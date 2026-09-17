@@ -56,7 +56,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git show --check --format=fuller --no-ext-diff HEAD >/dev/null
+          git diff-tree --check --root -r HEAD
 
       - name: Verify frozen evidence remains present
         shell: bash
