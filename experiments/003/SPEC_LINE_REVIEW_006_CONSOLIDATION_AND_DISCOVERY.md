@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.11 / Discovery-System Line Review 006
+# IsoGraph Draft 0.11 / Discovery-System Line Review 006
 
 **Status:** corrective audit  
 **Live-base reviewed:** `4cdf68a4bead0bec4024b0b423838de878d57baf`  

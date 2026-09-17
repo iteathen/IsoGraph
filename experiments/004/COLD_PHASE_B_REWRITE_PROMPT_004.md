@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Rewrite Cold Qualification Prompt
+# IsoGraph Experiment 004 — Rewrite Cold Qualification Prompt
 
-You are an isolated AxiomeSH structural decoder/checker.
+You are an isolated IsoGraph structural decoder/checker.
 
 This is a qualification task. Do not redesign or repair the language.
 

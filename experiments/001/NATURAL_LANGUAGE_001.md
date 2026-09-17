@@ -1,6 +1,6 @@
 # Experiment 001 — Natural-Language Control Payloads
 
-Each case below carries the same intended structural information as its AxiomeSH and JSON control versions. For cold qualification, give the decoder one case only.
+Each case below carries the same intended structural information as its IsoGraph and JSON control versions. For cold qualification, give the decoder one case only.
 
 ## P01
 

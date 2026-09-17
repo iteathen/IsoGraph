@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.3 Candidate
+# IsoGraph Core Specification — Draft 0.3 Candidate
 
 **Status:** experimental tightening produced from Experiment 002 cold decode (#267)  
 **Parent:** `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`  
@@ -10,7 +10,7 @@ Draft 0.3 closes two ambiguities exposed by the isolated Draft 0.2 decode:
 1. variable-number reuse was not scoped precisely enough;
 2. the native formula corpus used stable `^n` theory symbols but did not carry a native declaration of which semantic symbols belonged to the theory.
 
-No human-facing naming mechanism is added. AxiomeSH remains agent-native and does not make English identifiers part of core semantics.
+No human-facing naming mechanism is added. IsoGraph remains agent-native and does not make English identifiers part of core semantics.
 
 ---
 
@@ -86,7 +86,7 @@ Consistent renaming of a bound variable within its lexical scope preserves meani
 
 ## 3. Native theory signature
 
-AxiomeSH theory vocabulary must be recoverable as native structure, not only from an external glossary.
+IsoGraph theory vocabulary must be recoverable as native structure, not only from an external glossary.
 
 Draft 0.3 reserves one core semantic marker:
 
@@ -115,7 +115,7 @@ The member scope is unordered.
 
 ### 3.1 Signature membership
 
-A semantic symbol appearing in the theory body MUST occur in the native signature unless the symbol is core-reserved by the AxiomeSH specification.
+A semantic symbol appearing in the theory body MUST occur in the native signature unless the symbol is core-reserved by the IsoGraph specification.
 
 An undeclared theory-owned semantic symbol is a qualification failure.
 
@@ -170,7 +170,7 @@ not:
 
 ## 4. Native theory bundles
 
-A Draft 0.3 theory may be supplied as multiple raw AxiomeSH documents when they are explicitly presented as one bundle:
+A Draft 0.3 theory may be supplied as multiple raw IsoGraph documents when they are explicitly presented as one bundle:
 
 ```text
 native signature document

@@ -481,4 +481,4 @@ qualified lower construction
 11. Qualify explicit active/inert rewrite-role representation against legacy direct-child activation.
 12. Test reference hygiene with open/closed terms, sibling/descendant use, and capture adversaries.
 
-These audits determine the minimal substrate and safe comparison semantics of future AxiomeSH without invalidating frozen historical evidence.
+These audits determine the minimal substrate and safe comparison semantics of future IsoGraph without invalidating frozen historical evidence.

@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-10 Cold Extraction-Freeze Prompt
+# IsoGraph Experiment 004 — Q004-10 Cold Extraction-Freeze Prompt
 
-You are an isolated AxiomeSH structural comparison auditor.
+You are an isolated IsoGraph structural comparison auditor.
 
 Read only:
 

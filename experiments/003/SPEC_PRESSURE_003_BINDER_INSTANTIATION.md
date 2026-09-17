@@ -25,7 +25,7 @@ BODY[x := term]
 
 while preserving lexical binding and capture avoidance.
 
-Using a theory-owned `apply` or `substitute` symbol alone merely names the missing operation. Unless the bundle also defines how that operator acts on AxiomeSH terms, proof checking still depends on external semantics.
+Using a theory-owned `apply` or `substitute` symbol alone merely names the missing operation. Unless the bundle also defines how that operator acts on IsoGraph terms, proof checking still depends on external semantics.
 
 ## Why this is representation-general
 

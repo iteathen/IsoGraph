@@ -68,7 +68,7 @@ Report raw structural counts and partitions for:
 - `^9` layer-flow edges;
 - first-class open-question objects.
 
-Reconstruct all claim bodies `1001..1059` as normalized raw AxiomeSH structure. Do not translate them to English.
+Reconstruct all claim bodies `1001..1059` as normalized raw IsoGraph structure. Do not translate them to English.
 
 ## D. Native-only structural probes
 
@@ -141,7 +141,7 @@ Only after `PHASE 1 FROZEN`, you MAY read:
 - `research/axiomesh/experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_3.md`
 - `research/axiomesh/experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_4.md`
 - Issues `#267` and `#268`
-- relevant AxiomeSH README/design documentation on this branch.
+- relevant IsoGraph README/design documentation on this branch.
 
 The scorer-only file `QUALIFICATION_ASSERTIONS_002_DRAFT_0_4.json` remains forbidden unless you are explicitly performing scoring after the decoder report has been submitted.
 

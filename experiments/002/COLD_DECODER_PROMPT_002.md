@@ -1,6 +1,6 @@
 # Experiment 002 — Cold Decoder Protocol
 
-You are an isolated AxiomeSH decoder. This is qualification, not design.
+You are an isolated IsoGraph decoder. This is qualification, not design.
 
 ## Allowed files
 
@@ -24,7 +24,7 @@ Do not mutate the repository.
 
 ## Objective
 
-Determine what the native AxiomeSH object communicates structurally to a fresh agent without English atom labels.
+Determine what the native IsoGraph object communicates structurally to a fresh agent without English atom labels.
 
 Do not guess what opaque atoms mean. Report structural facts only.
 
@@ -43,7 +43,7 @@ Return a machine-readable reconstruction containing:
 9. guard-like, scope-like, and disposition-like attachments;
 10. the layer-to-layer flow subgraph.
 
-Do not use source names such as `C4-R0011`, `missing_law`, `supports`, or `geometry` unless those names are present in the allowed AxiomeSH payload. They are not expected to be.
+Do not use source names such as `C4-R0011`, `missing_law`, `supports`, or `geometry` unless those names are present in the allowed IsoGraph payload. They are not expected to be.
 
 ## Structural probes
 

@@ -1,11 +1,11 @@
-# AxiomeSH Core Specification — Draft 0.11 Candidate
+# IsoGraph Core Specification — Draft 0.11 Candidate
 
 **Status:** experimental tightening produced by third-pass discovery-system review  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6 → Draft 0.7 → Draft 0.8 → Draft 0.9 → Draft 0.10  
 **Form:** normative amendment; earlier candidate rules remain in force except where this document explicitly tightens them  
 **Promotion:** experimental-branch authority only
 
-Draft 0.10 makes pairwise structural comparison substantially safer. Draft 0.11 addresses the next layer: a system can have a perfect pairwise verifier and still fail AxiomeSH's purpose if candidate retrieval, substructure extraction, class parameterization, or policy design prevents true isomorphs from ever reaching that verifier.
+Draft 0.10 makes pairwise structural comparison substantially safer. Draft 0.11 addresses the next layer: a system can have a perfect pairwise verifier and still fail IsoGraph's purpose if candidate retrieval, substructure extraction, class parameterization, or policy design prevents true isomorphs from ever reaching that verifier.
 
 No new logical operator is introduced.
 

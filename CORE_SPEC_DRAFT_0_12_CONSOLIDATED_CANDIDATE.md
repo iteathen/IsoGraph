@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.12 Consolidated Candidate
+# IsoGraph Core Specification — Draft 0.12 Consolidated Candidate
 
 **Status:** experimental consolidated candidate after line-by-line review through both Draft 0.11 candidate tracks  
 **Historical lineage:** Draft 0.1 → 0.2 → 0.3 → 0.4 → 0.5 → 0.6 → 0.7 → 0.8 → 0.9 → 0.10 → 0.11 candidates  
@@ -16,7 +16,7 @@ No new domain logic primitive is introduced.
 
 # 1. Purpose
 
-AxiomeSH is an agent-native structural knowledge representation intended to maximize:
+IsoGraph is an agent-native structural knowledge representation intended to maximize:
 
 ```text
 durable correct synthesis / total lifecycle cost
@@ -41,7 +41,7 @@ knowledge = scoped relational structure + lawful structural transformation
 The native path remains:
 
 ```text
-AxiomeSH -> agent -> AxiomeSH
+IsoGraph -> agent -> IsoGraph
 ```
 
 No mandatory English, JSON, theorem-language, database, tokenizer-specific, or model-specific translation layer is part of native semantics.
@@ -52,7 +52,7 @@ The scoped-hypergraph/rewrite substrate remains falsifiable.
 
 # 2. Isomorphism/discovery constitution
 
-AxiomeSH succeeds only if it can expose common structure across independently named domains without either:
+IsoGraph succeeds only if it can expose common structure across independently named domains without either:
 
 - missing real correspondence because labels, IDs, syntax, serialization, namespace, factorization, candidate retrieval, or source convention differ; or
 - manufacturing false correspondence by deleting or parameterizing away a load-bearing distinction.
@@ -81,7 +81,7 @@ Expected analogy, desired class, class registry, scorer answer, or preferred fac
 
 # 3. Semantic revision and bundle authority
 
-Every new canonical bundle MUST identify the applicable AxiomeSH semantic revision/profile either:
+Every new canonical bundle MUST identify the applicable IsoGraph semantic revision/profile either:
 
 - in an explicit native bundle manifest; or
 - in an enclosing native corpus/bundle contract supplied as part of the artifact authority.
@@ -1444,7 +1444,7 @@ Forbidden as authority for the target claim:
 
 # 37. Proof systems and meta-theory
 
-AxiomeSH does not select one global proof calculus.
+IsoGraph does not select one global proof calculus.
 
 Surface implication/negation/etc. do not grant classicality, explosion, modal rules, temporal induction, deontic distribution, frame rules, higher-order extensionality, choice, or other profile laws.
 

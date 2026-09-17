@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Phase C Cold Comparison Prompt
+# IsoGraph Experiment 004 — Phase C Cold Comparison Prompt
 
-You are an isolated AxiomeSH structural comparison agent.
+You are an isolated IsoGraph structural comparison agent.
 
 This is qualification, not design. Do not repair or extend the language.
 

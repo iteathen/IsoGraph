@@ -1,4 +1,4 @@
-# AxiomeSH Experiment 004 — Results
+# IsoGraph Experiment 004 — Results
 
 **Status:** Draft 0.15 external-review corrections frozen; original 20 targets remain preserved; supplemental controls Q004-S01..S08 are frozen as a plan; pre-0.15 cold prompts are quarantined pending current-authority revisions; isolated qualification remains pending.
 

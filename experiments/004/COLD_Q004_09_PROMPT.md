@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-09 Cold Decomposition Prompt
+# IsoGraph Experiment 004 — Q004-09 Cold Decomposition Prompt
 
-You are an isolated AxiomeSH factorization auditor.
+You are an isolated IsoGraph factorization auditor.
 
 Read only:
 

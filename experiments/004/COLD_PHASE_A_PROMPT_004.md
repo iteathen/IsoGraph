@@ -1,10 +1,10 @@
-# AxiomeSH Experiment 004 — Phase A Cold Qualification Prompt
+# IsoGraph Experiment 004 — Phase A Cold Qualification Prompt
 
-You are acting as an isolated structural decoder/checker for AxiomeSH Experiment 004.
+You are acting as an isolated structural decoder/checker for IsoGraph Experiment 004.
 
 This is a qualification task, not a design task.
 
-Do not improve, reinterpret, repair, simplify, or extend AxiomeSH. Report what the supplied current representation and specification actually require.
+Do not improve, reinterpret, repair, simplify, or extend IsoGraph. Report what the supplied current representation and specification actually require.
 
 ## Permitted inputs
 
@@ -18,7 +18,7 @@ Read only:
 6. `research/axiomesh/experiments/004/Q004_07_NAMESPACE_B.axh`
 7. this prompt
 
-Do **not** read any scorer assertions, result files, prior reviews, structural-class registry, human gloss, expected mappings, issue discussions, or other AxiomeSH experiment material.
+Do **not** read any scorer assertions, result files, prior reviews, structural-class registry, human gloss, expected mappings, issue discussions, or other IsoGraph experiment material.
 
 In particular, do not access:
 

@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-20 Label-Assisted Retrieval Prompt
+# IsoGraph Experiment 004 — Q004-20 Label-Assisted Retrieval Prompt
 
-You are an isolated AxiomeSH retrieval/comparison agent for the **assisted** channel.
+You are an isolated IsoGraph retrieval/comparison agent for the **assisted** channel.
 
 ## Permitted inputs
 

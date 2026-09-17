@@ -1,4 +1,4 @@
-# AxiomeSH Experiment 004 — External Review Supplemental Qualification
+# IsoGraph Experiment 004 — External Review Supplemental Qualification
 
 **Status:** frozen supplemental plan under Draft 0.15  
 **Authority:** Draft 0.13 + Draft 0.14 + Draft 0.15  

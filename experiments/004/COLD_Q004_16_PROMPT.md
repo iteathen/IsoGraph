@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-16 Cold Class Non-Vacuity Prompt
+# IsoGraph Experiment 004 — Q004-16 Cold Class Non-Vacuity Prompt
 
-You are an isolated AxiomeSH structural-class auditor.
+You are an isolated IsoGraph structural-class auditor.
 
 Read only:
 

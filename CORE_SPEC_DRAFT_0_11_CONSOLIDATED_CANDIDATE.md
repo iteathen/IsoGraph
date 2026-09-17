@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.11 Consolidated Candidate
+# IsoGraph Core Specification — Draft 0.11 Consolidated Candidate
 
 **Status:** experimental consolidated candidate after line-by-line review through Draft 0.10  
 **Historical lineage:** Draft 0.1 → 0.2 → 0.3 → 0.4 → 0.5 → 0.6 → 0.7 → 0.8 → 0.9 → 0.10  
@@ -14,7 +14,7 @@ Historical drafts remain evidence explaining why each current rule exists.
 
 # 1. Purpose
 
-AxiomeSH is an agent-native structural knowledge representation intended to maximize:
+IsoGraph is an agent-native structural knowledge representation intended to maximize:
 
 ```text
 durable correct synthesis / total lifecycle cost
@@ -39,7 +39,7 @@ knowledge = scoped relational structure + lawful structural transformation
 The native path remains:
 
 ```text
-AxiomeSH -> agent -> AxiomeSH
+IsoGraph -> agent -> IsoGraph
 ```
 
 No mandatory English, JSON, theorem-language, database, tokenizer-specific, or model-specific translation layer is part of native semantics.
@@ -50,7 +50,7 @@ The scoped-hypergraph/rewrite substrate remains falsifiable.
 
 # 2. Isomorphism-safety constitution
 
-AxiomeSH succeeds only if it can expose common structure across independently named domains without either:
+IsoGraph succeeds only if it can expose common structure across independently named domains without either:
 
 - missing real correspondence because labels, IDs, syntax, serialization, namespace, factorization, or source convention differ; or
 - manufacturing false correspondence by deleting a load-bearing distinction.
@@ -1192,7 +1192,7 @@ Forbidden as authority for the target claim:
 
 # 34. Proof systems and meta-theory
 
-AxiomeSH does not select one global proof calculus.
+IsoGraph does not select one global proof calculus.
 
 Surface implication/negation/etc. do not grant classicality, explosion, modal rules, temporal induction, deontic distribution, frame rules, higher-order extensionality, choice, or other profile laws.
 

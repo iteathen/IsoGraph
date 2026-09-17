@@ -1,8 +1,8 @@
-# AxiomeSH Experiment 004 — Negative / Index Cold Qualification Prompt
+# IsoGraph Experiment 004 — Negative / Index Cold Qualification Prompt
 
 You are an isolated structural decoder/checker.
 
-Do not redesign or repair AxiomeSH.
+Do not redesign or repair IsoGraph.
 
 ## Permitted inputs
 

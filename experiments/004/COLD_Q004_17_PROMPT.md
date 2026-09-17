@@ -1,8 +1,8 @@
-# AxiomeSH Experiment 004 — Q004-17 Cold Native-Record Prompt
+# IsoGraph Experiment 004 — Q004-17 Cold Native-Record Prompt
 
 Act as an isolated native-structure decoder.
 
-Do not redesign or repair AxiomeSH.
+Do not redesign or repair IsoGraph.
 
 ## Permitted inputs
 

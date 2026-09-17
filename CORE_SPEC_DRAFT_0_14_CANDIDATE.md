@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.14 Candidate
+# IsoGraph Core Specification — Draft 0.14 Candidate
 
 **Status:** frozen qualification amendment produced from the final-pass review of Draft 0.13  
 **Base authority:** `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`  
@@ -47,11 +47,11 @@ Draft 0.14 is intentionally a **qualification freeze**, not another feature expa
 
 Draft 0.13 allowed a label-blind structural path **or** an independently demonstrated hidden-label recall guarantee.
 
-For qualification of the AxiomeSH **representation hypothesis**, that alternative is too weak.
+For qualification of the IsoGraph **representation hypothesis**, that alternative is too weak.
 
 A general representation/discovery qualification MUST include at least one candidate-generation path whose available inputs are limited to:
 
-- discovery-visible native AxiomeSH structure;
+- discovery-visible native IsoGraph structure;
 - qualified N0/N1 normalization;
 - qualified structural D factorizations/extractions allowed by the frozen policy;
 - structural indexes/fingerprints whose inputs and invariance claims are themselves native/qualified;
@@ -88,7 +88,7 @@ can native structural evidence itself make the pair discoverable?
 
 No load-bearing isomorphism/discovery semantics may live only in an English, JSON, database, host-language, or evaluator sidecar.
 
-For qualification, the following must be representable as ordinary native AxiomeSH structure or as explicitly included qualified native dependencies:
+For qualification, the following must be representable as ordinary native IsoGraph structure or as explicitly included qualified native dependencies:
 
 ```text
 comparison policy

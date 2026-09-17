@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-19 Cold Novel-Class Prompt
+# IsoGraph Experiment 004 — Q004-19 Cold Novel-Class Prompt
 
-You are an isolated AxiomeSH structural discovery agent.
+You are an isolated IsoGraph structural discovery agent.
 
 Do not read any structural-class registry or catalog. Do not infer a familiar class name.
 

@@ -31,6 +31,6 @@ The active program is falsification/qualification rather than vocabulary expansi
 
 ## Historical naming
 
-The project was incubated as **AxiomeSH** inside `iteathen/CUDA-JS`. Frozen historical artifacts retain that name as provenance. New work uses **IsoGraph**.
+The project was incubated as **IsoGraph** inside `iteathen/CUDA-JS`. Frozen historical artifacts retain that name as provenance. New work uses **IsoGraph**.
 
 See `MIGRATION.md` for the exact source checkpoint.

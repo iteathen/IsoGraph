@@ -381,7 +381,7 @@ Experiment 003 does not establish:
 - that a schema match proves source-theory semantic equivalence;
 - that the Peirce candidate is an E4 proof;
 - that all 18 benchmarks are provable;
-- that AxiomeSH outperforms another representation;
+- that IsoGraph outperforms another representation;
 - that every post-0.1 surface is irreducible core;
 - that Draft 0.13 improves proof/synthesis performance.
 

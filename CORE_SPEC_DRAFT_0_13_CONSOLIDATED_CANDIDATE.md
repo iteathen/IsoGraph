@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.13 Consolidated Candidate
+# IsoGraph Core Specification — Draft 0.13 Consolidated Candidate
 
 **Status:** experimental consolidated candidate after line-by-line review through both Draft 0.12 tracks  
 **Historical lineage:** Draft 0.1 → 0.2 → 0.3 → 0.4 → 0.5 → 0.6 → 0.7 → 0.8 → 0.9 → 0.10 → 0.11 candidates → 0.12 candidates  
@@ -16,7 +16,7 @@ No new domain-logic primitive is introduced.
 
 # 1. Mission and constitutional constraints
 
-AxiomeSH is an agent-native structural knowledge representation intended to maximize:
+IsoGraph is an agent-native structural knowledge representation intended to maximize:
 
 ```text
 durable correct synthesis / total lifecycle cost
@@ -41,7 +41,7 @@ knowledge = scoped relational structure + lawful structural transformation
 The native path remains:
 
 ```text
-AxiomeSH -> agent -> AxiomeSH
+IsoGraph -> agent -> IsoGraph
 ```
 
 No mandatory English, JSON, theorem-language, database, tokenizer-specific, or model-specific translation layer belongs to native semantics.
@@ -52,7 +52,7 @@ The scoped-hypergraph/rewrite substrate remains falsifiable.
 
 # 2. Isomorphism/discovery constitution
 
-AxiomeSH succeeds only if independently named structures can expose common shape without:
+IsoGraph succeeds only if independently named structures can expose common shape without:
 
 - missing a true correspondence because labels, IDs, syntax, namespaces, factorization, indexing, extraction, or serialization differ; or
 - manufacturing a false correspondence by dropping, parameterizing, or projecting away a load-bearing distinction.
@@ -961,7 +961,7 @@ Source-supplied domain labels and inferred memberships are distinct roles.
 
 An inferred class membership records schema revision, target layer, view/authority policy, factorization/extraction set, verified witness, and qualification status.
 
-Multiple verified memberships may coexist; AxiomeSH imposes no single inheritance or forced canonical class.
+Multiple verified memberships may coexist; IsoGraph imposes no single inheritance or forced canonical class.
 
 ---
 
@@ -1238,7 +1238,7 @@ Forbidden target-claim authority:
 
 # 38. Proof systems and meta-theory
 
-AxiomeSH does not select one global proof calculus.
+IsoGraph does not select one global proof calculus.
 
 Surface implication/negation/etc. do not grant classicality, explosion, modal rules, temporal induction, deontic distribution, frame rules, higher-order extensionality, choice, or other profile laws.
 

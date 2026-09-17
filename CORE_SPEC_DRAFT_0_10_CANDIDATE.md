@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.10 Candidate
+# IsoGraph Core Specification — Draft 0.10 Candidate
 
 **Status:** experimental tightening produced by second-pass line review of Draft 0.9 and inherited Draft 0.1–0.8 rules  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6 → Draft 0.7 → Draft 0.8 → Draft 0.9  
@@ -7,7 +7,7 @@
 
 Draft 0.10 does not add a new logical operator.
 
-It tightens the machinery that determines whether two independently represented objects have the same structure. This is constitutional for AxiomeSH: if comparison policy, labels, namespaces, factorization choice, or incomplete search can manufacture or hide an isomorphism, the language fails its central purpose.
+It tightens the machinery that determines whether two independently represented objects have the same structure. This is constitutional for IsoGraph: if comparison policy, labels, namespaces, factorization choice, or incomplete search can manufacture or hide an isomorphism, the language fails its central purpose.
 
 The governing sequence is now:
 
@@ -471,7 +471,7 @@ It is not an isomorphism unless a separate bijective structure-preserving-and-re
 
 ## 19. Comparison target layer is explicit
 
-AxiomeSH can compare several different things:
+IsoGraph can compare several different things:
 
 ```text
 serialized/native representation graph

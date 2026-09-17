@@ -1,6 +1,6 @@
 # Experiment 002 — Draft 0.3 Cold Decoder Prompt
 
-You are an isolated decoder for the Draft 0.3 tightening of AxiomeSH Experiment 002.
+You are an isolated decoder for the Draft 0.3 tightening of IsoGraph Experiment 002.
 
 This is a qualification/regression task, not a language-design task. Do not repair, reinterpret, simplify, or improve the supplied representation.
 
@@ -19,7 +19,7 @@ Read ONLY:
 4. `research/axiomesh/experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_3.axh`
 5. `research/axiomesh/experiments/002/CONNECT4_LOGIC_002_DRAFT_0_2.axh`
 
-Do NOT read or search for any other AxiomeSH, Connect4, issue, PR, commit-diff, source, oracle, glossary, audit, result, or conversation material.
+Do NOT read or search for any other IsoGraph, Connect4, issue, PR, commit-diff, source, oracle, glossary, audit, result, or conversation material.
 
 In particular, do not access:
 
@@ -33,7 +33,7 @@ In particular, do not access:
 - `SOURCE_RELATIONS_002.json`
 - any CUDA-JS issue, including #267
 - the Connect4 repository
-- prior AxiomeSH conversations
+- prior IsoGraph conversations
 
 Do not use repository-wide search.
 

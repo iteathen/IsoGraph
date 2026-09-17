@@ -1,4 +1,4 @@
-# Experiment 001 — Frozen AxiomeSH Payloads
+# Experiment 001 — Frozen IsoGraph Payloads
 
 These payloads correspond one-for-one with `CORPUS_001_ORACLE.json`.
 

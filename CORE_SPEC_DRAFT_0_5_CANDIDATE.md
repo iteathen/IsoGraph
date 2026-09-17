@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.5 Candidate
+# IsoGraph Core Specification — Draft 0.5 Candidate
 
 **Status:** experimental expansion produced by cross-logic benchmark pressure  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4  
@@ -205,7 +205,7 @@ This prevents one modal/temporal semantics from contaminating another.
 
 ## 9. Proof judgments and proof objects are native theory structure
 
-AxiomeSH does not gain a privileged global turnstile in Draft 0.5.
+IsoGraph does not gain a privileged global turnstile in Draft 0.5.
 
 A proof-capable bundle may declare native symbols for concepts such as:
 

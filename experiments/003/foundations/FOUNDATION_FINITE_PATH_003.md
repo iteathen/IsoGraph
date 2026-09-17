@@ -93,7 +93,7 @@ whose zero/step constructors
 are justified by primitive one-step relation edges
 ```
 
-This is the intended AxiomeSH direction.
+This is the intended IsoGraph direction.
 
 ## Qualification still required
 

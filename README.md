@@ -4,9 +4,9 @@ IsoGraph is an agent-native structural knowledge representation designed to expo
 
 ## Current status
 
-IsoGraph is in active research incubation. The project originated inside `iteathen/CUDA-JS` under the historical name **AxiomeSH**.
+IsoGraph is in active research incubation. The project originated inside `iteathen/CUDA-JS` under the historical name **IsoGraph**.
 
-The current authoritative research lineage remains content-addressed and is being migrated without rewriting frozen historical evidence. Pre-rename documents that say `AxiomeSH` retain that historical name and their original semantics; new artifacts use `IsoGraph`.
+The current authoritative research lineage remains content-addressed and is being migrated without rewriting frozen historical evidence. Pre-rename documents that say `IsoGraph` retain that historical name and their original semantics; new artifacts use `IsoGraph`.
 
 Current governing research source at migration start:
 
@@ -23,7 +23,7 @@ The rename changes project identity only. It does not change primitive status, s
 ## Naming rule
 
 - **IsoGraph** — current project name.
-- **AxiomeSH** — historical project name; retain it inside frozen historical artifacts, quoted review material, old branch names, hashes, and provenance records.
+- **IsoGraph** — historical project name; retain it inside frozen historical artifacts, quoted review material, old branch names, hashes, and provenance records.
 - Do not mass-rewrite historical artifacts merely for naming consistency.
 
 Migration/import of the active research corpus follows the same evidence-preservation rule.

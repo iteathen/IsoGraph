@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.9 Second-Pass Line Review — Isomorphism Safety
+# IsoGraph Draft 0.9 Second-Pass Line Review — Isomorphism Safety
 
 **Status:** corrective audit after the first Draft 0.1–0.8 line review  
 **Scope:** Draft 0.9 plus every historical rule still inherited from Drafts 0.1–0.8  
@@ -339,7 +339,7 @@ This prevents forcing every useful cross-domain relationship into a function-sha
 
 ## 19. Intensional schema isomorphism is not extensional semantic equivalence
 
-A finite recursive/inductive AxiomeSH schema may denote an infinite or large generated model.
+A finite recursive/inductive IsoGraph schema may denote an infinite or large generated model.
 
 Two schema graphs can be isomorphic while their parameterized/generated denotations differ, and two different schemas can generate equivalent denotations.
 

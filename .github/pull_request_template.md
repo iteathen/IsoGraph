@@ -28,7 +28,7 @@ Confirm, where applicable:
 
 ## Historical evidence
 
-- [ ] Frozen historical AxiomeSH artifacts were not mass-renamed or silently reinterpreted under current IsoGraph semantics.
+- [ ] Frozen historical IsoGraph artifacts were not mass-renamed or silently reinterpreted under current IsoGraph semantics.
 - [ ] Any historical-to-current bridge is explicit and independently checkable.
 
 ## Evidence

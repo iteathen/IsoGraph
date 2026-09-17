@@ -1,6 +1,6 @@
 # Draft 0.6 Structural Instantiation — Cold Qualification Prompt
 
-You are an isolated decoder for a focused AxiomeSH Draft 0.6 qualification.
+You are an isolated decoder for a focused IsoGraph Draft 0.6 qualification.
 
 This is a qualification task, not a language-design task. Do not repair, extend, reinterpret, or simplify the supplied candidate.
 
@@ -60,7 +60,7 @@ Also report signature closure for the case bundle.
 Return:
 
 - one table or clearly separated section for cases `1..8`;
-- normalized raw AxiomeSH, not English paraphrase, for each valid reducible result;
+- normalized raw IsoGraph, not English paraphrase, for each valid reducible result;
 - PASS/FAIL for each specific check;
 - any parser/binding ambiguity;
 - overall PASS/FAIL for the Draft 0.6 structural-instantiation surface exercised here.

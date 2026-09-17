@@ -1,6 +1,6 @@
 # IsoGraph migration
 
-IsoGraph was incubated as **AxiomeSH** inside `iteathen/CUDA-JS` before becoming a standalone project.
+IsoGraph was incubated as **IsoGraph** inside `iteathen/CUDA-JS` before becoming a standalone project.
 
 The initial standalone research snapshot was imported from:
 
@@ -9,7 +9,7 @@ The initial standalone research snapshot was imported from:
 - frozen source commit: `275b4d28224990a2b8fbdd7fa66cb071fb867e48`
 - former source path: `research/axiomesh/`
 
-Historical specifications, experiments, filenames, and reports retain the **AxiomeSH** name where that name is part of their provenance. They are not silently rewritten. New work uses **IsoGraph**.
+Historical specifications, experiments, filenames, and reports retain the **IsoGraph** name where that name is part of their provenance. They are not silently rewritten. New work uses **IsoGraph**.
 
 Current imported authority at migration time is the cumulative specification chain:
 

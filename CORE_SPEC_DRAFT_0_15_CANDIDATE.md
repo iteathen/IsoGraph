@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.15 Candidate
+# IsoGraph Core Specification — Draft 0.15 Candidate
 
 **Status:** frozen corrective amendment produced from isolated external review plus independent disposition  
 **Base authority:** `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md` + `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`  
@@ -292,7 +292,7 @@ Consequences:
 - alternatively it may use a separately proved factorization-invariant fingerprint/projection;
 - otherwise the index remains heuristic and its misses cannot support completeness or negative claims.
 
-AxiomeSH does **not** require one canonical post-D factorization merely to make indexing easier.
+IsoGraph does **not** require one canonical post-D factorization merely to make indexing easier.
 
 ---
 
@@ -391,7 +391,7 @@ symmetry/tie handling relevant to output identity
 qualified invariance/completeness claims, if any
 ```
 
-AxiomeSH does not require one global canonical-labeling algorithm.
+IsoGraph does not require one global canonical-labeling algorithm.
 
 Different sound serializers may emit different canonical-looking representatives unless an equivalence/compatibility contract relates their algorithms.
 

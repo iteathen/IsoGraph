@@ -3,11 +3,11 @@
 **Branch:** `experiment/axiomesh-native-reconstruction`  
 **Parent research line:** `research/axiomesh-context-logic`  
 **Status:** designed, not yet qualified  
-**Purpose:** test whether the current AxiomeSH core can carry exact novel relational structure between isolated agents without relying on shared conversation state, English explanation, or pretrained recognition.
+**Purpose:** test whether the current IsoGraph core can carry exact novel relational structure between isolated agents without relying on shared conversation state, English explanation, or pretrained recognition.
 
 ## Question
 
-Can one agent encode a novel structural object directly in AxiomeSH such that a fresh isolated agent can reconstruct the same structure exactly and then reason over it correctly?
+Can one agent encode a novel structural object directly in IsoGraph such that a fresh isolated agent can reconstruct the same structure exactly and then reason over it correctly?
 
 This is the first test because failure here invalidates stronger claims about context compression, cross-session continuation, or synthesis.
 
@@ -15,7 +15,7 @@ This is the first test because failure here invalidates stronger claims about co
 
 ### H1 — exact cold reconstruction
 
-Given a novel structure `X`, encoder agent `A` produces only AxiomeSH representation `C`. A fresh agent `B`, with no access to `X`, the encoder conversation, or hidden explanatory context, receives the core spec plus `C` and reconstructs `X'`.
+Given a novel structure `X`, encoder agent `A` produces only IsoGraph representation `C`. A fresh agent `B`, with no access to `X`, the encoder conversation, or hidden explanatory context, receives the core spec plus `C` and reconstructs `X'`.
 
 Required:
 
@@ -39,7 +39,7 @@ Run the same source structures through at least three representations:
 
 1. natural-language description;
 2. conventional explicit structured notation chosen as a neutral baseline;
-3. AxiomeSH Draft 0.1.
+3. IsoGraph Draft 0.1.
 
 Keep semantic information constant. Do not give one representation extra facts.
 
@@ -77,7 +77,7 @@ The decoder/evaluator agent must not have access to:
 - previous attempts on the same exact case;
 - descriptive names that identify a known object.
 
-The decoder may receive the frozen AxiomeSH core specification required to interpret the representation.
+The decoder may receive the frozen IsoGraph core specification required to interpret the representation.
 
 A same-context reconstruction is not qualification evidence.
 
@@ -87,10 +87,10 @@ The encoder receives:
 
 ```text
 Preserve every structurally meaningful distinction in the supplied object.
-Encode it directly using the frozen AxiomeSH core.
+Encode it directly using the frozen IsoGraph core.
 Do not add English explanations.
 Do not omit information merely to shorten the encoding.
-Return only the AxiomeSH object.
+Return only the IsoGraph object.
 ```
 
 A later compression phase may ask the encoder to reduce representation size, but only after exactness is established.
@@ -156,7 +156,7 @@ Reasoning results are scored separately from reconstruction.
 
 ## Representation-discovery subtest
 
-Once baseline AxiomeSH exactness is measured, allow encoder agents to mutate the serialization while preserving core semantics.
+Once baseline IsoGraph exactness is measured, allow encoder agents to mutate the serialization while preserving core semantics.
 
 For each candidate encoding `C_i`:
 
@@ -205,7 +205,7 @@ The current Draft 0.1 substrate is challenged if any of the following persists a
 
 ## Promotion rule
 
-No result from this experiment changes the parent AxiomeSH specification automatically.
+No result from this experiment changes the parent IsoGraph specification automatically.
 
 A proposed core change should include:
 
@@ -235,4 +235,4 @@ Start small:
 
 For each, collect at least one independent cold decode before changing the syntax.
 
-The first objective is not to prove AxiomeSH superior. It is to find the first place where the representation fails to preserve or expose structure.
+The first objective is not to prove IsoGraph superior. It is to find the first place where the representation fails to preserve or expose structure.

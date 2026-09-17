@@ -1,4 +1,4 @@
-# AxiomeSH Fourth-Pass Review — Core / Discovery Edge Cases
+# IsoGraph Fourth-Pass Review — Core / Discovery Edge Cases
 
 **Status:** corrective audit  
 **Scope:** Draft 0.11 plus inherited raw-core rules not fully closed by Drafts 0.9–0.10  

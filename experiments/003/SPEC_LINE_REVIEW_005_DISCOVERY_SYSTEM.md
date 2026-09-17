@@ -1,8 +1,8 @@
-# AxiomeSH Draft 0.10 Third-Pass Review — Discovery-System Safety
+# IsoGraph Draft 0.10 Third-Pass Review — Discovery-System Safety
 
 **Status:** corrective audit  
 **Scope:** Draft 0.10 and current Experiment 003 comparison/classification workflow  
-**Objective:** identify remaining ways a formally correct pairwise comparison framework could still fail the actual AxiomeSH mission of *finding* structural isomorphisms across a corpus.
+**Objective:** identify remaining ways a formally correct pairwise comparison framework could still fail the actual IsoGraph mission of *finding* structural isomorphisms across a corpus.
 
 Draft 0.10 substantially fixes pairwise comparison safety. This pass asks a different question:
 

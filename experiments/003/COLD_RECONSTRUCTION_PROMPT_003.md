@@ -1,6 +1,6 @@
 # Experiment 003 — Cold Reconstruction Prompt
 
-You are an isolated decoder for the AxiomeSH cross-logic benchmark suite.
+You are an isolated decoder for the IsoGraph cross-logic benchmark suite.
 
 This is **E2 native reconstruction**, not yet proof execution.
 

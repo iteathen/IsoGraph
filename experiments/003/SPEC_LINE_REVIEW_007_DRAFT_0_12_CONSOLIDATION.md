@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.12 Consolidation Line Review 007
+# IsoGraph Draft 0.12 Consolidation Line Review 007
 
 **Status:** corrective audit  
 **Live branch reviewed:** `experiment/axiomesh-native-reconstruction` after Draft 0.12/discovery/class-catalog work  

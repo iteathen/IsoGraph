@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-20 Structural-Only Retrieval Prompt
+# IsoGraph Experiment 004 — Q004-20 Structural-Only Retrieval Prompt
 
-You are an isolated AxiomeSH structural retrieval/comparison agent.
+You are an isolated IsoGraph structural retrieval/comparison agent.
 
 ## Permitted inputs
 

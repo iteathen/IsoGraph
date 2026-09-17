@@ -1,4 +1,4 @@
-# AxiomeSH Experiment 004 — External Review 001 Disposition
+# IsoGraph Experiment 004 — External Review 001 Disposition
 
 **Source:** isolated Gemini review relayed by project owner  
 **Reviewed authority:** Draft 0.13 consolidated candidate + Draft 0.14 amendment  
@@ -7,7 +7,7 @@
 
 ## Disposition summary
 
-The external review found several real specification defects, but three recommendations would incorrectly collapse the distinction between **surface syntax** and **irreducible primitive semantics** or would impose a canonical factorization that AxiomeSH explicitly does not assume.
+The external review found several real specification defects, but three recommendations would incorrectly collapse the distinction between **surface syntax** and **irreducible primitive semantics** or would impose a canonical factorization that IsoGraph explicitly does not assume.
 
 Accepted corrections are applied in the next amendment. Rejected recommendations remain recorded so they are not rediscovered and applied uncritically later.
 
@@ -115,7 +115,7 @@ Source-local transformation residuals and pairwise residuals must have distinct 
 
 The review correctly identifies that a fingerprint qualified on one representation/factorization stage cannot be used to prune another stage by assumption.
 
-However AxiomeSH does not assume a single canonical post-D factorization. Therefore the correction is:
+However IsoGraph does not assume a single canonical post-D factorization. Therefore the correction is:
 
 - every index/fingerprint pins the exact representation stage/factorization node or factorization set it indexes;
 - its necessary-invariant theorem is qualified for that exact layer/view/relation/D policy;

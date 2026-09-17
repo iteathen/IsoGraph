@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.7 Candidate
+# IsoGraph Core Specification — Draft 0.7 Candidate
 
 **Status:** experimental tightening produced by Experiment 003 semantic-decomposition review  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6  
@@ -31,7 +31,7 @@ named operator
 
 A stable semantic symbol may still name a derived construction for compact serialization, indexing, or review, but the named construction is not semantically complete until its native definition is present in the same qualified theory bundle or an explicitly included native dependency bundle.
 
-A human name, conventional notation, or theorem-prover primitive is never sufficient evidence that an operator should be primitive in AxiomeSH.
+A human name, conventional notation, or theorem-prover primitive is never sufficient evidence that an operator should be primitive in IsoGraph.
 
 ---
 
@@ -332,7 +332,7 @@ preserve source theorem
 
 The intended benefit is structural comparability across logics. Two operators with different names but the same underlying relational construction should become visibly similar; two operators with similar notation but different semantics should remain structurally different.
 
-That is a primary AxiomeSH objective, not optional prettification.
+That is a primary IsoGraph objective, not optional prettification.
 
 ---
 

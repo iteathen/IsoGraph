@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.8 Candidate
+# IsoGraph Core Specification — Draft 0.8 Candidate
 
 **Status:** experimental tightening produced by structural-class review of Experiment 003  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6 → Draft 0.7  
@@ -35,7 +35,7 @@ The purpose of labels is identification, reuse, retrieval, and cross-domain comp
 Every proposed higher-level object or operator MUST be handled in this order:
 
 1. preserve the source semantics without repair-by-convenience;
-2. decompose the semantics as far as faithfully possible into existing AxiomeSH structure plus admissible model leaves;
+2. decompose the semantics as far as faithfully possible into existing IsoGraph structure plus admissible model leaves;
 3. canonicalize the resulting construction;
 4. compare the construction with already known structural classes;
 5. if the construction is an instance, specialization, or composition of an existing class, attach that class identity;
@@ -50,7 +50,7 @@ The decomposition is evidence. The class assignment is a conclusion from that ev
 
 ## 2. Structural classes
 
-A **structural class** is a reusable parameterized construction pattern over native AxiomeSH structure.
+A **structural class** is a reusable parameterized construction pattern over native IsoGraph structure.
 
 A class is identified by the structure and invariants it preserves, not by the English or conventional formal-language name attached to one instance.
 

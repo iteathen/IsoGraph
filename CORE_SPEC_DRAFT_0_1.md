@@ -1,17 +1,17 @@
-# AxiomeSH Core Specification — Draft 0.1
+# IsoGraph Core Specification — Draft 0.1
 
 **Status:** research draft  
 **Scope:** native core only  
 **Primary substrate hypothesis:** scoped hypergraph rewrite structure  
 **Adapters:** prohibited from the core at this stage  
-**Input/output:** raw AxiomeSH  
+**Input/output:** raw IsoGraph  
 **Human readability:** not an optimization target
 
 This document specifies the first explicit candidate core. It is intentionally provisional. Every primitive remains open to elimination, replacement, or generalization.
 
 ## 1. Purpose
 
-AxiomeSH is an agent-native structural knowledge representation intended to maximize:
+IsoGraph is an agent-native structural knowledge representation intended to maximize:
 
 \[
 \boxed{\text{durable correct synthesis}/\text{total lifecycle cost}}
@@ -23,12 +23,12 @@ The primary research hypothesis is:
 
 > A capable neural reasoning agent may operate more effectively over a representation whose external structure directly exposes relations, transformations, invariants, composition, and isomorphism than over formal systems designed principally for human use.
 
-AxiomeSH is not initially a translation language, programming language, theorem syntax, compressed English, or human-facing notation.
+IsoGraph is not initially a translation language, programming language, theorem syntax, compressed English, or human-facing notation.
 
 The initial core is the representation itself:
 
 ```text
-raw AxiomeSH -> agent -> raw AxiomeSH
+raw IsoGraph -> agent -> raw IsoGraph
 ```
 
 No mandatory intermediate representation exists.
@@ -63,7 +63,7 @@ A representation that is formally elegant but demonstrably harms qualified agent
 
 ### 2.7 Architecture independence
 
-Current transformer architecture is an experimental target, not part of AxiomeSH semantics.
+Current transformer architecture is an experimental target, not part of IsoGraph semantics.
 
 ## 3. Central model
 
@@ -110,7 +110,7 @@ Draft 0.1 intentionally starts with a small symbol set.
 
 Whitespace separates terms but otherwise carries no meaning.
 
-There are deliberately no English identifiers in canonical core AxiomeSH.
+There are deliberately no English identifiers in canonical core IsoGraph.
 
 Names may eventually exist in adapters or provenance systems, but they do not define core structure.
 
@@ -276,7 +276,7 @@ A scope may itself occur inside another structure.
 
 ## 9. Natural boundaries
 
-AxiomeSH does not initially require an explicit interface declaration.
+IsoGraph does not initially require an explicit interface declaration.
 
 If an identity occurs both inside and outside a scope, that shared identity naturally forms part of its interface.
 
@@ -468,7 +468,7 @@ This prevents invisible global semantics.
 
 ## 15. Multiway semantics
 
-AxiomeSH does not initially impose rule priority or deterministic execution.
+IsoGraph does not initially impose rule priority or deterministic execution.
 
 If state \(S\) admits three valid rule applications:
 
@@ -512,7 +512,7 @@ it can be:
 - removed by another rewrite;
 - eventually rewritten itself.
 
-This permits AxiomeSH to represent transformations of reasoning systems using the same substrate.
+This permits IsoGraph to represent transformations of reasoning systems using the same substrate.
 
 No separate meta-language is assumed at Draft 0.1.
 
@@ -567,7 +567,7 @@ Domain theories may still represent equality-like relations as ordinary structur
 
 ## 19. Structural isomorphism
 
-Isomorphism is initially a property of AxiomeSH structures rather than a primitive language operator.
+Isomorphism is initially a property of IsoGraph structures rather than a primitive language operator.
 
 Two scopes are structurally isomorphic when a bijection exists between their opaque identities while preserving:
 
@@ -614,7 +614,7 @@ A representation that preserves each fragment separately while losing joint real
 
 ## 21. Logic is not hard-coded
 
-AxiomeSH Core is not initially identified with classical logic, intuitionistic logic, temporal logic, first-order logic, or another established logical system.
+IsoGraph Core is not initially identified with classical logic, intuitionistic logic, temporal logic, first-order logic, or another established logical system.
 
 A logic may itself be represented as:
 
@@ -642,7 +642,7 @@ the rewrite history itself is a derivation object.
 
 A proof system may therefore be represented as constraints on admissible rewrite histories.
 
-AxiomeSH does not initially assume that every reachable state constitutes a theorem.
+IsoGraph does not initially assume that every reachable state constitutes a theorem.
 
 That interpretation belongs to the represented theory.
 
@@ -662,11 +662,11 @@ for permitted:
 G\rightarrow G'
 \]
 
-AxiomeSH's research objective includes discovering when independently sourced systems preserve structurally equivalent invariants.
+IsoGraph's research objective includes discovering when independently sourced systems preserve structurally equivalent invariants.
 
 ## 24. Canonicalization requirements
 
-AxiomeSH semantic identity MUST ignore:
+IsoGraph semantic identity MUST ignore:
 
 - whitespace;
 - local atom spelling under consistent bijection;
@@ -694,7 +694,7 @@ During the core research phase:
 \boxed{\text{representation}=\text{interface}}
 \]
 
-Agents receive raw AxiomeSH and emit raw AxiomeSH.
+Agents receive raw IsoGraph and emit raw IsoGraph.
 
 No mandatory:
 
@@ -715,7 +715,7 @@ Later adapters MUST remain isolated.
 The eventual architecture MUST preserve the possibility of:
 
 ```text
-AxiomeSH -> native agent -> AxiomeSH
+IsoGraph -> native agent -> IsoGraph
 ```
 
 even after translation and interoperability systems are introduced.
@@ -744,7 +744,7 @@ Raw token cost is one measured component of the denominator.
 
 ## 28. Initial experimental qualification
 
-AxiomeSH should be compared against natural language and existing formal representations under equal resource budgets.
+IsoGraph should be compared against natural language and existing formal representations under equal resource budgets.
 
 The first qualification suite should include:
 
@@ -754,7 +754,7 @@ The first qualification suite should include:
 4. **Partial isomorphism** — recover maximum common structure and exact residual differences.
 5. **Rewrite correctness** — produce only structurally valid successors.
 6. **Long composition** — preserve identities, constraints, and scope across many transformations.
-7. **Cross-context continuation** — resume from raw AxiomeSH without human-language reconstruction.
+7. **Cross-context continuation** — resume from raw IsoGraph without human-language reconstruction.
 8. **Synthesis** — derive valid structural relations not explicitly supplied.
 9. **Context pressure** — measure how performance changes as simultaneously represented structural knowledge increases.
 10. **Logic baseline** — compare against conventional logical/formal representations rather than only prose.

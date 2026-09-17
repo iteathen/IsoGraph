@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.4 Candidate
+# IsoGraph Core Specification — Draft 0.4 Candidate
 
 **Status:** experimental tightening produced from Experiment 002 Draft 0.3 cold qualification/review (#268)  
 **Parents:** `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`, then `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`  
@@ -69,7 +69,7 @@ For canonical serialization only, `^n` members MUST be emitted in increasing num
 
 ## 3. Native qualification and human gloss are separate measurements
 
-AxiomeSH is agent-native. A cold formal qualification must therefore be answerable from native structure alone.
+IsoGraph is agent-native. A cold formal qualification must therefore be answerable from native structure alone.
 
 Draft 0.4 defines two distinct channels.
 
@@ -159,7 +159,7 @@ The Experiment 002 scorer therefore records the exact expected native chain:
 
 The cold prompt must select this chain structurally, without showing those expected edges.
 
-This is an experiment-specific regression fixture, not a new AxiomeSH semantic rule.
+This is an experiment-specific regression fixture, not a new IsoGraph semantic rule.
 
 ---
 

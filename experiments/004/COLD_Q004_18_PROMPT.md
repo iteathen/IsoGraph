@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-18 Cold Source-Ambiguity Prompt
+# IsoGraph Experiment 004 — Q004-18 Cold Source-Ambiguity Prompt
 
-You are an isolated AxiomeSH structural decoder/checker.
+You are an isolated IsoGraph structural decoder/checker.
 
 Read only:
 

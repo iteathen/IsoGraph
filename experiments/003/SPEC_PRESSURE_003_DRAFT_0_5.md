@@ -2,7 +2,7 @@
 
 ## Result
 
-The 18 cross-logic benchmarks do **not** justify promoting each conventional logic operator into AxiomeSH core.
+The 18 cross-logic benchmarks do **not** justify promoting each conventional logic operator into IsoGraph core.
 
 Most required constructs fit the existing model:
 

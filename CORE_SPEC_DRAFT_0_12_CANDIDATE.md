@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.12 Candidate
+# IsoGraph Core Specification — Draft 0.12 Candidate
 
 **Status:** experimental tightening produced by fourth-pass core/discovery edge-case review  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6 → Draft 0.7 → Draft 0.8 → Draft 0.9 → Draft 0.10 → Draft 0.11  
@@ -293,7 +293,7 @@ They do not become native semantic relations, class constraints, or witness evid
 
 ## 15. Class quality is multi-objective
 
-Compression/description length may help detect vacuity, but AxiomeSH does not define “best class” as shortest description alone.
+Compression/description length may help detect vacuity, but IsoGraph does not define “best class” as shortest description alone.
 
 Class quality may include:
 
@@ -335,7 +335,7 @@ Changing the source representation/schema revision does not silently preserve th
 
 A structure may validly instantiate several overlapping classes under different factorizations/views.
 
-AxiomeSH does not impose single inheritance or one canonical class merely for organizational simplicity.
+IsoGraph does not impose single inheritance or one canonical class merely for organizational simplicity.
 
 Preserve multiple verified memberships with their individual witnesses.
 
@@ -345,7 +345,7 @@ Any class-class hierarchy/equivalence relation remains a separate witnessed clai
 
 ## 18. Novel-class discovery is a qualification target
 
-Testing held-out instances of known classes is insufficient for AxiomeSH's intended discovery role.
+Testing held-out instances of known classes is insufficient for IsoGraph's intended discovery role.
 
 Qualification should include structures whose correct reusable class/common-core hypothesis is absent from the current registry/catalog.
 
