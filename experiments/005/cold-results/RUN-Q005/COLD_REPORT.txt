@@ -1,0 +1,229 @@
+# IsoGraph Experiment 005 — Cold Qualification Report
+**Run:** RUN-Q005
+**Frozen Source:** `iteathen/IsoGraph @ fa733d533cd683c5064c4f31fa6c083fa3aed21d`
+**Profile/Draft:** Draft 0.16 Consolidated Candidate
+
+This report is executed in complete information isolation under the strict controls of Gate E2 (Isolated Cold Reconstruction) and Gate E1L (Label-blind/Anti-cheating Audit). Only authorized discovery-visible artifacts are parsed.
+
+---
+
+## Task Reports
+
+### Q005-01: Isomorphism and Witness Sufficiency for Star Graphs (`1000` vs `2000`)
+
+#### 1. Analysis and Structural Result
+Under the V0 closed structural view, stable labels are rigid and local alpha-identities are bijectively mapped. 
+* **Object `1000`** is a directed star graph with central node `1` and 8 symmetric leaves: `2, 3, 4, 5, 6, 7, 8, 9` connected via relation `^91001`.
+* **Object `2000`** is an identical directed star graph with central node `10` and 8 symmetric leaves: `11, 12, 13, 14, 15, 16, 17, 18` connected via relation `^91001`.
+
+An **isomorphism exists** between `1000` and `2000`. 
+
+The **minimum witness evidence** required for this existential claim is exactly **one verified isomorphism mapping witness** (per Section 30.2). For example:
+```text
+[(1 10) (2 11) (3 12) (4 13) (5 14) (6 15) (7 16) (8 17) (9 18)]
+```
+
+#### 2. Analysis of the Isomorphism Family
+Because the 8 leaves of the star are completely symmetric, they can map to the target leaves in any bijective order. This yields a symmetric automorphism group ($S_8$) on the leaves. The size of this materially distinct isomorphism family is:
+$$\text{Size} = 8! = 40,320 \text{ mappings}$$
+
+#### 3. Evidence Requirements for Complete Families
+To claim a *complete* witness family, Section 30.2 and 30.4 state that **explicit enumeration is NOT semantically required** if an exact family certificate is available. 
+Instead, a compact complete-family certificate is sufficient and highly preferred:
+* One verified isomorphism mapping: $f : 1000 \to 2000$
+* An exact, verified generating description of the automorphism group of the source: $\text{Aut}_C(1000) \cong S_8$ on the leaves $\{2..9\}$.
+
+#### Summary
+* **Structural Result:** ISOMORPHISM (Verified)
+* **Evidence Obligation Required:** One verified bijection witness for existence; one witness plus automorphism generator descriptions for family-complete claims.
+* **Stronger Computation NOT Required:** Eager, exhaustive enumeration of all 40,320 individual mappings.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 30.2/30.4 successfully prevents artificial enumeration overhead while preserving structural fidelity.
+
+---
+
+### Q005-02: Context-Scoped Witness Quotients (`3000` under `3010` vs `3011`)
+
+#### 1. Automorphism Swapping Admissibility
+Object `3000` consists of three edges: `(^91001 30 31)`, `(^91001 30 32)`, and `(^91002 31)`.
+* **Under Context `3010` (Included: `[^91001]`):** The relation `^91002` is excluded. The active view of the graph contains only `(^91001 30 31)` and `(^91001 30 32)`. Under this context, swapping `31` and `32` **is structurally admissible** (it is a valid automorphism).
+* **Under Context `3011` (Included: `[^91001 ^91002]`):** The relation `^91002` is active. Node `31` participates in a unary relation `(^91002 31)` which node `32` lacks. Under this context, swapping `31` and `32` **is NOT structurally admissible** (it violates incidence preservation of active relations).
+
+#### 2. Reusability of Witness Quotients
+A witness quotient justified under context `3010` **cannot** be reused under context `3011`. Under Draft 0.16 Section 30.3, a quotient is strictly bound to its frozen claim context. Exposing previously ignored relations (like `^91002`) immediately invalidates the quotient symmetry.
+
+#### 3. Verification and Freezing of Quotients
+If a quotient $Q_C$ is utilized to prune witness search space or prove complete family coverage:
+* The quotient relation $Q_C$ must be explicitly frozen and qualified as a valid mathematical equivalence relation under the specific context $C$ *before* the search is executed.
+* It must be verified to preserve every load-bearing distinction, role, port, and obligation active in $C$.
+
+#### Summary
+* **Structural Result:** Context-dependent symmetry (Admissible under `3010`, Inadmissible under `3011`).
+* **Evidence Obligation Required:** Context-specific symmetry validation; explicit qualification of the quotient relation $Q_C$ for the active context.
+* **Stronger Computation NOT Required:** Global, context-independent quotient validation.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 30.3 prevents false match assumptions across distinct comparison views.
+
+---
+
+### Q005-03: Local Factorization Node Claims vs. Complete Factorization Space (`4000` vs `5000`)
+
+#### 1. Comparison of `4100` and `5100`
+* `4100` is a directed path graph: $40 \to 41 \to 42 \to 43$.
+* `5100` is a directed star graph: $50 \to \{51, 52, 53\}$.
+* Under V0, these specific nodes are **not isomorphic** (node degrees and connectivity differ).
+
+#### 2. Comparison of `4101` and `5101`
+* `4101` is a directed 3-cycle: $44 \to 45 \to 46 \to 44$.
+* `5101` is a directed 3-cycle: $54 \to 55 \to 56 \to 54$.
+* Under V0, these specific nodes **are isomorphic**.
+
+#### 3. Scope of Local Node Claims
+The comparison of `4100` and `5100` alone **can** establish that those two specific frozen factorization nodes are non-isomorphic. 
+However, it **cannot** support a global negative claim about the underlying sources `4000` and `5000`, because other valid factorizations of the same sources (namely, `4101` and `5101`) are isomorphic.
+
+#### 4. Coverage Burden for Space-Completeness Negatives
+To claim that there is no correspondence anywhere in the declared factorization space, an evaluator cannot rely on a single local failure. The evaluator must:
+* Declare the complete eligible factorization/extraction universe under the frozen policy; and
+* Either exhaustively search all alternative pairs or provide a qualified coverage certificate proving that omitted alternatives cannot change the negative result (Section 21.1.1).
+
+#### Summary
+* **Structural Result:** Local non-isomorphism (`4100` vs `5100`); Local isomorphism (`4101` vs `5101`).
+* **Evidence Obligation Required:** Local node claims only require verifying the specified nodes. Complete-space negatives require exhaustive coverage audits or qualified certificates.
+* **Stronger Computation NOT Required:** Global space exploration is not required when the claim is explicitly bounded to a specific local factorization node.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 21.1.1 successfully isolates local node claims from global search obligations.
+
+---
+
+### Q005-04: Non-Prerequisite Status of Canonical Serializers (`6000` vs `7000`)
+
+#### 1. Isomorphism and Witness
+* `6000` is a directed path of length 2: $60 \to 61 \to 62$.
+* `7000` is an identical directed path of length 2: $70 \to 71 \to 72$.
+
+They are **isomorphic** under V0.
+* **Witness:** `[(60 70) (61 71) (62 72)]`
+
+#### 2. Isomorphism Verification Without Canonical Serializer
+The structural isomorphism qualifies **without a canonical serializer or canonical-label record**. Under Section 29.3 and 32.4, semantic result verification is an *evidence obligation* check, not a mandatory execution algorithm.
+A verifier simply checks that the provided node mapping preserves and reflects ordered incidences. A canonical form is not a semantic prerequisite to verifying a valid bi-directional mapping.
+
+#### Summary
+* **Structural Result:** ISOMORPHISM (Verified)
+* **Evidence Obligation Required:** One verified bijective node mapping.
+* **Stronger Computation NOT Required:** Execution of a canonical graph-labeling algorithm or deterministic serialization.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 29.3 and 32.4 protect proof-method neutrality.
+
+---
+
+### Q005-05: Certified Negatives via Separating Invariants (`8000` vs `9000`)
+
+#### 1. Isomorphism Analysis
+* `8000` contains exactly **1 occurrence** of the edge `(^91001 80 81)`.
+* `9000` contains exactly **2 occurrences** of the edge `(^91001 90 91)`.
+
+Under IsoGraph Draft 0.16 Section 8.1, direct member occurrence multiplicity is semantic by default. Because their cardinalities differ ($1 \neq 2$), they are **not isomorphic**.
+
+#### 2. Separating Invariant
+A direct separating invariant is available:
+$$\text{Card}(\text{Members}(8000)) = 1 \neq 2 = \text{Card}(\text{Members}(9000))$$
+The difference in direct member occurrence multiplicity (cardinality of relation `^91001`) serves as the separating invariant.
+
+#### 3. Exhaustive Mapping Search Requirement
+Exhaustive mapping search is **NOT required** for the certified negative (Section 25). The verification of the separating invariant mathematically guarantees non-isomorphism, satisfying the negative claim obligation.
+
+#### Summary
+* **Structural Result:** CERTIFIED_NON_ISOMORPHIC
+* **Evidence Obligation Required:** Verification of the separating cardinality/multiplicity invariant.
+* **Stronger Computation NOT Required:** Exhaustive mapping search over the potential bijection space.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 25 supports certified negatives without wasteful search.
+
+---
+
+### Q005-06: Weak vs. Strong Embeddings (`10000` into `11000` under `10010`)
+
+#### 1. Weak Embedding Existence
+* `10000` contains `(^91001 100 101)`.
+* `11000` contains `(^91001 110 111)` and `(^91002 110 111)`.
+* Context `10010` includes both `^91001` and `^91002`.
+
+A **weak embedding exists** from `10000` into `11000`. The mapping $100 \mapsto 110$, $101 \mapsto 111$ injectively preserves the source structure.
+
+#### 2. Strong/Induced Embedding Existence
+A strong embedding **does NOT exist**. Under the active signature, the target contains an edge `(^91002 110 111)` between the mapped nodes that is *not reflected* in the source (no corresponding edge exists between `100` and `101`).
+
+#### 3. Independence of Weak Relation Qualification
+Qualifying the weak relation **does NOT require** proving or evaluating the stronger relation. Under Section 29.2, verification does not silently demand stronger relation types than what is claimed.
+
+#### 4. Target Residual Accounting
+For the weak embedding, the extra target relation `(^91002 110 111)` is formally accounted for as **target residual** (Section 25 / Section 30).
+
+#### Summary
+* **Structural Result:** WEAK_EMBEDDING (Verified) / STRONG_EMBEDDING (Inadmissible)
+* **Evidence Obligation Required:** Injective mapping witness preserving source edges + accounting of the unmapped target edge as target residual.
+* **Stronger Computation NOT Required:** Proving or checking the reflection property (strong embedding).
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 29.2 prevents conflation of weak and strong relations during verification.
+
+---
+
+### Q005-07: Separability of D-Local and Pairwise Reconstruction (`12000` vs `13000`)
+
+#### 1. Comparison of `12100` and `13100`
+* `12100` is `(^91001 120 121)`.
+* `13100` is `(^91001 130 131)`.
+
+Under V0, the comparison-stage objects $A_{cmp}$ and $B_{cmp}$ are **isomorphic**.
+
+#### 2. Qualification of Comparison-Stage Relations with Lossy D-Records
+Yes, the comparison-stage relation and its pairwise reconstruction claim **can qualify** even though the D-records are lossy (`EXACT_RECONSTRUCTABLE_FLAG` = `#0`). 
+Under Section 19.4, source-local D residuals and pairwise residuals belong to different accounting layers. Pairwise comparison only obligations reconstruction of $A_{cmp}$ and $B_{cmp}$ from the common core, which is fully satisfiable.
+
+#### 3. Unavailable Stronger Reconstruction Claims
+The stronger claim of **full-source reconstruction** (reconstructing `12000` and `13000` from their comparison-stage states) remains **unavailable**. The D transformations were lossy, throwing away the `^91003` edges. 
+Conflating the layers is strictly forbidden: a verifier cannot merge D-local residuals with pairwise residuals to simulate an exact source-level round trip that did not occur.
+
+#### Summary
+* **Structural Result:** ISOMORPHISM at Comparison Layer (Verified)
+* **Evidence Obligation Required:** Pairwise common-core mapping and reconstruction of `12100` and `13100`.
+* **Stronger Computation NOT Required:** Full-source reconstruction of original objects `12000` and `13000`.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 19.4 enforces the rigorous separation of D-local and pairwise residuals.
+
+---
+
+### Q005-08: Dependency-Closed Verification Audit (`14000` vs `15000` under Profile `16000`)
+
+#### 1. Is the Claim Qualified?
+**No.** The underlying objects `14000` (`^92001`) and `15000` (`^92002`) are structurally non-isomorphic under V0 because their stable labels are different and rigid.
+
+#### 2. Omitted Load-Bearing Dependency
+The proof profile `16000` lists only `^93001` (INCIDENCE_TOPOLOGY_CHECK). It completely **omitted stable label compatibility / signature checking**.
+
+#### 3. Can Incomplete Proof Profiles Force Validity?
+**No.** Under Section 29.2, a proof profile cannot make an invalid claim valid by ignoring failing rules. Verification must discharge the complete, dependency-closed obligation set. Because an isomorphism claim logically depends on stable-label consistency, the missing check is a structural blocker.
+
+#### 4. Final Audit Classification
+The claim is **REJECTED** under dependency-closed verification due to an incomplete proof profile attempting to omit a load-bearing dependency (Section 42.3, Control 8).
+
+#### Summary
+* **Structural Result:** CLAIM REJECTED
+* **Evidence Obligation Required:** Satisfying every element of the dependency-closed obligation set, which requires rigid label matching.
+* **Stronger Computation NOT Required:** None.
+* **Unresolved Ambiguity/Resource Limit:** None.
+* **Draft 0.16 Clarification Status:** Confirmed. Section 29.2 successfully detects and rejects malicious or incomplete proof profiles.
+
+---
+
+## Final Disposition
+
+All eight focused qualification controls from Section 42.3 have been executed against the synthetic fixture. The Draft 0.16 obligation-sufficiency clarifications successfully resolved every case without introducing performance shortcuts, global minimalisms, or arbitrary canonicalization requirements. 
+
+Every test case demonstrates that Draft 0.16 behaves as a highly consistent and conservative successor candidate.
+
+```text
+QUALIFIES
+```
