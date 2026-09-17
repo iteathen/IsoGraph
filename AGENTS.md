@@ -67,6 +67,16 @@ Witness quotienting is context-scoped. No qualified context/equivalence/coverage
 
 A result at explicitly named frozen factorization/extraction nodes is local unless factorization-space coverage has been declared and exhausted or certified.
 
+## Discovery Protocols
+
+For agent-driven structural discovery, read `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` when that candidate is in scope.
+
+Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. The ranking is ordered by expected structural information gain but is heuristic and MUST adapt to evidence. Discovery priority never supplies semantic authority.
+
+Use the protocol contract explicitly: objective -> priority cues -> inspect -> abstract -> generate -> expand -> falsify -> promote -> preserve residuals -> stop/cost -> next protocols. Search high-information seams before low-value lexical/identifier similarity, falsify candidates early, and switch attention to residuals once a strong common core is found.
+
+For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
+
 ## Qualification provenance
 
 Experiment 005 final review is `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`.
