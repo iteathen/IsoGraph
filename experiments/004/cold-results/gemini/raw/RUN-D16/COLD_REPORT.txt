@@ -1,0 +1,185 @@
+# ISOGRAPH EXPERIMENT 004 — RUN RUN-D16 AUDIT REPORT
+**Execution Environment:** Isolated Cold Run  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** `gemini-3.5-flash`  
+**Document Context:** Compiled under Draft 0.15 Consolidated Candidate Rules  
+
+---
+
+## 1. Schema 1601 Reconstruction & Analysis
+
+Under the rules established by the consolidated specification and the synthetic fixture definitions, Schema `1601` is reconstructed as follows:
+
+### 1.1 Structural Declaration & Slots
+Schema `1601` is declared as a structural-class schema using the native record role `^5600` (`SCHEMA`):
+```text
+(^5600 1601)
+```
+It defines exactly one parameter slot using the native record role `^5601` (`SCHEMA SLOT`):
+```text
+(^5601 1601 #1)
+```
+
+### 1.2 Required Patterns and Constraints
+In the provided fixture `Q004_16_CLASS_NONVACUITY_004.axh`, there are **no** required structural patterns, constraints, or abstractions declared for Slot `#1` of Schema `1601`. No record using role `^5602` (`SCHEMA SLOT ABSTRACT_REQUIRED_SUBSTRUCTURE_PATTERN`) references Schema `1601`.
+
+### 1.3 Active Assigned Instances
+The fixture records two instances assigned to Schema `1601` Slot `#1` under role `^5603` (`INSTANCE SCHEMA SLOT ASSIGNED_SUBSTRUCTURE`):
+*   **Instance `1710`:** Assigns a substructure of 6 disconnected edges:
+    ```text
+    [(70 71) (72 73) (74 75) (76 77) (78 79) (80 81)]
+    ```
+*   **Instance `1711`:** Assigns a substructure of a single edge:
+    ```text
+    [(90 91)]
+    ```
+
+### 1.4 Interpretation Verdict
+Schema `1601` represents a completely unconstrained or "pass-through" parameter slot. It imposes zero structural invariants on its assigned arguments.
+
+---
+
+## 2. Schema 1602 Reconstruction & Analysis
+
+Under the rules established by the consolidated specification and the synthetic fixture definitions, Schema `1602` is reconstructed as follows:
+
+### 2.1 Structural Declaration & Slots
+Schema `1602` is declared as a structural-class schema using the native record role `^5600` (`SCHEMA`):
+```text
+(^5600 1602)
+```
+It defines exactly one parameter slot using the native record role `^5601` (`SCHEMA SLOT`):
+```text
+(^5601 1602 #1)
+```
+
+### 2.2 Required Abstraction Pattern
+Schema `1602` defines a required structural pattern over Slot `#1` using the native record role `^5602` (`SCHEMA SLOT ABSTRACT_REQUIRED_SUBSTRUCTURE_PATTERN`):
+```text
+(^5602 1602 #1
+  \?0\?1\?2[
+    (?0 ?1)
+    (?1 ?2)
+  ]
+)
+```
+
+### 2.3 Interpretation of the Abstraction
+This pattern represents a nested lexical abstraction `\?0 (\?1 (\?2 [ (?0 ?1) (?1 ?2) ]))`.
+*   **Lexical Bindings:** The variables `?0`, `?1`, and `?2` are owned and bound by the nested abstraction constructors.
+*   **Structural Scope Condition:** The body defines an unordered structural scope `[ ... ]` containing two ordered incidence relations: `(?0 ?1)` and `(?1 ?2)`.
+*   **Semantic Constraint:** To satisfy this pattern, the assigned substructure must contain a structural match of a 2-step path. Specifically, there must exist structural identities in the assignment that can map to the bound variables such that both ordered edges exist in the target multiset.
+
+---
+
+## 3. Pattern Application and Variable-Binding Evaluation
+
+Using the Draft 0.15 variable-binding rules, we evaluate the required pattern of Schema `1602` against the assigned substructures of instances `1701`, `1702`, and `1703`.
+
+### 3.1 Evaluation of Instance `1701`
+*   **Assigned Substructure:**
+    ```text
+    [(20 21) (21 22) (20 23) (20 24) (25 26) (27 28)]
+    ```
+*   **Evaluation Status:** **MATCH SUCCESS**
+*   **Variable Bindings:**
+    *   `?0` $\rightarrow$ `20`
+    *   `?1` $\rightarrow$ `21`
+    *   `?2` $\rightarrow$ `22`
+*   **Proof:** The assignment `?0 = 20`, `?1 = 21`, `?2 = 22` maps the pattern edges `(?0 ?1)` and `(?1 ?2)` directly to the occurring structural incidences `(20 21)` and `(21 22)` present in the assigned scope of `1701`. No disequality constraints are specified, and the variable bindings are structurally sound and non-conflicting.
+
+### 3.2 Evaluation of Instance `1702`
+*   **Assigned Substructure:**
+    ```text
+    [(40 41) (41 42) (43 44) (45 46) (47 48) (49 50)]
+    ```
+*   **Evaluation Status:** **MATCH SUCCESS**
+*   **Variable Bindings:**
+    *   `?0` $\rightarrow$ `40`
+    *   `?1` $\rightarrow$ `41`
+    *   `?2` $\rightarrow$ `42`
+*   **Proof:** The assignment `?0 = 40`, `?1 = 41`, `?2 = 42` maps the pattern edges `(?0 ?1)` and `(?1 ?2)` directly to the occurring structural incidences `(40 41)` and `(41 42)` present in the assigned scope of `1702`.
+
+### 3.3 Evaluation of Instance `1703`
+*   **Assigned Substructure:**
+    ```text
+    [(60 61) (60 62) (60 63) (60 64) (60 65) (60 66)]
+    ```
+*   **Evaluation Status:** **STRUCTURAL FAILURE (NO MATCH)**
+*   **Structural Failure Proof:**
+    1.  The pattern requires identifying structural nodes `?0`, `?1`, and `?2` such that `(?0 ?1)` and `(?1 ?2)` are elements of the assigned edge set.
+    2.  This requires the existence of an intermediate node `?1` that is simultaneously the target of some edge `(?0 ?1)` and the source of another edge `(?1 ?2)`.
+    3.  In `1703`, the set of source (first position) nodes is exactly `{60}`. The set of target (second position) nodes is exactly `{61, 62, 63, 64, 65, 66}`.
+    4.  The intersection of source and target nodes is empty:
+        $$\{60\} \cap \{61, 62, 63, 64, 65, 66\} = \emptyset$$
+    5.  Since no node in `1703` is both a source and a target of any edge, no path of length 2 can be formed.
+    6.  Even under liberal variable-aliasing rules (where distinct variables may alias the same node), a match would require a self-loop (e.g., `(60 60)`), which is absent.
+    7.  Therefore, no valid assignment to the bound variables exists. The structural matching fails.
+
+---
+
+## 4. Non-Vacuity and Selectivity Audit
+
+We evaluate both schemas against the strict non-vacuity and selectivity criteria defined in Section 26.3 of the Core Specification and Section 6 of the Schema Contract.
+
+### 4.1 Schema 1601 Audit
+*   **Verdict:** **VACUOUS**
+*   **Analysis:** Schema `1601` does not enforce any structural constraints, invariants, or relations on its parameter slot. It acts as an unrestricted pass-through handle. It is incapable of rejecting "near misses" because it accepts any arbitrary structural expression. It offers zero compositional or reasoning utility beyond restating the argument.
+
+### 4.2 Schema 1602 Audit
+*   **Verdict:** **NON-VACUOUS & SELECTIVE**
+*   **Analysis:** Schema `1602` enforces a non-trivial structural invariant—the presence of a 2-step path. It demonstrates active selectivity by successfully matching instances containing the pattern (`1701`, `1702`) and successfully rejecting the structurally dense "near-miss" instance `1703`. Instance `1703` acts as an excellent adversarial negative control: it contains the same number of edges (6) and nodes (7) as `1701` and `1702`, but is arranged in a "star" topology that specifically lacks the required path property. The schema's ability to reject this near-miss verifies its selectivity.
+
+---
+
+## 5. Parameter Size vs. Vacuity Analysis
+
+A critical question is whether a class schema should be rejected because its required structural pattern is small while its assigned parameter values are structurally large.
+
+*   **Rule (Section 26.3 & Contract Section 6):** "Parameters may be structurally large. Size alone is neither evidence for nor against non-vacuity."
+*   **Analysis:** In the assignments `1701` and `1702`, the assigned substructures contain 6 edges, whereas the schema pattern defines a constraint spanning only 2 edges. This structural divergence does not degrade the non-vacuity of Schema `1602`. 
+*   **Verdict:** Parameter size alone does **not** decide vacuity. A class schema is non-vacuous if it constrains its parameter slot with a testable structural invariant that successfully rejects invalid shapes. Schema `1602` remains non-vacuous because its constraint is selective, whereas `1601` remains vacuous regardless of whether its assigned parameters are large (like `1710` with 6 edges) or small (like `1711` with 1 edge).
+
+---
+
+## 6. Class Promotion and Qualification Sufficiency Verdict
+
+We must evaluate whether the current synthetic fixture provides sufficient evidence to promote Schema `1602` to a fully qualified, reusable structural class.
+
+### 6.1 Status of Non-Vacuity Evidence
+The fixture successfully establishes the *structural non-vacuity and selectivity* of Schema `1602` through:
+*   Two independently matching positive instances (`1701` and `1702`).
+*   One clear, structurally dense adversarial negative control (`1703`).
+
+### 6.2 Sufficiency for Full Class Promotion
+*   **Verdict:** **INSUFFICIENT**
+*   **Rationale:** Under Section 14 of the Schema Contract, full class promotion is a systemic qualification process that requires much more than a selective pattern. The current fixture lacks:
+    1.  **Complete Native Schema Fields:** Explicit declaration of boundary ports, mapping modes, and residual/cut/excluded accounting policies.
+    2.  **Immutable Integrity Bindings:** Immutable, content-bound revision hashes/digests pinning the schema.
+    3.  **Independent Verification Records:** First-class native membership witnesses (reconstructable from the native bundle) checked by an independent mechanical verifier.
+    4.  **Generalization Audits:** Independent-domain/held-out generalization testing and boundary/composition audits.
+*   **Conclusion:** This fixture is highly sufficient as *evidence of structural non-vacuity* (passing Gate E1U), but is **insufficient on its own** to grant full *reusable structural class promotion* to `1602` without the surrounding system-level qualification artifacts.
+
+---
+
+## 7. Simplicity and Minimality Disclosure
+
+Pursuant to Section 21.5 of the Core Specification:
+*   "A claim that one factorization/class is simpler, minimal, or preferred by simplicity requires a declared metric or partial order including the dimensions measured."
+*   **Disclosure:** No metric or partial order for simplicity, minimality, or representation cost has been declared in the provided cold inputs.
+*   **Strict Adherence:** This audit report makes **no** claims regarding whether Schema `1601` or `1602` is "simpler" or "more minimal" than the other. The schemas are evaluated solely on their objective structural constraints, matching mechanics, and selectivity.
+
+---
+
+## 8. Qualification Gate Status Certificate
+
+| Gate | Description | Status | Evidence |
+| :--- | :--- | :--- | :--- |
+| **E1U** | Class Non-Vacuity / Selectivity Audit | **PASSED (for `1602`)** | Matches `1701`/`1702`; selectively rejects near-miss `1703` |
+| **E1U** | Class Non-Vacuity / Selectivity Audit | **FAILED (for `1601`)** | Fails to enforce any structural invariants on Slot `#1` |
+| **E1C** | Structural-Class Classification after Witness | **PENDING** | Requires native, content-bound membership witnesses |
+| **E1V** | Independent Witness Verification | **PENDING** | Requires independent mechanical verifier audit run |
+
+---
+**Report Authorization:** Cold Run Auditor RUN-D16  
+**Status:** Frozen and certified under Draft 0.15 isolation rules. No external source was queried.

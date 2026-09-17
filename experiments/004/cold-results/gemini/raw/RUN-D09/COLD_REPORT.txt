@@ -1,0 +1,151 @@
+# IsoGraph Experiment 004 — RUN-D09 Audit Report
+**Model:** gemini-3.5-flash  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Evaluation Profile:** Cold Run Isolation Audit  
+**Document Authority:** IsoGraph Core Specification — Draft 0.15 Consolidated Candidate  
+
+---
+
+## 1. Source `9000` Exact Reproduction
+
+Source object `9000` is defined under stable role label `^4900` (`SOURCE_BODY`):
+
+```text
+[
+  (1 2)
+  (3 2)
+]
+```
+
+### Structural Properties of `9000`:
+* **Carrier:** Raw unordered structural scope `[ ... ]` (default occurrence-preserving semantics, size = 2).
+* **Members:** Two ordered incidence tuples:
+  * `(1 2)`: Directed relation/edge from identity `1` to identity `2`.
+  * `(3 2)`: Directed relation/edge from identity `3` to identity `2`.
+* **Identities:** `1`, `2`, and `3` (opaque structural identities belonging to the default namespace).
+
+---
+
+## 2. Factorization `9100` Audit
+
+### 2.1 Component Reproduction
+* **Exposed Target (`^4902` - `EXPOSED_TARGET`)**:
+  ```text
+  [
+    (10 11)
+    (12 11)
+  ]
+  ```
+* **Source-Target Map (`^4903` - `SOURCE_TARGET_MAP`)**:
+  ```text
+  [
+    (1 10)
+    (2 11)
+    (3 12)
+  ]
+  ```
+* **Reconstruction Residual (`^4904` - `RECONSTRUCTION_RESIDUAL`)**:
+  ```text
+  [
+  ]
+  ```
+
+### 2.2 Reconstruction Analysis
+The original source structure `9000` **can be reconstructed exactly** from the exposed target and map without any reference to an opaque source copy.
+
+**Reconstruction Witness:**
+1. Retrieve target incidence relations: `[(10 11) (12 11)]`.
+2. Apply the inverse of the map `[(1 10) (2 11) (3 12)]`, which maps target nodes back to source nodes:
+   * Target node `10` maps to Source node `1`.
+   * Target node `11` maps to Source node `2`.
+   * Target node `12` maps to Source node `3`.
+3. Substitute the mapped values into the target edges:
+   * `(10 11)` $\rightarrow$ `(1 2)`
+   * `(12 11)` $\rightarrow$ `(3 2)`
+4. Combine the substituted edges into the target container shape: `[(1 2) (3 2)]`.
+5. This matches the original source `9000` structurally and dynamically with zero identity loss.
+
+### 2.3 Semantic-Decomposition Coverage
+* **Coverage Verdict:** Complete (100% Semantic Coverage).
+* **Justification:** Every load-bearing relational and topological feature of the source has been fully mapped, projected, and made transparently visible in the `EXPOSED_TARGET` layer. No structural properties are hidden or retained inside the reconstruction residual, which remains empty (`[]`).
+
+---
+
+## 3. Factorization `9200` Audit
+
+### 3.1 Component Reproduction
+* **Exposed Target (`^4902` - `EXPOSED_TARGET`)**:
+  ```text
+  [
+  ]
+  ```
+* **Source-Target Map (`^4903` - `SOURCE_TARGET_MAP`)**:
+  ```text
+  [
+  ]
+  ```
+* **Reconstruction Residual (`^4904` - `RECONSTRUCTION_RESIDUAL`)**:
+  ```text
+  [
+    (1 2)
+    (3 2)
+  ]
+  ```
+
+### 3.2 Recoverability and Semantic Validity
+* **Can the original source be recovered?**
+  Yes. Because the entire raw source body was copied directly into the `RECONSTRUCTION_RESIDUAL` (`[(1 2) (3 2)]`), recovery is trivially achieved by copying the residual back.
+* **Does this round trip count as semantic-decomposition evidence?**
+  **No.** Factorization `9200` represents a **decomposition cheat** (or a vacuous/null decomposition).
+  Under Section 19.3 of the Specification:
+  > *"An opaque or re-encoded source backup does not count as exposed semantics. Undecomposed residual preserves recoverability but lowers decomposition coverage."*
+  
+  Because the exposed target and map are completely empty, no structural features of the source have been translated to the target layer. An independent discovery agent operating strictly on exposed targets would see a blank object. It fails to expose any common shape.
+
+### 3.3 Residual Classification
+Under Section 19.3, the residual of `9200` is classified as a:
+`currently undecomposed residual` (an opaque, raw-source backup used solely as an archival recovery escape-hatch, rather than a semantically structured factorization).
+
+---
+
+## 4. Distinguishing Round-Trip from Semantic-Decomposition Coverage
+
+Lossless round-trip capability (recoverability) and semantic-decomposition coverage are **not** the same qualification property. They represent independent axes of decomposition evaluation:
+
+1. **Lossless Round-Trip (Recoverability):** A conservation metric ensuring no information is destroyed during transform $D$. It is satisfied whenever:
+   $$\text{Source} \equiv \text{Reconstruct}(\text{Target}, \text{Map}, \text{Residual})$$
+2. **Semantic-Decomposition Coverage:** An analytical metric evaluating how much load-bearing structure is mapped out of the opaque source domain and translated into the visible, comparable target domain.
+
+Factorization `9200` proves this distinction: it maintains **100% lossless round-trip recoverability** while delivering **0% semantic-decomposition coverage**.
+
+---
+
+## 5. Prohibition of Local Residual Leakage into Pairwise Accounting
+
+**Verdict:** No residual in this source-local D audit may be reclassified as a pairwise common-core residual.
+
+### Justification under Draft 0.15 rules (Section 19.4):
+* **Strict Separation of Accounting Layers:**
+  > *"The source-local D/extraction records own their own residual, information loss, provenance, discarded boundary/context, transparent reconstruction information, and exact round-trip witness... Pairwise comparison operates on the frozen comparison-stage objects... and owns a different accounting layer..."*
+* **Anti-Cheating Enforcement:**
+  > *"A verifier MUST NOT satisfy source reconstruction by merging D-local residuals with pairwise residuals."*
+
+Reclassifying the source-local reconstruction residual of `9200` as a pairwise residual would mask the fact that the source structure was never actually decomposed. It would allow a lossy or vacuous decomposition to masquerade as an active pairwise structural common core during comparison, directly violating the isolation boundary.
+
+---
+
+## 6. Qualification Verification Summary
+
+| Metric | Factorization `9100` | Factorization `9200` |
+| :--- | :--- | :--- |
+| **Exposed Target Nodes** | `10`, `11`, `12` | None (Empty) |
+| **Exposed Target Edges** | `(10 11)`, `(12 11)` | None (Empty) |
+| **Source-Target Mapping** | Complete, Bijective | None (Empty) |
+| **Reconstruction Residual** | Empty (`[]`) | Full Source copy (`[(1 2) (3 2)]`) |
+| **Lossless Round-Trip Status** | **PASSED** (Via mapping substitution) | **PASSED** (Via raw residual copy) |
+| **Decomposition Coverage** | **100% (Complete)** | **0% (Cheat/Vacuous)** |
+| **Discovery Suitability** | **EXCELLENT** | **REJECTED** |
+
+### Verified Certificates:
+* **E1D (Decomposition Audit):** `9100` qualifies as a valid, structure-preserving decomposition. `9200` is flagged as a vacuous round-trip backup with zero semantic exposure.
+* **E1COV (Item Coverage):** All items in `9100` are accounted for in the target graph. `9200` fails to expose any structural items.

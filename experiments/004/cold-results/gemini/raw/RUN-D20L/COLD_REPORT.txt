@@ -1,0 +1,246 @@
+# ISOGRAPH EXPERIMENT 004 — GEMINI ISOLATED COLD RUN
+**Run ID:** RUN-D20L  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** `gemini-3.5-flash`  
+**Evaluation Profile:** Assisted Channel Retrieval & Verification  
+**Gates Tested:** E1NR (Native Record), E1L (Label-Blind/Anti-Cheating), E1V (Independent Verification), E1W (Witnessed Comparison), E1K (Index-Invariant), E2 (Isolated Cold Reconstruction)
+
+---
+
+## 1. Isolation & Compliance Statement
+
+This evaluation was executed under strict cold isolation constraints. No external knowledge bases, adjacent experiments, author registries, or model-pretraining-specific shortcuts were consulted. All reasoning is derived exclusively from the provided files:
+*   `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+*   `experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh`
+*   `experiments/004/Q004_20_LABEL_ASSIST_004.axh`
+
+All findings are documented directly within this raw, unsummarized verification record.
+
+---
+
+## Part I: Retrieval Metadata Analysis (Label-Assisted Channel)
+
+The label-assisted channel retrieves candidate pairs using the metadata supplied in `Q004_20_LABEL_ASSIST_004.axh`. 
+
+```text
+[
+  (^0 [
+    ^6000 ^6001 ^6006
+  ])
+]
+
+[
+  (^6006 #2001 ^6000)
+  (^6006 #2002 ^6001)
+  (^6006 #2003 ^6000)
+]
+```
+
+### Analysis of Nominally Mapped Associations:
+*   **Object `#2001`** is mapped to label **`^6000`** via relation `^6006`.
+*   **Object `#2002`** is mapped to label **`^6001`** via relation `^6006`.
+*   **Object `#2003`** is mapped to label **`^6000`** via relation `^6006`.
+
+### Candidate Pair Identified by Label Equality:
+*   **Target Pair:** `(#2001, #2003)`
+    *   *Reasoning:* Both objects share the exact nominal value **`^6000`** under the association relation `^6006`.
+*   **Separated Candidate:** Object `#2002` is excluded from the primary retrieval group because its association label is `^6001`.
+
+---
+
+## Part II: Structural Corpus Analysis & Ground-Truth Verification (Native Evidence)
+
+This section performs an independent, blind evaluation of the true relational topologies within the structural corpus (`Q004_20_STRUCTURE_CORPUS_004.axh`) under the namespace of relation `^6005`.
+
+```text
+[
+  (^6005 #2001 [
+    (1 2)
+    (2 3)
+  ])
+]
+
+[
+  (^6005 #2002 [
+    (10 11)
+    (11 12)
+  ])
+]
+
+[
+  (^6005 #2003 [
+    (20 21)
+    (20 22)
+  ])
+]
+```
+
+### 1. Structural Decomposition of Object `#2001`
+*   **Scope:** `[(1 2) (2 3)]`
+*   **Local Identities:** `{1, 2, 3}`
+*   **Ordered Incidence Tuples:**
+    1.  `(1 2)` — Directed edge from `1` to `2`.
+    2.  `(2 3)` — Directed edge from `2` to `3`.
+*   **Local Degree Profiles:**
+    *   Identity `1`: Out-degree = 1, In-degree = 0 (Source)
+    *   Identity `2`: Out-degree = 1, In-degree = 1 (Intermediate)
+    *   Identity `3`: Out-degree = 0, In-degree = 1 (Sink)
+*   **Relational Topology:** Directed linear path of length 2 (`1 -> 2 -> 3`).
+
+### 2. Structural Decomposition of Object `#2003`
+*   **Scope:** `[(20 21) (20 22)]`
+*   **Local Identities:** `{20, 21, 22}`
+*   **Ordered Incidence Tuples:**
+    1.  `(20 21)` — Directed edge from `20` to `21`.
+    2.  `(20 22)` — Directed edge from `20` to `22`.
+*   **Local Degree Profiles:**
+    *   Identity `20`: Out-degree = 2, In-degree = 0 (Root/Source)
+    *   Identity `21`: Out-degree = 0, In-degree = 1 (Leaf/Sink)
+    *   Identity `22`: Out-degree = 0, In-degree = 1 (Leaf/Sink)
+*   **Relational Topology:** Directed branching fork/star graph with center `20`.
+
+### 3. Verification of the Label-Assisted Candidate `(#2001, #2003)`
+*   **Comparison Task:** Match `1 -> 2 -> 3` (Path) to `21 <- 20 -> 22` (Fork).
+*   **Invariant Check:** 
+    *   Sorted Out-Degree Multiset of `#2001`: `[0, 1, 1]`
+    *   Sorted Out-Degree Multiset of `#2003`: `[0, 0, 2]`
+*   **Evaluation:** The degree invariants do not match. The maximum out-degree of `#2001` is $1$, while the maximum out-degree of `#2003` is $2$. There is no bijective node mapping $f: \{1,2,3\} \to \{20,21,22\}$ that can map the edges of `#2001` to the edges of `#2003` while preserving ordered incidence.
+*   **Verification Verdict:** **NOT ISOMORPHISM (False Positive).** The pair retrieved by label-assisted channel shares no structural isomorphism.
+
+---
+
+## Part III: Isomorphism Verification & Mapping Certificate
+
+An independent, label-blind search of the entire structure corpus is performed to find structural correspondences.
+
+### 1. Structural Decomposition of Object `#2002`
+*   **Scope:** `[(10 11) (11 12)]`
+*   **Local Identities:** `{10, 11, 12}`
+*   **Ordered Incidence Tuples:**
+    1.  `(10 11)` — Directed edge from `10` to `11`.
+    2.  `(11 12)` — Directed edge from `11` to `12`.
+*   **Local Degree Profiles:**
+    *   Identity `10`: Out-degree = 1, In-degree = 0 (Source)
+    *   Identity `11`: Out-degree = 1, In-degree = 1 (Intermediate)
+    *   Identity `12`: Out-degree = 0, In-degree = 1 (Sink)
+*   **Relational Topology:** Directed linear path of length 2 (`10 -> 11 -> 12`).
+
+### 2. Comparison of `(#2001, #2002)`
+*   Both structures are topologically identical: directed linear paths of length 2.
+*   **Isomorphism Search:** We construct a bijection $f$ from local identities of `#2001` to local identities of `#2002`.
+*   **Local Identity Map:**
+    *   $f(1) = 10$  (Source to Source)
+    *   $f(2) = 11$  (Intermediate to Intermediate)
+    *   $f(3) = 12$  (Sink to Sink)
+*   **Incidence Validation:**
+    *   Tuple $(1\ 2) \in \#2001 \implies (f(1)\ f(2)) = (10\ 11) \in \#2002$  *(Preserved)*
+    *   Tuple $(2\ 3) \in \#2001 \implies (f(2)\ f(3)) = (11\ 12) \in \#2002$  *(Preserved)*
+*   **Reflection Validation:** No other edges exist in either `#2001` or `#2002`. Thus, the relation is fully reflected.
+*   **Automorphisms:** Because the path is asymmetric (directed with distinct source and sink), this is the unique valid bijective mapping between the two structures.
+*   **Verification Verdict:** **EXACT ISOMORPHISM (False Negative of Label Channel).**
+
+---
+
+## Part IV: Policy Comparison, Evaluation & Constitutional Verdict
+
+### 1. Soundness of Label Equality
+*   **Verdict:** Label equality in `^6006` is **neither a sound candidate relation nor a proof of structural correspondence**.
+*   **Proof from Fixture:**
+    1.  **False Positive:** Object `#2001` and `#2003` share the label `^6000` but are structurally non-isomorphic (a Path of length 2 vs. a branching Fork).
+    2.  **False Negative:** Object `#2001` and `#2002` have different labels (`^6000` and `^6001`) but are topologically identical (Isomorphic Paths of length 2).
+
+### 2. Channel Priority Comparison
+
+| Dimension | Label-Assisted Channel Priority | Native Structural Evidence Verification |
+| :--- | :--- | :--- |
+| **Primary Driver** | Nominal similarity (metadata tags, labels, classifications) | Relational topology (ordered incidence, scopes, degrees) |
+| **Sensitivity** | Extremely sensitive to naming/administrative changes | Immune to alpha-renaming or local naming variations |
+| **Error Modes** | High risk of false positives (different shapes, same label) and false negatives (isomorphic shapes, different labels) | Exact and sound; eliminates nominal noise |
+| **Verification Value**| Provides a weak retrieval hint only; carries no semantic weight | Produces mathematical, independently checkable witnesses |
+
+### 3. Constitutional Alignment
+This experiment validates the following core constraints of the IsoGraph Constitutional Discipline (Sections 2, 18, and 44):
+*   `same navigation label != same qualified semantic revision` — Names change; shapes endure.
+*   `Labels are downstream handles. They are not evidence for their own structural meaning.`
+*   `surface != primitive` — Visual similarities in metadata schemas do not alter the underlying hypergraph-like substrate.
+
+---
+
+## Part V: Native Representability and ISO Witness Records
+
+To satisfy **Gate E1NR** (Native Record Authority), all policies, positive witnesses, and negative separating certificates must be recorded as native IsoGraph structure.
+
+### 1. Native Comparison Policy Record
+This object defines the strict target parameters and invariants requested for the comparison stage under V0 view.
+
+```text
+[
+  (^comparison_policy [
+    (^target_layer ^serialized_native_graph)
+    (^view_policy ^V0)
+    (^included_relation_signature [^6005])
+    (^allowed_transformation_authority [^N0 ^N1])
+    (^relation_kinds_sought [^ISOMORPHISM])
+  ])
+]
+```
+
+### 2. Native Positive Isomorphism Witness Certificate (`#2001` <-> `#2002`)
+This verified certificate represents the exact node-to-node and edge-to-edge mappings establishing structural equivalence, meeting the requirements of Section 29.
+
+```text
+[
+  (^witness [
+    (^object_A #2001)
+    (^object_B #2002)
+    (^target_layer ^serialized_native_graph)
+    (^view_policy ^V0)
+    (^relation_kind ^ISOMORPHISM)
+    (^node_correspondence [
+      (1 10)
+      (2 11)
+      (3 12)
+    ])
+    (^edge_correspondence [
+      ((1 2) (10 11))
+      ((2 3) (11 12))
+    ])
+    (^common_core [
+      (1 2)
+      (2 3)
+    ])
+    (^pair_residuals [
+      (^residual_A [])
+      (^residual_B [])
+    ])
+    (^status ^verified)
+  ])
+]
+```
+
+### 3. Native Separating Certificate (`#2001` <-> `#2003`)
+This certificate proves structural non-isomorphism for the pair retrieved by the label-assisted channel by documenting a separating invariant mismatch (out-degree sequence), satisfying Section 25.
+
+```text
+[
+  (^separating_certificate [
+    (^object_A #2001)
+    (^object_B #2003)
+    (^target_layer ^serialized_native_graph)
+    (^view_policy ^V0)
+    (^relation_kind ^ISOMORPHISM)
+    (^invariant_mismatch [
+      (^invariant_kind ^out_degree_multiset)
+      (^value_A [1 1 0])
+      (^value_B [2 0 0])
+    ])
+    (^status ^certified_non_isomorphic)
+  ])
+]
+```
+
+---
+### Verification Verdict Summary:
+*   **Label-Assisted Candidate `(#2001, #2003)`:** **REJECTED** (Topological Mismatch).
+*   **Native Structural Search Candidate `(#2001, #2002)`:** **VERIFIED** (Exact Isomorphism under V0).
+*   **Conclusion:** Nominal labels are non-evidential for structural correctness. Structural discovery must operate purely from native topological structures.

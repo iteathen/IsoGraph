@@ -1,0 +1,329 @@
+# ISOGRAPH EXPERIMENT 004 — GEMINI ISOLATED COLD RUN
+**Run:** RUN-D19  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** `gemini-3.5-flash`  
+**Status:** COMPLETE RAW REPORT  
+
+---
+
+## 0. Constitutional Safeguards & Interpretation Barriers
+
+In accordance with Section 0 and Section 34 of `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`, this run enforces strict isolation. No external database, training labels, or model-specific semantic shortcuts are utilized. The interpretation barriers are preserved as follows:
+
+*   **Surface syntax != irreducible substrate:** The raw textual representations in the `.axh` file are treated strictly as serialized manifestations of an underlying scoped relational hypergraph.
+*   **Structural identity != member occurrence:** Bare integers (`1`, `2`, `10`, etc.) are recognized as structural identities. The incidences of ordered tuples (`(1 2)`) within the scopes are distinct member occurrences.
+*   **Factorization != normalization:** Mapping of nodes represents representation-only normalization (N1), whereas isolating the recurring structural schema represents qualified decomposition/factorization (D).
+*   **One valid factorization != canonical factorization:** The derived schema represents a valid structural class, not a uniquely privileged canonical form unless justified by an explicit metric.
+*   **Ambiguity stays ambiguous:** Any failure to resolve properties uniquely is preserved and reported as an unresolved condition.
+
+---
+
+## 1. Structural Comparison of Positives (Task 1)
+
+We analyze the three scopes selected by the stable label/identifier `^5901` in `Q004_19_NOVEL_CLASS_004.axh`.
+
+### 1.1 Scope `^5901 #1`
+```text
+[
+  (1 2)
+  (1 3)
+  (2 4)
+  (3 4)
+]
+```
+*   **Structural Identities (Nodes):** $\{1, 2, 3, 4\}$ (Cardinality: 4)
+*   **Member Occurrences (Edges):** Four ordered incidence pairs:
+    *   `(1 2)`: Directional edge from identity `1` to identity `2`.
+    *   `(1 3)`: Directional edge from identity `1` to identity `3`.
+    *   `(2 4)`: Directional edge from identity `2` to identity `4`.
+    *   `(3 4)`: Directional edge from identity `3` to identity `4`.
+*   **Topological Role Characterization:**
+    *   Identity `1` has an in-degree of $0$ and out-degree of $2$. It functions as a **root/source** (diverging split point).
+    *   Identities `2` and `3` each have an in-degree of $1$ and out-degree of $1$. They function as **intermediate parallel branches**.
+    *   Identity `4` has an in-degree of $2$ and out-degree of $0$. It functions as a **sink/merge point** (reconvergence node).
+    *   This represents a directed acyclic "diamond" graph (diverging-converging fork-join).
+
+### 1.2 Scope `^5901 #2`
+```text
+[
+  (10 11)
+  (10 12)
+  (11 13)
+  (12 13)
+]
+```
+*   **Structural Identities (Nodes):** $\{10, 11, 12, 13\}$ (Cardinality: 4)
+*   **Topological Role Characterization:**
+    *   Identity `10` functions as the **root/source** (out-degree 2, in-degree 0).
+    *   Identities `11` and `12` function as the **intermediate parallel branches** (in-degree 1, out-degree 1).
+    *   Identity `13` functions as the **sink/merge** (in-degree 2, out-degree 0).
+    *   This is structurally isomorphic to `^5901 #1`.
+
+### 1.3 Scope `^5901 #3`
+```text
+[
+  (20 21)
+  (20 22)
+  (21 23)
+  (22 23)
+]
+```
+*   **Structural Identities (Nodes):** $\{20, 21, 22, 23\}$ (Cardinality: 4)
+*   **Topological Role Characterization:**
+    *   Identity `20` functions as the **root/source** (out-degree 2, in-degree 0).
+    *   Identities `21` and `22` function as the **intermediate parallel branches** (in-degree 1, out-degree 1).
+    *   Identity `23` functions as the **sink/merge** (in-degree 2, out-degree 0).
+    *   This is structurally isomorphic to `^5901 #1` and `^5901 #2`.
+
+---
+
+## 2. Explicit Isomorphism Mappings (Task 2)
+
+Under the closed structural comparison view (**V0**), local structural identities may bijectively rename while preserving all ordered incidences and member occurrences.
+
+### 2.1 Mappings from `^5901 #1` (Domain) to `^5901 #2` (Codomain)
+
+Due to structural symmetry, there are exactly **two** distinct valid bijective isomorphism witnesses:
+
+#### Witness $\phi_{1 \to 2}^A$ (Direct Map)
+*   **Node Correspondence:**
+    *   `1` $\mapsto$ `10`
+    *   `2` $\mapsto$ `11`
+    *   `3` $\mapsto$ `12`
+    *   `4` $\mapsto$ `13`
+*   **Edge/Incidence Preservation Verification:**
+    *   `(1 2)` $\mapsto$ `(\phi(1) \phi(2))` = `(10 11)` [Preserved]
+    *   `(1 3)` $\mapsto$ `(\phi(1) \phi(3))` = `(10 12)` [Preserved]
+    *   `(2 4)` $\mapsto$ `(\phi(2) \phi(4))` = `(11 13)` [Preserved]
+    *   `(3 4)` $\mapsto$ `(\phi(3) \phi(4))` = `(12 13)` [Preserved]
+
+#### Witness $\phi_{1 \to 2}^B$ (Symmetric Map)
+*   **Node Correspondence:**
+    *   `1` $\mapsto$ `10`
+    *   `2` $\mapsto$ `12`
+    *   `3` $\mapsto$ `11`
+    *   `4` $\mapsto$ `13`
+*   **Edge/Incidence Preservation Verification:**
+    *   `(1 2)` $\mapsto$ `(\phi(1) \phi(2))` = `(10 12)` [Preserved]
+    *   `(1 3)` $\mapsto$ `(\phi(1) \phi(3))` = `(10 11)` [Preserved]
+    *   `(2 4)` $\mapsto$ `(\phi(2) \phi(4))` = `(12 13)` [Preserved]
+    *   `(3 4)` $\mapsto$ `(\phi(3) \phi(4))` = `(11 13)` [Preserved]
+
+---
+
+### 2.2 Mappings from `^5901 #1` (Domain) to `^5901 #3` (Codomain)
+
+Similarly, there are exactly **two** distinct valid bijective isomorphism witnesses:
+
+#### Witness $\psi_{1 \to 3}^A$ (Direct Map)
+*   **Node Correspondence:**
+    *   `1` $\mapsto$ `20`
+    *   `2` $\mapsto$ `21`
+    *   `3` $\mapsto$ `22`
+    *   `4` $\mapsto$ `23`
+*   **Edge/Incidence Preservation Verification:**
+    *   `(1 2)` $\mapsto$ `(\psi(1) \psi(2))` = `(20 21)` [Preserved]
+    *   `(1 3)` $\mapsto$ `(\psi(1) \psi(3))` = `(20 22)` [Preserved]
+    *   `(2 4)` $\mapsto$ `(\psi(2) \psi(4))` = `(21 23)` [Preserved]
+    *   `(3 4)` $\mapsto$ `(\psi(3) \psi(4))` = `(22 23)` [Preserved]
+
+#### Witness $\psi_{1 \to 3}^B$ (Symmetric Map)
+*   **Node Correspondence:**
+    *   `1` $\mapsto$ `20`
+    *   `2` $\mapsto$ `22`
+    *   `3` $\mapsto$ `21`
+    *   `4` $\mapsto$ `23`
+*   **Edge/Incidence Preservation Verification:**
+    *   `(1 2)` $\mapsto$ `(\psi(1) \psi(2))` = `(20 22)` [Preserved]
+    *   `(1 3)` $\mapsto$ `(\psi(1) \psi(3))` = `(20 21)` [Preserved]
+    *   `(2 4)` $\mapsto$ `(\psi(2) \psi(4))` = `(22 23)` [Preserved]
+    *   `(3 4)` $\mapsto$ `(\psi(3) \psi(4))` = `(21 23)` [Preserved]
+
+---
+
+## 3. Derivation of Reusable Common Structural Schema (Task 3 & 6)
+
+We derive a new structural class from these positive instances. This schema represents the common topological structure natively and without relying on pre-existing class names.
+
+### NATIVE CANDIDATE CLASS HYPOTHESIS
+
+```text
+[
+  (^class_namespace ^5900)
+  (^class_label ^novel_diamond_schema)
+  (^class_revision #1)
+
+  (^schema_graph [
+    (?A ?B)
+    (?A ?C)
+    (?B ?D)
+    (?C ?D)
+  ])
+
+  (^parameter_slots [
+    ?A
+    ?B
+    ?C
+    ?D
+  ])
+
+  (^ports [
+    (port_source ?A)
+    (port_sink   ?D)
+  ])
+
+  (^rigid_roles [
+    ?A
+    ?D
+  ])
+
+  (^mappable_roles [
+    ?B
+    ?C
+  ])
+
+  (^positive_constraints [
+    ~(?A == ?B)
+    ~(?A == ?C)
+    ~(?A == ?D)
+    ~(?B == ?C)
+    ~(?B == ?D)
+    ~(?C == ?D)
+  ])
+
+  (^negative_constraints [
+    ;; Ensures exact closed-world arity under V0 closed structural views
+    ;; No extra edges involving ?A, ?B, ?C, or ?D may exist within the boundary
+  ])
+
+  (^residual_policy [
+    (allowed_residual #0)
+  ])
+
+  (^qualification_status ^CANDIDATE)
+]
+```
+
+---
+
+## 4. Automorphism and Symmetric Roles (Task 4)
+
+The candidate schema contains a non-trivial structural automorphism group of order 2 ($S_2$).
+
+*   **Symmetric Roles:** The variables `?B` and `?C` (the parallel intermediate branches) are mutually symmetric.
+*   **Automorphism Proof:** Let $T: \{?A, ?B, ?C, ?D\} \to \{?A, ?B, ?C, ?D\}$ be a mapping defined as:
+    *   $T(?A) = ?A$
+    *   $T(?B) = ?C$
+    *   $T(?C) = ?B$
+    *   $T(?D) = ?D$
+    
+    Applying $T$ to the schema edge set $E = \{(?A \ ?B), (?A \ ?C), (?B \ ?D), (?C \ ?D)\}$:
+    $$T(E) = \{(?A \ ?C), (?A \ ?B), (?C \ ?D), (?B \ ?D)\}$$
+    Since unordered scope membership disregards internal serialization order, $T(E) \equiv E$. Thus, $T$ is a valid automorphism.
+*   **Rigid Roles:** The variable `?A` (source) and `?D` (sink) are fixed under all automorphisms ($T(?A) = ?A$ and $T(?D) = ?D$) because their in-degrees and out-degrees are topologically distinct ($0/2$ and $2/0$ respectively), preventing any valid bijection to other nodes.
+
+---
+
+## 5. Mismatch Analysis of Scope `^5902 #1` (Task 5)
+
+We test the scope `^5902 #1` against the derived candidate schema:
+```text
+^5902 #1 [
+  (30 31)
+  (30 32)
+  (31 33)
+  (32 34)
+]
+```
+
+### 5.1 Isomorphism Failure Proof
+Let us attempt to establish a bijective mapping $\chi$ from the parameter slots of `^novel_diamond_schema` $\{?A, ?B, ?C, ?D\}$ to the structural identities of `^5902 #1` $\{30, 31, 32, 33, 34\}$:
+
+1.  **Source Role Mapping:** $?A$ is the unique node with in-degree 0 and out-degree 2. In `^5902 #1`, only identity `30` has out-degree 2 and in-degree 0. Thus, we must map:
+    $$\chi(?A) = 30$$
+2.  **Intermediate Role Mapping:** $?B$ and $?C$ are targets of edges from $?A$. In `^5902 #1`, the targets of `30` are `31` and `32`. Under automorphism symmetry, we can assign:
+    $$\chi(?B) = 31, \quad \chi(?C) = 32$$
+3.  **Sink Role Mapping Constraint:** The schema requires a single node $?D$ such that there exist edges $(?B \ ?D)$ and $(?C \ ?D)$. This implies that under $\chi$, there must exist edges $(\chi(?B) \ \chi(?D))$ and $(\chi(?C) \ \chi(?D))$, which translates to:
+    $$(31 \ \chi(?D)) \quad \text{and} \quad (32 \ \chi(?D))$$
+    Looking at `^5902 #1`:
+    *   The only edge starting from `31` is `(31 33)`. Therefore, we must have $\chi(?D) = 33$.
+    *   The only edge starting from `32` is `(32 34)`. Therefore, we must have $\chi(?D) = 34$.
+    
+    This forces the contradiction:
+    $$33 = 34$$
+    However, `33` and `34` are distinct, non-equal structural identities within the scope of `^5902 #1`. Thus, **no bijective mapping exists**.
+
+---
+
+### 5.2 Two-Stage Complete Item Accounting (Section 30 Invariant)
+
+To characterize this failure rigorously, we construct a pairwise comparison between `^5901 #1` (as instance $A$) and `^5902 #1` (as instance $B$). We compute the maximal common core $C$ and identify the exact residuals.
+
+#### Common Core $C$ (Maximum Induced Isomorphism):
+*   **Common Structure:** Directed tree branching from root to two intermediate nodes, with only one branch converging.
+    $$C = [ (?A \ ?B), (?A \ ?C), (?B \ ?D) ]$$
+*   **Mapping to $A$ (`^5901 #1`):**
+    *   $?A \mapsto 1$, $?B \mapsto 2$, $?C \mapsto 3$, $?D \mapsto 4$
+    *   Mapped Edges: `(1 2)`, `(1 3)`, `(2 4)`
+*   **Mapping to $B$ (`^5902 #1`):**
+    *   $?A \mapsto 30$, $?B \mapsto 31$, $?C \mapsto 32$, $?D \mapsto 33$
+    *   Mapped Edges: `(30 31)`, `(30 32)`, `(31 33)`
+
+#### Complete Accounting Breakdown:
+
+| Item Role | Occurrence / Structure in $A$ (`^5901 #1`) | Occurrence / Structure in $B$ (`^5902 #1`) |
+| :--- | :--- | :--- |
+| **Mapped Common Structure** | `(1 2)`, `(1 3)`, `(2 4)` | `(30 31)`, `(30 32)`, `(31 33)` |
+| **Pairwise Residual (A-Only)** | `(3 4)` (Edge) | *None* |
+| **Pairwise Residual (B-Only)** | *None* | `34` (Identity), `(32 34)` (Edge) |
+| **Boundary-Cut/Port Glues** | *None* | *None* |
+| **Excluded-by-View** | *None* | *None* |
+| **Projected/Collapsed** | *None* | *None* |
+
+*   **Structural Reason for Mismatch:** The pairwise residual shows that `^5901 #1` has a converging step `(3 4)` that `^5902 #1` lacks. Conversely, `^5902 #1` has a dangling branch terminating in an isolated node `34` through edge `(32 34)`. This confirms that `^5902 #1` is a divergent branch topology that fails the convergence requirement of the diamond schema.
+
+---
+
+## 6. Simplicity & Minimality Metric (Task 8)
+
+We do not claim that this schema is globally the "simplest" or "minimal" in an absolute sense, as no universal simplicity metric is defined across all structural representations (Section 21.5 of Core Spec).
+
+However, we declare a local lexicographical metric of topological size:
+$$\mathcal{M}(S) = (\mathcal{V}, \mathcal{E})$$
+where:
+*   $\mathcal{V} = \text{number of parameterized node slots}$
+*   $\mathcal{E} = \text{number of ordered edge relations}$
+
+For the class of directed acyclic graph structures with diverging-converging behavior (diamond graphs):
+1.  **Divergence** requires at least one source and two intermediate nodes ($\mathcal{V} \ge 3$, $\mathcal{E} \ge 2$).
+2.  **Convergence** requires that the paths from these two intermediate nodes merge at a sink node distinct from the intermediates ($\mathcal{V} \ge 4$, $\mathcal{E} \ge 4$).
+
+Under the metric $\mathcal{M}(S)$, the candidate `^novel_diamond_schema` has the valuation:
+$$\mathcal{M}(\text{^novel_diamond_schema}) = (4, 4)$$
+This represents the **unique minimal boundary** for any non-trivial diverging-converging directed diamond topology under this metric.
+
+---
+
+## 7. Promotion Obstacles & Held-out/Adversarial Requirements (Task 7)
+
+In strict compliance with Section 28 of `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` and Section 14 of `STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`, the new candidate class `^novel_diamond_schema` is retained at the **`CANDIDATE`** level. 
+
+It **cannot** be promoted to a qualified reusable class based on these motivating examples alone. The following qualification gates are pending:
+
+1.  **Evidence Isolation and Independent Domain Verification:** The three positive instances (`^5901 #1`, `#2`, and `#3`) are present in a single test artifact (`Q004_19_NOVEL_CLASS_004.axh`), which represents a single domain partition. We require at least two independently sourced instances from completely distinct, non-overlapping domains (e.g., database transaction joins and pipeline routing topologies).
+2.  **Adversarial Negatives Suite:** We must subject the candidate to a test suite of structural "near misses" to prove non-vacuity and selectivity:
+    *   **The Un-converged Branch Negative (Tested here as `^5902 #1`):** Verifies the sink convergence constraint.
+    *   **The Single-Path Negative:** A 4-node path $A \to B \to C \to D$ with 3 edges, verifying that any match requires parallel branching.
+    *   **The Asymmetric Branch Negative:** A structure where one side of the fork has more hops than the other (e.g., $A \to B \to D$ and $A \to C_1 \to C_2 \to D$).
+    *   **The Cyclic Diamond Negative:** A structural diamond with back-edges (e.g., $D \to A$), verifying the directed-acyclic assumption.
+    *   **The Cross-Edge Negative:** A diamond with an extra edge between the intermediate nodes (e.g., $B \to C$).
+3.  **Independent Machine Verification:** The structural membership witness for each positive instance must be verified by a deterministic mechanical check program, independent of the candidate generation path.
+
+---
+
+## 8. Final Verdict
+
+*   **Isomorphism Verdict (`^5901 #1` $\leftrightarrow$ `^5901 #2`):** `ISOMORPHISM` verified (2 distinct bijective witnesses recorded).
+*   **Isomorphism Verdict (`^5901 #1` $\leftrightarrow$ `^5901 #3`):** `ISOMORPHISM` verified (2 distinct bijective witnesses recorded).
+*   **Isomorphism Verdict (`^5901 #1` $\leftrightarrow$ `^5902 #1`):** `CERTIFIED_NON_ISOMORPHIC` (isomorphism failed due to convergence mismatch; complete item accounting and maximum common core of size $\mathcal{E}=3$ documented).
+*   **Class Status:** `NEW_CANDIDATE_CLASS` documented natively as `^novel_diamond_schema` under namespace `^5900`. Promotion status: **`CANDIDATE`** (held-out validation and independent domain testing are required).

@@ -1,0 +1,147 @@
+# IsoGraph Experiment 004 — Q004-17 Base Native-Record Decode Report
+
+**Run:** RUN-D17  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** gemini-3.5-flash  
+**Status:** Complete Raw Decode Report  
+
+---
+
+### 1. Record-Type Identities (Operands of `^4705` Schema-Field Declarations)
+
+The schema declarations use the relation `^4705` as a constructor in the form:
+`(^4705 TYPE_ID FIELD_SCOPE)`
+
+The three record-type identities that act as the second elements (operands/types) of these declarations are:
+1. **`^4702`**
+2. **`^4703`**
+3. **`^4704`**
+
+---
+
+### 2. Declared Field Scopes for Each Type
+
+For each of the three record types identified, the exact direct member stable labels (`^n`) in its declared field scope `[...]` are:
+
+*   **Type `^4702`:**
+    *   `^4710`
+    *   `^4711`
+    *   `^4712`
+    *   `^4713`
+    *   `^4714`
+    *   `^4721`
+
+*   **Type `^4703`:**
+    *   `^4720`
+    *   `^4715`
+    *   `^4716`
+    *   `^4717`
+    *   `^4718`
+    *   `^4721`
+
+*   **Type `^4704`:**
+    *   `^4720`
+    *   `^4719`
+    *   `^4721`
+
+---
+
+### 3. Declared Instances (`(^4700 INSTANCE TYPE)`)
+
+The instances declared in the payload using the `^4700` relation are:
+1. **Instance:** `5000` | **Type:** `^4702`
+2. **Instance:** `5001` | **Type:** `^4703`
+3. **Instance:** `5002` | **Type:** `^4704`
+
+---
+
+### 4. Instance Field-Value Relations (`(^4701 INSTANCE FIELD VALUE)`)
+
+The exact field-value assignments for each instance are:
+
+#### Instance `5000`
+*   `(^4701 5000 ^4710 6000)`
+*   `(^4701 5000 ^4711 6001)`
+*   `(^4701 5000 ^4712 [ (7000 7001) (7000 7002) ])`
+*   `(^4701 5000 ^4713 6002)`
+*   `(^4701 5000 ^4714 6003)`
+*   `(^4701 5000 ^4721 6900)`
+
+#### Instance `5001`
+*   `(^4701 5001 ^4720 5000)`
+*   `(^4701 5001 ^4715 6100)`
+*   `(^4701 5001 ^4716 [ (8000 8001) (8002 8003) ])`
+*   `(^4701 5001 ^4717 [ (8100 8101) ])`
+*   `(^4701 5001 ^4718 [ (8200 8201) (8202 8203) ])`
+*   `(^4701 5001 ^4721 6901)`
+
+#### Instance `5002`
+*   `(^4701 5002 ^4720 5001)`
+*   `(^4701 5002 ^4719 6200)`
+*   `(^4701 5002 ^4721 6902)`
+
+---
+
+### 5. Nested Scope Direct Ordered-Incidence Members
+
+The following fields contain a scope (`[...]`) as their value. The direct ordered-incidence members `(...)` of these scopes are reproduced below:
+
+*   **Instance `5000`, Field `^4712`:**
+    1. `(7000 7001)`
+    2. `(7000 7002)`
+
+*   **Instance `5001`, Field `^4716`:**
+    1. `(8000 8001)`
+    2. `(8002 8003)`
+
+*   **Instance `5001`, Field `^4717`:**
+    1. `(8100 8101)`
+
+*   **Instance `5001`, Field `^4718`:**
+    1. `(8200 8201)`
+    2. `(8202 8203)`
+
+---
+
+### 6. Reference Chain Tracing (`^4720`)
+
+The reference field `^4720` establishes a directed acyclic dependency chain between the instances:
+
+$$\text{Instance } 5002 \xrightarrow{\wedge 4720} \text{Instance } 5001 \xrightarrow{\wedge 4720} \text{Instance } 5000$$
+
+*   Instance `5002` references Instance `5001` via: `(^4701 5002 ^4720 5001)`
+*   Instance `5001` references Instance `5000` via: `(^4701 5001 ^4720 5000)`
+*   Instance `5000` terminates the chain (it has no field `^4720` in its declared field-scope or instance values).
+
+---
+
+### 7. Physical Presence of Mapping/Residual Topology vs. External Sidecars
+
+*   **Physical Presence of Topology:** The mapping-like and residual-like substructures are **completely physically present** within the native payload. The associations (such as the pair relations inside the scopes under fields `^4712`, `^4716`, `^4717`, `^4718`) and the hierarchical link chains are fully explicitly structured using raw native identifiers, tuple structures, and scopes. No external human/JSON sidecar is required to reconstruct the exact structural connectivity, nodes, edges, or structural boundaries.
+*   **External Semantic Interpretation:** While the *topology* is self-contained, recovering the *human-domain semantics* (e.g., translating `^4712` to "node-correspondence" or `^4716` to "common-core") would require an external glossary or schema mapping if those semantic mappings are not themselves modeled inside the native namespace. However, the raw structural logic remains 100% self-contained and recoverable without external assistance.
+
+---
+
+### 8. Necessity of Human Names for `^n` Roles to Reconstruct the Graph
+
+**No.** Human names for `^n` field roles are **not** necessary to reconstruct the exact record graph. 
+
+The stable labels (`^4700` through `^4721`) serve as rigid, unique structural identifiers within this namespace. An agent or mechanical decoder can parse, trace, index, and verify the entire topology, its types, its instances, its nested scopes, and its reference chains using only the raw numerical labels and native structural boundaries.
+
+---
+
+### 9. Gap Analysis: What This Base Fixture Does NOT Establish About the E1NR Burden
+
+The E1NR gate (Native-Record Authority Audit) mandates that every load-bearing policy, schema, witness, certificate, and result is native and reconstructable rather than relying on external sidecar authority. This specific base fixture (`Q004_17_NATIVE_RECORDS_004.axh`) fails to establish the full E1NR burden in the following ways:
+
+1.  **Lack of Self-Documenting Meta-Schemas:** The fixture does not natively define or map its own types (`^4702`, `^4703`, `^4704`) and fields to standard Core Specification concepts (such as `comparison policy`, `witness`, `common core`, or `residual`). It relies on implicit structural correspondence rather than explicit native declarations of role categories.
+2.  **Incomplete E1NR Class Enrolment:** It completely lacks structural representations for other mandatory E1NR components, such as:
+    *   `structural index declarations` (Section 32)
+    *   `negative / separating certificates` (Section 29)
+    *   `optimality certificates` (Section 29)
+    *   `class-membership / class-class witnesses` (Section 26)
+    *   `discovery / verification result records` (Section 29)
+3.  **Absence of Core Policy and Environment Constraints:** The fixture does not represent key structural parameters required by Section 29, such as target layers, view policies, ports/boundaries, N0/N1 rules, or allowed D/E authorities.
+4.  **No Immutable Content Binding (E1REV):** The records do not contain cryptographic content digests or secure bindings to the exact immutable repository/blob revisions of the schemas they instantiate.
+5.  **No Namespace Separation or Port Contracts:** There are no boundary-cut, port-role, renaming, or cross-namespace bridge structures represented, leaving hygienic multi-document partitioning unverified.
+6.  **Static Data Only (No Verification Execution Proofs):** The fixture is a static data serialization. It does not establish how a mechanical verifier natively checks structural obligations (such as checking matching constraints, negative application conditions, or checking mathematical invariants) over these records.

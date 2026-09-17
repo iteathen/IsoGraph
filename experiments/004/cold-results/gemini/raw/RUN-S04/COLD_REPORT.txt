@@ -1,0 +1,286 @@
+# ISOGRAPH EXPERIMENT 004 — RUN-S04 AUDIT REPORT
+**Focus:** Two-Stage Residual and Full-Source Reconstruction Accounting  
+**Substrate Version:** Draft 0.15 Consolidated Candidate  
+**Status:** COMPLETE RAW AUDIT REPORT  
+
+---
+
+## 1. Executive Summary & Verification Context
+
+This report provides the complete, isolated verification and reconstruction audit for Run `RUN-S04`, operating under the strict parameters of `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` and the test schema provided in `experiments/004/Q004_S04_TWO_STAGE_RESIDUAL.isg`. 
+
+The core target of this experiment is to evaluate the fundamental architectural distinction:
+$$\text{Source-Local } D \text{ Residual} \neq \text{Pairwise Comparison Residual}$$
+
+This boundary prevents information leakage, enforces strict isolation between decomposition transformations and pairwise matching, and ensures that reconstruction claims are verified step-by-step without merging independent administrative layers.
+
+---
+
+## 2. Extraction and Reconstruction of Source 1000 (A-Side)
+
+### 2.1 Entity Extraction
+Based on the frozen test-record roles, the native elements from the source-local data of A-side are extracted as follows:
+
+*   **Source Object (`1000`) Body (`^6400`):**
+    ```text
+    [
+      (^7000 1 2)
+      (^7001 2 3)
+      (^7010 3 4)
+    ]
+    ```
+*   **Comparison-Stage Object (`1200`) Body (`^6402`):**
+    ```text
+    [
+      (^7000 1 2)
+      (^7001 2 3)
+    ]
+    ```
+*   **D Record (`1100`) (`^6401`):**
+    ```text
+    (^6401 1100 1000 1200 #1)
+    ```
+    *   *Source ID:* `1000`
+    *   *Target ID:* `1200`
+    *   *Exactness Certificate:* `#1` (Exact/reconstructable)
+*   **Source-Local Reconstruction Residual (`^6403 1100`):**
+    ```text
+    [
+      (^7010 3 4)
+    ]
+    ```
+
+### 2.2 Local Reconstruction Verification (Source 1000)
+To verify the exactness certificate (`#1`), we perform the local reconstruction of the source object $S_{1000}$ from the comparison-stage target $C_{1200}$ and the local residual $R_{D(1100)}$:
+
+$$\text{Reconstructed } S_{1000} = C_{1200} \uplus R_{D(1100)}$$
+
+Substituting the extracted native scopes:
+$$\text{Reconstructed } S_{1000} = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3) ] \uplus [ (\text{^}7010\ 3\ 4) ]$$
+$$\text{Reconstructed } S_{1000} = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3)\ (\text{^}7010\ 3\ 4) ]$$
+
+**Verdict:** **SUCCESS**. The reconstructed structure matches the original Source `1000` body identically. The exactness assertion `#1` is verified.
+
+---
+
+## 3. Extraction and Reconstruction of Source 2000 (B-Side)
+
+### 3.1 Entity Extraction
+The native elements from the source-local data of B-side are extracted as follows:
+
+*   **Source Object (`2000`) Body (`^6400`):**
+    ```text
+    [
+      (^7000 5 6)
+      (^7002 6 7)
+      (^7011 7 8)
+    ]
+    ```
+*   **Comparison-Stage Object (`2200`) Body (`^6402`):**
+    ```text
+    [
+      (^7000 5 6)
+      (^7002 6 7)
+    ]
+    ```
+*   **D Record (`2100`) (`^6401`):**
+    ```text
+    (^6401 2100 2000 2200 #1)
+    ```
+    *   *Source ID:* `2000`
+    *   *Target ID:* `2200`
+    *   *Exactness Certificate:* `#1` (Exact/reconstructable)
+*   **Source-Local Reconstruction Residual (`^6403 2100`):**
+    ```text
+    [
+      (^7011 7 8)
+    ]
+    ```
+
+### 3.2 Local Reconstruction Verification (Source 2000)
+Evaluating the exactness certificate (`#1`) for the B-side D-transform:
+
+$$\text{Reconstructed } S_{2000} = C_{2200} \uplus R_{D(2100)}$$
+$$\text{Reconstructed } S_{2000} = [ (\text{^}7000\ 5\ 6)\ (\text{^}7002\ 6\ 7) ] \uplus [ (\text{^}7011\ 7\ 8) ]$$
+$$\text{Reconstructed } S_{2000} = [ (\text{^}7000\ 5\ 6)\ (\text{^}7002\ 6\ 7)\ (\text{^}7011\ 7\ 8) ]$$
+
+**Verdict:** **SUCCESS**. The reconstructed structure matches the original Source `2000` body identically. The exactness assertion `#1` is verified.
+
+---
+
+## 4. Pair Record 3000 Audit & Comparison-Stage Reconstruction
+
+### 4.1 Pair Accounting Records Extraction
+The pairwise comparison record `3000` evaluates the relationship between comparison-stage objects $A_{\text{cmp}} = 1200$ and $B_{\text{cmp}} = 2200$:
+
+*   **Pair Comparison Record (`^6404`):** `(^6404 3000 1200 2200)`
+*   **Common Core Body in A-side identities (`^6405 3000`):**
+    ```text
+    [
+      (^7000 1 2)
+    ]
+    ```
+*   **A-to-B Identity Mapping (`^6409 3000`):**
+    ```text
+    [
+      (1 5)
+      (2 6)
+    ]
+    ```
+*   **A-Side Pair Residual (`^6406 3000`):**
+    ```text
+    [
+      (^7001 2 3)
+    ]
+    ```
+*   **B-Side Pair Residual (`^6407 3000`):**
+    ```text
+    [
+      (^7002 6 7)
+    ]
+    ```
+
+### 4.2 Comparison-Stage Reconstruction
+
+#### 4.2.1 Reconstructing A-side Comparison Target (1200)
+The reconstruction of $A_{\text{cmp}}$ uses the pairwise common core (expressed in A-side identities) and the A-side pair residual:
+
+$$A_{\text{cmp\_reconstructed}} = \text{CommonCore}_{A} \uplus \text{PairResidual}_{A}$$
+$$A_{\text{cmp\_reconstructed}} = [ (\text{^}7000\ 1\ 2) ] \uplus [ (\text{^}7001\ 2\ 3) ]$$
+$$A_{\text{cmp\_reconstructed}} = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3) ]$$
+
+**Verdict:** **SUCCESS**. The reconstructed comparison-stage object matches the original comparison object `1200` exactly.
+
+#### 4.2.2 Reconstructing B-side Comparison Target (2200)
+The reconstruction of $B_{\text{cmp}}$ first maps the Common Core into B-side identities using the A-to-B identity mapping $[ (1\ 5)\ (2\ 6) ]$:
+
+$$\text{CommonCore}_{B} = \text{map}_{A \to B}(\text{CommonCore}_{A}) = \text{map}_{A \to B}([ (\text{^}7000\ 1\ 2) ]) = [ (\text{^}7000\ 5\ 6) ]$$
+
+Now, we add the B-side pair residual:
+
+$$B_{\text{cmp\_reconstructed}} = \text{CommonCore}_{B} \uplus \text{PairResidual}_{B}$$
+$$B_{\text{cmp\_reconstructed}} = [ (\text{^}7000\ 5\ 6) ] \uplus [ (\text{^}7002\ 6\ 7) ]$$
+$$B_{\text{cmp\_reconstructed}} = [ (\text{^}7000\ 5\ 6)\ (\text{^}7002\ 6\ 7) ]$$
+
+**Verdict:** **SUCCESS**. The reconstructed comparison-stage object matches the original comparison object `2200` exactly.
+
+---
+
+## 5. Architectural Separation of Residuals (The Isolation Rule)
+
+### 5.1 Mandated Verdict on Merging Residuals
+**Verdict:** **NO.** Under no circumstances may a source-local D residual be merged into the pairwise comparison residual during end-to-end analysis.
+
+### 5.2 Technical Justification
+Section 19.4 of the Core Specification explicitly rules:
+> "The source-local D/extraction records... own their own residual, information loss, provenance, discarded boundary/context... Pairwise comparison operates on the frozen comparison-stage objects... and owns a different accounting layer... A verifier MUST NOT satisfy source reconstruction by merging D-local residuals with pairwise residuals."
+
+1.  **Semantic Boundary Violation:** A-side comparison residual ($R_{\text{pair\_A}}$) contains structure that was *retained* at the comparison stage but *did not match* the B-side under comparison policy. A-side local D residual ($R_{D(A)}$) contains structure that was *stripped* before the comparison stage even existed. Merging them collapses the critical distinction between "unmatched at comparison stage" and "unextracted at factorization stage."
+2.  **Mapping Domain Incoherence:** The pairwise mapping $A \to B$ operates strictly over the comparison-stage objects' identity domain. The source-local residuals may contain arbitrary source-theory structural identities (e.g., node `4` in $S_{1000}$, node `8` in $S_{2000}$) that have never been mapped, registered, or evaluated for cross-domain correspondence. Merging them pollutes the domain of mapped structures.
+3.  **Verification Failure:** Deterministic verification of the comparison-stage witness requires checkable, local mathematical bijections on frozen structures. Merging residuals violates boundary containment and breaks the mechanical checker's ability to verify the pairwise common core on the frozen comparative nodes alone.
+
+---
+
+## 6. End-to-End Reconstruction Pathways
+
+Because we have strictly isolated the transformation stages, the full end-to-end reconstruction of the original source object `1000` is performed cleanly as a sequence of independent algebraic operations, completely decoupled from B-side structures:
+
+```text
+               +-----------------------------+
+               |  Pairwise Common Core (A)   | [^7000 1 2]
+               |       (^6405 3000)          |
+               +--------------+--------------+
+                              |
+                              v  (Add A-side Pair Residual [^7001 2 3])
+               +--------------+--------------+
+               | Comparison-Stage Obj (1200) | [^7000 1 2] & [^7001 2 3]
+               |       (^6402 1200)          |
+               +--------------+--------------+
+                              |
+                              v  (Add Local D Residual [^7010 3 4])
+               +--------------+--------------+
+               |     Original Source (1000)   | [^7000 1 2], [^7001 2 3],
+               |       (^6400 1000)          | & [^7010 3 4]
+               +-----------------------------+
+```
+
+### Complete Sequence:
+1.  **Retrieve comparison-stage reconstructed body:**
+    $$C_{1200} = \text{CommonCore}_{A} \uplus \text{PairResidual}_{A}$$
+    $$C_{1200} = [ (\text{^}7000\ 1\ 2) ] \uplus [ (\text{^}7001\ 2\ 3) ] = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3) ]$$
+2.  **Lookup local D record exactness and residual:**
+    D record `1100` exactness is verified as `#1` (Exact). Retrieve $R_{D(1100)} = [ (\text{^}7010\ 3\ 4) ]$.
+3.  **Perform source reconstruction:**
+    $$S_{1000\_reconstructed} = C_{1200} \uplus R_{D(1100)}$$
+    $$S_{1000\_reconstructed} = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3) ] \uplus [ (\text{^}7010\ 3\ 4) ] = [ (\text{^}7000\ 1\ 2)\ (\text{^}7001\ 2\ 3)\ (\text{^}7010\ 3\ 4) ]$$
+
+---
+
+## 7. Audit of Lossy D Branch (1300 -> 1400)
+
+### 7.1 Entity Extraction
+*   **Lossy D Record (`1300`):**
+    ```text
+    (^6401 1300 1000 1400 #0)
+    ```
+    *   *Source ID:* `1000`
+    *   *Target ID:* `1400`
+    *   *Exactness Certificate:* `#0` (Lossy)
+*   **Comparison-Stage Object (`1400`) Body (`^6402`):**
+    ```text
+    [
+      (^7000 1 2)
+    ]
+    ```
+*   **Lossy-Discard Summary (`^6408 1300`):**
+    ```text
+    [
+      ^7001
+      ^7010
+    ]
+    ```
+
+### 7.2 Reconstruction Sufficiency Evaluation
+**Verdict:** **INSUFFICIENT.** The lossy-discard summary `^6408` is structurally insufficient to reconstruct the original omitted incidences.
+
+**Reasoning:**
+The discard summary lists only the stable label/role categories that were omitted: `^7001` and `^7010`. Crucially, it does not record the *incidence topologies* or the *structural identities* associated with those relations (i.e., it has discarded the tuples `(2 3)` and `(3 4)`). 
+
+From the summary `[^7001 ^7010]`, it is mathematically impossible to determine:
+*   Which nodes were connected by relations `^7001` and `^7010`.
+*   How many occurrences of these relations existed.
+*   Whether any fresh or existing structural identities were referenced.
+
+Therefore, the original source object `1000` cannot be reconstructed using this branch. The lossy indicator `#0` is accurate.
+
+### 7.3 Inter-stage Upgrading Prohibition
+**Verdict:** **NO.** Complete pairwise accounting at the comparison stage **cannot** convert this lossy D branch into a full-source reconstruction claim.
+
+**Reasoning:**
+Even if the comparison-stage object `1400` achieves a 100% complete, zero-residual pairwise match (Common Core) with another comparison-stage object, that pairwise match operates strictly on the comparison domain. 
+
+The information lost during the $1000 \xrightarrow{D(1300)} 1400$ step was discarded *prior* to comparison. Since the pairwise comparison engine has access only to the frozen comparison objects, it contains no semantic authority to synthesize or recover the specific omitted local incidence details `(^7001 2 3)` and `(^7010 3 4)`. Under Section 19.4: "A lossy D/projection/quotient never becomes full-source reconstruction merely because the pairwise accounting is complete." Any full-source reconstruction claim for Source `1000` through the D `1300` branch is permanently invalidated and must be rejected by the verifier.
+
+---
+
+## 8. Verified Reconstruction and Witness Ledger
+
+This table lists the frozen assets, their exact status, and the verified reconstruction outputs as validated by this audit.
+
+| Asset ID | Category | Type / Exactness | Contained Structure / Reference | Reconstruction Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **`1000`** | Source Object | N/A | `[(^7000 1 2) (^7001 2 3) (^7010 3 4)]` | **Fully Verified** via D `1100` |
+| **`1100`** | D Record | `#1` (Exact) | Source: `1000`, Target: `1200` | **Passes Audit** |
+| **`1200`** | Comp. Object | N/A | `[(^7000 1 2) (^7001 2 3)]` | **Fully Verified** via Pair `3000` |
+| **`2000`** | Source Object | N/A | `[(^7000 5 6) (^7002 6 7) (^7011 7 8)]` | **Fully Verified** via D `2100` |
+| **`2100`** | D Record | `#1` (Exact) | Source: `2000`, Target: `2200` | **Passes Audit** |
+| **`2200`** | Comp. Object | N/A | `[(^7000 5 6) (^7002 6 7)]` | **Fully Verified** via Pair `3000` |
+| **`3000`** | Pair Record | V0 (Closed) | Core: `[(^7000 1 2)]`, Map: `[(1 5) (2 6)]` | **Passes Audit** (Valid Core) |
+| **`1300`** | D Record | `#0` (Lossy) | Source: `1000`, Target: `1400` | **Unreconstructable** (By Design) |
+| **`1400`** | Comp. Object | N/A | `[(^7000 1 2)]` | **Reconstructable** |
+
+### Verified Certificate of Audit
+This document certifies that the structures in `experiments/004/Q004_S04_TWO_STAGE_RESIDUAL.isg` strictly adhere to the representation rules of Draft 0.15. The separation of source-local D residuals and pairwise residuals is maintained without leakage or illegal conversions.
+
+**Audit Status:** **QUALIFIED**  
+**Authorized Verifier Signature:** `IsoGraph-Agent-Verifier-Gemini-3.5-Flash [RUN-S04]`

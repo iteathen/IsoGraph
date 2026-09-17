@@ -1,0 +1,246 @@
+# ISOGRAPH EXPERIMENT 004 — RUN-D17B REPORT
+**Model:** gemini-3.5-flash  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Specification Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Evaluation Target:** `experiments/004/Q004_17B_NATIVE_RECORDS_004.isg`
+
+---
+
+## Task 1: Record-Type Declarations (`^4740 TYPE FIELD_SCOPE`)
+
+Based on the raw topology of the input file, we find exactly six record-type declarations defined by the constructor `^4740`. The types and their exact direct field IDs are:
+
+1. **Type `9000`**
+   * Fields: `^4750`, `^4751`, `^4752`, `^4753`, `^4754`
+   * Raw declaration: `(^4740 9000 [^4750 ^4751 ^4752 ^4753 ^4754])`
+
+2. **Type `9001`**
+   * Fields: `^4760`, `^4761`, `^4762`, `^4763`, `^4764`, `^4765`
+   * Raw declaration: `(^4740 9001 [^4760 ^4761 ^4762 ^4763 ^4764 ^4765])`
+
+3. **Type `9002`**
+   * Fields: `^4770`, `^4771`, `^4772`, `^4773`, `^4774`, `^4775`, `^4776`, `^4777`, `^4778`
+   * Raw declaration: `(^4740 9002 [^4770 ^4771 ^4772 ^4773 ^4774 ^4775 ^4776 ^4777 ^4778])`
+
+4. **Type `9003`**
+   * Fields: `^4780`, `^4781`, `^4782`, `^4783`, `^4784`, `^4785`
+   * Raw declaration: `(^4740 9003 [^4780 ^4781 ^4782 ^4783 ^4784 ^4785])`
+
+5. **Type `9004`**
+   * Fields: `^4790`, `^4791`, `^4792`, `^4793`, `^4794`
+   * Raw declaration: `(^4740 9004 [^4790 ^4791 ^4792 ^4793 ^4794])`
+
+6. **Type `9005`**
+   * Fields: `^4800`, `^4801`, `^4802`, `^4803`, `^4804`
+   * Raw declaration: `(^4740 9005 [^4800 ^4801 ^4802 ^4803 ^4804])`
+
+---
+
+## Task 2: Instance Declarations (`^4741 INSTANCE TYPE`)
+
+Six instances are declared using the `^4741` constructor. Each is bound to its declared type as follows:
+
+* `(^4741 9100 9000)` -> Instance **`9100`** is of Type **`9000`**
+* `(^4741 9101 9001)` -> Instance **`9101`** is of Type **`9001`**
+* `(^4741 9102 9002)` -> Instance **`9102`** is of Type **`9002`**
+* `(^4741 9103 9003)` -> Instance **`9103`** is of Type **`9003`**
+* `(^4741 9104 9004)` -> Instance **`9104`** is of Type **`9004`**
+* `(^4741 9105 9005)` -> Instance **`9105`** is of Type **`9005`**
+
+---
+
+## Task 3: Enumeration of Instance-Field Relations (`^4742 INSTANCE FIELD VALUE`)
+
+The following lists every field-value assignment relation exactly as serialized:
+
+### Instance `9100` (Type `9000`)
+* `(^4742 9100 ^4750 9200)`
+* `(^4742 9100 ^4751 9201)`
+* `(^4742 9100 ^4752 [^6800])`
+* `(^4742 9100 ^4753 [#0 #1])`
+* `(^4742 9100 ^4754 #64)`
+
+### Instance `9101` (Type `9001`)
+* `(^4742 9101 ^4760 9300)`
+* `(^4742 9101 ^4761 9301)`
+* `(^4742 9101 ^4762 #1)`
+* `(^4742 9101 ^4763 [(^6800 1 2)])`
+* `(^4742 9101 ^4764 [(^6801 2 3)])`
+* `(^4742 9101 ^4765 #15)`
+
+### Instance `9102` (Type `9002`)
+* `(^4742 9102 ^4770 9400)`
+* `(^4742 9102 ^4771 9401)`
+* `(^4742 9102 ^4772 [(1 10) (2 11)])`
+* `(^4742 9102 ^4773 [(^6800 1 2)])`
+* `(^4742 9102 ^4774 [(^6802 2 3)])`
+* `(^4742 9102 ^4775 [(^6803 11 12)])`
+* `(^4742 9102 ^4776 9101)`
+* `(^4742 9102 ^4777 9103)`
+* `(^4742 9102 ^4778 #15)`
+
+### Instance `9103` (Type `9003`)
+* `(^4742 9103 ^4780 9500)`
+* `(^4742 9103 ^4781 #3)`
+* `(^4742 9103 ^4782 9600)`
+* `(^4742 9103 ^4783 9201)`
+* `(^4742 9103 ^4784 [#0])`
+* `(^4742 9103 ^4785 #15)`
+
+### Instance `9104` (Type `9004`)
+* `(^4742 9104 ^4790 [!(30 31)])`
+* `(^4742 9104 ^4791 9700)`
+* `(^4742 9104 ^4792 [(30 32)])`
+* `(^4742 9104 ^4793 9100)`
+* `(^4742 9104 ^4794 #15)`
+
+### Instance `9105` (Type `9005`)
+* `(^4742 9105 ^4800 9102)`
+* `(^4742 9105 ^4801 9800)`
+* `(^4742 9105 ^4802 #1)`
+* `(^4742 9105 ^4803 9104)`
+* `(^4742 9105 ^4804 #15)`
+
+---
+
+## Task 4: Scope-Valued Fields and Bodies Defined via `^4743`
+
+### Scope-Valued Fields in Instances:
+* **Instance `9100`**:
+  * Field `^4752` contains scope: `[^6800]`
+  * Field `^4753` contains scope: `[#0 #1]`
+* **Instance `9101`**:
+  * Field `^4763` contains scope: `[(^6800 1 2)]`
+  * Field `^4764` contains scope: `[(^6801 2 3)]`
+* **Instance `9102`**:
+  * Field `^4772` contains scope: `[(1 10) (2 11)]`
+  * Field `^4773` contains scope: `[(^6800 1 2)]`
+  * Field `^4774` contains scope: `[(^6802 2 3)]`
+  * Field `^4775` contains scope: `[(^6803 11 12)]`
+* **Instance `9103`**:
+  * Field `^4784` contains scope: `[#0]`
+* **Instance `9104`**:
+  * Field `^4790` contains scope: `[!(30 31)]` (a first-class negative structural match condition, or NAC)
+  * Field `^4792` contains scope: `[(30 32)]`
+
+### Payload Bodies Supplied via `^4743`:
+* `(^4743 9200 [(^6800 1 2) (^6801 2 3)])`
+* `(^4743 9201 [(^6800 1 2)])`
+* `(^4743 9300 [(^6800 1 2) (^6801 2 3)])`
+* `(^4743 9301 [(^6800 1 2)])`
+* `(^4743 9400 [(^6800 1 2) (^6802 2 3)])`
+* `(^4743 9401 [(^6800 10 11) (^6803 11 12)])`
+
+---
+
+## Task 5: Reference Tracing (`9100..9105` and Body Objects)
+
+Tracing every reference link (where a field points to another instance or a body ID) exposes the following dependency relationships:
+
+* **`9105`** points directly to:
+  * Instance **`9102`** (via field `^4800`)
+  * Instance **`9104`** (via field `^4803`)
+* **`9104`** points directly to:
+  * Instance **`9100`** (via field `^4793`)
+* **`9102`** points directly to:
+  * Instance **`9101`** (via field `^4776`)
+  * Instance **`9103`** (via field `^4777`)
+  * Body payload **`9400`** (via field `^4770`)
+  * Body payload **`9401`** (via field `^4771`)
+* **`9103`** points directly to:
+  * Body payload **`9201`** (via field `^4783`)
+* **`9100`** points directly to:
+  * Body payload **`9200`** (via field `^4750`)
+  * Body payload **`9201`** (via field `^4751`)
+* **`9101`** points directly to:
+  * Body payload **`9300`** (via field `^4760`)
+  * Body payload **`9301`** (via field `^4761`)
+
+---
+
+## Task 6: Identification of Coexisting Scope-Valued Fields
+
+The following instances contain multiple distinct fields containing `[...]` scope-valued structures, rather than compressing them into a single overloaded or list-valued field:
+
+1. **Instance `9100`**: Holds two distinct scope-valued fields:
+   * Field `^4752` with value `[^6800]`
+   * Field `^4753` with value `[#0 #1]`
+
+2. **Instance `9101`**: Holds two distinct scope-valued fields:
+   * Field `^4763` with value `[(^6800 1 2)]`
+   * Field `^4764` with value `[(^6801 2 3)]`
+
+3. **Instance `9102`**: Holds four distinct scope-valued fields:
+   * Field `^4772` with value `[(1 10) (2 11)]`
+   * Field `^4773` with value `[(^6800 1 2)]`
+   * Field `^4774` with value `[(^6802 2 3)]`
+   * Field `^4775` with value `[(^6803 11 12)]`
+
+4. **Instance `9104`**: Holds two distinct scope-valued fields:
+   * Field `^4790` with value `[!(30 31)]`
+   * Field `^4792` with value `[(30 32)]`
+
+---
+
+## Task 7: Instance with Algorithm Identity, Revision Literal, and Body Reference
+
+**Instance `9103`** matches this description. It contains:
+* **Opaque algorithm-like identities**: `9500` (field `^4780`) and `9600` (field `^4782`)
+* **An exact revision literal**: `#3` (field `^4781`)
+* **An input/body-stage reference**: `9201` (field `^4783`), pointing to the body payload `[(^6800 1 2)]`
+
+---
+
+## Task 8: Instance with First-Class Negative (`!`) Condition and Context/Reference Fields
+
+**Instance `9104`** matches this description. It contains:
+* **First-class `!` condition object**: `[!(30 31)]` (field `^4790`)
+* **A separate boundary/context field**: `[(30 32)]` (field `^4792`)
+* **An opaque target/policy identity**: `9700` (field `^4791`)
+* **A consumer/reference field pointing to another instance**: `9100` (field `^4793`), linking the condition evaluation directly to the instance `9100` record
+* **A literal**: `#15` (field `^4794`)
+
+---
+
+## Task 9: Terminal Record and Complete Subgraph Topology
+
+The terminal record that acts as the root of the graph and aggregates/links other instances together is **`9105`**. 
+
+### Topology of `9105`
+
+* **Instance ID:** `9105`
+* **Declared Type:** `9005`
+* **Direct Field Configuration:**
+  * Field `^4800` links to **`9102`** (the instance acting as the aggregator of body differences/stages and historical references)
+  * Field `^4801` links to **`9800`** (an opaque parameter/index value)
+  * Field `^4802` holds the literal value **`#1`**
+  * Field `^4803` links to **`9104`** (the negative validation constraint/NAC instance)
+  * Field `^4804` holds the literal value **`#15`**
+
+### Complete Transitive Dependency Graph Represented from `9105`
+
+```text
+       [9105] (Type 9005)
+       /    \
+      /      \
+     v        v
+  [9102]    [9104] (Type 9004; NAC evaluated context)
+  (Type 9002)   \
+  /    \         v
+ v      v       [9100] (Type 9000; baseline structure)
+[9101] [9103]   /    \
+(Type  (Type   v      v
+9001)  9003)  (9200) (9201) (Payload Bodies)
+  |      |
+  v      v
+(9300)  (9201) (Payload Bodies)
+(9301)
+```
+
+---
+
+## Task 10: External Sidecar Requirement
+
+**No external human or JSON sidecar is required to reconstruct this complete raw record graph.** 
+
+According to the constitution of IsoGraph (Section 18.3, 29, and Gate `E1NR` in Section 39), all load-bearing, semantic, and structural representations are fully self-contained. The raw topology, labels, values, references, and nested scopes are natively fully qualified and completely reconstructible directly from the provided `.isg` file. No sidecar properties can supply or alter the structural truth of this network.

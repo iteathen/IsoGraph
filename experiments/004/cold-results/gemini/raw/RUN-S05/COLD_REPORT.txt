@@ -1,0 +1,118 @@
+# IsoGraph Index-Safety Audit Report
+**Run:** RUN-S05  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** gemini-3.5-flash  
+**Status:** COMPLETE  
+
+---
+
+## 1. Reconstruction of Bodies, Stages, and D Links
+
+Based on the parsed IsoGraph syntax and the provided semantic keys, the structural entities are reconstructed as follows:
+
+### Object `1000`
+*   **Body:** 
+    ```text
+    [
+      (^6500 1 2)
+      (^6500 2 3)
+    ]
+    ```
+*   **Stage:** `^6505` (`RAW_STAGE`)
+
+### Object `2000`
+*   **Body:** 
+    ```text
+    [
+      (^6500 10 11)
+      (^6500 11 12)
+      (^6500 12 13)
+    ]
+    ```
+*   **Stage:** `^6505` (`RAW_STAGE`)
+
+### Object `1200`
+*   **Body:** 
+    ```text
+    [
+      (^6501 100)
+    ]
+    ```
+*   **Stage:** `^6506` (`FACTORED_STAGE`)
+
+### Object `2200`
+*   **Body:** 
+    ```text
+    [
+      (^6501 200)
+    ]
+    ```
+*   **Stage:** `^6506` (`FACTORED_STAGE`)
+
+### Decomposition (D) Links
+*   **`1100`:** Maps source `1000` (`RAW_STAGE`) to target `1200` (`FACTORED_STAGE`).
+*   **`2100`:** Maps source `2000` (`RAW_STAGE`) to target `2200` (`FACTORED_STAGE`).
+
+---
+
+## 2. Fingerprint Outputs & Stage Qualification (Algorithm `7001`)
+
+*   **Fingerprint Value for `1000`:** `#2`
+*   **Fingerprint Value for `2000`:** `#3`
+*   **Qualified Stage for Necessary Invariant:** `^6505` (`RAW_STAGE`) (explicitly enabled via `^6511 7001 ^6505 #1`).
+
+---
+
+## 3. Raw-Stage Mismatch Pruning Verdict (`1000` vs `2000`)
+
+**Verdict:** **YES**, the raw-stage mismatch may be used to prune `1000` vs `2000`.
+
+**Reasoning:** Algorithm `7001` is an independently qualified necessary invariant for `^6505` (`RAW_STAGE`). Because the fingerprint outputs mismatch (`#2 != #3`), it is mathematically guaranteed that `1000` and `2000` are non-isomorphic at this stage. Under the certified negative discipline, this mismatch is a valid pruning certificate for the qualified raw-stage relation.
+
+---
+
+## 4. Cross-Stage Pruning Reuse Verdict (`1200` vs `2200` via Algorithm `7001`)
+
+**Verdict:** **NO**, this mismatch cannot be reused to prune the factored objects.
+
+**Reasoning:** In accordance with Section 32.3 of the Core Specification, necessary invariants are stage-specific. A fingerprint mismatch is only valid for pruning on the exact stage for which its invariance is qualified. Because algorithm `7001` is qualified exclusively on `^6505` (`RAW_STAGE`), its mismatch cannot be assumed to apply after a topology-changing D factorization. No cross-stage invariant is supplied for `7001` on `^6506`.
+
+---
+
+## 5. Fingerprint Outputs & Stage Qualification (Algorithm `7002`)
+
+*   **Fingerprint Value for `1200`:** `#1`
+*   **Fingerprint Value for `2200`:** `#1`
+*   **Qualified Stage for Necessary Invariant:** `^6506` (`FACTORED_STAGE`) (explicitly enabled via `^6511 7002 ^6506 #1`).
+
+---
+
+## 6. Structural Comparison & Mapping under V0 (`1200` vs `2200`)
+
+**Verdict:** **ISOMORPHIC under V0**.
+
+### Isomorphism Mapping Certificate:
+*   **Stable Label Mapping:** `^6501 <-> ^6501` (Rigid under V0, structurally matching)
+*   **Structural Identity Bijection:** `100 <-> 200` (Bare structural IDs are alpha-renamable under V0)
+*   **Incident Edge Correspondence:** `(^6501 100) <-> (^6501 200)`
+
+Both objects resolve to a single ordered tuple of arity 1 containing a stable label and an alpha-mappable identity, resulting in identical normalized topological structures.
+
+---
+
+## 7. Soundness of Fingerprint Sufficiency (Equal Values)
+
+**Verdict:** **NO**, equal fingerprint values alone do **not** prove structural isomorphism.
+
+**Reasoning:** Section 32.3 of the Core Specification explicitly establishes that:
+> "Equal fingerprints ordinarily prove nothing."
+
+Fingerprints act as necessary invariants designed for conservative negative pruning (rejecting definite non-matches). They do not constitute sufficient conditions for isomorphism. A positive structural isomorphism claim still requires independent verification of a complete bijective mapping.
+
+---
+
+## 8. Indexing Requirements on Canonical Factorization
+
+**Verdict:** **NO**, current IsoGraph does **not** require choosing or forcing a single global canonical post-D factorization to simplify indexing.
+
+**Reasoning:** As stated in Section 32.3, "IsoGraph does not require one canonical post-D factorization merely to simplify indexing." Instead, cross-factorization structural discovery is designed to index multiple qualified factorization nodes or leverage separate factorization-invariant projections, preserving all valid alternative factorizations without forcing lossy or arbitrary canonicalization choices.

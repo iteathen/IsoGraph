@@ -1,0 +1,192 @@
+# ISOGRAPH EXPERIMENT 004 — GEMINI ISOLATED COLD RUN
+## Run: RUN-S08
+### Frozen Source: `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`
+### Model: `gemini-3.5-flash`
+
+---
+
+# AUDIT AND SERIALIZATION REPORT: Q004-S08
+
+## Executive Summary
+This report presents the cold-run evaluation of the synthetic fixture `experiments/004/Q004_S08_SERIALIZER_SCOPE.isg` under the governance of the `IsoGraph Core Specification — Draft 0.15 Consolidated Candidate`. 
+
+The analysis confirms that the objects `1000` and `2000` are isomorphic under the V0 view policy. Due to a $Z_2$ symmetry of the leaf nodes, there exist exactly **two materially distinct bijective isomorphism witnesses**. 
+
+We analyze two serializer/indexing algorithms (`8100` and `8101`) operating at the raw stage. Although each algorithm uses a different internal deterministic tie-breaking convention—resulting in distinct serialized outputs and different hash values (`#111` vs. `#222`)—both algorithms successfully identify the structural isomorphism internally. 
+
+Finally, we enforce the core constitutional principle that a deterministic serialization choice at the index layer must never be allowed to erase or suppress distinct structural automorphism or isomorphism witnesses.
+
+---
+
+## 1. Object Symmetry and V0 Isomorphism Witnesses (Task 1)
+
+### 1.1 Structural Deconstruction
+The fixture contains two structural object bodies represented under label `^6801` (mapped to `OBJECT`):
+
+*   **Object `1000`:**
+    ```text
+    [
+      (^6800 1 2)
+      (^6800 1 3)
+    ]
+    ```
+    *   **Identities (Bare Integers):** `1`, `2`, `3`
+    *   **Direct Members:** Two ordered incidence edges of label `^6800`.
+    *   **Topological Shape:** Node `1` acts as a common source pointing to two symmetric leaf nodes, `2` and `3`.
+
+*   **Object `2000`:**
+    ```text
+    [
+      (^6800 10 11)
+      (^6800 10 12)
+    ]
+    ```
+    *   **Identities (Bare Integers):** `10`, `11`, `12`
+    *   **Direct Members:** Two ordered incidence edges of label `^6800`.
+    *   **Topological Shape:** Node `10` acts as a common source pointing to two symmetric leaf nodes, `11` and `12`.
+
+### 1.2 View V0 Rules
+Under Section 24 of the core specification:
+*   Local alpha identities (the bare integers `1, 2, 3` and `10, 11, 12`) are allowed to bijectively rename.
+*   The namespace-local stable label `^6800` is rigid and must map strictly to `^6800`.
+
+### 1.3 Enumeration of Bijective Witnesses
+Because nodes `2` and `3` are structurally indistinguishable leaves attached to the common origin `1`, the automorphism group of the body of `1000` is isomorphic to $S_2$ (or $Z_2$). This symmetry propagates to the pairwise mapping, yielding exactly **two materially distinct bijective isomorphism witnesses** between `1000` and `2000`:
+
+#### Witness A (Default Ordered Bijective Map)
+*   **Node Correspondence ($\phi_A$):**
+    *   `1   -> 10` (forced; common source node)
+    *   `2   -> 11`
+    *   `3   -> 12`
+*   **Edge Preservation:**
+    *   `(^6800 1 2) -> (^6800 10 11)`
+    *   `(^6800 1 3) -> (^6800 10 12)`
+*   **Verification:** Bijective, preserves and reflects all ordered incidence structures and the V0 rigid stable label `^6800`.
+
+#### Witness B (Symmetric Transposition Map)
+*   **Node Correspondence ($\phi_B$):**
+    *   `1   -> 10` (forced)
+    *   `2   -> 12`
+    *   `3   -> 11`
+*   **Edge Preservation:**
+    *   `(^6800 1 2) -> (^6800 10 12)`
+    *   `(^6800 1 3) -> (^6800 10 11)`
+*   **Verification:** Bijective, preserves and reflects all structures, representing the non-trivial automorphism swap.
+
+Both witnesses are structurally valid, distinct, and complete.
+
+---
+
+## 2. Reconstructed Serializer Algorithm Metadata (Task 2)
+
+Based on relations `^6810` (`SERIALIZER_INDEX_DECL`) and `^6813` (`QUALIFIED_WITHIN_ALGORITHM_INVARIANT`), we reconstruct the following metadata records for the active indexing algorithms:
+
+### 2.1 Algorithm 8100 Record
+*   **Algorithm Identifier:** `8100`
+*   **Revision Level:** `#1`
+*   **Execution Stage:** `^6820` (`RAW_STAGE`)
+*   **Qualification Invariant Status:** Enabled (`#1`)
+    *   *Source Syntax:* `(^6813 8100 ^6820 #1)`
+    *   *Semantic Role:* The algorithm is certified as producing a sound structural invariant over the `RAW_STAGE` representation layer.
+
+### 2.2 Algorithm 8101 Record
+*   **Algorithm Identifier:** `8101`
+*   **Revision Level:** `#1`
+*   **Execution Stage:** `^6820` (`RAW_STAGE`)
+*   **Qualification Invariant Status:** Enabled (`#1`)
+    *   *Source Syntax:* `(^6813 8101 ^6820 #1)`
+    *   *Semantic Role:* The algorithm is independently certified as producing a sound structural invariant over the `RAW_STAGE` representation layer.
+
+---
+
+## 3. Serialized Outputs and Hash Values (Task 3)
+
+The raw inputs mapping the execution of algorithms `8100` and `8101` on the target objects are reproduced in the table below:
+
+| Algorithm | Target Object | Serialized Output Pattern (`^6811`) | Hash Output Value (`^6812`) |
+| :--- | :--- | :--- | :--- |
+| **8100** | `1000` | `(#0 #1 #2)` | `#111` |
+| **8100** | `2000` | `(#0 #1 #2)` | `#111` |
+| **8101** | `1000` | `(#0 #2 #1)` | `#222` |
+| **8101** | `2000` | `(#0 #2 #1)` | `#222` |
+
+### Key Observations
+*   **Algorithm 8100** breaks symmetry by ordering the serialized leaves such that `#1` precedes `#2`. It generates the hash `#111` consistently for both objects.
+*   **Algorithm 8101** uses an alternative legal tie-breaking convention, causing the serialized representation of the leaves to output `#2` before `#1`. It generates the hash `#222` consistently for both objects.
+
+---
+
+## 4. Semantics of Equal Hashes within an Algorithm (Task 4)
+
+### 4.1 What Equal Hashes May Mean
+Under Section 32.3 of the Core Specification, a fingerprint/hash is a projection of a structural stage. Because algorithms `8100` and `8101` are qualified as invariants (`^6813 ... #1`), they guarantee the following implication:
+$$\text{Isomorphic}(A, B) \implies f(A) = f(B)$$
+Thus, when an algorithm produces equal hashes for Object `1000` and Object `2000` (such as `hash_8100(1000) == hash_8100(2000) == #111`), it means:
+1.  The necessary condition for structural isomorphism under the given view (V0) and stage (`RAW_STAGE`) has been successfully satisfied.
+2.  The candidate pair cannot be pruned as structurally distinct by this indexing filter.
+
+### 4.2 What Equal Hashes Do Not Prove By Themselves
+Hash equality is **non-evidential for positive structural isomorphism** in isolation. Specifically, it does not prove:
+1.  **Absence of Hash Collisions (Lossy Projection):** A serializer/hash function is a projection into a limited space. It cannot guarantee injectivity (uniqueness) over all arbitrary graphs unless a "no-collision" complete representative certificate is verified. Two non-isomorphic structures can mathematically collide and yield the same hash.
+2.  **Explicit Structural Witness/Mapping:** A hash match is an indexing shortcut. It does not supply the mandatory node-to-node and edge-to-edge bijective correspondence (the structural witness) required to satisfy an independent verifier (Section 29).
+3.  **Cross-Algorithm Equivalence:** Equal hashes in one algorithm carry no authority over other algorithms unless a qualified cross-algorithm bridge is explicitly declared.
+
+---
+
+## 5. Non-Impact of Cross-Algorithm Hash Discrepancies (Task 5)
+
+The discrepancy between the hash outputs of the two algorithms—specifically, `#111` for `8100` versus `#222` for `8101`—**does not imply structural non-isomorphism**.
+
+### 5.1 No Requirement for a Single Global Serializer
+Section 32.4 of the specification explicitly states:
+> "IsoGraph does not require one global canonical-labeling algorithm. Different sound serializers may emit different canonical-looking representatives unless an explicit compatibility/equivalence contract relates the algorithms."
+
+### 5.2 Explaining the Divergence
+Because both algorithms are internally sound and invariant, they correctly map isomorphic inputs to the same outputs *within their own systems* (i.e., `1000` and `2000` both map to `#111` in `8100`, and both map to `#222` in `8101`). 
+
+The difference between `#111` and `#222` is purely an artifact of different legal symmetry-breaking choices on the symmetric leaf nodes (`2/3` and `11/12`). It has zero structural semantics and is ignored when evaluating isomorphism.
+
+---
+
+## 6. Serialization Tie-Breaks and Automorphism Preservation (Task 6)
+
+### 6.1 The Governing Constraint
+**No.** A deterministic serializer tie-break is **not** allowed to erase, suppress, or collapse materially distinct automorphism/isomorphism witnesses from the final structural result.
+
+### 6.2 The Core Constitutional Barriers
+To allow a serializer's output to collapse the witness space would violate multiple foundational barriers defined in the core specification:
+
+1.  **The Core Interpretation Barrier (Section 0):**
+    $$\text{canonical serializer output} \neq \text{unique structural witness}$$
+    A canonical serializer must choose one output format to satisfy deterministic transport and fast indexing. However, this is a serialization-level convenience, not a semantic limit on the underlying graph's topology.
+2.  **Multiple Mappings Preservation (Section 30.2):**
+    > "Distinct verified mappings remain separate by default. A deterministic canonical graph representative does not prove uniqueness of mapping. Mappings may be quotient-collapsed only under an independently verified automorphism/equivalence showing irrelevance to the requested downstream operation."
+3.  **Preservation of Symmetry (Section 32.4):**
+    > "Comparison correctness and preservation of materially distinct automorphism witnesses MUST NOT depend on incidental serializer tie-breaks."
+
+### 6.3 Audit Verdict
+The fact that Algorithm `8100` outputs a single string `(#0 #1 #2)` and Algorithm `8101` outputs a single string `(#0 #2 #1)` is valid for their respective indexing pipelines. 
+
+However, the downstream comparison and verification stages must recognize and output both **Witness A** and **Witness B**. Erasing either mapping merely because a serialization step chose one specific representative violates the structural integrity of IsoGraph. Both mappings represent distinct, load-bearing pathways of joint realizability and composition (Section 31) and must be fully preserved.
+
+---
+
+## 7. Audit Verdict and Certificates
+
+```text
+[VERDICT: SUCCESSFUL_COLD_AUDIT]
+[STAGE: RAW_STAGE]
+[VIEW_POLICY: V0]
+[TARGET_A: OBJECT 1000]
+[TARGET_B: OBJECT 2000]
+[RELATION_KIND: ISOMORPHISM]
+[NUMBER_OF_DISTINCT_WITNESSES: 2]
+[WITNESS_A_MAP: (1->10, 2->11, 3->12)]
+[WITNESS_B_MAP: (1->10, 2->12, 3->11)]
+[ALGORITHM_8100_INVARIANT_CERTIFIED: TRUE]
+[ALGORITHM_8101_INVARIANT_CERTIFIED: TRUE]
+[CROSS_ALGORITHM_COLLAPSE_REJECTED: TRUE]
+```
+
+### Verification Signature
+This report is compiled in complete isolation from external environments. All constraints, mappings, and interpretation barriers defined in `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` have been strictly maintained. No structural information has been collapsed or omitted.

@@ -1,0 +1,124 @@
+# ISOGRAPH EXPERIMENT 004 — Q004-18 COLD RUN REPORT
+
+**Run Identifier:** RUN-D18  
+**Model:** gemini-3.5-flash  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Evaluation Standard:** IsoGraph Core Specification — Draft 0.15 Consolidated Candidate  
+
+---
+
+## 1. Source Object Identification and Metadata (Task 1)
+
+Based on the contents of `experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh`, the source object is identified as:
+*   **Source Object ID:** `1800` (attached by stable label `^5800`).
+
+### Raw Metadata Relation
+The source object `1800` is related to stable label `^5803` via the relation label `^5802`:
+```text
+(^5802 1800 ^5803)
+```
+In accordance with the constitutional constraints, no English names or domain meanings are inferred for `^5802` or `^5803`. This relation is preserved and reported solely as a raw structural fact of the source object’s profile.
+
+---
+
+## 2. Alternative Interpretations (Task 2)
+
+The stable label `^5801` defines the relationship of alternative interpretations to the source object `1800`. Two distinct alternative objects are registered in the source file:
+1.  **Interpretation 1:** `1801` — registered via `(^5801 1801 1800)`
+2.  **Interpretation 2:** `1802` — registered via `(^5801 1802 1800)`
+
+These represent independent, unresolved candidate factorizations of the source object.
+
+---
+
+## 3. Interpretation Body Scopes (Task 3)
+
+The stable label `^5804` attaches the structural body scopes to the alternative interpretation objects as follows:
+
+### Body of Interpretation `1801`
+```text
+[ (1 2) ]
+```
+*   **Constituent elements:** One unordered scope containing exactly one ordered incidence (tuple) of length 2: `(1 2)`.
+*   **Structural identities:** `{1, 2}`.
+
+### Body of Interpretation `1802`
+```text
+[ (1 2) (2 3) ]
+```
+*   **Constituent elements:** One unordered scope containing exactly two ordered incidences (tuples) of length 2: `(1 2)` and `(2 3)`.
+*   **Structural identities:** `{1, 2, 3}`.
+
+---
+
+## 4. Target Body Scope (Task 4)
+
+The target object is `1803` (attached by stable label `^5805`). Its structural body scope is:
+```text
+[ (10 11) ]
+```
+*   **Constituent elements:** One unordered scope containing exactly one ordered incidence (tuple) of length 2: `(10 11)`.
+*   **Structural identities:** `{10, 11}`.
+
+---
+
+## 5. Structural Comparison under V0 Closed Structural View (Task 5)
+
+Each interpretation body is compared independently to the target body scope `[ (10 11) ]` under the closed structural view policy (`V0`). Under `V0`, local structural identities may bijectively rename while stable labels and literals remain rigid.
+
+### Comparison 1: Interpretation `1801` vs Target `1803`
+*   **Source Scope:** `[ (1 2) ]`
+*   **Target Scope:** `[ (10 11) ]`
+*   **Mapping Analysis:** There exists a structural bijection $f$ mapping structural identities $\{1, 2\}$ to $\{10, 11\}$ such that:
+    $$f(1) = 10$$
+    $$f(2) = 11$$
+    This bijection preserves the ordered incidence positionally: $f((1\ 2)) = (10\ 11)$, and preserves occurrence multiplicity exactly (1 occurrence of the tuple in each scope).
+*   **Verdict:** `ISOMORPHISM` under `V0`.
+
+### Comparison 2: Interpretation `1802` vs Target `1803`
+*   **Source Scope:** `[ (1 2) (2 3) ]`
+*   **Target Scope:** `[ (10 11) ]`
+*   **Mapping Analysis:** The source scope has 3 unique structural identities $\{1, 2, 3\}$ and 2 member occurrences (tuples), whereas the target has 2 unique structural identities $\{10, 11\}$ and 1 member occurrence. No bijective mapping can exist between their structural identities or their member occurrences.
+*   **Verdict:** `CERTIFIED_NON_ISOMORPHIC` under `V0`.
+
+---
+
+## 6. Unconditional Verdict and Constitutional Analysis (Task 6)
+
+### Verdict
+**No.** The unresolved source object `1800` as a whole **cannot** receive one unconditional structural-match result while the represented interpretations remain unresolved.
+
+### Constitutional Analysis
+Section 18.1 of the *IsoGraph Core Specification* dictates:
+1.  *Source semantics are not assumed uniquely determined when a source is ambiguous, incomplete, inconsistent, or genuinely admits several faithful readings.*
+2.  *A result depending on one alternative is conditional on that alternative unless source authority resolves the ambiguity later.*
+3.  *Qualification MUST NOT silently choose the interpretation that creates the cleanest structural match.*
+
+To issue an unconditional verdict (such as "Isomorphism") would require choosing interpretation `1801` over `1802` post-hoc solely because it matches the target. This violates the core constitutional requirement to preserve source-side ambiguities and strictly isolate evidence (Section 18.4, 34, 44). The ambiguity is a load-bearing semantic property of the source.
+
+---
+
+## 7. Conditional Disposition (Task 7)
+
+Because the comparison results differ by interpretation, the correct, non-biased conditional disposition of the relation between source object `1800` and target `1803` is:
+
+*   **IF** the true interpretation of source object `1800` is resolved as `1801`, **THEN** the relation is `ISOMORPHISM` under `V0`.
+*   **IF** the true interpretation of source object `1800` is resolved as `1802`, **THEN** the relation is `CERTIFIED_NON_ISOMORPHIC` under `V0`.
+
+---
+
+## 8. Downstream Provenance and Status Requirements (Task 8)
+
+Any downstream verification result, certificate, or reasoning artifact incorporating this comparison MUST record the unresolved alternatives and attach the following metadata:
+
+*   **Result Status:** Must be flagged as `conditional` (not `resolved` or `unresolved`).
+*   **Source Record Provenance:**
+    *   Preserve the source object ID `1800` associated with label `^5800`.
+    *   Preserve the raw incidence `(^5802 1800 ^5803)` as non-evidential source context.
+    *   Preserve the explicit representation of both interpretation nodes (`1801` and `1802`) linked by relation `^5801`.
+*   **Shared Constraints (Common Core of Alternatives):**
+    *   Record that all alternatives share a structural subgraph isomorphic to `[ (1 2) ]`.
+*   **Distinctions of Disagreement:**
+    *   Identify that alternative `1802` includes an additional structural identity `3` and an additional ordered incidence `(2 3)` not present in alternative `1801`.
+*   **Label Attachment Provenance Categories:**
+    *   Labels `^5800`, `^5801`, and `^5802` must be logged under the category `SOURCE_SUPPLIED` to prevent downstream engines from treating them as inferred structural-class claims.

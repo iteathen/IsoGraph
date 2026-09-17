@@ -1,0 +1,122 @@
+# ISOGRAPH EXPERIMENT 004 — GEMINI ISOLATED COLD RUN
+## Run: RUN-B
+## Spec Version: Draft 0.15 Consolidated Candidate
+
+This is the complete raw qualification report for **IsoGraph Experiment 004 — Phase B (Rewrite Cases)**, executed under strict isolation constraints.
+
+---
+
+## Q004-02: Evaluation of Case `#2`
+
+### 1. Resolution of Selected State and Rule from Application Record `2003`
+The application record is given by:
+`(^4203 2003 2001 2002)`
+
+Following the parameter conventions established by the governing prompt (where the arguments of `^4203` represent the application-event ID, state-object ID, and rule-object ID in order):
+*   **Application-Event ID:** `2003`
+*   **State-Object ID:** `2001`
+    *   **Resolved State Structure:** `[(10 20) (10 20) (30 20)]` (a scope containing three direct member occurrences: two occurrences of ordered incidence `(10 20)` and one occurrence of ordered incidence `(30 20)`).
+*   **Rule-Object ID:** `2002`
+    *   **Resolved Rule Structure:** `[(10 ?0)] > [(30 ?0)]` (enclosed within the scope `[ [(10 ?0)] > [(30 ?0)] ]`).
+
+---
+
+### 2. LHS Binding and Selected Direct Member Occurrence
+*   **LHS Pattern:** `[(10 ?0)]`
+*   **Selected Direct Member Occurrence:** One of the two identical `(10 20)` ordered incidence occurrences in state `2001`.
+*   **LHS Binding:** `?0 = 20`
+
+---
+
+### 3. Occurrence-Preserving Default Rewrite Update & Rule-Side Splice Semantics
+*   **Rule-side outer-container splice semantics (Section 12.1):** The outermost brackets of the LHS pattern `[(10 ?0)]` and RHS replacement `[(30 ?0)]` are pattern/replacement containers defining the direct member occurrences selected and inserted. They are not matched or inserted as nested scope members. Splicing is applied directly to the outer application scope.
+*   **LHS Subtraction (Section 12.4):** Removing exactly one occurrence of `(10 20)` from the state scope `[(10 20) (10 20) (30 20)]` leaves `[(10 20) (30 20)]`.
+*   **RHS Addition (Section 12.4):** Instantiating the RHS pattern `[(30 ?0)]` with the binding `?0 = 20` yields `(30 20)`. This instantiated occurrence is added (spliced) into the remaining scope.
+*   **Successor Scope:** Splicing the new `(30 20)` occurrence yields `[(10 20) (30 20) (30 20)]`.
+
+---
+
+### 4. Direct Member Occurrence Multiset of the Successor Scope
+The successor scope is:
+`[(10 20) (30 20) (30 20)]`
+
+Represented as a multiset of direct member occurrences, it contains:
+*   **One (1) occurrence** of ordered incidence `(10 20)`
+*   **Two (2) occurrences** of ordered incidence `(30 20)`
+
+---
+
+### 5. Multiplicity of Coexisting Isomorphic Occurrences
+**Verdict:** **No.** 
+Under IsoGraph’s occurrence-preserving default semantics (Section 8.1, 12.4), a newly produced occurrence does *not* disappear merely because an isomorphic occurrence already exists. Direct member multiplicity is semantic by default. Thus, both occurrences of `(30 20)` coexist in the successor scope.
+
+---
+
+### 6. Integrity of Structural Identities Upon Occurrence Removal
+**Verdict:** **No.** 
+Under Section 8.2, structural identity is strictly distinct from occurrence identity. Removing a direct scope member removes only that specific membership occurrence from the scope; it does *not* destroy the underlying structural identities (such as `10` or `20`) or cascade-delete other incidences referring to those identities.
+
+---
+
+## Q004-03: Evaluation of Case `#3`
+
+### 1. Separate Evaluation of Application Records `3004` and `3005`
+
+#### Evaluation of Record `3004`
+*   **Application-Event ID:** `3004`
+*   **State-Object ID:** `3001` (Structure: `[(10 20)]`)
+*   **Rule-Object ID:** `3002` (Structure: `[ [(10 ?0)] > [(30 ?0)] ]`)
+*   **LHS Matching & Binding:** LHS `[(10 ?0)]` matches the single occurrence of `(10 20)` in state `3001`. This yields the binding `?0 = 20`.
+*   **Successor Computation:** Subtracting `(10 20)` leaves `[]`. Splicing in the instantiated RHS `(30 20)` yields `[(30 20)]`.
+
+#### Evaluation of Record `3005`
+*   **Application-Event ID:** `3005`
+*   **State-Object ID:** `3001` (Structure: `[(10 20)]`)
+*   **Rule-Object ID:** `3003` (Structure: `[ [(10 ?0)] > [(30 ?0)] ]`)
+*   **LHS Matching & Binding:** LHS `[(10 ?0)]` matches the single occurrence of `(10 20)` in state `3001`. This yields the binding `?0 = 20`.
+*   **Successor Computation:** Subtracting `(10 20)` leaves `[]`. Splicing in the instantiated RHS `(30 20)` yields `[(30 20)]`.
+
+---
+
+### 2. Rule Objects Selected by Each Record
+*   **For `3004`:** Rule object `3002` (represented as `[(10 ?0)] > [(30 ?0)]` inside scope `(^4202 3002 [[(10 ?0)] > [(30 ?0)]])`).
+*   **For `3005`:** Rule object `3003` (represented as `[(10 ?0)] > [(30 ?0)]` inside scope `(^4202 3003 [[(10 ?0)] > [(30 ?0)]])`).
+
+*Note: While `3002` and `3003` contain structurally identical rewrite terms, they are distinct, independently declared structural objects with distinct identity coordinates in the AXH document.*
+
+---
+
+### 3. Bindings and Successor States
+*   **Application `3004`:**
+    *   **Binding:** `?0 = 20`
+    *   **Successor State Structure:** `[(30 20)]`
+*   **Application `3005`:**
+    *   **Binding:** `?0 = 20`
+    *   **Successor State Structure:** `[(30 20)]`
+
+---
+
+### 4. Structural Isomorphism of Successor States
+**Verdict:** **Yes.**
+The successor states produced by both applications are structurally isomorphic. Each consists of an identical unordered scope containing exactly one direct member occurrence of the ordered incidence `(30 20)`. Under V0 (and any other view policy), their graph topologies are isomorphic.
+
+---
+
+### 5. Distinctness of Application/Derivation Events
+**Verdict:** **Yes.**
+The derivation events represented by event IDs `3004` and `3005` remain distinct application events. According to Section 12.7, distinct rule applications remain distinct derivation events even when the resulting successor states are structurally identical. They maintain their distinct identity records and event-level provenance.
+
+---
+
+## Ambiguity Report
+
+Pursuant to the governing prompt, the following semantic and representation ambiguities are frozen and reported directly from the cold sources:
+
+1.  **Implicit Argument Roles in Selection Records (`^4203`):** 
+    The raw serialization syntax in `PHASE_B_REWRITE_CASES_004.axh` defines selection records using the stable label `^4203` as an ordered incidence (e.g., `(^4203 2003 2001 2002)`). From a strictly structural perspective, raw core syntax (Section 7, Section 15) does not privilege any argument position or define execution roles inherently. The mapping of these elements to `(application-event ID, state-object ID, rule-object ID)` relies entirely on the external semantic profile supplied by the governing prompt, demonstrating that raw labels remain downstream metadata (Section 2) and execution profile bindings must be explicitly agreed upon (Section 12.2).
+    
+2.  **Rule-Side Outer-Container vs. Outer Scope Wrapping:** 
+    The rules are represented as `(^4202 2002 [[(10 ?0)] > [(30 ?0)]])`. The rewrite rule `[(10 ?0)] > [(30 ?0)]` is nested inside an outer scope bracket `[ ... ]` that acts as a structural container. A naive interpreter might collapse the outermost rule-side bracket with the container brackets. However, Draft 0.15 Section 12.1 clarifies that rule-side outer brackets are strictly pattern-splice boundaries, which resolves the ambiguity by distinguishing the rule's active boundary from the passive AXH scope wrapper.
+
+3.  **Namespace Inheritance Across Disjoint AXH Top-Level Scopes:** 
+    The input file `PHASE_B_REWRITE_CASES_004.axh` contains multiple, disjoint top-level scopes (Case `#2` and Case `#3`). The spec (Section 6.1, 6.2) notes that independent top-level documents do not share structural identity namespaces by default, but nested scopes inherit their enclosing namespace. Because Case `#2` and Case `#3` are evaluated independently as isolated test cases under different `#2` and `#3` selectors, the question of whether they share structural namespace is not load-bearing for this run, and identity hygiene is preserved.

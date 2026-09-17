@@ -1,0 +1,180 @@
+# ISOGRAPH EXPERIMENT 004 — RUN-C1
+## Phase C Cold Comparison Agent Report — Draft 0.15
+
+This is the complete raw report for the isolated cold run **RUN-C1**, utilizing only the frozen source inputs and specifications permitted under the Isolation Requirement. 
+
+---
+
+## Q004-11 Evaluation Report
+
+### 1. Isomorphism Evaluation (V0)
+* **Result:** `Rejected / False`
+* **Justification:** Under the V0 closed structural view, stable labels are rigid. `^5001` contains exactly one member occurrence (ordered incidence): `(^5100 10 11)`. `^5002` contains two member occurrences: `(^5100 20 21)` and `(^5101 20 21)`. Because a structural isomorphism requires a bijection between member occurrences and `^5002` has a larger multiset cardinality of member occurrences, no bijective edge mapping exists. 
+
+### 2. Strong/Induced Embedding Evaluation (V0)
+* **Result:** `Rejected / False`
+* **Justification:** Under Section 25 of the Core Specification, a strong embedding requires injective preservation *and reflection* of every included relation/scope/constraint kind among mapped objects. 
+Let the candidate node mapping be $m: \{10, 11\} \to \{20, 21\}$ defined by $m(10) = 20$ and $m(11) = 21$. This mapping preserves the edge `(^5100 10 11)` since `(^5100 20 21)` is present in the target. However, the target contains an additional relation, `(^5101 20 21)`, on the mapped objects $\{20, 21\}$. Since the pre-image `(^5101 10 11)` is absent in the source, this relation is not reflected from the source. Because `^5101` is part of the frozen included relation signature of this run, its non-reflection among the mapped objects violates the strong embedding condition. Any other node bijection fails preservation entirely.
+
+### 3. Weak Embedding Evaluation (V0)
+* **Result:** `Verified / True`
+* **Justification:** A weak embedding requires injective preservation of source structure while any extra target relations remain as explicit residuals. Under the mapping `{10 -> 20, 11 -> 21}`, the source edge `(^5100 10 11)` is preserved as `(^5100 20 21)` in the target, and the extra target-side edge `(^5101 20 21)` is successfully accounted for as a target-only pair residual.
+
+### 4. Valid Mapping
+* **Relation Kind:** `WEAK_EMBEDDING`
+* **Node Correspondence:** 
+  ```text
+  10 -> 20
+  11 -> 21
+  ```
+* **Edge Mapping:** 
+  ```text
+  (^5100 10 11) -> (^5100 20 21)
+  ```
+
+### 5. Pairwise Item Accounting & Blocking Relations
+* **Mapped Common Structure:**
+  * Nodes: `10` (mapped to `20`), `11` (mapped to `21`)
+  * Edge: `(^5100 10 11)` (mapped to `(^5100 20 21)`)
+* **Target-Only Pair Residual (B-only residual):**
+  * Edge: `(^5101 20 21)`
+* **Boundary-Cut / Incidence:**
+  * The residual edge `(^5101 20 21)` is incident on the mapped common core nodes `20` and `21`.
+* **Blocking Relation:** The target-only relation `(^5101 20 21)` holds among mapped objects but has no pre-image in the source, thereby blocking a `STRONG_EMBEDDING` and forcing a `WEAK_EMBEDDING`.
+* **Ambiguity:** None. The rigid label `^5100` uniquely determines the mapping direction, preventing any alternate node permutation.
+
+---
+
+## Q004-12 Evaluation Report
+
+### 1. Strongest V0 Common Core Definition
+Because stable labels `^5201` and `^5202` are rigid and distinct under V0, they cannot map to one another. Thus, only the edge with stable label `^5200` can be mapped into the common core. This permits two structurally defensible formulations of the common core depending on the strictness of node-inclusion rules:
+
+* **Alternative A (Minimal/Strict Core):** Only map nodes that participate in the mapped common edge.
+* **Alternative B (Extended Node Bijection):** Form a complete bijection over all nodes, leaving the un-mappable edges as isolated edge-only residuals. 
+
+Both alternatives are classified and accounted for below to ensure absolute analytical completeness.
+
+---
+
+### Alternative A: Minimal Node Mapping
+
+#### A.1 Node Mapping
+```text
+30 -> 40  (represented as common node c0)
+31 -> 41  (represented as common node c1)
+```
+
+#### A.2 Pairwise Accounting
+* **Mapped Common Structure:**
+  * Nodes: `30` (mapped to `40`), `31` (mapped to `41`)
+  * Edge: `(^5200 30 31)` (mapped to `(^5200 40 41)`)
+* **Source-Only Pair Residual (A-only residual):**
+  * Node: `32`
+  * Edge: `(^5201 31 32)`
+* **Target-Only Pair Residual (B-only residual):**
+  * Node: `42`
+  * Edge: `(^5202 41 42)`
+* **Boundary-Cut / Incidence:**
+  * Source A: The residual edge `(^5201 31 32)` has a boundary-cut incidence crossing into the common core at node `31` (corresponding to common core node `c1`).
+  * Target B: The residual edge `(^5202 41 42)` has a boundary-cut incidence crossing into the common core at node `41` (corresponding to common core node `c1`).
+
+#### A.3 Reconstruction Obligations
+Let the common core be `C = [ c0, c1, (^5200 c0 c1) ]`.
+* **Reconstruction of A (`^5001`):** Instantiate `C` under the node mapping `{c0 -> 30, c1 -> 31}`. Introduce the A-only residual node `32` and glue the A-only residual edge `(^5201 31 32)` to the core at node `31` via the boundary-cut incidence.
+* **Reconstruction of B (`^5002`):** Instantiate `C` under the node mapping `{c0 -> 40, c1 -> 41}`. Introduce the B-only residual node `42` and glue the B-only residual edge `(^5202 41 42)` to the core at node `41` via the boundary-cut incidence.
+
+---
+
+### Alternative B: Extended Node Bijection
+
+#### B.1 Node Mapping
+```text
+30 -> 40  (represented as common node c0)
+31 -> 41  (represented as common node c1)
+32 -> 42  (represented as common node c2)
+```
+
+#### B.2 Pairwise Accounting
+* **Mapped Common Structure:**
+  * Nodes: `30` (mapped to `40`), `31` (mapped to `41`), `32` (mapped to `42`)
+  * Edge: `(^5200 30 31)` (mapped to `(^5200 40 41)`)
+* **Source-Only Pair Residual (A-only residual):**
+  * Edge: `(^5201 31 32)`
+* **Target-Only Pair Residual (B-only residual):**
+  * Edge: `(^5202 41 42)`
+* **Boundary-Cut / Incidence:** None (since all nodes are mapped, the residual edges do not reference unmapped nodes; they connect mapped core nodes but remain edge-only residuals).
+
+#### B.3 Reconstruction Obligations
+Let the common core be `C = [ c0, c1, c2, (^5200 c0 c1) ]`.
+* **Reconstruction of A (`^5001`):** Instantiate `C` under the node mapping `{c0 -> 30, c1 -> 31, c2 -> 32}`. Merge the A-only residual edge `(^5201 31 32)`.
+* **Reconstruction of B (`^5002`):** Instantiate `C` under the node mapping `{c0 -> 40, c1 -> 41, c2 -> 42}`. Merge the B-only residual edge `(^5202 41 42)`.
+
+---
+
+### 4. Post-Hoc Omission of Relations
+Under Section 22 and 23 of the IsoGraph Core Specification, **no relation may be omitted post-hoc to enlarge the common core**. 
+The included/excluded relation signature and view policy must be frozen prior to search. Omitting `^5201` and `^5202` post-hoc to avoid residuals and manufacture an isomorphism of the remaining structures is structurally prohibited.
+
+### 5. Genuine Ambiguities
+* **Structural Ambiguity:** There is a structural ambiguity regarding whether node `32` should be mapped to `42` (Alternative B) or treated as an independent residual node (Alternative A). Under Alternative B, the node mapping `32 -> 42` is structurally arbitrary since their only incident edges are distinct rigid relations (`^5201` vs `^5202`), meaning they share no common relation in the core to justify their equivalence. Under Alternative A, we preserve this distinction by refusing to map them, which correctly isolates the structural mismatch of their connections. Both models are mathematically sound and are preserved in this report.
+
+---
+
+## Q004-13 Evaluation Report
+
+### 1. Isomorphism Verdict (V0)
+* **Result:** `Verified / True`
+* **Justification:** Both scopes contain two edges of label `^5300`. In `^5001`, both edges originate from node `50` and terminate at `51` and `52`. In `^5002`, both edges originate from node `60` and terminate at `61` and `62`. Because there exists a bijective mapping of nodes that preserves and reflects all edges, they are V0-isomorphic.
+
+### 2. Enumeration of Materially Distinct Witnesses
+Due to leaf symmetry among the terminal nodes, there are exactly **two** materially distinct bijective isomorphism witnesses:
+
+#### Witness 1:
+* **Node Bijection:**
+  ```text
+  50 -> 60
+  51 -> 61
+  52 -> 62
+  ```
+* **Edge Mapping:**
+  ```text
+  (^5300 50 51) -> (^5300 60 61)
+  (^5300 50 52) -> (^5300 60 62)
+  ```
+
+#### Witness 2:
+* **Node Bijection:**
+  ```text
+  50 -> 60
+  51 -> 62
+  52 -> 61
+  ```
+* **Edge Mapping:**
+  ```text
+  (^5300 50 51) -> (^5300 60 62)
+  (^5300 50 52) -> (^5300 60 61)
+  ```
+
+### 3. Deterministic Canonical Labeling & Automorphism Justification
+* **Verdict:** **No**, a deterministic canonical labeling does **not** permit discarding either witness or keeping only one without explicit, verified automorphism/equivalence justification.
+* **Justification:** According to Draft 0.15 Core Specification Section 32.4 and Section 30.2, "Comparison correctness and preservation of materially distinct automorphism witnesses MUST NOT depend on incidental serializer tie-breaks" and "Mappings may be quotient-collapsed only under an independently verified automorphism/equivalence showing irrelevance to the requested downstream operation." Because these two witnesses represent distinct, valid routing pathways (which may be load-bearing during downstream composition, port assignment, or data flow), they must be preserved separately by default.
+
+### 4. Complete Item Accounting (For Both Witnesses)
+* **Mapped Common Structure (Witness 1):**
+  * Nodes: `50` (mapped to `60`), `51` (mapped to `61`), `52` (mapped to `62`)
+  * Edges: `(^5300 50 51)` (mapped to `(^5300 60 61)`), `(^5300 50 52)` (mapped to `(^5300 60 62)`)
+* **Mapped Common Structure (Witness 2):**
+  * Nodes: `50` (mapped to `60`), `51` (mapped to `62`), `52` (mapped to `61`)
+  * Edges: `(^5300 50 51)` (mapped to `(^5300 60 62)`), `(^5300 50 52)` (mapped to `(^5300 60 61)`)
+* **All other categories (residuals, boundary-cuts, exclusions, projections):** Entirely empty for both witnesses.
+
+### 5. Genuine Ambiguities
+* **Symmetry Ambiguity:** The leaf nodes (`51` and `52` in the source, `61` and `62` in the target) are structurally symmetric with respect to their root nodes `50` and `60`. This symmetry creates two equally valid, non-dominated isomorphism mappings. Both are preserved to maintain structural fidelity.
+
+---
+
+### Certification Statement
+This cold run has been performed in strict isolation in accordance with **Draft 0.15** constraints and **Protocol 006**. No external sources, expected mappings, or human glosses were accessed. Every requested verdict, ambiguity, mapping, and item-accounting obligation is structurally documented and preserved.
+
+**Run Verdict:** `SUCCESSFUL RUN-C1 COMPLIANCE`

@@ -1,0 +1,181 @@
+# ISOGRAPH EXPERIMENT 004 — COLD RUN REPORT
+**Run Identifier:** RUN-C2  
+**Frozen Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Model:** `gemini-3.5-flash`  
+**Evaluation Standard:** Draft 0.15 Consolidated Candidate + SCP-006
+
+---
+
+## I. Compliance and Isolation Certification
+
+This report has been compiled under strict cold isolation constraints. No external network resources, training-set registries, or peer run outputs have been accessed. The analysis is derived strictly from the permitted files:
+1. `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+2. `experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
+3. `experiments/004/PHASE_C_NEGATIVE_INDEX_CASES_004.axh`
+
+All load-bearing distinctions (surface vs. substrate, occurrence vs. identity, D-local vs. pairwise residuals) are preserved without dilution.
+
+---
+
+## II. Case Evaluation Q004-14
+
+This case is selected by the native anchor edge `(^5400 #14)`.
+
+### Subcase #1: Comparison of `^5401 #1` and `^5402 #1` under V0
+
+#### 1. Input Structure Extraction
+*   **Source A (`^5401 #1`):** `[ (^5410 1 2) ]`
+    *   *Type:* Unordered structural scope.
+    *   *Direct Member Occurrences:* Exactly 1 ordered incidence edge.
+    *   *Edge Structure:* `(^5410 1 2)` where `^5410` is a rigid stable label (under V0), and `1`, `2` are local structural identities.
+*   **Source B (`^5402 #1`):** `[ (^5410 10 11) (^5410 10 12) ]`
+    *   *Type:* Unordered structural scope.
+    *   *Direct Member Occurrences:* Exactly 2 ordered incidence edges.
+    *   *Edge Structures:* `(^5410 10 11)` and `(^5410 10 12)`.
+
+#### 2. Structural Invariant Analysis
+Under the closed structural view **V0**, stable labels and literals are rigid. Although local structural identities can bijectively rename, the fundamental structural properties of the scopes must be preserved and reflected for an isomorphism to exist.
+
+*   **Direct Member Occurrence Multiplicity (Core Spec §8.1):** 
+    By default, occurrence multiplicity inside unordered scopes is semantic. 
+    $$\text{Multiplicity}(\text{Scope}_A) = 1 \neq 2 = \text{Multiplicity}(\text{Scope}_B)$$
+*   **Edge Count / Valence Invariant:** 
+    The count of ordered incidence edges within the scope boundary is 1 on the left and 2 on the right.
+*   **Structural Identity Cardinality:** 
+    The set of active local structural identities enclosed within the scope is 2 for Source A ($\{1, 2\}$) and 3 for Source B ($\{10, 11, 12\}$).
+
+#### 3. Verdict
+Yes, these direct structural invariants are **sufficient to certify non-isomorphism without search**. 
+*   **Exact Invariant Statement:** The cardinality of direct member occurrences within the scope boundary.
+*   **Applicability:** Under V0, isomorphism requires a bijective mapping of both structural nodes and direct scope member occurrences. Because $1 \neq 2$, no bijective mapping can exist. This mismatch is a necessary separating invariant that invalidates any isomorphic candidate at the representation layer prior to mapping search.
+
+---
+
+### Subcase #2: Comparison of `^5401 #2` and `^5402 #2` under V0
+
+#### 1. Input Structure Extraction
+*   **Source A (`^5401 #2`):** `[ (^5410 20 21) (^5410 20 22) ]`
+    *   *Structural Nodes:* $\{20, 21, 22\}$ under local namespace.
+    *   *Incidence Edges:* Two occurrences of `^5410`-headed tuples. Node `20` occupies the first coordinate in both.
+*   **Source B (`^5402 #2`):** `[ (^5410 30 31) (^5410 30 32) ]`
+    *   *Structural Nodes:* $\{30, 31, 32\}$ under local namespace.
+    *   *Incidence Edges:* Two occurrences of `^5410`-headed tuples. Node `30` occupies the first coordinate in both.
+
+#### 2. Isomorphism Verification and Witness
+An isomorphism exists under V0 because there is a bijection that preserves both the rigid stable labels and the ordered incidence structure.
+
+**Native Candidate Witness (Draft 0.15 Representative Structure):**
+```text
+[
+  (witness_namespace_binding)
+  (target_layer = serialized_representation_graph)
+  (view_policy = V0)
+  (relation_kind = ISOMORPHISM)
+  (label_map [
+    (^5410 ^5410)
+  ])
+  (node_correspondence [
+    (20 30)
+    (21 31)
+    (22 32)
+  ])
+  (edge_correspondence [
+    ((^5410 20 21) (^5410 30 31))
+    ((^5410 20 22) (^5410 30 32))
+  ])
+]
+```
+*(Note: An alternative valid automorphism maps node `21` to `32` and `22` to `31`, which is also preserved by default but mapped uniquely here to prove realizability).*
+
+#### 3. Interpretation of Native Run Record `(^5403 #2 #0)`
+The record `(^5403 #2 #0)` denotes that a bounded/incomplete search terminated with no witness found and no separating certificate.
+
+*   **Justified Statuses:** `NO_WITNESS_FOUND`, `UNKNOWN`, or `RESOURCE_LIMIT`.
+*   **Is `CERTIFIED_NON_ISOMORPHIC` Justified?** 
+    **No.** Under Core Spec §25, §36, and SCP-006 §13, a negative certificate of non-isomorphism requires either:
+    1. A *complete* search of the finite problem space; or
+    2. A verified separating invariant (such as the occurrence mismatch shown in Subcase #1).
+    
+    Because the native run record `(^5403 #2 #0)` indicates the search was incomplete/bounded, and no separating certificate was generated, upgrading the status to `CERTIFIED_NON_ISOMORPHIC` is **expressly prohibited** by the constitutional rules of search honesty. Indeed, doing so here would yield a false negative, as a valid isomorphic witness structurally exists.
+
+---
+
+## III. Case Evaluation Q004-15
+
+This case is selected by the native anchor edge `(^5400 #15)`.
+
+### 1. Analysis of V0 Rigidity and Fingerprint Mismatch
+
+*   **Left Structure (`^5401 #1`):** `[ (^5500 40 41) ]` (Index value: `#5500`)
+*   **Right Structure (`^5402 #1`):** `[ (^5501 50 51) ]` (Index value: `#5501`)
+
+**Q: Under V0, with stable labels rigid, can the mismatch serve as a necessary separating invariant for this exact fixture/policy/stage? What structural relation remains possible?**
+
+*   **A:** **Yes.** Under V0, stable labels are strictly rigid. The stable label `^5500` cannot map to `^5501`. Since the raw synthetic index directly outputs the stable label IDs as exact literals (`#5500` vs. `#5501`), the mismatch of the index values ($5500 \neq 5501$) strictly mirrors the rigidity violation of the stable labels themselves. It is a necessary separating invariant for V0.
+*   **Possible Relations:** No positive structural relations that preserve rigid labels (such as `ISOMORPHISM`, `STRONG_EMBEDDING`, `WEAK_EMBEDDING`, or `SPECIALIZATION`) are possible. The only permitted terminal statuses for the pair are `CERTIFIED_NON_ISOMORPHIC` or `NO_WITNESS_FOUND`.
+
+---
+
+### 2. VS Mapping and Fingerprint Invariance
+
+**Q: Under VS, if an explicit bijection permits `^5500` left to map to `^5501` right, is the same raw-label fingerprint still an invariant of the allowed relation?**
+
+*   **A:** **No.** Under the signature-mappable view **VS**, stable labels are permitted to map bijectively. The relation $\mathcal{R}_{\text{VS}}$ explicitly tolerates differences in raw label names so long as their incidence topologies match and the label mapping is bijective. 
+    Because `Left` can relate to `Right` under VS while having unequal raw labels, the raw-label fingerprint function $f(T) = \text{raw\_label\_ID}$ violates the strict invariant requirement:
+    $$A \mathcal{R}_{\text{VS}} B \implies f(A) = f(B)$$
+    Thus, the raw-label fingerprint ceases to be a valid invariant under VS.
+
+---
+
+### 3. Pruning Safety under VS
+
+**Q: Under that VS mapping, can the mismatch safely prune the pair?**
+
+*   **A:** **No.** Because the fingerprint is not an invariant under VS, pruning based on its mismatch would discard a valid structural match. This would manufacture an illicit **false negative**, violating Core Spec §32.3 ("otherwise the index is heuristic and its misses cannot support completeness or negative claims").
+
+---
+
+### 4. Witness and Mapping under VS
+
+**Q: Under that VS mapping, determine whether a mapped-signature isomorphism exists and give the local structural-ID map if so.**
+
+*   **A:** **Yes.** A mapped-signature isomorphism exists under VS.
+*   **Stable Label Bijection:** `^5500` $\leftrightarrow$ `^5501`
+*   **Local Structural-ID Map:**
+    *   `40` $\leftrightarrow$ `50`
+    *   `41` $\leftrightarrow$ `51`
+    *(An alternative valid automorphism maps `40` $\leftrightarrow$ `51` and `41` $\leftrightarrow$ `50` due to the lack of other asymmetric constraints on the nodes).*
+
+Under this node-and-label mapping, the edge `(^5500 40 41)` perfectly maps to `(^5501 50 51)`, preserving ordered incidence, scope boundary, and occurrence multiplicity.
+
+---
+
+### 5. Multi-Stage Generalization Limitations
+
+**Q: State why this fixture does not by itself qualify the same fingerprint across a different D/factorization stage.**
+
+*   **A:** Under Core Spec §32.3, fingerprint invariance is strictly stage-relative and topology-locked. A topology-altering D transformation (decomposition/extraction) may:
+    1. Project out or obscure the target stable labels;
+    2. Insert intermediate structural nodes;
+    3. Collapse or quotient the relation signature; or
+    4. Apply E-equivalence rewrites.
+    
+    Because the synthetic fingerprint in this fixture relies entirely on direct, raw exposure of the stable head labels on single-edge structures, its mathematical validity does not survive transformations that modify these structural invariants. Qualifiers and indexes must be separately certified for each distinct D-factorization stage.
+
+---
+
+## IV. Final Diagnostic Summary
+
+| Case/Subcase | Requested Verdict / Status | Certified Invariant / Witness Map | Specification Authority |
+| :--- | :--- | :--- | :--- |
+| **Q004-14 Sub1** | `CERTIFIED_NON_ISOMORPHIC` | Direct Member Occurrence Multiplicity ($1 \neq 2$) | Core Spec §8.1, §25 |
+| **Q004-14 Sub2** | `ISOMORPHISM` | `20` $\leftrightarrow$ `30`, `21` $\leftrightarrow$ `31`, `22` $\leftrightarrow$ `32` | Core Spec §6.1, V0 View |
+| **Q004-14 Sub2 (Run)** | `NO_WITNESS_FOUND` / `UNKNOWN` | No separation cert; `CERTIFIED_NON_ISOMORPHIC` is **invalid** | Core Spec §36, SCP-006 §13 |
+| **Q004-15 Q1 (V0)** | `CERTIFIED_NON_ISOMORPHIC` | Rigidity mismatch of rigid labels `^5500` / `^5501` | V0 View, SCP-006 §7 |
+| **Q004-15 Q2 (VS)** | Fingerprint is **not** an invariant | Raw label identity is non-rigid under VS | Core Spec §32.3, VS View |
+| **Q004-15 Q3 (VS)** | Pruning is **unsafe** (False Negative risk) | Fingerprint mismatch does not imply relation mismatch | Core Spec §32.3 |
+| **Q004-15 Q4 (VS)** | `ISOMORPHISM` exists | `40` $\leftrightarrow$ `50`, `41` $\leftrightarrow$ `51` (under label map `^5500` $\leftrightarrow$ `^5501`) | VS View, SCP-006 §7 |
+| **Q004-15 Q5** | Non-generalizable across D | Invariance is stage-specific; D alters graph topology | Core Spec §19.3, §32.3 |
+
+---
+**Report status:** COMPLETE. Frozen native comparison audit complete under Run RUN-C2.
