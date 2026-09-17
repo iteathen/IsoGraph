@@ -36,7 +36,7 @@ jobs:
       fail-fast: false
       max-parallel: 1
       matrix:
-        run: [RUN-S05, RUN-S08, RUN-B, RUN-C1, RUN-C2, RUN-D09, RUN-D10, RUN-D16, RUN-D18, RUN-D19, RUN-D20S, RUN-D20L]
+        run: [RUN-D09, RUN-D10, RUN-D16, RUN-D18, RUN-D19, RUN-D20S, RUN-D20L]
     steps:
       - name: Check out evidence history
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -58,7 +58,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: isograph-exp004-${{ matrix.run }}-verifier-v3
+          name: isograph-exp004-${{ matrix.run }}-verifier-v3b
           path: out/
           if-no-files-found: error
           retention-days: 30
@@ -75,14 +75,14 @@ jobs:
           fetch-depth: 0
           ref: experiment/004-gemini-results
 
-      - name: Download V3 verifier artifacts
+      - name: Download V3b verifier artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: isograph-exp004-*-verifier-v3
+          pattern: isograph-exp004-*-verifier-v3b
           path: verifier-downloads
           merge-multiple: true
 
-      - name: Archive V3 verifier outputs
+      - name: Archive V3b verifier outputs
         shell: bash
         run: |
           set -euo pipefail
@@ -97,10 +97,10 @@ jobs:
             cp "verifier-downloads/${base}_VERIFIER_METADATA.json" "$dest/$base/VERIFIER_METADATA.json"
             found=$((found+1))
           done
-          printf '# Experiment 004 — scorer-blind verifier archive\n\nV3 workflow run: `%s`\n\nV3 successful reports: **%s / 12**.\n\nV1 successful reports for RUN-A, RUN-S01, RUN-S02, RUN-S03, RUN-S06, RUN-S07, and RUN-S04 remain separately frozen in Actions artifacts and are not overwritten here.\n\nVerifier packets exclude hidden assertions, scoring reports, qualification ledgers, expected answers, and prior verifier outputs.\n' "$GITHUB_RUN_ID" "$found" > "$dest/MANIFEST.md"
+          printf '# Experiment 004 — scorer-blind verifier archive\n\nLatest continuation workflow run: `%s`\n\nV3b successful reports: **%s / 7**.\n\nOther successful verifier artifacts remain frozen separately and are reviewed in the final verifier ledger.\n\nVerifier packets exclude hidden assertions, scoring reports, qualification ledgers, expected answers, and prior verifier outputs.\n' "$GITHUB_RUN_ID" "$found" > "$dest/MANIFEST.md"
           test "$found" -gt 0
 
-      - name: Commit V3 verifier archive
+      - name: Commit V3b verifier archive
         shell: bash
         run: |
           set -euo pipefail
@@ -109,5 +109,5 @@ jobs:
           git add experiments/004/cold-results/gemini/verifier
           if git diff --cached --quiet; then exit 0; fi
           git diff --cached --check
-          git commit -m 'experiment: archive Gemini 3.6 scorer-blind verifier evidence'
+          git commit -m 'experiment: archive remaining Gemini 3.6 verifier evidence'
           git push origin HEAD:experiment/004-gemini-results
