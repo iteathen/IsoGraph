@@ -1,0 +1,17 @@
+{
+  "case": "Q004-S03",
+  "authority": "CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md",
+  "fixture_roles": {
+    "^6300": "case selector",
+    "^6301": "closed object body",
+    "^6302": "explicit open-interface variable ownership declaration",
+    "^6303": "open object body"
+  },
+  "expected": {
+    "case_1": "invalid_unowned_variable_in_closed_object",
+    "case_2": "valid_explicit_quantifier_owner",
+    "case_3": "valid_explicit_open_interface_owner",
+    "declarative_implication_implicitly_binds_variable": false,
+    "unowned_variable_default": "no implicit universal existential or wildcard meaning"
+  }
+}
