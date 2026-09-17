@@ -69,11 +69,20 @@ A result at explicitly named frozen factorization/extraction nodes is local unle
 
 ## Discovery Protocols
 
-For agent-driven structural discovery, read `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` when that candidate is in scope.
+For agent-driven structural discovery on the current research branch, read both:
+
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` — base ranked protocol catalog;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — current normative correction layer motivated by RUN-Q006.
+
+DP 0.2 supersedes conflicting DP 0.1 discovery behavior while preserving DP 0.1 as the exact candidate tested by Experiment 006.
 
 Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. The ranking is ordered by expected structural information gain but is heuristic and MUST adapt to evidence. Discovery priority never supplies semantic authority.
 
-Use the protocol contract explicitly: objective -> priority cues -> inspect -> abstract -> generate -> expand -> falsify -> promote -> preserve residuals -> stop/cost -> next protocols. Search high-information seams before low-value lexical/identifier similarity, falsify candidates early, and switch attention to residuals once a strong common core is found.
+Use the protocol contract explicitly: objective -> priority cues -> inspect -> abstract -> generate -> expand -> falsify -> promote -> preserve residuals -> stop/cost -> next protocols. Search high-information seams before low-value lexical/identifier similarity and falsify candidates early.
+
+Under DP 0.2, a load-bearing residual between already matched upstream/downstream regions is not terminal divergence. Trigger the cross-residual decomposition gate, refactor by functional role, test alternate factorization/scale, and align nodes by dependency role rather than textual proximity. Different machinery, carrier type, proof technique, implementation, factorization, or SI is not by itself a natural distinction.
+
+When corresponding load-bearing roles differ mainly by representation/factorization/formulation and that apparent distinction would terminate or split the search, trigger the DP-38 / NEI distinction audit. NEI is used to ask whether the separator is naturally justified; DP similarity, isomorphism, QUI, or common-core size does not itself establish NEI `SAME`. `UNKNOWN` or incomplete NEI authority cannot be used as a natural separator.
 
 For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
 
@@ -90,6 +99,8 @@ unresolved obligations: none
 ```
 
 Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
+
+Experiment 006 RUN-Q006 is frozen evidence against DP 0.1 / QU 0.1 / NEI 0.1 at its recorded qualification revision. Its integrated result did not qualify. Preserve `experiments/006/EXPERIMENT_006_RUN_Q006_REVIEW.md` and `experiments/006/RUN_Q006_DECOMPOSITION_REPLAY.md` as historical evidence; do not reinterpret the frozen cold result through DP 0.2.
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
