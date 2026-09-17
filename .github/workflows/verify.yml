@@ -32,6 +32,7 @@ jobs:
             CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md
             CORE_SPEC_DRAFT_0_14_CANDIDATE.md
             CORE_SPEC_DRAFT_0_15_CANDIDATE.md
+            CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md
             HISTORICAL_PRE_ISOGRAPH_README.md
             .github/CODEOWNERS
             .github/REPOSITORY_SETTINGS.md
@@ -46,11 +47,15 @@ jobs:
 
           grep -Fq '# IsoGraph' README.md
           grep -Fq '275b4d28224990a2b8fbdd7fa66cb071fb867e48' MIGRATION.md
-          grep -Fq 'CORE_SPEC_DRAFT_0_15_CANDIDATE.md' AGENTS.md
+          grep -Fq 'CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md' AGENTS.md
+          grep -Fq 'surface syntax' CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md
+          grep -Fq 'structural-only candidate retrieval path' CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md
           grep -Fq '* @iteathen' .github/CODEOWNERS
 
-          # The one-shot migration workflow must not return after migration.
+          # One-shot migration workflows must not return after migration.
           test ! -e .github/workflows/migrate-isograph.yml
+          test ! -e .github/workflows/name-sweep.yml
+          test ! -e .github/workflows/path-sweep.yml
 
       - name: Verify patch hygiene
         shell: bash
