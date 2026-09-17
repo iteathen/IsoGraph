@@ -46,7 +46,8 @@ function requireText(text, needle, label) {
 
 fs.mkdirSync('out/q006', { recursive: true });
 
-// Deterministic preflight before the single external semantic call.
+// Deterministic cold-visible preflight before the single external semantic call.
+// This process deliberately does not open scorer-only assertions/oracle material.
 for (const p of [...inputs, promptPath]) {
   if (forbiddenColdNames.some(x => p.includes(x))) {
     throw new Error(`Forbidden scorer-only resource mapped into cold packet: ${p}`);
@@ -60,7 +61,7 @@ const dp = frozen('extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md');
 const alpha = frozen('experiments/006/DP_PROOF_ALPHA.md');
 const beta = frozen('experiments/006/DP_PROOF_BETA.md');
 const cases = frozen('experiments/006/Q006_CASES.md');
-const assertions = frozen('experiments/006/Q006_ASSERTIONS.json');
+const prompt = frozen(promptPath);
 
 requireText(qu, 'R(Q)', 'QU realization-family semantics');
 requireText(qu, 'Quantifiable Unknown Isomorph (QUI)', 'QUI semantics');
@@ -85,10 +86,9 @@ for (const id of ['B01','B02','B03','B04','B05','B06','B07','B08','B09','B10']) 
   if (!beta.includes(id)) throw new Error(`Missing Proof Beta step ${id}`);
 }
 const leakage = /\b(Brouwer|Sperner|Ivanov|Harper|Rutgers|arXiv)\b/i;
-if (leakage.test(alpha) || leakage.test(beta) || leakage.test(cases) || leakage.test(frozen(promptPath))) {
+if (leakage.test(alpha) || leakage.test(beta) || leakage.test(cases) || leakage.test(prompt)) {
   throw new Error('Historical benchmark identity leaked into cold-visible corpus');
 }
-JSON.parse(assertions);
 
 const manifest = [];
 const chunks = [
@@ -104,13 +104,11 @@ for (const p of inputs) {
   manifest.push({ path: p, sha256: sha256(text), bytes: Buffer.byteLength(text) });
   chunks.push(`\n===== BEGIN PERMITTED FILE: ${p} =====\n${text}\n===== END PERMITTED FILE: ${p} =====\n`);
 }
-const prompt = frozen(promptPath);
 manifest.push({ path: promptPath, sha256: sha256(prompt), bytes: Buffer.byteLength(prompt) });
 chunks.push(`\n===== BEGIN GOVERNING COLD PROMPT: ${promptPath} =====\n${prompt}\n===== END GOVERNING COLD PROMPT =====\n`);
 
 const packet = chunks.join('');
-const packetPath = `out/q006/${RUN}_PACKET.txt`;
-fs.writeFileSync(packetPath, packet);
+fs.writeFileSync(`out/q006/${RUN}_PACKET.txt`, packet);
 fs.writeFileSync(`out/q006/${RUN}_INPUT_MANIFEST.json`, JSON.stringify(manifest, null, 2) + '\n');
 
 const request = {
@@ -163,8 +161,7 @@ const baseMeta = {
   packet_sha256: sha256(packet),
   api_attempts: attempts,
   http_status: status,
-  scorer_only_assertions_sha256: sha256(assertions),
-  isolation: 'single-packet cold decoder; scorer-only resources excluded'
+  isolation: 'cold-visible packet only; runner never opens scorer-only assertions/oracle material'
 };
 
 if (!(status >= 200 && status < 300)) {

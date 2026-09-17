@@ -2,6 +2,11 @@ name: Experiment 006 QU NEI DP integrated qualification
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - spec/nei-qu-rewrite
+    paths:
+      - experiments/006/RUN_Q006.request
 
 permissions:
   contents: read
@@ -65,3 +70,7 @@ jobs:
           console.log(`QU=${score.qu?.disposition} NEI=${score.nei?.disposition} DP=${score.dp?.disposition} integrated=${score.integrated}`);
           if (score.integrated !== 'QUALIFIES') process.exit(1);
           NODE
+
+# Candidate-branch execution: create or update experiments/006/RUN_Q006.request once
+# after the candidate/corpus/assertions are frozen. Authoring commits do not match that path
+# and therefore do not consume Actions or Gemini quota.

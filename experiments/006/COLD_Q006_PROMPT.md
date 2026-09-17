@@ -66,7 +66,7 @@ Answer every QU case in `Q006_CASES.md` using the allowed answer token listed fo
 
 ## NEI tasks
 
-Answer every NEI case in `Q006_CASES.md` using exactly one of:
+Answer every NEI case in `Q006_CASES.md` using the following tokens:
 
 ```text
 SAME
@@ -76,7 +76,7 @@ NO_ADMISSIBLE_MODEL
 INCOMPLETE_UNQUALIFIED
 ```
 
-Explain briefly why.
+If a case explicitly requests multiple subanswers, return those tokens as a comma-separated sequence in the requested order. Explain briefly why.
 
 ## DP task
 
