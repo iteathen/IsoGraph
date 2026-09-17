@@ -1,16 +1,18 @@
 # Experiment 004 — Cold-Run Manifest V3 — Consolidated Draft 0.15
 
-**Status:** current execution manifest; construction/freeze in progress  
+**Status:** current execution manifest; all current prompt/fixture/scorer artifacts constructed and frozen; isolated execution pending  
 **Supersedes for future execution:** `COLD_RUN_MANIFEST_004.md` and `COLD_RUN_MANIFEST_004_V2.md`  
 **Current semantic authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-The older manifests and prompts remain historical protocols. They are not edited or executed as current qualification evidence.
+The older manifests/prompts remain historical protocols. They are not edited or executed as current qualification evidence.
+
+New Draft 0.15 native fixtures use `.isg`; imported historical `.axh` fixtures remain unchanged. File extension has no semantic authority; see `NATIVE_FORMAT.md`.
 
 ## Global isolation rule
 
 Each cold run starts in a genuinely fresh context that has not seen scorer assertions, author audits, prior cold outputs, expected mappings/results, external-review reports/dispositions, prohibited registry/catalog material, or human gloss identifying intended analogies.
 
-A cold agent reads only the exact files named by its current Draft 0.15 prompt. The output is frozen/committed before scorer assertions are opened.
+A cold agent reads only the exact files named by its current prompt. The output is frozen/committed before scorer assertions are opened.
 
 A run contaminated by prior access is not cold evidence and must be rerun.
 
@@ -46,7 +48,7 @@ RUN-D16  COLD_Q004_16_PROMPT_DRAFT_0_15.md
          hidden: Q004_16_ASSERTIONS_004.json
 
 RUN-D17  COLD_Q004_17_PROMPT_DRAFT_0_15.md
-         Q004-17 base fixture only
+         Q004-17 preserved base fixture
          hidden: Q004_17_ASSERTIONS_004.json
 
 RUN-D18  COLD_Q004_18_PROMPT_DRAFT_0_15.md
@@ -67,11 +69,68 @@ RUN-D20L COLD_Q004_20_LABEL_ASSISTED_PROMPT_DRAFT_0_15.md
          hidden: Q004_20_ASSERTIONS_004.json
 ```
 
-## Required successor and supplemental runs
+## Current native-record successor
 
-Q004-17B is a current native-record successor/addendum. It does not rewrite Q004-17.
+```text
+RUN-D17B COLD_Q004_17B_PROMPT.md
+          fixture: Q004_17B_NATIVE_RECORDS_004.isg
+          hidden:  Q004_17B_ASSERTIONS_004.json
+```
 
-Q004-S01..Q004-S08 are additional frozen controls. Their fixtures/assertions/prompts are versioned separately and will be listed here only after each set is constructed and frozen.
+Q004-17B adds current-record pressure without changing Q004-17's frozen assertion set.
+
+## Supplemental Draft 0.15 runs
+
+```text
+RUN-S01  COLD_Q004_S01_PROMPT.md
+         fixtures: Q004_S01_LEGAL_REFERENCE_BINDING.isg
+                   Q004_S01_INVALID_EDGE_BINDING.isg
+                   Q004_S01_INVALID_DECLARATIVE_BINDING.isg
+         hidden:   Q004_S01_ASSERTIONS_004.json
+
+RUN-S02  COLD_Q004_S02_PROMPT.md
+         fixture:  Q004_S02_RULE_SPLICE.isg
+         hidden:   Q004_S02_ASSERTIONS_004.json
+
+RUN-S03  COLD_Q004_S03_PROMPT.md
+         fixture:  Q004_S03_VARIABLE_OWNERSHIP.isg
+         hidden:   Q004_S03_ASSERTIONS_004.json
+
+RUN-S04  COLD_Q004_S04_PROMPT.md
+         fixture:  Q004_S04_TWO_STAGE_RESIDUAL.isg
+         hidden:   Q004_S04_ASSERTIONS_004.json
+
+RUN-S05  COLD_Q004_S05_PROMPT.md
+         fixture:  Q004_S05_FACTOR_STAGE_INDEX.isg
+         hidden:   Q004_S05_ASSERTIONS_004.json
+
+RUN-S06  COLD_Q004_S06_PROMPT.md
+         fixtures: Q004_S06_PARSE_01.isg .. Q004_S06_PARSE_06.isg
+         hidden:   Q004_S06_ASSERTIONS_004.json
+
+RUN-S07  COLD_Q004_S07_PROMPT.md
+         fixtures: Q004_S07_NAC_INERT.isg
+                   Q004_S07_NAC_MATCHER.isg
+                   Q004_S07_NAC_FORBIDDEN.isg
+         hidden:   Q004_S07_ASSERTIONS_004.json
+
+RUN-S08  COLD_Q004_S08_PROMPT.md
+         fixture:  Q004_S08_SERIALIZER_SCOPE.isg
+         hidden:   Q004_S08_ASSERTIONS_004.json
+```
+
+## Supplemental execution order
+
+Execute deterministic syntax/context boundaries before the accounting/index cases:
+
+```text
+S01 / S02 / S03 / S06 / S07
+-> freeze outputs
+-> S04 / S05 / S08
+-> freeze outputs
+```
+
+The original-target runs and Q004-17B may execute in parallel fresh contexts once each run's exact permitted-input boundary is enforced.
 
 ## Freeze / unblind procedure
 
@@ -121,10 +180,10 @@ non-defect / reviewer misunderstanding
 
 Experiment 004 reaches its first current-authority qualification checkpoint only after:
 
-- all reusable original-target runs above have isolated outputs and post-freeze scoring;
+- all reusable original-target runs have isolated outputs and post-freeze scoring;
 - Q004-17B has been executed/scored;
 - Q004-S01..Q004-S08 have been executed/scored;
 - every discrepancy is classified before specification repair;
 - positive witnesses/certificates and claimed negatives/optimality are independently verified where applicable.
 
-Fixture construction alone is not qualification evidence.
+All required current prompt/fixture/assertion construction is complete. **Zero isolated current-authority runs have been accepted yet.** Construction is not qualification evidence.
