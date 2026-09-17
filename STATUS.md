@@ -1,73 +1,66 @@
 # IsoGraph Status
 
-**Project state:** research incubation / Draft 0.15 qualified checkpoint complete / Draft 0.16 focused qualification pending  
+**Project state:** research incubation / Draft 0.16 obligation-sufficiency clarification qualified  
 **Repository:** `iteathen/IsoGraph`  
 **Default branch:** `main`
 
-## Qualified authority
+## Current qualified semantic authority
 
-The last qualified self-contained semantic authority is:
+- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
 
-- `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
-
-Experiment 004 completed the first current-authority Draft 0.15 qualification checkpoint with:
-
-```text
-PASS:     15
-PARTIAL:   6
-FAIL:      0
-UNKNOWN:   0
-```
-
-No surviving Experiment 004 discrepancy demonstrated a Draft 0.15 representation-expressiveness failure. Frozen Experiment 004 evidence remains interpreted under Draft 0.15.
-
-## Draft 0.16 candidate
-
-The current unqualified successor candidate is:
+The exact tested pre-promotion candidate is retained unchanged as:
 
 - `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md`
 
-Its concise amendment record is:
+Draft 0.16 was tested from frozen corpus commit `fa733d533cd683c5064c4f31fa6c083fa3aed21d` and candidate blob `0cc6d2e3e08606a99324ee36b6ff5a6a5067efb8`.
 
-- `CORE_SPEC_DRAFT_0_16_CANDIDATE.md`
+Experiment 005 evidence:
 
-Draft 0.16 changes only proof/evidence sufficiency semantics:
+```text
+cold workflow:             35252295888
+cold artifact:             10510136341
+cold report SHA-256:       9078e33a7ae9f75eca75e2f9327a3f3e4e76e77c3223df5f03c5ce96dcbc5d9d
+post-freeze scoring:       8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
+verifier workflow:         35252625515
+verifier artifact:         10510431318
+verifier report SHA-256:   da45f19397f842eb08c9cea57cf77b108ee8dcf808c0c1f1989e72ca3d7b8eb3
+verifier disposition:      VERIFIED
+unresolved obligations:    none
+```
+
+Final review:
+
+- `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`
+
+## Qualified Draft 0.16 clarification layer
 
 - claim-bounded dependency-closed obligation sets;
-- proof-method neutrality within frozen qualification constraints;
+- proof-method neutrality within frozen qualification/isolation constraints;
 - claim-typed witness sufficiency;
 - context-scoped witness quotients;
-- exact compact witness-family certificates where coverage is proved;
+- exact compact witness-family certificates when coverage is independently verified;
 - local factorization-node claims versus factorization-space completeness.
 
-It adds no surface syntax, primitive, structural class, comparison relation kind, or D/E transformation kind.
+These rules reduce specification-mandated over-proof without deleting represented information or weakening structural correctness.
 
-## Experiment 005
+## Explicit non-changes
 
-Focused adversarial qualification is defined under `experiments/005/`.
+Draft 0.16 does not introduce:
 
-Frozen controls target:
+- new syntax or irreducible primitives;
+- new structural classes or comparison relations;
+- a globally minimal comparison view;
+- a prescribed progressive search algorithm;
+- mandatory canonical labeling or canonical factorization;
+- post-D-only fingerprinting;
+- weaker source/pairwise residual accounting;
+- heuristic negatives as proof;
+- automatic witness quotienting without qualified context and coverage.
 
-1. existential witness versus complete isomorphism family;
-2. witness quotient invalidated by a richer downstream context;
-3. local factorization-node result versus factorization-space completeness;
-4. direct isomorphism without canonicalization;
-5. separating-certificate negative without exhaustive search;
-6. weak relation success while a stronger relation fails;
-7. comparison-stage reconstruction without full-source reconstruction;
-8. dependency-closure rejection of an under-specified proof profile.
+## Historical authority
 
-Draft 0.16 MUST NOT replace Draft 0.15 as qualified authority until the Experiment 005 cold-run -> freeze -> score -> independent-verifier -> final-review sequence completes.
+`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` remains immutable qualified historical authority for Experiment 004 and prior Draft 0.15 artifacts. Draft 0.16 does not retroactively change their semantics.
 
 ## Immediate work
 
-1. Freeze the Experiment 005 corpus revision.
-2. Execute `RUN-Q005` in an isolated context with only the permitted resources.
-3. Freeze the raw report before scorer access.
-4. Score against hidden assertions and classify discrepancies.
-5. Independently verify the frozen report without scorer material.
-6. Promote, revise, or reject Draft 0.16 only from the resulting evidence.
-
-## Naming and provenance
-
-Current repository artifacts use **IsoGraph** terminology. The project was extracted from an earlier CUDA-JS research line; the exact pre-standalone state remains recoverable from the immutable source checkpoint recorded in `MIGRATION.md` and from Git history.
+Any further performance-related spec changes require a new explicit pressure case or experiment. Do not enlarge Draft 0.16 merely because an implementation technique appears faster.

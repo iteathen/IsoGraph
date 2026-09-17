@@ -1,0 +1,56 @@
+name: Promote qualified Draft 0.16
+
+on:
+  push:
+    branches:
+      - spec/draft-0-16-obligation-sufficiency
+    paths:
+      - tools/promote-draft-0-16.mjs
+      - .github/workflows/promote-draft-0-16.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-draft-0-16-qualified
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out qualification branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: spec/draft-0-16-obligation-sufficiency
+
+      - name: Derive qualified authority from tested candidate
+        run: node tools/promote-draft-0-16.mjs
+
+      - name: Verify promotion changes status/provenance only
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '# IsoGraph Core Specification — Draft 0.16 Consolidated Qualified' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F 'qualified consolidated authority' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F 'fa733d533cd683c5064c4f31fa6c083fa3aed21d' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '0cc6d2e3e08606a99324ee36b6ff5a6a5067efb8' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '## 29.2 Claim-bounded obligation closure' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '## 29.3 Proof-method neutrality' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '## 30.2 Claim-typed witness sufficiency and multiple mappings' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '## 30.3 Context-scoped witness quotients' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '## 30.4 Exact witness-family certificates' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          grep -F '### 21.1.1 Claim-scoped factorization coverage' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+
+      - name: Commit qualified authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md
+          git commit -m 'spec: promote qualified Draft 0.16 authority'
+          git push origin HEAD:spec/draft-0-16-obligation-sufficiency
