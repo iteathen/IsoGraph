@@ -20,7 +20,11 @@ That document consolidates the surviving semantics of:
 
 The three source documents remain historical evidence for why current rules exist; a current decoder no longer needs to replay them to determine current semantics. The consolidation adds no domain operator, structural class, comparison relation kind, or irreducible primitive.
 
-The rename changes project identity only. It does not change primitive status, structural semantics, qualification results, revision identity, or the meaning of previously recorded evidence.
+Experiment 004 now has a fully constructed current-authority qualification corpus: versioned Draft 0.15 cold prompts for the original targets, the separate Q004-17B native-record pressure case, and supplemental Q004-S01..Q004-S08 fixtures/prompts/scorer assertions. No current-authority isolated cold result has yet been accepted; construction is not qualification evidence.
+
+## Native text files
+
+New native-text IsoGraph artifacts use the `.isg` extension. Historical `.axh` artifacts remain under their recorded names. The file extension has no semantic authority; see `NATIVE_FORMAT.md`.
 
 ## Operating description
 

@@ -1,0 +1,30 @@
+{
+  "case": "Q004-S04",
+  "authority": "CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md",
+  "fixture_roles": {
+    "^6400": "source body",
+    "^6401": "D record: id source target exactness (#1 exact, #0 lossy)",
+    "^6402": "comparison-stage object body",
+    "^6403": "source-local exact-D reconstruction residual",
+    "^6404": "pairwise comparison record",
+    "^6405": "pairwise common core",
+    "^6406": "A-side pair residual",
+    "^6407": "B-side pair residual",
+    "^6408": "loss summary without reconstructing omitted incidences",
+    "^6409": "pairwise common-core A-to-B mapping"
+  },
+  "expected": {
+    "pair_common_edge_label": "^7000",
+    "pair_common_mapping": [[1, 5], [2, 6]],
+    "A_pair_residual_label": "^7001",
+    "B_pair_residual_label": "^7002",
+    "A_D_local_residual_label": "^7010",
+    "B_D_local_residual_label": "^7011",
+    "pair_reconstructs_A_cmp": true,
+    "pair_reconstructs_B_cmp": true,
+    "exact_D_1100_reconstructs_full_source": true,
+    "exact_D_2100_reconstructs_full_source": true,
+    "lossy_D_1300_reconstructs_full_source": false,
+    "D_local_and_pair_residuals_are_same_accounting_role": false
+  }
+}

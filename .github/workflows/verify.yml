@@ -29,6 +29,7 @@ jobs:
             AGENTS.md
             CONTRIBUTING.md
             LICENSE
+            NATIVE_FORMAT.md
             CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md
             CORE_SPEC_DRAFT_0_14_CANDIDATE.md
             CORE_SPEC_DRAFT_0_15_CANDIDATE.md
@@ -50,12 +51,158 @@ jobs:
           grep -Fq 'CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md' AGENTS.md
           grep -Fq 'surface syntax' CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md
           grep -Fq 'structural-only candidate retrieval path' CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md
+          grep -Fq '.isg' NATIVE_FORMAT.md
           grep -Fq '* @iteathen' .github/CODEOWNERS
 
           # One-shot migration workflows must not return after migration.
           test ! -e .github/workflows/migrate-isograph.yml
           test ! -e .github/workflows/name-sweep.yml
           test ! -e .github/workflows/path-sweep.yml
+
+      - name: Verify current Experiment 004 qualification corpus
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required=(
+            experiments/004/COLD_RUN_MANIFEST_004_V3.md
+            experiments/004/RESULTS_004.md
+            experiments/004/EXPERIMENT_004_DRAFT_0_15_CONSTRUCTION_AUDIT.md
+            experiments/004/COLD_PHASE_A_PROMPT_004_DRAFT_0_15.md
+            experiments/004/COLD_PHASE_B_REWRITE_PROMPT_004_DRAFT_0_15.md
+            experiments/004/COLD_PHASE_C_PROMPT_004_DRAFT_0_15.md
+            experiments/004/COLD_PHASE_C_NEGATIVE_INDEX_PROMPT_004_DRAFT_0_15.md
+            experiments/004/COLD_Q004_09_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_10_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_16_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_17_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_18_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_19_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_20_STRUCTURE_ONLY_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_20_LABEL_ASSISTED_PROMPT_DRAFT_0_15.md
+            experiments/004/COLD_Q004_17B_PROMPT.md
+            experiments/004/Q004_17B_NATIVE_RECORDS_004.isg
+            experiments/004/Q004_17B_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S01_PROMPT.md
+            experiments/004/Q004_S01_LEGAL_REFERENCE_BINDING.isg
+            experiments/004/Q004_S01_INVALID_EDGE_BINDING.isg
+            experiments/004/Q004_S01_INVALID_DECLARATIVE_BINDING.isg
+            experiments/004/Q004_S01_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S02_PROMPT.md
+            experiments/004/Q004_S02_RULE_SPLICE.isg
+            experiments/004/Q004_S02_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S03_PROMPT.md
+            experiments/004/Q004_S03_VARIABLE_OWNERSHIP.isg
+            experiments/004/Q004_S03_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S04_PROMPT.md
+            experiments/004/Q004_S04_TWO_STAGE_RESIDUAL.isg
+            experiments/004/Q004_S04_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S05_PROMPT.md
+            experiments/004/Q004_S05_FACTOR_STAGE_INDEX.isg
+            experiments/004/Q004_S05_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S06_PROMPT.md
+            experiments/004/Q004_S06_PARSE_01.isg
+            experiments/004/Q004_S06_PARSE_02.isg
+            experiments/004/Q004_S06_PARSE_03.isg
+            experiments/004/Q004_S06_PARSE_04.isg
+            experiments/004/Q004_S06_PARSE_05.isg
+            experiments/004/Q004_S06_PARSE_06.isg
+            experiments/004/Q004_S06_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S07_PROMPT.md
+            experiments/004/Q004_S07_NAC_INERT.isg
+            experiments/004/Q004_S07_NAC_MATCHER.isg
+            experiments/004/Q004_S07_NAC_FORBIDDEN.isg
+            experiments/004/Q004_S07_ASSERTIONS_004.json
+            experiments/004/COLD_Q004_S08_PROMPT.md
+            experiments/004/Q004_S08_SERIALIZER_SCOPE.isg
+            experiments/004/Q004_S08_ASSERTIONS_004.json
+          )
+
+          for path in "${required[@]}"; do
+            test -s "$path" || {
+              echo "required Experiment 004 artifact missing or empty: $path" >&2
+              exit 1
+            }
+          done
+
+          scorer_json=(
+            experiments/004/Q004_17B_ASSERTIONS_004.json
+            experiments/004/Q004_S01_ASSERTIONS_004.json
+            experiments/004/Q004_S02_ASSERTIONS_004.json
+            experiments/004/Q004_S03_ASSERTIONS_004.json
+            experiments/004/Q004_S04_ASSERTIONS_004.json
+            experiments/004/Q004_S05_ASSERTIONS_004.json
+            experiments/004/Q004_S06_ASSERTIONS_004.json
+            experiments/004/Q004_S07_ASSERTIONS_004.json
+            experiments/004/Q004_S08_ASSERTIONS_004.json
+          )
+
+          for path in "${scorer_json[@]}"; do
+            jq -e . "$path" >/dev/null
+          done
+
+          grep -Fq 'all current prompt/fixture/scorer artifacts constructed and frozen' experiments/004/COLD_RUN_MANIFEST_004_V3.md
+          grep -Fq 'Zero isolated current-authority runs have been accepted yet.' experiments/004/COLD_RUN_MANIFEST_004_V3.md
+          grep -Fq 'current-authority isolated cold runs accepted:     0' experiments/004/RESULTS_004.md
+          grep -Fq 'not eligible to produce cold qualification outputs' experiments/004/RESULTS_004.md
+
+      - name: Verify frozen Experiment 004 inputs were not rewritten
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Consolidated-authority main checkpoint from which the current
+          # qualification construction branch was created.
+          base=5ca94c6e607f86f03920bf4206ed72e315466a87
+
+          frozen=(
+            experiments/004/COLD_PHASE_A_PROMPT_004.md
+            experiments/004/COLD_PHASE_B_REWRITE_PROMPT_004.md
+            experiments/004/COLD_PHASE_C_PROMPT_004.md
+            experiments/004/COLD_PHASE_C_NEGATIVE_INDEX_PROMPT_004.md
+            experiments/004/COLD_Q004_09_PROMPT.md
+            experiments/004/COLD_Q004_10_PROMPT.md
+            experiments/004/COLD_Q004_16_PROMPT.md
+            experiments/004/COLD_Q004_17_PROMPT.md
+            experiments/004/COLD_Q004_18_PROMPT.md
+            experiments/004/COLD_Q004_19_PROMPT.md
+            experiments/004/COLD_Q004_20_STRUCTURE_ONLY_PROMPT.md
+            experiments/004/COLD_Q004_20_LABEL_ASSISTED_PROMPT.md
+            experiments/004/COLD_RUN_MANIFEST_004.md
+            experiments/004/COLD_RUN_MANIFEST_004_V2.md
+            experiments/004/PHASE_A_CASES_004.axh
+            experiments/004/PHASE_A_ASSERTIONS_004.json
+            experiments/004/PHASE_B_REWRITE_CASES_004.axh
+            experiments/004/PHASE_B_REWRITE_ASSERTIONS_004.json
+            experiments/004/PHASE_C_COMPARISON_CASES_004.axh
+            experiments/004/PHASE_C_ASSERTIONS_004.json
+            experiments/004/PHASE_C_NEGATIVE_INDEX_CASES_004.axh
+            experiments/004/PHASE_C_NEGATIVE_INDEX_ASSERTIONS_004.json
+            experiments/004/Q004_09_DECOMPOSITION_CHEAT_004.axh
+            experiments/004/Q004_09_ASSERTIONS_004.json
+            experiments/004/Q004_10_EXTRACTION_FREEZE_004.axh
+            experiments/004/Q004_10_ASSERTIONS_004.json
+            experiments/004/Q004_16_CLASS_NONVACUITY_004.axh
+            experiments/004/Q004_16_ASSERTIONS_004.json
+            experiments/004/Q004_17_NATIVE_RECORDS_004.axh
+            experiments/004/Q004_17_ASSERTIONS_004.json
+            experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh
+            experiments/004/Q004_18_ASSERTIONS_004.json
+            experiments/004/Q004_19_NOVEL_CLASS_004.axh
+            experiments/004/Q004_19_ASSERTIONS_004.json
+            experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh
+            experiments/004/Q004_20_LABEL_ASSIST_004.axh
+            experiments/004/Q004_20_ASSERTIONS_004.json
+          )
+
+          for path in "${frozen[@]}"; do
+            before=$(git rev-parse "$base:$path")
+            now=$(git rev-parse "HEAD:$path")
+            test "$before" = "$now" || {
+              echo "frozen historical Experiment 004 artifact changed: $path" >&2
+              exit 1
+            }
+          done
 
       - name: Verify patch hygiene
         shell: bash

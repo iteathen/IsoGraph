@@ -1,0 +1,23 @@
+{
+  "case": "Q004-S05",
+  "authority": "CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md",
+  "fixture_roles": {
+    "^6502": "object body",
+    "^6503": "qualified D/factorization source to target",
+    "^6504": "object stage",
+    "^6505": "raw stage",
+    "^6506": "factored stage",
+    "^6510": "fingerprint output: algorithm object stage value",
+    "^6511": "necessary-invariant qualification: algorithm stage enabled",
+    "^6512": "index declaration stage binding"
+  },
+  "expected": {
+    "raw_fingerprint_values": [2, 3],
+    "raw_pair_prunable_under_raw_qualified_invariant": true,
+    "factored_fingerprint_values": [1, 1],
+    "raw_fingerprint_may_prune_factored_pair": false,
+    "factored_objects_isomorphic_under_V0": true,
+    "equal_factored_fingerprint_proves_isomorphism": false,
+    "one_global_post_D_canonical_factorization_required": false
+  }
+}
