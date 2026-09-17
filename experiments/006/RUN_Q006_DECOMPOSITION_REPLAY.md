@@ -261,6 +261,69 @@ This matters because the historical result is stronger than "both are obstructio
 
 A stronger next benchmark should preserve independent presentation while exposing the internal dependency structure of the parity lemma rather than treating it as an opaque theorem call.
 
+### F7 — NEI was available but not used as a residual-distinction challenge
+
+The cold packet included NEI 0.1, but the mathematical Discovery Protocol routing did not force escalation from strong role correspondence into `DP-38` / NEI investigation.
+
+That matters here because the crucial failure was precisely an **unsupported distinction between differently represented intermediate proof objects**.
+
+After the role-level decomposition, the agent had enough evidence to formulate at least these NEI hypotheses:
+
+```text
+H1:
+Alpha A04-A05 boundary-compatible defect encoder
+and
+Beta B03-B04 boundary-directed defect encoder
+may be two SI-addressed representations/formulations of one natural proof-role object.
+
+H2:
+Alpha A06 parity obstruction
+and
+Beta B06-B08 topological obstruction
+may be two SI-addressed representations/formulations of one natural obstruction object at an appropriate abstraction/profile.
+```
+
+NEI must not infer `SAME` merely from structural similarity. NEI 0.1 explicitly requires a pinned identity profile/evidence authority and states that structural isomorphism/QUI alone is not an identity certificate.
+
+But this does **not** make NEI irrelevant to discovery. Proper use of NEI here would have changed the next question from:
+
+```text
+Are these residual mechanisms structurally identical as currently factored?
+```
+
+to:
+
+```text
+Is the distinction between these differently represented mechanisms
+supported by natural-identity evidence,
+or is it only a representation/factorization distinction?
+```
+
+That query directly attacks the erroneous stopping condition.
+
+The likely discovery flow should have been:
+
+```text
+DP-24 / DP-10 finds corresponding proof roles
+-> DP-08 exposes large middle residuals
+-> DP-07 recursively refactors them
+-> DP-38 creates NEI identity hypotheses over corresponding roles
+-> NEI profile asks what distinctions are natural versus representational
+-> absence of qualified separating evidence prevents treating formulation difference as a natural separator
+-> continue searching for a bridge/invariant rather than terminate on vocabulary/machinery difference
+```
+
+This would not automatically qualify `SAME`; it would prevent the discovery system from using unsupported representation differences as evidence that no deeper unification exists.
+
+The current NEI specification already supplies the required conceptual safeguards:
+
+- SI/factorization/source separation is not natural-identity evidence;
+- a lawful administrative/representational repartition preserves NEI when natural structure is preserved;
+- structural correspondence may enter an identity theorem only through an explicit qualified bridge;
+- NEI maximizes only **justified** collapse and preserves genuine uncertainty.
+
+Therefore RUN-Q006 exposes an integration defect between DP and NEI in addition to a decomposition-depth defect.
+
 ---
 
 ## 6. Two unifications are entangled in the current benchmark
@@ -278,156 +341,98 @@ cochain/cohomological no-extension / no-retraction obstruction
 ### Layer B — deduction to fixed point
 
 ```text
-finite labeled refinements + shrinking witnesses
+finite subdivision + shrinking witnesses
 <->
-simplicial approximation / continuous boundary construction
+simplicial approximation / continuous no-retraction deduction
 ```
 
-RUN-Q006 asks one discovery pass to recover both layers inside one combined proof pair.
+The current benchmark asks one discovery pass to recover both layers simultaneously.
 
-For diagnosis, the next experiment should score these layers separately even if they are still batched into one external call.
+For diagnostic precision, the next revision should separate them into two linked sub-benchmarks while retaining a final combined discovery task.
 
 ---
 
-## 7. What DP should require before stopping on a large residual
+## 7. Required DP correction pressure
 
-A proposed **Cross-Residual Decomposition Gate**:
+A next DP revision should add a cross-residual decomposition rule roughly equivalent to:
 
-Before an agent may declare two large residual regions terminal/domain-specific, if they connect corresponding matched obligations or interfaces, it MUST perform at least one recursive abstraction pass that asks:
+> When two residual regions are attached between already-corresponding upstream and downstream roles/obligations, and those residuals carry substantial proof/causal burden, the agent MUST NOT terminate solely because their mechanisms, vocabulary, or current factorizations differ. It SHOULD perform at least one deeper role/factorization pass and test whether both residuals realize a common encoder, constraint, invariant, obstruction, witness, adapter, or decoder role.
 
-1. what are the inputs and outputs of each residual region?
-2. what obligation does each region discharge?
-3. what invariant/constraint prevents the undesired state?
-4. is one residual an exact/continuous realization while the other is finite/discrete/approximate?
-5. can either region be refactored into `encoder -> compatibility -> obstruction -> decoder` or another shared role decomposition?
-6. does an alternative factorization reduce the residual without erasing source-specific machinery?
-
-Only after that pass fails may mechanism/vocabulary divergence support a stop decision.
-
-The residual remains preserved even when a deeper common factor is found.
-
----
-
-## 8. Proposed protocol corrections to investigate
-
-Do not apply these automatically to the frozen DP candidate; they are research outputs from RUN-Q006.
-
-### DP-08
-
-Add an explicit recursive rule:
-
-> Residual status is not terminal status. A residual lying between matched interfaces/obligations becomes a new discovery scope and re-enters the ranked protocol schedule.
-
-Add high-priority next protocols for patterned/cross-sandwiched residuals:
+For proof comparisons, candidate decomposition roles should include at least:
 
 ```text
-DP-07, DP-11, DP-13, DP-24, DP-37
-```
-
-### DP-24
-
-Add an **obligation-sandwich rule**:
-
-> When two proofs share corresponding premises and conclusions but have unmatched middle regions, factor each middle region by the obligation it discharges before classifying the middle as divergent.
-
-Compare proof roles such as:
-
-```text
+carrier
+assumption / negation
+local defect
 encoder
 boundary/side-condition enforcer
 invariant carrier
 obstruction
+witness generator
+approximation/refinement adapter
 witness extractor
 decoder
+contradiction / target discharge
 ```
 
-rather than only step-level textual machinery.
+This is discovery guidance, not new proof semantics.
 
-### DP-07
+A companion integration rule should also require:
 
-Explicitly recognize proof-step grouping/splitting as alternative factorization:
-
-```text
-one opaque theorem step
-<->
-several explicit invariant steps
-```
-
-should trigger factorization comparison rather than immediate residualization.
-
-### Global stopping rule
-
-If a residual carries most of the causal/proof burden between matched endpoints, `different machinery` is evidence to **decompose further**, not evidence to stop.
+> When two residual regions occupy corresponding load-bearing roles but differ mainly by representation, factorization, source, or mathematical machinery, DP SHOULD promote `DP-38` and formulate an NEI hypothesis before treating those differences as evidence of natural distinctness. NEI classification still requires its own qualified profile/evidence obligations; the discovery purpose is to test whether the residual distinction itself is justified.
 
 ---
 
-## 9. Benchmark correction for a future RUN-Q006 revision
+## 8. Benchmark correction pressure
 
-Preserve the frozen RUN-Q006 exactly.
+A stronger replacement benchmark should:
 
-For a revised benchmark:
+1. retain independent proof presentation and hidden theorem/citation names;
+2. expose the parity lemma internally enough to represent its boundary contribution/parity propagation structure;
+3. keep the topological invariant proof independently represented;
+4. score the obstruction-layer discovery separately from the fixed-point-deduction-layer discovery;
+5. include a final task asking whether the two discovered layers compose into the larger common proof architecture;
+6. still require residual preservation and reject full-proof isomorphism;
+7. explicitly permit/encourage DP-to-NEI escalation for corresponding residual roles, while withholding any oracle identity conclusion.
 
-1. keep theorem names/citations/history hidden from the cold agent;
-2. retain the combined Alpha/Beta proof pair;
-3. add an independently presented internal decomposition of Alpha's parity lemma, or a separate Alpha-obstruction artifact, without naming cohomology;
-4. score the obstruction-level unification separately from the fixed-point-deduction/approximation-level unification;
-5. require recursive DP work inside large residuals before allowing a stop;
-6. keep the one-call resource budget by batching both sub-benchmarks in the same frozen packet.
-
-This will distinguish:
-
-```text
-DP failed to abstract despite sufficient structure
-```
-
-from:
+This would distinguish:
 
 ```text
-the source artifact hid the structure inside an opaque theorem step
+failure to factor
+failure to align roles
+failure to invoke NEI on a potentially representational distinction
+failure to discover a bridge despite sufficient decomposition
+fixture omitted required internal structure
 ```
+
+rather than collapsing all five into one DP failure.
 
 ---
 
-## 10. Independent historical validation
+## 9. Conclusion
 
-Nikolai V. Ivanov, *Sperner's Lemma, the Brouwer Fixed-Point Theorem, and Cohomology* (2009), explicitly describes:
+RUN-Q006 did not fail because the two proofs lacked recoverable common structure.
 
-- the combinatorial proof of Sperner's lemma as a cochain-level version of a standard cohomological argument; and
-- the standard deduction of Brouwer from Sperner as similar to the deduction from the no-retraction theorem and closely related to simplicial approximation.
+It failed because:
 
-Reference: `https://arxiv.org/abs/0906.5193`
+1. the cold agent stopped at surface method categories;
+2. it failed to recursively decompose large residuals bracketed by matched obligations;
+3. it misaligned the obstruction layer with the witness-decoding layer;
+4. it treated residual status as a stopping result rather than a new decomposition target;
+5. DP routing did not strongly promote the relevant deeper-factorization protocols;
+6. the benchmark itself compressed Alpha's deepest obstruction more aggressively than Beta's;
+7. the discovery pass did not use NEI to challenge whether the remaining distinctions were natural or merely representational/formulational.
 
-This agrees with the decomposition recovered above and confirms that RUN-Q006 stopped precisely in the region containing the known deeper unification.
-
----
-
-## 11. Current diagnosis
-
-RUN-Q006 did not fail because DP found no relation.
-
-It failed because DP found the outer common shell, then **under-decomposed the middle**.
-
-The principal failure chain is:
+After role decomposition, the hidden relationship becomes visible from the frozen pair at the level of:
 
 ```text
-step-level comparison
--> literal boundary mismatch
--> proof-specific residual classification
--> obstruction-node misalignment
--> no alternative factorization of residual middle
--> premature stop
+fixed-point absence
+-> displacement information
+-> boundary-compatible encoding
+-> obstruction to extension through the interior
+-> fixed-point consequence
 ```
 
-The corrected search shape is:
+Proper NEI use would then ask whether the different encodings/obstruction realizations are naturally distinct or merely different representations of the same load-bearing proof object. That question should have prevented the premature `completely divergent residuals` conclusion even before the full historical bridge was reconstructed.
 
-```text
-outer common shell
--> preserve residual middle
--> recursively decompose residual by obligation/role
--> align boundary-directed encoders
--> align obstruction layers
--> preserve asymmetric approximation machinery
--> supported deeper common structure + explicit residual
-```
-
-That is the decomposition failure exposed by Experiment 006.
+The next qualification should therefore test both **recursive structural decomposition** and **DP-to-NEI escalation** explicitly.
