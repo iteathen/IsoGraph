@@ -1,0 +1,109 @@
+name: Experiment 004 Archive Final Verifiers
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/experiment-004-archive-final-verifiers.yml
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: experiment-004-archive-final-verifiers
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out results branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Download selected frozen verifier artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verifier-downloads
+          download() {
+            local run="$1" workflow="$2" name="$3"
+            mkdir -p "verifier-downloads/$run"
+            gh run download "$workflow" --repo "$GITHUB_REPOSITORY" --name "$name" --dir "verifier-downloads/$run"
+          }
+          download RUN-A    35234338405 isograph-exp004-RUN-A-verifier-v1
+          download RUN-S01  35234338405 isograph-exp004-RUN-S01-verifier-v1
+          download RUN-S02  35234338405 isograph-exp004-RUN-S02-verifier-v1
+          download RUN-S03  35234338405 isograph-exp004-RUN-S03-verifier-v1
+          download RUN-S04  35234338405 isograph-exp004-RUN-S04-verifier-v1
+          download RUN-S06  35234338405 isograph-exp004-RUN-S06-verifier-v1
+          download RUN-S07  35234338405 isograph-exp004-RUN-S07-verifier-v1
+          download RUN-S05  35237237782 isograph-exp004-RUN-S05-verifier-v3
+          download RUN-S08  35237237782 isograph-exp004-RUN-S08-verifier-v3
+          download RUN-B    35237237782 isograph-exp004-RUN-B-verifier-v3
+          download RUN-C1   35237237782 isograph-exp004-RUN-C1-verifier-v3
+          download RUN-C2   35240263716 isograph-exp004-RUN-C2-verifier-final
+          download RUN-D09  35239572341 isograph-exp004-RUN-D09-verifier-v4
+          download RUN-D10  35239572341 isograph-exp004-RUN-D10-verifier-v4
+          download RUN-D16  35239572341 isograph-exp004-RUN-D16-verifier-v4
+          download RUN-D18  35239572341 isograph-exp004-RUN-D18-verifier-v4
+          download RUN-D19  35239572341 isograph-exp004-RUN-D19-verifier-v4
+          download RUN-D20S 35239572341 isograph-exp004-RUN-D20S-verifier-v4
+          download RUN-D20L 35239572341 isograph-exp004-RUN-D20L-verifier-v4
+          download RUN-D17  35246313461 isograph-exp004-RUN-D17-verifier-d17
+          download RUN-D17B 35246313461 isograph-exp004-RUN-D17B-verifier-d17
+
+      - name: Materialize durable verifier archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=experiments/004/cold-results/verifier
+          rm -rf "$dest"
+          mkdir -p "$dest"
+          count=0
+          for src in verifier-downloads/RUN-*; do
+            [ -d "$src" ] || continue
+            run="$(basename "$src")"
+            mkdir -p "$dest/$run"
+            cp "$src"/*_VERIFIER_REPORT.txt "$dest/$run/VERIFIER_REPORT.txt"
+            cp "$src"/*_VERIFIER_METADATA.json "$dest/$run/VERIFIER_METADATA.json"
+            cp "$src"/*_VERIFIER_API_RESPONSE.json "$dest/$run/VERIFIER_API_RESPONSE.json"
+            cp "$src"/*_VERIFIER_PACKET.txt "$dest/$run/VERIFIER_PACKET.txt"
+            count=$((count+1))
+          done
+          test "$count" -eq 21
+          cat > "$dest/MANIFEST.md" <<'EOF'
+          # Experiment 004 — independent verifier evidence archive
+
+          **Qualification corpus:** `30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`
+
+          This directory is the durable verbatim archive of the selected successful scorer-blind verifier artifacts for all 21 frozen cold reports. Each run preserves the exact verifier packet, raw Gemini API response, extracted verifier report, and metadata produced before final interpretation.
+
+          Selected workflow runs:
+          - `35234338405` — RUN-A, RUN-S01, RUN-S02, RUN-S03, RUN-S04, RUN-S06, RUN-S07
+          - `35237237782` — RUN-S05, RUN-S08, RUN-B, RUN-C1
+          - `35240263716` — RUN-C2 final successful verifier
+          - `35239572341` — RUN-D09, RUN-D10, RUN-D16, RUN-D18, RUN-D19, RUN-D20S, RUN-D20L
+          - `35246313461` — RUN-D17, RUN-D17B after harness-only mapping repair
+
+          The verifier packets exclude hidden assertions, expected answers, scoring reports, qualification ledgers, prior verifier outputs, and external reviews. Frozen verifier reports are not repaired in this archive.
+          EOF
+          printf '\nArchived verifier runs: **%s / 21**.\n' "$count" >> "$dest/MANIFEST.md"
+
+      - name: Commit durable verifier archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add experiments/004/cold-results/verifier
+          git diff --cached --check
+          git commit -m 'experiment: freeze complete scorer-blind verifier archive'
+          git push origin HEAD:experiment/004-gemini-results
