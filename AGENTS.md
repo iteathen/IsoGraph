@@ -82,3 +82,11 @@ unresolved obligations: none
 Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
+
+## Qualification resource discipline
+
+External Gemini calls and GitHub Actions executions are scarce qualification resources. Read and follow `QUALIFICATION_RESOURCE_DISCIPLINE.md` before designing or running a new qualification experiment.
+
+Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient independent evidence**. Prefer one frozen multi-case packet, one cold semantic-decoder call, deterministic post-freeze scoring, and one independent verifier only when the qualification claim warrants it. Prefer one batched workflow/job over per-case matrices or repeated workflows when isolation does not require physical separation.
+
+Run deterministic syntax, hash, packet-integrity, provenance, and mechanical checks before spending an external semantic call. Do not rerun Gemini or CI merely to seek a more favorable answer. Additional external calls/runs require a concrete evidentiary or infrastructure reason and should be recorded in the final qualification provenance.
