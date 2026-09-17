@@ -11,13 +11,13 @@ Branch: `experiment/axiomesh-native-reconstruction`
 
 Read ONLY:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
-3. `research/axiomesh/CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
-4. `research/axiomesh/CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
-5. `research/axiomesh/CORE_SPEC_DRAFT_0_6_CANDIDATE.md`
-6. `research/axiomesh/experiments/003/instantiation/COLD_PROMPT_DRAFT_0_6_INSTANTIATION.md`
-7. `research/axiomesh/experiments/003/instantiation/DRAFT_0_6_INSTANTIATION_CASES.axh`
+1. `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
+3. `CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
+4. `CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
+5. `CORE_SPEC_DRAFT_0_6_CANDIDATE.md`
+6. `experiments/003/instantiation/COLD_PROMPT_DRAFT_0_6_INSTANTIATION.md`
+7. `experiments/003/instantiation/DRAFT_0_6_INSTANTIATION_CASES.axh`
 
 Do NOT read any other repository file, issue, PR, commit diff, oracle, result, benchmark source, semantic glossary, or prior conversation.
 

@@ -6,9 +6,9 @@ You are an isolated IsoGraph structural retrieval/comparison agent.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh`
 4. this prompt
 
 Do not access `Q004_20_LABEL_ASSIST_004.axh`, assertions, results, registries, glosses, or prior reviews.

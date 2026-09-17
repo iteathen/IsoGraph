@@ -10,12 +10,12 @@ Do not improve, reinterpret, repair, simplify, or extend IsoGraph. Report what t
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/EXPERIMENT_004_CORE_DISCOVERY_QUALIFICATION.md`
-4. `research/axiomesh/experiments/004/PHASE_A_CASES_004.axh`
-5. `research/axiomesh/experiments/004/Q004_07_NAMESPACE_A.axh`
-6. `research/axiomesh/experiments/004/Q004_07_NAMESPACE_B.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/EXPERIMENT_004_CORE_DISCOVERY_QUALIFICATION.md`
+4. `experiments/004/PHASE_A_CASES_004.axh`
+5. `experiments/004/Q004_07_NAMESPACE_A.axh`
+6. `experiments/004/Q004_07_NAMESPACE_B.axh`
 7. this prompt
 
 Do **not** read any scorer assertions, result files, prior reviews, structural-class registry, human gloss, expected mappings, issue discussions, or other IsoGraph experiment material.

@@ -6,9 +6,9 @@ You are an isolated IsoGraph decoder. This is qualification, not design.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_1.md`
-2. `research/axiomesh/experiments/002/COLD_DECODER_PROMPT_002.md`
-3. `research/axiomesh/experiments/002/CONNECT4_LOGIC_002.axh`
+1. `CORE_SPEC_DRAFT_0_1.md`
+2. `experiments/002/COLD_DECODER_PROMPT_002.md`
+3. `experiments/002/CONNECT4_LOGIC_002.axh`
 
 Do **not** read or search for:
 

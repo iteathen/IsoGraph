@@ -128,7 +128,7 @@ Experiment 001 found reference lifetime, shadowing, forward reference, and cycle
 
 The concrete result is:
 
-`research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+`CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
 
 It is experimental branch material only. Draft 0.1 remains frozen as the authority used by Experiment 001.
 

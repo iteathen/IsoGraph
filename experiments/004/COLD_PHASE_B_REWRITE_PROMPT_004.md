@@ -8,10 +8,10 @@ This is a qualification task. Do not redesign or repair the language.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/EXPERIMENT_004_CORE_DISCOVERY_QUALIFICATION.md`
-4. `research/axiomesh/experiments/004/PHASE_B_REWRITE_CASES_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/EXPERIMENT_004_CORE_DISCOVERY_QUALIFICATION.md`
+4. `experiments/004/PHASE_B_REWRITE_CASES_004.axh`
 5. this prompt
 
 Do not access `PHASE_B_REWRITE_ASSERTIONS_004.json`, result files, prior reviews, class registries, human gloss, or scorer material.

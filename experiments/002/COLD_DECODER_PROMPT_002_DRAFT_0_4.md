@@ -13,12 +13,12 @@ Branch: `experiment/axiomesh-native-reconstruction`
 
 Read ONLY:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
-3. `research/axiomesh/CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
-4. `research/axiomesh/experiments/002/COLD_DECODER_PROMPT_002_DRAFT_0_4.md`
-5. `research/axiomesh/experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_4.axh`
-6. `research/axiomesh/experiments/002/CONNECT4_LOGIC_002_DRAFT_0_2.axh`
+1. `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
+3. `CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
+4. `experiments/002/COLD_DECODER_PROMPT_002_DRAFT_0_4.md`
+5. `experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_4.axh`
+6. `experiments/002/CONNECT4_LOGIC_002_DRAFT_0_2.axh`
 
 Do not read or search any other repository material during Phase 1.
 
@@ -130,16 +130,16 @@ After that marker, never revise a Phase 1 answer.
 
 Only after `PHASE 1 FROZEN`, you MAY read:
 
-- `research/axiomesh/experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_2.json`
-- `research/axiomesh/experiments/002/SOURCE_CONNECT4_LOGIC_002.md`
-- `research/axiomesh/experiments/002/SOURCE_RELATIONS_002.json`
-- `research/axiomesh/experiments/002/FORMALIZATION_AUDIT_002.json`
-- `research/axiomesh/experiments/002/FORMALIZATION_AUDIT_002.md`
-- `research/axiomesh/experiments/002/SEMANTIC_FIDELITY_REVIEW_002.md`
-- `research/axiomesh/experiments/002/RESULTS_002.md`
-- `research/axiomesh/experiments/002/SPEC_EXPANSION_002.md`
-- `research/axiomesh/experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_3.md`
-- `research/axiomesh/experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_4.md`
+- `experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_2.json`
+- `experiments/002/SOURCE_CONNECT4_LOGIC_002.md`
+- `experiments/002/SOURCE_RELATIONS_002.json`
+- `experiments/002/FORMALIZATION_AUDIT_002.json`
+- `experiments/002/FORMALIZATION_AUDIT_002.md`
+- `experiments/002/SEMANTIC_FIDELITY_REVIEW_002.md`
+- `experiments/002/RESULTS_002.md`
+- `experiments/002/SPEC_EXPANSION_002.md`
+- `experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_3.md`
+- `experiments/002/SIGNATURE_AUDIT_002_DRAFT_0_4.md`
 - Issues `#267` and `#268`
 - relevant IsoGraph README/design documentation on this branch.
 

@@ -4,10 +4,10 @@ You are an isolated IsoGraph structural comparison auditor.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
-4. `research/axiomesh/experiments/004/Q004_10_EXTRACTION_FREEZE_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
+4. `experiments/004/Q004_10_EXTRACTION_FREEZE_004.axh`
 5. this prompt
 
 Do not read assertions, results, reviews, registries, or gloss.

@@ -13,11 +13,11 @@ Branch: `experiment/axiomesh-native-reconstruction`
 
 Read ONLY:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
-3. `research/axiomesh/experiments/002/COLD_DECODER_PROMPT_002_DRAFT_0_3.md`
-4. `research/axiomesh/experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_3.axh`
-5. `research/axiomesh/experiments/002/CONNECT4_LOGIC_002_DRAFT_0_2.axh`
+1. `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
+3. `experiments/002/COLD_DECODER_PROMPT_002_DRAFT_0_3.md`
+4. `experiments/002/SEMANTIC_SIGNATURE_002_DRAFT_0_3.axh`
+5. `experiments/002/CONNECT4_LOGIC_002_DRAFT_0_2.axh`
 
 Do NOT read or search for any other IsoGraph, Connect4, issue, PR, commit-diff, source, oracle, glossary, audit, result, or conversation material.
 
