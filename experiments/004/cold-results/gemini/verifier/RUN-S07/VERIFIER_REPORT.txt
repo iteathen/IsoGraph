@@ -1,0 +1,23 @@
+### Evaluation of Frozen Report Claims
+
+I have evaluated the frozen cold report (`RUN-S07`) against the native fixtures and the governing authority (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`). Below is the step-by-step verification of each claim:
+
+1. **`Q004_S07_NAC_INERT.isg` Verification:**
+   * **Claim:** A first-class negative structural match condition (NAC) `!(10 20)` exists within the scope but is not evaluated because there is no active matcher/pattern/execution profile context. It is an inert represented data structure under Section 12.6.
+   * **Reasoning/Evidence:** The document consists of a raw scope containing `!(10 20)`. There are no rule-side operators (`>`) or matcher configurations. Under Section 12.6, *"NAC object exists != NAC evaluated"*, and outside a matcher context, `!X` is inert. The report's claim is **VERIFIED**.
+
+2. **`Q004_S07_NAC_MATCHER.isg` Verification:**
+   * **Claim:** The NAC object `!(20 ?0)` is evaluated inside a valid rewrite rule context where `?0` is bound to `1` via the positive match of `(10 ?0)` against the target scope `(10 1)`. The negative condition is satisfied because `(20 1)` does not exist in target scope `7000`. The match succeeds with binding `?0 -> 1`.
+   * **Reasoning/Evidence:** The rule is `[(10 ?0) !(20 ?0)] > [(30 ?0)]`. The target scope `7000` is `[ (10 1) ]`. The selector `7002` acts as the explicit execution profile linking target `7000` and rule `7001`. Variable `?0` is legally bound by the positive pattern `(10 ?0)`, satisfying Section 11 (NAC-only variables must be positively bound). The target scope lacks `(20 1)`, satisfying the NAC evaluation under Section 12.6. The report's claim is **VERIFIED**.
+
+3. **`Q004_S07_NAC_FORBIDDEN.isg` Verification:**
+   * **Claim:** The NAC `!(10 20)` is nested inside the ordered incidence `(40 !(10 20))`. Under the specified profile, this is an illegal placement that fails static profile-validation, rather than an ambient negative query execution.
+   * **Reasoning/Evidence:** Section 12.6 states: *"A profile may reject NAC placement outside designated pattern positions, but that is explicit profile validation rather than hidden ambient evaluation."* The nested placement within an ordered incidence is forbidden by the test profile, making the file structurally invalid under that profile's static rules. The report's claim is **VERIFIED**.
+
+---
+
+### Overall Verifier Disposition
+
+**VERIFIED**
+
+All explicit structural claims, contexts, binding maps, and profile-validation results made in the frozen report are fully verified. There are no failed or unresolved obligations.
