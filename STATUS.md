@@ -6,13 +6,11 @@
 
 ## Current authority
 
-Current semantic authority is cumulative:
+Current semantic authority for new work is self-contained in:
 
-1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
+- `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-Draft 0.15 is the latest corrective amendment. It adds no domain operator, structural class, or irreducible primitive.
+It consolidates the surviving semantics of Drafts 0.13, 0.14, and 0.15 without adding a domain operator, structural class, comparison relation kind, or irreducible primitive. The source specifications remain historical provenance and rationale rather than required replay material for a current decoder.
 
 ## Current claims
 
@@ -22,12 +20,12 @@ The active program is falsification/qualification rather than vocabulary expansi
 
 ## Immediate work
 
-1. Reissue cold prompts and fixtures where Draft 0.15 changed authority.
-2. Add the supplemental qualification cases identified by the external-review disposition.
+1. Reissue Experiment 004 current cold prompts against the consolidated Draft 0.15 authority while preserving legacy prompts as historical protocols.
+2. Construct/freeze Q004-S01..Q004-S08 supplemental fixtures, hidden assertions, and cold prompts; add the current Q004-17 native-record successor pressure required by the Draft 0.15 impact audit.
 3. Execute isolated cold decoders/verifiers with strict permitted-input boundaries.
 4. Freeze outputs before unblinding scorer assertions.
 5. Classify discrepancies before any specification repair.
-6. Independently verify positive mappings/certificates.
+6. Independently verify positive mappings/certificates and distinguish certified negatives from incomplete-search outcomes.
 
 ## Naming and provenance
 
