@@ -1,0 +1,60 @@
+name: Specification defect
+description: Report an ambiguity, contradiction, semantic leak, false-match risk, or reconstruction defect in current IsoGraph authority.
+title: "[Spec defect]: "
+labels:
+  - bug
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and the current cumulative specification chain.
+          required: true
+        - label: I am reporting the observed defect before proposing a new primitive or structural class.
+          required: true
+        - label: This report does not rely on hidden scorer material from a cold qualification case.
+          required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Affected immutable revision
+      description: Commit SHA and, where applicable, exact specification file/revision.
+      placeholder: commit SHA + CORE_SPEC_DRAFT_...
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Exact location
+      description: Section, subsection, grammar production, witness field, or protocol step.
+    validations:
+      required: true
+  - type: textarea
+    id: defect
+    attributes:
+      label: Defect or ambiguity
+      description: State the competing readings or the exact incorrect behavior without silently repairing it.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Structural impact
+      description: Explain the false-positive, false-negative, semantic-loss, provenance, or implementation-divergence risk.
+    validations:
+      required: true
+  - type: textarea
+    id: lower_construction
+    attributes:
+      label: Lower-structure check
+      description: If a correction seems to require new syntax or a primitive, first describe whether existing lower structure can express the distinction.
+    validations:
+      required: false
+  - type: textarea
+    id: minimal_case
+    attributes:
+      label: Minimal falsifier
+      description: Give the smallest native/synthetic case that exposes the defect.
+    validations:
+      required: false
