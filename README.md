@@ -8,19 +8,23 @@ IsoGraph is in active research incubation. The work was incubated inside `iteath
 
 The imported research lineage is content-addressed. Its exact source checkpoint is recorded in `MIGRATION.md`, and the pre-extraction state remains recoverable from Git history and that immutable source revision.
 
-Current semantic authority for new work is self-contained in:
+### Qualified authority
+
+The last qualified self-contained semantic authority is:
 
 - `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-That document consolidates the surviving semantics of:
+Experiment 004 completed its first current-authority Draft 0.15 checkpoint with final audited dispositions **15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN**. The surviving partials were decoder/report/protocol issues rather than representation-expressiveness failures; the qualification review did not justify mutating Draft 0.15.
 
-1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
+### Successor candidate
 
-The three source documents remain historical evidence for why current rules exist; a current decoder no longer needs to replay them to determine current semantics. The consolidation adds no domain operator, structural class, comparison relation kind, or irreducible primitive.
+The current unqualified successor candidate is:
 
-Experiment 004 now has a fully constructed current-authority qualification corpus: versioned Draft 0.15 cold prompts for the original targets, the separate Q004-17B native-record pressure case, and supplemental Q004-S01..Q004-S08 fixtures/prompts/scorer assertions. No current-authority isolated cold result has yet been accepted; construction is not qualification evidence.
+- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md`
+
+Draft 0.16 adds no syntax, primitive, structural class, comparison relation kind, or D/E transformation kind. It clarifies claim-bounded dependency-closed proof obligations, proof-method neutrality, claim-typed witness sufficiency, context-scoped witness quotients, exact witness-family certificates, and factorization-space coverage scoping.
+
+Draft 0.15 remains the qualified authority until Draft 0.16 completes its focused adversarial qualification in Experiment 005.
 
 ## Native text files
 
@@ -36,4 +40,4 @@ New native-text IsoGraph artifacts use the `.isg` extension. Historical `.axh` a
 - Pre-IsoGraph wording remains recoverable from Git history and the pinned migration checkpoint rather than serving as current terminology.
 - Exact legacy source identifiers may retain their original spelling only when needed to identify an immutable historical source.
 
-See `STATUS.md` for the current qualification state and `MIGRATION.md` for extraction provenance.
+See `STATUS.md` for current qualification state and `MIGRATION.md` for extraction provenance.

@@ -1,0 +1,71 @@
+{
+  "experiment": "IsoGraph Experiment 005",
+  "scorer_only": true,
+  "cold_decoder_access": false,
+  "authority": "CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md",
+  "cases": {
+    "Q005-01": {
+      "existential_isomorphism": true,
+      "example_witness": {"1":"10","2":"11","3":"12","4":"13","5":"14","6":"15","7":"16","8":"17","9":"18"},
+      "existential_minimum_verified_witnesses": 1,
+      "leaf_automorphism_group": "S8",
+      "complete_family_size": 40320,
+      "complete_family_may_use_exact_generator_certificate": true,
+      "explicit_enumeration_required_for_existential_claim": false,
+      "explicit_enumeration_required_for_complete_family_if_exact_coverage_certificate_exists": false
+    },
+    "Q005-02": {
+      "context_3010_swap_31_32_admissible": true,
+      "context_3011_swap_31_32_admissible": false,
+      "reason_3011": "^91002 is included and occurs only on 31, so the swap fails preservation/reflection under the richer context",
+      "quotient_reusable_across_contexts_automatically": false,
+      "search_pruning_requires_quotient_frozen_and_qualified_before_affected_search": true
+    },
+    "Q005-03": {
+      "4100_vs_5100": "NON_ISOMORPHIC",
+      "4100_vs_5100_certificate": "directed chain incidence pattern versus three-outgoing-edge star pattern",
+      "4101_vs_5101": "ISOMORPHIC",
+      "example_witness_4101_5101": {"44":"54","45":"55","46":"56"},
+      "first_local_negative_implies_no_factorization_space_correspondence": false,
+      "global_no_correspondence_claim_valid": false,
+      "factorization_space_completeness_requires_declared_coverage": true
+    },
+    "Q005-04": {
+      "isomorphic": true,
+      "witness": {"60":"70","61":"71","62":"72"},
+      "canonicalization_required": false,
+      "reason": "a verified direct witness discharges the isomorphism obligations under the frozen relation; no canonical-output claim is made"
+    },
+    "Q005-05": {
+      "relation": "CERTIFIED_NON_ISOMORPHIC",
+      "certificate": "direct body-member occurrence count differs: 1 versus 2",
+      "exhaustive_search_additionally_required": false
+    },
+    "Q005-06": {
+      "weak_embedding_left_into_right": true,
+      "witness": {"100":"110","101":"111"},
+      "strong_embedding_left_into_right": false,
+      "strong_failure_reason": "target has extra included ^91002 incidence among mapped objects, violating reflection",
+      "weak_target_residual": ["(^91002 110 111)"],
+      "weak_claim_requires_proving_strong": false
+    },
+    "Q005-07": {
+      "12100_vs_13100": "ISOMORPHIC",
+      "witness": {"120":"130","121":"131"},
+      "comparison_stage_pairwise_reconstruction_available": true,
+      "full_source_exact_reconstruction_available": false,
+      "reason": "both ^90006 D records explicitly mark exact source reconstruction #0",
+      "pairwise_claim_requires_full_source_reconstruction": false,
+      "may_promote_pairwise_reconstruction_to_full_source_reconstruction": false
+    },
+    "Q005-08": {
+      "claimed_isomorphism_qualified": false,
+      "supplied_mapping_topology_only": {"140":"150","141":"151"},
+      "omitted_dependency": "V0 stable-label rigidity / relation-label preservation: ^92001 does not equal ^92002 and no mapping authority is supplied",
+      "profile_can_validate_by_omitting_dependency": false,
+      "dependency_closed_disposition": "REJECTED"
+    }
+  },
+  "overall_expected": "QUALIFIES",
+  "overall_reason": "all eight controls should preserve correctness while demonstrating that stronger unrelated proof work is not semantically mandatory"
+}
