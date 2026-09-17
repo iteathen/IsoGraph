@@ -1,0 +1,73 @@
+name: Experiment 004 Gemini Final Target Verifiers
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/experiment-004-gemini-verifier-final-targets.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: experiment-004-gemini-final-targets
+  cancel-in-progress: true
+
+env:
+  GEMINI_MODEL: gemini-flash-lite-latest
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify Gemini key
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}"
+
+  verify:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        run: [RUN-C2, RUN-D17, RUN-D17B]
+    steps:
+      - name: Check out evidence history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Fetch Claude evidence branch
+        shell: bash
+        run: git fetch origin experiment/004-cold-results-claude:refs/remotes/origin/experiment/004-cold-results-claude
+
+      - name: Bound verifier output
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i 's/maxOutputTokens: 65536/maxOutputTokens: 32768/' experiments/004/tools/run-gemini-verifier.mjs
+          grep -F 'maxOutputTokens: 32768' experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Execute scorer-blind structural verifier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RUN_ID: ${{ matrix.run }}
+        run: node experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Freeze verifier artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp004-${{ matrix.run }}-verifier-final
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
