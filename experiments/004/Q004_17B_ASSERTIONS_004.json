@@ -1,0 +1,35 @@
+{
+  "case": "Q004-17B",
+  "authority": "CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md",
+  "schema": {
+    "type_schema_relation": "^4740",
+    "instance_type_relation": "^4741",
+    "field_value_relation": "^4742",
+    "body_relation": "^4743",
+    "types": {
+      "9000": ["^4750", "^4751", "^4752", "^4753", "^4754"],
+      "9001": ["^4760", "^4761", "^4762", "^4763", "^4764", "^4765"],
+      "9002": ["^4770", "^4771", "^4772", "^4773", "^4774", "^4775", "^4776", "^4777", "^4778"],
+      "9003": ["^4780", "^4781", "^4782", "^4783", "^4784", "^4785"],
+      "9004": ["^4790", "^4791", "^4792", "^4793", "^4794"],
+      "9005": ["^4800", "^4801", "^4802", "^4803", "^4804"]
+    },
+    "instances": {
+      "9100": 9000,
+      "9101": 9001,
+      "9102": 9002,
+      "9103": 9003,
+      "9104": 9004,
+      "9105": 9005
+    }
+  },
+  "coverage_checks": {
+    "source_local_transform_record_has_distinct_target_and_residual_structures": true,
+    "pair_witness_has_common_and_two_pair_residual_fields": true,
+    "pair_witness_references_source_local_transform_and_index_record": true,
+    "index_record_contains_algorithm_identity_revision_input_stage_and_policy_reference": true,
+    "nac_context_record_contains_condition_boundary_context_consumer_and_revision": true,
+    "result_record_links_witness_verification_nac_context_and_revision": true,
+    "human_sidecar_required_to_reconstruct_raw_topology": false
+  }
+}

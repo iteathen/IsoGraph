@@ -1,0 +1,22 @@
+{
+  "case": "Q004-S08",
+  "authority": "CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md",
+  "fixture_roles": {
+    "^6801": "object body",
+    "^6802": "object input stage",
+    "^6810": "serializer/index declaration: algorithm revision stage",
+    "^6811": "deterministic serialized output",
+    "^6812": "hash/index output",
+    "^6813": "qualified within-algorithm isomorphism-invariant claim for exact stage",
+    "^6820": "raw comparison stage"
+  },
+  "expected": {
+    "objects_1000_2000_isomorphic": true,
+    "material_bijective_witness_count": 2,
+    "algorithm_8100_hash_pair": [111, 111],
+    "algorithm_8101_hash_pair": [222, 222],
+    "cross_algorithm_hash_difference_implies_non_isomorphism": false,
+    "algorithm_revision_is_part_of_index_record": true,
+    "serializer_tie_break_may_collapse_distinct_witnesses": false
+  }
+}
