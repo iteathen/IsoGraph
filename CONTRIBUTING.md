@@ -9,11 +9,11 @@ Before substantive work, read:
 1. `README.md`
 2. `MIGRATION.md`
 3. `AGENTS.md`
-4. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-5. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-6. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
+4. `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-Later amendments supersede earlier text only where they explicitly say so. Pre-IsoGraph artifacts remain evidence under the semantics recorded at their revision and must not be silently reinterpreted to appear current.
+The consolidated Draft 0.15 file is the self-contained current semantic authority for new work. Drafts 0.13, 0.14, and the non-consolidated 0.15 amendment remain historical provenance and rationale; they are not required replay material for a current decoder.
+
+Pre-IsoGraph and earlier-draft artifacts remain evidence under the semantics recorded at their revision and must not be silently reinterpreted to appear current.
 
 ## Evidence before extension
 
@@ -41,14 +41,16 @@ Keep these distinctions explicit:
 - retrieval hint != structural evidence;
 - source/D residual != pairwise residual;
 - class label != class-membership evidence;
-- semantic equivalence != structural isomorphism.
+- semantic equivalence != structural isomorphism;
+- rule existence != rule activation;
+- NAC object existence != NAC evaluation.
 
 ## Cold qualification
 
 Cold decoder/verifier experiments are evidence only when isolation is real.
 
 - Give the isolated agent only the files named by the frozen prompt.
-- Do not expose scorer assertions, expected mappings, prior cold outputs, registry hypotheses, or author audits before output freeze.
+- Do not expose scorer assertions, expected mappings, prior cold outputs, registry hypotheses, author audits, external-review dispositions, or other hidden material before output freeze.
 - Freeze the raw output before unblinding.
 - Classify discrepancies before repair.
 - Preserve failed runs and ambiguities as evidence; do not rewrite them into success.

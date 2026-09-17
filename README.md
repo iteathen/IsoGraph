@@ -8,13 +8,17 @@ IsoGraph is in active research incubation. The work was incubated inside `iteath
 
 The imported research lineage is content-addressed. Its exact source checkpoint is recorded in `MIGRATION.md`, and the pre-extraction state remains recoverable from Git history and that immutable source revision.
 
-Current semantic authority is cumulative:
+Current semantic authority for new work is self-contained in:
+
+- `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+
+That document consolidates the surviving semantics of:
 
 1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
 2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
 3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
 
-Draft 0.15 is the latest corrective amendment. It adds no domain operator, structural class, or irreducible primitive.
+The three source documents remain historical evidence for why current rules exist; a current decoder no longer needs to replay them to determine current semantics. The consolidation adds no domain operator, structural class, comparison relation kind, or irreducible primitive.
 
 The rename changes project identity only. It does not change primitive status, structural semantics, qualification results, revision identity, or the meaning of previously recorded evidence.
 
