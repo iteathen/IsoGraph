@@ -13,7 +13,7 @@ Before substantive work, read:
 5. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
 6. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
 
-Later amendments supersede earlier text only where they explicitly say so. Historical IsoGraph artifacts remain evidence under their recorded semantics and must not be silently rewritten to appear current.
+Later amendments supersede earlier text only where they explicitly say so. Pre-IsoGraph artifacts remain evidence under the semantics recorded at their revision and must not be silently reinterpreted to appear current.
 
 ## Evidence before extension
 
