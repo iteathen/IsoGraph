@@ -1,0 +1,137 @@
+name: Experiment 004 Gemini Independent Verifier
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/experiment-004-gemini-verifier.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-004-gemini-verifier
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify Gemini key and verifier model
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}" || { echo "GEMINI_API_KEY unavailable"; exit 1; }
+          node --input-type=module <<'NODE'
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${process.env.GEMINI_MODEL}:generateContent`, {
+            method:'POST',
+            headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},
+            body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply with ISOGRAPH_VERIFIER_OK.'}]}],generationConfig:{maxOutputTokens:256,thinkingConfig:{thinkingLevel:'MINIMAL'}}})
+          });
+          const body=await res.text();
+          if (!res.ok) { console.error(`HTTP ${res.status}: ${body.slice(0,2000)}`); process.exit(1); }
+          console.log(`Gemini verifier preflight accepted: ${process.env.GEMINI_MODEL}`);
+          NODE
+
+  verify:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        run: [RUN-A, RUN-S01, RUN-S02, RUN-S03, RUN-S06, RUN-S07, RUN-S04, RUN-S05, RUN-S08, RUN-B, RUN-C1, RUN-C2, RUN-D09, RUN-D10, RUN-D16, RUN-D18, RUN-D19, RUN-D20S, RUN-D20L]
+    steps:
+      - name: Check out evidence history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Fetch Claude evidence branch
+        shell: bash
+        run: git fetch origin experiment/004-cold-results-claude:refs/remotes/origin/experiment/004-cold-results-claude
+
+      - name: Execute scorer-blind structural verifier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RUN_ID: ${{ matrix.run }}
+        run: node experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Freeze verifier artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp004-${{ matrix.run }}-verifier-v1
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+
+  archive:
+    if: always()
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out results branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Download all verifier artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: isograph-exp004-*-verifier-v1
+          path: verifier-downloads
+          merge-multiple: true
+
+      - name: Archive successful verifier outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=experiments/004/cold-results/gemini/verifier
+          mkdir -p "$dest"
+          found=0
+          for report in verifier-downloads/*_VERIFIER_REPORT.txt; do
+            [ -e "$report" ] || continue
+            base="$(basename "$report" _VERIFIER_REPORT.txt)"
+            mkdir -p "$dest/$base"
+            cp "$report" "$dest/$base/VERIFIER_REPORT.txt"
+            cp "verifier-downloads/${base}_VERIFIER_METADATA.json" "$dest/$base/VERIFIER_METADATA.json"
+            found=$((found+1))
+          done
+          echo "Archived $found successful verifier reports."
+          test "$found" -gt 0
+          {
+            echo '# Experiment 004 — scorer-blind verifier archive'
+            echo
+            echo "Workflow run: \`${GITHUB_RUN_ID}\`"
+            echo
+            echo "Successful verifier reports archived: **$found / 19**"
+            echo
+            echo 'Each verifier received only the original cold permitted inputs and the corresponding frozen cold report. Hidden assertions, scoring reports, expected answers, and qualification ledgers were not included in verifier packets.'
+          } > "$dest/MANIFEST.md"
+
+      - name: Commit verifier archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add experiments/004/cold-results/gemini/verifier
+          if git diff --cached --quiet; then
+            echo 'No verifier archive changes to commit.'
+            exit 0
+          fi
+          git diff --cached --check
+          git commit -m 'experiment: archive scorer-blind Experiment 004 verifier evidence'
+          git push origin HEAD:experiment/004-gemini-results
