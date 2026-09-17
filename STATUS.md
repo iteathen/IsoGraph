@@ -16,7 +16,7 @@ Draft 0.15 is the latest corrective amendment. It adds no domain operator, struc
 
 ## Current claims
 
-IsoGraph currently has a specified experimental representation/discovery discipline and migrated historical experiment corpus. It does **not** yet establish that the current representation is independently qualified, that its structural-only discovery path achieves useful corpus-scale recall, or that any candidate structural class is promoted.
+IsoGraph currently has a specified experimental representation/discovery discipline and an imported historical experiment corpus. It does **not** yet establish that the current representation is independently qualified, that its structural-only discovery path achieves useful corpus-scale recall, or that any candidate structural class is promoted.
 
 The active program is falsification/qualification rather than vocabulary expansion.
 
@@ -29,8 +29,8 @@ The active program is falsification/qualification rather than vocabulary expansi
 5. Classify discrepancies before any specification repair.
 6. Independently verify positive mappings/certificates.
 
-## Historical naming
+## Naming and provenance
 
-The project was incubated as **IsoGraph** inside `iteathen/CUDA-JS`. Frozen historical artifacts retain that name as provenance. New work uses **IsoGraph**.
+Current repository artifacts use **IsoGraph** terminology. The project was extracted from an earlier CUDA-JS research line; the exact pre-standalone state remains recoverable from the immutable source checkpoint recorded in `MIGRATION.md` and from Git history.
 
-See `MIGRATION.md` for the exact source checkpoint.
+Legacy source identifiers are provenance only and do not define current project terminology.
