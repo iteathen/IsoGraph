@@ -84,13 +84,14 @@ For agent-driven structural discovery on the current research branch, read:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` — base ranked protocol catalog;
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — cross-residual/NEI correction motivated by RUN-Q006;
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md` — current evidence-matched separator correction.
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md` — evidence-matched separator correction;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md` — current structural-breaker and cross-residual promotion correction.
 
-DP 0.3 supersedes conflicting DP 0.2/0.1 discovery behavior while preserving those revisions as historical qualification evidence.
+DP 0.4 supersedes conflicting earlier discovery behavior while preserving DP 0.1–0.3 as historical evidence at their recorded revisions.
 
 Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. Discovery priority never supplies semantic authority.
 
-Under DP 0.3, evidence burden follows the conclusion:
+Evidence burden follows the conclusion:
 
 - a concrete structural breaker can reject a candidate without NEI;
 - an explicit pinned application/domain authority may serve as a rigid separator when its declared semantics make the difference load-bearing;
@@ -99,7 +100,9 @@ Under DP 0.3, evidence burden follows the conclusion:
 
 Application semantics are preserved exactly. Do not presume they are either identity-relevant or identity-irrelevant. Do not silently strengthen them into NEI meaning beyond the pinned authority.
 
-A load-bearing residual between already matched upstream/downstream regions still requires at least one bounded recursive role/factorization pass unless a structural or rigid-authority breaker already explains the divergence. Different machinery or carrier type alone is not terminal divergence.
+Under DP 0.4, `STRUCTURAL_BREAKER` means a **concrete failed load-bearing obligation** under the active comparison/view. Different machinery, formalism, carrier type, proof technique, or decomposition style is not itself such a breaker.
+
+A load-bearing residual between already matched upstream/downstream regions requires at least one bounded recursive role/factorization pass unless a valid structural or rigid-authority breaker already explains the divergence. Any `CORRESPONDENCE` discovered by that mandatory pass re-enters ordinary candidate expansion/falsification; it may not be ignored while the same residual is used as a terminal separator.
 
 For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
 
@@ -117,7 +120,9 @@ unresolved obligations: none
 
 Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
 
-Experiment 006 RUN-Q006 and RUN-Q006-R2 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting the frozen outputs through later DP/NEI revisions.
+Experiment 006 RUN-Q006, RUN-Q006-R2, and RUN-Q006-R3 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting frozen outputs through later DP/NEI revisions.
+
+RUN-Q006-R4 is the focused DP 0.4 regression attempt. Its first recorded execution ended at the provider boundary with HTTP 429 and produced no semantic report; this is infrastructure evidence only, not a DP 0.4 semantic disposition. See `experiments/006/EXPERIMENT_006_RUN_Q006_R4_PROVIDER_REVIEW.md`.
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
