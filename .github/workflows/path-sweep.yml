@@ -1,0 +1,41 @@
+name: Normalize imported IsoGraph paths
+
+on:
+  push:
+    branches: [chore/isograph-name-sweep]
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out rename branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: chore/isograph-name-sweep
+          fetch-depth: 0
+
+      - name: Normalize former nested research paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          while IFS= read -r -d '' file; do
+            case "$file" in
+              .github/workflows/*) continue ;;
+            esac
+            perl -0pi -e 's#research/axiomesh/##g' "$file"
+          done < <(git grep -Ilz 'research/axiomesh/' || true)
+
+          git add -A -- ':!.github/workflows/*'
+          if git diff --cached --quiet; then
+            echo "No imported paths required normalization"
+            exit 0
+          fi
+
+          git commit -m "docs: normalize imported IsoGraph paths"
+          git push origin HEAD:chore/isograph-name-sweep
