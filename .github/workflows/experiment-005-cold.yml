@@ -1,0 +1,82 @@
+name: Experiment 005 isolated cold qualification
+
+on:
+  push:
+    branches:
+      - spec/draft-0-16-obligation-sufficiency
+    paths:
+      - experiments/005/tools/run-q005-cold.mjs
+      - .github/workflows/experiment-005-cold.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-005-cold
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify Gemini access
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}"
+          node --input-type=module <<'NODE'
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${process.env.GEMINI_MODEL}:generateContent`, {
+            method:'POST',
+            headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},
+            body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply exactly ISOGRAPH_Q005_OK'}]}],generationConfig:{maxOutputTokens:256,thinkingConfig:{thinkingLevel:'MINIMAL'}}})
+          });
+          const body=await res.text();
+          if(!res.ok){console.error(`HTTP ${res.status}: ${body.slice(0,1000)}`);process.exit(1)}
+          console.log('Gemini preflight accepted');
+          NODE
+
+  cold:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: spec/draft-0-16-obligation-sufficiency
+
+      - name: Execute isolated cold run
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/005/tools/run-q005-cold.mjs
+
+      - name: Freeze cold artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp005-RUN-Q005-cold-v1
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Archive frozen report after artifact upload
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=experiments/005/cold-results/RUN-Q005
+          mkdir -p "$dest"
+          cp out/RUN-Q005_COLD_REPORT.txt "$dest/COLD_REPORT.txt"
+          cp out/RUN-Q005_METADATA.json "$dest/METADATA.json"
+          cp out/RUN-Q005_API_RESPONSE.json "$dest/API_RESPONSE.json"
+          cp out/RUN-Q005_PACKET.txt "$dest/PACKET.txt"
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add "$dest"
+          git commit -m 'experiment: freeze Experiment 005 cold report'
+          git push origin HEAD:spec/draft-0-16-obligation-sufficiency
