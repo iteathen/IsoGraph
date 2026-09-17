@@ -16,6 +16,7 @@ const inputs = [
   'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md',
   'extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md',
   'experiments/006/Q006_CASES.md',
+  'experiments/006/Q006_BOUNDARY_CASES.md',
   'experiments/006/DP_PROOF_ALPHA.md',
   'experiments/006/DP_PROOF_BETA.md'
 ];
@@ -60,7 +61,7 @@ const nei = frozen('extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.
 const dp = frozen('extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md');
 const alpha = frozen('experiments/006/DP_PROOF_ALPHA.md');
 const beta = frozen('experiments/006/DP_PROOF_BETA.md');
-const cases = frozen('experiments/006/Q006_CASES.md');
+const cases = frozen('experiments/006/Q006_CASES.md') + '\n' + frozen('experiments/006/Q006_BOUNDARY_CASES.md');
 const prompt = frozen(promptPath);
 
 requireText(qu, 'R(Q)', 'QU realization-family semantics');
@@ -75,8 +76,12 @@ requireText(dp, 'discovery priority\n    != semantic authority', 'DP constitutio
 const protocolCount = (dp.match(/^## DP-\d\d\b/gm) || []).length;
 if (protocolCount !== 45) throw new Error(`Expected 45 DP protocols, found ${protocolCount}`);
 
-for (const id of ['QU-01','QU-02','QU-03','QU-04','QU-05','QU-06','QU-07','QU-08',
-                  'NEI-01','NEI-02','NEI-03','NEI-04','NEI-05','NEI-06','NEI-07','NEI-08']) {
+for (let i = 1; i <= 13; i++) {
+  const id = `QU-${String(i).padStart(2, '0')}`;
+  if (!cases.includes(id)) throw new Error(`Missing semantic case ${id}`);
+}
+for (let i = 1; i <= 17; i++) {
+  const id = `NEI-${String(i).padStart(2, '0')}`;
   if (!cases.includes(id)) throw new Error(`Missing semantic case ${id}`);
 }
 for (const id of ['A01','A02','A03','A04','A05','A06','A07','A08','A09','A10']) {

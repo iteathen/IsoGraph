@@ -4,23 +4,23 @@
 **Candidate modules:** QU 0.1, NEI 0.1, Discovery Protocols 0.1  
 **Core authority:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`  
 **Resource discipline:** `QUALIFICATION_RESOURCE_DISCIPLINE.md`  
-**Default external budget:** one GitHub Actions workflow run + one Gemini semantic invocation
+**Default external budget:** one candidate-branch GitHub Actions run + one Gemini semantic invocation
 
 ## 1. Purpose
 
 Experiment 006 qualifies the three new modules together where their obligations overlap, while producing separate module dispositions.
 
-The experiment asks whether:
+It asks whether:
 
-1. QU preserves the relational structure of unresolved information, defines the correct admissible-realization semantics, and keeps semantic unresolvedness separate from computational incompleteness;
-2. NEI correctly separates determinate identity claims from QU-mediated identity claims, preserves genuine uncertainty, and does not reintroduce the superseded maximally-coarse-partition rule;
-3. Discovery Protocols can recover a nontrivial, historically documented common proof structure from two independently presented proof arguments without being given the hidden unification oracle, while preserving residuals and refusing unsupported semantic promotion.
+1. QU preserves the relational structure of unresolved information, defines the exact admissible-realization semantics, and distinguishes semantic uncertainty from qualification/computational incompleteness;
+2. NEI correctly separates determinate identity claims from QU-mediated identity claims, preserves genuine uncertainty, maintains joint identity consistency, and rejects the superseded maximally-coarse-partition rule;
+3. Discovery Protocols can recover a nontrivial, historically documented common proof structure from two independently presented proof arguments without seeing the hidden unification oracle, while preserving residuals, falsifying overclaims, and stopping efficiently.
 
-This experiment does not qualify a particular solver, graph-search algorithm, embedding model, canonicalizer, Bayesian procedure, entropy measure, or proof-search engine.
+The experiment does not qualify a particular solver, graph-search algorithm, embedding model, canonicalizer, Bayesian procedure, entropy measure, or proof-search engine.
 
 ## 2. Resource objective
 
-The experiment follows the project constraint:
+The experiment follows:
 
 ```text
 minimize Gemini calls + GitHub Actions runs + CI runtime
@@ -28,7 +28,7 @@ subject to complete semantic coverage, cold isolation, reproducibility,
 and sufficient independent evidence
 ```
 
-Default execution is one manually triggered workflow containing:
+Default execution is one deliberately armed workflow run:
 
 ```text
 deterministic preflight
@@ -39,9 +39,17 @@ deterministic preflight
 -> upload one evidence artifact
 ```
 
-There is no separate model-access preflight call. A missing API key is detected mechanically. HTTP 429 fails the run rather than immediately generating repeated rate-limit traffic. At most one retry may be used for a transient 5xx provider failure.
+On the candidate branch, the workflow is armed only by creating/updating:
 
-A second semantic verifier is not part of the default run. It is justified only if the frozen result contains a semantic ambiguity that the deterministic scorer cannot adjudicate without weakening the qualification claim.
+```text
+experiments/006/RUN_Q006.request
+```
+
+Ordinary authoring commits do not match that path and therefore do not consume Actions/Gemini quota.
+
+There is no separate model-access preflight call. A missing API key is detected mechanically. HTTP 429 fails rather than generating repeated rate-limit traffic. At most one retry is allowed for a transient 5xx provider failure.
+
+A second semantic verifier is not part of the default run. It is justified only if the frozen result contains a semantic ambiguity the deterministic scorer cannot adjudicate without weakening the qualification claim.
 
 ## 3. Discovery-visible resources
 
@@ -52,9 +60,10 @@ The cold decoder receives exactly:
 3. `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md`;
 4. `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`;
 5. `experiments/006/Q006_CASES.md`;
-6. `experiments/006/DP_PROOF_ALPHA.md`;
-7. `experiments/006/DP_PROOF_BETA.md`;
-8. `experiments/006/COLD_Q006_PROMPT.md`.
+6. `experiments/006/Q006_BOUNDARY_CASES.md`;
+7. `experiments/006/DP_PROOF_ALPHA.md`;
+8. `experiments/006/DP_PROOF_BETA.md`;
+9. `experiments/006/COLD_Q006_PROMPT.md`.
 
 The proof benchmark files deliberately omit theorem names, author names, citations, and the known historical unification.
 
@@ -69,11 +78,11 @@ The cold decoder MUST NOT receive:
 - author analysis or post-freeze reviews;
 - external search results or web access.
 
-The direct Gemini API call has no repository/browser tools. Isolation is therefore packet-based rather than requiring a separate physical job for each case.
+The cold runner itself does not open scorer-only resources before freezing the response. The direct Gemini API call has no repository/browser tools.
 
 ## 5. QU controls
 
-The QU controls cover:
+The combined QU controls cover all QU 0.1 minimum targets:
 
 ```text
 QU-01  shared unresolved referent versus two distinct constrained-equal referents
@@ -84,21 +93,35 @@ QU-05  cross-domain QUI candidate under renamed open-role topology
 QU-06  semantic UNRESOLVED versus incomplete/resource-limited computation
 QU-07  refinement versus semantic revision
 QU-08  downstream target may not circularly restrict the QU universe
+QU-09  ordinary core artifact remains core-only without QU dependency
+QU-10  lawful alpha-renaming preserves QU semantics
+QU-11  exact infinite/intensional realization family requires no eager enumeration
+QU-12  unrepresented fact is neither false nor arbitrarily admissible without authority
+QU-13  cross-realization subject correspondence must be explicit when needed
 ```
 
 ## 6. NEI controls
 
-The NEI controls cover:
+The combined NEI controls cover all NEI 0.1 minimum targets and the corrected identity semantics:
 
 ```text
 NEI-01  determinate SAME without artificial zero-uncertainty QU materialization
 NEI-02  absence of distinction with SAME/DISTINCT admissible alternatives -> UNKNOWN
 NEI-03  QU variation with a profile-wide separating law -> DISTINCT
-NEI-04  QU variation only in identity-irrelevant properties under preserving law -> SAME
+NEI-04  identity-irrelevant QU variation under preserving law -> SAME
 NEI-05  empty/inconsistent QU family -> NO_ADMISSIBLE_MODEL, never vacuous identity
 NEI-06  QUI plus unresolved identity alternatives does not imply SAME
 NEI-07  coarseness trap: [AB] and [A][B] both admissible -> UNKNOWN
 NEI-08  temporal preservation law versus lineage-only evidence
+NEI-09  core-only SI artifact does not acquire implicit NEI semantics
+NEI-10  unresolved identity-relevant structure without QU is incomplete
+NEI-11  unavailable required QU authority fails closed/incomplete
+NEI-12  administrative SI alpha-renaming preserves qualified natural identity result
+NEI-13  inconsistent pairwise identity projections are rejected
+NEI-14  incomplete model search is not semantic UNKNOWN
+NEI-15  circular QU restriction cannot qualify desired identity
+NEI-16  explicit temporal identity-separating law -> DISTINCT
+NEI-17  missing cross-realization query anchors leaves claim unqualified
 ```
 
 ## 7. Discovery Protocol benchmark
@@ -113,29 +136,29 @@ Beta uses a fixed-point-free assumption to construct a boundary retraction and t
 
 The hidden oracle is based on published mathematical analysis showing that the combinatorial argument contains the same boundary/no-retraction obstruction and that the combinatorial parity machinery has a cochain/cohomological interpretation. The cold decoder is not told this.
 
-### 7.2 What DP must do
+### 7.2 Required discovery behavior
 
 The decoder must use DP as a search policy rather than being told which mapping is correct. It must:
 
 - select and adapt discovery protocols;
 - propose bounded step-to-step or step-cluster correspondences;
-- identify a common proof skeleton deeper than "both are proofs by contradiction";
+- identify a common proof skeleton deeper than generic proof-by-contradiction;
 - preserve substantial proof-specific residuals;
 - attempt to falsify its strongest candidate;
-- reject unsupported claims of full proof isomorphism, equality of intermediate objects, or NEI identity;
-- stop when additional lower-ranked search has low marginal value.
+- reject unsupported full-proof isomorphism, equality of intermediate objects, or natural identity;
+- stop when lower-ranked search has low marginal value.
 
 ### 7.3 Hidden scoring motifs
 
-The scorer checks for independently recovered structure in five oracle motifs:
+The scorer checks five oracle motifs:
 
 1. common fixed-point-free contradiction architecture;
 2. local labeling/boundary compatibility as a discrete encoding of the boundary-directed construction;
-3. subdivision/refinement as an approximation bridge between local finite structure and a continuous/global boundary obstruction;
+3. subdivision/refinement as an approximation bridge between finite/local structure and the continuous/global boundary obstruction;
 4. combinatorial parity/existence obstruction as a discrete manifestation of the global topological/cohomological obstruction;
-5. corresponding terminal contradiction while preserving method-specific residual machinery.
+5. corresponding terminal contradiction with method-specific residual machinery preserved.
 
-At least four motifs must be recovered, including at least one of motifs 2–4. Broad many-to-many mappings are capped so the decoder cannot pass by mapping every step to every step.
+At least four motifs must be recovered, including at least one of motifs 2–4. Mapping width is capped to prevent passing by mapping everything to everything.
 
 ## 8. Module dispositions
 
@@ -147,22 +170,17 @@ NEI:  QUALIFIES | PARTIAL | DOES_NOT_QUALIFY
 DP:   QUALIFIES | PARTIAL | DOES_NOT_QUALIFY
 ```
 
-The integrated Experiment 006 disposition is `QUALIFIES` only if all three module dispositions are `QUALIFIES` and no critical isolation/provenance failure occurred.
-
-A failure in one module does not erase evidence gathered for the others.
+The integrated Experiment 006 disposition is `QUALIFIES` only if all three qualify and no critical isolation/provenance failure occurred. A failure in one module does not erase evidence gathered for the others.
 
 ## 9. Promotion thresholds
 
 ### QU
-
-All exact QU controls must match the hidden semantic assertions. Any confusion of semantic unresolvedness with resource failure, any loss of shared-versus-equal structure, or any scalar-information shortcut to QUI blocks qualification.
+All exact QU controls must match the hidden assertions. Confusing semantic unresolvedness with resource failure, losing shared-versus-equal structure, silently inventing closure, requiring eager enumeration, or using scalar information as a QUI shortcut blocks qualification.
 
 ### NEI
-
-All exact NEI controls must match. In particular, absence of distinction must never produce SAME, inconsistent model families must not vacuously classify identity, and the maximally-coarse selection rule must remain rejected.
+All exact NEI controls must match. Absence of distinction must never produce SAME, inconsistent model families must not vacuously classify identity, missing QU/anchors must fail incomplete, pairwise results must remain jointly realizable, and the maximally-coarse rule must remain rejected.
 
 ### DP
-
 DP must satisfy all critical guards:
 
 - no semantic promotion from discovery rank alone;
@@ -170,39 +188,29 @@ DP must satisfy all critical guards:
 - no identity claim from proof correspondence;
 - meaningful residuals on both proofs;
 - at least four hidden motifs recovered, with at least one deep motif (2–4);
-- explicit falsification attempt against the strongest common-core candidate;
-- lifecycle status no stronger than `SUPPORTED_CANDIDATE` unless separate semantic obligations are actually discharged.
+- explicit falsification against the strongest candidate;
+- lifecycle status `SUPPORTED_CANDIDATE` unless separate semantic obligations are actually discharged;
+- structurally relevant protocols used before low-value identifier/lexical hints.
 
 ## 10. Freeze and rerun discipline
 
-The workflow records:
+The workflow records exact repository SHA, every cold-visible file hash, packet hash, model identifier, API attempt count, raw/parsed report hashes, deterministic scorer output, and workflow run identity.
 
-- exact repository SHA;
-- every cold-visible file and SHA-256 hash;
-- assembled packet SHA-256;
-- model identifier;
-- API attempt count;
-- raw response hash;
-- parsed report hash;
-- deterministic scorer output;
-- workflow run ID.
-
-A malformed/provider-failed run is evidence of infrastructure failure, not a semantic failure. A rerun must retain the failed run metadata and is a separate evidence item.
-
-A semantic rerun after hidden assertions have been exposed requires a new frozen experiment revision.
+A provider/malformed-output run is infrastructure evidence, not semantic failure. A rerun preserves the failed metadata and is a separate evidence item. A semantic rerun after hidden assertions have been exposed requires a new frozen experiment revision.
 
 ## 11. Benchmark provenance
 
 The proof-pair source provenance and historical-unification oracle are documented only in `DP_HIDDEN_ORACLE.md`.
 
-The benchmark is intended to test rediscovery, not memorized citation recognition. The cold files omit names/citations and preserve only the mathematical proof structure needed for a fair structural search.
+The benchmark tests rediscovery, not citation recognition. Cold proof files preserve mathematical structure while omitting identifying names/citations.
 
 ## 12. Qualification sequence
 
 ```text
-author deterministic preflight
+author deterministic review
 -> freeze candidate + corpus + hidden assertions
--> one manual Experiment 006 workflow
+-> create/update RUN_Q006.request once
+-> one Experiment 006 workflow run
 -> one cold Gemini semantic reconstruction/discovery pass
 -> freeze output
 -> deterministic scorer unblind

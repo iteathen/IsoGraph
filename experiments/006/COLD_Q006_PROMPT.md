@@ -62,11 +62,11 @@ Do not add extra top-level keys.
 
 ## QU tasks
 
-Answer every QU case in `Q006_CASES.md` using the allowed answer token listed for that case. Explain briefly why.
+Answer every QU case in both `Q006_CASES.md` and `Q006_BOUNDARY_CASES.md` using the allowed answer token listed for that case. Explain briefly why.
 
 ## NEI tasks
 
-Answer every NEI case in `Q006_CASES.md` using the following tokens:
+Answer every NEI case in both `Q006_CASES.md` and `Q006_BOUNDARY_CASES.md` using the following tokens:
 
 ```text
 SAME
