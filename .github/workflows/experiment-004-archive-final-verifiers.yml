@@ -104,6 +104,7 @@ jobs:
           git config user.name "iteathen"
           git config user.email "josh.oshiro@gmail.com"
           git add experiments/004/cold-results/verifier
-          git diff --cached --check
+          # The archive is verbatim evidence. Markdown hard-break whitespace in the
+          # frozen packets/reports is intentional and must not be normalized.
           git commit -m 'experiment: freeze complete scorer-blind verifier archive'
           git push origin HEAD:experiment/004-gemini-results
