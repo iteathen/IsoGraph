@@ -1,0 +1,57 @@
+name: Experiment 004 Gemini C2 Verifier Retry
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/experiment-004-gemini-verifier-c2-fast.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: experiment-004-gemini-verifier-c2-fast
+  cancel-in-progress: true
+
+env:
+  GEMINI_MODEL: gemini-3.6-flash
+
+jobs:
+  verify-c2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out evidence history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Fetch Claude evidence branch
+        shell: bash
+        run: git fetch origin experiment/004-cold-results-claude:refs/remotes/origin/experiment/004-cold-results-claude
+
+      - name: Bound verifier reasoning/output
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i "s/thinkingLevel: 'HIGH'/thinkingLevel: 'MEDIUM'/" experiments/004/tools/run-gemini-verifier.mjs
+          sed -i 's/maxOutputTokens: 65536/maxOutputTokens: 16384/' experiments/004/tools/run-gemini-verifier.mjs
+          grep -F "thinkingLevel: 'MEDIUM'" experiments/004/tools/run-gemini-verifier.mjs
+          grep -F 'maxOutputTokens: 16384' experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Execute scorer-blind C2 verifier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RUN_ID: RUN-C2
+        run: node experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Freeze C2 verifier retry artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp004-RUN-C2-verifier-fast
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
