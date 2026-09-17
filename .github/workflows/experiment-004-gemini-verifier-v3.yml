@@ -11,11 +11,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: experiment-004-gemini-verifier-2-5
+  group: experiment-004-gemini-verifier-3-6
   cancel-in-progress: true
 
 env:
-  GEMINI_MODEL: gemini-2.5-flash
+  GEMINI_MODEL: gemini-3.6-flash
 
 jobs:
   preflight:
@@ -47,13 +47,6 @@ jobs:
       - name: Fetch Claude evidence branch
         shell: bash
         run: git fetch origin experiment/004-cold-results-claude:refs/remotes/origin/experiment/004-cold-results-claude
-
-      - name: Select Gemini 2.5 thinking control
-        shell: bash
-        run: |
-          set -euo pipefail
-          sed -i "s/thinkingConfig: { thinkingLevel: 'HIGH' }/thinkingConfig: { thinkingBudget: 24576 }/" experiments/004/tools/run-gemini-verifier.mjs
-          grep -F "thinkingBudget: 24576" experiments/004/tools/run-gemini-verifier.mjs
 
       - name: Execute scorer-blind structural verifier
         env:
@@ -116,5 +109,5 @@ jobs:
           git add experiments/004/cold-results/gemini/verifier
           if git diff --cached --quiet; then exit 0; fi
           git diff --cached --check
-          git commit -m 'experiment: archive Gemini 2.5 scorer-blind verifier evidence'
+          git commit -m 'experiment: archive Gemini 3.6 scorer-blind verifier evidence'
           git push origin HEAD:experiment/004-gemini-results
