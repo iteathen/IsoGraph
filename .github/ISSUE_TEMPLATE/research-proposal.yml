@@ -1,0 +1,52 @@
+name: Research proposal
+description: Propose a falsifiable IsoGraph research direction, representation change, comparison method, or qualification experiment.
+title: "[Research]: "
+labels:
+  - enhancement
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I read the current authority and migration/status notes.
+          required: true
+        - label: I distinguish a useful surface/class from an irreducible primitive.
+          required: true
+        - label: I am not using an expected analogy or target class as evidence for its own decomposition.
+          required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: State the question or hypothesis in falsifiable terms.
+    validations:
+      required: true
+  - type: textarea
+    id: current_boundary
+    attributes:
+      label: Current boundary
+      description: Identify the current specification/protocol limitation or unqualified claim this work addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_test
+    attributes:
+      label: Proposed falsifier or qualification test
+      description: Prefer a minimal executable/native case over additional speculative layering.
+    validations:
+      required: true
+  - type: textarea
+    id: decomposition
+    attributes:
+      label: Decomposition-first analysis
+      description: Explain how the proposal uses existing lower structure before introducing any new syntax, primitive, class, relation kind, or canonicalization.
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and provenance
+      description: List source revisions, external references, prior experiments, and anything that must remain isolated from blind evaluation.
+    validations:
+      required: false

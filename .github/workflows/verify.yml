@@ -1,0 +1,71 @@
+name: Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Verify repository authority surface
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required=(
+            README.md
+            STATUS.md
+            MIGRATION.md
+            AGENTS.md
+            CONTRIBUTING.md
+            LICENSE
+            CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md
+            CORE_SPEC_DRAFT_0_14_CANDIDATE.md
+            CORE_SPEC_DRAFT_0_15_CANDIDATE.md
+            HISTORICAL_AXIOMESH_README.md
+            .github/CODEOWNERS
+            .github/REPOSITORY_SETTINGS.md
+          )
+
+          for path in "${required[@]}"; do
+            test -s "$path" || {
+              echo "required authority/governance file missing or empty: $path" >&2
+              exit 1
+            }
+          done
+
+          grep -Fq '# IsoGraph' README.md
+          grep -Fq '275b4d28224990a2b8fbdd7fa66cb071fb867e48' MIGRATION.md
+          grep -Fq 'CORE_SPEC_DRAFT_0_15_CANDIDATE.md' AGENTS.md
+          grep -Fq '* @iteathen' .github/CODEOWNERS
+
+          # The one-shot migration workflow must not return after migration.
+          test ! -e .github/workflows/migrate-isograph.yml
+
+      - name: Verify patch hygiene
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show --check --format=fuller --no-ext-diff HEAD >/dev/null
+
+      - name: Verify frozen evidence remains present
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -d experiments/001
+          test -d experiments/002
+          test -d experiments/003
+          test -d experiments/004
+          test -s experiments/004/EXTERNAL_REVIEW_GEMINI_001_DISPOSITION.md
+          test -s experiments/004/RESULTS_004.md

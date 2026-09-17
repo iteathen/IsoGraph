@@ -1,0 +1,65 @@
+name: Qualification result
+description: Record an isolated decoder/verifier result, discrepancy, or reproducible qualification outcome.
+title: "[Qualification]: "
+body:
+  - type: checkboxes
+    id: isolation
+    attributes:
+      label: Isolation and freeze
+      options:
+        - label: The run used only the permitted input set for the selected protocol.
+          required: true
+        - label: The output was frozen before scorer assertions or expected mappings were consulted.
+          required: true
+        - label: Any contamination or protocol deviation is disclosed below.
+          required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Source revision
+      placeholder: immutable commit SHA
+    validations:
+      required: true
+  - type: input
+    id: protocol
+    attributes:
+      label: Protocol / case
+      placeholder: Experiment, run group, and case identifiers
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Permitted inputs actually accessed
+    validations:
+      required: true
+  - type: textarea
+    id: frozen_output
+    attributes:
+      label: Frozen result
+      description: Include or link the exact decoder/verifier output before unblinding.
+    validations:
+      required: true
+  - type: dropdown
+    id: disposition
+    attributes:
+      label: Post-unblind discrepancy class
+      options:
+        - Not yet unblinded
+        - No discrepancy
+        - Decoder / verifier error
+        - Specification ambiguity
+        - Representation defect
+        - Fixture defect
+        - Protocol defect
+        - Intended distinction recovered
+        - Unknown / needs investigation
+    validations:
+      required: true
+  - type: textarea
+    id: analysis
+    attributes:
+      label: Evidence and analysis
+      description: Separate observed evidence from interpretation and proposed repair.
+    validations:
+      required: false
