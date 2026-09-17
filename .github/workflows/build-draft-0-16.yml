@@ -1,0 +1,57 @@
+name: Build Draft 0.16 candidate
+
+on:
+  push:
+    branches:
+      - spec/draft-0-16-obligation-sufficiency
+    paths:
+      - tools/build-draft-0-16.mjs
+      - .github/workflows/build-draft-0-16.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-draft-0-16-candidate
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out candidate branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: spec/draft-0-16-obligation-sufficiency
+
+      - name: Generate Draft 0.16 amendment and consolidation
+        run: node tools/build-draft-0-16.mjs
+
+      - name: Verify generated candidate scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s CORE_SPEC_DRAFT_0_16_CANDIDATE.md
+          test -s CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '# IsoGraph Core Specification — Draft 0.16 Consolidated Candidate' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 29.2 Claim-bounded obligation closure' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 29.3 Proof-method neutrality' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 30.2 Claim-typed witness sufficiency and multiple mappings' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 30.3 Context-scoped witness quotients' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 30.4 Exact witness-family certificates' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '### 21.1.1 Claim-scoped factorization coverage' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '## 42.3 Draft 0.16 obligation-sufficiency controls' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          grep -F '# 45. Draft 0.16 qualification status' CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+
+      - name: Commit generated candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add CORE_SPEC_DRAFT_0_16_CANDIDATE.md CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'spec: generate Draft 0.16 obligation-sufficiency candidate'
+          git push origin HEAD:spec/draft-0-16-obligation-sufficiency
