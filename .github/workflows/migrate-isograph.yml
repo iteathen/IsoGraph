@@ -1,0 +1,114 @@
+name: Migrate IsoGraph research
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/migrate-isograph.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out IsoGraph
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Import frozen AxiomeSH research snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          saved_readme="$(mktemp)"
+          cp README.md "$saved_readme"
+
+          tmp="$(mktemp -d)"
+          git clone --depth 1 --branch export/axiomesh-gemini-review https://github.com/iteathen/CUDA-JS.git "$tmp/CUDA-JS"
+          source_head="$(git -C "$tmp/CUDA-JS" rev-parse HEAD)"
+          test "$source_head" = "275b4d28224990a2b8fbdd7fa66cb071fb867e48"
+
+          cp "$tmp/CUDA-JS/research/axiomesh/README.md" HISTORICAL_AXIOMESH_README.md
+          rsync -a --delete-excluded \
+            --exclude README.md \
+            "$tmp/CUDA-JS/research/axiomesh/" ./
+          cp "$saved_readme" README.md
+
+          cat > MIGRATION.md <<'EOF'
+          # IsoGraph migration
+
+          IsoGraph was incubated as **AxiomeSH** inside `iteathen/CUDA-JS` before becoming a standalone project.
+
+          The initial standalone research snapshot was imported from:
+
+          - source repository: `iteathen/CUDA-JS`
+          - source branch: `export/axiomesh-gemini-review`
+          - frozen source commit: `275b4d28224990a2b8fbdd7fa66cb071fb867e48`
+          - former source path: `research/axiomesh/`
+
+          Historical specifications, experiments, filenames, and reports retain the **AxiomeSH** name where that name is part of their provenance. They are not silently rewritten. New work uses **IsoGraph**.
+
+          Current imported authority at migration time is the cumulative specification chain:
+
+          1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+          2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+          3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
+
+          Draft 0.15 is a corrective amendment and adds no domain operator, structural class, or irreducible primitive.
+          EOF
+
+          cat > AGENTS.md <<'EOF'
+          # IsoGraph agent guidance
+
+          IsoGraph is an agent-native structural knowledge representation designed to expose invariants, isomorphisms, and common structure across independently expressed domains without erasing meaningful differences.
+
+          ## Authority
+
+          Before substantive work, read `README.md`, `MIGRATION.md`, and the current cumulative specification chain:
+
+          1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+          2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+          3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
+
+          Treat older specifications and experiments as historical evidence under their recorded semantics. Do not silently reinterpret or rename historical artifacts.
+
+          ## Research discipline
+
+          Use: assess -> research -> reassess -> plan -> execute -> qualify -> review -> cleanup/document.
+
+          Treat prior conclusions, reviews, fixtures, expected results, and issue text as evidence rather than authority. Preserve ambiguity and residual distinctions. Do not create a new primitive, structural class, comparison relation, or canonical factorization merely because a case is awkward.
+
+          Keep these distinctions explicit:
+
+          - surface syntax != irreducible substrate
+          - source-faithful representation != comparison view
+          - structural identity != occurrence
+          - factorization != normalization
+          - one valid factorization != canonical factorization
+          - native representability != dedicated syntax
+          - retrieval hint != structural evidence
+          - source/D residual != pairwise residual
+          - class label != class-membership evidence
+          - semantic equivalence != structural isomorphism
+
+          Preserve cold-test isolation: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
+          EOF
+
+          # The one-shot migration workflow removes itself after completing the import.
+          rm -f .github/workflows/migrate-isograph.yml
+
+      - name: Commit migration
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to migrate"
+            exit 0
+          fi
+          git commit -m "research: migrate AxiomeSH corpus into IsoGraph"
+          git push origin HEAD:main
