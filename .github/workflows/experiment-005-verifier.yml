@@ -1,0 +1,60 @@
+name: Experiment 005 independent verifier
+
+on:
+  push:
+    branches:
+      - spec/draft-0-16-obligation-sufficiency
+    paths:
+      - experiments/005/cold-results/RUN-Q005/COLD_REPORT.txt
+      - experiments/005/tools/run-q005-verifier.mjs
+      - .github/workflows/experiment-005-verifier.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-005-independent-verifier
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-flash-lite-latest
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out frozen evidence branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: spec/draft-0-16-obligation-sufficiency
+
+      - name: Execute scorer-blind verifier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/005/tools/run-q005-verifier.mjs
+
+      - name: Freeze verifier artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp005-RUN-Q005-verifier-v1
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Archive frozen verifier evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=experiments/005/verifier/RUN-Q005
+          mkdir -p "$dest"
+          cp out/RUN-Q005_VERIFIER_REPORT.txt "$dest/VERIFIER_REPORT.txt"
+          cp out/RUN-Q005_VERIFIER_METADATA.json "$dest/VERIFIER_METADATA.json"
+          cp out/RUN-Q005_VERIFIER_API_RESPONSE.json "$dest/VERIFIER_API_RESPONSE.json"
+          cp out/RUN-Q005_VERIFIER_PACKET.txt "$dest/VERIFIER_PACKET.txt"
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add "$dest"
+          git commit -m 'experiment: freeze Experiment 005 verifier report'
+          git push origin HEAD:spec/draft-0-16-obligation-sufficiency
