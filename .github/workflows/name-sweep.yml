@@ -44,7 +44,7 @@ jobs:
 
           if [ -e HISTORICAL_ISOGRAPH_README.md ]; then
             git mv HISTORICAL_ISOGRAPH_README.md HISTORICAL_PRE_ISOGRAPH_README.md
-            git grep -IlZ 'HISTORICAL_ISOGRAPH_README.md' | xargs -0 -r perl -0pi -e 's/HISTORICAL_ISOGRAPH_README\.md/HISTORICAL_PRE_ISOGRAPH_README.md/g'
+            git grep -Ilz 'HISTORICAL_ISOGRAPH_README.md' | xargs -0 -r perl -0pi -e 's/HISTORICAL_ISOGRAPH_README\.md/HISTORICAL_PRE_ISOGRAPH_README.md/g'
           fi
 
           rm -f .github/workflows/name-sweep.yml
