@@ -95,6 +95,14 @@ const runs = {
     prompt: 'experiments/004/COLD_Q004_16_PROMPT_DRAFT_0_15.md',
     inputs: ['CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md','experiments/003/STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md','experiments/004/Q004_16_CLASS_NONVACUITY_004.axh']
   },
+  'RUN-D17': {
+    prompt: 'experiments/004/COLD_Q004_17_PROMPT_DRAFT_0_15.md',
+    inputs: ['CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md','experiments/004/Q004_17_NATIVE_RECORDS_004.axh']
+  },
+  'RUN-D17B': {
+    prompt: 'experiments/004/COLD_Q004_17B_PROMPT.md',
+    inputs: ['CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md','experiments/004/Q004_17B_NATIVE_RECORDS_004.isg']
+  },
   'RUN-D18': {
     prompt: 'experiments/004/COLD_Q004_18_PROMPT_DRAFT_0_15.md',
     inputs: ['CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md','experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh']
