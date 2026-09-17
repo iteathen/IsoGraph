@@ -67,22 +67,39 @@ Witness quotienting is context-scoped. No qualified context/equivalence/coverage
 
 A result at explicitly named frozen factorization/extraction nodes is local unless factorization-space coverage has been declared and exhausted or certified.
 
+## Natural Entropic Identity
+
+For current NEI research, read:
+
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — base NEI semantics;
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — current clarification layer.
+
+NEI 0.2 preserves application/domain relations exactly and warns against silently carrying stronger identity meaning through them than their declared semantics/authority support. It does not assume application distinctions are meaningless, and it does not automatically promote them into `SAME` or `DISTINCT`.
+
+The word **natural** is explanatory and non-load-bearing. It contrasts the target identity question with merely representational identity; it is not a primitive, evidence source, ontology declaration, or inference rule.
+
 ## Discovery Protocols
 
-For agent-driven structural discovery on the current research branch, read both:
+For agent-driven structural discovery on the current research branch, read:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` — base ranked protocol catalog;
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — current normative correction layer motivated by RUN-Q006.
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — cross-residual/NEI correction motivated by RUN-Q006;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md` — current evidence-matched separator correction.
 
-DP 0.2 supersedes conflicting DP 0.1 discovery behavior while preserving DP 0.1 as the exact candidate tested by Experiment 006.
+DP 0.3 supersedes conflicting DP 0.2/0.1 discovery behavior while preserving those revisions as historical qualification evidence.
 
-Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. The ranking is ordered by expected structural information gain but is heuristic and MUST adapt to evidence. Discovery priority never supplies semantic authority.
+Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. Discovery priority never supplies semantic authority.
 
-Use the protocol contract explicitly: objective -> priority cues -> inspect -> abstract -> generate -> expand -> falsify -> promote -> preserve residuals -> stop/cost -> next protocols. Search high-information seams before low-value lexical/identifier similarity and falsify candidates early.
+Under DP 0.3, evidence burden follows the conclusion:
 
-Under DP 0.2, a load-bearing residual between already matched upstream/downstream regions is not terminal divergence. Trigger the cross-residual decomposition gate, refactor by functional role, test alternate factorization/scale, and align nodes by dependency role rather than textual proximity. Different machinery, carrier type, proof technique, implementation, factorization, or SI is not by itself a natural distinction.
+- a concrete structural breaker can reject a candidate without NEI;
+- an explicit pinned application/domain authority may serve as a rigid separator when its declared semantics make the difference load-bearing;
+- a natural-distinctness rejection requires qualified NEI `DISTINCT`;
+- a cost-bounded stop may remain `DORMANT`/unresolved without proving identity.
 
-When corresponding load-bearing roles differ mainly by representation/factorization/formulation and that apparent distinction would terminate or split the search, trigger the DP-38 / NEI distinction audit. NEI is used to ask whether the separator is naturally justified; DP similarity, isomorphism, QUI, or common-core size does not itself establish NEI `SAME`. `UNKNOWN` or incomplete NEI authority cannot be used as a natural separator.
+Application semantics are preserved exactly. Do not presume they are either identity-relevant or identity-irrelevant. Do not silently strengthen them into NEI meaning beyond the pinned authority.
+
+A load-bearing residual between already matched upstream/downstream regions still requires at least one bounded recursive role/factorization pass unless a structural or rigid-authority breaker already explains the divergence. Different machinery or carrier type alone is not terminal divergence.
 
 For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
 
@@ -100,7 +117,7 @@ unresolved obligations: none
 
 Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
 
-Experiment 006 RUN-Q006 is frozen evidence against DP 0.1 / QU 0.1 / NEI 0.1 at its recorded qualification revision. Its integrated result did not qualify. Preserve `experiments/006/EXPERIMENT_006_RUN_Q006_REVIEW.md` and `experiments/006/RUN_Q006_DECOMPOSITION_REPLAY.md` as historical evidence; do not reinterpret the frozen cold result through DP 0.2.
+Experiment 006 RUN-Q006 and RUN-Q006-R2 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting the frozen outputs through later DP/NEI revisions.
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
@@ -108,6 +125,6 @@ Preserve cold-test isolation for future experiments when an actual semantic hypo
 
 External Gemini calls and GitHub Actions executions are scarce qualification resources. Read and follow `QUALIFICATION_RESOURCE_DISCIPLINE.md` before designing or running a new qualification experiment.
 
-Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient independent evidence**. Prefer one frozen multi-case packet, one cold semantic-decoder call, deterministic post-freeze scoring, and one independent verifier only when the qualification claim warrants it. Prefer one batched workflow/job over per-case matrices or repeated workflows when isolation does not require physical separation.
+Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient independent evidence**. Prefer focused high-information regression tests over replaying unrelated already-covered controls after a narrow candidate revision.
 
-Run deterministic syntax, hash, packet-integrity, provenance, and mechanical checks before spending an external semantic call. Do not rerun Gemini or CI merely to seek a more favorable answer. Additional external calls/runs require a concrete evidentiary or infrastructure reason and should be recorded in the final qualification provenance.
+Run deterministic syntax, hash, packet-integrity, provenance, and mechanical checks before spending an external semantic call. Do not rerun Gemini or CI merely to seek a more favorable answer. Additional external calls/runs require a concrete evidentiary or infrastructure reason and should be recorded in final qualification provenance.
