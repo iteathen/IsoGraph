@@ -1,6 +1,8 @@
 name: IsoGraph name sweep
 
 on:
+  push:
+    branches: [chore/isograph-name-sweep]
   pull_request:
     branches: [main]
 
@@ -9,7 +11,7 @@ permissions:
 
 jobs:
   sweep:
-    if: github.event.pull_request.head.ref == 'chore/isograph-name-sweep' && github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'push' || (github.event.pull_request.head.ref == 'chore/isograph-name-sweep' && github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-latest
     steps:
       - name: Check out rename branch
