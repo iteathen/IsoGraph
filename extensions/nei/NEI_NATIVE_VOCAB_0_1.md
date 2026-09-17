@@ -11,19 +11,19 @@ These stable labels are owned by the NEI 0.1 extension namespace/revision. Numer
 | `^94001` | NEI claim/result record |
 | `^94002` | NEI carrier/domain |
 | `^94003` | fixed evidence revision/state `E` |
-| `^94004` | QU authority/revision reference when QU is required |
-| `^94005` | pinned QU state `Q` when QU is required |
-| `^94006` | QU admissible-realization family `R(Q)` reference |
+| `^94004` | QU authority/revision reference when the claim is QU-mediated |
+| `^94005` | pinned QU state `Q` when the claim is QU-mediated |
+| `^94006` | QU admissible-realization family `R(Q)` reference when the claim is QU-mediated |
 | `^94007` | queried subject A |
 | `^94008` | queried subject B |
-| `^94009` | cross-realization query-anchor/correspondence authority for QU-mediated claims |
+| `^94009` | cross-realization query-anchor/correspondence authority when required |
 | `^94010` | identity-preserving law |
 | `^94011` | identity-separating law |
 | `^94012` | natural disequality/distinctness constraint |
-| `^94013` | admissible NEI model for a QU-mediated claim |
+| `^94013` | admissible NEI model |
 | `^94014` | natural-identity equivalence relation within one admissible model |
 | `^94015` | admissible model-family membership |
-| `^94016` | qualified QU-mediated NEI model family `M(P,Q,E)` |
+| `^94016` | qualified NEI model family `M(P,Q,E)` for QU-mediated claims |
 | `^94017` | semantic result `SAME` |
 | `^94018` | semantic result `DISTINCT` |
 | `^94019` | semantic result `UNKNOWN` |
@@ -40,13 +40,9 @@ These stable labels are owned by the NEI 0.1 extension namespace/revision. Numer
 | `^94030` | optional qualified information-measure reference inherited from/associated with QU |
 | `^94031` | QUI / structural-unknown correspondence evidence reference |
 | `^94032` | pinned dependency/revision relation |
-| `^94033` | coverage/universality certificate for a QU-mediated claim over `M(P,Q,E)` |
+| `^94033` | coverage/universality certificate for a claim over `M(P,Q,E)` |
 
-The vocabulary intentionally does not reproduce QU's native representation of unresolved structure. Where unresolved identity-relevant structure matters, NEI references the pinned QU authority/state and adds identity-specific roles only.
-
-A determinate `SAME` or `DISTINCT` claim need not populate QU-specific roles merely to encode zero uncertainty. It must instead carry direct qualified evidence/profile authority sufficient to settle the identity claim without unresolved identity-relevant alternatives affecting it.
-
-Semantic `UNKNOWN` is QU-mediated and therefore requires the applicable QU roles and model-family evidence.
+The vocabulary intentionally does not reproduce QU's native representation of unresolved structure. A QU-mediated NEI claim references the pinned QU authority/state and adds identity-specific roles only. Determinate NEI claims need not materialize QU-specific roles solely to encode zero uncertainty.
 
 The vocabulary introduces no parser tokens. These labels participate in ordinary IsoGraph incidence/scopes under the extension authority.
 

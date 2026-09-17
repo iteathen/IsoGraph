@@ -3,7 +3,7 @@
 **Status:** unqualified rewritten normative extension candidate  
 **Short name:** NEI 0.1  
 **Core dependency:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` or an exact qualified bridge  
-**QU dependency:** NEI depends normatively on Quantifiable Unknown (QU) semantics for claims whose identity result depends on unresolved identity-relevant structure; a determinate claim need not materialize a QU state merely to encode zero uncertainty  
+**QU dependency:** `extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md` or an exact qualified bridge when the identity result depends on unresolved identity-relevant structure; a determinate claim need not materialize a QU state merely to encode zero uncertainty  
 **Native vocabulary:** `extensions/nei/NEI_VOCAB_0_1.isg`  
 **Growth rule:** adds no core syntax or irreducible IsoGraph primitive; NEI terms are extension-owned semantic constructions represented using ordinary IsoGraph structure
 
@@ -432,27 +432,27 @@ A represented physical, causal, temporal, containment, ownership, or boundary re
 
 # 18. QU refinement and epistemic evolution
 
-Where QU is present, a genuine QU refinement narrows the admissible realization family without changing the governing meaning of the retained possibilities.
+When QU is present, a genuine QU refinement narrows the admissible realization family without changing the governing meaning of the retained possibilities.
 
-A later refinement may resolve prior NEI `UNKNOWN` into `SAME` or `DISTINCT`.
+Later qualified information may resolve a prior NEI `UNKNOWN` into `SAME` or `DISTINCT`.
 
 Revision or invalidation of assumptions is not automatically a refinement. A later result does not rewrite the earlier claim; claims remain tied to their exact authority/evidence revisions.
 
-A qualified `SAME` or `DISTINCT` claim contradicted under the exact same pinned authority context indicates a qualification or implementation defect, not legitimate context dependence.
+A qualified `SAME` or `DISTINCT` claim contradicted under the exact same pinned authority/evidence context indicates a qualification or implementation defect, not legitimate context dependence.
 
 ---
 
 # 19. Information measures and the word entropic
 
-NEI requires QU's structured unknown semantics when unknown structure matters, not a mandatory scalar entropy measure.
+NEI uses QU's structured unknown semantics where unresolved identity-relevant information matters; it does not require a mandatory scalar entropy measure.
 
 A QU profile may carry an information-theoretic characterization such as a state-count, probability distribution, Shannon/Hartley-style quantity, description-length measure, algorithmic-information approximation, or another qualified measure. Such quantities may be useful evidence or metadata when a governing profile explicitly gives them a role.
 
 NEI 0.1 does not infer natural identity merely by minimizing any such quantity.
 
-In NEI, `entropic` names the information-sensitive objective of eliminating **unsupported** identity distinctions while preserving every distinction and uncertainty still supported by qualified information.
+In NEI, `entropic` names the information-sensitive objective of eliminating **unsupported** identity distinctions while preserving every distinction and uncertainty still supported by qualified evidence and, where applicable, the maximally constrained QU state.
 
-The operative rule is:
+The operative rule is therefore:
 
 ```text
 maximize justified collapse
@@ -475,13 +475,13 @@ A qualified NEI claim records enough structure to recover, where applicable:
 
 ```text
 NEI extension/profile immutable revision
+QU authority + immutable revision when QU-mediated
+QU state / realization-family reference when QU-mediated
 carrier and queried referents
+query-anchor/correspondence authority when QU-mediated
 fixed evidence revision
 identity-preserving/separating laws
 classification/result status
-QU authority + immutable revision when unresolved structure matters
-QU state / realization-family reference when used
-query-anchor/correspondence authority for QU-mediated claims
 witness/certificate references
 coverage evidence appropriate to the claim
 provenance
@@ -491,7 +491,7 @@ resource/completeness status
 
 Claim burdens are semantic rather than algorithmic:
 
-- determinate `SAME` or `DISTINCT` requires direct qualified evidence/profile authority sufficient to settle the claim without unresolved identity-relevant alternatives affecting it;
+- determinate `SAME`/`DISTINCT` requires sufficient direct qualified evidence under `P,E`;
 - QU-mediated `SAME` requires sufficient evidence that merger holds in every admissible NEI model relevant to the claim;
 - QU-mediated `DISTINCT` requires sufficient evidence that separation holds in every admissible NEI model;
 - semantic `UNKNOWN` requires sufficient evidence that both a SAME model and a DISTINCT model are admissible under one pinned `P,Q,E`;
@@ -504,7 +504,7 @@ A complete explicit model-family enumeration is not required when an exact quali
 
 # 21. Anti-circularity and discovery isolation
 
-The target NEI hypothesis MUST NOT choose or alter the evidence state, QU state when present, possibility universe, closure scope, source interpretation, factorization, profile, identity law, or correspondence later cited as proof of that same conclusion.
+The target NEI hypothesis MUST NOT choose or alter the QU state, possibility universe, closure scope, source interpretation, factorization, profile, identity law, or correspondence later cited as proof of that same conclusion.
 
 Forbidden pattern:
 
@@ -535,7 +535,7 @@ NEI uses ordinary IsoGraph scopes, ordered incidences, SIs, stable labels, depen
 
 The extension-owned numeric vocabulary in `NEI_VOCAB_0_1.isg` supplies stable native roles for NEI records. Those labels are namespaced to the extension revision and are not core-reserved tokens.
 
-NEI does not duplicate QU's representation of open structure. When QU is required, NEI references the governing QU authority/state and adds identity-specific profile, model, classification, and evidence roles.
+NEI does not duplicate QU's representation of open structure. When a claim is QU-mediated, it references the governing QU authority/state and adds only identity-specific profile, model, classification, and evidence roles.
 
 No NEI-specific parser token, special loader, mandatory solver, canonicalization algorithm, or entropy computation is required.
 
@@ -547,7 +547,7 @@ Before revising NEI semantics, classify a failure as one of:
 
 ```text
 core/SI misunderstanding
-QU representation or authority defect where QU is required
+QU representation or authority defect
 QU realization-family / closure defect
 query-anchor/correspondence defect
 identity-law/profile defect
@@ -571,21 +571,20 @@ Do not repair a failed case by adding a post-hoc natural distinction, post-hoc m
 NEI 0.1 remains unqualified. Before promotion, qualification should demonstrate at least that:
 
 1. core-only SI artifacts require no QU or NEI semantics;
-2. a determinate qualified `SAME` or `DISTINCT` claim can succeed without materializing an artificial zero-uncertainty QU state;
-3. a claim whose identity classification depends on unresolved structure requires a pinned QU state;
-4. semantic `UNKNOWN` cannot be asserted without a QU-bounded disagreement in admissible models;
-5. NEI fails closed when required QU authority/state is unavailable;
-6. SI renaming and transparent administrative repartition do not change an NEI result;
-7. absence of evidence for distinction does not produce `SAME`;
-8. qualified sameness across every admissible QU/NEI model produces `SAME`;
-9. qualified separation across every admissible model produces `DISTINCT`;
-10. admissible SAME and DISTINCT models under one QU state produce semantic `UNKNOWN`;
-11. inconsistent/empty QU or NEI model families do not produce vacuous identity results;
-12. structural isomorphism or QUI alone does not become identity proof;
-13. pairwise projections preserve joint equivalence-model consistency;
-14. temporal classifications depend on explicit temporal identity law rather than property change alone;
-15. incomplete computation remains distinct from semantic `UNKNOWN`;
-16. circular QU restriction or downstream isomorphism cannot qualify its own NEI premise.
+2. determinate NEI claims may qualify without materializing a zero-uncertainty QU artifact when fixed evidence/profile authority settles the result;
+3. any claim whose result depends on unresolved identity-relevant possibilities requires a pinned QU state;
+4. NEI fails closed/incomplete when required QU authority/state is unavailable;
+5. SI renaming and transparent administrative repartition do not change an NEI result;
+6. absence of evidence for distinction does not produce `SAME`;
+7. qualified sameness across every admissible QU/NEI model produces `SAME`;
+8. qualified separation across every admissible model produces `DISTINCT`;
+9. admissible SAME and DISTINCT models under one QU state produce semantic `UNKNOWN`;
+10. inconsistent/empty QU or NEI model families do not produce vacuous identity results;
+11. structural isomorphism or QUI alone does not become identity proof;
+12. pairwise projections preserve joint equivalence-model consistency;
+13. temporal classifications depend on explicit temporal identity law rather than property change alone;
+14. incomplete computation remains distinct from semantic `UNKNOWN`;
+15. circular QU restriction or downstream isomorphism cannot qualify its own NEI premise.
 
 These are future qualification obligations, not prescribed discovery algorithms.
 
@@ -597,6 +596,6 @@ The earlier experimental formulation that selected **maximally coarse admissible
 
 Its useful surviving intuition is retained only in corrected form:
 
-> identity distinctions carry informational commitment, but information-theoretic pressure cannot license a merge. Where uncertainty matters, the qualified QU/model family determines what remains possible; NEI returns only the identity invariant justified across that family.
+> identity distinctions carry informational commitment, but information-theoretic pressure cannot license a merge. Qualified evidence and, where unresolved structure matters, the QU/model family determine what remains possible; NEI returns only justified sameness, including the sameness invariant across the uncertainty family.
 
 No older coarseness-selection wording is normative for this candidate.
