@@ -2,25 +2,29 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
-const RUN = 'RUN-Q006';
+const RUN = process.env.Q006_RUN || 'RUN-Q006';
 const SHA = process.env.GITHUB_SHA;
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
 const API_KEY = process.env.GEMINI_API_KEY;
+const DP_BASE_PATH = 'extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md';
+const DP_PATH = process.env.Q006_DP_PATH || DP_BASE_PATH;
+const PROMPT_PATH = process.env.Q006_PROMPT_PATH || 'experiments/006/COLD_Q006_PROMPT.md';
 
 if (!SHA) throw new Error('GITHUB_SHA unavailable');
 if (!API_KEY) throw new Error('GEMINI_API_KEY unavailable');
 
+const dpInputs = DP_PATH === DP_BASE_PATH ? [DP_BASE_PATH] : [DP_BASE_PATH, DP_PATH];
 const inputs = [
   'CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md',
   'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
   'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md',
-  'extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md',
+  ...dpInputs,
   'experiments/006/Q006_CASES.md',
   'experiments/006/Q006_BOUNDARY_CASES.md',
   'experiments/006/DP_PROOF_ALPHA.md',
   'experiments/006/DP_PROOF_BETA.md'
 ];
-const promptPath = 'experiments/006/COLD_Q006_PROMPT.md';
+const promptPath = PROMPT_PATH;
 const forbiddenColdNames = [
   'Q006_ASSERTIONS',
   'DP_HIDDEN_ORACLE',
@@ -58,7 +62,8 @@ for (const p of [...inputs, promptPath]) {
 
 const qu = frozen('extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md');
 const nei = frozen('extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md');
-const dp = frozen('extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md');
+const dpBase = frozen(DP_BASE_PATH);
+const dpSelected = DP_PATH === DP_BASE_PATH ? dpBase : frozen(DP_PATH);
 const alpha = frozen('experiments/006/DP_PROOF_ALPHA.md');
 const beta = frozen('experiments/006/DP_PROOF_BETA.md');
 const cases = frozen('experiments/006/Q006_CASES.md') + '\n' + frozen('experiments/006/Q006_BOUNDARY_CASES.md');
@@ -72,9 +77,14 @@ if (nei.includes('Retain the maximally coarse admissible identity partitions')) 
   throw new Error('Obsolete maximally-coarse normative rule survived into NEI candidate');
 }
 requireText(nei, 'absence of evidence for DISTINCT', 'NEI absence-of-distinction barrier');
-requireText(dp, 'discovery priority\n    != semantic authority', 'DP constitutional boundary');
-const protocolCount = (dp.match(/^## DP-\d\d\b/gm) || []).length;
-if (protocolCount !== 45) throw new Error(`Expected 45 DP protocols, found ${protocolCount}`);
+requireText(dpBase, 'discovery priority\n    != semantic authority', 'DP constitutional boundary');
+const protocolCount = (dpBase.match(/^## DP-\d\d\b/gm) || []).length;
+if (protocolCount !== 45) throw new Error(`Expected 45 DP protocols in base, found ${protocolCount}`);
+if (DP_PATH !== DP_BASE_PATH) {
+  requireText(dpSelected, 'Cross-Residual Decomposition Gate', 'DP correction cross-residual gate');
+  requireText(dpSelected, 'NEI Distinction Audit Gate', 'DP correction NEI audit gate');
+  requireText(dpSelected, 'Role decomposition before object comparison', 'DP correction role-first rule');
+}
 
 for (let i = 1; i <= 13; i++) {
   const id = `QU-${String(i).padStart(2, '0')}`;
@@ -98,7 +108,7 @@ if (leakage.test(alpha) || leakage.test(beta) || leakage.test(cases) || leakage.
 const manifest = [];
 const chunks = [
   `ISOGRAPH EXPERIMENT 006 — INTEGRATED COLD QUALIFICATION\n` +
-  `Run: ${RUN}\nFrozen repository SHA: ${SHA}\nModel: ${MODEL}\n\n` +
+  `Run: ${RUN}\nFrozen repository SHA: ${SHA}\nModel: ${MODEL}\nSelected DP authority: ${DP_PATH}\n\n` +
   `ISOLATION REQUIREMENT\n` +
   `You receive only the files delimited below. Scorer assertions, the historical proof-unification oracle, prior outputs, and external sources are unavailable. ` +
   `Do not browse, redesign the modules, or use theorem-name recognition as evidence.\n`
@@ -160,6 +170,8 @@ const baseMeta = {
   run: RUN,
   model: MODEL,
   qualification_sha: SHA,
+  selected_dp_path: DP_PATH,
+  prompt_path: promptPath,
   workflow_run_id: process.env.GITHUB_RUN_ID || null,
   workflow_attempt: process.env.GITHUB_RUN_ATTEMPT || null,
   input_manifest: manifest,
