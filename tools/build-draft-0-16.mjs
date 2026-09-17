@@ -174,9 +174,9 @@ A complete witness family may be represented by an exact finite description rath
 
 For structural isomorphism specifically, if \`f : A -> B\` is one verified isomorphism and \`Aut_C(A)\` is the exact automorphism group of \`A\` under the same frozen context, then:
 
-```text
+~~~text
 Iso_C(A,B) = { f ∘ a | a in Aut_C(A) }
-```
+~~~
 
 because every other isomorphism \`g : A -> B\` yields \`f^-1 ∘ g in Aut_C(A)\`. Therefore one verified isomorphism plus an exact verified generating description of \`Aut_C(A)\` may serve as a compact complete-family certificate.
 
