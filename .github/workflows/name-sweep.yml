@@ -29,12 +29,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           while IFS= read -r -d '' file; do
+            case "$file" in
+              .github/workflows/*) continue ;;
+            esac
             perl -0pi -e 's/AxiomeSH/IsoGraph/g; s/AXIOMESH/ISOGRAPH/g; s/Axiomesh/IsoGraph/g; s/IsoMesh/IsoGraph/g; s/ISOMESH/ISOGRAPH/g; s/isomesh/isograph/g; s/axiomesh/isograph/g' "$file"
             perl -0pi -e 's#experiment/isograph-native-reconstruction#experiment/axiomesh-native-reconstruction#g; s#export/isograph-gemini-review#export/axiomesh-gemini-review#g; s#research/isograph/#research/axiomesh/#g; s#research/isograph\b#research/axiomesh#g' "$file"
           done < <(git grep -Ilz -i -E 'axiomesh|isomesh' || true)
 
           while IFS= read -r old; do
             [ -n "$old" ] || continue
+            case "$old" in
+              .github/workflows/*) continue ;;
+            esac
             new="${old//AXIOMESH/ISOGRAPH}"
             new="${new//ISOMESH/ISOGRAPH}"
             if [ "$old" != "$new" ]; then
@@ -44,12 +50,15 @@ jobs:
 
           if [ -e HISTORICAL_ISOGRAPH_README.md ]; then
             git mv HISTORICAL_ISOGRAPH_README.md HISTORICAL_PRE_ISOGRAPH_README.md
-            git grep -Ilz 'HISTORICAL_ISOGRAPH_README.md' | xargs -0 -r perl -0pi -e 's/HISTORICAL_ISOGRAPH_README\.md/HISTORICAL_PRE_ISOGRAPH_README.md/g'
+            while IFS= read -r -d '' file; do
+              case "$file" in
+                .github/workflows/*) continue ;;
+              esac
+              perl -0pi -e 's/HISTORICAL_ISOGRAPH_README\.md/HISTORICAL_PRE_ISOGRAPH_README.md/g' "$file"
+            done < <(git grep -Ilz 'HISTORICAL_ISOGRAPH_README.md' || true)
           fi
 
-          rm -f .github/workflows/name-sweep.yml
-
-          git add -A
+          git add -A -- ':!.github/workflows/*'
           if git diff --cached --quiet; then
             echo "No rename changes found"
             exit 0
