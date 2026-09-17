@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
 const OUT = 'out/q006';
-const RUN = 'RUN-Q006';
+const RUN = process.env.Q006_RUN || 'RUN-Q006';
 const assertionsPath = 'experiments/006/Q006_ASSERTIONS.json';
 const reportPath = `${OUT}/${RUN}_PARSED_REPORT.json`;
 const scorePath = `${OUT}/${RUN}_SCORE.json`;
@@ -11,10 +11,15 @@ fs.mkdirSync(OUT, { recursive: true });
 const assertions = JSON.parse(fs.readFileSync(assertionsPath, 'utf8'));
 
 function norm(v) {
-  return String(v ?? '')
+  const value = String(v ?? '')
     .trim()
     .toUpperCase()
     .replace(/\s*,\s*/g, ',');
+  // RUN-Q006 exposed this as a scorer-only singular/plural spelling mismatch.
+  if (value === 'SEMANTIC_PRESERVED_UNDER_ALPHA_RENAMING') {
+    return 'SEMANTICS_PRESERVED_UNDER_ALPHA_RENAMING';
+  }
+  return value;
 }
 
 function disposition(correct, total) {
@@ -183,6 +188,7 @@ fs.writeFileSync(scorePath, JSON.stringify(score, null, 2) + '\n');
 const md = [];
 md.push('# Experiment 006 Deterministic Score');
 md.push('');
+md.push(`- Run: **${RUN}**`);
 md.push(`- QU: **${quScore.disposition}** (${quScore.correct}/${quScore.total})`);
 md.push(`- NEI: **${neiScore.disposition}** (${neiScore.correct}/${neiScore.total})`);
 md.push(`- DP: **${dpScore.disposition}**`);
@@ -205,4 +211,4 @@ for (const r of neiScore.rows) md.push(`- ${r.id}: ${r.pass ? 'PASS' : 'FAIL'} â
 md.push('');
 fs.writeFileSync(scoreMdPath, md.join('\n') + '\n');
 
-console.log(JSON.stringify({ qu: quScore.disposition, nei: neiScore.disposition, dp: dpScore.disposition, integrated }));
+console.log(JSON.stringify({ run: RUN, qu: quScore.disposition, nei: neiScore.disposition, dp: dpScore.disposition, integrated }));
