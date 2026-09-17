@@ -11,18 +11,18 @@ permissions:
   contents: write
 
 concurrency:
-  group: experiment-004-gemini-verifier-3-8
+  group: experiment-004-gemini-verifier-3-7
   cancel-in-progress: true
 
 env:
-  GEMINI_MODEL: gemini-3.8-flash
+  GEMINI_MODEL: gemini-3.7-flash
 
 jobs:
   preflight:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Verify Gemini 3.8 access
+      - name: Verify Gemini 3.7 access
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         shell: bash
@@ -30,15 +30,21 @@ jobs:
           set -euo pipefail
           test -n "${GEMINI_API_KEY:-}"
           node <<'NODE'
-          const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent', {
-            method:'POST',
-            headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},
-            body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply exactly ISOGRAPH_OK'}]}],generationConfig:{maxOutputTokens:32,thinkingConfig:{thinkingLevel:'LOW'}}})
-          });
-          const body=await r.text();
-          if(!r.ok){console.error(body);process.exit(1)}
-          const d=JSON.parse(body); const t=(d.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
-          console.log(t); if(!t.includes('ISOGRAPH_OK')) process.exit(1);
+          const sleep = ms => new Promise(r => setTimeout(r,ms));
+          let ok=false, last='';
+          for(let i=0;i<4;i++){
+            const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent', {
+              method:'POST',
+              headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},
+              body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply exactly ISOGRAPH_OK'}]}],generationConfig:{maxOutputTokens:32,thinkingConfig:{thinkingLevel:'LOW'}}})
+            });
+            last=await r.text();
+            if(r.ok){const d=JSON.parse(last); const t=(d.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim(); console.log(t); if(t.includes('ISOGRAPH_OK')){ok=true;break}}
+            else console.error(`preflight HTTP ${r.status}: ${last.slice(0,1000)}`);
+            if(![429,500,502,503,504].includes(r.status)) break;
+            await sleep(5000*(i+1));
+          }
+          if(!ok) process.exit(1);
           NODE
 
   verify:
@@ -129,5 +135,5 @@ jobs:
           git add experiments/004/cold-results/gemini/verifier
           if git diff --cached --quiet; then exit 0; fi
           git diff --cached --check
-          git commit -m 'experiment: archive Gemini 3.8 scorer-blind verifier evidence'
+          git commit -m 'experiment: archive Gemini 3.7 scorer-blind verifier evidence'
           git push origin HEAD:experiment/004-gemini-results
