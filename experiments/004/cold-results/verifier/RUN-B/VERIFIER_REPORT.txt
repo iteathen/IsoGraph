@@ -1,0 +1,90 @@
+# ISOGRAPH EXPERIMENT 004 — INDEPENDENT STRUCTURAL VERIFICATION REPORT
+
+**Target:** RUN-B (Cold Decoder Output)  
+**Semantic Authority:** Core Specification Draft 0.15 Consolidated Candidate (`iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`)  
+**Native Fixtures:** `experiments/004/PHASE_B_REWRITE_CASES_004.axh`  
+**Governing Prompt:** `experiments/004/COLD_PHASE_B_REWRITE_PROMPT_004_DRAFT_0_15.md`  
+**Verifier Isolation:** Complete (No hidden assertions, expected answers, qualification ledgers, or external reviews accessed).
+
+---
+
+## 1. CLAIMS & OBLIGATIONS VERIFICATION LEDGER
+
+### Q004-02: Evaluation of Case `#2`
+
+* **Claim 1: Resolution of Application Record `2003`**
+  * **Frozen Report Statement:** Maps `(^4203 2003 2001 2002)` to Event ID `2003`, State ID `2001`, and Rule ID `2002`. Resolves State `2001` as `[(10 20) (10 20) (30 20)]` and Rule `2002` as `[(10 ?0)] > [(30 ?0)]`.
+  * **Fixture/Spec Audit:** Fixture `PHASE_B_REWRITE_CASES_004.axh` contains `(^4201 2001 [(10 20) (10 20) (30 20)])`, `(^4202 2002 [[(10 ?0)] > [(30 ?0)]])`, and `(^4203 2003 2001 2002)`. Ordered incidence positions match prompt definition `(event, state, rule)`.
+  * **Classification:** `VERIFIED`
+
+* **Claim 2: LHS Matching & Binding Identification**
+  * **Frozen Report Statement:** LHS pattern `[(10 ?0)]` matches one occurrence of `(10 20)`, establishing variable binding `?0 = 20`.
+  * **Fixture/Spec Audit:** Sec. 11, 12.1, 12.4: Matching LHS `[(10 ?0)]` against member occurrence `(10 20)` uniquely binds local variable `?0` to `20`.
+  * **Classification:** `VERIFIED`
+
+* **Claim 3: Rule-Side Outer-Container Splice & Rewrite Step**
+  * **Frozen Report Statement:** Applying rule-side container splice (Sec. 12.1) removes one occurrence of `(10 20)` from state `2001` and adds one instantiated occurrence of `(30 20)`, producing successor scope `[(10 20) (30 20) (30 20)]`.
+  * **Fixture/Spec Audit:** Sec. 12.1 dictates outermost rule brackets are pattern/replacement containers and do not introduce nested scope structure. Sec. 12.4 requires multiset subtraction of matched LHS occurrences and multiset addition of instantiated RHS occurrences: `{(10 20), (10 20), (30 20)} \ {(10 20)} ∪ {(30 20)} = {(10 20), (30 20), (30 20)}`.
+  * **Classification:** `VERIFIED`
+
+* **Claim 4: Successor Scope Member Multiset**
+  * **Frozen Report Statement:** Successor multiset contains 1 occurrence of `(10 20)` and 2 occurrences of `(30 20)`.
+  * **Fixture/Spec Audit:** Matches exact multiset accounting required by Sec. 8.1 and 12.4.
+  * **Classification:** `VERIFIED`
+
+* **Claim 5: Non-Disappearance of Duplicate Isomorphic Occurrences**
+  * **Frozen Report Statement:** Verdict: No. Newly produced occurrence does not collapse or disappear because occurrence multiplicity is semantic by default (Sec. 8.1, 12.4).
+  * **Fixture/Spec Audit:** Sec. 8.1 explicitly dictates direct member occurrence multiplicity is semantic by default without explicit quotient profile. Sec. 12.4 defines multiset update.
+  * **Classification:** `VERIFIED`
+
+* **Claim 6: Structural Identity Integrity Upon Member Removal**
+  * **Frozen Report Statement:** Verdict: No. Removing a member occurrence does not destroy referenced structural identities `10` or `20` or affect other incidences mentioning them (Sec. 8.2).
+  * **Fixture/Spec Audit:** Sec. 8.2 explicitly states occurrence removal does not destroy structural identities or cascade-delete other incidences.
+  * **Classification:** `VERIFIED`
+
+---
+
+### Q004-03: Evaluation of Case `#3`
+
+* **Claim 7: Separate Evaluation of Application Records `3004` and `3005`**
+  * **Frozen Report Statement:** Evaluates `3004` (`state 3001`, `rule 3002`) and `3005` (`state 3001`, `rule 3003`). Both bind `?0 = 20` and produce successor state `[(30 20)]`.
+  * **Fixture/Spec Audit:** Fixture contains `(^4201 3001 [(10 20)])`, `(^4202 3002 [[(10 ?0)] > [(30 ?0)]])`, `(^4202 3003 [[(10 ?0)] > [(30 ?0)]])`, `(^4203 3004 3001 3002)`, and `(^4203 3005 3001 3003)`. Multiset calculation: `{(10 20)} \ {(10 20)} ∪ {(30 20)} = {(30 20)}`.
+  * **Classification:** `VERIFIED`
+
+* **Claim 8: Selected Rule Objects**
+  * **Frozen Report Statement:** Record `3004` selects rule object `3002`; record `3005` selects rule object `3003`.
+  * **Fixture/Spec Audit:** Matches fixture declarations and IDs under `^4203`.
+  * **Classification:** `VERIFIED`
+
+* **Claim 9: Isomorphism of Successor States**
+  * **Frozen Report Statement:** Successor states `[(30 20)]` and `[(30 20)]` are structurally isomorphic under V0 (and all view policies).
+  * **Fixture/Spec Audit:** Sec. 22.2, 24, 25. Bijective graph topology preservation and reflection under V0 view.
+  * **Classification:** `VERIFIED`
+
+* **Claim 10: Distinctness of Derivation Events**
+  * **Frozen Report Statement:** Verdict: Yes. Events `3004` and `3005` remain distinct application/derivation events despite identical successor states (Sec. 12.7).
+  * **Fixture/Spec Audit:** Sec. 12.7 explicitly states distinct applications remain distinct derivation events even when successor states are structurally identical.
+  * **Classification:** `VERIFIED`
+
+---
+
+### Ambiguity Report Verification
+
+* **Claim 11: Explicit Ambiguity Assertions**
+  * **Frozen Report Statement:**
+    1. Selection record argument roles (`^4203`) depend on external prompt profile (Sec. 2, 7, 12.2).
+    2. Distinction between rule-side outer container brackets and enclosing AXH wrapper scope (Sec. 12.1).
+    3. Top-level scope namespace inheritance vs. test isolation (Sec. 6.1, 6.2).
+  * **Fixture/Spec Audit:** All cited specification clauses are accurate. The report correctly refrains from repairing specification nuances and freezes claims faithfully.
+  * **Classification:** `VERIFIED`
+
+---
+
+## 2. OVERALL VERIFIER DISPOSITION
+
+**FINAL DISPOSITION:** `VERIFIED`
+
+Every explicit structural claim, binding, rewrite calculation, multiset update, scope nesting interpretation, identity rule, and derivation event classification made in frozen cold report **RUN-B** strictly satisfies all obligations under Core Specification Draft 0.15 and native fixture `PHASE_B_REWRITE_CASES_004.axh`.
+
+### Failed / Unresolved Obligations
+* **None.**

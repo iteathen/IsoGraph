@@ -1,0 +1,67 @@
+### Independent Structural Verification Report
+
+This report evaluates the frozen abbreviated cold summary (**RUN-A**) of IsoGraph Experiment 004 against the governing authority (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`) and the native fixtures provided in the input packet.
+
+---
+
+### I. Evaluation of Explicit Claims and Obligations
+
+#### 1. Claim: Case Resolution Status (Q004-01, Q004-04, Q004-06, Q004-07, Q004-08 Fully Answered; Q004-05 Subcases 1, 2, 4 Answered; Subcase 3 Blocked)
+*   **Verification & Analysis**:
+    *   **Q004-01**: **VERIFIED**. The scope `^4001` has 2 member occurrences, while `^4002` has 1. They are structurally non-isomorphic, and duplicate occurrences cannot be collapsed by N0/N1 under the default occurrence-preserving semantics of §8.1 and §8.2.
+    *   **Q004-04**: **VERIFIED**. `^4001` contains a nested scope `[(30 31)]` while `^4002` consists of flat, direct edge memberships. Under §12.3 and §12.1, nested scopes are non-flattenable and cannot be normalized to match flat structures.
+    *   **Q004-05**: **VERIFIED**.
+        *   *Subcase 1* is well-formed and matches. Under §11, the distinct variables `?0` and `?1` are allowed to alias the same structural identity (`60`).
+        *   *Subcase 2* is well-formed but fails to match because the repeated variable `?0` on the LHS cannot bind to both `60` and `61` simultaneously (§11: "repeated same variable within one owner requires one binding").
+        *   *Subcase 3* is blocked. The variable `?1` in `!(51 ?1)` is NAC-only. Section 11 states: *"NAC-only variables must already be positively bound or explicitly scoped by the matching profile."* Since no matching profile was supplied in the permitted inputs, the well-formedness and evaluation of this subcase cannot be resolved, confirming it is blocked.
+        *   *Subcase 4* is well-formed and matches because `?0` is positively bound in `(50 ?0)`, making it immune to the NAC-only restriction. The negative condition `!(51 60)` is satisfied since no such edge exists in the target `[(50 60)]`.
+    *   **Q004-06**: **VERIFIED**. N0 reference resolution on `^4001` expands `@0` use-sites, yielding 2 direct member occurrences of `(70 71)`. Under V0 local alpha-renaming, `^4001` is isomorphic to `^4002` (which also contains 2 direct occurrences of an edge) but non-isomorphic to `^4003` (which contains only 1).
+    *   **Q004-07**: **VERIFIED**. The independent top-level bundles `Q004_07_NAMESPACE_A.axh` and `Q004_07_NAMESPACE_B.axh` do not share identities or stable label meanings (§6.1, §6.4). They are non-isomorphic under V0 because stable labels are rigid (§24). They are isomorphic under VS with explicit stable-label mapping and local ID bijection.
+    *   **Q004-08**: **VERIFIED**. The compact quantifier expressions match, but the complete construction scopes are non-isomorphic because their domains/generators (represented by `^4010` linkages) differ in size (1 vs 2). Under §14.1, quantifier expressions over different domains are not interchangeable.
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 2. Native Distinction: Occurrence Multiplicity vs. Structural Identity (Q004-01, Q004-06)
+*   **Verification & Analysis**: Verified against §8.1 (*"direct member occurrence multiplicity is semantic by default"*) and §8.2 (*"structural identity is not occurrence identity"*). The frozen report correctly observes that duplicate identical elements are preserved as distinct member occurrences (e.g., the two uses of `@0` in Q004-06 map to distinct use-site occurrences after N0).
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 3. Native Distinction: Scope-Nesting vs. Flat Edge Membership (Q004-04)
+*   **Verification & Analysis**: Verified against §12.3 (*"does not flatten or cross nested scopes implicitly"*) and §12.1 (*"It does not make ordinary nested scopes transparent or flattenable"*). Nested scopes are structurally load-bearing and cannot be flattened or bypassed by N0/N1 to force a match with flat structures.
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 4. Native Distinction: Reference-Binding Transparency (Q004-06)
+*   **Verification & Analysis**: Verified against §10.1 (*"After N0 resolution, the binding directive occupies no semantic member occurrence"*) and §19.1 (*"Valid reference-binding directives disappear after N0 because they are serialization directives, not semantic occurrences"*). The reference syntax `@0=(70 71)` is successfully resolved to use-site occurrences and erased from the semantic membership.
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 5. Native Distinction: Stable-Label Rigidity under V0 vs. VS Mapping (Q004-07)
+*   **Verification & Analysis**: Verified against §6.4 (*"Identical numeric labels in independent namespaces are not sameness evidence"*) and §24 (*"V0: Namespace-qualified stable labels and literals are rigid. VS: Selected stable labels may map explicitly."*). The frozen report accurately captures the transition from non-isomorphism under V0 to isomorphism under VS.
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 6. Native Distinction: Compact Quantifier Binder/Body vs. Externally-Linked Domain Structure (Q004-08)
+*   **Verification & Analysis**: Verified against §14.1 (*"Same binder/body over different domains is not interchangeable. A qualified quantified construction exposes: ... domain/generator"*). The identical compact syntax `*?0[(^4011 ?0)]` does not hide the structural domain mismatch (tracked via external `^4010` links), which prevents V0 isomorphism.
+*   **Classification**: **VERIFIED**
+
+---
+
+#### 7. Suspected Spec Defect Analysis
+*   **Verification & Analysis**: Verified. Under §11, the rule for NAC-only variables depends on a "matching profile." The absence of this profile in the test packet represents an evidence-partitioning/isolation gap in this specific run, rather than a defect in the spec's underlying theory.
+*   **Classification**: **VERIFIED**
+
+---
+
+### II. Verifier Disposition and Summary
+
+*   **Overall Disposition**: **VERIFIED**
+*   **Failed Obligations**: None.
+*   **Unresolved Obligations**: None.
+
+The frozen cold summary **RUN-A** is fully compliant with the Draft 0.15 specification and perfectly matches the native fixtures. Every claim made in the summary has been verified and confirmed.

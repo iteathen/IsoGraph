@@ -1,0 +1,77 @@
+# ISOGRAPH VERIFIER REPORT — RUN-D16
+
+**Verifier Isolation Status:** Verified. Operating strictly under the supplied cold inputs (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`, `STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`, `Q004_16_CLASS_NONVACUITY_004.axh`, and governing prompt) and frozen cold report (`RUN-D16`). No outside files, forbidden assertions, or scoring ledgers were accessed.
+
+---
+
+## 1. Obligation and Claim Verification
+
+Every explicit claim, structural mapping, pattern evaluation, and constraint analysis made in the frozen report `RUN-D16` has been checked mechanically against the native fixture file `Q004_16_CLASS_NONVACUITY_004.axh` and governing specifications (Draft 0.15 / Contract 006).
+
+### Task 1: Schema 1601 Reconstruction
+*   **Frozen Claim:** Schema `1601` has role `^5600`, parameter slot `#1` (`^5601`), and zero required patterns/constraints (`^5602`).
+*   **Fixture Check:** `(^5600 1601)` and `(^5601 1601 #1)` are present. No `^5602` record references `1601`.
+*   **Classification:** **VERIFIED**
+
+### Task 2: Schema 1602 Reconstruction
+*   **Frozen Claim:** Schema `1602` has role `^5600`, parameter slot `#1` (`^5601`), and abstraction pattern `\?0\?1\?2[ (?0 ?1) (?1 ?2) ]` (`^5602`).
+*   **Fixture Check:** `(^5600 1602)`, `(^5601 1602 #1)`, and `(^5602 1602 #1 \?0\?1\?2[ (?0 ?1) (?1 ?2) ])` match the fixture byte-for-byte.
+*   **Classification:** **VERIFIED**
+
+### Task 3: Pattern Application and Variable-Binding Evaluation
+*   **Instance `1701` Match Analysis:**
+    *   *Assigned Edges:* `[(20 21) (21 22) (20 23) (20 24) (25 26) (27 28)]`
+    *   *Frozen Evaluation:* MATCH SUCCESS; bindings `?0->20, ?1->21, ?2->22`.
+    *   *Fixture Check:* Edges `(20 21)` and `(21 22)` share node `21` in position 2 of the first and position 1 of the second, satisfying `(?0 ?1)` and `(?1 ?2)`.
+    *   *Classification:* **VERIFIED**
+*   **Instance `1702` Match Analysis:**
+    *   *Assigned Edges:* `[(40 41) (41 42) (43 44) (45 46) (47 48) (49 50)]`
+    *   *Frozen Evaluation:* MATCH SUCCESS; bindings `?0->40, ?1->41, ?2->42`.
+    *   *Fixture Check:* Edges `(40 41)` and `(41 42)` share node `41`.
+    *   *Classification:* **VERIFIED**
+*   **Instance `1703` Match Analysis:**
+    *   *Assigned Edges:* `[(60 61) (60 62) (60 63) (60 64) (60 65) (60 66)]`
+    *   *Frozen Evaluation:* STRUCTURAL FAILURE (NO MATCH); source set `{60}`, target set `{61, 62, 63, 64, 65, 66}`; empty intersection; no intermediate node exists to form a 2-step path.
+    *   *Fixture Check:* All edges emanate from node `60`. No edge has `60` as a target, and no target node has an outgoing edge. The structural proof is mathematically sound.
+    *   *Classification:* **VERIFIED**
+
+### Task 4: Non-Vacuity and Selectivity Evaluation
+*   **Frozen Claim:** Schema `1601` is **vacuous** (imposes no constraints, accepts arbitrary structures). Schema `1602` is **non-vacuous and selective** (enforces a 2-step path invariant, successfully accepting valid instances and rejecting adversarial near-miss `1703`).
+*   **Governing Spec Check:** Aligns with Core Spec Section 26.3 and Schema Contract Section 6.
+*   **Classification:** **VERIFIED**
+
+### Task 5: Parameter Size vs. Vacuity
+*   **Frozen Claim:** Parameter size alone does not decide vacuity. Small constraint patterns (`1602`) over large assigned substructures (`1701`, `1702` with 6 edges) remain non-vacuous if they enforce selective invariants.
+*   **Governing Spec Check:** Aligns with Schema Contract Section 3 & 6 ("Parameters may be structurally large. Size alone is neither evidence for nor against non-vacuity").
+*   **Classification:** **VERIFIED**
+
+### Task 6: Class Promotion vs. Non-Vacuity Sufficiency
+*   **Frozen Claim:** The fixture provides sufficient evidence for *structural non-vacuity and selectivity* (Gate E1U), but is **insufficient** on its own to grant full *reusable structural class promotion* because it lacks immutable content bindings, native first-class membership witnesses, and generalization audits.
+*   **Governing Spec Check:** Aligns with Schema Contract Section 14 (class promotion criteria).
+*   **Classification:** **VERIFIED**
+
+### Task 7: Simplicity and Minimality Disclosures
+*   **Frozen Claim:** No metric or partial order was declared in the inputs; therefore, no claims of simplicity, minimality, or representation cost are made.
+*   **Governing Spec Check:** Aligns strictly with Core Spec Section 21.5.
+*   **Classification:** **VERIFIED**
+
+---
+
+## 2. Detailed Findings and Failure Analysis
+
+*   **Defects Found in Frozen Report:** None.
+*   **Reasoning Quality:** The report executes precise structural extraction, rigorous variable-binding proofs, and correctly distinguishes between local non-vacuity/selectivity verification (Gate E1U) and systemic class promotion requirements.
+
+---
+
+## 3. Overall Verifier Disposition
+
+**VERIFIED**
+
+The frozen report `RUN-D16` faithfully adheres to all governing rules of Draft 0.15 and Contract 006, correctly interprets the synthetic fixture `Q004_16_CLASS_NONVACUITY_004.axh`, and executes all required tasks without speculative extrapolation or constraint violation.
+
+---
+
+## 4. Failed or Unresolved Obligations List
+
+*   *None.* (All obligations specified in the governing prompt and cold execution protocol were successfully met or correctly identified as pending full-system qualification artifacts).

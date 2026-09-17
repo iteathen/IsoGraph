@@ -1,0 +1,41 @@
+# VERIFIER REPORT — RUN-D18
+
+**Run Identifier:** RUN-D18  
+**Target Fixture:** `experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh`  
+**Governing Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Verifier Status:** INDEPENDENT SCORER-BLIND STRUCTURAL VERIFIER  
+
+---
+
+## 1. Obligation and Claim Verification Breakdown
+
+Every explicit claim, mapping, extraction, and comparison made in frozen report `RUN-D18` has been checked against the native fixture (`Q004_18_SOURCE_AMBIGUITY_004.axh`) and governing specification (`Draft 0.15`).
+
+| Claim / Section in Report | Subject / Scope | Classification | Verification Notes / Governing Rule |
+| :--- | :--- | :--- | :--- |
+| **Section 1** | Source object identification (`1800` via `^5800`) and relation `(^5802 1800 ^5803)` | **VERIFIED** | Directly matches native assertions in `Q004_18_SOURCE_AMBIGUITY_004.axh`. No domain names inferred. |
+| **Section 2** | Alternative interpretation identification (`1801` and `1802` via `^5801`) | **VERIFIED** | Matches native assertions `(^5801 1801 1800)` and `(^5801 1802 1800)`. |
+| **Section 3** | Interpretation body scopes (`1801`: `[ (1 2) ]`; `1802`: `[ (1 2) (2 3) ]`) | **VERIFIED** | Exactly matches native fixture scopes attached via `^5804`. Occurrence multiplicity and tuple positions correctly inventoried. |
+| **Section 4** | Target body scope (`1803`: `[ (10 11) ]` via `^5805`) | **VERIFIED** | Directly matches native fixture assertion. |
+| **Section 5** | Structural comparison under V0 (`1801` vs `1803` -> `ISOMORPHISM`; `1802` vs `1803` -> `CERTIFIED_NON_ISOMORPHIC`) | **VERIFIED** | Bijection correctly established for `1801` ($1 \leftrightarrow 10, 2 \leftrightarrow 11$). Tuple count and identity cardinality mismatch correctly identified as preventing isomorphism for `1802`. |
+| **Section 6** | Unconditional verdict & constitutional analysis | **VERIFIED** | Adheres strictly to Section 18.1 (*Source fidelity and ambiguity*): source ambiguity cannot be silently resolved to create a cleaner match. |
+| **Section 7** | Conditional disposition | **VERIFIED** | Correctly formulates conditional outcomes based on interpretation resolution. |
+| **Section 8** | Downstream provenance and status requirements | **VERIFIED** | Complies with Section 18.1 and 18.2 regarding conditional status, ambiguity preservation, and `SOURCE_SUPPLIED` label provenance. |
+
+---
+
+## 2. Structural & Semantic Rule Checks
+
+- **Scope Nesting & Occurrence Multiplicity:** Verified. The scopes and tuple occurrences (`(1 2)` vs `(2 3)`) are accurately counted and distinguished.
+- **Ordered Incidence:** Verified. Positional tuple order is preserved and respected in the isomorphism mapping.
+- **Source Ambiguity Discipline:** Verified. The frozen report correctly refuses to collapse the ambiguity or select the matching interpretation, upholding Section 18.1.
+- **Label Rigidity & Provenance:** Verified. Stable labels (`^5800` through `^5805`) are treated correctly as structural handles with `SOURCE_SUPPLIED` provenance rather than assumed domain semantics.
+
+---
+
+## 3. Overall Verifier Disposition
+
+**VERIFIED**
+
+### Failed or Unresolved Obligations
+*None.* All explicit claims, structural extractions, and comparative verifications in RUN-D18 are fully supported by the native fixture and comply with the governing constraints of Draft 0.15.

@@ -1,0 +1,32 @@
+# Verifier Report: RUN-D17 (Independent Scorer-Blind Structural Verifier)
+
+**Verifier Target:** Frozen Cold Report `RUN-D17`  
+**Governing Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`, `COLD_Q004_17_PROMPT_DRAFT_0_15.md`, and native fixture `experiments/004/Q004_17_NATIVE_RECORDS_004.axh`  
+**Isolation Status:** Maintained. No scorer reports, hidden assertions, or external reviews were accessed.
+
+---
+
+## 1. Item-by-Item Verification of Frozen Claims
+
+| Claim Section in Frozen Report | Evaluated Content | Classification | Verification Notes / Exact Reason |
+| :--- | :--- | :--- | :--- |
+| **1. Record-Type Identities** | `^4702`, `^4703`, `^4704` as operands of `^4705` | **VERIFIED** | Directly matches `(^4705 ^4702 ...)`, `(^4705 ^4703 ...)`, `(^4705 ^4704 [...])` in Block 2 of the native fixture. |
+| **2. Declared Field Scopes** | Exact member stable labels for types `^4702`, `^4703`, `^4704` | **VERIFIED** | Scope members match element-for-element with Block 2 declarations. |
+| **3. Declared Instances** | Instances `5000` (`^4702`), `5001` (`^4703`), `5002` (`^4704`) | **VERIFIED** | Exactly matches `(^4700 INSTANCE TYPE)` declarations in Blocks 3, 4, and 5. |
+| **4. Instance Field-Value Relations** | Enumerate all `(^4701 INSTANCE FIELD VALUE)` relations | **VERIFIED** | Every relation and value (including nested scopes) matches the raw fixture data exactly without omission or hallucination. |
+| **5. Nested Scope Direct Ordered-Incidence Members** | Ordered pairs inside fields `^4712`, `^4716`, `^4717`, `^4718` | **VERIFIED** | Reproduced tuples `(7000 7001)`, `(7000 7002)`, `(8000 8001)`, `(8002 8003)`, `(8100 8101)`, `(8200 8201)`, `(8202 8203)` match the fixture scopes precisely. |
+| **6. Reference Chain Tracing** | `^4720` chain: `5002 -> 5001 -> 5000` | **VERIFIED** | Tracing follows `(^4701 5002 ^4720 5001)` and `(^4701 5001 ^4720 5000)` correctly; `5000` terminates. |
+| **7. Physical Presence vs. Sidecars** | Topology is physically present; domain semantics require sidecar/glossary if not natively modeled | **VERIFIED** | Accurately distinguishes structural syntax/topology from external semantic interpretation. |
+| **8. Necessity of Human Names for `^n` Roles** | Human names are not necessary; stable numerical labels provide rigid identity | **VERIFIED** | Aligns fully with Spec Section 6.4 and Section 29 regarding label rigidity and structural decoding. |
+| **9. Gap Analysis (E1NR Burden)** | Base fixture lacks full E1NR components (meta-schemas, indexes, certificates, immutable bindings, execution proofs) | **VERIFIED** | Perfectly aligns with the governing prompt instruction noting that Q004-17 is a base fixture and does not fully establish the entire E1NR burden (which is handled by Q004-17B). |
+
+---
+
+## 2. Failed or Unresolved Obligations
+* **None.** All explicit structural claims and analytical statements in the frozen report are factually correct against the native fixture and governed accurately by the specification rules.
+
+---
+
+## 3. Overall Verifier Disposition
+
+**VERIFIED**

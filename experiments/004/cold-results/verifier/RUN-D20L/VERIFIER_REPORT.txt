@@ -1,0 +1,50 @@
+# ISOGRAPH EXPERIMENT 004 — INDEPENDENT VERIFIER REPORT
+**Run Verified:** RUN-D20L  
+**Verifier Role:** Independent Scorer-Blind Structural Verifier  
+**Governing Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+
+---
+
+## 1. Verifier Isolation & Scope Acknowledgment
+This verification was conducted under strict isolation. No scoring reports, hidden assertions, expected answers, or external reviews were consulted. Evaluation is performed by directly comparing the explicit structural claims, mappings, witnesses, and native records in frozen report `RUN-D20L` against the governing specification and the supplied native fixtures (`Q004_20_STRUCTURE_CORPUS_004.axh`, `Q004_20_LABEL_ASSIST_004.axh`).
+
+---
+
+## 2. Claim-by-Claim Verification Ledger
+
+| Claim / Component / Artifact | Type | Governing Rule / Spec Section | Status | Verification Notes & Reasons for Failure |
+| :--- | :--- | :--- | :--- | :--- |
+| **Label-Assisted Pair Matching** (`#2001`, `#2003` share `^6000`) | Retrieval Analysis | Sec. 18, Prompt Task 1 | **VERIFIED** | Correctly identifies that objects `#2001` and `#2003` share label `^6000` under relation `^6006` in `Q004_20_LABEL_ASSIST_004.axh`. |
+| **Structural Decomposition of `#2001`** | Topological Analysis | Sec. 7, 8, 42.1 | **VERIFIED** | Correctly extracts ordered incidence tuples `(1 2)` and `(2 3)` under `^6005`, identifying a directed linear path of length 2. |
+| **Structural Decomposition of `#2002`** | Topological Analysis | Sec. 7, 8, 42.1 | **VERIFIED** | Correctly extracts ordered incidence tuples `(10 11)` and `(11 12)` under `^6005`, identifying a directed linear path of length 2. |
+| **Structural Decomposition of `#2003`** | Topological Analysis | Sec. 7, 8, 42.1 | **VERIFIED** | Correctly extracts ordered incidence tuples `(20 21)` and `(20 22)` under `^6005`, identifying a branching fork/star graph. |
+| **Non-Isomorphism of `(#2001, #2003)`** | Separating Invariant / Verification | Sec. 25, 30.1 | **VERIFIED** | Correctly calculates and compares out-degree multisets (`[1, 1, 0]` vs `[2, 0, 0]`), proving topological non-isomorphism and establishing a valid separating certificate logic. |
+| **Isomorphism Mapping for `(#2001, #2002)`** | Witnessed Comparison | Sec. 24 (V0), 25, 29 | **VERIFIED** | Correctly constructs the bijective mapping $f(1)=10, f(2)=11, f(3)=12$ preserving ordered incidence tuples under V0. |
+| **Label Equality Soundness Evaluation** | Policy Evaluation | Sec. 2, 6.4, 18.2 | **VERIFIED** | Correctly concludes that label equality is neither a sound candidate relation nor proof of structural correspondence, citing both the false positive (`#2001` vs `#2003`) and false negative (`#2001` vs `#2002`) observed in the fixtures. |
+| **Native Comparison Policy Record** | Native Record (E1NR) | Sec. 5, 29 | **FAILED** | **Parser/Serialization Defect:** Section 5 surface grammar explicitly defines `label := ^integer`. The frozen report uses symbolic identifiers for labels (e.g., `^comparison_policy`, `^target_layer`, `^serialized_native_graph`, `^V0`, `^ISOMORPHISM`), which violates the strict deterministic surface grammar. |
+| **Native Isomorphism Witness Certificate** | Native Record (E1NR) | Sec. 5, 29 | **FAILED** | **Parser/Serialization Defect:** Violates Section 5 surface grammar (`label := ^integer`) by using symbolic labels such as `^witness`, `^object_A`, `^object_B`, `^relation_kind`, `^verified`, etc. |
+| **Native Separating Certificate** | Native Record (E1NR) | Sec. 5, 29 | **FAILED** | **Parser/Serialization Defect:** Violates Section 5 surface grammar (`label := ^integer`) by using symbolic labels such as `^separating_certificate`, `^invariant_mismatch`, `^certified_non_isomorphic`, etc. |
+
+---
+
+## 3. Detailed Failure Analysis
+
+While the cold agent's core topological analysis, retrieval evaluation, degree-profile calculations, isomorphism mapping, and separating invariant logic are **fully correct**, its attempt to satisfy **Gate E1NR (Native Record Authority)** and Section 29 introduces a **parser/serialization defect**:
+
+1. **Grammar Violation (`label := ^integer`)**: Section 5 of the Core Specification explicitly defines the surface grammar production:
+   ```text
+   label := ^integer
+   ```
+   Throughout the specification and native fixtures, stable labels are strictly numeric integers (e.g., `^0`, `^6005`, `^6000`). 
+2. **Fabricated Symbolic Tags**: In Part V, the frozen report introduces symbolic strings preceded by carets (e.g., `^comparison_policy`, `^target_layer`, `^V0`, `^ISOMORPHISM`, `^witness`, `^verified`, etc.). Under the deterministic grammar of Section 5, these are syntactically invalid and fail mechanical parsing as native IsoGraph terms.
+
+---
+
+## 4. Overall Verifier Disposition
+
+**PARTIAL**
+
+### Summary of Failed or Unresolved Obligations:
+1. **Syntactic Well-Formedness of Native Records (E1NR / Section 5)**: All native records supplied in Part V of the frozen report fail adherence to the surface grammar production `label := ^integer`. The agent used symbolic/string labels instead of integer-indexed labels.
+
+*(Note: All structural, topological, retrieval, and isomorphism-verification obligations in Parts I through IV were correctly executed and verified.)*

@@ -1,0 +1,110 @@
+# INDEPENDENT STRUCTURAL VERIFIER REPORT
+
+**Run:** RUN-S08  
+**Semantic Authority Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Governing Specification:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Native Fixture:** `experiments/004/Q004_S08_SERIALIZER_SCOPE.isg`  
+**Cold Prompt:** `experiments/004/COLD_Q004_S08_PROMPT.md`  
+
+---
+
+## 1. Verification Isolation & Scope
+
+The verifier operated strictly within isolation rules. No external browsing, hidden assertions, expected answer sheets, qualification ledgers, or post-hoc scoring reports were accessed. The explicit structural claims, mappings, metadata reconstructions, hash interpretations, and constitutional rule applications in the frozen report (`RUN-S08`) were checked against the native fixture `Q004_S08_SERIALIZER_SCOPE.isg` and the governing specification `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`.
+
+---
+
+## 2. Obligation-by-Obligation Verification
+
+### Task 1: Object Symmetry & V0 Isomorphism Witnesses
+* **Frozen Report Claims:**
+  1. Object `1000` (`[(^6800 1 2) (^6800 1 3)]`) and Object `2000` (`[(^6800 10 11) (^6800 10 12)]`) are isomorphic under view policy V0.
+  2. Under V0, local bare integer IDs may bijectively rename while stable label `^6800` is rigid.
+  3. Leaf symmetry ($Z_2$) yields exactly **two materially distinct bijective isomorphism witnesses**:
+     * **Witness A:** $1 \mapsto 10$, $2 \mapsto 11$, $3 \mapsto 12$
+     * **Witness B:** $1 \mapsto 10$, $2 \mapsto 12$, $3 \mapsto 11$
+* **Native Fixture Verification:**
+  * Object `1000` has source node `1` with outgoing `^6800` edges to symmetric leaves `2` and `3`.
+  * Object `2000` has source node `10` with outgoing `^6800` edges to symmetric leaves `11` and `12`.
+  * Under V0 (Section 24), mapping $1 \mapsto 10$ is forced as the sole degree-2 origin, and $\{2, 3\} \mapsto \{11, 12\}$ admits exactly two bijections. Both preserve ordered incidence `(^6800 source target)` and label rigidity.
+* **Classification:** `VERIFIED`
+
+---
+
+### Task 2: Reconstructed Serializer Algorithm Metadata
+* **Frozen Report Claims:**
+  * **Algorithm 8100:** Revision `#1`, Stage `^6820` (`RAW_STAGE`), Invariant certified `#1`.
+  * **Algorithm 8101:** Revision `#1`, Stage `^6820` (`RAW_STAGE`), Invariant certified `#1`.
+* **Native Fixture Verification:**
+  * Fixture asserts:
+    * `(^6810 8100 #1 ^6820)`
+    * `(^6810 8101 #1 ^6820)`
+    * `(^6813 8100 ^6820 #1)`
+    * `(^6813 8101 ^6820 #1)`
+  * Mapping provided in cold prompt: `^6810` = `SERIALIZER_INDEX_DECL`, `^6813` = `QUALIFIED_WITHIN_ALGORITHM_INVARIANT`, `^6820` = `RAW_STAGE`.
+  * The reconstructed metadata records perfectly match native facts.
+* **Classification:** `VERIFIED`
+
+---
+
+### Task 3: Serialized Outputs and Hash Values Reproduction
+* **Frozen Report Claims:**
+  * Algorithm `8100` on Object `1000`: Output `(#0 #1 #2)`, Hash `#111`
+  * Algorithm `8100` on Object `2000`: Output `(#0 #1 #2)`, Hash `#111`
+  * Algorithm `8101` on Object `1000`: Output `(#0 #2 #1)`, Hash `#222`
+  * Algorithm `8101` on Object `2000`: Output `(#0 #2 #1)`, Hash `#222`
+* **Native Fixture Verification:**
+  * Fixture explicitly asserts:
+    * `(^6811 8100 1000 (#0 #1 #2))`
+    * `(^6811 8100 2000 (#0 #1 #2))`
+    * `(^6812 8100 1000 #111)`
+    * `(^6812 8100 2000 #111)`
+    * `(^6811 8101 1000 (#0 #2 #1))`
+    * `(^6811 8101 2000 (#0 #2 #1))`
+    * `(^6812 8101 1000 #222)`
+    * `(^6812 8101 2000 #222)`
+  * The reproduced outputs and hashes are exact transcriptions of native statements.
+* **Classification:** `VERIFIED`
+
+---
+
+### Task 4: Semantics of Equal Hashes Within an Algorithm
+* **Frozen Report Claims:**
+  1. Equal hashes within a qualified invariant algorithm ($A \cong B \implies f(A) = f(B)$) certify that the necessary condition for isomorphism at `RAW_STAGE` under V0 is satisfied, preventing candidate pruning.
+  2. Equal hashes do **not** prove absence of hash collisions (sufficiency), supply an explicit bijective mapping witness, or establish cross-algorithm equivalence.
+* **Governing Authority Verification:**
+  * Section 32.3 (Stage-specific fingerprint invariance): $A \, \mathcal{R} \, B \implies f(A) = f(B)$ makes hash equality a necessary stage filter, not a positive structural proof.
+  * Section 29 & Section 32.5: Hashes/fingerprints do not substitute for explicit structural node/edge mapping witnesses.
+* **Classification:** `VERIFIED`
+
+---
+
+### Task 5: Analysis of Cross-Algorithm Hash Discrepancies
+* **Frozen Report Claims:**
+  * Differing hash outputs (`#111` vs. `#222`) across algorithms `8100` and `8101` do **not** imply structural non-isomorphism.
+  * IsoGraph does not enforce a single global canonical serializer; different legal symmetry tie-break conventions produce distinct hashes while remaining internally sound.
+* **Governing Authority Verification:**
+  * Section 32.4 (Canonical serializer/index algorithm scope): "IsoGraph does not require one global canonical-labeling algorithm. Different sound serializers may emit different canonical-looking representatives unless an explicit compatibility/equivalence contract relates the algorithms."
+* **Classification:** `VERIFIED`
+
+---
+
+### Task 6: Serialization Tie-Breaks vs. Automorphism Preservation
+* **Frozen Report Claims:**
+  * Deterministic tie-breaks in serializer/index stages MUST NOT erase, suppress, or collapse materially distinct automorphism/isomorphism witnesses from the downstream structural results.
+  * Cites Section 0 (`canonical serializer output != unique structural witness`), Section 30.2 (`distinct verified mappings remain separate by default`), and Section 32.4 (`preservation of materially distinct automorphism witnesses MUST NOT depend on incidental serializer tie-breaks`).
+* **Governing Authority Verification:**
+  * Core interpretation barrier in Section 0 explicitly forbids equating a canonical serializer output with a unique structural witness.
+  * Section 30.2 explicitly commands: "Distinct verified mappings remain separate by default. A deterministic canonical graph representative does not prove uniqueness of mapping."
+* **Classification:** `VERIFIED`
+
+---
+
+## 3. Verifier Disposition
+
+**OVERALL DISPOSITION:** `VERIFIED`
+
+### Summary of Obligations
+* **Total Material Claims Checked:** 6
+* **Verified Claims:** 6
+* **Failed / Unresolved Obligations:** 0

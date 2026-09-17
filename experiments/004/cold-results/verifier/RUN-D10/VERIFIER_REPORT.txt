@@ -1,0 +1,46 @@
+# Verifier Report — RUN-D10
+
+**Verifier Isolation Acknowledgment:** Checked against native fixtures (`experiments/004/Q004_10_EXTRACTION_FREEZE_004.axh`), Core Specification Draft 0.15, and Structural Comparison Protocol 006 without outside material or hidden assertions.
+
+---
+
+## Item-by-Item Verification Breakdown
+
+### Task 1: Source and Extraction Reproduction
+*   **Claim/Output:** Complete reproduction of source `1000`, source `2000`, pre-pair extractions `1100` and `2100`, exploratory extraction `2200`, and signature block `^0`.
+*   **Fixture Check:** Exact match with `experiments/004/Q004_10_EXTRACTION_FREEZE_004.axh`.
+*   **Classification:** **VERIFIED**
+
+### Task 2: Comparison of Frozen Extraction `1100` vs. `2100` under V0
+*   **Claim/Output:** Structural analysis showing `1100` is a directed path of length 2 (`1 -> 2 -> 3`) and `2100` is a star/fork of height 1 (`10 -> 11`, `10 -> 12`). Degree profile invariant proves V0 isomorphism impossible. Verdict: `CERTIFIED_NON_ISOMORPHIC`.
+*   **Authority Check:** Core Spec Section 25 & SCP-006 Section 13 (`CERTIFIED_NON_ISOMORPHIC` requires complete search or verified separating invariant; degree sequence over small finite graphs provides a valid separating certificate).
+*   **Classification:** **VERIFIED**
+
+### Task 3: Comparison of Frozen Extraction `1100` vs. Exploratory Extraction `2200` under V0
+*   **Claim/Output:** Extraction `2200` is a path of length 2 (`20 -> 21 -> 22`). Bijective V0 mapping provided (`1 <-> 20`, `2 <-> 21`, `3 <-> 22` and corresponding edges). Verdict: `ISOMORPHISM`.
+*   **Fixture Check:** Matches structural identities and ordered incidence in `2200` and `1100`.
+*   **Classification:** **VERIFIED**
+
+### Task 4: Eligibility of Post-Hoc Exploratory Isomorphism as Blind Qualification Evidence
+*   **Claim/Output:** Negative answer. Post-hoc exploratory extraction `2200` (`^4952`) cannot count as blind qualification evidence because it violates independent freeze and circular evidence prohibition.
+*   **Authority Check:** Core Spec Section 2, Section 21.1, Section 37, and SCP-006 Section 2.
+*   **Classification:** **VERIFIED**
+
+### Task 5: Strongest Honest Result Under the Frozen Pre-Pair Extraction Set
+*   **Claim/Output:** Strongest honest relation between frozen pre-pair extractions `1100` and `2100` is `CERTIFIED_NON_ISOMORPHIC`.
+*   **Authority Check:** Respects the independently frozen extraction set (`^4951`) without borrowing post-hoc insights from `^4952`.
+*   **Classification:** **VERIFIED**
+
+### Task 6: Retention of Post-Hoc Isomorphism as Exploratory Evidence
+*   **Claim/Output:** Retention via provenance labels (`^4951` vs `^4952`), separate exploratory witness records, hygienic D-edge projection, and parallel execution channels.
+*   **Authority Check:** Aligns with Core Spec Section 34 and SCP-006 Section 15 regarding exploratory evidence segregation and anti-cheating controls.
+*   **Classification:** **VERIFIED**
+
+---
+
+## Overall Verifier Disposition
+
+**VERIFIED**
+
+### Failed or Unresolved Obligations
+*   None.

@@ -1,0 +1,45 @@
+# VERIFIER REPORT — RUN-D09
+
+**Verifier Role:** Independent Scorer-Blind Structural Verifier  
+**Target Run:** RUN-D09  
+**Governing Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Native Fixture:** `experiments/004/Q004_09_DECOMPOSITION_CHEAT_004.axh`  
+**Cold Prompt:** `experiments/004/COLD_Q004_09_PROMPT_DRAFT_0_15.md`  
+
+---
+
+## Verifier Evaluation
+
+The frozen audit report (`RUN-D09`) was checked line-by-line against the native fixture and the governing specification rules (specifically Sections 19.3 and 19.4). 
+
+### 1. Source `9000` Exact Reproduction
+* **Claim:** Source `9000` consists of the raw unordered scope containing `(1 2)` and `(3 2)`.
+* **Verification:** **VERIFIED**. Matches fixture block `(^4900 9000 [ (1 2) (3 2) ])` exactly.
+
+### 2. Factorization `9100` Audit
+* **Claim:** Exposed target is `[(10 11) (12 11)]`, map is `[(1 10) (2 11) (3 12)]`, and residual is `[]`.
+* **Verification:** **VERIFIED**. Matches fixture block for `9100` exactly.
+* **Reconstruction & Coverage:** **VERIFIED**. The report correctly describes how the inverse map reconstructs the original source tuples without relying on an opaque source copy, resulting in 100% semantic-decomposition coverage.
+
+### 3. Factorization `9200` Audit
+* **Claim:** Exposed target is `[]`, map is `[]`, and residual is `[(1 2) (3 2)]`.
+* **Verification:** **VERIFIED**. Matches fixture block for `9200` exactly.
+* **Recoverability & Semantic Validity:** **VERIFIED**. The report correctly identifies `9200` as a "decomposition cheat" (vacuous decomposition) where the raw source is stashed entirely inside the residual, yielding 0% semantic-decomposition coverage despite a lossless round-trip. This directly aligns with Draft 0.15, Section 19.3 (*"An opaque or re-encoded source backup does not count as exposed semantics"*).
+* **Residual Classification:** **VERIFIED**. Properly classified as a `currently undecomposed residual`.
+
+### 4. Distinction Between Round-Trip and Semantic-Decomposition Coverage
+* **Claim:** Lossless round-trip capability and semantic-decomposition coverage are distinct qualification properties (conservation metric vs. analytical mapping metric).
+* **Verification:** **VERIFIED**. Soundly reasoned and faithful to the core specification principles.
+
+### 5. Prohibition of Residual Reclassification in Pairwise Accounting
+* **Claim:** Source-local reconstruction residuals must not be reclassified as pairwise common-core residuals merely because later comparison occurs.
+* **Verification:** **VERIFIED**. Explicitly complies with Section 19.4 (*"A verifier MUST NOT satisfy source reconstruction by merging D-local residuals with pairwise residuals"*).
+
+---
+
+## Overall Verifier Disposition
+
+**VERIFIED**
+
+### Failed or Unresolved Obligations
+* *None.* All explicit structural obligations, mapping checks, residual classifications, and anti-cheating constraints set forth in the governing authority and cold prompt were correctly addressed and verified.

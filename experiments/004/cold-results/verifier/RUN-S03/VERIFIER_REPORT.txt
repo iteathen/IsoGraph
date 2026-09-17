@@ -1,0 +1,46 @@
+An elegant and thorough analysis is presented in the frozen cold report. Below is the structural verification of every explicit claim, mapped directly to the governing authority (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`) and the test fixture (`experiments/004/Q004_S03_VARIABLE_OWNERSHIP.isg`).
+
+---
+
+### 1. Structural Verification of Case #1
+*   **Claim 1.1 (Variable Occurrences):** Exactly one occurrence of `?0` on the LHS of `?0 => 10`.
+    *   *Verification:* **VERIFIED**. The serialized term in `^6301` is `[ ?0 => 10 ]`. There is a single occurrence of `?0` in this subcase.
+*   **Claim 1.2 (Ownership):** `?0` is unowned. Implication (`=>`) does not introduce variable ownership.
+    *   *Verification:* **VERIFIED**. Section 11 states: *"Declarative constructors do not introduce variable ownership by themselves: A => B ..."* No quantifier, abstraction, or interface binder is present in Case #1 to own the variable.
+*   **Claim 1.3 (Well-Formedness):** The term is invalid under its asserted closed contract.
+    *   *Verification:* **VERIFIED**. Since `^6301` asserts a closed body, and Section 11 dictates that *"A standalone object asserted to be a closed declarative proposition is invalid if any variable remains unowned/free"*, the presence of the unowned `?0` renders this term invalid.
+*   **Claim 1.4 (No Implicit Semantics):** `?0` does not receive implicit universal, existential, or wildcard/pattern meanings.
+    *   *Verification:* **VERIFIED**. Section 11 states: *"There is no implicit universal quantification, existential quantification, or wildcard/pattern interpretation merely because `?n` appears in a declarative surface."*
+
+---
+
+### 2. Structural Verification of Case #2
+*   **Claim 2.1 (Variable Occurrences):** Two occurrences of `?0` (one binder, one usage in the edge).
+    *   *Verification:* **VERIFIED**. The term is `*?0 (?0 10)`. The variable `?0` occurs both as the bound variable of the universal quantifier `*` (per the grammar in §5: `forall := *var term`) and inside the ordered incidence edge `(?0 10)`.
+*   **Claim 2.2 (Ownership):** Owned by the explicit quantifier `*?0`.
+    *   *Verification:* **VERIFIED**. Section 11 explicitly lists "explicit quantifiers" as valid binders/owners.
+*   **Claim 2.3 (Well-Formedness & Completeness Gap):** Well-formed on ownership grounds, but semantically incomplete because it lacks a domain/generator.
+    *   *Verification:* **VERIFIED**. Section 14.1 states: `*?n BODY` is *"semantically complete only when their domain/generator is determined."* The term `*?0 (?0 10)` contains no generator or domain constraint, so the structural distinction between ownership validity and semantic completeness is correctly maintained.
+
+---
+
+### 3. Structural Verification of Case #3
+*   **Claim 3.1 (Variable Occurrences):** `?0` occurs in both the interface declaration (`^6302`) and the open body (`^6303`).
+    *   *Verification:* **VERIFIED**. The fixture contains `(^6302 1002 [?0])` and `(^6303 1002 [ ?0 => 10 ])`. `?0` is present in both.
+*   **Claim 3.2 (Ownership):** `?0` in `^6303` is owned/exposed by the interface declaration `^6302`.
+    *   *Verification:* **VERIFIED**. Per Section 11, possible owners of variables include *"schema/pattern parameter interfaces"* and *"another qualified represented binder/interface"*.
+*   **Claim 3.3 (Well-Formedness):** Well-formed as an open term.
+    *   *Verification:* **VERIFIED**. Section 11 declares: *"Open formula/schema terms are legal only when the containing native interface explicitly owns and exposes their free-variable interface."* The association with `^6302` satisfies this requirement.
+
+---
+
+### 4. Non-Material Issue: Identity and Namespace Linkage
+*   **Claim/Comment on Linkage (Difficulty 1):** The cold report states that the shared numeral `1002` acts as a link *"not because the spec defines numeral-matching as a semantic linking mechanism"*, but merely because of the prompt's stipulated roles.
+    *   *Verification:* **VERIFIED_WITH_NON_MATERIAL_ISSUES**. Sections 6.1 and 6.2 define bare integers as *opaque structural identities* rather than informal numerals. Within the same inherited namespace (the enclosing subcase scope), the identical bare integer `1002` refers to the exact same object. Thus, the linkage is indeed a formally specified, native semantic mechanism (shared structural identity). This does not alter the validity of any conclusions regarding variable ownership or well-formedness.
+
+---
+
+### Verifier Disposition
+**VERIFIED_WITH_NON_MATERIAL_ISSUES**
+
+*   **Failed or Unresolved Obligations:** None. All structural outcomes, variable counts, ownership mappings, and well-formedness evaluations are correct. The only issue is a minor conceptual misclassification in the "Difficulties" commentary regarding bare integer namespace-sharing being described as informal "numeral-matching."

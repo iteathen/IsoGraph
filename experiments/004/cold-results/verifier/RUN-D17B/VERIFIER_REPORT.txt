@@ -1,0 +1,78 @@
+# ISOGRAPH EXPERIMENT 004 — INDEPENDENT VERIFICATION REPORT
+**Run:** RUN-D17B  
+**Model:** gemini-flash-lite-latest  
+**Verifier Status:** ISOLATED & SCORER-BLIND  
+
+---
+
+## Verifier Isolation Check
+This verification was executed with access only to:
+1. `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+2. `experiments/004/Q004_17B_NATIVE_RECORDS_004.isg`
+3. `experiments/004/COLD_Q004_17B_PROMPT.md`
+4. Frozen report `RUN-D17B`
+
+No hidden assertions, scoring keys, qualification ledgers, or outside material were consulted.
+
+---
+
+## Task-by-Task Structural Obligation Verification
+
+### Task 1: Record-Type Declarations (`^4740`)
+* **Claim:** Exactly six record types (`9000`, `9001`, `9002`, `9003`, `9004`, `9005`) with their respective direct field scope lists.
+* **Fixture Check:** Cross-referenced against `(^4740 TYPE FIELD_SCOPE)` declarations in Block 2 of `Q004_17B_NATIVE_RECORDS_004.isg`. All types and field sets match precisely.
+* **Classification:** **VERIFIED**
+
+### Task 2: Instance Declarations (`^4741`)
+* **Claim:** Six instance declarations (`9100` through `9105`) mapped to types `9000` through `9005`.
+* **Fixture Check:** Verified against `(^4741 INSTANCE TYPE)` tuples in the fixture.
+* **Classification:** **VERIFIED**
+
+### Task 3: Instance-Field Relations (`^4742`)
+* **Claim:** Exhaustive listing of all `(^4742 INSTANCE FIELD VALUE)` relations for instances `9100` to `9105`.
+* **Fixture Check:** Every enumerated relation exactly matches the serialization in the fixture.
+* **Classification:** **VERIFIED**
+
+### Task 4: Scope-Valued Fields and `^4743` Bodies
+* **Claim:** Identification of all scope-valued fields (`[...]`) across instances and payload bodies supplied via `^4743`.
+* **Fixture Check:** Verified 9200, 9201, 9300, 9301, 9400, and 9401 definitions, along with instance field scope structures (`^4752`, `^4753`, `^4763`, `^4764`, `^4772`-`^4775`, `^4784`, `^4790`, `^4792`). All match the raw fixture.
+* **Classification:** **VERIFIED**
+
+### Task 5: Reference Tracing (`9100..9105` and Body Objects)
+* **Claim:** Tracing of references connecting instances and bodies.
+* **Fixture Check:** Links between instances (`9105` -> `9102`, `9104`; `9104` -> `9100`; `9102` -> `9101`, `9103`; etc.) and body references (`9200`, `9201`, `9300`, `9301`, `9400`, `9401`) are faithfully traced.
+* **Classification:** **VERIFIED**
+
+### Task 6: Identification of Coexisting Scope-Valued Fields
+* **Claim:** Instances `9100`, `9101`, `9102`, and `9104` hold multiple distinct scope-valued fields.
+* **Fixture Check:** Confirmed multiple `[...]` values assigned to separate fields on the same record without illegitimate overloading.
+* **Classification:** **VERIFIED**
+
+### Task 7: Instance with Algorithm Identity, Revision Literal, and Body Reference
+* **Claim:** Instance `9103` contains opaque identities (`9500`, `9600`), revision literal `#3`, and input/body reference `9201`.
+* **Fixture Check:** Verified fields `^4780`, `^4781`, `^4782`, and `^4783` on instance `9103`.
+* **Classification:** **VERIFIED**
+
+### Task 8: Instance with First-Class Negative (`!`) Condition and Context/Reference Fields
+* **Claim:** Instance `9104` contains first-class NAC `[!(30 31)]`, boundary/context `[(30 32)]`, policy ID `9700`, consumer reference `9100`, and literal `#15`.
+* **Fixture Check:** Verified against fields `^4790` through `^4794` of instance `9104`.
+* **Classification:** **VERIFIED**
+
+### Task 9: Terminal Record and Complete Subgraph Topology
+* **Claim:** Instance `9105` is the root/terminal aggregator linking `9102` and `9104`, with an accurate full transitive topology chart.
+* **Fixture Check:** Verified fields of `9105` (`^4800` -> `9102`, `^4803` -> `9104`) and the resulting dependency tree.
+* **Classification:** **VERIFIED**
+
+### Task 10: External Sidecar Requirement
+* **Claim:** No external human or JSON sidecar is required; the record graph is natively self-contained under specification and Gate `E1NR`.
+* **Fixture Check:** Adheres to IsoGraph specification requirements on native record authority (`E1NR`).
+* **Classification:** **VERIFIED**
+
+---
+
+## Overall Verifier Disposition
+
+**VERIFIED**
+
+### Failed or Unresolved Obligations
+* None. All explicit claims in the frozen report are fully supported by the native fixture and governed by specification rules.

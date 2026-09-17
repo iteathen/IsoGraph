@@ -1,0 +1,59 @@
+### IsoGraph Verification Report
+**Run:** RUN-S02
+**Target Fixture:** `experiments/004/Q004_S02_RULE_SPLICE.isg`
+**Governing Authority:** `iteathen/IsoGraph` @ `30d9b0f0a84cb6005fae1d8f82b1777fd24c0215` (Draft 0.15)
+
+---
+
+### 1. Structural Claims & Mappings Evaluation
+
+#### A. Schema & Case Resolution
+*   **Claim:** The schema declaration `(^0 [^6200 ^6201 ^6202])` defines record groups containing a case tag (`^6200`), state (`^6201`), and rule (`^6202`), identifying two distinct cases (Case `#1` and Case `#2`).
+*   **Status:** **VERIFIED**
+*   **Justification:** The structure of `Q004_S02_RULE_SPLICE.isg` conforms exactly to this triple-signature declaration, utilizing stable labels `^6200`, `^6201`, and `^6202` in sequence as specified in Section 17.
+
+#### B. Outer LHS Rule Container Behavior (General Rule)
+*   **Claim:** The outer brackets of the LHS pattern do not function as a literal nested scope to be matched. No matching sub-scope corresponding to these outer brackets is required in the source state.
+*   **Status:** **VERIFIED**
+*   **Justification:** Under Section 12.1 ("Rule-side outer containers") and the constitutional discipline of Section 44 (`rule-side container != nested scope`), the outermost brackets of a rule's LHS and RHS represent pattern/replacement boundaries, not literal nested scopes.
+
+#### C. Case #1 Evaluation (`^6201 1000 [10]` rewritten by `[10] > [20 21]`)
+*   **Claim - Selected LHS Occurrences:** The single direct occurrence `10` in state scope `[10]` is matched and selected.
+    *   **Status:** **VERIFIED**
+*   **Claim - Successor Count:** 2 direct member occurrences.
+    *   **Status:** **VERIFIED**
+*   **Claim - Successor Structure:** `[20 21]` (a flat scope containing occurrences of `20` and `21`).
+    *   **Status:** **VERIFIED**
+*   **Claim - Outer RHS Insertion:** The outer RHS brackets are not inserted as a semantic nested scope.
+    *   **Status:** **VERIFIED**
+*   **Claim - Nested Scopes:** No literal nested scopes exist in the successor.
+    *   **Status:** **VERIFIED**
+*   **Justification:** Following Section 12.4, the matched `10` is subtracted from `[10]`, and the RHS direct members `20` and `21` are added, yielding a flat successor scope `[20 21]`.
+
+#### D. Case #2 Evaluation (`^6201 1001 [10]` rewritten by `[10] > [[20 21]]`)
+*   **Claim - Selected LHS Occurrences:** Same match shape as Case #1 (the direct occurrence of `10`).
+    *   **Status:** **VERIFIED**
+*   **Claim - Successor Count:** 1 direct member occurrence.
+    *   **Status:** **VERIFIED**
+*   **Claim - Successor Structure:** `[[20 21]]` (a scope containing a single nested scope).
+    *   **Status:** **VERIFIED**
+*   **Claim - Outer RHS Insertion:** The outermost RHS container is not inserted, but the inner bracket `[20 21]` is preserved and constructed as a literal nested scope.
+    *   **Status:** **VERIFIED**
+*   **Claim - Nested Scopes:** A literal nested scope `[20 21]` is present one level deep.
+    *   **Status:** **VERIFIED**
+*   **Justification:** Under Section 12.1, to construct a literal nested scope in the RHS, one must nest a scope inside the outermost replacement container (e.g., `[[20 21]]`). The outer brackets are stripped as the container, and the inner scope `[20 21]` is instantiated intact as a direct member of the successor scope, satisfying nested-boundary non-flattening.
+
+---
+
+### 2. Analytical Integrity and Ambiguity Handling
+The frozen report correctly identified and handled structural nuances:
+1.  **Opaque ID Columns:** Correctly classified `1000`/`1001` and `2000`/`2001` as non-interfering structural identities distinct from scope-contents under Section 6.1.
+2.  **Whitespace Tokenization:** Properly parsed space-separated terms within `[20 21]` as distinct occurrences under Section 5.
+
+---
+
+### 3. Final Verifier Disposition
+
+**CORPUS DISPOSITION:** **VERIFIED**
+
+There are no failed or unresolved obligations. The frozen cold report's analysis of both rewrite instances is perfectly compliant with the IsoGraph Draft 0.15 Core Specification.

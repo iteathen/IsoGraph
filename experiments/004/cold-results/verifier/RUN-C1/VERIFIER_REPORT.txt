@@ -1,0 +1,84 @@
+# ISOGRAPH EXPERIMENT 004 — RUN-C1
+## Independent Scorer-Blind Structural Verification Report
+
+**Target Run:** RUN-C1  
+**Semantic Authority Source:** `iteathen/IsoGraph @ 30d9b0f0a84cb6005fae1d8f82b1777fd24c0215`  
+**Core Spec Revision:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Protocol Revision:** `STRUCTURAL_COMPARISON_PROTOCOL_006.md`  
+**Input Fixture:** `experiments/004/PHASE_C_COMPARISON_CASES_004.axh`  
+**Verifier Isolation:** Strict scorer-blind isolation maintained; no external material or expected answers accessed.
+
+---
+
+### OVERALL VERIFIER DISPOSITION
+
+**VERIFIED**
+
+There are no failed or unresolved obligations. All explicit structural claims, mappings, residual/cut accountings, non-reflection proofs, witness enumerations, and governance/view restrictions made in the frozen report `RUN-C1` strictly satisfy the governing specification (`Draft 0.15`) and protocol (`Protocol 006`).
+
+---
+
+### DETAILED OBLIGATION VERIFICATION BY CASE
+
+#### 1. Q004-11 Verification (`^5000 #11`)
+* **Source Structures:**
+  * `^5001`: `[ (^5100 10 11) ]`
+  * `^5002`: `[ (^5100 20 21) (^5101 20 21) ]`
+* **View:** `V0` (closed structural; stable labels `^5100` and `^5101` are rigid).
+
+| Obligation / Claim | Frozen Claim | Structural Check | Status |
+| :--- | :--- | :--- | :--- |
+| **Isomorphism (V0)** | `Rejected` | Member occurrence multiset cardinality of `^5001` is 1; `^5002` is 2. Bijective mapping over member occurrences is impossible. | **VERIFIED** |
+| **Strong Embedding (V0)** | `Rejected` | Node mapping $\{10 \to 20, 11 \to 21\}$ preserves `(^5100 10 11)`. However, target contains `(^5101 20 21)` on mapped nodes $\{20, 21\}$. Pre-image `(^5101 10 11)` is absent in source. Because `^5101` is in the frozen included relation signature, non-reflection on mapped nodes violates strong embedding. | **VERIFIED** |
+| **Weak Embedding (V0)** | `Verified` | Injective mapping $\{10 \to 20, 11 \to 21\}$ preserves source edge `(^5100 10 11) \to (^5100 20 21)`. Target-only edge `(^5101 20 21)` is valid B-only residual. | **VERIFIED** |
+| **Valid Mapping** | Node: $\{10 \to 20, 11 \to 21\}$<br>Edge: `(^5100 10 11) \to (^5100 20 21)` | Ordered incidence positions preserved ($0 \to 0, 1 \to 1$). Rigid stable label `^5100` matches in position 0. | **VERIFIED** |
+| **Item Accounting** | Mapped: Core nodes $\{10/20, 11/21\}$, Core edge `(^5100 10/20 11/21)`.<br>Target-Only Residual: Edge `(^5101 20 21)`.<br>Boundary Cut: Incident on mapped core nodes `20` and `21`. | Item-accounting invariant strictly partition-complete. No double-counting or projection loss hiding. | **VERIFIED** |
+| **Blocking Relation** | `(^5101 20 21)` | Directly blocks `STRONG_EMBEDDING` due to failure of relation reflection on mapped carriers. | **VERIFIED** |
+
+---
+
+#### 2. Q004-12 Verification (`^5000 #12`)
+* **Source Structures:**
+  * `^5001`: `[ (^5200 30 31) (^5201 31 32) ]`
+  * `^5002`: `[ (^5200 40 41) (^5202 41 42) ]`
+* **View:** `V0` (closed structural; rigid stable labels `^5200`, `^5201`, `^5202`).
+
+| Obligation / Claim | Frozen Claim | Structural Check | Status |
+| :--- | :--- | :--- | :--- |
+| **Strongest Core Mapping** | Core Edge: `(^5200 30 31) \to (^5200 40 41)`<br>Core Nodes: $\{30 \to 40, 31 \to 41\}$ | Under V0, `^5201` and `^5202` are distinct rigid labels and cannot map. Only `^5200` edge forms mapped common core. | **VERIFIED** |
+| **Dual Core Accounting (Alternatives A & B)** | Alternative A (Strict Core): Nodes $\{32, 42\}$ as residuals.<br>Alternative B (Extended Node Bijection): $\{32 \to 42\}$ mapped. | Both alternatives correctly isolate the unmappable edges `(^5201 31 32)` and `(^5202 41 42)`. Alternative A correctly notes that node mapping $32 \to 42$ is edge-unsupported under V0. | **VERIFIED** |
+| **Boundary Cut Accounting** | Alt A: `(^5201 31 32)` cuts at core node $31$; `(^5202 41 42)` cuts at core node $41$.<br>Alt B: Boundary cuts empty (nodes mapped). | Both cut formulations are structurally exact given their respective node-inclusion boundaries. | **VERIFIED** |
+| **Reconstruction Obligations** | Detailed exact gluing / instantiation functions for $A$ and $B$. | Reconstruction equations explicitly regenerate complete source objects $A$ and $B$ from core + residual + cut without loss. | **VERIFIED** |
+| **Post-Hoc Omission** | Forbidden | Spec Sections 22 & 23 and Protocol Section 8 strictly forbid post-hoc relation signature pruning to manufacture false core enlargement. | **VERIFIED** |
+
+---
+
+#### 3. Q004-13 Verification (`^5000 #13`)
+* **Source Structures:**
+  * `^5001`: `[ (^5300 50 51) (^5300 50 52) ]`
+  * `^5002`: `[ (^5300 60 61) (^5300 60 62) ]`
+* **View:** `V0` (closed structural; rigid stable label `^5300`).
+
+| Obligation / Claim | Frozen Claim | Structural Check | Status |
+| :--- | :--- | :--- | :--- |
+| **Isomorphism (V0)** | `Verified` | Bijective node mapping exists preserving and reflecting all occurrence structures. | **VERIFIED** |
+| **Witness Enumeration** | Exactly 2 distinct witnesses:<br>W1: $\{50 \to 60, 51 \to 61, 52 \to 62\}$<br>W2: $\{50 \to 60, 51 \to 62, 52 \to 61\}$ | Leaf symmetry among $\{51, 52\}$ and $\{61, 62\}$ yields exactly $2! = 2$ materially distinct node-and-edge bijection witnesses. | **VERIFIED** |
+| **Canonical Serializer Witness Pruning** | `Rejected` (Must keep both witnesses) | Spec Sections 30.2 & 32.4 and Protocol Section 15 prohibit discarding distinct automorphism witnesses based on serializer tie-breaks absent an explicit verified quotient/equivalence. | **VERIFIED** |
+| **Item Accounting** | Core: 100% mapped.<br>Residuals/Cuts/Exclusions: Empty. | Both witnesses completely account for all nodes and member occurrences. | **VERIFIED** |
+
+---
+
+### GOVERNANCE & PROTOCOL COMPLIANCE AUDIT
+
+1. **Ordered-Incidence Preservation:** Checked across all cases. Positions $0, 1, 2$ in tuple edges `(label head arg)` preserved faithfully.
+2. **Scope Nesting & Multiplicity:** Multiplicity of occurrences preserved. `[X X]` vs `[X]` distinctions upheld.
+3. **Stable-Label Rigidity:** Under V0, no cross-label mapping occurred (`^5201` was not mapped to `^5202`).
+4. **Negative Claims & Search Completeness:** Non-isomorphism and non-strong-embedding claims in Q004-11 are backed by explicit structural invariants (multiset cardinality mismatch and target relation non-reflection).
+5. **D-Local vs Pairwise Residual Separation:** Pairwise residuals in Q004-11 and Q004-12 were kept strictly pairwise; no source-local D residuals were conflated.
+
+---
+
+### LIST OF FAILED OR UNRESOLVED OBLIGATIONS
+
+* **Failed Obligations:** None.
+* **Unresolved Obligations:** None.

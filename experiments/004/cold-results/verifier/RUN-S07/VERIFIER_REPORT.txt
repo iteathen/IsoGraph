@@ -1,0 +1,34 @@
+### Evaluation of the Frozen Cold Report `RUN-S07`
+
+The frozen cold report has been audited against the governing authority (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`), the core test fixtures, and the constraints outlined in the cold prompt. 
+
+#### 1. `experiments/004/Q004_S07_NAC_INERT.isg`
+* **Claim Evaluation:** 
+  * The report correctly identifies that the NAC object `!(10 20)` exists.
+  * It correctly states that it is not evaluated because there is no active matcher/pattern/execution profile context (satisfying Core Spec Section 12.6: `NAC object exists != NAC evaluated`).
+  * It correctly notes that under default scope rules, the presence of the inert NAC object is syntactically valid as represented data, triggering no profile-validation error or ambient evaluation.
+* **Status:** **VERIFIED**
+
+#### 2. `experiments/004/Q004_S07_NAC_MATCHER.isg`
+* **Claim Evaluation:** 
+  * The report correctly identifies the NAC object `!(20 ?0)` on the LHS of the rewrite rule `7001` (under `^6701`).
+  * It correctly asserts evaluation is triggered by the matcher context at `^6702` (identity `7002`) pairing the target scope `7000` with the rule `7001`.
+  * The positive-match step is correctly traced: `(10 ?0)` matching `(10 1)` in scope `7000` yields binding `?0 -> 1`.
+  * The negative-match step is correctly evaluated: substituting `?0 -> 1` into the NAC yields `!(20 1)`. Since `(20 1)` is absent from scope `7000`, the negative constraint is satisfied.
+  * The final binding, match success, and successor state (`[(30 1)]` after multiset-subtraction of `(10 1)` and multiset-addition of RHS) are completely accurate and compliant with Section 12.1 and Section 12.4.
+* **Status:** **VERIFIED**
+
+#### 3. `experiments/004/Q004_S07_NAC_FORBIDDEN.isg`
+* **Claim Evaluation:**
+  * The report correctly identifies that the NAC object `!(10 20)` exists inside the nested ordered incidence tuple `(40 !(10 20))`.
+  * It correctly identifies that evaluation does not take place.
+  * It correctly classifies the structural rejection of this file as a static **profile-validation result** (owing to the active profile's ban on NAC elements residing in positional-child slots of ordered incidences) rather than an execution-time ambient query, perfectly aligned with Core Spec Section 12.6.
+* **Status:** **VERIFIED**
+
+---
+
+### Overall Verifier Disposition
+
+**VERIFIED**
+
+No failed or unresolved obligations were detected. All structural claims, context authorities, variable bindings, and profile-validation mechanics are perfectly aligned with the governing specification and native fixtures.

@@ -1,0 +1,62 @@
+An independent, scorer-blind structural verification of the frozen cold report **RUN-S01** has been completed against the governing semantic authority (`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`) and the supplied native fixtures. 
+
+Each explicit structural claim, rule interpretation, and grammatical mapping has been verified. Below is the detailed breakdown of obligations and the final disposition.
+
+---
+
+### I. Detailed Claim Verification
+
+#### 1. File 1 — `Q004_S01_LEGAL_REFERENCE_BINDING.isg`
+*   **Claim 1 (Validity):** The file is valid.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** The outer scope `[...]` contains two valid `scope_item` elements (§5). The second member `(^6100 [ ... ])` is an edge enclosing an unordered scope. Inside this scope, `@0=(10 11)` is a `ref_binding` occurring as a direct child of the scope. According to §10.1, reference bindings are legal in "ordinary scope-level serialization environments," which is the case here. The two subsequent references `@0` are valid `term` occurrences of type `ref` (§5).
+*   **Claim 2 (N0-Resolved Semantic Structure):** The resolved top-level structure is:
+    ```text
+    [
+      (^0 [^6100])
+      (^6100 [ (10 11) (10 11) ])
+    ]
+    ```
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** Per §10.3, N0 reference resolution expands the reference handle `@0` into the bound term `(10 11)`. It preserves the structural identities (`10` and `11`) within the referred term across the use-sites while creating multiple distinct use-site occurrences (§10.3). The stable labels `^0` and `^6100` are unaffected by N0 reference resolution.
+*   **Claim 3 (Direct Member Count and Binding Residual):** The direct semantic member count of the resolved `^6100` value scope is `2`, and the binding directive itself does not remain a semantic occurrence.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** §10.1 explicitly states: *"After N0 resolution, the binding directive occupies no semantic member occurrence."* Because the binding directive is removed, only the two expanded occurrences of `(10 11)` remain, yielding exactly `2` semantic member occurrences.
+
+#### 2. File 2 — `Q004_S01_INVALID_EDGE_BINDING.isg`
+*   **Claim 4 (Validity and Rule Violated):** The file is invalid because the binding `@0=(10 11)` is used as an ordered-edge positional child.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** Under §10.1, *"a reference binding is forbidden as: an ordered-edge positional child."* Furthermore, §5 defines `edge := (term ...)`. A `ref_binding` is defined as `ref = term` and is not a member of the `term` production rules. Placing a binding inside the parenthesis of an edge violates both the placement restriction and the syntax grammar.
+*   **Claim 5 (Rejection Phase):** Rejection of File 2 occurs before semantic comparison.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** Parser and placement validation are initial, non-negotiable gates that occur prior to N0/N1 normalization and the "structural-only candidate retrieval path" outlined in §2. A document containing syntactic/placement violations fails before reaching semantic comparison.
+
+#### 3. File 3 — `Q004_S01_INVALID_DECLARATIVE_BINDING.isg`
+*   **Claim 6 (Validity and Rule Violated):** The file is invalid because the binding `@0=(10 11)` is used as a declarative-formula operand.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** Under §10.1, *"a reference binding is forbidden as: a declarative-formula operand."* According to §5 and §13.2, `==` is an object-theory equality infix constructor where `eq := term == term`. Since `ref_binding` is not a `term`, it cannot occupy the left operand position of `==`.
+*   **Claim 7 (Rejection Phase):** Rejection of File 3 occurs before semantic comparison.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** As with File 2, grammatical correctness and placement enforcement are processed during initial parse/audit stages, which strictly precede semantic comparison in the pipeline (§2, §43).
+
+#### 4. Final Question — Arity Changes via Deleted Binding Directives
+*   **Claim 8 (Arity Preservation):** No valid N0 resolution is permitted to change ordered-edge arity by deleting a binding directive from an edge position.
+    *   **Verification Status:** **VERIFIED**
+    *   **Justification:** Since placing a binding directive in an edge position is illegal and rejected at the parse/placement level (Files 2 and 3), such a configuration never reaches N0. §10.1 forbids bindings in *"any position where its disappearance after N0 would change semantic arity or member occurrence structure."* Additionally, §10.3 confirms that *"N0 may remove the binding directive only because valid placement guarantees its removal cannot erase a semantic tuple position or member occurrence."* Therefore, no valid document can experience an arity change due to binding removal.
+
+---
+
+### II. Verification of Technical Difficulties and Ambiguities
+The frozen report lists four "Difficulties and ambiguities encountered." These observations have been checked:
+1.  **Missing inline revision/profile bindings:** The report correctly highlights that while the fixtures lack explicit metadata, the external audit packet's context (Draft 0.15) resolves the ambiguity (§3). This is structurally accurate and has been marked as a non-material validation observation.
+2.  **Dual invalidity paths for File 3:** The observation that File 3 fails both the specific §10.1 placement rule and the baseline §5 context-free grammar is correct.
+3.  **Scope-level definition of the top-level document:** The report's reading that any `[...]` (including a root document wrapper) constitutes a scope-level environment is consistent with the syntax specified in §5.
+4.  **Occurrence vs. Identity Terminology:** The frozen report carefully distinguishes between "occurrences" and "identities" (§8.2, §10.3). This is mathematically rigorous and aligns perfectly with §0's mandate (*"structural identity != member occurrence"*).
+
+---
+
+### III. Verifier Disposition
+
+**OVERALL DISPOSITION:** **VERIFIED**
+
+Every material claim made by the frozen report **RUN-S01** is fully correct, consistent with the rules in `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`, and completely verified against the provided test fixtures. No failed or unresolved obligations were identified.

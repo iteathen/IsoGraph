@@ -1,0 +1,53 @@
+# Independent Scorer-Blind Structural Verification Report
+
+**Run Under Verification:** RUN-D19  
+**Target Fixture:** `experiments/004/Q004_19_NOVEL_CLASS_004.axh`  
+**Governing Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`, `STRUCTURAL_COMPARISON_PROTOCOL_006.md`, `STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`, and `COLD_Q004_19_PROMPT_DRAFT_0_15.md`  
+**Verifier Disposition:** **VERIFIED**
+
+---
+
+## 1. Verification Breakdown by Explicit Obligation
+
+### 1.1 Scope Comparison and Isomorphism Mappings (Tasks 1 & 2)
+*   **Claim:** The frozen report analyzes the three scopes selected by `^5901 #1`, `#2`, and `#3` in `Q004_19_NOVEL_CLASS_004.axh`, identifies them as isomorphic directed diamond (fork-join) topologies, and provides two explicit bijective isomorphism witnesses for each pair.
+*   **Fixture Check:** 
+    *   `^5901 #1`: `[(1 2) (1 3) (2 4) (3 4)]`
+    *   `^5901 #2`: `[(10 11) (10 12) (11 13) (12 13)]`
+    *   `^5901 #3`: `[(20 21) (20 22) (21 23) (22 23)]`
+*   **Evaluation of Witnesses:**
+    *   Witnesses $\phi_{1 \to 2}^A$ and $\phi_{1 \to 2}^B$ correctly map nodes and preserve all ordered incidence pairs under V0.
+    *   Witnesses $\psi_{1 \to 3}^A$ and $\psi_{1 \to 3}^B$ correctly map nodes and preserve all ordered incidence pairs under V0.
+*   **Classification:** **VERIFIED**
+
+### 1.2 Reusable Schema Derivation and `NEW_CANDIDATE_CLASS` Hypothesis (Tasks 3 & 6)
+*   **Claim:** Derives a native candidate class hypothesis (`^novel_diamond_schema` under namespace `^5900`) with schema graph, parameter slots, ports, rigid/mappable roles, positive constraints, residual policy, and candidate status.
+*   **Spec Check:** Complies with Section 26 of the core spec and Section 2 of the class schema contract regarding native representation of schema fields and immutable candidate revision labeling without pre-existing class names.
+*   **Classification:** **VERIFIED**
+
+### 1.3 Automorphism and Symmetric Roles Identification (Task 4)
+*   **Claim:** Identifies the $S_2$ automorphism group where intermediate nodes `?B` and `?C` are mutually symmetric and swappable, while source `?A` and sink `?D` are rigid (fixed).
+*   **Spec Check:** Validated against structural symmetry and edge invariance under V0.
+*   **Classification:** **VERIFIED**
+
+### 1.4 Mismatch Analysis and Complete Item Accounting for `^5902 #1` (Task 5)
+*   **Claim:** Tests scope `^5902 #1` (`[(30 31) (30 32) (31 33) (32 34)]`) against the candidate schema, proves bijection failure via contradiction on sink convergence ($33 = 34$), and provides a complete two-stage item-accounting breakdown (Section 30 invariant) identifying common core $C$ and exact residuals.
+*   **Fixture Check:** `^5902 #1` diverges at `30` into `31` and `32`, but `31` leads to `33` while `32` leads to `34`, failing the convergence condition where both paths must meet at a single sink. The item accounting correctly isolates the A-only edge `(3 4)` and B-only node `34` / edge `(32 34)`.
+*   **Classification:** **VERIFIED**
+
+### 1.5 Non-Promotion and Held-Out / Adversarial Requirements (Task 7)
+*   **Claim:** Retains the class strictly at the `CANDIDATE` level, forbidding promotion from motivating examples alone, and explicitly lists required held-out/adversarial evidence (independent domain verification, adversarial negatives suite, independent machine verification).
+*   **Spec Check:** Complies with Section 28 of the core spec and Section 14 of the class schema contract.
+*   **Classification:** **VERIFIED**
+
+### 1.6 Simplicity / Minimality Metric and Conditioning (Task 8)
+*   **Claim:** Avoids claiming a global unconditional minimal status, instead declaring an explicit local lexicographical metric of topological size $\mathcal{M}(S) = (\mathcal{V}, \mathcal{E})$ and scoping the minimality claim strictly to the class of directed diamond topologies under that metric.
+*   **Spec Check:** Complies with Section 21.5 of the core spec ("without such a measure... do not reject or declare...").
+*   **Classification:** **VERIFIED**
+
+---
+
+## 2. Summary Disposition
+
+*   **Overall Verifier Disposition:** `VERIFIED`
+*   **Failed or Unresolved Obligations:** None. All explicit structural claims, mappings, witnesses, invariant checks, accounting obligations, and negative/cautious constraints required by the governing specification and prompt have been successfully verified against the native fixtures.

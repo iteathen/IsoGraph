@@ -1,0 +1,59 @@
+# INDEPENDENT SCORER-BLIND STRUCTURAL VERIFIER REPORT
+
+**Run:** RUN-C2  
+**Target Authority:** IsoGraph Core Specification Draft 0.15 + SCP-006  
+**Verifier Disposition:** `VERIFIED`
+
+---
+
+## I. Verifier Isolation and Scope Confirmation
+
+This verification has been performed under strict cold isolation constraints. No hidden assertions, scorer answers, or external references were supplied or consulted. The frozen report (`RUN-C2`) has been checked against the raw native fixtures (`PHASE_C_NEGATIVE_INDEX_CASES_004.axh`), Core Specification Draft 0.15, and SCP-006.
+
+---
+
+## II. Obligation & Claim Verification
+
+### 1. Case Q004-14, Subcase #1 (`^5401 #1` vs `^5402 #1` under V0)
+*   **Claim in Frozen Report:** Direct member occurrence multiplicity differs (1 vs. 2), serving as a necessary separating invariant under V0 to certify non-isomorphism without search.
+*   **Fixture Verification:** 
+    *   `^5401 #1` contains `[ (^5410 1 2) ]` (exactly 1 direct member occurrence).
+    *   `^5402 #1` contains `[ (^5410 10 11) (^5410 10 12) ]` (exactly 2 direct member occurrences).
+*   **Spec Compliance:** Under Core Spec §8.1, direct member occurrence multiplicity is semantic by default in raw scopes. Under V0, structural isomorphism requires bijective preservation of scope occurrences. Since $1 \neq 2$, no valid bijection exists. 
+*   **Classification:** `VERIFIED`.
+
+### 2. Case Q004-14, Subcase #2 (`^5401 #2` vs `^5402 #2` under V0)
+*   **Claim in Frozen Report:** An isomorphism exists under V0 with node correspondence `20 <-> 30`, `21 <-> 31`, `22 <-> 32`. The native run record `(^5403 #2 #0)` indicates a bounded/incomplete search with no witness and no separating certificate; therefore, upgrading the status to `CERTIFIED_NON_ISOMORPHIC` is invalid.
+*   **Fixture Verification:**
+    *   `^5401 #2` has two `^5410`-headed edges sharing node 20.
+    *   `^5402 #2` has two `^5410`-headed edges sharing node 30.
+    *   Mapping `20 -> 30`, `21 -> 31`, `22 -> 32` (along with stable label `^5410 -> ^5410`) perfectly preserves ordered incidence, scope nesting, and occurrence multiplicity under V0.
+*   **Spec Compliance:** Under Core Spec §25, §36, and SCP-006 §13, a negative result under incomplete search without a separating certificate must be reported as `NO_WITNESS_FOUND`, `UNKNOWN`, or `RESOURCE_LIMIT`, never as `CERTIFIED_NON_ISOMORPHIC`. The report correctly prohibits false negative elevation.
+*   **Classification:** `VERIFIED`.
+
+### 3. Case Q004-15 (Index Mismatch & View/Stage Sensitivity)
+*   **Claim 1 (V0 Invariant):** Under V0, stable labels are rigid. The mismatch between `#5500` and `#5501` is a valid separating invariant. Permitted statuses are `CERTIFIED_NON_ISOMORPHIC` or `NO_WITNESS_FOUND`.
+    *   *Verification:* `^5500` and `^5501` are rigid under V0; cannot map. `VERIFIED`.
+*   **Claim 2 (VS Invariance):** Under VS, raw-label fingerprint is no longer an invariant because VS explicitly permits stable labels to map bijectively.
+    *   *Verification:* Conforms to Core Spec §32.3 ($A \mathcal{R} B \implies f(A) = f(B)$ fails when fingerprint depends on non-rigid mapped labels). `VERIFIED`.
+*   **Claim 3 (VS Pruning Safety):** Pruning based on the raw fingerprint mismatch under VS is unsafe and risks a false negative.
+    *   *Verification:* Conforms to Core Spec §32.3. `VERIFIED`.
+*   **Claim 4 (VS Isomorphism Witness):** Under VS, a mapped-signature isomorphism exists with label map `^5500 <-> ^5501` and node map `40 <-> 50`, `41 <-> 51`.
+    *   *Verification:* Inspecting `(^5500 40 41)` and `(^5501 50 51)`, the incidence and arity match under the allowed label bijection. `VERIFIED`.
+*   **Claim 5 (Multi-Stage Generalization):** Fingerprint invariance is stage-relative and topology-locked; D-transformations alter topology and invalidate unproven index projections.
+    *   *Verification:* Conforms strictly to Core Spec §32.3. `VERIFIED`.
+
+---
+
+## III. Residual and Negative Accounting Check
+*   **Occurrence Multiplicity:** Properly respected in Q004-14.
+*   **Stable Label Rigidity vs. Mappability:** Correctly distinguished between V0 (rigid) and VS (mappable).
+*   **Negative Certificate Integrity:** Correctly blocked invalid promotion of incomplete search (`^5403 #2 #0`) to `CERTIFIED_NON_ISOMORPHIC`.
+*   **Stage Invariance:** Correctly limited fingerprint validity to its specific structural stage.
+
+---
+
+## IV. Overall Verifier Disposition
+
+*   **Disposition:** `VERIFIED`
+*   **Failed or Unresolved Obligations:** None.

@@ -1,0 +1,36 @@
+### Verifier Report on RUN-S04
+
+We have independently analyzed the frozen report against the native IsoGraph structural database provided in `experiments/004/Q004_S04_TWO_STAGE_RESIDUAL.isg` and the rules governing representation and reconstruction in the `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`.
+
+All explicit structural claims, mappings, identity transformations, and architectural assertions made in the frozen report have been matched to the physical elements of the native fixture:
+
+1. **Source 1000 and D-1100 Reconstruction**:
+   * Extracted Source Object `1000` body containing `[(^7000 1 2) (^7001 2 3) (^7010 3 4)]` corresponds exactly with the native data.
+   * Target Comparison Object `1200` body `[(^7000 1 2) (^7001 2 3)]` and its exactness status (`#1`) were verified.
+   * Local residual `R_D(1100)` containing `[(^7010 3 4)]` correctly satisfies the reconstruction: $S_{1000} = C_{1200} \uplus R_{D(1100)}$.
+
+2. **Source 2000 and D-2100 Reconstruction**:
+   * Extracted Source Object `2000` body containing `[(^7000 5 6) (^7002 6 7) (^7011 7 8)]` corresponds exactly with the native data.
+   * Target Comparison Object `2200` body `[(^7000 5 6) (^7002 6 7)]` and its exactness status (`#1`) were verified.
+   * Local residual `R_D(2100)` containing `[(^7011 7 8)]` correctly satisfies the reconstruction: $S_{2000} = C_{2200} \uplus R_{D(2100)}$.
+
+3. **Pair Record 3000 Audit**:
+   * Pairwise record `3000` mapping `1200` and `2200` was verified.
+   * Common core `[(^7000 1 2)]` and mapping `[(1 5) (2 6)]` correctly match.
+   * Reconstruction of comparison targets $A_{\text{cmp}}$ (`1200`) and $B_{\text{cmp}}$ (`2200`) using their respective pairwise residuals `[(^7001 2 3)]` and `[(^7002 6 7)]` was successfully verified.
+
+4. **Architectural Separation and Isolation Rules**:
+   * Verified that source-local $D$-transform residuals and pairwise comparison residuals are maintained as disjoint, isolated accounting structures.
+   * The report's technical justification is in perfect agreement with Section 19.4 of the Core Specification, forbidding the merging of these distinct residual layers.
+
+5. **Lossy D-1300 Branch Audit**:
+   * Verified that the discard summary `^6408` of D-record `1300` containing `[^7001 ^7010]` is insufficient for full source reconstruction as it omits incidence topologies.
+   * Verified that no pairwise matching at the comparison stage can upgrade this lossy D-branch into a full-source reconstruction claim, strictly conforming to the specification.
+
+No discrepancies, illegal reference bindings, or scope/occurrence violations were found in either the native input files or the frozen audit analysis.
+
+---
+
+### Overall Verifier Disposition
+
+**VERIFIED** (No failed or unresolved obligations)

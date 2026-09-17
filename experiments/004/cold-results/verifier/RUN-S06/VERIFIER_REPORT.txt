@@ -1,0 +1,65 @@
+### Independent Verifier Report
+
+**Run:** RUN-S06  
+**Target Experiment:** ISOGRAPH EXPERIMENT 004 — Q004-S06 Cold Infix-Parsing Audit  
+**Governing Authority:** `iteathen/IsoGraph` @ `30d9b0f0a84cb6005fae1d8f82b1777fd24c0215` (Draft 0.15 Consolidated Candidate)
+
+---
+
+### I. Evaluation of Material Claims & Parser Results
+
+Every explicit parsing assessment in the frozen report has been verified against the grammar and constraints in Section 5 of `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`.
+
+#### 1. PARSE_01 (`[ 1 => 2 ]`)
+*   **Frozen Report Claim:** One deterministic parse as `implies(1, 2)`. Valid.
+*   **Authority Reference:** Section 5 grammar: `implies := term => term`. Only a single un-delimited infix operator is present.
+*   **Result:** **VERIFIED**
+
+#### 2. PARSE_02 (`[ 1 == 2 ]`)
+*   **Frozen Report Claim:** One deterministic parse as `eq(1, 2)`. Valid.
+*   **Authority Reference:** Section 5 grammar: `eq := term == term`. Only a single un-delimited infix operator is present.
+*   **Result:** **VERIFIED**
+
+#### 3. PARSE_03 (`[ @0=\?0 (?0 10) \n @0 @@ 20 ]`)
+*   **Frozen Report Claim:** One deterministic parse. Line 1 is a `ref_binding` with an `abstract` term body, and Line 2 is a single `instantiate` (`@@`) term. Valid.
+*   **Authority Reference:** Section 5 grammar:
+    *   `ref_binding := ref = term`
+    *   `abstract := \var term` where `term` is the edge `(?0 10)`
+    *   `instantiate := term @@ term`
+    No un-delimited nesting of infix operations is present in either scope item.
+*   **Result:** **VERIFIED**
+
+#### 4. PARSE_04 (`[ 1 => 2 == 3 ]`)
+*   **Frozen Report Claim:** Invalid and ambiguous. Rejected.
+*   **Authority Reference:** Section 5 explicit constraint: "forms such as `A == B == C`, `A @@ B @@ C`, or `A => B == C` are invalid unless intended nesting is explicitly represented by a semantic/native constructor...".
+*   **Result:** **VERIFIED**
+
+#### 5. PARSE_05 (`[ 1 == 2 == 3 ]`)
+*   **Frozen Report Claim:** Invalid and ambiguous. Rejected.
+*   **Authority Reference:** Section 5 explicit constraint: "forms such as `A == B == C` ... are invalid".
+*   **Result:** **VERIFIED**
+
+#### 6. PARSE_06 (`[ @0=\?0 (?0 10) \n @0 @@ 20 @@ 30 ]`)
+*   **Frozen Report Claim:** Line 1 is valid, but Line 2 is invalid/ambiguous and rejected.
+*   **Authority Reference:** Section 5 explicit constraint: "forms such as ... `A @@ B @@ C` ... are invalid".
+*   **Result:** **VERIFIED**
+
+#### 7. Evaluation of Parentheses `()` as a Repair Mechanism
+*   **Frozen Report Claim:** Reject use of `()` for grouping repair. `()` denotes semantic ordered incidence, not transparent parser grouping. Wrappers must not be used as non-semantic grouping helpers.
+*   **Authority Reference:** Section 5: "`()` always denotes ordered incidence; it is not transparent parser grouping; ... ordinary scope or ordered-incidence wrappers MUST NOT be used as accidental non-semantic parentheses."
+*   **Result:** **VERIFIED**
+
+---
+
+### II. Verification Summary & Failed Obligations
+
+All six test files match the expected outcomes under the strict, zero-precedence, zero-associativity constraints defined for the qualification freeze in Section 5 of the Draft 0.15 Core Specification.
+
+*   **Failed Obligations:** None.
+*   **Unresolved Issues:** None.
+
+---
+
+### III. Final Verifier Disposition
+
+**VERIFIED**

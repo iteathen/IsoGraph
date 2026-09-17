@@ -1,0 +1,86 @@
+# STRUCTURAL VERIFICATION REPORT — RUN-S05
+
+**Target Run:** RUN-S05  
+**Semantic Authority:** `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`  
+**Native Fixture:** `experiments/004/Q004_S05_FACTOR_STAGE_INDEX.isg`  
+**Governing Prompt:** `experiments/004/COLD_Q004_S05_PROMPT.md`
+
+---
+
+## 1. Obligation-by-Obligation Verification
+
+### 1. Reconstructions of Bodies, Stages, and D Links
+* **Claim:** Object `1000` has body `[(^6500 1 2) (^6500 2 3)]` and stage `^6505` (`RAW_STAGE`).
+  * **Fixture Check:** `(^6502 1000 [(^6500 1 2) (^6500 2 3)])` and `(^6504 1000 ^6505)`.
+  * **Status:** **VERIFIED**
+* **Claim:** Object `2000` has body `[(^6500 10 11) (^6500 11 12) (^6500 12 13)]` and stage `^6505` (`RAW_STAGE`).
+  * **Fixture Check:** `(^6502 2000 [(^6500 10 11) (^6500 11 12) (^6500 12 13)])` and `(^6504 2000 ^6505)`.
+  * **Status:** **VERIFIED**
+* **Claim:** Object `1200` has body `[(^6501 100)]` and stage `^6506` (`FACTORED_STAGE`).
+  * **Fixture Check:** `(^6502 1200 [(^6501 100)])` and `(^6504 1200 ^6506)`.
+  * **Status:** **VERIFIED**
+* **Claim:** Object `2200` has body `[(^6501 200)]` and stage `^6506` (`FACTORED_STAGE`).
+  * **Fixture Check:** `(^6502 2200 [(^6501 200)])` and `(^6504 2200 ^6506)`.
+  * **Status:** **VERIFIED**
+* **Claim:** D record `1100` links source `1000` to target `1200`; D record `2100` links source `2000` to target `2200`.
+  * **Fixture Check:** `(^6503 1100 1000 1200)` and `(^6503 2100 2000 2200)`.
+  * **Status:** **VERIFIED**
+
+---
+
+### 2. Fingerprint Outputs & Stage Qualification for Algorithm `7001`
+* **Claim:** Fingerprint value for `1000` under `7001` is `#2`; for `2000` under `7001` is `#3`. Qualified stage is `^6505` (`RAW_STAGE`) via `(^6511 7001 ^6505 #1)`.
+  * **Fixture Check:** `(^6510 7001 1000 ^6505 #2)`, `(^6510 7001 2000 ^6505 #3)`, and `(^6511 7001 ^6505 #1)`.
+  * **Status:** **VERIFIED**
+
+---
+
+### 3. Raw-Stage Mismatch Pruning Verdict (`1000` vs `2000`)
+* **Claim:** Raw-stage mismatch prunes `1000` vs `2000` because `7001` is a qualified necessary invariant on stage `^6505` and `#2 != #3`.
+  * **Authority Check:** Spec §32.3 (`A R B => f(A) = f(B)` on a qualified stage allows fingerprint mismatch to certify separation).
+  * **Status:** **VERIFIED**
+
+---
+
+### 4. Cross-Stage Pruning Reuse Verdict (`1200` vs `2200` via Algorithm `7001`)
+* **Claim:** Mismatch cannot be reused to prune `1200` vs `2200` because stage invariants are stage-specific, and `7001` is not qualified on `^6506`.
+  * **Authority Check:** Spec §32.3 ("a raw-stage invariant may be used on the raw stage for the qualified relation; it is not automatically valid after topology-changing D factorization; an invariant qualified on one factorization node may not prune another factorization node by default").
+  * **Status:** **VERIFIED**
+
+---
+
+### 5. Fingerprint Outputs & Stage Qualification for Algorithm `7002`
+* **Claim:** Fingerprint value for `1200` under `7002` is `#1`; for `2200` under `7002` is `#1`. Qualified stage is `^6506` (`FACTORED_STAGE`) via `(^6511 7002 ^6506 #1)`.
+  * **Fixture Check:** `(^6510 7002 1200 ^6506 #1)`, `(^6510 7002 2200 ^6506 #1)`, and `(^6511 7002 ^6506 #1)`.
+  * **Status:** **VERIFIED**
+
+---
+
+### 6. Structural Comparison & Mapping under V0 (`1200` vs `2200`)
+* **Claim:** `1200` and `2200` are isomorphic under V0. Bijective mapping: stable label `^6501 <-> ^6501` (rigid), structural ID `100 <-> 200` (alpha-renamable), mapping edge `(^6501 100) <-> (^6501 200)`.
+  * **Authority & Structural Check:** Spec §24 (V0 allows local alpha identities to bijectively rename while keeping stable labels rigid). Both objects consist of a scope with a single unary incidence containing stable label `^6501` and one bare structural ID. Mapping is bijective and structure-preserving.
+  * **Status:** **VERIFIED**
+
+---
+
+### 7. Soundness of Fingerprint Sufficiency (Equal Values)
+* **Claim:** Equal fingerprint values alone do not prove structural isomorphism.
+  * **Authority Check:** Spec §32.3 ("Equal fingerprints ordinarily prove nothing.").
+  * **Status:** **VERIFIED**
+
+---
+
+### 8. Indexing Requirements on Canonical Factorization
+* **Claim:** IsoGraph does not require choosing or forcing one global canonical post-D factorization merely to simplify indexing.
+  * **Authority Check:** Spec §32.3 ("IsoGraph does not require one canonical post-D factorization merely to simplify indexing.").
+  * **Status:** **VERIFIED**
+
+---
+
+## 2. Verification Summary & Final Disposition
+
+Every explicit structural claim, entity reconstruction, stage qualification, fingerprint output, pruning verdict, mapping witness, and specification interpretation made in frozen report `RUN-S05` matches the native fixture `Q004_S05_FACTOR_STAGE_INDEX.isg` and governing specification `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` exactly.
+
+* **Failed / Unresolved Obligations:** None.
+
+**OVERALL VERIFIER DISPOSITION:** **VERIFIED**
