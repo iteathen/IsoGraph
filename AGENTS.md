@@ -8,15 +8,16 @@ Before substantive work, read `README.md`, `STATUS.md`, `MIGRATION.md`, and the 
 
 ### Current qualified authority
 
-- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
 
-The exact semantic candidate used by Experiment 005 remains preserved as `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md`. The qualified file is mechanically derived from that tested blob with only qualification-status/provenance changes.
+Draft 0.17 is a narrow description correction over Draft 0.16. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
 
 ### Historical authority
 
+- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
 - `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-Draft 0.15 remains immutable historical qualification evidence for Experiment 004 and artifacts frozen under that revision. Draft 0.16 does not retroactively reinterpret them.
+Draft 0.16 remains immutable historical qualification evidence for Experiment 005 and retains its obligation-sufficiency qualification. Draft 0.15 remains immutable historical qualification evidence for Experiment 004. Draft 0.17 does not retroactively reinterpret either revision.
 
 ## Research discipline
 
@@ -28,7 +29,8 @@ Keep these distinctions explicit:
 
 - surface syntax != irreducible substrate
 - source-faithful representation != comparison view
-- structural identity != occurrence
+- Semantic Identity (SI) != occurrence
+- SI equality/inequality != independently proved stronger identity relation
 - factorization != normalization
 - one valid factorization != canonical factorization
 - native representability != dedicated syntax
@@ -43,7 +45,17 @@ Keep these distinctions explicit:
 - local factorization-node claim != factorization-space completeness
 - witness equivalence in one frozen claim context != global witness equivalence
 
-## Draft 0.16 obligation-sufficiency rules
+## Semantic Identity discipline
+
+- Bare integer IDs are SI handles, not natural/ontological identity certificates.
+- Same SI means the same represented referent within the applicable SI namespace.
+- Different SIs remain distinct referents for core operational semantics; leaving a stronger identity question open does not make them mergeable for matching or allocation.
+- Same or different SI alone supplies no stronger external identity conclusion.
+- Object-theory equality remains separate from SI and does not silently coalesce SI referents.
+- Freshness is SI-namespace-relative and supplies no stronger identity conclusion by itself.
+- Do not import Natural Entropic Identity or other external identity semantics into core without an explicit, separately versioned dependency.
+
+## Draft 0.16 obligation-sufficiency rules retained by Draft 0.17
 
 A claim must discharge its complete dependency-closed obligation set. Do not require a stronger relation, stronger reconstruction layer, stronger completeness/optimality property, or unrelated qualification gate unless it is an actual dependency or explicit frozen proof-profile requirement.
 
@@ -67,4 +79,6 @@ independent verifier: VERIFIED
 unresolved obligations: none
 ```
 
-Preserve cold-test isolation for future experiments: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
+Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
+
+Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.

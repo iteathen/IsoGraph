@@ -1,20 +1,29 @@
 # IsoGraph Status
 
-**Project state:** research incubation / Draft 0.16 obligation-sufficiency clarification qualified  
+**Project state:** research incubation / Draft 0.17 Semantic Identity description correction current  
 **Repository:** `iteathen/IsoGraph`  
 **Default branch:** `main`
 
 ## Current qualified semantic authority
 
-- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
 
-The exact tested pre-promotion candidate is retained unchanged as:
+Draft 0.17 is a narrow descriptive correction over the qualified Draft 0.16 authority:
 
-- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_CANDIDATE.md`
+- bare IDs are explicitly **Semantic Identity (SI)** handles;
+- same SI means the same represented referent within the applicable SI namespace;
+- different SIs remain distinct represented referents for core operations;
+- SI equality or inequality does not independently establish any stronger external/natural/ontological identity relation;
+- operational behavior for occurrences, references, namespaces, alpha-renaming, freshness, matching, reconstruction, comparison, and object-theory equality remains unchanged from Draft 0.16;
+- no Natural Entropic Identity semantics are part of core.
 
-Draft 0.16 was tested from frozen corpus commit `fa733d533cd683c5064c4f31fa6c083fa3aed21d` and candidate blob `0cc6d2e3e08606a99324ee36b6ff5a6a5067efb8`.
+The Draft 0.17 authority is deterministically derived from the exact qualified Draft 0.16 blob `8c9a3c9030388a39bb89aed9045083fa03fb3209`. The build checks that the obsolete wording `same structural identity = same object` does not survive and that external NEI extension semantics do not leak into core.
 
-Experiment 005 evidence:
+## Retained Draft 0.16 qualification evidence
+
+`CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md` remains immutable historical authority for the obligation-sufficiency clarification qualified by Experiment 005.
+
+Experiment 005 evidence remains:
 
 ```text
 cold workflow:             35252295888
@@ -28,11 +37,11 @@ verifier disposition:      VERIFIED
 unresolved obligations:    none
 ```
 
-Final review:
+Final review remains:
 
 - `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`
 
-## Qualified Draft 0.16 clarification layer
+## Qualified obligation-sufficiency layer retained in Draft 0.17
 
 - claim-bounded dependency-closed obligation sets;
 - proof-method neutrality within frozen qualification/isolation constraints;
@@ -41,26 +50,23 @@ Final review:
 - exact compact witness-family certificates when coverage is independently verified;
 - local factorization-node claims versus factorization-space completeness.
 
-These rules reduce specification-mandated over-proof without deleting represented information or weakening structural correctness.
+## Explicit non-changes in Draft 0.17
 
-## Explicit non-changes
+Draft 0.17 introduces no:
 
-Draft 0.16 does not introduce:
-
-- new syntax or irreducible primitives;
-- new structural classes or comparison relations;
-- a globally minimal comparison view;
-- a prescribed progressive search algorithm;
-- mandatory canonical labeling or canonical factorization;
-- post-D-only fingerprinting;
-- weaker source/pairwise residual accounting;
-- heuristic negatives as proof;
-- automatic witness quotienting without qualified context and coverage.
+- Natural Entropic Identity semantics;
+- new syntax or irreducible primitive;
+- new structural class or comparison relation;
+- identity-collapse inference rule;
+- temporal identity law;
+- entropy/information measure;
+- special extension-loading mechanism;
+- change to Draft 0.16 proof/search sufficiency rules.
 
 ## Historical authority
 
-`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` remains immutable qualified historical authority for Experiment 004 and prior Draft 0.15 artifacts. Draft 0.16 does not retroactively change their semantics.
+`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` remains immutable qualified historical evidence for Experiment 004 and prior Draft 0.15 artifacts. Draft 0.17 does not retroactively change historical semantics or qualification evidence.
 
 ## Immediate work
 
-Any further performance-related spec changes require a new explicit pressure case or experiment. Do not enlarge Draft 0.16 merely because an implementation technique appears faster.
+Future NEI, admissible-variation, invariant-extraction, or information-measure work remains outside the core unless an independent core insufficiency is demonstrated. The current core correction is complete once Draft 0.17 is integrated to `main`.

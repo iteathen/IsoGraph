@@ -1,0 +1,58 @@
+name: Build Draft 0.17 correction
+
+on:
+  push:
+    branches:
+      - spec/draft-0-17-semantic-identity-only
+    paths:
+      - tools/build-draft-0-17.mjs
+      - .github/workflows/build-draft-0-17.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-draft-0-17-si-only
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out correction branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: spec/draft-0-17-semantic-identity-only
+
+      - name: Generate Draft 0.17 authority
+        run: node tools/build-draft-0-17.mjs
+
+      - name: Verify correction scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
+          grep -F '# IsoGraph Core Specification — Draft 0.17 Consolidated Qualified' CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
+          grep -F '# 6. Semantic Identity, namespaces, literals, and stable labels' CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
+          grep -F 'same SI = same represented referent' CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
+          if grep -Fq 'same structural identity = same object' CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md; then
+            echo 'obsolete identity overdefinition survived' >&2
+            exit 1
+          fi
+          if grep -Fq 'Natural Entropic Identity Extension' CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md; then
+            echo 'external identity-extension semantics leaked into core' >&2
+            exit 1
+          fi
+
+      - name: Commit generated authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'spec: generate Draft 0.17 Semantic Identity authority'
+          git push origin HEAD:spec/draft-0-17-semantic-identity-only
