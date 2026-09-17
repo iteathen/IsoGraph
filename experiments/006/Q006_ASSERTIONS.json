@@ -1,0 +1,83 @@
+{
+  "experiment": "IsoGraph Experiment 006",
+  "scorer_only": true,
+  "cold_decoder_access": false,
+  "modules": ["QU 0.1", "NEI 0.1", "Discovery Protocols 0.1"],
+  "qu": {
+    "QU-01": "PRESERVE_REPRESENTATIONAL_DISTINCTION",
+    "QU-02": "EXCLUDED,ADMISSIBLE,ADMISSIBLE",
+    "QU-03": "OPEN,DETERMINATE,INCONSISTENT,INCOMPLETE_SCOPE",
+    "QU-04": "NO_QUI_FROM_SCALAR_ALONE",
+    "QU-05": "QUI_CANDIDATE",
+    "QU-06": "SEMANTIC_UNRESOLVED,INCOMPLETE_COMPUTATION",
+    "QU-07": "REFINEMENT,REVISION_NOT_ESTABLISHED_AS_REFINEMENT",
+    "QU-08": "CIRCULAR_UNQUALIFIED_RESTRICTION"
+  },
+  "nei": {
+    "NEI-01": "SAME",
+    "NEI-02": "UNKNOWN",
+    "NEI-03": "DISTINCT",
+    "NEI-04": "SAME",
+    "NEI-05": "NO_ADMISSIBLE_MODEL",
+    "NEI-06": "UNKNOWN",
+    "NEI-07": "UNKNOWN",
+    "NEI-08": "SAME,INCOMPLETE_UNQUALIFIED"
+  },
+  "dp": {
+    "max_steps_per_side_per_finding": 4,
+    "minimum_motifs": 4,
+    "deep_motifs": ["O2", "O3", "O4"],
+    "minimum_deep_motifs": 1,
+    "motifs": {
+      "O1": {
+        "alpha": ["A02", "A09", "A10"],
+        "beta": ["B02", "B08", "B10"],
+        "min_alpha_overlap": 1,
+        "min_beta_overlap": 1
+      },
+      "O2": {
+        "alpha": ["A04", "A05"],
+        "beta": ["B03", "B04"],
+        "min_alpha_overlap": 2,
+        "min_beta_overlap": 2
+      },
+      "O3": {
+        "alpha": ["A03", "A07", "A08"],
+        "beta": ["B03", "B04"],
+        "min_alpha_overlap": 2,
+        "min_beta_overlap": 1
+      },
+      "O4": {
+        "alpha": ["A06"],
+        "beta": ["B06", "B07", "B08"],
+        "min_alpha_overlap": 1,
+        "min_beta_overlap": 2
+      },
+      "O5": {
+        "alpha": ["A09", "A10"],
+        "beta": ["B08", "B09", "B10"],
+        "min_alpha_overlap": 1,
+        "min_beta_overlap": 1
+      }
+    },
+    "alpha_residual_pool": ["A03", "A04", "A06", "A07", "A08"],
+    "beta_residual_pool": ["B03", "B04", "B06", "B07", "B08"],
+    "minimum_alpha_residuals": 2,
+    "minimum_beta_residuals": 2,
+    "required_rejected_overclaims": [
+      "FULL_PROOF_ISOMORPHISM",
+      "NATURAL_IDENTITY",
+      "SAME_INTERMEDIATE_OBJECTS"
+    ],
+    "expected_promotion": "SUPPORTED_CANDIDATE",
+    "preferred_protocols_any": ["DP-02", "DP-04", "DP-06", "DP-07", "DP-08", "DP-11", "DP-14", "DP-23", "DP-24"],
+    "minimum_preferred_protocols": 2,
+    "low_value_primary_forbidden": ["DP-42", "DP-43", "DP-44", "DP-45"]
+  },
+  "qualification": {
+    "qu_requires_all_exact": true,
+    "nei_requires_all_exact": true,
+    "dp_requires_all_critical_guards": true,
+    "integrated_requires_all_modules": true
+  }
+}
