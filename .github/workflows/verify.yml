@@ -56,7 +56,24 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git diff-tree --check --root -r HEAD
+
+          # Markdown permits trailing spaces for hard line breaks in this repository.
+          # Keep Git whitespace enforcement for all other changed files.
+          mapfile -d '' changed < <(
+            git diff-tree --no-commit-id --name-only -r -z --root HEAD
+          )
+
+          non_markdown=()
+          for path in "${changed[@]}"; do
+            case "$path" in
+              *.md|*.mdx) ;;
+              *) non_markdown+=("$path") ;;
+            esac
+          done
+
+          if ((${#non_markdown[@]})); then
+            git diff-tree --check --root -r HEAD -- "${non_markdown[@]}"
+          fi
 
       - name: Verify frozen evidence remains present
         shell: bash
