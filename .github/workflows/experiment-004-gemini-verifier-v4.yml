@@ -1,0 +1,133 @@
+name: Experiment 004 Gemini Independent Verifier V4
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/experiment-004-gemini-verifier-v4.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-004-gemini-verifier-3-8
+  cancel-in-progress: true
+
+env:
+  GEMINI_MODEL: gemini-3.8-flash
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify Gemini 3.8 access
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}"
+          node <<'NODE'
+          const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent', {
+            method:'POST',
+            headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},
+            body:JSON.stringify({contents:[{role:'user',parts:[{text:'Reply exactly ISOGRAPH_OK'}]}],generationConfig:{maxOutputTokens:32,thinkingConfig:{thinkingLevel:'LOW'}}})
+          });
+          const body=await r.text();
+          if(!r.ok){console.error(body);process.exit(1)}
+          const d=JSON.parse(body); const t=(d.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
+          console.log(t); if(!t.includes('ISOGRAPH_OK')) process.exit(1);
+          NODE
+
+  verify:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        run: [RUN-D09, RUN-D10, RUN-D16, RUN-D18, RUN-D19, RUN-D20S, RUN-D20L]
+    steps:
+      - name: Check out evidence history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Fetch Claude evidence branch
+        shell: bash
+        run: git fetch origin experiment/004-cold-results-claude:refs/remotes/origin/experiment/004-cold-results-claude
+
+      - name: Bound verifier output
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i 's/maxOutputTokens: 65536/maxOutputTokens: 32768/' experiments/004/tools/run-gemini-verifier.mjs
+          grep -F 'maxOutputTokens: 32768' experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Execute scorer-blind structural verifier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RUN_ID: ${{ matrix.run }}
+        run: node experiments/004/tools/run-gemini-verifier.mjs
+
+      - name: Freeze verifier artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp004-${{ matrix.run }}-verifier-v4
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+
+  archive:
+    if: always()
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out latest results branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: experiment/004-gemini-results
+
+      - name: Download V4 verifier artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: isograph-exp004-*-verifier-v4
+          path: verifier-downloads
+          merge-multiple: true
+
+      - name: Archive successful V4 verifier outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=experiments/004/cold-results/gemini/verifier
+          mkdir -p "$dest"
+          found=0
+          for report in verifier-downloads/*_VERIFIER_REPORT.txt; do
+            [ -e "$report" ] || continue
+            base="$(basename "$report" _VERIFIER_REPORT.txt)"
+            mkdir -p "$dest/$base"
+            cp "$report" "$dest/$base/VERIFIER_REPORT.txt"
+            cp "verifier-downloads/${base}_VERIFIER_METADATA.json" "$dest/$base/VERIFIER_METADATA.json"
+            found=$((found+1))
+          done
+          printf '# Experiment 004 — scorer-blind verifier archive\n\nV4 workflow run: `%s`\n\nV4 successful reports: **%s / 7**.\n\nEarlier successful verifier evidence remains frozen separately and is reconciled in the final verifier review ledger.\n\nVerifier packets exclude hidden assertions, scoring reports, qualification ledgers, expected answers, and prior verifier outputs.\n' "$GITHUB_RUN_ID" "$found" > "$dest/MANIFEST.md"
+          test "$found" -gt 0
+
+      - name: Commit V4 verifier archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "iteathen"
+          git config user.email "josh.oshiro@gmail.com"
+          git add experiments/004/cold-results/gemini/verifier
+          if git diff --cached --quiet; then exit 0; fi
+          git diff --cached --check
+          git commit -m 'experiment: archive Gemini 3.8 scorer-blind verifier evidence'
+          git push origin HEAD:experiment/004-gemini-results
