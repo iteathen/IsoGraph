@@ -4,17 +4,19 @@ IsoGraph is an agent-native structural knowledge representation designed to expo
 
 ## Current status
 
-IsoGraph is in active research incubation. The project originated inside `iteathen/CUDA-JS` under the historical name **IsoGraph**.
+IsoGraph is in active research incubation. The work was incubated inside `iteathen/CUDA-JS` before being extracted into this standalone repository.
 
-The current authoritative research lineage remains content-addressed and is being migrated without rewriting frozen historical evidence. Pre-rename documents that say `IsoGraph` retain that historical name and their original semantics; new artifacts use `IsoGraph`.
+The imported research lineage is content-addressed. Its exact source checkpoint is recorded in `MIGRATION.md`, and the pre-extraction state remains recoverable from Git history and that immutable source revision.
 
-Current governing research source at migration start:
+Current semantic authority is cumulative:
 
-- repository: `iteathen/CUDA-JS`
-- branch: `experiment/axiomesh-native-reconstruction`
-- checkpoint: `275b4d28224990a2b8fbdd7fa66cb071fb867e48`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
 
-The rename changes project identity only. It does not change primitive status, structural semantics, qualification results, revision identity, or previously frozen evidence.
+Draft 0.15 is the latest corrective amendment. It adds no domain operator, structural class, or irreducible primitive.
+
+The rename changes project identity only. It does not change primitive status, structural semantics, qualification results, revision identity, or the meaning of previously recorded evidence.
 
 ## Operating description
 
@@ -22,8 +24,8 @@ The rename changes project identity only. It does not change primitive status, s
 
 ## Naming rule
 
-- **IsoGraph** — current project name.
-- **IsoGraph** — historical project name; retain it inside frozen historical artifacts, quoted review material, old branch names, hashes, and provenance records.
-- Do not mass-rewrite historical artifacts merely for naming consistency.
+- **IsoGraph** is the current project name and the name used by current repository artifacts.
+- Pre-IsoGraph wording remains recoverable from Git history and the pinned migration checkpoint rather than serving as current terminology.
+- Exact legacy source identifiers may retain their original spelling only when needed to identify an immutable historical source.
 
-Migration/import of the active research corpus follows the same evidence-preservation rule.
+See `STATUS.md` for the current qualification state and `MIGRATION.md` for extraction provenance.
