@@ -28,6 +28,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Verify deterministic harness syntax before external call
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/006/tools/run-q006-cold.mjs
+          node --check experiments/006/tools/score-q006.mjs
+
       - name: Execute deterministic preflight and one cold semantic call
         id: cold
         continue-on-error: true
