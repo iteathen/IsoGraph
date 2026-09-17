@@ -1,0 +1,45 @@
+name: Gemini Model Discovery
+
+on:
+  push:
+    branches:
+      - experiment/004-gemini-results
+    paths:
+      - .github/workflows/gemini-model-discovery.yml
+
+permissions:
+  contents: read
+
+jobs:
+  models:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: List generateContent-capable models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}"
+          node <<'NODE'
+          const key = process.env.GEMINI_API_KEY;
+          let pageToken = '';
+          const models = [];
+          do {
+            const u = new URL('https://generativelanguage.googleapis.com/v1beta/models');
+            u.searchParams.set('pageSize','1000');
+            if (pageToken) u.searchParams.set('pageToken', pageToken);
+            const r = await fetch(u, {headers:{'x-goog-api-key':key}});
+            const body = await r.text();
+            if (!r.ok) { console.error(body); process.exit(1); }
+            const data = JSON.parse(body);
+            for (const m of data.models || []) {
+              if ((m.supportedGenerationMethods || []).includes('generateContent')) {
+                models.push({name:m.name,displayName:m.displayName,inputTokenLimit:m.inputTokenLimit,outputTokenLimit:m.outputTokenLimit});
+              }
+            }
+            pageToken = data.nextPageToken || '';
+          } while (pageToken);
+          for (const m of models) console.log(JSON.stringify(m));
+          NODE
