@@ -11,10 +11,10 @@ The first Experiment 002 render represented the Connect4 **research knowledge gr
 That was a useful structural intermediate artifact, but it did not satisfy the intended requirement:
 
 ```text
-Connect4 logic -> native AxiomeSH -> isolated agent -> actual logic
+Connect4 logic -> native IsoGraph -> isolated agent -> actual logic
 ```
 
-The experiment should have treated every failed formalization as pressure on the AxiomeSH specification rather than preserving Draft 0.1 unchanged.
+The experiment should have treated every failed formalization as pressure on the IsoGraph specification rather than preserving Draft 0.1 unchanged.
 
 ## Concrete pressure discovered
 
@@ -128,7 +128,7 @@ Experiment 001 found reference lifetime, shadowing, forward reference, and cycle
 
 The concrete result is:
 
-`research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+`CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
 
 It is experimental branch material only. Draft 0.1 remains frozen as the authority used by Experiment 001.
 
@@ -148,7 +148,7 @@ complete native logical render
 
 Experiment 002 is not complete until a replacement payload contains the proposition structure itself under the expanded candidate spec.
 
-The scoring oracle for the replacement may map opaque semantic symbols to human-readable source concepts, but it MUST NOT supply theorem/formula structure absent from the AxiomeSH payload.
+The scoring oracle for the replacement may map opaque semantic symbols to human-readable source concepts, but it MUST NOT supply theorem/formula structure absent from the IsoGraph payload.
 
 ## Next qualification gate
 

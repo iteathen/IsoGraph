@@ -28,7 +28,7 @@ No new binder mechanism was justified. Draft 0.3 lexical rules remain authoritat
 
 Draft 0.4 requires cold formal probes to select targets using native/raw structure only. Human semantic naming occurs only after the cold result is frozen.
 
-This directly addresses the derivative-chain selection miss without adding English strings to AxiomeSH core.
+This directly addresses the derivative-chain selection miss without adding English strings to IsoGraph core.
 
 ### 3. Add hidden regression authority for the derivative chain
 

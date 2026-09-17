@@ -1,6 +1,6 @@
 # Connect4 normalized logic source — Experiment 002 snapshot
 
-This is a copied logical snapshot for AxiomeSH Experiment 002. It does **not** replace or mutate Connect4 authority.
+This is a copied logical snapshot for IsoGraph Experiment 002. It does **not** replace or mutate Connect4 authority.
 
 - Source: `iteathen/Connect4`
 - Branch: `research/unified-knowledge`

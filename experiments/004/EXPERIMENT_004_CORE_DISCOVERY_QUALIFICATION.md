@@ -1,4 +1,4 @@
-# AxiomeSH Experiment 004 — Core / Structural-Discovery Qualification
+# IsoGraph Experiment 004 — Core / Structural-Discovery Qualification
 
 **Status:** frozen qualification campaign; construction in progress  
 **Branch:** `experiment/axiomesh-native-reconstruction`  
@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-Experiment 004 stops specification expansion and attempts to falsify the current AxiomeSH core/discovery contracts directly.
+Experiment 004 stops specification expansion and attempts to falsify the current IsoGraph core/discovery contracts directly.
 
 The campaign is synthetic by design. Cases are chosen to remove dependence on familiar domain knowledge and expose failures in:
 
@@ -112,7 +112,7 @@ A prompt saying “do not read” is insufficient if the same context already ob
 
 ## 5. Native authority requirement
 
-Load-bearing test policies, role declarations, witness/certificate structures, and result records must have native AxiomeSH representations for Q004-17 and for any case whose result depends on them.
+Load-bearing test policies, role declarations, witness/certificate structures, and result records must have native IsoGraph representations for Q004-17 and for any case whose result depends on them.
 
 Human Markdown/JSON is scorer/reviewer convenience only.
 

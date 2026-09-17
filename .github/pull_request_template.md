@@ -28,7 +28,8 @@ Confirm, where applicable:
 
 ## Historical evidence
 
-- [ ] Frozen historical AxiomeSH artifacts were not mass-renamed or silently reinterpreted under current IsoGraph semantics.
+- [ ] Pre-IsoGraph evidence was not silently reinterpreted under current IsoGraph semantics.
+- [ ] Naming-only edits preserve the meaning and revision identity of the underlying evidence.
 - [ ] Any historical-to-current bridge is explicit and independently checkable.
 
 ## Evidence

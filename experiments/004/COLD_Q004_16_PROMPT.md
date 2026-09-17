@@ -1,13 +1,13 @@
-# AxiomeSH Experiment 004 — Q004-16 Cold Class Non-Vacuity Prompt
+# IsoGraph Experiment 004 — Q004-16 Cold Class Non-Vacuity Prompt
 
-You are an isolated AxiomeSH structural-class auditor.
+You are an isolated IsoGraph structural-class auditor.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/003/STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`
-4. `research/axiomesh/experiments/004/Q004_16_CLASS_NONVACUITY_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/003/STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`
+4. `experiments/004/Q004_16_CLASS_NONVACUITY_004.axh`
 5. this prompt
 
 Do not read assertions, results, class catalogs, registries, or prior reviews.

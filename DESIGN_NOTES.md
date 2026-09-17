@@ -1,4 +1,4 @@
-# AxiomeSH Design Notes
+# IsoGraph Design Notes
 
 **Status:** research notes, not accepted core semantics  
 **Research direction:** Josh Oshiro
@@ -30,7 +30,7 @@ This motivates a distinction among four possible ceilings:
 3. **search ceiling** — the state is clear but combinatorics remain too large;
 4. **learned-operation ceiling** — the needed reasoning transformation is genuinely absent or unreliable.
 
-AxiomeSH is primarily aimed at the first two. Structural quotienting and canonicalization may also reduce some search. It does not assume representation can remove genuine learned-operation limits.
+IsoGraph is primarily aimed at the first two. Structural quotienting and canonicalization may also reduce some search. It does not assume representation can remove genuine learned-operation limits.
 
 ## 2. Latent structural-reasoning hypothesis
 
@@ -51,7 +51,7 @@ Transformers already learn and manipulate implicit relations such as:
 
 Those relations exist internally in distributed learned representations, while the persistent external interface is usually words or human-designed formal notation.
 
-AxiomeSH asks whether an external structural state can become a better coordinate system for those capabilities.
+IsoGraph asks whether an external structural state can become a better coordinate system for those capabilities.
 
 The relevant empirical question is whether the observed ceiling is approximately:
 
@@ -65,7 +65,7 @@ or instead contains a substantial:
 \text{representation}+\text{bookkeeping ceiling}
 \]
 
-If an unchanged model can reliably solve synthesis/optimization tasks in AxiomeSH that it cannot solve in conventional notation under matched resources, that would be evidence for the latter.
+If an unchanged model can reliably solve synthesis/optimization tasks in IsoGraph that it cannot solve in conventional notation under matched resources, that would be evidence for the latter.
 
 ## 3. Natural analog before translation
 
@@ -100,7 +100,7 @@ observed structure
 
 Normalization is unavoidable; semantic translation is not.
 
-The first AxiomeSH form is both semantic representation and wire representation.
+The first IsoGraph form is both semantic representation and wire representation.
 
 Later projections may include:
 
@@ -117,13 +117,13 @@ Those projections must remain downstream of the core.
 Initially:
 
 ```text
-raw input -> AxiomeSH core -> raw output
+raw input -> IsoGraph core -> raw output
 ```
 
 For native operation:
 
 ```text
-AxiomeSH -> agent -> AxiomeSH
+IsoGraph -> agent -> IsoGraph
 ```
 
 This serves two purposes:
@@ -133,7 +133,7 @@ This serves two purposes:
 
 The governing rule is:
 
-> Nothing required for interoperability should become mandatory for native AxiomeSH operation.
+> Nothing required for interoperability should become mandatory for native IsoGraph operation.
 
 ## 5. “Fewest characters” is not the objective
 
@@ -335,7 +335,7 @@ is possible because \(S_t\) retains every distinction required for future valid 
 
 If two histories produce the same \(S_t\) but support different valid continuations, then \(S_t\) was not sufficient.
 
-AxiomeSH should therefore test the minimum state required to restore continuation equivalence.
+IsoGraph should therefore test the minimum state required to restore continuation equivalence.
 
 The expected structure is likely richer than an ordinary chain because inference can involve:
 
@@ -417,13 +417,13 @@ The project needs at least conceptual separation among:
 
 These may not collapse into one universal equivalence relation.
 
-AxiomeSH should expose common cores and residuals rather than force false equivalence.
+IsoGraph should expose common cores and residuals rather than force false equivalence.
 
 ## 15. Composition as the central research problem
 
 Local predicates or individually valid fragments do not guarantee globally realizable composition.
 
-AxiomeSH therefore treats composition as a core problem rather than syntax sugar.
+IsoGraph therefore treats composition as a core problem rather than syntax sugar.
 
 When a representation factors a structure, always ask:
 
@@ -442,7 +442,7 @@ A fair benchmark should compare:
 - natural language;
 - established formal logic;
 - conventional structured representations;
-- AxiomeSH candidates;
+- IsoGraph candidates;
 
 at matched context and compute budgets.
 
@@ -462,13 +462,13 @@ Expected advantage, if the core hypothesis is correct, is likely asymmetric:
 
 ```text
 small isolated problem:
-  conventional logic ~= AxiomeSH
+  conventional logic ~= IsoGraph
 
 medium multi-source corpus:
-  AxiomeSH may outperform
+  IsoGraph may outperform
 
 large heterogeneous multi-session corpus:
-  AxiomeSH has the largest opportunity
+  IsoGraph has the largest opportunity
 ```
 
 This is a prediction to test, not a result.
@@ -479,7 +479,7 @@ The research direction should be weakened or abandoned if:
 
 - graph/rewrite representation repeatedly needs artificial scaffolding that another exact substrate avoids;
 - exact reconstruction fails without hidden natural-language assumptions;
-- agents must mentally decompress AxiomeSH before every useful operation;
+- agents must mentally decompress IsoGraph before every useful operation;
 - synthesis is no better at matched context/compute;
 - canonicalization destroys distinctions needed later;
 - context savings disappear under real tokenizers;

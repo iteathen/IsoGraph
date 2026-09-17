@@ -12,7 +12,7 @@ Qualify the step before pairwise comparison: which independently represented obj
 
 A perfect pairwise verifier cannot recover a true relation that retrieval/indexing/extraction never proposes.
 
-For AxiomeSH representation qualification, at least one candidate-generation path MUST derive candidacy from native structural evidence without requiring source/class labels as semantic authority.
+For IsoGraph representation qualification, at least one candidate-generation path MUST derive candidacy from native structural evidence without requiring source/class labels as semantic authority.
 
 ---
 
@@ -67,7 +67,7 @@ A resource is not safely excluded merely because instructions say not to use it 
 
 ## 3. Native discovery records are authoritative
 
-The load-bearing discovery policy and result records MUST be representable as ordinary native AxiomeSH structure or qualified native dependencies.
+The load-bearing discovery policy and result records MUST be representable as ordinary native IsoGraph structure or qualified native dependencies.
 
 At minimum native records exist for:
 
@@ -105,7 +105,7 @@ Pair-conditioned post-hoc interpretation choice, extraction, or factorization is
 
 Representation qualification MUST include at least one candidate-generation channel whose accessible semantic inputs are limited to:
 
-- discovery-visible native AxiomeSH structure;
+- discovery-visible native IsoGraph structure;
 - qualified N0/N1 normalization;
 - frozen allowed structural D factorizations/extractions;
 - qualified structural indexes/fingerprints;
@@ -313,7 +313,7 @@ model/index tuning history
 
 Final representation claims use sealed/fresh held-out or synthetic/adversarial cases not used for training/tuning.
 
-Learned label-assisted recall can demonstrate operational utility but cannot replace the mandatory structural-only path for the AxiomeSH representation hypothesis.
+Learned label-assisted recall can demonstrate operational utility but cannot replace the mandatory structural-only path for the IsoGraph representation hypothesis.
 
 ---
 

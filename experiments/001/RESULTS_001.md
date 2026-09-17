@@ -19,7 +19,7 @@ N01-N02  near-isomorphic adversarial pairs
 Three representation families exist for the same semantic cases:
 
 ```text
-AXIOMESH_001.md
+ISOGRAPH_001.md
 JSON_BASELINE_001.json
 NATURAL_LANGUAGE_001.md
 ```
@@ -42,7 +42,7 @@ This is **not qualification evidence** because the same research context that ge
 
 ### P01
 
-Expected exact structure: three ordered hyperedges in one unordered scope. Atoms `27`, `63`, and `88` each occur in two edges. AxiomeSH payload preserves all three shared identities.
+Expected exact structure: three ordered hyperedges in one unordered scope. Atoms `27`, `63`, and `88` each occur in two edges. IsoGraph payload preserves all three shared identities.
 
 Preflight: PASS.
 

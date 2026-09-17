@@ -10,7 +10,7 @@
 - `profiles/PROFILE_CLASSICAL_PROPOSITIONAL_003.axh`
 - `profiles/PROFILE_CLASSICAL_PROPOSITIONAL_003.md`
 
-The module carries explicit native derivability/context rules for implication, constructive connectives, negation, bottom, and double-negation elimination. Classicality is profile-owned rather than inherited from AxiomeSH core or model priors.
+The module carries explicit native derivability/context rules for implication, constructive connectives, negation, bottom, and double-negation elimination. Classicality is profile-owned rather than inherited from IsoGraph core or model priors.
 
 **Draft 0.7 disposition:** retain as a candidate, but audit every named rule under the primitive/derived distinction before calling the profile E3-complete.
 

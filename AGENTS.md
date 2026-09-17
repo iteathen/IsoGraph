@@ -10,7 +10,7 @@ Before substantive work, read `README.md`, `MIGRATION.md`, and the current cumul
 2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
 3. `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`
 
-Treat older specifications and experiments as historical evidence under their recorded semantics. Do not silently reinterpret or rename historical artifacts.
+Treat older specifications and experiments as historical evidence under the semantics recorded at their revision. Naming-only normalization to **IsoGraph** must not change the represented structure, claims, expected results, qualification status, or evidence meaning. The exact pre-normalization bytes remain recoverable through Git history and the pinned migration checkpoint.
 
 ## Research discipline
 

@@ -296,7 +296,7 @@ Circular aliases alone are invalid.
 
 A qualified reusable class MUST have at least one candidate-generation path by which an unlabeled new instance can reach pairwise comparison using only discovery-visible native structural evidence plus qualified structural transformations/indexes.
 
-Qualified labels may accelerate later retrieval but cannot replace the structural-only path for AxiomeSH representation qualification.
+Qualified labels may accelerate later retrieval but cannot replace the structural-only path for IsoGraph representation qualification.
 
 Any class fingerprint/index records:
 

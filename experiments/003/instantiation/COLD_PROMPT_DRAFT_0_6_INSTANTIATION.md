@@ -1,6 +1,6 @@
 # Draft 0.6 Structural Instantiation — Cold Qualification Prompt
 
-You are an isolated decoder for a focused AxiomeSH Draft 0.6 qualification.
+You are an isolated decoder for a focused IsoGraph Draft 0.6 qualification.
 
 This is a qualification task, not a language-design task. Do not repair, extend, reinterpret, or simplify the supplied candidate.
 
@@ -11,13 +11,13 @@ Branch: `experiment/axiomesh-native-reconstruction`
 
 Read ONLY:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
-3. `research/axiomesh/CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
-4. `research/axiomesh/CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
-5. `research/axiomesh/CORE_SPEC_DRAFT_0_6_CANDIDATE.md`
-6. `research/axiomesh/experiments/003/instantiation/COLD_PROMPT_DRAFT_0_6_INSTANTIATION.md`
-7. `research/axiomesh/experiments/003/instantiation/DRAFT_0_6_INSTANTIATION_CASES.axh`
+1. `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
+3. `CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
+4. `CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
+5. `CORE_SPEC_DRAFT_0_6_CANDIDATE.md`
+6. `experiments/003/instantiation/COLD_PROMPT_DRAFT_0_6_INSTANTIATION.md`
+7. `experiments/003/instantiation/DRAFT_0_6_INSTANTIATION_CASES.axh`
 
 Do NOT read any other repository file, issue, PR, commit diff, oracle, result, benchmark source, semantic glossary, or prior conversation.
 
@@ -60,7 +60,7 @@ Also report signature closure for the case bundle.
 Return:
 
 - one table or clearly separated section for cases `1..8`;
-- normalized raw AxiomeSH, not English paraphrase, for each valid reducible result;
+- normalized raw IsoGraph, not English paraphrase, for each valid reducible result;
 - PASS/FAIL for each specific check;
 - any parser/binding ambiguity;
 - overall PASS/FAIL for the Draft 0.6 structural-instantiation surface exercised here.

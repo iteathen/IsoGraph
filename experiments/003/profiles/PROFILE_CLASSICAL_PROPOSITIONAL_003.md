@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Provide an explicit native natural-deduction authority for classical propositional benchmarks without making classical proof theory part of AxiomeSH core semantics.
+Provide an explicit native natural-deduction authority for classical propositional benchmarks without making classical proof theory part of IsoGraph core semantics.
 
 The module is intended for benchmarks such as FL-001 and as the propositional base of classical FOL modules.
 

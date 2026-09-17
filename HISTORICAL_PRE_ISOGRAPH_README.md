@@ -1,4 +1,4 @@
-# AxiomeSH
+# IsoGraph
 
 **Status:** research incubation  
 **Research direction:** Josh Oshiro  
@@ -6,7 +6,7 @@
 **Current candidate authority for new qualification artifacts:** `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md` + `CORE_SPEC_DRAFT_0_14_CANDIDATE.md` + `CORE_SPEC_DRAFT_0_15_CANDIDATE.md`  
 **Current phase:** specification-growth freeze; focused structural falsification/qualification
 
-AxiomeSH is an experimental agent-native structural knowledge representation.
+IsoGraph is an experimental agent-native structural knowledge representation.
 
 Its central research question is:
 
@@ -40,7 +40,7 @@ Drafts 0.1–0.12 and earlier protocol revisions remain frozen design/experiment
 
 ## Objective
 
-AxiomeSH aims to maximize:
+IsoGraph aims to maximize:
 
 > **durable correct agent synthesis per total lifecycle resource cost**
 
@@ -59,7 +59,7 @@ Token/character count is a cost, not the objective.
 ## Native path
 
 ```text
-raw AxiomeSH -> agent -> raw AxiomeSH
+raw IsoGraph -> agent -> raw IsoGraph
 ```
 
 No mandatory English parser, theorem-language translation, JSON envelope, database adapter, or model-specific semantic layer belongs in the native correctness path.
@@ -86,17 +86,17 @@ Labels are retained because they help agents retrieve and reconstruct higher-lev
 
 A perfect pairwise isomorphism checker is insufficient if candidate retrieval never places true cross-domain correspondences in front of it.
 
-For qualification of the AxiomeSH representation hypothesis, at least one candidate-generation path must operate from discovery-visible native structural evidence without source/domain/class labels as semantic authority.
+For qualification of the IsoGraph representation hypothesis, at least one candidate-generation path must operate from discovery-visible native structural evidence without source/domain/class labels as semantic authority.
 
 Label-assisted or learned semantic retrieval may run in parallel as acceleration and is measured separately.
 
 Structural fingerprints, learned indexes, class labels, and source labels are retrieval machinery—not correspondence witnesses.
 
-A fingerprint/index is qualified for an explicit representation/factorization stage. A raw-stage invariant cannot silently prune a topology-changing D factorization, and AxiomeSH does not assume one canonical post-D factorization for indexing convenience.
+A fingerprint/index is qualified for an explicit representation/factorization stage. A raw-stage invariant cannot silently prune a topology-changing D factorization, and IsoGraph does not assume one canonical post-D factorization for indexing convenience.
 
 ## Isomorphism safety
 
-AxiomeSH must avoid both:
+IsoGraph must avoid both:
 
 - **false negatives:** related objects fail to meet because names, namespaces, serialization, factorization, extraction, indexing, or retrieval differ;
 - **false positives:** different objects collapse because constraints, multiplicity, boundaries, domains, residuals, relation signature, parameter choices, source interpretation, or search incompleteness are hidden.
@@ -163,7 +163,7 @@ Variables have reconstructable owners/roles. A closed declarative object contain
 
 ## Decomposition is plural
 
-AxiomeSH does not assume one primitive-normal factorization.
+IsoGraph does not assume one primitive-normal factorization.
 
 Qualified factorization graphs preserve exact definitions, refinements, projections, E-equivalences, extraction relations, and unresolved alternatives.
 
@@ -263,7 +263,7 @@ Historical reproducibility is not current structural qualification.
 
 ## Ownership boundary
 
-This research lives in CUDA-JS as an incubation host. AxiomeSH is not a CUDA-JS runtime responsibility. If it becomes independently load-bearing, it should move to a dedicated repository/package with its own authority/contracts.
+This research lives in CUDA-JS as an incubation host. IsoGraph is not a CUDA-JS runtime responsibility. If it becomes independently load-bearing, it should move to a dedicated repository/package with its own authority/contracts.
 
 ## Current operating principle
 

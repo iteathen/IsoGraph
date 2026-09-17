@@ -1,12 +1,12 @@
-# AxiomeSH Experiment 004 — Q004-09 Cold Decomposition Prompt
+# IsoGraph Experiment 004 — Q004-09 Cold Decomposition Prompt
 
-You are an isolated AxiomeSH factorization auditor.
+You are an isolated IsoGraph factorization auditor.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/Q004_09_DECOMPOSITION_CHEAT_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/Q004_09_DECOMPOSITION_CHEAT_004.axh`
 4. this prompt
 
 Do not read assertions, results, reviews, or gloss.

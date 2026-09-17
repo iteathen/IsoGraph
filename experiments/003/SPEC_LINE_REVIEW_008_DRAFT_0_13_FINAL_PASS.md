@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.13 Final-Pass Review — Native Discovery Authority
+# IsoGraph Draft 0.13 Final-Pass Review — Native Discovery Authority
 
 **Status:** corrective audit  
 **Scope:** `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md` and Protocol 005 artifacts  
@@ -18,9 +18,9 @@ independently demonstrated hidden-label recall guarantee
 
 for a general discovery system.
 
-That second branch is too permissive for the **AxiomeSH representation hypothesis**. A learned retriever trained on semantic/class labels could achieve hidden-label recall while the native structural representation contributes little to discovery.
+That second branch is too permissive for the **IsoGraph representation hypothesis**. A learned retriever trained on semantic/class labels could achieve hidden-label recall while the native structural representation contributes little to discovery.
 
-Such a retriever may be useful operationally, but it cannot substitute for evidence that AxiomeSH itself exposes the correspondence.
+Such a retriever may be useful operationally, but it cannot substitute for evidence that IsoGraph itself exposes the correspondence.
 
 **Correction:**
 
@@ -32,7 +32,7 @@ Such a retriever may be useful operationally, but it cannot substitute for evide
 
 Draft 0.13 specifies detailed witness/policy fields but does not explicitly require the load-bearing policy/witness to be representable natively.
 
-If the actual relation depends on an English/JSON sidecar that says which roles are rigid, which labels may map, which ports correspond, or which residuals exist, AxiomeSH has reintroduced a semantic translation layer exactly at the isomorphism boundary.
+If the actual relation depends on an English/JSON sidecar that says which roles are rigid, which labels may map, which ports correspond, or which residuals exist, IsoGraph has reintroduced a semantic translation layer exactly at the isomorphism boundary.
 
 **Correction:**
 
@@ -49,7 +49,7 @@ class membership/class-class witness
 discovery result record
 ```
 
-must be expressible as ordinary native AxiomeSH structure or an explicitly qualified native dependency.
+must be expressible as ordinary native IsoGraph structure or an explicitly qualified native dependency.
 
 Human Markdown/JSON reports may mirror those objects for review but are non-authoritative.
 

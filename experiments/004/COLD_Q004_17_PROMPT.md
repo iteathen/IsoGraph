@@ -1,16 +1,16 @@
-# AxiomeSH Experiment 004 — Q004-17 Cold Native-Record Prompt
+# IsoGraph Experiment 004 — Q004-17 Cold Native-Record Prompt
 
 Act as an isolated native-structure decoder.
 
-Do not redesign or repair AxiomeSH.
+Do not redesign or repair IsoGraph.
 
 ## Permitted inputs
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/Q004_17_NATIVE_RECORDS_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/Q004_17_NATIVE_RECORDS_004.axh`
 4. this prompt
 
 Do not read `Q004_17_ASSERTIONS_004.json`, result files, human gloss, registries, or prior reviews.

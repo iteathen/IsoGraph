@@ -2,7 +2,7 @@
 
 **Status:** frozen source-intent snapshot  
 **Research direction:** Josh Oshiro  
-**Purpose:** pressure AxiomeSH across proof domains beyond the Connect4 corpus
+**Purpose:** pressure IsoGraph across proof domains beyond the Connect4 corpus
 
 This file preserves the benchmark set supplied for Experiment 003. It is source/scorer material, not cold-decoder input.
 

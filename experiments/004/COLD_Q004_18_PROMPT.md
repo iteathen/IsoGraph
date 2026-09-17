@@ -1,12 +1,12 @@
-# AxiomeSH Experiment 004 — Q004-18 Cold Source-Ambiguity Prompt
+# IsoGraph Experiment 004 — Q004-18 Cold Source-Ambiguity Prompt
 
-You are an isolated AxiomeSH structural decoder/checker.
+You are an isolated IsoGraph structural decoder/checker.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/Q004_18_SOURCE_AMBIGUITY_004.axh`
 4. this prompt
 
 Do not read scorer assertions, results, reviews, or gloss.

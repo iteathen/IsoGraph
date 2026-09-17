@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.1–0.8 Line Review — Isomorphism Safety
+# IsoGraph Draft 0.1–0.8 Line Review — Isomorphism Safety
 
 **Status:** corrective audit  
 **Scope:** `CORE_SPEC_DRAFT_0_1.md` through `CORE_SPEC_DRAFT_0_8_CANDIDATE.md`  
@@ -8,7 +8,7 @@ This review treats the historical drafts as evidence and preserves them for repr
 
 ## Governing correctness target
 
-AxiomeSH must make structural correspondence discoverable without allowing names, serialization choices, decomposition choices, or convenience syntax to determine the answer.
+IsoGraph must make structural correspondence discoverable without allowing names, serialization choices, decomposition choices, or convenience syntax to determine the answer.
 
 The required order is stricter than Draft 0.8 currently states:
 
@@ -637,7 +637,7 @@ alternative-factorization pair
 misleading/swapped-label pair
 ```
 
-A class system that passes only positive examples is not qualified for AxiomeSH's central use.
+A class system that passes only positive examples is not qualified for IsoGraph's central use.
 
 ---
 

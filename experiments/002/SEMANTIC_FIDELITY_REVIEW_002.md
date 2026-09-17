@@ -57,7 +57,7 @@ This is still author-side evidence. It does not establish that:
 - Draft 0.2 is the smallest or best representation;
 - every theory symbol's intended human gloss is inferable without a scoring signature;
 - the represented Connect4 research claims are themselves true beyond their source epistemic status;
-- AxiomeSH improves reasoning, token cost, latency, or synthesis versus a baseline.
+- IsoGraph improves reasoning, token cost, latency, or synthesis versus a baseline.
 
 Those are separate qualification questions.
 

@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.9 Candidate
+# IsoGraph Core Specification — Draft 0.9 Candidate
 
 **Status:** experimental tightening produced by line-by-line isomorphism review of Drafts 0.1–0.8; self-reviewed before qualification  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5 → Draft 0.6 → Draft 0.7 → Draft 0.8  
@@ -7,7 +7,7 @@
 
 Draft 0.9 makes isomorphism safety constitutional.
 
-AxiomeSH's central value depends on finding common structure across independently named domains without either:
+IsoGraph's central value depends on finding common structure across independently named domains without either:
 
 - missing correspondence because labels, IDs, serialization, or factorization differ; or
 - manufacturing false correspondence by erasing a load-bearing distinction.
@@ -165,7 +165,7 @@ source object
 
 where each `Di` is a qualified decomposition/factorization node.
 
-AxiomeSH MUST NOT choose one factorization merely because it makes a desired class/isomorphism easier to see.
+IsoGraph MUST NOT choose one factorization merely because it makes a desired class/isomorphism easier to see.
 
 ### 3.1 Factorization graph
 
@@ -498,7 +498,7 @@ B = C + ΔB
 
 `ΔA` and `ΔB` MUST remain explicit, including any relation crossing from the common core into unmatched structure.
 
-AxiomeSH must prefer a precise common core plus residuals over a larger but false equivalence.
+IsoGraph must prefer a precise common core plus residuals over a larger but false equivalence.
 
 ### 8.7 Multiple valid mappings and automorphisms
 

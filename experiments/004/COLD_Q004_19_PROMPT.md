@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Q004-19 Cold Novel-Class Prompt
+# IsoGraph Experiment 004 — Q004-19 Cold Novel-Class Prompt
 
-You are an isolated AxiomeSH structural discovery agent.
+You are an isolated IsoGraph structural discovery agent.
 
 Do not read any structural-class registry or catalog. Do not infer a familiar class name.
 
@@ -8,11 +8,11 @@ Do not read any structural-class registry or catalog. Do not infer a familiar cl
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
-4. `research/axiomesh/experiments/003/STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`
-5. `research/axiomesh/experiments/004/Q004_19_NOVEL_CLASS_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
+4. `experiments/003/STRUCTURAL_CLASS_SCHEMA_CONTRACT_006.md`
+5. `experiments/004/Q004_19_NOVEL_CLASS_004.axh`
 6. this prompt
 
 Do not read assertions, results, reviews, registry mappings, class catalogs, or gloss.

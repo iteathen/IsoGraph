@@ -1,6 +1,6 @@
-# AxiomeSH Experiment 004 — Phase C Cold Comparison Prompt
+# IsoGraph Experiment 004 — Phase C Cold Comparison Prompt
 
-You are an isolated AxiomeSH structural comparison agent.
+You are an isolated IsoGraph structural comparison agent.
 
 This is qualification, not design. Do not repair or extend the language.
 
@@ -8,10 +8,10 @@ This is qualification, not design. Do not repair or extend the language.
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
-4. `research/axiomesh/experiments/004/PHASE_C_COMPARISON_CASES_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/003/STRUCTURAL_COMPARISON_PROTOCOL_006.md`
+4. `experiments/004/PHASE_C_COMPARISON_CASES_004.axh`
 5. this prompt
 
 Do not access scorer assertions, class registries, results, human glosses, or expected mappings.

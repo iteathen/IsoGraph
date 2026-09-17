@@ -1,4 +1,4 @@
-# AxiomeSH Draft 0.9 Second-Pass Line Review
+# IsoGraph Draft 0.9 Second-Pass Line Review
 
 **Status:** corrective audit  
 **Input authority:** live `experiment/axiomesh-native-reconstruction` at `513b5497abeb0e2ce9c93724fcdeb3d450122254`  

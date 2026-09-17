@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.2 Candidate
+# IsoGraph Core Specification — Draft 0.2 Candidate
 
 **Status:** experimental candidate produced by Experiment 002  
 **Parent:** `CORE_SPEC_DRAFT_0_1.md`  
@@ -7,7 +7,7 @@
 
 Draft 0.2 exists because the Connect4 corpus exposed a genuine expressiveness gap in Draft 0.1. Draft 0.1 can represent identity, incidence, scope, matching, and rewrite topology, but it cannot natively distinguish an opaque object identity from an exact numeric value or a theory-level semantic symbol, and it does not provide a complete declarative proposition form for quantification, implication, equality, or classical negation.
 
-The correction is deliberately small. AxiomeSH remains structurally native. The new forms are introduced only where the Experiment 002 source could not otherwise be represented without hiding meaning in an oracle.
+The correction is deliberately small. IsoGraph remains structurally native. The new forms are introduced only where the Experiment 002 source could not otherwise be represented without hiding meaning in an oracle.
 
 ---
 
@@ -20,7 +20,7 @@ Draft 0.2 retains these requirements unchanged:
 - canonical integrity;
 - recoverability;
 - no mandatory translation layer;
-- raw native AxiomeSH input/output;
+- raw native IsoGraph input/output;
 - qualified-agent performance as an empirical gate;
 - architecture independence;
 - adapters must remain optional around the native path.
@@ -34,7 +34,7 @@ knowledge = relational structure + lawful structural transformation
 and the native path remains:
 
 ```text
-AxiomeSH -> agent -> AxiomeSH
+IsoGraph -> agent -> IsoGraph
 ```
 
 ---
@@ -115,7 +115,7 @@ A semantic symbol is stable inside the represented theory and is not interchange
 
 A semantic symbol may denote a relation, function, proposition constructor, algebraic operation, domain constant, epistemic class, or another theory-owned semantic role.
 
-AxiomeSH itself does not require English names for these symbols.
+IsoGraph itself does not require English names for these symbols.
 
 Two theories may be compared under an explicit symbol mapping, but ordinary structural alpha-renaming does not silently rename semantic symbols.
 
@@ -319,7 +319,7 @@ means no matching instance is present for an operational match.
 
 is a proposition asserting negation inside the represented theory.
 
-Whether a represented theory is classical, intuitionistic, paraconsistent, or otherwise determines what further laws govern `~`; AxiomeSH only preserves the distinction.
+Whether a represented theory is classical, intuitionistic, paraconsistent, or otherwise determines what further laws govern `~`; IsoGraph only preserves the distinction.
 
 ---
 
@@ -341,7 +341,7 @@ would be written with the theory's numeric symbol ID, for example:
 
 The symbol's mathematical role is part of the represented theory/signature.
 
-This keeps AxiomeSH below any one arithmetic or set theory while allowing exact formulas to be represented.
+This keeps IsoGraph below any one arithmetic or set theory while allowing exact formulas to be represented.
 
 A corpus that needs arithmetic must therefore include the semantic symbol identities it uses and enough theory structure for the intended reasoning task.
 
@@ -349,7 +349,7 @@ A corpus that needs arithmetic must therefore include the semantic symbol identi
 
 ## 12. Sets and cardinality are theory-level values
 
-An unordered AxiomeSH scope is not automatically an extensional mathematical set.
+An unordered IsoGraph scope is not automatically an extensional mathematical set.
 
 If a represented theory needs sets, membership, subset, union, cardinality, antichains, or closure families, it must represent those concepts with semantic symbols and applications.
 
@@ -683,4 +683,4 @@ Reject or simplify any addition that:
 - makes canonicalization intractable for the intended use without compensating reasoning gain;
 - causes agents to reason worse than over a simpler exact representation.
 
-The purpose of this candidate is to make Experiment 002 honest: the proposition itself must live in AxiomeSH, not only its position in a graph.
+The purpose of this candidate is to make Experiment 002 honest: the proposition itself must live in IsoGraph, not only its position in a graph.

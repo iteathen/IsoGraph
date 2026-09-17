@@ -53,7 +53,7 @@ This removes the only parse ambiguity reported by #267.
 
 The decoder recovered the complete formal topology but correctly refused to guess English names for primitive semantic symbols such as `^1120` or `^1253`.
 
-That is not itself a failure: AxiomeSH semantic symbols are intended to be agent-native stable identities, not English identifiers.
+That is not itself a failure: IsoGraph semantic symbols are intended to be agent-native stable identities, not English identifiers.
 
 However, the theory did not natively declare which `^n` symbols belonged to its signature; that inventory lived only in the reviewer JSON glossary.
 

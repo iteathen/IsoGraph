@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Experiment 003 pressures AxiomeSH across formal systems whose source notations and proof rules differ materially.
+Experiment 003 pressures IsoGraph across formal systems whose source notations and proof rules differ materially.
 
 The experiment is now explicitly testing two coupled claims:
 

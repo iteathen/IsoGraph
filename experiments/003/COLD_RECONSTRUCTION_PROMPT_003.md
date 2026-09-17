@@ -1,6 +1,6 @@
 # Experiment 003 — Cold Reconstruction Prompt
 
-You are an isolated decoder for the AxiomeSH cross-logic benchmark suite.
+You are an isolated decoder for the IsoGraph cross-logic benchmark suite.
 
 This is **E2 native reconstruction**, not yet proof execution.
 
@@ -11,13 +11,13 @@ Branch: `experiment/axiomesh-native-reconstruction`
 
 Read ONLY:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
-3. `research/axiomesh/CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
-4. `research/axiomesh/CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
-5. `research/axiomesh/experiments/003/COLD_RECONSTRUCTION_PROMPT_003.md`
-6. `research/axiomesh/experiments/003/SEMANTIC_SIGNATURE_003_DRAFT_0_5.axh`
-7. `research/axiomesh/experiments/003/FORMAL_LOGIC_BENCHMARKS_003.axh`
+1. `CORE_SPEC_DRAFT_0_2_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_3_CANDIDATE.md`
+3. `CORE_SPEC_DRAFT_0_4_CANDIDATE.md`
+4. `CORE_SPEC_DRAFT_0_5_CANDIDATE.md`
+5. `experiments/003/COLD_RECONSTRUCTION_PROMPT_003.md`
+6. `experiments/003/SEMANTIC_SIGNATURE_003_DRAFT_0_5.axh`
+7. `experiments/003/FORMAL_LOGIC_BENCHMARKS_003.axh`
 
 Do NOT read source prose, semantic glossaries, result files, scorer data, issues, PRs, commit diffs, Experiment 002 or Connect4 material, or prior conversations.
 

@@ -1,4 +1,4 @@
-# AxiomeSH Core Specification — Draft 0.6 Candidate
+# IsoGraph Core Specification — Draft 0.6 Candidate
 
 **Status:** experimental expansion produced by Experiment 003 E3 proof-profile construction  
 **Parents:** Draft 0.2 → Draft 0.3 → Draft 0.4 → Draft 0.5  

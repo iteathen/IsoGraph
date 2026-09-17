@@ -8,9 +8,9 @@
 
 ## Purpose
 
-Render the normalized Connect4 structural-logic research corpus into native AxiomeSH without mutating or relocating Connect4 research.
+Render the normalized Connect4 structural-logic research corpus into native IsoGraph without mutating or relocating Connect4 research.
 
-Connect4 is read-only source material. Every copied source snapshot, AxiomeSH render, candidate specification, oracle, test protocol, audit, and result belongs only on this CUDA-JS experimental branch.
+Connect4 is read-only source material. Every copied source snapshot, IsoGraph render, candidate specification, oracle, test protocol, audit, and result belongs only on this CUDA-JS experimental branch.
 
 Experiment 002 is also a language-development pressure test. When source logic or an isolated decode exposes a real representation/qualification defect, the experimental candidate may tighten minimally and must then be independently tested again.
 
@@ -188,7 +188,7 @@ Issue #268 is an example of a protocol/serialization pressure, not evidence for 
 
 - Do not mutate Connect4.
 - Do not replace Connect4 canonical research authority.
-- Do not claim AxiomeSH superiority from conversion success.
+- Do not claim IsoGraph superiority from conversion success.
 - Do not make English naming mandatory for agent-native semantics.
 - Do not turn empirical/hypothetical material into theorem authority.
 - Do not force declarative formulas to become operational rewrites.

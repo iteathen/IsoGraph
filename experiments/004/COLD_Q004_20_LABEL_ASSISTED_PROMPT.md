@@ -1,15 +1,15 @@
-# AxiomeSH Experiment 004 — Q004-20 Label-Assisted Retrieval Prompt
+# IsoGraph Experiment 004 — Q004-20 Label-Assisted Retrieval Prompt
 
-You are an isolated AxiomeSH retrieval/comparison agent for the **assisted** channel.
+You are an isolated IsoGraph retrieval/comparison agent for the **assisted** channel.
 
 ## Permitted inputs
 
 Read only:
 
-1. `research/axiomesh/CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
-2. `research/axiomesh/CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
-3. `research/axiomesh/experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh`
-4. `research/axiomesh/experiments/004/Q004_20_LABEL_ASSIST_004.axh`
+1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
+2. `CORE_SPEC_DRAFT_0_14_CANDIDATE.md`
+3. `experiments/004/Q004_20_STRUCTURE_CORPUS_004.axh`
+4. `experiments/004/Q004_20_LABEL_ASSIST_004.axh`
 5. this prompt
 
 Do not read assertions, results, registries, or prior reviews.
