@@ -27,12 +27,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: bash experiments/004/tools/archive-gemini-v3-evidence.sh
 
-      - name: Commit frozen evidence
+      - name: Commit frozen evidence verbatim
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add experiments/004/cold-results/gemini/raw
-          git diff --cached --check
           git commit -m "experiment: archive Gemini V3 cold evidence"
           git push origin HEAD:experiment/004-gemini-results
