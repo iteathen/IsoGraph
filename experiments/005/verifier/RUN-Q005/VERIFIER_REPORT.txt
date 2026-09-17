@@ -1,0 +1,73 @@
+# Independent Scorer-Blind Verification Report — IsoGraph Experiment 005
+
+**Model:** gemini-flash-lite-latest  
+**Frozen Qualification Source:** `iteathen/IsoGraph @ fa733d533cd683c5064c4f31fa6c083fa3aed21d` (Draft 0.16 Consolidated Candidate)  
+**Verification Target:** `experiments/005/COLD_Q005_PROMPT.md` and `experiments/005/Q005_OBLIGATION_SUFFICIENCY.isg` against the frozen cold qualification report.
+
+---
+
+## Case-by-Case Claim Verification
+
+### Q005-01: Isomorphism and Witness Sufficiency (`1000` vs `2000`)
+* **Material Claims Made by Frozen Report:**
+  1. An isomorphism exists between `1000` and `2000`. (**VERIFIED**)
+  2. Minimum witness evidence for existence requires exactly one verified isomorphism mapping witness. (**VERIFIED** per Section 30.2)
+  3. The automorphism group of the 8 symmetric leaves yields $|S_8| = 40,320$ mappings. (**VERIFIED**)
+  4. Complete-family claims do not require explicit enumeration when an exact family certificate (one verified isomorphism plus the exact generating description of $\text{Aut}_C(1000) \cong S_8$) is available. (**VERIFIED** per Section 30.2 & 30.4)
+
+### Q005-02: Context-Scoped Witness Quotients (`3000` under `3010` vs `3011`)
+* **Material Claims Made by Frozen Report:**
+  1. Swapping identities `31` and `32` is structurally admissible under context `3010` (relation `^91002` excluded). (**VERIFIED**)
+  2. Swapping `31` and `32` is inadmissible under context `3011` (relation `^91002` active on `31` but not `32`). (**VERIFIED**)
+  3. A witness quotient justified under context `3010` cannot be reused under context `3011`. (**VERIFIED** per Section 30.3)
+  4. Quotients used for search pruning or family coverage must be independently frozen and verified to preserve all active distinctions before execution. (**VERIFIED**)
+
+### Q005-03: Factorization-Node vs. Factorization-Space Scope (`4000` vs `5000`)
+* **Material Claims Made by Frozen Report:**
+  1. Nodes `4100` (path) and `5100` (star) are not isomorphic; nodes `4101` (3-cycle) and `5101` (3-cycle) are isomorphic. (**VERIFIED**)
+  2. The comparison of `4100` and `5100` establishes non-isomorphism local to those nodes, but does not establish a global negative across sources `4000` and `5000`. (**VERIFIED** per Section 21.1.1)
+  3. A claim of factorization-space completeness (no correspondence anywhere in the declared space) requires declaring the complete eligible universe and providing exhaustive search or a qualified coverage certificate. (**VERIFIED**)
+
+### Q005-04: Proof-Method Neutrality and Canonical Serializer Non-Prerequisite (`6000` vs `7000`)
+* **Material Claims Made by Frozen Report:**
+  1. `6000` and `7000` are isomorphic under V0 with a direct bijective mapping witness. (**VERIFIED**)
+  2. A canonical serializer or canonical label record is not semantically required to qualify an isomorphism; verification is an evidence-obligation check rather than a mandatory algorithm. (**VERIFIED** per Section 29.3, 32.4, and 42.3 Control 4)
+
+### Q005-05: Certificate-Backed Negatives (`8000` vs `9000`)
+* **Material Claims Made by Frozen Report:**
+  1. `8000` and `9000` are non-isomorphic because direct member occurrence multiplicities differ ($1 \neq 2$ under Section 8.1). (**VERIFIED**)
+  2. A direct separating invariant (cardinality of member occurrences) successfully certifies non-isomorphism. (**VERIFIED**)
+  3. Exhaustive mapping search is not additionally required when a valid separating invariant or certificate is established. (**VERIFIED** per Section 25)
+
+### Q005-06: Weak vs. Strong Embeddings (`10000` into `11000` under `10010`)
+* **Material Claims Made by Frozen Report:**
+  1. A weak embedding exists from `10000` into `11000` under context `10010`. (**VERIFIED**)
+  2. A strong/induced embedding does not exist because the target contains an extra relation (`^91002`) not reflected in the source. (**VERIFIED**)
+  3. Qualifying the weak relation does not require proving or demanding the stronger relation. (**VERIFIED** per Section 29.2)
+  4. The unmapped target relation is correctly accounted for as target residual. (**VERIFIED** per Section 25 & 30)
+
+### Q005-07: Pairwise vs. Source Reconstruction (`12000` -> `12100` and `13000` -> `13100`)
+* **Material Claims Made by Frozen Report:**
+  1. Comparison-stage objects `12100` and `13100` are isomorphic under V0. (**VERIFIED**)
+  2. Comparison-stage relations and pairwise reconstruction claims can qualify even when full-source D records are lossy (`#0`), because D-local residuals and pairwise residuals belong to separate accounting layers. (**VERIFIED** per Section 19.4)
+  3. Full-source reconstruction remains unavailable, and merging D-local residuals with pairwise residuals is strictly prohibited. (**VERIFIED**)
+
+### Q005-08: Dependency-Closed Obligation Closure and Profile Audit (`14000` vs `15000`)
+* **Material Claims Made by Frozen Report:**
+  1. The claimed isomorphism between `14000` (`^92001`) and `15000` (`^92002`) is not qualified under V0 due to rigid and differing stable labels. (**VERIFIED**)
+  2. Proof profile `16000` omitted a load-bearing dependency (stable label / signature verification) by listing only `^93001`. (**VERIFIED**)
+  3. A proof profile cannot make an invalid claim valid by omitting failing dependencies. (**VERIFIED** per Section 29.2)
+  4. The claim is correctly rejected under dependency-closed verification. (**VERIFIED** per Section 42.3 Control 8)
+
+---
+
+## Overall Disposition
+
+Every material structural claim, boundary check, and obligation-sufficiency control in the frozen report has been verified against Draft 0.16 and the fixture data. The cold report correctly applies model rules regarding witness sufficiency, quotient scoping, factorization spaces, proof-method neutrality, separating invariants, embedding strength, residual separation, and dependency-closure verification.
+
+```text
+VERIFIED
+```
+
+### Unresolved Obligations
+* **None.** All dependency-closed verification obligations for Experiment 005 are fully discharged by the frozen report and fixture data.
