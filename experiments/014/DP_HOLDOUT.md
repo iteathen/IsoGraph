@@ -8,11 +8,11 @@ Alpha:
 
 ```text
 A01: an admissible process begins with integer budget N >= 0
-A02: every nonterminal step consumes at least one budget unit
-A03: admissibility forbids budget from becoming negative
-A04: more than N nonterminal steps would consume more than N units
-A05: that would force a negative budget, contradicting admissibility
-A06: therefore every admissible process terminates after at most N nonterminal steps
+A02: every nonterminal step irreversibly consumes at least one budget unit
+A03: after k nonterminal steps, cumulative consumption is at least k units
+A04: more than N nonterminal steps would therefore consume more than N units
+A05: total consumption cannot exceed the initial N-unit budget
+A06: exceeding N steps contradicts A05, so every admissible process terminates after at most N nonterminal steps
 ```
 
 Beta:
@@ -21,10 +21,10 @@ Beta:
 B01: an admissible process begins with a finite pool of M distinct tokens
 B02: every nonterminal transition removes one token from the pool
 B03: removed tokens are never reinserted during the process
-B04: therefore each nonterminal transition consumes a distinct token
-B05: more than M nonterminal transitions would require removing more than M distinct tokens
-B06: that exceeds the initial finite pool and is impossible
-B07: therefore every admissible process terminates after at most M nonterminal transitions
+B04: after k nonterminal transitions, exactly k distinct tokens have been removed
+B05: more than M nonterminal transitions would therefore require removing more than M distinct tokens
+B06: more than M distinct tokens cannot be removed from the initial M-token pool
+B07: exceeding M transitions contradicts B06, so every admissible process terminates after at most M nonterminal transitions
 ```
 
 Frozen comparison view:
