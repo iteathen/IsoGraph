@@ -126,6 +126,12 @@ RUN-Q006-R4 is the focused DP 0.4 regression line. Its first recorded Gemini exe
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
+Experiment 007 is fresh blind semantic-discovery evidence at frozen SHA `eae08ffc562168a2bc093c74056e3b6e01b88d93`. Its decoder recovered all five hidden motifs and all three deep motifs, but the immutable frozen automatic disposition remains `DOES_NOT_QUALIFY` because its scorer secretly required exact enum spellings for otherwise explicit rejection statements. Preserve that historical disposition. The post-freeze review and QRC audit are `experiments/007/EXPERIMENT_007_BLIND_HOLDOUT_REVIEW.md` and `experiments/007/EXPERIMENT_007_QRC_0_1_POST_FREEZE_AUDIT.md`.
+
+The generic rejection/output-contract correction is `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md` (QRC 0.1). It is qualification infrastructure, not semantic authority. It separates semantic rejection coverage from exact serializer conformance and is covered by deterministic tests under `tools/qualification/`.
+
+Experiment 008 is fresh post-QRC blind evidence at frozen SHA `cabcdd90c2a997c69a421bb6ada9d2f1a7d31882`. Direct OpenRouter/Nemotron run `35303672370` returned `QUALIFIES`, matched O1-O5 and deep O2/O3/O4, passed every guard, preserved residuals, and remained bounded to `SUPPORTED_CANDIDATE`; see `experiments/008/EXPERIMENT_008_BLIND_HOLDOUT_REVIEW.md`. This is evidence for current Discovery Protocol candidate behavior. It does not by itself promote DP 0.4, QRC 0.1, NEI, or QU into qualified semantic authority.
+
 ## External agent execution paths
 
 Reusable coding, OpenRouter, strict-cold, byte-identical panel, agent-host, and GitHub-connector routes are documented in the private control repository:
