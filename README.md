@@ -709,7 +709,7 @@ The project does not dismiss them. Many of them directly shaped the specificatio
 | **“An agent can cheat by changing factorization after seeing the other side.”** | Independent factorization/extraction freeze is a governing qualification rule. Pair-conditioned exploration cannot be cited as blind evidence for the same claim. |
 | **“IDs will be mistaken for real-world identity.”** | Core SI is explicitly representation-level identity/addressing only. Stronger identity requires separate authority such as NEI. |
 | **“Different IDs will be treated as naturally different things.”** | SI inequality supplies no natural-distinctness conclusion. Separate SIs remain separate for addressing while stronger identity remains open. |
-| **“Unknown values will destroy comparison.”** | QU research represents unknowns as constrained relational structure rather than opaque missing markers. |
+| **“Unknown values will destroy comparison.”** | Qualified QU 0.1 represents unknowns as constrained relational structure rather than opaque missing markers. |
 | **“Formal systems overclaim certainty.”** | Unknown remains unknown; incomplete search remains incomplete; resource limits remain resource limits; unresolved source interpretations can remain explicit. |
 | **“Proof obligations will grow without bound.”** | The qualified obligation-sufficiency layer is claim-bounded and dependency-closed. Stronger unrelated obligations are not imported merely because they exist. |
 | **“One witness cannot represent symmetry.”** | One witness can discharge an existence claim; complete-family claims require family coverage. Distinct witnesses are preserved unless a context-scoped quotient is independently justified. |
@@ -868,7 +868,7 @@ See:
 | **Experiment 004** | 15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN | Broad corpus-bounded evidence for Draft 0.15 representation/comparison semantics; no surviving expressiveness failure. |
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
-| **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence for current Discovery Protocol candidate behavior. |
+| **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
@@ -1181,35 +1181,3 @@ Historical failed qualification runs:
 ~~~
 
 The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: unknown remains unknown, discovery is not proof, extensions are not Core, and integrated success is not universal completeness.
-
-
-
-~~~text
-Core:
-    Draft 0.17 qualified authority
-
-Experiment 004:
-    15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN
-
-Experiment 005:
-    8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
-    independent verifier: VERIFIED
-
-Experiment 007:
-    blind semantic motifs 5/5
-    deep motifs 3/3
-    frozen formal disposition: DOES_NOT_QUALIFY
-    reason: hidden serializer/token contract defect
-
-Experiment 008:
-    frozen automatic score: QUALIFIES
-    hidden motifs 5/5
-    deep motifs 3/3
-    all guards pass
-~~~
-
-The most important current result is not that every hard problem is solved.
-
-It is that the project has repeatedly been able to **preserve source fidelity, recover hidden common structure, retain meaningful residuals, and resist promoting weak evidence into stronger claims**—while keeping the foundational substrate comparatively small.
-
-That is the direction IsoGraph is testing.
