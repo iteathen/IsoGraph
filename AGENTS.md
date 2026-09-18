@@ -122,7 +122,7 @@ Draft 0.17 adds no separate qualification campaign because it changes the descri
 
 Experiment 006 RUN-Q006, RUN-Q006-R2, and RUN-Q006-R3 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting frozen outputs through later DP/NEI revisions.
 
-RUN-Q006-R4 is the focused DP 0.4 regression attempt. Its first recorded execution ended at the provider boundary with HTTP 429 and produced no semantic report; this is infrastructure evidence only, not a DP 0.4 semantic disposition. See `experiments/006/EXPERIMENT_006_RUN_Q006_R4_PROVIDER_REVIEW.md`.
+RUN-Q006-R4 is the focused DP 0.4 regression line. Its first recorded Gemini execution ended at the provider boundary with HTTP 429 and produced no semantic report; see `experiments/006/EXPERIMENT_006_RUN_Q006_R4_PROVIDER_REVIEW.md`. A later Aider/OpenRouter free-router pass is retained only as behavioral evidence because it was not strictly cold; see `experiments/006/EXPERIMENT_006_R4_OPENROUTER_FREE_BEHAVIORAL_REVIEW.md`. The direct pinned OpenRouter/Nemotron cold run at IsoGraph SHA `24a7a49a58214a281ae5fe8c553f99e18f229cfb` recovered O1/O4/O5 but did not meet the four-motif threshold, so DP 0.4 remains unqualified; see `experiments/006/EXPERIMENT_006_RUN_Q006_R4_OPENROUTER_COLD_REVIEW.md`.
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
