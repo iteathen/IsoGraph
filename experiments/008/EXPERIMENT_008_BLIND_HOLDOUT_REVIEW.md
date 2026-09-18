@@ -174,3 +174,47 @@ new blind qualification evidence: YES
 ```
 
 This result is evidence for the current Discovery Protocol candidate behavior. It does not silently promote DP 0.4, QRC 0.1, QU, NEI, or any other candidate into qualified semantic authority.
+
+
+## Qualification-strength limit
+
+This holdout is genuinely fresh and isolated, but its discriminative difficulty is not maximal.
+
+Both visible derivations explicitly expose:
+
+- forward iteration from a fixed generator;
+- a finite-capacity initial segment;
+- a resulting constraint;
+- propagation into a recurrence;
+- finite reconstruction of an infinite future.
+
+The hidden oracle still required the decoder to preserve different mechanisms and recover the propagated-dependency architecture, but several high-level roles are visibly parallel.
+
+Accordingly, interpret Experiment 008 as strong evidence that:
+
+```text
+current DP behavior
++ QRC 0.1
++ hidden structural scoring
+```
+
+can recover and correctly bound a fresh cross-mechanism correspondence.
+
+Do not interpret it alone as proof that DP 0.4 handles every highly oblique cross-domain discovery case.
+
+The evidence picture is stronger in combination:
+
+```text
+Experiment 007:
+    different proof domain / more oblique machinery
+    blind semantic motifs 5/5, deep 3/3
+    frozen formal failure only from hidden token serialization
+
+Experiment 008:
+    fresh independent holdout after public QRC freeze
+    formal QUALIFIES
+    motifs 5/5, deep 3/3
+    all guards pass
+```
+
+That combined record supports further qualification or an explicit promotion review, but does not itself perform the promotion.
