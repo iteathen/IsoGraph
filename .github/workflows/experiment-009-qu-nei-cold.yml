@@ -1,0 +1,113 @@
+name: Experiment 009 QU NEI joint qualification
+
+on:
+  push:
+    branches:
+      - qualification/module-campaign-009-20260918
+    paths:
+      - experiments/009/RUN.request
+
+permissions:
+  contents: read
+
+concurrency:
+  group: experiment-009-qu-nei-qualification
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out exact qualification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/009/tools/run-exp009-cold.mjs
+          node --check experiments/009/tools/score-exp009.mjs
+          node --check experiments/009/tools/test-score-exp009.mjs
+          node tools/qualification/test-semantic-rejections.mjs
+          node experiments/009/tools/test-score-exp009.mjs
+          rm -rf out/exp009
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/009/tools/run-exp009-cold.mjs | tee /tmp/exp009-dry.json
+          test -f out/exp009/DRY_RUN.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const d=JSON.parse(fs.readFileSync('out/exp009/DRY_RUN.json','utf8'));
+          const paths=d.input_manifest.map(x=>x.path);
+          for (const forbidden of ['hidden/','ASSERTIONS','score-exp009','AUTHORING_AUDIT','QUALIFICATION_REVIEW']) {
+            if (paths.some(p=>p.includes(forbidden))) throw new Error('forbidden cold input: '+forbidden);
+          }
+          if (!paths.includes('experiments/009/COLD_PROMPT.md')) throw new Error('missing cold prompt');
+          if (!paths.includes('experiments/009/QU_NEI_CASES.md')) throw new Error('missing public cases');
+          console.log('dry_packet_sha256='+d.packet_sha256);
+          NODE
+
+      - name: Execute one isolated semantic reconstruction call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/009/tools/run-exp009-cold.mjs
+
+      - name: Verify dry and live packet identity
+        if: always() && steps.cold.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp009/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp009/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          echo "packet_sha256=$live"
+
+      - name: Deterministically score frozen output
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        run: node experiments/009/tools/score-exp009.mjs
+
+      - name: Emit frozen qualification evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          for p in             out/exp009/DRY_RUN.json             out/exp009/METADATA.json             out/exp009/COLD_REPORT_RAW.txt             out/exp009/PARSED_REPORT.json             out/exp009/SCORE.json; do
+            [ -f "$p" ] || continue
+            echo "===== BEGIN ${p#out/exp009/} ====="
+            cat "$p"
+            echo "===== END ${p#out/exp009/} ====="
+          done
+          echo "Evidence hashes:"
+          find out/exp009 -type f ! -name '*API_RESPONSE*' -print0 2>/dev/null | sort -z | xargs -0 -r sha256sum
+
+      - name: Enforce completed qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp009/SCORE.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const score=JSON.parse(fs.readFileSync('out/exp009/SCORE.json','utf8'));
+          console.log('disposition='+score.disposition);
+          console.log('QU pass='+score.qu_0_1?.pass);
+          console.log('NEI pass='+score.nei_0_1_0_2?.pass);
+          if (score.disposition !== 'QUALIFIES') process.exit(1);
+          NODE
