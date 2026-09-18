@@ -1,0 +1,20 @@
+cases answered: Q004-01, Q004-04, Q004-06, Q004-07, Q004-08 fully answered.
+                Q004-05: subcases 1, 2, 4 answered; subcase 3 blocked.
+
+cases blocked by ambiguity: Q004-05 subcase #3 (unbound NAC-only variable, no
+                             matching profile supplied in permitted inputs).
+
+native distinctions recovered:
+  - occurrence multiplicity vs. structural identity (Q004-01, Q004-06)
+  - scope-nesting vs. flat edge membership as non-flattenable kinds (Q004-04)
+  - reference-binding transparency: use-site occurrence created, binding syntax
+    itself erased, after N0 (Q004-06)
+  - stable-label rigidity under V0 across independent namespaces vs. explicit
+    VS label-mapping (Q004-07)
+  - compact quantifier binder/body vs. externally-linked domain/generator
+    structure not visible in the compact syntax (Q004-08)
+
+suspected spec defect: none identified with confidence. The one candidate gap
+  — §11's NAC-only-variable rule pointing to a "matching profile" that this
+  cold packet never supplies — reads as an evidence-partitioning gap in this
+  specific packet rather than a defect in the Draft 0.15 text itself.

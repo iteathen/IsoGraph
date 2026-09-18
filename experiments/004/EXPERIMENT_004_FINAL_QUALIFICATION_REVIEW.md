@@ -9,6 +9,12 @@
 **Complete verifier archive workflow:** `35248055284`  
 **Complete verifier archive commit:** `e8c206b4f1219ee9aed4ed46adc97df2a9399f79`
 
+## Historical evidence integration
+
+The earlier Claude/manual cold and scoring records are preserved directly under `experiments/004/cold-results/claude/`. They were recovered from the historical `experiment/004-gemini-cold-bulk` lineage without altering any frozen report or final disposition.
+
+The branch's artifact-retaining Gemini execution workflows were not integrated because they conflict with the current Actions storage policy and belong to a completed Draft 0.15 campaign. See `research/SURVIVING_BRANCH_RECONCILIATION_REVIEW.md`.
+
 ## Qualification checkpoint
 
 Experiment 004 reaches its **first current-authority Draft 0.15 qualification checkpoint** for the frozen corpus, with explicit partials. The checkpoint claim is limited to the exercised representation semantics and discovery/comparison controls in this corpus. It is not a claim of general correctness outside the frozen targets.
