@@ -1,0 +1,71 @@
+{
+  "experiment": "010",
+  "disposition": "DOES_NOT_QUALIFY",
+  "guards": {
+    "exact_case_coverage": true,
+    "no_duplicates": true,
+    "no_unexpected": true,
+    "packet_self_audit": true,
+    "module_assessment_supported": true
+  },
+  "duplicates": [],
+  "unexpected_case_ids": [],
+  "case_results": [
+    {
+      "case_id": "D01",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D02",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D03",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D04",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D05",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D06",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "candidate_status",
+          "expected_one_of": [
+            "DORMANT",
+            "INCOMPLETE"
+          ],
+          "actual": "CORRESPONDENCE"
+        }
+      ]
+    },
+    {
+      "case_id": "D07",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D08",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "rejected_overclaims",
+          "missing": [
+            "SAME_ALGORITHM"
+          ]
+        }
+      ]
+    }
+  ]
+}

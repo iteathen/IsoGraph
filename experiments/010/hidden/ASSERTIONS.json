@@ -1,0 +1,136 @@
+{
+  "experiment": "010",
+  "required_case_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08"
+  ],
+  "cases": {
+    "D01": {
+      "expect": {
+        "candidate_status": "CORRESPONDENCE",
+        "separator_kind": "NONE"
+      }
+    },
+    "D02": {
+      "expect": {
+        "candidate_status": "REJECTED",
+        "separator_kind": "STRUCTURAL_BREAKER"
+      },
+      "require_failed_obligation": true
+    },
+    "D03": {
+      "expect": {
+        "candidate_status": "CORRESPONDENCE",
+        "separator_kind": "NONE"
+      }
+    },
+    "D04": {
+      "expect": {
+        "candidate_status": "CORRESPONDENCE",
+        "separator_kind": "NONE"
+      },
+      "allowed": {
+        "cross_residual_disposition": [
+          "PROMOTED",
+          "EXPANDED"
+        ]
+      },
+      "require_one_to_subgraph": true
+    },
+    "D05": {
+      "expect": {
+        "candidate_status": "REJECTED",
+        "separator_kind": "RIGID_AUTHORITY"
+      }
+    },
+    "D06": {
+      "allowed": {
+        "candidate_status": [
+          "DORMANT",
+          "INCOMPLETE"
+        ]
+      },
+      "expect": {
+        "separator_kind": "NONE"
+      }
+    },
+    "D07": {
+      "expect": {
+        "candidate_status": "DORMANT",
+        "separator_kind": "NONE"
+      }
+    },
+    "D08": {
+      "expect": {
+        "candidate_status": "CORRESPONDENCE",
+        "separator_kind": "NONE",
+        "one_to_subgraph_attempted": true
+      },
+      "required_mappings": [
+        {
+          "left": [
+            "A01"
+          ],
+          "right": [
+            "B01"
+          ]
+        },
+        {
+          "left": [
+            "A02"
+          ],
+          "right": [
+            "B02"
+          ]
+        },
+        {
+          "left": [
+            "A03"
+          ],
+          "right": [
+            "B03",
+            "B04",
+            "B05"
+          ]
+        },
+        {
+          "left": [
+            "A04"
+          ],
+          "right": [
+            "B06"
+          ]
+        },
+        {
+          "left": [
+            "A05"
+          ],
+          "right": [
+            "B07"
+          ]
+        },
+        {
+          "left": [
+            "A06"
+          ],
+          "right": [
+            "B08"
+          ]
+        }
+      ],
+      "require_residual": true,
+      "required_rejection_concepts": [
+        "FULL_PROOF_ISOMORPHISM",
+        "NATURAL_IDENTITY",
+        "SAME_INTERMEDIATE_OBJECTS",
+        "SAME_ALGORITHM"
+      ]
+    }
+  }
+}

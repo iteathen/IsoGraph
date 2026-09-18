@@ -1,0 +1,338 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [
+        {
+          "left": [
+            "L1"
+          ],
+          "right": [
+            "R1"
+          ],
+          "role": "input boundary"
+        },
+        {
+          "left": [
+            "L2"
+          ],
+          "right": [
+            "R2"
+          ],
+          "role": "constrained intermediate step"
+        },
+        {
+          "left": [
+            "L3"
+          ],
+          "right": [
+            "R3"
+          ],
+          "role": "output boundary"
+        }
+      ],
+      "residuals": [],
+      "rejected_overclaims": [
+        "lexical identity",
+        "natural identity of operations"
+      ],
+      "protocols_used": [
+        "DP-01",
+        "DP-03",
+        "DP-10",
+        "DP-40"
+      ],
+      "reason": "Lexical names are non-rigid. The structural topology, dependency direction, boundaries, and ordering constraints match bijectively under V0/VS view."
+    },
+    {
+      "case_id": "D02",
+      "candidate_status": "REJECTED",
+      "separator_kind": "STRUCTURAL_BREAKER",
+      "failed_obligation": "RELATION_PRESERVATION",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [
+        {
+          "left": [
+            "load"
+          ],
+          "right": [
+            "load"
+          ],
+          "role": "input step"
+        },
+        {
+          "left": [
+            "transform"
+          ],
+          "right": [
+            "transform"
+          ],
+          "role": "transformation step"
+        },
+        {
+          "left": [
+            "emit"
+          ],
+          "right": [
+            "emit"
+          ],
+          "role": "output step"
+        }
+      ],
+      "residuals": [
+        "reversal of ordered incidence on right"
+      ],
+      "rejected_overclaims": [
+        "isomorphism under ordered-incidence preservation"
+      ],
+      "protocols_used": [
+        "DP-02",
+        "DP-40"
+      ],
+      "reason": "Rejection is justified by a concrete structural breaker. The active comparison requires ordered-incidence preservation, which is violated by the right constraint reversing the incidence."
+    },
+    {
+      "case_id": "D03",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": true,
+      "mappings": [
+        {
+          "left": [
+            "atomic step"
+          ],
+          "right": [
+            "three operational steps"
+          ],
+          "role": "analogous functional role"
+        }
+      ],
+      "residuals": [
+        "granularity difference (atomic vs decomposed)"
+      ],
+      "rejected_overclaims": [
+        "exact literal isomorphism",
+        "identical factorization depth"
+      ],
+      "protocols_used": [
+        "DP-07",
+        "DP-10",
+        "DP-13"
+      ],
+      "reason": "Different machinery or factorization depth alone is not a structural breaker. A one-to-subgraph role alignment is attempted and succeeds because no load-bearing obligation fails."
+    },
+    {
+      "case_id": "D04",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "PROMOTED",
+      "one_to_subgraph_attempted": true,
+      "mappings": [
+        {
+          "left": [
+            "A1"
+          ],
+          "right": [
+            "B1"
+          ],
+          "role": "upstream boundary"
+        },
+        {
+          "left": [
+            "A3"
+          ],
+          "right": [
+            "B3",
+            "B4",
+            "B5"
+          ],
+          "role": "intermediate role correspondence"
+        },
+        {
+          "left": [
+            "A5"
+          ],
+          "right": [
+            "B7"
+          ],
+          "role": "downstream reconstruction"
+        }
+      ],
+      "residuals": [
+        "A2, A4 on left",
+        "B2, B6 on right"
+      ],
+      "rejected_overclaims": [
+        "terminal rejection without promotion"
+      ],
+      "protocols_used": [
+        "DP-07",
+        "DP-08",
+        "DP-13"
+      ],
+      "reason": "The discovered cross-residual correspondence must re-enter discovery (be promoted/expanded) and cannot be discarded or ignored to force a terminal rejection without a concrete structural breaker."
+    },
+    {
+      "case_id": "D05",
+      "candidate_status": "REJECTED",
+      "separator_kind": "RIGID_AUTHORITY",
+      "failed_obligation": "RIGID_AUTHORITY_VIOLATION",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [],
+      "residuals": [
+        "differing jurisdiction_code values"
+      ],
+      "rejected_overclaims": [
+        "natural identity",
+        "isomorphism under rigid authority"
+      ],
+      "protocols_used": [
+        "DP-02",
+        "DP-40"
+      ],
+      "reason": "The branch is rejected under RIGID_AUTHORITY because the active comparison profile explicitly declares jurisdiction_code rigid and identity-separating, and the frozen values differ."
+    },
+    {
+      "case_id": "D06",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [],
+      "residuals": [
+        "different SIs",
+        "different source files",
+        "different factorization depths"
+      ],
+      "rejected_overclaims": [
+        "natural distinctness rejection",
+        "relabeling representational difference as structural breaker"
+      ],
+      "protocols_used": [
+        "DP-38"
+      ],
+      "reason": "Without a qualified NEI DISTINCT result or rigid authority, representational differences (SIs, files, factorization depth) cannot justify rejection or be relabeled as a structural breaker."
+    },
+    {
+      "case_id": "D07",
+      "candidate_status": "DORMANT",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [],
+      "residuals": [
+        "unexplored factorization space"
+      ],
+      "rejected_overclaims": [
+        "proven non-isomorphism",
+        "terminal rejection"
+      ],
+      "protocols_used": [
+        "DP-07"
+      ],
+      "reason": "A cost-bounded stop is legally recorded as DORMANT when resource limits are exceeded, without asserting a negative proof or terminal rejection."
+    },
+    {
+      "case_id": "D08",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "cross_residual_disposition": "NOT_APPLICABLE",
+      "one_to_subgraph_attempted": true,
+      "mappings": [
+        {
+          "left": [
+            "A01"
+          ],
+          "right": [
+            "B01"
+          ],
+          "role": "two candidates related to same anchor"
+        },
+        {
+          "left": [
+            "A02"
+          ],
+          "right": [
+            "B02"
+          ],
+          "role": "local budget bounds relative to anchor"
+        },
+        {
+          "left": [
+            "A03"
+          ],
+          "right": [
+            "B03",
+            "B04",
+            "B05"
+          ],
+          "role": "composition bounding of distance/cost"
+        },
+        {
+          "left": [
+            "A04"
+          ],
+          "right": [
+            "B06"
+          ],
+          "role": "admissibility separation requirement"
+        },
+        {
+          "left": [
+            "A05"
+          ],
+          "right": [
+            "B07"
+          ],
+          "role": "contradiction of distinctness"
+        },
+        {
+          "left": [
+            "A06"
+          ],
+          "right": [
+            "B08"
+          ],
+          "role": "uniqueness conclusion"
+        }
+      ],
+      "residuals": [
+        "explicit bridge construction steps on right (B03, B04)"
+      ],
+      "rejected_overclaims": [
+        "full-proof isomorphism",
+        "same intermediate objects",
+        "natural identity of candidates and records"
+      ],
+      "protocols_used": [
+        "DP-02",
+        "DP-04",
+        "DP-07",
+        "DP-10",
+        "DP-24",
+        "DP-40"
+      ],
+      "reason": "A strong common proof topology is discovered. A03 on the left maps to the subgraph [B03, B04, B05] on the right, representing a one-to-subgraph role correspondence. Method-specific residuals include the explicit bridge construction steps on the right."
+    }
+  ],
+  "module_assessment": {
+    "dp_0_1_to_0_4": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "All cases analyzed strictly in accordance with Core 0.17 and Discovery Protocols 0.1-0.4. No external knowledge or assumptions were used."
+  }
+}
