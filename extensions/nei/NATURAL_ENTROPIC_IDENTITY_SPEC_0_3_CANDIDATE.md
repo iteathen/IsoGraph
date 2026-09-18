@@ -130,16 +130,16 @@ NEI 0.1 already requires positive sameness authority and rejects a maximally-coa
 
 NEI 0.3 names the corresponding closure condition:
 
-> **A positive SAME conclusion requires enough qualified identity authority to exclude every admissible identity-relevant distinction for the claimed scope.**
+> **A positive SAME conclusion requires enough qualified identity authority to exclude every admissible identity resolution in which the queried pair is DISTINCT for the claimed scope.**
 
-This does **not** require exhaustive observation of every conceivable property in reality.
+This does **not** require exhaustive observation of every conceivable property in reality, and it does not require the subjects to share every property. A represented difference may be identity-preserving under the pinned profile.
 
-It requires only the dependency-closed identity burden of the declared profile/claim.
+It requires only the dependency-closed identity burden of the declared profile/claim. Any unresolved distinction that could still lawfully support a DISTINCT model blocks SAME until that possibility is excluded or represented inside the qualified model family.
 
 A determinate `SAME` path therefore needs one of:
 
 - an applicable qualified theorem/law that settles sameness;
-- a qualified closure certificate showing the represented comparison is complete for the identity-relevant distinctions of the claim;
+- a qualified closure certificate showing the represented comparison is sufficient to exclude unrepresented identity-separating alternatives for the claim;
 - another exact proof admitted by the pinned identity profile.
 
 For a QU-mediated claim, closure is supplied by the qualified admissible model family. `SAME` holds only if every admissible model gives sameness.
