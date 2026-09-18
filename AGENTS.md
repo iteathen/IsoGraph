@@ -126,6 +126,16 @@ RUN-Q006-R4 is the focused DP 0.4 regression line. Its first recorded Gemini exe
 
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
 
+## External agent execution paths
+
+Reusable coding, OpenRouter, strict-cold, byte-identical panel, agent-host, and GitHub-connector routes are documented in the private control repository:
+
+```text
+iteathen/OX-Alpha-Contol/AGENT_EXECUTION_PATHS.md
+```
+
+Use that file for execution routing only. IsoGraph's own authority, isolation, qualification, and merge rules remain controlling for IsoGraph work. Generic Aider coding routes are not strict cold-evidence paths.
+
 ## Qualification resource discipline
 
 External Gemini calls and GitHub Actions executions are scarce qualification resources. Read and follow `QUALIFICATION_RESOURCE_DISCIPLINE.md` before designing or running a new qualification experiment.
