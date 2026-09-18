@@ -1,0 +1,93 @@
+{
+  "experiment": "012",
+  "disposition": "DOES_NOT_QUALIFY",
+  "guards": {
+    "exact_case_coverage": true,
+    "no_duplicates": true,
+    "no_unexpected": true,
+    "packet_self_audit": true,
+    "module_assessment_supported": true
+  },
+  "duplicates": [],
+  "unexpected_case_ids": [],
+  "case_results": [
+    {
+      "case_id": "R01",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "R02",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A01"
+            ],
+            "right": [
+              "B01"
+            ]
+          }
+        },
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A02"
+            ],
+            "right": [
+              "B02",
+              "B04"
+            ]
+          }
+        },
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A03"
+            ],
+            "right": [
+              "B03"
+            ]
+          }
+        },
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A04"
+            ],
+            "right": [
+              "B05"
+            ]
+          }
+        },
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A05"
+            ],
+            "right": [
+              "B06"
+            ]
+          }
+        },
+        {
+          "field": "mappings",
+          "missing": {
+            "left": [
+              "A06"
+            ],
+            "right": [
+              "B07"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

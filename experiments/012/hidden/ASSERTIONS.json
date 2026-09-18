@@ -1,0 +1,87 @@
+{
+  "experiment": "012",
+  "required_case_ids": [
+    "R01",
+    "R02"
+  ],
+  "cases": {
+    "R01": {
+      "allowed": {
+        "candidate_status": [
+          "CORRESPONDENCE",
+          "DORMANT",
+          "INCOMPLETE"
+        ]
+      },
+      "expect": {
+        "separator_kind": "NONE"
+      },
+      "forbidden_failed_obligation": true
+    },
+    "R02": {
+      "expect": {
+        "candidate_status": "CORRESPONDENCE",
+        "separator_kind": "NONE",
+        "one_to_subgraph_attempted": true
+      },
+      "required_mappings": [
+        {
+          "left": [
+            "A01"
+          ],
+          "right": [
+            "B01"
+          ]
+        },
+        {
+          "left": [
+            "A02"
+          ],
+          "right": [
+            "B02",
+            "B04"
+          ]
+        },
+        {
+          "left": [
+            "A03"
+          ],
+          "right": [
+            "B03"
+          ]
+        },
+        {
+          "left": [
+            "A04"
+          ],
+          "right": [
+            "B05"
+          ]
+        },
+        {
+          "left": [
+            "A05"
+          ],
+          "right": [
+            "B06"
+          ]
+        },
+        {
+          "left": [
+            "A06"
+          ],
+          "right": [
+            "B07"
+          ]
+        }
+      ],
+      "require_residual": true,
+      "required_rejection_concepts": [
+        "FULL_PROOF_ISOMORPHISM",
+        "NATURAL_IDENTITY",
+        "SAME_INTERMEDIATE_OBJECTS",
+        "SAME_ALGORITHM"
+      ]
+    }
+  }
+}
