@@ -215,9 +215,18 @@ Such a correction should not allow arbitrary union of unrelated findings.
 
 ## 8. Artifact storage
 
-The evidence-upload step succeeded on this rerun after the IsoGraph artifact cleanup.
+The semantic report, metadata, and score were successfully emitted into the immutable workflow log before the artifact step.
 
-This confirms that artifact creation is operational again for this workflow, subject to the account-level quota meter and retained-artifact usage.
+The artifact upload itself still returned:
+
+```text
+Artifact storage quota has been hit.
+Usage is recalculated every 6-12 hours.
+```
+
+The workflow UI records the step as non-fatal because the upload action is intentionally `continue-on-error`; this must not be mistaken for a successful artifact creation.
+
+IsoGraph artifact cleanup had already deleted 87 older artifacts and reclaimed 5,204,856 bytes, but GitHub's account-level Actions storage meter had not yet recalculated when this rerun attempted upload. No semantic evidence was lost because log retention is now the primary fallback.
 
 ## 9. Disposition
 
