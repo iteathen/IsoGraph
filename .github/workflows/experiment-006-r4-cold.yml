@@ -49,15 +49,21 @@ jobs:
         if: always()
         run: node experiments/006/tools/score-q006-r4.mjs
 
-      - name: Upload focused qualification evidence
+      - name: Emit qualification evidence to log
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: isograph-exp006-RUN-Q006-R4
-          path: out/q006r4/
-          if-no-files-found: error
-          retention-days: 30
-
+        shell: bash
+        run: |
+          set -euo pipefail
+          found=0
+          while IFS= read -r -d '' p; do
+            found=1
+            echo "===== BEGIN ${p#out/} ====="
+            cat "$p"
+            echo "===== END ${p#out/} ====="
+          done < <(find out -type f \( -name '*METADATA*.json' -o -name '*PARSED_REPORT*.json' -o -name '*SCORE*.json' -o -name '*REPORT*.txt' \) ! -name '*API_RESPONSE*' -print0 2>/dev/null | sort -z)
+          echo "Evidence file hashes:"
+          find out -type f -print0 2>/dev/null | sort -z | xargs -0 -r sha256sum
+          test "$found" -eq 1
       - name: Enforce focused disposition
         if: always()
         env:
