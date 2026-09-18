@@ -1,87 +1,159 @@
 # IsoGraph Status
 
-**Project state:** research incubation / Draft 0.17 Semantic Identity description correction current  
+**Project state:** research incubation / qualified modular authority stack  
 **Repository:** `iteathen/IsoGraph`  
 **Default branch:** `main`
 
-## Current qualified semantic authority
+## Current qualified authority
+
+### Core
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
 
-Draft 0.17 is a narrow descriptive correction over the qualified Draft 0.16 authority:
+Draft 0.17 remains the qualified Core authority. Bare IDs are **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
 
-- bare IDs are explicitly **Semantic Identity (SI)** handles;
-- same SI means the same represented referent within the applicable SI namespace;
-- different SIs remain distinct represented referents for core operations;
-- SI equality or inequality does not independently establish any stronger external/natural/ontological identity relation;
-- operational behavior for occurrences, references, namespaces, alpha-renaming, freshness, matching, reconstruction, comparison, and object-theory equality remains unchanged from Draft 0.16;
-- no Natural Entropic Identity semantics are part of core.
+### Qualified semantic extensions/modules
 
-The Draft 0.17 authority is deterministically derived from the exact qualified Draft 0.16 blob `8c9a3c9030388a39bb89aed9045083fa03fb3209`. The build checks that the obsolete wording `same structural identity = same object` does not survive and that external NEI extension semantics do not leak into core.
+Current qualified extension/module authority is recorded in:
 
-## Retained Draft 0.16 qualification evidence
+- `qualification/QUALIFIED_MODULES_2026-09-18.md`
 
-`CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md` remains immutable historical authority for the obligation-sufficiency clarification qualified by Experiment 005.
+It binds the exact tested revisions of:
 
-Experiment 005 evidence remains:
+- Quantifiable Unknown (QU) 0.1;
+- Natural Entropic Identity (NEI) 0.1 with NEI 0.2 as the cumulative clarification layer;
+- Discovery Protocols 0.1 through 0.4 as one cumulative current module.
+
+The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
+
+Qualified extensions remain separately versioned dependencies. Qualification does **not** silently import QU, NEI, or Discovery Protocol semantics into Core.
+
+### Qualified infrastructure
+
+QRC 0.1 is qualified for qualification-infrastructure use:
+
+- `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md`
+- `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_QUALIFICATION.md`
+
+QRC is not semantic domain authority.
+
+## Core provenance retained
+
+Draft 0.16 remains immutable historical authority for the obligation-sufficiency clarification qualified by Experiment 005.
+
+Experiment 005:
 
 ```text
-cold workflow:             35252295888
-cold artifact:             10510136341
-cold report SHA-256:       9078e33a7ae9f75eca75e2f9327a3f3e4e76e77c3223df5f03c5ce96dcbc5d9d
 post-freeze scoring:       8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
-verifier workflow:         35252625515
-verifier artifact:         10510431318
-verifier report SHA-256:   da45f19397f842eb08c9cea57cf77b108ee8dcf808c0c1f1989e72ca3d7b8eb3
-verifier disposition:      VERIFIED
+independent verifier:      VERIFIED
 unresolved obligations:    none
 ```
 
-Final review remains:
+Final review:
 
 - `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`
 
-## Qualified obligation-sufficiency layer retained in Draft 0.17
+Draft 0.17 is a narrow Semantic Identity description correction over Draft 0.16 and changes no operational bare-ID behavior.
 
-- claim-bounded dependency-closed obligation sets;
-- proof-method neutrality within frozen qualification/isolation constraints;
-- claim-typed witness sufficiency;
-- context-scoped witness quotients;
-- exact compact witness-family certificates when coverage is independently verified;
-- local factorization-node claims versus factorization-space completeness.
+## QU / NEI qualification
 
-## Explicit non-changes in Draft 0.17
+Experiment 009 remains an immutable formal `DOES_NOT_QUALIFY` run. Its review separated public-output-contract defects from one substantive identity-authority overreach.
 
-Draft 0.17 introduces no:
+Experiment 013 used fresh focused cases and proposition-specific public scoring:
 
-- Natural Entropic Identity semantics;
-- new syntax or irreducible primitive;
-- new structural class or comparison relation;
-- identity-collapse inference rule;
-- temporal identity law;
-- entropy/information measure;
-- special extension-loading mechanism;
-- change to Draft 0.16 proof/search sufficiency rules.
+```text
+formal disposition:       QUALIFIES
+QU 0.1:                   PASS
+NEI 0.1 + 0.2:            PASS
+case coverage:             8 / 8
+mismatches:                none
+workflow run:              35376498717
+```
 
-## Current Discovery Protocol qualification evidence
+Final review:
 
-Discovery Protocols 0.1-0.4 remain candidate research and are not part of the qualified core authority.
+- `experiments/013/EXPERIMENT_013_FINAL_QUALIFICATION_REVIEW.md`
 
-The current evidence record is:
+The corrected evidence specifically confirms that missing identity authority remains incomplete; it is not silently upgraded to semantic NEI `UNKNOWN`.
 
-- Experiment 006 current-main Test 6 regression recovered O1/O2/O4/O5 and deep O2/O4, but remains post-unblind regression evidence only.
-- Experiment 007, frozen at `eae08ffc562168a2bc093c74056e3b6e01b88d93`, recovered **5/5 hidden motifs** and **3/3 deep motifs** under strict cold isolation. Its immutable automatic disposition remains `DOES_NOT_QUALIFY` because the frozen scorer required hidden exact enum spellings for rejection statements that were semantically present.
-- QRC 0.1 (`qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md`) separates semantic rejection coverage from exact serializer conformance. It is qualification infrastructure, not semantic authority.
-- Experiment 008, frozen at `cabcdd90c2a997c69a421bb6ada9d2f1a7d31882`, returned **`QUALIFIES`**, recovered **5/5 motifs** and **3/3 deep motifs**, and passed every frozen guard in direct cold OpenRouter run `35303672370`.
+## Discovery Protocol qualification
 
-Experiment 008 is genuinely fresh post-QRC blind qualification evidence, but its review records that the paired derivations expose several high-level roles relatively transparently. Read its result together with the more oblique Experiment 007 blind semantic success rather than treating either run alone as universal proof of Discovery Protocol adequacy.
+Discovery Protocols 0.1-0.4 are now qualified as one cumulative module at the exact hashes recorded in the authority manifest.
 
-No candidate is silently promoted by these results.
+The evidence chain is intentionally preserved rather than rewritten:
+
+- Experiment 007: blind semantic discovery success; immutable formal `DOES_NOT_QUALIFY` due hidden serializer/token requirements.
+- Experiment 008: fresh post-QRC blind `QUALIFIES`.
+- Experiment 010: immutable `DOES_NOT_QUALIFY`; review found one hidden-oracle defect and one genuine omitted overclaim.
+- Experiment 012: immutable `DOES_NOT_QUALIFY`; semantic behavior succeeded but the hidden scorer imposed an undisclosed singleton-array mapping shape.
+- Experiment 014: fresh corrected mapping-contract holdout formally `QUALIFIES` with zero mismatches.
+
+Experiment 014:
+
+```text
+workflow run:              35376711200
+attempt 1:                 provider failure only
+attempt 2 semantic score:  QUALIFIES
+mismatches:                none
+```
+
+Reviews:
+
+- `experiments/014/EXPERIMENT_014_FINAL_QUALIFICATION_REVIEW.md`
+- `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_4_QUALIFICATION_REVIEW.md`
+
+Discovery remains discovery: protocol priority is not structural proof authority.
+
+## Integrated module-stack qualification
+
+Experiment 011 correctly recovered the structural integration behavior but remains formally `DOES_NOT_QUALIFY` because its free-text overclaim list did not discharge all four public rejection guards.
+
+Experiment 015 used a fresh integrated holdout with proposition-specific overclaim fields.
+
+```text
+formal disposition:       QUALIFIES
+workflow run:              35377399665
+attempt 1:                 provider failure only
+attempt 2:                 HTTP 200
+score mismatches:          none
+module assessment:         SUPPORTED
+```
+
+The integrated run correctly preserved:
+
+- source-local exact-D provenance;
+- alternative noncanonical factorization;
+- relational unknown sharing and QUI;
+- NEI authority incompleteness where no identity authority existed;
+- structural discovery despite misleading labels;
+- weak versus strong embedding;
+- target-only residuals;
+- source-local versus pairwise accounting;
+- rejection of unsupported global isomorphism, natural identity, same intermediate objects, and same algorithm.
+
+Final review:
+
+- `experiments/015/EXPERIMENT_015_FINAL_QUALIFICATION_REVIEW.md`
+
+This establishes compatibility for the exercised composition. It is not a universal completeness claim.
 
 ## Historical authority
 
-`CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` remains immutable qualified historical evidence for Experiment 004 and prior Draft 0.15 artifacts. Draft 0.17 does not retroactively change historical semantics or qualification evidence.
+- `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
+- `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+
+Historical evidence remains interpreted against the exact revision where it was produced. Failed/partial qualification results are never rewritten merely because later campaigns corrected their defects.
 
 ## Immediate work
 
-Draft 0.17 remains the qualified core authority. Current discovery work should use the Experiment 007/008 evidence record and QRC 0.1 without treating those candidate layers as qualified core semantics. Further promotion, NEI, admissible-variation, invariant-extraction, or information-measure work remains separate unless its own evidence burden is discharged.
+The current modular authority stack is qualified sufficiently to use QU, NEI, and cumulative Discovery Protocol semantics as explicit versioned dependencies in new work.
+
+For the Connect4 authority-transition effort, the next burden is therefore not to requalify these modules. It is to:
+
+1. construct the complete source-faithful IsoGraph representation;
+2. preserve unknown/uncertain structure explicitly;
+3. demonstrate source coverage and reconstruction fidelity;
+4. independently verify the representation and its residual/accounting obligations;
+5. only then promote the resulting IsoGraph corpus as the authority for the represented Connect4 logic.
+
+Any semantic change to a qualified IsoGraph module creates a new revision with its own affected qualification burden.

@@ -26,11 +26,12 @@ IsoGraph -> agent -> IsoGraph
 
 No mandatory English, JSON, theorem-language, database, tokenizer-specific, or model-specific translation layer belongs to the semantics.
 
-IsoGraph is currently in **active research incubation**. Its current qualified semantic authority is:
+IsoGraph is currently in **active research incubation**. Its qualified authority is modular:
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
+- [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 
-Current status and provenance:
+Core remains distinct from separately versioned qualified extensions. Current status and provenance:
 
 - [STATUS.md](STATUS.md)
 - [MIGRATION.md](MIGRATION.md)
@@ -181,12 +182,12 @@ IsoGraph needs stable addressing, sharing, reconstruction, matching, namespaces,
 
 Stronger identity questions belong to an explicit theory/profile/extension with their own evidence burden.
 
-The current research extension for that purpose is:
+The qualified extension authority for that purpose is:
 
-- [Natural Entropic Identity 0.1 Candidate](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.2 Candidate](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
+- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
+- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
 
-NEI remains a candidate extension, not Core authority.
+NEI 0.1 with the NEI 0.2 clarification layer is a **qualified semantic extension** at the exact revisions recorded in the qualified-module authority manifest. NEI remains separate from Core; qualification does not make natural identity implicit.
 
 ---
 
@@ -428,15 +429,15 @@ That is real information even though the value remains unresolved.
 
 See:
 
-- [Quantifiable Unknown 0.1 Candidate](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
+- [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 
-QU is currently a candidate extension, not qualified Core semantics.
+QU 0.1 is a **qualified semantic extension** at the exact revision recorded in the qualified-module authority manifest. It remains separate from Core and is not silently active unless a claim/profile depends on it.
 
 ---
 
 # Identity can remain open without being guessed
 
-The current NEI research is intentionally conservative.
+Qualified NEI semantics are intentionally conservative.
 
 It does not infer sameness merely because no difference has been found.
 
@@ -460,7 +461,7 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 # Discovery is separate from authority
 
-IsoGraph's current Discovery Protocol research provides ranked, adaptive strategies for finding candidate:
+IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1-0.4) provides ranked, adaptive strategies for finding candidate:
 
 - correspondences;
 - invariants;
@@ -488,12 +489,14 @@ Discovery may explore speculative leads cheaply.
 
 Promotion still requires the normal structural/evidentiary obligations.
 
-Current candidates:
+Qualified cumulative revisions:
 
 - [Discovery Protocols 0.1](extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md)
 - [Discovery Protocols 0.2](extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md)
 - [Discovery Protocols 0.3](extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md)
 - [Discovery Protocols 0.4](extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md)
+
+The historical filenames retain `_CANDIDATE` because those exact bytes were qualified. Current status is defined by the authority manifest, not by the filename.
 
 DP 0.4 in particular makes an important correction:
 
@@ -706,7 +709,7 @@ The project does not dismiss them. Many of them directly shaped the specificatio
 | **“An agent can cheat by changing factorization after seeing the other side.”** | Independent factorization/extraction freeze is a governing qualification rule. Pair-conditioned exploration cannot be cited as blind evidence for the same claim. |
 | **“IDs will be mistaken for real-world identity.”** | Core SI is explicitly representation-level identity/addressing only. Stronger identity requires separate authority such as NEI. |
 | **“Different IDs will be treated as naturally different things.”** | SI inequality supplies no natural-distinctness conclusion. Separate SIs remain separate for addressing while stronger identity remains open. |
-| **“Unknown values will destroy comparison.”** | QU research represents unknowns as constrained relational structure rather than opaque missing markers. |
+| **“Unknown values will destroy comparison.”** | Qualified QU 0.1 represents unknowns as constrained relational structure rather than opaque missing markers. |
 | **“Formal systems overclaim certainty.”** | Unknown remains unknown; incomplete search remains incomplete; resource limits remain resource limits; unresolved source interpretations can remain explicit. |
 | **“Proof obligations will grow without bound.”** | The qualified obligation-sufficiency layer is claim-bounded and dependency-closed. Stronger unrelated obligations are not imported merely because they exist. |
 | **“One witness cannot represent symmetry.”** | One witness can discharge an existence claim; complete-family claims require family coverage. Distinct witnesses are preserved unless a context-scoped quotient is independently justified. |
@@ -848,9 +851,9 @@ promotion bound:        SUPPORTED_CANDIDATE
 
 Every scorer guard passed.
 
-The result is **fresh blind evidence for current Discovery Protocol candidate behavior**.
+The result is **fresh blind historical evidence for the Discovery Protocol line**.
 
-It does not silently promote DP 0.4, QRC 0.1, QU, NEI, or any other candidate into qualified Core authority.
+At the time of Experiment 008 it did not itself promote DP, QRC, QU, or NEI. Later fresh campaigns preserved that history and separately qualified QRC infrastructure, QU/NEI, and cumulative DP 0.1-0.4. None of those promotions imports the extensions into Core.
 
 See:
 
@@ -865,7 +868,7 @@ See:
 | **Experiment 004** | 15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN | Broad corpus-bounded evidence for Draft 0.15 representation/comparison semantics; no surviving expressiveness failure. |
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
-| **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence for current Discovery Protocol candidate behavior. |
+| **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
@@ -1003,9 +1006,39 @@ It is a structural representation and qualification framework whose claims are i
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 
-Draft 0.17 is a narrow correction over Draft 0.16: bare IDs are explicitly described as **Semantic Identity (SI)** handles rather than being given a stronger-sounding identity description.
+Draft 0.17 remains Core authority. Its Semantic Identity correction changes no operational bare-ID behavior from Draft 0.16.
 
-Operational ID behavior is unchanged.
+## Qualified semantic extensions/modules
+
+Exact tested revisions and content hashes are authoritative in:
+
+- [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
+
+Qualified modules:
+
+- [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
+- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
+- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
+- [Discovery Protocols 0.1-0.4](extensions/discovery/)
+
+The `_CANDIDATE` names are immutable historical filenames of the exact tested semantic artifacts. They no longer describe the current qualification state.
+
+Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
+
+## Qualified qualification infrastructure
+
+- [Qualification Rejection Contract 0.1](qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md)
+- [QRC 0.1 Qualification Record](qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_QUALIFICATION.md)
+
+QRC is qualification infrastructure, not semantic domain authority.
+
+## Integrated compatibility
+
+Experiment 015 formally `QUALIFIES` the exercised composition of Core 0.17 + QU 0.1 + cumulative NEI 0.1/0.2 + cumulative DP 0.1-0.4.
+
+- [Experiment 015 Final Qualification Review](experiments/015/EXPERIMENT_015_FINAL_QUALIFICATION_REVIEW.md)
+
+This is a scoped compatibility result, not universal discovery completeness.
 
 ## Historical qualified evidence
 
@@ -1013,18 +1046,6 @@ Operational ID behavior is unchanged.
 - [Draft 0.15 Consolidated Candidate](CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md)
 
 Historical evidence remains interpreted under the revision at which it was produced.
-
-## Candidate extensions / infrastructure
-
-- [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
-- [Discovery Protocols](extensions/discovery/)
-- [Qualification Rejection Contract 0.1](qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md)
-
-Candidate extensions are not silently promoted into Core by appearing in the repository or by passing one experiment.
-
----
 
 # Constitutional discipline
 
@@ -1084,13 +1105,13 @@ NATIVE_FORMAT.md
     .isg native-text convention
 
 extensions/qu/
-    Quantifiable Unknown research
+    qualified Quantifiable Unknown extension authority
 
 extensions/nei/
-    Natural Entropic Identity research
+    qualified Natural Entropic Identity extension authority
 
 extensions/discovery/
-    structural Discovery Protocol research
+    qualified cumulative structural Discovery Protocol module
 
 qualification/
     qualification infrastructure and contracts
@@ -1128,6 +1149,25 @@ That discipline is part of the project, not overhead around it.
 Core:
     Draft 0.17 qualified authority
 
+QRC 0.1:
+    qualified qualification infrastructure
+
+QU 0.1:
+    QUALIFIED
+    decisive corrected holdout: Experiment 013
+
+NEI 0.1 + 0.2:
+    QUALIFIED cumulative extension
+    decisive corrected holdout: Experiment 013
+
+Discovery Protocols 0.1-0.4:
+    QUALIFIED cumulative module
+    decisive corrected holdout: Experiment 014
+
+Integrated module stack:
+    QUALIFIED for exercised composition
+    decisive corrected holdout: Experiment 015
+
 Experiment 004:
     15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN
 
@@ -1135,21 +1175,9 @@ Experiment 005:
     8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
     independent verifier: VERIFIED
 
-Experiment 007:
-    blind semantic motifs 5/5
-    deep motifs 3/3
-    frozen formal disposition: DOES_NOT_QUALIFY
-    reason: hidden serializer/token contract defect
-
-Experiment 008:
-    frozen automatic score: QUALIFIES
-    hidden motifs 5/5
-    deep motifs 3/3
-    all guards pass
+Historical failed qualification runs:
+    preserved unchanged
+    later corrected by fresh holdouts rather than rescoring
 ~~~
 
-The most important current result is not that every hard problem is solved.
-
-It is that the project has repeatedly been able to **preserve source fidelity, recover hidden common structure, retain meaningful residuals, and resist promoting weak evidence into stronger claims**—while keeping the foundational substrate comparatively small.
-
-That is the direction IsoGraph is testing.
+The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: unknown remains unknown, discovery is not proof, extensions are not Core, and integrated success is not universal completeness.

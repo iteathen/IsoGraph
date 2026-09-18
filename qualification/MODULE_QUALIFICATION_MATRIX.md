@@ -1,6 +1,6 @@
 # IsoGraph Module Qualification Matrix
 
-**Status:** governing qualification plan  
+**Status:** qualification plan completed; retained as obligation matrix  
 **Date:** 2026-09-18  
 **Qualified semantic baseline:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
 
@@ -177,9 +177,18 @@ Default semantic budget per frozen campaign:
 
 Additional external calls require a recorded evidentiary or infrastructure reason.
 
-## Current execution order
+## Qualification outcome
 
-1. QRC 0.1 infrastructure qualification record.
-2. Experiment 009: joint QU 0.1 + NEI 0.1/0.2 qualification.
-3. Experiment 010: cumulative Discovery Protocol qualification.
-4. Experiment 011: integrated-stack qualification.
+The plan has been executed.
+
+1. QRC 0.1 — qualified qualification infrastructure.
+2. QU 0.1 — qualified by the corrected fresh Experiment 013 campaign.
+3. NEI 0.1 + 0.2 cumulative module — qualified by Experiment 013.
+4. Discovery Protocols 0.1-0.4 cumulative module — qualified through the cumulative evidence chain ending in the fresh corrected Experiment 014 pass.
+5. Integrated module stack — qualified for the exercised composition by the fresh corrected Experiment 015 pass.
+
+Historical failed runs (009, 010, 011, 012) remain immutable evidence and are not rescored.
+
+Current authority and exact tested hashes are recorded in:
+
+- `qualification/QUALIFIED_MODULES_2026-09-18.md`

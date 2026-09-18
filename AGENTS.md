@@ -6,18 +6,43 @@ IsoGraph is an agent-native structural knowledge representation designed to expo
 
 Before substantive work, read `README.md`, `STATUS.md`, `MIGRATION.md`, and the semantic authority relevant to the task.
 
-### Current qualified authority
+### Qualified Core authority
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
 
-Draft 0.17 is a narrow description correction over Draft 0.16. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+Draft 0.17 remains Core authority. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+
+### Qualified extension/module authority
+
+Read:
+
+- `qualification/QUALIFIED_MODULES_2026-09-18.md`
+
+That manifest qualifies the exact tested revisions of:
+
+- QU 0.1;
+- NEI 0.1 + NEI 0.2 cumulative clarification;
+- Discovery Protocols 0.1-0.4 cumulative module.
+
+The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
+
+Qualified extensions remain separately versioned dependencies and do not silently become Core.
+
+### Qualified infrastructure
+
+QRC 0.1 is qualified for qualification-infrastructure use only:
+
+- `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md`
+- `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_QUALIFICATION.md`
+
+QRC is not semantic domain authority.
 
 ### Historical authority
 
 - `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
 - `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
-Draft 0.16 remains immutable historical qualification evidence for Experiment 005 and retains its obligation-sufficiency qualification. Draft 0.15 remains immutable historical qualification evidence for Experiment 004. Draft 0.17 does not retroactively reinterpret either revision.
+Draft 0.16 remains immutable historical qualification evidence for Experiment 005 and retains its obligation-sufficiency qualification. Draft 0.15 remains immutable historical qualification evidence for Experiment 004. Later qualification does not retroactively reinterpret historical artifacts.
 
 ## Research discipline
 
@@ -69,70 +94,78 @@ A result at explicitly named frozen factorization/extraction nodes is local unle
 
 ## Natural Entropic Identity
 
-For current NEI research, read:
+Current qualified NEI authority is the cumulative exact revision pair recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`:
 
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — base NEI semantics;
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — current clarification layer.
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — qualified base NEI semantics;
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — qualified clarification layer.
 
-Historical research `research/nei/NEI_DESIGN_AUDIT_0_1_SUPERSEDED.md` preserves an earlier maximally-coarse identity-partition design. It is not authority: current NEI 0.1 explicitly rejects coarseness as a sameness-selection rule because absence of distinctness evidence is not positive SAME evidence.
+Historical research `research/nei/NEI_DESIGN_AUDIT_0_1_SUPERSEDED.md` preserves an earlier maximally-coarse identity-partition design. It is not authority: qualified NEI 0.1 explicitly rejects coarseness as a sameness-selection rule because absence of distinctness evidence is not positive SAME evidence.
 
 NEI 0.2 preserves application/domain relations exactly and warns against silently carrying stronger identity meaning through them than their declared semantics/authority support. It does not assume application distinctions are meaningless, and it does not automatically promote them into `SAME` or `DISTINCT`.
 
 The word **natural** is explanatory and non-load-bearing. It contrasts the target identity question with merely representational identity; it is not a primitive, evidence source, ontology declaration, or inference rule.
 
+A semantic NEI `UNKNOWN` is itself a qualified positive result: do not use it merely because identity authority is absent. Missing required identity profile/query-anchor authority remains incomplete.
+
 ## Discovery Protocols
 
-For agent-driven structural discovery on the current research branch, read:
+Discovery Protocols 0.1-0.4 are qualified as one cumulative current module at the exact revisions recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`:
 
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` — base ranked protocol catalog;
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — cross-residual/NEI correction motivated by RUN-Q006;
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md` — evidence-matched separator correction;
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md` — current structural-breaker and cross-residual promotion correction.
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md`
 
-DP 0.4 supersedes conflicting earlier discovery behavior while preserving DP 0.1–0.3 as historical evidence at their recorded revisions.
+DP 0.4 supersedes conflicting earlier discovery behavior while preserving DP 0.1-0.3 as historical layers of the cumulative qualified module.
 
-Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. Discovery priority never supplies semantic authority.
+Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. **Discovery priority never supplies semantic authority.**
 
 Evidence burden follows the conclusion:
 
 - a concrete structural breaker can reject a candidate without NEI;
 - an explicit pinned application/domain authority may serve as a rigid separator when its declared semantics make the difference load-bearing;
 - a natural-distinctness rejection requires qualified NEI `DISTINCT`;
+- a supported correspondence may remain `CORRESPONDENCE`;
 - a cost-bounded stop may remain `DORMANT`/unresolved without proving identity.
 
 Application semantics are preserved exactly. Do not presume they are either identity-relevant or identity-irrelevant. Do not silently strengthen them into NEI meaning beyond the pinned authority.
 
-Under DP 0.4, `STRUCTURAL_BREAKER` means a **concrete failed load-bearing obligation** under the active comparison/view. Different machinery, formalism, carrier type, proof technique, or decomposition style is not itself such a breaker.
+Under qualified DP 0.4, `STRUCTURAL_BREAKER` means a **concrete failed load-bearing obligation** under the active comparison/view. Different machinery, formalism, carrier type, proof technique, source file, SI spelling, or decomposition depth is not itself such a breaker.
 
 A load-bearing residual between already matched upstream/downstream regions requires at least one bounded recursive role/factorization pass unless a valid structural or rigid-authority breaker already explains the divergence. Any `CORRESPONDENCE` discovered by that mandatory pass re-enters ordinary candidate expansion/falsification; it may not be ignored while the same residual is used as a terminal separator.
 
-For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
+Where one side exposes one atomic role and the other a dependent region, attempt one-node-to-subgraph alignment before concluding the role is absent.
+
+For unresolved information, consider whether qualified QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI remains structural evidence only and does not imply NEI `SAME`.
 
 ## Qualification provenance
 
-Experiment 005 final review is `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`.
+Core qualification remains revision-specific:
 
-The focused Draft 0.16 controls completed with:
+- Experiment 004 preserves Draft 0.15 broad qualification evidence;
+- Experiment 005 qualified the obligation-sufficiency layer retained in Core 0.17.
 
-```text
-post-freeze scoring: 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
-independent verifier: VERIFIED
-unresolved obligations: none
-```
+Extension/module qualification is recorded in:
 
-Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
+- `qualification/QUALIFIED_MODULES_2026-09-18.md`
 
-Experiment 006 RUN-Q006, RUN-Q006-R2, and RUN-Q006-R3 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting frozen outputs through later DP/NEI revisions.
+The qualification campaign deliberately preserves failed runs:
 
-RUN-Q006-R4 is the focused DP 0.4 regression line. Its first recorded Gemini execution ended at the provider boundary with HTTP 429 and produced no semantic report; see `experiments/006/EXPERIMENT_006_RUN_Q006_R4_PROVIDER_REVIEW.md`. A later Aider/OpenRouter free-router pass is retained only as behavioral evidence because it was not strictly cold; see `experiments/006/EXPERIMENT_006_R4_OPENROUTER_FREE_BEHAVIORAL_REVIEW.md`. The earlier direct pinned OpenRouter/Nemotron cold run at IsoGraph SHA `24a7a49a58214a281ae5fe8c553f99e18f229cfb` recovered O1/O4/O5 and did not meet the four-motif threshold. A later direct current-main cold regression at IsoGraph SHA `08aaeb8b7a7d6748f86649fe8b6a7b8c9c21b655` matched O1/O2/O4/O5, deep O2/O4, and passed every existing R4 scorer guard; see `experiments/006/EXPERIMENT_006_CURRENT_MAIN_TEST6_REGRESSION_REVIEW.md`. Because DP 0.4 changed after the hidden R4 assertions had already been exposed to the authoring process, that pass is retained as post-unblind regression evidence and does not by itself promote DP 0.4 to newly blind-qualified authority.
+- Experiment 009: joint QU/NEI formal failure; review identified output-contract defects plus one substantive missing-authority overreach.
+- Experiment 013: fresh corrected focused QU/NEI run — `QUALIFIES`, QU 0.1 PASS, cumulative NEI 0.1/0.2 PASS.
+- Experiment 010: cumulative DP formal failure; review identified one hidden-oracle defect and one genuine omitted overclaim.
+- Experiment 012: focused DP formal failure from an undisclosed mapping wire shape while semantic obligations were recovered.
+- Experiment 014: fresh corrected DP mapping-contract run — `QUALIFIES` with zero mismatches; cumulative DP 0.1-0.4 promotion review recorded.
+- Experiment 011: integrated formal failure due incomplete explicit overclaim rejection while the structural composition behavior was otherwise correct.
+- Experiment 015: fresh corrected integrated run — `QUALIFIES` with zero mismatches.
 
-Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
+Preserve every frozen historical disposition. Do not rewrite a failed score because later review identifies a fixture/scorer defect. Correct the generic contract, use fresh holdout material, and qualify the exact new campaign.
 
-Experiment 007 is fresh blind semantic-discovery evidence at frozen SHA `eae08ffc562168a2bc093c74056e3b6e01b88d93`. Its decoder recovered all five hidden motifs and all three deep motifs, but the immutable frozen automatic disposition remains `DOES_NOT_QUALIFY` because its scorer secretly required exact enum spellings for otherwise explicit rejection statements. Preserve that historical disposition. The post-freeze review and QRC audit are `experiments/007/EXPERIMENT_007_BLIND_HOLDOUT_REVIEW.md` and `experiments/007/EXPERIMENT_007_QRC_0_1_POST_FREEZE_AUDIT.md`.
+Provider/infrastructure failures that produce no semantic report may be retried only against the same frozen SHA/packet or a newly frozen revision with the reason recorded.
 
-The generic rejection/output-contract correction is `qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md` (QRC 0.1). It is qualification infrastructure, not semantic authority. It separates semantic rejection coverage from exact serializer conformance and is covered by deterministic tests under `tools/qualification/`.
+Cold-test isolation remains mandatory when qualification depends on fresh semantic reconstruction: hidden assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable until the output is frozen.
 
-Experiment 008 is fresh post-QRC blind evidence at frozen SHA `cabcdd90c2a997c69a421bb6ada9d2f1a7d31882`. Direct OpenRouter/Nemotron run `35303672370` returned `QUALIFIES`, matched O1-O5 and deep O2/O3/O4, passed every guard, preserved residuals, and remained bounded to `SUPPORTED_CANDIDATE`; see `experiments/008/EXPERIMENT_008_BLIND_HOLDOUT_REVIEW.md`. This is evidence for current Discovery Protocol candidate behavior. It does not by itself promote DP 0.4, QRC 0.1, NEI, or QU into qualified semantic authority.
+The final integrated Experiment 015 establishes compatibility for the exercised Core + QU + NEI + DP composition. It does not establish universal discovery completeness or universal domain coverage.
 
 ## External agent execution paths
 
