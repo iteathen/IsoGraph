@@ -8,7 +8,7 @@ on:
       - .github/workflows/experiment-004-gemini-verifier-v3.yml
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: experiment-004-gemini-verifier-3-6
@@ -54,60 +54,19 @@ jobs:
           RUN_ID: ${{ matrix.run }}
         run: node experiments/004/tools/run-gemini-verifier.mjs
 
-      - name: Freeze verifier artifact
+      - name: Emit verifier evidence to log
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: isograph-exp004-${{ matrix.run }}-verifier-v3b
-          path: out/
-          if-no-files-found: error
-          retention-days: 30
-
-  archive:
-    if: always()
-    needs: verify
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Check out latest results branch
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          fetch-depth: 0
-          ref: experiment/004-gemini-results
-
-      - name: Download V3b verifier artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: isograph-exp004-*-verifier-v3b
-          path: verifier-downloads
-          merge-multiple: true
-
-      - name: Archive V3b verifier outputs
         shell: bash
         run: |
           set -euo pipefail
-          dest=experiments/004/cold-results/gemini/verifier
-          mkdir -p "$dest"
           found=0
-          for report in verifier-downloads/*_VERIFIER_REPORT.txt; do
-            [ -e "$report" ] || continue
-            base="$(basename "$report" _VERIFIER_REPORT.txt)"
-            mkdir -p "$dest/$base"
-            cp "$report" "$dest/$base/VERIFIER_REPORT.txt"
-            cp "verifier-downloads/${base}_VERIFIER_METADATA.json" "$dest/$base/VERIFIER_METADATA.json"
-            found=$((found+1))
+          for p in out/*_VERIFIER_REPORT.txt out/*_VERIFIER_METADATA.json; do
+            [ -f "$p" ] || continue
+            found=1
+            echo "===== BEGIN $(basename "$p") ====="
+            cat "$p"
+            echo "===== END $(basename "$p") ====="
           done
-          printf '# Experiment 004 — scorer-blind verifier archive\n\nLatest continuation workflow run: `%s`\n\nV3b successful reports: **%s / 7**.\n\nOther successful verifier artifacts remain frozen separately and are reviewed in the final verifier ledger.\n\nVerifier packets exclude hidden assertions, scoring reports, qualification ledgers, expected answers, and prior verifier outputs.\n' "$GITHUB_RUN_ID" "$found" > "$dest/MANIFEST.md"
-          test "$found" -gt 0
-
-      - name: Commit V3b verifier archive
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "iteathen"
-          git config user.email "josh.oshiro@gmail.com"
-          git add experiments/004/cold-results/gemini/verifier
-          if git diff --cached --quiet; then exit 0; fi
-          git diff --cached --check
-          git commit -m 'experiment: archive remaining Gemini 3.6 verifier evidence'
-          git push origin HEAD:experiment/004-gemini-results
+          echo "Evidence file hashes:"
+          find out -maxdepth 2 -type f -print0 2>/dev/null | sort -z | xargs -0 -r sha256sum
+          test "$found" -eq 1
