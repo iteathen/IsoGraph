@@ -145,6 +145,10 @@ Q_search:
     a bounded solver stopped before deciding whether P is forced
 ```
 
+Named subqueries:
+- `Q_semantic`
+- `Q_search`
+
 Question: distinguish the semantic state of `Q_semantic` from the computational status of `Q_search`.
 
 ## C11 — Refinement versus revision
@@ -160,6 +164,10 @@ Q0:
 Update X keeps authority A and adds qualified observation `u != 2`.
 
 Update Y replaces authority A with incompatible authority B under which the original domain rule is not accepted and declares `value(u) in {red,blue}`.
+
+Named subqueries:
+- `X`
+- `Y`
 
 Question: classify X and Y as refinement or revision.
 
@@ -184,6 +192,11 @@ Q_C:
 
 An information profile assigns the same scalar value `2 bits` to all three.
 
+Named subqueries:
+- `pair_AB`: Q_A compared with Q_B
+- `pair_AC`: Q_A compared with Q_C
+- `equal_scalar_claim`: the claim that equal information scalar alone establishes QUI
+
 Question: under an alpha-renaming structural view, which pair may qualify as QUI? Does equal information scalar establish QUI?
 
 ## C13 — QUI overclaim guard
@@ -207,6 +220,10 @@ Profile `P_distinct` contains qualified law/evidence stating that subjects `s1` 
 
 There is no unresolved identity-relevant possibility in either query.
 
+Named subqueries:
+- `same_query`: r1 compared with r2 under P_same
+- `distinct_query`: s1 compared with s2 under P_distinct
+
 Question: classify the two NEI queries and state whether an artificial zero-uncertainty QU artifact is required.
 
 ## C15 — QU-mediated NEI model families
@@ -227,6 +244,12 @@ M_mixed:
 M_empty:
     no admissible model exists because inherited constraints are inconsistent
 ```
+
+Named subqueries:
+- `M_same`
+- `M_distinct`
+- `M_mixed`
+- `M_empty`
 
 Question: classify each query.
 
@@ -251,6 +274,12 @@ D:
     application relation tagged "equivalent_record"
     profile explicitly declares equivalent_record identity-preserving for this registry domain
 ```
+
+Named subqueries:
+- `A`
+- `B`
+- `C`
+- `D`
 
 Question: what NEI conclusions are justified for A-D?
 
