@@ -63,11 +63,19 @@ jobs:
           RUN_ID: ${{ matrix.run }}
         run: node experiments/004/tools/run-gemini-verifier.mjs
 
-      - name: Freeze verifier artifact
+      - name: Emit verifier evidence to log
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: isograph-exp004-${{ matrix.run }}-verifier-final
-          path: out/
-          if-no-files-found: error
-          retention-days: 30
+        shell: bash
+        run: |
+          set -euo pipefail
+          found=0
+          for p in out/*_VERIFIER_REPORT.txt out/*_VERIFIER_METADATA.json; do
+            [ -f "$p" ] || continue
+            found=1
+            echo "===== BEGIN $(basename "$p") ====="
+            cat "$p"
+            echo "===== END $(basename "$p") ====="
+          done
+          echo "Evidence file hashes:"
+          find out -maxdepth 2 -type f -print0 2>/dev/null | sort -z | xargs -0 -r sha256sum
+          test "$found" -eq 1
