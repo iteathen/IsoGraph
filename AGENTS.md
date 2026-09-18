@@ -74,6 +74,8 @@ For current NEI research, read:
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — base NEI semantics;
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — current clarification layer.
 
+Historical research `research/nei/NEI_DESIGN_AUDIT_0_1_SUPERSEDED.md` preserves an earlier maximally-coarse identity-partition design. It is not authority: current NEI 0.1 explicitly rejects coarseness as a sameness-selection rule because absence of distinctness evidence is not positive SAME evidence.
+
 NEI 0.2 preserves application/domain relations exactly and warns against silently carrying stronger identity meaning through them than their declared semantics/authority support. It does not assume application distinctions are meaningless, and it does not automatically promote them into `SAME` or `DISTINCT`.
 
 The word **natural** is explanatory and non-load-bearing. It contrasts the target identity question with merely representational identity; it is not a primitive, evidence source, ontology declaration, or inference rule.
