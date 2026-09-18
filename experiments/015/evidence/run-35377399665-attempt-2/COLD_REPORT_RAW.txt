@@ -1,0 +1,37 @@
+{
+  "mapping": [
+    {"left": "P0", "right": "Q0", "role": "input boundary"},
+    {"left": "P1a", "right": "Q1", "role": "first stage with open level constraint"},
+    {"left": "P1b", "right": "Q2", "role": "middle stage"},
+    {"left": "P1c", "right": "Q3", "role": "third stage with open level constraint"},
+    {"left": "P2", "right": "Q4", "role": "output boundary"},
+    {"left": "u", "right": "v", "role": "shared open referent"}
+  ],
+  "qu_status_alpha": "OPEN",
+  "qu_status_beta": "OPEN",
+  "unknown_structural_relation": "QUI",
+  "nei_status": "INCOMPLETE_AUTHORITY",
+  "relation_kind": "WEAK_EMBEDDING",
+  "strong_embedding": false,
+  "weak_embedding": true,
+  "beta_residuals": [
+    "Check(Q2,Q3, policy_tag)",
+    "Q0 -> Q5 -> Q6(external audit boundary)"
+  ],
+  "alpha_source_local_D_preserved": true,
+  "alpha_atomic_as_pair_residual": false,
+  "canonical_factorization_claimed": false,
+  "misleading_label_Q5_mapped_to_P1a": false,
+  "overclaim_checks": {
+    "full_or_global_isomorphism_established": false,
+    "natural_identity_established": false,
+    "same_intermediate_objects_established": false,
+    "same_algorithm_established": false
+  },
+  "reason": "Alpha's comparison-stage structure injectively maps to Beta's main path, preserving the shared open referent topology, domains, and constraints, which establishes a Quantifiable Unknown Isomorph (QUI) relation between u and v. However, because Beta contains an unreflected load-bearing relation Check(Q2,Q3, policy_tag) among mapped objects, as well as the unmapped branch Q0 -> Q5 -> Q6, the relation is a weak embedding rather than a strong embedding or global isomorphism. No NEI profile is provided, so natural identity is incomplete. Misleading labels are rejected structurally, and source-local D factorization is preserved separately from pairwise residuals.",
+  "module_assessment": "SUPPORTED",
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "Decoded strictly using the provided specifications and STACK_CASE. Verified that u and v are both OPEN and form a QUI. Confirmed that the relation is a WEAK_EMBEDDING due to the unreflected Check relation on mapped objects and the extra branch. Confirmed NEI is INCOMPLETE_AUTHORITY due to lack of profile."
+  }
+}
