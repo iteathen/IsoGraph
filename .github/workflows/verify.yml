@@ -232,13 +232,7 @@ jobs:
           fi
 
       - name: Forbid GitHub Actions storage
-        shell: bash
-        run: |
-          set -euo pipefail
-          if grep -RInE 'actions/(upload-artifact|download-artifact|cache)@|^[[:space:]]+cache:[[:space:]]*' .github/workflows; then
-            echo "::error::GitHub Actions artifact/cache storage is prohibited. Emit evidence to logs or persist intentional durable evidence in repository history instead."
-            exit 1
-          fi
+        run: node tools/check-no-github-actions-storage.mjs
 
       - name: Verify frozen evidence remains present
         shell: bash
