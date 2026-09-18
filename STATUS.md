@@ -28,6 +28,24 @@ The tested semantic files retain their historical `_CANDIDATE` filenames. Their 
 
 Qualified extensions remain separately versioned dependencies. Qualification does **not** silently import QU, NEI, or Discovery Protocol semantics into Core.
 
+### Active unqualified successor candidates
+
+The current qualified authority is unchanged. Two new successor candidates capture lessons from the Connect4 authority 1.1 discrepancy campaign:
+
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md`
+  - observation precedes identity judgment;
+  - SAME requires sufficient identity-relevant closure;
+  - scope is load-bearing;
+  - unknown relevant distinctions block collapse;
+  - exact scoped quotients do not imply global identity.
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
+  - discrepancy is initially an observation, not automatically a defect;
+  - semantic-quantity/scope alignment precedes value judgment;
+  - qualification and structural-discovery dispositions remain independent;
+  - repair must preserve the anomaly evidence that exposed hidden structure.
+
+Neither candidate is qualified or promoted. NEI 0.1+0.2 and DP 0.1-0.4 remain current authority.
+
 ### Qualified infrastructure
 
 QRC 0.1 is qualified for qualification-infrastructure use:
@@ -146,14 +164,15 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 ## Immediate work
 
-The current modular authority stack is qualified sufficiently to use QU, NEI, and cumulative Discovery Protocol semantics as explicit versioned dependencies in new work.
+The qualified modular authority stack remains usable exactly as recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
 
-For the Connect4 authority-transition effort, the next burden is therefore not to requalify these modules. It is to:
+The next semantic qualification burden is the coupled but separately owned successor work:
 
-1. construct the complete source-faithful IsoGraph representation;
-2. preserve unknown/uncertain structure explicitly;
-3. demonstrate source coverage and reconstruction fidelity;
-4. independently verify the representation and its residual/accounting obligations;
-5. only then promote the resulting IsoGraph corpus as the authority for the represented Connect4 logic.
+1. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
+2. qualify DP 0.5 against discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
+3. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
+4. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
+
+No external semantic call should be spent before deterministic contract/preflight material for these focused cases is complete.
 
 Any semantic change to a qualified IsoGraph module creates a new revision with its own affected qualification burden.

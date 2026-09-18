@@ -28,6 +28,15 @@ The semantic files intentionally retain their historical `_CANDIDATE` filenames 
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
+### Unqualified successor candidates
+
+The following revisions are active semantic candidates and are **not** current authority until separately qualified and promoted:
+
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md` — observation/comparison-closure, scope, and safe-collapse clarification;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
+
+Use them as candidate material only when the task explicitly concerns their development/qualification. Do not silently apply them to historical evidence or qualified-module claims.
+
 ### Qualified infrastructure
 
 QRC 0.1 is qualified for qualification-infrastructure use only:
@@ -107,6 +116,8 @@ The word **natural** is explanatory and non-load-bearing. It contrasts the targe
 
 A semantic NEI `UNKNOWN` is itself a qualified positive result: do not use it merely because identity authority is absent. Missing required identity profile/query-anchor authority remains incomplete.
 
+NEI 0.3 is an unqualified successor candidate. Its proposed clarification is observation-first: no observed difference is not proof of sameness, an observed difference is not automatically identity-separating, scope is load-bearing, and unknown identity-relevant distinctions cannot be quotiented away. It adds no new NEI result status and must not be treated as qualified authority before promotion.
+
 ## Discovery Protocols
 
 Discovery Protocols 0.1-0.4 are qualified as one cumulative current module at the exact revisions recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`:
@@ -137,6 +148,8 @@ A load-bearing residual between already matched upstream/downstream regions requ
 Where one side exposes one atomic role and the other a dependent region, attempt one-node-to-subgraph alignment before concluding the role is absent.
 
 For unresolved information, consider whether qualified QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI remains structural evidence only and does not imply NEI `SAME`.
+
+DP 0.5 is an unqualified successor candidate. Its proposed rule is that a discrepancy is initially an observation, not automatically a defect. Candidate work under DP 0.5 preserves the raw discrepancy, checks semantic-quantity/scope alignment before value judgment, and keeps qualification disposition separate from any surviving structural-discovery lead.
 
 ## Qualification provenance
 

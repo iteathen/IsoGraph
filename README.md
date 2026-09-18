@@ -1025,6 +1025,28 @@ The `_CANDIDATE` names are immutable historical filenames of the exact tested se
 
 Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
 
+## Active unqualified successor candidates
+
+Two successor candidates are under development and **do not yet change qualified authority**:
+
+- [Natural Entropic Identity 0.3](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md) — observation/comparison closure, scope, unknown-preserving collapse, and exact scoped quotient clarification.
+- [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md) — observation-first discrepancy handling, semantic-quantity alignment, and separate qualification/discovery dispositions.
+
+They were motivated by the Connect4 authority 1.1 discrepancy campaign, where a small source-count inconsistency exposed hidden evidence identity structure and later decoder/scorer mismatches demonstrated that a qualification error can still be a useful discovery signal.
+
+The proposed discipline is:
+
+~~~text
+observe discrepancy
+-> preserve it
+-> establish what each observation denotes
+-> compare scope / aggregation / closure
+-> explore hidden distinction, hidden equivalence, or unknown factor
+-> only then judge defect vs valid structural difference
+~~~
+
+Neither candidate permits missing authority to masquerade as semantic NEI `UNKNOWN`, and neither makes an anomaly proof of an isomorphism.
+
 ## Qualified qualification infrastructure
 
 - [Qualification Rejection Contract 0.1](qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md)
@@ -1163,6 +1185,14 @@ NEI 0.1 + 0.2:
 Discovery Protocols 0.1-0.4:
     QUALIFIED cumulative module
     decisive corrected holdout: Experiment 014
+
+NEI 0.3:
+    UNQUALIFIED successor candidate
+    observation/scope/unknown-preserving collapse clarification
+
+Discovery Protocols 0.5:
+    UNQUALIFIED successor candidate
+    observation-first discrepancy/discovery clarification
 
 Integrated module stack:
     QUALIFIED for exercised composition
