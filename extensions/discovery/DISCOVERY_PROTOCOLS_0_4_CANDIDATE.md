@@ -149,6 +149,12 @@ seek one concrete falsifier
 
 If the candidate survives, keep it as a candidate/supported candidate and continue only as far as useful.
 
+Weak evidence may still be a strong reason to explore. A signal, hint, anomaly, or resemblance may justify a cheap branch when potential information gain is high.
+
+The agent may recursively derive speculative consequences and inspect them for stronger or familiar structure. Speculative distance lowers evidential confidence; confidence rises again only when the branch gains new independent support.
+
+Speculation may guide search. It may not promote itself into evidence.
+
 This preserves DP's resource discipline.
 
 ---
