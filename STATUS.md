@@ -137,6 +137,18 @@ Reviews:
 
 Discovery remains discovery: protocol priority is not structural proof authority.
 
+### Real-world Discovery Protocol execution evidence
+
+Connect4 authority 1.1 has now run the Discovery Protocols against live cold-reconstruction discrepancies.
+
+Evidence record:
+
+- `qualification/REAL_WORLD_DISCOVERY_PROTOCOL_EVIDENCE_CONNECT4_2026-09-18.md`
+
+The campaign found real hidden structure, retained a supported-but-unproved layer-substitution explanation, falsified an attractive common relation-basis hypothesis, and correctly closed an ordinary prose error. It also produced a reusable execution contract/schema in the Connect4 research owner.
+
+This is **development evidence**, not fresh qualification. It should inform independent holdout design without becoming the hidden oracle for those holdouts.
+
 ## Integrated module-stack qualification
 
 Experiment 011 correctly recovered the structural integration behavior but remains formally `DOES_NOT_QUALIFY` because its free-text overclaim list did not discharge all four public rejection guards.
@@ -185,7 +197,7 @@ The next semantic qualification burden is the coupled but separately owned succe
 
 1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
 2. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
-3. qualify DP 0.5 against discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
+3. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives; use the Connect4 campaign only as development evidence, not as hidden oracle material;
 4. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
 5. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
 
