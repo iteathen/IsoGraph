@@ -1,0 +1,246 @@
+{
+  "experiment": "009",
+  "schema_version": "1",
+  "cases": {
+    "C01": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "qu_status": "NOT_APPLICABLE",
+        "structural_relation": "NOT_APPLICABLE",
+        "nei_status": "NOT_APPLICABLE",
+        "requires_qu": false,
+        "requires_nei": false,
+        "decision": "SUPPORTED"
+      }
+    },
+    "C02": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "structural_relation": "STRUCTURALLY_DISTINCT",
+        "requires_qu": true,
+        "decision": "SUPPORTED"
+      }
+    },
+    "C03": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "structural_relation": "QUI",
+        "requires_qu": true,
+        "decision": "SUPPORTED"
+      }
+    },
+    "C04": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "requires_qu": true,
+        "requires_eager_enumeration": false,
+        "decision": "SUPPORTED"
+      }
+    },
+    "C05": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "requires_qu": true,
+        "decision": "REJECTED"
+      }
+    },
+    "C06": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "decision": "SUPPORTED"
+      }
+    },
+    "C07": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "DETERMINATE",
+        "decision": "SUPPORTED"
+      }
+    },
+    "C08": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "INCONSISTENT",
+        "decision": "SUPPORTED"
+      }
+    },
+    "C09": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "INCOMPLETE_SCOPE",
+        "decision": "SUPPORTED"
+      }
+    },
+    "C10": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "qu_status": "NOT_APPLICABLE",
+        "decision": "INCOMPLETE"
+      },
+      "subresults": {
+        "Q_semantic": "SEMANTIC_UNRESOLVED",
+        "Q_search": "COMPUTATION_INCOMPLETE"
+      }
+    },
+    "C11": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "qu_status": "NOT_APPLICABLE",
+        "decision": "SUPPORTED"
+      },
+      "subresults": {
+        "X": "REFINEMENT",
+        "Y": "REVISION"
+      }
+    },
+    "C12": {
+      "modules": [
+        "QU"
+      ],
+      "expect": {
+        "structural_relation": "UNKNOWN",
+        "decision": "SUPPORTED"
+      },
+      "subresults": {
+        "pair_AB": "QUI",
+        "pair_AC": "NOT_QUI",
+        "equal_scalar_claim": "REJECTED"
+      }
+    },
+    "C13": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "structural_relation": "QUI",
+        "nei_status": "INCOMPLETE_AUTHORITY",
+        "requires_qu": true,
+        "requires_nei": true,
+        "decision": "REJECTED"
+      }
+    },
+    "C14": {
+      "modules": [
+        "NEI"
+      ],
+      "expect": {
+        "qu_status": "NOT_APPLICABLE",
+        "requires_qu": false,
+        "requires_nei": true,
+        "decision": "SUPPORTED"
+      },
+      "subresults": {
+        "same_query": "SAME",
+        "distinct_query": "DISTINCT"
+      }
+    },
+    "C15": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "requires_qu": true,
+        "requires_nei": true,
+        "decision": "SUPPORTED"
+      },
+      "subresults": {
+        "M_same": "SAME",
+        "M_distinct": "DISTINCT",
+        "M_mixed": "UNKNOWN",
+        "M_empty": "NO_ADMISSIBLE_MODEL"
+      }
+    },
+    "C16": {
+      "modules": [
+        "NEI"
+      ],
+      "expect": {
+        "requires_nei": true,
+        "decision": "SUPPORTED"
+      },
+      "subresults": {
+        "A": "INCOMPLETE_AUTHORITY",
+        "B": "INCOMPLETE_AUTHORITY",
+        "C": "DISTINCT",
+        "D": "SAME"
+      }
+    },
+    "C17": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "requires_qu": true,
+        "requires_nei": true,
+        "nei_status": "INCOMPLETE_AUTHORITY",
+        "decision": "INCOMPLETE"
+      }
+    },
+    "C18": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "expect": {
+        "qu_status": "OPEN",
+        "nei_status": "INCOMPLETE_AUTHORITY",
+        "requires_qu": true,
+        "requires_nei": true,
+        "circular_evidence": true,
+        "decision": "REJECTED"
+      }
+    }
+  },
+  "required_case_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18"
+  ]
+}
