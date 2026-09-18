@@ -1,0 +1,127 @@
+{
+  "cases": [
+    {
+      "case_id": "R01",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "one_to_subgraph_attempted": false,
+      "mappings": [
+        {
+          "left": "local_role_A",
+          "right": "local_role_B",
+          "role": "LOCAL_ROLE_CORRESPONDENCE"
+        }
+      ],
+      "residuals": [
+        {
+          "element": "SI spelling",
+          "type": "REPRESENTATIONAL"
+        },
+        {
+          "element": "source file",
+          "type": "REPRESENTATIONAL"
+        },
+        {
+          "element": "factorization depth",
+          "type": "REPRESENTATIONAL"
+        }
+      ],
+      "rejected_overclaims": [
+        "NATURAL_IDENTITY",
+        "STRUCTURAL_BREAKER",
+        "RIGID_AUTHORITY"
+      ],
+      "protocols_used": [
+        "DP-08",
+        "DP-10",
+        "DP-38"
+      ],
+      "reason": "The structures exhibit a verified local role correspondence and have passed structural checks. The differences in SI spelling, source file, and factorization depth are purely representational and do not violate any concrete structural obligation or rigid authority. No qualified NEI DISTINCT result exists. Therefore, no separator is justified, and the candidate status remains CORRESPONDENCE with separator NONE."
+    },
+    {
+      "case_id": "R02",
+      "candidate_status": "CORRESPONDENCE",
+      "separator_kind": "NONE",
+      "failed_obligation": "NONE",
+      "one_to_subgraph_attempted": true,
+      "mappings": [
+        {
+          "left": "A01",
+          "right": "B01",
+          "role": "STEP_RELATION"
+        },
+        {
+          "left": "A02",
+          "right": [
+            "B02",
+            "B04"
+          ],
+          "role": "MEASURE_BOUND_DEFINITION"
+        },
+        {
+          "left": "A03",
+          "right": "B03",
+          "role": "STRICT_DECREASE_RULE"
+        },
+        {
+          "left": "A04",
+          "right": "B05",
+          "role": "INFINITE_CHAIN_INDUCTION"
+        },
+        {
+          "left": "A05",
+          "right": "B06",
+          "role": "CONTRADICTION_IMPOSSIBILITY"
+        },
+        {
+          "left": "A06",
+          "right": "B07",
+          "role": "TERMINATION_CONCLUSION"
+        }
+      ],
+      "residuals": [
+        {
+          "side": "Alpha",
+          "element": "mu(s) measure function and set {0,...,N}",
+          "role": "MEASURE_SPECIFICATION"
+        },
+        {
+          "side": "Beta",
+          "element": "lambda derivation from frozen acyclic dependency structure",
+          "role": "LAYER_DERIVATION_METHOD"
+        },
+        {
+          "side": "Alpha",
+          "element": "execution states s, t",
+          "role": "CARRIER_TYPE"
+        },
+        {
+          "side": "Beta",
+          "element": "dependency items p, q",
+          "role": "CARRIER_TYPE"
+        }
+      ],
+      "rejected_overclaims": [
+        "full proof isomorphism",
+        "natural identity",
+        "same intermediate objects",
+        "same algorithm"
+      ],
+      "protocols_used": [
+        "DP-02",
+        "DP-10",
+        "DP-24",
+        "DP-37"
+      ],
+      "reason": "A common proof topology of termination via well-founded induction was discovered. Alpha uses a state measure while Beta derives layers from an acyclic dependency graph. This difference in layer/measure derivation is a method-specific residual, not a structural breaker. A one-to-subgraph mapping aligns Alpha's finite measure set with Beta's derived layer assignment and bounded-below range. Stronger claims of full proof isomorphism, natural identity, same intermediate objects, and same algorithm are explicitly rejected as the underlying machinery and carrier types differ."
+    }
+  ],
+  "module_assessment": {
+    "dp_0_1_to_0_4": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "Successfully analyzed R01 and R02 using the provided IsoGraph Core and Discovery Protocols specifications. Verified that representational differences do not constitute structural breakers or separators in R01, and mapped the common proof topology of termination in R02 using role-based alignment and one-to-subgraph mapping while rejecting unsupported overclaims."
+  }
+}
