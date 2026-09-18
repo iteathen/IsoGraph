@@ -1,0 +1,64 @@
+name: Cleanup old IsoGraph Actions artifacts
+
+on:
+  push:
+    branches:
+      - spec/nei-qu-rewrite
+    paths:
+      - .github/workflows/cleanup-actions-artifacts.yml
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inventory and prune artifacts
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          KEEP_NEWEST: "5"
+        run: |
+          set -euo pipefail
+
+          gh api --paginate --slurp "repos/$REPO/actions/artifacts?per_page=100" > "$RUNNER_TEMP/pages.json"
+          jq '[.[].artifacts[]] | sort_by(.created_at) | reverse' "$RUNNER_TEMP/pages.json" > "$RUNNER_TEMP/artifacts.json"
+
+          COUNT="$(jq 'length' "$RUNNER_TEMP/artifacts.json")"
+          BYTES="$(jq '[.[].size_in_bytes] | add // 0' "$RUNNER_TEMP/artifacts.json")"
+
+          echo "Artifacts before cleanup: $COUNT"
+          echo "Bytes before cleanup: $BYTES"
+          echo "Keeping newest: $KEEP_NEWEST"
+          echo
+          echo "===== ARTIFACT MANIFEST BEFORE CLEANUP ====="
+          jq -r '.[] | [.id,.name,.size_in_bytes,.created_at,.expired] | @tsv' "$RUNNER_TEMP/artifacts.json"
+          echo "===== END ARTIFACT MANIFEST ====="
+
+          jq -r --argjson keep "$KEEP_NEWEST" '.[$keep:][]?.id' "$RUNNER_TEMP/artifacts.json" > "$RUNNER_TEMP/delete_ids.txt"
+
+          DELETE_COUNT="$(wc -l < "$RUNNER_TEMP/delete_ids.txt" | tr -d ' ')"
+          echo "Deleting $DELETE_COUNT older artifacts."
+
+          while IFS= read -r id; do
+            [ -n "$id" ] || continue
+            gh api --method DELETE "repos/$REPO/actions/artifacts/$id"
+            echo "Deleted artifact $id"
+          done < "$RUNNER_TEMP/delete_ids.txt"
+
+          gh api --paginate --slurp "repos/$REPO/actions/artifacts?per_page=100" > "$RUNNER_TEMP/after-pages.json"
+          jq '[.[].artifacts[]] | sort_by(.created_at) | reverse' "$RUNNER_TEMP/after-pages.json" > "$RUNNER_TEMP/after.json"
+
+          AFTER_COUNT="$(jq 'length' "$RUNNER_TEMP/after.json")"
+          AFTER_BYTES="$(jq '[.[].size_in_bytes] | add // 0' "$RUNNER_TEMP/after.json")"
+
+          echo "Artifacts after cleanup: $AFTER_COUNT"
+          echo "Bytes after cleanup: $AFTER_BYTES"
+          echo "Bytes deleted: $((BYTES - AFTER_BYTES))"
+          echo
+          echo "===== RETAINED ARTIFACTS ====="
+          jq -r '.[] | [.id,.name,.size_in_bytes,.created_at,.expired] | @tsv' "$RUNNER_TEMP/after.json"
+          echo "===== END RETAINED ARTIFACTS ====="
