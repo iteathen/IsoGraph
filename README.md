@@ -182,10 +182,10 @@ IsoGraph needs stable addressing, sharing, reconstruction, matching, namespaces,
 
 Stronger identity questions belong to an explicit theory/profile/extension with their own evidence burden.
 
-The current research extension for that purpose is:
+The qualified extension authority for that purpose is:
 
-- [Natural Entropic Identity 0.1 Candidate](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.2 Candidate](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
+- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
+- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
 
 NEI 0.1 with the NEI 0.2 clarification layer is a **qualified semantic extension** at the exact revisions recorded in the qualified-module authority manifest. NEI remains separate from Core; qualification does not make natural identity implicit.
 
@@ -429,7 +429,7 @@ That is real information even though the value remains unresolved.
 
 See:
 
-- [Quantifiable Unknown 0.1 Candidate](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
+- [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 
 QU 0.1 is a **qualified semantic extension** at the exact revision recorded in the qualified-module authority manifest. It remains separate from Core and is not silently active unless a claim/profile depends on it.
 
@@ -437,7 +437,7 @@ QU 0.1 is a **qualified semantic extension** at the exact revision recorded in t
 
 # Identity can remain open without being guessed
 
-The current NEI research is intentionally conservative.
+Qualified NEI semantics are intentionally conservative.
 
 It does not infer sameness merely because no difference has been found.
 
