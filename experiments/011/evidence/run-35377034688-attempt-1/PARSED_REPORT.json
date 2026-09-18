@@ -1,0 +1,64 @@
+{
+  "mapping": [
+    {
+      "left": "A0",
+      "right": "B0",
+      "role": "input_boundary"
+    },
+    {
+      "left": "A1a",
+      "right": "B1",
+      "role": "limit_carrier_1"
+    },
+    {
+      "left": "A1b",
+      "right": "B2",
+      "role": "process_stage_2"
+    },
+    {
+      "left": "A2",
+      "right": "B3",
+      "role": "limit_carrier_2"
+    },
+    {
+      "left": "A3",
+      "right": "B4",
+      "role": "output_boundary"
+    },
+    {
+      "left": "u",
+      "right": "v",
+      "role": "open_referent"
+    }
+  ],
+  "qu_status_alpha": "OPEN",
+  "qu_status_beta": "OPEN",
+  "unknown_structural_relation": "QUI",
+  "nei_status": "INCOMPLETE_AUTHORITY",
+  "relation_kind": "WEAK_EMBEDDING",
+  "strong_embedding": false,
+  "weak_embedding": true,
+  "beta_residuals": [
+    "Guard(B2,B3, provenance_tag)",
+    "B5",
+    "B6",
+    "B0 -> B5 -> B6(audit boundary)"
+  ],
+  "alpha_source_local_D_preserved": true,
+  "alpha_atomic_as_pair_residual": false,
+  "canonical_factorization_claimed": false,
+  "misleading_label_B5_mapped_to_A1a": false,
+  "rejected_overclaims": [
+    "Global Isomorphism",
+    "Strong Embedding",
+    "Natural Identity SAME/DISTINCT",
+    "Canonical Factorization",
+    "Mapping B5 to A1a based on label"
+  ],
+  "reason": "The Alpha process chain (A0->A1a->A1b->A2->A3) injectively maps to Beta (B0->B1->B2->B3->B4). The open referents u and v share identical topology and constraints (domain {1,2,3}, != 3), establishing a QUI. Because Beta contains target-only structures (Guard and B5->B6 branch) not reflected in Alpha, the relation is a weak embedding. NEI is incomplete due to the absence of an identity profile. B5's misleading label is ignored because it is structurally a residual. Alpha's atomic A1 is preserved in D-provenance.",
+  "module_assessment": "SUPPORTED",
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "Verified all constraints, mapping alignments, QU states, NEI authority limitations, and D-local vs pairwise residual accounting rules according to Core Spec Draft 0.17 and extensions."
+  }
+}
