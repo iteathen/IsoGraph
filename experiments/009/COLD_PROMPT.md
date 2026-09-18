@@ -43,11 +43,16 @@ Return one case object for every case C01-C18, in order:
   "decision": "SUPPORTED|REJECTED|INCOMPLETE",
   "reason": "concise step-grounded explanation",
   "authority_used": ["section or declared authority"],
+  "subresults": {
+    "public_subcase_name": "one of the public enum values where the case contains named subcases"
+  },
   "rejected_overclaims": ["plain-language overclaims rejected in this case"]
 }
 ```
 
 Use `NOT_APPLICABLE` where a field is genuinely outside the case. Do not invent an answer just to avoid `INCOMPLETE`.
+
+For cases containing multiple explicitly named artifacts/updates/model families, use `subresults` to classify each named subcase. The subresult keys must exactly match the public names in the case (for example `Q_semantic`, `Q_search`, `X`, `Y`, `M_same`). Subresult values must use the same public enum vocabulary appearing in this prompt. For cases without named subcases, return an empty object.
 
 The exact enum spellings above are a public serializer requirement for this experiment and may be checked mechanically. The free-text `reason`, `authority_used`, and `rejected_overclaims` are semantic evidence and are not required to use hidden wording.
 
