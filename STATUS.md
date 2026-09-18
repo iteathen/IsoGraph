@@ -30,8 +30,13 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 ### Active unqualified successor candidates
 
-The current qualified authority is unchanged. Two new successor candidates capture lessons from the Connect4 authority 1.1 discrepancy campaign:
+The current qualified authority is unchanged. Three successor candidates capture lessons from the Connect4 authority 1.1 discrepancy campaign and the full-stack sanity audit:
 
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`
+  - discrepancy is initially observation, not defect;
+  - semantic quantity/scope/layer alignment precedes failure classification;
+  - repair follows owner localization rather than driving interpretation;
+  - unknown potentially load-bearing distinctions are not projection permission.
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md`
   - observation precedes identity judgment;
   - SAME requires sufficient identity-relevant closure;
@@ -168,10 +173,11 @@ The qualified modular authority stack remains usable exactly as recorded in `qua
 
 The next semantic qualification burden is the coupled but separately owned successor work:
 
-1. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
-2. qualify DP 0.5 against discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
-3. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
-4. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
+1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
+2. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
+3. qualify DP 0.5 against discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
+4. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
+5. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
 
 No external semantic call should be spent before deterministic contract/preflight material for these focused cases is complete.
 
