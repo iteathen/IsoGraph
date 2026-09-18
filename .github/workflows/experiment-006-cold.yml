@@ -1,0 +1,83 @@
+name: Experiment 006 QU NEI DP integrated qualification
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - spec/nei-qu-rewrite
+    paths:
+      - experiments/006/RUN_Q006.request
+
+permissions:
+  contents: read
+
+concurrency:
+  group: experiment-006-integrated-qualification
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out exact qualification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Verify deterministic harness syntax before external call
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/006/tools/run-q006-cold.mjs
+          node --check experiments/006/tools/score-q006.mjs
+
+      - name: Execute deterministic preflight and one cold semantic call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/006/tools/run-q006-cold.mjs
+
+      - name: Deterministically score frozen output
+        if: always()
+        run: node experiments/006/tools/score-q006.mjs
+
+      - name: Upload complete qualification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: isograph-exp006-RUN-Q006
+          path: out/q006/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Enforce integrated disposition
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$COLD_OUTCOME" != "success" ]; then
+            echo "Cold execution did not complete successfully: $COLD_OUTCOME" >&2
+            exit 1
+          fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p = 'out/q006/RUN-Q006_SCORE.json';
+          if (!fs.existsSync(p)) {
+            console.error('Missing deterministic score artifact');
+            process.exit(1);
+          }
+          const score = JSON.parse(fs.readFileSync(p, 'utf8'));
+          console.log(`QU=${score.qu?.disposition} NEI=${score.nei?.disposition} DP=${score.dp?.disposition} integrated=${score.integrated}`);
+          if (score.integrated !== 'QUALIFIES') process.exit(1);
+          NODE
+
+# Candidate-branch execution: create or update experiments/006/RUN_Q006.request once
+# after the candidate/corpus/assertions are frozen. Authoring commits do not match that path
+# and therefore do not consume Actions or Gemini quota.

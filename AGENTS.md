@@ -67,6 +67,45 @@ Witness quotienting is context-scoped. No qualified context/equivalence/coverage
 
 A result at explicitly named frozen factorization/extraction nodes is local unless factorization-space coverage has been declared and exhausted or certified.
 
+## Natural Entropic Identity
+
+For current NEI research, read:
+
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — base NEI semantics;
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — current clarification layer.
+
+NEI 0.2 preserves application/domain relations exactly and warns against silently carrying stronger identity meaning through them than their declared semantics/authority support. It does not assume application distinctions are meaningless, and it does not automatically promote them into `SAME` or `DISTINCT`.
+
+The word **natural** is explanatory and non-load-bearing. It contrasts the target identity question with merely representational identity; it is not a primitive, evidence source, ontology declaration, or inference rule.
+
+## Discovery Protocols
+
+For agent-driven structural discovery on the current research branch, read:
+
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md` — base ranked protocol catalog;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md` — cross-residual/NEI correction motivated by RUN-Q006;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md` — evidence-matched separator correction;
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md` — current structural-breaker and cross-residual promotion correction.
+
+DP 0.4 supersedes conflicting earlier discovery behavior while preserving DP 0.1–0.3 as historical evidence at their recorded revisions.
+
+Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. Discovery priority never supplies semantic authority.
+
+Evidence burden follows the conclusion:
+
+- a concrete structural breaker can reject a candidate without NEI;
+- an explicit pinned application/domain authority may serve as a rigid separator when its declared semantics make the difference load-bearing;
+- a natural-distinctness rejection requires qualified NEI `DISTINCT`;
+- a cost-bounded stop may remain `DORMANT`/unresolved without proving identity.
+
+Application semantics are preserved exactly. Do not presume they are either identity-relevant or identity-irrelevant. Do not silently strengthen them into NEI meaning beyond the pinned authority.
+
+Under DP 0.4, `STRUCTURAL_BREAKER` means a **concrete failed load-bearing obligation** under the active comparison/view. Different machinery, formalism, carrier type, proof technique, or decomposition style is not itself such a breaker.
+
+A load-bearing residual between already matched upstream/downstream regions requires at least one bounded recursive role/factorization pass unless a valid structural or rigid-authority breaker already explains the divergence. Any `CORRESPONDENCE` discovered by that mandatory pass re-enters ordinary candidate expansion/falsification; it may not be ignored while the same residual is used as a terminal separator.
+
+For unresolved information, consider whether QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI candidate remains structural evidence only and does not imply NEI `SAME`.
+
 ## Qualification provenance
 
 Experiment 005 final review is `experiments/005/EXPERIMENT_005_FINAL_QUALIFICATION_REVIEW.md`.
@@ -81,4 +120,16 @@ unresolved obligations: none
 
 Draft 0.17 adds no separate qualification campaign because it changes the description/scope of the existing ID mechanism without changing its operational behavior.
 
+Experiment 006 RUN-Q006, RUN-Q006-R2, and RUN-Q006-R3 remain frozen historical evidence against their exact recorded candidate revisions. Preserve their reports and reproduction investigations without reinterpreting frozen outputs through later DP/NEI revisions.
+
+RUN-Q006-R4 is the focused DP 0.4 regression line. Its first recorded Gemini execution ended at the provider boundary with HTTP 429 and produced no semantic report; see `experiments/006/EXPERIMENT_006_RUN_Q006_R4_PROVIDER_REVIEW.md`. A later Aider/OpenRouter free-router pass is retained only as behavioral evidence because it was not strictly cold; see `experiments/006/EXPERIMENT_006_R4_OPENROUTER_FREE_BEHAVIORAL_REVIEW.md`. The direct pinned OpenRouter/Nemotron cold run at IsoGraph SHA `24a7a49a58214a281ae5fe8c553f99e18f229cfb` recovered O1/O4/O5 but did not meet the four-motif threshold, so DP 0.4 remains unqualified; see `experiments/006/EXPERIMENT_006_RUN_Q006_R4_OPENROUTER_COLD_REVIEW.md`.
+
 Preserve cold-test isolation for future experiments when an actual semantic hypothesis warrants qualification: scorer assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable to isolated qualification agents until their outputs are frozen.
+
+## Qualification resource discipline
+
+External Gemini calls and GitHub Actions executions are scarce qualification resources. Read and follow `QUALIFICATION_RESOURCE_DISCIPLINE.md` before designing or running a new qualification experiment.
+
+Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient independent evidence**. Prefer focused high-information regression tests over replaying unrelated already-covered controls after a narrow candidate revision.
+
+Run deterministic syntax, hash, packet-integrity, provenance, and mechanical checks before spending an external semantic call. Do not rerun Gemini or CI merely to seek a more favorable answer. Additional external calls/runs require a concrete evidentiary or infrastructure reason and should be recorded in final qualification provenance.
