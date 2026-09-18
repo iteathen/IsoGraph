@@ -231,8 +231,10 @@ jobs:
             git diff-tree --check --root -r HEAD -- "${non_markdown[@]}"
           fi
 
-      - name: Forbid GitHub Actions storage
-        run: node tools/check-no-github-actions-storage.mjs
+      - name: Validate transient Actions storage policy
+        run: |
+          node tools/test-github-actions-storage-policy.mjs
+          node tools/check-github-actions-storage-policy.mjs
 
       - name: Verify frozen evidence remains present
         shell: bash
