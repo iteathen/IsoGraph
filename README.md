@@ -31,11 +31,40 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 
-Core remains distinct from separately versioned qualified extensions. Current status and provenance:
+Core remains distinct from separately versioned qualified extensions. Current status, design posture, and provenance:
 
-- [STATUS.md](STATUS.md)
-- [MIGRATION.md](MIGRATION.md)
-- [AGENTS.md](AGENTS.md)
+- [DESIGN_IDEALS.md](DESIGN_IDEALS.md) — explanatory design doctrine: perception before judgment, scoped sameness, unknown preservation, exact collapse, and discrepancy-as-discovery;
+- [STATUS.md](STATUS.md) — current qualified/candidate authority state;
+- [MIGRATION.md](MIGRATION.md) — repository provenance;
+- [AGENTS.md](AGENTS.md) — agent operating guidance.
+
+The design doctrine does not override the versioned semantic specifications. It explains why the specifications preserve scope, residuals, unknown structure, and revision-scoped evidence.
+
+---
+
+# Design posture
+
+IsoGraph is deliberately **observation-first**.
+
+A discrepancy is not automatically a defect. A missing observed difference is not automatically sameness. A represented difference is not automatically ontological distinctness. The first question is what the observation actually denotes, under what scope, at what layer, and with what completeness authority.
+
+The working posture is:
+
+~~~text
+perceive
+-> preserve
+-> distinguish
+-> compare scope / quantity / authority / closure
+-> explore hidden difference or hidden equivalence
+-> falsify
+-> only then conclude or repair
+~~~
+
+This matters because the representation is supposed to expose structure that was not already known. If every inconsistency is immediately normalized away, the system can destroy the evidence it was designed to reveal.
+
+At the same time, IsoGraph does not romanticize anomalies. An ordinary error is a valid outcome once the structural alternatives have been examined sufficiently.
+
+See [DESIGN_IDEALS.md](DESIGN_IDEALS.md) for the full doctrine.
 
 ---
 
@@ -1123,6 +1152,9 @@ STATUS.md
 
 AGENTS.md
     research and agent operating guidance
+
+DESIGN_IDEALS.md
+    explanatory observation-first / unknown-preserving design doctrine
 
 NATIVE_FORMAT.md
     .isg native-text convention
