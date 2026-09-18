@@ -4,7 +4,9 @@ IsoGraph is an agent-native structural knowledge representation designed to expo
 
 ## Authority
 
-Before substantive work, read `README.md`, `STATUS.md`, `MIGRATION.md`, and the semantic authority relevant to the task.
+Before substantive work, read `README.md`, `DESIGN_IDEALS.md`, `STATUS.md`, `MIGRATION.md`, and the semantic authority relevant to the task.
+
+`DESIGN_IDEALS.md` is explanatory doctrine, not semantic authority. Use it to preserve the intended reasoning posture without letting prose override versioned qualified semantics.
 
 ### Qualified Core authority
 
@@ -58,10 +60,25 @@ Draft 0.16 remains immutable historical qualification evidence for Experiment 00
 
 Use: assess -> research -> reassess -> plan -> execute -> qualify -> review -> cleanup/document.
 
-Treat prior conclusions, reviews, fixtures, expected results, verifier output, and issue text as evidence rather than authority. Preserve ambiguity and residual distinctions. Do not create a new primitive, structural class, comparison relation, canonical factorization, canonical labeling requirement, or mandatory proof algorithm merely because a case is awkward or expensive.
+Within that cycle, **perception precedes judgment**. When a discrepancy appears, first preserve and characterize it. Before calling it a defect, determine whether the compared observations have the same semantic quantity, scope, layer, aggregation level, authority, and closure assumptions. Treat hidden distinction, hidden scoped equivalence, unknown structure, and ordinary error as competing explanations until evidence separates them.
+
+Qualification and discovery are separate questions. A decoder/scorer/output can be wrong for qualification while the anomaly that exposed the error remains a useful structural lead. Closing the qualification issue does not automatically close the discovery issue.
+
+Treat prior conclusions, reviews, fixtures, expected results, verifier output, and issue text as evidence rather than authority. Preserve ambiguity, unknown structure, and residual distinctions. Do not create a new primitive, structural class, comparison relation, canonical factorization, canonical labeling requirement, or mandatory proof algorithm merely because a case is awkward or expensive.
+
+Do not weaken dependency propagation merely to localize a newly exposed distinction. With exact provenance, downstream invalidation is evidence about how load-bearing the distinction was.
 
 Keep these distinctions explicit:
 
+- observation != judgment
+- discrepancy != defect
+- no observed difference != positive sameness evidence
+- represented difference != automatic ontological distinctness
+- unknown != irrelevant
+- same scoped property != global identity
+- classification != ontology
+- qualification disposition != discovery disposition
+- repair != explanation
 - surface syntax != irreducible substrate
 - source-faithful representation != comparison view
 - Semantic Identity (SI) != occurrence
