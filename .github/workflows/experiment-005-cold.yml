@@ -57,15 +57,23 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node experiments/005/tools/run-q005-cold.mjs
 
-      - name: Freeze cold artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: isograph-exp005-RUN-Q005-cold-v1
-          path: out/
-          if-no-files-found: error
-          retention-days: 30
-
-      - name: Archive frozen report after artifact upload
+      - name: Emit frozen evidence to log
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          found=0
+          for p in out/*REPORT*.txt out/*METADATA*.json; do
+            [ -f "$p" ] || continue
+            found=1
+            echo "===== BEGIN $(basename "$p") ====="
+            cat "$p"
+            echo "===== END $(basename "$p") ====="
+          done
+          echo "Evidence file hashes:"
+          find out -maxdepth 2 -type f -print0 2>/dev/null | sort -z | xargs -0 -r sha256sum
+          test "$found" -eq 1
+      - name: Archive frozen report to repository
         shell: bash
         run: |
           set -euo pipefail
