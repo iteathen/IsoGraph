@@ -63,10 +63,25 @@ Draft 0.17 introduces no:
 - special extension-loading mechanism;
 - change to Draft 0.16 proof/search sufficiency rules.
 
+## Current Discovery Protocol qualification evidence
+
+Discovery Protocols 0.1-0.4 remain candidate research and are not part of the qualified core authority.
+
+The current evidence record is:
+
+- Experiment 006 current-main Test 6 regression recovered O1/O2/O4/O5 and deep O2/O4, but remains post-unblind regression evidence only.
+- Experiment 007, frozen at `eae08ffc562168a2bc093c74056e3b6e01b88d93`, recovered **5/5 hidden motifs** and **3/3 deep motifs** under strict cold isolation. Its immutable automatic disposition remains `DOES_NOT_QUALIFY` because the frozen scorer required hidden exact enum spellings for rejection statements that were semantically present.
+- QRC 0.1 (`qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md`) separates semantic rejection coverage from exact serializer conformance. It is qualification infrastructure, not semantic authority.
+- Experiment 008, frozen at `cabcdd90c2a997c69a421bb6ada9d2f1a7d31882`, returned **`QUALIFIES`**, recovered **5/5 motifs** and **3/3 deep motifs**, and passed every frozen guard in direct cold OpenRouter run `35303672370`.
+
+Experiment 008 is genuinely fresh post-QRC blind qualification evidence, but its review records that the paired derivations expose several high-level roles relatively transparently. Read its result together with the more oblique Experiment 007 blind semantic success rather than treating either run alone as universal proof of Discovery Protocol adequacy.
+
+No candidate is silently promoted by these results.
+
 ## Historical authority
 
 `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md` remains immutable qualified historical evidence for Experiment 004 and prior Draft 0.15 artifacts. Draft 0.17 does not retroactively change historical semantics or qualification evidence.
 
 ## Immediate work
 
-Future NEI, admissible-variation, invariant-extraction, or information-measure work remains outside the core unless an independent core insufficiency is demonstrated. The current core correction is complete once Draft 0.17 is integrated to `main`.
+Draft 0.17 remains the qualified core authority. Current discovery work should use the Experiment 007/008 evidence record and QRC 0.1 without treating those candidate layers as qualified core semantics. Further promotion, NEI, admissible-variation, invariant-extraction, or information-measure work remains separate unless its own evidence burden is discharged.
