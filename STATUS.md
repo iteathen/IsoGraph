@@ -4,6 +4,16 @@
 **Repository:** `iteathen/IsoGraph`  
 **Default branch:** `main`
 
+## Design doctrine
+
+The explanatory project doctrine is recorded in:
+
+- `DESIGN_IDEALS.md`
+
+It captures the intended observation-first posture: perceive before judging, preserve unknown and residual structure, keep sameness scoped, separate classification from ontology, collapse only proven-irrelevant distinctions, and treat discrepancy propagation as a possible structural signal.
+
+This doctrine is **not semantic authority**. Versioned qualified specifications remain controlling.
+
 ## Current qualified authority
 
 ### Core
@@ -49,7 +59,7 @@ The current qualified authority is unchanged. Three successor candidates capture
   - qualification and structural-discovery dispositions remain independent;
   - repair must preserve the anomaly evidence that exposed hidden structure.
 
-Neither candidate is qualified or promoted. NEI 0.1+0.2 and DP 0.1-0.4 remain current authority.
+None of these successor candidates is qualified or promoted. Core 0.17, NEI 0.1+0.2, and DP 0.1-0.4 remain current authority.
 
 ### Qualified infrastructure
 
@@ -171,7 +181,7 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 The qualified modular authority stack remains usable exactly as recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
 
-The next semantic qualification burden is the coupled but separately owned successor work:
+The next semantic qualification burden is the coupled but separately owned successor work. Qualification should test the candidate semantics against the design ideals rather than merely testing whether expected strings are reproduced:
 
 1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
 2. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
