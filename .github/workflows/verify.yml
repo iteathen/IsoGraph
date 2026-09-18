@@ -143,8 +143,12 @@ jobs:
 
           grep -Fq 'all current prompt/fixture/scorer artifacts constructed and frozen' experiments/004/COLD_RUN_MANIFEST_004_V3.md
           grep -Fq 'Zero isolated current-authority runs have been accepted yet.' experiments/004/COLD_RUN_MANIFEST_004_V3.md
-          grep -Fq 'current-authority isolated cold runs accepted:     0' experiments/004/RESULTS_004.md
-          grep -Fq 'not eligible to produce cold qualification outputs' experiments/004/RESULTS_004.md
+          grep -Fq 'first current-authority Draft 0.15 qualification checkpoint reached' experiments/004/RESULTS_004.md
+          grep -Fq 'PASS:     15' experiments/004/RESULTS_004.md
+          grep -Fq 'PARTIAL:   6' experiments/004/RESULTS_004.md
+          grep -Fq 'FAIL:      0' experiments/004/RESULTS_004.md
+          grep -Fq 'UNKNOWN:   0' experiments/004/RESULTS_004.md
+          grep -Fq 'Experiment 004 qualification required for this checkpoint is complete.' experiments/004/RESULTS_004.md
 
       - name: Verify frozen Experiment 004 inputs were not rewritten
         shell: bash
