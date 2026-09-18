@@ -73,12 +73,14 @@ Unless a qualification obligation requires physical isolation between jobs:
 
 - use one job rather than a matrix of one job per case;
 - execute deterministic preflight, packet assembly, one external decoder call, output freezing, and deterministic validation in one workflow when isolation can still be preserved;
-- upload one compact evidence artifact/manifest rather than one artifact per case;
+- emit durable evidence to workflow logs and/or intentional repository history rather than retaining Actions artifacts;
+- when an artifact is genuinely useful as same-run transport, treat it as transient owned state and delete all artifacts created by that workflow run in an `if: always()` cleanup step before termination;
+- do not use GitHub Actions cache storage for qualification state;
 - avoid push-triggered workflows during iterative authoring; prefer explicit/manual or tightly path-filtered qualification triggers;
 - batch repository changes before triggering qualification;
 - do not create a new workflow version merely to rerun the same semantic test.
 
-Independent verification may be a second workflow/run if separation is load-bearing. It should consume the frozen decoder artifact/hash rather than repeating the first external call.
+Independent verification may be a second workflow/run if separation is load-bearing. It should consume a committed/frozen report or recorded hash rather than relying on retained Actions storage or repeating the first external call.
 
 ## 5. Preserve cold isolation without multiplying calls
 
