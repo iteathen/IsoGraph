@@ -21,7 +21,8 @@ The source Draft 0.13/0.14/0.15 documents remain historical provenance and ratio
 Cold evidence:
 
 ```text
-earlier Claude/manual evidence branch: experiment/004-cold-results-claude
+Claude/manual evidence:                experiments/004/cold-results/claude/
+source branch provenance:              experiment/004-gemini-cold-bulk @ 2ffabf30964b09b0eb6f5ef10f490a6ff80a28b8
 Gemini cold workflow:                  35191919970
 Gemini cold model:                     gemini-3.5-flash, high thinking
 Gemini raw evidence archive:           d78a806322198e084e5016f44f813401bff72ad3
@@ -38,6 +39,8 @@ D17/D17B verifier workflow:            35246313461
 complete durable archive workflow:     35248055284
 complete durable archive commit:       e8c206b4f1219ee9aed4ed46adc97df2a9399f79
 ```
+
+The earlier Claude/manual cold/scoring evidence is now preserved directly on main-track history under `experiments/004/cold-results/claude/`; it no longer depends on a surviving side branch. The historical direct Gemini Draft 0.15 runner is archived at `experiments/004/tools/historical/run-gemini-cold-draft-0-15.mjs` and is not a current qualification route.
 
 The complete selected verifier evidence is preserved verbatim under:
 
