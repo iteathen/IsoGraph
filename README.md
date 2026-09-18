@@ -1075,7 +1075,7 @@ observe discrepancy
 -> only then judge defect vs valid structural difference
 ~~~
 
-Neither candidate permits missing authority to masquerade as semantic NEI `UNKNOWN`, and neither makes an anomaly proof of an isomorphism.
+None of these successor candidates permits missing authority to masquerade as semantic NEI `UNKNOWN`, and none makes an anomaly proof of an isomorphism.
 
 ## Qualified qualification infrastructure
 
