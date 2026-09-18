@@ -1027,8 +1027,9 @@ Qualified extensions do **not** become Core. They remain explicit versioned depe
 
 ## Active unqualified successor candidates
 
-Two successor candidates are under development and **do not yet change qualified authority**:
+Three successor candidates are under development and **do not yet change qualified authority**:
 
+- [Core 0.18 Observation-First Clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md) — discrepancy interpretation, semantic-quantity alignment, and pre-repair failure-classification discipline.
 - [Natural Entropic Identity 0.3](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md) — observation/comparison closure, scope, unknown-preserving collapse, and exact scoped quotient clarification.
 - [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md) — observation-first discrepancy handling, semantic-quantity alignment, and separate qualification/discovery dispositions.
 
@@ -1185,6 +1186,10 @@ NEI 0.1 + 0.2:
 Discovery Protocols 0.1-0.4:
     QUALIFIED cumulative module
     decisive corrected holdout: Experiment 014
+
+Core 0.18:
+    UNQUALIFIED successor candidate
+    observation-first discrepancy/pre-repair clarification
 
 NEI 0.3:
     UNQUALIFIED successor candidate
