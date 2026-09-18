@@ -1,0 +1,52 @@
+{
+  "max_steps_per_side_per_finding": 4,
+  "minimum_motifs": 4,
+  "deep_motifs": [
+    "O2",
+    "O3",
+    "O4"
+  ],
+  "motifs": {
+    "O1": {
+      "alpha": ["A01", "A02"],
+      "beta": ["B01", "B02"],
+      "min_alpha_overlap": 2,
+      "min_beta_overlap": 2
+    },
+    "O2": {
+      "alpha": ["A02", "A03"],
+      "beta": ["B02", "B03"],
+      "min_alpha_overlap": 2,
+      "min_beta_overlap": 2
+    },
+    "O3": {
+      "alpha": ["A03", "A05"],
+      "beta": ["B03", "B04"],
+      "min_alpha_overlap": 2,
+      "min_beta_overlap": 2
+    },
+    "O4": {
+      "alpha": ["A04", "A05"],
+      "beta": ["B05"],
+      "min_alpha_overlap": 2,
+      "min_beta_overlap": 1
+    },
+    "O5": {
+      "alpha": ["A06", "A07", "A08"],
+      "beta": ["B06", "B07", "B08"],
+      "min_alpha_overlap": 2,
+      "min_beta_overlap": 2
+    }
+  },
+  "alpha_residual_pool": ["A03", "A05", "A06"],
+  "beta_residual_pool": ["B03", "B04", "B06"],
+  "minimum_alpha_residuals": 2,
+  "minimum_beta_residuals": 2,
+  "required_rejected_overclaims": [
+    "FULL_PROOF_ISOMORPHISM",
+    "NATURAL_IDENTITY",
+    "SAME_INTERMEDIATE_OBJECTS",
+    "SAME_ALGORITHM"
+  ],
+  "expected_promotion": "SUPPORTED_CANDIDATE"
+}
