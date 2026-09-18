@@ -1,0 +1,96 @@
+{
+  "experiment": "013",
+  "required_case_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08"
+  ],
+  "cases": {
+    "F01": {
+      "modules": [
+        "QU"
+      ],
+      "answers": {
+        "shared_vs_split_equal_equivalent": false,
+        "shared_vs_opaque_equivalent": false,
+        "relational_distinction_must_survive": true
+      }
+    },
+    "F02": {
+      "modules": [
+        "QU"
+      ],
+      "answers": {
+        "four_admissible": false,
+        "qu_status": "OPEN",
+        "stale_cache_controls_semantics": false
+      }
+    },
+    "F03": {
+      "modules": [
+        "QU"
+      ],
+      "answers": {
+        "Exact": "SEMANTIC_UNRESOLVED",
+        "Search": "COMPUTATION_INCOMPLETE"
+      }
+    },
+    "F04": {
+      "modules": [
+        "QU"
+      ],
+      "answers": {
+        "X": "REFINEMENT",
+        "Y": "REVISION"
+      }
+    },
+    "F05": {
+      "modules": [
+        "QU"
+      ],
+      "answers": {
+        "QX_QY": "QUI",
+        "QX_QZ": "NOT_QUI",
+        "equal_scalar_establishes_QUI": false
+      }
+    },
+    "F06": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "answers": {
+        "actual_resolution_equality_established": false,
+        "nei_same_established": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      }
+    },
+    "F07": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "answers": {
+        "may_choose_anchor_to_force_result": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      }
+    },
+    "F08": {
+      "modules": [
+        "QU",
+        "NEI"
+      ],
+      "answers": {
+        "circular_proof_admissible": false,
+        "original_qu_status": "OPEN",
+        "semantic_nei_unknown_established": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      }
+    }
+  }
+}

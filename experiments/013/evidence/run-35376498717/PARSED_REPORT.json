@@ -1,0 +1,110 @@
+{
+  "cases": [
+    {
+      "case_id": "F01",
+      "answers": {
+        "shared_vs_split_equal_equivalent": false,
+        "shared_vs_opaque_equivalent": false,
+        "relational_distinction_must_survive": true
+      },
+      "reason": "Shared uses a single SI-addressable referent, which is not equivalent to SplitEqual's two referents related by equality constraint (QU Spec Sec 11), nor to Opaque's independent UNKNOWN markers. Relational distinctions must survive to prevent loss of structural information (QU Spec Sec 4).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F02",
+      "answers": {
+        "four_admissible": false,
+        "qu_status": "OPEN",
+        "stale_cache_controls_semantics": false
+      },
+      "reason": "The qualified constraint m != 4 excludes 4 from semantic admissibility. The QU remains OPEN because multiple realizations (2 and 6) are still admissible. Stale implementation caches do not control semantic admissibility (QU Spec Sec 7).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F03",
+      "answers": {
+        "Exact": "SEMANTIC_UNRESOLVED",
+        "Search": "COMPUTATION_INCOMPLETE"
+      },
+      "reason": "Exact has realizations satisfying both phi and not-phi, making it SEMANTIC_UNRESOLVED. Search represents a computational limit where the exact family has not been established, making it COMPUTATION_INCOMPLETE (QU Spec Sec 12, Sec 8.4).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F04",
+      "answers": {
+        "X": "REFINEMENT",
+        "Y": "REVISION"
+      },
+      "reason": "Update X is a REFINEMENT because it retains the governing authority and narrows the realization family. Update Y is a REVISION because it replaces the authority with an incompatible one and changes the domain (QU Spec Sec 13).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F05",
+      "answers": {
+        "QX_QY": "QUI",
+        "QX_QZ": "NOT_QUI",
+        "equal_scalar_establishes_QUI": false
+      },
+      "reason": "QX and QY are isomorphic under alpha-renaming, establishing QUI. QZ lacks the T relation, so it is NOT_QUI. Equal information scalars do not establish structural isomorphism (QU Spec Sec 14, Sec 16).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F06",
+      "answers": {
+        "actual_resolution_equality_established": false,
+        "nei_same_established": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      },
+      "reason": "QUI does not establish actual resolution equality or NEI SAME. Since no NEI identity profile, law, or bridge is supplied, the query status is INCOMPLETE_AUTHORITY (QU Spec Sec 16, NEI 0.1 Sec 14, NEI 0.2 Sec 6).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F07",
+      "answers": {
+        "may_choose_anchor_to_force_result": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      },
+      "reason": "The system cannot choose an anchor to force a result as that violates anti-circularity. Without a qualified query anchor or correspondence rule, the query is unqualified, resulting in INCOMPLETE_AUTHORITY (NEI 0.1 Sec 7, Sec 21).",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F08",
+      "answers": {
+        "circular_proof_admissible": false,
+        "original_qu_status": "OPEN",
+        "semantic_nei_unknown_established": false,
+        "nei_query_status": "INCOMPLETE_AUTHORITY"
+      },
+      "reason": "Circular proofs are strictly inadmissible. The original QU remains OPEN. Semantic NEI UNKNOWN is not established because there is no qualified identity profile/law to define SAME or DISTINCT models. The query status is INCOMPLETE_AUTHORITY (NEI 0.1 Sec 12, Sec 21).",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "qu_0_1": "SUPPORTED",
+    "nei_0_1_0_2": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "Decoded all cases F01-F08 strictly following the provided specifications for Core, QU, and NEI."
+  }
+}
