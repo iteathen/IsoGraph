@@ -2,7 +2,7 @@
 
 **Status:** unqualified normative correction candidate  
 **Short name:** DP 0.5  
-**Base dependencies:** DP 0.1, DP 0.2, DP 0.3, and DP 0.4  
+**Base dependencies:** DP 0.1, DP 0.2, DP 0.3, DP 0.4, and the observation-first discrepancy clarification in `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`  
 **Identity dependency:** cumulative NEI 0.1-0.3 only when a conclusion actually relies on natural identity/distinctness  
 **QU dependency:** qualified QU when unresolved structure must be preserved to represent the discrepancy faithfully  
 **Evidence motivating this revision:** Connect4 IsoGraph authority 1.1 qualification/adjudication, where several apparent “errors” were either hidden semantic distinctions or decoder errors that still remained useful discovery leads  

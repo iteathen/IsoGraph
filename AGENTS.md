@@ -32,6 +32,7 @@ Qualified extensions remain separately versioned dependencies and do not silentl
 
 The following revisions are active semantic candidates and are **not** current authority until separately qualified and promoted:
 
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — observation-first discrepancy interpretation and pre-repair alignment clarification;
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md` — observation/comparison-closure, scope, and safe-collapse clarification;
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
 

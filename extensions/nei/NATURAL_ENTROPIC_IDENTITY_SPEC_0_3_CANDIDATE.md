@@ -3,7 +3,7 @@
 **Status:** unqualified normative clarification candidate  
 **Short name:** NEI 0.3  
 **Base dependencies:** `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` and `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md`  
-**Core dependency:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` or an exact qualified bridge  
+**Core dependency:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` plus `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` for this successor candidate, or an exact qualified bridge carrying both obligations  
 **QU dependency:** qualified QU when unresolved identity-relevant structure can change the result  
 **Evidence motivating this revision:** Connect4 IsoGraph authority 1.1 discrepancy/lineage adjudication, especially the distinction between explicit fields, semantic scope, citation/artifact/event/lineage identity, and unresolved evidence independence  
 **Growth rule:** adds no Core primitive, NEI result status, universal identity ontology, compression objective, or mandatory search algorithm
