@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { checkWorkflowText } from './check-github-actions-storage-policy.mjs';
 
-function wf(lines){ return lines.join('\\n')+'\\n'; }
+function wf(lines){ return lines.join('\n')+'\n'; }
 
 assert.deepEqual(checkWorkflowText(wf([
   'permissions:',
@@ -61,7 +61,7 @@ assert.deepEqual(checkWorkflowText(wf([
   '      - name: Cleanup transient artifacts',
   '        if: always()',
   '        env:',
-  '          GITHUB_TOKEN: $'+'{{ github.token }}',
+  '          GITHUB_TOKEN: token',
   '        run: node tools/cleanup-github-actions-storage.mjs'
 ])),[]);
 
