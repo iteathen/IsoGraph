@@ -35,7 +35,8 @@ Qualified extensions remain separately versioned dependencies and do not silentl
 The following revisions are active semantic candidates and are **not** current authority until separately qualified and promoted:
 
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — observation-first discrepancy interpretation and pre-repair alignment clarification;
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md` — observation/comparison-closure, scope, and safe-collapse clarification;
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — active successor candidate: derived identity, explicit exact/probabilistic identity evidence, Bayesian evidence strength, evidence dependence, and mandatory QU when unresolved identity-relevant structure affects identity or evidence;
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md` — superseded unqualified precursor retained as historical successor-candidate evidence;
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
 
 Use them as candidate material only when the task explicitly concerns their development/qualification. Do not silently apply them to historical evidence or qualified-module claims.
@@ -134,7 +135,7 @@ The word **natural** is explanatory and non-load-bearing. It contrasts the targe
 
 A semantic NEI `UNKNOWN` is itself a qualified positive result: do not use it merely because identity authority is absent. Missing required identity profile/query-anchor authority remains incomplete.
 
-NEI 0.3 is an unqualified successor candidate. Its proposed clarification is observation-first: no observed difference is not proof of sameness, an observed difference is not automatically identity-separating, scope is load-bearing, and unknown identity-relevant distinctions cannot be quotiented away. It adds no new NEI result status and must not be treated as qualified authority before promotion.
+NEI 0.4 is the active unqualified successor candidate. It preserves 0.3's observation-first/scoped-quotient discipline but makes a deeper correction: `SAME` and `DISTINCT` are derived results, not application/profile answer tags. Query contexts define the identity question, scope, model and evidence authority. Exact evidence constrains admissible identity models; probabilistic identity evidence may carry a Bayes/log-Bayes factor but cannot cross a probability threshold into exact identity. Evidence lineage/dependence is load-bearing. QU is the uncertainty substrate whenever unresolved identity-relevant structure can affect classification, likelihood, dependence, or evidence strength; QU does not imply a probability distribution over realizations. Missing required QU is incomplete/unqualified, not semantic `UNKNOWN`. NEI 0.3 remains an unqualified historical precursor and is superseded for active successor work.
 
 ## Discovery Protocols
 
