@@ -6,7 +6,7 @@
 
 The 0.1 vocabulary remains exact historical authority for NEI 0.1/0.2 claims.
 
-This 0.2 companion supplies successor roles for NEI 0.4's derived-identity and probabilistic-evidence semantics. It deliberately does **not** reinterpret historical `^94010` / `^94011` identity-preserving/separating-law records.
+This 0.2 companion supplies successor roles for NEI 0.4's derived-identity and probabilistic-evidence semantics. It reuses qualified role `^94000` only to identify the NEI extension/revision authority record; successor evidence/query roles live in the new `^941xx` range. It deliberately does **not** reinterpret historical `^94010` / `^94011` identity-preserving/separating-law records.
 
 | Stable label | Role |
 | --- | --- |
