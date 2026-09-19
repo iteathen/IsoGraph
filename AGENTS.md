@@ -32,7 +32,7 @@ Qualified extensions remain separately versioned dependencies and do not silentl
 
 ### Unqualified successor candidates
 
-The following revisions are active semantic candidates and are **not** current authority until separately qualified and promoted:
+The following revisions are unqualified successor material and are **not** current authority until separately qualified and promoted. NEI 0.4 is the active identity successor; NEI 0.3 is retained only as its immediate precursor:
 
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — observation-first discrepancy interpretation and pre-repair alignment clarification;
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — active successor candidate: derived identity, explicit exact/probabilistic identity evidence, Bayesian evidence strength, evidence dependence, and mandatory QU when unresolved identity-relevant structure affects identity or evidence;
