@@ -41,7 +41,7 @@ A system that exposes a hidden distinction by producing a discrepancy may be wor
 
 ---
 
-# 2. Sameness requires justified absence of relevant difference
+# 2. Sameness is derived, not declared
 
 A central danger in representation is confusing:
 
@@ -66,11 +66,13 @@ no observed difference
     != positive SAME evidence
 ~~~
 
-unless the applicable identity/profile/closure authority is sufficient to exclude admissible identity-separating alternatives for the claim being made.
+and an identity query/profile should not solve the problem by tagging a relation as `identity-preserving` merely because the desired conclusion is SAME.
+
+The query context should identify the carrier, scope, observations, domain laws, constraints, QU state and evidence/model authority. The identity result should emerge from the admissible identity models that survive those facts.
 
 This is not a requirement to know every conceivable property of reality.
 
-It is a requirement to close the **relevant scoped identity burden**.
+It is a requirement to close the **relevant scoped identity burden** without declaring the answer in the query definition.
 
 ---
 
@@ -94,7 +96,7 @@ Two represented things may differ in:
 
 That does not automatically establish that they are two different natural/domain objects.
 
-A difference becomes identity-separating only when the applicable domain/profile authority gives it that role.
+A difference becomes identity-separating only when the represented domain facts and constraints make separation follow for the identity question. A profile may define scope and model authority; it should not manufacture DISTINCT by attaching an answer tag to the difference.
 
 Thus:
 
@@ -174,6 +176,49 @@ semantic unresolvedness
 A semantic UNKNOWN or UNRESOLVED result is a positive structural statement about a qualified possibility/model family.
 
 When the possibility universe or closure authority is missing, the correct result is incompleteness, not manufactured semantic uncertainty.
+
+For identity work this is especially important:
+
+~~~text
+known identity-relevant structure
+        +
+QU describing what remains unresolved
+        ->
+admissible identity possibilities
+~~~
+
+If unresolved structure can change the identity result, evidence relevance, evidence dependence, or evidence likelihood, QU is part of the identity problem rather than optional metadata.
+
+> **A loss of QU structure is a loss of identity information.**
+
+QU does not automatically provide probabilities over its admissible realizations. If probabilistic identity evidence depends on QU, preserve the realization dependence unless a qualified probability model supplies lawful marginal likelihoods.
+
+
+# 5A. Identity evidence can be graded without making identity probabilistic truth
+
+Identity evidence may favor coidentity or favor separation without exactly settling the identity relation.
+
+The preferred quantitative measure for one probabilistic evidence item is a Bayes factor, normally stored in log form:
+
+~~~text
+identity evidence weight
+    = log P(E | identity, context)
+      - log P(E | not-identity, context)
+~~~
+
+Positive weight favors coidentity. Negative weight favors separation. Zero is identity-neutral evidence.
+
+But:
+
+~~~text
+large positive weight != SAME
+large negative weight != DISTINCT
+posterior probability != NEI truth
+~~~
+
+Exact identity remains a structural/model-family conclusion. Bayesian values describe epistemic support among unresolved alternatives.
+
+Evidence dependence is load-bearing. Multiple observations from one lineage or common cause cannot be added as though independent merely because they are separate records.
 
 ---
 
@@ -606,7 +651,7 @@ Current qualified authority remains whatever is recorded in:
 The active successor candidates that most directly encode these ideals are:
 
 - CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md;
-- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md;
+- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md;
 - extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md.
 
 They remain unqualified until fresh promotion evidence exists.
