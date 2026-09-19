@@ -47,12 +47,19 @@ The current qualified authority is unchanged. Three successor candidates capture
   - semantic quantity/scope/layer alignment precedes failure classification;
   - repair follows owner localization rather than driving interpretation;
   - unknown potentially load-bearing distinctions are not projection permission.
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md`
+  - supersedes NEI 0.3 for successor research while preserving it as historical candidate evidence;
+  - SAME/DISTINCT are derived outputs, never profile-declared answers;
+  - identity query contexts define the question/scope/model authority rather than tagging relations as identity-preserving/separating;
+  - exact and probabilistic identity evidence are separate;
+  - probabilistic evidence strength uses Bayes/log-Bayes factors, never an identity threshold;
+  - evidence dependence/lineage is load-bearing and correlated evidence must not be double-counted;
+  - QU is mandatory whenever unresolved identity-relevant structure can affect identity classification or evidence likelihood/weight;
+  - QU supplies admissible structure, not an implicit probability distribution;
+  - missing required QU remains incomplete/unqualified rather than semantic UNKNOWN.
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md`
-  - observation precedes identity judgment;
-  - SAME requires sufficient identity-relevant closure;
-  - scope is load-bearing;
-  - unknown relevant distinctions block collapse;
-  - exact scoped quotients do not imply global identity.
+  - retained as the immediate unqualified precursor that introduced observation-first identity closure/scoped-quotient discipline;
+  - superseded by NEI 0.4 for active successor work.
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
   - discrepancy is initially an observation, not automatically a defect;
   - semantic-quantity/scope alignment precedes value judgment;
@@ -196,7 +203,7 @@ The qualified modular authority stack remains usable exactly as recorded in `qua
 The next semantic qualification burden is the coupled but separately owned successor work. Qualification should test the candidate semantics against the design ideals rather than merely testing whether expected strings are reproduced:
 
 1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
-2. qualify NEI 0.3 against cases that distinguish observed equality from qualified SAME, represented difference from identity-separating DISTINCT, semantic UNKNOWN from missing authority, and scoped quotient validity from global identity;
+2. qualify NEI 0.4 against derived identity without profile answer tags, exact-versus-probabilistic evidence, Bayes-factor versus posterior separation, correlated evidence, QU-conditioned evidence weights, lawful marginalization, missing-QU fail-closed behavior, semantic UNKNOWN with non-neutral probabilistic confidence, and scoped quotient validity without global identity collapse;
 3. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives; use the Connect4 campaign only as development evidence, not as hidden oracle material;
 4. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
 5. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
