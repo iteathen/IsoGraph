@@ -40,7 +40,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 ### Active unqualified successor candidates
 
-The current qualified authority is unchanged. Three successor candidates capture lessons from the Connect4 authority 1.1 discrepancy campaign and the full-stack sanity audit:
+The current qualified authority is unchanged. The active successor set, plus the retained NEI 0.3 precursor, captures lessons from the Connect4 authority 1.1 discrepancy campaign, the full-stack sanity audit, and the later NEI identity/evidence correction:
 
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`
   - discrepancy is initially observation, not defect;
