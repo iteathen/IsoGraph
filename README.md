@@ -211,12 +211,13 @@ IsoGraph needs stable addressing, sharing, reconstruction, matching, namespaces,
 
 Stronger identity questions belong to an explicit theory/profile/extension with their own evidence burden.
 
-The qualified extension authority for that purpose is:
+The current qualified extension authority for that purpose is:
 
-- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
+- [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
 
-NEI 0.1 with the NEI 0.2 clarification layer is a **qualified semantic extension** at the exact revisions recorded in the qualified-module authority manifest. NEI remains separate from Core; qualification does not make natural identity implicit.
+NEI 0.4 is a **qualified semantic extension** at the exact revision recorded in the qualified-module authority manifest. Identity results are derived from facts/evidence/QU and admissible identity models rather than supplied by profile answer tags. Exact identity remains separate from Bayesian evidence/confidence. NEI remains separate from Core; qualification does not make natural identity implicit.
+
+NEI 0.1/0.2 remain historical qualified revisions, and NEI 0.3 remains an unqualified historical precursor.
 
 ---
 
@@ -1046,8 +1047,7 @@ Exact tested revisions and content hashes are authoritative in:
 Qualified modules:
 
 - [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.1](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md)
-- [Natural Entropic Identity 0.2](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md)
+- [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
 - [Discovery Protocols 0.1-0.4](extensions/discovery/)
 
 The `_CANDIDATE` names are immutable historical filenames of the exact tested semantic artifacts. They no longer describe the current qualification state.
@@ -1056,11 +1056,12 @@ Qualified extensions do **not** become Core. They remain explicit versioned depe
 
 ## Active unqualified successor candidates
 
-Three successor candidates are under development and **do not yet change qualified authority**:
+Two semantic successors remain under development and **do not yet change qualified authority**:
 
 - [Core 0.18 Observation-First Clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md) — discrepancy interpretation, semantic-quantity alignment, and pre-repair failure-classification discipline.
-- [Natural Entropic Identity 0.3](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md) — observation/comparison closure, scope, unknown-preserving collapse, and exact scoped quotient clarification.
 - [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md) — observation-first discrepancy handling, semantic-quantity alignment, and separate qualification/discovery dispositions.
+
+NEI 0.4 has completed fresh qualification and is current authority; NEI 0.3 is retained only as its historical precursor.
 
 They were motivated by the Connect4 authority 1.1 discrepancy campaign, where a small source-count inconsistency exposed hidden evidence identity structure and later decoder/scorer mismatches demonstrated that a qualification error can still be a useful discovery signal.
 
@@ -1086,11 +1087,15 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-Experiment 015 formally `QUALIFIES` the exercised composition of Core 0.17 + QU 0.1 + cumulative NEI 0.1/0.2 + cumulative DP 0.1-0.4.
+Experiment 015 formally `QUALIFIES` the historical exercised composition of Core 0.17 + QU 0.1 + NEI 0.1/0.2 + DP 0.1-0.4.
 
 - [Experiment 015 Final Qualification Review](experiments/015/EXPERIMENT_015_FINAL_QUALIFICATION_REVIEW.md)
 
-This is a scoped compatibility result, not universal discovery completeness.
+Experiment 016 separately qualifies current NEI 0.4 with Core 0.17 + QU 0.1:
+
+- [Experiment 016 Final Qualification Review](experiments/016/EXPERIMENT_016_FINAL_QUALIFICATION_REVIEW.md)
+
+Do not reinterpret Experiment 015 as fresh NEI 0.4 + DP integration evidence. Both results are scoped to their declared compositions.
 
 ## Historical qualified evidence
 
@@ -1211,9 +1216,10 @@ QU 0.1:
     QUALIFIED
     decisive corrected holdout: Experiment 013
 
-NEI 0.1 + 0.2:
-    QUALIFIED cumulative extension
-    decisive corrected holdout: Experiment 013
+NEI 0.4:
+    QUALIFIED current extension
+    derived identity + Bayesian evidence + QU substrate
+    decisive holdout: Experiment 016 (18/18 PASS)
 
 Discovery Protocols 0.1-0.4:
     QUALIFIED cumulative module
@@ -1223,16 +1229,23 @@ Core 0.18:
     UNQUALIFIED successor candidate
     observation-first discrepancy/pre-repair clarification
 
+NEI 0.1 + 0.2:
+    HISTORICAL QUALIFIED revisions
+    original decisive holdout: Experiment 013
+
 NEI 0.3:
-    UNQUALIFIED successor candidate
-    observation/scope/unknown-preserving collapse clarification
+    HISTORICAL UNQUALIFIED precursor to NEI 0.4
 
 Discovery Protocols 0.5:
     UNQUALIFIED successor candidate
     observation-first discrepancy/discovery clarification
 
-Integrated module stack:
-    QUALIFIED for exercised composition
+Integrated historical module stack:
+    QUALIFIED by Experiment 015 for its exercised NEI 0.1/0.2 composition
+
+Current NEI 0.4:
+    QUALIFIED independently with Core 0.17 + QU 0.1
+    fresh DP integration only when a concrete cross-module claim requires it
     decisive corrected holdout: Experiment 015
 
 Experiment 004:

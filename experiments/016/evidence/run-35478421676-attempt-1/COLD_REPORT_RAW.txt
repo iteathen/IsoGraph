@@ -1,0 +1,242 @@
+{
+  "cases": [
+    {
+      "case_id": "Q01",
+      "answers": {
+        "nei_status": "SAME",
+        "profile_declares_answer": false,
+        "derived_from_model_family": true
+      },
+      "reason": "Under NEI 0.4, SAME is a derived output from the admissible model family, not a profile-declared answer. Since every component has exactly one serial and no two distinct components share a serial, and both observations have serial 17, all admissible models must map them to the same component, yielding SAME.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 1",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 3"
+      ]
+    },
+    {
+      "case_id": "Q02",
+      "answers": {
+        "nei_status": "DISTINCT",
+        "profile_declares_answer": false,
+        "derived_from_model_family": true
+      },
+      "reason": "Under NEI 0.4, DISTINCT is derived from the model family. Since a specimen occupies exactly one location at an instant, and L and R are disjoint, observations at the same instant at L and R must refer to distinct specimens, yielding DISTINCT.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 1",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 3"
+      ]
+    },
+    {
+      "case_id": "Q03",
+      "answers": {
+        "nei_status": "UNKNOWN",
+        "evidence_direction": "COIDENTITY",
+        "exact_same_established": false,
+        "thresholding_allowed": false
+      },
+      "reason": "Under NEI 0.4, a finite Bayes factor, no matter how large, is probabilistic evidence and cannot substitute for exact identity truth. Since the model family contains both SAME and DISTINCT models and no exact theorem eliminates DISTINCT models, the status remains UNKNOWN. Thresholding is not allowed.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 0",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 3",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 7.2",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 8"
+      ]
+    },
+    {
+      "case_id": "Q04",
+      "answers": {
+        "nei_status": "UNKNOWN",
+        "evidence_direction": "SEPARATION",
+        "exact_distinct_established": false,
+        "thresholding_allowed": false
+      },
+      "reason": "Under NEI 0.4, a small Bayes factor is probabilistic evidence favoring separation but cannot establish exact DISTINCT status when the model family still contains both SAME and DISTINCT models and no exact theorem eliminates SAME models. The status remains UNKNOWN.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 0",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 3",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 7.2",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 8"
+      ]
+    },
+    {
+      "case_id": "Q05",
+      "answers": {
+        "bayes_factor": "10",
+        "posterior_odds_a": "10",
+        "posterior_odds_b": "10/9",
+        "posterior_changes": true,
+        "nei_status": "UNKNOWN"
+      },
+      "reason": "Under NEI 0.4, posterior odds are calculated as prior odds multiplied by the Bayes factor. For A, posterior odds are 10; for B, they are 10/9. The posterior changes, but the exact NEI status remains UNKNOWN because the model family still admits both outcomes.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 8"
+      ]
+    },
+    {
+      "case_id": "Q06",
+      "answers": {
+        "naive_log_weight_sum_allowed": false,
+        "joint_model_required": true,
+        "independent_evidence_count": 1
+      },
+      "reason": "Under NEI 0.4, log-Bayes weights cannot be naively summed without conditional independence. Since all three files derive from a single physical sensor event S, they are conditionally dependent, and a joint model is required. The independent evidence count is 1.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 9"
+      ]
+    },
+    {
+      "case_id": "Q07",
+      "answers": {
+        "factorization_allowed": true,
+        "joint_bayes_factor": "15",
+        "log_additive": true
+      },
+      "reason": "Under NEI 0.4, conditional independence under both hypotheses allows factorization. The joint Bayes factor is the product of individual Bayes factors (3 * 5 = 15), and the log weights are additive.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 9"
+      ]
+    },
+    {
+      "case_id": "Q08",
+      "answers": {
+        "scalar_marginal_allowed": false,
+        "evidence_direction": "QU_DEPENDENT",
+        "representation": "REALIZATION_CONDITIONED_OR_SET"
+      },
+      "reason": "Under NEI 0.4, a single scalar marginal Bayes factor is not allowed without a qualified probability distribution over the QU realizations. The evidence direction is QU-dependent, and the structured result must be preserved as a realization-conditioned function or set.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 10"
+      ]
+    },
+    {
+      "case_id": "Q09",
+      "answers": {
+        "robust_direction": "COIDENTITY",
+        "exact_same_established": false,
+        "nei_status": "UNKNOWN"
+      },
+      "reason": "Under NEI 0.4, robust positive evidence across all realizations favors coidentity but does not establish exact SAME when the model family still contains both SAME and DISTINCT models.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 11"
+      ]
+    },
+    {
+      "case_id": "Q10",
+      "answers": {
+        "marginalization_allowed": true,
+        "marginal_likelihood_i": "0.6",
+        "marginal_likelihood_not_i": "0.25",
+        "bayes_factor": "2.4",
+        "nei_status": "UNKNOWN"
+      },
+      "reason": "Under NEI 0.4, marginalization is allowed when a qualified probability authority is supplied. The marginal likelihoods are P(E|I) = 0.6 and P(E|not-I) = 0.25, yielding a Bayes factor of 2.4. The exact NEI status remains UNKNOWN.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 10"
+      ]
+    },
+    {
+      "case_id": "Q11",
+      "answers": {
+        "nei_status": "INCOMPLETE_UNQUALIFIED",
+        "semantic_unknown_established": false,
+        "missing_qu_can_be_ignored": false
+      },
+      "reason": "Under NEI 0.4, missing identity-relevant QU structure fails closed as INCOMPLETE_UNQUALIFIED rather than defaulting to UNKNOWN, and the unresolved relation cannot be ignored.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 5"
+      ]
+    },
+    {
+      "case_id": "Q12",
+      "answers": {
+        "information_states_equivalent": false,
+        "shared_referent_preserved": true,
+        "equal_value_implies_same_referent": false
+      },
+      "reason": "Under NEI 0.4, a shared unknown referent and two distinct equal-valued unknowns are not equivalent information states. Shared preserves the shared referent fact, and equal value does not imply the same referent.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 4"
+      ]
+    },
+    {
+      "case_id": "Q13",
+      "answers": {
+        "nei_status": "SAME",
+        "bayes_weight_required": false,
+        "evidence_kind": "EXACT"
+      },
+      "reason": "Under NEI 0.4, an exact identity theorem is exact evidence that constrains the model family directly to SAME, and no Bayes weight is required.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 7.1"
+      ]
+    },
+    {
+      "case_id": "Q14",
+      "answers": {
+        "nei_status": "UNKNOWN",
+        "posterior_identity_probability": "0.9",
+        "coexist_without_contradiction": true
+      },
+      "reason": "Under NEI 0.4, semantic UNKNOWN and a non-neutral posterior probability (e.g., 0.9) can coexist without contradiction because exact identity truth and probabilistic confidence are separate dimensions.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 12"
+      ]
+    },
+    {
+      "case_id": "Q15",
+      "answers": {
+        "scoped_equivalence_established": true,
+        "global_nei_status": "UNKNOWN",
+        "scoped_result_promotes_global_same": false
+      },
+      "reason": "Under NEI 0.4, a scoped quotient establishes equivalence only under that specific scope S and does not promote to global SAME when the wider query admits both SAME and DISTINCT models.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 15"
+      ]
+    },
+    {
+      "case_id": "Q16",
+      "answers": {
+        "independent_evidence_count": 1,
+        "multiply_bayes_factors": false,
+        "lineage_must_be_preserved": true
+      },
+      "reason": "Under NEI 0.4, duplicated evidence lineage from a single event does not count as independent evidence. The independent evidence count is 1, Bayes factors cannot be multiplied, and lineage must be preserved.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 9"
+      ]
+    },
+    {
+      "case_id": "Q17",
+      "answers": {
+        "restriction_admissible": false,
+        "original_qu_unchanged": true,
+        "nei_same_established": false
+      },
+      "reason": "Under NEI 0.4, anti-circularity prohibits restricting the QU state solely to make a desired identity hypothesis (SAME) true. The original QU remains unchanged, and SAME is not established.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 17"
+      ]
+    },
+    {
+      "case_id": "Q18",
+      "answers": {
+        "profile_contains_answer_tag": false,
+        "derived_result_possible": true,
+        "nei_status": "SAME"
+      },
+      "reason": "Under NEI 0.4, the query context defines the question and contains no answer tags. The exact domain facts determine the answer, and a derived result of SAME is possible.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 1",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 2"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "nei_0_4": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "All cases evaluated strictly according to NEI 0.4 specifications. Exact identity truth is kept separate from probabilistic evidence. QU is treated as the required substrate for unresolved identity-relevant structure."
+  }
+}

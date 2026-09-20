@@ -1,0 +1,121 @@
+name: Experiment 016 NEI 0.4 qualification
+
+on:
+  push:
+    branches:
+      - qualification/nei-0-4-016-20260919
+    paths:
+      - experiments/016/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-016-nei-0-4
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out exact qualification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/016/tools/run-exp016-cold.mjs
+          node --check experiments/016/tools/score-exp016.mjs
+          node --check experiments/016/tools/test-score-exp016.mjs
+          node experiments/016/tools/test-score-exp016.mjs
+          rm -rf out/exp016
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/016/tools/run-exp016-cold.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const d=JSON.parse(fs.readFileSync('out/exp016/DRY_RUN.json','utf8'));
+          const paths=d.input_manifest.map(x=>x.path);
+          const forbidden=['hidden/','ASSERTIONS','score-exp016','AUTHORING_AUDIT','QUALIFICATION_REVIEW','experiments/016/evidence'];
+          for(const f of forbidden){
+            if(paths.some(p=>p.includes(f)))throw new Error('forbidden cold input '+f);
+          }
+          const required=[
+            'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md',
+            'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
+            'experiments/016/NEI_0_4_CASES.md'
+          ];
+          for(const f of required)if(!paths.includes(f))throw new Error('missing cold input '+f);
+          console.log('dry_packet_sha256='+d.packet_sha256);
+          NODE
+
+      - name: Execute isolated semantic call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/016/tools/run-exp016-cold.mjs
+
+      - name: Verify packet identity and score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp016/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp016/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/016/tools/score-exp016.mjs
+
+      - name: Persist sanitized evidence to branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/016/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp016/$f" ] && cp "out/exp016/$f" "$E/$f"
+          done
+          cat > "$E/CONTROL.json" <<EOF
+          {
+            "workflow_run_id": "${GITHUB_RUN_ID}",
+            "workflow_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "qualification_sha": "${GITHUB_SHA}",
+            "cold_outcome": "${{ steps.cold.outcome }}",
+            "score_outcome": "${{ steps.score.outcome }}"
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 016 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:qualification/nei-0-4-016-20260919
+          fi
+
+      - name: Enforce qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp016/SCORE.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const s=JSON.parse(fs.readFileSync('out/exp016/SCORE.json','utf8'));
+          console.log(JSON.stringify({disposition:s.disposition,nei:s.nei_0_4},null,2));
+          if(s.disposition!=='QUALIFIES')process.exit(1);
+          NODE

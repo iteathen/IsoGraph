@@ -33,20 +33,65 @@ Qualification evidence:
 
 Qualified scope is the declared QU 0.1 semantic contract. This does not qualify a particular solver, inference procedure, information measure, or implementation.
 
-### Natural Entropic Identity 0.1 + 0.2
+### Natural Entropic Identity 0.4
 
-Qualified cumulative semantic artifacts:
+Current qualified NEI semantic artifact:
 
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md`
+`extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md`
+
+Qualified content SHA-256:
+
+`6e2f0efb1f4bfbfa55bc2c5597f1ecc5b4d7bb734216543c21ba72089b0aacee`
+
+Current qualified native vocabulary companion:
+
+- `extensions/nei/NEI_NATIVE_VOCAB_0_2.md`
+  - cold-packet SHA-256 `3bc1cf61fdae353c6a701b280c7b6ca3ef48d75c99ac1c0a1f58df2e6fe87bf4`
+  - git blob `5609ab560e67ae9ef039817f4f135fefdb718311`
+- `extensions/nei/NEI_VOCAB_0_2.isg`
+  - git blob `d30ea93cb35ddbaabff63019f1d970925472aaab`
+- deterministic native-vocabulary qualification:
+  - `qualification/NEI_NATIVE_VOCAB_0_2_QUALIFICATION.md`
+
+Qualification evidence:
+
+- Experiment 016 frozen trigger SHA: `0bb78c5038ebea387e60154470d36c7b78be9650`;
+- workflow run: `35478421676`;
+- workflow attempt: `1`;
+- cold model: `gemini-3.5-flash`;
+- external semantic calls: `1`;
+- API attempts: `1`;
+- packet SHA-256: `5a303d9f5634a5bc6895d33b7553efd2930621c3cdb15369ceaa31aea6b4eefd`;
+- report SHA-256: `299d943f741adb6e7650f429cad38ee4def91f7ad2404295bbb35fecde178bfe`;
+- Q01-Q18: `18 / 18 PASS`;
+- mismatches: `0`;
+- formal disposition: `QUALIFIES`;
+- final review: `experiments/016/EXPERIMENT_016_FINAL_QUALIFICATION_REVIEW.md`.
+
+Current NEI 0.4 semantics include:
+
+- `SAME` / `DISTINCT` are derived from admissible identity models rather than profile-owned answer tags;
+- exact identity evidence remains distinct from probabilistic identity evidence;
+- Bayes/log-Bayes factors are evidence strength, not identity truth or posterior probability;
+- evidence lineage/dependence is load-bearing and correlated evidence cannot be double-counted;
+- QU is required whenever unresolved identity-relevant structure can affect identity classification or identity-evidence likelihood/dependence/strength;
+- QU supplies admissible structure, not an implicit probability distribution;
+- missing required QU remains incomplete/unqualified rather than semantic `UNKNOWN`;
+- scoped quotient equivalence does not silently become global identity;
+- identity-driven QU restriction or likelihood construction is circular and inadmissible.
+
+Historical qualified revisions remain immutable qualification evidence:
+
+- NEI 0.1: `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md`
   - SHA-256 `39f40b79e23d155d2a0d891bb338f2ac615d0d5bfc60d39afede4608257e0d60`
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md`
+- NEI 0.2: `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md`
   - SHA-256 `0afbe55615efc92ea678786fd5af6493a923cbbfef73baf884aa094b750bfdb6`
 
-NEI 0.1 supplies the base semantics. NEI 0.2 is the qualified clarification layer.
+Their Experiment 013 qualification remains valid at those exact revisions. They are no longer the current NEI routing authority after NEI 0.4 promotion.
 
-Qualification evidence is the same frozen Experiment 013 campaign above.
+NEI 0.3 remains an unqualified historical precursor to 0.4.
 
-NEI remains a separately versioned extension. It is not imported into Core merely by being qualified.
+NEI remains a separately versioned extension and is not imported into Core merely by being qualified.
 
 ## Qualified Discovery Protocol module
 
@@ -89,7 +134,7 @@ QRC is not semantic domain authority.
 
 ## Integrated compatibility qualification
 
-The qualified Core and modules above have passed a fresh integrated composition holdout.
+The historical Core + QU 0.1 + NEI 0.1/0.2 + DP 0.1-0.4 stack passed the fresh integrated composition holdout below. Experiment 016 separately qualifies current NEI 0.4 with Core 0.17 + QU 0.1; this older integrated run is not retroactively evidence for NEI 0.4 + DP composition.
 
 Experiment 015:
 
@@ -115,7 +160,7 @@ The integrated holdout exercised:
 - separation of source-local D provenance from pairwise residuals;
 - rejection of unsupported full/global isomorphism, natural identity, same-intermediate-object, and same-algorithm claims.
 
-This establishes compatibility for the exercised dependency-closed composition. It is not a universal discovery-completeness or universal-domain-coverage claim.
+This establishes compatibility for the historical exercised dependency-closed composition. It is not a universal discovery-completeness or universal-domain-coverage claim, and it does not substitute for a fresh integrated NEI 0.4 + Discovery Protocol holdout if such cross-module compatibility becomes load-bearing.
 
 ## Revision rule
 

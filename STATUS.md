@@ -31,7 +31,7 @@ Current qualified extension/module authority is recorded in:
 It binds the exact tested revisions of:
 
 - Quantifiable Unknown (QU) 0.1;
-- Natural Entropic Identity (NEI) 0.1 with NEI 0.2 as the cumulative clarification layer;
+- Natural Entropic Identity (NEI) 0.4;
 - Discovery Protocols 0.1 through 0.4 as one cumulative current module.
 
 The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
@@ -40,33 +40,20 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 ### Active unqualified successor candidates
 
-The current qualified authority is unchanged. The active successor set, plus the retained NEI 0.3 precursor, captures lessons from the Connect4 authority 1.1 discrepancy campaign, the full-stack sanity audit, and the later NEI identity/evidence correction:
+Current qualified authority now includes NEI 0.4. The remaining active semantic successors are:
 
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`
   - discrepancy is initially observation, not defect;
   - semantic quantity/scope/layer alignment precedes failure classification;
   - repair follows owner localization rather than driving interpretation;
   - unknown potentially load-bearing distinctions are not projection permission.
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md`
-  - supersedes NEI 0.3 for successor research while preserving it as historical candidate evidence;
-  - SAME/DISTINCT are derived outputs, never profile-declared answers;
-  - identity query contexts define the question/scope/model authority rather than tagging relations as identity-preserving/separating;
-  - exact and probabilistic identity evidence are separate;
-  - probabilistic evidence strength uses Bayes/log-Bayes factors, never an identity threshold;
-  - evidence dependence/lineage is load-bearing and correlated evidence must not be double-counted;
-  - QU is mandatory whenever unresolved identity-relevant structure can affect identity classification or evidence likelihood/weight;
-  - QU supplies admissible structure, not an implicit probability distribution;
-  - missing required QU remains incomplete/unqualified rather than semantic UNKNOWN.
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md`
-  - retained as the immediate unqualified precursor that introduced observation-first identity closure/scoped-quotient discipline;
-  - superseded by NEI 0.4 for active successor work.
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
   - discrepancy is initially an observation, not automatically a defect;
   - semantic-quantity/scope alignment precedes value judgment;
   - qualification and structural-discovery dispositions remain independent;
   - repair must preserve the anomaly evidence that exposed hidden structure.
 
-None of these successor candidates is qualified or promoted. Core 0.17, NEI 0.1+0.2, and DP 0.1-0.4 remain current authority.
+NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
 ### Qualified infrastructure
 
@@ -115,6 +102,26 @@ Final review:
 - `experiments/013/EXPERIMENT_013_FINAL_QUALIFICATION_REVIEW.md`
 
 The corrected evidence specifically confirms that missing identity authority remains incomplete; it is not silently upgraded to semantic NEI `UNKNOWN`.
+
+Experiment 016 used a fresh 18-case holdout for NEI 0.4:
+
+```text
+formal disposition:       QUALIFIES
+NEI 0.4:                  PASS
+case coverage:             18 / 18
+mismatches:                none
+workflow run:              35478421676
+external semantic calls:   1
+provider retries:           0
+```
+
+It independently recovered derived SAME/DISTINCT without profile answer tags, exact/probabilistic evidence separation, Bayes-factor/posterior separation, evidence dependence, QU-conditioned evidence, missing-QU fail-closed behavior, scoped quotient discipline, and anti-circularity.
+
+Final review:
+
+- `experiments/016/EXPERIMENT_016_FINAL_QUALIFICATION_REVIEW.md`
+
+NEI 0.4 is therefore the current qualified NEI semantic extension at the exact hash recorded in the authority manifest.
 
 ## Discovery Protocol qualification
 
@@ -200,14 +207,13 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 The qualified modular authority stack remains usable exactly as recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
 
-The next semantic qualification burden is the coupled but separately owned successor work. Qualification should test the candidate semantics against the design ideals rather than merely testing whether expected strings are reproduced:
+The next semantic qualification burden is:
 
 1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
-2. qualify NEI 0.4 against derived identity without profile answer tags, exact-versus-probabilistic evidence, Bayes-factor versus posterior separation, correlated evidence, QU-conditioned evidence weights, lawful marginalization, missing-QU fail-closed behavior, semantic UNKNOWN with non-neutral probabilistic confidence, and scoped quotient validity without global identity collapse;
-3. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives; use the Connect4 campaign only as development evidence, not as hidden oracle material;
-4. run an integrated holdout showing that DP 0.5 can use NEI 0.3/QU without turning every anomaly into either a mandatory repair or a mandatory isomorph search;
-5. preserve the existing qualified module revisions and all historical dispositions unchanged until fresh promotion evidence exists.
+2. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
+3. run a fresh integrated NEI 0.4 + Discovery Protocol holdout only when a concrete cross-module claim makes that compatibility load-bearing; the historical Experiment 015 integrated result remains scoped to NEI 0.1/0.2 + DP 0.1-0.4;
+4. preserve every historical qualification disposition at its exact revision.
 
-No external semantic call should be spent before deterministic contract/preflight material for these focused cases is complete.
+No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
 
 Any semantic change to a qualified IsoGraph module creates a new revision with its own affected qualification burden.
