@@ -23,7 +23,7 @@ Read:
 That manifest qualifies the exact tested revisions of:
 
 - QU 0.1;
-- NEI 0.1 + NEI 0.2 cumulative clarification;
+- NEI 0.4;
 - Discovery Protocols 0.1-0.4 cumulative module.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
@@ -32,14 +32,12 @@ Qualified extensions remain separately versioned dependencies and do not silentl
 
 ### Unqualified successor candidates
 
-The following revisions are unqualified successor material and are **not** current authority until separately qualified and promoted. NEI 0.4 is the active identity successor; NEI 0.3 is retained only as its immediate precursor:
+The following revisions are unqualified successor material and are **not** current authority until separately qualified and promoted:
 
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — observation-first discrepancy interpretation and pre-repair alignment clarification;
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — active successor candidate: derived identity, explicit exact/probabilistic identity evidence, Bayesian evidence strength, evidence dependence, and mandatory QU when unresolved identity-relevant structure affects identity or evidence;
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_3_CANDIDATE.md` — superseded unqualified precursor retained as historical successor-candidate evidence;
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
 
-Use them as candidate material only when the task explicitly concerns their development/qualification. Do not silently apply them to historical evidence or qualified-module claims.
+NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
 
 ### Qualified infrastructure
 
@@ -122,20 +120,30 @@ A result at explicitly named frozen factorization/extraction nodes is local unle
 
 ## Natural Entropic Identity
 
-Current qualified NEI authority is the cumulative exact revision pair recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`:
+Current qualified NEI authority is:
 
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_1_CANDIDATE.md` — qualified base NEI semantics;
-- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_2_CANDIDATE.md` — qualified clarification layer.
+- `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — qualified NEI 0.4 semantics;
+- `extensions/nei/NEI_NATIVE_VOCAB_0_2.md` and `extensions/nei/NEI_VOCAB_0_2.isg` — qualified native vocabulary companion.
 
-Historical research `research/nei/NEI_DESIGN_AUDIT_0_1_SUPERSEDED.md` preserves an earlier maximally-coarse identity-partition design. It is not authority: qualified NEI 0.1 explicitly rejects coarseness as a sameness-selection rule because absence of distinctness evidence is not positive SAME evidence.
+Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
 
-NEI 0.2 preserves application/domain relations exactly and warns against silently carrying stronger identity meaning through them than their declared semantics/authority support. It does not assume application distinctions are meaningless, and it does not automatically promote them into `SAME` or `DISTINCT`.
+NEI 0.4's governing discipline is:
 
-The word **natural** is explanatory and non-load-bearing. It contrasts the target identity question with merely representational identity; it is not a primitive, evidence source, ontology declaration, or inference rule.
+- identity query contexts ask the question; they do not declare the answer;
+- `SAME`, `DISTINCT`, and semantic `UNKNOWN` are derived from the admissible identity-model family;
+- exact identity evidence is distinct from probabilistic identity evidence;
+- Bayes/log-Bayes factors measure evidence strength and never cross a threshold into exact identity;
+- posterior probability is not NEI truth;
+- evidence lineage/dependence is load-bearing and correlated evidence is not double-counted;
+- QU is the uncertainty substrate whenever unresolved identity-relevant structure affects classification, likelihood, dependence, or evidence strength;
+- QU does not supply an implicit probability distribution;
+- missing required QU remains incomplete/unqualified, not semantic `UNKNOWN`;
+- exact scoped quotient equivalence does not silently become global identity;
+- identity-driven QU restriction or likelihood construction is circular and inadmissible.
 
-A semantic NEI `UNKNOWN` is itself a qualified positive result: do not use it merely because identity authority is absent. Missing required identity profile/query-anchor authority remains incomplete.
+The word **natural** remains explanatory and non-load-bearing. It is not an evidence source or ontology declaration.
 
-NEI 0.4 is the active unqualified successor candidate. It preserves 0.3's observation-first/scoped-quotient discipline but makes a deeper correction: `SAME` and `DISTINCT` are derived results, not application/profile answer tags. Query contexts define the identity question, scope, model and evidence authority. Exact evidence constrains admissible identity models; probabilistic identity evidence may carry a Bayes/log-Bayes factor but cannot cross a probability threshold into exact identity. Evidence lineage/dependence is load-bearing. QU is the uncertainty substrate whenever unresolved identity-relevant structure can affect classification, likelihood, dependence, or evidence strength; QU does not imply a probability distribution over realizations. Missing required QU is incomplete/unqualified, not semantic `UNKNOWN`. NEI 0.3 remains an unqualified historical precursor and is superseded for active successor work.
+Historical NEI 0.1 and NEI 0.2 remain immutable qualified evidence at their original revisions. NEI 0.3 remains an unqualified historical precursor. Do not use their older profile-answer-tag mechanism as parallel current authority.
 
 ## Discovery Protocols
 
@@ -184,7 +192,8 @@ Extension/module qualification is recorded in:
 The qualification campaign deliberately preserves failed runs:
 
 - Experiment 009: joint QU/NEI formal failure; review identified output-contract defects plus one substantive missing-authority overreach.
-- Experiment 013: fresh corrected focused QU/NEI run — `QUALIFIES`, QU 0.1 PASS, cumulative NEI 0.1/0.2 PASS.
+- Experiment 013: fresh corrected focused QU/NEI run — `QUALIFIES`, QU 0.1 PASS, historical cumulative NEI 0.1/0.2 PASS.
+- Experiment 016: fresh NEI 0.4 derived-identity/QU/Bayesian-evidence holdout — `QUALIFIES`, 18/18 cases PASS, zero mismatches, one external semantic call.
 - Experiment 010: cumulative DP formal failure; review identified one hidden-oracle defect and one genuine omitted overclaim.
 - Experiment 012: focused DP formal failure from an undisclosed mapping wire shape while semantic obligations were recovered.
 - Experiment 014: fresh corrected DP mapping-contract run — `QUALIFIES` with zero mismatches; cumulative DP 0.1-0.4 promotion review recorded.
@@ -197,7 +206,7 @@ Provider/infrastructure failures that produce no semantic report may be retried 
 
 Cold-test isolation remains mandatory when qualification depends on fresh semantic reconstruction: hidden assertions, expected mappings, prior decoder outputs, and author audits must remain unavailable until the output is frozen.
 
-The final integrated Experiment 015 establishes compatibility for the exercised Core + QU + NEI + DP composition. It does not establish universal discovery completeness or universal domain coverage.
+Experiment 015 establishes compatibility for its historical Core 0.17 + QU 0.1 + NEI 0.1/0.2 + DP 0.1-0.4 composition. Experiment 016 separately qualifies current NEI 0.4 with Core 0.17 + QU 0.1. Do not cite Experiment 015 as fresh NEI 0.4 + DP integration evidence.
 
 ## External agent execution paths
 
