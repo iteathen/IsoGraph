@@ -648,13 +648,16 @@ Current qualified authority remains whatever is recorded in:
 - qualification/QUALIFIED_MODULES_2026-09-18.md;
 - qualified infrastructure records.
 
-The active successor candidates that most directly encode these ideals are:
+Current qualified NEI semantics are now encoded by:
+
+- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md — qualified at the exact revision recorded in the module authority manifest.
+
+The remaining active successor candidates that most directly encode these ideals are:
 
 - CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md;
-- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md;
 - extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md.
 
-They remain unqualified until fresh promotion evidence exists.
+Those remaining successors are unqualified until fresh promotion evidence exists.
 
 ---
 
