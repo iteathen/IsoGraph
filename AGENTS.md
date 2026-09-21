@@ -178,6 +178,19 @@ For unresolved information, consider whether qualified QU structure itself can p
 
 DP 0.5 is an unqualified successor candidate. Its proposed rule is that a discrepancy is initially an observation, not automatically a defect. Candidate work under DP 0.5 preserves the raw discrepancy, checks semantic-quantity/scope alignment before value judgment, and keeps qualification disposition separate from any surviving structural-discovery lead.
 
+## Evidence independence terminology
+
+IsoGraph qualification distinguishes **execution independence** from **external authority**.
+
+- A fresh context, cold prompt, blind packet, hidden oracle, different model, or different provider may improve execution independence and contamination resistance.
+- A model instance or provider used inside a project-controlled qualification campaign remains internal qualification evidence unless the truth conditions/oracle are genuinely external.
+- Use **isolated verifier**, **cold verifier**, or **independent execution** for that internal isolation property.
+- Historical artifact names or reports that say "independent verifier" remain immutable provenance; when citing them now, do not imply independent external validation.
+- PASS/FAIL/PARTIAL/QUALIFIES dispositions retain their frozen meaning under the named qualification contract. They do not silently mean externally validated.
+- External validation requires a separately identified external oracle, mechanical checker with independently grounded obligations, or genuinely independent reproduction as defined by EVIDENCE.md and the shared evidence policy.
+
+This terminology rule changes no Core/module semantics and rewrites no historical qualification disposition.
+
 ## Qualification provenance
 
 Core qualification remains revision-specific:
@@ -222,6 +235,6 @@ Use that file for execution routing only. IsoGraph's own authority, isolation, q
 
 External Gemini calls and GitHub Actions executions are scarce qualification resources. Read and follow `QUALIFICATION_RESOURCE_DISCIPLINE.md` before designing or running a new qualification experiment.
 
-Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient independent evidence**. Prefer focused high-information regression tests over replaying unrelated already-covered controls after a narrow candidate revision.
+Minimize external model calls and CI executions **subject to complete semantic coverage, cold isolation, reproducibility, and sufficient execution-independent evidence within the qualification scope**. Prefer focused high-information regression tests over replaying unrelated already-covered controls after a narrow candidate revision.
 
 Run deterministic syntax, hash, packet-integrity, provenance, and mechanical checks before spending an external semantic call. Do not rerun Gemini or CI merely to seek a more favorable answer. Additional external calls/runs require a concrete evidentiary or infrastructure reason and should be recorded in final qualification provenance.
