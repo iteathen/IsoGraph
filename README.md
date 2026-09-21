@@ -31,7 +31,17 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 
-Core remains distinct from separately versioned qualified extensions. Current status, design posture, and provenance:
+Core remains distinct from separately versioned qualified extensions.
+
+## Evidence status
+
+Start with [EVIDENCE.md](EVIDENCE.md), the machine-readable [claim registry](evidence/claims.json), and the [external-validation index](evidence/external/README.md).
+
+IsoGraph's cold packets, isolated verifier runs, holdouts, scorers, and qualification manifests are **INTERNAL-QUALIFICATION** evidence. Fresh context, hidden oracles, different models/providers, and blind packets can improve execution independence, but they do not by themselves create independent external authority. **No general independent external validation of IsoGraph's formal/structural claims is currently registered.**
+
+Historical PASS/FAIL/PARTIAL/QUALIFIES dispositions remain preserved at their frozen revisions; this evidence classification does not rewrite them.
+
+Current status, design posture, and provenance:
 
 - [DESIGN_IDEALS.md](DESIGN_IDEALS.md) — explanatory design doctrine: perception before judgment, scoped sameness, unknown preservation, exact collapse, and discrepancy-as-discovery;
 - [STATUS.md](STATUS.md) — current qualified/candidate authority state;
