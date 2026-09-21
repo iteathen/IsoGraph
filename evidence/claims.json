@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "repository": "iteathen/IsoGraph",
+  "claims": [
+    {
+      "id": "ISG-CORE-001",
+      "claim": "Core Draft 0.17 is current qualified Core authority under IsoGraph's repository qualification system.",
+      "evidence_class": "INTERNAL-QUALIFICATION",
+      "status": "qualified repository authority",
+      "oracle": "Frozen repository qualification obligations, packets, scorers, and review",
+      "revision": "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+      "falsifier": "A later qualified Core authority supersedes it, or its recorded qualification provenance is invalidated under the repository's own rules.",
+      "evidence": [
+        "AGENTS.md",
+        "qualification",
+        "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md"
+      ],
+      "limitations": [
+        "Qualified repository authority is not independent external validation of the general formal claims."
+      ],
+      "external_reproduction": false
+    },
+    {
+      "id": "ISG-MODULES-001",
+      "claim": "Modules named by the qualified-module manifest passed their frozen repository qualification campaigns at the recorded revisions/hashes.",
+      "evidence_class": "INTERNAL-QUALIFICATION",
+      "status": "qualified repository module authority",
+      "oracle": "Frozen qualification campaigns and manifest provenance",
+      "revision": "qualification/QUALIFIED_MODULES_2026-09-18.md",
+      "falsifier": "Manifest/hash mismatch, invalid qualification provenance, or superseding qualified authority changes the applicable status.",
+      "evidence": [
+        "qualification/QUALIFIED_MODULES_2026-09-18.md",
+        "qualification"
+      ],
+      "limitations": [
+        "Cold/model/provider isolation improves execution independence but does not create external authority."
+      ],
+      "external_reproduction": false
+    },
+    {
+      "id": "ISG-EXT-001",
+      "claim": "IsoGraph's general formal and structural claims have independent external validation.",
+      "evidence_class": "UNVALIDATED",
+      "status": "no general external validation registered",
+      "oracle": null,
+      "revision": "main",
+      "falsifier": "Failure against an independent external oracle, counterexample, or failed third-party reproduction rejects the corresponding external claim.",
+      "evidence": [
+        "evidence/external/README.md"
+      ],
+      "limitations": [
+        "Internal qualification and model-to-model review are not by themselves external validation."
+      ],
+      "external_reproduction": false
+    }
+  ]
+}
