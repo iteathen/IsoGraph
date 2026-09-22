@@ -393,6 +393,7 @@ These SIs are source-declaration referents pinned to OpenAI commit `f9e8bc5b38b6
 | 5042 | NavierStokes/LocalResidualFlatness.lean::AllResidualJetRates / exists_schedule_all_jetRates / selected_schedule |
 | 5043 | NavierStokes/WholeDomainActualStageBounds.lean::actual_finite_residual_bound |
 | 5044 | NavierStokes/ActualIterationLedger.lean::residualLoss and stage-independent residual-rate machinery |
+| 5045 | NavierStokes/R3/CompactEnergy.lean::energy_balance / energy_rate_le / uniform_finite_energy |
 
 
 ### DP-promoted source-exact mechanisms
@@ -426,6 +427,18 @@ These SIs are source-declaration referents pinned to OpenAI commit `f9e8bc5b38b6
 | 2705 | diagonal schedule selection using unbounded stage gain/cut bounds |
 | 2706 | AllResidualJetRates: every derivative order and every nonnegative residual power |
 | 2707 | small-scale bridge from AllResidualJetRates to LocalPaper residual_flatness |
+
+### Compact-energy closure
+
+
+| 2800 | compact-support energy closure |
+| 2801 | compact velocity support input |
+| 2802 | uniform force L2-square bound |
+| 2803 | exact forced Navier–Stokes energy balance |
+| 2804 | energy-rate inequality |
+| 2805 | scalar Gronwall/integrating-factor closure |
+| 2806 | UniformFiniteEnergy output |
+| 2807 | integrated dissipation/energy-estimate consequences |
 
 ## QU states
 
