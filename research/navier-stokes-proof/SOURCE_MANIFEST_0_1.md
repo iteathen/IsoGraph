@@ -76,6 +76,45 @@ This manifest treats those statements as source metadata, not independent extern
 | same | of_compact_candidate | compressed compact R3 candidate periodizes into periodic candidate |
 | same | periodic_corollary | periodic breakdown theorem |
 
+
+## Exact R3 CandidateProperties fields retained
+
+At the pinned source revision, `NavierStokes/R3/ProblemStatement.lean::CandidateProperties` has exactly these 12 named fields, all represented in the native artifact:
+
+1. `velocity_smooth`
+2. `pressure_smooth`
+3. `support_compact`
+4. `velocity_support`
+5. `pressure_support`
+6. `force_smooth`
+7. `force_support`
+8. `zero_initial_velocity`
+9. `divergence_free`
+10. `navier_stokes`
+11. `energy_bounded`
+12. `speed_unbounded`
+
+## Exact periodic CandidateProperties fields retained
+
+At the pinned source revision, `NavierStokes/PeriodicPaperTheorem.lean::CandidateProperties` has exactly these 16 named fields, all represented in the native artifact:
+
+1. `velocity_smooth`
+2. `pressure_smooth`
+3. `force_smooth`
+4. `velocity_periodic`
+5. `pressure_periodic`
+6. `force_periodic`
+7. `support_compact`
+8. `support_interior`
+9. `velocity_support`
+10. `pressure_support`
+11. `zero_initial_velocity`
+12. `force_time_support`
+13. `force_zero_nonpos`
+14. `divergence_free`
+15. `navier_stokes`
+16. `speed_unbounded`
+
 ## Compact local theorem fields retained exactly by role
 
 `LocalPaper.Properties` fields:
