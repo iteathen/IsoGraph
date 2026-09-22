@@ -290,6 +290,54 @@ StepResult fields:
 | 2400 | comparator option C theorem |
 | 2401 | comparator option D theorem |
 
+
+## Native source-declaration anchors
+
+These SIs are source-declaration referents pinned to OpenAI commit `f9e8bc5b38b6e212696e8a30e3e91517af887bbd`.
+
+| SI | Source declaration |
+|---|---|
+| 5000 | NavierStokes/R3/ProblemStatement.lean::CandidateProperties |
+| 5001 | same::GlobalFiniteEnergySolution |
+| 5002 | same::breakdownStatement |
+| 5003 | NavierStokes/R3/Theorem.lean::theorem_1_1 |
+| 5004 | NavierStokes/LocalPaperTheorem.lean::Properties |
+| 5005 | same::properties_of_schedule |
+| 5006 | NavierStokes/ActualCandidateAssembly.lean::Witness |
+| 5007 | same::selected_witness |
+| 5008 | NavierStokes/MixedCandidateWitness.lean::SelectedSchedule |
+| 5009 | NavierStokes/CorrectionState.lean::State |
+| 5010 | NavierStokes/CorrectionStep.lean::CycleState |
+| 5011 | same::CycleState.step |
+| 5012 | same::fullResidual |
+| 5013 | NavierStokes/ActualIterationLedger.lean::sigma and its formula/succ/strictMono theorems |
+| 5014 | NavierStokes/ActualCyclePreservation.lean::RunInvariant |
+| 5015 | same::state_runInvariant |
+| 5016 | NavierStokes/ActualCycleCoherence.lean::Coherent |
+| 5017 | NavierStokes/ActualCyclePeriodicity.lean::Periodic |
+| 5018 | NavierStokes/CorrectionAnalyticStep.lean::StepResult |
+| 5019 | same::step |
+| 5020 | NavierStokes/ActualCycleResidualBounds.lean::fullResidual reconstruction / residual jet-rate bridge |
+| 5021 | same::PhysicalFields |
+| 5022 | NavierStokes/PulseCovariance.lean::PulseBounds |
+| 5023 | NavierStokes/LeadingStressWeights.lean::FullTrueCone / stress_ne_zero / weighted_bounds |
+| 5024 | NavierStokes/WholeDomainPhysicalStageTheorem.lean::actual_finite_velocity_bound |
+| 5025 | same::actual_finite_pressure_bound |
+| 5026 | same::actual_increment_bound |
+| 5027 | NavierStokes/R3/ActualCandidate.lean::of_localized_fields |
+| 5028 | same::selected_candidate_one_with_initial_rest |
+| 5029 | NavierStokes/R3/IntegratedDissipation.lean::candidate_energy_estimates family |
+| 5030 | NavierStokes/LocalAngularGrowth.lean::AngularGrowth / selectedRawVelocity_angularGrowth |
+| 5031 | NavierStokes/CandidateConsequences.lean::Consequences |
+| 5032 | NavierStokes/R3/WholeSpaceUniqueness.lean::candidate_global_agrees_before_one |
+| 5033 | NavierStokes/R3/CandidateBreakdown.lean::CandidateProperties.no_global_solution_one |
+| 5034 | NavierStokes/R3/ViscosityScaling.lean::rescale_candidate |
+| 5035 | same::candidate_at_viscosity and residual scaling bridge |
+| 5036 | NavierStokes/PeriodicPaperTheorem.lean::CandidateProperties / of_compact_candidate |
+| 5037 | same::periodic_corollary |
+| 5038 | NavierStokes/ComparatorSolution.lean::navier_stokes_breakdown_R3 |
+| 5039 | same::navier_stokes_breakdown_periodic |
+
 ## QU states
 
 | SI | Role |
