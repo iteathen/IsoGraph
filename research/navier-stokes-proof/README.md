@@ -94,6 +94,16 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Reduced-formula equivalence artifacts
+
+- `REDUCED_FORMULA_0_2.md` — repaired eight-component reduced formula.
+- `REDUCED_FORMULA_0_2.isg` — native reduced-formula graph.
+- `REDUCED_FORMULA_0_2_SCHEMA.md` — local schema and source imports.
+- `REDUCED_FORMULA_EQUIVALENCE_0_2.md` — two-way equivalence matrix against the published proof and pinned formalization.
+- `REDUCED_FORMULA_VALIDATION_0_2.md` — deterministic integrity, source-import, and deletion-test audit.
+
+The historical D10 synthesis is preserved in `DP_DISCOVERY_0_1.md` as under-complete for equivalence. RF-0.2 is the first reduced formula in this branch to pass the declared proof-outline/interface equivalence test.
+
 ## Discovery artifacts
 
 - `DP_DISCOVERY_0_1.md` — qualified-DP-0.1–0.4 research ledger and falsification history.
