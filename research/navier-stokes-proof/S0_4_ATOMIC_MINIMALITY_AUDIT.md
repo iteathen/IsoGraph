@@ -514,7 +514,7 @@ Under this test:
 - A8/A9/A10/A11 **must remain distinct**: the source exposes four literal increments with different defect consumers.
 - A2/A3 **must remain distinct**: all-order flatness and exact exterior zero have different semantics and consumers.
 - A23/A24 **must remain distinct**: competitor classes differ.
-- A0/A17 **must remain distinct**: singularity generation and transfer to the corrected/localized field are different obligations.
+- A0/A17 **must remain distinct**: singularity generation in the base and transfer to the corrected raw field are different obligations.
 - A18/A19 **must remain distinct**: localization and force extension discharge different final fields.
 - A13/A14 **must remain distinct**: invariant gain does not by itself imply a physical residual rate.
 - A15/A16 **must remain distinct**: diagonal selection and theorem-contract packaging have different logical types.
