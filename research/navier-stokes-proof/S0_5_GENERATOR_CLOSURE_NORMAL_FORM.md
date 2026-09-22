@@ -233,13 +233,13 @@ The source-relative architecture can now be written as alternating construction 
 \text{compact forced whole-space candidate}
 \\
 &\xrightarrow{C6}
-\text{finite-energy candidate}
-\\
-&\xrightarrow{G14}
-\text{arbitrary-viscosity whole-space candidate}
+\text{finite-energy viscosity-one candidate}
 \\
 &\xrightarrow{C7}
-\text{R3 breakdown},
+\text{viscosity-one whole-space obstruction}
+\\
+&\xrightarrow{G14}
+\text{arbitrary-viscosity R3 breakdown},
 \end{aligned}
 \]
 
