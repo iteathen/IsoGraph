@@ -9,7 +9,8 @@ Status: DP research ledger. Discovery output only; no item below is a qualified 
 - NEI: 0.4 qualified revision pinned by the module manifest.
 - Discovery Protocols: qualified cumulative DP 0.1–0.4 only.
 - OpenAI formal source: openai/NavierStokesAndEuler@f9e8bc5b38b6e212696e8a30e3e91517af887bbd.
-- Expanded source-faithful rendering blob: 23b3d6c877ef80d17be018913c82b0c8255368be.
+- Initial expanded source-faithful rendering blob used for the first DP pass: 23b3d6c877ef80d17be018913c82b0c8255368be.
+- Final source-faithful rendering blob after DP-promoted exact mechanisms: 6e01f6b7bb8579e08d5e5135a4e9ea5965677763.
 - Rendering path: research/navier-stokes-proof/NAVIER_STOKES_FORCED_BLOWUP_0_1.isg.
 
 DP 0.5 was not used.
@@ -310,19 +311,53 @@ No natural-identity conclusion is drawn.
 
 # D10 — Compact generative formulation discovered by the pass
 
-Lifecycle: SUPPORTED_CANDIDATE
+Lifecycle: SUPPORTED_CANDIDATE after one falsifying completeness attack and repair.
 
-Protocols: synthesis of D01–D09; DP-07 factorization; DP-11 invariants; DP-14 transformation; DP-22 composition; DP-24 proof topology.
+Protocols: synthesis of D01–D09 and D11; DP-07 factorization; DP-11 invariants; DP-14 transformation; DP-22 composition; DP-24 proof topology.
 
-The strongest compact formulation found in this bounded pass is:
+The first version of D10 omitted the source of the R3 uniform kinetic-energy bound. That omission was found by selecting a downstream CandidateProperties obligation and tracing it backward. The original D10 was therefore incomplete.
 
-Preserve an exact singular base on a protected geometric channel while an invariant-preserving correction recurrence increases residual order without bound in the correction region. Select a diagonal scale sequence that turns finite-stage bounds into smooth infinite sums and all-order endpoint residual flatness. Promote that residual to a smooth prescribed force, localize and transport the resulting candidate without changing the singularity contract, then use uniqueness to convert pre-singular blowup into nonexistence of a global smooth competitor.
+After adding D11, the strongest compact formulation supported by this bounded pass is:
+
+Preserve an exact singular base on a protected geometric channel while an invariant-preserving correction recurrence increases residual order without bound in the correction region. Select a diagonal scale sequence that turns finite-stage bounds into smooth infinite sums and all-order endpoint residual flatness. Promote that residual to a smooth prescribed force. Localize to compact spatial support; then use the exact forced energy balance plus compact-support/force bounds to close the uniform kinetic-energy obligation. Transport the resulting candidate across viscosity and, with the additional initial-rest bridge, into the periodic setting. Finally use the appropriate uniqueness/comparison obstruction to convert pre-singular blowup into nonexistence of a global smooth competitor.
 
 This explains substantially more of the proof than the final theorem contract while remaining much smaller than the full Lean dependency closure.
 
-Falsifier: D10 fails if D01, D02, D03, or D07 is falsified, or if a load-bearing construction obligation cannot be attached to one of these roles without introducing an independent mechanism.
+Falsifier history:
+- first attack: FAIL — energy_bounded had no generating mechanism in the synthesis;
+- repair: D11 compact-support energy closure added from source-exact CompactEnergy results;
+- recheck: the sampled R3 contract obligations now have explicit roles for smoothness/support, PDE/divergence, force, energy, blowup, scaling, and nonexistence.
 
-Important limitation: this is a discovery abstraction, not a replacement proof and not evidence that the full Lean graph has been reduced to a mathematically sufficient minimal generator. Completeness/minimality remains open.
+Important limitation: this is still a discovery abstraction, not a replacement proof and not evidence that the full Lean graph has been reduced to a mathematically sufficient minimal generator. Completeness/minimality remains open.
+
+---
+
+# D11 — Compact spatial support closes the finite-energy obligation
+
+Lifecycle: SUPPORTED_CANDIDATE
+
+Protocols: DP-02 constraints; DP-04 dependency topology; DP-22 composition; DP-24 proof topology; DP-31 conservation/balance.
+
+The R3 localization step does more than make the fields compactly supported. It creates the hypotheses needed for the whole-space energy closure.
+
+Source-exact dependency:
+
+    compact velocity support
+    + smooth velocity/pressure/force
+    + divergence-free
+    + exact forced Navier–Stokes equation
+    + zero initial velocity
+    + compact force support
+    -> exact energy balance
+    -> energy-rate inequality
+    -> scalar Gronwall/integrating-factor bound
+    -> UniformFiniteEnergy on [0,1)
+
+This mechanism is separate from the residual-order ladder. Arbitrary residual flatness explains smooth force construction; compact-support energy closure explains why the resulting whole-space singular solution still belongs to the finite-energy class required by alternative C.
+
+Falsifier attempted: derive UniformFiniteEnergy from smoothness or compact support alone. The source does not do this. It uses the PDE-derived energy inequality and the force bound, so the exact equation and forcing remain load-bearing.
+
+Residual: later IntegratedDissipation results strengthen the same energy structure with total-dissipation and sharp accumulated-force inequalities, but those stronger conclusions are not required merely to obtain CandidateProperties.energy_bounded.
 
 ---
 
@@ -375,7 +410,7 @@ DP does not upgrade any existing NEI query. Common recurrence role does not impl
 
 # Next highest-value DP work
 
-1. D10 completeness attack: select downstream theorem obligations and test whether the factorization traces them to a generating role without hand-waving.
+1. Continue D10 completeness attack with additional randomly selected downstream obligations beyond the energy field already tested.
 2. Correction residual decomposition: inspect the mean/oscillatory/stored-error split and test for an error-transfer motif.
 3. Support topology: explicitly render active annulus, protected inner ray, heat exterior, and localization plateaus as a three-region structure.
 4. QU 3002: freeze a stage-comparison view and test compact witness-family coverage.
