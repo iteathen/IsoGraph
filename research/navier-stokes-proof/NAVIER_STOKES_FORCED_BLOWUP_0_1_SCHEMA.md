@@ -388,6 +388,45 @@ These SIs are source-declaration referents pinned to OpenAI commit `f9e8bc5b38b6
 | 5038 | NavierStokes/ComparatorSolution.lean::navier_stokes_breakdown_R3 |
 | 5039 | same::navier_stokes_breakdown_periodic |
 
+| 5040 | NavierStokes/CandidateFromLimits.lean::force / force_eq_activated_residual / force_smooth / force_boundary_jets |
+| 5041 | NavierStokes/LocalAngularGrowth.lean::exists_ray_interval / rawVelocity_eq_base / selectedVelocity_eq_base_on_ray |
+| 5042 | NavierStokes/LocalResidualFlatness.lean::AllResidualJetRates / exists_schedule_all_jetRates / selected_schedule |
+| 5043 | NavierStokes/WholeDomainActualStageBounds.lean::actual_finite_residual_bound |
+| 5044 | NavierStokes/ActualIterationLedger.lean::residualLoss and stage-independent residual-rate machinery |
+
+
+### DP-promoted source-exact mechanisms
+
+| SI | Meaning |
+|---|---|
+| 2500 | residual-to-smooth-force bridge |
+| 2501 | traced/activated presingular residual |
+| 2502 | boundary-limit jet data at t=1 |
+| 2503 | smooth spacetime extension of the traced residual |
+| 2504 | constructed force equals activated Navier–Stokes residual for 0≤t<1 |
+| 2505 | constructed force is C∞ |
+| 2506 | constructed force has the represented future-time support/zero regions |
+| 2507 | force boundary derivatives equal the supplied boundary-limit jets |
+| 2600 | protected singular-ray mechanism |
+| 2601 | fixed inner radius |
+| 2602 | inner radius lies strictly inside the active/correction edge |
+| 2603 | sufficiently late shrinking ray lies in the exterior-domain side of the correction support |
+| 2604 | zeroth cutoff is on its plateau along that ray |
+| 2605 | sufficiently late time is within the localization late-time regime |
+| 2606 | shrinking ray lies in the spatial-localization plateau |
+| 2607 | raw corrected velocity equals the final slow base along the ray |
+| 2608 | localized whole-space velocity equals the same slow base along the ray |
+| 2609 | angular growth is inherited from the slow-base estimate through exact equality |
+| 2610 | FinalSlowBase velocity on the selected construction |
+| 2700 | monotone correction-accuracy → all-order residual-flatness bridge |
+| 2701 | stage accuracy sequence σ_j |
+| 2702 | finite residual jet exponent h·σ_J − fixedLoss(m) |
+| 2703 | fixedLoss(m) is independent of stage J |
+| 2704 | for fixed derivative order, the residual exponent is unbounded above as J→∞ |
+| 2705 | diagonal schedule selection using unbounded stage gain/cut bounds |
+| 2706 | AllResidualJetRates: every derivative order and every nonnegative residual power |
+| 2707 | small-scale bridge from AllResidualJetRates to LocalPaper residual_flatness |
+
 ## QU states
 
 | SI | Role |
