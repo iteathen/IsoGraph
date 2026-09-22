@@ -9,7 +9,7 @@ Status: discovery bookkeeping only. It does not add Core or Discovery Protocol s
 SI 8000 identifies the frozen source rendering used by this discovery pass:
 
 NAVIER_STOKES_FORCED_BLOWUP_0_1.isg
-git blob: 23b3d6c877ef80d17be018913c82b0c8255368be
+git blob: 6e01f6b7bb8579e08d5e5135a4e9ea5965677763
 
 Relation ^72001 declares imported source SIs. Source SIs referenced in the discovery artifact retain the meanings recorded in NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md.
 
@@ -106,6 +106,7 @@ These are local handles for the named qualified DP 0.1–0.4 procedures, not new
 | 7310 | D10 compact generative synthesis |
 | 7311 | D09 full-contract isomorphism attempt |
 | 7312 | D04 same-residual-mechanism identification attempt |
+| 7313 | D11 compact-support energy closure |
 
 ## Non-claims
 
