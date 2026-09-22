@@ -361,6 +361,43 @@ Residual: later IntegratedDissipation results strengthen the same energy structu
 
 ---
 
+# D12 — Equivalence audit of the compact synthesis
+
+Lifecycle: SUPPORTED_CANDIDATE
+
+The published-paper equivalence audit applied a stronger criterion than the original D10 completeness sampling.
+
+Result:
+
+- original D10: FAIL for proof-outline/interface equivalence;
+- RF-0.2: PASS for proof-outline/interface equivalence.
+
+The stricter audit found that D10 had compressed three independent existence mechanisms too aggressively:
+
+1. background-profile construction, radial-moment matching, annular-stress representation, and admissible stress-cone synthesis;
+2. support-separated oscillatory pulse dynamics and averaged quadratic stress realization with exact curls;
+3. the explicit four-role residual-correction cycle, rather than only its monotone sigma output.
+
+These were promoted into RF-0.2 as G1–G3. The previous D10 history is retained rather than rewritten.
+
+RF-0.2 then passed:
+- all top-level paper Sections 4–10 and Appendices A–C mapped;
+- all major Section 3 proof-outline roles mapped;
+- Theorem 3.1 and final R3/periodic contracts covered;
+- 8/8 reduced components source-backed in reverse;
+- 8/8 components load-bearing under deletion testing;
+- known residual distinctions preserved.
+
+The exact test and revised formula are:
+- REDUCED_FORMULA_0_2.md
+- REDUCED_FORMULA_EQUIVALENCE_0_2.md
+- REDUCED_FORMULA_0_2.isg
+- REDUCED_FORMULA_VALIDATION_0_2.md
+
+Important boundary: PASS here means proof-outline/interface equivalence, not a replacement formal proof, minimality theorem, or independent proof validation.
+
+---
+
 # Additional structural hints retained for future passes
 
 These are deliberately below SUPPORTED_CANDIDATE. They are preserved because the current graph contains enough structure to make them worth revisiting, but not enough to promote them without a more focused pass.
