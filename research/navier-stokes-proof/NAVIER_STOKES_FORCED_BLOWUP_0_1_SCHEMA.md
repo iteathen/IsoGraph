@@ -169,6 +169,12 @@ Property SIs:
 | 1407 | PSum |
 | 1408–1410 | away extensions ea/eb/ep |
 | 1411 | forcing produced by witness |
+| 1450 | witness CandidateProperties output |
+| 1451 | witness force smoothness |
+| 1452 | witness CandidateConsequences output |
+| 1453 | derivative-H3 norm tends to infinity as t→1- |
+| 1454 | all-order componentwise force derivative decay |
+| 1455 | forcing derivative matching to boundary limits at t=1 |
 | 1420–1427 | SelectedSchedule obligations |
 
 SelectedSchedule:
@@ -201,12 +207,13 @@ SelectedSchedule:
 | 1531 | σ_0=1/5 |
 | 1532 | σ_{j+1}=σ_j+1/10 |
 | 1533 | σ strictly monotone |
+| 1534 | κ = 1/100000 |
 | 1540 | RunInvariant |
 | 1541 | analytic invariant |
 | 1542 | geometric coherence |
 | 1543 | periodicity invariant |
 | 1550 | StepResult |
-| 1551–1557 | step-output bounds/invariants |
+| 1551–1558 | step-output bounds/invariants |
 | 1560 | fullResidual |
 | 1561 | residual decomposition/reconstruction |
 | 1562 | residual jet-rate family |
@@ -219,7 +226,8 @@ StepResult fields:
 - 1554 pressure mean-class increment
 - 1555 velocity coefficient wave-class bound
 - 1556 pressure coefficient wave-class bound
-- 1557 post-signed theta/axial residual classes
+- 1557 post-signed theta residual class
+- 1558 post-signed axial residual class
 
 ### Coherence/periodicity/pulses/stress
 
@@ -240,6 +248,21 @@ StepResult fields:
 | 1641 | nonzero stress consequence |
 | 1642 | weighted stress bounds |
 | 1650 | covariance/stress realization role |
+
+
+PulseBounds property SIs:
+- 1621 radius_one_le
+- 1622 lower_pos
+- 1623 upper_pos
+- 1624 decay_pos
+- 1625 lower_decay_pos
+- 1626 cutoff_continuous
+- 1627 component_continuous
+- 1628 cutoff_abs_le
+- 1629 cutoff_zero outside the stated slot
+- 1630 cutoff_one on the inner slot
+- 1631 component_lower Gaussian envelope
+- 1632 component_upper Gaussian envelope
 
 ### Finite-prefix / physical bridge
 
@@ -273,10 +296,21 @@ StepResult fields:
 | 1904 | energy+dissipation inequality |
 | 1905 | total dissipation bound |
 | 2000 | AngularGrowth |
-| 2001 | positive leading coefficient |
-| 2002 | asymptotic error O(τ^(2h)) |
+| 2001 | e₀ > 0 |
+| 2002 | quantitative normalized angular-growth error bound |
 | 2003 | speed/L∞ blowup consequence |
+| 2004 | e₀ |
+| 2005 | C |
+| 2006 | δ |
+| 2007 | C > 0 |
+| 2008 | 0 < δ ≤ 1 |
 | 2010 | derivative H3 blowup consequence |
+| 2050 | CandidateConsequences.Consequences |
+| 2051 | maximal classical solution with lifespan endpoint 1 |
+| 2052 | admissible lifespans = Ioc(0,1) |
+| 2053 | derivative-H3 unbounded at one |
+| 2054 | force nonzero at some positive pre-blowup time |
+| 2055 | all-order future force-jet polynomial decay |
 | 2100 | whole-space uniqueness/comparison |
 | 2101 | global competitor agrees before t=1 |
 | 2102 | blowup contradicts global smooth finite-energy solution |
@@ -287,6 +321,22 @@ StepResult fields:
 | 2300 | compression/periodization |
 | 2301 | periodic CandidateProperties |
 | 2302 | no global smooth periodic solution |
+| 2310 | periodic candidate velocity_smooth |
+| 2311 | pressure_smooth |
+| 2312 | force_smooth |
+| 2313 | velocity_periodic |
+| 2314 | pressure_periodic |
+| 2315 | force_periodic |
+| 2316 | support_compact |
+| 2317 | support_interior |
+| 2318 | velocity_support in K within fundamental cube |
+| 2319 | pressure_support in K within fundamental cube |
+| 2320 | zero_initial_velocity |
+| 2321 | compact future-time force support |
+| 2322 | force zero for nonpositive time |
+| 2323 | divergence_free |
+| 2324 | periodic Navier–Stokes residual equation |
+| 2325 | speed_unbounded at one |
 | 2400 | comparator option C theorem |
 | 2401 | comparator option D theorem |
 
