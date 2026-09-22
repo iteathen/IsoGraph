@@ -28,7 +28,7 @@ Latest deterministic check of the native artifact:
 - balanced `() [] {}` delimiters: PASS
 - undeclared stable labels: 0
 - suspicious/non-Core tokens under the restricted artifact surface: 0
-- native relation occurrences: 541
+- native relation occurrences: 615
 - QU state records: 4
 - NEI query-context records: 4
 
