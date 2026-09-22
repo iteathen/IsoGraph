@@ -107,6 +107,22 @@ These are local handles for the named qualified DP 0.1–0.4 procedures, not new
 | 7311 | D09 full-contract isomorphism attempt |
 | 7312 | D04 same-residual-mechanism identification attempt |
 | 7313 | D11 compact-support energy closure |
+| 7320 | H01 residual error-routing/accounting hint |
+| 7321 | H02 three-region spatial division-of-labor hint |
+| 7322 | H03 endpoint jets as reconstruction-interface hint |
+| 7323 | H04 pointwise-blowup / finite-energy orthogonal-channel hint |
+| 7324 | H05 two-level refinement architecture hint |
+| 7325 | H06 compositional transport/adaptor algebra hint |
+| 7326 | H07 modular/product RunInvariant hint |
+| 7327 | H08 oscillatory covariance as stress-realization operator hint |
+| 7328 | H09 exact-interface / flexible-interior design motif hint |
+| 7329 | H10 obstruction-after-transport extensibility hint |
+
+## Hint discipline
+
+SIs 7320–7329 are deliberately lifecycle `LEAD`. They preserve potentially valuable similarities discovered during the pass but are not promoted to `CANDIDATE` until their stated dependency/falsifier work is performed.
+
+`LEAD` in this artifact is the native representation of the prose term **HINT**.
 
 ## Non-claims
 
