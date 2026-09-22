@@ -19,12 +19,34 @@ Source rendering:
 - suspicious tokens under restricted artifact surface: 0
 
 DP discovery view:
-- relation occurrences: 155
+- relation occurrences: 266
 - balanced () [] {}: PASS
 - undeclared stable labels: 0
 - suspicious tokens under restricted artifact surface: 0
-- explicit imported source SIs: 36
+- explicit imported source SIs: 46
 - imported source SIs missing from source rendering: 0
+
+## Hint preservation audit
+
+- additional low-confidence structural hints preserved: 10
+- all 10 encoded with lifecycle `LEAD`
+- none encoded as `CANDIDATE`, `SUPPORTED_CANDIDATE`, or `QUALIFIED_CLAIM`
+- every native hint carries source/mapped regions plus a next-work/falsifier handle
+- imported source SIs missing from source rendering: 0
+
+The preserved hints cover:
+- residual error-routing/accounting;
+- three-region spatial division of labor;
+- endpoint jets as a reconstruction interface;
+- local blowup vs global energy as potentially orthogonal channels;
+- two-level refinement via distinct `sigma_j` and `a_j` roles;
+- a possible compositional algebra of transport adapters;
+- modular/product structure of `RunInvariant`;
+- oscillatory covariance as a possible stress-realization operator;
+- exact-interface/flexible-interior design;
+- obstruction-after-transport as a potentially reusable theorem pattern.
+
+These remain search leads only.
 
 ## DP lifecycle audit
 
