@@ -13,7 +13,7 @@ This is not a claim of globally minimal mathematics or proof uniqueness.
 ## Native integrity
 
 `S0_4_ATOMIC_MINIMALITY.isg`:
-- blob: `6ee79d66cf8d2c98deec875bbaac13a3a74f62c2`
+- blob: `c4584b6592dd70a4698ca4c4b187bde84229712a`
 - relation occurrences: 126
 - atom count: 25
 - source imports: 34
@@ -50,6 +50,21 @@ Rightarrow
 ]
 
 Result: **PASS**.
+
+## Dependency-direction correction
+
+A generator-vs-consequence review found and repaired one graph-direction error before further work:
+
+- `LocalAngularGrowth.selectedRawVelocity_angularGrowth` is consumed by
+  `LocalPaperTheorem.properties_of_schedule` when the local contract's
+  `angular_growth` field is constructed.
+- Therefore A17 (raw protected-ray angular growth) is upstream of A16
+  (local contract closure), not downstream of it.
+- A18 then preserves/transfers that already-established blowup channel through
+  compact localization.
+
+The corrected graph was rerun through the complete deletion/reachability test.
+All 25 atoms still break at least one declared final target when removed.
 
 ## Target-specific interpretation
 
