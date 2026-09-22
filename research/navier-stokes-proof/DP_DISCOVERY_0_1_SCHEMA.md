@@ -107,6 +107,7 @@ These are local handles for the named qualified DP 0.1–0.4 procedures, not new
 | 7311 | D09 full-contract isomorphism attempt |
 | 7312 | D04 same-residual-mechanism identification attempt |
 | 7313 | D11 compact-support energy closure |
+| 7314 | D12 reduced-formula equivalence audit; D10 fails, RF-0.2 passes declared interface test |
 | 7320 | H01 residual error-routing/accounting hint |
 | 7321 | H02 three-region spatial division-of-labor hint |
 | 7322 | H03 endpoint jets as reconstruction-interface hint |
