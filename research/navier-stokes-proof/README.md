@@ -94,6 +94,15 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Generator/closure normal-form artifacts
+
+- `S0_5_GENERATOR_CLOSURE_NORMAL_FORM.md` — separates 16 generative/structural mechanisms from 9 closure/bridge theorems.
+- `S0_5_GENERATOR_CLOSURE.isg` — typed dependency graph.
+- `S0_5_GENERATOR_CLOSURE_SCHEMA.md` — generator/closure role dictionary.
+- `S0_5_GENERATOR_CLOSURE_VALIDATION.md` — one-to-one S0.4 mapping, source-order, source-import, and final-target reachability audit.
+
+S0.5 does not delete any S0.4 atom. It prevents false compression by forbidding downstream consequences from silently replacing the mechanisms that generate them.
+
 ## Atomic minimality artifacts
 
 - `S0_4_ATOMIC_MINIMALITY_AUDIT.md` — 25-mechanism source-relative atomic factorization and deletion witnesses.
