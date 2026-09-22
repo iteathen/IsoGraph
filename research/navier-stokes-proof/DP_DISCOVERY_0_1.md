@@ -361,6 +361,304 @@ Residual: later IntegratedDissipation results strengthen the same energy structu
 
 ---
 
+# Additional structural hints retained for future passes
+
+These are deliberately below SUPPORTED_CANDIDATE. They are preserved because the current graph contains enough structure to make them worth revisiting, but not enough to promote them without a more focused pass.
+
+The lifecycle status for every item in this section is LEAD/HINT unless explicitly stated otherwise.
+
+## H01 — Residual decomposition may be an error-routing/accounting structure
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-06 motifs; DP-11 invariants; DP-14 transformations; DP-31 conservation/balance.
+
+Source cue:
+
+    fullResidual
+      -> oscillatory source contribution
+      + mean-good residual
+      + stored total errors
+
+and the cycle state separately carries excluded/stored errors.
+
+Possible correspondence:
+
+The correction cycle may be doing more than making one scalar residual smaller. It may repeatedly move defect among structured channels:
+
+    oscillatory defect
+    <-> mean defect
+    <-> stored/excluded error
+    <-> newly realized correction
+
+If true, the useful invariant may be an error-transfer/accounting law rather than only the monotone sigma accuracy coordinate.
+
+Why only a hint:
+- the current rendering has the decomposition but not a complete stage-to-stage transfer equation for every component;
+- cancellation/sign conventions and what is genuinely conserved versus merely bounded have not been reconstructed.
+
+Concrete falsifier:
+find a stage transition where one residual component is created/destroyed without a corresponding represented transfer/bound relation, so no coherent accounting interpretation survives.
+
+## H02 — The proof may have a three-region spatial division of labor
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-13 multi-scale; DP-17 containment; DP-26 boundary movement; DP-33 special cases.
+
+Current regions already visible:
+
+    protected inner ray / inner singular channel
+    active correction annulus / repair region
+    heat exterior / exact-zero-residual region
+
+Possible correspondence:
+
+The geometry may factor the proof into three spatial roles:
+
+    preserve target singular behavior
+    repair the PDE defect
+    close to an exact exterior solution
+
+This is stronger than saying support matters. It suggests the geometry itself allocates distinct semantic responsibilities to different regions.
+
+Why only a hint:
+- one protected ray is source-exact, but a complete region partition has not been rendered;
+- the active annulus, overlap/collar regions, and localization transitions may introduce additional roles.
+
+Concrete falsifier:
+show that a load-bearing correction mechanism simultaneously occupies all three proposed roles/regions, or that the proposed boundaries fail to cover an essential transition region.
+
+## H03 — Endpoint jets may form a sufficient interface between singular past and smooth future force
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-01 boundary structure; DP-03 interfaces; DP-23 reconstruction; DP-26 boundary movement.
+
+Source cue:
+
+    presingular residual
+      -> boundaryLimits / all endpoint derivatives
+      -> smoothExtension
+      -> global smooth force
+
+Possible correspondence:
+
+A very large amount of presingular construction detail may be hidden behind a compact interface consisting of:
+- the traced residual on the past side;
+- its compatible all-order normal/boundary jets at t=1.
+
+That would make the terminal jet family a genuine reconstruction port.
+
+Why only a hint:
+- we have not proved a minimal-interface statement;
+- the smooth extension theorem may consume regularity/compatibility information not reducible to a bare jet tuple in the intended abstraction.
+
+Concrete falsifier:
+identify a future-force obligation that depends on presingular structure not recoverable from the represented traced residual plus compatible boundary jets.
+
+## H04 — Pointwise blowup and finite energy appear to be deliberately orthogonal obligation channels
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-08 residuals; DP-11 invariants; DP-22 composition; DP-31 balance.
+
+Current supported mechanisms are strikingly separate:
+
+    pointwise/supremum blowup
+      <- protected singular ray / slow-base asymptotic
+
+    uniform finite kinetic energy
+      <- compact support + exact PDE + force bound + energy/Gronwall closure
+
+Possible correspondence:
+
+The construction may exploit a general local/global norm separation:
+a highly concentrated singular observable can diverge while an integrated quantity is controlled by a different structural mechanism.
+
+Why only a hint:
+- this pass has not reconstructed the quantitative concentration geometry strongly enough to prove a general decoupling theorem;
+- the two channels may share hidden parameter constraints through the base construction.
+
+Concrete falsifier:
+show that the energy closure requires a quantitative bound on the singular-ray amplitude/profile that makes the two channels inseparable at the represented mechanism level.
+
+## H05 — sigma_j and a_j may form a two-level refinement architecture despite being non-identical
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-13 multi-scale; DP-21 recurrence; DP-27 parameter roles; DP-29 ordering.
+
+D06 correctly rejected sigma_j <-> a_j identity/correspondence as the same scale role.
+
+A weaker relation remains interesting:
+
+    inner deterministic refinement:
+        correction stage J -> higher analytic/residual order via sigma_J
+
+    outer existential extraction:
+        choose a_j from the finite-stage gain/bounds
+        -> smooth diagonal sums + endpoint-flat limit
+
+Possible correspondence:
+
+This resembles a two-level architecture:
+first manufacture an increasingly accurate family, then choose a sparse/fast-enough diagonal subsequence that realizes all countably many final obligations simultaneously.
+
+Why only a hint:
+- the exact dependency from sigma/gain into the selected schedule has not been abstracted as a general two-level theorem;
+- a_j has several obligations unrelated to sigma itself.
+
+Concrete falsifier:
+show that the selected schedule can be constructed from source facts that do not materially depend on the unbounded stage-accuracy/gain ladder.
+
+## H06 — The transport/adaptor layer may have a compositional algebra
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-14 transformation invariants; DP-22 composition; DP-23 reconstruction; DP-36 representation redundancy.
+
+Current source-exact adapters include:
+- viscosity rescaling;
+- delayed parabolic compression;
+- periodization;
+- comparator adapters.
+
+They share a supported interface role: transform an already established candidate while preserving selected theorem-bearing obligations.
+
+Possible correspondence:
+
+These may form a compositional family of contract morphisms:
+
+    candidate contract
+      --T1--> transformed candidate contract
+      --T2--> transformed candidate contract
+      --T3--> comparator-facing theorem
+
+If exact composition laws can be stated, much downstream proof structure could be represented as transformations over contracts rather than separate theorem chains.
+
+Why only a hint:
+- no identity/composition/closure laws have been formalized in the IsoGraph view;
+- each adapter preserves a different subset and requires different side conditions.
+
+Concrete falsifier:
+find two adapters whose sequential composition cannot be described by a consistent mapped contract without re-opening hidden internal construction state.
+
+## H07 — RunInvariant may be a product/modular invariant rather than one monolithic invariant
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-06 repeated motifs; DP-11 invariants; DP-22 composition; DP-36 redundancy.
+
+Source cue:
+
+    RunInvariant =
+        analytic invariant
+        + geometric coherence
+        + periodicity invariant
+
+These are separately named and separately proved roles.
+
+Possible correspondence:
+
+The correction cycle may intentionally separate three nearly orthogonal preservation burdens:
+- quantitative analytic control;
+- cross-chart / coefficient / axis coherence;
+- translation periodicity.
+
+If so, RunInvariant is a product-like composition of invariant modules, which may explain why later proof consumers can request only the facet they need.
+
+Why only a hint:
+- independence has not been proved;
+- one facet may be logically necessary to establish another at each step.
+
+Concrete falsifier:
+show that one invariant component cannot even be stated/preserved without importing the full semantic content of another, defeating a modular factorization.
+
+## H08 — Oscillatory wave/covariance machinery may be a generic stress-realization operator
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-03 interfaces; DP-06 motifs; DP-07 factorization; DP-10 role equivalence; DP-14 transformation invariance.
+
+Source cues:
+- PulseBounds constrain actual pulse functions;
+- covariance constructions produce controlled quadratic effects;
+- FullTrueCone supplies a nondegenerate target stress region;
+- signed/particular wave stages feed correction outputs.
+
+Possible correspondence:
+
+There may be a compact operator-level role:
+
+    target defect/stress
+      -> choose oscillatory wave data
+      -> quadratic covariance realizes required mean stress
+      -> remaining defect moves to a higher-order/error class
+
+This would be a stronger mechanistic compression than the current D01 residual-order ladder because it would explain what physically/mathematically performs the cancellation.
+
+Why only a hint:
+- this pass has not traced the complete target-stress -> covariance -> residual-cancellation dependency chain;
+- FullTrueCone and PulseBounds may serve narrower technical roles than this abstraction suggests.
+
+Concrete falsifier:
+trace the actual correction step and find that the covariance/stress machinery does not discharge the leading residual/stress obligation, or that an independent mechanism does the essential cancellation.
+
+## H09 — The proof may repeatedly use “make the interface exact, leave the interior representation flexible”
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-01 boundaries; DP-03 interfaces; DP-07 factorization; DP-23 reconstruction.
+
+Repeated cues:
+- protected ray requires exact equality to the base only on a selected channel;
+- heat exterior requires exact residual zero only on its exterior domain;
+- candidate construction needs exact PDE equality once force is defined;
+- transformation adapters preserve explicit theorem contracts while changing internal representation.
+
+Possible correspondence:
+
+The construction may systematically spend exactness at interfaces/boundaries while allowing more flexible internal machinery between them.
+
+This would be a useful general design motif if it survives a broader source audit.
+
+Why only a hint:
+- “interface” is currently our abstraction, not a source theorem;
+- some interior estimates are themselves exact identities and may be equally load-bearing.
+
+Concrete falsifier:
+find a central proof region where downstream correctness depends on detailed internal representation rather than any recoverable boundary/contract property.
+
+## H10 — The C/D comparison may be one instance of a broader “obstruction after transport” pattern
+
+Lifecycle: LEAD
+
+Protocols suggested: DP-06 motifs; DP-10 role equivalence; DP-22 composition; DP-24 proof topology.
+
+Current pattern:
+
+    build one singular mechanism
+    -> transport it into a target setting
+    -> define the setting-specific competitor class
+    -> use setting-specific uniqueness/agreement
+    -> singularity obstructs global continuation
+
+Possible correspondence:
+
+The same construction might support additional theorem formulations whenever:
+1. a transport adapter preserves the singular candidate contract; and
+2. the target setting supplies a suitable pre-singular uniqueness/comparison theorem.
+
+Why only a hint:
+- no additional target setting has been established;
+- extrapolating beyond C/D would be speculative.
+
+Concrete falsifier:
+show that C/D share this pattern only because of special properties that do not survive even a nearby alternative formulation.
+
+---
+
 # Cross-residual conformance records
 
 ## CR-1: flat residual vs exact-zero exterior
