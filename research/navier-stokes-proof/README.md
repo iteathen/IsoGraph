@@ -94,6 +94,16 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Fresh synthesis proof artifacts
+
+- `FRESH_SYNTHESIS_S0_3.md` — repaired source-first synthesis.
+- `FRESH_SYNTHESIS_S0_3_PROOF.md` — compositional proof of interface sufficiency.
+- `FRESH_SYNTHESIS_S0_3.isg` — native proof graph.
+- `FRESH_SYNTHESIS_S0_3_SCHEMA.md` — proof-graph schema.
+- `FRESH_SYNTHESIS_S0_3_VALIDATION.md` — published-role, contract, dependency, deletion, and native-integrity audit.
+
+The fresh S0.2 synthesis is preserved as a failed predecessor: it omitted the singular-background seed and first oscillatory stress realization. S0.3 is the first source-first synthesis from DP 0.2 to pass the declared source-relative interface proof.
+
 ## Reduced-formula equivalence artifacts
 
 - `REDUCED_FORMULA_0_2.md` — repaired eight-component reduced formula.
