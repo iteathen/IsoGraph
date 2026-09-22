@@ -208,13 +208,13 @@ The source-relative architecture can now be written as alternating construction 
 \xrightarrow{C0,C1}
 \text{background interface}
 \\
-&\xrightarrow{G2,G3,G4}
-\text{oscillatory stress realization}
+&\xrightarrow{G2,G3,G4,G9}
+\text{represented oscillatory/correction state}
 \\
 &\xrightarrow{C2}
 \text{exact residual channels}
 \\
-&\xrightarrow{G5,G6,G7,G8,G9}
+&\xrightarrow{G5,G6,G7,G8}
 \text{next correction state}
 \\
 &\xrightarrow{C3}
