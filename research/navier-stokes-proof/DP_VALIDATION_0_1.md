@@ -19,12 +19,25 @@ Source rendering:
 - suspicious tokens under restricted artifact surface: 0
 
 DP discovery view:
-- relation occurrences: 266
+- relation occurrences: 272
 - balanced () [] {}: PASS
 - undeclared stable labels: 0
 - suspicious tokens under restricted artifact surface: 0
 - explicit imported source SIs: 46
 - imported source SIs missing from source rendering: 0
+
+## Reduced-formula equivalence audit
+
+- historical D10 equivalence disposition: FAIL / under-complete
+- revised RF-0.2 disposition: PASS at proof-outline/interface level
+- RF components: 8/8
+- RF source imports: 36
+- RF missing source imports: 0
+- RF deletion-test witnesses: 8/8
+- RF native relation occurrences: 50
+- RF native delimiter/label/token checks: PASS
+
+The equivalence audit is recorded as D12 in the DP ledger/native graph. It does not upgrade the result to a qualified semantic theorem.
 
 ## Hint preservation audit
 
