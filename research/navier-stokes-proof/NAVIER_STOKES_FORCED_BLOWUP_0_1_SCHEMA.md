@@ -11,7 +11,7 @@ Local labels below are artifact-owned. QU `^950xx` and NEI `^941xx/^9401x` label
 | ^70000 | artifact record |
 | ^70001 | pinned source revision |
 | ^70002 | source file |
-| ^70003 | source declaration |
+| ^70003 | source declaration / declaration-family anchor |
 | ^70004 | evidence/provenance edge |
 | ^70005 | semantic object |
 | ^70006 | property record |
