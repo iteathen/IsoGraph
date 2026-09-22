@@ -94,6 +94,15 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Standard physical-equivalence artifacts
+
+- `STANDARD_PHYSICAL_EQUIVALENCE_0_1.md` — exact dimensional continuum equivalence proof and measurement non-equivalence boundary.
+- `STANDARD_PHYSICAL_EQUIVALENCE_0_1.isg` — native equivalence graph.
+- `STANDARD_PHYSICAL_EQUIVALENCE_0_1_SCHEMA.md` — quantity/status dictionary.
+- `STANDARD_PHYSICAL_EQUIVALENCE_0_1_VALIDATION.md` — units, PDE, energy, dissipation, covariance, FiveRows, blowup, and measurement audit.
+
+This proves equivalence between the source continuum formulation and a standard dimensional fluid formulation. It deliberately does not identify the theorem with ordinary finite-resolution laboratory data.
+
 ## Fresh synthesis proof artifacts
 
 - `FRESH_SYNTHESIS_S0_3.md` — repaired source-first synthesis.
