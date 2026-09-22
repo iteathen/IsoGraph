@@ -77,6 +77,18 @@ This manifest treats those statements as source metadata, not independent extern
 | same | periodic_corollary | periodic breakdown theorem |
 
 
+
+| NavierStokes/CandidateFromLimits.lean | force | specified force is a smooth spacetime extension of the traced presingular residual using boundary jet data |
+| same | force_eq_activated_residual | for 0≤t<1 the constructed force equals the activated Navier–Stokes residual exactly |
+| same | force_smooth / force_boundary_jets / force_time_support | smoothness, endpoint-jet agreement, and future-time support of the same force |
+| NavierStokes/LocalAngularGrowth.lean | exists_ray_interval | one positive late-time interval places the shrinking inner ray in the correction exterior and spatial-localization plateau with the cutoff on its plateau |
+| same | rawVelocity_eq_base | full diagonal corrected velocity equals FinalSlowBase on the relevant exterior region |
+| same | selectedVelocity_eq_base_on_ray | fully localized selected velocity equals FinalSlowBase along the shrinking blowup ray |
+| NavierStokes/LocalResidualFlatness.lean | AllResidualJetRates | all derivative orders and arbitrary nonnegative residual powers at the singular spacetime point |
+| same | exists_schedule_all_jetRates / selected_schedule | one common selected schedule simultaneously provides smooth sums, cut bounds, vanishing endpoint jets, and all residual jet rates |
+| NavierStokes/WholeDomainActualStageBounds.lean | actual_finite_residual_bound | finite-stage residual jet bound with exponent h·sigma(J) − fixedLoss(m) |
+| NavierStokes/ActualIterationLedger.lean | residualLoss / sigma_formula / sigma_succ | residual loss is stage-independent; sigma(J)=1/5+J/10 and increases by 1/10 each cycle |
+
 ## Exact R3 CandidateProperties fields retained
 
 At the pinned source revision, `NavierStokes/R3/ProblemStatement.lean::CandidateProperties` has exactly these 12 named fields, all represented in the native artifact:
