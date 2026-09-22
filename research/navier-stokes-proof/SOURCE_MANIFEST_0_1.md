@@ -89,6 +89,8 @@ This manifest treats those statements as source metadata, not independent extern
 | NavierStokes/WholeDomainActualStageBounds.lean | actual_finite_residual_bound | finite-stage residual jet bound with exponent h·sigma(J) − fixedLoss(m) |
 | NavierStokes/ActualIterationLedger.lean | residualLoss / sigma_formula / sigma_succ | residual loss is stage-independent; sigma(J)=1/5+J/10 and increases by 1/10 each cycle |
 
+| NavierStokes/R3/CompactEnergy.lean | energy_balance / energy_rate_le / uniform_finite_energy | compact support, smooth force, divergence freedom and the exact PDE yield the forced energy balance; a scalar Gronwall/integrating-factor argument gives UniformFiniteEnergy |
+
 ## Exact R3 CandidateProperties fields retained
 
 At the pinned source revision, `NavierStokes/R3/ProblemStatement.lean::CandidateProperties` has exactly these 12 named fields, all represented in the native artifact:
