@@ -94,6 +94,13 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Discovery artifacts
+
+- `DP_DISCOVERY_0_1.md` — qualified-DP-0.1–0.4 research ledger and falsification history.
+- `DP_DISCOVERY_0_1.isg` — native discovery view with lifecycle status, residuals, breakers, QU/NEI impact, and synthesis dependencies.
+- `DP_DISCOVERY_0_1_SCHEMA.md` — local discovery vocabulary and explicit source-namespace import.
+- `DP_VALIDATION_0_1.md` — deterministic audit of the DP artifacts.
+
 ## Falsifiers / next checks
 
 This rendering should be revised if any of the following occurs:
