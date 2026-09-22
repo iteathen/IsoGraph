@@ -94,6 +94,15 @@ Retained:
 - `NAVIER_STOKES_FORCED_BLOWUP_0_1_SCHEMA.md` — local label/SI dictionary and interpretation boundaries.
 - `SOURCE_MANIFEST_0_1.md` — exact source revision and declaration-to-property provenance.
 
+## Atomic minimality artifacts
+
+- `S0_4_ATOMIC_MINIMALITY_AUDIT.md` — 25-mechanism source-relative atomic factorization and deletion witnesses.
+- `S0_4_ATOMIC_MINIMALITY.isg` — native dependency/reachability graph.
+- `S0_4_ATOMIC_MINIMALITY_SCHEMA.md` — atom and status dictionary.
+- `S0_4_ATOMIC_MINIMALITY_VALIDATION.md` — mechanical deletion/reachability audit.
+
+S0.4 strengthens S0.3 from ten-box coarse irreducibility to 25 source-backed atomic interfaces. Every atom is required for at least one represented final target under the frozen interface vocabulary. This remains a source-relative irreducibility result, not a claim of globally unique or cardinality-minimal mathematics.
+
 ## Standard physical-equivalence artifacts
 
 - `STANDARD_PHYSICAL_EQUIVALENCE_0_1.md` — exact dimensional continuum equivalence proof and measurement non-equivalence boundary.
