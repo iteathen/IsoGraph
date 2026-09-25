@@ -113,7 +113,7 @@ Phase 3/4 development evidence is frozen in `experiments/020/`.
 - source anchors include immutable Git blob IDs;
 - no TI claim was asserted in Experiment 020.
 
-## Phase 5 — first TI campaign
+## Phase 5 — first TI campaign — COMPLETE
 
 The first TI campaign must include:
 
@@ -257,7 +257,7 @@ Current state:
 - Phase 2 — deterministic DTS tooling: **COMPLETE**;
 - Phase 3 — real source-anchored transition corpus: **COMPLETE**;
 - Phase 4 — transition reconstruction: **COMPLETE**;
-- Phase 5 — first TI campaign: **PARTIAL; Experiment 024 corrected coverage and isolated one substantive QU/view discrepancy (R07) after separating two scorer-contract false negatives**;
+- Phase 5 — first TI campaign: **COMPLETE as development evidence; Experiment 025 resolved the remaining R07 QU/view discrepancy as projection-justified scoped TI**;
 - Phase 6 — decomposition experiment: **COMPLETE**;
 - Phase 7 — interpretation-barrier experiment: **COMPLETE**;
 - Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
@@ -269,6 +269,8 @@ Its immutable scorer disposition is `DOES_NOT_PASS`, but the failure is a public
 
 Experiment 024 supplied the corrected public comparison contract. It returned all eight claims and matched seven of eight expected semantic dispositions. Two scorer failures (R05/R06) were caused solely by an undisclosed breaker-string length requirement despite correct REJECTED dispositions. One substantive disagreement remains: R07, the QU-bearing T01/T06 C_CONCEPT comparison.
 
-Run a focused QU projection/region-ownership audit before deciding whether R07 should be TI or INCOMPLETE. Do not rewrite the Experiment 024 result, its oracle, or DTS semantics by fiat.
+Experiment 025 completed the focused QU projection/region-ownership audit with no preferred hidden semantic answer. It found all T06 QUs owned by C_CONCEPT-projected regions and returned PROJECTION_JUSTIFIED / SUPPORTS_TI. The R07 disagreement is therefore resolved in favor of scoped TI with QU residuals preserved.
 
-Do not spend DTS qualification resources until that R07 discrepancy is resolved and the Phase 5 burden closes.
+Phase 5 is closed as development evidence through the combined Experiment 021/024/025 record. Historical DOES_NOT_PASS scorer dispositions remain immutable.
+
+Transition Structural Signatures remain optional successor/profile research and are not a DTS 0.1 promotion prerequisite. Proceed to Phase 9 qualification preparation while retaining TSS as separately versioned follow-on work.

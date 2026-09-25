@@ -236,8 +236,9 @@ Current branch authority: `research/dts-0.1`.
 - DTS base semantics/tooling: implemented; deterministic controls PASS.
 - Experiment 020 source-anchored reconstruction: PASS.
 - Experiment 021 first TI discovery: real semantic report obtained; immutable `DOES_NOT_PASS` due hidden coverage contract, with all emitted claims correct.
-- Experiment 024 corrected TI comparison contract: all 8 public requests answered. Seven semantic dispositions align with the intended controls; R05/R06 scorer failures are undisclosed breaker-string length constraints despite correct REJECTED dispositions. One substantive discrepancy remains at R07 (QU-bearing T01/T06 under C_CONCEPT: expected TI vs decoder INCOMPLETE).
+- Experiment 024 corrected TI comparison contract: all 8 public requests answered. R05/R06 scorer failures are undisclosed breaker-string length constraints despite correct REJECTED dispositions. The sole substantive R07 discrepancy was isolated for Experiment 025.
+- Experiment 025 QU projection audit: PASS; no preferred hidden answer. All four T06 QU regions are C_CONCEPT-projected, no admissible realization changes the load-bearing projection, and the cold audit returned PROJECTION_JUSTIFIED / SUPPORTS_TI. Phase 5 TI development burden is complete.
 - Experiment 022 decomposition semantics: PASS; pinned view semantics are sufficient for DTS 0.1's current decomposition scope.
 - Experiment 023 interpretation-barrier discovery: PARTIAL with methodology PASS; a candidate common structural core was found, split across three semantic families, with no source-spec refactor justified.
-- Next critical burden: isolate and resolve the R07 QU projection/load-bearing discrepancy without changing DTS or the oracle prematurely.
+- Next critical burden: prepare the fresh DTS 0.1 qualification campaign. Transition Structural Signatures remain deferred successor/profile research and do not block DTS 0.1.
 - DTS remains unqualified and outside the current qualified integrated semantic stack.
