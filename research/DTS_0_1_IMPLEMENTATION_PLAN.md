@@ -257,14 +257,16 @@ Current state:
 - Phase 2 — deterministic DTS tooling: **COMPLETE**;
 - Phase 3 — real source-anchored transition corpus: **COMPLETE**;
 - Phase 4 — transition reconstruction: **COMPLETE**;
-- Phase 5 — first TI campaign: **PROVIDER-BLOCKED; no semantic report yet**;
+- Phase 5 — first TI campaign: **PARTIAL; Experiment 021 produced a real report but formally DOES_NOT_PASS due a public-output-contract/hidden-coverage mismatch; fresh corrected campaign required**;
 - Phase 6 — decomposition experiment: **COMPLETE**;
 - Phase 7 — interpretation-barrier experiment: **COMPLETE**;
 - Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
 - Phase 9 — DTS qualification: not started.
 
-Experiment 021 remains semantically unexecuted despite four provider attempts across Gemini 3.5 Flash and 3.8 Flash; every attempt ended in HTTP 503 before producing a semantic report.
+Experiment 021 eventually produced a semantic report in workflow run `36188362082` using `gemini-3.1-flash-lite` with the proven request shape.
 
-Experiment 023 established that `gemini-3.1-flash-lite` can accept the long discovery-payload class and subsequently produced a successful 12k-token barrier-discovery report. The next DTS action is therefore to retry Experiment 021 on that proven long-payload path, without changing its corpus, views, hidden assertions, or scorer.
+Its immutable scorer disposition is `DOES_NOT_PASS`, but the failure is a public-output-contract defect: all four emitted required claims matched their expected dispositions, while four additional hidden-required comparisons were omitted because the public prompt allowed the decoder to select only pairs it considered materially informative.
 
-Do not reinterpret prior provider failures as DTS or TI evidence, and do not spend DTS qualification resources until the TI discovery burden is understood.
+Create a fresh corrected campaign with the comparison requests publicly enumerated and expected dispositions still hidden. Do not rewrite Experiment 021 or alter DTS semantics to satisfy the old hidden coverage requirement.
+
+Do not spend DTS qualification resources until that corrected TI campaign closes the Phase 5 burden.
