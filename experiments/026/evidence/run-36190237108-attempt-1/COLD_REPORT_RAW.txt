@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "case_id": "Q01",
+      "answers": {"ordinary_core_valid_without_dts": true, "dts_required_for_ordinary_state": false},
+      "reason": "DTS is an extension; ordinary Core structures remain valid independently, and DTS materialization is not a requirement for Core validity.",
+      "authority_used": ["DTS 0.1 Candidate Section 0", "DTS 0.1 Candidate Section 13"]
+    },
+    {
+      "case_id": "Q02",
+      "answers": {"source_projection": "G0", "target_projection": "G1", "projections_recoverable": true},
+      "reason": "DTS defines source and target projections as ordinary IsoGraph structures, which are recoverable from the transition anatomy.",
+      "authority_used": ["DTS 0.1 Candidate Section 3"]
+    },
+    {
+      "case_id": "Q03",
+      "answers": {"ordinary_isograph_anatomy_valid": true, "opaque_parallel_substrate_valid": false},
+      "reason": "DTS mandates a single structural substrate; opaque external payloads violate the requirement that transition anatomy be ordinary IsoGraph structure.",
+      "authority_used": ["DTS 0.1 Candidate Section 2"]
+    },
+    {
+      "case_id": "Q04",
+      "answers": {"reuse_existing_boundary": true, "new_dts_boundary_required": false},
+      "reason": "DTS explicitly prohibits the creation of a second boundary notion, requiring reuse of existing IsoGraph boundary/interface structure.",
+      "authority_used": ["DTS 0.1 Candidate Section 4.1"]
+    },
+    {
+      "case_id": "Q05",
+      "answers": {"artificial_qu_required": false, "claim_may_be_complete": true},
+      "reason": "Determinate transitions do not require QU when the claim has sufficient closure authority.",
+      "authority_used": ["DTS 0.1 Candidate Section 5"]
+    },
+    {
+      "case_id": "Q06",
+      "answers": {"qu_required": true, "private_dts_unknown_allowed": false, "claim_status_without_qu": "INCOMPLETE_UNQUALIFIED"},
+      "reason": "DTS prohibits private unknown tokens when unresolved structure is load-bearing; QU is required to represent the unresolved delta.",
+      "authority_used": ["DTS 0.1 Candidate Section 5"]
+    },
+    {
+      "case_id": "Q07",
+      "answers": {"omission_as_empty_allowed": false, "ti_status": "INCOMPLETE_UNQUALIFIED"},
+      "reason": "Omission of potentially load-bearing structure without closure authority is not equivalent to an empty region, blocking the TI claim.",
+      "authority_used": ["DTS 0.1 Candidate Section 5.1", "DTS 0.1 Candidate Section 13"]
+    },
+    {
+      "case_id": "Q08",
+      "answers": {"same_endpoints_establish_ti": false, "ti_status": "NOT_ESTABLISHED"},
+      "reason": "TI is a structural correspondence claim, not an endpoint identity claim; equal endpoints do not establish TI.",
+      "authority_used": ["DTS 0.1 Candidate Section 7.1"]
+    },
+    {
+      "case_id": "Q09",
+      "answers": {"ti_status": "TI", "projected_decomposition_preserved_as_residual": true},
+      "reason": "Under a pinned view where decomposition is projected as irrelevant, verified correspondence of load-bearing regions supports TI, with residuals preserved.",
+      "authority_used": ["DTS 0.1 Candidate Section 7", "DTS 0.1 Candidate Section 8"]
+    },
+    {
+      "case_id": "Q10",
+      "answers": {"decomposition_difference_blocks_ti": false, "decomposition_residual_preserved": true},
+      "reason": "If decomposition is non-load-bearing under the pinned view, differences do not block TI, but the structure remains as residual.",
+      "authority_used": ["DTS 0.1 Candidate Section 6", "DTS 0.1 Candidate Section 13"]
+    },
+    {
+      "case_id": "Q11",
+      "answers": {"ti_status": "REJECTED", "decomposition_or_order_breaker": true},
+      "reason": "When decomposition is load-bearing, structural mismatch in D/O prevents TI.",
+      "authority_used": ["DTS 0.1 Candidate Section 6", "DTS 0.1 Candidate Section 11"]
+    },
+    {
+      "case_id": "Q12",
+      "answers": {"structural_correspondence_may_hold": true, "same_actual_realization_follows": false},
+      "reason": "Structural correspondence of QU regions does not imply equality of future actual realizations.",
+      "authority_used": ["DTS 0.1 Candidate Section 7.1"]
+    },
+    {
+      "case_id": "Q13",
+      "answers": {"nei_same_follows": false, "identity_claim_requires_nei_authority": true},
+      "reason": "TI is a structural correspondence claim; natural identity requires NEI authority, which is not supplied by DTS.",
+      "authority_used": ["DTS 0.1 Candidate Section 7.1", "NEI Authority Boundary"]
+    },
+    {
+      "case_id": "Q14",
+      "answers": {"profile_result_determines_base_dts": false, "base_and_profile_qualification_separate": true},
+      "reason": "Profile qualification is distinct from DTS base qualification; profile failures do not invalidate base DTS representation.",
+      "authority_used": ["DTS 0.1 Candidate Section 11"]
+    },
+    {
+      "case_id": "Q15",
+      "answers": {"ti_status": "REJECTED", "surface_similarity_sufficient": false},
+      "reason": "Surface labels and counts are insufficient; load-bearing boundary roles must map correctly for TI.",
+      "authority_used": ["DTS 0.1 Candidate Section 7.1"]
+    },
+    {
+      "case_id": "Q16",
+      "answers": {"qualified_ti_admissible": false, "evidence_class": "CIRCULAR_EVIDENCE"},
+      "reason": "Choosing a projection view specifically to force a TI result is circular and violates anti-circularity requirements.",
+      "authority_used": ["DTS 0.1 Candidate Section 12"]
+    },
+    {
+      "case_id": "Q17",
+      "answers": {"absence_of_qu_proves_complete": false, "completeness_status": "INCOMPLETE_UNQUALIFIED"},
+      "reason": "Absence of a QU object does not prove completeness; completeness must be established by closure authority.",
+      "authority_used": ["DTS 0.1 Candidate Section 5"]
+    },
+    {
+      "case_id": "Q18",
+      "answers": {"qu_projection_allowed": true, "scoped_ti_may_proceed": true, "qu_residual_preserved": true},
+      "reason": "QU inside projected regions can remain residual if it is proven irrelevant to the load-bearing claim.",
+      "authority_used": ["DTS 0.1 Candidate Section 5.1"]
+    },
+    {
+      "case_id": "Q19",
+      "answers": {"transition_valid_without_known_mechanism": true, "known_mechanism_required": false},
+      "reason": "DTS represents transitions as observations; mechanism explanation is not a prerequisite for validity.",
+      "authority_used": ["DTS 0.1 Candidate Section 3"]
+    },
+    {
+      "case_id": "Q20",
+      "answers": {"role_factorization_is_invariant_proof": false, "matching_role_counts_prove_ti": false},
+      "reason": "Role factorization is not invariant decomposition, and matching counts do not constitute a structural mapping or TI proof.",
+      "authority_used": ["DTS 0.1 Candidate Section 10"]
+    }
+  ],
+  "module_assessment": {
+    "dts_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_use_prior_dts_experiments": true,
+    "did_not_infer_nei_same_from_ti": true,
+    "did_not_treat_missing_qu_as_complete": true
+  }
+}
