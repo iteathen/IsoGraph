@@ -80,9 +80,8 @@ const request={
   contents:[{role:'user',parts:[{text:packet}]}],
   generationConfig:{
     candidateCount:1,
-    maxOutputTokens:32768,
-    temperature:0.1,
-    thinkingConfig:{thinkingLevel:'HIGH'}
+    maxOutputTokens:8192,
+    temperature:0.1
   }
 };
 const url='https://generativelanguage.googleapis.com/v1beta/models/'+MODEL+':generateContent';
