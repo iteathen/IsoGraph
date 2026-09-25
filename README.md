@@ -1074,7 +1074,9 @@ Qualified extensions do **not** become Core. They remain explicit versioned depe
 
 ## Active unqualified extension work
 
-DTS 0.1 is the active transition-semantics research line. It remains unqualified until its own dependency-closed qualification burden is discharged.
+[Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) is the active transition-semantics research line. It remains unqualified until its own dependency-closed qualification burden is discharged.
+
+Implementation plan: [DTS 0.1 Implementation Plan](research/DTS_0_1_IMPLEMENTATION_PLAN.md).
 
 Core 0.18, QU 0.1, NEI 0.4, and DP 0.1–0.6 are now accepted dependencies for DTS development.
 

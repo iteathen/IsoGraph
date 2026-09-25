@@ -38,6 +38,12 @@ The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition is also inte
 
 Core 0.18 and Discovery Protocols through 0.6 are qualified at their exact tested revisions. DTS 0.1 remains unqualified successor research until its own qualification burden is discharged.
 
+For DTS work read:
+
+- `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`;
+- `extensions/dts/DTS_NATIVE_VOCAB_0_1.md`;
+- `research/DTS_0_1_IMPLEMENTATION_PLAN.md`.
+
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
 
 ### Qualified infrastructure

@@ -43,7 +43,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 ### Active unqualified successor candidates
 
-Core 0.18 and Discovery Protocols through 0.6 have now completed focused qualification. DTS 0.1 remains an active unqualified extension candidate on its research branch.
+Core 0.18 and Discovery Protocols through 0.6 have completed qualification. `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is the active unqualified transition extension candidate; its deterministic base is implemented, but DTS itself is not qualified.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 

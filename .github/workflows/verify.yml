@@ -231,6 +231,9 @@ jobs:
             git diff-tree --check --root -r HEAD -- "${non_markdown[@]}"
           fi
 
+      - name: Verify DTS 0.1 deterministic base controls
+        run: node tools/dts/test-dts-base.mjs
+
       - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs
