@@ -19,13 +19,14 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 
 Read:
 
-- `qualification/QUALIFIED_MODULES_2026-09-18.md`
+- `qualification/QUALIFIED_MODULES_2026-09-25.md`
+- `qualification/QUALIFIED_MODULES_2026-09-18.md` — historical predecessor
 
-That manifest qualifies the exact tested revisions of:
+The current manifest routes the exact qualified revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1-0.4 historical qualified baseline, extended by qualified DP 0.5/0.6 through `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md`.
+- Discovery Protocols 0.1–0.6 cumulative current module.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
@@ -147,36 +148,20 @@ Historical NEI 0.1 and NEI 0.2 remain immutable qualified evidence at their orig
 
 ## Discovery Protocols
 
-Discovery Protocols 0.1-0.4 are qualified as one cumulative current module at the exact revisions recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`:
+Discovery Protocols 0.1–0.6 are the current cumulative qualified discovery module:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md`
 
-DP 0.4 supersedes conflicting earlier discovery behavior while preserving DP 0.1-0.3 as historical layers of the cumulative qualified module.
+DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
-Discovery Protocols provide a ranked, adaptive search prior for finding candidate relations, invariants, common structures, factorizations, residuals, QUIs, and identity hypotheses. **Discovery priority never supplies semantic authority.**
+Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, and identity hypotheses. **Discovery priority never supplies semantic proof authority.**
 
-Evidence burden follows the conclusion:
-
-- a concrete structural breaker can reject a candidate without NEI;
-- an explicit pinned application/domain authority may serve as a rigid separator when its declared semantics make the difference load-bearing;
-- a natural-distinctness rejection requires qualified NEI `DISTINCT`;
-- a supported correspondence may remain `CORRESPONDENCE`;
-- a cost-bounded stop may remain `DORMANT`/unresolved without proving identity.
-
-Application semantics are preserved exactly. Do not presume they are either identity-relevant or identity-irrelevant. Do not silently strengthen them into NEI meaning beyond the pinned authority.
-
-Under qualified DP 0.4, `STRUCTURAL_BREAKER` means a **concrete failed load-bearing obligation** under the active comparison/view. Different machinery, formalism, carrier type, proof technique, source file, SI spelling, or decomposition depth is not itself such a breaker.
-
-A load-bearing residual between already matched upstream/downstream regions requires at least one bounded recursive role/factorization pass unless a valid structural or rigid-authority breaker already explains the divergence. Any `CORRESPONDENCE` discovered by that mandatory pass re-enters ordinary candidate expansion/falsification; it may not be ignored while the same residual is used as a terminal separator.
-
-Where one side exposes one atomic role and the other a dependent region, attempt one-node-to-subgraph alignment before concluding the role is absent.
-
-For unresolved information, consider whether qualified QU structure itself can provide the useful correspondence before spending resources resolving the unknown. A QUI remains structural evidence only and does not imply NEI `SAME`.
-
-DP 0.5 is an unqualified successor candidate. Its proposed rule is that a discrepancy is initially an observation, not automatically a defect. Candidate work under DP 0.5 preserves the raw discrepancy, checks semantic-quantity/scope alignment before value judgment, and keeps qualification disposition separate from any surviving structural-discovery lead.
+Evidence burden follows the conclusion. Structural correspondence does not become NEI `SAME`; represented difference does not become NEI `DISTINCT`; unresolved load-bearing structure remains QU-bearing; and a qualified representation may still retain an open discovery lead.
 
 ## Evidence independence terminology
 

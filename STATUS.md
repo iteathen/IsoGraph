@@ -27,9 +27,9 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 
 Current qualified extension/module authority is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-18.md`
+- `qualification/QUALIFIED_MODULES_2026-09-25.md`
 
-It binds the historical exact tested revisions of QU 0.1, NEI 0.4, and DP 0.1–0.4. Current successor qualification additionally establishes Discovery Protocols 0.5 and 0.6 through Experiment 018 and `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md`.
+The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded. The current manifest routes Core 0.18, QU 0.1, NEI 0.4, DP 0.1–0.6, and the Experiment 019 integrated composition at their exact qualified revisions.
 
 Current semantic extensions/modules include:
 
@@ -214,7 +214,7 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 ## Immediate work
 
-The qualified modular authority stack remains usable exactly as recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
+The current qualified modular authority stack is recorded in `qualification/QUALIFIED_MODULES_2026-09-25.md`; the 2026-09-18 manifest remains historical evidence.
 
 The next semantic qualification burden is:
 
