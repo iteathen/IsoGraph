@@ -62,3 +62,21 @@ Source SHA: `01bd25b90272a24615f08fa550aba8b89bbfc56a`
 - no score.
 
 Because the same provider failure occurred on two distinct currently-listed models and after packet reduction, Experiment 021 remains blocked on external generation availability rather than on a known DTS, corpus, or scorer defect.
+
+
+## Workflow run 36188077534
+
+Source SHA: `eddf0a2901a74e2cadad3b4773caa2c1a8162393`
+
+- model: `gemini-3.1-flash-lite`;
+- deterministic preflight: PASS;
+- API attempts: 2;
+- final HTTP status: 503;
+- packet SHA-256: `deefe7cbf6da760dd91267aa0a8f5e23d6b5e646866e4586864db57fc1b780c6`;
+- semantic status: `PROVIDER_FAILURE`;
+- no model report;
+- no score.
+
+The model had already passed a separate 36,097-byte long-payload probe and powered the successful Experiment 023 discovery run. Inspection then found that Experiment 021 still requested `maxOutputTokens: 32768` with `thinkingLevel: HIGH`, whereas the successful Experiment 023 semantic run used `maxOutputTokens: 8192` and no thinking override.
+
+The next retry may align only those transport-generation settings. The Experiment 021 corpus, views, DTS candidate, hidden assertions, and scorer remain unchanged.
