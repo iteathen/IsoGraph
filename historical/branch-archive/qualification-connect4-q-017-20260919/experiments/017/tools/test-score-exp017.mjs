@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
+const ROOT=process.cwd(),OUT=path.join(ROOT,'out','exp017');
+const a=JSON.parse(fs.readFileSync(path.join(ROOT,'experiments','017','hidden','ASSERTIONS.json'),'utf8'));
+fs.rmSync(OUT,{recursive:true,force:true});fs.mkdirSync(OUT,{recursive:true});
+const report={cases:a.required_case_ids.map(id=>({case_id:id,answers:a.cases[id].answers,reason:'Synthetic deterministic scorer self-test explanation.',authority_used:['frozen Connect4 packet']})),overall:{q_o_congruence:a.overall.q_o_congruence,q_r_distinction_required:a.overall.q_r_distinction_required,notes:'Synthetic correct overall assessment.'},self_audit:{used_only_packet:true,notes:'synthetic'}};
+fs.writeFileSync(path.join(OUT,'PARSED_REPORT.json'),JSON.stringify(report,null,2)+'\n');
+let r=spawnSync(process.execPath,['experiments/017/tools/score-exp017.mjs'],{cwd:ROOT,encoding:'utf8'});if(r.status!==0)throw new Error('perfect report rejected '+r.stdout+r.stderr);
+report.cases[8].answers.qr_implies_literal_action_identity=true;fs.writeFileSync(path.join(OUT,'PARSED_REPORT.json'),JSON.stringify(report,null,2)+'\n');
+r=spawnSync(process.execPath,['experiments/017/tools/score-exp017.mjs'],{cwd:ROOT,encoding:'utf8'});
+const score=JSON.parse(fs.readFileSync(path.join(OUT,'SCORE.json'),'utf8'));if(r.status===0||score.disposition!=='DOES_NOT_QUALIFY')throw new Error('q_r overclaim not rejected');
+fs.rmSync(OUT,{recursive:true,force:true});console.log('Experiment 017 scorer self-test PASS');
