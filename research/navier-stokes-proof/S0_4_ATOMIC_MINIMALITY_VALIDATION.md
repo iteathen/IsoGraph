@@ -41,13 +41,12 @@ Result:
 
 Therefore:
 
-[
-orall iin{0,ldots,24},
-quad
-	ext{delete}(A_i)
-Rightarrow
-	ext{at least one declared final target is unreachable}.
-]
+\[
+\forall i \in \{0,\ldots,24\},\quad
+\operatorname{delete}(A_i)
+\Rightarrow
+\text{at least one declared final target is unreachable}.
+\]
 
 Result: **PASS**.
 
