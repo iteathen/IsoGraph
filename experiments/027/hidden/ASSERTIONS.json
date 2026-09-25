@@ -1,0 +1,158 @@
+{
+  "experiment": "027",
+  "required_case_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18"
+  ],
+  "cases": {
+    "D01": {
+      "answers": {
+        "transition_observation_valid": true,
+        "artificial_qu_required": false,
+        "known_mechanism_required": false
+      }
+    },
+    "D02": {
+      "answers": {
+        "complete_transition_claim": false,
+        "ti_status": "INCOMPLETE_UNQUALIFIED",
+        "dp_may_project_unresolved": false
+      }
+    },
+    "D03": {
+      "answers": {
+        "ti_status": "REJECTED",
+        "same_endpoints_sufficient": false,
+        "partial_common_core_may_exist": true
+      }
+    },
+    "D04": {
+      "answers": {
+        "ti_status": "TI",
+        "mechanism_identity_follows": false,
+        "mechanism_residual_preserved": true
+      }
+    },
+    "D05": {
+      "answers": {
+        "structural_correspondence_may_hold": true,
+        "same_actual_realization_follows": false,
+        "nei_same_follows": false
+      }
+    },
+    "D06": {
+      "answers": {
+        "ti_status": "TI",
+        "canonical_decomposition_follows": false,
+        "decomposition_residual_preserved": true
+      }
+    },
+    "D07": {
+      "answers": {
+        "ti_status": "REJECTED",
+        "ordering_breaker_load_bearing": true,
+        "same_carrier_identity_rescues_ti": false
+      }
+    },
+    "D08": {
+      "answers": {
+        "nei_status": "SAME",
+        "ti_follows_from_nei_same": false,
+        "transition_breaker_still_controls": true
+      }
+    },
+    "D09": {
+      "answers": {
+        "dp_structural_lead_valid": true,
+        "ti_established": false,
+        "discovery_supplies_proof": false
+      }
+    },
+    "D10": {
+      "answers": {
+        "qualified_ti_admissible": false,
+        "evidence_class": "CIRCULAR_EVIDENCE",
+        "dp_priority_repairs_circularity": false
+      }
+    },
+    "D11": {
+      "answers": {
+        "absence_of_qu_proves_complete": false,
+        "completeness_status": "INCOMPLETE_UNQUALIFIED",
+        "partial_observation_may_exist": true
+      }
+    },
+    "D12": {
+      "answers": {
+        "qualification_must_fail": false,
+        "same_semantic_quantity": false,
+        "discovery_lead_may_remain": true
+      }
+    },
+    "D13": {
+      "answers": {
+        "later_ti_may_be_established": true,
+        "rewrite_historical_status": false,
+        "refinement_narrows_realizations": true
+      }
+    },
+    "D14": {
+      "answers": {
+        "nei_distinct_follows_from_profile_labels": false,
+        "base_dts_validity_affected": false,
+        "profile_labels_establish_ti": false
+      }
+    },
+    "D15": {
+      "answers": {
+        "full_ti": false,
+        "residual_preserved": true,
+        "dp_partial_common_core_valid": true
+      }
+    },
+    "D16": {
+      "answers": {
+        "base_representation_valid": false,
+        "reuse_ordinary_boundary_required": true,
+        "second_boundary_semantics_allowed": false
+      }
+    },
+    "D17": {
+      "answers": {
+        "role_counts_prove_ti": false,
+        "tss_invariant_proved": false,
+        "ti_status": "REJECTED"
+      }
+    },
+    "D18": {
+      "answers": {
+        "scoped_ti_status": "TI",
+        "projected_qu_residual_preserved": true,
+        "broader_nei_status": "UNKNOWN"
+      }
+    }
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "did_not_use_exp019_outputs": true,
+    "did_not_use_exp026_outputs": true,
+    "did_not_infer_nei_same_from_ti": true,
+    "did_not_treat_unknown_as_irrelevant": true
+  }
+}
