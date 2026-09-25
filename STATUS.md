@@ -237,5 +237,6 @@ Current branch authority: `research/dts-0.1`.
 - Experiment 020 source-anchored reconstruction: PASS.
 - Experiment 021 first TI discovery: provider-blocked after four HTTP 503-only runs; no semantic report or score exists.
 - Experiment 022 decomposition semantics: PASS; pinned view semantics are sufficient for DTS 0.1's current decomposition scope.
-- Next independent burden: interpretation-barrier experiment.
+- Experiment 023 interpretation-barrier discovery: PARTIAL with methodology PASS; a candidate common structural core was found, split across three semantic families, with no source-spec refactor justified.
+- Next critical burden: obtain an independent Experiment 021 TI semantic result using the proven long-payload-capable provider path.
 - DTS remains unqualified and outside the current qualified integrated semantic stack.

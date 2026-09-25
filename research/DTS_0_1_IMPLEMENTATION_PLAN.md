@@ -171,13 +171,37 @@ The coarse decomposition is mechanically proven to be a contiguous order-preserv
 
 For DTS 0.1's current scope, pinned comparison-view semantics are sufficient to avoid decomposition-choice false negatives when decomposition is genuinely irrelevant. Stronger existential/universal decomposition-family TI claims remain deferred rather than promoted without evidence.
 
-## Phase 7 — interpretation-barrier experiment
+## Phase 7 — interpretation-barrier experiment — COMPLETE
 
 Freeze the existing barrier lists from Core 0.18, QU 0.1, NEI 0.4, the current cumulative DP 0.5/0.6 successor layers, and DTS 0.1.
 
 Represent them as ordinary IsoGraph structure and use DP to test whether their repeated `X != Y` form has a reusable structural generator.
 
 Do not refactor the source specifications until evidence supports the factorization.
+
+## Experiment 023 interpretation-barrier result
+
+Experiment 023 passed its hidden methodology controls in workflow run `36186867190`.
+
+```text
+methodology disposition: PASSES
+discovery disposition:   PARTIAL
+module coverage:         6 / 6
+candidate families:      3
+source refactor now:     false
+surface shape alone proof:false
+```
+
+DP recovered a candidate **Interpretation-Barrier Structural Core**, but did not collapse the six source modules into one universal semantic primitive.
+
+It separated the corpus into three candidate families:
+- epistemic / observational barriers;
+- quantifiable / identity-related barriers;
+- systemic / protocol-integrity barriers.
+
+The common `X != Y` topology remains a useful discovery lead, not proof of one semantic generator. Source-local relation distinctions and residuals remain load-bearing evidence.
+
+No Core/QU/NEI/DP/DTS source specification is refactored from this result alone.
 
 ## Phase 8 — Transition Structural Signatures research
 
@@ -235,10 +259,12 @@ Current state:
 - Phase 4 — transition reconstruction: **COMPLETE**;
 - Phase 5 — first TI campaign: **PROVIDER-BLOCKED; no semantic report yet**;
 - Phase 6 — decomposition experiment: **COMPLETE**;
-- Phase 7 — interpretation-barrier experiment: **NEXT**;
+- Phase 7 — interpretation-barrier experiment: **COMPLETE**;
 - Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
 - Phase 9 — DTS qualification: not started.
 
 Experiment 021 remains semantically unexecuted despite four provider attempts across Gemini 3.5 Flash and 3.8 Flash; every attempt ended in HTTP 503 before producing a semantic report.
 
-Proceed with Phase 7 and other deterministic/source-faithful work that does not depend on Experiment 021. Do not reinterpret provider failure as DTS or TI evidence, and do not spend DTS qualification resources until the TI discovery burden is understood.
+Experiment 023 established that `gemini-3.1-flash-lite` can accept the long discovery-payload class and subsequently produced a successful 12k-token barrier-discovery report. The next DTS action is therefore to retry Experiment 021 on that proven long-payload path, without changing its corpus, views, hidden assertions, or scorer.
+
+Do not reinterpret prior provider failures as DTS or TI evidence, and do not spend DTS qualification resources until the TI discovery burden is understood.
