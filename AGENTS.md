@@ -33,7 +33,7 @@ The semantic files intentionally retain their historical `_CANDIDATE` filenames 
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition is integration-qualified by Experiment 019; see `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. DTS 0.1 is separately module-qualified by Experiment 026. The expanded composition including DTS still requires its own fresh integrated holdout.
+The current expanded Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1 composition is integration-qualified by Experiment 027; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`. Experiment 019 and `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md` remain the immutable pre-DTS integration record.
 
 ### Successor status
 
@@ -45,6 +45,8 @@ For DTS work read:
 - `extensions/dts/DTS_NATIVE_VOCAB_0_1.md`;
 - `qualification/DTS_0_1_QUALIFICATION.md`;
 - `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`;
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`;
+- `experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md`;
 - `research/DTS_0_1_IMPLEMENTATION_PLAN.md`.
 
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
