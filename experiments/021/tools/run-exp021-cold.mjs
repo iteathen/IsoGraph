@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 
 const RUN='RUN-EXP021';
 const SHA=process.env.GITHUB_SHA;
-const MODEL=process.env.GEMINI_MODEL||'gemini-3.5-flash';
+const MODEL=process.env.GEMINI_MODEL||'gemini-3.8-flash';
 const DRY=process.env.ISOGRAPH_COLD_DRY_RUN==='1';
 const KEY=process.env.GEMINI_API_KEY;
 
