@@ -1,0 +1,238 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "transition_observation_valid": true,
+        "artificial_qu_required": false,
+        "known_mechanism_required": false
+      },
+      "reason": "DTS 0.1 base structure requires observed transitions; determinate transitions do not require artificial QU, and mechanism knowledge is not a base DTS requirement.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "complete_transition_claim": false,
+        "ti_status": "INCOMPLETE_UNQUALIFIED",
+        "dp_may_project_unresolved": false
+      },
+      "reason": "Unresolved load-bearing structure requires QU/closure authority; without it, the claim fails closed and cannot be projected away.",
+      "authority_used": [
+        "Quantifiable Unknown 0.1 authority",
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "ti_status": "REJECTED",
+        "same_endpoints_sufficient": false,
+        "partial_common_core_may_exist": true
+      },
+      "reason": "Same endpoints do not establish TI; the boundary-role breaker is a concrete structural failure, though partial common structure may be retained.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority",
+        "Discovery Protocols 0.1–0.6 authority"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "ti_status": "TI",
+        "mechanism_identity_follows": false,
+        "mechanism_residual_preserved": true
+      },
+      "reason": "Scoped TI holds under the pinned view; mechanism differences remain residual and do not imply identity.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "structural_correspondence_may_hold": true,
+        "same_actual_realization_follows": false,
+        "nei_same_follows": false
+      },
+      "reason": "Structural correspondence of QU regions does not imply identity of realizations or subjects.",
+      "authority_used": [
+        "Quantifiable Unknown 0.1 authority",
+        "Natural Entropic Identity 0.4 authority"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "ti_status": "TI",
+        "canonical_decomposition_follows": false,
+        "decomposition_residual_preserved": true
+      },
+      "reason": "Decomposition is non-load-bearing under the view; differences remain represented as residuals without establishing a canonical form.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "ti_status": "REJECTED",
+        "ordering_breaker_load_bearing": true,
+        "same_carrier_identity_rescues_ti": false
+      },
+      "reason": "Ordering is load-bearing under the process view; the mismatch is a structural breaker that carrier identity cannot override.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "nei_status": "SAME",
+        "ti_follows_from_nei_same": false,
+        "transition_breaker_still_controls": true
+      },
+      "reason": "NEI SAME does not imply TI; transition structure remains subject to its own load-bearing requirements.",
+      "authority_used": [
+        "Natural Entropic Identity 0.4 authority",
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "dp_structural_lead_valid": true,
+        "ti_established": false,
+        "discovery_supplies_proof": false
+      },
+      "reason": "Discovery priority identifies structural leads but does not supply semantic proof authority for TI.",
+      "authority_used": [
+        "Discovery Protocols 0.1–0.6 authority"
+      ]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "qualified_ti_admissible": false,
+        "evidence_class": "CIRCULAR_EVIDENCE",
+        "dp_priority_repairs_circularity": false
+      },
+      "reason": "Target-driven projection to force TI is circular and inadmissible; DP cannot repair this.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D11",
+      "answers": {
+        "absence_of_qu_proves_complete": false,
+        "completeness_status": "INCOMPLETE_UNQUALIFIED",
+        "partial_observation_may_exist": true
+      },
+      "reason": "Absence of QU is not proof of completeness; partial observations remain valid but incomplete.",
+      "authority_used": [
+        "Quantifiable Unknown 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D12",
+      "answers": {
+        "qualification_must_fail": false,
+        "same_semantic_quantity": false,
+        "discovery_lead_may_remain": true
+      },
+      "reason": "Different counts are not necessarily a failure if definitions differ; they support structural investigation.",
+      "authority_used": [
+        "Core 0.18 authority",
+        "Discovery Protocols 0.1–0.6 authority"
+      ]
+    },
+    {
+      "case_id": "D13",
+      "answers": {
+        "later_ti_may_be_established": true,
+        "rewrite_historical_status": false,
+        "refinement_narrows_realizations": true
+      },
+      "reason": "Refinement narrows the QU family allowing TI, but historical records remain as they were.",
+      "authority_used": [
+        "Quantifiable Unknown 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D14",
+      "answers": {
+        "nei_distinct_follows_from_profile_labels": false,
+        "base_dts_validity_affected": false,
+        "profile_labels_establish_ti": false
+      },
+      "reason": "Profile labels are not identity-separating and do not affect base DTS validity.",
+      "authority_used": [
+        "Natural Entropic Identity 0.4 authority",
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D15",
+      "answers": {
+        "full_ti": false,
+        "residual_preserved": true,
+        "dp_partial_common_core_valid": true
+      },
+      "reason": "Full TI fails due to the unmapped R5; the common core is retained as a discovery lead.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority",
+        "Discovery Protocols 0.1–0.6 authority"
+      ]
+    },
+    {
+      "case_id": "D16",
+      "answers": {
+        "base_representation_valid": false,
+        "reuse_ordinary_boundary_required": true,
+        "second_boundary_semantics_allowed": false
+      },
+      "reason": "DTS 0.1 must reuse ordinary IsoGraph boundary semantics; private opaque boundary objects are invalid.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D17",
+      "answers": {
+        "role_counts_prove_ti": false,
+        "tss_invariant_proved": false,
+        "ti_status": "REJECTED"
+      },
+      "reason": "Role factorization is not an invariant; incidence differences invalidate TI.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority"
+      ]
+    },
+    {
+      "case_id": "D18",
+      "answers": {
+        "scoped_ti_status": "TI",
+        "projected_qu_residual_preserved": true,
+        "broader_nei_status": "UNKNOWN"
+      },
+      "reason": "Scoped TI is established under the view; broader identity remains unknown due to the admissible model family.",
+      "authority_used": [
+        "Detailed Transition System 0.1 authority",
+        "Natural Entropic Identity 0.4 authority"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "integrated_with_dts": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_use_exp019_outputs": true,
+    "did_not_use_exp026_outputs": true,
+    "did_not_infer_nei_same_from_ti": true,
+    "did_not_treat_unknown_as_irrelevant": true
+  }
+}
