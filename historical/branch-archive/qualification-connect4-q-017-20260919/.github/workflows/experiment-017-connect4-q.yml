@@ -1,0 +1,105 @@
+name: Experiment 017 Connect4 q qualification
+
+on:
+  push:
+    branches:
+      - qualification/connect4-q-017-20260919
+    paths:
+      - experiments/017/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-017-connect4-q
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out exact qualification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/017/tools/run-exp017-cold.mjs
+          node --check experiments/017/tools/score-exp017.mjs
+          node --check experiments/017/tools/test-score-exp017.mjs
+          node experiments/017/tools/test-score-exp017.mjs
+          rm -rf out/exp017
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/017/tools/run-exp017-cold.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const d=JSON.parse(fs.readFileSync('out/exp017/DRY_RUN.json','utf8'));
+          const paths=d.input_manifest.map(x=>x.path);
+          for(const f of ['hidden/','ASSERTIONS','score-exp017','AUTHORING_AUDIT','Q_CONGRUENCE_INDEPENDENT_REVIEW','experiments/017/evidence']){
+            if(paths.some(p=>p.includes(f)))throw new Error('forbidden cold input '+f);
+          }
+          for(const f of ['experiments/017/source/STANDARD_7X6_Q_CONGRUENCE.md','experiments/017/source/gameplay-key.test.mjs','extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md']){
+            if(!paths.includes(f))throw new Error('missing cold input '+f);
+          }
+          console.log('dry_packet_sha256='+d.packet_sha256);
+          NODE
+      - name: Execute isolated semantic call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/017/tools/run-exp017-cold.mjs
+      - name: Verify packet identity and score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp017/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp017/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/017/tools/score-exp017.mjs
+      - name: Persist sanitized evidence to branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/017/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp017/$f" ] && cp "out/exp017/$f" "$E/$f"
+          done
+          cat > "$E/CONTROL.json" <<EOF
+          {"workflow_run_id":"${GITHUB_RUN_ID}","workflow_attempt":"${GITHUB_RUN_ATTEMPT}","qualification_sha":"${GITHUB_SHA}","cold_outcome":"${{ steps.cold.outcome }}","score_outcome":"${{ steps.score.outcome }}"}
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 017 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:qualification/connect4-q-017-20260919
+          fi
+      - name: Enforce qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp017/SCORE.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const s=JSON.parse(fs.readFileSync('out/exp017/SCORE.json','utf8'));
+          console.log(JSON.stringify({disposition:s.disposition,q:s.q_congruence},null,2));
+          if(s.disposition!=='QUALIFIES')process.exit(1);
+          NODE
