@@ -240,7 +240,10 @@ jobs:
       - name: Experiment 022 DTS decomposition controls
         run: node experiments/022/test-decomposition.mjs
 
-      - name: Experiment 023 barrier rendering\n        run: node experiments/023/test-barriers.mjs\n\n      - name: Validate transient Actions storage policy
+      - name: Experiment 023 barrier rendering
+        run: node experiments/023/test-barriers.mjs
+
+      - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs
           node tools/check-github-actions-storage-policy.mjs
