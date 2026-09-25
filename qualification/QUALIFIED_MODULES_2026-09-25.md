@@ -73,6 +73,30 @@ Successor qualification:
 
 DP remains discovery/search guidance and does not become semantic proof authority.
 
+### Detailed Transition System 0.1
+
+Artifact:
+
+`extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`
+
+SHA-256:
+
+`9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad`
+
+Native vocabulary SHA-256:
+
+- `extensions/dts/DTS_NATIVE_VOCAB_0_1.md`: `fe1a65922186232524c07f4e8b6a29fecb3e8dfcedf9de678c6678e8226986a6`;
+- `extensions/dts/DTS_VOCAB_0_1.isg`: `ac3ff97f0a22c38628b5ae05a9471a9df1bbc83833c11a16f6ac9aad5ea9f2fb`.
+
+Qualification evidence:
+
+- Experiment 026 cold qualification run `36190237108`, 20/20 PASS, formal `QUALIFIES`;
+- Experiment 026 independent promotion verifier run `36190514681`, verdict `SUPPORT_PROMOTION`;
+- `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`;
+- `qualification/DTS_0_1_QUALIFICATION.md`.
+
+DTS 0.1 is a separately versioned qualified extension. It does not become Core. TI remains scoped structural correspondence and does not imply NEI `SAME`, mechanism identity, canonical decomposition, or equality of actual QU realizations.
+
 ## Integrated current-stack qualification
 
 The current composition:
@@ -106,9 +130,9 @@ QRC 0.1 remains qualified qualification infrastructure:
 
 QRC is not semantic domain authority.
 
-## Active unqualified extension work
+## Expanded integration pending
 
-DTS 0.1 remains unqualified research until its own dependency-closed qualification campaign passes.
+DTS 0.1 is module-qualified. The expanded composition including DTS is not yet integration-qualified. Experiment 019 remains the current integration authority for the pre-DTS composition until a fresh DTS-inclusive holdout passes.
 
 ## Revision rule
 
