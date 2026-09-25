@@ -1,12 +1,13 @@
 Experiment: 023
 Campaign: interpretation-barrier structural discovery
 Branch: research/dts-0.1
-Retry trigger: 3
+Retry trigger: 4
 Previous provider failures:
 - 36185715484 gemini-2.5-pro HTTP 404
 - 36186088486 gemini-3.6-flash HTTP 503
-Callable model: gemini-3.6-flash
-Transport change: maxOutputTokens reduced from 32768 to 8192
+- 36186394227 gemini-3.6-flash HTTP 503 with reduced output budget
+Long-payload probe selected: gemini-3.1-flash-lite
+Response budget: 8192
 Corpus/prompt/controls/scorer: unchanged
 Request: execute one isolated DP discovery call after deterministic preflight
 No preferred discovery status is encoded in the cold packet.
