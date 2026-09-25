@@ -1,0 +1,186 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "direct_value_conflict": false,
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "hidden_distinction_candidate": true
+      },
+      "reason": "The counts of 14 citation occurrences and 5 artifacts measure different semantic quantities over the same evidence system. Under Core 0.18 Section 2 and DP 0.5 Section 2, they do not conflict. This mismatch exposes a hidden-distinction lead under DP 0.5 Section 4.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "qualification_disposition": "DECODER_ERROR",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "repair_closes_discovery": false
+      },
+      "reason": "Dropping an explicit relation is a decoder defect under its contract, so the qualification disposition is DECODER_ERROR. However, because the relation is derivable, an open structural lead exists. Under DP 0.5 Section 6.2 and Section 7, repairing the defect does not automatically close the discovery lead.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "direct_boolean_contradiction": false,
+        "discovery_question_remains": true
+      },
+      "reason": "The explicit metadata field and the derived semantic domain constraint are different predicates under Core 0.18 Section 2 and DP 0.5 Section 8. They do not form a direct boolean contradiction, and their relationship remains an open discovery question.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "action": "SPLIT_SEMANTIC_QUANTITIES",
+        "hidden_distinction_preserved": true
+      },
+      "reason": "When a single coarse label covers multiple distinct semantic quantities, DP 0.5 Section 4 dictates splitting the semantic quantities to preserve the hidden distinction.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "scoped_equivalence_allowed": true,
+        "global_identity_conclusion_allowed": false,
+        "residual_preserved": true
+      },
+      "reason": "Under Core 0.18 Section 7 and NEI 0.4 Section 15, equivalence under a frozen context C is allowed but does not license a global identity conclusion. The residual must be preserved.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "collapse_allowed": false,
+        "qu_must_remain_load_bearing": true,
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD"
+      },
+      "reason": "Under Core 0.18 Section 6 and DP 0.5 Section 5, unknown distinctions cannot be projected away or collapsed merely because they are unresolved. The QU structure must remain load-bearing, leaving an open structural lead.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "suppress_propagation": false,
+        "reassess_dependents": true,
+        "dependency_cone_is_evidence": true
+      },
+      "reason": "Under Core 0.18 Section 9 and DP 0.5 Section 10, local suppression of invalidation is prohibited. Dependent claims must be reassessed, and the invalidation cone itself serves as diagnostic evidence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "qualification_may_complete": true,
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "qualification_closes_discovery": false
+      },
+      "reason": "Under Core 0.18 Section 8 and DP 0.5 Section 11, qualification and discovery are independent. A representation may qualify even if a discovery lead remains open, and qualification does not close the discovery lead.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "discovery_disposition": "STRUCTURAL_LEAD_FALSIFIED",
+        "final_classification": "IMPLEMENTATION_ERROR",
+        "manufacture_isomorph": false
+      },
+      "reason": "Under Core 0.18 Section 10 and DP 0.5 Section 3 and 13, when a structural explanation is falsified and shown to be an implementation error, the lead is falsified. No isomorph should be manufactured.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "exhaustive_search_required": false,
+        "repair_allowed_after_owner_established": true
+      },
+      "reason": "Under Core 0.18 Section 10 and DP 0.5 Section 7, exhaustive search is not required. Repair is permitted once the authoritative owner of the defect is established.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D11",
+      "answers": {
+        "dp_may_conclude_same": false,
+        "identity_authority": "NEI_0_4",
+        "structural_correspondence_is_identity_proof": false
+      },
+      "reason": "Under NEI 0.4 Section 14 and DP 0.6 Section 1, structural correspondence is not identity proof. DP cannot directly conclude SAME; natural identity conclusions must route through NEI 0.4.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D12",
+      "answers": {
+        "nei_required": false,
+        "structural_claim_may_proceed_without_nei": true
+      },
+      "reason": "Under DP 0.6 Section 1, NEI is not required for non-identity discovery claims. The structural comparison may proceed without invoking NEI.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D13",
+      "answers": {
+        "preserve_qu_structure": true,
+        "generic_unknown_substitute_allowed": false
+      },
+      "reason": "Under QU 0.1 Section 4, NEI 0.4 Section 4, and DP 0.6 Section 2, unresolved load-bearing structure must be preserved as QU structure. A generic UNKNOWN token cannot substitute for QU.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "D14",
+      "answers": {
+        "artificial_qu_required": false,
+        "determinate_claim_may_proceed_without_qu_instance": true
+      },
+      "reason": "Under QU 0.1 Section 8.2 and DP 0.6 Section 2, a determinate case with no unresolved structure does not require manufacturing an artificial QU state.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_6": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "Decoded all 14 cases in strict accordance with Core 0.18, QU 0.1, NEI 0.4, DP 0.5, and DP 0.6 specifications. Kept qualification and discovery dispositions distinct, routed identity claims to NEI 0.4, and preserved QU structure where load-bearing."
+  }
+}
