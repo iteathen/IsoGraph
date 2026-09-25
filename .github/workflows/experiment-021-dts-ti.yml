@@ -1,0 +1,95 @@
+name: Experiment 021 DTS TI discovery
+
+on:
+  push:
+    branches:
+      - research/dts-0.1
+    paths:
+      - experiments/021/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-021-dts-ti
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/021/tools/run-exp021-cold.mjs
+          node --check experiments/021/tools/score-exp021.mjs
+          node --check experiments/021/tools/test-score-exp021.mjs
+          node experiments/021/tools/test-score-exp021.mjs
+          rm -rf out/exp021
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/021/tools/run-exp021-cold.mjs
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('out/exp021/DRY_RUN.json','utf8'));const p=d.input_manifest.map(x=>x.path);const bad=['hidden/','ASSERTIONS','score-exp021','AUTHORING_AUDIT','RESULTS','experiments/021/evidence','AGENTS.md','README.md','STATUS.md'];for(const f of bad)if(p.some(x=>x.includes(f)))throw new Error('forbidden cold input '+f);console.log('dry_packet_sha256='+d.packet_sha256)"
+
+      - name: Execute isolated discovery call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/021/tools/run-exp021-cold.mjs
+
+      - name: Verify packet identity and score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp021/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp021/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/021/tools/score-exp021.mjs
+
+      - name: Persist evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/021/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp021/$f" ] && cp "out/exp021/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 021 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/dts-0.1
+          fi
+
+      - name: Enforce development discovery controls
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp021/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp021/SCORE.json','utf8'));console.log(JSON.stringify({disposition:s.disposition,required:s.required_claims,guards:s.guards},null,2));if(s.disposition!=='PASSES')process.exit(1)"
