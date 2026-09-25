@@ -227,12 +227,18 @@ Profile qualification is never substituted for DTS base qualification.
 
 ## Current implementation checkpoint
 
-Phase 1 and Phase 2 are complete. The deterministic DTS base suite passes 10 controls.
+Current state:
 
-Proceed next with Phase 3 and Phase 4 against the accepted 2026-09-25 authority stack:
+- Phase 1 — minimal DTS semantic base: **COMPLETE**;
+- Phase 2 — deterministic DTS tooling: **COMPLETE**;
+- Phase 3 — real source-anchored transition corpus: **COMPLETE**;
+- Phase 4 — transition reconstruction: **COMPLETE**;
+- Phase 5 — first TI campaign: **PROVIDER-BLOCKED; no semantic report yet**;
+- Phase 6 — decomposition experiment: **COMPLETE**;
+- Phase 7 — interpretation-barrier experiment: **NEXT**;
+- Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
+- Phase 9 — DTS qualification: not started.
 
-1. build the real transition development corpus in `experiments/020/`;
-2. verify transition reconstruction/source fidelity;
-3. only then run the first TI discovery campaign and decomposition experiment.
+Experiment 021 remains semantically unexecuted despite four provider attempts across Gemini 3.5 Flash and 3.8 Flash; every attempt ended in HTTP 503 before producing a semantic report.
 
-Do not spend DTS qualification resources until real transition evidence has tested the factorization.
+Proceed with Phase 7 and other deterministic/source-faithful work that does not depend on Experiment 021. Do not reinterpret provider failure as DTS or TI evidence, and do not spend DTS qualification resources until the TI discovery burden is understood.

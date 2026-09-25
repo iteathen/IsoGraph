@@ -227,3 +227,15 @@ The next semantic qualification burden is:
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
 
 Any semantic change to a qualified IsoGraph module creates a new revision with its own affected qualification burden.
+
+
+## DTS 0.1 development status
+
+Current branch authority: `research/dts-0.1`.
+
+- DTS base semantics/tooling: implemented; deterministic controls PASS.
+- Experiment 020 source-anchored reconstruction: PASS.
+- Experiment 021 first TI discovery: provider-blocked after four HTTP 503-only runs; no semantic report or score exists.
+- Experiment 022 decomposition semantics: PASS; pinned view semantics are sufficient for DTS 0.1's current decomposition scope.
+- Next independent burden: interpretation-barrier experiment.
+- DTS remains unqualified and outside the current qualified integrated semantic stack.
