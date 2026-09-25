@@ -141,13 +141,35 @@ falsification attempt
 
 Do not encode the expected mapping into the transition representations.
 
-## Phase 6 — decomposition experiment
+## Phase 6 — decomposition experiment — COMPLETE
 
 Test the same underlying transition under multiple independently valid decompositions.
 
 Determine empirically whether DTS 0.1's pinned-decomposition semantics are sufficient or whether later work needs an independently defined admissible decomposition family with existential/robust TI claims.
 
 No stronger decomposition semantics are promoted merely because they are convenient.
+
+## Experiment 022 decomposition result
+
+Experiment 022 passed deterministic CI at repository Verify run `36184571451`.
+
+The same source-anchored IsoMax transition was represented by:
+- a fine-grained decomposition `T04A`;
+- an order-preserving coarse decomposition `T04B`.
+
+Results:
+
+```text
+same source/target projection: PASS
+same K / delta / B effect regions: PASS
+different D / O topology: PASS
+C_WORKER_EFFECT projects D/O: effect correspondence survives with D/O residuals
+C_PROCESS load-bears D/O: exact topology breaker rejects process TI
+```
+
+The coarse decomposition is mechanically proven to be a contiguous order-preserving coarsening of the fine decomposition.
+
+For DTS 0.1's current scope, pinned comparison-view semantics are sufficient to avoid decomposition-choice false negatives when decomposition is genuinely irrelevant. Stronger existential/universal decomposition-family TI claims remain deferred rather than promoted without evidence.
 
 ## Phase 7 — interpretation-barrier experiment
 
