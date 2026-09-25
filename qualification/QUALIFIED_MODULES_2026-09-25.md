@@ -99,7 +99,34 @@ DTS 0.1 is a separately versioned qualified extension. It does not become Core. 
 
 ## Integrated current-stack qualification
 
-The current composition:
+The current expanded composition:
+
+```text
+Core 0.17 + Core 0.18
++ QU 0.1
++ NEI 0.4
++ DP 0.1–0.6
++ DTS 0.1
+```
+
+passed Experiment 027:
+
+- frozen SHA: `c53856f840dc1c9ee29bb55b509f6de3f6926179`;
+- workflow run: `36191443384`;
+- 18 / 18 cases PASS;
+- zero mismatches;
+- all scoring guards true;
+- module assessment: `SUPPORTED`;
+- formal disposition: `QUALIFIES`;
+- packet SHA-256: `1ab972c5edf76c2644f5bccd4f15bed9175a5babca32c0d549bb6363e0b3e2cd`;
+- report SHA-256: `37af0c0330879f940c75eab39fb245bb4924292598015f138f70093141ee33c8`;
+- authority record: `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`.
+
+This establishes compatibility for the exercised expanded composition. It is not a universal completeness claim.
+
+### Historical pre-DTS integration
+
+Experiment 019 remains the immutable integration record for:
 
 ```text
 Core 0.17 + Core 0.18
@@ -108,18 +135,7 @@ Core 0.17 + Core 0.18
 + DP 0.1–0.6
 ```
 
-passed Experiment 019:
-
-- frozen SHA: `7609a2d8a0a167d9674904e045fa41374df07f7c`;
-- workflow run: `36178254627`;
-- 14 / 14 cases PASS;
-- zero mismatches;
-- formal disposition: `QUALIFIES`;
-- packet SHA-256: `b44cbfa5d2fdf30deb5ca58506020154245e90e65e9f82ff65832f8952787f9e`;
-- report SHA-256: `5d24ba9bf8cc6d4a83ca69a911fe0feaa81f6831743b6f5679d0e4a08714aa4c`;
-- authority record: `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`.
-
-This establishes compatibility for the exercised composition. It is not a universal completeness claim.
+Its authority record remains `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. Experiment 027 extends current integration routing; it does not rewrite Experiment 019 evidence.
 
 ## Qualified infrastructure
 
@@ -130,9 +146,6 @@ QRC 0.1 remains qualified qualification infrastructure:
 
 QRC is not semantic domain authority.
 
-## Expanded integration pending
-
-DTS 0.1 is module-qualified. The expanded composition including DTS is not yet integration-qualified. Experiment 019 remains the current integration authority for the pre-DTS composition until a fresh DTS-inclusive holdout passes.
 
 ## Revision rule
 
