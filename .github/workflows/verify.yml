@@ -243,6 +243,9 @@ jobs:
       - name: Experiment 023 barrier rendering
         run: node experiments/023/test-barriers.mjs
 
+      - name: Experiment 025 QU projection ownership
+        run: node experiments/025/test-qu-projection.mjs
+
       - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs
