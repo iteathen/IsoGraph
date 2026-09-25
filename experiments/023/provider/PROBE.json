@@ -1,0 +1,37 @@
+{
+  "purpose": "Experiment 021/023 provider capability probe; no semantic judgment",
+  "candidates": [
+    "gemini-pro-latest",
+    "gemini-2.5-flash",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite"
+  ],
+  "results": [
+    {
+      "model": "gemini-pro-latest",
+      "http_status": 429,
+      "ok": false,
+      "body_prefix": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your cur"
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "http_status": 404,
+      "ok": false,
+      "body_prefix": "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use"
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "http_status": 429,
+      "ok": false,
+      "body_prefix": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your cur"
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "http_status": 200,
+      "ok": true,
+      "response": ""
+    }
+  ],
+  "selected_model": "gemini-3.6-flash"
+}
