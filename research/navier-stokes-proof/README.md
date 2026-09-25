@@ -2,7 +2,7 @@
 
 **Status:** research representation; not qualified IsoGraph evidence and not an independent validation of the Navier–Stokes proof.
 
-**Branch owner:** `work/navier-stokes-proof-isograph-20260921` only.
+**Research lineage:** developed on `work/navier-stokes-proof-isograph-20260921`; preserved on `main` by explicit owner merge instruction on 2026-09-25.
 
 **IsoGraph base:** `main@148a91b576aa8de6f92c34aa305fc55fd458c452`.
 
@@ -159,8 +159,10 @@ This rendering should be revised if any of the following occurs:
 - an NEI result is stronger than its exact identity model/evidence;
 - the native artifact is not parseable under Core 0.17 syntax.
 
-## Branch retirement condition
+## Promotion / authority boundary
 
-Do not promote this work merely because the rendering is useful. Retirement requires either:
-1. a reviewed/qualified successor is deliberately promoted into IsoGraph authority/research on explicit owner instruction; or
-2. the experiment is abandoned, with all useful findings preserved on this branch unless the owner explicitly authorizes another destination.
+The owner explicitly authorized review and merge of this research branch into `main` on 2026-09-25.
+
+That merge preserves the research record; it does **not** promote this rendering to qualified IsoGraph semantic authority, independent mathematical validation, or physical-realizability authority.
+
+Any future semantic-authority promotion still requires its own explicit qualification record and routing change.
