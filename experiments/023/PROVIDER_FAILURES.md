@@ -1,29 +1,33 @@
-# Experiment 023 provider failure — workflow run 36185715484
+# Experiment 023 provider failures
 
-**Disposition:** infrastructure/provider failure  
-**Semantic report:** none  
-**Discovery score:** none  
-**Corpus implication:** none
+These runs are infrastructure/provider evidence only. None produced a semantic report or discovery score.
 
-Source SHA:
+## Run 36185715484 — gemini-2.5-pro
 
-`b27cc158c9b99a89884b7dfb2615c58008df255d`
-
-The run passed deterministic preflight and attempted the cold discovery call with:
-
-`gemini-2.5-pro`
-
-Result:
-
+- source SHA: `b27cc158c9b99a89884b7dfb2615c58008df255d`;
+- deterministic preflight: PASS;
 - API attempts: 1;
 - HTTP status: 404;
-- semantic status: `PROVIDER_FAILURE`;
 - packet SHA-256: `fe36f6db7cf7d035b5f8bfe3a4a23a76538c71c5ac4dde5220ee53b2c42e5b71`;
+- semantic status: `PROVIDER_FAILURE`;
 - no model report;
 - no score.
 
-This is not a Discovery Protocol disposition.
+A subsequent provider capability probe showed that this model name is retired/unavailable for this account.
 
-The Experiment 023 barrier corpus, native IsoGraph rendering, hidden methodology controls, and deterministic scorer remain unchanged.
+## Run 36186088486 — gemini-3.6-flash
 
-Because Experiment 021 already encountered repeated HTTP 503s on Gemini 3.5 Flash and Gemini 3.8 Flash, the next provider step is a tiny capability probe over currently advertised text models before another semantic discovery call is attempted.
+- source SHA: `079ff2530b21e2778d8d03bb4afb9942f2171290`;
+- deterministic preflight: PASS;
+- API attempts: 2;
+- HTTP status: 503;
+- packet SHA-256: `a45e21d6a62f6d4162824f17f9901014d6ff31ba7394f693e0ce1a9ddc361f7b`;
+- semantic status: `PROVIDER_FAILURE`;
+- no model report;
+- no score.
+
+The same `gemini-3.6-flash` endpoint returned HTTP 200 to the tiny provider capability probe immediately beforehand, so the endpoint is callable.
+
+The next retry keeps the same model, corpus, prompt, controls and scorer but reduces the requested maximum output size to lower request capacity pressure.
+
+No provider failure is interpreted as a Discovery Protocol result.
