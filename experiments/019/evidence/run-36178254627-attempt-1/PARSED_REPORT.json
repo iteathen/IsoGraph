@@ -1,0 +1,183 @@
+{
+  "cases": [
+    {
+      "case_id": "I01",
+      "answers": {
+        "same_qu_information_state": false,
+        "nei_same_follows": false,
+        "preserve_representation_distinction": true
+      },
+      "reason": "System A and System B represent different QU information states because System A uses a single shared carrier while System B uses two distinct carriers with an equality constraint. QU preserves this distinction as it is structurally load-bearing. Natural identity does not automatically follow from value equality.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I02",
+      "answers": {
+        "single_scalar_allowed": false,
+        "preserve_realization_conditioning": true,
+        "invent_distribution_allowed": false
+      },
+      "reason": "NEI prohibits silently averaging over QU realizations to produce a single scalar weight when the weight varies and no probability distribution is qualified. Realization-conditioned evidence must be preserved instead.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I03",
+      "answers": {
+        "exact_nei_status": "SAME",
+        "finite_evidence_weight_causes_exact_status": false,
+        "probabilistic_record_may_coexist": true
+      },
+      "reason": "An exact domain theorem forces coidentity in every model, yielding a SAME status. Finite probabilistic evidence does not cause this exact status but can coexist with it in the record.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I04",
+      "answers": {
+        "dp_may_answer_same": false,
+        "identity_result": "INCOMPLETE"
+      },
+      "reason": "DP cannot upgrade structural correspondence to natural identity without NEI authority. Since required identity model/closure authority is absent, the identity query is incomplete.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I05",
+      "answers": {
+        "qualification_must_fail": false,
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "same_semantic_quantity": false
+      },
+      "reason": "The observations measure different semantic quantities (citations vs. artifacts), so they do not conflict. Qualification does not fail, and the discrepancy exposes an open structural lead for a hidden distinction.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I06",
+      "answers": {
+        "repair_allowed": true,
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "repair_closes_lead": false
+      },
+      "reason": "A real decoder error can be repaired once the defect owner is established. However, the repair does not close the open structural lead regarding the derivable relation.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I07",
+      "answers": {
+        "scoped_equivalence_valid": true,
+        "global_identity_follows": false,
+        "nei_status": "UNKNOWN"
+      },
+      "reason": "Scoped equivalence under view C is valid but does not imply global identity. Since admissible models include both coidentity and separation, the NEI status is UNKNOWN.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I08",
+      "answers": {
+        "full_global_isomorphism": false,
+        "residual_r5_preserved": true,
+        "partial_common_core_valid": true
+      },
+      "reason": "A partial common core is valid, but because R5 is outside the core and load-bearing, a full global isomorphism cannot be claimed, and R5 must remain a residual.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I09",
+      "answers": {
+        "naive_sum_allowed": false,
+        "dependence_must_be_preserved": true
+      },
+      "reason": "Naive summing of log Bayes factors is prohibited because the evidence records are correlated (shared causal lineage) and no conditional-independence authority exists. Dependence must be preserved.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I10",
+      "answers": {
+        "q2_nei_status": "DISTINCT",
+        "rewrite_q1_history": false,
+        "refinement_narrows_realizations": true
+      },
+      "reason": "QU refinement Q2 narrows the realization family, excluding SAME-compatible models and resulting in a DISTINCT status. Historical Q1 UNKNOWN records are not rewritten.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I11",
+      "answers": {
+        "distinct_follows_from_class_labels": false
+      },
+      "reason": "Different application class labels do not imply DISTINCT unless a domain law makes the classification identity-separating.",
+      "authority_used": [
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I12",
+      "answers": {
+        "restriction_admissible": false,
+        "circular_evidence": true
+      },
+      "reason": "Restricting the QU state solely to force a desired identity result is circular and inadmissible under both QU and NEI specifications.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I13",
+      "answers": {
+        "qualification_may_complete": true,
+        "discovery_lead_must_close": false
+      },
+      "reason": "Qualification may complete when all obligations are met, even if a discovery lead remains open, as long as it does not undermine the completeness claim.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I14",
+      "answers": {
+        "close_structural_lead": true,
+        "manufacture_equivalence": false,
+        "final_classification": "IMPLEMENTATION_ERROR"
+      },
+      "reason": "When a mismatch is proved to be a local implementation error and structural explanations are falsified, DP may close the lead without manufacturing an equivalence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "integrated_current_stack": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "notes": "The analysis was performed using only the provided specifications for Core 0.18, QU 0.1, NEI 0.4, and DP 0.5/0.6. All cases were evaluated compositionally and independently."
+  }
+}
