@@ -1092,14 +1092,17 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The pre-DTS Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition formally `QUALIFIES` under Experiment 019.
+The expanded Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1 composition formally `QUALIFIES` under Experiment 027.
 
-DTS 0.1 is now module-qualified, but the expanded composition including DTS still requires a fresh integrated holdout before it is integration-qualified.
+- [Experiment 027 Final Qualification Review](experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md)
+- [Current Integrated Stack with DTS Qualification](qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md)
+
+Experiment 019 remains the immutable pre-DTS integrated qualification record:
 
 - [Experiment 019 Final Qualification Review](experiments/019/EXPERIMENT_019_FINAL_QUALIFICATION_REVIEW.md)
-- [Current Integrated Stack Qualification](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
+- [Pre-DTS Integrated Stack Qualification](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
 
-Historical integrated qualification evidence remains preserved, including Experiment 015 for its earlier dependency composition.
+Historical integrated qualification evidence also remains preserved, including Experiment 015 for its earlier dependency composition.
 
 ## Historical qualified evidence
 
@@ -1214,11 +1217,15 @@ That discipline is part of the project, not overhead around it.
 # Current status
 
 ~~~text
-Core:
-    Draft 0.17 qualified authority
+Core 0.17:
+    QUALIFIED base authority
+
+Core 0.18:
+    QUALIFIED cumulative observation-first clarification
+    decisive holdout: Experiment 017
 
 QRC 0.1:
-    qualified qualification infrastructure
+    QUALIFIED qualification infrastructure
 
 QU 0.1:
     QUALIFIED
@@ -1226,35 +1233,30 @@ QU 0.1:
 
 NEI 0.4:
     QUALIFIED current extension
-    derived identity + Bayesian evidence + QU substrate
     decisive holdout: Experiment 016 (18/18 PASS)
 
-Discovery Protocols 0.1-0.4:
-    QUALIFIED cumulative module
-    decisive corrected holdout: Experiment 014
+Discovery Protocols 0.1–0.6:
+    QUALIFIED cumulative current discovery module
+    successor qualification: Experiment 018
 
-Core 0.18:
-    UNQUALIFIED successor candidate
-    observation-first discrepancy/pre-repair clarification
+DTS 0.1:
+    QUALIFIED current transition extension
+    decisive holdout: Experiment 026 (20/20 PASS)
+    independent promotion verifier: SUPPORT_PROMOTION
+
+Current integrated stack:
+    Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1
+    QUALIFIED by Experiment 027 (18/18 PASS)
+
+Historical pre-DTS integrated stack:
+    QUALIFIED by Experiment 019
+    preserved as immutable predecessor evidence
 
 NEI 0.1 + 0.2:
     HISTORICAL QUALIFIED revisions
-    original decisive holdout: Experiment 013
 
 NEI 0.3:
     HISTORICAL UNQUALIFIED precursor to NEI 0.4
-
-Discovery Protocols 0.5:
-    UNQUALIFIED successor candidate
-    observation-first discrepancy/discovery clarification
-
-Integrated historical module stack:
-    QUALIFIED by Experiment 015 for its exercised NEI 0.1/0.2 composition
-
-Current NEI 0.4:
-    QUALIFIED independently with Core 0.17 + QU 0.1
-    fresh DP integration only when a concrete cross-module claim requires it
-    decisive corrected holdout: Experiment 015
 
 Experiment 004:
     15 PASS / 6 PARTIAL / 0 FAIL / 0 UNKNOWN
@@ -1263,7 +1265,7 @@ Experiment 005:
     8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN
     independent verifier: VERIFIED
 
-Historical failed qualification runs:
+Historical failed/partial qualification runs:
     preserved unchanged
     later corrected by fresh holdouts rather than rescoring
 ~~~
