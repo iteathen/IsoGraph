@@ -12,11 +12,7 @@ if(!SHA) throw new Error('GITHUB_SHA unavailable');
 if(!DRY && !KEY) throw new Error('GEMINI_API_KEY unavailable');
 
 const inputs=[
-  'CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md',
-  'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
-  'extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md',
-  'extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md',
-  'extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md',
+  'experiments/021/FOCUSED_AUTHORITY.md',
   'extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md',
   'experiments/021/TRANSITIONS.json',
   'experiments/021/VIEWS.json',
