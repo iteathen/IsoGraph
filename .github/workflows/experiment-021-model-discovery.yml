@@ -1,0 +1,47 @@
+name: Experiment 021 Gemini model discovery
+
+on:
+  push:
+    branches:
+      - research/dts-0.1
+    paths:
+      - experiments/021/MODEL_DISCOVERY.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-021-model-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover-models:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: List generateContent models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/021/tools/list-gemini-models.mjs
+
+      - name: Persist model list
+        run: |
+          set -euo pipefail
+          E="experiments/021/provider"
+          mkdir -p "$E"
+          cp out/exp021-models/MODELS.json "$E/MODELS.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E/MODELS.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: record Experiment 021 available Gemini models"
+            git push origin HEAD:research/dts-0.1
+          fi
