@@ -161,7 +161,7 @@ QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It 
 
 ## DTS 0.1
 
-**State:** UNQUALIFIED candidate; qualification campaign prepared on `research/dts-0.1`.
+**State:** QUALIFIED at the exact DTS 0.1 candidate bytes by Experiment 026; expanded DTS-inclusive stack integration remains pending.
 
 **Dependencies:** current qualified Core 0.17 + Core 0.18; qualified QU 0.1 as the unresolved-transition substrate. NEI 0.4 is invoked only for identity-related non-claims. Discovery Protocols are not DTS truth authority.
 
@@ -193,6 +193,8 @@ QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It 
 **Development evidence:** Experiments 020–025. Development evidence informs holdout design but is excluded from the fresh cold qualification packet.
 
 **Promotion gate:** all 20 fresh DTS controls, deterministic preflight, dependency closure, and one independent promotion verification must pass with no hidden-output-contract defect.
+
+**Qualification result:** 20/20 fresh controls PASS; formal `QUALIFIES`; independent verifier `SUPPORT_PROMOTION`; authority record `qualification/DTS_0_1_QUALIFICATION.md`.
 
 ## Integrated stack
 
@@ -228,6 +230,7 @@ The plan has been executed.
 4. Discovery Protocols 0.1-0.4 cumulative module — qualified through the cumulative evidence chain ending in the fresh corrected Experiment 014 pass.
 5. Historical integrated module stack — qualified for the Experiment 015 exercised composition.
 6. Current integrated semantic stack — qualified by Experiment 019 for Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6.
+7. DTS 0.1 base semantics — qualified by Experiment 026 at the exact candidate hash; expanded DTS-inclusive integration remains a separate burden.
 
 Historical failed runs (009, 010, 011, 012) remain immutable evidence and are not rescored.
 
