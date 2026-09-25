@@ -216,7 +216,7 @@ signature match    -> never proves TI by itself
 
 This work belongs in a separately versioned TSS profile or later DTS revision, not DTS 0.1 base.
 
-## Phase 9 — DTS qualification preparation
+## Phase 9 — DTS qualification — COMPLETE
 
 After the semantic base stabilizes:
 
@@ -261,7 +261,7 @@ Current state:
 - Phase 6 — decomposition experiment: **COMPLETE**;
 - Phase 7 — interpretation-barrier experiment: **COMPLETE**;
 - Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
-- Phase 9 — DTS qualification: not started.
+- Phase 9 — DTS qualification: **COMPLETE; Experiment 026 20/20 PASS with independent `SUPPORT_PROMOTION`; DTS 0.1 module authority promoted at the exact qualified hash.**
 
 Experiment 021 eventually produced a semantic report in workflow run `36188362082` using `gemini-3.1-flash-lite` with the proven request shape.
 
@@ -274,3 +274,22 @@ Experiment 025 completed the focused QU projection/region-ownership audit with n
 Phase 5 is closed as development evidence through the combined Experiment 021/024/025 record. Historical DOES_NOT_PASS scorer dispositions remain immutable.
 
 Transition Structural Signatures remain optional successor/profile research and are not a DTS 0.1 promotion prerequisite. Proceed to Phase 9 qualification preparation while retaining TSS as separately versioned follow-on work.
+
+## Experiment 026 qualification result
+
+Experiment 026 completed the fresh DTS 0.1 module qualification campaign.
+
+```text
+cold decoder run:          36190237108
+fresh semantic controls:   20 / 20 PASS
+formal scorer disposition: QUALIFIES
+promotion verifier run:    36190514681
+verifier verdict:          SUPPORT_PROMOTION
+module disposition:        QUALIFIED
+```
+
+Authority record: `qualification/DTS_0_1_QUALIFICATION.md`.
+
+Final review: `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`.
+
+The next burden is a fresh integrated holdout for the expanded Core + QU + NEI + DP + DTS composition. Transition Structural Signatures remain deferred successor/profile research.
