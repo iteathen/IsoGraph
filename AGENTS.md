@@ -10,9 +10,10 @@ Before substantive work, read `README.md`, `DESIGN_IDEALS.md`, `STATUS.md`, `MIG
 
 ### Qualified Core authority
 
-- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017.
 
-Draft 0.17 remains Core authority. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 observation-first clarification. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
 
 ### Qualified extension/module authority
 
@@ -34,7 +35,6 @@ Qualified extensions remain separately versioned dependencies and do not silentl
 
 The following revisions are unqualified successor material and are **not** current authority until separately qualified and promoted:
 
-- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — observation-first discrepancy interpretation and pre-repair alignment clarification;
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
 
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.

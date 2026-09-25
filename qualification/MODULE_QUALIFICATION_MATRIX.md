@@ -2,7 +2,7 @@
 
 **Status:** qualification plan completed; retained as obligation matrix  
 **Date:** 2026-09-18  
-**Qualified semantic baseline:** `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
+**Qualified semantic baseline:** Core 0.17 + qualified Core 0.18 observation-first clarification (`qualification/CORE_0_18_QUALIFICATION.md`)
 
 This matrix separates module semantic qualification from implementation testing, discovery performance, and integrated-stack compatibility.
 
@@ -44,9 +44,13 @@ Core + QRC + QU + NEI + DP
 
 QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It is qualification infrastructure used by harnesses.
 
-## Core 0.17
+## Core 0.17 + Core 0.18 cumulative authority
 
-**State:** QUALIFIED baseline; no new campaign.
+**State:** QUALIFIED. Core 0.17 is the base; Core 0.18 observation-first clarification qualified by Experiment 017.
+
+**Core 0.18 qualification:** 12/12 focused cases PASS, zero mismatches, formal `QUALIFIES`. See `experiments/017/EXPERIMENT_017_FINAL_QUALIFICATION_REVIEW.md` and `qualification/CORE_0_18_QUALIFICATION.md`.
+
+**Historical Core 0.17 state:** QUALIFIED baseline.
 
 **Claims retained:** Core Draft 0.17 exactly as qualified, including SI description correction, claim-bounded obligation closure, source fidelity, factorization/comparison discipline, and native witness authority.
 

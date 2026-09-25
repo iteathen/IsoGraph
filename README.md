@@ -29,6 +29,7 @@ No mandatory English, JSON, theorem-language, database, tokenizer-specific, or m
 IsoGraph is currently in **active research incubation**. Its qualified authority is modular:
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
+- [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
 - [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 
 Core remains distinct from separately versioned qualified extensions.
