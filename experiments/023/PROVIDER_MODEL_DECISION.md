@@ -29,3 +29,5 @@ The following remain unchanged:
 - deterministic scorer.
 
 The model change supplies no discovery evidence by itself.
+
+After a full-packet HTTP 503 on the callable model, the next retry also lowers `maxOutputTokens` from 32768 to 8192. This is a transport-capacity change only; semantic inputs and scoring controls remain unchanged.

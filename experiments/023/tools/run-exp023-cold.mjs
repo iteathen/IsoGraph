@@ -78,7 +78,7 @@ const request={
   contents:[{role:'user',parts:[{text:packet}]}],
   generationConfig:{
     candidateCount:1,
-    maxOutputTokens:32768,
+    maxOutputTokens:8192,
     temperature:0.1
   }
 };
