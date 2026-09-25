@@ -2,25 +2,23 @@
 
 **Status:** transport/provider decision only; no semantic change.
 
-Initial attempt used `gemini-2.5-pro` and returned HTTP 404 before any semantic report.
+Provider history:
+- `gemini-2.5-pro` -> full Experiment 023 request HTTP 404;
+- `gemini-3.6-flash` -> tiny capability probe HTTP 200, but full Experiment 023 requests HTTP 503 even after reducing output budget;
+- long-payload probe (~36,097 bytes) on `gemini-3.1-flash-lite` -> HTTP 200, response `OK`.
 
-A dedicated provider capability probe then tested currently advertised text models using a tiny non-semantic prompt. The persisted result is:
-
-`experiments/023/provider/PROBE.json`
-
-Probe result:
-
-- `gemini-pro-latest` -> HTTP 429 quota;
-- `gemini-2.5-flash` -> HTTP 404, retired for new users;
-- `gemini-3.1-pro-preview` -> HTTP 429 quota;
-- `gemini-3.6-flash` -> HTTP 200.
+Persisted provider evidence:
+- `experiments/023/provider/PROBE.json`;
+- `experiments/023/provider/LONG_PROBE.json`;
+- `experiments/023/PROVIDER_FAILURES.md`.
 
 Experiment 023 is therefore repinned to:
 
-`gemini-3.6-flash`
+`gemini-3.1-flash-lite`
+
+The response budget remains 8192 tokens.
 
 The following remain unchanged:
-
 - source barrier corpus;
 - native `.isg` rendering;
 - focused Discovery authority;
@@ -28,6 +26,4 @@ The following remain unchanged:
 - hidden methodology controls;
 - deterministic scorer.
 
-The model change supplies no discovery evidence by itself.
-
-After a full-packet HTTP 503 on the callable model, the next retry also lowers `maxOutputTokens` from 32768 to 8192. This is a transport-capacity change only; semantic inputs and scoring controls remain unchanged.
+This provider/model choice supplies no discovery evidence by itself.
