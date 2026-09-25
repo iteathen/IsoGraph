@@ -32,6 +32,7 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
 - [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 - [Discovery Protocols 0.1–0.6 Qualification Review — 2026-09-25](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
+- [Current Integrated Semantic Stack Qualification — 2026-09-25](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
 
 Core remains distinct from separately versioned qualified extensions.
 

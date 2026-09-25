@@ -157,6 +157,23 @@ This is **development evidence**, not fresh qualification. It should inform inde
 
 ## Integrated module-stack qualification
 
+Experiment 019 now qualifies the current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1-0.6 composition.
+
+```text
+formal disposition:       QUALIFIES
+workflow run:              36178254627
+case coverage:             14 / 14
+mismatches:                none
+module assessment:         SUPPORTED
+```
+
+Final review:
+
+- `experiments/019/EXPERIMENT_019_FINAL_QUALIFICATION_REVIEW.md`
+- `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`
+
+Historical integrated evidence remains preserved below.
+
 Experiment 011 correctly recovered the structural integration behavior but remains formally `DOES_NOT_QUALIFY` because its free-text overclaim list did not discharge all four public rejection guards.
 
 Experiment 015 used a fresh integrated holdout with proposition-specific overclaim fields.
@@ -203,8 +220,9 @@ The next semantic qualification burden is:
 
 1. Core 0.18 qualification is complete (`QUALIFIES`, Experiment 017); preserve its exact qualified revision;
 2. DP 0.5/0.6 qualification is complete (`QUALIFIES`, Experiment 018); preserve its exact successor revisions;
-3. run a fresh integrated Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1-0.6 holdout only when a concrete cross-module claim makes that compatibility load-bearing; the historical Experiment 015 integrated result remains scoped to NEI 0.1/0.2 + DP 0.1-0.4;
-4. preserve every historical qualification disposition at its exact revision.
+3. current-stack integration qualification is complete (`QUALIFIES`, Experiment 019); preserve its exact revision and scope;
+4. proceed with DTS 0.1 development/qualification against this accepted authority stack;
+5. preserve every historical qualification disposition at its exact revision.
 
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
 
