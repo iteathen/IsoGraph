@@ -18,9 +18,10 @@ This doctrine is **not semantic authority**. Versioned qualified specifications 
 
 ### Core
 
-- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — **qualified cumulative observation-first clarification**, promoted by `qualification/CORE_0_18_QUALIFICATION.md` and Experiment 017.
 
-Draft 0.17 remains the qualified Core authority. Bare IDs are **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 clarification. Bare IDs remain **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
 
 ### Qualified semantic extensions/modules
 
@@ -42,11 +43,6 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 Current qualified authority now includes NEI 0.4. The remaining active semantic successors are:
 
-- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`
-  - discrepancy is initially observation, not defect;
-  - semantic quantity/scope/layer alignment precedes failure classification;
-  - repair follows owner localization rather than driving interpretation;
-  - unknown potentially load-bearing distinctions are not projection permission.
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
   - discrepancy is initially an observation, not automatically a defect;
   - semantic-quantity/scope alignment precedes value judgment;
@@ -209,7 +205,7 @@ The qualified modular authority stack remains usable exactly as recorded in `qua
 
 The next semantic qualification burden is:
 
-1. qualify Core 0.18 against observation-vs-defect, same-quantity alignment, scoped quotient, and dependency-invalidation controls;
+1. Core 0.18 qualification is complete (`QUALIFIES`, Experiment 017); preserve its exact qualified revision;
 2. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
 3. run a fresh integrated NEI 0.4 + Discovery Protocol holdout only when a concrete cross-module claim makes that compatibility load-bearing; the historical Experiment 015 integrated result remains scoped to NEI 0.1/0.2 + DP 0.1-0.4;
 4. preserve every historical qualification disposition at its exact revision.
