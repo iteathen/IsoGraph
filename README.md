@@ -1067,18 +1067,21 @@ Current qualified modules:
 - [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 - [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
 - [Discovery Protocols 0.1–0.6](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
+- [Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) — [qualification record](qualification/DTS_0_1_QUALIFICATION.md)
 
 The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded.
 
 Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
 
-## Active unqualified extension work
+## Qualified transition extension
 
-[Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) is the active transition-semantics research line. It remains unqualified until its own dependency-closed qualification burden is discharged.
+[Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) is qualified at its exact tested bytes by Experiment 026.
 
-Implementation plan: [DTS 0.1 Implementation Plan](research/DTS_0_1_IMPLEMENTATION_PLAN.md).
+- [DTS 0.1 Qualification Authority](qualification/DTS_0_1_QUALIFICATION.md)
+- [Experiment 026 Final Qualification Review](experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md)
+- [DTS 0.1 Implementation Plan](research/DTS_0_1_IMPLEMENTATION_PLAN.md)
 
-Core 0.18, QU 0.1, NEI 0.4, and DP 0.1–0.6 are now accepted dependencies for DTS development.
+DTS remains a separately versioned extension and does not become Core. Transition Structural Signatures and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work.
 
 ## Qualified qualification infrastructure
 
@@ -1089,7 +1092,9 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition formally `QUALIFIES` under Experiment 019.
+The pre-DTS Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition formally `QUALIFIES` under Experiment 019.
+
+DTS 0.1 is now module-qualified, but the expanded composition including DTS still requires a fresh integrated holdout before it is integration-qualified.
 
 - [Experiment 019 Final Qualification Review](experiments/019/EXPERIMENT_019_FINAL_QUALIFICATION_REVIEW.md)
 - [Current Integrated Stack Qualification](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
@@ -1172,6 +1177,9 @@ extensions/nei/
 
 extensions/discovery/
     qualified cumulative structural Discovery Protocol module
+
+extensions/dts/
+    qualified Detailed Transition System extension plus separately versioned profiles
 
 qualification/
     qualification infrastructure and contracts
