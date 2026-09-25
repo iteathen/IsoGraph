@@ -1,0 +1,390 @@
+{
+  "version": "DTS-DEV-020",
+  "semantic_status": "development evidence only; not DTS qualification",
+  "cases": [
+    {
+      "case_id": "S01",
+      "title": "Sequential lexical rejection classification",
+      "source_anchor": {
+        "repository": "iteathen/IsoGraph",
+        "ref": "main",
+        "path": "tools/qualification/semantic-rejections.mjs",
+        "blob_sha": "3b36f674676c03b5a4fb92b4a22dfc9c8a5fe7a2",
+        "symbol": "identifyRejectedConcept"
+      },
+      "claim_scope": "fixed input 'natural identity'; lexical classification projection only",
+      "source_state": {
+        "entry": "natural identity"
+      },
+      "target_state": {
+        "entry": "natural identity",
+        "normalized": "natural identity",
+        "matches": [
+          "NATURAL_IDENTITY"
+        ],
+        "concept_id": "NATURAL_IDENTITY",
+        "recognition": "PUBLIC_LEXICAL_SIGNATURE"
+      },
+      "anatomy": {
+        "preserved_paths": [
+          "entry"
+        ],
+        "introduced_paths": [
+          "normalized",
+          "matches",
+          "concept_id",
+          "recognition"
+        ],
+        "removed_paths": [],
+        "changed_paths": [],
+        "operations": [
+          {
+            "op": "set",
+            "path": "normalized",
+            "value": "natural identity"
+          },
+          {
+            "op": "set",
+            "path": "matches",
+            "value": [
+              "NATURAL_IDENTITY"
+            ]
+          },
+          {
+            "op": "set",
+            "path": "concept_id",
+            "value": "NATURAL_IDENTITY"
+          },
+          {
+            "op": "set",
+            "path": "recognition",
+            "value": "PUBLIC_LEXICAL_SIGNATURE"
+          }
+        ],
+        "boundary": [
+          "entry",
+          "concept_id",
+          "recognition"
+        ],
+        "qu": [],
+        "closure_authority": "Exact source function and fixed input determine every field in this projection."
+      }
+    },
+    {
+      "case_id": "S02",
+      "title": "IsoMax worker branch publication projection",
+      "source_anchor": {
+        "repository": "iteathen/Connect4",
+        "ref": "work/isomax-jsminsys-rebuild",
+        "path": "components/isometric/execution/worker.mjs",
+        "blob_sha": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+        "contract_path": "components/isometric/execution/README.md",
+        "contract_blob_sha": "9ca951ce163a90116672ef8ae71d278aebbe5cf6",
+        "symbol": "workerStep7x6"
+      },
+      "claim_scope": "code=4 successful publication path projected onto worker/parent/child-claim/edge fields listed below; signals, generations, bounds, intern details and unrelated TT fields are outside this claim",
+      "source_state": {
+        "worker": {
+          "owner": 2,
+          "q": 7,
+          "code": 4,
+          "count": 2,
+          "witness": -1,
+          "started": 0,
+          "branches": 4
+        },
+        "parent": {
+          "q": 7,
+          "execution": 2,
+          "phase": 0,
+          "count": 0
+        },
+        "children": [
+          {
+            "q": 11,
+            "execution": 0,
+            "exact": 0,
+            "phase": 0
+          },
+          {
+            "q": 12,
+            "execution": 0,
+            "exact": 0,
+            "phase": 0
+          }
+        ],
+        "edges": [
+          {
+            "child": -1,
+            "action": null,
+            "attached": 0
+          },
+          {
+            "child": -1,
+            "action": null,
+            "attached": 0
+          }
+        ]
+      },
+      "target_state": {
+        "worker": {
+          "owner": 2,
+          "q": 11,
+          "code": 0,
+          "count": 0,
+          "witness": -1,
+          "started": 1,
+          "branches": 5
+        },
+        "parent": {
+          "q": 7,
+          "execution": 0,
+          "phase": 2,
+          "count": 2
+        },
+        "children": [
+          {
+            "q": 11,
+            "execution": 2,
+            "exact": 0,
+            "phase": 0
+          },
+          {
+            "q": 12,
+            "execution": 0,
+            "exact": 0,
+            "phase": 0
+          }
+        ],
+        "edges": [
+          {
+            "child": 11,
+            "action": 3,
+            "attached": 0
+          },
+          {
+            "child": 12,
+            "action": 4,
+            "attached": 0
+          }
+        ]
+      },
+      "anatomy": {
+        "preserved_paths": [
+          "worker.owner",
+          "worker.witness",
+          "parent.q",
+          "children.0.q",
+          "children.0.exact",
+          "children.0.phase",
+          "children.1.q",
+          "children.1.execution",
+          "children.1.exact",
+          "children.1.phase",
+          "edges.0.attached",
+          "edges.1.attached"
+        ],
+        "introduced_paths": [],
+        "removed_paths": [],
+        "changed_paths": [
+          "worker.q",
+          "worker.code",
+          "worker.count",
+          "worker.started",
+          "worker.branches",
+          "parent.execution",
+          "parent.phase",
+          "parent.count",
+          "children.0.execution",
+          "edges.0.child",
+          "edges.0.action",
+          "edges.1.child",
+          "edges.1.action"
+        ],
+        "operations": [
+          {
+            "op": "set",
+            "path": "edges.0.child",
+            "value": 11
+          },
+          {
+            "op": "set",
+            "path": "edges.0.action",
+            "value": 3
+          },
+          {
+            "op": "set",
+            "path": "parent.count",
+            "value": 1
+          },
+          {
+            "op": "set",
+            "path": "edges.1.child",
+            "value": 12
+          },
+          {
+            "op": "set",
+            "path": "edges.1.action",
+            "value": 4
+          },
+          {
+            "op": "set",
+            "path": "parent.count",
+            "value": 2
+          },
+          {
+            "op": "set",
+            "path": "parent.phase",
+            "value": 2
+          },
+          {
+            "op": "set",
+            "path": "worker.branches",
+            "value": 5
+          },
+          {
+            "op": "set",
+            "path": "children.0.execution",
+            "value": 2
+          },
+          {
+            "op": "set",
+            "path": "parent.execution",
+            "value": 0
+          },
+          {
+            "op": "set",
+            "path": "worker.q",
+            "value": 11
+          },
+          {
+            "op": "set",
+            "path": "worker.code",
+            "value": 0
+          },
+          {
+            "op": "set",
+            "path": "worker.count",
+            "value": 0
+          },
+          {
+            "op": "set",
+            "path": "worker.witness",
+            "value": -1
+          },
+          {
+            "op": "set",
+            "path": "worker.started",
+            "value": 1
+          }
+        ],
+        "boundary": [
+          "worker.q",
+          "parent.phase",
+          "parent.execution",
+          "children.0.execution"
+        ],
+        "qu": [],
+        "closure_authority": "Exact source path plus explicit projection boundary. Fields outside claim_scope are qualified irrelevant to this reconstruction claim, not asserted absent."
+      }
+    },
+    {
+      "case_id": "N01",
+      "title": "IsoMax worker preparation negative control",
+      "source_anchor": {
+        "repository": "iteathen/Connect4",
+        "ref": "work/isomax-jsminsys-rebuild",
+        "path": "components/isometric/execution/worker.mjs",
+        "blob_sha": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+        "symbol": "prepareWorker7x6"
+      },
+      "claim_scope": "owner=2, workerCount=4; initialization projection",
+      "source_state": {
+        "configuration": {
+          "owner": 2,
+          "workerCount": 4
+        }
+      },
+      "target_state": {
+        "configuration": {
+          "owner": 2,
+          "workerCount": 4
+        },
+        "worker": {
+          "owner": 2,
+          "allowExpose": 1,
+          "readyTarget": 8,
+          "expose": 0,
+          "q": -1,
+          "code": 0,
+          "count": 0,
+          "witness": -1,
+          "lower": 1,
+          "upper": 3,
+          "childMask": 127,
+          "started": 1,
+          "claims": 0,
+          "continuations": 0,
+          "branches": 0,
+          "keys_length": 56,
+          "actionLower_length": 7,
+          "actionUpper_length": 7,
+          "childBasis_length": 483,
+          "childBasisSize_length": 7,
+          "actions_length": 7
+        }
+      },
+      "anatomy": {
+        "preserved_paths": [
+          "configuration.owner",
+          "configuration.workerCount"
+        ],
+        "introduced_paths": [
+          "worker"
+        ],
+        "removed_paths": [],
+        "changed_paths": [],
+        "operations": [
+          {
+            "op": "set",
+            "path": "worker",
+            "value": {
+              "owner": 2,
+              "allowExpose": 1,
+              "readyTarget": 8,
+              "expose": 0,
+              "q": -1,
+              "code": 0,
+              "count": 0,
+              "witness": -1,
+              "lower": 1,
+              "upper": 3,
+              "childMask": 127,
+              "started": 1,
+              "claims": 0,
+              "continuations": 0,
+              "branches": 0,
+              "keys_length": 56,
+              "actionLower_length": 7,
+              "actionUpper_length": 7,
+              "childBasis_length": 483,
+              "childBasisSize_length": 7,
+              "actions_length": 7
+            }
+          }
+        ],
+        "boundary": [
+          "configuration.owner",
+          "configuration.workerCount",
+          "worker"
+        ],
+        "qu": [],
+        "closure_authority": "Exact prepareWorker7x6 return construction for owner=2 and workerCount=4, projected to scalar values and typed-array lengths."
+      },
+      "negative_control_for": [
+        "S02"
+      ],
+      "negative_reason": "Initialization is introduction-dominant and has no parent/child publication topology; endpoint/action surface similarity must not manufacture a TI."
+    }
+  ]
+}

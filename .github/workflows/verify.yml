@@ -234,6 +234,9 @@ jobs:
       - name: Verify DTS 0.1 deterministic base controls
         run: node tools/dts/test-dts-base.mjs
 
+      - name: Experiment 020 DTS reconstruction
+        run: node experiments/020/test-reconstruction.mjs
+
       - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs
