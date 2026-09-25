@@ -1,0 +1,120 @@
+name: Experiment 018 Connect4 game-theory 1.2 qualification
+
+on:
+  push:
+    branches:
+      - qualification/connect4-game-theory-018-20260919
+    paths:
+      - experiments/018/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-018-connect4-game-theory-1-2
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out exact qualification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/018/tools/run-exp018-cold.mjs
+          node --check experiments/018/tools/score-exp018.mjs
+          node --check experiments/018/tools/test-score-exp018.mjs
+          node experiments/018/tools/test-score-exp018.mjs
+          rm -rf out/exp018
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/018/tools/run-exp018-cold.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const d=JSON.parse(fs.readFileSync('out/exp018/DRY_RUN.json','utf8'));
+          const paths=d.input_manifest.map(x=>x.path);
+          for(const f of ['hidden/','ASSERTIONS','score-exp018','AUTHORING_AUDIT','QUALIFICATION_REVIEW','experiments/018/evidence']){
+            if(paths.some(p=>p.includes(f)))throw new Error('forbidden cold input '+f);
+          }
+          for(const f of [
+            'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md',
+            'experiments/018/source/CONNECT4_GAME_THEORY_1_2_CANDIDATE.md',
+            'experiments/018/source/CONNECT4_GAME_THEORY_CLAIM_COVERAGE_1_2_CANDIDATE.json',
+            'experiments/018/CASES.md'
+          ]) if(!paths.includes(f))throw new Error('missing cold input '+f);
+          console.log('dry_packet_sha256='+d.packet_sha256);
+          NODE
+
+      - name: Execute isolated semantic call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/018/tools/run-exp018-cold.mjs
+
+      - name: Verify packet identity and score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp018/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp018/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/018/tools/score-exp018.mjs
+
+      - name: Persist sanitized evidence to branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/018/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp018/$f" ] && cp "out/exp018/$f" "$E/$f"
+          done
+          cat > "$E/CONTROL.json" <<EOF
+          {
+            "workflow_run_id": "${GITHUB_RUN_ID}",
+            "workflow_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "qualification_sha": "${GITHUB_SHA}",
+            "cold_outcome": "${{ steps.cold.outcome }}",
+            "score_outcome": "${{ steps.score.outcome }}"
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 018 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:qualification/connect4-game-theory-018-20260919
+          fi
+
+      - name: Enforce qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp018/SCORE.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const s=JSON.parse(fs.readFileSync('out/exp018/SCORE.json','utf8'));
+          console.log(JSON.stringify({disposition:s.disposition,package:s.connect4_game_theory_1_2},null,2));
+          if(s.disposition!=='QUALIFIES')process.exit(1);
+          NODE
