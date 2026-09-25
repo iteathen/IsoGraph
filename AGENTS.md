@@ -31,6 +31,8 @@ The semantic files intentionally retain their historical `_CANDIDATE` filenames 
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
+The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition is also integration-qualified by Experiment 019; see `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. This does not qualify DTS.
+
 ### Successor status
 
 Core 0.18 and Discovery Protocols through 0.6 are qualified at their exact tested revisions. DTS 0.1 remains unqualified successor research until its own qualification burden is discharged.

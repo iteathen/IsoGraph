@@ -161,6 +161,8 @@ QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It 
 
 ## Integrated stack
 
+**State:** QUALIFIED for the current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition by Experiment 019 (14/14 PASS, zero mismatches).
+
 **Dependencies:** only modules already promoted for the claims exercised.
 
 **Objective:** test composition, not re-prove every lower-layer obligation.
@@ -189,7 +191,8 @@ The plan has been executed.
 2. QU 0.1 — qualified by the corrected fresh Experiment 013 campaign.
 3. NEI 0.1 + 0.2 cumulative module — qualified by Experiment 013.
 4. Discovery Protocols 0.1-0.4 cumulative module — qualified through the cumulative evidence chain ending in the fresh corrected Experiment 014 pass.
-5. Integrated module stack — qualified for the exercised composition by the fresh corrected Experiment 015 pass.
+5. Historical integrated module stack — qualified for the Experiment 015 exercised composition.
+6. Current integrated semantic stack — qualified by Experiment 019 for Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6.
 
 Historical failed runs (009, 010, 011, 012) remain immutable evidence and are not rescored.
 
