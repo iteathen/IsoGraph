@@ -132,11 +132,11 @@ QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It 
 
 **Promotion gate:** dependency-closed QU obligations pass where invoked; direct determinate paths pass independently; circular downstream isomorphism/identity evidence is rejected.
 
-## Discovery Protocols 0.1-0.4 cumulative effective module
+## Discovery Protocols 0.1-0.6 cumulative effective module
 
-**Dependencies:** Core 0.17. QU and NEI are dependencies only for discovery branches that actually rely on those semantics.
+**Dependencies:** current qualified Core 0.17 + Core 0.18. QU 0.1 and NEI 0.4 are dependencies only for discovery branches that actually rely on unresolved structure or natural/domain identity semantics.
 
-**Revision discipline:** qualify current cumulative behavior, not each historical revision as an independent current module.
+**Revision discipline:** DP 0.1-0.4 remain the qualified historical baseline. DP 0.5/0.6 successor obligations qualified by Experiment 018 (14/14 PASS, zero mismatches). Current authority is cumulative DP 0.1-0.6.
 
 **Normative claims under qualification:**
 - ranked structural-first candidate discovery;

@@ -29,11 +29,13 @@ Current qualified extension/module authority is recorded in:
 
 - `qualification/QUALIFIED_MODULES_2026-09-18.md`
 
-It binds the exact tested revisions of:
+It binds the historical exact tested revisions of QU 0.1, NEI 0.4, and DP 0.1–0.4. Current successor qualification additionally establishes Discovery Protocols 0.5 and 0.6 through Experiment 018 and `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md`.
+
+Current semantic extensions/modules include:
 
 - Quantifiable Unknown (QU) 0.1;
 - Natural Entropic Identity (NEI) 0.4;
-- Discovery Protocols 0.1 through 0.4 as one cumulative current module.
+- Discovery Protocols 0.1 through 0.6 as one cumulative current module.
 
 The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
 
@@ -41,13 +43,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 ### Active unqualified successor candidates
 
-Current qualified authority now includes NEI 0.4. The remaining active semantic successors are:
-
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
-  - discrepancy is initially an observation, not automatically a defect;
-  - semantic-quantity/scope alignment precedes value judgment;
-  - qualification and structural-discovery dispositions remain independent;
-  - repair must preserve the anomaly evidence that exposed hidden structure.
+Core 0.18 and Discovery Protocols through 0.6 have now completed focused qualification. DTS 0.1 remains an active unqualified extension candidate on its research branch.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
@@ -121,7 +117,7 @@ NEI 0.4 is therefore the current qualified NEI semantic extension at the exact h
 
 ## Discovery Protocol qualification
 
-Discovery Protocols 0.1-0.4 are now qualified as one cumulative module at the exact hashes recorded in the authority manifest.
+Discovery Protocols 0.1-0.6 are now qualified as one cumulative module. DP 0.1-0.4 retain the exact hashes recorded in the 2026-09-18 authority manifest; DP 0.5/0.6 qualification is recorded in Experiment 018 and the 2026-09-25 cumulative review.
 
 The evidence chain is intentionally preserved rather than rewritten:
 
@@ -206,8 +202,8 @@ The qualified modular authority stack remains usable exactly as recorded in `qua
 The next semantic qualification burden is:
 
 1. Core 0.18 qualification is complete (`QUALIFIES`, Experiment 017); preserve its exact qualified revision;
-2. qualify DP 0.5 against fresh independent discrepancy cases where an apparent error reveals a hidden distinction/equivalence, where a true decoder/scorer error still leaves a discovery lead, and where no structural lead survives;
-3. run a fresh integrated NEI 0.4 + Discovery Protocol holdout only when a concrete cross-module claim makes that compatibility load-bearing; the historical Experiment 015 integrated result remains scoped to NEI 0.1/0.2 + DP 0.1-0.4;
+2. DP 0.5/0.6 qualification is complete (`QUALIFIES`, Experiment 018); preserve its exact successor revisions;
+3. run a fresh integrated Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1-0.6 holdout only when a concrete cross-module claim makes that compatibility load-bearing; the historical Experiment 015 integrated result remains scoped to NEI 0.1/0.2 + DP 0.1-0.4;
 4. preserve every historical qualification disposition at its exact revision.
 
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
