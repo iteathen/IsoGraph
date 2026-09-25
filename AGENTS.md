@@ -26,22 +26,25 @@ The current manifest routes the exact qualified revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1–0.6 cumulative current module.
+- Discovery Protocols 0.1–0.6 cumulative current module;
+- DTS 0.1.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition is also integration-qualified by Experiment 019; see `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. This does not qualify DTS.
+The Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition is integration-qualified by Experiment 019; see `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. DTS 0.1 is separately module-qualified by Experiment 026. The expanded composition including DTS still requires its own fresh integrated holdout.
 
 ### Successor status
 
-Core 0.18 and Discovery Protocols through 0.6 are qualified at their exact tested revisions. DTS 0.1 remains unqualified successor research until its own qualification burden is discharged.
+Core 0.18, Discovery Protocols through 0.6, and DTS 0.1 are qualified at their exact tested revisions. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
 - `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`;
 - `extensions/dts/DTS_NATIVE_VOCAB_0_1.md`;
+- `qualification/DTS_0_1_QUALIFICATION.md`;
+- `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`;
 - `research/DTS_0_1_IMPLEMENTATION_PLAN.md`.
 
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
