@@ -1,0 +1,103 @@
+name: Experiment 026 DTS 0.1 qualification
+
+on:
+  push:
+    branches:
+      - research/dts-0.1
+    paths:
+      - experiments/026/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-026-dts-0-1-qualification
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic qualification preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md)" = "04170c1faa26ca8b76e211a0491ce76e358d111b"
+          test "$(sha256sum extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md | awk '{print $1}')" = "9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad"
+          test -s extensions/dts/DTS_NATIVE_VOCAB_0_1.md
+          test -s extensions/dts/DTS_VOCAB_0_1.isg
+          node tools/dts/test-dts-base.mjs
+          node experiments/020/test-reconstruction.mjs
+          node experiments/022/test-decomposition.mjs
+          node experiments/025/test-qu-projection.mjs
+          node --check experiments/026/tools/run-exp026-cold.mjs
+          node --check experiments/026/tools/score-exp026.mjs
+          node --check experiments/026/tools/test-score-exp026.mjs
+          node experiments/026/tools/test-score-exp026.mjs
+          rm -rf out/exp026
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/026/tools/run-exp026-cold.mjs
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('out/exp026/DRY_RUN.json','utf8'));const p=d.input_manifest.map(x=>x.path);const bad=['hidden/','ASSERTIONS','score-exp026','AUTHORING_AUDIT','QUALIFICATION_REVIEW','RESULTS','experiments/026/evidence','experiments/020','experiments/021','experiments/022','experiments/023','experiments/024','experiments/025','AGENTS.md','STATUS.md'];for(const f of bad)if(p.some(x=>x.includes(f)))throw new Error('forbidden cold input '+f);console.log('dry_packet_sha256='+d.packet_sha256)"
+
+      - name: Execute isolated qualification decoder
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/026/tools/run-exp026-cold.mjs
+
+      - name: Verify packet identity and score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp026/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp026/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/026/tools/score-exp026.mjs
+
+      - name: Persist qualification evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/026/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp026/$f" ] && cp "out/exp026/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 026 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/dts-0.1
+          fi
+
+      - name: Enforce DTS qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp026/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp026/SCORE.json','utf8'));console.log(JSON.stringify({disposition:s.disposition,dts:s.dts_0_1,guards:s.guards},null,2));if(s.disposition!=='QUALIFIES')process.exit(1)"

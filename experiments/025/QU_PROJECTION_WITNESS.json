@@ -1,0 +1,83 @@
+{
+  "experiment": "025",
+  "status": "deterministic development witness; not qualification",
+  "dispute": "Experiment 024 R07: T01 vs T06 under C_CONCEPT",
+  "frozen_inputs": {
+    "transitions_path": "experiments/021/TRANSITIONS.json",
+    "transitions_blob_sha": "d3c6da4267ec15ba68ceaea2e608ba69e03bbbca",
+    "views_path": "experiments/021/VIEWS.json",
+    "views_blob_sha": "3a2491ebb1b1ade2b1a02d925f6a0ef4fa72c4d8"
+  },
+  "view": {
+    "id": "C_CONCEPT",
+    "load_bearing": [
+      "B.input-role",
+      "B.concept-role",
+      "target.concept"
+    ],
+    "projected": [
+      "source carrier representation",
+      "target recognition",
+      "D",
+      "O",
+      "non-concept delta detail"
+    ],
+    "authority": "Compare only semantic input role to resulting concept classification; projected differences remain residuals."
+  },
+  "qu_region_ownership": [
+    {
+      "qu_ref": "Q021-input",
+      "represented_region": "source carrier representation",
+      "path": "T06.source",
+      "projected_under_view": true
+    },
+    {
+      "qu_ref": "Q021-recognition",
+      "represented_region": "target recognition",
+      "path": "T06.target.recognition",
+      "projected_under_view": true
+    },
+    {
+      "qu_ref": "Q021-decomposition",
+      "represented_region": "D",
+      "path": "T06.anatomy.D",
+      "projected_under_view": true
+    },
+    {
+      "qu_ref": "Q021-ordering",
+      "represented_region": "O",
+      "path": "T06.anatomy.O",
+      "projected_under_view": true
+    }
+  ],
+  "admissible_realization_witnesses": [
+    {
+      "realization": "canonical-path",
+      "source_carrier": "NATURAL_IDENTITY",
+      "target_concept": "NATURAL_IDENTITY",
+      "target_recognition": "CANONICAL_ID",
+      "corresponds_to_transition": "T01"
+    },
+    {
+      "realization": "lexical-path",
+      "source_carrier": "natural identity",
+      "target_concept": "NATURAL_IDENTITY",
+      "target_recognition": "PUBLIC_LEXICAL_SIGNATURE",
+      "corresponds_to_transition": "T03"
+    }
+  ],
+  "load_bearing_projection": {
+    "boundary_roles": [
+      "input",
+      "concept"
+    ],
+    "target_concept": "NATURAL_IDENTITY"
+  },
+  "expected_mechanical_facts": {
+    "every_t06_qu_owned_by_projected_region": true,
+    "no_t06_qu_owned_by_declared_load_bearing_region": true,
+    "every_admissible_realization_has_same_target_concept": true,
+    "canonical_realization_matches_t01_source_carrier": true,
+    "lexical_realization_matches_t03_source_carrier": true
+  }
+}

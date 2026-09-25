@@ -1,0 +1,107 @@
+{
+  "claims": [
+    {
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "residuals": [
+        "source carrier",
+        "target recognition",
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "reason": "Under C_CONCEPT, both transitions map the input semantic content to the same concept classification, satisfying the load-bearing requirements while projecting differences in carrier and recognition.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "C_CONCEPT view authority"
+      ]
+    },
+    {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "TI",
+      "common_structure": [
+        "K",
+        "delta_tilde",
+        "B",
+        "source projection",
+        "target projection"
+      ],
+      "residuals": [
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "reason": "Both transitions share identical source/target projections and delta_tilde effects; decomposition differences are explicitly projected as non-load-bearing residuals under C_WORKER_EFFECT.",
+      "authority_used": [
+        "DTS 0.1 Section 8",
+        "C_WORKER_EFFECT view authority"
+      ]
+    },
+    {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_PROCESS",
+      "disposition": "REJECTED",
+      "common_structure": [
+        "K",
+        "delta_tilde",
+        "B"
+      ],
+      "residuals": [],
+      "qu_dependencies": [],
+      "reason": "Under C_PROCESS, decomposition (D) and ordering (O) are load-bearing. The transitions exhibit distinct decomposition topologies and ordering constraints, which act as structural breakers.",
+      "authority_used": [
+        "DTS 0.1 Section 6",
+        "C_PROCESS view authority"
+      ]
+    },
+    {
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CLASSIFICATION",
+      "disposition": "INCOMPLETE",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "residuals": [],
+      "qu_dependencies": [
+        "Q021-input",
+        "Q021-recognition"
+      ],
+      "reason": "T06 contains unresolved QU-bearing structure in its input and recognition roles. Under C_CLASSIFICATION, these roles are load-bearing, and the correspondence cannot be established without resolving the QU constraints.",
+      "authority_used": [
+        "DTS 0.1 Section 5",
+        "QU 0.1 clauses"
+      ]
+    }
+  ],
+  "discoveries": [
+    {
+      "kind": "Decomposition Topology Sensitivity",
+      "description": "Transition correspondence is highly sensitive to the C_PROCESS view when multiple valid factorizations exist for the same source/target pair.",
+      "status": "SUPPORTED"
+    },
+    {
+      "kind": "QU-bearing Transition Correspondence",
+      "description": "QU-bearing transitions prevent TI claims in load-bearing views until the admissible realization family is constrained.",
+      "status": "SUPPORTED"
+    }
+  ],
+  "self_audit": {
+    "same_endpoints_not_sufficient": true,
+    "ti_does_not_imply_nei_same": true,
+    "projected_qu_preserved_as_residual": true,
+    "used_only_packet": true
+  }
+}

@@ -159,6 +159,43 @@ QRC is not semantic authority and is not a semantic dependency of QU/NEI/DP. It 
 
 **Promotion gate:** fresh blind semantic success plus independently verified residual/overclaim discipline and no protocol-specific hidden token requirement.
 
+## DTS 0.1
+
+**State:** QUALIFIED at the exact DTS 0.1 candidate bytes by Experiment 026; expanded DTS-inclusive stack integration remains pending.
+
+**Dependencies:** current qualified Core 0.17 + Core 0.18; qualified QU 0.1 as the unresolved-transition substrate. NEI 0.4 is invoked only for identity-related non-claims. Discovery Protocols are not DTS truth authority.
+
+**Candidate:** `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`
+
+**Exact candidate SHA-256:** `9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad`
+
+**Qualification plan:** `qualification/DTS_0_1_QUALIFICATION_PLAN.md`
+
+**Normative claims under qualification:**
+- transitions relate ordinary IsoGraph source/target structures;
+- transition anatomy remains ordinary IsoGraph structure;
+- K / Delta- / Delta+ / Delta~ / B / D / O / E / Q are semantic roles, not a second substrate;
+- QU is mandatory semantics for unresolved load-bearing transition structure but need not be artificially instantiated for determinate claims;
+- multiple lawful decompositions may coexist;
+- TI is view-scoped structural correspondence with explicit load-bearing/projected regions, residuals and QU dependencies;
+- same endpoints, same mechanism labels, same decomposition, same cost, or TI itself do not establish natural identity;
+- mechanism and analysis profiles remain separately versioned.
+
+**Explicit non-claims:**
+- no canonical decomposition;
+- no universal/existential quantification over every admissible decomposition family in DTS 0.1;
+- no DPO or sequential execution ontology in base semantics;
+- no cost/optimization semantics;
+- no invariant/TSS vocabulary;
+- no NEI SAME from TI;
+- no equality of actual QU realizations from QU-bearing TI.
+
+**Development evidence:** Experiments 020–025. Development evidence informs holdout design but is excluded from the fresh cold qualification packet.
+
+**Promotion gate:** all 20 fresh DTS controls, deterministic preflight, dependency closure, and one independent promotion verification must pass with no hidden-output-contract defect.
+
+**Qualification result:** 20/20 fresh controls PASS; formal `QUALIFIES`; independent verifier `SUPPORT_PROMOTION`; authority record `qualification/DTS_0_1_QUALIFICATION.md`.
+
 ## Integrated stack
 
 **State:** QUALIFIED for the current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition by Experiment 019 (14/14 PASS, zero mismatches).
@@ -193,6 +230,7 @@ The plan has been executed.
 4. Discovery Protocols 0.1-0.4 cumulative module — qualified through the cumulative evidence chain ending in the fresh corrected Experiment 014 pass.
 5. Historical integrated module stack — qualified for the Experiment 015 exercised composition.
 6. Current integrated semantic stack — qualified by Experiment 019 for Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6.
+7. DTS 0.1 base semantics — qualified by Experiment 026 at the exact candidate hash; expanded DTS-inclusive integration remains a separate burden.
 
 Historical failed runs (009, 010, 011, 012) remain immutable evidence and are not rescored.
 

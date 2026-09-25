@@ -73,9 +73,60 @@ Successor qualification:
 
 DP remains discovery/search guidance and does not become semantic proof authority.
 
+### Detailed Transition System 0.1
+
+Artifact:
+
+`extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`
+
+SHA-256:
+
+`9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad`
+
+Native vocabulary SHA-256:
+
+- `extensions/dts/DTS_NATIVE_VOCAB_0_1.md`: `fe1a65922186232524c07f4e8b6a29fecb3e8dfcedf9de678c6678e8226986a6`;
+- `extensions/dts/DTS_VOCAB_0_1.isg`: `ac3ff97f0a22c38628b5ae05a9471a9df1bbc83833c11a16f6ac9aad5ea9f2fb`.
+
+Qualification evidence:
+
+- Experiment 026 cold qualification run `36190237108`, 20/20 PASS, formal `QUALIFIES`;
+- Experiment 026 independent promotion verifier run `36190514681`, verdict `SUPPORT_PROMOTION`;
+- `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`;
+- `qualification/DTS_0_1_QUALIFICATION.md`.
+
+DTS 0.1 is a separately versioned qualified extension. It does not become Core. TI remains scoped structural correspondence and does not imply NEI `SAME`, mechanism identity, canonical decomposition, or equality of actual QU realizations.
+
 ## Integrated current-stack qualification
 
-The current composition:
+The current expanded composition:
+
+```text
+Core 0.17 + Core 0.18
++ QU 0.1
++ NEI 0.4
++ DP 0.1–0.6
++ DTS 0.1
+```
+
+passed Experiment 027:
+
+- frozen SHA: `c53856f840dc1c9ee29bb55b509f6de3f6926179`;
+- workflow run: `36191443384`;
+- 18 / 18 cases PASS;
+- zero mismatches;
+- all scoring guards true;
+- module assessment: `SUPPORTED`;
+- formal disposition: `QUALIFIES`;
+- packet SHA-256: `1ab972c5edf76c2644f5bccd4f15bed9175a5babca32c0d549bb6363e0b3e2cd`;
+- report SHA-256: `37af0c0330879f940c75eab39fb245bb4924292598015f138f70093141ee33c8`;
+- authority record: `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`.
+
+This establishes compatibility for the exercised expanded composition. It is not a universal completeness claim.
+
+### Historical pre-DTS integration
+
+Experiment 019 remains the immutable integration record for:
 
 ```text
 Core 0.17 + Core 0.18
@@ -84,18 +135,7 @@ Core 0.17 + Core 0.18
 + DP 0.1–0.6
 ```
 
-passed Experiment 019:
-
-- frozen SHA: `7609a2d8a0a167d9674904e045fa41374df07f7c`;
-- workflow run: `36178254627`;
-- 14 / 14 cases PASS;
-- zero mismatches;
-- formal disposition: `QUALIFIES`;
-- packet SHA-256: `b44cbfa5d2fdf30deb5ca58506020154245e90e65e9f82ff65832f8952787f9e`;
-- report SHA-256: `5d24ba9bf8cc6d4a83ca69a911fe0feaa81f6831743b6f5679d0e4a08714aa4c`;
-- authority record: `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`.
-
-This establishes compatibility for the exercised composition. It is not a universal completeness claim.
+Its authority record remains `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`. Experiment 027 extends current integration routing; it does not rewrite Experiment 019 evidence.
 
 ## Qualified infrastructure
 
@@ -106,9 +146,6 @@ QRC 0.1 remains qualified qualification infrastructure:
 
 QRC is not semantic domain authority.
 
-## Active unqualified extension work
-
-DTS 0.1 remains unqualified research until its own dependency-closed qualification campaign passes.
 
 ## Revision rule
 

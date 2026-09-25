@@ -1,0 +1,89 @@
+{
+  "experiment": "021",
+  "disposition": "DOES_NOT_PASS",
+  "required_claims": {
+    "pass": false,
+    "failed": [
+      "T01|T02|C_CLASSIFICATION",
+      "T01|T03|C_CLASSIFICATION",
+      "T04A|T05|C_WORKER_EFFECT",
+      "T01|T06|C_CONCEPT"
+    ]
+  },
+  "guards": {
+    "no_duplicate_claim_keys": true,
+    "all_claims_well_formed": true,
+    "required_self_audit": true
+  },
+  "duplicate_claim_keys": [],
+  "malformed_claims": [],
+  "self_audit_mismatches": [],
+  "claim_results": [
+    {
+      "key": "T01|T02|C_CLASSIFICATION",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "claim",
+          "expected": "T01|T02|C_CLASSIFICATION",
+          "actual": null
+        }
+      ]
+    },
+    {
+      "key": "T01|T03|C_CONCEPT",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "key": "T01|T03|C_CLASSIFICATION",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "claim",
+          "expected": "T01|T03|C_CLASSIFICATION",
+          "actual": null
+        }
+      ]
+    },
+    {
+      "key": "T04A|T04B|C_WORKER_EFFECT",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "key": "T04A|T04B|C_PROCESS",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "key": "T04A|T05|C_WORKER_EFFECT",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "claim",
+          "expected": "T04A|T05|C_WORKER_EFFECT",
+          "actual": null
+        }
+      ]
+    },
+    {
+      "key": "T01|T06|C_CONCEPT",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "claim",
+          "expected": "T01|T06|C_CONCEPT",
+          "actual": null
+        }
+      ]
+    },
+    {
+      "key": "T01|T06|C_CLASSIFICATION",
+      "pass": true,
+      "mismatches": []
+    }
+  ],
+  "total_claims_reported": 4,
+  "discoveries_reported": 2
+}

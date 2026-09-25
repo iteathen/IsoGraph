@@ -231,6 +231,21 @@ jobs:
             git diff-tree --check --root -r HEAD -- "${non_markdown[@]}"
           fi
 
+      - name: Verify DTS 0.1 deterministic base controls
+        run: node tools/dts/test-dts-base.mjs
+
+      - name: Experiment 020 DTS reconstruction
+        run: node experiments/020/test-reconstruction.mjs
+
+      - name: Experiment 022 DTS decomposition controls
+        run: node experiments/022/test-decomposition.mjs
+
+      - name: Experiment 023 barrier rendering
+        run: node experiments/023/test-barriers.mjs
+
+      - name: Experiment 025 QU projection ownership
+        run: node experiments/025/test-qu-projection.mjs
+
       - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs

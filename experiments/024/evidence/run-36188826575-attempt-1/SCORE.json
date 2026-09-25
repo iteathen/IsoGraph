@@ -1,0 +1,83 @@
+{
+  "experiment": "024",
+  "disposition": "DOES_NOT_PASS",
+  "required_requests": {
+    "pass": false,
+    "failed": [
+      "R05",
+      "R06",
+      "R07"
+    ]
+  },
+  "guards": {
+    "exact_claim_count": true,
+    "no_duplicates": true,
+    "no_unexpected": true,
+    "all_claims_well_formed": true,
+    "public_contract_self_audit": true
+  },
+  "duplicate_request_ids": [],
+  "unexpected_request_ids": [],
+  "malformed_claims": [],
+  "self_audit_errors": [],
+  "request_results": [
+    {
+      "request_id": "R01",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "request_id": "R02",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "request_id": "R03",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "request_id": "R04",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "request_id": "R05",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "breaker",
+          "expected": "concrete load-bearing breaker",
+          "actual": "D"
+        }
+      ]
+    },
+    {
+      "request_id": "R06",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "breaker",
+          "expected": "concrete load-bearing breaker",
+          "actual": "K"
+        }
+      ]
+    },
+    {
+      "request_id": "R07",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "disposition",
+          "expected": "TI",
+          "actual": "INCOMPLETE"
+        }
+      ]
+    },
+    {
+      "request_id": "R08",
+      "pass": true,
+      "mismatches": []
+    }
+  ]
+}

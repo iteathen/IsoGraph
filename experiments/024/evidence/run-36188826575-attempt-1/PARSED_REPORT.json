@@ -1,0 +1,211 @@
+{
+  "claims": [
+    {
+      "request_id": "R01",
+      "left": "T01",
+      "right": "T02",
+      "view": "C_CLASSIFICATION",
+      "disposition": "TI",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "B.recognition-role",
+        "target.concept",
+        "target.recognition"
+      ],
+      "residuals": [
+        "source carrier representation",
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "breaker": null,
+      "reason": "Under C_CLASSIFICATION, load-bearing regions (B and target) correspond; carrier and decomposition are projected as residuals.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R02",
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "residuals": [
+        "source carrier representation",
+        "target recognition",
+        "D",
+        "O",
+        "non-concept delta detail"
+      ],
+      "qu_dependencies": [],
+      "breaker": null,
+      "reason": "Under C_CONCEPT, load-bearing regions (B.input, B.concept, target.concept) correspond.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R03",
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CLASSIFICATION",
+      "disposition": "REJECTED",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "residuals": [
+        "source carrier representation",
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "breaker": "target.recognition",
+      "reason": "T01 target recognition is CANONICAL_ID; T03 target recognition is PUBLIC_LEXICAL_SIGNATURE. These do not correspond under C_CLASSIFICATION.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R04",
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "TI",
+      "common_structure": [
+        "K",
+        "delta_tilde",
+        "B",
+        "source projection",
+        "target projection"
+      ],
+      "residuals": [
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "breaker": null,
+      "reason": "Under C_WORKER_EFFECT, decomposition and order are projected; K, delta_tilde, and B match.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R05",
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_PROCESS",
+      "disposition": "REJECTED",
+      "common_structure": [
+        "K",
+        "delta_tilde",
+        "B"
+      ],
+      "residuals": [],
+      "qu_dependencies": [],
+      "breaker": "D",
+      "reason": "Under C_PROCESS, decomposition (D) is load-bearing. T04A and T04B have distinct, non-isomorphic decomposition structures.",
+      "authority_used": [
+        "DTS 0.1 Section 6",
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R06",
+      "left": "T04A",
+      "right": "T05",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "REJECTED",
+      "common_structure": [
+        "B"
+      ],
+      "residuals": [
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [],
+      "breaker": "K",
+      "reason": "K regions (worker_owner/parent_q vs configuration_owner/worker_count) do not correspond.",
+      "authority_used": [
+        "DTS 0.1 Section 7",
+        "VIEWS.json"
+      ]
+    },
+    {
+      "request_id": "R07",
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CONCEPT",
+      "disposition": "INCOMPLETE",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "residuals": [
+        "source carrier representation",
+        "target recognition",
+        "D",
+        "O",
+        "non-concept delta detail"
+      ],
+      "qu_dependencies": [
+        "Q021-input"
+      ],
+      "breaker": null,
+      "reason": "T06 contains unresolved QU regions (Q021-input) that are load-bearing for the concept classification; completeness is not established.",
+      "authority_used": [
+        "DTS 0.1 Section 5",
+        "DTS 0.1 Section 7"
+      ]
+    },
+    {
+      "request_id": "R08",
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CLASSIFICATION",
+      "disposition": "INCOMPLETE",
+      "common_structure": [
+        "B.input-role",
+        "B.concept-role",
+        "B.recognition-role",
+        "target.concept",
+        "target.recognition"
+      ],
+      "residuals": [
+        "source carrier representation",
+        "D",
+        "O"
+      ],
+      "qu_dependencies": [
+        "Q021-input",
+        "Q021-recognition"
+      ],
+      "breaker": null,
+      "reason": "T06 contains unresolved QU regions (Q021-input, Q021-recognition) that are load-bearing for the classification view.",
+      "authority_used": [
+        "DTS 0.1 Section 5",
+        "DTS 0.1 Section 7"
+      ]
+    }
+  ],
+  "self_audit": {
+    "answered_every_public_request": true,
+    "same_endpoints_not_sufficient": true,
+    "ti_does_not_imply_nei_same": true,
+    "projected_qu_preserved_as_residual": true,
+    "used_only_packet": true
+  }
+}

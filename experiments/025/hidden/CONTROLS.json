@@ -1,0 +1,31 @@
+{
+  "experiment": "025",
+  "required_qu_refs": [
+    "Q021-input",
+    "Q021-recognition",
+    "Q021-decomposition",
+    "Q021-ordering"
+  ],
+  "allowed_status": [
+    "PROJECTION_JUSTIFIED",
+    "LOAD_BEARING_UNRESOLVED",
+    "INCOMPLETE_AUTHORITY",
+    "OTHER"
+  ],
+  "allowed_ti_consequence": [
+    "SUPPORTS_TI",
+    "BLOCKS_TI",
+    "DOES_NOT_DETERMINE_TI"
+  ],
+  "required_realizations": [
+    "canonical-path",
+    "lexical-path"
+  ],
+  "minimum_falsifiers": 1,
+  "required_self_audit": {
+    "did_not_choose_one_realization_as_actual": true,
+    "did_not_treat_projected_qu_as_erased": true,
+    "did_not_infer_nei_same": true,
+    "used_only_packet": true
+  }
+}

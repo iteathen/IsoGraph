@@ -1,0 +1,93 @@
+name: Experiment 025 R07 QU projection audit
+
+on:
+  push:
+    branches:
+      - research/dts-0.1
+    paths:
+      - experiments/025/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-025-qu-projection
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node experiments/025/test-qu-projection.mjs
+          node --check experiments/025/tools/run-exp025-cold.mjs
+          node --check experiments/025/tools/score-exp025.mjs
+          node experiments/025/tools/test-score-exp025.mjs
+          rm -rf out/exp025
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/025/tools/run-exp025-cold.mjs
+
+      - name: Execute isolated audit call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/025/tools/run-exp025-cold.mjs
+
+      - name: Score methodology
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp025/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp025/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/025/tools/score-exp025.mjs
+
+      - name: Persist evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/025/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp025/$f" ] && cp "out/exp025/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 025 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/dts-0.1
+          fi
+
+      - name: Enforce methodology controls
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp025/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp025/SCORE.json','utf8'));console.log(JSON.stringify(s,null,2));if(s.disposition!=='PASSES')process.exit(1)"

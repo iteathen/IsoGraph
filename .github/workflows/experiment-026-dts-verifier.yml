@@ -1,0 +1,88 @@
+name: Experiment 026 DTS promotion verifier
+
+on:
+  push:
+    branches:
+      - research/dts-0.1
+    paths:
+      - experiments/026/VERIFY.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-026-dts-promotion-verifier
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+
+jobs:
+  verify-promotion:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic verifier preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f experiments/026/evidence/run-36190237108-attempt-1/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('experiments/026/evidence/run-36190237108-attempt-1/SCORE.json','utf8'));if(s.disposition!=='QUALIFIES')throw new Error('decoder does not qualify DTS')"
+          node --check experiments/026/tools/run-exp026-verifier.mjs
+          node --check experiments/026/tools/validate-exp026-verifier.mjs
+          rm -rf out/exp026-verifier
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/026/tools/run-exp026-verifier.mjs
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('out/exp026-verifier/DRY_RUN.json','utf8'));const p=d.input_manifest.map(x=>x.path);for(const f of ['hidden/','ASSERTIONS','experiments/020','experiments/021','experiments/022','experiments/023','experiments/024','experiments/025'])if(p.some(x=>x.includes(f)))throw new Error('forbidden verifier input '+f)"
+
+      - name: Execute independent promotion verifier
+        id: verifier
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/026/tools/run-exp026-verifier.mjs
+
+      - name: Validate verifier report
+        id: validate
+        if: always() && steps.verifier.outcome == 'success'
+        continue-on-error: true
+        run: node experiments/026/tools/validate-exp026-verifier.mjs
+
+      - name: Persist verifier evidence
+        if: always()
+        env:
+          VERIFIER_OUTCOME: ${{ steps.verifier.outcome }}
+          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/026/verifier/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json VERIFIER_RAW.txt VERIFIER_REPORT.json VALIDATION.json; do
+            [ -f "out/exp026-verifier/$f" ] && cp "out/exp026-verifier/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","verifier_outcome":"%s","validate_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$VERIFIER_OUTCOME" "$VALIDATE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 026 independent verifier run ${GITHUB_RUN_ID}"
+            git push origin HEAD:research/dts-0.1
+          fi
+
+      - name: Enforce verifier completion
+        if: always()
+        env:
+          VERIFIER_OUTCOME: ${{ steps.verifier.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$VERIFIER_OUTCOME" = "success"
+          test -f out/exp026-verifier/VALIDATION.json
+          node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('out/exp026-verifier/VALIDATION.json','utf8'));if(v.status!=='VALID')process.exit(1)"

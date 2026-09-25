@@ -1,0 +1,54 @@
+{
+  "assessment": {
+    "status": "PROJECTION_JUSTIFIED",
+    "qu_regions": [
+      {
+        "qu_ref": "Q021-input",
+        "owning_region": "source carrier representation",
+        "view_treatment": "PROJECTED",
+        "reason": "The view C_CONCEPT explicitly projects source carrier representation; the QU ownership witness confirms this region is the host for Q021-input."
+      },
+      {
+        "qu_ref": "Q021-recognition",
+        "owning_region": "target recognition",
+        "view_treatment": "PROJECTED",
+        "reason": "Target recognition is explicitly projected under C_CONCEPT; the QU witness maps this to the T06.target.recognition path."
+      },
+      {
+        "qu_ref": "Q021-decomposition",
+        "owning_region": "D",
+        "view_treatment": "PROJECTED",
+        "reason": "D is explicitly projected under C_CONCEPT; the QU witness maps this to T06.anatomy.D."
+      },
+      {
+        "qu_ref": "Q021-ordering",
+        "owning_region": "O",
+        "view_treatment": "PROJECTED",
+        "reason": "O is explicitly projected under C_CONCEPT; the QU witness maps this to T06.anatomy.O."
+      }
+    ],
+    "considered_realizations": [
+      "canonical-path",
+      "lexical-path"
+    ],
+    "can_any_admissible_realization_change_load_bearing_projection": false,
+    "ti_consequence": "SUPPORTS_TI",
+    "residuals": [
+      "source carrier representation",
+      "target recognition",
+      "D",
+      "O",
+      "non-concept delta detail"
+    ],
+    "falsifiers": [
+      "If any load-bearing role (B.input-role, B.concept-role, or target.concept) were dependent on the specific realization of D or O, the projection would be invalid under QU 0.1."
+    ],
+    "reason": "The C_CONCEPT view defines a clear boundary between load-bearing roles and projected residuals. The QU witness confirms that all QU-bearing regions in T06 fall strictly within the projected set. Since the target.concept is invariant across all admissible realizations (NATURAL_IDENTITY), the load-bearing claim remains stable despite the unresolved QU structure."
+  },
+  "self_audit": {
+    "did_not_choose_one_realization_as_actual": true,
+    "did_not_treat_projected_qu_as_erased": true,
+    "did_not_infer_nei_same": true,
+    "used_only_packet": true
+  }
+}
