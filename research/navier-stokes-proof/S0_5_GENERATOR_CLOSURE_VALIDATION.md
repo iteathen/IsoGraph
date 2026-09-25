@@ -33,18 +33,17 @@ The validation explicitly preserves two corrected source-order facts:
 
 Whole-space transport order is also source-faithful:
 
-[
-	ext{viscosity-one candidate}
-	o
-	ext{finite-energy closure}
-	o
-	ext{viscosity-one uniqueness obstruction}
-	o
-	ext{viscosity scaling}
-	o
-	ext{all-}
-u>0	ext{ R3 theorem}.
-]
+\[
+\text{viscosity-one candidate}
+\to
+\text{finite-energy closure}
+\to
+\text{viscosity-one uniqueness obstruction}
+\to
+\text{viscosity scaling}
+\to
+\text{all-}\nu>0\text{ R3 theorem}.
+\]
 
 The periodic branch begins from the already transported whole-space theorem and then uses delayed compression/periodization before the periodic obstruction.
 
