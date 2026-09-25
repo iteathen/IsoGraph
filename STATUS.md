@@ -235,8 +235,9 @@ Current branch authority: `research/dts-0.1`.
 
 - DTS base semantics/tooling: implemented; deterministic controls PASS.
 - Experiment 020 source-anchored reconstruction: PASS.
-- Experiment 021 first TI discovery: first real semantic report obtained in run `36188362082`; immutable scorer disposition `DOES_NOT_PASS` because four hidden-required comparisons were not publicly required. All four emitted required claims were correct and all methodology guards passed. Fresh corrected public comparison-contract campaign required.
+- Experiment 021 first TI discovery: real semantic report obtained; immutable `DOES_NOT_PASS` due hidden coverage contract, with all emitted claims correct.
+- Experiment 024 corrected TI comparison contract: all 8 public requests answered. Seven semantic dispositions align with the intended controls; R05/R06 scorer failures are undisclosed breaker-string length constraints despite correct REJECTED dispositions. One substantive discrepancy remains at R07 (QU-bearing T01/T06 under C_CONCEPT: expected TI vs decoder INCOMPLETE).
 - Experiment 022 decomposition semantics: PASS; pinned view semantics are sufficient for DTS 0.1's current decomposition scope.
 - Experiment 023 interpretation-barrier discovery: PARTIAL with methodology PASS; a candidate common structural core was found, split across three semantic families, with no source-spec refactor justified.
-- Next critical burden: run a fresh corrected TI campaign that publicly enumerates the comparison requests while keeping expected dispositions hidden.
+- Next critical burden: isolate and resolve the R07 QU projection/load-bearing discrepancy without changing DTS or the oracle prematurely.
 - DTS remains unqualified and outside the current qualified integrated semantic stack.

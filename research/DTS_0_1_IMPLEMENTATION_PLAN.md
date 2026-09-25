@@ -257,7 +257,7 @@ Current state:
 - Phase 2 — deterministic DTS tooling: **COMPLETE**;
 - Phase 3 — real source-anchored transition corpus: **COMPLETE**;
 - Phase 4 — transition reconstruction: **COMPLETE**;
-- Phase 5 — first TI campaign: **PARTIAL; Experiment 021 produced a real report but formally DOES_NOT_PASS due a public-output-contract/hidden-coverage mismatch; fresh corrected campaign required**;
+- Phase 5 — first TI campaign: **PARTIAL; Experiment 024 corrected coverage and isolated one substantive QU/view discrepancy (R07) after separating two scorer-contract false negatives**;
 - Phase 6 — decomposition experiment: **COMPLETE**;
 - Phase 7 — interpretation-barrier experiment: **COMPLETE**;
 - Phase 8 — Transition Structural Signatures: deferred until real TI evidence exists;
@@ -267,6 +267,8 @@ Experiment 021 eventually produced a semantic report in workflow run `3618836208
 
 Its immutable scorer disposition is `DOES_NOT_PASS`, but the failure is a public-output-contract defect: all four emitted required claims matched their expected dispositions, while four additional hidden-required comparisons were omitted because the public prompt allowed the decoder to select only pairs it considered materially informative.
 
-Create a fresh corrected campaign with the comparison requests publicly enumerated and expected dispositions still hidden. Do not rewrite Experiment 021 or alter DTS semantics to satisfy the old hidden coverage requirement.
+Experiment 024 supplied the corrected public comparison contract. It returned all eight claims and matched seven of eight expected semantic dispositions. Two scorer failures (R05/R06) were caused solely by an undisclosed breaker-string length requirement despite correct REJECTED dispositions. One substantive disagreement remains: R07, the QU-bearing T01/T06 C_CONCEPT comparison.
 
-Do not spend DTS qualification resources until that corrected TI campaign closes the Phase 5 burden.
+Run a focused QU projection/region-ownership audit before deciding whether R07 should be TI or INCOMPLETE. Do not rewrite the Experiment 024 result, its oracle, or DTS semantics by fiat.
+
+Do not spend DTS qualification resources until that R07 discrepancy is resolved and the Phase 5 burden closes.
