@@ -29,21 +29,24 @@ Current qualified extension/module authority is recorded in:
 
 - `qualification/QUALIFIED_MODULES_2026-09-25.md`
 
-The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded. The current manifest routes Core 0.18, QU 0.1, NEI 0.4, DP 0.1–0.6, and the Experiment 019 integrated composition at their exact qualified revisions.
+The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded. The current manifest routes Core 0.18, QU 0.1, NEI 0.4, DP 0.1–0.6, and DTS 0.1 at their exact qualified revisions. Experiment 019 remains the integration authority for the pre-DTS composition until a fresh DTS-inclusive integrated holdout passes.
 
 Current semantic extensions/modules include:
 
 - Quantifiable Unknown (QU) 0.1;
 - Natural Entropic Identity (NEI) 0.4;
-- Discovery Protocols 0.1 through 0.6 as one cumulative current module.
+- Discovery Protocols 0.1 through 0.6 as one cumulative current module;
+- Detailed Transition System (DTS) 0.1.
 
 The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
 
-Qualified extensions remain separately versioned dependencies. Qualification does **not** silently import QU, NEI, or Discovery Protocol semantics into Core.
+Qualified extensions remain separately versioned dependencies. Qualification does **not** silently import QU, NEI, Discovery Protocol, or DTS semantics into Core.
 
-### Active unqualified successor candidates
+### Qualified DTS 0.1 authority
 
-Core 0.18 and Discovery Protocols through 0.6 have completed qualification. `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is the active unqualified transition extension candidate; its deterministic base is implemented, but DTS itself is not qualified.
+`extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is qualified at its exact tested bytes by Experiment 026 and `qualification/DTS_0_1_QUALIFICATION.md`.
+
+The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The expanded composition including DTS is not yet integration-qualified.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
@@ -220,8 +223,8 @@ The next semantic qualification burden is:
 
 1. Core 0.18 qualification is complete (`QUALIFIES`, Experiment 017); preserve its exact qualified revision;
 2. DP 0.5/0.6 qualification is complete (`QUALIFIES`, Experiment 018); preserve its exact successor revisions;
-3. current-stack integration qualification is complete (`QUALIFIES`, Experiment 019); preserve its exact revision and scope;
-4. proceed with DTS 0.1 development/qualification against this accepted authority stack;
+3. DTS 0.1 module qualification is complete (`QUALIFIED`, Experiment 026); preserve its exact candidate and vocabulary revisions;
+4. run a fresh integrated current-stack holdout including DTS before claiming the expanded composition is integration-qualified;
 5. preserve every historical qualification disposition at its exact revision.
 
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
@@ -240,5 +243,6 @@ Current branch authority: `research/dts-0.1`.
 - Experiment 025 QU projection audit: PASS; no preferred hidden answer. All four T06 QU regions are C_CONCEPT-projected, no admissible realization changes the load-bearing projection, and the cold audit returned PROJECTION_JUSTIFIED / SUPPORTS_TI. Phase 5 TI development burden is complete.
 - Experiment 022 decomposition semantics: PASS; pinned view semantics are sufficient for DTS 0.1's current decomposition scope.
 - Experiment 023 interpretation-barrier discovery: PARTIAL with methodology PASS; a candidate common structural core was found, split across three semantic families, with no source-spec refactor justified.
-- Next critical burden: prepare the fresh DTS 0.1 qualification campaign. Transition Structural Signatures remain deferred successor/profile research and do not block DTS 0.1.
-- DTS remains unqualified and outside the current qualified integrated semantic stack.
+- Experiment 026 DTS qualification: 20/20 fresh controls PASS; formal scorer disposition `QUALIFIES`; independent promotion verifier verdict `SUPPORT_PROMOTION`.
+- DTS 0.1 is module-qualified at SHA-256 `9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad`.
+- Next critical burden: fresh integrated current-stack qualification including DTS. Transition Structural Signatures remain deferred successor/profile research and do not block DTS integration.
