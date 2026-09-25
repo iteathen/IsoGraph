@@ -25,17 +25,15 @@ That manifest qualifies the exact tested revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1-0.4 cumulative module.
+- Discovery Protocols 0.1-0.4 historical qualified baseline, extended by qualified DP 0.5/0.6 through `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md`.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-### Unqualified successor candidates
+### Successor status
 
-The following revisions are unqualified successor material and are **not** current authority until separately qualified and promoted:
-
-- `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md` — observation-first discrepancy handling and separation of qualification from structural discovery.
+Core 0.18 and Discovery Protocols through 0.6 are qualified at their exact tested revisions. DTS 0.1 remains unqualified successor research until its own qualification burden is discharged.
 
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
 
