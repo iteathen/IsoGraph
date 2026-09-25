@@ -237,6 +237,9 @@ jobs:
       - name: Experiment 020 DTS reconstruction
         run: node experiments/020/test-reconstruction.mjs
 
+      - name: Experiment 022 DTS decomposition controls
+        run: node experiments/022/test-decomposition.mjs
+
       - name: Validate transient Actions storage policy
         run: |
           node tools/test-github-actions-storage-policy.mjs

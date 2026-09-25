@@ -1,0 +1,66 @@
+{
+  "experiment": "022",
+  "status": "development evidence; not qualification",
+  "source": {
+    "transition_corpus": "experiments/021/TRANSITIONS.json",
+    "views": "experiments/021/VIEWS.json",
+    "left": "T04A",
+    "right": "T04B"
+  },
+  "decomposition_authority": {
+    "source_blob": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+    "source_path": "components/isometric/execution/worker.mjs",
+    "source_symbol": "workerStep7x6",
+    "rule": "T04B is a contiguous order-preserving coarsening of T04A; no source operation is reordered or discarded.",
+    "grouping": [
+      {
+        "coarse": "publish-parent-transaction",
+        "fine": [
+          "install-edge-0",
+          "install-edge-1",
+          "publish-phase"
+        ]
+      },
+      {
+        "coarse": "retain-first-continuation",
+        "fine": [
+          "claim-first-child",
+          "release-parent"
+        ]
+      },
+      {
+        "coarse": "reset-worker",
+        "fine": [
+          "reset-worker"
+        ]
+      }
+    ]
+  },
+  "frozen_views": {
+    "effect": "C_WORKER_EFFECT",
+    "process": "C_PROCESS"
+  },
+  "expected_structural_facts": {
+    "same_source": true,
+    "same_target": true,
+    "same_effect_regions": [
+      "K",
+      "delta_minus",
+      "delta_plus",
+      "delta_tilde",
+      "B"
+    ],
+    "different_regions": [
+      "D",
+      "O"
+    ],
+    "effect_view_projects": [
+      "D",
+      "O"
+    ],
+    "process_view_load_bearing": [
+      "D",
+      "O"
+    ]
+  }
+}
