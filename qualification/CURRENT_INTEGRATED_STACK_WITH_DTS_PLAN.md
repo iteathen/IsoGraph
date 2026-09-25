@@ -1,6 +1,6 @@
 # Current Integrated Stack with DTS — Qualification Plan
 
-**Status:** frozen qualification design; no semantic call authorized yet  
+**Status:** complete — expanded DTS-inclusive composition QUALIFIES by Experiment 027  
 **Experiment:** 027  
 **Scope:** qualified Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1
 
@@ -77,3 +77,24 @@ The expanded composition may be recorded as integration-qualified only when:
 - historical Experiment 019 and 026 dispositions remain unchanged.
 
 A failing frozen semantic report is preserved unchanged and classified by failure owner before any repair.
+
+## Qualification outcome
+
+The frozen campaign completed without semantic or serializer repair.
+
+```text
+workflow run:             36191443384
+frozen source SHA:        c53856f840dc1c9ee29bb55b509f6de3f6926179
+fresh cases:              18 / 18 PASS
+mismatches:               0
+scoring guards:           all true
+module assessment:        SUPPORTED
+formal disposition:       QUALIFIES
+provider attempts:        1
+```
+
+Final review: `experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md`.
+
+Current integration authority: `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`.
+
+Experiment 019 remains the immutable pre-DTS integration authority record.
