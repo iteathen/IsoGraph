@@ -1,16 +1,31 @@
 # Experiment 023 provider/model decision
 
-Experiment 021 encountered repeated HTTP 503 provider failures on `gemini-3.5-flash` and `gemini-3.8-flash`.
+**Status:** transport/provider decision only; no semantic change.
 
-The provider model-discovery record in `experiments/021/provider/MODELS.json` currently lists `models/gemini-2.5-pro` as a non-preview `generateContent` model with:
+Initial attempt used `gemini-2.5-pro` and returned HTTP 404 before any semantic report.
 
-- input token limit: 1,048,576;
-- output token limit: 65,536.
+A dedicated provider capability probe then tested currently advertised text models using a tiny non-semantic prompt. The persisted result is:
 
-Experiment 023 therefore pins its first cold discovery attempt to:
+`experiments/023/provider/PROBE.json`
 
-`gemini-2.5-pro`
+Probe result:
 
-This is a transport/model choice only. It does not alter the barrier corpus, Discovery Protocol semantics, or evaluation controls.
+- `gemini-pro-latest` -> HTTP 429 quota;
+- `gemini-2.5-flash` -> HTTP 404, retired for new users;
+- `gemini-3.1-pro-preview` -> HTTP 429 quota;
+- `gemini-3.6-flash` -> HTTP 200.
 
-If the provider fails before returning a report, the failure is infrastructure evidence and carries no discovery disposition.
+Experiment 023 is therefore repinned to:
+
+`gemini-3.6-flash`
+
+The following remain unchanged:
+
+- source barrier corpus;
+- native `.isg` rendering;
+- focused Discovery authority;
+- public prompt;
+- hidden methodology controls;
+- deterministic scorer.
+
+The model change supplies no discovery evidence by itself.
