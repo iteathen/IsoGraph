@@ -74,7 +74,7 @@ Required deterministic controls:
 
 Add the deterministic test to the repository `verify` workflow.
 
-## Phase 3 — real transition development corpus
+## Phase 3 — real transition development corpus — COMPLETE
 
 Phase 2 passes on the DTS branch. Create the next unused experiment directory: `experiments/020/` at this reconciliation point.
 
@@ -88,7 +88,7 @@ Prefer an additional non-program domain if exact semantics can be represented wi
 
 This corpus is development evidence, not qualification.
 
-## Phase 4 — transition reconstruction
+## Phase 4 — transition reconstruction — COMPLETE
 
 For sufficiently specified cases, demonstrate that:
 
@@ -102,6 +102,16 @@ source state
 faithfully accounts for the target-state evidence under the declared claim.
 
 If the DTS role factorization repeatedly loses source information or manufactures closure, revise DTS before TI work continues.
+
+## Experiment 020 reconstruction result
+
+Phase 3/4 development evidence is frozen in `experiments/020/`.
+
+- source-anchored cases: 3;
+- deterministic reconstruction: PASS;
+- repository Verify run: `36180968439`;
+- source anchors include immutable Git blob IDs;
+- no TI claim was asserted in Experiment 020.
 
 ## Phase 5 — first TI campaign
 
