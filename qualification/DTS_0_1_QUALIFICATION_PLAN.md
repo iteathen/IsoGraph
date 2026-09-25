@@ -1,6 +1,6 @@
 # DTS 0.1 Qualification Plan
 
-**Status:** frozen qualification design; semantic run not yet authorized  
+**Status:** completed; DTS 0.1 QUALIFIED by Experiment 026  
 **Candidate:** `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md`  
 **Candidate Git blob:** `04170c1faa26ca8b76e211a0491ce76e358d111b`  
 **Candidate SHA-256:** `9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad`  
@@ -144,3 +144,22 @@ DTS 0.1 may be promoted only when:
 - exact candidate/vocabulary/provenance records are frozen.
 
 A semantic change after the cold run creates a new DTS candidate revision and a new affected qualification burden.
+
+## Qualification outcome
+
+The frozen campaign completed without semantic or contract repair.
+
+```text
+cold decoder run:          36190237108
+cold decoder disposition:  QUALIFIES
+fresh cases:               20 / 20 PASS
+independent verifier run:  36190514681
+verifier verdict:          SUPPORT_PROMOTION
+final module disposition:  QUALIFIED
+```
+
+Authority record: `qualification/DTS_0_1_QUALIFICATION.md`.
+
+Final review: `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`.
+
+The expanded current-stack composition including DTS remains a separate integration burden.
