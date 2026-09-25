@@ -1,0 +1,85 @@
+{
+  "experiment": "024",
+  "required_requests": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08"
+  ],
+  "expected": {
+    "R01": {
+      "left": "T01",
+      "right": "T02",
+      "view": "C_CLASSIFICATION",
+      "disposition": "TI",
+      "requires_residual": false,
+      "requires_qu": false
+    },
+    "R02": {
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "requires_residual": true,
+      "requires_qu": false
+    },
+    "R03": {
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CLASSIFICATION",
+      "disposition": "REJECTED",
+      "requires_residual": false,
+      "requires_qu": false
+    },
+    "R04": {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "TI",
+      "requires_residual": true,
+      "requires_qu": false
+    },
+    "R05": {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_PROCESS",
+      "disposition": "REJECTED",
+      "requires_residual": false,
+      "requires_qu": false
+    },
+    "R06": {
+      "left": "T04A",
+      "right": "T05",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "REJECTED",
+      "requires_residual": false,
+      "requires_qu": false
+    },
+    "R07": {
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "requires_residual": true,
+      "requires_qu": true
+    },
+    "R08": {
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CLASSIFICATION",
+      "disposition": "INCOMPLETE",
+      "requires_residual": false,
+      "requires_qu": true
+    }
+  },
+  "required_self_audit": {
+    "same_endpoints_not_sufficient": true,
+    "ti_does_not_imply_nei_same": true,
+    "projected_qu_preserved_as_residual": true,
+    "used_only_packet": true
+  }
+}
