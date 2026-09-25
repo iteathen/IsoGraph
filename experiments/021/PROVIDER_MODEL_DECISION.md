@@ -1,38 +1,44 @@
 # Experiment 021 provider model decision
 
-**Status:** transport/provider decision only; no DTS semantic change
+**Status:** transport/provider decision only; no DTS semantic change.
 
-Experiment 021 initially targeted `gemini-3.5-flash`, matching the recent IsoGraph qualification campaigns.
+Experiment 021's first four attempts produced no semantic report:
 
-Three successive discovery triggers produced only provider failures:
+- Gemini 3.5 Flash: three HTTP 503-only runs;
+- Gemini 3.8 Flash: one HTTP 503-only run.
 
-- workflow `36183338156`: HTTP 503 after 2 attempts;
-- workflow `36183579627`: HTTP 503 after 2 attempts;
-- workflow `36183859218`: HTTP 503 after 2 attempts.
+Those runs remain infrastructure/provider evidence and carry no TI disposition.
 
-No semantic report or score was produced by any of those runs.
+Experiment 023 later added a dedicated long-payload capability probe because tiny-call model availability was insufficient evidence for discovery-packet usability.
 
-A dedicated model-discovery workflow then queried the provider's current `generateContent` model list and persisted it at:
+Persisted probe:
 
-`experiments/021/provider/MODELS.json`
+`experiments/023/provider/LONG_PROBE.json`
 
-The list includes the exact non-preview model:
+Probe result:
 
-`models/gemini-3.8-flash`
+```text
+input bytes:       36097
+selected model:    gemini-3.1-flash-lite
+HTTP status:       200
+response:          OK
+```
 
-with:
-- input token limit: 1,048,576;
-- output token limit: 65,536.
+Experiment 023 then used the same provider path to produce a successful ~12k-token semantic discovery report.
 
-Experiment 021 is therefore repinned to `gemini-3.8-flash`.
+Experiment 021 is therefore repinned to:
 
-This changes only the execution provider/model used for the cold development-discovery call. The following remain byte-for-byte unchanged from the frozen Experiment 021 semantic target:
+`gemini-3.1-flash-lite`
+
+Only the transport model changes.
+
+The following remain unchanged from the frozen Experiment 021 semantic target:
 
 - DTS 0.1 candidate;
 - transition corpus;
 - comparison views;
 - hidden assertions;
 - deterministic scorer;
-- expected propositions.
+- expected TI / rejection / incomplete controls.
 
-The model change is justified solely by repeated provider failure on the prior endpoint and is not evidence for or against any TI claim.
+The provider/model decision supplies no DTS or TI evidence by itself.
