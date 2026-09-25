@@ -1,0 +1,69 @@
+name: Experiment 019 current integrated stack
+on:
+  push:
+    branches: [qualification/integrated-current-019-20260925]
+    paths: [experiments/019/RUN.request]
+permissions:
+  contents: write
+concurrency:
+  group: experiment-019-current-stack
+  cancel-in-progress: false
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: 26.7.0}
+      - name: Deterministic preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/019/tools/run-exp019-cold.mjs
+          node --check experiments/019/tools/score-exp019.mjs
+          node experiments/019/tools/test-score-exp019.mjs
+          rm -rf out/exp019
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/019/tools/run-exp019-cold.mjs
+      - name: Execute isolated semantic call
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/019/tools/run-exp019-cold.mjs
+      - name: Score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp019/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp019/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/019/tools/score-exp019.mjs
+      - name: Persist evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        run: |
+          set -euo pipefail
+          E="experiments/019/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do [ -f "out/exp019/$f" ] && cp "out/exp019/$f" "$E/$f"; done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","qualification_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then git commit -m "evidence: Experiment 019 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"; git push origin HEAD:qualification/integrated-current-019-20260925; fi
+      - name: Enforce qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/exp019/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp019/SCORE.json','utf8'));if(s.disposition!=='QUALIFIES')process.exit(1)"
