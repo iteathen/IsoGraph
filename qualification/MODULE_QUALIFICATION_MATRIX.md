@@ -198,4 +198,8 @@ Historical failed runs (009, 010, 011, 012) remain immutable evidence and are no
 
 Current authority and exact tested hashes are recorded in:
 
+- `qualification/QUALIFIED_MODULES_2026-09-25.md`
+
+Historical predecessor:
+
 - `qualification/QUALIFIED_MODULES_2026-09-18.md`

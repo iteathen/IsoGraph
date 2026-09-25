@@ -30,7 +30,8 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
-- [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
+- [Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
+- [Historical Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 - [Discovery Protocols 0.1–0.6 Qualification Review — 2026-09-25](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
 - [Current Integrated Semantic Stack Qualification — 2026-09-25](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
 
@@ -1047,49 +1048,35 @@ It is a structural representation and qualification framework whose claims are i
 
 ## Qualified Core authority
 
-- [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
+Current Core authority is cumulative:
 
-Draft 0.17 remains Core authority. Its Semantic Identity correction changes no operational bare-ID behavior from Draft 0.16.
+- [Core 0.17 qualified base](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
+- [Core 0.18 qualified observation-first clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md)
+- [Core 0.18 qualification record](qualification/CORE_0_18_QUALIFICATION.md)
+
+Core 0.18 is qualified at the exact tested bytes even though the historical filename retains `_CANDIDATE`.
 
 ## Qualified semantic extensions/modules
 
-Exact tested revisions and content hashes are authoritative in:
+Current exact routing authority is recorded in:
 
-- [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
+- [Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
 
-Qualified modules:
+Current qualified modules:
 
 - [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 - [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
-- [Discovery Protocols 0.1-0.4](extensions/discovery/)
+- [Discovery Protocols 0.1–0.6](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
 
-The `_CANDIDATE` names are immutable historical filenames of the exact tested semantic artifacts. They no longer describe the current qualification state.
+The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded.
 
 Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
 
-## Active unqualified successor candidates
+## Active unqualified extension work
 
-Two semantic successors remain under development and **do not yet change qualified authority**:
+DTS 0.1 is the active transition-semantics research line. It remains unqualified until its own dependency-closed qualification burden is discharged.
 
-- [Core 0.18 Observation-First Clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md) — discrepancy interpretation, semantic-quantity alignment, and pre-repair failure-classification discipline.
-- [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md) — observation-first discrepancy handling, semantic-quantity alignment, and separate qualification/discovery dispositions.
-
-NEI 0.4 has completed fresh qualification and is current authority; NEI 0.3 is retained only as its historical precursor.
-
-They were motivated by the Connect4 authority 1.1 discrepancy campaign, where a small source-count inconsistency exposed hidden evidence identity structure and later decoder/scorer mismatches demonstrated that a qualification error can still be a useful discovery signal.
-
-The proposed discipline is:
-
-~~~text
-observe discrepancy
--> preserve it
--> establish what each observation denotes
--> compare scope / aggregation / closure
--> explore hidden distinction, hidden equivalence, or unknown factor
--> only then judge defect vs valid structural difference
-~~~
-
-None of these successor candidates permits missing authority to masquerade as semantic NEI `UNKNOWN`, and none makes an anomaly proof of an isomorphism.
+Core 0.18, QU 0.1, NEI 0.4, and DP 0.1–0.6 are now accepted dependencies for DTS development.
 
 ## Qualified qualification infrastructure
 
@@ -1100,18 +1087,16 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-Experiment 015 formally `QUALIFIES` the historical exercised composition of Core 0.17 + QU 0.1 + NEI 0.1/0.2 + DP 0.1-0.4.
+The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 composition formally `QUALIFIES` under Experiment 019.
 
-- [Experiment 015 Final Qualification Review](experiments/015/EXPERIMENT_015_FINAL_QUALIFICATION_REVIEW.md)
+- [Experiment 019 Final Qualification Review](experiments/019/EXPERIMENT_019_FINAL_QUALIFICATION_REVIEW.md)
+- [Current Integrated Stack Qualification](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
 
-Experiment 016 separately qualifies current NEI 0.4 with Core 0.17 + QU 0.1:
-
-- [Experiment 016 Final Qualification Review](experiments/016/EXPERIMENT_016_FINAL_QUALIFICATION_REVIEW.md)
-
-Do not reinterpret Experiment 015 as fresh NEI 0.4 + DP integration evidence. Both results are scoped to their declared compositions.
+Historical integrated qualification evidence remains preserved, including Experiment 015 for its earlier dependency composition.
 
 ## Historical qualified evidence
 
+- [Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 - [Draft 0.16 Consolidated Qualified](CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md)
 - [Draft 0.15 Consolidated Candidate](CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md)
 
