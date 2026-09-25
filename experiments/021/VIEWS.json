@@ -1,0 +1,66 @@
+{
+  "views": [
+    {
+      "id": "C_CONCEPT",
+      "load_bearing": [
+        "B.input-role",
+        "B.concept-role",
+        "target.concept"
+      ],
+      "projected": [
+        "source carrier representation",
+        "target recognition",
+        "D",
+        "O",
+        "non-concept delta detail"
+      ],
+      "authority": "Compare only semantic input role to resulting concept classification; projected differences remain residuals."
+    },
+    {
+      "id": "C_CLASSIFICATION",
+      "load_bearing": [
+        "B.input-role",
+        "B.concept-role",
+        "B.recognition-role",
+        "target.concept",
+        "target.recognition"
+      ],
+      "projected": [
+        "source carrier representation",
+        "D",
+        "O"
+      ],
+      "authority": "Concept and recognition mode are load-bearing; carrier/decomposition are not."
+    },
+    {
+      "id": "C_WORKER_EFFECT",
+      "load_bearing": [
+        "K",
+        "delta_tilde",
+        "B",
+        "source projection",
+        "target projection"
+      ],
+      "projected": [
+        "D",
+        "O"
+      ],
+      "authority": "Compare IsoMax worker transition effect; decomposition/order are explicitly non-load-bearing residuals."
+    },
+    {
+      "id": "C_PROCESS",
+      "load_bearing": [
+        "K",
+        "delta_plus",
+        "delta_minus",
+        "delta_tilde",
+        "B",
+        "D",
+        "O",
+        "Q"
+      ],
+      "projected": [],
+      "authority": "Full represented transition anatomy, including decomposition/order/QU, is load-bearing."
+    }
+  ]
+}

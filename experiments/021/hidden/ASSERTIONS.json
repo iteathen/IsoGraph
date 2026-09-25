@@ -1,0 +1,64 @@
+{
+  "experiment": "021",
+  "required_claims": [
+    {
+      "left": "T01",
+      "right": "T02",
+      "view": "C_CLASSIFICATION",
+      "disposition": "TI"
+    },
+    {
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "requires_residual": true
+    },
+    {
+      "left": "T01",
+      "right": "T03",
+      "view": "C_CLASSIFICATION",
+      "disposition": "REJECTED"
+    },
+    {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "TI",
+      "requires_residual": true
+    },
+    {
+      "left": "T04A",
+      "right": "T04B",
+      "view": "C_PROCESS",
+      "disposition": "REJECTED"
+    },
+    {
+      "left": "T04A",
+      "right": "T05",
+      "view": "C_WORKER_EFFECT",
+      "disposition": "REJECTED"
+    },
+    {
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CONCEPT",
+      "disposition": "TI",
+      "requires_qu": true,
+      "requires_residual": true
+    },
+    {
+      "left": "T01",
+      "right": "T06",
+      "view": "C_CLASSIFICATION",
+      "disposition": "INCOMPLETE",
+      "requires_qu": true
+    }
+  ],
+  "required_self_audit": {
+    "same_endpoints_not_sufficient": true,
+    "ti_does_not_imply_nei_same": true,
+    "projected_qu_preserved_as_residual": true,
+    "used_only_packet": true
+  }
+}

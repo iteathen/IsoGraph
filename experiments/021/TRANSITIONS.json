@@ -1,0 +1,397 @@
+{
+  "version": "DTS-DISCOVERY-021",
+  "semantic_status": "development discovery; not qualification",
+  "provenance": {
+    "experiment_020": "reconstruction PASS at e03c2fe60a0a6b5d16c50208ccf7cbcaa7ff130e",
+    "note": "Scoped transition representations derived from source-anchored Experiment 020 evidence, plus two independently valid decompositions of the same source-anchored IsoMax S02 transition and one QU-bearing partial observation."
+  },
+  "transitions": [
+    {
+      "id": "T01",
+      "source_anchor": {
+        "repository": "iteathen/IsoGraph",
+        "path": "tools/qualification/semantic-rejections.mjs",
+        "blob_sha": "3b36f674676c03b5a4fb92b4a22dfc9c8a5fe7a2",
+        "symbol": "identifyRejectedConcept"
+      },
+      "source": {
+        "carrier": "string",
+        "value": "NATURAL_IDENTITY"
+      },
+      "target": {
+        "concept": "NATURAL_IDENTITY",
+        "recognition": "CANONICAL_ID"
+      },
+      "anatomy": {
+        "K": [
+          "input_semantic_content"
+        ],
+        "delta_minus": [],
+        "delta_plus": [
+          "concept_classification",
+          "recognition_classification"
+        ],
+        "delta_tilde": [],
+        "B": [
+          "input",
+          "concept",
+          "recognition"
+        ],
+        "D": [
+          "exact-canonical-string-test",
+          "emit-classification"
+        ],
+        "O": [
+          "exact-canonical-string-test<emit-classification"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob"
+        ]
+      }
+    },
+    {
+      "id": "T02",
+      "source_anchor": {
+        "repository": "iteathen/IsoGraph",
+        "path": "tools/qualification/semantic-rejections.mjs",
+        "blob_sha": "3b36f674676c03b5a4fb92b4a22dfc9c8a5fe7a2",
+        "symbol": "identifyRejectedConcept"
+      },
+      "source": {
+        "carrier": "object",
+        "claim_id": "NATURAL_IDENTITY",
+        "status": "REJECTED"
+      },
+      "target": {
+        "concept": "NATURAL_IDENTITY",
+        "recognition": "CANONICAL_ID"
+      },
+      "anatomy": {
+        "K": [
+          "input_semantic_content"
+        ],
+        "delta_minus": [],
+        "delta_plus": [
+          "concept_classification",
+          "recognition_classification"
+        ],
+        "delta_tilde": [],
+        "B": [
+          "input",
+          "concept",
+          "recognition"
+        ],
+        "D": [
+          "structured-id-extraction",
+          "rejected-status-check",
+          "emit-classification"
+        ],
+        "O": [
+          "structured-id-extraction<rejected-status-check",
+          "rejected-status-check<emit-classification"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob"
+        ]
+      }
+    },
+    {
+      "id": "T03",
+      "source_anchor": {
+        "repository": "iteathen/IsoGraph",
+        "path": "tools/qualification/semantic-rejections.mjs",
+        "blob_sha": "3b36f674676c03b5a4fb92b4a22dfc9c8a5fe7a2",
+        "symbol": "identifyRejectedConcept"
+      },
+      "source": {
+        "carrier": "string",
+        "value": "natural identity"
+      },
+      "target": {
+        "concept": "NATURAL_IDENTITY",
+        "recognition": "PUBLIC_LEXICAL_SIGNATURE"
+      },
+      "anatomy": {
+        "K": [
+          "input_semantic_content"
+        ],
+        "delta_minus": [],
+        "delta_plus": [
+          "normalized_form",
+          "candidate_set",
+          "concept_classification",
+          "recognition_classification"
+        ],
+        "delta_tilde": [],
+        "B": [
+          "input",
+          "concept",
+          "recognition"
+        ],
+        "D": [
+          "normalize",
+          "lexical-signature-match",
+          "emit-classification"
+        ],
+        "O": [
+          "normalize<lexical-signature-match",
+          "lexical-signature-match<emit-classification"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob"
+        ]
+      }
+    },
+    {
+      "id": "T04A",
+      "source_anchor": {
+        "repository": "iteathen/Connect4",
+        "path": "components/isometric/execution/worker.mjs",
+        "blob_sha": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+        "symbol": "workerStep7x6"
+      },
+      "source": {
+        "projection": "Experiment020:S02-source"
+      },
+      "target": {
+        "projection": "Experiment020:S02-target"
+      },
+      "anatomy": {
+        "K": [
+          "worker_owner",
+          "parent_q",
+          "child_identity_set"
+        ],
+        "delta_minus": [],
+        "delta_plus": [],
+        "delta_tilde": [
+          "edge_children",
+          "edge_actions",
+          "parent_count",
+          "parent_phase",
+          "parent_execution",
+          "child_claim",
+          "worker_q",
+          "worker_code",
+          "worker_count",
+          "worker_started",
+          "branch_counter"
+        ],
+        "B": [
+          "worker_q",
+          "parent_phase",
+          "parent_execution",
+          "claimed_child"
+        ],
+        "D": [
+          "install-edge-0",
+          "install-edge-1",
+          "publish-phase",
+          "claim-first-child",
+          "release-parent",
+          "reset-worker"
+        ],
+        "O": [
+          "install-edge-0<install-edge-1",
+          "install-edge-1<publish-phase",
+          "publish-phase<claim-first-child",
+          "claim-first-child<release-parent",
+          "release-parent<reset-worker"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob",
+          "experiment_020_S02"
+        ]
+      }
+    },
+    {
+      "id": "T04B",
+      "source_anchor": {
+        "repository": "iteathen/Connect4",
+        "path": "components/isometric/execution/worker.mjs",
+        "blob_sha": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+        "symbol": "workerStep7x6"
+      },
+      "source": {
+        "projection": "Experiment020:S02-source"
+      },
+      "target": {
+        "projection": "Experiment020:S02-target"
+      },
+      "anatomy": {
+        "K": [
+          "worker_owner",
+          "parent_q",
+          "child_identity_set"
+        ],
+        "delta_minus": [],
+        "delta_plus": [],
+        "delta_tilde": [
+          "edge_children",
+          "edge_actions",
+          "parent_count",
+          "parent_phase",
+          "parent_execution",
+          "child_claim",
+          "worker_q",
+          "worker_code",
+          "worker_count",
+          "worker_started",
+          "branch_counter"
+        ],
+        "B": [
+          "worker_q",
+          "parent_phase",
+          "parent_execution",
+          "claimed_child"
+        ],
+        "D": [
+          "publish-parent-transaction",
+          "retain-first-continuation",
+          "reset-worker"
+        ],
+        "O": [
+          "publish-parent-transaction<retain-first-continuation",
+          "retain-first-continuation<reset-worker"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob",
+          "experiment_020_S02",
+          "alternate_valid_factorization"
+        ]
+      }
+    },
+    {
+      "id": "T05",
+      "source_anchor": {
+        "repository": "iteathen/Connect4",
+        "path": "components/isometric/execution/worker.mjs",
+        "blob_sha": "2f9012b2b6a580ed58edcea76125b108f9833cb7",
+        "symbol": "prepareWorker7x6"
+      },
+      "source": {
+        "configuration": {
+          "owner": 2,
+          "workerCount": 4
+        }
+      },
+      "target": {
+        "projection": "Experiment020:N01-target"
+      },
+      "anatomy": {
+        "K": [
+          "configuration_owner",
+          "configuration_worker_count"
+        ],
+        "delta_minus": [],
+        "delta_plus": [
+          "worker_state",
+          "fixed_numeric_buffers"
+        ],
+        "delta_tilde": [],
+        "B": [
+          "configuration",
+          "worker"
+        ],
+        "D": [
+          "validate-configuration",
+          "allocate-fixed-storage",
+          "emit-worker-state"
+        ],
+        "O": [
+          "validate-configuration<allocate-fixed-storage",
+          "allocate-fixed-storage<emit-worker-state"
+        ],
+        "Q": [],
+        "E": [
+          "source_blob",
+          "experiment_020_N01"
+        ]
+      }
+    },
+    {
+      "id": "T06",
+      "source_anchor": {
+        "repository": "iteathen/IsoGraph",
+        "path": "tools/qualification/semantic-rejections.mjs",
+        "blob_sha": "3b36f674676c03b5a4fb92b4a22dfc9c8a5fe7a2",
+        "symbol": "identifyRejectedConcept"
+      },
+      "source": {
+        "carrier": "QU",
+        "qu_ref": "Q021-input",
+        "admissible": [
+          "NATURAL_IDENTITY",
+          "natural identity"
+        ]
+      },
+      "target": {
+        "concept": "NATURAL_IDENTITY",
+        "recognition": {
+          "qu_ref": "Q021-recognition",
+          "admissible": [
+            "CANONICAL_ID",
+            "PUBLIC_LEXICAL_SIGNATURE"
+          ]
+        }
+      },
+      "anatomy": {
+        "K": [
+          "input_semantic_content"
+        ],
+        "delta_minus": [],
+        "delta_plus": [
+          "concept_classification",
+          "recognition_classification"
+        ],
+        "delta_tilde": [],
+        "B": [
+          "input",
+          "concept",
+          "recognition"
+        ],
+        "D": {
+          "qu_ref": "Q021-decomposition",
+          "admissible": [
+            "canonical-path",
+            "lexical-path"
+          ]
+        },
+        "O": {
+          "qu_ref": "Q021-ordering",
+          "admissible": [
+            "canonical-order",
+            "lexical-order"
+          ]
+        },
+        "Q": [
+          {
+            "id": "Q021-input",
+            "constraint": "input is one of the two listed source spellings"
+          },
+          {
+            "id": "Q021-recognition",
+            "constraint": "recognition follows the selected admissible source spelling"
+          },
+          {
+            "id": "Q021-decomposition",
+            "constraint": "path is canonical or lexical consistently with source spelling"
+          },
+          {
+            "id": "Q021-ordering",
+            "constraint": "ordering follows selected path"
+          }
+        ],
+        "E": [
+          "source_blob",
+          "qualified_QU_semantics"
+        ]
+      }
+    }
+  ]
+}
