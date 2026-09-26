@@ -1,7 +1,44 @@
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 
 const MANIFEST=process.argv[2]||'research/rendering-modernization/2026-09-26/WAVE_01_MANIFEST.json';
 const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
+
+
+function gitBlobSha(buf){
+  const header=Buffer.from('blob '+buf.length+'\\0');
+  return crypto.createHash('sha1').update(header).update(buf).digest('hex');
+}
+
+if(manifest.status==='IMMUTABLE_ESR_QUALIFIED_PREDECESSORS'){
+  const results=[];
+  for(const c of manifest.cases||[]){
+    const q=fs.readFileSync(c.qualified_path);
+    const p=fs.readFileSync(c.promoted_path);
+    const qsha=gitBlobSha(q),psha=gitBlobSha(p);
+    const pass=qsha===c.expected_git_blob_sha &&
+      psha===c.expected_git_blob_sha &&
+      q.equals(p);
+    results.push({
+      id:c.id,
+      subject:c.subject,
+      pass,
+      expected_git_blob_sha:c.expected_git_blob_sha,
+      qualified_git_blob_sha:qsha,
+      promoted_git_blob_sha:psha,
+      byte_identical:q.equals(p)
+    });
+  }
+  const report={
+    schema:1,
+    manifest:MANIFEST,
+    disposition:results.every(x=>x.pass)?'PASS':'FAIL',
+    results
+  };
+  console.log(JSON.stringify(report,null,2));
+  if(report.disposition!=='PASS')process.exit(2);
+  process.exit(0);
+}
 
 function labels(s){return [...s.matchAll(/\^(\d+)/g)].map(m=>'^'+m[1]);}
 function vars(s){return [...s.matchAll(/\?(\d+)/g)].map(m=>m[1]);}
