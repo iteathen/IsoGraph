@@ -1,0 +1,150 @@
+name: Experiment 031 full-stack Core 0.19 qualification
+
+on:
+  push:
+    branches:
+      - qualification/core-0-19-full-stack-031-20260926
+    paths:
+      - experiments/031/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-031-full-stack-core-0-19
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3-flash-preview
+  GEMINI_FALLBACK_MODELS: gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-pro-preview,gemini-3.1-flash-lite,gemini-pro-latest
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic full-stack preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test "$(sha256sum CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md | awk '{print $1}')" = "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8"
+          test "$(sha256sum CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md | awk '{print $1}')" = "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63"
+          test "$(sha256sum CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md | awk '{print $1}')" = "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2"
+          test "$(sha256sum extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md | awk '{print $1}')" = "1f1510b41e4351726e4d9e714eb32ece0d5e69f0964255aabd7b4a6e94eee4cc"
+          test "$(sha256sum extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md | awk '{print $1}')" = "6e2f0efb1f4bfbfa55bc2c5597f1ecc5b4d7bb734216543c21ba72089b0aacee"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md | awk '{print $1}')" = "25fb4f84343633a22b08b2375fa085c2e01dc7f8a799a0e038b3fcf7ecc73c6b"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md | awk '{print $1}')" = "9b121b767f5ca52759bd9a7a42d32dd1e6f12872c2bcfb370277a6292dd6011c"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md | awk '{print $1}')" = "c37c9caebe33dc0b7f021638ab1679930f0e7edfbb3bd9368efdfc48538a11ee"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md | awk '{print $1}')" = "35e70a19f0eb6a1893f541465d76e7d37d028a9128391562afcd6c9260d462cd"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md | awk '{print $1}')" = "522a1a1a89b5f1fc753e17f76a58902c0f58543916d35a51a2c60dd64fcbea0b"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md | awk '{print $1}')" = "2494a135c11e5d8a2c7da63af7cbf12ed78d769536f917fd5c216d4a932fcd44"
+          test "$(sha256sum extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md | awk '{print $1}')" = "7b4ba0cc7b895f39212080892d13b7f0a1d7d67c41267ed44291d11c5e63a08d"
+          test "$(sha256sum extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md | awk '{print $1}')" = "9d3478f605bc7f673e3dc73f62991a80c50b0eadebe7fbe755689e01452ae4ad"
+
+          node --check experiments/031/tools/run-exp031-cold.mjs
+          node --check experiments/031/tools/score-exp031.mjs
+          node --check experiments/031/tools/test-score-exp031.mjs
+          node experiments/031/tools/test-score-exp031.mjs
+
+          rm -rf out/exp031
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/031/tools/run-exp031-cold.mjs
+
+          node - <<'NODE'
+          const fs=require('fs');
+          const dry=JSON.parse(fs.readFileSync('out/exp031/DRY_RUN.json','utf8'));
+          if(dry.case_count!==32) throw new Error('case count mismatch');
+          if(dry.authority_hashes['CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md']!=='8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2') throw new Error('Core 0.19 hash mismatch');
+          const paths=dry.input_manifest.map(x=>x.path);
+          const expected=[
+            'CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md',
+            'CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md',
+            'CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md',
+            'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
+            'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md',
+            'extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md',
+            'extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md',
+            'experiments/031/BASELINE_AUTHORITY.md',
+            'experiments/031/FULL_STACK_CORE_0_19_CASES.md',
+            'experiments/031/COLD_PROMPT.md'
+          ];
+          if(JSON.stringify(paths)!==JSON.stringify(expected)) throw new Error('unexpected cold packet manifest '+JSON.stringify(paths));
+          const forbidden=['hidden/','ASSERTIONS','score-exp031','test-score-exp031','AUTHORING_AUDIT','FINAL_QUALIFICATION_REVIEW','experiments/031/evidence','experiments/027/evidence','experiments/028/evidence','experiments/029/evidence','experiments/030/evidence','CURRENT_INTEGRATED_STACK','QUALIFIED_MODULES','AGENTS.md','README.md','STATUS.md'];
+          for(const item of forbidden){
+            if(paths.some(path=>path.includes(item))) throw new Error('forbidden cold input '+item);
+          }
+          console.log(JSON.stringify({packet_sha256:dry.packet_sha256,case_count:dry.case_count,input_count:paths.length},null,2));
+          NODE
+
+      - name: Execute isolated full-stack decoder
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/031/tools/run-exp031-cold.mjs
+
+      - name: Verify packet identity and hidden score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp031/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp031/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/031/tools/score-exp031.mjs
+
+      - name: Persist Experiment 031 evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/031/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp031/$f" ] && cp "out/exp031/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 031 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin qualification/core-0-19-full-stack-031-20260926
+            git rebase origin/qualification/core-0-19-full-stack-031-20260926
+            git push origin HEAD:qualification/core-0-19-full-stack-031-20260926
+          fi
+
+      - name: Enforce full-stack qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test "$SCORE_OUTCOME" = "success"
+          test -f out/exp031/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp031/SCORE.json','utf8'));console.log(JSON.stringify({disposition:s.disposition,full_stack:s.full_stack_core_0_19,categories:s.categories,guards:s.guards},null,2));if(s.disposition!=='QUALIFIES')process.exit(1)"
