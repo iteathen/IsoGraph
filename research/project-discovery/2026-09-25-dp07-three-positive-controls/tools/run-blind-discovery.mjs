@@ -25,7 +25,7 @@ async function callGemini(packet){
   for(const model of MODEL_CANDIDATES){
     if(disabledModels.has(model)) continue;
     let useThinking=!model.includes('flash-lite');
-    for(let i=0;i<2;i++){
+    for(let i=0;i<4;i++){
       const generationConfig={
         candidateCount:1,
         maxOutputTokens:32768,
@@ -64,12 +64,23 @@ async function callGemini(packet){
         i--;
         continue;
       }
-      if(res.status===429 || res.status===404){
-        disabledModels.set(model,'http_'+res.status);
+      if(res.status===429){
+        if(i<3){
+          let retryMs=15000;
+          const m=txt.match(/retry in ([0-9.]+)s/i);
+          if(m) retryMs=Math.max(retryMs,Math.ceil(Number(m[1])*1000)+3000);
+          await new Promise(r=>setTimeout(r,retryMs));
+          continue;
+        }
+        disabledModels.set(model,'http_429');
+        break;
+      }
+      if(res.status===404){
+        disabledModels.set(model,'http_404');
         break;
       }
       if([500,502,503,504].includes(res.status)){
-        if(i===0){await new Promise(r=>setTimeout(r,12000));continue;}
+        if(i<3){await new Promise(r=>setTimeout(r,15000*(i+1)));continue;}
         disabledModels.set(model,'http_'+res.status);
         break;
       }
