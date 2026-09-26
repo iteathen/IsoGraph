@@ -88,3 +88,55 @@ Do not:
 - delete archived evidence;
 - reinterpret historical PASS/FAIL/PARTIAL/QUALIFIES dispositions;
 - delete the Navier–Stokes compatibility branch while the manuscript still references it.
+
+
+## Follow-up classification — 2026-09-26
+
+Reviewed against current `main@43490735f0073acccb4f900e247cd0db19681e1f` after Core 0.19 promotion and final-product maintenance work.
+
+### RETAIN — Core 0.19 qualification archive
+
+Do not delete or merge into current authority:
+
+`archive/core-0.19-qualification-2026-09-26@d96ce1340c49d1cfb9fb0e7d3ea33ecb40b8efa6`
+
+Reason:
+- it preserves the pre-squash Core 0.19 qualification lineage;
+- current `main` contains the promoted/squashed authority, not this historical commit topology;
+- replaying the archive onto `main` would duplicate/reintroduce historical qualification states.
+
+### CURATED PRESERVATION — Ising / MWC DP 0.7 exploratory research
+
+Source branch:
+
+`experiment/dp07-ising-mwc-v1@6f1368c6d6e110b6e97032ef0d629b6025b38b2c`
+
+The branch contains a valid completed exploratory research payload under:
+
+`research/project-discovery/2026-09-25-ising-mwc-dp07/**`
+
+but also carries obsolete predecessor snapshots of Core 0.19 and DP 0.7. Therefore the branch MUST NOT be merged directly into current authority.
+
+The research directory is preserved separately by exact source blob identity on the current-main integration branch. Once that preservation PR is merged and verified, this source branch is safe to retire.
+
+The research remains explicitly non-qualification evidence and has no authority effect.
+
+### SAFE TO RETIRE — contained by the Core 0.19 qualification archive
+
+The following refs have no commits ahead of `archive/core-0.19-qualification-2026-09-26` and are redundant after archive preservation:
+
+- `experiment/dp07-three-positive-controls-v1`
+- `experiment/028-dp07-derived-views`
+- `experiment/029-core-0.19`
+- `research/core-0.19-implicit-assertions`
+
+Deleting these refs, when branch-deletion capability is available, does not authorize deletion or rewriting of the archive branch or the historical evidence it preserves.
+
+### RETAIN HISTORICAL SIDE REFS — do not merge into current authority
+
+These branches diverge from the preserved accepted lineage and contain superseded intermediate qualification states:
+
+- `experiment/029-core-0-19@61c5b14b39bd327df43d6c699d5f9c0ac6ebc7af` — terminates at the earlier Experiment 029 23/24-era attempt;
+- `experiment/030-core-0-19-qu-discharge@6702ba10576c724fc564e9a5573f8f75ae7676cd` — early fresh-case / QU-discharge planning lineage superseded by the corrected Experiment 030 mutation-regression path.
+
+Do not merge either branch over current `experiments/029`, `experiments/030`, Core 0.19, qualification manifests, or workflows. Retain these refs until their unique historical branch states are collision-safely archived or an explicit owner decision retires them.
