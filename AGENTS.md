@@ -41,7 +41,17 @@ The latest fully integration-qualified composition is now the exact Core 0.17 + 
 
 ### Successor status
 
-Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. Experiment 031 directly qualifies the current full stack including Core 0.19 for its exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. Experiment 031 directly qualifies the current full stack including Core 0.19 for its exercised dependency-closed scope.
+
+DP 0.8 is an **unqualified successor candidate**, not current authority:
+
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CANDIDATE.md`
+- `qualification/DISCOVERY_PROTOCOLS_0_8_QUALIFICATION_PLAN.md`
+- `research/discovery/LOGIC_LENS_FOR_IMPLICIT_ASSERTION_DISCOVERY_0_1.md` — non-authoritative search refresher.
+
+When evaluating DP 0.8 work, preserve the separation between complete semantic representation and objective-scoped support reduction. A value profile may rank already-sufficient alternatives; it may not redefine sufficiency, change inputs/scope, discard load-bearing QU/DTS structure, or import unsupported logical premises.
+
+DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
