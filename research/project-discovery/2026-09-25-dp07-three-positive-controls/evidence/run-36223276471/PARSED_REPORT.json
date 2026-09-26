@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "Ising model configuration space and partition function structure"
+      ],
+      "mapping_witness": [
+        "Structural correspondence of energy, weight, and partition function definitions"
+      ],
+      "transformations": [
+        "Identity mapping of structural roles"
+      ],
+      "a_to_b_reconstruction": [
+        "Successful reconstruction of B from A"
+      ],
+      "b_to_a_reconstruction": [
+        "Successful reconstruction of A from B"
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Energy and weight calculation consistency",
+            "primitive_support": [
+              "Energy and weight definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "B energy/weight structure",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Energy and weight calculation consistency",
+            "primitive_support": [
+              "Energy and weight definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "A energy/weight structure",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Tested for differences in edge endpoint structure and energy definitions"
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [],
+      "unresolved_obligations": [],
+      "derived_view": "Ising model partition function",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": [
+        "Parity constraint satisfaction system"
+      ],
+      "mapping_witness": [
+        "Structural correspondence of parity row constraints"
+      ],
+      "transformations": [
+        "Identity mapping of row-sum and parity logic"
+      ],
+      "a_to_b_reconstruction": [
+        "Successful reconstruction of B from A"
+      ],
+      "b_to_a_reconstruction": [
+        "Successful reconstruction of A from B"
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Parity constraint satisfaction",
+            "primitive_support": [
+              "Parity row definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "B parity structure",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Parity constraint satisfaction",
+            "primitive_support": [
+              "Parity row definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "A parity structure",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Tested for differences in row satisfaction logic"
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [],
+      "unresolved_obligations": [],
+      "derived_view": "Parity check system",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": [
+        "Harmonic oscillator energy and time derivative structure"
+      ],
+      "mapping_witness": [
+        "Structural correspondence of Hamiltonian and time derivative definitions"
+      ],
+      "transformations": [
+        "Identity mapping of Hamiltonian and derivative roles"
+      ],
+      "a_to_b_reconstruction": [
+        "Successful reconstruction of B from A"
+      ],
+      "b_to_a_reconstruction": [
+        "Successful reconstruction of A from B"
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Hamiltonian and time derivative consistency",
+            "primitive_support": [
+              "Hamiltonian and derivative definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "B Hamiltonian structure",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Hamiltonian and time derivative consistency",
+            "primitive_support": [
+              "Hamiltonian and derivative definitions"
+            ],
+            "transformation": "Identity",
+            "reconstructed_target": "A Hamiltonian structure",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Tested for differences in Hamiltonian energy definitions"
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [],
+      "unresolved_obligations": [],
+      "derived_view": "Harmonic oscillator Hamiltonian",
+      "disposition": "EXACT_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}
