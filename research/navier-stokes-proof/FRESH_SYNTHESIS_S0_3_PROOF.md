@@ -16,7 +16,7 @@ Under the source-exact obligations discharged by the pinned formalization
 
 their composition implies:
 
-1. the R3 forced-breakdown statement for every \(\nu>0\);
+1. the R3 forced-breakdown statement for every $\nu>0$;
 2. the initial-rest strengthening used for the periodic compression;
 3. the periodic forced-breakdown statement;
 4. comparator alternatives C and D.
@@ -37,10 +37,10 @@ Representative formal facts:
 - \`FinalSlowBase.velocity_eq_curl\` supplies a vector-potential realization.
 - \`FinalSlowBase.divergence_zero\` gives exact divergence freedom.
 - \`FinalSlowBase.residual_identity\` gives
-  \[
+  $$
   R(u_B,p_B)=\text{stressForce}+E_B.
-  \]
-- \`FinalSlowBase.error_allJetsFlat\` gives all-order flatness of \(E_B\).
+  $$
+- \`FinalSlowBase.error_allJetsFlat\` gives all-order flatness of $E_B$.
 - \`FinalSlowBase.stressForce_zero_right\` / core/exterior support lemmas localize the stress.
 - \`FinalSlowBase.exterior_residual_zero\` gives the exact heat exterior.
 - \`FinalSlowBase.speedUnbounded\` supplies the singular growth channel.
@@ -71,7 +71,7 @@ For every represented correction state satisfying the extraction/representation 
 
 \`ActualCycleResidualBounds.fullResidual_decomposition\` proves:
 
-\[
+$$
 R_{\mathrm{full}}
 =
 \sum_l R_l^{\mathrm{osc}}
@@ -79,7 +79,7 @@ R_{\mathrm{full}}
 R^{\mathrm{mean}}
 +
 E^{\mathrm{stored}}.
-\]
+$$
 
 The proof uses the exact \`CycleRepresentation\`, local residual grouping, and the angular-mean equation. The independent axisymmetric alias is retained.
 
@@ -94,7 +94,7 @@ The source's one-step theorem is:
 \`CorrectionAnalyticStep.step\`.
 
 Its conclusion \`StepResult\` contains:
-- the next analytic invariant at \(\sigma+1/10\);
+- the next analytic invariant at $\sigma+1/10$;
 - temporal increment bounds;
 - rank increment bounds;
 - pressure increment bounds;
@@ -126,27 +126,27 @@ Therefore P3 is discharged.
 
 \`ActualIterationLedger.sigma_formula\` and \`sigma_succ\` give
 
-\[
+$$
 \sigma_j=\frac15+\frac{j}{10},
 \qquad
 \sigma_{j+1}=\sigma_j+\frac1{10}.
-\]
+$$
 
-\`ActualCyclePreservation.state_runInvariant\` proves by induction that every actual stage satisfies the common run invariant at \(\sigma_j\).
+\`ActualCyclePreservation.state_runInvariant\` proves by induction that every actual stage satisfies the common run invariant at $\sigma_j$.
 
-\`ActualCycleResidualBounds.Invariant.residual_jetRate\` gives, for derivative order \(m\),
+\`ActualCycleResidualBounds.Invariant.residual_jetRate\` gives, for derivative order $m$,
 
-\[
+$$
 \operatorname{JetRate}
 \left(
 R_j,
 h\!\left(\frac12+\sigma_j\right)-\operatorname{fixedLoss}(m)
 \right).
-\]
+$$
 
 The global finite-stage bound is weakened only to the ledger gain; the loss remains independent of stage.
 
-Because \(h>0\) and \(\sigma_j\to\infty\), for every fixed \(m\) and every target power \(N\), choose \(j\) sufficiently large that the residual exponent is at least \(N\).
+Because $h>0$ and $\sigma_j\to\infty$, for every fixed $m$ and every target power $N$, choose $j$ sufficiently large that the residual exponent is at least $N$.
 
 Therefore the recurrence can meet every finite residual-order obligation.
 
@@ -154,7 +154,7 @@ Therefore the recurrence can meet every finite residual-order obligation.
 
 The previous lemma gives arbitrarily high finite-stage rates, but the final theorem needs one common infinite object.
 
-\`LocalResidualFlatness.selected_schedule\` selects one schedule \(a:\mathbb N\to\mathbb N\) satisfying simultaneously:
+\`LocalResidualFlatness.selected_schedule\` selects one schedule $a:\mathbb N\to\mathbb N$ satisfying simultaneously:
 - the selected-schedule conditions;
 - all common cut bounds;
 - \`AllResidualJetRates\`.
@@ -178,7 +178,7 @@ Therefore P5 is discharged.
 
 The source turns the local construction into a force/candidate in two exact steps.
 
-First, \`CandidateFromLimits.force\` constructs the force as a smooth extension of the traced presingular residual, and \`force_eq_activated_residual\` proves exact equality with the activated Navier–Stokes residual for \(0\le t<1\).
+First, \`CandidateFromLimits.force\` constructs the force as a smooth extension of the traced presingular residual, and \`force_eq_activated_residual\` proves exact equality with the activated Navier–Stokes residual for $0\le t<1$.
 
 Second, \`NavierStokesR3.ActualCandidate.of_localized_fields\` spatially/time localizes the fields and gives the R3 \`CandidateProperties\` bundle at viscosity one, including compact support, smooth force with positive-time compact support, zero initial velocity, divergence freedom, exact equation, energy bound, and blowup.
 
@@ -208,11 +208,11 @@ Therefore P7 is discharged and the finite-energy requirement of alternative C is
 
 ### Lemma 9 — P9 excludes a global whole-space competitor at viscosity one
 
-For a viscosity-one R3 candidate \(h\),
+For a viscosity-one R3 candidate $h$,
 
 \`WholeSpaceUniqueness.candidate_global_agrees_before_one h v\`
 
-proves that every global smooth uniformly finite-energy solution with the same force and zero initial datum agrees with the candidate for every \(t<1\).
+proves that every global smooth uniformly finite-energy solution with the same force and zero initial datum agrees with the candidate for every $t<1$.
 
 \`CandidateProperties.no_global_solution_one\` then combines that agreement with the candidate's speed blowup to exclude any such global competitor.
 
@@ -220,7 +220,7 @@ Therefore P9 proves the viscosity-one R3 breakdown conclusion.
 
 ### Lemma 10 — P8 transports the closed whole-space contract to every positive viscosity
 
-\`ViscosityScaling.candidate_at_viscosity\` maps a viscosity-one candidate to a candidate at arbitrary \(\nu>0\), preserving singular time one and the force support class.
+\`ViscosityScaling.candidate_at_viscosity\` maps a viscosity-one candidate to a candidate at arbitrary $\nu>0$, preserving singular time one and the force support class.
 
 \`normalized_global_solution\` transports any hypothetical global competitor back to viscosity one.
 
@@ -229,7 +229,7 @@ Accordingly, \`R3.Theorem.theorem_1_1_with_initial_rest\` composes:
 - viscosity scaling;
 - viscosity-one no-global-solution.
 
-It obtains the complete theorem contract for every \(\nu>0\), while preserving the initial-rest interval.
+It obtains the complete theorem contract for every $\nu>0$, while preserving the initial-rest interval.
 
 \`R3.Theorem.theorem_1_1\` then proves the R3 \`breakdownStatement\`.
 
@@ -361,13 +361,13 @@ After that repair, every major published proof stage and every final contract fi
 
 Relative to the pinned source, S0.3 is **proved sufficient at the proof-interface level**:
 
-\[
+$$
 P0\land P1\land\cdots\land P9
 \Longrightarrow
 \text{R3 breakdown}
 \land
 \text{periodic breakdown}.
-\]
+$$
 
 The proof is compositional and source-exact at its interfaces.
 

@@ -189,7 +189,7 @@ Result: PASS.
 
 | Theorem 3.1 obligation | RF source |
 |---|---|
-| \(u=\operatorname{curl}A+B e_\theta\) | G4 local interface produced from G1–G3 |
+| $u=\operatorname{curl}A+B e_\theta$ | G4 local interface produced from G1–G3 |
 | exact divergence freedom | G1/G2/G3 preservation -> G4 |
 | smooth Cartesian representatives at axis | G1 + G4 |
 | all derivatives bounded away from singular point with compatible one-sided limits | G4 |
@@ -266,7 +266,7 @@ Result: 8/8 RF components source-backed.
 
 Published dependency direction:
 
-\[
+$$
 \text{profiles/base}
 \to \text{stress}
 \to \text{waves}
@@ -275,18 +275,18 @@ Published dependency direction:
 \to \text{localized force/candidate}
 \to \text{energy + uniqueness}
 \to \text{rescaling/periodic/comparator}.
-\]
+$$
 
 RF-0.2 direction:
 
-\[
+$$
 G1\to G2\to G3\to G4\to G5,
-\]
+$$
 
 then:
-- \(G5\to G6\);
-- \(G5\to G7\);
-- candidate + \(G6/G7\to G8\).
+- $G5\to G6$;
+- $G5\to G7$;
+- candidate + $G6/G7\to G8$.
 
 No RF component uses a downstream theorem to manufacture an upstream construction.
 
@@ -299,7 +299,7 @@ Result: PASS.
 RF-0.2 explicitly keeps these non-equivalences:
 
 1. arbitrary-order terminal residual flatness vs exact exterior residual zero;
-2. correction accuracy \(\sigma_j\) vs diagonal schedule \(a_j\);
+2. correction accuracy $\sigma_j$ vs diagonal schedule $a_j$;
 3. whole-space finite-energy competitor vs periodic competitor;
 4. generic recurrence role vs concrete stage occurrence;
 5. stress realization vs later residual-improvement machinery;
@@ -315,7 +315,7 @@ Result: PASS.
 |---|---|---|
 | G1 | no concentrating singular background / admissible annular target stress / heat exterior | necessary |
 | G2 | no construction realizing/canceling leading annular stress with divergence-free pulses | necessary |
-| G3 | no mechanism correcting remaining angular/mean/moment residuals and improving \(\sigma_j\) | necessary |
+| G3 | no mechanism correcting remaining angular/mean/moment residuals and improving $\sigma_j$ | necessary |
 | G4 | no smooth diagonal sum, all-order flat local residual, or protected final blowup field | necessary |
 | G5 | no compact whole-space fields or globally smooth prescribed force equal to residual | necessary |
 | G6 | no proof of uniform finite kinetic energy for alternative C | necessary |

@@ -33,7 +33,7 @@ The validation explicitly preserves two corrected source-order facts:
 
 Whole-space transport order is also source-faithful:
 
-\[
+$$
 \text{viscosity-one candidate}
 \to
 \text{finite-energy closure}
@@ -43,7 +43,7 @@ Whole-space transport order is also source-faithful:
 \text{viscosity scaling}
 \to
 \text{all-}\nu>0\text{ R3 theorem}.
-\]
+$$
 
 The periodic branch begins from the already transported whole-space theorem and then uses delayed compression/periodization before the periodic obstruction.
 

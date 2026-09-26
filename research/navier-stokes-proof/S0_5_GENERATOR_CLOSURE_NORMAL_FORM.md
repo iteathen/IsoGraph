@@ -153,7 +153,7 @@ This closes the semantic gap between correction bookkeeping and the PDE defect.
 
 S0.4 atom: A13.
 
-Proves that G5–G9 compose into a valid next state and improve stage accuracy by \(1/10\).
+Proves that G5–G9 compose into a valid next state and improve stage accuracy by $1/10$.
 
 ## C4 — physical residual-rate bridge
 
@@ -202,7 +202,7 @@ C7 and C8 remain distinct because their competitor classes differ.
 
 The source-relative architecture can now be written as alternating construction and certification:
 
-\[
+$$
 \begin{aligned}
 &(G0,G1)
 \xrightarrow{C0,C1}
@@ -241,11 +241,11 @@ The source-relative architecture can now be written as alternating construction 
 &\xrightarrow{G14}
 \text{arbitrary-viscosity R3 breakdown},
 \end{aligned}
-\]
+$$
 
 with the periodic branch
 
-\[
+$$
 G14
 \to
 G15
@@ -253,7 +253,7 @@ G15
 C8
 \to
 \text{periodic breakdown}.
-\]
+$$
 
 ---
 

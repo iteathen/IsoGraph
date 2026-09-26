@@ -248,7 +248,7 @@ without A12, outputs of the four correction roles do not re-enter one represente
 ## A13 — invariant-preserving one-step accuracy gain
 
 Role:
-map a valid stage at accuracy \(\sigma\) to a valid stage at \(\sigma+1/10\).
+map a valid stage at accuracy $\sigma$ to a valid stage at $\sigma+1/10$.
 
 Representative source:
 - \`CorrectionAnalyticStep.step\`
@@ -276,7 +276,7 @@ First irreplaceable consumer:
 arbitrary finite residual order.
 
 Deletion witness:
-\(\sigma_j\to\infty\) alone does not imply the physical residual has improving jets.
+$\sigma_j\to\infty$ alone does not imply the physical residual has improving jets.
 
 ---
 
@@ -292,7 +292,7 @@ First irreplaceable consumer:
 local theorem closure.
 
 Deletion witness:
-separate finite-stage existence for each \((m,N)\) does not produce one common final field.
+separate finite-stage existence for each $(m,N)$ does not produce one common final field.
 
 ---
 
@@ -352,7 +352,7 @@ without A18, the local field does not satisfy the whole-space compact-support co
 ## A19 — smooth residual-to-force extension
 
 Role:
-extend compatible endpoint residual jets to a globally smooth prescribed force equal to the actual residual for \(0\le t<1\).
+extend compatible endpoint residual jets to a globally smooth prescribed force equal to the actual residual for $0\le t<1$.
 
 Representative source:
 - \`CandidateFromLimits.force\`
@@ -388,7 +388,7 @@ without A20, the R3 candidate lacks one exact contract field.
 ## A21 — viscosity transport
 
 Role:
-map the viscosity-one candidate and competitor obstruction to arbitrary \(\nu>0\).
+map the viscosity-one candidate and competitor obstruction to arbitrary $\nu>0$.
 
 Representative source:
 - \`ViscosityScaling.candidate_at_viscosity\`
@@ -398,7 +398,7 @@ First irreplaceable consumer:
 universal positive-viscosity R3 theorem.
 
 Deletion witness:
-without A21, the theorem remains at \(\nu=1\).
+without A21, the theorem remains at $\nu=1$.
 
 ---
 
@@ -458,7 +458,7 @@ the whole-space finite-energy uniqueness theorem has the wrong competitor class 
 
 The main construction path is
 
-\[
+$$
 (A0,A1,A2,A3)
 \to
 (A4,A5,A6)
@@ -480,22 +480,22 @@ A16
 A20
 \to
 A23.
-\]
+$$
 
 Transport branches:
 
-\[
+$$
 A18,A19,A20,A23
 \to A21
-\]
+$$
 
 for arbitrary-viscosity whole-space C, and
 
-\[
+$$
 A17,A18,A19,A21
 \to A22
 \to A24
-\]
+$$
 
 for periodic D.
 

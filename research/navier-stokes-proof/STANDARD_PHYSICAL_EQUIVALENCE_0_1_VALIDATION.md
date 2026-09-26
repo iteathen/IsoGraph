@@ -21,20 +21,20 @@ This is not experimental validation and not independent validation of the publis
 
 ## Dimensional map
 
-For \(L_0,T_0,\rho>0\),
+For $L_0,T_0,\rho>0$,
 
-\[
+$$
 X=L_0x,\quad T=T_0t,
-\]
+$$
 
-\[
+$$
 U=\frac{L_0}{T_0}u,\quad
 P=\rho\frac{L_0^2}{T_0^2}p,\quad
 F=\frac{L_0}{T_0^2}f,\quad
 \nu_{\rm phys}=\frac{L_0^2}{T_0}\nu.
-\]
+$$
 
-All field evaluations are understood at \((t,x)=(T/T_0,X/L_0)\).
+All field evaluations are understood at $(t,x)=(T/T_0,X/L_0)$.
 
 The inverse is explicit, so the base continuum map is bijective.
 
@@ -42,52 +42,52 @@ The inverse is explicit, so the base continuum map is bijective.
 
 | Quantity | Physical units |
 |---|---|
-| \(X\) | L |
-| \(T\) | T |
-| \(U\) | L T\(^{-1}\) |
-| \(P\) | M L\(^{-1}\) T\(^{-2}\) |
-| \(F\) | L T\(^{-2}\) |
-| \(\rho F\) | M L\(^{-2}\) T\(^{-2}\) |
-| \(\nu_{\rm phys}\) | L\(^2\) T\(^{-1}\) |
-| \(\nabla_XU\) | T\(^{-1}\) |
-| vorticity | T\(^{-1}\) |
-| momentum-flux tensor \(\rho U_iU_j\) | M L\(^{-1}\) T\(^{-2}\) |
-| total kinetic energy | M L\(^2\) T\(^{-2}\) |
-| viscous dissipation power | M L\(^2\) T\(^{-3}\) |
+| $X$ | L |
+| $T$ | T |
+| $U$ | L T$^{-1}$ |
+| $P$ | M L$^{-1}$ T$^{-2}$ |
+| $F$ | L T$^{-2}$ |
+| $\rho F$ | M L$^{-2}$ T$^{-2}$ |
+| $\nu_{\rm phys}$ | L$^2$ T$^{-1}$ |
+| $\nabla_XU$ | T$^{-1}$ |
+| vorticity | T$^{-1}$ |
+| momentum-flux tensor $\rho U_iU_j$ | M L$^{-1}$ T$^{-2}$ |
+| total kinetic energy | M L$^2$ T$^{-2}$ |
+| viscous dissipation power | M L$^2$ T$^{-3}$ |
 
 Pressure note:
-the source equation uses \(+\nabla p\), i.e. density-one/kinematic pressure convention. The dimensional pressure is therefore \(P=\rho U_0^2p\), so the dimensional equation contains \((1/\rho)\nabla_XP\).
+the source equation uses $+\nabla p$, i.e. density-one/kinematic pressure convention. The dimensional pressure is therefore $P=\rho U_0^2p$, so the dimensional equation contains $(1/\rho)\nabla_XP$.
 
 Force note:
-the source \(f\) is body acceleration. Physical force density is \(\rho F\).
+the source $f$ is body acceleration. Physical force density is $\rho F$.
 
 ## PDE scaling audit
 
-Each term scales by the same factor \(L_0/T_0^2\):
+Each term scales by the same factor $L_0/T_0^2$:
 
-\[
+$$
 \partial_TU
 =
 \frac{L_0}{T_0^2}\partial_tu,
-\]
+$$
 
-\[
+$$
 (U\cdot\nabla_X)U
 =
 \frac{L_0}{T_0^2}(u\cdot\nabla)u,
-\]
+$$
 
-\[
+$$
 \nu_{\rm phys}\Delta_XU
 =
 \frac{L_0}{T_0^2}\nu\Delta u,
-\]
+$$
 
-\[
+$$
 \frac1\rho\nabla_XP
 =
 \frac{L_0}{T_0^2}\nabla p.
-\]
+$$
 
 Therefore source residual = source force iff dimensional residual = dimensional force.
 
@@ -95,11 +95,11 @@ Result: PASS.
 
 ## Divergence audit
 
-\[
+$$
 \nabla_X\cdot U
 =
 T_0^{-1}\nabla\cdot u.
-\]
+$$
 
 Zero divergence is preserved and reflected.
 
@@ -118,24 +118,24 @@ Result: PASS.
 ## Energy audit
 
 Source:
-\[
+$$
 E=\frac12\int|u|^2dx.
-\]
+$$
 
 Physical:
-\[
+$$
 E_{\rm phys}
 =
 \frac{\rho}{2}\int|U|^2dX.
-\]
+$$
 
 Hence
 
-\[
+$$
 E_{\rm phys}(T_0t)
 =
 \rho\frac{L_0^5}{T_0^2}E(t).
-\]
+$$
 
 Uniform boundedness is preserved and reflected.
 
@@ -144,25 +144,25 @@ Result: PASS.
 ## Dissipation audit
 
 Source:
-\[
+$$
 D=\int|\nabla u|^2dx.
-\]
+$$
 
 Dimensional viscous power:
-\[
+$$
 \varepsilon_{\rm phys}
 =
 \rho\nu_{\rm phys}\int|\nabla_XU|^2dX
 =
 \rho\nu\frac{L_0^5}{T_0^3}D.
-\]
+$$
 
 The source work term scales by the same power factor:
-\[
+$$
 \rho\int U\cdot F\,dX
 =
 \rho\frac{L_0^5}{T_0^3}\int u\cdot f\,dx.
-\]
+$$
 
 Thus the energy identity commutes with dimensionalization.
 
@@ -170,13 +170,13 @@ Result: PASS.
 
 ## Blowup audit
 
-\[
+$$
 \|U(T_0t)\|_\infty
 =
 \frac{L_0}{T_0}\|u(t)\|_\infty.
-\]
+$$
 
-The multiplicative factor is positive and finite, so source \(L^\infty\) blowup is equivalent to dimensional velocity blowup.
+The multiplicative factor is positive and finite, so source $L^\infty$ blowup is equivalent to dimensional velocity blowup.
 
 Result: PASS.
 
@@ -184,18 +184,18 @@ Result: PASS.
 
 The formal source proves exact double/torus-average quadratic identities realizing the requested stress.
 
-Under the same deterministic averaging operator \(\mathcal A\),
+Under the same deterministic averaging operator $\mathcal A$,
 
-\[
+$$
 \rho\mathcal A[U'_iU'_j]
 =
 \rho\frac{L_0^2}{T_0^2}\mathcal A[u'_iu'_j].
-\]
+$$
 
 Therefore the covariance identity is exactly a dimensional momentum-flux identity.
 
 Boundary:
-the source \(\mathcal A\) is not automatically identified with experimental Reynolds averaging.
+the source $\mathcal A$ is not automatically identified with experimental Reynolds averaging.
 
 Result:
 - continuum momentum-flux interpretation: PASS;
@@ -228,11 +228,11 @@ Lagrangian particle-path interpretation: NOT CLAIMED.
 
 A real observation operator generally samples, filters, averages, and adds noise:
 
-\[
+$$
 Y=\mathcal O(U,P,F).
-\]
+$$
 
-No injectivity theorem for \(\mathcal O\) is supplied. Therefore real finite-resolution data are not equivalent to the complete continuum fields in general.
+No injectivity theorem for $\mathcal O$ is supplied. Therefore real finite-resolution data are not equivalent to the complete continuum fields in general.
 
 Result:
 - continuum equivalence: PASS;
@@ -242,13 +242,13 @@ Result:
 
 ### Exact equivalence
 
-\[
+$$
 \boxed{
 \text{source continuum formulation}
 \cong
 \text{standard dimensional continuum formulation}
 }
-\]
+$$
 
 for the PDE, divergence constraint, smoothness/support, force, velocity-gradient observables, quadratic momentum-flux identity, energy, dissipation, blowup, and protected Eulerian path.
 
@@ -258,12 +258,12 @@ FiveRows is an exact derived integral constraint but not a standard direct measu
 
 ### Non-equivalence
 
-\[
+$$
 \boxed{
 \text{complete continuum solution}
 \not\cong
 \text{ordinary finite-resolution instrument data}
 }
-\]
+$$
 
 without an additional injective observation model.
