@@ -60,7 +60,7 @@ jobs:
           set -euo pipefail
           E="research/project-discovery/2026-09-25-dp07-three-positive-controls/evidence/run-${GITHUB_RUN_ID}"
           mkdir -p "$E"
-          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json; do
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt ROLE_COVERAGE_AUDIT.json PARSED_REPORT.json; do
             [ -f "out/dp07-positive-controls/$f" ] && cp "out/dp07-positive-controls/$f" "$E/$f"
           done
           cat > "$E/CONTROL.json" <<EOF
@@ -88,4 +88,5 @@ jobs:
         run: |
           set -euo pipefail
           test "$COLD_OUTCOME" = "success"
+          test -f out/dp07-positive-controls/ROLE_COVERAGE_AUDIT.json
           test -f out/dp07-positive-controls/PARSED_REPORT.json
