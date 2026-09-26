@@ -1,0 +1,98 @@
+{
+  "status": "FAIL_TRANSLATION_QUALIFICATION",
+  "consequence": "DP07_RUN_36213568767_IS_PRELIMINARY_ONLY",
+  "qualification_rule": "A source->IsoGraph translation must carry every load-bearing source distinction natively before cold reconstruction. Human sidecars may gloss symbols but may not carry missing proposition/formula meaning.",
+  "cases": [
+    {
+      "artifact": "case-01-ising-lattice-gas/ISING.isg",
+      "result": "FAIL",
+      "missing": [
+        "literal {-1,+1} spin domain natively",
+        "two endpoint spin values in each neighbor pair contribution",
+        "multiplication structure s_i*s_j",
+        "negative J coefficient/sign",
+        "finite sum over neighbor pairs",
+        "negative h coefficient/sign",
+        "finite sum over sites",
+        "energy equality/definition",
+        "negative beta multiplication",
+        "exponential application",
+        "partition sum over configurations",
+        "division/normalization semantics"
+      ]
+    },
+    {
+      "artifact": "case-01-ising-lattice-gas/LATTICE_GAS.isg",
+      "result": "FAIL",
+      "missing": [
+        "literal {0,1} occupancy domain natively",
+        "two endpoint occupancies in each pair contribution",
+        "multiplication n_i*n_j",
+        "epsilon coefficient/sign convention",
+        "finite sum over neighbor pairs",
+        "negative mu one-body term",
+        "finite sum over sites",
+        "grand-energy equality/definition",
+        "beta/exponential structure",
+        "grand partition sum",
+        "division/normalization semantics"
+      ]
+    },
+    {
+      "artifact": "case-02-xor-gf2/XOR.isg",
+      "result": "FAIL",
+      "missing": [
+        "literal two-element truth domain natively",
+        "XOR operation truth table or equivalent native authority",
+        "constraint target parity binding as exact value",
+        "fold/order semantics sufficient to reconstruct selected-variable parity",
+        "exact all-constraints conjunction semantics"
+      ]
+    },
+    {
+      "artifact": "case-02-xor-gf2/GF2.isg",
+      "result": "FAIL",
+      "missing": [
+        "literal GF(2) carrier natively",
+        "field addition table/axioms or imported native field authority",
+        "coefficient 0/1 semantics",
+        "right-hand-side exact value",
+        "finite mod-2 sum semantics",
+        "simultaneous equation-system satisfaction semantics"
+      ]
+    },
+    {
+      "artifact": "case-03-newton-hamilton/NEWTON.isg",
+      "result": "FAIL",
+      "missing": [
+        "continuous-time/function scope sufficient to bind q(t)",
+        "exact derivative semantics qdot and qddot",
+        "multiplication m*a and k*q",
+        "addition and equality-to-zero structure for m*a+k*q=0",
+        "m>0 and k>0 source restrictions"
+      ]
+    },
+    {
+      "artifact": "case-03-newton-hamilton/HAMILTON.isg",
+      "result": "FAIL",
+      "missing": [
+        "continuous-time/function scope sufficient to bind q(t),p(t)",
+        "Hamiltonian equality H=p^2/(2m)+kq^2/2",
+        "square, multiplication, division, addition structure",
+        "partial derivative or exact first-order equation authority",
+        "qdot=p/m equation",
+        "pdot=-kq equation including sign",
+        "m>0 and k>0 source restrictions"
+      ]
+    }
+  ],
+  "cold_reconstruction": "BLOCKED_UNTIL_AUTHOR_SIDE_NATIVE_COVERAGE_PASSES",
+  "required_next_layers": [
+    "Q0 native expressibility/formula coverage",
+    "Q1 mechanical source-to-native formalization audit",
+    "Q2 isolated cold reconstruction from native bundle only",
+    "Q3 canonical source-vs-reconstruction structural isomorphism scoring",
+    "Q4 adversarial distinction preservation / no silent repair",
+    "Q5 only then DP 0.7 discovery"
+  ]
+}
