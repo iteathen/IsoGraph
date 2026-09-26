@@ -1,0 +1,119 @@
+{
+  "case_id": "case-02B",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "D1",
+        "pass": true,
+        "reason": "Explicitly maps to {0, 1}."
+      },
+      {
+        "id": "D2",
+        "pass": true,
+        "reason": "Explicitly maps to {0, 1}."
+      },
+      {
+        "id": "D3",
+        "pass": true,
+        "reason": "Explicitly defines GF2 addition table."
+      },
+      {
+        "id": "D4",
+        "pass": true,
+        "reason": "Correctly identifies finite-fold GF2 addition."
+      },
+      {
+        "id": "D5",
+        "pass": true,
+        "reason": "Correctly identifies equality of row_sum and rhs."
+      },
+      {
+        "id": "D6",
+        "pass": true,
+        "reason": "Correctly identifies universal quantification over rows."
+      },
+      {
+        "id": "D7",
+        "pass": true,
+        "reason": "Correctly identifies indexing by assignment and variable."
+      },
+      {
+        "id": "D8",
+        "pass": true,
+        "reason": "Correctly identifies sparse representation of nonzero variables."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "D1",
+        "pass": true,
+        "reason": "Explicitly maps to {0, 1}."
+      },
+      {
+        "id": "D2",
+        "pass": true,
+        "reason": "Explicitly maps to {0, 1}."
+      },
+      {
+        "id": "D3",
+        "pass": true,
+        "reason": "Explicitly defines GF2 addition table."
+      },
+      {
+        "id": "D4",
+        "pass": true,
+        "reason": "Correctly identifies finite-fold GF2 addition."
+      },
+      {
+        "id": "D5",
+        "pass": true,
+        "reason": "Correctly identifies equality of row_sum and rhs."
+      },
+      {
+        "id": "D6",
+        "pass": true,
+        "reason": "Correctly identifies universal quantification over rows."
+      },
+      {
+        "id": "D7",
+        "pass": true,
+        "reason": "Correctly identifies indexing by assignment and variable."
+      },
+      {
+        "id": "D8",
+        "pass": true,
+        "reason": "Correctly identifies sparse representation of nonzero variables."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "D-M1-table",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A explicitly reconstructs the modified table entry 1+1=1.",
+      "reason_B": "Decoder B explicitly reconstructs the modified table entry 1+1=1."
+    },
+    {
+      "mutation_id": "D-M2-rhs-domain",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A explicitly reconstructs the restricted domain {0}.",
+      "reason_B": "Decoder B explicitly reconstructs the restricted domain {0}."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}

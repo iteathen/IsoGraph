@@ -1,0 +1,49 @@
+{
+  "case_id": "case-02B",
+  "base": {
+    "reconstructed_statements": [
+      "Define model as a structure containing variable_family, assignment_family, row_family, and value_at.",
+      "value_at maps to {0, 1}.",
+      "value_at is indexed by assignment_family and variable_family.",
+      "rhs maps to {0, 1}.",
+      "gf2_add(0,0)=0, gf2_add(0,1)=1, gf2_add(1,0)=1, gf2_add(1,1)=0.",
+      "row_sum(row, assignment) equals finite_fold(gf2_add, selected_nonzero_variables(assignment), lambda(var) value_at(row, var), 0).",
+      "row_satisfied(row, assignment) equals (row_sum(row, assignment) == rhs(assignment)).",
+      "system_satisfied(row_family) equals forall(row in row_family) row_satisfied(row_family, row)."
+    ],
+    "formula_trees": [
+      "equal(row_sum(?1, ?2), finite_fold(gf2_add, selected_nonzero_variables(?2), lambda(?3) value_at(?1, ?3), 0))",
+      "equal(row_satisfied(?1, ?2), equal(row_sum(?1, ?2), rhs(?2)))",
+      "equal(system_satisfied(?1), forall(?2) (member(?2, row_family) => row_satisfied(?1, ?2)))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "gf2_add(1,1)=1 instead of 0."
+      ],
+      "formula_trees": [
+        "gf2_add(1,1)=1"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "rhs maps to {0} instead of {0, 1}."
+      ],
+      "formula_trees": [
+        "rhs maps to {0}"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}
