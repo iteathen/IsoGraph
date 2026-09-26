@@ -49,7 +49,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -58,7 +58,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -107,7 +107,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -116,7 +116,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -165,7 +165,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -174,7 +174,7 @@ Return exactly one JSON object, with no prose outside it:
           {
             "symbol": "^...",
             "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
-            "counterparts": ["^..."],
+            "counterparts": ["^... or represented literal such as #0"],
             "justification": "...",
             "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
           }
@@ -240,7 +240,7 @@ For every case, `role_coverage` must classify the local stable-label symbols use
 For `EXACT_WITNESS` specifically:
 
 - every used signature symbol on side A and side B MUST appear exactly once;
-- `MAPPED`, `TRANSFORMED`, and `SHARED_INFRASTRUCTURE` entries MUST name at least one valid opposite-side counterpart;
+- `MAPPED`, `TRANSFORMED`, and `SHARED_INFRASTRUCTURE` entries MUST name at least one valid opposite-side counterpart; a counterpart may be an opposite-side signature symbol or an opposite-side literal explicitly present in the frozen native;
 - `RESIDUAL` and `NON_LOAD_BEARING` may have an empty counterpart list, but MUST explain why;
 - every entry MUST include a non-empty `justification`;
 - `authority_refs` MUST identify direct native support or the packet authority that licenses any nonliteral transformation;
