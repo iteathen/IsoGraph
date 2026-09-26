@@ -1,12 +1,12 @@
 # DP 0.7 — Three Exact Positive Controls
 
 **Date:** 2026-09-25
-**Status:** COMPLETE FIRST RUN
+**Status:** REOPENED — EXACT TRANSLATION QUALIFICATION REQUIRED
 **Branch:** `experiment/dp07-three-positive-controls-v1`
 **Base:** `research/core-0.19-implicit-assertions@c2a62af9cbacbea68f5ca3ab9112d6b966fb0764`
 **Protocol under test:** `extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md`
 **Authority effect:** none
-**Qualification effect:** none
+**Qualification effect:** none; prior DP run is diagnostic only
 
 ## Purpose
 
@@ -64,3 +64,28 @@ No discovery result has been generated yet.
 See `FINAL_REPORT_0_1.md` and `SCORE_0_1.json`.
 
 The first run recovered all three conceptual known-positive correspondences, with one clean exact native witness and two partial witnesses. Case 01 also exposed a control-scope defect requiring correction before rerun.
+
+
+## Exact-rendering correction
+
+The first DP run used native structural skeletons that had not first passed exact source-to-native rendering qualification.
+
+Under current Core 0.19 section 18 and ESR 0.1:
+
+```text
+source
+-> exact qualified native rendering
+-> only then DP
+```
+
+Therefore:
+
+```text
+run 36213568767
+    = retained diagnostic evidence
+    != current DP 0.7 qualification evidence
+```
+
+The campaign is reopened at the translation layer.
+
+Discovery remains blocked until all six v2 translations pass the exact rendering contract.
