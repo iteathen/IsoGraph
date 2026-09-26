@@ -34,7 +34,7 @@ Return exactly one JSON object and no Markdown fencing:
   }
 }
 
-Return F01-F32 exactly once and in order. Every reason must contain at least 12 non-whitespace characters. Every authority_used list must be nonempty.
+Return F01-F32 exactly once and in order. Keep each reason to one concise sentence of at most 20 words, with at least 12 non-whitespace characters. Use one or two compact authority references per case; every authority_used list must be nonempty.
 
 The following keys and enum alternatives are the complete public serializer contract. Boolean examples indicate type only, not expected truth values.
 
