@@ -9,7 +9,7 @@
 
 | Native artifact | Existing role | New-standard disposition | Native rewrite? |
 |---|---|---|---|
-| `NAVIER_STOKES_FORCED_BLOWUP_0_1.isg` | high-retention source rendering | Core 0.19 exact-source qualification burden remains open; explicit source-exact/source-derived/QU boundaries already exist | **successor required before exact-source qualification**, not rewritten yet |
+| `NAVIER_STOKES_FORCED_BLOWUP_0_1.isg` | high-retention source rendering | Core 0.19 exact-source qualification burden remains open; explicit source-exact/source-derived/QU boundaries already exist | **coverage audit first; successor only if a demonstrated native gap requires it** |
 | `REDUCED_FORMULA_0_2.isg` | derived 8-component proof/interface reduction | already has target coverage and deletion witnesses; reinterpret as **minimal under fixed G1–G8 deletion candidate space**, not minimum | no semantic rewrite required |
 | `STANDARD_PHYSICAL_EQUIVALENCE_0_1.isg` | derived continuum equivalence proof | already separates exact continuum equivalence from finite-resolution measurement non-equivalence | no semantic rewrite required |
 | `FRESH_SYNTHESIS_S0_3.isg` | source-relative proof-interface synthesis | source-relative sufficiency/deletion structure already explicit; global minimum not claimed | no semantic rewrite required |
@@ -42,7 +42,7 @@ Disposition:
 ```text
 research rendering: retained
 exact-source qualification: not established
-modern successor: required before any exact-source promotion
+modern successor: conditional on demonstrated coverage gaps
 ```
 
 The successor should be driven by an exact coverage audit, not by blindly expanding every Lean helper declaration.
@@ -151,8 +151,8 @@ A successor DP 0.8 view should instead import the current Navier family and expl
 Wave 02 native work should therefore be narrow:
 
 1. create a DP 0.8 successor support/discovery graph rather than modifying old DP ledgers;
-2. create a Core 0.19 source-coverage audit for `NAVIER_STOKES_FORCED_BLOWUP_0_1.isg`;
-3. only if that audit exposes native semantic loss, author `NAVIER_STOKES_FORCED_BLOWUP_0_2.isg`;
+2. use `NAVIER_STOKES_FORCED_BLOWUP_0_1_CORE019_AUDIT.md` to freeze the exact future rendering claim scope and build Q1 coverage;
+3. only if that coverage work exposes native semantic loss, author `NAVIER_STOKES_FORCED_BLOWUP_0_2.isg`;
 4. do not create meaningless version bumps for RF/S0.3/S0.4/S0.5/physical-equivalence graphs whose existing native semantics already satisfy the new distinction being checked.
 
 This preserves the project's "do nothing when nothing is needed" discipline.
