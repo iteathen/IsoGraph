@@ -352,7 +352,7 @@ discover freely
 use only what is necessary for the declared objective
 ```
 
-What counts as "better" among sufficient alternatives is application-dependent. Time, CPU cycles, memory, material, transition count, proof burden, reliability, energy, risk, information gain, or another quantity may matter. IsoGraph should not invent a universal optimization currency.
+What counts as "better" among sufficient alternatives is application-dependent. Examples include time, CPU cycles, peak memory, bytes moved, search states expanded, transition count, proof-step count, or external-call count. A comparison dimension must be represented, mechanically derivable, or supplied as measured evidence; IsoGraph should not invent either the quantity or a universal optimization currency.
 
 When no supplied value system ranks two sufficient alternatives, preserve the incomparability rather than manufacturing a preference.
 
