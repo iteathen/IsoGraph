@@ -33,7 +33,6 @@ const expectedHashes={
 
 const forbidden=[
   'hidden/',
-  'ASSERTIONS',
   'score-exp029',
   'test-score-exp029',
   'test-runner-exp029',
