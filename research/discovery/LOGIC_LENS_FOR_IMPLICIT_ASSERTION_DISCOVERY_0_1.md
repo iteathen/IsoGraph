@@ -79,7 +79,7 @@ Which assertions remain invariant across admissible QU realizations?
 
 Which facts can be reconstructed from a smaller generating support?
 
-Which represented values are semantic outcomes but not independent information generators?
+Which represented outcomes are logically derivable from others and therefore may not require an independent detector for the current objective?
 ```
 
 A positive answer is only a discovery lead until its governing authority is identified.
@@ -191,10 +191,10 @@ These consequences expose an important distinction:
 
 ```text
 semantic member of a partition
-    != independent detector or information source
+    != requirement for an independent detector
 ```
 
-An ordered classifier may therefore have fewer independent tests than semantic outcomes, while the semantic representation still retains every outcome.
+An ordered classifier may therefore require fewer independent tests than there are semantic outcomes, provided the earlier tests are exact under the governing authority and the residual branch is exhaustive. Independent evidence for a residual class may still exist and should not be erased merely because the class is derivable.
 
 This is a generic partition pattern, not a game-specific rule.
 
