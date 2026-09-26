@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 
-let validateExactRoleCoverage;
+let validateExactRoleCoverage, enforceExactRoleCoverage;
 try {
-  ({validateExactRoleCoverage}=await import('./exact-role-coverage.mjs'));
+  ({validateExactRoleCoverage,enforceExactRoleCoverage}=await import('./exact-role-coverage.mjs'));
 } catch (error) {
   console.error('RED: exact-role-coverage validator is not implemented');
   process.exit(1);
@@ -50,3 +50,15 @@ emptyReason.role_coverage.A[0].justification='';
 assert.match(validateExactRoleCoverage({caseReport:emptyReason,signatureA:sigA,signatureB:sigB}).join('\n'),/missing A justification for \^1/);
 
 console.log('PASS: exact-witness role coverage validator');
+
+const signatures={
+  'case-01':{A:sigA,B:sigB}
+};
+
+assert.doesNotThrow(()=>enforceExactRoleCoverage({report:{cases:[complete]},signaturesByCase:signatures}));
+assert.throws(
+  ()=>enforceExactRoleCoverage({report:{cases:[missing]},signaturesByCase:signatures}),
+  /case-01 exact role coverage failed: missing A symbol \^1/
+);
+
+console.log('PASS: aggregate exact-witness role coverage enforcement');
