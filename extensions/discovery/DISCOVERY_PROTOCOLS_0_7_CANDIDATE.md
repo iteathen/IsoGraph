@@ -535,7 +535,8 @@ The exact-witness audit MUST:
 6. check represented domains/ranges, scope, binding, arity, operator role, ordering where material, sign/coefficient/value distinctions, exact/approximate status, and other load-bearing distinctions;
 7. preserve and explicitly account for representation-only residuals, additive constants, auxiliary coordinates, projections, quotients, or other non-identical structure rather than declaring them absent;
 8. attempt local falsification against represented distinctions that would fail if the candidate mapping were merely familiar rather than exact;
-9. refuse semantic repair toward a familiar target when the represented candidate mapping fails.
+9. refuse semantic repair toward a familiar target when the represented candidate mapping fails;
+10. record primitive provenance or an included qualified semantic-authority path/section for every nonliteral transformation step used to pass the exact gate.
 
 The governing shape is:
 
