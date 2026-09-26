@@ -1,0 +1,35 @@
+{
+  "campaign": "2026-09-25-dp07-three-positive-controls",
+  "status": "PREPARED_NOT_EXECUTED",
+  "branch": "experiment/dp07-three-positive-controls-v1",
+  "base_commit": "c2a62af9cbacbea68f5ca3ab9112d6b966fb0764",
+  "protocol_under_test": "extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md",
+  "discovery_prompt": "research/project-discovery/2026-09-25-dp07-three-positive-controls/BLIND_DISCOVERY_PROMPT.md",
+  "scoring_contract": "research/project-discovery/2026-09-25-dp07-three-positive-controls/SCORING_CONTRACT.md",
+  "discovery_inputs": [
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-01-ising-lattice-gas/ISING_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-01-ising-lattice-gas/ISING.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-01-ising-lattice-gas/LATTICE_GAS_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-01-ising-lattice-gas/LATTICE_GAS.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/XOR_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/XOR.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/GF2_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/GF2.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/NEWTON_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/NEWTON.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/HAMILTON_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/HAMILTON.isg"
+  ],
+  "withheld_oracles": [
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/oracle/CASE_01_ISING_LATTICE_GAS_ORACLE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/oracle/CASE_02_XOR_GF2_ORACLE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/oracle/CASE_03_NEWTON_HAMILTON_ORACLE.md"
+  ],
+  "rules": {
+    "no_oracle_access_during_discovery": true,
+    "no_domain_label_evidence": true,
+    "no_raw_id_evidence": true,
+    "no_global_negative_isomorphism_oracle": true,
+    "additional_discoveries_allowed": true
+  }
+}
