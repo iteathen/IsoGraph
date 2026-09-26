@@ -12,6 +12,7 @@ const sigA={symbols:{'^1':'beta','^2':'energy','^3':'equal'}};
 const sigB={symbols:{'^11':'beta','^12':'energy','^13':'equal'}};
 
 const complete={
+  case_id:'case-01',
   disposition:'EXACT_WITNESS',
   role_coverage:{
     A:[
