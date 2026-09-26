@@ -5,9 +5,8 @@ const MANIFEST=process.argv[2]||'research/rendering-modernization/2026-09-26/WAV
 const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
 
 
-function gitBlobSha(buf){
-  const header=Buffer.from('blob '+buf.length+'\\0');
-  return crypto.createHash('sha1').update(header).update(buf).digest('hex');
+function gitBlobSha(path){
+  return execFileSync('git',['rev-parse','HEAD:'+path],{encoding:'utf8'}).trim();
 }
 
 if(manifest.status==='IMMUTABLE_ESR_QUALIFIED_PREDECESSORS'){
