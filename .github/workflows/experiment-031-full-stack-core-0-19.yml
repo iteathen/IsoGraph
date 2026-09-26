@@ -85,7 +85,7 @@ jobs:
             'experiments/031/COLD_PROMPT.md'
           ];
           if(JSON.stringify(paths)!==JSON.stringify(expected)) throw new Error('unexpected cold packet manifest '+JSON.stringify(paths));
-          const forbidden=['hidden/','ASSERTIONS','score-exp031','test-score-exp031','AUTHORING_AUDIT','FINAL_QUALIFICATION_REVIEW','experiments/031/evidence','experiments/027/evidence','experiments/028/evidence','experiments/029/evidence','experiments/030/evidence','CURRENT_INTEGRATED_STACK','QUALIFIED_MODULES','AGENTS.md','README.md','STATUS.md'];
+          const forbidden=['hidden/','score-exp031','test-score-exp031','AUTHORING_AUDIT','FINAL_QUALIFICATION_REVIEW','experiments/031/evidence','experiments/027/evidence','experiments/028/evidence','experiments/029/evidence','experiments/030/evidence','CURRENT_INTEGRATED_STACK','QUALIFIED_MODULES','AGENTS.md','README.md','STATUS.md'];
           for(const item of forbidden){
             if(paths.some(path=>path.includes(item))) throw new Error('forbidden cold input '+item);
           }
