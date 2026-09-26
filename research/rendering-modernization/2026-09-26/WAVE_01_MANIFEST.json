@@ -9,15 +9,60 @@
       "source_freeze": "research/project-discovery/2026-09-25-ising-mwc-dp07/ISING_SOURCE_FREEZE_0_1.md",
       "predecessor": "research/project-discovery/2026-09-25-ising-mwc-dp07/ISING_RENDER_0_1.isg",
       "obligations": {
-        "finite_site_family": ["^41123", "^41101"],
-        "binary_spin_domain": ["^41118", "^41103", "#-1", "#1"],
-        "configuration_site_indexing": ["^41119", "^41103", "^41102", "^41101"],
-        "periodic_successor": ["^41124", "^41104", "^41101"],
-        "complete_assignment_family": ["^41125", "^41102", "^41101", "^41103"],
-        "energy_formula": ["^41108", "^41105", "^41106", "^41112", "^41113", "^41114", "^41115"],
-        "boltzmann_weight": ["^41109", "^41116", "^41107", "^41108"],
-        "partition": ["^41110", "^41115", "^41102", "^41109"],
-        "probability": ["^41111", "^41117", "^41109", "^41110"]
+        "finite_site_family": [
+          "^41123",
+          "^41101"
+        ],
+        "binary_spin_domain": [
+          "^41118",
+          "^41103",
+          "#-1",
+          "#1"
+        ],
+        "configuration_site_indexing": [
+          "^41119",
+          "^41103",
+          "^41102",
+          "^41101"
+        ],
+        "periodic_successor": [
+          "^41124",
+          "^41104",
+          "^41101"
+        ],
+        "complete_assignment_family": [
+          "^41125",
+          "^41102",
+          "^41101",
+          "^41103"
+        ],
+        "energy_formula": [
+          "^41108",
+          "^41105",
+          "^41106",
+          "^41112",
+          "^41113",
+          "^41114",
+          "^41115"
+        ],
+        "boltzmann_weight": [
+          "^41109",
+          "^41116",
+          "^41107",
+          "^41108"
+        ],
+        "partition": [
+          "^41110",
+          "^41115",
+          "^41102",
+          "^41109"
+        ],
+        "probability": [
+          "^41111",
+          "^41117",
+          "^41109",
+          "^41110"
+        ]
       }
     },
     {
@@ -27,18 +72,143 @@
       "source_freeze": "research/project-discovery/2026-09-25-ising-mwc-dp07/MWC_SOURCE_FREEZE_0_1.md",
       "predecessor": "research/project-discovery/2026-09-25-ising-mwc-dp07/MWC_RENDER_0_1.isg",
       "obligations": {
-        "finite_binding_site_family": ["^52126", "^52101"],
-        "binary_occupancy_domain": ["^52121", "^52103", "#0", "#1"],
-        "occupancy_indexing": ["^52122", "^52103", "^52102", "^52101"],
-        "binary_global_conformation": ["^52121", "^52104", "^52130", "^52131"],
-        "concerted_global_conformation": ["^52129", "^52104", "^52102"],
-        "complete_microstate": ["^52127", "^52102", "^52101", "^52103", "^52104"],
-        "state_energy": ["^52108", "^52106", "^52107", "^52115", "^52118"],
-        "bound_count": ["^52109", "^52118", "^52103"],
-        "gibbs_factor": ["^52112", "^52119", "^52117", "^52116", "^52111", "^52110"],
-        "partition": ["^52113", "^52118", "^52102", "^52112"],
-        "probability": ["^52114", "^52120", "^52112", "^52113"],
-        "source_stated_observables": ["^52128", "^52132", "^52133", "^52114"]
+        "finite_binding_site_family": [
+          "^52126",
+          "^52101"
+        ],
+        "binary_occupancy_domain": [
+          "^52121",
+          "^52103",
+          "#0",
+          "#1"
+        ],
+        "occupancy_indexing": [
+          "^52122",
+          "^52103",
+          "^52102",
+          "^52101"
+        ],
+        "binary_global_conformation": [
+          "^52121",
+          "^52104",
+          "^52130",
+          "^52131"
+        ],
+        "concerted_global_conformation": [
+          "^52129",
+          "^52104",
+          "^52102"
+        ],
+        "complete_microstate": [
+          "^52127",
+          "^52102",
+          "^52101",
+          "^52103",
+          "^52104"
+        ],
+        "state_energy": [
+          "^52108",
+          "^52106",
+          "^52107",
+          "^52115",
+          "^52118"
+        ],
+        "bound_count": [
+          "^52109",
+          "^52118",
+          "^52103"
+        ],
+        "gibbs_factor": [
+          "^52112",
+          "^52119",
+          "^52117",
+          "^52116",
+          "^52111",
+          "^52110"
+        ],
+        "partition": [
+          "^52113",
+          "^52118",
+          "^52102",
+          "^52112"
+        ],
+        "probability": [
+          "^52114",
+          "^52120",
+          "^52112",
+          "^52113"
+        ],
+        "source_stated_observables": [
+          "^52128",
+          "^52132",
+          "^52133",
+          "^52114"
+        ]
+      }
+    },
+    {
+      "id": "ising-mwc-common-core-0.2",
+      "native": "research/project-discovery/2026-09-25-ising-mwc-dp07/COMMON_CORE_0_2.isg",
+      "signature": "research/project-discovery/2026-09-25-ising-mwc-dp07/COMMON_CORE_0_2_SIGNATURE.json",
+      "predecessor": "research/project-discovery/2026-09-25-ising-mwc-dp07/COMMON_CORE_0_1.isg",
+      "derived_from": [
+        "research/project-discovery/2026-09-25-ising-mwc-dp07/ISING_RENDER_0_2.isg",
+        "research/project-discovery/2026-09-25-ising-mwc-dp07/MWC_RENDER_0_2.isg"
+      ],
+      "obligations": {
+        "finite_index_family": [
+          "^63101",
+          "3010"
+        ],
+        "local_binary_state": [
+          "^63102",
+          "3011",
+          "3012",
+          "3010"
+        ],
+        "aggregate_local_statistic": [
+          "^63104",
+          "3013",
+          "3011",
+          "3010"
+        ],
+        "external_control": [
+          "^63105",
+          "3014"
+        ],
+        "source_specific_residual_port": [
+          "^63106",
+          "3015"
+        ],
+        "total_statistical_score": [
+          "^63107",
+          "3016",
+          "3015",
+          "3014",
+          "3013"
+        ],
+        "exponential_weight": [
+          "^63108",
+          "3017",
+          "3016"
+        ],
+        "finite_partition": [
+          "^63109",
+          "3018",
+          "3017",
+          "3012"
+        ],
+        "normalized_probability": [
+          "^63110",
+          "3019",
+          "3017",
+          "3018"
+        ],
+        "affine_binary_bridge": [
+          "^63116",
+          "3020",
+          "3011"
+        ]
       }
     }
   ]
