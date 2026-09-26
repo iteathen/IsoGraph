@@ -25,6 +25,12 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Verify accumulated family reference is synchronized
+        run: node tools/check-family-reference-sync.mjs
+
+      - name: Verify accumulated family reference DOCX integrity
+        run: unzip -t IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+
       - name: Verify repository authority surface
         shell: bash
         run: |
