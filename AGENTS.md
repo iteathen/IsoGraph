@@ -11,9 +11,10 @@ Before substantive work, read `README.md`, `DESIGN_IDEALS.md`, `STATUS.md`, `MIG
 ### Qualified Core authority
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
-- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017.
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017;
+- `CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md` — qualified cumulative assertion-support / exact-rendering clarification by `qualification/CORE_0_19_QUALIFICATION.md`, using Experiments 029/030 plus the six ESR-qualified renderings.
 
-Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 observation-first clarification. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 and Core 0.19 clarifications. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
 
 ### Qualified extension/module authority
 
@@ -34,11 +35,11 @@ The semantic files intentionally retain their historical `_CANDIDATE` filenames 
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The current expanded Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition is integration-qualified for the exercised dependency-closed scope by the Experiment 027 predecessor plus Experiment 028 successor delta; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`. Experiment 027 and the older integration records remain immutable predecessor evidence.
+The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision recorded by the Experiment 027 predecessor plus Experiment 028 successor delta; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`. Core 0.19 is independently qualified as current Core authority and is not silently inserted into that historical integration result.
 
 ### Successor status
 
-Core 0.18, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. Core 0.19 remains an unqualified successor candidate. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. A fresh full-stack integration claim including Core 0.19 remains separate from module qualification. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
@@ -180,7 +181,7 @@ DP 0.7 qualification is recorded in:
 - `experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md`;
 - the completed three-positive-control campaign under `research/project-discovery/2026-09-25-dp07-three-positive-controls/`.
 
-DP 0.7's conditional exact source-rendering path does not promote Core 0.19 globally. Core 0.19 remains separately unqualified; when source-formula rendering is used for DP evidence, the applicable rendering authority must independently satisfy its qualification burden.
+DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision pinned by `qualification/CORE_0_19_QUALIFICATION.md`.
 
 Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, identity hypotheses, and derived views. **Discovery priority never supplies semantic proof authority.**
 
