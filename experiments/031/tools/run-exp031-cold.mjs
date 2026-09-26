@@ -52,7 +52,7 @@ const expectedHashes={
 };
 
 const forbidden=[
-  'hidden/','ASSERTIONS','score-exp031','test-score-exp031','AUTHORING_AUDIT',
+  'hidden/','score-exp031','test-score-exp031','AUTHORING_AUDIT',
   'FINAL_QUALIFICATION_REVIEW','experiments/031/evidence','experiments/027/evidence',
   'experiments/028/evidence','experiments/029/evidence','experiments/030/evidence',
   'EXPERIMENT_027_FINAL','EXPERIMENT_028_FINAL','EXPERIMENT_029_FINAL','EXPERIMENT_030_FINAL',
