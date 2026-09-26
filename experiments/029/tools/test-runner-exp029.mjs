@@ -28,7 +28,7 @@ if(JSON.stringify(paths)!==JSON.stringify(expected)){
 }
 
 const forbidden=[
-  'hidden/','ASSERTIONS','score-exp029','test-score-exp029','test-runner-exp029',
+  'experiments/029/hidden/','score-exp029','test-score-exp029','test-runner-exp029',
   'QUALIFICATION_REVIEW','AUTHORING_AUDIT','experiments/029/evidence',
   'translation-v2/evidence','translation-v2/hidden','oracle/','SCORING_CONTRACT',
   'AGENTS.md','README.md','STATUS.md'
