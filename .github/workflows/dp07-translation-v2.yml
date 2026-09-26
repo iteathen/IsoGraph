@@ -29,6 +29,14 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: 26.7.0
+      - name: Load qualification shard
+        run: |
+          set -euo pipefail
+          R="research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/RUN.request"
+          CASE="$(sed -n 's/^case=//p' "$R" | tail -n 1)"
+          if [ -n "$CASE" ]; then
+            echo "ISOGRAPH_CASE=$CASE" >> "$GITHUB_ENV"
+          fi
       - name: Deterministic native integrity audit
         run: |
           set -euo pipefail
