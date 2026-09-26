@@ -7,6 +7,9 @@ on:
     paths:
       - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-exact-role-coverage.mjs
       - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/exact-role-coverage.mjs
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-runner-role-gate.mjs
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/run-blind-discovery.mjs
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/BLIND_DISCOVERY_PROMPT.md
 
 permissions:
   contents: read
@@ -22,3 +25,5 @@ jobs:
           node-version: 26.7.0
       - name: Test exact-witness role coverage gate
         run: node research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-exact-role-coverage.mjs
+      - name: Test blind runner role coverage integration
+        run: node research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-runner-role-gate.mjs
