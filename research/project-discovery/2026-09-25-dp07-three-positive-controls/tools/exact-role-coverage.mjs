@@ -10,6 +10,12 @@ function symbols(signature){
   return Object.keys(signature?.symbols||{});
 }
 
+function references(signature,native){
+  const refs=new Set(symbols(signature));
+  for(const match of String(native||'').matchAll(/#-?\\d+/g)) refs.add(match[0]);
+  return refs;
+}
+
 function validateSide({side,entries,expected,opposite}){
   const issues=[];
   if(!Array.isArray(entries)){
@@ -52,13 +58,15 @@ function validateSide({side,entries,expected,opposite}){
   return issues;
 }
 
-export function validateExactRoleCoverage({caseReport,signatureA,signatureB}){
+export function validateExactRoleCoverage({caseReport,signatureA,signatureB,nativeA,nativeB}){
   const expectedA=new Set(symbols(signatureA));
   const expectedB=new Set(symbols(signatureB));
+  const refsA=references(signatureA,nativeA);
+  const refsB=references(signatureB,nativeB);
   const coverage=caseReport?.role_coverage||{};
   return [
-    ...validateSide({side:'A',entries:coverage.A,expected:expectedA,opposite:expectedB}),
-    ...validateSide({side:'B',entries:coverage.B,expected:expectedB,opposite:expectedA})
+    ...validateSide({side:'A',entries:coverage.A,expected:expectedA,opposite:refsB}),
+    ...validateSide({side:'B',entries:coverage.B,expected:expectedB,opposite:refsA})
   ];
 }
 
@@ -68,7 +76,13 @@ export function enforceExactRoleCoverage({report,signaturesByCase}){
     const caseId=caseReport?.case_id;
     const pair=signaturesByCase?.[caseId];
     if(!pair?.A||!pair?.B) throw new Error(`${caseId||'unknown-case'} exact role coverage failed: missing signatures`);
-    const issues=validateExactRoleCoverage({caseReport,signatureA:pair.A,signatureB:pair.B});
+    const issues=validateExactRoleCoverage({
+      caseReport,
+      signatureA:pair.A,
+      signatureB:pair.B,
+      nativeA:pair.nativeA,
+      nativeB:pair.nativeB
+    });
     if(issues.length) throw new Error(`${caseId} exact role coverage failed: ${issues.join('; ')}`);
   }
 }
