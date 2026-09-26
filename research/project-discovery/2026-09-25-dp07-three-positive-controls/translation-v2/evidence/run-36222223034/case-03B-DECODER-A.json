@@ -1,0 +1,79 @@
+{
+  "case_id": "case-03B",
+  "base": {
+    "reconstructed_statements": [
+      "model(time_domain, q, p, H, m, k)",
+      "function_signature(q, time_domain, real_domain)",
+      "function_signature(p, time_domain, real_domain)",
+      "function_signature(H, time_domain, real_domain)",
+      "range_or_domain(m, real_domain)",
+      "range_or_domain(k, real_domain)",
+      "positive(m)",
+      "positive(k)",
+      "continuous(time_domain)",
+      "\\?1 equal(H(?1), real_add(real_divide(square(p(?1)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(?1))), #2)))",
+      "\\?1 equal(time_derivative(q, ?1), real_divide(p(?1), m))",
+      "\\?1 equal(time_derivative(p, ?1), real_multiply(real_multiply(#-1, k), q(?1)))"
+    ],
+    "formula_trees": [
+      "\\?1 (equal (H ?1) (real_add (real_divide (square (p ?1)) (real_multiply #2 m)) (real_divide (real_multiply k (square (q ?1))) #2)))",
+      "\\?1 (equal (time_derivative q ?1) (real_divide (p ?1) m))",
+      "\\?1 (equal (time_derivative p ?1) (real_multiply (real_multiply #-1 k) (q ?1)))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "model(time_domain, q, p, H, m, k)",
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(p, time_domain, real_domain)",
+        "function_signature(H, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "\\?1 equal(H(?1), real_add(real_divide(square(p(?1)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(?1))), #2)))",
+        "\\?1 equal(time_derivative(q, ?1), real_divide(p(?1), m))",
+        "\\?1 equal(time_derivative(p, ?1), real_multiply(k, q(?1)))"
+      ],
+      "formula_trees": [
+        "\\?1 (equal (H ?1) (real_add (real_divide (square (p ?1)) (real_multiply #2 m)) (real_divide (real_multiply k (square (q ?1))) #2)))",
+        "\\?1 (equal (time_derivative q ?1) (real_divide (p ?1) m))",
+        "\\?1 (equal (time_derivative p ?1) (real_multiply k (q ?1)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "model(time_domain, q, p, H, m, k)",
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(p, time_domain, real_domain)",
+        "function_signature(H, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "\\?1 equal(H(?1), real_add(real_divide(square(p(?1)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(?1))), #2)))",
+        "\\?1 equal(time_derivative(q, ?1), real_divide(q(?1), m))",
+        "\\?1 equal(time_derivative(p, ?1), real_multiply(real_multiply(#-1, k), q(?1)))"
+      ],
+      "formula_trees": [
+        "\\?1 (equal (H ?1) (real_add (real_divide (square (p ?1)) (real_multiply #2 m)) (real_divide (real_multiply k (square (q ?1))) #2)))",
+        "\\?1 (equal (time_derivative q ?1) (real_divide (q ?1) m))",
+        "\\?1 (equal (time_derivative p ?1) (real_multiply (real_multiply #-1 k) (q ?1)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}
