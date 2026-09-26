@@ -1,34 +1,82 @@
 # Final-Product Maintenance Outstanding — 2026-09-26
 
-**Status:** OUTSTANDING — Library publication/storage projection only  
-**Semantic/repository authority:** unchanged  
-**Pinned repository snapshot for the verified current DOCX:** `main@f813b278dbefbd07e1ec2424926c2393368532a4`
+**Status:** OUTSTANDING — canonical Project-attached Library publication/storage projection only  
+**Current semantic authority:** direct Core 0.19 full-stack qualification complete  
+**Pinned repository snapshot for the verified current working-source DOCX:** `main@ef5414b1733b3619356039722a7280cc94ac49d4`
 
 ## What is complete
 
-Core 0.19 qualification and promotion are complete at the repository level. The accumulated family reference was rebuilt against the pinned snapshot above and was already visually inspected page-by-page before this incident.
+The current semantic family and direct integration qualification are complete at the repository level.
 
-The preserved current build is now maintained as an editable working source:
+Experiment 031 directly qualified:
+
+```text
+Core 0.17
++ Core 0.18
++ Core 0.19
++ QU 0.1
++ NEI 0.4
++ DP 0.1–0.7
++ DTS 0.1
+```
+
+Qualification evidence:
+
+- workflow run: `36256020851`;
+- frozen execution SHA: `cd5d3b9f0281ba2bf222e4c2541f90ab4c4dac7b`;
+- evidence commit: `8091d5ae4e7a184461b53caebd8352bc24c67de7`;
+- full-stack cases: 32 / 32 PASS;
+- mismatches: 0;
+- all scoring guards: true;
+- all module assessments: `SUPPORTED`;
+- formal disposition: `QUALIFIES`;
+- promotion PR: #44;
+- promotion merge: `ef5414b1733b3619356039722a7280cc94ac49d4`;
+- post-merge Verify: `36256333700` — SUCCESS.
+
+Historical Experiments 027–030 and Experiment 031 attempts 1–2 retain their original dispositions/classifications. No historical result was rewritten.
+
+## Current editable final-product working source
+
+The accumulated family reference was refreshed after Experiment 031 and is current as an editable working source:
 
 - title: `IsoGraph_Family_Reference_WORKING_SOURCE.docx`;
 - Library path: `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx`;
 - stable Library ID: `libfile_ed48dd1e9e308191bfb1233de5bed7f7`;
-- current backing file ID after verified path-based overwrite: `file_0000000001c081fda372578a653eca64`;
-- size: 58,122 bytes;
+- Library version: `2`;
+- current backing file ID: `file_00000000120481fd9e12bae09ae70bd5`;
+- size: 58,188 bytes;
 - page count: 19;
-- SHA-256 of the exact preserved DOCX bytes: `0b6353e5dbca7034e36af7d415b1ed09924f1ef3aa770b3f896218a37b5f1a49`.
+- SHA-256 of the exact verified DOCX bytes: `a25daa5e0592a6eb8be80aa2e7a0d941b5ecbede215bbc2c7c720857887b4b3c`;
+- pinned document snapshot: `main@ef5414b1733b3619356039722a7280cc94ac49d4`.
 
-This execution moved the previously verified duplicate-safe copy into the dedicated editable working-source location, renamed it so it cannot be mistaken for the canonical final product, successfully exercised path-based overwrite there, and re-read page 1 and page 19 from the same stable Library record. Page 1 identifies:
+The refreshed document now states that the exact current composition including Core 0.19 is directly integration-qualified by Experiment 031, 32/32 PASS with formal `QUALIFIES`, and routes the current integration record to:
 
-`main@f813b278dbefbd07e1ec2424926c2393368532a4`
+`qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md`
 
-and declares the current family as Core 0.17 + qualified Core 0.18 + qualified Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1. Page 19 repeats the pinned snapshot and the revision-scoped authority discipline.
+QA completed after the refresh:
 
-The originally generated source snapshot `file_00000000ada081fda959c567004d5950` is no longer visible. This does not invalidate the preserved current build above.
+- all 19 rendered pages visually inspected;
+- no clipping;
+- no overflow;
+- no broken glyphs;
+- no broken tables;
+- no pagination defects;
+- accessibility audit: 0 high / 0 medium / 0 low findings.
+
+The exact version-2 backing file was re-read directly. Page 1 pins `main@ef5414b1733b3619356039722a7280cc94ac49d4` and states the Experiment 031 full-stack result. Page 19 repeats the same pinned snapshot and current integration authority.
+
+### Library read-cache observation
+
+After the successful path-based overwrite, `files.list` reports Library version 2 and backing file `file_00000000120481fd9e12bae09ae70bd5`.
+
+An unversioned read through the stable Library ID, and even a read requesting `version_id=2` through that stable ID, may still return cached version-1 bytes. A direct read of the exact current backing file returns the verified version-2 document.
+
+Therefore future verification should first resolve the current backing file/version with Library listing metadata, then verify the exact backing file bytes. Do not infer staleness solely from the cached stable-ID read path.
 
 ## What is not complete
 
-The canonical accumulated final-product Library record remains stale:
+The canonical accumulated final-product Library record remains stale and Project-attached:
 
 - canonical path: `/IsoGraph/IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx`;
 - stable Library ID: `libfile_574bb4d579ec8191a25778e6db9c6cce`;
@@ -38,13 +86,11 @@ The canonical accumulated final-product Library record remains stale:
 - modified time: `2026-09-26T00:21:42.016763+00:00`;
 - page 1 still identifies `main@419f3d13ab5480d72fcd78f51502e5928bf5280f` and the older Core 0.18 / DP 0.1–0.6-era family.
 
-Therefore the canonical final product MUST NOT be described as current.
+Therefore the canonical Project-attached final product MUST NOT be described as current.
 
 ## Failure classification
 
-An in-place upload to the canonical stable Library ID was retried using the exact preserved current DOCX as the source.
-
-The available Library API rejected the mutation with:
+In-place upload to the canonical stable Library ID is rejected by the available Library API with:
 
 `project_library_mutation_unsupported`
 
@@ -54,19 +100,26 @@ Message:
 
 This is an infrastructure/storage-projection restriction. It is not a semantic, qualification, rendering, or document-content failure.
 
-No additional `(3)`, `(4)`, “final”, “latest”, or “revised” Library copies are to be created. Future DOCX maintenance should use `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx` as the mutable working source while the Project-attached canonical record remains the publication target.
+No additional `(3)`, `(4)`, “final”, “latest”, or “revised” Library copies are to be created.
+
+Future accumulated-reference maintenance should continue at:
+
+`/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx`
+
+The working source is mutable and current; it is not a second canonical published final product.
 
 ## Required closure
 
 When a product surface or API capable of mutating the Project-attached canonical Library record is available:
 
 1. re-fetch live `main`;
-2. confirm whether the accumulated reference still needs the exact 19-page build recorded above or has become stale because authority changed again;
-3. if the recorded build is still current, use the exact working-source document at `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx` (58,122 bytes for this build) to replace the canonical stable Library record in place;
-4. re-read the canonical stable ID, not merely the filename;
-5. verify page 1 pins the correct live snapshot and declares the current family;
-6. verify the canonical document has 19 pages for this build and that the final page preserves the pinned-snapshot/integration-boundary statement;
-7. keep the dedicated working-source record for future maintenance; do not treat it as a second canonical final product;
-8. update or retire this outstanding record only after the canonical stable ID itself has been verified current.
+2. determine whether qualified authority has materially changed since the working source's pinned snapshot;
+3. if unchanged, use the exact current working-source version to replace the canonical stable Library record in place;
+4. if changed, refresh and fully QA the working source first;
+5. re-read the canonical stable ID/backing file after publication;
+6. verify the canonical document pins the correct repository snapshot and declares the current family/integration status;
+7. verify page count and visual integrity;
+8. keep the dedicated working-source record for future maintenance;
+9. mark this incident closed only after the canonical stable ID itself is verified current.
 
 The owner requirement remains unchanged: the accumulated family reference is a final product and must be kept updated.
