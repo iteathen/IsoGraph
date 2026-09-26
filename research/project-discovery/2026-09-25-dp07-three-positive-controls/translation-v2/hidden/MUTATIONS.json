@@ -20,8 +20,8 @@
       {
         "id": "A-M2-weight-sign",
         "description": "weight exponent is +beta*energy rather than -beta*energy",
-        "from": "(^71018\\n        (^71016\\n          (^71015 ^71009 (^71010 ?1))))",
-        "to": "(^71018\\n        (^71015 ^71009 (^71010 ?1)))",
+        "from": "(^71016\\n          (^71015 ^71009 (^71010 ?1)))",
+        "to": "(^71015 ^71009 (^71010 ?1))",
         "must_contain": [
           "exp",
           "beta",
@@ -51,8 +51,8 @@
       {
         "id": "B-M2-weight-sign",
         "description": "weight exponent is +beta*grand_energy rather than -beta*grand_energy",
-        "from": "(^81018\\n        (^81016\\n          (^81015 ^81009 (^81010 ?1))))",
-        "to": "(^81018\\n        (^81015 ^81009 (^81010 ?1)))",
+        "from": "(^81016\\n          (^81015 ^81009 (^81010 ?1)))",
+        "to": "(^81015 ^81009 (^81010 ?1))",
         "must_contain": [
           "exp",
           "beta",
@@ -129,8 +129,8 @@
       {
         "id": "E-M1-rhs",
         "description": "equation right side is 1 rather than 0",
-        "from": "(^93009 ^93006 (^93002 ?1)))\\n      #0)",
-        "to": "(^93009 ^93006 (^93002 ?1)))\\n      #1)",
+        "from": "(^93014\\n      (^93008\\n        (^93009 ^93005 (^93004 ?1))\\n        (^93009 ^93006 (^93002 ?1)))\\n      #0)",
+        "to": "(^93014\\n      (^93008\\n        (^93009 ^93005 (^93004 ?1))\\n        (^93009 ^93006 (^93002 ?1)))\\n      #1)",
         "must_contain": [
           "= 1"
         ],
@@ -158,8 +158,8 @@
       {
         "id": "F-M1-pdot-sign",
         "description": "pdot=+kq rather than -kq",
-        "from": "(^94007\\n        (^94007 #-1 ^94006)\\n        (^94002 ?1))",
-        "to": "(^94007 ^94006 (^94002 ?1))",
+        "from": "(^94007 #-1 ^94006)",
+        "to": "^94006",
         "must_contain": [
           "derivative",
           "p",
