@@ -1,0 +1,408 @@
+{
+  "cases": [
+    {
+      "case_id": "F01",
+      "answers": {
+        "direct_conflict": false,
+        "preserve_both_explicit_support": true,
+        "repair_required": false
+      },
+      "reason": "Discrepancy is initially observational; align semantic quantities before judging conflict or requiring any repair.",
+      "authority_used": [
+        "Core 0.18, Sec 2"
+      ]
+    },
+    {
+      "case_id": "F02",
+      "answers": {
+        "exact_implicit_support": true,
+        "provenance_required": true,
+        "becomes_source_explicit": false
+      },
+      "reason": "Implicit assertions are discovered from represented structure; they require provenance but never rewrite history.",
+      "authority_used": [
+        "Core 0.19, Sec 3"
+      ]
+    },
+    {
+      "case_id": "F03",
+      "answers": {
+        "implicit_support_admissible": false,
+        "familiar_knowledge_can_fill_gap": false,
+        "discovery_hypothesis_may_remain": true
+      },
+      "reason": "Implicit support requires represented premises; familiarity cannot fill gaps or manufacture any semantic authority.",
+      "authority_used": [
+        "Core 0.19, Sec 6.2"
+      ]
+    },
+    {
+      "case_id": "F04",
+      "answers": {
+        "both_support_paths_retained": true,
+        "truth_amplified_by_count": false,
+        "provenance_paths_distinct": true
+      },
+      "reason": "Multiple support paths are retained with distinct provenance; count does not amplify the semantic truth.",
+      "authority_used": [
+        "Core 0.19, Sec 6.9"
+      ]
+    },
+    {
+      "case_id": "F05",
+      "answers": {
+        "b_supported": true,
+        "c_supported": true,
+        "cycle_invalidates_all": false
+      },
+      "reason": "Cycles are permitted when grounded by explicit source support; B and C receive valid support.",
+      "authority_used": [
+        "Core 0.19, Sec 6.6"
+      ]
+    },
+    {
+      "case_id": "F06",
+      "answers": {
+        "b_supported": false,
+        "c_supported": false,
+        "self_support_manufactures_validity": false
+      },
+      "reason": "Ungrounded self-support cycles are invalid; they cannot manufacture authority without independent explicit grounding.",
+      "authority_used": [
+        "Core 0.19, Sec 6.6"
+      ]
+    },
+    {
+      "case_id": "F07",
+      "answers": {
+        "exact_support": true,
+        "depth_weakens_exactness": false,
+        "lineage_must_remain": true
+      },
+      "reason": "Derivation depth does not weaken exactness; complete lineage must remain recoverable for any verification.",
+      "authority_used": [
+        "Core 0.19, Sec 7"
+      ]
+    },
+    {
+      "case_id": "F08",
+      "answers": {
+        "procedure_may_stop": true,
+        "universal_closure_proved": false,
+        "undiscovered_derivation_impossible": false
+      },
+      "reason": "Operational fixed points do not prove universal closure or the impossibility of undiscovered derivations.",
+      "authority_used": [
+        "Core 0.19, Sec 6.11"
+      ]
+    },
+    {
+      "case_id": "F09",
+      "answers": {
+        "exact_implicit_support": true,
+        "qu_must_be_erased": false,
+        "qu_provenance_required": true
+      },
+      "reason": "Invariants across all realizations receive exact support; QU provenance remains part of the lineage.",
+      "authority_used": [
+        "Core 0.19, Sec 5"
+      ]
+    },
+    {
+      "case_id": "F10",
+      "answers": {
+        "exact_support": false,
+        "qu_claim_status": "UNRESOLVED",
+        "target_may_restrict_qu": false
+      },
+      "reason": "Disagreement across realizations makes the claim unresolved; target objectives cannot circularly restrict the family.",
+      "authority_used": [
+        "Core 0.19, Sec 6.8"
+      ]
+    },
+    {
+      "case_id": "F11",
+      "answers": {
+        "exact_support_at_q2": true,
+        "rewrite_q1_history": false,
+        "refinement_valid": true
+      },
+      "reason": "Refinement narrows the realization family without rewriting historical evidence or the original QU state.",
+      "authority_used": [
+        "Core 0.19, Sec 5"
+      ]
+    },
+    {
+      "case_id": "F12",
+      "answers": {
+        "assertion_qualified": false,
+        "completeness_status": "INCOMPLETE_UNQUALIFIED",
+        "missing_unknown_counts_false": false
+      },
+      "reason": "Unresolved structure must be preserved; missing QU authority results in an incomplete or unqualified claim.",
+      "authority_used": [
+        "Core 0.19, Sec 6.7"
+      ]
+    },
+    {
+      "case_id": "F13",
+      "answers": {
+        "probabilistic_support_admissible": true,
+        "exact_support": false,
+        "threshold_yields_exact": false
+      },
+      "reason": "Bayesian support is established from probabilistic authority; numerical thresholds never upgrade it to exact.",
+      "authority_used": [
+        "Core 0.19, Sec 4.2"
+      ]
+    },
+    {
+      "case_id": "F14",
+      "answers": {
+        "treat_as_two_independent": false,
+        "probabilistic_support_may_remain": true,
+        "exact_nei_status_follows": false
+      },
+      "reason": "Correlated evidence must not be double-counted; lineage and dependence are load-bearing for probabilistic strength.",
+      "authority_used": [
+        "NEI 0.4, Sec 9"
+      ]
+    },
+    {
+      "case_id": "F15",
+      "answers": {
+        "nei_status": "SAME",
+        "implicit_exact_support_can_contribute": true,
+        "si_equality_required": false
+      },
+      "reason": "Exact implicit support contributes to identity models; NEI SAME does not require matching SIs.",
+      "authority_used": [
+        "NEI 0.4, Sec 3"
+      ]
+    },
+    {
+      "case_id": "F16",
+      "answers": {
+        "ti_may_hold": true,
+        "nei_same_follows": false,
+        "nei_status": "INCOMPLETE"
+      },
+      "reason": "Transition isomorphism is structural correspondence; it does not imply natural identity without qualified authority.",
+      "authority_used": [
+        "DTS 0.1, Sec 7.1"
+      ]
+    },
+    {
+      "case_id": "F17",
+      "answers": {
+        "nei_distinct": false,
+        "label_evidence_sufficient": false,
+        "base_structures_invalid": false
+      },
+      "reason": "Identity must emerge from models; application labels are evidence but do not dictate results.",
+      "authority_used": [
+        "NEI 0.4, Sec 1"
+      ]
+    },
+    {
+      "case_id": "F18",
+      "answers": {
+        "nei_status": "INCOMPLETE",
+        "semantic_unknown": false,
+        "opaque_unknown_substitute": false
+      },
+      "reason": "Missing identity-relevant QU leaves the query incomplete; opaque tokens cannot substitute for relational structure.",
+      "authority_used": [
+        "NEI 0.4, Sec 5"
+      ]
+    },
+    {
+      "case_id": "F19",
+      "answers": {
+        "exact_rendering": true,
+        "downstream_source_faithful_use_allowed": true,
+        "sidecar_needed": false
+      },
+      "reason": "Exact rendering requires zero semantic loss; native structure must permit full source-semantic reconstruction.",
+      "authority_used": [
+        "Core 0.19, Sec 18.1"
+      ]
+    },
+    {
+      "case_id": "F20",
+      "answers": {
+        "exact_rendering": false,
+        "sidecar_can_complete": false,
+        "downstream_exact_use_allowed": false
+      },
+      "reason": "Sidecars cannot complete native rendering; load-bearing logic must be represented in the native bundle.",
+      "authority_used": [
+        "Core 0.19, Sec 18.4"
+      ]
+    },
+    {
+      "case_id": "F21",
+      "answers": {
+        "exact_rendering": false,
+        "familiarity_repairs": false,
+        "transformation_witness_required": true
+      },
+      "reason": "Alternate forms require exact transformation witnesses; familiarity does not repair missing semantic authority.",
+      "authority_used": [
+        "Core 0.19, Sec 18.6"
+      ]
+    },
+    {
+      "case_id": "F22",
+      "answers": {
+        "reconstruct_mutation": true,
+        "repair_to_familiar": false,
+        "exactness_requires_mutated_semantics": true
+      },
+      "reason": "Source fidelity requires preserving mutated relations; repair toward familiar forms is unauthorized semantic loss.",
+      "authority_used": [
+        "Core 0.19, Sec 18.8"
+      ]
+    },
+    {
+      "case_id": "F23",
+      "answers": {
+        "derived_view_valid": true,
+        "primitive_descent_required": true,
+        "discovery_priority_is_proof": false
+      },
+      "reason": "Derived views guide discovery but exact witnesses must descend to authoritative primitive structural support.",
+      "authority_used": [
+        "DP 0.7, Sec 13.1"
+      ]
+    },
+    {
+      "case_id": "F24",
+      "answers": {
+        "recursion_follows": false,
+        "termination_follows": false,
+        "cycle_view_may_be_candidate": true
+      },
+      "reason": "Graph cycles do not establish recursion or termination without explicit semantic authority or theorems.",
+      "authority_used": [
+        "DP 0.7, Sec 8"
+      ]
+    },
+    {
+      "case_id": "F25",
+      "answers": {
+        "qu_required": true,
+        "may_project_away": false,
+        "discovery_lead_valid": true
+      },
+      "reason": "Unresolved unfolding structure must be preserved through QU; it cannot be projected for convenience.",
+      "authority_used": [
+        "DP 0.7, Sec 10"
+      ]
+    },
+    {
+      "case_id": "F26",
+      "answers": {
+        "transition_valid": true,
+        "artificial_qu_required": false,
+        "mechanism_required": false
+      },
+      "reason": "Transitions are valid observations before mechanisms are known; determinate transitions do not require QU.",
+      "authority_used": [
+        "DTS 0.1, Sec 3"
+      ]
+    },
+    {
+      "case_id": "F27",
+      "answers": {
+        "invariant_exact_support": true,
+        "transition_valid": true,
+        "mechanism_annotation_required": false
+      },
+      "reason": "Invariants over transitions receive exact implicit support; mechanism knowledge is not required for base claims.",
+      "authority_used": [
+        "Core 0.19, Sec 3"
+      ]
+    },
+    {
+      "case_id": "F28",
+      "answers": {
+        "ti_status": "REJECTED",
+        "same_endpoints_sufficient": false,
+        "partial_common_core_may_remain": true
+      },
+      "reason": "Identical endpoints are insufficient for TI; load-bearing boundary breakers reject the transition isomorphism.",
+      "authority_used": [
+        "DTS 0.1, Sec 7.1"
+      ]
+    },
+    {
+      "case_id": "F29",
+      "answers": {
+        "ti_status": "TI",
+        "mechanism_identity_follows": false,
+        "mechanism_residual_preserved": true,
+        "nei_same_follows": false
+      },
+      "reason": "Scoped TI allows projecting mechanism residuals; TI does not imply mechanism identity or NEI SAME.",
+      "authority_used": [
+        "DTS 0.1, Sec 8"
+      ]
+    },
+    {
+      "case_id": "F30",
+      "answers": {
+        "b_exact_rendering": false,
+        "full_ti_qualified": false,
+        "nei_same_follows": false,
+        "dp_lead_may_remain": true
+      },
+      "reason": "Incomplete renderings cannot serve as discovery evidence; DP leads remain open but TI is unqualified.",
+      "authority_used": [
+        "Core 0.19, Sec 18.12"
+      ]
+    },
+    {
+      "case_id": "F31",
+      "answers": {
+        "qu_restriction_admissible": false,
+        "nei_same_qualified": false,
+        "evidence_class": "CIRCULAR_EVIDENCE"
+      },
+      "reason": "Desired results cannot choose the evidence; identity-driven QU restriction is invalid circular evidence.",
+      "authority_used": [
+        "NEI 0.4, Sec 17"
+      ]
+    },
+    {
+      "case_id": "F32",
+      "answers": {
+        "q2_ti_status": "TI",
+        "implicit_ti_support": true,
+        "rewrite_q1_history": false,
+        "nei_same_follows": false
+      },
+      "reason": "Refinement establishes TI via implicit support; historical Q1 status remains unchanged and valid.",
+      "authority_used": [
+        "DTS 0.1, Sec 5"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_19_integration": "SUPPORTED",
+    "qu_0_1_integration": "SUPPORTED",
+    "nei_0_4_integration": "SUPPORTED",
+    "dp_0_1_to_0_7_integration": "SUPPORTED",
+    "dts_0_1_integration": "SUPPORTED",
+    "full_stack_core_0_19": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_use_prior_experiment_outputs": true,
+    "did_not_import_familiar_unrepresented_semantics": true,
+    "did_not_treat_missing_qu_as_false_or_unknown": true,
+    "did_not_infer_nei_from_structural_correspondence": true,
+    "did_not_use_discovery_priority_as_proof": true,
+    "did_not_rewrite_historical_evidence": true
+  }
+}
