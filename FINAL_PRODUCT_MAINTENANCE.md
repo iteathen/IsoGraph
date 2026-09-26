@@ -42,6 +42,22 @@ When updating the final product:
 6. state clearly that the accumulated document is a convenience/final reference product, not a replacement for exact versioned semantic authority;
 7. render the DOCX and visually inspect every page before replacing the maintained Library file.
 
+## Blocked canonical replacement
+
+A Project-attached Library record may be readable while the available Library mutation API is not permitted to replace it in place.
+
+If an in-place replacement fails because Project attachment or Project knowledge mutation is unsupported:
+
+1. do not generate another duplicate-safe Library copy;
+2. preserve the exact already-verified current DOCX that was intended for the canonical record;
+3. record the exact repository snapshot, page count, byte size, DOCX SHA-256, canonical stable Library ID, preserved-copy stable Library ID, and the infrastructure error;
+4. keep describing the canonical Library record as stale until that stable ID itself is re-read and verified current;
+5. do not weaken the final-product requirement or treat the preserved copy as a second canonical product;
+6. complete the in-place canonical replacement through a product surface or API that is authorized to mutate the Project-attached record;
+7. remove a temporary duplicate only after the canonical stable ID is verified current and only when cleanup does not alter Project attachment membership.
+
+Current unresolved incidents are recorded under `maintenance/`. The active record at the time of this rule update is [maintenance/FINAL_PRODUCT_OUTSTANDING_2026-09-26.md](maintenance/FINAL_PRODUCT_OUTSTANDING_2026-09-26.md).
+
 ## Completion rule
 
 For a promotion or authority change:
