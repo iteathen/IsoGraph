@@ -11,33 +11,35 @@ Before substantive work, read `README.md`, `DESIGN_IDEALS.md`, `STATUS.md`, `MIG
 ### Qualified Core authority
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
-- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017.
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017;
+- `CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md` — qualified cumulative assertion-support / exact-rendering clarification by `qualification/CORE_0_19_QUALIFICATION.md`, using Experiments 029/030 plus the six ESR-qualified renderings.
 
-Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 observation-first clarification. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 and Core 0.19 clarifications. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
 
 ### Qualified extension/module authority
 
 Read:
 
-- `qualification/QUALIFIED_MODULES_2026-09-25.md`
-- `qualification/QUALIFIED_MODULES_2026-09-18.md` — historical predecessor
+- `qualification/QUALIFIED_MODULES_2026-09-26.md`
+- `qualification/QUALIFIED_MODULES_2026-09-25.md` — historical predecessor
+- `qualification/QUALIFIED_MODULES_2026-09-18.md` — older historical predecessor
 
 The current manifest routes the exact qualified revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1–0.6 cumulative current module;
+- Discovery Protocols 0.1–0.7 cumulative current module;
 - DTS 0.1.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The current expanded Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1 composition is integration-qualified by Experiment 027; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`. Experiment 019 and `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md` remain the immutable pre-DTS integration record.
+The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision recorded by the Experiment 027 predecessor plus Experiment 028 successor delta; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`. Core 0.19 is independently qualified as current Core authority and is not silently inserted into that historical integration result.
 
 ### Successor status
 
-Core 0.18, Discovery Protocols through 0.6, and DTS 0.1 are qualified at their exact tested revisions. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. A fresh full-stack integration claim including Core 0.19 remains separate from module qualification. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
@@ -137,7 +139,7 @@ Current qualified NEI authority is:
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — qualified NEI 0.4 semantics;
 - `extensions/nei/NEI_NATIVE_VOCAB_0_2.md` and `extensions/nei/NEI_VOCAB_0_2.isg` — qualified native vocabulary companion.
 
-Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
+Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-26.md`.
 
 NEI 0.4's governing discipline is:
 
@@ -159,7 +161,7 @@ Historical NEI 0.1 and NEI 0.2 remain immutable qualified evidence at their orig
 
 ## Discovery Protocols
 
-Discovery Protocols 0.1–0.6 are the current cumulative qualified discovery module:
+Discovery Protocols 0.1–0.7 are the current cumulative qualified discovery module:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md`
@@ -167,13 +169,23 @@ Discovery Protocols 0.1–0.6 are the current cumulative qualified discovery mod
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md`
 
 DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
-Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, and identity hypotheses. **Discovery priority never supplies semantic proof authority.**
+DP 0.7 adds primitive-first derived structural views. High-level labels do not define structure; multiple derived views may coexist; recurrence/unfolding unknowns remain QU-bearing where load-bearing; exit does not imply termination; cycles do not automatically imply recursion; lossy derived views do not replace primitive support; exact higher-order correspondence descends back to primitive support; DTS-sensitive differences remain load-bearing; and structural correspondence does not imply NEI `SAME`.
 
-Evidence burden follows the conclusion. Structural correspondence does not become NEI `SAME`; represented difference does not become NEI `DISTINCT`; unresolved load-bearing structure remains QU-bearing; and a qualified representation may still retain an open discovery lead.
+DP 0.7 qualification is recorded in:
 
+- `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md`;
+- `experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md`;
+- the completed three-positive-control campaign under `research/project-discovery/2026-09-25-dp07-three-positive-controls/`.
+
+DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision pinned by `qualification/CORE_0_19_QUALIFICATION.md`.
+
+Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, identity hypotheses, and derived views. **Discovery priority never supplies semantic proof authority.**
+
+Evidence burden follows the conclusion. Structural correspondence does not become NEI `SAME`; represented difference does not become NEI `DISTINCT`; unresolved load-bearing structure remains QU-bearing; a derived view does not become an exact primitive substitute; and a qualified representation may still retain an open discovery lead.
 ## Evidence independence terminology
 
 IsoGraph qualification distinguishes **execution independence** from **external authority**.
@@ -196,7 +208,7 @@ Core qualification remains revision-specific:
 
 Extension/module qualification is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-18.md`
+- `qualification/QUALIFIED_MODULES_2026-09-26.md`
 
 The qualification campaign deliberately preserves failed runs:
 

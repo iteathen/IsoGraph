@@ -1,0 +1,83 @@
+{
+  "campaign": "2026-09-25-dp07-three-positive-controls",
+  "run_id": 36213568767,
+  "experiment_sha": "c0723b683cd997a64d1594c0b2be78f41da0ca85",
+  "packet_sha256": "69fe9d134e3f2f8a11713b69ff238590d59b24fb33a79a487e7ef8c76ead84a6",
+  "report_sha256": "4aa6a937d618ee51c55384b9af808b6966bfbb9a5d28fc1c73b79a308c6ef58a",
+  "discovery_model": "gemini-3.5-flash",
+  "discovery_isolation": "ORACLE_BLIND",
+  "strict_primitive_only_blindness": "NOT_ESTABLISHED_BECAUSE_ANONYMIZED_EQUATIONS_REMAIN_DOMAIN_RECOGNIZABLE",
+  "cases": [
+    {
+      "case_id": "case-01",
+      "bookkeeping_result": "PARTIAL_WITNESS_RECOVERED",
+      "required_obligations": {
+        "binary_bijection": "PASS",
+        "neighbor_interaction_transport": "PASS_CONCEPTUALLY",
+        "one_body_field_count_transport": "FAIL_OR_INCOMPLETE",
+        "state_independent_constant": "NOT_EXPLICITLY_RECOVERED",
+        "normalized_ensemble_transport": "PARTIAL"
+      },
+      "defects": [
+        "Recovered x=2y-1 / y=(x+1)/2 correctly.",
+        "Proposed coefficient transport is not valid under the frozen conventions as written.",
+        "The control itself under-specifies graph coordination: a single scalar one-body coefficient after substitution requires regular/fixed coordination or a site-dependent term.",
+        "Reported '14-node interaction graph' is an unsupported interpretation of role SIs rather than represented site cardinality."
+      ],
+      "disposition_note": "Known positive transformation core recovered, but exact transported score was not established."
+    },
+    {
+      "case_id": "case-02",
+      "bookkeeping_result": "KNOWN_POSITIVE_WITNESS_RECOVERED",
+      "required_obligations": {
+        "boolean_gf2_bijection": "PASS",
+        "xor_to_addition_mod2": "PASS",
+        "constraint_to_equation": "PASS",
+        "conjunction_to_simultaneous_satisfaction": "PASS",
+        "satisfying_assignment_bijection": "PASS"
+      },
+      "defects": [
+        "Reported '5 constraints over 9 variables' is unsupported; the native SIs are semantic roles, not instance cardinalities."
+      ],
+      "disposition_note": "Exact positive witness recovered; result contains a separate cardinality overclaim that must be rejected."
+    },
+    {
+      "case_id": "case-03",
+      "bookkeeping_result": "PARTIAL_WITNESS_RECOVERED",
+      "required_obligations": {
+        "shared_q": "PASS",
+        "p_equals_m_v_equals_m_qdot": "PASS",
+        "hamilton_to_newton": "PASS",
+        "newton_to_hamilton": "PASS",
+        "no_extra_physical_degree_claim": "PARTIAL_NOT_EXPLICIT"
+      },
+      "defects": [
+        "Conceptual mathematical transformation is recovered in both directions.",
+        "Several raw native-ID correspondences are wrong: mass/stiffness/derivative/inertial roles are cross-mapped incorrectly.",
+        "The reasoner correctly treated momentum/Hamiltonian quantities as representation residuals but did not explicitly state the no-extra-physical-degree obligation."
+      ],
+      "disposition_note": "Exact mathematics recovered, but native structural witness is not reliable enough to call the full IsoGraph mapping exact."
+    }
+  ],
+  "cross_case_findings": {
+    "known_positive_core_recovered_in_all_three": true,
+    "clean_exact_case_count": 1,
+    "partial_case_count": 2,
+    "oracle_contamination_detected": false,
+    "domain_name_inference_detected": true,
+    "raw_id_mapping_precision_problem_detected": true,
+    "unsupported_cardinality_overclaim_detected": true
+  },
+  "dp07_development_disposition": {
+    "usefulness": "SUPPORTED",
+    "qualification": "NOT_ESTABLISHED",
+    "strongest_positive": "All three known conceptual correspondences were recovered from a cold packet without oracle access.",
+    "strongest_failure": "The reasoner sometimes jumped from a correct high-level correspondence to incorrect or unsupported primitive/native claims.",
+    "protocol_implication": "DP 0.7 should require a post-discovery descent to primitive support with explicit exact-obligation verification before an exact structural witness is promoted."
+  },
+  "harness_followups": [
+    "Repair case-01 scope to a regular degree-z graph (or represent site-dependent one-body coefficients) before rerunning it as an exact positive oracle.",
+    "For a stronger primitive-only test, remove recognizable domain equations from the cold packet and encode operation/derivative semantics structurally with opaque symbols.",
+    "Mechanically verify claimed native SI/role mappings rather than accepting model-generated raw-ID correspondence text."
+  ]
+}

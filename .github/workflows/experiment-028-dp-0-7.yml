@@ -1,0 +1,128 @@
+name: Experiment 028 DP 0.7 derived-view qualification
+
+on:
+  push:
+    branches:
+      - experiment/028-dp07-derived-views
+    paths:
+      - experiments/028/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-028-dp07-derived-views
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3-flash-preview
+  GEMINI_FALLBACK_MODELS: gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-pro-preview,gemini-pro-latest
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic qualification preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          node --check experiments/028/tools/run-exp028-cold.mjs
+          node --check experiments/028/tools/score-exp028.mjs
+          node --check experiments/028/tools/test-score-exp028.mjs
+          node --check experiments/028/tools/test-runner-exp028.mjs
+
+          node experiments/028/tools/test-score-exp028.mjs
+          node experiments/028/tools/test-runner-exp028.mjs
+
+          rm -rf out/exp028
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/028/tools/run-exp028-cold.mjs
+
+          node - <<'NODE'
+          const fs=require('fs');
+          const dry=JSON.parse(fs.readFileSync('out/exp028/DRY_RUN.json','utf8'));
+          if(dry.dp_0_7_sha256!=='7b4ba0cc7b895f39212080892d13b7f0a1d7d67c41267ed44291d11c5e63a08d'){
+            throw new Error('DP 0.7 hash mismatch');
+          }
+          if(dry.case_count!==13) throw new Error('case count mismatch');
+          if(dry.predecessor_positive_control_stage!=='PASS_3_OF_3'){
+            throw new Error('fresh predecessor evidence not pinned');
+          }
+          console.log(JSON.stringify({
+            packet_sha256:dry.packet_sha256,
+            dp_0_7_sha256:dry.dp_0_7_sha256,
+            case_count:dry.case_count,
+            predecessor_positive_control_stage:dry.predecessor_positive_control_stage
+          },null,2));
+          NODE
+
+      - name: Execute isolated DP 0.7 decoder
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/028/tools/run-exp028-cold.mjs
+
+      - name: Verify packet identity and hidden score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp028/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp028/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/028/tools/score-exp028.mjs
+
+      - name: Persist Experiment 028 evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/028/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp028/$f" ] && cp "out/exp028/$f" "$E/$f"
+          done
+
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 028 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin experiment/028-dp07-derived-views
+            git rebase origin/experiment/028-dp07-derived-views
+            git push origin HEAD:experiment/028-dp07-derived-views
+          fi
+
+      - name: Enforce Experiment 028 qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test "$SCORE_OUTCOME" = "success"
+          test -f out/exp028/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp028/SCORE.json','utf8'));console.log(JSON.stringify({disposition:s.disposition,delta:s.dp_0_7_delta,guards:s.guards},null,2));if(s.disposition!=='QUALIFIES')process.exit(1)"

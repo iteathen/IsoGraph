@@ -1,0 +1,96 @@
+{
+  "campaign": "2026-09-25-dp07-three-positive-controls",
+  "revision": "0.2",
+  "run_id": 36222604050,
+  "experiment_sha": "821ba98e957b43d8def31bbfabf7253a2b47e429",
+  "evidence_commit": "98fbf2d6619f90a83c9b7d2ee11f5a4ffb18c854",
+  "pre_oracle_freeze_commit": "30edb1e333d4ae3a7fcf7f51c47d88d5a9a5fe5c",
+  "translation_promotion_commit": "f13aca1420327d7c1dc9a95ff78df44ffd820170",
+  "packet_sha256": "93439fbe2ba502edbe01cab94e71f7952e3809b594b2d7418cb2c7e7bf79fcc5",
+  "report_sha256": "3f26c87f45b6a4a895b958a6b653b2831c23372f79ab765e3ddc01129eb18839",
+  "discovery_model": "gemini-3.1-flash-lite",
+  "discovery_isolation": "ORACLE_BLIND_ESR_QUALIFIED_PACKET",
+  "cases": [
+    {
+      "case_id": "case-01",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "CLAIMED_MAPPING_FALSIFIED_LOCALLY",
+      "required_obligations": {
+        "binary_local_state_bijection": "FAIL_NOT_RECOVERED",
+        "neighbor_interaction_transport": "FAIL_NOT_ESTABLISHED",
+        "one_body_field_count_transport": "FAIL_DIRECT_RENAME_FALSE",
+        "state_independent_constant": "FAIL_OMITTED",
+        "normalized_ensemble_transport": "FAIL_NOT_ESTABLISHED"
+      },
+      "local_falsifiers": [
+        "A local values are {-1,+1}; B local values are {0,1}. Direct role renaming does not preserve the frozen local-state domain.",
+        "The report proposes direct J->epsilon and h->mu renaming. Under n=(s+1)/2 on the frozen undirected 2-regular graph, exact transport requires epsilon=-4J and mu=2h-4J, not direct parameter renaming.",
+        "Substitution introduces a configuration-independent constant C=-J|E|+hN (and |E|=N for a finite undirected 2-regular graph); the report claims no residual and does not isolate C.",
+        "Because the required affine state map and constant factor are absent, partition-function scaling and normalized-probability preservation are not reconstructed."
+      ],
+      "accepted_findings": [
+        "The reasoner recognized shared site/edge/configuration organization and common partition/weight structure."
+      ]
+    },
+    {
+      "case_id": "case-02",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "PARTIAL_WITNESS_RECOVERED",
+      "required_obligations": {
+        "boolean_gf2_value_bijection": "PASS",
+        "xor_to_gf2_addition": "PARTIAL_NOT_EXPLICITLY_WITNESSED",
+        "constraint_to_linear_equation_with_matching_rhs": "PARTIAL_TARGET_RHS_MAPPING_OMITTED",
+        "conjunction_to_simultaneous_satisfaction": "PARTIAL_CONCEPT_RECOGNIZED_BUT_NATIVE_CHECK_MISDESCRIBED",
+        "satisfying_assignment_bijection": "PARTIAL_VALUE_BIJECTION_GIVEN_SATISFACTION_PRESERVATION_NOT_SHOWN"
+      },
+      "defects": [
+        "The report explicitly gives F->#0 and T->#1 and the inverse.",
+        "It describes parity/row_sum logic as structurally identical, but does not explicitly witness XOR<->gf2_add or target<->rhs.",
+        "It says a finite fold checks whether all rows/constraints are satisfied; in the frozen sources finite_fold computes parity/row_sum, while universal quantification supplies all-constraint/all-row satisfaction.",
+        "The two reconstruction lists contain only value renaming and do not reconstruct the complete constraint/row system in both directions."
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "CLAIMED_MAPPING_FALSIFIED_LOCALLY",
+      "required_obligations": {
+        "shared_q": "PASS_CONCEPTUALLY",
+        "momentum_velocity_bridge": "FAIL_DIRECT_V_TO_P_RENAME_FALSE",
+        "qdot_from_p_over_m": "FAIL_NOT_RECONSTRUCTED",
+        "hamilton_to_newton_second_order": "FAIL_NOT_RECONSTRUCTED",
+        "newton_to_hamilton_first_order": "FAIL_NOT_RECONSTRUCTED",
+        "no_extra_physical_degree_claim": "FAIL_OMITTED"
+      },
+      "local_falsifiers": [
+        "The report proposes direct v->p mapping, but the frozen positive witness requires p=m*v=m*qdot.",
+        "The report proposes a->H mapping. In the frozen B source H=p^2/(2m)+kq^2/2 is an energy function; it is not acceleration.",
+        "The required pdot=m*a=m*qddot bridge and derivation of m*qddot+kq=0 are absent.",
+        "The reverse construction introducing p=m*qdot and reconstructing qdot=p/m and pdot=-kq is absent.",
+        "The report claims no residuals and does not discharge the no-extra-physical-degree obligation."
+      ],
+      "accepted_findings": [
+        "The reasoner recognized a shared harmonic-oscillator setting, q, m, k, and derivative structure."
+      ]
+    }
+  ],
+  "cross_case_findings": {
+    "reasoner_claimed_exact_cases": 3,
+    "accepted_exact_cases": 0,
+    "partial_cases": 1,
+    "locally_falsified_claimed_mappings": 2,
+    "oracle_contamination_detected": false,
+    "reasoner_inferred_domain_names": true,
+    "reasoner_used_raw_ids_as_evidence": false,
+    "all_six_source_renderings_were_esr_qualified": true
+  },
+  "dp07_development_disposition": {
+    "qualification": "NOT_ESTABLISHED",
+    "current_run_result": "FAILS_QUALIFICATION_GATE",
+    "strongest_positive": "The ESR-qualified packet supported recognition of all three intended correspondence families, and case-02 recovered the core value bijection.",
+    "strongest_failure": "The reasoner promoted familiar high-level correspondences to exact witnesses without reconstructing the load-bearing transformation, especially in cases 01 and 03.",
+    "protocol_or_execution_question": "Determine whether DP 0.7 lacks a mechanically enforced post-candidate exact-obligation descent, or whether the fallback discovery model failed to execute an already-sufficient protocol.",
+    "provider_note": "The qualified run used gemini-3.1-flash-lite after stronger configured models were unavailable; this is a potential execution-strength confound but does not make the locally false exact claims valid."
+  },
+  "predecessor_run_status": "RUN_36213568767_DIAGNOSTIC_ONLY_NOT_CURRENT_DP_EVIDENCE"
+}

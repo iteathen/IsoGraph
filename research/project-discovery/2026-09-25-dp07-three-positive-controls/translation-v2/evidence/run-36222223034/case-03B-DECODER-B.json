@@ -1,0 +1,55 @@
+{
+  "case_id": "case-03B",
+  "base": {
+    "reconstructed_statements": [
+      "Define model with time_domain, q, p, H, m, k, real_multiply, real_add, square, real_divide, time_derivative, function_signature, real_domain, range_or_domain, positive, continuous, equal.",
+      "Function signatures: q: time_domain -> real_domain, p: time_domain -> real_domain, H: time_domain -> real_domain.",
+      "Domain constraints: m in real_domain, k in real_domain, m > 0, k > 0, time_domain is continuous.",
+      "Equation 1: H(t) = (p(t)^2 / (2 * m)) + (k * q(t)^2 / 2).",
+      "Equation 2: dq/dt = p(t) / m.",
+      "Equation 3: dp/dt = -k * q(t)."
+    ],
+    "formula_trees": [
+      "equal(H(t), real_add(real_divide(square(p(t)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(t))), #2)))",
+      "equal(time_derivative(q(t)), real_divide(p(t), m))",
+      "equal(time_derivative(p(t)), real_multiply(real_multiply(#-1, k), q(t)))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "Equation 1: H(t) = (p(t)^2 / (2 * m)) + (k * q(t)^2 / 2).",
+        "Equation 2: dq/dt = p(t) / m.",
+        "Equation 3: dp/dt = k * q(t)."
+      ],
+      "formula_trees": [
+        "equal(H(t), real_add(real_divide(square(p(t)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(t))), #2)))",
+        "equal(time_derivative(q(t)), real_divide(p(t), m))",
+        "equal(time_derivative(p(t)), real_multiply(k, q(t)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "Equation 1: H(t) = (p(t)^2 / (2 * m)) + (k * q(t)^2 / 2).",
+        "Equation 2: dq/dt = q(t) / m.",
+        "Equation 3: dp/dt = -k * q(t)."
+      ],
+      "formula_trees": [
+        "equal(H(t), real_add(real_divide(square(p(t)), real_multiply(#2, m)), real_divide(real_multiply(k, square(q(t))), #2)))",
+        "equal(time_derivative(q(t)), real_divide(q(t), m))",
+        "equal(time_derivative(p(t)), real_multiply(real_multiply(#-1, k), q(t)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "case-01A",
+  "reconstructed_statements": [
+    "The model is defined over site_family, edge_family, and configuration_family.",
+    "The local_value_at function maps a configuration and a site to the set {-1, 1}.",
+    "The local_value_at function is indexed by configuration_family and site_family.",
+    "The site_family has a regular_degree of 2 with respect to the edge_family.",
+    "The edge_family is undirected.",
+    "The edge_endpoint_structure of edge_family defines endpoints edge_left and edge_right in the site_family.",
+    "The coupling constant J has a range/domain of real_domain.",
+    "The external magnetic field h has a range/domain of real_domain.",
+    "The inverse temperature beta has a range/domain of real_domain and is positive.",
+    "The energy of a configuration is defined as the sum of the negative coupling term (J multiplied by the sum over all edges of the product of local values at the endpoints) and the negative magnetic field term (h multiplied by the sum over all sites of the local values).",
+    "The weight of a configuration is defined as the exponential of the negative product of beta and the energy of that configuration.",
+    "The partition function is defined as the sum over all configurations in configuration_family of their weights.",
+    "The probability of a configuration is defined as its weight divided by the partition function."
+  ],
+  "formula_trees": [
+    "(model site_family edge_family configuration_family)",
+    "(range_or_domain local_value_at {-1, 1})",
+    "(indexed_by local_value_at configuration_family site_family)",
+    "(regular_degree site_family edge_family 2)",
+    "(undirected edge_family)",
+    "(edge_endpoint_structure edge_family edge_left edge_right site_family)",
+    "(range_or_domain J real_domain)",
+    "(range_or_domain h real_domain)",
+    "(range_or_domain beta real_domain)",
+    "(positive beta)",
+    "(lambda (config) (equal (energy config) (real_add (real_negate (real_multiply J (finite_fold real_add edge_family (lambda (edge) (real_multiply (local_value_at config (edge_left edge)) (local_value_at config (edge_right edge)))) 0))) (real_negate (real_multiply h (finite_fold real_add site_family (lambda (site) (local_value_at config site)) 0))))))",
+    "(lambda (config) (equal (weight config) (real_exp (real_negate (real_multiply beta (energy config))))))",
+    "(equal partition (finite_fold real_add configuration_family (lambda (config) (weight config)) 0))",
+    "(lambda (config) (equal (probability config) (real_divide (weight config) partition)))"
+  ],
+  "ambiguities": [],
+  "inferred_not_explicit": [],
+  "signature_issues": []
+}

@@ -1,0 +1,103 @@
+{
+  "schema": 2,
+  "contract": "ESR-0.1",
+  "sha": "23ad7a9bf1179c1845e32e5bc1ae03342007d31f",
+  "model": "gemini-3.8-flash",
+  "model_candidates": [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-pro-latest",
+    "gemini-3.1-pro-preview"
+  ],
+  "cases": [
+    "case-02B"
+  ],
+  "input_manifest": [
+    {
+      "kind": "authority",
+      "path": "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+      "sha256": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+      "bytes": 76065
+    },
+    {
+      "kind": "authority",
+      "path": "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+      "sha256": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+      "bytes": 11063
+    },
+    {
+      "kind": "authority",
+      "path": "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+      "sha256": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2",
+      "bytes": 35102
+    },
+    {
+      "kind": "qualification_contract",
+      "path": "qualification/EXACT_SOURCE_RENDERING_CONTRACT_0_1_CANDIDATE.md",
+      "sha256": "051839093f736eeef876cf381c8ac1931d26618e245a564d2d6824d175255f1f",
+      "bytes": 10302
+    },
+    {
+      "kind": "qualification_control",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/COLD_RECONSTRUCTION_PROMPT.md",
+      "sha256": "24d660a8b6a55451ba10e8e9fab5dd5f4ed1184b79dc3aeccbefbb6e1acc02b0",
+      "bytes": 2264
+    },
+    {
+      "kind": "qualification_control",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/VERIFIER_PROMPT.md",
+      "sha256": "1822d7c94fec7a3284e606e2494b9f9a1bb996d38dd0aaec6bd7c1b738fdbfe9",
+      "bytes": 2274
+    },
+    {
+      "kind": "scorer_only",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/OBLIGATIONS.json",
+      "sha256": "13abf63267ed6be2bf6fc52eb7c664bf5bbd42ae04f18e35f212a9b7cfcdc873",
+      "bytes": 5792
+    },
+    {
+      "kind": "scorer_only",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/COVERAGE_MAP.json",
+      "sha256": "23e62dd129bb54aecb56e2e0c074b5a8004ef98e7b86f2f6c268ac1afd64c178",
+      "bytes": 5339
+    },
+    {
+      "kind": "scorer_only",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/MUTATIONS.json",
+      "sha256": "74387afe0dc8300de874b62138e37aa70fa3656a20c64ee883086994f5c3b8ba",
+      "bytes": 4973
+    },
+    {
+      "kind": "scorer_only_source",
+      "case_id": "case-02B",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-02B/SOURCE_FREEZE.md",
+      "sha256": "8163a98c64a1de720bd3558ba90d82d6c9ecd10da7b0e38014b7e83fbed410b3",
+      "bytes": 546
+    },
+    {
+      "kind": "decoder_input",
+      "case_id": "case-02B",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-02B/NATIVE.isg",
+      "sha256": "dffb9848a1f87461fd9798a83edede8232900faf4bfcea9b819f8c7090533e45",
+      "bytes": 696
+    },
+    {
+      "kind": "decoder_input",
+      "case_id": "case-02B",
+      "path": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-02B/SIGNATURE.json",
+      "sha256": "c1f9e778cd39e03746b5376b04cbeabbfc83db085796f092bba7c1a58fee197a",
+      "bytes": 539
+    }
+  ],
+  "oracle_paths": [
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/OBLIGATIONS.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/MUTATIONS.json"
+  ],
+  "oracle_exposed_to_decoder": false,
+  "source_exposed_to_decoder": false,
+  "core_0_19_exact_rendering": true,
+  "required_cold_decoders_per_case": 2,
+  "required_mutation_controls_per_case": 2
+}

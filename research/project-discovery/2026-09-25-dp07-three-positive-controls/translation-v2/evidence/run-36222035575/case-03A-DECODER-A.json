@@ -1,0 +1,100 @@
+{
+  "case_id": "case-03A",
+  "base": {
+    "reconstructed_statements": [
+      "function_signature(q, time_domain, real_domain)",
+      "function_signature(v, time_domain, real_domain)",
+      "function_signature(a, time_domain, real_domain)",
+      "range_or_domain(m, real_domain)",
+      "range_or_domain(k, real_domain)",
+      "positive(m)",
+      "positive(k)",
+      "continuous(time_domain)",
+      "forall t: v(t) == time_derivative(q(t))",
+      "forall t: a(t) == time_derivative(v(t))",
+      "forall t: real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) == #0"
+    ],
+    "formula_trees": [
+      "function_signature(q, time_domain, real_domain)",
+      "function_signature(v, time_domain, real_domain)",
+      "function_signature(a, time_domain, real_domain)",
+      "range_or_domain(m, real_domain)",
+      "range_or_domain(k, real_domain)",
+      "positive(m)",
+      "positive(k)",
+      "continuous(time_domain)",
+      "forall(t, equal(v(t), time_derivative(q(t))))",
+      "forall(t, equal(a(t), time_derivative(v(t))))",
+      "forall(t, equal(real_add(real_multiply(m, a(t)), real_multiply(k, q(t))), #0))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(v, time_domain, real_domain)",
+        "function_signature(a, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "forall t: v(t) == time_derivative(q(t))",
+        "forall t: a(t) == time_derivative(v(t))",
+        "forall t: real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) == #1"
+      ],
+      "formula_trees": [
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(v, time_domain, real_domain)",
+        "function_signature(a, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "forall(t, equal(v(t), time_derivative(q(t))))",
+        "forall(t, equal(a(t), time_derivative(v(t))))",
+        "forall(t, equal(real_add(real_multiply(m, a(t)), real_multiply(k, q(t))), #1))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(v, time_domain, real_domain)",
+        "function_signature(a, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "forall t: v(t) == time_derivative(q(t))",
+        "forall t: a(t) == time_derivative(q(t))",
+        "forall t: real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) == #0"
+      ],
+      "formula_trees": [
+        "function_signature(q, time_domain, real_domain)",
+        "function_signature(v, time_domain, real_domain)",
+        "function_signature(a, time_domain, real_domain)",
+        "range_or_domain(m, real_domain)",
+        "range_or_domain(k, real_domain)",
+        "positive(m)",
+        "positive(k)",
+        "continuous(time_domain)",
+        "forall(t, equal(v(t), time_derivative(q(t))))",
+        "forall(t, equal(a(t), time_derivative(q(t))))",
+        "forall(t, equal(real_add(real_multiply(m, a(t)), real_multiply(k, q(t))), #0))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}

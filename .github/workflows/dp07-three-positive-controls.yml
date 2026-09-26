@@ -1,0 +1,92 @@
+name: DP 0.7 three positive controls blind run
+
+on:
+  push:
+    branches:
+      - experiment/dp07-three-positive-controls-v1
+    paths:
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dp07-three-positive-controls
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3-flash-preview
+  GEMINI_FALLBACK_MODELS: gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-pro-preview,gemini-pro-latest
+
+jobs:
+  blind-discovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Cold packet preflight
+        run: |
+          set -euo pipefail
+          node --check research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/run-blind-discovery.mjs
+          rm -rf out/dp07-positive-controls
+          ISOGRAPH_COLD_DRY_RUN=1 node research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/run-blind-discovery.mjs
+
+      - name: Execute blind discovery
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/run-blind-discovery.mjs
+
+      - name: Verify packet identity
+        if: always() && steps.cold.outcome == 'success'
+        run: |
+          set -euo pipefail
+          dry=$(node -e "console.log(JSON.parse(require('fs').readFileSync('out/dp07-positive-controls/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "console.log(JSON.parse(require('fs').readFileSync('out/dp07-positive-controls/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+
+      - name: Persist blind evidence
+        if: always()
+        run: |
+          set -euo pipefail
+          E="research/project-discovery/2026-09-25-dp07-three-positive-controls/evidence/run-${GITHUB_RUN_ID}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt ROLE_COVERAGE_AUDIT.json PARSED_REPORT.json; do
+            [ -f "out/dp07-positive-controls/$f" ] && cp "out/dp07-positive-controls/$f" "$E/$f"
+          done
+          cat > "$E/CONTROL.json" <<EOF
+          {
+            "workflow_run_id": "${GITHUB_RUN_ID}",
+            "workflow_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "experiment_sha": "${GITHUB_SHA}",
+            "cold_outcome": "${{ steps.cold.outcome }}"
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: DP 0.7 blind positive-control run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/dp07-three-positive-controls-v1
+            git rebase origin/experiment/dp07-three-positive-controls-v1
+            git push origin HEAD:experiment/dp07-three-positive-controls-v1
+          fi
+
+      - name: Enforce blind-run completion
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test -f out/dp07-positive-controls/ROLE_COVERAGE_AUDIT.json
+          test -f out/dp07-positive-controls/PARSED_REPORT.json

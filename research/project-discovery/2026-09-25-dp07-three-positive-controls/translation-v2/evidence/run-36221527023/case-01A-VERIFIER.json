@@ -1,0 +1,139 @@
+{
+  "case_id": "case-01A",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "A1",
+        "pass": true,
+        "reason": "Range {-1, 1} correctly identified."
+      },
+      {
+        "id": "A2",
+        "pass": true,
+        "reason": "Indexed by configuration and site families."
+      },
+      {
+        "id": "A3",
+        "pass": true,
+        "reason": "Undirected graph with degree 2 identified."
+      },
+      {
+        "id": "A4",
+        "pass": true,
+        "reason": "J, h, beta real; beta positive identified."
+      },
+      {
+        "id": "A5",
+        "pass": true,
+        "reason": "Pair contribution fold over edges with identity 0."
+      },
+      {
+        "id": "A6",
+        "pass": true,
+        "reason": "Field contribution fold over sites with identity 0."
+      },
+      {
+        "id": "A7",
+        "pass": true,
+        "reason": "Energy is sum of pair and field contributions."
+      },
+      {
+        "id": "A8",
+        "pass": true,
+        "reason": "Weight is exp(-beta*E)."
+      },
+      {
+        "id": "A9",
+        "pass": true,
+        "reason": "Partition is fold over configurations with identity 0."
+      },
+      {
+        "id": "A10",
+        "pass": true,
+        "reason": "Probability is weight/partition."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "A1",
+        "pass": true,
+        "reason": "Range {-1, 1} correctly identified."
+      },
+      {
+        "id": "A2",
+        "pass": true,
+        "reason": "Indexed by configuration and site families."
+      },
+      {
+        "id": "A3",
+        "pass": true,
+        "reason": "Undirected graph with degree 2 identified."
+      },
+      {
+        "id": "A4",
+        "pass": true,
+        "reason": "J, h, beta real; beta positive identified."
+      },
+      {
+        "id": "A5",
+        "pass": true,
+        "reason": "Pair contribution fold over edges with identity 0."
+      },
+      {
+        "id": "A6",
+        "pass": true,
+        "reason": "Field contribution fold over sites with identity 0."
+      },
+      {
+        "id": "A7",
+        "pass": true,
+        "reason": "Energy is sum of pair and field contributions."
+      },
+      {
+        "id": "A8",
+        "pass": true,
+        "reason": "Weight is exp(-beta*E)."
+      },
+      {
+        "id": "A9",
+        "pass": true,
+        "reason": "Partition is fold over configurations with identity 0."
+      },
+      {
+        "id": "A10",
+        "pass": true,
+        "reason": "Probability is weight/partition."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "A-M1-domain",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the mutated domain {-1, 2}.",
+      "reason_B": "Decoder B correctly identified the mutated domain {-1, 2}."
+    },
+    {
+      "mutation_id": "A-M2-weight-sign",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the sign change in the weight exponent.",
+      "reason_B": "Decoder B correctly identified the sign change in the weight exponent."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}

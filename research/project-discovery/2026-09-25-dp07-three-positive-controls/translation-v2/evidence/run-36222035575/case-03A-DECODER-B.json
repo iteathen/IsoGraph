@@ -1,0 +1,61 @@
+{
+  "case_id": "case-03A",
+  "base": {
+    "reconstructed_statements": [
+      "q, v, a are functions of time_domain mapping to real_domain",
+      "m, k are in real_domain and are positive",
+      "time_domain is continuous",
+      "v(t) = time_derivative(q(t))",
+      "a(t) = time_derivative(v(t))",
+      "real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) = #0"
+    ],
+    "formula_trees": [
+      "\\?1 (equal (v ?1) (time_derivative (q ?1)))",
+      "\\?1 (equal (a ?1) (time_derivative (v ?1)))",
+      "\\?1 (equal (real_add (real_multiply m (a ?1)) (real_multiply k (q ?1))) #0)"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "q, v, a are functions of time_domain mapping to real_domain",
+        "m, k are in real_domain and are positive",
+        "time_domain is continuous",
+        "v(t) = time_derivative(q(t))",
+        "a(t) = time_derivative(v(t))",
+        "real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) = #1"
+      ],
+      "formula_trees": [
+        "\\?1 (equal (v ?1) (time_derivative (q ?1)))",
+        "\\?1 (equal (a ?1) (time_derivative (v ?1)))",
+        "\\?1 (equal (real_add (real_multiply m (a ?1)) (real_multiply k (q ?1))) #1)"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "q, v, a are functions of time_domain mapping to real_domain",
+        "m, k are in real_domain and are positive",
+        "time_domain is continuous",
+        "v(t) = time_derivative(q(t))",
+        "a(t) = time_derivative(q(t))",
+        "real_add(real_multiply(m, a(t)), real_multiply(k, q(t))) = #0"
+      ],
+      "formula_trees": [
+        "\\?1 (equal (v ?1) (time_derivative (q ?1)))",
+        "\\?1 (equal (a ?1) (time_derivative (q ?1)))",
+        "\\?1 (equal (real_add (real_multiply m (a ?1)) (real_multiply k (q ?1))) #0)"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}

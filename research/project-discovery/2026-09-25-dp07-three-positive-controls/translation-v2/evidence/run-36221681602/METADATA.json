@@ -1,0 +1,115 @@
+{
+  "schema": 2,
+  "sha": "636a3c42974af5d799f113a84b0a7373ce4eb982",
+  "model": "gemini-3.8-flash",
+  "model_candidates": [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-pro-latest",
+    "gemini-3.1-pro-preview"
+  ],
+  "contract": "ESR-0.1",
+  "provider_calls": [
+    {
+      "label": "case-01B:decoder_A",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 28391,
+        "candidatesTokenCount": 2058,
+        "totalTokenCount": 30449,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 28391
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-01B:decoder_B",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 28391,
+        "candidatesTokenCount": 1349,
+        "totalTokenCount": 29740,
+        "cachedContentTokenCount": 24493,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 28391
+          }
+        ],
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 24493
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-01B:verifier",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 7057,
+        "candidatesTokenCount": 868,
+        "totalTokenCount": 7925,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7057
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "disabled_models": {
+    "gemini-3.8-flash": "http_503",
+    "gemini-3.7-flash": "http_503",
+    "gemini-3.6-flash": "http_429"
+  },
+  "verification_meta": {
+    "case-01B": {
+      "model": "gemini-3.1-flash-lite",
+      "thinking": false,
+      "attempts": 1,
+      "usage": {
+        "promptTokenCount": 7057,
+        "candidatesTokenCount": 868,
+        "totalTokenCount": 7925,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7057
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  },
+  "authority_hashes": {
+    "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+    "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2"
+  },
+  "contract_sha256": "051839093f736eeef876cf381c8ac1931d26618e245a564d2d6824d175255f1f",
+  "coverage_map_sha256": "adf1aeceb580f1427b5f1ca60236fdf178414fbde640519cae3aab50cc2e01ed",
+  "mutation_map_sha256": "46cfea8814f9fefbc8b13f33b93ef872362f1b9eed56282f8d2b8163f8e96326",
+  "case_packet_hashes": {
+    "case-01B": "47467373ccf49a99b334e95cbb6c1167856da1d0c865bde9c77fde9bceac36e5"
+  }
+}

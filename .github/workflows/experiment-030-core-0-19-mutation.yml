@@ -1,0 +1,103 @@
+name: Experiment 030 Core 0.19 mutation regression
+
+on:
+  push:
+    branches:
+      - experiment/030-core-0.19-mutation-regression
+    paths:
+      - experiments/030/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-030-core-0.19-mutation-regression
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3-flash-preview
+  GEMINI_FALLBACK_MODELS: gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-pro-preview,gemini-pro-latest
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic mutation-regression preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/030/tools/run-exp030-cold.mjs
+          node --check experiments/030/tools/score-exp030.mjs
+          node --check experiments/030/tools/test-score-exp030.mjs
+          node --check experiments/030/tools/test-runner-exp030.mjs
+          node experiments/030/tools/test-score-exp030.mjs
+          node experiments/030/tools/test-runner-exp030.mjs
+          rm -rf out/exp030
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/030/tools/run-exp030-cold.mjs
+
+      - name: Execute isolated mutation regression
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/030/tools/run-exp030-cold.mjs
+
+      - name: Verify packet identity and hidden score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          dry=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp030/DRY_RUN.json','utf8')).packet_sha256)")
+          live=$(node -e "const fs=require('fs');console.log(JSON.parse(fs.readFileSync('out/exp030/METADATA.json','utf8')).packet_sha256)")
+          test "$dry" = "$live"
+          node experiments/030/tools/score-exp030.mjs
+
+      - name: Persist Experiment 030 evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/030/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do
+            [ -f "out/exp030/$f" ] && cp "out/exp030/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 030 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin experiment/030-core-0.19-mutation-regression
+            git rebase origin/experiment/030-core-0.19-mutation-regression
+            git push origin HEAD:experiment/030-core-0.19-mutation-regression
+          fi
+
+      - name: Enforce mutation regression qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test "$SCORE_OUTCOME" = "success"
+          test -f out/exp030/SCORE.json
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync('out/exp030/SCORE.json','utf8'));console.log(JSON.stringify({disposition:s.disposition,regression:s.mutation_regression,guards:s.guards},null,2));if(s.disposition!=='QUALIFIES')process.exit(1)"

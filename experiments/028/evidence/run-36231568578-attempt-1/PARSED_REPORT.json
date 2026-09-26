@@ -1,0 +1,189 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "structural_correspondence": true,
+        "label_difference_breaker": false,
+        "primitive_first_comparison": true,
+        "label_assistance_required": false
+      },
+      "reason": "DP 0.7 Section 3 and 12 establish that primitive structural correspondence precedes and overrides high-level labels; different labels do not block discovery when the underlying construction matches.",
+      "authority_used": [
+        "DP 0.7 Section 3",
+        "DP 0.7 Section 12"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "shared_label_sufficient": false,
+        "candidate_exact_correspondence": "REJECTED",
+        "partial_cyclic_common_core": "MAY_RETAIN",
+        "global_no_isomorphism_claim": false
+      },
+      "reason": "Shared labels do not override primitive structural differences; a cycle is not semantically equivalent to recursion without appropriate authority. The candidate exact match fails the descent to primitive support required by Section 13.1.",
+      "authority_used": [
+        "DP 0.7 Section 3",
+        "DP 0.7 Section 8",
+        "DP 0.7 Section 13.1"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "loop_view_supported": true,
+        "recursion_view_supported": true,
+        "exclusive_taxonomy_required": false,
+        "coexistence_conflict": false
+      },
+      "reason": "DP 0.7 Section 4 explicitly permits multiple valid derived views over the same primitive structure; they do not need to form an exclusive taxonomy.",
+      "authority_used": [
+        "DP 0.7 Section 4"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "fixed_recurrence_grammar_required": false,
+        "multiple_reentry_supported": true,
+        "multiple_exits_supported": true,
+        "nested_recurrence_supported": true
+      },
+      "reason": "DP 0.7 Section 7 and 4 allow derived views to preserve complex recurrence topologies, including multiple paths and nesting, without forcing a fixed grammar.",
+      "authority_used": [
+        "DP 0.7 Section 4",
+        "DP 0.7 Section 7"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "invent_count_allowed": false,
+        "preserve_qu": true,
+        "recurrence_invariant_established": true
+      },
+      "reason": "DP 0.7 Section 10 requires preserving unresolved structure through QU; an invariant property (recurrence) can be established across the realization family without inventing a specific count.",
+      "authority_used": [
+        "DP 0.7 Section 10",
+        "QU 0.1 Section 1"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "scalar_collapse_allowed": false,
+        "preserve_non_scalar_qu": true,
+        "representative_selection_allowed": false
+      },
+      "reason": "Non-scalar unresolved topology must be preserved as QU; DP 0.7 Section 10 forbids collapsing such structure into a scalar or selecting an arbitrary representative.",
+      "authority_used": [
+        "DP 0.7 Section 10",
+        "QU 0.1 Section 4"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "exit_represented": true,
+        "termination_established": false,
+        "progress_or_convergence_established": false,
+        "possible_nontermination_preserved": true
+      },
+      "reason": "DP 0.7 Section 11 states that the presence of an exit relation does not establish termination or progress; possible non-termination must remain explicit if unresolved.",
+      "authority_used": [
+        "DP 0.7 Section 11"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "cycle_established": true,
+        "recursion_established": false,
+        "extra_semantic_authority_required": true
+      },
+      "reason": "DP 0.7 Section 8 clarifies that a cycle in primitive structure does not by itself establish recursion; specific semantic authority for occurrences/invocations is required.",
+      "authority_used": [
+        "DP 0.7 Section 8"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "exact_substitution_allowed": false,
+        "projection_declared": true,
+        "primitive_support_authoritative": true,
+        "convenience_reuse_allowed": true
+      },
+      "reason": "DP 0.7 Section 6 and 13 establish that derived views are interpretations that cannot substitute for primitive structure in an exact claim; lossy projections must be declared.",
+      "authority_used": [
+        "DP 0.7 Section 6",
+        "DP 0.7 Section 13"
+      ]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "derived_views_reusable": true,
+        "exact_without_descent_allowed": false,
+        "exact_candidate_status": "REJECTED",
+        "common_recurrence_view_retained": true
+      },
+      "reason": "DP 0.7 Section 13.1 requires descent to primitive support for exact witness promotion; the candidate fails because the primitive incidence differs despite the common high-level view.",
+      "authority_used": [
+        "DP 0.7 Section 13",
+        "DP 0.7 Section 13.1"
+      ]
+    },
+    {
+      "case_id": "D11",
+      "answers": {
+        "invariant_established": true,
+        "realization_selection_required": false,
+        "actual_shape_known": false,
+        "qu_preserved": true
+      },
+      "reason": "DP 0.7 Section 10 allows establishing invariants that hold across all admissible realizations of a QU family without selecting a specific realization or resolving the unknown shape.",
+      "authority_used": [
+        "DP 0.7 Section 10"
+      ]
+    },
+    {
+      "case_id": "D12",
+      "answers": {
+        "state_recurrence_view_valid": true,
+        "dts_exact_status": "REJECTED",
+        "transition_order_residual": true
+      },
+      "reason": "DP 0.7 Section 15 requires routing transition-sensitive comparisons through DTS; state-level similarity does not override load-bearing transition-order differences in an exact correspondence claim.",
+      "authority_used": [
+        "DP 0.7 Section 15",
+        "DTS 0.1 Section 7"
+      ]
+    },
+    {
+      "case_id": "D13",
+      "answers": {
+        "structural_correspondence_valid": true,
+        "nei_same_established": false,
+        "identity_authority": "NEI_0_4",
+        "structural_isomorphism_is_identity_proof": false
+      },
+      "reason": "DP 0.7 Section 17 Target 16 and NEI 0.4 Section 14 establish that structural isomorphism is evidence but not proof of natural identity; NEI owns the identity conclusion.",
+      "authority_used": [
+        "DP 0.7 Section 17 Target 16",
+        "NEI 0.4 Section 14"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_7_delta": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_use_labels_as_structural_proof": true,
+    "did_not_make_global_negative_isomorphism_claim": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_nei_same_from_structure": true
+  }
+}

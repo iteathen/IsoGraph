@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "scorer_only": true,
+  "purpose": "Exhaustive source-semantic obligations for v2 translation sameness adjudication.",
+  "cases": {
+    "case-01A": [
+      {
+        "id": "A1",
+        "statement": "local_value_at has exact range {-1,+1}"
+      },
+      {
+        "id": "A2",
+        "statement": "local_value_at is indexed by configuration family and site family"
+      },
+      {
+        "id": "A3",
+        "statement": "interaction graph is undirected with explicit endpoints and regular degree exactly 2"
+      },
+      {
+        "id": "A4",
+        "statement": "J and h are real; beta is real and positive"
+      },
+      {
+        "id": "A5",
+        "statement": "pair contribution is -J times an additive fold over edges of local_value_at(c,left(e))*local_value_at(c,right(e)), identity 0"
+      },
+      {
+        "id": "A6",
+        "statement": "field contribution is -h times an additive fold over sites of local_value_at(c,i), identity 0"
+      },
+      {
+        "id": "A7",
+        "statement": "energy(c) is exactly the sum of the pair and field contributions"
+      },
+      {
+        "id": "A8",
+        "statement": "weight(c)=exp(-beta*energy(c))"
+      },
+      {
+        "id": "A9",
+        "statement": "partition is additive fold of weight(c) over all configurations with identity 0"
+      },
+      {
+        "id": "A10",
+        "statement": "probability(c)=weight(c)/partition"
+      }
+    ],
+    "case-01B": [
+      {
+        "id": "B1",
+        "statement": "local_value_at has exact range {0,1}"
+      },
+      {
+        "id": "B2",
+        "statement": "local_value_at is indexed by configuration family and site family"
+      },
+      {
+        "id": "B3",
+        "statement": "interaction graph is undirected with explicit endpoints and regular degree exactly 2"
+      },
+      {
+        "id": "B4",
+        "statement": "epsilon and mu are real; beta is real and positive"
+      },
+      {
+        "id": "B5",
+        "statement": "pair contribution is epsilon times an additive fold over edges of n(c,left(e))*n(c,right(e)), identity 0"
+      },
+      {
+        "id": "B6",
+        "statement": "one-body contribution is -mu times an additive fold over sites of n(c,i), identity 0"
+      },
+      {
+        "id": "B7",
+        "statement": "grand_energy(c) is exactly pair contribution plus one-body contribution"
+      },
+      {
+        "id": "B8",
+        "statement": "weight(c)=exp(-beta*grand_energy(c))"
+      },
+      {
+        "id": "B9",
+        "statement": "grand_partition is additive fold of weight(c) over all configurations with identity 0"
+      },
+      {
+        "id": "B10",
+        "statement": "probability(c)=weight(c)/grand_partition"
+      }
+    ],
+    "case-02A": [
+      {
+        "id": "C1",
+        "statement": "assigned value range is exactly {F,T}"
+      },
+      {
+        "id": "C2",
+        "statement": "target range is exactly {F,T}"
+      },
+      {
+        "id": "C3",
+        "statement": "XOR table contains exactly F⊕F=F, F⊕T=T, T⊕F=T, T⊕T=F"
+      },
+      {
+        "id": "C4",
+        "statement": "parity(a,r) is fold of XOR over selected_variables(r), mapping each selected variable through value_at(a,v), with initial F"
+      },
+      {
+        "id": "C5",
+        "statement": "constraint_satisfied(a,r) is equality of parity(a,r) and target(r)"
+      },
+      {
+        "id": "C6",
+        "statement": "system_satisfied(a) universally requires constraint_satisfied(a,r) for every r in constraint family"
+      },
+      {
+        "id": "C7",
+        "statement": "value_at is indexed by assignment family and variable family"
+      }
+    ],
+    "case-02B": [
+      {
+        "id": "D1",
+        "statement": "assigned value range is exactly {0,1}"
+      },
+      {
+        "id": "D2",
+        "statement": "rhs range is exactly {0,1}"
+      },
+      {
+        "id": "D3",
+        "statement": "GF(2) addition table contains exactly 0+0=0, 0+1=1, 1+0=1, 1+1=0"
+      },
+      {
+        "id": "D4",
+        "statement": "row_sum(a,r) is fold of GF(2) addition over selected_nonzero_variables(r), mapping each selected variable through value_at(a,v), with initial 0"
+      },
+      {
+        "id": "D5",
+        "statement": "row_satisfied(a,r) is equality of row_sum(a,r) and rhs(r)"
+      },
+      {
+        "id": "D6",
+        "statement": "system_satisfied(a) universally requires row_satisfied(a,r) for every r in row family"
+      },
+      {
+        "id": "D7",
+        "statement": "value_at is indexed by assignment family and variable family"
+      },
+      {
+        "id": "D8",
+        "statement": "selected_nonzero_variables is the sparse row representation of coefficient-1 terms; absent variables are not added to the fold"
+      }
+    ],
+    "case-03A": [
+      {
+        "id": "E1",
+        "statement": "q,v,a are real-valued functions on the continuous time domain"
+      },
+      {
+        "id": "E2",
+        "statement": "m and k are real and positive"
+      },
+      {
+        "id": "E3",
+        "statement": "v(t)=time_derivative(q,t)"
+      },
+      {
+        "id": "E4",
+        "statement": "a(t)=time_derivative(v,t)"
+      },
+      {
+        "id": "E5",
+        "statement": "m*a(t)+k*q(t)=0 exactly"
+      }
+    ],
+    "case-03B": [
+      {
+        "id": "F1",
+        "statement": "q,p,H are real-valued functions on the continuous time domain"
+      },
+      {
+        "id": "F2",
+        "statement": "m and k are real and positive"
+      },
+      {
+        "id": "F3",
+        "statement": "H(t)=p(t)^2/(2m)+k*q(t)^2/2 exactly"
+      },
+      {
+        "id": "F4",
+        "statement": "time_derivative(q,t)=p(t)/m exactly"
+      },
+      {
+        "id": "F5",
+        "statement": "time_derivative(p,t)=(-1*k)*q(t) exactly"
+      }
+    ]
+  }
+}

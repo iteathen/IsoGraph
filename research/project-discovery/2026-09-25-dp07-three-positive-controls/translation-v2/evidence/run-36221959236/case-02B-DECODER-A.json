@@ -1,0 +1,49 @@
+{
+  "case_id": "case-02B",
+  "base": {
+    "reconstructed_statements": [
+      "Define model with variables, assignments, rows, and row-family.",
+      "Value-at function maps assignments and variables to {0, 1}.",
+      "Row-family is indexed by assignments and variables.",
+      "RHS function maps rows to {0, 1}.",
+      "GF2 addition table: 0+0=0, 0+1=1, 1+0=1, 1+1=0.",
+      "Row-sum(assignment, row) is the finite-fold GF2 addition of value-at(assignment, variable) for all variables in the row.",
+      "Row-satisfied(assignment, row) is true if row-sum(assignment, row) equals RHS(row).",
+      "System-satisfied(assignment) is true if for all rows in the row-family, row-satisfied(assignment, row) is true."
+    ],
+    "formula_trees": [
+      "row_sum(assignment, row) == finite_fold(gf2_add, selected_nonzero_variables(row), \\variable(value_at(assignment, variable)), #0)",
+      "row_satisfied(assignment, row) == (row_sum(assignment, row) == rhs(row))",
+      "system_satisfied(assignment) == *row((member(row, row_family) => row_satisfied(assignment, row)))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "GF2 addition table modified: 1+1=1."
+      ],
+      "formula_trees": [
+        "gf2_add(#1, #1) == #1"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "RHS function domain restricted to {0}."
+      ],
+      "formula_trees": [
+        "range_or_domain(rhs) == {#0}"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}

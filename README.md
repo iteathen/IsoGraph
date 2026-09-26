@@ -30,10 +30,12 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
-- [Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
-- [Historical Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
-- [Discovery Protocols 0.1–0.6 Qualification Review — 2026-09-25](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
-- [Current Integrated Semantic Stack Qualification — 2026-09-25](qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md)
+- [Core 0.19 Qualified Assertion-Support / Exact-Rendering Clarification](qualification/CORE_0_19_QUALIFICATION.md)
+- [Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
+- [Historical Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
+- [Older Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
+- [Discovery Protocols 0.1–0.7 Qualification Review — 2026-09-26](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
+- [Current Integrated Semantic Stack with DP 0.7 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
 
 Core remains distinct from separately versioned qualified extensions.
 
@@ -505,7 +507,7 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 # Discovery is separate from authority
 
-IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1-0.4) provides ranked, adaptive strategies for finding candidate:
+IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.7) provides ranked, adaptive strategies for finding candidate:
 
 - correspondences;
 - invariants;
@@ -539,8 +541,13 @@ Qualified cumulative revisions:
 - [Discovery Protocols 0.2](extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md)
 - [Discovery Protocols 0.3](extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md)
 - [Discovery Protocols 0.4](extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md)
+- [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md)
+- [Discovery Protocols 0.6](extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md)
+- [Discovery Protocols 0.7](extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md)
 
 The historical filenames retain `_CANDIDATE` because those exact bytes were qualified. Current status is defined by the authority manifest, not by the filename.
+
+DP 0.4 introduced the concrete-breaker discipline; later qualified revisions preserve it. DP 0.7 additionally makes derived views primitive-first, keeps unknown unfolding explicit through QU where load-bearing, and requires exact claims to descend back to primitive support.
 
 DP 0.4 in particular makes an important correction:
 
@@ -1053,23 +1060,25 @@ Current Core authority is cumulative:
 - [Core 0.17 qualified base](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 qualified observation-first clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md)
 - [Core 0.18 qualification record](qualification/CORE_0_18_QUALIFICATION.md)
+- [Core 0.19 qualified assertion-support / exact-rendering clarification](CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md)
+- [Core 0.19 qualification record](qualification/CORE_0_19_QUALIFICATION.md)
 
-Core 0.18 is qualified at the exact tested bytes even though the historical filename retains `_CANDIDATE`.
+Core 0.18 and Core 0.19 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
 
 ## Qualified semantic extensions/modules
 
 Current exact routing authority is recorded in:
 
-- [Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
+- [Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
 
 Current qualified modules:
 
 - [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 - [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
-- [Discovery Protocols 0.1–0.6](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_6_QUALIFICATION_REVIEW.md)
+- [Discovery Protocols 0.1–0.7](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
 - [Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) — [qualification record](qualification/DTS_0_1_QUALIFICATION.md)
 
-The 2026-09-18 manifest remains immutable historical authority for the revisions it recorded.
+The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded.
 
 Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
 
@@ -1092,10 +1101,12 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The expanded Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1 composition formally `QUALIFIES` under Experiment 027.
+The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision qualified by the Experiment 027 predecessor plus the focused DP 0.7 successor evidence. Core 0.19 is independently qualified as current Core authority; it is not silently added to that revision-scoped integration result.
 
-- [Experiment 027 Final Qualification Review](experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md)
-- [Current Integrated Stack with DTS Qualification](qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md)
+- [Experiment 028 Final Qualification Review](experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md)
+- [Current Integrated Stack with DP 0.7](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
+- [Experiment 027 Historical Predecessor Review](experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md)
+- [Historical Current Stack with DTS](qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md)
 
 Experiment 019 remains the immutable pre-DTS integrated qualification record:
 
@@ -1224,6 +1235,12 @@ Core 0.18:
     QUALIFIED cumulative observation-first clarification
     decisive holdout: Experiment 017
 
+Core 0.19:
+    QUALIFIED cumulative assertion-support / exact-rendering clarification
+    broad holdout: Experiment 029 (25/26 frozen PASS; formal failure preserved)
+    corrected mutation regression: Experiment 030 (2/2 PASS, QUALIFIES)
+    concrete exact-rendering evidence: six ESR-qualified/Q7-promoted renderings
+
 QRC 0.1:
     QUALIFIED qualification infrastructure
 
@@ -1235,7 +1252,7 @@ NEI 0.4:
     QUALIFIED current extension
     decisive holdout: Experiment 016 (18/18 PASS)
 
-Discovery Protocols 0.1–0.6:
+Discovery Protocols 0.1–0.7:
     QUALIFIED cumulative current discovery module
     successor qualification: Experiment 018
 
@@ -1244,9 +1261,11 @@ DTS 0.1:
     decisive holdout: Experiment 026 (20/20 PASS)
     independent promotion verifier: SUPPORT_PROMOTION
 
-Current integrated stack:
-    Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.6 + DTS 0.1
-    QUALIFIED by Experiment 027 (18/18 PASS)
+Latest fully integration-qualified stack revision:
+    Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1
+    QUALIFIED by Experiment 027 predecessor + DP 0.7 successor evidence
+
+Current Core module authority additionally includes qualified Core 0.19; full-stack integration including Core 0.19 is a separate revision-scoped claim.
 
 Historical pre-DTS integrated stack:
     QUALIFIED by Experiment 019

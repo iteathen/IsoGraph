@@ -1,0 +1,89 @@
+{
+  "case_id": "case-03B",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "F1",
+        "pass": true,
+        "reason": "Explicitly reconstructed function signatures and domain types."
+      },
+      {
+        "id": "F2",
+        "pass": true,
+        "reason": "Explicitly reconstructed positive constraints on m and k."
+      },
+      {
+        "id": "F3",
+        "pass": true,
+        "reason": "Exact structural reconstruction of Hamiltonian formula."
+      },
+      {
+        "id": "F4",
+        "pass": true,
+        "reason": "Exact structural reconstruction of q-derivative."
+      },
+      {
+        "id": "F5",
+        "pass": true,
+        "reason": "Exact structural reconstruction of p-derivative including sign."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "F1",
+        "pass": true,
+        "reason": "Explicitly reconstructed function signatures and domain types."
+      },
+      {
+        "id": "F2",
+        "pass": true,
+        "reason": "Explicitly reconstructed positive constraints on m and k."
+      },
+      {
+        "id": "F3",
+        "pass": true,
+        "reason": "Exact structural reconstruction of Hamiltonian formula."
+      },
+      {
+        "id": "F4",
+        "pass": true,
+        "reason": "Exact structural reconstruction of q-derivative."
+      },
+      {
+        "id": "F5",
+        "pass": true,
+        "reason": "Exact structural reconstruction of p-derivative including sign."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "F-M1-pdot-sign",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the removal of the negative sign in the p-derivative.",
+      "reason_B": "Decoder B correctly identified the removal of the negative sign in the p-derivative."
+    },
+    {
+      "mutation_id": "F-M2-qdot-source",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the substitution of p(t) with q(t) in the q-derivative.",
+      "reason_B": "Decoder B correctly identified the substitution of p(t) with q(t) in the q-derivative."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}

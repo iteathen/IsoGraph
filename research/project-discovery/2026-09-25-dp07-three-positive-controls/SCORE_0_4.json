@@ -1,0 +1,108 @@
+{
+  "campaign": "2026-09-25-dp07-three-positive-controls",
+  "revision": "0.4",
+  "run_id": 36228776786,
+  "experiment_sha": "414405f1cd527b529464ab2fb63ec7695d5f5165",
+  "evidence_commit": "500c6e398331694d922267c9bc38cfa563e6d89e",
+  "pre_oracle_freeze_commit": "183882e2877cc594ba7ca1e6aff3344ba09d9517",
+  "translation_promotion_commit": "f13aca1420327d7c1dc9a95ff78df44ffd820170",
+  "packet_sha256": "ee6dad3d2e27841a5ebae87ceaa6f4880ab4de0d05d7161e5bd60ab515fa972a",
+  "report_sha256": "838d283002e3205a1703899b45abe79e68020b4171bd01ac5e3472a19e05664e",
+  "discovery_model": "gemini-3-flash-preview",
+  "discovery_isolation": "ORACLE_BLIND_ESR_QUALIFIED_AUTHORITY_COMPLETE_MECHANICALLY_GATED",
+  "mechanical_role_coverage": "PASS",
+  "cases": [
+    {
+      "case_id": "case-01",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "KNOWN_POSITIVE_WITNESS_RECOVERED",
+      "required_obligations": {
+        "binary_local_state_bijection": "PASS",
+        "neighbor_interaction_transport": "PASS",
+        "one_body_field_count_transport": "PASS",
+        "state_independent_constant": "PASS",
+        "partition_probability_correspondence": "PASS"
+      },
+      "evidence": [
+        "Recovered s=2n-1 and n=(s+1)/2.",
+        "Recovered epsilon=-4J and mu=2h-2zJ with represented z=2, hence mu=2h-4J.",
+        "Explicitly mapped beta across the two systems.",
+        "Used the represented regular-degree incidence identity to transport the one-body term.",
+        "Isolated C=-J|E|+h|V| and the corresponding exp(-beta*C) weight/partition scaling.",
+        "Reconstructed the energy relation in both directions and preserved normalized probability."
+      ],
+      "local_falsification_result": "NO_FROZEN_OBLIGATION_FAILED"
+    },
+    {
+      "case_id": "case-02",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "KNOWN_POSITIVE_WITNESS_RECOVERED",
+      "required_obligations": {
+        "boolean_gf2_value_bijection": "PASS",
+        "xor_to_gf2_addition": "PASS",
+        "constraint_to_linear_equation_matching_rhs": "PASS",
+        "selected_variable_to_nonzero_coefficient_support": "PASS",
+        "conjunction_to_simultaneous_satisfaction": "PASS",
+        "satisfying_assignment_bijection": "PASS"
+      },
+      "evidence": [
+        "Recovered F<->0 and T<->1.",
+        "Recovered XOR<->GF(2) addition by exact operation-table preservation.",
+        "Mapped selected_variables to selected_nonzero_variables, which is the represented coefficient-1 support in the GF(2) row encoding.",
+        "Mapped target to rhs, parity to row_sum, local satisfaction to row satisfaction, and global universal satisfaction in both structures.",
+        "Reconstructed the constraint/row correspondence in both directions."
+      ],
+      "local_falsification_result": "NO_FROZEN_OBLIGATION_FAILED"
+    },
+    {
+      "case_id": "case-03",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "KNOWN_POSITIVE_WITNESS_RECOVERED",
+      "required_obligations": {
+        "shared_q": "PASS",
+        "momentum_velocity_bridge": "PASS",
+        "qdot_from_p_over_m": "PASS",
+        "hamilton_to_newton_second_order": "PASS",
+        "newton_to_hamilton_first_order": "PASS",
+        "no_extra_physical_degree_claim": "PASS"
+      },
+      "evidence": [
+        "Recovered q_A=q_B, m_A=m_B, and k_A=k_B.",
+        "Recovered v=p/m and therefore p=mv=m*qdot.",
+        "Recovered a=-kq/m and pdot=m*a=m*qddot.",
+        "Reconstructed qdot=p/m and pdot=-kq from the Newton form.",
+        "Reconstructed m*qddot+kq=0 from the Hamilton form.",
+        "Classified the Hamiltonian energy machinery as accounted representation residual rather than an additional independent physical degree of freedom."
+      ],
+      "local_falsification_result": "NO_FROZEN_OBLIGATION_FAILED"
+    }
+  ],
+  "cross_case_findings": {
+    "reasoner_claimed_exact_cases": 3,
+    "accepted_exact_cases": 3,
+    "known_positive_witnesses_recovered": 3,
+    "partial_cases": 0,
+    "locally_falsified_claimed_mappings": 0,
+    "oracle_contamination_detected": false,
+    "domain_name_inference_detected": true,
+    "domain_labels_used_as_structural_evidence": false,
+    "raw_ids_used_as_structural_evidence": false,
+    "all_six_source_renderings_esr_qualified": true,
+    "q7_translation_promotion": true,
+    "transformation_semantic_authority_pinned": true,
+    "mechanical_role_coverage_passed": true
+  },
+  "qualification_disposition": {
+    "three_positive_control_stage": "PASS",
+    "current_campaign_result": "QUALIFIED_ON_ALL_THREE_FROZEN_POSITIVE_CONTROLS",
+    "dp07_full_spec_promotion": "NOT_CLAIMED_BY_THIS_SCORE_ALONE",
+    "strongest_result": "All three frozen known-positive correspondences were recovered exactly from the ESR-qualified, oracle-blind packet and survived independent hidden-oracle scoring.",
+    "remaining_scope_note": "This score closes the three-positive-control campaign. It does not by itself assert completion of every broader DP 0.7 qualification target listed in the candidate specification."
+  },
+  "predecessor_status": [
+    "RUN_36222604050_FAILS_HIDDEN_SCORE",
+    "RUN_36223276471_DIAGNOSTIC_ONLY",
+    "RUN_36224030592_FAILS_HIDDEN_SCORE",
+    "RUN_36228618460_REJECTED_BY_MECHANICAL_ROLE_COVERAGE_GATE"
+  ]
+}

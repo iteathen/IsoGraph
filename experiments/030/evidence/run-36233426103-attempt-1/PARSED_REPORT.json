@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "case_id": "R01",
+      "answers": {
+        "decoder_preserved_mutated_distinction": true,
+        "exact_rendering_qualification_passes": true,
+        "familiar_form_repair_allowed": false
+      },
+      "reason": "The decoder successfully recovered the mutated literal (-7) as represented in the native encoding. This satisfies the zero semantic residual requirement and the adversarial distinction preservation rule, which specifically identifies sign/coefficient changes as load-bearing distinctions that must be preserved.",
+      "authority_used": [
+        "Core 0.19 Section 18.1",
+        "Core 0.19 Section 18.10",
+        "Core 0.19 Section 18.11"
+      ]
+    },
+    {
+      "case_id": "R02",
+      "answers": {
+        "decoder_preserved_mutated_distinction": false,
+        "exact_rendering_qualification_passes": false,
+        "familiar_form_repair_allowed": false
+      },
+      "reason": "The decoder failed the exact-rendering qualification by performing a silent conventional repair. By returning 'exists' when the native rendering explicitly encoded 'forall', the decoder introduced semantic loss and violated the prohibition against importing familiar mathematical meaning over represented structure.",
+      "authority_used": [
+        "Core 0.19 Section 18.5",
+        "Core 0.19 Section 18.10",
+        "Core 0.19 Section 18.11",
+        "Core 0.19 Section 18.14"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "mutation_regression": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "distinguished_preservation_from_detection": true,
+    "did_not_repair_toward_familiar_form": true
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "A 14-node undirected graph representing the interaction topology of the sites.",
+        "Vertices: {1110..1123} in A, {2110..2123} in B.",
+        "Edges: Symmetric neighbor relations defined by stable labels ^71101..^71108 in A and ^81201..^81208 in B."
+      ],
+      "mapping_witness": [
+        "1100 <-> 2100",
+        "1110 <-> 2110",
+        "1111 <-> 2111",
+        "1112 <-> 2112",
+        "1113 <-> 2113",
+        "1114 <-> 2114",
+        "1115 <-> 2115",
+        "1116 <-> 2116",
+        "1117 <-> 2117",
+        "1118 <-> 2118",
+        "1119 <-> 2119",
+        "1120 <-> 2120",
+        "1121 <-> 2121",
+        "1122 <-> 2122",
+        "1123 <-> 2123",
+        "^71100 <-> ^81200",
+        "^71101 <-> ^81201",
+        "^71102 <-> ^81202",
+        "^71103 <-> ^81203",
+        "^71104 <-> ^81204",
+        "^71105 <-> ^81205",
+        "^71106 <-> ^81206",
+        "^71107 <-> ^81207",
+        "^71108 <-> ^81208"
+      ],
+      "transformations": [
+        "Linear mapping of spin states x_i in {-1, 1} to binary lattice gas variables y_i in {0, 1} via x_i = 2*y_i - 1."
+      ],
+      "a_to_b_reconstruction": [
+        "Substitute x_i = 2*y_i - 1 into the Ising Hamiltonian E_A(x) to obtain the lattice gas energy E_B(y).",
+        "Map parameters: c = 4*a, d = 2*b + 4*a * sum_j J_ij."
+      ],
+      "b_to_a_reconstruction": [
+        "Substitute y_i = (x_i + 1)/2 into the lattice gas energy E_B(y) to obtain the Ising Hamiltonian E_A(x)."
+      ],
+      "residuals": [
+        "None at the graph topology level (perfect isomorphism).",
+        "Physical parameters {a, b, t} and {c, d, u} are distinct but related by a linear transformation of the state space."
+      ],
+      "unresolved_obligations": [
+        "Parameter mapping between the Ising model and the lattice gas model."
+      ],
+      "derived_view": "Ising Model vs. Lattice Gas on a 14-node Graph",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": [
+        "A system of 5 linear/parity constraints over 9 variables.",
+        "Variables: {3110..3118} in A, {4110..4118} in B.",
+        "Constraints: XOR relations defined by stable labels ^91301..^91305 in A and ^61401..^61405 in B."
+      ],
+      "mapping_witness": [
+        "3100 <-> 4100",
+        "3110 <-> 4110",
+        "3111 <-> 4111",
+        "3112 <-> 4112",
+        "3113 <-> 4113",
+        "3114 <-> 4114",
+        "3115 <-> 4115",
+        "3116 <-> 4116",
+        "3117 <-> 4117",
+        "3118 <-> 4118",
+        "^91300 <-> ^61400",
+        "^91301 <-> ^61401",
+        "^91302 <-> ^61402",
+        "^91303 <-> ^61403",
+        "^91304 <-> ^61404",
+        "^91305 <-> ^61405",
+        "^91306 <-> ^61406"
+      ],
+      "transformations": [
+        "Isomorphism between the boolean group ({F, T}, XOR) and the finite field (F_2, +) where F <-> 0 and T <-> 1."
+      ],
+      "a_to_b_reconstruction": [
+        "Map F to 0 and T to 1, converting parity constraints to linear equations over F_2."
+      ],
+      "b_to_a_reconstruction": [
+        "Map 0 to F and 1 to T, converting linear equations over F_2 to parity constraints."
+      ],
+      "residuals": [
+        "None (perfect isomorphism)."
+      ],
+      "unresolved_obligations": [
+        "None."
+      ],
+      "derived_view": "Parity Constraints vs. Linear Equations over GF(2)",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": [
+        "1D Harmonic Oscillator dynamics: coordinate q(t), parameters m and k, and the second-order relation d^2q/dt^2 + (k/m)q = 0."
+      ],
+      "mapping_witness": [
+        "5110 <-> 6110 (t)",
+        "5111 <-> 6111 (q)",
+        "5116 <-> 6113 (m)",
+        "5117 <-> 6114 (k)",
+        "5112 <-> 6118 (v <-> p/m)",
+        "5118 <-> 6119 (ma <-> dp/dt)"
+      ],
+      "transformations": [
+        "Legendre transform / Hamiltonian formulation transition: p = m * v.",
+        "Reduction of second-order ODE to a system of two first-order ODEs."
+      ],
+      "a_to_b_reconstruction": [
+        "Define p = m * v.",
+        "Define H = p^2/(2m) + kq^2/2.",
+        "Obtain first-order equations dq/dt = p/m and dp/dt = -kq from v = dq/dt and m*a = -kq."
+      ],
+      "b_to_a_reconstruction": [
+        "Define v = p/m.",
+        "Define a = dv/dt = (dp/dt)/m.",
+        "From dp/dt = -kq, obtain m*a = -kq, which yields m*a + k*q = 0."
+      ],
+      "residuals": [
+        "In A: acceleration a (5113) and velocity v (5112) as explicit independent variables.",
+        "In B: momentum p (6112), Hamiltonian H (6115), kinetic energy T (6116), and potential energy V (6117) as explicit variables/functions."
+      ],
+      "unresolved_obligations": [
+        "Equivalence of the second-order Newtonian formulation and the first-order Hamiltonian formulation requires the definition of momentum p = m * v and the Legendre transform."
+      ],
+      "derived_view": "1D Harmonic Oscillator (Newtonian vs. Hamiltonian formulation)",
+      "disposition": "PARTIAL_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}

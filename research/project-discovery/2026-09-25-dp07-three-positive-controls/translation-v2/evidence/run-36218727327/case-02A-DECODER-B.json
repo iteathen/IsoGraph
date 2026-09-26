@@ -1,0 +1,76 @@
+{
+  "case_id": "case-02A",
+  "base": {
+    "reconstructed_statements": [
+      "model(variable_family, assignment_family, constraint_family)",
+      "range_or_domain(value_at, {F, T})",
+      "indexed_by(value_at, assignment_family, variable_family)",
+      "range_or_domain(target, {F, T})",
+      "xor(F, F) = F",
+      "xor(F, T) = T",
+      "xor(T, F) = T",
+      "xor(T, T) = F",
+      "abstraction(?1, ?2): parity(?1, ?2) = finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F)",
+      "abstraction(?1, ?2): constraint_satisfied(?1, ?2) = equal(parity(?1, ?2), target(?2))",
+      "abstraction(?1): system_satisfied(?1) = forall(?2, member(?2, constraint_family) => constraint_satisfied(?1, ?2))"
+    ],
+    "formula_trees": [
+      "abstraction(?1, abstraction(?2, equal(parity(?1, ?2), finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F))))",
+      "abstraction(?1, abstraction(?2, equal(constraint_satisfied(?1, ?2), equal(parity(?1, ?2), target(?2)))))",
+      "abstraction(?1, equal(system_satisfied(?1), forall(?2, implies(member(?2, constraint_family), constraint_satisfied(?1, ?2)))))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "model(variable_family, assignment_family, constraint_family)",
+        "range_or_domain(value_at, {F, T})",
+        "indexed_by(value_at, assignment_family, variable_family)",
+        "range_or_domain(target, {F, T})",
+        "xor(F, F) = F",
+        "xor(F, T) = T",
+        "xor(T, F) = T",
+        "xor(T, T) = T",
+        "abstraction(?1, ?2): parity(?1, ?2) = finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F)",
+        "abstraction(?1, ?2): constraint_satisfied(?1, ?2) = equal(parity(?1, ?2), target(?2))",
+        "abstraction(?1): system_satisfied(?1) = forall(?2, member(?2, constraint_family) => constraint_satisfied(?1, ?2))"
+      ],
+      "formula_trees": [
+        "abstraction(?1, abstraction(?2, equal(parity(?1, ?2), finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F))))",
+        "abstraction(?1, abstraction(?2, equal(constraint_satisfied(?1, ?2), equal(parity(?1, ?2), target(?2)))))",
+        "abstraction(?1, equal(system_satisfied(?1), forall(?2, implies(member(?2, constraint_family), constraint_satisfied(?1, ?2)))))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "model(variable_family, assignment_family, constraint_family)",
+        "range_or_domain(value_at, {F, T})",
+        "indexed_by(value_at, assignment_family, variable_family)",
+        "range_or_domain(target, {F})",
+        "xor(F, F) = F",
+        "xor(F, T) = T",
+        "xor(T, F) = T",
+        "xor(T, T) = F",
+        "abstraction(?1, ?2): parity(?1, ?2) = finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F)",
+        "abstraction(?1, ?2): constraint_satisfied(?1, ?2) = equal(parity(?1, ?2), target(?2))",
+        "abstraction(?1): system_satisfied(?1) = forall(?2, member(?2, constraint_family) => constraint_satisfied(?1, ?2))"
+      ],
+      "formula_trees": [
+        "abstraction(?1, abstraction(?2, equal(parity(?1, ?2), finite_fold(xor, selected_variables(?2), abstraction(?3, value_at(?1, ?3)), F))))",
+        "abstraction(?1, abstraction(?2, equal(constraint_satisfied(?1, ?2), equal(parity(?1, ?2), target(?2)))))",
+        "abstraction(?1, equal(system_satisfied(?1), forall(?2, implies(member(?2, constraint_family), constraint_satisfied(?1, ?2)))))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}
