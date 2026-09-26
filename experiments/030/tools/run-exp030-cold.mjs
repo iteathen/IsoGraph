@@ -65,7 +65,7 @@ const failures=[];
 let call=null;
 for(const model of MODELS){
   for(let i=0;i<3;i++){
-    const cfg={candidateCount:1,maxOutputTokens:4096,temperature:0.1,responseMimeType:'application/json'};
+    const cfg={candidateCount:1,maxOutputTokens:16384,temperature:0.1,responseMimeType:'application/json'};
     if(!model.includes('flash-lite')) cfg.thinkingConfig={thinkingLevel:'HIGH'};
     const url='https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent';
     const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify({contents:[{role:'user',parts:[{text:packet}]}],generationConfig:cfg})});
