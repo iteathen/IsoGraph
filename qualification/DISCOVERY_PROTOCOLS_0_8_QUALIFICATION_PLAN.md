@@ -61,7 +61,7 @@ Do not expose:
 - private valuation answers;
 - case labels that reveal the intended discovery.
 
-For the real-world CPC control, do not tell the reasoner that predictive draw machinery is suspected or removable.
+For the real-world CPC control, do not tell the reasoner that predictive draw machinery is suspected or nonessential for sufficiency.
 
 ---
 
@@ -131,12 +131,14 @@ Expected behavior:
 
 ## Q07 — Runtime valuation reversal
 
-Use the same or analogous topology but supply measured per-transition costs so a topology with more transitions has lower total declared execution cost.
+Use the same or analogous topology but supply sufficiently separated measured costs, with explicit provenance and measurement scope, so a topology with more transitions has lower total declared execution cost.
 
 Expected behavior:
 
-- valuation may prefer the larger topology;
-- transition count and execution cost remain distinct.
+- valuation may prefer the larger topology under the supplied measurement scope;
+- transition count and execution cost remain distinct;
+- the reasoner does not generalize the measured ordering beyond its evidence scope;
+- if a companion control supplies overlapping/noisy measurements, the reasoner preserves the ordering as unresolved rather than inventing a winner.
 
 ## Q08 — Multi-objective incomparability
 
@@ -165,7 +167,7 @@ Expected behavior:
 
 ## Q11 — QU-sensitive reduction
 
-Support is removable in some admissible realizations but necessary in others.
+Support is nonessential for sufficiency in some admissible realizations but necessary in others.
 
 Expected behavior:
 
@@ -267,7 +269,7 @@ Expected behavior:
 For every case, score separately:
 
 ```text
-target correctly identified
+target and all required witness/certificate/side-effect obligations correctly identified
 support cone / objective-relevant slice sufficiently scoped
 implicit assertions valid
 authority routing valid
