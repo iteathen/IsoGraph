@@ -172,7 +172,7 @@ The optional logic-lens companion may refresh search patterns. It supplies no se
 
 ---
 
-# 3. Declare the discovery objective before reducing support
+# 3. Declare the discovery objective before analyzing sufficiency
 
 Minimum-sufficient-support analysis is objective-scoped.
 
@@ -295,9 +295,29 @@ It does not establish that no different sufficient support uses less structure.
 
 ## 6.2 Minimum sufficient support
 
-A sufficient support `S*` is **minimum** only relative to an explicitly declared candidate space and support-order or measure when no established sufficient alternative in that candidate space ranks below `S*` under that order.
+A sufficient support `S*` is **minimum** only relative to an explicitly declared candidate space and ordering/measure.
 
-Examples of support orders may include:
+For a declared preference order `≼`, a minimum claim requires:
+
+```text
+for every established sufficient alternative T
+in the declared candidate space:
+
+    S* ≼ T
+```
+
+For a declared scalar measure `m`, a minimum claim requires:
+
+```text
+for every established sufficient alternative T
+in the declared candidate space:
+
+    m(S*) <= m(T)
+```
+
+This is stronger than merely showing that no known alternative is strictly below `S*`. Under a partial order, several supports may be **minimal** while no single minimum/least support exists.
+
+Examples of declared support orders/measures may include:
 
 ```text
 set inclusion
@@ -305,14 +325,16 @@ number of load-bearing transitions
 number of support nodes
 proof-step count
 dependency count
-another application-defined structural order
+another application-defined structural order or measure
 ```
 
 DP introduces no universal support-size metric.
 
+A minimum need not be unique under a measure: several distinct sufficient supports may tie for the same minimum value. Preserve that multiplicity unless another represented preference separates them.
+
 If search has established irreducibility but has not covered the declared candidate space needed for a minimum claim, say `minimal sufficient support`, not `minimum`.
 
-A minimum claim MUST name or recover the candidate space and ordering under which it is minimum. DP 0.8 does not require a universal search over every imaginable representation or implementation.
+A minimum claim MUST name or recover the candidate space and ordering/measure under which it is minimum. DP 0.8 does not require a universal search over every imaginable representation or implementation.
 
 ---
 
@@ -436,14 +458,14 @@ They need not be promoted into a canonical implementation.
 
 DP 0.8 permits an application to declare how established sufficient alternatives should be valued.
 
-A **Discovery Valuation Profile** should identify, as applicable:
+A **Discovery Valuation Profile** is discovery/application context, not a new Core primitive or semantic truth source. It should identify, as applicable:
 
 ```text
 target conclusion / observable set
 hard invariants
 admissible transformations
 valuation dimensions
-valuation evidence / derivation method / units where applicable
+valuation evidence / derivation method / units and counting granularity where applicable
 constraints / thresholds
 preference ordering
 lexicographic priorities
@@ -621,8 +643,10 @@ semantic class
     != independent detector
 
 member of outcome space
-    != independent information generator
+    != requirement for a unique computational test
 ```
+
+A residual class may still have independent evidence or a useful direct detector; derivability means only that such a detector is not automatically necessary for the declared classification objective.
 
 This section does not grant classical logic or partition semantics merely from labels.
 
@@ -765,7 +789,7 @@ Candidate failure classes include:
 ```text
 target objective underspecified
 consumer boundary too narrow
-support cone incomplete
+support cone or objective-relevant analysis slice incomplete
 implicit assertion missed
 implicit assertion invalid
 hidden premise imported
@@ -783,7 +807,7 @@ valuation evidence / derivation method missing
 preference ordering missing
 incomparable alternatives collapsed
 local or sampled optimum mistaken for a minimum over the declared candidate space
-cost model incorrect
+valuation model / measurement / derivation incorrect
 implementation/measurement defect
 actual load-bearing support
 ```
@@ -797,7 +821,7 @@ This list is discovery bookkeeping, not a new ontology.
 Before DP 0.8 promotion, fresh qualification should test at least:
 
 1. **Implicit partition closure:** a blind case with mutually exclusive and collectively exhaustive alternatives exposes a residual class without an application-specific rule.
-2. **Minimum-support positive:** a proper support subgraph establishes the same exact target under unchanged inputs, scope, and authority.
+2. **Sufficient-support positive:** a proper support subgraph establishes the same exact target under unchanged inputs, scope, and authority.
 3. **Load-bearing negative:** removal of one apparently redundant relation changes the target and is rejected.
 4. **Consumer-scope case:** a locally useful intermediate is discovered to be nonessential only after tracing an exact downstream fallback.
 5. **Alternative sufficient topology:** multiple materially distinct sufficient subgraphs are preserved.
@@ -812,14 +836,14 @@ Before DP 0.8 promotion, fresh qualification should test at least:
 14. **Logic-lens positive:** with appropriate authority, elementary consequence discovery expands the assertion graph before support minimization.
 15. **Objective-scoped preservation:** structure nonessential for sufficiency of one objective remains preserved semantically and available for another objective.
 16. **Minimum-vs-minimal discipline:** a reasoner does not claim minimum from one irreducible candidate without coverage of the declared candidate space.
-17. **Costed optional accelerator:** an optional accelerator is classified by net declared value rather than by mere causal connectedness.
-18. **Real-world blind control:** an exact implementation topology with no optimization hint independently exposes a removable derived/optional path and preserves the original result.
+17. **Valued optional accelerator:** an optional accelerator is classified by net declared value rather than by mere dependency connectedness.
+18. **Real-world blind control:** an exact implementation topology with no optimization hint independently exposes a nonessential derived/optional path, preserves the original result, and evaluates omission only through the supplied valuation profile.
 19. **Anti-overfit control:** a superficially similar topology where the third branch carries unique information is retained.
 20. **Full-stack boundary:** DP 0.8 composes correctly with current Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 without importing their authority when not load-bearing.
 
 Qualification should include blind cases in which the reasoner is not told:
 
-- which support is removable;
+- which support is nonessential for sufficiency;
 - which valuation alternative should win;
 - that a partition/complement pattern exists;
 - that a real-world optimization opportunity is present.
@@ -838,7 +862,7 @@ Core 0.19 determines what implicit support may count.
 Discovery asks what follows,
 what is necessary,
 what is sufficient,
-what can be removed for this objective,
+what is nonessential for sufficiency of this objective,
 and what alternatives remain.
 
 Sufficiency comes before valuation.
@@ -854,7 +878,7 @@ Do not optimize by mutating the problem.
 
 Do not confuse a consumed value with a necessary value.
 
-Do not confuse a semantic class with an independent detector.
+Do not confuse a semantic class with a requirement for an independent detector.
 
 Trace far enough downstream to the declared observable.
 
