@@ -15,7 +15,10 @@ const DRY=process.env.ISOGRAPH_COLD_DRY_RUN==='1';
 if(!SHA)throw new Error('GITHUB_SHA unavailable');
 if(!DRY&&!KEY)throw new Error('GEMINI_API_KEY unavailable');
 
-const CASES=['case-01A','case-01B','case-02A','case-02B','case-03A','case-03B'];
+const ALL_CASES=['case-01A','case-01B','case-02A','case-02B','case-03A','case-03B'];
+const CASE_FILTER=(process.env.ISOGRAPH_CASE||'').trim();
+if(CASE_FILTER&&!ALL_CASES.includes(CASE_FILTER))throw new Error('unknown ISOGRAPH_CASE '+CASE_FILTER);
+const CASES=CASE_FILTER?[CASE_FILTER]:ALL_CASES;
 const AUTHORITY_FILES=[
   'CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md',
   'CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md',
