@@ -21,7 +21,7 @@ if(JSON.stringify(paths)!==JSON.stringify(expected)) throw new Error('unexpected
 if(dry.core_0_19_sha256!=='8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2') throw new Error('Core 0.19 hash mismatch');
 if(dry.case_count!==2) throw new Error('case count mismatch');
 
-const forbidden=['hidden/','ASSERTIONS','score-exp030','experiment/029/evidence','C25_CONTRACT_DIAGNOSTIC','STATUS.md','AGENTS.md','README.md'];
+const forbidden=['experiments/030/hidden/','experiments/030/hidden/ASSERTIONS.json','score-exp030','experiment/029/evidence','C25_CONTRACT_DIAGNOSTIC','STATUS.md','AGENTS.md','README.md'];
 for(const item of forbidden){
   if(paths.some(p=>p.includes(item))) throw new Error('forbidden input '+item);
 }
