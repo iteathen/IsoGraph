@@ -50,6 +50,44 @@ const emptyReason=structuredClone(complete);
 emptyReason.role_coverage.A[0].justification='';
 assert.match(validateExactRoleCoverage({caseReport:emptyReason,signatureA:sigA,signatureB:sigB}).join('\n'),/missing A justification for \^1/);
 
+
+const literalSigA={symbols:{'^1':'F'}};
+const literalSigB={symbols:{'^11':'value_domain'}};
+const literalCase={
+  case_id:'literal-case',
+  disposition:'EXACT_WITNESS',
+  role_coverage:{
+    A:[
+      {symbol:'^1',status:'TRANSFORMED',counterparts:['#0'],justification:'F maps to represented zero literal',authority_refs:['authority#9']}
+    ],
+    B:[
+      {symbol:'^11',status:'NON_LOAD_BEARING',counterparts:[],justification:'domain carrier role; represented literals are values',authority_refs:['DIRECT_NATIVE_SUPPORT']}
+    ]
+  }
+};
+assert.deepEqual(
+  validateExactRoleCoverage({
+    caseReport:literalCase,
+    signatureA:literalSigA,
+    signatureB:literalSigB,
+    nativeA:'(^1)',
+    nativeB:'(^11 {#0 #1})'
+  }),
+  []
+);
+const inventedLiteral=structuredClone(literalCase);
+inventedLiteral.role_coverage.A[0].counterparts=['#9'];
+assert.match(
+  validateExactRoleCoverage({
+    caseReport:inventedLiteral,
+    signatureA:literalSigA,
+    signatureB:literalSigB,
+    nativeA:'(^1)',
+    nativeB:'(^11 {#0 #1})'
+  }).join('\n'),
+  /unknown B counterpart #9/
+);
+
 console.log('PASS: exact-witness role coverage validator');
 
 const signatures={
