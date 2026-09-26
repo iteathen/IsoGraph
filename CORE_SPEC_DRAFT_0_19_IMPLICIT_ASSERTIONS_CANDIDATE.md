@@ -3,10 +3,10 @@
 **Status:** unqualified normative clarification candidate  
 **Base authority:** current effective Core = `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` + the exact qualified `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` clarification  
 **Short name:** Core 0.19 candidate  
-**Purpose:** distinguish source-explicit assertion support from necessarily or probabilistically derived implicit assertion support without introducing a universal proof calculus  
+**Purpose:** (1) distinguish source-explicit assertion support from necessarily or probabilistically derived implicit assertion support without introducing a universal proof calculus; and (2) make exact source-to-native formula rendering an explicit admission requirement  
 **Growth rule:** adds no parser syntax, no mandatory inference algorithm, no universal theorem prover, no probability distribution, no default Bayesian prior, no new identity rule, and no permission to weaken existing Core/QU/NEI obligations
 
-Core 0.19 is a narrow assertion-support clarification over the current qualified Core.
+Core 0.19 is a narrow clarification over the current qualified Core. It adds assertion-support discipline and consolidates the already-existing source-fidelity obligations into an explicit exact-rendering contract.
 
 Its purpose is to let IsoGraph expose structure that is not directly stated by a source but is nevertheless established by the represented system under its governing authority, while preserving the distinction between what the source explicitly supplied and what later reasoning recovered.
 
@@ -17,6 +17,8 @@ an implicit assertion is discovered, not supplied
 ```
 
 Core defines what may count as an implicit assertion. It does not prescribe how an agent must discover one.
+
+Core 0.19 also makes explicit that a formula is not successfully rendered into IsoGraph merely because a structural sketch, role graph, or recognizable semantic skeleton exists. A complete rendering has **zero unresolved semantic loss** relative to the frozen source interpretation, modulo only explicitly qualified representation-only normalization.
 
 ---
 
@@ -69,6 +71,27 @@ failure to discover an implicit assertion
 
 operational fixed point
     != universal semantic completeness
+
+formula skeleton
+    != formula rendering
+
+recognizable semantic shape
+    != source-semantic completeness
+
+sidecar-completed native graph
+    != complete native rendering
+
+approximate reconstruction
+    != exact rendering
+
+probabilistic/likely interpretation
+    != exact rendering
+
+source-equivalent-looking formula
+    != exact bidirectional source witness
+
+representability
+    != successful rendering
 ```
 
 These barriers are normative.
@@ -744,3 +767,401 @@ It does not dictate how the AI reasons its way there.
 ```
 
 This candidate changes no qualified Core authority until independently tested, reviewed, and promoted.
+
+---
+
+# 18. Exact source-to-native formula rendering
+
+This section consolidates and strengthens the current Core source-fidelity requirements for formulas, constraints, equations, proofs, transition predicates, quantitative relations, and other logic-bearing source structure.
+
+Its purpose is not to add a higher-level formula ontology.
+
+Its purpose is to establish the admission condition for saying:
+
+```text
+this source formula has been rendered in IsoGraph
+```
+
+The admission condition is **exact semantic closure**.
+
+## 18.1 Zero semantic residual
+
+A source formula is completely rendered only when every load-bearing semantic distinction required to reconstruct the frozen source interpretation is represented in:
+
+1. the native IsoGraph structure itself; or
+2. an explicitly pinned qualified semantic dependency whose interface is itself represented and whose use is exact.
+
+The complete native bundle MUST permit recovery of the source-semantic object with zero unresolved semantic loss, modulo only qualified representation-only normalization.
+
+```text
+source semantic object S
+    ->
+native bundle N
+    ->
+reconstructed semantic object S'
+
+complete rendering requires:
+    S' ≅ S
+```
+
+where the equivalence relation is the frozen source-semantic structural equivalence for that rendering claim.
+
+This requirement is semantic, not byte-for-byte textual identity.
+
+Whitespace, source spelling, alpha-renamable binder handles, transparent serialization choices, and other already-qualified representation-only differences may normalize away.
+
+No load-bearing logic may normalize away without an exact qualified witness.
+
+## 18.2 Primitive / qualified-leaf closure
+
+Rendering proceeds downward until every load-bearing component reaches either:
+
+- qualified Core structure;
+- an explicitly represented primitive/model leaf with pinned authority;
+- or a pinned qualified semantic construction whose exact interface is represented.
+
+A renderer MUST NOT stop decomposition at a convenient familiar label merely because an agent understands it.
+
+For a formula, load-bearing structure includes, as applicable:
+
+```text
+operator / relation identity
+operator arity
+ordered operand incidence
+literal values
+sign
+coefficient
+units / dimensions when semantic
+binding
+binder ownership
+free-variable interface
+quantifier kind
+quantifier domain / generator
+scope / boundary
+guards / side conditions
+branch / choice structure
+equality / disequality kind
+exact / approximate distinction
+epistemic status where part of the source claim
+function application
+indexing
+aggregation / fold operation
+aggregation domain
+aggregation identity/base case
+ordering
+multiplicity
+derivative / transition semantics
+probability / measure authority
+unknown / alternative interpretation structure
+provenance needed to reconstruct the frozen source meaning
+```
+
+This list is illustrative, not exhaustive.
+
+The test is not whether the renderer named every familiar concept.
+
+The test is whether removing any unrepresented distinction could change the source-semantic object.
+
+## 18.3 No skeleton renderings
+
+The following may be useful exploratory artifacts but are **not complete formula renderings**:
+
+```text
+role graph
+dependency skeleton
+operator-name graph without operator semantics
+formula outline
+semantic summary
+heuristic decomposition
+approximate reconstruction
+partial factorization
+lossy projection
+recognition-trigger representation
+English- or JSON-completed native object
+```
+
+Such artifacts MUST be labeled partial/exploratory and MUST NOT be admitted as source-faithful formula renderings for proof, structural comparison, isomorphism discovery, qualification, or implicit-assertion support.
+
+## 18.4 No sidecar completion
+
+Human-readable or machine-readable sidecars may supply:
+
+- symbol gloss;
+- citations;
+- provenance;
+- reviewer navigation;
+- non-authoritative explanation;
+- serialization metadata.
+
+They MUST NOT supply load-bearing formula meaning absent from the native bundle.
+
+```text
+native payload
+    = semantic/formula structure
+
+sidecar
+    = gloss/navigation/provenance only
+```
+
+If removing the sidecar makes the represented formula unreconstructable, the native rendering is incomplete.
+
+A pinned qualified semantic authority is not a sidecar when its semantics and interface are explicit dependencies of the native bundle.
+
+## 18.5 No silent conventional mathematics
+
+A renderer MUST NOT rely on an agent to silently import conventional mathematical meaning merely because a notation is familiar.
+
+Examples include:
+
+```text
+"+" means an assumed addition law
+juxtaposition means multiplication
+summation is associative/commutative
+a derivative has ordinary calculus semantics
+exp has a familiar real-exponential meaning
+a field has familiar axioms
+probabilities normalize conventionally
+an omitted domain is "obvious"
+operator precedence is conventional
+```
+
+Any such semantics that are load-bearing must be represented directly or routed through pinned qualified authority.
+
+Pretrained recognition is not semantic authority.
+
+## 18.6 Exact transformations only
+
+A source formula may be rendered through an alternate exact factorization, algebraic form, quotient, canonicalization, or compact construction only when the rendering preserves an exact recoverable bridge.
+
+For a changed semantic surface:
+
+```text
+source form S
+    <-> exact witnessed transformation T
+    <-> rendered form R
+```
+
+The witness must establish the claimed direction(s) under the declared scope.
+
+If only one direction is established, only that direction may be claimed.
+
+Approximation, empirical similarity, asymptotic equivalence, heuristic simplification, likely equivalence, or probabilistic support does not satisfy an exact-rendering claim.
+
+## 18.7 Unknown and ambiguity fidelity
+
+Exact rendering does not require guessing an unresolved source meaning.
+
+If the source is ambiguous, incomplete, inconsistent, parameterized, or genuinely admits multiple faithful interpretations, the rendering preserves that structure exactly.
+
+As applicable:
+
+```text
+known alternative interpretations
+    -> represented alternatives
+
+unresolved load-bearing value/relation
+    -> QU
+
+inconsistent source claims
+    -> preserved inconsistency with provenance
+
+missing authority
+    -> missing/unresolved authority
+```
+
+Choosing a convenient realization is semantic loss.
+
+```text
+exact rendering of an unknown
+    != guessing the unknown
+```
+
+## 18.8 Precision and modality preservation
+
+Source precision and assertion strength are load-bearing.
+
+A renderer MUST preserve distinctions such as:
+
+```text
+exact
+approximate
+bounded
+empirical
+probabilistic
+conditional
+existential
+universal
+modal
+hypothetical
+disproven
+unknown
+```
+
+when present in the frozen source interpretation.
+
+A renderer MUST NOT upgrade or downgrade these merely to obtain a simpler graph or stronger discovery result.
+
+## 18.9 Formula reconstruction gate
+
+A formula-rendering claim is not qualified by author inspection alone.
+
+Before the rendering may serve as evidence for proof, discovery, comparison, implicit assertion, or another semantic result, the applicable qualification profile MUST establish source-semantic reconstruction.
+
+At minimum:
+
+```text
+Q0  freeze source interpretation / alternatives
+Q1  author-side semantic coverage audit
+Q2  native parse / signature / closure audit
+Q3  isolated native-only reconstruction by a fresh reasoner
+Q4  canonical source <-> reconstruction structural comparison
+Q5  targeted distinction-preservation controls
+Q6  promotion for downstream semantic use
+```
+
+A profile may require stronger controls.
+
+A failure at an earlier layer blocks downstream use.
+
+Same-context reconstruction is not independent qualification evidence.
+
+## 18.10 Exact reconstruction criterion
+
+For exact rendering qualification:
+
+```text
+PASS
+    =
+every load-bearing source-semantic distinction is recoverable
+and no unsupported semantic distinction is added
+
+FAIL
+    =
+any load-bearing distinction is
+missing
+added
+merged
+split
+reordered
+rebound
+rescoped
+retyped
+strengthened
+weakened
+approximated
+guessed
+or otherwise changed
+without exact qualified authority
+```
+
+There is no partial credit for the exact-rendering gate.
+
+A partial rendering may remain useful as an explicitly partial artifact.
+
+It simply cannot be called an exact source rendering.
+
+## 18.11 Adversarial distinction preservation
+
+Qualification SHOULD include source variants differing by one load-bearing feature, such as:
+
+```text
++ versus -
+ordered operand swap
+forall versus exists
+exact versus approximate
+one changed literal
+one changed coefficient
+one changed scope boundary
+one changed binder
+one changed domain restriction
+one changed guard
+one changed identity-sharing relation
+```
+
+The rendering and cold reconstruction must preserve the distinction rather than silently repairing the source toward a familiar formula.
+
+## 18.12 Discovery and implicit-assertion barrier
+
+Discovery may begin only from the semantic content actually qualified in the rendering.
+
+A DP result MUST NOT receive evidentiary support from source meaning that exists only outside the qualified native bundle.
+
+Likewise, explicit assertion support under Core 0.19 requires either:
+
+- a directly represented source assertion body; or
+- an exact qualified source-faithful rendering of that body.
+
+```text
+source prose
+    -> incomplete skeleton
+    -> DP / implicit support
+```
+
+is invalid.
+
+The lawful path is:
+
+```text
+source
+    -> exact qualified native rendering
+    -> discovery / reasoning
+    -> derived view / implicit assertion
+```
+
+## 18.13 Failure classification
+
+Rendering failures should be classified before Core is changed.
+
+Useful classes include:
+
+```text
+source-interpretation ambiguity
+formula omission
+operator-semantics omission
+operand/arity/order loss
+literal/sign/coefficient loss
+binder/domain/scope loss
+precision/modality loss
+sidecar-authority leakage
+silent conventional-semantics import
+lossy transformation presented as exact
+missing transformation witness
+unknown collapsed to guessed value
+unsupported semantic addition
+cold-reconstruction failure
+canonical-comparison failure
+implementation/serializer defect
+actual Core representability defect
+```
+
+A rendering failure does not establish a Core expressiveness defect until faithful construction from existing primitives/dependencies has been attempted and shown insufficient or materially worse under the normal Core admission rule.
+
+## 18.14 Formula rendering constitutional summary
+
+```text
+Represent every load-bearing bit of source logic.
+
+Stop only at qualified primitives/leaves or exact pinned dependencies.
+
+A skeleton is not a rendering.
+
+A sidecar cannot finish the semantics.
+
+Familiar mathematics cannot be silently imported.
+
+Alternative forms require exact transformation witnesses.
+
+Unknown remains unknown.
+
+Ambiguity remains explicit.
+
+Precision and modality survive.
+
+Exact rendering has no semantic residual.
+
+Fresh native-only reconstruction must recover the frozen source semantics.
+
+Only qualified exact renderings may serve as downstream discovery/proof evidence.
+```
+
+
