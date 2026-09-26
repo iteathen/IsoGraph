@@ -303,7 +303,7 @@ The native rerendering encodes -3 exactly.
 
 A cold decoder reconstructs +3 because it recognizes the familiar canonical formula and silently repairs the sign.
 
-Determine whether the mutation control passes and whether familiar-form repair is permitted in exact rendering qualification.
+Determine whether the rendering/reconstruction path passes the mutation-preservation qualification gate and whether familiar-form repair is permitted in exact rendering qualification.
 
 ## C26 — Downstream barrier for incomplete rendering
 
