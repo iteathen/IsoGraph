@@ -1,37 +1,76 @@
 # Blind DP 0.7 discovery prompt
 
-You are given three anonymous pairs of frozen IsoGraph renderings.
+You are given three anonymous pairs of frozen IsoGraph structures.
 
-Use the current qualified IsoGraph stack plus the unqualified DP 0.7 candidate on this branch.
+Use only the authority files and discovery files explicitly included in your packet.
 
-## Input restriction
-
-Read only files listed in `DISCOVERY_INPUT_MANIFEST.json.discovery_inputs`.
-
-Do not read any path listed in `withheld_oracles`.
-
-If an oracle file is accidentally exposed, mark that case `TEST_CONTAMINATED`.
+Do not infer or guess the hidden source-domain names. Domain identification is not part of the task.
 
 ## Task
 
 For each pair independently:
 
-1. compare primitive structure before using a high-level conceptual description;
-2. ignore raw SI numbers, raw stable-label numbers, filenames, and domain vocabulary as evidence;
+1. compare primitive structure before constructing a high-level description;
+2. ignore raw SI numbers and raw stable-label numbers as evidence;
 3. identify exact common structure;
-4. propose an exact mapping witness where supported;
+4. propose an exact mapping/transformation witness where supported;
 5. attempt reconstruction in both directions;
 6. preserve residuals and scope;
 7. use QU only when unresolved structure is actually load-bearing;
-8. do not make a global negative-isomorphism claim from failure to find a mapping.
+8. do not make a global negative-isomorphism claim from failure to find a mapping;
+9. do not assume that the two local literal encodings must be identical;
+10. distinguish an exact structural witness from a merely suggestive analogy.
 
-Report:
+## Required output
 
-- mapping witness;
-- common primitive structure;
-- residuals;
-- exact obligations verified;
-- unresolved obligations;
-- higher-level derived view, if one emerges only after primitive comparison.
+Return exactly one JSON object, with no prose outside it:
 
-Do not score against an expected answer during discovery.
+```json
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": ["..."],
+      "mapping_witness": ["..."],
+      "transformations": ["..."],
+      "a_to_b_reconstruction": ["..."],
+      "b_to_a_reconstruction": ["..."],
+      "residuals": ["..."],
+      "unresolved_obligations": ["..."],
+      "derived_view": "...",
+      "disposition": "EXACT_WITNESS | PARTIAL_WITNESS | NO_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": ["..."],
+      "mapping_witness": ["..."],
+      "transformations": ["..."],
+      "a_to_b_reconstruction": ["..."],
+      "b_to_a_reconstruction": ["..."],
+      "residuals": ["..."],
+      "unresolved_obligations": ["..."],
+      "derived_view": "...",
+      "disposition": "EXACT_WITNESS | PARTIAL_WITNESS | NO_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": ["..."],
+      "mapping_witness": ["..."],
+      "transformations": ["..."],
+      "a_to_b_reconstruction": ["..."],
+      "b_to_a_reconstruction": ["..."],
+      "residuals": ["..."],
+      "unresolved_obligations": ["..."],
+      "derived_view": "...",
+      "disposition": "EXACT_WITNESS | PARTIAL_WITNESS | NO_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}
+```
+
+A valid additional discovery may be reported inside the relevant arrays. Do not score yourself against an expected answer.
