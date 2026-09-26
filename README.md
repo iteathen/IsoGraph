@@ -30,6 +30,7 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
+- [Core 0.19 Qualified Assertion-Support / Exact-Rendering Clarification](qualification/CORE_0_19_QUALIFICATION.md)
 - [Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
 - [Historical Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
 - [Older Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
@@ -1059,8 +1060,10 @@ Current Core authority is cumulative:
 - [Core 0.17 qualified base](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 qualified observation-first clarification](CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md)
 - [Core 0.18 qualification record](qualification/CORE_0_18_QUALIFICATION.md)
+- [Core 0.19 qualified assertion-support / exact-rendering clarification](CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md)
+- [Core 0.19 qualification record](qualification/CORE_0_19_QUALIFICATION.md)
 
-Core 0.18 is qualified at the exact tested bytes even though the historical filename retains `_CANDIDATE`.
+Core 0.18 and Core 0.19 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
 
 ## Qualified semantic extensions/modules
 
@@ -1098,7 +1101,7 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition is qualified for the exercised dependency-closed scope by the Experiment 027 predecessor plus the focused DP 0.7 successor evidence.
+The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision qualified by the Experiment 027 predecessor plus the focused DP 0.7 successor evidence. Core 0.19 is independently qualified as current Core authority; it is not silently added to that revision-scoped integration result.
 
 - [Experiment 028 Final Qualification Review](experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md)
 - [Current Integrated Stack with DP 0.7](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
@@ -1232,6 +1235,12 @@ Core 0.18:
     QUALIFIED cumulative observation-first clarification
     decisive holdout: Experiment 017
 
+Core 0.19:
+    QUALIFIED cumulative assertion-support / exact-rendering clarification
+    broad holdout: Experiment 029 (25/26 frozen PASS; formal failure preserved)
+    corrected mutation regression: Experiment 030 (2/2 PASS, QUALIFIES)
+    concrete exact-rendering evidence: six ESR-qualified/Q7-promoted renderings
+
 QRC 0.1:
     QUALIFIED qualification infrastructure
 
@@ -1252,9 +1261,11 @@ DTS 0.1:
     decisive holdout: Experiment 026 (20/20 PASS)
     independent promotion verifier: SUPPORT_PROMOTION
 
-Current integrated stack:
+Latest fully integration-qualified stack revision:
     Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1
-    QUALIFIED by Experiment 027 (18/18 PASS)
+    QUALIFIED by Experiment 027 predecessor + DP 0.7 successor evidence
+
+Current Core module authority additionally includes qualified Core 0.19; full-stack integration including Core 0.19 is a separate revision-scoped claim.
 
 Historical pre-DTS integrated stack:
     QUALIFIED by Experiment 019
