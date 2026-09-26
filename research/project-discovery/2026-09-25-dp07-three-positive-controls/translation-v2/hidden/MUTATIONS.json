@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "purpose": "Q5 one-distinction mutation controls. Each native mutation changes exactly one load-bearing source-semantic feature; cold reconstruction must report the changed value rather than repair toward the familiar base formula.",
+  "cases": {
+    "case-01A": [
+      {
+        "id": "A-M1-domain",
+        "description": "local value domain is {-1,2}, not {-1,1}",
+        "from": "(^71020 ^71004 {#-1 #1})",
+        "to": "(^71020 ^71004 {#-1 #2})",
+        "must_contain": [
+          "-1",
+          "2"
+        ],
+        "must_not_claim": [
+          "{-1,+1}",
+          "{-1,1}"
+        ]
+      },
+      {
+        "id": "A-M2-weight-sign",
+        "description": "weight exponent is +beta*energy rather than -beta*energy",
+        "from": "(^71018\\n        (^71016\\n          (^71015 ^71009 (^71010 ?1))))",
+        "to": "(^71018\\n        (^71015 ^71009 (^71010 ?1)))",
+        "must_contain": [
+          "exp",
+          "beta",
+          "energy",
+          "positive"
+        ],
+        "must_not_claim": [
+          "-beta",
+          "negative beta"
+        ]
+      }
+    ],
+    "case-01B": [
+      {
+        "id": "B-M1-domain",
+        "description": "local value domain is {0,2}, not {0,1}",
+        "from": "(^81020 ^81004 {#0 #1})",
+        "to": "(^81020 ^81004 {#0 #2})",
+        "must_contain": [
+          "0",
+          "2"
+        ],
+        "must_not_claim": [
+          "{0,1}"
+        ]
+      },
+      {
+        "id": "B-M2-weight-sign",
+        "description": "weight exponent is +beta*grand_energy rather than -beta*grand_energy",
+        "from": "(^81018\\n        (^81016\\n          (^81015 ^81009 (^81010 ?1))))",
+        "to": "(^81018\\n        (^81015 ^81009 (^81010 ?1)))",
+        "must_contain": [
+          "exp",
+          "beta",
+          "grand_energy",
+          "positive"
+        ],
+        "must_not_claim": [
+          "-beta",
+          "negative beta"
+        ]
+      }
+    ],
+    "case-02A": [
+      {
+        "id": "C-M1-table",
+        "description": "the T⊕T table row returns T rather than F",
+        "from": "(^91007 ^91006 ^91006 ^91005)",
+        "to": "(^91007 ^91006 ^91006 ^91006)",
+        "must_contain": [
+          "T",
+          "T",
+          "returns T"
+        ],
+        "must_not_claim": [
+          "T XOR T = F",
+          "T⊕T=F"
+        ]
+      },
+      {
+        "id": "C-M2-target-domain",
+        "description": "target range is singleton {F}",
+        "from": "(^91015 ^91009 {^91005 ^91006})",
+        "to": "(^91015 ^91009 {^91005})",
+        "must_contain": [
+          "target",
+          "F",
+          "singleton"
+        ],
+        "must_not_claim": [
+          "target range is {F,T}"
+        ]
+      }
+    ],
+    "case-02B": [
+      {
+        "id": "D-M1-table",
+        "description": "the 1+1 table row returns 1 rather than 0",
+        "from": "(^92006 #1 #1 #0)",
+        "to": "(^92006 #1 #1 #1)",
+        "must_contain": [
+          "1+1",
+          "1"
+        ],
+        "must_not_claim": [
+          "1+1=0"
+        ]
+      },
+      {
+        "id": "D-M2-rhs-domain",
+        "description": "rhs range is singleton {0}",
+        "from": "(^92014 ^92008 {#0 #1})",
+        "to": "(^92014 ^92008 {#0})",
+        "must_contain": [
+          "rhs",
+          "0",
+          "singleton"
+        ],
+        "must_not_claim": [
+          "rhs range is {0,1}"
+        ]
+      }
+    ],
+    "case-03A": [
+      {
+        "id": "E-M1-rhs",
+        "description": "equation right side is 1 rather than 0",
+        "from": "(^93009 ^93006 (^93002 ?1)))\\n      #0)",
+        "to": "(^93009 ^93006 (^93002 ?1)))\\n      #1)",
+        "must_contain": [
+          "= 1"
+        ],
+        "must_not_claim": [
+          "= 0"
+        ]
+      },
+      {
+        "id": "E-M2-derivative",
+        "description": "a(t)=D(q,t) rather than D(v,t)",
+        "from": "(^93007 ^93003 ?1)",
+        "to": "(^93007 ^93002 ?1)",
+        "must_contain": [
+          "a",
+          "derivative",
+          "q"
+        ],
+        "must_not_claim": [
+          "a(t)=time_derivative(v",
+          "a = D(v"
+        ]
+      }
+    ],
+    "case-03B": [
+      {
+        "id": "F-M1-pdot-sign",
+        "description": "pdot=+kq rather than -kq",
+        "from": "(^94007\\n        (^94007 #-1 ^94006)\\n        (^94002 ?1))",
+        "to": "(^94007 ^94006 (^94002 ?1))",
+        "must_contain": [
+          "derivative",
+          "p",
+          "k",
+          "q",
+          "positive"
+        ],
+        "must_not_claim": [
+          "-kq",
+          "negative k"
+        ]
+      },
+      {
+        "id": "F-M2-qdot-source",
+        "description": "qdot=q/m rather than p/m",
+        "from": "(^94010 (^94003 ?1) ^94005)",
+        "to": "(^94010 (^94002 ?1) ^94005)",
+        "must_contain": [
+          "derivative",
+          "q",
+          "q",
+          "m"
+        ],
+        "must_not_claim": [
+          "qdot=p/m",
+          "derivative(q)=p/m"
+        ]
+      }
+    ]
+  }
+}
