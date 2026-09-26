@@ -35,7 +35,8 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Historical Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
 - [Older Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
 - [Discovery Protocols 0.1–0.7 Qualification Review — 2026-09-26](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
-- [Current Integrated Semantic Stack with DP 0.7 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
+- [Current Integrated Semantic Stack with Core 0.19 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
+- [Historical Integrated Semantic Stack with DP 0.7 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
 
 Core remains distinct from separately versioned qualified extensions.
 
@@ -921,6 +922,7 @@ See:
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
 | **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
+| **Experiment 031** | QUALIFIES; 32/32 full-stack cases PASS; all guards/module assessments pass | Direct integration qualification of the exact current Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack. |
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
@@ -1102,10 +1104,12 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision qualified by the Experiment 027 predecessor plus the focused DP 0.7 successor evidence. Core 0.19 is independently qualified as current Core authority; it is not silently added to that revision-scoped integration result.
+The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack directly qualified by Experiment 031: 32/32 cases PASS, zero mismatches, all guards true, all module assessments SUPPORTED, formal `QUALIFIES`.
 
-- [Experiment 028 Final Qualification Review](experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md)
-- [Current Integrated Stack with DP 0.7](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
+- [Experiment 031 Final Qualification Review](experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md)
+- [Current Integrated Stack with Core 0.19](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
+- [Historical Experiment 028 Final Qualification Review](experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md)
+- [Historical Integrated Stack with DP 0.7](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
 - [Experiment 027 Historical Predecessor Review](experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md)
 - [Historical Current Stack with DTS](qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md)
 
@@ -1263,10 +1267,9 @@ DTS 0.1:
     independent promotion verifier: SUPPORT_PROMOTION
 
 Latest fully integration-qualified stack revision:
-    Core 0.17 + Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1
-    QUALIFIED by Experiment 027 predecessor + DP 0.7 successor evidence
-
-Current Core module authority additionally includes qualified Core 0.19; full-stack integration including Core 0.19 is a separate revision-scoped claim.
+    Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1
+    DIRECTLY QUALIFIED by Experiment 031
+    32/32 PASS; zero mismatches; all guards true; all module assessments SUPPORTED
 
 Historical pre-DTS integrated stack:
     QUALIFIED by Experiment 019
