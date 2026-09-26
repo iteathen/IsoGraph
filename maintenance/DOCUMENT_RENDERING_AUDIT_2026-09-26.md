@@ -110,7 +110,7 @@ The repository `Verify` workflow now executes:
 
 `node tools/audit-doc-rendering.mjs --enforce-mutable`
 
-Any future unsupported TeX delimiter, raw TeX command outside supported math, Unicode replacement/noncharacter, unexpected BOM, probable mojibake, or control-character finding in mutable documentation causes Verify to fail.
+Any future unsupported TeX delimiter, raw TeX command outside supported math, Unicode replacement/noncharacter, unexpected BOM, probable mojibake, or control-character finding in mutable documentation causes Verify to fail. Fenced code blocks and inline backtick code spans are excluded from TeX-rendering checks because literal markup examples are intentional there.
 
 Protected historical/versioned artifacts are reported but do not fail the mutable-documentation gate.
 
