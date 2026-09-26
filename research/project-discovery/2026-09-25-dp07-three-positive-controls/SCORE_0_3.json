@@ -1,0 +1,110 @@
+{
+  "campaign": "2026-09-25-dp07-three-positive-controls",
+  "revision": "0.3",
+  "run_id": 36224030592,
+  "experiment_sha": "1708d6f309d4d823229d18d1cba2516da5af278e",
+  "evidence_commit": "b5dd2f1a0b842d1dd2b05b67aa097588e09d794a",
+  "translation_promotion_commit": "f13aca1420327d7c1dc9a95ff78df44ffd820170",
+  "packet_sha256": "db1b45cc57b2f19af12f07e3b1f307b2a5c7344eb2453b79c09052134b351c5d",
+  "report_sha256": "0bba35f0f47d1af684fca915522f0faf6458ceec59cf041c7ff81c103fa2fa81",
+  "discovery_model": "gemini-3-flash-preview",
+  "discovery_isolation": "ORACLE_BLIND_ESR_QUALIFIED_AUTHORITY_COMPLETE_PACKET",
+  "cases": [
+    {
+      "case_id": "case-01",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "PARTIAL_WITNESS_RECOVERED",
+      "required_obligations": {
+        "binary_local_state_bijection": "PASS",
+        "neighbor_interaction_transport": "PASS",
+        "one_body_field_count_transport": "PASS",
+        "state_independent_constant": "PASS_ISOLATED_SYMBOLICALLY",
+        "normalized_ensemble_transport": "PARTIAL_MISSING_EXPLICIT_BETA_TRANSPORT"
+      },
+      "accepted_findings": [
+        "Recovered the exact affine value map s=2n-1 and n=(s+1)/2.",
+        "Recovered the degree-2 incidence consequence needed for the one-body coefficient.",
+        "Recovered epsilon=-4J and mu=2h-4J.",
+        "Preserved a configuration-independent energy-offset residual and invoked the included normalization authority."
+      ],
+      "defects": [
+        "The exact mapping never explicitly maps the A-side inverse-scale parameter beta to the B-side beta.",
+        "The blind prompt explicitly forbids treating matching signature glosses as proof of direct cross-system identity.",
+        "Without an explicit beta transport, E_A=E_B+C is insufficient by itself to establish w_A=K*w_B and normalized probability equality across the two systems.",
+        "The constant residual is isolated, which satisfies the frozen scoring contract; its closed-form value is not the blocker."
+      ],
+      "exact_gate_judgment": "FAIL_INCOMPLETE_LOAD_BEARING_PARAMETER_CLOSURE"
+    },
+    {
+      "case_id": "case-02",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "PARTIAL_WITNESS_RECOVERED",
+      "required_obligations": {
+        "boolean_gf2_value_bijection": "PASS",
+        "xor_to_gf2_addition": "PASS",
+        "target_to_rhs": "PASS",
+        "selected_variable_to_nonzero_coefficient_support": "PARTIAL_NOT_EXPLICITLY_MAPPED",
+        "constraint_to_linear_equation": "PARTIAL_SELECTED_MEMBER_FAMILY_CLOSURE_OMITTED",
+        "conjunction_to_simultaneous_satisfaction": "PASS",
+        "satisfying_assignment_bijection": "PARTIAL_DEPENDS_ON_OMITTED_SELECTED_MEMBER_MAPPING"
+      },
+      "accepted_findings": [
+        "Recovered F<->0 and T<->1.",
+        "Recovered XOR<->GF(2) addition.",
+        "Recovered target/right-hand-side correspondence.",
+        "Correctly identified universal satisfaction as the outer all-constraint/all-row condition."
+      ],
+      "defects": [
+        "The report never explicitly maps selected_variables to selected_nonzero_variables or otherwise discharges the coefficient-1/selected-member obligation.",
+        "Transformation Semantic Authority section 9 explicitly states that selected-member families remain a separate represented obligation that must also be mapped.",
+        "The A->B and B->A reconstruction summaries therefore do not close the entire per-constraint/row support cone."
+      ],
+      "exact_gate_judgment": "FAIL_INCOMPLETE_SELECTED_MEMBER_CLOSURE"
+    },
+    {
+      "case_id": "case-03",
+      "reasoner_disposition": "EXACT_WITNESS",
+      "bookkeeping_result": "KNOWN_POSITIVE_WITNESS_RECOVERED",
+      "required_obligations": {
+        "shared_q": "PASS",
+        "momentum_velocity_bridge": "PASS",
+        "qdot_from_p_over_m": "PASS",
+        "hamilton_to_newton_second_order": "PASS",
+        "newton_to_hamilton_first_order": "PASS",
+        "no_extra_physical_degree_claim": "PASS_BY_DERIVED_P_EQUALS_M_V_BRIDGE"
+      },
+      "accepted_findings": [
+        "Recovered p=m*v=m*qdot.",
+        "Recovered pdot=m*a=m*qddot and pdot=-kq.",
+        "Reconstructed m*qddot+kq=0 from Hamilton form.",
+        "Reconstructed qdot=p/m and pdot=-kq from Newton form after introducing p=m*qdot.",
+        "The p=m*v bridge accounts for the phase-space momentum coordinate without inventing an extra physical degree of freedom."
+      ],
+      "rejected_non_load_bearing_finding": [
+        "The statement that D(H,t)=0 follows from the represented equations is mathematically familiar but is not licensed by the pinned derivative authority, which does not include the product/chain rules needed to differentiate H. This extra claim is not used to score the required positive witness."
+      ],
+      "exact_gate_judgment": "PASS_REQUIRED_WITNESS"
+    }
+  ],
+  "cross_case_findings": {
+    "reasoner_claimed_exact_cases": 3,
+    "accepted_exact_cases": 1,
+    "partial_cases": 2,
+    "locally_falsified_claimed_mappings": 0,
+    "oracle_contamination_detected": false,
+    "domain_name_inference_detected": true,
+    "reasoner_used_raw_ids_as_evidence": false,
+    "all_six_source_renderings_were_esr_qualified": true,
+    "transformation_semantic_authority_was_pinned": true
+  },
+  "dp07_development_disposition": {
+    "qualification": "NOT_ESTABLISHED",
+    "current_run_result": "FAILS_QUALIFICATION_GATE",
+    "strongest_positive": "The authority-complete run recovered the core known-positive transformation in all three controls and recovered the full required case-03 witness.",
+    "strongest_failure": "The reasoner still promoted incomplete support audits to EXACT_WITNESS by omitting load-bearing parameter/member mappings in cases 01 and 02.",
+    "protocol_or_execution_judgment": "DP 0.7 section 13.1 and the blind prompt already require exhaustive load-bearing descent. The remaining defect is execution/harness enforcement rather than an identified normative protocol gap.",
+    "next_correction": "Add a blind mechanical completeness gate that requires explicit coverage of every promoted top-level native assertion/role needed by an EXACT_WITNESS before the disposition can be accepted.",
+    "provider_note": "This run used the preferred callable full reasoner gemini-3-flash-preview, so the earlier flash-lite execution-strength confound is materially reduced."
+  },
+  "predecessor_run_status": "RUN_36222604050_SCORED_IN_SCORE_0_2; RUN_36223276471_DIAGNOSTIC_ONLY"
+}
