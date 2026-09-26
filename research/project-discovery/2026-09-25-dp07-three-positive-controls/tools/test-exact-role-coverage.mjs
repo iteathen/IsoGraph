@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 
 let validateExactRoleCoverage, enforceExactRoleCoverage;
 try {
@@ -101,3 +102,22 @@ assert.throws(
 );
 
 console.log('PASS: aggregate exact-witness role coverage enforcement');
+
+
+const ROOT='research/project-discovery/2026-09-25-dp07-three-positive-controls';
+const rejectedRaw=JSON.parse(fs.readFileSync(`${ROOT}/evidence/run-36225973244/COLD_REPORT_RAW.txt`,'utf8'));
+const actualSignatures={};
+for(const caseId of ['case-01','case-02','case-03']){
+  actualSignatures[caseId]={
+    A:JSON.parse(fs.readFileSync(`${ROOT}/blind-v2/${caseId}/A.signature.json`,'utf8')),
+    B:JSON.parse(fs.readFileSync(`${ROOT}/blind-v2/${caseId}/B.signature.json`,'utf8')),
+    nativeA:fs.readFileSync(`${ROOT}/blind-v2/${caseId}/A.isg`,'utf8'),
+    nativeB:fs.readFileSync(`${ROOT}/blind-v2/${caseId}/B.isg`,'utf8')
+  };
+}
+assert.doesNotThrow(
+  ()=>enforceExactRoleCoverage({report:rejectedRaw,signaturesByCase:actualSignatures}),
+  'corrected gate must accept the mechanically complete run-36225973244 role coverage'
+);
+console.log('PASS: rejected run role coverage regression fixture');
+
