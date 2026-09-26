@@ -1,0 +1,334 @@
+{
+  "experiment": "031",
+  "required_case_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F21",
+    "F22",
+    "F23",
+    "F24",
+    "F25",
+    "F26",
+    "F27",
+    "F28",
+    "F29",
+    "F30",
+    "F31",
+    "F32"
+  ],
+  "categories": {
+    "core_0_19": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08"
+    ],
+    "qu_0_1": [
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F25",
+      "F31",
+      "F32"
+    ],
+    "nei_0_4": [
+      "F14",
+      "F15",
+      "F16",
+      "F17",
+      "F18",
+      "F29",
+      "F30",
+      "F31",
+      "F32"
+    ],
+    "dp_0_1_to_0_7": [
+      "F01",
+      "F03",
+      "F23",
+      "F24",
+      "F25",
+      "F30",
+      "F31"
+    ],
+    "dts_0_1": [
+      "F26",
+      "F27",
+      "F28",
+      "F29",
+      "F30",
+      "F32"
+    ]
+  },
+  "cases": {
+    "F01": {
+      "answers": {
+        "direct_conflict": false,
+        "preserve_both_explicit_support": true,
+        "repair_required": false
+      }
+    },
+    "F02": {
+      "answers": {
+        "exact_implicit_support": true,
+        "provenance_required": true,
+        "becomes_source_explicit": false
+      }
+    },
+    "F03": {
+      "answers": {
+        "implicit_support_admissible": false,
+        "familiar_knowledge_can_fill_gap": false,
+        "discovery_hypothesis_may_remain": true
+      }
+    },
+    "F04": {
+      "answers": {
+        "both_support_paths_retained": true,
+        "truth_amplified_by_count": false,
+        "provenance_paths_distinct": true
+      }
+    },
+    "F05": {
+      "answers": {
+        "b_supported": true,
+        "c_supported": true,
+        "cycle_invalidates_all": false
+      }
+    },
+    "F06": {
+      "answers": {
+        "b_supported": false,
+        "c_supported": false,
+        "self_support_manufactures_validity": false
+      }
+    },
+    "F07": {
+      "answers": {
+        "exact_support": true,
+        "depth_weakens_exactness": false,
+        "lineage_must_remain": true
+      }
+    },
+    "F08": {
+      "answers": {
+        "procedure_may_stop": true,
+        "universal_closure_proved": false,
+        "undiscovered_derivation_impossible": false
+      }
+    },
+    "F09": {
+      "answers": {
+        "exact_implicit_support": true,
+        "qu_must_be_erased": false,
+        "qu_provenance_required": true
+      }
+    },
+    "F10": {
+      "answers": {
+        "exact_support": false,
+        "qu_claim_status": "UNRESOLVED",
+        "target_may_restrict_qu": false
+      }
+    },
+    "F11": {
+      "answers": {
+        "exact_support_at_q2": true,
+        "rewrite_q1_history": false,
+        "refinement_valid": true
+      }
+    },
+    "F12": {
+      "answers": {
+        "assertion_qualified": false,
+        "completeness_status": "INCOMPLETE_UNQUALIFIED",
+        "missing_unknown_counts_false": false
+      }
+    },
+    "F13": {
+      "answers": {
+        "probabilistic_support_admissible": true,
+        "exact_support": false,
+        "threshold_yields_exact": false
+      }
+    },
+    "F14": {
+      "answers": {
+        "treat_as_two_independent": false,
+        "probabilistic_support_may_remain": true,
+        "exact_nei_status_follows": false
+      }
+    },
+    "F15": {
+      "answers": {
+        "nei_status": "SAME",
+        "implicit_exact_support_can_contribute": true,
+        "si_equality_required": false
+      }
+    },
+    "F16": {
+      "answers": {
+        "ti_may_hold": true,
+        "nei_same_follows": false,
+        "nei_status": "INCOMPLETE"
+      }
+    },
+    "F17": {
+      "answers": {
+        "nei_distinct": false,
+        "label_evidence_sufficient": false,
+        "base_structures_invalid": false
+      }
+    },
+    "F18": {
+      "answers": {
+        "nei_status": "INCOMPLETE",
+        "semantic_unknown": false,
+        "opaque_unknown_substitute": false
+      }
+    },
+    "F19": {
+      "answers": {
+        "exact_rendering": true,
+        "downstream_source_faithful_use_allowed": true,
+        "sidecar_needed": false
+      }
+    },
+    "F20": {
+      "answers": {
+        "exact_rendering": false,
+        "sidecar_can_complete": false,
+        "downstream_exact_use_allowed": false
+      }
+    },
+    "F21": {
+      "answers": {
+        "exact_rendering": false,
+        "familiarity_repairs": false,
+        "transformation_witness_required": true
+      }
+    },
+    "F22": {
+      "answers": {
+        "reconstruct_mutation": true,
+        "repair_to_familiar": false,
+        "exactness_requires_mutated_semantics": true
+      }
+    },
+    "F23": {
+      "answers": {
+        "derived_view_valid": true,
+        "primitive_descent_required": true,
+        "discovery_priority_is_proof": false
+      }
+    },
+    "F24": {
+      "answers": {
+        "recursion_follows": false,
+        "termination_follows": false,
+        "cycle_view_may_be_candidate": true
+      }
+    },
+    "F25": {
+      "answers": {
+        "qu_required": true,
+        "may_project_away": false,
+        "discovery_lead_valid": true
+      }
+    },
+    "F26": {
+      "answers": {
+        "transition_valid": true,
+        "artificial_qu_required": false,
+        "mechanism_required": false
+      }
+    },
+    "F27": {
+      "answers": {
+        "invariant_exact_support": true,
+        "transition_valid": true,
+        "mechanism_annotation_required": false
+      }
+    },
+    "F28": {
+      "answers": {
+        "ti_status": "REJECTED",
+        "same_endpoints_sufficient": false,
+        "partial_common_core_may_remain": true
+      }
+    },
+    "F29": {
+      "answers": {
+        "ti_status": "TI",
+        "mechanism_identity_follows": false,
+        "mechanism_residual_preserved": true,
+        "nei_same_follows": false
+      }
+    },
+    "F30": {
+      "answers": {
+        "b_exact_rendering": false,
+        "full_ti_qualified": false,
+        "nei_same_follows": false,
+        "dp_lead_may_remain": true
+      }
+    },
+    "F31": {
+      "answers": {
+        "qu_restriction_admissible": false,
+        "nei_same_qualified": false,
+        "evidence_class": "CIRCULAR_EVIDENCE"
+      }
+    },
+    "F32": {
+      "answers": {
+        "q2_ti_status": "TI",
+        "implicit_ti_support": true,
+        "rewrite_q1_history": false,
+        "nei_same_follows": false
+      }
+    }
+  },
+  "required_module_assessment": {
+    "core_0_19_integration": "SUPPORTED",
+    "qu_0_1_integration": "SUPPORTED",
+    "nei_0_4_integration": "SUPPORTED",
+    "dp_0_1_to_0_7_integration": "SUPPORTED",
+    "dts_0_1_integration": "SUPPORTED",
+    "full_stack_core_0_19": "SUPPORTED"
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "did_not_use_prior_experiment_outputs": true,
+    "did_not_import_familiar_unrepresented_semantics": true,
+    "did_not_treat_missing_qu_as_false_or_unknown": true,
+    "did_not_infer_nei_from_structural_correspondence": true,
+    "did_not_use_discovery_priority_as_proof": true,
+    "did_not_rewrite_historical_evidence": true
+  }
+}
