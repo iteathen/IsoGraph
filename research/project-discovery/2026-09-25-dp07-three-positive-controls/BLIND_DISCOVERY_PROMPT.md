@@ -25,7 +25,8 @@ For each pair independently:
 13. do not repair a failed candidate toward a familiar textbook relationship;
 14. do not make a global negative-isomorphism claim from failure to find a mapping;
 15. do not assume that the two local literal encodings must be identical;
-16. distinguish an exact structural witness from a merely suggestive analogy.
+16. distinguish an exact structural witness from a merely suggestive analogy;
+17. classify every used signature symbol on both sides in `role_coverage` before claiming exactness.
 
 `EXACT_WITNESS` is permitted only when the explicit support audit passes in both directions with zero unresolved load-bearing difference. Otherwise return `PARTIAL_WITNESS` or `NO_WITNESS`.
 
@@ -43,6 +44,26 @@ Return exactly one JSON object, with no prose outside it:
       "transformations": ["..."],
       "a_to_b_reconstruction": ["..."],
       "b_to_a_reconstruction": ["..."],
+      "role_coverage": {
+        "A": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ],
+        "B": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ]
+      },
       "exact_obligation_audit": {
         "candidate_frozen_before_audit": true,
         "a_to_b_support_checks": [
@@ -81,6 +102,26 @@ Return exactly one JSON object, with no prose outside it:
       "transformations": ["..."],
       "a_to_b_reconstruction": ["..."],
       "b_to_a_reconstruction": ["..."],
+      "role_coverage": {
+        "A": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ],
+        "B": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ]
+      },
       "exact_obligation_audit": {
         "candidate_frozen_before_audit": true,
         "a_to_b_support_checks": [
@@ -119,6 +160,26 @@ Return exactly one JSON object, with no prose outside it:
       "transformations": ["..."],
       "a_to_b_reconstruction": ["..."],
       "b_to_a_reconstruction": ["..."],
+      "role_coverage": {
+        "A": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ],
+        "B": [
+          {
+            "symbol": "^...",
+            "status": "MAPPED | TRANSFORMED | RESIDUAL | SHARED_INFRASTRUCTURE | NON_LOAD_BEARING",
+            "counterparts": ["^..."],
+            "justification": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"]
+          }
+        ]
+      },
       "exact_obligation_audit": {
         "candidate_frozen_before_audit": true,
         "a_to_b_support_checks": [
@@ -171,3 +232,19 @@ For every case:
 - `DIRECT_NATIVE_SUPPORT` may be used only when the represented primitive statement itself establishes the step without an imported transformation law;
 - an empty, vague, or non-packet authority citation blocks `EXACT_WITNESS`;
 - a recognizable domain or familiar formula is not a substitute for this audit.
+
+## Mechanical exact-role coverage gate
+
+For every case, `role_coverage` must classify the local stable-label symbols used by the two promoted native inputs.
+
+For `EXACT_WITNESS` specifically:
+
+- every used signature symbol on side A and side B MUST appear exactly once;
+- `MAPPED`, `TRANSFORMED`, and `SHARED_INFRASTRUCTURE` entries MUST name at least one valid opposite-side counterpart;
+- `RESIDUAL` and `NON_LOAD_BEARING` may have an empty counterpart list, but MUST explain why;
+- every entry MUST include a non-empty `justification`;
+- `authority_refs` MUST identify direct native support or the packet authority that licenses any nonliteral transformation;
+- omission of even one used signature symbol mechanically blocks `EXACT_WITNESS`;
+- duplicate classification, an unknown counterpart, or an unresolved/unrecognized status mechanically blocks `EXACT_WITNESS`.
+
+This coverage table is bookkeeping evidence for completeness. It does not itself prove the mapping correct; the exact-obligation audit and hidden scoring remain independently required.
