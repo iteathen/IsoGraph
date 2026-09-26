@@ -3,7 +3,7 @@
 **Status:** unqualified normative successor candidate  
 **Short name:** DP 0.7  
 **Base dependencies:** DP 0.1, DP 0.2, DP 0.3, DP 0.4, DP 0.5, and DP 0.6  
-**Core dependency:** current qualified Core 0.17 + Core 0.18 observation-first clarification  
+**Core dependency:** current qualified Core 0.17 + Core 0.18 observation-first clarification; when source formulas are newly rendered for a DP 0.7 campaign, this branch additionally requires Core 0.19 exact source-rendering section 18 before the rendering may serve as source-faithful discovery evidence  
 **Identity dependency:** qualified NEI 0.4 only when a discovery conclusion actually relies on natural/domain identity or distinctness  
 **QU dependency:** qualified QU 0.1 whenever unresolved structure is load-bearing for a derived view or comparison  
 **DTS dependency:** qualified DTS 0.1 only when a discovery conclusion depends on detailed transition anatomy  
@@ -84,7 +84,25 @@ These barriers are normative.
 
 # 1. Primitive-first discovery
 
-IsoGraph discovery should move upward in abstraction only after the relevant source structure has been represented faithfully enough at the primitive level.
+IsoGraph discovery should move upward in abstraction only after the relevant source structure has been represented exactly at the primitive/qualified-leaf level required by the applicable rendering claim.
+
+For newly authored source-formula renderings under this branch:
+
+```text
+primitive-first
+    presupposes
+exact source-to-native rendering qualification
+```
+
+A role graph, dependency skeleton, heuristic decomposition, lossy projection, or sidecar-completed formula may be explored as an explicitly partial artifact, but it MUST NOT serve as source-faithful evidence for a DP structural/isomorphism claim.
+
+DP does not repair or complete an inadequate source rendering.
+
+```text
+rendering correctness
+    precedes
+discovery correctness
+```
 
 Preferred direction:
 
