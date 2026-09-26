@@ -18,13 +18,14 @@ For each pair independently:
 6. descend every load-bearing part of that candidate back to primitive/qualified-leaf support on both sides;
 7. reconstruct B from A under the candidate transformation and reconstruct A from B under the inverse transformation;
 8. explicitly check domains/ranges, scope, binding, operator roles, material ordering, signs, coefficients/values, and residual structure;
-9. attempt at least one local falsification of the candidate using a represented distinction that would expose a merely familiar but false mapping;
-10. preserve residuals, constants, auxiliary coordinates, projections, and scope rather than declaring them absent;
-11. use QU only when unresolved structure is actually load-bearing;
-12. do not repair a failed candidate toward a familiar textbook relationship;
-13. do not make a global negative-isomorphism claim from failure to find a mapping;
-14. do not assume that the two local literal encodings must be identical;
-15. distinguish an exact structural witness from a merely suggestive analogy.
+9. cite the packet authority that licenses every nonliteral transformation step;
+10. attempt at least one local falsification of the candidate using a represented distinction that would expose a merely familiar but false mapping;
+11. preserve residuals, constants, auxiliary coordinates, projections, and scope rather than declaring them absent;
+12. use QU only when unresolved structure is actually load-bearing;
+13. do not repair a failed candidate toward a familiar textbook relationship;
+14. do not make a global negative-isomorphism claim from failure to find a mapping;
+15. do not assume that the two local literal encodings must be identical;
+16. distinguish an exact structural witness from a merely suggestive analogy.
 
 `EXACT_WITNESS` is permitted only when the explicit support audit passes in both directions with zero unresolved load-bearing difference. Otherwise return `PARTIAL_WITNESS` or `NO_WITNESS`.
 
@@ -49,6 +50,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -58,6 +60,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -85,6 +88,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -94,6 +98,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -121,6 +126,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -130,6 +136,7 @@ Return exactly one JSON object, with no prose outside it:
             "obligation": "...",
             "primitive_support": ["..."],
             "transformation": "...",
+            "authority_refs": ["packet authority path + section, or DIRECT_NATIVE_SUPPORT"],
             "reconstructed_target": "...",
             "result": "PASS | FAIL | UNKNOWN"
           }
@@ -160,4 +167,7 @@ For every case:
 - every listed A->B and B->A support check must be `PASS`;
 - `unaccounted_load_bearing_differences` and `unresolved_obligations` must both be empty;
 - a failed or unknown load-bearing check forbids `EXACT_WITNESS`;
+- every nonliteral algebraic, fold, graph, derivative, or other theory transformation marked `PASS` must cite an included packet authority path and section in `authority_refs`;
+- `DIRECT_NATIVE_SUPPORT` may be used only when the represented primitive statement itself establishes the step without an imported transformation law;
+- an empty, vague, or non-packet authority citation blocks `EXACT_WITNESS`;
 - a recognizable domain or familiar formula is not a substitute for this audit.
