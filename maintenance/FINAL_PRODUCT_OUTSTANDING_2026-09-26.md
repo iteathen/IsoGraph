@@ -8,17 +8,17 @@
 
 Core 0.19 qualification and promotion are complete at the repository level. The accumulated family reference was rebuilt against the pinned snapshot above and was already visually inspected page-by-page before this incident.
 
-The preserved current build is:
+The preserved current build is now maintained as an editable working source:
 
-- title: `IsoGraph_Family_Reference_Joshua_Oshiro_2026(2).docx`;
-- Library path: `/IsoGraph/IsoGraph_Family_Reference_Joshua_Oshiro_2026(2).docx`;
+- title: `IsoGraph_Family_Reference_WORKING_SOURCE.docx`;
+- Library path: `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx`;
 - stable Library ID: `libfile_ed48dd1e9e308191bfb1233de5bed7f7`;
-- backing file ID: `file_00000000f8c881fdad2a0af44717415b`;
+- current backing file ID after verified path-based overwrite: `file_0000000001c081fda372578a653eca64`;
 - size: 58,122 bytes;
 - page count: 19;
 - SHA-256 of the exact preserved DOCX bytes: `0b6353e5dbca7034e36af7d415b1ed09924f1ef3aa770b3f896218a37b5f1a49`.
 
-This execution re-read page 1 and page 19 from that stable Library record. Page 1 identifies:
+This execution moved the previously verified duplicate-safe copy into the dedicated editable working-source location, renamed it so it cannot be mistaken for the canonical final product, successfully exercised path-based overwrite there, and re-read page 1 and page 19 from the same stable Library record. Page 1 identifies:
 
 `main@f813b278dbefbd07e1ec2424926c2393368532a4`
 
@@ -54,7 +54,7 @@ Message:
 
 This is an infrastructure/storage-projection restriction. It is not a semantic, qualification, rendering, or document-content failure.
 
-No additional `(3)`, `(4)`, “final”, “latest”, or “revised” Library copies are to be created.
+No additional `(3)`, `(4)`, “final”, “latest”, or “revised” Library copies are to be created. Future DOCX maintenance should use `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx` as the mutable working source while the Project-attached canonical record remains the publication target.
 
 ## Required closure
 
@@ -62,11 +62,11 @@ When a product surface or API capable of mutating the Project-attached canonical
 
 1. re-fetch live `main`;
 2. confirm whether the accumulated reference still needs the exact 19-page build recorded above or has become stale because authority changed again;
-3. if the recorded build is still current, replace the canonical stable Library record in place using the exact preserved 58,122-byte DOCX;
+3. if the recorded build is still current, use the exact working-source document at `/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx` (58,122 bytes for this build) to replace the canonical stable Library record in place;
 4. re-read the canonical stable ID, not merely the filename;
 5. verify page 1 pins the correct live snapshot and declares the current family;
 6. verify the canonical document has 19 pages for this build and that the final page preserves the pinned-snapshot/integration-boundary statement;
-7. remove the temporary `(2)` copy only if permissions permit and doing so does not alter Project attachment membership;
+7. keep the dedicated working-source record for future maintenance; do not treat it as a second canonical final product;
 8. update or retire this outstanding record only after the canonical stable ID itself has been verified current.
 
 The owner requirement remains unchanged: the accumulated family reference is a final product and must be kept updated.
