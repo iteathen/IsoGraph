@@ -4,6 +4,8 @@ import {spawnSync} from 'node:child_process';
 
 const ROOT=process.cwd();
 const OUT=path.join(ROOT,'out','exp029');
+const runnerSource=fs.readFileSync(path.join(ROOT,'experiments','029','tools','run-exp029-cold.mjs'),'utf8');
+if(!/maxOutputTokens\s*:\s*65536/.test(runnerSource)) throw new Error('Experiment 029 requires 65536 output budget');
 fs.rmSync(OUT,{recursive:true,force:true});
 
 const env={...process.env,GITHUB_SHA:'HEAD',ISOGRAPH_COLD_DRY_RUN:'1'};
