@@ -1,0 +1,139 @@
+{
+  "case_id": "case-01B",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "B1",
+        "pass": true,
+        "reason": "Range {0,1} correctly identified."
+      },
+      {
+        "id": "B2",
+        "pass": true,
+        "reason": "Indexed by configuration and site family."
+      },
+      {
+        "id": "B3",
+        "pass": true,
+        "reason": "Undirected and regular degree 2 identified."
+      },
+      {
+        "id": "B4",
+        "pass": true,
+        "reason": "Real parameters and positive beta identified."
+      },
+      {
+        "id": "B5",
+        "pass": true,
+        "reason": "Pair contribution fold over edges with identity 0."
+      },
+      {
+        "id": "B6",
+        "pass": true,
+        "reason": "One-body contribution fold over sites with identity 0."
+      },
+      {
+        "id": "B7",
+        "pass": true,
+        "reason": "Grand energy sum correctly reconstructed."
+      },
+      {
+        "id": "B8",
+        "pass": true,
+        "reason": "Weight exp(-beta*G) correctly reconstructed."
+      },
+      {
+        "id": "B9",
+        "pass": true,
+        "reason": "Partition function fold over configurations with identity 0."
+      },
+      {
+        "id": "B10",
+        "pass": true,
+        "reason": "Probability ratio correctly reconstructed."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "B1",
+        "pass": true,
+        "reason": "Range {0,1} correctly identified."
+      },
+      {
+        "id": "B2",
+        "pass": true,
+        "reason": "Indexed by configuration and site family."
+      },
+      {
+        "id": "B3",
+        "pass": true,
+        "reason": "Undirected and regular degree 2 identified."
+      },
+      {
+        "id": "B4",
+        "pass": true,
+        "reason": "Real parameters and positive beta identified."
+      },
+      {
+        "id": "B5",
+        "pass": true,
+        "reason": "Pair contribution fold over edges with identity 0."
+      },
+      {
+        "id": "B6",
+        "pass": true,
+        "reason": "One-body contribution fold over sites with identity 0."
+      },
+      {
+        "id": "B7",
+        "pass": true,
+        "reason": "Grand energy sum correctly reconstructed."
+      },
+      {
+        "id": "B8",
+        "pass": true,
+        "reason": "Weight exp(-beta*G) correctly reconstructed."
+      },
+      {
+        "id": "B9",
+        "pass": true,
+        "reason": "Partition function fold over configurations with identity 0."
+      },
+      {
+        "id": "B10",
+        "pass": true,
+        "reason": "Probability ratio correctly reconstructed."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "B-M1-domain",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the domain change to {0,2}.",
+      "reason_B": "Decoder B correctly identified the domain change to {0,2}."
+    },
+    {
+      "mutation_id": "B-M2-weight-sign",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly identified the sign change in the weight exponent.",
+      "reason_B": "Decoder B correctly identified the sign change in the weight exponent."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}

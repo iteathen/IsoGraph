@@ -1,0 +1,76 @@
+{
+  "case_id": "case-01B",
+  "base": {
+    "reconstructed_statements": [
+      "model(site_family, edge_family, configuration_family)",
+      "range_or_domain(local_value_at, {0, 1})",
+      "indexed_by(local_value_at, configuration_family, site_family)",
+      "regular_degree(site_family, edge_family, 2)",
+      "undirected(edge_family)",
+      "edge_endpoint_structure(edge_family, edge_left, edge_right, site_family)",
+      "range_or_domain(epsilon, real_domain)",
+      "range_or_domain(mu, real_domain)",
+      "range_or_domain(beta, real_domain)",
+      "positive(beta)"
+    ],
+    "formula_trees": [
+      "forall(config, equal(grand_energy(config), real_add(real_multiply(epsilon, finite_fold(real_add, edge_family, lambda(edge, real_multiply(local_value_at(config, edge_left(edge)), local_value_at(config, edge_right(edge)))), 0)), real_negate(real_multiply(mu, finite_fold(real_add, site_family, lambda(site, local_value_at(config, site)), 0))))))",
+      "forall(config, equal(weight(config), real_exp(real_negate(real_multiply(beta, grand_energy(config))))))",
+      "equal(grand_partition, finite_fold(real_add, configuration_family, lambda(config, weight(config)), 0))",
+      "forall(config, equal(probability(config), real_divide(weight(config), grand_partition)))"
+    ],
+    "ambiguities": [],
+    "inferred_not_explicit": [],
+    "signature_issues": []
+  },
+  "variants": [
+    {
+      "variant_id": "variant-1",
+      "reconstructed_statements": [
+        "model(site_family, edge_family, configuration_family)",
+        "range_or_domain(local_value_at, {0, 2})",
+        "indexed_by(local_value_at, configuration_family, site_family)",
+        "regular_degree(site_family, edge_family, 2)",
+        "undirected(edge_family)",
+        "edge_endpoint_structure(edge_family, edge_left, edge_right, site_family)",
+        "range_or_domain(epsilon, real_domain)",
+        "range_or_domain(mu, real_domain)",
+        "range_or_domain(beta, real_domain)",
+        "positive(beta)"
+      ],
+      "formula_trees": [
+        "forall(config, equal(grand_energy(config), real_add(real_multiply(epsilon, finite_fold(real_add, edge_family, lambda(edge, real_multiply(local_value_at(config, edge_left(edge)), local_value_at(config, edge_right(edge)))), 0)), real_negate(real_multiply(mu, finite_fold(real_add, site_family, lambda(site, local_value_at(config, site)), 0))))))",
+        "forall(config, equal(weight(config), real_exp(real_negate(real_multiply(beta, grand_energy(config))))))",
+        "equal(grand_partition, finite_fold(real_add, configuration_family, lambda(config, weight(config)), 0))",
+        "forall(config, equal(probability(config), real_divide(weight(config), grand_partition)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    },
+    {
+      "variant_id": "variant-2",
+      "reconstructed_statements": [
+        "model(site_family, edge_family, configuration_family)",
+        "range_or_domain(local_value_at, {0, 1})",
+        "indexed_by(local_value_at, configuration_family, site_family)",
+        "regular_degree(site_family, edge_family, 2)",
+        "undirected(edge_family)",
+        "edge_endpoint_structure(edge_family, edge_left, edge_right, site_family)",
+        "range_or_domain(epsilon, real_domain)",
+        "range_or_domain(mu, real_domain)",
+        "range_or_domain(beta, real_domain)",
+        "positive(beta)"
+      ],
+      "formula_trees": [
+        "forall(config, equal(grand_energy(config), real_add(real_multiply(epsilon, finite_fold(real_add, edge_family, lambda(edge, real_multiply(local_value_at(config, edge_left(edge)), local_value_at(config, edge_right(edge)))), 0)), real_negate(real_multiply(mu, finite_fold(real_add, site_family, lambda(site, local_value_at(config, site)), 0))))))",
+        "forall(config, equal(weight(config), real_exp(real_multiply(beta, grand_energy(config)))))",
+        "equal(grand_partition, finite_fold(real_add, configuration_family, lambda(config, weight(config)), 0))",
+        "forall(config, equal(probability(config), real_divide(weight(config), grand_partition)))"
+      ],
+      "ambiguities": [],
+      "inferred_not_explicit": [],
+      "signature_issues": []
+    }
+  ]
+}
