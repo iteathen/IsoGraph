@@ -45,7 +45,7 @@ for(const c of manifest.cases){
     all_variables_bound:allVars.every(x=>allBinders.includes(x)),
     signature_gloss_only:sig.formula_bodies_in_signature===false &&
       Object.values(sig.symbols||{}).every(v=>typeof v==='string'),
-    predecessor_linked:typeof sig.predecessor==='string' && sig.predecessor.length>0,
+    predecessor_linked:(typeof sig.predecessor==='string' && sig.predecessor.length>0) || (Array.isArray(sig.predecessors) && sig.predecessors.length>0),
     provenance_linked:c.source_freeze
       ? (typeof sig.source_freeze==='string' && sig.source_freeze.length>0)
       : (Array.isArray(sig.derived_from) && sig.derived_from.length>0),
