@@ -49,7 +49,7 @@ The current qualified Discovery Protocol authority remains **DP 0.1–0.7**. The
 - [DP 0.8 Qualification Plan](qualification/DISCOVERY_PROTOCOLS_0_8_QUALIFICATION_PLAN.md)
 - [Logic Lens for Implicit-Assertion Discovery 0.1](research/discovery/LOGIC_LENS_FOR_IMPLICIT_ASSERTION_DISCOVERY_0_1.md) — non-authoritative reasoning refresher only.
 
-DP 0.8 keeps Core representation separate from objective-scoped support reduction: Core represents semantic structure faithfully; Discovery Protocol may investigate which qualified support is necessary for a declared conclusion and how sufficient alternatives should be valued under an application-supplied profile.
+DP 0.8 keeps Core representation separate from objective-scoped support analysis: Core represents semantic structure faithfully; Discovery Protocol may investigate which represented support is necessary for a declared conclusion and how established sufficient alternatives should be valued under an application-supplied profile.
 
 ## Evidence status
 
