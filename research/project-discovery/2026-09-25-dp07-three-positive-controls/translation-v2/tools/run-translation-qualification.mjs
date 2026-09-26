@@ -17,13 +17,21 @@ async function callGemini(packet,temp=0.05){
   const request={contents:[{role:'user',parts:[{text:packet}]}],generationConfig:{candidateCount:1,maxOutputTokens:20000,temperature:temp,responseMimeType:'application/json',thinkingConfig:{thinkingLevel:'HIGH'}}};
   const url=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
   let status=0,txt='',attempts=0;
-  for(let i=0;i<4;i++){
+  for(let i=0;i<8;i++){
     attempts=i+1;
     const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify(request)});
     status=r.status;txt=await r.text();
     if(r.ok)break;
-    if(status===429)break;
-    if([500,502,503,504].includes(status)&&i<3){await new Promise(x=>setTimeout(x,15000*(i+1)));continue;}
+    if(status===429 && i<7){
+      let retryMs=12000;
+      try{
+        const m=txt.match(/retry in ([0-9.]+)s/i);
+        if(m) retryMs=Math.max(retryMs,Math.ceil(Number(m[1])*1000)+3000);
+      }catch{}
+      await new Promise(x=>setTimeout(x,retryMs));
+      continue;
+    }
+    if([500,502,503,504].includes(status)&&i<7){await new Promise(x=>setTimeout(x,15000*(i+1)));continue;}
     break;
   }
   if(!(status>=200&&status<300))throw new Error('Gemini HTTP '+status+' '+txt.slice(0,500));
@@ -56,7 +64,9 @@ for(const id of CASES){
   const packetHash=hash(packet);
   fs.writeFileSync(`${OUT}/${id}-PACKET.sha256`,packetHash+'\n');
   const A=await callGemini(packet,0.02);
+  await new Promise(x=>setTimeout(x,2500));
   const B=await callGemini(packet,0.18);
+  await new Promise(x=>setTimeout(x,2500));
   fs.writeFileSync(`${OUT}/${id}-DECODER-A.json`,JSON.stringify(A.parsed,null,2)+'\n');
   fs.writeFileSync(`${OUT}/${id}-DECODER-B.json`,JSON.stringify(B.parsed,null,2)+'\n');
   decodeResults[id]={packet_sha256:packetHash,A:A.parsed,B:B.parsed,A_meta:{attempts:A.attempts,usage:A.usage},B_meta:{attempts:B.attempts,usage:B.usage}};
@@ -69,6 +79,7 @@ for(const id of CASES){
   const d=decodeResults[id];
   const packet=`ISOGRAPH TRANSLATION SAMENESS VERIFICATION\nCASE ID: ${id}\n\n===== SOURCE =====\n${source}\n===== OBLIGATIONS =====\n${JSON.stringify(obs,null,2)}\n===== DECODER A =====\n${JSON.stringify(d.A,null,2)}\n===== DECODER B =====\n${JSON.stringify(d.B,null,2)}\n===== VERIFIER PROMPT =====\n${verifierPrompt}`;
   const V=await callGemini(packet,0.0);
+  await new Promise(x=>setTimeout(x,2500));
   fs.writeFileSync(`${OUT}/${id}-VERIFIER.json`,JSON.stringify(V.parsed,null,2)+'\n');
   verifications[id]=V.parsed;
 }
