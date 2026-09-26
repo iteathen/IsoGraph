@@ -6,7 +6,7 @@ IsoGraph is an agent-native structural knowledge representation designed to expo
 
 Before substantive work, read `README.md`, `DESIGN_IDEALS.md`, `STATUS.md`, `MIGRATION.md`, and the semantic authority relevant to the task.
 
-The accumulated family reference is a maintained final product. Read `FINAL_PRODUCT_MAINTENANCE.md` before any promotion/current-authority change. Repository authority changes are not operationally complete until `/IsoGraph/IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx` has been refreshed and visually verified, or the maintenance step is explicitly recorded as outstanding.
+The accumulated family reference is a maintained final product. Read `FINAL_PRODUCT_MAINTENANCE.md` before any promotion/current-authority change. Repository authority changes are not operationally complete until the repository-root `IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx` beside `README.md` has been refreshed and visually verified, or the maintenance step is explicitly recorded as outstanding. The ChatGPT Library copy is a publication mirror and may be separately outstanding if its Project-attached record cannot be replaced.
 
 `DESIGN_IDEALS.md` is explanatory doctrine, not semantic authority. Use it to preserve the intended reasoning posture without letting prose override versioned qualified semantics.
 
