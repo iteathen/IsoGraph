@@ -1,0 +1,85 @@
+{
+  "campaign": "2026-09-25-ising-mwc-dp07",
+  "status": "COMPLETE",
+  "authority_effect": "none",
+  "qualification_effect": "none",
+  "protocol_under_test": {
+    "branch": "research/core-0.19-implicit-assertions",
+    "commit": "c2a62af9cbacbea68f5ca3ab9112d6b966fb0764",
+    "artifact": "extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md",
+    "status": "unqualified_candidate"
+  },
+  "candidates": {
+    "physics": "finite 1D nearest-neighbor periodic Ising chain with external field and Boltzmann weighting",
+    "biochemistry": "n-site concerted Monod-Wyman-Changeux allosteric model with binary occupancy and global binary conformation"
+  },
+  "controls": {
+    "independent_source_freeze": true,
+    "independent_native_namespaces": true,
+    "domain_labels_hidden_from_structural_evidence": true,
+    "posthoc_external_validation_only": true
+  },
+  "established": [
+    {
+      "id": "R1",
+      "result": "exact_local_binary_domain_correspondence",
+      "statement": "Ising {-1,+1} and MWC {0,1} local binary domains are related by x=(s+1)/2 and s=2x-1."
+    },
+    {
+      "id": "R2",
+      "result": "exact_partial_common_statistical_ensemble_core",
+      "statement": "Both contain repeated local binary variables feeding a state score, exponential statistical weight, finite partition normalization, normalized probability, and weighted observables."
+    },
+    {
+      "id": "R3",
+      "result": "external_bias_role_correspondence",
+      "statement": "Ising field h and MWC ligand chemical-potential/control occupy the same lower algebraic role as external scalar biases on an aggregate local binary statistic, up to affine recoding, scale, and additive constants."
+    },
+    {
+      "id": "R4",
+      "result": "interaction_topology_difference",
+      "statement": "Ising uses direct nearest-neighbor local/local pair coupling on a cycle; frozen MWC uses one global binary conformation that modulates all local binding contributions."
+    },
+    {
+      "id": "R5",
+      "result": "whole_structure_isomorphism_falsified",
+      "statement": "Load-bearing interaction topology and global-conformation structure remain unmatched."
+    },
+    {
+      "id": "R6",
+      "result": "dp07_primitive_first_behavior_supported",
+      "statement": "DP 0.7 found lower common structure without using domain labels and preserved the load-bearing residual instead of forcing a larger false match."
+    },
+    {
+      "id": "R7",
+      "result": "recurrence_negative_control_passed",
+      "statement": "DP-21 did not manufacture a recurrence/fixed-point interpretation from repeated indexed sites."
+    }
+  ],
+  "not_established": [
+    "physical identity between magnetic field and ligand chemical potential",
+    "whole-system Ising/MWC equivalence",
+    "common interaction mechanism",
+    "thermodynamic critical-point equivalence",
+    "DP 0.7 qualification"
+  ],
+  "strongest_next_lead": {
+    "id": "L1",
+    "statement": "Exactly eliminate/marginalize the MWC global conformation, derive the induced occupancy-only statistical score, then compare the resulting interaction order/topology with the Ising nearest-neighbor pair interaction using Core 0.19 implicit assertions and DP 0.7.",
+    "status": "OPEN"
+  },
+  "artifacts": [
+    "ISING_SOURCE_FREEZE_0_1.md",
+    "MWC_SOURCE_FREEZE_0_1.md",
+    "ISING_RENDER_0_1.isg",
+    "ISING_RENDER_0_1.md",
+    "MWC_RENDER_0_1.isg",
+    "MWC_RENDER_0_1.md",
+    "COMPARISON_VIEW_0_1.md",
+    "COMMON_CORE_0_1.isg",
+    "COMMON_CORE_0_1.md",
+    "DP_0_7_PASS_0_1.md",
+    "FINAL_REPORT_0_1.md",
+    "POSTHOC_VALIDATION_0_1.md"
+  ]
+}
