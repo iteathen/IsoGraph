@@ -179,7 +179,9 @@ const signaturesByCase=Object.fromEntries(
     caseId,
     {
       A:JSON.parse(frozen(`${ROOT}/blind-v2/${caseId}/A.signature.json`)),
-      B:JSON.parse(frozen(`${ROOT}/blind-v2/${caseId}/B.signature.json`))
+      B:JSON.parse(frozen(`${ROOT}/blind-v2/${caseId}/B.signature.json`)),
+      nativeA:frozen(`${ROOT}/blind-v2/${caseId}/A.isg`),
+      nativeB:frozen(`${ROOT}/blind-v2/${caseId}/B.isg`)
     }
   ])
 );
