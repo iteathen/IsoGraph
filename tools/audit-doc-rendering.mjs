@@ -89,9 +89,13 @@ for(const file of allFiles){
     });
 
     const open=raw.indexOf('\\[');
-    if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $$ display math or plain text.');
+    if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $ display math or plain text.');
     const close=raw.indexOf('\\]');
-    if(close>=0) add('unsupported-tex-display-delimiter',close,'Use GitHub-supported $$ display math or plain text.');
+    if(close>=0) add('unsupported-tex-display-delimiter',close,'Use GitHub-supported $ display math or plain text.');
+    const inlineOpen=raw.indexOf('\\(');
+    if(inlineOpen>=0) add('unsupported-tex-inline-delimiter',inlineOpen,'Use GitHub-supported $ inline math.');
+    const inlineClose=raw.indexOf('\\)');
+    if(inlineClose>=0) add('unsupported-tex-inline-delimiter',inlineClose,'Use GitHub-supported $ inline math.');
 
     const outsideMath=stripInlineMath(raw);
     const cmd=outsideMath.match(texCommand);
@@ -127,6 +131,12 @@ for(const item of findings){
   classCounts[item.classification]=(classCounts[item.classification]||0)+1;
 }
 const mutable=findings.filter(item=>item.classification==='mutable-documentation');
+const mutableByPath={};
+for(const item of mutable){
+  mutableByPath[item.path]??={total:0,kinds:{}};
+  mutableByPath[item.path].total++;
+  mutableByPath[item.path].kinds[item.kind]=(mutableByPath[item.path].kinds[item.kind]||0)+1;
+}
 const report={
   scanned_at:new Date().toISOString(),
   files_scanned:allFiles.length,
@@ -145,6 +155,7 @@ console.log(JSON.stringify({
   class_counts:classCounts,
   mutable_findings:mutable.length
 },null,2));
+console.log('MUTABLE_BY_PATH '+JSON.stringify(Object.entries(mutableByPath).sort((a,b)=>b[1].total-a[1].total)));
 for(const item of mutable.slice(0,400)){
   console.log('HIT '+item.path+':'+item.line+':'+item.column+' ['+item.kind+'] '+JSON.stringify(item.excerpt));
 }
