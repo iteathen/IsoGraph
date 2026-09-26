@@ -32,10 +32,17 @@ jobs:
             cat "$staging/chunk-$n.b64" >> /tmp/family-reference.b64
           done
 
-          test "$(wc -c < /tmp/family-reference.b64)" -eq 80768
+          actual_b64="$(wc -c < /tmp/family-reference.b64)"
+          echo "combined_base64_chars=$actual_b64"
+          test "$actual_b64" -eq 80768
+
           base64 --decode /tmp/family-reference.b64 > "$tmp"
-          test "$(wc -c < "$tmp")" -eq 60575
-          echo "6584ca146a82a8331fc22167afd678b6a54dd3c62454c8209b0afb86a2119806  $tmp" | sha256sum -c -
+          actual_bytes="$(wc -c < "$tmp")"
+          actual_sha="$(sha256sum "$tmp" | awk '{print $1}')"
+          echo "decoded_bytes=$actual_bytes"
+          echo "decoded_sha256=$actual_sha"
+          test "$actual_bytes" -eq 60575
+          test "$actual_sha" = "6584ca146a82a8331fc22167afd678b6a54dd3c62454c8209b0afb86a2119806"
           unzip -t "$tmp"
           mv "$tmp" "$out"
 
