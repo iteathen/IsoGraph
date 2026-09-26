@@ -59,66 +59,9 @@ Cold decoder/verifier experiments are evidence only when isolation is real.
 
 Mutable documentation must render correctly in GitHub Markdown.
 
-- Use `$...# Contributing to IsoGraph
-
-IsoGraph is an experimental agent-native structural knowledge representation. Contributions are welcome, but semantic changes carry a higher evidence burden than ordinary documentation or tooling changes because a small ambiguity can create false structural equivalence or hide a real correspondence.
-
-## Start with current authority
-
-Before substantive work, read:
-
-1. `README.md`
-2. `MIGRATION.md`
-3. `AGENTS.md`
-4. `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
-
-The consolidated Draft 0.15 file is the self-contained current semantic authority for new work. Drafts 0.13, 0.14, and the non-consolidated 0.15 amendment remain historical provenance and rationale; they are not required replay material for a current decoder.
-
-Pre-IsoGraph and earlier-draft artifacts remain evidence under the semantics recorded at their revision and must not be silently reinterpreted to appear current.
-
-## Evidence before extension
-
-For a proposed semantic change:
-
-```text
-observed defect or missing distinction
--> minimal falsifier
--> attempt faithful construction from existing lower structure
--> classify the failure
--> make the smallest correction that restores exact meaning
--> qualify the correction independently
-```
-
-Do not add a primitive, structural class, relation kind, parameter slot, comparison view, or canonical factorization merely because one case is awkward.
-
-Keep these distinctions explicit:
-
-- surface syntax != irreducible substrate;
-- source-faithful representation != comparison view;
-- structural identity != occurrence;
-- factorization != normalization;
-- one valid factorization != canonical factorization;
-- native representability != dedicated syntax;
-- retrieval hint != structural evidence;
-- source/D residual != pairwise residual;
-- class label != class-membership evidence;
-- semantic equivalence != structural isomorphism;
-- rule existence != rule activation;
-- NAC object existence != NAC evaluation.
-
-## Cold qualification
-
-Cold decoder/verifier experiments are evidence only when isolation is real.
-
-- Give the isolated agent only the files named by the frozen prompt.
-- Do not expose scorer assertions, expected mappings, prior cold outputs, registry hypotheses, author audits, external-review dispositions, or other hidden material before output freeze.
-- Freeze the raw output before unblinding.
-- Classify discrepancies before repair.
-- Preserve failed runs and ambiguities as evidence; do not rewrite them into success.
-
- for inline mathematics.
-- Use `$...$` for display mathematics.
-- Do not use raw `\\(...\\)` or `\\[...\\]` delimiters in mutable Markdown; they are not reliably rendered by the repository surfaces and can appear as literal `\\boxed{}`, `\\text{}`, and similar markup.
+- Use `$...$` for inline mathematics.
+- Use `$$...$$` for display mathematics.
+- Do not use raw `\(...\)` or `\[...\]` delimiters in mutable Markdown; they are not reliably rendered by repository surfaces and can appear as literal `\boxed{}`, `\text{}`, and similar markup.
 - Keep TeX commands inside a supported math delimiter or a fenced code block.
 - Do not “repair” frozen raw experiment output or versioned historical specification bytes merely for presentation. Preserve those exact artifacts and record the rendering exception instead.
 - Run `node tools/audit-doc-rendering.mjs --enforce-mutable` before submitting documentation changes. Repository Verify runs the same guard.
