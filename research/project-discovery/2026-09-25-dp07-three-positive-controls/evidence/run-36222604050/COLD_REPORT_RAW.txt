@@ -1,0 +1,102 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "The structures represent the same partition function calculation for a 1D Ising model.",
+        "Both use a finite fold over edge-family and site-family structures to compute the partition function.",
+        "The local energy and weight calculations are structurally identical, mapping the same local value constraints to the partition function."
+      ],
+      "mapping_witness": [
+        "Map site_family and edge_family nodes by role.",
+        "Map local_value_at constraints by role.",
+        "Map the finite_fold structure over the real_add and real_multiply operations."
+      ],
+      "transformations": [
+        "Alpha-renaming of stable labels.",
+        "Mapping of local symbols (J, h, beta vs epsilon, mu, beta)."
+      ],
+      "a_to_b_reconstruction": [
+        "Reconstruct B from A by mapping J to epsilon and h to mu."
+      ],
+      "b_to_a_reconstruction": [
+        "Reconstruct A from B by mapping epsilon to J and mu to h."
+      ],
+      "residuals": [
+        "None; the structures are isomorphic under the provided symbol mapping."
+      ],
+      "unresolved_obligations": [
+        "None."
+      ],
+      "derived_view": "Ising model partition function calculation",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": [
+        "Both structures represent a system of linear equations over GF(2) (parity constraints).",
+        "Both use a finite fold to check if all rows/constraints are satisfied.",
+        "The parity/row_sum logic is structurally identical."
+      ],
+      "mapping_witness": [
+        "Map variable_family and assignment_family.",
+        "Map parity/row_sum constraints.",
+        "Map the finite_fold satisfaction check."
+      ],
+      "transformations": [
+        "Alpha-renaming of stable labels.",
+        "Mapping of local symbols (F/T vs #0/#1)."
+      ],
+      "a_to_b_reconstruction": [
+        "Reconstruct B from A by mapping F to #0 and T to #1."
+      ],
+      "b_to_a_reconstruction": [
+        "Reconstruct A from B by mapping #0 to F and #1 to T."
+      ],
+      "residuals": [
+        "None."
+      ],
+      "unresolved_obligations": [
+        "None."
+      ],
+      "derived_view": "System of linear equations over GF(2)",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": [
+        "Both structures represent the Hamiltonian and equations of motion for a harmonic oscillator.",
+        "Both define the system using mass (m) and spring constant (k).",
+        "Both define the time derivative of position (q) and momentum (p) or velocity (v)."
+      ],
+      "mapping_witness": [
+        "Map time_domain and state variables (q, v/p).",
+        "Map the Hamiltonian/energy function structure.",
+        "Map the time_derivative relations."
+      ],
+      "transformations": [
+        "Alpha-renaming of stable labels.",
+        "Mapping of local symbols (v vs p, a vs H)."
+      ],
+      "a_to_b_reconstruction": [
+        "Reconstruct B from A by mapping v to p and a to H."
+      ],
+      "b_to_a_reconstruction": [
+        "Reconstruct A from B by mapping p to v and H to a."
+      ],
+      "residuals": [
+        "None."
+      ],
+      "unresolved_obligations": [
+        "None."
+      ],
+      "derived_view": "Harmonic oscillator equations of motion",
+      "disposition": "EXACT_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}
