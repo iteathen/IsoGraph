@@ -19,9 +19,10 @@ This doctrine is **not semantic authority**. Versioned qualified specifications 
 ### Core
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
-- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — **qualified cumulative observation-first clarification**, promoted by `qualification/CORE_0_18_QUALIFICATION.md` and Experiment 017.
+- `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — **qualified cumulative observation-first clarification**, promoted by `qualification/CORE_0_18_QUALIFICATION.md` and Experiment 017;
+- `CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md` — **qualified cumulative assertion-support and exact-rendering clarification**, promoted by `qualification/CORE_0_19_QUALIFICATION.md` using Experiments 029/030 plus six ESR-qualified source renderings.
 
-Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 clarification. Bare IDs remain **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18 and Core 0.19 clarifications. Bare IDs remain **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
 
 ### Qualified semantic extensions/modules
 
@@ -29,7 +30,7 @@ Current qualified extension/module authority is recorded in:
 
 - `qualification/QUALIFIED_MODULES_2026-09-26.md`
 
-The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-26 manifest routes Core 0.18, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 at their exact qualified revisions. Current integration routing is recorded in `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`.
+The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-26 manifest routes Core 0.18, Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 at their exact qualified revisions. The latest fully integration-qualified composition remains revision-scoped to Core 0.18 in `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`; Core 0.19 is independently module-qualified and is not silently added to that historical integration result.
 
 Current semantic extensions/modules include:
 
@@ -150,7 +151,7 @@ The evidence chain remains intentionally preserved rather than rewritten: earlie
 
 DP remains discovery/search guidance, not semantic proof authority.
 
-DP 0.7's conditional exact source-rendering path does not by itself promote Core 0.19. Core 0.19 remains separately unqualified until its own qualification burden is completed.
+DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision recorded in the authority manifest.
 ### Real-world Discovery Protocol execution evidence
 
 Connect4 authority 1.1 has now run the Discovery Protocols against live cold-reconstruction discrepancies.
@@ -165,7 +166,7 @@ This is **development evidence**, not fresh qualification. It should inform inde
 
 ## Integrated module-stack qualification
 
-The current expanded composition is:
+The latest fully integration-qualified composition is revision-scoped to:
 
 ```text
 Core 0.17 + Core 0.18
@@ -175,7 +176,7 @@ Core 0.17 + Core 0.18
 + DTS 0.1
 ```
 
-It is qualified for the exercised dependency-closed scope by the immutable Experiment 027 predecessor plus the focused DP 0.7 successor evidence.
+It is qualified for the exercised dependency-closed scope by the immutable Experiment 027 predecessor plus the focused DP 0.7 successor evidence. Core 0.19 is now qualified independently as current Core authority; a full-stack integration claim including Core 0.19 is not inferred merely from module promotion.
 
 Experiment 027 remains the full-stack predecessor for DP 0.1–0.6 + DTS 0.1.
 
@@ -213,12 +214,13 @@ The current qualified modular authority stack is recorded in `qualification/QUAL
 Current completed qualification checkpoints:
 
 1. Core 0.18 — `QUALIFIES`, Experiment 017;
-2. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
-3. Discovery Protocols 0.1–0.7 — qualified cumulatively, with DP 0.7 closed by the three-positive-control campaign plus Experiment 028;
-4. DTS 0.1 — `QUALIFIED`, Experiment 026;
-5. current Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition — qualified for the exercised dependency-closed scope.
+2. Core 0.19 — qualified at SHA-256 `8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2`, using Experiment 029's frozen 25/26 evidence, Experiment 030's fresh corrected 2/2 mutation regression, and six ESR-qualified exact-rendering predecessors;
+3. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
+4. Discovery Protocols 0.1–0.7 — qualified cumulatively, with DP 0.7 closed by the three-positive-control campaign plus Experiment 028;
+5. DTS 0.1 — `QUALIFIED`, Experiment 026;
+6. the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition remains integration-qualified for its exact predecessor revision.
 
-The remaining current semantic candidate burden is Core 0.19, including its implicit-assertion semantics and the exact source-rendering section used conditionally by DP 0.7. Core 0.19 must be independently qualified or revised before it can become current Core authority.
+Core 0.19 is now current Core authority. A fresh full-stack integration claim including Core 0.19 remains a separate revision-scoped burden if that stronger claim is required.
 
 Transition Structural Signatures and DTS profiles remain separately versioned successor research.
 
