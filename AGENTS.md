@@ -49,7 +49,7 @@ DP 0.8 is an **unqualified successor candidate**, not current authority:
 - `qualification/DISCOVERY_PROTOCOLS_0_8_QUALIFICATION_PLAN.md`
 - `research/discovery/LOGIC_LENS_FOR_IMPLICIT_ASSERTION_DISCOVERY_0_1.md` — non-authoritative search refresher.
 
-When evaluating DP 0.8 work, preserve the separation between complete semantic representation and objective-scoped support reduction. A value profile may rank already-sufficient alternatives; it may not redefine sufficiency, change inputs/scope, discard load-bearing QU/DTS structure, or import unsupported logical premises.
+When evaluating DP 0.8 work, preserve the separation between faithful semantic representation and objective-scoped support analysis. A value profile may rank already-sufficient alternatives; it may not redefine sufficiency, change inputs/scope, discard load-bearing QU/DTS structure, or import unsupported logical premises.
 
 DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
