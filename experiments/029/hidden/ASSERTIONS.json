@@ -1,0 +1,211 @@
+{
+  "experiment": "029",
+  "required_case_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D23",
+    "D24"
+  ],
+  "cases": {
+    "D01": {
+      "answers": {
+        "explicit_support": true,
+        "exact_truth_from_explicit": false,
+        "provenance_scope_retained": true
+      }
+    },
+    "D02": {
+      "answers": {
+        "implicit_exact_admissible": true,
+        "source_explicit": false,
+        "premises_authority_witness_recoverable": true
+      }
+    },
+    "D03": {
+      "answers": {
+        "implicit_exact_admissible": false,
+        "conventional_familiarity_is_authority": false,
+        "missing_premise_blocks": true
+      }
+    },
+    "D04": {
+      "answers": {
+        "r_admitted_under_g": true,
+        "r_global_unconditional": false,
+        "guard_g_retained": true
+      }
+    },
+    "D05": {
+      "answers": {
+        "q_supported_under_h": true,
+        "q_global_exact_unconditional": false,
+        "condition_may_be_dropped": false
+      }
+    },
+    "D06": {
+      "answers": {
+        "b_exact_implicit": true,
+        "c_exact_implicit": true,
+        "a_additional_implicit_support": true,
+        "cycle_invalid_merely_cyclic": false
+      }
+    },
+    "D07": {
+      "answers": {
+        "cycle_manufactures_valid_support": false,
+        "represented_cycle_is_valid_support": false,
+        "separate_grounding_required": true
+      }
+    },
+    "D08": {
+      "answers": {
+        "b_retains_u": true,
+        "c_retains_u": true,
+        "later_pass_may_drop_u": false
+      }
+    },
+    "D09": {
+      "answers": {
+        "q1_is_refinement": true,
+        "p_exact_implicit": true,
+        "qu_condition_required_in_assertion_body": false,
+        "provenance_retains_refinement_witness": true
+      }
+    },
+    "D10": {
+      "answers": {
+        "uniform_prior_allowed": false,
+        "bayesian_from_qu_alone": false,
+        "qu_family_valid": true
+      }
+    },
+    "D11": {
+      "answers": {
+        "b_bayesian_implicit": true,
+        "b_may_feed_c": true,
+        "c_bayesian_implicit": true,
+        "exact_promotion": false
+      }
+    },
+    "D12": {
+      "answers": {
+        "multiply_as_independent": false,
+        "dependence_load_bearing": true,
+        "separate_records_prove_independence": false
+      }
+    },
+    "D13": {
+      "answers": {
+        "bayesian_support": true,
+        "exact_support": false,
+        "core_probability_threshold_promotes": false
+      }
+    },
+    "D14": {
+      "answers": {
+        "both_support_classes_retained": true,
+        "lineage_overwrite": false,
+        "same_body_implies_same_support": false
+      }
+    },
+    "D15": {
+      "answers": {
+        "dp_motivates_search": true,
+        "dp_target_is_validity_premise": false,
+        "t_exact_from_independent_derivation": true
+      }
+    },
+    "D16": {
+      "answers": {
+        "d_admissible_pass3": true,
+        "lineage_dependency_closed": true,
+        "depth_weakens_exact": false
+      }
+    },
+    "D17": {
+      "answers": {
+        "operational_stop_allowed": true,
+        "universal_closure_claim": false,
+        "completeness_requires_separate_evidence": true
+      }
+    },
+    "D18": {
+      "answers": {
+        "not_found_report_allowed": true,
+        "nonderivable_conclusion": false,
+        "negative_claim_needs_completeness": true
+      }
+    },
+    "D19": {
+      "answers": {
+        "exact_rendering": false,
+        "partial_artifact_allowed": true,
+        "sidecar_may_supply_missing_semantics": false
+      }
+    },
+    "D20": {
+      "answers": {
+        "exact_rendering": false,
+        "pretrained_recognition_is_authority": false,
+        "semantics_must_be_represented_or_pinned": true
+      }
+    },
+    "D21": {
+      "answers": {
+        "bidirectional_exact": false,
+        "one_way_claim_allowed": true,
+        "empirical_agreement_supplies_inverse": false
+      }
+    },
+    "D22": {
+      "answers": {
+        "exact_rendering": false,
+        "preserve_alternatives_qu": true,
+        "convenient_selection_allowed": false
+      }
+    },
+    "D23": {
+      "answers": {
+        "exact_rendering": false,
+        "precision_modality_preserved": true
+      }
+    },
+    "D24": {
+      "answers": {
+        "exact_rendering_pass": false,
+        "partial_credit_allows_exact": false,
+        "downstream_source_faithful_use": false,
+        "silent_repair_allowed": false
+      }
+    }
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "did_not_invent_hidden_premise": true,
+    "did_not_invent_probability": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_upgrade_explicit_to_truth": true,
+    "did_not_upgrade_bayesian_to_exact": true,
+    "did_not_treat_skeleton_as_rendering": true
+  }
+}
