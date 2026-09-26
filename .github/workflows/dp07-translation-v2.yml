@@ -70,4 +70,4 @@ jobs:
         run: |
           set -euo pipefail
           test "$Q_OUTCOME" = "success"
-          node -e "const s=require('./out/translation-v2/SCORE.json'); if(s.disposition!=='TRANSLATIONS_QUALIFY') process.exit(1)"
+          node -e "const s=require('./out/translation-v2/SCORE.json'); if(s.disposition!=='EXACT_SOURCE_RENDERINGS_QUALIFY') process.exit(1)"
