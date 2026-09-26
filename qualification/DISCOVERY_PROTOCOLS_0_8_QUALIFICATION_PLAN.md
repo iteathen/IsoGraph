@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-Qualify whether DP 0.8 causes a fresh isolated reasoner to discover objective-scoped support reduction and valuation opportunities **without**:
+Qualify whether DP 0.8 causes a fresh isolated reasoner to discover objective-scoped support sufficiency and valuation structure **without**:
 
 - mutating the problem;
 - weakening exactness;
@@ -238,7 +238,7 @@ Expected hidden behavior:
 - discover that predictive draw/no-win/exhaustion machinery carries no unique correctness support for the selected exact-search composition;
 - distinguish that finding from terminal draw semantics;
 - preserve WIN/LOSS/DRAW as semantic outcomes;
-- identify the relevant support reduction without a Connect4-specific rule.
+- identify the relevant nonessential support and valuation consequence without a Connect4-specific rule.
 
 ## Q19 — Real-world anti-overfit control
 
