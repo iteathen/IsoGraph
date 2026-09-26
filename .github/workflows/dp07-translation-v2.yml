@@ -1,0 +1,73 @@
+name: DP07 source-to-IsoGraph translation qualification v2
+
+on:
+  push:
+    branches:
+      - experiment/dp07-three-positive-controls-v1
+    paths:
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dp07-translation-v2
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.5-flash
+
+jobs:
+  qualify-translations:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Deterministic native integrity audit
+        run: |
+          set -euo pipefail
+          rm -rf out/translation-v2
+          mkdir -p out/translation-v2
+          node research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/tools/audit-native-bundle.mjs out/translation-v2
+          ISOGRAPH_COLD_DRY_RUN=1 node research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/tools/run-translation-qualification.mjs
+      - name: Execute cold reconstruction and sameness verification
+        id: qualification
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/tools/run-translation-qualification.mjs
+      - name: Persist qualification evidence
+        if: always()
+        run: |
+          set -euo pipefail
+          E="research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/evidence/run-${GITHUB_RUN_ID}"
+          mkdir -p "$E"
+          cp -a out/translation-v2/. "$E/" || true
+          cat > "$E/CONTROL.json" <<EOF
+          {
+            "workflow_run_id":"${GITHUB_RUN_ID}",
+            "workflow_attempt":"${GITHUB_RUN_ATTEMPT}",
+            "qualification_sha":"${GITHUB_SHA}",
+            "qualification_outcome":"${{ steps.qualification.outcome }}"
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: DP07 translation v2 qualification run ${GITHUB_RUN_ID}"
+            git push origin HEAD:experiment/dp07-three-positive-controls-v1
+          fi
+      - name: Enforce translation qualification
+        if: always()
+        env:
+          Q_OUTCOME: ${{ steps.qualification.outcome }}
+        run: |
+          set -euo pipefail
+          test "$Q_OUTCOME" = "success"
+          node -e "const s=require('./out/translation-v2/SCORE.json'); if(s.disposition!=='TRANSLATIONS_QUALIFY') process.exit(1)"
