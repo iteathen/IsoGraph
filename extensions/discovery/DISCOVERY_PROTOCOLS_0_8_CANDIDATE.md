@@ -76,7 +76,7 @@ one sufficient topology
 derivable assertion
     != permission to erase its semantic representation
 
-removable from one execution objective
+nonessential for sufficiency of one objective
     != globally irrelevant
 
 unobserved effect
@@ -180,6 +180,7 @@ Before claiming that structure is necessary, unnecessary, substitutable, dominat
 
 ```text
 target conclusion / observable set
+required witness / certificate / provenance / side effects where applicable
 fixed inputs / admissible input domain
 semantic scope
 declared authority envelope
@@ -194,6 +195,8 @@ valuation profile if selection is desired
 ```
 
 A component-local return value is not automatically the target observable.
+
+Likewise, an application that requires not only a result but also a witness, certificate, explanation, provenance chain, audit record, or externally visible side effect has a larger target obligation. A support cannot be called sufficient by preserving only the answer while dropping another required part of the contract.
 
 If the application objective is a downstream result, discovery must follow enough consumer topology to judge support relative to that result.
 
@@ -238,7 +241,7 @@ This distinction prevents two opposite errors:
 
 ```text
 upstream-only view
-    -> falsely treats a locally consumed value as globally necessary
+    -> falsely treats a locally consumed value as necessary for the declared downstream objective
 
 unbounded whole-system expansion
     -> adds irrelevant structure and cost to the discovery question
@@ -257,6 +260,7 @@ same required scope
 same required precision / modality
 same load-bearing unknown obligations
 same required externally visible behavior
+same required witness / certificate / provenance obligations where applicable
     ->
 S establishes O
 ```
@@ -278,6 +282,8 @@ changed identity assumptions
 ```
 
 Valuation is applied only after sufficiency under the declared objective is established.
+
+DP 0.8 inherits Core's claim-bounded obligation discipline. Minimum-sufficient-support analysis MUST operate on the actual dependency-closed obligations of the declared target; it must not invent stronger obligations merely to block a reduction, and it must not omit an obligation merely to make a reduction pass.
 
 ---
 
@@ -408,7 +414,7 @@ without X -> unresolved -> downstream exact procedure -> O
 
 The existence of the first path does not prove `X` is necessary.
 
-Conversely, the existence of an alternate downstream procedure does not prove `X` is removable unless the alternate path preserves the declared target contract.
+Conversely, the existence of an alternate downstream procedure does not prove `X` is nonessential for sufficiency unless the alternate path preserves the declared target contract.
 
 The governing rule is:
 
@@ -504,6 +510,25 @@ supplied as measured evidence with provenance
 ```
 
 If a named valuation dimension cannot currently be evaluated, preserve it as unresolved and do not rank alternatives on that dimension.
+
+Measured valuation evidence SHOULD retain enough provenance to interpret it, such as:
+
+```text
+measurement environment / implementation revision
+input or workload scope
+sampling method / repetitions
+range, variance, confidence, or other uncertainty description where material
+units
+```
+
+A noisy, environment-specific, or overlapping measurement does not justify a stronger ordering than the evidence supports.
+
+```text
+one observed timing
+    != universal performance order
+```
+
+If valuation uncertainty can change the preferred alternative and remains unresolved, preserve the alternatives as unresolved/incomparable under that dimension or route the uncertainty through the applicable represented authority.
 
 DP does not assume distinct valuation dimensions are commensurable.
 
@@ -691,7 +716,7 @@ A reduction that depends on an invalid or circular implicit assertion is invalid
 
 # 16. Interaction with QU
 
-If unresolved structure can change whether a support is sufficient, removable, substitutable, or preferred, that QU remains load-bearing.
+If unresolved structure can change whether a support is sufficient, nonessential for sufficiency, substitutable, or preferred, that QU remains load-bearing.
 
 DP MUST NOT choose a convenient realization merely to produce a smaller support graph.
 
