@@ -4,9 +4,13 @@ import { execFileSync } from 'node:child_process';
 
 const ROOT='research/project-discovery/2026-09-25-dp07-three-positive-controls';
 const SHA=process.env.GITHUB_SHA;
-const MODEL=process.env.GEMINI_MODEL||'gemini-3.5-flash';
+const MODEL=process.env.GEMINI_MODEL||'gemini-3.8-flash';
+const FALLBACK_MODELS=(process.env.GEMINI_FALLBACK_MODELS||'').split(',').map(x=>x.trim()).filter(Boolean);
+const MODEL_CANDIDATES=[...new Set([MODEL,...FALLBACK_MODELS])];
 const DRY=process.env.ISOGRAPH_COLD_DRY_RUN==='1';
 const KEY=process.env.GEMINI_API_KEY;
+const disabledModels=new Map();
+const providerCalls=[];
 if(!SHA) throw new Error('GITHUB_SHA unavailable');
 if(!DRY&&!KEY) throw new Error('GEMINI_API_KEY unavailable');
 
@@ -14,18 +18,91 @@ function frozen(p){
   return execFileSync('git',['show',`${SHA}:${p}`],{encoding:'utf8',maxBuffer:128*1024*1024});
 }
 function sha256(v){return crypto.createHash('sha256').update(v).digest('hex');}
+function blobSha(p){return execFileSync('git',['rev-parse',`${SHA}:${p}`],{encoding:'utf8'}).trim();}
+
+async function callGemini(packet){
+  const failures=[];
+  for(const model of MODEL_CANDIDATES){
+    if(disabledModels.has(model)) continue;
+    let useThinking=!model.includes('flash-lite');
+    for(let i=0;i<2;i++){
+      const generationConfig={
+        candidateCount:1,
+        maxOutputTokens:32768,
+        temperature:0.1,
+        responseMimeType:'application/json'
+      };
+      if(useThinking) generationConfig.thinkingConfig={thinkingLevel:'HIGH'};
+      const request={contents:[{role:'user',parts:[{text:packet}]}],generationConfig};
+      const url=`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+      let res,txt='';
+      try{
+        res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify(request)});
+        txt=await res.text();
+      }catch(error){
+        failures.push({model,status:null,error:String(error)});
+        if(i===0){await new Promise(r=>setTimeout(r,8000));continue;}
+        disabledModels.set(model,'network_error');
+        break;
+      }
+      if(res.ok){
+        let data;
+        try{data=JSON.parse(txt);}
+        catch(error){
+          failures.push({model,status:res.status,error:'malformed_api_json',detail:String(error)});
+          if(i===0) continue;
+          disabledModels.set(model,'malformed_api_json');
+          break;
+        }
+        const raw=(data.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
+        providerCalls.push({model,status:res.status,attempt:i+1,thinking:useThinking,usage:data.usageMetadata??null});
+        return {model,status:res.status,attempts:i+1,thinking:useThinking,data,raw,responseText:txt};
+      }
+      failures.push({model,status:res.status,body_prefix:txt.slice(0,500)});
+      if(res.status===400 && useThinking && /thinking/i.test(txt)){
+        useThinking=false;
+        i--;
+        continue;
+      }
+      if(res.status===429 || res.status===404){
+        disabledModels.set(model,'http_'+res.status);
+        break;
+      }
+      if([500,502,503,504].includes(res.status)){
+        if(i===0){await new Promise(r=>setTimeout(r,12000));continue;}
+        disabledModels.set(model,'http_'+res.status);
+        break;
+      }
+      disabledModels.set(model,'http_'+res.status);
+      break;
+    }
+  }
+  throw new Error('All Gemini model candidates unavailable: '+JSON.stringify(failures).slice(0,3000));
+}
 
 const manifestPath=`${ROOT}/DISCOVERY_INPUT_MANIFEST.json`;
 const promptPath=`${ROOT}/BLIND_DISCOVERY_PROMPT.md`;
 const manifest=JSON.parse(frozen(manifestPath));
 if(manifest.status!=='READY_FOR_BLIND_EXECUTION') throw new Error('manifest not ready');
 
+const promotionPath=manifest.translation_promotion;
+if(!promotionPath) throw new Error('missing translation promotion');
+const promotion=JSON.parse(frozen(promotionPath));
+if(promotion.status!=='PROMOTED_FOR_DP07_DISCOVERY'||promotion.q7_promotion!=='PASS'||promotion.all_six_qualified!==true){
+  throw new Error('translation Q7 promotion not valid');
+}
+if(!Array.isArray(promotion.cases)||promotion.cases.length!==6) throw new Error('expected six promoted translations');
+for(const c of promotion.cases){
+  if(c.native_blob_sha!==blobSha(ROOT+'/'+c.promoted_native)) throw new Error(c.case_id+': promoted native blob mismatch');
+  if(c.signature_blob_sha!==blobSha(ROOT+'/'+c.promoted_signature)) throw new Error(c.case_id+': promoted signature blob mismatch');
+}
+
 const authority=manifest.authority_inputs||[];
 const inputs=manifest.discovery_inputs||[];
 const withheld=new Set(manifest.withheld_from_discovery||[]);
 if(inputs.length!==12) throw new Error('expected exactly 12 anonymous discovery inputs');
 for(const p of inputs){
-  if(!p.includes('/blind/')) throw new Error('non-blind discovery input: '+p);
+  if(!p.includes('/blind-v2/')) throw new Error('non-promoted discovery input: '+p);
   if(withheld.has(p)) throw new Error('withheld path leaked: '+p);
 }
 const forbiddenPathTerms=['/oracle/','SCORING_CONTRACT','ising','lattice-gas','xor-gf2','newton-hamilton'];
@@ -60,46 +137,17 @@ const out='out/dp07-positive-controls';
 fs.mkdirSync(out,{recursive:true});
 fs.writeFileSync(`${out}/PACKET.txt`,packet);
 fs.writeFileSync(`${out}/INPUT_MANIFEST.json`,JSON.stringify(packetManifest,null,2)+'\n');
-const baseMeta={campaign:manifest.campaign,model:MODEL,frozen_sha:SHA,packet_sha256:packetHash,input_manifest:packetManifest};
+const baseMeta={campaign:manifest.campaign,model_requested:MODEL,model_candidates:MODEL_CANDIDATES,frozen_sha:SHA,translation_promotion_commit:manifest.translation_promotion_commit,packet_sha256:packetHash,input_manifest:packetManifest};
 if(DRY){
   fs.writeFileSync(`${out}/DRY_RUN.json`,JSON.stringify({...baseMeta,dry_run:true},null,2)+'\n');
   console.log(JSON.stringify({dry_run:true,packet_sha256:packetHash,files:packetManifest.length}));
   process.exit(0);
 }
 
-const request={
-  contents:[{role:'user',parts:[{text:packet}]}],
-  generationConfig:{
-    candidateCount:1,
-    maxOutputTokens:32768,
-    temperature:0.1,
-    responseMimeType:'application/json',
-    thinkingConfig:{thinkingLevel:'HIGH'}
-  }
-};
-const url=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
-let status=0,responseText='',attempts=0;
-for(let i=0;i<4;i++){
-  attempts=i+1;
-  const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify(request)});
-  status=res.status;
-  responseText=await res.text();
-  if(res.ok) break;
-  if(status===429) break;
-  if([500,502,503,504].includes(status) && i<3){
-    await new Promise(r=>setTimeout(r,20000*(i+1)));
-    continue;
-  }
-  break;
-}
+const call=await callGemini(packet);
+const {data,raw,responseText}=call;
 fs.writeFileSync(`${out}/API_RESPONSE.json`,responseText);
-const meta={...baseMeta,workflow_run_id:process.env.GITHUB_RUN_ID||null,workflow_attempt:process.env.GITHUB_RUN_ATTEMPT||null,api_attempts:attempts,http_status:status};
-if(!(status>=200&&status<300)){
-  fs.writeFileSync(`${out}/METADATA.json`,JSON.stringify({...meta,semantic_status:'PROVIDER_FAILURE'},null,2)+'\n');
-  throw new Error(`Gemini HTTP ${status}`);
-}
-const data=JSON.parse(responseText);
-const raw=(data.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
+const meta={...baseMeta,workflow_run_id:process.env.GITHUB_RUN_ID||null,workflow_attempt:process.env.GITHUB_RUN_ATTEMPT||null,selected_model:call.model,api_attempts:call.attempts,http_status:call.status,provider_calls:providerCalls,disabled_models:Object.fromEntries(disabledModels)};
 fs.writeFileSync(`${out}/COLD_REPORT_RAW.txt`,raw+'\n');
 let parsed;
 try{parsed=JSON.parse(raw);}
@@ -110,4 +158,4 @@ catch(e){
 if(!Array.isArray(parsed?.cases)||parsed.cases.length!==3) throw new Error('expected three cases');
 fs.writeFileSync(`${out}/PARSED_REPORT.json`,JSON.stringify(parsed,null,2)+'\n');
 fs.writeFileSync(`${out}/METADATA.json`,JSON.stringify({...meta,semantic_status:'FROZEN',report_sha256:sha256(raw),finish_reason:data.candidates?.[0]?.finishReason??null,usage:data.usageMetadata??null},null,2)+'\n');
-console.log(JSON.stringify({status,attempts,packet_sha256:packetHash,report_sha256:sha256(raw)}));
+console.log(JSON.stringify({status:call.status,model:call.model,attempts:call.attempts,packet_sha256:packetHash,report_sha256:sha256(raw)}));
