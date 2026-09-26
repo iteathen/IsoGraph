@@ -161,7 +161,7 @@ async function callGemini(){
     for(let attempt=0;attempt<4;attempt++){
       const generationConfig={
         candidateCount:1,
-        maxOutputTokens:32768,
+        maxOutputTokens:65536,
         temperature:0.1,
         responseMimeType:'application/json'
       };
