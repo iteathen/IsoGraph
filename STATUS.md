@@ -159,7 +159,7 @@ DP 0.7's conditional exact source-rendering path now routes through independentl
 It adds discovery guidance for:
 
 - stronger implicit-assertion search over logical dependence such as exclusion, exhaustiveness, partitions, residual classes, implication, and necessary/sufficient conditions;
-- objective-scoped support cones;
+- objective-scoped support cones and bounded consumer/fallback analysis slices;
 - minimal versus minimum sufficient support;
 - counterfactual removal/substitution;
 - consumer-scope sufficiency rather than component-local necessity;
