@@ -1,0 +1,109 @@
+{
+  "schema": 2,
+  "sha": "6cf12dc2dc0c2454131709dc1b1095aef32385a6",
+  "model": "gemini-3.8-flash",
+  "model_candidates": [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-pro-latest",
+    "gemini-3.1-pro-preview"
+  ],
+  "contract": "ESR-0.1",
+  "provider_calls": [
+    {
+      "label": "case-02A:decoder_A",
+      "model": "gemini-3.8-flash",
+      "status": 200,
+      "attempt": 2,
+      "thinking": true,
+      "usage": {
+        "promptTokenCount": 27563,
+        "candidatesTokenCount": 1550,
+        "totalTokenCount": 36103,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 27563
+          }
+        ],
+        "thoughtsTokenCount": 6990,
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-02A:decoder_B",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 27563,
+        "candidatesTokenCount": 1135,
+        "totalTokenCount": 28698,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 27563
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-02A:verifier",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 6224,
+        "candidatesTokenCount": 739,
+        "totalTokenCount": 6963,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6224
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "disabled_models": {
+    "gemini-3.8-flash": "http_429",
+    "gemini-3.7-flash": "http_503",
+    "gemini-3.6-flash": "http_429"
+  },
+  "verification_meta": {
+    "case-02A": {
+      "model": "gemini-3.1-flash-lite",
+      "thinking": false,
+      "attempts": 1,
+      "usage": {
+        "promptTokenCount": 6224,
+        "candidatesTokenCount": 739,
+        "totalTokenCount": 6963,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6224
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  },
+  "authority_hashes": {
+    "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+    "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2"
+  },
+  "contract_sha256": "051839093f736eeef876cf381c8ac1931d26618e245a564d2d6824d175255f1f",
+  "coverage_map_sha256": "adf1aeceb580f1427b5f1ca60236fdf178414fbde640519cae3aab50cc2e01ed",
+  "mutation_map_sha256": "46cfea8814f9fefbc8b13f33b93ef872362f1b9eed56282f8d2b8163f8e96326",
+  "case_packet_hashes": {
+    "case-02A": "d96c5c2da3bcfb37a779edf1a0c40e2d0bff263180d824aebe78fefb236f0dea"
+  }
+}

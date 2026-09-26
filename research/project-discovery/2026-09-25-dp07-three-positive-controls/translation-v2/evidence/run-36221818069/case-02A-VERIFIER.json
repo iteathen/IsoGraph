@@ -1,0 +1,109 @@
+{
+  "case_id": "case-02A",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "C1",
+        "pass": true,
+        "reason": "Explicitly reconstructed range {F, T} for value_at."
+      },
+      {
+        "id": "C2",
+        "pass": true,
+        "reason": "Explicitly reconstructed range {F, T} for target."
+      },
+      {
+        "id": "C3",
+        "pass": true,
+        "reason": "XOR table reconstructed exactly as defined."
+      },
+      {
+        "id": "C4",
+        "pass": true,
+        "reason": "Parity fold logic reconstructed with correct initial F and variable mapping."
+      },
+      {
+        "id": "C5",
+        "pass": true,
+        "reason": "Constraint satisfaction equality logic reconstructed."
+      },
+      {
+        "id": "C6",
+        "pass": true,
+        "reason": "System satisfaction universal quantification over constraints reconstructed."
+      },
+      {
+        "id": "C7",
+        "pass": true,
+        "reason": "Indexing of value_at by assignment and variable families reconstructed."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "C1",
+        "pass": true,
+        "reason": "Explicitly reconstructed range {F, T} for value_at."
+      },
+      {
+        "id": "C2",
+        "pass": true,
+        "reason": "Explicitly reconstructed range {F, T} for target."
+      },
+      {
+        "id": "C3",
+        "pass": true,
+        "reason": "XOR table reconstructed exactly as defined."
+      },
+      {
+        "id": "C4",
+        "pass": true,
+        "reason": "Parity fold logic reconstructed with correct initial F and variable mapping."
+      },
+      {
+        "id": "C5",
+        "pass": true,
+        "reason": "Constraint satisfaction equality logic reconstructed."
+      },
+      {
+        "id": "C6",
+        "pass": true,
+        "reason": "System satisfaction universal quantification over constraints reconstructed."
+      },
+      {
+        "id": "C7",
+        "pass": true,
+        "reason": "Indexing of value_at by assignment and variable families reconstructed."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "C-M1-table",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly reconstructed the mutated XOR table row (T, T, T).",
+      "reason_B": "Decoder B correctly reconstructed the mutated XOR table row (T, T, T)."
+    },
+    {
+      "mutation_id": "C-M2-target-domain",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly reconstructed the mutated target domain {F}.",
+      "reason_B": "Decoder B correctly reconstructed the mutated target domain {F}."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}
