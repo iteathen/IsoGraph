@@ -152,6 +152,28 @@ The evidence chain remains intentionally preserved rather than rewritten: earlie
 DP remains discovery/search guidance, not semantic proof authority.
 
 DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision recorded in the authority manifest.
+### DP 0.8 successor candidate — unqualified
+
+`extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CANDIDATE.md` is the current unqualified successor draft.
+
+It adds discovery guidance for:
+
+- stronger implicit-assertion search over logical dependence such as exclusion, exhaustiveness, partitions, residual classes, implication, and necessary/sufficient conditions;
+- objective-scoped support cones;
+- minimal versus minimum sufficient support;
+- counterfactual removal/substitution;
+- consumer-scope sufficiency rather than component-local necessity;
+- preservation of alternative sufficient topologies;
+- application-defined Discovery Valuation Profiles;
+- multi-objective/non-dominated alternatives when no preference ordering is supplied;
+- implementation/cost optimization as one possible Discovery Protocol application rather than a universal IsoGraph value system.
+
+Its optional companion, `research/discovery/LOGIC_LENS_FOR_IMPLICIT_ASSERTION_DISCOVERY_0_1.md`, is explicitly non-authoritative. It refreshes reasoning patterns but cannot supply premises or semantic authority.
+
+Qualification is planned in `qualification/DISCOVERY_PROTOCOLS_0_8_QUALIFICATION_PLAN.md`.
+
+**Authority effect:** none until fresh qualification, review, promotion, and any required full-stack integration are complete. Current qualified DP authority remains DP 0.1–0.7.
+
 ### Real-world Discovery Protocol execution evidence
 
 Connect4 authority 1.1 has now run the Discovery Protocols against live cold-reconstruction discrepancies.
