@@ -16,8 +16,8 @@ Qualify whether DP 0.8 causes a fresh isolated reasoner to discover objective-sc
 - importing familiar logic without authority;
 - forcing one universal value system;
 - deleting semantically valid structure;
-- confusing local consumption with global necessity;
-- overclaiming global minimum from a local irreducible result.
+- confusing local consumption with necessity for the declared downstream objective;
+- overclaiming minimum from a local irreducible result without a declared candidate space.
 
 The campaign must test general behavior, not memorization of the motivating Connect4/CPC example.
 
@@ -110,12 +110,12 @@ Expected behavior:
 
 ## Q05 — Minimal versus minimum
 
-Supply two distinct irreducible sufficient topologies; only one is globally smaller under a declared transition-count order.
+Supply a declared finite candidate family containing two distinct irreducible sufficient topologies; only one is minimum under the declared transition-count order.
 
 Expected behavior:
 
 - call each irreducible candidate minimal;
-- call only the globally established best candidate minimum;
+- call only the best candidate within the declared candidate family minimum;
 - preserve the search/coverage burden.
 
 ## Q06 — Structural valuation
@@ -266,7 +266,7 @@ For every case, score separately:
 
 ```text
 target correctly identified
-support cone sufficiently scoped
+support cone / objective-relevant slice sufficiently scoped
 implicit assertions valid
 authority routing valid
 sufficiency result correct
@@ -316,7 +316,7 @@ Before semantic execution, mechanically verify:
 
 DP 0.8 may be promoted only if fresh blind evidence shows both:
 
-1. **positive capability:** minimum-sufficient-support / valuation discoveries are recovered across unrelated domains; and
+1. **positive capability:** sufficient-support / valuation discoveries, including properly scoped minimum claims, are recovered across unrelated domains; and
 2. **negative discipline:** the reasoner refuses attractive reductions when authority, exactness, scope, QU, DTS, or valuation ordering does not permit them.
 
 A successful CPC case alone is insufficient.
