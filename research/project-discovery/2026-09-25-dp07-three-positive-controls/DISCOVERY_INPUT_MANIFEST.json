@@ -1,12 +1,13 @@
 {
   "campaign": "2026-09-25-dp07-three-positive-controls",
-  "status": "BLOCKED_PENDING_EXACT_TRANSLATION_QUALIFICATION",
+  "status": "READY_FOR_BLIND_EXECUTION",
   "branch": "experiment/dp07-three-positive-controls-v1",
   "protocol_under_test": "extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md",
   "discovery_prompt": "research/project-discovery/2026-09-25-dp07-three-positive-controls/BLIND_DISCOVERY_PROMPT.md",
   "authority_inputs": [
     "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
     "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
     "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
     "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md",
     "extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md",
@@ -19,18 +20,18 @@
     "extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md"
   ],
   "discovery_inputs": [
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-01/A.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-01/A.isg",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-01/B.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-01/B.isg",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-02/A.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-02/A.isg",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-02/B.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-02/B.isg",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-03/A.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-03/A.isg",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-03/B.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind/case-03/B.isg"
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-01/A.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-01/A.signature.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-01/B.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-01/B.signature.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-02/A.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-02/A.signature.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-02/B.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-02/B.signature.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-03/A.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-03/A.signature.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-03/B.isg",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/blind-v2/case-03/B.signature.json"
   ],
   "withheld_from_discovery": [
     "research/project-discovery/2026-09-25-dp07-three-positive-controls/oracle/CASE_01_ISING_LATTICE_GAS_ORACLE.md",
@@ -42,7 +43,16 @@
     "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/XOR_SOURCE_FREEZE.md",
     "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-02-xor-gf2/GF2_SOURCE_FREEZE.md",
     "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/NEWTON_SOURCE_FREEZE.md",
-    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/HAMILTON_SOURCE_FREEZE.md"
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/case-03-newton-hamilton/HAMILTON_SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-01A/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-01B/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-02A/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-02B/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-03A/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/case-03B/SOURCE_FREEZE.md",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/OBLIGATIONS.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/COVERAGE_MAP.json",
+    "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/hidden/MUTATIONS.json"
   ],
   "rules": {
     "no_withheld_access_during_discovery": true,
@@ -52,7 +62,24 @@
     "no_global_negative_isomorphism_oracle": true,
     "additional_discoveries_allowed": true
   },
-  "block_reason": "Discovery inputs are not admissible until every source-to-native translation passes Core 0.19 section 18 and ESR 0.1 Q0-Q7.",
+  "block_reason": null,
   "required_translation_contract": "qualification/EXACT_SOURCE_RENDERING_CONTRACT_0_1_CANDIDATE.md",
-  "prior_run_status": "RUN_36213568767_DIAGNOSTIC_ONLY_NOT_CURRENT_DP_EVIDENCE"
+  "prior_run_status": "RUN_36213568767_DIAGNOSTIC_ONLY_NOT_CURRENT_DP_EVIDENCE",
+  "translation_revision": "v2-esr-promoted",
+  "translation_promotion": "research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2/PROMOTION_0_1.json",
+  "translation_promotion_commit": "f13aca1420327d7c1dc9a95ff78df44ffd820170",
+  "unblocked_reason": "All six v2 source-to-native bundles passed ESR 0.1 Q0-Q6 in independent sharded runs and were explicitly Q7-promoted at commit f13aca1420327d7c1dc9a95ff78df44ffd820170.",
+  "exact_translation_gate": {
+    "contract": "qualification/EXACT_SOURCE_RENDERING_CONTRACT_0_1_CANDIDATE.md",
+    "required_disposition": "EXACT_SOURCE_RENDERINGS_QUALIFY",
+    "cases": [
+      "case-01A",
+      "case-01B",
+      "case-02A",
+      "case-02B",
+      "case-03A",
+      "case-03B"
+    ],
+    "all_qualified": true
+  }
 }
