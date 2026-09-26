@@ -1,0 +1,89 @@
+{
+  "case_id": "case-03A",
+  "decoder_A": {
+    "obligations": [
+      {
+        "id": "E1",
+        "pass": true,
+        "reason": "Functions and domains correctly identified."
+      },
+      {
+        "id": "E2",
+        "pass": true,
+        "reason": "Parameters m and k correctly identified as positive reals."
+      },
+      {
+        "id": "E3",
+        "pass": true,
+        "reason": "Derivative relation v(t)=D(q,t) preserved."
+      },
+      {
+        "id": "E4",
+        "pass": true,
+        "reason": "Derivative relation a(t)=D(v,t) preserved."
+      },
+      {
+        "id": "E5",
+        "pass": true,
+        "reason": "Equation m*a(t)+k*q(t)=0 preserved."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "decoder_B": {
+    "obligations": [
+      {
+        "id": "E1",
+        "pass": true,
+        "reason": "Functions and domains correctly identified."
+      },
+      {
+        "id": "E2",
+        "pass": true,
+        "reason": "Parameters m and k correctly identified as positive reals."
+      },
+      {
+        "id": "E3",
+        "pass": true,
+        "reason": "Derivative relation v(t)=D(q,t) preserved."
+      },
+      {
+        "id": "E4",
+        "pass": true,
+        "reason": "Derivative relation a(t)=D(v,t) preserved."
+      },
+      {
+        "id": "E5",
+        "pass": true,
+        "reason": "Equation m*a(t)+k*q(t)=0 preserved."
+      }
+    ],
+    "missing": [],
+    "additions": [],
+    "distortions": [],
+    "ambiguities": [],
+    "exact_same": true
+  },
+  "mutation_controls": [
+    {
+      "mutation_id": "E-M1-rhs",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly reconstructed the RHS as #1.",
+      "reason_B": "Decoder B correctly reconstructed the RHS as #1."
+    },
+    {
+      "mutation_id": "E-M2-derivative",
+      "decoder_A_preserved": true,
+      "decoder_B_preserved": true,
+      "reason_A": "Decoder A correctly reconstructed the mutated derivative relation a(t)=D(q,t).",
+      "reason_B": "Decoder B correctly reconstructed the mutated derivative relation a(t)=D(q,t)."
+    }
+  ],
+  "cross_decoder_consistent": true,
+  "translation_pass": true
+}
