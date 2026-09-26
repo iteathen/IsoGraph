@@ -11,9 +11,13 @@ The accumulated IsoGraph family reference is a final product of the project and 
 
 A change is not operationally complete when it changes the current qualified family, promotion state, integration status, or public authority routing but leaves the accumulated reference stale.
 
-After any change that materially affects the current family, update the maintained DOCX in the same work cycle.
+After any change that materially affects the maintained family surface, update the maintained DOCX in the same branch/work cycle. This includes unqualified successor/candidate family material when repository-facing documentation presents it as part of the current project family, even though the candidate is not yet semantic authority.
 
 Material changes include at least:
+
+- new or revised Core / extension / Discovery Protocol / DTS successor or candidate specifications that are part of the maintained family surface;
+- new or revised qualification plans that materially change the described family/successor state;
+- maintained discovery-reference material that the family document is expected to route or summarize;
 
 - Core qualification or promotion;
 - qualified extension/module qualification or promotion;
@@ -24,6 +28,46 @@ Material changes include at least:
 - authority-manifest changes;
 - repository status/routing changes that change what a reader should treat as current;
 - retirement or replacement of current semantic authority.
+
+## Branch synchronization rule
+
+The repository-root accumulated family reference is a **branch-maintained product**, not a main-only afterthought.
+
+For any branch whose diff against its main merge-base changes a maintained family surface, that branch MUST also change:
+
+`IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx`
+
+in the same branch before the synchronization check may pass.
+
+This rule applies whether the family change is:
+
+```text
+qualified authority
+unqualified successor/candidate specification
+family-facing qualification/routing state
+maintained discovery-family reference
+```
+
+The DOCX must preserve qualification status exactly. Adding an unqualified candidate to the accumulated reference does not promote it.
+
+The synchronization gate is intentionally branch-wide rather than last-commit-only. A branch cannot clear an earlier stale family-spec change by adding an unrelated later commit.
+
+Mechanical enforcement:
+
+- `.github/workflows/family-reference-sync.yml` runs on pushes to every branch and on pull requests;
+- `tools/check-family-reference-sync.mjs` compares the branch against its main/base merge point and requires a changed root DOCX when family-affecting paths changed;
+- normal `Verify` runs the same guard;
+- both CI surfaces also verify the DOCX is a valid ZIP package.
+
+The guard proves that the accumulated product changed with the family surface. It does not prove document semantic completeness or visual quality. Human/agent maintenance still MUST perform the content refresh, render, page-by-page visual QA, and accessibility checks required below.
+
+### Non-triggering work
+
+Not every repository change requires republishing the accumulated family reference. Pure implementation, experiment evidence, test harness, CI plumbing, historical frozen evidence, or unrelated research work does not trigger maintenance unless it changes what the maintained family reference should say.
+
+The CI path matcher is deliberately narrower than the whole repository and should be revised when new maintained family surfaces are introduced.
+
+---
 
 ## Canonical maintained artifact
 
