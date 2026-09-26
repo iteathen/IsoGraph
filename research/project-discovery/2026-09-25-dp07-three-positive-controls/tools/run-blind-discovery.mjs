@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { enforceExactRoleCoverage } from './exact-role-coverage.mjs';
 
 const ROOT='research/project-discovery/2026-09-25-dp07-three-positive-controls';
 const SHA=process.env.GITHUB_SHA;
@@ -173,6 +174,21 @@ catch(e){
   throw e;
 }
 if(!Array.isArray(parsed?.cases)||parsed.cases.length!==3) throw new Error('expected three cases');
+const signaturesByCase=Object.fromEntries(
+  ['case-01','case-02','case-03'].map(caseId=>[
+    caseId,
+    {
+      A:JSON.parse(frozen(`${ROOT}/blind-v2/${caseId}/A.signature.json`)),
+      B:JSON.parse(frozen(`${ROOT}/blind-v2/${caseId}/B.signature.json`))
+    }
+  ])
+);
+enforceExactRoleCoverage({report:parsed,signaturesByCase});
+fs.writeFileSync(`${out}/ROLE_COVERAGE_AUDIT.json`,JSON.stringify({
+  schema:1,
+  disposition:'PASS',
+  exact_cases:parsed.cases.filter(x=>x.disposition==='EXACT_WITNESS').map(x=>x.case_id)
+},null,2)+'\n');
 fs.writeFileSync(`${out}/PARSED_REPORT.json`,JSON.stringify(parsed,null,2)+'\n');
 fs.writeFileSync(`${out}/METADATA.json`,JSON.stringify({...meta,semantic_status:'FROZEN',report_sha256:sha256(raw),finish_reason:data.candidates?.[0]?.finishReason??null,usage:data.usageMetadata??null},null,2)+'\n');
 console.log(JSON.stringify({status:call.status,model:call.model,attempts:call.attempts,packet_sha256:packetHash,report_sha256:sha256(raw)}));
