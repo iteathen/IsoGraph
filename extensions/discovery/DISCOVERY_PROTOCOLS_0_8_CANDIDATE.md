@@ -810,7 +810,7 @@ Before DP 0.8 promotion, fresh qualification should test at least:
 12. **DTS-sensitive sufficiency:** same endpoint does not erase a load-bearing transition difference.
 13. **Implicit-support authority:** a familiar logical inference without represented/pinned authority remains a search lead, not admitted support.
 14. **Logic-lens positive:** with appropriate authority, elementary consequence discovery expands the assertion graph before support minimization.
-15. **No global erasure:** structure removable for one objective remains preserved semantically and available for another objective.
+15. **Objective-scoped preservation:** structure nonessential for sufficiency of one objective remains preserved semantically and available for another objective.
 16. **Minimum-vs-minimal discipline:** a reasoner does not claim minimum from one irreducible candidate without coverage of the declared candidate space.
 17. **Costed optional accelerator:** an optional accelerator is classified by net declared value rather than by mere causal connectedness.
 18. **Real-world blind control:** an exact implementation topology with no optimization hint independently exposes a removable derived/optional path and preserves the original result.
