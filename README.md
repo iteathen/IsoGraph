@@ -37,6 +37,7 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Discovery Protocols 0.1–0.7 Qualification Review — 2026-09-26](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
 - [Current Integrated Semantic Stack with Core 0.19 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
 - [Historical Integrated Semantic Stack with DP 0.7 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
+- [Maintained IsoGraph Family Reference (DOCX)](IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx) — durable accumulated final product stored beside this README; repository semantic authority remains the exact versioned specifications/qualification records.
 
 Core remains distinct from separately versioned qualified extensions.
 
@@ -54,7 +55,7 @@ Current status, design posture, and provenance:
 - [STATUS.md](STATUS.md) — current qualified/candidate authority state;
 - [MIGRATION.md](MIGRATION.md) — repository provenance;
 - [AGENTS.md](AGENTS.md) — agent operating guidance.
-- [FINAL_PRODUCT_MAINTENANCE.md](FINAL_PRODUCT_MAINTENANCE.md) — maintenance contract for the accumulated final-product DOCX.
+- [FINAL_PRODUCT_MAINTENANCE.md](FINAL_PRODUCT_MAINTENANCE.md) — maintenance contract for the repository-root accumulated final-product DOCX and its Library publication mirror.
 
 The design doctrine does not override the versioned semantic specifications. It explains why the specifications preserve scope, residuals, unknown structure, and revision-scoped evidence.
 
