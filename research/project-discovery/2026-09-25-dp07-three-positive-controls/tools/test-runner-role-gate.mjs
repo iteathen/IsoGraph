@@ -15,6 +15,9 @@ assert.match(prompt,/every used signature symbol/i,'blind prompt must require ev
 assert.match(runner,/exact-role-coverage\.mjs/,'runner must import the exact role coverage gate');
 assert.match(runner,/enforceExactRoleCoverage\s*\(/,'runner must enforce exact role coverage');
 
+assert.match(runner,/nativeA\s*:/,'runner must supply side-A frozen native text to the role coverage gate');
+assert.match(runner,/nativeB\s*:/,'runner must supply side-B frozen native text to the role coverage gate');
+
 const enforceAt=runner.indexOf('enforceExactRoleCoverage(');
 const parsedWriteAt=runner.indexOf("fs.writeFileSync(`${out}/PARSED_REPORT.json`");
 assert.ok(enforceAt>=0,'runner enforcement call missing');
