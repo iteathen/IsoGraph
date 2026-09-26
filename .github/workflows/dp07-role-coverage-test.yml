@@ -1,0 +1,24 @@
+name: DP07 exact role coverage test
+
+on:
+  push:
+    branches:
+      - experiment/dp07-three-positive-controls-v1
+    paths:
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-exact-role-coverage.mjs
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/exact-role-coverage.mjs
+
+permissions:
+  contents: read
+
+jobs:
+  role-coverage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Test exact-witness role coverage gate
+        run: node research/project-discovery/2026-09-25-dp07-three-positive-controls/tools/test-exact-role-coverage.mjs
