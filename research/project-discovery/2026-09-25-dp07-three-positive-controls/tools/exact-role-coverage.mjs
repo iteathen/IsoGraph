@@ -12,7 +12,7 @@ function symbols(signature){
 
 function references(signature,native){
   const refs=new Set(symbols(signature));
-  for(const match of String(native||'').matchAll(/#-?\\d+/g)) refs.add(match[0]);
+  for(const match of String(native||'').matchAll(/#-?\d+/g)) refs.add(match[0]);
   return refs;
 }
 
