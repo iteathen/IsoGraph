@@ -70,6 +70,8 @@ jobs:
           git add "$E"
           if ! git diff --cached --quiet; then
             git commit -m "evidence: DP07 translation v2 qualification run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/dp07-three-positive-controls-v1
+            git rebase origin/experiment/dp07-three-positive-controls-v1
             git push origin HEAD:experiment/dp07-three-positive-controls-v1
           fi
       - name: Enforce translation qualification
