@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "profile": "research/rendering-modernization/2026-09-26/RENDERING_MODERNIZATION_PROFILE_0_1.md",
+  "cases": [
+    {
+      "id": "navier-dp08-support-0.1",
+      "native": "research/navier-stokes-proof/DP_DISCOVERY_0_3_SUFFICIENCY.isg",
+      "signature": "research/navier-stokes-proof/DP_DISCOVERY_0_3_SUFFICIENCY_SIGNATURE.json",
+      "predecessor": "research/navier-stokes-proof/DP_DISCOVERY_0_2_FRESH.isg",
+      "derived_from": [
+        "research/navier-stokes-proof/REDUCED_FORMULA_0_2.isg",
+        "research/navier-stokes-proof/S0_4_ATOMIC_MINIMALITY.isg",
+        "research/navier-stokes-proof/S0_5_GENERATOR_CLOSURE.isg",
+        "research/navier-stokes-proof/STANDARD_PHYSICAL_EQUIVALENCE_0_1.isg"
+      ],
+      "obligations": {
+        "declared_targets": ["^79602", "13100", "13101"],
+        "objective_target_set": ["^79611", "13100", "13101"],
+        "rf_candidate_space": ["^79603", "13200", "14001", "14008"],
+        "rf_deletion_witnesses": ["^79607", "14001", "14008"],
+        "rf_minimal_not_minimum": ["^79608", "13200", "13300", "^79609", "13301"],
+        "s04_candidate_space": ["^79603", "13201", "15000", "15024"],
+        "s04_deletion_witnesses": ["^79607", "15000", "15024"],
+        "s04_minimal_not_minimum": ["^79608", "13201", "13300", "^79609", "13301"],
+        "s05_refinement": ["^79613", "13004", "13003"],
+        "valuation_not_supplied": ["^79610", "13302"]
+      }
+    }
+  ]
+}
