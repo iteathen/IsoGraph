@@ -25,10 +25,24 @@ jobs:
           STAGE=".artifact-staging/family-reference"
           OUT="IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx"
 
-          count=$(find "$STAGE" -maxdepth 1 -type f -name 'chunk-*.b64' | wc -l)
-          test "$count" -eq 10
-
-          cat "$STAGE"/chunk-00.b64               "$STAGE"/chunk-01.b64               "$STAGE"/chunk-02.b64               "$STAGE"/chunk-03.b64               "$STAGE"/chunk-04.b64               "$STAGE"/chunk-05.b64               "$STAGE"/chunk-06.b64               "$STAGE"/chunk-07.b64               "$STAGE"/chunk-08.b64               "$STAGE"/chunk-09.b64 > /tmp/family-reference.b64
+          cat \
+            "$STAGE/chunk-00.b64" \
+            "$STAGE/chunk-01.b64" \
+            "$STAGE/chunk-02.b64" \
+            "$STAGE/chunk-03.b64" \
+            "$STAGE/chunk-04a.b64" \
+            "$STAGE/chunk-04b0.b64" \
+            "$STAGE/chunk-04b10.b64" \
+            "$STAGE/chunk-04b110.b64" \
+            "$STAGE/chunk-04b1110.b64" \
+            "$STAGE/chunk-04b1111.b64" \
+            "$STAGE/chunk-05.b64" \
+            "$STAGE/chunk-06a.b64" \
+            "$STAGE/chunk-06b.b64" \
+            "$STAGE/chunk-07a.b64" \
+            "$STAGE/chunk-07b.b64" \
+            "$STAGE/chunk-08.b64" \
+            "$STAGE/chunk-09.b64" > /tmp/family-reference.b64
 
           test "$(wc -c < /tmp/family-reference.b64)" -eq 77584
           base64 -d /tmp/family-reference.b64 > "$OUT"
