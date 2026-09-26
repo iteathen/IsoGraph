@@ -5,8 +5,12 @@ import { execFileSync } from 'node:child_process';
 const ROOT='research/project-discovery/2026-09-25-dp07-three-positive-controls/translation-v2';
 const OUT='out/translation-v2';
 const SHA=process.env.GITHUB_SHA;
-const MODEL=process.env.GEMINI_MODEL||'gemini-3.5-flash';
+const MODEL=process.env.GEMINI_MODEL||'gemini-3.8-flash';
+const FALLBACK_MODELS=(process.env.GEMINI_FALLBACK_MODELS||'').split(',').map(x=>x.trim()).filter(Boolean);
+const MODEL_CANDIDATES=[...new Set([MODEL,...FALLBACK_MODELS])];
 const KEY=process.env.GEMINI_API_KEY;
+const disabledModels=new Map();
+const providerCalls=[];
 const DRY=process.env.ISOGRAPH_COLD_DRY_RUN==='1';
 if(!SHA)throw new Error('GITHUB_SHA unavailable');
 if(!DRY&&!KEY)throw new Error('GEMINI_API_KEY unavailable');
@@ -29,45 +33,70 @@ function exactOneReplace(native,from,to,id){
   return changed;
 }
 
-async function callGemini(packet,temp=0.05){
-  const request={
-    contents:[{role:'user',parts:[{text:packet}]}],
-    generationConfig:{
-      candidateCount:1,
-      maxOutputTokens:24000,
-      temperature:temp,
-      responseMimeType:'application/json',
-      thinkingConfig:{thinkingLevel:'HIGH'}
-    }
-  };
-  const url=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
-  let status=0,txt='',attempts=0;
-  for(let i=0;i<8;i++){
-    attempts=i+1;
-    const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify(request)});
-    status=r.status;txt=await r.text();
-    if(r.ok)break;
-    if(status===429 && i<7){
-      let retryMs=12000;
+async function callGemini(packet,temp=0.05,label='unlabeled'){
+  const failures=[];
+  for(const model of MODEL_CANDIDATES){
+    if(disabledModels.has(model)) continue;
+    let useThinking=!model.includes('flash-lite');
+    for(let i=0;i<2;i++){
+      const generationConfig={
+        candidateCount:1,
+        maxOutputTokens:24000,
+        temperature:temp,
+        responseMimeType:'application/json'
+      };
+      if(useThinking) generationConfig.thinkingConfig={thinkingLevel:'HIGH'};
+      const request={contents:[{role:'user',parts:[{text:packet}]}],generationConfig};
+      const url=`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+      let r,txt='';
       try{
-        const m=txt.match(/retry in ([0-9.]+)s/i);
-        if(m) retryMs=Math.max(retryMs,Math.ceil(Number(m[1])*1000)+3000);
-      }catch{}
-      await new Promise(x=>setTimeout(x,retryMs));
-      continue;
+        r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify(request)});
+        txt=await r.text();
+      }catch(error){
+        failures.push({model,status:null,error:String(error)});
+        if(i===0){await new Promise(x=>setTimeout(x,8000));continue;}
+        disabledModels.set(model,'network_error');
+        break;
+      }
+
+      if(r.ok){
+        let data,raw,parsed;
+        try{
+          data=JSON.parse(txt);
+          raw=(data.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
+          parsed=JSON.parse(raw);
+        }catch(error){
+          failures.push({model,status:r.status,error:'malformed_json',detail:String(error)});
+          if(i===0) continue;
+          disabledModels.set(model,'malformed_json');
+          break;
+        }
+        const call={label,model,status:r.status,attempt:i+1,thinking:useThinking,usage:data.usageMetadata??null};
+        providerCalls.push(call);
+        return {parsed,raw,status:r.status,attempts:i+1,usage:data.usageMetadata??null,model,thinking:useThinking};
+      }
+
+      const brief=txt.slice(0,500);
+      failures.push({model,status:r.status,body_prefix:brief});
+      if(r.status===400 && useThinking && /thinking/i.test(txt)){
+        useThinking=false;
+        i--;
+        continue;
+      }
+      if(r.status===429 || r.status===404){
+        disabledModels.set(model,'http_'+r.status);
+        break;
+      }
+      if([500,502,503,504].includes(r.status)){
+        if(i===0){await new Promise(x=>setTimeout(x,12000));continue;}
+        disabledModels.set(model,'http_'+r.status);
+        break;
+      }
+      disabledModels.set(model,'http_'+r.status);
+      break;
     }
-    if([500,502,503,504].includes(status)&&i<7){
-      await new Promise(x=>setTimeout(x,15000*(i+1)));
-      continue;
-    }
-    break;
   }
-  if(!(status>=200&&status<300))throw new Error('Gemini HTTP '+status+' '+txt.slice(0,500));
-  const data=JSON.parse(txt);
-  const raw=(data.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();
-  let parsed;
-  try{parsed=JSON.parse(raw);}catch(e){throw new Error('Malformed JSON output: '+raw.slice(0,800));}
-  return {parsed,raw,status,attempts,usage:data.usageMetadata??null};
+  throw new Error('All Gemini model candidates unavailable for '+label+': '+JSON.stringify(failures).slice(0,3000));
 }
 
 fs.mkdirSync(OUT,{recursive:true});
@@ -110,6 +139,7 @@ const dry={
   contract:'ESR-0.1',
   sha:SHA,
   model:MODEL,
+  model_candidates:MODEL_CANDIDATES,
   cases:CASES,
   input_manifest:dryManifest,
   oracle_paths:[`${ROOT}/hidden/OBLIGATIONS.json`,`${ROOT}/hidden/MUTATIONS.json`],
@@ -141,14 +171,14 @@ for(const id of CASES){
   mutationMap[id]=variants.map(v=>({variant_id:v.variant_id,mutation_id:v.mutation_id,description:v.description}));
 
   const variantText=variants.map(v=>`===== BEGIN ${v.variant_id.toUpperCase()} NATIVE =====\n${v.native}\n===== END ${v.variant_id.toUpperCase()} NATIVE =====`).join('\n\n');
-  const packet=`ISOGRAPH EXACT SOURCE-RENDERING COLD RECONSTRUCTION\nCASE ID: ${id}\nFROZEN SHA: ${SHA}\nMODEL: ${MODEL}\n\n${authorityPacket}\n\n===== BEGIN GLOSS-ONLY SIGNATURE =====\n${signature}\n===== END SIGNATURE =====\n\n===== BEGIN BASE NATIVE =====\n${native}\n===== END BASE NATIVE =====\n\n${variantText}\n\n===== BEGIN GOVERNING COLD PROMPT =====\n${coldPrompt}\n===== END GOVERNING COLD PROMPT =====`;
+  const packet=`ISOGRAPH EXACT SOURCE-RENDERING COLD RECONSTRUCTION\nCASE ID: ${id}\nFROZEN SHA: ${SHA}\n\n${authorityPacket}\n\n===== BEGIN GLOSS-ONLY SIGNATURE =====\n${signature}\n===== END SIGNATURE =====\n\n===== BEGIN BASE NATIVE =====\n${native}\n===== END BASE NATIVE =====\n\n${variantText}\n\n===== BEGIN GOVERNING COLD PROMPT =====\n${coldPrompt}\n===== END GOVERNING COLD PROMPT =====`;
 
   const packetHash=hash(packet);
   fs.writeFileSync(`${OUT}/${id}-PACKET.sha256`,packetHash+'\n');
 
-  const A=await callGemini(packet,0.02);
+  const A=await callGemini(packet,0.02,`${id}:decoder_A`);
   await new Promise(x=>setTimeout(x,2500));
-  const B=await callGemini(packet,0.18);
+  const B=await callGemini(packet,0.18,`${id}:decoder_B`);
   await new Promise(x=>setTimeout(x,2500));
 
   fs.writeFileSync(`${OUT}/${id}-DECODER-A.json`,JSON.stringify(A.parsed,null,2)+'\n');
@@ -156,13 +186,14 @@ for(const id of CASES){
   decodeResults[id]={
     packet_sha256:packetHash,
     A:A.parsed,B:B.parsed,
-    A_meta:{attempts:A.attempts,usage:A.usage},
-    B_meta:{attempts:B.attempts,usage:B.usage}
+    A_meta:{model:A.model,thinking:A.thinking,attempts:A.attempts,usage:A.usage},
+    B_meta:{model:B.model,thinking:B.thinking,attempts:B.attempts,usage:B.usage}
   };
 }
 fs.writeFileSync(`${OUT}/MUTATION_MAP.json`,JSON.stringify(mutationMap,null,2)+'\n');
 
 const verifications={};
+const verificationMeta={};
 for(const id of CASES){
   const source=frozen(`${ROOT}/${id}/SOURCE_FREEZE.md`);
   const obs=obligations.cases[id];
@@ -170,10 +201,11 @@ for(const id of CASES){
   const muts=mutationMap[id];
   const packet=`ISOGRAPH EXACT SOURCE-RENDERING SAMENESS VERIFICATION\nCASE ID: ${id}\nFROZEN SHA: ${SHA}\n\n===== EXACT RENDERING CONTRACT =====\n${contract}\n===== END CONTRACT =====\n\n===== FROZEN SOURCE =====\n${source}\n===== END SOURCE =====\n\n===== BASE SOURCE OBLIGATIONS =====\n${JSON.stringify(obs,null,2)}\n===== END OBLIGATIONS =====\n\n===== MUTATION SCORER MAP =====\n${JSON.stringify(muts,null,2)}\n===== END MUTATION SCORER MAP =====\n\n===== DECODER A =====\n${JSON.stringify(d.A,null,2)}\n===== END DECODER A =====\n\n===== DECODER B =====\n${JSON.stringify(d.B,null,2)}\n===== END DECODER B =====\n\n===== VERIFIER PROMPT =====\n${verifierPrompt}\n===== END VERIFIER PROMPT =====`;
 
-  const V=await callGemini(packet,0.0);
+  const V=await callGemini(packet,0.0,`${id}:verifier`);
   await new Promise(x=>setTimeout(x,2500));
   fs.writeFileSync(`${OUT}/${id}-VERIFIER.json`,JSON.stringify(V.parsed,null,2)+'\n');
   verifications[id]=V.parsed;
+  verificationMeta[id]={model:V.model,thinking:V.thinking,attempts:V.attempts,usage:V.usage};
 }
 
 function exactBaseDecoder(x,expected){
@@ -228,7 +260,10 @@ const score={
 };
 fs.writeFileSync(`${OUT}/SCORE.json`,JSON.stringify(score,null,2)+'\n');
 fs.writeFileSync(`${OUT}/METADATA.json`,JSON.stringify({
-  schema:2,sha:SHA,model:MODEL,contract:'ESR-0.1',
+  schema:2,sha:SHA,model:MODEL,model_candidates:MODEL_CANDIDATES,contract:'ESR-0.1',
+  provider_calls:providerCalls,
+  disabled_models:Object.fromEntries(disabledModels),
+  verification_meta:verificationMeta,
   authority_hashes:Object.fromEntries(authorities.map(x=>[x.path,hash(x.text)])),
   contract_sha256:hash(contract),
   coverage_map_sha256:hash(JSON.stringify(coverage)),
