@@ -18,7 +18,7 @@ const inputs=[
 ];
 const promptPath='experiments/030/COLD_PROMPT.md';
 const CORE_HASH='8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2';
-const forbidden=['experiments/030/hidden/','ASSERTIONS','score-exp030','experiment/029/evidence','C25_CONTRACT_DIAGNOSTIC','STATUS.md','AGENTS.md','README.md'];
+const forbidden=['experiments/030/hidden/','experiments/030/hidden/ASSERTIONS.json','score-exp030','experiment/029/evidence','C25_CONTRACT_DIAGNOSTIC','STATUS.md','AGENTS.md','README.md'];
 
 function frozen(p){return execFileSync('git',['show',SHA+':'+p],{encoding:'utf8',maxBuffer:128*1024*1024});}
 function sha256(v){return crypto.createHash('sha256').update(v).digest('hex');}
