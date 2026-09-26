@@ -19,7 +19,7 @@ The governing sequence is:
 ```text
 represent faithfully
 -> expose explicit and valid implicit structure
--> declare the target conclusion / observable
+-> declare the target conclusion / observable set
 -> discover sufficient support
 -> preserve alternative sufficient topologies
 -> apply an explicit valuation profile if selection is desired
@@ -179,7 +179,7 @@ Minimum-sufficient-support analysis is objective-scoped.
 Before claiming that structure is necessary, unnecessary, substitutable, dominated, or preferable, record enough context to identify:
 
 ```text
-target conclusion / observable
+target conclusion / observable set
 fixed inputs / admissible input domain
 semantic scope
 declared authority envelope
@@ -201,7 +201,7 @@ If the application objective is a downstream result, discovery must follow enoug
 
 # 4. Support cone and objective-relevant analysis slice
 
-For a declared target `O`, the **support cone** is the upstream represented dependency/support structure that may contribute to establishing `O` under the declared objective context.
+For a declared target `O` (which may be one conclusion/observable or a required set of them), the **support cone** is the upstream represented dependency/support structure that may contribute to establishing `O` under the declared objective context.
 
 It may include:
 
@@ -335,8 +335,8 @@ Possible dispositions include:
 LOAD_BEARING
     removal breaks sufficiency
 
-REMOVABLE_FOR_OBJECTIVE
-    removal preserves sufficiency
+NONESSENTIAL_FOR_SUFFICIENCY
+    removal preserves sufficiency for the declared target
 
 SUBSTITUTABLE
     another qualified support replaces X
@@ -345,7 +345,7 @@ UNRESOLVED
     available authority / QU / search coverage is insufficient
 ```
 
-A `REMOVABLE_FOR_OBJECTIVE` result means only:
+A `NONESSENTIAL_FOR_SUFFICIENCY` result means only:
 
 ```text
 X contributes no unique necessity
@@ -358,8 +358,11 @@ It does not mean:
 X is false
 X is meaningless
 X should be deleted from Core representation
+X should be omitted from the implementation
 X is globally unnecessary
 ```
+
+Whether a nonessential support should actually be omitted, retained, cached, precomputed, or derived on demand is a later valuation question.
 
 Counterfactual tests SHOULD preserve provenance and the exact transformation/removal being tested.
 
@@ -436,7 +439,7 @@ DP 0.8 permits an application to declare how established sufficient alternatives
 A **Discovery Valuation Profile** should identify, as applicable:
 
 ```text
-target conclusion / observable
+target conclusion / observable set
 hard invariants
 admissible transformations
 valuation dimensions
@@ -727,7 +730,7 @@ classification with represented exclusion/exhaustiveness
 repeated bound computation whose consumer already has exact closure
 duplicate support paths
 expensive optional accelerator
-large support cone with compact observable
+large support cone with a compact declared target
 one value affecting only a preference rather than correctness
 one component output consumed locally but bypassable globally
 ```
@@ -770,10 +773,10 @@ partition/exclusion authority missing
 QU dependency omitted
 DTS dependency omitted
 identity assumption imported
-candidate removal changes result
-candidate removal changes scope
-candidate removal changes precision/modality
-candidate removal changes admissible input domain
+candidate omission changes result
+candidate omission changes scope
+candidate omission changes precision/modality
+candidate omission changes admissible input domain
 candidate substitution changes externally visible behavior
 valuation dimension undefined
 valuation evidence / derivation method missing
