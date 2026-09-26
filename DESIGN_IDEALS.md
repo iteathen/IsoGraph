@@ -317,6 +317,47 @@ Compression, coarseness, elegance, or symmetry never supplies missing evidence f
 
 ---
 
+# 8A. Representation minimality and support minimality are different
+
+IsoGraph has two different places where "minimal" can matter.
+
+Core representation seeks the lowest primitive information structure sufficient to preserve the represented meaning and expose load-bearing patterns.
+
+Discovery may later ask a different question:
+
+```text
+given a declared conclusion / observable,
+what represented support is actually necessary
+to establish that same conclusion?
+```
+
+These must not be collapsed.
+
+```text
+minimal primitive representation
+    !=
+minimum sufficient support for one objective
+```
+
+A fact may belong in the semantic representation even when one application does not need to execute, carry, or independently recompute that fact.
+
+Likewise, a smaller execution/support topology is useful only when it preserves the declared inputs, semantics, scope, precision, unresolved-state obligations, and externally required result.
+
+The design posture is therefore:
+
+```text
+represent minimally
+preserve completely
+discover freely
+use only what is necessary for the declared objective
+```
+
+What counts as "better" among sufficient alternatives is application-dependent. Time, CPU cycles, memory, material, transition count, proof burden, reliability, energy, risk, information gain, or another quantity may matter. IsoGraph should not invent a universal optimization currency.
+
+When no supplied value system ranks two sufficient alternatives, preserve the incomparability rather than manufacturing a preference.
+
+---
+
 # 9. Hidden distinction and hidden equivalence are dual discoveries
 
 A discrepancy may reveal either direction.
