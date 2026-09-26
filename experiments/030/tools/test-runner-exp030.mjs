@@ -28,3 +28,8 @@ for(const item of forbidden){
 
 fs.rmSync(OUT,{recursive:true,force:true});
 console.log('Experiment 030 runner dry-run self-test PASS');
+
+const runnerText=fs.readFileSync(path.join(ROOT,'experiments','030','tools','run-exp030-cold.mjs'),'utf8');
+const budgetMatch=runnerText.match(/maxOutputTokens:(\d+)/);
+if(!budgetMatch||Number(budgetMatch[1])<16384) throw new Error('semantic output budget must be at least 16384');
+console.log('Experiment 030 output-budget guard PASS');
