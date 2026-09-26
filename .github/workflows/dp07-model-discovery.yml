@@ -1,0 +1,51 @@
+name: DP07 Gemini model inventory
+
+on:
+  push:
+    branches:
+      - experiment/dp07-three-positive-controls-v1
+    paths:
+      - research/project-discovery/2026-09-25-dp07-three-positive-controls/MODEL_DISCOVERY.request
+
+permissions:
+  contents: read
+
+jobs:
+  list-models:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: List generateContent-capable Gemini models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "${GEMINI_API_KEY:-}"
+          node <<'NODE'
+          const key=process.env.GEMINI_API_KEY;
+          let pageToken='';
+          const models=[];
+          do {
+            const u=new URL('https://generativelanguage.googleapis.com/v1beta/models');
+            u.searchParams.set('pageSize','1000');
+            if(pageToken) u.searchParams.set('pageToken',pageToken);
+            const r=await fetch(u,{headers:{'x-goog-api-key':key}});
+            const txt=await r.text();
+            if(!r.ok){console.error(txt);process.exit(1);}
+            const data=JSON.parse(txt);
+            for(const m of data.models||[]){
+              if((m.supportedGenerationMethods||[]).includes('generateContent')){
+                models.push({
+                  name:(m.name||'').replace(/^models\//,''),
+                  displayName:m.displayName,
+                  inputTokenLimit:m.inputTokenLimit,
+                  outputTokenLimit:m.outputTokenLimit,
+                  methods:m.supportedGenerationMethods
+                });
+              }
+            }
+            pageToken=data.nextPageToken||'';
+          } while(pageToken);
+          models.sort((a,b)=>a.name.localeCompare(b.name));
+          console.log(JSON.stringify({count:models.length,models},null,2));
+          NODE
