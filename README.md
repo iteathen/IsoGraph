@@ -53,6 +53,7 @@ Current status, design posture, and provenance:
 - [STATUS.md](STATUS.md) — current qualified/candidate authority state;
 - [MIGRATION.md](MIGRATION.md) — repository provenance;
 - [AGENTS.md](AGENTS.md) — agent operating guidance.
+- [FINAL_PRODUCT_MAINTENANCE.md](FINAL_PRODUCT_MAINTENANCE.md) — maintenance contract for the accumulated final-product DOCX.
 
 The design doctrine does not override the versioned semantic specifications. It explains why the specifications preserve scope, residuals, unknown structure, and revision-scoped evidence.
 
