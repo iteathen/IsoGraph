@@ -109,6 +109,12 @@ for(const c of promotion.cases){
 }
 
 const authority=manifest.authority_inputs||[];
+const transformationAuthorityPath=manifest.transformation_semantic_authority;
+if(!transformationAuthorityPath) throw new Error('missing transformation semantic authority');
+if(!authority.includes(transformationAuthorityPath)) throw new Error('transformation semantic authority not in authority_inputs');
+if(manifest.transformation_semantic_authority_status!=='FROZEN_STIPULATED_EXPERIMENT_AUTHORITY') throw new Error('transformation semantic authority status invalid');
+if(manifest.transformation_semantic_authority_blob_sha!==blobSha(transformationAuthorityPath)) throw new Error('transformation semantic authority blob mismatch');
+if(manifest.exact_discovery_law_provenance_required!==true) throw new Error('exact discovery law provenance gate disabled');
 const inputs=manifest.discovery_inputs||[];
 const withheld=new Set(manifest.withheld_from_discovery||[]);
 if(inputs.length!==12) throw new Error('expected exactly 12 anonymous discovery inputs');
@@ -148,7 +154,7 @@ const out='out/dp07-positive-controls';
 fs.mkdirSync(out,{recursive:true});
 fs.writeFileSync(`${out}/PACKET.txt`,packet);
 fs.writeFileSync(`${out}/INPUT_MANIFEST.json`,JSON.stringify(packetManifest,null,2)+'\n');
-const baseMeta={campaign:manifest.campaign,model_requested:MODEL,model_candidates:MODEL_CANDIDATES,frozen_sha:SHA,translation_promotion_commit:manifest.translation_promotion_commit,packet_sha256:packetHash,input_manifest:packetManifest};
+const baseMeta={campaign:manifest.campaign,model_requested:MODEL,model_candidates:MODEL_CANDIDATES,frozen_sha:SHA,translation_promotion_commit:manifest.translation_promotion_commit,transformation_semantic_authority:transformationAuthorityPath,transformation_semantic_authority_blob_sha:manifest.transformation_semantic_authority_blob_sha,exact_discovery_law_provenance_required:true,packet_sha256:packetHash,input_manifest:packetManifest};
 if(DRY){
   fs.writeFileSync(`${out}/DRY_RUN.json`,JSON.stringify({...baseMeta,dry_run:true},null,2)+'\n');
   console.log(JSON.stringify({dry_run:true,packet_sha256:packetHash,files:packetManifest.length}));
