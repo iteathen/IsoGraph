@@ -1,0 +1,124 @@
+{
+  "cases": [
+    {
+      "case_id": "F01",
+      "answers": {
+        "direct_conflict": false,
+        "preserve_both_explicit_support": true,
+        "repair_required": false
+      },
+      "reason": "Quantity alignment precedes value comparison.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md Section 2"
+      ]
+    },
+    {
+      "case_id": "F02",
+      "answers": {
+        "exact_implicit_support": true,
+        "provenance_required": true,
+        "becomes_source_explicit": false
+      },
+      "reason": "Implicit support is discovered, not supplied.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.9"
+      ]
+    },
+    {
+      "case_id": "F03",
+      "answers": {
+        "implicit_support_admissible": false,
+        "familiar_knowledge_can_fill_gap": false,
+        "discovery_hypothesis_may_remain": true
+      },
+      "reason": "No hidden premises allowed in exact support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.2",
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "F04",
+      "answers": {
+        "both_support_paths_retained": true,
+        "truth_amplified_by_count": false,
+        "provenance_paths_distinct": true
+      },
+      "reason": "Explicit and implicit provenance remain distinct.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.9",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.4"
+      ]
+    },
+    {
+      "case_id": "F05",
+      "answers": {
+        "b_supported": true,
+        "c_supported": true,
+        "cycle_invalidates_all": false
+      },
+      "reason": "Grounded cycles are valid in assertion structure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.6"
+      ]
+    },
+    {
+      "case_id": "F06",
+      "answers": {
+        "b_supported": false,
+        "c_supported": false,
+        "self_support_manufactures_validity": false
+      },
+      "reason": "Ungrounded cycles cannot manufacture validity.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.6"
+      ]
+    },
+    {
+      "case_id": "F07",
+      "answers": {
+        "exact_support": true,
+        "depth_weakens_exactness": false,
+        "lineage_must_remain": true
+      },
+      "reason": "Derivation depth does not weaken exactness.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 7"
+      ]
+    },
+    {
+      "case_id": "F08",
+      "answers": {
+        "procedure_may_stop": true,
+        "universal_closure_proved": false,
+        "undiscovered_derivation_impossible": false
+      },
+      "reason": "Operational fixed point is not universal closure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.11"
+      ]
+    },
+    {
+      "case_id": "F09",
+      "answers": {
+        "exact_implicit_support": true,
+        "qu_must_be_erased": false,
+        "qu_provenance_required": true
+      },
+      "reason": "QU provenance remains part of support lineage.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 5",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.7"
+      ]
+    },
+    {
+      "case_id": "F10",
+      "answers": {
+        "exact_support": false,
+        "qu_claim_status": "UNRESOLVED",
+        "target_may_restrict_qu": false
+      },
+      "reason": "Unresolved realizations block exact support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19

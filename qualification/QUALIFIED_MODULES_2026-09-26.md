@@ -107,41 +107,35 @@ DTS 0.1 is a separately versioned qualified extension. It does not become Core. 
 
 ## Integrated current-stack qualification
 
-The latest fully integration-qualified composition remains revision-scoped to:
+The latest fully integration-qualified composition is now revision-scoped to:
 
 ```text
-Core 0.17 + Core 0.18
+Core 0.17 + Core 0.18 + Core 0.19
 + QU 0.1
 + NEI 0.4
 + DP 0.1–0.7
 + DTS 0.1
 ```
 
-Core 0.19 is independently module-qualified by Experiments 029/030 and is now current Core authority. This manifest does not silently rewrite the earlier full-stack integration record to include Core 0.19.
+Experiment 031 directly qualifies this exact composition for the exercised dependency-closed scope.
 
-It is qualified for the exercised dependency-closed scope by:
+Experiment 031:
 
-1. Experiment 027 as the immutable full-stack predecessor for DP 0.1–0.6 + DTS 0.1;
-2. the DP 0.7 three-positive-control campaign for fresh primitive-first/exact-witness evidence;
-3. Experiment 028 as the fresh focused successor delta exercising every remaining DP 0.7 qualification target, including QU-, DTS-, and NEI-sensitive interactions.
-
-Experiment 028:
-
-- frozen SHA: `18b8a0ed79b886be976ef12fef698da44b5874e7`;
-- workflow run: `36231568578`;
-- evidence commit: `647455182a86c6a7b8b0aea524a0f96aaaeeb791`;
-- 13 / 13 cases PASS;
+- workflow run: `36256020851`;
+- frozen execution SHA: `cd5d3b9f0281ba2bf222e4c2541f90ab4c4dac7b`;
+- evidence commit: `8091d5ae4e7a184461b53caebd8352bc24c67de7`;
+- 32 / 32 cases PASS;
 - zero mismatches;
 - all scoring guards true;
-- module assessment: `SUPPORTED`;
+- all module assessments `SUPPORTED`;
 - formal disposition: `QUALIFIES`;
-- packet SHA-256: `862d76a4e0790d3ec0395557502dc8e9c8a2cbd78d925a3850e271702ef06f07`;
-- report SHA-256: `439dc0d0b3e18c41b57a154574cb08961b5607922cc24d276819e3acbde5af2e`;
-- authority record: `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`.
+- packet SHA-256: `61e5d852f59566c8499c4b47d794083fc455ff9444d8496fb5c21c1d448b7c74`;
+- report SHA-256: `f31b82de5cc10259c8548b204f936a5544ee1e1053dcf400faf7c9521cbe0c53`;
+- authority record: `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md`.
 
-Experiment 027 and `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md` remain immutable predecessor integration records.
+The previous Core-0.18 full-stack record in `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md` remains immutable predecessor evidence. Experiment 031 does not rewrite Experiments 027–030 or their historical dispositions.
 
-This establishes compatibility for the exercised current composition. It is not a universal completeness claim.
+This establishes compatibility for the exercised exact current composition. It is not a universal completeness claim.
 
 ## Qualified infrastructure
 

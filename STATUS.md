@@ -30,7 +30,7 @@ Current qualified extension/module authority is recorded in:
 
 - `qualification/QUALIFIED_MODULES_2026-09-26.md`
 
-The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-26 manifest routes Core 0.18, Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 at their exact qualified revisions. The latest fully integration-qualified composition remains revision-scoped to Core 0.18 in `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`; Core 0.19 is independently module-qualified and is not silently added to that historical integration result.
+The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-26 manifest routes Core 0.18, Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 at their exact qualified revisions. Experiment 031 now directly qualifies the exact current composition including Core 0.19; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md`. The earlier Core-0.18 integration record remains immutable predecessor evidence.
 
 Current semantic extensions/modules include:
 
@@ -47,7 +47,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is qualified at its exact tested bytes by Experiment 026 and `qualification/DTS_0_1_QUALIFICATION.md`.
 
-The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The current expanded composition including DTS and DP 0.7 is integration-qualified for the exercised dependency-closed scope by the Experiment 027 predecessor plus Experiment 028 successor delta.
+The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The exact current expanded composition including Core 0.19, DTS 0.1, and DP 0.7 is directly integration-qualified for the exercised dependency-closed scope by Experiment 031.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
@@ -169,37 +169,47 @@ This is **development evidence**, not fresh qualification. It should inform inde
 The latest fully integration-qualified composition is revision-scoped to:
 
 ```text
-Core 0.17 + Core 0.18
+Core 0.17 + Core 0.18 + Core 0.19
 + QU 0.1
 + NEI 0.4
 + DP 0.1–0.7
 + DTS 0.1
 ```
 
-It is qualified for the exercised dependency-closed scope by the immutable Experiment 027 predecessor plus the focused DP 0.7 successor evidence. Core 0.19 is now qualified independently as current Core authority; a full-stack integration claim including Core 0.19 is not inferred merely from module promotion.
-
-Experiment 027 remains the full-stack predecessor for DP 0.1–0.6 + DTS 0.1.
-
-Experiment 028 freshly exercised every remaining DP 0.7 qualification target, including QU-, DTS-, and NEI-sensitive interactions:
+Experiment 031 directly exercised the current complete stack:
 
 ```text
 formal disposition:       QUALIFIES
-workflow run:              36231568578
-case coverage:             13 / 13
+workflow run:              36256020851
+case coverage:             32 / 32
 mismatches:                none
-module assessment:         SUPPORTED
+all scoring guards:        true
+all module assessments:    SUPPORTED
+```
+
+Category coverage:
+
+```text
+Core 0.19 integration:     8 / 8 PASS
+QU 0.1 integration:       9 / 9 PASS
+NEI 0.4 integration:      9 / 9 PASS
+DP 0.1–0.7 integration:   7 / 7 PASS
+DTS 0.1 integration:      6 / 6 PASS
 ```
 
 Current authority record:
 
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md`
+- `experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md`
+
+Historical predecessor integration records remain immutable:
+
 - `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`
-
-Historical integration records remain immutable:
-
 - `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`
 - `qualification/CURRENT_INTEGRATED_STACK_2026-09-25.md`
 
-This establishes compatibility for the exercised compositions. It is not a universal completeness claim.
+Experiments 027–030 retain their original dispositions and evidence. This establishes compatibility for the exercised exact composition; it is not a universal completeness claim.
+
 ## Historical authority
 
 - `CORE_SPEC_DRAFT_0_16_CONSOLIDATED_QUALIFIED.md`
@@ -218,9 +228,9 @@ Current completed qualification checkpoints:
 3. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
 4. Discovery Protocols 0.1–0.7 — qualified cumulatively, with DP 0.7 closed by the three-positive-control campaign plus Experiment 028;
 5. DTS 0.1 — `QUALIFIED`, Experiment 026;
-6. the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition remains integration-qualified for its exact predecessor revision.
+6. the Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition is directly integration-qualified by Experiment 031, 32/32 PASS, formal `QUALIFIES`.
 
-Core 0.19 is now current Core authority. A fresh full-stack integration claim including Core 0.19 remains a separate revision-scoped burden if that stronger claim is required.
+Core 0.19 is current Core authority and its direct full-stack integration burden is now discharged at the exact revisions pinned by Experiment 031.
 
 Transition Structural Signatures and DTS profiles remain separately versioned successor research.
 

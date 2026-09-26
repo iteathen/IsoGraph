@@ -37,11 +37,11 @@ The semantic files intentionally retain their historical `_CANDIDATE` filenames 
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The latest fully integration-qualified composition remains the Core 0.18 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 revision recorded by the Experiment 027 predecessor plus Experiment 028 successor delta; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md`. Core 0.19 is independently qualified as current Core authority and is not silently inserted into that historical integration result.
+The latest fully integration-qualified composition is now the exact Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack directly qualified by Experiment 031; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md`. The earlier Core-0.18 integration record remains immutable predecessor evidence.
 
 ### Successor status
 
-Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. A fresh full-stack integration claim including Core 0.19 remains separate from module qualification. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Discovery Protocols through 0.7, and DTS 0.1 are qualified at their exact tested revisions. Experiment 031 directly qualifies the current full stack including Core 0.19 for its exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
@@ -184,6 +184,8 @@ DP 0.7 qualification is recorded in:
 - the completed three-positive-control campaign under `research/project-discovery/2026-09-25-dp07-three-positive-controls/`.
 
 DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision pinned by `qualification/CORE_0_19_QUALIFICATION.md`.
+
+Experiment 031 directly confirms this routing compositionally inside the current full stack: workflow `36256020851`, 32/32 PASS, formal `QUALIFIES`; see `experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md`.
 
 Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, identity hypotheses, and derived views. **Discovery priority never supplies semantic proof authority.**
 
