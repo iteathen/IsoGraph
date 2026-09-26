@@ -130,7 +130,7 @@ async function callGemini(){
   const failures=[];
   for(const model of MODEL_CANDIDATES){
     if(disabledModels.has(model)) continue;
-    let useThinking=!model.includes('flash-lite');
+    let useThinking=false;
     for(let attempt=0;attempt<4;attempt++){
       const generationConfig={
         candidateCount:1,
