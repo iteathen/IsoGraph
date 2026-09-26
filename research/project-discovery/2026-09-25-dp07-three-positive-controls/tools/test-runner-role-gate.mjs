@@ -4,6 +4,7 @@ import fs from 'node:fs';
 const ROOT='research/project-discovery/2026-09-25-dp07-three-positive-controls';
 const prompt=fs.readFileSync(`${ROOT}/BLIND_DISCOVERY_PROMPT.md`,'utf8');
 const runner=fs.readFileSync(`${ROOT}/tools/run-blind-discovery.mjs`,'utf8');
+const workflow=fs.readFileSync('.github/workflows/dp07-three-positive-controls.yml','utf8');
 
 assert.match(prompt,/"role_coverage"\s*:/,'blind prompt must require role_coverage');
 for(const status of ['MAPPED','TRANSFORMED','RESIDUAL','SHARED_INFRASTRUCTURE','NON_LOAD_BEARING']){
@@ -25,3 +26,6 @@ for(const pair of ['case-01','case-02','case-03']){
 }
 
 console.log('PASS: blind runner exact role coverage integration');
+
+assert.match(workflow,/ROLE_COVERAGE_AUDIT\.json/,'blind workflow must persist the mechanical role coverage audit');
+console.log('PASS: blind workflow persists role coverage audit evidence');
