@@ -52,7 +52,7 @@ The isolated reasoner may receive only the declared public packet.
 
 Do not expose:
 
-- hidden expected removable support;
+- hidden expected nonessential support;
 - hidden preferred topology;
 - author discussion about CPC draw elimination;
 - benchmark conclusions;
@@ -96,7 +96,7 @@ An upstream precomputation produces a locally consumed bound, but a downstream e
 Expected behavior:
 
 - trace through the consumer;
-- classify the upstream path as potentially removable for the declared objective;
+- classify the upstream path as nonessential for sufficiency of the declared objective;
 - preserve it as semantically valid / potentially useful under another valuation.
 
 ## Q04 — Load-bearing local computation
@@ -198,12 +198,12 @@ Expected behavior:
 
 ## Q15 — Semantic preservation across objectives
 
-A support node is removable for objective O1 but required for objective O2.
+A support node is nonessential for sufficiency of objective O1 but load-bearing for objective O2.
 
 Expected behavior:
 
 - preserve the node in the semantic graph;
-- keep removal objective-scoped.
+- keep the nonessential-support conclusion objective-scoped.
 
 ## Q16 — Optional accelerator with positive value
 
