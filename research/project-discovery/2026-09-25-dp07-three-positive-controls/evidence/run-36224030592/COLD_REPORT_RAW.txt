@@ -1,0 +1,218 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "Both systems represent a statistical mechanical model on a graph.",
+        "Common roles: site_family, edge_family, configuration_family, local_value_at, edge_endpoints, coupling parameters, energy, weight, partition function, probability."
+      ],
+      "mapping_witness": [
+        {"A": "^71001", "B": "^81001", "role": "site_family"},
+        {"A": "^71002", "B": "^81002", "role": "edge_family"},
+        {"A": "^71004", "B": "^81004", "role": "local_value_at"},
+        {"A": "^71007", "B": "^81007", "role": "coupling_J_epsilon"},
+        {"A": "^71008", "B": "^81008", "role": "coupling_h_mu"}
+      ],
+      "transformations": [
+        "Value mapping: s in {-1, 1} (A) maps to n in {0, 1} (B) via s = 2n - 1.",
+        "Parameter mapping: epsilon = -4J, mu = 2h - 4J.",
+        "Energy transformation: E_A = E_B + Constant_Offset."
+      ],
+      "a_to_b_reconstruction": [
+        "Substitute s_i = 2n_i - 1 into E_A = -J * sum(s_i*s_j) - h * sum(s_i).",
+        "Use regular_degree z=2 to relate sum(n_i+n_j) to 2*sum(n_i).",
+        "Resulting form matches E_B = epsilon * sum(n_i*n_j) - mu * sum(n_i) plus a constant."
+      ],
+      "b_to_a_reconstruction": [
+        "Substitute n_i = (s_i + 1)/2 into E_B.",
+        "Resulting form matches E_A modulo parameter redefinition and constant offset."
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Value domain bijection",
+            "primitive_support": ["A range {-1, 1}", "B range {0, 1}"],
+            "transformation": "s = 2n - 1",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"],
+            "reconstructed_target": "PASS",
+            "result": "PASS"
+          },
+          {
+            "obligation": "Energy algebraic equivalence",
+            "primitive_support": ["A energy formula", "B energy formula", "regular_degree z=2"],
+            "transformation": "Algebraic expansion and coefficient matching",
+            "authority_refs": [
+              "TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2",
+              "TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"
+            ],
+            "reconstructed_target": "E_A = E_B + C",
+            "result": "PASS"
+          },
+          {
+            "obligation": "Probability invariance",
+            "primitive_support": ["A probability formula", "B probability formula"],
+            "transformation": "Constant offset cancellation in normalized ratio",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"],
+            "reconstructed_target": "P_A = P_B",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Inverse energy equivalence",
+            "primitive_support": ["B energy formula"],
+            "transformation": "n = (s+1)/2",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"],
+            "reconstructed_target": "E_B = E_A + C'",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Checked if z=2 is required; yes, the linear term shift depends on the regular degree."
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [
+        "Constant energy offset (non-load-bearing for probability distribution)."
+      ],
+      "unresolved_obligations": [],
+      "derived_view": "Ising model to Lattice Gas transformation on a 2-regular graph.",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": [
+        "Both systems represent a system of linear constraints over a finite field (GF2).",
+        "Common roles: variable_family, assignment_family, constraint_family, value_at, finite_fold, equality."
+      ],
+      "mapping_witness": [
+        {"A": "^91005", "B": "#0", "role": "additive_identity"},
+        {"A": "^91006", "B": "#1", "role": "multiplicative_identity"},
+        {"A": "^91007", "B": "^92006", "role": "addition_operation"}
+      ],
+      "transformations": [
+        "Value mapping: F -> 0, T -> 1.",
+        "Operation mapping: XOR -> GF2_ADD."
+      ],
+      "a_to_b_reconstruction": [
+        "Map XOR table to GF2_ADD table.",
+        "Map parity sum to row sum."
+      ],
+      "b_to_a_reconstruction": [
+        "Map GF2_ADD table to XOR table.",
+        "Map row sum to parity sum."
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Operation table isomorphism",
+            "primitive_support": ["A XOR table", "B GF2_ADD table"],
+            "transformation": "Value bijection {F:0, T:1}",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"],
+            "reconstructed_target": "PASS",
+            "result": "PASS"
+          },
+          {
+            "obligation": "Constraint satisfaction equivalence",
+            "primitive_support": ["A system_satisfied", "B system_satisfied"],
+            "transformation": "Direct mapping of universal quantification over constraints",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 10"],
+            "reconstructed_target": "PASS",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Inverse table isomorphism",
+            "primitive_support": ["B GF2_ADD table"],
+            "transformation": "Value bijection {0:F, 1:T}",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"],
+            "reconstructed_target": "PASS",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Verified that the target/rhs values are also mapped correctly."
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [],
+      "unresolved_obligations": [],
+      "derived_view": "Boolean Parity Constraints to GF(2) Linear System.",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": [
+        "Both systems represent a second-order linear differential equation (harmonic oscillator).",
+        "Common roles: time_domain, state variables, time_derivative, parameters m and k."
+      ],
+      "mapping_witness": [
+        {"A": "^93002", "B": "^94002", "role": "position_q"},
+        {"A": "^93003", "B": "D(q,t)", "role": "velocity_v"},
+        {"A": "^93005", "B": "^94005", "role": "mass_m"},
+        {"A": "^93006", "B": "^94006", "role": "spring_constant_k"}
+      ],
+      "transformations": [
+        "Variable mapping: p = m * v = m * D(q,t).",
+        "Equation mapping: Newton's Second Law <-> Hamilton's Equations."
+      ],
+      "a_to_b_reconstruction": [
+        "Define p = m * D(q,t).",
+        "D(p,t) = m * D(D(q,t),t) = m * a.",
+        "Substitute m*a = -k*q from A to get D(p,t) = -k*q."
+      ],
+      "b_to_a_reconstruction": [
+        "From B: D(q,t) = p/m => p = m * D(q,t).",
+        "D(p,t) = -k*q => D(m * D(q,t), t) = -k*q.",
+        "Use linearity and time-independence of m to get m * D(D(q,t),t) + k*q = 0."
+      ],
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Derivative linearity and parameter constancy",
+            "primitive_support": ["A m range real_domain", "A m positive"],
+            "transformation": "D(m*v, t) = m * D(v,t)",
+            "authority_refs": [
+              "TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 3",
+              "TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"
+            ],
+            "reconstructed_target": "m*a = -k*q",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Hamiltonian to Newtonian reduction",
+            "primitive_support": ["B equations"],
+            "transformation": "Substitution and differentiation",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"],
+            "reconstructed_target": "m*a + k*q = 0",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": [
+          "Checked if Hamiltonian H in B is preserved; yes, D(H,t)=0 follows from the equations."
+        ],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [
+        "Hamiltonian H in B is a derived invariant in A."
+      ],
+      "unresolved_obligations": [],
+      "derived_view": "Newtonian Mechanics to Hamiltonian Mechanics (Harmonic Oscillator).",
+      "disposition": "EXACT_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}
