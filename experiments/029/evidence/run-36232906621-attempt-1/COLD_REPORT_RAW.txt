@@ -1,0 +1,333 @@
+{
+  "cases": [
+    {
+      "case_id": "C01",
+      "answers": {
+        "explicit_support_allowed": true,
+        "explicitness_proves_truth": false,
+        "source_limits_preserved": true
+      },
+      "reason": "Explicit support is defined by source supply, but Core 0.19 Section 2 explicitly states that explicitness does not independently prove truth and that the assertion inherits source limitations.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#2"
+      ]
+    },
+    {
+      "case_id": "C02",
+      "answers": {
+        "exact_implicit_support_allowed": true,
+        "becomes_source_explicit": false,
+        "support_recoverable": true
+      },
+      "reason": "Exact implicit support is permitted for necessary results under pinned authority, but Section 6.9 forbids rewriting history to make implicit results appear source-explicit.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.1",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.9"
+      ]
+    },
+    {
+      "case_id": "C03",
+      "answers": {
+        "exact_implicit_support_allowed": false,
+        "silent_conventional_premise_allowed": false
+      },
+      "reason": "Section 6.2 prohibits adding unstated premises merely because they are conventional or necessary for a desired result.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.2"
+      ]
+    },
+    {
+      "case_id": "C04",
+      "answers": {
+        "remains_conditional": true,
+        "global_unconditional_allowed": false,
+        "scope_lineage_preserved": true
+      },
+      "reason": "Scope preservation (Section 6.3) requires that assertions do not escape the scope that makes them valid, and lineage must remain closed through dependencies.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#7"
+      ]
+    },
+    {
+      "case_id": "C05",
+      "answers": {
+        "unconditional_exact_allowed": false,
+        "drop_uncertainty_or_condition": false,
+        "authority_amplification_allowed": false
+      },
+      "reason": "Section 6.4 forbids authority amplification; derived support cannot exceed the strength or scope of its premises.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.4"
+      ]
+    },
+    {
+      "case_id": "C06",
+      "answers": {
+        "b_implicit_supported": true,
+        "c_implicit_supported": true,
+        "a_additional_implicit_support": true,
+        "cycle_invalid_merely_for_cycle": false
+      },
+      "reason": "Cycles are permitted in assertion structure (Section 6.6) and can provide additional support paths if grounded by independent explicit authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#13"
+      ]
+    },
+    {
+      "case_id": "C07",
+      "answers": {
+        "cycle_manufactures_validity": false,
+        "cycle_structure_representable": true,
+        "separate_grounding_required": true
+      },
+      "reason": "While representable, a cycle cannot manufacture its own validity without independent grounding or a specific recursive/fixed-point theorem (Section 6.6).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6"
+      ]
+    },
+    {
+      "case_id": "C08",
+      "answers": {
+        "qu_dependency_propagates": true,
+        "unconditional_exact_c": false,
+        "choose_realization_to_derive": false
+      },
+      "reason": "QU dependencies propagate (Section 5), and Section 6.7 forbids fixing unresolved structure merely to obtain an assertion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.7"
+      ]
+    },
+    {
+      "case_id": "C09",
+      "answers": {
+        "q1_valid_for_later_support": true,
+        "z_exact_without_selecting_realization": true,
+        "q0_q1_lineage_preserved": true
+      },
+      "reason": "Section 5 allows exact implicit support for assertions invariant across all admissible realizations of a refined QU state.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5"
+      ]
+    },
+    {
+      "case_id": "C10",
+      "answers": {
+        "equal_probability_assignment_authorized": false,
+        "bayesian_support_from_qu_alone": false,
+        "qu_only_supplies_possibility": true
+      },
+      "reason": "QU supplies possibility structure but not probability distributions or measures (Section 5).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#16.10"
+      ]
+    },
+    {
+      "case_id": "C11",
+      "answers": {
+        "b_bayesian_implicit_supported": true,
+        "b_support_may_feed_later_probability_model": true,
+        "b_or_c_becomes_exact": false
+      },
+      "reason": "Bayesian support is permitted under pinned authority (Section 4.2) and can feed later passes (Section 8), but never upgrades to exact necessity (Section 4.2).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.2",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#8"
+      ]
+    },
+    {
+      "case_id": "C12",
+      "answers": {
+        "treat_e1_e2_as_independent": false,
+        "shared_lineage_load_bearing": true,
+        "stronger_combined_support_requires_dependence_authority": true
+      },
+      "reason": "Section 8 forbids double-counting correlated evidence; independence is not presumed and requires explicit authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#8"
+      ]
+    },
+    {
+      "case_id": "C13",
+      "answers": {
+        "bayesian_implicit_supported": true,
+        "promote_to_exact": false,
+        "probability_threshold_supplies_exact_truth": false
+      },
+      "reason": "No probability threshold upgrades Bayesian support to exact support (Section 4.2 and 16.13).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.2",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#16.13"
+      ]
+    },
+    {
+      "case_id": "C14",
+      "answers": {
+        "retain_explicit_and_implicit_support": true,
+        "rewrite_support_history": false,
+        "distinct_lineages_preserved": true
+      },
+      "reason": "Section 1 and 6.9 allow coexistence of multiple support paths and forbid rewriting history to merge them.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#1",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.9"
+      ]
+    },
+    {
+      "case_id": "C15",
+      "answers": {
+        "implicit_support_allowed": true,
+        "comparison_target_as_validity_premise": false,
+        "reason_to_search_is_evidence": false
+      },
+      "reason": "Section 6.8 distinguishes the reason to search (discovery target) from the reason to believe (validity support).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.8"
+      ]
+    },
+    {
+      "case_id": "C16",
+      "answers": {
+        "d_exact_implicit_supported": true,
+        "lineage_closed_through_a_b_c": true,
+        "depth_weakens_exact_support": false
+      },
+      "reason": "Iterative expansion (Section 7) allows deep derivations, and depth does not weaken semantic strength.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#7",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#16.16"
+      ]
+    },
+    {
+      "case_id": "C17",
+      "answers": {
+        "operational_stop_allowed": true,
+        "no_change_proves_universal_closure": false,
+        "universal_completeness_requires_separate_coverage": true
+      },
+      "reason": "An operational fixed point is not proof of universal semantic closure (Section 6.11).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.11"
+      ]
+    },
+    {
+      "case_id": "C18",
+      "answers": {
+        "conclude_non_derivable": false,
+        "failed_search_may_be_recorded": true,
+        "negative_claim_requires_completeness_certificate": true
+      },
+      "reason": "Failure to find is not proof of absence (Section 6.10); negative claims require completeness certificates.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.10",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#16.18"
+      ]
+    },
+    {
+      "case_id": "C19",
+      "answers": {
+        "exact_rendering": false,
+        "partial_exploratory_artifact_allowed": true,
+        "source_faithful_downstream_use_allowed": false
+      },
+      "reason": "A skeleton is not an exact rendering (Section 18.3) and cannot be used for downstream proof or discovery.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.3"
+      ]
+    },
+    {
+      "case_id": "C20",
+      "answers": {
+        "exact_native_rendering": false,
+        "sidecar_may_supply_missing_semantics": false
+      },
+      "reason": "Section 18.4 forbids sidecars from supplying load-bearing semantics absent from the native bundle.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.4"
+      ]
+    },
+    {
+      "case_id": "C21",
+      "answers": {
+        "exact_rendering": false,
+        "familiar_recognition_supplies_operator_semantics": false
+      },
+      "reason": "Conventional mathematics cannot be silently imported (Section 18.5); operator semantics must be explicit.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.5"
+      ]
+    },
+    {
+      "case_id": "C22",
+      "answers": {
+        "bidirectional_exact_rendering": false,
+        "one_way_claim_may_be_limited": true,
+        "empirical_agreement_replaces_exact_bridge": false
+      },
+      "reason": "Section 18.6 requires exact transformation witnesses; empirical agreement is insufficient for bidirectional equivalence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.6"
+      ]
+    },
+    {
+      "case_id": "C23",
+      "answers": {
+        "single_choice_exact_for_ambiguous_source": false,
+        "both_interpretations_preserved": true,
+        "familiar_choice_is_semantic_loss": true
+      },
+      "reason": "Choosing one realization of an ambiguous source is semantic loss (Section 18.7).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.7"
+      ]
+    },
+    {
+      "case_id": "C24",
+      "answers": {
+        "exact_rendering": false,
+        "precision_or_condition_may_be_strengthened_away": false
+      },
+      "reason": "Precision and modality are load-bearing and must be preserved (Section 18.8).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.8"
+      ]
+    },
+    {
+      "case_id": "C25",
+      "answers": {
+        "mutation_control_passes": true,
+        "familiar_form_repair_allowed": false
+      },
+      "reason": "Adversarial mutations must be preserved; silent repair toward familiar forms is a qualification failure (Section 18.11).",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.11"
+      ]
+    },
+    {
+      "case_id": "C26",
+      "answers": {
+        "partial_skeleton_source_faithful_dp_evidence": false,
+        "partial_skeleton_explicit_support_allowed": false,
+        "required_before_downstream_use": "EXACT_RENDERING_QUALIFICATION"
+      },
+      "reason": "Section 18.12 establishes a barrier: only qualified exact renderings may serve as downstream evidence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.12"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_19": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_import_hidden_premises": true,
+    "did_not_invent_probability": true,
+    "preserved_scope_and_qu": true,
+    "did_not_use_partial_renderings_as_exact": true
+  }
+}

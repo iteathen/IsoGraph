@@ -1,0 +1,101 @@
+{
+  "experiment": "029",
+  "run": "RUN-EXP029",
+  "source_sha": "db80f31a84b103210f5772740f5fdfc2ffe15bae",
+  "model_requested": "gemini-3-flash-preview",
+  "model_candidates": [
+    "gemini-3-flash-preview",
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-pro-preview",
+    "gemini-pro-latest"
+  ],
+  "packet_sha256": "47765dd38937d1f3e2759df42bcc256eb40192515a2e18db9e1303009a09d354",
+  "core_0_19_sha256": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2",
+  "case_count": 26,
+  "esr_predecessor": "PASS_6_OF_6_Q7",
+  "esr_case_count": 6,
+  "esr_promotion_contract": "ESR-0.1",
+  "esr_promotion_status": "PROMOTED_FOR_DP07_DISCOVERY",
+  "input_manifest": [
+    {
+      "path": "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+      "sha256": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+      "bytes": 76065
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+      "sha256": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+      "bytes": 11063
+    },
+    {
+      "path": "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+      "sha256": "1f1510b41e4351726e4d9e714eb32ece0d5e69f0964255aabd7b4a6e94eee4cc",
+      "bytes": 25578
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+      "sha256": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2",
+      "bytes": 35102
+    },
+    {
+      "path": "experiments/029/BASELINE_AUTHORITY.md",
+      "sha256": "3986ec0dfd0e94881c0a54130a656ee0dcf8dc7029fcb754bbb05593168dc3a4",
+      "bytes": 3198
+    },
+    {
+      "path": "experiments/029/CORE_0_19_CASES.md",
+      "sha256": "334a7a035b9d830db0854cac577fdc50d8c431a2508a0bdd9d7a0d512bfe00ec",
+      "bytes": 12784
+    },
+    {
+      "path": "experiments/029/COLD_PROMPT.md",
+      "sha256": "fb64a45d261e49fd3936496b5767c76ff717831ff518b0198a69654fcb6963bc",
+      "bytes": 5869
+    }
+  ],
+  "workflow_run_id": "36232906621",
+  "workflow_attempt": "1",
+  "selected_model": "gemini-3-flash-preview",
+  "api_attempts": 1,
+  "http_status": 200,
+  "provider_calls": [
+    {
+      "model": "gemini-3-flash-preview",
+      "status": 200,
+      "attempt": 1,
+      "thinking": true,
+      "usage": {
+        "promptTokenCount": 35976,
+        "candidatesTokenCount": 4103,
+        "totalTokenCount": 42789,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 35976
+          }
+        ],
+        "thoughtsTokenCount": 2710,
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "disabled_models": {},
+  "semantic_status": "FROZEN",
+  "report_sha256": "70bf24fa2dc1a0b2ae3386195313c23db96e9ae4aa04dc2d36b16cb3afdc9eea",
+  "finish_reason": "STOP",
+  "usage": {
+    "promptTokenCount": 35976,
+    "candidatesTokenCount": 4103,
+    "totalTokenCount": 42789,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 35976
+      }
+    ],
+    "thoughtsTokenCount": 2710,
+    "serviceTier": "standard"
+  }
+}
