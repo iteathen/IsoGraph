@@ -15,7 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GEMINI_MODEL: gemini-3.5-flash
+  GEMINI_MODEL: gemini-3.8-flash
+  GEMINI_FALLBACK_MODELS: gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-flash-lite,gemini-pro-latest,gemini-3.1-pro-preview
 
 jobs:
   blind-discovery:
@@ -75,6 +76,8 @@ jobs:
           git add "$E"
           if ! git diff --cached --quiet; then
             git commit -m "evidence: DP 0.7 blind positive-control run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/dp07-three-positive-controls-v1
+            git rebase origin/experiment/dp07-three-positive-controls-v1
             git push origin HEAD:experiment/dp07-three-positive-controls-v1
           fi
 
