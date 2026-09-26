@@ -37,23 +37,23 @@ Do not collapse these distinctions:
 minimal Core representation
     != minimum sufficient support for one objective
 
-represented truth
-    != structure that must execute
+represented semantic structure
+    != structure that must be used for one objective
 
 semantic outcome
     != independent runtime predicate
 
-causal connection
+dependency / support connection
     != load-bearing necessity
 
 locally consumed output
-    != globally necessary support
+    != necessary support for the declared downstream objective
 
 sufficient
     != minimal
 
 minimal sufficient
-    != globally minimum
+    != minimum over a declared candidate space
 
 fewest transitions
     != lowest cost
@@ -90,7 +90,7 @@ These barriers are normative.
 
 ---
 
-# 1. Core representation remains complete and primitive-first
+# 1. Core representation remains faithful and primitive-first
 
 DP 0.8 does not change the Core design target.
 
@@ -115,7 +115,7 @@ Preferred posture:
 
 ```text
 represent minimally
-preserve completely
+preserve the represented meaning completely
 discover freely
 use only what is necessary for the declared objective
 ```
@@ -182,13 +182,13 @@ Before claiming that structure is necessary, unnecessary, substitutable, dominat
 target conclusion / observable
 fixed inputs / admissible input domain
 semantic scope
-governing authority
+declared authority envelope
 required precision / modality
 required externally visible behavior
 load-bearing QU state
 load-bearing DTS transition obligations
 identity obligations if any
-non-mutable invariants
+invariants that must be preserved
 allowed transformations / substitutions
 valuation profile if selection is desired
 ```
@@ -199,9 +199,9 @@ If the application objective is a downstream result, discovery must follow enoug
 
 ---
 
-# 4. Support cone
+# 4. Support cone and objective-relevant analysis slice
 
-For a declared target `O`, the **support cone** is the represented dependency/support structure that may contribute to establishing `O` under the declared objective context.
+For a declared target `O`, the **support cone** is the upstream represented dependency/support structure that may contribute to establishing `O` under the declared objective context.
 
 It may include:
 
@@ -216,15 +216,33 @@ proof/witness structure
 QU refinements
 DTS anatomy
 authoritative transformations
-consumer relations
-fallback / alternate closure paths
 ```
 
-The support cone is a discovery view over represented structure.
+The support cone is a discovery view over represented structure. It is not a new Core substrate.
 
-It is not a new Core substrate.
+When judging whether an intermediate result is actually necessary for a farther downstream observable, the support cone alone may be too narrow. DP may construct an **objective-relevant analysis slice** containing the support cone plus only the consumer/fallback topology needed to evaluate that necessity.
 
-A discovery reasoner SHOULD include downstream consumers and alternate closure paths when they are necessary to judge whether an upstream computation contributes unique support.
+Such a slice may include:
+
+```text
+immediate consumers
+downstream target consumers
+alternate closure / fallback paths
+bypass relations
+required externally visible effects
+```
+
+The slice is claim-bounded. It SHOULD NOT expand through unrelated downstream behavior merely because that behavior exists.
+
+This distinction prevents two opposite errors:
+
+```text
+upstream-only view
+    -> falsely treats a locally consumed value as globally necessary
+
+unbounded whole-system expansion
+    -> adds irrelevant structure and cost to the discovery question
+```
 
 ---
 
@@ -234,7 +252,7 @@ A support subgraph `S` is **sufficient** for target `O` only when, under the dec
 
 ```text
 same admissible inputs
-same governing semantic authority
+same declared authority envelope
 same required scope
 same required precision / modality
 same load-bearing unknown obligations
@@ -277,7 +295,7 @@ It does not establish that no different sufficient support uses less structure.
 
 ## 6.2 Minimum sufficient support
 
-A sufficient support `S*` is **minimum** only relative to an explicitly declared support-order or measure when no qualified sufficient alternative ranks below `S*` under that order.
+A sufficient support `S*` is **minimum** only relative to an explicitly declared candidate space and support-order or measure when no established sufficient alternative in that candidate space ranks below `S*` under that order.
 
 Examples of support orders may include:
 
@@ -292,9 +310,9 @@ another application-defined structural order
 
 DP introduces no universal support-size metric.
 
-If search has established irreducibility but not global minimum, say `minimal sufficient support`, not `minimum`.
+If search has established irreducibility but has not covered the declared candidate space needed for a minimum claim, say `minimal sufficient support`, not `minimum`.
 
-If global coverage needed for a minimum claim is unavailable, preserve the result as a candidate/minimal result with its search scope.
+A minimum claim MUST name or recover the candidate space and ordering under which it is minimum. DP 0.8 does not require a universal search over every imaginable representation or implementation.
 
 ---
 
@@ -375,7 +393,7 @@ The governing rule is:
 
 # 9. Alternative sufficient topology
 
-Discovery SHOULD preserve materially distinct qualified ways of reaching the same declared target.
+Discovery SHOULD preserve materially distinct ways whose sufficiency is established under the declared objective and governing authority.
 
 For example:
 
@@ -413,7 +431,7 @@ They need not be promoted into a canonical implementation.
 
 # 10. Discovery Valuation Profile
 
-DP 0.8 permits an application to declare how qualified sufficient alternatives should be valued.
+DP 0.8 permits an application to declare how established sufficient alternatives should be valued.
 
 A **Discovery Valuation Profile** should identify, as applicable:
 
@@ -422,7 +440,7 @@ target conclusion / observable
 hard invariants
 admissible transformations
 valuation dimensions
-measurement authority / units
+valuation evidence / derivation method / units where applicable
 constraints / thresholds
 preference ordering
 lexicographic priorities
@@ -434,30 +452,35 @@ scope and revision
 Potential valuation dimensions include, without privilege:
 
 ```text
-CPU cycles
-wall-clock time
-latency
-memory
-memory movement
-energy
-physical material
+CPU-cycle count
+wall-clock time / latency
+peak memory
+bytes read / written / transferred
+allocation count
+search nodes or states expanded
 transition count
-support-node count
+support-node / support-edge count
 dependency count
-proof burden
-external-resource use
-risk
-reliability
-fault exposure
-uncertainty reduction
-information gain
-maintainability
-another represented application value
+proof-step or verification-obligation count
+external tool / model / service call count
+another explicitly supplied or derivable application metric
 ```
 
-This list is illustrative and non-exhaustive.
+This list is illustrative and non-exhaustive. It intentionally favors quantities that can plausibly be represented, counted, derived, or measured for the system under study.
 
-DP does not assume these quantities are commensurable.
+A valuation dimension need not be numeric; an application may supply a partial order, lexicographic preference, threshold constraint, or another explicit comparison rule.
+
+DP MUST NOT invent a valuation quantity merely because a profile names it. A value used to rank alternatives must be one of:
+
+```text
+directly represented
+mechanically derivable under a declared method
+supplied as measured evidence with provenance
+```
+
+If a named valuation dimension cannot currently be evaluated, preserve it as unresolved and do not rank alternatives on that dimension.
+
+DP does not assume distinct valuation dimensions are commensurable.
 
 ---
 
@@ -519,7 +542,7 @@ B:
 
 with no governing priority may remain incomparable.
 
-DP may preserve a non-dominated / Pareto set when that notion is licensed by the valuation profile.
+DP may preserve the set of alternatives not dominated under the supplied comparison rules. No special Pareto machinery is required unless the profile actually defines such an order.
 
 A weighted scalar objective may be used only when its weights and combination rule are represented or pinned.
 
@@ -535,7 +558,7 @@ incomparable
 
 ---
 
-# 13. Cost / implementation optimization as discovery
+# 13. Valuation-guided implementation optimization as discovery
 
 Implementation optimization is one possible DP application, not a universal IsoGraph objective.
 
@@ -551,7 +574,7 @@ which execution transition contributes no unique support?
 which exact fallback makes an earlier bound nonessential?
 ```
 
-The application must supply the relevant valuation dimensions and measurement authority.
+The application must supply the relevant valuation dimensions plus enough evidence or derivation rules to evaluate them. DP may compute a quantity only when that computation is itself defined and supported.
 
 DP should be able to conclude:
 
@@ -717,8 +740,8 @@ But:
 do nothing
     != automatically sufficient
 
-laziest-looking
-    != proved least cost
+apparent simplicity
+    != established preference under the valuation profile
 
 smallest-looking
     != minimum
@@ -726,7 +749,7 @@ smallest-looking
 
 Search may stop when additional alternatives have low expected information value relative to the active discovery objective.
 
-Any minimum/global-optimum claim still carries the coverage burden appropriate to that claim.
+Any minimum/optimum claim still carries the coverage burden for its declared candidate space and ordering.
 
 ---
 
@@ -753,10 +776,10 @@ candidate removal changes precision/modality
 candidate removal changes admissible input domain
 candidate substitution changes externally visible behavior
 valuation dimension undefined
-valuation measurement authority missing
+valuation evidence / derivation method missing
 preference ordering missing
 incomparable alternatives collapsed
-local optimum mistaken for global minimum
+local or sampled optimum mistaken for a minimum over the declared candidate space
 cost model incorrect
 implementation/measurement defect
 actual load-bearing support
@@ -776,7 +799,7 @@ Before DP 0.8 promotion, fresh qualification should test at least:
 4. **Consumer-scope case:** a locally useful intermediate is discovered to be nonessential only after tracing an exact downstream fallback.
 5. **Alternative sufficient topology:** multiple materially distinct sufficient subgraphs are preserved.
 6. **Structural valuation:** a profile preferring fewer transitions selects accordingly without claiming universal superiority.
-7. **Non-structural valuation:** a different profile such as time, memory, energy, or another supplied metric can prefer a topology with more transitions.
+7. **Measured valuation reversal:** a different profile such as time, peak memory, bytes moved, or another supplied/derivable metric can prefer a topology with more transitions.
 8. **Multi-objective incomparability:** absent a supplied tradeoff, non-dominated alternatives remain uncollapsed.
 9. **Valuation/sufficiency firewall:** a cheaper but semantically weaker alternative is rejected for an exact objective.
 10. **Input/scope firewall:** a smaller topology obtained by narrowing admissible inputs or scope is not called sufficient for the original objective.
@@ -785,7 +808,7 @@ Before DP 0.8 promotion, fresh qualification should test at least:
 13. **Implicit-support authority:** a familiar logical inference without represented/pinned authority remains a search lead, not admitted support.
 14. **Logic-lens positive:** with appropriate authority, elementary consequence discovery expands the assertion graph before support minimization.
 15. **No global erasure:** structure removable for one objective remains preserved semantically and available for another objective.
-16. **Minimum-vs-minimal discipline:** a reasoner does not claim global minimum from one irreducible candidate without coverage.
+16. **Minimum-vs-minimal discipline:** a reasoner does not claim minimum from one irreducible candidate without coverage of the declared candidate space.
 17. **Costed optional accelerator:** an optional accelerator is classified by net declared value rather than by mere causal connectedness.
 18. **Real-world blind control:** an exact implementation topology with no optimization hint independently exposes a removable derived/optional path and preserves the original result.
 19. **Anti-overfit control:** a superficially similar topology where the third branch carries unique information is retained.
@@ -819,7 +842,7 @@ Sufficiency comes before valuation.
 
 A value system is application-supplied.
 DP does not privilege cycles, time, memory,
-material, proof length, or any other metric.
+transition count, proof-step count, or any other metric.
 
 Preserve multiple sufficient topologies
 when the application does not rank them.
@@ -832,8 +855,8 @@ Do not confuse a semantic class with an independent detector.
 
 Trace far enough downstream to the declared observable.
 
-Represent the full truth.
-Discover the minimum support required for the job.
+Represent the required semantics faithfully.
+Discover sufficient support, and claim minimum only within a declared candidate space.
 Then, and only then, prefer among sufficient alternatives.
 ```
 
