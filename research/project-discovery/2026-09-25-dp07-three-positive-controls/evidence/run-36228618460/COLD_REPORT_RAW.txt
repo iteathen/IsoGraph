@@ -1,0 +1,351 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "Both systems represent a statistical mechanical model on a regular graph.",
+        "Both define a local value at each site, an energy function as a sum over edges and sites, a Boltzmann weight, and a partition function.",
+        "The graph structure (site_family, edge_family, regular_degree, undirected, edge_endpoint_structure) is identical in form."
+      ],
+      "mapping_witness": [
+        "A:local_value_at {-1, 1} <-> B:local_value_at {0, 1} via s = 2n - 1",
+        "A:J <-> B:epsilon via epsilon = -4J",
+        "A:h <-> B:mu via mu = 2h - 2zJ",
+        "A:energy <-> B:grand_energy (up to additive constant)",
+        "A:weight <-> B:weight (proportional)",
+        "A:probability <-> B:probability (identical)"
+      ],
+      "transformations": [
+        "Algebraic substitution of s_i = 2n_i - 1 into the energy sum.",
+        "Expansion of product (2n_i - 1)(2n_j - 1) = 4n_i n_j - 2n_i - 2n_j + 1.",
+        "Summation over edges using regular graph property: sum_{e} (n_L + n_R) = z * sum_{i} n_i.",
+        "Normalization of weights via partition function ratio."
+      ],
+      "a_to_b_reconstruction": [
+        "Substitute s = 2n-1 into A's energy formula.",
+        "Apply graph incidence laws from Authority Section 6.",
+        "Group terms by n_i*n_j and n_i.",
+        "Identify B's epsilon and mu as linear combinations of A's J, h, and z."
+      ],
+      "b_to_a_reconstruction": [
+        "Substitute n = (s+1)/2 into B's energy formula.",
+        "Apply inverse algebraic expansion.",
+        "Recover A's J and h coefficients."
+      ],
+      "role_coverage": {
+        "A": [
+          {"symbol": "^71000", "status": "MAPPED", "counterparts": ["^81000"], "justification": "Top-level model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71001", "status": "MAPPED", "counterparts": ["^81001"], "justification": "Vertex/site set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71002", "status": "MAPPED", "counterparts": ["^81002"], "justification": "Edge set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71003", "status": "MAPPED", "counterparts": ["^81003"], "justification": "Configuration space.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71004", "status": "MAPPED", "counterparts": ["^81004"], "justification": "Value lookup function.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71005", "status": "MAPPED", "counterparts": ["^81005"], "justification": "Edge endpoint left.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71006", "status": "MAPPED", "counterparts": ["^81006"], "justification": "Edge endpoint right.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71007", "status": "TRANSFORMED", "counterparts": ["^81007"], "justification": "Coupling constant; maps via epsilon = -4J.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71008", "status": "TRANSFORMED", "counterparts": ["^81008"], "justification": "External field; maps via mu = 2h - 2zJ.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71009", "status": "MAPPED", "counterparts": ["^81009"], "justification": "Inverse temperature.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^71010", "status": "TRANSFORMED", "counterparts": ["^81010"], "justification": "Energy; maps up to additive constant.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^71011", "status": "TRANSFORMED", "counterparts": ["^81011"], "justification": "Boltzmann weight; proportional.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^71012", "status": "TRANSFORMED", "counterparts": ["^81012"], "justification": "Partition function; proportional.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^71013", "status": "MAPPED", "counterparts": ["^81013"], "justification": "Normalized probability.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^71014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81014"], "justification": "Real addition.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81015"], "justification": "Real multiplication.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71016", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81016"], "justification": "Real negation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71017", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81017"], "justification": "Finite fold.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 5"]},
+          {"symbol": "^71018", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81018"], "justification": "Exponential function.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71019", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81019"], "justification": "Real division.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71020", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81020"], "justification": "Domain declaration.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^71021", "status": "MAPPED", "counterparts": ["^81021"], "justification": "Graph regularity constraint.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^71022", "status": "MAPPED", "counterparts": ["^81022"], "justification": "Undirected graph property.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^71023", "status": "MAPPED", "counterparts": ["^81023"], "justification": "Incidence structure.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^71024", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81024"], "justification": "Equality relation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71025", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81025"], "justification": "Indexing relation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^71026", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81026"], "justification": "Positivity constraint.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^71027", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^81027"], "justification": "Real domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]}
+        ],
+        "B": [
+          {"symbol": "^81000", "status": "MAPPED", "counterparts": ["^71000"], "justification": "Model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81001", "status": "MAPPED", "counterparts": ["^71001"], "justification": "Site set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81002", "status": "MAPPED", "counterparts": ["^71002"], "justification": "Edge set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81003", "status": "MAPPED", "counterparts": ["^71003"], "justification": "Configuration space.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81004", "status": "MAPPED", "counterparts": ["^71004"], "justification": "Value lookup.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81005", "status": "MAPPED", "counterparts": ["^71005"], "justification": "Left endpoint.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81006", "status": "MAPPED", "counterparts": ["^71006"], "justification": "Right endpoint.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81007", "status": "TRANSFORMED", "counterparts": ["^71007"], "justification": "Coupling constant.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81008", "status": "TRANSFORMED", "counterparts": ["^71008"], "justification": "Chemical potential.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81009", "status": "MAPPED", "counterparts": ["^71009"], "justification": "Inverse temperature.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^81010", "status": "TRANSFORMED", "counterparts": ["^71010"], "justification": "Grand energy.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^81011", "status": "TRANSFORMED", "counterparts": ["^71011"], "justification": "Weight.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^81012", "status": "TRANSFORMED", "counterparts": ["^71012"], "justification": "Grand partition function.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^81013", "status": "MAPPED", "counterparts": ["^71013"], "justification": "Probability.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"]},
+          {"symbol": "^81014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71014"], "justification": "Addition.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71015"], "justification": "Multiplication.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81016", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71016"], "justification": "Negation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81017", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71017"], "justification": "Fold.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 5"]},
+          {"symbol": "^81018", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71018"], "justification": "Exp.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81019", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71019"], "justification": "Division.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81020", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71020"], "justification": "Domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^81021", "status": "MAPPED", "counterparts": ["^71021"], "justification": "Regularity.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^81022", "status": "MAPPED", "counterparts": ["^71022"], "justification": "Undirected.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^81023", "status": "MAPPED", "counterparts": ["^71023"], "justification": "Incidence.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"]},
+          {"symbol": "^81024", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71024"], "justification": "Equal.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81025", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71025"], "justification": "Indexed.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^81026", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71026"], "justification": "Positive.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^81027", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^71027"], "justification": "Real domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]}
+        ]
+      },
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Energy term mapping",
+            "primitive_support": ["^71010 definition"],
+            "transformation": "s = 2n-1 substitution + Section 6 incidence laws",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 6"],
+            "reconstructed_target": "^81010 structure",
+            "result": "PASS"
+          },
+          {
+            "obligation": "Probability invariance",
+            "primitive_support": ["^71013 definition"],
+            "transformation": "Section 7 normalization law",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 7"],
+            "reconstructed_target": "^81013 structure",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Inverse energy mapping",
+            "primitive_support": ["^81010 definition"],
+            "transformation": "n = (s+1)/2 substitution",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"],
+            "reconstructed_target": "^71010 structure",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": ["Checked if non-regular graph would break the mapping; Section 6 confirms regularity is required for the linear mu/h shift."],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": ["Additive constant in energy", "Proportionality constant in partition function"],
+      "unresolved_obligations": [],
+      "derived_view": "Ising model to Lattice Gas mapping on a regular graph.",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-02",
+      "primitive_common_structure": [
+        "Both systems represent a system of linear constraints over a two-element finite field.",
+        "Both define a set of variables, a set of constraints/rows, a value assignment, and a satisfaction predicate.",
+        "Both use a finite fold of a binary operation (XOR / GF2_ADD) to compute a parity/sum."
+      ],
+      "mapping_witness": [
+        "A:{F, T} <-> B:{0, 1} via F->0, T->1",
+        "A:xor <-> B:gf2_add via table bijection",
+        "A:parity <-> B:row_sum",
+        "A:target <-> B:rhs",
+        "A:system_satisfied <-> B:system_satisfied via universal quantification over constraints"
+      ],
+      "transformations": [
+        "Value bijection preserving the binary operation table.",
+        "Mapping of finite fold over corresponding member sets."
+      ],
+      "a_to_b_reconstruction": [
+        "Map F to 0 and T to 1.",
+        "Verify XOR table maps to GF2_ADD table.",
+        "Reconstruct B's row_sum as the image of A's parity."
+      ],
+      "b_to_a_reconstruction": [
+        "Map 0 to F and 1 to T.",
+        "Verify GF2_ADD table maps to XOR table.",
+        "Reconstruct A's parity as the image of B's row_sum."
+      ],
+      "role_coverage": {
+        "A": [
+          {"symbol": "^91000", "status": "MAPPED", "counterparts": ["^92000"], "justification": "Model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91001", "status": "MAPPED", "counterparts": ["^92001"], "justification": "Variable set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91002", "status": "MAPPED", "counterparts": ["^92002"], "justification": "Assignment set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91003", "status": "MAPPED", "counterparts": ["^92003"], "justification": "Constraint/row set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91004", "status": "MAPPED", "counterparts": ["^92004"], "justification": "Value lookup.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91005", "status": "MAPPED", "counterparts": ["#0"], "justification": "False literal.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"]},
+          {"symbol": "^91006", "status": "MAPPED", "counterparts": ["#1"], "justification": "True literal.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"]},
+          {"symbol": "^91007", "status": "MAPPED", "counterparts": ["^92006"], "justification": "Binary operation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"]},
+          {"symbol": "^91008", "status": "MAPPED", "counterparts": ["^92007"], "justification": "Selection function.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91009", "status": "MAPPED", "counterparts": ["^92008"], "justification": "Target/RHS value.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91010", "status": "MAPPED", "counterparts": ["^92009"], "justification": "Computed sum.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91011", "status": "MAPPED", "counterparts": ["^92010"], "justification": "Local satisfaction.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91012", "status": "MAPPED", "counterparts": ["^92011"], "justification": "Global satisfaction.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91013", "status": "MAPPED", "counterparts": ["^92012"], "justification": "Fold operation.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 5"]},
+          {"symbol": "^91014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^92013"], "justification": "Equality.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^92014"], "justification": "Domain declaration.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91016", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^92015"], "justification": "Indexing.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^91017", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^92005"], "justification": "Membership.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]}
+        ],
+        "B": [
+          {"symbol": "^92000", "status": "MAPPED", "counterparts": ["^91000"], "justification": "Model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92001", "status": "MAPPED", "counterparts": ["^91001"], "justification": "Variable set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92002", "status": "MAPPED", "counterparts": ["^91002"], "justification": "Assignment set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92003", "status": "MAPPED", "counterparts": ["^91003"], "justification": "Row set.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92004", "status": "MAPPED", "counterparts": ["^91004"], "justification": "Value lookup.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92005", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^91017"], "justification": "Membership.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92006", "status": "MAPPED", "counterparts": ["^91007"], "justification": "Addition table.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"]},
+          {"symbol": "^92007", "status": "MAPPED", "counterparts": ["^91008"], "justification": "Selection.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92008", "status": "MAPPED", "counterparts": ["^91009"], "justification": "RHS.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92009", "status": "MAPPED", "counterparts": ["^91010"], "justification": "Row sum.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92010", "status": "MAPPED", "counterparts": ["^91011"], "justification": "Row satisfaction.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92011", "status": "MAPPED", "counterparts": ["^91012"], "justification": "System satisfaction.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92012", "status": "MAPPED", "counterparts": ["^91013"], "justification": "Fold.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 5"]},
+          {"symbol": "^92013", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^91014"], "justification": "Equality.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^91015"], "justification": "Domain.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^92015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^91016"], "justification": "Indexing.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]}
+        ]
+      },
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Operation table preservation",
+            "primitive_support": ["^91007 table"],
+            "transformation": "Value bijection F->0, T->1",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"],
+            "reconstructed_target": "^92006 table",
+            "result": "PASS"
+          },
+          {
+            "obligation": "Fold result preservation",
+            "primitive_support": ["^91013 fold"],
+            "transformation": "Section 5 reindexing law",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 5"],
+            "reconstructed_target": "^92012 fold",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Inverse table preservation",
+            "primitive_support": ["^92006 table"],
+            "transformation": "Value bijection 0->F, 1->T",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 9"],
+            "reconstructed_target": "^91007 table",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": ["Checked if a 3-valued logic would break the mapping; Section 9 requires exact table preservation."],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": [],
+      "unresolved_obligations": [],
+      "derived_view": "Boolean Parity Check System to GF(2) Linear System mapping.",
+      "disposition": "EXACT_WITNESS"
+    },
+    {
+      "case_id": "case-03",
+      "primitive_common_structure": [
+        "Both systems represent a second-order linear differential equation (Harmonic Oscillator).",
+        "Both define a time domain, state variables (q, v/p), parameters (m, k), and time derivatives.",
+        "Both use real addition, multiplication, and equality."
+      ],
+      "mapping_witness": [
+        "A:q <-> B:q",
+        "A:v <-> B:p/m via p = m*v",
+        "A:a <-> B:dot(p)/m via dot(p) = m*a",
+        "A:m <-> B:m",
+        "A:k <-> B:k",
+        "A:time_derivative <-> B:time_derivative"
+      ],
+      "transformations": [
+        "Differentiation of p = m * dot(q) to get dot(p) = m * ddot(q).",
+        "Substitution of dot(p) = -k*q into the force equation.",
+        "Algebraic rearrangement of Hamiltonian derivatives."
+      ],
+      "a_to_b_reconstruction": [
+        "Define p = m * dot(q).",
+        "Differentiate p using Section 8 linearity.",
+        "Substitute A's m*ddot(q) + k*q = 0 to get dot(p) = -k*q.",
+        "Reconstruct B's Hamiltonian as the integral of the motion."
+      ],
+      "b_to_a_reconstruction": [
+        "Substitute p = m * dot(q) into B's dot(p) = -k*q.",
+        "Apply Section 8 derivative laws to get m * ddot(q) = -k*q.",
+        "Recover A's Newton's second law form."
+      ],
+      "role_coverage": {
+        "A": [
+          {"symbol": "^93000", "status": "MAPPED", "counterparts": ["^94000"], "justification": "Model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93001", "status": "MAPPED", "counterparts": ["^94001"], "justification": "Time domain.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93002", "status": "MAPPED", "counterparts": ["^94002"], "justification": "Position variable.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93003", "status": "TRANSFORMED", "counterparts": ["^94003"], "justification": "Velocity; maps to p/m.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93004", "status": "TRANSFORMED", "counterparts": ["^94011"], "justification": "Acceleration; maps to dot(p)/m.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"]},
+          {"symbol": "^93005", "status": "MAPPED", "counterparts": ["^94005"], "justification": "Mass parameter.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93006", "status": "MAPPED", "counterparts": ["^94006"], "justification": "Spring constant.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93007", "status": "MAPPED", "counterparts": ["^94011"], "justification": "Time derivative.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"]},
+          {"symbol": "^93008", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94008"], "justification": "Addition.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93009", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94007"], "justification": "Multiplication.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93010", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94013"], "justification": "Real domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93011", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94014"], "justification": "Domain declaration.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^93012", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94015"], "justification": "Positivity.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93013", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94016"], "justification": "Continuity.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^93014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94017"], "justification": "Equality.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^93015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^94012"], "justification": "Function signature.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]}
+        ],
+        "B": [
+          {"symbol": "^94000", "status": "MAPPED", "counterparts": ["^93000"], "justification": "Model container.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94001", "status": "MAPPED", "counterparts": ["^93001"], "justification": "Time domain.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94002", "status": "MAPPED", "counterparts": ["^93002"], "justification": "Position.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94003", "status": "TRANSFORMED", "counterparts": ["^93003"], "justification": "Momentum; maps to m*v.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94004", "status": "TRANSFORMED", "counterparts": [], "justification": "Hamiltonian; derived energy residual.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94005", "status": "MAPPED", "counterparts": ["^93005"], "justification": "Mass.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94006", "status": "MAPPED", "counterparts": ["^93006"], "justification": "Spring constant.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94007", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93009"], "justification": "Multiplication.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94008", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93008"], "justification": "Addition.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94009", "status": "TRANSFORMED", "counterparts": ["^93009"], "justification": "Square; x*x.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94010", "status": "SHARED_INFRASTRUCTURE", "counterparts": [], "justification": "Division.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94011", "status": "MAPPED", "counterparts": ["^93007"], "justification": "Derivative.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"]},
+          {"symbol": "^94012", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93015"], "justification": "Signature.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^94013", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93010"], "justification": "Real domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94014", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93011"], "justification": "Domain.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 4"]},
+          {"symbol": "^94015", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93012"], "justification": "Positive.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]},
+          {"symbol": "^94016", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93013"], "justification": "Continuous.", "authority_refs": ["DIRECT_NATIVE_SUPPORT"]},
+          {"symbol": "^94017", "status": "SHARED_INFRASTRUCTURE", "counterparts": ["^93014"], "justification": "Equal.", "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 2"]}
+        ]
+      },
+      "exact_obligation_audit": {
+        "candidate_frozen_before_audit": true,
+        "a_to_b_support_checks": [
+          {
+            "obligation": "Equation of motion mapping",
+            "primitive_support": ["^93014 constraints"],
+            "transformation": "Differentiation + Substitution",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"],
+            "reconstructed_target": "^94017 constraints",
+            "result": "PASS"
+          }
+        ],
+        "b_to_a_support_checks": [
+          {
+            "obligation": "Inverse equation mapping",
+            "primitive_support": ["^94017 constraints"],
+            "transformation": "Substitution + Section 8 derivative laws",
+            "authority_refs": ["TRANSFORMATION_SEMANTIC_AUTHORITY_0_1.md Section 8"],
+            "reconstructed_target": "^93014 constraints",
+            "result": "PASS"
+          }
+        ],
+        "local_falsification_attempts": ["Checked if a non-linear oscillator would map; Section 2 laws for linearity are required for the p=mv derivative step."],
+        "unaccounted_load_bearing_differences": [],
+        "exact_gate_pass": true
+      },
+      "residuals": ["Hamiltonian function H in B is a derived integral of motion not explicitly in A"],
+      "unresolved_obligations": [],
+      "derived_view": "Newtonian Mechanics to Hamiltonian Mechanics mapping for a Harmonic Oscillator.",
+      "disposition": "EXACT_WITNESS"
+    }
+  ],
+  "self_audit": {
+    "used_only_packet": true,
+    "used_raw_ids_as_evidence": false,
+    "made_global_negative_isomorphism_claim": false
+  }
+}
