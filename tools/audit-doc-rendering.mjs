@@ -131,11 +131,18 @@ for(const item of findings){
   classCounts[item.classification]=(classCounts[item.classification]||0)+1;
 }
 const mutable=findings.filter(item=>item.classification==='mutable-documentation');
+const protectedFindings=findings.filter(item=>item.classification!=='mutable-documentation');
 const mutableByPath={};
 for(const item of mutable){
   mutableByPath[item.path]??={total:0,kinds:{}};
   mutableByPath[item.path].total++;
   mutableByPath[item.path].kinds[item.kind]=(mutableByPath[item.path].kinds[item.kind]||0)+1;
+}
+const protectedByPath={};
+for(const item of protectedFindings){
+  protectedByPath[item.path]??={total:0,classification:item.classification,kinds:{}};
+  protectedByPath[item.path].total++;
+  protectedByPath[item.path].kinds[item.kind]=(protectedByPath[item.path].kinds[item.kind]||0)+1;
 }
 const report={
   scanned_at:new Date().toISOString(),
@@ -156,7 +163,12 @@ console.log(JSON.stringify({
   mutable_findings:mutable.length
 },null,2));
 console.log('MUTABLE_BY_PATH '+JSON.stringify(Object.entries(mutableByPath).sort((a,b)=>b[1].total-a[1].total)));
+console.log('PROTECTED_BY_PATH '+JSON.stringify(Object.entries(protectedByPath).sort((a,b)=>b[1].total-a[1].total)));
 for(const item of mutable.slice(0,400)){
   console.log('HIT '+item.path+':'+item.line+':'+item.column+' ['+item.kind+'] '+JSON.stringify(item.excerpt));
 }
 if(mutable.length>400) console.log('... '+(mutable.length-400)+' more mutable findings omitted from log');
+if(process.argv.includes('--enforce-mutable') && mutable.length!==0){
+  console.error('mutable documentation rendering findings remain: '+mutable.length);
+  process.exitCode=2;
+}
