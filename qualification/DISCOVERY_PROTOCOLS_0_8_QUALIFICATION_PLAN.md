@@ -110,12 +110,14 @@ Expected behavior:
 
 ## Q05 — Minimal versus minimum
 
-Supply a declared finite candidate family containing two distinct irreducible sufficient topologies; only one is minimum under the declared transition-count order.
+Supply a declared finite candidate family containing several sufficient topologies, including at least two incomparable irreducible supports under one partial order and a separate scalar measure with a known minimum.
 
 Expected behavior:
 
-- call each irreducible candidate minimal;
-- call only the best candidate within the declared candidate family minimum;
+- distinguish minimal elements from a minimum/least element;
+- do not infer a minimum merely because no known alternative is strictly below one candidate;
+- identify the scalar-measure minimum only after comparing the full declared candidate family;
+- preserve ties if several alternatives attain the same minimum measure;
 - preserve the search/coverage burden.
 
 ## Q06 — Structural valuation
