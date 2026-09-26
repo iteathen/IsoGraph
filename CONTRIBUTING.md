@@ -55,6 +55,17 @@ Cold decoder/verifier experiments are evidence only when isolation is real.
 - Classify discrepancies before repair.
 - Preserve failed runs and ambiguities as evidence; do not rewrite them into success.
 
+## Markdown and math rendering
+
+Mutable documentation must render correctly in GitHub Markdown.
+
+- Use `$...$` for inline mathematics.
+- Use `$$...$$` for display mathematics.
+- Do not use raw `\(...\)` or `\[...\]` delimiters in mutable Markdown; they are not reliably rendered by repository surfaces and can appear as literal `\boxed{}`, `\text{}`, and similar markup.
+- Keep TeX commands inside a supported math delimiter or a fenced code block.
+- Do not “repair” frozen raw experiment output or versioned historical specification bytes merely for presentation. Preserve those exact artifacts and record the rendering exception instead.
+- Run `node tools/audit-doc-rendering.mjs --enforce-mutable` before submitting documentation changes. Repository Verify runs the same guard.
+
 ## Pull requests
 
 Use an issue for nontrivial semantic/specification changes. Keep each pull request scoped to one coherent correction, experiment, or documentation boundary.

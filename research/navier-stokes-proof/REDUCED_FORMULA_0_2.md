@@ -21,11 +21,11 @@ Construct a concentrating, exactly divergence-free axisymmetric background with:
 
 Correct the background recursively in powers of the small similarity parameter so the background residual has the form
 
-\[
+$$
 R(u_B,p_B)=-\operatorname{div}_{cyl}T_{\rm phys}+E_B,
-\]
+$$
 
-where \(T_{\rm phys}\) is annular and \(E_B\) is flat to every order.
+where $T_{\rm phys}$ is annular and $E_B$ is flat to every order.
 
 ### G2 — oscillatory realization of the annular stress
 
@@ -51,15 +51,15 @@ After each operation:
 - recompute the full residual, including linear, quadratic, curl, cutoff, pressure, and reconstruction terms;
 - preserve the run invariants (analytic bounds, coherence, periodicity/support and moment conditions);
 - advance the residual-accuracy coordinate
-  \(\sigma_{j+1}=\sigma_j+1/10\);
+  $\sigma_{j+1}=\sigma_j+1/10$;
 - retain a derivative-order loss independent of stage.
 
-For fixed derivative order \(m\), finite-stage residual power therefore tends to \(+\infty\) with \(j\).
+For fixed derivative order $m$, finite-stage residual power therefore tends to $+\infty$ with $j$.
 
 ### G4 — diagonal summation + protected singular/exterior channels
 
 Choose a rapidly growing diagonal schedule and shrinking cutoffs so that:
-- the velocity/potential/direct/pressure series are smooth and locally finite before \(t=1\);
+- the velocity/potential/direct/pressure series are smooth and locally finite before $t=1$;
 - all residual derivatives are flat to arbitrary order at the singular spacetime point;
 - the selected inner blowup ray remains in a region where all annular corrections vanish, hence the corrected/localized velocity equals the original singular slow base there;
 - the outer heat region retains identically zero residual.
@@ -75,11 +75,11 @@ This produces the local theorem interface:
 
 Use the potential/direct decomposition to localize in space and time while preserving incompressibility and leaving the late-time singular channel unchanged.
 
-Let the presingular Navier–Stokes residual provide the past-side force. Its compatible all-order boundary jets at \(t=1\) define a smooth spacetime extension.
+Let the presingular Navier–Stokes residual provide the past-side force. Its compatible all-order boundary jets at $t=1$ define a smooth spacetime extension.
 
 The resulting prescribed force:
-- equals the activated Navier–Stokes residual exactly for \(0\le t<1\);
-- is \(C^\infty\);
+- equals the activated Navier–Stokes residual exactly for $0\le t<1$;
+- is $C^\infty$;
 - has the required compact positive-time support after whole-space localization;
 - preserves the blowup path because the cutoffs equal one there.
 
@@ -92,13 +92,13 @@ From:
 - exact forced Navier–Stokes equation;
 - incompressibility;
 
-derive the whole-space energy balance, then the energy-rate inequality and scalar Gronwall/integrating-factor estimate. This yields uniform finite kinetic energy on \([0,1)\), with the stronger integrated-dissipation consequences available downstream.
+derive the whole-space energy balance, then the energy-rate inequality and scalar Gronwall/integrating-factor estimate. This yields uniform finite kinetic energy on $[0,1)$, with the stronger integrated-dissipation consequences available downstream.
 
 ### G7 — contract-preserving transport
 
 Transport the constructed witness without reopening the internal correction engine:
 
-- spatial/amplitude scaling: viscosity one -> every \(\nu>0\), preserving singular time and candidate obligations;
+- spatial/amplitude scaling: viscosity one -> every $\nu>0$, preserving singular time and candidate obligations;
 - initial-rest delayed parabolic compression: fit the compact candidate into the periodic fundamental region;
 - periodization: whole-space compact witness -> periodic witness with the periodic contract;
 - comparator adapters: candidate contracts -> the official alternatives C and D.
@@ -109,7 +109,7 @@ Each transport has its own side conditions; they share a role, not an identity.
 
 For the appropriate target setting, assume a global smooth competitor with the same force and zero initial data.
 
-Use the setting-specific uniqueness/comparison theorem to obtain agreement with the constructed solution for every \(T<1\). The competitor therefore inherits the constructed blowup path, contradicting global smooth boundedness.
+Use the setting-specific uniqueness/comparison theorem to obtain agreement with the constructed solution for every $T<1$. The competitor therefore inherits the constructed blowup path, contradicting global smooth boundedness.
 
 - R3/C: competitor class includes the uniform finite-energy condition.
 - periodic/D: competitor class carries periodicity instead; the same energy hypothesis is not required.
@@ -118,7 +118,7 @@ Therefore no admissible global smooth competitor exists.
 
 ## Compact dependency chain
 
-\[
+$$
 G1
 \to G2
 \to G3
@@ -126,19 +126,19 @@ G1
 \to G5
 \to G6
 \to G8,
-\]
+$$
 
 with
 
-\[
+$$
 G5\to G7\to G8
-\]
+$$
 
 for viscosity/domain transport and comparator-facing theorem forms.
 
 More structurally:
 
-\[
+$$
 \boxed{
 \begin{aligned}
 &\text{singular background with annular stress}\\
@@ -157,7 +157,7 @@ More structurally:
 &\xrightarrow{\text{uniqueness + blowup}}
 \text{no global smooth competitor.}
 \end{aligned}}
-\]
+$$
 
 ## What RF-0.2 intentionally compresses
 
@@ -173,7 +173,7 @@ It does **not** compress away:
 - oscillatory covariance realization;
 - the four correction roles;
 - exact-zero exterior vs merely flat residual;
-- distinct \(\sigma_j\) and diagonal schedule roles;
+- distinct $\sigma_j$ and diagonal schedule roles;
 - finite-energy closure;
 - whole-space vs periodic competitor residuals.
 

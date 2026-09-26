@@ -8,7 +8,7 @@ IsoGraph is built around a simple but demanding idea:
 
 The working substrate hypothesis is:
 
-\[
+$$
 \boxed{
 \text{knowledge}
 =
@@ -16,7 +16,7 @@ The working substrate hypothesis is:
 +
 \text{lawful structural transformation}
 }
-\]
+$$
 
 The native path is intended to be:
 

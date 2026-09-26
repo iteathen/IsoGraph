@@ -55,15 +55,15 @@ IsoGraph asks whether an external structural state can become a better coordinat
 
 The relevant empirical question is whether the observed ceiling is approximately:
 
-\[
+$$
 \text{reasoning ceiling}
-\]
+$$
 
 or instead contains a substantial:
 
-\[
+$$
 \text{representation}+\text{bookkeeping ceiling}
-\]
+$$
 
 If an unchanged model can reliably solve synthesis/optimization tasks in IsoGraph that it cannot solve in conventional notation under matched resources, that would be evidence for the latter.
 
@@ -172,28 +172,28 @@ Fresh Agent B receives C only
 
 Require exact structural recovery:
 
-\[
+$$
 X'=X
-\]
+$$
 
 Then use fresh agents to reason over surviving encodings.
 
 This creates two distinct fitness tests:
 
-\[
+$$
 F_{\text{storage}}(C)
 =
 \frac{\text{exact recoverability}}{\text{size}}
-\]
+$$
 
 and:
 
-\[
+$$
 F_{\text{reason}}(C)
 =
 \frac{\text{correct synthesis}}
 {\text{context/compute cost}}
-\]
+$$
 
 The second is ultimately more important.
 
@@ -293,11 +293,11 @@ Individual runtimes, tokenizers, models, databases, storage providers, ingest/ch
 
 A practical test for formal veto is:
 
-\[
+$$
 \text{mission-critical legitimate interest}
 +
 \text{credible inability to proceed without consent}
-\]
+$$
 
 Shutdown power without mission legitimacy is a dependency problem to engineer away.
 
@@ -327,13 +327,13 @@ It is the search for a **semantically sufficient current state**.
 
 If:
 
-\[
+$$
 S_{t+1}=F(S_t,o_t)
-\]
+$$
 
-is possible because \(S_t\) retains every distinction required for future valid reasoning, old textual history can be discarded.
+is possible because $S_t$ retains every distinction required for future valid reasoning, old textual history can be discarded.
 
-If two histories produce the same \(S_t\) but support different valid continuations, then \(S_t\) was not sufficient.
+If two histories produce the same $S_t$ but support different valid continuations, then $S_t$ was not sufficient.
 
 IsoGraph should therefore test the minimum state required to restore continuation equivalence.
 

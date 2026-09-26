@@ -62,20 +62,20 @@ The next state is reconstructed and satisfies the same representation/coherence/
 
 Let the stage accuracy satisfy
 
-\[
+$$
 \sigma_0=\frac15,\qquad
 \sigma_{j+1}=\sigma_j+\frac1{10}.
-\]
+$$
 
 Each cycle preserves the run invariant at the new accuracy.
 
-For derivative order \(m\), the physical residual exponent is
+For derivative order $m$, the physical residual exponent is
 
-\[
+$$
 h\sigma_j-\operatorname{fixedLoss}(m),
-\]
+$$
 
-with \(h>0\) and loss independent of \(j\). Hence for every requested residual power \(N\) and derivative order \(m\), some finite stage has exponent at least \(N\).
+with $h>0$ and loss independent of $j$. Hence for every requested residual power $N$ and derivative order $m$, some finite stage has exponent at least $N$.
 
 ### P5 — diagonal extraction and local theorem closure
 
@@ -93,7 +93,7 @@ This closes the property-rich local theorem contract.
 Localize through the potential/direct representation so incompressibility is preserved.
 
 Use the presingular residual plus its compatible endpoint jets to construct a global smooth force that:
-- equals the activated residual for \(0\le t<1\);
+- equals the activated residual for $0\le t<1$;
 - is compactly supported in positive time;
 - leaves the protected blowup channel unchanged.
 
@@ -120,7 +120,7 @@ Transport the closed candidate contract without reopening the correction machine
 ### P9 — global-continuation obstruction
 
 For the relevant competitor class:
-- use uniqueness/comparison to force agreement with the constructed candidate for every time \(t<1\);
+- use uniqueness/comparison to force agreement with the constructed candidate for every time $t<1$;
 - transfer the protected blowup to the hypothetical competitor;
 - contradict global smooth boundedness.
 
@@ -128,15 +128,15 @@ Whole-space and periodic competitor classes remain distinct.
 
 ## Dependency chain
 
-\[
+$$
 P0\to P1\to P2\to P3\to P4\to P5\to P6\to P7\to P9
-\]
+$$
 
 and
 
-\[
+$$
 P6\to P8\to P9.
-\]
+$$
 
 P2–P4 describe the correction engine; P5 is the extraction boundary; P6 is the contract-closure boundary; P8–P9 consume only the closed contracts.
 
@@ -151,7 +151,7 @@ S0.3 retains the fresh DP mechanisms rather than replacing them with opaque boxe
 - FiveRows is the recurring finite obstruction repair;
 - physical/coefficient/alias views evolve synchronously;
 - all four corrections share one continuation frame;
-- \(\sigma_j\) and the diagonal schedule remain distinct refinement mechanisms.
+- $\sigma_j$ and the diagonal schedule remain distinct refinement mechanisms.
 
 ## Non-claims
 

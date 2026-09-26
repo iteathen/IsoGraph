@@ -17,6 +17,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Node for documentation audit
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Verify mutable documentation rendering
+        run: node tools/audit-doc-rendering.mjs --enforce-mutable
+
       - name: Verify repository authority surface
         shell: bash
         run: |

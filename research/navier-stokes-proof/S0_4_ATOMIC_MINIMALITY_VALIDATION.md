@@ -41,12 +41,12 @@ Result:
 
 Therefore:
 
-\[
+$$
 \forall i \in \{0,\ldots,24\},\quad
 \operatorname{delete}(A_i)
 \Rightarrow
 \text{at least one declared final target is unreachable}.
-\]
+$$
 
 Result: **PASS**.
 
