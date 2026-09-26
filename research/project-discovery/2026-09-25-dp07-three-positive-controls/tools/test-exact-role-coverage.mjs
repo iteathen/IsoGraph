@@ -115,9 +115,9 @@ for(const caseId of ['case-01','case-02','case-03']){
     nativeB:fs.readFileSync(`${ROOT}/blind-v2/${caseId}/B.isg`,'utf8')
   };
 }
-assert.doesNotThrow(
+assert.throws(
   ()=>enforceExactRoleCoverage({report:rejectedRaw,signaturesByCase:actualSignatures}),
-  'corrected gate must accept the mechanically complete run-36225973244 role coverage'
+  /case-03 exact role coverage failed: unknown A counterpart \^71019 for \^94010/
 );
-console.log('PASS: rejected run role coverage regression fixture');
+console.log('PASS: rejected run cross-case counterpart regression fixture');
 
