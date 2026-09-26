@@ -1,0 +1,30 @@
+name: Rendering Modernization Audit
+
+on:
+  push:
+    paths:
+      - 'research/rendering-modernization/**'
+      - 'research/project-discovery/2026-09-25-ising-mwc-dp07/ISING_RENDER_0_2*'
+      - 'research/project-discovery/2026-09-25-ising-mwc-dp07/MWC_RENDER_0_2*'
+      - 'tools/audit-rendering-modernization.mjs'
+      - '.github/workflows/rendering-modernization.yml'
+  pull_request:
+    paths:
+      - 'research/rendering-modernization/**'
+      - 'research/project-discovery/2026-09-25-ising-mwc-dp07/ISING_RENDER_0_2*'
+      - 'research/project-discovery/2026-09-25-ising-mwc-dp07/MWC_RENDER_0_2*'
+      - 'tools/audit-rendering-modernization.mjs'
+      - '.github/workflows/rendering-modernization.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - run: node tools/audit-rendering-modernization.mjs
