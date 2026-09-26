@@ -17,6 +17,10 @@ Qualified dependencies used by the Experiment 029 cases:
 
 Core 0.19 remains the candidate under test and is not authority merely because it is present in the cold packet.
 
+Frozen Core 0.19 Git blob SHA:
+
+`ae482dda774456a855af942dc8d15fcfd5aae0bb`
+
 ## Section 18 ESR predecessor evidence
 
 The exact source-rendering path has already been exercised on six source renderings under ESR 0.1.
