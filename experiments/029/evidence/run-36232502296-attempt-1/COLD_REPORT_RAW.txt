@@ -1,0 +1,106 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "explicit_support": true,
+        "exact_truth_from_explicit": false,
+        "provenance_scope_retained": true
+      },
+      "reason": "Core 0.19 §2 defines explicit support as being directly supplied by the source, but explicitly states that this does not independently establish truth or proof authority. Provenance and scope are inherited from the source.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#2"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "implicit_exact_admissible": true,
+        "source_explicit": false,
+        "premises_authority_witness_recoverable": true
+      },
+      "reason": "The assertion R(A,C) is derived from explicit premises and a pinned transitivity authority, satisfying the requirements for exact implicit support. It is not explicitly stated by the source.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.1"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "implicit_exact_admissible": false,
+        "conventional_familiarity_is_authority": false,
+        "missing_premise_blocks": true
+      },
+      "reason": "Core 0.19 §6.2 forbids implicit assertions from depending on unstated premises or conventional familiarity. Every load-bearing premise must be represented.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.2"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "r_admitted_under_g": true,
+        "r_global_unconditional": false,
+        "guard_g_retained": true
+      },
+      "reason": "Core 0.19 §6.3 requires scope preservation. Assertions must not escape the scope (guard G) that makes them valid, and the guard remains attached to the support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.3"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "q_supported_under_h": true,
+        "q_global_exact_unconditional": false,
+        "condition_may_be_dropped": false
+      },
+      "reason": "Core 0.19 §6.4 prohibits authority amplification. Conditional support produces conditional assertion support, and the condition H cannot be silently dropped.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.4"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "b_exact_implicit": true,
+        "c_exact_implicit": true,
+        "a_additional_implicit_support": true,
+        "cycle_invalid_merely_cyclic": false
+      },
+      "reason": "Core 0.19 §6.6 permits cycles in assertion structure when they have independent explicit grounding (source support for A). The cycle can provide additional implicit support paths.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "cycle_manufactures_valid_support": false,
+        "represented_cycle_is_valid_support": false,
+        "separate_grounding_required": true
+      },
+      "reason": "Core 0.19 §6.6 states that ungrounded self-support is invalid. A cycle cannot manufacture its own authority without independent or separately qualified grounding.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "b_retains_u": true,
+        "c_retains_u": true,
+        "later_pass_may_drop_u": false
+      },
+      "reason": "Core 0.19 §6.7 requires that unresolved structure (QU) remain represented until qualified reasoning refines or discharges it. Dependencies propagate through iterative passes.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.7"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "q1_is_refinement": true,
+        "p_exact_implicit": true,
+        "qu_condition_required_in
