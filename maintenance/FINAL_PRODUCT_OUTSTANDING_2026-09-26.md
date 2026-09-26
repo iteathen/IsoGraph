@@ -1,8 +1,8 @@
 # Final-Product Maintenance Outstanding — 2026-09-26
 
 **Status:** OUTSTANDING — ChatGPT Library publication mirror only  
-**Repository-root final product:** CURRENT and durable  
-**Current semantic authority:** direct Core 0.19 full-stack qualification complete  
+**Repository-root final product:** CURRENT and durable on the DP 0.8 successor branch  
+**Current semantic authority:** direct Core 0.19 full-stack qualification complete; DP 0.8 remains unqualified successor material  
 **Pinned semantic-authority snapshot represented by the DOCX:** `main@ef5414b1733b3619356039722a7280cc94ac49d4`
 
 ## Repository final product — complete
@@ -13,26 +13,32 @@ The accumulated family reference is now stored durably in the repository root be
 
 Verified repository artifact:
 
-- materialization commit: `5356bcd845d0ce4d3f373d14af4514ae027833b7`;
-- Git blob SHA: `85a35eb1455e8620f15ce6696dc4e63e9aa8277c`;
-- size: 58,188 bytes;
-- SHA-256: `a25daa5e0592a6eb8be80aa2e7a0d941b5ecbede215bbc2c7c720857887b4b3c`;
-- page count: 19;
-- exact byte identity with the fully QA-verified Library working source: confirmed.
+- current DP 0.8 branch materialization commit: `7db7a167c9faaafef1e47c7dfeb5dd140ba790f5`;
+- current Git blob SHA: `c009bfed778c84aceacf9b75a733d4595f7e2a47`;
+- current size: 60,575 bytes;
+- current SHA-256: `6584ca146a82a8331fc22167afd678b6a54dd3c62454c8209b0afb86a2119806`;
+- current page count: 21;
+- DP 0.8 is included only as explicitly unqualified successor material; the qualified-authority pin remains unchanged.
 
-Materialization workflow run:
+Original repository materialization workflow run:
 
 `36273489329`
 
-The run passed all required gates:
+DP 0.8 branch refresh materialization workflow run:
 
-- reconstructed base64 length: 77,584 characters;
-- decoded DOCX size: 58,188 bytes;
-- exact SHA-256 match;
+`36279494215` — SUCCESS
+
+The original publication run passed its required gates. The DP 0.8 branch refresh independently passed:
+
+- reconstructed base64 length: 80,768 characters;
+- decoded DOCX size: 60,575 bytes;
+- exact SHA-256 `6584ca146a82a8331fc22167afd678b6a54dd3c62454c8209b0afb86a2119806`;
 - DOCX ZIP integrity test PASS;
 - root artifact commit PASS;
-- temporary staging removal PASS;
-- one-shot materializer workflow removal PASS.
+- all temporary staging/subchunks removed;
+- one-shot materializer workflow/trigger removed.
+
+Earlier DP 0.8 staging/materialization attempts failed closed before publication while chunk transfer was incomplete or mismatched. They changed no root DOCX.
 
 The earlier materialization run `36258581587` failed before publication because staging bytes were not yet exact. It produced no root artifact and has no semantic/qualification effect. The successful run used individually Git-hash-verified staging pieces and removed all temporary staging afterward.
 
@@ -64,7 +70,7 @@ Qualification evidence:
 - promotion merge: `ef5414b1733b3619356039722a7280cc94ac49d4`;
 - post-merge Verify: `36256333700` — SUCCESS.
 
-The DOCX pins the semantic-authority snapshot `ef5414b1733b3619356039722a7280cc94ac49d4`. Later maintenance-only commits that store, route, or document the DOCX do not change semantic authority and therefore do not create an infinite self-reference requirement to repin the document.
+The DOCX pins the semantic-authority snapshot `ef5414b1733b3619356039722a7280cc94ac49d4`. The DP 0.8 branch edition additionally records DP 0.8, its qualification plan, and its Logic Lens companion as **unqualified successor material**. That candidate inclusion does not alter the qualified-authority pin. Later maintenance-only commits that store, route, or document the DOCX do not create an infinite self-reference requirement to repin the qualified snapshot.
 
 Historical Experiments 027–030 and Experiment 031 attempts 1–2 retain their original dispositions/classifications. No historical result was rewritten.
 
@@ -74,7 +80,7 @@ The exact repository bytes are the same bytes previously fully verified as the e
 
 QA completed before repository publication:
 
-- all 19 rendered pages visually inspected;
+- all 21 rendered pages of the DP 0.8 branch edition visually inspected;
 - no clipping;
 - no overflow;
 - no broken glyphs;
@@ -82,7 +88,7 @@ QA completed before repository publication:
 - no pagination defects;
 - accessibility audit: 0 high / 0 medium / 0 low findings.
 
-Page 1 pins `main@ef5414b1733b3619356039722a7280cc94ac49d4` and states the Experiment 031 full-stack result. Page 19 repeats the same pinned semantic snapshot and current integration authority.
+Page 1 pins `main@ef5414b1733b3619356039722a7280cc94ac49d4`, states the Experiment 031 full-stack result, and labels DP 0.8 as an unqualified successor draft. The final pages preserve the same qualified snapshot and explicitly separate the successor surface from current authority.
 
 ## Editable working source
 
@@ -95,7 +101,7 @@ The current editable Library working source remains:
 - size: 58,188 bytes;
 - SHA-256: `a25daa5e0592a6eb8be80aa2e7a0d941b5ecbede215bbc2c7c720857887b4b3c`.
 
-It is a convenience editing surface. The repository-root DOCX is now the durable maintained project artifact.
+It is a convenience editing surface. It still reflects the previous 58,188-byte / 19-page edition and is therefore behind the DP 0.8 branch-maintained repository artifact. The repository-root DOCX is the durable maintained project artifact and must be preferred for this branch.
 
 ### Library read-cache observation
 
@@ -104,6 +110,18 @@ After the successful path-based overwrite, `files.list` reports Library version 
 An unversioned read through the working-source stable Library ID, and even a read requesting `version_id=2` through that stable ID, may still return cached version-1 bytes. A direct read of the exact current backing file returns the verified version-2 document.
 
 Future verification should resolve the current backing file/version with Library listing metadata and then verify the exact backing file bytes.
+
+
+## Branch synchronization enforcement
+
+The DP 0.8 branch adds permanent synchronization enforcement:
+
+- `.github/workflows/family-reference-sync.yml` runs on every branch push and on pull requests;
+- `tools/check-family-reference-sync.mjs` compares the branch against its main/base merge point;
+- family-affecting specification/routing changes require the repository-root DOCX to differ in the same branch;
+- normal `Verify` runs the same synchronization check and verifies DOCX ZIP integrity.
+
+This mechanical gate proves that branch maintenance participated. It does not replace content review, page-by-page render inspection, accessibility audit, or exact qualification-status labeling.
 
 ## What remains outstanding — Library publication mirror only
 
