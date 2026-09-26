@@ -1,0 +1,55 @@
+name: Materialize DP 0.8 family reference
+
+on:
+  push:
+    branches:
+      - candidate/dp08-sufficiency-valuation-20260926
+    paths:
+      - maintenance/final-product-dp08/RUN.request
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify family reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          staging=.artifact-staging/family-reference-dp08
+          out=IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+          tmp="$out.tmp"
+
+          : > /tmp/family-reference.b64
+          for n in $(seq -w 0 13); do
+            test -s "$staging/chunk-$n.b64"
+            cat "$staging/chunk-$n.b64" >> /tmp/family-reference.b64
+          done
+
+          test "$(wc -c < /tmp/family-reference.b64)" -eq 80768
+          base64 --decode /tmp/family-reference.b64 > "$tmp"
+          test "$(wc -c < "$tmp")" -eq 60575
+          echo "6584ca146a82a8331fc22167afd678b6a54dd3c62454c8209b0afb86a2119806  $tmp" | sha256sum -c -
+          unzip -t "$tmp"
+          mv "$tmp" "$out"
+
+      - name: Commit verified family reference and remove one-shot machinery
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+          git rm -r .artifact-staging/family-reference-dp08
+          git rm .github/workflows/materialize-dp08-final-product.yml
+          git rm maintenance/final-product-dp08/RUN.request
+
+          git commit -m "docs: refresh accumulated family reference for DP 0.8"
+          git push origin HEAD:candidate/dp08-sufficiency-valuation-20260926
