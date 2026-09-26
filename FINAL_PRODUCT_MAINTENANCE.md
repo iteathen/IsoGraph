@@ -58,6 +58,14 @@ If an in-place replacement fails because Project attachment or Project knowledge
 
 Current unresolved incidents are recorded under `maintenance/`. The active record at the time of this rule update is [maintenance/FINAL_PRODUCT_OUTSTANDING_2026-09-26.md](maintenance/FINAL_PRODUCT_OUTSTANDING_2026-09-26.md).
 
+### Editable working source
+
+While the Project-attached canonical Library record cannot be mutated through the available API, maintain the editable source document at:
+
+`/IsoGraph/working/IsoGraph_Family_Reference_WORKING_SOURCE.docx`
+
+This working source is not a second canonical final product. It is the mutable source used for future accumulated-reference edits, rendering/QA, and eventual in-place publication to the canonical Library record. Preserve its stable Library identity when practical; path-based overwrite is permitted for this working source when stable-ID version upload is unavailable.
+
 ## Completion rule
 
 For a promotion or authority change:
