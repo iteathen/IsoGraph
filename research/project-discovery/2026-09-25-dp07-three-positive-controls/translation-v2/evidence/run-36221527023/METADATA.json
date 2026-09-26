@@ -1,0 +1,110 @@
+{
+  "schema": 2,
+  "sha": "58d71a5b7d9043b6b398428952ef43def6551138",
+  "model": "gemini-3.8-flash",
+  "model_candidates": [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-pro-latest",
+    "gemini-3.1-pro-preview"
+  ],
+  "contract": "ESR-0.1",
+  "provider_calls": [
+    {
+      "label": "case-01A:decoder_A",
+      "model": "gemini-3.8-flash",
+      "status": 200,
+      "attempt": 2,
+      "thinking": true,
+      "usage": {
+        "promptTokenCount": 28414,
+        "candidatesTokenCount": 1927,
+        "totalTokenCount": 36475,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 28414
+          }
+        ],
+        "thoughtsTokenCount": 6134,
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-01A:decoder_B",
+      "model": "gemini-3.6-flash",
+      "status": 200,
+      "attempt": 1,
+      "thinking": true,
+      "usage": {
+        "promptTokenCount": 28414,
+        "candidatesTokenCount": 1996,
+        "totalTokenCount": 33582,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 28414
+          }
+        ],
+        "thoughtsTokenCount": 3172,
+        "serviceTier": "standard"
+      }
+    },
+    {
+      "label": "case-01A:verifier",
+      "model": "gemini-3.1-flash-lite",
+      "status": 200,
+      "attempt": 1,
+      "thinking": false,
+      "usage": {
+        "promptTokenCount": 7611,
+        "candidatesTokenCount": 880,
+        "totalTokenCount": 8491,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7611
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "disabled_models": {
+    "gemini-3.8-flash": "http_503",
+    "gemini-3.7-flash": "http_503",
+    "gemini-3.6-flash": "http_429"
+  },
+  "verification_meta": {
+    "case-01A": {
+      "model": "gemini-3.1-flash-lite",
+      "thinking": false,
+      "attempts": 1,
+      "usage": {
+        "promptTokenCount": 7611,
+        "candidatesTokenCount": 880,
+        "totalTokenCount": 8491,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7611
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  },
+  "authority_hashes": {
+    "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+    "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2"
+  },
+  "contract_sha256": "051839093f736eeef876cf381c8ac1931d26618e245a564d2d6824d175255f1f",
+  "coverage_map_sha256": "adf1aeceb580f1427b5f1ca60236fdf178414fbde640519cae3aab50cc2e01ed",
+  "mutation_map_sha256": "46cfea8814f9fefbc8b13f33b93ef872362f1b9eed56282f8d2b8163f8e96326",
+  "case_packet_hashes": {
+    "case-01A": "d303a902e44d65b91f14beceb98b869df15befdca63413eb5590ea52fbaa1144"
+  }
+}
