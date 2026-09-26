@@ -1,0 +1,50 @@
+name: Materialize repo-root family reference
+
+on:
+  push:
+    branches:
+      - maintenance/repo-root-final-product-20260926
+    paths:
+      - .artifact-staging/family-reference/MATERIALIZE.request
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct verified DOCX
+        shell: bash
+        run: |
+          set -euo pipefail
+          STAGE=".artifact-staging/family-reference"
+          OUT="IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx"
+
+          count=$(find "$STAGE" -maxdepth 1 -type f -name 'chunk-*.b64' | wc -l)
+          test "$count" -eq 10
+
+          cat "$STAGE"/chunk-00.b64               "$STAGE"/chunk-01.b64               "$STAGE"/chunk-02.b64               "$STAGE"/chunk-03.b64               "$STAGE"/chunk-04.b64               "$STAGE"/chunk-05.b64               "$STAGE"/chunk-06.b64               "$STAGE"/chunk-07.b64               "$STAGE"/chunk-08.b64               "$STAGE"/chunk-09.b64 > /tmp/family-reference.b64
+
+          test "$(wc -c < /tmp/family-reference.b64)" -eq 77584
+          base64 -d /tmp/family-reference.b64 > "$OUT"
+          test "$(wc -c < "$OUT")" -eq 58188
+          echo "a25daa5e0592a6eb8be80aa2e7a0d941b5ecbede215bbc2c7c720857887b4b3c  $OUT" | sha256sum -c -
+          unzip -t "$OUT"
+
+      - name: Commit root artifact and remove staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .artifact-staging/family-reference
+          rm -f .github/workflows/materialize-final-product.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Store maintained family-reference DOCX beside README"
+          git push origin HEAD:maintenance/repo-root-final-product-20260926
