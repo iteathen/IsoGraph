@@ -37,7 +37,7 @@ const ESR_PROMOTION_BLOB='489be088187329ef3cbcf95d08fe73cd7d026ee8';
 
 const forbidden=[
   'hidden/',
-  'ASSERTIONS',
+  'experiments/029/hidden/',
   'score-exp029',
   'test-score-exp029',
   'test-runner-exp029',
