@@ -1,0 +1,29 @@
+name: Family Reference Sync
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  family-reference-sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Ensure main comparison ref
+        if: github.ref_name != 'main' || github.event_name == 'pull_request'
+        run: git fetch --no-tags origin main:refs/remotes/origin/main
+
+      - name: Verify accumulated family reference is synchronized
+        run: node tools/check-family-reference-sync.mjs
+
+      - name: Verify DOCX package integrity
+        run: unzip -t IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
