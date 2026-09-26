@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import crypto from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 
 const MANIFEST=process.argv[2]||'research/rendering-modernization/2026-09-26/WAVE_01_MANIFEST.json';
 const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
@@ -15,7 +15,7 @@ if(manifest.status==='IMMUTABLE_ESR_QUALIFIED_PREDECESSORS'){
   for(const c of manifest.cases||[]){
     const q=fs.readFileSync(c.qualified_path);
     const p=fs.readFileSync(c.promoted_path);
-    const qsha=gitBlobSha(q),psha=gitBlobSha(p);
+    const qsha=gitBlobSha(c.qualified_path),psha=gitBlobSha(c.promoted_path);
     const pass=qsha===c.expected_git_blob_sha &&
       psha===c.expected_git_blob_sha &&
       q.equals(p);
