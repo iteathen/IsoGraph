@@ -120,4 +120,3 @@ assert.throws(
   /case-03 exact role coverage failed: unknown A counterpart \^71019 for \^94010/
 );
 console.log('PASS: rejected run cross-case counterpart regression fixture');
-
