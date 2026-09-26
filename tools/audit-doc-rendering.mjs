@@ -28,6 +28,22 @@ function walk(dir){
   return out;
 }
 
+function stripInlineCode(line){
+  const chars=[...line];
+  let i=0;
+  while(i<line.length){
+    if(line[i]!=='\x60'){ i++; continue; }
+    let j=i;
+    while(j<line.length && line[j]==='\x60') j++;
+    const fence=line.slice(i,j);
+    const end=line.indexOf(fence,j);
+    if(end<0){ i=j; continue; }
+    for(let k=i;k<end+fence.length;k++) chars[k]=' ';
+    i=end+fence.length;
+  }
+  return chars.join('');
+}
+
 function stripInlineMath(line){
   let out=''; let i=0; let inMath=false;
   while(i<line.length){
@@ -88,16 +104,18 @@ for(const file of allFiles){
       detail
     });
 
-    const open=raw.indexOf('\\[');
+    const rendered=stripInlineCode(raw);
+
+    const open=rendered.indexOf('\\[');
     if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $ display math or plain text.');
-    const close=raw.indexOf('\\]');
+    const close=rendered.indexOf('\\]');
     if(close>=0) add('unsupported-tex-display-delimiter',close,'Use GitHub-supported $ display math or plain text.');
-    const inlineOpen=raw.indexOf('\\(');
+    const inlineOpen=rendered.indexOf('\\(');
     if(inlineOpen>=0) add('unsupported-tex-inline-delimiter',inlineOpen,'Use GitHub-supported $ inline math.');
-    const inlineClose=raw.indexOf('\\)');
+    const inlineClose=rendered.indexOf('\\)');
     if(inlineClose>=0) add('unsupported-tex-inline-delimiter',inlineClose,'Use GitHub-supported $ inline math.');
 
-    const outsideMath=stripInlineMath(raw);
+    const outsideMath=stripInlineMath(rendered);
     const cmd=outsideMath.match(texCommand);
     if(cmd) add('raw-tex-command-outside-math',cmd.index??0,cmd[0]);
 
