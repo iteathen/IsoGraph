@@ -61,3 +61,14 @@ export function validateExactRoleCoverage({caseReport,signatureA,signatureB}){
     ...validateSide({side:'B',entries:coverage.B,expected:expectedB,opposite:expectedA})
   ];
 }
+
+export function enforceExactRoleCoverage({report,signaturesByCase}){
+  for(const caseReport of report?.cases||[]){
+    if(caseReport?.disposition!=='EXACT_WITNESS') continue;
+    const caseId=caseReport?.case_id;
+    const pair=signaturesByCase?.[caseId];
+    if(!pair?.A||!pair?.B) throw new Error(`${caseId||'unknown-case'} exact role coverage failed: missing signatures`);
+    const issues=validateExactRoleCoverage({caseReport,signatureA:pair.A,signatureB:pair.B});
+    if(issues.length) throw new Error(`${caseId} exact role coverage failed: ${issues.join('; ')}`);
+  }
+}
