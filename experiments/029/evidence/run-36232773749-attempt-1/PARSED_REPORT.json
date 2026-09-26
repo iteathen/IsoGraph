@@ -1,0 +1,317 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "explicit_support": true,
+        "exact_truth_from_explicit": false,
+        "provenance_scope_retained": true
+      },
+      "reason": "Explicit support is defined by the source directly supplying the assertion body, but this does not independently establish truth or proof status. Provenance and scope must remain attached as the assertion inherits the authority and limitations of its source.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#2"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "implicit_exact_admissible": true,
+        "source_explicit": false,
+        "premises_authority_witness_recoverable": true
+      },
+      "reason": "The assertion is not directly supplied by the source but is established from represented structure (R(A,B), R(B,C)) and pinned authority (transitivity). It qualifies for implicit exact support, provided the lineage is recoverable.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.1"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "implicit_exact_admissible": false,
+        "conventional_familiarity_is_authority": false,
+        "missing_premise_blocks": true
+      },
+      "reason": "Implicit assertions must not depend on unstated premises merely because they are familiar or conventional. The absence of represented transitivity authority blocks the derivation.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.2",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.5"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "r_admitted_under_g": true,
+        "r_global_unconditional": false,
+        "guard_g_retained": true
+      },
+      "reason": "Implicit assertions must preserve the scope and guards of their premises. R is valid only under guard G and cannot be promoted to a global unconditional assertion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.3"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "q_supported_under_h": true,
+        "q_global_exact_unconditional": false,
+        "condition_may_be_dropped": false
+      },
+      "reason": "Authority amplification is forbidden; an implicit assertion cannot acquire stronger semantic authority or broader scope than its support justifies. The condition H must be retained.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.4"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "b_exact_implicit": true,
+        "c_exact_implicit": true,
+        "a_additional_implicit_support": true,
+        "cycle_invalid_merely_cyclic": false
+      },
+      "reason": "Cycles in assertion structure are permitted when grounded by independent explicit support (A). B and C receive implicit support, and A gains an additional implicit lineage.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#13"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "cycle_manufactures_valid_support": false,
+        "represented_cycle_is_valid_support": false,
+        "separate_grounding_required": true
+      },
+      "reason": "An ungrounded support cycle cannot manufacture its own authority. Without explicit or separately qualified recursive grounding, the assertions are invalid.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.6"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "b_retains_u": true,
+        "c_retains_u": true,
+        "later_pass_may_drop_u": false
+      },
+      "reason": "Unresolved structure (QU) dependencies remain load-bearing and propagate through iterative expansion unless a qualified authority refines or discharges them.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.7"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "q1_is_refinement": true,
+        "p_exact_implicit": true,
+        "qu_condition_required_in_assertion_body": true,
+        "provenance_retains_refinement_witness": true
+      },
+      "reason": "Q1 is a refinement of Q0. Since P is invariant across all realizations of Q1, it receives exact implicit support, though it remains conditional on the refined QU state.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5",
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md#13"
+      ]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "uniform_prior_allowed": false,
+        "bayesian_from_qu_alone": false,
+        "qu_family_valid": true
+      },
+      "reason": "QU represents possibility structure but does not supply probability distributions or uniform priors. Bayesian support requires separately represented probability authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#5"
+      ]
+    },
+    {
+      "case_id": "D11",
+      "answers": {
+        "b_bayesian_implicit": true,
+        "b_may_feed_c": true,
+        "c_bayesian_implicit": true,
+        "exact_promotion": false
+      },
+      "reason": "Bayesian implicit assertions are admitted under explicit probability authority and can participate in later passes. They are never promoted to exact support merely by being numerically determinate.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.2",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#8"
+      ]
+    },
+    {
+      "case_id": "D12",
+      "answers": {
+        "multiply_as_independent": false,
+        "dependence_load_bearing": true,
+        "separate_records_prove_independence": false
+      },
+      "reason": "Evidence items sharing a causal source are not presumed independent. Double-counting is forbidden, and separate record identities do not establish independence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#8"
+      ]
+    },
+    {
+      "case_id": "D13",
+      "answers": {
+        "bayesian_support": true,
+        "exact_support": false,
+        "core_probability_threshold_promotes": false
+      },
+      "reason": "No probability threshold upgrades Bayesian support to exact support. Exact support requires necessity under the governing authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#4.2"
+      ]
+    },
+    {
+      "case_id": "D14",
+      "answers": {
+        "both_support_classes_retained": true,
+        "lineage_overwrite": false,
+        "same_body_implies_same_support": false
+      },
+      "reason": "Assertion identity is distinct from support identity. One body may retain both explicit and implicit support lineages without overwriting history.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#1",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.9"
+      ]
+    },
+    {
+      "case_id": "D15",
+      "answers": {
+        "dp_motivates_search": true,
+        "dp_target_is_validity_premise": false,
+        "t_exact_from_independent_derivation": true
+      },
+      "reason": "A discovery target may motivate a search but cannot serve as a premise for validity. T is admitted only because of the independent derivation from X and Y.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.8"
+      ]
+    },
+    {
+      "case_id": "D16",
+      "answers": {
+        "d_admissible_pass3": true,
+        "lineage_dependency_closed": true,
+        "depth_weakens_exact": false
+      },
+      "reason": "Implicit assertions are admitted through iterative passes. Lineage must remain dependency-closed, and derivation depth does not weaken semantic strength.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#7",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#16"
+      ]
+    },
+    {
+      "case_id": "D17",
+      "answers": {
+        "operational_stop_allowed": true,
+        "universal_closure_claim": false,
+        "completeness_requires_separate_evidence": true
+      },
+      "reason": "An operational fixed point is not proof of universal semantic closure. Stopping the procedure is allowed, but a completeness claim requires separate coverage authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.11"
+      ]
+    },
+    {
+      "case_id": "D18",
+      "answers": {
+        "not_found_report_allowed": true,
+        "nonderivable_conclusion": false,
+        "negative_claim_needs_completeness": true
+      },
+      "reason": "Failure to find an assertion is not proof of non-derivability. A negative claim requires a completeness certificate for the relevant search space.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#6.10"
+      ]
+    },
+    {
+      "case_id": "D19",
+      "answers": {
+        "exact_rendering": false,
+        "partial_artifact_allowed": true,
+        "sidecar_may_supply_missing_semantics": false
+      },
+      "reason": "A sidecar cannot supply load-bearing semantics absent from the native bundle. Exact rendering requires zero semantic residual in the native representation.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.4"
+      ]
+    },
+    {
+      "case_id": "D20",
+      "answers": {
+        "exact_rendering": false,
+        "pretrained_recognition_is_authority": false,
+        "semantics_must_be_represented_or_pinned": true
+      },
+      "reason": "Conventional mathematics cannot be silently imported. Load-bearing semantics must be represented directly or routed through pinned qualified authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.5"
+      ]
+    },
+    {
+      "case_id": "D21",
+      "answers": {
+        "bidirectional_exact": false,
+        "one_way_claim_allowed": true,
+        "empirical_agreement_supplies_inverse": false
+      },
+      "reason": "Exact rendering requires bidirectional witnesses for bidirectional claims. Empirical agreement or one-way proof does not establish the missing exact inverse.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.6"
+      ]
+    },
+    {
+      "case_id": "D22",
+      "answers": {
+        "exact_rendering": false,
+        "preserve_alternatives_qu": true,
+        "convenient_selection_allowed": false
+      },
+      "reason": "Choosing a convenient realization of an unknown or ambiguous source is semantic loss. Alternatives and QU must remain represented for an exact rendering.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.7"
+      ]
+    },
+    {
+      "case_id": "D23",
+      "answers": {
+        "exact_rendering": false,
+        "precision_modality_preserved": true
+      },
+      "reason": "Precision and modality (approximate, conditional, existential) are load-bearing distinctions that must be preserved in an exact rendering.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.8"
+      ]
+    },
+    {
+      "case_id": "D24",
+      "answers": {
+        "exact_rendering_pass": false,
+        "partial_credit_allows_exact": false,
+        "downstream_source_faithful_use": false,
+        "silent_repair_allowed": false
+      },
+      "reason": "There is no partial credit for exact rendering. A failed reconstruction gate blocks downstream use as source-faithful evidence, and silent repair is forbidden.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.10",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md#18.12"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_19": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_invent_hidden_premise": true,
+    "did_not_invent_probability": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_upgrade_explicit_to_truth": true,
+    "did_not_upgrade_bayesian_to_exact": true,
+    "did_not_treat_skeleton_as_rendering": true
+  }
+}
