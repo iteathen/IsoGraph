@@ -41,6 +41,16 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 Core remains distinct from separately versioned qualified extensions.
 
+### Unqualified successor discovery work
+
+The current qualified Discovery Protocol authority remains **DP 0.1–0.7**. The following successor material is under review and is **not current authority**:
+
+- [Discovery Protocols 0.8 — Minimum Sufficient Support and Valuation Candidate](extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CANDIDATE.md)
+- [DP 0.8 Qualification Plan](qualification/DISCOVERY_PROTOCOLS_0_8_QUALIFICATION_PLAN.md)
+- [Logic Lens for Implicit-Assertion Discovery 0.1](research/discovery/LOGIC_LENS_FOR_IMPLICIT_ASSERTION_DISCOVERY_0_1.md) — non-authoritative reasoning refresher only.
+
+DP 0.8 keeps Core representation separate from objective-scoped support reduction: Core represents semantic structure faithfully; Discovery Protocol may investigate which qualified support is necessary for a declared conclusion and how sufficient alternatives should be valued under an application-supplied profile.
+
 ## Evidence status
 
 Start with [EVIDENCE.md](EVIDENCE.md), the machine-readable [claim registry](evidence/claims.json), and the [external-validation index](evidence/external/README.md).
