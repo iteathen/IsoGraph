@@ -1,0 +1,48 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "primitive_common_structure": [
+        "Both systems define a finite undirected 2-regular interaction graph over site family V (^71001 / ^81001) and edge family E (^71002 / ^81002).",
+        "Both define a binary local value configuration family C (^71003 / ^81003) indexed by site family V.",
+        "Both define a scalar energy function via a two-body edge fold and a one-body vertex fold, followed by exponential Boltzmann weights, partition function fold, and normalized configuration probabilities."
+      ],
+      "mapping_witness": [
+        "^71000 <-> ^81000 (model)",
+        "^71001 <-> ^81001 (site_family)",
+        "^71002 <-> ^81002 (edge_family)",
+        "^71003 <-> ^81003 (configuration_family)",
+        "^71004 <-> ^81004 (local_value_at under affine value bijection s_i = 2*n_i - 1)",
+        "^71005 <-> ^81005 (edge_left)",
+        "^71006 <-> ^81006 (edge_right)",
+        "^71007 <-> ^81007 (J <-> epsilon via epsilon = -4*J)",
+        "^71008 <-> ^81008 (h <-> mu via mu = 2*h - 4*J)",
+        "^71009 <-> ^81009 (beta <-> beta)",
+        "^71010 <-> ^81010 (energy <-> grand_energy via E(s) = H(n) + C, C = -J*|E| + h*|V|)",
+        "^71011 <-> ^81011 (weight <-> weight via w_A(s) = K * w_B(n), K = exp(-beta * C))",
+        "^71012 <-> ^81012 (partition <-> grand_partition via Z_A = K * Z_B)",
+        "^71013 <-> ^81013 (probability <-> probability via p_A(s) = p_B(n))",
+        "^71014 <-> ^81014 (real_add)",
+        "^71015 <-> ^81015 (real_multiply)",
+        "^71016 <-> ^81016 (real_negate)",
+        "^71017 <-> ^81017 (finite_fold)",
+        "^71018 <-> ^81018 (real_exp)",
+        "^71019 <-> ^81019 (real_divide)",
+        "^71020 <-> ^81020 (range_or_domain)",
+        "^71021 <-> ^81021 (regular_degree)",
+        "^71022 <-> ^81022 (undirected)",
+        "^71023 <-> ^81023 (edge_endpoint_structure)",
+        "^71024 <-> ^81024 (equal)",
+        "^71025 <-> ^81025 (indexed_by)",
+        "^71026 <-> ^81026 (positive)",
+        "^71027 <-> ^81027 (real_domain)"
+      ],
+      "transformations": [
+        "Configuration bijection: phi(s)_i = (s_i + 1) / 2 from {-1, 1} to {0, 1}; phi^-1(n)_i = 2*n_i - 1 from {0, 1} to {-1, 1}.",
+        "Graph identity on 2-regular undirected graph: sum_{e in E} (n_l(e) + n_r(e)) = 2 * sum_{i in V} n_i, and |E| = |V|.",
+        "Edge product expansion: s_l * s_r = (2*n_l - 1)*(2*n_r - 1) = 4*n_l*n_r - 2*(n_l + n_r) + 1, summing to 4*sum_e(n_l*n_r) - 4*sum_i(n_i) + |E|.",
+        "Single-site sum expansion: sum_i s_i = 2*sum_i n_i - |V|.",
+        "Parameter relation: epsilon = -4*J, mu = 2*h - 4*J, beta_B = beta_A; inverse: J = -epsilon/4, h = (mu - epsilon)/2, beta_A = beta_B.",
+        "Energy shift: E(s) = H(n) + C where C = -J*|E| + h*|V| is configuration-independent.",
+        "Exponential weight scaling: w_A(s) = exp(-beta * E(s)) = exp(-beta * C) * exp(-beta * H(n)) = K * w_B(n) with K = exp(-beta * C) > 0.",
+        "Partition function and probability normalization: Z_
