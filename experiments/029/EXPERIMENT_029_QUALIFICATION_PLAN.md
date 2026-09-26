@@ -70,13 +70,14 @@ Experiment 029 does not replay those expensive translations. D19–D24 test the 
 
 Cold-permitted files:
 
-1. Core 0.18 qualified clarification;
-2. QU 0.1;
-3. current qualified DP 0.7 candidate for D15 only;
-4. Core 0.19 candidate;
-5. Experiment 029 baseline authority;
-6. Experiment 029 public cases;
-7. Experiment 029 public serializer prompt.
+1. Core 0.17 qualified base;
+2. Core 0.18 qualified clarification;
+3. QU 0.1;
+4. current qualified DP 0.7 candidate for D15 only;
+5. Core 0.19 candidate;
+6. Experiment 029 baseline authority;
+7. Experiment 029 public cases;
+8. Experiment 029 public serializer prompt.
 
 Cold-excluded material:
 
