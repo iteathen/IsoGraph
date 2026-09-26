@@ -14,10 +14,15 @@ Current Core authority is cumulative:
 - base: `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`;
 - qualified clarification: `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md`;
 - Core 0.18 SHA-256: `51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63`;
-- qualification: `qualification/CORE_0_18_QUALIFICATION.md`;
-- fresh semantic evidence: Experiment 017, formal disposition `QUALIFIES`.
+- Core 0.18 qualification: `qualification/CORE_0_18_QUALIFICATION.md`;
+- qualified clarification: `CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md`;
+- Core 0.19 SHA-256: `8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2`;
+- Core 0.19 qualification: `qualification/CORE_0_19_QUALIFICATION.md`;
+- Core 0.19 broad evidence: Experiment 029, 25/26 frozen PASS with immutable formal `DOES_NOT_QUALIFY`;
+- Core 0.19 corrected focused regression: Experiment 030 run `36233426103`, 2/2 PASS, formal `QUALIFIES`;
+- exact-rendering predecessor evidence: six ESR-qualified/Q7-promoted source renderings.
 
-The historical `_CANDIDATE` filename is retained because those exact bytes were tested.
+The historical `_CANDIDATE` filenames are retained because those exact bytes were tested. Qualification status comes from this manifest and the revision-specific qualification records.
 
 ## Current qualified semantic extensions
 
@@ -74,7 +79,7 @@ Together the fresh positive-control and Experiment 028 evidence discharge all se
 
 DP remains discovery/search guidance and does not become semantic proof authority.
 
-DP 0.7's conditional exact source-rendering path does not promote Core 0.19 globally; when that path is invoked, the applicable source-rendering authority must qualify separately.
+Core 0.19 is now independently qualified at its exact tested revision. DP 0.7's conditional exact source-rendering path therefore routes through qualified Core 0.19 section 18 when that path is invoked.
 
 ### Detailed Transition System 0.1
 
@@ -102,7 +107,7 @@ DTS 0.1 is a separately versioned qualified extension. It does not become Core. 
 
 ## Integrated current-stack qualification
 
-The current expanded composition is:
+The latest fully integration-qualified composition remains revision-scoped to:
 
 ```text
 Core 0.17 + Core 0.18
@@ -111,6 +116,8 @@ Core 0.17 + Core 0.18
 + DP 0.1–0.7
 + DTS 0.1
 ```
+
+Core 0.19 is independently module-qualified by Experiments 029/030 and is now current Core authority. This manifest does not silently rewrite the earlier full-stack integration record to include Core 0.19.
 
 It is qualified for the exercised dependency-closed scope by:
 
