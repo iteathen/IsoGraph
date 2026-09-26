@@ -1,6 +1,6 @@
 {
   "campaign": "2026-09-25-dp07-three-positive-controls",
-  "status": "READY_FOR_BLIND_EXECUTION",
+  "status": "BLOCKED_PENDING_EXACT_TRANSLATION_QUALIFICATION",
   "branch": "experiment/dp07-three-positive-controls-v1",
   "protocol_under_test": "extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md",
   "discovery_prompt": "research/project-discovery/2026-09-25-dp07-three-positive-controls/BLIND_DISCOVERY_PROMPT.md",
@@ -51,5 +51,8 @@
     "no_raw_id_evidence": true,
     "no_global_negative_isomorphism_oracle": true,
     "additional_discoveries_allowed": true
-  }
+  },
+  "block_reason": "Discovery inputs are not admissible until every source-to-native translation passes Core 0.19 section 18 and ESR 0.1 Q0-Q7.",
+  "required_translation_contract": "qualification/EXACT_SOURCE_RENDERING_CONTRACT_0_1_CANDIDATE.md",
+  "prior_run_status": "RUN_36213568767_DIAGNOSTIC_ONLY_NOT_CURRENT_DP_EVIDENCE"
 }
