@@ -1,0 +1,127 @@
+{
+  "experiment": "028",
+  "required_case_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13"
+  ],
+  "cases": {
+    "D01": {
+      "answers": {
+        "structural_correspondence": true,
+        "label_difference_breaker": false,
+        "primitive_first_comparison": true,
+        "label_assistance_required": false
+      }
+    },
+    "D02": {
+      "answers": {
+        "shared_label_sufficient": false,
+        "candidate_exact_correspondence": "REJECTED",
+        "partial_cyclic_common_core": "MAY_RETAIN",
+        "global_no_isomorphism_claim": false
+      }
+    },
+    "D03": {
+      "answers": {
+        "loop_view_supported": true,
+        "recursion_view_supported": true,
+        "exclusive_taxonomy_required": false,
+        "coexistence_conflict": false
+      }
+    },
+    "D04": {
+      "answers": {
+        "fixed_recurrence_grammar_required": false,
+        "multiple_reentry_supported": true,
+        "multiple_exits_supported": true,
+        "nested_recurrence_supported": true
+      }
+    },
+    "D05": {
+      "answers": {
+        "invent_count_allowed": false,
+        "preserve_qu": true,
+        "recurrence_invariant_established": true
+      }
+    },
+    "D06": {
+      "answers": {
+        "scalar_collapse_allowed": false,
+        "preserve_non_scalar_qu": true,
+        "representative_selection_allowed": false
+      }
+    },
+    "D07": {
+      "answers": {
+        "exit_represented": true,
+        "termination_established": false,
+        "progress_or_convergence_established": false,
+        "possible_nontermination_preserved": true
+      }
+    },
+    "D08": {
+      "answers": {
+        "cycle_established": true,
+        "recursion_established": false,
+        "extra_semantic_authority_required": true
+      }
+    },
+    "D09": {
+      "answers": {
+        "exact_substitution_allowed": false,
+        "projection_declared": true,
+        "primitive_support_authoritative": true,
+        "convenience_reuse_allowed": true
+      }
+    },
+    "D10": {
+      "answers": {
+        "derived_views_reusable": true,
+        "exact_without_descent_allowed": false,
+        "exact_candidate_status": "REJECTED",
+        "common_recurrence_view_retained": true
+      }
+    },
+    "D11": {
+      "answers": {
+        "invariant_established": true,
+        "realization_selection_required": false,
+        "actual_shape_known": false,
+        "qu_preserved": true
+      }
+    },
+    "D12": {
+      "answers": {
+        "state_recurrence_view_valid": true,
+        "dts_exact_status": "REJECTED",
+        "transition_order_residual": true
+      }
+    },
+    "D13": {
+      "answers": {
+        "structural_correspondence_valid": true,
+        "nei_same_established": false,
+        "identity_authority": "NEI_0_4",
+        "structural_isomorphism_is_identity_proof": false
+      }
+    }
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "did_not_use_labels_as_structural_proof": true,
+    "did_not_make_global_negative_isomorphism_claim": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_nei_same_from_structure": true
+  }
+}
