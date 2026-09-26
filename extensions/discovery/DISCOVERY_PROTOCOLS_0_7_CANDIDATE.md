@@ -634,6 +634,7 @@ transition anatomy omitted
 false common abstraction
 false negative caused by domain vocabulary
 implementation/decoder defect
+exact-witness support audit skipped or incomplete
 actual structural difference
 ```
 
@@ -661,6 +662,7 @@ Before DP 0.7 promotion, fresh qualification should test at least:
 14. **QU invariant:** a structural property shared across all admissible unfoldings may be established without selecting one realization.
 15. **DTS-sensitive case:** state-level recurrence similarity does not erase material transition-level differences.
 16. **Identity-sensitive case:** structural correspondence is not promoted to NEI SAME without identity authority.
+17. **Exact-witness support closure:** a familiar or useful common view cannot be promoted to an exact witness until the candidate transformation closes bidirectionally against all load-bearing primitive support, including distinction-sensitive local falsification.
 
 Qualification should include blind cases where the discovery reasoner is not told the expected high-level category.
 
