@@ -505,6 +505,71 @@ is not.
 
 This is especially important in recursive Project Discovery passes.
 
+## 13.1 Exact correspondence promotion gate
+
+A derived or familiar common view may nominate a candidate correspondence.
+
+It MUST NOT, by itself, promote that candidate to an exact structural witness.
+
+Before DP emits or promotes any claim equivalent to:
+
+```text
+EXACT_WITNESS
+exact structural correspondence
+structural isomorphism
+exact reconstruction
+exact equivalence
+```
+
+the comparison MUST descend back to the authoritative primitive/qualified-leaf support on both sides.
+
+For an exact claim, item 4 above is therefore strengthened from `SHOULD` to `MUST`.
+
+The exact-witness audit MUST:
+
+1. freeze the candidate mapping/transformation before checking it;
+2. enumerate every load-bearing represented assertion needed by the claimed correspondence on both sides;
+3. map or transform each such assertion using only represented structure and explicitly applicable qualified semantic authority;
+4. reconstruct the supported B-side structure from A under the candidate transformation;
+5. reconstruct the supported A-side structure from B under the inverse transformation;
+6. check represented domains/ranges, scope, binding, arity, operator role, ordering where material, sign/coefficient/value distinctions, exact/approximate status, and other load-bearing distinctions;
+7. preserve and explicitly account for representation-only residuals, additive constants, auxiliary coordinates, projections, quotients, or other non-identical structure rather than declaring them absent;
+8. attempt local falsification against represented distinctions that would fail if the candidate mapping were merely familiar rather than exact;
+9. refuse semantic repair toward a familiar target when the represented candidate mapping fails.
+
+The governing shape is:
+
+```text
+primitive/qualified support A
+    -> candidate transformation T
+    -> reconstructed B'
+
+primitive/qualified support B
+    -> inverse transformation T^-1
+    -> reconstructed A'
+
+exact promotion requires:
+    B' structurally same as represented B
+    A' structurally same as represented A
+    zero unresolved load-bearing difference
+```
+
+This is a structural correspondence qualification rule, not an NEI natural-object identity result.
+
+If any load-bearing obligation is missing, false, unsupported, or unresolved:
+
+```text
+candidate / partial / scoped witness
+    MAY remain
+
+EXACT_WITNESS
+    MUST NOT be promoted
+```
+
+Use QU when the unresolved structure is genuinely unknown and load-bearing.
+
+A high-level recognition that survives only by skipping this descent is evidence of a candidate view, not evidence of exact isomorphism.
+
 ---
 
 # 14. Interaction with implicit assertions
