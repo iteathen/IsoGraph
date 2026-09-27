@@ -2,10 +2,12 @@
 
 **Status:** PASS — Node.js authoritative rerun  
 **Date:** 2026-09-27  
-**Authoritative workflow run:** 36357819191, attempt 1  
-**Authoritative source SHA:** ea602d9d7a062ad32c63b7b46081b7386ae6b594  
+**Semantic-authority workflow run:** 36357819191, attempt 1  
+**Semantic-authority source SHA:** ea602d9d7a062ad32c63b7b46081b7386ae6b594  
+**Latest performance-regression run:** 36357981537, attempt 1  
+**Latest performance source SHA:** f9734d7a758c0d048c58ae4f054b2958d5f6cd49  
 **Implementation:** Node.js v26.7.0  
-**Node optimization revision:** `typed-watched-coverers-v6`  
+**Latest Node optimization revision:** `lean-watched-coverers-v7`  
 **Internal parent:** A25 Maximum Minimal Set Cover view
 
 ## Implementation policy
@@ -103,7 +105,8 @@ Same frozen Node workload, successive implementations:
 | V3 branchless incidence / packed cover | 0.383 s | 3.070 s | 3.465 s |
 | V4 branchless incidence / separate cover | 0.419 s | 3.547 s | 3.981 s |
 | V5 two watched coverers | 0.380 s | 2.060 s | 2.615 s |
-| **V6 typed watched coverers** | **0.420 s** | **1.749 s** | **2.289 s** |
+| V6 typed watched coverers | 0.420 s | 1.749 s | 2.289 s |
+| **V7 lean watched coverers** | **0.385 s** | **1.056 s** | **1.639 s** |
 
 The historical C++ execution step on the same GitHub runner class was approximately:
 
@@ -113,17 +116,21 @@ The historical C++ execution step on the same GitHub runner class was approximat
 
 from workflow log timestamps.
 
-Thus the final Node V6 run is approximately:
+The cleaned V7 run reproduced the same deterministic cover-size histogram, the same best trial, the same width-75 selected family, zero uncovered threshold words, and all 75 private witnesses.
+
+Against the historical native execution-step timing:
 
 ~~~text
-2.289 / 2.265
+1.639 / 2.265
 =
-1.011x
+0.724x
 ~~~
 
-the historical native execution time, about one percent slower on these frozen runs.
+on these frozen runs.
 
-This is a benchmark observation, not a universal Node/C++ performance claim.
+Equivalently, the V7 Node execution was about 28% faster than the historical native reference timing for this workload on the recorded GitHub runner measurements.
+
+This is a runner/revision/workload benchmark observation only. It is not a general claim that Node.js is faster than C++.
 
 ## Structural optimization result
 
@@ -146,7 +153,7 @@ replacement scans:            128,204,116
 max trial event count:        444,572
 ~~~
 
-The same 128 deletion orders and exact final verification remained intact.
+The same 128 deletion orders and exact final verification remained intact through V7. V7 also removed hot-loop diagnostic counters and one redundant liveness branch after those quantities were no longer needed for correctness.
 
 ## Witness-width consequence
 
