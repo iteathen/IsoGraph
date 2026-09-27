@@ -310,64 +310,153 @@ Across 88,948 instances / 396,855 reachable states:
 Experiment 040 is the current falsifier search for a larger path-family counterexample to universal J3.
 
 
-## Two-enzyme exact island and fixed-h boundary
+## Current algorithm/discovery frontier
 
-Exact clue derivations now extend through:
+Exact clue-fed implicit results now extend through:
 
-    G-IA358.
+    G-IA390.
 
-New files:
+Canonical current clue files after A15:
 
 - GLYCAN_CLUE_DERIVATIONS_A16_PCCSP_BOUNDS_0_1.md
 - GLYCAN_CLUE_DERIVATIONS_A17_PARTITION_BOUND_0_1.md
-- GLYCAN_PARTITION_BOUND_RESIDUAL_DP_0_1.md
 - GLYCAN_CLUE_DERIVATIONS_A18_JOINT_PATH_BOUND_0_1.md
 - GLYCAN_CLUE_DERIVATIONS_A19_TWO_ENZYME_EXACT_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A20_J3_FALSIFIER_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A20_THREE_ENZYME_J3_BOUNDARY_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A21_TERNARY_WITNESS_WIDTH_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A22_WITNESS_WIDTH_PARAMETER_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A23_CRITICAL_COVER_0_1.md
 
-Key boundary:
+The sibling A19/A20 draft files marked SUPERSEDED are provenance only and contribute no current assertion definitions.
 
-### Two enzymes
+### Experiments 033–035 — exact algorithms
 
-For the full frozen set-valued two-enzyme model:
+Experiment 033:
+- backward antichain optimum solver PASS;
+- 129,445 exhaustive instances;
+- 0 optimum mismatches;
+- 752,380 microscopic/formula phase checks with 0 mismatches.
 
-    J2 = exact remaining OPT.
+Experiment 034:
+- minimized quasi-ordered automaton basis PASS;
+- 6,565 basis controls with 0 mismatches;
+- 41,082 star-product oracle checks with 0 mismatches.
 
-Every optimum word is alternating and the exact value is determined by at most two maximal paths. The complete optimum raw-word family has at most two members.
+Experiment 035:
+- counterexample-guided B_M learner PASS;
+- 6,565 exhaustive instances;
+- 0 learned/reference basis mismatches.
 
-### Three enzymes
+Preferred exact optimization baseline:
 
-Experiment 040 gives four singleton paths:
+    backward winning antichain
+    using
+    P_e(J)=downward_closure(J intersection N_e).
 
-    ABA
-    ABC
-    BAB
-    CBA
+Preferred complete-language baseline:
 
-with:
+    exact star-product oracle
+    +
+    counterexample-guided B_M learner.
 
-    every three-path subfamily optimum = 5
-    full four-path optimum = 6.
+### Experiments 036–039 — lower-bound hierarchy
 
-Thus:
+Experiment 036:
+- singleton PCCSP one-class bound tight on 98.9812% of 429,531 tested reachable states;
+- tested immediate-selection certificates had 0 counterexamples.
 
-    J3 < OPT
+Experiment 037:
+- set-valued partition lower bound PLB tight on 99.5747% of 396,855 states;
+- 0 admissibility violations.
 
-on a valid frozen-0.1 three-enzyme instance.
+Experiment 038:
+- pairwise J2 closed 1,484 / 1,688 PLB gaps;
+- 204 genuine three-way-or-higher residuals remained.
 
-The joint-path hierarchy is therefore an adaptive lower-bound hierarchy beyond the binary case, not a fixed-h exact theorem determined by enzyme count alone.
+Experiment 039:
+- J3 closed all 204 residuals on that finite surface;
+- J3 was exact on all 396,855 tested states;
+- this finite exactness was immediately treated as a falsifiable lead, not a universal theorem.
 
-### Current preferred algorithmic stack
+### Experiments 040–042 — fixed-h falsification and witness width
 
-For exact optimum:
+Experiment 040:
+- concrete three-enzyme singleton instance with J3=5 and OPT=6;
+- therefore universal ternary J3 exactness is false;
+- binary bounded-family control found 0 J2 counterexamples, agreeing with A19's universal proof.
 
-1. two enzymes: direct A19 alternating-threshold formula;
-2. general case: backward antichain solver from Experiment 033;
-3. use PLB / J_h bounds when branch-and-bound or forward search is useful;
-4. singleton search may additionally use PCCSP one-class bounds and immediate selection.
+Experiment 041:
+- first attempt preserved as harness failure (n>28 compact-mask limit);
+- corrected arbitrary-width run PASS;
+- direct glycan witness widths 4, 5, 6, and 7 verified;
+- three enzyme labels can therefore require at least seven simultaneously load-bearing path constraints.
 
-For complete solution-language representation:
+Experiment 042:
+- exact ternary witness width 24 verified;
+- 24 independent length-5 singleton chains / 120 non-target nodes;
+- 3,070 irredundant words through length 10 checked;
+- no full-family solution of length <=10;
+- every one-path deletion has a length-10 private witness;
+- 137 full-family length-11 solutions;
+- exact OPT=11 and W=24.
 
-1. oracle-driven B_M learner from Experiment 035;
-2. exact star-product oracle from A15;
-3. minimized quasi-ordered automaton as an alternate exact representation.
+### Exact witness-width parameter
+
+For path family F:
+
+    W(F)
+    =
+    minimum |H|
+    such that
+    OPT_PATH(H)=OPT_PATH(F).
+
+Exact relation:
+
+    J_h(F)=OPT(F)
+    iff
+    h >= W(F).
+
+Two effective treatment classes:
+
+    W <= 2 universally.
+
+Three treatment classes:
+
+    W >= 24 is explicitly realized.
+
+Conditional complexity boundary from A22:
+
+    cited PCCSP hardness
+    +
+    P != NP
+    ->
+    no universal constant ternary witness-width bound.
+
+No unconditional unboundedness theorem is claimed.
+
+### Threshold critical-cover representation
+
+At fixed treatment length L:
+
+- U_L = finite irredundant treatment-word universe;
+- each path P has satisfaction set C_L(P);
+- forbidden set D_L(P)=U_L\C_L(P);
+- no length-L common solution iff the D_L(P) sets cover U_L;
+- one-path-deletion criticality iff that cover is inclusion-minimal;
+- every critical path has a private deletion-witness word.
+
+Experiment 042 realizes a 24-set minimal cover of the 1,536-word universe U_10.
+
+This critical-cover / finite-intersection view is the current highest-value construction clue for finding wider witness families.
+
+### Current research priorities
+
+1. use critical-cover search rather than random path-family search to seek scalable ternary witness-width constructions;
+2. study witness width as an exact parameter for adaptive J_h optimality certificates;
+3. combine PLB, J_h, backward antichain regression, and feasible-word upper bounds;
+4. preserve the binary exact island separately from the >=3-label hard synchronization regime;
+5. do not infer unconditional unbounded witness width or polynomial-time behavior from finite experiments.
+
+Core 0.20 remains unqualified, and frozen biochemical 0.1 remains intentionally narrower than real enzymology.
+
+No external novelty claim is made by these research records.
