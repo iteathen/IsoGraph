@@ -33,6 +33,7 @@ Each is primitive-supported in the pinned dependency artifact.
 172105  ordered finite parity
 172106  one-equation satisfaction
 172107  full control truth
+172108  duplicate-free list predicate
 ```
 
 All except the raw input-relation carrier and the explicitly enumerated XOR relation are expanded by IFF structure.
@@ -72,6 +73,14 @@ These conversions are justified only because the source explicitly freezes both 
 The recursive call is on the proper list tail under the pinned finite-list inductive authority.
 
 Thus no generic SUM, field, vector, matrix, or equation-evaluation primitive is hidden.
+
+## Coordinate-list uniqueness
+
+`172108` recursively requires that each CONS head is absent from its proper tail.
+
+The full control requires `172108(VL)` and `172108(EL)`. This closes the source coordinate semantics: every listed variable contributes exactly one parity coordinate, and every listed equation is quantified exactly once.
+
+The recursion descends on the proper list tail under the pinned finite-list authority.
 
 ## Equation/control reconstruction
 
