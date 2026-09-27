@@ -1,0 +1,40 @@
+{
+  "schema": "isograph.p_vs_np.cnf_target_discovery_input.v1",
+  "date": "2026-09-27",
+  "target": "CNF Boolean satisfiability (human-facing navigation label only)",
+  "discovery_input": [
+    {
+      "path": "research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_SOURCE_FREEZE_0_1.md",
+      "blob_sha": "054822cfe47f2330aaac2514dd681d1d903f4aec"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_PRIMITIVE_0_1.isg",
+      "blob_sha": "7cb9b04f86d26887bbf5e14a4044f0faf8502091"
+    }
+  ],
+  "primitive_dependencies": [
+    {
+      "path": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+      "blob_sha": "2630336da5c4117a15a43c1dc0847536b33ed083"
+    },
+    {
+      "path": "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "blob_sha": "c0479ac1de1a1c8ff5737221133601618b1a56cf"
+    },
+    {
+      "path": "research/primitive-logic/PRIMITIVE_NATURAL_ARITHMETIC_0_5.isg",
+      "blob_sha": "fde4915b3a056430e0cb7a3a327e26abc1c7b09b"
+    }
+  ],
+  "excluded": [
+    "CNF_TARGET_PRIMITIVE_AUDIT_0_1.md",
+    "all downstream implicit-assertion artifacts",
+    "all downstream NEI/QU artifacts",
+    "all downstream DP/projection artifacts",
+    "positive-control comparison and common-core artifacts"
+  ],
+  "mechanical_checks": {
+    "delimiter_balance": true,
+    "named_solver_leak": null
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.p_vs_np.algorithm_hidden_positive_controls.v1",
+  "date": "2026-09-27",
+  "discovery_input_rule": "Only the source and primitive files listed for a control are its control-specific discovery input. Audits, implicit-assertion results, NEI overlays, DP reports, comparison reports, and the common protocol are excluded.",
+  "controls": [
+    {
+      "id": "PC-R",
+      "source": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-r-bounded-walk/PC_R_SOURCE_FREEZE_0_1.md",
+        "blob_sha": "bc733ec92c16bd8daef5037a73249e131da32790"
+      },
+      "primitive": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-r-bounded-walk/PC_R_PRIMITIVE_0_1.isg",
+        "blob_sha": "9d76617bc53e8ad730cb5d30be1f51ac838ced21"
+      }
+    },
+    {
+      "id": "PC-H",
+      "source": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-h-horn-consistency/PC_H_SOURCE_FREEZE_0_1.md",
+        "blob_sha": "f7656aa54bcebf424da43abb4c604863da2a88bd"
+      },
+      "primitive": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-h-horn-consistency/PC_H_PRIMITIVE_0_1.isg",
+        "blob_sha": "c9169b2dd5e5af886f940a55e57c4fd785f19b76"
+      }
+    },
+    {
+      "id": "PC-G",
+      "source": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-g-gf2-consistency/PC_G_SOURCE_FREEZE_0_1.md",
+        "blob_sha": "2b09814287a0498eed013c255fc3e404d642adc6"
+      },
+      "primitive": {
+        "path": "research/p-vs-np/2026-09-27/positive-controls/pc-g-gf2-consistency/PC_G_PRIMITIVE_0_1.isg",
+        "blob_sha": "dc7af5e9834632deeaf3d3f897f1039dfeb4dd6c"
+      }
+    }
+  ],
+  "primitive_dependencies": [
+    {
+      "path": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+      "blob_sha": "2630336da5c4117a15a43c1dc0847536b33ed083"
+    },
+    {
+      "path": "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "blob_sha": "c0479ac1de1a1c8ff5737221133601618b1a56cf"
+    },
+    {
+      "path": "research/primitive-logic/PRIMITIVE_NATURAL_ARITHMETIC_0_5.isg",
+      "blob_sha": "fde4915b3a056430e0cb7a3a327e26abc1c7b09b"
+    }
+  ],
+  "mechanical_checks": {
+    "delimiter_balance": {
+      "PC-R": true,
+      "PC-H": true,
+      "PC-G": true
+    },
+    "named_solver_leak": {
+      "PC-R": null,
+      "PC-H": null,
+      "PC-G": null
+    }
+  },
+  "excluded_by_design": [
+    "primitive audit files",
+    "control-local implicit assertion files",
+    "NEI/QU overlay files",
+    "DP result files",
+    "cross-control comparison files",
+    "POSITIVE_CONTROL_PROTOCOL_0_1.md"
+  ]
+}

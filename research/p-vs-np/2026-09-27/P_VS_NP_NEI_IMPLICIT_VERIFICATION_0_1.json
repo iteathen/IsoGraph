@@ -1,0 +1,71 @@
+{
+  "schema": "isograph.p_vs_np.nei_implicit_audit.v1",
+  "date": "2026-09-27",
+  "branch": "research/p-vs-np-primitive-logic-20260926",
+  "primitive_authority": {
+    "path": "research/p-vs-np/2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg",
+    "blob_sha": "c38de5674ffa568c1297e8383b48b2ed77de7756"
+  },
+  "nei": {
+    "qualified_semantics": "NEI 0.4",
+    "qualified_unknown": "QU 0.1",
+    "semantic_contract": "research/p-vs-np/2026-09-27/P_VS_NP_NEI_SCOPE_CONTRACT_0_1.md",
+    "native_overlay": {
+      "path": "research/p-vs-np/2026-09-27/P_VS_NP_NEI_OVERLAY_0_5.isg",
+      "blob_sha": "b39909628b9fac913e0a637804a3c766fd3eee30",
+      "query_templates": 12,
+      "incomplete_queries": 12,
+      "result_roles": 0,
+      "open_qu_states": 0,
+      "incomplete_qu_states": 5
+    },
+    "predecessor_overlay_0_4": "NOT_CURRENT_NATIVE_AUTHORITY"
+  },
+  "implicit": {
+    "index": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTION_INDEX_0_8.json",
+    "admitted_count": 341,
+    "missing_support_refs": 0,
+    "support_cycles": 0,
+    "max_normalized_depth": 11,
+    "superseded": [
+      "IA-013",
+      "IA-304",
+      "IA-305"
+    ],
+    "current_numeric_range": [
+      1,
+      344
+    ],
+    "nonadmitted_numeric_ids": [
+      13,
+      304,
+      305
+    ]
+  },
+  "a21_sanity": {
+    "states": 2,
+    "labels": 2,
+    "horizon": 2,
+    "comparisons": 1296,
+    "predecessor_recursion_false_positives": 0,
+    "predecessor_recursion_false_negatives": 94,
+    "corrected_live_recursion_false_positives": 0,
+    "corrected_live_recursion_false_negatives": 0,
+    "corrected_mutual_live_vs_residual_equality_mismatches": 0
+  },
+  "seeded_candidates": {
+    "unresolved_intentional": [
+      "CA-001 global numeral-normal-form uniqueness"
+    ],
+    "missed_supported_candidates": []
+  },
+  "audit_fixed_point": {
+    "scope": "NEI/QU misuse, identity scope leakage, support refs, A21 simulation completeness, seeded-candidate disposition",
+    "status": "OPERATIONAL_FIXED_POINT_REACHED",
+    "universal_semantic_completeness_claim": false
+  },
+  "truth": {
+    "p_equals_np": "OPEN",
+    "p_not_equals_np": "OPEN"
+  }
+}
