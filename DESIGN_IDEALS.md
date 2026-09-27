@@ -2,7 +2,7 @@
 
 **Role:** explanatory design doctrine and research posture  
 **Semantic authority:** none by itself  
-**Current semantic authority:** see STATUS.md and qualification/QUALIFIED_MODULES_2026-09-18.md
+**Current semantic authority:** see `STATUS.md` and `qualification/QUALIFIED_MODULES_2026-09-26.md`
 
 This document explains the design ideals that guide IsoGraph research, specification work, qualification, and interpretation.
 
@@ -747,20 +747,18 @@ These ideals explain the direction of the project but do not themselves promote 
 
 Current qualified authority remains whatever is recorded in:
 
-- CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md;
-- qualification/QUALIFIED_MODULES_2026-09-18.md;
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`;
+- the qualified Core 0.18 and Core 0.19 cumulative clarifications at the exact revisions recorded by their qualification records;
+- `qualification/QUALIFIED_MODULES_2026-09-26.md`;
 - qualified infrastructure records.
 
-Current qualified NEI semantics are now encoded by:
+Current qualified semantic extensions include QU 0.1, NEI 0.4, cumulative Discovery Protocols 0.1–0.7, and DTS 0.1 at the exact revisions pinned by the authority manifest.
 
-- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md — qualified at the exact revision recorded in the module authority manifest.
+The active successor most directly extending this discrepancy doctrine is:
 
-The remaining active successor candidates that most directly encode these ideals are:
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`.
 
-- CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md;
-- extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md.
-
-Those remaining successors are unqualified until fresh promotion evidence exists.
+DP 0.8 is unqualified successor research. It does not alter current qualified Discovery authority until fresh qualification and promotion occur.
 
 ---
 
