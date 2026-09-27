@@ -201,7 +201,7 @@ Primary publication metadata were checked for:
 - Ruhaak et al. (2018), DOI 10.1021/acs.chemrev.7b00732;
 - Higman (1952), DOI 10.1112/plms/s3-2.1.326;
 - Maier (1978), DOI 10.1145/322063.322075;
-- Bürgy, Baptiste & Hertz (2020), DOI 10.1016/j.cor.2020.105063;
+- Bürgy, Hertz & Baptiste (2020), DOI 10.1016/j.cor.2020.105063;
 - Escardó (2003), DOI 10.1023/A:1023555514029;
 - Finkel & Schnoebelen (2001), DOI 10.1016/S0304-3975(00)00102-X;
 - Aristote (2025), DOI 10.4230/LIPIcs.CALCO.2025.16;
