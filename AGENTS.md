@@ -10,6 +10,21 @@ The accumulated family reference is a maintained final product. Read `FINAL_PROD
 
 `DESIGN_IDEALS.md` is explanatory doctrine, not semantic authority. Use it to preserve the intended reasoning posture without letting prose override versioned qualified semantics.
 
+### Publication attribution requirement
+
+Before drafting, revising, or releasing any public-facing research publication, read and follow `PUBLICATION_ATTRIBUTION_POLICY.md`.
+
+Every IsoGraph publication MUST:
+
+- list **Joshua Oshiro** as the author unless Joshua Oshiro explicitly directs otherwise for that publication;
+- spell the surname exactly **Oshiro** (O-S-H-I-R-O);
+- provide proper attribution and references to the **IsoGraph Project** and to every load-bearing IsoGraph artifact/revision used;
+- disclose that the work was produced with AI/agent assistance where applicable;
+- explicitly state that the **IsoGraph system was designed by Joshua Oshiro**;
+- separately credit third-party publications, formal sources, software, datasets, and prior results.
+
+Authorship, IsoGraph system design, agent assistance, and third-party contribution are distinct provenance facts and MUST NOT be collapsed.
+
 ### Qualified Core authority
 
 - `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md` — qualified base;
