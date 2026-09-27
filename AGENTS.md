@@ -79,6 +79,12 @@ Within that cycle, **perception precedes judgment**. When a discrepancy appears,
 
 Qualification and discovery are separate questions. A decoder/scorer/output can be wrong for qualification while the anomaly that exposed the error remains a useful structural lead. Closing the qualification issue does not automatically close the discovery issue.
 
+For any material discrepancy, keep **repair disposition** and **discovery disposition** separate. Do not call something an error/bug/defect until the violated contract and owner are established. The owner of the discrepancy is initially unresolved: representation, implementation, expected/reference result, scope, authority, hidden distinction/equivalence, unknown structure, or the comparison itself may be responsible.
+
+When a repair is justified, use the minimum causal repair and rerun the observation. Record what disappears, survives, changes, or becomes sharper. Treat that repair as a diagnostic intervention. A surviving clue remains open unless independently falsified.
+
+Never patch toward an expected answer merely because it is expected. A source-faithful rendering may expose a defect or limitation in what it represents. Conversely, one anomaly does not silently supersede current qualified authority; preserve the challenge as research until the applicable successor is qualified.
+
 Treat prior conclusions, reviews, fixtures, expected results, verifier output, and issue text as evidence rather than authority. Preserve ambiguity, unknown structure, and residual distinctions. Do not create a new primitive, structural class, comparison relation, canonical factorization, canonical labeling requirement, or mandatory proof algorithm merely because a case is awkward or expensive.
 
 Do not weaken dependency propagation merely to localize a newly exposed distinction. With exact provenance, downstream invalidation is evidence about how load-bearing the distinction was.
@@ -87,6 +93,10 @@ Keep these distinctions explicit:
 
 - observation != judgment
 - discrepancy != defect
+- non-working behavior != known defect owner
+- faithful representation != correctness of represented reference
+- expected agreement != repair oracle
+- repair disposition != discovery disposition
 - no observed difference != positive sameness evidence
 - represented difference != automatic ontological distinctness
 - unknown != irrelevant
@@ -176,6 +186,12 @@ Discovery Protocols 0.1–0.7 are the current cumulative qualified discovery mod
 DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
 DP 0.7 adds primitive-first derived structural views. High-level labels do not define structure; multiple derived views may coexist; recurrence/unfolding unknowns remain QU-bearing where load-bearing; exit does not imply termination; cycles do not automatically imply recursion; lossy derived views do not replace primitive support; exact higher-order correspondence descends back to primitive support; DTS-sensitive differences remain load-bearing; and structural correspondence does not imply NEI `SAME`.
+
+Active unqualified successor research:
+
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
+
+DP 0.8 candidate strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. It is **not current qualified Discovery authority** until independently tested, reviewed, and promoted. Use it only for successor research; current qualified execution remains DP 0.1–0.7.
 
 DP 0.7 qualification is recorded in:
 

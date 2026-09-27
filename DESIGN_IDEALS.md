@@ -2,7 +2,7 @@
 
 **Role:** explanatory design doctrine and research posture  
 **Semantic authority:** none by itself  
-**Current semantic authority:** see STATUS.md and qualification/QUALIFIED_MODULES_2026-09-18.md
+**Current semantic authority:** see `STATUS.md` and `qualification/QUALIFIED_MODULES_2026-09-26.md`
 
 This document explains the design ideals that guide IsoGraph research, specification work, qualification, and interpretation.
 
@@ -395,6 +395,103 @@ Both questions can coexist.
 
 ---
 
+# 10A. A failure is evidence before it is a diagnosis
+
+The observation-first posture has an additional consequence:
+
+~~~text
+something did not work as expected
+    !=
+we already know what is wrong
+~~~
+
+A discrepancy does not arrive with its owner attached.
+
+The problem may belong to:
+
+- the representation;
+- an implementation or decoder;
+- an expected result or test oracle;
+- a referenced source or interpretation;
+- an unstated assumption;
+- the comparison scope;
+- an identity judgment;
+- missing authority;
+- unresolved structure;
+- or the assumption that the two observations should have agreed at all.
+
+Therefore a material discrepancy should carry two independent questions:
+
+~~~text
+REPAIR:
+    Is an actual contract violation established?
+    Where is it?
+
+DISCOVERY:
+    Did the discrepancy expose a useful structural clue?
+~~~
+
+Those answers can differ.
+
+A genuine defect may still be the event that exposes an important distinction. Repairing the defect should not automatically erase or close the discovery question.
+
+Conversely, an interesting clue does not excuse a proved defect.
+
+## Clue-preserving repair
+
+When repair is justified, prefer the smallest causal repair that restores the violated contract while preserving enough surrounding structure to rerun the observation.
+
+Then ask:
+
+~~~text
+what disappeared?
+what survived?
+what changed form?
+what became clearer?
+~~~
+
+The repair is therefore also a controlled intervention.
+
+If a structural clue survives a narrow repair, that is evidence that the clue is not merely the repaired defect.
+
+If it disappears exactly with the defect and has no independent support, it should be downgraded rather than romanticized.
+
+## Expected agreement is not an oracle
+
+An expected answer, reference result, established implementation, prior artifact, source, or conventional interpretation may be correct.
+
+It may also be incomplete, differently scoped, misapplied, or wrong.
+
+IsoGraph should not decide that question by prestige, familiarity, age, or convenience.
+
+In particular:
+
+~~~text
+faithful representation
+    !=
+correctness of the represented thing
+~~~
+
+An exact rendering is allowed to expose a problem in what it represents.
+
+At the same time, an anomaly does not automatically overturn current authority.
+
+Preserve the challenge, test it, and change authority only through the applicable revision/qualification process.
+
+This keeps IsoGraph between two failure modes:
+
+~~~text
+authority worship:
+    anomaly must be wrong because authority exists
+
+authority collapse:
+    authority must be wrong because anomaly exists
+~~~
+
+The intended posture is evidence-sensitive adjudication.
+
+---
+
 # 11. Qualification and discovery serve different purposes
 
 Qualification asks whether a representation or claim satisfies its declared contract.
@@ -623,11 +720,17 @@ Could separately represented things share a scoped invariant?
 
 Could apparently identical things hide an unresolved distinction?
 
+Who actually owns the discrepancy, if anyone?
+
 What would falsify each interpretation?
+
+If a repair is justified, what is the smallest causal repair?
+
+After that repair, what disappears and what survives?
 
 Only then:
     what should be concluded?
-    what, if anything, should be repaired?
+    what, if anything, should be repaired or preserved as a clue?
 ~~~
 
 This is intentionally more **perceptive than judgment-first**.
@@ -644,20 +747,18 @@ These ideals explain the direction of the project but do not themselves promote 
 
 Current qualified authority remains whatever is recorded in:
 
-- CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md;
-- qualification/QUALIFIED_MODULES_2026-09-18.md;
+- `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`;
+- the qualified Core 0.18 and Core 0.19 cumulative clarifications at the exact revisions recorded by their qualification records;
+- `qualification/QUALIFIED_MODULES_2026-09-26.md`;
 - qualified infrastructure records.
 
-Current qualified NEI semantics are now encoded by:
+Current qualified semantic extensions include QU 0.1, NEI 0.4, cumulative Discovery Protocols 0.1–0.7, and DTS 0.1 at the exact revisions pinned by the authority manifest.
 
-- extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md — qualified at the exact revision recorded in the module authority manifest.
+The active successor most directly extending this discrepancy doctrine is:
 
-The remaining active successor candidates that most directly encode these ideals are:
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`.
 
-- CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md;
-- extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md.
-
-Those remaining successors are unqualified until fresh promotion evidence exists.
+DP 0.8 is unqualified successor research. It does not alter current qualified Discovery authority until fresh qualification and promotion occur.
 
 ---
 
@@ -686,8 +787,13 @@ Collapse only what is proved irrelevant.
 Preserve residuals and unknowns.
 Let contradictions propagate through explicit dependencies.
 Treat discrepancies as possible measurements of hidden structure.
+Treat failure as evidence before diagnosis.
+Do not preassign the owner of a discrepancy.
+Separate repair disposition from discovery disposition.
+Use minimal repairs as diagnostic interventions.
 
 Repair defects.
+Do not repair toward an expected answer.
 Do not repair away discovery.
 Do not force agreement.
 Do not force isomorphism.
