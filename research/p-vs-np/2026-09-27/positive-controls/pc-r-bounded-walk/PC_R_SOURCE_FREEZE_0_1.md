@@ -92,19 +92,11 @@ The witness length is at most the explicit input-list length. Therefore this is 
 
 This statement is part of the source shape only. No deterministic elimination method is supplied.
 
-## 6. Withheld structure
+## 6. Discovery-input boundary
 
-The discovery input MUST NOT contain or presuppose:
+This artifact supplies only the instance/witness/truth semantics stated above.
 
-- a set of already reachable vertices;
-- a recurrence for future truth;
-- breadth-first or depth-first traversal;
-- a transitive-closure construction;
-- a dynamic-programming table;
-- a sufficient-statistic claim;
-- a residual quotient claim.
-
-Those may be derived only after the primitive source is frozen and audited.
+No relation, object, state, recurrence, ordering, construction, or procedure for deciding the truth condition is supplied by the source artifact.
 
 ## 7. Truth classification
 
