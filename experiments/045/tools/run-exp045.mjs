@@ -113,7 +113,6 @@ for (let u = 0; u < U; u++) {
 const forbidden = new Uint32Array(P * U);
 const forbiddenLength = new Uint32Array(P);
 const baseCount = new Uint16Array(U);
-const baseXor = new Uint16Array(U);
 
 for (let p = 0; p < P; p++) {
   const base = p * U;
@@ -145,22 +144,16 @@ for (let p = 0; p < P; p++) {
       forbidden[base + n] = u;
       n++;
       baseCount[u]++;
-      baseXor[u] ^= (p + 1);
     }
   }
 
   forbiddenLength[p] = n;
 }
 
-const basePrivateCount = new Uint32Array(P);
-
 for (let u = 0; u < U; u++) {
-  const count = baseCount[u];
-  if (count === 0) {
+  if (baseCount[u] === 0) {
     throw new Error(`all-path family does not cover threshold word ${u}`);
   }
-
-  if (count === 1) basePrivateCount[baseXor[u] - 1]++;
 }
 
 const incidenceMs = Number(process.hrtime.bigint() - t0) / 1e6;
