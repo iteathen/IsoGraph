@@ -33,8 +33,8 @@ function generateWords(length) {
 }
 
 function wordString(flat, row, length) {
-  const off = row * length;
   let s = '';
+  const off = row * length;
   for (let i = 0; i < length; i++) s += String(flat[off + i]);
   return s;
 }
@@ -51,26 +51,29 @@ class XorShift32 {
   }
 }
 
+function lowBitIndex(mask) {
+  const lsb = mask & -mask;
+  return 31 - Math.clz32(lsb);
+}
+
 const totalStart = process.hrtime.bigint();
 
-const genStart = process.hrtime.bigint();
+const generationStart = process.hrtime.bigint();
 const paths = generateWords(PL);
 const words = generateWords(WL);
 const P = paths.length / PL;
 const U = words.length / WL;
-const generationMs = Number(process.hrtime.bigint() - genStart) / 1e6;
+const generationMs = Number(process.hrtime.bigint() - generationStart) / 1e6;
 
 if (P !== 768 || U !== 393216) {
   throw new Error(`unexpected dimensions P=${P} U=${U}`);
 }
 
-// Branchless per-word subsequence transition table.
-// State s=0..WL is the next threshold-word position to search.
-// FAIL_STATE is an absorbing failure sink.
+// Branchless subsequence transitions per threshold word.
 const transitionStart = process.hrtime.bigint();
-const FAIL_STATE = WL + 1;       // 19
-const NEXT_STATES = WL + 2;      // 20
-const NEXT_STRIDE = NEXT_STATES * ALPHABET; // 60
+const FAIL_STATE = WL + 1;
+const NEXT_STATES = WL + 2;
+const NEXT_STRIDE = NEXT_STATES * ALPHABET;
 let nextState = new Uint8Array(U * NEXT_STRIDE);
 
 for (let u = 0; u < U; u++) {
@@ -104,10 +107,12 @@ for (let u = 0; u < U; u++) {
 
 const transitionMs = Number(process.hrtime.bigint() - transitionStart) / 1e6;
 
-// Pass 1: exact failure count per threshold word.
-// No row-incidence matrix is retained.
-const countStart = process.hrtime.bigint();
-const baseCount = new Uint16Array(U);
+// Exact dense transposed failure incidence: one bit per path/threshold pair.
+// This is P*U bits instead of a sparse Uint16 path-id list.
+const incidenceStart = process.hrtime.bigint();
+const BLOCKS = (P + 31) >>> 5; // 24
+const failBits = new Uint32Array(U * BLOCKS);
+let totalIncidence = 0;
 
 for (let p = 0; p < P; p++) {
   const po = p * PL;
@@ -120,6 +125,9 @@ for (let p = 0; p < P; p++) {
   const p6 = paths[po + 6];
   const p7 = paths[po + 7];
   const p8 = paths[po + 8];
+
+  const block = p >>> 5;
+  const bit = (1 << (p & 31)) >>> 0;
 
   for (let u = 0; u < U; u++) {
     const nb = u * NEXT_STRIDE;
@@ -134,62 +142,17 @@ for (let p = 0; p < P; p++) {
     s = nextState[nb + s * 3 + p7];
     s = nextState[nb + s * 3 + p8];
 
-    if (s === FAIL_STATE) baseCount[u]++;
+    if (s === FAIL_STATE) {
+      failBits[u * BLOCKS + block] |= bit;
+      totalIncidence++;
+    }
   }
 }
 
-const countPassMs = Number(process.hrtime.bigint() - countStart) / 1e6;
-
-// Prefix offsets for threshold-word -> failing-path CSR.
-const transposeStart = process.hrtime.bigint();
-const coverOffset = new Uint32Array(U + 1);
-for (let u = 0; u < U; u++) {
-  const count = baseCount[u];
-  if (count === 0) throw new Error(`all-path family leaves threshold word ${u} uncovered`);
-  coverOffset[u + 1] = coverOffset[u] + count;
-}
-
-const totalIncidence = coverOffset[U];
-const coverers = new Uint16Array(totalIncidence);
-const coverFill = new Uint32Array(U);
-coverFill.set(coverOffset.subarray(0, U));
-
-// Pass 2: recompute exact incidence and fill CSR directly.
-for (let p = 0; p < P; p++) {
-  const po = p * PL;
-  const p0 = paths[po];
-  const p1 = paths[po + 1];
-  const p2 = paths[po + 2];
-  const p3 = paths[po + 3];
-  const p4 = paths[po + 4];
-  const p5 = paths[po + 5];
-  const p6 = paths[po + 6];
-  const p7 = paths[po + 7];
-  const p8 = paths[po + 8];
-
-  for (let u = 0; u < U; u++) {
-    const nb = u * NEXT_STRIDE;
-    let s = 0;
-    s = nextState[nb + s * 3 + p0];
-    s = nextState[nb + s * 3 + p1];
-    s = nextState[nb + s * 3 + p2];
-    s = nextState[nb + s * 3 + p3];
-    s = nextState[nb + s * 3 + p4];
-    s = nextState[nb + s * 3 + p5];
-    s = nextState[nb + s * 3 + p6];
-    s = nextState[nb + s * 3 + p7];
-    s = nextState[nb + s * 3 + p8];
-
-    if (s === FAIL_STATE) coverers[coverFill[u]++] = p;
-  }
-}
-
-const transposeMs = Number(process.hrtime.bigint() - transposeStart) / 1e6;
-
-// Transition table no longer participates in the search.
+const incidenceMs = Number(process.hrtime.bigint() - incidenceStart) / 1e6;
 nextState = null;
 
-// Initialize exact two-watcher state and intrusive watcher lists.
+// Initialize the same ascending-path-id two-watcher semantics as the CSR run.
 const watchInitStart = process.hrtime.bigint();
 const NO_WATCH = 0xffff;
 const NO_NODE = 0xffffffff;
@@ -201,44 +164,64 @@ const baseWatchNext = new Uint32Array(WATCH_NODES);
 baseWatchNext.fill(NO_NODE);
 const baseWatchHead = new Uint32Array(P);
 baseWatchHead.fill(NO_NODE);
-const baseNextCover = new Uint32Array(U);
+const baseNextPath = new Uint16Array(U);
 const basePrivateCount = new Uint32Array(P);
 
 for (let u = 0; u < U; u++) {
-  const begin = coverOffset[u];
-  const finish = coverOffset[u + 1];
-  const len = finish - begin;
+  const row = u * BLOCKS;
+  let first = NO_WATCH;
+  let second = NO_WATCH;
+
+  for (let b = 0; b < BLOCKS && second === NO_WATCH; b++) {
+    let mask = failBits[row + b] >>> 0;
+
+    while (mask) {
+      const bitIndex = lowBitIndex(mask);
+      const p = (b << 5) + bitIndex;
+
+      if (first === NO_WATCH) first = p;
+      else {
+        second = p;
+        break;
+      }
+
+      mask = (mask & (mask - 1)) >>> 0;
+    }
+  }
+
+  if (first === NO_WATCH) {
+    throw new Error(`all-path family leaves threshold word ${u} uncovered`);
+  }
 
   const nodeA = u << 1;
-  const a = coverers[begin];
-  baseWatchOwner[nodeA] = a;
-  baseWatchNext[nodeA] = baseWatchHead[a];
-  baseWatchHead[a] = nodeA;
+  baseWatchOwner[nodeA] = first;
+  baseWatchNext[nodeA] = baseWatchHead[first];
+  baseWatchHead[first] = nodeA;
 
-  if (len === 1) {
-    basePrivateCount[a]++;
-    baseNextCover[u] = finish;
+  if (second === NO_WATCH) {
+    basePrivateCount[first]++;
+    baseNextPath[u] = P;
   } else {
     const nodeB = nodeA + 1;
-    const b = coverers[begin + 1];
-    baseWatchOwner[nodeB] = b;
-    baseWatchNext[nodeB] = baseWatchHead[b];
-    baseWatchHead[b] = nodeB;
-    baseNextCover[u] = begin + 2;
+    baseWatchOwner[nodeB] = second;
+    baseWatchNext[nodeB] = baseWatchHead[second];
+    baseWatchHead[second] = nodeB;
+    baseNextPath[u] = second + 1;
   }
 }
 
 const watchInitMs = Number(process.hrtime.bigint() - watchInitStart) / 1e6;
 
-// Deterministic 128-order deletion search.
+// Exact deterministic deletion search.
 const rng = new XorShift32(0x04612026);
 const order = new Uint16Array(P);
 const rank = new Uint16Array(P);
 const selected = new Uint8Array(P);
+const selectedBits = new Uint32Array(BLOCKS);
 const watchOwner = new Uint16Array(WATCH_NODES);
 const watchNext = new Uint32Array(WATCH_NODES);
 const watchHead = new Uint32Array(P);
-const nextCover = new Uint32Array(U);
+const nextPath = new Uint16Array(U);
 const privateCount = new Uint32Array(P);
 const histogram = new Uint32Array(P + 1);
 
@@ -250,10 +233,11 @@ const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
   selected.fill(1);
+  selectedBits.fill(0xffffffff);
   watchOwner.set(baseWatchOwner);
   watchNext.set(baseWatchNext);
   watchHead.set(baseWatchHead);
-  nextCover.set(baseNextCover);
+  nextPath.set(baseNextPath);
   privateCount.set(basePrivateCount);
 
   let size = P;
@@ -273,9 +257,11 @@ for (let trial = 0; trial < TRIALS; trial++) {
     if (privateCount[p] !== 0) continue;
 
     selected[p] = 0;
+    selectedBits[p >>> 5] &= ~((1 << (p & 31)) >>> 0);
     size--;
 
     let node = watchHead[p];
+
     while (node !== NO_NODE) {
       const nextNode = watchNext[node];
       const u = node >>> 1;
@@ -285,25 +271,42 @@ for (let trial = 0; trial < TRIALS; trial++) {
         throw new Error(`attempted removal of sole watcher ${p} for threshold word ${u}`);
       }
 
-      let cursor = nextCover[u];
-      const finish = coverOffset[u + 1];
+      const row = u * BLOCKS;
+      let pos = nextPath[u];
+      let block = pos >>> 5;
       let replacement = NO_WATCH;
 
-      for (; cursor < finish; cursor++) {
-        const r = coverers[cursor];
-        if (r !== other && selected[r]) {
-          replacement = r;
-          cursor++;
+      while (block < BLOCKS) {
+        let mask = (failBits[row + block] & selectedBits[block]) >>> 0;
+
+        if (block === (pos >>> 5)) {
+          const shift = pos & 31;
+          if (shift) mask &= (0xffffffff << shift) >>> 0;
+        }
+
+        if ((other >>> 5) === block) {
+          mask &= ~((1 << (other & 31)) >>> 0);
+        }
+
+        if (mask) {
+          const bitIndex = lowBitIndex(mask);
+          replacement = (block << 5) + bitIndex;
+          pos = replacement + 1;
           break;
         }
+
+        block++;
+        pos = block << 5;
       }
-      nextCover[u] = cursor;
+
+      nextPath[u] = pos;
 
       if (replacement === NO_WATCH) {
         watchOwner[node] = NO_WATCH;
         privateCount[other]++;
       } else {
         watchOwner[node] = replacement;
+
         if (rank[replacement] > oi) {
           watchNext[node] = watchHead[replacement];
           watchHead[replacement] = node;
@@ -315,6 +318,7 @@ for (let trial = 0; trial < TRIALS; trial++) {
   }
 
   histogram[size]++;
+
   if (size > bestSize) {
     bestSize = size;
     bestTrial = trial;
@@ -324,30 +328,41 @@ for (let trial = 0; trial < TRIALS; trial++) {
 
 const searchMs = Number(process.hrtime.bigint() - searchStart) / 1e6;
 
-// Exact post-search verification from CSR only.
+// Exact verification directly against the failure bit matrix.
 const verifyStart = process.hrtime.bigint();
+const bestBits = new Uint32Array(BLOCKS);
+for (let p = 0; p < P; p++) {
+  if (bestSelected[p]) bestBits[p >>> 5] |= (1 << (p & 31)) >>> 0;
+}
+
 let uncovered = 0;
 const privateWord = new Int32Array(P);
 privateWord.fill(-1);
 
 for (let u = 0; u < U; u++) {
+  const row = u * BLOCKS;
   let owner = -1;
-  let selectedCount = 0;
+  let count = 0;
 
-  for (let i = coverOffset[u], end = coverOffset[u + 1]; i < end; i++) {
-    const p = coverers[i];
-    if (!bestSelected[p]) continue;
+  for (let b = 0; b < BLOCKS; b++) {
+    let mask = (failBits[row + b] & bestBits[b]) >>> 0;
 
-    selectedCount++;
-    if (selectedCount === 1) owner = p;
-    else break;
+    while (mask) {
+      const bitIndex = lowBitIndex(mask);
+      const p = (b << 5) + bitIndex;
+      count++;
+
+      if (count === 1) owner = p;
+      else break;
+
+      mask = (mask & (mask - 1)) >>> 0;
+    }
+
+    if (count > 1) break;
   }
 
-  if (selectedCount === 0) {
-    uncovered++;
-  } else if (selectedCount === 1 && privateWord[owner] < 0) {
-    privateWord[owner] = u;
-  }
+  if (count === 0) uncovered++;
+  else if (count === 1 && privateWord[owner] < 0) privateWord[owner] = u;
 }
 
 const selectedIds = [];
@@ -367,18 +382,12 @@ for (let size = 0; size <= P; size++) {
 
 const pass = uncovered === 0 && missingPrivate === 0 && selectedIds.length === bestSize;
 
-const selectedPaths = selectedIds.map(p => wordString(paths, p, PL));
-const privateWitnesses = selectedIds.map(p => ({
-  path: wordString(paths, p, PL),
-  word: privateWord[p] >= 0 ? wordString(words, privateWord[p], WL) : ''
-}));
-
 const result = {
   experiment: '046',
   disposition: pass ? 'PASS' : 'FAIL',
   implementation_language: 'Node.js',
   node_version: process.version,
-  optimization_revision: 'csr-two-pass-intrusive-watchers-v1',
+  optimization_revision: 'dense-bitset-watchers-v2',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
@@ -393,17 +402,19 @@ const result = {
   total_glycan_non_target_nodes: pass ? bestSize * PL : 0,
   generation_ms: generationMs,
   transition_ms: transitionMs,
-  count_pass_ms: countPassMs,
-  transpose_fill_ms: transposeMs,
+  incidence_ms: incidenceMs,
   watch_init_ms: watchInitMs,
   search_ms: searchMs,
   verification_ms: verifyMs,
   total_incidence: totalIncidence,
-  coverer_bytes: coverers.byteLength,
+  failure_bitset_bytes: failBits.byteLength,
   total_ms: Number(process.hrtime.bigint() - totalStart) / 1e6,
   cover_size_histogram: histogramObject,
-  selected_paths: selectedPaths,
-  private_witnesses: privateWitnesses
+  selected_paths: selectedIds.map(p => wordString(paths, p, PL)),
+  private_witnesses: selectedIds.map(p => ({
+    path: wordString(paths, p, PL),
+    word: privateWord[p] >= 0 ? wordString(words, privateWord[p], WL) : ''
+  }))
 };
 
 fs.writeFileSync(`${OUT}/RESULT.json`, JSON.stringify(result, null, 2) + '\n');
@@ -411,16 +422,15 @@ fs.writeFileSync(`${OUT}/RESULT.json`, JSON.stringify(result, null, 2) + '\n');
 console.log(JSON.stringify({
   experiment: result.experiment,
   disposition: result.disposition,
-  implementation_language: result.implementation_language,
+  optimization_revision: result.optimization_revision,
   best_cover_size: result.best_cover_size,
   threshold_uncovered_words: result.threshold_uncovered_words,
   missing_private_witnesses: result.missing_private_witnesses,
   total_incidence: result.total_incidence,
-  coverer_mb: result.coverer_bytes / 1048576,
+  failure_bitset_mb: result.failure_bitset_bytes / 1048576,
   generation_ms: result.generation_ms,
   transition_ms: result.transition_ms,
-  count_pass_ms: result.count_pass_ms,
-  transpose_fill_ms: result.transpose_fill_ms,
+  incidence_ms: result.incidence_ms,
   watch_init_ms: result.watch_init_ms,
   search_ms: result.search_ms,
   verification_ms: result.verification_ms,
