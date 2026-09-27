@@ -288,6 +288,39 @@ Treat this as a high-value discovery signal. The repair may have removed noise r
 
 ---
 
+
+# 8A. Repair is also an intervention experiment
+
+A minimum causal repair changes one identified variable or support region while preserving as much surrounding structure as possible.
+
+That makes the repair useful not only operationally but diagnostically.
+
+Record, where material:
+
+~~~text
+what was changed
+what was held fixed
+which discrepancies disappeared
+which discrepancies survived
+which new discrepancies appeared
+which downstream claims changed
+which downstream claims remained invariant
+~~~
+
+This supports a causal question:
+
+> Was the repaired defect actually responsible for the structural phenomenon that drew attention?
+
+A repair that removes the contract violation but leaves the structural pattern intact is evidence that the pattern has another cause or a broader support basis.
+
+A repair that removes both exactly is evidence for a common cause.
+
+Neither result is automatically conclusive; alternate dependencies may exist.
+
+The repair should therefore be as narrow as practical when it is being used diagnostically.
+
+---
+
 # 9. Desired agreement is not a repair oracle
 
 Forbidden pattern:
