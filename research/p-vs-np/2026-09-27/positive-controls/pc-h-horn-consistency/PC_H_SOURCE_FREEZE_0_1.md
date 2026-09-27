@@ -125,19 +125,11 @@ The witness is a polynomially bounded finite list over the explicit variable lis
 
 This is source structure only. No deterministic existential-elimination procedure is supplied.
 
-## 7. Withheld structure
+## 7. Discovery-input boundary
 
-The discovery input MUST NOT contain or name:
+This artifact supplies only the instance/witness/clause/truth semantics stated above.
 
-- a closure set;
-- iterative implication/chaining;
-- unit propagation;
-- a least model;
-- a fixed-point construction;
-- a canonical satisfying assignment;
-- a rejection certificate derived by saturation.
-
-Any such structure must be independently recovered from the primitive clauses after source freeze.
+No derived consequence state, canonical witness, contradiction construction, iteration rule, or decision procedure is supplied by the source artifact.
 
 ## 8. Truth classification
 
