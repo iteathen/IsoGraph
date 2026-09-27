@@ -177,20 +177,24 @@ for (let p = 0; p < P; p++) {
   }
 }
 
-// Two-watched-coverer invariant.
+// Two-watched-coverer invariant with intrusive typed-array watcher lists.
 //
-// Each threshold word is a set-cover constraint: at least one selected path
-// must forbid it. We watch two currently selected coverers whenever possible.
-// A path is undeletable exactly when it is the sole remaining watcher of at
-// least one word. Removing a nonprivate watcher only touches words currently
-// watching that path, rather than every word in the path's forbidden set.
+// Each threshold word owns two fixed watcher slots (node ids 2*u and 2*u+1).
+// A slot is moved between path watcher-lists in O(1) by relinking the same
+// node. This removes all per-trial dynamic JS arrays/pushes from the hot loop.
 const NO_WATCH = 0xffff;
-const baseWatchA = new Uint16Array(U);
-const baseWatchB = new Uint16Array(U);
-baseWatchB.fill(NO_WATCH);
+const NO_NODE = 0xffffffff;
+const WATCH_NODES = U * 2;
+
+const baseWatchOwner = new Uint16Array(WATCH_NODES);
+baseWatchOwner.fill(NO_WATCH);
 const baseNextCover = new Uint32Array(U);
 const basePrivateCount = new Uint32Array(P);
-const initialWatchCount = new Uint32Array(P);
+
+const baseWatchHead = new Uint32Array(P);
+baseWatchHead.fill(NO_NODE);
+const baseWatchNext = new Uint32Array(WATCH_NODES);
+baseWatchNext.fill(NO_NODE);
 
 for (let u = 0; u < U; u++) {
   const begin = coverOffset[u];
@@ -199,49 +203,34 @@ for (let u = 0; u < U; u++) {
 
   if (len === 0) throw new Error(`threshold word ${u} has no coverer`);
 
+  const nodeA = u << 1;
   const a = coverers[begin];
-  baseWatchA[u] = a;
-  initialWatchCount[a]++;
+  baseWatchOwner[nodeA] = a;
+  baseWatchNext[nodeA] = baseWatchHead[a];
+  baseWatchHead[a] = nodeA;
 
   if (len === 1) {
     basePrivateCount[a]++;
     baseNextCover[u] = finish;
   } else {
+    const nodeB = nodeA + 1;
     const b = coverers[begin + 1];
-    baseWatchB[u] = b;
-    initialWatchCount[b]++;
+    baseWatchOwner[nodeB] = b;
+    baseWatchNext[nodeB] = baseWatchHead[b];
+    baseWatchHead[b] = nodeB;
     baseNextCover[u] = begin + 2;
   }
-}
-
-const initialWatchOffset = new Uint32Array(P + 1);
-for (let p = 0; p < P; p++) {
-  initialWatchOffset[p + 1] = initialWatchOffset[p] + initialWatchCount[p];
-}
-
-const initialWatchWords = new Uint32Array(initialWatchOffset[P]);
-const initialWatchFill = new Uint32Array(P);
-initialWatchFill.set(initialWatchOffset.subarray(0, P));
-
-for (let u = 0; u < U; u++) {
-  const a = baseWatchA[u];
-  initialWatchWords[initialWatchFill[a]++] = u;
-
-  const b = baseWatchB[u];
-  if (b !== NO_WATCH) initialWatchWords[initialWatchFill[b]++] = u;
 }
 
 const rng = new XorShift32(0x04512026);
 const order = new Uint16Array(P);
 const rank = new Uint16Array(P);
 const selected = new Uint8Array(P);
-const watchA = new Uint16Array(U);
-const watchB = new Uint16Array(U);
+const watchOwner = new Uint16Array(WATCH_NODES);
+const watchHead = new Uint32Array(P);
+const watchNext = new Uint32Array(WATCH_NODES);
 const nextCover = new Uint32Array(U);
 const privateCount = new Uint32Array(P);
-const eventHead = new Int32Array(P);
-let eventWord = new Uint32Array(U * 16);
-let eventNext = new Int32Array(U * 16);
 const histogram = new Uint32Array(P + 1);
 
 let bestSize = -1;
@@ -249,19 +238,18 @@ let bestTrial = -1;
 let bestSelected = null;
 let replacementEvents = 0;
 let replacementScans = 0;
-let maxTrialEventCount = 0;
+let scheduledWatcherMoves = 0;
 
 const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
   selected.fill(1);
-  watchA.set(baseWatchA);
-  watchB.set(baseWatchB);
+  watchOwner.set(baseWatchOwner);
+  watchHead.set(baseWatchHead);
+  watchNext.set(baseWatchNext);
   nextCover.set(baseNextCover);
   privateCount.set(basePrivateCount);
 
-  eventHead.fill(-1);
-  let eventCount = 0;
   let size = P;
 
   for (let i = 0; i < P; i++) order[i] = i;
@@ -276,33 +264,17 @@ for (let trial = 0; trial < TRIALS; trial++) {
   for (let oi = 0; oi < P; oi++) {
     const p = order[oi];
 
-    // A private threshold word makes p permanently necessary.
+    // Once a path owns a private threshold word it must remain selected.
     if (privateCount[p] !== 0) continue;
 
     selected[p] = 0;
     size--;
 
-    // Process all words currently watching p. Initial watches live in a
-    // compact CSR slice; replacement watches use a per-path linked list in
-    // typed arrays, avoiding JS array pushes and callback/closure overhead.
-    let wi = initialWatchOffset[p];
-    const wend = initialWatchOffset[p + 1];
-    let event = eventHead[p];
-
-    while (wi < wend || event !== -1) {
-      let u;
-
-      if (wi < wend) {
-        u = initialWatchWords[wi++];
-      } else {
-        u = eventWord[event];
-        event = eventNext[event];
-      }
-
-      const a = watchA[u];
-      const b = watchB[u];
-      const pIsA = a === p;
-      const other = pIsA ? b : a;
+    let node = watchHead[p];
+    while (node !== NO_NODE) {
+      const nextNode = watchNext[node];
+      const u = node >>> 1;
+      const other = watchOwner[node ^ 1];
 
       if (other === NO_WATCH) {
         throw new Error(`removing sole watcher ${p} for word ${u}`);
@@ -316,47 +288,35 @@ for (let trial = 0; trial < TRIALS; trial++) {
         replacementScans++;
         const r = coverers[cursor];
 
-        if (r !== other && selected[r]) {
+        if (r === other) continue;
+
+        // Unprocessed paths are necessarily selected. Processed paths are
+        // selected only when they previously became permanent/private.
+        if (rank[r] > oi || selected[r]) {
           replacement = r;
           cursor++;
           break;
         }
       }
-
       nextCover[u] = cursor;
 
       if (replacement === NO_WATCH) {
-        if (pIsA) watchA[u] = NO_WATCH;
-        else watchB[u] = NO_WATCH;
+        watchOwner[node] = NO_WATCH;
         privateCount[other]++;
-        continue;
-      }
+      } else {
+        watchOwner[node] = replacement;
+        replacementEvents++;
 
-      if (pIsA) watchA[u] = replacement;
-      else watchB[u] = replacement;
-
-      replacementEvents++;
-
-      if (rank[replacement] > oi) {
-        if (eventCount === eventWord.length) {
-          const nextCapacity = eventWord.length * 2;
-          const grownWord = new Uint32Array(nextCapacity);
-          const grownNext = new Int32Array(nextCapacity);
-          grownWord.set(eventWord);
-          grownNext.set(eventNext);
-          eventWord = grownWord;
-          eventNext = grownNext;
+        if (rank[replacement] > oi) {
+          watchNext[node] = watchHead[replacement];
+          watchHead[replacement] = node;
+          scheduledWatcherMoves++;
         }
-
-        eventWord[eventCount] = u;
-        eventNext[eventCount] = eventHead[replacement];
-        eventHead[replacement] = eventCount;
-        eventCount++;
       }
+
+      node = nextNode;
     }
   }
-
-  if (eventCount > maxTrialEventCount) maxTrialEventCount = eventCount;
 
   histogram[size]++;
   if (size > bestSize) {
@@ -441,6 +401,7 @@ const result = {
   total_incidence: totalIncidence,
   replacement_events: replacementEvents,
   replacement_scans: replacementScans,
+  scheduled_watcher_moves: scheduledWatcherMoves,
   max_trial_event_count: maxTrialEventCount,
   total_ms: Number(process.hrtime.bigint() - t0) / 1e6,
   cover_size_histogram: histogramObject,
