@@ -164,3 +164,53 @@ Experiment 046 does not establish:
 - a universal performance law for Node.js.
 
 It establishes one exact width-113 finite construction and demonstrates that the Node-only implementation can scale the exact critical-cover search to the declared 302-million path/word comparison surface.
+
+
+## Dense-bitset regression
+
+A second exact Node run used `dense-bitset-watchers-v2` at source SHA `4f4105c0cb49b000d7e320d5754f3b0380dc68ae`.
+
+It reproduced exactly:
+
+~~~text
+best trial:                 43
+best cover size:            113
+threshold uncovered words:  0
+missing private witnesses:  0
+complete cover histogram:   identical
+~~~
+
+Thus the dense bitset is an exact implementation substitute for the sparse coverer CSR on this workload.
+
+Memory comparison for the main incidence structure:
+
+~~~text
+sparse Uint16 coverer CSR:
+    264,649,728 bytes
+
+dense one-bit incidence:
+     37,748,736 bytes
+~~~
+
+The bitset uses about one seventh of the main incidence storage.
+
+Performance comparison:
+
+~~~text
+CSR V1 total:
+    11.646 s
+
+dense-bitset V2 total:
+    15.469 s
+~~~
+
+The bitset is slower here because watcher replacement scans bit blocks rather than walking a compact path-id list.
+
+Its purpose is scaling pressure: at the next symmetric level, a sparse path-id CSR approaches multi-gigabyte storage while the exact bit matrix remains a few hundred megabytes.
+
+The active campaign therefore keeps both lessons:
+
+- sparse coverer lists are faster at moderate density/scale;
+- dense incidence bits are the preferred memory representation when path-id storage becomes dominant.
+
+Both are Node.js-only implementations.
