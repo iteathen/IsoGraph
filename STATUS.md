@@ -152,6 +152,26 @@ The evidence chain remains intentionally preserved rather than rewritten: earlie
 DP remains discovery/search guidance, not semantic proof authority.
 
 DP 0.7's conditional exact source-rendering path now routes through independently qualified Core 0.19 section 18 at the exact revision recorded in the authority manifest.
+
+### Active Discovery Protocol successor research
+
+An unqualified DP 0.8 successor candidate is under development:
+
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
+
+Its scope is **clue-preserving discrepancy adjudication**. It generalizes the qualified observation-first behavior by requiring material discrepancies to keep repair and discovery dispositions separate, leaving discrepancy ownership unresolved until a violated contract is located, using minimum repairs as diagnostic interventions, and preventing expected/reference agreement from becoming an implicit repair oracle.
+
+Motivating evidence includes both the earlier Connect4 discrepancy work and the 2026-09-27 P-vs-NP primitive/NEI/implicit campaign, where proved defects exposed additional structure that survived or sharpened after correction.
+
+This candidate changes no current authority:
+
+~~~text
+qualified Discovery authority:
+    DP 0.1–0.7
+
+DP 0.8:
+    UNQUALIFIED SUCCESSOR CANDIDATE
+~~~
 ### Real-world Discovery Protocol execution evidence
 
 Connect4 authority 1.1 has now run the Discovery Protocols against live cold-reconstruction discrepancies.
@@ -233,6 +253,8 @@ Current completed qualification checkpoints:
 Core 0.19 is current Core authority and its direct full-stack integration burden is now discharged at the exact revisions pinned by Experiment 031.
 
 Transition Structural Signatures and DTS profiles remain separately versioned successor research.
+
+Discovery Protocol 0.8 clue-preserving discrepancy adjudication is also active successor research. Before promotion it requires fresh adversarial qualification, including blind mixed cases where the correct outcome may be an ordinary defect, a structural clue, both, or neither.
 
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
 
