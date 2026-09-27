@@ -1,0 +1,1024 @@
+{
+  "schema": "isograph.implicit_assertion_index.v1",
+  "generated_from": [
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "sha": "bd3f2773565565626f7631dcf63c2b3fecda3913"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_CORRECTION_0_1.md",
+      "sha": "2b6081ceb10f57ea317a99522f8166767296ee5e"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "sha": "a0fd83cf3d83e80c37cd007d0faf7b123b40e28d"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "sha": "dc1d1ead67b309f57d1a63e34f70b10ed5ada3c1"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "sha": "6b08ab3d377fb2e4fd6aad1083ea181d488e69b9"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "sha": "a7af2bf8d7643a1c5f05e77742e2a9877e7bee6a"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "sha": "94426b5eb55bd17c1250e2d8fd167f3cc3f9577c"
+    },
+    {
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "sha": "8a70f0775e73b4c454ca1e5aae42d40084645327"
+    }
+  ],
+  "admitted_count": 99,
+  "superseded": [
+    "IA-013 predecessor round-1 admission"
+  ],
+  "missing_refs": [],
+  "cycles": [],
+  "max_normalized_depth": 10,
+  "assertions": [
+    {
+      "id": "IA-001",
+      "title": "addition result functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-002",
+      "title": "multiplication result functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [
+        "IA-001"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-003",
+      "title": "exponentiation result functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [
+        "IA-002"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-004",
+      "title": "list length functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-005",
+      "title": "primitive input initialization is functional",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-006",
+      "title": "deterministic one-step successor functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-007",
+      "title": "deterministic exact-n endpoint functionality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [
+        "IA-006"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-008",
+      "title": "terminal states cannot occur before a longer continuation",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-009",
+      "title": "bounded-totality excludes paths longer than the bound",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [
+        "IA-008"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-010",
+      "title": "language truth splits the positive-path cases exactly",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-011",
+      "title": "functional realization is a branching realization",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-012",
+      "title": "known containment is structural in the primitive model",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [
+        "IA-011"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-014",
+      "title": "exact constructor equality feeds NEI SAME",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-015",
+      "title": "exact disequality feeds NEI DISTINCT",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A1_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-016",
+      "title": "primitive natural order reflexivity",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-017",
+      "title": "primitive natural order transitivity",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-018",
+      "title": "primitive natural order antisymmetry",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-019",
+      "title": "primitive natural order totality",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-020",
+      "title": "strict residual decomposition",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-021",
+      "title": "deterministic terminal polarity uniqueness",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [
+        "IA-007",
+        "IA-008",
+        "IA-019",
+        "IA-020",
+        "IA-013"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-022",
+      "title": "all paths from a bounded-total witness are bounded",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [
+        "IA-009",
+        "IA-019"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-023",
+      "title": "fixed finite list members admit constant-size unary codes",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [
+        "IA-004",
+        "IA-019"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-024",
+      "title": "one fixed branching witness has constant local choice-code width",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [
+        "IA-023"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-025",
+      "title": "fixed local branching multiplicity is finite and input-independent",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [
+        "IA-024"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-026",
+      "title": "raw finite-table size is not witness-input size",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A2_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-027",
+      "title": "one transition increases represented tape span by at most one",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-004"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-028",
+      "title": "reachable tape span is linearly bounded by input length plus step count",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-027"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-029",
+      "title": "fixed-realization configuration codes have linear size in represented span",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-023",
+        "IA-026"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-030",
+      "title": "an exact accepting path has a polynomial-size tableau encoding",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-022",
+        "IA-028",
+        "IA-029"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-031",
+      "title": "tableau validity is locally checkable",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-024"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-032",
+      "title": "tableau checking is deterministic polynomial time",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-031"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-033",
+      "title": "branching realization implies polynomial bounded-certificate verification",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-030",
+        "IA-031",
+        "IA-010"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-034",
+      "title": "bounded certificate verification implies a branching realization",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-035",
+      "title": "branching realizability is exactly bounded existential projection of functional polynomial verification",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-033",
+        "IA-034"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-036",
+      "title": "the unresolved primitive implication is equivalent to bounded existential-projection closure",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-035",
+        "IA-011"
+      ],
+      "admitted": true,
+      "normalized_depth": 7
+    },
+    {
+      "id": "IA-037",
+      "title": "polynomially many candidate witnesses imply deterministic polynomial projection",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-038",
+      "title": "polynomial candidate count is stronger than polynomial candidate length",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A3_0_1.md",
+      "refs": [
+        "IA-037",
+        "IA-027"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-039",
+      "title": "NEI SAME is an equivalence relation inside one fixed exact query family",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-040",
+      "title": "exact residual continuation equality implies scoped SAME",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-041",
+      "title": "one exact distinguishing continuation forces scoped DISTINCT",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-040"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-042",
+      "title": "QU-dependent continuation variation yields NEI UNKNOWN when both outcomes remain admissible",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-043",
+      "title": "missing identity-relevant QU blocks residual classification",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-044",
+      "title": "global DISTINCT and scoped SAME are compatible",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-045",
+      "title": "scoped SAME supports substitution only through scope-factored consumers",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-046",
+      "title": "exact residual identity collapse defines a valid deterministic propagation state",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-039",
+        "IA-040",
+        "IA-045"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-047",
+      "title": "polynomial NEI residual width plus efficient quotient operations implies deterministic polynomial decision",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-046"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-048",
+      "title": "one NEI residual class per depth collapses all existential branching at that depth",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-047"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-049",
+      "title": "raw representation multiplicity does not lower-bound NEI residual multiplicity",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-044"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-050",
+      "title": "structural similarity does not upper-bound NEI residual multiplicity",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-041"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-051",
+      "title": "identity computation cost is load-bearing for algorithmic compression",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-047"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-052",
+      "title": "desired compression cannot restrict QU to force SAME",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [
+        "IA-047"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-053",
+      "title": "equal computed language is not global realization identity",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A4_NEI_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-054",
+      "title": "one selected transition tuple determines at most one next configuration",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-055",
+      "title": "a legal transition-code sequence determines at most one replay path",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-024",
+        "IA-005",
+        "IA-054"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-056",
+      "title": "accepting paths and valid accepting transition-code sequences correspond",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-024",
+        "IA-055"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-057",
+      "title": "accepting transition-choice certificates have length linear in path length",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-024"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-058",
+      "title": "transition-choice certificate verification is deterministic polynomial time",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-054",
+        "IA-057",
+        "IA-028"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-059",
+      "title": "full tableau materialization is nonessential for certificate sufficiency",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-030",
+        "IA-057",
+        "IA-056",
+        "IA-058"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-060",
+      "title": "every bounded-total realization has at least one terminal path for every input",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-061",
+      "title": "a functional realization has exactly one terminal outcome for each input",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-060",
+        "IA-007",
+        "IA-008",
+        "IA-021"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-062",
+      "title": "functional polynomial realizability is closed under complement",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-061"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-063",
+      "title": "false branching instances have only negative maximal branches",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-060",
+        "IA-010"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-064",
+      "title": "bounded existential and bounded universal projections are dual through complement",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-062"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-065",
+      "title": "universal closure of functional polynomial relations is equivalent to existential closure",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-062",
+        "IA-064"
+      ],
+      "admitted": true,
+      "normalized_depth": 7
+    },
+    {
+      "id": "IA-066",
+      "title": "adjacent same-polarity bounded quantifiers can be paired into one block",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-067",
+      "title": "existential closure would collapse every fixed finite bounded-quantifier alternation over a functional-polynomial predicate",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-065",
+        "IA-066"
+      ],
+      "admitted": true,
+      "normalized_depth": 8
+    },
+    {
+      "id": "IA-068",
+      "title": "residual scoped SAME is exactly continuation-language equality under complete Q-RESIDUAL authority",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-040",
+        "IA-041"
+      ],
+      "admitted": true,
+      "normalized_depth": 3
+    },
+    {
+      "id": "IA-069",
+      "title": "residual SAME is a right congruence under common witness extension",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-068"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-070",
+      "title": "residual-class successor is automatically well-defined",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-069"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-071",
+      "title": "residual SAME automatically preserves terminal acceptance",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-068"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-072",
+      "title": "sharpened NEI residual-width sufficient condition",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A5_0_1.md",
+      "refs": [
+        "IA-047",
+        "IA-070",
+        "IA-071"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-073",
+      "title": "residual DISTINCT iff a distinguishing suffix exists",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-041",
+        "IA-068"
+      ],
+      "admitted": true,
+      "normalized_depth": 4
+    },
+    {
+      "id": "IA-074",
+      "title": "residual SAME is the absence of a distinguishing suffix",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-068",
+        "IA-073"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-075",
+      "title": "one distinguishing suffix is polynomially checkable",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-076",
+      "title": "residual DISTINCT is itself a bounded existential projection",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-073",
+        "IA-075"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-077",
+      "title": "residual SAME is a bounded universal/complement projection",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-074",
+        "IA-076"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-078",
+      "title": "existential-projection closure would make general exact residual identity polynomial-time decidable",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-065",
+        "IA-076",
+        "IA-062"
+      ],
+      "admitted": true,
+      "normalized_depth": 8
+    },
+    {
+      "id": "IA-079",
+      "title": "a universal polynomial exact residual-identity procedure would imply existential-projection closure",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-080",
+      "title": "universal efficient residual identity is equivalent in strength to the unresolved existential closure principle",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-078",
+        "IA-079"
+      ],
+      "admitted": true,
+      "normalized_depth": 9
+    },
+    {
+      "id": "IA-081",
+      "title": "a universal polynomial residual canonicalizer would also settle the existential closure principle",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-079"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-082",
+      "title": "right-congruence semantics do not make quotient construction computationally free",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-069",
+        "IA-080"
+      ],
+      "admitted": true,
+      "normalized_depth": 10
+    },
+    {
+      "id": "IA-083",
+      "title": "the identity premise in the NEI width theorem is fully load-bearing",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-072",
+        "IA-079"
+      ],
+      "admitted": true,
+      "normalized_depth": 7
+    },
+    {
+      "id": "IA-084",
+      "title": "NEI can still provide genuine compression on special verifier families",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-072",
+        "IA-080"
+      ],
+      "admitted": true,
+      "normalized_depth": 10
+    },
+    {
+      "id": "IA-085",
+      "title": "identity proof burden is asymmetric",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A6_IDENTITY_COMPLEXITY_0_1.md",
+      "refs": [
+        "IA-073",
+        "IA-074"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-086",
+      "title": "sequential composition of functional polynomial realizations is functional polynomial",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-087",
+      "title": "functional polynomial predicates are closed under conjunction",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-088",
+      "title": "functional polynomial predicates are closed under disjunction",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-087"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-089",
+      "title": "functional polynomial predicates are closed under XOR / exact Boolean finite composition",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-086",
+        "IA-075"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-090",
+      "title": "exact self-delimiting pair encoding has linear overhead",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-091",
+      "title": "pair encode/decode is functionally polynomial",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-090"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-092",
+      "title": "functional polynomial computation is closed under polynomial-time precomposition",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-086"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-093",
+      "title": "finite sums and products of represented polynomial bounds are polynomial bounds",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-094",
+      "title": "an eventual polynomial bound can absorb finitely many small inputs",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-095",
+      "title": "membership in one fixed finite raw relation extension is functionally decidable",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-096",
+      "title": "a fixed finite number of functional polynomial calls remains polynomial",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-086",
+        "IA-093"
+      ],
+      "admitted": true,
+      "normalized_depth": 2
+    },
+    {
+      "id": "IA-097",
+      "title": "nondeterministic choices may be front-loaded as one existential choice string",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-055"
+      ],
+      "admitted": true,
+      "normalized_depth": 5
+    },
+    {
+      "id": "IA-098",
+      "title": "bijective transition-code renaming preserves the represented language",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-056"
+      ],
+      "admitted": true,
+      "normalized_depth": 6
+    },
+    {
+      "id": "IA-099",
+      "title": "bijective internal state/symbol alpha-renaming preserves language behavior",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [],
+      "admitted": true,
+      "normalized_depth": 1
+    },
+    {
+      "id": "IA-100",
+      "title": "exactly unreachable internal structure is nonessential for extensional language behavior",
+      "path": "research/p-vs-np/2026-09-27/IMPLICIT_ASSERTIONS_A7_SUPPORT_CLOSURE_0_1.md",
+      "refs": [
+        "IA-030",
+        "IA-093",
+        "IA-094",
+        "IA-032",
+        "IA-034",
+        "IA-086",
+        "IA-090",
+        "IA-091",
+        "IA-037",
+        "IA-057",
+        "IA-095",
+        "IA-075",
+        "IA-089",
+        "IA-096",
+        "IA-067"
+      ],
+      "admitted": true,
+      "normalized_depth": 9
+    }
+  ]
+}
