@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.p_vs_np.primitive_bundle_verification.v1",
+  "date": "2026-09-27",
+  "branch": "research/p-vs-np-primitive-logic-20260926",
+  "artifact": {
+    "path": "research/p-vs-np/2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg",
+    "blob_sha": "c38de5674ffa568c1297e8383b48b2ed77de7756",
+    "status": "CONFIRMED_RESEARCH_AUDIT"
+  },
+  "supersedes": {
+    "path": "research/p-vs-np/2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_3.isg",
+    "disposition": "REJECTED_AS_CURRENT_AUTHORITY",
+    "defect": "bundled generic transition-support blocks globally forced deterministic uniqueness and mis-scoped machine-instance properties"
+  },
+  "dependencies": {
+    "primitive_logic_kernel_0_1": "2630336da5c4117a15a43c1dc0847536b33ed083",
+    "primitive_natural_arithmetic_0_5": "fde4915b3a056430e0cb7a3a327e26abc1c7b09b",
+    "primitive_data_constructors_0_5": "c0479ac1de1a1c8ff5737221133601618b1a56cf",
+    "primitive_finite_transition_computation_0_9": "160fa427e2bee87711f50776d04cf5b046f205cf",
+    "primitive_truth_kernel_0_4": "14d9df85590b349be4b42b932bd317e719215ea3"
+  },
+  "mechanical": {
+    "top_level_blocks": 36,
+    "parenthesis_residual": 0,
+    "bracket_residual": 0,
+    "negative_delimiter_depth": false,
+    "free_native_variables": 0,
+    "derived_view_role_present": false,
+    "generic_machine_Q_parameter_present": false,
+    "generic_transition_determinism_present": false
+  },
+  "semantic": {
+    "branching_witness_functionality_constraint": false,
+    "functional_witness_functionality_constraint": true,
+    "same_language_relation_both_sides": true,
+    "machine_witnesses_outside_input_quantifier": true,
+    "polynomial_parameters_uniform_per_witness": true,
+    "transition_totality_over_full_represented_symbol_list": true,
+    "terminal_states_no_outgoing": true,
+    "exact_bound_requires_terminal": true,
+    "early_halting_allowed": true,
+    "deterministic_subcase_embeds_in_branching": true,
+    "nei_separate_from_core": true,
+    "high_level_complexity_labels_native": false
+  },
+  "boundaries": {
+    "core_0_20_qualified": false,
+    "official_model_equivalence": "QU_UNEXPANDED",
+    "p_equals_np": "OPEN",
+    "p_not_equals_np": "OPEN"
+  }
+}
