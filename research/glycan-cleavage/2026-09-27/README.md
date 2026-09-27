@@ -515,3 +515,23 @@ A25 identifies fixed-threshold witness-width maximization exactly as Maximum Min
 Core 0.20 remains unqualified, and frozen biochemical 0.1 remains intentionally narrower than real enzymology.
 
 No external novelty claim is made by these research records.
+
+
+## Implementation constraint — Node.js only
+
+Executable glycan research experiments, benchmark harnesses, search tools, and algorithm prototypes in this campaign MUST use Node.js.
+
+Do not switch to C/C++, Rust, WebAssembly, or another native implementation language to obtain easier performance.
+
+The performance pressure is intentional. Prefer:
+
+- typed arrays;
+- compact integer/bit representations;
+- allocation-free hot loops;
+- preallocated buffers;
+- data-oriented layouts;
+- cache-friendly traversal;
+- branch reduction;
+- exact structural compression before machinery.
+
+Historical non-Node experiment artifacts, if any, are retained only as provenance and are not active campaign implementation authority unless independently reproduced in Node.js.
