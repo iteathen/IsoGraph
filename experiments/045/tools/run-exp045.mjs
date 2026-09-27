@@ -239,7 +239,9 @@ const watchA = new Uint16Array(U);
 const watchB = new Uint16Array(U);
 const nextCover = new Uint32Array(U);
 const privateCount = new Uint32Array(P);
-const extraWatchWords = Array.from({ length: P }, () => []);
+const eventHead = new Int32Array(P);
+let eventWord = new Uint32Array(U * 16);
+let eventNext = new Int32Array(U * 16);
 const histogram = new Uint32Array(P + 1);
 
 let bestSize = -1;
@@ -247,6 +249,7 @@ let bestTrial = -1;
 let bestSelected = null;
 let replacementEvents = 0;
 let replacementScans = 0;
+let maxTrialEventCount = 0;
 
 const searchStart = process.hrtime.bigint();
 
@@ -257,8 +260,8 @@ for (let trial = 0; trial < TRIALS; trial++) {
   nextCover.set(baseNextCover);
   privateCount.set(basePrivateCount);
 
-  for (let p = 0; p < P; p++) extraWatchWords[p].length = 0;
-
+  eventHead.fill(-1);
+  let eventCount = 0;
   let size = P;
 
   for (let i = 0; i < P; i++) order[i] = i;
@@ -279,8 +282,23 @@ for (let trial = 0; trial < TRIALS; trial++) {
     selected[p] = 0;
     size--;
 
-    // Process one word currently watching p.
-    const removeWatcher = (u) => {
+    // Process all words currently watching p. Initial watches live in a
+    // compact CSR slice; replacement watches use a per-path linked list in
+    // typed arrays, avoiding JS array pushes and callback/closure overhead.
+    let wi = initialWatchOffset[p];
+    const wend = initialWatchOffset[p + 1];
+    let event = eventHead[p];
+
+    while (wi < wend || event !== -1) {
+      let u;
+
+      if (wi < wend) {
+        u = initialWatchWords[wi++];
+      } else {
+        u = eventWord[event];
+        event = eventNext[event];
+      }
+
       const a = watchA[u];
       const b = watchB[u];
       const pIsA = a === p;
@@ -297,19 +315,21 @@ for (let trial = 0; trial < TRIALS; trial++) {
       for (; cursor < finish; cursor++) {
         replacementScans++;
         const r = coverers[cursor];
+
         if (r !== other && selected[r]) {
           replacement = r;
           cursor++;
           break;
         }
       }
+
       nextCover[u] = cursor;
 
       if (replacement === NO_WATCH) {
         if (pIsA) watchA[u] = NO_WATCH;
         else watchB[u] = NO_WATCH;
         privateCount[other]++;
-        return;
+        continue;
       }
 
       if (pIsA) watchA[u] = replacement;
@@ -317,19 +337,26 @@ for (let trial = 0; trial < TRIALS; trial++) {
 
       replacementEvents++;
 
-      // If replacement's deletion turn is still ahead, record the watch so
-      // it can be maintained then. Already-processed selected paths are
-      // permanent and never need a future watch-list event.
-      if (rank[replacement] > oi) extraWatchWords[replacement].push(u);
-    };
+      if (rank[replacement] > oi) {
+        if (eventCount === eventWord.length) {
+          const nextCapacity = eventWord.length * 2;
+          const grownWord = new Uint32Array(nextCapacity);
+          const grownNext = new Int32Array(nextCapacity);
+          grownWord.set(eventWord);
+          grownNext.set(eventNext);
+          eventWord = grownWord;
+          eventNext = grownNext;
+        }
 
-    let wi = initialWatchOffset[p];
-    const wend = initialWatchOffset[p + 1];
-    for (; wi < wend; wi++) removeWatcher(initialWatchWords[wi]);
-
-    const extra = extraWatchWords[p];
-    for (let i = 0; i < extra.length; i++) removeWatcher(extra[i]);
+        eventWord[eventCount] = u;
+        eventNext[eventCount] = eventHead[replacement];
+        eventHead[replacement] = eventCount;
+        eventCount++;
+      }
+    }
   }
+
+  if (eventCount > maxTrialEventCount) maxTrialEventCount = eventCount;
 
   histogram[size]++;
   if (size > bestSize) {
@@ -396,7 +423,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
-  node_optimization_revision: 'two-watched-coverers-v5',
+  node_optimization_revision: 'typed-watched-coverers-v6',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
@@ -414,6 +441,7 @@ const result = {
   total_incidence: totalIncidence,
   replacement_events: replacementEvents,
   replacement_scans: replacementScans,
+  max_trial_event_count: maxTrialEventCount,
   total_ms: Number(process.hrtime.bigint() - t0) / 1e6,
   cover_size_histogram: histogramObject,
   selected_paths: selectedPaths,
