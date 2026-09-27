@@ -1,0 +1,132 @@
+{
+  "local_semantics": {
+    "181000": {
+      "kind": "carrier",
+      "arity": null,
+      "reconstruction": "A carrier representing the domain of binary relations over elements (7400), used to define structural properties like parent-child mappings and depth."
+    },
+    "181001": {
+      "kind": "derived_relation",
+      "arity": 1,
+      "reconstruction": "A predicate on lists (7420) satisfied if the list contains no duplicate elements, effectively representing a set with extensional uniqueness."
+    },
+    "181002": {
+      "kind": "derived_relation",
+      "arity": 2,
+      "reconstruction": "A predicate on two lists (7420) satisfied if every element of the first list is also an element of the second list (the subset relation)."
+    },
+    "181003": {
+      "kind": "derived_relation",
+      "arity": 2,
+      "reconstruction": "A predicate on two lists (7420) satisfied if they contain exactly the same elements regardless of order (extensional set equality)."
+    },
+    "181004": {
+      "kind": "derived_relation",
+      "arity": 6,
+      "reconstruction": "Defines a valid tree structure on nodes RL with parent relation P and root, where TG is an upward-closed subset of RL, and M maps entities EL to nodes. It includes a depth relation D to ensure well-foundedness."
+    },
+    "181005": {
+      "kind": "derived_relation",
+      "arity": 3,
+      "reconstruction": "A predicate satisfied if node r is an element of set S and no child of r (according to relation P) is present in set S, identifying r as a leaf relative to the current set S."
+    },
+    "181006": {
+      "kind": "derived_relation",
+      "arity": 6,
+      "reconstruction": "A predicate satisfied if node r is a leaf of set S (per 181005), is not a member of the target set TG, and is the image of entity e under mapping M."
+    },
+    "181007": {
+      "kind": "derived_relation",
+      "arity": 3,
+      "reconstruction": "A predicate satisfied if set Sp is extensionally equal to set S excluding exactly one instance of node r."
+    },
+    "181008": {
+      "kind": "derived_relation",
+      "arity": 6,
+      "reconstruction": "A predicate satisfied if set Sp is obtained by removing a valid removable node r (satisfying 181006 for entity e) from set S."
+    },
+    "181009": {
+      "kind": "derived_relation",
+      "arity": 5,
+      "reconstruction": "A saturation predicate satisfied if no node in set S satisfies the removal conditions (181006) for entity e."
+    },
+    "181010": {
+      "kind": "carrier",
+      "arity": null,
+      "reconstruction": "A carrier for sequences (lists) of sets (7420), used to represent the execution trace of the node removal process."
+    },
+    "181011": {
+      "kind": "constructor",
+      "arity": 0,
+      "reconstruction": "The constructor for an empty sequence of sets."
+    },
+    "181012": {
+      "kind": "constructor",
+      "arity": 2,
+      "reconstruction": "The constructor for a non-empty sequence of sets, taking a head (set) and a tail (sequence of sets)."
+    },
+    "181013": {
+      "kind": "field",
+      "arity": 1,
+      "reconstruction": "The field accessor for the head set of a non-empty sequence of sets."
+    },
+    "181014": {
+      "kind": "field",
+      "arity": 1,
+      "reconstruction": "The field accessor for the tail sequence of a non-empty sequence of sets."
+    },
+    "181015": {
+      "kind": "derived_relation",
+      "arity": 2,
+      "reconstruction": "A predicate relating a sequence of sets (181010) to its natural number length (7000)."
+    },
+    "181016": {
+      "kind": "derived_relation",
+      "arity": 7,
+      "reconstruction": "A recursive predicate satisfied if tr is a trace of sets representing the step-by-step removal of all possible nodes for entity e, starting from set S and ending at a saturated set Sf."
+    },
+    "181017": {
+      "kind": "derived_relation",
+      "arity": 8,
+      "reconstruction": "A recursive predicate satisfied if Sf is the result of sequentially applying the saturation process (181016) for each entity in the sequence T, starting from set S."
+    },
+    "181018": {
+      "kind": "derived_relation",
+      "arity": 7,
+      "reconstruction": "A predicate satisfied if the sequence of entities T successfully reduces the initial set of nodes RL to exactly the target set TG within a valid tree structure."
+    },
+    "181019": {
+      "kind": "derived_relation",
+      "arity": 7,
+      "reconstruction": "An optimization predicate satisfied if T is a sequence of entities that satisfies 181018 and no other valid sequence T2 has a strictly smaller length (per LEQ relation 7013)."
+    }
+  },
+  "global_reconstruction": {
+    "input_structure": "A tree-structured hierarchy of nodes (RL) with a designated root and a target subset (TG) that is upward-closed, plus a set of entities (EL) mapped to specific nodes.",
+    "well_formedness": "The node sets must be unique lists; the parent relation must form a finite tree where every non-root node has exactly one parent; the target set must be a subset of the nodes and contain the parents of its members.",
+    "state_semantics": "States are subsets of nodes; state equality is extensional (containing the same set of node identities).",
+    "local_action_semantics": "An entity can remove a node from the current state if that node is a leaf in the current state, is not in the target set, and is mapped to by that entity.",
+    "saturation_semantics": "For a single entity, the removal action is applied greedily and exhaustively until no further valid nodes for that entity remain in the state.",
+    "sequence_semantics": "A sequence of entities is processed by executing the full saturation process for each entity in the order they appear in the sequence.",
+    "success_condition": "The final state after processing the entire sequence of entities must be extensionally equal to the target set TG.",
+    "objective": "Minimize the total number of entities in the sequence T required to reach the success condition."
+  },
+  "primitive_leaf_audit": {
+    "primitive_logic_only": true,
+    "raw_atoms_or_extensional_incidence_only": true,
+    "traceable_derived_views": [
+      "MEMBER (7430)",
+      "LENGTH (7431)",
+      "ADD (7010)",
+      "MUL (7011)",
+      "LEQ (7013)"
+    ],
+    "unexpanded_semantic_operators": [],
+    "qu_unexpanded": []
+  },
+  "possible_ambiguities": [],
+  "self_audit": {
+    "used_source_domain_knowledge": false,
+    "guessed_missing_semantics": false
+  }
+}
