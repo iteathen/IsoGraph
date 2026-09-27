@@ -41,6 +41,35 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 Core remains distinct from separately versioned qualified extensions.
 
+## Active research lead — P versus NP primitive-logic campaign
+
+The current P-vs-NP campaign has a corrected primitive authority, NEI/QU discipline, and 357 machine-indexed admitted implicit assertions. Its most distinctive current output is a **continuation-support reduction synthesis**:
+
+~~~text
+empty        -> delete
+equal        -> merge
+included     -> dominance prune
+live + incomparable
+             -> exact factorization / sharing
+objective-only
+             -> exact aggregate image
+~~~
+
+A second campaign-specific connector uses **sound negative evidence to remove dead support before simulation/dominance**, then sends the remaining all-live incomparable support to factorization/aggregation.
+
+These are **new to the current IsoGraph campaign / possible synthesis novelty**, not claimed externally novel theorems. Targeted prior-art review found established precedents for the individual ingredients.
+
+Start here:
+
+- [P-vs-NP research front page](research/p-vs-np/README.md)
+- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_3.md)
+- [Re-applied Discovery Protocol result](research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md)
+- [Targeted novelty review](research/p-vs-np/2026-09-27/P_VS_NP_DP07_NOVELTY_REVIEW_0_1.md)
+
+Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
+
+---
+
 ## Evidence status
 
 Start with [EVIDENCE.md](EVIDENCE.md), the machine-readable [claim registry](evidence/claims.json), and the [external-validation index](evidence/external/README.md).
