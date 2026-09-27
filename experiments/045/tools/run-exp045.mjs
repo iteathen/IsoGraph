@@ -72,9 +72,44 @@ if (P !== 384 || U !== 98304) {
   throw new Error(`unexpected dimensions P=${P} U=${U}`);
 }
 
-// One flat fixed-stride incidence buffer keeps the hot data contiguous.
-// P*U uint32 slots is the same upper bound as the prior per-path backing arrays,
-// but avoids 384 typed-array objects and repeated property dereferences.
+// Precompute a branchless subsequence transition automaton per threshold word.
+// State s=0..16 is the next word position to search; state 17 is a permanent
+// failure sink. Each transition consumes one candidate-path symbol.
+const NEXT_STATES = 18;
+const NEXT_STRIDE = NEXT_STATES * ALPHABET; // 54
+const FAIL_STATE = 17;
+const nextState = new Uint8Array(U * NEXT_STRIDE);
+
+for (let u = 0; u < U; u++) {
+  const base = u * NEXT_STRIDE;
+  const wo = u << 4; // WL = 16
+
+  // Sink transitions.
+  nextState[base + 51] = FAIL_STATE;
+  nextState[base + 52] = FAIL_STATE;
+  nextState[base + 53] = FAIL_STATE;
+
+  let n0 = FAIL_STATE;
+  let n1 = FAIL_STATE;
+  let n2 = FAIL_STATE;
+
+  for (let s = 16; s >= 0; s--) {
+    if (s < 16) {
+      const sym = words[wo + s];
+      const next = s + 1;
+      if (sym === 0) n0 = next;
+      else if (sym === 1) n1 = next;
+      else n2 = next;
+    }
+
+    const off = base + s * 3;
+    nextState[off] = n0;
+    nextState[off + 1] = n1;
+    nextState[off + 2] = n2;
+  }
+}
+
+// Flat fixed-stride failure incidence.
 const forbidden = new Uint32Array(P * U);
 const forbiddenLength = new Uint32Array(P);
 const baseCount = new Uint16Array(U);
@@ -83,17 +118,30 @@ const baseXor = new Uint16Array(U);
 for (let p = 0; p < P; p++) {
   const base = p * U;
   const po = p << 3; // PL = 8
+  const p0 = paths[po];
+  const p1 = paths[po + 1];
+  const p2 = paths[po + 2];
+  const p3 = paths[po + 3];
+  const p4 = paths[po + 4];
+  const p5 = paths[po + 5];
+  const p6 = paths[po + 6];
+  const p7 = paths[po + 7];
+
   let n = 0;
 
   for (let u = 0; u < U; u++) {
-    const wo = u << 4; // WL = 16
-    let pi = 0;
+    const nb = u * NEXT_STRIDE;
+    let s = 0;
+    s = nextState[nb + s * 3 + p0];
+    s = nextState[nb + s * 3 + p1];
+    s = nextState[nb + s * 3 + p2];
+    s = nextState[nb + s * 3 + p3];
+    s = nextState[nb + s * 3 + p4];
+    s = nextState[nb + s * 3 + p5];
+    s = nextState[nb + s * 3 + p6];
+    s = nextState[nb + s * 3 + p7];
 
-    for (let j = 0; j < 16 && pi < 8; j++) {
-      if (paths[po + pi] === words[wo + j]) pi++;
-    }
-
-    if (pi !== 8) {
+    if (s === FAIL_STATE) {
       forbidden[base + n] = u;
       n++;
       baseCount[u]++;
@@ -104,21 +152,29 @@ for (let p = 0; p < P; p++) {
   forbiddenLength[p] = n;
 }
 
+// Pack exact cover count and XOR-owner accumulator into one uint32 search word:
+// low 9 bits=count (0..384), next 9 bits=XOR of owner encodings (1..384).
+const COUNT_MASK = 0x1ff;
+const XOR_SHIFT = 9;
+const baseCoverState = new Uint32Array(U);
 const basePrivateCount = new Uint32Array(P);
+
 for (let u = 0; u < U; u++) {
   const count = baseCount[u];
   if (count === 0) {
     throw new Error(`all-path family does not cover threshold word ${u}`);
   }
-  if (count === 1) basePrivateCount[baseXor[u] - 1]++;
+
+  const xor = baseXor[u];
+  baseCoverState[u] = count | (xor << XOR_SHIFT);
+  if (count === 1) basePrivateCount[xor - 1]++;
 }
 
 const incidenceMs = Number(process.hrtime.bigint() - t0) / 1e6;
 
 const rng = new XorShift32(0x04512026);
 const order = new Uint16Array(P);
-const counts = new Uint16Array(U);
-const xors = new Uint16Array(U);
+const coverState = new Uint32Array(U);
 const privateCount = new Uint32Array(P);
 const selected = new Uint8Array(P);
 const histogram = new Uint32Array(P + 1);
@@ -130,8 +186,7 @@ let bestSelected = null;
 const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
-  counts.set(baseCount);
-  xors.set(baseXor);
+  coverState.set(baseCoverState);
   privateCount.set(basePrivateCount);
   selected.fill(1);
 
@@ -162,16 +217,16 @@ for (let trial = 0; trial < TRIALS; trial++) {
 
     for (; i < end; i++) {
       const u = forbidden[i];
-      const count = counts[u];
+      const packed = coverState[u];
+      const count = packed & COUNT_MASK;
+      const xor = packed >>> XOR_SHIFT;
+      const nextXor = xor ^ enc;
 
       if (count === 2) {
-        // After removing p, the XOR of the two current owners with p
-        // yields the newly private remaining owner.
-        privateCount[(xors[u] ^ enc) - 1]++;
+        privateCount[nextXor - 1]++;
       }
 
-      counts[u] = count - 1;
-      xors[u] ^= enc;
+      coverState[u] = (count - 1) | (nextXor << XOR_SHIFT);
     }
   }
 
@@ -240,7 +295,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
-  node_optimization_revision: 'flat-incidence-private-invariant-v2',
+  node_optimization_revision: 'branchless-next-packed-cover-v3',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
