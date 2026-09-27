@@ -85,6 +85,7 @@ Current status, design posture, and provenance:
 - [MIGRATION.md](MIGRATION.md) — repository provenance;
 - [AGENTS.md](AGENTS.md) — agent operating guidance.
 - [FINAL_PRODUCT_MAINTENANCE.md](FINAL_PRODUCT_MAINTENANCE.md) — maintenance contract for the repository-root accumulated final-product DOCX and its Library publication mirror.
+- [PUBLICATION_ATTRIBUTION_POLICY.md](PUBLICATION_ATTRIBUTION_POLICY.md) — publication authorship/provenance rule: Joshua Oshiro author attribution, IsoGraph Project references, agent-assistance disclosure, and explicit credit that IsoGraph was designed by Joshua Oshiro.
 
 The design doctrine does not override the versioned semantic specifications. It explains why the specifications preserve scope, residuals, unknown structure, and revision-scoped evidence.
 
