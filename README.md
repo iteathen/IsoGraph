@@ -70,6 +70,13 @@ Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
 ---
 
+## Research publications
+
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. The paper reports exact phase algebra, the universal two-enzyme collapse, and finite ternary witness width 173 while leaving unbounded ternary witness width open.
+- [2026-09-26 publications](research/publications/2026-09-26/)
+
+---
+
 ## Evidence status
 
 Start with [EVIDENCE.md](EVIDENCE.md), the machine-readable [claim registry](evidence/claims.json), and the [external-validation index](evidence/external/README.md).
