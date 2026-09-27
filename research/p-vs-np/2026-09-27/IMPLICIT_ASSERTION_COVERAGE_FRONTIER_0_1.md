@@ -1,146 +1,105 @@
 # P versus NP implicit-assertion coverage frontier 0.1
 
-**Status:** claim-bounded coverage record, not a universal closure certificate  
-**Current index:** `IMPLICIT_ASSERTION_INDEX_0_5.json`
+**Status:** operational coverage record; not a universal completeness claim
 
 ## Machine-audited state
 
-```text
-admitted implicit assertions: 184
-missing IA references:        0
-support cycles:               0
-max normalized depth:         11
-superseded admission:         IA-013 predecessor placement
-```
-
-## Covered inference families
-
-### Primitive logic and equality
-
-- conjunction/implication/IFF consequences;
-- equality substitution;
-- constructor extensionality;
-- exact disequality;
-- quantifier duality/distribution safeguards.
-
-### Primitive arithmetic/data
-
-- functionality of addition/multiplication/power;
-- natural order reflexivity/transitivity/antisymmetry/totality;
-- strict residual decomposition;
-- list-length uniqueness;
-- finite member coding;
-- polynomial bound closure.
-
-### Computation
-
-- unique initialization;
-- deterministic one-step/path functionality;
-- terminal-path properties;
-- bounded-totality consequences;
-- tape-span bounds;
-- certificate/tableau/choice-sequence encodings;
-- branching <-> bounded verifier projection;
-- complement and Boolean closure;
-- fixed finite relation compilation;
-- representation renaming invariance.
-
-### NEI / QU
-
-- exact constructor SAME/DISTINCT;
-- future-residual scoped identity;
-- existential-observable scoped identity;
-- QU-mediated UNKNOWN/incomplete discipline;
-- residual identity complexity;
-- coarsest exact future congruence;
-- minimum semantic residual quotient;
-- objective-vs-compositional identity separation.
-
-### Generic existential-elimination laws
-
-- dominating canonical witness;
-- monotone/antitone witness collapse;
-- polynomial-image canonicalization;
-- exact symmetry quotient;
-- independent-factor decomposition;
-- sufficient statistics;
-- bounded separators;
-- polynomial residual invariants;
-- polynomial witness hitting sets.
-
-## Not covered / still open
-
-### Mathematical truth
+Current indexed closure through A20:
 
 ```text
-universal bounded existential closure:
-    OPEN
+admitted assertions: 301
+missing support references: 0
+support cycles: 0
+max normalized derivation depth: 11
 ```
 
-### Universal residual structure
+Authoritative index:
+
+`IMPLICIT_ASSERTION_INDEX_0_5.json`
+
+## Heavily exercised inference families
+
+The current closure includes substantial exact coverage of:
+
+- first-order Boolean/quantifier consequences used by the problem;
+- natural/list/configuration functionality and constructor identity;
+- finite path/reachability consequences;
+- polynomial arithmetic closure used by certificates;
+- branching <-> bounded-certificate factorization;
+- functional Boolean closure;
+- bounded existential flattening;
+- NEI exact/scoped identity;
+- Q-EXISTS / Q-RESIDUAL / Q-MIN / Q-COUNT scopes;
+- residual congruence;
+- continuation dominance;
+- hitting-set sufficient conditions;
+- sufficient statistics/canonicalization;
+- separator/factorization sufficient conditions;
+- aggregate recurrence conditions;
+- rejection invariants;
+- sound lower/upper abstraction;
+- many-one reduction transport;
+- decision/search/canonical-witness equivalence.
+
+## Explicitly not closed
+
+No universal completeness claim is made for:
+
+- all mathematics derivable from Peano arithmetic;
+- all possible verifier factorizations;
+- all algebraic representations;
+- all topological/geometric representations;
+- all proof-complexity statements;
+- all communication-complexity statements;
+- all circuit-complexity statements;
+- all probabilistic/Bayesian consequences;
+- all possible identity query contexts;
+- all possible lower-bound invariants;
+- all deterministic polynomial algorithm architectures.
+
+## Remaining Core/authority work
+
+- Core 0.20 primitive-logic closure remains unqualified.
+- Primitive machine-model alignment to the exact official convention remains a qualification workstream.
+- NEI 0.4 is qualified, but this P-vs-NP NEI domain application is research material.
+
+## Operational fixed point status
 
 ```text
-polynomial W_NEI for every verifier:
-    NOT ESTABLISHED
-
-polynomial exact residual identity for every verifier:
-    NOT ESTABLISHED
+NOT REACHED.
 ```
 
-The latter universal principle is assertion-equivalent in strength to the unresolved existential closure result.
+Every recent pass A12-A20 produced new exact assertions or support refinements.
 
-### Official model bridge
+Therefore the campaign must not report an implicit-assertion fixed point yet.
 
-Primitive convention alignment to the exact official computational formulation remains a separate qualification workstream.
+## DP status
 
-Polynomial robustness of standard models is source-backed, but the primitive bridge is not complete.
+The expanded DP run is:
 
-### Domain-specific complete-problem structure
+`P_VS_NP_IMPLICIT_NEI_DP08_RUN_0_2.md`
 
-The authoritative truth kernel deliberately excludes SAT/Cook-Levin.
-
-If SAT or another complete problem is used as a DP stress target, its own primitive rendering and implicit-assertion closure remain to be performed.
-
-### Other identity questions
-
-Only currently declared NEI query contexts have been expanded.
-
-No claim is made that every useful identity scope has already been imagined.
-
-### Probabilistic/Bayesian assertions
-
-None admitted.
-
-No qualified probability model is currently load-bearing.
-
-### Arbitrary theorem closure
-
-No claim is made that every theorem of the represented first-order/arithmetic system has been enumerated.
-
-The closure target is **P-vs-NP-relevant, dependency-closed implicit structure**, not every mathematical consequence.
-
-## Reopening rule
-
-The candidate frontier MUST be reopened when:
-
-- DP proposes a new exact support topology;
-- NEI discovers a new identity scope;
-- QU receives a material refinement;
-- a complete problem is primitive-rendered;
-- a new mathematical/domain theorem is pinned;
-- an assertion proof uses an unnamed premise;
-- a support audit finds a new derivation path.
-
-## Negative-result discipline
-
-A full selected-family pass with no new assertions may justify:
+Its current non-circular target is:
 
 ```text
-operational fixed point for that pass.
+cheap sound incomplete structure
++
+polynomial retained support
++
+exact target preservation.
 ```
 
-It does not justify:
+## Next closure/control work
 
-```text
-no additional implicit assertion exists.
-```
+Use known polynomial bounded-existential problems as blind positive controls.
+
+For each control:
+
+1. define/render the primitive existential verifier;
+2. do not name the known algorithm in the discovery input;
+3. run implicit closure and NEI;
+4. let DP recover one or more exact elimination laws;
+5. compare the recovered primitive laws across controls;
+6. preserve failed/partial mechanisms as falsifiers.
+
+External source search is deferred unless one exact edge needs authority.
