@@ -152,11 +152,6 @@ for (let p = 0; p < P; p++) {
   forbiddenLength[p] = n;
 }
 
-// Pack exact cover count and XOR-owner accumulator into one uint32 search word:
-// low 9 bits=count (0..384), next 9 bits=XOR of owner encodings (1..384).
-const COUNT_MASK = 0x1ff;
-const XOR_SHIFT = 9;
-const baseCoverState = new Uint32Array(U);
 const basePrivateCount = new Uint32Array(P);
 
 for (let u = 0; u < U; u++) {
@@ -165,16 +160,15 @@ for (let u = 0; u < U; u++) {
     throw new Error(`all-path family does not cover threshold word ${u}`);
   }
 
-  const xor = baseXor[u];
-  baseCoverState[u] = count | (xor << XOR_SHIFT);
-  if (count === 1) basePrivateCount[xor - 1]++;
+  if (count === 1) basePrivateCount[baseXor[u] - 1]++;
 }
 
 const incidenceMs = Number(process.hrtime.bigint() - t0) / 1e6;
 
 const rng = new XorShift32(0x04512026);
 const order = new Uint16Array(P);
-const coverState = new Uint32Array(U);
+const counts = new Uint16Array(U);
+const xors = new Uint16Array(U);
 const privateCount = new Uint32Array(P);
 const selected = new Uint8Array(P);
 const histogram = new Uint32Array(P + 1);
@@ -186,7 +180,8 @@ let bestSelected = null;
 const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
-  coverState.set(baseCoverState);
+  counts.set(baseCount);
+  xors.set(baseXor);
   privateCount.set(basePrivateCount);
   selected.fill(1);
 
@@ -217,16 +212,14 @@ for (let trial = 0; trial < TRIALS; trial++) {
 
     for (; i < end; i++) {
       const u = forbidden[i];
-      const packed = coverState[u];
-      const count = packed & COUNT_MASK;
-      const xor = packed >>> XOR_SHIFT;
-      const nextXor = xor ^ enc;
+      const count = counts[u];
 
       if (count === 2) {
-        privateCount[nextXor - 1]++;
+        privateCount[(xors[u] ^ enc) - 1]++;
       }
 
-      coverState[u] = (count - 1) | (nextXor << XOR_SHIFT);
+      counts[u] = count - 1;
+      xors[u] ^= enc;
     }
   }
 
@@ -295,7 +288,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
-  node_optimization_revision: 'branchless-next-packed-cover-v3',
+  node_optimization_revision: 'branchless-next-separate-cover-v4',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
