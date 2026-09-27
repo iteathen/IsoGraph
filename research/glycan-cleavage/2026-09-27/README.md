@@ -207,317 +207,77 @@ Further work should change the research question rather than replay the same fix
 Core 0.20 remains unqualified, and the frozen 0.1 biochemical model remains intentionally narrower than real enzymology.
 
 
-## External clue research / next algorithm ideas
+## External clue research / algorithm campaign
 
-External structural research has now been compared against the admitted IsoGraph graph.
+External structural research was compared against the admitted IsoGraph graph and converted back into exact internal consequences.
 
-Primary report:
+Primary external-clue report:
 
 - GLYCAN_EXTERNAL_CLUE_RESEARCH_0_1.md
 
-Exact clue-fed internal derivations:
-
-- GLYCAN_CLUE_DERIVATIONS_A15_0_1.md
-- extends exact implicit range through G-IA318
-
-Singleton prior-art bridge:
-
-- GLYCAN_PCCSP_BRIDGE_0_1.md
-
-Highest-priority implementation experiments are now:
-
-1. exact backward antichain DP using the explicit predecessor P_e(J)=downward_closure(J intersection N_e);
-2. direct B_M extraction using the exact star-product intersection oracle with generalized Higman / Valk-Jantzen basis machinery;
-3. singleton-susceptibility PCCSP exact-DP baseline, then generalize its merging/bounds/branching rules to set-valued susceptibility;
-4. minimal quasi-ordered automaton learning/minimization using the exact word membership and ideal-intersection machinery;
-5. common treatment-set nuclei J_Gamma as macro-actions, enzyme-set landmarks, and star-block closures.
-
-Important complexity boundary:
-
-- the singleton/disjoint-chain subclass maps to the established PCCSP family;
-- published PCCSP results report strong NP-hardness already with at least three classes and precedence graphs that are disjoint unions of paths;
-- therefore future work should prioritize exact compression, lower bounds, output-sensitive basis generation, parameterized structure, and special polynomial subclasses rather than presuming a universal polynomial collapse.
-
-No external novelty claim is made by this research note.
-
-
-## Algorithm clue experiments 033–039
-
-The external-clue phase has now produced working exact algorithms and stronger lower bounds.
-
-### Experiment 033 — backward antichain optimum
-
-- 129,445 exhaustive instances;
-- 752,380 microscopic-vs-closed-form phase checks;
-- 0 phase mismatches;
-- 0 forward/backward optimum mismatches;
-- 48 larger cases: mean 96.81 forward reached states vs 7.21 backward peak-antichain states.
-
-Preferred exact optimization baseline:
-
-    backward winning antichain
-    with
-    P_e(J)=downward_closure(J intersection N_e).
-
-### Experiment 034 — minimal quasi-ordered automaton + star oracle
-
-- 6,565 exact basis controls;
-- 0 B_M mismatches;
-- 0 quasi-order guard failures;
-- 41,082 explicit star-product comparisons;
-- 0 star-oracle mismatches.
-
-### Experiment 035 — oracle-driven B_M learning
-
-- 6,565 exhaustive learner instances;
-- 0 learned/reference basis mismatches;
-- 0 invalid oracle counterexamples;
-- 0 quasi-order guard failures;
-- direct B_M recovery without treatment-word length enumeration.
-
-### Experiment 036 — singleton PCCSP transfer
-
-Across 77,368 singleton instances / 429,531 reachable states:
-
-- one-class lower bound never exceeded exact distance;
-- one-class bound tight on 98.9812% of states;
-- critical-path bound tight on 88.7040%;
-- 282,061 nonextendable-class immediate-selection certificates;
-- 0 immediate-selection counterexamples.
-
-### Experiment 037 — set-valued partition lower bound
-
-Across 88,948 instances / 396,855 reachable states:
-
-- 0 admissibility violations;
-- PLB tight on 99.5747%;
-- max-path SEG tight on 90.4358%;
-- PLB strictly stronger on 36,268 states.
-
-### Experiment 038 — pairwise path synchronization
-
-- PLB residual states: 1,688;
-- pairwise J2 closes 1,484;
-- max(PLB,J2) tight on 99.9486%;
-- 204 preserved three-way-or-higher residuals.
-
-### Experiment 039 — three-way path synchronization
-
-- J3 and max(PLB,J3) exact on all 396,855 states of the Experiment-037 surface;
-- all 204 pairwise residuals closed;
-- this is finite-surface evidence only, not a universal J3 theorem.
-
-Experiment 040 is the current falsifier search for a larger path-family counterexample to universal J3.
-
-
-## Current algorithm/discovery frontier
-
-Exact clue-fed implicit results now extend through:
-
-    G-IA413.
-
-Canonical current clue files after A15:
-
-- GLYCAN_CLUE_DERIVATIONS_A16_PCCSP_BOUNDS_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A17_PARTITION_BOUND_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A18_JOINT_PATH_BOUND_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A19_TWO_ENZYME_EXACT_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A20_THREE_ENZYME_J3_BOUNDARY_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A21_TERNARY_WITNESS_WIDTH_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A22_WITNESS_WIDTH_PARAMETER_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A23_CRITICAL_COVER_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A24_TERNARY_WITNESS_WIDTH_35_0_1.md
-- GLYCAN_CLUE_DERIVATIONS_A25_WITNESS_WIDTH_54_0_1.md
-
-The sibling A19/A20 draft files marked SUPERSEDED are provenance only and contribute no current assertion definitions.
-
-### Exact algorithm baselines
-
-Experiment 033 — backward antichain optimum:
-- PASS;
-- 129,445 exhaustive instances;
-- 752,380 microscopic/formula phase checks;
-- 0 phase mismatches;
-- 0 forward/backward optimum mismatches.
-
-Experiment 034 — minimal quasi-ordered automaton + star oracle:
-- PASS;
-- 6,565 exact basis controls;
-- 0 B_M mismatches;
-- 41,082 star-product comparisons;
-- 0 oracle mismatches.
-
-Experiment 035 — oracle-driven B_M learning:
-- PASS;
-- 6,565 exhaustive learner instances;
-- 0 learned/reference basis mismatches.
-
-Preferred exact optimization baseline:
-
-    backward winning antichain
-    using
-    P_e(J)=downward_closure(J intersection N_e).
-
-Preferred complete-language baseline:
-
-    exact star-product oracle
-    +
-    counterexample-guided B_M learner.
-
-### Lower-bound hierarchy
-
-Experiment 036:
-- singleton PCCSP one-class bound tight on 98.9812% of 429,531 tested states;
-- tested immediate-selection certificates: 0 counterexamples.
-
-Experiment 037:
-- set-valued PLB tight on 99.5747% of 396,855 states;
-- 0 admissibility violations.
-
-Experiment 038:
-- J2 closed 1,484 / 1,688 PLB gaps;
-- 204 higher-order residual states remained.
-
-Experiment 039:
-- J3 closed all 204 residuals on that finite surface;
-- J3 exact on all 396,855 tested states;
-- immediately treated as a falsifiable finite observation, not a universal theorem.
-
-### Fixed-h boundary and witness width
-
-Experiment 040:
-- explicit ternary singleton counterexample:
-      010, 012, 101, 210
-- J3=5;
-- exact OPT=6;
-- direct glycan realization matches.
-
-A19 proves the binary island:
-
-    <=2 effective treatment classes
-    ->
-    J2 = OPT universally.
-
-Experiment 041:
-- first run preserved as harness failure before semantic output;
-- corrected arbitrary-width run PASS;
-- verified ternary witness widths 4,5,6,7.
-
-Experiment 042:
-- PASS;
-- 24 independent length-5 ternary singleton chains;
-- exact OPT=11;
-- exact witness width=24;
-- every one-path deletion has a private length-10 witness.
-
-Experiment 043:
-- PASS;
-- threshold U_12 contains 6,144 irredundant ternary words;
-- all 96 run-compressed length-6 paths were candidate constraints;
-- 50,000 deterministic critical-cover minimization trials;
-- largest verified inclusion-minimal cover found: 35 paths;
-- 35/35 private length-12 deletion witnesses verified;
-- full family has exact OPT=13;
-- exact witness width=35;
-- direct glycan realization: 35 independent length-6 chains / 210 non-target nodes.
-
-Experiment 044:
-- PASS;
-- 54 distinct run-compressed ternary singleton paths of length 7;
-- threshold universe U_14 contains 24,576 irredundant treatment words;
-- no full-family solution through length 14;
-- 54/54 private length-14 deletion witnesses verified;
-- 695 full-family length-15 solutions;
-- exact OPT=15;
-- exact witness width=54;
-- direct glycan realization: 54 independent chains / 378 non-target nodes.
-
-Thus the strongest unconditional finite witness is now:
-
-    alphabet size:          3
-    witness width:          54
-    path count:             54
-    path length:            7
-    threshold length:       14
-    exact optimum:          15
-    non-target glycan nodes:378.
-
-This refutes universal J_h exactness for every h<=53 in the ternary singleton subclass.
-
-Neither Experiment 043 nor Experiment 044 proves a maximum critical-cover size at its threshold.
-
-### Witness-width parameter
-
-For path family F:
-
-    W(F)
-    =
-    minimum |H|
-    such that
-    OPT_PATH(H)=OPT_PATH(F).
-
-Exact relation:
-
-    J_h(F)=OPT(F)
-    iff
-    h >= W(F).
-
-For fixed h, J_h is polynomial-time computable by bounded path-product search.
-
-Therefore a universal constant witness-width bound would yield a polynomial exact solver for that subclass.
-
-Conditional complexity boundary from A22:
-
-    cited PCCSP hardness
-    +
-    P != NP
-    ->
-    ternary witness width is unbounded.
-
-No unconditional unboundedness theorem is claimed.
-
-### Threshold critical-cover / private-witness representation
-
-At fixed treatment length L:
-
-- U_L = finite irredundant treatment-word universe;
-- C_L(P) = words in U_L that cover path P;
-- D_L(P) = U_L minus C_L(P);
-- threshold infeasibility iff the D_L(P) sets cover U_L;
-- one-path-deletion criticality iff that cover is inclusion-minimal;
-- every critical path has a private deletion-witness word.
-
-For a critical family P_i with private words w_i, the failure-incidence matrix:
-
-    M(P,w)=1 iff w fails P
-
-contains an identity submatrix:
-
-    M(P_i,w_j)=1 iff i=j.
-
-This is an exact structural clue. It resembles fooling-set/communication-matrix constructions, but no communication-complexity theorem is imported.
-
-Experiment 043 realizes a 35-set minimal cover of U_12.
-
-Experiment 044 realizes a 54-set minimal cover of U_14.
-
-A25 identifies fixed-threshold witness-width maximization exactly as Maximum Minimal Set Cover on the structured path-forbidden incidence system.
-
-### Current research priorities
-
-1. use the critical-cover incidence structure to seek scalable witness-width constructions rather than random path-family search;
-2. investigate whether private-witness identity submatrices connect to useful rank/fooling-set bounds without importing unsupported semantics;
-3. use witness width W as the control parameter for adaptive J_h lower-bound certificates;
-4. combine PLB, J_h, backward antichain regression, and feasible-word upper bounds in exact search;
-5. preserve the binary exact island separately from the >=3-label hard synchronization regime;
-6. distinguish exact finite lower-bound constructions from any unconditional unboundedness claim.
-
-Core 0.20 remains unqualified, and frozen biochemical 0.1 remains intentionally narrower than real enzymology.
-
-No external novelty claim is made by these research records.
-
-
-## Implementation constraint — Node.js only
+Exact clue-fed derivations now extend through:
+
+~~~text
+G-IA304..G-IA432
+~~~
+
+with no gaps or duplicate definitions in the A15-A27 line.
+
+Current routing:
+
+- A15 — backward adjoints, antichain DP, common closures, star-product oracle;
+- A16 — singleton PCCSP lower-bound transfer;
+- A17 — set-valued partition lower bound;
+- A18 — joint-path lower-bound hierarchy;
+- A19 — universal two-enzyme exact collapse;
+- A20 — explicit three-enzyme J3 falsifier;
+- A21/A22 — witness-width formulation and parameter boundary;
+- A23 — finite threshold critical-cover representation;
+- A24 — verified ternary witness width 35;
+- A25 — verified witness width 54 / Maximum Minimal Set Cover view;
+- A26 — Node-verified witness width 75;
+- A27 — Node-verified witness width 113.
+
+### Exact algorithm experiments
+
+- Experiment 033 — backward antichain solver: PASS.
+- Experiment 034 — minimal quasi-ordered automaton / star-product oracle: PASS.
+- Experiment 035 — counterexample-guided B_M learner: PASS.
+- Experiment 036 — PCCSP singleton bounds / immediate selection: PASS.
+- Experiment 037 — set-valued partition lower bound: PASS.
+- Experiment 038 — pairwise path synchronization: PASS with preserved higher-order residual.
+- Experiment 039 — J3 exact on the declared small surface: PASS.
+- Experiment 040 — explicit three-enzyme J3<OPT falsifier: COMPLETE.
+- Experiment 041 — exact witness widths 4,5,6,7: PASS.
+- Experiment 042 — exact witness width 24: PASS.
+- Experiment 043 — exact witness width 35: PASS.
+- Experiment 044 — exact witness width 54: PASS.
+- Experiment 045 — exact witness width 75: PASS, authoritative implementation Node.js.
+- Experiment 046 — exact witness width 113: PASS, Node.js only.
+- Experiment 047 — active Node-only threshold-20 scaling experiment.
+
+### Current strongest finite witness
+
+~~~text
+alphabet size:            3
+witness width:            113
+path count:               113
+path length:              9
+threshold length:         18
+direct non-target nodes:  1,017
+~~~
+
+Thus universal J_h exactness is falsified for every fixed:
+
+~~~text
+h <= 112
+~~~
+
+even in deterministic singleton-susceptibility three-enzyme chain forests.
+
+Unconditional unbounded ternary witness width remains open.
+
+### Node-only implementation constraint
 
 Executable glycan research experiments, benchmark harnesses, search tools, and algorithm prototypes in this campaign MUST use Node.js.
 
@@ -534,82 +294,42 @@ The performance pressure is intentional. Prefer:
 - branch reduction;
 - exact structural compression before machinery.
 
-Historical non-Node experiment artifacts, if any, are retained only as provenance and are not active campaign implementation authority unless independently reproduced in Node.js.
+Historical non-Node artifacts are retained only as provenance/performance comparisons and are not active implementation authority.
 
+### Node performance result
 
-
-## Algorithm campaign — Node-only exact search
-
-Current exact implicit range:
+Experiment 045's same frozen 128-trial workload improved from:
 
 ~~~text
-G-IA001..G-IA422
+baseline Node:
+    8.092 s
+
+Node v7:
+    1.639 s
 ~~~
 
-Recent exact-algorithm campaign:
+while reproducing the same width-75 cover, histogram, and private-witness certificate.
 
-- Experiment 033 — backward antichain optimum solver: PASS;
-- Experiment 034 — minimal quasi-ordered automaton / star-product oracle: PASS;
-- Experiment 035 — counterexample-guided B_M learner: PASS;
-- Experiment 036 — singleton PCCSP lower bounds / immediate selection: PASS;
-- Experiment 037 — set-valued partition lower bound: PASS;
-- Experiment 038 — pairwise path synchronization residual: PASS;
-- Experiment 039 — J2/J3 hierarchy on the small exhaustive surface: PASS;
-- Experiment 040 — explicit ternary J3 counterexample: COMPLETE;
-- Experiment 041 — exact witness widths 4,5,6,7: PASS;
-- Experiment 042 — exact ternary witness width 24: PASS;
-- Experiment 043 — exact ternary witness width 35: PASS;
-- Experiment 044 — exact ternary witness width 54: PASS;
-- Experiment 045 — exact ternary witness width 75: PASS under authoritative Node.js rerun.
+The historical native execution-step reference was approximately 2.265 s on the recorded GitHub runner measurements, making Node v7 about 28% faster on that frozen workload.
 
-Strongest current unconditional finite witness:
+This is a revision/runner/workload benchmark observation, not a general language-performance claim.
+
+Experiment 046 scaled the exact Node search to:
 
 ~~~text
-effective treatment labels: 3
-witness width:              75
-path count:                 75
-path length:                8
-threshold length:           16
-direct glycan nodes:        600
+768 candidate paths
+393,216 threshold words
+302 million path/word pairs
 ~~~
 
-Experiment 045 implementation authority is Node.js v26.7.0, run `36357819191`.
+and verified witness width 113.
 
-Node performance campaign on the frozen Experiment 045 workload:
+A dense-bitset regression reduced its primary incidence storage from about 265 MB of sparse path IDs to about 38 MB of exact bits, at some runtime cost; this is the memory representation used for the next scale.
 
-~~~text
-baseline Node: 8.092 s
-V2:            4.033 s
-V3:            3.465 s
-V5:            2.615 s
-V6:            2.289 s
+### Complexity / prior-art boundary
 
-historical native reference execution:
-                ~2.265 s
-~~~
+The singleton/disjoint-chain subclass maps to established PCCSP structure.
 
-V6 is therefore approximately one percent slower than the historical native execution on those frozen GitHub-runner observations.
+Published PCCSP results report strong NP-hardness from three classes on disjoint-path precedence systems. This motivates exact compression, lower bounds, parameterized structure, and special polynomial subclasses rather than assuming a universal polynomial collapse.
 
-The decisive optimization was structural rather than language substitution:
-
-~~~text
-exact cover-count updates
-->
-two watched coverers per threshold constraint
-->
-typed linked replacement events.
-~~~
-
-The active campaign remains **Node.js only**.
-
-Next scaling target:
-
-- ternary path length 9;
-- threshold treatment length 18;
-- 768 candidate paths;
-- 393,216 threshold words;
-- exact critical-cover/private-witness verification;
-- Node-only memory-conscious incidence representation.
-
-No universal performance claim and no unconditional unbounded witness-width theorem is made.
-
+No external novelty claim is made without a dedicated novelty review.
