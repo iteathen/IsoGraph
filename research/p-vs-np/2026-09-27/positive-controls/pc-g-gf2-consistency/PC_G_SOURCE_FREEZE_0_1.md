@@ -126,20 +126,11 @@ The witness is a bounded finite Boolean assignment encoded by list membership.
 
 No deterministic existential-elimination mechanism is supplied by the source.
 
-## 8. Withheld structure
+## 8. Discovery-input boundary
 
-The discovery input MUST NOT contain or name:
+This artifact supplies only the instance/witness/Boolean/parity/truth semantics stated above.
 
-- row reduction;
-- Gaussian elimination;
-- echelon form;
-- pivot selection;
-- a linear-system rank test;
-- a precomputed basis;
-- a canonical solution constructor;
-- a contradiction row obtained by normalization.
-
-Any such structure must be derived after primitive source freeze.
+No transformation system, normal form, distinguished coordinate, canonical witness, contradiction construction, or decision procedure is supplied by the source artifact.
 
 ## 9. Truth classification
 
