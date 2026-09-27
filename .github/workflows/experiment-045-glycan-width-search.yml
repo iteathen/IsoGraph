@@ -25,20 +25,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build exact critical-cover search
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Execute Node-only threshold-16 search
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p out/exp045
-          g++ -std=c++20 -O3 -march=x86-64 -DNDEBUG             experiments/045/tools/run-exp045.cpp             -o out/exp045/run-exp045
+          node --check experiments/045/tools/run-exp045.mjs
+          rm -rf out/exp045
+          node --max-old-space-size=4096 experiments/045/tools/run-exp045.mjs
 
-      - name: Execute threshold-16 search
-        shell: bash
-        run: |
-          set -euo pipefail
-          ./out/exp045/run-exp045
-
-      - name: Persist Experiment 045 evidence
+      - name: Persist Experiment 045 Node evidence
         if: always()
         shell: bash
         run: |
@@ -46,19 +45,19 @@ jobs:
           E="experiments/045/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
           mkdir -p "$E"
           [ -f out/exp045/RESULT.json ] && cp out/exp045/RESULT.json "$E/RESULT.json"
-          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","implementation_language":"Node.js"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$E"
           if ! git diff --cached --quiet; then
-            git commit -m "evidence: Experiment 045 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git commit -m "evidence: Experiment 045 Node run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
             git fetch origin research/glycan-cleavage-primitive-20260927
             git rebase origin/research/glycan-cleavage-primitive-20260927
             git push origin HEAD:research/glycan-cleavage-primitive-20260927
           fi
 
-      - name: Enforce verified minimal cover
+      - name: Enforce Node-only verified minimal cover
         if: always()
         shell: bash
         run: |
@@ -69,12 +68,15 @@ jobs:
           const r=JSON.parse(fs.readFileSync('out/exp045/RESULT.json','utf8'));
           console.log(JSON.stringify({
             disposition:r.disposition,
+            implementation_language:r.implementation_language,
             best_cover_size:r.best_cover_size,
             threshold_uncovered_words:r.threshold_uncovered_words,
             missing_private_witnesses:r.missing_private_witnesses,
-            exact_witness_width:r.exact_witness_width
+            exact_witness_width:r.exact_witness_width,
+            total_ms:r.total_ms
           },null,2));
           if(r.disposition!=='PASS') process.exit(1);
+          if(r.implementation_language!=='Node.js') process.exit(1);
           if(r.threshold_uncovered_words!==0) process.exit(1);
           if(r.missing_private_witnesses!==0) process.exit(1);
           if(!(r.exact_witness_width>=54)) process.exit(1);
