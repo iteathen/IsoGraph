@@ -308,3 +308,66 @@ Across 88,948 instances / 396,855 reachable states:
 - this is finite-surface evidence only, not a universal J3 theorem.
 
 Experiment 040 is the current falsifier search for a larger path-family counterexample to universal J3.
+
+
+## Two-enzyme exact island and fixed-h boundary
+
+Exact clue derivations now extend through:
+
+    G-IA358.
+
+New files:
+
+- GLYCAN_CLUE_DERIVATIONS_A16_PCCSP_BOUNDS_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A17_PARTITION_BOUND_0_1.md
+- GLYCAN_PARTITION_BOUND_RESIDUAL_DP_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A18_JOINT_PATH_BOUND_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A19_TWO_ENZYME_EXACT_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A20_J3_FALSIFIER_0_1.md
+
+Key boundary:
+
+### Two enzymes
+
+For the full frozen set-valued two-enzyme model:
+
+    J2 = exact remaining OPT.
+
+Every optimum word is alternating and the exact value is determined by at most two maximal paths. The complete optimum raw-word family has at most two members.
+
+### Three enzymes
+
+Experiment 040 gives four singleton paths:
+
+    ABA
+    ABC
+    BAB
+    CBA
+
+with:
+
+    every three-path subfamily optimum = 5
+    full four-path optimum = 6.
+
+Thus:
+
+    J3 < OPT
+
+on a valid frozen-0.1 three-enzyme instance.
+
+The joint-path hierarchy is therefore an adaptive lower-bound hierarchy beyond the binary case, not a fixed-h exact theorem determined by enzyme count alone.
+
+### Current preferred algorithmic stack
+
+For exact optimum:
+
+1. two enzymes: direct A19 alternating-threshold formula;
+2. general case: backward antichain solver from Experiment 033;
+3. use PLB / J_h bounds when branch-and-bound or forward search is useful;
+4. singleton search may additionally use PCCSP one-class bounds and immediate selection.
+
+For complete solution-language representation:
+
+1. oracle-driven B_M learner from Experiment 035;
+2. exact star-product oracle from A15;
+3. minimized quasi-ordered automaton as an alternate exact representation.
