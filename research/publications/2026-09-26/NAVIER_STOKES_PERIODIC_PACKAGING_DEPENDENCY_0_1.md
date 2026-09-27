@@ -13,7 +13,7 @@ The original text, analysis, diagrams, and explanatory material in this paper ar
 
 ## Abstract
 
-A structural analysis of the formal Navier–Stokes forced-blowup development identifies a distinction between a dependency required by the current proof interface and a dependency required by the periodic theorem itself. The whole-space \(\mathbb{R}^3\) construction carries a uniform finite-energy field as part of its `CandidateProperties` structure. The existing viscosity-scaling and parabolic-compression theorems preserve this entire structure and therefore require the finite-energy field throughout the current transport path.
+A structural analysis of the formal Navier–Stokes forced-blowup development identifies a distinction between a dependency required by the current proof interface and a dependency required by the periodic theorem itself. The whole-space R³ construction carries a uniform finite-energy field as part of its `CandidateProperties` structure. The existing viscosity-scaling and parabolic-compression theorems preserve this entire structure and therefore require the finite-energy field throughout the current transport path.
 
 The periodic candidate and periodic competitor structures, however, contain no finite-energy requirement. Direct inspection of the periodization and support-compression consumers further shows that they do not use the whole-space energy bound. The finite-energy closure is therefore currently load-bearing as a **formal packaging dependency**, but it is not established as an intrinsic semantic dependency of the periodic blowup corollary.
 
@@ -37,7 +37,7 @@ Inspection of the pinned formal source supports the second possibility.
 
 ## 2. Formal Setting
 
-The whole-space \(\mathbb{R}^3\) theorem uses:
+The whole-space R³ theorem uses:
 
 `NavierStokesR3.ProblemStatement.CandidateProperties`
 
@@ -216,7 +216,7 @@ The result can be stated carefully in three layers.
 
 ### 6.1 Whole-space objective
 
-For the whole-space \(\mathbb{R}^3\) conclusion, finite-energy closure is load-bearing.
+For the whole-space R³ conclusion, finite-energy closure is load-bearing.
 
 The candidate contract contains `energy_bounded`, and the excluded global competitor is itself a finite-energy competitor.
 
