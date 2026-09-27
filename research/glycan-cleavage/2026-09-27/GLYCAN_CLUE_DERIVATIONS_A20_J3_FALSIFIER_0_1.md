@@ -1,61 +1,23 @@
-# Glycan clue-fed exact derivations A20 — fixed-J3 falsifier 0.1
+# Superseded duplicate A20 draft — fixed-J3 falsifier
 
-**Status:** exact negative-result admission
-**Date:** 2026-09-27
-**Parent:** Experiment 040
-**Prior exact implicit range:** G-IA001..G-IA353
+**Status:** SUPERSEDED / historical duplicate only
+**Date reconciled:** 2026-09-27
+**Historical blob before reconciliation:** `511b7608ec32da6ac8186f9841f553cf325a9fbc`
 
-## G-IA354 — a three-enzyme frozen-0.1 instance can require four paths to witness OPT
+This file was created concurrently with the authoritative A20 record and reused assertion IDs `G-IA354..G-IA358`.
 
-Consider four disjoint non-target singleton-susceptibility chains with child-to-parent class words:
+Do not cite assertion IDs from this historical duplicate.
 
-    ABA
-    ABC
-    BAB
-    CBA.
+Current authority is:
 
-Attach the top of each chain below retained target structure.
+- `GLYCAN_CLUE_DERIVATIONS_A20_THREE_ENZYME_J3_BOUNDARY_0_1.md`
+  - authoritative `G-IA354..G-IA358`;
+  - Experiment-040 three-enzyme `J3 < OPT` counterexample and binary/ternary boundary.
 
-Experiment 040's exact path-product and direct glycan-state search both give:
+- `GLYCAN_CLUE_DERIVATIONS_A21_TERNARY_WITNESS_WIDTH_0_1.md`
+  - authoritative `G-IA359..G-IA369`;
+  - exact witness-width definition and verified ternary widths 4 through 7.
 
-    OPT = 6.
+The original duplicate text remains recoverable in Git history at the historical blob above.
 
-## G-IA355 — every three-path subfamily of the counterexample has optimum 5
-
-The four three-path omissions have exact shortest covering words of length 5.
-
-Therefore J3=5 for the full four-path instance.
-
-## G-IA356 — J3 is not universally exact for three enzymes
-
-Combining G-IA354 and G-IA355:
-
-    J3 < OPT
-
-on a valid singleton-susceptibility three-enzyme frozen-0.1 instance.
-
-Thus no theorem 'three enzymes imply J3 exact' is admissible.
-
-Experiment 039 remains valid finite-surface evidence only.
-
-## G-IA357 — enzyme alphabet cardinality does not by itself bound exact witness-path cardinality
-
-The counterexample has three enzyme labels but needs all four path constraints to raise the exact optimum from 5 to 6.
-
-Therefore the enzyme-count value alone is not an upper bound on the number of paths required to witness the exact global optimum.
-
-This statement refutes that cardinality bound only; it does not establish an unbounded witness-width family for every fixed alphabet.
-
-## G-IA358 — A19 two-enzyme exactness survives
-
-The three-enzyme falsifier does not affect A19.
-
-A19's J2 theorem uses the special fact that every no-adjacent-repeat binary word is one of two alternating sequences determined by start symbol and length.
-
-That property fails from three symbols onward.
-
-## Disposition
-
-New exact implicit assertions: G-IA354..G-IA358.
-
-The adaptive J_h hierarchy remains valid, but no fixed h tied only to three-enzyme alphabet size is exact.
+This file is retained only as provenance for the concurrent/UI-desynchronized creation event and contributes no current semantic assertion definitions.
