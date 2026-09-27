@@ -54,3 +54,13 @@ The direct glycan realization consists of one independent singleton-susceptibili
 The randomized search does not solve Maximum Minimal Set Cover to optimality.
 
 The experiment reports an exact achievable witness-width lower bound only.
+
+## Implementation constraint
+
+This campaign is **Node.js only**.
+
+Native C/C++, Rust, WebAssembly, or other implementation-language substitutions are not accepted as the active experimental implementation.
+
+Performance pressure is intentional: use typed arrays, compact integer encodings, allocation discipline, data locality, and hot-loop restructuring in Node.js.
+
+Historical run `36356875817` used a C++ harness and is retained only as non-authoritative historical comparison evidence. Its width result must be independently reproduced by the Node.js implementation before admission into the active campaign.
