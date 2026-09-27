@@ -92,3 +92,14 @@ Disposition: historical methodology/provenance; not rewritten.
 6. Cross-repository audit for current Connect4 / JSMinSys / other application IsoGraph renderings.
 
 The inventory is expected to grow if the cross-repository audit finds additional maintained renderings.
+
+## H. Cross-repository current application renderings
+
+The canonical cross-repository audit is:
+
+- `CROSS_REPO_AUDIT.md`.
+
+Current Connect4 modernization is being performed in its own durable research lineage rather than copied into this repository.
+
+Current JSMinSys main contains no native `.isg` authority; its implementation is source input to Connect4-owned renderings.
+
