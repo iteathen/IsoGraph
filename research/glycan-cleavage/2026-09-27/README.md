@@ -205,3 +205,37 @@ Further work should change the research question rather than replay the same fix
 - Core 0.20 qualification.
 
 Core 0.20 remains unqualified, and the frozen 0.1 biochemical model remains intentionally narrower than real enzymology.
+
+
+## External clue research / next algorithm ideas
+
+External structural research has now been compared against the admitted IsoGraph graph.
+
+Primary report:
+
+- GLYCAN_EXTERNAL_CLUE_RESEARCH_0_1.md
+
+Exact clue-fed internal derivations:
+
+- GLYCAN_CLUE_DERIVATIONS_A15_0_1.md
+- extends exact implicit range through G-IA318
+
+Singleton prior-art bridge:
+
+- GLYCAN_PCCSP_BRIDGE_0_1.md
+
+Highest-priority implementation experiments are now:
+
+1. exact backward antichain DP using the explicit predecessor P_e(J)=downward_closure(J intersection N_e);
+2. direct B_M extraction using the exact star-product intersection oracle with generalized Higman / Valk-Jantzen basis machinery;
+3. singleton-susceptibility PCCSP exact-DP baseline, then generalize its merging/bounds/branching rules to set-valued susceptibility;
+4. minimal quasi-ordered automaton learning/minimization using the exact word membership and ideal-intersection machinery;
+5. common treatment-set nuclei J_Gamma as macro-actions, enzyme-set landmarks, and star-block closures.
+
+Important complexity boundary:
+
+- the singleton/disjoint-chain subclass maps to the established PCCSP family;
+- published PCCSP results report strong NP-hardness already with at least three classes and precedence graphs that are disjoint unions of paths;
+- therefore future work should prioritize exact compression, lower bounds, output-sensitive basis generation, parameterized structure, and special polynomial subclasses rather than presuming a universal polynomial collapse.
+
+No external novelty claim is made by this research note.
