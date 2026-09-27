@@ -236,10 +236,6 @@ const histogram = new Uint32Array(P + 1);
 let bestSize = -1;
 let bestTrial = -1;
 let bestSelected = null;
-let replacementEvents = 0;
-let replacementScans = 0;
-let scheduledWatcherMoves = 0;
-
 const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
@@ -285,14 +281,9 @@ for (let trial = 0; trial < TRIALS; trial++) {
       let replacement = NO_WATCH;
 
       for (; cursor < finish; cursor++) {
-        replacementScans++;
         const r = coverers[cursor];
 
-        if (r === other) continue;
-
-        // Unprocessed paths are necessarily selected. Processed paths are
-        // selected only when they previously became permanent/private.
-        if (rank[r] > oi || selected[r]) {
+        if (r !== other && selected[r]) {
           replacement = r;
           cursor++;
           break;
@@ -305,12 +296,10 @@ for (let trial = 0; trial < TRIALS; trial++) {
         privateCount[other]++;
       } else {
         watchOwner[node] = replacement;
-        replacementEvents++;
 
         if (rank[replacement] > oi) {
           watchNext[node] = watchHead[replacement];
           watchHead[replacement] = node;
-          scheduledWatcherMoves++;
         }
       }
 
@@ -383,7 +372,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
-  node_optimization_revision: 'typed-watched-coverers-v6',
+  node_optimization_revision: 'lean-watched-coverers-v7',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
@@ -399,9 +388,6 @@ const result = {
   incidence_ms: incidenceMs,
   search_ms: searchMs,
   total_incidence: totalIncidence,
-  replacement_events: replacementEvents,
-  replacement_scans: replacementScans,
-  scheduled_watcher_moves: scheduledWatcherMoves,
   max_trial_event_count: maxTrialEventCount,
   total_ms: Number(process.hrtime.bigint() - t0) / 1e6,
   cover_size_histogram: histogramObject,
