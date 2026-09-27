@@ -72,31 +72,45 @@ if (P !== 384 || U !== 98304) {
   throw new Error(`unexpected dimensions P=${P} U=${U}`);
 }
 
-// Keep exact per-path failure lists in typed arrays.
-// Each backing array has U slots; subarray length records the populated prefix.
-// This uses ~151 MB and avoids JS-number-array overhead.
-const forbidden = new Array(P);
+// One flat fixed-stride incidence buffer keeps the hot data contiguous.
+// P*U uint32 slots is the same upper bound as the prior per-path backing arrays,
+// but avoids 384 typed-array objects and repeated property dereferences.
+const forbidden = new Uint32Array(P * U);
+const forbiddenLength = new Uint32Array(P);
 const baseCount = new Uint16Array(U);
 const baseXor = new Uint16Array(U);
 
 for (let p = 0; p < P; p++) {
-  const tmp = new Uint32Array(U);
+  const base = p * U;
+  const po = p << 3; // PL = 8
   let n = 0;
-  const po = p * PL;
+
   for (let u = 0; u < U; u++) {
-    if (!isSubsequence(paths, po, PL, words, u * WL, WL)) {
-      tmp[n++] = u;
+    const wo = u << 4; // WL = 16
+    let pi = 0;
+
+    for (let j = 0; j < 16 && pi < 8; j++) {
+      if (paths[po + pi] === words[wo + j]) pi++;
+    }
+
+    if (pi !== 8) {
+      forbidden[base + n] = u;
+      n++;
       baseCount[u]++;
       baseXor[u] ^= (p + 1);
     }
   }
-  forbidden[p] = tmp.subarray(0, n);
+
+  forbiddenLength[p] = n;
 }
 
+const basePrivateCount = new Uint32Array(P);
 for (let u = 0; u < U; u++) {
-  if (baseCount[u] === 0) {
+  const count = baseCount[u];
+  if (count === 0) {
     throw new Error(`all-path family does not cover threshold word ${u}`);
   }
+  if (count === 1) basePrivateCount[baseXor[u] - 1]++;
 }
 
 const incidenceMs = Number(process.hrtime.bigint() - t0) / 1e6;
@@ -118,17 +132,10 @@ const searchStart = process.hrtime.bigint();
 for (let trial = 0; trial < TRIALS; trial++) {
   counts.set(baseCount);
   xors.set(baseXor);
-  privateCount.fill(0);
+  privateCount.set(basePrivateCount);
   selected.fill(1);
 
   let size = P;
-
-  for (let u = 0; u < U; u++) {
-    if (counts[u] === 1) {
-      const owner = xors[u] - 1;
-      if (owner >= 0 && owner < P) privateCount[owner]++;
-    }
-  }
 
   for (let i = 0; i < P; i++) order[i] = i;
   for (let i = P - 1; i > 0; i--) {
@@ -140,34 +147,30 @@ for (let trial = 0; trial < TRIALS; trial++) {
 
   for (let oi = 0; oi < P; oi++) {
     const p = order[oi];
-    if (!selected[p]) continue;
-    if (privateCount[p] !== 0) continue;
 
-    const f = forbidden[p];
-    let safe = true;
-    for (let i = 0; i < f.length; i++) {
-      if (counts[f[i]] === 1) {
-        safe = false;
-        break;
-      }
-    }
-    if (!safe) continue;
+    // privateCount[p] === 0 is already the exact removability test:
+    // a selected set is essential iff it is the sole coverer of some word.
+    // The prior second scan for counts[u]===1 duplicated this invariant.
+    if (privateCount[p] !== 0) continue;
 
     selected[p] = 0;
     size--;
-    const enc = p + 1;
 
-    for (let i = 0; i < f.length; i++) {
-      const u = f[i];
-      const c = counts[u];
-      if (c === 2) {
-        const remaining = xors[u] ^ enc;
-        if (remaining === 0 || remaining > P) {
-          throw new Error(`bad xor owner ${remaining} for threshold word ${u}`);
-        }
-        privateCount[remaining - 1]++;
+    const enc = p + 1;
+    let i = p * U;
+    const end = i + forbiddenLength[p];
+
+    for (; i < end; i++) {
+      const u = forbidden[i];
+      const count = counts[u];
+
+      if (count === 2) {
+        // After removing p, the XOR of the two current owners with p
+        // yields the newly private remaining owner.
+        privateCount[(xors[u] ^ enc) - 1]++;
       }
-      counts[u] = c - 1;
+
+      counts[u] = count - 1;
       xors[u] ^= enc;
     }
   }
@@ -189,8 +192,9 @@ const selectedIds = [];
 for (let p = 0; p < P; p++) {
   if (!bestSelected[p]) continue;
   selectedIds.push(p);
-  const f = forbidden[p];
-  for (let i = 0; i < f.length; i++) verifyCount[f[i]]++;
+  let i = p * U;
+  const end = i + forbiddenLength[p];
+  for (; i < end; i++) verifyCount[forbidden[i]]++;
 }
 
 let uncovered = 0;
@@ -200,9 +204,10 @@ const privateWord = new Int32Array(P);
 privateWord.fill(-1);
 
 for (const p of selectedIds) {
-  const f = forbidden[p];
-  for (let i = 0; i < f.length; i++) {
-    const u = f[i];
+  let i = p * U;
+  const end = i + forbiddenLength[p];
+  for (; i < end; i++) {
+    const u = forbidden[i];
     if (verifyCount[u] === 1) {
       privateWord[p] = u;
       break;
@@ -235,6 +240,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
+  node_optimization_revision: 'flat-incidence-private-invariant-v2',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
