@@ -612,7 +612,7 @@ A sequence of exact finite Node.js experiments constructed increasingly large te
 
 | Experiment | Path length | Threshold \(L\) | Witness width | Non-target nodes |
 | --- | ---: | ---: | ---: | ---: |
-| 042 | 6 | 12 | 24 | 144 |
+| 042 | 5 | 10 | 24 | 120 |
 | 043 | 6 / refined critical-cover search | 12 | 35 | 210 |
 | 044 | 7 | 14 | 54 | 378 |
 | 045 | 8 | 16 | 75 | 600 |
@@ -732,7 +732,7 @@ P_i<w_j
 i\ne j.
 \]
 
-This is the classical **standard example** \(S_k\) from poset-dimension theory [21,29].
+This is the classical **standard example** \(S_k\) from poset-dimension theory [21,28].
 
 A direct linear-extension argument shows that one linear extension cannot reverse two different incomparable diagonal pairs \((P_i,w_i)\). Hence the induced subposet has dimension at least \(k\).
 
@@ -744,9 +744,9 @@ Applying the width-173 construction:
 }
 \]
 
-Therefore it contains a finite induced subposet of Dushnik–Miller dimension at least 173 [21,29].
+Therefore it contains a finite induced subposet of Dushnik–Miller dimension at least 173 [21,28].
 
-The standard-example pattern alone is not enough to certify witness width. Threshold-universe coverage is also required: otherwise some other threshold word might cover every selected path [29].
+The standard-example pattern alone is not enough to certify witness width. Threshold-universe coverage is also required: otherwise some other threshold word might cover every selected path [28].
 
 This distinction is important. The same certificate simultaneously has:
 
@@ -798,7 +798,7 @@ A separate direct Node verifier found:
 
 Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols \(p_0,\ldots,p_8\). The tenth symbol \(p_9\) had been omitted.
 
-The minimum repair added \(p_9\), added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to \(PL=10\). The repaired run then produced the width-173 certificate [30].
+The minimum repair added \(p_9\), added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to \(PL=10\). The repaired run then produced the width-173 certificate [29].
 
 The episode is relevant because it illustrates the IsoGraph discrepancy discipline: an anomaly is neither automatically promoted to discovery nor immediately discarded as “just a bug.” Competing structural and implementation explanations are separated and falsified.
 
@@ -820,7 +820,7 @@ Higman's classical work is foundational for well-quasi-order behavior under gene
 
 ### PCCSP
 
-Bürgy, Baptiste, and Hertz study PCCSP, where operations have classes, precedence constraints, and the objective is minimizing class switches/setups [18]. The singleton glycan chain subclass has the same “select a class, execute as much as precedence permits” shape. The set-valued susceptibility model is more general because one site may accept several treatments.
+Bürgy, Hertz, and Baptiste study PCCSP, where operations have classes, precedence constraints, and the objective is minimizing class switches/setups [18]. The singleton glycan chain subclass has the same “select a class, execute as much as precedence permits” shape. The set-valued susceptibility model is more general because one site may accept several treatments.
 
 ### Nuclei and fixed points
 
@@ -834,7 +834,7 @@ Aristote gives modern algorithms for learning upward-closed word languages and c
 
 ### Poset dimension
 
-Dushnik and Miller introduced the dimension of a partially ordered set [21]. The critical-cover private-witness pattern induces the standard examples familiar from that theory. The dimension lower bound used here is also proved directly inside the project artifact [29].
+Dushnik and Miller introduced the dimension of a partially ordered set [21]. The critical-cover private-witness pattern induces the standard examples familiar from that theory. The dimension lower bound used here is also proved directly inside the project artifact [28].
 
 ---
 
@@ -986,9 +986,9 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [27] IsoGraph Project. [A28 — Node-verified witness width 173](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A28_WITNESS_WIDTH_173_NODE_0_1.md), Git blob \`2bedc4f9a8c8a0fe49d36995938410ee280f7bb8\`; [Experiment 047 final review](../../../experiments/047/FINAL_REVIEW.md), Git blob \`a49b759313c371f35f0cb361b0225a1dbe737126\`.
 
-[29] IsoGraph Project. [A29 — critical covers as standard examples](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A29_STANDARD_EXAMPLE_0_1.md). Git blob \`05b956c15eecacc173c2097e258738e742187789\`.
+[28] IsoGraph Project. [A29 — critical covers as standard examples](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A29_STANDARD_EXAMPLE_0_1.md). Git blob \`05b956c15eecacc173c2097e258738e742187789\`.
 
-[30] IsoGraph Project. [Experiment 047 discrepancy review 0.1](../../../experiments/047/DISCREPANCY_REVIEW_0_1.md). Git blob \`75d89c821a2526adbf275d6971962aaa401e191e\`.
+[29] IsoGraph Project. [Experiment 047 discrepancy review 0.1](../../../experiments/047/DISCREPANCY_REVIEW_0_1.md). Git blob \`75d89c821a2526adbf275d6971962aaa401e191e\`.
 
 ### Biological and biochemical background
 
@@ -1006,7 +1006,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [17] David Maier. “The Complexity of Some Problems on Subsequences and Supersequences.” *Journal of the ACM* 25(2):322–336, 1978. DOI: https://doi.org/10.1145/322063.322075.
 
-[18] Reinhard Bürgy, Pierre Baptiste, and Alain Hertz. “An exact dynamic programming algorithm for the precedence-constrained class sequencing problem.” *Computers & Operations Research* 124:105063, 2020. DOI: https://doi.org/10.1016/j.cor.2020.105063.
+[18] Reinhard Bürgy, Alain Hertz, and Pierre Baptiste. “An exact dynamic programming algorithm for the precedence-constrained class sequencing problem.” *Computers & Operations Research* 124:105063, 2020. DOI: https://doi.org/10.1016/j.cor.2020.105063.
 
 [19] Martín Hötzel Escardó. “Joins in the Frame of Nuclei.” *Applied Categorical Structures* 11(2):117–124, 2003. DOI: https://doi.org/10.1023/A:1023555514029.
 
