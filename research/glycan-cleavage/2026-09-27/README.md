@@ -1,5 +1,11 @@
 # Glycan cleavage IsoGraph research — 2026-09-27
 
+## Published paper
+
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md) — Joshua Oshiro; agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.
+- [Publication preflight audit](GLYCAN_PUBLICATION_PREFLIGHT_0_1.md)
+- [Source-reference correction](GLYCAN_SOURCE_REFERENCE_CORRECTION_0_1.md)
+
 ## Current verified primitive baseline
 
 - source: GLYCAN_CLEAVAGE_SOURCE_FREEZE_0_1.md
