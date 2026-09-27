@@ -1,0 +1,73 @@
+name: Experiment 042 ternary witness width 24
+
+on:
+  push:
+    branches:
+      - research/glycan-cleavage-primitive-20260927
+    paths:
+      - experiments/042/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-042-glycan-witness-width-24
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Execute exact witness-width verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/042/tools/run-exp042.mjs
+          rm -rf out/exp042
+          node experiments/042/tools/run-exp042.mjs
+
+      - name: Persist Experiment 042 evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/042/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -f out/exp042/RESULT.json ] && cp out/exp042/RESULT.json "$E/RESULT.json"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 042 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin research/glycan-cleavage-primitive-20260927
+            git rebase origin/research/glycan-cleavage-primitive-20260927
+            git push origin HEAD:research/glycan-cleavage-primitive-20260927
+          fi
+
+      - name: Enforce result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f out/exp042/RESULT.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const r=JSON.parse(fs.readFileSync('out/exp042/RESULT.json','utf8'));
+          console.log(JSON.stringify(r,null,2));
+          if(r.disposition!=='PASS') process.exit(1);
+          if(r.exact_witness_width!==24) process.exit(1);
+          if(r.exact_full_opt!==11) process.exit(1);
+          NODE
