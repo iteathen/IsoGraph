@@ -165,25 +165,106 @@ for (let u = 0; u < U; u++) {
 
 const incidenceMs = Number(process.hrtime.bigint() - t0) / 1e6;
 
+// Build the exact transpose once: for each threshold word, list every
+// candidate path whose forbidden set contains that word.
+const coverOffset = new Uint32Array(U + 1);
+for (let u = 0; u < U; u++) coverOffset[u + 1] = coverOffset[u] + baseCount[u];
+
+const totalIncidence = coverOffset[U];
+const coverers = new Uint16Array(totalIncidence);
+const coverFill = new Uint32Array(U);
+coverFill.set(coverOffset.subarray(0, U));
+
+for (let p = 0; p < P; p++) {
+  let i = p * U;
+  const end = i + forbiddenLength[p];
+  for (; i < end; i++) {
+    const u = forbidden[i];
+    coverers[coverFill[u]++] = p;
+  }
+}
+
+// Two-watched-coverer invariant.
+//
+// Each threshold word is a set-cover constraint: at least one selected path
+// must forbid it. We watch two currently selected coverers whenever possible.
+// A path is undeletable exactly when it is the sole remaining watcher of at
+// least one word. Removing a nonprivate watcher only touches words currently
+// watching that path, rather than every word in the path's forbidden set.
+const NO_WATCH = 0xffff;
+const baseWatchA = new Uint16Array(U);
+const baseWatchB = new Uint16Array(U);
+baseWatchB.fill(NO_WATCH);
+const baseNextCover = new Uint32Array(U);
+const basePrivateCount = new Uint32Array(P);
+const initialWatchCount = new Uint32Array(P);
+
+for (let u = 0; u < U; u++) {
+  const begin = coverOffset[u];
+  const finish = coverOffset[u + 1];
+  const len = finish - begin;
+
+  if (len === 0) throw new Error(`threshold word ${u} has no coverer`);
+
+  const a = coverers[begin];
+  baseWatchA[u] = a;
+  initialWatchCount[a]++;
+
+  if (len === 1) {
+    basePrivateCount[a]++;
+    baseNextCover[u] = finish;
+  } else {
+    const b = coverers[begin + 1];
+    baseWatchB[u] = b;
+    initialWatchCount[b]++;
+    baseNextCover[u] = begin + 2;
+  }
+}
+
+const initialWatchOffset = new Uint32Array(P + 1);
+for (let p = 0; p < P; p++) {
+  initialWatchOffset[p + 1] = initialWatchOffset[p] + initialWatchCount[p];
+}
+
+const initialWatchWords = new Uint32Array(initialWatchOffset[P]);
+const initialWatchFill = new Uint32Array(P);
+initialWatchFill.set(initialWatchOffset.subarray(0, P));
+
+for (let u = 0; u < U; u++) {
+  const a = baseWatchA[u];
+  initialWatchWords[initialWatchFill[a]++] = u;
+
+  const b = baseWatchB[u];
+  if (b !== NO_WATCH) initialWatchWords[initialWatchFill[b]++] = u;
+}
+
 const rng = new XorShift32(0x04512026);
 const order = new Uint16Array(P);
-const counts = new Uint16Array(U);
-const xors = new Uint16Array(U);
-const privateCount = new Uint32Array(P);
+const rank = new Uint16Array(P);
 const selected = new Uint8Array(P);
+const watchA = new Uint16Array(U);
+const watchB = new Uint16Array(U);
+const nextCover = new Uint32Array(U);
+const privateCount = new Uint32Array(P);
+const extraWatchWords = Array.from({ length: P }, () => []);
 const histogram = new Uint32Array(P + 1);
 
 let bestSize = -1;
 let bestTrial = -1;
 let bestSelected = null;
+let replacementEvents = 0;
+let replacementScans = 0;
 
 const searchStart = process.hrtime.bigint();
 
 for (let trial = 0; trial < TRIALS; trial++) {
-  counts.set(baseCount);
-  xors.set(baseXor);
-  privateCount.set(basePrivateCount);
   selected.fill(1);
+  watchA.set(baseWatchA);
+  watchB.set(baseWatchB);
+  nextCover.set(baseNextCover);
+  privateCount.set(basePrivateCount);
+
+  for (let p = 0; p < P; p++) extraWatchWords[p].length = 0;
 
   let size = P;
 
@@ -194,33 +275,67 @@ for (let trial = 0; trial < TRIALS; trial++) {
     order[i] = order[j];
     order[j] = t;
   }
+  for (let i = 0; i < P; i++) rank[order[i]] = i;
 
   for (let oi = 0; oi < P; oi++) {
     const p = order[oi];
 
-    // privateCount[p] === 0 is already the exact removability test:
-    // a selected set is essential iff it is the sole coverer of some word.
-    // The prior second scan for counts[u]===1 duplicated this invariant.
+    // A private threshold word makes p permanently necessary.
     if (privateCount[p] !== 0) continue;
 
     selected[p] = 0;
     size--;
 
-    const enc = p + 1;
-    let i = p * U;
-    const end = i + forbiddenLength[p];
+    // Process one word currently watching p.
+    const removeWatcher = (u) => {
+      const a = watchA[u];
+      const b = watchB[u];
+      const pIsA = a === p;
+      const other = pIsA ? b : a;
 
-    for (; i < end; i++) {
-      const u = forbidden[i];
-      const count = counts[u];
-
-      if (count === 2) {
-        privateCount[(xors[u] ^ enc) - 1]++;
+      if (other === NO_WATCH) {
+        throw new Error(`removing sole watcher ${p} for word ${u}`);
       }
 
-      counts[u] = count - 1;
-      xors[u] ^= enc;
-    }
+      let cursor = nextCover[u];
+      const finish = coverOffset[u + 1];
+      let replacement = NO_WATCH;
+
+      for (; cursor < finish; cursor++) {
+        replacementScans++;
+        const r = coverers[cursor];
+        if (r !== other && selected[r]) {
+          replacement = r;
+          cursor++;
+          break;
+        }
+      }
+      nextCover[u] = cursor;
+
+      if (replacement === NO_WATCH) {
+        if (pIsA) watchA[u] = NO_WATCH;
+        else watchB[u] = NO_WATCH;
+        privateCount[other]++;
+        return;
+      }
+
+      if (pIsA) watchA[u] = replacement;
+      else watchB[u] = replacement;
+
+      replacementEvents++;
+
+      // If replacement's deletion turn is still ahead, record the watch so
+      // it can be maintained then. Already-processed selected paths are
+      // permanent and never need a future watch-list event.
+      if (rank[replacement] > oi) extraWatchWords[replacement].push(u);
+    };
+
+    let wi = initialWatchOffset[p];
+    const wend = initialWatchOffset[p + 1];
+    for (; wi < wend; wi++) removeWatcher(initialWatchWords[wi]);
+
+    const extra = extraWatchWords[p];
+    for (let i = 0; i < extra.length; i++) removeWatcher(extra[i]);
   }
 
   histogram[size]++;
@@ -288,7 +403,7 @@ const result = {
   implementation_language: 'Node.js',
   node_version: process.version,
   historical_cpp_run_authoritative: false,
-  node_optimization_revision: 'branchless-next-separate-cover-v4',
+  node_optimization_revision: 'two-watched-coverers-v5',
   alphabet_size: ALPHABET,
   candidate_path_length: PL,
   candidate_path_count: P,
@@ -303,6 +418,9 @@ const result = {
   total_glycan_non_target_nodes: pass ? bestSize * PL : 0,
   incidence_ms: incidenceMs,
   search_ms: searchMs,
+  total_incidence: totalIncidence,
+  replacement_events: replacementEvents,
+  replacement_scans: replacementScans,
   total_ms: Number(process.hrtime.bigint() - t0) / 1e6,
   cover_size_histogram: histogramObject,
   selected_paths: selectedPaths,
