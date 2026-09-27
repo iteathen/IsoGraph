@@ -91,41 +91,50 @@ function realize(paths){
   return {parent,classes};
 }
 
-function bits(mask){
-  const a=[];let x=mask>>>0;
-  while(x){const b=x&-x;a.push(31-Math.clz32(b));x=(x^b)>>>0;}
-  return a;
-}
-
 function makeInst(real,m){
-  const n=real.parent.length,full=n===0?0:(2**n-1)>>>0;
-  if(n>28)throw new Error('bitmask harness n>28');
+  const n=real.parent.length;
+  const full=n===0?0n:((1n<<BigInt(n))-1n);
   const children=Array.from({length:n},()=>[]);
   for(let q=0;q<n;q++)if(real.parent[q]>=0)children[real.parent[q]].push(q);
-  const supports=Array(m).fill(0);
-  for(let q=0;q<n;q++)supports[real.classes[q]]|=(1<<q);
-  const resist=supports.map(s=>(full^s)>>>0);
+  const supports=Array(m).fill(0n);
+  for(let q=0;q<n;q++)supports[real.classes[q]]|=(1n<<BigInt(q));
+  const resist=supports.map(s=>full^s);
   return {n,full,parent:real.parent,children,m,supports,resist};
 }
 
-function up(inst,mask){
-  let out=mask>>>0;
-  for(const q of bits(mask)){
-    let p=inst.parent[q];
-    while(p>=0){out|=(1<<p);p=inst.parent[p];}
+function bitsBig(mask){
+  const a=[];
+  let x=mask;
+  let i=0;
+  while(x){
+    if(x&1n)a.push(i);
+    x>>=1n;
+    i++;
   }
-  return out>>>0;
+  return a;
+}
+
+function up(inst,mask){
+  let out=mask;
+  for(const q of bitsBig(mask)){
+    let p=inst.parent[q];
+    while(p>=0){
+      out|=(1n<<BigInt(p));
+      p=inst.parent[p];
+    }
+  }
+  return out;
 }
 
 function phase(inst,I,e){
-  const active=(inst.full^I)>>>0;
-  const surv=up(inst,(active&inst.resist[e])>>>0);
-  return (inst.full^surv)>>>0;
+  const active=inst.full^I;
+  const surv=up(inst,active&inst.resist[e]);
+  return inst.full^surv;
 }
 
 function glycanOpt(real,m){
   const inst=makeInst(real,m);
-  const q=[0],dist=new Map([[0,0]]);
+  const q=[0n],dist=new Map([[0n,0]]);
   for(let qi=0;qi<q.length;qi++){
     const I=q[qi],d=dist.get(I);
     if(I===inst.full)return {dist:d,states:dist.size};
