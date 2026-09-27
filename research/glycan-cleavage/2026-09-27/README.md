@@ -239,3 +239,72 @@ Important complexity boundary:
 - therefore future work should prioritize exact compression, lower bounds, output-sensitive basis generation, parameterized structure, and special polynomial subclasses rather than presuming a universal polynomial collapse.
 
 No external novelty claim is made by this research note.
+
+
+## Algorithm clue experiments 033–039
+
+The external-clue phase has now produced working exact algorithms and stronger lower bounds.
+
+### Experiment 033 — backward antichain optimum
+
+- 129,445 exhaustive instances;
+- 752,380 microscopic-vs-closed-form phase checks;
+- 0 phase mismatches;
+- 0 forward/backward optimum mismatches;
+- 48 larger cases: mean 96.81 forward reached states vs 7.21 backward peak-antichain states.
+
+Preferred exact optimization baseline:
+
+    backward winning antichain
+    with
+    P_e(J)=downward_closure(J intersection N_e).
+
+### Experiment 034 — minimal quasi-ordered automaton + star oracle
+
+- 6,565 exact basis controls;
+- 0 B_M mismatches;
+- 0 quasi-order guard failures;
+- 41,082 explicit star-product comparisons;
+- 0 star-oracle mismatches.
+
+### Experiment 035 — oracle-driven B_M learning
+
+- 6,565 exhaustive learner instances;
+- 0 learned/reference basis mismatches;
+- 0 invalid oracle counterexamples;
+- 0 quasi-order guard failures;
+- direct B_M recovery without treatment-word length enumeration.
+
+### Experiment 036 — singleton PCCSP transfer
+
+Across 77,368 singleton instances / 429,531 reachable states:
+
+- one-class lower bound never exceeded exact distance;
+- one-class bound tight on 98.9812% of states;
+- critical-path bound tight on 88.7040%;
+- 282,061 nonextendable-class immediate-selection certificates;
+- 0 immediate-selection counterexamples.
+
+### Experiment 037 — set-valued partition lower bound
+
+Across 88,948 instances / 396,855 reachable states:
+
+- 0 admissibility violations;
+- PLB tight on 99.5747%;
+- max-path SEG tight on 90.4358%;
+- PLB strictly stronger on 36,268 states.
+
+### Experiment 038 — pairwise path synchronization
+
+- PLB residual states: 1,688;
+- pairwise J2 closes 1,484;
+- max(PLB,J2) tight on 99.9486%;
+- 204 preserved three-way-or-higher residuals.
+
+### Experiment 039 — three-way path synchronization
+
+- J3 and max(PLB,J3) exact on all 396,855 states of the Experiment-037 surface;
+- all 204 pairwise residuals closed;
+- this is finite-surface evidence only, not a universal J3 theorem.
+
+Experiment 040 is the current falsifier search for a larger path-family counterexample to universal J3.
