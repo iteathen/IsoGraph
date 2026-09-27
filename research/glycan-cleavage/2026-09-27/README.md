@@ -218,7 +218,7 @@ Primary external-clue report:
 Exact clue-fed derivations now extend through:
 
 ~~~text
-G-IA304..G-IA432
+G-IA304..G-IA440
 ~~~
 
 with no gaps or duplicate definitions in the A15-A27 line.
@@ -236,7 +236,8 @@ Current routing:
 - A24 — verified ternary witness width 35;
 - A25 — verified witness width 54 / Maximum Minimal Set Cover view;
 - A26 — Node-verified witness width 75;
-- A27 — Node-verified witness width 113.
+- A27 — Node-verified witness width 113;
+- A28 — repaired Node-verified witness width 173.
 
 ### Exact algorithm experiments
 
@@ -254,23 +255,23 @@ Current routing:
 - Experiment 044 — exact witness width 54: PASS.
 - Experiment 045 — exact witness width 75: PASS, authoritative implementation Node.js.
 - Experiment 046 — exact witness width 113: PASS, Node.js only.
-- Experiment 047 — active Node-only threshold-20 scaling experiment.
+- Experiment 047 — repaired Node-only threshold-20 scaling experiment: PASS, witness width 173.
 
 ### Current strongest finite witness
 
 ~~~text
 alphabet size:            3
-witness width:            113
-path count:               113
-path length:              9
-threshold length:         18
-direct non-target nodes:  1,017
+witness width:            173
+path count:               173
+path length:              10
+threshold length:         20
+direct non-target nodes:  1,730
 ~~~
 
 Thus universal J_h exactness is falsified for every fixed:
 
 ~~~text
-h <= 112
+h <= 172
 ~~~
 
 even in deterministic singleton-susceptibility three-enzyme chain forests.
@@ -324,7 +325,7 @@ Experiment 046 scaled the exact Node search to:
 
 and verified witness width 113.
 
-A dense-bitset regression reduced its primary incidence storage from about 265 MB of sparse path IDs to about 38 MB of exact bits, at some runtime cost; this is the memory representation used for the next scale.
+A dense-bitset regression reduced Experiment 046 primary incidence storage from about 265 MB of sparse path IDs to about 38 MB of exact bits. The repaired Experiment 047 used the same Node-only representation at the 1,536 × 1,572,864 scale and verified witness width 173. Its initial false threshold-universality observation was independently falsified and traced to one omitted manually unrolled path transition; the minimum repair is preserved in Experiment 047's discrepancy review.
 
 ### Complexity / prior-art boundary
 
