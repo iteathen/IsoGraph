@@ -69,6 +69,11 @@ if (P !== 1536 || U !== 1572864) {
   throw new Error(`unexpected dimensions P=${P} U=${U}`);
 }
 
+const UNROLLED_PL = 10;
+if (PL !== UNROLLED_PL) {
+  throw new Error(`unrolled incidence kernel requires PL=${UNROLLED_PL}, got ${PL}`);
+}
+
 // Branchless subsequence transitions per threshold word.
 const transitionStart = process.hrtime.bigint();
 const FAIL_STATE = WL + 1;
@@ -125,6 +130,7 @@ for (let p = 0; p < P; p++) {
   const p6 = paths[po + 6];
   const p7 = paths[po + 7];
   const p8 = paths[po + 8];
+  const p9 = paths[po + 9];
 
   const block = p >>> 5;
   const bit = (1 << (p & 31)) >>> 0;
@@ -141,6 +147,7 @@ for (let p = 0; p < P; p++) {
     s = nextState[nb + s * 3 + p6];
     s = nextState[nb + s * 3 + p7];
     s = nextState[nb + s * 3 + p8];
+    s = nextState[nb + s * 3 + p9];
 
     if (s === FAIL_STATE) {
       failBits[u * BLOCKS + block] |= bit;
