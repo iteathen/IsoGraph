@@ -388,7 +388,6 @@ const result = {
   incidence_ms: incidenceMs,
   search_ms: searchMs,
   total_incidence: totalIncidence,
-  max_trial_event_count: maxTrialEventCount,
   total_ms: Number(process.hrtime.bigint() - t0) / 1e6,
   cover_size_histogram: histogramObject,
   selected_paths: selectedPaths,
