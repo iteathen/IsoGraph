@@ -395,6 +395,103 @@ Both questions can coexist.
 
 ---
 
+# 10A. A failure is evidence before it is a diagnosis
+
+The observation-first posture has an additional consequence:
+
+~~~text
+something did not work as expected
+    !=
+we already know what is wrong
+~~~
+
+A discrepancy does not arrive with its owner attached.
+
+The problem may belong to:
+
+- the representation;
+- an implementation or decoder;
+- an expected result or test oracle;
+- a referenced source or interpretation;
+- an unstated assumption;
+- the comparison scope;
+- an identity judgment;
+- missing authority;
+- unresolved structure;
+- or the assumption that the two observations should have agreed at all.
+
+Therefore a material discrepancy should carry two independent questions:
+
+~~~text
+REPAIR:
+    Is an actual contract violation established?
+    Where is it?
+
+DISCOVERY:
+    Did the discrepancy expose a useful structural clue?
+~~~
+
+Those answers can differ.
+
+A genuine defect may still be the event that exposes an important distinction. Repairing the defect should not automatically erase or close the discovery question.
+
+Conversely, an interesting clue does not excuse a proved defect.
+
+## Clue-preserving repair
+
+When repair is justified, prefer the smallest causal repair that restores the violated contract while preserving enough surrounding structure to rerun the observation.
+
+Then ask:
+
+~~~text
+what disappeared?
+what survived?
+what changed form?
+what became clearer?
+~~~
+
+The repair is therefore also a controlled intervention.
+
+If a structural clue survives a narrow repair, that is evidence that the clue is not merely the repaired defect.
+
+If it disappears exactly with the defect and has no independent support, it should be downgraded rather than romanticized.
+
+## Expected agreement is not an oracle
+
+An expected answer, reference result, established implementation, prior artifact, source, or conventional interpretation may be correct.
+
+It may also be incomplete, differently scoped, misapplied, or wrong.
+
+IsoGraph should not decide that question by prestige, familiarity, age, or convenience.
+
+In particular:
+
+~~~text
+faithful representation
+    !=
+correctness of the represented thing
+~~~
+
+An exact rendering is allowed to expose a problem in what it represents.
+
+At the same time, an anomaly does not automatically overturn current authority.
+
+Preserve the challenge, test it, and change authority only through the applicable revision/qualification process.
+
+This keeps IsoGraph between two failure modes:
+
+~~~text
+authority worship:
+    anomaly must be wrong because authority exists
+
+authority collapse:
+    authority must be wrong because anomaly exists
+~~~
+
+The intended posture is evidence-sensitive adjudication.
+
+---
+
 # 11. Qualification and discovery serve different purposes
 
 Qualification asks whether a representation or claim satisfies its declared contract.
@@ -623,11 +720,17 @@ Could separately represented things share a scoped invariant?
 
 Could apparently identical things hide an unresolved distinction?
 
+Who actually owns the discrepancy, if anyone?
+
 What would falsify each interpretation?
+
+If a repair is justified, what is the smallest causal repair?
+
+After that repair, what disappears and what survives?
 
 Only then:
     what should be concluded?
-    what, if anything, should be repaired?
+    what, if anything, should be repaired or preserved as a clue?
 ~~~
 
 This is intentionally more **perceptive than judgment-first**.
@@ -686,8 +789,13 @@ Collapse only what is proved irrelevant.
 Preserve residuals and unknowns.
 Let contradictions propagate through explicit dependencies.
 Treat discrepancies as possible measurements of hidden structure.
+Treat failure as evidence before diagnosis.
+Do not preassign the owner of a discrepancy.
+Separate repair disposition from discovery disposition.
+Use minimal repairs as diagnostic interventions.
 
 Repair defects.
+Do not repair toward an expected answer.
 Do not repair away discovery.
 Do not force agreement.
 Do not force isomorphism.
