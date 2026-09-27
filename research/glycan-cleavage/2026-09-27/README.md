@@ -535,3 +535,81 @@ The performance pressure is intentional. Prefer:
 - exact structural compression before machinery.
 
 Historical non-Node experiment artifacts, if any, are retained only as provenance and are not active campaign implementation authority unless independently reproduced in Node.js.
+
+
+
+## Algorithm campaign — Node-only exact search
+
+Current exact implicit range:
+
+~~~text
+G-IA001..G-IA422
+~~~
+
+Recent exact-algorithm campaign:
+
+- Experiment 033 — backward antichain optimum solver: PASS;
+- Experiment 034 — minimal quasi-ordered automaton / star-product oracle: PASS;
+- Experiment 035 — counterexample-guided B_M learner: PASS;
+- Experiment 036 — singleton PCCSP lower bounds / immediate selection: PASS;
+- Experiment 037 — set-valued partition lower bound: PASS;
+- Experiment 038 — pairwise path synchronization residual: PASS;
+- Experiment 039 — J2/J3 hierarchy on the small exhaustive surface: PASS;
+- Experiment 040 — explicit ternary J3 counterexample: COMPLETE;
+- Experiment 041 — exact witness widths 4,5,6,7: PASS;
+- Experiment 042 — exact ternary witness width 24: PASS;
+- Experiment 043 — exact ternary witness width 35: PASS;
+- Experiment 044 — exact ternary witness width 54: PASS;
+- Experiment 045 — exact ternary witness width 75: PASS under authoritative Node.js rerun.
+
+Strongest current unconditional finite witness:
+
+~~~text
+effective treatment labels: 3
+witness width:              75
+path count:                 75
+path length:                8
+threshold length:           16
+direct glycan nodes:        600
+~~~
+
+Experiment 045 implementation authority is Node.js v26.7.0, run `36357819191`.
+
+Node performance campaign on the frozen Experiment 045 workload:
+
+~~~text
+baseline Node: 8.092 s
+V2:            4.033 s
+V3:            3.465 s
+V5:            2.615 s
+V6:            2.289 s
+
+historical native reference execution:
+                ~2.265 s
+~~~
+
+V6 is therefore approximately one percent slower than the historical native execution on those frozen GitHub-runner observations.
+
+The decisive optimization was structural rather than language substitution:
+
+~~~text
+exact cover-count updates
+->
+two watched coverers per threshold constraint
+->
+typed linked replacement events.
+~~~
+
+The active campaign remains **Node.js only**.
+
+Next scaling target:
+
+- ternary path length 9;
+- threshold treatment length 18;
+- 768 candidate paths;
+- 393,216 threshold words;
+- exact critical-cover/private-witness verification;
+- Node-only memory-conscious incidence representation.
+
+No universal performance claim and no unconditional unbounded witness-width theorem is made.
+
