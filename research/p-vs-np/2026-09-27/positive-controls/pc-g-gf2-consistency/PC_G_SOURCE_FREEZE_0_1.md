@@ -26,7 +26,14 @@ RHS1(e) present    -> right-hand bit 1
 RHS1(e) absent     -> right-hand bit 0.
 ```
 
-Well-formedness requires every represented coefficient endpoint to occur in the corresponding equation/variable lists and every represented RHS1 equation to occur in `EL`.
+Well-formedness requires:
+
+1. every represented coefficient endpoint to occur in the corresponding equation/variable lists;
+2. every represented RHS1 equation to occur in `EL`;
+3. `VL` contains no repeated variable identity;
+4. `EL` contains no repeated equation identity.
+
+The duplicate-free requirement makes each listed variable exactly one coordinate of the source parity expression rather than silently counting a coordinate multiple times.
 
 ## 2. Witness assignment
 
