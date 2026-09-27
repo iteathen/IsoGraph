@@ -1,0 +1,78 @@
+name: Experiment 036 glycan PCCSP transfer
+
+on:
+  push:
+    branches:
+      - research/glycan-cleavage-primitive-20260927
+    paths:
+      - experiments/036/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-036-glycan-pccsp
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Execute PCCSP transfer controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/036/tools/run-exp036.mjs
+          rm -rf out/exp036
+          node experiments/036/tools/run-exp036.mjs
+
+      - name: Persist Experiment 036 evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/036/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json THREE_CLASS.json TWO_CLASS_N6.json; do
+            [ -f "out/exp036/$f" ] && cp "out/exp036/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 036 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin research/glycan-cleavage-primitive-20260927
+            git rebase origin/research/glycan-cleavage-primitive-20260927
+            git push origin HEAD:research/glycan-cleavage-primitive-20260927
+          fi
+
+      - name: Enforce experiment result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f out/exp036/RESULT.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const r=JSON.parse(fs.readFileSync('out/exp036/RESULT.json','utf8'));
+          console.log(JSON.stringify(r,null,2));
+          const c=r.combined;
+          if(r.disposition!=='PASS') process.exit(1);
+          if(c.cp_gt_oc!==0) process.exit(1);
+          if(c.oc_gt_distance!==0) process.exit(1);
+          if(c.only_counterexamples!==0) process.exit(1);
+          if(c.nonextendable_counterexamples!==0) process.exit(1);
+          NODE
