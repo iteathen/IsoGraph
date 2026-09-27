@@ -314,7 +314,7 @@ Experiment 040 is the current falsifier search for a larger path-family countere
 
 Exact clue-fed implicit results now extend through:
 
-    G-IA402.
+    G-IA413.
 
 Canonical current clue files after A15:
 
@@ -327,6 +327,7 @@ Canonical current clue files after A15:
 - GLYCAN_CLUE_DERIVATIONS_A22_WITNESS_WIDTH_PARAMETER_0_1.md
 - GLYCAN_CLUE_DERIVATIONS_A23_CRITICAL_COVER_0_1.md
 - GLYCAN_CLUE_DERIVATIONS_A24_TERNARY_WITNESS_WIDTH_35_0_1.md
+- GLYCAN_CLUE_DERIVATIONS_A25_WITNESS_WIDTH_54_0_1.md
 
 The sibling A19/A20 draft files marked SUPERSEDED are provenance only and contribute no current assertion definitions.
 
@@ -420,19 +421,30 @@ Experiment 043:
 - exact witness width=35;
 - direct glycan realization: 35 independent length-6 chains / 210 non-target nodes.
 
+Experiment 044:
+- PASS;
+- 54 distinct run-compressed ternary singleton paths of length 7;
+- threshold universe U_14 contains 24,576 irredundant treatment words;
+- no full-family solution through length 14;
+- 54/54 private length-14 deletion witnesses verified;
+- 695 full-family length-15 solutions;
+- exact OPT=15;
+- exact witness width=54;
+- direct glycan realization: 54 independent chains / 378 non-target nodes.
+
 Thus the strongest unconditional finite witness is now:
 
     alphabet size:          3
-    witness width:          35
-    path count:             35
-    path length:            6
-    threshold length:       12
-    exact optimum:          13
-    non-target glycan nodes:210.
+    witness width:          54
+    path count:             54
+    path length:            7
+    threshold length:       14
+    exact optimum:          15
+    non-target glycan nodes:378.
 
-This refutes universal J_h exactness for every h<=34 in the ternary singleton subclass.
+This refutes universal J_h exactness for every h<=53 in the ternary singleton subclass.
 
-The Experiment-043 randomized search is not a maximum-cover proof; larger threshold-12 critical covers may exist.
+Neither Experiment 043 nor Experiment 044 proves a maximum critical-cover size at its threshold.
 
 ### Witness-width parameter
 
@@ -486,6 +498,10 @@ contains an identity submatrix:
 This is an exact structural clue. It resembles fooling-set/communication-matrix constructions, but no communication-complexity theorem is imported.
 
 Experiment 043 realizes a 35-set minimal cover of U_12.
+
+Experiment 044 realizes a 54-set minimal cover of U_14.
+
+A25 identifies fixed-threshold witness-width maximization exactly as Maximum Minimal Set Cover on the structured path-forbidden incidence system.
 
 ### Current research priorities
 
