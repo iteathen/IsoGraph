@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   refresh:
@@ -88,3 +89,9 @@ jobs:
           git fetch origin qualification/core020-dp08-20260928
           git rebase origin/qualification/core020-dp08-20260928
           git push origin HEAD:qualification/core020-dp08-20260928
+
+      - name: Cleanup transient QA artifact
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/cleanup-github-actions-storage.mjs
