@@ -17,17 +17,17 @@ The original text, analysis, diagrams, and explanatory material in this paper ar
 
 We study an idealized optimization problem motivated by sequential exoglycosidase digestion of branched glycans. A finite rooted residue structure, a retained ancestor-closed target, and a closed-world enzyme/site susceptibility relation are given. One treatment selects a single enzyme and applies it exhaustively: every currently terminal, non-target, susceptible residue is removed, including residues exposed during the same treatment. The objective is to minimize the number of such treatments required to reach the target exactly.
 
-The problem was rendered into primitive IsoGraph structure and independently reconstructed under a frozen verification experiment before structural discovery. The resulting analysis exposes a closed-form treatment action. If \(A\) is the active non-target filter and \(N_e\) is the set of non-target sites resistant to enzyme \(e\), then one exhaustive treatment is exactly
+The problem was rendered into primitive IsoGraph structure and independently reconstructed under a frozen verification experiment before structural discovery. The resulting analysis exposes a closed-form treatment action. If $A$ is the active non-target filter and $N_e$ is the set of non-target sites resistant to enzyme $e$, then one exhaustive treatment is exactly
 
-\[
+$
 D_e(A)=\uparrow(A\cap N_e).
-\]
+$
 
 Dually, treatment acts as an extensive, monotone, idempotent, meet-preserving closure on the finite lattice of removed-node ideals. Effective non-target susceptibility is a complete invariant of one-phase behavior, and susceptibility inclusion induces two-sided absorption.
 
-At the trajectory level, a treatment word solves exactly when it covers every maximal non-target path. In the singleton-susceptibility subclass this becomes ordinary shortest common supersequence (SCS) on run-compressed path words. With at most two effective treatment classes, every irredundant treatment word alternates, yielding an exact formula for the optimum and the universal theorem \(J_2=\mathrm{OPT}\), where \(J_h\) is the best lower bound obtained from subfamilies of at most \(h\) maximal paths.
+At the trajectory level, a treatment word solves exactly when it covers every maximal non-target path. In the singleton-susceptibility subclass this becomes ordinary shortest common supersequence (SCS) on run-compressed path words. With at most two effective treatment classes, every irredundant treatment word alternates, yielding an exact formula for the optimum and the universal theorem $J_2=\mathrm{OPT}$, where $J_h$ is the best lower bound obtained from subfamilies of at most $h$ maximal paths.
 
-The binary collapse fails sharply for three treatment labels. Exact finite constructions produced critical path families of witness widths 24, 35, 54, 75, 113, and 173. The width-173 construction consists only of 173 independent singleton-susceptibility chains of length 10. No treatment word of length 20 satisfies the full family, yet deleting any one path admits a length-20 treatment word. Thus every one of the 173 path constraints is necessary to witness the threshold failure. The associated private-witness incidence induces the standard example \(S_{173}\) inside the ternary subsequence poset and hence a finite poset-dimension lower bound of at least 173.
+The binary collapse fails sharply for three treatment labels. Exact finite constructions produced critical path families of witness widths 24, 35, 54, 75, 113, and 173. The width-173 construction consists only of 173 independent singleton-susceptibility chains of length 10. No treatment word of length 20 satisfies the full family, yet deleting any one path admits a length-20 treatment word. Thus every one of the 173 path constraints is necessary to witness the threshold failure. The associated private-witness incidence induces the standard example $S_{173}$ inside the ternary subsequence poset and hence a finite poset-dimension lower bound of at least 173.
 
 These results establish substantial high-order synchronization over a fixed three-symbol treatment alphabet, but they do **not** prove that ternary witness width is unbounded. They also concern a deliberately idealized deterministic digestion model, not a complete model of laboratory enzymology.
 
@@ -45,7 +45,7 @@ The central question is:
 
 The work began as an IsoGraph rendering exercise. The source problem was reduced to primitive relational logic, independently reconstructed from the primitive representation, and then subjected to alternating implicit-assertion, identity, and Discovery Protocol passes [1–6]. What emerged is not merely an implementation of a search problem. The structure admits several exact and mutually reinforcing representations:
 
-\[
+$
 \text{microscopic deletion}
 \;\longrightarrow\;
 \text{phase closure}
@@ -55,7 +55,7 @@ The work began as an IsoGraph rendering exercise. The source problem was reduced
 \text{path languages}
 \;\longrightarrow\;
 \text{word-order boundaries}.
-\]
+$
 
 The main contributions reported here are:
 
@@ -65,10 +65,10 @@ The main contributions reported here are:
 4. a dual resistant-chain certificate for treatment-word failure;
 5. a finite dominance-aware basis for the complete solving language;
 6. an exact SCS reduction for singleton susceptibility;
-7. a universal two-treatment-class collapse, \(J_2=\mathrm{OPT}\);
-8. explicit three-treatment-class counterexamples to any naive \(J_3\) extension;
+7. a universal two-treatment-class collapse, $J_2=\mathrm{OPT}$;
+8. explicit three-treatment-class counterexamples to any naive $J_3$ extension;
 9. exact finite ternary witness-width constructions reaching 173;
-10. an induced standard-example \(S_{173}\) in the ternary subsequence poset.
+10. an induced standard-example $S_{173}$ in the ternary subsequence poset.
 
 The external mathematics used for orientation—Higman-style subword orders, shortest common supersequence, closure/nucleus theory, well-structured transition systems, PCCSP, and poset dimension—is established prior art [16–22]. The project-specific synthesis and finite constructions are reported without a claim of external novelty beyond the exact statements proved and certified here.
 
@@ -80,52 +80,52 @@ The external mathematics used for orientation—Higman-style subword orders, sho
 
 An instance supplies:
 
-- a finite residue set \(R\);
-- a finite enzyme set \(E\);
+- a finite residue set $R$;
+- a finite enzyme set $E$;
 - a distinguished root;
-- a parent relation \(P(\text{child},\text{parent})\) forming a finite rooted tree;
-- a retained target \(T\subseteq R\), containing the root and closed under ancestry;
-- a closed-world susceptibility relation \(M(e,r)\).
+- a parent relation $P(\text{child},\text{parent})$ forming a finite rooted tree;
+- a retained target $T\subseteq R$, containing the root and closed under ancestry;
+- a closed-world susceptibility relation $M(e,r)$.
 
 The susceptibility relation is extensional input. It is intended to encode every static site distinction relevant to the frozen instance—such as terminal residue identity, linkage, anomeric character, or other local context—without requiring the optimizer to derive chemistry from a label.
 
 ### 2.2 State and terminality
 
-A state \(S\) is a subset of \(R\) satisfying
+A state $S$ is a subset of $R$ satisfying
 
-\[
+$
 T\subseteq S\subseteq R.
-\]
+$
 
-A represented residue \(r\in S\) is terminal exactly when no represented child of \(r\) remains in \(S\).
+A represented residue $r\in S$ is terminal exactly when no represented child of $r$ remains in $S$.
 
-Residue \(r\) is eligible for enzyme \(e\) exactly when:
+Residue $r$ is eligible for enzyme $e$ exactly when:
 
-1. \(r\) is terminal;
-2. \(r\notin T\);
-3. \(M(e,r)\).
+1. $r$ is terminal;
+2. $r\notin T$;
+3. $M(e,r)$.
 
 A microscopic cleavage removes one eligible residue and changes nothing else.
 
 ### 2.3 Exhaustive treatment
 
-One treatment chooses a single enzyme \(e\) and repeatedly removes eligible sites for \(e\) until no such site remains. Sites newly exposed during that treatment are eligible to be removed during the same treatment if they also satisfy \(M(e,r)\).
+One treatment chooses a single enzyme $e$ and repeatedly removes eligible sites for $e$ until no such site remains. Sites newly exposed during that treatment are eligible to be removed during the same treatment if they also satisfy $M(e,r)$.
 
 A treatment trajectory is a finite enzyme word
 
-\[
+$
 w=e_1e_2\cdots e_k.
-\]
+$
 
-The trajectory solves when exhaustive execution from the full initial state leaves exactly \(T\). Its cost is \(k\).
+The trajectory solves when exhaustive execution from the full initial state leaves exactly $T$. Its cost is $k$.
 
 Repeated use of the same enzyme is allowed. In particular, a non-adjacent pattern such as
 
-\[
+$
 A\,B\,A
-\]
+$
 
-may be necessary because \(B\) can expose a new \(A\)-susceptible site.
+may be necessary because $B$ can expose a new $A$-susceptible site.
 
 ### 2.4 Scope boundary
 
@@ -136,7 +136,7 @@ This paper does not model:
 - enzyme concentration or time;
 - simultaneous cocktails;
 - stochastic cleavage;
-- state-dependent chemistry not represented in \(M\);
+- state-dependent chemistry not represented in $M$;
 - endoglycosidase internal cuts;
 - synthesis;
 - uncertainty in glycan structure or enzyme specificity.
@@ -151,7 +151,7 @@ The source model was translated into an IsoGraph primitive rendering whose autho
 
 Experiment 032 tested the round trip
 
-\[
+$
 \text{source}
 \to
 \text{primitive IsoGraph}
@@ -159,57 +159,57 @@ Experiment 032 tested the round trip
 \text{cold reconstruction}
 \to
 \text{source comparison}.
-\]
+$
 
 The frozen result was PASS: the native parser passed; there were no free native variables or undeclared local predicates; all expected semantic predicates were reconstructed; 18 of 18 targeted source/reconstruction checks passed; and the verifier reported no missing source semantics, unsupported additions, or load-bearing unresolved structure [4].
 
 This is **internal project verification**, not independent external validation. The primitive rendering was exercised under a Core 0.20 research contract, while Core 0.20 itself remains unqualified. Current qualified semantic authority remains through Core 0.19, with qualified DP 0.1–0.7, NEI 0.4, and QU 0.1 used where applicable [5,6].
 
-A later maximal-path proof contained a local support defect. The theorem survived, but its original path-local/global-\(\tau\) comparison did not. The proof was repaired using a bottleneck-path induction, and that correction is mandatory support for all downstream maximal-path and SCS results [7].
+A later maximal-path proof contained a local support defect. The theorem survived, but its original path-local/global-$\tau$ comparison did not. The proof was repaired using a bottleneck-path induction, and that correction is mandatory support for all downstream maximal-path and SCS results [7].
 
 The publication preflight re-audited the current assertion surface. The authoritative implicit range is
 
-\[
+$
 G\text{-}IA001\ldots G\text{-}IA448,
-\]
+$
 
-with no gaps or duplicate authoritative IDs in the post-DP range \(G\text{-}IA304\ldots G\text{-}IA448\). The scoped identity range remains \(G\text{-}N001\ldots G\text{-}N116\) [8].
+with no gaps or duplicate authoritative IDs in the post-DP range $G\text{-}IA304\ldots G\text{-}IA448$. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$ [8].
 
 ---
 
 ## 4. Closed-Form Phase Algebra
 
-Let \(Q=R\setminus T\) be the non-target nodes ordered descendant-before-ancestor. A valid active non-target state is an upward-closed filter \(A\subseteq Q\).
+Let $Q=R\setminus T$ be the non-target nodes ordered descendant-before-ancestor. A valid active non-target state is an upward-closed filter $A\subseteq Q$.
 
-For enzyme \(e\), define effective non-target susceptibility
+For enzyme $e$, define effective non-target susceptibility
 
-\[
+$
 S_e^*=\{q\in Q:M(e,q)\}
-\]
+$
 
 and resistance
 
-\[
+$
 N_e=Q\setminus S_e^*.
-\]
+$
 
 ### Theorem 1 — Resistant-frontier phase formula
 
-One exhaustive \(e\)-treatment sends active filter \(A\) to
+One exhaustive $e$-treatment sends active filter $A$ to
 
-\[
+$
 \boxed{
 D_e(A)=\uparrow(A\cap N_e)
 }
-\]
+$
 
-where \(\uparrow\) denotes upward closure in the descendant-before-ancestor order [9].
+where $\uparrow$ denotes upward closure in the descendant-before-ancestor order [9].
 
 #### Proof sketch
 
-Any active resistant node cannot be removed. Its active ancestors remain blocked by it, so \(\uparrow(A\cap N_e)\) survives.
+Any active resistant node cannot be removed. Its active ancestors remain blocked by it, so $\uparrow(A\cap N_e)$ survives.
 
-Conversely, take an active node \(q\) outside that upward closure. No active descendant of \(q\), including \(q\), is resistant to \(e\). Finiteness allows terminal susceptible descendants to be removed bottom-up until \(q\) becomes terminal and is itself removed. Hence nothing outside the displayed upward closure survives.
+Conversely, take an active node $q$ outside that upward closure. No active descendant of $q$, including $q$, is resistant to $e$. Finiteness allows terminal susceptible descendants to be removed bottom-up until $q$ becomes terminal and is itself removed. Hence nothing outside the displayed upward closure survives.
 
 The formula eliminates microscopic fixed-point iteration from the derived phase representation.
 
@@ -217,42 +217,42 @@ The formula eliminates microscopic fixed-point iteration from the derived phase 
 
 Let
 
-\[
+$
 I=Q\setminus A
-\]
+$
 
 be the removed-node ideal. The phase action is
 
-\[
+$
 R_e(I)
 =
 Q\setminus
 \uparrow\big((Q\setminus I)\cap N_e\big).
-\]
+$
 
 The action satisfies:
 
-\[
+$
 I\subseteq R_e(I),
-\]
+$
 
-\[
+$
 I\subseteq J
 \Rightarrow
 R_e(I)\subseteq R_e(J),
-\]
+$
 
-\[
+$
 R_e(R_e(I))=R_e(I),
-\]
+$
 
 and
 
-\[
+$
 \boxed{
 R_e(I\cap J)=R_e(I)\cap R_e(J).
 }
-\]
+$
 
 Thus each treatment acts as a meet-preserving closure operator on the finite ideal lattice [9].
 
@@ -266,21 +266,21 @@ The stronger join law is false in general. A susceptible parent with two resista
 
 ### Theorem 2 — Effective susceptibility classifies one-phase behavior
 
-For enzymes \(e_1,e_2\),
+For enzymes $e_1,e_2$,
 
-\[
+$
 \boxed{
 S_{e_1}^*=S_{e_2}^*
 \iff
 R_{e_1}=R_{e_2}
 }
-\]
+$
 
 as functions on all valid states [9].
 
 The forward direction follows immediately from the resistant-frontier formula.
 
-For the reverse direction, if the supports differ at node \(q\), choose the active filter generated by \(q\). One enzyme can remove \(q\); the other cannot. The phase outputs differ.
+For the reverse direction, if the supports differ at node $q$, choose the active filter generated by $q$. One enzyme can remove $q$; the other cannot. The phase outputs differ.
 
 This has a useful modeling consequence: susceptibility tuples on retained target residues are source-real but irrelevant to treatment behavior in version 0.1 because target membership independently prohibits their cleavage.
 
@@ -288,27 +288,27 @@ This has a useful modeling consequence: susceptibility tuples on retained target
 
 Define enzyme dominance by
 
-\[
+$
 e_1\preceq e_2
 \iff
 S_{e_1}^*\subseteq S_{e_2}^*.
-\]
+$
 
-Then \(e_2\) removes at least everything \(e_1\) removes from every valid state, and the phase operators satisfy two-sided absorption:
+Then $e_2$ removes at least everything $e_1$ removes from every valid state, and the phase operators satisfy two-sided absorption:
 
-\[
+$
 \boxed{
 R_{e_2}\circ R_{e_1}=R_{e_2}
 }
-\]
+$
 
 and
 
-\[
+$
 \boxed{
 R_{e_1}\circ R_{e_2}=R_{e_2}.
 }
-\]
+$
 
 Consequently adjacent comparable treatments collapse to the stronger treatment. Adjacent duplicate removal is the equality case.
 
@@ -320,9 +320,9 @@ The exact treatment problem can also be represented as a language over the enzym
 
 ### 6.1 Upward word order
 
-Let \(u\preceq_M v\) when \(u\) embeds as a subsequence of \(v\) and every retained symbol of \(u\) is matched to an equal or susceptibility-dominating symbol of \(v\).
+Let $u\preceq_M v$ when $u$ embeds as a subsequence of $v$ and every retained symbol of $u$ is matched to an equal or susceptibility-dominating symbol of $v$.
 
-If \(u\) solves and \(u\preceq_M v\), then \(v\) solves. Extra treatments cannot recreate removed material, and replacing a treatment by a dominator cannot reduce progress.
+If $u$ solves and $u\preceq_M v$, then $v$ solves. Extra treatments cannot recreate removed material, and replacing a treatment by a dominator cannot reduce progress.
 
 The solving language is therefore an upset under this generalized subword order.
 
@@ -330,32 +330,32 @@ This is structurally aligned with the word embeddings studied in Higman-style we
 
 ### 6.2 Unique minimal TRUE boundary
 
-Let \(B_M\) be the set of \(\preceq_M\)-minimal solving words.
+Let $B_M$ be the set of $\preceq_M$-minimal solving words.
 
 The admitted result is
 
-\[
+$
 w\text{ solves}
 \iff
 \exists b\in B_M:\;b\preceq_M w.
-\]
+$
 
-Thus \(B_M\) is the unique minimal TRUE boundary of the complete solving language under the declared generalized word order [10].
+Thus $B_M$ is the unique minimal TRUE boundary of the complete solving language under the declared generalized word order [10].
 
-For \(b=a_1\cdots a_m\), define
+For $b=a_1\cdots a_m$, define
 
-\[
+$
 UP(a_i)=\{e:S_{a_i}^*\subseteq S_e^*\}.
-\]
+$
 
 Then the complete solving language has the finite exact form
 
-\[
+$
 L
 =
 \bigcup_{b\in B_M}
 \Sigma^*UP(a_1)\Sigma^*\cdots UP(a_m)\Sigma^*.
-\]
+$
 
 Recent work on upward-closed word languages and quasi-ordered automata provides external algorithmic context for such finite bases [22]. Experiment 034 and Experiment 035 independently exercised this connection inside the frozen model.
 
@@ -365,33 +365,33 @@ There is also an exact negative certificate.
 
 For treatment word
 
-\[
+$
 w=e_1e_2\cdots e_k,
-\]
+$
 
 the word fails exactly when there exists a nondecreasing chain
 
-\[
+$
 q_1\le q_2\le\cdots\le q_k
-\]
+$
 
 such that
 
-\[
+$
 q_i\in N_{e_i}
-\]
+$
 
 for every treatment position [11].
 
 So:
 
-\[
+$
 \boxed{
 w\text{ solves}
 \iff
 \text{no treatment-spanning resistant chain exists}.
 }
-\]
+$
 
 Positive path coverage and negative resistant chains are complementary decision interfaces. They are not the same witness object.
 
@@ -401,19 +401,19 @@ Positive path coverage and negative resistant chains are complementary decision 
 
 After the corrected A8 proof, a treatment word solves exactly when it covers every maximal non-target path [7].
 
-For singleton susceptibility, each non-target node has one treatment label. Along a path, consecutive equal labels can be executed in the same exhaustive phase, so compress consecutive equal labels. Let \(COMP(P)\) be the resulting run-compressed word.
+For singleton susceptibility, each non-target node has one treatment label. Along a path, consecutive equal labels can be executed in the same exhaustive phase, so compress consecutive equal labels. Let $COMP(P)$ be the resulting run-compressed word.
 
-Then a treatment word covers path \(P\) exactly when \(COMP(P)\) is an ordinary subsequence of that treatment word.
+Then a treatment word covers path $P$ exactly when $COMP(P)$ is an ordinary subsequence of that treatment word.
 
 Therefore:
 
-\[
+$
 \boxed{
 \text{singleton-susceptibility optimum}
 =
 \text{SCS length of the compressed maximal-path words}.
 }
-\]
+$
 
 Moreover, the complete optimum treatment family is exactly the shortest-common-supersequence family of those words.
 
@@ -425,7 +425,7 @@ For general set-valued susceptibility, the problem is **not** silently one ordin
 
 ## 8. The Exact Two-Enzyme Collapse
 
-The strongest clean special case occurs when there are at most two effective treatment classes, call them \(A\) and \(B\).
+The strongest clean special case occurs when there are at most two effective treatment classes, call them $A$ and $B$.
 
 ### Theorem 3 — Minimum words alternate
 
@@ -433,47 +433,47 @@ Every minimum solution has no adjacent duplicate treatment because phase idempot
 
 Over a two-symbol alphabet, every no-adjacent-repeat word is alternating. Hence every minimum solution is one of
 
-\[
+$
 ABAB\cdots
-\]
+$
 
 or
 
-\[
+$
 BABA\cdots
-\]
+$
 
 truncated at some length [23].
 
-For each maximal path \(P\), let \(a(P)\) be the minimum length of an \(A\)-starting alternating word that covers \(P\), and \(b(P)\) the analogous \(B\)-starting length.
+For each maximal path $P$, let $a(P)$ be the minimum length of an $A$-starting alternating word that covers $P$, and $b(P)$ the analogous $B$-starting length.
 
 Define
 
-\[
+$
 A_{\max}=\max_P a(P),
 \qquad
 B_{\max}=\max_P b(P).
-\]
+$
 
 ### Theorem 4 — Exact binary optimum
 
-\[
+$
 \boxed{
 \mathrm{OPT}
 =
 \min(A_{\max},B_{\max}).
 }
-\]
+$
 
-An \(A\)-starting solution must have length at least \(A_{\max}\), and the alternating word of exactly that length covers every path. The argument is symmetric for \(B\).
+An $A$-starting solution must have length at least $A_{\max}$, and the alternating word of exactly that length covers every path. The argument is symmetric for $B$.
 
-Choose a path attaining \(A_{\max}\) and a path attaining \(B_{\max}\). Those at most two paths already witness the global optimum. Therefore
+Choose a path attaining $A_{\max}$ and a path attaining $B_{\max}$. Those at most two paths already witness the global optimum. Therefore
 
-\[
+$
 \boxed{
 J_2=\mathrm{OPT}
 }
-\]
+$
 
 for every frozen version-0.1 state with at most two effective treatment classes, including set-valued susceptibility [23].
 
@@ -489,22 +489,22 @@ The binary theorem does not extend by replacing 2 with the alphabet size.
 
 Consider four independent singleton-susceptibility paths
 
-\[
+$
 010,\qquad
 012,\qquad
 101,\qquad
 210.
-\]
+$
 
 Every three-path subfamily has a common supersequence of length 5, but the full four-path family requires length 6 [24].
 
 Thus
 
-\[
+$
 J_3=5
 <
 6=\mathrm{OPT}.
-\]
+$
 
 The obstruction uses:
 
@@ -519,48 +519,48 @@ It is pure global synchronization of treatment order.
 
 This is the first qualitative transition:
 
-\[
+$
 \text{two effective labels}
 \Rightarrow
 \text{pairwise exactness},
-\]
+$
 
 while
 
-\[
+$
 \text{three effective labels}
 \Rightarrow
 \text{higher-order synchronization can be essential}.
-\]
+$
 
 ---
 
 ## 10. Witness Width
 
-For a maximal-path family \(\mathcal P\), define
+For a maximal-path family $\mathcal P$, define
 
-\[
+$
 J_h(\mathcal P)
 =
 \max_{\substack{\mathcal H\subseteq\mathcal P\\|\mathcal H|\le h}}
 \mathrm{OPT}(\mathcal H).
-\]
+$
 
 Define the **witness width**
 
-\[
+$
 W(\mathcal P)
 =
 \min\{h:J_h(\mathcal P)=\mathrm{OPT}(\mathcal P)\}.
-\]
+$
 
-Thus \(W\) is the smallest number of path constraints that can already witness the full optimum value [25].
+Thus $W$ is the smallest number of path constraints that can already witness the full optimum value [25].
 
 For binary instances, Theorem 4 gives
 
-\[
+$
 W\le2.
-\]
+$
 
 For ternary instances, the width can be much larger.
 
@@ -568,39 +568,39 @@ For ternary instances, the width can be much larger.
 
 ## 11. Critical Covers
 
-Fix a treatment threshold \(L\). Let \(U_L\) be the complete set of run-compressed treatment words of length \(L\).
+Fix a treatment threshold $L$. Let $U_L$ be the complete set of run-compressed treatment words of length $L$.
 
-For path \(P\), define the failure set
+For path $P$, define the failure set
 
-\[
+$
 D_L(P)
 =
 \{w\in U_L:P\not\preceq_{\text{subseq}} w\}.
-\]
+$
 
-A selected path family \(F\) has no length-\(L\) solution exactly when
+A selected path family $F$ has no length-$L$ solution exactly when
 
-\[
+$
 \bigcup_{P\in F}D_L(P)=U_L.
-\]
+$
 
-The family is **threshold-critical** when the cover is inclusion-minimal: for every selected path \(P_i\), there exists a private word \(w_i\in U_L\) such that
+The family is **threshold-critical** when the cover is inclusion-minimal: for every selected path $P_i$, there exists a private word $w_i\in U_L$ such that
 
-\[
+$
 w_i\in D_L(P_i)
-\]
+$
 
 but
 
-\[
+$
 w_i\notin D_L(P_j)
 \qquad
 (j\ne i).
-\]
+$
 
-Equivalently, \(w_i\) fails exactly \(P_i\) among the selected paths.
+Equivalently, $w_i$ fails exactly $P_i$ among the selected paths.
 
-If the full family has no length-\(L\) solution and every one-path deletion has a length-\(L\) solution, then every selected path is necessary to witness the optimum threshold. The witness width equals the selected family cardinality [26].
+If the full family has no length-$L$ solution and every one-path deletion has a length-$L$ solution, then every selected path is necessary to witness the optimum threshold. The witness width equals the selected family cardinality [26].
 
 This converts finite witness-width construction into a structured **Maximum Minimal Set Cover** problem over the path/threshold-word failure incidence relation.
 
@@ -610,7 +610,7 @@ This converts finite witness-width construction into a structured **Maximum Mini
 
 A sequence of exact finite Node.js experiments constructed increasingly large ternary threshold-critical families.
 
-| Experiment | Path length | Threshold \(L\) | Witness width | Non-target nodes |
+| Experiment | Path length | Threshold $L$ | Witness width | Non-target nodes |
 | --- | ---: | ---: | ---: | ---: |
 | 042 | 5 | 10 | 24 | 120 |
 | 043 | 6 / refined critical-cover search | 12 | 35 | 210 |
@@ -621,65 +621,65 @@ A sequence of exact finite Node.js experiments constructed increasingly large te
 
 The strongest current construction uses all 1,536 run-compressed ternary path candidates of length 10 as the search universe and all
 
-\[
+$
 3\cdot2^{19}
 =
 1,572,864
-\]
+$
 
 run-compressed treatment words of length 20 as the threshold universe.
 
 The repaired Experiment 047 selected 173 paths and verified:
 
-\[
+$
 \bigcup_{i=1}^{173}D_{20}(P_i)=U_{20},
-\]
+$
 
 with zero uncovered threshold words.
 
-For every selected path \(P_i\), it also recorded a private threshold word \(w_i\) that covers the other 172 selected paths and fails \(P_i\).
+For every selected path $P_i$, it also recorded a private threshold word $w_i$ that covers the other 172 selected paths and fails $P_i$.
 
 Therefore:
 
-\[
+$
 \mathrm{OPT}(F_{173})>20,
-\]
+$
 
 while
 
-\[
+$
 \mathrm{OPT}(F_{173}\setminus\{P_i\})\le20
-\]
+$
 
-for every \(i\).
+for every $i$.
 
 Hence
 
-\[
+$
 \boxed{
 W(F_{173})=173.
 }
-\]
+$
 
 The direct glycan realization is simply 173 independent singleton-susceptibility chains of length 10 under retained target structure: 1,730 non-target nodes [27].
 
 Consequently:
 
-\[
+$
 J_h(F_{173})<\mathrm{OPT}(F_{173})
 \qquad
 \text{for every }h\le172.
-\]
+$
 
-Thus no universal fixed-\(h\) theorem with \(h\le172\) can determine the optimum even in this restricted deterministic three-enzyme chain subclass.
+Thus no universal fixed-$h$ theorem with $h\le172$ can determine the optimum even in this restricted deterministic three-enzyme chain subclass.
 
 ### What this does not prove
 
 The finite ladder
 
-\[
+$
 24,\;35,\;54,\;75,\;113,\;173
-\]
+$
 
 does **not** prove unbounded ternary witness width.
 
@@ -693,56 +693,56 @@ The private-witness structure has an additional order-theoretic interpretation.
 
 For a threshold-critical family
 
-\[
+$
 P_1,\ldots,P_k
-\]
+$
 
 with private words
 
-\[
+$
 w_1,\ldots,w_k,
-\]
+$
 
 we have
 
-\[
+$
 P_i\not\preceq w_i
-\]
+$
 
 and
 
-\[
+$
 P_i\preceq w_j
 \quad\text{for }i\ne j.
-\]
+$
 
 Because the selected paths all have the same length, they form an antichain under ordinary subsequence. The private words, also of one common length and necessarily distinct, form another antichain.
 
 Therefore the induced poset on
 
-\[
+$
 \{P_1,\ldots,P_k,w_1,\ldots,w_k\}
-\]
+$
 
 has exactly the cross-relations
 
-\[
+$
 P_i<w_j
 \iff
 i\ne j.
-\]
+$
 
-This is the classical **standard example** \(S_k\) from poset-dimension theory [21,28].
+This is the classical **standard example** $S_k$ from poset-dimension theory [21,28].
 
-A direct linear-extension argument shows that one linear extension cannot reverse two different incomparable diagonal pairs \((P_i,w_i)\). Hence the induced subposet has dimension at least \(k\).
+A direct linear-extension argument shows that one linear extension cannot reverse two different incomparable diagonal pairs $(P_i,w_i)$. Hence the induced subposet has dimension at least $k$.
 
 Applying the width-173 construction:
 
-\[
+$
 \boxed{
 \text{the ternary subsequence poset contains an explicitly represented }S_{173}.
 }
-\]
+$
 
 Therefore it contains a finite induced subposet of Dushnik–Miller dimension at least 173 [21,28].
 
@@ -750,8 +750,8 @@ The standard-example pattern alone is not enough to certify witness width. Thres
 
 This distinction is important. The same certificate simultaneously has:
 
-- an optimization reading: witness width \(=k\);
-- an order-theoretic reading: induced \(S_k\), dimension at least \(k\).
+- an optimization reading: witness width $=k$;
+- an order-theoretic reading: induced $S_k$, dimension at least $k$.
 
 Neither reading should be substituted for the other.
 
@@ -772,11 +772,11 @@ At the width-75 scale, repeated structural optimization reduced the same frozen 
 
 At threshold 20, Experiment 047 evaluated an exact path/word surface of
 
-\[
+$
 1,536\times1,572,864
 =
 2,415,919,104
-\]
+$
 
 candidate subsequence pairs. The dense failure bit matrix used 301,989,888 bytes. The complete repaired Node run, including incidence construction, 128 deterministic deletion searches, and exact verification, completed in approximately 119.5 seconds on its recorded runner [27].
 
@@ -788,17 +788,17 @@ An initial scaled run appeared to find a length-20 word containing every length-
 
 A separate direct Node verifier found:
 
-\[
+$
 \text{universal length-19 words}=0,
-\]
+$
 
-\[
+$
 \text{universal length-20 words}=0.
-\]
+$
 
-Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols \(p_0,\ldots,p_8\). The tenth symbol \(p_9\) had been omitted.
+Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols $p_0,\ldots,p_8$. The tenth symbol $p_9$ had been omitted.
 
-The minimum repair added \(p_9\), added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to \(PL=10\). The repaired run then produced the width-173 certificate [29].
+The minimum repair added $p_9$, added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to $PL=10$. The repaired run then produced the width-173 certificate [29].
 
 The episode is relevant because it illustrates the IsoGraph discrepancy discipline: an anomaly is neither automatically promoted to discovery nor immediately discarded as “just a bug.” Competing structural and implementation explanations are separated and falsified.
 
@@ -830,7 +830,7 @@ Escardó studies joins of nuclei—idempotent, inflationary, meet-preserving map
 
 Finkel and Schnoebelen develop the well-structured transition-system framework, where monotone transitions and well-quasi-orders support finite symbolic reasoning [20]. The finite glycan ideal-state system is simpler than the general infinite-state setting but shares the useful antichain/upward-closed geometry.
 
-Aristote gives modern algorithms for learning upward-closed word languages and computing finite bases in quasi-ordered settings [22]. The exact glycan \(B_M\) boundary and star-product oracle provide a concrete project-specific interface to those ideas.
+Aristote gives modern algorithms for learning upward-closed word languages and computing finite bases in quasi-ordered settings [22]. The exact glycan $B_M$ boundary and star-product oracle provide a concrete project-specific interface to those ideas.
 
 ### Poset dimension
 
@@ -846,23 +846,23 @@ This is an idealized mathematical model. Real enzyme behavior may depend on kine
 
 ### 16.2 Closed-world specificity
 
-The relation \(M(e,r)\) is assumed exact and complete for the represented instance. The model does not derive susceptibility from chemistry.
+The relation $M(e,r)$ is assumed exact and complete for the represented instance. The model does not derive susceptibility from chemistry.
 
 ### 16.3 Finite lower bound, not unboundedness
 
 The current strongest unconditional construction proves only
 
-\[
+$
 W\ge173
-\]
+$
 
 for a fixed ternary instance.
 
 It does **not** establish
 
-\[
+$
 \forall k\;\exists F:\;W(F)\ge k.
-\]
+$
 
 That unboundedness question remains open in the current project record.
 
@@ -890,11 +890,11 @@ An idealized enzyme-treatment problem on rooted branched glycans admits a compac
 
 One exhaustive treatment is simply:
 
-\[
+$
 \text{retain resistant active sites}
 \quad+\quad
 \text{close upward to their blockers}.
-\]
+$
 
 That phase operator is a meet-preserving closure. Effective susceptibility completely determines phase behavior. Treatment dominance becomes algebraic absorption. The complete solving language is upward closed under insertion and treatment dominance and has a finite exact minimal boundary.
 
@@ -902,21 +902,21 @@ The path view exposes a sharper transition.
 
 With two effective treatment classes, the no-adjacent-repeat condition forces every irredundant word to alternate, and two paths always suffice to witness the global optimum:
 
-\[
+$
 J_2=\mathrm{OPT}.
-\]
+$
 
 With three treatment classes, that collapse disappears. Pure synchronization among independent deterministic chains can require many simultaneously load-bearing path constraints. Exact finite constructions now reach:
 
-\[
+$
 \boxed{W=173}.
-\]
+$
 
 The associated private witnesses induce:
 
-\[
+$
 \boxed{S_{173}}
-\]
+$
 
 inside the ternary subsequence poset and therefore a finite poset-dimension lower bound of at least 173.
 
