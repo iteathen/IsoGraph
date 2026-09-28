@@ -7,7 +7,7 @@
 **Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.**
 
 - [Publication revision 0.1](P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md)
-- Publication blob: `b7375a036d5508449392ce1a52f3cb378f231e02`
+- Publication blob: `e4581335eff8296c7f2d59e09dcaea4e6d0934fd`
 - [Broad novelty review](../../p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
 - [Publication preflight](../../p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_PUBLICATION_PREFLIGHT_0_1.md)
 - Contribution: structural synthesis of established future-equivalence, dominance/simulation, dead-support, factorization, and objective-projection ideas over one continuation-support semantics
