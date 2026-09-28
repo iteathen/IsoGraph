@@ -1,0 +1,636 @@
+{
+  "experiment": "048",
+  "disposition": "DOES_NOT_QUALIFY",
+  "core_0_20": {
+    "pass": false,
+    "passed_cases": [],
+    "failed_cases": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18"
+    ]
+  },
+  "guards": {
+    "exact_case_count": true,
+    "exact_case_order": true,
+    "no_duplicates": true,
+    "no_unexpected": true,
+    "self_audit": true,
+    "module_assessment_consistent": true
+  },
+  "duplicates": [],
+  "unexpected_case_ids": [],
+  "self_audit_errors": [],
+  "case_results": [
+    {
+      "case_id": "C01",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.named_node_status",
+          "expected": "REJECTED_AS_LEAF",
+          "actual": null
+        },
+        {
+          "field": "answers.definition_must_expand",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "definition_must_expand",
+            "named_node_status",
+            "primitive_complete"
+          ],
+          "actual": [
+            "linked_as_authoritative_leaf",
+            "primitive_completeness"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.qualified_endpoint_cache_allowed",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.qualified_endpoint_can_replace_primitive_support",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": "NO"
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "primitive_complete",
+            "qualified_endpoint_cache_allowed",
+            "qualified_endpoint_can_replace_primitive_support"
+          ],
+          "actual": [
+            "primitive_complete",
+            "q_cached_or_referenced"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C03",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.raw_literals_allowed",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.length_predicate_status",
+          "expected": "REJECTED_AS_LEAF",
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "length_predicate_status",
+            "primitive_complete",
+            "raw_literals_allowed"
+          ],
+          "actual": [
+            "length_eq_as_leaf",
+            "literals",
+            "primitive_completeness"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C04",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.computation_predicate_status",
+          "expected": "REJECTED_AS_LEAF",
+          "actual": null
+        },
+        {
+          "field": "answers.transition_trace_expansion_required",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "computation_predicate_status",
+            "primitive_complete",
+            "transition_trace_expansion_required"
+          ],
+          "actual": [
+            "accepts_leaf",
+            "primitive_completeness"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C05",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.carrier_status",
+          "expected": "RAW_DATA_ATOM",
+          "actual": null
+        },
+        {
+          "field": "answers.behavior_separately_represented",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "behavior_separately_represented",
+            "carrier_status",
+            "primitive_complete"
+          ],
+          "actual": [
+            "primitive_completeness",
+            "raw_identities"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C06",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.derived_label_status",
+          "expected": "DERIVED_VIEW",
+          "actual": null
+        },
+        {
+          "field": "answers.exact_reconstruction_after_deletion",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.derived_label_authoritative_support",
+          "expected": false,
+          "actual": "NO"
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "derived_label_authoritative_support",
+            "derived_label_status",
+            "exact_reconstruction_after_deletion"
+          ],
+          "actual": [
+            "derived_label_authoritative_support",
+            "exact_source_reconstruction"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C07",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.dp_may_use_derived_view",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.exact_admission_on_view_alone",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_projection_required",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "dp_may_use_derived_view",
+            "exact_admission_on_view_alone",
+            "primitive_projection_required"
+          ],
+          "actual": [
+            "dp_may_use_loop",
+            "exact_admission_rely_on_loop_alone"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C08",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.relation_status",
+          "expected": "QU_UNEXPANDED",
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.invent_primitive_allowed",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "invent_primitive_allowed",
+            "primitive_complete",
+            "relation_status"
+          ],
+          "actual": [
+            "primitive_complete_claim_pass",
+            "r_closure_status"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C09",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.sidecar_can_supply_missing_native_meaning",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.native_expansion_required",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "native_expansion_required",
+            "primitive_complete",
+            "sidecar_can_supply_missing_native_meaning"
+          ],
+          "actual": [
+            "sidecar_makes_primitive_complete"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C10",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.core_0_19_predecessor_valid",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.core_0_20_primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.retroactive_invalidation",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "core_0_19_predecessor_valid",
+            "core_0_20_primitive_complete",
+            "retroactive_invalidation"
+          ],
+          "actual": [
+            "core_0_20_primitive_completeness",
+            "historical_core_0_19_validity"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C11",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.source_round_trip",
+          "expected": "EXACT",
+          "actual": null
+        },
+        {
+          "field": "answers.unsupported_addition",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "primitive_complete",
+            "source_round_trip",
+            "unsupported_addition"
+          ],
+          "actual": [
+            "primitive_completeness",
+            "source_round_trip_status"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C12",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.primitive_semantics_changed",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.derived_names_semantic_authority",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.exact_claim_preserved",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "derived_names_semantic_authority",
+            "exact_claim_preserved",
+            "primitive_semantics_changed"
+          ],
+          "actual": [
+            "exact_claims_depend_on_original_names",
+            "primitive_semantics_change"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C13",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.qualified_node_status",
+          "expected": "DERIVED_VIEW",
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.exact_support_survives_view_deletion",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "exact_support_survives_view_deletion",
+            "primitive_complete",
+            "qualified_node_status"
+          ],
+          "actual": [
+            "primitive_completeness",
+            "q_classification"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C14",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.raw_literals_allowed",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.add_status",
+          "expected": "REJECTED_AS_LEAF",
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "add_status",
+            "primitive_complete",
+            "raw_literals_allowed"
+          ],
+          "actual": [
+            "add_classification",
+            "literals",
+            "primitive_completeness"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C15",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.incidence_status",
+          "expected": "CLOSED_PRIMITIVE",
+          "actual": null
+        },
+        {
+          "field": "answers.internal_cause_expansion_required",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "incidence_status",
+            "internal_cause_expansion_required",
+            "primitive_complete"
+          ],
+          "actual": [
+            "color_incidences_as_primitive",
+            "internal_cause_expanded"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C16",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.carrier_status",
+          "expected": "RAW_DATA_ATOM",
+          "actual": null
+        },
+        {
+          "field": "answers.domain_flavored_name_breaks_closure",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "carrier_status",
+            "domain_flavored_name_breaks_closure",
+            "primitive_complete"
+          ],
+          "actual": [
+            "carrier_identities_allowed"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C17",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.firewall_pass",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.exact_claim_reconstructable",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": true,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "exact_claim_reconstructable",
+            "firewall_pass",
+            "primitive_complete"
+          ],
+          "actual": [
+            "firewall_result",
+            "primitive_completeness"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C18",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.view_status",
+          "expected": "DERIVED_VIEW",
+          "actual": null
+        },
+        {
+          "field": "answers.firewall_pass",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.primitive_complete",
+          "expected": false,
+          "actual": null
+        },
+        {
+          "field": "answers.keys",
+          "expected": [
+            "firewall_pass",
+            "primitive_complete",
+            "view_status"
+          ],
+          "actual": [
+            "firewall_result",
+            "primitive_completeness",
+            "v_classification"
+          ]
+        }
+      ]
+    }
+  ]
+}

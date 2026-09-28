@@ -1,0 +1,110 @@
+{
+  "experiment": "048",
+  "run": "RUN-EXP048",
+  "source_sha": "a96f63b544fef6a6af944d6b0022a52299299ce0",
+  "model_requested": "gemini-3-flash-preview",
+  "model_candidates": [
+    "gemini-3-flash-preview",
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-pro-preview",
+    "gemini-3.1-flash-lite",
+    "gemini-pro-latest"
+  ],
+  "packet_sha256": "10d5bdecbda14952d2875e08e87a82b4827178b0364fa2d74bd91ab8e1aa8f3a",
+  "authority_hashes": {
+    "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+    "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2",
+    "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md": "1f1510b41e4351726e4d9e714eb32ece0d5e69f0964255aabd7b4a6e94eee4cc",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md": "9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7"
+  },
+  "core_0_20_sha256": "9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7",
+  "case_count": 18,
+  "input_manifest": [
+    {
+      "path": "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+      "sha256": "348d59017047f7d64daba2066b9b3e068c629186ee3e767551cfcb9815fe36a8",
+      "bytes": 76065
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md",
+      "sha256": "51be43bec990b0c7baf93914e074c5fc9a29ec64b00eaf91eb25b672d9c04a63",
+      "bytes": 11063
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+      "sha256": "8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2",
+      "bytes": 35102
+    },
+    {
+      "path": "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+      "sha256": "1f1510b41e4351726e4d9e714eb32ece0d5e69f0964255aabd7b4a6e94eee4cc",
+      "bytes": 25578
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+      "sha256": "9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7",
+      "bytes": 13299
+    },
+    {
+      "path": "experiments/048/BASELINE_AUTHORITY.md",
+      "sha256": "4bd95d7528080e95f2aa83a10f88d84c958af6ff91f2f851e9b2ddc2c94c8107",
+      "bytes": 669
+    },
+    {
+      "path": "experiments/048/CORE_0_20_CASES.md",
+      "sha256": "38ef7a2657071bc68d22a7c935879620b687981c985540aeba35973313c8e081",
+      "bytes": 7159
+    },
+    {
+      "path": "experiments/048/COLD_PROMPT.md",
+      "sha256": "54fd9d5b0a429cdeea6cb1c9b8781daf72c52be10abe166962744e3671b220f8",
+      "bytes": 1182
+    }
+  ],
+  "workflow_run_id": "36361985554",
+  "workflow_attempt": "1",
+  "selected_model": "gemini-3-flash-preview",
+  "api_attempts": 2,
+  "http_status": 200,
+  "provider_calls": [
+    {
+      "model": "gemini-3-flash-preview",
+      "status": 200,
+      "attempt": 2,
+      "thinking": true,
+      "usage": {
+        "promptTokenCount": 35513,
+        "candidatesTokenCount": 2425,
+        "totalTokenCount": 40868,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 35513
+          }
+        ],
+        "thoughtsTokenCount": 2930,
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "disabled_models": {},
+  "semantic_status": "FROZEN",
+  "report_sha256": "55700c645e7743c7a7b839922eabdfb72e7da999fcdedf7d6cc462ed0b4276a7",
+  "finish_reason": "STOP",
+  "usage": {
+    "promptTokenCount": 35513,
+    "candidatesTokenCount": 2425,
+    "totalTokenCount": 40868,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 35513
+      }
+    ],
+    "thoughtsTokenCount": 2930,
+    "serviceTier": "standard"
+  }
+}
