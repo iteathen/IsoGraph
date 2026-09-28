@@ -1,0 +1,108 @@
+{
+  "cases": [
+    {
+      "case_id": "C01",
+      "answers": {
+        "primitive_complete": false,
+        "named_node_status": "REJECTED_AS_LEAF",
+        "definition_must_expand": true
+      },
+      "reason": "LINKED is a definable domain concept with an available expansion; under Core 0.20, it cannot be an authoritative leaf if it can be decomposed into lower logical structure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 2"
+      ]
+    },
+    {
+      "case_id": "C02",
+      "answers": {
+        "qualified_endpoint_cache_allowed": true,
+        "qualified_endpoint_can_replace_primitive_support": false,
+        "primitive_complete": false
+      },
+      "reason": "Qualified constructions may be referenced for caching or navigation but cannot replace primitive support for a primitive-closure claim when internal semantics are load-bearing.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 3"
+      ]
+    },
+    {
+      "case_id": "C03",
+      "answers": {
+        "raw_literals_allowed": true,
+        "length_predicate_status": "REJECTED_AS_LEAF",
+        "primitive_complete": false
+      },
+      "reason": "Arithmetic behavior is not primitive; labels like LENGTH_EQ must be expanded to lower relational/logical structure to satisfy primitive closure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 5"
+      ]
+    },
+    {
+      "case_id": "C04",
+      "answers": {
+        "computation_predicate_status": "REJECTED_AS_LEAF",
+        "transition_trace_expansion_required": true,
+        "primitive_complete": false
+      },
+      "reason": "Computation predicates must expose transition and trace semantics; stopping at ACCEPTS hides load-bearing logic required for primitive closure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 6"
+      ]
+    },
+    {
+      "case_id": "C05",
+      "answers": {
+        "carrier_status": "RAW_DATA_ATOM",
+        "behavior_separately_represented": true,
+        "primitive_complete": true
+      },
+      "reason": "Raw carrier identities are allowed as atoms when their behavior is fully expressed by separate primitive logical relations.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 4"
+      ]
+    },
+    {
+      "case_id": "C06",
+      "answers": {
+        "derived_label_status": "DERIVED_VIEW",
+        "exact_reconstruction_after_deletion": true,
+        "derived_label_authoritative_support": false
+      },
+      "reason": "Derived views are not authoritative support; exact reconstruction must succeed from the primitive kernel alone after view deletion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 7",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 14"
+      ]
+    },
+    {
+      "case_id": "C07",
+      "answers": {
+        "dp_may_use_derived_view": true,
+        "exact_admission_on_view_alone": false,
+        "primitive_projection_required": true
+      },
+      "reason": "Discovery Protocol may use abstractions for search, but exact admission requires projecting results back to primitive support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 13"
+      ]
+    },
+    {
+      "case_id": "C08",
+      "answers": {
+        "relation_status": "QU_UNEXPANDED",
+        "primitive_complete": false,
+        "invent_primitive_allowed": false
+      },
+      "reason": "A load-bearing relation with no available lower definition must be marked as QU_UNEXPANDED; failure to locate a definition does not permit promotion to primitive status.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 9",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 11"
+      ]
+    },
+    {
+      "case_id": "C09",
+      "answers": {
+        "sidecar_can_supply_missing_native_meaning": false,
+        "primitive_complete": false,
+        "native_expansion_required": true
+      },
+      "reason": "Sidecars cannot supply load-bearing
