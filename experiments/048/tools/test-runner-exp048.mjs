@@ -20,6 +20,7 @@ const expected=[
   'CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md',
   'experiments/048/BASELINE_AUTHORITY.md',
   'experiments/048/CORE_0_20_CASES.md',
+  'experiments/048/PUBLIC_OUTPUT_SCHEMA.json',
   'experiments/048/COLD_PROMPT.md'
 ];
 if(JSON.stringify(paths)!==JSON.stringify(expected)) throw new Error('unexpected packet manifest '+JSON.stringify(paths));
