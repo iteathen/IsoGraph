@@ -1,0 +1,116 @@
+{
+  "I01": {
+    "core_primitive_complete": false,
+    "expected_output_privileged": false,
+    "expand_available_definition": true,
+    "patch_to_expected": false,
+    "reason": "Core 0.20 requires unfolding definable nodes into primitive logic; RELAY is not an authoritative leaf. DP 0.8 forbids privileging expected output without a contract violation."
+  },
+  "I02": {
+    "preserve_qu": true,
+    "select_realization": false,
+    "defect_owner_established": false,
+    "reason": "QU 0.1 requires preserving unresolved alternatives. DP 0.8 states the owner of a discrepancy is initially unresolved and forbids selecting a realization to close a branch."
+  },
+  "I03": {
+    "repair_local_defect": true,
+    "scoped_behavioral_equivalence": true,
+    "global_nei_same": false,
+    "preserve_clue": true,
+    "reason": "DP 0.8 requires repairing confirmed defects while preserving structural clues. NEI 0.4 and QU 0.1 forbid inferring global identity from scoped equivalence or shared bytes."
+  },
+  "I04": {
+    "dts_anatomy_violation": true,
+    "validator_defect": true,
+    "repair_transition_record": true,
+    "reason": "DTS 0.1 requires source, event, and destination anatomy. DP 0.8 requires identifying the violated contract (DTS) and the owner (transition record and validator)."
+  },
+  "I05": {
+    "derived_view_allowed": true,
+    "promote_to_core": false,
+    "primitive_firewall_pass": true,
+    "reason": "DP 0.7 and Core 0.20 permit derived views for discovery provided they do not replace primitive support and the firewall test (deletion) preserves the kernel."
+  },
+  "I06": {
+    "preserve_both_authorities": true,
+    "choose_one_without_authority": false,
+    "qu_or_incomplete_boundary": true,
+    "reason": "DP 0.8 forbids choosing one reference without authority. QU 0.1 requires representing the unresolved contradiction as an open structural state."
+  },
+  "I07": {
+    "dp_may_use_view": true,
+    "core_primitive_complete": false,
+    "arithmetic_expansion_required": true,
+    "reason": "DP 0.7 allows derived views for search, but Core 0.20 requires arithmetic to be expanded to primitive relational structure for exact rendering."
+  },
+  "I08": {
+    "historical_core019_valid": true,
+    "core020_complete": false,
+    "retroactive_invalidation": false,
+    "reason": "Core 0.20 explicitly states it does not retroactively rewrite prior artifacts; they remain valid under Core 0.19 but incomplete under the 0.20 primitive-closure rule."
+  },
+  "I09": {
+    "repair_parse_defect": true,
+    "clue_survives": true,
+    "exact_admission_requires_primitive_support": true,
+    "reason": "DP 0.8 requires clue-preserving repair. Core 0.19/0.20 require that exact admission of the motif depends on the underlying primitive support, not the discovery lead."
+  },
+  "I10": {
+    "sidecar_can_supply_native_semantics": false,
+    "core_primitive_complete": false,
+    "qu_unexpanded_or_missing_support": true,
+    "reason": "Core 0.19/0.20 forbid sidecars from supplying load-bearing semantics. Missing definitions must be marked QU_UNEXPANDED."
+  },
+  "I11": {
+    "raw_carriers_allowed": true,
+    "domain_flavored_name_breaks_closure": false,
+    "core_primitive_complete": true,
+    "reason": "Core 0.20 permits raw carrier atoms if behavior is represented logically. Names are non-load-bearing; the primitive kernel remains intact."
+  },
+  "I12": {
+    "patch_justified": false,
+    "preserve_qu": true,
+    "select_realization": false,
+    "reason": "DP 0.8 and QU 0.1 forbid patching to match a test ('green-test patch') when the underlying structure is unresolved. The discrepancy is evidence of the QU state."
+  },
+  "I13": {
+    "repair_required": true,
+    "derived_view_deletion_preserves_assertion": true,
+    "core_firewall_pass": true,
+    "reason": "DP 0.8 requires repair of the local defect. Core 0.20 requires that the assertion remains reconstructable from the primitive kernel after derived views are deleted."
+  },
+  "I14": {
+    "rendering_defect_established": true,
+    "repair_reference": false,
+    "challenge_reference_after_trace": true,
+    "reason": "DP 0.8 requires locating the authoritative defect owner. Trace inspection establishes the rendering defect; the reference is not the owner."
+  },
+  "I15": {
+    "scoped_same": true,
+    "global_identity_established": false,
+    "preserve_source_distinction": true,
+    "reason": "NEI 0.4 and QU 0.1 require preserving source distinctions. Scoped equivalence does not establish global natural identity."
+  },
+  "I16": {
+    "qu_unexpanded": true,
+    "assume_transitivity": false,
+    "dp_pattern_may_be_explored_conditionally": true,
+    "exact_admission_without_authority": false,
+    "reason": "Core 0.19/0.20 forbid assuming unrepresented premises (transitivity). DP 0.7 allows exploration, but exact admission requires qualified authority."
+  },
+  "module_assessment": {
+    "core_0_20": "SUPPORTED",
+    "dp_0_8": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "preserved_module_ownership": true,
+    "did_not_use_dp_as_proof_authority": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_global_identity_from_scoped_same": true,
+    "routed_exact_claims_to_primitive_support": true
+  }
+}
