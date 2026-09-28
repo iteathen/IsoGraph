@@ -94,7 +94,7 @@ async function callGemini(){
     let useThinking=!model.includes('flash-lite');
     for(let attempt=0;attempt<4;attempt++){
       const generationConfig={candidateCount:1,maxOutputTokens:32768,temperature:0.1,responseMimeType:'application/json'};
-      if(useThinking) generationConfig.thinkingConfig={thinkingLevel:'HIGH'};
+      if(useThinking) generationConfig.thinkingConfig={thinkingLevel:'MEDIUM'};
       const request={contents:[{role:'user',parts:[{text:packet}]}],generationConfig};
       const url='https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent';
       let response,responseText='';
