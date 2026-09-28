@@ -75,6 +75,7 @@ Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
 ## Research publications
 
+- [Continuation-Support Reductions for Bounded Existential Computation](research/publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md) — Joshua Oshiro. Structural synthesis of established continuation equivalence, simulation/dominance, dead-support pruning, factorization, and accessibility results; possible synthesis-level contribution only. No P-vs-NP resolution or new lower-bound claim.
 - [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
 - [2026-09-26 publications](research/publications/2026-09-26/)
 
