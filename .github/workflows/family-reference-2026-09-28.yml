@@ -1,0 +1,90 @@
+name: Refresh IsoGraph family reference 2026-09-28
+
+on:
+  push:
+    branches: [qualification/core020-dp08-20260928]
+    paths: [maintenance/FAMILY_REFERENCE_2026-09-28.request]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: 26.7.0}
+      - name: Update maintained DOCX
+        env:
+          AUTHORITY_SNAPSHOT: a3dffccbcdac830789b7a1bb8a2a805bd476d76f
+        run: |
+          set -euo pipefail
+          node maintenance/update-family-reference-2026-09-28.mjs
+      - name: Render and QA package
+        run: |
+          set -euo pipefail
+          mkdir -p out/family-reference/render
+          if command -v libreoffice >/dev/null 2>&1; then
+            OFFICE=libreoffice
+          elif command -v soffice >/dev/null 2>&1; then
+            OFFICE=soffice
+          else
+            sudo apt-get update
+            sudo apt-get install -y libreoffice-writer poppler-utils
+            OFFICE=libreoffice
+          fi
+          "$OFFICE" --headless --convert-to pdf --outdir out/family-reference IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+          PDF=out/family-reference/IsoGraph_Family_Reference_Joshua_Oshiro_2026.pdf
+          test -s "$PDF"
+          if ! command -v pdftoppm >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          pdftoppm -png -r 110 "$PDF" out/family-reference/render/page
+          ls out/family-reference/render/page-*.png >/dev/null
+          unzip -p IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx word/document.xml             | node -e "let x='';process.stdin.setEncoding('utf8');process.stdin.on('data',d=>x+=d);process.stdin.on('end',()=>{const t=[...x.matchAll(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g)].map(m=>m[1].replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>')).join('\n');process.stdout.write(t)})"             > out/family-reference/DOCX_TEXT.txt
+          grep -F "Current Qualified Authority - 2026-09-28" out/family-reference/DOCX_TEXT.txt
+          grep -F "Experiment 052 run 36365347906" out/family-reference/DOCX_TEXT.txt
+          PAGE_COUNT=$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')
+          DOCX_SHA=$(sha256sum IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx | awk '{print $1}')
+          DOCX_BYTES=$(stat -c %s IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx)
+          mkdir -p maintenance
+          cat > maintenance/FINAL_PRODUCT_REFRESH_2026-09-28.md <<EOF
+          # Final Product Refresh — 2026-09-28
+
+          **Status:** repository-root DOCX refreshed; visual artifact packaged for review
+          **Authority snapshot represented:** `a3dffccbcdac830789b7a1bb8a2a805bd476d76f`
+          **DOCX:** `IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx`
+          **DOCX SHA-256:** `$DOCX_SHA`
+          **DOCX bytes:** `$DOCX_BYTES`
+          **Rendered pages:** `$PAGE_COUNT`
+
+          Current authority update includes Core 0.20, DP 0.8, and Experiment-052 full-stack integration.
+
+          Repository semantic authority remains the exact versioned specifications, qualification records, and `qualification/QUALIFIED_MODULES_2026-09-28.md`.
+
+          The ChatGPT Library mirror is a separate publication projection and is not asserted current by this repository refresh.
+          EOF
+      - name: Upload rendered QA artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: family-reference-2026-09-28-qa
+          path: |
+            out/family-reference/IsoGraph_Family_Reference_Joshua_Oshiro_2026.pdf
+            out/family-reference/DOCX_TEXT.txt
+            out/family-reference/render/page-*.png
+          if-no-files-found: error
+          retention-days: 7
+      - name: Persist refreshed final product
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx maintenance/FINAL_PRODUCT_REFRESH_2026-09-28.md
+          git commit -m "Refresh IsoGraph family reference for Core 0.20 and DP 0.8"
+          git fetch origin qualification/core020-dp08-20260928
+          git rebase origin/qualification/core020-dp08-20260928
+          git push origin HEAD:qualification/core020-dp08-20260928
