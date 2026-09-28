@@ -19,5 +19,7 @@ jobs:
           set -euo pipefail
           node --check experiments/049/tools/test-score-exp049.mjs
           node --check experiments/049/tools/test-runner-exp049.mjs
+          node --check experiments/049/tools/test-schema-exp049.mjs
+          node experiments/049/tools/test-schema-exp049.mjs
           node experiments/049/tools/test-score-exp049.mjs
           node experiments/049/tools/test-runner-exp049.mjs
