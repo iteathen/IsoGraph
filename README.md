@@ -550,7 +550,7 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 # Discovery is separate from authority
 
-IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.7) provides ranked, adaptive strategies for finding candidate:
+IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.8) provides ranked, adaptive strategies for finding candidate:
 
 - correspondences;
 - invariants;
@@ -963,7 +963,10 @@ See:
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
 | **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
-| **Experiment 031** | QUALIFIES; 32/32 full-stack cases PASS; all guards/module assessments pass | Direct integration qualification of the exact current Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack. |
+| **Experiment 031** | QUALIFIES; 32/32 full-stack cases PASS; all guards/module assessments pass | Historical direct integration qualification of the Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack. |
+| **Experiment 048** | QUALIFIES; 18/18 fresh Core 0.20 cases PASS | Independent qualification of Core 0.20 primitive-logic closure. |
+| **Experiments 050 + 051** | 21 valid principle-level PASS + 1/1 fresh target-5 replacement PASS | Independent cumulative qualification evidence for DP 0.8. |
+| **Experiment 052** | QUALIFIES; 16/16 fresh full-stack cases PASS; all guards/module assessments pass | Direct integration qualification of the exact current Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 stack. |
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
@@ -1106,23 +1109,25 @@ Current Core authority is cumulative:
 - [Core 0.18 qualification record](qualification/CORE_0_18_QUALIFICATION.md)
 - [Core 0.19 qualified assertion-support / exact-rendering clarification](CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md)
 - [Core 0.19 qualification record](qualification/CORE_0_19_QUALIFICATION.md)
+- [Core 0.20 qualified primitive-logic-closure clarification](CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md)
+- [Core 0.20 qualification record](qualification/CORE_0_20_QUALIFICATION.md)
 
-Core 0.18 and Core 0.19 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
+Core 0.18, Core 0.19, and Core 0.20 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
 
 ## Qualified semantic extensions/modules
 
 Current exact routing authority is recorded in:
 
-- [Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
+- [Qualified Module Authority Manifest — 2026-09-28](qualification/QUALIFIED_MODULES_2026-09-28.md)
 
 Current qualified modules:
 
 - [Quantifiable Unknown 0.1](extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md)
 - [Natural Entropic Identity 0.4](extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md)
-- [Discovery Protocols 0.1–0.7](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
+- [Discovery Protocols 0.1–0.8](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md)
 - [Detailed Transition System 0.1](extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md) — [qualification record](qualification/DTS_0_1_QUALIFICATION.md)
 
-The 2026-09-25 and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded.
+The 2026-09-26, 2026-09-25, and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded.
 
 Qualified extensions do **not** become Core. They remain explicit versioned dependencies.
 
@@ -1145,10 +1150,12 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 ## Integrated compatibility
 
-The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack directly qualified by Experiment 031: 32/32 cases PASS, zero mismatches, all guards true, all module assessments SUPPORTED, formal `QUALIFIES`.
+The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 stack directly qualified by Experiment 052: 16/16 cases PASS, zero mismatches, all guards true, all module assessments SUPPORTED, formal `QUALIFIES`.
 
-- [Experiment 031 Final Qualification Review](experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md)
-- [Current Integrated Stack with Core 0.19](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
+- [Experiment 052 Final Qualification Review](experiments/052/EXPERIMENT_052_FINAL_QUALIFICATION_REVIEW.md)
+- [Current Integrated Stack with Core 0.20 and DP 0.8](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md)
+- [Historical Experiment 031 Final Qualification Review](experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md)
+- [Historical Integrated Stack with Core 0.19](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
 - [Historical Experiment 028 Final Qualification Review](experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md)
 - [Historical Integrated Stack with DP 0.7](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
 - [Experiment 027 Historical Predecessor Review](experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md)
@@ -1287,6 +1294,10 @@ Core 0.19:
     corrected mutation regression: Experiment 030 (2/2 PASS, QUALIFIES)
     concrete exact-rendering evidence: six ESR-qualified/Q7-promoted renderings
 
+Core 0.20:
+    QUALIFIED cumulative primitive-logic-closure clarification
+    decisive holdout: Experiment 048 (18/18 PASS)
+
 QRC 0.1:
     QUALIFIED qualification infrastructure
 
@@ -1298,9 +1309,9 @@ NEI 0.4:
     QUALIFIED current extension
     decisive holdout: Experiment 016 (18/18 PASS)
 
-Discovery Protocols 0.1–0.7:
+Discovery Protocols 0.1–0.8:
     QUALIFIED cumulative current discovery module
-    successor qualification: Experiment 018
+    DP 0.8 evidence: Experiment 050 valid 21-case surface + Experiment 051 target-5 replacement
 
 DTS 0.1:
     QUALIFIED current transition extension
@@ -1308,9 +1319,9 @@ DTS 0.1:
     independent promotion verifier: SUPPORT_PROMOTION
 
 Latest fully integration-qualified stack revision:
-    Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1
-    DIRECTLY QUALIFIED by Experiment 031
-    32/32 PASS; zero mismatches; all guards true; all module assessments SUPPORTED
+    Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1
+    DIRECTLY QUALIFIED by Experiment 052
+    16/16 PASS; zero mismatches; all guards true; all module assessments SUPPORTED
 
 Historical pre-DTS integrated stack:
     QUALIFIED by Experiment 019
