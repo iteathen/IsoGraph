@@ -20,7 +20,8 @@ const inputs=[
   'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
   'CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md',
   'experiments/048/BASELINE_AUTHORITY.md',
-  'experiments/048/CORE_0_20_CASES.md'
+  'experiments/048/CORE_0_20_CASES.md',
+  'experiments/048/PUBLIC_OUTPUT_SCHEMA.json'
 ];
 const promptPath='experiments/048/COLD_PROMPT.md';
 const forbidden=[
