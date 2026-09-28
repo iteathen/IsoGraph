@@ -177,7 +177,7 @@ $$
 G\text{-}IA001\ldots G\text{-}IA448,
 $$
 
-with no gaps or duplicate authoritative IDs through $G\text{-}IA448$. Peer-review refinements now extend through $G\text{-}IA464$ without rewriting the earlier derivations [20, [22]]. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$.
+with no gaps or duplicate authoritative IDs through $G\text{-}IA448$. Peer-review refinements now extend through $G\text{-}IA464$ without rewriting the earlier derivations [20–22]. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$.
 
 ---
 
@@ -356,7 +356,7 @@ u\preceq_M v
 v\preceq_M u.
 $$
 
-The effective treatment alphabet is finite and quasi-ordered by susceptibility dominance. Higman's lemma therefore applies: finite words over this alphabet are well-quasi-ordered by generalized subsequence embedding, which is exactly $\preceq_M$ here [11, [22]]. The solving language is upward closed. Its minimal quotient elements form an antichain, and a well-quasi-order has no infinite antichain. Hence the solving upset has a **finite** unique set $\mathcal B_M$ of minimal equivalence classes in the quotient poset of words modulo $\approx_M$ [[22], 22].
+The effective treatment alphabet is finite and quasi-ordered by susceptibility dominance. Higman's lemma therefore applies: finite words over this alphabet are well-quasi-ordered by generalized subsequence embedding, which is exactly $\preceq_M$ here [12, 22]. The solving language is upward closed. Its minimal quotient elements form an antichain, and a well-quasi-order has no infinite antichain. Hence the solving upset has a **finite** unique set $\mathcal B_M$ of minimal equivalence classes in the quotient poset of words modulo $\approx_M$ [22, 24].
 
 A concrete raw representative family need not be unique when distinct raw enzymes or words are mutually equivalent. Choose any representative family $B_M^{\mathrm{rep}}$ containing representatives of all minimal classes. Then
 
@@ -423,7 +423,7 @@ Positive path coverage and negative resistant chains are complementary decision 
 
 ## 7. Maximal Paths and the SCS Reduction
 
-Write an active maximal non-target path **leaf-first** as
+Write a maximal non-target path **leaf-first** as
 
 $$
 P=[p_1,\ldots,p_m],
@@ -653,7 +653,7 @@ For the **singleton-susceptibility subclass used by Experiments 040–047**, ide
 $$
 w\text{ covers }P
 \iff
-COMP(P)\preceq_{\mathrm{subseq}} w,
+COMP(P)\preceq_{\mathrm{subseq}}w,
 $$
 
 so the shorthand
@@ -664,7 +664,7 @@ D_L(P)
 \{w\in U_L:COMP(P)\not\preceq_{\mathrm{subseq}}w\}
 $$
 
-is exactly the singleton specialization of $D^{\mathrm{cov}}_L(P)$ [[22]].
+is exactly the singleton specialization of $D^{\mathrm{cov}}_L(P)$ [22].
 
 In the singleton critical-cover construction below, the family is **threshold-critical** when this cover is inclusion-minimal: for every selected path $P_i$, there exists a private word $w_i\in U_L$ such that
 
@@ -840,7 +840,7 @@ This is the classical **standard example** $S_k$ from poset-dimension theory [17
 
 A direct linear-extension argument shows that one linear extension cannot reverse two different incomparable diagonal pairs $(P_i,w_i)$. Hence the induced subposet has dimension at least $k$.
 
-This order-theoretic consequence is reported as a **by-product**, not as a novelty claim about dimension theory for subword orders. A targeted check of representative finite/classical/generalized subword-order literature did not locate a direct Dushnik–Miller dimension bound for the classical fixed-alphabet subsequence poset, but that limited search is not evidence that no stronger result exists. No novelty claim is made for the dimension corollary [11, 17, [22]].
+This order-theoretic consequence is reported as a **by-product**, not as a novelty claim about dimension theory for subword orders. A targeted check of representative finite/classical/generalized subword-order literature did not locate a direct Dushnik–Miller dimension bound for the classical fixed-alphabet subsequence poset, but that limited search is not evidence that no stronger result exists. No novelty claim is made for the dimension corollary [12, 18, 22].
 
 Applying the width-173 construction:
 
@@ -904,7 +904,7 @@ $$
 
 Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols $p_0,\ldots,p_8$. The tenth symbol $p_9$ had been omitted.
 
-The minimum repair added $p_9$, added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to $PL=10$. The omission effectively reduced the incidence check to the **complete** run-compressed ternary length-9 path universe: every run-compressed length-9 word is the prefix of at least one run-compressed length-10 word. Experiment 046's threshold-18 critical cover proves that this complete length-9 universe has no universal word of length 18, while the cyclic ceiling supplies one of length 19. Its universal-word minimum is therefore **exactly 19** [[22]]. The defective kernel consequently predicts universal words at both lengths 19 and 20. The repaired run then produced the width-173 certificate [30, 31, 33].
+The minimum repair added $p_9$, added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to $PL=10$. The omission effectively reduced the incidence check to the **complete** run-compressed ternary length-9 path universe: every run-compressed length-9 word is the prefix of at least one run-compressed length-10 word. Experiment 046's threshold-18 critical cover proves that this complete length-9 universe has no universal word of length 18, while the cyclic ceiling supplies one of length 19. Its universal-word minimum is therefore **exactly 19** [22]. The defective kernel consequently predicts universal words at both lengths 19 and 20. The repaired run then produced the width-173 certificate [30, 31, 33].
 
 The episode is relevant because it illustrates the IsoGraph discrepancy discipline: an anomaly is neither automatically promoted to discovery nor immediately discarded as “just a bug.” Competing structural and implementation explanations are separated and falsified.
 
@@ -1030,7 +1030,7 @@ $$
 
 inside the ternary subsequence poset and therefore a finite poset-dimension lower bound of at least 173.
 
-The strongest current open question can be stated at the maximal nontrivial threshold: if $W_{\max}(\ell)$ denotes the maximum cardinality of an inclusion-minimal failure cover for run-compressed ternary paths of length $\ell$ at $L=2\ell$, is $W_{\max}(\ell)$ unbounded as $\ell\to\infty$? The measured widths grow over $\ell=5,\ldots,10$ while their fraction of the full path universe decreases; no growth law is claimed [[22]].
+The strongest current open question can be stated at the maximal nontrivial threshold: if $W_{\max}(\ell)$ denotes the maximum cardinality of an inclusion-minimal failure cover for run-compressed ternary paths of length $\ell$ at $L=2\ell$, is $W_{\max}(\ell)$ unbounded as $\ell\to\infty$? The measured widths grow over $\ell=5,\ldots,10$ while their fraction of the full path universe decreases; no growth law is claimed [22].
 
 That question is now sharply separated from the original biochemical presentation. The remaining difficulty is not local cleavage logic. It is global synchronization in a structured subsequence-order incidence system.
 
@@ -1108,7 +1108,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [23] IsoGraph Project. “DP-fed implicit admissions A12 — phase algebra and dominance-aware language.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md.
 
-[24] IsoGraph Project. “DP-fed implicit admissions A14 — unique dominance boundary.” Historical derivation refined by [21, 22]. Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md.
+[24] IsoGraph Project. “DP-fed implicit admissions A14 — unique dominance boundary.” Historical derivation refined by the later peer-review refinement layers. Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md.
 
 [25] IsoGraph Project. “DP-fed implicit admissions A13 — resistance-chain duality.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A13_0_1.md.
 
