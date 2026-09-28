@@ -1,5 +1,22 @@
 # IsoGraph research publications — 2026-09-27
 
+## Continuation-Support Reductions for Bounded Existential Computation
+
+**Author:** Joshua Oshiro
+
+**Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.**
+
+- [Publication revision 0.1](P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md)
+- Publication blob: `b7375a036d5508449392ce1a52f3cb378f231e02`
+- [Broad novelty review](../../p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
+- [Publication preflight](../../p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_PUBLICATION_PREFLIGHT_0_1.md)
+- Contribution: structural synthesis of established future-equivalence, dominance/simulation, dead-support, factorization, and objective-projection ideas over one continuation-support semantics
+- Novelty boundary: possible synthesis/expositional contribution; no new P-vs-NP theorem, lower bound, or general tractability characterization
+- Truth status: `P = NP` OPEN; `P != NP` OPEN
+- License: CC BY 4.0
+
+---
+
 ## Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories
 
 **Author:** Joshua Oshiro
