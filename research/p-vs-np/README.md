@@ -184,17 +184,17 @@ succinctness vs tractable operations:
 
 continuation-support reduction ladder:
     NEW_TO_CURRENT_ISOGRAPH_CAMPAIGN
-    POSSIBLE_SYNTHESIS_NOVELTY
-    POSSIBLE_SYNTHESIS / EXPOSITORY CONTRIBUTION
+    POSSIBLE SYNTHESIS / EXPOSITORY CONTRIBUTION
     SUBSTANTIAL PRIOR-ART OVERLAP
 
 generic QU/NEI-safe integration of
 negative evidence -> filtered simulation -> dominance -> factorization:
     NEW_TO_CURRENT_ISOGRAPH_CAMPAIGN
-    EXTERNAL_NOVELTY_UNREVIEWED
+    PROJECT-LOCAL FORMAL INTEGRATION
+    PRIOR-ART ANALOGUES FOUND
 ~~~
 
-Do not publish or describe these as externally novel results without a broader scholarly novelty review.
+The broad review supports publication as a synthesis paper. It does not establish a new complexity theorem or strong external novelty claim.
 
 ## Correctness corrections that must remain visible
 
@@ -204,7 +204,7 @@ Historical artifacts retain provenance, but current work must not route through 
 - NEI overlay 0.4 — superseded as native result authority because opaque handles overclaimed evidence/model/QU completeness;
 - IA-304 / IA-305 — superseded because all-legal simulation is sufficient but not necessary for continuation dominance/equality in the presence of dead branches.
 
-Current corrected replacements are indexed by `P_VS_NP_CURRENT_AUTHORITY_0_3.md`.
+Current corrected replacements are indexed by `P_VS_NP_CURRENT_AUTHORITY_0_4.md`.
 
 ## Current machine-audited implicit state
 
