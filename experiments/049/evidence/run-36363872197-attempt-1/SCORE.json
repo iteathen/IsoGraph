@@ -1,0 +1,250 @@
+{
+  "experiment": "049",
+  "disposition": "DOES_NOT_QUALIFY",
+  "dp_0_8": {
+    "pass": false,
+    "passed_cases": [
+      "D01",
+      "D02",
+      "D03",
+      "D06",
+      "D07",
+      "D09",
+      "D11",
+      "D13",
+      "D17",
+      "D19",
+      "D20",
+      "D24"
+    ],
+    "failed_cases": [
+      "D04",
+      "D05",
+      "D08",
+      "D10",
+      "D12",
+      "D14",
+      "D15",
+      "D16",
+      "D18",
+      "D21",
+      "D22",
+      "D23"
+    ]
+  },
+  "guards": {
+    "exact_case_count": true,
+    "exact_case_order": true,
+    "no_duplicates": true,
+    "no_unexpected": true,
+    "self_audit": true,
+    "module_assessment_consistent": true
+  },
+  "duplicates": [],
+  "unexpected_case_ids": [],
+  "self_audit_errors": [],
+  "case_results": [
+    {
+      "case_id": "D01",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D02",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D03",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D04",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "actual": "LOCAL_DEFECT_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "case_id": "D05",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "STRUCTURE_ESTABLISHED",
+          "actual": "OPEN_STRUCTURAL_LEAD"
+        }
+      ]
+    },
+    {
+      "case_id": "D06",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D07",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D08",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "REPRESENTATION_DEFECT_CONFIRMED",
+          "actual": "IMPLEMENTATION_DEFECT_CONFIRMED"
+        },
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "STRUCTURAL_LEAD_FALSIFIED",
+          "actual": "NO_STRUCTURAL_LEAD"
+        }
+      ]
+    },
+    {
+      "case_id": "D09",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D10",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "REPRESENTATION_DEFECT_CONFIRMED",
+          "actual": "IMPLEMENTATION_DEFECT_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "case_id": "D11",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D12",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "OPEN_STRUCTURAL_LEAD",
+          "actual": "NO_STRUCTURAL_LEAD"
+        }
+      ]
+    },
+    {
+      "case_id": "D13",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D14",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "NO_STRUCTURAL_LEAD",
+          "actual": "OPEN_STRUCTURAL_LEAD"
+        }
+      ]
+    },
+    {
+      "case_id": "D15",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "OPEN_STRUCTURAL_LEAD",
+          "actual": "NO_STRUCTURAL_LEAD"
+        }
+      ]
+    },
+    {
+      "case_id": "D16",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "LOCAL_DEFECT_CONFIRMED",
+          "actual": "IMPLEMENTATION_DEFECT_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "case_id": "D17",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D18",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "OPEN_STRUCTURAL_LEAD",
+          "actual": "STRUCTURE_ESTABLISHED"
+        }
+      ]
+    },
+    {
+      "case_id": "D19",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D20",
+      "pass": true,
+      "mismatches": []
+    },
+    {
+      "case_id": "D21",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "UNRESOLVED",
+          "actual": "NO_REPAIR_ESTABLISHED"
+        }
+      ]
+    },
+    {
+      "case_id": "D22",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "SCOPE_MISMATCH",
+          "actual": "NO_REPAIR_ESTABLISHED"
+        },
+        {
+          "field": "answers.discovery_disposition",
+          "expected": "NO_STRUCTURAL_LEAD",
+          "actual": "STRUCTURE_ESTABLISHED"
+        }
+      ]
+    },
+    {
+      "case_id": "D23",
+      "pass": false,
+      "mismatches": [
+        {
+          "field": "answers.repair_disposition",
+          "expected": "SCOPE_MISMATCH",
+          "actual": "NO_REPAIR_ESTABLISHED"
+        }
+      ]
+    },
+    {
+      "case_id": "D24",
+      "pass": true,
+      "mismatches": []
+    }
+  ]
+}
