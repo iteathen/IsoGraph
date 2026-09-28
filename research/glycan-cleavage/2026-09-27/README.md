@@ -2,9 +2,10 @@
 
 ## Published paper
 
-- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.2](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_2.md) — Joshua Oshiro; agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.
-- [Response to mathematical review](../../publications/2026-09-27/GLYCAN_CLEAVAGE_REVIEW_RESPONSE_0_2.md)
-- [Publication revision 0.2 preflight](GLYCAN_PUBLICATION_PREFLIGHT_0_2.md)
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro; agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.
+- [Response to second mathematical review](../../publications/2026-09-27/GLYCAN_CLEAVAGE_REVIEW_RESPONSE_0_3.md)
+- [Publication revision 0.3 preflight](GLYCAN_PUBLICATION_PREFLIGHT_0_3.md)
+- [Publication revision 0.2 — historical](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_2.md)
 - [Publication revision 0.1 — historical](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md)
 - [Source-reference correction](GLYCAN_SOURCE_REFERENCE_CORRECTION_0_1.md)
 
@@ -226,7 +227,7 @@ Primary external-clue report:
 Exact clue-fed derivations and publication-review refinements now extend through:
 
 ~~~text
-G-IA304..G-IA459
+G-IA304..G-IA464
 ~~~
 
 with A29 supplying the standard-example interpretation and A30 supplying the reviewed path-coverage, quotient-uniqueness, padding, and ternary-threshold refinements.
@@ -247,7 +248,8 @@ Current routing:
 - A27 — Node-verified witness width 113;
 - A28 — repaired Node-verified witness width 173;
 - A29 — critical-cover private witnesses induce standard examples;
-- A30 — publication-review refinements: path coverage, quotient uniqueness, exact-length padding, ternary ceiling, and exact OPT=21 for the width-173 family.
+- A30 — first-round publication-review refinements: path coverage, quotient uniqueness, exact-length padding, ternary ceiling, and exact OPT=21 for the width-173 family;
+- A31 — second-round publication-review refinements: singleton threshold specialization, Higman finiteness, and exact length-9 bug prediction.
 
 ### Exact algorithm experiments
 
@@ -288,6 +290,21 @@ h <= 172
 even in deterministic singleton-susceptibility three-enzyme chain forests.
 
 Unconditional unbounded ternary witness width remains open.
+
+A cleaner current conjecture is:
+
+~~~text
+W_max(ell)
+=
+maximum inclusion-minimal failure-cover size
+for run-compressed ternary paths of length ell
+at the maximal nontrivial threshold L=2*ell
+
+conjecture:
+    W_max(ell) is unbounded.
+~~~
+
+The measured widths increase for ell=5..10 while their fraction of the full path universe decreases; no growth law is claimed.
 
 ### Node-only implementation constraint
 
