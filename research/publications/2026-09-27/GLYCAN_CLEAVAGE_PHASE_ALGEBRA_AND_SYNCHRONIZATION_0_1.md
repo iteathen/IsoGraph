@@ -5,7 +5,7 @@
 **Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.**
 
 **IsoGraph Project:** https://github.com/iteathen/IsoGraph  
-**Research snapshot:** \`iteathen/IsoGraph@897dd08cf5c4dffc7e3a4fc959cf354fde77cd24\`  
+**Research snapshot:** `iteathen/IsoGraph@897dd08cf5c4dffc7e3a4fc959cf354fde77cd24`  
 **License:** CC BY 4.0  
 © 2026 Joshua Oshiro.
 
@@ -19,9 +19,9 @@ We study an idealized optimization problem motivated by sequential exoglycosidas
 
 The problem was rendered into primitive IsoGraph structure and independently reconstructed under a frozen verification experiment before structural discovery. The resulting analysis exposes a closed-form treatment action. If $A$ is the active non-target filter and $N_e$ is the set of non-target sites resistant to enzyme $e$, then one exhaustive treatment is exactly
 
-$
+$$
 D_e(A)=\uparrow(A\cap N_e).
-$
+$$
 
 Dually, treatment acts as an extensive, monotone, idempotent, meet-preserving closure on the finite lattice of removed-node ideals. Effective non-target susceptibility is a complete invariant of one-phase behavior, and susceptibility inclusion induces two-sided absorption.
 
@@ -45,7 +45,7 @@ The central question is:
 
 The work began as an IsoGraph rendering exercise. The source problem was reduced to primitive relational logic, independently reconstructed from the primitive representation, and then subjected to alternating implicit-assertion, identity, and Discovery Protocol passes [1–6]. What emerged is not merely an implementation of a search problem. The structure admits several exact and mutually reinforcing representations:
 
-$
+$$
 \text{microscopic deletion}
 \;\longrightarrow\;
 \text{phase closure}
@@ -55,7 +55,7 @@ $
 \text{path languages}
 \;\longrightarrow\;
 \text{word-order boundaries}.
-$
+$$
 
 The main contributions reported here are:
 
@@ -93,9 +93,9 @@ The susceptibility relation is extensional input. It is intended to encode every
 
 A state $S$ is a subset of $R$ satisfying
 
-$
+$$
 T\subseteq S\subseteq R.
-$
+$$
 
 A represented residue $r\in S$ is terminal exactly when no represented child of $r$ remains in $S$.
 
@@ -113,17 +113,17 @@ One treatment chooses a single enzyme $e$ and repeatedly removes eligible sites 
 
 A treatment trajectory is a finite enzyme word
 
-$
+$$
 w=e_1e_2\cdots e_k.
-$
+$$
 
 The trajectory solves when exhaustive execution from the full initial state leaves exactly $T$. Its cost is $k$.
 
 Repeated use of the same enzyme is allowed. In particular, a non-adjacent pattern such as
 
-$
+$$
 A\,B\,A
-$
+$$
 
 may be necessary because $B$ can expose a new $A$-susceptible site.
 
@@ -151,7 +151,7 @@ The source model was translated into an IsoGraph primitive rendering whose autho
 
 Experiment 032 tested the round trip
 
-$
+$$
 \text{source}
 \to
 \text{primitive IsoGraph}
@@ -159,7 +159,7 @@ $
 \text{cold reconstruction}
 \to
 \text{source comparison}.
-$
+$$
 
 The frozen result was PASS: the native parser passed; there were no free native variables or undeclared local predicates; all expected semantic predicates were reconstructed; 18 of 18 targeted source/reconstruction checks passed; and the verifier reported no missing source semantics, unsupported additions, or load-bearing unresolved structure [4].
 
@@ -169,9 +169,9 @@ A later maximal-path proof contained a local support defect. The theorem survive
 
 The publication preflight re-audited the current assertion surface. The authoritative implicit range is
 
-$
+$$
 G\text{-}IA001\ldots G\text{-}IA448,
-$
+$$
 
 with no gaps or duplicate authoritative IDs in the post-DP range $G\text{-}IA304\ldots G\text{-}IA448$. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$ [8].
 
@@ -183,25 +183,25 @@ Let $Q=R\setminus T$ be the non-target nodes ordered descendant-before-ancestor.
 
 For enzyme $e$, define effective non-target susceptibility
 
-$
+$$
 S_e^*=\{q\in Q:M(e,q)\}
-$
+$$
 
 and resistance
 
-$
+$$
 N_e=Q\setminus S_e^*.
-$
+$$
 
 ### Theorem 1 — Resistant-frontier phase formula
 
 One exhaustive $e$-treatment sends active filter $A$ to
 
-$
+$$
 \boxed{
 D_e(A)=\uparrow(A\cap N_e)
 }
-$
+$$
 
 where $\uparrow$ denotes upward closure in the descendant-before-ancestor order [9].
 
@@ -217,42 +217,42 @@ The formula eliminates microscopic fixed-point iteration from the derived phase 
 
 Let
 
-$
+$$
 I=Q\setminus A
-$
+$$
 
 be the removed-node ideal. The phase action is
 
-$
+$$
 R_e(I)
 =
 Q\setminus
 \uparrow\big((Q\setminus I)\cap N_e\big).
-$
+$$
 
 The action satisfies:
 
-$
+$$
 I\subseteq R_e(I),
-$
+$$
 
-$
+$$
 I\subseteq J
 \Rightarrow
 R_e(I)\subseteq R_e(J),
-$
+$$
 
-$
+$$
 R_e(R_e(I))=R_e(I),
-$
+$$
 
 and
 
-$
+$$
 \boxed{
 R_e(I\cap J)=R_e(I)\cap R_e(J).
 }
-$
+$$
 
 Thus each treatment acts as a meet-preserving closure operator on the finite ideal lattice [9].
 
@@ -268,13 +268,13 @@ The stronger join law is false in general. A susceptible parent with two resista
 
 For enzymes $e_1,e_2$,
 
-$
+$$
 \boxed{
 S_{e_1}^*=S_{e_2}^*
 \iff
 R_{e_1}=R_{e_2}
 }
-$
+$$
 
 as functions on all valid states [9].
 
@@ -288,27 +288,27 @@ This has a useful modeling consequence: susceptibility tuples on retained target
 
 Define enzyme dominance by
 
-$
+$$
 e_1\preceq e_2
 \iff
 S_{e_1}^*\subseteq S_{e_2}^*.
-$
+$$
 
 Then $e_2$ removes at least everything $e_1$ removes from every valid state, and the phase operators satisfy two-sided absorption:
 
-$
+$$
 \boxed{
 R_{e_2}\circ R_{e_1}=R_{e_2}
 }
-$
+$$
 
 and
 
-$
+$$
 \boxed{
 R_{e_1}\circ R_{e_2}=R_{e_2}.
 }
-$
+$$
 
 Consequently adjacent comparable treatments collapse to the stronger treatment. Adjacent duplicate removal is the equality case.
 
@@ -334,28 +334,28 @@ Let $B_M$ be the set of $\preceq_M$-minimal solving words.
 
 The admitted result is
 
-$
+$$
 w\text{ solves}
 \iff
 \exists b\in B_M:\;b\preceq_M w.
-$
+$$
 
 Thus $B_M$ is the unique minimal TRUE boundary of the complete solving language under the declared generalized word order [10].
 
 For $b=a_1\cdots a_m$, define
 
-$
+$$
 UP(a_i)=\{e:S_{a_i}^*\subseteq S_e^*\}.
-$
+$$
 
 Then the complete solving language has the finite exact form
 
-$
+$$
 L
 =
 \bigcup_{b\in B_M}
 \Sigma^*UP(a_1)\Sigma^*\cdots UP(a_m)\Sigma^*.
-$
+$$
 
 Recent work on upward-closed word languages and quasi-ordered automata provides external algorithmic context for such finite bases [22]. Experiment 034 and Experiment 035 independently exercised this connection inside the frozen model.
 
@@ -365,33 +365,33 @@ There is also an exact negative certificate.
 
 For treatment word
 
-$
+$$
 w=e_1e_2\cdots e_k,
-$
+$$
 
 the word fails exactly when there exists a nondecreasing chain
 
-$
+$$
 q_1\le q_2\le\cdots\le q_k
-$
+$$
 
 such that
 
-$
+$$
 q_i\in N_{e_i}
-$
+$$
 
 for every treatment position [11].
 
 So:
 
-$
+$$
 \boxed{
 w\text{ solves}
 \iff
 \text{no treatment-spanning resistant chain exists}.
 }
-$
+$$
 
 Positive path coverage and negative resistant chains are complementary decision interfaces. They are not the same witness object.
 
@@ -407,13 +407,13 @@ Then a treatment word covers path $P$ exactly when $COMP(P)$ is an ordinary subs
 
 Therefore:
 
-$
+$$
 \boxed{
 \text{singleton-susceptibility optimum}
 =
 \text{SCS length of the compressed maximal-path words}.
 }
-$
+$$
 
 Moreover, the complete optimum treatment family is exactly the shortest-common-supersequence family of those words.
 
@@ -433,15 +433,15 @@ Every minimum solution has no adjacent duplicate treatment because phase idempot
 
 Over a two-symbol alphabet, every no-adjacent-repeat word is alternating. Hence every minimum solution is one of
 
-$
+$$
 ABAB\cdots
-$
+$$
 
 or
 
-$
+$$
 BABA\cdots
-$
+$$
 
 truncated at some length [23].
 
@@ -449,31 +449,31 @@ For each maximal path $P$, let $a(P)$ be the minimum length of an $A$-starting a
 
 Define
 
-$
+$$
 A_{\max}=\max_P a(P),
 \qquad
 B_{\max}=\max_P b(P).
-$
+$$
 
 ### Theorem 4 — Exact binary optimum
 
-$
+$$
 \boxed{
 \mathrm{OPT}
 =
 \min(A_{\max},B_{\max}).
 }
-$
+$$
 
 An $A$-starting solution must have length at least $A_{\max}$, and the alternating word of exactly that length covers every path. The argument is symmetric for $B$.
 
 Choose a path attaining $A_{\max}$ and a path attaining $B_{\max}$. Those at most two paths already witness the global optimum. Therefore
 
-$
+$$
 \boxed{
 J_2=\mathrm{OPT}
 }
-$
+$$
 
 for every frozen version-0.1 state with at most two effective treatment classes, including set-valued susceptibility [23].
 
@@ -489,22 +489,22 @@ The binary theorem does not extend by replacing 2 with the alphabet size.
 
 Consider four independent singleton-susceptibility paths
 
-$
+$$
 010,\qquad
 012,\qquad
 101,\qquad
 210.
-$
+$$
 
 Every three-path subfamily has a common supersequence of length 5, but the full four-path family requires length 6 [24].
 
 Thus
 
-$
+$$
 J_3=5
 <
 6=\mathrm{OPT}.
-$
+$$
 
 The obstruction uses:
 
@@ -519,19 +519,19 @@ It is pure global synchronization of treatment order.
 
 This is the first qualitative transition:
 
-$
+$$
 \text{two effective labels}
 \Rightarrow
 \text{pairwise exactness},
-$
+$$
 
 while
 
-$
+$$
 \text{three effective labels}
 \Rightarrow
 \text{higher-order synchronization can be essential}.
-$
+$$
 
 ---
 
@@ -539,28 +539,28 @@ $
 
 For a maximal-path family $\mathcal P$, define
 
-$
+$$
 J_h(\mathcal P)
 =
 \max_{\substack{\mathcal H\subseteq\mathcal P\\|\mathcal H|\le h}}
 \mathrm{OPT}(\mathcal H).
-$
+$$
 
 Define the **witness width**
 
-$
+$$
 W(\mathcal P)
 =
 \min\{h:J_h(\mathcal P)=\mathrm{OPT}(\mathcal P)\}.
-$
+$$
 
 Thus $W$ is the smallest number of path constraints that can already witness the full optimum value [25].
 
 For binary instances, Theorem 4 gives
 
-$
+$$
 W\le2.
-$
+$$
 
 For ternary instances, the width can be much larger.
 
@@ -572,31 +572,31 @@ Fix a treatment threshold $L$. Let $U_L$ be the complete set of run-compressed t
 
 For path $P$, define the failure set
 
-$
+$$
 D_L(P)
 =
 \{w\in U_L:P\not\preceq_{\text{subseq}} w\}.
-$
+$$
 
 A selected path family $F$ has no length-$L$ solution exactly when
 
-$
+$$
 \bigcup_{P\in F}D_L(P)=U_L.
-$
+$$
 
 The family is **threshold-critical** when the cover is inclusion-minimal: for every selected path $P_i$, there exists a private word $w_i\in U_L$ such that
 
-$
+$$
 w_i\in D_L(P_i)
-$
+$$
 
 but
 
-$
+$$
 w_i\notin D_L(P_j)
 \qquad
 (j\ne i).
-$
+$$
 
 Equivalently, $w_i$ fails exactly $P_i$ among the selected paths.
 
@@ -621,19 +621,19 @@ A sequence of exact finite Node.js experiments constructed increasingly large te
 
 The strongest current construction uses all 1,536 run-compressed ternary path candidates of length 10 as the search universe and all
 
-$
+$$
 3\cdot2^{19}
 =
 1,572,864
-$
+$$
 
 run-compressed treatment words of length 20 as the threshold universe.
 
 The repaired Experiment 047 selected 173 paths and verified:
 
-$
+$$
 \bigcup_{i=1}^{173}D_{20}(P_i)=U_{20},
-$
+$$
 
 with zero uncovered threshold words.
 
@@ -641,35 +641,35 @@ For every selected path $P_i$, it also recorded a private threshold word $w_i$ t
 
 Therefore:
 
-$
+$$
 \mathrm{OPT}(F_{173})>20,
-$
+$$
 
 while
 
-$
+$$
 \mathrm{OPT}(F_{173}\setminus\{P_i\})\le20
-$
+$$
 
 for every $i$.
 
 Hence
 
-$
+$$
 \boxed{
 W(F_{173})=173.
 }
-$
+$$
 
 The direct glycan realization is simply 173 independent singleton-susceptibility chains of length 10 under retained target structure: 1,730 non-target nodes [27].
 
 Consequently:
 
-$
+$$
 J_h(F_{173})<\mathrm{OPT}(F_{173})
 \qquad
 \text{for every }h\le172.
-$
+$$
 
 Thus no universal fixed-$h$ theorem with $h\le172$ can determine the optimum even in this restricted deterministic three-enzyme chain subclass.
 
@@ -677,9 +677,9 @@ Thus no universal fixed-$h$ theorem with $h\le172$ can determine the optimum eve
 
 The finite ladder
 
-$
+$$
 24,\;35,\;54,\;75,\;113,\;173
-$
+$$
 
 does **not** prove unbounded ternary witness width.
 
@@ -693,44 +693,44 @@ The private-witness structure has an additional order-theoretic interpretation.
 
 For a threshold-critical family
 
-$
+$$
 P_1,\ldots,P_k
-$
+$$
 
 with private words
 
-$
+$$
 w_1,\ldots,w_k,
-$
+$$
 
 we have
 
-$
+$$
 P_i\not\preceq w_i
-$
+$$
 
 and
 
-$
+$$
 P_i\preceq w_j
 \quad\text{for }i\ne j.
-$
+$$
 
 Because the selected paths all have the same length, they form an antichain under ordinary subsequence. The private words, also of one common length and necessarily distinct, form another antichain.
 
 Therefore the induced poset on
 
-$
+$$
 \{P_1,\ldots,P_k,w_1,\ldots,w_k\}
-$
+$$
 
 has exactly the cross-relations
 
-$
+$$
 P_i<w_j
 \iff
 i\ne j.
-$
+$$
 
 This is the classical **standard example** $S_k$ from poset-dimension theory [21,28].
 
@@ -738,11 +738,11 @@ A direct linear-extension argument shows that one linear extension cannot revers
 
 Applying the width-173 construction:
 
-$
+$$
 \boxed{
 \text{the ternary subsequence poset contains an explicitly represented }S_{173}.
 }
-$
+$$
 
 Therefore it contains a finite induced subposet of Dushnik–Miller dimension at least 173 [21,28].
 
@@ -772,11 +772,11 @@ At the width-75 scale, repeated structural optimization reduced the same frozen 
 
 At threshold 20, Experiment 047 evaluated an exact path/word surface of
 
-$
+$$
 1,536\times1,572,864
 =
 2,415,919,104
-$
+$$
 
 candidate subsequence pairs. The dense failure bit matrix used 301,989,888 bytes. The complete repaired Node run, including incidence construction, 128 deterministic deletion searches, and exact verification, completed in approximately 119.5 seconds on its recorded runner [27].
 
@@ -788,13 +788,13 @@ An initial scaled run appeared to find a length-20 word containing every length-
 
 A separate direct Node verifier found:
 
-$
+$$
 \text{universal length-19 words}=0,
-$
+$$
 
-$
+$$
 \text{universal length-20 words}=0.
-$
+$$
 
 Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols $p_0,\ldots,p_8$. The tenth symbol $p_9$ had been omitted.
 
@@ -852,17 +852,17 @@ The relation $M(e,r)$ is assumed exact and complete for the represented instance
 
 The current strongest unconditional construction proves only
 
-$
+$$
 W\ge173
-$
+$$
 
 for a fixed ternary instance.
 
 It does **not** establish
 
-$
+$$
 \forall k\;\exists F:\;W(F)\ge k.
-$
+$$
 
 That unboundedness question remains open in the current project record.
 
@@ -890,11 +890,11 @@ An idealized enzyme-treatment problem on rooted branched glycans admits a compac
 
 One exhaustive treatment is simply:
 
-$
+$$
 \text{retain resistant active sites}
 \quad+\quad
 \text{close upward to their blockers}.
-$
+$$
 
 That phase operator is a meet-preserving closure. Effective susceptibility completely determines phase behavior. Treatment dominance becomes algebraic absorption. The complete solving language is upward closed under insertion and treatment dominance and has a finite exact minimal boundary.
 
@@ -902,21 +902,21 @@ The path view exposes a sharper transition.
 
 With two effective treatment classes, the no-adjacent-repeat condition forces every irredundant word to alternate, and two paths always suffice to witness the global optimum:
 
-$
+$$
 J_2=\mathrm{OPT}.
-$
+$$
 
 With three treatment classes, that collapse disappears. Pure synchronization among independent deterministic chains can require many simultaneously load-bearing path constraints. Exact finite constructions now reach:
 
-$
+$$
 \boxed{W=173}.
-$
+$$
 
 The associated private witnesses induce:
 
-$
+$$
 \boxed{S_{173}}
-$
+$$
 
 inside the ternary subsequence poset and therefore a finite poset-dimension lower bound of at least 173.
 
@@ -954,41 +954,41 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 ### IsoGraph Project and project evidence
 
-[1] IsoGraph Project. [Optimal enzymatic cleavage trajectories — source freeze 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_SOURCE_FREEZE_0_1.md). Git blob \`7565778decc21d865f9fd81b10bd483a36e091e4\`.
+[1] IsoGraph Project. [Optimal enzymatic cleavage trajectories — source freeze 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_SOURCE_FREEZE_0_1.md). Git blob `7565778decc21d865f9fd81b10bd483a36e091e4`.
 
-[2] IsoGraph Project. [Glycan source-reference correction 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_SOURCE_REFERENCE_CORRECTION_0_1.md). Git blob \`aa4616e5d035156b0d30b181d924d28847f5e706\`.
+[2] IsoGraph Project. [Glycan source-reference correction 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_SOURCE_REFERENCE_CORRECTION_0_1.md). Git blob `aa4616e5d035156b0d30b181d924d28847f5e706`.
 
-[3] IsoGraph Project. [Glycan primitive rendering 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_PRIMITIVE_0_1.isg). Git blob \`f5ef6f08df03c01cb03d8dea1f9da87cc2fa29c4\`.
+[3] IsoGraph Project. [Glycan primitive rendering 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_PRIMITIVE_0_1.isg). Git blob `f5ef6f08df03c01cb03d8dea1f9da87cc2fa29c4`.
 
-[4] IsoGraph Project. [Experiment 032 — final verification review](../../../experiments/032/FINAL_REVIEW.md). Git blob \`e167f4ed6b065ade74c61dac1698a2f0ab8e585d\`.
+[4] IsoGraph Project. [Experiment 032 — final verification review](../../../experiments/032/FINAL_REVIEW.md). Git blob `e167f4ed6b065ade74c61dac1698a2f0ab8e585d`.
 
 [5] IsoGraph Project. [Core 0.19 Qualification](../../../qualification/CORE_0_19_QUALIFICATION.md); [Discovery Protocols 0.1–0.7 Qualification Review](../../../qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md); qualified NEI 0.4 and QU 0.1 as recorded by the project qualification manifests.
 
-[6] IsoGraph Project. [Glycan DP 0.1–0.7 campaign report](../../glycan-cleavage/2026-09-27/GLYCAN_DP07_CAMPAIGN_REPORT_0_1.md). Git blob \`c1430a8dcead2f341e8d200aa6487f32618219fc\`.
+[6] IsoGraph Project. [Glycan DP 0.1–0.7 campaign report](../../glycan-cleavage/2026-09-27/GLYCAN_DP07_CAMPAIGN_REPORT_0_1.md). Git blob `c1430a8dcead2f341e8d200aa6487f32618219fc`.
 
-[7] IsoGraph Project. [A8 maximal-path sufficiency correction 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_IMPLICIT_ASSERTIONS_A8_CORRECTION_0_1.md). Git blob \`102c31a3cdb806c08f480a465746879f76e3fbf9\`.
+[7] IsoGraph Project. [A8 maximal-path sufficiency correction 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_IMPLICIT_ASSERTIONS_A8_CORRECTION_0_1.md). Git blob `102c31a3cdb806c08f480a465746879f76e3fbf9`.
 
-[8] IsoGraph Project. [Glycan publication preflight audit 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_PREFLIGHT_0_1.md). Git blob \`97b20c1c8cf09e07ed6a78bbe3809f3314f4df96\`.
+[8] IsoGraph Project. [Glycan publication preflight audit 0.1](../../glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_PREFLIGHT_0_1.md). Git blob `97b20c1c8cf09e07ed6a78bbe3809f3314f4df96`.
 
-[9] IsoGraph Project. [DP-fed implicit admissions A12 — phase algebra and dominance-aware language](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md). Git blob \`3a510daf6054f8b68ffbbbf8062d86dd6a40ea23\`.
+[9] IsoGraph Project. [DP-fed implicit admissions A12 — phase algebra and dominance-aware language](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md). Git blob `3a510daf6054f8b68ffbbbf8062d86dd6a40ea23`.
 
-[10] IsoGraph Project. [DP-fed implicit admissions A14 — unique dominance boundary](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md). Git blob \`59afcb7558b2e2e2cb69dd3a014b74fe2e4be170\`.
+[10] IsoGraph Project. [DP-fed implicit admissions A14 — unique dominance boundary](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md). Git blob `59afcb7558b2e2e2cb69dd3a014b74fe2e4be170`.
 
-[11] IsoGraph Project. [DP-fed implicit admissions A13 — resistance-chain duality](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A13_0_1.md). Git blob \`c60a79e1de0ff379574655c2a56da25b4943cac9\`.
+[11] IsoGraph Project. [DP-fed implicit admissions A13 — resistance-chain duality](../../glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A13_0_1.md). Git blob `c60a79e1de0ff379574655c2a56da25b4943cac9`.
 
-[23] IsoGraph Project. [A19 — two-enzyme exact path collapse](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A19_TWO_ENZYME_EXACT_0_1.md). Git blob \`b60dac409c921423517c4ee2ecd6cd7318bc0e47\`.
+[23] IsoGraph Project. [A19 — two-enzyme exact path collapse](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A19_TWO_ENZYME_EXACT_0_1.md). Git blob `b60dac409c921423517c4ee2ecd6cd7318bc0e47`.
 
-[24] IsoGraph Project. [A20 — three-enzyme J3 boundary](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A20_THREE_ENZYME_J3_BOUNDARY_0_1.md). Git blob \`0d1e121bbf97116e5eaebade05baf5f55bd5e825\`.
+[24] IsoGraph Project. [A20 — three-enzyme J3 boundary](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A20_THREE_ENZYME_J3_BOUNDARY_0_1.md). Git blob `0d1e121bbf97116e5eaebade05baf5f55bd5e825`.
 
-[25] IsoGraph Project. [A21 — ternary witness width](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A21_TERNARY_WITNESS_WIDTH_0_1.md). Git blob \`1dc2e4b9195e1f5e3362a0683303fc4770f41110\`.
+[25] IsoGraph Project. [A21 — ternary witness width](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A21_TERNARY_WITNESS_WIDTH_0_1.md). Git blob `1dc2e4b9195e1f5e3362a0683303fc4770f41110`.
 
-[26] IsoGraph Project. [A23 — critical cover](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A23_CRITICAL_COVER_0_1.md). Git blob \`f12307701f2432e08fb97ea54c45eb2ee491dc2b\`.
+[26] IsoGraph Project. [A23 — critical cover](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A23_CRITICAL_COVER_0_1.md). Git blob `f12307701f2432e08fb97ea54c45eb2ee491dc2b`.
 
-[27] IsoGraph Project. [A28 — Node-verified witness width 173](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A28_WITNESS_WIDTH_173_NODE_0_1.md), Git blob \`2bedc4f9a8c8a0fe49d36995938410ee280f7bb8\`; [Experiment 047 final review](../../../experiments/047/FINAL_REVIEW.md), Git blob \`a49b759313c371f35f0cb361b0225a1dbe737126\`.
+[27] IsoGraph Project. [A28 — Node-verified witness width 173](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A28_WITNESS_WIDTH_173_NODE_0_1.md), Git blob `2bedc4f9a8c8a0fe49d36995938410ee280f7bb8`; [Experiment 047 final review](../../../experiments/047/FINAL_REVIEW.md), Git blob `a49b759313c371f35f0cb361b0225a1dbe737126`.
 
-[28] IsoGraph Project. [A29 — critical covers as standard examples](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A29_STANDARD_EXAMPLE_0_1.md). Git blob \`05b956c15eecacc173c2097e258738e742187789\`.
+[28] IsoGraph Project. [A29 — critical covers as standard examples](../../glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A29_STANDARD_EXAMPLE_0_1.md). Git blob `05b956c15eecacc173c2097e258738e742187789`.
 
-[29] IsoGraph Project. [Experiment 047 discrepancy review 0.1](../../../experiments/047/DISCREPANCY_REVIEW_0_1.md). Git blob \`75d89c821a2526adbf275d6971962aaa401e191e\`.
+[29] IsoGraph Project. [Experiment 047 discrepancy review 0.1](../../../experiments/047/DISCREPANCY_REVIEW_0_1.md). Git blob `75d89c821a2526adbf275d6971962aaa401e191e`.
 
 ### Biological and biochemical background
 
