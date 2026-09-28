@@ -24,6 +24,7 @@ const expected=[
  'extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md',
  'experiments/049/BASELINE_AUTHORITY.md',
  'experiments/049/DP_0_8_CASES.md',
+ 'experiments/049/PUBLIC_OUTPUT_SCHEMA.json',
  'experiments/049/COLD_PROMPT.md'
 ];
 if(JSON.stringify(paths)!==JSON.stringify(expected)) throw new Error('unexpected manifest '+JSON.stringify(paths));
