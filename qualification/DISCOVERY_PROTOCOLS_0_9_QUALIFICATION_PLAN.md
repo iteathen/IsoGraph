@@ -19,7 +19,7 @@ Qualify whether DP 0.9 causes a fresh isolated reasoner to discover objective-sc
 - confusing local consumption with necessity for the declared downstream objective;
 - overclaiming minimum from a local irreducible result without a declared candidate space.
 
-The campaign must test general behavior, not memorization of the motivating application-specific/application-specific control example.
+The campaign must test general behavior, not memorization of any motivating application-specific example.
 
 ---
 
@@ -249,7 +249,7 @@ Expected behavior:
 
 ## Q20 — Full-stack composition
 
-Exercise DP 0.9 with Core 0.19, QU 0.1, NEI 0.4, DP 0.1–0.7, and DTS 0.1 across mixed cases.
+Exercise DP 0.9 with the current cumulative Core through 0.20, QU 0.1, NEI 0.4, qualified DP 0.1–0.8, and DTS 0.1 across mixed cases.
 
 Expected behavior:
 
