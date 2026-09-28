@@ -1,0 +1,83 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+
+const SHA=process.env.GITHUB_SHA, DRY=process.env.ISOGRAPH_COLD_DRY_RUN==='1', KEY=process.env.GEMINI_API_KEY;
+const MODEL=process.env.GEMINI_MODEL||'gemini-3-flash-preview';
+const FALLBACK=(process.env.GEMINI_FALLBACK_MODELS||'').split(',').map(x=>x.trim()).filter(Boolean);
+const MODELS=[...new Set([MODEL,...FALLBACK])];
+if(!SHA)throw new Error('GITHUB_SHA unavailable');
+if(!DRY&&!KEY)throw new Error('GEMINI_API_KEY unavailable');
+
+const inputs=[
+  'CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md',
+  'CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md',
+  'qualification/CORE_0_20_QUALIFICATION.md',
+  'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
+  'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md',
+  'extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_4_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md',
+  'extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md',
+  'qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md',
+  'experiments/052/BASELINE_AUTHORITY.md',
+  'experiments/052/INTEGRATION_CASES.md',
+  'experiments/052/PUBLIC_OUTPUT_SCHEMA.json'
+];
+const promptPath='experiments/052/COLD_PROMPT.md';
+const forbidden=['hidden/','score-exp052','test-score-exp052','evidence','FINAL_','AGENTS.md','README.md','STATUS.md','GLYCAN_','P_VS_NP'];
+function frozen(p){return execFileSync('git',['show',SHA+':'+p],{encoding:'utf8',maxBuffer:128*1024*1024});}
+function h(v){return crypto.createHash('sha256').update(v).digest('hex');}
+for(const p of [...inputs,promptPath]){if(forbidden.some(x=>p.includes(x)))throw new Error('forbidden '+p);frozen(p);}
+const caseText=frozen('experiments/052/INTEGRATION_CASES.md');
+for(let i=1;i<=16;i++){const id='I'+String(i).padStart(2,'0');if(!caseText.includes('## '+id+' '))throw new Error('missing '+id);}
+const modulePaths={
+  core_0_20:'CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md',
+  dp_0_8:'extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md',
+  qu_0_1:'extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md',
+  nei_0_4:'extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md',
+  dts_0_1:'extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md'
+};
+const moduleSha256=Object.fromEntries(Object.entries(modulePaths).map(([k,p])=>[k,h(frozen(p))]));
+const manifest=[],chunks=[`ISOGRAPH EXPERIMENT 052 — CURRENT STACK DIRECT INTEGRATION
+Frozen SHA: ${SHA}
+
+Use only the delimited files. Core 0.20 and DP 0.8 are independently qualified at their exact supplied revisions; QU 0.1, NEI 0.4, and DTS 0.1 retain their qualified ownership. This experiment tests their composition. Hidden answers, scorer code, earlier integration outputs, status/routing files, motivating campaigns, and browsing are unavailable.
+`];
+for(const p of inputs){const v=frozen(p);manifest.push({path:p,sha256:h(v),bytes:Buffer.byteLength(v)});chunks.push('\n===== BEGIN PERMITTED FILE: '+p+' =====\n'+v+'\n===== END PERMITTED FILE: '+p+' =====\n');}
+const prompt=frozen(promptPath);manifest.push({path:promptPath,sha256:h(prompt),bytes:Buffer.byteLength(prompt)});chunks.push('\n===== BEGIN GOVERNING PROMPT =====\n'+prompt+'\n===== END GOVERNING PROMPT =====\n');
+const packet=chunks.join(''),packetHash=h(packet),out='out/exp052';
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/PACKET.txt',packet);fs.writeFileSync(out+'/INPUT_MANIFEST.json',JSON.stringify(manifest,null,2)+'\n');
+const baseMeta={experiment:'052',source_sha:SHA,packet_sha256:packetHash,module_sha256:moduleSha256,case_count:16,input_manifest:manifest};
+if(DRY){fs.writeFileSync(out+'/DRY_RUN.json',JSON.stringify({...baseMeta,dry_run:true},null,2)+'\n');console.log(JSON.stringify({...baseMeta,dry_run:true},null,2));process.exit(0);}
+
+let call=null,failures=[];
+for(const model of MODELS){
+  let useThinking=!model.includes('flash-lite');
+  for(let attempt=0;attempt<3;attempt++){
+    const generationConfig={candidateCount:1,maxOutputTokens:16384,temperature:0.1,responseMimeType:'application/json'};
+    if(useThinking)generationConfig.thinkingConfig={thinkingLevel:'LOW'};
+    const url='https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent';
+    let response,responseText='';
+    try{response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':KEY},body:JSON.stringify({contents:[{role:'user',parts:[{text:packet}]}],generationConfig})});responseText=await response.text();}
+    catch(error){failures.push({model,error:String(error)});if(attempt<1){await new Promise(r=>setTimeout(r,8000));continue;}break;}
+    if(response.ok){const data=JSON.parse(responseText);const raw=(data.candidates?.[0]?.content?.parts||[]).filter(p=>!p.thought).map(p=>p.text||'').join('').trim();call={model,status:response.status,attempts:attempt+1,data,raw,responseText};break;}
+    failures.push({model,status:response.status,body_prefix:responseText.slice(0,500)});
+    if(response.status===400&&useThinking&&/thinking/i.test(responseText)){useThinking=false;attempt--;continue;}
+    if([429,500,502,503,504].includes(response.status)&&attempt<2){await new Promise(r=>setTimeout(r,10000*(attempt+1)));continue;}
+    break;
+  }
+  if(call)break;
+}
+if(!call)throw new Error('provider unavailable '+JSON.stringify(failures).slice(0,3000));
+fs.writeFileSync(out+'/API_RESPONSE.json',call.responseText);fs.writeFileSync(out+'/COLD_REPORT_RAW.txt',call.raw+'\n');
+let t=call.raw.replace(/^\`\`\`(?:json)?\s*/i,'').replace(/\s*\`\`\`$/,'');const first=t.indexOf('{'),last=t.lastIndexOf('}');if(first>=0&&last>=first)t=t.slice(first,last+1);
+let parsed;try{parsed=JSON.parse(t);}catch(e){fs.writeFileSync(out+'/METADATA.json',JSON.stringify({...baseMeta,selected_model:call.model,semantic_status:'MALFORMED_OUTPUT',finish_reason:call.data.candidates?.[0]?.finishReason??null,report_sha256:h(call.raw)},null,2)+'\n');throw e;}
+fs.writeFileSync(out+'/PARSED_REPORT.json',JSON.stringify(parsed,null,2)+'\n');
+fs.writeFileSync(out+'/METADATA.json',JSON.stringify({...baseMeta,selected_model:call.model,http_status:call.status,semantic_status:'FROZEN',finish_reason:call.data.candidates?.[0]?.finishReason??null,usage:call.data.usageMetadata??null,report_sha256:h(call.raw)},null,2)+'\n');
+console.log(JSON.stringify({model:call.model,packet_sha256:packetHash,report_sha256:h(call.raw),module_sha256:moduleSha256},null,2));
