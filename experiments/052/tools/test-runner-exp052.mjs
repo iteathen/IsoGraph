@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const ROOT=process.cwd(),OUT=path.join(ROOT,'out','exp052');
+fs.rmSync(OUT,{recursive:true,force:true});
+const run=spawnSync(process.execPath,['experiments/052/tools/run-exp052-cold.mjs'],{cwd:ROOT,env:{...process.env,GITHUB_SHA:'HEAD',ISOGRAPH_COLD_DRY_RUN:'1'},encoding:'utf8'});
+if(run.status!==0)throw new Error('dry runner failed '+run.stdout+run.stderr);
+const d=JSON.parse(fs.readFileSync(path.join(OUT,'DRY_RUN.json'),'utf8'));
+if(d.case_count!==16)throw new Error('case count');
+for(const hash of Object.values(d.module_sha256))if(!/^[0-9a-f]{64}$/.test(hash))throw new Error('bad module hash');
+const p=d.input_manifest.map(x=>x.path);
+for(const required of ['experiments/052/INTEGRATION_CASES.md','experiments/052/PUBLIC_OUTPUT_SCHEMA.json','experiments/052/COLD_PROMPT.md'])if(!p.includes(required))throw new Error('missing '+required);
+for(const bad of ['hidden/','score-exp052','test-score-exp052','evidence','FINAL_','AGENTS.md','STATUS.md'])if(p.some(x=>x.includes(bad)))throw new Error('forbidden '+bad);
+fs.rmSync(OUT,{recursive:true,force:true});
+console.log('Experiment 052 runner self-test PASS');

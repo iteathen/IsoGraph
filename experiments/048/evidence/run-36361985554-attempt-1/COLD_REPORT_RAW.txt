@@ -1,0 +1,216 @@
+{
+  "cases": [
+    {
+      "case_id": "C01",
+      "answers": {
+        "primitive_completeness": "INCOMPLETE",
+        "linked_as_authoritative_leaf": "NO"
+      },
+      "reason": "LINKED is a domain abstraction with an available definitional decomposition that was not expanded to primitive logic.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C02",
+      "answers": {
+        "q_cached_or_referenced": "YES",
+        "primitive_complete": "NO"
+      },
+      "reason": "Qualified constructions may abbreviate but not replace primitive support; the authoritative path must remain traceable through the expansion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C03",
+      "answers": {
+        "literals": "RAW_DATA_ATOM",
+        "length_eq_as_leaf": "REJECTED",
+        "primitive_completeness": "INCOMPLETE"
+      },
+      "reason": "LENGTH_EQ hides arithmetic behavior (length calculation and comparison) which must be represented as lower relational structure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C04",
+      "answers": {
+        "accepts_leaf": "REJECTED",
+        "primitive_completeness": "INCOMPLETE"
+      },
+      "reason": "Computation predicates must expose configuration, transition, and trace semantics to satisfy primitive closure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C05",
+      "answers": {
+        "raw_identities": "RAW_DATA_ATOM",
+        "primitive_completeness": "COMPLETE"
+      },
+      "reason": "Raw carrier identities are allowed when all load-bearing behavior is expressed separately by primitive logical relations.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C06",
+      "answers": {
+        "exact_source_reconstruction": "SUCCESS",
+        "derived_label_authoritative_support": "NO"
+      },
+      "reason": "Abstractions are non-authoritative views; reconstruction succeeds if the underlying primitive formula is preserved.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C07",
+      "answers": {
+        "dp_may_use_loop": "YES",
+        "exact_admission_rely_on_loop_alone": "NO"
+      },
+      "reason": "Discovery Protocol may use abstractions for search, but exact admission must route to primitive support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C08",
+      "answers": {
+        "r_closure_status": "QU_UNEXPANDED",
+        "primitive_complete_claim_pass": "FAIL"
+      },
+      "reason": "Unknown lower meaning must be marked as QU_UNEXPANDED; it cannot be promoted to a primitive leaf.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C09",
+      "answers": {
+        "sidecar_makes_primitive_complete": "NO"
+      },
+      "reason": "Sidecars cannot supply load-bearing semantics absent from the native structure; the rendering remains incomplete.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C10",
+      "answers": {
+        "historical_core_0_19_validity": "VALID",
+        "core_0_20_primitive_completeness": "INCOMPLETE"
+      },
+      "reason": "Core 0.20 removes the escape hatch for qualified constructions; predecessor validity does not imply current primitive completeness.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C11",
+      "answers": {
+        "primitive_completeness": "COMPLETE",
+        "source_round_trip_status": "PASS"
+      },
+      "reason": "The rendering bottoms out in raw atoms and primitive logic, successfully recovering the frozen source meaning.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C12",
+      "answers": {
+        "primitive_semantics_change": "NO",
+        "exact_claims_depend_on_original_names": "NO"
+      },
+      "reason": "Primitive semantics reside in the kernel; derived domain labels are non-authoritative views.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C13",
+      "answers": {
+        "q_classification": "DERIVED_VIEW",
+        "primitive_completeness": "COMPLETE"
+      },
+      "reason": "The qualified construction is correctly used as a view while the authoritative support is provided by the primitive expansion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C14",
+      "answers": {
+        "literals": "RAW_DATA_ATOM",
+        "add_classification": "REJECTED_AS_LEAF",
+        "primitive_completeness": "INCOMPLETE"
+      },
+      "reason": "Arithmetic operators are semantic constructions that must be expanded to primitive logic.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C15",
+      "answers": {
+        "color_incidences_as_primitive": "YES",
+        "internal_cause_expanded": "NO"
+      },
+      "reason": "Primitive observation incidences are allowed when their full semantic contribution is exactly the represented incidence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C16",
+      "answers": {
+        "carrier_identities_allowed": "YES"
+      },
+      "reason": "Carrier names are non-evidential; raw identities are permitted if behavior is represented separately and primitively.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C17",
+      "answers": {
+        "firewall_result": "PASS",
+        "primitive_completeness": "COMPLETE"
+      },
+      "reason": "The assertion remains connected to primitive support after the removal of all derived view nodes.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "C18",
+      "answers": {
+        "v_classification": "DERIVED_VIEW",
+        "firewall_result": "FAIL",
+        "primitive_completeness": "INCOMPLETE"
+      },
+      "reason": "A lossy derived view cannot be the sole support; removing it disconnects the assertion from the missing primitive support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_20": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_accept_domain_name_as_primitive": true,
+    "preserved_qu_when_definition_missing": true,
+    "did_not_use_sidecar_as_native_semantics": true,
+    "distinguished_core019_validity_from_core020_completion": true,
+    "exact_claims_route_to_primitive_support": true
+  }
+}

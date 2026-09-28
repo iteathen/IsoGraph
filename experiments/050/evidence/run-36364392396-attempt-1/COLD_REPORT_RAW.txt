@@ -1,0 +1,291 @@
+{
+  "cases": [
+    {
+      "case_id": "E01",
+      "answers": {
+        "established_contract_violation": true,
+        "minimum_repair_authorized": true,
+        "extended_investigation_required": false
+      },
+      "reason": "The discrepancy is a confirmed mechanical defect in the writer's offset logic; repair is justified by the established binary format contract and trace evidence.",
+      "authority_used": [
+        "DP 0.8 Section 15",
+        "DP 0.8 Section 7"
+      ]
+    },
+    {
+      "case_id": "E02",
+      "answers": {
+        "repair_required": true,
+        "surviving_structural_support": false,
+        "close_discovery": true
+      },
+      "reason": "The discrepancy is an implementation defect; the structural pattern disappears exactly with the repair, indicating it was an artifact of the error.",
+      "authority_used": [
+        "DP 0.8 Section 8.1"
+      ]
+    },
+    {
+      "case_id": "E03",
+      "answers": {
+        "repair_required": true,
+        "surviving_structural_support": true,
+        "preserve_clue_after_repair": true
+      },
+      "reason": "A confirmed hash defect exists, but the state-equivalence clue survives the repair, indicating an independent structural phenomenon (hidden scoped equivalence).",
+      "authority_used": [
+        "DP 0.8 Section 8.2",
+        "DP 0.8 Section 2"
+      ]
+    },
+    {
+      "case_id": "E04",
+      "answers": {
+        "repair_required": true,
+        "post_repair_support_stronger": true,
+        "preserve_clue": true
+      },
+      "reason": "Repairing the scale factor sharpens the structural invariant from approximate to exact, providing high-value discovery evidence.",
+      "authority_used": [
+        "DP 0.8 Section 8.4"
+      ]
+    },
+    {
+      "case_id": "E05",
+      "answers": {
+        "repair_required": true,
+        "distinct_quantities": true,
+        "normalize_values": false
+      },
+      "reason": "The discrepancy reveals a hidden semantic distinction between two valid quantities; the comparison tool's assumption of identity is the defect.",
+      "authority_used": [
+        "DP 0.5 Section 2",
+        "DP 0.8 Section 6"
+      ]
+    },
+    {
+      "case_id": "E06",
+      "answers": {
+        "scoped_equivalence": true,
+        "global_identity_established": false,
+        "repair_required": false
+      },
+      "reason": "The transducers are equivalent under a declared finite scope; however, global identity is not established without qualified NEI authority.",
+      "authority_used": [
+        "DP 0.3 Section 5",
+        "NEI 0.4 Section 3"
+      ]
+    },
+    {
+      "case_id": "E07",
+      "answers": {
+        "rendering_fidelity_established": true,
+        "expected_output_privileged": false,
+        "change_rendering_to_match_expected": false
+      },
+      "reason": "The IsoGraph rendering is faithful to the signed source; legacy expected output without provenance is not a repair oracle.",
+      "authority_used": [
+        "DP 0.8 Section 4",
+        "DP 0.8 Section 9"
+      ]
+    },
+    {
+      "case_id": "E08",
+      "answers": {
+        "rendering_defect_established": true,
+        "reference_challenge_withdraw": true,
+        "repair_rendering": true
+      },
+      "reason": "A concrete rendering defect (dropped sign) is established by trace inspection; the reference challenge is withdrawn as the reference was correct.",
+      "authority_used": [
+        "DP 0.8 Section 19.8"
+      ]
+    },
+    {
+      "case_id": "E09",
+      "answers": {
+        "reference_trust_sufficient": false,
+        "repair_to_trusted_value": false,
+        "preserve_conflict": true
+      },
+      "reason": "Both sources are faithfully represented and no override authority exists; the conflict must be preserved rather than choosing the handbook by prestige.",
+      "authority_used": [
+        "DP 0.8 Section 3",
+        "DP 0.8 Section 10"
+      ]
+    },
+    {
+      "case_id": "E10",
+      "answers": {
+        "reference_supported": true,
+        "isograph_side_defect_established": true,
+        "repair_reference": false
+      },
+      "reason": "The reference is supported by source/checksum evidence; the IsoGraph-side converter defect (swapped slots) is the established owner.",
+      "authority_used": [
+        "DP 0.8 Section 19.10"
+      ]
+    },
+    {
+      "case_id": "E11",
+      "answers": {
+        "both_faithful": true,
+        "choose_one_without_authority": false,
+        "preserve_conflict": true
+      },
+      "reason": "Two faithful standards conflict; without resolution authority, the contradiction must remain represented.",
+      "authority_used": [
+        "DP 0.8 Section 10"
+      ]
+    },
+    {
+      "case_id": "E12",
+      "answers": {
+        "status_incomplete": true,
+        "normalize_to_agreement": false
+      },
+      "reason": "System B lacks closure/transitivity authority; the comparison is incomplete and cannot be normalized to agreement.",
+      "authority_used": [
+        "QU 0.1 Section 8.4",
+        "DP 0.8 Section 12"
+      ]
+    },
+    {
+      "case_id": "E13",
+      "answers": {
+        "preserve_all_admissible_realizations": true,
+        "select_realization": false,
+        "defect_owner_established": false
+      },
+      "reason": "QU preserves both realizations; since no evidence discriminates between them, no defect owner is established.",
+      "authority_used": [
+        "QU 0.1 Section 6",
+        "DP 0.8 Section 13"
+      ]
+    },
+    {
+      "case_id": "E14",
+      "answers": {
+        "nei_same_established": false,
+        "absence_of_difference_sufficient": false,
+        "identity_authority_required": true
+      },
+      "reason": "Finite agreement is not proof of natural identity; NEI 0.4 requires qualified identity authority to establish SAME.",
+      "authority_used": [
+        "NEI 0.4 Section 3",
+        "DP 0.8 Section 19.14"
+      ]
+    },
+    {
+      "case_id": "E15",
+      "answers": {
+        "propagate_invalidation": true,
+        "leave_dependents_unchanged": false
+      },
+      "reason": "The reversal of a primitive edge must propagate through its dependency cone; suppressing invalidation violates provenance discipline.",
+      "authority_used": [
+        "DP 0.8 Section 11",
+        "Core 0.18 Section 9"
+      ]
+    },
+    {
+      "case_id": "E16",
+      "answers": {
+        "repair_defect": true,
+        "clue_survives": true,
+        "preserve_clue": true
+      },
+      "reason": "The syntax defect is repaired, and the structural motif survives (and is strengthened), confirming it as a valid discovery lead.",
+      "authority_used": [
+        "DP 0.8 Section 8.2"
+      ]
+    },
+    {
+      "case_id": "E17",
+      "answers": {
+        "repair_defect": true,
+        "clue_survives": false,
+        "downgrade_or_falsify_clue": true
+      },
+      "reason": "The pattern was a spurious artifact of the endian bug; it disappears after repair and should be falsified.",
+      "authority_used": [
+        "DP 0.8 Section 8.1"
+      ]
+    },
+    {
+      "case_id": "E18",
+      "answers": {
+        "investigate_correspondence": true,
+        "invent_shared_ontology": false,
+        "global_identity_established": false
+      },
+      "reason": "The structural role correspondence is a valid discovery lead, but it does not establish global identity or justify inventing an ontology.",
+      "authority_used": [
+        "DP 0.7 Section 12",
+        "DP 0.7 Section 3"
+      ]
+    },
+    {
+      "case_id": "E19",
+      "answers": {
+        "retain_as_derived_view": true,
+        "promote_to_core": false,
+        "primitive_support_remains_authoritative": true
+      },
+      "reason": "The frontier summary is a useful derived view; it remains subordinate to the primitive structure and does not require Core promotion.",
+      "authority_used": [
+        "DP 0.7 Section 2",
+        "DP 0.7 Section 13"
+      ]
+    },
+    {
+      "case_id": "E20",
+      "answers": {
+        "repair_or_remove_bad_data": true,
+        "preserve_structural_lead": false,
+        "close_as_ordinary_error": true
+      },
+      "reason": "The pattern was caused by a corrupted duplicate row; removing the defect eliminates the lead, which is closed as an ordinary error.",
+      "authority_used": [
+        "DP 0.8 Section 8.1",
+        "DP 0.8 Section 20"
+      ]
+    },
+    {
+      "case_id": "E21",
+      "answers": {
+        "patch_justified": false,
+        "locate_contract_before_repair": true
+      },
+      "reason": "Patching to make a test green without an established contract violation is forbidden; the owner of the discrepancy is unresolved.",
+      "authority_used": [
+        "DP 0.8 Section 9",
+        "DP 0.8 Section 21"
+      ]
+    },
+    {
+      "case_id": "E22",
+      "answers": {
+        "repair_required": true,
+        "clue_survives": true,
+        "separate_dispositions_required": true
+      },
+      "reason": "The off-by-one defect requires repair, but the surviving equivalence clue requires a separate discovery disposition.",
+      "authority_used": [
+        "DP 0.8 Section 2",
+        "DP 0.8 Section 8.2"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_8": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_privilege_expected_or_trusted_side": true,
+    "kept_repair_and_discovery_questions_separate": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_nei_same_from_finite_agreement": true,
+    "did_not_promote_useful_derived_view_to_core": true
+  }
+}

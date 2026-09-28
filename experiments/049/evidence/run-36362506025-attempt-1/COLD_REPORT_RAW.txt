@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "fast_repair_path": true
+      },
+      "reason": "Mechanical index shift with no structural implications.",
+      "authority_used": ["CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md Section 10"]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "close_after_repair": true
+      },
+      "reason": "Defect confirmed; interesting cluster was an artifact of the incorrect connective.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 8.1"]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "preserve_both_dispositions": true
+      },
+      "reason": "Pointer defect repaired; independent symmetry proves structural correspondence survives.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 2.2"]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "repair_invariance": "sharpened"
+      },
+      "reason": "Unit repair sharpens the established dimensionless ratio relation.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 8.4"]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "repair_disposition": "SCOPE_MISMATCH",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "false_repair_allowed": false
+      },
+      "reason": "Different semantic quantities measured; no defect exists.",
+      "authority_used": ["CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md Section 2"]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "scoped_equivalence": true,
+        "nei_same_established": false
+      },
+      "reason": "Scoped equivalence established; natural identity remains unresolved.",
+      "authority_used": ["CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md Section 7"]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "repair_disposition": "REFERENCE_DEFECT_POSSIBLE",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "expected_side_privileged": false,
+        "faithful_rendering_should_change": false
+      },
+      "reason": "Faithful rendering of source duration; legacy expected file lacks authority.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 4"]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "repair_disposition": "REPRESENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "reference_challenge_withdrawn": true
+      },
+      "reason": "Parser error located and repaired; reference challenge withdrawn.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 1"]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "repair_disposition": "UNRESOLVED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "trusted_reference_privileged": false,
+        "change_to_7_justified": false
+      },
+      "reason": "Conflicting references; handbook prestige does not override instrument evidence.",
+      "authority_used": ["extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 3"]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "reference_control_locates_isograph_side": true

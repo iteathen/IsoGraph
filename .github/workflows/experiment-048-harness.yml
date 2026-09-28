@@ -1,0 +1,33 @@
+name: Experiment 048 deterministic harness
+
+on:
+  push:
+    branches:
+      - qualification/core020-dp08-20260928
+    paths:
+      - experiments/048/HARNESS.request
+
+permissions:
+  contents: read
+
+jobs:
+  harness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Verify Experiment 048 deterministic harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/048/tools/test-score-exp048.mjs
+          node --check experiments/048/tools/test-runner-exp048.mjs
+          node --check experiments/048/tools/test-schema-exp048.mjs
+          node experiments/048/tools/test-schema-exp048.mjs
+          node experiments/048/tools/test-score-exp048.mjs
+          node experiments/048/tools/test-runner-exp048.mjs

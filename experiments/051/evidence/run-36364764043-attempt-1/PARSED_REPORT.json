@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "case_id": "H01",
+      "answers": {
+        "source_a_requires_repair": false,
+        "source_b_requires_repair": false,
+        "hidden_distinction_established": true,
+        "normalize_to_common_quantity": false,
+        "false_repair_allowed": false
+      },
+      "reason": "Both sources are faithfully represented and satisfy their respective contracts. The numeric discrepancy is an observation of two different semantic quantities (end-to-end vs. service-only latency) rather than a defect. Under DP 0.8, semantic quantity alignment precedes judgment, and a hidden distinction with no defect must avoid false repair.",
+      "authority_used": [
+        "DP 0.8 Section 0 (observation != diagnosis)",
+        "DP 0.8 Section 2 (Semantic quantity alignment)",
+        "DP 0.8 Section 4 (Fidelity vs Correctness)",
+        "DP 0.8 Section 9 (Desired agreement is not a repair oracle)"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_8_target_5": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_treat_numeric_difference_as_defect": true,
+    "preserved_quantity_scope": true
+  }
+}

@@ -4,6 +4,38 @@
 **Date:** 2026-09-18  
 **Qualified semantic baseline:** Core 0.17 + qualified Core 0.18 observation-first clarification (`qualification/CORE_0_18_QUALIFICATION.md`)
 
+## 2026-09-28 current authority update
+
+The historical obligation matrix below is retained unchanged as qualification-planning provenance.
+
+Current qualified authority has advanced to:
+
+```text
+Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20
++ QU 0.1
++ NEI 0.4
++ Discovery Protocols 0.1–0.8
++ DTS 0.1
+```
+
+Current routing manifest:
+
+- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+
+Current direct integration record:
+
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`
+- Experiment 052: 16 / 16 PASS, formal `QUALIFIES`.
+
+New successor qualification records:
+
+- Core 0.20: `qualification/CORE_0_20_QUALIFICATION.md`;
+- DP 0.8: `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md`.
+
+The sections below describe the historical qualification plan as executed at earlier revisions and should not be used as the current routing manifest.
+
+---
+
 This matrix separates module semantic qualification from implementation testing, discovery performance, and integrated-stack compatibility.
 
 ```text

@@ -1,0 +1,340 @@
+{
+  "cases": [
+    {
+      "case_id": "D01",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "fast_repair_path": true
+      },
+      "reason": "The discrepancy is a mechanical index shift in the serializer. Once corrected, no structural residuals or leads remain.",
+      "authority_used": [
+        "DP 0.8 Section 15",
+        "DP 0.5 Section 7"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURAL_LEAD_FALSIFIED",
+        "close_after_repair": true
+      },
+      "reason": "The implementation violated the frozen source rule. The resulting 'interesting' cluster was an artifact of the boolean error and disappeared upon repair.",
+      "authority_used": [
+        "DP 0.8 Section 8.1",
+        "DP 0.4 Section 2"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "preserve_both_dispositions": true
+      },
+      "reason": "A confirmed pointer defect caused duplicate counts, but its repair revealed a surviving structural symmetry in the continuation language.",
+      "authority_used": [
+        "DP 0.8 Section 2.2",
+        "DP 0.8 Section 8.2"
+      ]
+    },
+    {
+      "case_id": "D04",
+      "answers": {
+        "repair_disposition": "LOCAL_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "repair_invariance": "SHARPENED"
+      },
+      "reason": "Correcting the unit label (a local adapter defect) sharpened the discovery of a dimensionless ratio relation across the systems.",
+      "authority_used": [
+        "DP 0.8 Section 8.4",
+        "DP 0.5 Section 2"
+      ]
+    },
+    {
+      "case_id": "D05",
+      "answers": {
+        "repair_disposition": "SCOPE_MISMATCH",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "false_repair_allowed": false
+      },
+      "reason": "The discrepancy is caused by comparing two different semantic quantities (end-to-end vs service-only). Both are correct within their documented scopes.",
+      "authority_used": [
+        "DP 0.8 Section 3",
+        "DP 0.5 Section 2"
+      ]
+    },
+    {
+      "case_id": "D06",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "scoped_equivalence": true,
+        "nei_same_established": false
+      },
+      "reason": "The transducers are equivalent under the declared I/O scope, but no identity authority exists to establish global natural identity.",
+      "authority_used": [
+        "DP 0.7 Section 4",
+        "NEI 0.4 Section 3"
+      ]
+    },
+    {
+      "case_id": "D07",
+      "answers": {
+        "repair_disposition": "REFERENCE_DEFECT_POSSIBLE",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "expected_side_privileged": false,
+        "faithful_rendering_should_change": false
+      },
+      "reason": "The IsoGraph rendering is faithful to the confirmed source. The expected-output file lacks provenance and contradicts the source without authority.",
+      "authority_used": [
+        "DP 0.8 Section 4",
+        "DP 0.8 Section 9"
+      ]
+    },
+    {
+      "case_id": "D08",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "reference_challenge_withdrawn": true
+      },
+      "reason": "The challenge to the reference was incorrect; the discrepancy was caused by a parser defect in the IsoGraph rendering path.",
+      "authority_used": [
+        "DP 0.8 Section 3",
+        "Core 0.19 Section 18"
+      ]
+    },
+    {
+      "case_id": "D09",
+      "answers": {
+        "repair_disposition": "UNRESOLVED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "trusted_reference_privileged": false,
+        "change_to_7_justified": false
+      },
+      "reason": "There is a conflict between two faithfully represented sources. Trust in the handbook is not a substitute for adjudicating evidence.",
+      "authority_used": [
+        "DP 0.8 Section 3",
+        "DP 0.8 Section 9"
+      ]
+    },
+    {
+      "case_id": "D10",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "reference_control_locates_isograph_side": true
+      },
+      "reason": "Multiple independent references agree, and a converter bug was located on the IsoGraph side.",
+      "authority_used": [
+        "DP 0.8 Section 3",
+        "DP 0.5 Section 3"
+      ]
+    },
+    {
+      "case_id": "D11",
+      "answers": {
+        "repair_disposition": "UNRESOLVED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "preserve_both_references": true,
+        "choose_by_date_allowed": false
+      },
+      "reason": "Two standards conflict. Without a precedence rule, both must be preserved as a genuine contradiction in the source authority.",
+      "authority_used": [
+        "DP 0.8 Section 10",
+        "Core 0.18 Section 4"
+      ]
+    },
+    {
+      "case_id": "D12",
+      "answers": {
+        "repair_disposition": "AUTHORITY_GAP",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "symmetry_status": "INCOMPLETE",
+        "normalize_to_agreement": false
+      },
+      "reason": "The discrepancy is due to missing authority/closure in Model B. Normalizing to agreement would be an unsupported inference.",
+      "authority_used": [
+        "DP 0.5 Section 5",
+        "QU 0.1 Section 8.4"
+      ]
+    },
+    {
+      "case_id": "D13",
+      "answers": {
+        "repair_disposition": "UNRESOLVED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "preserve_qu_realizations": true,
+        "select_realization_allowed": false
+      },
+      "reason": "The diagnosis depends on an unresolved QU mapping. Both realizations must be preserved until evidence selects one.",
+      "authority_used": [
+        "DP 0.8 Section 6",
+        "QU 0.1 Section 12"
+      ]
+    },
+    {
+      "case_id": "D14",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "OPEN_STRUCTURAL_LEAD",
+        "nei_same_established": false,
+        "identity_authority_required": true
+      },
+      "reason": "Absence of observed difference in a finite set is not proof of natural identity without a qualified identity model.",
+      "authority_used": [
+        "NEI 0.4 Section 5",
+        "DP 0.6 Section 2"
+      ]
+    },
+    {
+      "case_id": "D15",
+      "answers": {
+        "repair_disposition": "REPRESENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "propagate_invalidation": true,
+        "suppress_dependents": false
+      },
+      "reason": "A confirmed primitive defect must propagate through its dependency cone to maintain system integrity and expose the impact.",
+      "authority_used": [
+        "DP 0.8 Section 11",
+        "Core 0.18 Section 9"
+      ]
+    },
+    {
+      "case_id": "D16",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "repair_invariance": "SURVIVED"
+      },
+      "reason": "The structural motif was independent of the parse error and survived the restoration of the missing row.",
+      "authority_used": [
+        "DP 0.8 Section 8.2",
+        "DP 0.5 Section 6"
+      ]
+    },
+    {
+      "case_id": "D17",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURAL_LEAD_FALSIFIED",
+        "repair_invariance": "DISAPPEARED"
+      },
+      "reason": "The palindromic patterns were artifacts of a byte-order bug and disappeared completely upon repair.",
+      "authority_used": [
+        "DP 0.8 Section 8.1",
+        "DP 0.5 Section 13"
+      ]
+    },
+    {
+      "case_id": "D18",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "cross_domain_correspondence_investigable": true,
+        "shared_ontology_invented": false
+      },
+      "reason": "The structural motifs correspond across domains. This is a valid discovery lead that does not require inventing a shared ontology.",
+      "authority_used": [
+        "DP 0.7 Section 12",
+        "DP 0.1 Section 6"
+      ]
+    },
+    {
+      "case_id": "D19",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "promotion_destination": "DERIVED_DP_VIEW",
+        "promote_to_core": false
+      },
+      "reason": "The bottleneck view is a useful derived interpretation of primitive structure. It does not require promotion to a Core primitive.",
+      "authority_used": [
+        "DP 0.7 Section 2",
+        "DP 0.8 Section 13"
+      ]
+    },
+    {
+      "case_id": "D20",
+      "answers": {
+        "repair_disposition": "LOCAL_DEFECT_CONFIRMED",
+        "discovery_disposition": "STRUCTURAL_LEAD_FALSIFIED",
+        "close_as_ordinary_error": true
+      },
+      "reason": "The correspondence was an artifact of a corrupted data row. Removing the defect falsified the structural lead.",
+      "authority_used": [
+        "DP 0.8 Section 15",
+        "DP 0.5 Section 13"
+      ]
+    },
+    {
+      "case_id": "D21",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "expected_output_only_patch_allowed": false,
+        "contract_required_before_repair": true
+      },
+      "reason": "Repairing solely to match a test expectation without an established contract violation is an invalid 'expected-output-only' patch.",
+      "authority_used": [
+        "DP 0.8 Section 9",
+        "DP 0.5 Section 7"
+      ]
+    },
+    {
+      "case_id": "D22",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "semantic_conflict": false,
+        "repair_required": false
+      },
+      "reason": "The mismatch is representational (list order) rather than semantic (set membership). Both decode to the same members.",
+      "authority_used": [
+        "DP 0.2 Section 0",
+        "Core 0.18 Section 2"
+      ]
+    },
+    {
+      "case_id": "D23",
+      "answers": {
+        "repair_disposition": "NO_REPAIR_ESTABLISHED",
+        "discovery_disposition": "STRUCTURE_ESTABLISHED",
+        "preserve_scope_distinction": true
+      },
+      "reason": "The discrepancy reveals a useful distinction between global and phase-specific latency, correlated with allocation behavior.",
+      "authority_used": [
+        "DP 0.5 Section 4",
+        "Core 0.18 Section 2"
+      ]
+    },
+    {
+      "case_id": "D24",
+      "answers": {
+        "repair_disposition": "IMPLEMENTATION_DEFECT_CONFIRMED",
+        "discovery_disposition": "NO_STRUCTURAL_LEAD",
+        "semantic_gap": false,
+        "enforcement_gap": true
+      },
+      "reason": "The semantic rule is clear; the discrepancy is an enforcement gap in the validator implementation.",
+      "authority_used": [
+        "DP 0.8 Section 12",
+        "DP 0.5 Section 7"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_8": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "did_not_privilege_expected_or_trusted_side": true,
+    "kept_repair_and_discovery_dispositions_independent": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_nei_same_from_absence_of_difference": true,
+    "did_not_promote_useful_view_to_core_without_need": true
+  }
+}
