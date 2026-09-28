@@ -31,11 +31,14 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
 - [Core 0.18 Qualified Observation-First Clarification](qualification/CORE_0_18_QUALIFICATION.md)
 - [Core 0.19 Qualified Assertion-Support / Exact-Rendering Clarification](qualification/CORE_0_19_QUALIFICATION.md)
-- [Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
+- [Core 0.20 Qualified Primitive-Logic-Closure Clarification](qualification/CORE_0_20_QUALIFICATION.md)
+- [Qualified Module Authority Manifest — 2026-09-28](qualification/QUALIFIED_MODULES_2026-09-28.md)
+- [Historical Qualified Module Authority Manifest — 2026-09-26](qualification/QUALIFIED_MODULES_2026-09-26.md)
 - [Historical Qualified Module Authority Manifest — 2026-09-25](qualification/QUALIFIED_MODULES_2026-09-25.md)
 - [Older Qualified Module Authority Manifest — 2026-09-18](qualification/QUALIFIED_MODULES_2026-09-18.md)
-- [Discovery Protocols 0.1–0.7 Qualification Review — 2026-09-26](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_7_QUALIFICATION_REVIEW.md)
-- [Current Integrated Semantic Stack with Core 0.19 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
+- [Discovery Protocols 0.1–0.8 Qualification Review — 2026-09-28](qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md)
+- [Current Integrated Semantic Stack with Core 0.20 and DP 0.8 — 2026-09-28](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md)
+- [Historical Integrated Semantic Stack with Core 0.19 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_19_2026-09-26.md)
 - [Historical Integrated Semantic Stack with DP 0.7 — 2026-09-26](qualification/CURRENT_INTEGRATED_STACK_WITH_DP07_2026-09-26.md)
 - [Maintained IsoGraph Family Reference (DOCX)](IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx) — durable accumulated final product stored beside this README; repository semantic authority remains the exact versioned specifications/qualification records.
 
