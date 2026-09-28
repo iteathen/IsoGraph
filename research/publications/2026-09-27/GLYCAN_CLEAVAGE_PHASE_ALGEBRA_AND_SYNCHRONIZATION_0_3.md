@@ -449,7 +449,7 @@ $$
 
 The historical A8 proof and its bottleneck-path correction remain valid provenance; this shorter proof became available only after the later resistant-chain duality was derived [19].
 
-For singleton susceptibility, each non-target node has one treatment label. Reading labels leaf-first along the path, Along a path, consecutive equal labels can be executed in the same exhaustive phase, so compress consecutive equal labels. Let $COMP(P)$ be the resulting run-compressed word.
+For singleton susceptibility, each non-target node has one treatment label. Reading labels leaf-first along the path, consecutive equal labels can be executed in the same exhaustive phase, so compress consecutive equal labels. Let $COMP(P)$ be the resulting run-compressed word.
 
 Then a treatment word covers path $P$ exactly when $COMP(P)$ is an ordinary subsequence of that treatment word.
 
