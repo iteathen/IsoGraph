@@ -89,7 +89,7 @@
     "I14": [
       "rendering_defect_established",
       "repair_reference",
-      "challenge_reference_after_trace"
+      "continue_challenging_reference_after_rendering_defect_established"
     ],
     "I15": [
       "scoped_same",
@@ -260,7 +260,7 @@
       "repair_reference": {
         "type": "boolean"
       },
-      "challenge_reference_after_trace": {
+      "continue_challenging_reference_after_rendering_defect_established": {
         "type": "boolean"
       }
     },
@@ -303,5 +303,14 @@
       "UNSUPPORTED"
     ]
   },
-  "note": "Field names/types and module-assessment vocabulary are public. Expected values remain hidden."
+  "note": "Field names/types and module-assessment vocabulary are public. Expected values remain hidden.",
+  "top_level": {
+    "case_container": "cases_array",
+    "case_item_fields": [
+      "case_id",
+      "answers",
+      "reason",
+      "authority_used"
+    ]
+  }
 }
