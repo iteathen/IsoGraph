@@ -174,7 +174,7 @@ $$
 G\text{-}IA001\ldots G\text{-}IA448,
 $$
 
-with no gaps or duplicate authoritative IDs through $G\text{-}IA448$. Peer-review refinements add $G\text{-}IA449\ldots G\text{-}IA459$ without rewriting the earlier derivations [19, 22]. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$.
+with no gaps or duplicate authoritative IDs through $G\text{-}IA448$. Peer-review refinements add $G\text{-}IA449\ldots G\text{-}IA459$ without rewriting the earlier derivations [19, 20]. The scoped identity range remains $G\text{-}N001\ldots G\text{-}N116$.
 
 ---
 
@@ -204,7 +204,7 @@ D_e(A)=\uparrow(A\cap N_e)
 }
 $$
 
-where $\uparrow$ denotes upward closure in the descendant-before-ancestor order [20].
+where $\uparrow$ denotes upward closure in the descendant-before-ancestor order [21].
 
 #### Proof sketch
 
@@ -255,7 +255,7 @@ R_e(I\cap J)=R_e(I)\cap R_e(J).
 }
 $$
 
-Thus each treatment acts as a meet-preserving closure operator on the finite ideal lattice [20].
+Thus each treatment acts as a meet-preserving closure operator on the finite ideal lattice [21].
 
 This is the classical algebraic shape called a **nucleus** on a frame or distributive lattice [14]. The terminology is external; the equalities above were derived directly in the frozen model.
 
@@ -277,7 +277,7 @@ R_{e_1}=R_{e_2}
 }
 $$
 
-as functions on all valid states [20].
+as functions on all valid states [21].
 
 The forward direction follows immediately from the resistant-frontier formula.
 
@@ -295,7 +295,7 @@ e\sim f
 S_e^*=S_f^*.
 $
 
-By Theorem 2, this is equivalent to equality of the complete one-phase transformer on every valid state. An **effective treatment class** is an equivalence class under $\sim$. The class alphabet is therefore $E/{\sim}$. Distinct raw enzymes inside one effective class remain distinct source objects unless stronger identity authority separately identifies them [22].
+By Theorem 2, this is equivalent to equality of the complete one-phase transformer on every valid state. An **effective treatment class** is an equivalence class under $\sim$. The class alphabet is therefore $E/{\sim}$. Distinct raw enzymes inside one effective class remain distinct source objects unless stronger identity authority separately identifies them [20].
 
 ### Dominance
 
@@ -353,7 +353,7 @@ u\preceq_M v
 v\preceq_M u.
 $$
 
-The solving upset has a unique set $\mathcal B_M$ of minimal **equivalence classes** in the quotient poset of words modulo $\approx_M$ [21, 22]. A concrete raw representative family need not be unique when distinct raw enzymes or words are mutually equivalent.
+The solving upset has a unique set $\mathcal B_M$ of minimal **equivalence classes** in the quotient poset of words modulo $\approx_M$ [20, 22]. A concrete raw representative family need not be unique when distinct raw enzymes or words are mutually equivalent.
 
 Choose any representative family $B_M^{\mathrm{rep}}$ containing representatives of all minimal classes. Then
 
@@ -434,7 +434,7 @@ $$
 q_1\le_P\cdots\le_P q_k
 $$
 
-contained in $P$ with $q_i\in N_{e_i}$ for every treatment position [22, 23]. This definition applies directly to set-valued susceptibility.
+contained in $P$ with $q_i\in N_{e_i}$ for every treatment position [20, 23]. This definition applies directly to set-valued susceptibility.
 
 The resistant-chain dual gives a short proof of maximal-path sufficiency. If $w$ fails globally, §6.3 supplies a nondecreasing resistant chain. Because its nodes are totally ordered in the rooted-tree order, that chain lies in some maximal active path, so $w$ fails to cover that path. Conversely, a resistant chain contained in one maximal path is also a valid global resistant chain. Hence
 
@@ -470,7 +470,7 @@ For general set-valued susceptibility, the problem is **not** silently one ordin
 
 ## 8. The Exact Two-Enzyme Collapse
 
-The strongest clean special case occurs when the quotient alphabet $E/{\sim}$ has at most two effective treatment classes, call them $A$ and $B$. All statements in this section are class-level statements; raw enzymes in one class may be substituted without changing phase behavior [22, 24].
+The strongest clean special case occurs when the quotient alphabet $E/{\sim}$ has at most two effective treatment classes, call them $A$ and $B$. All statements in this section are class-level statements; raw enzymes in one class may be substituted without changing phase behavior [20, 24].
 
 ### Theorem 3 — Minimum words alternate
 
@@ -522,7 +522,7 @@ $$
 
 for every frozen version-0.1 state with at most two effective treatment classes, including set-valued susceptibility [24].
 
-The complete optimum **effective-class-word** family has size at most two. The raw optimum-word family can be larger when an effective class contains several distinct raw enzymes, because class-equivalent representatives may be substituted position-wise [22].
+The complete optimum **effective-class-word** family has size at most two. The raw optimum-word family can be larger when an effective class contains several distinct raw enzymes, because class-equivalent representatives may be substituted position-wise [20].
 
 This theorem explains why small binary test surfaces appear deceptively easy. It depends on the special rigidity of no-adjacent-repeat binary words.
 
@@ -627,7 +627,7 @@ $
 \exists\text{ run-compressed solution of length exactly }L.
 $
 
-The ternary critical-cover constructions satisfy the two-class minimum automatically [22].
+The ternary critical-cover constructions satisfy the two-class minimum automatically [20].
 
 For path $P$, define the failure set
 
@@ -692,7 +692,7 @@ run-compressed treatment words of length 20 as the threshold universe.
 
 ### Ternary universal-supersequence ceiling
 
-For any run-compressed ternary path word of length $\ell$, the cyclic word $012012012\cdots$ has a prefix of length $2\ell+1$ containing that path as a subsequence: the first required symbol appears within the first three positions, and because consecutive target symbols differ, each later required symbol appears within at most two additional positions [22].
+For any run-compressed ternary path word of length $\ell$, the cyclic word $012012012\cdots$ has a prefix of length $2\ell+1$ containing that path as a subsequence: the first required symbol appears within the first three positions, and because consecutive target symbols differ, each later required symbol appears within at most two additional positions [20].
 
 Hence every family of run-compressed ternary paths of length $\ell$ satisfies
 
@@ -881,7 +881,7 @@ $$
 
 Inspection then found the defect: the performance-specialized length-10 kernel manually consumed only symbols $p_0,\ldots,p_8$. The tenth symbol $p_9$ had been omitted.
 
-The minimum repair added $p_9$, added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to $PL=10$. The omission had effectively reduced the incidence check to length-9 paths; the ternary ceiling supplies a universal cyclic supersequence of length $2\cdot9+1=19$, so a universal word at threshold 20 is exactly what that defective kernel should permit. The repaired run then produced the width-173 certificate [22, 30].
+The minimum repair added $p_9$, added the tenth transition, and added a fail-closed specialization guard tying the unrolled kernel to $PL=10$. The omission had effectively reduced the incidence check to length-9 paths; the ternary ceiling supplies a universal cyclic supersequence of length $2\cdot9+1=19$, so a universal word at threshold 20 is exactly what that defective kernel should permit. The repaired run then produced the width-173 certificate [20, 30].
 
 The episode is relevant because it illustrates the IsoGraph discrepancy discipline: an anomaly is neither automatically promoted to discovery nor immediately discarded as “just a bug.” Competing structural and implementation explanations are separated and falsified.
 
@@ -1078,11 +1078,11 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [19] IsoGraph Project. “Glycan publication preflight audit 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_PREFLIGHT_0_1.md.
 
-[20] IsoGraph Project. “DP-fed implicit admissions A12 — phase algebra and dominance-aware language.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md.
+[21] IsoGraph Project. “DP-fed implicit admissions A12 — phase algebra and dominance-aware language.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md.
 
-[21] IsoGraph Project. “DP-fed implicit admissions A14 — unique dominance boundary.” Historical derivation refined by [22]. Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md.
+[22] IsoGraph Project. “DP-fed implicit admissions A14 — unique dominance boundary.” Historical derivation refined by [20]. Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md.
 
-[22] IsoGraph Project. “Glycan publication-review refinements A30 — path coverage, quotient uniqueness, and ternary threshold ceiling 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/0431c392db23da94a93ba972c7ef613c537e82cb/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_REVIEW_REFINEMENTS_A30_0_1.md.
+[20] IsoGraph Project. “Glycan publication-review refinements A30 — path coverage, quotient uniqueness, and ternary threshold ceiling 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/0431c392db23da94a93ba972c7ef613c537e82cb/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_REVIEW_REFINEMENTS_A30_0_1.md.
 
 [23] IsoGraph Project. “DP-fed implicit admissions A13 — resistance-chain duality.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A13_0_1.md.
 
