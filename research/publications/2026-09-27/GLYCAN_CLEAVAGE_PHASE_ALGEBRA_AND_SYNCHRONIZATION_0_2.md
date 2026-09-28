@@ -289,11 +289,11 @@ This has a useful modeling consequence: susceptibility tuples on retained target
 
 Define raw-treatment equivalence by
 
-$
+$$
 e\sim f
 \iff
 S_e^*=S_f^*.
-$
+$$
 
 By Theorem 2, this is equivalent to equality of the complete one-phase transformer on every valid state. An **effective treatment class** is an equivalence class under $\sim$. The class alphabet is therefore $E/{\sim}$. Distinct raw enzymes inside one effective class remain distinct source objects unless stronger identity authority separately identifies them [20].
 
@@ -621,11 +621,11 @@ Assume the effective treatment alphabet has at least two classes. If a word of l
 
 Therefore
 
-$
+$$
 \exists\text{ solution of length }\le L
 \iff
 \exists\text{ run-compressed solution of length exactly }L.
-$
+$$
 
 The ternary critical-cover constructions satisfy the two-class minimum automatically [20].
 
@@ -696,9 +696,9 @@ For any run-compressed ternary path word of length $\ell$, the cyclic word $0120
 
 Hence every family of run-compressed ternary paths of length $\ell$ satisfies
 
-$
+$$
 \mathrm{OPT}\le 2\ell+1.
-$
+$$
 
 Therefore $L=2\ell$ is the highest threshold at which a critical cover can establish failure for a family whose paths all have length $\ell$.
 
@@ -714,17 +714,17 @@ For every selected path $P_i$, it also recorded a private threshold word $w_i$ t
 
 The critical-cover certificate gives
 
-$
+$$
 \mathrm{OPT}(F_{173})>20.
-$
+$$
 
 The universal ceiling gives $\mathrm{OPT}(F_{173})\le21$. Therefore
 
-$
+$$
 \boxed{
 \mathrm{OPT}(F_{173})=21.
 }
-$
+$$
 
 Moreover,
 
@@ -935,11 +935,11 @@ The relation $M(e,r)$ is assumed exact and complete for the represented instance
 
 The current strongest unconditional construction gives one fixed ternary instance with
 
-$
+$$
 W=173
 \qquad\text{and}\qquad
 \mathrm{OPT}=21.
-$
+$$
 
 It does **not** establish
 
@@ -991,11 +991,11 @@ $$
 
 With three treatment classes, that collapse disappears. Pure synchronization among independent deterministic chains can require many simultaneously load-bearing path constraints. Exact finite constructions now reach:
 
-$
+$$
 \boxed{W=173},
 \qquad
 \boxed{\mathrm{OPT}=21}
-$
+$$
 
 for the strongest current length-10 ternary construction.
 
@@ -1036,8 +1036,6 @@ You are free to share, copy, redistribute, remix, transform, and build upon the 
 This license applies to the original text, analysis, diagrams, and explanatory material in this paper. Referenced source code, repository contents, third-party publications, trademarks, and other externally owned materials retain their original licenses and ownership.
 
 ---
-
-## References
 
 ## References
 
