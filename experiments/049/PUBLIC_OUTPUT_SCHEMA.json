@@ -161,5 +161,749 @@
       "enforcement_gap"
     ]
   },
-  "note": "Field names are public serialization contract. Expected values remain hidden."
+  "note": "Field names and value vocabularies are public serialization contract. Expected choices remain hidden.",
+  "field_contracts": {
+    "D01": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "fast_repair_path": {
+        "type": "boolean"
+      }
+    },
+    "D02": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "close_after_repair": {
+        "type": "boolean"
+      }
+    },
+    "D03": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "preserve_both_dispositions": {
+        "type": "boolean"
+      }
+    },
+    "D04": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "repair_invariance": {
+        "type": "enum",
+        "values": [
+          "DISAPPEARED",
+          "SURVIVED",
+          "CHANGED",
+          "SHARPENED"
+        ]
+      }
+    },
+    "D05": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "false_repair_allowed": {
+        "type": "boolean"
+      }
+    },
+    "D06": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "scoped_equivalence": {
+        "type": "boolean"
+      },
+      "nei_same_established": {
+        "type": "boolean"
+      }
+    },
+    "D07": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "expected_side_privileged": {
+        "type": "boolean"
+      },
+      "faithful_rendering_should_change": {
+        "type": "boolean"
+      }
+    },
+    "D08": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "reference_challenge_withdrawn": {
+        "type": "boolean"
+      }
+    },
+    "D09": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "trusted_reference_privileged": {
+        "type": "boolean"
+      },
+      "change_to_7_justified": {
+        "type": "boolean"
+      }
+    },
+    "D10": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "reference_control_locates_isograph_side": {
+        "type": "boolean"
+      }
+    },
+    "D11": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "preserve_both_references": {
+        "type": "boolean"
+      },
+      "choose_by_date_allowed": {
+        "type": "boolean"
+      }
+    },
+    "D12": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "symmetry_status": {
+        "type": "enum",
+        "values": [
+          "INCOMPLETE",
+          "ESTABLISHED_TRUE",
+          "ESTABLISHED_FALSE",
+          "QU_UNRESOLVED"
+        ]
+      },
+      "normalize_to_agreement": {
+        "type": "boolean"
+      }
+    },
+    "D13": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "preserve_qu_realizations": {
+        "type": "boolean"
+      },
+      "select_realization_allowed": {
+        "type": "boolean"
+      }
+    },
+    "D14": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "nei_same_established": {
+        "type": "boolean"
+      },
+      "identity_authority_required": {
+        "type": "boolean"
+      }
+    },
+    "D15": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "propagate_invalidation": {
+        "type": "boolean"
+      },
+      "suppress_dependents": {
+        "type": "boolean"
+      }
+    },
+    "D16": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "repair_invariance": {
+        "type": "enum",
+        "values": [
+          "DISAPPEARED",
+          "SURVIVED",
+          "CHANGED",
+          "SHARPENED"
+        ]
+      }
+    },
+    "D17": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "repair_invariance": {
+        "type": "enum",
+        "values": [
+          "DISAPPEARED",
+          "SURVIVED",
+          "CHANGED",
+          "SHARPENED"
+        ]
+      }
+    },
+    "D18": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "cross_domain_correspondence_investigable": {
+        "type": "boolean"
+      },
+      "shared_ontology_invented": {
+        "type": "boolean"
+      }
+    },
+    "D19": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "promotion_destination": {
+        "type": "enum",
+        "values": [
+          "LOCAL_REPAIR",
+          "VALIDATOR",
+          "DERIVED_DP_VIEW",
+          "EXTENSION_CANDIDATE",
+          "CORE_CANDIDATE"
+        ]
+      },
+      "promote_to_core": {
+        "type": "boolean"
+      }
+    },
+    "D20": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "close_as_ordinary_error": {
+        "type": "boolean"
+      }
+    },
+    "D21": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "expected_output_only_patch_allowed": {
+        "type": "boolean"
+      },
+      "contract_required_before_repair": {
+        "type": "boolean"
+      }
+    },
+    "D22": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "semantic_conflict": {
+        "type": "boolean"
+      },
+      "repair_required": {
+        "type": "boolean"
+      }
+    },
+    "D23": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "preserve_scope_distinction": {
+        "type": "boolean"
+      }
+    },
+    "D24": {
+      "repair_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_REPAIR_ESTABLISHED",
+          "LOCAL_DEFECT_CONFIRMED",
+          "REPRESENTATION_DEFECT_CONFIRMED",
+          "IMPLEMENTATION_DEFECT_CONFIRMED",
+          "REFERENCE_DEFECT_POSSIBLE",
+          "AUTHORITY_GAP",
+          "SCOPE_MISMATCH",
+          "MULTIPLE_OWNERS_POSSIBLE",
+          "UNRESOLVED"
+        ]
+      },
+      "discovery_disposition": {
+        "type": "enum",
+        "values": [
+          "NO_STRUCTURAL_LEAD",
+          "OPEN_STRUCTURAL_LEAD",
+          "STRUCTURE_ESTABLISHED",
+          "STRUCTURAL_LEAD_FALSIFIED"
+        ]
+      },
+      "semantic_gap": {
+        "type": "boolean"
+      },
+      "enforcement_gap": {
+        "type": "boolean"
+      }
+    }
+  }
 }
