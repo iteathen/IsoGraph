@@ -103,7 +103,7 @@ The paper does **not** claim a new P-versus-NP theorem, lower bound, or general 
 
 ## 2. Scope and relationship to P versus NP
 
-The motivating IsoGraph campaign starts from a primitive rendering of bounded branching computation and its functional counterpart [10–13].
+The motivating IsoGraph campaign starts from a primitive rendering of bounded branching computation and its functional counterpart [1–4].
 
 At the familiar complexity-theoretic level, the unresolved direction can be summarized informally as:
 
@@ -148,7 +148,7 @@ All reductions below preserve either the exact continuation support or a declare
 
 ### 2.1 Authority boundary
 
-The IsoGraph primitive P-versus-NP bundle used by the research campaign is confirmed at research-audit level for its selected finite-control tape convention [10].
+The IsoGraph primitive P-versus-NP bundle used by the research campaign is confirmed at research-audit level for its selected finite-control tape convention [1].
 
 The separate primitive bridge from that convention to the exact official formulation of P versus NP remains outside the qualified claim of the research bundle.
 
@@ -156,9 +156,9 @@ Accordingly, this paper uses the bounded existential formulation as its technica
 
 ### 2.2 Current IsoGraph authority
 
-At the repository baseline cited by this paper, the qualified IsoGraph family consists of Core 0.17–0.20, QU 0.1, NEI 0.4, Discovery Protocols 0.1–0.8, and DTS 0.1 [14,15].
+At the repository baseline cited by this paper, the qualified IsoGraph family consists of Core 0.17–0.20, QU 0.1, NEI 0.4, Discovery Protocols 0.1–0.8, and DTS 0.1 [5–6].
 
-The P-versus-NP derivations cited here were produced earlier under the then-current qualified DP 0.7 and remain historical derivation evidence [11]. Later qualification of DP 0.8 does not retroactively rewrite them.
+The P-versus-NP derivations cited here were produced earlier under the then-current qualified DP 0.7 and remain historical derivation evidence [2]. Later qualification of DP 0.8 does not retroactively rewrite them.
 
 ---
 
@@ -196,7 +196,7 @@ $
 
 This is future-language equivalence.
 
-The idea is classical. Myhill–Nerode theory characterizes automaton states through indistinguishability by future continuations and connects finite right congruences to finite-state recognition [1,2].
+The idea is classical. Myhill–Nerode theory characterizes automaton states through indistinguishability by future continuations and connects finite right congruences to finite-state recognition [7–8].
 
 The present relation is scoped to a fixed input/verifier/depth context. Equality of the continuation-support value is not a claim of global natural identity between the underlying residual objects.
 
@@ -212,7 +212,7 @@ $
 
 For existential truth, $p$ becomes redundant whenever $p\preceq_F q$ and $q$ is retained.
 
-Simulation preorders and language-inclusion relations have long been used for analogous purposes in automata algorithms [3–5].
+Simulation preorders and language-inclusion relations have long been used for analogous purposes in automata algorithms [9–11].
 
 ### 4.3 Deadness
 
@@ -224,7 +224,7 @@ $
 
 Dead support contributes nothing to existential acceptance.
 
-Removing dead behavior before more expensive equivalence or inclusion analysis is established practice in automata work [3–5].
+Removing dead behavior before more expensive equivalence or inclusion analysis is established practice in automata work [9–11].
 
 ### 4.4 Exact factorization
 
@@ -469,7 +469,7 @@ The useful target is a sound incomplete certificate family that removes some sup
 
 ## 7. Finite sanity evidence
 
-The IsoGraph campaign performed a finite exhaustive sanity check of the dead-filtered simulation rule [16].
+The IsoGraph campaign performed a finite exhaustive sanity check of the dead-filtered simulation rule [12].
 
 It enumerated deterministic labelled transition systems with:
 
@@ -495,7 +495,7 @@ This finite enumeration is not the proof of Theorem 1; the induction above is. I
 
 ## 8. A representation-relative CNF falsifier
 
-The most useful boundary example in the campaign is an exact CNF family [17,18].
+The most useful boundary example in the campaign is an exact CNF family [13–14].
 
 It simultaneously exhibits:
 
@@ -679,11 +679,11 @@ At minimum one must account for:
 5. number of source-ranked stages
 ~~~
 
-This aligns closely with the knowledge-compilation perspective of Darwiche and Marquis, where representation languages are compared for succinctness and for the queries and transformations they support in polynomial time [6].
+This aligns closely with the knowledge-compilation perspective of Darwiche and Marquis, where representation languages are compared for succinctness and for the queries and transformations they support in polynomial time [15].
 
-Marquis studies existential closures of compilation languages directly [7].
+Marquis studies existential closures of compilation languages directly [16].
 
-Capelli and Mengel study how quantification interacts with width in OBDD and structured deterministic DNNF [8].
+Capelli and Mengel study how quantification interacts with width in OBDD and structured deterministic DNNF [17].
 
 The IsoGraph campaign therefore does not claim discovery of the size-versus-operation tradeoff.
 
@@ -697,7 +697,7 @@ Boolean functional synthesis asks for output functions witnessing a relational s
 
 This is closely related to the broad motivating question here: when can existentially specified behavior be converted into functionally realizable behavior without prohibitive cost?
 
-Akshay et al. introduced SynNNF, a normal form supporting polynomial-time Boolean functional synthesis and polynomial-time existential quantification under an appropriate order [9].
+Akshay et al. introduced SynNNF, a normal form supporting polynomial-time Boolean functional synthesis and polynomial-time existential quantification under an appropriate order [18].
 
 Shah, Bansal, Akshay, and Chakraborty later introduced SAUNF and showed that a Boolean specification is polynomial-time synthesizable iff it can be compiled to SAUNF in polynomial time; their representation also characterizes polynomial-size functional solutions in the sense established in their LICS 2021 result [19].
 
@@ -747,7 +747,7 @@ It need not recognize every true inclusion.
 
 Missed inclusions cost performance, not correctness.
 
-This mirrors the established role of simulations and antichain subsumption in automata algorithms [3–5].
+This mirrors the established role of simulations and antichain subsumption in automata algorithms [9–11].
 
 ---
 
@@ -1029,46 +1029,45 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 ## References
 
-[1] John Myhill. “Finite Automata and the Representation of Events.” In *Fundamental Concepts in the Theory of Systems*, WADC Technical Report 57-624, pp. 112–137, 1957.
+[1] IsoGraph Project. “P versus NP primitive bundle 0.4.” Git blob c38de5674ffa568c1297e8383b48b2ed77de7756. Repository baseline: https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg.
 
-[2] Anil Nerode. “Linear Automaton Transformations.” Proceedings of the American Mathematical Society 9(4):541–544, 1958. DOI: https://doi.org/10.1090/S0002-9939-1958-0135681-9.
+[2] IsoGraph Project. “P versus NP — Discovery Protocol reapplication 0.1.” Git blob a40d07a62977526d41177d34ab5277fedc5aea0d. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md.
 
-[3] Laurent Doyen and Jean-François Raskin. “Antichains for the Automata-Based Approach to Model-Checking.” Logical Methods in Computer Science 5(1:5), 2009. DOI: https://doi.org/10.2168/LMCS-5(1:5)2009.
+[3] IsoGraph Project. “P versus NP NEI semantic scope contract 0.1.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/P_VS_NP_NEI_SCOPE_CONTRACT_0_1.md.
 
-[4] Lukáš Holík. Simulations and Antichains for Efficient Handling of Finite Automata. Doctoral thesis / arXiv:1706.03208, 2017. https://arxiv.org/abs/1706.03208.
+[4] IsoGraph Project. “P versus NP implicit assertion index 0.10.” Git blob 3c7fa34d5512b1ee8c6a3548a0bc722c3d8838ed. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/IMPLICIT_ASSERTION_INDEX_0_10.json.
 
-[5] Parosh Aziz Abdulla, Yu-Fang Chen, Lukáš Holík, Richard Mayr, and Tomáš Vojnar. “When Simulation Meets Antichains.” In *Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2010)*, LNCS 6015, pp. 158–174. DOI: https://doi.org/10.1007/978-3-642-12002-2_14.
+[5] IsoGraph Project. “Qualified Module Authority Manifest — 2026-09-28.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/qualification/QUALIFIED_MODULES_2026-09-28.md.
 
-[6] Adnan Darwiche and Pierre Marquis. “A Knowledge Compilation Map.” Journal of Artificial Intelligence Research 17:229–264, 2002. DOI: https://doi.org/10.1613/JAIR.989.
+[6] IsoGraph Project. “Current Integrated Semantic Stack with Core 0.20 and DP 0.8 — 2026-09-28.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md.
 
-[7] Pierre Marquis. “Existential Closures for Knowledge Compilation.” Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011), pp. 996–1001. DOI: https://doi.org/10.5591/978-1-57735-516-8/IJCAI11-171.
+[7] John Myhill. “Finite Automata and the Representation of Events.” In *Fundamental Concepts in the Theory of Systems*, WADC Technical Report 57-624, pp. 112–137, 1957.
 
-[8] Florent Capelli and Stefan Mengel. “Knowledge Compilation, Width and Quantification.” arXiv:1807.04263, 2018. https://arxiv.org/abs/1807.04263.
+[8] Anil Nerode. “Linear Automaton Transformations.” Proceedings of the American Mathematical Society 9(4):541–544, 1958. DOI: https://doi.org/10.1090/S0002-9939-1958-0135681-9.
 
-[9] S. Akshay, Jatin Arora, Supratik Chakraborty, S. Krishna, Divya Raghunathan, and Shetal Shah. “Knowledge Compilation for Boolean Functional Synthesis.” Formal Methods in Computer Aided Design (FMCAD 2019), pp. 161–169. DOI: https://doi.org/10.23919/FMCAD.2019.8894266.
+[9] Laurent Doyen and Jean-François Raskin. “Antichains for the Automata-Based Approach to Model-Checking.” Logical Methods in Computer Science 5(1:5), 2009. DOI: https://doi.org/10.2168/LMCS-5(1:5)2009.
 
-[10] IsoGraph Project. “P versus NP primitive bundle 0.4.” Git blob c38de5674ffa568c1297e8383b48b2ed77de7756. Repository baseline: https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg.
+[10] Lukáš Holík. Simulations and Antichains for Efficient Handling of Finite Automata. Doctoral thesis / arXiv:1706.03208, 2017. https://arxiv.org/abs/1706.03208.
 
-[11] IsoGraph Project. “P versus NP — Discovery Protocol reapplication 0.1.” Git blob a40d07a62977526d41177d34ab5277fedc5aea0d. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md.
+[11] Parosh Aziz Abdulla, Yu-Fang Chen, Lukáš Holík, Richard Mayr, and Tomáš Vojnar. “When Simulation Meets Antichains.” In *Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2010)*, LNCS 6015, pp. 158–174. DOI: https://doi.org/10.1007/978-3-642-12002-2_14.
 
-[12] IsoGraph Project. “P versus NP NEI semantic scope contract 0.1.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/P_VS_NP_NEI_SCOPE_CONTRACT_0_1.md.
+[12] IsoGraph Project. “A25 dead-support filtered simulation — finite sanity check 0.1.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/A25_DEAD_FILTER_SANITY_0_1.md.
 
-[13] IsoGraph Project. “P versus NP implicit assertion index 0.10.” Git blob 3c7fa34d5512b1ee8c6a3548a0bc722c3d8838ed. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/IMPLICIT_ASSERTION_INDEX_0_10.json.
+[13] IsoGraph Project. “CNF target implicit assertions 0.1,” especially CNF-IA-011 through CNF-IA-013. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_IMPLICIT_ASSERTIONS_0_1.md.
 
-[14] IsoGraph Project. “Qualified Module Authority Manifest — 2026-09-28.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/qualification/QUALIFIED_MODULES_2026-09-28.md.
+[14] IsoGraph Project. “CNF target — dead-support filtering falsifier 0.1.” Git blob 59d1769540d4c59e5debc31f56682b7bc850e617. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_DEAD_SUPPORT_FALSIFIER_0_1.md.
 
-[15] IsoGraph Project. “Current Integrated Semantic Stack with Core 0.20 and DP 0.8 — 2026-09-28.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md.
+[15] Adnan Darwiche and Pierre Marquis. “A Knowledge Compilation Map.” Journal of Artificial Intelligence Research 17:229–264, 2002. DOI: https://doi.org/10.1613/JAIR.989.
 
-[16] IsoGraph Project. “A25 dead-support filtered simulation — finite sanity check 0.1.” https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/A25_DEAD_FILTER_SANITY_0_1.md.
+[16] Pierre Marquis. “Existential Closures for Knowledge Compilation.” Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011), pp. 996–1001. DOI: https://doi.org/10.5591/978-1-57735-516-8/IJCAI11-171.
 
-[17] IsoGraph Project. “CNF target implicit assertions 0.1,” especially CNF-IA-011 through CNF-IA-013. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_IMPLICIT_ASSERTIONS_0_1.md.
+[17] Florent Capelli and Stefan Mengel. “Knowledge Compilation, Width and Quantification.” arXiv:1807.04263, 2018. https://arxiv.org/abs/1807.04263.
 
-[18] IsoGraph Project. “CNF target — dead-support filtering falsifier 0.1.” Git blob 59d1769540d4c59e5debc31f56682b7bc850e617. https://github.com/iteathen/IsoGraph/blob/84e2f4d2386f9cd1a7b2c533752600eee82e44bf/research/p-vs-np/2026-09-27/target-cnf-sat/CNF_TARGET_DEAD_SUPPORT_FALSIFIER_0_1.md.
+[18] S. Akshay, Jatin Arora, Supratik Chakraborty, S. Krishna, Divya Raghunathan, and Shetal Shah. “Knowledge Compilation for Boolean Functional Synthesis.” Formal Methods in Computer Aided Design (FMCAD 2019), pp. 161–169. DOI: https://doi.org/10.23919/FMCAD.2019.8894266.
 
 [19] Preey Shah, Aman Bansal, S. Akshay, and Supratik Chakraborty. “A Normal Form Characterization for Efficient Boolean Skolem Function Synthesis.” 36th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2021). DOI: https://doi.org/10.1109/LICS52264.2021.9470741.
 
 [20] IsoGraph Project. “P versus NP continuation-support synthesis — broad external novelty review 0.1.” Git blob e872d10228bcd1180d9379d07f3dbd7fd302a1da. `research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md`.
-
 ---
 
 ## Citation
