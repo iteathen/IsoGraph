@@ -2,8 +2,10 @@
 
 ## Published paper
 
-- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md) — Joshua Oshiro; agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.
-- [Publication preflight audit](GLYCAN_PUBLICATION_PREFLIGHT_0_1.md)
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.2](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_2.md) — Joshua Oshiro; agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.
+- [Response to mathematical review](../../publications/2026-09-27/GLYCAN_CLEAVAGE_REVIEW_RESPONSE_0_2.md)
+- [Publication revision 0.2 preflight](GLYCAN_PUBLICATION_PREFLIGHT_0_2.md)
+- [Publication revision 0.1 — historical](../../publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md)
 - [Source-reference correction](GLYCAN_SOURCE_REFERENCE_CORRECTION_0_1.md)
 
 ## Current verified primitive baseline
@@ -13,7 +15,7 @@
 - verification: Experiment 032 run 36345374241 attempt 1
 - result: PASS
 - native blob: f5ef6f08df03c01cb03d8dea1f9da87cc2fa29c4
-- verification contract: Core 0.20 primitive-logic closure candidate, unqualified
+- historical verification contract: Core 0.20 primitive-logic closure candidate; Core 0.20 was subsequently qualified by Experiment 048
 
 The verified 0.1 model is intentionally idealized: finite rooted structure, static closed-world site susceptibility, target-protected terminal deletion, exhaustive one-operator phases, and minimum phase count.
 
@@ -208,9 +210,9 @@ Further work should change the research question rather than replay the same fix
 - concrete-instance benchmarking;
 - external prior-art / novelty review;
 - successor biochemical model with explicit QU;
-- Core 0.20 qualification.
+- unbounded-witness-width construction or falsifier.
 
-Core 0.20 remains unqualified, and the frozen 0.1 biochemical model remains intentionally narrower than real enzymology.
+Core 0.20 is now qualified at its exact tested revision, and DP 0.8 is now the current cumulative qualified discovery successor; Experiment 052 directly qualifies their composition with QU 0.1, NEI 0.4, and DTS 0.1. The frozen 0.1 biochemical model remains intentionally narrower than real enzymology.
 
 
 ## External clue research / algorithm campaign
@@ -221,13 +223,13 @@ Primary external-clue report:
 
 - GLYCAN_EXTERNAL_CLUE_RESEARCH_0_1.md
 
-Exact clue-fed derivations now extend through:
+Exact clue-fed derivations and publication-review refinements now extend through:
 
 ~~~text
-G-IA304..G-IA440
+G-IA304..G-IA459
 ~~~
 
-with no gaps or duplicate definitions in the A15-A27 line.
+with A29 supplying the standard-example interpretation and A30 supplying the reviewed path-coverage, quotient-uniqueness, padding, and ternary-threshold refinements.
 
 Current routing:
 
@@ -243,7 +245,9 @@ Current routing:
 - A25 — verified witness width 54 / Maximum Minimal Set Cover view;
 - A26 — Node-verified witness width 75;
 - A27 — Node-verified witness width 113;
-- A28 — repaired Node-verified witness width 173.
+- A28 — repaired Node-verified witness width 173;
+- A29 — critical-cover private witnesses induce standard examples;
+- A30 — publication-review refinements: path coverage, quotient uniqueness, exact-length padding, ternary ceiling, and exact OPT=21 for the width-173 family.
 
 ### Exact algorithm experiments
 
@@ -271,6 +275,7 @@ witness width:            173
 path count:               173
 path length:              10
 threshold length:         20
+exact optimum:            21
 direct non-target nodes:  1,730
 ~~~
 
