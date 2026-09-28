@@ -65,9 +65,9 @@ These are **new to the current IsoGraph campaign / possible synthesis novelty**,
 Start here:
 
 - [P-vs-NP research front page](research/p-vs-np/README.md)
-- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_3.md)
+- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md)
 - [Re-applied Discovery Protocol result](research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md)
-- [Targeted novelty review](research/p-vs-np/2026-09-27/P_VS_NP_DP07_NOVELTY_REVIEW_0_1.md)
+- [Broad continuation-support novelty review](research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
 
 Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
