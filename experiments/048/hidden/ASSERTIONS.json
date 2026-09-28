@@ -1,0 +1,159 @@
+{
+  "experiment": "048",
+  "required_case_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18"
+  ],
+  "cases": {
+    "C01": {
+      "answers": {
+        "primitive_complete": false,
+        "named_node_status": "REJECTED_AS_LEAF",
+        "definition_must_expand": true
+      }
+    },
+    "C02": {
+      "answers": {
+        "qualified_endpoint_cache_allowed": true,
+        "qualified_endpoint_can_replace_primitive_support": false,
+        "primitive_complete": false
+      }
+    },
+    "C03": {
+      "answers": {
+        "raw_literals_allowed": true,
+        "length_predicate_status": "REJECTED_AS_LEAF",
+        "primitive_complete": false
+      }
+    },
+    "C04": {
+      "answers": {
+        "computation_predicate_status": "REJECTED_AS_LEAF",
+        "transition_trace_expansion_required": true,
+        "primitive_complete": false
+      }
+    },
+    "C05": {
+      "answers": {
+        "carrier_status": "RAW_DATA_ATOM",
+        "behavior_separately_represented": true,
+        "primitive_complete": true
+      }
+    },
+    "C06": {
+      "answers": {
+        "derived_label_status": "DERIVED_VIEW",
+        "exact_reconstruction_after_deletion": true,
+        "derived_label_authoritative_support": false
+      }
+    },
+    "C07": {
+      "answers": {
+        "dp_may_use_derived_view": true,
+        "exact_admission_on_view_alone": false,
+        "primitive_projection_required": true
+      }
+    },
+    "C08": {
+      "answers": {
+        "relation_status": "QU_UNEXPANDED",
+        "primitive_complete": false,
+        "invent_primitive_allowed": false
+      }
+    },
+    "C09": {
+      "answers": {
+        "sidecar_can_supply_missing_native_meaning": false,
+        "primitive_complete": false,
+        "native_expansion_required": true
+      }
+    },
+    "C10": {
+      "answers": {
+        "core_0_19_predecessor_valid": true,
+        "core_0_20_primitive_complete": false,
+        "retroactive_invalidation": false
+      }
+    },
+    "C11": {
+      "answers": {
+        "primitive_complete": true,
+        "source_round_trip": "EXACT",
+        "unsupported_addition": false
+      }
+    },
+    "C12": {
+      "answers": {
+        "primitive_semantics_changed": false,
+        "derived_names_semantic_authority": false,
+        "exact_claim_preserved": true
+      }
+    },
+    "C13": {
+      "answers": {
+        "qualified_node_status": "DERIVED_VIEW",
+        "primitive_complete": true,
+        "exact_support_survives_view_deletion": true
+      }
+    },
+    "C14": {
+      "answers": {
+        "raw_literals_allowed": true,
+        "add_status": "REJECTED_AS_LEAF",
+        "primitive_complete": false
+      }
+    },
+    "C15": {
+      "answers": {
+        "incidence_status": "CLOSED_PRIMITIVE",
+        "internal_cause_expansion_required": false,
+        "primitive_complete": true
+      }
+    },
+    "C16": {
+      "answers": {
+        "carrier_status": "RAW_DATA_ATOM",
+        "domain_flavored_name_breaks_closure": false,
+        "primitive_complete": true
+      }
+    },
+    "C17": {
+      "answers": {
+        "firewall_pass": true,
+        "exact_claim_reconstructable": true,
+        "primitive_complete": true
+      }
+    },
+    "C18": {
+      "answers": {
+        "view_status": "DERIVED_VIEW",
+        "firewall_pass": false,
+        "primitive_complete": false
+      }
+    }
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "did_not_accept_domain_name_as_primitive": true,
+    "preserved_qu_when_definition_missing": true,
+    "did_not_use_sidecar_as_native_semantics": true,
+    "distinguished_core019_validity_from_core020_completion": true,
+    "exact_claims_route_to_primitive_support": true
+  }
+}
