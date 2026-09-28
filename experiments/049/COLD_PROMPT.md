@@ -25,6 +25,6 @@ Schema:
   }
 }
 
-Use the DP 0.8 bookkeeping labels exactly where a disposition field asks for one.
+Use exactly the answer-field names listed for each case in experiments/049/PUBLIC_OUTPUT_SCHEMA.json. Do not add, omit, rename, or alias answer fields.\n\nUse the DP 0.8 bookkeeping labels exactly where a disposition field asks for one.
 Do not call an observation a defect before locating a violated contract and owner.
 Keep repair disposition separate from discovery disposition.
