@@ -4,6 +4,20 @@ Evaluate I01..I16 using only the supplied packet.
 
 Return exactly one JSON object and no Markdown.
 
+The top-level JSON object MUST have this shape:
+
+```json
+{
+  "cases": [
+    {"case_id":"I01","answers":{},"reason":"brief but substantive","authority_used":["specific supplied authority"]}
+  ],
+  "module_assessment": {},
+  "self_audit": {}
+}
+```
+
+Do not serialize I01..I16 as top-level keys.
+
 For every case:
 - use exactly the answer fields published in PUBLIC_OUTPUT_SCHEMA.json;
 - all case answer values are boolean;
