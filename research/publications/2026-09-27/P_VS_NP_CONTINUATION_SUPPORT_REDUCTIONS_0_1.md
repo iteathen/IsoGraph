@@ -17,7 +17,7 @@ The original text, analysis, diagrams, and explanatory material in this paper ar
 
 ## Abstract
 
-This paper gives a structural synthesis of several established techniques for bounded existential computation by placing them over a single semantic object: the set of accepting continuations available from a residual prefix. For a fixed input and verifier, each residual \(p\) is assigned a continuation support \(C_p\) consisting of the admissible suffixes that complete \(p\) to acceptance.
+This paper gives a structural synthesis of several established techniques for bounded existential computation by placing them over a single semantic object: the set of accepting continuations available from a residual prefix. For a fixed input and verifier, each residual $p$ is assigned a continuation support $C_p$ consisting of the admissible suffixes that complete $p$ to acceptance.
 
 On this common object, familiar reductions become directly comparable. Empty support may be deleted. Equal support may be merged. Included support may be pruned by one-way dominance. Remaining mutually live and incomparable support may still admit exact factorization or sharing. When the consumer needs only a coarser observable, the full support may be replaced by an exact aggregate sufficient for that objective.
 
@@ -39,7 +39,7 @@ The IsoGraph P-versus-NP research campaign reduced these descriptions to a commo
 
 The resulting semantic center is simple.
 
-For each residual prefix \(p\), associate the set \(C_p\) of admissible suffixes that complete \(p\) to acceptance.
+For each residual prefix $p$, associate the set $C_p$ of admissible suffixes that complete $p$ to acceptance.
 
 Once that object is explicit, several familiar operations become relations on the same family:
 
@@ -119,30 +119,30 @@ For this paper, no stronger identification is needed.
 
 Fix:
 
-- an input \(x\);
-- a finite choice alphabet \(A\);
-- a witness depth \(m=m(|x|)\), polynomially bounded in the input size;
-- a Boolean verifier \(V_x\) on complete admissible witnesses.
+- an input $x$;
+- a finite choice alphabet $A$;
+- a witness depth $m=m(|x|)$, polynomially bounded in the input size;
+- a Boolean verifier $V_x$ on complete admissible witnesses.
 
-A padding or normalization convention may be used when the verifier accepts witnesses of length at most \(m\) rather than exactly \(m\), provided the admissible continuation domain is represented exactly.
+A padding or normalization convention may be used when the verifier accepts witnesses of length at most $m$ rather than exactly $m$, provided the admissible continuation domain is represented exactly.
 
-For a prefix \(p\) of depth \(t\), let \(S_t\) denote the admissible suffixes for the remaining witness positions.
+For a prefix $p$ of depth $t$, let $S_t$ denote the admissible suffixes for the remaining witness positions.
 
 Define
 
-\[
+$
 C_p = \{\,s\in S_t : V_x(p\cdot s)=1\,\}.
-\]
+$
 
-Call \(C_p\) the **continuation support** or **future language** of \(p\).
+Call $C_p$ the **continuation support** or **future language** of $p$.
 
 Define
 
-\[
+$
 E(p)=1 \quad\Longleftrightarrow\quad C_p\neq\varnothing.
-\]
+$
 
-The root decision is \(E(\epsilon)\).
+The root decision is $E(\epsilon)$.
 
 All reductions below preserve either the exact continuation support or a declared observable derived from it.
 
@@ -166,9 +166,9 @@ The P-versus-NP derivations cited here were produced earlier under the then-curr
 
 The continuation-support definition exposes the exact future information relevant to the bounded existential objective.
 
-Suppose \(p\) is nonterminal and one more choice \(a\) is admissible. Write \(pa\) for the child prefix.
+Suppose $p$ is nonterminal and one more choice $a$ is admissible. Write $pa$ for the child prefix.
 
-Every accepting continuation from \(p\) is either a current acceptance, where allowed by the chosen normalization, or begins with one legal first choice followed by an accepting continuation from the corresponding child.
+Every accepting continuation from $p$ is either a current acceptance, where allowed by the chosen normalization, or begins with one legal first choice followed by an accepting continuation from the corresponding child.
 
 The important structural distinction is:
 
@@ -182,17 +182,17 @@ A legal child can have empty continuation support and therefore contribute nothi
 
 ---
 
-## 4. Established viewpoints over \(C_p\)
+## 4. Established viewpoints over $C_p$
 
 ### 4.1 Future equivalence
 
 Define
 
-\[
+$
 p\sim_F q
 \quad\Longleftrightarrow\quad
 C_p=C_q.
-\]
+$
 
 This is future-language equivalence.
 
@@ -204,13 +204,13 @@ The present relation is scoped to a fixed input/verifier/depth context. Equality
 
 Define
 
-\[
+$
 p\preceq_F q
 \quad\Longleftrightarrow\quad
 C_p\subseteq C_q.
-\]
+$
 
-For existential truth, \(p\) becomes redundant whenever \(p\preceq_F q\) and \(q\) is retained.
+For existential truth, $p$ becomes redundant whenever $p\preceq_F q$ and $q$ is retained.
 
 Simulation preorders and language-inclusion relations have long been used for analogous purposes in automata algorithms [3–5].
 
@@ -218,9 +218,9 @@ Simulation preorders and language-inclusion relations have long been used for an
 
 A residual is dead when
 
-\[
+$
 C_p=\varnothing.
-\]
+$
 
 Dead support contributes nothing to existential acceptance.
 
@@ -230,17 +230,17 @@ Removing dead behavior before more expensive equivalence or inclusion analysis i
 
 Even when supports are all nonempty, unequal, and pairwise incomparable, their union may admit a compact exact representation.
 
-For a family \(P\) of residuals define
+For a family $P$ of residuals define
 
-\[
+$
 U_P=\bigcup_{p\in P} C_p.
-\]
+$
 
-A factorized representation \(R(P)\) is useful only when it denotes exactly \(U_P\) under the relevant semantics.
+A factorized representation $R(P)$ is useful only when it denotes exactly $U_P$ under the relevant semantics.
 
 ### 4.5 Objective projection
 
-Sometimes the consumer does not need the full \(C_p\).
+Sometimes the consumer does not need the full $C_p$.
 
 Examples include:
 
@@ -253,7 +253,7 @@ another exact objective-specific observable
 
 A coarser observable may permit more merging than exact future-language identity.
 
-But a small observable range says nothing by itself about access cost. The extreme example is \(E(p)\), which has only two values but is exactly the root decision problem.
+But a small observable range says nothing by itself about access cost. The extreme example is $E(p)$, which has only two values but is exactly the root decision problem.
 
 ---
 
@@ -286,61 +286,61 @@ The value of the ladder is to state the semantic burden before a reduction is tr
 
 ### Proposition 1 — dead deletion
 
-If \(C_p=\varnothing\), deleting \(p\) from any existential union preserves that union exactly.
+If $C_p=\varnothing$, deleting $p$ from any existential union preserves that union exactly.
 
 #### Proof
 
-For any family \(P\) containing \(p\),
+For any family $P$ containing $p$,
 
-\[
+$
 \bigcup_{r\in P}C_r
 =
 \left(\bigcup_{r\in P\setminus\{p\}}C_r\right)\cup C_p.
-\]
+$
 
-Since \(C_p=\varnothing\), the final term contributes nothing.
+Since $C_p=\varnothing$, the final term contributes nothing.
 
 ### Proposition 2 — equality merge
 
-If \(C_p=C_q\), retaining either \(p\) or \(q\) instead of both preserves the exact continuation union.
+If $C_p=C_q$, retaining either $p$ or $q$ instead of both preserves the exact continuation union.
 
 #### Proof
 
-\[
+$
 C_p\cup C_q=C_q\cup C_q=C_q.
-\]
+$
 
 ### Proposition 3 — dominance pruning
 
-If \(C_p\subseteq C_q\), then \(p\) may be deleted while \(q\) is retained without changing the continuation union.
+If $C_p\subseteq C_q$, then $p$ may be deleted while $q$ is retained without changing the continuation union.
 
 #### Proof
 
-\[
+$
 C_p\cup C_q=C_q.
-\]
+$
 
 This is why one-way dominance can be more permissive than identity merging.
 
 ### Proposition 4 — exact factorization is representation substitution
 
-Suppose \(F\) is a representation with
+Suppose $F$ is a representation with
 
-\[
+$
 \operatorname{denote}(F)=\bigcup_{p\in P}C_p.
-\]
+$
 
-Then \(F\) may replace the explicitly materialized family \(P\) for later operations whose semantics is correctly implemented over \(F\).
+Then $F$ may replace the explicitly materialized family $P$ for later operations whose semantics is correctly implemented over $F$.
 
-The qualification is load-bearing: compactness of \(F\) is not enough if the next required exact operation forces destructive expansion.
+The qualification is load-bearing: compactness of $F$ is not enough if the next required exact operation forces destructive expansion.
 
 ### Proposition 5 — objective projection requires objective sufficiency
 
-Let \(h\) be the only observable required downstream.
+Let $h$ be the only observable required downstream.
 
-If a representation \(z\) determines \(h(C_p)\) exactly and all later required operations can be performed exactly on \(z\), then reconstruction of the full \(C_p\) is unnecessary for that claim.
+If a representation $z$ determines $h(C_p)$ exactly and all later required operations can be performed exactly on $z$, then reconstruction of the full $C_p$ is unnecessary for that claim.
 
-This does not imply that \(z\) represents \(C_p\) exactly.
+This does not imply that $z$ represents $C_p$ exactly.
 
 ---
 
@@ -352,31 +352,31 @@ Exact deadness classification is not assumed.
 
 Define any sound incomplete certificate relation
 
-\[
+$
 \widehat D(p,a).
-\]
+$
 
 Its soundness obligation is:
 
-\[
+$
 \widehat D(p,a)
 \Longrightarrow
 C_{pa}=\varnothing,
-\]
+$
 
-for an existing child \(pa\).
+for an existing child $pa$.
 
 The certificate may miss arbitrarily many truly dead children. Incompleteness affects pruning power, not correctness.
 
 ### 6.1 Dead-filtered simulation
 
-Let \(R_t(p,q)\) be a relation on residuals with \(t\) positions remaining.
+Let $R_t(p,q)$ be a relation on residuals with $t$ positions remaining.
 
 Require:
 
-1. current acceptance transfers from \(p\) to \(q\);
-2. \(\widehat D\) is sound;
-3. every legal edge of \(p\) not certified dead is matched by the same first label at \(q\), with related children.
+1. current acceptance transfers from $p$ to $q$;
+2. $\widehat D$ is sound;
+3. every legal edge of $p$ not certified dead is matched by the same first label at $q$, with related children.
 
 Schematically:
 
@@ -397,35 +397,35 @@ exists q':
 
 ### Theorem 1 — dead-filtered simulation is sound dominance evidence
 
-If \(R_t\) satisfies these conditions, then
+If $R_t$ satisfies these conditions, then
 
-\[
+$
 R_t(p,q)\Longrightarrow C_p\subseteq C_q.
-\]
+$
 
 #### Proof
 
 Induct on remaining depth.
 
-Take any accepting continuation from \(p\).
+Take any accepting continuation from $p$.
 
-If it is an empty/current acceptance, current-acceptance transfer gives the corresponding acceptance at \(q\).
+If it is an empty/current acceptance, current-acceptance transfer gives the corresponding acceptance at $q$.
 
-Otherwise it begins with some label \(a\) and continues with suffix \(s\) through child \(p'\).
+Otherwise it begins with some label $a$ and continues with suffix $s$ through child $p'$.
 
-Because \(as\) accepts, \(C_{p'}\neq\varnothing\). Soundness therefore prevents \(\widehat D(p,a)\) from holding.
+Because $as$ accepts, $C_{p'}\neq\varnothing$. Soundness therefore prevents $\widehat D(p,a)$ from holding.
 
-The simulation obligation supplies a \(q\)-child \(q'\) under the same first label with \(R_{t-1}(p',q')\). By induction, every accepting suffix of \(p'\) is accepted from \(q'\).
+The simulation obligation supplies a $q$-child $q'$ under the same first label with $R_{t-1}(p',q')$. By induction, every accepting suffix of $p'$ is accepted from $q'$.
 
-Hence \(as\in C_q\).
+Hence $as\in C_q$.
 
-Therefore every member of \(C_p\) belongs to \(C_q\).
+Therefore every member of $C_p$ belongs to $C_q$.
 
 ### 6.2 Endpoint cases
 
-If \(\widehat D\) recognizes nothing, Theorem 1 reduces to an all-legal forward-simulation rule.
+If $\widehat D$ recognizes nothing, Theorem 1 reduces to an all-legal forward-simulation rule.
 
-If \(\widehat D\) is the exact dead-child classifier, obligations are imposed only on live children.
+If $\widehat D$ is the exact dead-child classifier, obligations are imposed only on live children.
 
 Sound incomplete negative evidence therefore forms a continuum between all-legal simulation and exact live-child recursion.
 
@@ -455,11 +455,11 @@ The claim is not that dead-state pruning or simulation is new. The synthesis mak
 
 At the root,
 
-\[
+$
 C_{\epsilon}=\varnothing
 \quad\Longleftrightarrow\quad
 E(\epsilon)=0.
-\]
+$
 
 A universal efficient exact deadness classifier for arbitrary roots of the represented bounded-existential family would therefore decide the existential objective.
 
@@ -511,33 +511,33 @@ the same projected Boolean function has a compact exact factorization
 
 Choose elimination variables
 
-\[
+$
 x_1,\ldots,x_d.
-\]
+$
 
 For every sign vector
 
-\[
+$
 \sigma\in\{+,-\}^d,
-\]
+$
 
-introduce \(k\) private variables
+introduce $k$ private variables
 
-\[
+$
 a_{\sigma,1},\ldots,a_{\sigma,k}.
-\]
+$
 
-For each \(\sigma\) and each \(i\in\{1,\ldots,k\}\), create
+For each $\sigma$ and each $i\in\{1,\ldots,k\}$, create
 
-\[
+$
 L_{\sigma,1}\vee\cdots\vee L_{\sigma,d}\vee a_{\sigma,i},
-\]
+$
 
-where \(L_{\sigma,j}\) is the \(\sigma\)-selected sign of \(x_j\).
+where $L_{\sigma,j}$ is the $\sigma$-selected sign of $x_j$.
 
-The input has \(2^d k\) clauses.
+The input has $2^d k$ clauses.
 
-Freeze the elimination order \(x_1,x_2,\ldots,x_d\).
+Freeze the elimination order $x_1,x_2,\ldots,x_d$.
 
 ### 8.2 Explicit CNF elimination growth
 
@@ -548,37 +548,37 @@ Eliminate one variable by exact resolution-style projection:
 - remove the opposite variable literals;
 - add each non-tautological resolvent.
 
-After eliminating \(x_1\), only pairs whose remaining sign patterns agree survive non-tautologically. Each remaining sign group therefore has \(k^2\) clauses.
+After eliminating $x_1$, only pairs whose remaining sign patterns agree survive non-tautologically. Each remaining sign group therefore has $k^2$ clauses.
 
-Inductively, after eliminating \(x_1,\ldots,x_r\), each remaining sign vector carries
+Inductively, after eliminating $x_1,\ldots,x_r$, each remaining sign vector carries
 
-\[
+$
 k^{2^r}
-\]
+$
 
 clauses.
 
 The next elimination pairs the two opposite predecessor groups and squares the count.
 
-After all \(d\) eliminations, the explicit projected CNF contains
+After all $d$ eliminations, the explicit projected CNF contains
 
-\[
+$
 k^{2^d}
-\]
+$
 
 distinct non-tautological clauses.
 
-For fixed \(k=2\),
+For fixed $k=2$,
 
-\[
+$
 N_{\mathrm{in}}=2^{d+1},
-\]
+$
 
 while
 
-\[
+$
 N_{\mathrm{out}}=2^{2^d}=2^{N_{\mathrm{in}}/2}.
-\]
+$
 
 The represented clauses are pairwise non-subsuming.
 
@@ -588,13 +588,13 @@ It is not a representation-independent lower bound.
 
 ### 8.3 Compact exact alternate factorization
 
-For each sign group \(\sigma\), define
+For each sign group $\sigma$, define
 
-\[
+$
 A_\sigma=\{a_{\sigma,1},\ldots,a_{\sigma,k}\}.
-\]
+$
 
-After eliminating all \(x\) variables, the large explicit CNF says:
+After eliminating all $x$ variables, the large explicit CNF says:
 
 > For every tuple selecting one private variable from each sign group, at least one selected variable is true.
 
@@ -602,14 +602,14 @@ This formula is false exactly when every sign group contains at least one false 
 
 Therefore it is equivalent to
 
-\[
+$
 \bigvee_{\sigma\in\{+,-\}^d}
 \left(
 \bigwedge_{i=1}^{k} a_{\sigma,i}
 \right).
-\]
+$
 
-That alternate representation has size \(O(2^d k)\), proportional to the original private-variable data.
+That alternate representation has size $O(2^d k)$, proportional to the original private-variable data.
 
 Thus the same projected Boolean function has both an exponentially large explicit CNF under the frozen elimination procedure and a compact exact alternate factorization.
 
@@ -617,25 +617,25 @@ Thus the same projected Boolean function has both an exponentially large explici
 
 Dead-support filtering does not explain the blowup.
 
-Fix any complete assignment \(\tau\) to \(x_1,\ldots,x_d\).
+Fix any complete assignment $\tau$ to $x_1,\ldots,x_d$.
 
-Exactly one sign vector \(\sigma^*\) has all of its selected \(x\)-literals false under \(\tau\).
+Exactly one sign vector $\sigma^*$ has all of its selected $x$-literals false under $\tau$.
 
-Every clause belonging to another sign group is already satisfied by at least one \(x\)-literal.
+Every clause belonging to another sign group is already satisfied by at least one $x$-literal.
 
-The remaining \(\sigma^*\) clauses reduce to
+The remaining $\sigma^*$ clauses reduce to
 
-\[
+$
 a_{\sigma^*,1},\ldots,a_{\sigma^*,k}.
-\]
+$
 
 Set all of them true.
 
 This yields a satisfying extension.
 
-Any partial \(x\) assignment can first be extended arbitrarily to a complete \(x\) assignment and then completed by the same construction.
+Any partial $x$ assignment can first be extended arbitrarily to a complete $x$ assignment and then completed by the same construction.
 
-Therefore every partial \(x\)-prefix is live. Even a perfect dead-child oracle removes no \(x\)-edge there.
+Therefore every partial $x$-prefix is live. Even a perfect dead-child oracle removes no $x$-edge there.
 
 ### 8.5 Consequence
 
@@ -659,15 +659,15 @@ The remaining issue is whether a compact representation can be constructed and m
 
 The CNF family motivates writing retained support as
 
-\[
+$
 W_i(R)
-\]
+$
 
-rather than simply \(W_i\).
+rather than simply $W_i$.
 
-Here \(i\) is the existential/projection stage and \(R\) is the representation or factorization family.
+Here $i$ is the existential/projection stage and $R$ is the representation or factorization family.
 
-A useful representation family for a polynomial workflow needs more than small \(W_i(R)\).
+A useful representation family for a polynomial workflow needs more than small $W_i(R)$.
 
 At minimum one must account for:
 
@@ -723,25 +723,25 @@ The continuation-support view instead supplies a common semantic coordinate syst
 
 Exact future equality requires
 
-\[
+$
 C_p=C_q.
-\]
+$
 
 Existential pruning needs only
 
-\[
+$
 C_p\subseteq C_q
-\]
+$
 
-when \(q\) is retained.
+when $q$ is retained.
 
 Complete equality classification may therefore be unnecessary even when a sound inclusion certificate is cheap.
 
-An implementation can search for any relation \(\widehat R\) satisfying
+An implementation can search for any relation $\widehat R$ satisfying
 
-\[
+$
 \widehat R(p,q)\Longrightarrow C_p\subseteq C_q.
-\]
+$
 
 It need not recognize every true inclusion.
 
@@ -763,7 +763,7 @@ cheap semantic access
 
 ### 12.1 Boolean existence
 
-\(E(p)\) has only two values, yet computing \(E(\epsilon)\) is exactly the bounded existential decision problem.
+$E(p)$ has only two values, yet computing $E(\epsilon)$ is exactly the bounded existential decision problem.
 
 ### 12.2 Exact residual quotient
 
@@ -789,7 +789,7 @@ Accordingly, this paper claims only a modest contribution.
 
 ### 13.1 One semantic center
 
-Several reductions are treated as relations or representations of one continuation-support object \(C_p\).
+Several reductions are treated as relations or representations of one continuation-support object $C_p$.
 
 This reduces vocabulary drift between automata language equivalence, simulation/inclusion, dead-state reasoning, existential projection, factorization, and objective aggregation.
 
@@ -823,7 +823,7 @@ This is especially important for deadness and dominance.
 
 ### 13.4 Representation parameters are mandatory
 
-A support-size claim should be read as \(W(R)\), not as an unqualified semantic lower bound.
+A support-size claim should be read as $W(R)$, not as an unqualified semantic lower bound.
 
 ### 13.5 The next operation is part of the representation claim
 
@@ -849,7 +849,7 @@ find compression
 
 to a more falsifiable target.
 
-Seek primitive structural conditions under which a representation family \(R\) is:
+Seek primitive structural conditions under which a representation family $R$ is:
 
 ~~~text
 exact for the required objective
@@ -865,7 +865,7 @@ polynomial in operation cost
 stable for a polynomial number of source-ranked stages
 ~~~
 
-Defining \(R\) semantically as “whatever representation makes the problem easy” is circular.
+Defining $R$ semantically as “whatever representation makes the problem easy” is circular.
 
 The useful target is an independently recognizable structural cause of stable accessibility.
 
@@ -881,7 +881,7 @@ The framework may be useful for thinking about P versus NP because NP-style boun
 
 But the present results stop far short of a resolution.
 
-They establish neither \(P=NP\) nor \(P\neq NP\).
+They establish neither $P=NP$ nor $P\neq NP$.
 
 They establish no universal polynomial factorization theorem and no representation-independent lower bound.
 
@@ -952,7 +952,7 @@ Other exact representations, algebraic reductions, randomized methods, proof sys
 
 ## 17. Conclusion
 
-Bounded existential computation can be viewed through one semantic object: the accepting continuation support \(C_p\) of a residual prefix.
+Bounded existential computation can be viewed through one semantic object: the accepting continuation support $C_p$ of a residual prefix.
 
 That object exposes a useful hierarchy of safe reductions:
 
@@ -1029,7 +1029,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 ## References
 
-[1] John Myhill. “Finite Automata and the Representation of Events.” WADD Technical Report 57-624, pp. 112–137, 1957.
+[1] John Myhill. “Finite Automata and the Representation of Events.” In *Fundamental Concepts in the Theory of Systems*, WADC Technical Report 57-624, pp. 112–137, 1957.
 
 [2] Anil Nerode. “Linear Automaton Transformations.” Proceedings of the American Mathematical Society 9(4):541–544, 1958. DOI: https://doi.org/10.1090/S0002-9939-1958-0135681-9.
 
@@ -1037,7 +1037,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [4] Lukáš Holík. Simulations and Antichains for Efficient Handling of Finite Automata. Doctoral thesis / arXiv:1706.03208, 2017. https://arxiv.org/abs/1706.03208.
 
-[5] Yu-Fang Chen, Lukáš Holík, Tomáš Vojnar, Parosh A. Abdulla, and Richard M. Mayr. “When Simulation Meets Antichains (On Checking Language Inclusion of Nondeterministic Finite (Tree) Automata).” TACAS 2010. DOI: https://doi.org/10.1007/978-3-642-12002-2_14.
+[5] Parosh Aziz Abdulla, Yu-Fang Chen, Lukáš Holík, Richard Mayr, and Tomáš Vojnar. “When Simulation Meets Antichains.” In *Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2010)*, LNCS 6015, pp. 158–174. DOI: https://doi.org/10.1007/978-3-642-12002-2_14.
 
 [6] Adnan Darwiche and Pierre Marquis. “A Knowledge Compilation Map.” Journal of Artificial Intelligence Research 17:229–264, 2002. DOI: https://doi.org/10.1613/JAIR.989.
 
@@ -1067,7 +1067,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [19] Preey Shah, Aman Bansal, S. Akshay, and Supratik Chakraborty. “A Normal Form Characterization for Efficient Boolean Skolem Function Synthesis.” 36th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2021). DOI: https://doi.org/10.1109/LICS52264.2021.9470741.
 
-[20] IsoGraph Project. “P versus NP continuation-support synthesis — broad external novelty review 0.1.” research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md.
+[20] IsoGraph Project. “P versus NP continuation-support synthesis — broad external novelty review 0.1.” Git blob e872d10228bcd1180d9379d07f3dbd7fd302a1da. `research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md`.
 
 ---
 
