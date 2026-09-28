@@ -130,17 +130,17 @@ For a prefix $p$ of depth $t$, let $S_t$ denote the admissible suffixes for the 
 
 Define
 
-$
+$$
 C_p = \{\,s\in S_t : V_x(p\cdot s)=1\,\}.
-$
+$$
 
 Call $C_p$ the **continuation support** or **future language** of $p$.
 
 Define
 
-$
+$$
 E(p)=1 \quad\Longleftrightarrow\quad C_p\neq\varnothing.
-$
+$$
 
 The root decision is $E(\epsilon)$.
 
@@ -188,11 +188,11 @@ A legal child can have empty continuation support and therefore contribute nothi
 
 Define
 
-$
+$$
 p\sim_F q
 \quad\Longleftrightarrow\quad
 C_p=C_q.
-$
+$$
 
 This is future-language equivalence.
 
@@ -204,11 +204,11 @@ The present relation is scoped to a fixed input/verifier/depth context. Equality
 
 Define
 
-$
+$$
 p\preceq_F q
 \quad\Longleftrightarrow\quad
 C_p\subseteq C_q.
-$
+$$
 
 For existential truth, $p$ becomes redundant whenever $p\preceq_F q$ and $q$ is retained.
 
@@ -218,9 +218,9 @@ Simulation preorders and language-inclusion relations have long been used for an
 
 A residual is dead when
 
-$
+$$
 C_p=\varnothing.
-$
+$$
 
 Dead support contributes nothing to existential acceptance.
 
@@ -232,9 +232,9 @@ Even when supports are all nonempty, unequal, and pairwise incomparable, their u
 
 For a family $P$ of residuals define
 
-$
+$$
 U_P=\bigcup_{p\in P} C_p.
-$
+$$
 
 A factorized representation $R(P)$ is useful only when it denotes exactly $U_P$ under the relevant semantics.
 
@@ -292,11 +292,11 @@ If $C_p=\varnothing$, deleting $p$ from any existential union preserves that uni
 
 For any family $P$ containing $p$,
 
-$
+$$
 \bigcup_{r\in P}C_r
 =
 \left(\bigcup_{r\in P\setminus\{p\}}C_r\right)\cup C_p.
-$
+$$
 
 Since $C_p=\varnothing$, the final term contributes nothing.
 
@@ -306,9 +306,9 @@ If $C_p=C_q$, retaining either $p$ or $q$ instead of both preserves the exact co
 
 #### Proof
 
-$
+$$
 C_p\cup C_q=C_q\cup C_q=C_q.
-$
+$$
 
 ### Proposition 3 — dominance pruning
 
@@ -316,9 +316,9 @@ If $C_p\subseteq C_q$, then $p$ may be deleted while $q$ is retained without cha
 
 #### Proof
 
-$
+$$
 C_p\cup C_q=C_q.
-$
+$$
 
 This is why one-way dominance can be more permissive than identity merging.
 
@@ -326,9 +326,9 @@ This is why one-way dominance can be more permissive than identity merging.
 
 Suppose $F$ is a representation with
 
-$
+$$
 \operatorname{denote}(F)=\bigcup_{p\in P}C_p.
-$
+$$
 
 Then $F$ may replace the explicitly materialized family $P$ for later operations whose semantics is correctly implemented over $F$.
 
@@ -352,17 +352,17 @@ Exact deadness classification is not assumed.
 
 Define any sound incomplete certificate relation
 
-$
+$$
 \widehat D(p,a).
-$
+$$
 
 Its soundness obligation is:
 
-$
+$$
 \widehat D(p,a)
 \Longrightarrow
 C_{pa}=\varnothing,
-$
+$$
 
 for an existing child $pa$.
 
@@ -399,9 +399,9 @@ exists q':
 
 If $R_t$ satisfies these conditions, then
 
-$
+$$
 R_t(p,q)\Longrightarrow C_p\subseteq C_q.
-$
+$$
 
 #### Proof
 
@@ -455,11 +455,11 @@ The claim is not that dead-state pruning or simulation is new. The synthesis mak
 
 At the root,
 
-$
+$$
 C_{\epsilon}=\varnothing
 \quad\Longleftrightarrow\quad
 E(\epsilon)=0.
-$
+$$
 
 A universal efficient exact deadness classifier for arbitrary roots of the represented bounded-existential family would therefore decide the existential objective.
 
@@ -511,27 +511,27 @@ the same projected Boolean function has a compact exact factorization
 
 Choose elimination variables
 
-$
+$$
 x_1,\ldots,x_d.
-$
+$$
 
 For every sign vector
 
-$
+$$
 \sigma\in\{+,-\}^d,
-$
+$$
 
 introduce $k$ private variables
 
-$
+$$
 a_{\sigma,1},\ldots,a_{\sigma,k}.
-$
+$$
 
 For each $\sigma$ and each $i\in\{1,\ldots,k\}$, create
 
-$
+$$
 L_{\sigma,1}\vee\cdots\vee L_{\sigma,d}\vee a_{\sigma,i},
-$
+$$
 
 where $L_{\sigma,j}$ is the $\sigma$-selected sign of $x_j$.
 
@@ -552,9 +552,9 @@ After eliminating $x_1$, only pairs whose remaining sign patterns agree survive 
 
 Inductively, after eliminating $x_1,\ldots,x_r$, each remaining sign vector carries
 
-$
+$$
 k^{2^r}
-$
+$$
 
 clauses.
 
@@ -562,23 +562,23 @@ The next elimination pairs the two opposite predecessor groups and squares the c
 
 After all $d$ eliminations, the explicit projected CNF contains
 
-$
+$$
 k^{2^d}
-$
+$$
 
 distinct non-tautological clauses.
 
 For fixed $k=2$,
 
-$
+$$
 N_{\mathrm{in}}=2^{d+1},
-$
+$$
 
 while
 
-$
+$$
 N_{\mathrm{out}}=2^{2^d}=2^{N_{\mathrm{in}}/2}.
-$
+$$
 
 The represented clauses are pairwise non-subsuming.
 
@@ -590,9 +590,9 @@ It is not a representation-independent lower bound.
 
 For each sign group $\sigma$, define
 
-$
+$$
 A_\sigma=\{a_{\sigma,1},\ldots,a_{\sigma,k}\}.
-$
+$$
 
 After eliminating all $x$ variables, the large explicit CNF says:
 
@@ -602,12 +602,12 @@ This formula is false exactly when every sign group contains at least one false 
 
 Therefore it is equivalent to
 
-$
+$$
 \bigvee_{\sigma\in\{+,-\}^d}
 \left(
 \bigwedge_{i=1}^{k} a_{\sigma,i}
 \right).
-$
+$$
 
 That alternate representation has size $O(2^d k)$, proportional to the original private-variable data.
 
@@ -625,9 +625,9 @@ Every clause belonging to another sign group is already satisfied by at least on
 
 The remaining $\sigma^*$ clauses reduce to
 
-$
+$$
 a_{\sigma^*,1},\ldots,a_{\sigma^*,k}.
-$
+$$
 
 Set all of them true.
 
@@ -659,9 +659,9 @@ The remaining issue is whether a compact representation can be constructed and m
 
 The CNF family motivates writing retained support as
 
-$
+$$
 W_i(R)
-$
+$$
 
 rather than simply $W_i$.
 
@@ -723,15 +723,15 @@ The continuation-support view instead supplies a common semantic coordinate syst
 
 Exact future equality requires
 
-$
+$$
 C_p=C_q.
-$
+$$
 
 Existential pruning needs only
 
-$
+$$
 C_p\subseteq C_q
-$
+$$
 
 when $q$ is retained.
 
@@ -739,9 +739,9 @@ Complete equality classification may therefore be unnecessary even when a sound 
 
 An implementation can search for any relation $\widehat R$ satisfying
 
-$
+$$
 \widehat R(p,q)\Longrightarrow C_p\subseteq C_q.
-$
+$$
 
 It need not recognize every true inclusion.
 
