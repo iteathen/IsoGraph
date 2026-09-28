@@ -200,17 +200,16 @@ The current qualified modular authority stack is recorded in `qualification/QUAL
 Current completed qualification checkpoints:
 
 1. Core 0.18 — `QUALIFIES`, Experiment 017;
-2. Core 0.19 — qualified at SHA-256 `8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2`, using Experiment 029's frozen 25/26 evidence, Experiment 030's fresh corrected 2/2 mutation regression, and six ESR-qualified exact-rendering predecessors;
-3. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
-4. Discovery Protocols 0.1–0.7 — qualified cumulatively, with DP 0.7 closed by the three-positive-control campaign plus Experiment 028;
-5. DTS 0.1 — `QUALIFIED`, Experiment 026;
-6. the Core 0.17 + Core 0.18 + Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 composition is directly integration-qualified by Experiment 031, 32/32 PASS, formal `QUALIFIES`.
+2. Core 0.19 — qualified at SHA-256 `8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2`;
+3. Core 0.20 — qualified at SHA-256 `9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7`, Experiment 048, 18/18 fresh cases PASS;
+4. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
+5. Discovery Protocols 0.1–0.8 — qualified cumulatively; DP 0.8 is pinned at SHA-256 `74378de9618b655888a993901e620ca841ae47f3aa406dff1d2dcc92de15fa96` by Experiments 050+051;
+6. DTS 0.1 — `QUALIFIED`, Experiment 026;
+7. the Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 composition is directly integration-qualified by Experiment 052, 16/16 PASS, formal `QUALIFIES`.
 
-Core 0.19 is current Core authority and its direct full-stack integration burden is now discharged at the exact revisions pinned by Experiment 031.
+Core 0.20 is current Core authority and its direct full-stack integration burden is discharged at the exact revisions pinned by Experiment 052.
 
 Transition Structural Signatures and DTS profiles remain separately versioned successor research.
-
-Discovery Protocol 0.8 clue-preserving discrepancy adjudication is also active successor research. Before promotion it requires fresh adversarial qualification, including blind mixed cases where the correct outcome may be an ordinary defect, a structural clue, both, or neither.
 
 No external semantic call should be spent before deterministic contract/preflight material for the focused claim is complete.
 
