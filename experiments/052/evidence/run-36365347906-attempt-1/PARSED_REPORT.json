@@ -1,0 +1,230 @@
+{
+  "cases": [
+    {
+      "case_id": "I01",
+      "answers": {
+        "core_primitive_complete": false,
+        "expected_output_privileged": false,
+        "expand_available_definition": true,
+        "patch_to_expected": false
+      },
+      "reason": "Core 0.20 requires unfolding definable relations to primitive logic; DP 0.8 forbids patching to match expected output without an established contract violation.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 1",
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 9"
+      ]
+    },
+    {
+      "case_id": "I02",
+      "answers": {
+        "preserve_qu": true,
+        "select_realization": false,
+        "defect_owner_established": false
+      },
+      "reason": "QU 0.1 requires preserving all admissible realizations; DP 0.8 forbids assigning defect ownership while the cause remains unresolved under uncertainty.",
+      "authority_used": [
+        "QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md Section 6",
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 3"
+      ]
+    },
+    {
+      "case_id": "I03",
+      "answers": {
+        "repair_local_defect": true,
+        "scoped_behavioral_equivalence": true,
+        "global_nei_same": false,
+        "preserve_clue": true
+      },
+      "reason": "DP 0.8 requires clue preservation after repair; NEI 0.4 forbids global SAME from scoped equivalence without a natural identity theorem.",
+      "authority_used": [
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 8.2",
+        "NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 15"
+      ]
+    },
+    {
+      "case_id": "I04",
+      "answers": {
+        "dts_anatomy_violation": true,
+        "validator_defect": true,
+        "repair_transition_record": true
+      },
+      "reason": "DTS 0.1 requires source, event, and destination anatomy; DP 0.8 requires repairing the authoritative defect owner (the record and the validator).",
+      "authority_used": [
+        "DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md Section 4",
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 7"
+      ]
+    },
+    {
+      "case_id": "I05",
+      "answers": {
+        "derived_view_allowed": true,
+        "promote_to_core": false,
+        "primitive_firewall_pass": true
+      },
+      "reason": "DP 0.7 permits derived views that do not replace primitive structure; Core 0.20 requires assertions to survive deletion of derived views.",
+      "authority_used": [
+        "DP_0_7_PRIMITIVE_FIRST_DERIVED_STRUCTURAL_VIEWS_CANDIDATE.md Section 2",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 14"
+      ]
+    },
+    {
+      "case_id": "I06",
+      "answers": {
+        "preserve_both_authorities": true,
+        "choose_one_without_authority": false,
+        "qu_or_incomplete_boundary": true
+      },
+      "reason": "DP 0.8 requires preserving conflicting faithful references; QU 0.1 represents the unresolved alternatives licensed by authority.",
+      "authority_used": [
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 10",
+        "QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md Section 0"
+      ]
+    },
+    {
+      "case_id": "I07",
+      "answers": {
+        "dp_may_use_view": true,
+        "core_primitive_complete": false,
+        "arithmetic_expansion_required": true
+      },
+      "reason": "DP 0.7 allows views for discovery, but Core 0.20 requires arithmetic to be unfolded to primitive relational structure for exact claims.",
+      "authority_used": [
+        "DP_0_7_PRIMITIVE_FIRST_DERIVED_STRUCTURAL_VIEWS_CANDIDATE.md Section 13",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 5"
+      ]
+    },
+    {
+      "case_id": "I08",
+      "answers": {
+        "historical_core019_valid": true,
+        "core020_complete": false,
+        "retroactive_invalidation": false
+      },
+      "reason": "Core 0.20 does not retroactively rewrite prior renderings but classifies them as 0.20-incomplete if load-bearing logic is unexpanded.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 15"
+      ]
+    },
+    {
+      "case_id": "I09",
+      "answers": {
+        "repair_parse_defect": true,
+        "clue_survives": true,
+        "exact_admission_requires_primitive_support": true
+      },
+      "reason": "DP 0.8 requires checking if a clue survives repair; Core 0.19 requires exact rendering to have zero semantic residual for admission.",
+      "authority_used": [
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 8.2",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 18.1"
+      ]
+    },
+    {
+      "case_id": "I10",
+      "answers": {
+        "sidecar_can_supply_native_semantics": false,
+        "core_primitive_complete": false,
+        "qu_unexpanded_or_missing_support": true
+      },
+      "reason": "Core 0.19 forbids sidecars from supplying load-bearing meaning; Core 0.20 requires expansion of definable nodes.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 18.4",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 11"
+      ]
+    },
+    {
+      "case_id": "I11",
+      "answers": {
+        "raw_carriers_allowed": true,
+        "domain_flavored_name_breaks_closure": false,
+        "core_primitive_complete": true
+      },
+      "reason": "Core 0.20 permits raw carrier atoms when behavior is represented externally; names do not define structure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 4",
+        "DP_0_7_PRIMITIVE_FIRST_DERIVED_STRUCTURAL_VIEWS_CANDIDATE.md Section 3"
+      ]
+    },
+    {
+      "case_id": "I12",
+      "answers": {
+        "patch_justified": false,
+        "preserve_qu": true,
+        "select_realization": false
+      },
+      "reason": "DP 0.8 forbids repair based solely on expected output; QU 0.1 requires preserving unresolved alternatives.",
+      "authority_used": [
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 9",
+        "QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md Section 6"
+      ]
+    },
+    {
+      "case_id": "I13",
+      "answers": {
+        "repair_required": true,
+        "derived_view_deletion_preserves_assertion": true,
+        "core_firewall_pass": true
+      },
+      "reason": "Core 0.20 requires exact claims to survive deletion of derived views; DP 0.8 requires minimum causal repair.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 14",
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 7"
+      ]
+    },
+    {
+      "case_id": "I14",
+      "answers": {
+        "rendering_defect_established": true,
+        "repair_reference": false,
+        "continue_challenging_reference_after_rendering_defect_established": false
+      },
+      "reason": "DP 0.8 requires establishing a defect owner; Core 0.19 requires exact rendering of signs and operators.",
+      "authority_used": [
+        "DP_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md Section 3",
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 18.2"
+      ]
+    },
+    {
+      "case_id": "I15",
+      "answers": {
+        "scoped_same": true,
+        "global_identity_established": false,
+        "preserve_source_distinction": true
+      },
+      "reason": "NEI 0.4 distinguishes scoped quotients from global identity; DP 0.3 preserves application distinctions exactly.",
+      "authority_used": [
+        "NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md Section 15",
+        "DISCOVERY_PROTOCOLS_0_3_CANDIDATE.md Section 1"
+      ]
+    },
+    {
+      "case_id": "I16",
+      "answers": {
+        "qu_unexpanded": true,
+        "assume_transitivity": false,
+        "dp_pattern_may_be_explored_conditionally": true,
+        "exact_admission_without_authority": false
+      },
+      "reason": "Core 0.19 forbids unrepresented premises; Core 0.20 marks missing definitions as QU_UNEXPANDED; DP 0.7 allows conditional exploration.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md Section 6.2",
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md Section 11",
+        "DP_0_7_PRIMITIVE_FIRST_DERIVED_STRUCTURAL_VIEWS_CANDIDATE.md Section 13"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_20": "SUPPORTED",
+    "dp_0_8": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "preserved_module_ownership": true,
+    "did_not_use_dp_as_proof_authority": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_global_identity_from_scoped_same": true,
+    "routed_exact_claims_to_primitive_support": true
+  }
+}
