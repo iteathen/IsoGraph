@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const ROOT=process.cwd(),OUT=path.join(ROOT,'out','exp050');
+fs.rmSync(OUT,{recursive:true,force:true});
+const env={...process.env,GITHUB_SHA:'HEAD',ISOGRAPH_COLD_DRY_RUN:'1'};
+const run=spawnSync(process.execPath,['experiments/050/tools/run-exp050-cold.mjs'],{cwd:ROOT,env,encoding:'utf8'});
+if(run.status!==0)throw new Error('dry runner failed '+run.stdout+run.stderr);
+const d=JSON.parse(fs.readFileSync(path.join(OUT,'DRY_RUN.json'),'utf8'));
+if(d.case_count!==22)throw new Error('case count');
+const paths=d.input_manifest.map(x=>x.path);
+for(const required of ['experiments/050/DP_0_8_CASES.md','experiments/050/PUBLIC_OUTPUT_SCHEMA.json','experiments/050/COLD_PROMPT.md'])if(!paths.includes(required))throw new Error('missing '+required);
+for(const bad of ['hidden/','score-exp050','test-score-exp050','test-runner-exp050','evidence','ATTEMPT_','FINAL_QUALIFICATION_REVIEW','AGENTS.md','STATUS.md'])if(paths.some(p=>p.includes(bad)))throw new Error('forbidden '+bad);
+if(!/^[0-9a-f]{64}$/.test(d.dp_0_8_sha256))throw new Error('missing DP hash');
+fs.rmSync(OUT,{recursive:true,force:true});
+console.log('Experiment 050 runner self-test PASS');
