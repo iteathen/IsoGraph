@@ -75,7 +75,7 @@ Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
 ## Research publications
 
-- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.2](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_2.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.2 adds the exact-length padding lemma, explicit effective treatment classes, set-valued path coverage, and sharpens the width-173 family to exact OPT = 21 while leaving unbounded ternary witness width open.
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
 - [2026-09-26 publications](research/publications/2026-09-26/)
 
 ---
