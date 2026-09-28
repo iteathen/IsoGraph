@@ -1038,6 +1038,7 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 ---
 
 ## References
+
 ## References
 
 [1] Akira Kobata. “Exo- and endoglycosidases revisited.” *Proceedings of the Japan Academy, Series B* 89(3):97–117, 2013. DOI: https://doi.org/10.2183/pjab.89.97.
@@ -1078,11 +1079,11 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 
 [19] IsoGraph Project. “Glycan publication preflight audit 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_PREFLIGHT_0_1.md.
 
+[20] IsoGraph Project. “Glycan publication-review refinements A30 — path coverage, quotient uniqueness, and ternary threshold ceiling 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/0431c392db23da94a93ba972c7ef613c537e82cb/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_REVIEW_REFINEMENTS_A30_0_1.md.
+
 [21] IsoGraph Project. “DP-fed implicit admissions A12 — phase algebra and dominance-aware language.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A12_0_1.md.
 
 [22] IsoGraph Project. “DP-fed implicit admissions A14 — unique dominance boundary.” Historical derivation refined by [20]. Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A14_0_1.md.
-
-[20] IsoGraph Project. “Glycan publication-review refinements A30 — path coverage, quotient uniqueness, and ternary threshold ceiling 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/0431c392db23da94a93ba972c7ef613c537e82cb/research/glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_REVIEW_REFINEMENTS_A30_0_1.md.
 
 [23] IsoGraph Project. “DP-fed implicit admissions A13 — resistance-chain duality.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_DP_IMPLICIT_ADMISSIONS_A13_0_1.md.
 
@@ -1099,7 +1100,6 @@ This license applies to the original text, analysis, diagrams, and explanatory m
 [29] IsoGraph Project. “A29 — critical covers as standard examples.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/research/glycan-cleavage/2026-09-27/GLYCAN_CLUE_DERIVATIONS_A29_STANDARD_EXAMPLE_0_1.md.
 
 [30] IsoGraph Project. “Experiment 047 discrepancy review 0.1.” Permanent repository snapshot: https://github.com/iteathen/IsoGraph/blob/95d32275a8942e34c494296f1d8815bd1268b3a0/experiments/047/DISCREPANCY_REVIEW_0_1.md.
-
 ---
 
 ## Citation
