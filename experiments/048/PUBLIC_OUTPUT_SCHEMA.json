@@ -112,5 +112,287 @@
       "primitive_complete"
     ]
   },
-  "note": "Field names are public serialization contract. Expected values remain hidden."
+  "note": "Field names and value vocabularies are public serialization contract. Expected choices remain hidden.",
+  "field_contracts": {
+    "C01": {
+      "primitive_complete": {
+        "type": "boolean"
+      },
+      "named_node_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "definition_must_expand": {
+        "type": "boolean"
+      }
+    },
+    "C02": {
+      "qualified_endpoint_cache_allowed": {
+        "type": "boolean"
+      },
+      "qualified_endpoint_can_replace_primitive_support": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C03": {
+      "raw_literals_allowed": {
+        "type": "boolean"
+      },
+      "length_predicate_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C04": {
+      "computation_predicate_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "transition_trace_expansion_required": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C05": {
+      "carrier_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "behavior_separately_represented": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C06": {
+      "derived_label_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "exact_reconstruction_after_deletion": {
+        "type": "boolean"
+      },
+      "derived_label_authoritative_support": {
+        "type": "boolean"
+      }
+    },
+    "C07": {
+      "dp_may_use_derived_view": {
+        "type": "boolean"
+      },
+      "exact_admission_on_view_alone": {
+        "type": "boolean"
+      },
+      "primitive_projection_required": {
+        "type": "boolean"
+      }
+    },
+    "C08": {
+      "relation_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      },
+      "invent_primitive_allowed": {
+        "type": "boolean"
+      }
+    },
+    "C09": {
+      "sidecar_can_supply_missing_native_meaning": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      },
+      "native_expansion_required": {
+        "type": "boolean"
+      }
+    },
+    "C10": {
+      "core_0_19_predecessor_valid": {
+        "type": "boolean"
+      },
+      "core_0_20_primitive_complete": {
+        "type": "boolean"
+      },
+      "retroactive_invalidation": {
+        "type": "boolean"
+      }
+    },
+    "C11": {
+      "primitive_complete": {
+        "type": "boolean"
+      },
+      "source_round_trip": {
+        "type": "enum",
+        "values": [
+          "EXACT",
+          "INEXACT",
+          "UNSUPPORTED"
+        ]
+      },
+      "unsupported_addition": {
+        "type": "boolean"
+      }
+    },
+    "C12": {
+      "primitive_semantics_changed": {
+        "type": "boolean"
+      },
+      "derived_names_semantic_authority": {
+        "type": "boolean"
+      },
+      "exact_claim_preserved": {
+        "type": "boolean"
+      }
+    },
+    "C13": {
+      "qualified_node_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      },
+      "exact_support_survives_view_deletion": {
+        "type": "boolean"
+      }
+    },
+    "C14": {
+      "raw_literals_allowed": {
+        "type": "boolean"
+      },
+      "add_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C15": {
+      "incidence_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "internal_cause_expansion_required": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C16": {
+      "carrier_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "domain_flavored_name_breaks_closure": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C17": {
+      "firewall_pass": {
+        "type": "boolean"
+      },
+      "exact_claim_reconstructable": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    },
+    "C18": {
+      "view_status": {
+        "type": "enum",
+        "values": [
+          "CLOSED_PRIMITIVE",
+          "DERIVED_VIEW",
+          "RAW_DATA_ATOM",
+          "QU_UNEXPANDED",
+          "REJECTED_AS_LEAF"
+        ]
+      },
+      "firewall_pass": {
+        "type": "boolean"
+      },
+      "primitive_complete": {
+        "type": "boolean"
+      }
+    }
+  }
 }
