@@ -1,0 +1,83 @@
+Experiment 045 execution request
+
+Run the frozen threshold-16 ternary Maximum-Minimal-Set-Cover search.
+
+Required:
+- build all 384 run-compressed length-8 candidate path constraints;
+- build all 98,304 run-compressed length-16 threshold treatment words;
+- build the exact complete subsequence-failure incidence;
+- run 128 deterministic incremental deletion trials;
+- retain the largest inclusion-minimal cover found;
+- verify complete threshold coverage and one private length-16 witness per selected path;
+- persist evidence regardless of result.
+
+Node-only rerun request.
+
+The active implementation MUST be Node.js. Do not use C/C++, Rust, WebAssembly, or other native substitutes. Reproduce the threshold-16 critical-cover result using experiments/045/tools/run-exp045.mjs and persist fresh Node-tagged evidence.
+
+
+Fresh Node-only rerun after workflow synchronization.
+
+Required source contains:
+- experiments/045/tools/run-exp045.mjs;
+- Node 26.7 workflow execution;
+- no native compilation step;
+- fresh Node-tagged RESULT.json.
+
+
+Node optimization rerun v2.
+
+Use source containing node_optimization_revision=flat-incidence-private-invariant-v2.
+Keep all 128 trials and exact threshold/private-witness verification unchanged.
+
+
+Node optimization rerun v3.
+
+Use source containing node_optimization_revision=branchless-next-packed-cover-v3.
+Keep all 128 trials, RNG seed, threshold universe, and exact private-witness verification unchanged.
+
+
+Node optimization rerun v4.
+
+Use source containing node_optimization_revision=branchless-next-separate-cover-v4.
+Keep workload, seed, threshold universe, and exact verification identical to earlier Node runs.
+
+
+Node optimization rerun v5.
+
+Use node_optimization_revision=two-watched-coverers-v5.
+Keep the identical 128 deletion orders and exact post-search coverage/private-witness verification.
+The retained cover histogram and best trial must remain consistent with earlier exact runs.
+
+
+Node watched-coverer rerun v5-fixed.
+
+Use source after initialization repair commit 17cb402986d093841574dc5d8ce08a55f559da09.
+Keep all 128 deterministic deletion orders and exact final cover/private-witness verification.
+
+
+Node optimization rerun v6.
+
+Use node_optimization_revision=typed-watched-coverers-v6.
+Keep identical 128 trial orders and exact verification.
+
+
+Node optimization rerun v6.
+
+Use source containing node_optimization_revision=intrusive-watcher-lists-v6.
+Keep all 128 deterministic trials and exact verification unchanged.
+
+
+Node optimization rerun v7.
+
+Use source containing node_optimization_revision=lean-watched-coverers-v7.
+Keep the exact 128 deterministic trials and post-search verification unchanged.
+
+
+Fresh v7 benchmark after stale-diagnostic cleanup.
+
+Required source SHA must include:
+- node_optimization_revision=lean-watched-coverers-v7;
+- no maxTrialEventCount reference;
+- 128 deterministic trials;
+- exact post-search verification.

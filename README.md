@@ -70,6 +70,13 @@ Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
 ---
 
+## Research publications
+
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_1.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. The paper reports exact phase algebra, the universal two-enzyme collapse, and finite ternary witness width 173 while leaving unbounded ternary witness width open.
+- [2026-09-26 publications](research/publications/2026-09-26/)
+
+---
+
 ## Evidence status
 
 Start with [EVIDENCE.md](EVIDENCE.md), the machine-readable [claim registry](evidence/claims.json), and the [external-validation index](evidence/external/README.md).
@@ -85,6 +92,7 @@ Current status, design posture, and provenance:
 - [MIGRATION.md](MIGRATION.md) — repository provenance;
 - [AGENTS.md](AGENTS.md) — agent operating guidance.
 - [FINAL_PRODUCT_MAINTENANCE.md](FINAL_PRODUCT_MAINTENANCE.md) — maintenance contract for the repository-root accumulated final-product DOCX and its Library publication mirror.
+- [PUBLICATION_ATTRIBUTION_POLICY.md](PUBLICATION_ATTRIBUTION_POLICY.md) — publication authorship/provenance rule: Joshua Oshiro author attribution, IsoGraph Project references, agent-assistance disclosure, and explicit credit that IsoGraph was designed by Joshua Oshiro.
 
 The design doctrine does not override the versioned semantic specifications. It explains why the specifications preserve scope, residuals, unknown structure, and revision-scoped evidence.
 

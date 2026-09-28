@@ -1,0 +1,83 @@
+name: Experiment 046 Node-only ternary threshold-18 critical cover
+
+on:
+  push:
+    branches:
+      - research/glycan-cleavage-primitive-20260927
+    paths:
+      - experiments/046/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-046-glycan-width-search
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out exact experiment revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Execute Node-only threshold-18 search
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/046/tools/run-exp046.mjs
+          rm -rf out/exp046
+          node --max-old-space-size=4096 experiments/046/tools/run-exp046.mjs
+
+      - name: Persist Experiment 046 Node evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/046/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -f out/exp046/RESULT.json ] && cp out/exp046/RESULT.json "$E/RESULT.json"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","implementation_language":"Node.js"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 046 Node run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin research/glycan-cleavage-primitive-20260927
+            git rebase origin/research/glycan-cleavage-primitive-20260927
+            git push origin HEAD:research/glycan-cleavage-primitive-20260927
+          fi
+
+      - name: Enforce exact Node result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f out/exp046/RESULT.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const r=JSON.parse(fs.readFileSync('out/exp046/RESULT.json','utf8'));
+          console.log(JSON.stringify({
+            disposition:r.disposition,
+            implementation_language:r.implementation_language,
+            best_cover_size:r.best_cover_size,
+            threshold_uncovered_words:r.threshold_uncovered_words,
+            missing_private_witnesses:r.missing_private_witnesses,
+            exact_witness_width:r.exact_witness_width,
+            total_ms:r.total_ms
+          },null,2));
+          if(r.disposition!=='PASS') process.exit(1);
+          if(r.implementation_language!=='Node.js') process.exit(1);
+          if(r.threshold_uncovered_words!==0) process.exit(1);
+          if(r.missing_private_witnesses!==0) process.exit(1);
+          if(!(r.exact_witness_width>=75)) process.exit(1);
+          NODE

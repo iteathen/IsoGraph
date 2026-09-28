@@ -1,0 +1,132 @@
+name: Experiment 032 glycan primitive reconstruction
+
+on:
+  push:
+    branches:
+      - research/glycan-cleavage-primitive-20260927
+    paths:
+      - experiments/032/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-032-glycan-primitive
+  cancel-in-progress: false
+
+env:
+  GEMINI_DECODER_MODELS: gemini-3-flash-preview,gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-pro-preview,gemini-pro-latest
+  GEMINI_VERIFIER_MODELS: gemini-3.1-pro-preview,gemini-3-flash-preview,gemini-3.8-flash,gemini-3.7-flash,gemini-pro-latest
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out exact verification revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic primitive preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check experiments/032/tools/check-glycan-primitive.mjs
+          node --check experiments/032/tools/run-exp032-glycan-cold.mjs
+
+          rm -rf out/exp032
+          node experiments/032/tools/check-glycan-primitive.mjs
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/032/tools/run-exp032-glycan-cold.mjs
+
+          node - <<'NODE'
+          const fs=require('fs');
+          const m=JSON.parse(fs.readFileSync('out/exp032/MECHANICAL.json','utf8'));
+          const d=JSON.parse(fs.readFileSync('out/exp032/DRY_RUN.json','utf8'));
+          if(m.parse!=='PASS') throw new Error('mechanical parse failed');
+          if(m.free_native_variables!==0) throw new Error('free variables');
+          if(m.forbidden_domain_label_hits.length!==0) throw new Error('native domain label leakage');
+          if(d.source_excluded_from_cold!==true) throw new Error('source entered cold packet');
+          if(d.author_audit_excluded_from_cold!==true) throw new Error('author audit entered cold packet');
+          if(d.verifier_prompt_excluded_from_cold!==true) throw new Error('verifier prompt entered cold packet');
+          if(d.cold_domain_word_hits.length!==0) throw new Error('cold packet domain word leakage');
+          const paths=d.cold_input_manifest.map(x=>x.path);
+          const forbidden=[
+            'research/glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_SOURCE_FREEZE_0_1.md',
+            'research/glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_PRIMITIVE_AUDIT_0_1.md',
+            'research/glycan-cleavage/2026-09-27/GLYCAN_CLEAVAGE_PRIMITIVE_CLOSURE_LEDGER_0_1.md',
+            'experiments/032/VERIFIER_PROMPT.md',
+            'AGENTS.md','README.md','STATUS.md'
+          ];
+          for(const p of forbidden){
+            if(paths.includes(p)) throw new Error('forbidden cold input '+p);
+          }
+          if(paths.length!==7) throw new Error('unexpected cold packet file count '+paths.length);
+          console.log(JSON.stringify({
+            mechanical:m.parse,
+            top_level_blocks:m.top_level_blocks,
+            cold_packet_sha256:d.cold_packet_sha256,
+            cold_input_count:paths.length
+          },null,2));
+          NODE
+
+      - name: Execute cold reconstruction and isolated verifier
+        id: semantic
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/032/tools/run-exp032-glycan-cold.mjs
+
+      - name: Persist Experiment 032 evidence
+        if: always()
+        env:
+          SEMANTIC_OUTCOME: ${{ steps.semantic.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="experiments/032/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+
+          for f in             MECHANICAL.json             DRY_RUN.json             COLD_INPUT_MANIFEST.json             COLD_RECONSTRUCTION_RAW.txt             COLD_RECONSTRUCTION.json             COLD_METADATA.json             VERIFIER_INPUT_MANIFEST.json             VERIFIER_REPORT_RAW.txt             VERIFIER_REPORT.json             VERIFIER_METADATA.json             RESULT.json             RUN_FAILURE.json
+          do
+            [ -f "out/exp032/$f" ] && cp "out/exp032/$f" "$E/$f"
+          done
+
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","semantic_outcome":"%s"}\n'             "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$SEMANTIC_OUTCOME" > "$E/CONTROL.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 032 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin research/glycan-cleavage-primitive-20260927
+            git rebase origin/research/glycan-cleavage-primitive-20260927
+            git push origin HEAD:research/glycan-cleavage-primitive-20260927
+          fi
+
+      - name: Enforce rendering verification
+        if: always()
+        env:
+          SEMANTIC_OUTCOME: ${{ steps.semantic.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$SEMANTIC_OUTCOME" = "success"
+          test -f out/exp032/RESULT.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const r=JSON.parse(fs.readFileSync('out/exp032/RESULT.json','utf8'));
+          console.log(JSON.stringify(r,null,2));
+          if(r.disposition!=='PASS') process.exit(1);
+          if(r.mechanical!=='PASS') process.exit(1);
+          if(r.verifier_verdict!=='PASS') process.exit(1);
+          if(r.source_reconstruction!=='PASS') process.exit(1);
+          if(r.primitive_closure!=='PASS') process.exit(1);
+          if(r.all_targeted_checks_pass!==true) process.exit(1);
+          if(r.mismatch_arrays_empty!==true) process.exit(1);
+          NODE
