@@ -9,7 +9,7 @@
 ### Current reviewed revision
 
 - [Publication revision 0.2](GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_2.md)
-- Publication blob: `c36a86527b8af9a05fa9128fbe97ec3552b26559`
+- Publication blob: `e32924c3a691ef4dbe6c550c4d3d675569bc5c93`
 - [Response to mathematical review](GLYCAN_CLEAVAGE_REVIEW_RESPONSE_0_2.md)
 - [Revision 0.2 publication preflight](../../glycan-cleavage/2026-09-27/GLYCAN_PUBLICATION_PREFLIGHT_0_2.md)
 - Scope: idealized deterministic exoglycosidase-treatment optimization on finite rooted branched structures
