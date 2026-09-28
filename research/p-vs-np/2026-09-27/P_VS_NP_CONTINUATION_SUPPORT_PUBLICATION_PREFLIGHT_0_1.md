@@ -3,7 +3,7 @@
 **Status:** publication preflight PASS  
 **Date:** 2026-09-27 America/Los_Angeles  
 **Paper:** `research/publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md`  
-**Paper blob reviewed:** `b7375a036d5508449392ce1a52f3cb378f231e02`  
+**Paper blob reviewed:** `e4581335eff8296c7f2d59e09dcaea4e6d0934fd`  
 **Repository research baseline cited by paper:** `main@84e2f4d2386f9cd1a7b2c533752600eee82e44bf`
 
 ## 1. Publication policy gate
