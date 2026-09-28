@@ -76,7 +76,7 @@ fs.writeFileSync(out+'/INPUT_MANIFEST.json',JSON.stringify(manifest,null,2)+'\n'
 const baseMeta={
   experiment:'048',run:RUN,source_sha:SHA,model_requested:MODEL,
   model_candidates:MODEL_CANDIDATES,packet_sha256:packetHash,
-  authority_hashes,
+  authority_hashes:authorityHashes,
   core_0_20_sha256:authorityHashes['CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md'],
   case_count:18,input_manifest:manifest
 };
