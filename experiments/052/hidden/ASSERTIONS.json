@@ -1,0 +1,153 @@
+{
+  "experiment": "052",
+  "required_case_ids": [
+    "I01",
+    "I02",
+    "I03",
+    "I04",
+    "I05",
+    "I06",
+    "I07",
+    "I08",
+    "I09",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14",
+    "I15",
+    "I16"
+  ],
+  "cases": {
+    "I01": {
+      "answers": {
+        "core_primitive_complete": false,
+        "expected_output_privileged": false,
+        "expand_available_definition": true,
+        "patch_to_expected": false
+      }
+    },
+    "I02": {
+      "answers": {
+        "preserve_qu": true,
+        "select_realization": false,
+        "defect_owner_established": false
+      }
+    },
+    "I03": {
+      "answers": {
+        "repair_local_defect": true,
+        "scoped_behavioral_equivalence": true,
+        "global_nei_same": false,
+        "preserve_clue": true
+      }
+    },
+    "I04": {
+      "answers": {
+        "dts_anatomy_violation": true,
+        "validator_defect": true,
+        "repair_transition_record": true
+      }
+    },
+    "I05": {
+      "answers": {
+        "derived_view_allowed": true,
+        "promote_to_core": false,
+        "primitive_firewall_pass": true
+      }
+    },
+    "I06": {
+      "answers": {
+        "preserve_both_authorities": true,
+        "choose_one_without_authority": false,
+        "qu_or_incomplete_boundary": true
+      }
+    },
+    "I07": {
+      "answers": {
+        "dp_may_use_view": true,
+        "core_primitive_complete": false,
+        "arithmetic_expansion_required": true
+      }
+    },
+    "I08": {
+      "answers": {
+        "historical_core019_valid": true,
+        "core020_complete": false,
+        "retroactive_invalidation": false
+      }
+    },
+    "I09": {
+      "answers": {
+        "repair_parse_defect": true,
+        "clue_survives": true,
+        "exact_admission_requires_primitive_support": true
+      }
+    },
+    "I10": {
+      "answers": {
+        "sidecar_can_supply_native_semantics": false,
+        "core_primitive_complete": false,
+        "qu_unexpanded_or_missing_support": true
+      }
+    },
+    "I11": {
+      "answers": {
+        "raw_carriers_allowed": true,
+        "domain_flavored_name_breaks_closure": false,
+        "core_primitive_complete": true
+      }
+    },
+    "I12": {
+      "answers": {
+        "patch_justified": false,
+        "preserve_qu": true,
+        "select_realization": false
+      }
+    },
+    "I13": {
+      "answers": {
+        "repair_required": true,
+        "derived_view_deletion_preserves_assertion": true,
+        "core_firewall_pass": true
+      }
+    },
+    "I14": {
+      "answers": {
+        "rendering_defect_established": true,
+        "repair_reference": false,
+        "challenge_reference_after_trace": false
+      }
+    },
+    "I15": {
+      "answers": {
+        "scoped_same": true,
+        "global_identity_established": false,
+        "preserve_source_distinction": true
+      }
+    },
+    "I16": {
+      "answers": {
+        "qu_unexpanded": true,
+        "assume_transitivity": false,
+        "dp_pattern_may_be_explored_conditionally": true,
+        "exact_admission_without_authority": false
+      }
+    }
+  },
+  "required_module_assessment": {
+    "core_0_20": "SUPPORTED",
+    "dp_0_8": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED"
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "preserved_module_ownership": true,
+    "did_not_use_dp_as_proof_authority": true,
+    "preserved_qu_when_load_bearing": true,
+    "did_not_infer_global_identity_from_scoped_same": true,
+    "routed_exact_claims_to_primitive_support": true
+  }
+}
