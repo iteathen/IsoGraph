@@ -190,7 +190,7 @@ Historical NEI 0.1 and NEI 0.2 remain immutable qualified evidence at their orig
 
 ## Discovery Protocols
 
-Discovery Protocols 0.1–0.7 are the current cumulative qualified discovery module:
+Discovery Protocols 0.1–0.8 are the current cumulative qualified discovery module:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md`
@@ -199,6 +199,7 @@ Discovery Protocols 0.1–0.7 are the current cumulative qualified discovery mod
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
 
 DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
