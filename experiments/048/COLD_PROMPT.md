@@ -30,7 +30,7 @@ Schema:
 
 Rules:
 - Return C01..C18 exactly once and in order.
-- Use only answer-field names that are required for each case.
+- Use exactly the answer-field names listed for each case in experiments/048/PUBLIC_OUTPUT_SCHEMA.json. Do not add, omit, rename, or alias answer fields.
 - Do not infer hidden chemistry/domain semantics from labels.
 - A familiar name is not primitive authority.
 - A missing lower definition remains unresolved/QU-bearing when load-bearing.
