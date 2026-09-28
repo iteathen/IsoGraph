@@ -2,10 +2,22 @@
 
 **Status:** active research campaign  
 **Primitive authority:** `2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg`  
-**Current campaign authority:** `2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_3.md`  
+**Current campaign authority:** `2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md`  
 **Current implicit index:** `2026-09-27/IMPLICIT_ASSERTION_INDEX_0_10.json`  
-**Current Discovery Protocol pass:** `2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md`  
+**Latest completed P-vs-NP Discovery pass:** `2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md` (historical DP 0.7 execution; current qualified family authority is DP 0.1–0.8)  
 **Durable checkpoint:** `2026-09-27/CAMPAIGN_CHECKPOINT_2_0.md`
+
+## Research publication
+
+- [Continuation-Support Reductions for Bounded Existential Computation: A Structural Synthesis of Pruning, Quotienting, and Factorization](../publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md)
+- Author: Joshua Oshiro
+- Publication framing: synthesis/support of established work with modest possible synthesis-level novelty
+- [Broad external novelty review](2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
+- [Publication preflight](2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_PUBLICATION_PREFLIGHT_0_1.md)
+- License: CC BY 4.0
+- P-versus-NP theorem status remains OPEN in both directions.
+
+---
 
 ## Potentially novel synthesis — visible research lead
 
@@ -147,7 +159,11 @@ It demonstrates that dead-support filtering is useful but cannot replace stable 
 
 ## Novelty status
 
-Targeted prior-art review:
+Current broad publication-support novelty review:
+
+`2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md`
+
+Historical targeted predecessor:
 
 `2026-09-27/P_VS_NP_DP07_NOVELTY_REVIEW_0_1.md`
 
@@ -168,16 +184,17 @@ succinctness vs tractable operations:
 
 continuation-support reduction ladder:
     NEW_TO_CURRENT_ISOGRAPH_CAMPAIGN
-    POSSIBLE_SYNTHESIS_NOVELTY
-    EXTERNAL_NOVELTY_UNREVIEWED
+    POSSIBLE SYNTHESIS / EXPOSITORY CONTRIBUTION
+    SUBSTANTIAL PRIOR-ART OVERLAP
 
 generic QU/NEI-safe integration of
 negative evidence -> filtered simulation -> dominance -> factorization:
     NEW_TO_CURRENT_ISOGRAPH_CAMPAIGN
-    EXTERNAL_NOVELTY_UNREVIEWED
+    PROJECT-LOCAL FORMAL INTEGRATION
+    PRIOR-ART ANALOGUES FOUND
 ~~~
 
-Do not publish or describe these as externally novel results without a broader scholarly novelty review.
+The broad review supports publication as a synthesis paper. It does not establish a new complexity theorem or strong external novelty claim.
 
 ## Correctness corrections that must remain visible
 
@@ -187,7 +204,7 @@ Historical artifacts retain provenance, but current work must not route through 
 - NEI overlay 0.4 — superseded as native result authority because opaque handles overclaimed evidence/model/QU completeness;
 - IA-304 / IA-305 — superseded because all-legal simulation is sufficient but not necessary for continuation dominance/equality in the presence of dead branches.
 
-Current corrected replacements are indexed by `P_VS_NP_CURRENT_AUTHORITY_0_3.md`.
+Current corrected replacements are indexed by `P_VS_NP_CURRENT_AUTHORITY_0_4.md`.
 
 ## Current machine-audited implicit state
 

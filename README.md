@@ -65,9 +65,9 @@ These are **new to the current IsoGraph campaign / possible synthesis novelty**,
 Start here:
 
 - [P-vs-NP research front page](research/p-vs-np/README.md)
-- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_3.md)
+- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md)
 - [Re-applied Discovery Protocol result](research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md)
-- [Targeted novelty review](research/p-vs-np/2026-09-27/P_VS_NP_DP07_NOVELTY_REVIEW_0_1.md)
+- [Broad continuation-support novelty review](research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
 
 Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
@@ -75,6 +75,7 @@ Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
 
 ## Research publications
 
+- [Continuation-Support Reductions for Bounded Existential Computation](research/publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md) — Joshua Oshiro. Structural synthesis of established continuation equivalence, simulation/dominance, dead-support pruning, factorization, and accessibility results; possible synthesis-level contribution only. No P-vs-NP resolution or new lower-bound claim.
 - [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
 - [2026-09-26 publications](research/publications/2026-09-26/)
 
