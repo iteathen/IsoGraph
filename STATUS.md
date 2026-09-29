@@ -29,16 +29,17 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 
 Current qualified extension/module authority is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
 
-The 2026-09-26, 2026-09-25, and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-28 manifest routes Core through 0.20, QU 0.1, NEI 0.4, DP 0.1–0.8, and DTS 0.1 at their exact qualified revisions. Experiment 052 directly qualifies the exact current composition including Core 0.20 and DP 0.8; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`. Earlier integration records remain immutable predecessor evidence.
+The 2026-09-28 and older manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-29 manifest routes Core through 0.20, QU 0.1, NEI 0.4, DP 0.1–0.10, DTS 0.1, and Experimental Inquiry 0.1 at their exact qualified revisions. Experiment 056 directly qualifies the exact expanded composition; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
 Current semantic extensions/modules include:
 
 - Quantifiable Unknown (QU) 0.1;
 - Natural Entropic Identity (NEI) 0.4;
-- Discovery Protocols 0.1 through 0.8 as one cumulative current module;
-- Detailed Transition System (DTS) 0.1.
+- Discovery Protocols 0.1 through 0.10 as one cumulative current module;
+- Detailed Transition System (DTS) 0.1;
+- Experimental Inquiry (EI) 0.1.
 
 The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
 
@@ -122,7 +123,7 @@ NEI 0.4 is therefore the current qualified NEI semantic extension at the exact h
 
 ## Discovery Protocol qualification
 
-Discovery Protocols 0.1–0.8 are now qualified as one cumulative current module.
+Discovery Protocols 0.1–0.10 are now qualified as one cumulative current module.
 
 - DP 0.1–0.7 retain their exact historical hashes/evidence.
 - DP 0.8 clue-preserving discrepancy adjudication is qualified at SHA-256:
@@ -165,15 +166,16 @@ The latest fully integration-qualified composition is revision-scoped to:
 Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20
 + QU 0.1
 + NEI 0.4
-+ DP 0.1–0.8
++ DP 0.1–0.10
 + DTS 0.1
++ EI 0.1
 ```
 
-Experiment 052 directly exercised the current stack:
+Experiment 056 directly exercised the current expanded stack:
 
 ```text
 formal disposition:       QUALIFIES
-workflow run:              36365347906
+workflow run:              36620811980
 case coverage:             16 / 16
 mismatches:                none
 all scoring guards:        true
@@ -182,7 +184,7 @@ all module assessments:    SUPPORTED
 
 Current authority record:
 
-- `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`
 
 The Core-0.19 / DP-0.7 integrated stack remains immutable predecessor evidence. Integrated qualification establishes compatibility for the exercised composition; it is not a universal completeness claim.
 
