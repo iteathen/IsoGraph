@@ -4,8 +4,12 @@
 **Primitive authority:** `2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg`  
 **Current campaign authority:** `2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md`  
 **Current implicit index:** `2026-09-27/IMPLICIT_ASSERTION_INDEX_0_10.json`  
-**Latest completed P-vs-NP Discovery pass:** `2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md` (historical DP 0.7 execution; current qualified family authority is DP 0.1–0.8)  
+**Latest completed P-vs-NP Discovery pass:** `2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md` (historical DP 0.7 execution; current repository Discovery authority is cumulative DP 0.1–0.10)  
 **Durable checkpoint:** `2026-09-27/CAMPAIGN_CHECKPOINT_2_0.md`
+
+**Current-family continuation note:** the frozen P-vs-NP campaign authority above predates Core 0.21 and the DP 0.9/0.10 + EI 0.1 successors. It remains the authority for this campaign's recorded results; it is not automatically upgraded by later family qualification.
+
+Any new exact continuation should first create a Core 0.21 successor rendering with a frozen Source Semantic Census and scope, then regenerate IA closure for that new primitive kernel before applying current DP 0.1–0.10. Experimental Inquiry is relevant only if DP 0.10 establishes an Experimental Warrant; generated observations remain evidence rather than theorem authority.
 
 ## Research publication
 
@@ -141,7 +145,7 @@ next-operation cost
 remain polynomial.
 ~~~
 
-The current next experiment applies this ladder directly to primitive CNF clause-variable incidence.
+The next experiment recorded by this campaign was to apply this ladder directly to primitive CNF clause-variable incidence. That statement describes the campaign checkpoint, not the repository-wide current mission or an instruction to bypass Core 0.21 modernization.
 
 ## Mandatory falsifier
 
@@ -223,3 +227,5 @@ max normalized derivation depth: 11
 P = NP:  OPEN
 P != NP: OPEN
 ~~~
+
+IsoGraph discovery output, recursive IA, compact continuation-support structure, or an experimental result does not alter that status without an independently valid complexity-theoretic proof. The campaign is an application of IsoGraph's representation/discovery discipline, not the definition of the IsoGraph project.

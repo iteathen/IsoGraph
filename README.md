@@ -1,10 +1,12 @@
 # IsoGraph
 
-**An agent-native structural knowledge representation for exposing invariants, isomorphisms, common structure, and meaningful residual differences across independently expressed domains.**
+**An agent-native system for exact structural representation, primitive-logic closure, cross-domain discovery, and evidence-bounded inquiry.**
 
 IsoGraph is built around a simple but demanding idea:
 
-> If two theories, proofs, programs, workflows, physical descriptions, or knowledge structures have the same load-bearing relational shape, an agent should be able to discover that correspondence without being fooled by names, notation, serialization, factorization, source conventions, or familiar labels—and without erasing the differences that still matter.
+> Represent the promised semantic content exactly enough that names and familiar abstractions can be removed, then let structural correspondence, residual difference, unknown structure, implicit consequence, and the need for new evidence emerge from the representation rather than being assumed in advance.
+
+Cross-domain isomorphism remains a central use case, but it is no longer the whole project. IsoGraph now treats faithful primitive rendering, structured unknowns, recursive implicit assertion, discovery, experimental warrant, and experimental inquiry as one versioned family with explicit authority boundaries.
 
 The working substrate hypothesis is:
 
@@ -48,32 +50,51 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 Core remains distinct from separately versioned qualified extensions.
 
-## Active research lead — P versus NP primitive-logic campaign
+## Current project mission
 
-The current P-vs-NP campaign has a corrected primitive authority, NEI/QU discipline, and 357 machine-indexed admitted implicit assertions. Its most distinctive current output is a **continuation-support reduction synthesis**:
+The current IsoGraph family is aimed at a repeatable reasoning loop:
 
 ~~~text
-empty        -> delete
-equal        -> merge
-included     -> dominance prune
-live + incomparable
-             -> exact factorization / sharing
-objective-only
-             -> exact aggregate image
+freeze source interpretation + semantic scope + Source Semantic Census
+
+-> render every load-bearing in-scope obligation
+   down to primitive logic / exact raw incidence
+   without silently shrinking the target
+
+-> preserve residuals and genuine structured unknowns
+
+-> generate and validate implicit assertions recursively
+
+-> if deeper reduction, scope, QU, authority, or inference-profile state changes:
+       invalidate the old current IA fixed point
+       reopen IA closure
+
+-> use Discovery Protocol to search for structure,
+   minimum sufficient support, useful valuations,
+   falsifiers, and unresolved evidence needs
+
+-> when existing represented evidence is insufficient
+   but experimentation is justified:
+       issue a DP 0.10 Experimental Warrant
+
+-> use Experimental Inquiry to generate new observations
+
+-> return those observations as evidence,
+   not as truth by fiat
+
+-> admit conclusions only through the authority
+   that actually owns them
 ~~~
 
-A second campaign-specific connector uses **sound negative evidence to remove dead support before simulation/dominance**, then sends the remaining all-live incomparable support to factorization/aggregation.
+The system is deliberately **observation-first, primitive-first, and non-evasive**. Difficulty reducing a claim is not permission to delete it; an unexpected result is evidence before it is a diagnosis; and a successful discovery or experiment does not bypass semantic qualification.
 
-These are **new to the current IsoGraph campaign / possible synthesis novelty**, not claimed externally novel theorems. Targeted prior-art review found established precedents for the individual ingredients.
+## Current research applications
 
-Start here:
+The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
 
-- [P-vs-NP research front page](research/p-vs-np/README.md)
-- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md)
-- [Re-applied Discovery Protocol result](research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md)
-- [Broad continuation-support novelty review](research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
-
-Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
+- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
+- [Glycan cleavage research](research/glycan-cleavage/2026-09-27/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
+- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
 
 ---
 
@@ -178,32 +199,28 @@ IsoGraph is not trying to build the largest ontology or the most feature-rich su
 
 It is trying to build a **small information-preserving structural substrate** from which richer constructions can be represented, compared, transformed, verified, and discovered.
 
-The strongest current core candidates include:
+The current qualified Core is cumulative through **Core 0.21**. The substrate stays deliberately small: representation-level Semantic Identity handles, ordered relational incidence, scope/binding structure, rewrite/constraint structure, primitive logical relations, and raw carrier/data atoms where no hidden behavior is being smuggled into the leaf.
 
-- **Semantic Identity (SI)** — representation-level referential identity/addressing;
-- **ordered incidence / hyperedge-like relations**;
-- **structural scope and boundary**;
-- **binding ownership needed for structural matching**;
-- **structural rewrite**;
-- **negative structural match conditions** where they survive elimination testing;
-- **transparent references** as non-semantic serialization compression.
+Later Core clarifications tighten how that substrate is used:
 
-The project deliberately resists promoting familiar concepts into primitives merely because they are common or convenient.
+- Core 0.19 separates assertion bodies from their support, requires exact source-semantic reconstruction, and permits recursive Implicit Assertion passes;
+- Core 0.20 requires every definitionally reducible load-bearing semantic construction to descend to primitive logic rather than stop at a familiar domain label;
+- Core 0.21 freezes the complete Source Semantic Census and scope, forbids qualification by silent scope shrinkage, introduces exact **Schema Closure** for finitely described iterative/generative semantics, and reopens IA closure when load-bearing representation state changes.
 
-The current core-admission discipline is:
+High-level concepts are still useful. They belong as derived, reversible views over primitive support rather than as convenient authoritative stopping points.
+
+The current admission discipline is therefore:
 
 ~~~text
-candidate distinction
--> attempt faithful construction from existing primitives
--> test exactness / round trip / residual burden
--> test identity and ambiguity
--> test isomorphism/discovery behavior
--> test qualified-agent reconstruction cost
--> keep a useful surface label if helpful
--> promote only if lower construction fails or is materially worse
+freeze what the source promises
+-> render every load-bearing obligation
+-> unfold every reducible semantic operator
+-> preserve genuine unknowns without using QU as missing-work camouflage
+-> prove exact reconstruction / coverage / scope integrity
+-> keep high-level views only when primitive support survives their deletion
 ~~~
 
-That keeps the core small while leaving rich structure available above it.
+This keeps the substrate small without obtaining simplicity by throwing away semantic obligations.
 
 ---
 
@@ -492,7 +509,7 @@ UNKNOWN
 
 throws away the shape of what is unknown.
 
-The current **Quantifiable Unknown (QU)** research extension explores a richer alternative:
+The qualified **Quantifiable Unknown (QU) 0.1** extension represents a richer alternative:
 
 - unresolved carriers;
 - unresolved relation occurrences;
@@ -592,16 +609,21 @@ Qualified cumulative revisions:
 - [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md)
 - [Discovery Protocols 0.6](extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md)
 - [Discovery Protocols 0.7](extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md)
+- [Discovery Protocols 0.8 — clue-preserving discrepancy adjudication](extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md)
+- [Discovery Protocols 0.9 — Minimum Sufficient Support / Valuation](extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md)
+- [Discovery Protocols 0.10 — Experimental Warrant](extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md)
 
 The historical filenames retain `_CANDIDATE` because those exact bytes were qualified. Current status is defined by the authority manifest, not by the filename.
 
-DP 0.4 introduced the concrete-breaker discipline; later qualified revisions preserve it. DP 0.7 additionally makes derived views primitive-first, keeps unknown unfolding explicit through QU where load-bearing, and requires exact claims to descend back to primitive support.
+The cumulative progression matters:
 
-DP 0.4 in particular makes an important correction:
+- DP 0.4 requires concrete structural breakers rather than treating “different machinery” as a refutation;
+- DP 0.7 makes derived views primitive-first and routes exact claims back to primitive support;
+- DP 0.8 treats discrepancies as evidence before diagnosis and separates repair from discovery disposition;
+- DP 0.9 asks which represented support is actually sufficient for a declared conclusion and values lawful alternatives only after validity;
+- DP 0.10 decides when the represented evidence justifies generating new observations.
 
-> “different machinery” is not itself a structural breaker.
-
-A valid structural breaker must identify a **concrete failed load-bearing obligation**.
+When DP 0.10 issues an Experimental Warrant, [Experimental Inquiry 0.1](extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md) may construct and revise experiments, discover scope, preserve unexpected/model-breaking observations, and return new evidence. EI does not make its observations true by fiat and does not absorb Core, QU, NEI, DTS, or DP authority.
 
 ---
 
@@ -1083,7 +1105,7 @@ If models are eventually trained directly on IsoGraph, familiar structures may b
 
 Learned familiarity would still not be semantic authority.
 
-The structure remains the authority.
+Qualified represented structure remains the semantic basis; learned familiarity is not authority.
 
 ---
 
@@ -1103,9 +1125,12 @@ IsoGraph is not:
 - a license to discard inconvenient residuals;
 - a guarantee that all discovery is computationally cheap;
 - a claim that structural isomorphism implies semantic equivalence;
-- a claim that one successful benchmark proves universal discovery ability.
+- a claim that one successful benchmark proves universal discovery ability;
+- a license to shrink a declared rendering scope because reduction is difficult;
+- a rule that every loop/recursion must be exhaustively unrolled;
+- an experiment engine whose observations become truth automatically.
 
-It is a structural representation and qualification framework whose claims are intentionally scoped.
+It is a structural representation, discovery, evidence-generation, and qualification framework whose claims are intentionally scoped and whose modules retain explicit authority boundaries.
 
 ---
 
@@ -1127,12 +1152,13 @@ Current Core authority is cumulative:
 
 Core 0.18, Core 0.19, Core 0.20, and Core 0.21 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
 
-## Qualified semantic extensions/modules
+## Qualified extensions/modules
 
 Current exact routing authority is recorded in:
 
 - [Qualified Module Authority Manifest — 2026-09-29 Core 0.21 successor](qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md)
-- [Historical Qualified Module Authority Manifest — 2026-09-28](qualification/QUALIFIED_MODULES_2026-09-28.md)
+
+Older manifests remain immutable historical routing records, including the 2026-09-28 predecessor.
 
 Current qualified modules:
 
@@ -1167,10 +1193,10 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack qualified by the valid Experiment 059 I01–I15 surface plus fresh Experiment 060 ownership replacement. All exercised guards and module assessments pass; formal disposition `QUALIFIES`.
 
-- [Experiment 052 Final Qualification Review](experiments/052/EXPERIMENT_052_FINAL_QUALIFICATION_REVIEW.md)
 - [Experiment 059 Final Core 0.21 Integration Review](experiments/059/EXPERIMENT_059_FINAL_QUALIFICATION_REVIEW.md)
 - [Experiment 060 Final Ownership Replacement Review](experiments/060/EXPERIMENT_060_FINAL_QUALIFICATION_REVIEW.md)
 - [Current Integrated Stack with Core 0.21](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md)
+- [Historical Experiment 052 Final Qualification Review](experiments/052/EXPERIMENT_052_FINAL_QUALIFICATION_REVIEW.md)
 - [Historical same-day Integrated Stack with DP 0.10 and EI 0.1](qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md)
 - [Historical Current Integrated Stack with Core 0.20 and DP 0.8](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md)
 - [Historical Experiment 031 Final Qualification Review](experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md)
@@ -1197,35 +1223,42 @@ Historical evidence remains interpreted under the revision at which it was produ
 
 # Constitutional discipline
 
-The current Core summarizes its intended discipline approximately as:
+The current family summarizes its intended discipline approximately as:
 
 ~~~text
-preserve source semantics and unresolved ambiguity
--> independently decompose/extract as far as justified
--> preserve alternative exact factorizations
--> freeze roles/ports/relation signature/policy before pairing
--> normalize representation only
--> retrieve candidates through a structural-only path
--> compare under explicit target layer + view + transformation authority
--> state relation kind independently
--> emit native independently verifiable mapping/core/residual/gluing witnesses
--> keep source-local residual accounting separate from pairwise accounting
--> preserve negative constraints, multiplicity, and distinct mappings
--> recognize or induce classes only from verified structure
--> validate reusable classes on held-out/adversarial cases
--> retain useful labels afterward with provenance
+freeze source interpretation + semantic scope + Source Semantic Census
+-> preserve every in-scope load-bearing source obligation
+-> primitive-render every reducible semantic operator
+-> preserve genuine unknowns / alternatives through qualified QU where needed
+-> preserve residuals and alternative exact factorizations
+-> derive IAs recursively from represented support
+-> invalidate and reopen IA closure when its frozen inputs change
+-> compare under explicit scope / relation / transformation authority
+-> use DP for search, discrepancy adjudication, MSS/valuation, and experimental warrant
+-> use EI only under a warrant to generate observations
+-> return experimental output as evidence, not admitted truth
+-> qualify soundness, coverage, reconstruction, scope integrity, and authority routing separately
+-> retain useful high-level labels only with reversible primitive support
 ~~~
 
-And, until qualification says otherwise:
+Current barriers include:
 
 ~~~text
 surface != primitive
 occurrence != Semantic Identity
+missing definition != QU
+qualified QU != opaque semantic leaf
+primitive premises != primitive assertion body
+schema closure != exhaustive materialization
+schema closure != termination proof
 factorization != normalization
 one factorization != canonical factorization
 semantic equivalence != structural isomorphism
 retrieval hint != evidence
-rule existence != activation
+warrant to experiment != support for a hypothesis
+experiment != proof
+observation != admitted assertion
+soundness != coverage
 one witness != complete witness family
 unknown remains unknown
 revisions are immutable evidence
@@ -1241,7 +1274,13 @@ They exist because collapsing those distinctions creates exactly the false corre
 
 ~~~text
 CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
-    current qualified semantic authority
+    qualified Core base
+
+CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md
+CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md
+CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md
+CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md
+    exact qualified cumulative Core clarifications; use the current authority manifest for routing
 
 STATUS.md
     current authority / evidence status
@@ -1267,6 +1306,9 @@ extensions/discovery/
 extensions/dts/
     qualified Detailed Transition System extension plus separately versioned profiles
 
+extensions/experimental/
+    qualified Experimental Inquiry module; observations/evidence only, not truth authority
+
 qualification/
     qualification infrastructure and contracts
 
@@ -1274,7 +1316,7 @@ experiments/
     frozen qualification / discovery evidence
 
 research/
-    research notes and historical analysis
+    current and historical research artifacts; research presence does not itself create semantic authority
 ~~~
 
 ---
@@ -1317,6 +1359,11 @@ Core 0.20:
     QUALIFIED cumulative primitive-logic-closure clarification
     decisive holdout: Experiment 048 (18/18 PASS)
 
+Core 0.21:
+    QUALIFIED cumulative rendering-conservation / Schema-Closure / closure-invalidation clarification
+    evidence: Experiment 057 valid C01-C25 + Experiment 058 fresh target-26 replacement
+    strict rendering freezes Source Semantic Census + scope and forbids implicit scope shrinkage
+
 QRC 0.1:
     QUALIFIED qualification infrastructure
 
@@ -1338,6 +1385,11 @@ DTS 0.1:
     QUALIFIED current transition extension
     decisive holdout: Experiment 026 (20/20 PASS)
     independent promotion verifier: SUPPORT_PROMOTION
+
+Experimental Inquiry 0.1:
+    QUALIFIED current experimental/discovery module
+    evidence: Experiment 055 (18/18 PASS)
+    consumes DP 0.10 Experimental Warrants and returns observations as evidence, not truth
 
 Latest fully integration-qualified stack revision:
     Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1
@@ -1366,4 +1418,4 @@ Historical failed/partial qualification runs:
     later corrected by fresh holdouts rather than rescoring
 ~~~
 
-The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: unknown remains unknown, discovery is not proof, extensions are not Core, and integrated success is not universal completeness.
+The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: the declared source scope is conserved, reducible semantics descend to primitive support, unknown remains unknown, discovery is not proof, experiment is not truth, extensions are not Core, and integrated success is not universal completeness.

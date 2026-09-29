@@ -46,11 +46,11 @@ Authority/report:
 
 - GLYCAN_IMPLICIT_NEI_FIXED_POINT_0_1.md
 
-## Qualified Discovery Protocol campaign
+## Historical qualified Discovery Protocol campaign
 
-Qualified cumulative DP 0.1–0.7 was then applied to the fixed graph.
+Qualified cumulative DP 0.1–0.7 was applied to the fixed graph during this campaign. That execution is historical evidence for this frozen research surface; it is not a statement that DP 0.1–0.7 is the current family endpoint.
 
-DP-fed semantic admissions extend the current research surface to:
+That DP-fed campaign extended the admitted research surface to:
 
 ~~~text
 exact implicit assertions:
@@ -201,19 +201,33 @@ A8 G-IA191 must always be cited with:
 
 The original proof-support defect was repaired while the maximal-path/SCS discovery survived and sharpened.
 
-## Current next-stage boundary
+## Current-family continuation boundary
 
-The requested qualified Discovery Protocol pass is complete.
+The historical DP 0.1–0.7 pass over the frozen 0.1 biochemical graph is complete. Replaying that same pass does not constitute current-family work.
 
-Further work should change the research question rather than replay the same fixed graph. Useful next directions include:
+The repository-wide current family is now Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. The frozen glycan 0.1 rendering is **not silently upgraded** to those later semantics.
+
+If this campaign is reopened under the current family, first create a successor rendering target:
+
+~~~text
+freeze source interpretation + scope + complete Source Semantic Census
+-> primitive-render every load-bearing obligation under Core 0.21
+-> preserve genuine unknowns through QU rather than using QU for missing definitions
+-> regenerate IAs to a fixed point for the new primitive kernel
+-> re-run NEI only where identity is load-bearing
+-> apply cumulative DP 0.1–0.10
+-> use EI only if DP 0.10 establishes an Experimental Warrant
+~~~
+
+Useful new research questions still include:
 
 - algorithm/accessibility analysis;
 - concrete-instance benchmarking;
 - external prior-art / novelty review;
-- successor biochemical model with explicit QU;
+- a successor biochemical model with genuinely structured QU;
 - unbounded-witness-width construction or falsifier.
 
-Core 0.20 is now qualified at its exact tested revision, and DP 0.8 is now the current cumulative qualified discovery successor; Experiment 052 directly qualifies their composition with QU 0.1, NEI 0.4, and DTS 0.1. The frozen 0.1 biochemical model remains intentionally narrower than real enzymology.
+The frozen 0.1 biochemical model remains intentionally narrower than real enzymology, and its historical qualification/discovery records remain valid only at their recorded revisions.
 
 
 ## External clue research / algorithm campaign

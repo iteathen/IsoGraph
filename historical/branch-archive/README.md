@@ -70,7 +70,7 @@ Their historical qualification dispositions remain exactly what the frozen runs 
 
 ## Retirement rule
 
-After this archive is merged and its blob identity is verified, the two original qualification branches no longer need to carry unique durable evidence and may be retired.
+The two original qualification branches have been retired after archive integration and blob preservation. This archive is now the durable inert record of their unique evidence.
 
 Do not apply this retirement rule to externally referenced compatibility branches such as:
 
