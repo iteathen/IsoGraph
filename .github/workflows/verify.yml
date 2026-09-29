@@ -25,6 +25,9 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Verify workflow expression YAML
+        run: node tools/check-workflow-expression-yaml.mjs
+
       - name: Verify repository authority surface
         shell: bash
         run: |
