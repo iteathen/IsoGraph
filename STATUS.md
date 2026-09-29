@@ -25,7 +25,7 @@ This doctrine is **not semantic authority**. Versioned qualified specifications 
 
 Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18, Core 0.19, and Core 0.20 clarifications. Bare IDs remain **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
 
-### Qualified semantic extensions/modules
+### Qualified extensions/modules
 
 Current qualified extension/module authority is recorded in:
 
@@ -33,7 +33,7 @@ Current qualified extension/module authority is recorded in:
 
 The 2026-09-28 and older manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-29 manifest routes Core through 0.20, QU 0.1, NEI 0.4, DP 0.1–0.10, DTS 0.1, and Experimental Inquiry 0.1 at their exact qualified revisions. Experiment 056 directly qualifies the exact expanded composition; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
-Current semantic extensions/modules include:
+Current qualified extensions/modules include:
 
 - Quantifiable Unknown (QU) 0.1;
 - Natural Entropic Identity (NEI) 0.4;
