@@ -834,15 +834,15 @@ $$
 (u,p,f,\nu)
 &\xleftrightarrow[\mathcal D^{-1}]{\mathcal D}&
 (U,P,F,\nu_{\rm phys})
-\$$2mm]
+\\[2mm]
 \downarrow \Phi_{\rm src}
 &&
 \downarrow \Phi_{\rm phys}
-\$$2mm]
+\\[2mm]
 \text{source derived quantities}
 &\xleftrightarrow{\text{exact scaling}}&
 \text{physical continuum observables}
-\$$2mm]
+\\[2mm]
 &&
 \downarrow\mathcal O
 \\
