@@ -1235,6 +1235,11 @@ The pattern matters as much as the totals: ambiguous or defective frozen cases a
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
 | **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
+| **Experiment 013** | Decisive corrected QU 0.1 holdout | Qualification evidence for structured unknown semantics at the pinned QU revision. |
+| **Experiment 016** | QUALIFIES; 18/18 fresh NEI controls PASS | Current NEI 0.4 identity/evidence/QU discipline. |
+| **Experiment 017** | QUALIFIES | Core 0.18 observation-first discrepancy semantics. |
+| **Experiment 026** | QUALIFIES; 20/20 fresh DTS controls PASS; promotion verifier SUPPORT_PROMOTION | Qualified DTS 0.1 transition-anatomy / Transition-Isomorph semantics. |
+| **Experiments 029 + 030** | Broad frozen Core 0.19 run preserved at 25/26; fresh corrected mutation regression 2/2 PASS, QUALIFIES | Assertion-support / exact-rendering qualification without retroactive rescoring. |
 | **Experiment 031** | QUALIFIES; 32/32 full-stack cases PASS; all guards/module assessments pass | Historical direct integration qualification of the Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack. |
 | **Experiment 048** | QUALIFIES; 18/18 fresh Core 0.20 cases PASS | Independent qualification of Core 0.20 primitive-logic closure. |
 | **Experiments 050 + 051** | 21 valid principle-level PASS + 1/1 fresh target-5 replacement PASS | Independent cumulative qualification evidence for DP 0.8. |
@@ -1245,6 +1250,13 @@ The pattern matters as much as the totals: ambiguous or defective frozen cases a
 | **Experiment 056** | QUALIFIES; 16/16 fresh full-stack cases PASS; all module assessments supported | Historical same-day integration qualification of Core through 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
 | **Experiments 057 + 058** | Core 0.21 QUALIFIES; 25 uncontested cases PASS + 1/1 fresh target-26 replacement PASS | Core 0.21 Rendering Conservation, Schema Closure, and Closure Invalidation qualification. |
 | **Experiments 059 + 060** | QUALIFIES; 15 uncontested integration cases PASS + 1/1 fresh ownership replacement PASS; all module assessments supported | Current integration qualification of Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
+| **Project Discovery three-positive-control campaign** | PASS 3/3 after six exact source renderings passed ESR/Q7 gates | Development/qualification evidence that blind structural discovery can recover Ising↔lattice-gas, XOR↔GF(2), and Newton↔Hamilton correspondences from exact native structure. |
+| **Project Discovery Ising/MWC campaign** | Complete exploratory comparison; authority effect none | Development evidence for finding a real shared statistical layer while preserving the non-isomorphic interaction mechanism as residual. |
+| **Connect4 real-world DP campaign** | Development evidence; IsoGraph authority unchanged | Live discrepancy analysis exposed hidden semantic/evidence layers, falsified attractive common explanations, and correctly closed an ordinary summarization error. |
+| **Glycan Experiments 032–047** | Source rendering + algorithm/reduction campaign; strongest repaired finite witness width 173, exact OPT 21 | Application evidence for primitive rendering, IA/NEI iteration, quotient/path reductions, algorithm derivation, scaling, discrepancy preservation, falsification, and correction. |
+| **Navier–Stokes research line** | Source-relative structural rendering and reviewed research outputs; not independent validation of the theorem | Application evidence for source-faithful proof decomposition, generator/closure analysis, deletion-space MSS, alternative-factorization discovery, and physical-continuum equivalence boundaries. |
+
+The table deliberately separates qualification evidence from application/development evidence. The latter demonstrates how the methods behave in research without silently promoting domain conclusions or changing module authority.
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
