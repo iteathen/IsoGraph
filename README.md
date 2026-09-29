@@ -609,16 +609,21 @@ Qualified cumulative revisions:
 - [Discovery Protocols 0.5](extensions/discovery/DISCOVERY_PROTOCOLS_0_5_CANDIDATE.md)
 - [Discovery Protocols 0.6](extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md)
 - [Discovery Protocols 0.7](extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md)
+- [Discovery Protocols 0.8 — clue-preserving discrepancy adjudication](extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md)
+- [Discovery Protocols 0.9 — Minimum Sufficient Support / Valuation](extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md)
+- [Discovery Protocols 0.10 — Experimental Warrant](extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md)
 
 The historical filenames retain `_CANDIDATE` because those exact bytes were qualified. Current status is defined by the authority manifest, not by the filename.
 
-DP 0.4 introduced the concrete-breaker discipline; later qualified revisions preserve it. DP 0.7 additionally makes derived views primitive-first, keeps unknown unfolding explicit through QU where load-bearing, and requires exact claims to descend back to primitive support.
+The cumulative progression matters:
 
-DP 0.4 in particular makes an important correction:
+- DP 0.4 requires concrete structural breakers rather than treating “different machinery” as a refutation;
+- DP 0.7 makes derived views primitive-first and routes exact claims back to primitive support;
+- DP 0.8 treats discrepancies as evidence before diagnosis and separates repair from discovery disposition;
+- DP 0.9 asks which represented support is actually sufficient for a declared conclusion and values lawful alternatives only after validity;
+- DP 0.10 decides when the represented evidence justifies generating new observations.
 
-> “different machinery” is not itself a structural breaker.
-
-A valid structural breaker must identify a **concrete failed load-bearing obligation**.
+When DP 0.10 issues an Experimental Warrant, [Experimental Inquiry 0.1](extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md) may construct and revise experiments, discover scope, preserve unexpected/model-breaking observations, and return new evidence. EI does not make its observations true by fiat and does not absorb Core, QU, NEI, DTS, or DP authority.
 
 ---
 
@@ -1144,7 +1149,7 @@ Current Core authority is cumulative:
 
 Core 0.18, Core 0.19, Core 0.20, and Core 0.21 are qualified at their exact tested bytes even though the historical filenames retain `_CANDIDATE`.
 
-## Qualified semantic extensions/modules
+## Qualified extensions/modules
 
 Current exact routing authority is recorded in:
 
