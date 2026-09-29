@@ -1,0 +1,216 @@
+{
+  "cases": [
+    {
+      "case_id": "I01",
+      "answers": {
+        "may_drop_hard_item_for_discovery": false,
+        "core_coverage_remains_required": true,
+        "dp_may_use_partial_view_as_authority": false
+      },
+      "reason": "Core 0.21 forbids silent deletion of census items; discovery convenience does not override primitive closure.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I02",
+      "answers": {
+        "new_scope_creates_new_target": true,
+        "old_result_remains_historical": true,
+        "old_scope_result_automatically_current_for_new_scope": false
+      },
+      "reason": "Scope revision creates a new qualification target; old results are historical evidence, not current authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I03",
+      "answers": {
+        "core_schema_closes_generation": true,
+        "dts_owns_transition_anatomy": true,
+        "core_decides_transition_equivalence": false
+      },
+      "reason": "Core 0.21 handles schema closure; DTS owns transition anatomy; NEI/Core handle identity/equivalence.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+        "extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I04",
+      "answers": {
+        "core_schema_closed": true,
+        "qu_owns_unresolved_termination": true,
+        "termination_may_be_silently_assumed": false
+      },
+      "reason": "Schema closure does not prove termination; unresolved termination must be represented.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I05",
+      "answers": {
+        "old_ia_fixed_point_current": false,
+        "reopen_ia": true,
+        "dp_consumes_new_ia_before_core_admission": false
+      },
+      "reason": "Deeper primitive expansion invalidates old IA fixed point; IA closure must reopen.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I06",
+      "answers": {
+        "opaque_identity_body_core_closed": false,
+        "nei_may_establish_identity_without_valid_support": false,
+        "body_must_close": true
+      },
+      "reason": "Primitive closure requires unfolding reducible operators; identity cannot be established without valid support.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+        "extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I07",
+      "answers": {
+        "core_marks_missing_known_qu_semantics_incomplete": true,
+        "dp_can_relabel_missing_definition_as_unknown": false,
+        "qu_realization_selected": false
+      },
+      "reason": "Missing known semantics is INCOMPLETE_UNEXPANDED, not QU; QU cannot be used to hide missing definitions.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I08",
+      "answers": {
+        "ei_negative_is_evidence": true,
+        "negative_claim_scope_limited": true,
+        "core_may_skip_primitive_witness": false
+      },
+      "reason": "Negative results require primitive witness and correct scope; they are evidence, not truth by fiat.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I09",
+      "answers": {
+        "schema_closed_with_partial_materialization": true,
+        "must_execute_all_instances": false,
+        "dp_valuation_defines_semantic_validity": false
+      },
+      "reason": "Schema closure does not require exhaustive materialization; valuation is not semantic authority.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I10",
+      "answers": {
+        "derived_view_may_help_dp": true,
+        "derived_view_required_for_exact_support": false,
+        "primitive_reconstruction_survives_view_deletion": true
+      },
+      "reason": "Derived views are for search/navigation; primitive reconstruction must survive their deletion.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I11",
+      "answers": {
+        "old_census_mutated_in_place": false,
+        "new_observation_can_motivate_new_revision": true,
+        "old_target_preserved": true
+      },
+      "reason": "Model-breaking observations motivate new revisions; old targets must be preserved.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I12",
+      "answers": {
+        "simulator_output_is_raw_evidence": true,
+        "simulator_output_automatic_truth": false,
+        "generator_provenance_required": true
+      },
+      "reason": "Simulator output is evidence, not truth; provenance is required.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I13",
+      "answers": {
+        "soundness_and_coverage_separate": true,
+        "sound_complete_required_for_qualification": true
+      },
+      "reason": "Qualification requires both soundness and coverage; partial credit is not allowed.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I14",
+      "answers": {
+        "scope_drift_preserves_current_nei_dp_results_without_revalidation": false,
+        "scope_integrity_failure_detected": true
+      },
+      "reason": "Scope integrity is a mandatory qualification gate; drift invalidates downstream results.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I15",
+      "answers": {
+        "ledger_checker_is_semantic_authority": false,
+        "ledger_checker_is_qualification_infrastructure": true
+      },
+      "reason": "Ledger tooling is qualification infrastructure, not semantic domain authority.",
+      "authority_used": [
+        "qualification/CORE_0_21_LEDGER_CONTRACT.md"
+      ]
+    },
+    {
+      "case_id": "I16",
+      "answers": {
+        "core_selects_qu": false,
+        "core_establishes_nei": false,
+        "core_absorbs_dts": false,
+        "core_issues_warrant": true,
+        "core_promotes_ei_to_truth": false,
+        "module_boundaries_preserved": true
+      },
+      "reason": "Module boundaries are preserved; Core issues warrants via DP, but does not promote EI evidence to truth.",
+      "authority_used": [
+        "qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_21": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED",
+    "dp_0_10": "SUPPORTED",
+    "ei_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "preserved_source_semantic_census": true,
+    "preserved_scope_revision_boundaries": true,
+    "preserved_schema_materialization_distinction": true,
+    "preserved_ia_invalidation": true,
+    "preserved_qu_nei_dts_dp_ei_ownership": true,
+    "kept_qualification_tooling_nonsemantic": true
+  }
+}
