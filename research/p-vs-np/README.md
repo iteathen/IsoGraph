@@ -1,5 +1,7 @@
 # P versus NP research — current front page
 
+**Current research dossier:** this README
+
 **Status:** active research campaign  
 **Primitive authority:** `2026-09-26/P_VS_NP_PRIMITIVE_BUNDLE_0_4.isg`  
 **Current campaign authority:** `2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md`  

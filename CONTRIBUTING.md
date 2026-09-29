@@ -7,13 +7,24 @@ IsoGraph is an experimental agent-native structural knowledge representation. Co
 Before substantive work, read:
 
 1. `README.md`
-2. `MIGRATION.md`
+2. `STATUS.md`
 3. `AGENTS.md`
-4. `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
+4. `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`
+5. `research/README.md` when the work is research.
 
-The consolidated Draft 0.15 file is the self-contained current semantic authority for new work. Drafts 0.13, 0.14, and the non-consolidated 0.15 amendment remain historical provenance and rationale; they are not required replay material for a current decoder.
+Current Core authority is cumulative through Core 0.21 at the exact qualified revisions routed by the current manifest. Older drafts remain historical provenance/evidence and must not be silently reinterpreted to appear current.
 
-Pre-IsoGraph and earlier-draft artifacts remain evidence under the semantics recorded at their revision and must not be silently reinterpreted to appear current.
+Pre-IsoGraph and earlier-draft artifacts remain evidence under the semantics recorded at their revision.
+
+## Research layout
+
+Research work belongs under `research/<project>/`, one first-level directory per research project.
+
+The project `README.md` is the current consolidated research dossier. Supporting artifacts may remain separate for audit/provenance, but the README should be sufficient to understand and begin reviewing the current research without scraping the directory.
+
+Do not add loose files directly under `research/`. Keep `research/README.md` updated whenever a first-level research project is added or removed.
+
+Repository Verify enforces these layout rules.
 
 ## Evidence before extension
 

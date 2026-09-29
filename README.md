@@ -93,7 +93,7 @@ The system is deliberately **observation-first, primitive-first, and non-evasive
 The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
 
 - [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
-- [Glycan cleavage research](research/glycan-cleavage/2026-09-27/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
+- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
 - [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
 
 ---
@@ -1178,7 +1178,7 @@ Qualified extensions do **not** become Core. They remain explicit versioned depe
 
 - [DTS 0.1 Qualification Authority](qualification/DTS_0_1_QUALIFICATION.md)
 - [Experiment 026 Final Qualification Review](experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md)
-- [DTS 0.1 Implementation Plan](research/DTS_0_1_IMPLEMENTATION_PLAN.md)
+- [DTS 0.1 Implementation Plan](research/dts/DTS_0_1_IMPLEMENTATION_PLAN.md)
 
 DTS remains a separately versioned extension and does not become Core. Transition Structural Signatures and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work.
 
@@ -1316,7 +1316,7 @@ experiments/
     frozen qualification / discovery evidence
 
 research/
-    current and historical research artifacts; research presence does not itself create semantic authority
+    project-scoped research directories; start with research/README.md; research presence does not itself create semantic authority
 ~~~
 
 ---

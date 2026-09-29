@@ -28,6 +28,11 @@ jobs:
       - name: Verify README mission alignment
         run: node tools/audit-readme-mission.mjs
 
+      - name: Verify research directory layout
+        run: node tools/check-research-layout.mjs
+
+
+
 
 
       - name: Verify mutable document math structure

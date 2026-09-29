@@ -1,5 +1,7 @@
 # Navier–Stokes forced-blowup IsoGraph rendering
 
+**Current research dossier:** this README
+
 **Status:** research representation; not qualified IsoGraph evidence and not an independent validation of the Navier–Stokes proof.
 
 **Research lineage:** developed on `work/navier-stokes-proof-isograph-20260921`; preserved on `main` by explicit owner merge instruction on 2026-09-25.
