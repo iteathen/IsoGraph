@@ -91,7 +91,7 @@ For DTS work read:
 - `experiments/026/EXPERIMENT_026_FINAL_QUALIFICATION_REVIEW.md`;
 - `qualification/CURRENT_INTEGRATED_STACK_WITH_DTS_2026-09-25.md`;
 - `experiments/027/EXPERIMENT_027_FINAL_QUALIFICATION_REVIEW.md`;
-- `research/DTS_0_1_IMPLEMENTATION_PLAN.md`.
+- `research/dts/DTS_0_1_IMPLEMENTATION_PLAN.md`.
 
 NEI 0.1/0.2 are historical qualified revisions. NEI 0.3 is an unqualified historical precursor. Current NEI authority is NEI 0.4 as pinned by the qualified-module manifest.
 
@@ -110,6 +110,27 @@ QRC is not semantic domain authority.
 - `CORE_SPEC_DRAFT_0_15_CONSOLIDATED_CANDIDATE.md`
 
 Draft 0.16 remains immutable historical qualification evidence for Experiment 005 and retains its obligation-sufficiency qualification. Draft 0.15 remains immutable historical qualification evidence for Experiment 004. Later qualification does not retroactively reinterpret historical artifacts.
+
+## Research directory governance
+
+All IsoGraph research belongs under `research/`.
+
+Before starting or continuing research, read `research/README.md`.
+
+Rules:
+
+- every distinct research project uses its own first-level directory: `research/<project>/`;
+- do not add loose research documents directly under `research/`; the only root file is `research/README.md`;
+- every first-level research directory MUST contain `README.md`;
+- that project README is the **current consolidated research dossier** and primary access surface for humans and agents;
+- the dossier must summarize the question/scope, current state, strongest findings, important falsifiers/corrections, evidence/authority boundary, provenance pointers, and open questions sufficiently that a reviewer does not have to crawl the directory merely to understand the current result;
+- supporting native graphs, source freezes, experiments, derivation indexes, audits, raw reports, and dated snapshots may remain separate as audit/provenance material;
+- historical/frozen artifacts are not rewritten merely to make their vocabulary current; the project dossier explains their current disposition instead;
+- a research dossier is not semantic authority by default; promotion still requires the applicable versioned specification/qualification process;
+- adding or removing a first-level research directory requires updating `research/README.md` in the same change;
+- publication output belongs under `research/publications/`, while the originating project's README remains the consolidated research/audit front door.
+
+The filesystem is the research registry. Do not introduce a manually maintained parallel bundle registry unless a concrete need later requires one.
 
 ## Research discipline
 
