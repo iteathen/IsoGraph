@@ -67,6 +67,11 @@ function stripInlineMath(line){
 
 const texCommand=/\\[A-Za-z]+\*?/;
 const mojibake=/(?:Ã.|Â.|â€|â€™|â€œ|â€�|â†|â‰|ï»¿)/;
+const D=String.fromCharCode(36);
+const DD=D+D;
+const rendererIndependent=p=>
+  /(^|\/)README(?:\.[^\/]+)?$/i.test(p)
+  || ['STATUS.md','AGENTS.md','DESIGN_IDEALS.md','DESIGN_NOTES.md','CONTRIBUTING.md','MIGRATION.md','EVIDENCE.md','FINAL_PRODUCT_MAINTENANCE.md','NATIVE_FORMAT.md'].includes(p);
 const allFiles=walk(ROOT);
 
 for(const file of allFiles){
@@ -105,6 +110,23 @@ for(const file of allFiles){
     });
 
     const rendered=stripInlineCode(raw);
+
+    if(rendererIndependent(rel)){
+      const displayAt=rendered.indexOf(DD);
+      if(displayAt>=0){
+        add('renderer-independent-doc-latex',displayAt,'README/navigation docs must use Unicode/plain text or fenced text, not LaTeX display math.');
+      }else{
+        let first=-1,second=-1;
+        for(let i=0;i<rendered.length;i++){
+          if(rendered[i]!==D || (i>0&&rendered[i-1]==='\\')) continue;
+          if(first<0) first=i;
+          else { second=i; break; }
+        }
+        if(first>=0&&second>first){
+          add('renderer-independent-doc-latex',first,'README/navigation docs must not depend on inline LaTeX rendering.');
+        }
+      }
+    }
 
     const open=rendered.indexOf('\\[');
     if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $ display math or plain text.');
