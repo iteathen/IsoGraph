@@ -1,6 +1,6 @@
 # Branch Retirement Status — 2026-09-29
 
-**Status:** active cleanup record for the unified IsoGraph family closeout  
+**Status:** stale development refs retired; final campaign-ref cleanup pending merge  
 **Owner direction:** remove stale development branches after preserving exact provenance; retain only branches with an explicit continuing archival/compatibility role.
 
 This record supplements the 2026-09-25 retirement record. It does not rewrite historical qualification dispositions.
@@ -96,3 +96,25 @@ Branch retirement deletes only Git refs. It does not:
 - delete the two explicitly retained archive/compatibility refs above.
 
 After the unified family PR is merged, the temporary campaign branch should also be removed if repository automatic cleanup does not remove it.
+
+
+## Executed retirement result
+
+The one-shot cleanup workflow successfully removed the following live refs:
+
+- `candidate/dp08-sufficiency-valuation-20260926`
+- `experiment/029-core-0-19`
+- `experiment/030-core-0-19-qu-discharge`
+- `research/dp08-rendering-discovery-20260926`
+- `research/p-vs-np-isograph-20260926`
+- `work/rendering-modernization-dp08-20260926`
+
+`research/dp09-mss-valuation-20260928` had already been removed by repository automatic head-branch cleanup after PR #59 merged.
+
+After retirement, the only non-main refs intentionally present are:
+
+- active campaign: `qualification/family-cleanup-ei-20260929`;
+- historical archive: `archive/core-0.19-qualification-2026-09-26`;
+- externally referenced compatibility ref: `work/navier-stokes-proof-isograph-20260921`.
+
+The one-shot cleanup workflow/request were removed immediately after successful execution and are not part of the retained project surface.
