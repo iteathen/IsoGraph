@@ -214,7 +214,7 @@ Qualified DP 0.8 predecessor checkpoint:
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
 - SHA-256: `74378de9618b655888a993901e620ca841ae47f3aa406dff1d2dcc92de15fa96`
 - cumulative qualification: `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md`
-- direct current-stack integration: Experiment 052, 16/16 PASS.
+- historical direct-stack integration: Experiment 052, 16/16 PASS.
 
 DP 0.8 strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. Its bookkeeping labels remain illustrative rather than a new semantic ontology. DP 0.8 remains an immutable qualified predecessor checkpoint.
 
