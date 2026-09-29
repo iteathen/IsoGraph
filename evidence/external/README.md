@@ -2,6 +2,8 @@
 
 This directory is reserved for evidence whose truth conditions or oracle are independent of the IsoGraph project-controlled qualification campaign.
 
+Current-family note: Core 0.21 strengthens **internal** rendering/qualification discipline through Source Semantic Census conservation, primitive closure, scope integrity, Schema Closure, and IA invalidation. None of those controls turns project-controlled qualification into external validation. Independence still depends on the source/oracle/evaluator being outside the project-controlled truth/scoring loop.
+
 ## Suitable external targets
 
 Examples include:
@@ -20,7 +22,7 @@ Preserve:
 
 - external source/oracle and immutable version/reference;
 - exact IsoGraph Core/module revisions;
-- exact represented input and comparison scope;
+- exact represented input, frozen Source Semantic Census where applicable, and comparison/experimental scope;
 - expected external fact or falsifier;
 - raw IsoGraph representation and output;
 - checker/scorer/evaluator identity and version;
