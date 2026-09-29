@@ -977,7 +977,9 @@ See:
 | **Experiment 053** | QUALIFIES; 20/20 fresh cases PASS | DP 0.9 Minimum Sufficient Support / Valuation qualification. |
 | **Experiment 054** | QUALIFIES; 18/18 fresh cases PASS | DP 0.10 Experimental Warrant qualification. |
 | **Experiment 055** | QUALIFIES; 18/18 fresh cases PASS | Experimental Inquiry 0.1 qualification. |
-| **Experiment 056** | QUALIFIES; 16/16 fresh full-stack cases PASS; all module assessments supported | Current direct integration qualification of Core through 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
+| **Experiment 056** | QUALIFIES; 16/16 fresh full-stack cases PASS; all module assessments supported | Historical same-day integration qualification of Core through 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
+| **Experiments 057 + 058** | Core 0.21 QUALIFIES; 25 uncontested cases PASS + 1/1 fresh target-26 replacement PASS | Core 0.21 Rendering Conservation, Schema Closure, and Closure Invalidation qualification. |
+| **Experiments 059 + 060** | QUALIFIES; 15 uncontested integration cases PASS + 1/1 fresh ownership replacement PASS; all module assessments supported | Current integration qualification of Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
