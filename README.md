@@ -8,15 +8,13 @@ IsoGraph is built around a simple but demanding idea:
 
 The working substrate hypothesis is:
 
-$$
-\boxed{
-\text{knowledge}
+~~~text
+knowledge
 =
-\text{scoped relational structure}
+scoped relational structure
 +
-\text{lawful structural transformation}
-}
-$$
+lawful structural transformation
+~~~
 
 The native path is intended to be:
 

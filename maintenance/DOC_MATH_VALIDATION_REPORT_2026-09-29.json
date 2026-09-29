@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "date": "2026-09-29",
+  "validation": "KaTeX 0.16.22 isolated parser validation on mutable Markdown",
+  "workflow_run_id": 36642850099,
+  "files": 346,
+  "expressions": 1037,
+  "inline": 672,
+  "display": 365,
+  "error_count": 0,
+  "repairs": [
+    "Removed root README LaTeX-only opening display in favor of renderer-independent text.",
+    "Converted general DESIGN_NOTES math examples to renderer-independent text/code.",
+    "Repaired three corrupted array row separators in research/navier-stokes-proof/STANDARD_PHYSICAL_EQUIVALENCE_0_1.md.",
+    "Restored and clarified CONTRIBUTING.md math-rendering policy."
+  ],
+  "preserved": "Frozen/versioned qualification and historical evidence were not rewritten solely for presentation cleanup.",
+  "permanent_guards": [
+    "tools/audit-doc-rendering.mjs",
+    "tools/check-doc-math-structure.mjs"
+  ]
+}

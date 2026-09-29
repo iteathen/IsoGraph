@@ -59,9 +59,11 @@ Cold decoder/verifier experiments are evidence only when isolation is real.
 
 Mutable documentation must render correctly in GitHub Markdown.
 
-- Use `$...$` for inline mathematics.
-- Use `$$...$$` for display mathematics.
-- Do not use raw `\(...\)` or `\[...\]` delimiters in mutable Markdown; they are not reliably rendered by repository surfaces and can appear as literal `\boxed{}`, `\text{}`, and similar markup.
+- Keep general mutable documentation renderer-independent: prefer Unicode/plain text for simple mathematics and fenced `text` blocks for multi-line structural expressions.
+- Do not use raw backslash-parenthesis or backslash-bracket TeX delimiters in mutable Markdown.
+- When a formal research document genuinely needs mathematical typesetting, keep all TeX commands inside an explicitly supported math region and validate the math syntax before merge.
+- When discussing literal TeX syntax, place it inside inline code or a fenced code block.
+- Do not rewrite frozen/versioned historical evidence solely for presentation cleanup; fix current mutable routing/explanatory documents or create a new qualified revision if authoritative semantic bytes must change.
 - Keep TeX commands inside a supported math delimiter or a fenced code block.
 - Do not “repair” frozen raw experiment output or versioned historical specification bytes merely for presentation. Preserve those exact artifacts and record the rendering exception instead.
 - Run `node tools/audit-doc-rendering.mjs --enforce-mutable` before submitting documentation changes. Repository Verify runs the same guard.

@@ -25,6 +25,10 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Verify mutable document math structure
+        run: node tools/check-doc-math-structure.mjs
+
+
       - name: Verify workflow expression YAML
         run: node tools/check-workflow-expression-yaml.mjs
 

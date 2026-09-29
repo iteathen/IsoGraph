@@ -10,7 +10,7 @@ function classification(p){
   if(/^experiments\//.test(p)) return 'frozen-experiment-evidence';
   if(/^historical\//.test(p)) return 'historical-archive';
   if(/^evidence\//.test(p)) return 'evidence-registry';
-  if(/^extensions\/(qu|nei|discovery|dts)\//.test(p)) return 'qualified-extension-surface';
+  if(/^extensions\/(qu|nei|discovery|dts|experimental)\//.test(p)) return 'qualified-extension-surface';
   if(/\/evidence\//.test(p)) return 'frozen-evidence';
   if(/(?:SOURCE_FREEZE|COLD_REPORT|VERIFIER_|HIDDEN_ORACLE|ASSERTIONS|PACKET)/.test(p)) return 'frozen-or-source-evidence';
   if(/^qualification\//.test(p) && /(?:_CANDIDATE|QUALIFIED_MODULES_2026-09-(18|25)|CURRENT_INTEGRATED_STACK_2026-09-25|WITH_DTS_2026-09-25)/.test(p)) return 'authority-or-historical-qualification';
@@ -48,7 +48,7 @@ function stripInlineMath(line){
   let out=''; let i=0; let inMath=false;
   while(i<line.length){
     if(line[i]==='\\' && i+1<line.length){
-      out+=line.slice(i,i+2);
+      out+=inMath?'  ':line.slice(i,i+2);
       i+=2;
       continue;
     }
@@ -65,8 +65,13 @@ function stripInlineMath(line){
   return out;
 }
 
-const texCommand=/\\(?:boxed|text|frac|sqrt|forall|exists|infty|sum|prod|int|left|right|begin|end|mathbb|mathbf|mathrm|operatorname|xleftrightarrow|xrightarrow|xleftarrow|subseteq|subset|cup|cap|to|mapsto|equiv|neq|leq|geq|wedge|vee|neg|mathcal|rm|Phi|Delta|Omega|Gamma|lambda|mu|nu|alpha|beta|gamma|theta|sigma|pi|rho|tau)\b/;
+const texCommand=/\\[A-Za-z]+\*?/;
 const mojibake=/(?:Ã.|Â.|â€|â€™|â€œ|â€�|â†|â‰|ï»¿)/;
+const D=String.fromCharCode(36);
+const DD=D+D;
+const rendererIndependent=p=>
+  /(^|\/)README(?:\.[^\/]+)?$/i.test(p)
+  || ['STATUS.md','AGENTS.md','DESIGN_IDEALS.md','DESIGN_NOTES.md','CONTRIBUTING.md','MIGRATION.md','EVIDENCE.md','FINAL_PRODUCT_MAINTENANCE.md','NATIVE_FORMAT.md'].includes(p);
 const allFiles=walk(ROOT);
 
 for(const file of allFiles){
@@ -105,6 +110,23 @@ for(const file of allFiles){
     });
 
     const rendered=stripInlineCode(raw);
+
+    if(rendererIndependent(rel)){
+      const displayAt=rendered.indexOf(DD);
+      if(displayAt>=0){
+        add('renderer-independent-doc-latex',displayAt,'README/navigation docs must use Unicode/plain text or fenced text, not LaTeX display math.');
+      }else{
+        let first=-1,second=-1;
+        for(let i=0;i<rendered.length;i++){
+          if(rendered[i]!==D || (i>0&&rendered[i-1]==='\\')) continue;
+          if(first<0) first=i;
+          else { second=i; break; }
+        }
+        if(first>=0&&second>first){
+          add('renderer-independent-doc-latex',first,'README/navigation docs must not depend on inline LaTeX rendering.');
+        }
+      }
+    }
 
     const open=rendered.indexOf('\\[');
     if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $ display math or plain text.');
