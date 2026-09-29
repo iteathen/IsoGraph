@@ -1587,13 +1587,35 @@ extensions/experimental/
     qualified Experimental Inquiry module; observations/evidence only, not truth authority
 
 qualification/
-    qualification infrastructure and contracts
+    current/historical authority manifests, module qualification records,
+    integration records, contracts, and qualification plans
 
 experiments/
-    frozen qualification / discovery evidence
+    frozen qualification, discovery, adversarial-control, and application evidence;
+    historical dispositions remain revision-scoped
+
+evidence/
+    claim/evidence registry and external-validation boundary
+
+research/README.md
+    maintained index and governance front door for all research projects
 
 research/
-    project-scoped research directories; start with research/README.md; research presence does not itself create semantic authority
+    project-scoped current research dossiers plus supporting provenance:
+    discovery, dts, glycan-cleavage, navier-stokes-proof, nei,
+    p-vs-np, primitive-logic, project-discovery, publications,
+    and repository-reconciliation
+
+tools/
+    deterministic validators, render/audit tooling, ledger checks,
+    and implementation support; tooling is not semantic authority by itself
+
+maintenance/
+    repository/final-product maintenance and review records
+
+IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+    maintained accumulated human-facing family reference;
+    exact versioned repository authority remains controlling
 ~~~
 
 ---
