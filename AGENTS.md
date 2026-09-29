@@ -38,7 +38,8 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 
 Read:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
+- `qualification/QUALIFIED_MODULES_2026-09-28.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-26.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-25.md` — older historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-18.md` — older historical predecessor
@@ -47,14 +48,15 @@ The current manifest routes the exact qualified revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1–0.8 cumulative current module;
-- DTS 0.1.
+- Discovery Protocols 0.1–0.10 cumulative current module;
+- DTS 0.1;
+- Experimental Inquiry 0.1.
 
 The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 stack directly qualified by Experiment 052; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`. Earlier integration records remain immutable predecessor evidence.
+The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack directly qualified by Experiment 056; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
 ### Successor status
 
