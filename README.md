@@ -99,6 +99,8 @@ IsoGraph is exercised both through domain applications and through research on t
 - [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful proof decomposition, generator/closure separation, minimum-support analysis inside frozen deletion spaces, packaging-dependency discovery, and dimensional-equivalence analysis of a pinned proof corpus.
 - [Project Discovery](research/project-discovery/README.md) — cross-domain structural discovery controls including Ising↔lattice-gas, XOR↔GF(2), Newton↔Hamilton, and the Ising/MWC partial-correspondence study.
 - [Connect4 real-world Discovery Protocol evidence](qualification/REAL_WORLD_DISCOVERY_PROTOCOL_EVIDENCE_CONNECT4_2026-09-18.md) — a live external-repository campaign that exposed semantic-layer distinctions, evidence-lineage structure, falsified attractive quotient hypotheses, and correctly closed ordinary error without changing IsoGraph authority.
+- [Current Connect4 / IsoMax full-discovery research](https://github.com/iteathen/Connect4/commit/2683e701919d65eb4834402896501e4c2dd9c892) — current external application evidence using full-family discovery machinery on the reduced solver structure, including DTS transition analysis, explicit falsifiers, and objective-scoped Minimum Sufficient Support over bounded Connect4 graphs.
+- [JSMinSys / IsoMax implementation research](https://github.com/iteathen/JSMinSys/commit/e8f174823a6e5cee95061adba087d6c156e5f3b8) — application of assertion closure and structural identities to solver/runtime optimization, including elimination of implied hot-loop checks and repeated qualification of transformed paths; a later [promotion commit](https://github.com/iteathen/JSMinSys/commit/0899c5811918e68c22dc1b0e4dd8af97d9b4bbcb) records the qualified IsoMax runtime/profile promotion.
 
 ### IsoGraph-family and research-method work
 
@@ -961,9 +963,10 @@ Application campaigns have repeatedly turned structural findings into executable
 
 - glycan phase dynamics produced exact frontier, quotient, path-coverage, antichain, and common-supersequence formulations;
 - P-vs-NP research exposed deletion, equality, dominance, factorization, and aggregate-image routes over continuation support;
-- Connect4 research used structural equivalence, residuals, and evidence-layer distinctions to guide solver/research hypotheses.
+- Connect4 research used structural equivalence, residuals, DTS transition structure, falsifiers, and objective-scoped MSS to guide solver/research hypotheses;
+- JSMinSys/IsoMax optimization used assertion-closure consequences to remove redundant checks, specialize exact paths, and qualify lower-cost runtime variants.
 
-IsoGraph does not guarantee that every structural reduction yields an efficient algorithm, but it can expose the exact place where an algorithmic opportunity or obstruction lives.
+IsoGraph does not guarantee that every structural reduction yields an efficient algorithm, but it can expose the exact place where an algorithmic opportunity or obstruction lives and can make already-proved implications available to implementation work.
 
 ## 31. Evidence topology can be represented separately from citation count
 
