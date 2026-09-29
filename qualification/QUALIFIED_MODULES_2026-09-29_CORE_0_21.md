@@ -62,9 +62,12 @@ Integration qualification:
 QRC 0.1 remains qualified qualification infrastructure.
 
 The Core 0.21 graph-derived ledger checker is qualification tooling only:
-- qualification/CORE_0_21_LEDGER_CONTRACT.md
-- tools/core021/check-core021-ledger.mjs
-- tools/core021/test-core021-ledger.mjs
+- qualification/CORE_0_21_LEDGER_CONTRACT.md — current hardened contract `core-0.21-ledger-0.2`;
+- tools/core021/check-core021-ledger.mjs;
+- tools/core021/test-core021-ledger.mjs;
+- qualification/CORE_0_21_LEDGER_HARDENING_REVIEW_2026-09-29.md.
+
+The semantic Core 0.21 candidate hash did not change during checker hardening. Experiments 057–060 remain immutable semantic evidence at the contract/tooling revisions frozen in their packets; the v0.2 checker is the current stronger deterministic implementation shipped with this promotion.
 
 It does not become semantic proof authority.
 
