@@ -4,10 +4,10 @@ on:
     branches: [qualification/family-cleanup-ei-20260929]
     paths: [experiments/054/RUN.request]
 permissions: {contents: write}
-concurrency: {group: experiment-054-dp010-v3, cancel-in-progress: false}
+concurrency: {group: experiment-054-dp010-v4, cancel-in-progress: false}
 env:
   GEMINI_MODEL: gemini-3.8-flash
-  GEMINI_FALLBACK_MODELS: gemini-3.1-pro-preview
+  GEMINI_FALLBACK_MODELS: gemini-3.7-flash,gemini-3.6-flash,gemini-3.1-flash-lite,gemini-pro-latest,gemini-3.1-pro-preview
 jobs:
   qualify:
     runs-on: ubuntu-24.04
