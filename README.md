@@ -1359,6 +1359,11 @@ Core 0.20:
     QUALIFIED cumulative primitive-logic-closure clarification
     decisive holdout: Experiment 048 (18/18 PASS)
 
+Core 0.21:
+    QUALIFIED cumulative rendering-conservation / Schema-Closure / closure-invalidation clarification
+    evidence: Experiment 057 valid C01-C25 + Experiment 058 fresh target-26 replacement
+    strict rendering freezes Source Semantic Census + scope and forbids implicit scope shrinkage
+
 QRC 0.1:
     QUALIFIED qualification infrastructure
 
@@ -1380,6 +1385,11 @@ DTS 0.1:
     QUALIFIED current transition extension
     decisive holdout: Experiment 026 (20/20 PASS)
     independent promotion verifier: SUPPORT_PROMOTION
+
+Experimental Inquiry 0.1:
+    QUALIFIED current experimental/discovery module
+    evidence: Experiment 055 (18/18 PASS)
+    consumes DP 0.10 Experimental Warrants and returns observations as evidence, not truth
 
 Latest fully integration-qualified stack revision:
     Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1
@@ -1408,4 +1418,4 @@ Historical failed/partial qualification runs:
     later corrected by fresh holdouts rather than rescoring
 ~~~
 
-The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: unknown remains unknown, discovery is not proof, extensions are not Core, and integrated success is not universal completeness.
+The current evidence supports using the qualified modules as explicit versioned authorities while preserving the same constitutional limits: the declared source scope is conserved, reducible semantics descend to primitive support, unknown remains unknown, discovery is not proof, experiment is not truth, extensions are not Core, and integrated success is not universal completeness.
