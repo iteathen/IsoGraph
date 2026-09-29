@@ -1,0 +1,146 @@
+{
+  "experiment": "056",
+  "required_case_ids": [
+    "I01",
+    "I02",
+    "I03",
+    "I04",
+    "I05",
+    "I06",
+    "I07",
+    "I08",
+    "I09",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14",
+    "I15",
+    "I16"
+  ],
+  "cases": {
+    "I01": {
+      "answers": {
+        "warrant_issued": true,
+        "experiment_constructed": true,
+        "experimental_observation_is_truth": false
+      }
+    },
+    "I02": {
+      "answers": {
+        "warrant_issued": false,
+        "experiment_constructed": false
+      }
+    },
+    "I03": {
+      "answers": {
+        "select_qu_realization": false,
+        "use_qu_topology": true,
+        "preserve_qu_after_observation": true
+      }
+    },
+    "I04": {
+      "answers": {
+        "open_world_reserve_present": true,
+        "encode_reserve_as_qu_realization": false
+      }
+    },
+    "I05": {
+      "answers": {
+        "structural_alignment_allowed": true,
+        "posthoc_confirmation_established": false,
+        "route_dts": true
+      }
+    },
+    "I06": {
+      "answers": {
+        "preserve_adaptive_lineage": true,
+        "reuse_selected_data_as_untouched_confirmation": false
+      }
+    },
+    "I07": {
+      "answers": {
+        "reopen_scope": true,
+        "force_into_existing_model": false,
+        "new_warrant_possible": true
+      }
+    },
+    "I08": {
+      "answers": {
+        "experiment_a_valid": true,
+        "experiment_b_valid": true,
+        "valuation_after_validity": true,
+        "prefer_lower_cost": true
+      }
+    },
+    "I09": {
+      "answers": {
+        "cheap_invalid_experiment_selected": false,
+        "validity_before_valuation": true
+      }
+    },
+    "I10": {
+      "answers": {
+        "nei_same_established_by_ei": false,
+        "route_identity_to_nei": true
+      }
+    },
+    "I11": {
+      "answers": {
+        "ei_admits_implicit_assertion": false,
+        "route_candidate_assertion_to_core": true
+      }
+    },
+    "I12": {
+      "answers": {
+        "broad_parent_falsified": false,
+        "narrow_candidate_falsified": true,
+        "preserve_uncovered_scope": true
+      }
+    },
+    "I13": {
+      "answers": {
+        "nonessential_for_objective": true,
+        "delete_semantic_structure": false,
+        "valuation_may_retain": true
+      }
+    },
+    "I14": {
+      "answers": {
+        "dp09_closes_question": true,
+        "issue_experimental_warrant": false,
+        "run_experiment": false
+      }
+    },
+    "I15": {
+      "answers": {
+        "record_external_generator_provenance": true,
+        "generator_output_universal_truth": false
+      }
+    },
+    "I16": {
+      "answers": {
+        "cycle_preserves_authority_boundaries": true,
+        "ei_is_proof_authority": false,
+        "dp_is_proof_authority": false
+      }
+    }
+  },
+  "required_module_assessment": {
+    "core_0_20": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED",
+    "dp_0_9": "SUPPORTED",
+    "dp_0_10": "SUPPORTED",
+    "ei_0_1": "SUPPORTED"
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "preserved_module_ownership": true,
+    "preserved_qu_and_open_world_distinction": true,
+    "preserved_adaptive_evidence_lineage": true,
+    "limited_negative_results_to_coverage": true,
+    "kept_experiment_evidence_separate_from_truth": true
+  }
+}
