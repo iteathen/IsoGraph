@@ -35,7 +35,7 @@ The checker additionally requires:
 
 ## Deterministic regression coverage
 
-`tools/core021/test-core021-ledger.mjs` now contains 17 adversarial controls including:
+`tools/core021/test-core021-ledger.mjs` now contains two positive baselines plus 18 adversarial negative controls. Coverage includes:
 
 - missing census disposition;
 - missing body node;
@@ -54,7 +54,8 @@ The checker additionally requires:
 - ungrounded support cycle;
 - unknown reconstruction reference;
 - authoritative node without census linkage;
-- plus positive/negative QU-termination controls.
+- positive/negative QU-termination controls;
+- positive cross-census dependency reuse, ensuring shared/transitive support is not mechanically duplicated.
 
 Repository Verify passed on the hardened implementation.
 
