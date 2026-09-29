@@ -41,7 +41,8 @@ jobs:
       - name: Execute isolated reasoner
         id: cold
         continue-on-error: true
-        env: {GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node experiments/054/tools/run-exp054-cold.mjs
       - name: Hidden score
         id: score
@@ -50,7 +51,9 @@ jobs:
         run: node experiments/054/tools/score-exp054.mjs
       - name: Persist evidence
         if: always()
-        env: {COLD_OUTCOME: ${{ steps.cold.outcome }}, SCORE_OUTCOME: ${{ steps.score.outcome }}}
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
         run: |
           set -euo pipefail
           E="experiments/054/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"; mkdir -p "$E"
