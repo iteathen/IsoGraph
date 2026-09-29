@@ -44,20 +44,28 @@ function stripInlineCode(line){
   return chars.join('');
 }
 
-function firstUnescapedDollar(line){
-  for(let i=0;i<line.length;i++){
-    if(line[i]!=='$') continue;
-    if(i>0&&line[i-1]==='\\') continue;
-    if(line[i+1]==='$') return {index:i,kind:'latex-display-math-delimiter'};
-    if(i>0&&line[i-1]==='$') continue;
-    // Avoid ordinary currency such as $5 or $12.50.
-    if(/[0-9]/.test(line[i+1]||'')) continue;
-    return {index:i,kind:'latex-inline-math-delimiter'};
+function stripInlineMath(line){
+  let out=''; let i=0; let inMath=false;
+  while(i<line.length){
+    if(line[i]==='\\' && i+1<line.length){
+      out+=line.slice(i,i+2);
+      i+=2;
+      continue;
+    }
+    if(line[i]==='$'){
+      if(line[i+1]==='$'){ out+='  '; i+=2; continue; }
+      inMath=!inMath;
+      out+=' ';
+      i++;
+      continue;
+    }
+    out+=inMath?' ':line[i];
+    i++;
   }
-  return null;
+  return out;
 }
 
-const rawTexCommand=/\\[A-Za-z]+\*?/g;
+const texCommand=/\\[A-Za-z]+\*?/;
 const mojibake=/(?:Ã.|Â.|â€|â€™|â€œ|â€�|â†|â‰|ï»¿)/;
 const allFiles=walk(ROOT);
 
@@ -66,8 +74,7 @@ for(const file of allFiles){
   const text=fs.readFileSync(file,'utf8');
   const cls=classification(rel);
   const lines=text.split(/\r?\n/);
-  let inFence=false;
-  let fenceChar=null;
+  let inFence=false, fenceChar=null, inDollarBlock=false;
 
   for(let n=0;n<lines.length;n++){
     const raw=lines[n];
@@ -81,34 +88,50 @@ for(const file of allFiles){
     }
     if(inFence) continue;
 
+    if(trimmed.includes('$') && trimmed!=='$'){
+      const at=raw.indexOf('$');
+      findings.push({
+        path:rel,line:n+1,column:at+1,kind:'nonstandalone-display-math-delimiter',
+        classification:cls,excerpt:raw,detail:'Use standalone $ lines for display math delimiters.'
+      });
+    }
+    if(/\\\$\$/.test(raw)){
+      const at=raw.search(/\\\$\$/);
+      findings.push({
+        path:rel,line:n+1,column:at+1,kind:'corrupted-tex-dollar-sequence',
+        classification:cls,excerpt:raw,detail:'Backslash immediately followed by $ is likely a corrupted TeX row break or delimiter.'
+      });
+    }
+    if(trimmed==='$'){
+      inDollarBlock=!inDollarBlock;
+      continue;
+    }
+    if(inDollarBlock) continue;
+
     const add=(kind,index,detail='')=>findings.push({
       path:rel,
       line:n+1,
       column:index+1,
       kind,
       classification:cls,
-      excerpt:raw.slice(Math.max(0,index-50),Math.min(raw.length,index+200)),
+      excerpt:raw.slice(Math.max(0,index-40),Math.min(raw.length,index+180)),
       detail
     });
 
     const rendered=stripInlineCode(raw);
 
-    for(const [needle,kind,detail] of [
-      ['\\[','unsupported-tex-display-delimiter','Use Unicode/plain text or a fenced text block in mutable docs.'],
-      ['\\]','unsupported-tex-display-delimiter','Use Unicode/plain text or a fenced text block in mutable docs.'],
-      ['\\(','unsupported-tex-inline-delimiter','Use Unicode/plain text in mutable docs.'],
-      ['\\)','unsupported-tex-inline-delimiter','Use Unicode/plain text in mutable docs.']
-    ]){
-      const at=rendered.indexOf(needle);
-      if(at>=0) add(kind,at,detail);
-    }
+    const open=rendered.indexOf('\\[');
+    if(open>=0) add('unsupported-tex-display-delimiter',open,'Use GitHub-supported $ display math or plain text.');
+    const close=rendered.indexOf('\\]');
+    if(close>=0) add('unsupported-tex-display-delimiter',close,'Use GitHub-supported $ display math or plain text.');
+    const inlineOpen=rendered.indexOf('\\(');
+    if(inlineOpen>=0) add('unsupported-tex-inline-delimiter',inlineOpen,'Use GitHub-supported $ inline math.');
+    const inlineClose=rendered.indexOf('\\)');
+    if(inlineClose>=0) add('unsupported-tex-inline-delimiter',inlineClose,'Use GitHub-supported $ inline math.');
 
-    const dollar=firstUnescapedDollar(rendered);
-    if(dollar) add(dollar.kind,dollar.index,'Mutable documentation must not depend on LaTeX/math delimiters.');
-
-    rawTexCommand.lastIndex=0;
-    const cmd=rawTexCommand.exec(rendered);
-    if(cmd) add('raw-tex-command',cmd.index,cmd[0]);
+    const outsideMath=stripInlineMath(rendered);
+    const cmd=outsideMath.match(texCommand);
+    if(cmd) add('raw-tex-command-outside-math',cmd.index??0,cmd[0]);
 
     const rep=raw.indexOf('\uFFFD');
     if(rep>=0) add('unicode-replacement-character',rep,'U+FFFD');
@@ -132,29 +155,35 @@ for(const file of allFiles){
       }
     }
   }
+  if(inDollarBlock){
+    findings.push({
+      path:rel,line:lines.length,column:1,kind:'unclosed-display-math-block',
+      classification:cls,excerpt:'EOF',detail:'Display math opened with $ but was not closed.'
+    });
+  }
 }
 
-const counts={},classCounts={};
+const counts={}, classCounts={};
 for(const item of findings){
   counts[item.kind]=(counts[item.kind]||0)+1;
   classCounts[item.classification]=(classCounts[item.classification]||0)+1;
 }
 const mutable=findings.filter(item=>item.classification==='mutable-documentation');
 const protectedFindings=findings.filter(item=>item.classification!=='mutable-documentation');
-
-const summarize=items=>{
-  const byPath={};
-  for(const item of items){
-    byPath[item.path]??={total:0,kinds:{}};
-    byPath[item.path].total++;
-    byPath[item.path].kinds[item.kind]=(byPath[item.path].kinds[item.kind]||0)+1;
-  }
-  return byPath;
-};
-
+const mutableByPath={};
+for(const item of mutable){
+  mutableByPath[item.path]??={total:0,kinds:{}};
+  mutableByPath[item.path].total++;
+  mutableByPath[item.path].kinds[item.kind]=(mutableByPath[item.path].kinds[item.kind]||0)+1;
+}
+const protectedByPath={};
+for(const item of protectedFindings){
+  protectedByPath[item.path]??={total:0,classification:item.classification,kinds:{}};
+  protectedByPath[item.path].total++;
+  protectedByPath[item.path].kinds[item.kind]=(protectedByPath[item.path].kinds[item.kind]||0)+1;
+}
 const report={
   scanned_at:new Date().toISOString(),
-  policy:'mutable Markdown/TXT is renderer-independent: no LaTeX delimiters or raw TeX commands outside literal code',
   files_scanned:allFiles.length,
   total_findings:findings.length,
   counts,
@@ -162,10 +191,8 @@ const report={
   mutable_findings:mutable.length,
   findings
 };
-
 fs.mkdirSync('out',{recursive:true});
 fs.writeFileSync('out/doc-rendering-audit.json',JSON.stringify(report,null,2)+'\n');
-
 console.log(JSON.stringify({
   files_scanned:report.files_scanned,
   total_findings:report.total_findings,
@@ -173,14 +200,12 @@ console.log(JSON.stringify({
   class_counts:classCounts,
   mutable_findings:mutable.length
 },null,2));
-console.log('MUTABLE_BY_PATH '+JSON.stringify(Object.entries(summarize(mutable)).sort((a,b)=>b[1].total-a[1].total)));
-console.log('PROTECTED_BY_PATH '+JSON.stringify(Object.entries(summarize(protectedFindings)).sort((a,b)=>b[1].total-a[1].total)));
-
-for(const item of mutable.slice(0,800)){
+console.log('MUTABLE_BY_PATH '+JSON.stringify(Object.entries(mutableByPath).sort((a,b)=>b[1].total-a[1].total)));
+console.log('PROTECTED_BY_PATH '+JSON.stringify(Object.entries(protectedByPath).sort((a,b)=>b[1].total-a[1].total)));
+for(const item of mutable.slice(0,400)){
   console.log('HIT '+item.path+':'+item.line+':'+item.column+' ['+item.kind+'] '+JSON.stringify(item.excerpt));
 }
-if(mutable.length>800) console.log('... '+(mutable.length-800)+' more mutable findings omitted from log');
-
+if(mutable.length>400) console.log('... '+(mutable.length-400)+' more mutable findings omitted from log');
 if(process.argv.includes('--enforce-mutable') && mutable.length!==0){
   console.error('mutable documentation rendering findings remain: '+mutable.length);
   process.exitCode=2;
