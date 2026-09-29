@@ -52,8 +52,7 @@ const parts=[
   p('An Experimental Warrant is permission to inquire, not support for a hypothesis. EI observations are evidence, not truth by themselves. Open-world model incompleteness is separate from QU and supplies no semantic premise. Adaptive and post-hoc evidence retains its provenance. Negative experimental results are limited to demonstrated coverage.'),
   p('Historical and cleanup status','Heading2'),
   p('Earlier failed and infrastructure-only qualification attempts remain immutable evidence. The Core 0.19 qualification archive and externally referenced Navier-Stokes compatibility branch remain intentionally retained; stale development branches were retired under the 2026-09-29 cleanup record.'),
-  p('This DOCX is the maintained accumulated convenience/final reference product. It does not replace exact versioned specifications, qualification records, manifests, or frozen experiment evidence.'),
-  pageBreak
+  p('This DOCX is the maintained accumulated convenience/final reference product. It does not replace exact versioned specifications, qualification records, manifests, or frozen experiment evidence.')
 ];
 
 const firstEnd=xml.indexOf('</w:p>');

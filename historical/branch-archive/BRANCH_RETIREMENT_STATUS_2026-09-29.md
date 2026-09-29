@@ -118,3 +118,21 @@ After retirement, the only non-main refs intentionally present are:
 - externally referenced compatibility ref: `work/navier-stokes-proof-isograph-20260921`.
 
 The one-shot cleanup workflow/request were removed immediately after successful execution and are not part of the retained project surface.
+
+
+## Core 0.21 campaign follow-up — family-reference layout-fix branch
+
+Source ref:
+
+`fix/family-reference-blank-page-20260929@c1c2f62a5198158d9f0cb7a0d79d8b10c7315970`
+
+Disposition: **retire after Core 0.21 final-product refresh**.
+
+Reason:
+- the branch diagnosed the duplicate page-break defect in the 2026-09-29 accumulated family-reference generator;
+- the durable fix was ported into the Core 0.21 campaign by removing the trailing page break from `maintenance/update-family-reference-2026-09-29.mjs`;
+- the Core 0.21 refresh script also repairs the already-generated duplicate break before inserting the new controlling Core 0.21 section;
+- the refreshed Core 0.21 DOCX was rendered to 25 pages and every page was visually inspected;
+- the branch carries no semantic authority and is superseded by the maintained final product on the Core 0.21 campaign.
+
+Deleting this ref does not remove the diagnosis or durable fix; this exact head remains recorded here as provenance.

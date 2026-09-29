@@ -28,6 +28,9 @@ jobs:
       - name: Verify workflow expression YAML
         run: node tools/check-workflow-expression-yaml.mjs
 
+      - name: Verify Core 0.21 ledger controls
+        run: node tools/core021/test-core021-ledger.mjs
+
       - name: Verify repository authority surface
         shell: bash
         run: |

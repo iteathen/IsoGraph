@@ -31,14 +31,35 @@ Authorship, IsoGraph system design, agent assistance, and third-party contributi
 - `CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md` — qualified cumulative clarification by `qualification/CORE_0_18_QUALIFICATION.md` / Experiment 017;
 - `CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md` — qualified cumulative assertion-support / exact-rendering clarification by `qualification/CORE_0_19_QUALIFICATION.md`, using Experiments 029/030 plus the six ESR-qualified renderings;
 - `CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md` — qualified cumulative primitive-logic-closure clarification by `qualification/CORE_0_20_QUALIFICATION.md`, using Experiment 048.
+- `CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md` — qualified cumulative rendering-conservation/schema-closure clarification by `qualification/CORE_0_21_QUALIFICATION.md`, using Experiment 057 valid C01–C25 plus Experiment 058 target-26 replacement.
 
-Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18, Core 0.19, and Core 0.20 clarifications. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18, Core 0.19, Core 0.20, and Core 0.21 clarifications. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
+
+### Core 0.21 rendering-conservation operating rules
+
+For every new strict Core-0.21 rendering campaign:
+
+- freeze the source interpretation, semantic scope, and complete **Source Semantic Census (SSC)** before primitive reduction;
+- census every load-bearing source-semantic obligation, not only proposition-shaped assertions;
+- never delete, demote, or move a hard-to-reduce census item out of scope merely to obtain closure;
+- any scope change requires an explicit `SCOPE_REVISION` that creates a new qualification target and preserves the old target unchanged;
+- primitive-close the assertion/body itself, its support, and every transitive load-bearing dependency;
+- distinguish a genuine qualified QU boundary from missing semantic definition: QU may preserve an unresolved realization, but it may not hide known semantics or missing work;
+- use `CLOSED_SCHEMA` only when finite primitive-closed generating semantics characterize **all and only** the admitted generated family; loop/recursion/generator labels are never leaves;
+- do not exhaustively materialize a closed iterative/recursive family merely for semantic closure; keep termination, maximum depth, and fixed-point questions separate and QU-bearing when genuinely unresolved;
+- give negative results, falsifiers, counterexamples, non-implications, and non-determination claims the same primitive-support burden as positive assertions;
+- derive the Core 0.21 closure ledger mechanically from the authoritative graph/bundle and frozen SSC; do not use a prose claim of completeness as the ledger;
+- if the primitive kernel, SSC, scope, QU state, governing authority, or selected IA inference/search profile changes, the prior IA fixed point becomes historical for its old tuple and current IA closure MUST reopen;
+- qualify SOUNDNESS, COVERAGE, RECONSTRUCTION, SCOPE_INTEGRITY, and AUTHORITY_ROUTING independently. Passing only the assertions that remain in a smaller packet is not qualification.
+
+Current deterministic ledger tooling is the hardened `core-0.21-ledger-0.2` contract in `qualification/CORE_0_21_LEDGER_CONTRACT.md`, with `tools/core021/check-core021-ledger.mjs` and its adversarial self-tests. The checker is qualification infrastructure, not theorem authority.
 
 ### Qualified extension/module authority
 
 Read:
 
-- `qualification/QUALIFIED_MODULES_2026-09-29.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md` — historical same-day predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-28.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-26.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-25.md` — older historical predecessor
@@ -56,11 +77,11 @@ The tested specification/module files intentionally retain their historical `_CA
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack directly qualified by Experiment 056; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
+The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack qualified by the valid Experiment 059 I01–I15 surface plus fresh Experiment 060 I16 replacement; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
 ### Successor status
 
-Core 0.18, Core 0.19, Core 0.20, Discovery Protocols through 0.10, DTS 0.1, and Experimental Inquiry 0.1 are qualified at their exact tested revisions. Experiment 056 directly qualifies the current expanded stack for its exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Core 0.20, Core 0.21, Discovery Protocols through 0.10, DTS 0.1, and Experimental Inquiry 0.1 are qualified at their exact tested revisions. Experiments 059+060 qualify the current expanded stack for their exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
@@ -170,7 +191,7 @@ Current qualified NEI authority is:
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — qualified NEI 0.4 semantics;
 - `extensions/nei/NEI_NATIVE_VOCAB_0_2.md` and `extensions/nei/NEI_VOCAB_0_2.isg` — qualified native vocabulary companion.
 
-Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-29.md`.
+Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`.
 
 NEI 0.4's governing discipline is:
 
@@ -226,7 +247,7 @@ DP 0.7 qualification remains immutable predecessor evidence in:
 - `experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md`;
 - the completed three-positive-control campaign under `research/project-discovery/2026-09-25-dp07-three-positive-controls/`.
 
-The current full-stack routing is `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`; the Core-0.20 / DP-0.8 and earlier integration records remain historical and immutable.
+The current full-stack routing is `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`; the same-day Core-0.20 / DP-0.10 / EI-0.1 record and earlier integration records remain historical and immutable.
 
 Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, identity hypotheses, and derived views. **Discovery priority never supplies semantic proof authority.**
 
@@ -253,7 +274,7 @@ Core qualification remains revision-specific:
 
 Extension/module qualification is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-29.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`
 
 The qualification campaign deliberately preserves failed runs:
 

@@ -1,15 +1,18 @@
-# Final Product Refresh — 2026-09-29
+# Final Product Refresh — 2026-09-29 Core 0.21
 
-**Status:** repository-root DOCX refreshed; deterministic render complete; visual QA artifact published
-**Authority snapshot represented:** d242a183c142bd6e9b1f9240495972e30ad9f657
+**Status:** repository-root DOCX refreshed; deterministic and independent cross-renderer visual QA complete
+**Authority snapshot represented:** 20fb41c3a3427f94a8da0b663ebc80ab0f2dc401
 **DOCX:** IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
-**DOCX SHA-256:** 6dccea98bf50517c39e67b82376e4da22cf4495e98857d844bf816b642d51051
-**DOCX bytes:** 62236
-**Rendered pages:** 24
-**QA workflow run:** 36621784422
+**DOCX SHA-256:** 173f47a8c793585ce0d0c3cd2696b50a0220386c039a12f0c4b77bf8dc71a6f3
+**DOCX bytes:** 63043
+**GitHub QA render pages:** 25  
+**Independent canonical renderer pages:** 26
+**QA workflow run:** 36637568175
 
-The accumulated reference routes the qualified Core through 0.20, QU 0.1, NEI 0.4, Discovery Protocols through 0.10, DTS 0.1, Experimental Inquiry 0.1, and Experiment 056 expanded-stack integration.
+The accumulated reference routes qualified Core through 0.21, QU 0.1, NEI 0.4, Discovery Protocols through 0.10, DTS 0.1, Experimental Inquiry 0.1, and the Experiment 059+060 expanded-stack integration result.
 
-Repository semantic authority remains the exact versioned specifications, qualification records, and qualification/QUALIFIED_MODULES_2026-09-29.md.
+Repository semantic authority remains the exact versioned specifications, qualification records, and qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md.
 
-Visual page QA is required before final merge. The ChatGPT Library mirror remains a separate publication projection.
+The prior duplicated page-break defect is repaired in this refreshed artifact. The GitHub Actions LibreOffice environment rendered 25 pages. An independent render with the repository document QA renderer produced 26 pages because of renderer-specific pagination; inspection of all independently rendered pages found no blank separator page, clipping, overlap, broken glyph rendering, malformed table, or header/footer collision. Page count is therefore recorded as renderer-specific QA evidence, not a cross-renderer layout invariant.
+
+The ChatGPT Library mirror remains a separate publication projection.

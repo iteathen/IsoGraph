@@ -4,6 +4,30 @@
 **Date:** 2026-09-18  
 **Qualified semantic baseline:** Core 0.17 + qualified Core 0.18 observation-first clarification (`qualification/CORE_0_18_QUALIFICATION.md`)
 
+## 2026-09-29 Core 0.21 current authority update
+
+The controlling current routing has advanced again on 2026-09-29 to:
+
+~~~text
+Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21
++ QU 0.1
++ NEI 0.4
++ Discovery Protocols 0.1–0.10
++ DTS 0.1
++ Experimental Inquiry 0.1
+~~~
+
+Current routing:
+- `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`;
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`;
+- Core 0.21 qualification: Experiment 057 valid C01–C25 + Experiment 058 fresh target-26 replacement;
+- current integration: Experiment 059 valid I01–I15 + Experiment 060 fresh I16 replacement;
+- formal disposition: `QUALIFIES`.
+
+The earlier 2026-09-29 update below is historical.
+
+---
+
 ## 2026-09-29 current authority update
 
 The controlling current routing has advanced to:

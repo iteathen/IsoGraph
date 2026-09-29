@@ -1,0 +1,81 @@
+name: Experiment 059 Core 0.21 full-stack integration
+
+on:
+  push:
+    branches:
+      - qualification/core021-rendering-conservation-20260929
+    paths:
+      - experiments/059/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-059-core021-integration
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  GEMINI_FALLBACK_MODELS: gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-pro-latest,gemini-3.1-pro-preview
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Deterministic integration preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/059/tools/run-exp059-cold.mjs
+          node --check experiments/059/tools/score-exp059.mjs
+          node tools/core021/test-core021-ledger.mjs
+          rm -rf out/exp059
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/059/tools/run-exp059-cold.mjs
+          node -e "const d=require('./out/exp059/DRY_RUN.json');if(d.case_count!==16||!/^[0-9a-f]{64}$/.test(d.core_0_21_sha256))process.exit(1);if(d.input_manifest.some(x=>x.path.includes('/hidden/')||x.path.includes('score-exp059')))process.exit(1)"
+      - name: Execute isolated integration reasoner
+        id: cold
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/059/tools/run-exp059-cold.mjs
+      - name: Hidden score
+        id: score
+        if: always() && steps.cold.outcome == 'success'
+        continue-on-error: true
+        run: node experiments/059/tools/score-exp059.mjs
+      - name: Persist Experiment 059 evidence
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        run: |
+          set -euo pipefail
+          E="experiments/059/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in DRY_RUN.json INPUT_MANIFEST.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json SCORE.json; do [ -f "out/exp059/$f" ] && cp "out/exp059/$f" "$E/$f"; done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","cold_outcome":"%s","score_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$COLD_OUTCOME" "$SCORE_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 059 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin qualification/core021-rendering-conservation-20260929
+            git rebase origin/qualification/core021-rendering-conservation-20260929
+            git push origin HEAD:qualification/core021-rendering-conservation-20260929
+          fi
+      - name: Enforce integration qualification
+        if: always()
+        env:
+          COLD_OUTCOME: ${{ steps.cold.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        run: |
+          set -euo pipefail
+          test "$COLD_OUTCOME" = "success"
+          test "$SCORE_OUTCOME" = "success"
+          node -e "const s=require('./out/exp059/SCORE.json');if(s.disposition!=='QUALIFIES')process.exit(1)"
