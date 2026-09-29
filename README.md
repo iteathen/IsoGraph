@@ -199,32 +199,28 @@ IsoGraph is not trying to build the largest ontology or the most feature-rich su
 
 It is trying to build a **small information-preserving structural substrate** from which richer constructions can be represented, compared, transformed, verified, and discovered.
 
-The strongest current core candidates include:
+The current qualified Core is cumulative through **Core 0.21**. The substrate stays deliberately small: representation-level Semantic Identity handles, ordered relational incidence, scope/binding structure, rewrite/constraint structure, primitive logical relations, and raw carrier/data atoms where no hidden behavior is being smuggled into the leaf.
 
-- **Semantic Identity (SI)** — representation-level referential identity/addressing;
-- **ordered incidence / hyperedge-like relations**;
-- **structural scope and boundary**;
-- **binding ownership needed for structural matching**;
-- **structural rewrite**;
-- **negative structural match conditions** where they survive elimination testing;
-- **transparent references** as non-semantic serialization compression.
+Later Core clarifications tighten how that substrate is used:
 
-The project deliberately resists promoting familiar concepts into primitives merely because they are common or convenient.
+- Core 0.19 separates assertion bodies from their support, requires exact source-semantic reconstruction, and permits recursive Implicit Assertion passes;
+- Core 0.20 requires every definitionally reducible load-bearing semantic construction to descend to primitive logic rather than stop at a familiar domain label;
+- Core 0.21 freezes the complete Source Semantic Census and scope, forbids qualification by silent scope shrinkage, introduces exact **Schema Closure** for finitely described iterative/generative semantics, and reopens IA closure when load-bearing representation state changes.
 
-The current core-admission discipline is:
+High-level concepts are still useful. They belong as derived, reversible views over primitive support rather than as convenient authoritative stopping points.
+
+The current admission discipline is therefore:
 
 ~~~text
-candidate distinction
--> attempt faithful construction from existing primitives
--> test exactness / round trip / residual burden
--> test identity and ambiguity
--> test isomorphism/discovery behavior
--> test qualified-agent reconstruction cost
--> keep a useful surface label if helpful
--> promote only if lower construction fails or is materially worse
+freeze what the source promises
+-> render every load-bearing obligation
+-> unfold every reducible semantic operator
+-> preserve genuine unknowns without using QU as missing-work camouflage
+-> prove exact reconstruction / coverage / scope integrity
+-> keep high-level views only when primitive support survives their deletion
 ~~~
 
-That keeps the core small while leaving rich structure available above it.
+This keeps the substrate small without obtaining simplicity by throwing away semantic obligations.
 
 ---
 
@@ -513,7 +509,7 @@ UNKNOWN
 
 throws away the shape of what is unknown.
 
-The current **Quantifiable Unknown (QU)** research extension explores a richer alternative:
+The qualified **Quantifiable Unknown (QU) 0.1** extension represents a richer alternative:
 
 - unresolved carriers;
 - unresolved relation occurrences;
