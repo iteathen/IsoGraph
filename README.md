@@ -829,6 +829,184 @@ The project asks first whether the failure is parser/serialization, semantic amb
 
 Only then should the specification change.
 
+## 18. Exact rendering can be audited for missing semantics
+
+Core 0.19–0.21 make source fidelity an explicit obligation rather than a stylistic goal.
+
+A strict rendering can freeze the source interpretation, scope, and complete Source Semantic Census, then require every load-bearing obligation to close through its body, support, and transitive dependencies.
+
+That makes omission itself detectable.
+
+## 19. Implicit consequences can be generated recursively instead of guessed
+
+Core 0.19 admits **Implicit Assertions (IA)** derived from already represented support.
+
+IA generation can proceed through repeated rounds until the selected inference/search profile reaches a fixed point.
+
+This has been used in application research to expose structure that was not explicitly written in the source representation.
+
+## 20. Hard-to-reduce meaning cannot simply disappear
+
+Core 0.21's no-evasion rule prevents a difficult semantic obligation from being deleted, demoted, reclassified as irrelevant, or silently moved outside the target merely to make a rendering close.
+
+If scope really changes, the change becomes an explicit new revision.
+
+That turns "we could not reduce this" into visible incompleteness rather than invisible information loss.
+
+## 21. Large iterative and recursive families can be represented without exhaustive unrolling
+
+Core 0.21 Schema Closure allows a finite primitive-closed generator to represent an arbitrarily large or unbounded generated family when it characterizes **all and only** the admitted members/transitions.
+
+This separates:
+
+~~~text
+semantic step/generator closure
+!= exhaustive materialization
+!= termination proof
+~~~
+
+That is important for programs, recurrences, iterative algorithms, transition systems, and mathematical constructions whose complete execution may be impractical or infinite.
+
+## 22. Transition anatomy can be compared independently of endpoints
+
+Qualified DTS 0.1 represents structured change rather than treating a transition as merely a source/target pair.
+
+Two processes can have the same endpoints yet remain non-isomorphic because their load-bearing mechanism, ordering, barrier, decomposition, or unresolved transition structure differs.
+
+This supports comparison of algorithms, workflows, proof steps, state transitions, and other dynamical structures.
+
+## 23. Natural/domain identity can remain separate from addressing and structural similarity
+
+Core SI answers "which represented referent is this?"
+
+NEI answers stronger identity questions under separately qualified evidence/model authority.
+
+This allows exact identity, distinctness, unresolved identity, and graded probabilistic evidence to remain separate instead of letting filenames, IDs, structural similarity, or probability thresholds manufacture identity conclusions.
+
+## 24. Discrepancies can be used as discovery instruments
+
+DP 0.8 treats unexpected behavior as evidence before diagnosis.
+
+A mismatch can be investigated as:
+
+~~~text
+ordinary defect
+hidden distinction
+hidden scoped equivalence
+authority mismatch
+scope mismatch
+representation projection
+or unresolved structure
+~~~
+
+Repair disposition and discovery disposition remain separate, so fixing a real bug does not automatically erase the clue that exposed it.
+
+## 25. The system can discover minimum sufficient support
+
+DP 0.9 asks not only what structure is present, but what represented support is actually sufficient for a declared conclusion.
+
+This can expose:
+
+- redundant proof/interface dependencies;
+- multiple lawful sufficient topologies;
+- objective-relative minimal supports;
+- dependencies that are artifacts of packaging rather than the target itself.
+
+The Navier–Stokes deletion-space and periodic-packaging research are concrete examples of this style of analysis.
+
+## 26. Valid alternatives can be valued without confusing preference with truth
+
+After several supports or constructions are shown to be valid, DP 0.9 can apply an explicit valuation profile to compare them by declared costs such as transitions, time, cycles, memory, or another task-relevant quantity.
+
+The valuation does not create semantic validity; it chooses among already admissible alternatives.
+
+## 27. IsoGraph can identify when reasoning should stop and new evidence should be generated
+
+DP 0.10 introduces the **Experimental Warrant**.
+
+When represented evidence is insufficient for the active question but the unresolved structure is strong enough to justify measurement or experimentation, the system can record that need explicitly rather than guessing the missing fact.
+
+~~~text
+warrant to experiment
+!= evidence for the hypothesis
+~~~
+
+## 28. Experiments can be represented as provisional, revisable structural inquiries
+
+Experimental Inquiry 0.1 consumes a valid warrant and can construct a provisional working model, search an experiment space, generate observations, preserve expected and unexpected results, and revise the working model.
+
+Its output returns as evidence.
+
+~~~text
+experiment
+!= proof
+
+observation
+!= admitted assertion
+~~~
+
+This makes experiment generation part of the research loop without turning an experimental module into truth authority.
+
+## 29. Structural analysis can expose proof-packaging dependencies
+
+A dependency may be required by the current formal interface while not yet being established as intrinsic to the final theorem or consumer.
+
+The Navier–Stokes periodic-packaging research demonstrated this distinction by separating whole-space finite-energy packaging from the narrower periodic target question.
+
+This is useful for proof refactoring, API/interface design, and theorem-dependency analysis.
+
+## 30. Structural reduction can lead directly to algorithms
+
+Application campaigns have repeatedly turned structural findings into executable reductions:
+
+- glycan phase dynamics produced exact frontier, quotient, path-coverage, antichain, and common-supersequence formulations;
+- P-vs-NP research exposed deletion, equality, dominance, factorization, and aggregate-image routes over continuation support;
+- Connect4 research used structural equivalence, residuals, and evidence-layer distinctions to guide solver/research hypotheses.
+
+IsoGraph does not guarantee that every structural reduction yields an efficient algorithm, but it can expose the exact place where an algorithmic opportunity or obstruction lives.
+
+## 31. Evidence topology can be represented separately from citation count
+
+The Connect4 real-world discrepancy campaign exposed a concrete hierarchy:
+
+~~~text
+citation occurrences
+source artifacts
+evidence events
+evidence lineages
+independence groups
+~~~
+
+Those quantities are not interchangeable.
+
+Representing them separately helps prevent accidental double counting, false independence claims, and layer-substitution errors in research evidence.
+
+## 32. Representation and testing can reveal defects without losing the surrounding discovery
+
+In the glycan campaign, a surprising threshold result was preserved, independently checked, falsified, traced to one omitted transition in an optimized kernel, repaired, and then rerun.
+
+The bug was real.
+
+The structural question that the bug exposed was still worth investigating.
+
+This is the intended observation-first behavior:
+
+~~~text
+repair what is wrong
+preserve what was learned
+~~~
+
+## 33. Cross-domain discovery can recover exact correspondences while rejecting tempting false ones
+
+The Project Discovery campaigns have exercised exact structural recovery across independently expressed domains including:
+
+- Ising ↔ lattice gas;
+- XOR ↔ GF(2);
+- Newtonian ↔ Hamiltonian formulations;
+- Ising ↔ MWC, where a real common statistical layer was retained while whole-system isomorphism was rejected.
+
+That demonstrates both directions of the mission: finding hidden common structure and preserving the load-bearing residual.
+
 ---
 
 # Common objections and how IsoGraph addresses them
