@@ -25,6 +25,10 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Verify README mission alignment
+        run: node tools/audit-readme-mission.mjs
+
+
       - name: Inventory README surfaces for alignment review
         run: |
           echo "README_INVENTORY_BEGIN"
