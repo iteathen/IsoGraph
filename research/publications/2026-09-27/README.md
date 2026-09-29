@@ -1,5 +1,9 @@
 # IsoGraph research publications — 2026-09-27
 
+These documents communicate research results and their novelty/provenance boundaries. They do **not** define current IsoGraph semantic authority merely by being published.
+
+Current family routing is controlled by `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md` and the exact versioned qualification records. Publication claims remain scoped to the source/research revisions cited by each paper; later Core/DP/EI qualification does not silently rewrite or strengthen them.
+
 ## Continuation-Support Reductions for Bounded Existential Computation
 
 **Author:** Joshua Oshiro
@@ -23,7 +27,7 @@
 
 **Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro.**
 
-### Current reviewed revision
+### Current reviewed publication revision
 
 - [Publication revision 0.3](GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md)
 - Publication blob: `013187767d34e7ddd57995f516a2418aec78bfbb`
