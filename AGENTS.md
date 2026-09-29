@@ -35,6 +35,25 @@ Authorship, IsoGraph system design, agent assistance, and third-party contributi
 
 Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18, Core 0.19, Core 0.20, and Core 0.21 clarifications. Bare IDs are **Semantic Identity (SI)** handles: representation-level referential identity used for addressing, sharing, matching, namespaces, allocation, reconstruction, and comparison. SI equality or inequality is not independently authoritative for any stronger identity relation.
 
+### Core 0.21 rendering-conservation operating rules
+
+For every new strict Core-0.21 rendering campaign:
+
+- freeze the source interpretation, semantic scope, and complete **Source Semantic Census (SSC)** before primitive reduction;
+- census every load-bearing source-semantic obligation, not only proposition-shaped assertions;
+- never delete, demote, or move a hard-to-reduce census item out of scope merely to obtain closure;
+- any scope change requires an explicit `SCOPE_REVISION` that creates a new qualification target and preserves the old target unchanged;
+- primitive-close the assertion/body itself, its support, and every transitive load-bearing dependency;
+- distinguish a genuine qualified QU boundary from missing semantic definition: QU may preserve an unresolved realization, but it may not hide known semantics or missing work;
+- use `CLOSED_SCHEMA` only when finite primitive-closed generating semantics characterize **all and only** the admitted generated family; loop/recursion/generator labels are never leaves;
+- do not exhaustively materialize a closed iterative/recursive family merely for semantic closure; keep termination, maximum depth, and fixed-point questions separate and QU-bearing when genuinely unresolved;
+- give negative results, falsifiers, counterexamples, non-implications, and non-determination claims the same primitive-support burden as positive assertions;
+- derive the Core 0.21 closure ledger mechanically from the authoritative graph/bundle and frozen SSC; do not use a prose claim of completeness as the ledger;
+- if the primitive kernel, SSC, scope, QU state, governing authority, or selected IA inference/search profile changes, the prior IA fixed point becomes historical for its old tuple and current IA closure MUST reopen;
+- qualify SOUNDNESS, COVERAGE, RECONSTRUCTION, SCOPE_INTEGRITY, and AUTHORITY_ROUTING independently. Passing only the assertions that remain in a smaller packet is not qualification.
+
+Current deterministic ledger tooling is the hardened `core-0.21-ledger-0.2` contract in `qualification/CORE_0_21_LEDGER_CONTRACT.md`, with `tools/core021/check-core021-ledger.mjs` and its adversarial self-tests. The checker is qualification infrastructure, not theorem authority.
+
 ### Qualified extension/module authority
 
 Read:
