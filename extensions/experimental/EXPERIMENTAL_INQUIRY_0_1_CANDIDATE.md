@@ -1,6 +1,6 @@
 # IsoGraph Experimental Inquiry — 0.1 Candidate
 
-**Status:** unqualified semantic/discovery extension candidate  
+**Status:** unqualified experimental/discovery extension candidate  
 **Short name:** EI 0.1  
 **Purpose:** generate lawful new observations under an explicitly incomplete experimental working model  
 **Warrant dependency:** DP 0.10 Experimental Warrant at an exact qualified revision before EI promotion  
