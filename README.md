@@ -1105,7 +1105,7 @@ If models are eventually trained directly on IsoGraph, familiar structures may b
 
 Learned familiarity would still not be semantic authority.
 
-The structure remains the authority.
+Qualified represented structure remains the semantic basis; learned familiarity is not authority.
 
 ---
 
@@ -1130,7 +1130,7 @@ IsoGraph is not:
 - a rule that every loop/recursion must be exhaustively unrolled;
 - an experiment engine whose observations become truth automatically.
 
-It is a structural representation and qualification framework whose claims are intentionally scoped.
+It is a structural representation, discovery, evidence-generation, and qualification framework whose claims are intentionally scoped and whose modules retain explicit authority boundaries.
 
 ---
 
@@ -1316,7 +1316,7 @@ experiments/
     frozen qualification / discovery evidence
 
 research/
-    research notes and historical analysis
+    current and historical research artifacts; research presence does not itself create semantic authority
 ~~~
 
 ---
