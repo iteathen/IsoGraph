@@ -324,11 +324,11 @@ A successful application-specific control case alone is insufficient.
 
 If DP 0.9 independently qualifies, run a fresh integration qualification against the then-current qualified stack.
 
-Do not rewrite the existing DP 0.1–0.7 qualification review or Experiment 031.
+Do not rewrite the existing DP 0.1–0.8 qualification review or Experiment 052.
 
 Promotion should create:
 
-- a new cumulative DP 0.1–0.8 qualification review;
+- a new cumulative DP 0.1–0.9 qualification review;
 - a new qualified-module manifest revision;
 - a fresh full-stack integration record if required by repository policy;
 - a maintained family-reference refresh in the same authority-change work cycle.
