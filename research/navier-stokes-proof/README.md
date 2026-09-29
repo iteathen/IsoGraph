@@ -8,15 +8,20 @@
 
 **Pinned mathematical/formal source:** `openai/NavierStokesAndEuler@f9e8bc5b38b6e212696e8a30e3e91517af887bbd`.
 
-**Pinned IsoGraph semantic dependencies:**
+**Historical rendering dependencies used by this research artifact:**
 - Core 0.17 qualified authority: `CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md`.
-- QU 0.1, exact qualified revision recorded in `qualification/QUALIFIED_MODULES_2026-09-18.md`.
-- NEI 0.4, exact qualified revision recorded in the same manifest.
-- Discovery Protocols 0.1–0.4 cumulative qualified module, used only as discovery guidance.
+- QU 0.1 and NEI 0.4 at the exact revisions routed by the then-current manifest.
+- Discovery Protocols 0.1–0.4 as the discovery guidance used during this campaign.
+
+**Current repository family:** Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1, routed by `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md`.
+
+The historical rendering is not silently upgraded to the current family. Any new exact-rendering claim must create a successor target under current Core 0.21 rules.
 
 ## Purpose
 
-Represent as much of the internal mathematical structure of the released forced Navier–Stokes blowup proof as is reasonable in a compact agent-readable artifact, while preserving exact source provenance and refusing to manufacture completeness, identity, or physical-realizability claims.
+Preserve a compact, source-traceable structural research representation of the released forced Navier–Stokes blowup proof while refusing to manufacture completeness, identity, or physical-realizability claims.
+
+This frozen artifact is a historical research rendering, not a Core 0.21 primitive-complete rendering. Under current IsoGraph doctrine, “as much as is reasonable” is not an admissible completion criterion for a declared exact scope: a successor exact-rendering campaign must freeze its Source Semantic Census and scope first, then give every in-scope load-bearing obligation a complete closure disposition.
 
 The representation is deliberately property-rich. It compresses repetitive proof engineering but retains named mathematical distinctions, invariants, transformations, error/residual structure, scaling, localization, energy, singularity, comparison, and periodization bridges.
 
@@ -85,8 +90,25 @@ Retained:
 4. Structural correspondence is not NEI SAME.
 5. Different SI is not NEI DISTINCT.
 6. Where the pass has not established the exact admissible possibility family, NEI remains `INCOMPLETE/UNQUALIFIED`, not semantic UNKNOWN.
-7. Omitted lower-level proof structure is represented through QU completeness boundaries rather than implicitly treated as irrelevant.
+7. Omitted lower-level proof structure is **not** automatically QU. A genuine source unknown may be represented through qualified QU; missing definitions or unrendered known semantics remain incomplete. Under Core 0.21, an exact successor target may not hide such incompleteness behind a QU label or silently move it out of scope.
 8. Physical realizability/thermodynamic interpretation is outside the formal theorem contract and is explicitly separated.
+
+## Current-family continuation rules
+
+If this research is resumed under the current IsoGraph family:
+
+~~~text
+freeze source interpretation + declared semantic scope + Source Semantic Census
+-> primitive-render the assertion bodies, support, and transitive dependencies
+-> use Schema Closure for exact iterative/recursive generators rather than exhaustive unrolling
+-> keep unresolved termination separate from already-known step semantics
+-> preserve genuine source unknowns through QU and missing definitions as incompleteness
+-> reopen IA closure whenever the primitive kernel / census / scope / QU / authority profile changes
+-> use current DP 0.1–0.10 for discovery
+-> invoke EI only under a DP 0.10 Experimental Warrant
+~~~
+
+Any source-exact result still remains source-relative. Neither structural rendering nor current-family qualification would independently validate the underlying mathematical theorem or establish physical realizability.
 
 ## Files
 
@@ -157,7 +179,8 @@ This rendering should be revised if any of the following occurs:
 - a compressed property family hides a source distinction consumed differently downstream;
 - a QU state excludes a source-admissible possibility or admits a source-excluded possibility;
 - an NEI result is stronger than its exact identity model/evidence;
-- the native artifact is not parseable under Core 0.17 syntax.
+- the historical native artifact is not parseable under its recorded Core 0.17 syntax;
+- a future current-family successor leaves a frozen census item without a Core 0.21 closure disposition or silently shrinks scope.
 
 ## Promotion / authority boundary
 
