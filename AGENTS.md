@@ -52,7 +52,7 @@ The current manifest routes the exact qualified revisions of:
 - DTS 0.1;
 - Experimental Inquiry 0.1.
 
-The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
+The tested specification/module files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
