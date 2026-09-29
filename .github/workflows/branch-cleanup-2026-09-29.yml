@@ -1,0 +1,55 @@
+name: Retire stale IsoGraph branches 2026-09-29
+
+on:
+  push:
+    branches: [qualification/family-cleanup-ei-20260929]
+    paths: [maintenance/BRANCH_CLEANUP_2026-09-29.request]
+
+permissions:
+  contents: write
+
+jobs:
+  retire:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Delete explicitly retired refs
+        shell: bash
+        run: |
+          set -euo pipefail
+          stale=(
+            "candidate/dp08-sufficiency-valuation-20260926"
+            "experiment/029-core-0-19"
+            "experiment/030-core-0-19-qu-discharge"
+            "research/dp08-rendering-discovery-20260926"
+            "research/p-vs-np-isograph-20260926"
+            "work/rendering-modernization-dp08-20260926"
+          )
+          keep=(
+            "archive/core-0.19-qualification-2026-09-26"
+            "work/navier-stokes-proof-isograph-20260921"
+            "main"
+            "qualification/family-cleanup-ei-20260929"
+          )
+          for b in "${keep[@]}"; do
+            git ls-remote --exit-code --heads origin "$b" >/dev/null || {
+              echo "required retained branch missing: $b" >&2
+              exit 1
+            }
+          done
+          for b in "${stale[@]}"; do
+            if git ls-remote --exit-code --heads origin "$b" >/dev/null; then
+              git push origin --delete "$b"
+              echo "retired: $b"
+            else
+              echo "already absent: $b"
+            fi
+          done
+          for b in "${stale[@]}"; do
+            if git ls-remote --exit-code --heads origin "$b" >/dev/null; then
+              echo "stale branch still present: $b" >&2
+              exit 1
+            fi
+          done
