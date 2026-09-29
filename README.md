@@ -1319,6 +1319,15 @@ The qualified performance contribution is semantic:
 
 > the specification does not require proof/search work stronger than the dependency-closed claim being made once qualified evidence has discharged that claim.
 
+Later qualified modules add several additional **semantic efficiency controls**:
+
+- **Schema Closure** can establish the semantics of an iterative/recursive generator without exhaustively materializing every generated member;
+- **Minimum Sufficient Support** can identify which represented dependencies are actually needed for a declared conclusion;
+- **Valuation** can compare already-valid alternatives under explicit cost axes without turning the preferred alternative into truth;
+- claim-bounded negative certificates can avoid exhaustive mapping search when a qualified separating invariant already discharges the declared negative.
+
+Application research has also found domain-specific reductions—quotients, dominance, antichains, factorization, exact frontier dynamics, and structural pruning—that can reduce concrete work. Those are application results, not a universal IsoGraph speed guarantee.
+
 That leaves implementations free to use:
 
 - hashes;
@@ -1349,14 +1358,25 @@ They can operate on explicit relational structure directly.
 A mature IsoGraph ecosystem could allow agents to:
 
 - preserve exact dependencies across long projects;
+- freeze and audit a complete Source Semantic Census before reduction;
 - compare independently authored theories without lexical alignment;
 - discover recurring structures across corpora;
+- recursively generate implicit assertions while retaining their support provenance;
+- reopen stale IA closure automatically when load-bearing representation state changes;
 - retain residual distinctions rather than over-summarizing;
 - communicate proof/witness structure natively;
-- represent unresolved information without flattening it;
+- represent unresolved information without flattening it or confusing unknown with missing work;
+- reason about transition anatomy rather than only before/after states;
+- distinguish representation identity, natural/domain identity, and evidence strength;
+- preserve evidence events, lineages, independence groups, and revision provenance separately;
+- treat discrepancies as structured observations before deciding whether they are defects;
+- search for minimum sufficient support and compare lawful alternatives under explicit valuations;
+- recognize when available evidence is insufficient and issue an Experimental Warrant rather than guess;
+- construct/revise experiments under EI while returning observations as evidence rather than truth;
 - reuse qualified structure instead of re-deriving it from prose;
-- reason over policies, witnesses, and their own structural records;
-- search for invariants hidden by human naming conventions.
+- reason over policies, witnesses, experiments, and their own structural records;
+- search for invariants hidden by human naming conventions;
+- hand a human or another agent one consolidated research dossier while retaining deeper repository provenance for audit.
 
 If models are eventually trained directly on IsoGraph, familiar structures may become cheap learned handles while the underlying formal structure remains available for verification.
 
