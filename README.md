@@ -1,10 +1,12 @@
 # IsoGraph
 
-**An agent-native structural knowledge representation for exposing invariants, isomorphisms, common structure, and meaningful residual differences across independently expressed domains.**
+**An agent-native system for exact structural representation, primitive-logic closure, cross-domain discovery, and evidence-bounded inquiry.**
 
 IsoGraph is built around a simple but demanding idea:
 
-> If two theories, proofs, programs, workflows, physical descriptions, or knowledge structures have the same load-bearing relational shape, an agent should be able to discover that correspondence without being fooled by names, notation, serialization, factorization, source conventions, or familiar labels—and without erasing the differences that still matter.
+> Represent the promised semantic content exactly enough that names and familiar abstractions can be removed, then let structural correspondence, residual difference, unknown structure, implicit consequence, and the need for new evidence emerge from the representation rather than being assumed in advance.
+
+Cross-domain isomorphism remains a central use case, but it is no longer the whole project. IsoGraph now treats faithful primitive rendering, structured unknowns, recursive implicit assertion, discovery, experimental warrant, and experimental inquiry as one versioned family with explicit authority boundaries.
 
 The working substrate hypothesis is:
 
