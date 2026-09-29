@@ -554,7 +554,7 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 # Discovery is separate from authority
 
-IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.8) provides ranked, adaptive strategies for finding candidate:
+IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.10) provides ranked, adaptive strategies for finding candidate:
 
 - correspondences;
 - invariants;
@@ -1321,9 +1321,11 @@ NEI 0.4:
     QUALIFIED current extension
     decisive holdout: Experiment 016 (18/18 PASS)
 
-Discovery Protocols 0.1–0.8:
+Discovery Protocols 0.1–0.10:
     QUALIFIED cumulative current discovery module
     DP 0.8 evidence: Experiment 050 valid 21-case surface + Experiment 051 target-5 replacement
+    DP 0.9 evidence: Experiment 053 (20/20 PASS)
+    DP 0.10 evidence: Experiment 054 (18/18 PASS)
 
 DTS 0.1:
     QUALIFIED current transition extension
@@ -1331,8 +1333,8 @@ DTS 0.1:
     independent promotion verifier: SUPPORT_PROMOTION
 
 Latest fully integration-qualified stack revision:
-    Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1
-    DIRECTLY QUALIFIED by Experiment 052
+    Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1
+    DIRECTLY QUALIFIED by Experiment 056
     16/16 PASS; zero mismatches; all guards true; all module assessments SUPPORTED
 
 Historical pre-DTS integrated stack:
