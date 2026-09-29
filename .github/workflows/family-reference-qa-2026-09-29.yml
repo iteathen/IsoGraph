@@ -83,3 +83,9 @@ jobs:
           git fetch origin qualification/family-cleanup-ei-20260929
           git rebase origin/qualification/family-cleanup-ei-20260929
           git push origin HEAD:qualification/family-cleanup-ei-20260929
+
+      - name: Cleanup transient QA artifact
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/cleanup-github-actions-storage.mjs
