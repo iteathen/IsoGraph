@@ -93,7 +93,7 @@ The system is deliberately **observation-first, primitive-first, and non-evasive
 The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
 
 - [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
-- [Glycan cleavage research](research/glycan-cleavage/2026-09-27/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
+- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
 - [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
 
 ---
