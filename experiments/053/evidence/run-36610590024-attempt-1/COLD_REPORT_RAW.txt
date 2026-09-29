@@ -1,0 +1,258 @@
+{
+  "cases": [
+    {
+      "case_id": "M01",
+      "answers": {
+        "residual_derivable": true,
+        "preserve_semantic_class": true,
+        "independent_detector_required": false
+      },
+      "reason": "When partition authority establishes mutual exclusion and collective exhaustiveness, the remaining class is derivable as a residual, meaning a separate runtime detector is not required for classification; however, the semantic class itself must remain represented.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 14"
+      ]
+    },
+    {
+      "case_id": "M02",
+      "answers": {
+        "residual_derivable": false,
+        "keep_unique_test": true
+      },
+      "reason": "Absent represented mutual exclusion and exhaustiveness authority, and because C identifies unique cases, C is not a derivable residual complement and its unique test must be retained.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 14"
+      ]
+    },
+    {
+      "case_id": "M03",
+      "answers": {
+        "x_load_bearing": false,
+        "fallback_preserves_target": true,
+        "delete_x_from_semantic_graph": false
+      },
+      "reason": "The exact fallback establishes identical target outputs including witness and audit record, making X nonessential for sufficiency of this objective; however, DP 0.9 does not authorize deleting semantically valid structure from the Core representation.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 1",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 7"
+      ]
+    },
+    {
+      "case_id": "M04",
+      "answers": {
+        "x_load_bearing": true,
+        "reduction_sufficient": false
+      },
+      "reason": "The declared objective contract explicitly requires a signed certificate that only X produces. Dropping X violates the target contract, so X is load-bearing and the reduction is insufficient.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 3",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 5"
+      ]
+    },
+    {
+      "case_id": "M05",
+      "answers": {
+        "minimal_established": true,
+        "minimum_established": false,
+        "candidate_space_covered": false
+      },
+      "reason": "Irreducibility under single-node deletion establishes minimality, but claiming a minimum requires coverage of the declared candidate space and comparison across alternatives, which was not completed.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 6.1",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 6.2"
+      ]
+    },
+    {
+      "case_id": "M06",
+      "answers": {
+        "both_sufficient": true,
+        "prefer_b": true,
+        "universal_fewer_transitions_rule": false
+      },
+      "reason": "Both topologies are exact and sufficient. Under the application-supplied valuation profile specifying fewer transitions, B (4) is preferred to A (7), but DP 0.9 defines no universal fewer-transitions rule.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 0",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 10"
+      ]
+    },
+    {
+      "case_id": "M07",
+      "answers": {
+        "both_sufficient": true,
+        "prefer_b": true,
+        "prefer_fewer_transitions": false
+      },
+      "reason": "Both topologies are sufficient, and the profile explicitly selects solely on lower wall-clock time, favoring B (11 ms vs 18 ms); the profile does not prefer fewer transitions.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 10",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 21"
+      ]
+    },
+    {
+      "case_id": "M08",
+      "answers": {
+        "incomparable": true,
+        "invent_weights": false
+      },
+      "reason": "With two conflicting valuation dimensions and no supplied preference ordering, weights, or thresholds, DP preserves the alternatives as incomparable and must not invent weights.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 12"
+      ]
+    },
+    {
+      "case_id": "M09",
+      "answers": {
+        "candidate_sufficient": false,
+        "valuation_applicable": false
+      },
+      "reason": "Sufficiency precedes valuation. An approximation cannot satisfy a target requiring exact integer output, and valuation cannot be applied to an insufficient candidate.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 5",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 11"
+      ]
+    },
+    {
+      "case_id": "M10",
+      "answers": {
+        "candidate_sufficient": false,
+        "scope_changed": true
+      },
+      "reason": "Narrowing the admissible input domain to nonnegative inputs changes the declared scope; an alternative is not sufficient if it alters the required input envelope.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 5",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 11"
+      ]
+    },
+    {
+      "case_id": "M11",
+      "answers": {
+        "unconditional_removal": false,
+        "preserve_qu": true
+      },
+      "reason": "Because support necessity varies across admissible QU realizations, DP must not pick a convenient realization; the unresolved structure is load-bearing and QU must be preserved.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 16"
+      ]
+    },
+    {
+      "case_id": "M12",
+      "answers": {
+        "substitution_sufficient": false,
+        "route_through_dts": true
+      },
+      "reason": "When the declared objective includes an intermediate signed transition obligation, paths reaching the same endpoint are not interchangeable if one omits that transition; the claim must be routed through DTS.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 17",
+        "extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md section 7"
+      ]
+    },
+    {
+      "case_id": "M13",
+      "answers": {
+        "implicit_assertion_admissible": true,
+        "authority_present": true
+      },
+      "reason": "The governing theory explicitly provides modus ponens / implication authority and premise A, so implicit support for B is exact and admissible under Core 0.19.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md section 3",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 2"
+      ]
+    },
+    {
+      "case_id": "M14",
+      "answers": {
+        "implicit_assertion_admissible": false,
+        "authority_missing": true
+      },
+      "reason": "A discovery search hint does not provide semantic authority. Absent governing rule authority permitting contraposition, the implicit assertion cannot be admitted.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md section 6.2",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 2"
+      ]
+    },
+    {
+      "case_id": "M15",
+      "answers": {
+        "nonessential_for_o1": true,
+        "load_bearing_for_o2": true,
+        "delete_semantically": false
+      },
+      "reason": "Sufficiency is objective-scoped: X is nonessential for O1 but load-bearing for O2, and must remain preserved in the semantic representation.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 1",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 3"
+      ]
+    },
+    {
+      "case_id": "M16",
+      "answers": {
+        "sufficient_without_x": true,
+        "prefer_retain_under_profile": true
+      },
+      "reason": "Removing X preserves exact correctness, making it nonessential for sufficiency. However, because X costs 2 units and avoids 20 units downstream, the valuation profile prefers retaining it.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 13"
+      ]
+    },
+    {
+      "case_id": "M17",
+      "answers": {
+        "sufficient_without_x": true,
+        "prefer_omit_under_profile": true
+      },
+      "reason": "Removing X preserves correctness. Under the supplied profile, X costs 15 units while avoiding only 3 downstream, giving it negative net value and leading the valuation profile to prefer omitting it.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 13"
+      ]
+    },
+    {
+      "case_id": "M18",
+      "answers": {
+        "trace_consumer_slice": true,
+        "y_load_bearing": false
+      },
+      "reason": "Sufficiency must be judged at the downstream objective scope by tracing the consumer slice. Because a bypass and exact closure establish the target without Y, Y is not load-bearing for the target.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 4",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 8"
+      ]
+    },
+    {
+      "case_id": "M19",
+      "answers": {
+        "reduction_sufficient": false,
+        "preserve_unique_information": true
+      },
+      "reason": "Branch C carries a unique required witness bit not derivable from A or B, so reducing the branch violates the target contract; the unique information must be preserved.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 5",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 21"
+      ]
+    },
+    {
+      "case_id": "M20",
+      "answers": {
+        "select_qu_realization": false,
+        "erase_dts_difference": false,
+        "dp_is_proof_authority": false
+      },
+      "reason": "DP 0.9 is discovery guidance, not proof authority. It cannot choose convenient QU realizations or erase load-bearing DTS transition differences to force a smaller support.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 0",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 16",
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md section 17"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "dp_0_9": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "preserved_semantic_structure": true,
+    "kept_sufficiency_before_valuation": true,
+    "did_not_invent_preferences": true,
+    "preserved_qu_when_load_bearing": true,
+    "preserved_dts_when_load_bearing": true,
+    "kept_dp_separate_from_proof_authority": true
+  }
+}
