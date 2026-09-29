@@ -88,21 +88,40 @@ freeze source interpretation + semantic scope + Source Semantic Census
 
 The system is deliberately **observation-first, primitive-first, and non-evasive**. Difficulty reducing a claim is not permission to delete it; an unexpected result is evidence before it is a diagnosis; and a successful discovery or experiment does not bypass semantic qualification.
 
-## Current research applications
+## Research programs and demonstrated applications
 
-The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
+IsoGraph is exercised both through domain applications and through research on the representation/discovery system itself. The complete maintained project index is [research/README.md](research/README.md).
 
-- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
-- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
-- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
+### Domain/application research
+
+- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, representation-relative support growth, and explicit non-resolution of P versus NP.
+- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, shortest-common-supersequence boundaries, witness-width growth, algorithmic reductions, and discrepancy-driven bug discovery in an idealized biochemical model.
+- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful proof decomposition, generator/closure separation, minimum-support analysis inside frozen deletion spaces, packaging-dependency discovery, and dimensional-equivalence analysis of a pinned proof corpus.
+- [Project Discovery](research/project-discovery/README.md) — cross-domain structural discovery controls including Ising↔lattice-gas, XOR↔GF(2), Newton↔Hamilton, and the Ising/MWC partial-correspondence study.
+- [Connect4 real-world Discovery Protocol evidence](qualification/REAL_WORLD_DISCOVERY_PROTOCOL_EVIDENCE_CONNECT4_2026-09-18.md) — a live external-repository campaign that exposed semantic-layer distinctions, evidence-lineage structure, falsified attractive quotient hypotheses, and correctly closed ordinary error without changing IsoGraph authority.
+
+### IsoGraph-family and research-method work
+
+- [Discovery-method research](research/discovery/README.md) — discrepancy adjudication, Minimum Sufficient Support / Valuation development, and IA-oriented discovery guidance behind later DP revisions.
+- [DTS research](research/dts/README.md) — detailed transition anatomy, Transition Isomorph controls, decomposition, QU projection, and interpretation barriers.
+- [NEI research](research/nei/README.md) — the design/correction history behind conservative natural/domain identity reasoning and the rejection of unsupported coarsening.
+- [Primitive-logic research](research/primitive-logic/README.md) — logic kernels, data constructors, finite transition computation, arithmetic, and relational-function reductions supporting primitive closure.
+- [Research publications](research/publications/README.md) — publication-facing results and revision history.
+- [Repository-reconciliation research](research/repository-reconciliation/README.md) — provenance-preserving analysis of surviving historical branches and superseded semantics.
+
+These projects are evidence and applications of the IsoGraph family. Their presence in the repository does not automatically promote their domain conclusions into IsoGraph semantic authority.
 
 ---
 
 ## Research publications
 
 - [Continuation-Support Reductions for Bounded Existential Computation](research/publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md) — Joshua Oshiro. Structural synthesis of established continuation equivalence, simulation/dominance, dead-support pruning, factorization, and accessibility results; possible synthesis-level contribution only. No P-vs-NP resolution or new lower-bound claim.
-- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
-- [2026-09-26 publications](research/publications/2026-09-26/)
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
+- [A Packaging Dependency in the Periodic Navier–Stokes Blowup Corollary](research/publications/2026-09-26/NAVIER_STOKES_PERIODIC_PACKAGING_DEPENDENCY_0_1.md) — Joshua Oshiro. Identifies finite energy as load-bearing in the current whole-space packaging path while not established as intrinsic to the periodic theorem target; proposes a weaker pre-periodic interface as an alternative factorization question.
+- [Unique Minimum Support in Two Frozen Navier–Stokes Proof Deletion Spaces](research/publications/2026-09-26/NAVIER_STOKES_UNIQUE_MINIMUM_DELETION_SPACES_0_1.md) — Joshua Oshiro. Strengthens two source-relative deletion-space results to unique minimum sufficient support inside their explicitly frozen finite candidate spaces, without claiming a globally shortest proof or factorization-independent minimum.
+- [Publication index](research/publications/README.md) — current publication-facing index, provenance boundary, and historical revisions.
+
+All listed papers are research publications, not automatic semantic-authority promotions.
 
 ---
 
