@@ -3,6 +3,8 @@ const path=require('path');
 const katex=require('katex');
 
 const ROOT=process.cwd();
+const D=String.fromCharCode(36);
+const DD=D+D;
 const exts=new Set(['.md','.markdown']);
 const errors=[];
 const stats={files:0,expressions:0,inline:0,display:0};
@@ -32,9 +34,9 @@ function walk(dir){
 function stripInlineCode(line){
   let out='';
   for(let i=0;i<line.length;){
-    if(line[i]!=='`'){ out+=line[i++]; continue; }
+    if(line.charCodeAt(i)!==96){ out+=line[i++]; continue; }
     let j=i;
-    while(j<line.length&&line[j]==='`') j++;
+    while(j<line.length&&line.charCodeAt(j)===96) j++;
     const fence=line.slice(i,j);
     const end=line.indexOf(fence,j);
     if(end<0){ out+=line.slice(i); break; }
@@ -54,22 +56,33 @@ function validate(expr,meta){
   }
 }
 
+function nextUnescaped(text,needle,start){
+  let at=start;
+  while(true){
+    at=text.indexOf(needle,at);
+    if(at<0) return -1;
+    if(at===0||text[at-1]!=='\\') return at;
+    at+=needle.length;
+  }
+}
+
 for(const file of walk(ROOT)){
   const rel=path.relative(ROOT,file).replaceAll(path.sep,'/');
   if(classification(rel)!=='mutable') continue;
   stats.files++;
   const lines=fs.readFileSync(file,'utf8').split(/\r?\n/);
-  let inFence=false,fenceChar=null;
+  let inFence=false;
+  let fenceChar=null;
   let display=null;
 
   for(let n=0;n<lines.length;n++){
     const raw=lines[n];
     const trimmed=raw.trim();
-    const fence=trimmed.match(/^(\`\`\`+|~~~+)/);
+    const fence=trimmed.match(/^(\x60\x60\x60+|~~~+)/);
     if(fence){
       const ch=fence[1][0];
-      if(!inFence){inFence=true;fenceChar=ch;}
-      else if(ch===fenceChar){inFence=false;fenceChar=null;}
+      if(!inFence){ inFence=true; fenceChar=ch; }
+      else if(ch===fenceChar){ inFence=false; fenceChar=null; }
       continue;
     }
     if(inFence) continue;
@@ -77,26 +90,27 @@ for(const file of walk(ROOT)){
     const line=stripInlineCode(raw);
 
     if(display){
-      const at=line.indexOf('$$');
+      const at=line.indexOf(DD);
       if(at>=0){
         display.parts.push(line.slice(0,at));
         validate(display.parts.join('\n'),{path:rel,line:display.line,kind:'display'});
+        const tail=line.slice(at+DD.length);
+        if(tail.trim()) errors.push({path:rel,line:n+1,kind:'delimiter',error:'text after closing display delimiter on same line',expr:tail});
         display=null;
-        const rest=line.slice(at+2);
-        if(rest.trim()) errors.push({path:rel,line:n+1,kind:'delimiter',error:'text after closing $$ on same line',expr:rest});
       }else{
         display.parts.push(line);
       }
       continue;
     }
 
-    const displayAt=line.indexOf('$$');
+    const displayAt=line.indexOf(DD);
     if(displayAt>=0){
-      const rest=line.slice(displayAt+2);
-      const close=rest.indexOf('$$');
+      const rest=line.slice(displayAt+DD.length);
+      const close=rest.indexOf(DD);
       if(close>=0){
         validate(rest.slice(0,close),{path:rel,line:n+1,kind:'display'});
-        if(rest.slice(close+2).trim()) errors.push({path:rel,line:n+1,kind:'delimiter',error:'text after closing $$ on same line',expr:rest.slice(close+2)});
+        const tail=rest.slice(close+DD.length);
+        if(tail.trim()) errors.push({path:rel,line:n+1,kind:'delimiter',error:'text after closing display delimiter on same line',expr:tail});
       }else{
         display={line:n+1,parts:[rest]};
       }
@@ -105,49 +119,23 @@ for(const file of walk(ROOT)){
 
     let i=0;
     while(i<line.length){
-      const open=line.indexOf('
-    }
-  }
-  if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
-}
-
-const report={stats,error_count:errors.length,errors};
-fs.mkdirSync('out',{recursive:true});
-fs.writeFileSync('out/doc-math-katex-report.json',JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify(report,null,2));
-if(errors.length) process.exitCode=1;
-,i);
+      const open=nextUnescaped(line,D,i);
       if(open<0) break;
-      if(open>0&&line[open-1]==='\\'){i=open+1;continue;}
-      let close=open+1;
-      while(true){
-        close=line.indexOf('
-    }
-  }
-  if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
-}
-
-const report={stats,error_count:errors.length,errors};
-fs.mkdirSync('out',{recursive:true});
-fs.writeFileSync('out/doc-math-katex-report.json',JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify(report,null,2));
-if(errors.length) process.exitCode=1;
-,close);
-        if(close<0) break;
-        if(close>0&&line[close-1]==='\\'){close++;continue;}
-        break;
-      }
+      const close=nextUnescaped(line,D,open+1);
       if(close<0){
-        // A lone dollar followed by a digit is ordinary currency, not math.
-        if(/[0-9]/.test(line[open+1]||'')){i=open+1;continue;}
-        errors.push({path:rel,line:n+1,kind:'delimiter',error:'unclosed inline $ delimiter',expr:line.slice(open)});
+        // Treat an unmatched numeric-leading marker as ordinary currency.
+        if(/[0-9]/.test(line[open+1]||'')){ i=open+1; continue; }
+        errors.push({path:rel,line:n+1,kind:'delimiter',error:'unclosed inline math delimiter',expr:line.slice(open)});
         break;
       }
       validate(line.slice(open+1,close),{path:rel,line:n+1,kind:'inline'});
       i=close+1;
     }
   }
-  if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
+
+  if(display){
+    errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed display-math block',expr:display.parts.join('\n')});
+  }
 }
 
 const report={stats,error_count:errors.length,errors};
