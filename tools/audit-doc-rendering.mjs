@@ -48,7 +48,7 @@ function stripInlineMath(line){
   let out=''; let i=0; let inMath=false;
   while(i<line.length){
     if(line[i]==='\\' && i+1<line.length){
-      out+=line.slice(i,i+2);
+      out+=inMath?'  ':line.slice(i,i+2);
       i+=2;
       continue;
     }
