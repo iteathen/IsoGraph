@@ -25,6 +25,11 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Validate mutable document math syntax
+        run: |
+          npm install --prefix /tmp/isograph-docmath katex@0.16.22 --no-save --ignore-scripts
+          NODE_PATH=/tmp/isograph-docmath/node_modules node tools/validate-doc-math-katex.cjs
+
       - name: Verify workflow expression YAML
         run: node tools/check-workflow-expression-yaml.mjs
 
