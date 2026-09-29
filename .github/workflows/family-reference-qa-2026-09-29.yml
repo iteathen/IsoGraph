@@ -1,0 +1,84 @@
+name: QA IsoGraph family reference 2026-09-29
+
+on:
+  push:
+    branches:
+      - qualification/family-cleanup-ei-20260929
+    paths:
+      - maintenance/FAMILY_REFERENCE_QA_2026-09-29.request
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Render current maintained DOCX
+        run: |
+          set -euo pipefail
+          mkdir -p out/family-reference/render
+          if command -v libreoffice >/dev/null 2>&1; then
+            OFFICE=libreoffice
+          elif command -v soffice >/dev/null 2>&1; then
+            OFFICE=soffice
+          else
+            sudo apt-get update
+            sudo apt-get install -y libreoffice-writer poppler-utils
+            OFFICE=libreoffice
+          fi
+          "$OFFICE" --headless --convert-to pdf --outdir out/family-reference IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+          PDF=out/family-reference/IsoGraph_Family_Reference_Joshua_Oshiro_2026.pdf
+          test -s "$PDF"
+          if ! command -v pdftoppm >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          pdftoppm -png -r 120 "$PDF" out/family-reference/render/page
+          unzip -p IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx word/document.xml > out/family-reference/document.xml
+          grep -F "Current Qualified Authority - 2026-09-29" out/family-reference/document.xml
+          grep -F "Experiment 056" out/family-reference/document.xml
+          PAGE_COUNT=$(pdfinfo "$PDF" | awk '/^Pages:/ {print $2}')
+          DOCX_SHA=$(sha256sum IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx | awk '{print $1}')
+          DOCX_BYTES=$(stat -c %s IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx)
+          {
+            echo "# Final Product Refresh — 2026-09-29"
+            echo
+            echo "**Status:** repository-root DOCX refreshed; deterministic render complete; visual QA artifact published"
+            echo "**Authority snapshot represented:** d242a183c142bd6e9b1f9240495972e30ad9f657"
+            echo "**DOCX:** IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx"
+            echo "**DOCX SHA-256:** $DOCX_SHA"
+            echo "**DOCX bytes:** $DOCX_BYTES"
+            echo "**Rendered pages:** $PAGE_COUNT"
+            echo "**QA workflow run:** $GITHUB_RUN_ID"
+            echo
+            echo "The accumulated reference routes the qualified Core through 0.20, QU 0.1, NEI 0.4, Discovery Protocols through 0.10, DTS 0.1, Experimental Inquiry 0.1, and Experiment 056 expanded-stack integration."
+            echo
+            echo "Repository semantic authority remains the exact versioned specifications, qualification records, and qualification/QUALIFIED_MODULES_2026-09-29.md."
+            echo
+            echo "Visual page QA is required before final merge. The ChatGPT Library mirror remains a separate publication projection."
+          } > maintenance/FINAL_PRODUCT_REFRESH_2026-09-29.md
+      - name: Upload QA render
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: family-reference-2026-09-29-qa
+          path: |
+            out/family-reference/IsoGraph_Family_Reference_Joshua_Oshiro_2026.pdf
+            out/family-reference/render/page-*.png
+          if-no-files-found: error
+          retention-days: 7
+      - name: Persist corrected refresh record
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add maintenance/FINAL_PRODUCT_REFRESH_2026-09-29.md
+          git commit -m "Record verified 2026-09-29 family-reference render"
+          git fetch origin qualification/family-cleanup-ei-20260929
+          git rebase origin/qualification/family-cleanup-ei-20260929
+          git push origin HEAD:qualification/family-cleanup-ei-20260929
