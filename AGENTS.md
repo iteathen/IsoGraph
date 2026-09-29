@@ -38,7 +38,8 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 
 Read:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
+- `qualification/QUALIFIED_MODULES_2026-09-28.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-26.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-25.md` — older historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-18.md` — older historical predecessor
@@ -47,18 +48,19 @@ The current manifest routes the exact qualified revisions of:
 
 - QU 0.1;
 - NEI 0.4;
-- Discovery Protocols 0.1–0.8 cumulative current module;
-- DTS 0.1.
+- Discovery Protocols 0.1–0.10 cumulative current module;
+- DTS 0.1;
+- Experimental Inquiry 0.1.
 
-The semantic files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
+The tested specification/module files intentionally retain their historical `_CANDIDATE` filenames because those exact bytes were tested. **Filename suffix is not qualification status.** Use the authority manifest and exact content hashes.
 
 Qualified extensions remain separately versioned dependencies and do not silently become Core.
 
-The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 stack directly qualified by Experiment 052; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`. Earlier integration records remain immutable predecessor evidence.
+The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack directly qualified by Experiment 056; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
 ### Successor status
 
-Core 0.18, Core 0.19, Core 0.20, Discovery Protocols through 0.8, and DTS 0.1 are qualified at their exact tested revisions. Experiment 052 directly qualifies the current full stack including Core 0.20 and DP 0.8 for its exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
+Core 0.18, Core 0.19, Core 0.20, Discovery Protocols through 0.10, DTS 0.1, and Experimental Inquiry 0.1 are qualified at their exact tested revisions. Experiment 056 directly qualifies the current expanded stack for its exercised dependency-closed scope. DTS profiles and Transition Structural Signatures remain separately versioned successor work.
 
 For DTS work read:
 
@@ -168,7 +170,7 @@ Current qualified NEI authority is:
 - `extensions/nei/NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md` — qualified NEI 0.4 semantics;
 - `extensions/nei/NEI_NATIVE_VOCAB_0_2.md` and `extensions/nei/NEI_VOCAB_0_2.isg` — qualified native vocabulary companion.
 
-Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-28.md`.
+Use the exact revision/hash recorded in `qualification/QUALIFIED_MODULES_2026-09-29.md`.
 
 NEI 0.4's governing discipline is:
 
@@ -190,7 +192,7 @@ Historical NEI 0.1 and NEI 0.2 remain immutable qualified evidence at their orig
 
 ## Discovery Protocols
 
-Discovery Protocols 0.1–0.8 are the current cumulative qualified discovery module:
+Discovery Protocols 0.1–0.10 are the current cumulative qualified discovery module:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_1_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_2_CANDIDATE.md`
@@ -200,19 +202,23 @@ Discovery Protocols 0.1–0.8 are the current cumulative qualified discovery mod
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md`
 
 DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
 DP 0.7 adds primitive-first derived structural views. High-level labels do not define structure; multiple derived views may coexist; recurrence/unfolding unknowns remain QU-bearing where load-bearing; exit does not imply termination; cycles do not automatically imply recursion; lossy derived views do not replace primitive support; exact higher-order correspondence descends back to primitive support; DTS-sensitive differences remain load-bearing; and structural correspondence does not imply NEI `SAME`.
 
-Current DP 0.8 qualified successor:
+Qualified DP 0.8 predecessor checkpoint:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
 - SHA-256: `74378de9618b655888a993901e620ca841ae47f3aa406dff1d2dcc92de15fa96`
 - cumulative qualification: `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md`
-- direct current-stack integration: Experiment 052, 16/16 PASS.
+- historical direct-stack integration: Experiment 052, 16/16 PASS.
 
-DP 0.8 strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. Its bookkeeping labels remain illustrative rather than a new semantic ontology. Current qualified execution is cumulative DP 0.1–0.8.
+DP 0.8 strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. Its bookkeeping labels remain illustrative rather than a new semantic ontology. DP 0.8 remains an immutable qualified predecessor checkpoint.
+
+DP 0.9 adds objective-scoped Minimum Sufficient Support / Valuation and is qualified by Experiment 053. DP 0.10 adds Experimental Warrants and is qualified by Experiment 054. Current qualified Discovery execution is cumulative DP 0.1–0.10.
 
 DP 0.7 qualification remains immutable predecessor evidence in:
 
@@ -220,7 +226,7 @@ DP 0.7 qualification remains immutable predecessor evidence in:
 - `experiments/028/EXPERIMENT_028_FINAL_QUALIFICATION_REVIEW.md`;
 - the completed three-positive-control campaign under `research/project-discovery/2026-09-25-dp07-three-positive-controls/`.
 
-The current full-stack routing is `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`; earlier Core-0.19 / DP-0.7 integration evidence remains historical and immutable.
+The current full-stack routing is `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`; the Core-0.20 / DP-0.8 and earlier integration records remain historical and immutable.
 
 Discovery Protocols provide ranked search guidance for candidate relations, common structure, factorizations, residuals, QUIs, transition correspondences, identity hypotheses, and derived views. **Discovery priority never supplies semantic proof authority.**
 
@@ -247,7 +253,7 @@ Core qualification remains revision-specific:
 
 Extension/module qualification is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
 
 The qualification campaign deliberately preserves failed runs:
 

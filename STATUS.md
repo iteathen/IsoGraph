@@ -25,20 +25,21 @@ This doctrine is **not semantic authority**. Versioned qualified specifications 
 
 Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18, Core 0.19, and Core 0.20 clarifications. Bare IDs remain **Semantic Identity (SI)** handles for representation-level addressing and referential identity. SI equality or inequality does not independently establish stronger natural/ontological identity.
 
-### Qualified semantic extensions/modules
+### Qualified extensions/modules
 
 Current qualified extension/module authority is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
 
-The 2026-09-26, 2026-09-25, and 2026-09-18 manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-28 manifest routes Core through 0.20, QU 0.1, NEI 0.4, DP 0.1–0.8, and DTS 0.1 at their exact qualified revisions. Experiment 052 directly qualifies the exact current composition including Core 0.20 and DP 0.8; see `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`. Earlier integration records remain immutable predecessor evidence.
+The 2026-09-28 and older manifests remain immutable historical authority for the revisions they recorded. The current 2026-09-29 manifest routes Core through 0.20, QU 0.1, NEI 0.4, DP 0.1–0.10, DTS 0.1, and Experimental Inquiry 0.1 at their exact qualified revisions. Experiment 056 directly qualifies the exact expanded composition; see `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`. Earlier integration records remain immutable predecessor evidence.
 
-Current semantic extensions/modules include:
+Current qualified extensions/modules include:
 
 - Quantifiable Unknown (QU) 0.1;
 - Natural Entropic Identity (NEI) 0.4;
-- Discovery Protocols 0.1 through 0.8 as one cumulative current module;
-- Detailed Transition System (DTS) 0.1.
+- Discovery Protocols 0.1 through 0.10 as one cumulative current module;
+- Detailed Transition System (DTS) 0.1;
+- Experimental Inquiry (EI) 0.1.
 
 The tested semantic files retain their historical `_CANDIDATE` filenames. Their current qualification status comes from the authority manifest and exact content hashes, not from the filename.
 
@@ -48,7 +49,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is qualified at its exact tested bytes by Experiment 026 and `qualification/DTS_0_1_QUALIFICATION.md`.
 
-The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The exact current expanded composition including Core 0.20, DTS 0.1, and DP 0.8 is directly integration-qualified for the exercised dependency-closed scope by Experiment 052.
+The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The exact current expanded composition including Core 0.20, DTS 0.1, DP 0.1–0.10, and EI 0.1 is directly integration-qualified for the exercised dependency-closed scope by Experiment 056.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
@@ -122,7 +123,7 @@ NEI 0.4 is therefore the current qualified NEI semantic extension at the exact h
 
 ## Discovery Protocol qualification
 
-Discovery Protocols 0.1–0.8 are now qualified as one cumulative current module.
+Discovery Protocols 0.1–0.10 are now qualified as one cumulative current module.
 
 - DP 0.1–0.7 retain their exact historical hashes/evidence.
 - DP 0.8 clue-preserving discrepancy adjudication is qualified at SHA-256:
@@ -165,15 +166,16 @@ The latest fully integration-qualified composition is revision-scoped to:
 Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20
 + QU 0.1
 + NEI 0.4
-+ DP 0.1–0.8
++ DP 0.1–0.10
 + DTS 0.1
++ EI 0.1
 ```
 
-Experiment 052 directly exercised the current stack:
+Experiment 056 directly exercised the current expanded stack:
 
 ```text
 formal disposition:       QUALIFIES
-workflow run:              36365347906
+workflow run:              36620811980
 case coverage:             16 / 16
 mismatches:                none
 all scoring guards:        true
@@ -182,7 +184,7 @@ all module assessments:    SUPPORTED
 
 Current authority record:
 
-- `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md`
+- `qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md`
 
 The Core-0.19 / DP-0.7 integrated stack remains immutable predecessor evidence. Integrated qualification establishes compatibility for the exercised composition; it is not a universal completeness claim.
 
@@ -195,7 +197,7 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 ## Immediate work
 
-The current qualified modular authority stack is recorded in `qualification/QUALIFIED_MODULES_2026-09-28.md`; the 2026-09-25 and 2026-09-18 manifests remain historical evidence.
+The current qualified modular authority stack is recorded in `qualification/QUALIFIED_MODULES_2026-09-29.md`; the 2026-09-28 and older manifests remain historical evidence.
 
 Current completed qualification checkpoints:
 
@@ -203,11 +205,12 @@ Current completed qualification checkpoints:
 2. Core 0.19 — qualified at SHA-256 `8db3f6554afb12d3f6de78789f771bb09484d27babd7fd98782cb92d704402c2`;
 3. Core 0.20 — qualified at SHA-256 `9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7`, Experiment 048, 18/18 fresh cases PASS;
 4. QU 0.1 / NEI 0.4 — qualified at their pinned current revisions;
-5. Discovery Protocols 0.1–0.8 — qualified cumulatively; DP 0.8 is pinned at SHA-256 `74378de9618b655888a993901e620ca841ae47f3aa406dff1d2dcc92de15fa96` by Experiments 050+051;
+5. Discovery Protocols 0.1–0.10 — qualified cumulatively; DP 0.9 is pinned at SHA-256 `4d6ed98288863ccd50e9cbccf2e626ff241aded3bd9fb534e0fb74ad147858ea` by Experiment 053, and DP 0.10 at SHA-256 `108f3998bba90aff6a386335aeb45fde663d4be0b32643a06e01fb039bff61ec` by Experiment 054;
 6. DTS 0.1 — `QUALIFIED`, Experiment 026;
-7. the Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.8 + DTS 0.1 composition is directly integration-qualified by Experiment 052, 16/16 PASS, formal `QUALIFIES`.
+7. Experimental Inquiry 0.1 — qualified at SHA-256 `b94262d7384603072d0e7a2657b84f6c427e7098cea051948702c367a440c666` by Experiment 055, 18/18 PASS;
+8. the Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 composition is directly integration-qualified by Experiment 056, 16/16 PASS, formal `QUALIFIES`.
 
-Core 0.20 is current Core authority and its direct full-stack integration burden is discharged at the exact revisions pinned by Experiment 052.
+Core 0.20 remains current Core authority; the current expanded full-stack integration burden is discharged at the exact revisions pinned by Experiment 056.
 
 Transition Structural Signatures and DTS profiles remain separately versioned successor research.
 

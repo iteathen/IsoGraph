@@ -1,0 +1,215 @@
+{
+  "cases": [
+    {
+      "case_id": "I01",
+      "answers": {
+        "warrant_issued": true,
+        "experiment_constructed": true,
+        "experimental_observation_is_truth": false
+      },
+      "reason": "DP 0.10 warrants experiment generation when represented reasoning is insufficient; EI 0.1 generates observations as evidence, not truth.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I02",
+      "answers": {
+        "warrant_issued": false,
+        "experiment_constructed": false
+      },
+      "reason": "DP 0.10 requires material unresolved demand; existing support already closes the question.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I03",
+      "answers": {
+        "select_qu_realization": false,
+        "use_qu_topology": true,
+        "preserve_qu_after_observation": true
+      },
+      "reason": "QU topology guides inquiry but EI must not choose a realization; QU semantics are preserved.",
+      "authority_used": [
+        "QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I04",
+      "answers": {
+        "open_world_reserve_present": true,
+        "encode_reserve_as_qu_realization": false
+      },
+      "reason": "Open-world model incompleteness is discovery metadata, not a QU realization.",
+      "authority_used": [
+        "QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I05",
+      "answers": {
+        "structural_alignment_allowed": true,
+        "posthoc_confirmation_established": false,
+        "route_dts": true
+      },
+      "reason": "DTS allows structural alignment; post-hoc discovery is a lead, not confirmation.",
+      "authority_used": [
+        "DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I06",
+      "answers": {
+        "preserve_adaptive_lineage": true,
+        "reuse_selected_data_as_untouched_confirmation": false
+      },
+      "reason": "Adaptive evidence lineage must be preserved; it cannot be reused as untouched confirmation.",
+      "authority_used": [
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I07",
+      "answers": {
+        "reopen_scope": true,
+        "force_into_existing_model": false,
+        "new_warrant_possible": true
+      },
+      "reason": "Model-breaking observations require scope reopening, not patching into existing models.",
+      "authority_used": [
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I08",
+      "answers": {
+        "experiment_a_valid": true,
+        "experiment_b_valid": true,
+        "valuation_after_validity": true,
+        "prefer_lower_cost": true
+      },
+      "reason": "Valuation is applied only after sufficiency/validity is established.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I09",
+      "answers": {
+        "cheap_invalid_experiment_selected": false,
+        "validity_before_valuation": true
+      },
+      "reason": "Validity is a hard constraint; valuation cannot override invalidity.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I10",
+      "answers": {
+        "nei_same_established_by_ei": false,
+        "route_identity_to_nei": true
+      },
+      "reason": "EI evidence is not NEI truth; identity classification routes to NEI.",
+      "authority_used": [
+        "NATURAL_ENTROPIC_IDENTITY_SPEC_0_4_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I11",
+      "answers": {
+        "ei_admits_implicit_assertion": false,
+        "route_candidate_assertion_to_core": true
+      },
+      "reason": "EI generates evidence; Core 0.19 admits implicit assertions.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I12",
+      "answers": {
+        "broad_parent_falsified": false,
+        "narrow_candidate_falsified": true,
+        "preserve_uncovered_scope": true
+      },
+      "reason": "Negative results are limited to tested scope; broader parent clues remain live.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I13",
+      "answers": {
+        "nonessential_for_objective": true,
+        "delete_semantic_structure": false,
+        "valuation_may_retain": true
+      },
+      "reason": "Nonessential for sufficiency does not mean globally irrelevant; valuation may retain it.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I14",
+      "answers": {
+        "dp09_closes_question": true,
+        "issue_experimental_warrant": false,
+        "run_experiment": false
+      },
+      "reason": "If DP 0.9 closes the question, no warrant is justified.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md",
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I15",
+      "answers": {
+        "record_external_generator_provenance": true,
+        "generator_output_universal_truth": false
+      },
+      "reason": "External generator output is evidence, not universal truth.",
+      "authority_used": [
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "I16",
+      "answers": {
+        "cycle_preserves_authority_boundaries": true,
+        "ei_is_proof_authority": false,
+        "dp_is_proof_authority": false
+      },
+      "reason": "Discovery and EI are not proof authorities; they preserve boundaries.",
+      "authority_used": [
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_20": "SUPPORTED",
+    "qu_0_1": "SUPPORTED",
+    "nei_0_4": "SUPPORTED",
+    "dts_0_1": "SUPPORTED",
+    "dp_0_9": "SUPPORTED",
+    "dp_0_10": "SUPPORTED",
+    "ei_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "preserved_module_ownership": true,
+    "preserved_qu_and_open_world_distinction": true,
+    "preserved_adaptive_evidence_lineage": true,
+    "limited_negative_results_to_coverage": true,
+    "kept_experiment_evidence_separate_from_truth": true
+  }
+}

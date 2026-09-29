@@ -1,0 +1,163 @@
+{
+  "experiment": "053",
+  "required_case_ids": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M17",
+    "M18",
+    "M19",
+    "M20"
+  ],
+  "cases": {
+    "M01": {
+      "answers": {
+        "residual_derivable": true,
+        "preserve_semantic_class": true,
+        "independent_detector_required": false
+      }
+    },
+    "M02": {
+      "answers": {
+        "residual_derivable": false,
+        "keep_unique_test": true
+      }
+    },
+    "M03": {
+      "answers": {
+        "x_load_bearing": false,
+        "fallback_preserves_target": true,
+        "delete_x_from_semantic_graph": false
+      }
+    },
+    "M04": {
+      "answers": {
+        "x_load_bearing": true,
+        "reduction_sufficient": false
+      }
+    },
+    "M05": {
+      "answers": {
+        "minimal_established": true,
+        "minimum_established": false,
+        "candidate_space_covered": false
+      }
+    },
+    "M06": {
+      "answers": {
+        "both_sufficient": true,
+        "prefer_b": true,
+        "universal_fewer_transitions_rule": false
+      }
+    },
+    "M07": {
+      "answers": {
+        "both_sufficient": true,
+        "prefer_b": true,
+        "prefer_fewer_transitions": false
+      }
+    },
+    "M08": {
+      "answers": {
+        "incomparable": true,
+        "invent_weights": false
+      }
+    },
+    "M09": {
+      "answers": {
+        "candidate_sufficient": false,
+        "valuation_applicable": false
+      }
+    },
+    "M10": {
+      "answers": {
+        "candidate_sufficient": false,
+        "scope_changed": true
+      }
+    },
+    "M11": {
+      "answers": {
+        "unconditional_removal": false,
+        "preserve_qu": true
+      }
+    },
+    "M12": {
+      "answers": {
+        "substitution_sufficient": false,
+        "route_through_dts": true
+      }
+    },
+    "M13": {
+      "answers": {
+        "implicit_assertion_admissible": true,
+        "authority_present": true
+      }
+    },
+    "M14": {
+      "answers": {
+        "implicit_assertion_admissible": false,
+        "authority_missing": true
+      }
+    },
+    "M15": {
+      "answers": {
+        "nonessential_for_o1": true,
+        "load_bearing_for_o2": true,
+        "delete_semantically": false
+      }
+    },
+    "M16": {
+      "answers": {
+        "sufficient_without_x": true,
+        "prefer_retain_under_profile": true
+      }
+    },
+    "M17": {
+      "answers": {
+        "sufficient_without_x": true,
+        "prefer_omit_under_profile": true
+      }
+    },
+    "M18": {
+      "answers": {
+        "trace_consumer_slice": true,
+        "y_load_bearing": false
+      }
+    },
+    "M19": {
+      "answers": {
+        "reduction_sufficient": false,
+        "preserve_unique_information": true
+      }
+    },
+    "M20": {
+      "answers": {
+        "select_qu_realization": false,
+        "erase_dts_difference": false,
+        "dp_is_proof_authority": false
+      }
+    }
+  },
+  "required_self_audit": {
+    "used_only_packet": true,
+    "preserved_semantic_structure": true,
+    "kept_sufficiency_before_valuation": true,
+    "did_not_invent_preferences": true,
+    "preserved_qu_when_load_bearing": true,
+    "preserved_dts_when_load_bearing": true,
+    "kept_dp_separate_from_proof_authority": true
+  }
+}

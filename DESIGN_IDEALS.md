@@ -2,7 +2,7 @@
 
 **Role:** explanatory design doctrine and research posture  
 **Semantic authority:** none by itself  
-**Current semantic authority:** see `STATUS.md` and `qualification/QUALIFIED_MODULES_2026-09-26.md`
+**Current semantic authority:** see `STATUS.md` and `qualification/QUALIFIED_MODULES_2026-09-29.md`
 
 This document explains the design ideals that guide IsoGraph research, specification work, qualification, and interpretation.
 

@@ -1,0 +1,226 @@
+{
+  "cases": [
+    {
+      "case_id": "Q01",
+      "answers": {
+        "construct_experiment": false,
+        "warrant_required": true
+      },
+      "reason": "EI 0.1 requires an Experimental Warrant; without a warrant, no experiment can be constructed.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md",
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q02",
+      "answers": {
+        "discover_scope": true,
+        "assume_scope_complete": false,
+        "preserve_frontier": true
+      },
+      "reason": "EI 0.1 must actively discover scope and preserve the frontier rather than assuming completeness.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q03",
+      "answers": {
+        "use_narrow_scope": true,
+        "narrowing_supported": true
+      },
+      "reason": "Narrowing is permitted when supported by represented evidence and conservation relations.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q04",
+      "answers": {
+        "test_interaction": true,
+        "collapse_to_single_dimension": false
+      },
+      "reason": "Interactions must be tested as such; collapsing them ignores the represented dependency structure.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q05",
+      "answers": {
+        "introduce_gap_dimension": true,
+        "rationale_required": true
+      },
+      "reason": "Gap-directed invention is allowed if a recoverable rationale exists.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q06",
+      "answers": {
+        "select_qu_realization": false,
+        "use_qu_topology": true,
+        "preserve_qu": true
+      },
+      "reason": "EI must not select a QU realization; it must use the topology while preserving the QU semantics.",
+      "authority_used": [
+        "extensions/qu/QUANTIFIABLE_UNKNOWN_SPEC_0_1_CANDIDATE.md",
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q07",
+      "answers": {
+        "retain_open_world_reserve": true,
+        "encode_as_unconstrained_qu_realization": false
+      },
+      "reason": "Open-world incompleteness is discovery metadata and must not be encoded as a QU realization.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q08",
+      "answers": {
+        "record_targeted_channel": true,
+        "record_open_channel": true
+      },
+      "reason": "EI must record both targeted and open observation channels.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q09",
+      "answers": {
+        "preserve_unexpected_output": true,
+        "force_into_expected_category": false,
+        "retain_reconstructable_provenance": true
+      },
+      "reason": "Unexpected structure must be preserved, not forced into existing categories.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q10",
+      "answers": {
+        "reopen_scope": true,
+        "declare_observation_defect": false,
+        "working_model_inadequate": true
+      },
+      "reason": "Model breaks require reopening scope, not declaring the observation a defect.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q11",
+      "answers": {
+        "record_adaptive_lineage": true,
+        "reuse_as_untouched_confirmation": false
+      },
+      "reason": "Adaptive evidence cannot be reused as untouched confirmation.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q12",
+      "answers": {
+        "preserve_posthoc_status": true,
+        "fresh_confirmation_needed": true
+      },
+      "reason": "Post-hoc alignments are discovery leads and require fresh confirmation for general claims.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q13",
+      "answers": {
+        "align_structural_event": true,
+        "require_equal_literal_depth": false,
+        "route_dts": true
+      },
+      "reason": "Structural alignment is preferred over literal depth; DTS owns transition semantics.",
+      "authority_used": [
+        "extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md",
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q14",
+      "answers": {
+        "falsify_parent_clue": false,
+        "falsify_tested_candidate": true,
+        "preserve_uncovered_scope": true
+      },
+      "reason": "Negative results are limited to the tested scope.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q15",
+      "answers": {
+        "record_generator_revision": true,
+        "generator_output_is_automatic_truth": false
+      },
+      "reason": "Simulator output is evidence, not domain truth.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q16",
+      "answers": {
+        "continue_random_sweep": false,
+        "stop_or_defer": true
+      },
+      "reason": "Random sweeps without rationale are prohibited; stop or defer.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q17",
+      "answers": {
+        "apply_valuation_before_validity": false,
+        "apply_valuation_after_validity": true,
+        "invent_weights": false
+      },
+      "reason": "Valuation applies only after sufficiency/validity is established.",
+      "authority_used": [
+        "extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md"
+      ]
+    },
+    {
+      "case_id": "Q18",
+      "answers": {
+        "ei_admits_truth": false,
+        "return_evidence_with_provenance": true,
+        "route_to_authority_owners": true
+      },
+      "reason": "EI returns evidence; truth is admitted by the relevant authority owners.",
+      "authority_used": [
+        "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "ei_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "required_warrant": true,
+    "preserved_scope_incompleteness": true,
+    "preserved_qu_semantics": true,
+    "preserved_unexpected_observations": true,
+    "preserved_adaptive_lineage": true,
+    "limited_negative_results_to_coverage": true,
+    "returned_evidence_not_truth": true
+  }
+}
