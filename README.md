@@ -1223,35 +1223,42 @@ Historical evidence remains interpreted under the revision at which it was produ
 
 # Constitutional discipline
 
-The current Core summarizes its intended discipline approximately as:
+The current family summarizes its intended discipline approximately as:
 
 ~~~text
-preserve source semantics and unresolved ambiguity
--> independently decompose/extract as far as justified
--> preserve alternative exact factorizations
--> freeze roles/ports/relation signature/policy before pairing
--> normalize representation only
--> retrieve candidates through a structural-only path
--> compare under explicit target layer + view + transformation authority
--> state relation kind independently
--> emit native independently verifiable mapping/core/residual/gluing witnesses
--> keep source-local residual accounting separate from pairwise accounting
--> preserve negative constraints, multiplicity, and distinct mappings
--> recognize or induce classes only from verified structure
--> validate reusable classes on held-out/adversarial cases
--> retain useful labels afterward with provenance
+freeze source interpretation + semantic scope + Source Semantic Census
+-> preserve every in-scope load-bearing source obligation
+-> primitive-render every reducible semantic operator
+-> preserve genuine unknowns / alternatives through qualified QU where needed
+-> preserve residuals and alternative exact factorizations
+-> derive IAs recursively from represented support
+-> invalidate and reopen IA closure when its frozen inputs change
+-> compare under explicit scope / relation / transformation authority
+-> use DP for search, discrepancy adjudication, MSS/valuation, and experimental warrant
+-> use EI only under a warrant to generate observations
+-> return experimental output as evidence, not admitted truth
+-> qualify soundness, coverage, reconstruction, scope integrity, and authority routing separately
+-> retain useful high-level labels only with reversible primitive support
 ~~~
 
-And, until qualification says otherwise:
+Current barriers include:
 
 ~~~text
 surface != primitive
 occurrence != Semantic Identity
+missing definition != QU
+qualified QU != opaque semantic leaf
+primitive premises != primitive assertion body
+schema closure != exhaustive materialization
+schema closure != termination proof
 factorization != normalization
 one factorization != canonical factorization
 semantic equivalence != structural isomorphism
 retrieval hint != evidence
-rule existence != activation
+warrant to experiment != support for a hypothesis
+experiment != proof
+observation != admitted assertion
+soundness != coverage
 one witness != complete witness family
 unknown remains unknown
 revisions are immutable evidence
@@ -1267,7 +1274,13 @@ They exist because collapsing those distinctions creates exactly the false corre
 
 ~~~text
 CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md
-    current qualified semantic authority
+    qualified Core base
+
+CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md
+CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md
+CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md
+CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md
+    exact qualified cumulative Core clarifications; use the current authority manifest for routing
 
 STATUS.md
     current authority / evidence status
@@ -1292,6 +1305,9 @@ extensions/discovery/
 
 extensions/dts/
     qualified Detailed Transition System extension plus separately versioned profiles
+
+extensions/experimental/
+    qualified Experimental Inquiry module; observations/evidence only, not truth authority
 
 qualification/
     qualification infrastructure and contracts
