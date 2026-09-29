@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "case_id": "R01",
+      "answers": {
+        "core_0_21_itself_owns_experimental_warrant_authority": false,
+        "dp_0_10_owns_experimental_warrant_authority": true,
+        "ei_consumes_warrant_without_owning_warrant_authority": true,
+        "qu_dts_nei_ownership_remains_separate": true,
+        "correct_integrated_behavior_preserves_module_boundaries": true
+      },
+      "reason": "DP 0.10 explicitly defines the Experimental Warrant as its discovery record, while Core 0.21 focuses on rendering conservation and schema closure. EI 0.1 consumes warrants as input, and QU, DTS, and NEI maintain distinct semantic domains.",
+      "authority_used": [
+        "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+        "DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md",
+        "EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md",
+        "CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md"
+      ]
+    }
+  ],
+  "module_assessment": {
+    "core_0_21": "SUPPORTED",
+    "dp_0_10": "SUPPORTED",
+    "ei_0_1": "SUPPORTED"
+  },
+  "self_audit": {
+    "used_only_packet": true,
+    "interpreted_question_as_module_ownership": true,
+    "preserved_module_boundaries": true
+  }
+}
