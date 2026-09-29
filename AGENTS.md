@@ -39,7 +39,7 @@ Current effective Core authority is Core 0.17 plus the exact qualified Core 0.18
 Read:
 
 - `qualification/QUALIFIED_MODULES_2026-09-29.md`
-- `qualification/QUALIFIED_MODULES_2026-09-29.md` — historical predecessor
+- `qualification/QUALIFIED_MODULES_2026-09-28.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-26.md` — historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-25.md` — older historical predecessor
 - `qualification/QUALIFIED_MODULES_2026-09-18.md` — older historical predecessor
@@ -202,19 +202,23 @@ Discovery Protocols 0.1–0.10 are the current cumulative qualified discovery mo
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_6_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_7_CANDIDATE.md`
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md`
+- `extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md`
 
 DP 0.5 adds observation-first discrepancy handling and separation of qualification from discovery disposition. DP 0.6 routes natural/domain identity conclusions through current qualified NEI 0.4 and uses QU 0.1 only when unresolved structure is load-bearing.
 
 DP 0.7 adds primitive-first derived structural views. High-level labels do not define structure; multiple derived views may coexist; recurrence/unfolding unknowns remain QU-bearing where load-bearing; exit does not imply termination; cycles do not automatically imply recursion; lossy derived views do not replace primitive support; exact higher-order correspondence descends back to primitive support; DTS-sensitive differences remain load-bearing; and structural correspondence does not imply NEI `SAME`.
 
-Current DP 0.8 qualified successor:
+Qualified DP 0.8 predecessor checkpoint:
 
 - `extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md`
 - SHA-256: `74378de9618b655888a993901e620ca841ae47f3aa406dff1d2dcc92de15fa96`
 - cumulative qualification: `qualification/DISCOVERY_PROTOCOLS_0_1_TO_0_8_QUALIFICATION_REVIEW.md`
 - direct current-stack integration: Experiment 052, 16/16 PASS.
 
-DP 0.8 strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. Its bookkeeping labels remain illustrative rather than a new semantic ontology. Current qualified execution is cumulative DP 0.1–0.8.
+DP 0.8 strengthens discrepancy handling with clue-preserving repair, unresolved discrepancy ownership, repair-invariance testing, and separation of faithful representation from correctness of the represented reference. Its bookkeeping labels remain illustrative rather than a new semantic ontology. DP 0.8 remains an immutable qualified predecessor checkpoint.
+
+DP 0.9 adds objective-scoped Minimum Sufficient Support / Valuation and is qualified by Experiment 053. DP 0.10 adds Experimental Warrants and is qualified by Experiment 054. Current qualified Discovery execution is cumulative DP 0.1–0.10.
 
 DP 0.7 qualification remains immutable predecessor evidence in:
 
@@ -249,7 +253,7 @@ Core qualification remains revision-specific:
 
 Extension/module qualification is recorded in:
 
-- `qualification/QUALIFIED_MODULES_2026-09-28.md`
+- `qualification/QUALIFIED_MODULES_2026-09-29.md`
 
 The qualification campaign deliberately preserves failed runs:
 
