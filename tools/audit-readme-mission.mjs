@@ -15,10 +15,11 @@ const frontDoors=[
   'evidence/external/README.md',
   'extensions/dts/profiles/README.md',
   'historical/branch-archive/README.md',
-  'research/glycan-cleavage/2026-09-27/README.md',
+  'research/README.md',
+  'research/glycan-cleavage/README.md',
   'research/navier-stokes-proof/README.md',
   'research/p-vs-np/README.md',
-  'research/publications/2026-09-27/README.md'
+  'research/publications/README.md'
 ];
 for(const path of frontDoors){
   if(!fs.existsSync(path)||!fs.statSync(path).size) failures.push(path+': missing/empty README front door');
@@ -32,14 +33,30 @@ must('README.md','missing definition != QU');
 must('README.md','schema closure != exhaustive materialization');
 must('README.md','experiment != proof');
 must('README.md','QUALIFIED cumulative rendering-conservation / Schema-Closure / closure-invalidation clarification');
+must('README.md','## Research programs and demonstrated applications');
+must('README.md','## 19. Implicit consequences can be generated recursively instead of guessed');
+must('README.md','## 21. Large iterative and recursive families can be represented without exhaustive unrolling');
+must('README.md','## 22. Transition anatomy can be compared independently of endpoints');
+must('README.md','## 25. The system can discover minimum sufficient support');
+must('README.md','## 27. IsoGraph can identify when reasoning should stop and new evidence should be generated');
+must('README.md','## 28. Experiments can be represented as provisional, revisable structural inquiries');
+must('README.md','## 33. Cross-domain discovery can recover exact correspondences while rejecting tempting false ones');
+must('README.md','A Packaging Dependency in the Periodic Navier–Stokes Blowup Corollary');
+must('README.md','Unique Minimum Support in Two Frozen Navier–Stokes Proof Deletion Spaces');
+
+const researchIndex=fs.readFileSync('research/README.md','utf8');
+for(const match of researchIndex.matchAll(/\(([^()\/]+)\/README\.md\)/g)){
+  const project=match[1];
+  must('README.md','research/'+project+'/README.md');
+}
 
 mustNot('README.md','## Active research lead — P versus NP primitive-logic campaign');
 mustNot('README.md','The strongest current core candidates include:');
 mustNot('README.md','current qualified family authority is DP 0.1–0.8');
 mustNot('README.md','current qualified family authority is DP 0.1–0.7');
 
-must('research/glycan-cleavage/2026-09-27/README.md','## Current-family continuation boundary');
-must('research/glycan-cleavage/2026-09-27/README.md','Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1');
+must('research/glycan-cleavage/README.md','## Current-family continuation');
+must('research/glycan-cleavage/README.md','Core 0.21');
 mustNot('research/glycan-cleavage/2026-09-27/README.md','DP 0.8 is now the current cumulative qualified discovery successor');
 
 must('research/navier-stokes-proof/README.md','**Historical rendering dependencies used by this research artifact:**');
@@ -54,7 +71,9 @@ must('research/p-vs-np/README.md','P = NP:  OPEN');
 must('research/p-vs-np/README.md','P != NP: OPEN');
 mustNot('research/p-vs-np/README.md','current qualified family authority is DP 0.1–0.8');
 
-must('research/publications/2026-09-27/README.md','They do **not** define current IsoGraph semantic authority merely by being published.');
+must('research/publications/README.md','publication does not create semantic authority');
+must('research/publications/README.md','A Packaging Dependency in the Periodic Navier–Stokes Blowup Corollary');
+must('research/publications/README.md','Unique Minimum Support in Two Frozen Navier–Stokes Proof Deletion Spaces');
 must('evidence/external/README.md','None of those controls turns project-controlled qualification into external validation.');
 must('extensions/dts/profiles/README.md','Core Schema Closure may finitely close generation semantics, while DTS still owns any load-bearing transition anatomy/order distinction.');
 must('historical/branch-archive/README.md','This archive is now the durable inert record of their unique evidence.');
