@@ -50,32 +50,51 @@ IsoGraph is currently in **active research incubation**. Its qualified authority
 
 Core remains distinct from separately versioned qualified extensions.
 
-## Active research lead — P versus NP primitive-logic campaign
+## Current project mission
 
-The current P-vs-NP campaign has a corrected primitive authority, NEI/QU discipline, and 357 machine-indexed admitted implicit assertions. Its most distinctive current output is a **continuation-support reduction synthesis**:
+The current IsoGraph family is aimed at a repeatable reasoning loop:
 
 ~~~text
-empty        -> delete
-equal        -> merge
-included     -> dominance prune
-live + incomparable
-             -> exact factorization / sharing
-objective-only
-             -> exact aggregate image
+freeze source interpretation + semantic scope + Source Semantic Census
+
+-> render every load-bearing in-scope obligation
+   down to primitive logic / exact raw incidence
+   without silently shrinking the target
+
+-> preserve residuals and genuine structured unknowns
+
+-> generate and validate implicit assertions recursively
+
+-> if deeper reduction, scope, QU, authority, or inference-profile state changes:
+       invalidate the old current IA fixed point
+       reopen IA closure
+
+-> use Discovery Protocol to search for structure,
+   minimum sufficient support, useful valuations,
+   falsifiers, and unresolved evidence needs
+
+-> when existing represented evidence is insufficient
+   but experimentation is justified:
+       issue a DP 0.10 Experimental Warrant
+
+-> use Experimental Inquiry to generate new observations
+
+-> return those observations as evidence,
+   not as truth by fiat
+
+-> admit conclusions only through the authority
+   that actually owns them
 ~~~
 
-A second campaign-specific connector uses **sound negative evidence to remove dead support before simulation/dominance**, then sends the remaining all-live incomparable support to factorization/aggregation.
+The system is deliberately **observation-first, primitive-first, and non-evasive**. Difficulty reducing a claim is not permission to delete it; an unexpected result is evidence before it is a diagnosis; and a successful discovery or experiment does not bypass semantic qualification.
 
-These are **new to the current IsoGraph campaign / possible synthesis novelty**, not claimed externally novel theorems. Targeted prior-art review found established precedents for the individual ingredients.
+## Current research applications
 
-Start here:
+The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
 
-- [P-vs-NP research front page](research/p-vs-np/README.md)
-- [Current P-vs-NP authority](research/p-vs-np/2026-09-27/P_VS_NP_CURRENT_AUTHORITY_0_4.md)
-- [Re-applied Discovery Protocol result](research/p-vs-np/2026-09-27/P_VS_NP_DP07_REAPPLY_0_1.md)
-- [Broad continuation-support novelty review](research/p-vs-np/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_BROAD_NOVELTY_REVIEW_0_1.md)
-
-Current theorem status remains: **P = NP OPEN; P != NP OPEN.**
+- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
+- [Glycan cleavage research](research/glycan-cleavage/2026-09-27/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
+- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
 
 ---
 
