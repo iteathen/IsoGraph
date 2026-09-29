@@ -25,7 +25,7 @@ represent faithfully
 -> apply an explicit valuation profile if selection is desired
 ```
 
-All DP 0.1–0.7 behavior remains in force.
+All DP 0.1–0.8 behavior remains in force.
 
 ---
 
