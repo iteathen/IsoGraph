@@ -1,0 +1,48 @@
+name: Retire superseded family-reference layout branch
+
+on:
+  push:
+    branches:
+      - qualification/core021-rendering-conservation-20260929
+    paths:
+      - maintenance/RETIRE_FAMILY_REFERENCE_LAYOUT_BRANCH.request
+
+permissions:
+  contents: write
+
+jobs:
+  retire:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Verify retained refs and retire superseded layout branch
+        run: |
+          set -euo pipefail
+          keep=(
+            "main"
+            "archive/core-0.19-qualification-2026-09-26"
+            "work/navier-stokes-proof-isograph-20260921"
+            "qualification/core021-rendering-conservation-20260929"
+          )
+          for b in "${keep[@]}"; do
+            git ls-remote --exit-code --heads origin "$b" >/dev/null || {
+              echo "required retained branch missing: $b" >&2
+              exit 1
+            }
+          done
+          target="fix/family-reference-blank-page-20260929"
+          expected="c1c2f62a5198158d9f0cb7a0d79d8b10c7315970"
+          actual=$(git ls-remote --heads origin "$target" | awk '{print $1}')
+          if [ -n "$actual" ]; then
+            test "$actual" = "$expected" || {
+              echo "layout-fix branch moved: expected $expected got $actual" >&2
+              exit 1
+            }
+            git push origin --delete "$target"
+          fi
+          if git ls-remote --exit-code --heads origin "$target" >/dev/null; then
+            echo "superseded layout branch still present" >&2
+            exit 1
+          fi
