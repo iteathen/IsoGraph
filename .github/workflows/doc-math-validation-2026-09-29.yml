@@ -8,7 +8,7 @@ on:
       - maintenance/DOC_MATH_VALIDATION_2026-09-29.request
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -27,3 +27,19 @@ jobs:
         env:
           NODE_PATH: /tmp/isograph-docmath/node_modules
         run: node tools/validate-doc-math-katex.cjs
+
+      - name: Persist validation report
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/doc-math-katex-report.json || exit 0
+          cp out/doc-math-katex-report.json maintenance/DOC_MATH_VALIDATION_REPORT_2026-09-29.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add maintenance/DOC_MATH_VALIDATION_REPORT_2026-09-29.json
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: record mutable document math validation"
+            git fetch origin fix/document-math-rendering-20260929
+            git rebase origin/fix/document-math-rendering-20260929
+            git push origin HEAD:fix/document-math-rendering-20260929
+          fi
