@@ -25,6 +25,14 @@ jobs:
       - name: Verify mutable documentation rendering
         run: node tools/audit-doc-rendering.mjs --enforce-mutable
 
+      - name: Inventory README surfaces for alignment review
+        run: |
+          echo "README_INVENTORY_BEGIN"
+          find . -type f \( -iname 'README.md' -o -iname 'README*.md' \) \
+            ! -path './.git/*' ! -path './out/*' | sed 's#^./##' | sort
+          echo "README_INVENTORY_END"
+
+
       - name: Verify mutable document math structure
         run: node tools/check-doc-math-structure.mjs
 
