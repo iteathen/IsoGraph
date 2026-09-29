@@ -28,6 +28,13 @@ jobs:
       - name: Verify README mission alignment
         run: node tools/audit-readme-mission.mjs
 
+      - name: Inventory research root for governance design
+        run: |
+          echo "RESEARCH_ROOT_BEGIN"
+          find research -maxdepth 2 -mindepth 1 -printf '%y %p\n' | sort
+          echo "RESEARCH_ROOT_END"
+
+
 
 
       - name: Verify mutable document math structure
