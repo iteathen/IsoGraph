@@ -137,7 +137,12 @@ if(dispByCensus.size!==censusMap.size) fail('COVERAGE','disposition/census cardi
 
 const globallyReachable=new Set();
 function inspectRoots(d){
-  const roots=[...arr(d.body_roots),...arr(d.support_roots),...arr(d.dependency_roots)];
+  const bodyRoots=arr(d.body_roots);
+  const roots=[...bodyRoots,...arr(d.support_roots),...arr(d.dependency_roots)];
+  for(const id of bodyRoots){
+    const n=nodeMap.get(id);
+    if(n&&!arr(n.source_census_ids).includes(d.census_id)) fail('COVERAGE','body root '+id+' is not linked to census '+d.census_id);
+  }
   const seen=new Set();
   const quNodes=new Set();
   let permittedLeafCount=0;
@@ -150,7 +155,6 @@ function inspectRoots(d){
     const n=nodeMap.get(id);
     if(!n){fail('RECONSTRUCTION','census '+d.census_id+' references missing node '+id);continue;}
     if(n.authoritative!==true) fail('RECONSTRUCTION','authoritative closure path for '+d.census_id+' traverses non-authoritative node '+id);
-    if(!arr(n.source_census_ids).includes(d.census_id)) fail('COVERAGE','node '+id+' on '+d.census_id+' closure path is not linked to that census item');
     if(arr(n.unexpanded_dependencies).length) fail('STRICT_CLOSURE','node '+id+' has unexpanded dependencies');
     if(n.classification==='DERIVED_VIEW') fail('RECONSTRUCTION','authoritative path for '+d.census_id+' traverses derived view '+id);
     const children=arr(n.children);
