@@ -65,7 +65,8 @@ function stripInlineMath(line){
   return out;
 }
 
-const DISPLAY='
+const DISPLAY=String.fromCharCode(36,36);
+const texCommand=/\\[A-Za-z]+\*?/;
 const mojibake=/(?:Ã.|Â.|â€|â€™|â€œ|â€�|â†|â‰|ï»¿)/;
 const allFiles=walk(ROOT);
 
