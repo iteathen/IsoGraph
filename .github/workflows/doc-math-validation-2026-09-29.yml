@@ -1,0 +1,29 @@
+name: One-shot mutable document math validation
+
+on:
+  push:
+    branches:
+      - fix/document-math-rendering-20260929
+    paths:
+      - maintenance/DOC_MATH_VALIDATION_2026-09-29.request
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Install isolated KaTeX validator
+        run: npm install --prefix /tmp/isograph-docmath katex@0.16.22 --no-save --ignore-scripts
+      - name: Validate mutable-document math
+        env:
+          NODE_PATH: /tmp/isograph-docmath/node_modules
+        run: node tools/validate-doc-math-katex.cjs
