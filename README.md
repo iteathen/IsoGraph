@@ -1125,7 +1125,10 @@ IsoGraph is not:
 - a license to discard inconvenient residuals;
 - a guarantee that all discovery is computationally cheap;
 - a claim that structural isomorphism implies semantic equivalence;
-- a claim that one successful benchmark proves universal discovery ability.
+- a claim that one successful benchmark proves universal discovery ability;
+- a license to shrink a declared rendering scope because reduction is difficult;
+- a rule that every loop/recursion must be exhaustively unrolled;
+- an experiment engine whose observations become truth automatically.
 
 It is a structural representation and qualification framework whose claims are intentionally scoped.
 
@@ -1154,7 +1157,8 @@ Core 0.18, Core 0.19, Core 0.20, and Core 0.21 are qualified at their exact test
 Current exact routing authority is recorded in:
 
 - [Qualified Module Authority Manifest — 2026-09-29 Core 0.21 successor](qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md)
-- [Historical Qualified Module Authority Manifest — 2026-09-28](qualification/QUALIFIED_MODULES_2026-09-28.md)
+
+Older manifests remain immutable historical routing records, including the 2026-09-28 predecessor.
 
 Current qualified modules:
 
@@ -1189,10 +1193,10 @@ QRC is qualification infrastructure, not semantic domain authority.
 
 The latest fully integration-qualified composition is the exact Core 0.17 + Core 0.18 + Core 0.19 + Core 0.20 + Core 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1 stack qualified by the valid Experiment 059 I01–I15 surface plus fresh Experiment 060 ownership replacement. All exercised guards and module assessments pass; formal disposition `QUALIFIES`.
 
-- [Experiment 052 Final Qualification Review](experiments/052/EXPERIMENT_052_FINAL_QUALIFICATION_REVIEW.md)
 - [Experiment 059 Final Core 0.21 Integration Review](experiments/059/EXPERIMENT_059_FINAL_QUALIFICATION_REVIEW.md)
 - [Experiment 060 Final Ownership Replacement Review](experiments/060/EXPERIMENT_060_FINAL_QUALIFICATION_REVIEW.md)
 - [Current Integrated Stack with Core 0.21](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md)
+- [Historical Experiment 052 Final Qualification Review](experiments/052/EXPERIMENT_052_FINAL_QUALIFICATION_REVIEW.md)
 - [Historical same-day Integrated Stack with DP 0.10 and EI 0.1](qualification/CURRENT_INTEGRATED_STACK_WITH_DP_0_10_EI_0_1_2026-09-29.md)
 - [Historical Current Integrated Stack with Core 0.20 and DP 0.8](qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_20_DP_0_8_2026-09-28.md)
 - [Historical Experiment 031 Final Qualification Review](experiments/031/EXPERIMENT_031_FINAL_QUALIFICATION_REVIEW.md)
