@@ -105,12 +105,41 @@ for(const file of walk(ROOT)){
 
     let i=0;
     while(i<line.length){
-      const open=line.indexOf('$',i);
+      const open=line.indexOf('
+    }
+  }
+  if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
+}
+
+const report={stats,error_count:errors.length,errors};
+fs.mkdirSync('out',{recursive:true});
+fs.writeFileSync('out/doc-math-katex-report.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));
+if(errors.length) process.exitCode=1;
+,i);
       if(open<0) break;
       if(open>0&&line[open-1]==='\\'){i=open+1;continue;}
-      if(/[0-9]/.test(line[open+1]||'')){i=open+1;continue;}
-      const close=line.indexOf('$',open+1);
+      let close=open+1;
+      while(true){
+        close=line.indexOf('
+    }
+  }
+  if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
+}
+
+const report={stats,error_count:errors.length,errors};
+fs.mkdirSync('out',{recursive:true});
+fs.writeFileSync('out/doc-math-katex-report.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));
+if(errors.length) process.exitCode=1;
+,close);
+        if(close<0) break;
+        if(close>0&&line[close-1]==='\\'){close++;continue;}
+        break;
+      }
       if(close<0){
+        // A lone dollar followed by a digit is ordinary currency, not math.
+        if(/[0-9]/.test(line[open+1]||'')){i=open+1;continue;}
         errors.push({path:rel,line:n+1,kind:'delimiter',error:'unclosed inline $ delimiter',expr:line.slice(open)});
         break;
       }
