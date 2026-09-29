@@ -49,7 +49,7 @@ Qualified extensions remain separately versioned dependencies. Qualification doe
 
 `extensions/dts/DETAILED_TRANSITION_SYSTEM_0_1_CANDIDATE.md` is qualified at its exact tested bytes by Experiment 026 and `qualification/DTS_0_1_QUALIFICATION.md`.
 
-The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The exact current expanded composition including Core 0.20, DTS 0.1, and DP 0.8 is directly integration-qualified for the exercised dependency-closed scope by Experiment 052.
+The qualification covers DTS base transition semantics only. TSS and mechanism/cost/concurrency/optimization profiles remain separately versioned successor work. The exact current expanded composition including Core 0.20, DTS 0.1, DP 0.1–0.10, and EI 0.1 is directly integration-qualified for the exercised dependency-closed scope by Experiment 056.
 
 NEI 0.1/0.2 remain immutable historical qualified revisions. NEI 0.3 remains an unqualified historical precursor to the now-qualified NEI 0.4 semantics; none is a parallel current NEI authority.
 
@@ -197,7 +197,7 @@ Historical evidence remains interpreted against the exact revision where it was 
 
 ## Immediate work
 
-The current qualified modular authority stack is recorded in `qualification/QUALIFIED_MODULES_2026-09-28.md`; the 2026-09-25 and 2026-09-18 manifests remain historical evidence.
+The current qualified modular authority stack is recorded in `qualification/QUALIFIED_MODULES_2026-09-29.md`; the 2026-09-28 and older manifests remain historical evidence.
 
 Current completed qualification checkpoints:
 
