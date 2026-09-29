@@ -1186,6 +1186,47 @@ See:
 
 ---
 
+## Later qualification campaigns
+
+The qualification program did not stop at the early comparison/discovery checkpoints. Later campaigns directly exercised the family components that now define current IsoGraph behavior.
+
+### QU and NEI
+
+- Experiment 013 supplied the decisive corrected QU 0.1 holdout.
+- Experiment 016 qualified NEI 0.4 with 18/18 fresh controls, including the separation of exact identity from graded probabilistic evidence and explicit QU/evidence-lineage obligations.
+
+### Observation-first and exact rendering
+
+- Experiment 017 qualified Core 0.18 observation-first discrepancy semantics.
+- Experiments 029/030 exercised Core 0.19 assertion-support / exact-rendering behavior, preserving the broad frozen failure while using a fresh corrected regression rather than rescoring it.
+- The Project Discovery three-positive-control campaign separately required exact source rendering of six source artifacts before discovery and recovered all three frozen known-positive correspondences under hidden-oracle scoring.
+
+### Transition structure
+
+- Experiments 020–025 developed and adversarially exercised DTS reconstruction, Transition Isomorph comparison, decomposition, interpretation barriers, and QU projection.
+- Experiment 026 qualified DTS 0.1 with 20/20 fresh controls.
+- Experiment 027 supplied the first DTS-inclusive integration qualification; later integration campaigns superseded it as current routing while preserving its evidence.
+
+### Primitive closure
+
+- Experiment 048 qualified Core 0.20 with 18/18 fresh controls over primitive-logic closure and exact reduction boundaries.
+
+### Discovery beyond correspondence search
+
+- Experiments 050/051 qualified DP 0.8 clue-preserving discrepancy adjudication while preserving one underdetermined case and using a fresh replacement rather than retroactive rescoring.
+- Experiment 053 qualified DP 0.9 Minimum Sufficient Support / Valuation with 20/20 fresh cases.
+- Experiment 054 qualified DP 0.10 Experimental Warrant with 18/18 fresh cases.
+- Experiment 055 qualified Experimental Inquiry 0.1 with 18/18 fresh cases.
+
+### Rendering conservation and current integration
+
+- Experiments 057/058 qualified Core 0.21 Rendering Conservation, Source Semantic Census coverage, Schema Closure, and IA closure invalidation through 25 uncontested cases plus a fresh replacement for the ambiguous authority-routing target.
+- Experiments 059/060 integration-qualified the current Core-through-0.21 + QU + NEI + DP-through-0.10 + DTS + EI composition using 15 uncontested integration cases plus a fresh ownership replacement.
+
+The pattern matters as much as the totals: ambiguous or defective frozen cases are preserved, interpreted, and replaced with fresh qualification targets where necessary rather than rewritten into success.
+
+---
+
 # Current evidence at a glance
 
 | Evidence | Result | What it supports |
