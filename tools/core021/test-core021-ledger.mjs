@@ -81,6 +81,11 @@ function run(name,obj,shouldPass){
 
 run('good',finalize(base()),true);
 
+let cross=base();
+cross.dispositions[0].dependency_roots=['schema'];
+cross.dispositions[0].reconstruction_path.push('schema');
+run('cross-census-dependency-reuse',finalize(cross),true);
+
 let x=finalize(base());
 x.dispositions.pop();
 run('missing-census-disposition',x,false);
@@ -181,4 +186,4 @@ x.dispositions[1].reconstruction_path.push('term-q');
 run('schema-qu-termination-missing-link',finalize(x),false);
 
 fs.rmSync(dir,{recursive:true,force:true});
-console.log('Core 0.21 ledger checker tests: PASS (17 adversarial controls)');
+console.log('Core 0.21 ledger checker tests: PASS (2 positive baselines, 18 adversarial negative controls)');
