@@ -121,5 +121,8 @@ for(const file of walk(ROOT)){
   if(display) errors.push({path:rel,line:display.line,kind:'delimiter',error:'unclosed $$ display block',expr:display.parts.join('\n')});
 }
 
-console.log(JSON.stringify({stats,error_count:errors.length,errors},null,2));
+const report={stats,error_count:errors.length,errors};
+fs.mkdirSync('out',{recursive:true});
+fs.writeFileSync('out/doc-math-katex-report.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));
 if(errors.length) process.exitCode=1;
