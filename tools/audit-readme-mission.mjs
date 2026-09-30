@@ -19,6 +19,7 @@ const frontDoors=[
   'research/glycan-cleavage/README.md',
   'research/navier-stokes-proof/README.md',
   'research/p-vs-np/README.md',
+  'research/project-discovery/README.md',
   'research/publications/README.md'
 ];
 for(const path of frontDoors){
@@ -77,6 +78,18 @@ must('research/p-vs-np/README.md','current repository Discovery authority is cum
 must('research/p-vs-np/README.md','**Current-family continuation note:**');
 must('research/p-vs-np/README.md','P = NP:  OPEN');
 must('research/p-vs-np/README.md','P != NP: OPEN');
+must('research/project-discovery/README.md','**Research status:** early prototype / proof-of-function research program; the intended mature Project Discovery has not yet been built.');
+must('research/project-discovery/README.md','## Mission');
+must('research/project-discovery/README.md','## Intended scale');
+must('research/project-discovery/README.md','## Current state');
+must('research/project-discovery/README.md','## Resource requirements');
+must('research/project-discovery/README.md','## Organizational requirement: independence must scale with discovery');
+must('research/project-discovery/README.md','## Infrastructure needed before grand scale');
+must('research/project-discovery/README.md','## Scaling path');
+must('research/project-discovery/README.md','## Success criteria');
+must('research/project-discovery/README.md','The current evidence does not establish:');
+must('research/project-discovery/README.md','more agents');
+must('research/project-discovery/README.md','!= more truth');
 mustNot('research/p-vs-np/README.md','current qualified family authority is DP 0.1–0.8');
 
 must('research/publications/README.md','publication does not create semantic authority');
