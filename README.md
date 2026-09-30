@@ -210,7 +210,18 @@ and:
 preserve real difference despite superficial similarity
 ~~~
 
-That is the central IsoGraph problem.
+But the current project has a broader requirement as well:
+
+~~~text
+preserve everything the declared source scope actually promises
+-> expose what follows implicitly
+-> identify what support is really necessary
+-> preserve what remains unresolved
+-> discover what is missing
+-> generate new evidence only when warranted
+~~~
+
+So the central IsoGraph problem is no longer only graph correspondence. It is **information-preserving structural reasoning across representation, comparison, discovery, and evidence generation without silently changing the authority or scope of the question.**
 
 ---
 
