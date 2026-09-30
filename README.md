@@ -531,6 +531,97 @@ This is one of the ways IsoGraph controls proof/search explosion while preservin
 
 ---
 
+# Exact rendering is conserved
+
+Core 0.19–0.21 make exact source rendering a first-class obligation.
+
+Before a strict Core 0.21 rendering campaign, freeze:
+
+~~~text
+source interpretation
+semantic scope
+complete Source Semantic Census
+~~~
+
+The census covers every load-bearing semantic obligation—not only proposition-shaped assertions, but also definitions, guards, binding/scope rules, transition/generator semantics, modality/precision, unknown/alternative structure, and anything else whose loss could change reconstruction.
+
+Every in-scope census item remains live until it receives a valid closure disposition.
+
+~~~text
+hard to reduce
+!= permission to delete
+!= permission to demote
+!= permission to move out of scope
+~~~
+
+If the scope genuinely changes, that creates an explicit new revision while preserving the old target.
+
+This is the **No-Evasion** boundary behind current exact rendering.
+
+---
+
+# Implicit Assertions are derived structure with explicit support
+
+IsoGraph distinguishes:
+
+~~~text
+explicit source assertion
+!= implicit assertion derived from represented structure
+~~~
+
+An Implicit Assertion (IA) is admissible only through represented support and the selected inference/search profile.
+
+The assertion body, its support, and every transitive load-bearing dependency remain separate obligations. Primitive premises do not make a high-level assertion body primitive automatically.
+
+IA generation may run recursively:
+
+~~~text
+represented structure
+-> derive supported IAs
+-> add admitted IAs
+-> search again
+-> repeat until fixed point
+~~~
+
+But that fixed point is revision-relative.
+
+Changing the primitive kernel, Source Semantic Census, semantic scope, QU state, governing authority, or selected inference/search profile reopens current IA closure. The earlier fixed point remains historical evidence for the earlier tuple rather than silently qualifying the changed system.
+
+---
+
+# Schema Closure represents iteration without exhaustive execution
+
+Loops, recurrences, recursion, generators, and other long-running structures do not require a new high-level semantic primitive merely because fully materializing them is impractical.
+
+Core 0.21 permits **Schema Closure** when a finite primitive-closed generator characterizes **all and only** the admitted generated members or transitions.
+
+The representation must expose the load-bearing semantics of the process—for example:
+
+~~~text
+initial/base condition
+carrier/domain
+continuation/admission condition
+one-step or recursive relation
+binding/substitution
+argument transformation / result composition
+~~~
+
+as applicable.
+
+But:
+
+~~~text
+Schema Closure
+!= prefix fit
+!= exhaustive materialization
+!= termination proof
+!= proof of every downstream property
+~~~
+
+This gives IsoGraph a finite exact representation of iterative structure while leaving genuinely unresolved termination/depth questions unresolved.
+
+---
+
 # Unknown information can remain structural
 
 A generic marker such as:
