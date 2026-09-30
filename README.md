@@ -693,6 +693,36 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 ---
 
+# Detailed Transition System: change has internal structure
+
+Core can represent state and relation structure, but transition questions often depend on more than endpoints.
+
+The qualified Detailed Transition System (DTS) 0.1 extension makes transition anatomy explicit.
+
+A transition comparison can preserve distinctions such as:
+
+- source/target roles;
+- ordered internal steps;
+- decomposition/factorization;
+- barriers and admission conditions;
+- mechanism-sensitive roles;
+- QU-bearing unresolved transition structure;
+- residual differences.
+
+Therefore:
+
+~~~text
+same endpoints
+!= same transition
+!= Transition Isomorph
+~~~
+
+DTS lets IsoGraph compare workflows, algorithms, proof transformations, state-machine behavior, and other processes without collapsing every path between the same endpoints.
+
+DTS remains separate from Core. Core Schema Closure can finitely represent generator semantics, while DTS owns load-bearing transition anatomy when that anatomy is part of the claim.
+
+---
+
 # Discovery is separate from authority
 
 IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.10) provides ranked, adaptive strategies for finding candidate:
@@ -747,6 +777,78 @@ The cumulative progression matters:
 - DP 0.10 decides when the represented evidence justifies generating new observations.
 
 When DP 0.10 issues an Experimental Warrant, [Experimental Inquiry 0.1](extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md) may construct and revise experiments, discover scope, preserve unexpected/model-breaking observations, and return new evidence. EI does not make its observations true by fiat and does not absorb Core, QU, NEI, DTS, or DP authority.
+
+---
+
+# Minimum sufficient support and valuation
+
+Discovery is not limited to finding additional structure.
+
+DP 0.9 can ask the inverse question:
+
+> Which represented support is actually necessary to reach this declared conclusion?
+
+The result is objective-scoped **Minimum Sufficient Support (MSS)**.
+
+MSS can expose:
+
+- redundant support;
+- packaging dependencies;
+- alternative sufficient topologies;
+- irreducible support inside a frozen candidate space;
+- places where a supposedly necessary dependency is only necessary because of the current factorization.
+
+After validity is established, an explicit valuation profile can compare lawful alternatives under costs such as transitions, runtime, cycles, memory, or another declared resource.
+
+~~~text
+validity first
+-> valuation second
+
+lower cost
+!= greater truth
+~~~
+
+The Navier–Stokes and current Connect4/IsoMax research lines both contain concrete MSS-style analyses.
+
+---
+
+# Discovery can escalate to experimental inquiry
+
+DP 0.10 adds a disciplined stopping condition for reasoning from already represented evidence.
+
+If the active question remains unresolved and the represented structure justifies collecting new observations, DP may issue an **Experimental Warrant**.
+
+The warrant says:
+
+~~~text
+existing evidence is insufficient
++
+a concrete evidence-generating inquiry is justified
+~~~
+
+It does **not** say which hypothesis is true.
+
+Experimental Inquiry (EI) 0.1 then provides the active evidence-generation layer:
+
+~~~text
+warrant
+-> provisional working model
+-> experiment-space construction
+-> lawful experiment / intervention
+-> observation
+-> preserve expected + unexpected structure
+-> revise working model where warranted
+-> return evidence to the family
+~~~
+
+A model-breaking observation is not an inconvenience to be normalized away. It is evidence that may change the next representation, hypothesis, or experiment.
+
+EI therefore extends IsoGraph from passive structural analysis into an evidence-generating research loop while preserving the core boundary:
+
+~~~text
+observation
+!= semantic truth
+~~~
 
 ---
 
