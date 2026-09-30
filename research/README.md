@@ -39,7 +39,7 @@ research/
 - [NEI research](nei/README.md) — historical/design research surrounding Natural Entropic Identity; qualified NEI authority remains separately versioned.
 - [P versus NP](p-vs-np/README.md) — primitive computation and continuation-support research; theorem status remains open.
 - [Primitive logic](primitive-logic/README.md) — supporting primitive-logic/kernel research used during Core primitive-closure development.
-- [Project discovery](project-discovery/README.md) — cross-domain discovery campaigns and controls used to exercise Discovery Protocol behavior.
+- [Project Discovery](project-discovery/README.md) — current proof-of-function campaigns and the long-term plan for large-scale, massively parallel within-domain and cross-domain research synthesis using coordinated agents, substantial compute, independent verification, and human/domain expertise.
 - [Research publications](publications/README.md) — publication-facing outputs and revision indexes.
 - [Repository reconciliation](repository-reconciliation/README.md) — preserved research/provenance review of surviving historical branches.
 
