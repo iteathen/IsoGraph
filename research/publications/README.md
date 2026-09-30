@@ -12,7 +12,8 @@ A paper should be readable as a coherent document without requiring the reader t
 ## Publication indexes
 
 - [2026-09-27 publications](2026-09-27/README.md)
-- [2026-09-26 publications](2026-09-26/)
+- [A Packaging Dependency in the Periodic Navier–Stokes Blowup Corollary](2026-09-26/NAVIER_STOKES_PERIODIC_PACKAGING_DEPENDENCY_0_1.md)
+- [Unique Minimum Support in Two Frozen Navier–Stokes Proof Deletion Spaces](2026-09-26/NAVIER_STOKES_UNIQUE_MINIMUM_DELETION_SPACES_0_1.md)
 
 ## Publication template
 

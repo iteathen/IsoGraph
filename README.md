@@ -88,21 +88,42 @@ freeze source interpretation + semantic scope + Source Semantic Census
 
 The system is deliberately **observation-first, primitive-first, and non-evasive**. Difficulty reducing a claim is not permission to delete it; an unexpected result is evidence before it is a diagnosis; and a successful discovery or experiment does not bypass semantic qualification.
 
-## Current research applications
+## Research programs and demonstrated applications
 
-The repository contains several substantial application campaigns. They are testbeds and research outputs, not the definition of IsoGraph's mission:
+IsoGraph is exercised both through domain applications and through research on the representation/discovery system itself. The complete maintained project index is [research/README.md](research/README.md).
 
-- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, and explicit non-resolution of P versus NP.
-- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, witness-width growth, and algorithmic consequences in an idealized biochemical model.
-- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful structural decomposition, generator/closure separation, and dimensional-equivalence analysis of a pinned proof corpus.
+### Domain/application research
+
+- [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, representation-relative support growth, and explicit non-resolution of P versus NP.
+- [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, shortest-common-supersequence boundaries, witness-width growth, algorithmic reductions, and discrepancy-driven bug discovery in an idealized biochemical model.
+- [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful proof decomposition, generator/closure separation, minimum-support analysis inside frozen deletion spaces, packaging-dependency discovery, and dimensional-equivalence analysis of a pinned proof corpus.
+- [Project Discovery](research/project-discovery/README.md) — cross-domain structural discovery controls including Ising↔lattice-gas, XOR↔GF(2), Newton↔Hamilton, and the Ising/MWC partial-correspondence study.
+- [Connect4 real-world Discovery Protocol evidence](qualification/REAL_WORLD_DISCOVERY_PROTOCOL_EVIDENCE_CONNECT4_2026-09-18.md) — a live external-repository campaign that exposed semantic-layer distinctions, evidence-lineage structure, falsified attractive quotient hypotheses, and correctly closed ordinary error without changing IsoGraph authority.
+- [Current Connect4 / IsoMax full-discovery research](https://github.com/iteathen/Connect4/commit/2683e701919d65eb4834402896501e4c2dd9c892) — current external application evidence using full-family discovery machinery on the reduced solver structure, including DTS transition analysis, explicit falsifiers, and objective-scoped Minimum Sufficient Support over bounded Connect4 graphs.
+- [JSMinSys / IsoMax implementation research](https://github.com/iteathen/JSMinSys/commit/e8f174823a6e5cee95061adba087d6c156e5f3b8) — application of assertion closure and structural identities to solver/runtime optimization, including elimination of implied hot-loop checks and repeated qualification of transformed paths; a later [promotion commit](https://github.com/iteathen/JSMinSys/commit/0899c5811918e68c22dc1b0e4dd8af97d9b4bbcb) records the qualified IsoMax runtime/profile promotion.
+
+### IsoGraph-family and research-method work
+
+- [Discovery-method research](research/discovery/README.md) — discrepancy adjudication, Minimum Sufficient Support / Valuation development, and IA-oriented discovery guidance behind later DP revisions.
+- [DTS research](research/dts/README.md) — detailed transition anatomy, Transition Isomorph controls, decomposition, QU projection, and interpretation barriers.
+- [NEI research](research/nei/README.md) — the design/correction history behind conservative natural/domain identity reasoning and the rejection of unsupported coarsening.
+- [Primitive-logic research](research/primitive-logic/README.md) — logic kernels, data constructors, finite transition computation, arithmetic, and relational-function reductions supporting primitive closure.
+- [Research publications](research/publications/README.md) — publication-facing results and revision history.
+- [Repository-reconciliation research](research/repository-reconciliation/README.md) — provenance-preserving analysis of surviving historical branches and superseded semantics.
+
+These projects are evidence and applications of the IsoGraph family. Their presence in the repository does not automatically promote their domain conclusions into IsoGraph semantic authority.
 
 ---
 
 ## Research publications
 
 - [Continuation-Support Reductions for Bounded Existential Computation](research/publications/2026-09-27/P_VS_NP_CONTINUATION_SUPPORT_REDUCTIONS_0_1.md) — Joshua Oshiro. Structural synthesis of established continuation equivalence, simulation/dominance, dead-support pruning, factorization, and accessibility results; possible synthesis-level contribution only. No P-vs-NP resolution or new lower-bound claim.
-- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Agent-assisted research produced using the IsoGraph system designed by Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
-- [2026-09-26 publications](research/publications/2026-09-26/)
+- [Exact Phase Algebra and High-Order Synchronization in Optimal Enzymatic Cleavage Trajectories — reviewed revision 0.3](research/publications/2026-09-27/GLYCAN_CLEAVAGE_PHASE_ALGEBRA_AND_SYNCHRONIZATION_0_3.md) — Joshua Oshiro. Revision 0.3 makes Higman finiteness explicit, separates general path coverage from the singleton subsequence specialization, preserves exact witness width 173 / OPT = 21, and sharpens the Experiment 047 bug prediction to exact accidental length-9 universal minimum 19 while leaving unbounded ternary witness width open.
+- [A Packaging Dependency in the Periodic Navier–Stokes Blowup Corollary](research/publications/2026-09-26/NAVIER_STOKES_PERIODIC_PACKAGING_DEPENDENCY_0_1.md) — Joshua Oshiro. Identifies finite energy as load-bearing in the current whole-space packaging path while not established as intrinsic to the periodic theorem target; proposes a weaker pre-periodic interface as an alternative factorization question.
+- [Unique Minimum Support in Two Frozen Navier–Stokes Proof Deletion Spaces](research/publications/2026-09-26/NAVIER_STOKES_UNIQUE_MINIMUM_DELETION_SPACES_0_1.md) — Joshua Oshiro. Strengthens two source-relative deletion-space results to unique minimum sufficient support inside their explicitly frozen finite candidate spaces, without claiming a globally shortest proof or factorization-independent minimum.
+- [Publication index](research/publications/README.md) — current publication-facing index, provenance boundary, and historical revisions.
+
+All listed papers are research publications, not automatic semantic-authority promotions.
 
 ---
 
@@ -189,7 +210,18 @@ and:
 preserve real difference despite superficial similarity
 ~~~
 
-That is the central IsoGraph problem.
+But the current project has a broader requirement as well:
+
+~~~text
+preserve everything the declared source scope actually promises
+-> expose what follows implicitly
+-> identify what support is really necessary
+-> preserve what remains unresolved
+-> discover what is missing
+-> generate new evidence only when warranted
+~~~
+
+So the central IsoGraph problem is no longer only graph correspondence. It is **information-preserving structural reasoning across representation, comparison, discovery, and evidence generation without silently changing the authority or scope of the question.**
 
 ---
 
@@ -499,6 +531,97 @@ This is one of the ways IsoGraph controls proof/search explosion while preservin
 
 ---
 
+# Exact rendering is conserved
+
+Core 0.19–0.21 make exact source rendering a first-class obligation.
+
+Before a strict Core 0.21 rendering campaign, freeze:
+
+~~~text
+source interpretation
+semantic scope
+complete Source Semantic Census
+~~~
+
+The census covers every load-bearing semantic obligation—not only proposition-shaped assertions, but also definitions, guards, binding/scope rules, transition/generator semantics, modality/precision, unknown/alternative structure, and anything else whose loss could change reconstruction.
+
+Every in-scope census item remains live until it receives a valid closure disposition.
+
+~~~text
+hard to reduce
+!= permission to delete
+!= permission to demote
+!= permission to move out of scope
+~~~
+
+If the scope genuinely changes, that creates an explicit new revision while preserving the old target.
+
+This is the **No-Evasion** boundary behind current exact rendering.
+
+---
+
+# Implicit Assertions are derived structure with explicit support
+
+IsoGraph distinguishes:
+
+~~~text
+explicit source assertion
+!= implicit assertion derived from represented structure
+~~~
+
+An Implicit Assertion (IA) is admissible only through represented support and the selected inference/search profile.
+
+The assertion body, its support, and every transitive load-bearing dependency remain separate obligations. Primitive premises do not make a high-level assertion body primitive automatically.
+
+IA generation may run recursively:
+
+~~~text
+represented structure
+-> derive supported IAs
+-> add admitted IAs
+-> search again
+-> repeat until fixed point
+~~~
+
+But that fixed point is revision-relative.
+
+Changing the primitive kernel, Source Semantic Census, semantic scope, QU state, governing authority, or selected inference/search profile reopens current IA closure. The earlier fixed point remains historical evidence for the earlier tuple rather than silently qualifying the changed system.
+
+---
+
+# Schema Closure represents iteration without exhaustive execution
+
+Loops, recurrences, recursion, generators, and other long-running structures do not require a new high-level semantic primitive merely because fully materializing them is impractical.
+
+Core 0.21 permits **Schema Closure** when a finite primitive-closed generator characterizes **all and only** the admitted generated members or transitions.
+
+The representation must expose the load-bearing semantics of the process—for example:
+
+~~~text
+initial/base condition
+carrier/domain
+continuation/admission condition
+one-step or recursive relation
+binding/substitution
+argument transformation / result composition
+~~~
+
+as applicable.
+
+But:
+
+~~~text
+Schema Closure
+!= prefix fit
+!= exhaustive materialization
+!= termination proof
+!= proof of every downstream property
+~~~
+
+This gives IsoGraph a finite exact representation of iterative structure while leaving genuinely unresolved termination/depth questions unresolved.
+
+---
+
 # Unknown information can remain structural
 
 A generic marker such as:
@@ -570,6 +693,36 @@ This keeps the system from turning structural analogy into metaphysical overclai
 
 ---
 
+# Detailed Transition System: change has internal structure
+
+Core can represent state and relation structure, but transition questions often depend on more than endpoints.
+
+The qualified Detailed Transition System (DTS) 0.1 extension makes transition anatomy explicit.
+
+A transition comparison can preserve distinctions such as:
+
+- source/target roles;
+- ordered internal steps;
+- decomposition/factorization;
+- barriers and admission conditions;
+- mechanism-sensitive roles;
+- QU-bearing unresolved transition structure;
+- residual differences.
+
+Therefore:
+
+~~~text
+same endpoints
+!= same transition
+!= Transition Isomorph
+~~~
+
+DTS lets IsoGraph compare workflows, algorithms, proof transformations, state-machine behavior, and other processes without collapsing every path between the same endpoints.
+
+DTS remains separate from Core. Core Schema Closure can finitely represent generator semantics, while DTS owns load-bearing transition anatomy when that anatomy is part of the claim.
+
+---
+
 # Discovery is separate from authority
 
 IsoGraph's qualified cumulative Discovery Protocol module (DP 0.1–0.10) provides ranked, adaptive strategies for finding candidate:
@@ -624,6 +777,78 @@ The cumulative progression matters:
 - DP 0.10 decides when the represented evidence justifies generating new observations.
 
 When DP 0.10 issues an Experimental Warrant, [Experimental Inquiry 0.1](extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md) may construct and revise experiments, discover scope, preserve unexpected/model-breaking observations, and return new evidence. EI does not make its observations true by fiat and does not absorb Core, QU, NEI, DTS, or DP authority.
+
+---
+
+# Minimum sufficient support and valuation
+
+Discovery is not limited to finding additional structure.
+
+DP 0.9 can ask the inverse question:
+
+> Which represented support is actually necessary to reach this declared conclusion?
+
+The result is objective-scoped **Minimum Sufficient Support (MSS)**.
+
+MSS can expose:
+
+- redundant support;
+- packaging dependencies;
+- alternative sufficient topologies;
+- irreducible support inside a frozen candidate space;
+- places where a supposedly necessary dependency is only necessary because of the current factorization.
+
+After validity is established, an explicit valuation profile can compare lawful alternatives under costs such as transitions, runtime, cycles, memory, or another declared resource.
+
+~~~text
+validity first
+-> valuation second
+
+lower cost
+!= greater truth
+~~~
+
+The Navier–Stokes and current Connect4/IsoMax research lines both contain concrete MSS-style analyses.
+
+---
+
+# Discovery can escalate to experimental inquiry
+
+DP 0.10 adds a disciplined stopping condition for reasoning from already represented evidence.
+
+If the active question remains unresolved and the represented structure justifies collecting new observations, DP may issue an **Experimental Warrant**.
+
+The warrant says:
+
+~~~text
+existing evidence is insufficient
++
+a concrete evidence-generating inquiry is justified
+~~~
+
+It does **not** say which hypothesis is true.
+
+Experimental Inquiry (EI) 0.1 then provides the active evidence-generation layer:
+
+~~~text
+warrant
+-> provisional working model
+-> experiment-space construction
+-> lawful experiment / intervention
+-> observation
+-> preserve expected + unexpected structure
+-> revise working model where warranted
+-> return evidence to the family
+~~~
+
+A model-breaking observation is not an inconvenience to be normalized away. It is evidence that may change the next representation, hypothesis, or experiment.
+
+EI therefore extends IsoGraph from passive structural analysis into an evidence-generating research loop while preserving the core boundary:
+
+~~~text
+observation
+!= semantic truth
+~~~
 
 ---
 
@@ -810,6 +1035,185 @@ The project asks first whether the failure is parser/serialization, semantic amb
 
 Only then should the specification change.
 
+## 18. Exact rendering can be audited for missing semantics
+
+Core 0.19–0.21 make source fidelity an explicit obligation rather than a stylistic goal.
+
+A strict rendering can freeze the source interpretation, scope, and complete Source Semantic Census, then require every load-bearing obligation to close through its body, support, and transitive dependencies.
+
+That makes omission itself detectable.
+
+## 19. Implicit consequences can be generated recursively instead of guessed
+
+Core 0.19 admits **Implicit Assertions (IA)** derived from already represented support.
+
+IA generation can proceed through repeated rounds until the selected inference/search profile reaches a fixed point.
+
+This has been used in application research to expose structure that was not explicitly written in the source representation.
+
+## 20. Hard-to-reduce meaning cannot simply disappear
+
+Core 0.21's no-evasion rule prevents a difficult semantic obligation from being deleted, demoted, reclassified as irrelevant, or silently moved outside the target merely to make a rendering close.
+
+If scope really changes, the change becomes an explicit new revision.
+
+That turns "we could not reduce this" into visible incompleteness rather than invisible information loss.
+
+## 21. Large iterative and recursive families can be represented without exhaustive unrolling
+
+Core 0.21 Schema Closure allows a finite primitive-closed generator to represent an arbitrarily large or unbounded generated family when it characterizes **all and only** the admitted members/transitions.
+
+This separates:
+
+~~~text
+semantic step/generator closure
+!= exhaustive materialization
+!= termination proof
+~~~
+
+That is important for programs, recurrences, iterative algorithms, transition systems, and mathematical constructions whose complete execution may be impractical or infinite.
+
+## 22. Transition anatomy can be compared independently of endpoints
+
+Qualified DTS 0.1 represents structured change rather than treating a transition as merely a source/target pair.
+
+Two processes can have the same endpoints yet remain non-isomorphic because their load-bearing mechanism, ordering, barrier, decomposition, or unresolved transition structure differs.
+
+This supports comparison of algorithms, workflows, proof steps, state transitions, and other dynamical structures.
+
+## 23. Natural/domain identity can remain separate from addressing and structural similarity
+
+Core SI answers "which represented referent is this?"
+
+NEI answers stronger identity questions under separately qualified evidence/model authority.
+
+This allows exact identity, distinctness, unresolved identity, and graded probabilistic evidence to remain separate instead of letting filenames, IDs, structural similarity, or probability thresholds manufacture identity conclusions.
+
+## 24. Discrepancies can be used as discovery instruments
+
+DP 0.8 treats unexpected behavior as evidence before diagnosis.
+
+A mismatch can be investigated as:
+
+~~~text
+ordinary defect
+hidden distinction
+hidden scoped equivalence
+authority mismatch
+scope mismatch
+representation projection
+or unresolved structure
+~~~
+
+Repair disposition and discovery disposition remain separate, so fixing a real bug does not automatically erase the clue that exposed it.
+
+## 25. The system can discover minimum sufficient support
+
+DP 0.9 asks not only what structure is present, but what represented support is actually sufficient for a declared conclusion.
+
+This can expose:
+
+- redundant proof/interface dependencies;
+- multiple lawful sufficient topologies;
+- objective-relative minimal supports;
+- dependencies that are artifacts of packaging rather than the target itself.
+
+The Navier–Stokes deletion-space and periodic-packaging research are concrete examples of this style of analysis.
+
+## 26. Valid alternatives can be valued without confusing preference with truth
+
+After several supports or constructions are shown to be valid, DP 0.9 can apply an explicit valuation profile to compare them by declared costs such as transitions, time, cycles, memory, or another task-relevant quantity.
+
+The valuation does not create semantic validity; it chooses among already admissible alternatives.
+
+## 27. IsoGraph can identify when reasoning should stop and new evidence should be generated
+
+DP 0.10 introduces the **Experimental Warrant**.
+
+When represented evidence is insufficient for the active question but the unresolved structure is strong enough to justify measurement or experimentation, the system can record that need explicitly rather than guessing the missing fact.
+
+~~~text
+warrant to experiment
+!= evidence for the hypothesis
+~~~
+
+## 28. Experiments can be represented as provisional, revisable structural inquiries
+
+Experimental Inquiry 0.1 consumes a valid warrant and can construct a provisional working model, search an experiment space, generate observations, preserve expected and unexpected results, and revise the working model.
+
+Its output returns as evidence.
+
+~~~text
+experiment
+!= proof
+
+observation
+!= admitted assertion
+~~~
+
+This makes experiment generation part of the research loop without turning an experimental module into truth authority.
+
+## 29. Structural analysis can expose proof-packaging dependencies
+
+A dependency may be required by the current formal interface while not yet being established as intrinsic to the final theorem or consumer.
+
+The Navier–Stokes periodic-packaging research demonstrated this distinction by separating whole-space finite-energy packaging from the narrower periodic target question.
+
+This is useful for proof refactoring, API/interface design, and theorem-dependency analysis.
+
+## 30. Structural reduction can lead directly to algorithms
+
+Application campaigns have repeatedly turned structural findings into executable reductions:
+
+- glycan phase dynamics produced exact frontier, quotient, path-coverage, antichain, and common-supersequence formulations;
+- P-vs-NP research exposed deletion, equality, dominance, factorization, and aggregate-image routes over continuation support;
+- Connect4 research used structural equivalence, residuals, DTS transition structure, falsifiers, and objective-scoped MSS to guide solver/research hypotheses;
+- JSMinSys/IsoMax optimization used assertion-closure consequences to remove redundant checks, specialize exact paths, and qualify lower-cost runtime variants.
+
+IsoGraph does not guarantee that every structural reduction yields an efficient algorithm, but it can expose the exact place where an algorithmic opportunity or obstruction lives and can make already-proved implications available to implementation work.
+
+## 31. Evidence topology can be represented separately from citation count
+
+The Connect4 real-world discrepancy campaign exposed a concrete hierarchy:
+
+~~~text
+citation occurrences
+source artifacts
+evidence events
+evidence lineages
+independence groups
+~~~
+
+Those quantities are not interchangeable.
+
+Representing them separately helps prevent accidental double counting, false independence claims, and layer-substitution errors in research evidence.
+
+## 32. Representation and testing can reveal defects without losing the surrounding discovery
+
+In the glycan campaign, a surprising threshold result was preserved, independently checked, falsified, traced to one omitted transition in an optimized kernel, repaired, and then rerun.
+
+The bug was real.
+
+The structural question that the bug exposed was still worth investigating.
+
+This is the intended observation-first behavior:
+
+~~~text
+repair what is wrong
+preserve what was learned
+~~~
+
+## 33. Cross-domain discovery can recover exact correspondences while rejecting tempting false ones
+
+The Project Discovery campaigns have exercised exact structural recovery across independently expressed domains including:
+
+- Ising ↔ lattice gas;
+- XOR ↔ GF(2);
+- Newtonian ↔ Hamiltonian formulations;
+- Ising ↔ MWC, where a real common statistical layer was retained while whole-system isomorphism was rejected.
+
+That demonstrates both directions of the mission: finding hidden common structure and preserving the load-bearing residual.
+
 ---
 
 # Common objections and how IsoGraph addresses them
@@ -840,6 +1244,13 @@ The project does not dismiss them. Many of them directly shaped the specificatio
 | **“The system will accumulate primitives forever.”** | Core admission requires attempted lower construction, exactness testing, residual analysis, ambiguity testing, discovery behavior, and reconstruction-cost evidence. Specification growth is intentionally frozen until exercised. |
 | **“The notation is not human-friendly.”** | Human readability is not the semantic target. Stable labels and higher-level surfaces may be retained for convenience while the underlying structure remains machine-native and reconstructible. |
 | **“The representation will become huge.”** | Transparent references may compress serialization without changing semantics. Factorization and views can expose only claim-relevant structure, but omitted distinctions cannot be silently declared irrelevant. |
+| **“Primitive reduction will recurse forever.”** | Core 0.21 does not require exhaustive execution. Exact Schema Closure can finitely represent all-and-only generated members/transitions while keeping termination and maximum-depth questions separate. |
+| **“QU can become a convenient label for missing work.”** | Core 0.21 explicitly rejects that move. A genuine structured source unknown may use qualified QU; a missing definition or unrendered known semantic dependency remains incomplete. |
+| **“Recursive implicit-assertion generation can never be trusted to be finished.”** | IA closure is fixed-point and revision-relative. The fixed point is meaningful only for a frozen primitive kernel, census, scope, QU state, authority, and inference/search profile; changing those inputs reopens closure rather than pretending the old result is current. |
+| **“If two transitions have the same start and end, they are the same transition.”** | DTS rejects endpoint-only equivalence. Load-bearing anatomy, ordering, barriers, mechanism, decomposition, and unresolved structure may distinguish transitions with identical endpoints. |
+| **“Minimum sufficient support means IsoGraph found the globally shortest proof.”** | No. MSS is objective-, scope-, and candidate-space-relative. The Navier–Stokes deletion-space result is intentionally bounded to its frozen finite support space and does not claim a globally shortest proof or unique factorization. |
+| **“An experimental agent can just invent facts and feed them back as truth.”** | DP 0.10 separates a warrant to experiment from support for a hypothesis. EI 0.1 returns observations as evidence; observations do not become admitted assertions or proof by fiat. |
+| **“An AI reviewer will simply agree with the AI that produced the work.”** | IsoGraph's qualification design uses frozen packets, cold reconstruction, hidden scoring, fresh replacement cases, and independent verification where justified. Participating-agent review may be useful internal audit, but independence must be tracked rather than assumed. |
 | **“Self-description creates circular proof.”** | Circular evidence is explicitly prohibited. A target claim cannot justify the decomposition or policy later cited as evidence for that same claim. |
 | **“A verifier can just rubber-stamp the decoder.”** | Qualification separates cold reconstruction, hidden scoring, scorer-blind verification, and final review. Verifier output is evidence, not authority; Experiment 004 preserved partials where final review found defects a verifier missed. |
 | **“Hidden scorers can accidentally test formatting instead of semantics.”** | Experiment 007 exposed exactly that failure. QRC 0.1 now separates semantic rejection coverage from serializer conformance, and Experiment 008 provided a fresh blind post-fix holdout. |
@@ -982,6 +1393,47 @@ See:
 
 ---
 
+## Later qualification campaigns
+
+The qualification program did not stop at the early comparison/discovery checkpoints. Later campaigns directly exercised the family components that now define current IsoGraph behavior.
+
+### QU and NEI
+
+- Experiment 013 supplied the decisive corrected QU 0.1 holdout.
+- Experiment 016 qualified NEI 0.4 with 18/18 fresh controls, including the separation of exact identity from graded probabilistic evidence and explicit QU/evidence-lineage obligations.
+
+### Observation-first and exact rendering
+
+- Experiment 017 qualified Core 0.18 observation-first discrepancy semantics.
+- Experiments 029/030 exercised Core 0.19 assertion-support / exact-rendering behavior, preserving the broad frozen failure while using a fresh corrected regression rather than rescoring it.
+- The Project Discovery three-positive-control campaign separately required exact source rendering of six source artifacts before discovery and recovered all three frozen known-positive correspondences under hidden-oracle scoring.
+
+### Transition structure
+
+- Experiments 020–025 developed and adversarially exercised DTS reconstruction, Transition Isomorph comparison, decomposition, interpretation barriers, and QU projection.
+- Experiment 026 qualified DTS 0.1 with 20/20 fresh controls.
+- Experiment 027 supplied the first DTS-inclusive integration qualification; later integration campaigns superseded it as current routing while preserving its evidence.
+
+### Primitive closure
+
+- Experiment 048 qualified Core 0.20 with 18/18 fresh controls over primitive-logic closure and exact reduction boundaries.
+
+### Discovery beyond correspondence search
+
+- Experiments 050/051 qualified DP 0.8 clue-preserving discrepancy adjudication while preserving one underdetermined case and using a fresh replacement rather than retroactive rescoring.
+- Experiment 053 qualified DP 0.9 Minimum Sufficient Support / Valuation with 20/20 fresh cases.
+- Experiment 054 qualified DP 0.10 Experimental Warrant with 18/18 fresh cases.
+- Experiment 055 qualified Experimental Inquiry 0.1 with 18/18 fresh cases.
+
+### Rendering conservation and current integration
+
+- Experiments 057/058 qualified Core 0.21 Rendering Conservation, Source Semantic Census coverage, Schema Closure, and IA closure invalidation through 25 uncontested cases plus a fresh replacement for the ambiguous authority-routing target.
+- Experiments 059/060 integration-qualified the current Core-through-0.21 + QU + NEI + DP-through-0.10 + DTS + EI composition using 15 uncontested integration cases plus a fresh ownership replacement.
+
+The pattern matters as much as the totals: ambiguous or defective frozen cases are preserved, interpreted, and replaced with fresh qualification targets where necessary rather than rewritten into success.
+
+---
+
 # Current evidence at a glance
 
 | Evidence | Result | What it supports |
@@ -990,6 +1442,11 @@ See:
 | **Experiment 005** | 8 PASS / 0 PARTIAL / 0 FAIL / 0 UNKNOWN + verifier VERIFIED | Qualified claim-bounded obligation sufficiency retained in Draft 0.17. |
 | **Experiment 007** | Semantic motifs 5/5, deep 3/3; frozen score DOES_NOT_QUALIFY | Blind discovery success plus discovery of a hidden scorer/output-contract defect. |
 | **Experiment 008** | QUALIFIES; motifs 5/5, deep 3/3; all guards pass | Fresh blind post-QRC evidence retained in the later cumulative Discovery Protocol qualification record. |
+| **Experiment 013** | Decisive corrected QU 0.1 holdout | Qualification evidence for structured unknown semantics at the pinned QU revision. |
+| **Experiment 016** | QUALIFIES; 18/18 fresh NEI controls PASS | Current NEI 0.4 identity/evidence/QU discipline. |
+| **Experiment 017** | QUALIFIES | Core 0.18 observation-first discrepancy semantics. |
+| **Experiment 026** | QUALIFIES; 20/20 fresh DTS controls PASS; promotion verifier SUPPORT_PROMOTION | Qualified DTS 0.1 transition-anatomy / Transition-Isomorph semantics. |
+| **Experiments 029 + 030** | Broad frozen Core 0.19 run preserved at 25/26; fresh corrected mutation regression 2/2 PASS, QUALIFIES | Assertion-support / exact-rendering qualification without retroactive rescoring. |
 | **Experiment 031** | QUALIFIES; 32/32 full-stack cases PASS; all guards/module assessments pass | Historical direct integration qualification of the Core 0.19 + QU 0.1 + NEI 0.4 + DP 0.1–0.7 + DTS 0.1 stack. |
 | **Experiment 048** | QUALIFIES; 18/18 fresh Core 0.20 cases PASS | Independent qualification of Core 0.20 primitive-logic closure. |
 | **Experiments 050 + 051** | 21 valid principle-level PASS + 1/1 fresh target-5 replacement PASS | Independent cumulative qualification evidence for DP 0.8. |
@@ -1000,6 +1457,15 @@ See:
 | **Experiment 056** | QUALIFIES; 16/16 fresh full-stack cases PASS; all module assessments supported | Historical same-day integration qualification of Core through 0.20 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
 | **Experiments 057 + 058** | Core 0.21 QUALIFIES; 25 uncontested cases PASS + 1/1 fresh target-26 replacement PASS | Core 0.21 Rendering Conservation, Schema Closure, and Closure Invalidation qualification. |
 | **Experiments 059 + 060** | QUALIFIES; 15 uncontested integration cases PASS + 1/1 fresh ownership replacement PASS; all module assessments supported | Current integration qualification of Core through 0.21 + QU 0.1 + NEI 0.4 + DP 0.1–0.10 + DTS 0.1 + EI 0.1. |
+| **Project Discovery three-positive-control campaign** | PASS 3/3 after six exact source renderings passed ESR/Q7 gates | Development/qualification evidence that blind structural discovery can recover Ising↔lattice-gas, XOR↔GF(2), and Newton↔Hamilton correspondences from exact native structure. |
+| **Project Discovery Ising/MWC campaign** | Complete exploratory comparison; authority effect none | Development evidence for finding a real shared statistical layer while preserving the non-isomorphic interaction mechanism as residual. |
+| **Connect4 real-world DP campaign** | Development evidence; IsoGraph authority unchanged | Live discrepancy analysis exposed hidden semantic/evidence layers, falsified attractive common explanations, and correctly closed an ordinary summarization error. |
+| **Connect4 / IsoMax full-discovery phase 1** | External current research evidence; bounded structural results and candidate/falsifier dispositions | Application evidence for DTS transition analysis, contradiction witnesses, finite discriminator falsification, and objective-scoped MSS on reduced Connect4 graphs. |
+| **JSMinSys / IsoMax assertion-closure optimization** | External implementation research with repeated qualification; later qualified runtime/profile promotion | Application evidence that represented/derived implications can eliminate redundant hot-loop work and guide solver/runtime specialization without treating optimization as semantic proof. |
+| **Glycan Experiments 032–047** | Source rendering + algorithm/reduction campaign; strongest repaired finite witness width 173, exact OPT 21 | Application evidence for primitive rendering, IA/NEI iteration, quotient/path reductions, algorithm derivation, scaling, discrepancy preservation, falsification, and correction. |
+| **Navier–Stokes research line** | Source-relative structural rendering and reviewed research outputs; not independent validation of the theorem | Application evidence for source-faithful proof decomposition, generator/closure analysis, deletion-space MSS, alternative-factorization discovery, and physical-continuum equivalence boundaries. |
+
+The table deliberately separates qualification evidence from application/development evidence. The latter demonstrates how the methods behave in research without silently promoting domain conclusions or changing module authority.
 
 The evidence is deliberately not collapsed into one global “IsoGraph is proven” claim.
 
@@ -1062,6 +1528,15 @@ The qualified performance contribution is semantic:
 
 > the specification does not require proof/search work stronger than the dependency-closed claim being made once qualified evidence has discharged that claim.
 
+Later qualified modules add several additional **semantic efficiency controls**:
+
+- **Schema Closure** can establish the semantics of an iterative/recursive generator without exhaustively materializing every generated member;
+- **Minimum Sufficient Support** can identify which represented dependencies are actually needed for a declared conclusion;
+- **Valuation** can compare already-valid alternatives under explicit cost axes without turning the preferred alternative into truth;
+- claim-bounded negative certificates can avoid exhaustive mapping search when a qualified separating invariant already discharges the declared negative.
+
+Application research has also found domain-specific reductions—quotients, dominance, antichains, factorization, exact frontier dynamics, and structural pruning—that can reduce concrete work. Those are application results, not a universal IsoGraph speed guarantee.
+
 That leaves implementations free to use:
 
 - hashes;
@@ -1092,14 +1567,25 @@ They can operate on explicit relational structure directly.
 A mature IsoGraph ecosystem could allow agents to:
 
 - preserve exact dependencies across long projects;
+- freeze and audit a complete Source Semantic Census before reduction;
 - compare independently authored theories without lexical alignment;
 - discover recurring structures across corpora;
+- recursively generate implicit assertions while retaining their support provenance;
+- reopen stale IA closure automatically when load-bearing representation state changes;
 - retain residual distinctions rather than over-summarizing;
 - communicate proof/witness structure natively;
-- represent unresolved information without flattening it;
+- represent unresolved information without flattening it or confusing unknown with missing work;
+- reason about transition anatomy rather than only before/after states;
+- distinguish representation identity, natural/domain identity, and evidence strength;
+- preserve evidence events, lineages, independence groups, and revision provenance separately;
+- treat discrepancies as structured observations before deciding whether they are defects;
+- search for minimum sufficient support and compare lawful alternatives under explicit valuations;
+- recognize when available evidence is insufficient and issue an Experimental Warrant rather than guess;
+- construct/revise experiments under EI while returning observations as evidence rather than truth;
 - reuse qualified structure instead of re-deriving it from prose;
-- reason over policies, witnesses, and their own structural records;
-- search for invariants hidden by human naming conventions.
+- reason over policies, witnesses, experiments, and their own structural records;
+- search for invariants hidden by human naming conventions;
+- hand a human or another agent one consolidated research dossier while retaining deeper repository provenance for audit.
 
 If models are eventually trained directly on IsoGraph, familiar structures may become cheap learned handles while the underlying formal structure remains available for verification.
 
@@ -1310,13 +1796,35 @@ extensions/experimental/
     qualified Experimental Inquiry module; observations/evidence only, not truth authority
 
 qualification/
-    qualification infrastructure and contracts
+    current/historical authority manifests, module qualification records,
+    integration records, contracts, and qualification plans
 
 experiments/
-    frozen qualification / discovery evidence
+    frozen qualification, discovery, adversarial-control, and application evidence;
+    historical dispositions remain revision-scoped
+
+evidence/
+    claim/evidence registry and external-validation boundary
+
+research/README.md
+    maintained index and governance front door for all research projects
 
 research/
-    project-scoped research directories; start with research/README.md; research presence does not itself create semantic authority
+    project-scoped current research dossiers plus supporting provenance:
+    discovery, dts, glycan-cleavage, navier-stokes-proof, nei,
+    p-vs-np, primitive-logic, project-discovery, publications,
+    and repository-reconciliation
+
+tools/
+    deterministic validators, render/audit tooling, ledger checks,
+    and implementation support; tooling is not semantic authority by itself
+
+maintenance/
+    repository/final-product maintenance and review records
+
+IsoGraph_Family_Reference_Joshua_Oshiro_2026.docx
+    maintained accumulated human-facing family reference;
+    exact versioned repository authority remains controlling
 ~~~
 
 ---
