@@ -28,16 +28,6 @@ jobs:
       - name: Verify README mission alignment
         run: node tools/audit-readme-mission.mjs
 
-      - name: Inventory README completeness surfaces
-        run: |
-          echo "README_COMPLETENESS_BEGIN"
-          find research/publications -maxdepth 3 -type f -printf '%p\n' | sort
-          echo "--- PROJECT_DISCOVERY ---"
-          find research/project-discovery -maxdepth 3 -type f -printf '%p\n' | sort
-          echo "--- SELECTED_QUALIFICATION ---"
-          find qualification -maxdepth 1 -type f -printf '%p\n' | sort
-          echo "README_COMPLETENESS_END"
-
 
       - name: Verify research directory layout
         run: node tools/check-research-layout.mjs
