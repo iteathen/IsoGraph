@@ -1790,6 +1790,15 @@ CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md
 STATUS.md
     current authority / evidence status
 
+ORIGIN_AND_PROVENANCE.md
+    human-readable intellectual chronology and contribution attribution
+
+IDEA_PROVENANCE_POLICY.md
+    governance for dating/attributing major ideas and findings without backdating
+
+provenance/
+    machine-readable idea/finding provenance ledger
+
 AGENTS.md
     research and agent operating guidance
 
