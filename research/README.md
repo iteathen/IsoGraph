@@ -29,6 +29,8 @@ research/
 8. **Publications are outputs, not authority routing.** `research/publications/` follows the same README/front-door rule but serves as a shared publication collection.
 9. **No hidden bundle registry.** The filesystem is the registry. CI discovers first-level research directories automatically and checks that their READMEs exist and are indexed here.
 10. **Keep this index current.** Adding or removing a first-level research directory requires updating this README in the same change.
+11. **Preserve idea/finding provenance.** Major research ideas, methods, mission changes, and material findings intended for publication must follow `../IDEA_PROVENANCE_POLICY.md`: record originator/contributors, earliest evidence currently located, retrospective record date where applicable, reasoning/decision path, and evidence revision. Do not backdate retrospective provenance.
+12. **Separate research direction from formulation.** Human direction, agent-originated formulation, agent-assisted formalization, implementation, finding, verification, and publication authorship are different contribution facts and must not be collapsed.
 
 ## Current research areas
 
