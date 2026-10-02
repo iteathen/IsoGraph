@@ -9,6 +9,8 @@ The initial standalone research snapshot was imported from:
 
 That commit is the authoritative provenance anchor for the imported pre-standalone tree. Historical branch names, paths, filenames, and text remain recoverable from the source revision and repository history; current standalone artifacts use **IsoGraph** terminology.
 
+For the reconstructed intellectual chronology—who supplied the initial research direction, which formulations were agent-originated or co-developed, and how Project Discovery emerged—see [`ORIGIN_AND_PROVENANCE.md`](ORIGIN_AND_PROVENANCE.md) and [`IDEA_PROVENANCE_POLICY.md`](IDEA_PROVENANCE_POLICY.md). Migration provenance and idea provenance are related but distinct: the source commit proves the imported tree existed at that revision; it does not by itself establish who originated every concept contained in the tree.
+
 Current imported authority at migration time is the cumulative specification chain:
 
 1. `CORE_SPEC_DRAFT_0_13_CONSOLIDATED_CANDIDATE.md`
