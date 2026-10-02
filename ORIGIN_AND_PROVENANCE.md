@@ -20,6 +20,8 @@ It exists because ordinary file authorship is not sufficient to answer:
 
 This document does **not** claim that IsoGraph was the first project in the world to pursue broad themes such as AI-assisted science, computational discovery, graph/hypergraph rewriting, automated theorem discovery, structural analogy, or multi-agent research.
 
+Throughout this record, `earliest evidence currently located` means the oldest supporting item found in the sources examined by this audit. It is an evidence statement, not a declaration that no earlier private or external antecedent exists.
+
 For claim-specific priority, use a separate prior-art/history review.
 
 Machine-readable companion:
