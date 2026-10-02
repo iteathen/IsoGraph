@@ -6,6 +6,8 @@
 
 This document explains the design ideals that guide IsoGraph research, specification work, qualification, and interpretation.
 
+Idea origin and contribution history are tracked separately in [`ORIGIN_AND_PROVENANCE.md`](ORIGIN_AND_PROVENANCE.md) under [`IDEA_PROVENANCE_POLICY.md`](IDEA_PROVENANCE_POLICY.md). In particular, explanatory doctrine must not erase whether a principle came from Joshua Oshiro's research direction, an agent-originated formulation, later co-development, or external antecedent work.
+
 It is intentionally **not** a substitute for the versioned semantic specifications. Where an ideal becomes load-bearing, the applicable Core/QU/NEI/Discovery specification and its qualification status control.
 
 ---
