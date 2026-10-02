@@ -53,6 +53,21 @@ A longer provenance/contribution note SHOULD distinguish:
 - research, drafting, analysis, verification, or discovery work performed with AI/agent assistance;
 - external sources and third-party results credited to their respective authors.
 
+## Idea/finding provenance is separate from authorship
+
+Joshua Oshiro's authorship and credit as designer of IsoGraph do **not** imply that every exact formulation, module name, theorem candidate, experiment design, proof step, implementation detail, or discovered result was individually originated by Joshua.
+
+Where a paper depends materially on a priority-sensitive project idea or finding, consult:
+
+- `ORIGIN_AND_PROVENANCE.md`;
+- `IDEA_PROVENANCE_POLICY.md`;
+- `provenance/IDEA_PROVENANCE_LEDGER.json`;
+- the originating research dossier's provenance record, when present.
+
+Publications SHOULD distinguish human-originated direction/ideas, agent-originated formulations, co-developed work, agent-assisted formalization, research findings, and external antecedents when those distinctions are material to the result or a priority claim.
+
+Do not convert the general statement `IsoGraph was designed by Joshua Oshiro` into a false sole-origin claim for a more specific idea where the project provenance record says otherwise.
+
 ## Required contribution/provenance note
 
 For research papers, include a section such as:
