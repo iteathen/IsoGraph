@@ -3,6 +3,9 @@
 **Status:** research notes, not accepted core semantics  
 **Research direction:** Josh Oshiro
 
+**Historical provenance:** predecessor AxiomeSH design notes were publicly committed in `iteathen/CUDA-JS` as `a0a5d015c8daadd0221c4b766c2aee14f05d0c1e` at `2026-09-16T21:02:48Z`. The research problem/direction is attributed to Joshua Oshiro. The current provenance audit records the specific graph/hypergraph-rewrite substrate and compact structure-plus-lawful-transformation formulation as an AI-assistant-originated formulation adopted and developed under Joshua's direction. See `ORIGIN_AND_PROVENANCE.md`.  
+**Provenance-record note:** this annotation was added retrospectively on 2026-10-02; it does not alter the historical design-note bytes in the predecessor repository.
+
 This document preserves the design reasoning that led from the original context-logic incubation to the first scoped-hypergraph rewrite specification.
 
 It exists to keep hypotheses, constraints, and negative knowledge available across agent/context resets without promoting them into settled language semantics.

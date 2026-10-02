@@ -2,6 +2,21 @@
 
 This repository follows the shared [iteathen evidence and validation policy](https://github.com/iteathen/.github/blob/main/EVIDENCE_POLICY.md).
 
+## Historical / idea-provenance evidence
+
+`ORIGIN_AND_PROVENANCE.md` and `provenance/IDEA_PROVENANCE_LEDGER.json` track evidence about **when project ideas/findings are first evidenced and who contributed what**.
+
+That evidence category is distinct from semantic/scientific validation:
+
+~~~text
+idea provenance
+!= semantic qualification
+!= external scientific validation
+!= global novelty / priority proof
+~~~
+
+A Git commit can strongly establish that a project artifact existed by a particular revision; it cannot by itself prove that no external predecessor existed.
+
 ## Current posture
 
 IsoGraph has extensive revision-scoped qualification evidence. Its cold packets, isolated decoder/verifier runs, repository-controlled scorers, holdouts, and qualification manifests are valuable **INTERNAL-QUALIFICATION** evidence.

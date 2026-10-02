@@ -10,6 +10,33 @@ The accumulated family reference is a maintained final product. Read `FINAL_PROD
 
 `DESIGN_IDEALS.md` is explanatory doctrine, not semantic authority. Use it to preserve the intended reasoning posture without letting prose override versioned qualified semantics.
 
+### Idea and research provenance requirement
+
+Before introducing or materially revising a major IsoGraph/Project Discovery idea, method, module, mission, or priority-sensitive finding, read and follow:
+
+- `IDEA_PROVENANCE_POLICY.md`
+- `ORIGIN_AND_PROVENANCE.md`
+- `provenance/IDEA_PROVENANCE_LEDGER.json`
+
+For Project Discovery also read `research/project-discovery/ORIGIN_AND_PROVENANCE.md`.
+
+Record provenance in the same work cycle where practicable. Distinguish the event/earliest-evidence time from the time a retrospective provenance record is written. Use `earliest evidence currently located` unless a separate history/prior-art review supports a stronger claim.
+
+Do not collapse:
+
+~~~text
+human research direction
+agent-originated formulation
+agent-assisted formalization
+co-development
+implementation
+research finding
+verification
+publication authorship
+~~~
+
+Frozen historical artifacts are not rewritten just to add modern attribution; link them from the current provenance ledger instead.
+
 ### Publication attribution requirement
 
 Before drafting, revising, or releasing any public-facing research publication, read and follow `PUBLICATION_ATTRIBUTION_POLICY.md`.

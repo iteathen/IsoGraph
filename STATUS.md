@@ -4,6 +4,17 @@
 **Repository:** `iteathen/IsoGraph`  
 **Default branch:** `main`
 
+## Idea/provenance status
+
+Idea origin, contribution attribution, and priority-sensitive chronology are tracked separately from semantic qualification:
+
+- `ORIGIN_AND_PROVENANCE.md`;
+- `IDEA_PROVENANCE_POLICY.md`;
+- `provenance/IDEA_PROVENANCE_LEDGER.json`;
+- `research/project-discovery/ORIGIN_AND_PROVENANCE.md`.
+
+These records document project history and contribution evidence. They do **not** qualify semantic claims, establish scientific novelty, or prove global intellectual priority by themselves.
+
 ## Design doctrine
 
 The explanatory project doctrine is recorded in:

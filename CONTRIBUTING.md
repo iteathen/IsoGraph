@@ -26,6 +26,22 @@ Do not add loose files directly under `research/`. Keep `research/README.md` upd
 
 Repository Verify enforces these layout rules.
 
+## Idea and finding provenance
+
+For a major new semantic principle, module, research method, Project Discovery operating principle, material publication finding, or priority-sensitive claim, update the provenance record in the same change or explicitly record why it is pending.
+
+Follow `IDEA_PROVENANCE_POLICY.md` and distinguish:
+
+- who supplied the research direction;
+- who first proposed the specific formulation;
+- who formalized/implemented it;
+- the earliest evidence currently located;
+- whether the record is retrospective;
+- the reasoning/decision path;
+- relevant external antecedents/prior art.
+
+Do not backdate newly written provenance. Git commit time, artifact-internal date, conversation time, and public-publication time are different evidence types and should remain distinguishable.
+
 ## Evidence before extension
 
 For a proposed semantic change:

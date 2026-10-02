@@ -26,6 +26,25 @@ IsoGraph -> agent -> IsoGraph
 
 No mandatory English, JSON, theorem-language, database, tokenizer-specific, or model-specific translation layer belongs to the semantics.
 
+## Origin, design, and provenance
+
+IsoGraph is an agent-assisted research project directed and designed by **Joshua Oshiro**, with individual formulations, modules, experiments, and findings carrying their own more specific contribution provenance.
+
+The project began as **Axiomesh / AxiomeSH** inside `iteathen/CUDA-JS` on September 16, 2026 before migration to the standalone IsoGraph repository. The preserved chronology distinguishes Joshua-originated research direction from agent-originated formulations, co-developed ideas, agent-assisted formalization, and later research findings.
+
+Start here:
+
+- [IsoGraph Origin and Provenance](ORIGIN_AND_PROVENANCE.md)
+- [Idea and Research Provenance Policy](IDEA_PROVENANCE_POLICY.md)
+- [Machine-readable Idea Provenance Ledger](provenance/IDEA_PROVENANCE_LEDGER.json)
+- [Project Discovery Origin and Provenance](research/project-discovery/ORIGIN_AND_PROVENANCE.md)
+- [Migration / predecessor repository anchor](MIGRATION.md)
+
+Historical attribution is evidence-scoped. The repository records the **earliest evidence currently located** for a project idea; it does not turn similarity or Git timestamps into unsupported global-priority claims.
+
+For example, the current record attributes the initial agent-context / research-direction problem to Joshua Oshiro, while the specific graph/hypergraph-rewrite substrate and the compact structure-plus-lawful-transformation formulation first appear as an AI-assistant proposal adopted and developed under Joshua's direction.
+
+---
 IsoGraph is currently in **active research incubation**. Its qualified authority is modular:
 
 - [Core Specification — Draft 0.17 Consolidated Qualified](CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md)
@@ -1770,6 +1789,15 @@ CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md
 
 STATUS.md
     current authority / evidence status
+
+ORIGIN_AND_PROVENANCE.md
+    human-readable intellectual chronology and contribution attribution
+
+IDEA_PROVENANCE_POLICY.md
+    governance for dating/attributing major ideas and findings without backdating
+
+provenance/
+    machine-readable idea/finding provenance ledger
 
 AGENTS.md
     research and agent operating guidance

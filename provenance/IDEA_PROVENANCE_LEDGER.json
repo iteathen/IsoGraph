@@ -1,0 +1,571 @@
+{
+  "schema": "isograph.idea-provenance-ledger.v1",
+  "recorded_on": {
+    "local": "2026-10-02T14:06:06-07:00",
+    "utc": "2026-10-02T21:06:06Z"
+  },
+  "retrospective": true,
+  "purpose": "Machine-readable chronology of major IsoGraph and Project Discovery ideas, formulations, mission changes, and contribution boundaries. Entries state earliest evidence currently located; they are not global priority determinations.",
+  "attribution_categories": [
+    "HUMAN_ORIGINATED_DIRECTION",
+    "HUMAN_ORIGINATED_IDEA",
+    "AGENT_ORIGINATED_FORMULATION",
+    "AGENT_ASSISTED_FORMALIZATION",
+    "CO_DEVELOPED",
+    "RESEARCH_FINDING",
+    "EXTERNAL_ANTECEDENT"
+  ],
+  "entries": [
+    {
+      "id": "IG-ORIGIN-001",
+      "title": "Agent-oriented compact reasoning representation / context-logic incubation",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        }
+      ],
+      "earliest_evidence": {
+        "time": "2026-09-16T19:44:15Z",
+        "basis": "PUBLIC_GIT_COMMIT",
+        "repository": "iteathen/CUDA-JS",
+        "commit": "323ce2510c6f4bcf883c506a630aa9acbd618490",
+        "url": "https://github.com/iteathen/CUDA-JS/commit/323ce2510c6f4bcf883c506a630aa9acbd618490",
+        "path": "research/axiomesh/README.md",
+        "blob_sha": "3dec1d491fe4f14ba38de422c6d68801fe851d1a"
+      },
+      "conversation_evidence": [
+        {
+          "time": "2026-09-16T20:07:16Z",
+          "party": "Joshua Oshiro",
+          "summary": "Stated that the language was for agents, emphasizing context-window compactness and synthesis of concepts.",
+          "public_at_event_time": false,
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED"
+        }
+      ],
+      "reasoning_path": [
+        "Complex reasoning can exceed available context/working-state capacity even when local operations are tractable.",
+        "A compact state should preserve propositions, dependencies, scopes, alternatives, provenance, and inference obligations.",
+        "History may be quotiented only when valid future continuations remain unchanged.",
+        "The first public Axiomesh record therefore framed a search for a token-efficient, recoverable logical/structural state for agents."
+      ],
+      "notes": "The seed README explicitly says 'Research direction: Josh Oshiro'. 'Josh Oshiro' is the historical short-form name for Joshua Oshiro."
+    },
+    {
+      "id": "IG-ORIGIN-002",
+      "title": "Graph/hypergraph rewrite substrate and structure-plus-transformation formulation",
+      "attribution": [
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ORIGINATED_FORMULATION"
+        },
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION",
+          "detail": "Adopted the proposal as a candidate research direction and continued directing its development."
+        }
+      ],
+      "earliest_evidence": {
+        "time": "2026-09-16T20:42:38Z",
+        "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+        "public_at_event_time": false,
+        "summary": "Assistant proposed graph/hypergraph rewriting as a candidate substrate and the formulation of knowledge as structure plus lawful transformation."
+      },
+      "first_public_corroboration": {
+        "time": "2026-09-16T21:02:48Z",
+        "basis": "PUBLIC_GIT_COMMIT",
+        "repository": "iteathen/CUDA-JS",
+        "commit": "a0a5d015c8daadd0221c4b766c2aee14f05d0c1e",
+        "url": "https://github.com/iteathen/CUDA-JS/commit/a0a5d015c8daadd0221c4b766c2aee14f05d0c1e",
+        "path": "research/axiomesh/DESIGN_NOTES.md",
+        "blob_sha": "e61f8775000dd64a9148f16599a8d67f3f0c2ff1"
+      },
+      "reasoning_path": [
+        "The initial Markov-like sufficient-state idea had to preserve nonlocal dependencies, guards, quantifiers, alternatives, and provenance.",
+        "The design pressure favored a sparse typed relational structure over a simple chain.",
+        "Graph/hypergraph rewriting unified represented state and lawful transformation while supporting composition, self-representation, isomorphism, and residual accounting."
+      ],
+      "notes": "This record deliberately does not attribute the graph/hypergraph-rewrite proposal or the compact structure-plus-transformation wording solely to Joshua Oshiro."
+    },
+    {
+      "id": "IG-ORIGIN-003",
+      "title": "One semantic structure / no mandatory internal translation boundary",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro + AI research process",
+          "role": "CO_DEVELOPED"
+        }
+      ],
+      "earliest_evidence": {
+        "time": "2026-09-16T21:02:48Z",
+        "basis": "PUBLIC_GIT_COMMIT",
+        "repository": "iteathen/CUDA-JS",
+        "commit": "a0a5d015c8daadd0221c4b766c2aee14f05d0c1e",
+        "url": "https://github.com/iteathen/CUDA-JS/commit/a0a5d015c8daadd0221c4b766c2aee14f05d0c1e",
+        "path": "research/axiomesh/DESIGN_NOTES.md",
+        "blob_sha": "e61f8775000dd64a9148f16599a8d67f3f0c2ff1"
+      },
+      "reasoning_path": [
+        "A translator between a source formalism and a separate agent formalism would confound representation, decomposition, mapping, and translation loss.",
+        "The project therefore made the structural form both semantic representation and native wire representation, with human/theorem-prover/database views downstream."
+      ],
+      "notes": "The surviving evidence establishes the design under Joshua's research direction but does not support clean sole-origin attribution for this exact formulation."
+    },
+    {
+      "id": "IG-ORIGIN-004",
+      "title": "IsoGraph name and standalone migration from Axiomesh/AxiomeSH",
+      "attribution": [
+        {
+          "party": "AI assistant + Joshua Oshiro",
+          "role": "CO_DEVELOPED",
+          "detail": "The assistant surfaced the IsoGraph naming option; Joshua explicitly selected/accepted it."
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-17T03:47:03Z",
+          "party": "Joshua Oshiro",
+          "summary": "Explicitly accepted the IsoGraph name ('Isograph is cool too') during the rename discussion.",
+          "public_at_event_time": false,
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED"
+        }
+      ],
+      "public_evidence": [
+        {
+          "time": "2026-09-17T04:08:56Z",
+          "repository": "iteathen/IsoGraph",
+          "commit": "986732d06002de3b90e9c9f7e785b65986f7cb6d",
+          "url": "https://github.com/iteathen/IsoGraph/commit/986732d06002de3b90e9c9f7e785b65986f7cb6d",
+          "description": "Standalone migration of the AxiomeSH corpus."
+        },
+        {
+          "time": "2026-09-17T04:35:37Z",
+          "repository": "iteathen/IsoGraph",
+          "commit": "6dc112d131369dfaba4f36c63fa23229eae28a2e",
+          "url": "https://github.com/iteathen/IsoGraph/commit/6dc112d131369dfaba4f36c63fa23229eae28a2e",
+          "description": "Completed IsoGraph naming migration without semantic change."
+        }
+      ],
+      "migration_anchor": {
+        "repository": "iteathen/CUDA-JS",
+        "commit": "275b4d28224990a2b8fbdd7fa66cb071fb867e48",
+        "time": "2026-09-17T03:40:07Z",
+        "url": "https://github.com/iteathen/CUDA-JS/commit/275b4d28224990a2b8fbdd7fa66cb071fb867e48"
+      }
+    },
+    {
+      "id": "IG-ORIGIN-005",
+      "title": "Observation-first discrepancy handling: error/defect may be a clue",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-18T16:27:47Z",
+          "party": "Joshua Oshiro",
+          "summary": "Stated that a discrepancy might be a clue to look deeper rather than something to normalize away immediately.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-18T18:05:10Z",
+          "party": "Joshua Oshiro",
+          "summary": "Accepted and reinforced an observation-first posture: anomalies should be understood before judging or repairing them.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T15:59:37Z",
+          "party": "Joshua Oshiro",
+          "summary": "Strengthened the rule: discrepancies/errors should be preserved and investigated as possible clues; even the expected/reference authority may be wrong.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T16:03:44Z",
+          "party": "Joshua Oshiro",
+          "summary": "Clarified that concrete examples normally express a general principle, not a request for a special-case rule.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "first_public_formalization": {
+        "time": "2026-09-18T18:17:53Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "73e344bf022316830b19b846b0daaf9027a6fd9f",
+        "url": "https://github.com/iteathen/IsoGraph/commit/73e344bf022316830b19b846b0daaf9027a6fd9f",
+        "path": "CORE_SPEC_DRAFT_0_18_OBSERVATION_FIRST_CANDIDATE.md"
+      },
+      "later_formalization": {
+        "time": "2026-09-27T16:16:32Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "cb2b60048dc15300e5ab4fcc2c3777b872ddfdbe",
+        "url": "https://github.com/iteathen/IsoGraph/commit/cb2b60048dc15300e5ab4fcc2c3777b872ddfdbe",
+        "path": "extensions/discovery/DISCOVERY_PROTOCOLS_0_8_CLUE_PRESERVING_DISCREPANCY_CANDIDATE.md"
+      },
+      "reasoning_path": [
+        "Unexpected mismatch may indicate a bug, hidden distinction, hidden equivalence, wrong reference expectation, scope mismatch, or unresolved structure.",
+        "Therefore preserve the observation before assigning defect ownership.",
+        "When repair is justified, use it as a diagnostic intervention and see what disappears or survives.",
+        "Keep repair disposition separate from discovery disposition."
+      ]
+    },
+    {
+      "id": "PD-ORIGIN-001",
+      "title": "Project Discovery named cross-domain discovery campaigns",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro + agent-assisted IsoGraph research process",
+          "role": "CO_DEVELOPED"
+        }
+      ],
+      "artifact_evidence": {
+        "declared_date": "2026-09-25",
+        "path": "research/project-discovery/2026-09-25-ising-mwc-dp07/CAMPAIGN.md",
+        "title": "Project Discovery — Ising / MWC DP 0.7 Campaign"
+      },
+      "first_located_public_preservation": {
+        "time": "2026-09-26T15:30:54Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "378a5170d5a51319f1d4f3cd3deb786fbd3db258",
+        "url": "https://github.com/iteathen/IsoGraph/commit/378a5170d5a51319f1d4f3cd3deb786fbd3db258"
+      },
+      "notes": "The campaign file is self-dated September 25; the located main-branch preservation commit is September 26. The current audit does not claim that the self-date is independently public timestamp evidence."
+    },
+    {
+      "id": "PD-ORIGIN-002",
+      "title": "Corpus-wide Project Discovery vision",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        }
+      ],
+      "earliest_evidence": {
+        "time": "2026-09-26T00:55:18Z",
+        "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+        "public_at_event_time": false,
+        "summary": "Proposed rendering mathematics, physics, computational/complexity-theory and related papers into IsoGraph, then running Discovery Protocol across the corpus to find cross-domain isomorphs and discoveries."
+      },
+      "agent_contribution": {
+        "time": "2026-09-26T00:55:34Z",
+        "role": "AGENT_ASSISTED_FORMALIZATION",
+        "summary": "Expanded the proposal into corpus-wide structural discovery with common cores/residuals, candidate isomorphs/generalizations, structural indexing, falsification, and validation.",
+        "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+        "public_at_event_time": false
+      },
+      "reasoning_path": [
+        "Individual structural renderings had already shown value for exposing non-obvious relationships.",
+        "A corpus of exact renderings would permit retrieval/comparison beyond one hand-selected pair.",
+        "Discovery Protocol could then search within and across disciplines while residual accounting limits false equivalence."
+      ]
+    },
+    {
+      "id": "IG-ORIGIN-006",
+      "title": "Primitive-logic / no-high-level-authoritative-leaf doctrine",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-26T02:20:49Z",
+          "party": "Joshua Oshiro",
+          "summary": "Required IsoGraph to reduce structure to irreducible, invariant primitives; high-level abstractions belong in discovery/derived views rather than the authoritative Core.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T06:51:04Z",
+          "party": "Joshua Oshiro",
+          "summary": "Reiterated that everything authoritative must reduce to irreducible logic and only fundamental logical properties may remain at the bottom.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "first_located_public_core20": {
+        "time": "2026-09-27T15:51:07Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "6bf6634d706793b94bae4dd7c0e89ef42b9b68fd",
+        "url": "https://github.com/iteathen/IsoGraph/commit/6bf6634d706793b94bae4dd7c0e89ef42b9b68fd",
+        "path": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md"
+      },
+      "reasoning_path": [
+        "High-level names can conceal exactly the structure needed for discovery.",
+        "A source-faithful representation may retain convenient labels only as derived/reconstructible views.",
+        "Definitionally reducible semantics should not remain opaque authoritative leaves."
+      ]
+    },
+    {
+      "id": "IG-ORIGIN-007",
+      "title": "Implicit Assertions and recursive fixed-point passes",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro + AI research process",
+          "role": "CO_DEVELOPED"
+        },
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION",
+          "detail": "Explicitly required careful recursive passes and later IA/NEI alternation until a scoped fixed point."
+        }
+      ],
+      "public_evidence": {
+        "time": "2026-09-26T09:52:17Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "62182c03bc0f69869cc66ec31feed142ee645471",
+        "url": "https://github.com/iteathen/IsoGraph/commit/62182c03bc0f69869cc66ec31feed142ee645471",
+        "path": "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md"
+      },
+      "conversation_evidence": [
+        {
+          "time": "2026-09-27T08:36:43Z",
+          "party": "Joshua Oshiro",
+          "summary": "Directed that implicit assertions be filled carefully and recursively because missing one could miss the opportunity to solve the problem.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T20:01:56Z",
+          "party": "Joshua Oshiro",
+          "summary": "Directed a scoped loop: Core first, then implicit assertions, then NEI, then implicit assertions again, repeating until finished within scope.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "notes": "The current evidence establishes IA publicly before the later explicit Joshua fixed-point directives; it does not support sole attribution of the original IA concept to one participant."
+    },
+    {
+      "id": "IG-ORIGIN-008",
+      "title": "Minimum Sufficient Support / Valuation",
+      "attribution": [
+        {
+          "party": "AI assistant / agent research process",
+          "role": "AGENT_ORIGINATED_FORMULATION"
+        },
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION",
+          "detail": "Supplied broader pressure toward the shortest/laziest exact route and approved/pursued the successor research."
+        }
+      ],
+      "precursor_conversation": {
+        "time": "2026-09-26T22:28:15Z",
+        "party": "Joshua Oshiro",
+        "summary": "Asked for the 'laziest path' / shortest exact route to the same conclusion without changing inputs or the solution.",
+        "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+        "public_at_event_time": false
+      },
+      "module_evidence": {
+        "time": "2026-09-29T18:09:15Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "b859fe5e280378ac15f06f0c6b62e1279b701e0b",
+        "url": "https://github.com/iteathen/IsoGraph/commit/b859fe5e280378ac15f06f0c6b62e1279b701e0b",
+        "path": "extensions/discovery/DISCOVERY_PROTOCOLS_0_9_MINIMUM_SUFFICIENT_SUPPORT_VALUATION_CANDIDATE.md"
+      },
+      "notes": "The specific DP 0.9 MSS/Valuation formalization is not claimed as solely Joshua-originated. The surviving record supports a broader Joshua optimization principle followed by agent formalization into the module."
+    },
+    {
+      "id": "IG-ORIGIN-009",
+      "title": "Experimental Warrant and open-world Experimental Inquiry",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA",
+          "detail": "Required clues to trigger experimentation and required experiments to operate over incomplete working models rather than falsely complete models."
+        },
+        {
+          "party": "AI assistant / agent research process",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-29T07:37:14Z",
+          "party": "Joshua Oshiro",
+          "summary": "Required clues to trigger experimentation and to inform intervention scope rather than prematurely narrowing the experiment.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-29T07:52:51Z",
+          "party": "Joshua Oshiro",
+          "summary": "Required experiments to work from incomplete 'Lego' models with possibly unknown pieces, outputs, dimensions, and completeness.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "public_module_evidence": {
+        "time": "2026-09-29T19:54:49Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "8dc6a0f37babae61d50e9cd5889d2cd1c11220ec",
+        "url": "https://github.com/iteathen/IsoGraph/commit/8dc6a0f37babae61d50e9cd5889d2cd1c11220ec",
+        "paths": [
+          "extensions/discovery/DISCOVERY_PROTOCOLS_0_10_EXPERIMENTAL_WARRANT_CANDIDATE.md",
+          "extensions/experimental/EXPERIMENTAL_INQUIRY_0_1_CANDIDATE.md"
+        ]
+      }
+    },
+    {
+      "id": "IG-ORIGIN-010",
+      "title": "No-Evasion, Source Semantic Census, Schema Closure, and IA invalidation",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION",
+          "detail": "Repeatedly required complete primitive reduction and forbade evading hard-to-reduce semantics or shrinking scope."
+        },
+        {
+          "party": "AI assistant / agent research process",
+          "role": "AGENT_ASSISTED_FORMALIZATION",
+          "detail": "Formalized the pressure into SSC conservation, closure dispositions, Schema Closure, and machine-derived ledger controls."
+        }
+      ],
+      "conceptual_precursors": [
+        {
+          "time": "2026-09-26T02:20:49Z",
+          "summary": "Joshua required irreducible primitive reduction.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T06:51:04Z",
+          "summary": "Joshua reiterated that high-level abstractions cannot terminate authoritative reduction.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-29T18:37:45Z",
+          "summary": "Joshua required integration under updated standards, recursive IA until none remain, and no evasion of hard-to-reduce semantics.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "public_evidence": {
+        "time": "2026-09-29T22:39:13Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "036f9be53b0620e8c96004ae694b20d62bb2e76b",
+        "url": "https://github.com/iteathen/IsoGraph/commit/036f9be53b0620e8c96004ae694b20d62bb2e76b",
+        "path": "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+      },
+      "notes": "The exact terms Source Semantic Census and Schema Closure, and the hardened ledger machinery, are recorded as agent-assisted formalization rather than retrospectively assigned as Joshua's original wording."
+    },
+    {
+      "id": "PD-ORIGIN-003",
+      "title": "Grand-scale Project Discovery mission: mass research synthesis with hundreds/thousands of agents",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-30T00:43:48Z",
+          "party": "Joshua Oshiro",
+          "summary": "Described current Project Discovery as a small proof/example collection and the intended mature system as mass research synthesis across and within domains, potentially using hundreds or thousands of agents and much greater server resources.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-30T00:46:30Z",
+          "party": "Joshua Oshiro",
+          "summary": "Clarified that full realization would require substantial funding, people, talent, and help because one person could not manage that scale alone.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "agent_formalization": {
+        "time": "2026-09-30T00:44:04Z",
+        "summary": "Assistant characterized the present work as a prototype/validation environment and the mature target as a massively parallel, continuously compounding structural research-synthesis system.",
+        "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+        "public_at_event_time": false
+      },
+      "first_public_formalization": {
+        "time": "2026-09-30T00:49:49Z",
+        "repository": "iteathen/IsoGraph",
+        "commit": "323d0f4ea78775ca99170002efb5be0037d6b01b",
+        "url": "https://github.com/iteathen/IsoGraph/commit/323d0f4ea78775ca99170002efb5be0037d6b01b",
+        "path": "research/project-discovery/README.md",
+        "github_verified_commit": true
+      }
+    },
+    {
+      "id": "IG-ORIGIN-011",
+      "title": "Publication authorship and agent-assistance attribution rule",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        }
+      ],
+      "conversation_evidence": [
+        {
+          "time": "2026-09-27T21:33:25Z",
+          "party": "Joshua Oshiro",
+          "summary": "Required Joshua Oshiro authorship, IsoGraph Project attribution, disclosure of agent assistance, and explicit statement that IsoGraph was designed by Joshua Oshiro.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        },
+        {
+          "time": "2026-09-27T21:33:43Z",
+          "party": "Joshua Oshiro",
+          "summary": "Corrected/confirmed the surname spelling Oshiro.",
+          "basis": "PRESERVED_DATED_CONVERSATION_RETROSPECTIVELY_SUMMARIZED",
+          "public_at_event_time": false
+        }
+      ],
+      "current_public_record": "PUBLICATION_ATTRIBUTION_POLICY.md"
+    },
+    {
+      "id": "PD-ORIGIN-004",
+      "title": "External parallel-work awareness and provenance audit trigger",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        }
+      ],
+      "event_time": {
+        "local": "2026-10-02T14:06:06-07:00",
+        "utc": "2026-10-02T21:06:06Z",
+        "basis": "AUDIT_START_TIMESTAMP"
+      },
+      "summary": "After identifying substantial philosophical and research-direction overlap with active work at the Wolfram Institute, Joshua directed a comprehensive provenance audit so IsoGraph and Project Discovery ideas/findings would preserve origin, reasoning path, authorship/contribution, and dated evidence.",
+      "external_trigger": {
+        "youtube_url": "https://youtu.be/oetFdMpB6v0?is=dIXKBSMUXtuy2pzF",
+        "note": "The URL is preserved as the trigger supplied by Joshua. This ledger does not infer priority or copying from the video."
+      },
+      "external_antecedent_boundary": [
+        {
+          "source": "Wolfram Institute",
+          "url": "https://wolframinstitute.org/about",
+          "note": "The Institute states it was initially launched in October 2022 and pursues computational foundational science."
+        },
+        {
+          "source": "Stephen Wolfram, Can AI Solve Science?",
+          "date": "2024-03-05",
+          "url": "https://wolframinstitute.org/output/can-ai-solve-science",
+          "note": "Public prior discussion of AI/computation in scientific discovery. This is one reason Project Discovery provenance claims must be architecture-specific rather than generic AI-for-science priority claims."
+        }
+      ]
+    }
+  ]
+}

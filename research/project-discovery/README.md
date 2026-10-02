@@ -3,6 +3,24 @@
 **Current research dossier:** this README  
 **Research status:** early prototype / proof-of-function research program; the intended mature Project Discovery has not yet been built.
 
+## Origin and provenance
+
+Project Discovery's current mission was not created all at once. Its historical development is recorded in:
+
+- [Project Discovery Origin and Provenance](ORIGIN_AND_PROVENANCE.md)
+- [IsoGraph Origin and Provenance](../../ORIGIN_AND_PROVENANCE.md)
+- [Idea and Research Provenance Policy](../../IDEA_PROVENANCE_POLICY.md)
+
+Key currently located chronology:
+
+- `2026-09-25` — earliest currently located Project Discovery-named campaign artifact is self-dated to this day; its located public preservation is later.
+- `2026-09-26T00:55:18Z` — preserved conversation records Joshua Oshiro proposing corpus-wide IsoGraph rendering and Discovery Protocol synthesis across mathematics/science domains.
+- `2026-09-30T00:43:48Z` — Joshua explicitly defines the intended mature program as mass within-domain/cross-domain research synthesis, potentially using hundreds or thousands of agents and far greater compute.
+- `2026-09-30T00:49:49Z` — GitHub-verified commit `323d0f4ea78775ca99170002efb5be0037d6b01b` publicly formalizes the mature Project Discovery mission.
+- `2026-10-02T14:06:06-07:00` — formal provenance audit begins after Joshua identifies strongly overlapping parallel work at the Wolfram Institute.
+
+Conversation evidence is labeled retrospective when it was not public at the event time. Project Discovery does not claim generic priority over AI-assisted science or computational discovery; priority-sensitive statements must be architecture/idea-specific and supported by evidence.
+
 ## Mission
 
 Project Discovery is intended to become a **large-scale research-synthesis program built on the IsoGraph family**.
