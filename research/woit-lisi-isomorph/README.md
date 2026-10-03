@@ -2,7 +2,7 @@
 
 **Current research dossier:** this README
 
-**Status:** ACTIVE RESEARCH — SOURCE / FORMULATION-FAMILY PASS, PRE-COMPARISON  
+**Status:** ACTIVE RESEARCH — FULL ISOGRAPH TREATMENT OF BOTH TRACKS, PRE-COMPARISON  
 **Started:** 2026-10-03  
 **Branch:** `research/woit-lisi-isomorph-20261003`  
 **Base revision:** `f3217af9a4fd50e838db39e249e93f39380e0e4a`  
@@ -20,6 +20,45 @@ The second target question is whether any surviving common quotient:
 4. disappears once source-faithful distinctions are preserved.
 
 No positive correspondence is assumed.
+
+## Full-treatment acceptance criterion
+
+The campaign objective is no longer merely to render enough of each program to test the proposed bridge.
+
+**Both programs receive a complete independent IsoGraph treatment over the frozen source scope.** The cross-domain comparison is downstream of those treatments.
+
+A track is not complete until all of the following are satisfied under one pinned authority tuple:
+
+1. complete Source Semantic Census (SSC) frozen;
+2. every census obligation has an exact reconstruction path;
+3. every load-bearing named mathematical/domain construction is reduced to primitive logic/raw incidence, exact schema closure, or a lawful qualified QU boundary;
+4. native IsoGraph bundle exists and is the authority for the track rendering;
+5. mechanically derived Core-0.21 closure ledger passes source coverage, scope integrity, reconstruction, and authority-routing checks;
+6. recursive Implicit Assertion generation has reached a pinned operational fixed point;
+7. NEI identity questions have been run over all identity distinctions that become load-bearing;
+8. DTS has been applied to all load-bearing transitions/revisions/formulation changes;
+9. the full current Discovery Protocol stack has been applied within the track independently of the other author;
+10. any DP 0.10 Experimental Warrant is either discharged through Experimental Inquiry or left explicitly outstanding;
+11. cold/source reconstruction review succeeds;
+12. the track is sealed before any cross-author hypothesis or source-native citation is unquarantined.
+
+The governing completion relation is therefore:
+
+~~~text
+source fidelity
++ primitive closure
++ IA closure
++ NEI
++ DTS
++ DP
++ reconstruction
++ explicit QU
+= sealed full-treatment track
+~~~
+
+Passing a bridge-relevant subset is insufficient.
+
+See FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md, woit/README.md, and lisi/README.md.
 
 ## Anti-bias architecture
 
@@ -109,7 +148,7 @@ A known representation-theoretic criticism of (E_8) unification, Distler–Garib
 
 ## Required execution order
 
-`source freeze 0.2 -> complete SSC W/L -> primitive closure W/L -> recursive IA W/L -> seal intra-author formulation families -> independent review -> unquarantine source-native cross references -> blind family-to-family comparison -> NEI/DTS/DP common-core search -> falsifiers -> obstruction audit -> reassessment`
+`source freeze 0.2 -> complete full W treatment -> complete full L treatment -> independently seal both -> unquarantine source-native cross references -> family-to-family comparison -> cross-track NEI/DTS/DP -> falsifiers -> obstruction audit -> reassessment`
 
 Any change to source scope, primitive kernel, governing authority, QU state, or IA inference profile reopens the affected closure under Core 0.21.
 

@@ -1,0 +1,46 @@
+# Woit full IsoGraph treatment
+
+**Track:** W
+**Current status:** ACTIVE — source traversal and primitive requirements expansion
+**Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
+**Cross-author semantics available:** NO
+
+## Objective
+
+Produce a complete source-faithful Core-0.21 rendering of the frozen Peter Woit corpus independently of Garrett Lisi. This track is successful even if no later bridge survives.
+
+## Current formulation family
+
+Current provisional formulations are W-F1 Euclidean-first twistor unification, W-F2 quaternionic/twistor-P1 representation layer, W-F3 right-handed spinor/vector geometry, W-F4 twistor real-form/orbit/fibration geometry, W-F5 Minkowski-twistor/holomorphic-first formulation, and W-F6 conjugation/chiral-real-structure work in progress.
+
+See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FORMULATION_FAMILY_GRAPH_0_1.json.
+
+## Full-treatment gates
+
+| Gate | State |
+|---|---|
+| corpus frozen | PASS — 0.2 |
+| source traversal complete | IN PROGRESS |
+| SSC frozen complete | NOT YET |
+| primitive math support complete | NOT YET |
+| native .isg bundle | NOT YET |
+| graph-derived closure ledger | NOT YET |
+| recursive IA fixed point | NOT YET |
+| NEI pass | NOT YET |
+| DTS pass | PARTIAL / PROVISIONAL |
+| DP pass | NOT YET |
+| EI warrants | NONE YET |
+| reconstruction audit | NOT YET |
+| sealed | NO |
+
+## High-risk reductions
+
+Complex/projective twistor geometry; Spin/SU/SL actions; Weyl spinors/chirality; vector-from-spinor constructions; real forms/conjugations; Hermitian forms/orbits; CP1 incidence; quaternionic P1; Wick rotation; self-dual forms; chiral gravity/Yang-Mills; internal U(1)/SU(2)/SU(3); one-generation matter construction; Higgs/imaginary-time-direction or later replacement structure; quantization claims and admitted missing formalism.
+
+## Revision discipline
+
+W01/W02 are frozen papers. W04a–W04e are separately dated 2026 sources. Later posts do not silently rewrite earlier ones. W04e explicitly remains work in progress.
+
+## Firewall
+
+No Lisi fact, notation, triality construction, E8 embedding, or source-native Woit citation found in Lisi may be used to close a Woit item before this track is sealed.

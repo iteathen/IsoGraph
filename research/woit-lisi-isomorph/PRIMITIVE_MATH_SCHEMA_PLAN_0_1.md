@@ -1,0 +1,92 @@
+# Primitive Mathematical Schema Plan 0.1
+
+**Status:** ACTIVE RESEARCH SUPPORT PLAN — NOT QUALIFIED AUTHORITY
+**Applies to:** both full-treatment tracks, with source-local instantiation
+**Primitive base:** research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg and exact supporting theories when used
+
+## Purpose
+
+The Woit and Lisi corpora rely on mathematical structures not covered by the current reusable primitive-logic research library. Core 0.20/0.21 forbids stopping at these labels.
+
+The schemas below are domain-neutral mathematical reduction obligations. Source-specific dimensions, signatures, interpretations, and physical roles remain track-local.
+
+## M01 — scalar carrier and operation graphs
+Carrier membership; binary addition/multiplication graphs; additive inverse; distinguished zero/one; equality; associativity, commutativity, distributivity, identity/inverse laws; characteristic conditions when load-bearing. FIELD remains derived.
+
+## M02 — real/complex structure
+Ordered-field support when needed; complex extension or independent complex-field schema; distinguished imaginary unit; conjugation as involutive field automorphism; fixed-point real subcarrier. Analytic completeness/topology remains incomplete until explicitly rendered when load-bearing.
+
+## M03 — vector space
+Vector/scalar carriers; vector addition; scalar action; zero vector; quantified vector-space axioms. Dimension requires basis, independence, and spanning semantics.
+
+## M04 — linear/multilinear maps
+Total function graphs plus preservation laws. Bilinear/trilinear maps require linearity in each slot.
+
+## M05 — forms and involutions
+Map graph; domains; symmetry/conjugate-symmetry; nondegeneracy/signature when required; conjugation relation when used.
+
+## M06 — associative/composition/division algebra
+Multiplication/unit graphs plus exact algebra laws. Division/composition properties, norm, norm multiplicativity, alternativity/associativity, and split-signature distinctions must be explicit when load-bearing.
+
+## M07 — Clifford algebra interface
+Scalar/vector/algebra carriers; algebra product; vector embedding; quadratic/bilinear form; Clifford relation; grading/chirality; basis/generator rules when dimension-specific. Matrix representation is a separate embedding claim.
+
+## M08 — Lie algebra
+Carrier/vector-space support; bracket graph; bilinearity; antisymmetry; Jacobi. Subalgebra and embedding receive explicit closure/injectivity/bracket-preservation conditions.
+
+## M09 — group and action
+Group carrier/product/identity/inverse/associativity plus action graph and compatibility. Spin-group claims expose their load-bearing Clifford/Lie relation.
+
+## M10 — representation
+Group/Lie action on vector carrier satisfying homomorphism/action laws. Vector, spinor, and adjoint are derived roles.
+
+## M11 — grading/chirality
+Grading/partition; positive/negative subcarriers; action preservation/exchange; chirality operator/eigenstructure when required. Majorana/Weyl conditions require explicit reality and chirality constraints.
+
+## M12 — projective quotient
+Nonzero vector carrier; nonzero scalar rescaling relation; equivalence; quotient-class incidence.
+
+## M13 — Grassmannian/twistor incidence
+Ambient carrier; subspace carrier; membership/incidence; dimension/basis constraints; reality/orbit conditions. TWISTOR remains derived.
+
+## M14 — real forms/conjugations
+Complex carrier; involution/antilinear map; fixed-point or source reality condition; preserved form/action; orbit/signature conditions.
+
+## M15 — manifold/local coordinate support
+Point carrier; charts/domains; coordinate maps; overlap maps; differentiability assumptions required by the source.
+
+## M16 — differential forms/exterior product
+Degree carriers; wedge graph; graded laws; exterior derivative graph and source-used laws.
+
+## M17 — principal bundle/fiber/section
+Total/base carriers; projection; group action; fiber relation; sections; local trivialization/transition semantics when load-bearing.
+
+## M18 — connection/curvature
+Connection carrier; covariant derivative or local connection-form incidence; transformation behavior; curvature construction; structure equations used by the source. Ehresmann, Cartan, generalized Cartan, and superconnection remain distinct until related explicitly.
+
+## M19 — Cartan/generalized Cartan geometry
+Model group/subgroup; base or embedded-spacetime ownership; soldering/frame relation; Cartan connection; deformation/embedding structure.
+
+## M20 — gauge/symmetry breaking
+Pre-break action; distinguished field/configuration; stabilizer/unbroken structure; carrier/field decomposition; transition to post-break structure.
+
+## M21 — triality
+Three role carriers; trilinear relation/form; cyclic invariance; transformation cycling roles; preservation law; order-three condition where asserted. Spin(8), division-algebra, and generation triality remain distinct claims until related.
+
+## M22 — root/weight systems
+Cartan/subspace carrier; root functional/vector relation; root-space/bracket incidence; sign/structure-constant data when needed.
+
+## M23 — quantization/Hilbert representation
+Quantum states, Hilbert spaces, unitary representations, canonical/functional quantization, and Grassmann-valued fields require separate semantics when load-bearing.
+
+## M24 — analytic continuation/Wick rotation
+Complexified carrier; source/target real structures; holomorphic domain; boundary/restriction relation; extra choice/field; unresolved existence/uniqueness claims. Treat as DTS/schema, not a primitive.
+
+## Current support disposition
+
+~~~text
+M01-M24:
+    NOT YET FULLY PRIMITIVE-RENDERED
+~~~
+
+This file is a burden register, not a closure ledger.

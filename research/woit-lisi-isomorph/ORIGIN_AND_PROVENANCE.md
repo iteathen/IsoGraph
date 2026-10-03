@@ -37,3 +37,12 @@ cross-domain search
 The agent formalized this into `FORMULATION_FAMILY_PROTOCOL_0_1.md`.
 
 The provenance record does not claim that formulation equivalence, change of representation, normal forms, or cross-representation comparison are new mathematical concepts. The project-specific contribution being recorded is the decision to make **intra-author formulation-family recovery a mandatory blind stage of this IsoGraph comparison**, so that a cross-domain isomorph is not missed or manufactured by representative choice.
+
+## WL-ORIGIN-003 — full independent IsoGraph treatment for both programs
+
+**Attribution:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION.
+**Formalization:** AI assistant — AGENT_ASSISTED_FORMALIZATION.
+
+On 2026-10-03 Joshua directed that both the Woit and Lisi programs receive the full IsoGraph treatment, rather than being rendered only deeply enough to search for the anticipated bridge.
+
+This changes the campaign completion criterion: bridge-sufficient partial rendering is not completion. The agent formalized the requirement in FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md and opened separate track dossiers under woit/ and lisi/.
