@@ -18,6 +18,8 @@ Carrier membership; binary addition/multiplication graphs; additive inverse; dis
 ## M02 — real/complex structure
 Ordered-field support when needed; complex extension or independent complex-field schema; distinguished imaginary unit; conjugation as involutive field automorphism; fixed-point real subcarrier. Analytic completeness/topology remains incomplete until explicitly rendered when load-bearing.
 
+**Current reusable support:** algebraic involutive scalar-conjugation interface SCHEMA-CLOSED in support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg. Identification with standard complex conjugation, real fixed field, topology, and completeness remain open.
+
 ## M03 — vector space
 Vector/scalar carriers; vector addition; scalar action; zero vector; quantified vector-space axioms. Dimension requires basis, independence, and spanning semantics.
 
@@ -26,8 +28,12 @@ Vector/scalar carriers; vector addition; scalar action; zero vector; quantified 
 ## M04 — linear/multilinear maps
 Total function graphs plus preservation laws. Bilinear/trilinear maps require linearity in each slot.
 
+**Current reusable support:** linear maps and scalar-valued bilinear maps SCHEMA-CLOSED in support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg. General n-linear and source-specific maps remain open.
+
 ## M05 — forms and involutions
 Map graph; domains; symmetry/conjugate-symmetry; nondegeneracy/signature when required; conjugation relation when used.
+
+**Current reusable support:** bilinear and Hermitian interfaces SCHEMA-CLOSED; nondegeneracy/signature remain open.
 
 ## M06 — associative/composition/division algebra
 Multiplication/unit graphs plus exact algebra laws. Division/composition properties, norm, norm multiplicativity, alternativity/associativity, and split-signature distinctions must be explicit when load-bearing.
@@ -46,6 +52,8 @@ Group/Lie action on vector carrier satisfying homomorphism/action laws. Vector, 
 
 ## M11 — grading/chirality
 Grading/partition; positive/negative subcarriers; action preservation/exchange; chirality operator/eigenstructure when required. Majorana/Weyl conditions require explicit reality and chirality constraints.
+
+**Current reusable support:** direct-sum Z2 chiral grading plus linear chirality operator SCHEMA-CLOSED; Majorana reality and source representation action remain open.
 
 ## M12 — projective quotient
 Nonzero vector carrier; nonzero scalar rescaling relation; equivalence; quotient-class incidence.
@@ -95,7 +103,19 @@ M01:
 M03:
     ABSTRACT VECTOR-SPACE SCHEMA CLOSED; DIMENSION/SOURCE INSTANTIATION OPEN
 
-M02, M04-M24:
+M02:
+    ALGEBRAIC CONJUGATION SCHEMA CLOSED; STANDARD R/C STRUCTURE OPEN
+
+M04:
+    LINEAR / BILINEAR SUPPORT PARTIALLY SCHEMA-CLOSED
+
+M05:
+    BILINEAR / HERMITIAN INTERFACES SCHEMA-CLOSED; SIGNATURE/NONDEGENERACY OPEN
+
+M11:
+    ABSTRACT CHIRAL DIRECT-SUM SCHEMA CLOSED; SOURCE REALITY CONDITIONS OPEN
+
+M06-M10, M12-M24:
     NOT YET FULLY PRIMITIVE-RENDERED
 ~~~
 
