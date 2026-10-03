@@ -68,11 +68,17 @@ Grading/partition; positive/negative subcarriers; action preservation/exchange; 
 ## M12 — projective quotient
 Nonzero vector carrier; nonzero scalar rescaling relation; equivalence; quotient-class incidence.
 
+**Current reusable support:** exact nonzero-vector and projective-quotient schemas CLOSED in support/PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.isg. Dimension-specific projective spaces remain open.
+
 ## M13 — Grassmannian/twistor incidence
 Ambient carrier; subspace carrier; membership/incidence; dimension/basis constraints; reality/orbit conditions. TWISTOR remains derived.
 
+**Current reusable support:** represented-subspace-family and projective-subspace incidence schemas CLOSED. Finite-dimension/basis constraints and source twistor identifications remain open.
+
 ## M14 — real forms/conjugations
 Complex carrier; involution/antilinear map; fixed-point or source reality condition; preserved form/action; orbit/signature conditions.
+
+**Current reusable support:** antilinear vector involution and exact fixed-point carrier schemas CLOSED. Named real forms, preserved source actions, signature, and orbit structure remain open.
 
 ## M15 — manifold/local coordinate support
 Point carrier; charts/domains; coordinate maps; overlap maps; differentiability assumptions required by the source.
@@ -142,7 +148,16 @@ M09:
 M10:
     ABSTRACT GROUP/LIE REPRESENTATION SCHEMAS CLOSED; SOURCE REPRESENTATIONS OPEN
 
-M12-M20:
+M12:
+    ABSTRACT PROJECTIVE QUOTIENT SCHEMA CLOSED; SOURCE DIMENSIONS OPEN
+
+M13:
+    SUBSPACE-FAMILY / PROJECTIVE INCIDENCE SKELETON CLOSED; DIMENSION/TWISTOR INSTANTIATION OPEN
+
+M14:
+    ANTILINEAR INVOLUTION / FIXED-CARRIER SCHEMAS CLOSED; NAMED REAL FORMS/SIGNATURE OPEN
+
+M15-M20:
     NOT YET FULLY PRIMITIVE-RENDERED
 
 M21:

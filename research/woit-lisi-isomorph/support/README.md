@@ -13,3 +13,5 @@ Current support:
 - PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.md — closure audit and limitations for that slice.
 - PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg — associative/composition algebra, quadratic-space, Clifford-module, trilinear, and cyclic-triality schemas.
 - PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.md — closure audit and limitations for that slice.
+- PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.isg — algebraic real structures, projective quotient, subspace-family, and projective-incidence schemas.
+- PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.md — closure audit and dimension/real-form limitations.
