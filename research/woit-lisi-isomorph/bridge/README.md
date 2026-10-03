@@ -77,3 +77,9 @@ These can be tested as refinements only if the weaker bridge survives.
 - `BRIDGE_NEUTRAL_SIGNATURES_0_1.isg` — neutral structural signature graph for B01–B04.
 - `BRIDGE_NEUTRAL_SIGNATURES_0_1.md` — role map, nested-strength interpretation, and limitations.
 - `BRIDGE_ABSTRACTION_LATTICE_0_1.json` — weak/strong candidate levels and promotion constraints.
+
+## First exploratory result
+
+- `B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.isg` / `.md` — strongest current candidate: algebraic vector–chiral-spinor incidence and geometric projective-twistor incidence may be alternate quaternionic presentations.
+- `PRESEAL_EXPLORATORY_COMPARISON_0_1.md` — current pre-seal dispositions; no admitted cross-track match.
+- `SOURCE_PROJECTION_STATUS_0_1.json` — asymmetric W/L readiness against B01–B04.

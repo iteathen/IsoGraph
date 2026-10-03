@@ -57,3 +57,14 @@ On 2026-10-03 Joshua identified the abstraction boundary itself as a discovery v
 The agent formalized this as the **isomorph-exposure frontier** in `ISOMORPH_EXPOSURE_FRONTIER_0_1.md`: use nested lawful abstractions, compare at several levels, require upward reconstruction, and stop before deleting load-bearing distinctions.
 
 This is a project-specific research-method decision. It does not claim novelty for abstraction, quotienting, axiomatization, or mathematical isomorphism generally.
+
+## WL-FINDING-001 — quaternionic chiral-action / twistor-incidence transform candidate
+
+**Category:** RESEARCH_FINDING with EXTERNAL_ANTECEDENT source support.  
+**Project finding recorded:** 2026-10-03.
+
+During the first bridge-signature construction, the strongest candidate shifted from a direct named-object correspondence to a representation transform: Lisi's division/Clifford formulation exposes a vector-to-chiral-spinor action, while Woit's formulation exposes quaternionic projective twistor incidence. Lisi's 2026 source itself states that the quaternionic case of its algebraic relation is a Euclidean twistor incidence relation and cites Woit 2021.
+
+The project-specific finding is not that this mathematical relationship was newly discovered; the external source already states it. The finding is that, under the IsoGraph formulation-family and isomorph-exposure method, this cross-presentation transform is currently the strongest candidate common quotient and should be tested below E8 rather than beginning from the full exceptional embedding.
+
+Current artifact: `bridge/B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.md`.
