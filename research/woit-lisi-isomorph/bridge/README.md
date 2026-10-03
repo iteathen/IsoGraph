@@ -71,3 +71,9 @@ No Transition Isomorph claim is made.
 - CPT/root-involution equivalence.
 
 These can be tested as refinements only if the weaker bridge survives.
+
+## Native workbench artifacts
+
+- `BRIDGE_NEUTRAL_SIGNATURES_0_1.isg` — neutral structural signature graph for B01–B04.
+- `BRIDGE_NEUTRAL_SIGNATURES_0_1.md` — role map, nested-strength interpretation, and limitations.
+- `BRIDGE_ABSTRACTION_LATTICE_0_1.json` — weak/strong candidate levels and promotion constraints.

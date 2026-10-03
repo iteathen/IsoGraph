@@ -1,0 +1,143 @@
+{
+  "schema": "woit-lisi.bridge-abstraction-lattice.v0.1",
+  "status": "PROVISIONAL",
+  "date": "2026-10-03",
+  "candidates": {
+    "B01": {
+      "levels": [
+        {
+          "level": "B01.0",
+          "name": "typed chiral action",
+          "requires": [
+            "vector-like carrier",
+            "spinor-like carrier",
+            "two chiral subcarriers",
+            "bilinear/typed action",
+            "action exchanges chirality"
+          ]
+        },
+        {
+          "level": "B01.1",
+          "name": "Clifford refinement",
+          "adds": [
+            "quadratic carrier",
+            "Clifford square relation"
+          ]
+        },
+        {
+          "level": "B01.2",
+          "name": "division/triality refinement",
+          "adds": [
+            "trilinear triality form",
+            "cyclic role maps"
+          ],
+          "status": "deferred_stronger_refinement"
+        }
+      ]
+    },
+    "B02": {
+      "levels": [
+        {
+          "level": "B02.0",
+          "name": "parametrized projective incidence",
+          "requires": [
+            "projective quotient",
+            "subspace family",
+            "incidence",
+            "base-to-subspace parameterization"
+          ]
+        },
+        {
+          "level": "B02.1",
+          "name": "dimension-specific twistor incidence",
+          "adds": [
+            "ambient dimension",
+            "subspace dimension",
+            "reality structure"
+          ],
+          "status": "source_specific"
+        },
+        {
+          "level": "B02.2",
+          "name": "quaternionic realization",
+          "adds": [
+            "composition/quaternionic structure",
+            "compatibility with incidence"
+          ],
+          "status": "source_specific"
+        }
+      ]
+    },
+    "B03": {
+      "levels": [
+        {
+          "level": "B03.0",
+          "name": "graded real structure",
+          "requires": [
+            "antilinear involution",
+            "fixed/selected real carrier",
+            "chirality grading"
+          ]
+        },
+        {
+          "level": "B03.P",
+          "name": "grading-preserving real structure",
+          "adds": [
+            "involution commutes with grading"
+          ]
+        },
+        {
+          "level": "B03.X",
+          "name": "grading-exchanging real structure",
+          "adds": [
+            "involution exchanges grading sectors"
+          ]
+        },
+        {
+          "level": "B03.strong",
+          "name": "source reality condition",
+          "adds": [
+            "Majorana/Weyl or Woit-specific real-form equations"
+          ],
+          "status": "source_specific"
+        }
+      ]
+    },
+    "B04": {
+      "levels": [
+        {
+          "level": "B04.0",
+          "name": "parent-selection transition",
+          "requires": [
+            "K",
+            "Delta-minus",
+            "Delta-plus",
+            "boundary",
+            "QU"
+          ]
+        },
+        {
+          "level": "B04.1",
+          "name": "source-instantiated transition",
+          "adds": [
+            "source ownership",
+            "target ownership",
+            "selection/embedding semantics"
+          ]
+        },
+        {
+          "level": "B04.2",
+          "name": "Transition Isomorph candidate",
+          "adds": [
+            "comparison view",
+            "mapping witness",
+            "residuals",
+            "falsifier"
+          ],
+          "status": "forbidden_before_track_seal"
+        }
+      ]
+    }
+  },
+  "rule": "Prefer the strongest common level that both tracks independently instantiate while preserving upward reconstruction and residuals."
+}
