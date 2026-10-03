@@ -13,11 +13,15 @@ The schemas below are domain-neutral mathematical reduction obligations. Source-
 ## M01 — scalar carrier and operation graphs
 Carrier membership; binary addition/multiplication graphs; additive inverse; distinguished zero/one; equality; associativity, commutativity, distributivity, identity/inverse laws; characteristic conditions when load-bearing. FIELD remains derived.
 
+**Current reusable support:** PARTIAL / SCHEMA-CLOSED for the abstract commutative-field interface in support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg. Source-specific R/C structure remains open.
+
 ## M02 — real/complex structure
 Ordered-field support when needed; complex extension or independent complex-field schema; distinguished imaginary unit; conjugation as involutive field automorphism; fixed-point real subcarrier. Analytic completeness/topology remains incomplete until explicitly rendered when load-bearing.
 
 ## M03 — vector space
 Vector/scalar carriers; vector addition; scalar action; zero vector; quantified vector-space axioms. Dimension requires basis, independence, and spanning semantics.
+
+**Current reusable support:** PARTIAL / SCHEMA-CLOSED for the abstract vector-space interface in support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg. Dimension/basis and source instantiation remain open.
 
 ## M04 — linear/multilinear maps
 Total function graphs plus preservation laws. Bilinear/trilinear maps require linearity in each slot.
@@ -85,7 +89,13 @@ Complexified carrier; source/target real structures; holomorphic domain; boundar
 ## Current support disposition
 
 ~~~text
-M01-M24:
+M01:
+    ABSTRACT FIELD SCHEMA CLOSED; SOURCE-SPECIFIC EXTENSIONS OPEN
+
+M03:
+    ABSTRACT VECTOR-SPACE SCHEMA CLOSED; DIMENSION/SOURCE INSTANTIATION OPEN
+
+M02, M04-M24:
     NOT YET FULLY PRIMITIVE-RENDERED
 ~~~
 
