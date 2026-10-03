@@ -38,8 +38,12 @@ Map graph; domains; symmetry/conjugate-symmetry; nondegeneracy/signature when re
 ## M06 — associative/composition/division algebra
 Multiplication/unit graphs plus exact algebra laws. Division/composition properties, norm, norm multiplicativity, alternativity/associativity, and split-signature distinctions must be explicit when load-bearing.
 
+**Current reusable support:** unital associative algebra and unital composition-algebra schemas CLOSED in support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg. Division/split classification, alternativity, and source-specific multiplication remain open.
+
 ## M07 — Clifford algebra interface
 Scalar/vector/algebra carriers; algebra product; vector embedding; quadratic/bilinear form; Clifford relation; grading/chirality; basis/generator rules when dimension-specific. Matrix representation is a separate embedding claim.
+
+**Current reusable support:** nondegenerate quadratic-space and Clifford-module action schemas CLOSED. Universal Clifford algebra, named Cl(p,q), matrix realizations, and source grading details remain open.
 
 ## M08 — Lie algebra
 Carrier/vector-space support; bracket graph; bilinearity; antisymmetry; Jacobi. Subalgebra and embedding receive explicit closure/injectivity/bracket-preservation conditions.
@@ -91,6 +95,8 @@ Pre-break action; distinguished field/configuration; stabilizer/unbroken structu
 ## M21 — triality
 Three role carriers; trilinear relation/form; cyclic invariance; transformation cycling roles; preservation law; order-three condition where asserted. Spin(8), division-algebra, and generation triality remain distinct claims until related.
 
+**Current reusable support:** trilinear form and generic cyclic triality schemas CLOSED. Spin(8), division-algebra, and generation-specific instantiations remain separate/open.
+
 ## M22 — root/weight systems
 Cartan/subspace carrier; root functional/vector relation; root-space/bracket incidence; sign/structure-constant data when needed.
 
@@ -121,8 +127,11 @@ M05:
 M11:
     ABSTRACT CHIRAL DIRECT-SUM SCHEMA CLOSED; SOURCE REALITY CONDITIONS OPEN
 
-M06-M07:
-    NOT YET FULLY PRIMITIVE-RENDERED
+M06:
+    ASSOCIATIVE / COMPOSITION-ALGEBRA SCHEMAS CLOSED; DIVISION/SPLIT/SOURCE DETAILS OPEN
+
+M07:
+    QUADRATIC-SPACE CLIFFORD-MODULE SCHEMA CLOSED; UNIVERSAL/NAMED CLIFFORD ALGEBRAS OPEN
 
 M08:
     ABSTRACT LIE/SUBALGEBRA/EMBEDDING SCHEMAS CLOSED; NAMED ALGEBRAS OPEN
@@ -133,7 +142,13 @@ M09:
 M10:
     ABSTRACT GROUP/LIE REPRESENTATION SCHEMAS CLOSED; SOURCE REPRESENTATIONS OPEN
 
-M12-M24:
+M12-M20:
+    NOT YET FULLY PRIMITIVE-RENDERED
+
+M21:
+    ABSTRACT TRILINEAR / CYCLIC TRIALITY SCHEMAS CLOSED; SOURCE INSTANCES OPEN
+
+M22-M24:
     NOT YET FULLY PRIMITIVE-RENDERED
 ~~~
 
