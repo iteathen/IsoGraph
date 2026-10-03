@@ -138,6 +138,8 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 - `TRACK_W_WORKING_SSC_0_1.md` / `TRACK_L_WORKING_SSC_0_1.md` — historical 0.1 working censuses; preserved.
 - `TRACK_W_WORKING_SSC_0_2.md` / `TRACK_L_WORKING_SSC_0_2.md` — current working censuses; incomplete.
 - `TRACK_W_FORMULATION_MAP_0_1.md` / `TRACK_L_FORMULATION_MAP_0_1.md` — provisional source-side formulation families and relation witnesses; not primitive-closed.
+- `TRACK_W_DTS_WORKING_0_1.md` / `TRACK_L_DTS_WORKING_0_1.md` — source-side DTS anatomy for the major same-author formulation transitions; provisional.
+- `FORMULATION_FAMILY_GRAPH_0_1.json` — machine-readable provisional family graph containing intra-author edges only.
 - `SOURCE_NATIVE_CROSS_REFERENCE_QUARANTINE_0_1.md` — preserves cross-author references encountered inside a source without allowing them to bias independent track construction.
 
 ## Open questions
