@@ -42,6 +42,7 @@ research/
 - [P versus NP](p-vs-np/README.md) — primitive computation and continuation-support research; theorem status remains open.
 - [Primitive logic](primitive-logic/README.md) — supporting primitive-logic/kernel research used during Core primitive-closure development.
 - [Project Discovery](project-discovery/README.md) — current proof-of-function campaigns and the long-term plan for large-scale, massively parallel within-domain and cross-domain research synthesis using coordinated agents, substantial compute, independent verification, and human/domain expertise.
+- [Woit–Lisi structural isomorph search](woit-lisi-isomorph/README.md) — blind two-track primitive rendering and cross-domain common-quotient research comparing Peter Woit’s twistor/unification program with Garrett Lisi’s exceptional/Clifford unification program; bridge hypotheses remain quarantined until both tracks are independently sealed.
 - [Research publications](publications/README.md) — publication-facing outputs and revision indexes.
 - [Repository reconciliation](repository-reconciliation/README.md) — preserved research/provenance review of surviving historical branches.
 
