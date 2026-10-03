@@ -44,6 +44,49 @@ Run recursive IA discovery independently for each track until the pinned operati
 
 The IA profile must be recorded. Any change to primitive support, scope, QU state, authority, or profile invalidates the fixed point and reopens closure.
 
+## Phase 3.5 — intra-author formulation families
+
+Before any W-to-L comparison, construct a formulation graph separately inside each track.
+
+For every candidate pair of formulations within one author's corpus:
+
+1. identify whether they purport to express the same or overlapping idea;
+2. test the relation from primitive structure rather than terminology;
+3. classify the relation only to the strength actually supported;
+4. preserve a transformation/reconstruction witness where available;
+5. preserve all residual structure that prevents stronger equivalence;
+6. record directionality when one formulation reconstructs from another but not conversely.
+
+Possible bookkeeping relations include:
+
+- exact equivalence under the pinned scope;
+- derivable/scoped equivalence;
+- alternative factorization or coordinate/representation change;
+- specialization/generalization;
+- real-form/signature/chirality realization;
+- revision/supersession;
+- analogy without proved equivalence;
+- unresolved relation.
+
+These labels do not add Core primitives.
+
+Each resulting concept/formulation family remains a graph of related representations; it must not be collapsed into one canonical node merely for comparison convenience.
+
+### Bridge-relative representative selection
+
+After the intra-author graphs are sealed, DP 0.9 may be used to evaluate which representative exposes a proposed cross-domain correspondence with the least unsupported structure while preserving reconstruction.
+
+The evaluation profile must include at least:
+
+- exact reconstruction back to the source formulation;
+- size/nature of cross-domain residuals;
+- dependence on QU or unproved assumptions;
+- robustness across alternate formulations in the same family;
+- preservation of semantic role and transition anatomy;
+- directionality/information loss.
+
+No representative may be selected because it makes the expected bridge easier. Selection is an evidence result, not a preprocessing assumption.
+
 ## Phase 4 — seal and blind
 
 Before comparison:
@@ -51,6 +94,7 @@ Before comparison:
 - verify SSC conservation;
 - freeze graph hashes/revisions;
 - freeze IA ledgers;
+- freeze intra-author formulation graphs and all claimed transform witnesses;
 - replace domain-facing labels with neutral handles in the comparison projection;
 - preserve source-facing reconstruction maps outside the blinded view.
 
@@ -64,6 +108,8 @@ Use DP to search for:
 - scoped common cores;
 - residual differences;
 - alternative factorizations;
+- family-to-family bridges across all eligible formulation representatives;
+- asymmetric translation/reconstruction paths;
 - minimum sufficient support for each proposed correspondence.
 
 Use NEI only for natural/domain identity questions actually required by a candidate mapping. Same structural role is not automatically NEI SAME.
@@ -95,6 +141,15 @@ Does the (SU(4)/Spin(6)) candidate arise independently in the Woit rendering? If
 
 ### C08
 After a common quotient is identified, does the Distler–Garibaldi obstruction attach to that quotient or only to a stronger (E_8)-specific extension?
+
+### C09
+Is a candidate bridge stable across multiple formulations of the same idea on each side, or does it exist only for one representative pair?
+
+### C10
+Is the bridge bidirectionally reconstructive, or is it an asymmetric translation in which one formulation retains structure the other discards?
+
+### C11
+Can an initially poor Woit↔Lisi match become exact or stronger by moving through a source-authorized intra-track formulation transform, without importing cross-track assumptions?
 
 ## Falsifier-first requirements
 

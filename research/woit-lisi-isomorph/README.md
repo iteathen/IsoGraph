@@ -34,6 +34,38 @@ The motivating bridge supplied at project initiation is preserved separately in 
 
 Only after both tracks are independently source-censused, primitive-closed to the declared scope, recursively IA-closed under the pinned inference profile, and separately reviewed may DP/NEI/DTS cross-comparison begin.
 
+## Formulation-family requirement
+
+Neither author is treated as having one canonical graph.
+
+The same underlying idea may appear in several source-faithful formulations: different real forms, representation languages, coordinate choices, factorizations, symmetry-breaking presentations, revisions, or levels of abstraction. A formulation that is awkward for direct cross-domain comparison may be internally equivalent, under a pinned scope, to another formulation that exposes the bridge cleanly.
+
+Therefore each track must construct an **intra-author formulation graph** before cross-track comparison:
+
+```text
+source formulation
+    -> primitive rendering
+    -> relation to other formulations of the same author's idea
+    -> exact/scoped transform witness
+    -> preserved residuals
+```
+
+No formulation is declared globally "best." Bridge suitability is objective-relative and is evaluated only after source-faithful closure. The search may legitimately use chains such as:
+
+```text
+Woit formulation A
+    --intra-W transform-->
+Woit formulation B
+    <--cross-domain common quotient-->
+Lisi formulation C
+    <--intra-L transform--
+Lisi formulation D
+```
+
+A cross-domain bridge through one representative does not imply that all formulations in either family are interchangeable, nor that the two physical theories are equivalent.
+
+See `FORMULATION_FAMILY_PROTOCOL_0_1.md`.
+
 ## Current state
 
 Campaign initialization is complete.
@@ -66,7 +98,7 @@ A known representation-theoretic criticism of (E_8) unification, Distler–Garib
 
 ## Required execution order
 
-`source freeze -> complete SSC W/L -> primitive closure W/L -> recursive IA W/L -> independent review -> blind relabeling/comparison -> NEI/DTS/DP common-core search -> falsifiers -> obstruction audit -> reassessment`
+`source freeze -> complete SSC W/L -> primitive closure W/L -> recursive IA W/L -> intra-author formulation-family graph -> independent review -> blind family-to-family comparison -> NEI/DTS/DP common-core search -> falsifiers -> obstruction audit -> reassessment`
 
 Any change to source scope, primitive kernel, governing authority, QU state, or IA inference profile reopens the affected closure under Core 0.21.
 
@@ -75,6 +107,8 @@ Any change to source scope, primitive kernel, governing authority, QU state, or 
 **Research direction:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION. On 2026-10-03 Joshua identified Woit's and Lisi's programs as candidates for an IsoGraph isomorph search and directed that the work be started in its own research directory.
 
 **Campaign formalization:** AI assistant — AGENT_ASSISTED_FORMALIZATION, under Joshua Oshiro's direction.
+
+**Formulation-family search principle:** Joshua Oshiro — HUMAN_ORIGINATED_IDEA. On 2026-10-03 Joshua directed that the campaign identify multiple expressions of the same idea within each author's work and determine which source-faithful representatives provide the strongest cross-domain bridge, rather than assuming one formulation per author. The agent formalized this into the formulation-family protocol.
 
 **Earliest evidence currently located:** preserved dated project conversation on 2026-10-03. This README is the first public repository record created for the campaign; it does not backdate that public record.
 
@@ -85,6 +119,7 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 - `SOURCE_CORPUS_FREEZE_0_1.md` — initial frozen source/revision scope.
 - `HYPOTHESIS_QUARANTINE_0_1.md` — motivating bridge claims excluded from blind rendering.
 - `EXPERIMENT_001_BLIND_PROTOCOL.md` — preregistered first comparison protocol.
+- `FORMULATION_FAMILY_PROTOCOL_0_1.md` — intra-author formulation equivalence/translation protocol and bridge-relative representative selection.
 - `TRACK_W_WORKING_SSC_0_1.md` — Woit working census; incomplete.
 - `TRACK_L_WORKING_SSC_0_1.md` — Lisi working census; incomplete.
 

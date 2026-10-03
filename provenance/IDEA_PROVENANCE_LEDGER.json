@@ -566,6 +566,62 @@
           "note": "Public prior discussion of AI/computation in scientific discovery. This is one reason Project Discovery provenance claims must be architecture-specific rather than generic AI-for-science priority claims."
         }
       ]
+    },
+    {
+      "id": "WL-ORIGIN-001",
+      "title": "Woit-Lisi IsoGraph structural comparison campaign",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua identified Peter Woit's and Garrett Lisi's programs as candidates for an IsoGraph isomorph search and directed that the work receive its own research directory."
+      },
+      "first_public_record": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "commit": "fc5b1db635e217c330b0ee47cf24819015e8985d",
+        "path": "research/woit-lisi-isomorph/README.md"
+      }
+    },
+    {
+      "id": "WL-ORIGIN-002",
+      "title": "Mandatory intra-author formulation-family recovery before cross-domain bridge selection",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua observed that Woit and Lisi often use multiple formulations of the same ideas, not all equally translatable, and directed the campaign to identify same-author alternative expressions and determine which representatives bridge most strongly in each direction."
+      },
+      "reasoning_path": [
+        "A one-rendering-per-author comparison can create false negatives when the chosen representatives expose different structure.",
+        "It can also create false positives if a convenient representative cannot be transported back through the author's other formulations.",
+        "Therefore recover same-author formulation families blindly before cross-domain comparison.",
+        "Treat representative preference as bridge-objective-relative and evidence-bounded rather than as a globally canonical formulation."
+      ],
+      "public_formalization": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "path": "research/woit-lisi-isomorph/FORMULATION_FAMILY_PROTOCOL_0_1.md",
+        "note": "Formalized in the same work cycle as this provenance entry."
+      }
     }
   ]
 }

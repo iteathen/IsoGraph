@@ -20,3 +20,16 @@ This file opens the Woit census. IDs below are only initial top-level obligation
 | W-SSC-011 | 2026 Wick-rotation analysis is revision-sensitive/work-in-progress and must remain temporally scoped. | W03/W04 | OPEN |
 
 **Closure prohibition:** do not begin cross-track comparison from this table. It is not a complete SSC.
+
+## Formulation-family bookkeeping
+
+During full traversal, every census item must additionally record or link:
+
+- source formulation ID;
+- revision/date scope;
+- candidate concept-family ID when one emerges from Woit-only evidence;
+- relation to alternate Woit formulations;
+- exact/scoped transform witness or UNKNOWN;
+- residual structure blocking stronger equivalence.
+
+No Woit concept family may be created using Lisi-side similarity as its justification.

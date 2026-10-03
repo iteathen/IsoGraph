@@ -19,3 +19,16 @@ This file opens the Lisi census. IDs below are only initial top-level obligation
 | L-SSC-010 | Exceptional unification is one application layer of the algebraic structures developed in L05. | L05 | OPEN |
 
 **Closure prohibition:** do not begin cross-track comparison from this table. It is not a complete SSC.
+
+## Formulation-family bookkeeping
+
+During full traversal, every census item must additionally record or link:
+
+- source formulation ID;
+- revision/date scope;
+- candidate concept-family ID when one emerges from Lisi-only evidence;
+- relation to alternate Lisi formulations;
+- exact/scoped transform witness or UNKNOWN;
+- residual structure blocking stronger equivalence.
+
+No Lisi concept family may be created using Woit-side similarity as its justification.
