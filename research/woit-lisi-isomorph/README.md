@@ -84,7 +84,7 @@ Strict Core-0.21 primitive-closure status is **NOT YET CLAIMED**. The working ce
 
 The frozen corpus begins with primary sources whose own descriptions already justify a structural comparison without assuming its result.
 
-Woit's `Euclidean Twistor Unification` starts from Euclidean (Spin(4)=SU(2)\times SU(2)), uses one chiral factor in gravity and another toward Standard Model gauge structure, introduces an imaginary-time-direction degree of freedom in reconstructing Lorentz signature, and moves the theory to projective twistor space. His later `Spacetime is Right-handed` makes chirally asymmetric spinor geometry and the Euclidean/Minkowski relation more explicit. His July 2026 project page explicitly marks the newest Wick-rotation interpretation as work in progress.
+Woit's `Euclidean Twistor Unification` starts from Euclidean (Spin(4) = SU(2) × SU(2)), uses one chiral factor in gravity and another toward Standard Model gauge structure, introduces an imaginary-time-direction degree of freedom in reconstructing Lorentz signature, and moves the theory to projective twistor space. His later `Spacetime is Right-handed` makes chirally asymmetric spinor geometry and the Euclidean/Minkowski relation more explicit. His July 2026 project page explicitly marks the newest Wick-rotation interpretation as work in progress.
 
 Lisi's original (E_8) proposal treats Standard Model and gravitational fields within an (E_8)-valued connection. The 2010 explicit embedding uses a (Spin(11,3)) action on a Majorana-Weyl spinor inside the quaternionic real form of (E_8). His 2024 CPT/triality paper and September 2026 division-algebra/triality paper provide later primary material on discrete symmetries, Clifford/spinor structure, triality, and exceptional unification.
 
@@ -117,6 +117,7 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 ## Files
 
 - `SOURCE_CORPUS_FREEZE_0_1.md` — initial frozen source/revision scope.
+- `ORIGIN_AND_PROVENANCE.md` — campaign-specific origin and methodology provenance.
 - `HYPOTHESIS_QUARANTINE_0_1.md` — motivating bridge claims excluded from blind rendering.
 - `EXPERIMENT_001_BLIND_PROTOCOL.md` — preregistered first comparison protocol.
 - `FORMULATION_FAMILY_PROTOCOL_0_1.md` — intra-author formulation equivalence/translation protocol and bridge-relative representative selection.
