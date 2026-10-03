@@ -1,6 +1,8 @@
 # Woit–Lisi Structural Isomorph Search
 
-**Status:** ACTIVE RESEARCH — INITIALIZED, PRE-COMPARISON  
+**Current research dossier:** this README
+
+**Status:** ACTIVE RESEARCH — SOURCE / FORMULATION-FAMILY PASS, PRE-COMPARISON  
 **Started:** 2026-10-03  
 **Branch:** `research/woit-lisi-isomorph-20261003`  
 **Base revision:** `f3217af9a4fd50e838db39e249e93f39380e0e4a`  
@@ -68,15 +70,16 @@ See `FORMULATION_FAMILY_PROTOCOL_0_1.md`.
 
 ## Current state
 
-Campaign initialization is complete.
+Campaign initialization is complete and the first source/formulation pass is active.
 
-- dedicated first-level research directory created;
-- initial public source corpus frozen in `SOURCE_CORPUS_FREEZE_0_1.md`;
-- cross-domain bridge claims quarantined rather than admitted;
-- blind comparison protocol preregistered in `EXPERIMENT_001_BLIND_PROTOCOL.md`;
-- working Source Semantic Census shells opened for both tracks;
-- no structural match has yet been admitted;
-- no theorem, physical equivalence, unification claim, or (E_8) viability claim is made.
+- the original corpus target remains frozen in `SOURCE_CORPUS_FREEZE_0_1.md`;
+- `SCOPE_REVISION_0_1.md` creates the current 0.2 target because formulation-family recovery made additional source revisions load-bearing;
+- `SOURCE_CORPUS_FREEZE_0_2.md` splits Woit's 2026 evolving sequence into exact dated sources, adds his quaternionic/twistor-P1 formulation, and adds Lisi's 2015 generalized-Cartan reformulation;
+- working 0.2 Source Semantic Censuses are open for both tracks;
+- provisional source-side formulation maps now exist independently for Woit and Lisi;
+- a source-native Lisi reference to a Euclidean twistor incidence relation is preserved in a cross-reference quarantine and is not used to construct either track;
+- no cross-track structural match has yet been admitted;
+- no theorem, physical equivalence, unification claim, or E8 viability claim is made.
 
 Strict Core-0.21 primitive-closure status is **NOT YET CLAIMED**. The working censuses are intentionally incomplete until the selected sources have been fully traversed.
 
@@ -90,6 +93,14 @@ Lisi's original (E_8) proposal treats Standard Model and gravitational fields wi
 
 Those statements define reasons to compare. They do not establish an isomorphism.
 
+### First formulation-family findings
+
+Within Woit's own sources, the strongest source-side revision is explicit: in March 2026 he says he began from a Euclidean-fundamental twistor picture and had more recently shifted toward treating the Minkowski twistor / holomorphic boundary-value picture as fundamental, with Wick rotation becoming an extra choice rather than the foundational direction of construction. The right-handed spinor formulation persists across that shift, so the current Woit map preserves both the stable chiral substrate and the changed foundational interpretation.
+
+Within Lisi's sources, the 2015 generalized-Cartan formulation explicitly says the earlier three-generation triality idea did not fit cleanly in the original E8 principal-bundle geometry and reframes it using triality-related embedded spacetimes in a deforming Lie group. The 2026 division-algebra paper then presents division algebras, Clifford algebras, vectors, chiral spinors, triality, and exceptional Lie structures as mutually illuminating mathematical starting points.
+
+A particularly important observation is quarantined rather than consumed: Lisi's 2026 paper explicitly identifies its quaternionic vector/spinor relation with a Euclidean twistor incidence relation and cites Woit's 2021 Euclidean Twistor Unification. This is a source-native cross-reference, not an admitted IsoGraph bridge. It will be tested only after both track renderings are independently sealed.
+
 ## Evidence and authority boundary
 
 This directory is research evidence, not IsoGraph semantic authority and not authority for either physicist's program. Every source-side assertion must trace to its frozen source. Every discovered correspondence must preserve residual differences and QU-bearing unknowns. Familiar algebraic names are not primitive leaves when their semantics are load-bearing.
@@ -98,7 +109,7 @@ A known representation-theoretic criticism of (E_8) unification, Distler–Garib
 
 ## Required execution order
 
-`source freeze -> complete SSC W/L -> primitive closure W/L -> recursive IA W/L -> intra-author formulation-family graph -> independent review -> blind family-to-family comparison -> NEI/DTS/DP common-core search -> falsifiers -> obstruction audit -> reassessment`
+`source freeze 0.2 -> complete SSC W/L -> primitive closure W/L -> recursive IA W/L -> seal intra-author formulation families -> independent review -> unquarantine source-native cross references -> blind family-to-family comparison -> NEI/DTS/DP common-core search -> falsifiers -> obstruction audit -> reassessment`
 
 Any change to source scope, primitive kernel, governing authority, QU state, or IA inference profile reopens the affected closure under Core 0.21.
 
@@ -116,13 +127,18 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 
 ## Files
 
-- `SOURCE_CORPUS_FREEZE_0_1.md` — initial frozen source/revision scope.
+- `SOURCE_CORPUS_FREEZE_0_1.md` — historical initial source/revision target; preserved unchanged.
+- `SCOPE_REVISION_0_1.md` — Core-0.21 scope revision creating the 0.2 source target.
+- `SOURCE_CORPUS_FREEZE_0_2.md` — current frozen source/revision target.
 - `ORIGIN_AND_PROVENANCE.md` — campaign-specific origin and methodology provenance.
 - `HYPOTHESIS_QUARANTINE_0_1.md` — motivating bridge claims excluded from blind rendering.
-- `EXPERIMENT_001_BLIND_PROTOCOL.md` — preregistered first comparison protocol.
+- `EXPERIMENT_001_BLIND_PROTOCOL.md` — historical initial preregistration for corpus 0.1.
+- `EXPERIMENT_001_BLIND_PROTOCOL_0_2.md` — current Experiment 001 successor target for corpus 0.2.
 - `FORMULATION_FAMILY_PROTOCOL_0_1.md` — intra-author formulation equivalence/translation protocol and bridge-relative representative selection.
-- `TRACK_W_WORKING_SSC_0_1.md` — Woit working census; incomplete.
-- `TRACK_L_WORKING_SSC_0_1.md` — Lisi working census; incomplete.
+- `TRACK_W_WORKING_SSC_0_1.md` / `TRACK_L_WORKING_SSC_0_1.md` — historical 0.1 working censuses; preserved.
+- `TRACK_W_WORKING_SSC_0_2.md` / `TRACK_L_WORKING_SSC_0_2.md` — current working censuses; incomplete.
+- `TRACK_W_FORMULATION_MAP_0_1.md` / `TRACK_L_FORMULATION_MAP_0_1.md` — provisional source-side formulation families and relation witnesses; not primitive-closed.
+- `SOURCE_NATIVE_CROSS_REFERENCE_QUARANTINE_0_1.md` — preserves cross-author references encountered inside a source without allowing them to bias independent track construction.
 
 ## Open questions
 
