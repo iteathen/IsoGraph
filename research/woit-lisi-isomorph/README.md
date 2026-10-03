@@ -166,6 +166,10 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 
 ## Files
 
+- `ISOMORPH_EXPOSURE_FRONTIER_0_1.md` — abstraction-boundary rule: remove presentation dependence until generative invariants become comparable, but stop before semantic distinctions are destroyed.
+- `bridge/README.md` — provisional bridge-projection workbench; isolated from the authoritative full-treatment tracks.
+- `bridge/BRIDGE_CANDIDATE_MANIFEST_0_1.json` — current candidate surfaces and evidence status.
+- `bridge/BRIDGE_SOURCE_PROJECTIONS_0_1.md` — source-side projections into neutral bridge schemas; no admitted isomorphisms.
 - `SOURCE_CORPUS_FREEZE_0_1.md` — historical initial source/revision target; preserved unchanged.
 - `SCOPE_REVISION_0_1.md` — Core-0.21 scope revision creating the 0.2 source target.
 - `SOURCE_CORPUS_FREEZE_0_2.md` — current frozen source/revision target.
