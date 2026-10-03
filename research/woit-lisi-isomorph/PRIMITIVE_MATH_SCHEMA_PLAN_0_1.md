@@ -44,11 +44,17 @@ Scalar/vector/algebra carriers; algebra product; vector embedding; quadratic/bil
 ## M08 — Lie algebra
 Carrier/vector-space support; bracket graph; bilinearity; antisymmetry; Jacobi. Subalgebra and embedding receive explicit closure/injectivity/bracket-preservation conditions.
 
+**Current reusable support:** abstract Lie algebra, subalgebra, homomorphism, and injective embedding schemas CLOSED in support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg. Named Lie algebras and real forms remain open.
+
 ## M09 — group and action
 Group carrier/product/identity/inverse/associativity plus action graph and compatibility. Spin-group claims expose their load-bearing Clifford/Lie relation.
 
+**Current reusable support:** abstract group and left-action schemas CLOSED. Smooth/Lie-group structure and named groups remain open.
+
 ## M10 — representation
 Group/Lie action on vector carrier satisfying homomorphism/action laws. Vector, spinor, and adjoint are derived roles.
+
+**Current reusable support:** abstract linear group representation and Lie-algebra representation schemas CLOSED. Source-specific representations remain open.
 
 ## M11 — grading/chirality
 Grading/partition; positive/negative subcarriers; action preservation/exchange; chirality operator/eigenstructure when required. Majorana/Weyl conditions require explicit reality and chirality constraints.
@@ -115,7 +121,19 @@ M05:
 M11:
     ABSTRACT CHIRAL DIRECT-SUM SCHEMA CLOSED; SOURCE REALITY CONDITIONS OPEN
 
-M06-M10, M12-M24:
+M06-M07:
+    NOT YET FULLY PRIMITIVE-RENDERED
+
+M08:
+    ABSTRACT LIE/SUBALGEBRA/EMBEDDING SCHEMAS CLOSED; NAMED ALGEBRAS OPEN
+
+M09:
+    ABSTRACT GROUP/ACTION SCHEMAS CLOSED; LIE-GROUP/SMOOTH/NAMED GROUPS OPEN
+
+M10:
+    ABSTRACT GROUP/LIE REPRESENTATION SCHEMAS CLOSED; SOURCE REPRESENTATIONS OPEN
+
+M12-M24:
     NOT YET FULLY PRIMITIVE-RENDERED
 ~~~
 

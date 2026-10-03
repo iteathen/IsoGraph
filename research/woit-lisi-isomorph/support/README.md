@@ -9,3 +9,5 @@ Current support:
 - PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.md — role map, closure audit, and limitations.
 - PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg — native conjugation, linear/bilinear/Hermitian, subspace, and chiral direct-sum schemas.
 - PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.md — closure audit and limitations for that slice.
+- PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg — native group, action, Lie algebra, subalgebra, representation, homomorphism, and embedding schemas.
+- PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.md — closure audit and limitations for that slice.
