@@ -42,6 +42,12 @@ It is based on:
 
 **U1-TC — twistor/Clifford amalgam**
 
+U1 now has a first concrete phase:
+
+**U1.0-PC — projective compactification**
+
+The finite Lisi quaternionic action is identified with the finite Woit graph family through U0; Woit's infinity fiber then compactifies the incidence family without defining a fictional Lisi operator at infinity.
+
 Use Woit's global twistor geometry as the first geometric extension of U0 and test whether Lisi's Clifford/triality residuals admit a chart-consistent, pseudoreal-compatible extension over it.
 
 The first U1 result must reconstruct U0 on every local chart.
@@ -59,6 +65,7 @@ The first U1 result must reconstruct U0 on every local chart.
 - `UNIFICATION_KERNEL_U0_0_1.isg` / `.md` — current shared synthesis kernel.
 - `UNIFICATION_RESIDUAL_PORTS_0_1.md` — W/L residual classification and first interaction hypotheses.
 - `UNIFICATION_CANDIDATE_MANIFEST_0_1.json` — machine-readable candidate state.
+- `UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.isg` / `.md` / `.json` — first constructive U1 candidate: Woit's global projective family as a conservative compactification of Lisi's affine chiral graph relation.
 
 ## Firewall
 

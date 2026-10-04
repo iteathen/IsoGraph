@@ -14,7 +14,7 @@
       "id": "U1-TC",
       "label": "twistor / Clifford amalgam",
       "priority": 1,
-      "status": "OPEN_PRIMARY",
+      "status": "STRUCTURALLY_CONSISTENT_CANDIDATE",
       "W_inputs": [
         "global projective/twistor geometry",
         "pseudoreal structure",
@@ -25,11 +25,31 @@
         "triality/division-algebra residuals where transport exists"
       ],
       "obligations": [
-        "local restriction reconstructs U0",
+        "local restriction reconstructs U0 — PASS in U1.0",
         "chart transitions preserve attached algebraic action",
         "pseudoreal structure is preserved",
         "compactification patch introduces no unsupported Lisi structure",
         "both source residual projections reconstruct"
+      ],
+      "phases": [
+        {
+          "id": "U1.0-PC",
+          "label": "projective compactification of affine quaternionic chiral relation",
+          "status": "STRUCTURALLY_CONSISTENT_CANDIDATE",
+          "artifact": "UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.md",
+          "certificate": "UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.json",
+          "synthesis_edges": [
+            "UH-001A"
+          ],
+          "result": "finite Lisi relation is conservatively compactified by Woit graph-plane family; no operator is defined at infinity"
+        },
+        {
+          "id": "U1.1-TR",
+          "label": "triality/fiber extension",
+          "status": "OPEN",
+          "prerequisite": "U1.0-PC",
+          "question": "can Lisi triality/division-algebra residuals act globally over the U1.0 family while preserving chart and pseudoreal structure?"
+        }
       ]
     },
     {
