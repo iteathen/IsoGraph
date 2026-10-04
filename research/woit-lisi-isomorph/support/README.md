@@ -54,3 +54,5 @@ Current support:
 - PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.md — source-separation and analytic-scope guards.
 - PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg — exact finite M2(C)-style algebra presentation via matrix-unit basis and complete multiplication table.
 - PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.md — closure scope and exclusions.
+- PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.isg — unit-norm group derived from associative composition algebra product/conjugation.
+- PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.md — group semantics and SU(2) source-role guard.

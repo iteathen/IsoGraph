@@ -1,7 +1,7 @@
 {
   "schema": "woit-lisi.bt01-slice-closure-input.v0.1",
   "status": "AUTHOR_SIDE_SCOPED_INPUT_NOT_FULL_TRACK",
-  "branch_head": "eb2087468fe279106f1007a98fe9588d42d25e5d",
+  "branch_head": "840f3b518d61635c755a9028ec41a8616c37e803",
   "scope": {
     "description": "Only already-traversed source assertions that materially support BT01/B03/B06. This is not the complete Woit or Lisi SSC.",
     "W_assertion_base": {
@@ -137,12 +137,16 @@
     {
       "track": "W",
       "id": "W-A0-040",
-      "status": "OPEN_NAMED_GROUP_ACTION",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "bridge/BT01_SPIN4_CHIRAL_ROLE_MAPPING_0_1.md"
+        "woit/WOIT_BT01_SPIN4_UNIT_QUATERNION_ACTION_0_1.isg"
       ],
-      "schemas": [],
-      "note": "Role mapping exists, but SU(2)_L x SU(2)_R action is not yet source-instantiated through group/action schemas."
+      "schemas": [
+        "195110",
+        "199000",
+        "184001"
+      ],
+      "note": "Two SU(2) factor roles use the exact unit-quaternion group presentation; x->g_L x g_R^{-1} is explicitly defined."
     },
     {
       "track": "W",
