@@ -29,3 +29,5 @@ Current support:
 - PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.md — B05 abstraction levels and evidence limits.
 - PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg — associative algebra anti-involution and exact left/right multiplication side-swap lemma for B06.
 - PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.md — role-sensitive interpretation and limits.
+- PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg — explicit bijections and exact action-incidence transport between source and alternate presentations.
+- PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.md — representation-change semantics and BT01 limits.
