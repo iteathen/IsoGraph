@@ -127,3 +127,7 @@ These can be tested as refinements only if the weaker bridge survives.
 ## Current priority
 
 - `BRIDGE_PRIORITY_CHECKPOINT_0_1.md` — ranks BT01/B06 first after surviving abstraction, dimension, and handedness falsifiers; B05 remains the secondary independent route.
+
+## Spin(4) role mapping
+
+- `BT01_SPIN4_CHIRAL_ROLE_MAPPING_0_1.md` / `BT01_SPIN4_CHIRAL_ROLE_PACKET_0_1.json` — source-supported scoped map Q_minus↔S_R, Q_plus↔S_L, su(2)_M↔su(2)_R, su(2)_P↔su(2)_L, selected by the typed vector action rather than naming convention.
