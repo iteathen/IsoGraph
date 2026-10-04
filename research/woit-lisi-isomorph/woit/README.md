@@ -68,6 +68,8 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_1.isg` / `.md` — W02's proposed single-right-handed complex action, Euclidean x0-imaginary real form, invariant time direction, SU(2)_R spatial action, and exact trivial SU(2)_L spacetime action.
 
-- `W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_1.isg` / `.md` — exact six-dimensional exterior-two-form carrier, Euclidean Hodge star with star^2=+1, and self/anti-self-dual eigenspace decomposition.
+- `W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_2.isg` / `.md` — exact six-dimensional exterior-two-form carrier, Euclidean Hodge star with star^2=+1, and self/anti-self-dual eigenspace decomposition.
 
 - `W02_MINKOWSKI_HODGE_COMPLEX_SOURCE_INSTANCE_0_1.isg` / `.md` — Minkowski real two-form carrier with star^2=-1, exact complexification, and ±i Hodge eigenspace decomposition.
+
+- `W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_1_CORRECTION.md` — records rejection of the defective 0.1 anti-self-dual basis construction.
