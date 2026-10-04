@@ -41,3 +41,6 @@ Current support:
 - PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.md — scope and identity guard.
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.isg — field embedding plus exact restriction-of-scalars semantics for real/complex source presentations.
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.md — BT01 use and limits.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg — corrected total-injective field embedding and restriction-of-scalars semantics; current authority for this local support.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.md — successor contract; 0.1 rejected as surjectivity defect.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_0_1_CORRECTION.md — defect and no-dependent-impact record.
