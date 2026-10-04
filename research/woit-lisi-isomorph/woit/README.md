@@ -73,3 +73,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_MINKOWSKI_HODGE_COMPLEX_SOURCE_INSTANCE_0_1.isg` / `.md` — Minkowski real two-form carrier with star^2=-1, exact complexification, and ±i Hodge eigenspace decomposition.
 
 - `W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_1_CORRECTION.md` — records rejection of the defective 0.1 anti-self-dual basis construction.
+
+- `W02_HODGE_SPIN4_LIE_SOURCE_INSTANCE_0_1.isg` / `.md` — exact 3D self/anti-self-dual eigenspaces mapped as Lie algebras to distinct source SU(2)_R/SU(2)_L roles, completing the algebraic W-A0-063 package.
