@@ -63,3 +63,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
 - `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
+
+- `W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_1.isg` / `.md` — determinant-one complex factor roles, conventional X→g_LXg_R^{-1} action, conjugate-diagonal Lorentz real form, Hermitian Minkowski action, and independent SU(2)_L×SU(2)_R Euclidean factor roles.
