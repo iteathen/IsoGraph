@@ -13,7 +13,7 @@ It introduces:
 - determinant
   (det(m)=ad-bc);
 - conjugate-transpose
-  ((a,b,c,d)mapsto(ar a,ar c,ar b,ar d));
+  ((a,b,c,d)mapsto(ar a,ar c,ar b,ar d));
 - the Hermitian predicate `HERM(m)` iff `ADJ(m,m)`.
 
 Coordinates, determinant, and adjoint are total/unique on the represented matrix carrier.

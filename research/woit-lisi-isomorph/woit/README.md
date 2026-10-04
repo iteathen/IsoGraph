@@ -62,4 +62,4 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `SOURCE_TRAVERSAL_LEDGER_0_5.json` — W02 main-text traversal state and remaining equation-conservation pass.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
-- `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_1.isg` / `.md` — W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation.
+- `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
