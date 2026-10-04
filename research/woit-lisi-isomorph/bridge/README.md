@@ -94,3 +94,10 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md` — derives the strongest current neutral common core: a typed chiral action induces a parameterized projective family by taking graphs and quotienting nonzero pairs by simultaneous scaling.
 - `BT01_SOURCE_PROJECTION_PACKET_0_1.json` — explicit pre-seal Woit/Lisi role maps into neutral IDs 187200–187208.
+
+## Abstraction correction and quaternionic lift
+
+- `BT01_ABSTRACTION_CORRECTION_0_1.md` — lowers the minimum frontier from same-field bilinearity to a parameter-indexed complex-linear spinor action.
+- `BT01_QUATERNIONIC_COMPLEX_STRUCTURE_LIFT_0_1.md` — identifies the compatible-complex-structure step that turns the real/quaternionic action into the CP1-in-CP3 projective incidence shape.
+- `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_2.md` — current successor common-core report.
+- `BT01_SOURCE_PROJECTION_PACKET_0_2.json` — corrected source role mapping.
