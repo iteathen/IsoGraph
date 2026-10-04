@@ -113,3 +113,17 @@ source-local primitive instantiations:
 isomorphism:
     NOT CLAIMED
 ~~~
+
+## Projective homogeneity result
+
+The neutral support schema ../support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg now closes the generic homogeneity obligation:
+
+~~~text
+ACT(v,m,p)
+->
+ACT(v,a m,a p)
+~~~
+
+for simultaneous scalar rescaling, and therefore preserves the nonzero action-incidence relation under nonzero projective rescaling.
+
+This discharges the generic algebraic part of T05. The source-specific claim that the resulting quotient/incidence is exactly Woit's CP3/CP1 twistor geometry remains open and must be reconstructed from W01/W05.

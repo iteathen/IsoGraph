@@ -15,3 +15,5 @@ Current support:
 - PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.md — closure audit and limitations for that slice.
 - PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.isg — algebraic real structures, projective quotient, subspace-family, and projective-incidence schemas.
 - PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.md — closure audit and dimension/real-form limitations.
+- PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg — typed bilinear V x S_minus -> S_plus action, simultaneous projective pair equivalence, and homogeneous incidence schema for B01/BT01.
+- PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.md — derivation scope and projective-well-definedness limits.
