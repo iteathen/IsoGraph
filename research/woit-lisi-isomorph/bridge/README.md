@@ -145,3 +145,8 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_LOCAL_PROJECTIVE_ALIGNMENT_0_1.isg` / `.md` — pinned Woit/Lisi representation maps send both source actions to the same local graph plane and therefore the same projective CP1 incidence line.
 - `BT01_LOCAL_PROJECTIVE_ALIGNMENT_CERTIFICATE_0_1.json` — source SHA-pinned scoped certificate and residual boundary.
+
+## Affine common quotient
+
+- `BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.isg` / `.md` — current maximal demonstrated parameter-space common quotient is the affine quaternionic chart H ~= R4; Woit's global HP1 compactification remains residual.
+- `BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.json` — machine-readable scope boundary.
