@@ -19,3 +19,5 @@ Current support:
 - PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.md — derivation scope and projective-well-definedness limits.
 - PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg — exact quotient of nonzero chiral pairs by simultaneous scaling and parameterized projective incidence induced by a typed action.
 - PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.md — graph/projectivization interpretation and source-specific dimension limits.
+- PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg — antilinear J with J^2=-1 and the induced projective involution for B03.Q.
+- PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.md — separates pseudoreal/projective semantics from ordinary real fixed-point involutions.

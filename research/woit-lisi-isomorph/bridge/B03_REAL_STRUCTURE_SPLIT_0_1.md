@@ -63,3 +63,9 @@ Track:
 - B03.R;
 - B03.Q;
 - explicit maps between them only when source/mathematical support exists.
+
+## Native B03.Q support
+
+The generic pseudoreal/projective branch is now represented by ../support/PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg using IDs 187400–187402.
+
+Woit source instantiation remains to be mapped into those IDs; Lisi-side source relevance remains open.
