@@ -122,3 +122,27 @@ The B06 left/right complex-structure fork is not an algebraic separation: divisi
 **Recorded:** 2026-10-03.
 
 The Woit-side BT01 gap does not require a false global identity T=S_R+S_L. Choosing an auxiliary local complement to S_R in T=C4 identifies the quotient T/S_R with that complement, turns Hom(S_R,T/S_R) into the standard graph chart on Gr(2,T), and projectivizes each graph to a CP1 in CP3. The project-specific finding is that this exact local reconstruction connects Woit's independently represented Hom/vector and twistor-incidence formulations while preserving global fibration structure as a residual.
+
+
+## WL-ORIGIN-005 — target shift from bridge discovery to constructive unification
+
+**Attribution:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION.  
+**Formalization:** AI assistant — AGENT_ASSISTED_FORMALIZATION.  
+**Date:** 2026-10-04.
+
+Joshua explicitly changed the project target from finding a bridge between the Woit and Lisi programs to **unifying them**.
+
+The campaign therefore treats the previously discovered common quotient as an interface rather than a final result.
+
+The project-generated synthesis is constrained to be conservative:
+
+~~~text
+shared kernel
++ source-reconstructive W residuals
++ source-reconstructive L residuals
++ only explicitly labeled new synthesis relations
+~~~
+
+The agent formalized this direction in `UNIFICATION_TARGET_REVISION_0_1.md` and `unification/UNIFICATION_SYNTHESIS_PROTOCOL_0_1.md`.
+
+This provenance entry attributes the research direction to Joshua Oshiro. It does not attribute the resulting unified candidate, if any, to Peter Woit or Garrett Lisi.
