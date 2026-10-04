@@ -71,3 +71,5 @@ Current support:
 - PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.md — normalization and topology guard.
 - PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.isg — Hodge-compatible symmetric bilinear functional and exact self-dual projection for chiral action identities.
 - PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.md — abstraction boundary and orthogonality consequence.
+- PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.isg — parameterized linear endomorphisms of a Hodge split with exact vanishing-off-diagonal/sector-preservation predicate.
+- PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.md — chiral-GR abstraction boundary.
