@@ -108,3 +108,10 @@ The evidence-state asymmetry is load-bearing: Woit's use is speculative/open-pro
 BT01 requires a compatible complex presentation of quaternionic chiral carriers before projectivization. Woit's twistor-P1 source independently identifies the CP1 fiber with the sphere of orthogonal complex structures on R4=H. The campaign therefore identified the **choice family itself** as a possible bridge generator: a real quaternionic relation plus a point of the complex-structure choice sphere gives the complex-linear presentation used by the projective incidence bridge.
 
 The result is currently side-sensitive: left and right multiplication correspond to different chirality/orientation structures and may not be collapsed.
+
+## WL-FINDING-006 — quaternionic conjugation connects the B06 handed choice families
+
+**Category:** RESEARCH_FINDING / standard algebra transport applied to the bridge.  
+**Recorded:** 2026-10-03.
+
+The B06 left/right complex-structure fork is not an algebraic separation: division-algebra conjugation is an anti-involution and transports left multiplication into right multiplication by the conjugated element. Native support records KAPPA L_u KAPPA = R_KAPPA(u). The remaining possible obstruction is source-role/chirality compatibility rather than mathematical handedness itself.
