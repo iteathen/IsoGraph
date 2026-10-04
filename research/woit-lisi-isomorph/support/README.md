@@ -48,3 +48,5 @@ Current support:
 - PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.md — scope and BT01 use.
 - PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.isg — sign-correct construction from normed associative algebra + conjugation into the paired chiral Clifford schema.
 - PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.md — explicit Q_C=-N and reverse-action semantics.
+- PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg — exact quaternion conjugation norm and polarized bilinear form, with composition-norm closure.
+- PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.md — scope and BT01 use.
