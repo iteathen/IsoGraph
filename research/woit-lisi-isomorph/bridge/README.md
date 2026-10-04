@@ -131,3 +131,7 @@ These can be tested as refinements only if the weaker bridge survives.
 ## Spin(4) role mapping
 
 - `BT01_SPIN4_CHIRAL_ROLE_MAPPING_0_1.md` / `BT01_SPIN4_CHIRAL_ROLE_PACKET_0_1.json` — source-supported scoped map Q_minus↔S_R, Q_plus↔S_L, su(2)_M↔su(2)_R, su(2)_P↔su(2)_L, selected by the typed vector action rather than naming convention.
+
+## Exact quaternionic matrix alignment
+
+- `BT01_EXACT_QUATERNIONIC_MATRIX_ACTION_ALIGNMENT_0_1.md` / `.json` — Woit and Lisi independently use the identical Pauli/quaternion basis (I,-i sigma_1,-i sigma_2,-i sigma_3); with the chiral role map, the same parameter matrix acts from the input to output chiral carrier. This does not rely on unquarantining Lisi's Woit citation.
