@@ -154,3 +154,8 @@ These can be tested as refinements only if the weaker bridge survives.
 ## Exact affine source formula
 
 - `BT01_EXACT_AFFINE_SOURCE_FORMULA_WITNESS_0_1.md` — Woit's `(s,Zs)` and Lisi's `(psi,tilde(chi))`, `tilde(chi)=v psi`, coincide under the already established source role map `Z=v, s=psi`; the point at infinity remains Woit residual structure.
+
+## Chiral Clifford refinement
+
+- `BT01_CHIRAL_CLIFFORD_COEFFICIENT_ALIGNMENT_0_1.isg` / `.md` — bridge-only field/quaternion comparison transports product, conjugation, negative quadratic form, and both chiral actions between the Woit-derived and Lisi-explicit Cl(0,4) packages.
+- `BT01_CHIRAL_CLIFFORD_COEFFICIENT_ALIGNMENT_0_1.json` — scoped certificate preserving the Woit-derived/Lisi-explicit provenance asymmetry.
