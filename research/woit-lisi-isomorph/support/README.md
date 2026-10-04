@@ -37,3 +37,5 @@ Current support:
 - PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.md — chart-choice firewall and limits.
 - PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg — finite 1,i,j,k multiplication/conjugation presentation closing the source-specific quaternion algebra used by BT01.
 - PRIMITIVE_QUATERNION_PRESENTATION_0_1.md — closure scope and exclusions.
+- PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg — exact linear + bijective representation-map schema used to close BT01 coefficient transports.
+- PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.md — scope and identity guard.
