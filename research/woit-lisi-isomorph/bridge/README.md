@@ -169,3 +169,9 @@ These can be tested as refinements only if the weaker bridge survives.
 - `BT01_SLICE_CLOSURE_INPUT_0_1.json` — source/native mapping input for the already-traversed BT01-bearing assertions.
 - `BT01_SLICE_CLOSURE_LEDGER_0_1.json` — mechanically generated scoped closure ledger; explicitly not a full-track closure claim.
 - `BT01_SLICE_CLOSURE_AUDIT_0_1.md` — open/partial burden and next closure targets.
+
+## Scoped BT01 projection closure
+
+- `BT01_ALGEBRAIC_PROJECTIVE_PROJECTION_0_1.json` — splits the two composite Woit source assertions into closed BT01 algebraic/projective projections and topology residuals without changing their parent PARTIAL status.
+- `BT01_ALGEBRAIC_PROJECTIVE_CLOSURE_CERTIFICATE_0_1.md` / `.json` — freezes the non-topological BT01 projection as PASS while explicitly preserving the full-track firewall.
+- `BT01_SLICE_CLOSURE_AUDIT_0_2.md` — successor audit explaining the 14/16 Woit parent-assertion status versus the closed bridge projection.
