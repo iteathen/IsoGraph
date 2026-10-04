@@ -46,3 +46,5 @@ Current support:
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_0_1_CORRECTION.md — defect and no-dependent-impact record.
 - PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg — exact linear injective map for real-form/subcarrier embeddings into larger representations.
 - PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.md — scope and BT01 use.
+- PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.isg — sign-correct construction from normed associative algebra + conjugation into the paired chiral Clifford schema.
+- PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.md — explicit Q_C=-N and reverse-action semantics.
