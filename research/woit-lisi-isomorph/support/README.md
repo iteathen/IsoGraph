@@ -65,3 +65,7 @@ Current support:
 - PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg — exact six-basis vector-space support for four-dimensional two-form carriers.
 - PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg — finite exterior-2 presentation and signature-neutral Hodge eigenspace decomposition.
 - PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.md — W02 self-duality reduction scope.
+- PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg — exact three-element basis witness.
+- PRIMITIVE_DIMENSION_3_SCHEMA_0_1.md — scope and finite-basis semantics.
+- PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg — exact 3D su(2)-type Lie algebra with [t1,t2]=2t3 cyclically.
+- PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.md — normalization and topology guard.
