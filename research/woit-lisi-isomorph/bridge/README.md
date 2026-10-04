@@ -135,3 +135,8 @@ These can be tested as refinements only if the weaker bridge survives.
 ## Exact quaternionic matrix alignment
 
 - `BT01_EXACT_QUATERNIONIC_MATRIX_ACTION_ALIGNMENT_0_1.md` / `.json` — Woit and Lisi independently use the identical Pauli/quaternion basis (I,-i sigma_1,-i sigma_2,-i sigma_3); with the chiral role map, the same parameter matrix acts from the input to output chiral carrier. This does not rely on unquarantining Lisi's Woit citation.
+
+## Woit local Grassmannian reconstruction
+
+- `BT01_WOIT_GRASSMANNIAN_LOCAL_CHART_0_1.isg` / `.md` — local complement/graph chart connecting Hom(S_R,S_L) to two-planes and CP1 twistor incidence without inventing a global split.
+- `BT01_WOIT_LOCAL_RECONSTRUCTION_RESULT_0_1.md` — Woit Hom and twistor presentations now connected at exact mathematical reconstruction level.

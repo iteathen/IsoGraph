@@ -115,3 +115,10 @@ The result is currently side-sensitive: left and right multiplication correspond
 **Recorded:** 2026-10-03.
 
 The B06 left/right complex-structure fork is not an algebraic separation: division-algebra conjugation is an anti-involution and transports left multiplication into right multiplication by the conjugated element. Native support records KAPPA L_u KAPPA = R_KAPPA(u). The remaining possible obstruction is source-role/chirality compatibility rather than mathematical handedness itself.
+
+## WL-FINDING-007 — Woit Hom/twistor gap closes by a local Grassmannian graph chart
+
+**Category:** RESEARCH_FINDING / standard geometry applied to the source reconstruction.  
+**Recorded:** 2026-10-03.
+
+The Woit-side BT01 gap does not require a false global identity T=S_R+S_L. Choosing an auxiliary local complement to S_R in T=C4 identifies the quotient T/S_R with that complement, turns Hom(S_R,T/S_R) into the standard graph chart on Gr(2,T), and projectivizes each graph to a CP1 in CP3. The project-specific finding is that this exact local reconstruction connects Woit's independently represented Hom/vector and twistor-incidence formulations while preserving global fibration structure as a residual.
