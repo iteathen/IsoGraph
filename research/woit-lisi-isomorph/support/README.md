@@ -50,3 +50,5 @@ Current support:
 - PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.md — explicit Q_C=-N and reverse-action semantics.
 - PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg — exact quaternion conjugation norm and polarized bilinear form, with composition-norm closure.
 - PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.md — scope and BT01 use.
+- PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.isg — bridge-safe field isomorphism, semilinear bijection, and involutive-algebra isomorphism support.
+- PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.md — source-separation and analytic-scope guards.
