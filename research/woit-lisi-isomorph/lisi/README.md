@@ -1,0 +1,46 @@
+# Lisi full IsoGraph treatment
+
+**Track:** L
+**Current status:** ACTIVE — source traversal and primitive requirements expansion
+**Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
+**Cross-author semantics available:** NO
+
+## Objective
+
+Produce a complete source-faithful Core-0.21 rendering of the frozen Garrett Lisi corpus independently of Peter Woit. This track is successful even if no later bridge survives.
+
+## Current formulation family
+
+Current provisional formulations are L-F1 E8 principal-bundle/superconnection formulation, L-F2 generic gauge/gravity/Higgs symmetry-breaking formulation, L-F3 Spin(11,3)/Majorana-Weyl/E8(-24) embedding, L-F4 generalized Cartan/deforming-Lie-group geometry, L-F5 CPTt discrete-symmetry/Clifford formulation, and L-F6 division-algebra/Clifford/triality/exceptional scaffold.
+
+See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FORMULATION_FAMILY_GRAPH_0_1.json.
+
+## Full-treatment gates
+
+| Gate | State |
+|---|---|
+| corpus frozen | PASS — 0.2 |
+| source traversal complete | IN PROGRESS |
+| SSC frozen complete | NOT YET |
+| primitive math support complete | NOT YET |
+| native .isg bundle | NOT YET |
+| graph-derived closure ledger | NOT YET |
+| recursive IA fixed point | NOT YET |
+| NEI pass | NOT YET |
+| DTS pass | PARTIAL / PROVISIONAL |
+| DP pass | NOT YET |
+| EI warrants | NONE YET |
+| reconstruction audit | NOT YET |
+| sealed | NO |
+
+## High-risk reductions
+
+Lie groups/algebras/embeddings; Clifford matrices; chiral spinors; Majorana-Weyl constraints; Spin(11,3), Spin(12,4), E8(-24); principal bundles/superconnections/curvature; extended Plebanski action; symmetry breaking; frame-Higgs factorization; Cartan/generalized Cartan geometry; deforming Lie group/embedded spacetime; C/P/T/triality; division/split-composition algebras; trilinear triality; generalized reflections; magic square/exceptional algebras; triality eigenspaces/Vinberg theta; generation assignments; unresolved dynamics.
+
+## Revision discipline
+
+L01–L06 remain separate source formulations. L06 explicitly reframes a problem in L01 rather than merely restating it. L05's Woit citation remains opaque until both tracks seal.
+
+## Firewall
+
+No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpretation, or proposed bridge may close a Lisi item before sealing.

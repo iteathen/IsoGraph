@@ -566,6 +566,228 @@
           "note": "Public prior discussion of AI/computation in scientific discovery. This is one reason Project Discovery provenance claims must be architecture-specific rather than generic AI-for-science priority claims."
         }
       ]
+    },
+    {
+      "id": "WL-ORIGIN-001",
+      "title": "Woit-Lisi IsoGraph structural comparison campaign",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua identified Peter Woit's and Garrett Lisi's programs as candidates for an IsoGraph isomorph search and directed that the work receive its own research directory."
+      },
+      "first_public_record": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "commit": "fc5b1db635e217c330b0ee47cf24819015e8985d",
+        "path": "research/woit-lisi-isomorph/README.md"
+      }
+    },
+    {
+      "id": "WL-ORIGIN-002",
+      "title": "Mandatory intra-author formulation-family recovery before cross-domain bridge selection",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua observed that Woit and Lisi often use multiple formulations of the same ideas, not all equally translatable, and directed the campaign to identify same-author alternative expressions and determine which representatives bridge most strongly in each direction."
+      },
+      "reasoning_path": [
+        "A one-rendering-per-author comparison can create false negatives when the chosen representatives expose different structure.",
+        "It can also create false positives if a convenient representative cannot be transported back through the author's other formulations.",
+        "Therefore recover same-author formulation families blindly before cross-domain comparison.",
+        "Treat representative preference as bridge-objective-relative and evidence-bounded rather than as a globally canonical formulation."
+      ],
+      "public_formalization": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "path": "research/woit-lisi-isomorph/FORMULATION_FAMILY_PROTOCOL_0_1.md",
+        "note": "Formalized in the same work cycle as this provenance entry."
+      }
+    },
+    {
+      "id": "WL-ORIGIN-003",
+      "title": "Full independent IsoGraph treatment of both Woit and Lisi programs before cross-domain comparison",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_DIRECTION"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua directed that both theories receive the full IsoGraph treatment, not merely bridge-sufficient partial renderings."
+      },
+      "consequence": [
+        "Each author becomes an independent full-treatment research track.",
+        "Full SSC, primitive closure, recursive IA, NEI, DTS, DP, reconstruction, and sealing are required independently.",
+        "Cross-author comparison becomes downstream of the two sealed treatments."
+      ],
+      "public_formalization": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "path": "research/woit-lisi-isomorph/FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md",
+        "note": "Formalized in the same work cycle."
+      }
+    },
+    {
+      "id": "WL-ORIGIN-004",
+      "title": "Isomorph-exposure frontier for axiomatic abstraction",
+      "attribution": [
+        {
+          "party": "Joshua Oshiro",
+          "role": "HUMAN_ORIGINATED_IDEA"
+        },
+        {
+          "party": "AI assistant",
+          "role": "AGENT_ASSISTED_FORMALIZATION"
+        }
+      ],
+      "earliest_evidence": {
+        "date": "2026-10-03",
+        "basis": "PRESERVED_DATED_CONVERSATION",
+        "summary": "Joshua identified the abstraction boundary as a discovery variable: abstract far enough to expose likely isomorphic generative structures, but not so far that load-bearing distinctions are erased."
+      },
+      "reasoning_path": [
+        "The source mathematical objects are too large for extensional IsoGraph representation.",
+        "An axiomatic representation is therefore required.",
+        "Too-concrete axioms hide cross-formulation structure; too-abstract axioms create trivial false correspondences.",
+        "Use nested source-preserving abstractions and stop at the deepest nontrivial common quotient that still reconstructs the relevant source views."
+      ],
+      "public_formalization": {
+        "repository": "iteathen/IsoGraph",
+        "branch": "research/woit-lisi-isomorph-20261003",
+        "path": "research/woit-lisi-isomorph/ISOMORPH_EXPOSURE_FRONTIER_0_1.md"
+      }
+    },
+    {
+      "id": "WL-FINDING-001",
+      "title": "Quaternionic chiral-action / projective-twistor incidence representation-transform candidate",
+      "attribution": [
+        {
+          "party": "A. Garrett Lisi 2026 source",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Explicitly identifies the quaternionic vector/chiral-spinor relation as Euclidean twistor incidence and cites Woit 2021."
+        },
+        {
+          "party": "Peter Woit source corpus",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Provides the Euclidean quaternionic/projective twistor geometry and twistor-P1 formulation."
+        },
+        {
+          "party": "Woit-Lisi IsoGraph research process",
+          "role": "RESEARCH_FINDING",
+          "detail": "Identified the B01-to-B02 representation transform as the strongest current bridge candidate under the formulation-family/isomorph-exposure method."
+        }
+      ],
+      "recorded_on": "2026-10-03",
+      "supported_scope": "Strong provisional bridge candidate only; no cross-track isomorphism admitted before full-track sealing.",
+      "artifact": "research/woit-lisi-isomorph/bridge/B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.md",
+      "cautions": [
+        "External sources predate the IsoGraph campaign; no novelty claim is made for the mathematical relation.",
+        "Projective well-definedness, source-local type/reality/chirality conditions, reconstruction, and residual accounting remain to be proved in the native treatments."
+      ]
+    },
+    {
+      "id": "WL-FINDING-002",
+      "title": "Graph-projectivization as the current Woit-Lisi bridge invariant",
+      "attribution": [
+        {
+          "party": "Standard linear/projective geometry",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "The graph of a linear map is a subspace and can be projectivized."
+        },
+        {
+          "party": "Peter Woit source corpus",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Supplies vectors as Hom(S_R,S_L), two-plane twistor geometry, and CP3/CP1 Euclidean projective structure."
+        },
+        {
+          "party": "A. Garrett Lisi 2026 source",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Supplies vector/chiral-spinor multiplication and identifies the quaternionic case with Euclidean twistor incidence."
+        },
+        {
+          "party": "Woit-Lisi IsoGraph research process",
+          "role": "RESEARCH_FINDING",
+          "detail": "Isolated the typed-action -> graph -> projective-incidence transform as the strongest current neutral common quotient."
+        }
+      ],
+      "recorded_on": "2026-10-03",
+      "supported_scope": "Pre-seal common-core candidate. Native source instantiation, NEI, residual reconstruction, and post-seal comparison remain outstanding.",
+      "artifact": "research/woit-lisi-isomorph/bridge/BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md"
+    },
+    {
+      "id": "WL-FINDING-003",
+      "title": "Paired complex-structure intertwiner as the convention-safe BT01 frontier",
+      "attribution": [
+        {
+          "party": "Peter Woit source corpus",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Separates Euclidean vectors, complexified Hom(S_R,S_L), and quaternionic/pseudoreal twistor structure."
+        },
+        {
+          "party": "A. Garrett Lisi 2026 source",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Provides real quaternionic chiral multiplication plus a Pauli-matrix complex representation."
+        },
+        {
+          "party": "Woit-Lisi IsoGraph research process",
+          "role": "RESEARCH_FINDING",
+          "detail": "Rejected an overly strong common scalar convention and isolated A_v J_minus = J_plus A_v as the safer common invariant."
+        }
+      ],
+      "recorded_on": "2026-10-03",
+      "artifact": "research/woit-lisi-isomorph/bridge/BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md",
+      "cautions": [
+        "Exact source-local J_minus/J_plus identifications and handedness remain open."
+      ]
+    },
+    {
+      "id": "WL-FINDING-004",
+      "title": "Unit-octonion lower common quotient with asymmetric theory role",
+      "attribution": [
+        {
+          "party": "Peter Woit 2021 source",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Explicitly identifies S7 with unit octonions in speculative generation/open-problem discussion."
+        },
+        {
+          "party": "A. Garrett Lisi 2026 source",
+          "role": "EXTERNAL_ANTECEDENT",
+          "detail": "Develops octonion composition, Clifford, so(8), and triality structure."
+        },
+        {
+          "party": "Woit-Lisi IsoGraph research process",
+          "role": "RESEARCH_FINDING",
+          "detail": "Separated the shared unit-composition quotient from stronger triality/generation claims and preserved evidence-state asymmetry."
+        }
+      ],
+      "recorded_on": "2026-10-03",
+      "artifact": "research/woit-lisi-isomorph/bridge/B05_UNIT_COMPOSITION_COMMON_CORE_0_1.md"
     }
   ]
 }

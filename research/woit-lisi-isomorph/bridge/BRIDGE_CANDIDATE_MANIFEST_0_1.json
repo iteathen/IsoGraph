@@ -1,0 +1,159 @@
+{
+  "schema": "woit-lisi.bridge-candidate-manifest.v0.1",
+  "status": "PROVISIONAL_NOT_ADMITTED",
+  "date": "2026-10-03",
+  "abstraction_method": "ISOMORPH_EXPOSURE_FRONTIER_0_1.md",
+  "firewall": {
+    "full_tracks_may_import_bridge_semantics": false,
+    "bridge_may_use_only_already_recorded_source_side_structures": true,
+    "cross_track_isomorphism_admitted": false
+  },
+  "candidates": [
+    {
+      "id": "B01",
+      "label": "chiral action / quaternionic-twistor incidence",
+      "neutral_core": [
+        "vector carrier",
+        "chiral grading",
+        "bilinear vector-spinor action",
+        "chirality exchange"
+      ],
+      "stronger_refinement": [
+        "Clifford square relation"
+      ],
+      "W_candidates": [
+        "W-F2",
+        "W-F3",
+        "W-F4"
+      ],
+      "L_candidates": [
+        "L-F3",
+        "L-F6"
+      ],
+      "evidence": "B01_0_SOURCE_SUPPORTED_BOTH_SIDES",
+      "special_note": "L05 contains an opaque source-native citation identifying its quaternionic relation with Euclidean twistor incidence; citation semantics remain quarantined.",
+      "native_range": "187001-187009",
+      "source_local_common_core": "V x S_chiral_A -> S_chiral_B"
+    },
+    {
+      "id": "B02",
+      "label": "parametrized projective incidence",
+      "neutral_core": [
+        "projective quotient",
+        "subspace family",
+        "incidence",
+        "base-to-subspace parameterization"
+      ],
+      "W_candidates": [
+        "W-F1",
+        "W-F2",
+        "W-F4"
+      ],
+      "L_candidates": [
+        "L-F6"
+      ],
+      "evidence": "MEDIUM_HIGH_CANDIDATE",
+      "native_range": "187020-187028"
+    },
+    {
+      "id": "B03",
+      "label": "real / pseudoreal graded structures",
+      "neutral_core": [
+        "antilinear involution",
+        "fixed real carrier",
+        "chirality grading"
+      ],
+      "refinements": [
+        "B03.R ordinary antilinear involution with square +1 and fixed-real carrier",
+        "B03.Q quaternionic/pseudoreal antilinear structure with square -1 before projectivization",
+        "chirality-preserving or chirality-exchanging source-specific refinements"
+      ],
+      "W_candidates": [
+        "W-F3",
+        "W-F4",
+        "W-F5",
+        "W-F6"
+      ],
+      "L_candidates": [
+        "L-F3",
+        "L-F5",
+        "L-F6"
+      ],
+      "evidence": "SPLIT_REQUIRED_WOIT_B03Q_SOURCE_SUPPORTED",
+      "native_range": "187040-187050",
+      "correction_artifact": "B03_REAL_STRUCTURE_SPLIT_0_1.md"
+    },
+    {
+      "id": "B04",
+      "label": "larger-parent to selected-spacetime transition",
+      "neutral_core": [
+        "preserved parent",
+        "removed external-base priority",
+        "introduced selection/embedding",
+        "spacetime-facing target",
+        "QU remainder"
+      ],
+      "W_candidates": [
+        "W-T01",
+        "W-T03",
+        "W-T04"
+      ],
+      "L_candidates": [
+        "L-T01"
+      ],
+      "evidence": "MEDIUM_DTS_CANDIDATE",
+      "native_range": "187060-187067"
+    },
+    {
+      "id": "B05",
+      "label": "octonionic S7 / Spin(8) generation surface",
+      "neutral_core": [
+        "normed/composition carrier",
+        "unit-norm locus",
+        "multiplication-preserving automorphism/stabilizer structure",
+        "potential three-role triality refinement"
+      ],
+      "W_candidates": [
+        "W01 section 5 speculative S7/unit-octonion/Spin(8)/G2 generation route"
+      ],
+      "L_candidates": [
+        "L-F6 octonion/Clifford/triality scaffold"
+      ],
+      "evidence": "HIGH_INTEREST_ASYMMETRIC",
+      "W_evidence_state": "SOURCE_ASSERTED_SPECULATIVE",
+      "L_evidence_state": "STRUCTURAL_MATH_SOURCE_ASSERTED; generation use PROPOSED",
+      "artifact": "B05_OCTONIONIC_S7_SPIN8_GENERATION_SURFACE_0_1.md",
+      "lowest_native_schema": "187700",
+      "lowest_common_core": "composition algebra + unit-norm octonionic locus",
+      "lowest_common_core_status": "SOURCE_SUPPORTED_BOTH_SIDES_ROLE_ASYMMETRIC",
+      "automorphism_schema": "187701",
+      "triality_refinement": "185006",
+      "current_report": "B05_UNIT_COMPOSITION_COMMON_CORE_0_1.md"
+    }
+  ],
+  "deferred": [
+    "Spin(4,2)/Spin(6) block bridge",
+    "Spin(12,4)/E8 realization",
+    "64-dimensional generation bridge",
+    "CPT/root-involution identification"
+  ],
+  "native_signature": "BRIDGE_NEUTRAL_SIGNATURES_0_1.isg",
+  "abstraction_lattice": "BRIDGE_ABSTRACTION_LATTICE_0_1.json",
+  "leading_transform_candidate": {
+    "id": "BT01",
+    "source_signature": "B01",
+    "target_signature": "B02",
+    "guard": "quaternionic realization + projective well-definedness",
+    "status": "STRONG_PRESEAL_CONVENTION_SAFE_COMMON_CORE",
+    "native": "B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.isg",
+    "graph_projectivization": "BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md",
+    "neutral_composite": "187208",
+    "minimum_action_schema": "187300",
+    "minimum_composite": "187301",
+    "stronger_refinement": "187200/187208",
+    "current_report": "BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_3.md",
+    "quaternionic_complex_lift": "BT01_QUATERNIONIC_COMPLEX_STRUCTURE_LIFT_0_1.md",
+    "lowest_action_frontier": "187500",
+    "side_convention_audit": "BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md"
+  }
+}

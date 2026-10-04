@@ -1,0 +1,67 @@
+{
+  "schema": "woit-lisi.bt01-source-projection-packet.v0.2",
+  "status": "PRESEAL_SOURCE_SEMANTIC_MAPPING_NOT_NATIVE_PROOF",
+  "neutral": {
+    "action_schema": "187200",
+    "pair_equivalence": "187203",
+    "pair_quotient": "187206",
+    "incidence": "187207",
+    "composite": "187208",
+    "minimum_action_schema": "187300",
+    "minimum_composite": "187301",
+    "stronger_bilinear_refinement": "187200"
+  },
+  "W": {
+    "sources": [
+      "W01 §2.2",
+      "W01 Appendix A.3.3"
+    ],
+    "map": {
+      "V": "Euclidean/quaternionic parameter or complexified Hom(S_R,S_L), depending source projection",
+      "S_minus": "S_R",
+      "S_plus": "S_L or T/S_R in the twistor tangent description",
+      "ACT": "for fixed parameter, complex-linear map S_R -> S_L",
+      "projective_pair_target": "projective twistor representation after exact source reconstruction",
+      "base_parameter": "spacetime/tangent parameter under the selected local presentation"
+    },
+    "evidence_state": "SOURCE_SUPPORTED",
+    "residuals": [
+      "Euclidean/Minkowski real-form choice",
+      "HP1 quaternionic structure",
+      "CP3->HP1 fibration",
+      "Higgs/physical roles"
+    ]
+  },
+  "L": {
+    "sources": [
+      "L05 division/Clifford relation",
+      "L05 generalized-reflection dual relation"
+    ],
+    "map": {
+      "V": "quaternionic/real vector parameter v",
+      "S_minus": "negative-chiral spinor psi (orientation may reverse under the dual formula)",
+      "S_plus": "positive-chiral spinor chi",
+      "ACT": "fixed quaternionic left multiplication on the represented chiral spinor, after compatible complex-structure lift",
+      "projective_pair_target": "twistor pair (psi,chi) in the quaternionic case",
+      "base_parameter": "Euclidean vector v"
+    },
+    "evidence_state": "SOURCE_SUPPORTED",
+    "residuals": [
+      "triality automorphisms",
+      "generalized reflections",
+      "magic-square/exceptional structure",
+      "generation interpretation"
+    ]
+  },
+  "shape_audit": {
+    "typed_action_role_match": true,
+    "homogeneous_pair_role_match": true,
+    "parameterized_projective_family_candidate": true,
+    "native_source_instantiation_complete": false,
+    "natural_identity_established": false,
+    "common_scalar_on_parameter_required": false,
+    "compatible_complex_structure_required": true,
+    "dimension_4R_equals_2C_required": true
+  },
+  "predecessor": "BT01_SOURCE_PROJECTION_PACKET_0_1.json"
+}

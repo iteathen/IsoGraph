@@ -1,0 +1,238 @@
+{
+  "schema": "woit-lisi.formulation-family-graph.v0.1",
+  "status": "PROVISIONAL_SOURCE_SIDE_ONLY_NOT_PRIMITIVE_CLOSED",
+  "corpus": "SOURCE_CORPUS_FREEZE_0_2.md",
+  "invariants": [
+    "no_cross_author_semantic_edges_before_seal",
+    "source_native_cross_references_remain_opaque",
+    "relation_strength_is_not_global_identity"
+  ],
+  "tracks": {
+    "W": {
+      "nodes": [
+        {
+          "id": "W-F1",
+          "label": "Euclidean-first twistor unification",
+          "sources": [
+            "W01"
+          ]
+        },
+        {
+          "id": "W-F2",
+          "label": "quaternionic/twistor-P1 representation layer",
+          "sources": [
+            "W05",
+            "W01"
+          ]
+        },
+        {
+          "id": "W-F3",
+          "label": "right-handed spinor/vector geometry",
+          "sources": [
+            "W02",
+            "W04a"
+          ]
+        },
+        {
+          "id": "W-F4",
+          "label": "twistor real-form/orbit/fibration geometry",
+          "sources": [
+            "W04b"
+          ]
+        },
+        {
+          "id": "W-F5",
+          "label": "Minkowski-twistor/holomorphic-first formulation",
+          "sources": [
+            "W04c",
+            "W04d"
+          ]
+        },
+        {
+          "id": "W-F6",
+          "label": "conjugation/chiral-real-structure work in progress",
+          "sources": [
+            "W04e"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "W-R01",
+          "from": "W-F1",
+          "to": "W-F3",
+          "relation": "MOTIVATED_REFACTORIZATION",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "W-R02",
+          "from": "W-F3",
+          "to": "W-F4",
+          "relation": "GEOMETRIC_REALIZATION_CANDIDATE",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "W-R03",
+          "from": "W-F1",
+          "to": "W-F5",
+          "relation": "AUTHOR_EXPLICIT_VIEWPOINT_REVISION",
+          "status": "SOURCE_SUPPORTED"
+        },
+        {
+          "id": "W-R04",
+          "from": "W-F4",
+          "to": "W-F5",
+          "relation": "REFACTORIZATION_SPECIALIZATION",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "W-R05",
+          "from": "W-F5",
+          "to": "W-F6",
+          "relation": "REVISION_IN_PROGRESS",
+          "status": "QU_REQUIRED"
+        },
+        {
+          "id": "W-R06",
+          "from": "W-F1",
+          "to": "W-F2",
+          "relation": "SHARED_SUBSTRUCTURE",
+          "status": "SOURCE_SUPPORTED"
+        },
+        {
+          "id": "W-R07",
+          "from": "W-F3",
+          "to": "W-F1",
+          "relation": "PARTIAL_RECONSTRUCTION_CANDIDATE",
+          "status": "PROVISIONAL"
+        }
+      ],
+      "transitions": [
+        "W-T01",
+        "W-T02",
+        "W-T03",
+        "W-T04"
+      ]
+    },
+    "L": {
+      "nodes": [
+        {
+          "id": "L-F1",
+          "label": "E8 principal-bundle/superconnection formulation",
+          "sources": [
+            "L01"
+          ]
+        },
+        {
+          "id": "L-F2",
+          "label": "generic gauge/gravity/Higgs symmetry-breaking formulation",
+          "sources": [
+            "L02"
+          ]
+        },
+        {
+          "id": "L-F3",
+          "label": "Spin(11,3)/Majorana-Weyl/E8(-24) embedding",
+          "sources": [
+            "L03"
+          ]
+        },
+        {
+          "id": "L-F4",
+          "label": "generalized Cartan/deforming-Lie-group geometry",
+          "sources": [
+            "L06"
+          ]
+        },
+        {
+          "id": "L-F5",
+          "label": "CPTt discrete-symmetry/Clifford formulation",
+          "sources": [
+            "L04"
+          ]
+        },
+        {
+          "id": "L-F6",
+          "label": "division-algebra/Clifford/triality/exceptional scaffold",
+          "sources": [
+            "L05"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "L-R01",
+          "from": "L-F1",
+          "to": "L-F2",
+          "relation": "MECHANISM_GENERALIZATION",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "L-R02",
+          "from": "L-F1",
+          "to": "L-F3",
+          "relation": "PARTIAL_ALGEBRAIC_EXPLICITIFICATION",
+          "status": "SOURCE_SUPPORTED"
+        },
+        {
+          "id": "L-R03",
+          "from": "L-F1",
+          "to": "L-F4",
+          "relation": "AUTHOR_EXPLICIT_GEOMETRIC_REFRAME",
+          "status": "SOURCE_SUPPORTED"
+        },
+        {
+          "id": "L-R04",
+          "from": "L-F3",
+          "to": "L-F4",
+          "relation": "EMBEDDING_RETAINED_UNDER_REFRAME",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "L-R05",
+          "from": "L-F5",
+          "to": "L-F6",
+          "relation": "DISCRETE_TRIALITY_MODULE_TO_SCAFFOLD",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "L-R06",
+          "from": "L-F3",
+          "to": "L-F6",
+          "relation": "CLIFFORD_REPRESENTATION_REFACTORIZATION_CANDIDATE",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "L-R07",
+          "from": "L-F1",
+          "to": "L-F6",
+          "relation": "UPDATED_EXCEPTIONAL_FORMULATION",
+          "status": "PROVISIONAL"
+        },
+        {
+          "id": "L-R08",
+          "from": "L-F6",
+          "to": "L-F6",
+          "relation": "INTERNAL_MULTI_START_EQUIVALENCE_CLAIM",
+          "status": "DECOMPOSITION_REQUIRED"
+        }
+      ],
+      "transitions": [
+        "L-T01",
+        "L-T02",
+        "L-T03",
+        "L-T04"
+      ],
+      "opaque_external_edges": [
+        {
+          "id": "XREF-L05-033",
+          "from": "L-F6",
+          "target": "OPAQUE_EXTERNAL_SOURCE",
+          "source_side_label": "Euclidean twistor incidence relation",
+          "status": "QUARANTINED"
+        }
+      ]
+    }
+  },
+  "cross_author_edges": []
+}
