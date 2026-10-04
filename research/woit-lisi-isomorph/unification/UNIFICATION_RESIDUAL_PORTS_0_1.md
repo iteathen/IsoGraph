@@ -1,0 +1,78 @@
+# Unification Residual Ports 0.1
+
+**Status:** INITIAL ATTACHMENT MAP
+
+The old bridge program asked which residuals remain unmatched.
+
+The unification program asks which residuals can be attached to the common kernel simultaneously.
+
+## W residual port
+
+### W-GEO
+- global CP3 / HP1 geometry;
+- projective/twistor fibration;
+- pseudoreal structure;
+- complex-structure choice fiber.
+
+### W-DYN
+- right-handed Euclidean/Minkowski geometry;
+- self-dual Yang–Mills;
+- chiral general relativity;
+- distinguished-direction/Wick-rotation machinery.
+
+### W-INT
+- internal-role use of the opposite chiral SU(2);
+- W01/W02 Standard Model construction claims;
+- unresolved electroweak/Higgs integration.
+
+## L residual port
+
+### L-ALG
+- full division-algebra ladder;
+- vector / S-minus / S-plus triality;
+- generalized reflections;
+- magic-square structure.
+
+### L-DYN
+- gauge/gravity/Higgs connection;
+- symmetry breaking;
+- generalized Cartan/deforming-group geometry.
+
+### L-EX
+- Spin(11,3);
+- Spin(12,4);
+- E8(-24) / exceptional realization.
+
+## First interaction hypotheses
+
+### UH-001 — fiberwise Clifford/triality extension over Woit geometry
+
+Can L-ALG act consistently over W-GEO while restricting locally to U0?
+
+Required:
+- chart-transition invariance;
+- pseudoreal compatibility;
+- source action reconstruction;
+- no invented structure at the compactification patch.
+
+### UH-002 — common chiral connection architecture
+
+Can W-DYN and L-DYN be represented as projections of one connection/curvature/action architecture over U1?
+
+This is not a claim that their existing actions are identical.
+
+### UH-003 — octonionic extension
+
+Does Woit's S7/unit-octonion speculative surface provide a source-supported geometric extension point for Lisi's octonionic triality machinery?
+
+### UH-004 — exceptional realization
+
+If U1/U2 survive, can an exceptional algebra act as a realization of the unified structure without changing lower source reconstructions?
+
+E8 is tested last.
+
+## Conflict rule
+
+A residual that cannot attach conservatively remains outside U.
+
+A unified candidate is allowed to be smaller than the union of both theories.

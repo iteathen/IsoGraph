@@ -1,0 +1,96 @@
+{
+  "schema": "woit-lisi.unification-candidate-manifest.v0.1",
+  "date": "2026-10-04",
+  "status": "ACTIVE_EXPLORATORY_SYNTHESIS",
+  "primary_objective": "construct minimal conservative unification",
+  "kernel": {
+    "id": "U0",
+    "artifact": "UNIFICATION_KERNEL_U0_0_1.isg",
+    "evidence": "../bridge/BT01_ALGEBRAIC_PROJECTIVE_CLOSURE_CERTIFICATE_0_1.md",
+    "disposition": "FROZEN_INPUT_SURFACE_NOT_COMPLETE_THEORY"
+  },
+  "candidates": [
+    {
+      "id": "U1-TC",
+      "label": "twistor / Clifford amalgam",
+      "priority": 1,
+      "status": "OPEN_PRIMARY",
+      "W_inputs": [
+        "global projective/twistor geometry",
+        "pseudoreal structure",
+        "Spin(4) chiral geometry"
+      ],
+      "L_inputs": [
+        "quaternionic chiral Clifford structure",
+        "triality/division-algebra residuals where transport exists"
+      ],
+      "obligations": [
+        "local restriction reconstructs U0",
+        "chart transitions preserve attached algebraic action",
+        "pseudoreal structure is preserved",
+        "compactification patch introduces no unsupported Lisi structure",
+        "both source residual projections reconstruct"
+      ]
+    },
+    {
+      "id": "U2-DYN",
+      "label": "chiral dynamics amalgam",
+      "priority": 2,
+      "status": "OPEN_AFTER_SOURCE_CLOSURE",
+      "W_inputs": [
+        "W02 self-dual Yang-Mills",
+        "W02 chiral GR"
+      ],
+      "L_inputs": [
+        "L02 gauge/gravity/Higgs connection",
+        "L06 generalized Cartan geometry"
+      ],
+      "obligations": [
+        "common connection/action interface",
+        "field-role conservation",
+        "source action reconstruction",
+        "no forced Higgs identification"
+      ]
+    },
+    {
+      "id": "U3-OT",
+      "label": "octonionic / triality extension",
+      "priority": 3,
+      "status": "OPEN_ASYMMETRIC",
+      "W_inputs": [
+        "W01 speculative S7/unit-octonion surface"
+      ],
+      "L_inputs": [
+        "L05 octonion/Clifford/triality structure"
+      ],
+      "obligations": [
+        "preserve U0/U1",
+        "retain Woit speculative evidence status",
+        "prove triality action rather than infer from neighborhood"
+      ]
+    },
+    {
+      "id": "U4-EX",
+      "label": "exceptional realization",
+      "priority": 4,
+      "status": "DEFERRED",
+      "W_inputs": [],
+      "L_inputs": [
+        "Spin(11,3)",
+        "Spin(12,4)",
+        "E8(-24)"
+      ],
+      "obligations": [
+        "realize previously qualified lower unification",
+        "survive representation obstruction audit",
+        "do not redefine U0 merely to fit E8"
+      ]
+    }
+  ],
+  "firewall": {
+    "synthesis_may_close_source_tracks": false,
+    "synthesis_edges_must_be_labeled": true,
+    "formal_promotion_requires_both_source_tracks_sealed": true,
+    "source_native_cross_reference_still_quarantined": true
+  }
+}
