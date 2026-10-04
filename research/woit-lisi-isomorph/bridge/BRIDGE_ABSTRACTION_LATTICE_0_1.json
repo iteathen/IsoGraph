@@ -80,39 +80,29 @@
       ]
     },
     "B03": {
-      "levels": [
-        {
-          "level": "B03.0",
-          "name": "graded real structure",
+      "branches": {
+        "R": {
+          "name": "ordinary real involution",
           "requires": [
-            "antilinear involution",
-            "fixed/selected real carrier",
-            "chirality grading"
-          ]
-        },
-        {
-          "level": "B03.P",
-          "name": "grading-preserving real structure",
-          "adds": [
-            "involution commutes with grading"
-          ]
-        },
-        {
-          "level": "B03.X",
-          "name": "grading-exchanging real structure",
-          "adds": [
-            "involution exchanges grading sectors"
-          ]
-        },
-        {
-          "level": "B03.strong",
-          "name": "source reality condition",
-          "adds": [
-            "Majorana/Weyl or Woit-specific real-form equations"
+            "antilinear map",
+            "square +1",
+            "fixed-point semantics"
           ],
-          "status": "source_specific"
+          "status": "separate branch"
+        },
+        "Q": {
+          "name": "quaternionic/pseudoreal structure",
+          "requires": [
+            "antilinear map",
+            "square -1 on carrier",
+            "projective square +1",
+            "no forced carrier fixed points"
+          ],
+          "W_status": "SOURCE_SUPPORTED by W05",
+          "L_status": "CANDIDATE via quaternionic carrier; exact source convention open"
         }
-      ]
+      },
+      "rule": "Do not merge B03.R and B03.Q merely because both are antilinear real-structure presentations."
     },
     "B04": {
       "levels": [

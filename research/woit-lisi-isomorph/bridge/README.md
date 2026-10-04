@@ -101,3 +101,8 @@ These can be tested as refinements only if the weaker bridge survives.
 - `BT01_QUATERNIONIC_COMPLEX_STRUCTURE_LIFT_0_1.md` — identifies the compatible-complex-structure step that turns the real/quaternionic action into the CP1-in-CP3 projective incidence shape.
 - `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_2.md` — current successor common-core report.
 - `BT01_SOURCE_PROJECTION_PACKET_0_2.json` — corrected source role mapping.
+
+## Dimension/reality refinement
+
+- `BT01_DIMENSION_REALITY_CHECK_0_1.md` — no raw dimension obstruction after the quaternionic complex lift; convention mapping remains open.
+- `B03_REAL_STRUCTURE_SPLIT_0_1.md` — separates ordinary real involutions from Woit's quaternionic/pseudoreal twistor structure.
