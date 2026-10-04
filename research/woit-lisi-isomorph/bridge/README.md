@@ -150,3 +150,7 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.isg` / `.md` — current maximal demonstrated parameter-space common quotient is the affine quaternionic chart H ~= R4; Woit's global HP1 compactification remains residual.
 - `BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.json` — machine-readable scope boundary.
+
+## Exact affine source formula
+
+- `BT01_EXACT_AFFINE_SOURCE_FORMULA_WITNESS_0_1.md` — Woit's `(s,Zs)` and Lisi's `(psi,tilde(chi))`, `tilde(chi)=v psi`, coincide under the already established source role map `Z=v, s=psi`; the point at infinity remains Woit residual structure.
