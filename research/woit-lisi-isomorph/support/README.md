@@ -39,3 +39,5 @@ Current support:
 - PRIMITIVE_QUATERNION_PRESENTATION_0_1.md — closure scope and exclusions.
 - PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg — exact linear + bijective representation-map schema used to close BT01 coefficient transports.
 - PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.md — scope and identity guard.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.isg — field embedding plus exact restriction-of-scalars semantics for real/complex source presentations.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.md — BT01 use and limits.
