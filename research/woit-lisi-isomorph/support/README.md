@@ -35,3 +35,5 @@ Current support:
 - PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.md — exact semantics and chart/global limitations.
 - PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.isg — extensional graph-chart equivalence and induced projective-incidence invariance.
 - PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.md — chart-choice firewall and limits.
+- PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg — finite 1,i,j,k multiplication/conjugation presentation closing the source-specific quaternion algebra used by BT01.
+- PRIMITIVE_QUATERNION_PRESENTATION_0_1.md — closure scope and exclusions.
