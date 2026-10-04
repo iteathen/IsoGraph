@@ -123,3 +123,7 @@ These can be tested as refinements only if the weaker bridge survives.
 ## B06 complex-structure choice fiber
 
 - `B06_QUATERNIONIC_COMPLEX_STRUCTURE_CHOICE_FIBER_0_1.md` — treats the CP1 family of quaternionic complex structures as a candidate bridge generator, while preserving the unresolved left/right chirality fork.
+
+## Current priority
+
+- `BRIDGE_PRIORITY_CHECKPOINT_0_1.md` — ranks BT01/B06 first after surviving abstraction, dimension, and handedness falsifiers; B05 remains the secondary independent route.
