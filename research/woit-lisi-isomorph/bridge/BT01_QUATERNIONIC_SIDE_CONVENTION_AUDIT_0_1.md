@@ -119,3 +119,7 @@ exact Woit <-> Lisi convention mapping:
 ~~~
 
 This correction strengthens BT01 by removing an unjustified common convention rather than weakening source fidelity.
+
+## 7. Choice-fiber consequence
+
+The compatible-complex-structure choice is now tracked separately as B06. Left- and right-multiplication choices must remain distinct until the source chirality/orientation routing is pinned. See B06_QUATERNIONIC_COMPLEX_STRUCTURE_CHOICE_FIBER_0_1.md.

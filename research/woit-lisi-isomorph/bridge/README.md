@@ -119,3 +119,7 @@ These can be tested as refinements only if the weaker bridge survives.
 ## B05 lower common quotient
 
 - `B05_UNIT_COMPOSITION_COMMON_CORE_0_1.md` — both sources reach the unit-octonion/composition neighborhood, but Woit's theory role is explicitly speculative; shared triality/generation mechanism is not established.
+
+## B06 complex-structure choice fiber
+
+- `B06_QUATERNIONIC_COMPLEX_STRUCTURE_CHOICE_FIBER_0_1.md` — treats the CP1 family of quaternionic complex structures as a candidate bridge generator, while preserving the unresolved left/right chirality fork.

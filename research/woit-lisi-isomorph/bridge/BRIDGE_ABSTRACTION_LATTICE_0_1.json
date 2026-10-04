@@ -195,6 +195,44 @@
           "status": "source_asymmetric_and_provisional"
         }
       ]
+    },
+    "B06": {
+      "levels": [
+        {
+          "level": "B06.0",
+          "name": "unit-imaginary quaternion choice locus",
+          "requires": [
+            "H-like carrier",
+            "norm-one/square-minus-one choice"
+          ]
+        },
+        {
+          "level": "B06.1",
+          "name": "handed complex-structure family",
+          "adds": [
+            "left or right multiplication choice"
+          ],
+          "status": "SIDE_FORK_REQUIRED"
+        },
+        {
+          "level": "B06.2",
+          "name": "paired chiral compatibility",
+          "adds": [
+            "A_v J_minus = J_plus A_v"
+          ],
+          "native_support": "187500"
+        },
+        {
+          "level": "B06.3",
+          "name": "projective incidence family",
+          "adds": [
+            "187300",
+            "187206",
+            "187207"
+          ]
+        }
+      ],
+      "rule": "Do not identify left and right choice families before chirality/orientation routing is established."
     }
   },
   "rule": "Prefer the strongest common level that both tracks independently instantiate while preserving upward reconstruction and residuals."

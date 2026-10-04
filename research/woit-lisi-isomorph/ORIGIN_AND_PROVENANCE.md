@@ -99,3 +99,12 @@ Artifact: `bridge/BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md`.
 Full Woit source traversal exposed an independent octonionic bridge neighborhood: W01 explicitly identifies S7 with the unit octonions while discussing the unresolved generation problem, whereas L05 develops the octonion composition/Clifford/triality structure in detail. The lowest common quotient is the composition-algebra/unit-norm-locus structure; shared Spin(8) triality or generation mechanism is not yet established.
 
 The evidence-state asymmetry is load-bearing: Woit's use is speculative/open-problem material, while Lisi's algebra is developed and his generation interpretation is proposed.
+
+## WL-FINDING-005 — complex-structure choice fiber as a bridge generator
+
+**Category:** RESEARCH_FINDING / synthesis over standard quaternionic-twistor structure.  
+**Recorded:** 2026-10-03.
+
+BT01 requires a compatible complex presentation of quaternionic chiral carriers before projectivization. Woit's twistor-P1 source independently identifies the CP1 fiber with the sphere of orthogonal complex structures on R4=H. The campaign therefore identified the **choice family itself** as a possible bridge generator: a real quaternionic relation plus a point of the complex-structure choice sphere gives the complex-linear presentation used by the projective incidence bridge.
+
+The result is currently side-sensitive: left and right multiplication correspond to different chirality/orientation structures and may not be collapsed.
