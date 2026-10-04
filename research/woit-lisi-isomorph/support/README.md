@@ -21,3 +21,5 @@ Current support:
 - PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.md — graph/projectivization interpretation and source-specific dimension limits.
 - PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg — antilinear J with J^2=-1 and the induced projective involution for B03.Q.
 - PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.md — separates pseudoreal/projective semantics from ordinary real fixed-point involutions.
+- PRIMITIVE_PAIRED_COMPLEX_STRUCTURE_ACTION_SCHEMA_0_1.isg — paired square-minus-one chiral structures plus parameterized action intertwinement, current lowest BT01 action frontier.
+- PRIMITIVE_PAIRED_COMPLEX_STRUCTURE_ACTION_SCHEMA_0_1.md — convention-safe interpretation and exclusions.

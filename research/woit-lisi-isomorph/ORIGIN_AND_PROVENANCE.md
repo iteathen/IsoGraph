@@ -79,3 +79,14 @@ The bridge campaign isolated a lower invariant beneath the named quaternionic/tw
 This standard graph/projectivization fact is not claimed as new mathematics. The research finding is that it is the current **isomorph-exposure frontier** for the Woit–Lisi comparison: Woit independently supplies the Hom(S_R,S_L) action and projective twistor geometry, while Lisi independently supplies the vector/chiral-spinor multiplication and explicitly identifies its quaternionic case with Euclidean twistor incidence.
 
 Artifact: `bridge/BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md`.
+
+## WL-FINDING-003 — paired-complex-structure intertwiner is the convention-safe BT01 frontier
+
+**Category:** RESEARCH_FINDING / correction.  
+**Recorded:** 2026-10-03.
+
+Source-level quaternionic convention checking showed that the bridge must not identify raw quaternion multiplication with one common complex-linear action without recording scalar handedness and chiral representation maps. Woit supplies a complex Hom(S_R,S_L) presentation while Lisi supplies both the real quaternionic multiplication presentation and a Pauli-matrix complex representation.
+
+The campaign therefore lowered BT01 to the invariant A_v J_minus = J_plus A_v with J_minus^2=J_plus^2=-1. The complex-linear/projective presentation is derived only after a source-authorized compatible complex structure is fixed.
+
+Artifact: `bridge/BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md`.

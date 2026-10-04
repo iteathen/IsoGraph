@@ -106,3 +106,8 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_DIMENSION_REALITY_CHECK_0_1.md` — no raw dimension obstruction after the quaternionic complex lift; convention mapping remains open.
 - `B03_REAL_STRUCTURE_SPLIT_0_1.md` — separates ordinary real involutions from Woit's quaternionic/pseudoreal twistor structure.
+
+## Quaternionic side-convention audit
+
+- `BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md` — rejects the overly coarse assumption that raw quaternion multiplication is automatically complex-linear in one fixed convention; pins the representation/intertwiner obligation.
+- `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_3.md` — current lowest convention-safe bridge frontier, based on paired square-minus-one structures and an intertwining action.
