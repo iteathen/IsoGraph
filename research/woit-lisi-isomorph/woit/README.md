@@ -46,3 +46,5 @@ W01/W02 are frozen papers. W04a–W04e are separately dated 2026 sources. Later 
 No Lisi fact, notation, triality construction, E8 embedding, or source-native Woit citation found in Lisi may be used to close a Woit item before this track is sealed.
 
 - `WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg` / `.md` — exact H basis presentation, corrected R->C scalar embedding, restriction of scalars, and native H->Hom(S_R,S_L) basis embedding.
+
+- `WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_1.isg` / `.md` — exact W05 H↔C2 coordinate presentation and pseudoreal J pinned to left multiplication by quaternion j; projective fixed-point-free clause remains open.

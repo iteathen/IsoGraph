@@ -2,7 +2,7 @@
   "schema": "woit-lisi.bt01-slice-closure-ledger.v0.1",
   "generated_from": "BT01_SLICE_CLOSURE_INPUT_0_1.json",
   "generated_at_research_checkpoint": "2026-10-03",
-  "source_branch_head": "88b7456a2aecab7f6e3a9ab75e4615276a3a45b2",
+  "source_branch_head": "aa62e0d8d99b2ef003ce4994d561029f5c6b23c7",
   "scope": {
     "description": "Only already-traversed source assertions that materially support BT01/B03/B06. This is not the complete Woit or Lisi SSC.",
     "W_assertion_base": {
@@ -27,8 +27,8 @@
   },
   "summary": {
     "W": {
-      "closed": 6,
-      "partial": 7,
+      "closed": 7,
+      "partial": 6,
       "open": 3,
       "quarantined": 0,
       "other": 0,
@@ -86,31 +86,33 @@
     {
       "track": "W",
       "id": "W-A0-034",
-      "status": "PARTIAL_SOURCE_INSTANCE",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "woit/WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg"
+        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_1.isg"
       ],
       "schemas": [
-        "193100",
-        "193302",
-        "193303"
+        "187600",
+        "193303",
+        "193200"
       ],
-      "note": "H and its real-to-complex parameter representation are native; exact source H<->C2 spinor map remains uninstantiated.",
-      "category": "partial"
+      "note": "Exact real-linear H->C2 coordinate representation with source basis images.",
+      "category": "closed"
     },
     {
       "track": "W",
       "id": "W-A0-035",
       "status": "PARTIAL_SOURCE_INSTANCE",
       "witness": [
-        "support/PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg"
+        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_1.isg"
       ],
       "schemas": [
+        "183001",
         "187400",
+        "186004",
         "187401",
         "187402"
       ],
-      "note": "Generic J^2=-1/projective involution closed; W05-specific native instantiation and fixed-point-free property remain.",
+      "note": "Source J is pinned by left quaternion-j multiplication; J^2=-1 and projective involution close. Fixed-point-free CP1 clause remains open.",
       "category": "partial"
     },
     {
