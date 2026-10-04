@@ -67,3 +67,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_1.isg` / `.md` — determinant-one complex factor roles, conventional X→g_LXg_R^{-1} action, conjugate-diagonal Lorentz real form, Hermitian Minkowski action, and independent SU(2)_L×SU(2)_R Euclidean factor roles.
 
 - `W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_1.isg` / `.md` — W02's proposed single-right-handed complex action, Euclidean x0-imaginary real form, invariant time direction, SU(2)_R spatial action, and exact trivial SU(2)_L spacetime action.
+
+- `W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_1.isg` / `.md` — exact six-dimensional exterior-two-form carrier, Euclidean Hodge star with star^2=+1, and self/anti-self-dual eigenspace decomposition.
