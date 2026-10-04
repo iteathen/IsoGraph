@@ -56,3 +56,5 @@ Current support:
 - PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.md — closure scope and exclusions.
 - PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.isg — unit-norm group derived from associative composition algebra product/conjugation.
 - PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.md — group semantics and SU(2) source-role guard.
+- PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.isg — exact vector-space direct sum and affine-carrier-plus-infinity schemas for global Woit twistor rendering.
+- PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.md — scope and topology guard.
