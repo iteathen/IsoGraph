@@ -83,3 +83,9 @@ These can be tested as refinements only if the weaker bridge survives.
 - `B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.isg` / `.md` — strongest current candidate: algebraic vector–chiral-spinor incidence and geometric projective-twistor incidence may be alternate quaternionic presentations.
 - `PRESEAL_EXPLORATORY_COMPARISON_0_1.md` — current pre-seal dispositions; no admitted cross-track match.
 - `SOURCE_PROJECTION_STATUS_0_1.json` — asymmetric W/L readiness against B01–B04.
+
+## Source-local strengthening after W01 section traversal
+
+- `B01_SOURCE_LOCAL_TYPED_ACTION_0_1.md` — W01 independently supplies V=Hom(S_R,S_L), establishing the weak typed chiral-action quotient on the Woit side; L05 supplies the corresponding vector/chiral-spinor action.
+- `B05_OCTONIONIC_S7_SPIN8_GENERATION_SURFACE_0_1.md` — new higher bridge candidate exposed by W01's speculative S7/unit-octonion/Spin(8)/G2 generation discussion.
+- `HYPOTHESIS_STATUS_UPDATE_0_1.md` — confirms Woit-side SU(4)=Spin(6) exists mathematically while preserving the unresolved physical-role question.

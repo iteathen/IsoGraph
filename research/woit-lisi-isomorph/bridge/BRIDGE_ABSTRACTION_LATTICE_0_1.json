@@ -137,6 +137,46 @@
           "status": "forbidden_before_track_seal"
         }
       ]
+    },
+    "B05": {
+      "levels": [
+        {
+          "level": "B05.0",
+          "name": "normed-composition/unit-sphere neighborhood",
+          "requires": [
+            "composition carrier",
+            "norm",
+            "unit-norm locus",
+            "multiplication-preserving symmetry"
+          ]
+        },
+        {
+          "level": "B05.1",
+          "name": "Spin(8)/G2 structural refinement",
+          "adds": [
+            "8-dimensional source instantiation",
+            "Spin(8)-representation roles",
+            "G2 automorphism/stabilizer structure"
+          ]
+        },
+        {
+          "level": "B05.2",
+          "name": "triality refinement",
+          "adds": [
+            "three role carriers",
+            "cyclic triality action",
+            "trilinear invariant"
+          ]
+        },
+        {
+          "level": "B05.3",
+          "name": "generation interpretation",
+          "adds": [
+            "three-generation source role"
+          ],
+          "status": "source_asymmetric_and_provisional"
+        }
+      ]
     }
   },
   "rule": "Prefer the strongest common level that both tracks independently instantiate while preserving upward reconstruction and residuals."
