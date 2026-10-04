@@ -44,3 +44,5 @@ Current support:
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg — corrected total-injective field embedding and restriction-of-scalars semantics; current authority for this local support.
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.md — successor contract; 0.1 rejected as surjectivity defect.
 - PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_0_1_CORRECTION.md — defect and no-dependent-impact record.
+- PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg — exact linear injective map for real-form/subcarrier embeddings into larger representations.
+- PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.md — scope and BT01 use.
