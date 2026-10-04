@@ -68,6 +68,7 @@ Core source posture:
 | W-R05 | W-F5 | W-F6 | REVISION_IN_PROGRESS | W04e says the implications are still changing and proposes new conjugation structure. | Relation remains QU-bearing/UNKNOWN beyond the explicit overlap. |
 | W-R06 | W-F1 | W-F2 | SHARED_SUBSTRUCTURE | W01 uses quaternionic twistor geometry; W05 isolates the P1/quaternionic presentation. | W-F2 is not the full W-F1 theory and cannot replace it. |
 | W-R07 | W-F3 | W-F1 | PARTIAL_RECONSTRUCTION_CANDIDATE | W02 gives a distinguished-vector isomorphism relating asymmetric and symmetric spinor descriptions. | Applies to the spinor/vector sector, not automatically the complete unification package. |
+| W-R08 | W-F1 | W-F2 | QUATERNIONIC_PROJECTIVE_CONVENTION_TRANSFORM | W01 uses Z=s_perp s^{-1} with infinity (0,1); W05 uses q=q2^{-1}q1 with infinity [1,0]. Componentwise quaternion conjugation plus coordinate swap maps the presentations, sending Z to KAPPA(Z). | Same HP1 geometry; noncommutativity makes the transform load-bearing, so formulas may not be mixed directly. |
 
 ## Formulation-family partition — current provisional view
 
