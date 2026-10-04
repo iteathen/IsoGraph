@@ -55,3 +55,9 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_2.isg` / `.md` — successor pseudoreal source instance adding the fixed-point-free projective clause.
 - `WOIT_BT01_ORTHOGONAL_COMPLEX_STRUCTURE_FIBER_0_1.isg` / `.md` — unit-imaginary-quaternion parameterization of the CP1 fiber with square-minus-one norm-preserving complex structures.
+
+## W02 full-source expansion
+
+- `ASSERTION_BASE_A0_0_8.md` — W02 section-by-section semantic expansion adds W-A0-047–070, including negative claims and unresolved boundaries.
+- `SOURCE_TRAVERSAL_LEDGER_0_5.json` — W02 main-text traversal state and remaining equation-conservation pass.
+- `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
