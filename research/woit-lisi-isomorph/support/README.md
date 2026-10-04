@@ -33,3 +33,5 @@ Current support:
 - PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.md — representation-change semantics and BT01 limits.
 - PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.isg — finite Schema Closure for a chosen direct-sum chart, parameterized graph family, and projective incidence.
 - PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.md — exact semantics and chart/global limitations.
+- PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.isg — extensional graph-chart equivalence and induced projective-incidence invariance.
+- PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.md — chart-choice firewall and limits.
