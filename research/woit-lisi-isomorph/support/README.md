@@ -62,3 +62,6 @@ Current support:
 - PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.md — scope and exclusions.
 - PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.isg — determinant-one M2 group and adjoint-equals-inverse special-unitary subgroup schemas.
 - PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.md — algebraic SL/SU scope and topology guard.
+- PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg — exact six-basis vector-space support for four-dimensional two-form carriers.
+- PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg — finite exterior-2 presentation and signature-neutral Hodge eigenspace decomposition.
+- PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.md — W02 self-duality reduction scope.
