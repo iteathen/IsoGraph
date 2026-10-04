@@ -138,3 +138,13 @@ exact side/chirality identification:
 B06 as cross-track isomorph:
     NOT CLAIMED
 ~~~
+
+## Side-swap lemma
+
+Native support 188000–188002 proves the generic transport
+
+~~~text
+KAPPA o L_u o KAPPA = R_KAPPA(u).
+~~~
+
+For an imaginary quaternion unit, KAPPA(u)=-u. Thus the left/right choice families are algebraically connected; source-role/chirality compatibility remains open.

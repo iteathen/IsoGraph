@@ -123,3 +123,7 @@ This correction strengthens BT01 by removing an unjustified common convention ra
 ## 7. Choice-fiber consequence
 
 The compatible-complex-structure choice is now tracked separately as B06. Left- and right-multiplication choices must remain distinct until the source chirality/orientation routing is pinned. See B06_QUATERNIONIC_COMPLEX_STRUCTURE_CHOICE_FIBER_0_1.md.
+
+## 8. Exact anti-involution transport
+
+The generic side swap is native-closed as 188001. L05 explicitly supplies multiplication-order reversal under division-algebra conjugation. This removes a purely algebraic left/right obstruction but does not remove the source-role audit.
