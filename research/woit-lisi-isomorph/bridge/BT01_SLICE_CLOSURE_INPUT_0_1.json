@@ -1,7 +1,7 @@
 {
   "schema": "woit-lisi.bt01-slice-closure-input.v0.1",
   "status": "AUTHOR_SIDE_SCOPED_INPUT_NOT_FULL_TRACK",
-  "branch_head": "840f3b518d61635c755a9028ec41a8616c37e803",
+  "branch_head": "5425a875dc8dea8ddfbded24628cd887ca5726be",
   "scope": {
     "description": "Only already-traversed source assertions that materially support BT01/B03/B06. This is not the complete Woit or Lisi SSC.",
     "W_assertion_base": {
@@ -41,25 +41,30 @@
     {
       "track": "W",
       "id": "W-A0-027",
-      "status": "PARTIAL_RECONSTRUCTION",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "bridge/BT01_WOIT_GRASSMANNIAN_LOCAL_CHART_0_1.isg",
-        "support/PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.isg"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
       ],
       "schemas": [
-        "193000"
+        "201000",
+        "187300",
+        "186004"
       ],
-      "note": "Local graph-chart reconstruction exists; source-specific native 193000 instantiation and global quotient reconstruction remain."
+      "note": "T=S_R direct-sum S_L, Hom graph planes, and projective incidence are source-instantiated globally."
     },
     {
       "track": "W",
       "id": "W-A0-028",
-      "status": "PARTIAL_GLOBAL_STRUCTURE",
+      "status": "PARTIAL_GLOBAL_TOPOLOGY",
       "witness": [
-        "bridge/BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.isg"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
       ],
-      "schemas": [],
-      "note": "Affine H chart is represented; global HP1 compactification and CP3->HP1 fibration remain residual."
+      "schemas": [
+        "201001",
+        "186004",
+        "187300"
+      ],
+      "note": "HP affine-plus-infinity base, PT, projection, and CP1 fibers close algebraically; topological HP1=S4 identity remains."
     },
     {
       "track": "W",
@@ -94,14 +99,17 @@
     {
       "track": "W",
       "id": "W-A0-036",
-      "status": "PARTIAL_GLOBAL_STRUCTURE",
+      "status": "PARTIAL_GLOBAL_TOPOLOGY",
       "witness": [
-        "bridge/BT01_WOIT_GRASSMANNIAN_LOCAL_CHART_0_1.isg"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg",
+        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_1.isg"
       ],
       "schemas": [
-        "193000"
+        "193200",
+        "201000",
+        "186004"
       ],
-      "note": "Local C4/projective line reconstruction exists; global H2->HP1 quotient/fibration not yet native-closed."
+      "note": "C4=two chiral C2s and H2 source representation plus CP3->HP chart projection close; S4/topology remains."
     },
     {
       "track": "W",
@@ -167,36 +175,41 @@
     {
       "track": "W",
       "id": "W-A0-042",
-      "status": "PARTIAL_BRIDGE_WITNESS_NOT_TRACK_AUTHORITY",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "bridge/BT01_EXACT_AFFINE_SOURCE_FORMULA_WITNESS_0_1.md"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
       ],
-      "schemas": [],
-      "note": "Exact (s,Zs) source formula recorded; still requires source-track native affine-incidence instance."
+      "schemas": [
+        "187300",
+        "201001"
+      ],
+      "note": "Exact source affine graph (s,Zs) is native within T."
     },
     {
       "track": "W",
       "id": "W-A0-043",
-      "status": "OPEN_GLOBAL_RESIDUAL",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "bridge/BT01_AFFINE_QUATERNIONIC_COMMON_QUOTIENT_0_1.json"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
       ],
-      "schemas": [],
-      "note": "Point at infinity intentionally remains outside demonstrated affine common quotient."
+      "schemas": [
+        "201001"
+      ],
+      "note": "W01 infinity is distinguished HP point with fiber the S_L plane."
     },
     {
       "track": "W",
       "id": "W-A0-044",
-      "status": "PARTIAL_GLOBAL_STRUCTURE",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "bridge/BT01_LOCAL_PROJECTIVE_ALIGNMENT_CERTIFICATE_0_1.json"
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
       ],
       "schemas": [
-        "193000",
-        "193001",
-        "193002"
+        "186004",
+        "187300",
+        "201000"
       ],
-      "note": "Local projective line incidence and chart invariance are closed; global quaternionic-line fibration remains."
+      "note": "pi:PT->HP is exact projective incidence; fibers are projectivized 2C graph planes / infinity plane."
     },
     {
       "track": "W",
