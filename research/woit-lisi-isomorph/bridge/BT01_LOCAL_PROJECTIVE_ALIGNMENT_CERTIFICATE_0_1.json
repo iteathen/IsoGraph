@@ -1,0 +1,42 @@
+{
+  "schema": "woit-lisi.bt01.local-projective-alignment-certificate.v0.1",
+  "status": "SCOPED_LOCAL_ALIGNMENT_PASS_PRESEAL",
+  "pinned_inputs": {
+    "W_source_native_sha": "9118b9dfe9d0f692967dc5ed28d76d8e1d08c23a",
+    "L_coefficient_transport_sha": "2d04bad43a1b97b7b74f585f624b3e61f3297ae1",
+    "matrix_alignment_sha": "2544782096bb3513ccfa65e7b68869f50b484a96",
+    "W_grassmann_chart_sha": "4812fd9415bb1618541d6fe258039b15147b42ac"
+  },
+  "mapping": {
+    "parameter": "x_a <-> v_a",
+    "input_chiral": "S_R <-> Q_minus / psi",
+    "output_chiral": "S_L <-> Q_plus represented as tilde(chi)",
+    "action": "rho_W(x) = rho_L(v)"
+  },
+  "derived": {
+    "graph_plane_relation": "G_W maps to G_L under product representation",
+    "projective_relation": "P(G_W) maps to P(G_L)",
+    "local_incidence_disposition": "PASS"
+  },
+  "scope": {
+    "local_chart_only": true,
+    "W_global_fibration_identified": false,
+    "L_triality_identified": false,
+    "physical_roles_identified": false,
+    "NEI_same_claimed": false
+  },
+  "residuals": {
+    "W": [
+      "global HP1/Grassmannian family",
+      "CP3->HP1 fibration",
+      "pseudoreal structure",
+      "physical interpretation"
+    ],
+    "L": [
+      "Clifford square",
+      "conjugation",
+      "triality",
+      "exceptional structure"
+    ]
+  }
+}

@@ -140,3 +140,8 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_WOIT_GRASSMANNIAN_LOCAL_CHART_0_1.isg` / `.md` — local complement/graph chart connecting Hom(S_R,S_L) to two-planes and CP1 twistor incidence without inventing a global split.
 - `BT01_WOIT_LOCAL_RECONSTRUCTION_RESULT_0_1.md` — Woit Hom and twistor presentations now connected at exact mathematical reconstruction level.
+
+## Local projective alignment
+
+- `BT01_LOCAL_PROJECTIVE_ALIGNMENT_0_1.isg` / `.md` — pinned Woit/Lisi representation maps send both source actions to the same local graph plane and therefore the same projective CP1 incidence line.
+- `BT01_LOCAL_PROJECTIVE_ALIGNMENT_CERTIFICATE_0_1.json` — source SHA-pinned scoped certificate and residual boundary.
