@@ -69,3 +69,5 @@ Current support:
 - PRIMITIVE_DIMENSION_3_SCHEMA_0_1.md — scope and finite-basis semantics.
 - PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg — exact 3D su(2)-type Lie algebra with [t1,t2]=2t3 cyclically.
 - PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.md — normalization and topology guard.
+- PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.isg — Hodge-compatible symmetric bilinear functional and exact self-dual projection for chiral action identities.
+- PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.md — abstraction boundary and orthogonality consequence.

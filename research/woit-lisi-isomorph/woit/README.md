@@ -77,3 +77,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_HODGE_SPIN4_LIE_SOURCE_INSTANCE_0_1.isg` / `.md` — exact 3D self/anti-self-dual eigenspaces mapped as Lie algebras to distinct source SU(2)_R/SU(2)_L roles, completing the algebraic W-A0-063 package.
 
 - `W02_COMPLEX_SELFDUAL_SL2_SYM2_SOURCE_INSTANCE_0_1.isg` / `.md` — W02 complex self-dual forms as an exact sl(2,C)_R/traceless-End(S_R) Lie algebra and representation-equivalent Sym²(S_R) carrier.
+
+- `W02_YANG_MILLS_SELFDUAL_ACTION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact Yang-Mills vs self-dual action identity with the scaled Tr(F∧F) residual explicit; global topological invariance remains a separate full-treatment obligation.
