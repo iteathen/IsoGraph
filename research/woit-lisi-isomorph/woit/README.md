@@ -44,3 +44,5 @@ W01/W02 are frozen papers. W04a–W04e are separately dated 2026 sources. Later 
 ## Firewall
 
 No Lisi fact, notation, triality construction, E8 embedding, or source-native Woit citation found in Lisi may be used to close a Woit item before this track is sealed.
+
+- `WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg` / `.md` — exact H basis presentation, corrected R->C scalar embedding, restriction of scalars, and native H->Hom(S_R,S_L) basis embedding.
