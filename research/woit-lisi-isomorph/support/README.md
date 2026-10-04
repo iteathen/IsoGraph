@@ -27,3 +27,5 @@ Current support:
 - PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.md — source-mapping limits and BT01 use.
 - PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.isg — composition-algebra unit-norm locus and explicit norm/product-preserving automorphism schema for B05.
 - PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.md — B05 abstraction levels and evidence limits.
+- PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg — associative algebra anti-involution and exact left/right multiplication side-swap lemma for B06.
+- PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.md — role-sensitive interpretation and limits.
