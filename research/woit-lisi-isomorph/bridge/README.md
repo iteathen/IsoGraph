@@ -115,3 +115,7 @@ These can be tested as refinements only if the weaker bridge survives.
 ## Finite-dimension support
 
 - `BT01_DIMENSION_REALITY_CHECK_0_2.md` — successor dimension audit using native finite-basis schemas 187600/187601; source instantiation remains open.
+
+## B05 lower common quotient
+
+- `B05_UNIT_COMPOSITION_COMMON_CORE_0_1.md` — both sources reach the unit-octonion/composition neighborhood, but Woit's theory role is explicitly speculative; shared triality/generation mechanism is not established.

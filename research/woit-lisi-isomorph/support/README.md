@@ -25,3 +25,5 @@ Current support:
 - PRIMITIVE_PAIRED_COMPLEX_STRUCTURE_ACTION_SCHEMA_0_1.md — convention-safe interpretation and exclusions.
 - PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg — exact finite-basis schemas for complex/vector dimensions 2 and 4 via spanning + linear independence.
 - PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.md — source-mapping limits and BT01 use.
+- PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.isg — composition-algebra unit-norm locus and explicit norm/product-preserving automorphism schema for B05.
+- PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.md — B05 abstraction levels and evidence limits.

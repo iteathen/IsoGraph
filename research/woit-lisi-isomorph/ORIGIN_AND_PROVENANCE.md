@@ -90,3 +90,12 @@ Source-level quaternionic convention checking showed that the bridge must not id
 The campaign therefore lowered BT01 to the invariant A_v J_minus = J_plus A_v with J_minus^2=J_plus^2=-1. The complex-linear/projective presentation is derived only after a source-authorized compatible complex structure is fixed.
 
 Artifact: `bridge/BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md`.
+
+## WL-FINDING-004 — unit-octonion lower common quotient with asymmetric theory role
+
+**Category:** RESEARCH_FINDING with EXTERNAL_ANTECEDENT support.  
+**Recorded:** 2026-10-03.
+
+Full Woit source traversal exposed an independent octonionic bridge neighborhood: W01 explicitly identifies S7 with the unit octonions while discussing the unresolved generation problem, whereas L05 develops the octonion composition/Clifford/triality structure in detail. The lowest common quotient is the composition-algebra/unit-norm-locus structure; shared Spin(8) triality or generation mechanism is not yet established.
+
+The evidence-state asymmetry is load-bearing: Woit's use is speculative/open-problem material, while Lisi's algebra is developed and his generation interpretation is proposed.
