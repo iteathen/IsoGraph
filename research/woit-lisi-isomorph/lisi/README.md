@@ -44,3 +44,8 @@ L01–L06 remain separate source formulations. L06 explicitly reframes a problem
 ## Firewall
 
 No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpretation, or proposed bridge may close a Lisi item before sealing.
+
+## BT01 source-native bridge support
+
+- `LISI_BT01_SOURCE_INSTANCE_0_1.isg` — direct real typed action instance.
+- `LISI_BT01_QUATERNION_COEFFICIENT_TRANSPORT_0_1.isg` — preserves the source tilde convention while transporting vector/chiral roles to quaternion multiplication and the neutral 187500 intertwiner package.
