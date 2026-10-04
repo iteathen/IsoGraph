@@ -81,3 +81,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_YANG_MILLS_SELFDUAL_ACTION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact Yang-Mills vs self-dual action identity with the scaled Tr(F∧F) residual explicit; global topological invariance remains a separate full-treatment obligation.
 
 - `W02_CURVATURE_HODGE_BLOCK_SOURCE_INSTANCE_0_1.isg` / `.md` — exact six-dimensional Hodge-sector curvature block semantics; Einstein condition is vanishing off-diagonal blocks, while frame/connection reconstruction remains open.
+
+- `W02_CHIRAL_GR_ACTION_VARIATION_INTERFACE_0_1.isg` / `.md` — preserves the chiral GR action and its connection/tetrad first-variation roles while leaving tetrad, spin-connection, curvature, torsion-free, and Einstein semantics open for primitive expansion.

@@ -73,3 +73,5 @@ Current support:
 - PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.md — abstraction boundary and orthogonality consequence.
 - PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.isg — parameterized linear endomorphisms of a Hodge split with exact vanishing-off-diagonal/sector-preservation predicate.
 - PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.md — chiral-GR abstraction boundary.
+- PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.isg — bivariate action plus explicit first-variation/stationarity interface for source variational claims.
+- PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md — calculus boundary and limitations.
