@@ -61,3 +61,5 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `ASSERTION_BASE_A0_0_8.md` — W02 section-by-section semantic expansion adds W-A0-047–070, including negative claims and unresolved boundaries.
 - `SOURCE_TRAVERSAL_LEDGER_0_5.json` — W02 main-text traversal state and remaining equation-conservation pass.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
+
+- `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_1.isg` / `.md` — W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation.
