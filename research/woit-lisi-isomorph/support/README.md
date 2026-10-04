@@ -31,3 +31,5 @@ Current support:
 - PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.md — role-sensitive interpretation and limits.
 - PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg — explicit bijections and exact action-incidence transport between source and alternate presentations.
 - PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.md — representation-change semantics and BT01 limits.
+- PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.isg — finite Schema Closure for a chosen direct-sum chart, parameterized graph family, and projective incidence.
+- PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.md — exact semantics and chart/global limitations.

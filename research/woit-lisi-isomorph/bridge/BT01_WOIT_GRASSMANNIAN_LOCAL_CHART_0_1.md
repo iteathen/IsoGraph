@@ -117,3 +117,9 @@ The bridge must therefore compare the graph/incidence structure modulo chart cho
 - connect Lisi's transported 187500 action to the same projective chart;
 - test chart-choice invariance and residuals;
 - reconstruct the global HP1 family only after the local correspondence is stable.
+
+## Primitive/schema closure update
+
+The finite local-chart semantics are now schema-closed by `../support/PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.isg` as 193000.
+
+The Woit artifact still needs a source-specific native instantiation of 193000, but the local graph/projective construction itself no longer terminates at the high-level phrase "Grassmannian chart."
