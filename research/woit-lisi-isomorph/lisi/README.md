@@ -49,3 +49,5 @@ No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpreta
 
 - `LISI_BT01_SOURCE_INSTANCE_0_1.isg` — direct real typed action instance.
 - `LISI_BT01_QUATERNION_COEFFICIENT_TRANSPORT_0_1.isg` — preserves the source tilde convention while transporting vector/chiral roles to quaternion multiplication and the neutral 187500 intertwiner package.
+
+- `LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_1.isg` / `.md` — Lisi-local complex field, finite M2(C) matrix-unit presentation, explicit Pauli elements, and multiplicative H→M2(C) source representation.

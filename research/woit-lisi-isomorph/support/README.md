@@ -52,3 +52,5 @@ Current support:
 - PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.md — scope and BT01 use.
 - PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.isg — bridge-safe field isomorphism, semilinear bijection, and involutive-algebra isomorphism support.
 - PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.md — source-separation and analytic-scope guards.
+- PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg — exact finite M2(C)-style algebra presentation via matrix-unit basis and complete multiplication table.
+- PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.md — closure scope and exclusions.
