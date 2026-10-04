@@ -2,7 +2,7 @@
   "schema": "woit-lisi.bt01-slice-closure-ledger.v0.1",
   "generated_from": "BT01_SLICE_CLOSURE_INPUT_0_1.json",
   "generated_at_research_checkpoint": "2026-10-03",
-  "source_branch_head": "5425a875dc8dea8ddfbded24628cd887ca5726be",
+  "source_branch_head": "04b52fb3afa9ab031b0dcf9184e77698aa1e5680",
   "scope": {
     "description": "Only already-traversed source assertions that materially support BT01/B03/B06. This is not the complete Woit or Lisi SSC.",
     "W_assertion_base": {
@@ -27,9 +27,9 @@
   },
   "summary": {
     "W": {
-      "closed": 12,
-      "partial": 3,
-      "open": 1,
+      "closed": 14,
+      "partial": 2,
+      "open": 0,
       "quarantined": 0,
       "other": 0,
       "total": 16
@@ -106,9 +106,9 @@
     {
       "track": "W",
       "id": "W-A0-035",
-      "status": "PARTIAL_SOURCE_INSTANCE",
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
       "witness": [
-        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_1.isg"
+        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_2.isg"
       ],
       "schemas": [
         "183001",
@@ -117,8 +117,8 @@
         "187401",
         "187402"
       ],
-      "note": "Source J is pinned by left quaternion-j multiplication; J^2=-1 and projective involution close. Fixed-point-free CP1 clause remains open.",
-      "category": "partial"
+      "note": "H<->C2, J^2=-1, projective involution, and source fixed-point-free projective clause are native.",
+      "category": "closed"
     },
     {
       "track": "W",
@@ -139,11 +139,16 @@
     {
       "track": "W",
       "id": "W-A0-037",
-      "status": "OPEN_NATIVE_SOURCE_INSTANCE",
-      "witness": [],
-      "schemas": [],
-      "note": "CP1 family as orthogonal complex structures on R4=H not yet source-instantiated natively.",
-      "category": "open"
+      "status": "CLOSED_SCHEMA_SOURCE_INSTANCE",
+      "witness": [
+        "woit/WOIT_BT01_ORTHOGONAL_COMPLEX_STRUCTURE_FIBER_0_1.isg"
+      ],
+      "schemas": [
+        "188100",
+        "182002"
+      ],
+      "note": "Unit imaginary quaternions parameterize CP1; left multiplication squares to -1 and preserves quaternion norm.",
+      "category": "closed"
     },
     {
       "track": "W",
@@ -464,6 +469,6 @@
   "qualification": {
     "full_track_closure_claimed": false,
     "bt01_slice_author_audit": "PARTIAL_PASS",
-    "reason": "Lisi BT01 slice is closed; Woit residual topology/complex-structure items remain, and complete source traversal has not occurred."
+    "reason": "Both algebraic bridge slices are closed except Woit assertions that additionally require topological HP1=S4 semantics; complete source traversal has not occurred."
   }
 }

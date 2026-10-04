@@ -52,3 +52,6 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `WOIT_BT01_SPIN4_UNIT_QUATERNION_ACTION_0_1.isg` / `.md` — unit-quaternion presentation of the two Spin(4) factor roles and exact source action x→g_L x g_R^{-1}.
 
 - `WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg` / `.md` — source-native T=S_R⊕S_L, affine graph planes plus infinity plane, PT projective quotient, HP affine-plus-infinity base, and exact twistor projection with 2C projective fibers.
+
+- `WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_2.isg` / `.md` — successor pseudoreal source instance adding the fixed-point-free projective clause.
+- `WOIT_BT01_ORTHOGONAL_COMPLEX_STRUCTURE_FIBER_0_1.isg` / `.md` — unit-imaginary-quaternion parameterization of the CP1 fiber with square-minus-one norm-preserving complex structures.
