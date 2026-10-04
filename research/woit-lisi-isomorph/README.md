@@ -1,25 +1,38 @@
-# Woit–Lisi Structural Isomorph Search
+# Woit–Lisi IsoGraph Unification Synthesis
 
 **Current research dossier:** this README
 
-**Status:** ACTIVE RESEARCH — FULL ISOGRAPH TREATMENT OF BOTH TRACKS, PRE-COMPARISON  
+**Status:** ACTIVE RESEARCH — CONSTRUCTIVE UNIFICATION SYNTHESIS + FULL INDEPENDENT SOURCE TREATMENTS  
 **Started:** 2026-10-03  
 **Branch:** `research/woit-lisi-isomorph-20261003`  
 **Base revision:** `f3217af9a4fd50e838db39e249e93f39380e0e4a`  
 **Semantic stack:** current qualified IsoGraph family routed by `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md` and `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`
 
-## Research question
+## Primary objective
 
-After independently rendering Peter Woit's twistor/unification program and A. Garrett Lisi's exceptional/Clifford unification program to source-faithful primitive IsoGraph structure, what is their **maximal common structural quotient**?
+The project target changed on 2026-10-04.
 
-The second target question is whether any surviving common quotient:
+The historical objective was to locate and characterize the strongest source-faithful bridge/common quotient between the Woit and Lisi programs.
 
-1. depends essentially on (E_8);
-2. depends only on a lower Clifford/spinorial substrate;
-3. survives differences in physical interpretation, real form, chirality, conjugation, locality, and gauge role; or
-4. disappears once source-faithful distinctions are preserved.
+The current objective is **constructive unification**:
 
-No positive correspondence is assumed.
+> Build the smallest source-faithful candidate structure that can reconstruct selected Woit and Lisi formulations through one shared kernel, while preserving incompatible residuals and minimizing new synthesis axioms.
+
+The frozen BT01 algebraic/projective result is now an input interface, not the endpoint.
+
+See `UNIFICATION_TARGET_REVISION_0_1.md` and `unification/README.md`.
+
+### Historical bridge question
+
+The original maximal-common-quotient question remains preserved as the discovery path that produced the current kernel. Its artifacts remain evidence and falsifier infrastructure.
+
+### Unification questions
+
+1. Can Woit's global twistor/projective geometry and Lisi's chiral Clifford/triality structure be conservatively amalgamated over the shared quaternionic/chiral kernel?
+2. Can Woit's self-dual Yang–Mills/chiral-GR dynamics and Lisi's gauge/gravity/Higgs or generalized-Cartan dynamics be reconstructed from one connection/action architecture?
+3. Does the octonionic/triality layer extend the quaternionic synthesis without losing the lower reconstruction?
+4. Is an exceptional E8 realization necessary, optional, or obstructed after a lower unified structure exists?
+5. What genuinely new synthesis axioms, if any, are required?
 
 ## Full-treatment acceptance criterion
 
@@ -70,6 +83,14 @@ Render only frozen Woit sources. No Lisi terminology, proposed bridge, (E_8) tar
 ### Track L — Lisi only
 Render only frozen Lisi sources. No Woit terminology, twistor-target mapping, or anticipated correspondence may be used to choose primitives, factorization, or closure.
 
+### Unification synthesis workbench
+
+The project-generated synthesis lives under `unification/`.
+
+It may consume frozen source evidence and frozen common-kernel evidence, but it cannot feed hypotheses back into Track W or Track L.
+
+Exploratory synthesis may proceed before the source tracks seal. Formal promotion waits for both independent source treatments to seal and for post-seal validation.
+
 ### Hypothesis quarantine
 The motivating bridge supplied at project initiation is preserved separately in `HYPOTHESIS_QUARANTINE_0_1.md`. It is **test material, not source authority**. It must not be fed into either source rendering before those renderings are sealed.
 
@@ -117,8 +138,10 @@ Campaign initialization is complete and the first source/formulation pass is act
 - working 0.2 Source Semantic Censuses are open for both tracks;
 - provisional source-side formulation maps now exist independently for Woit and Lisi;
 - a source-native Lisi reference to a Euclidean twistor incidence relation is preserved in a cross-reference quarantine and is not used to construct either track;
-- no cross-track structural match has yet been admitted;
-- no theorem, physical equivalence, unification claim, or E8 viability claim is made.
+- the BT01 algebraic/projective common kernel is frozen as a scoped pre-seal research result;
+- the project target has shifted from bridge discovery to constructive unification;
+- exploratory synthesis candidates are now opened under `unification/`;
+- no qualified physical unification, program equivalence, or E8 viability claim is made.
 
 Strict Core-0.21 primitive-closure status is **NOT YET CLAIMED**. The working censuses are intentionally incomplete until the selected sources have been fully traversed.
 
@@ -148,7 +171,7 @@ A known representation-theoretic criticism of (E_8) unification, Distler–Garib
 
 ## Required execution order
 
-`source freeze 0.2 -> complete full W treatment -> complete full L treatment -> independently seal both -> unquarantine source-native cross references -> family-to-family comparison -> cross-track NEI/DTS/DP -> falsifiers -> obstruction audit -> reassessment`
+`complete W and L source treatments in parallel -> maintain frozen shared kernel U0 -> construct exploratory conservative amalgams U1+ without feedback into source tracks -> independently seal W and L -> post-seal NEI/DTS/DP over the synthesis -> reconstruction/falsifiers -> obstruction audit -> promote, branch, or reject`
 
 Any change to source scope, primitive kernel, governing authority, QU state, or IA inference profile reopens the affected closure under Core 0.21.
 
@@ -159,6 +182,8 @@ Any change to source scope, primitive kernel, governing authority, QU state, or 
 **Campaign formalization:** AI assistant — AGENT_ASSISTED_FORMALIZATION, under Joshua Oshiro's direction.
 
 **Formulation-family search principle:** Joshua Oshiro — HUMAN_ORIGINATED_IDEA. On 2026-10-03 Joshua directed that the campaign identify multiple expressions of the same idea within each author's work and determine which source-faithful representatives provide the strongest cross-domain bridge, rather than assuming one formulation per author. The agent formalized this into the formulation-family protocol.
+
+**Current synthesis direction:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION. On 2026-10-04 Joshua changed the primary target from finding a bridge to constructing a unified formulation. The agent formalized that direction as a minimal conservative-amalgam synthesis protocol; the synthesis itself is project-generated and is not attributed to either source author.
 
 **Earliest evidence currently located:** preserved dated project conversation on 2026-10-03. This README is the first public repository record created for the campaign; it does not backdate that public record.
 
@@ -187,9 +212,9 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 
 ## Open questions
 
-- What common quotient, if any, survives exact source-semantic conservation?
-- Is any surviving quotient fundamentally Clifford/spinorial rather than exceptional-(E_8)?
-- Do the two programs use superficially similar chirality/conjugation structures in genuinely different semantic roles?
-- Does DTS expose a shared transition pattern for real-form/signature/chirality selection?
-- Which proposed correspondences fail under dimension, reality-condition, representation, or physical-role accounting?
-- Does the Distler–Garibaldi obstruction attach to the common quotient or only to a stronger (E_8)-specific realization?
+- What is the smallest U1 that attaches Woit's global twistor geometry and Lisi's chiral Clifford/triality residuals while reconstructing U0?
+- Which chart/real-structure transition laws are required for a global fiberwise extension?
+- Can W02 chiral dynamics and Lisi gauge/Cartan dynamics be represented as projections of one source-conservative connection/action structure?
+- Does the octonionic layer extend U1 naturally or introduce a genuine obstruction?
+- Does E8 add necessary structure after U1/U2, or only a stronger realization of structure already present?
+- Which synthesis relations are inherited, forced by U0, genuinely new, or impossible?
