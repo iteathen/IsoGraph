@@ -60,3 +60,5 @@ Current support:
 - PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.md — scope and topology guard.
 - PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg — exact M2 coordinates, determinant, conjugate-transpose, and Hermitian predicate over the finite matrix-unit algebra.
 - PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.md — scope and exclusions.
+- PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.isg — determinant-one M2 group and adjoint-equals-inverse special-unitary subgroup schemas.
+- PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.md — algebraic SL/SU scope and topology guard.
