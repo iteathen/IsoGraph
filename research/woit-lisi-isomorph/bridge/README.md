@@ -111,3 +111,7 @@ These can be tested as refinements only if the weaker bridge survives.
 
 - `BT01_QUATERNIONIC_SIDE_CONVENTION_AUDIT_0_1.md` — rejects the overly coarse assumption that raw quaternion multiplication is automatically complex-linear in one fixed convention; pins the representation/intertwiner obligation.
 - `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_3.md` — current lowest convention-safe bridge frontier, based on paired square-minus-one structures and an intertwining action.
+
+## Finite-dimension support
+
+- `BT01_DIMENSION_REALITY_CHECK_0_2.md` — successor dimension audit using native finite-basis schemas 187600/187601; source instantiation remains open.
