@@ -68,3 +68,14 @@ During the first bridge-signature construction, the strongest candidate shifted 
 The project-specific finding is not that this mathematical relationship was newly discovered; the external source already states it. The finding is that, under the IsoGraph formulation-family and isomorph-exposure method, this cross-presentation transform is currently the strongest candidate common quotient and should be tested below E8 rather than beginning from the full exceptional embedding.
 
 Current artifact: `bridge/B01_B02_REPRESENTATION_TRANSFORM_CANDIDATE_0_1.md`.
+
+## WL-FINDING-002 — graph-projectivization bridge invariant
+
+**Category:** RESEARCH_FINDING / agent-assisted formalization of standard mathematics.  
+**Recorded:** 2026-10-03.
+
+The bridge campaign isolated a lower invariant beneath the named quaternionic/twistor and Clifford presentations: a typed bilinear action V x S_minus -> S_plus defines, for each v, the graph of a linear map; quotienting its nonzero chiral pairs by simultaneous scalar rescaling produces a parameterized projective incidence family.
+
+This standard graph/projectivization fact is not claimed as new mathematics. The research finding is that it is the current **isomorph-exposure frontier** for the Woit–Lisi comparison: Woit independently supplies the Hom(S_R,S_L) action and projective twistor geometry, while Lisi independently supplies the vector/chiral-spinor multiplication and explicitly identifies its quaternionic case with Euclidean twistor incidence.
+
+Artifact: `bridge/BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md`.

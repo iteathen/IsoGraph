@@ -89,3 +89,8 @@ These can be tested as refinements only if the weaker bridge survives.
 - `B01_SOURCE_LOCAL_TYPED_ACTION_0_1.md` — W01 independently supplies V=Hom(S_R,S_L), establishing the weak typed chiral-action quotient on the Woit side; L05 supplies the corresponding vector/chiral-spinor action.
 - `B05_OCTONIONIC_S7_SPIN8_GENERATION_SURFACE_0_1.md` — new higher bridge candidate exposed by W01's speculative S7/unit-octonion/Spin(8)/G2 generation discussion.
 - `HYPOTHESIS_STATUS_UPDATE_0_1.md` — confirms Woit-side SU(4)=Spin(6) exists mathematically while preserving the unresolved physical-role question.
+
+## Graph-projectivization result
+
+- `BT01_GRAPH_PROJECTIVIZATION_COMMON_CORE_0_1.md` — derives the strongest current neutral common core: a typed chiral action induces a parameterized projective family by taking graphs and quotienting nonzero pairs by simultaneous scaling.
+- `BT01_SOURCE_PROJECTION_PACKET_0_1.json` — explicit pre-seal Woit/Lisi role maps into neutral IDs 187200–187208.

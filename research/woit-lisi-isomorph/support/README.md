@@ -17,3 +17,5 @@ Current support:
 - PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.md — closure audit and dimension/real-form limitations.
 - PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg — typed bilinear V x S_minus -> S_plus action, simultaneous projective pair equivalence, and homogeneous incidence schema for B01/BT01.
 - PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.md — derivation scope and projective-well-definedness limits.
+- PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg — exact quotient of nonzero chiral pairs by simultaneous scaling and parameterized projective incidence induced by a typed action.
+- PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.md — graph/projectivization interpretation and source-specific dimension limits.
