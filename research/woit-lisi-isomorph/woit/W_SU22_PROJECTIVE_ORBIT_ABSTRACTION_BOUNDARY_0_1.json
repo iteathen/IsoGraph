@@ -1,0 +1,30 @@
+{
+  "schema": "woit.su22-projective-orbit-abstraction-boundary.v0.1",
+  "status": "FROZEN_FOR_W007_W014_W069_W093",
+  "date": "2026-10-05",
+  "source_units": [
+    "W01",
+    "W04b",
+    "W04d"
+  ],
+  "represented_semantics": {
+    "twistor_carrier": "exact T=C4 and PT=P(T)",
+    "hermitian_form": "exact sesquilinear Hermitian form with basis signature (+,+,-,-)",
+    "source_group_role": "exact abstract group with a complex-linear representation on T",
+    "group_metric_condition": "representation preserves the exact Hermitian form",
+    "projective_action": "exact action induced from vector action",
+    "positive_negative_null_strata": "defined by the sign of H(t,t) through the exact ordered-real embedding",
+    "orbit_semantics": "each sign stratum is invariant and transitive under the represented group action",
+    "compactified_minkowski_points": "exact complex two-planes in T whose vectors are all Hermitian-null; their projective lines lie in the null PT stratum"
+  },
+  "intentionally_abstracted_non_load_bearing_semantics": [
+    "matrix-coordinate presentation of every SU(2,2) element",
+    "determinant-one equation as a separate matrix polynomial",
+    "Lie-group topology/smoothness",
+    "the global double-cover construction identifying Spin(4,2) with SU(2,2)",
+    "celestial-sphere/light-ray differential geometry"
+  ],
+  "invalidation_rule": "If a later frozen W obligation uses determinant, Lie-group topology, the explicit Spin double cover, or differential geometry of the light-ray/celestial-sphere role as a premise, this boundary must be extended before that obligation can close.",
+  "rationale": "For W007/W014/W069/W093, the load-bearing source behavior is the Hermitian-preserving projective action and its positive/negative/null orbit decomposition, plus totally-null two-planes. These are represented directly in primitive quantified form.",
+  "cross_author_semantics_available": false
+}
