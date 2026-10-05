@@ -1,0 +1,30 @@
+{
+  "schema": "woit.w084-os-direction-symmetry-break-summary.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-084",
+  "frozen_body": "The W04e reconstruction requires choosing an imaginary-time half-space/direction and reflection, so the physical-state reconstruction breaks Euclidean SO(4) even when the underlying Euclidean correlation data are SO(4)-covariant.",
+  "source": "W04e notes",
+  "support_packets": [
+    "W054_OS_DIRECTION_SYMMETRY_BREAK_CLOSURE_PACKET_0_1.json",
+    "W083_OS_PHYSICAL_STATE_RECONSTRUCTION_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "source_summary_of": [
+      "W-SSC-054",
+      "W-SSC-083"
+    ]
+  },
+  "guards": [
+    "No new group or state-space semantics are added beyond the exact OS support.",
+    "No cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
