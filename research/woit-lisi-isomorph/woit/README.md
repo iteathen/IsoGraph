@@ -24,7 +24,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
 | primitive math support complete | IN PROGRESS |
 | native .isg bundle | PASS — authoritative routing compilation 0.2; semantic closure in progress |
-| graph-derived closure ledger | IN PROGRESS — 0.11: 8 CLOSED_SCHEMA / 143 incomplete |
+| graph-derived closure ledger | IN PROGRESS — 0.14: 10 CLOSED_SCHEMA / 141 incomplete |
 | recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
 | NEI pass | NOT YET |
 | DTS pass | PARTIAL / PROVISIONAL |
@@ -63,7 +63,7 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `SOURCE_TRAVERSAL_LEDGER_0_9.json` / `SOURCE_ASSERTION_CONSERVATION_0_1.md` — source traversal and assertion-conservation PASS.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
-- `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
+- `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_4.isg` / `.md` — current corrected, interface-preserving W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, det=-Q_M relation, and preserved downstream 204xxx meanings. Versions 0.1–0.3 are historical/rejected as current closure support.
 
 - `W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_1.isg` / `.md` — determinant-one complex factor roles, conventional X→g_LXg_R^{-1} action, conjugate-diagonal Lorentz real form, Hermitian Minkowski action, and independent SU(2)_L×SU(2)_R Euclidean factor roles.
 
@@ -94,8 +94,8 @@ The next active task is authoritative native W compilation and primitive/schema 
 
 ## Current primitive-closure checkpoint
 
-- `CORE021_CLOSURE_LEDGER_0_11.json`: 8 frozen census obligations CLOSED_SCHEMA, 143 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
-- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098, W-SSC-128, W-SSC-131.
+- `CORE021_CLOSURE_LEDGER_0_14.json`: 10 frozen census obligations CLOSED_SCHEMA, 141 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
+- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098, W-SSC-128, W-SSC-131, W-SSC-144, W-SSC-145.
 - `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
 - No Lisi semantics are available to the W closure process.
 
