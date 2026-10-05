@@ -1,0 +1,70 @@
+{
+  "schema": "woit.pre-dp-gate.v0.3",
+  "status": "ENFORCED_PROCESS_REGROUNDED",
+  "date": "2026-10-05",
+  "predecessor": "PRE_DP_GATE_0_2.json",
+  "scope": "W independent source track only",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "current_native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_3.isg",
+  "current_native_manifest": "WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_3.json",
+  "current_core021_ledger": "CORE021_CLOSURE_LEDGER_0_49.json",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "current_closed_census_items": 1,
+  "total_census_items": 151,
+  "current_closed_ids": [
+    "W-SSC-020"
+  ],
+  "ordered_stages": [
+    {
+      "stage": 1,
+      "id": "PRIMITIVE_SCHEMA_CLOSURE",
+      "required": true,
+      "state": "IN_PROGRESS_1_OF_151_ACCEPTED_AFTER_REGROUNDING",
+      "admission_rule": "DERIVE_FROM_FROZEN_SSC_PLUS_AUTHORITATIVE_NATIVE_GRAPH_AND_QUALIFIED_AUTHORITY"
+    },
+    {
+      "stage": 2,
+      "id": "CORE021_LEDGER_QUALIFICATION",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_1"
+    },
+    {
+      "stage": 3,
+      "id": "RECURSIVE_IMPLICIT_ASSERTIONS",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_2",
+      "profile": "IMPLICIT_ASSERTION_PROFILE_0_1.md",
+      "working_corpus": "IMPLICIT_ASSERTIONS_WORKING_0_3.md"
+    },
+    {
+      "stage": 4,
+      "id": "NEI",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_3"
+    },
+    {
+      "stage": 5,
+      "id": "DTS",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_4"
+    },
+    {
+      "stage": 6,
+      "id": "DISCOVERY_PROTOCOL",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_5"
+    }
+  ],
+  "current_input_tuple": {
+    "primitive_kernel_sha256": "0c22c4737e5ba21d132a24d27b3a0c1b86636e1df3d05595056164dee3fe5560",
+    "source_semantic_census_sha256": "014ba3612f18c95d237998241c447f758b8c25e1f543baea1b87e9dd4f18cfc9",
+    "semantic_scope_sha256": "c1d09649c78a763d217c4fe4d1b5285b5ae81b3e4cc2639ee71f3a8a5777443c",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "07c7ee97472f8f3afb67ac3ed5e8af8bce8d9020886e607d1ab5fbf6dfe9cdbe",
+    "inference_profile_sha256": "33764c638b11d2e5374ff54d79ea79faf7352c433e44f19273e8cd69d6decac0"
+  },
+  "current_ia_fixed_point": null,
+  "cross_author_premises_forbidden": true,
+  "lisi_semantics_available": false,
+  "dp_allowed": false
+}
