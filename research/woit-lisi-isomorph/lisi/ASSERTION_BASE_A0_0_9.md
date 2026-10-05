@@ -1,0 +1,127 @@
+# Lisi explicit assertion base A0 0.9
+
+**Status:** SOURCE-ASSERTION WORKING BASE — INCOMPLETE UNTIL SOURCE TRAVERSAL COMPLETES
+**Predecessor:** ASSERTION_BASE_A0_0_8.md
+**Corpus:** ../SOURCE_CORPUS_FREEZE_0_2.md
+
+This is not the complete SSC. It gives stable IDs to source assertions already exposed by the current traversal. New source obligations may be added in successor revisions; none of these may be silently deleted.
+
+| ID | Assertion | Source | Evidence disposition |
+|---|---|---|---|
+| L-A0-001 | L01 unifies Standard Model and gravitational fields as parts of an E8 principal-bundle connection/superconnection. | L01 | SOURCE_ASSERTED |
+| L-A0-002 | L01 uses a noncompact E8 real form with substructure broken into strong, electroweak, gravitational, frame-Higgs, and fermionic sectors. | L01 | SOURCE_ASSERTED |
+| L-A0-003 | L01 relates three fermion generations by triality. | L01 | SOURCE_ASSERTED |
+| L-A0-004 | L01 describes dynamics through curvature/action over a four-dimensional base manifold. | L01 | SOURCE_ASSERTED |
+| L-A0-005 | L02 proposes a fully g-invariant gauge theory whose symmetry breaks to Lorentz, Yang-Mills, and complement sectors. | L02 | SOURCE_ASSERTED |
+| L-A0-006 | L02 begins from an extended Plebanski-type action and recovers gravity, Yang-Mills, and Higgs sectors. | L02 | SOURCE_ASSERTED |
+| L-A0-007 | In L02, off-diagonal connection components factor as gravitational frame times an internal Higgs vector when the YM algebra is a spin algebra. | L02 | SOURCE_ASSERTED |
+| L-A0-008 | L02's low-energy couplings are functions of the initial action parameter and the Higgs vacuum expectation value. | L02 | SOURCE_ASSERTED |
+| L-A0-009 | L03 represents gravity and Standard Model gauge action on one fermion generation with real matrices matching a Spin(11,3) subalgebra action on a Majorana-Weyl spinor. | L03 | SOURCE_ASSERTED |
+| L-A0-010 | L03 embeds that structure in the quaternionic real form of E8. | L03 | SOURCE_ASSERTED |
+| L-A0-011 | L06 says the original triality-generation suggestion did not make complete geometric sense in the E8 principal-bundle model. | L06 | SOURCE_ASSERTED_CORRECTION |
+| L-A0-012 | L06 reframes the geometry as a deforming Lie group with embedded four-dimensional spacetime and generalized Cartan connection. | L06 | SOURCE_ASSERTED |
+| L-A0-013 | L06 retains Spin(11,3)/Spin(12,4)/E8 algebraic material while changing the geometry owning spacetime/frame semantics. | L06 | SOURCE_ASSERTED |
+| L-A0-014 | L06 uses three triality-related spacetime sheaves/subgroups as a proposed generation structure. | L06 | SOURCE_ASSERTED_PROPOSAL |
+| L-A0-015 | L04 extends C, P, T transformations of fermion states with an order-three triality transformation between generations. | L04 | SOURCE_ASSERTED |
+| L-A0-016 | L05 constructs Clifford algebras/spinor structures from division and split-composition algebra multiplication data. | L05 | SOURCE_ASSERTED |
+| L-A0-017 | L05 states a structural isomorphism between vectors, negative-chiral spinors, positive-chiral spinors, and corresponding division-algebra element sets in dimensions 2, 4, or 8. | L05 | SOURCE_ASSERTED |
+| L-A0-018 | L05 defines a real cyclic trilinear triality form from division-algebra multiplication and allows the product to be recovered from the triality form. | L05 | SOURCE_ASSERTED |
+| L-A0-019 | L05 uses generalized reflections and triality automorphisms to transform/cycle vector and chiral-spinor roles. | L05 | SOURCE_ASSERTED |
+| L-A0-020 | L05 builds triality Lie algebras and combines them into exceptional magic-square Lie algebras. | L05 | SOURCE_ASSERTED |
+| L-A0-021 | L05 uses triality eigenspaces and Vinberg theta-algebra structure in generation-oriented model-building proposals. | L05 | SOURCE_ASSERTED_PROPOSAL |
+| L-A0-022 | L05 identifies the quaternionic case of one vector/chiral-spinor relation with a Euclidean twistor incidence relation. | L05 | SOURCE_ASSERTED_XREF_QUARANTINED |
+| L-A0-023 | The citation attached to that twistor-incidence statement is Woit's Euclidean Twistor Unification; target semantics remain unavailable to Track L before sealing. | L05 | SOURCE_XREF_QUARANTINED |
+| L-A0-024 | L05 explicitly presents multiple mathematical starting points as mutually illuminating representations of the scaffold. | L05 | SOURCE_ASSERTED |
+| L-A0-025 | L06 and L05 do not retroactively make the original L01 physical assignments exact or complete; revisions/residuals must remain explicit. | L01/L06/L05 | RENDERING_GUARD |
+| L-A0-026 | Known incompleteness/phenomenological gaps in the Lisi source family remain source-semantic obligations rather than material to omit. | L01/L06 | SOURCE_ASSERTED_LIMITATION |
+
+| L-A0-027 | L05 defines division/composition algebra conjugation and uses it to construct the source metric/norm structure. | L05 §2 | SOURCE_ASSERTED |
+| L-A0-028 | L05 identifies real chiral Clifford representative matrices numerically with division-algebra multiplication-table coefficients, with explicit index/conjugation conventions. | L05 §2 | SOURCE_ASSERTED |
+| L-A0-029 | L05 identifies n-dimensional vectors, negative real chiral spinors, and positive real chiral spinors with three division-algebra element carriers and relates them by division/Clifford multiplication. | L05 §2 | SOURCE_ASSERTED |
+| L-A0-030 | In the quaternionic case L05 gives an explicit Cl(0,4) chiral representative built from the quaternion multiplication table. | L05 §4 region | SOURCE_ASSERTED |
+| L-A0-031 | L05 gives the dual relation psi = conjugate(v) times the represented positive-chiral division element and explicitly identifies the quaternionic case as Euclidean twistor incidence. | L05 §3 | SOURCE_ASSERTED_XREF_QUARANTINED |
+| L-A0-032 | The conjugation/tilde convention on the positive-chiral division representative is load-bearing for any source-faithful mapping to a complex twistor pair. | L05 §2-§3 | RENDERING_GUARD_FROM_SOURCE |
+
+| L-A0-033 | In the quaternionic sp(3)/Cl(0,4) case L05 uses the Pauli representation e0=sigma0 and eA=-i sigmaA for A=1,2,3. | L05 §4.2 | SOURCE_ASSERTED |
+| L-A0-034 | Replacing quaternion entries by this Pauli representation converts the quaternionic sp(3) presentation to a complex matrix representation. | L05 §4.2 | SOURCE_ASSERTED |
+| L-A0-035 | L05 identifies the quaternion coefficient relation tilde(chi)=v psi with the chiral Clifford relation chi=Gamma(v) psi. | L05 §2 | SOURCE_ASSERTED |
+| L-A0-036 | In the quaternionic Cl(0,4) sector the vector generator gamma maps Q_minus to Q_plus, while the barred action gives the reverse chiral orientation. | L05 §§3–4.2 | SOURCE_ASSERTED |
+
+| L-A0-037 | L05's source division-algebra spinor representative is the ordered pair (psi,tilde(chi)), with primary relation tilde(chi)=v psi. | L05 §2 | SOURCE_ASSERTED |
+| L-A0-038 | L05's dual relation psi=tilde(v)tilde(chi) is explicitly described in the quaternionic case as Euclidean twistor incidence; that external identification remains quarantined from track construction. | L05 §3 | SOURCE_ASSERTED_XREF_QUARANTINED |
+| L-A0-039 | L05 represents a Cl(0,n) vector by the off-diagonal chiral block with lower-left action v and upper-right action -tilde(v); in the quaternionic n=4 case this is the source Cl(0,4) chiral vector action. | L05 Clifford construction | SOURCE_ASSERTED |
+
+| L-A0-040 | L05 defines the real trilinear form by T(v,psi,chi)=(tilde(chi),v psi), equivalently by the source Clifford/multiplication coefficients. | L05 §3 eq. (6) | SOURCE_ASSERTED |
+| L-A0-041 | L05 states that the triality form is cyclic, T(v,psi,chi)=T(psi,chi,v), using the cyclic multiplication-table identity. | L05 §§2–3 eqs. (4),(6) | SOURCE_ASSERTED |
+| L-A0-042 | L05 gives a canonical triality automorphism cycling vector, negative-chiral-spinor, and positive-chiral-spinor roles as (v,psi,chi)->(psi,chi,v). | L05 §3 | SOURCE_ASSERTED |
+| L-A0-043 | In the quaternionic sp(3) realization, L05 gives the corresponding canonical basis-role cycle gamma_a -> Q_minus_a -> Q_plus_a -> gamma_a and identifies it as an inner automorphism of sp(3). | L05 §4.2 | SOURCE_ASSERTED |
+
+| L-A0-044 | L01 places gauge connection 1-forms, Clifford-valued spin connection and frame, Higgs scalar multiplet, and Grassmann-valued fermions over a four-dimensional base manifold with distinct form/statistics roles. | L01 §1.1 | SOURCE_ASSERTED |
+| L-A0-045 | L01 combines these fields into a single extended connection/superconnection with fixed 1/2 spin-connection and 1/4 frame-Higgs coefficients, bosons as Lie-algebra-valued 1-forms and fermions as Lie-algebra-valued Grassmann elements. | L01 §1.1 eq. (1) | SOURCE_ASSERTED |
+| L-A0-046 | L01 defines unified curvature F=dA+1/2[A,A] and uses nonzero Lie brackets/root addition as interaction incidence and, in exceptional embeddings, as subgroup action on embedded matter generators. | L01 §§1.1–2 eqs. (2)–(3) | SOURCE_ASSERTED |
+| L-A0-047 | L01 defines Cartan/root/weight structure so that Cartan eigenvalue coordinates represent particle quantum numbers and root-vector brackets correspond to root addition. | L01 §2 | SOURCE_ASSERTED |
+| L-A0-048 | L01 embeds su(3), 3, and bar3 into g2=su(3)+3+bar3 and treats quark/anti-quark carriers as root-vector elements of the exceptional Lie algebra rather than solely as an external representation. | L01 §2.1 | SOURCE_ASSERTED |
+| L-A0-049 | L01 uses explicit Cl(3,1), Cl(4), and Cl(7,1) matrix presentations to combine gravitational, electroweak, frame, and Higgs roles into a chiral so(7,1) graviweak connection acting on an 8_S+ spinor carrier. | L01 §§2.2.1–2.2.3 | SOURCE_ASSERTED |
+| L-A0-050 | L01 introduces an order-three D4 triality rotation cycling 8_S+, 8_S-, and 8_V and proposes these roles as a mechanism for three fermion generations. | L01 §§2.2.3–2.2.4 | SOURCE_ASSERTED_PROPOSAL |
+| L-A0-051 | L01 embeds the graviweak D4 structure into F4 and combines F4 with G2+U(1) quantum numbers so 222 known-field weights match 222 of E8's 240 roots. | L01 §§2.2.4–2.4 | SOURCE_ASSERTED |
+| L-A0-052 | The L01 E8 completion introduces an additional quantum number w and new w and xPhi field sectors; it uses F4 as the centralizer of G2 and explicit Cartan-coordinate rotations to display the substructure. | L01 §2.4 | SOURCE_ASSERTED |
+| L-A0-053 | L01 decomposes its E8 connection into bosonic sectors H1 and H2 and three fermionic generation sectors associated with the triality-related 8-dimensional roles. | L01 §3 / §4 | SOURCE_ASSERTED |
+| L-A0-054 | L01 decomposes the E8 curvature into F1, F2, and covariant derivatives of the fermion sectors; F1 further separates gravitational, mixed graviweak, and electroweak pieces. | L01 §3.1 eqs. (18)–(21) | SOURCE_ASSERTED |
+| L-A0-055 | L01's gravitational curvature contains Riemann curvature minus an e e phi^2 term, while its mixed graviweak curvature is T phi - e Dphi; the electroweak piece separates W and B1 curvatures. | L01 §3.1 eqs. (19)–(21) | SOURCE_ASSERTED |
+| L-A0-056 | L01's second bosonic curvature sector separates w, B2, x, and su(3) curvature plus xPhi xPhi, with the x-sector expressed through covariant derivatives of x and Phi. | L01 §3.1 eq. (22) and following | SOURCE_ASSERTED |
+| L-A0-057 | L01 represents the fermionic curvature as a covariant massive Dirac derivative receiving left/right actions from spin, frame-Higgs, electroweak, new-field, and color sectors. | L01 §3.1 | SOURCE_ASSERTED |
+| L-A0-058 | L01 chooses a modified BF action over the four-dimensional base with E8-valued bosonic and anti-Grassmann multipliers; eliminating the bosonic multiplier yields gravitational, fermionic, and non-gravitational curvature-action terms. | L01 §3.2 eqs. (23)–(24) | SOURCE_ASSERTED |
+| L-A0-059 | The L01 gravitational action reduces to a MacDowell-Mansouri/Palatini-Einstein-Hilbert form after eliminating the multiplier and dropping a boundary term, with cosmological constant tied to Higgs magnitude. | L01 §3.2.1 | SOURCE_ASSERTED |
+| L-A0-060 | L01's other-boson action contains torsion, Higgs-kinetic, electroweak, strong, and new-field terms; the new-field action is explicitly described as a speculative first guess likely to change. | L01 §3.2.2 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-061 | L01 notes that its Hodge-star use requires extracting and inverting the frame from the E8 connection and calls this construction awkward and insufficiently justified within the proposed E8 geometry. | L01 §3.2.2 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-062 | L01 obtains a standard one-generation massive Dirac/Higgs action plus new w and xPhi fermion couplings that are not understood; the actions for the other two triality-related generations are explicitly unresolved. | L01 §3.2.3 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-063 | L01 states that the total action is chosen by hand to agree with known physics, supplies high-energy coupling/cosmological/mass relations, and claims no free parameters at the stated level. | L01 §4 | SOURCE_ASSERTED_WITH_SCOPE_GUARD |
+| L-A0-064 | L01 states that generation/triality, the new fields, and aspects of the noncompact E8 real form remain poorly understood and that the proposal should be treated skeptically until these issues are resolved. | L01 §5 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-065 | L01 mentions spin-foam/asymptotic-safety/exceptional-Kac-Moody directions as speculative possibilities rather than established parts of the source theory. | L01 §5 | SOURCE_ASSERTED_SPECULATIVE |
+| L-A0-066 | L01 explicitly allows that future work may reveal a fatal contradiction with nature; source admission therefore records a proposed structure, not an established physical theory. | L01 §5 | RENDERING_GUARD_FROM_SOURCE |
+
+| L-A0-067 | L02 takes a spin(1+N,3)-valued bosonic connection over a four-dimensional base as the fundamental field, with spin(1,3), spin(N), and off-diagonal complement sectors. | L02 §§1–2 | SOURCE_ASSERTED |
+| L-A0-068 | L02 uses a fully g-invariant extended-Plebanski action S(H,B,Phi) with one parameter g, curvature F=dH+1/2[H,H], auxiliary g-valued 2-form B, and symmetric operator Phi on bivectors/2-forms. | L02 §2 eq. (1) | SOURCE_ASSERTED |
+| L-A0-069 | Variation of H, B, and Phi gives the displayed coupled field equations; the cubic Phi potential is a chosen convenient potential and the source explicitly permits replacement by more general U(Phi). | L02 §2 eqs. (2)–(5) | SOURCE_ASSERTED_WITH_SCOPE_GUARD |
+| L-A0-070 | L02's symmetry breaking distinguishes spin(1,3), introduces spacetime Hodge and Lie-algebra dual operators, and requires a nondegenerate frame to define the Hodge star. | L02 §2.1 | SOURCE_ASSERTED |
+| L-A0-071 | One L02 solution class uses a Phi ansatz reducing to the Hodge star and B=3/4 *F, producing the Yang-Mills-form equation D*F=0. | L02 §2.1 eqs. (7)–(11) | SOURCE_ASSERTED |
+| L-A0-072 | After breaking L02 decomposes H=1/2 omega+1/4 E+A and factors the off-diagonal E as a simple bivector e'phi, with e' transforming as gravitational frame and phi as a Yang-Mills-vector Higgs multiplet. | L02 §2.1.1 eqs. (12)–(13) | SOURCE_ASSERTED |
+| L-A0-073 | L02 initially keeps the Hodge frame e distinct from the connection frame e' and later imposes e'=e only as a restriction to a subset of solutions. | L02 §2.1.1 eq. (18) | RENDERING_GUARD_FROM_SOURCE |
+| L-A0-074 | The broken curvature decomposes into gravitational, mixed torsion/Higgs, and Yang-Mills sectors, with the mixed term T phi-e'Dphi. | L02 §2.1.1 eq. (14) | SOURCE_ASSERTED |
+| L-A0-075 | L02 states that e'=e and zero torsion (when fermionic matter is ignored) are consistent restrictions that simplify the equations but do not necessarily follow from the symmetry breaking. | L02 §§2.1.1,4 | SOURCE_ASSERTED_GUARD |
+| L-A0-076 | Within that restricted sector L02 obtains Einstein-type gravity coupled to Higgs terms but explicitly calls the resulting gravitational dynamics modified because additional curvature equations remain. | L02 §2.1.1 eq. (23) | SOURCE_ASSERTED |
+| L-A0-077 | Substituting the symmetry-breaking ansätze into the action gives a curvature-squared/Yang-Mills-form action and, after the gravitational restrictions, Einstein-Hilbert, cosmological/Higgs potential, SKY curvature-squared, Higgs kinetic, and Yang-Mills terms. | L02 §2.2 eqs. (24)–(27) | SOURCE_ASSERTED |
+| L-A0-078 | L02 derives Newton, cosmological, Yang-Mills, and Higgs parameters from the initial g and Higgs vev and identifies a nonzero-vev de Sitter background solution. | L02 §2.2 eq. (28) | SOURCE_ASSERTED |
+| L-A0-079 | L02 acknowledges that the displayed bare parameter relations are far from observed values and only suggests high-energy running/fixed-point behavior as a possible qualification. | L02 §2.2 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-080 | L02 couples fermions through Dpsi=(d+H)psi; after breaking the derivative contains spin, frame-Higgs, and Yang-Mills interactions and implies fermionic torsion sourcing. | L02 §3 eq. (29) | SOURCE_ASSERTED |
+| L-A0-081 | L02 records SM subset Pati-Salam subset spin(10) and, in its unified setting, spin(11,3) with one Standard-Model generation in a 32-complex/64-real positive-chiral spinor and Higgs vev generating Dirac masses. | L02 §3 eq. (30) | SOURCE_ASSERTED_PROPOSAL |
+| L-A0-082 | L02's final reconstruction claim is conditional on the Phi ansatz, simple frame-Higgs ansatz, matched-frame restriction, and torsion restriction; it does not claim all solutions of the original g-invariant action have Standard-Model/gravity form. | L02 §4 | RENDERING_GUARD_FROM_SOURCE |
+| L-A0-083 | L02 makes metric/spacetime geometry emergent only after symmetry breaking rather than a pre-breaking fundamental variable, which is also the source's stated reason Coleman-Mandula does not directly obstruct the construction. | L02 §§1,4 | SOURCE_ASSERTED |
+| L-A0-084 | L02 leaves the gravitational sector, quantization, and more general extended-Plebanski potentials as unresolved future work. | L02 §4 | SOURCE_ASSERTED_LIMITATION |
+
+| L-A0-085 | L03 converts the conventional 32-complex one-generation fermion representation to an action-equivalent 64-real representation by replacing scalar i with a fixed real 2x2 square-minus-one matrix and splitting every complex component into real/imaginary parts. | L03 §2.3 eqs. (2.7)–(2.8) | SOURCE_ASSERTED |
+| L-A0-086 | The resulting 18 real 64x64 gravity+SM generators retain the same real Lie algebra and act on the 64-real fermion carrier exactly as the 32-complex generators act on the original generation. | L03 §2.3 | SOURCE_ASSERTED |
+| L-A0-087 | L03 constructs explicit Cl(11,3) real 128x128 vector matrices whose 91 bivectors split into 64-real positive/negative chiral blocks, with the positive block acting on a Majorana-Weyl 64-real spinor. | L03 §3 eqs. (3.1)–(3.2) | SOURCE_ASSERTED |
+| L-A0-088 | In the chosen matrix representation the 18 gravity+SM generators are numerically identical to specified positive-chiral spin(11,3) bivector combinations and the 64-real fermion components are identical to those of the positive-chiral Majorana-Weyl spinor. | L03 §3 eq. (3.3) | SOURCE_ASSERTED |
+| L-A0-089 | L03 explicitly says the underlying gravity+SM subalgebra embedding into spin(11,3) is representation-independent even though the numerical identity in L-A0-088 uses a convenient explicit matrix realization. | L03 §3 | RENDERING_GUARD_FROM_SOURCE |
+| L-A0-090 | L03 contains the Pati-Salam chain su(4)+su(2)_L+su(2)_R subset spin(10) subset spin(11,3) and identifies the 40 spin(11,3) generators outside spin(1,3)+spin(10) as the frame-Higgs representation sector. | L03 §3 eq. (3.4) | SOURCE_ASSERTED |
+| L-A0-091 | L03 combines spin connection, frame, spin(10) Higgs, and gauge connection into H=1/2 omega+1/4 ephi+A and gives curvature R-1/8 eephi^2 + 1/4(Tphi-eDphi)+F_A plus the covariant Dirac derivative. | L03 §3.1 eqs. (3.5)–(3.8) | SOURCE_ASSERTED |
+| L-A0-092 | L03 defines a GraviGUT algebra from the spin(11,3) bivector bracket and its chiral spinor action, with a deliberately trivial spinor-spinor bracket so the spinor carrier is an ideal. | L03 §3.2 eqs. (3.9)–(3.11) | SOURCE_ASSERTED |
+| L-A0-093 | L03 constructs spin(12,4) from Cl(12,4), with 120 bivectors acting on a 128-real positive-chiral spinor, and uses these two role sets as the 120+128 carrier decomposition of E8(-24). | L03 §4 eqs. (4.1)–(4.2) | SOURCE_ASSERTED |
+| L-A0-094 | In the E8(-24) Lie bracket, spinor-spinor brackets are nonzero and close into the bivector sector, unlike the trivially closed spinor ideal used in the GraviGUT semidirect algebra. | L03 §4 eq. (4.3) | SOURCE_ASSERTED |
+| L-A0-095 | L03 gives the E8(-24) Killing-form blocks and signatures (48,72) for the bivector sector, (64,64) for the spinor sector, zero mixed pairing, and total (112,136). | L03 §4 eq. (4.4) | SOURCE_ASSERTED |
+| L-A0-096 | The spin(11,3) GraviGUT is embedded in E8(-24) by 91 selected spin(12,4) bivectors plus 64 selected positive-chiral spinor generators whose inherited brackets reproduce the GraviGUT algebra/action. | L03 §4 eq. (4.5) | SOURCE_ASSERTED |
+| L-A0-097 | L03 distinguishes the exact algebraic embedding of gravity+SM plus one-generation action from the stronger direct physical interpretation of all 248 E8 generators as elementary particles. | L03 §4 | RENDERING_GUARD_FROM_SOURCE |
+| L-A0-098 | Under the direct particle interpretation L03 predicts extra gauge/frame-Higgs/axion-like sectors and 64 mirror fermions with opposite charges. | L03 §4 | SOURCE_ASSERTED_PROPOSAL |
+| L-A0-099 | L03 states that the triality map among 64 SM fermions, 64 mirror fermions, and 64 non-SM bosons cannot directly represent the three observed fermion generations in the direct E8 decomposition and demotes the earlier three-block identification to a vague hint. | L03 §4 | SOURCE_ASSERTED_CORRECTION |
+| L-A0-100 | The origin of the three observed fermion generations remains explicitly unresolved in L03. | L03 §§4–5 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-101 | L03 defines a boson-plus-Grassmann-fermion superconnection A=H+psi whose curvature is F+Dpsi+psi psi and whose covariant derivative agrees with the source's Dirac derivative on the chosen fermion multiplet. | L03 §4.1 eqs. (4.6)–(4.7) | SOURCE_ASSERTED |
+| L-A0-102 | A physical E8-principal-bundle interpretation in L03 requires frame-Higgs symmetry breaking and entails the direct-E8 extra-particle spectrum; this physical interpretation is not part of the bare embedding theorem. | L03 §5 | RENDERING_GUARD_FROM_SOURCE |
+| L-A0-103 | L03 leaves mirror-fermion masses, generation structure, particle masses, a complete action, and quantum description open, and mentions E8(8) only as an undeveloped possible clue. | L03 §5 | SOURCE_ASSERTED_LIMITATION |
+| L-A0-104 | L03 presents the explicit 64-real SM/gravity matrices, Cl(11,3) representation, and E8(-24) bracket construction as useful algebraic infrastructure independently of whether the direct E8 physical model is accepted. | L03 §5 | SOURCE_ASSERTED |
+
+## Closure state
+
+Admission records what the sources assert, not that the physical claim is correct.
+
+The quaternionic slices of L-A0-040–043 now have native research-local schema instantiations in `LISI_L05_QUATERNION_TRIALITY_SOURCE_INSTANCE_0_1.isg`. They remain pre-seal because the reusable schemas are research-local and the complete L05 source treatment, recursive IA closure, and full Core qualification are not complete. L-A0-044–066 were added by the full L01 source-semantic census expansion, L-A0-067–084 by L02, and L-A0-085–104 by L03; none of these successor regions has yet been compiled into the authoritative track bundle. All other unqualified A0 bodies remain INCOMPLETE_UNEXPANDED with respect to strict primitive closure.
