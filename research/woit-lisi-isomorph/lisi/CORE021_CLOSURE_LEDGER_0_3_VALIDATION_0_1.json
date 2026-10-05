@@ -1,0 +1,26 @@
+{
+  "schema": "lisi.core021-partial-ledger-validation.v0.1",
+  "date": "2026-10-04",
+  "ledger": "CORE021_CLOSURE_LEDGER_0_3.json",
+  "qualifies": false,
+  "gates": {
+    "SOUNDNESS_STRUCTURE": true,
+    "COVERAGE": true,
+    "RECONSTRUCTION": true,
+    "SCOPE_INTEGRITY": true,
+    "AUTHORITY_ROUTING_STRUCTURE": true,
+    "IA_FIXED_POINT_CURRENT": true,
+    "STRICT_CLOSURE": false
+  },
+  "non_strict_errors": [],
+  "incomplete_census_count": 189,
+  "closed_schema": [
+    "L-SSC-125",
+    "L-SSC-126"
+  ],
+  "ia_fixed_point": false,
+  "nei": false,
+  "dts_final": false,
+  "dp": false,
+  "note": "Expected partial-closure state. The only failing gate is STRICT_CLOSURE because 189 frozen census items remain INCOMPLETE_UNEXPANDED."
+}
