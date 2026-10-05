@@ -1,0 +1,32 @@
+{
+  "schema": "woit.w001-spin4-chiral-split-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-001",
+  "frozen_body": "Euclidean Spin(4) is decomposed into two chiral SU(2) factors in the Euclidean-first proposal.",
+  "source": "W01",
+  "support_packets": [
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "left_chiral_factor_role": 199106,
+    "right_chiral_factor_role": 199107,
+    "exact_underlying_group_carrier": 199102,
+    "exact_group_schema": 199000,
+    "source_vector_action": 199105
+  },
+  "reason": "The W027 packet already gives two structurally distinct left/right source factor roles, each backed by the exact unit-quaternion SU(2)/Sp(1) group presentation. W-SSC-001 asks only for this Euclidean chiral factor decomposition, not the later physical/internal role assignment.",
+  "exclusions": [
+    "W-SSC-002 physical/internal role assignment is not closed here",
+    "no topology or smooth Lie-group structure is added",
+    "no cross-author semantics are used"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
