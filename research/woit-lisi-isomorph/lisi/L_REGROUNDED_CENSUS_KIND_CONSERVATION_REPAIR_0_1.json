@@ -1,0 +1,46 @@
+{
+  "schema": "lisi.regrounded-census-kind-conservation-repair.v0.1",
+  "date": "2026-10-05",
+  "status": "LOCAL_LEDGER_EXTRACTOR_DEFECT_CONFIRMED_AND_REPAIRED",
+  "violated_contract": [
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "qualification/CORE_0_21_LEDGER_CONTRACT.md"
+  ],
+  "frozen_source": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "frozen_source_blob": "db889137e94759727cfbf8e2c21f6749b728bebd",
+  "defect": {
+    "owner": "tools/generate_regrounded_l_core021_ledger_0_7.mjs",
+    "description": "The extractor replaced every frozen SSC item kind with the uppercase constant SOURCE_SEMANTIC_OBLIGATION instead of conserving the exact frozen kind.",
+    "affected_item_count": 191,
+    "source_semantics_changed": false,
+    "source_file_changed": false,
+    "observed_bad_hash": "87f31b343bfcde73c79b1e63b553b51b5aaf160ccc5ef3e1de267af3618eb099",
+    "restored_hash": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7"
+  },
+  "invalidated_current_artifacts": [
+    "CORE021_CLOSURE_LEDGER_0_25.json",
+    "CORE021_CLOSURE_LEDGER_0_25_AUDIT.json",
+    "LISI_PRE_DP_IA_GATE_0_12.json"
+  ],
+  "preserved_as_historical_evidence": true,
+  "repair": {
+    "successor_generator": "tools/generate_regrounded_l_core021_ledger_0_8.mjs",
+    "successor_ledger": "CORE021_CLOSURE_LEDGER_0_26.json",
+    "rule": "ledger.census[i].kind = frozen SSC item kind exactly; no normalization/case rewrite",
+    "semantic_closure_set_changed": false,
+    "accepted_closed_items": 14,
+    "incomplete_unexpanded": 177,
+    "primitive_kernel_changed": false,
+    "semantic_scope_changed": false,
+    "governing_authority_changed": false,
+    "inference_profile_changed": false
+  },
+  "clue_disposition": {
+    "discovery_value": "PROCESS_CLUE",
+    "note": "The failure demonstrates that mechanically derived closure ledgers must conserve not only census membership and bodies but exact source-semantic item typing; canonical-hash checking alone cannot catch a wrong-but-self-consistent extractor unless frozen-source projection is independently compared."
+  },
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}
