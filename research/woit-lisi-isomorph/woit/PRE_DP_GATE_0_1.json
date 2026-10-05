@@ -5,13 +5,13 @@
   "scope": "W independent source track only",
   "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_1.json",
   "current_native_compilation": "WOIT_NATIVE_COMPILATION_0_1.isg",
-  "current_core021_ledger": "CORE021_CLOSURE_LEDGER_0_1.json",
+  "current_core021_ledger": "CORE021_CLOSURE_LEDGER_0_6.json",
   "ordered_stages": [
     {
       "stage": 1,
       "id": "PRIMITIVE_SCHEMA_CLOSURE",
       "required": true,
-      "state": "IN_PROGRESS"
+      "state": "IN_PROGRESS_5_OF_127_CLOSED"
     },
     {
       "stage": 2,
@@ -65,7 +65,13 @@
       "inference_profile_sha256"
     ],
     "cross_author_premises_forbidden": true,
-    "lisi_semantics_available": false
+    "lisi_semantics_available": false,
+    "current_primitive_closure_progress": {
+      "closed_schema": 5,
+      "incomplete_unexpanded": 122,
+      "total": 127,
+      "ledger": "CORE021_CLOSURE_LEDGER_0_6.json"
+    }
   },
   "dp_authorization_rule": "DP MUST NOT run until stage 3 has a pinned current IA fixed point and stages 4-5 are complete."
 }
