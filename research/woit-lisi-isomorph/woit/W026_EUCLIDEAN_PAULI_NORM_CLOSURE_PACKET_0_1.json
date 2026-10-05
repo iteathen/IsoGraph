@@ -1,0 +1,67 @@
+{
+  "schema": "woit.w026-euclidean-pauli-norm-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-026",
+  "frozen_body": "W01 fixes the Euclidean vector real form inside M(2,C) by the Pauli-matrix map, with determinant equal to positive Euclidean norm squared and an equivalent quaternion presentation with x KAPPA(x).",
+  "source": "W01 §2.1",
+  "root_native": "research/woit-lisi-isomorph/woit/W01_EUCLIDEAN_PAULI_NORM_SOURCE_INSTANCE_0_1.isg",
+  "dependency_files": [
+    "research/woit-lisi-isomorph/woit/WOIT_PRIMITIVE_ORDERED_FIELD_POSDEF_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETER_LINEAR_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 19,
+    "declared_local_ids": 141,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "ordered_real_relation": 942001,
+    "quaternion_norm": 942011,
+    "positive_definite_schema": 941001,
+    "matrix_carrier": 942110,
+    "determinant": 942122,
+    "source_embedding_H_to_M2C": 942151,
+    "basis_images": {
+      "one": 942116,
+      "i": 942140,
+      "j": 942141,
+      "k": 942142
+    },
+    "determinant_norm_identity": "det(EMB(h)) = embed_R_to_C(N_H(h))",
+    "quaternion_norm_identity": "h KAPPA(h) = N_H(h) * 1"
+  },
+  "semantic_guards": [
+    "positive Euclidean norm is represented through an ordered-field/positive-definite schema rather than inferred from the word Euclidean",
+    "the exact matrix determinant is used, not a pulled-back relation merely named determinant",
+    "the Pauli basis is constructed natively from matrix units and the source complex imaginary unit",
+    "no analytic completeness/topology of R or C is imported",
+    "no W02 physical semantics and no Lisi semantics are premises"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
