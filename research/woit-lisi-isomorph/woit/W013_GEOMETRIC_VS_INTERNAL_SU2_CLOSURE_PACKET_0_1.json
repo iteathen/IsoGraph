@@ -1,0 +1,45 @@
+{
+  "schema": "woit.w013-geometric-vs-internal-su2-summary.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-013",
+  "frozen_body": "Under W04a, SU(2)_R acts geometrically and SU(2)_L is available as an internal symmetry.",
+  "source": "W04a",
+  "support_packets": [
+    "W134_EUCLIDEAN_SU2_ROLE_PSEUDOREAL_CLOSURE_PACKET_0_1.json",
+    "W009_EUCLIDEAN_LEFT_SPINOR_INTERNAL_SU2_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "su2_R_role": 205131,
+    "su2_R_spacetime_action": 205121,
+    "su2_R_nontrivial_geometric_witness": {
+      "group_element": 205150,
+      "input": 205107,
+      "output": 205151
+    },
+    "su2_L_role": 205130,
+    "su2_L_spacetime_action": 205122,
+    "su2_L_spacetime_semantics": "TRIVIAL",
+    "su2_L_left_spinor_action": 949101,
+    "su2_L_internal_nontrivial_witness": {
+      "group_element": 205150,
+      "input": 189042,
+      "output": 949102
+    },
+    "role_split": "SU(2)_R nontrivial on spacetime; SU(2)_L trivial on spacetime but nontrivial on S_L"
+  },
+  "rationale": "W-SSC-013 is a later W04a summary of the exact geometric/internal action contrast already represented by W134 and W009.",
+  "semantic_guards": [
+    "Internal means nontrivial action on the left-spinor carrier combined with trivial spacetime action.",
+    "No identification with observed weak gauge dynamics is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
