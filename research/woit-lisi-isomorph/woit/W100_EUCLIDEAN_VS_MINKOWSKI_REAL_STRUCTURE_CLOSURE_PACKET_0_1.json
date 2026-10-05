@@ -1,0 +1,86 @@
+{
+  "schema": "woit.w100-euclidean-vs-minkowski-real-structure-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-100",
+  "frozen_body": "W05 contrasts Euclidean and Minkowski reality: the Euclidean twistor real structure acts on PT itself and preserves the CP1 fibers, while the Minkowski reality structure naturally maps PT to its dual and interchanges spinor chirality.",
+  "source": "W05 §3",
+  "root_native": "research/woit-lisi-isomorph/woit/W05_MINKOWSKI_DUAL_TWISTOR_REAL_STRUCTURE_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W098_H2_PROJECTIVE_REAL_STRUCTURE_CLOSURE_PACKET_0_2.json",
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json"
+  ],
+  "additional_support": [
+    "research/woit-lisi-isomorph/woit/WOIT_PRIMITIVE_CONJUGATE_VECTOR_BIJECTION_SCHEMA_0_1.isg"
+  ],
+  "compositional_interface": {
+    "root_external_refs": [
+      182001,
+      182004,
+      183003,
+      183005,
+      186003,
+      186004,
+      187600,
+      187601,
+      189000,
+      189001,
+      189002,
+      189003,
+      189004,
+      189005,
+      189006,
+      197012,
+      202100,
+      202101,
+      202102,
+      202103,
+      202104,
+      202107,
+      202108,
+      202109,
+      202110,
+      202111,
+      202113,
+      202114,
+      202124,
+      943099,
+      944000,
+      990110
+    ],
+    "provider_rule": "W098 supplies the Euclidean PT real-structure authority and 943099; W047 supplies the corrected reference right-spinor plane 990110; the conjugate-semilinear schema supplies 944000; remaining field/vector/projective roles are contained in those validated support graphs.",
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "projective_twistor_space": 202113,
+    "euclidean_vector_real_structure": 943000,
+    "euclidean_projective_real_structure": 943001,
+    "euclidean_codomain": "PT",
+    "dual_twistor_vector_carrier": 994100,
+    "dual_pairing": 994110,
+    "dual_right_chiral_subspace": 994120,
+    "dual_left_chiral_subspace": 994121,
+    "minkowski_conjugate_dual_map": 994130,
+    "dual_projective_space": 994142,
+    "minkowski_projective_real_structure": 994150,
+    "minkowski_codomain": "PT*",
+    "chiral_exchange": "right plane <-> dual-left annihilator; left plane <-> dual-right annihilator"
+  },
+  "semantic_guards": [
+    "The dual twistor space is represented by an exact four-dimensional complex carrier with a nondegenerate pairing against T, not by a name-only node.",
+    "Dual chiral subspaces are exact annihilators of the opposite source chiral planes.",
+    "The Minkowski reality map is an exact conjugate-semilinear bijection and its induced projective map is total.",
+    "The Euclidean side is reused from current W098 authority and remains a self-map of PT.",
+    "No SU(2,2) orbit/signature semantics are imported; those remain W-SSC-052.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
