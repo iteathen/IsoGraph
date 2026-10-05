@@ -24,7 +24,26 @@ W -> K <- L
 
 No U hypothesis may flow backward to repair W or L.
 
-## 2. Conservative-amalgam rule
+## 2. Primitive-first discovery firewall
+
+Before constructing any successor U candidate:
+
+1. complete the applicable source census;
+2. reduce the relevant source semantics to primitive logic / exact schema closure;
+3. recursively close source-local IA;
+4. run required NEI/DTS;
+5. run Discovery Protocol over reduced structures;
+6. identify correspondence classes without using candidate labels as factorization priors.
+
+Do not preselect a global carrier or mechanism.
+
+Existing labels U1-TC, U2-DYN, U3-OT, and U4-EX are historical/retrieval buckets. They MUST NOT choose what the primitive reduction is allowed to expose.
+
+Cross-track discovery should use a blind/anonymized structural projection whenever source identity is not load-bearing to the comparison.
+
+See `UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md`.
+
+## 3. Conservative-amalgam rule
 
 Do not define U as all Woit structure plus all Lisi structure.
 
@@ -39,7 +58,7 @@ Every edge in U has one of four dispositions:
 
 No silent fifth category is allowed.
 
-## 3. Reconstruction diagrams
+## 4. Reconstruction diagrams
 
 For every U candidate preserve source reconstruction.
 
@@ -54,7 +73,7 @@ must recover the declared source-semantic view.
 
 Where prior comparison provides only quotient maps, choose an explicit comparison realization Kc and preserve the representation maps instead of claiming an unproved categorical pushout.
 
-## 4. Residual classes
+## 5. Residual classes
 
 Before attachment classify residuals as:
 
@@ -65,9 +84,9 @@ Before attachment classify residuals as:
 - QU;
 - OBSTRUCTION.
 
-## 5. Minimal-new-axiom discipline
+## 6. Synthesis-edge discipline
 
-Use no new relation when an inherited or K-forced relation suffices.
+During synthesis, use no new relation when an inherited or structurally forced relation suffices. This rule applies only after primitive-first discovery has exposed the candidate correspondence; it is not permission to bias discovery toward the current kernel.
 
 Every new relation records:
 
@@ -81,7 +100,9 @@ falsifier
 what disappears if removed.
 ~~~
 
-## 6. First attachment program
+## 7. Historical candidate buckets
+
+These buckets preserve prior work and hypotheses. They are not the active factorization order.
 
 ### U1-TC — twistor/Clifford amalgam
 
@@ -123,7 +144,7 @@ Test exceptional structure only as a realization of a previously qualified U can
 
 Do not use E8 to define the unification problem.
 
-## 7. Failure modes
+## 8. Failure modes
 
 Reject or branch a U candidate when:
 - a source can no longer reconstruct;
@@ -133,7 +154,7 @@ Reject or branch a U candidate when:
 - an attachment depends on one coordinate presentation but not an equivalent same-author formulation;
 - a high-level label is doing work absent from primitive relations.
 
-## 8. Promotion vocabulary
+## 9. Promotion vocabulary
 
 Use only:
 
