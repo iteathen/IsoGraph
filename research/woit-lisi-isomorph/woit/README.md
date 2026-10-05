@@ -20,9 +20,9 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
-| source traversal complete | IN PROGRESS |
-| SSC frozen complete | NOT YET |
-| primitive math support complete | NOT YET |
+| source traversal complete | PASS — 9/9 frozen source units |
+| SSC frozen complete | PASS — 127 obligations, SOURCE_SEMANTIC_CENSUS_0_1.json |
+| primitive math support complete | IN PROGRESS |
 | native .isg bundle | NOT YET |
 | graph-derived closure ledger | NOT YET |
 | recursive IA fixed point | NOT YET |
@@ -58,9 +58,9 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 ## W02 full-source expansion
 
-- `ASSERTION_BASE_A0_0_10.md` — current explicit assertion base; W-A0-091–122 add the W03/W04a–W04e source obligations exposed by the full-treatment pass.
-- `../TRACK_W_WORKING_SSC_0_4.md` — current working W Source Semantic Census; still incomplete and therefore not yet frozen Core-0.21 input.
-- `SOURCE_TRAVERSAL_LEDGER_0_7.json` — current traversal state; W03 is traversed at the frozen retrieval, W04a–c and the main W04e notes are broadly traversed, while the W04d slide deck and W05 full-source pass remain open.
+- `ASSERTION_BASE_A0_0_12.md` — frozen-track explicit assertion base candidate after source-conservation completion.
+- `SOURCE_SEMANTIC_CENSUS_0_1.json` / `SOURCE_SEMANTIC_CENSUS_FREEZE_0_1.md` — authoritative frozen W Source Semantic Census: 127 obligations across 9 source units.
+- `SOURCE_TRAVERSAL_LEDGER_0_9.json` / `SOURCE_ASSERTION_CONSERVATION_0_1.md` — source traversal and assertion-conservation PASS.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
 - `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
@@ -85,6 +85,12 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `W02_CHIRAL_GR_ACTION_VARIATION_INTERFACE_0_1.isg` / `.md` — preserves the chiral GR action and its connection/tetrad first-variation roles while leaving tetrad, spin-connection, curvature, torsion-free, and Einstein semantics open for primitive expansion.
 
+
+## Frozen source-census checkpoint
+
+The W source corpus is now independently frozen for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
+
+The next active task is authoritative native W compilation and primitive/schema closure. Existing research-local source instances are reusable components only after their source ownership and reconstruction paths are routed from the frozen census.
 
 ## Current execution gate
 
