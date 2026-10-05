@@ -23,9 +23,9 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | source traversal complete | PASS — 9/9 frozen source units |
 | SSC frozen complete | PASS — 127 obligations, SOURCE_SEMANTIC_CENSUS_0_1.json |
 | primitive math support complete | IN PROGRESS |
-| native .isg bundle | NOT YET |
-| graph-derived closure ledger | NOT YET |
-| recursive IA fixed point | NOT YET |
+| native .isg bundle | PASS — authoritative routing compilation 0.1; semantic closure in progress |
+| graph-derived closure ledger | IN PROGRESS — 0.6: 5 CLOSED_SCHEMA / 122 incomplete |
+| recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
 | NEI pass | NOT YET |
 | DTS pass | PARTIAL / PROVISIONAL |
 | DP pass | NOT YET |
@@ -91,6 +91,13 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 The W source corpus is now independently frozen for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
 
 The next active task is authoritative native W compilation and primitive/schema closure. Existing research-local source instances are reusable components only after their source ownership and reconstruction paths are routed from the frozen census.
+
+## Current primitive-closure checkpoint
+
+- `CORE021_CLOSURE_LEDGER_0_6.json`: 5 frozen census obligations CLOSED_SCHEMA, 122 INCOMPLETE_UNEXPANDED.
+- Closed so far: W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098.
+- `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
+- No Lisi semantics are available to the W closure process.
 
 ## Current execution gate
 
