@@ -1,0 +1,63 @@
+{
+  "schema": "woit-lisi.lisi-pre-dp-ia-gate.v0.8",
+  "date": "2026-10-05",
+  "track": "L",
+  "status": "BLOCKED_PROCESS_REGROUNDED_5_OF_191_ACCEPTED",
+  "predecessor": "LISI_PRE_DP_IA_GATE_0_7.json",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "current_ledger": "CORE021_CLOSURE_LEDGER_0_21.json",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "source_revision": "LISI_SSC_SOURCE_CORRECTION_0_2.json",
+  "current_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_10.json",
+  "current_native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_10.isg",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "current_closed_census_items": 5,
+  "total_census_items": 191,
+  "current_closed_ids": [
+    "L-SSC-022",
+    "L-SSC-121",
+    "L-SSC-189",
+    "L-SSC-190",
+    "L-SSC-191"
+  ],
+  "structural_gate_state": {
+    "SOUNDNESS_STRUCTURE": true,
+    "COVERAGE": true,
+    "RECONSTRUCTION": true,
+    "SCOPE_INTEGRITY": true,
+    "AUTHORITY_ROUTING_STRUCTURE": true,
+    "IA_FIXED_POINT_CURRENT": true,
+    "STRICT_CLOSURE": false
+  },
+  "required_order": [
+    "native_body_compilation",
+    "primitive_schema_closure",
+    "core021_closure_ledger_and_gates",
+    "recursive_implicit_assertions",
+    "primitive_close_all_ia_bodies_support_dependencies",
+    "ia_no_change_pass",
+    "record_current_ia_fixed_point",
+    "nei",
+    "dts",
+    "dp"
+  ],
+  "current_ia_fixed_point": null,
+  "current_input_tuple": {
+    "primitive_kernel_sha256": "faa8177494c0d14e29b14795e01c2e0d8edd214d7ffbbb69244f61137d267e65",
+    "source_semantic_census_sha256": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "27108fc1d2a4f43df324b212886a48f628015e743e593138b7208b541e3c60b0"
+  },
+  "closure_admission_rule": "DERIVE_FROM_FROZEN_SSC_PLUS_AUTHORITATIVE_NATIVE_GRAPH_AND_QUALIFIED_AUTHORITY",
+  "historical_closure_evidence": {
+    "prior_authority_ledger": "CORE021_CLOSURE_LEDGER_0_16.json",
+    "prior_promoted_count": 39,
+    "later_non_authoritative_ledger": "CORE021_CLOSURE_LEDGER_0_17.json",
+    "accepted_currently": 5,
+    "disposition": "PRESERVED_RESEARCH_EVIDENCE_REQUIRES_GRAPH_FIRST_REDERIVATION"
+  },
+  "cross_author_semantics_allowed": false,
+  "dp_allowed": false
+}
