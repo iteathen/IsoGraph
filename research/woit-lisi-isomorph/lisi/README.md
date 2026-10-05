@@ -54,11 +54,11 @@ No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpreta
 - `LISI_L05_QUATERNION_TRIALITY_SOURCE_INSTANCE_0_1.isg` / `.md` — source-native quaternionic scalar triality form and canonical order-three vector/Q_minus/Q_plus role cycle, preserving the tilde-basis convention.
 
 
-Current working assertion base: `ASSERTION_BASE_A0_0_11.md`.
+Current working assertion base: `ASSERTION_BASE_A0_0_12.md`.
 
-Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_8.json`.
+Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_9.json`.
 
-Current working Source Semantic Census: `../TRACK_L_WORKING_SSC_0_7.md`.
+Current working Source Semantic Census: `../TRACK_L_WORKING_SSC_0_8.md`.
 
 
 ## Current execution gate
@@ -80,3 +80,10 @@ complete/freeze L SSC
 ~~~
 
 Existing partial native source instances remain evidence/components; they do not constitute the authoritative full-track compilation while the SSC is open.
+
+
+## L06 v2 full-source expansion
+
+The current L06 census was taken from the frozen arXiv v2 paper, including the full Cartan/generalized-Cartan/superconnection/regional-fermion construction and the source's explicit assumptions and discussion-level limitations.
+
+All six frozen L sources now have section-level census expansions. The L track is still **not census-complete** until the final assertion-conservation pass verifies every displayed equation, table, footnote-level guard, and source limitation and then freezes the SSC.
