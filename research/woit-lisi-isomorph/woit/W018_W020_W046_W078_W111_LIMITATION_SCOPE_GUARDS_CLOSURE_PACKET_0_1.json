@@ -1,0 +1,57 @@
+{
+  "schema": "woit.source-limitation-scope-guards-closure-packet.v0.1",
+  "status": "CANDIDATE_MULTI_CLOSED_PRIMITIVE_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_ids": [
+    "W-SSC-018",
+    "W-SSC-020",
+    "W-SSC-046",
+    "W-SSC-078",
+    "W-SSC-111"
+  ],
+  "representation_class": "RAW_DATA_ATOM",
+  "exact_authority": [
+    "SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "SOURCE_TRAVERSAL_LEDGER_0_9.json",
+    "ASSERTION_BASE_A0_0_12.md",
+    "../SOURCE_CORPUS_FREEZE_0_2.md"
+  ],
+  "items": [
+    {
+      "census_id": "W-SSC-018",
+      "body": "W04c leaves the electroweak/Higgs completion of the revised viewpoint unresolved.",
+      "raw_role": "explicit unresolved completion boundary"
+    },
+    {
+      "census_id": "W-SSC-020",
+      "body": "W04d explicitly states that the exact new Wick-rotation implementation remains unresolved.",
+      "raw_role": "explicit unresolved implementation boundary"
+    },
+    {
+      "census_id": "W-SSC-046",
+      "body": "W01 leaves the gauge-theory/spinor-field quantization formalism on PT unresolved and mentions anti-self-dual/twistor-action and supersymmetric/twisted theories only as possible clues, not as adopted dynamics.",
+      "raw_role": "unresolved formalism + non-adoption guard"
+    },
+    {
+      "census_id": "W-SSC-078",
+      "body": "W04c leaves the generation problem, the correct Dirac-versus-Dolbeault operator, interacting dynamics, and much of the proposed holomorphic field theory unresolved.",
+      "raw_role": "explicit unresolved problem set"
+    },
+    {
+      "census_id": "W-SSC-111",
+      "body": "W05 is explicitly expository: its Hodge, arithmetic, quantization, and number-theory discussions are source-semantic contexts for the twistor P1 and must not be promoted to asserted components of the Euclidean Twistor Unification physical model.",
+      "raw_role": "scope/non-promotion guard"
+    }
+  ],
+  "guards": [
+    "Named mathematical topics inside these source statements are not semantically expanded or made available as DP structure by this closure.",
+    "If any named topic becomes load-bearing for IA/NEI/DTS/DP, it must be separately primitive-rendered under its own census obligation.",
+    "These raw nodes preserve epistemic/scope status only.",
+    "No cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_PRIMITIVE",
+    "leaf_classification": "RAW_DATA_ATOM",
+    "item_count": 5
+  }
+}
