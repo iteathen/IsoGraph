@@ -1,0 +1,38 @@
+{
+  "schema": "woit.w092-real-form-role-table-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-092",
+  "frozen_body": "W04d lists SU(4), SL(4,R), SL(2,H), and SU(2,2) as real forms of SL(4,C)=Spin(6,C), with the SL(2,H) and SU(2,2) forms assigned Euclidean and Minkowski geometric roles respectively.",
+  "source": "W04d slides pp. 20–21",
+  "abstraction_boundary": "W_TWISTOR_FOUR_REAL_FORMS_BOUNDARY_0_1.json",
+  "support_packets": [
+    "W051_FOUR_TWISTOR_REAL_FORMS_CLOSURE_PACKET_0_1.json",
+    "W053_EUCLIDEAN_SL2H_TWISTOR_CLOSURE_PACKET_0_1.json",
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "common_complex_twistor_carrier": 202100,
+    "compact_SU4_role": 999130,
+    "split_SL4R_role": 999160,
+    "euclidean_SL2H_role": 998100,
+    "minkowski_SU22_role": 995100,
+    "euclidean_geometric_role": "W053 exact quaternionic/projective action",
+    "minkowski_geometric_role": "W014 exact signature-(2,2) projective orbit action",
+    "sl4c_spin6c_label": "source navigation identity at frozen action boundary; covering data not load-bearing"
+  },
+  "rationale": "W092 is the slide-level real-form role table for the four exact structures already represented by W051/W053/W014.",
+  "semantic_guards": [
+    "The source role table does not collapse the four real structures.",
+    "Spin(6,C) covering topology is not inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
