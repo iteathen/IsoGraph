@@ -1,7 +1,7 @@
 # Woit–Lisi Unification Workbench
 
 **Status:** ACTIVE EXPLORATORY SYNTHESIS  
-**Primary objective:** construct a minimal conservative unified formulation from source-faithful Woit and Lisi structures.
+**Primary objective:** discover the most complete source-faithful conservative unification by reducing both programs to invariant primitive structure first; minimize synthesis support only after the maximal viable structure is known.
 
 This directory contains project-generated synthesis artifacts.
 
@@ -38,7 +38,19 @@ It is based on:
 - pseudoreal/complex-structure transport;
 - the BT01 falsifier suite.
 
-## Leading candidate
+## Active discovery method
+
+The active program is now **primitive-first and anti-bias**.
+
+No successor global carrier, dynamical architecture, triality mechanism, octonionic extension, or exceptional algebra is selected in advance.
+
+The campaign first completes source census, primitive/schema closure, recursive IA, NEI, DTS, and DP. Cross-track correspondence is then searched over reduced/anonymized structure so patterns can emerge without theory labels choosing the answer.
+
+See `UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md`.
+
+Existing U-candidate names remain historical/retrieval buckets and prior experimental results.
+
+## Historical leading candidate
 
 **U1-TC — twistor/Clifford amalgam**
 
@@ -70,7 +82,8 @@ A successor finite-chart audit now closes the quaternionic L05 scalar triality s
 
 ## Files
 
-- `../UNIFICATION_TARGET_REVISION_0_1.md` — objective change from bridge search to constructive unification.
+- `../UNIFICATION_TARGET_REVISION_0_1.md` — objective change from bridge search to constructive unification, now corrected to maximal primitive-first discovery before final minimization.
+- `UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md` — active anti-bias discovery method: full source reduction and blind structural correspondence before new U construction.
 - `UNIFICATION_SYNTHESIS_PROTOCOL_0_1.md` — synthesis rules, reconstruction requirements, and promotion vocabulary.
 - `UNIFICATION_KERNEL_U0_0_1.isg` / `.md` — current shared synthesis kernel.
 - `UNIFICATION_RESIDUAL_PORTS_0_1.md` — W/L residual classification and first interaction hypotheses.
