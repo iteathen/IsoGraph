@@ -1,0 +1,47 @@
+{
+  "schema": "woit.w02-minkowski-vector-0.4-interface-audit.v0.1",
+  "status": "PASS_PUBLIC_INTERFACE_PRESERVED",
+  "date": "2026-10-04",
+  "predecessor": "W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg",
+  "corrected_successor": "W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_4.isg",
+  "public_ids_preserved": [
+    204101,
+    204110,
+    204111,
+    204112,
+    204113,
+    204114,
+    204115,
+    204120,
+    204121,
+    204122,
+    204123,
+    204124,
+    204130,
+    204140,
+    204141,
+    204144,
+    204145,
+    204146,
+    204150,
+    204151,
+    204199
+  ],
+  "added_private_ids": [
+    204102,
+    204147,
+    204152
+  ],
+  "removed_public_ids": [],
+  "semantic_repairs": [
+    "correct scalar MUL/NEG handle use",
+    "correct matrix-unit Pauli construction",
+    "correct det(X)=-embed(Q_M) relation",
+    "preserve 204145 as -i for downstream W02 Hodge/right-handed/self-dual source instances"
+  ],
+  "affected_current_closure_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_1.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_1.json"
+  ],
+  "rule": "W128/W131 require successor packet revisions explicitly citing 0.4; ledger 0.10/0.11 are historical until rebuilt."
+}
