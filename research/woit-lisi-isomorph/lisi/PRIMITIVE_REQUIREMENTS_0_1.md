@@ -111,3 +111,24 @@ Do not reduce L04 to a single named CPTt group. The carrier changes, antiunitary
 | L-A0-158–160 | exact multiplication-preserving algebra automorphisms; G2 ordinary/split real forms; inner automorphism validity by carrier; equivalence-of-presentation vs physical-model guards | INCOMPLETE |
 
 Root systems, triality matrices, and named exceptional algebras are derived views. Exact source closure must preserve the multiplication/bracket/conjugation/sign/phase relations that generate them.
+
+
+## L06 full-treatment successor obligations exposed by SSC 0.8
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-161–162 | M08–M10 group/Lie/action semantics; manifold/tangent/vector-field support; Maurer-Cartan relation; Killing form; torsor/identity distinction; M15–M18 bundle/section/transition/connection/curvature | INCOMPLETE |
+| L-A0-163–165 | M03–M07 Clifford/tetrad/cotetrad; M16 differential forms/Hodge; M17 frame/spin bundle; M18 spin connection/torsion/curvature; de Sitter and MacDowell-Mansouri source instances | INCOMPLETE |
+| L-A0-166–170 | M15–M19 Klein/Cartan geometry; deforming-group vs principal-bundle reconstruction; subgroup-rigidity/"symmetry keeping"; embedded-coset frame semantics; total-group measure factorization; full-group Yang-Mills action and gravity-sector residual terms | INCOMPLETE |
+| L-A0-171–176 | M19 generalized Cartan hierarchy H⊂G0⊂G; exact C=omega+E+A typing; curvature block decomposition; regional/triality transition semantics; coefficient-vs-generator distinction; superposition and equal/different-Higgs alternatives | INCOMPLETE |
+| L-A0-177–183 | vertical/non-spacetime 1-form semantics; Grassmann parity; superbracket; superconnection/supercurvature; covariant fermion derivative; super-Hodge/conjugation; second-order and four-fermion action terms; modified-BF alternative | INCOMPLETE |
+| L-A0-184–190 | regional triality carriers; F4(4)/E8 source instances; inter-generational Hodge; source access-to-region assumption; weak/mass-eigenstate distinction; Majorana and mixing consequences; explicit new-particle prediction | INCOMPLETE |
+| L-A0-191–194 | exact residual/limitation structure: Kretschmann term, second-order fermions, equal bare masses, unknown CKM/PMNS/masses, unexplained symmetry keeping/4D selection/complementarity, and speculative future directions | INCOMPLETE |
+
+The following distinctions are mandatory in primitive compilation:
+- Lie group vs torsor/group manifold;
+- Maurer-Cartan form vs deformed Cartan connection;
+- principal-bundle connection vs generalized Cartan connection vs superconnection;
+- triality-related generators vs potentially unequal regional field coefficients;
+- source assumptions used to identify one physical spacetime vs mathematical consequences;
+- full-group action vs the spacetime action obtained only under the stated factorization conditions.
