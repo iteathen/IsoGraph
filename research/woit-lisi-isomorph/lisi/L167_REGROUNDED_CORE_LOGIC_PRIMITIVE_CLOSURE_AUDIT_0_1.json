@@ -1,0 +1,191 @@
+{
+  "schema": "lisi.l167-regrounded-core-logic-primitive-closure-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_CANDIDATE_CLOSED_PRIMITIVE",
+  "census_id": "L-SSC-167",
+  "source_body": "The resulting gravity action contains Einstein-Hilbert/cosmological terms together with a Kretschmann/SKY curvature-squared term and torsion term, so its gravitational dynamics are explicitly not identical to pure Einstein-Hilbert gravity.",
+  "closure_review": "L_L06_ACTION_SUMMARY_LOGIC_CLOSURE_REVIEW_0_1.json",
+  "native_compilation": "LISI_NATIVE_COMPILATION_REGROUNDED_0_23.isg",
+  "native_derivation": "L_L06_ACTION_SUMMARY_LOGIC_REGROUNDED_NATIVE_DERIVATION_0_1.json",
+  "body_analysis": {
+    "body_formula": {
+      "kind": "OP",
+      "role": "AND",
+      "args": [
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944115
+            },
+            {
+              "kind": "RAW",
+              "id": 942167
+            },
+            {
+              "kind": "RAW",
+              "id": 944192
+            },
+            {
+              "kind": "RAW",
+              "id": 944193
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944115
+            },
+            {
+              "kind": "RAW",
+              "id": 942167
+            },
+            {
+              "kind": "RAW",
+              "id": 944192
+            },
+            {
+              "kind": "RAW",
+              "id": 944194
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944115
+            },
+            {
+              "kind": "RAW",
+              "id": 942167
+            },
+            {
+              "kind": "RAW",
+              "id": 944192
+            },
+            {
+              "kind": "RAW",
+              "id": 944195
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "IMPLIES",
+          "args": [
+            {
+              "kind": "OP",
+              "role": "AND",
+              "args": [
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 944115
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 942167
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944192
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944194
+                    }
+                  ]
+                },
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 944115
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 942167
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944192
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944195
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "OP",
+              "role": "NOT",
+              "args": [
+                {
+                  "kind": "OP",
+                  "role": "EQUAL",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 944196
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944197
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "support_incidences": [
+      [
+        940005,
+        941167,
+        940105
+      ]
+    ],
+    "target_internal_behavior_load_bearing": false,
+    "relation_semantics": "actionContainsTerm is used only as a finite extensional membership incidence; the source does not require term-composition laws at this body.",
+    "logical_force": "Core IMPLIES + NOT(EQUAL) carries the explicit source conclusion that the resulting dynamics are not identical to pure Einstein-Hilbert dynamics."
+  },
+  "core_gates": {
+    "body_primitive_closed": true,
+    "support_primitive_closed": true,
+    "transitive_dependencies_primitive_closed": true,
+    "definitionally_reducible_logical_operator_left_hidden": false,
+    "unsupported_native_addition_present": false,
+    "source_semantics_conserved": true,
+    "qualified_qu_required": false,
+    "schema_closure_applicable": false,
+    "cross_author_semantics_used": false
+  },
+  "anti_leak_guards": [
+    "Einstein-Hilbert, cosmological, Kretschmann/SKY and torsion targets are opaque identities",
+    "no curvature or gravity equations are imported",
+    "historical closure packets are not premises"
+  ],
+  "proposed_disposition": "CLOSED_PRIMITIVE",
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}
