@@ -47,3 +47,18 @@ No item may be closed merely by referencing E8, Spin, Clifford algebra, triality
 | L-A0-063–066 | coupling/value equations and source scope; proposal/limitation modalities; unresolved realization boundaries; speculative-future-direction guards | INCOMPLETE |
 
 These obligations are source-selected, not unification-selected. No item may be skipped because later cross-track comparison appears unlikely to use it.
+
+
+## L02 full-treatment successor obligations exposed by SSC 0.4
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-067–069 | M15 base/manifold; M16 forms/integration; M18 connection/curvature; auxiliary B/Phi carrier semantics; symmetric endomorphism; polynomial potential; exact variational equations | INCOMPLETE |
+| L-A0-070–071 | M02/M05 metric/dual structures; spacetime Hodge star and Lie-algebra duality kept distinct; nondegenerate-frame dependency; Phi ansatz and branch/solution semantics | INCOMPLETE |
+| L-A0-072–075 | M08–M10 decomposition under spin(1,3)+spin(N); M17–M20 frame-Higgs factorization, connection decomposition, torsion, covariant derivative, matched-frame and zero-torsion restriction semantics | INCOMPLETE |
+| L-A0-076 | M16–M18 projected curvature/field equations and Einstein-type tensor semantics; source guard that gravity remains modified by additional curvature equations | INCOMPLETE |
+| L-A0-077–079 | M16 action/integration/Hodge contractions; Einstein-Hilbert, cosmological, SKY, Higgs, YM sector reconstruction; coupling/value equations and running caveat | INCOMPLETE |
+| L-A0-080–081 | fermion/Grassmann carrier; covariant Dirac operator; spin/chirality/Majorana-Weyl constraints; spin(10)→spin(11,3) embedding and Higgs mass action | INCOMPLETE |
+| L-A0-082–084 | exact logical dependency of reconstruction on Phi/E/e'=e/T=0 restrictions; emergent-metric/symmetry-breaking transition semantics; unresolved gravity/quantization/general-potential boundaries | INCOMPLETE |
+
+The ansatz and restricted-solution dependencies are load-bearing. Primitive reduction MUST NOT replace the conjunction of the source action, selected solution branch, and explicit restrictions with a stronger unconditional low-energy reconstruction claim.
