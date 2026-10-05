@@ -20,8 +20,8 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
-| source traversal complete | IN PROGRESS |
-| SSC frozen complete | NOT YET |
+| source traversal complete | PASS — L01–L06 complete |
+| SSC frozen complete | PASS — `SOURCE_SEMANTIC_CENSUS_0_1.json` |
 | primitive math support complete | NOT YET |
 | native .isg bundle | NOT YET |
 | graph-derived closure ledger | NOT YET |
@@ -56,9 +56,11 @@ No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpreta
 
 Current working assertion base: `ASSERTION_BASE_A0_0_12.md`.
 
-Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_9.json`.
+Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_10.json`.
 
-Current working Source Semantic Census: `../TRACK_L_WORKING_SSC_0_8.md`.
+Frozen Source Semantic Census: `SOURCE_SEMANTIC_CENSUS_0_1.json`.
+
+Historical working census immediately before freeze: `../TRACK_L_WORKING_SSC_0_8.md`.
 
 
 ## Current execution gate
@@ -68,8 +70,8 @@ Discovery Protocol is blocked.
 The required order is:
 
 ~~~text
-complete/freeze L SSC
--> compile authoritative L native .isg bundle
+frozen L SSC [PASS]
+-> compile authoritative L native .isg bundle [CURRENT]
 -> primitive/schema closure
 -> mechanically derived Core-0.21 closure ledger
 -> five Core qualification gates
@@ -86,4 +88,4 @@ Existing partial native source instances remain evidence/components; they do not
 
 The current L06 census was taken from the frozen arXiv v2 paper, including the full Cartan/generalized-Cartan/superconnection/regional-fermion construction and the source's explicit assumptions and discussion-level limitations.
 
-All six frozen L sources now have section-level census expansions. The L track is still **not census-complete** until the final assertion-conservation pass verifies every displayed equation, table, footnote-level guard, and source limitation and then freezes the SSC.
+All six frozen L sources passed the final census-conservation review. Track L source traversal is complete and the 191-item SSC is frozen. This does **not** imply native compilation or primitive closure.
