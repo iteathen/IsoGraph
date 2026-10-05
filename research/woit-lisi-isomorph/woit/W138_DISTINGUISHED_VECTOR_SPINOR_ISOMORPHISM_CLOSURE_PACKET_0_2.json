@@ -1,0 +1,54 @@
+{
+  "schema": "woit.w138-distinguished-vector-spinor-isomorphism-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_AFTER_GROUP_IDENTITY_CORRECTION",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-138",
+  "source_assertion_id": "W-A0-057",
+  "frozen_body": "Under the conventional Euclidean vector-spinor identification, a distinguished nonzero Euclidean vector supplies an isomorphism between the left spinor and the conjugate right spinor, permitting translation between chirally symmetric and asymmetric descriptions.",
+  "source": "W02 §III",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_DISTINGUISHED_VECTOR_SPINOR_IDENTIFICATION_SOURCE_INSTANCE_0_1.isg",
+  "base_support_packet": "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json",
+  "w02_support_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json"
+  ],
+  "additional_dependency_files": [
+    "research/woit-lisi-isomorph/woit/WOIT_PRIMITIVE_CONJUGATE_VECTOR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_ids": 113,
+    "additional_declared_ids": 102,
+    "total_provider_ids": 215,
+    "unresolved_local_refs": 0,
+    "all_extra_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "right_spinor_carrier": 189010,
+    "left_spinor_carrier": 189020,
+    "conjugate_right_spinor_carrier": 944100,
+    "scalar_conjugation": 204100,
+    "right_to_conjugate_right_semilinear_bijection": 944110,
+    "left_to_conjugate_right_linear_bijection": 944120,
+    "distinguished_euclidean_direction": 205105,
+    "selected_isomorphism_incidence": 944121
+  },
+  "semantic_guards": [
+    "The conjugate-right carrier is behaviorally defined through an exact conjugate-semilinear bijection, not a name-only role.",
+    "The distinguished vector is tied extensionally to the exact linear isomorphism; no unrepresented map behavior is hidden in the selection incidence.",
+    "This closes vector-supplied spinor identification only; SU(2)_R representation intertwining remains a separate W-SSC-134 burden.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W138_DISTINGUISHED_VECTOR_SPINOR_ISOMORPHISM_CLOSURE_PACKET_0_1.json",
+  "group_identity_revalidation": "PASS compositionally after W128/W131 successors revalidated on corrected conventional/right-handed source instances."
+}
