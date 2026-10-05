@@ -1,0 +1,38 @@
+{
+  "schema": "woit.w028-common-complexification-real-forms-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-028",
+  "frozen_body": "W01 identifies the common complexification of Euclidean, Minkowski, and split-signature four-vector spaces with M(2,C)=Hom(S_R,S_L), while retaining different real-form/action constraints for each signature.",
+  "source": "W01 §§2.1–2.2",
+  "support_packets": [
+    "W130_CONVENTIONAL_HOM_TENSOR_CLOSURE_PACKET_0_1.json",
+    "W129_CONVENTIONAL_ANALYTIC_CONTINUATION_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "common_complex_matrix_carrier": 204110,
+    "hom_tensor_carrier": "closed under W130 as exact Hom(S_R^*,S_L) / tensor-equivalent finite presentation",
+    "common_complex_action": 204220,
+    "minkowski_real_carrier": 204130,
+    "euclidean_real_carrier": 205100,
+    "minkowski_embedding": 204151,
+    "euclidean_embedding": 205111,
+    "lorentz_real_form_condition": 204230,
+    "euclidean_real_form_condition": 204231,
+    "real_linear_wick_bijection": 948100
+  },
+  "rationale": "W028 is the earlier W01 source statement whose mathematical content is already rendered exactly by the conventional Hom/tensor carrier (W130) and the distinct Minkowski/Euclidean real-form embeddings/action conditions (W129). The census identity remains separate.",
+  "guards": [
+    "Minkowski and Euclidean real forms remain distinct and are not identified.",
+    "The split-signature role remains source-level in this closure only insofar as W028 says the common complexification admits another distinct real form; no detailed split real-form group is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
