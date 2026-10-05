@@ -1,0 +1,47 @@
+{
+  "schema": "woit.w132-right-handed-tradeoff-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-132",
+  "source_assertion_id": "W-A0-051",
+  "frozen_body": "The proposed right-handed representation gives up the conventional holomorphic SL(2,C)_L x SL(2,C)_R representation used for group-coordinate analytic continuation, while retaining a complex spacetime with real Minkowski and Euclidean subspaces.",
+  "source": "W02 §II",
+  "support_packets": [
+    "W129_CONVENTIONAL_ANALYTIC_CONTINUATION_CLOSURE_PACKET_0_1.json",
+    "W130_CONVENTIONAL_HOM_TENSOR_CLOSURE_PACKET_0_1.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json"
+  ],
+  "reconstruction": {
+    "common_complex_carrier": 204110,
+    "conventional_two_factor_action": 204220,
+    "conventional_left_role": 204210,
+    "conventional_right_role": 204211,
+    "conventional_wick_map": 948100,
+    "minkowski_real_slice": 204130,
+    "euclidean_real_slice": 205100,
+    "right_handed_group_role": 205132,
+    "right_handed_action": 205120,
+    "right_handed_action_uses_adjoint": true,
+    "left_factor_spacetime_action_in_right_handed_formulation": "ABSENT_BY_SOURCE_FORMULATION"
+  },
+  "exact_tradeoff": [
+    "conventional formulation: independent left/right complex group roles act on M2(C)",
+    "right-handed formulation: only right-handed group role acts on M2(C)",
+    "right-handed action uses adjoint/conjugation and is not the same holomorphic two-factor group-coordinate action",
+    "both formulations retain the same complex carrier and the frozen Minkowski/Euclidean real slices"
+  ],
+  "semantic_guards": [
+    "This is a source-authored formulation tradeoff, not a DTS successor judgment.",
+    "Absence of the left spacetime action is inherited only from the exact right-handed source formulation already closed in W-SSC-131.",
+    "No electroweak/internal interpretation is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
