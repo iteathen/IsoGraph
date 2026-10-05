@@ -1,0 +1,58 @@
+{
+  "schema": "woit.w145-complex-selfdual-sl2-sym2-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-145",
+  "source_assertion_id": "W-A0-064",
+  "frozen_body": "Complexified self-dual two-forms are identified with sl(2,C)_R, equivalently traceless endomorphisms of the right spinor and the symmetric square of two right spinors.",
+  "source": "W02 §IV.2",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_COMPLEX_SELFDUAL_SL2_SYM2_SOURCE_INSTANCE_0_1.isg",
+  "base_support_packet": "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json",
+  "additional_dependency_files": [
+    "research/woit-lisi-isomorph/woit/W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_4.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/woit/W02_MINKOWSKI_HODGE_COMPLEX_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_provider_ids": 113,
+    "additional_declared_ids": 117,
+    "total_provider_ids": 230,
+    "unresolved_local_refs": 0,
+    "all_additional_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "complex_selfdual_two_form_carrier": 206114,
+    "traceless_endomorphism_carrier": 208100,
+    "sl2_bracket": 208104,
+    "right_spinor_carrier": 208120,
+    "sl2_action_on_spinor": 208127,
+    "symmetric_square_carrier": 208140,
+    "symmetric_bilinear_map": 208148,
+    "traceless_to_sym2_linear_bijection": 208149,
+    "induced_sym2_action": 208150,
+    "selfdual_to_traceless_linear_bijection": 208160,
+    "transported_selfdual_bracket": 208164
+  },
+  "semantic_guards": [
+    "W02 Minkowski scalar/matrix support is revision 0.4, preserving 204145=-i.",
+    "The closure is algebraic/representation-theoretic only; it adds no gauge bundle, connection, or analytic field-theory semantics.",
+    "The symmetric square is explicitly presented by a three-dimensional carrier and symmetric bilinear generator, not left as a name.",
+    "No Lisi or cross-track semantics are premises."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
