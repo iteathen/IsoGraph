@@ -1,0 +1,21 @@
+{
+  "schema": "woit-lisi.lisi-ssc-source-correction.v0.2",
+  "date": "2026-10-04",
+  "status": "SOURCE_SEMANTIC_CORRECTION",
+  "old_census": "SOURCE_SEMANTIC_CENSUS_0_1.json",
+  "new_census": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "affected_ids": [
+    "L-SSC-130"
+  ],
+  "old_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; the three reflection types preserve the triality form while permuting role carriers.",
+  "corrected_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T.",
+  "source_basis": "L05 §3 distinguishes anti-invariance of individual generalized reflections from invariance of the triality group/even generalized-reflection compositions.",
+  "downstream_effects": [
+    "old frozen census remains historical evidence",
+    "Core-0.21 source-census hash must change",
+    "qualification target and semantic-scope boundary must advance to a new revision",
+    "previously closed L-SSC-125/126/128/129 bodies are unchanged and require revalidation, not semantic reconstruction",
+    "IA fixed point is unaffected because none is currently legal/recorded"
+  ],
+  "cross_author_semantics_used": false
+}
