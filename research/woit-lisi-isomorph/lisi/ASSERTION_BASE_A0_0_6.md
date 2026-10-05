@@ -58,4 +58,6 @@ This is not the complete SSC. It gives stable IDs to source assertions already e
 
 ## Closure state
 
-All A0 bodies are currently INCOMPLETE_UNEXPANDED with respect to strict primitive closure except for trivial provenance/scope guards. Admission records what the sources assert, not that the physical claim is correct.
+Admission records what the sources assert, not that the physical claim is correct.
+
+The quaternionic slices of L-A0-040–043 now have native research-local schema instantiations in `LISI_L05_QUATERNION_TRIALITY_SOURCE_INSTANCE_0_1.isg`. They remain pre-seal because the reusable schemas are research-local and the complete L05 source treatment, recursive IA closure, and full Core qualification are not complete. All other unqualified A0 bodies remain INCOMPLETE_UNEXPANDED with respect to strict primitive closure.
