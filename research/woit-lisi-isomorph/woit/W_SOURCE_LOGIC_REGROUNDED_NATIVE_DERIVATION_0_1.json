@@ -1,0 +1,78 @@
+{
+  "schema": "woit.regrounded-source-logic-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_BODIES_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "frontier": "W_REGROUNDED_SOURCE_LOGIC_FRONTIER_0_1.json",
+  "native_bundle": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_8.isg",
+  "core_operators": {
+    "AND": 150001,
+    "NOT": 150003,
+    "IMPLIES": 150004,
+    "PREDICATE_APPLICATION": 150010,
+    "DEFINITION_EXPANDS_TO": 150019
+  },
+  "raw_relations": {
+    "934002": "body-target-source-status finite extensional relation",
+    "934030": "has explicit successor target",
+    "934031": "overwrites frozen source revisions",
+    "934032": "retroactively rewrites source revisions"
+  },
+  "raw_status_values": {
+    "934033": "interpretation still changing",
+    "934034": "revision-scoped",
+    "934035": "mutable project-status evidence",
+    "934036": "preliminary version",
+    "934037": "dated 2026-07-14",
+    "934038": "future/later account expected to differ substantially",
+    "934039": "unlikely to be updated in place",
+    "934040": "work in progress",
+    "934041": "dated July-2026"
+  },
+  "raw_targets": {
+    "934310": "W021 W04e author interpretation",
+    "934311": "W021 later-claims set",
+    "934320": "W025/W058 July-2026 W03 mutable project-status evidence/current notes",
+    "934321": "W025 frozen source revisions",
+    "934331": "W058 future write-up",
+    "934332": "W058 frozen W01/W02 revisions",
+    "934340": "W121 linked W04e notes",
+    "934341": "W121 author-maintained W03/W04e interpretation",
+    "934342": "W121 later account"
+  },
+  "items": [
+    {
+      "census_id": "W-SSC-021",
+      "frozen_body": "W04e says the author's interpretation is still changing and therefore later claims must remain revision-scoped.",
+      "logical_reading": "AND(changing(W04e interpretation), IMPLIES(changing(W04e interpretation), revision_scoped(later claims)))",
+      "guard": "The implication is source-revision logic only; W04e mathematical content is opaque."
+    },
+    {
+      "census_id": "W-SSC-025",
+      "frozen_body": "W03 is mutable project-status evidence and cannot overwrite frozen source revisions without an explicit successor target.",
+      "logical_reading": "AND(mutable_status(W03 evidence), IMPLIES(overwrites(W03 evidence, frozen revisions), has_explicit_successor_target(W03 evidence)))",
+      "guard": "This is the direct classical reading of 'cannot overwrite ... without'; no successor target is asserted to exist."
+    },
+    {
+      "census_id": "W-SSC-058",
+      "frozen_body": "The July-2026 W03 status explicitly says the current notes are work in progress, are unlikely to be updated in place, and a future write-up is expected to differ significantly; mutable status evidence therefore cannot retroactively rewrite W01/W02.",
+      "logical_reading": "Assert the four source-status facts, then IMPLIES(AND(those facts), NOT(retroactively_rewrites(W03 mutable status evidence, frozen W01/W02)))",
+      "guard": "No W01/W02 mathematical semantics are imported; only their frozen-revision identities occur."
+    },
+    {
+      "census_id": "W-SSC-121",
+      "frozen_body": "The linked W04e notes are a preliminary version dated 2026-07-14, while the author-maintained W03/W04e status explicitly says the interpretation is still changing and a later account is expected to differ substantially; the preliminary notes therefore remain revision-scoped.",
+      "logical_reading": "Assert preliminary/date/changing/later-difference facts, then IMPLIES(AND(those facts), revision_scoped(linked preliminary notes))",
+      "guard": "Only source revision/provenance status is represented; no mathematical claim from the notes is imported."
+    }
+  ],
+  "guards": [
+    "raw predicates have no behavior beyond their current finite native applications",
+    "all source/version/note identities are raw carriers",
+    "conditional wording is expressed with Core logical operators",
+    "no campaign-specific revision schema is introduced",
+    "no historical closure packet is a premise",
+    "all four items remain INCOMPLETE_UNEXPANDED until separate primitive-closure audit"
+  ],
+  "target_behavior_imported": false,
+  "closure_claim": false
+}
