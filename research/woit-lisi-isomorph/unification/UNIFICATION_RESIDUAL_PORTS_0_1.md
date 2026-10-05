@@ -57,7 +57,9 @@ Required:
 
 **U1.1 result:** the strong global triality form is **REJECTED**.
 
-The finite U0 graph/incidence action survives the W01/W05 convention transport only when quaternion conjugation, homogeneous-coordinate swap, and the induced action side-swap are retained. Full source-specific triality transport remains QU pending L05 closure.
+The finite U0 graph/incidence action survives the W01/W05 convention transport only when quaternion conjugation, homogeneous-coordinate swap, and the induced action side-swap are retained.
+
+The quaternionic L05 scalar triality form and canonical role cycle are now source-native on the finite slice. Their exact transport law is sharper: simultaneous quaternion conjugation exchanges the two chiral triality arguments. Exact tensor invariance is restored only by adding an explicit Q_minus/Q_plus exchange. Strict frozen-role transport therefore fails, while the role-swapped algebraic transport passes. W05 does not source-type its homogeneous q1/q2 coordinates as that chiral exchange, so the required role assignment remains outside inherited source structure.
 
 At the U1.0 infinity patch there is no source-backed Lisi vector/division-algebra element or triality action. Making the triality action total would therefore require algebraic structure not supplied by either source or forced by U0. The L-ALG triality residual remains outside U1.0 rather than being forced into the compactification.
 
