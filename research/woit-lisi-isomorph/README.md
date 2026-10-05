@@ -16,9 +16,9 @@ The historical objective was to locate and characterize the strongest source-fai
 
 The current objective is **constructive unification**:
 
-> Build the smallest source-faithful candidate structure that can reconstruct selected Woit and Lisi formulations through one shared kernel, while preserving incompatible residuals and minimizing new synthesis axioms.
+> Discover the strongest invariant structural correspondences that emerge after both programs are reduced to primitive logic, then construct the most complete source-faithful conservative synthesis those correspondences support. Minimize synthesis support only after the maximal viable structure is known.
 
-The frozen BT01 algebraic/projective result is now an input interface, not the endpoint.
+The frozen BT01 algebraic/projective result remains an input interface and historical discovery result, not the endpoint and not a required factorization prior.
 
 See `UNIFICATION_TARGET_REVISION_0_1.md` and `unification/README.md`.
 
@@ -28,11 +28,16 @@ The original maximal-common-quotient question remains preserved as the discovery
 
 ### Unification questions
 
-1. Can Woit's global twistor/projective geometry and Lisi's chiral Clifford/triality structure be conservatively amalgamated over the shared quaternionic/chiral kernel?
-2. Can Woit's self-dual Yang–Mills/chiral-GR dynamics and Lisi's gauge/gravity/Higgs or generalized-Cartan dynamics be reconstructed from one connection/action architecture?
-3. Does the octonionic/triality layer extend the quaternionic synthesis without losing the lower reconstruction?
-4. Is an exceptional E8 realization necessary, optional, or obstructed after a lower unified structure exists?
-5. What genuinely new synthesis axioms, if any, are required?
+The active questions are intentionally structure-neutral:
+
+1. After full primitive reduction, which invariant relation patterns recur across the two independently sealed source graphs?
+2. Which apparent correspondences survive deletion of domain labels and derived abstractions?
+3. Which source transformations have Transition Isomorph structure, and which only share endpoints or terminology?
+4. What larger correspondence classes emerge that were not visible in the original theory packaging?
+5. What is the largest source-reconstructive synthesis supported by those classes?
+6. After that maximal structure is known, what is its minimum sufficient synthesis support?
+
+Twistor/triality, dynamical, octonionic, and exceptional questions remain historical hypothesis buckets only until the reduced structures regenerate them.
 
 ## Full-treatment acceptance criterion
 
@@ -89,7 +94,7 @@ The project-generated synthesis lives under `unification/`.
 
 It may consume frozen source evidence and frozen common-kernel evidence, but it cannot feed hypotheses back into Track W or Track L.
 
-Exploratory synthesis may proceed before the source tracks seal. Formal promotion waits for both independent source treatments to seal and for post-seal validation.
+Existing exploratory synthesis artifacts remain preserved, but new synthesis construction is now subordinate to the primitive-first discovery method. Formal cross-track discovery and promotion wait for both independent source treatments to seal for the claimed scope.
 
 ### Hypothesis quarantine
 The motivating bridge supplied at project initiation is preserved separately in `HYPOTHESIS_QUARANTINE_0_1.md`. It is **test material, not source authority**. It must not be fed into either source rendering before those renderings are sealed.
@@ -171,7 +176,7 @@ A known representation-theoretic criticism of (E_8) unification, Distler–Garib
 
 ## Required execution order
 
-`complete W and L source treatments in parallel -> maintain frozen shared kernel U0 -> construct exploratory conservative amalgams U1+ without feedback into source tracks -> independently seal W and L -> post-seal NEI/DTS/DP over the synthesis -> reconstruction/falsifiers -> obstruction audit -> promote, branch, or reject`
+`complete W and L source traversal/SSC -> primitive/schema closure -> mechanically derived closure ledgers -> recursive IA fixed points -> source-local NEI/DTS/DP -> seal both tracks -> blind/anonymized cross-track NEI/DP/DTS -> emergent correspondence classes -> construct maximal source-reconstructive U -> falsifiers/obstruction audit -> minimum-sufficient-support audit -> qualify, branch, or reject`
 
 Any change to source scope, primitive kernel, governing authority, QU state, or IA inference profile reopens the affected closure under Core 0.21.
 
@@ -183,7 +188,7 @@ Any change to source scope, primitive kernel, governing authority, QU state, or 
 
 **Formulation-family search principle:** Joshua Oshiro — HUMAN_ORIGINATED_IDEA. On 2026-10-03 Joshua directed that the campaign identify multiple expressions of the same idea within each author's work and determine which source-faithful representatives provide the strongest cross-domain bridge, rather than assuming one formulation per author. The agent formalized this into the formulation-family protocol.
 
-**Current synthesis direction:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION. On 2026-10-04 Joshua changed the primary target from finding a bridge to constructing a unified formulation. The agent formalized that direction as a minimal conservative-amalgam synthesis protocol; the synthesis itself is project-generated and is not attributed to either source author.
+**Current synthesis direction:** Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION. On 2026-10-04 Joshua changed the primary target from finding a bridge to constructing a unified formulation, then clarified that the research must discover that structure by reducing both programs to invariant logical primitives rather than selecting a familiar unification architecture in advance. The agent formalized this as a primitive-first maximal-conservative discovery method; the synthesis itself is project-generated and is not attributed to either source author.
 
 **Earliest evidence currently located:** preserved dated project conversation on 2026-10-03. This README is the first public repository record created for the campaign; it does not backdate that public record.
 
@@ -209,12 +214,15 @@ External theories, papers, mathematical constructions, and criticisms remain EXT
 - `TRACK_W_DTS_WORKING_0_1.md` / `TRACK_L_DTS_WORKING_0_1.md` — source-side DTS anatomy for the major same-author formulation transitions; provisional.
 - `FORMULATION_FAMILY_GRAPH_0_1.json` — machine-readable provisional family graph containing intra-author edges only.
 - `SOURCE_NATIVE_CROSS_REFERENCE_QUARANTINE_0_1.md` — preserves cross-author references encountered inside a source without allowing them to bias independent track construction.
+- `FULL_TREATMENT_DISCOVERY_FRONTIER_0_1.json` — current neutral execution frontier; explicitly not a Core-0.21 closure ledger.
+- `unification/UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md` — active primitive-first anti-bias method for maximal unification discovery.
 
 ## Open questions
 
-- What is the smallest U1 that attaches Woit's global twistor geometry and Lisi's chiral Clifford/triality residuals while reconstructing U0?
-- Which chart/real-structure transition laws are required for a global fiberwise extension?
-- Can W02 chiral dynamics and Lisi gauge/Cartan dynamics be represented as projections of one source-conservative connection/action structure?
-- Does the octonionic layer extend U1 naturally or introduce a genuine obstruction?
-- Does E8 add necessary structure after U1/U2, or only a stronger realization of structure already present?
-- Which synthesis relations are inherited, forced by U0, genuinely new, or impossible?
+- Can both source tracks reach complete Core-0.21 census and primitive closure without bridge-driven scope shrinkage?
+- What new source-local IAs appear after deeper reductions reopen IA closure?
+- Which natural/domain identities survive NEI after high-level names are removed?
+- Which same-author and cross-author transitions survive DTS comparison?
+- What correspondence classes emerge from blind primitive comparison that were not visible in the original theory terminology?
+- What is the maximal source-reconstructive synthesis those classes support?
+- Which synthesis relations remain necessary after the final minimum-sufficient-support audit?
