@@ -26,4 +26,4 @@ X -> g_L X g_R^{-1}.
 
 Thus the chiral symmetry is represented by distinct left/right source group roles acting on the exact carrier, while the Hom/tensor presentations give the source’s two equivalent descriptions.
 
-No canonical (S_R\cong S_R^*), topology, smooth structure, or right-handed replacement semantics are added.
+No canonical `S_R` canonically identified with `S_R^*`, topology, smooth structure, or right-handed replacement semantics are added.
