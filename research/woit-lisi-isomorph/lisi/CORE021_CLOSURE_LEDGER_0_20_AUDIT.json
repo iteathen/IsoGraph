@@ -1,0 +1,47 @@
+{
+  "schema": "lisi.core021-regrounded-ledger-audit.v0.2",
+  "date": "2026-10-05",
+  "status": "PASS_STRUCTURAL_PARTIAL_CLOSURE",
+  "ledger": "CORE021_CLOSURE_LEDGER_0_20.json",
+  "authoritative_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_9.json",
+  "authoritative_native_compilation": "LISI_NATIVE_COMPILATION_REGROUNDED_0_9.isg",
+  "source_semantic_census": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "counts": {
+    "census": 191,
+    "closed_primitive": 3,
+    "closed_schema": 0,
+    "incomplete_unexpanded": 188,
+    "nodes": 251,
+    "reachable_authoritative_nodes": 251
+  },
+  "accepted_closed_ids": [
+    "L-SSC-189",
+    "L-SSC-190",
+    "L-SSC-191"
+  ],
+  "deterministic_gates": {
+    "coverage": "PASS",
+    "reconstruction_structure": "PASS",
+    "scope_integrity": "PASS",
+    "authority_routing_structure": "PASS",
+    "canonical_hash_recomputation": "PASS",
+    "ia_fixed_point_current": "NOT_ASSERTED_NULL",
+    "strict_closure": "FAIL_EXPECTED_188_INCOMPLETE"
+  },
+  "hashes": {
+    "source_semantic_census_sha256": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "primitive_kernel_sha256": "b11985e132bd790f4f9abb516950955e514e481710f8a940545e315d40d919cd",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "3ea01e850f3f829170dda3677dd232767fe39df17aa9f48de9e80c8fe0ba0b9d"
+  },
+  "guards": [
+    "This audit is structural qualification evidence only; it does not prove domain truth.",
+    "Historical packet-driven closures remain research evidence and are not current authority.",
+    "Only L189/L190/L191 are admitted because their current manifest entries carry audited primitive closure metadata and their exact tuples occur in the authoritative native graph.",
+    "Recursive IA remains unauthorized until strict primitive/schema closure and Core qualification.",
+    "NEI, DTS, and DP remain blocked."
+  ]
+}
