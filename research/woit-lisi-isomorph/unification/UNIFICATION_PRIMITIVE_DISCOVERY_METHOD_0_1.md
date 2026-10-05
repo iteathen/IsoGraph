@@ -233,18 +233,24 @@ U1.0 may later reappear as a component of an emergent larger structure, or it ma
 The active order is now:
 
 ~~~text
-A. finish W source traversal / SSC
-B. finish L source traversal / SSC
+A. finish W source traversal and freeze complete W SSC
+B. finish L source traversal and freeze complete L SSC
 
-C. complete source-local primitive/schema reduction
-D. mechanically derive Core-0.21 closure ledgers
+C. compile each frozen SSC into an authoritative native .isg bundle
+   preserving every census item and source boundary
 
-E. recursively close W IA
-F. recursively close L IA
+D. primitive/schema-close every load-bearing native semantic path
+E. mechanically derive Core-0.21 closure ledgers from SSC + scope + native graph
+F. verify SOUNDNESS / COVERAGE / RECONSTRUCTION / SCOPE_INTEGRITY / AUTHORITY_ROUTING
 
-G. run required source-local NEI
-H. run source-local DTS
-I. run source-local DP
+G. recursively generate and primitive-close W IA to a pinned fixed point
+H. recursively generate and primitive-close L IA to a pinned fixed point
+   reopening closure whenever Core 0.21 invalidates the tuple
+
+I. run required source-local NEI
+J. run source-local DTS
+
+K. only after A-J pass, run source-local DP
 
 J. freeze blind cross-track comparison packet
 K. run cross-track NEI / DP / DTS correspondence search
