@@ -26,10 +26,10 @@
       ],
       "obligations": [
         "local restriction reconstructs U0 — PASS in U1.0",
-        "chart transitions preserve attached algebraic action",
-        "pseudoreal structure is preserved",
-        "compactification patch introduces no unsupported Lisi structure",
-        "both source residual projections reconstruct"
+        "chart transitions preserve U0 graph/incidence action — PASS with conjugation + side-swap; source-specific triality transport remains QU",
+        "pseudoreal structure is preserved in U1.0; triality/J compatibility remains QU",
+        "compactification patch introduces no unsupported Lisi structure — PASS by rejecting the strong U1.1 global extension",
+        "source residual projections reconstruct; L-ALG triality remains outside U1.0"
       ],
       "phases": [
         {
@@ -46,11 +46,17 @@
         {
           "id": "U1.1-TR",
           "label": "triality/fiber extension",
-          "status": "OPEN",
+          "status": "REJECTED",
           "prerequisite": "U1.0-PC",
-          "question": "can Lisi triality/division-algebra residuals act globally over the U1.0 family while preserving chart and pseudoreal structure?"
+          "question": "can Lisi triality/division-algebra residuals act globally over the U1.0 family while preserving chart and pseudoreal structure?",
+          "artifact": "UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.md",
+          "certificate": "UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.json",
+          "tested_synthesis_hypothesis": "UH-001B",
+          "synthesis_edges_accepted": [],
+          "result": "finite U0 incidence survives W01/W05 transport, but a total triality action over the compactification patch would require unsupported algebraic/vector-role structure at infinity; L-ALG remains a residual"
         }
-      ]
+      ],
+      "current_boundary": "U1.0-PC admitted; strong U1.1-TR global triality extension rejected"
     },
     {
       "id": "U2-DYN",
