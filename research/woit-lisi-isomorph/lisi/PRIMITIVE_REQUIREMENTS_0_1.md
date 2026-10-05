@@ -29,3 +29,21 @@
 10. discrete C/P/T/t operation schema.
 
 No item may be closed merely by referencing E8, Spin, Clifford algebra, triality, connection, or Cartan geometry.
+
+
+## L01 full-treatment successor obligations exposed by SSC 0.3
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-044–046 | M15 four-dimensional base/manifold support; M16 differential forms; M17 principal-bundle/graded-field ownership; M18 connection/curvature; Grassmann parity/statistics; exact bracket/action transport | INCOMPLETE |
+| L-A0-047–048 | M08 Lie algebra; M10 representations; M22 Cartan/root/weight system; exact root-addition/bracket incidence and dual-representation semantics | INCOMPLETE |
+| L-A0-049 | M02–M11 with source-specific Cl(3,1), Cl(4), Cl(7,1), chiral matrix representations, frame-Higgs multiplication, and so(7,1) embedding | INCOMPLETE |
+| L-A0-050 | M21 source-specific D4 triality, order-three role cycle, representation-carrier typing, and proposal-status guard | INCOMPLETE |
+| L-A0-051–053 | M08–M10 Lie/subalgebra/representation embeddings; M22 complete root-coordinate support; F4/G2 centralizer and E8 root/decomposition claims; source-specific real-form data | INCOMPLETE |
+| L-A0-054–057 | M16 forms/wedge; M18 connection/curvature/covariant derivative; torsion; source grading; left/right action; exact sector projections and reconstruction | INCOMPLETE |
+| L-A0-058–059 | M16 integration/forms; multiplier fields; variational elimination; Clifford volume element; Hodge star; boundary-term semantics; Palatini/Einstein-Hilbert reconstruction | INCOMPLETE |
+| L-A0-060–061 | M16–M18 bosonic action sectors; Hodge/frame extraction and inversion; M20 role-selection semantics; explicit speculative/awkward-source guards | INCOMPLETE |
+| L-A0-062 | M16–M18 fermionic covariant derivative/action; Grassmann/anti-Grassmann semantics; frame/coframe contraction; Higgs and new-field coupling relations | INCOMPLETE |
+| L-A0-063–066 | coupling/value equations and source scope; proposal/limitation modalities; unresolved realization boundaries; speculative-future-direction guards | INCOMPLETE |
+
+These obligations are source-selected, not unification-selected. No item may be skipped because later cross-track comparison appears unlikely to use it.
