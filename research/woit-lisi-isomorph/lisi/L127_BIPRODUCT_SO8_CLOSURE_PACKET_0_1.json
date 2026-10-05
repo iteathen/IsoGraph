@@ -1,0 +1,102 @@
+{
+  "schema": "lisi.l127-octonion-biproduct-so8-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "L-SSC-127",
+  "frozen_body": "L05 distinguishes associative C/H multiplication from nonassociative octonion multiplication; octonionic bi-product operators span so(8) and cannot be reduced to imaginary-octonion multiplication alone.",
+  "source": "L05 §2",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_SO8_SOURCE_ASSERTION_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_SO8_SOURCE_ASSERTION_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_28_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FULL_METRIC_SKEW_ENDOMORPHISM_LIE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 20,
+    "declared_local_ids": 221,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "associative_controls": {
+      "C": "185001 via LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+      "H": "193100 -> 185001 via LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg"
+    },
+    "O_nonassociativity": {
+      "exact_basis_witness": "(e1 e2)e3 != e1(e2 e3)",
+      "source_instance": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_1.isg",
+      "basis_associativity_failures": 162
+    },
+    "imaginary_right_multiplication": {
+      "carrier": 226100,
+      "dimension_schema": 225000,
+      "dimension": 7,
+      "injection_into_biproducts": 226120
+    },
+    "biproduct_operator_space": {
+      "carrier": 226000,
+      "action": 226005,
+      "dimension_schema": 225001,
+      "dimension": 28,
+      "source_basis": "B_cd(x)=(x e_d) tilde(e_c), c<d",
+      "proper_extension_witness": "B_12 is outside the represented 7D right-multiplication injection image"
+    },
+    "structural_so8": {
+      "schema": 227000,
+      "bracket": 226006,
+      "statement": "all and only metric-skew linear endomorphisms with commutator bracket"
+    }
+  },
+  "evidence": {
+    "operator_falsifier": "L127_BIPRODUCT_OPERATOR_FALSIFIER_0_1.json",
+    "so8_falsifier": "L127_SO8_SOURCE_FALSIFIER_0_1.json",
+    "exact_source_table": {
+      "biproduct_span_rank": 28,
+      "imaginary_right_span_rank": 7,
+      "ordinary_O_metric_skew_failures": 14,
+      "ordinary_O_commutators_outside_span": 336
+    },
+    "ordinary_O_disposition": "INCONSISTENT_SOURCE",
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "so(8) is not used as an opaque semantic leaf",
+    "the 28D operator space is represented extensionally through metric-skew endomorphisms and commutator bracket",
+    "the 7D imaginary right-multiplication carrier is a proper represented subspace of the 28D bi-product carrier",
+    "ordinary-O source-table inconsistency is preserved and not repaired",
+    "representation closure is distinct from source consistency/truth",
+    "no Woit or synthesis premise occurs"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "COMPLETE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
