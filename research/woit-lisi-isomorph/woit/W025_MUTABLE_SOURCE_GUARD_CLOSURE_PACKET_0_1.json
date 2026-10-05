@@ -1,0 +1,29 @@
+{
+  "schema": "woit.w025-mutable-source-guard-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_PRIMITIVE_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-025",
+  "frozen_body": "W03 is mutable project-status evidence and cannot overwrite frozen source revisions without an explicit successor target.",
+  "source": "W03",
+  "exact_authority": [
+    "../SOURCE_CORPUS_FREEZE_0_2.md#W03",
+    "SOURCE_SEMANTIC_CENSUS_0_2.json#W-SSC-025",
+    "SOURCE_TRAVERSAL_LEDGER_0_9.json#W03"
+  ],
+  "representation": {
+    "classification": "RAW_DATA_ATOM",
+    "rationale": "The obligation is itself an exact frozen provenance/scope guard. It has no hidden mathematical or operational behavior to decompose; later DTS may consume it, but closure does not precompute DTS."
+  },
+  "exact_frozen_role": "mutable project-status evidence only; may date or qualify later revisions but may not silently rewrite frozen papers",
+  "guards": [
+    "This does not decide which later Woit formulation supersedes another.",
+    "It does not run DTS or infer a successor relation.",
+    "It preserves the requirement that any actual scope/successor change be explicit.",
+    "No Lisi or cross-track semantics are involved."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_PRIMITIVE",
+    "leaf_classification": "RAW_DATA_ATOM",
+    "exact_source_incidence": true
+  }
+}
