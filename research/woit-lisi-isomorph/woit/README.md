@@ -58,9 +58,9 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 ## W02 full-source expansion
 
-- `ASSERTION_BASE_A0_0_9.md` — current explicit assertion base; W-A0-071–090 add the full-source W01 obligations exposed beyond the bridge-bearing slice.
-- `../TRACK_W_WORKING_SSC_0_3.md` — current working W Source Semantic Census; still incomplete and therefore not yet frozen Core-0.21 input.
-- `SOURCE_TRAVERSAL_LEDGER_0_6.json` — current traversal state; W01 main text and major appendices have been expanded, with final assertion-conservation still open.
+- `ASSERTION_BASE_A0_0_10.md` — current explicit assertion base; W-A0-091–122 add the W03/W04a–W04e source obligations exposed by the full-treatment pass.
+- `../TRACK_W_WORKING_SSC_0_4.md` — current working W Source Semantic Census; still incomplete and therefore not yet frozen Core-0.21 input.
+- `SOURCE_TRAVERSAL_LEDGER_0_7.json` — current traversal state; W03 is traversed at the frozen retrieval, W04a–c and the main W04e notes are broadly traversed, while the W04d slide deck and W05 full-source pass remain open.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
 - `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
