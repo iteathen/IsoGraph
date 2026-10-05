@@ -1,0 +1,110 @@
+{
+  "schema": "lisi.l130-generalized-reflection-closure-packet.v0.2",
+  "status": "CANDIDATE_CLOSED_SCHEMA_REVALIDATED_ON_COMPLEX_SCALAR_0_2",
+  "date": "2026-10-05",
+  "census_id": "L-SSC-130",
+  "frozen_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T.",
+  "source": "L05 §3",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPACELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TIMELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TIMELIKE_REFLECTION_ANTIINVARIANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_GENERALIZED_REFLECTION_EXTENSION_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_2.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPACELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TIMELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TIMELIKE_REFLECTION_ANTIINVARIANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_GENERALIZED_REFLECTION_EXTENSION_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FINITE_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TRILINEAR_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETERIZED_SCALAR_EXTENSION_MAP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg"
+  ],
+  "prior_closed_dependencies": [
+    "L125-BODY",
+    "L128-BODY",
+    "L129-BODY"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 18,
+    "declared_local_ids": 448,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS_REVALIDATED",
+    "complex_scalar_successor": "LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_2.isg"
+  },
+  "reconstruction": {
+    "spacelike": "LISI_L05_SPACELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_2.isg",
+    "complexified_roles": "LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2.isg",
+    "timelike_maps": "LISI_L05_TIMELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.isg",
+    "timelike_antiinvariance": "LISI_L05_TIMELIKE_REFLECTION_ANTIINVARIANCE_0_1.isg",
+    "complex_domain_extension": "LISI_L05_COMPLEX_GENERALIZED_REFLECTION_EXTENSION_0_1.isg",
+    "generic_parameterized_extension_schema": 231000,
+    "split_phase_relation": 229000,
+    "reflection_type_atoms": [
+      223001,
+      223002,
+      223003
+    ]
+  },
+  "evidence": {
+    "spacelike_verifier": "tools/verify_l130_spacelike_reflections.mjs",
+    "timelike_verifier": "tools/verify_l130_timelike_reflections.mjs",
+    "complex_domain_verifier": "tools/verify_l130_complex_reflections.mjs",
+    "timelike_falsifier": "L130_TIMELIKE_REFLECTION_FALSIFIER_0_1.json",
+    "complex_falsifier": "L130_COMPLEX_REFLECTION_FALSIFIER_0_1.json",
+    "complex_controls": {
+      "odd_basis_cases": 6552,
+      "even_basis_cases": 76104,
+      "failures": 0
+    },
+    "ordinary_O_disposition": "INCONSISTENT_SOURCE_PROPAGATED",
+    "source_repair_used": false,
+    "complex_scalar_interface_verifier": "tools/verify_lisi_complex_scalar_interface.mjs"
+  },
+  "semantic_guards": [
+    "individual generalized reflections are anti-invariant; even compositions are invariant",
+    "s_u=+1 and s_u=-1 branches remain explicitly distinct",
+    "time-like swapped outputs carry the source factor i with i^2=embed(-1)",
+    "complexified roles are scalar extensions and are not identified with the original real roles",
+    "ordinary-O source inconsistency is preserved and not repaired",
+    "no Woit or synthesis premise occurs in the packet",
+    "time-like swapped outputs use the corrected complex-field multiplication handle 198102 with phase i=198108 and i^2=embed(-1)",
+    "the later alternate anti-linear real-structure claim is owned by L-SSC-135, not imported into L-SSC-130",
+    "the predecessor complex-scalar native interface defect is excluded from qualification dependencies"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "COMPLETE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "L130_GENERALIZED_REFLECTION_CLOSURE_PACKET_0_1.json",
+  "revalidation": {
+    "reason": "Pauli/complex scalar predecessor used negation handle 198103 as a malformed ternary multiplication-like relation.",
+    "old_interface_rejected_for_qualification": true,
+    "declaration_set_unchanged": true,
+    "source_semantics_changed": false,
+    "dependent_closed_bodies_to_revalidate": [
+      "L131-BODY",
+      "L132-BODY",
+      "L134-BODY"
+    ]
+  }
+}
