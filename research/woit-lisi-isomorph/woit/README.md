@@ -21,10 +21,10 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | PASS — 9/9 frozen source units |
-| SSC frozen complete | PASS — 127 obligations, SOURCE_SEMANTIC_CENSUS_0_1.json |
+| SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
 | primitive math support complete | IN PROGRESS |
 | native .isg bundle | PASS — authoritative routing compilation 0.1; semantic closure in progress |
-| graph-derived closure ledger | IN PROGRESS — 0.6: 5 CLOSED_SCHEMA / 122 incomplete |
+| graph-derived closure ledger | IN PROGRESS — 0.9: 6 CLOSED_SCHEMA / 145 incomplete |
 | recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
 | NEI pass | NOT YET |
 | DTS pass | PARTIAL / PROVISIONAL |
@@ -59,7 +59,7 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 ## W02 full-source expansion
 
 - `ASSERTION_BASE_A0_0_12.md` — frozen-track explicit assertion base candidate after source-conservation completion.
-- `SOURCE_SEMANTIC_CENSUS_0_1.json` / `SOURCE_SEMANTIC_CENSUS_FREEZE_0_1.md` — authoritative frozen W Source Semantic Census: 127 obligations across 9 source units.
+- `SOURCE_SEMANTIC_CENSUS_0_2.json` / `SOURCE_ASSERTION_CONSERVATION_0_2.md` — current corrected W Source Semantic Census: 151 obligations across 9 source units; SSC 0.1 is historical/incomplete.
 - `SOURCE_TRAVERSAL_LEDGER_0_9.json` / `SOURCE_ASSERTION_CONSERVATION_0_1.md` — source traversal and assertion-conservation PASS.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
@@ -88,14 +88,14 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 ## Frozen source-census checkpoint
 
-The W source corpus is now independently frozen for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
+The W source corpus is independently frozen at corrected SSC revision 0.2 for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
 
 The next active task is authoritative native W compilation and primitive/schema closure. Existing research-local source instances are reusable components only after their source ownership and reconstruction paths are routed from the frozen census.
 
 ## Current primitive-closure checkpoint
 
-- `CORE021_CLOSURE_LEDGER_0_6.json`: 5 frozen census obligations CLOSED_SCHEMA, 122 INCOMPLETE_UNEXPANDED.
-- Closed so far: W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098.
+- `CORE021_CLOSURE_LEDGER_0_9.json`: 6 frozen census obligations CLOSED_SCHEMA, 145 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
+- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098.
 - `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
 - No Lisi semantics are available to the W closure process.
 
