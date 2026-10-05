@@ -1,0 +1,71 @@
+{
+  "schema": "woit.pre-dp-gate.v0.1",
+  "status": "ENFORCED",
+  "date": "2026-10-04",
+  "scope": "W independent source track only",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_1.json",
+  "current_native_compilation": "WOIT_NATIVE_COMPILATION_0_1.isg",
+  "current_core021_ledger": "CORE021_CLOSURE_LEDGER_0_1.json",
+  "ordered_stages": [
+    {
+      "stage": 1,
+      "id": "PRIMITIVE_SCHEMA_CLOSURE",
+      "required": true,
+      "state": "IN_PROGRESS"
+    },
+    {
+      "stage": 2,
+      "id": "CORE021_LEDGER_QUALIFICATION",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_1"
+    },
+    {
+      "stage": 3,
+      "id": "RECURSIVE_IMPLICIT_ASSERTIONS",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_2",
+      "profile": "IMPLICIT_ASSERTION_PROFILE_0_1.md",
+      "working_corpus": "IMPLICIT_ASSERTIONS_WORKING_0_3.md",
+      "completion_rule": "Generate source-local implicit assertions recursively, primitive-close each admitted IA body/support/dependencies, repeat until an operational no-new-IA fixed point is reached under the pinned Core-0.21 input tuple."
+    },
+    {
+      "stage": 4,
+      "id": "NEI",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_3"
+    },
+    {
+      "stage": 5,
+      "id": "DTS",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_4"
+    },
+    {
+      "stage": 6,
+      "id": "DISCOVERY_PROTOCOL",
+      "required": true,
+      "state": "BLOCKED_ON_STAGE_5"
+    }
+  ],
+  "ia_constraints": {
+    "fixed_point_required": true,
+    "current_fixed_point": false,
+    "existing_working_ias_are_not_fixed_point": true,
+    "current_working_ia_ids": [
+      "W-IA-BT01-001",
+      "W-IA-BT01-002",
+      "W-IA-W02-001"
+    ],
+    "invalidation_inputs": [
+      "primitive_kernel_sha256",
+      "source_semantic_census_sha256",
+      "semantic_scope_sha256",
+      "qu_state_sha256",
+      "governing_authority_sha256",
+      "inference_profile_sha256"
+    ],
+    "cross_author_premises_forbidden": true,
+    "lisi_semantics_available": false
+  },
+  "dp_authorization_rule": "DP MUST NOT run until stage 3 has a pinned current IA fixed point and stages 4-5 are complete."
+}
