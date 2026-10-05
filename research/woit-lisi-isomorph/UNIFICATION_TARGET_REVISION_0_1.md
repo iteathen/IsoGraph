@@ -24,7 +24,7 @@ The bridge/common-quotient campaign is preserved as historical research evidence
 
 ## New primary question
 
-Given independent source-faithful renderings W and L and a demonstrated shared kernel K, construct the smallest useful candidate U such that:
+Given independent source-faithful renderings W and L, discover the strongest structural correspondences exposed by their primitive reductions and construct the most complete source-reconstructive candidate U that those correspondences support, such that:
 
 1. the selected Woit structure reconstructs inside U;
 2. the selected Lisi structure reconstructs inside U;
@@ -33,7 +33,7 @@ Given independent source-faithful renderings W and L and a demonstrated shared k
 5. contradictions create explicit branches or QU, not forced collapse;
 6. genuinely new relations introduced by the synthesis are labeled as project-generated hypotheses.
 
-The intended object is a **minimal conservative amalgam**, not a union of terminology.
+The research phase now targets a **maximal conservative synthesis discovered from primitive structure**, not a union of terminology and not a theory-shaped construction chosen in advance. Minimality is applied only after the maximal viable synthesis is known, as a final minimum-sufficient-support audit.
 
 ## Historical common kernel
 
@@ -57,7 +57,31 @@ It does not contain by default:
 - Woit's or Lisi's full dynamics;
 - an assertion that the two programs are physically equivalent.
 
+## Discovery-method correction — primitive-first, anti-bias
+
+The candidate hierarchy below is retained for historical continuity and retrieval only.
+
+It MUST NOT determine source factorization, reduction order, or the shape of the next unified carrier.
+
+The active method is defined by:
+
+`unification/UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md`
+
+The decisive rule is:
+
+~~~text
+do not choose the object that should unify the theories
+reduce the source semantics until structural correspondences emerge
+then construct U from those correspondences.
+~~~
+
+High-level source labels and existing U-candidate names are derived views, not structural evidence.
+
 ## Objective function
+
+During discovery, prefer broader exact source-semantic coverage and stronger primitive correspondence, subject to reconstruction and falsifiers.
+
+After the maximal viable candidate is found, apply minimum-sufficient-support / valuation to remove redundant synthesis structure.
 
 A candidate U is preferred when it:
 
