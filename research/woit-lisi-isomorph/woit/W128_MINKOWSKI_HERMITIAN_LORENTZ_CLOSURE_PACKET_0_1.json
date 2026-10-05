@@ -1,0 +1,54 @@
+{
+  "schema": "woit.w128-minkowski-hermitian-lorentz-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-128",
+  "source_assertion_id": "W-A0-047",
+  "frozen_body": "W02 begins from the conventional Hermitian 2x2 complex-matrix realization of Minkowski vectors, with determinant equal to minus Minkowski length-squared and Lorentz action x -> Omega_L x Omega_R^{-1}.",
+  "source": "W02 §I",
+  "source_components": [
+    "W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_3.isg",
+    "W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "support_packet": "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json",
+  "extra_support": [
+    "PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg",
+    "PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg",
+    "PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "combined_provider_ids": 177,
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "hermitian_matrix_carrier": 204124,
+    "minkowski_vector_carrier": 204130,
+    "quadratic_form": 204140,
+    "vector_to_matrix_injection": 204151,
+    "determinant": 204122,
+    "determinant_metric_relation": "det(X) = - embed_R_to_C(Q_M(v))",
+    "complex_factor_roles": [
+      204210,
+      204211
+    ],
+    "complex_action": 204220,
+    "lorentz_real_form_condition": 204230,
+    "hermitian_lorentz_action": 204221,
+    "transported_minkowski_action": 204222
+  },
+  "guards": [
+    "Minkowski vector/determinant support uses rebuilt source instance 0.3; predecessors 0.1/0.2 are rejected.",
+    "No Euclidean analytic-continuation relation is claimed here; that belongs to W-SSC-129.",
+    "No topology/smooth Lie-group structure is added.",
+    "No Lisi or cross-track semantics are premises."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
