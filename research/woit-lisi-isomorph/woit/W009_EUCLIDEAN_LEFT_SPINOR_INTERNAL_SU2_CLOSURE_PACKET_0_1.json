@@ -1,0 +1,81 @@
+{
+  "schema": "woit.w009-euclidean-left-spinor-internal-su2-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-009",
+  "frozen_body": "In that formulation, Euclidean left-handed spinors acquire an internal SU(2) role.",
+  "source": "W02",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_SU2L_INTERNAL_SPINOR_ACTION_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W134_EUCLIDEAN_SU2_ROLE_PSEUDOREAL_CLOSURE_PACKET_0_1.json"
+  ],
+  "compositional_interface": {
+    "root_external_refs": [
+      184002,
+      184006,
+      187200,
+      189000,
+      189001,
+      189002,
+      189003,
+      189004,
+      189005,
+      189006,
+      189020,
+      189021,
+      189022,
+      189023,
+      189024,
+      189042,
+      189043,
+      204110,
+      204111,
+      204112,
+      204113,
+      204114,
+      204116,
+      204117,
+      204118,
+      204119,
+      204120,
+      204145,
+      204204,
+      204205,
+      205130,
+      205150,
+      205199
+    ],
+    "provider_rule": "Current W134 support supplies the corrected SU(2)_L role, group identity, and spacetime-trivial action; the W009 source instance adds the exact nontrivial S_L representation.",
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "su2_L_role": 205130,
+    "su2_L_spacetime_action": 205122,
+    "su2_L_spacetime_action_semantics": "TRIVIAL",
+    "left_spinor_carrier": 189020,
+    "left_spinor_matrix_action": 949100,
+    "left_spinor_group_representation": 949101,
+    "nontrivial_witness": {
+      "group_element": 205150,
+      "input": 189042,
+      "output": 949102,
+      "unequal_to_input": true
+    },
+    "internal_role_definition": "same SU(2)_L role acts trivially on Euclidean spacetime but nontrivially on S_L"
+  },
+  "semantic_guards": [
+    "Internal role is represented structurally by action contrast, not by a label.",
+    "The group/action schemas use corrected matrix identity 204116=I.",
+    "No identification with the observed weak gauge interaction, gauge bosons, or electroweak dynamics is added.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
