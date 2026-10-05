@@ -62,3 +62,19 @@ These obligations are source-selected, not unification-selected. No item may be 
 | L-A0-082–084 | exact logical dependency of reconstruction on Phi/E/e'=e/T=0 restrictions; emergent-metric/symmetry-breaking transition semantics; unresolved gravity/quantization/general-potential boundaries | INCOMPLETE |
 
 The ansatz and restricted-solution dependencies are load-bearing. Primitive reduction MUST NOT replace the conjunction of the source action, selected solution branch, and explicit restrictions with a stronger unconditional low-energy reconstruction claim.
+
+
+## L03 full-treatment successor obligations exposed by SSC 0.5
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-085–086 | exact C->R realification; 32-complex/64-real carrier bijection; scalar-i matrix action; preservation/reflection of all 18 generator actions | INCOMPLETE |
+| L-A0-087–089 | M02–M11; exact Cl(11,3) basis/multiplication/signature; bivector/chiral projection; Majorana-Weyl reality; distinction between representation-independent embedding and selected numerical matrix witness | INCOMPLETE |
+| L-A0-090–091 | M08–M10 embedding chain; Pati-Salam/spin(10)/spin(11,3) subalgebras; frame-Higgs complement; M16–M20 frame, torsion, Higgs, connection/curvature, symmetry-breaking and Dirac-action semantics | INCOMPLETE |
+| L-A0-092 | exact semidirect Lie-algebra construction with spin(11,3) bivector carrier, 64R spinor module, action bracket, zero spinor-spinor bracket, Jacobi/ideal closure | INCOMPLETE |
+| L-A0-093–096 | Cl(12,4) source presentation; 120 bivectors + 128R chiral spinor; E8(-24) three bracket classes; Killing-form blocks/signatures; exact subalgebra injection preserving both bivector and action brackets | INCOMPLETE |
+| L-A0-097–100 | representation/embedding truth separated from physical particle assignment; mirror-fermion/new-particle proposal; triality-generation correction; unresolved-generation modality | INCOMPLETE |
+| L-A0-101 | M17–M18 plus Grassmann grading/superconnection semantics; bosonic 1-form vs anticommuting fermion role; curvature decomposition F+Dpsi+psi psi | INCOMPLETE |
+| L-A0-102–104 | physical-interpretation conditional; symmetry-breaking dependency; open mass/action/quantization boundaries; derived-vs-source interpretation guards | INCOMPLETE |
+
+The semidirect GraviGUT bracket with zero spinor-spinor bracket and the E8(-24) bracket with nonzero spinor-spinor closure MUST remain distinct primitive structures. Numerical identity of selected matrices MUST NOT be used as the sole support for the representation-independent embedding.
