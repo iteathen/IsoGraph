@@ -1,0 +1,62 @@
+{
+  "schema": "woit.w135-right-spinor-tensor-euclidean-split-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-135",
+  "source_assertion_id": "W-A0-054",
+  "frozen_body": "Euclidean spacetime in the right-handed construction is a real subspace of the right-spinor tensor its conjugate, decomposing into an SU(2)_R scalar plus vector; this produces one SU(2)_R-invariant distinguished direction and a complementary three-dimensional vector subspace.",
+  "source": "W02 §III",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_RIGHT_SPINOR_TENSOR_EUCLIDEAN_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json",
+    "W138_DISTINGUISHED_VECTOR_SPINOR_ISOMORPHISM_CLOSURE_PACKET_0_2.json",
+    "W134_EUCLIDEAN_SU2_ROLE_PSEUDOREAL_CLOSURE_PACKET_0_1.json",
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_ids": 113,
+    "additional_declared_ids": 105,
+    "total_provider_ids": 218,
+    "unresolved_local_refs": 0,
+    "all_extra_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "right_spinor_carrier": 189010,
+    "conjugate_right_spinor_carrier": 944100,
+    "tensor_bilinear_map": 946000,
+    "tensor_target_matrix_carrier": 204110,
+    "euclidean_real_carrier": 205100,
+    "euclidean_embedding_into_tensor_target": 205111,
+    "scalar_line": 946010,
+    "distinguished_direction": 205105,
+    "spatial_three_subspace": 205140,
+    "unique_direct_sum": true,
+    "zero_intersection": true,
+    "su2_R_action": 205121,
+    "scalar_line_fixed_pointwise": true
+  },
+  "basis_tensor_presentation": {
+    "e1⊗bar(e1)": 204117,
+    "e1⊗bar(e2)": 204118,
+    "e2⊗bar(e1)": 204119,
+    "e2⊗bar(e2)": 204120
+  },
+  "semantic_guards": [
+    "The tensor carrier is represented by a finite bilinear basis presentation into exact M2(C), not a name-only tensor node.",
+    "The claim is limited to the finite source presentation needed by W02; no universal categorical tensor-product property is asserted.",
+    "The Euclidean carrier is a real-linear subspace of that exact complex carrier via 205111.",
+    "The 1+3 split is exact and unique; SU(2)_R fixes the scalar line and preserves the spatial subspace.",
+    "No electroweak/internal SU(2)_L interpretation is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
