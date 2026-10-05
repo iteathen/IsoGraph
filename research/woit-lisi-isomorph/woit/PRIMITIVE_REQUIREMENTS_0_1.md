@@ -29,3 +29,19 @@
 10. quantization boundary.
 
 No item may be closed merely by referencing the label Spin, SU, twistor, Higgs, or Wick rotation.
+
+
+## W01 full-treatment successor obligations exposed by SSC 0.3
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| W-A0-071–073 | M15 frame/manifold support; M16 differential forms/wedge; M17 frame/spin bundle; M18 connection/curvature; M11 chirality; M20 action/variation interface | INCOMPLETE |
+| W-A0-074 | M09–M10 group/action/representation; M17–M18 gauge bundles/connections; M20 symmetry breaking; Higgs-role carrier and transformation semantics | INCOMPLETE |
+| W-A0-075–077 | M03–M05 vector/form support; M11 grading/chirality; M12 projective quotient; M13 twistor incidence; M14 complex/pseudoreal structure; exact complex-structure-choice schema | PARTIAL SUPPORT / SOURCE INSTANCE INCOMPLETE |
+| W-A0-078–080 | M09–M10 group/representation; M12–M13 tautological/quotient projective bundles; exact U(1) weight and tensor/Hom decomposition; negative GUT guard | INCOMPLETE |
+| W-A0-081–084 | M15–M18 bundle/connection/curvature; sheaf/cohomology/Dolbeault semantics; Penrose/Penrose-Ward reconstruction; anti-self-duality and fiber-triviality side conditions | INCOMPLETE |
+| W-A0-085 | M03–M05; M12–M13 Grassmannian/projective incidence; exterior-square/decomposability; fractional-linear action | PARTIAL SUPPORT / SOURCE INSTANCE INCOMPLETE |
+| W-A0-086–087 | M02/M05 real/Hermitian structures; M09–M10 group actions; M12–M14 projective/pseudoreal real-form/orbit semantics | PARTIAL SUPPORT / SOURCE INSTANCE INCOMPLETE |
+| W-A0-088–090 | M23 quantum-state/Hilbert reconstruction; M24 analytic continuation; reflection/half-space support; distribution/hyperfunction boundary-value semantics | INCOMPLETE |
+
+These obligations are source-selected, not unification-selected. They must be reduced even if later DP finds them irrelevant to cross-track correspondence.
