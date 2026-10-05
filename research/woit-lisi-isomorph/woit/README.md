@@ -24,7 +24,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
 | primitive math support complete | IN PROGRESS |
 | native .isg bundle | PASS — authoritative routing compilation 0.2; semantic closure in progress |
-| graph-derived closure ledger | IN PROGRESS — 0.14: 10 CLOSED_SCHEMA / 141 incomplete |
+| graph-derived closure ledger | IN PROGRESS — 0.19: 12 CLOSED_SCHEMA + 9 CLOSED_PRIMITIVE / 130 incomplete |
 | recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
 | NEI pass | NOT YET |
 | DTS pass | PARTIAL / PROVISIONAL |
@@ -86,6 +86,8 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_CHIRAL_GR_ACTION_VARIATION_INTERFACE_0_1.isg` / `.md` — preserves the chiral GR action and its connection/tetrad first-variation roles while leaving tetrad, spin-connection, curvature, torsion-free, and Einstein semantics open for primitive expansion.
 
 
+- `W02_DISTINGUISHED_VECTOR_SPINOR_IDENTIFICATION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact conjugate-right spinor carrier plus distinguished-vector-selected S_L→conjugate(S_R) isomorphism; closes W-SSC-138 with generic conjugate-semilinear support.
+
 ## Frozen source-census checkpoint
 
 The W source corpus is independently frozen at corrected SSC revision 0.2 for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
@@ -94,8 +96,8 @@ The next active task is authoritative native W compilation and primitive/schema 
 
 ## Current primitive-closure checkpoint
 
-- `CORE021_CLOSURE_LEDGER_0_14.json`: 10 frozen census obligations CLOSED_SCHEMA, 141 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
-- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098, W-SSC-128, W-SSC-131, W-SSC-144, W-SSC-145.
+- `CORE021_CLOSURE_LEDGER_0_19.json`: 21/151 frozen census obligations closed (12 schema + 9 primitive provenance), 130 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
+- Closed so far include W-SSC-001, 010, 018, 020, 021, 023–027, 046, 058, 078, 098, 111, 121, 128, 131, 138, 144, 145. Exact current dispositions are authoritative in CORE021_CLOSURE_LEDGER_0_19.json.
 - `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
 - No Lisi semantics are available to the W closure process.
 
