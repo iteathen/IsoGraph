@@ -1,7 +1,7 @@
 # Woit primitive requirements 0.1
 
 **Status:** WORKING REDUCTION MAP
-**Assertion base:** ASSERTION_BASE_A0_0_1.md
+**Assertion base:** ASSERTION_BASE_A0_0_10.md
 **Shared burden plan:** ../PRIMITIVE_MATH_SCHEMA_PLAN_0_1.md
 
 | A0 region | Required primitive/schema families | Current state |
@@ -45,3 +45,18 @@ No item may be closed merely by referencing the label Spin, SU, twistor, Higgs, 
 | W-A0-088–090 | M23 quantum-state/Hilbert reconstruction; M24 analytic continuation; reflection/half-space support; distribution/hyperfunction boundary-value semantics | INCOMPLETE |
 
 These obligations are source-selected, not unification-selected. They must be reduced even if later DP finds them irrelevant to cross-track correspondence.
+
+
+## W03-W04 full-treatment successor obligations exposed by SSC 0.4
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| W-A0-091–092 | source-revision identity; dated-source ordering; mutable-versus-frozen authority; DTS revision/supersession edges; provenance/scope guards | INCOMPLETE |
+| W-A0-093–095 | M02–M05 scalar/vector/operator support; M11 chirality; momentum/energy/helicity predicates; inverse linear operator/propagator schema; M23 quantum-field state/oscillator boundary; M24 continuation semantics | INCOMPLETE |
+| W-A0-096–099 | M02–M05 dual/conjugate vector spaces; M09–M10 group actions/representations; M11 chirality; M13 twistor point incidence; M14 conjugation/real-form structure; exact conventional-versus-right-handed role assignment | INCOMPLETE |
+| W-A0-100–106 | M02–M05 complex/Hermitian support; M09–M10 SL/SU/Spin actions; M12 projective quotient; M13 incidence/fibration; M14 real-form/orbit structure; hyperfunction/boundary-value semantics; Penrose transform support; exact SU(2,2) and SL(2,H) source instances | INCOMPLETE |
+| W-A0-107–113 | M09–M10 action roles; M12–M14 projective/twistor/bundle real structures; M17 bundle ownership; holomorphic line/quotient-bundle and sheaf/Dolbeault/cohomology support; M20 internal-versus-spacetime role transition; source limitation modalities | INCOMPLETE |
+| W-A0-114–115 | M23 spectral/Hilbert/time-evolution support; M24 complex-time half-plane holomorphy and boundary semantics; twistor open-orbit/boundary typing; Euclidean-choice DTS; unresolved-realization guard | INCOMPLETE |
+| W-A0-116–122 | M14 antilinear involution/conjugation and Hermitian structures; M23 reflection positivity/Hilbert reconstruction; M24 analytic-continuation alternative; half-space/reflection predicates; PT Hermitian-orbit split; Penrose/Penrose-Ward support; M20 role breaking; provisional-source guards | INCOMPLETE |
+
+The W04 sequence contains genuine same-author revisions. Primitive reduction must preserve the source-local carrier and role changes so DTS can later decide what is transported, replaced, or left residual. The OS/conjugation proposal is not permission to collapse Euclidean and Lorentzian structures by label.
