@@ -15,4 +15,4 @@ It requires:
 
 This is the minimum load-bearing behavior needed for source statements using “dual spinor”; the dual role is not accepted as a name-only node.
 
-The schema does not assert topology, continuity, inner products, conjugate-linearity, or any canonical identification (V\cong D).
+The schema does not assert topology, continuity, inner products, conjugate-linearity, or any canonical identification `V` canonically identified with `D`.
