@@ -60,6 +60,8 @@ The finite U0 graph/incidence relation survives the W01↔W05 projective convent
 
 No Lisi operator, division-algebra element, or triality role is invented at infinity. L-ALG therefore remains a preserved residual outside U1.0, and U1-TC remains structurally consistent through U1.0-PC rather than being expanded by force.
 
+A successor finite-chart audit now closes the quaternionic L05 scalar triality slice and resolves the former chart-transport QU. Quaternion conjugation sends the oriented tensor to the tensor with its two chiral arguments exchanged. Conjugation plus an explicit coherent Q_minus/Q_plus exchange restores exact invariance, but W05 does not source-type its homogeneous q1/q2 coordinates with those chiral roles. Therefore strict source-role-preserving triality chart invariance fails, and no new U-edge is admitted.
+
 ## Later candidates
 
 - U2-DYN — Woit chiral YM/GR + Lisi gauge/gravity/Higgs/Cartan dynamics.
@@ -74,7 +76,9 @@ No Lisi operator, division-algebra element, or triality role is invented at infi
 - `UNIFICATION_RESIDUAL_PORTS_0_1.md` — W/L residual classification and first interaction hypotheses.
 - `UNIFICATION_CANDIDATE_MANIFEST_0_1.json` — machine-readable candidate state.
 - `UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.isg` / `.md` / `.json` — first constructive U1 candidate: Woit's global projective family as a conservative compactification of Lisi's affine chiral graph relation.
-- `UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.isg` / `.md` / `.json` — U1.1 audit: finite chart transport survives, but the strong global triality extension is rejected at the compactification patch.
+- `UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.isg` / `.md` / `.json` — U1.1 global audit: the strong global triality extension is rejected at the compactification patch.
+- `UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_0_1.isg` / `.md` / `.json` — finite audit: the source L05 tensor survives conjugation only with explicit chiral-role exchange; strict role-preserving transport fails.
+- `UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_FALSIFIER_0_1.json` — exhaustive 64-basis-triple check of cyclicity and the conjugation/role-swap laws.
 
 ## Firewall
 
