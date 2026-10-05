@@ -1,0 +1,18 @@
+import fs from "node:fs";
+const native=fs.readFileSync("research/woit-lisi-isomorph/woit/WOIT_NATIVE_COMPILATION_REGROUNDED_0_13.isg","utf8");
+const manifest=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/woit/WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_13.json","utf8"));
+const audit=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/woit/W081_REGROUNDED_CORE_LOGIC_PRIMITIVE_CLOSURE_AUDIT_0_1.json","utf8"));
+const errors=[],norm=s=>s.replace(/\s+/g,"");
+const formula="(^150019 932081 (^150001 (^150004 (^150010 934065 934440) (^150010 934066 934441)) (^150010 934002 932081 934442 934011)))";
+if(audit.status!=="PASS_CANDIDATE_CLOSED_PRIMITIVE"||audit.proposed_disposition!=="CLOSED_PRIMITIVE")errors.push("audit disposition");
+if(!norm(native).includes(norm(formula)))errors.push("formula missing");
+if(!native.includes("(^150010 930005 931081 930106)"))errors.push("source provenance missing");
+if(!native.includes("(^150010 930002 931081 930015)")||!native.includes("(^150010 930003 932081 930016)"))errors.push("closed routing state");
+if(native.includes("(^150010 930002 931081 930010)")||native.includes("(^150010 930003 932081 930014)"))errors.push("stale routing state");
+const mi=manifest.items.find(x=>x.census_id==="W-SSC-081");
+if(mi?.closure_mode!=="CLOSED_PRIMITIVE"||mi?.semantic_compilation_state!=="PRIMITIVE_CLOSED_AFTER_REGROUNDED_CORE_LOGIC_AUDIT")errors.push("manifest state");
+if(mi?.primitive_formula_closure?.qualified_qu_used||mi?.primitive_formula_closure?.schema_used||mi?.primitive_formula_closure?.cross_author_semantics_used)errors.push("invalid closure metadata");
+if(manifest.regrounded_compilation?.accepted_closed_census_items!==24)errors.push("closed count");
+if((manifest.regrounded_compilation?.compiled_pending_primitive_closure_audit||[]).length!==0)errors.push("pending set");
+const result={pass:errors.length===0,errors,census_id:"W-SSC-081",accepted_closed:24};
+console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;
