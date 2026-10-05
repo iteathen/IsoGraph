@@ -78,3 +78,19 @@ The ansatz and restricted-solution dependencies are load-bearing. Primitive redu
 | L-A0-102–104 | physical-interpretation conditional; symmetry-breaking dependency; open mass/action/quantization boundaries; derived-vs-source interpretation guards | INCOMPLETE |
 
 The semidirect GraviGUT bracket with zero spinor-spinor bracket and the E8(-24) bracket with nonzero spinor-spinor closure MUST remain distinct primitive structures. Numerical identity of selected matrices MUST NOT be used as the sole support for the representation-independent embedding.
+
+
+## L04 full-treatment successor obligations exposed by SSC 0.6
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-105–108 | M07 Clifford/Pin carrier; explicit reflection and adjoint relations; unitary/antiunitary maps; complex conjugation; phase-modified representatives; finite generated-group closure | INCOMPLETE |
+| L-A0-109–111 | M02–M05 complex/vector support; M07 Clifford matrices; M08 Lie algebra; M10 representation; M22 Cartan/root/weight incidence; Dirac-equation solution relations; QFT creation/annihilation carrier semantics | INCOMPLETE |
+| L-A0-112–115 | exact C/P/T maps on QFT operators and weights; antiunitarity; momentum/spin/helicity/charge transformations; T^2=-1 quaternionic consequence; Q8×Z2 multiplication and split-biquaternion representation | INCOMPLETE |
+| L-A0-116–117 | generic finite-group generation; source candidate t'; adjoint role-cycle; 2T×Z2 order-48 closure; explicit candidate rejection and preferred noncommutation/commutation constraints | INCOMPLETE |
+| L-A0-118–120 | exact Dirac↔biquaternion coefficient bijection; C⊗H product; matrix/quaternion/complex/Hermitian conjugations; invariant bilinear/determinant/Dirac-scalar reconstruction | INCOMPLETE |
+| L-A0-121–124 | antiunitary right-multiplication C/P/T representatives; t/ad_t; derived K; group-relator closure; normal-subgroup and shared-center semantics; central product 2T∘D4; GAP classification evidence boundary | INCOMPLETE |
+| L-A0-125–127 | projective weight quotient; 24-cell incidence; explicit sign matrices; triality matrix; generation-specific conjugated C/P/T maps; local source-family dependency on division-algebra explanation | INCOMPLETE |
+| L-A0-128–130 | proposal/alternative semantics; direct-product candidate vs preferred non-direct product; 192-state eight-24-cell construction; source-level E8 model claim; physical-triality proposal modality | INCOMPLETE |
+
+Do not reduce L04 to a single named CPTt group. The carrier changes, antiunitary structure, rejected intermediate extension, conjugation distinctions, projective quotient, and proposal-status boundaries are all load-bearing.
