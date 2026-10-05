@@ -1,0 +1,93 @@
+{
+  "schema": "woit.w014-su22-projective-orbits-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-014",
+  "frozen_body": "Twistor space is C^4 / projective CP^3 with an SU(2,2) real form giving positive, negative, and null/boundary orbits for the Minkowski picture.",
+  "source": "W04b",
+  "abstraction_boundary": "W_SU22_PROJECTIVE_ORBIT_ABSTRACTION_BOUNDARY_0_1.json",
+  "root_native": "research/woit-lisi-isomorph/woit/W04B_SU22_PROJECTIVE_ORBIT_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json",
+    "W026_EUCLIDEAN_PAULI_NORM_CLOSURE_PACKET_0_1.json",
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json",
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json"
+  ],
+  "compositional_interface": {
+    "external_local_refs": [
+      182000,
+      182002,
+      183004,
+      184001,
+      184006,
+      189000,
+      189001,
+      189002,
+      189003,
+      189004,
+      189005,
+      189006,
+      189300,
+      189301,
+      189302,
+      189303,
+      189304,
+      189305,
+      189306,
+      189307,
+      193302,
+      197012,
+      197020,
+      202100,
+      202101,
+      202102,
+      202103,
+      202104,
+      202107,
+      202108,
+      202109,
+      202110,
+      202113,
+      202114,
+      202199,
+      941000,
+      942001,
+      990100
+    ],
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "projective_twistor_space": 202113,
+    "hermitian_form": 995110,
+    "source_group_carrier": 995100,
+    "source_group_vector_action": 995104,
+    "projective_action": 995120,
+    "positive_orbit": 995130,
+    "negative_orbit": 995131,
+    "null_orbit": 995132
+  },
+  "orbit_conditions": {
+    "partition": true,
+    "pairwise_disjoint": true,
+    "invariant": true,
+    "transitive": true,
+    "hermitian_signature": "(+,+,-,-)"
+  },
+  "semantic_guards": [
+    "The source SU(2,2) role is represented by exact Hermitian-preserving linear/projective group behavior at the frozen abstraction boundary.",
+    "Determinant-one matrix equations, Lie-group topology, and Spin(4,2) cover topology are not used by this obligation.",
+    "No celestial/light-ray differential geometry is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
