@@ -1,0 +1,45 @@
+{
+  "schema": "woit.w028-common-complexification-real-forms-closure-packet.v0.2",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "predecessor": "W028_COMMON_COMPLEXIFICATION_REAL_FORMS_CLOSURE_PACKET_0_1.json",
+  "census_id": "W-SSC-028",
+  "frozen_body": "W01 identifies the common complexification of Euclidean, Minkowski, and split-signature four-vector spaces with M(2,C)=Hom(S_R,S_L), while retaining different real-form/action constraints for each signature.",
+  "source": "W01 §§2.1–2.2",
+  "support_packets": [
+    "W130_CONVENTIONAL_HOM_TENSOR_CLOSURE_PACKET_0_1.json",
+    "W129_CONVENTIONAL_ANALYTIC_CONTINUATION_CLOSURE_PACKET_0_1.json"
+  ],
+  "split_source_instance": "research/woit-lisi-isomorph/woit/W_SPLIT_SIGNATURE_M2C_REAL_FORM_SOURCE_INSTANCE_0_2.isg",
+  "reconstruction": {
+    "common_complex_matrix_carrier": 204110,
+    "hom_tensor_carrier": "W130 exact Hom(S_R^*,S_L) finite presentation",
+    "common_complex_action": 204220,
+    "minkowski_real_carrier": 204130,
+    "minkowski_real_form_condition": 204230,
+    "euclidean_real_carrier": 205100,
+    "euclidean_real_form_condition": 204231,
+    "split_real_carrier": 999000,
+    "split_quadratic_form": 999021,
+    "split_signature": "(+,+,-,-)",
+    "split_left_factor": 999041,
+    "split_right_factor": 999042,
+    "split_two_factor_action": 999050,
+    "split_real_form_condition": 999060
+  },
+  "semantic_guards": [
+    "All three real forms share the same qualified complex M2(C) carrier but remain distinct subcarriers/action constraints.",
+    "The split signature is represented by an explicit real basis and exact quadratic form, not a role label.",
+    "The split two-factor action is a restriction of the qualified complex action and preserves the exact split quadratic form.",
+    "No real forms are collapsed into each other.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
