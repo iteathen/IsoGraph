@@ -1,0 +1,56 @@
+{
+  "schema": "woit.w053-euclidean-sl2h-twistor-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-053",
+  "frozen_body": "For Euclidean twistor geometry W01 uses T=H^2, the pseudoreal map sigma with sigma^2=-1 on T and +1 projectively, HP1 homogeneous coordinates, SL(2,H) fractional-linear action, and the CP1 fibration whose sigma action is antipodal on each fiber.",
+  "source": "W01 Appendix A.3.3",
+  "abstraction_boundaries": [
+    "W_EUCLIDEAN_TWISTOR_ORTHOGONAL_COMPLEX_BOUNDARY_0_1.json",
+    "W_EUCLIDEAN_SL2H_PROJECTIVE_ACTION_BOUNDARY_0_1.json"
+  ],
+  "support_packets": [
+    "W098_H2_PROJECTIVE_REAL_STRUCTURE_CLOSURE_PACKET_0_2.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W099_INVARIANT_TWISTOR_LINES_CLOSURE_PACKET_0_1.json"
+  ],
+  "source_instances": [
+    "research/woit-lisi-isomorph/woit/W_EUCLIDEAN_SL2H_PROJECTIVE_ACTION_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/woit/W_EUCLIDEAN_HP1_HOMOGENEOUS_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "h2_structure": "exact H-derived direct-sum carrier from W023/W098",
+    "pseudoreal_vector_map": 943000,
+    "projective_real_structure": 943001,
+    "vector_square_minus_one": true,
+    "projective_involution": true,
+    "hp1_base": 202120,
+    "hp1_homogeneous_coordinates": 998210,
+    "hp1_right_scalar_equivalence": 998211,
+    "sl2h_source_group": 998100,
+    "sl2h_vector_action": 998104,
+    "sl2h_projective_action": 998110,
+    "sl2h_base_action": 998120,
+    "quaternion_inverse": 998141,
+    "fractional_chart": 998142,
+    "twistor_projection": 202126,
+    "invariant_fiber_base_carrier": 997000,
+    "fiber_antipodal_reason": "rho_tw preserves each exact CP1 fiber and is fixed-point-free projectively, with the same source quaternionic pseudoreal mechanism"
+  },
+  "semantic_guards": [
+    "HP1 homogeneous coordinates are represented by exact right-quaternionic scalar equivalence.",
+    "The SL(2,H) source role is closed at the frozen projective/action boundary; Dieudonne-determinant normalization and covering topology are non-load-bearing here.",
+    "S4 topology is not imported; the Euclidean base uses the frozen algebraic/quaternionic role boundary.",
+    "The antipodal fiber statement uses exact fiber invariance plus the fixed-point-free projective pseudoreal structure.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARIES",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
