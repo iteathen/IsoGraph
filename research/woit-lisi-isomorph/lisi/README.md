@@ -63,6 +63,10 @@ Frozen Source Semantic Census: `SOURCE_SEMANTIC_CENSUS_0_1.json`.
 Historical working census immediately before freeze: `../TRACK_L_WORKING_SSC_0_8.md`.
 
 
+## Implicit-assertion gate
+
+- `LISI_PRE_DP_IA_GATE_0_1.md` / `.json` — mandatory recursive source-local IA gate. DP is prohibited until a current IA fixed point is reached after primitive/schema closure; any load-bearing kernel/SSC/scope/QU/authority/profile change reopens IA.
+
 ## Current execution gate
 
 Discovery Protocol is blocked.
@@ -75,7 +79,8 @@ frozen L SSC [PASS]
 -> primitive/schema closure
 -> mechanically derived Core-0.21 closure ledger
 -> five Core qualification gates
--> recursive IA fixed point
+-> recursive IA rounds with every IA body/support/dependency primitive-closed
+-> no-change pass + pinned current IA fixed point
 -> applicable NEI
 -> DTS
 -> only then DP
