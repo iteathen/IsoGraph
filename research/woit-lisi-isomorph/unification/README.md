@@ -52,6 +52,14 @@ Use Woit's global twistor geometry as the first geometric extension of U0 and te
 
 The first U1 result must reconstruct U0 on every local chart.
 
+### U1.1-TR result
+
+The strong global triality/fiber extension has now been tested and **rejected**.
+
+The finite U0 graph/incidence relation survives the W01↔W05 projective convention change when quaternion conjugation, homogeneous-coordinate swap, and the induced left/right multiplication side-swap are all retained. However, a total Lisi triality action over the U1.0 compactification would require a source-backed vector/algebra role at the infinity patch, or an exact source-backed family-preservation law. Neither is currently present.
+
+No Lisi operator, division-algebra element, or triality role is invented at infinity. L-ALG therefore remains a preserved residual outside U1.0, and U1-TC remains structurally consistent through U1.0-PC rather than being expanded by force.
+
 ## Later candidates
 
 - U2-DYN — Woit chiral YM/GR + Lisi gauge/gravity/Higgs/Cartan dynamics.
@@ -66,6 +74,7 @@ The first U1 result must reconstruct U0 on every local chart.
 - `UNIFICATION_RESIDUAL_PORTS_0_1.md` — W/L residual classification and first interaction hypotheses.
 - `UNIFICATION_CANDIDATE_MANIFEST_0_1.json` — machine-readable candidate state.
 - `UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.isg` / `.md` / `.json` — first constructive U1 candidate: Woit's global projective family as a conservative compactification of Lisi's affine chiral graph relation.
+- `UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.isg` / `.md` / `.json` — U1.1 audit: finite chart transport survives, but the strong global triality extension is rejected at the compactification patch.
 
 ## Firewall
 
