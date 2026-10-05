@@ -94,3 +94,20 @@ The semidirect GraviGUT bracket with zero spinor-spinor bracket and the E8(-24) 
 | L-A0-128–130 | proposal/alternative semantics; direct-product candidate vs preferred non-direct product; 192-state eight-24-cell construction; source-level E8 model claim; physical-triality proposal modality | INCOMPLETE |
 
 Do not reduce L04 to a single named CPTt group. The carrier changes, antiunitary structure, rejected intermediate extension, conjugation distinctions, projective quotient, and proposal-status boundaries are all load-bearing.
+
+
+## L05 full-treatment successor obligations exposed by SSC 0.7
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| L-A0-131–134 | M01–M07 exact ordinary/split composition-algebra multiplication, conjugation, metrics/signatures, associativity/alternativity, Clifford coefficient matrices and vector/spinor role maps | PARTIAL SUPPORT / SOURCE INSTANCES INCOMPLETE |
+| L-A0-135–138 | M21 source triality form; reverse product reconstruction; generalized vector/spinor reflection relations; signature-root factors; rotation/triality group closure and source-specific tri(D) real forms | PARTIAL SUPPORT / SOURCE INSTANCES INCOMPLETE |
+| L-A0-139–143 | M08–M10 source triality Lie algebras; exact brackets; source real forms; root/Cartan presentations; generator-level automorphisms; phase/sign reconstruction; interpretation guards | INCOMPLETE |
+| L-A0-144–146 | compound Clifford construction; tensor-product carrier semantics; magic-square brackets; canonical triality composition; root projection vs generator-level phase/sign information | INCOMPLETE |
+| L-A0-147–149 | order-three eigenspace relation; complex conjugate ±1 sectors; Z3 bracket grading; Vinberg Theta action; real grading distinction; e8 five-/two-grading and graviGUT intersections | INCOMPLETE |
+| L-A0-150–152 | complete e6/e7/e8 compound triality carriers, brackets, real-form metrics, charge/root maps and triality automorphisms | INCOMPLETE |
+| L-A0-153–155 | source limitations; M24 pseudo-similarity Wick rotation; vector/bivector/spinor/root transport; mirror-vs-conjugate fermion distinction; triality-generation proposal | INCOMPLETE |
+| L-A0-156–157 | M15–M19 exceptional-valued superconnection, Grassmann directions, supercurvature, exterior-Dirac derivative, generalized-Hodge action; model-specific physical limitations | INCOMPLETE |
+| L-A0-158–160 | exact multiplication-preserving algebra automorphisms; G2 ordinary/split real forms; inner automorphism validity by carrier; equivalence-of-presentation vs physical-model guards | INCOMPLETE |
+
+Root systems, triality matrices, and named exceptional algebras are derived views. Exact source closure must preserve the multiplication/bracket/conjugation/sign/phase relations that generate them.
