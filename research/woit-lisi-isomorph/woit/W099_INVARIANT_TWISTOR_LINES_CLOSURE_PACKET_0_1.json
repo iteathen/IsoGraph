@@ -1,0 +1,42 @@
+{
+  "schema": "woit.w099-invariant-twistor-lines-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-099",
+  "frozen_body": "W05 states that rho_tw on CP3 has no fixed projective points but has a four-real-dimensional family of invariant CP1 real lines parametrized by HP1=S4; each such line is a twistor P1.",
+  "source": "W05 §3",
+  "abstraction_boundary": "W_EUCLIDEAN_TWISTOR_ORTHOGONAL_COMPLEX_BOUNDARY_0_1.json",
+  "support_packets": [
+    "W098_H2_PROJECTIVE_REAL_STRUCTURE_CLOSURE_PACKET_0_2.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W033_EUCLIDEAN_TWISTOR_ORTHOGONAL_COMPLEX_FIBER_CLOSURE_PACKET_0_1.json"
+  ],
+  "root_native": "research/woit-lisi-isomorph/woit/W05_RHOTW_FIBER_INVARIANCE_SOURCE_INSTANCE_0_1.isg",
+  "reconstruction": {
+    "projective_twistor_space": 202113,
+    "euclidean_base": 202120,
+    "twistor_projection": 202126,
+    "finite_fiber_membership": 202123,
+    "infinity_fiber_membership": 202124,
+    "projective_real_structure": 943001,
+    "invariant_base_carrier": 997000,
+    "fixed_point_free_projective_clause": "supplied by W098/W024",
+    "projective_line_reason": "each exact W023 fiber is the projectivization of an exact two-complex-dimensional plane",
+    "four_real_dimensional_parameter_reason": "the frozen base boundary is quaternionic H plus one distinguished infinity point; the affine chart is exact four-dimensional over R",
+    "hp1_s4_role": "frozen algebraic Euclidean-base role only; topology intentionally abstracted"
+  },
+  "semantic_guards": [
+    "rho_tw fiber invariance is now an explicit source-local compatibility law.",
+    "No topological homeomorphism HP1=S4 or smooth atlas is imported; W_EUCLIDEAN_TWISTOR_ORTHOGONAL_COMPLEX_BOUNDARY_0_1.json governs that abstraction.",
+    "Each invariant line is a twistor P1 through the already exact W023 fiber semantics.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
