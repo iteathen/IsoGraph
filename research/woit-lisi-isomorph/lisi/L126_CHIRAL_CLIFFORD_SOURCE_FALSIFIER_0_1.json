@@ -1,0 +1,167 @@
+{
+  "schema": "woit-lisi.l126-chiral-clifford-source-falsifier.v0.1",
+  "date": "2026-10-04",
+  "source": "L05 version of record §2 eqs. (2)-(4)",
+  "coefficient_definition": "Gamma_c^b_a = M_ca^(tilde b); lowered coefficient uses n_bb",
+  "signature_adjusted_transpose": "barGamma_c = n_cc Gamma_c^T",
+  "source_claims": [
+    "Clifford anticommutator identity",
+    "cyclic coefficient identity"
+  ],
+  "results": [
+    {
+      "name": "C",
+      "carrier": 214000,
+      "dimension": 2,
+      "coefficient_tuples": 8,
+      "cyclic_failures": 0,
+      "clifford_identity_failures": 0,
+      "cyclic_samples": [],
+      "clifford_samples": []
+    },
+    {
+      "name": "Cprime",
+      "carrier": 214100,
+      "dimension": 2,
+      "coefficient_tuples": 8,
+      "cyclic_failures": 0,
+      "clifford_identity_failures": 0,
+      "cyclic_samples": [],
+      "clifford_samples": []
+    },
+    {
+      "name": "H",
+      "carrier": 189200,
+      "dimension": 4,
+      "coefficient_tuples": 64,
+      "cyclic_failures": 0,
+      "clifford_identity_failures": 0,
+      "cyclic_samples": [],
+      "clifford_samples": []
+    },
+    {
+      "name": "Hprime",
+      "carrier": 214200,
+      "dimension": 4,
+      "coefficient_tuples": 64,
+      "cyclic_failures": 0,
+      "clifford_identity_failures": 0,
+      "cyclic_samples": [],
+      "clifford_samples": []
+    },
+    {
+      "name": "O",
+      "carrier": 214300,
+      "dimension": 8,
+      "coefficient_tuples": 512,
+      "cyclic_failures": 2,
+      "clifford_identity_failures": 28,
+      "cyclic_samples": [
+        {
+          "a": 6,
+          "b": 7,
+          "c": 2,
+          "left": -1,
+          "right": 1
+        },
+        {
+          "a": 7,
+          "b": 2,
+          "c": 6,
+          "left": 1,
+          "right": -1
+        }
+      ],
+      "clifford_samples": [
+        {
+          "c": 0,
+          "d": 6,
+          "r": 2,
+          "k": 7,
+          "lhs": -2,
+          "rhs": 0
+        },
+        {
+          "c": 0,
+          "d": 6,
+          "r": 7,
+          "k": 2,
+          "lhs": -2,
+          "rhs": 0
+        },
+        {
+          "c": 1,
+          "d": 6,
+          "r": 4,
+          "k": 7,
+          "lhs": 2,
+          "rhs": 0
+        },
+        {
+          "c": 1,
+          "d": 6,
+          "r": 7,
+          "k": 4,
+          "lhs": 2,
+          "rhs": 0
+        },
+        {
+          "c": 2,
+          "d": 6,
+          "r": 0,
+          "k": 7,
+          "lhs": -2,
+          "rhs": 0
+        },
+        {
+          "c": 2,
+          "d": 6,
+          "r": 7,
+          "k": 0,
+          "lhs": -2,
+          "rhs": 0
+        },
+        {
+          "c": 3,
+          "d": 6,
+          "r": 5,
+          "k": 7,
+          "lhs": -2,
+          "rhs": 0
+        },
+        {
+          "c": 3,
+          "d": 6,
+          "r": 7,
+          "k": 5,
+          "lhs": -2,
+          "rhs": 0
+        }
+      ]
+    },
+    {
+      "name": "Oprime",
+      "carrier": 214400,
+      "dimension": 8,
+      "coefficient_tuples": 512,
+      "cyclic_failures": 0,
+      "clifford_identity_failures": 0,
+      "cyclic_samples": [],
+      "clifford_samples": []
+    }
+  ],
+  "controls_clean": [
+    "C",
+    "Cprime",
+    "H",
+    "Hprime",
+    "Oprime"
+  ],
+  "discrepancy_carrier": "O",
+  "expected_ordinary_O_failures": {
+    "cyclic": 2,
+    "clifford": 28
+  },
+  "source_repair_used": false,
+  "pass": true
+}
