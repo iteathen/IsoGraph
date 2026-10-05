@@ -26,8 +26,10 @@
       ],
       "obligations": [
         "local restriction reconstructs U0 — PASS in U1.0",
-        "chart transitions preserve U0 graph/incidence action — PASS with conjugation + side-swap; source-specific triality transport remains QU",
-        "pseudoreal structure is preserved in U1.0; triality/J compatibility remains QU",
+        "W01/W05 graph-incidence transport — PASS with conjugation + homogeneous-coordinate swap + action side-swap",
+        "L05 quaternionic scalar triality is source-native on the finite slice; strict source-role-preserving triality chart invariance — FAIL",
+        "triality tensor is invariant only after conjugation plus an explicit Q_minus/Q_plus role exchange; W05 does not source-type that exchange — QU as a representation/synthesis choice",
+        "pseudoreal structure is preserved in U1.0; global triality/J compatibility remains QU",
         "compactification patch introduces no unsupported Lisi structure — PASS by rejecting the strong U1.1 global extension",
         "source residual projections reconstruct; L-ALG triality remains outside U1.0"
       ],
@@ -53,10 +55,19 @@
           "certificate": "UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.json",
           "tested_synthesis_hypothesis": "UH-001B",
           "synthesis_edges_accepted": [],
-          "result": "finite U0 incidence survives W01/W05 transport, but a total triality action over the compactification patch would require unsupported algebraic/vector-role structure at infinity; L-ALG remains a residual"
+          "result": "global triality extension remains rejected; the finite L05 tensor is now source-native, and exact conjugation reverses the two chiral triality arguments, so role-preserving W01/W05 tensor transport fails while conjugation plus an explicit chiral-role exchange passes",
+          "finite_transport": {
+            "artifact": "UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_0_1.md",
+            "certificate": "UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_0_1.json",
+            "falsifier": "UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_FALSIFIER_0_1.json",
+            "l05_scalar_triality": "SOURCE_NATIVE_CLOSED_SLICE",
+            "role_preserving_chart_invariance": "FAIL",
+            "conjugation_plus_chiral_role_swap": "PASS",
+            "w05_source_authorization_of_role_swap": "ABSENT_QU"
+          }
         }
       ],
-      "current_boundary": "U1.0-PC admitted; strong U1.1-TR global triality extension rejected"
+      "current_boundary": "U1.0-PC admitted; U1.1 global extension rejected; finite scalar triality transport requires an explicit chiral-role exchange not inherited from W05"
     },
     {
       "id": "U2-DYN",
