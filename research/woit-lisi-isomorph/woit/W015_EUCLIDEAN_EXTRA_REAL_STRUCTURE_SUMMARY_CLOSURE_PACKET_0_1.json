@@ -1,0 +1,37 @@
+{
+  "schema": "woit.w015-euclidean-extra-real-structure-summary-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-015",
+  "frozen_body": "Euclidean spacetime is associated with extra fibration/real-structure data rather than the same real form as Minkowski spacetime.",
+  "source": "W04b",
+  "support_packets": [
+    "W098_H2_PROJECTIVE_REAL_STRUCTURE_CLOSURE_PACKET_0_2.json",
+    "W100_EUCLIDEAN_VS_MINKOWSKI_REAL_STRUCTURE_CLOSURE_PACKET_0_1.json",
+    "W129_CONVENTIONAL_ANALYTIC_CONTINUATION_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "euclidean_twistor_real_structure": 943001,
+    "euclidean_codomain": "PT self-map",
+    "euclidean_fibration_support": "W098 quaternionic H2/projective real-structure packet",
+    "minkowski_projective_real_structure": 994150,
+    "minkowski_codomain": "dual PT*",
+    "conventional_real_form_distinction": "W129 Lorentz and Euclidean real-form conditions remain distinct",
+    "source_extra_choice_role": "Euclidean realization requires its own fibration/real-structure data"
+  },
+  "rationale": "W015 is a W04b summary of the exact Euclidean/Minkowski real-structure distinction and the extra Euclidean fibration data already represented independently.",
+  "guards": [
+    "Euclidean and Minkowski real structures are not identified.",
+    "No SU(2,2) orbit/signature semantics are imported beyond W100.",
+    "No HP1=S4 topology is required.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
