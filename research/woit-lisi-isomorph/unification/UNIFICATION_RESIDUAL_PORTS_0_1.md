@@ -55,6 +55,12 @@ Required:
 - source action reconstruction;
 - no invented structure at the compactification patch.
 
+**U1.1 result:** the strong global triality form is **REJECTED**.
+
+The finite U0 graph/incidence action survives the W01/W05 convention transport only when quaternion conjugation, homogeneous-coordinate swap, and the induced action side-swap are retained. Full source-specific triality transport remains QU pending L05 closure.
+
+At the U1.0 infinity patch there is no source-backed Lisi vector/division-algebra element or triality action. Making the triality action total would therefore require algebraic structure not supplied by either source or forced by U0. The L-ALG triality residual remains outside U1.0 rather than being forced into the compactification.
+
 ### UH-002 — common chiral connection architecture
 
 Can W-DYN and L-DYN be represented as projections of one connection/curvature/action architecture over U1?
