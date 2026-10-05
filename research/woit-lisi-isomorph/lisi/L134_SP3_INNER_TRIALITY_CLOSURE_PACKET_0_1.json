@@ -1,0 +1,68 @@
+{
+  "schema": "lisi.l134-sp3-inner-triality-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "L-SSC-134",
+  "frozen_body": "For sp(3), L05 gives an explicit quaternionic 3x3 realization and canonical inner triality automorphism cycling vector/spinor generators and three su(2) factors; root-space rotations alone do not determine generator phases.",
+  "source": "L05 §4.2",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SP3_INNER_TRIALITY_SOURCE_INSTANCE_0_4.isg"
+  ],
+  "new_support_files": [
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX3_CYCLIC_PERMUTATION_CONJUGATION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg"
+  ],
+  "prior_closed_dependencies": [
+    "L125-BODY",
+    "L128-BODY",
+    "L132-BODY"
+  ],
+  "mechanical_dependency_check": {
+    "new_file_count": 5,
+    "declared_new_local_ids": 25,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "diagonal_factor_maps": {
+      "M_to_H": 242010,
+      "P_to_H": 242011,
+      "V_to_H": 242012,
+      "basis_images": "each compact tri(H) basis maps to quaternion i,j,k and preserves the Lie bracket as quaternion commutator"
+    },
+    "matrix_layout": 242000,
+    "printed_gt_matrix_relation": 242091,
+    "printed_gt_conjugation": 242020,
+    "primitive_conjugation_schema": 243100,
+    "textual_generator_cycle": 242021,
+    "inverse_orientation_relation": 242022,
+    "root_phase_guard": 242090
+  },
+  "evidence": {
+    "orientation_audit": "L134_INNER_TRIALITY_ORIENTATION_AUDIT_0_1.json",
+    "recursive_verifier": "tools/verify_l134_sp3_inner_triality_closure.mjs",
+    "printed_gt_result": "REALIZES_INVERSE_OF_STATED_BASIS_CYCLE",
+    "order_three_preserved": true,
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "the three diagonal tri(H) factors are tied to imaginary quaternions by bracket-preserving linear injections, not dimension matching",
+    "the printed matrix conjugation and textual basis-arrow direction are both preserved",
+    "the two triality orientations are recorded as inverses rather than silently normalized",
+    "the root-space phase statement is preserved as a source non-determination guard and no phases are invented",
+    "the full parent Lie bracket belongs to L-SSC-133 and is not imported into L134",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
