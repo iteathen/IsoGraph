@@ -1,0 +1,67 @@
+{
+  "schema": "woit.w02-group-identity-correction-interface-audit.v0.1",
+  "status": "PASS_PUBLIC_IDS_STABLE_SEMANTICS_CORRECTED",
+  "date": "2026-10-04",
+  "corrections": [
+    {
+      "predecessor": "W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_1.isg",
+      "successor": "W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_2.isg",
+      "declared_ids_unchanged": true,
+      "local_reference_delta": {
+        "added": [
+          204116
+        ],
+        "removed": [
+          204120
+        ]
+      },
+      "meaning": "all group/action identity parameters now use matrix identity 204116 instead of E22=204120"
+    },
+    {
+      "predecessor": "W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_1.isg",
+      "successor": "W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_2.isg",
+      "declared_ids_unchanged": true,
+      "local_reference_delta": {
+        "added": [
+          204116
+        ],
+        "removed": []
+      },
+      "meaning": "group/action identity parameters now use 204116; legitimate E22 use 204120 remains"
+    }
+  ],
+  "matrix_identity": {
+    "id": 204116,
+    "definition": "E11+E22"
+  },
+  "e22": {
+    "id": 204120
+  },
+  "affected_current_closures": [
+    "W-SSC-128",
+    "W-SSC-131",
+    "W-SSC-138",
+    "W-SSC-010",
+    "W-SSC-144"
+  ],
+  "unaffected_current_closures": [
+    "W-SSC-001",
+    "W-SSC-018",
+    "W-SSC-020",
+    "W-SSC-021",
+    "W-SSC-023",
+    "W-SSC-024",
+    "W-SSC-025",
+    "W-SSC-026",
+    "W-SSC-027",
+    "W-SSC-046",
+    "W-SSC-058",
+    "W-SSC-078",
+    "W-SSC-098",
+    "W-SSC-111",
+    "W-SSC-121",
+    "W-SSC-145"
+  ],
+  "ia_fixed_point_invalidated": false,
+  "rule": "Affected closure packets require successor revisions before they remain current closure authority. No IA fixed point existed."
+}
