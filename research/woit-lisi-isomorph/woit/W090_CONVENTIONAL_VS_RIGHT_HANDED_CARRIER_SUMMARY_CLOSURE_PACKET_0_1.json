@@ -1,0 +1,33 @@
+{
+  "schema": "woit.w090-conventional-vs-right-handed-carrier-summary-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-090",
+  "frozen_body": "W04d explicitly contrasts the conventional complex vector carrier S_L tensor S_R with the proposed right-handed carrier S_R tensor conjugate(S_R); on the Euclidean slice the latter decomposes as a scalar plus a three-vector and SU(2)_L acts trivially.",
+  "source": "W04d slides pp. 9,13–16",
+  "support_packets": [
+    "W130_CONVENTIONAL_HOM_TENSOR_CLOSURE_PACKET_0_1.json",
+    "W135_RIGHT_SPINOR_TENSOR_EUCLIDEAN_SPLIT_CLOSURE_PACKET_0_1.json",
+    "W134_EUCLIDEAN_SU2_ROLE_PSEUDOREAL_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "conventional_carrier": "W-SSC-130",
+    "right_handed_tensor_carrier": "W-SSC-135",
+    "euclidean_scalar_plus_three_split": "W-SSC-135",
+    "su2_L_trivial_spacetime_action": "W-SSC-134",
+    "source_contrast": "CONVENTIONAL_VS_RIGHT_HANDED"
+  },
+  "guards": [
+    "The source contrast does not assert isomorphism of the two presentations.",
+    "No electroweak dynamics are inferred.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
