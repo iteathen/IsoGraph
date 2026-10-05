@@ -1,0 +1,33 @@
+{
+  "schema": "woit.os-reflection-positive-abstraction-boundary.v0.1",
+  "status": "FROZEN_FOR_W054_W083_W084_W122_W123_W136",
+  "date": "2026-10-05",
+  "represented_semantics": {
+    "euclidean_test_function_space": "exact complex vector carrier",
+    "time_reflection": "exact linear involutive bijection",
+    "pointwise_conjugation_role": "exact conjugate-semilinear involutive bijection",
+    "theta": "exact conjugate-semilinear involution defined as conjugation after time reflection",
+    "positive_time_space": "exact complex vector carrier linearly injected into the Euclidean carrier",
+    "negative_time_image": "exact Theta image of the positive-time carrier",
+    "schwinger_two_point_form": "exact complex bilinear form",
+    "os_form": "exact Hermitian form S2(Theta f,g) on the positive-time carrier",
+    "reflection_positivity": "OS diagonal is an embedded nonnegative ordered-real scalar",
+    "null_space": "exact subspace of zero OS norm",
+    "physical_state_space": "exact vector quotient of positive-time states by the null subspace",
+    "physical_inner_product": "exact positive-definite Hermitian form induced on the quotient",
+    "euclidean_covariance": "abstract exact linear group action preserving S2",
+    "chosen_reflection_symmetry_reduction": "exact proper subgroup commuting with reflection and preserving the positive-time carrier",
+    "reconstructed_covariance": "abstract exact group action on the physical quotient preserving its inner product, with the residual subgroup embedded",
+    "distinguished_spinor_direction_link": "source incidence linking W02's exact distinguished Euclidean direction to the reflection choice"
+  },
+  "intentionally_abstracted_non_load_bearing_semantics": [
+    "topology/nuclearity/completeness of the test-function space",
+    "distributional continuity of Schwinger functions",
+    "Hilbert completion beyond the exact positive-definite quotient inner-product space",
+    "matrix-coordinate presentations and Lie-group topology of SO(4), SO(3), or SO(3,1)",
+    "pointwise evaluation at a numerical tau coordinate"
+  ],
+  "invalidation_rule": "If a later frozen W obligation uses test-function topology, distributional continuity, Hilbert completion, explicit SO matrix coordinates, or pointwise tau evaluation as a premise, this boundary must be extended before that obligation closes.",
+  "rationale": "The W sources use OS reconstruction here through an involutive reflection choice, reflection positivity, null quotient, and symmetry change. Those invariant structures are represented exactly in primitive quantified form.",
+  "cross_author_semantics_available": false
+}
