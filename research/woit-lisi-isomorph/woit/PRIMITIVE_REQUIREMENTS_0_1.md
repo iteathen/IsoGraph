@@ -1,7 +1,8 @@
 # Woit primitive requirements 0.1
 
 **Status:** WORKING REDUCTION MAP
-**Assertion base:** ASSERTION_BASE_A0_0_10.md
+**Assertion base:** ASSERTION_BASE_A0_0_12.md
+**Frozen SSC:** SOURCE_SEMANTIC_CENSUS_0_1.json
 **Shared burden plan:** ../PRIMITIVE_MATH_SCHEMA_PLAN_0_1.md
 
 | A0 region | Required primitive/schema families | Current state |
@@ -60,3 +61,39 @@ These obligations are source-selected, not unification-selected. They must be re
 | W-A0-116–122 | M14 antilinear involution/conjugation and Hermitian structures; M23 reflection positivity/Hilbert reconstruction; M24 analytic-continuation alternative; half-space/reflection predicates; PT Hermitian-orbit split; Penrose/Penrose-Ward support; M20 role breaking; provisional-source guards | INCOMPLETE |
 
 The W04 sequence contains genuine same-author revisions. Primitive reduction must preserve the source-local carrier and role changes so DTS can later decide what is transported, replaced, or left residual. The OS/conjugation proposal is not permission to collapse Euclidean and Lorentzian structures by label.
+
+
+## W04d-slide and W05 full-treatment obligations exposed by SSC 0.5
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| W-A0-123–124 | M02–M05; M09–M11; positive-spectrum/time-evolution predicates; complex tube domain; locality continuation guard; OS reflection; exact conventional/right-handed tensor carriers; Euclidean scalar-plus-three-vector decomposition | INCOMPLETE |
+| W-A0-125–130 | M09–M14; Grassmannian incidence; SL(4,C) real-form family; Hermitian-sign orbit partition; celestial/null incidence; projective spin bundle; orthogonal-complex-structure bundle; anti-self-dual integrability condition; holomorphic-boundary transport | INCOMPLETE |
+| W-A0-131–135 | M02–M06; M12–M14; projective conic; fixed-point-free real action; quaternionic pseudoreality; dual-projective Minkowski real structure; holomorphic O(1) bundle/direct-sum construction | PARTIAL SUPPORT / SOURCE INSTANCES INCOMPLETE |
+| W-A0-136–138 | hyperkahler triple/sphere; quotient and moduli semantics; holomorphic vector bundles with degree/rank/slope; U(1)-equivariance; filtration/associated-graded reconstruction; lambda-connection family and endpoint roles | NEW PRIMITIVE FAMILIES REQUIRED — NOT QU |
+| W-A0-139–141 | base-field-parametric quaternion algebra; scalar extension; split/division predicate; Hilbert symbol; projective conic rational-point predicate; Galois action; Brauer equivalence/product; Galois cohomology; graded Brauer-Wall and Clifford periodicity | NEW PRIMITIVE FAMILIES REQUIRED — NOT QU |
+| W-A0-142 | Heisenberg Lie algebra/group; irreducible unitary representation; symplectic automorphism action; projective representation/cocycle; metaplectic central extension; Brauer-class control; local/global product and reciprocity | NEW PRIMITIVE FAMILIES REQUIRED — NOT QU |
+| W-A0-143–145 | analogy relation with non-identity guard; finite-prime/infinite-prime comparison typing; source epistemic-strength modality; speculation guard; expository-context versus physical-model ownership | INCOMPLETE |
+
+W05 exposes mathematical families outside the original M01–M24 burden list. Under the no-evasion rule these are extension requirements, not QU. A source-local mathematical context may remain opaque only when none of its internal behavior is load-bearing downstream.
+
+
+## Final conservation obligations exposed by frozen SSC 0.1
+
+| A0 region | Required primitive/schema families | Current state |
+|---|---|---|
+| W-A0-146 | canonical connection/form pair; constrained Hamiltonian system; Gauss, spatial-diffeomorphism, and Hamiltonian constraint predicates; boundary/no-boundary condition; chiral SU(2) action | INCOMPLETE |
+| W-A0-147 | tautological line bundle; Hom_C(l,S_L) carrier; U(1)×SU(2) action; stabilizer/subgroup selection by nonzero vector; residual-symmetry transition; electromagnetic-role label as derived source interpretation | INCOMPLETE |
+| W-A0-148–151 | Clifford/exterior-algebra bundle; fiber-supplied Weyl degree; multiplicity/count schema; homogeneous/minimal orbit; geometric-quantization polarization predicate; moment map; speculative-relation and prediction-strength guards | INCOMPLETE |
+| W-A0-152 | exact differential-form/action normalization; self-dual projection; topological residual term; equality-modulo-residual relation | PARTIAL SUPPORT / SOURCE INSTANCE MUST BE ROUTED |
+| W-A0-153 | principal/frame bundle ownership; structure-group dependency on spacetime geometry; canonical/tetrad one-form versus generic internal connection distinction | INCOMPLETE |
+| W-A0-154 | modified Euclidean Dirac operator; distinguished Clifford basis element; connection-space hyperkahler context; expository-context guard | INCOMPLETE |
+| W-A0-155 | dated revision ordering; preliminary-source status; mutable-status relation; downstream invalidation/supersession semantics for DTS | INCOMPLETE |
+| W-A0-156–157 | antilinear involution Theta; time reflection; conjugation; sesquilinear OS form; positive-time support; positive-semidefinite/null-space predicate; quotient completion to Hilbert space; covariance-role transition induced by direction choice | INCOMPLETE |
+| W-A0-158 | two-chirality complexification; anti-diagonal Euclidean real form; right-chiral holomorphic carrier; conjugation fixed locus; real-form selection without ordinary analytic-continuation identification | INCOMPLETE |
+| W-A0-159–160 | sheaf/cohomology H^1 carrier; O(n-2) line bundle; twistor-transform conjugation; holomorphic vector bundle; Ward-Penrose reconstruction; self-dual connection; Euclidean-domain and Minkowski-boundary transport with side conditions | INCOMPLETE |
+| W-A0-161 | Hermitian-form parameter; projective orbit split; physical-state structure selection; internal-symmetry breaking; tautological/quotient bundle gauge-role assignment; proposal/limitation modality | INCOMPLETE |
+
+## Frozen-census rule
+
+`SOURCE_SEMANTIC_CENSUS_0_1.json` is now authoritative for W source coverage. Primitive compilation MUST route all 127 census obligations. Missing mathematical semantics are `INCOMPLETE_UNEXPANDED`, not QU. QU is reserved for genuinely unresolved source/domain realization after the relevant primitive language exists.
