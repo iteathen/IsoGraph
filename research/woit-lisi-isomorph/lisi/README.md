@@ -54,6 +54,29 @@ No Woit twistor definition, Euclidean-incidence construction, SU(2,2) interpreta
 - `LISI_L05_QUATERNION_TRIALITY_SOURCE_INSTANCE_0_1.isg` / `.md` — source-native quaternionic scalar triality form and canonical order-three vector/Q_minus/Q_plus role cycle, preserving the tilde-basis convention.
 
 
-Current working assertion base: `ASSERTION_BASE_A0_0_6.md`.
+Current working assertion base: `ASSERTION_BASE_A0_0_7.md`.
 
-Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_3.json`.
+Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_4.json`.
+
+Current working Source Semantic Census: `../TRACK_L_WORKING_SSC_0_3.md`.
+
+
+## Current execution gate
+
+Discovery Protocol is blocked.
+
+The required order is:
+
+~~~text
+complete/freeze L SSC
+-> compile authoritative L native .isg bundle
+-> primitive/schema closure
+-> mechanically derived Core-0.21 closure ledger
+-> five Core qualification gates
+-> recursive IA fixed point
+-> applicable NEI
+-> DTS
+-> only then DP
+~~~
+
+Existing partial native source instances remain evidence/components; they do not constitute the authoritative full-track compilation while the SSC is open.
