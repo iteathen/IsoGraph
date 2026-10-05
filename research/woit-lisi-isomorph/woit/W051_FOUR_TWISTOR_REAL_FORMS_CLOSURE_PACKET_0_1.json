@@ -1,0 +1,49 @@
+{
+  "schema": "woit.w051-four-twistor-real-forms-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-051",
+  "frozen_body": "Appendix A distinguishes split, Minkowski, Euclidean, and compact SU(4) real-form structures of SL(4,C), each with different fixed/orbit/signature conditions; these real forms may not be collapsed into one representation.",
+  "source": "W01 Appendix A.3",
+  "abstraction_boundary": "W_TWISTOR_FOUR_REAL_FORMS_BOUNDARY_0_1.json",
+  "source_instance": "research/woit-lisi-isomorph/woit/W_TWISTOR_COMPACT_SPLIT_REAL_FORMS_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json",
+    "W053_EUCLIDEAN_SL2H_TWISTOR_CLOSURE_PACKET_0_1.json",
+    "W100_EUCLIDEAN_VS_MINKOWSKI_REAL_STRUCTURE_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "common_complex_twistor_carrier": 202100,
+    "compact_positive_hermitian_form": 999120,
+    "compact_group_role": 999130,
+    "compact_projective_action": 999135,
+    "split_ordinary_conjugation": 999100,
+    "split_real_fixed_carrier": 999150,
+    "split_group_role": 999160,
+    "split_projective_action": 999165,
+    "minkowski_signature_22_form": 995110,
+    "minkowski_group_role": 995100,
+    "minkowski_projective_orbits": [
+      995130,
+      995131,
+      995132
+    ],
+    "euclidean_quaternionic_structure": 943000,
+    "euclidean_group_role": 998100,
+    "euclidean_projective_action": 998110,
+    "distinctness": "represented by different fixed/signature/orbit structures on the common exact C4 carrier"
+  },
+  "semantic_guards": [
+    "The four real-form structures are not merged; each retains distinct exact defining behavior.",
+    "The parent SL(4,C) and Spin cover names are navigation labels at the frozen action boundary; explicit determinant/cover topology is not used by W051.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
