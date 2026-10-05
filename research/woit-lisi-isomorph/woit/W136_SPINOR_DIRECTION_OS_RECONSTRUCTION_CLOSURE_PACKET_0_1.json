@@ -1,0 +1,30 @@
+{
+  "schema": "woit.w136-spinor-direction-os-reconstruction-closure.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-136",
+  "frozen_body": "Reconstruction of a physical state space from Euclidean Schwinger functions requires a chosen imaginary-time direction and reflection; W02 interprets the distinguished Euclidean direction as naturally supplied by the proposed spinor geometry.",
+  "source": "W02 §III",
+  "support_packets": [
+    "W083_OS_PHYSICAL_STATE_RECONSTRUCTION_CLOSURE_PACKET_0_1.json",
+    "W135_RIGHT_SPINOR_TENSOR_EUCLIDEAN_SPLIT_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "distinguished_euclidean_direction": 205105,
+    "time_reflection": 996110,
+    "direction_reflection_source_link": 996197,
+    "physical_state_quotient": 996140
+  },
+  "guards": [
+    "The link from the exact spinor-geometric direction to the reflection choice is source incidence; it adds no hidden map behavior.",
+    "No cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
