@@ -15,15 +15,15 @@ Extends the abstract field interface with a total compatible order relation:
 - totality;
 - additive monotonicity;
 - closure of nonnegative values under multiplication;
-- (0\le 1).
+- `0 <= 1`.
 
 It does not add completeness, topology, Archimedean structure, or a claim that every ordered field is the standard real numbers.
 
 ## 216001
 
-Defines a positive-definite scalar map (Q:V\to C) over an ordered vector space:
-- (Q(0)=0);
-- (Q(v)\ge0);
-- (Q(v)=0\Rightarrow v=0).
+Defines a positive-definite scalar map `Q: V -> C` over an ordered vector space:
+- `Q(0) = 0`;
+- `Q(v) >= 0`;
+- `Q(v) = 0` implies `v = 0`.
 
 This schema exists so L05's source distinction between positive-definite division-algebra metrics and split metrics is represented below the English classification.
