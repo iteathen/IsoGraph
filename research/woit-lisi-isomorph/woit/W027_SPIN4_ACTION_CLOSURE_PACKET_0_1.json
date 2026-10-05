@@ -1,0 +1,58 @@
+{
+  "schema": "woit.w027-spin4-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-027",
+  "frozen_body": "W01 represents Spin(4) by independent left/right SU(2)=Sp(1) actions, with the Euclidean vector action x -> g_L x g_R^{-1}; the two factors are structurally independent in Euclidean signature.",
+  "source": "W01 §2.1",
+  "root_native": "WOIT_BT01_SPIN4_UNIT_QUATERNION_ACTION_0_1.isg",
+  "source_carrier_native": "WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg",
+  "schema_files": [
+    "research/woit-lisi-isomorph/support/PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 13,
+    "declared_relation_ids": 76,
+    "unresolved_noncore_calls": 0,
+    "terminal_authority": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "factor_roles": [
+      199106,
+      199107
+    ],
+    "unit_group_carrier": 199102,
+    "group_schema": 199000,
+    "action_relation": 199105,
+    "action_formula": "y = g_L x g_R^{-1}",
+    "quaternion_carrier": 189310,
+    "quaternion_product": 189315,
+    "quaternion_conjugation_inverse": 189317
+  },
+  "semantic_guards": [
+    "left and right factor roles are distinct role atoms even though both instantiate the same unit-quaternion group schema",
+    "SU(2)/Sp(1)/Spin(4) names are navigation/source roles; authoritative behavior is the exact group/action schema",
+    "no topology, smooth Lie-group structure, global bundle action, or physical/internal-role identification is added",
+    "this packet closes only W-SSC-027, not W-SSC-002 or other physical-role obligations"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": [],
+    "generator_root": "WOIT_BT01_SPIN4_UNIT_QUATERNION_ACTION_0_1.isg"
+  }
+}
