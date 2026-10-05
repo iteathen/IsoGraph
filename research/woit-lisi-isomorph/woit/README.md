@@ -58,8 +58,9 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 ## W02 full-source expansion
 
-- `ASSERTION_BASE_A0_0_8.md` — W02 section-by-section semantic expansion adds W-A0-047–070, including negative claims and unresolved boundaries.
-- `SOURCE_TRAVERSAL_LEDGER_0_5.json` — W02 main-text traversal state and remaining equation-conservation pass.
+- `ASSERTION_BASE_A0_0_9.md` — current explicit assertion base; W-A0-071–090 add the full-source W01 obligations exposed beyond the bridge-bearing slice.
+- `../TRACK_W_WORKING_SSC_0_3.md` — current working W Source Semantic Census; still incomplete and therefore not yet frozen Core-0.21 input.
+- `SOURCE_TRAVERSAL_LEDGER_0_6.json` — current traversal state; W01 main text and major appendices have been expanded, with final assertion-conservation still open.
 - `W02_PRIMITIVE_REQUIREMENTS_0_1.md` — reduction plan for right-handed vectors/spinors, Hodge/self-duality, Yang-Mills, frame/tetrad, and chiral GR.
 
 - `W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_2.isg` / `.md` — current corrected W02 Hermitian M2(C) vector representation with exact Pauli basis, (-+++) quadratic form, Hermitian image, and det=-Q_M relation. Version 0.1 is rejected.
@@ -83,3 +84,24 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 - `W02_CURVATURE_HODGE_BLOCK_SOURCE_INSTANCE_0_1.isg` / `.md` — exact six-dimensional Hodge-sector curvature block semantics; Einstein condition is vanishing off-diagonal blocks, while frame/connection reconstruction remains open.
 
 - `W02_CHIRAL_GR_ACTION_VARIATION_INTERFACE_0_1.isg` / `.md` — preserves the chiral GR action and its connection/tetrad first-variation roles while leaving tetrad, spin-connection, curvature, torsion-free, and Einstein semantics open for primitive expansion.
+
+
+## Current execution gate
+
+Discovery Protocol is blocked.
+
+The required order is:
+
+~~~text
+complete/freeze W SSC
+-> compile authoritative W native .isg bundle
+-> primitive/schema closure
+-> mechanically derived Core-0.21 closure ledger
+-> five Core qualification gates
+-> recursive IA fixed point
+-> applicable NEI
+-> DTS
+-> only then DP
+~~~
+
+Existing partial native source instances remain evidence/components; they do not constitute the authoritative full-track compilation while the SSC is open.
