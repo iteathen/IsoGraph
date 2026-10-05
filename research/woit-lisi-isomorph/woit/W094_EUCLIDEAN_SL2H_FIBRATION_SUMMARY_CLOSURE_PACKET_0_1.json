@@ -1,0 +1,36 @@
+{
+  "schema": "woit.w094-euclidean-sl2h-fibration-summary-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-094",
+  "frozen_body": "Under the Euclidean SL(2,H) real form W04d uses T=C4=H2 and the CP3->HP1=S4 fibration sending each complex line to the quaternionic line it generates.",
+  "source": "W04d slides pp. 24–25",
+  "support_packets": [
+    "W053_EUCLIDEAN_SL2H_TWISTOR_CLOSURE_PACKET_0_1.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "quaternionic_h2_role": "W053",
+    "euclidean_sl2h_role": 998100,
+    "projective_twistor_space": 202113,
+    "euclidean_base": 202120,
+    "hp1_homogeneous_coordinates": 998210,
+    "twistor_projection": 202126,
+    "source_line_to_quaternionic_line_semantics": "the exact W023 projection from a complex projective line in T to its H plus infinity quaternionic-base class"
+  },
+  "rationale": "W-SSC-094 is a slide-level summary of the Euclidean quaternionic real-form/fibration package already closed under W053 and W023.",
+  "semantic_guards": [
+    "S4 is used only at the frozen algebraic Euclidean-base role boundary.",
+    "No new topology or smooth structure is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}
