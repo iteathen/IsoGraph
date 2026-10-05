@@ -53,19 +53,26 @@
     "source_specific_gaps_remain_across_M01_M14": true
   },
   "deterministic_execution_order": [
-    "complete W source traversal and SSC without bridge filtering",
-    "complete L source traversal and SSC without bridge filtering",
-    "reduce all census items; do not skip items based on expected unification relevance",
-    "mechanically derive Core-0.21 closure ledgers",
-    "close W IA recursively to fixed point",
-    "close L IA recursively to fixed point",
-    "run source-local NEI and DTS",
-    "run source-local DP",
-    "freeze anonymized cross-track structural packets",
-    "run cross-track NEI/DP/DTS over primitive support",
+    "complete W source traversal and freeze complete W SSC",
+    "complete L source traversal and freeze complete L SSC",
+    "compile each frozen SSC into an authoritative native .isg bundle",
+    "primitive/schema-close every load-bearing semantic path in the native bundles",
+    "mechanically derive Core-0.21 closure ledgers from frozen SSC + scope + native graph",
+    "verify soundness, coverage, reconstruction, scope integrity, and authority routing",
+    "generate and primitive-close W IA recursively to a pinned fixed point",
+    "generate and primitive-close L IA recursively to a pinned fixed point",
+    "run required source-local NEI",
+    "run source-local DTS",
+    "only then run source-local DP",
+    "seal source tracks for comparison scope",
+    "build blind cross-track comparison packet from compiled/reduced structures",
+    "run cross-track NEI and DTS",
+    "only then run cross-track DP",
     "classify emergent correspondences/residuals/obstructions",
-    "construct maximal source-reconstructive U only from those results",
-    "run final minimum-sufficient-support/valuation audit"
+    "construct maximal source-reconstructive U",
+    "compile U into IsoGraph and repeat applicable closure/IA/NEI/DTS stages",
+    "run minimum-sufficient-support/valuation audit",
+    "qualify and publish"
   ],
   "prohibited_shortcuts": [
     "choose V+S_minus+S_plus or any other carrier before reduction",
@@ -74,5 +81,18 @@
     "use L05 citation of Woit as a premise",
     "treat missing primitive semantics as QU",
     "stop at named mathematical constructions when their behavior is load-bearing"
-  ]
+  ],
+  "pre_dp_gate": {
+    "dp_blocked_until": [
+      "complete frozen SSC",
+      "authoritative native IsoGraph compilation",
+      "primitive/schema closure",
+      "mechanically derived Core-0.21 closure ledger",
+      "five Core-0.21 qualification gates",
+      "recursive IA fixed point",
+      "applicable NEI",
+      "applicable DTS"
+    ],
+    "current_state": "BLOCKED"
+  }
 }
