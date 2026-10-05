@@ -23,8 +23,8 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | source traversal complete | PASS — 9/9 frozen source units |
 | SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
 | primitive math support complete | IN PROGRESS |
-| native .isg bundle | PASS — authoritative routing compilation 0.1; semantic closure in progress |
-| graph-derived closure ledger | IN PROGRESS — 0.9: 6 CLOSED_SCHEMA / 145 incomplete |
+| native .isg bundle | PASS — authoritative routing compilation 0.2; semantic closure in progress |
+| graph-derived closure ledger | IN PROGRESS — 0.11: 8 CLOSED_SCHEMA / 143 incomplete |
 | recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
 | NEI pass | NOT YET |
 | DTS pass | PARTIAL / PROVISIONAL |
@@ -94,8 +94,8 @@ The next active task is authoritative native W compilation and primitive/schema 
 
 ## Current primitive-closure checkpoint
 
-- `CORE021_CLOSURE_LEDGER_0_9.json`: 6 frozen census obligations CLOSED_SCHEMA, 145 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
-- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098.
+- `CORE021_CLOSURE_LEDGER_0_11.json`: 8 frozen census obligations CLOSED_SCHEMA, 143 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
+- Closed so far: W-SSC-001, W-SSC-023, W-SSC-024, W-SSC-026, W-SSC-027, W-SSC-098, W-SSC-128, W-SSC-131.
 - `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
 - No Lisi semantics are available to the W closure process.
 
