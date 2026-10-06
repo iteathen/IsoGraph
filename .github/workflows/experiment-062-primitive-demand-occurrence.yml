@@ -35,7 +35,7 @@ jobs:
       - name: Deterministic preflight
         run: |
           set -euo pipefail
-          node --check experiments/062/tools/run-exp062.mjs
+          node --check experiments/062/tools/run-exp062-v2.mjs
           node research/primitive-demand-qualification/tools/verify_joint_primitive_demand_graph.mjs || true
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_REGROUNDING_AUDIT_0_1.json
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
@@ -43,22 +43,22 @@ jobs:
       - name: Extract W occurrences
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062.mjs W extract
+        run: node experiments/062/tools/run-exp062-v2.mjs W extract
 
       - name: Audit W extraction
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062.mjs W audit
+        run: node experiments/062/tools/run-exp062-v2.mjs W audit
 
       - name: Extract L occurrences
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062.mjs L extract
+        run: node experiments/062/tools/run-exp062-v2.mjs L extract
 
       - name: Audit L extraction
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062.mjs L audit
+        run: node experiments/062/tools/run-exp062-v2.mjs L audit
 
       - name: Persist research evidence
         if: always()
