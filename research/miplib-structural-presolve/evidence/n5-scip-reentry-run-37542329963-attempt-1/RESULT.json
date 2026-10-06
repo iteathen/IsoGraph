@@ -1,0 +1,163 @@
+{
+  "experiment": "n5-3-scip-residual-reentry-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "pyscipopt_version": "6.2.1",
+  "stage1_symmetry_off_presolve": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_time_s": 0.036638,
+    "wall_s": 0.04030502300000194
+  },
+  "reentry_presolve_default": {
+    "vars": 2142,
+    "conss": 846,
+    "handlers": {
+      "linear": 846
+    },
+    "symmetry_named_constraints": [],
+    "presolve_time_s": 0.028537999999999997
+  },
+  "reentry_presolve_symmetry_off": {
+    "vars": 2142,
+    "conss": 846,
+    "handlers": {
+      "linear": 846
+    },
+    "symmetry_named_constraints": [],
+    "presolve_time_s": 0.021131999999999998
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "default": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 11481.84068396716,
+        "dual": 7563.030165893971,
+        "gap": 0.5181534956379452,
+        "nodes": 27,
+        "lp_iterations": 26205,
+        "wall_s": 15.000788954999997
+      },
+      "symmetry_off": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 11481.84068396716,
+        "dual": 7563.030165893971,
+        "gap": 0.5181534956379452,
+        "nodes": 28,
+        "lp_iterations": 26252,
+        "wall_s": 15.000662680000005
+      }
+    },
+    {
+      "seed": 1,
+      "default": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 11411.33498759106,
+        "dual": 7454.524026518885,
+        "gap": 0.5307932400507572,
+        "nodes": 40,
+        "lp_iterations": 34034,
+        "wall_s": 15.001103712000003
+      },
+      "symmetry_off": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 11411.33498759106,
+        "dual": 7454.524026518885,
+        "gap": 0.5307932400507572,
+        "nodes": 40,
+        "lp_iterations": 33986,
+        "wall_s": 15.000653303999997
+      }
+    },
+    {
+      "seed": 2,
+      "default": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 10086.000000000207,
+        "dual": 7559.412843795569,
+        "gap": 0.33423060870109106,
+        "nodes": 19,
+        "lp_iterations": 27588,
+        "wall_s": 15.000664246
+      },
+      "symmetry_off": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 10086.000000000207,
+        "dual": 7559.412843795569,
+        "gap": 0.33423060870109106,
+        "nodes": 19,
+        "lp_iterations": 27588,
+        "wall_s": 15.000801096999993
+      }
+    },
+    {
+      "seed": 3,
+      "default": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 10517.516129032378,
+        "dual": 7485.048424620147,
+        "gap": 0.40513668481258003,
+        "nodes": 48,
+        "lp_iterations": 35220,
+        "wall_s": 15.001740952999995
+      },
+      "symmetry_off": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 10517.516129032378,
+        "dual": 7485.048424620147,
+        "gap": 0.40513668481258003,
+        "nodes": 48,
+        "lp_iterations": 35220,
+        "wall_s": 15.000782949000012
+      }
+    },
+    {
+      "seed": 4,
+      "default": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 11455.000000000298,
+        "dual": 7590.27101106096,
+        "gap": 0.5091687745150922,
+        "nodes": 14,
+        "lp_iterations": 24971,
+        "wall_s": 15.000846143000018
+      },
+      "symmetry_off": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 11455.000000000298,
+        "dual": 7590.27101106096,
+        "gap": 0.5091687745150922,
+        "nodes": 14,
+        "lp_iterations": 24971,
+        "wall_s": 15.000777261999986
+      }
+    }
+  ],
+  "summary": {
+    "default_median_gap": 0.5091687745150922,
+    "off_median_gap": 0.5091687745150922,
+    "default_median_nodes": 27,
+    "off_median_nodes": 28,
+    "default_median_lp": 27588,
+    "off_median_lp": 27588,
+    "default_gap_wins": 0,
+    "off_gap_wins": 0,
+    "gap_ties": 5
+  },
+  "disposition": "PASS"
+}
