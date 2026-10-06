@@ -1,0 +1,41 @@
+{
+  "experiment": "miplib-structural-presolve-prototype-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "time_limit_s_per_solve": 15.0,
+  "fixed_profile": [
+    "exact identical-row interval intersection",
+    "exact identical-column aggregation for ordinary continuous/integer interval variables with identical objective coefficient",
+    "exact disconnected-component detection",
+    "six-round coefficient-aware bipartite refinement for LEAD_ONLY structural classes"
+  ],
+  "instances": [],
+  "errors": [
+    {
+      "name": "mad",
+      "error": "AttributeError(\"'Highs' object has no attribute 'getPresolvedModel'\")"
+    },
+    {
+      "name": "glass4",
+      "error": "AttributeError(\"'Highs' object has no attribute 'getPresolvedModel'\")"
+    },
+    {
+      "name": "supportcase26",
+      "error": "AttributeError(\"'Highs' object has no attribute 'getPresolvedModel'\")"
+    },
+    {
+      "name": "bppc4-08",
+      "error": "AttributeError(\"'Highs' object has no attribute 'getPresolvedModel'\")"
+    }
+  ],
+  "objective_failures": [],
+  "summary": {
+    "instances_completed": 0,
+    "instances_with_exact_post_presolve_reduction": 0,
+    "instances_with_exact_factorization_signal": 0,
+    "instances_with_wl_leads": 0,
+    "total_post_presolve_rows_removed": 0,
+    "total_post_presolve_cols_removed": 0
+  },
+  "disposition": "FAIL"
+}
