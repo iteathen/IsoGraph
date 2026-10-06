@@ -1,0 +1,73 @@
+{
+  "schema": "isograph.dnwf-source-semantic-census.v0.1",
+  "date": "2026-10-05",
+  "status": "FROZEN_CANDIDATE_MODULE_SSC",
+  "qualification_target": "DNWF_0_1",
+  "module_name": "Domain-Neutral Well-Founded Constructor Authority 0.1",
+  "provenance": {
+    "demand_graph": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_0_1.json",
+    "definability_audit": "research/primitive-demand-qualification/CORE_DEFINABILITY_AUDIT_0_2.json",
+    "derivation": "The joint W/L demand graph forces generic finite indexing/cardinality and recursive/fold structures. Core K7 requires but does not itself supply well-founded/inductive carrier authority."
+  },
+  "governing_authority": {
+    "core": "0.17-0.21 cumulative qualified",
+    "qu": "not used",
+    "cross_author_semantics": false
+  },
+  "items": [
+    {
+      "id": "DNWF-SSC-001",
+      "kind": "signature",
+      "body": "A constructor signature Sigma is a finite indexed family of constructor tags. Each tag has a finite ordered field list; each field is declared either recursive into the generated carrier or external into a separately declared raw carrier."
+    },
+    {
+      "id": "DNWF-SSC-002",
+      "kind": "generated_carrier",
+      "body": "Given Sigma, the generated carrier Mu(Sigma) contains all and only finite well-founded constructor trees formed from the tags and fields of Sigma; no other members are admitted."
+    },
+    {
+      "id": "DNWF-SSC-003",
+      "kind": "constructor_separation",
+      "body": "Different constructor tags produce distinct members of Mu(Sigma). For one constructor tag, two constructed members are equal exactly when every corresponding ordered field value is equal."
+    },
+    {
+      "id": "DNWF-SSC-004",
+      "kind": "structural_induction",
+      "body": "For any property P on Mu(Sigma), if every constructor case preserves P assuming P for each recursive field, then P holds for every member of Mu(Sigma)."
+    },
+    {
+      "id": "DNWF-SSC-005",
+      "kind": "structural_recursion",
+      "body": "For any target carrier A and one target constructor-function for each Sigma constructor, there exists exactly one fold map fold:Mu(Sigma)->A whose value on a constructed member is the corresponding target constructor-function applied to the folded recursive fields and unchanged external fields."
+    },
+    {
+      "id": "DNWF-SSC-006",
+      "kind": "well_foundedness_guard",
+      "body": "No member of Mu(Sigma) has an infinite descending chain through recursive fields; every member has finite constructor depth, and recursive definitions may recurse only through recursive fields."
+    },
+    {
+      "id": "DNWF-SSC-007",
+      "kind": "scope_guard",
+      "body": "DNWF supplies only generic well-founded constructor, induction, and fold authority. It supplies no arithmetic, ordering, algebra, topology, geometry, physics, source-domain object, or source-specific theorem."
+    }
+  ],
+  "counts": {
+    "total": 7
+  },
+  "anti_scope": [
+    "No Woit or Lisi source object appears in DNWF semantics.",
+    "No arithmetic operation is primitive DNWF authority.",
+    "No group/vector/matrix/bundle/topology/differential semantics are in DNWF.",
+    "DNWF may not be consumed by W, L, or DNIA until independently qualified."
+  ],
+  "required_qualification": [
+    "Q0 source freeze and interpretation closure",
+    "Q1 exact semantic coverage",
+    "Q2 native/schema closure and parse integrity",
+    "Q3 two independent fresh cold reconstructions",
+    "Q4 exact canonical source/reconstruction sameness",
+    "Q5 adversarial distinction preservation",
+    "Q6 independent scorer-blind verification",
+    "Q7 promotion"
+  ]
+}
