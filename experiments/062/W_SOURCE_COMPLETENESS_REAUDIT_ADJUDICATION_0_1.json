@@ -1,0 +1,123 @@
+{
+  "artifact": "W_SOURCE_COMPLETENESS_REAUDIT_ADJUDICATION_0_1",
+  "schema": "isograph.exp062-w-source-completeness-reaudit-adjudication.v0.1",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_ADJUDICATION_COMPLETE_FOR_RUN_37496395745_ATTEMPT_2",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "purpose": "Adjudicate the 12 correction-bearing rows from the successful W 0.3 source-completeness cold audit without introducing primitive categories, textbook semantics, cross-track correspondence, or W closure.",
+  "inputs": {
+    "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+    "predecessor_extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_3.json",
+    "audit": "experiments/062/evidence/run-37496395745-attempt-2/exp062-w-audit/AUDIT.json",
+    "audit_validation": "experiments/062/evidence/run-37496395745-attempt-2/exp062-w-audit/AUDIT_VALIDATION.json"
+  },
+  "rules": [
+    "No audit lead is promoted automatically.",
+    "Ordinary logic and source-status, motivational, prescriptive, evaluative, or bare source-association modality do not become G1 primitive-demand occurrences.",
+    "Mathematical operations, relations, equations, actions, decompositions, representations, and load-bearing side conditions are conserved source-locally.",
+    "When an audit lead mixes a mathematical occurrence with a source analogy/association, conserve only the explicitly stated mathematical occurrence and leave the analogy/association at Core source-relation level.",
+    "No textbook semantics, conventional mathematical category assignment, primitive proposal, or W/L correspondence is introduced."
+  ],
+  "counts": {
+    "correction_rows": 12,
+    "audit_omission_leads": 15,
+    "accepted_as_stated": 13,
+    "accepted_with_source_local_narrowing": 1,
+    "rejected_as_bare_source_relation": 1
+  },
+  "decisions": [
+    {
+      "census_id": "W-SSC-087",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTIONS",
+      "accepted_spans": [
+        "holomorphic theory on PT+ is proposed to have boundary values on the null region representing chiral Minkowski data",
+        "Penrose/Penrose-Ward constructions supplying part of the reconstruction machinery"
+      ]
+    },
+    {
+      "census_id": "W-SSC-090",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "on the Euclidean slice the latter decomposes as a scalar plus a three-vector and SU(2)_L acts trivially"
+      ],
+      "resolution": "Split the explicit decomposition and action statements into separate occurrences."
+    },
+    {
+      "census_id": "W-SSC-091",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTIONS",
+      "accepted_spans": [
+        "a spacetime point with a right-handed C2 plane in T=C4",
+        "projective twistor space with CP3 containing the corresponding CP1"
+      ],
+      "resolution": "Conserve the projective-space identification and the stated containment separately."
+    },
+    {
+      "census_id": "W-SSC-093",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTIONS",
+      "accepted_spans": [
+        "compactified Minkowski points are CP1s lying in PT0",
+        "PT0 is the space of Minkowski light rays/celestial spheres"
+      ],
+      "resolution": "Conserve identification and incidence separately where the source states both."
+    },
+    {
+      "census_id": "W-SSC-095",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "it states that the latter construction extends to four-dimensional Riemannian manifolds and becomes a complex twistor space for anti-self-dual metrics"
+      ],
+      "resolution": "Conserve extension and resulting-role statements separately."
+    },
+    {
+      "census_id": "W-SSC-097",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "it also presents the same real form as a real projective conic with complex but no real points"
+      ]
+    },
+    {
+      "census_id": "W-SSC-098",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "uses the same quaternionic mechanism on C4=H2 to define the Euclidean projective-twistor real structure"
+      ]
+    },
+    {
+      "census_id": "W-SSC-101",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "for quaternionic dimension d this becomes 2d copies of O(1)"
+      ]
+    },
+    {
+      "census_id": "W-SSC-103",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "with bundle degree/slope and the U(1) weights encoding the Hodge filtration"
+      ]
+    },
+    {
+      "census_id": "W-SSC-105",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "accepted_spans": [
+        "distinguishes split and division classes by the Hilbert symbol"
+      ]
+    },
+    {
+      "census_id": "W-SSC-106",
+      "decision": "ACCEPT_WITH_SOURCE_LOCAL_NARROWING",
+      "audit_span": "uses the no-F-rational-point/fixed-point-free Galois action as the finite-prime analogue of the twistor P1 antipodal real structure",
+      "accepted_span": "no-F-rational-point/fixed-point-free Galois action",
+      "rejected_component": "as the finite-prime analogue of the twistor P1 antipodal real structure",
+      "reason": "The fixed-point-free Galois action/property is mathematical behavior requiring conservation; the analogue relation is a finite source comparison and does not itself create a non-Core G1 demand."
+    },
+    {
+      "census_id": "W-SSC-108",
+      "decision": "REJECT_AUDIT_LEAD_BARE_SOURCE_ASSOCIATION",
+      "rejected_span": "it connects the global adelic construction to Hilbert reciprocity",
+      "reason": "The frozen body states only a source-level connection and supplies no lower operation, law, argument incidence, or reconstruction behavior for that connection. Promoting it as a non-Core occurrence would invent semantics."
+    }
+  ],
+  "downstream_boundary": "This artifact authorizes only construction and deterministic validation of a successor W G1 occurrence census. It does not authorize G2 quotienting, primitive selection, W closure, recursive IA, NEI, DTS, DP, or cross-track synthesis."
+}
