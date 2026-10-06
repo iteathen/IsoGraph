@@ -1,0 +1,1668 @@
+{
+  "experiment": "miplib-semantic-transposition-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "z3_version": "5.1.0",
+  "pair_cap": 40,
+  "query_timeout_ms": 2500,
+  "results": [
+    {
+      "name": "glass4",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/glass4.mps.gz",
+        "gzip_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+        "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d"
+      },
+      "raw": {
+        "rows": 396,
+        "cols": 322,
+        "nonzeros": 1815
+      },
+      "presolved": {
+        "rows": 392,
+        "cols": 317,
+        "nonzeros": 1799
+      },
+      "candidate_groups": 52,
+      "candidate_pairs": 718,
+      "pairs_tested": 40,
+      "controls": [
+        {
+          "pair": [
+            "z1&3.4",
+            "z1&3.8"
+          ],
+          "formulation_swap": true,
+          "semantic": {
+            "exact": true,
+            "reason": null,
+            "affected_rows": 2,
+            "queries": 2,
+            "proof": "All swapped affected row sides are implied by the complete rationalized LP relaxation; transposition is involutive and objective/domain invariant."
+          }
+        }
+      ],
+      "semantic_only": [],
+      "tested": [
+        {
+          "pair": [
+            "z1&2.0",
+            "z2&3.4"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id31",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.0",
+            "z2&9.3"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id31",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.1",
+            "z1&7.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id34",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.2",
+            "z3&8.6"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id36",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.2",
+            "z5&8.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id36",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.2",
+            "z6&8.4"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id36",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.3",
+            "z2&6.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id38",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.3",
+            "z2&7.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id38",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.5",
+            "z2&7.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id43",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.7",
+            "z4&9.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id48",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.7",
+            "z5&9.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id48",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.7",
+            "z6&9.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id48",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.7",
+            "z8&9.4"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id48",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&2.7",
+            "z8&9.7"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id48",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.0",
+            "z1&8.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id51",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.2",
+            "z1&4.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id55",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.2",
+            "z1&8.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id55",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.2",
+            "z3&4.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id55",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.2",
+            "z3&8.7"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id55",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.2",
+            "z8&9.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id55",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.4",
+            "z1&3.8"
+          ],
+          "formulation_swap": true,
+          "semantic": {
+            "exact": true,
+            "reason": null,
+            "affected_rows": 2,
+            "queries": 2,
+            "proof": "All swapped affected row sides are implied by the complete rationalized LP relaxation; transposition is involutive and objective/domain invariant."
+          }
+        },
+        {
+          "pair": [
+            "z1&3.6",
+            "z2&3.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id65",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&3.6",
+            "z3&7.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id65",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.0",
+            "z3&4.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id75",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z1&5.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z1&8.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z2&8.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z3&8.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z5&8.1"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.1",
+            "z8&9.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id77",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.2",
+            "z1&8.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id79",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.2",
+            "z3&4.5"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id79",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.2",
+            "z3&8.7"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id79",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.2",
+            "z8&9.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id79",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.3",
+            "z1&6.2"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id81",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.3",
+            "z2&8.3"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id81",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.3",
+            "z7&8.0"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id81",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.4",
+            "z1&5.4"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id83",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.4",
+            "z1&6.3"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id83",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "z1&4.4",
+            "z1&8.6"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "id83",
+            "queries": 1
+          }
+        }
+      ],
+      "status": "FORMULATION_SWAP_ONLY_OR_ALSO"
+    },
+    {
+      "name": "n5-3",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+        "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+        "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+      },
+      "raw": {
+        "rows": 1062,
+        "cols": 2550,
+        "nonzeros": 9900
+      },
+      "presolved": {
+        "rows": 836,
+        "cols": 2139,
+        "nonzeros": 8327
+      },
+      "candidate_groups": 83,
+      "candidate_pairs": 525029,
+      "pairs_tested": 40,
+      "controls": [],
+      "semantic_only": [],
+      "tested": [
+        {
+          "pair": [
+            "C0001",
+            "C0002"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0001",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0001",
+            "C0007"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0001",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0001",
+            "C0009"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0001",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0001",
+            "C0299"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0001",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0002",
+            "C0007"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0002",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0002",
+            "C0009"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0002",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0002",
+            "C0299"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0002",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0008"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0010"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0296"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0300"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0301"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0003",
+            "C0302"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0003",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0004",
+            "C0297"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0004",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0005",
+            "C0298"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0005",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0009"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0007",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0299"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0007",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0010"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0008",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0296"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0008",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0300"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0008",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0301"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0008",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0302"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0008",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0009",
+            "C0299"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0009",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0296"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0010",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0300"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0010",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0301"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0010",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0302"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0010",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0012"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0013"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0014"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0015"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0016"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0017"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0018"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0019"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0020"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0021"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0022"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0023"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0024"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "lower_counterexample",
+            "row": "R0011",
+            "queries": 1
+          }
+        }
+      ],
+      "status": "NO_SEMANTIC_SWAP_FOUND"
+    },
+    {
+      "name": "neos-911970",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-911970.mps.gz",
+        "gzip_sha256": "cf9ad35ade0015d140f33ce83a593d76672c09fd8cc30c0539213be7e4a65ebb",
+        "mps_sha256": "31e8f835a9499de4897eb23838453cb83bee093abb8fab881b44f9937236eaa6"
+      },
+      "raw": {
+        "rows": 107,
+        "cols": 888,
+        "nonzeros": 3408
+      },
+      "presolved": {
+        "rows": 107,
+        "cols": 888,
+        "nonzeros": 3408
+      },
+      "candidate_groups": 252,
+      "candidate_pairs": 1383,
+      "pairs_tested": 40,
+      "controls": [],
+      "semantic_only": [],
+      "tested": [
+        {
+          "pair": [
+            "C0001",
+            "C0002"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0025",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0001",
+            "C0003"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0025",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0002",
+            "C0003"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0026",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0004",
+            "C0005"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0028",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0004",
+            "C0006"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0028",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0005",
+            "C0006"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0029",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0008"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0031",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0009"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0031",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0022"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0031",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0023"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0031",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0007",
+            "C0024"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0031",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0009"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0032",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0022"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0032",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0023"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0032",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0008",
+            "C0024"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0032",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0009",
+            "C0022"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0033",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0009",
+            "C0023"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0033",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0009",
+            "C0024"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0033",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0011"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0034",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0010",
+            "C0012"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0034",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0011",
+            "C0012"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0035",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0014"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0015"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0016"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0017"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0018"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0019"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0020"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0013",
+            "C0021"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0037",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0015"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0016"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0017"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0018"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0019"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0020"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0014",
+            "C0021"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0038",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0015",
+            "C0016"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0039",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0015",
+            "C0017"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0039",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0015",
+            "C0018"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0039",
+            "queries": 1
+          }
+        },
+        {
+          "pair": [
+            "C0015",
+            "C0019"
+          ],
+          "formulation_swap": false,
+          "semantic": {
+            "exact": false,
+            "reason": "upper_counterexample",
+            "row": "R0039",
+            "queries": 1
+          }
+        }
+      ],
+      "status": "NO_SEMANTIC_SWAP_FOUND"
+    }
+  ],
+  "errors": [],
+  "positive_control_pass": true,
+  "semantic_only_total": 0,
+  "disposition": "PASS"
+}
