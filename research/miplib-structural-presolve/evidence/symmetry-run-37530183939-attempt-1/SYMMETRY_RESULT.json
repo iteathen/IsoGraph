@@ -1,0 +1,112 @@
+{
+  "experiment": "miplib-structural-presolve-symmetry-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "instance": "glass4",
+  "source": {
+    "gz_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+    "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d",
+    "gz_bytes": 12661,
+    "mps_bytes": 127661,
+    "mps_path": "out/miplib-structural-presolve-symmetry/glass4.mps"
+  },
+  "presolved_dimensions": {
+    "rows": 392,
+    "cols": 317,
+    "nonzeros": 1799
+  },
+  "exact_restricted_transpositions": [
+    {
+      "cols": [
+        31,
+        35
+      ],
+      "rows": [
+        26,
+        32
+      ],
+      "col_names": [
+        "z1&3.4",
+        "z1&3.8"
+      ],
+      "row_names": [
+        "id60",
+        "id70"
+      ],
+      "cost": 0.0,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "integrality": "HighsVarType.kInteger",
+      "proof": "Exact restricted automorphism: swapping the two binary columns and the two listed rows leaves objective coefficients, variable domains, row bounds, and every matrix coefficient unchanged; all remaining rows are fixed."
+    }
+  ],
+  "chosen_breaker": {
+    "cols": [
+      31,
+      35
+    ],
+    "rows": [
+      26,
+      32
+    ],
+    "col_names": [
+      "z1&3.4",
+      "z1&3.8"
+    ],
+    "row_names": [
+      "id60",
+      "id70"
+    ],
+    "cost": 0.0,
+    "bounds": [
+      0.0,
+      1.0
+    ],
+    "integrality": "HighsVarType.kInteger",
+    "proof": "Exact restricted automorphism: swapping the two binary columns and the two listed rows leaves objective coefficients, variable domains, row bounds, and every matrix coefficient unchanged; all remaining rows are fixed."
+  },
+  "symmetry_break_law": "For an objective-preserving automorphism swapping x and y, imposing x>=y retains at least one representative of every two-element orbit and therefore preserves the optimal objective value.",
+  "baseline": {
+    "status": "Not Set",
+    "optimal": false,
+    "objective": 0.0,
+    "dual_bound": 0.0,
+    "gap": Infinity,
+    "nodes": -1,
+    "lp_iterations": -1,
+    "highs_runtime_s": 0.0,
+    "wall_runtime_s": 2.702100000107066e-05,
+    "rows": 392,
+    "cols": 317,
+    "nonzeros": 1799
+  },
+  "symmetry_broken": {
+    "status": "Not Set",
+    "optimal": false,
+    "objective": 0.0,
+    "dual_bound": 0.0,
+    "gap": Infinity,
+    "nodes": -1,
+    "lp_iterations": -1,
+    "highs_runtime_s": 0.0,
+    "wall_runtime_s": 7.904999996810602e-06,
+    "rows": 393,
+    "cols": 317,
+    "nonzeros": 1801
+  },
+  "expected_objective": 1200012599.972384,
+  "failures": [],
+  "disposition": "PASS",
+  "comparison": {
+    "node_ratio_broken_over_baseline": null,
+    "lp_iteration_ratio_broken_over_baseline": null,
+    "baseline_gap": Infinity,
+    "symmetry_broken_gap": Infinity,
+    "baseline_incumbent": 0.0,
+    "symmetry_broken_incumbent": 0.0,
+    "baseline_dual_bound": 0.0,
+    "symmetry_broken_dual_bound": 0.0
+  }
+}
