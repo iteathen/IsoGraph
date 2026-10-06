@@ -1,0 +1,204 @@
+{
+  "experiment": "n5-active-only-long-holdout-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "pyscipopt_version": "6.2.1",
+  "igraph_version": "0.11.9",
+  "stage1": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_time_s": 0.037580999999999996,
+    "presolve_wall_s": 0.04117259200000234
+  },
+  "linearized_export": {
+    "rows": 846,
+    "cols": 2354,
+    "nonzeros": 8316
+  },
+  "active_graph": {
+    "active_variables": 2142,
+    "dropped_export_only_variables": 212,
+    "rows": 846,
+    "active_nonzeros": 8316,
+    "vertices": 11304,
+    "edges": 16632,
+    "color_classes": 22
+  },
+  "symmetry": {
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "bliss_wall_s": 0.00349598100000037,
+    "structural_frontend_wall_s": 3.1980056849999983,
+    "generators": [
+      {
+        "index": 0,
+        "moved_active_variables": 84,
+        "involution": true,
+        "a_name": "t_C0021",
+        "b_name": "t_C0026"
+      },
+      {
+        "index": 1,
+        "moved_active_variables": 84,
+        "involution": true,
+        "a_name": "t_C0027",
+        "b_name": "t_C0028"
+      }
+    ],
+    "selected_breakers": [
+      {
+        "index": 0,
+        "a_name": "t_C0021",
+        "b_name": "t_C0026"
+      },
+      {
+        "index": 1,
+        "a_name": "t_C0027",
+        "b_name": "t_C0028"
+      }
+    ]
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "baseline": {
+        "seed": 0,
+        "status": "optimal",
+        "primal": 8105.000000000325,
+        "dual": 8105.000000000325,
+        "gap": 0.0,
+        "nodes": 964,
+        "lp_iterations": 163891,
+        "wall_s": 37.589332577
+      },
+      "double": {
+        "seed": 0,
+        "status": "optimal",
+        "primal": 8105.000000000404,
+        "dual": 8105.000000000404,
+        "gap": 0.0,
+        "nodes": 941,
+        "lp_iterations": 168475,
+        "wall_s": 38.772509631999995
+      }
+    },
+    {
+      "seed": 1,
+      "baseline": {
+        "seed": 1,
+        "status": "optimal",
+        "primal": 8105.000000000336,
+        "dual": 8105.000000000336,
+        "gap": 0.0,
+        "nodes": 952,
+        "lp_iterations": 148746,
+        "wall_s": 34.793615234
+      },
+      "double": {
+        "seed": 1,
+        "status": "optimal",
+        "primal": 8105.000000001536,
+        "dual": 8105.000000001536,
+        "gap": 0.0,
+        "nodes": 1004,
+        "lp_iterations": 189891,
+        "wall_s": 42.79533390399999
+      }
+    },
+    {
+      "seed": 2,
+      "baseline": {
+        "seed": 2,
+        "status": "optimal",
+        "primal": 8105.00000000037,
+        "dual": 8105.00000000037,
+        "gap": 0.0,
+        "nodes": 827,
+        "lp_iterations": 139304,
+        "wall_s": 36.96240271100001
+      },
+      "double": {
+        "seed": 2,
+        "status": "optimal",
+        "primal": 8105.000000000326,
+        "dual": 8105.000000000326,
+        "gap": 0.0,
+        "nodes": 790,
+        "lp_iterations": 161642,
+        "wall_s": 37.889289101
+      }
+    },
+    {
+      "seed": 3,
+      "baseline": {
+        "seed": 3,
+        "status": "optimal",
+        "primal": 8105.000000000526,
+        "dual": 8105.000000000526,
+        "gap": 0.0,
+        "nodes": 817,
+        "lp_iterations": 161777,
+        "wall_s": 34.496844349000014
+      },
+      "double": {
+        "seed": 3,
+        "status": "optimal",
+        "primal": 8105.000000000271,
+        "dual": 8105.000000000271,
+        "gap": 0.0,
+        "nodes": 709,
+        "lp_iterations": 141620,
+        "wall_s": 32.284091442999966
+      }
+    },
+    {
+      "seed": 4,
+      "baseline": {
+        "seed": 4,
+        "status": "optimal",
+        "primal": 8105.000000000386,
+        "dual": 8105.000000000386,
+        "gap": 0.0,
+        "nodes": 449,
+        "lp_iterations": 110961,
+        "wall_s": 29.927830664
+      },
+      "double": {
+        "seed": 4,
+        "status": "optimal",
+        "primal": 8105.0000000005775,
+        "dual": 8105.0000000005775,
+        "gap": 0.0,
+        "nodes": 594,
+        "lp_iterations": 122774,
+        "wall_s": 29.75342789299998
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "median_gap": 0.0,
+      "median_nodes": 827,
+      "median_lp": 148746,
+      "median_primal": 8105.00000000037,
+      "median_dual": 8105.00000000037,
+      "median_wall_s": 34.793615234
+    },
+    "double": {
+      "median_gap": 0.0,
+      "median_nodes": 790,
+      "median_lp": 161642,
+      "median_primal": 8105.000000000404,
+      "median_dual": 8105.000000000404,
+      "median_wall_s": 37.889289101
+    },
+    "paired_gap_wins": 0,
+    "paired_gap_losses": 0,
+    "paired_gap_ties": 5
+  },
+  "disposition": "PASS"
+}
