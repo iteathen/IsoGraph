@@ -56,7 +56,7 @@ Measure wall from SCIP model construction/load through termination.
 
 - pay the measured structural frontend cost;
 - load the exported SCIP-presolved residual;
-- SCIP symmetry disabled and presolve disabled;
+- SCIP symmetry disabled; normal SCIP presolve is permitted on residual re-entry, matching the previously tested active-only production path;
 - add the two exact breakers;
 - solve to optimality or 90-second limit.
 
@@ -76,3 +76,8 @@ as the end-to-end wall.
 - Also report nodes and LP iterations.
 - Seven fresh seeds are directional evidence only, not a production performance claim.
 - The source download itself is excluded equally from both variants.
+
+
+## Pre-run correction
+
+Before any 0.3 timing data were generated, the residual-reentry clause was corrected from “presolve disabled” to normal SCIP presolve. Previous active-only time-to-optimum tests used normal residual re-entry presolve, and disabling it would test an artificially weakened path rather than the intended production composition. This correction is frozen before execution.
