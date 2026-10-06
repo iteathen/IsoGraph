@@ -1,0 +1,73 @@
+name: MIPLIB SCIP higher-order control 0.1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-scip-higher-control.yml
+      - research/miplib-structural-presolve/SCIP_HIGHER_ORDER_CONTROL_0_1.md
+      - research/miplib-structural-presolve/SCIP_HIGHER_CONTROL_RUN.request
+      - research/miplib-structural-presolve/tools/run-scip-higher-control-0.1.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-scip-higher-control-0.1
+  cancel-in-progress: false
+
+jobs:
+  control:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --disable-pip-version-check pyscipopt==6.2.1
+      - name: Execute SCIP higher-order control
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python3 -m py_compile research/miplib-structural-presolve/tools/run-scip-higher-control-0.1.py
+          rm -rf out/miplib-scip-higher-control-0.1
+          python3 research/miplib-structural-presolve/tools/run-scip-higher-control-0.1.py
+      - name: Persist evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/scip-higher-control-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-scip-higher-control-0.1/$f" ] && cp "out/miplib-scip-higher-control-0.1/$f" "$E/$f"
+          done
+          python3 - <<'PY' > "$E/CONTROL.json"
+          import json, os, pyscipopt
+          print(json.dumps({"workflow_run_id":os.environ["GITHUB_RUN_ID"],"workflow_attempt":os.environ["GITHUB_RUN_ATTEMPT"],"source_sha":os.environ["GITHUB_SHA"],"pyscipopt_version":pyscipopt.__version__,"profile":"scip-higher-control-0.1"},indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: MIPLIB SCIP higher control run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/miplib-structural-presolve-20261006
+            git rebase origin/experiment/miplib-structural-presolve-20261006
+            git push origin HEAD:experiment/miplib-structural-presolve-20261006
+          fi
+      - name: Enforce
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-scip-higher-control-0.1/RESULT.json"))
+          print(json.dumps({"disposition":r["disposition"],"errors":r["errors"]},indent=2))
+          if r["disposition"]!="PASS":raise SystemExit(1)
+          PY
