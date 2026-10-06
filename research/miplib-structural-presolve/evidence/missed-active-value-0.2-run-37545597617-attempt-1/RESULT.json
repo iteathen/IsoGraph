@@ -1,0 +1,641 @@
+{
+  "experiment": "post-scip-missed-active-value-0.2",
+  "date": "2026-10-06",
+  "results": [
+    {
+      "name": "mcsched",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+        "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+        "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+      },
+      "stage1": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_wall_s": 0.051522870000013654
+      },
+      "linearized": {
+        "rows": 1853,
+        "cols": 1573,
+        "nonzeros": 4507
+      },
+      "encoding": {
+        "vertices": 7933,
+        "edges": 9014,
+        "active_vars": 1495,
+        "export_only_vars": 78
+      },
+      "breaker": {
+        "a_name": "t_C0000186",
+        "b_name": "t_C0001396",
+        "a_index": 165,
+        "b_index": 1246,
+        "generator_index": 91,
+        "active_moved_variables": 6,
+        "generator_count": 92,
+        "active_generator_count": 15,
+        "bliss_wall_s": 0.024640637000004517
+      },
+      "structural_frontend_wall_s": 2.7937116409999874,
+      "trials": [
+        {
+          "seed": 0,
+          "default": {
+            "status": "timelimit",
+            "primal": 215791.0,
+            "dual": 193833.4947471181,
+            "gap": 0.11328024231069264,
+            "bound_width": 21957.505252881907,
+            "nodes": 69,
+            "lp_iterations": 28100,
+            "wall_s": 15.000627915999985
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 215791.0,
+            "dual": 193833.4947471181,
+            "gap": 0.11328024231069264,
+            "bound_width": 21957.505252881907,
+            "nodes": 68,
+            "lp_iterations": 27619,
+            "wall_s": 15.00071066000001
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 215770.0,
+            "dual": 194842.29668455897,
+            "gap": 0.10740842040741315,
+            "bound_width": 20927.70331544103,
+            "nodes": 28,
+            "lp_iterations": 25905,
+            "wall_s": 15.000731424999998
+          }
+        },
+        {
+          "seed": 1,
+          "default": {
+            "status": "timelimit",
+            "primal": 216826.0,
+            "dual": 194120.71110065567,
+            "gap": 0.1169647935586387,
+            "bound_width": 22705.288899344334,
+            "nodes": 52,
+            "lp_iterations": 25519,
+            "wall_s": 15.000619510000035
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 216826.0,
+            "dual": 194120.71110065567,
+            "gap": 0.1169647935586387,
+            "bound_width": 22705.288899344334,
+            "nodes": 54,
+            "lp_iterations": 26729,
+            "wall_s": 15.000625869999965
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 216870.0,
+            "dual": 194226.8368181209,
+            "gap": 0.1165810222357827,
+            "bound_width": 22643.163181879092,
+            "nodes": 58,
+            "lp_iterations": 24652,
+            "wall_s": 15.00158464499998
+          }
+        },
+        {
+          "seed": 2,
+          "default": {
+            "status": "timelimit",
+            "primal": 214835.0,
+            "dual": 193840.596243912,
+            "gap": 0.10830756901753685,
+            "bound_width": 20994.403756087995,
+            "nodes": 27,
+            "lp_iterations": 26682,
+            "wall_s": 15.000684795999973
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 214835.0,
+            "dual": 193840.596243912,
+            "gap": 0.10830756901753685,
+            "bound_width": 20994.403756087995,
+            "nodes": 28,
+            "lp_iterations": 26739,
+            "wall_s": 15.000526702000002
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 217971.0,
+            "dual": 193838.25489579677,
+            "gap": 0.12449939315217459,
+            "bound_width": 24132.745104203233,
+            "nodes": 85,
+            "lp_iterations": 24296,
+            "wall_s": 15.000705977999985
+          }
+        }
+      ],
+      "summary": {
+        "default": {
+          "median_gap": 0.11328024231069264,
+          "median_bound_width": 21957.505252881907,
+          "median_nodes": 52,
+          "median_lp": 26682
+        },
+        "symmetry_off": {
+          "median_gap": 0.11328024231069264,
+          "median_bound_width": 21957.505252881907,
+          "median_nodes": 54,
+          "median_lp": 26739
+        },
+        "active_breaker": {
+          "median_gap": 0.1165810222357827,
+          "median_bound_width": 22643.163181879092,
+          "median_nodes": 58,
+          "median_lp": 24652
+        }
+      },
+      "directional_value_win": false
+    },
+    {
+      "name": "neos-1171737",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-1171737.mps.gz",
+        "gzip_sha256": "7e58f511e3ca5ae69213fdd78e448a2b6aadbb6b1ed161ae92ad0b74365a953c",
+        "mps_sha256": "9c11ef450081fcac8e6ff4dbbaa695656a2f7d2df3e6cfd3db768e49b932b6dc"
+      },
+      "stage1": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_wall_s": 0.1897115319999898
+      },
+      "linearized": {
+        "rows": 4179,
+        "cols": 2340,
+        "nonzeros": 58620
+      },
+      "encoding": {
+        "vertices": 65139,
+        "edges": 117240,
+        "active_vars": 2340,
+        "export_only_vars": 0
+      },
+      "breaker": {
+        "a_name": "t_C0001",
+        "b_name": "t_C0002",
+        "a_index": 1170,
+        "b_index": 1171,
+        "generator_index": 28,
+        "active_moved_variables": 156,
+        "generator_count": 29,
+        "active_generator_count": 29,
+        "bliss_wall_s": 0.33343157100000553
+      },
+      "structural_frontend_wall_s": 10.180429694999987,
+      "trials": [
+        {
+          "seed": 0,
+          "default": {
+            "status": "timelimit",
+            "primal": -187.5,
+            "dual": -194.99999999999997,
+            "gap": 0.03999999999999985,
+            "bound_width": 7.499999999999972,
+            "nodes": 93,
+            "lp_iterations": 61796,
+            "wall_s": 15.03520038900001
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -194.99999999999997,
+            "gap": 0.015624999999999853,
+            "bound_width": 2.9999999999999716,
+            "nodes": 64,
+            "lp_iterations": 68961,
+            "wall_s": 15.08268909200001
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -194.99999999999997,
+            "gap": 0.015624999999999853,
+            "bound_width": 2.9999999999999716,
+            "nodes": 54,
+            "lp_iterations": 55326,
+            "wall_s": 15.01487132599999
+          }
+        },
+        {
+          "seed": 1,
+          "default": {
+            "status": "timelimit",
+            "primal": -191.0,
+            "dual": -194.99999999999994,
+            "gap": 0.020942408376963054,
+            "bound_width": 3.999999999999943,
+            "nodes": 47,
+            "lp_iterations": 71358,
+            "wall_s": 15.003813696999998
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -194.99999999999994,
+            "gap": 0.02631578947368391,
+            "bound_width": 4.999999999999943,
+            "nodes": 47,
+            "lp_iterations": 56032,
+            "wall_s": 15.022621630999993
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": -194.0,
+            "dual": -194.99999999999997,
+            "gap": 0.005154639175257585,
+            "bound_width": 0.9999999999999716,
+            "nodes": 54,
+            "lp_iterations": 60855,
+            "wall_s": 15.05806069099998
+          }
+        },
+        {
+          "seed": 2,
+          "default": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -195.0,
+            "gap": 0.015625,
+            "bound_width": 3.0,
+            "nodes": 49,
+            "lp_iterations": 58925,
+            "wall_s": 15.00219678999997
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -195.0,
+            "gap": 0.015625,
+            "bound_width": 3.0,
+            "nodes": 51,
+            "lp_iterations": 52477,
+            "wall_s": 15.039511199000003
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -194.99999999999997,
+            "gap": 0.02631578947368406,
+            "bound_width": 4.999999999999972,
+            "nodes": 52,
+            "lp_iterations": 64005,
+            "wall_s": 15.057791733999977
+          }
+        }
+      ],
+      "summary": {
+        "default": {
+          "median_gap": 0.020942408376963054,
+          "median_bound_width": 3.999999999999943,
+          "median_nodes": 49,
+          "median_lp": 61796
+        },
+        "symmetry_off": {
+          "median_gap": 0.015625,
+          "median_bound_width": 3.0,
+          "median_nodes": 51,
+          "median_lp": 56032
+        },
+        "active_breaker": {
+          "median_gap": 0.015624999999999853,
+          "median_bound_width": 2.9999999999999716,
+          "median_nodes": 54,
+          "median_lp": 60855
+        }
+      },
+      "directional_value_win": true
+    },
+    {
+      "name": "neos-3381206-awhea",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3381206-awhea.mps.gz",
+        "gzip_sha256": "58d33361a14a26ae1c497a9c8726fb33a699205a9dfad4f6c90e18ba7994db56",
+        "mps_sha256": "738f0bf51278e4dd1f0418b149de72ee2614a5a9b805c838705565397cd0514d"
+      },
+      "stage1": {
+        "vars": 2375,
+        "conss": 479,
+        "presolve_wall_s": 0.0323088730000336
+      },
+      "linearized": {
+        "rows": 479,
+        "cols": 2375,
+        "nonzeros": 4275
+      },
+      "encoding": {
+        "vertices": 7129,
+        "edges": 8550,
+        "active_vars": 2375,
+        "export_only_vars": 0
+      },
+      "breaker": {
+        "a_name": "t_C0001",
+        "b_name": "t_C0002",
+        "a_index": 1,
+        "b_index": 2,
+        "generator_index": 472,
+        "active_moved_variables": 10,
+        "generator_count": 474,
+        "active_generator_count": 474,
+        "bliss_wall_s": 0.3487317860000303
+      },
+      "structural_frontend_wall_s": 8.469927247999976,
+      "trials": [
+        {
+          "seed": 0,
+          "default": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 29,
+            "lp_iterations": 16365,
+            "wall_s": 1.7711787429999504
+          },
+          "symmetry_off": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 49,
+            "lp_iterations": 24600,
+            "wall_s": 2.319534032999968
+          },
+          "active_breaker": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 1,
+            "lp_iterations": 15166,
+            "wall_s": 1.5104597710000007
+          }
+        },
+        {
+          "seed": 1,
+          "default": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 272,
+            "lp_iterations": 26337,
+            "wall_s": 5.66189159999999
+          },
+          "symmetry_off": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 104,
+            "lp_iterations": 24784,
+            "wall_s": 2.976765476999958
+          },
+          "active_breaker": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 47,
+            "lp_iterations": 16966,
+            "wall_s": 1.9357874999999467
+          }
+        },
+        {
+          "seed": 2,
+          "default": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 452.25,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 1494,
+            "lp_iterations": 36835,
+            "wall_s": 15.000077587999954
+          },
+          "symmetry_off": {
+            "status": "optimal",
+            "primal": 453.00000000000006,
+            "dual": 453.00000000000006,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 67,
+            "lp_iterations": 20046,
+            "wall_s": 2.123173260000044
+          },
+          "active_breaker": {
+            "status": "optimal",
+            "primal": 453.0,
+            "dual": 453.0,
+            "gap": 0.0,
+            "bound_width": 0.0,
+            "nodes": 21,
+            "lp_iterations": 16886,
+            "wall_s": 1.8193057349999435
+          }
+        }
+      ],
+      "summary": {
+        "default": {
+          "median_gap": 0.0,
+          "median_bound_width": 0.0,
+          "median_nodes": 272,
+          "median_lp": 26337
+        },
+        "symmetry_off": {
+          "median_gap": 0.0,
+          "median_bound_width": 0.0,
+          "median_nodes": 67,
+          "median_lp": 24600
+        },
+        "active_breaker": {
+          "median_gap": 0.0,
+          "median_bound_width": 0.0,
+          "median_nodes": 21,
+          "median_lp": 16886
+        }
+      },
+      "directional_value_win": false
+    },
+    {
+      "name": "ns1208400",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ns1208400.mps.gz",
+        "gzip_sha256": "993b8f2dce018d3d339334345eb22db979089318e708c45cfbed28b988e4d145",
+        "mps_sha256": "7fb147bfe61f8b028dca80f6b7648a7c82e5dc377885808df18bd3e93704d06d"
+      },
+      "stage1": {
+        "vars": 2596,
+        "conss": 1981,
+        "presolve_wall_s": 0.11680167200006508
+      },
+      "linearized": {
+        "rows": 1981,
+        "cols": 2880,
+        "nonzeros": 73620
+      },
+      "encoding": {
+        "vertices": 78481,
+        "edges": 147240,
+        "active_vars": 2596,
+        "export_only_vars": 284
+      },
+      "breaker": {
+        "a_name": "t_C0004",
+        "b_name": "t_C0244",
+        "a_index": 1,
+        "b_index": 241,
+        "generator_index": 289,
+        "active_moved_variables": 2368,
+        "generator_count": 290,
+        "active_generator_count": 7,
+        "bliss_wall_s": 1.0615419240000392
+      },
+      "structural_frontend_wall_s": 73.30777539999997,
+      "trials": [
+        {
+          "seed": 0,
+          "default": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 16,
+            "lp_iterations": 63752,
+            "wall_s": 15.000366240999938
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 16,
+            "lp_iterations": 64164,
+            "wall_s": 15.000306759000068
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 11,
+            "lp_iterations": 62645,
+            "wall_s": 15.000438291000023
+          }
+        },
+        {
+          "seed": 1,
+          "default": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 26,
+            "lp_iterations": 60060,
+            "wall_s": 15.003088290999926
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 34,
+            "lp_iterations": 60599,
+            "wall_s": 15.00026772199999
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 28,
+            "lp_iterations": 63427,
+            "wall_s": 15.00025799599996
+          }
+        },
+        {
+          "seed": 2,
+          "default": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 41,
+            "lp_iterations": 60197,
+            "wall_s": 15.01995373300008
+          },
+          "symmetry_off": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 41,
+            "lp_iterations": 60197,
+            "wall_s": 15.020121969999991
+          },
+          "active_breaker": {
+            "status": "timelimit",
+            "primal": 1e+20,
+            "dual": 0.0,
+            "gap": 1e+20,
+            "bound_width": 1e+20,
+            "nodes": 17,
+            "lp_iterations": 48404,
+            "wall_s": 15.000373766000052
+          }
+        }
+      ],
+      "summary": {
+        "default": {
+          "median_gap": 1e+20,
+          "median_bound_width": 1e+20,
+          "median_nodes": 26,
+          "median_lp": 60197
+        },
+        "symmetry_off": {
+          "median_gap": 1e+20,
+          "median_bound_width": 1e+20,
+          "median_nodes": 34,
+          "median_lp": 60599
+        },
+        "active_breaker": {
+          "median_gap": 1e+20,
+          "median_bound_width": 1e+20,
+          "median_nodes": 17,
+          "median_lp": 62645
+        }
+      },
+      "directional_value_win": false
+    }
+  ],
+  "errors": [],
+  "directional_wins": 1,
+  "disposition": "PASS"
+}
