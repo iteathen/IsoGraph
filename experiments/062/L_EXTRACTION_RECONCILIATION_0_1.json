@@ -1,0 +1,83 @@
+{
+  "schema": "isograph.exp062-l-extraction-reconciliation.v0.1",
+  "date": "2026-10-06",
+  "status": "SIX_LITERAL_SPAN_DEFECTS_REPAIRED_NO_SEMANTIC_SELECTION_CHANGE",
+  "predecessor_evidence": "experiments/062/evidence/run-37494458541-attempt-1/L/EXTRACTION_CAPTURE_ALL_0_1.json",
+  "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "changes": [
+    {
+      "census_id": "L-SSC-031",
+      "occurrence_id": "L-SSC-031-O01",
+      "field": "argument_spans",
+      "before": [
+        "gravitational weights",
+        "electroweak weights",
+        "graviweak D4/so(7,1) structure"
+      ],
+      "after": [
+        "gravitational/electroweak weights",
+        "graviweak D4/so(7,1) structure"
+      ],
+      "reason": "Use exact compact source span gravitational/electroweak weights rather than two manufactured expansions."
+    },
+    {
+      "census_id": "L-SSC-054",
+      "occurrence_id": "L-SSC-054-O01",
+      "field": "source_span",
+      "before": "The Hodge operator presupposes a nondegenerate gravitational frame",
+      "after": "the Hodge operator presupposes a nondegenerate gravitational frame",
+      "reason": "Preserve source lowercase 'the' after semicolon."
+    },
+    {
+      "census_id": "L-SSC-103",
+      "occurrence_id": "L-SSC-103-O01",
+      "field": "argument_spans",
+      "before": [
+        "annihilation weights",
+        "creation weights"
+      ],
+      "after": [
+        "annihilation",
+        "creation weights"
+      ],
+      "reason": "Use exact literal substrings for annihilation/creation-weight contrast."
+    },
+    {
+      "census_id": "L-SSC-117",
+      "occurrence_id": "L-SSC-117-O01",
+      "field": "relation_span",
+      "before": "commutes with / anticommutes with",
+      "after": "commutes with",
+      "reason": "Remove synthetic slash-combined relation wording; semantic completeness remains for independent audit."
+    },
+    {
+      "census_id": "L-SSC-126",
+      "occurrence_id": "L-SSC-126-O01",
+      "field": "argument_spans",
+      "before": [
+        "Clifford indices",
+        "division-algebra indices"
+      ],
+      "after": [
+        "Clifford",
+        "division-algebra indices"
+      ],
+      "reason": "Use exact substrings from compact 'Clifford and division-algebra indices' phrasing."
+    },
+    {
+      "census_id": "L-SSC-129",
+      "occurrence_id": "L-SSC-129-O01",
+      "field": "relation_span",
+      "before": "defined from / define",
+      "after": "is defined from",
+      "reason": "Remove synthetic slash-combined bidirectionality label; independent audit must decide whether converse requires a second occurrence."
+    }
+  ],
+  "deterministic_validation": {
+    "pass": true,
+    "errors": []
+  },
+  "semantic_completeness_audit": "NOT_YET_RUN",
+  "authority": false
+}
