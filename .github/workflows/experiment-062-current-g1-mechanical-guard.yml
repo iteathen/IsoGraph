@@ -1,0 +1,55 @@
+name: Experiment 062 current G1 mechanical guard
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_5.json"
+      - "experiments/062/W_EXTRACTION_RECONCILIATION_0_5.json"
+      - "experiments/062/L_EXTRACTION_RECONCILED_0_13.json"
+      - "experiments/062/L_EXTRACTION_RECONCILIATION_0_13.json"
+      - "experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-5.mjs"
+      - "experiments/062/tools/verify-l-extraction-reconciled-0-13.mjs"
+      - "experiments/062/tools/verify-current-g1-inputs.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md"
+      - ".github/workflows/experiment-062-current-g1-mechanical-guard.yml"
+  pull_request:
+    paths:
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_5.json"
+      - "experiments/062/W_EXTRACTION_RECONCILIATION_0_5.json"
+      - "experiments/062/L_EXTRACTION_RECONCILED_0_13.json"
+      - "experiments/062/L_EXTRACTION_RECONCILIATION_0_13.json"
+      - "experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-5.mjs"
+      - "experiments/062/tools/verify-l-extraction-reconciled-0-13.mjs"
+      - "experiments/062/tools/verify-current-g1-inputs.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md"
+      - ".github/workflows/experiment-062-current-g1-mechanical-guard.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-current-g1:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Verify repaired W 0.5
+        run: node experiments/062/tools/verify-w-extraction-reconciled-0-5.mjs
+
+      - name: Verify reconciled L 0.13
+        run: node experiments/062/tools/verify-l-extraction-reconciled-0-13.mjs
+
+      - name: Verify joint current G1 mechanical contract
+        run: node experiments/062/tools/verify-current-g1-inputs.mjs
