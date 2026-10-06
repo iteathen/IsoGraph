@@ -1,6 +1,7 @@
 # Primitive Demand Qualification
 
-**Status:** active supporting research; no new semantic authority is qualified here yet.
+**Current research dossier:** this README  
+**Research status:** active supporting research; no new semantic authority is qualified here yet.
 
 This project is the lawful unblock path for the re-grounded Woit/Lisi primitive-domain boundaries. It converts the frozen unresolved source bodies into **domain-neutral structural demand fingerprints** without importing source-domain object identity or conventional mathematics as semantic authority.
 
@@ -38,9 +39,15 @@ In particular:
   - 1 L-only structural type;
   - `L-SSC-013` is the sole Core-only unresolved assertion.
 
+- `CANDIDATE_PRIMITIVE_BASIS_0_1.json`
+  - candidate-only, unqualified;
+  - five foundational semantic extensions;
+  - seven derived generic schemas;
+  - minimal only relative to the frozen v0.1 demand/capability dependency model.
+
 ## Candidate basis
 
-The frozen extraction rules currently name twelve **candidate** basis IDs:
+The frozen candidate basis currently contains:
 
 `B-TYPED-MAP`, `B-FINITE-PRODUCT-INDEX`, `B-OPERATION-LAW`,
 `B-SUBOBJECT-QUOTIENT`, `B-INDEXED-FAMILY`, `B-ADDITIVE-SCALAR`,
@@ -52,7 +59,7 @@ These are demand-basis labels only. Their semantics, sufficiency, independence, 
 ## Required next order
 
 1. verify frozen corpus conservation and demand-graph reproducibility;
-2. mechanically derive the candidate-basis support/incidence surface;
+2. verify candidate-basis coverage/minimality against the frozen demand model;
 3. freeze candidate primitive semantics without source-domain names;
 4. qualify those semantics independently with positive controls, falsifiers, reconstruction, and scope/invalidation checks;
 5. only after qualification, reopen affected W/L primitive-closure items;
