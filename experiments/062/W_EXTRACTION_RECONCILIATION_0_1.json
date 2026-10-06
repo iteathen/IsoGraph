@@ -1,0 +1,37 @@
+{
+  "schema": "isograph.experiment062-w-span-reconciliation.v0.1",
+  "date": "2026-10-06",
+  "status": "SOURCE_LITERAL_ONLY_RECONCILIATION_PENDING_INDEPENDENT_SEMANTIC_AUDIT",
+  "source_extraction": "experiments/062/evidence/run-37438115386-attempt-1/exp062/W/EXTRACTION.json",
+  "source_validation": "experiments/062/evidence/run-37438115386-attempt-1/exp062/W/EXTRACTION_VALIDATION.json",
+  "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "repairs": [
+    {
+      "occurrence_id": "W-SSC-022-O01",
+      "field": "argument_spans",
+      "before": [
+        "positive imaginary-time sectors",
+        "negative imaginary-time sectors"
+      ],
+      "after": [
+        "positive",
+        "negative imaginary-time sectors"
+      ],
+      "reason": "Both replacement strings are exact contiguous source substrings; preserves the already-selected two-sector interchange without expanding slash notation into invented spans."
+    },
+    {
+      "occurrence_id": "W-SSC-095-O01",
+      "field": "relation_span",
+      "before": "equivalent to",
+      "after": "equivalent",
+      "reason": "Exact source relation token; removes invented preposition while preserving the already-selected equivalence occurrence."
+    }
+  ],
+  "deterministic_post_repair_span_validation": {
+    "pass": true,
+    "errors": []
+  },
+  "semantic_changes": false,
+  "authority": false,
+  "next": "Run the independent Experiment 062 W omission/spurious-boundary audit against W_EXTRACTION_RECONCILED_0_1.json."
+}
