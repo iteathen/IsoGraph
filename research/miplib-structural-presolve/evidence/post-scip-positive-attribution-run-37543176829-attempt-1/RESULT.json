@@ -1,0 +1,432 @@
+{
+  "experiment": "post-scip-bliss-positive-attribution-0.1",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "instances": [
+    "reblock115",
+    "n5-3",
+    "neos-911970",
+    "seymour1",
+    "b1c1s1",
+    "markshare2",
+    "mas74",
+    "mas76"
+  ],
+  "results": [
+    {
+      "name": "reblock115",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/reblock115.mps.gz",
+        "gzip_sha256": "cfc1223e622ed133400b5614cd382b6aa9a84fabfcea63510158b6c16e1e951c",
+        "mps_sha256": "83fac9bfcbeb1934fa03a30bac1372f540afcdc5681e4532a8f459184e6a6005"
+      },
+      "stage1_symmetry_off": {
+        "vars": 1106,
+        "conss": 4423,
+        "presolve_time_s": 0.5541579999999999
+      },
+      "fresh_default": {
+        "vars": 1106,
+        "conss": 4423,
+        "presolve_time_s": 0.465356,
+        "handlers": {
+          "knapsack": 20,
+          "setppc": 4403
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 4423
+      },
+      "fresh_symmetry_off": {
+        "vars": 1106,
+        "conss": 4423,
+        "presolve_time_s": 0.479118,
+        "handlers": {
+          "knapsack": 20,
+          "setppc": 4403
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 4423
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "n5-3",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+        "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+        "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+      },
+      "stage1_symmetry_off": {
+        "vars": 2142,
+        "conss": 846,
+        "presolve_time_s": 0.026615
+      },
+      "fresh_default": {
+        "vars": 2142,
+        "conss": 846,
+        "presolve_time_s": 0.01975,
+        "handlers": {
+          "linear": 846
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 846
+      },
+      "fresh_symmetry_off": {
+        "vars": 2142,
+        "conss": 846,
+        "presolve_time_s": 0.017012,
+        "handlers": {
+          "linear": 846
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 846
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "neos-911970",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-911970.mps.gz",
+        "gzip_sha256": "cf9ad35ade0015d140f33ce83a593d76672c09fd8cc30c0539213be7e4a65ebb",
+        "mps_sha256": "31e8f835a9499de4897eb23838453cb83bee093abb8fab881b44f9937236eaa6"
+      },
+      "stage1_symmetry_off": {
+        "vars": 888,
+        "conss": 107,
+        "presolve_time_s": 0.023465
+      },
+      "fresh_default": {
+        "vars": 855,
+        "conss": 114,
+        "presolve_time_s": 0.03346,
+        "handlers": {
+          "linear": 48,
+          "logicor": 24,
+          "orbitope_pp": 7,
+          "setppc": 35
+        },
+        "symmetry_named_constraints": [
+          "orbitope_component_0_pp",
+          "orbitope_component_1_pp",
+          "orbitope_component_2_pp",
+          "orbitope_component_3_pp",
+          "orbitope_component_4_pp",
+          "orbitope_component_5_pp",
+          "orbitope_component_6_pp"
+        ],
+        "constraint_name_count": 114
+      },
+      "fresh_symmetry_off": {
+        "vars": 888,
+        "conss": 107,
+        "presolve_time_s": 0.023306999999999998,
+        "handlers": {
+          "linear": 48,
+          "logicor": 24,
+          "setppc": 35
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 107
+      },
+      "comparison": {
+        "classification": "VISIBLE_SCIP_RECOVERY",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "orbitope_component_0_pp",
+          "orbitope_component_1_pp",
+          "orbitope_component_2_pp",
+          "orbitope_component_3_pp",
+          "orbitope_component_4_pp",
+          "orbitope_component_5_pp",
+          "orbitope_component_6_pp"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": [
+          "orbitope_component_0_pp",
+          "orbitope_component_1_pp",
+          "orbitope_component_2_pp",
+          "orbitope_component_3_pp",
+          "orbitope_component_4_pp",
+          "orbitope_component_5_pp",
+          "orbitope_component_6_pp"
+        ]
+      }
+    },
+    {
+      "name": "seymour1",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/seymour1.mps.gz",
+        "gzip_sha256": "fbcef8581c27234abf5816cbd1ddd5b6b6fdc3764b57d36d85c517d9fd3e9bac",
+        "mps_sha256": "d5150ce3c86eb3e89cb3689261cc7c26459d735991acd0e0b362b711584b7548"
+      },
+      "stage1_symmetry_off": {
+        "vars": 931,
+        "conss": 4486,
+        "presolve_time_s": 0.09530899999999999
+      },
+      "fresh_default": {
+        "vars": 929,
+        "conss": 4464,
+        "presolve_time_s": 0.051817999999999996,
+        "handlers": {
+          "linear": 4057,
+          "logicor": 248,
+          "setppc": 138,
+          "varbound": 21
+        },
+        "symmetry_named_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_2_1row_comp_2_col0"
+        ],
+        "constraint_name_count": 4464
+      },
+      "fresh_symmetry_off": {
+        "vars": 929,
+        "conss": 4462,
+        "presolve_time_s": 0.045094999999999996,
+        "handlers": {
+          "linear": 4055,
+          "logicor": 248,
+          "setppc": 138,
+          "varbound": 21
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 4462
+      },
+      "comparison": {
+        "classification": "VISIBLE_SCIP_RECOVERY",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_2_1row_comp_2_col0"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_2_1row_comp_2_col0"
+        ]
+      }
+    },
+    {
+      "name": "b1c1s1",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/b1c1s1.mps.gz",
+        "gzip_sha256": "3ad5eb7edd4a86889fbdaedc086444a93ebe07e54a743b5e19d2a5908340ad46",
+        "mps_sha256": "68cbaa66b6ff08114d9c3fb9b5e786cfd7e34dbe718865d35aa9181147872393"
+      },
+      "stage1_symmetry_off": {
+        "vars": 2654,
+        "conss": 2761,
+        "presolve_time_s": 0.08748399999999999
+      },
+      "fresh_default": {
+        "vars": 2654,
+        "conss": 2761,
+        "presolve_time_s": 0.039354,
+        "handlers": {
+          "linear": 1269,
+          "varbound": 1492
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 2761
+      },
+      "fresh_symmetry_off": {
+        "vars": 2654,
+        "conss": 2761,
+        "presolve_time_s": 0.036558,
+        "handlers": {
+          "linear": 1269,
+          "varbound": 1492
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 2761
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "markshare2",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/markshare2.mps.gz",
+        "gzip_sha256": "8b1ea0bee5d89f3247cfbf6fd5fbd1234ea48e1d7081a8b7fbd827602b4b8914",
+        "mps_sha256": "35013a309b073f42e163e01a485909055b52a5d816fdd18345576473f8ed1458"
+      },
+      "stage1_symmetry_off": {
+        "vars": 60,
+        "conss": 7,
+        "presolve_time_s": 0.000926
+      },
+      "fresh_default": {
+        "vars": 60,
+        "conss": 7,
+        "presolve_time_s": 0.0007469999999999999,
+        "handlers": {
+          "knapsack": 7
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 7
+      },
+      "fresh_symmetry_off": {
+        "vars": 60,
+        "conss": 7,
+        "presolve_time_s": 0.000643,
+        "handlers": {
+          "knapsack": 7
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 7
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "mas74",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mas74.mps.gz",
+        "gzip_sha256": "019a9ca2dac800342a887cd07e326526b463dca9646ba16ad955a16fa4b6ecc1",
+        "mps_sha256": "181f02fd634306ad6431f21d5e8115f3e8112f2e7d2bebed1690475b49acc4af"
+      },
+      "stage1_symmetry_off": {
+        "vars": 150,
+        "conss": 13,
+        "presolve_time_s": 0.0026939999999999998
+      },
+      "fresh_default": {
+        "vars": 150,
+        "conss": 15,
+        "presolve_time_s": 0.004154,
+        "handlers": {
+          "knapsack": 1,
+          "linear": 12,
+          "setppc": 2
+        },
+        "symmetry_named_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ],
+        "constraint_name_count": 15
+      },
+      "fresh_symmetry_off": {
+        "vars": 150,
+        "conss": 13,
+        "presolve_time_s": 0.002402,
+        "handlers": {
+          "knapsack": 1,
+          "linear": 12
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 13
+      },
+      "comparison": {
+        "classification": "VISIBLE_SCIP_RECOVERY",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ]
+      }
+    },
+    {
+      "name": "mas76",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mas76.mps.gz",
+        "gzip_sha256": "91f624659e181538020e0c627910f02ffa6b355d6df708ef324e697a69485a74",
+        "mps_sha256": "114b73dbe17c1d1b4d37a09311424571781225e01edfbec1c6acb320214593f6"
+      },
+      "stage1_symmetry_off": {
+        "vars": 150,
+        "conss": 12,
+        "presolve_time_s": 0.0029119999999999997
+      },
+      "fresh_default": {
+        "vars": 150,
+        "conss": 14,
+        "presolve_time_s": 0.004562,
+        "handlers": {
+          "knapsack": 1,
+          "linear": 11,
+          "setppc": 2
+        },
+        "symmetry_named_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ],
+        "constraint_name_count": 14
+      },
+      "fresh_symmetry_off": {
+        "vars": 150,
+        "conss": 12,
+        "presolve_time_s": 0.00261,
+        "handlers": {
+          "knapsack": 1,
+          "linear": 11
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 12
+      },
+      "comparison": {
+        "classification": "VISIBLE_SCIP_RECOVERY",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": [
+          "orbitope_component_0_1row_comp_0_col0",
+          "orbitope_component_1_1row_comp_1_col0"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "counts": {
+    "VISIBLE_SCIP_RECOVERY": 4,
+    "NO_VISIBLE_SCIP_RECOVERY": 4,
+    "AMBIGUOUS_DIFFERENCE": 0
+  },
+  "disposition": "PASS"
+}
