@@ -1,0 +1,332 @@
+{
+  "schema": "isograph.domain-neutral-demand-extraction-rules.v0.1",
+  "date": "2026-10-05",
+  "status": "FROZEN_PRE_EXTRACTION",
+  "source_corpus": "SOURCE_DEMAND_CENSUS_0_1.json",
+  "rule": "Each rule is triggered only by frozen-body surface language. Output IDs are domain-neutral structural demand fingerprints. Trigger words are evidence locators, not primitive names.",
+  "core_already_qualified": [
+    "AND",
+    "OR",
+    "NOT",
+    "IMPLIES",
+    "IFF",
+    "FORALL",
+    "EXISTS",
+    "EQUAL",
+    "PREDICATE_APPLICATION",
+    "RAW_CARRIER",
+    "RAW_VALUE",
+    "DEFINITION_EXPANDS_TO"
+  ],
+  "demand_rules": [
+    {
+      "id": "PD-MAP-APPLY",
+      "regex": "(map|maps|mapping|operator|transform|sends|sending|acts? on|action on|representation|represents|represented|apply|application|flow|diffeomorphism)",
+      "fingerprint": "typed mapping/application semantics",
+      "requires": [
+        "B-TYPED-MAP"
+      ]
+    },
+    {
+      "id": "PD-COMPOSE",
+      "regex": "(compos|product|multiplication|multiply|bracket|commutator|wedge|tensor|concatenat|fractional-linear|fractional linear|super-bracket)",
+      "fingerprint": "operation/composition semantics with laws",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-OPERATION-LAW"
+      ]
+    },
+    {
+      "id": "PD-ID-INVERSE",
+      "regex": "(identity|inverse|invert|order-[0-9]+|order [0-9]+|involution|squared|square-minus-one|square minus one)",
+      "fingerprint": "identity/inverse/finite-order law over a map or operation",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-OPERATION-LAW"
+      ]
+    },
+    {
+      "id": "PD-ACTION-LAW",
+      "regex": "(acts? on|action|representation|generator|covariant|transforms? under|symmetry|automorphism|rotation)",
+      "fingerprint": "action compatibility between an acting operation and a carrier",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-OPERATION-LAW"
+      ]
+    },
+    {
+      "id": "PD-LINEAR",
+      "regex": "(linear|vector|spinor|matrix|scalar|basis|coefficient|weight|root|bivector|tensor|exterior|clifford)",
+      "fingerprint": "additive/scalar combination and linearity semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-ADDITIVE-SCALAR"
+      ]
+    },
+    {
+      "id": "PD-FORM-PAIRING",
+      "regex": "(hermitian|inner product|pairing|metric|killing form|bilinear|trilinear|quadratic|trace|determinant|norm|form\\b)",
+      "fingerprint": "multilinear/pairing/quadratic functional semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-ADDITIVE-SCALAR",
+        "B-MULTILINEAR-FORM"
+      ]
+    },
+    {
+      "id": "PD-INVOLUTION",
+      "regex": "(conjugat|adjoint|antiunitary|antilinear|anti-linear|reflection|hodge|dual|real structure|reality)",
+      "fingerprint": "involution/conjugation/fixed-structure semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-INVOLUTION-GRADING"
+      ]
+    },
+    {
+      "id": "PD-DECOMPOSE",
+      "regex": "(decompos|split into|splits into|block|grading|graded|eigenspace|chiral|self-dual|anti-self-dual|sector|direct sum|sum of)",
+      "fingerprint": "indexed decomposition/grading with reconstruction laws",
+      "requires": [
+        "B-FINITE-PRODUCT-INDEX",
+        "B-SUBOBJECT-QUOTIENT",
+        "B-INVOLUTION-GRADING"
+      ]
+    },
+    {
+      "id": "PD-SUBOBJECT",
+      "regex": "(subgroup|subalgebra|subspace|subset|embed|embedding|centralizer|complement|ideal|contained|contains)",
+      "fingerprint": "subcarrier/inclusion semantics",
+      "requires": [
+        "B-SUBOBJECT-QUOTIENT"
+      ]
+    },
+    {
+      "id": "PD-QUOTIENT",
+      "regex": "(quotient|projective|modulo|null space|equivalence class|coset|torsor)",
+      "fingerprint": "equivalence relation and quotient carrier semantics",
+      "requires": [
+        "B-SUBOBJECT-QUOTIENT"
+      ]
+    },
+    {
+      "id": "PD-INDEXED-FAMILY",
+      "regex": "(bundle|fiber|fibration|section|pullback|principal|transition function|family|regional|region|copy|copies)",
+      "fingerprint": "indexed family/projection/fiber/section semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-INDEXED-FAMILY"
+      ]
+    },
+    {
+      "id": "PD-INCIDENCE",
+      "regex": "(inciden|intersection|intersect|lies in|contained in|fibered over)",
+      "fingerprint": "incidence/preimage/intersection semantics",
+      "requires": [
+        "B-SUBOBJECT-QUOTIENT",
+        "B-INDEXED-FAMILY"
+      ]
+    },
+    {
+      "id": "PD-DIMENSION",
+      "regex": "(\\b[0-9]+-dimensional|dimension|dimensional|components?|copies|roots?|weights?|order [0-9]+|order-[0-9]+)",
+      "fingerprint": "finite indexing/cardinality/dimension semantics",
+      "requires": [
+        "B-FINITE-PRODUCT-INDEX"
+      ]
+    },
+    {
+      "id": "PD-DOMAIN-BOUNDARY",
+      "regex": "(open set|open .*region|domain|boundary|hemisphere|null orbit|null region|compactified|positive.*negative|half-plane|tube|region)",
+      "fingerprint": "domain/open/boundary/topology semantics",
+      "requires": [
+        "B-TOPOLOGY-LIMIT"
+      ]
+    },
+    {
+      "id": "PD-LIMIT-REGULARITY",
+      "regex": "(holomorph|analytic continu|boundary value|hyperfunction|distribution|wightman|schwinger|regularity)",
+      "fingerprint": "regularity/limit/boundary-value semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-TOPOLOGY-LIMIT",
+        "B-DIFFERENTIAL"
+      ]
+    },
+    {
+      "id": "PD-LOCAL-RESTRICT",
+      "regex": "(local|restriction|restrict|trivial|transition function|patch|section|gluing|pullback)",
+      "fingerprint": "restriction/local compatibility/gluing semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-INDEXED-FAMILY",
+        "B-TOPOLOGY-LIMIT"
+      ]
+    },
+    {
+      "id": "PD-DIFFERENTIAL",
+      "regex": "(differential|derivative|derivation|covariant derivative|dirac|dphi|d psi|dpsi|cohomology|h\\^1|kernel|image)",
+      "fingerprint": "differential/chain/derivation semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-ADDITIVE-SCALAR",
+        "B-DIFFERENTIAL"
+      ]
+    },
+    {
+      "id": "PD-CONNECTION-CURVATURE",
+      "regex": "(connection|curvature|torsion|maurer-cartan|field strength|riemann)",
+      "fingerprint": "connection/curvature semantics derived from differential plus action/composition",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-OPERATION-LAW",
+        "B-INDEXED-FAMILY",
+        "B-DIFFERENTIAL"
+      ]
+    },
+    {
+      "id": "PD-INTEGRAL-FUNCTIONAL",
+      "regex": "(integral|action|lagrangian|measure|functional|bf action|yang-mills|palatini|einstein-hilbert)",
+      "fingerprint": "measure/aggregate/functional semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-AGGREGATE"
+      ]
+    },
+    {
+      "id": "PD-VARIATION",
+      "regex": "(variation|varying|field equation|equations|stationary|minimiz|extrem)",
+      "fingerprint": "functional variation/stationarity semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-DIFFERENTIAL",
+        "B-AGGREGATE"
+      ]
+    },
+    {
+      "id": "PD-POSITIVITY-COMPLETION",
+      "regex": "(positiv|hilbert|inner product|null space|completion|positive-time|reflection-positive|reflection positive)",
+      "fingerprint": "ordered/positive form, null quotient, completion semantics",
+      "requires": [
+        "B-MULTILINEAR-FORM",
+        "B-SUBOBJECT-QUOTIENT",
+        "B-TOPOLOGY-LIMIT"
+      ]
+    },
+    {
+      "id": "PD-EQUATION-SOLUTION",
+      "regex": "(equation|solution|propagator|kernel|mass-shell|mass shell|helicity|energy|eigenvalue)",
+      "fingerprint": "operator equation and solution-set semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-SUBOBJECT-QUOTIENT"
+      ]
+    },
+    {
+      "id": "PD-SUPER-PARITY",
+      "regex": "(grassmann|superconnection|super-bracket|fermionic|bosonic|anti-grassmann|anticommut)",
+      "fingerprint": "parity-graded sign semantics",
+      "requires": [
+        "B-FINITE-PRODUCT-INDEX",
+        "B-PARITY-GRADED"
+      ]
+    },
+    {
+      "id": "PD-DISCRETE-AUTOMORPHISM",
+      "regex": "(triality|cpt|parity|time reversal|charge conjugation|automorphism|reflection|order-three|order three)",
+      "fingerprint": "finite automorphism/action semantics",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-OPERATION-LAW",
+        "B-FINITE-PRODUCT-INDEX"
+      ]
+    },
+    {
+      "id": "PD-FINITE-PRESENTATION",
+      "regex": "(multiplication table|structure constants|cartan|root addition|explicit generator|generators|weight coordinates|full multiplication table|gap id)",
+      "fingerprint": "finite generator/relation/presentation semantics",
+      "requires": [
+        "B-FINITE-PRODUCT-INDEX",
+        "B-OPERATION-LAW"
+      ]
+    },
+    {
+      "id": "PD-REAL-FORM",
+      "regex": "(real form|fixed locus|fixed point|signature|reality condition|split analogue|split form|noncompact|compact form)",
+      "fingerprint": "real-structure/fixed-subcarrier/signature semantics",
+      "requires": [
+        "B-INVOLUTION-GRADING",
+        "B-MULTILINEAR-FORM",
+        "B-SUBOBJECT-QUOTIENT"
+      ]
+    },
+    {
+      "id": "PD-TOPOLOGICAL-CLASS",
+      "regex": "(brauer|galois|hilbert symbol|reciprocity|cohomology|periodicity|topological)",
+      "fingerprint": "equivalence/class/obstruction semantics with local-global data",
+      "requires": [
+        "B-SUBOBJECT-QUOTIENT",
+        "B-DIFFERENTIAL",
+        "B-TOPOLOGY-LIMIT"
+      ]
+    },
+    {
+      "id": "PD-LOCAL-GLOBAL",
+      "regex": "(adelic|local.*global|global.*local|group volume|factor.*spacetime|regional coverage|multiple regions|cover different regions)",
+      "fingerprint": "local-global factorization/coverage semantics",
+      "requires": [
+        "B-INDEXED-FAMILY",
+        "B-TOPOLOGY-LIMIT",
+        "B-AGGREGATE"
+      ]
+    },
+    {
+      "id": "PD-LAW-CONSTRAINT",
+      "regex": "(associat|nonassociat|commut|anticommut|preserv|invariant|constraint|vanish|zero condition|closure|closes|law|condition)",
+      "fingerprint": "quantified law/constraint over operations or maps",
+      "requires": [
+        "B-TYPED-MAP",
+        "B-OPERATION-LAW"
+      ]
+    },
+    {
+      "id": "PD-COUNT-CARDINALITY",
+      "regex": "(sixteen|three generations|one generation|64-real|128-real|32-complex|240|248|222|24-cell|96|16|eight disjoint|three .*generations)",
+      "fingerprint": "explicit finite cardinality/index-set semantics",
+      "requires": [
+        "B-FINITE-PRODUCT-INDEX"
+      ]
+    },
+    {
+      "id": "PD-CORE-STATUS",
+      "regex": "(unresolved|does not claim|not complete|limitation|proposal|proposes|tentative|awkward|qualification|expected|possible)",
+      "fingerprint": "source modality/status expressible in current Core",
+      "requires": [],
+      "new_qualified_semantics": false
+    }
+  ],
+  "candidate_basis_ids": [
+    "B-TYPED-MAP",
+    "B-FINITE-PRODUCT-INDEX",
+    "B-OPERATION-LAW",
+    "B-SUBOBJECT-QUOTIENT",
+    "B-INDEXED-FAMILY",
+    "B-ADDITIVE-SCALAR",
+    "B-MULTILINEAR-FORM",
+    "B-INVOLUTION-GRADING",
+    "B-TOPOLOGY-LIMIT",
+    "B-DIFFERENTIAL",
+    "B-AGGREGATE",
+    "B-PARITY-GRADED"
+  ],
+  "anti_bias": [
+    "Demand IDs and basis IDs contain no source-domain object names.",
+    "Regex triggers are extraction locators only; they are not semantic definitions.",
+    "A demand is included only if its trigger occurs in the exact frozen body.",
+    "Core-expressible source modality does not create a new primitive demand.",
+    "Cross-track overlap may justify prioritization but cannot justify semantic identification between source objects."
+  ]
+}
