@@ -56,6 +56,13 @@ The locator records 535 generic surface relation-head occurrences while preservi
 
 G2/G3/G4 remain blocked until a complete audited G1 semantic occurrence census exists.
 
+
+## Direct source-native G1 re-derivation frontier
+
+`DIRECT_SOURCE_NATIVE_EVIDENCE_FRONTIER_0_1.json` identifies only open SSC bodies for which an existing source-local artifact explicitly names the same frozen SSC target and has a paired native witness. The audit admits 25 W bodies and 9 L bodies (34 total) as **evidence-priority targets only**.
+
+This does not reinstate historical local schemas. Their non-Core IDs, named mathematical objects, and hand-designed schema boundaries are non-authoritative. Each target must be independently re-derived into G1 from the frozen SSC/source evidence. A0-only source instances remain quarantined until an exact SSC conservation bridge is established.
+
 ## Authority boundary
 
 Current semantic authority remains the repository's qualified Core/QU/NEI/DTS/Discovery/EI stack.
