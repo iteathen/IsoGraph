@@ -1,0 +1,271 @@
+{
+  "experiment": "n5-3-composed-structural-reductions-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "source": {
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "presolved": {
+    "rows": 836,
+    "cols": 2139,
+    "nonzeros": 8327,
+    "offset": 155.0
+  },
+  "automorphism": {
+    "mappings_examined": 1,
+    "breaker": {
+      "a": 11,
+      "b": 38,
+      "a_name": "C0012",
+      "b_name": "C0039",
+      "cycle_length": 2,
+      "cycle_names": [
+        "C0012",
+        "C0039"
+      ],
+      "cost": 1.0,
+      "lower": 0.0,
+      "upper": 293000.0,
+      "integrality": "HighsVarType.kContinuous"
+    },
+    "moved_variables": 168,
+    "moved_rows": 60
+  },
+  "components": [
+    {
+      "rows": 831,
+      "cols": 2128
+    },
+    {
+      "rows": 1,
+      "cols": 3
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    }
+  ],
+  "small_components": [
+    {
+      "status": "Optimal",
+      "objective": 455.0,
+      "dual": 455.0,
+      "gap": 0.0,
+      "nodes": 1,
+      "lp_iterations": 0,
+      "wall_s": 0.009634156000004168
+    },
+    {
+      "status": "Optimal",
+      "objective": 355.0,
+      "dual": 355.0,
+      "gap": 0.0,
+      "nodes": 1,
+      "lp_iterations": 0,
+      "wall_s": 0.012112432999998646
+    },
+    {
+      "status": "Optimal",
+      "objective": 355.0,
+      "dual": 355.0,
+      "gap": 0.0,
+      "nodes": 1,
+      "lp_iterations": 0,
+      "wall_s": 0.011964855999998747
+    },
+    {
+      "status": "Optimal",
+      "objective": 355.0,
+      "dual": 355.0,
+      "gap": 0.0,
+      "nodes": 1,
+      "lp_iterations": 0,
+      "wall_s": 0.01203436699999827
+    },
+    {
+      "status": "Optimal",
+      "objective": 355.0,
+      "dual": 355.0,
+      "gap": 0.0,
+      "nodes": 1,
+      "lp_iterations": 0,
+      "wall_s": 0.012032472000001349
+    }
+  ],
+  "small_objective_adjustment": 1100.0,
+  "small_dual_adjustment": 1100.0,
+  "trials_per_variant": 3,
+  "limit_s": 15.0,
+  "results": {
+    "A_full": {
+      "trials": [
+        {
+          "status": "Time limit reached",
+          "objective": 8604.999999999996,
+          "dual": 7800.306921534166,
+          "gap": 0.09351459366250216,
+          "nodes": 35,
+          "lp_iterations": 69499,
+          "wall_s": 15.008220848999997
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8604.999999999996,
+          "dual": 7800.306921534166,
+          "gap": 0.09351459366250216,
+          "nodes": 35,
+          "lp_iterations": 70139,
+          "wall_s": 15.008020434999992
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8604.999999999996,
+          "dual": 7800.306921534166,
+          "gap": 0.09351459366250216,
+          "nodes": 35,
+          "lp_iterations": 70493,
+          "wall_s": 15.007763814
+        }
+      ],
+      "median": {
+        "objective": 8604.999999999996,
+        "dual": 7800.306921534166,
+        "gap": 0.09351459366250216,
+        "nodes": 35,
+        "lp_iterations": 70139,
+        "wall_s": 15.008020434999992
+      }
+    },
+    "B_full_plus_symmetry": {
+      "trials": [
+        {
+          "status": "Time limit reached",
+          "objective": 8580.0,
+          "dual": 7834.151504513971,
+          "gap": 0.08692872907762572,
+          "nodes": 2,
+          "lp_iterations": 58808,
+          "wall_s": 15.006141796999998
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8580.0,
+          "dual": 7834.151504513971,
+          "gap": 0.08692872907762572,
+          "nodes": 2,
+          "lp_iterations": 59145,
+          "wall_s": 15.006168728999995
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8580.0,
+          "dual": 7834.151504513971,
+          "gap": 0.08692872907762572,
+          "nodes": 2,
+          "lp_iterations": 59171,
+          "wall_s": 15.008866701000017
+        }
+      ],
+      "median": {
+        "objective": 8580.0,
+        "dual": 7834.151504513971,
+        "gap": 0.08692872907762572,
+        "nodes": 2,
+        "lp_iterations": 59145,
+        "wall_s": 15.006168728999995
+      }
+    },
+    "C_factorized": {
+      "trials": [
+        {
+          "status": "Time limit reached",
+          "objective": 8395.0,
+          "dual": 7825.556930159379,
+          "gap": 0.0678312173723194,
+          "nodes": 16,
+          "lp_iterations": 67607,
+          "wall_s": 15.00671764400002
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8395.0,
+          "dual": 7825.556930159379,
+          "gap": 0.0678312173723194,
+          "nodes": 16,
+          "lp_iterations": 66524,
+          "wall_s": 15.007202809999995
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8395.0,
+          "dual": 7825.556930159379,
+          "gap": 0.0678312173723194,
+          "nodes": 16,
+          "lp_iterations": 66801,
+          "wall_s": 15.007521198999996
+        }
+      ],
+      "median": {
+        "objective": 8395.0,
+        "dual": 7825.556930159379,
+        "gap": 0.0678312173723194,
+        "nodes": 16,
+        "lp_iterations": 66801,
+        "wall_s": 15.007202809999995
+      }
+    },
+    "D_factorized_plus_symmetry": {
+      "trials": [
+        {
+          "status": "Time limit reached",
+          "objective": 8720.000000000002,
+          "dual": 7867.729018926477,
+          "gap": 0.09773749782953267,
+          "nodes": 26,
+          "lp_iterations": 59613,
+          "wall_s": 15.033310096000008
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8720.000000000002,
+          "dual": 7867.729018926477,
+          "gap": 0.09773749782953267,
+          "nodes": 27,
+          "lp_iterations": 59789,
+          "wall_s": 15.004682723000002
+        },
+        {
+          "status": "Time limit reached",
+          "objective": 8720.000000000002,
+          "dual": 7867.729018926477,
+          "gap": 0.09773749782953267,
+          "nodes": 27,
+          "lp_iterations": 59999,
+          "wall_s": 15.005090869000014
+        }
+      ],
+      "median": {
+        "objective": 8720.000000000002,
+        "dual": 7867.729018926477,
+        "gap": 0.09773749782953267,
+        "nodes": 27,
+        "lp_iterations": 59789,
+        "wall_s": 15.005090869000014
+      }
+    }
+  },
+  "disposition": "PASS"
+}
