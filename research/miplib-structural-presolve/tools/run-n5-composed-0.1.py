@@ -68,11 +68,27 @@ def main():
     if ph.presolve()==highspy.HighsStatus.kError:raise RuntimeError("presolve")
     lp=ph.getPresolvedLp()
 
-    G=sym.build_graph(lp);mapping,examined=sym.first_nonidentity(G)
-    if mapping is None:raise RuntimeError("no automorphism")
-    breaker=sym.select_breaker(lp,mapping)
-    if (breaker["a_name"],breaker["b_name"])!=("C0012","C0039"):
-        raise RuntimeError(f"unexpected frozen breaker {breaker}")
+    G=sym.build_graph(lp)
+    names=[sym.colname(lp,j) for j in range(int(lp.num_col_))]
+    byname={n:j for j,n in enumerate(names)}
+    ta,tb=byname["C0012"],byname["C0039"]
+    nm=sym.iso.categorical_node_match(["kind","base","color"],[None,None,None])
+    em=sym.iso.categorical_edge_match("coef",None)
+    gm=sym.iso.GraphMatcher(G,G,node_match=nm,edge_match=em)
+    mapping=None; examined=0
+    for cand in gm.isomorphisms_iter():
+        examined+=1
+        if cand.get(("v",ta))==("v",tb):
+            mapping=cand;break
+        if examined>=100:
+            break
+    if mapping is None:raise RuntimeError("frozen C0012->C0039 automorphism not recovered")
+    cyc=sym.cycle_of(mapping,("v",ta))
+    if len(cyc)!=2:raise RuntimeError(f"unexpected target cycle length {len(cyc)}")
+    breaker={"a":ta,"b":tb,"a_name":"C0012","b_name":"C0039","cycle_length":2,
+      "cycle_names":["C0012","C0039"],"cost":float(lp.col_cost_[ta]),
+      "lower":float(lp.col_lower_[ta]),"upper":float(lp.col_upper_[ta]),
+      "integrality":str(lp.integrality_[ta]) if len(lp.integrality_)>ta else "C"}
 
     comps=fac.components(lp)
     if len(comps)!=6:raise RuntimeError(f"expected 6 components, got {len(comps)}")
