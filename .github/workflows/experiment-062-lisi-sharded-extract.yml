@@ -1,0 +1,60 @@
+name: Experiment 062 Lisi sharded extraction only
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/L_EXTRACT_RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-062-lisi-sharded-extract
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  L_SHARD_SIZE: "20"
+
+jobs:
+  extract-l:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/062/tools/run-exp062-l-sharded-extract-only.mjs
+          test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
+          test -f research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json
+          test -f experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md
+      - name: Extract all L shards
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/062/tools/run-exp062-l-sharded-extract-only.mjs
+      - name: Persist L extraction evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/062/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -d out/exp062/L ] && cp -R out/exp062/L "$E/"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","track":"L","mode":"sharded-extraction-only"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL_L_EXTRACT.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 062 L extraction run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi
