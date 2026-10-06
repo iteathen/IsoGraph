@@ -23,7 +23,18 @@ ORDER=[
 "neos-4722843-widden","neos-4738912-atrato","neos-4763324-toguru","neos-4954672-berkel","neos-5049753-cuanza",
 "neos-5052403-cygnet","neos-5093327-huahum","neos-5104907-jarama","neos-5107597-kakapo","neos-5114902-kasavu",
 "neos-5188808-nattai","neos-5195221-niemur","neos-631710","neos-662469","neos-787933","neos-827175","neos-848589",
-"neos-860300"
+"neos-860300","neos-873061","neos-911970","neos-933966","neos-950242","neos-957323","neos-960392","neos17","neos5",
+"neos8","neos859080","net12","netdiversion","nexp-150-20-8-5","ns1116954","ns1208400","ns1644855","ns1760995",
+"ns1830653","ns1952667","nu25-pr12","nursesched-medium-hint03","nursesched-sprint02","nw04","opm2-z10-s4","p200x1188c",
+"peg-solitaire-a3","pg","pg5_34","physiciansched3-3","physiciansched6-2","piperout-08","piperout-27","pk1",
+"proteindesign121hz512p9","proteindesign122trx11p8","qap10","radiationm18-12-05","radiationm40-10-02","rail01","rail02",
+"rail507","ran14x18-disj-8","rd-rplusc-21","reblock115","rmatr100-p10","rmatr200-p5","rocI-4-11","rocII-5-11",
+"rococoB10-011000","rococoC10-001000","roi2alpha3n4","roi5alpha10n8","roll3000","s100","s250r10","satellites2-40",
+"satellites2-60-fs","savsched1","sct2","seymour","seymour1","sing326","sing44","snp-02-004-104","sorrell3",
+"sp150x300d","sp97ar","sp98ar","splice1k1","square41","square47","supportcase10","supportcase12","supportcase18",
+"supportcase19","supportcase22","supportcase26","supportcase33","supportcase40","supportcase42","supportcase6","supportcase7",
+"swath1","swath3","tbfp-network","thor50dday","timtab1","tr12-30","traininstance2","traininstance6","trento1","triptim1",
+"uccase12","uccase9","uct-subprob","unitcal_7","var-smallemery-m6j6","wachplan"
 ]
 
 def fv(x):
