@@ -1,0 +1,178 @@
+{
+  "experiment": "n5-active-double-breaker-holdout-0.2",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "pyscipopt_version": "6.2.1",
+  "igraph_version": "0.11.9",
+  "stage1": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_time_s": 0.037176
+  },
+  "linearized_export": {
+    "rows": 846,
+    "cols": 2354,
+    "nonzeros": 8316
+  },
+  "encoding": {
+    "variables": 2354,
+    "rows": 846,
+    "vertices": 11516,
+    "edges": 16632
+  },
+  "bliss": {
+    "generator_count": 208,
+    "active_generator_count": 2,
+    "bliss_and_replay_wall_s": 4.256160455999996,
+    "structural_frontend_wall_s": 7.383435327000001
+  },
+  "active_generators": [
+    {
+      "index": 184,
+      "moved_active_variables": 84,
+      "involution": true,
+      "a_name": "t_C0021",
+      "b_name": "t_C0026"
+    },
+    {
+      "index": 185,
+      "moved_active_variables": 84,
+      "involution": true,
+      "a_name": "t_C0027",
+      "b_name": "t_C0028"
+    }
+  ],
+  "selected_breakers": [
+    {
+      "index": 184,
+      "a": 2224,
+      "b": 2229,
+      "a_name": "t_C0021",
+      "b_name": "t_C0026"
+    },
+    {
+      "index": 185,
+      "a": 2230,
+      "b": 2231,
+      "a_name": "t_C0027",
+      "b_name": "t_C0028"
+    }
+  ],
+  "composition_certificate": {
+    "generator1_involution": true,
+    "generator2_involution": true,
+    "g2_fixes_breaker1_pair": true,
+    "g1_fixes_breaker2_pair": true,
+    "proof": "Each breaker can be oriented by its automorphism without changing the variables used by the other breaker; sequential orientation yields an objective-equal representative satisfying both."
+  },
+  "trials": [
+    {
+      "seed": 5,
+      "baseline": {
+        "seed": 5,
+        "status": "optimal",
+        "primal": 8104.999999997941,
+        "dual": 8104.999999997941,
+        "gap": 0.0,
+        "nodes": 687,
+        "lp_iterations": 137766,
+        "wall_s": 32.936719445,
+        "transformed_vars": 2142,
+        "transformed_conss": 909
+      },
+      "double": {
+        "seed": 5,
+        "status": "optimal",
+        "primal": 8105.000000000241,
+        "dual": 8105.000000000241,
+        "gap": 0.0,
+        "nodes": 652,
+        "lp_iterations": 146079,
+        "wall_s": 33.671795755999995,
+        "transformed_vars": 2142,
+        "transformed_conss": 900
+      }
+    },
+    {
+      "seed": 6,
+      "baseline": {
+        "seed": 6,
+        "status": "optimal",
+        "primal": 8105.000000000452,
+        "dual": 8105.000000000452,
+        "gap": 0.0,
+        "nodes": 1292,
+        "lp_iterations": 236993,
+        "wall_s": 48.42405110300001,
+        "transformed_vars": 2142,
+        "transformed_conss": 930
+      },
+      "double": {
+        "seed": 6,
+        "status": "optimal",
+        "primal": 8105.000000000295,
+        "dual": 8105.000000000295,
+        "gap": 0.0,
+        "nodes": 1009,
+        "lp_iterations": 125814,
+        "wall_s": 30.967349584000004,
+        "transformed_vars": 2142,
+        "transformed_conss": 894
+      }
+    },
+    {
+      "seed": 7,
+      "baseline": {
+        "seed": 7,
+        "status": "optimal",
+        "primal": 8105.000000000347,
+        "dual": 8105.000000000347,
+        "gap": 0.0,
+        "nodes": 817,
+        "lp_iterations": 172953,
+        "wall_s": 37.10802862900002,
+        "transformed_vars": 2142,
+        "transformed_conss": 911
+      },
+      "double": {
+        "seed": 7,
+        "status": "optimal",
+        "primal": 8105.000000000318,
+        "dual": 8105.000000000318,
+        "gap": 0.0,
+        "nodes": 826,
+        "lp_iterations": 185358,
+        "wall_s": 40.15932081799997,
+        "transformed_vars": 2142,
+        "transformed_conss": 917
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "median_gap": 0.0,
+      "median_nodes": 817,
+      "median_lp": 172953,
+      "median_primal": 8105.000000000347,
+      "median_dual": 8105.000000000347,
+      "median_wall_s": 37.10802862900002
+    },
+    "double": {
+      "median_gap": 0.0,
+      "median_nodes": 826,
+      "median_lp": 146079,
+      "median_primal": 8105.000000000295,
+      "median_dual": 8105.000000000295,
+      "median_wall_s": 33.671795755999995
+    },
+    "double_gap_wins_vs_baseline": 0,
+    "double_gap_losses_vs_baseline": 0,
+    "double_gap_ties_vs_baseline": 3,
+    "directional_confirmation": false
+  },
+  "disposition": "PASS"
+}
