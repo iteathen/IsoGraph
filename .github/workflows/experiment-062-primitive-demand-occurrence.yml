@@ -40,12 +40,12 @@ jobs:
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_REGROUNDING_AUDIT_0_1.json
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
 
-      - name: Extract W occurrences
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062-v2.mjs W extract
+      - name: Stage reconciled W extraction
+        run: |
+          mkdir -p out/exp062/W
+          cp experiments/062/W_EXTRACTION_RECONCILED_0_1.json out/exp062/W/EXTRACTION.json
 
-      - name: Audit W extraction
+      - name: Audit reconciled W extraction
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node experiments/062/tools/run-exp062-v2.mjs W audit
