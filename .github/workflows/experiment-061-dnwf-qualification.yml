@@ -1,0 +1,142 @@
+name: Experiment 061 DNWF 0.1 qualification
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/061/RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-061-dnwf-qualification
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/primitive-demand-qualification/tools/verify_joint_primitive_demand_graph.mjs
+          node research/primitive-demand-qualification/tools/verify_candidate_primitive_basis.mjs
+          node research/primitive-demand-qualification/tools/verify_dnwf_prequalification.mjs
+          node research/primitive-demand-qualification/tools/verify_dnwf_native_vocab.mjs
+          node research/primitive-demand-qualification/tools/verify_dnwf_cold_holdout_0_2.mjs
+          node --check experiments/061/tools/run-exp061-cold.mjs
+          node --check experiments/061/tools/score-exp061-decoders.mjs
+          node --check experiments/061/tools/run-exp061-verifier.mjs
+          node --check experiments/061/tools/finalize-exp061.mjs
+          rm -rf out/exp061
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/061/tools/run-exp061-cold.mjs A
+          ISOGRAPH_COLD_DRY_RUN=1 node experiments/061/tools/run-exp061-cold.mjs B
+          node <<'NODE'
+          const fs=require('fs');
+          const a=JSON.parse(fs.readFileSync('out/exp061/decoder-A/DRY_RUN.json','utf8'));
+          const b=JSON.parse(fs.readFileSync('out/exp061/decoder-B/DRY_RUN.json','utf8'));
+          if(a.packet_sha256!==b.packet_sha256)throw new Error('cold packets are not byte-identical');
+          if(a.source_sha!==b.source_sha)throw new Error('cold source SHA mismatch');
+          const paths=a.input_manifest.map(x=>x.path);
+          const forbidden=['ORACLE','score-exp061','PREQUALIFICATION','COVERAGE_AUDIT','CANDIDATE_SCOPE_AUDIT','SOURCE_SEMANTIC_CENSUS','PRIMITIVE_DEMAND_GRAPH','CANDIDATE_PRIMITIVE_BASIS','woit-lisi-isomorph/woit','woit-lisi-isomorph/lisi','AGENTS.md','STATUS.md'];
+          for(const f of forbidden)if(paths.some(x=>x.includes(f)))throw new Error('forbidden cold input '+f);
+          console.log(JSON.stringify({packet_sha256:a.packet_sha256,input_count:paths.length},null,2));
+          NODE
+
+      - name: Execute isolated decoder A
+        id: decoder_a
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/061/tools/run-exp061-cold.mjs A
+
+      - name: Execute isolated decoder B
+        id: decoder_b
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/061/tools/run-exp061-cold.mjs B
+
+      - name: Deterministically score frozen decoder outputs
+        id: score
+        if: always() && steps.decoder_a.outcome == 'success' && steps.decoder_b.outcome == 'success'
+        continue-on-error: true
+        run: node experiments/061/tools/score-exp061-decoders.mjs
+
+      - name: Execute post-freeze independent verifier
+        id: verifier
+        if: always() && steps.score.outcome == 'success'
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/061/tools/run-exp061-verifier.mjs
+
+      - name: Finalize qualification evidence
+        id: final
+        if: always() && steps.verifier.outcome == 'success'
+        continue-on-error: true
+        run: node experiments/061/tools/finalize-exp061.mjs
+
+      - name: Persist frozen qualification evidence
+        if: always()
+        env:
+          DECODER_A_OUTCOME: ${{ steps.decoder_a.outcome }}
+          DECODER_B_OUTCOME: ${{ steps.decoder_b.outcome }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+          VERIFIER_OUTCOME: ${{ steps.verifier.outcome }}
+          FINAL_OUTCOME: ${{ steps.final.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/061/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E/decoder-A" "$E/decoder-B" "$E/verifier"
+          for R in A B; do
+            for F in DRY_RUN.json METADATA.json COLD_REPORT_RAW.txt PARSED_REPORT.json INPUT_MANIFEST.json; do
+              [ -f "out/exp061/decoder-$R/$F" ] && cp "out/exp061/decoder-$R/$F" "$E/decoder-$R/$F"
+            done
+          done
+          for F in METADATA.json VERIFIER_RAW.txt VERIFIER_REPORT.json PACKET_METADATA.json; do
+            [ -f "out/exp061/verifier/$F" ] && cp "out/exp061/verifier/$F" "$E/verifier/$F"
+          done
+          [ -f out/exp061/SCORE_DECODERS.json ] && cp out/exp061/SCORE_DECODERS.json "$E/SCORE_DECODERS.json"
+          [ -f out/exp061/FINAL_EVIDENCE.json ] && cp out/exp061/FINAL_EVIDENCE.json "$E/FINAL_EVIDENCE.json"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","decoder_a_outcome":"%s","decoder_b_outcome":"%s","score_outcome":"%s","verifier_outcome":"%s","final_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$DECODER_A_OUTCOME" "$DECODER_B_OUTCOME" "$SCORE_OUTCOME" "$VERIFIER_OUTCOME" "$FINAL_OUTCOME" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 061 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi
+
+      - name: Enforce evidence completion
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ steps.decoder_a.outcome }}" = "success"
+          test "${{ steps.decoder_b.outcome }}" = "success"
+          test "${{ steps.score.outcome }}" = "success"
+          test "${{ steps.verifier.outcome }}" = "success"
+          test "${{ steps.final.outcome }}" = "success"
+          test -f out/exp061/FINAL_EVIDENCE.json
+          node -e "const fs=require('fs');const x=JSON.parse(fs.readFileSync('out/exp061/FINAL_EVIDENCE.json','utf8'));console.log(JSON.stringify(x,null,2));if(x.disposition!=='QUALIFICATION_EVIDENCE_COMPLETE_SUPPORTS_PROMOTION')process.exit(1)"
