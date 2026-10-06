@@ -1,0 +1,310 @@
+{
+  "experiment": "post-scip-active-positive-attribution-0.2",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "instances": [
+    "mcsched",
+    "neos-1171737",
+    "neos-3381206-awhea",
+    "neos-3627168-kasai",
+    "neos5",
+    "ns1208400"
+  ],
+  "results": [
+    {
+      "name": "mcsched",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+        "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+        "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+      },
+      "stage1_symmetry_off": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_time_s": 0.0515
+      },
+      "fresh_default": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_time_s": 0.050606,
+        "handlers": {
+          "knapsack": 5,
+          "setppc": 1848
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1853
+      },
+      "fresh_symmetry_off": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_time_s": 0.044753,
+        "handlers": {
+          "knapsack": 5,
+          "setppc": 1848
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1853
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "neos-1171737",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-1171737.mps.gz",
+        "gzip_sha256": "7e58f511e3ca5ae69213fdd78e448a2b6aadbb6b1ed161ae92ad0b74365a953c",
+        "mps_sha256": "9c11ef450081fcac8e6ff4dbbaa695656a2f7d2df3e6cfd3db768e49b932b6dc"
+      },
+      "stage1_symmetry_off": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_time_s": 0.19817099999999999
+      },
+      "fresh_default": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_time_s": 0.227547,
+        "handlers": {
+          "linear": 2469,
+          "setppc": 540,
+          "varbound": 1170
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 4179
+      },
+      "fresh_symmetry_off": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_time_s": 0.192427,
+        "handlers": {
+          "linear": 2469,
+          "setppc": 540,
+          "varbound": 1170
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 4179
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "neos-3381206-awhea",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3381206-awhea.mps.gz",
+        "gzip_sha256": "58d33361a14a26ae1c497a9c8726fb33a699205a9dfad4f6c90e18ba7994db56",
+        "mps_sha256": "738f0bf51278e4dd1f0418b149de72ee2614a5a9b805c838705565397cd0514d"
+      },
+      "stage1_symmetry_off": {
+        "vars": 2375,
+        "conss": 479,
+        "presolve_time_s": 0.031622
+      },
+      "fresh_default": {
+        "vars": 2375,
+        "conss": 479,
+        "presolve_time_s": 0.057961,
+        "handlers": {
+          "linear": 479
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 479
+      },
+      "fresh_symmetry_off": {
+        "vars": 2375,
+        "conss": 479,
+        "presolve_time_s": 0.032112999999999996,
+        "handlers": {
+          "linear": 479
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 479
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "neos-3627168-kasai",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3627168-kasai.mps.gz",
+        "gzip_sha256": "adf4a013825ad2932531128132c387eab68470ca087e23ea5cca4d2930954d7e",
+        "mps_sha256": "e0fce9d13f3ec671ad4f7964d1b01a398c9c5d128eca8ba40cf67a4949cca37e"
+      },
+      "stage1_symmetry_off": {
+        "vars": 1400,
+        "conss": 1652,
+        "presolve_time_s": 0.027326
+      },
+      "fresh_default": {
+        "vars": 1400,
+        "conss": 1665,
+        "presolve_time_s": 0.035442999999999995,
+        "handlers": {
+          "knapsack": 28,
+          "linear": 1035,
+          "logicor": 42,
+          "varbound": 560
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1665
+      },
+      "fresh_symmetry_off": {
+        "vars": 1400,
+        "conss": 1652,
+        "presolve_time_s": 0.026432999999999998,
+        "handlers": {
+          "knapsack": 28,
+          "linear": 1022,
+          "logicor": 42,
+          "varbound": 560
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1652
+      },
+      "comparison": {
+        "classification": "AMBIGUOUS_DIFFERENCE",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "SSTcut_476_1399",
+          "SSTcut_476_488",
+          "SSTcut_476_1397",
+          "SSTcut_476_486",
+          "SSTcut_476_1395",
+          "SSTcut_476_484",
+          "SSTcut_476_1393",
+          "SSTcut_476_482",
+          "SSTcut_476_1391",
+          "SSTcut_476_480",
+          "SSTcut_476_1389",
+          "SSTcut_476_478",
+          "SSTcut_476_1387"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "neos5",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos5.mps.gz",
+        "gzip_sha256": "2888e9aeb10a4cf16d3b9ad221302fd3de815ce1454b31e660ebd060589c1072",
+        "mps_sha256": "6004edda3e48c0d2e6b109e88c059bd874875535fa420cd486461e68a7375870"
+      },
+      "stage1_symmetry_off": {
+        "vars": 63,
+        "conss": 63,
+        "presolve_time_s": 0.0015609999999999999
+      },
+      "fresh_default": {
+        "vars": 63,
+        "conss": 64,
+        "presolve_time_s": 0.002123,
+        "handlers": {
+          "knapsack": 3,
+          "linear": 61
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 64
+      },
+      "fresh_symmetry_off": {
+        "vars": 63,
+        "conss": 63,
+        "presolve_time_s": 0.001469,
+        "handlers": {
+          "knapsack": 3,
+          "linear": 60
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 63
+      },
+      "comparison": {
+        "classification": "AMBIGUOUS_DIFFERENCE",
+        "same_dims": false,
+        "same_handlers": false,
+        "same_constraint_name_multiset": false,
+        "extra_default_constraints": [
+          "SSTcut_53_54"
+        ],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    },
+    {
+      "name": "ns1208400",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ns1208400.mps.gz",
+        "gzip_sha256": "993b8f2dce018d3d339334345eb22db979089318e708c45cfbed28b988e4d145",
+        "mps_sha256": "7fb147bfe61f8b028dca80f6b7648a7c82e5dc377885808df18bd3e93704d06d"
+      },
+      "stage1_symmetry_off": {
+        "vars": 2596,
+        "conss": 1981,
+        "presolve_time_s": 0.11918
+      },
+      "fresh_default": {
+        "vars": 2596,
+        "conss": 1981,
+        "presolve_time_s": 0.140394,
+        "handlers": {
+          "knapsack": 397,
+          "linear": 528,
+          "logicor": 492,
+          "setppc": 564
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1981
+      },
+      "fresh_symmetry_off": {
+        "vars": 2596,
+        "conss": 1981,
+        "presolve_time_s": 0.106957,
+        "handlers": {
+          "knapsack": 397,
+          "linear": 528,
+          "logicor": 492,
+          "setppc": 564
+        },
+        "symmetry_named_constraints": [],
+        "constraint_name_count": 1981
+      },
+      "comparison": {
+        "classification": "NO_VISIBLE_SCIP_RECOVERY",
+        "same_dims": true,
+        "same_handlers": true,
+        "same_constraint_name_multiset": true,
+        "extra_default_constraints": [],
+        "missing_default_constraints": [],
+        "extra_symmetry_named": []
+      }
+    }
+  ],
+  "errors": [],
+  "counts": {
+    "VISIBLE_SCIP_RECOVERY": 0,
+    "NO_VISIBLE_SCIP_RECOVERY": 4,
+    "AMBIGUOUS_DIFFERENCE": 2
+  },
+  "disposition": "PASS"
+}
