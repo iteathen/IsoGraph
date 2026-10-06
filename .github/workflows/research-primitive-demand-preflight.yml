@@ -1,0 +1,33 @@
+name: Research primitive-demand preflight
+
+on:
+  pull_request:
+    paths:
+      - "research/primitive-demand-qualification/**"
+      - ".github/workflows/research-primitive-demand-preflight.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Verify joint primitive-demand graph
+        run: node research/primitive-demand-qualification/tools/verify_joint_primitive_demand_graph.mjs
+
+      - name: Verify candidate primitive basis
+        run: node research/primitive-demand-qualification/tools/verify_candidate_primitive_basis.mjs
+
+      - name: Verify DNWF deterministic prequalification
+        run: node research/primitive-demand-qualification/tools/verify_dnwf_prequalification.mjs
