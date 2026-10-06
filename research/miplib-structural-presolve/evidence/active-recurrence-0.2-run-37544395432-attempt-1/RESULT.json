@@ -1,0 +1,1492 @@
+{
+  "experiment": "post-scip-active-support-recurrence-0.2",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "igraph_version": "0.11.9",
+  "sample": [
+    "mc11",
+    "mcsched",
+    "mik-250-20-75-4",
+    "neos-1171737",
+    "neos-2657525-crna",
+    "neos-3024952-loue",
+    "neos-3046615-murg",
+    "neos-3381206-awhea",
+    "neos-3627168-kasai",
+    "neos-3754480-nidda",
+    "neos-4338804-snowy",
+    "neos-4387871-tavua",
+    "neos-4954672-berkel",
+    "neos-860300",
+    "neos17",
+    "neos5",
+    "ns1208400",
+    "ns1830653",
+    "peg-solitaire-a3",
+    "pg"
+  ],
+  "results": [
+    {
+      "name": "mc11",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mc11.mps.gz",
+        "gzip_sha256": "55f4d9c9d2022cffeb3e07cd7398753f5aab720f16fa49ab17223375bab83874",
+        "mps_sha256": "f134128b38fdc1167a132123c65d6a6ffe95465258f07469daee35e3a59217f7"
+      },
+      "scip_transformed": {
+        "vars": 3040,
+        "conss": 1920,
+        "presolve_time_s": 0.016856
+      },
+      "linearized_export": {
+        "rows": 1920,
+        "cols": 3040,
+        "nonzeros": 6079
+      },
+      "encoding": {
+        "variables": 3040,
+        "rows": 1920,
+        "coefficient_vertices": 6079,
+        "vertices": 11039,
+        "edges": 12158,
+        "active_variables_in_export": 3040,
+        "export_only_variables": 0,
+        "active_rows_in_export": 1920,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.003017071999977361,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "mcsched",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+        "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+        "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+      },
+      "scip_transformed": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_time_s": 0.050431
+      },
+      "linearized_export": {
+        "rows": 1853,
+        "cols": 1573,
+        "nonzeros": 4507
+      },
+      "encoding": {
+        "variables": 1573,
+        "rows": 1853,
+        "coefficient_vertices": 4507,
+        "vertices": 7933,
+        "edges": 9014,
+        "active_variables_in_export": 1495,
+        "export_only_variables": 78,
+        "active_rows_in_export": 1853,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.023032396999980165,
+        "generator_count": 92,
+        "variable_moving_generator_count": 92,
+        "active_variable_moving_generator_count": 15,
+        "export_only_moving_generator_count": 77
+      },
+      "support": {
+        "active_moved_variable_count": 90,
+        "export_moved_variable_count": 78,
+        "active_nontrivial_orbit_count": 45,
+        "active_largest_orbit_sizes": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_C0000186",
+            "t_C0001396"
+          ],
+          [
+            "t_C0000187",
+            "t_C0001397"
+          ],
+          [
+            "t_C0000188",
+            "t_C0001398"
+          ],
+          [
+            "t_C0000189",
+            "t_C0001399"
+          ],
+          [
+            "t_C0000190",
+            "t_C0001400"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "mik-250-20-75-4",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mik-250-20-75-4.mps.gz",
+        "gzip_sha256": "1fa6126895fa59d1c613787ad19bb10e6080a39207224b018a43b95440dca4ef",
+        "mps_sha256": "b29fe88b56bf3c924894f473cee77e25efb4dbaccb322e95c98b9210fb875e6d"
+      },
+      "scip_transformed": {
+        "vars": 270,
+        "conss": 75,
+        "presolve_time_s": 0.008346
+      },
+      "linearized_export": {
+        "rows": 75,
+        "cols": 270,
+        "nonzeros": 9150
+      },
+      "encoding": {
+        "variables": 270,
+        "rows": 75,
+        "coefficient_vertices": 9150,
+        "vertices": 9495,
+        "edges": 18300,
+        "active_variables_in_export": 270,
+        "export_only_variables": 0,
+        "active_rows_in_export": 75,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.002629544999990685,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "neos-1171737",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-1171737.mps.gz",
+        "gzip_sha256": "7e58f511e3ca5ae69213fdd78e448a2b6aadbb6b1ed161ae92ad0b74365a953c",
+        "mps_sha256": "9c11ef450081fcac8e6ff4dbbaa695656a2f7d2df3e6cfd3db768e49b932b6dc"
+      },
+      "scip_transformed": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_time_s": 0.198187
+      },
+      "linearized_export": {
+        "rows": 4179,
+        "cols": 2340,
+        "nonzeros": 58620
+      },
+      "encoding": {
+        "variables": 2340,
+        "rows": 4179,
+        "coefficient_vertices": 58620,
+        "vertices": 65139,
+        "edges": 117240,
+        "active_variables_in_export": 2340,
+        "export_only_variables": 0,
+        "active_rows_in_export": 4179,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.34014658300000633,
+        "generator_count": 29,
+        "variable_moving_generator_count": 29,
+        "active_variable_moving_generator_count": 29,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 2340,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 78,
+        "active_largest_orbit_sizes": [
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30,
+          30
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_C2339",
+            "t_C2311",
+            "t_C2312",
+            "t_C2313",
+            "t_C2314",
+            "t_C2315",
+            "t_C2316",
+            "t_C2317",
+            "t_C2318",
+            "t_C2319",
+            "t_C2320",
+            "t_C2321",
+            "t_C2322",
+            "t_C2323",
+            "t_C2324",
+            "t_C2325",
+            "t_C2326",
+            "t_C2327",
+            "t_C2328",
+            "t_C2329"
+          ],
+          [
+            "t_C1171",
+            "t_C1172",
+            "t_C1173",
+            "t_C1174",
+            "t_C1175",
+            "t_C1176",
+            "t_C1177",
+            "t_C1178",
+            "t_C1179",
+            "t_C1180",
+            "t_C1181",
+            "t_C1182",
+            "t_C1183",
+            "t_C1184",
+            "t_C1185",
+            "t_C1186",
+            "t_C1187",
+            "t_C1188",
+            "t_C1189",
+            "t_C1190"
+          ],
+          [
+            "t_C1201",
+            "t_C1202",
+            "t_C1203",
+            "t_C1204",
+            "t_C1205",
+            "t_C1206",
+            "t_C1207",
+            "t_C1208",
+            "t_C1209",
+            "t_C1210",
+            "t_C1211",
+            "t_C1212",
+            "t_C1213",
+            "t_C1214",
+            "t_C1215",
+            "t_C1216",
+            "t_C1217",
+            "t_C1218",
+            "t_C1219",
+            "t_C1220"
+          ],
+          [
+            "t_C1231",
+            "t_C1232",
+            "t_C1233",
+            "t_C1234",
+            "t_C1235",
+            "t_C1236",
+            "t_C1237",
+            "t_C1238",
+            "t_C1239",
+            "t_C1240",
+            "t_C1241",
+            "t_C1242",
+            "t_C1243",
+            "t_C1244",
+            "t_C1245",
+            "t_C1246",
+            "t_C1247",
+            "t_C1248",
+            "t_C1249",
+            "t_C1250"
+          ],
+          [
+            "t_C1261",
+            "t_C1262",
+            "t_C1263",
+            "t_C1264",
+            "t_C1265",
+            "t_C1266",
+            "t_C1267",
+            "t_C1268",
+            "t_C1269",
+            "t_C1270",
+            "t_C1271",
+            "t_C1272",
+            "t_C1273",
+            "t_C1274",
+            "t_C1275",
+            "t_C1276",
+            "t_C1277",
+            "t_C1278",
+            "t_C1279",
+            "t_C1280"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "neos-2657525-crna",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-2657525-crna.mps.gz",
+        "gzip_sha256": "447ffaafa253582984b35bb6f16b44ec5d8692ef4f5b84ffb389c2d84b938983",
+        "mps_sha256": "31a5a4880f97d3844a273b57221e88a6491bb392b1185290548d9f18b17402eb"
+      },
+      "scip_transformed": {
+        "vars": 435,
+        "conss": 255,
+        "presolve_time_s": 0.01124
+      },
+      "linearized_export": {
+        "rows": 255,
+        "cols": 439,
+        "nonzeros": 1456
+      },
+      "encoding": {
+        "variables": 439,
+        "rows": 255,
+        "coefficient_vertices": 1456,
+        "vertices": 2150,
+        "edges": 2912,
+        "active_variables_in_export": 435,
+        "export_only_variables": 4,
+        "active_rows_in_export": 255,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.0006550640000000385,
+        "generator_count": 3,
+        "variable_moving_generator_count": 3,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 3
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 4,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "neos-3024952-loue",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3024952-loue.mps.gz",
+        "gzip_sha256": "6c5f4b9dcb2bf75ce068fb2eea1a2ce911b028390e0fe6b98bd6ddb8690be5cb",
+        "mps_sha256": "c35a114cc6e63556ba76182d35cf7ef0d963f137dd8eb3085f305784814581c7"
+      },
+      "scip_transformed": {
+        "vars": 3255,
+        "conss": 3805,
+        "presolve_time_s": 0.038596
+      },
+      "linearized_export": {
+        "rows": 3805,
+        "cols": 3255,
+        "nonzeros": 18130
+      },
+      "encoding": {
+        "variables": 3255,
+        "rows": 3805,
+        "coefficient_vertices": 18130,
+        "vertices": 25190,
+        "edges": 36260,
+        "active_variables_in_export": 3255,
+        "export_only_variables": 0,
+        "active_rows_in_export": 3805,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.005806514999989076,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "neos-3046615-murg",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3046615-murg.mps.gz",
+        "gzip_sha256": "07d98d3032b201c023a7628a75974093c945987119a19803bcc69f0476956e19",
+        "mps_sha256": "d8bfe7f051fdf60fdd27c0c5e7e6286729561275f13d87e2f71b1e78b19ccaf5"
+      },
+      "scip_transformed": {
+        "vars": 154,
+        "conss": 138,
+        "presolve_time_s": 0.004507
+      },
+      "linearized_export": {
+        "rows": 138,
+        "cols": 154,
+        "nonzeros": 426
+      },
+      "encoding": {
+        "variables": 154,
+        "rows": 138,
+        "coefficient_vertices": 426,
+        "vertices": 718,
+        "edges": 852,
+        "active_variables_in_export": 154,
+        "export_only_variables": 0,
+        "active_rows_in_export": 138,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.00014180499999838503,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "neos-3381206-awhea",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3381206-awhea.mps.gz",
+        "gzip_sha256": "58d33361a14a26ae1c497a9c8726fb33a699205a9dfad4f6c90e18ba7994db56",
+        "mps_sha256": "738f0bf51278e4dd1f0418b149de72ee2614a5a9b805c838705565397cd0514d"
+      },
+      "scip_transformed": {
+        "vars": 2375,
+        "conss": 479,
+        "presolve_time_s": 0.03225
+      },
+      "linearized_export": {
+        "rows": 479,
+        "cols": 2375,
+        "nonzeros": 4275
+      },
+      "encoding": {
+        "variables": 2375,
+        "rows": 479,
+        "coefficient_vertices": 4275,
+        "vertices": 7129,
+        "edges": 8550,
+        "active_variables_in_export": 2375,
+        "export_only_variables": 0,
+        "active_rows_in_export": 479,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.36958661499997447,
+        "generator_count": 474,
+        "variable_moving_generator_count": 474,
+        "active_variable_moving_generator_count": 474,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 2375,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 5,
+        "active_largest_orbit_sizes": [
+          475,
+          475,
+          475,
+          475,
+          475
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_C0475",
+            "t_C0001",
+            "t_C0002",
+            "t_C0003",
+            "t_C0004",
+            "t_C0005",
+            "t_C0006",
+            "t_C0007",
+            "t_C0008",
+            "t_C0009",
+            "t_C0010",
+            "t_C0011",
+            "t_C0012",
+            "t_C0013",
+            "t_C0014",
+            "t_C0015",
+            "t_C0016",
+            "t_C0017",
+            "t_C0018",
+            "t_C0019"
+          ],
+          [
+            "t_C2374",
+            "t_C2373",
+            "t_C2372",
+            "t_C2371",
+            "t_C2370",
+            "t_C2369",
+            "t_C2368",
+            "t_C2367",
+            "t_C2366",
+            "t_C2365",
+            "t_C2364",
+            "t_C2363",
+            "t_C2362",
+            "t_C2361",
+            "t_C2360",
+            "t_C2359",
+            "t_C2358",
+            "t_C2357",
+            "t_C2356",
+            "t_C2355"
+          ],
+          [
+            "t_C1900",
+            "t_C1899",
+            "t_C1898",
+            "t_C1897",
+            "t_C1896",
+            "t_C1895",
+            "t_C1894",
+            "t_C1893",
+            "t_C1892",
+            "t_C1891",
+            "t_C1890",
+            "t_C1889",
+            "t_C1888",
+            "t_C1887",
+            "t_C1886",
+            "t_C1885",
+            "t_C1884",
+            "t_C1883",
+            "t_C1882",
+            "t_C1881"
+          ],
+          [
+            "t_C1425",
+            "t_C1424",
+            "t_C1423",
+            "t_C1422",
+            "t_C1421",
+            "t_C1420",
+            "t_C1419",
+            "t_C1418",
+            "t_C1417",
+            "t_C1416",
+            "t_C1415",
+            "t_C1414",
+            "t_C1413",
+            "t_C1412",
+            "t_C1411",
+            "t_C1410",
+            "t_C1409",
+            "t_C1408",
+            "t_C1407",
+            "t_C1406"
+          ],
+          [
+            "t_C0950",
+            "t_C0949",
+            "t_C0948",
+            "t_C0947",
+            "t_C0946",
+            "t_C0945",
+            "t_C0944",
+            "t_C0943",
+            "t_C0942",
+            "t_C0941",
+            "t_C0940",
+            "t_C0939",
+            "t_C0938",
+            "t_C0937",
+            "t_C0936",
+            "t_C0935",
+            "t_C0934",
+            "t_C0933",
+            "t_C0932",
+            "t_C0931"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "neos-3627168-kasai",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3627168-kasai.mps.gz",
+        "gzip_sha256": "adf4a013825ad2932531128132c387eab68470ca087e23ea5cca4d2930954d7e",
+        "mps_sha256": "e0fce9d13f3ec671ad4f7964d1b01a398c9c5d128eca8ba40cf67a4949cca37e"
+      },
+      "scip_transformed": {
+        "vars": 1400,
+        "conss": 1652,
+        "presolve_time_s": 0.027132
+      },
+      "linearized_export": {
+        "rows": 1652,
+        "cols": 1459,
+        "nonzeros": 4158
+      },
+      "encoding": {
+        "variables": 1459,
+        "rows": 1652,
+        "coefficient_vertices": 4158,
+        "vertices": 7269,
+        "edges": 8316,
+        "active_variables_in_export": 1400,
+        "export_only_variables": 59,
+        "active_rows_in_export": 1652,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.013988864999987527,
+        "generator_count": 60,
+        "variable_moving_generator_count": 60,
+        "active_variable_moving_generator_count": 2,
+        "export_only_moving_generator_count": 58
+      },
+      "support": {
+        "active_moved_variable_count": 1386,
+        "export_moved_variable_count": 59,
+        "active_nontrivial_orbit_count": 99,
+        "active_largest_orbit_sizes": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_C0928",
+            "t_C0930",
+            "t_C0932",
+            "t_C0934",
+            "t_C0936",
+            "t_C0938",
+            "t_C0940",
+            "t_C0943",
+            "t_C0945",
+            "t_C0947",
+            "t_C0949",
+            "t_C0951",
+            "t_C0953",
+            "t_C0955"
+          ],
+          [
+            "t_C0929",
+            "t_C0931",
+            "t_C0933",
+            "t_C0935",
+            "t_C0937",
+            "t_C0939",
+            "t_C0941",
+            "t_C0942",
+            "t_C0944",
+            "t_C0946",
+            "t_C0948",
+            "t_C0950",
+            "t_C0952",
+            "t_C0954"
+          ],
+          [
+            "t_C0956",
+            "t_C0960",
+            "t_C0964",
+            "t_C0968",
+            "t_C0972",
+            "t_C0976",
+            "t_C0980",
+            "t_C0986",
+            "t_C0990",
+            "t_C0994",
+            "t_C0998",
+            "t_C1002",
+            "t_C1006",
+            "t_C1010"
+          ],
+          [
+            "t_C0957",
+            "t_C0961",
+            "t_C0965",
+            "t_C0969",
+            "t_C0973",
+            "t_C0977",
+            "t_C0981",
+            "t_C0987",
+            "t_C0991",
+            "t_C0995",
+            "t_C0999",
+            "t_C1003",
+            "t_C1007",
+            "t_C1011"
+          ],
+          [
+            "t_C0958",
+            "t_C0962",
+            "t_C0966",
+            "t_C0970",
+            "t_C0974",
+            "t_C0978",
+            "t_C0982",
+            "t_C0984",
+            "t_C0988",
+            "t_C0992",
+            "t_C0996",
+            "t_C1000",
+            "t_C1004",
+            "t_C1008"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "neos-3754480-nidda",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-3754480-nidda.mps.gz",
+        "gzip_sha256": "63f322dd9be49acf31f7579d8f04e3bb578bdd7ca7d3525683384190c9a8bf7f",
+        "mps_sha256": "f9b9bf4718a28ac757b176d4f30476758936ea361dad6733a096f5835ad9dcf3"
+      },
+      "scip_transformed": {
+        "vars": 253,
+        "conss": 402,
+        "presolve_time_s": 0.007246
+      },
+      "linearized_export": {
+        "rows": 402,
+        "cols": 253,
+        "nonzeros": 1488
+      },
+      "encoding": {
+        "variables": 253,
+        "rows": 402,
+        "coefficient_vertices": 1488,
+        "vertices": 2143,
+        "edges": 2976,
+        "active_variables_in_export": 253,
+        "export_only_variables": 0,
+        "active_rows_in_export": 402,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.0004953549999981988,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "neos-4338804-snowy",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-4338804-snowy.mps.gz",
+        "gzip_sha256": "a8111bbb59ae6b28be2253e0532c9e628749e7c7cc7d1a1603992ec079f7eb04",
+        "mps_sha256": "867380141abb94f45a54fcddf8c26316358cf25698ad44ed88d0e0fb721c2988"
+      },
+      "scip_transformed": {
+        "vars": 1344,
+        "conss": 1491,
+        "presolve_time_s": 0.057918
+      },
+      "linearized_export": {
+        "rows": 1491,
+        "cols": 1344,
+        "nonzeros": 5082
+      },
+      "encoding": {
+        "variables": 1344,
+        "rows": 1491,
+        "coefficient_vertices": 5082,
+        "vertices": 7917,
+        "edges": 10164,
+        "active_variables_in_export": 1344,
+        "export_only_variables": 0,
+        "active_rows_in_export": 1491,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.0017852759999925638,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    },
+    {
+      "name": "neos-4387871-tavua",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-4387871-tavua.mps.gz",
+        "gzip_sha256": "afc84607bc03e0b0ba68010c0f59b0ea0999f4bafb7ef6af63b841a36445a28e",
+        "mps_sha256": "3607bd503256e50bace2185e5e9f0fee5c189ba9cae016a310b3c0a0af05a744"
+      },
+      "scip_transformed": {
+        "vars": 3654,
+        "conss": 9395,
+        "presolve_time_s": 1.386545
+      },
+      "linearized_export": {
+        "rows": 9395,
+        "cols": 3998,
+        "nonzeros": 21894
+      },
+      "encoding": {
+        "variables": 3998,
+        "rows": 9395,
+        "coefficient_vertices": 21894,
+        "vertices": 35287,
+        "edges": 43788,
+        "active_variables_in_export": 3654,
+        "export_only_variables": 344,
+        "active_rows_in_export": 9395,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.43717812799999933,
+        "generator_count": 342,
+        "variable_moving_generator_count": 342,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 342
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 344,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "neos-4954672-berkel",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-4954672-berkel.mps.gz",
+        "gzip_sha256": "634fa369d5100ae7a9c3d5e872f8c58af74d2873f6642291be899362322c1e6c",
+        "mps_sha256": "c3d0897fc7b75b0335a43da0fd2919f8d1fa04b0360947d70897ab114b9ca382"
+      },
+      "scip_transformed": {
+        "vars": 651,
+        "conss": 426,
+        "presolve_time_s": 0.013836999999999999
+      },
+      "linearized_export": {
+        "rows": 426,
+        "cols": 1113,
+        "nonzeros": 2490
+      },
+      "encoding": {
+        "variables": 1113,
+        "rows": 426,
+        "coefficient_vertices": 2490,
+        "vertices": 4029,
+        "edges": 4980,
+        "active_variables_in_export": 651,
+        "export_only_variables": 462,
+        "active_rows_in_export": 426,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.10665170499999022,
+        "generator_count": 461,
+        "variable_moving_generator_count": 461,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 461
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 462,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "neos-860300",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-860300.mps.gz",
+        "gzip_sha256": "d1b2a0a0500834ef6e3a97a6dbfc17c48226c6619056edfedf990e4d83c01504",
+        "mps_sha256": "e55f58674c081e4c3e0e74e145cddc549a57e13c70657035fdf3b8ccc428c035"
+      },
+      "scip_transformed": {
+        "vars": 1216,
+        "conss": 584,
+        "presolve_time_s": 2.71396
+      },
+      "linearized_export": {
+        "rows": 584,
+        "cols": 1384,
+        "nonzeros": 181024
+      },
+      "encoding": {
+        "variables": 1384,
+        "rows": 584,
+        "coefficient_vertices": 181024,
+        "vertices": 182992,
+        "edges": 362048,
+        "active_variables_in_export": 1216,
+        "export_only_variables": 168,
+        "active_rows_in_export": 584,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 1.203844370000013,
+        "generator_count": 167,
+        "variable_moving_generator_count": 167,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 167
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 168,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "neos17",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos17.mps.gz",
+        "gzip_sha256": "1d50d129c3cbee9e409399314e5a77626811a46c301a2cf2fa2a2e64f65a8ba9",
+        "mps_sha256": "4ea347bc9061a49b4737f2e77b3c15541c031eb8df14881cc9a4bd96a2d65c00"
+      },
+      "scip_transformed": {
+        "vars": 511,
+        "conss": 488,
+        "presolve_time_s": 0.028515
+      },
+      "linearized_export": {
+        "rows": 488,
+        "cols": 535,
+        "nonzeros": 2506
+      },
+      "encoding": {
+        "variables": 535,
+        "rows": 488,
+        "coefficient_vertices": 2506,
+        "vertices": 3529,
+        "edges": 5012,
+        "active_variables_in_export": 511,
+        "export_only_variables": 24,
+        "active_rows_in_export": 488,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.0021537189999776274,
+        "generator_count": 23,
+        "variable_moving_generator_count": 23,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 23
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 24,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "neos5",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos5.mps.gz",
+        "gzip_sha256": "2888e9aeb10a4cf16d3b9ad221302fd3de815ce1454b31e660ebd060589c1072",
+        "mps_sha256": "6004edda3e48c0d2e6b109e88c059bd874875535fa420cd486461e68a7375870"
+      },
+      "scip_transformed": {
+        "vars": 63,
+        "conss": 63,
+        "presolve_time_s": 0.001514
+      },
+      "linearized_export": {
+        "rows": 63,
+        "cols": 63,
+        "nonzeros": 2016
+      },
+      "encoding": {
+        "variables": 63,
+        "rows": 63,
+        "coefficient_vertices": 2016,
+        "vertices": 2142,
+        "edges": 4032,
+        "active_variables_in_export": 63,
+        "export_only_variables": 0,
+        "active_rows_in_export": 63,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.0017699200000151905,
+        "generator_count": 2,
+        "variable_moving_generator_count": 2,
+        "active_variable_moving_generator_count": 2,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 48,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 20,
+        "active_largest_orbit_sizes": [
+          4,
+          4,
+          4,
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_d18",
+            "t_d19",
+            "t_d34",
+            "t_d35"
+          ],
+          [
+            "t_d22",
+            "t_d23",
+            "t_d38",
+            "t_d39"
+          ],
+          [
+            "t_d26",
+            "t_d27",
+            "t_d42",
+            "t_d43"
+          ],
+          [
+            "t_d30",
+            "t_d31",
+            "t_d46",
+            "t_d47"
+          ],
+          [
+            "t_d2",
+            "t_d3"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "ns1208400",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ns1208400.mps.gz",
+        "gzip_sha256": "993b8f2dce018d3d339334345eb22db979089318e708c45cfbed28b988e4d145",
+        "mps_sha256": "7fb147bfe61f8b028dca80f6b7648a7c82e5dc377885808df18bd3e93704d06d"
+      },
+      "scip_transformed": {
+        "vars": 2596,
+        "conss": 1981,
+        "presolve_time_s": 0.108052
+      },
+      "linearized_export": {
+        "rows": 1981,
+        "cols": 2880,
+        "nonzeros": 73620
+      },
+      "encoding": {
+        "variables": 2880,
+        "rows": 1981,
+        "coefficient_vertices": 73620,
+        "vertices": 78481,
+        "edges": 147240,
+        "active_variables_in_export": 2596,
+        "export_only_variables": 284,
+        "active_rows_in_export": 1981,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.9618610360000162,
+        "generator_count": 290,
+        "variable_moving_generator_count": 290,
+        "active_variable_moving_generator_count": 7,
+        "export_only_moving_generator_count": 283
+      },
+      "support": {
+        "active_moved_variable_count": 2536,
+        "export_moved_variable_count": 284,
+        "active_nontrivial_orbit_count": 374,
+        "active_largest_orbit_sizes": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "active_largest_orbit_names": [
+          [
+            "t_C0104",
+            "t_C0124",
+            "t_C0204",
+            "t_C0584",
+            "t_C0604",
+            "t_C0684",
+            "t_C0824",
+            "t_C0844",
+            "t_C0924",
+            "t_C1304",
+            "t_C1324",
+            "t_C1404",
+            "t_C1444",
+            "t_C1484",
+            "t_C1504",
+            "t_C1544",
+            "t_C1684",
+            "t_C1724",
+            "t_C1744",
+            "t_C1784"
+          ],
+          [
+            "t_C0105",
+            "t_C0125",
+            "t_C0205",
+            "t_C0585",
+            "t_C0605",
+            "t_C0685",
+            "t_C0825",
+            "t_C0845",
+            "t_C0925",
+            "t_C1305",
+            "t_C1325",
+            "t_C1405",
+            "t_C1445",
+            "t_C1485",
+            "t_C1505",
+            "t_C1545",
+            "t_C1685",
+            "t_C1725",
+            "t_C1745",
+            "t_C1785"
+          ],
+          [
+            "t_C0106",
+            "t_C0126",
+            "t_C0206",
+            "t_C0586",
+            "t_C0606",
+            "t_C0686",
+            "t_C0826",
+            "t_C0846",
+            "t_C0926",
+            "t_C1306",
+            "t_C1326",
+            "t_C1406",
+            "t_C1446",
+            "t_C1486",
+            "t_C1506",
+            "t_C1546",
+            "t_C1686",
+            "t_C1726",
+            "t_C1746",
+            "t_C1786"
+          ],
+          [
+            "t_C0107",
+            "t_C0127",
+            "t_C0207",
+            "t_C0587",
+            "t_C0607",
+            "t_C0687",
+            "t_C0827",
+            "t_C0847",
+            "t_C0927",
+            "t_C1307",
+            "t_C1327",
+            "t_C1407",
+            "t_C1447",
+            "t_C1487",
+            "t_C1507",
+            "t_C1547",
+            "t_C1687",
+            "t_C1727",
+            "t_C1747",
+            "t_C1787"
+          ],
+          [
+            "t_C0108",
+            "t_C0128",
+            "t_C0208",
+            "t_C0588",
+            "t_C0608",
+            "t_C0688",
+            "t_C0828",
+            "t_C0848",
+            "t_C0928",
+            "t_C1308",
+            "t_C1328",
+            "t_C1408",
+            "t_C1448",
+            "t_C1488",
+            "t_C1508",
+            "t_C1548",
+            "t_C1688",
+            "t_C1728",
+            "t_C1748",
+            "t_C1788"
+          ]
+        ]
+      },
+      "status": "EXACT_ACTIVE_POST_SCIP_SYMMETRY"
+    },
+    {
+      "name": "ns1830653",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ns1830653.mps.gz",
+        "gzip_sha256": "a4e3c130f7ff6ebab4d6781a7e95fadc6c4c043e3e65d95b90f3e2e5e46f1017",
+        "mps_sha256": "98b3656ef998c2f666648a52acf1f477f6d008bbe97408d3e618546a41fc8b00"
+      },
+      "scip_transformed": {
+        "vars": 672,
+        "conss": 1362,
+        "presolve_time_s": 0.238648
+      },
+      "linearized_export": {
+        "rows": 1362,
+        "cols": 1629,
+        "nonzeros": 28276
+      },
+      "encoding": {
+        "variables": 1629,
+        "rows": 1362,
+        "coefficient_vertices": 28276,
+        "vertices": 31267,
+        "edges": 56552,
+        "active_variables_in_export": 672,
+        "export_only_variables": 957,
+        "active_rows_in_export": 1362,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 1.4939949399999932,
+        "generator_count": 953,
+        "variable_moving_generator_count": 953,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 953
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 957,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "peg-solitaire-a3",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/peg-solitaire-a3.mps.gz",
+        "gzip_sha256": "d3d2519a2670d64639a409313a872dfabec2a88915d793826132826062a8cb63",
+        "mps_sha256": "50ce4460e4a8d11011193f6d07e897e16508cb8c2192acd956b0b1091e381a26"
+      },
+      "scip_transformed": {
+        "vars": 4169,
+        "conss": 10043,
+        "presolve_time_s": 0.135768
+      },
+      "linearized_export": {
+        "rows": 10043,
+        "cols": 4537,
+        "nonzeros": 31808
+      },
+      "encoding": {
+        "variables": 4537,
+        "rows": 10043,
+        "coefficient_vertices": 31808,
+        "vertices": 46388,
+        "edges": 63616,
+        "active_variables_in_export": 4169,
+        "export_only_variables": 368,
+        "active_rows_in_export": 10043,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.6144641000000206,
+        "generator_count": 366,
+        "variable_moving_generator_count": 366,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 366
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 368,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "EXPORT_ONLY_SYMMETRY"
+    },
+    {
+      "name": "pg",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/pg.mps.gz",
+        "gzip_sha256": "b4344d7361aca3d0ff039e5de05d2ad38cfe7c9b9b8300fab4573b35821457b2",
+        "mps_sha256": "765a365c6d851573ef12a4c6c08b5fec0c3514e195986618c9d37075e84a3a0c"
+      },
+      "scip_transformed": {
+        "vars": 2690,
+        "conss": 125,
+        "presolve_time_s": 0.012421999999999999
+      },
+      "linearized_export": {
+        "rows": 125,
+        "cols": 2690,
+        "nonzeros": 5190
+      },
+      "encoding": {
+        "variables": 2690,
+        "rows": 125,
+        "coefficient_vertices": 5190,
+        "vertices": 8005,
+        "edges": 10380,
+        "active_variables_in_export": 2690,
+        "export_only_variables": 0,
+        "active_rows_in_export": 125,
+        "export_only_rows": 0
+      },
+      "bliss": {
+        "wall_s": 0.001866651999989699,
+        "generator_count": 0,
+        "variable_moving_generator_count": 0,
+        "active_variable_moving_generator_count": 0,
+        "export_only_moving_generator_count": 0
+      },
+      "support": {
+        "active_moved_variable_count": 0,
+        "export_moved_variable_count": 0,
+        "active_nontrivial_orbit_count": 0,
+        "active_largest_orbit_sizes": [],
+        "active_largest_orbit_names": []
+      },
+      "status": "NO_VARIABLE_MOVING_GENERATOR"
+    }
+  ],
+  "errors": [],
+  "counts": {
+    "EXACT_ACTIVE_POST_SCIP_SYMMETRY": 6,
+    "EXPORT_ONLY_SYMMETRY": 7,
+    "NO_VARIABLE_MOVING_GENERATOR": 7
+  },
+  "disposition": "PASS"
+}
