@@ -36,17 +36,17 @@ jobs:
       - name: Deterministic preflight
         run: |
           set -euo pipefail
-          node --check experiments/062/tools/run-exp062-w-audit-batched-v4.mjs
-          test -f experiments/062/W_COLD_AUDIT_SUCCESSOR_0_4.md
-          test -f experiments/062/W_EXTRACTION_RECONCILED_0_3.json
+          node --check experiments/062/tools/run-exp062-w-audit-batched-v5.mjs
+          test -f experiments/062/W_COLD_AUDIT_SUCCESSOR_0_5.md
+          test -f experiments/062/W_EXTRACTION_RECONCILED_0_4.json
           test -f research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
-          node experiments/062/tools/verify-w-extraction-reconciled-0-3.mjs
+          node experiments/062/tools/verify-w-extraction-reconciled-0-4.mjs
 
       - name: Audit all 84 W rows in validated batches
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062-w-audit-batched-v4.mjs
+        run: node experiments/062/tools/run-exp062-w-audit-batched-v5.mjs
 
       - name: Persist research evidence
         if: always()
