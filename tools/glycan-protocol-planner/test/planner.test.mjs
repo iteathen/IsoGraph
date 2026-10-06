@@ -30,6 +30,14 @@ test('adaptive sequencing distinguishes all four candidates with worst-case cost
   assert.equal(data.result.policy.branches.length, 2);
 });
 
+test('validation/QC demo classifies expected profile versus represented deviation', () => {
+  const data = runExample('validation-qc');
+  assert.equal(data.result.status, 'POLICY');
+  assert.equal(data.result.candidateCount, 2);
+  assert.equal(data.summary.representedModels, 3);
+  assert.equal(data.result.policy.worstCost, 2);
+});
+
 test('remodeling demo chooses lower-cost three-step path over direct cost-four route', () => {
   const data = runExample('remodeling-path');
   assert.equal(data.result.status, 'OPTIMAL');
