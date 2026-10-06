@@ -1,0 +1,68 @@
+name: MIPLIB structural presolve follow-up
+
+on:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-structural-presolve-followup.yml
+      - research/miplib-structural-presolve/FOLLOWUP.request
+      - research/miplib-structural-presolve/tools/run-followup.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-structural-presolve-followup
+  cancel-in-progress: false
+
+jobs:
+  followup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --disable-pip-version-check highspy==1.15.1
+      - name: Execute exact glass4 symmetry quotient
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          rm -rf out/miplib-structural-presolve-followup
+          python3 -m py_compile research/miplib-structural-presolve/tools/run-followup.py
+          python3 research/miplib-structural-presolve/tools/run-followup.py
+      - name: Persist evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/followup-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-structural-presolve-followup/$f" ] && cp "out/miplib-structural-presolve-followup/$f" "$E/$f"
+          done
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","profile":"followup-0.2"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: MIPLIB structural follow-up run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/miplib-structural-presolve-20261006
+            git rebase origin/experiment/miplib-structural-presolve-20261006
+            git push origin HEAD:experiment/miplib-structural-presolve-20261006
+          fi
+      - name: Enforce
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-structural-presolve-followup/RESULT.json"))
+          print(json.dumps({"disposition":r["disposition"],"certificate":r["certificate"],"dimensions":[r["presolved_dimensions"],r["quotient_dimensions"]]},indent=2))
+          if r["disposition"]!="PASS": raise SystemExit(1)
+          PY
