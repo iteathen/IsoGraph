@@ -18,6 +18,7 @@ This means the optimizer is not tied to the original "minimum complete cleavage"
 - complete digestion objectives;
 - selective-removal objectives with explicit preservation constraints;
 - adaptive sequencing/identification policies in which each observed result updates the surviving candidate states before the next experiment is chosen;
+- validation/QC classification policies that can stop at the decision boundary of interest without unnecessarily identifying every alternative subtype;
 - generic remodeling/transition-network planning through a separate adapter;
 - an interactive browser UI with structure diagrams, protocol timelines, adaptive policy trees, and optimality/model-boundary explanations;
 - a custom JSON cleavage-model endpoint and editor;
@@ -48,7 +49,13 @@ A synthetic branched structure asks the planner to remove one branch while prese
 
 Four candidate structures react differently to two diagnostic treatments. The planner returns an adaptive decision policy rather than a fixed word: perform the first treatment, use the observation to narrow the candidate set, then choose the next experiment from the updated states.
 
-### 4. Remodeling
+### 4. Structure validation / QC
+
+Three represented response models are grouped into two decision classes: **expected profile** versus **represented deviation**. The planner may stop as soon as that classification is certain, even if it has not identified which deviation subtype is present. This demonstrates that the same adaptive engine can optimize a validation or QC decision rather than full sequencing.
+
+The probes and response models are schematic, not a validated diagnostic or manufacturing assay.
+
+### 5. Remodeling
 
 A schematic state-transition network includes glycosidase- and transferase-like operations with costs. The same optimizer chooses the minimum-cost route to a target glycoform. This demonstrates the adapter boundary; the example chemistry is intentionally illustrative rather than a wet-lab prescription.
 
