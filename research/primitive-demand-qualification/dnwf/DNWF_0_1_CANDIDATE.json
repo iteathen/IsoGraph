@@ -1,0 +1,72 @@
+{
+  "schema": "isograph.dnwf-module-candidate.v0.1",
+  "date": "2026-10-05",
+  "status": "UNQUALIFIED_SEMANTIC_EXTENSION_CANDIDATE",
+  "source_census": "DNWF_SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "dependency": {
+    "core": "0.17-0.21 cumulative qualified"
+  },
+  "new_semantic_relations": [
+    {
+      "id": 160100,
+      "name": "WF_TERM_ALGEBRA",
+      "arity": 2
+    }
+  ],
+  "raw_packet_metadata_relations": [
+    {
+      "id": 160110,
+      "name": "SIGNATURE_HAS_CONSTRUCTOR"
+    },
+    {
+      "id": 160111,
+      "name": "CONSTRUCTOR_HAS_FIELD"
+    },
+    {
+      "id": 160112,
+      "name": "FIRST_FIELD"
+    },
+    {
+      "id": 160113,
+      "name": "NEXT_FIELD"
+    },
+    {
+      "id": 160114,
+      "name": "LAST_FIELD"
+    },
+    {
+      "id": 160115,
+      "name": "FIELD_IS_RECURSIVE"
+    },
+    {
+      "id": 160116,
+      "name": "FIELD_HAS_EXTERNAL_CARRIER"
+    }
+  ],
+  "semantic_clauses": [
+    "constructor_closure",
+    "constructor_coverage",
+    "constructor_separation",
+    "recursive_field_well_foundedness",
+    "least_generated_carrier",
+    "initial_fold_existence_and_uniqueness"
+  ],
+  "derived_required": [
+    "structural_induction",
+    "structural_recursion",
+    "constructor_recursion_termination",
+    "cyclic_infinite_exclusion"
+  ],
+  "nonclaims": [
+    "arithmetic",
+    "order",
+    "cardinality",
+    "algebra",
+    "topology",
+    "analysis",
+    "physics",
+    "cross_author_identity",
+    "coinduction"
+  ],
+  "authority": false
+}
