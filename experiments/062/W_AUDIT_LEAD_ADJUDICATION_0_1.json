@@ -1,0 +1,144 @@
+{
+  "schema": "isograph.experiment062-w-audit-lead-adjudication.v0.1",
+  "date": "2026-10-06",
+  "status": "FIVE_DIAGNOSTIC_LEADS_ADJUDICATED_THREE_BODIES_CORRECTED",
+  "audit_evidence": "experiments/062/evidence/run-37438595107-attempt-1/exp062/W/AUDIT.json",
+  "audit_contract_failure": "Auditor returned five correction rows rather than all 84 required rows; output is diagnostic evidence only.",
+  "lead_dispositions": [
+    {
+      "census_id": "W-SSC-031",
+      "disposition": "ACCEPT_AND_EXTEND",
+      "reason": "Omitted torsion conditional is load-bearing; re-read also exposed the right-handed-sector restriction and missing torsion-free side-condition context."
+    },
+    {
+      "census_id": "W-SSC-032",
+      "disposition": "ACCEPT_AND_EXTEND",
+      "reason": "Missing invariance constraints are load-bearing; re-read also exposed the omitted Higgs-candidate relation."
+    },
+    {
+      "census_id": "W-SSC-055",
+      "disposition": "REJECT_AS_G1_OCCURRENCE",
+      "reason": "The proposed omission is the source's motivation link. G1 excludes source-status/motivational modality; the actual SO(4)-invariance obstruction is already represented."
+    },
+    {
+      "census_id": "W-SSC-084",
+      "disposition": "ACCEPT_AND_EXTEND",
+      "reason": "The covariance contrast is load-bearing; re-read also exposed the required half-space/direction/reflection choice."
+    },
+    {
+      "census_id": "W-SSC-114",
+      "disposition": "REJECT_HALLUCINATED_SPAN",
+      "reason": "The auditor's proposed source span does not occur in frozen W-SSC-114."
+    }
+  ],
+  "changes": [
+    {
+      "census_id": "W-SSC-031",
+      "action": "EXPAND_OCCURRENCE",
+      "occurrence_id": "W-SSC-031-O01",
+      "before": {
+        "occurrence_id": "W-SSC-031-O01",
+        "source_span": "vacuum Einstein condition as vanishing of a specified mixed/chiral curvature component",
+        "relation_span": "as",
+        "argument_spans": [
+          "vacuum Einstein condition",
+          "vanishing of a specified mixed/chiral curvature component"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Condition defined by vanishing of a curvature component."
+      },
+      "after": {
+        "occurrence_id": "W-SSC-031-O01",
+        "source_span": "For a torsion-free connection W01 states the vacuum Einstein condition as vanishing of a specified mixed/chiral curvature component",
+        "relation_span": "as",
+        "argument_spans": [
+          "torsion-free connection",
+          "vacuum Einstein condition",
+          "vanishing of a specified mixed/chiral curvature component"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Condition defined by vanishing of a curvature component."
+      },
+      "reason": "Preserve the explicit torsion-free side condition on the Einstein-condition occurrence."
+    },
+    {
+      "census_id": "W-SSC-031",
+      "action": "ADD_OCCURRENCES",
+      "occurrence_ids": [
+        "W-SSC-031-O02",
+        "W-SSC-031-O03"
+      ],
+      "reason": "Both clauses are independently load-bearing non-Core relations in the frozen body."
+    },
+    {
+      "census_id": "W-SSC-032",
+      "action": "ADD_OCCURRENCES",
+      "occurrence_ids": [
+        "W-SSC-032-O02",
+        "W-SSC-032-O03"
+      ],
+      "reason": "The original extraction retained only gauge-sector construction and omitted the distinct Higgs-candidate relation and missing-invariance constraints."
+    },
+    {
+      "census_id": "W-SSC-084",
+      "action": "REPLACE_UNDERCOMPLETE_OCCURRENCE",
+      "before": {
+        "occurrence_id": "W-SSC-084-O01",
+        "source_span": "physical-state reconstruction breaks Euclidean SO(4)",
+        "relation_span": "breaks",
+        "argument_spans": [
+          "physical-state reconstruction",
+          "Euclidean SO(4)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Symmetry breaking property."
+      },
+      "after": [
+        {
+          "occurrence_id": "W-SSC-084-O01",
+          "source_span": "reconstruction requires choosing an imaginary-time half-space/direction and reflection",
+          "relation_span": "requires choosing",
+          "argument_spans": [
+            "reconstruction",
+            "imaginary-time half-space/direction",
+            "reflection"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [],
+          "load_bearing_note": "The reconstruction explicitly depends on a half-space/direction and reflection choice."
+        },
+        {
+          "occurrence_id": "W-SSC-084-O02",
+          "source_span": "physical-state reconstruction breaks Euclidean SO(4) even when the underlying Euclidean correlation data are SO(4)-covariant",
+          "relation_span": "breaks",
+          "argument_spans": [
+            "physical-state reconstruction",
+            "Euclidean SO(4)",
+            "underlying Euclidean correlation data",
+            "SO(4)-covariant"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "W-SSC-084-O01"
+          ],
+          "load_bearing_note": "Symmetry breaking is stated despite covariance of the underlying Euclidean correlation data."
+        }
+      ],
+      "reason": "Preserve both the required reconstruction choice and the covariance-vs-physical-state symmetry contrast."
+    }
+  ],
+  "deterministic_span_validation": {
+    "pass": true,
+    "errors": []
+  },
+  "authority": false,
+  "next": "Run a focused corrections-only semantic completeness audit over all 84 W bodies against W_EXTRACTION_RECONCILED_0_2.json."
+}
