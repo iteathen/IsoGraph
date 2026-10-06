@@ -20,6 +20,10 @@ def norm(name):
     s=str(name)
     return s[2:] if s.startswith("t_") else s
 
+def semantic_base(name):
+    s=norm(name)
+    return s[:-4] if s.endswith("_neg") else s
+
 def prep(path,usesymmetry):
     m=Model(); m.hideOutput(True); m.readProblem(str(path))
     if usesymmetry is not None: m.setIntParam("misc/usesymmetry",int(usesymmetry))
@@ -58,9 +62,9 @@ def main():
     target_extra=[]
     target_sym=[]
     for c in extra:
-        if c["vars"] is not None and TARGET.issubset(set(c["vars"])): target_extra.append(c)
+        if c["vars"] is not None and TARGET.issubset({semantic_base(v) for v in c["vars"]}): target_extra.append(c)
     for c in syms:
-        if c["vars"] is not None and TARGET.issubset(set(c["vars"])): target_sym.append(c)
+        if c["vars"] is not None and TARGET.issubset({semantic_base(v) for v in c["vars"]}): target_sym.append(c)
     result={
       "experiment":"miplib-scip-symmetry-attribution-0.1","date":"2026-10-06",
       "pyscipopt_version":pyscipopt.__version__,
@@ -75,7 +79,7 @@ def main():
       "interpretation":{
         "extra_constraint_count":len(extra),
         "symmetry_handler_constraint_count":len(syms),
-        "target_pair_directly_attributed":bool(target_extra or target_sym),
+        "target_pair_or_complement_attributed":bool(target_extra or target_sym),
         "attribution_complete":len(default["exposure_errors"])==0
       },
       "disposition":"PASS"
@@ -83,7 +87,7 @@ def main():
     (OUT/"RESULT.json").write_text(json.dumps(result,indent=2)+"\n")
     lines=["# SCIP symmetry attribution 0.1","",f"**Extra transformed constraints:** {len(extra)}",
            f"**Symmetry-handler constraints:** {len(syms)}",
-           f"**Target pair directly attributed:** {bool(target_extra or target_sym)}",
+           f"**Target pair or SCIP complement directly attributed:** {bool(target_extra or target_sym)}",
            f"**Generic variable exposure complete:** {len(default['exposure_errors'])==0}","",
            "## Extra constraints",""]
     for c in extra: lines.append(f"- {c['name']} [{c['handler']}]: {c['vars']}")
