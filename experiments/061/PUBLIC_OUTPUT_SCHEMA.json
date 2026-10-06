@@ -1,0 +1,31 @@
+{
+  "schema": "isograph.dnwf-cold-output-schema.v0.1",
+  "status": "FROZEN_PUBLIC_OUTPUT_CONTRACT",
+  "type": "array",
+  "exact_case_count": 19,
+  "item": {
+    "required": [
+      "case_id",
+      "classification",
+      "load_bearing_reason",
+      "must_follow",
+      "must_not_follow"
+    ],
+    "classifications": [
+      "CONSISTENT_DNWF",
+      "INCONSISTENT_DNWF",
+      "DISTINCT_SEMANTICS",
+      "OVERCLAIM"
+    ],
+    "case_id_pattern": "^DNWF-C(0[1-9]|1[0-9])$",
+    "load_bearing_reason": "array of concise semantic reasons reconstructed from the candidate",
+    "must_follow": "array of semantic consequences required by the candidate for this case",
+    "must_not_follow": "array of semantic consequences or repairs forbidden by the candidate for this case"
+  },
+  "guards": [
+    "Exactly one item per C01-C19.",
+    "No Woit/Lisi/application-domain references.",
+    "Classification tokens are public serialization, not hidden answers.",
+    "Free-text reasons are semantically reviewed only after outputs freeze."
+  ]
+}
