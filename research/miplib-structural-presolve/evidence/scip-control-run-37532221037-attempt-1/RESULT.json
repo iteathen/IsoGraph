@@ -1,0 +1,96 @@
+{
+  "experiment": "miplib-stronger-control-scip-0.1",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "scip_version": "10.0.2",
+  "source": {
+    "gzip_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+    "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d",
+    "gzip_bytes": 12661,
+    "mps_bytes": 127661
+  },
+  "presolve": {
+    "symmetry_default": {
+      "raw": {
+        "vars": 322,
+        "conss": 396
+      },
+      "transformed": {
+        "vars": 317,
+        "conss": 393
+      },
+      "presolve_wall_s": 0.012966456999997433,
+      "presolve_scip_s": 0.012112,
+      "target_survival": {
+        "z1&3.4": true,
+        "z1&3.8": true,
+        "id60": true,
+        "id70": true
+      }
+    },
+    "symmetry_off": {
+      "raw": {
+        "vars": 322,
+        "conss": 396
+      },
+      "transformed": {
+        "vars": 317,
+        "conss": 392
+      },
+      "presolve_wall_s": 0.010130949999997085,
+      "presolve_scip_s": 0.009444,
+      "target_survival": {
+        "z1&3.4": true,
+        "z1&3.8": true,
+        "id60": true,
+        "id70": true
+      }
+    }
+  },
+  "solves": [
+    {
+      "label": "SCIP default symmetry",
+      "usesymmetry": null,
+      "breaker": false,
+      "status": "timelimit",
+      "primal_bound": 2055573177.7777777,
+      "dual_bound": 800005157.1166968,
+      "gap": 1.5694499085309408,
+      "nodes": 1274,
+      "lp_iterations": 390306,
+      "solving_time_s": 15.000073,
+      "wall_s": 15.000159662000002,
+      "solutions": 20
+    },
+    {
+      "label": "SCIP symmetry off",
+      "usesymmetry": 0,
+      "breaker": false,
+      "status": "timelimit",
+      "primal_bound": 2000017700.0,
+      "dual_bound": 800005296.5072925,
+      "gap": 1.5000055733778117,
+      "nodes": 2974,
+      "lp_iterations": 480777,
+      "solving_time_s": 15.000065,
+      "wall_s": 15.000156554,
+      "solutions": 12
+    },
+    {
+      "label": "SCIP symmetry off + IG breaker",
+      "usesymmetry": 0,
+      "breaker": true,
+      "status": "timelimit",
+      "primal_bound": 1900017050.0,
+      "dual_bound": 800005159.5621105,
+      "gap": 1.37500599501132,
+      "nodes": 2883,
+      "lp_iterations": 501508,
+      "solving_time_s": 15.000037,
+      "wall_s": 15.000135551999996,
+      "solutions": 18
+    }
+  ],
+  "optimal_objective_mismatch_off_vs_breaker": false,
+  "disposition": "PASS"
+}
