@@ -40,6 +40,7 @@ research/
 - [Navier–Stokes proof rendering](navier-stokes-proof/README.md) — source-faithful structural rendering and reduction research over a pinned proof corpus.
 - [NEI research](nei/README.md) — historical/design research surrounding Natural Entropic Identity; qualified NEI authority remains separately versioned.
 - [P versus NP](p-vs-np/README.md) — primitive computation and continuation-support research; theorem status remains open.
+- [Primitive-demand qualification](primitive-demand-qualification/README.md) — domain-neutral demand extraction and candidate primitive-basis qualification work intended to unblock source bodies without promoting campaign-specific schemas.
 - [Primitive logic](primitive-logic/README.md) — supporting primitive-logic/kernel research used during Core primitive-closure development.
 - [Project Discovery](project-discovery/README.md) — current proof-of-function campaigns and the long-term plan for large-scale, massively parallel within-domain and cross-domain research synthesis using coordinated agents, substantial compute, independent verification, and human/domain expertise.
 - [Woit–Lisi IsoGraph unification synthesis](woit-lisi-isomorph/README.md) — full independent source renderings plus constructive synthesis over a frozen quaternionic/chiral common kernel; bridge work is retained as evidence, while current research targets a minimal conservative unified formulation.
