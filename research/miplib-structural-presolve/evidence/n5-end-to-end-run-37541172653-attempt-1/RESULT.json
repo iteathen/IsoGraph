@@ -1,0 +1,239 @@
+{
+  "experiment": "n5-3-end-to-end-frontend-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "highs_version": "1.15.1",
+  "pyscipopt_version": "6.2.1",
+  "front_end": {
+    "highs_presolve_wall_s": 0.011529633000002093,
+    "structural_discovery_wall_s": 24.963374956000003,
+    "frontend_wall_s": 24.974904589000005,
+    "residual_rows": 836,
+    "residual_cols": 2139,
+    "residual_nonzeros": 8327,
+    "residual_offset": 155.0
+  },
+  "certificate": {
+    "a_index": 11,
+    "b_index": 38,
+    "a_name": "C0012",
+    "b_name": "C0039",
+    "mappings_examined": 3,
+    "discovery_wall_s": 24.963374956000003,
+    "moved_variables": 210,
+    "moved_rows": 75,
+    "certificate_replay": true
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "A_original_default": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 8463.0,
+        "dual": 7657.540836831572,
+        "bound_width": 805.459163168428,
+        "gap": 0.10518509536303032,
+        "nodes": 560,
+        "lp_iterations": 140929,
+        "wall_s": 30.000928672
+      },
+      "B_highs_residual": {
+        "seed": 0,
+        "status": "optimal",
+        "primal": 8104.999999997039,
+        "dual": 8104.999999997039,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 672,
+        "lp_iterations": 94999,
+        "wall_s": 22.723815007000013
+      },
+      "C_residual_plus_ig": {
+        "seed": 0,
+        "status": "optimal",
+        "primal": 8104.999999997043,
+        "dual": 8104.999999997043,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 705,
+        "lp_iterations": 109318,
+        "wall_s": 25.403529475
+      }
+    },
+    {
+      "seed": 1,
+      "A_original_default": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8104.999999993103,
+        "dual": 7730.762899054785,
+        "bound_width": 374.2371009383187,
+        "gap": 0.048408818874017656,
+        "nodes": 758,
+        "lp_iterations": 126882,
+        "wall_s": 30.006168707
+      },
+      "B_highs_residual": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8105.000000000272,
+        "dual": 7898.593119444141,
+        "bound_width": 206.406880556131,
+        "gap": 0.026132107001184127,
+        "nodes": 806,
+        "lp_iterations": 133396,
+        "wall_s": 30.000860989000017
+      },
+      "C_residual_plus_ig": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8105.000000000279,
+        "dual": 7811.745067400385,
+        "bound_width": 293.25493259989435,
+        "gap": 0.03754025893954122,
+        "nodes": 696,
+        "lp_iterations": 117601,
+        "wall_s": 30.000573322999998
+      }
+    },
+    {
+      "seed": 2,
+      "A_original_default": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8104.999999999999,
+        "dual": 7762.568476856493,
+        "bound_width": 342.43152314350573,
+        "gap": 0.044113172613477,
+        "nodes": 552,
+        "lp_iterations": 132553,
+        "wall_s": 30.006017826000033
+      },
+      "B_highs_residual": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8104.999999995993,
+        "dual": 7799.683993224574,
+        "bound_width": 305.31600677141887,
+        "gap": 0.039144663685944284,
+        "nodes": 662,
+        "lp_iterations": 120254,
+        "wall_s": 30.00039693900004
+      },
+      "C_residual_plus_ig": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8105.000000000173,
+        "dual": 7790.023977510912,
+        "bound_width": 314.9760224892607,
+        "gap": 0.04043325455718336,
+        "nodes": 611,
+        "lp_iterations": 133354,
+        "wall_s": 30.000346922000006
+      }
+    },
+    {
+      "seed": 3,
+      "A_original_default": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 8104.99999999999,
+        "dual": 7652.335118225439,
+        "bound_width": 452.66488177455085,
+        "gap": 0.0591538236082273,
+        "nodes": 757,
+        "lp_iterations": 139237,
+        "wall_s": 30.000703079000004
+      },
+      "B_highs_residual": {
+        "seed": 3,
+        "status": "optimal",
+        "primal": 8105.000000000109,
+        "dual": 8105.000000000109,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 795,
+        "lp_iterations": 114238,
+        "wall_s": 25.978069866999988
+      },
+      "C_residual_plus_ig": {
+        "seed": 3,
+        "status": "optimal",
+        "primal": 8104.999999999998,
+        "dual": 8104.999999999998,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 659,
+        "lp_iterations": 107226,
+        "wall_s": 25.427204757000027
+      }
+    },
+    {
+      "seed": 4,
+      "A_original_default": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 8105.00000000001,
+        "dual": 7729.536266484177,
+        "bound_width": 375.46373351583316,
+        "gap": 0.04857519527321074,
+        "nodes": 564,
+        "lp_iterations": 141704,
+        "wall_s": 30.00044357400003
+      },
+      "B_highs_residual": {
+        "seed": 4,
+        "status": "optimal",
+        "primal": 8105.00000000012,
+        "dual": 8105.00000000012,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 539,
+        "lp_iterations": 97945,
+        "wall_s": 27.186430432999998
+      },
+      "C_residual_plus_ig": {
+        "seed": 4,
+        "status": "optimal",
+        "primal": 8105.000000067058,
+        "dual": 8105.000000067058,
+        "bound_width": 0.0,
+        "gap": 0.0,
+        "nodes": 619,
+        "lp_iterations": 116302,
+        "wall_s": 29.219601966000027
+      }
+    }
+  ],
+  "summary": {
+    "A_original_default": {
+      "median_bound_width": 375.46373351583316,
+      "median_gap": 0.04857519527321074,
+      "median_nodes": 564,
+      "median_lp_iterations": 139237,
+      "median_wall_s": 30.000928672
+    },
+    "B_highs_residual": {
+      "median_bound_width": 0.0,
+      "median_gap": 0.0,
+      "median_nodes": 672,
+      "median_lp_iterations": 114238,
+      "median_wall_s": 27.186430432999998
+    },
+    "C_residual_plus_ig": {
+      "median_bound_width": 0.0,
+      "median_gap": 0.0,
+      "median_nodes": 659,
+      "median_lp_iterations": 116302,
+      "median_wall_s": 29.219601966000027
+    },
+    "paired_C_vs_B_bound_width_wins": 0,
+    "paired_C_vs_A_bound_width_wins": 5
+  },
+  "disposition": "PASS"
+}
