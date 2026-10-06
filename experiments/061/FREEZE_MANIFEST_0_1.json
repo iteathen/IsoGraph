@@ -1,0 +1,126 @@
+{
+  "schema": "isograph.experiment-061-freeze-manifest.v0.1",
+  "date": "2026-10-05",
+  "status": "FROZEN_BEFORE_EXTERNAL_EXECUTION",
+  "experiment": "061",
+  "target": "DNWF_0_1",
+  "decoder_invocations_required": 2,
+  "verifier_invocations_required": 1,
+  "provider_model_default": "gemini-3.1-flash-lite",
+  "pinned_files": [
+    {
+      "path": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+      "blob_sha": "ef9ea2584ec24f87c956d486040d3cbbd7d49f79",
+      "role": "DECODER_PERMITTED_CORE"
+    },
+    {
+      "path": "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+      "blob_sha": "c77e94b872e43d592cc45071c5f06695aa0f4225",
+      "role": "DECODER_PERMITTED_CORE"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_SOURCE_SEMANTIC_CENSUS_0_2.json",
+      "blob_sha": "531e86ace89e399db063cfd48c88242f34914e0c",
+      "role": "HIDDEN_QUALIFICATION_SOURCE"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_0_1_CANDIDATE.md",
+      "blob_sha": "69ff8b7f47cd4a101f1e8ef1116a68f3460a11a9",
+      "role": "DECODER_PERMITTED_CANDIDATE"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_0_1_CANDIDATE.json",
+      "blob_sha": "f81fc5f14209de8d708bc6a8cf0d50151ea1af19",
+      "role": "HIDDEN_MACHINE_AUTHORITY_CHECK"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_NATIVE_VOCAB_0_1.md",
+      "blob_sha": "eb0be534abbbd881764f4e82afba1a17ca6f8d59",
+      "role": "DECODER_PERMITTED_VOCAB"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_VOCAB_0_1.isg",
+      "blob_sha": "2a5073b4910eea1e589c62c41cc647fcdd8daefe",
+      "role": "HIDDEN_INTERFACE_INTEGRITY"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_0_1_QUALIFICATION_PLAN.md",
+      "blob_sha": "663c615571d9e87eace8be2bf1f0a3bf72f8deec",
+      "role": "VERIFIER_PERMITTED_PLAN"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_Q0_Q2_PREQUALIFICATION_AUDIT_0_1.json",
+      "blob_sha": "9802ad61db5ea1bb91ea718be026413b44a66db6",
+      "role": "HIDDEN_DETERMINISTIC_PREQUALIFICATION"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_COLD_CASES_0_2.json",
+      "blob_sha": "c30c31b0880d1e5509cda1a9b129df2209a48d70",
+      "role": "DECODER_PERMITTED_CASES"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_COLD_PROMPT_0_2.md",
+      "blob_sha": "957a36034cf17d2158880a17faedd943cf0b1aac",
+      "role": "DECODER_PERMITTED_PROMPT"
+    },
+    {
+      "path": "research/primitive-demand-qualification/dnwf/DNWF_COLD_ORACLE_0_2.json",
+      "blob_sha": "fbcb4100598746a96f00d7b9d833e57330c84038",
+      "role": "HIDDEN_UNTIL_POST_FREEZE_VERIFIER"
+    },
+    {
+      "path": "experiments/061/PUBLIC_OUTPUT_SCHEMA.json",
+      "blob_sha": "1f298831927193c18b73321d93190cb1f7a5f8f3",
+      "role": "DECODER_PERMITTED_OUTPUT_SCHEMA"
+    },
+    {
+      "path": "experiments/061/VERIFIER_PROMPT.md",
+      "blob_sha": "3ff1083eecb6b8c27806be9b3e10e65323f5f272",
+      "role": "HIDDEN_FROM_DECODERS_VERIFIER_PROMPT"
+    },
+    {
+      "path": "experiments/061/tools/run-exp061-cold.mjs",
+      "blob_sha": "2b261ff3db6673541701b75e153d98778a623ecd",
+      "role": "QUALIFICATION_INFRASTRUCTURE"
+    },
+    {
+      "path": "experiments/061/tools/score-exp061-decoders.mjs",
+      "blob_sha": "7230511da3a9d9e3755252a93db518d7aa9dad1d",
+      "role": "HIDDEN_SCORER"
+    },
+    {
+      "path": "experiments/061/tools/run-exp061-verifier.mjs",
+      "blob_sha": "57974e1e7d444efdf8b0c1e9f03d9d137db1c25c",
+      "role": "QUALIFICATION_INFRASTRUCTURE"
+    },
+    {
+      "path": "experiments/061/tools/finalize-exp061.mjs",
+      "blob_sha": "47c6e5c277f1ea1966413e797475b35bd8cc5ffd",
+      "role": "HIDDEN_FINALIZER"
+    },
+    {
+      "path": ".github/workflows/experiment-061-dnwf-qualification.yml",
+      "blob_sha": "5ec1a915b17ad8b1399fbec5c1d924c29071f2e0",
+      "role": "QUALIFICATION_INFRASTRUCTURE"
+    }
+  ],
+  "decoder_permitted_paths": [
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "research/primitive-demand-qualification/dnwf/DNWF_0_1_CANDIDATE.md",
+    "research/primitive-demand-qualification/dnwf/DNWF_NATIVE_VOCAB_0_1.md",
+    "research/primitive-demand-qualification/dnwf/DNWF_COLD_CASES_0_2.json",
+    "experiments/061/PUBLIC_OUTPUT_SCHEMA.json",
+    "research/primitive-demand-qualification/dnwf/DNWF_COLD_PROMPT_0_2.md"
+  ],
+  "hidden_from_decoders": [
+    "research/primitive-demand-qualification/dnwf/DNWF_SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "research/primitive-demand-qualification/dnwf/DNWF_COLD_ORACLE_0_2.json",
+    "research/primitive-demand-qualification/dnwf/DNWF_Q0_Q2_PREQUALIFICATION_AUDIT_0_1.json",
+    "experiments/061/VERIFIER_PROMPT.md",
+    "experiments/061/tools/score-exp061-decoders.mjs",
+    "experiments/061/tools/finalize-exp061.mjs",
+    "all prior decoder outputs and qualification evidence"
+  ],
+  "qualification_claim": "No file in this manifest is promoted by the freeze. DNWF remains unqualified until Experiment 061 evidence is reviewed and a separate Q7 promotion record is committed."
+}
