@@ -1,0 +1,593 @@
+{
+  "experiment": "miplib-structural-presolve-prototype-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "time_limit_s_per_solve": 15.0,
+  "fixed_profile": [
+    "exact identical-row interval intersection",
+    "exact identical-column aggregation for ordinary continuous/integer interval variables with identical objective coefficient",
+    "exact disconnected-component detection",
+    "six-round coefficient-aware bipartite refinement for LEAD_ONLY structural classes"
+  ],
+  "instances": [
+    {
+      "name": "mad",
+      "family": "mean-absolute-deviation / dense set-partitioning mixed-binary",
+      "source_url": "https://miplib.zib.de/WebData/instances/mad.mps.gz",
+      "expected_objective": 0.0268,
+      "download": {
+        "mps_path": "out/miplib-structural-presolve/instances/mad.mps",
+        "download_sha256": "0109c5aefd23dbe6d46dd84ab4ad451eab329904249b7acaa38e9a0c94a6bc7a",
+        "mps_sha256": "7fb9d385e3358b98df263d85d10d7161927ef153f2dd6b38e3738c8ae97295f3",
+        "bytes_gzip": 16882,
+        "bytes_mps": 157750
+      },
+      "original_dimensions": {
+        "cols": 220,
+        "rows": 51,
+        "nonzeros": 2808
+      },
+      "highs_presolve_status": "HighsStatus.kOk",
+      "presolved_dimensions": {
+        "cols": 220,
+        "rows": 40,
+        "nonzeros": 2174
+      },
+      "baseline_residual_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 0.2063999999990125,
+        "dual_bound": 0.0,
+        "gap": 1.0,
+        "nodes": 12611,
+        "lp_iterations": 156399,
+        "highs_runtime_s": 15.002764225006104,
+        "wall_runtime_s": 15.002796239999995,
+        "dimensions": {
+          "cols": 220,
+          "rows": 40,
+          "nonzeros": 2174
+        }
+      },
+      "structural_before": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 220,
+              "rows": 40,
+              "nonzeros": 2174
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "structural_closure": {
+        "rounds": [],
+        "removed_rows": 0,
+        "removed_cols": 0,
+        "final_dimensions": {
+          "cols": 220,
+          "rows": 40,
+          "nonzeros": 2174
+        }
+      },
+      "structural_after": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 220,
+              "rows": 40,
+              "nonzeros": 2174
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "reduced_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 0.2063999999990125,
+        "dual_bound": 0.0,
+        "gap": 1.0,
+        "nodes": 12611,
+        "lp_iterations": 156944,
+        "highs_runtime_s": 15.003735780715942,
+        "wall_runtime_s": 15.003772740000002,
+        "dimensions": {
+          "cols": 220,
+          "rows": 40,
+          "nonzeros": 2174
+        }
+      },
+      "original_default_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 0.21919999999978082,
+        "dual_bound": 0.0,
+        "gap": 1.0,
+        "nodes": 11487,
+        "lp_iterations": 141743,
+        "highs_runtime_s": 15.003780126571655,
+        "wall_runtime_s": 15.003806914000009,
+        "dimensions": {
+          "cols": 220,
+          "rows": 51,
+          "nonzeros": 2808
+        }
+      },
+      "objective_match_baseline_vs_reduced": null,
+      "expected_objective_match": null,
+      "signal": "NO_POST_PRESOLVE_SIGNAL"
+    },
+    {
+      "name": "glass4",
+      "family": "nesting / sparse set-partitioning mixed-binary",
+      "source_url": "https://miplib.zib.de/WebData/instances/glass4.mps.gz",
+      "expected_objective": 1200012599.972384,
+      "download": {
+        "mps_path": "out/miplib-structural-presolve/instances/glass4.mps",
+        "download_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+        "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d",
+        "bytes_gzip": 12661,
+        "bytes_mps": 127661
+      },
+      "original_dimensions": {
+        "cols": 322,
+        "rows": 396,
+        "nonzeros": 1815
+      },
+      "highs_presolve_status": "HighsStatus.kOk",
+      "presolved_dimensions": {
+        "cols": 317,
+        "rows": 392,
+        "nonzeros": 1799
+      },
+      "baseline_residual_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 2033352233.333333,
+        "dual_bound": 800004957.666923,
+        "gap": 0.6065585959224331,
+        "nodes": 4609,
+        "lp_iterations": 255179,
+        "highs_runtime_s": 15.000954627990723,
+        "wall_runtime_s": 15.000983044000009,
+        "dimensions": {
+          "cols": 317,
+          "rows": 392,
+          "nonzeros": 1799
+        }
+      },
+      "structural_before": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 317,
+              "rows": 392,
+              "nonzeros": 1799
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 1,
+          "variable_candidates": 2,
+          "largest_variable_classes": [
+            [
+              "z1&3.4",
+              "z1&3.8"
+            ]
+          ],
+          "row_candidate_classes": 1,
+          "row_candidates": 2,
+          "largest_row_classes": [
+            [
+              "id60",
+              "id70"
+            ]
+          ],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "structural_closure": {
+        "rounds": [],
+        "removed_rows": 0,
+        "removed_cols": 0,
+        "final_dimensions": {
+          "cols": 317,
+          "rows": 392,
+          "nonzeros": 1799
+        }
+      },
+      "structural_after": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 317,
+              "rows": 392,
+              "nonzeros": 1799
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 1,
+          "variable_candidates": 2,
+          "largest_variable_classes": [
+            [
+              "z1&3.4",
+              "z1&3.8"
+            ]
+          ],
+          "row_candidate_classes": 1,
+          "row_candidates": 2,
+          "largest_row_classes": [
+            [
+              "id60",
+              "id70"
+            ]
+          ],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "reduced_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 2033352233.333333,
+        "dual_bound": 800004957.666923,
+        "gap": 0.6065585959224331,
+        "nodes": 4611,
+        "lp_iterations": 255189,
+        "highs_runtime_s": 15.001089811325073,
+        "wall_runtime_s": 15.001134124999993,
+        "dimensions": {
+          "cols": 317,
+          "rows": 392,
+          "nonzeros": 1799
+        }
+      },
+      "original_default_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 1950016950.000002,
+        "dual_bound": 800005378.7131509,
+        "gap": 0.5897443974970832,
+        "nodes": 4617,
+        "lp_iterations": 199790,
+        "highs_runtime_s": 15.001431465148926,
+        "wall_runtime_s": 15.00146202900001,
+        "dimensions": {
+          "cols": 322,
+          "rows": 396,
+          "nonzeros": 1815
+        }
+      },
+      "objective_match_baseline_vs_reduced": null,
+      "expected_objective_match": null,
+      "signal": "STRUCTURAL_LEAD_ONLY"
+    },
+    {
+      "name": "supportcase26",
+      "family": "precedence / sparse mixed-binary",
+      "source_url": "https://miplib.zib.de/WebData/instances/supportcase26.mps.gz",
+      "expected_objective": 1745.123813,
+      "download": {
+        "mps_path": "out/miplib-structural-presolve/instances/supportcase26.mps",
+        "download_sha256": "e5769bd12cc2b5e711165d986ec324d68d336d6314e2b9db4156d5003b9f4ae4",
+        "mps_sha256": "1973ccac4667abab6eb274f4017b72d33d35dbfddfe72eb4c893e1e2611def67",
+        "bytes_gzip": 16561,
+        "bytes_mps": 131286
+      },
+      "original_dimensions": {
+        "cols": 436,
+        "rows": 870,
+        "nonzeros": 2492
+      },
+      "highs_presolve_status": "HighsStatus.kOk",
+      "presolved_dimensions": {
+        "cols": 436,
+        "rows": 434,
+        "nonzeros": 1264
+      },
+      "baseline_residual_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 1840.7759285089367,
+        "dual_bound": 1397.8179346008585,
+        "gap": 0.24063656366197841,
+        "nodes": 1622,
+        "lp_iterations": 150255,
+        "highs_runtime_s": 15.00140643119812,
+        "wall_runtime_s": 15.001434948999986,
+        "dimensions": {
+          "cols": 436,
+          "rows": 434,
+          "nonzeros": 1264
+        }
+      },
+      "structural_before": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 436,
+              "rows": 434,
+              "nonzeros": 1264
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "structural_closure": {
+        "rounds": [],
+        "removed_rows": 0,
+        "removed_cols": 0,
+        "final_dimensions": {
+          "cols": 436,
+          "rows": 434,
+          "nonzeros": 1264
+        }
+      },
+      "structural_after": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 436,
+              "rows": 434,
+              "nonzeros": 1264
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "reduced_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 1840.7759285089367,
+        "dual_bound": 1397.8179346008585,
+        "gap": 0.24063656366197841,
+        "nodes": 1619,
+        "lp_iterations": 149294,
+        "highs_runtime_s": 15.001535177230835,
+        "wall_runtime_s": 15.001579623999987,
+        "dimensions": {
+          "cols": 436,
+          "rows": 434,
+          "nonzeros": 1264
+        }
+      },
+      "original_default_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 1790.05043011219,
+        "dual_bound": 1415.2534524726775,
+        "gap": 0.20937788753584022,
+        "nodes": 3385,
+        "lp_iterations": 184681,
+        "highs_runtime_s": 15.002013921737671,
+        "wall_runtime_s": 15.002041804000015,
+        "dimensions": {
+          "cols": 436,
+          "rows": 870,
+          "nonzeros": 2492
+        }
+      },
+      "objective_match_baseline_vs_reduced": null,
+      "expected_objective_match": null,
+      "signal": "NO_POST_PRESOLVE_SIGNAL"
+    },
+    {
+      "name": "bppc4-08",
+      "family": "bin-packing / set-partitioning mixed-binary",
+      "source_url": "https://miplib.zib.de/WebData/instances/bppc4-08.mps.gz",
+      "expected_objective": 53.0,
+      "download": {
+        "mps_path": "out/miplib-structural-presolve/instances/bppc4-08.mps",
+        "download_sha256": "f7441940af00d8a1a68b889f95dcabbe0185b68f53598cb70595fab23eca1cec",
+        "mps_sha256": "e596783b23be27e1165bc6080050736d499f163ee1bb184c3846b72e312a7fec",
+        "bytes_gzip": 77423,
+        "bytes_mps": 1222796
+      },
+      "original_dimensions": {
+        "cols": 1456,
+        "rows": 111,
+        "nonzeros": 23964
+      },
+      "highs_presolve_status": "HighsStatus.kOk",
+      "presolved_dimensions": {
+        "cols": 1455,
+        "rows": 111,
+        "nonzeros": 23964
+      },
+      "baseline_residual_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 55.0,
+        "dual_bound": 52.0,
+        "gap": 0.05454545454545454,
+        "nodes": 2116,
+        "lp_iterations": 154261,
+        "highs_runtime_s": 15.0113844871521,
+        "wall_runtime_s": 15.011429063000008,
+        "dimensions": {
+          "cols": 1455,
+          "rows": 111,
+          "nonzeros": 23964
+        }
+      },
+      "structural_before": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 1455,
+              "rows": 111,
+              "nonzeros": 23964
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "structural_closure": {
+        "rounds": [],
+        "removed_rows": 0,
+        "removed_cols": 0,
+        "final_dimensions": {
+          "cols": 1455,
+          "rows": 111,
+          "nonzeros": 23964
+        }
+      },
+      "structural_after": {
+        "components": {
+          "component_count": 1,
+          "nontrivial_component_count": 1,
+          "largest_components": [
+            {
+              "cols": 1455,
+              "rows": 111,
+              "nonzeros": 23964
+            }
+          ],
+          "exact_factorization": false,
+          "proof": null
+        },
+        "wl_candidates": {
+          "rounds": 6,
+          "variable_candidate_classes": 0,
+          "variable_candidates": 0,
+          "largest_variable_classes": [],
+          "row_candidate_classes": 0,
+          "row_candidates": 0,
+          "largest_row_classes": [],
+          "authority": "LEAD_ONLY",
+          "note": "Equal refinement colors are structural-candidate evidence only. They are not treated as variable identity, automorphism, dominance, or a legal quotient without an independent exact proof."
+        }
+      },
+      "reduced_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 55.0,
+        "dual_bound": 52.0,
+        "gap": 0.05454545454545454,
+        "nodes": 2116,
+        "lp_iterations": 154338,
+        "highs_runtime_s": 15.00430154800415,
+        "wall_runtime_s": 15.004357653,
+        "dimensions": {
+          "cols": 1455,
+          "rows": 111,
+          "nonzeros": 23964
+        }
+      },
+      "original_default_solve": {
+        "status": "Time limit reached",
+        "optimal": false,
+        "objective": 55.999999999999915,
+        "dual_bound": 52.0,
+        "gap": 0.07142857142857001,
+        "nodes": 2075,
+        "lp_iterations": 138935,
+        "highs_runtime_s": 15.000837087631226,
+        "wall_runtime_s": 15.000875159000003,
+        "dimensions": {
+          "cols": 1456,
+          "rows": 111,
+          "nonzeros": 23964
+        }
+      },
+      "objective_match_baseline_vs_reduced": null,
+      "expected_objective_match": null,
+      "signal": "NO_POST_PRESOLVE_SIGNAL"
+    }
+  ],
+  "errors": [],
+  "objective_failures": [],
+  "summary": {
+    "instances_completed": 4,
+    "instances_with_exact_post_presolve_reduction": 0,
+    "instances_with_exact_factorization_signal": 0,
+    "instances_with_wl_leads": 1,
+    "total_post_presolve_rows_removed": 0,
+    "total_post_presolve_cols_removed": 0
+  },
+  "disposition": "PASS"
+}
