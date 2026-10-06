@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.dnwf-cold-taxonomy-repair-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "SUCCESSOR_HOLDOUT_FROZEN_AFTER_DEMONSTRATED_AMBIGUITY",
+  "attempt1_taxonomy_audit": "DNWF_ATTEMPT1_CLASSIFICATION_TAXONOMY_AUDIT_0_1.json",
+  "predecessor_cases": "DNWF_COLD_CASES_0_2.json",
+  "successor_cases": "DNWF_COLD_CASES_0_3.json",
+  "predecessor_prompt": "DNWF_COLD_PROMPT_0_2.md",
+  "successor_prompt": "DNWF_COLD_PROMPT_0_3.md",
+  "predecessor_oracle": "DNWF_COLD_ORACLE_0_2.json",
+  "successor_oracle": "DNWF_COLD_ORACLE_0_3.json",
+  "candidate_unchanged": "DNWF_0_1_CANDIDATE.md",
+  "changed_public_cases": [
+    "DNWF-C15",
+    "DNWF-C17",
+    "DNWF-C18"
+  ],
+  "unchanged_expected_classifications": true,
+  "repair_scope": [
+    "define mutually exclusive meanings for CONSISTENT_DNWF, INCONSISTENT_DNWF, DISTINCT_SEMANTICS, and OVERCLAIM",
+    "clarify C15 that both signatures may separately satisfy DNWF and semantic non-equivalence is the tested defect",
+    "clarify C17/C18 that the signature/carrier itself satisfies DNWF and the tested defect is an unsupported induction conclusion"
+  ],
+  "nonchanges": [
+    "no DNWF candidate semantic clause changed",
+    "no Q5 mutation family changed",
+    "no hidden expected classification changed",
+    "no score threshold changed",
+    "attempt-1 evidence remains immutable and is not rescored"
+  ],
+  "rerun_justification": "Qualification Resource Discipline permits a rerun for a materially changed frozen corpus caused by a specific demonstrated semantic ambiguity. Attempt 1 showed identical three-token mismatches from two independent decoders while both reports reconstructed the oracle-required semantic distinctions.",
+  "qualification_rule": "Only a fresh execution on the 0.3 successor may count toward qualification. Attempt 1 remains DOES_NOT_QUALIFY under its own frozen 0.2 packet."
+}
