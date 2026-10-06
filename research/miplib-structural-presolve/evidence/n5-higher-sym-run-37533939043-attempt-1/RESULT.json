@@ -1,0 +1,92 @@
+{
+  "experiment": "n5-3-higher-symmetry-benchmark-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "pyscipopt_version": "6.2.1",
+  "source": {
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "presolved": {
+    "rows": 836,
+    "cols": 2139,
+    "nonzeros": 8327
+  },
+  "automorphism": {
+    "mappings_examined": 1,
+    "moved_variables": 168,
+    "moved_rows": 60,
+    "certificate_replay": true
+  },
+  "breaker": {
+    "a": 11,
+    "b": 38,
+    "a_name": "C0012",
+    "b_name": "C0039",
+    "cycle_length": 2,
+    "cycle_names": [
+      "C0012",
+      "C0039"
+    ],
+    "cost": 1.0,
+    "lower": 0.0,
+    "upper": 293000.0,
+    "integrality": "HighsVarType.kContinuous"
+  },
+  "highs": {
+    "baseline": {
+      "status": "Time limit reached",
+      "objective": 8604.999999999996,
+      "dual": 7812.429147388404,
+      "gap": 0.09210585155277079,
+      "nodes": 101,
+      "lp_iterations": 105243,
+      "wall_s": 20.004051239
+    },
+    "breaker": {
+      "status": "Time limit reached",
+      "objective": 8469.999999999998,
+      "dual": 7873.728737720622,
+      "gap": 0.0703980238818626,
+      "nodes": 34,
+      "lp_iterations": 94337,
+      "wall_s": 20.00807873400001
+    }
+  },
+  "scip": {
+    "default": {
+      "status": "timelimit",
+      "primal": 8104.999999999999,
+      "dual": 7542.74306022323,
+      "gap": 0.07454276717204379,
+      "nodes": 469,
+      "lp_iterations": 86152,
+      "wall_s": 20.000482409,
+      "transformed_vars": 2128,
+      "transformed_conss": 857
+    },
+    "symmetry_off": {
+      "status": "timelimit",
+      "primal": 8104.999999999999,
+      "dual": 7542.74306022323,
+      "gap": 0.07454276717204379,
+      "nodes": 474,
+      "lp_iterations": 86818,
+      "wall_s": 20.000504997000007,
+      "transformed_vars": 2128,
+      "transformed_conss": 858
+    },
+    "symmetry_off_breaker": {
+      "status": "timelimit",
+      "primal": 8105.0,
+      "dual": 7637.856613265063,
+      "gap": 0.06116158110688078,
+      "nodes": 501,
+      "lp_iterations": 78186,
+      "wall_s": 20.00038232900002,
+      "transformed_vars": 2128,
+      "transformed_conss": 855
+    }
+  },
+  "disposition": "PASS"
+}
