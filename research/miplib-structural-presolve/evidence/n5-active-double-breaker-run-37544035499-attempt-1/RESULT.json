@@ -1,0 +1,299 @@
+{
+  "experiment": "n5-active-double-breaker-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "pyscipopt_version": "6.2.1",
+  "igraph_version": "0.11.9",
+  "stage1": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_time_s": 0.038586999999999996
+  },
+  "linearized_export": {
+    "rows": 846,
+    "cols": 2354,
+    "nonzeros": 8316
+  },
+  "encoding": {
+    "variables": 2354,
+    "rows": 846,
+    "vertices": 11516,
+    "edges": 16632
+  },
+  "bliss": {
+    "generator_count": 208,
+    "active_generator_count": 2,
+    "bliss_and_replay_wall_s": 5.421060215000011,
+    "structural_frontend_wall_s": 8.624344288999993
+  },
+  "active_generators": [
+    {
+      "index": 184,
+      "moved_active_variables": 84,
+      "involution": true,
+      "a_name": "t_C0021",
+      "b_name": "t_C0026"
+    },
+    {
+      "index": 185,
+      "moved_active_variables": 84,
+      "involution": true,
+      "a_name": "t_C0027",
+      "b_name": "t_C0028"
+    }
+  ],
+  "selected_breakers": [
+    {
+      "index": 184,
+      "a": 2224,
+      "b": 2229,
+      "a_name": "t_C0021",
+      "b_name": "t_C0026"
+    },
+    {
+      "index": 185,
+      "a": 2230,
+      "b": 2231,
+      "a_name": "t_C0027",
+      "b_name": "t_C0028"
+    }
+  ],
+  "composition_certificate": {
+    "generator1_involution": true,
+    "generator2_involution": true,
+    "g2_fixes_breaker1_pair": true,
+    "g1_fixes_breaker2_pair": true,
+    "proof": "Each breaker can be oriented by its automorphism without changing the variables used by the other breaker; sequential orientation yields an objective-equal representative satisfying both."
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "baseline": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 11481.84068396716,
+        "dual": 7563.030165893971,
+        "gap": 0.5181534956379452,
+        "nodes": 25,
+        "lp_iterations": 26027,
+        "wall_s": 15.001208880000007,
+        "transformed_vars": 2142,
+        "transformed_conss": 854
+      },
+      "single": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 11481.84068396716,
+        "dual": 7563.030165893971,
+        "gap": 0.5181534956379452,
+        "nodes": 25,
+        "lp_iterations": 26217,
+        "wall_s": 15.001187009999995,
+        "transformed_vars": 2142,
+        "transformed_conss": 855
+      },
+      "double": {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 10995.536671804342,
+        "dual": 7573.847032665503,
+        "gap": 0.45177696676224344,
+        "nodes": 17,
+        "lp_iterations": 25325,
+        "wall_s": 15.000876435999999,
+        "transformed_vars": 2142,
+        "transformed_conss": 855
+      }
+    },
+    {
+      "seed": 1,
+      "baseline": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 11411.33498759106,
+        "dual": 7454.524026518885,
+        "gap": 0.5307932400507572,
+        "nodes": 31,
+        "lp_iterations": 31616,
+        "wall_s": 15.000679890000015,
+        "transformed_vars": 2142,
+        "transformed_conss": 862
+      },
+      "single": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 11635.464412070984,
+        "dual": 7455.039355884934,
+        "gap": 0.5607515744214099,
+        "nodes": 26,
+        "lp_iterations": 30535,
+        "wall_s": 15.000947937999996,
+        "transformed_vars": 2142,
+        "transformed_conss": 861
+      },
+      "double": {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 11635.464412070984,
+        "dual": 7455.039355884934,
+        "gap": 0.5607515744214099,
+        "nodes": 24,
+        "lp_iterations": 29992,
+        "wall_s": 15.000897793000007,
+        "transformed_vars": 2142,
+        "transformed_conss": 862
+      }
+    },
+    {
+      "seed": 2,
+      "baseline": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 10425.000000000335,
+        "dual": 7559.412843795569,
+        "gap": 0.37907536146232745,
+        "nodes": 16,
+        "lp_iterations": 24687,
+        "wall_s": 15.00117488799998,
+        "transformed_vars": 2142,
+        "transformed_conss": 849
+      },
+      "single": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 11160.0,
+        "dual": 7556.078075279508,
+        "gap": 0.476956681603264,
+        "nodes": 16,
+        "lp_iterations": 26796,
+        "wall_s": 15.000867857999992,
+        "transformed_vars": 2142,
+        "transformed_conss": 855
+      },
+      "double": {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 10720.000000000371,
+        "dual": 7556.078075279508,
+        "gap": 0.41872541458669693,
+        "nodes": 12,
+        "lp_iterations": 25876,
+        "wall_s": 15.000808163999977,
+        "transformed_vars": 2142,
+        "transformed_conss": 851
+      }
+    },
+    {
+      "seed": 3,
+      "baseline": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 10517.516129032378,
+        "dual": 7485.048424620147,
+        "gap": 0.40513668481258003,
+        "nodes": 43,
+        "lp_iterations": 32728,
+        "wall_s": 15.001167339000006,
+        "transformed_vars": 2142,
+        "transformed_conss": 859
+      },
+      "single": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 10517.516129032378,
+        "dual": 7485.048424620147,
+        "gap": 0.40513668481258003,
+        "nodes": 43,
+        "lp_iterations": 33272,
+        "wall_s": 15.001249200000018,
+        "transformed_vars": 2142,
+        "transformed_conss": 860
+      },
+      "double": {
+        "seed": 3,
+        "status": "timelimit",
+        "primal": 10517.516129032618,
+        "dual": 7486.979256578969,
+        "gap": 0.4047743113206372,
+        "nodes": 53,
+        "lp_iterations": 33915,
+        "wall_s": 15.001237352999965,
+        "transformed_vars": 2142,
+        "transformed_conss": 860
+      }
+    },
+    {
+      "seed": 4,
+      "baseline": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 11455.000000000298,
+        "dual": 7590.27101106096,
+        "gap": 0.5091687745150922,
+        "nodes": 14,
+        "lp_iterations": 24971,
+        "wall_s": 15.000727594000011,
+        "transformed_vars": 2142,
+        "transformed_conss": 856
+      },
+      "single": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 10505.0,
+        "dual": 7601.0133808594255,
+        "gap": 0.3820525597880514,
+        "nodes": 49,
+        "lp_iterations": 32783,
+        "wall_s": 15.000615312000036,
+        "transformed_vars": 2142,
+        "transformed_conss": 852
+      },
+      "double": {
+        "seed": 4,
+        "status": "timelimit",
+        "primal": 11035.00000000018,
+        "dual": 7635.960143545486,
+        "gap": 0.44513588239821156,
+        "nodes": 43,
+        "lp_iterations": 32587,
+        "wall_s": 15.001069915999949,
+        "transformed_vars": 2142,
+        "transformed_conss": 856
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "median_gap": 0.5091687745150922,
+      "median_nodes": 25,
+      "median_lp": 26027,
+      "median_primal": 11411.33498759106,
+      "median_dual": 7559.412843795569,
+      "median_wall_s": 15.001167339000006
+    },
+    "single": {
+      "median_gap": 0.476956681603264,
+      "median_nodes": 26,
+      "median_lp": 30535,
+      "median_primal": 11160.0,
+      "median_dual": 7556.078075279508,
+      "median_wall_s": 15.000947937999996
+    },
+    "double": {
+      "median_gap": 0.44513588239821156,
+      "median_nodes": 24,
+      "median_lp": 29992,
+      "median_primal": 10995.536671804342,
+      "median_dual": 7556.078075279508,
+      "median_wall_s": 15.000897793000007
+    },
+    "double_gap_wins_vs_baseline": 3,
+    "double_gap_losses_vs_baseline": 2,
+    "double_gap_ties_vs_baseline": 0
+  },
+  "disposition": "PASS"
+}
