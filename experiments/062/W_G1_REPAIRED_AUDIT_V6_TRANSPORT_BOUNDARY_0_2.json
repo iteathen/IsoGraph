@@ -1,0 +1,78 @@
+{
+  "schema": "isograph.exp062-w-g1-repaired-audit-v6-transport-boundary.v0.2",
+  "date": "2026-10-06",
+  "status": "PROCEDURAL_TRANSPORT_BOUNDARY_W_G1_REAUDIT_INCOMPLETE_G2_BLOCKED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "predecessor": "W_G1_REPAIRED_AUDIT_V6_TRANSPORT_BOUNDARY_0_1.json",
+  "purpose": "Append the two later unchanged-input cold-audit attempts to the W G1 transport record without weakening or bypassing the graph-first G1 completeness gate.",
+  "pinned_input": {
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+    "extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_5.json",
+    "reconciliation": "experiments/062/W_EXTRACTION_RECONCILIATION_0_5.json",
+    "preflight": "experiments/062/tools/verify-w-extraction-reconciled-0-5.mjs",
+    "cold_audit_successor": "experiments/062/W_COLD_AUDIT_SUCCESSOR_0_6.md",
+    "runner": "experiments/062/tools/run-exp062-w-audit-batched-v6.mjs",
+    "workflow": ".github/workflows/experiment-062-w-batched-audit-v6.yml",
+    "request": "experiments/062/W_G1_REPAIRED_AUDIT_RUN.request",
+    "W_items": 84,
+    "W_occurrences": 177
+  },
+  "deterministic_gate": {
+    "pass": true,
+    "latest_attempt_preflight": {
+      "attempt": 4,
+      "item_count": 84,
+      "occurrence_count": 177,
+      "errors": []
+    },
+    "statement": "The unchanged repaired 0.5 extraction again passed deterministic verification before the cold-call transport failure."
+  },
+  "appended_cold_audit_attempts": [
+    {
+      "workflow_run_id": 37543452440,
+      "attempt": 3,
+      "source_sha": "c8503328aeb4ac18e8fbea8e2534d066c3a4baab",
+      "conclusion": "FAIL_TRANSPORT_QUOTA",
+      "persisted_evidence": "experiments/062/evidence/run-37543452440-attempt-3/",
+      "completed_batches": 0,
+      "complete_84_row_audit": false,
+      "provider_error": {
+        "http_status": 429,
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 1 hour 2 minutes 43 seconds"
+      }
+    },
+    {
+      "workflow_run_id": 37543452440,
+      "attempt": 4,
+      "source_sha": "c8503328aeb4ac18e8fbea8e2534d066c3a4baab",
+      "conclusion": "FAIL_TRANSPORT_QUOTA",
+      "persisted_evidence": "experiments/062/evidence/run-37543452440-attempt-4/",
+      "completed_batches": 0,
+      "complete_84_row_audit": false,
+      "provider_error": {
+        "http_status": 429,
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 49 minutes 16 seconds"
+      }
+    }
+  ],
+  "procedural_findings": [
+    "Attempts 3 and 4 reused the same frozen corpus, repaired 0.5 extraction, method, runner, and semantic audit contract.",
+    "Deterministic G1 verification remains green at 84 bodies and 177 occurrences.",
+    "Both later failures are provider-transport quota failures before a complete independent all-84 audit; they are not semantic audit failures and establish no G1 completion.",
+    "No G2 neutral occurrence graph, G3 Core-definability pass, G4 structural quotient, G5 basis synthesis, G6 qualification, W closure, recursive IA, NEI, DTS, or DP is authorized."
+  ],
+  "next_lawful_action": "Re-run the unchanged Experiment 062 W repaired G1 audit v6 only after the independent cold-call provider quota is available. Do not change semantic inputs or the audit contract merely to bypass transport.",
+  "joint_gate": {
+    "W_G1_complete_for_repaired_0_5": false,
+    "L_G1_complete_for_reconciled_0_13": false,
+    "joint_G2_authorized": false
+  },
+  "authority": false
+}
