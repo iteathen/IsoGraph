@@ -94,7 +94,7 @@ def combined_gap(primal,dual):
 
 def main():
     p,source=download()
-    src=highspy.Highs();src.setOptionValue("output_flag",False);src.setOptionValue("presolve","on")
+    src=highspy.Highs();configure(src);src.setOptionValue("presolve","on")
     if src.readModel(str(p))==highspy.HighsStatus.kError:raise RuntimeError("read")
     if src.presolve()==highspy.HighsStatus.kError:raise RuntimeError("presolve")
     lp=src.getPresolvedLp()
