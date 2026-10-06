@@ -56,6 +56,21 @@ The frozen candidate basis currently contains:
 
 These are demand-basis labels only. Their semantics, sufficiency, independence, closure behavior, and invalidation conditions still require a separate freeze and qualification campaign before use as authority.
 
+## Current qualification disposition
+
+DNWF 0.1 has completed its current qualification campaign with terminal disposition **DOES_NOT_QUALIFY**.
+
+- Q0–Q2: PASS.
+- Experiment 061 freeze 0.2: DOES_NOT_QUALIFY; demonstrated C15/C17/C18 taxonomy ambiguity and remains immutable negative evidence.
+- Taxonomy-repaired freeze 0.3 / run `37435790421`: decoder A 19/19; decoder B 18/19, with a genuine C10 cold-reconstruction miss.
+- Q7: DOES_NOT_QUALIFY; `WF_TERM_ALGEBRA` is **not** semantic authority.
+- DNIA remains blocked on DNWF.
+- W and L remain blocked at their genuine primitive/domain boundaries; neither may enter recursive IA, NEI, DTS, or DP.
+
+Authority record: `dnwf/DNWF_0_1_QUALIFICATION_REVIEW_0_1.md` / `.json`.
+
+The frozen 0.3 holdout must not be rerun unchanged to accumulate a passing sample. A future attempt requires a separately justified new candidate/qualification campaign and a newly frozen independent holdout.
+
 ## Required next order
 
 1. verify frozen corpus conservation and demand-graph reproducibility;
