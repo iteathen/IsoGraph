@@ -1,0 +1,179 @@
+{
+  "experiment": "n5-3-factorization-benchmark-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "source": {
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "presolved": {
+    "rows": 836,
+    "cols": 2139,
+    "nonzeros": 8327,
+    "objective_offset": 155.0
+  },
+  "components": [
+    {
+      "rows": 831,
+      "cols": 2128
+    },
+    {
+      "rows": 1,
+      "cols": 3
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    },
+    {
+      "rows": 1,
+      "cols": 2
+    }
+  ],
+  "baseline": {
+    "status": "Time limit reached",
+    "optimal": false,
+    "objective": 8604.999999999996,
+    "dual_bound": 7800.306921534166,
+    "gap": 0.09351459366250216,
+    "nodes": 34,
+    "lp_iterations": 65123,
+    "wall_s": 15.009049402000002,
+    "rows": 836,
+    "cols": 2139,
+    "nonzeros": 8327
+  },
+  "small_components": [
+    {
+      "index": 1,
+      "component": {
+        "rows": 1,
+        "cols": 3
+      },
+      "solve": {
+        "status": "Optimal",
+        "optimal": true,
+        "objective": 455.0,
+        "dual_bound": 455.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 0,
+        "wall_s": 0.008454131999997117,
+        "rows": 1,
+        "cols": 3,
+        "nonzeros": 3
+      }
+    },
+    {
+      "index": 2,
+      "component": {
+        "rows": 1,
+        "cols": 2
+      },
+      "solve": {
+        "status": "Optimal",
+        "optimal": true,
+        "objective": 355.0,
+        "dual_bound": 355.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 0,
+        "wall_s": 0.010394515999998077,
+        "rows": 1,
+        "cols": 2,
+        "nonzeros": 2
+      }
+    },
+    {
+      "index": 3,
+      "component": {
+        "rows": 1,
+        "cols": 2
+      },
+      "solve": {
+        "status": "Optimal",
+        "optimal": true,
+        "objective": 355.0,
+        "dual_bound": 355.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 0,
+        "wall_s": 0.010576583000002415,
+        "rows": 1,
+        "cols": 2,
+        "nonzeros": 2
+      }
+    },
+    {
+      "index": 4,
+      "component": {
+        "rows": 1,
+        "cols": 2
+      },
+      "solve": {
+        "status": "Optimal",
+        "optimal": true,
+        "objective": 355.0,
+        "dual_bound": 355.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 0,
+        "wall_s": 0.010468916999997191,
+        "rows": 1,
+        "cols": 2,
+        "nonzeros": 2
+      }
+    },
+    {
+      "index": 5,
+      "component": {
+        "rows": 1,
+        "cols": 2
+      },
+      "solve": {
+        "status": "Optimal",
+        "optimal": true,
+        "objective": 355.0,
+        "dual_bound": 355.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 0,
+        "wall_s": 0.010433683000002247,
+        "rows": 1,
+        "cols": 2,
+        "nonzeros": 2
+      }
+    }
+  ],
+  "all_small_optimal": true,
+  "main_component": {
+    "status": "Time limit reached",
+    "optimal": false,
+    "objective": 7295.0,
+    "dual_bound": 6725.556930159379,
+    "gap": 0.07805936529686379,
+    "nodes": 15,
+    "lp_iterations": 63451,
+    "wall_s": 15.007273230999992,
+    "rows": 831,
+    "cols": 2128,
+    "nonzeros": 8316
+  },
+  "combined": {
+    "primal": 8395.0,
+    "dual": 7825.556930159379,
+    "gap": 0.0678312173723194,
+    "nodes_main_only": 15,
+    "lp_iterations_main_only": 63451
+  },
+  "exact_factorization": true,
+  "disposition": "PASS"
+}
