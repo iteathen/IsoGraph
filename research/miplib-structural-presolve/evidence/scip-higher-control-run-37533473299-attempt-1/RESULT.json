@@ -1,0 +1,143 @@
+{
+  "experiment": "miplib-scip-higher-order-control-0.1",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "scip_version": "10.0.2",
+  "instances": [
+    "n5-3",
+    "neos-911970"
+  ],
+  "results": [
+    {
+      "name": "n5-3",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+        "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+        "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+      },
+      "presolve_default": {
+        "vars": 2142,
+        "conss": 846,
+        "handlers": {
+          "linear": 846
+        },
+        "symmetry_named_constraints": [],
+        "presolve_time_s": 0.039237999999999995
+      },
+      "presolve_symmetry_off": {
+        "vars": 2142,
+        "conss": 846,
+        "handlers": {
+          "linear": 846
+        },
+        "symmetry_named_constraints": [],
+        "presolve_time_s": 0.032749
+      },
+      "extra_constraint_names_default_vs_off": [],
+      "extra_symmetry_named": [],
+      "solve_default": {
+        "status": "timelimit",
+        "primal": 12325.0,
+        "dual": 7495.394028914905,
+        "gap": 0.6443431729478095,
+        "nodes": 11,
+        "lp_iterations": 20009,
+        "solutions": 100,
+        "solving_time_s": 10.000136,
+        "wall_s": 10.000500881999997
+      },
+      "solve_symmetry_off": {
+        "status": "timelimit",
+        "primal": 12325.0,
+        "dual": 7495.394028914905,
+        "gap": 0.6443431729478095,
+        "nodes": 11,
+        "lp_iterations": 20081,
+        "solutions": 100,
+        "solving_time_s": 10.000517,
+        "wall_s": 10.000861247999993
+      }
+    },
+    {
+      "name": "neos-911970",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-911970.mps.gz",
+        "gzip_sha256": "cf9ad35ade0015d140f33ce83a593d76672c09fd8cc30c0539213be7e4a65ebb",
+        "mps_sha256": "31e8f835a9499de4897eb23838453cb83bee093abb8fab881b44f9937236eaa6"
+      },
+      "presolve_default": {
+        "vars": 855,
+        "conss": 114,
+        "handlers": {
+          "linear": 48,
+          "logicor": 24,
+          "orbitope_pp": 7,
+          "setppc": 35
+        },
+        "symmetry_named_constraints": [
+          "orbitope_component_0_pp",
+          "orbitope_component_1_pp",
+          "orbitope_component_2_pp",
+          "orbitope_component_3_pp",
+          "orbitope_component_4_pp",
+          "orbitope_component_5_pp",
+          "orbitope_component_6_pp"
+        ],
+        "presolve_time_s": 0.040198
+      },
+      "presolve_symmetry_off": {
+        "vars": 888,
+        "conss": 107,
+        "handlers": {
+          "linear": 48,
+          "logicor": 24,
+          "setppc": 35
+        },
+        "symmetry_named_constraints": [],
+        "presolve_time_s": 0.028107
+      },
+      "extra_constraint_names_default_vs_off": [
+        "orbitope_component_0_pp",
+        "orbitope_component_1_pp",
+        "orbitope_component_2_pp",
+        "orbitope_component_3_pp",
+        "orbitope_component_4_pp",
+        "orbitope_component_5_pp",
+        "orbitope_component_6_pp"
+      ],
+      "extra_symmetry_named": [
+        "orbitope_component_0_pp",
+        "orbitope_component_1_pp",
+        "orbitope_component_2_pp",
+        "orbitope_component_3_pp",
+        "orbitope_component_4_pp",
+        "orbitope_component_5_pp",
+        "orbitope_component_6_pp"
+      ],
+      "solve_default": {
+        "status": "timelimit",
+        "primal": 54.830000000000005,
+        "dual": 53.284370475169176,
+        "gap": 0.029007183739762896,
+        "nodes": 506,
+        "lp_iterations": 90416,
+        "solutions": 100,
+        "solving_time_s": 10.000521,
+        "wall_s": 10.00064260500001
+      },
+      "solve_symmetry_off": {
+        "status": "timelimit",
+        "primal": 58.16,
+        "dual": 54.51832630502548,
+        "gap": 0.06679723942000079,
+        "nodes": 1,
+        "lp_iterations": 90543,
+        "solutions": 100,
+        "solving_time_s": 10.000096,
+        "wall_s": 10.000213815000023
+      }
+    }
+  ],
+  "errors": [],
+  "disposition": "PASS"
+}
