@@ -1,0 +1,135 @@
+[
+  {
+    "case_id": "DNWF-C01",
+    "classification": "CONSISTENT_DNWF",
+    "load_bearing_reason": ["The signature defines a standard inductive carrier Mu via constructors Z and S."],
+    "must_follow": ["Mu is the least generated carrier satisfying the constructor equations."],
+    "must_not_follow": ["Mu is not defined by arithmetic or cardinality."]
+  },
+  {
+    "case_id": "DNWF-C02",
+    "classification": "CONSISTENT_DNWF",
+    "load_bearing_reason": ["The signature defines a binary tree structure with external labels."],
+    "must_follow": ["Structural induction over Leaf and Node constructors holds."],
+    "must_not_follow": ["The structure does not imply any specific tree-traversal order or arithmetic."]
+  },
+  {
+    "case_id": "DNWF-C03",
+    "classification": "CONSISTENT_DNWF",
+    "load_bearing_reason": ["The signature defines a well-founded chain of Wrap constructors terminating at Stop."],
+    "must_follow": ["Every member of Mu is a finite chain."],
+    "must_not_follow": ["The structure does not imply infinite chains."]
+  },
+  {
+    "case_id": "DNWF-C04",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["The existence of a junk value J violates the constructor coverage requirement."],
+    "must_follow": ["Mu must contain only members produced by constructors in Sigma."],
+    "must_not_follow": ["Mu cannot contain non-constructor-generated members."]
+  },
+  {
+    "case_id": "DNWF-C05",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["Identifying distinct constructor tags A and B violates constructor separation."],
+    "must_follow": ["Different constructor tags must produce distinct members."],
+    "must_not_follow": ["Constructor tags cannot be identified."]
+  },
+  {
+    "case_id": "DNWF-C06",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["Identifying Pair(x,y) with Pair(x,z) for distinct y,z violates constructor field injectivity."],
+    "must_follow": ["For one constructor tag, members are equal iff all corresponding fields are equal."],
+    "must_not_follow": ["Constructor fields cannot be collapsed."]
+  },
+  {
+    "case_id": "DNWF-C07",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["The equation x=S(x) violates the well-foundedness requirement."],
+    "must_follow": ["Recursive fields must not produce cyclic structures."],
+    "must_not_follow": ["Cyclic structures are forbidden."]
+  },
+  {
+    "case_id": "DNWF-C08",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["An infinite descending chain violates the well-foundedness requirement."],
+    "must_follow": ["Every member must be a finite constructor tree."],
+    "must_not_follow": ["Infinite descending chains are forbidden."]
+  },
+  {
+    "case_id": "DNWF-C09",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["The existence of two distinct fold maps violates the unique fold property."],
+    "must_follow": ["Exactly one fold map must exist for any target algebra."],
+    "must_not_follow": ["Non-unique folds are forbidden."]
+  },
+  {
+    "case_id": "DNWF-C10",
+    "classification": "OVERCLAIM",
+    "load_bearing_reason": ["The failure of P on m in Mu despite the inductive step suggests the induction argument is incomplete or the property is not closed."],
+    "must_follow": ["Structural induction requires the property to be closed under every constructor case."],
+    "must_not_follow": ["One cannot conclude P for all Mu if the induction argument is incomplete."]
+  },
+  {
+    "case_id": "DNWF-C11",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["Invoking a fold on an external field violates the interface of the fold map."],
+    "must_follow": ["External fields must be passed through unchanged."],
+    "must_not_follow": ["External fields cannot be processed by the fold."]
+  },
+  {
+    "case_id": "DNWF-C12",
+    "classification": "DISTINCT_SEMANTICS",
+    "load_bearing_reason": ["Field order is a load-bearing component of the constructor signature."],
+    "must_follow": ["Signatures with different field orders define different constructor trees."],
+    "must_not_follow": ["Signatures with different field orders cannot be identified as semantically the same."]
+  },
+  {
+    "case_id": "DNWF-C13",
+    "classification": "OVERCLAIM",
+    "load_bearing_reason": ["DNWF does not supply arithmetic or cardinality operations."],
+    "must_follow": ["DNWF only provides structural induction and recursion."],
+    "must_not_follow": ["One cannot infer arithmetic or cardinality from DNWF alone."]
+  },
+  {
+    "case_id": "DNWF-C14",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["The absence of a terminal constructor violates the well-foundedness requirement."],
+    "must_follow": ["Every member must be a finite constructor tree."],
+    "must_not_follow": ["Infinite streams are not members of Mu."]
+  },
+  {
+    "case_id": "DNWF-C15",
+    "classification": "DISTINCT_SEMANTICS",
+    "load_bearing_reason": ["Changing a field role from recursive to external changes the constructor signature and the generated carrier."],
+    "must_follow": ["Recursive and external fields have different semantic roles."],
+    "must_not_follow": ["Signatures with different field roles cannot be identified as semantically the same."]
+  },
+  {
+    "case_id": "DNWF-C16",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["A recursive field must draw from Mu, not an external carrier."],
+    "must_follow": ["Recursive fields must be members of Mu."],
+    "must_not_follow": ["Recursive fields cannot draw from external carriers."]
+  },
+  {
+    "case_id": "DNWF-C17",
+    "classification": "OVERCLAIM",
+    "load_bearing_reason": ["Omitting the Alt constructor case in an induction proof violates the structural induction requirement."],
+    "must_follow": ["Structural induction requires a case for every constructor in the signature."],
+    "must_not_follow": ["One cannot conclude P for all Mu if a constructor case is missing."]
+  },
+  {
+    "case_id": "DNWF-C18",
+    "classification": "OVERCLAIM",
+    "load_bearing_reason": ["The proof fails to cover all recursive cases for the Node constructor."],
+    "must_follow": ["Structural induction requires the property to be preserved for all recursive fields."],
+    "must_not_follow": ["One cannot conclude P for all Mu if the inductive step is incomplete."]
+  },
+  {
+    "case_id": "DNWF-C19",
+    "classification": "INCONSISTENT_DNWF",
+    "load_bearing_reason": ["The signature packet lacks a coherent first/next/last field correspondence."],
+    "must_follow": ["Each constructor must have an explicit, coherent field ordering."],
+    "must_not_follow": ["Ambiguous field orderings are forbidden."]
+  }
+]
