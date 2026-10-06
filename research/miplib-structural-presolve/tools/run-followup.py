@@ -51,8 +51,34 @@ def row_entries(h,r):
     return {int(i):float(v) for i,v in zip(inds,vals)}
 
 def close(a,b,tol=1e-9):
-    if math.isinf(a) or math.isinf(b): return a==b
+    inf=highspy.kHighsInf
+    if abs(a)>=0.5*inf or abs(b)>=0.5*inf:
+        return (a>=0.5*inf and b>=0.5*inf) or (a<=-0.5*inf and b<=-0.5*inf)
     return abs(a-b)<=tol*max(1.0,abs(a),abs(b))
+
+def activity_interval(h, entries, omitted=None):
+    omitted=set(omitted or [])
+    lo=0.0; up=0.0
+    inf=highspy.kHighsInf
+    for c,v in entries.items():
+        if c in omitted:
+            continue
+        st,cost,lb,ub,nnz=h.getCol(c)
+        if st!=highspy.HighsStatus.kOk:
+            raise RuntimeError(f"getCol {c}: {st}")
+        if v>=0:
+            clo, cup = lb, ub
+        else:
+            clo, cup = ub, lb
+        if clo<=-0.5*inf:
+            lo=-inf
+        elif lo>-0.5*inf:
+            lo += v*clo
+        if cup>=0.5*inf:
+            up=inf
+        elif up<0.5*inf:
+            up += v*cup
+    return lo,up
 
 def automorphism_certificate(lp):
     h=pass_lp(lp)
@@ -84,16 +110,14 @@ def automorphism_certificate(lp):
     for c,v in e.items():
         st,cost,lb,ub,nnz=h.getCol(c)
         if v<0 or lb< -1e-9: onehot_ok=False
-    # Private-row implication after B=0.
+    # After choosing the B=0 orbit representative, prove RB redundant directly
+    # by interval activity under the remaining variable bounds.
     sta,la,ua,na=h.getRow(ra); stb,lb,ub,nb=h.getRow(rb)
     ea=row_entries(h,ra); eb=row_entries(h,rb)
-    common_a={c:v for c,v in ea.items() if c!=ca}
-    common_b={c:v for c,v in eb.items() if c!=cb}
-    stc,cost,cla,cua,nnz=h.getCol(ca)
-    private_implied=(common_a.keys()==common_b.keys()
-      and all(close(common_a[c],common_b[c]) for c in common_a)
-      and close(la,lb) and math.isinf(ua) and math.isinf(ub)
-      and ca in ea and cb in eb and close(ea[ca],eb[cb]) and ea[ca]<=0 and cla>=-1e-9)
+    act_lo,act_up=activity_interval(h,eb,omitted={cb})
+    inf=highspy.kHighsInf
+    private_implied=(act_lo>=lb-1e-9*max(1.0,abs(lb))
+      and (ub>=0.5*inf or act_up<=ub+1e-9*max(1.0,abs(ub))))
     return {
       "valid":len(problems)==0,
       "problems":problems[:20],
@@ -101,6 +125,7 @@ def automorphism_certificate(lp):
       "onehot_at_most_one":onehot_ok,
       "onehot_row":ONEHOT,
       "private_row_implied_after_representative_fix":private_implied,
+      "private_row_activity_after_fix":{"min":act_lo,"max":act_up,"lower":lb,"upper":ub},
       "representative_fix_objective_preserving":len(problems)==0 and onehot_ok,
       "quotient_licensed":len(problems)==0 and onehot_ok and private_implied,
     }
