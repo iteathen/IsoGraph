@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import gzip, hashlib, json, urllib.request
+import gzip, hashlib, json, urllib.request, sys
+sys.setrecursionlimit(200000)
 from pathlib import Path
 import highspy
 
