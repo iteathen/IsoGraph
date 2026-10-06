@@ -1,0 +1,73 @@
+name: MIPLIB conditional factorization 0.1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-conditional-factor.yml
+      - research/miplib-structural-presolve/CONDITIONAL_FACTORIZATION_0_1.md
+      - research/miplib-structural-presolve/CONDITIONAL_FACTOR_RUN.request
+      - research/miplib-structural-presolve/tools/run-conditional-factorization-0.1.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-conditional-factorization-0.1
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --disable-pip-version-check highspy==1.15.1
+      - name: Execute conditional-factorization scan
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python3 -m py_compile research/miplib-structural-presolve/tools/run-conditional-factorization-0.1.py
+          rm -rf out/miplib-conditional-factor-0.1
+          python3 research/miplib-structural-presolve/tools/run-conditional-factorization-0.1.py
+      - name: Persist evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/conditional-factor-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-conditional-factor-0.1/$f" ] && cp "out/miplib-conditional-factor-0.1/$f" "$E/$f"
+          done
+          python3 - <<'PY' > "$E/CONTROL.json"
+          import json, os, highspy
+          print(json.dumps({"workflow_run_id":os.environ["GITHUB_RUN_ID"],"workflow_attempt":os.environ["GITHUB_RUN_ATTEMPT"],"source_sha":os.environ["GITHUB_SHA"],"highs_version":highspy.Highs().version(),"profile":"conditional-factorization-0.1"},indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: MIPLIB conditional factor run ${GITHUB_RUN_ID}"
+            git fetch origin experiment/miplib-structural-presolve-20261006
+            git rebase origin/experiment/miplib-structural-presolve-20261006
+            git push origin HEAD:experiment/miplib-structural-presolve-20261006
+          fi
+      - name: Enforce
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-conditional-factor-0.1/RESULT.json"))
+          print(json.dumps({"disposition":r["disposition"],"summary":r["summary"],"errors":r["errors"]},indent=2))
+          if r["disposition"]!="PASS":raise SystemExit(1)
+          PY
