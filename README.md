@@ -128,6 +128,7 @@ IsoGraph is exercised both through domain applications and through research on t
 - [DTS research](research/dts/README.md) — detailed transition anatomy, Transition Isomorph controls, decomposition, QU projection, and interpretation barriers.
 - [NEI research](research/nei/README.md) — the design/correction history behind conservative natural/domain identity reasoning and the rejection of unsupported coarsening.
 - [Primitive-logic research](research/primitive-logic/README.md) — logic kernels, data constructors, finite transition computation, arithmetic, and relational-function reductions supporting primitive closure.
+- [Primitive-demand qualification](research/primitive-demand-qualification/README.md) — domain-neutral demand extraction, Core-definability analysis, DNIA qualification, and generic-schema qualification work for reopening primitive-domain boundaries without campaign-specific semantic shortcuts.
 - [Research publications](research/publications/README.md) — publication-facing results and revision history.
 - [Repository-reconciliation research](research/repository-reconciliation/README.md) — provenance-preserving analysis of surviving historical branches and superseded semantics.
 
