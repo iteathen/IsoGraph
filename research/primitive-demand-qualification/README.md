@@ -1,83 +1,82 @@
 # Primitive Demand Qualification
 
 **Current research dossier:** this README  
-**Research status:** active supporting research; no new semantic authority is qualified here yet.
+**Research status:** active supporting research; no new semantic authority is qualified here.
 
-This project is the lawful unblock path for the re-grounded Woit/Lisi primitive-domain boundaries. It converts the frozen unresolved source bodies into **domain-neutral structural demand fingerprints** without importing source-domain object identity or conventional mathematics as semantic authority.
+This project is the lawful unblock path for the re-grounded Woit/Lisi primitive-domain boundaries. It uses the frozen unresolved W and L bodies only as independent demand evidence. It does not permit either source track to self-qualify new mathematics.
+
+## Current state
+
+The first v0.1 primitive-demand path is **not authority evidence**.
+
+`PRIMITIVE_DEMAND_REGROUNDING_AUDIT_0_1.json` found that the original regex demand extractor predeclared semantic categories/candidate-basis edges before the graph existed, and that the DNWF necessity argument relied on an unqualified supporting primitive-logic kernel rather than exact qualified Core authority.
+
+Therefore:
+
+- `DEMAND_EXTRACTION_RULES_0_1.json`, `PRIMITIVE_DEMAND_GRAPH_0_1.json`, and `CANDIDATE_PRIMITIVE_BASIS_0_1.json` are historical diagnostic/hypothesis evidence only;
+- DNWF 0.1 remains immutable terminal negative evidence with Q7 `DOES_NOT_QUALIFY`;
+- DNIA remains blocked and is not authority;
+- W remains at 67/151 primitive-closed and L at 40/191 primitive-closed;
+- recursive IA, NEI, DTS, DP, and W/L consumption of any candidate module remain blocked.
+
+The governing replacement procedure is `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md`.
+
+## Frozen input
+
+`SOURCE_DEMAND_CENSUS_0_1.json` remains the exact frozen cross-track corpus: 235 unresolved bodies, W 84 and L 151.
+
+The W and L bodies are independent demand sources. No W body may premise an L body and no L body may premise a W body.
+
+## Graph-first sequence
+
+```text
+G0 frozen unresolved corpus + exact qualified authority
+-> G1 complete source-conserved semantic occurrence census
+-> G2 neutral occurrence graph
+-> G3 exact qualified-Core definability marking
+-> G4 alpha-renamed structural quotient
+-> G5 candidate basis synthesis
+-> G6 independent module qualification
+-> G7 source-track reopening only for explicitly dependent bodies
+```
+
+Candidate primitive/schema classes may not be named, selected, or attached before G4 exists.
+
+## G1 working pass
+
+The first conservative G1 tooling is frozen:
+
+- `SEMANTIC_OCCURRENCE_EXTRACTION_PROFILE_0_1.json` — generic surface-relation locator profile only;
+- `SEMANTIC_OCCURRENCE_CENSUS_WORKING_0_1.json` — exact 235-body / 327-clause working census;
+- `SEMANTIC_OCCURRENCE_CENSUS_WORKING_0_1_AUDIT.json` — conservation and anti-circularity audit;
+- `tools/generate_semantic_occurrence_census_0_1.mjs` — deterministic generator;
+- `tools/verify_semantic_occurrence_census_0_1.mjs` — deterministic verifier.
+
+The locator records 535 generic surface relation-head occurrences while preserving every exact clause span. **This is not G1 semantic completion.** All 327 clauses remain source-local semantic-review obligations because a verb match cannot establish complete load-bearing argument/behavior semantics, and named mathematical referents may still hide unresolved behavior.
+
+G2/G3/G4 remain blocked until a complete audited G1 semantic occurrence census exists.
 
 ## Authority boundary
 
-Current qualified authority remains the repository's qualified Core/QU/NEI/DTS/Discovery/EI stack. The artifacts in this directory are research inputs for a future qualification step.
+Current semantic authority remains the repository's qualified Core/QU/NEI/DTS/Discovery/EI stack.
 
-In particular:
+A demand fingerprint, surface locator, quotient class, candidate basis label, or failed/partial qualification artifact is not a semantic primitive. Cross-track recurrence is prioritization evidence only, not a Woit/Lisi correspondence theorem.
 
-- a demand fingerprint is **not** a primitive;
-- a candidate basis ID is **not** qualified semantic authority;
-- cross-track overlap is prioritization evidence only, not a Woit/Lisi correspondence theorem;
-- no candidate produced here may be used to close W or L until it is independently frozen and qualified through the IsoGraph qualification process.
+Historical W/L closure packets and campaign-specific schemas remain evidence only unless independently re-derived by the prescribed graph-first process.
 
-## Frozen inputs
+## Required next work
 
-- `SOURCE_DEMAND_CENSUS_0_1.json`
-  - 235 unresolved source bodies total;
-  - W: 84;
-  - L: 151;
-  - exact bodies are pinned from the re-grounded W/L SSC/native-manifest states.
+1. Review every G1 clause source-locally.
+2. Enumerate every load-bearing non-Core operation/relation occurrence with exact source span or exact reversible body reference.
+3. Preserve explicit argument/result roles, dependency incidence, logical polarity, side conditions, and modality where stated.
+4. Keep ambiguous semantic boundaries visibly `OCCURRENCE_EXTRACTION_INCOMPLETE`; do not resolve them by conventional category names.
+5. Audit G1 completeness over all 235 bodies.
+6. Only then compile G2 and run the exact qualified-Core G3 definability pass.
 
-- `DEMAND_EXTRACTION_RULES_0_1.json`
-  - 31 frozen surface-trigger demand rules;
-  - trigger words locate evidence only;
-  - output demand IDs and candidate basis IDs are domain-neutral;
-  - Core-expressible source modality creates no new primitive demand.
+## Provenance / correction pointers
 
-- `PRIMITIVE_DEMAND_GRAPH_0_1.json`
-  - mechanically extracted assertion→demand graph;
-  - 31 supported demand types;
-  - 30 structural demand types;
-  - 27 structural demand types shared by W and L;
-  - 2 W-only structural types;
-  - 1 L-only structural type;
-  - `L-SSC-013` is the sole Core-only unresolved assertion.
+- `PRIMITIVE_DEMAND_REGROUNDING_AUDIT_0_1.json` — authority-routing and circularity correction.
+- `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md` — current graph-first procedure.
+- `dnwf/DNWF_0_1_QUALIFICATION_REVIEW_0_1.md` / `.json` — immutable DNWF terminal negative evidence.
 
-- `CANDIDATE_PRIMITIVE_BASIS_0_1.json`
-  - candidate-only, unqualified;
-  - five foundational semantic extensions;
-  - seven derived generic schemas;
-  - minimal only relative to the frozen v0.1 demand/capability dependency model.
-
-## Candidate basis
-
-The frozen candidate basis currently contains:
-
-`B-TYPED-MAP`, `B-FINITE-PRODUCT-INDEX`, `B-OPERATION-LAW`,
-`B-SUBOBJECT-QUOTIENT`, `B-INDEXED-FAMILY`, `B-ADDITIVE-SCALAR`,
-`B-MULTILINEAR-FORM`, `B-INVOLUTION-GRADING`, `B-TOPOLOGY-LIMIT`,
-`B-DIFFERENTIAL`, `B-AGGREGATE`, and `B-PARITY-GRADED`.
-
-These are demand-basis labels only. Their semantics, sufficiency, independence, closure behavior, and invalidation conditions still require a separate freeze and qualification campaign before use as authority.
-
-## Current qualification disposition
-
-DNWF 0.1 has completed its current qualification campaign with terminal disposition **DOES_NOT_QUALIFY**.
-
-- Q0–Q2: PASS.
-- Experiment 061 freeze 0.2: DOES_NOT_QUALIFY; demonstrated C15/C17/C18 taxonomy ambiguity and remains immutable negative evidence.
-- Taxonomy-repaired freeze 0.3 / run `37435790421`: decoder A 19/19; decoder B 18/19, with a genuine C10 cold-reconstruction miss.
-- Q7: DOES_NOT_QUALIFY; `WF_TERM_ALGEBRA` is **not** semantic authority.
-- DNIA remains blocked on DNWF.
-- W and L remain blocked at their genuine primitive/domain boundaries; neither may enter recursive IA, NEI, DTS, or DP.
-
-Authority record: `dnwf/DNWF_0_1_QUALIFICATION_REVIEW_0_1.md` / `.json`.
-
-The frozen 0.3 holdout must not be rerun unchanged to accumulate a passing sample. A future attempt requires a separately justified new candidate/qualification campaign and a newly frozen independent holdout.
-
-## Required next order
-
-1. verify frozen corpus conservation and demand-graph reproducibility;
-2. verify candidate-basis coverage/minimality against the frozen demand model;
-3. freeze candidate primitive semantics without source-domain names;
-4. qualify those semantics independently with positive controls, falsifiers, reconstruction, and scope/invalidation checks;
-5. only after qualification, reopen affected W/L primitive-closure items;
-6. resume source-local closure → Core-0.21 gates → recursive IA fixed point → NEI → DTS → DP.
-
-Historical W/L closure packets and campaign-specific schemas remain evidence only.
+This dossier is research access/provenance, not semantic authority.
