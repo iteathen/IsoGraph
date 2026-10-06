@@ -92,10 +92,27 @@ function sequencingExample() {
     makeCleavageIdentificationExperiment('E0', 'newly-removed-count'),
     makeCleavageIdentificationExperiment('E1', 'newly-removed-count'),
   ];
-  // Give the UI human-readable labels without changing the reusable adapter.
   experiments[0].label = 'Apply diagnostic treatment E0';
   experiments[1].label = 'Apply diagnostic treatment E1';
   return { candidates, experiments, models };
+}
+
+function validationExample() {
+  const expected = sequencingCandidate('Expected profile', ['x'], ['z']);
+  const deviationA = sequencingCandidate('Deviation A', ['x', 'y'], ['z']);
+  const deviationB = sequencingCandidate('Deviation B', ['x'], ['y', 'z']);
+  const candidates = [
+    { id: 'EXPECTED', label: 'Expected profile', state: expected.initialState, meta: { model: expected } },
+    { id: 'DEVIATION', label: 'Represented deviation', state: deviationA.initialState, meta: { model: deviationA } },
+    { id: 'DEVIATION', label: 'Represented deviation', state: deviationB.initialState, meta: { model: deviationB } },
+  ];
+  const experiments = [
+    makeCleavageIdentificationExperiment('E0', 'newly-removed-count'),
+    makeCleavageIdentificationExperiment('E1', 'newly-removed-count'),
+  ];
+  experiments[0].label = 'QC probe E0';
+  experiments[1].label = 'QC probe E1';
+  return { candidates, experiments, models: [expected, deviationA, deviationB] };
 }
 
 function remodelingSpec() {
@@ -159,6 +176,13 @@ export const exampleCatalog = [
     title: 'Adaptive glycan sequencing',
     subtitle: 'Choose experiments by information gain and worst-case cost',
     description: 'Builds an adaptive decision policy: observe a digestion result, reduce the candidate set, update candidate states, and choose the next experiment.',
+  },
+  {
+    id: 'validation-qc',
+    mode: 'validation',
+    title: 'Structure validation / QC',
+    subtitle: 'Confirm an expected represented profile or flag a deviation',
+    description: 'Uses the adaptive experiment engine as a classifier: the exact deviation subtype does not need to be identified once the expected-vs-deviation question is resolved.',
   },
   {
     id: 'remodeling-path',
@@ -235,6 +259,33 @@ export function runExample(id) {
       notes: [
         'The observation in this demonstration is the number of residues newly removed by each diagnostic treatment.',
         'The engine supports stateful adaptive sequencing: each candidate carries its updated post-treatment state into the next decision.',
+      ],
+    };
+  }
+  if (id === 'validation-qc') {
+    const { candidates, experiments, models } = validationExample();
+    const result = optimalIdentificationPolicy({ candidates, experiments, maxDepth: 4 });
+    return {
+      id,
+      mode: 'sequencing',
+      title: exampleCatalog.find(x => x.id === id).title,
+      summary: {
+        status: result.status,
+        classifications: result.candidateCount,
+        representedModels: models.length,
+        experiments: result.experimentCount,
+        worstCaseCost: result.policy.worstCost ?? null,
+      },
+      result,
+      candidateModels: models.map(m => ({
+        id: m.id,
+        nodes: m.nodes.map(n => ({ id: n.id, parent: n.parent, target: n.target, label: n.label })),
+        enzymes: m.enzymes.map(e => ({ id: e.id, susceptible: [...e.susceptible].sort() })),
+      })),
+      notes: [
+        'This demonstration answers a classification question: expected represented profile versus represented deviation.',
+        'Multiple deviation models intentionally share one classification ID, so the policy may stop as soon as the validation/QC question is settled.',
+        'Probe labels and response models are schematic and are not a validated clinical or manufacturing assay.',
       ],
     };
   }
