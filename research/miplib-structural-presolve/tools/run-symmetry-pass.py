@@ -183,8 +183,10 @@ def solve_lp(lp, breaker=None):
         if status == highspy.HighsStatus.kError:
             raise RuntimeError("addRow symmetry breaker failed")
     t0 = time.perf_counter()
-    h.run()
+    run_status = h.run()
     wall = time.perf_counter() - t0
+    if run_status == highspy.HighsStatus.kError:
+        raise RuntimeError("HiGHS run failed")
     info = h.getInfo()
     status = h.getModelStatus()
     return {
@@ -205,7 +207,7 @@ def solve_lp(lp, breaker=None):
 def main():
     source = download()
     source_h = highspy.Highs()
-    source_h.setOptionValue("output_flag", False)
+    configure(source_h, "on")
     if source_h.readModel(source["mps_path"]) == highspy.HighsStatus.kError:
         raise RuntimeError("readModel failed")
     if source_h.presolve() == highspy.HighsStatus.kError:
@@ -250,6 +252,10 @@ def main():
     failures = []
     if chosen is None:
         failures.append("NO_EXACT_TRANSPOSITION_FOUND")
+    if baseline["status"] == "Not Set":
+        failures.append("BASELINE_SOLVE_NOT_RUN")
+    if broken is not None and broken["status"] == "Not Set":
+        failures.append("SYMMETRY_SOLVE_NOT_RUN")
     if broken is not None and baseline["optimal"] and broken["optimal"]:
         if not math.isclose(baseline["objective"], broken["objective"], rel_tol=1e-9, abs_tol=1e-6):
             failures.append("OPTIMAL_OBJECTIVE_MISMATCH")
