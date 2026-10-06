@@ -1,0 +1,96 @@
+{
+  "artifact": "L_G1_FINAL_AUDIT_V4_ADJUDICATION_0_1",
+  "schema": "isograph.exp062-l-g1-final-audit-v4-adjudication.v0.1",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_ADJUDICATION_COMPLETE_FOR_RUN_37530158235_ATTEMPT_1",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "counts": {
+    "correction_rows": 2,
+    "audit_omission_leads": 3,
+    "accepted_occurrence_additions": 3,
+    "rejected_leads": 0
+  },
+  "decisions": [
+    {
+      "census_id": "L-SSC-067",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "the latter two do not necessarily follow from symmetry breaking",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "Explicit non-necessity side condition on the matched-frame and vanishing-torsion restrictions.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "the latter two do not necessarily follow from symmetry breaking",
+              "relation_span": "do not necessarily follow from",
+              "argument_spans": [
+                "matched frames, and vanishing-torsion restriction",
+                "symmetry breaking"
+              ],
+              "logical_force": "NEGATED",
+              "definition_status": "PARTIAL_IN_BODY",
+              "depends_on": [
+                "L-SSC-067-O01"
+              ],
+              "load_bearing_note": "Source-stated non-necessity of the latter two reconstruction restrictions as consequences of symmetry breaking."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-188",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "full-group generalized Yang-Mills action",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "The full-group modifier scopes the source action in the reduction relation.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "full-group generalized Yang-Mills action",
+              "relation_span": "full-group",
+              "argument_spans": [
+                "generalized Yang-Mills action"
+              ],
+              "logical_force": "OTHER",
+              "definition_status": "PARTIAL_IN_BODY",
+              "depends_on": [
+                "L-SSC-188-O02"
+              ],
+              "load_bearing_note": "Source-stated full-group scope condition on the generalized Yang-Mills action."
+            }
+          ]
+        },
+        {
+          "audit_source_span": "three-generation Standard Model action",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "The three-generation modifier scopes the reduction target.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C02",
+              "source_span": "three-generation Standard Model action",
+              "relation_span": "three-generation",
+              "argument_spans": [
+                "Standard Model action"
+              ],
+              "logical_force": "OTHER",
+              "definition_status": "PARTIAL_IN_BODY",
+              "depends_on": [
+                "L-SSC-188-O02"
+              ],
+              "load_bearing_note": "Source-stated three-generation scope condition on the Standard Model action."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": [
+        {
+          "decision": "RESOLVED_BY_ADDED_SCOPE_OCCURRENCES",
+          "reason": "C01 and C02 expose both load-bearing modifiers without changing O02."
+        }
+      ]
+    }
+  ],
+  "downstream_boundary": "Append exactly three occurrences to L_EXTRACTION_RECONCILED_0_5.json and run a new all-151-row cold completeness audit. G2 remains blocked until zero corrections."
+}
