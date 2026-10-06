@@ -107,7 +107,9 @@ for(let bi=0;bi<batches.length;bi++){
   'Ordinary logical composition, bare source-status/motivational modality, or a statement already fully represented by qualified Core logic is NOT a new G1 non-Core occurrence.',
   'If genuine, ACCEPT and propose the smallest exact source-local occurrence record(s) needed. If the audit wording is too broad, ACCEPT_WITH_SOURCE_LOCAL_NARROWING and use a narrower exact source span.',
   'If Core-only/source-modality, or duplicate/spurious relative to predecessor occurrences, REJECT with a source-local reason.',
-  'Every proposed source_span/relation_span/argument_span must be an exact contiguous substring of that frozen body. relation_span must lie inside source_span.',
+  'Every proposed source_span/relation_span/argument_span must be an exact contiguous substring copied character-for-character from that frozen body. relation_span must lie inside source_span. NEVER use ellipses (...), slash-combined paraphrases, bracketed substitutions, or synthetic connector wording.',
+  'audit_source_span MUST be copied character-for-character from the corresponding audit omission source_span. Do not broaden, narrow, normalize punctuation, or paraphrase audit_source_span.',
+  'A source statement whose only load is epistemic/completeness/proposal status already expressible by qualified Core logical structure is not a new non-Core G1 occurrence; reject such a lead rather than inventing a domain operation.',
   'Do not import textbook definitions. definition_status describes only whether this frozen body itself defines the occurrence behavior.',
   'candidate_id is temporary, unique within the census item, and must end in C01, C02, etc. depends_on may reference predecessor occurrence IDs or temporary candidate_ids from the same item.',
   'Return JSON only: {"track":"L","items":[{"census_id":"...","lead_resolutions":[{"audit_source_span":"exact audit span","decision":"ACCEPT_SOURCE_LOCAL_CORRECTION|ACCEPT_WITH_SOURCE_LOCAL_NARROWING|REJECT_CORE_ONLY_OR_SOURCE_MODALITY|REJECT_DUPLICATE_OR_SPURIOUS","reason":"...","proposed_occurrences":[{"candidate_id":"C01","source_span":"...","relation_span":"...","argument_spans":["..."],"logical_force":"ASSERTED|NEGATED|CONDITIONAL|EQUALITY_OR_IDENTIFICATION|EXISTENCE|COMPARISON|OTHER","definition_status":"EXPLICIT_IN_BODY|PARTIAL_IN_BODY|NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED","depends_on":[],"load_bearing_note":"..."}]}]}]}.',
@@ -115,12 +117,29 @@ for(let bi=0;bi<batches.length;bi++){
   '\n===== GRAPH-FIRST METHOD =====\n'+method,
   '\n===== L ADJUDICATION BATCH =====\n'+JSON.stringify(payload,null,2)
  ].join('\n');
- const {raw,data,transport_attempt}=await call(packet),parsed=JSON.parse(stripFence(raw)),errors=validateBatch(parsed,batch),tag=String(bi+1).padStart(2,'0');
- fs.writeFileSync(out+'/BATCH_'+tag+'_RAW.txt',raw+'\n');
- fs.writeFileSync(out+'/BATCH_'+tag+'.json',JSON.stringify(parsed,null,2)+'\n');
- fs.writeFileSync(out+'/BATCH_'+tag+'_VALIDATION.json',JSON.stringify({pass:errors.length===0,errors,batch:bi+1,census_ids:ids,packet_sha256:h(packet),report_sha256:h(raw),model:MODEL,source_sha:SHA,finish_reason:data.candidates?.[0]?.finishReason??null,transport_attempt},null,2)+'\n');
- if(errors.length)throw new Error('batch '+(bi+1)+' validation failed: '+errors.join('; '));
- merged.push(...parsed.items);meta.push({batch:bi+1,census_ids:ids,packet_sha256:h(packet),report_sha256:h(raw),transport_attempt});
+ const tag=String(bi+1).padStart(2,'0');
+ let raw='',data=null,transport_attempt=0,parsed=null,errors=[],semantic_attempt=0,finalPacket=packet;
+ for(semantic_attempt=1;semantic_attempt<=4;semantic_attempt++){
+  finalPacket=semantic_attempt===1?packet:[
+   packet,
+   '\n===== VALIDATION-REPAIR TURN =====',
+   'Your previous JSON for this exact same frozen batch failed deterministic literal/shape validation.',
+   'Fix ONLY the listed validation defects. Re-audit nothing, add no new semantic leads, and preserve every valid decision/content from the previous response.',
+   'Validation errors: '+JSON.stringify(errors),
+   'Previous response: '+JSON.stringify(parsed)
+  ].join('\n');
+  const callResult=await call(finalPacket);
+  raw=callResult.raw;data=callResult.data;transport_attempt=callResult.transport_attempt;
+  try{parsed=JSON.parse(stripFence(raw));errors=validateBatch(parsed,batch);}catch(err){errors=['JSON/parse: '+String(err?.message||err)];}
+  const suffix=semantic_attempt===1?'':'_REPAIR_'+semantic_attempt;
+  fs.writeFileSync(out+'/BATCH_'+tag+suffix+'_RAW.txt',raw+'\n');
+  fs.writeFileSync(out+'/BATCH_'+tag+suffix+'.json',JSON.stringify(parsed,null,2)+'\n');
+  fs.writeFileSync(out+'/BATCH_'+tag+suffix+'_VALIDATION.json',JSON.stringify({pass:errors.length===0,errors,batch:bi+1,census_ids:ids,packet_sha256:h(finalPacket),report_sha256:h(raw),model:MODEL,source_sha:SHA,finish_reason:data?.candidates?.[0]?.finishReason??null,transport_attempt,semantic_attempt},null,2)+'\n');
+  if(!errors.length)break;
+ }
+ if(errors.length)throw new Error('batch '+(bi+1)+' validation failed after '+semantic_attempt+' semantic attempts: '+errors.join('; '));
+ fs.writeFileSync(out+'/BATCH_'+tag+'_FINAL.json',JSON.stringify(parsed,null,2)+'\n');
+ merged.push(...parsed.items);meta.push({batch:bi+1,census_ids:ids,packet_sha256:h(finalPacket),report_sha256:h(raw),transport_attempt,semantic_attempt});
 }
 if(JSON.stringify(merged.map(x=>x.census_id))!==JSON.stringify(expectedIds))throw new Error('merged correction ids/order mismatch');
 const result={artifact:'L_SOURCE_COMPLETENESS_AUDIT_ADJUDICATION_CANDIDATES_0_1',track:'L',status:'BATCHED_SOURCE_LOCAL_ADJUDICATION_CANDIDATES_COMPLETE',authority_effect:'NONE_RESEARCH_EVIDENCE_ONLY',inputs:{corpus:corpusPath,method:methodPath,predecessor_extraction:extractionPath,audit:auditPath,audit_validation:auditValidationPath},items:merged,batches:meta};
