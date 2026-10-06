@@ -1,0 +1,102 @@
+name: MIPLIB structural presolve prototype
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-structural-presolve.yml
+      - research/miplib-structural-presolve/RUN.request
+      - research/miplib-structural-presolve/tools/**
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-structural-presolve-prototype
+  cancel-in-progress: false
+
+jobs:
+  prototype:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out exact prototype revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Install frozen solver
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check highspy==1.15.1
+
+      - name: Materialize and syntax-check harness
+        run: |
+          set -euo pipefail
+          gzip -dc research/miplib-structural-presolve/tools/run-prototype.py.gz > /tmp/run-prototype.py
+          python3 -m py_compile /tmp/run-prototype.py
+
+      - name: Execute controlled prototype
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          rm -rf out/miplib-structural-presolve
+          python3 /tmp/run-prototype.py
+
+      - name: Persist evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-structural-presolve/$f" ] && cp "out/miplib-structural-presolve/$f" "$E/$f"
+          done
+          python3 - <<'PY' > "$E/CONTROL.json"
+          import json, os
+          import highspy
+          print(json.dumps({
+              "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+              "workflow_attempt": os.environ["GITHUB_RUN_ATTEMPT"],
+              "source_sha": os.environ["GITHUB_SHA"],
+              "highs_version": highspy.Highs().version(),
+              "implementation_language": "Python",
+              "profile": "frozen-prototype-0.1"
+          }, indent=2))
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: MIPLIB structural presolve run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git fetch origin experiment/miplib-structural-presolve-20261006
+            git rebase origin/experiment/miplib-structural-presolve-20261006
+            git push origin HEAD:experiment/miplib-structural-presolve-20261006
+          fi
+
+      - name: Enforce prototype result
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          test -f out/miplib-structural-presolve/RESULT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-structural-presolve/RESULT.json"))
+          print(json.dumps({
+              "disposition": r["disposition"],
+              "summary": r["summary"],
+              "errors": r["errors"],
+              "objective_failures": r["objective_failures"]
+          }, indent=2))
+          if r["disposition"] != "PASS":
+              raise SystemExit(1)
+          PY

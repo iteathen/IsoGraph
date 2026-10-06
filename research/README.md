@@ -37,6 +37,7 @@ research/
 - [Discovery-method research](discovery/README.md) — research notes supporting Discovery Protocol development; current DP authority remains under `extensions/discovery/` and qualification routing.
 - [DTS research](dts/README.md) — development history and implementation research behind the Detailed Transition System.
 - [Glycan cleavage](glycan-cleavage/README.md) — exact phase-algebra, path-coverage, witness-width, and algorithmic research in the frozen biochemical model.
+- [MIPLIB structural presolve](miplib-structural-presolve/README.md) — bounded prototype testing whether exact structural reductions remain after conventional MIP presolve, with null results treated as valid falsification evidence.
 - [Navier–Stokes proof rendering](navier-stokes-proof/README.md) — source-faithful structural rendering and reduction research over a pinned proof corpus.
 - [NEI research](nei/README.md) — historical/design research surrounding Natural Entropic Identity; qualified NEI authority remains separately versioned.
 - [P versus NP](p-vs-np/README.md) — primitive computation and continuation-support research; theorem status remains open.
