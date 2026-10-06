@@ -1,0 +1,107 @@
+{
+  "experiment": "miplib-structural-presolve-followup-0.2",
+  "instance": "glass4",
+  "source_url": "https://miplib.zib.de/WebData/instances/glass4.mps.gz",
+  "download_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+  "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d",
+  "highs_version": "1.15.1",
+  "original_dimensions": {
+    "rows": 396,
+    "cols": 322,
+    "nonzeros": 1815
+  },
+  "presolved_dimensions": {
+    "rows": 392,
+    "cols": 317,
+    "nonzeros": 1799
+  },
+  "certificate": {
+    "valid": true,
+    "problems": [],
+    "swap": {
+      "cols": [
+        "z1&3.4",
+        "z1&3.8"
+      ],
+      "rows": [
+        "id60",
+        "id70"
+      ],
+      "col_indices": [
+        31,
+        35
+      ],
+      "row_indices": [
+        26,
+        32
+      ]
+    },
+    "onehot_at_most_one": true,
+    "onehot_row": "id73",
+    "private_row_implied_after_representative_fix": true,
+    "private_row_activity_after_fix": {
+      "min": -390.625,
+      "max": 546.875,
+      "lower": -Infinity,
+      "upper": 546.875
+    },
+    "representative_fix_objective_preserving": true,
+    "quotient_licensed": true
+  },
+  "quotient_dimensions": {
+    "rows": 391,
+    "cols": 316,
+    "nonzeros": 1795
+  },
+  "baseline_residual": {
+    "status": "Time limit reached",
+    "objective": 1900014950.0,
+    "dual_bound": 800005016.9600052,
+    "gap": 0.5789480409298857,
+    "nodes": 14821,
+    "lp_iterations": 388699,
+    "highs_runtime_s": 30.00381064414978,
+    "wall_runtime_s": 30.00387071899999,
+    "dimensions": {
+      "rows": 392,
+      "cols": 317,
+      "nonzeros": 1799
+    }
+  },
+  "quotient_residual_presolve_off": {
+    "status": "Time limit reached",
+    "objective": 1800016450.0,
+    "dual_bound": 831607798.3997207,
+    "gap": 0.5379998897233852,
+    "nodes": 13749,
+    "lp_iterations": 370866,
+    "highs_runtime_s": 30.004029750823975,
+    "wall_runtime_s": 30.00406312599999,
+    "dimensions": {
+      "rows": 391,
+      "cols": 316,
+      "nonzeros": 1795
+    }
+  },
+  "quotient_residual_presolve_on": {
+    "status": "Time limit reached",
+    "objective": 1900017800.0,
+    "dual_bound": 800004919.8481834,
+    "gap": 0.5789487236129138,
+    "nodes": 4571,
+    "lp_iterations": 265036,
+    "highs_runtime_s": 30.00708270072937,
+    "wall_runtime_s": 30.00711966,
+    "dimensions": {
+      "rows": 391,
+      "cols": 316,
+      "nonzeros": 1795
+    }
+  },
+  "interpretation": {
+    "exact_post_presolve_reduction": true,
+    "claim": "The quotient preserves the optimal objective by exact swap automorphism plus an at-most-one representative argument; it does not preserve every raw feasible assignment.",
+    "runtime_status": "DIRECTIONAL_PROTOTYPE_ONLY"
+  },
+  "disposition": "PASS"
+}
