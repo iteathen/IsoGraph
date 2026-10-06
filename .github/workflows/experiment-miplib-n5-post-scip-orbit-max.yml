@@ -1,0 +1,71 @@
+name: MIPLIB n5 post-SCIP orbit-max benchmark 0.1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-n5-post-scip-orbit-max.yml
+      - research/miplib-structural-presolve/N5_3_POST_SCIP_ORBIT_MAX_BENCHMARK_0_1.md
+      - research/miplib-structural-presolve/tools/run-n5-post-scip-orbit-max-0.1.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-n5-post-scip-orbit-max-0.1
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Install frozen tools
+        run: python3 -m pip install --disable-pip-version-check highspy==1.15.1 igraph==0.11.9 pyscipopt==6.2.1
+      - name: Execute orbit-max benchmark
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          rm -rf out/miplib-n5-post-scip-orbit-max-0.1
+          python3 -m py_compile research/miplib-structural-presolve/tools/run-n5-post-scip-orbit-max-0.1.py
+          python3 research/miplib-structural-presolve/tools/run-n5-post-scip-orbit-max-0.1.py
+      - name: Persist evidence
+        if: always()
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/n5-post-scip-orbit-max-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-n5-post-scip-orbit-max-0.1/$f" ] && cp "out/miplib-n5-post-scip-orbit-max-0.1/$f" "$E/$f"
+          done
+          printf '%s\n' "{\"workflow_run_id\":\"$GITHUB_RUN_ID\",\"workflow_attempt\":\"$GITHUB_RUN_ATTEMPT\",\"source_sha\":\"$GITHUB_SHA\",\"profile\":\"n5-post-scip-orbit-max-0.1\"}" > "$E/CONTROL.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: n5 post-SCIP orbit-max ${GITHUB_RUN_ID}"
+            git fetch origin experiment/miplib-structural-presolve-20261006
+            git rebase origin/experiment/miplib-structural-presolve-20261006
+            git push origin HEAD:experiment/miplib-structural-presolve-20261006
+          fi
+      - name: Enforce
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          test -f out/miplib-n5-post-scip-orbit-max-0.1/RESULT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-n5-post-scip-orbit-max-0.1/RESULT.json"))
+          print(json.dumps({"disposition":r["disposition"],"bliss":r["bliss"],"orbits":r["variable_orbits"],"summary":r["summary"]},indent=2))
+          if r["disposition"]!="PASS": raise SystemExit(1)
+          PY
