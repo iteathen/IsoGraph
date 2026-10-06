@@ -36,8 +36,8 @@ jobs:
       - name: Deterministic preflight
         run: |
           set -euo pipefail
-          node --check experiments/062/tools/run-exp062-w-audit-batched.mjs
-          test -f experiments/062/W_BATCHED_AUDIT_SUCCESSOR_0_1.md
+          node --check experiments/062/tools/run-exp062-w-audit-batched-v2.mjs
+          test -f experiments/062/W_BATCHED_AUDIT_SUCCESSOR_0_2.md
           test -f experiments/062/W_EXTRACTION_RECONCILED_0_2.json
           test -f research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json
           test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
@@ -45,7 +45,7 @@ jobs:
       - name: Audit all 84 W rows in validated batches
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node experiments/062/tools/run-exp062-w-audit-batched.mjs
+        run: node experiments/062/tools/run-exp062-w-audit-batched-v2.mjs
 
       - name: Persist research evidence
         if: always()
