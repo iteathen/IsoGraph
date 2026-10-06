@@ -45,8 +45,7 @@ jobs:
           for f in RESULT.json SUMMARY.md; do
             [ -f "out/miplib-seymour1-post-scip-swap-0.1/$f" ] && cp "out/miplib-seymour1-post-scip-swap-0.1/$f" "$E/$f"
           done
-          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","profile":"seymour1-post-scip-swap-0.1"}
-' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL.json"
+          printf '%s\n' "{\"workflow_run_id\":\"$GITHUB_RUN_ID\",\"workflow_attempt\":\"$GITHUB_RUN_ATTEMPT\",\"source_sha\":\"$GITHUB_SHA\",\"profile\":\"seymour1-post-scip-swap-0.1\"}" > "$E/CONTROL.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$E"
