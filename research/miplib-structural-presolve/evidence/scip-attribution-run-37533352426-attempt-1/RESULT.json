@@ -1,0 +1,47 @@
+{
+  "experiment": "miplib-scip-symmetry-attribution-0.1",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "source": {
+    "gzip_sha256": "0d6e6ceaf921e5d5489b9926fdfed2ce0aa25fd9acfa9deb6794669b56b59591",
+    "mps_sha256": "5878be05b45cb711cde341110e8a996252b54e456a1e1eac6540d3bf3f395e6d"
+  },
+  "default_dimensions": {
+    "vars": 317,
+    "conss": 393
+  },
+  "symmetry_off_dimensions": {
+    "vars": 317,
+    "conss": 392
+  },
+  "extra_constraints_default_vs_off": [
+    {
+      "name": "orbitope_component_0_1row_comp_0_col0",
+      "handler": "setppc",
+      "vars": [
+        "z1&3.8",
+        "z1&3.4_neg"
+      ]
+    }
+  ],
+  "symmetry_handler_constraints": [],
+  "target_pair_in_extra_constraint": [
+    {
+      "name": "orbitope_component_0_1row_comp_0_col0",
+      "handler": "setppc",
+      "vars": [
+        "z1&3.8",
+        "z1&3.4_neg"
+      ]
+    }
+  ],
+  "target_pair_in_symmetry_handler_constraint": [],
+  "variable_exposure_errors_default": [],
+  "interpretation": {
+    "extra_constraint_count": 1,
+    "symmetry_handler_constraint_count": 0,
+    "target_pair_or_complement_attributed": true,
+    "attribution_complete": true
+  },
+  "disposition": "PASS"
+}
