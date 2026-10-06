@@ -1,0 +1,781 @@
+{
+  "experiment": "miplib-recurrence-screen-0.1",
+  "date": "2026-10-06",
+  "highs_version": "1.15.1",
+  "sample": [
+    "50v-10",
+    "reblock115",
+    "ran14x18-disj-8",
+    "gen-ip002",
+    "gen-ip054",
+    "ic97_potential",
+    "pk1",
+    "n5-3",
+    "neos859080",
+    "neos-911970",
+    "seymour1",
+    "p200x1188c",
+    "b1c1s1",
+    "markshare2",
+    "mas74",
+    "exp-1-500-5-5",
+    "markshare_4_0",
+    "qap10",
+    "cost266-UUE",
+    "mas76"
+  ],
+  "sample_rule": "first 20 official benchmark-table instances with <=5000 raw variables and <=5000 raw constraints, excluding the four prototype instances",
+  "profile": {
+    "refinement_rounds": 6,
+    "max_pair_checks_per_instance": 50000,
+    "max_certificates_per_instance": 32,
+    "exact_detector": "binary two-column / two-row restricted transposition",
+    "quotient_guard": "shared nonnegative at-most-one row plus interval-redundant exchanged private row after representative fix"
+  },
+  "results": [
+    {
+      "name": "50v-10",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/50v-10.mps.gz",
+        "gzip_sha256": "9e64ce8962b8152e48b617cf7ec9e1abd8efeee8dcb317d4c06d817e5644192c",
+        "mps_sha256": "ab32c42d0b916c3b858dae1f160f4367f0dbe17016b0714955765ff4d8471133",
+        "gzip_bytes": 37959,
+        "mps_bytes": 294310
+      },
+      "original": {
+        "rows": 233,
+        "cols": 2013,
+        "nonzeros": 2745
+      },
+      "presolved": {
+        "rows": 233,
+        "cols": 2013,
+        "nonzeros": 2745
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "reblock115",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/reblock115.mps.gz",
+        "gzip_sha256": "cfc1223e622ed133400b5614cd382b6aa9a84fabfcea63510158b6c16e1e951c",
+        "mps_sha256": "83fac9bfcbeb1934fa03a30bac1372f540afcdc5681e4532a8f459184e6a6005",
+        "gzip_bytes": 98516,
+        "mps_bytes": 1052776
+      },
+      "original": {
+        "rows": 4735,
+        "cols": 1150,
+        "nonzeros": 13724
+      },
+      "presolved": {
+        "rows": 4448,
+        "cols": 1109,
+        "nonzeros": 12986
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "ran14x18-disj-8",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ran14x18-disj-8.mps.gz",
+        "gzip_sha256": "2a063d948b69e080e8712c449000bf8f26b05ff4f619552a35b06ca5b6eb38c8",
+        "mps_sha256": "42c8804fa44742cf94b09238f1f03781ae89b25f6c31902c15ce25c2ba22f1cd",
+        "gzip_bytes": 58880,
+        "mps_bytes": 366504
+      },
+      "original": {
+        "rows": 447,
+        "cols": 504,
+        "nonzeros": 10277
+      },
+      "presolved": {
+        "rows": 447,
+        "cols": 504,
+        "nonzeros": 8951
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "gen-ip002",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/gen-ip002.mps.gz",
+        "gzip_sha256": "cb37e723fa2187947981215bf9c8ba40d452984d7b9be3467e9f9d18f0343f78",
+        "mps_sha256": "30ed071e531beea561b330dd8e590eb641a5ec6d4e3f41a8d54735ce27db01b6",
+        "gzip_bytes": 10577,
+        "mps_bytes": 48940
+      },
+      "original": {
+        "rows": 24,
+        "cols": 41,
+        "nonzeros": 922
+      },
+      "presolved": {
+        "rows": 24,
+        "cols": 41,
+        "nonzeros": 922
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "gen-ip054",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/gen-ip054.mps.gz",
+        "gzip_sha256": "b5089ebc97c43bd583fcadf30955b8800861044d632d747c0b7ac73f19b9e6f3",
+        "mps_sha256": "8b71b70a6f92ea9bde78b375f4366e7cc021cfb517df87130775f8b8bdf47333",
+        "gzip_bytes": 5884,
+        "mps_bytes": 29589
+      },
+      "original": {
+        "rows": 27,
+        "cols": 30,
+        "nonzeros": 532
+      },
+      "presolved": {
+        "rows": 27,
+        "cols": 30,
+        "nonzeros": 532
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "ic97_potential",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/ic97_potential.mps.gz",
+        "gzip_sha256": "db709f9ca628323d2ebcad02cb681e135a7638dfb1e6bdef4853b5366b6faa92",
+        "mps_sha256": "4260f75027c7712b7bbf2c13b5e903185703a8cbac7353cb8739b97f988b7f37",
+        "gzip_bytes": 26260,
+        "mps_bytes": 195969
+      },
+      "original": {
+        "rows": 1046,
+        "cols": 728,
+        "nonzeros": 3138
+      },
+      "presolved": {
+        "rows": 522,
+        "cols": 726,
+        "nonzeros": 1566
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "pk1",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/pk1.mps.gz",
+        "gzip_sha256": "6c64530538b254a8ae648f8f8f188847366ae52da560fdec0ad290c642973ba0",
+        "mps_sha256": "13851ed426a2dfd7c6af7b021236553c391d77a675ab9223dd9135d3351c2e66",
+        "gzip_bytes": 4005,
+        "mps_bytes": 31982
+      },
+      "original": {
+        "rows": 45,
+        "cols": 86,
+        "nonzeros": 915
+      },
+      "presolved": {
+        "rows": 45,
+        "cols": 86,
+        "nonzeros": 915
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "n5-3",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+        "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+        "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f",
+        "gzip_bytes": 47192,
+        "mps_bytes": 343914
+      },
+      "original": {
+        "rows": 1062,
+        "cols": 2550,
+        "nonzeros": 9900
+      },
+      "presolved": {
+        "rows": 836,
+        "cols": 2139,
+        "nonzeros": 8327
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 136,
+        "row_class_count": 53,
+        "var_members": 324,
+        "row_members": 131,
+        "largest_var_sizes": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "largest_row_sizes": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pair_checks": 1,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "LEAD_ONLY"
+    },
+    {
+      "name": "neos859080",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos859080.mps.gz",
+        "gzip_sha256": "bace2c785ab613cdd997b74197a44eca35b7b7871b18e4d958a9e83fa5ee205b",
+        "mps_sha256": "127e8c4b5e67ac665bd5c7ff062375364c8716c2b31bdb38334ab23befa95fc7",
+        "gzip_bytes": 6320,
+        "mps_bytes": 77225
+      },
+      "original": {
+        "rows": 164,
+        "cols": 160,
+        "nonzeros": 1280
+      },
+      "presolved": {
+        "rows": 120,
+        "cols": 120,
+        "nonzeros": 1128
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "neos-911970",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-911970.mps.gz",
+        "gzip_sha256": "cf9ad35ade0015d140f33ce83a593d76672c09fd8cc30c0539213be7e4a65ebb",
+        "mps_sha256": "31e8f835a9499de4897eb23838453cb83bee093abb8fab881b44f9937236eaa6",
+        "gzip_bytes": 16586,
+        "mps_bytes": 118807
+      },
+      "original": {
+        "rows": 107,
+        "cols": 888,
+        "nonzeros": 3408
+      },
+      "presolved": {
+        "rows": 107,
+        "cols": 888,
+        "nonzeros": 3408
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 259,
+        "row_class_count": 21,
+        "var_members": 888,
+        "row_members": 72,
+        "largest_var_sizes": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "largest_row_sizes": [
+          6,
+          6,
+          6,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "pair_checks": 1155,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "LEAD_ONLY"
+    },
+    {
+      "name": "seymour1",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/seymour1.mps.gz",
+        "gzip_sha256": "fbcef8581c27234abf5816cbd1ddd5b6b6fdc3764b57d36d85c517d9fd3e9bac",
+        "mps_sha256": "d5150ce3c86eb3e89cb3689261cc7c26459d735991acd0e0b362b711584b7548",
+        "gzip_bytes": 143198,
+        "mps_bytes": 1355208
+      },
+      "original": {
+        "rows": 4944,
+        "cols": 1372,
+        "nonzeros": 33549
+      },
+      "presolved": {
+        "rows": 4563,
+        "cols": 890,
+        "nonzeros": 29839
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 4,
+        "row_class_count": 6,
+        "var_members": 8,
+        "row_members": 13,
+        "largest_var_sizes": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "largest_row_sizes": [
+          3,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "LEAD_ONLY"
+    },
+    {
+      "name": "p200x1188c",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/p200x1188c.mps.gz",
+        "gzip_sha256": "edf0cc0c502379119a65005b5c9a59ad242211598b1741e7fd9f9376b11bc30f",
+        "mps_sha256": "52e616e7a1e0dc95b14a8e381bda45bd1618cadcf5f8393609b1b7fe81a5459e",
+        "gzip_bytes": 36690,
+        "mps_bytes": 288222
+      },
+      "original": {
+        "rows": 1388,
+        "cols": 2376,
+        "nonzeros": 4752
+      },
+      "presolved": {
+        "rows": 1388,
+        "cols": 2376,
+        "nonzeros": 4752
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "b1c1s1",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/b1c1s1.mps.gz",
+        "gzip_sha256": "3ad5eb7edd4a86889fbdaedc086444a93ebe07e54a743b5e19d2a5908340ad46",
+        "mps_sha256": "68cbaa66b6ff08114d9c3fb9b5e786cfd7e34dbe718865d35aa9181147872393",
+        "gzip_bytes": 72442,
+        "mps_bytes": 700641
+      },
+      "original": {
+        "rows": 3904,
+        "cols": 3872,
+        "nonzeros": 11408
+      },
+      "presolved": {
+        "rows": 2748,
+        "cols": 2718,
+        "nonzeros": 9164
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "markshare2",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/markshare2.mps.gz",
+        "gzip_sha256": "8b1ea0bee5d89f3247cfbf6fd5fbd1234ea48e1d7081a8b7fbd827602b4b8914",
+        "mps_sha256": "35013a309b073f42e163e01a485909055b52a5d816fdd18345576473f8ed1458",
+        "gzip_bytes": 2179,
+        "mps_bytes": 17207
+      },
+      "original": {
+        "rows": 7,
+        "cols": 74,
+        "nonzeros": 434
+      },
+      "presolved": {
+        "rows": 7,
+        "cols": 67,
+        "nonzeros": 427
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "mas74",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mas74.mps.gz",
+        "gzip_sha256": "019a9ca2dac800342a887cd07e326526b463dca9646ba16ad955a16fa4b6ecc1",
+        "mps_sha256": "181f02fd634306ad6431f21d5e8115f3e8112f2e7d2bebed1690475b49acc4af",
+        "gzip_bytes": 9840,
+        "mps_bytes": 64163
+      },
+      "original": {
+        "rows": 13,
+        "cols": 151,
+        "nonzeros": 1706
+      },
+      "presolved": {
+        "rows": 13,
+        "cols": 148,
+        "nonzeros": 1682
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "exp-1-500-5-5",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/exp-1-500-5-5.mps.gz",
+        "gzip_sha256": "6e00da7741d808d331ff37bfcaf498bcc4c57ac24f32622f01047b6bbc7d870f",
+        "mps_sha256": "32bcb5e23d511b3ee530e7016765cc724e06bc77225648669c443aa7be0a68f2",
+        "gzip_bytes": 19201,
+        "mps_bytes": 209869
+      },
+      "original": {
+        "rows": 550,
+        "cols": 990,
+        "nonzeros": 1980
+      },
+      "presolved": {
+        "rows": 550,
+        "cols": 990,
+        "nonzeros": 1980
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "markshare_4_0",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/markshare_4_0.mps.gz",
+        "gzip_sha256": "1a1feb04f5637db9f69be53bd6224fcd9fe5b8d750870d9b2002b535d25f4353",
+        "mps_sha256": "a05d1c8c1a1e0646ea31965fd5e05af7a41801db3cb1820b2ab4cd95c7bc32db",
+        "gzip_bytes": 797,
+        "mps_bytes": 5377
+      },
+      "original": {
+        "rows": 4,
+        "cols": 34,
+        "nonzeros": 123
+      },
+      "presolved": {
+        "rows": 4,
+        "cols": 34,
+        "nonzeros": 123
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "qap10",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/qap10.mps.gz",
+        "gzip_sha256": "86c1f147d75688fe154f9dd402032f0c3b8ce164a70e4d0e350fec6c00d20c66",
+        "mps_sha256": "a317ab99d08ad4d4b5cb8286a8a1c4c4f77ad801ff3f8b50d565390219485789",
+        "gzip_bytes": 82641,
+        "mps_bytes": 675639
+      },
+      "original": {
+        "rows": 1820,
+        "cols": 4150,
+        "nonzeros": 18200
+      },
+      "presolved": {
+        "rows": 1820,
+        "cols": 4150,
+        "nonzeros": 18200
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "cost266-UUE",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/cost266-UUE.mps.gz",
+        "gzip_sha256": "a6048c81daa7c992ff5c3f6b954e2fd4d77048c9b9c3e49b76380a3c3e73fa7d",
+        "mps_sha256": "4c278416403bb2a1388eaabaf13061c879ab97c96d73c754c1b4fd76d8570e86",
+        "gzip_bytes": 103586,
+        "mps_bytes": 1978151
+      },
+      "original": {
+        "rows": 1446,
+        "cols": 4161,
+        "nonzeros": 12312
+      },
+      "presolved": {
+        "rows": 1429,
+        "cols": 4136,
+        "nonzeros": 12251
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "name": "mas76",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mas76.mps.gz",
+        "gzip_sha256": "91f624659e181538020e0c627910f02ffa6b355d6df708ef324e697a69485a74",
+        "mps_sha256": "114b73dbe17c1d1b4d37a09311424571781225e01edfbec1c6acb320214593f6",
+        "gzip_bytes": 9186,
+        "mps_bytes": 62523
+      },
+      "original": {
+        "rows": 12,
+        "cols": 151,
+        "nonzeros": 1640
+      },
+      "presolved": {
+        "rows": 12,
+        "cols": 148,
+        "nonzeros": 1615
+      },
+      "presolve_status": "HighsStatus.kOk",
+      "refinement": {
+        "var_class_count": 0,
+        "row_class_count": 0,
+        "var_members": 0,
+        "row_members": 0,
+        "largest_var_sizes": [],
+        "largest_row_sizes": []
+      },
+      "pair_checks": 0,
+      "pair_check_truncated": false,
+      "exact_transpositions": [],
+      "exact_quotients": [],
+      "signal": "NO_SIGNAL"
+    }
+  ],
+  "errors": [],
+  "counts": {
+    "EXACT_QUOTIENT": 0,
+    "EXACT_SYMMETRY_ONLY": 0,
+    "LEAD_ONLY": 3,
+    "NO_SIGNAL": 17
+  },
+  "disposition": "PASS"
+}
