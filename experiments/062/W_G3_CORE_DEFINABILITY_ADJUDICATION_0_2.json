@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.exp062-w-g3-core-definability-adjudication.v0.2",
+  "date": "2026-10-06",
+  "status": "FOUR_STRUCTURAL_ROLE_INCIDENCES_CORE_CLOSED_G3_STILL_OPEN",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "input": {
+    "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_1.json",
+    "git_blob_sha": "5552da0f9e3abb9ad3a8c6a156f9bd23ca31e5eb"
+  },
+  "authority_basis": {
+    "core20": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "core20_rule": "Primitive logical structure includes predicate/relation application and ordered argument incidence; a primitive extensional relation instance is admissible when its full semantic contribution is exactly the represented incidence.",
+    "core17": "CORE_SPEC_DRAFT_0_17_CONSOLIDATED_QUALIFIED.md",
+    "core17_boundary_rule": "Interfaces may expose port roles and direction/mapping rules when those roles are explicitly represented."
+  },
+  "corrections": [
+    {
+      "occurrence_id": "W-SSC-062-O06",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence contributes only the source-explicit domain-role incidence between the already-separate map occurrence and the dual-right-spinor carrier. The parent map behavior remains unresolved; no function law or spinor semantics is imported."
+    },
+    {
+      "occurrence_id": "W-SSC-062-O07",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence contributes only the source-explicit codomain-role incidence between the already-separate map occurrence and the left-spinor carrier. The parent map behavior remains unresolved; no function law or spinor semantics is imported."
+    },
+    {
+      "occurrence_id": "W-SSC-130-O04",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence contributes only the source-explicit domain-role incidence for the already-separate linear-map occurrence. Linearity and map behavior remain unresolved elsewhere; this row adds only ordered role incidence."
+    },
+    {
+      "occurrence_id": "W-SSC-130-O05",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence contributes only the source-explicit codomain-role incidence for the already-separate linear-map occurrence. Linearity and map behavior remain unresolved elsewhere; this row adds only ordered role incidence."
+    }
+  ],
+  "reviewed_not_closed": [
+    {
+      "occurrence_id": "W-SSC-030-O03",
+      "reason": "The source word 'respectively' carries elementwise pairing between two internally ordered two-element families. G2 currently preserves each family only as one argument span, so the elementwise pairing incidence is not yet explicit. Closing now would hide load-bearing structure."
+    },
+    {
+      "occurrence_id": "W-SSC-092-O04",
+      "reason": "The source word 'respectively' carries elementwise form-to-geometric-role pairing, but G2 does not expose the internal pair members as separate ordered nodes. Keep unresolved until that incidence is represented source-faithfully."
+    },
+    {
+      "occurrence_id": "W-SSC-049-O01",
+      "reason": "'alpha-planes from a twistor point' is source-definitional, not a generic domain-role incidence; its alpha-plane construction remains semantically load-bearing."
+    },
+    {
+      "occurrence_id": "W-SSC-144-O03",
+      "reason": "The source 'to' denotes a chiral-sector correspondence/identification, not merely a map codomain role. It therefore cannot close as raw structural direction incidence."
+    }
+  ],
+  "resulting_counts": {
+    "CORE_CLOSED": 7,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0,
+    "UNEXPANDED_DEMAND": 418
+  },
+  "fixed_point": {
+    "G3_complete": false,
+    "G4_authorized": false
+  },
+  "next": "Continue W-only source-local G3 definability adjudication under exact qualified Core."
+}
