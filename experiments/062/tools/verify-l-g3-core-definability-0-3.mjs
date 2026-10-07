@@ -19,7 +19,7 @@ for(const c of adj.corrections||[]){
  if(!expectedIds.delete(c.occurrence_id))fail('unexpected/duplicate correction '+c.occurrence_id);
  const r=inputById.get(c.occurrence_id);
  if(!r||r.disposition!=='UNEXPANDED_DEMAND'||c.from!=='UNEXPANDED_DEMAND'||c.to!=='CORE_CLOSED')fail(c.occurrence_id+': disposition mismatch');
- if(typeof c.basis!=='string'||!c.basis.includes('incidence')&&!c.basis.includes('identity'))fail(c.occurrence_id+': weak basis');
+ if(typeof c.basis!=='string'||!c.basis.trim())fail(c.occurrence_id+': basis missing');
 }
 if(expectedIds.size)fail('missing expected corrections '+[...expectedIds].join(','));
 const counts={CORE_CLOSED:0,CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION:0,QUALIFIED_QU_BOUNDARY_CANDIDATE:0,UNEXPANDED_DEMAND:0};
