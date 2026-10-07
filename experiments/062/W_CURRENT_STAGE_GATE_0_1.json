@@ -1,0 +1,107 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.1",
+  "date": "2026-10-07",
+  "status": "W_G6_CANDIDATE_CAMPAIGN_PROVISIONALLY_QUALIFIED_G7_EXPLICIT_REOPENING_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "g1": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b",
+      "occurrences": 425
+    },
+    "source_local_fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "git_blob_sha": "c298b613e4f4d1876cbc7c1d93709fac5f6b961b"
+    },
+    "external_verification_complete": false,
+    "campaign_accepted_under_owner_bypass": true
+  },
+  "downstream_pin_chain": {
+    "g2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_1.json",
+      "git_blob_sha": "e0d729169abafd9f0fed137e66acc0922a389db4"
+    },
+    "g3": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_5.json",
+      "git_blob_sha": "bde960cd84f532ec6e775e84319b94a4a6009275"
+    },
+    "g4": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_1.json",
+      "git_blob_sha": "6d88102298f7605aef724d0fa95b5b658cfe1b8a"
+    },
+    "g5": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_1.json",
+      "git_blob_sha": "38f812e179e4bca6165e97ad8bbdcc2e03c40934"
+    },
+    "g5_reopening": {
+      "path": "experiments/062/W_G5_HYPOTHESIS_REOPENING_0_1.json",
+      "git_blob_sha": "cb56c2a9a7b47b660a340d39af97254e7bb93c6f"
+    }
+  },
+  "g6": {
+    "candidate_id": "VARIATIONAL_STATIONARITY_INTERFACE_0_1",
+    "primitive_id": 211000,
+    "provisional_qualification": {
+      "path": "experiments/063/OWNER_WAIVER_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "b69940a5dd1ef85c8a78114e0989ec7e6e68c99a",
+      "disposition": "PROVISIONAL_QUALIFIED_WITH_EXPLICIT_SCOPE_UNDER_OWNER_BYPASS"
+    },
+    "external_verification_complete": false,
+    "global_disposition": "INCOMPLETE_EVIDENCE",
+    "campaign_consumption_allowed": true,
+    "globally_qualified": false
+  },
+  "explicit_dependency_scope": {
+    "W_bodies": [
+      "W-SSC-029",
+      "W-SSC-149"
+    ],
+    "W_occurrences": [
+      "W-SSC-029-O03",
+      "W-SSC-029-O04",
+      "W-SSC-149-O02",
+      "W-SSC-149-O03"
+    ],
+    "positive_g4_classes": [
+      "W-G4-Q0023",
+      "W-G4-Q0351"
+    ],
+    "negative_controls_excluded": 5
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_complete": true,
+    "G4_complete": true,
+    "G5_complete": true,
+    "G6_global_qualification_complete": false,
+    "G6_campaign_provisional_consumption": true,
+    "G7_authorized": true,
+    "G7_scope": "EXPLICIT_DEPENDENCIES_ONLY",
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false
+  },
+  "g7_rules": [
+    "Reopen only W-SSC-029 and W-SSC-149 occurrence subgraphs that explicitly depend on the provisionally qualified interface.",
+    "Do not use primitive 211000 to infer internal semantics of the W output equations.",
+    "A W source instance must prove its source-local variation relations instantiate VARX/VARY and preserve the parent ACTION dependency.",
+    "All five W negative controls remain outside primitive 211000.",
+    "After source-local reconstruction, rerun affected W G3/G4/G5 and any later W fixed-point/IA gates required by the governing method.",
+    "Do not export primitive 211000 as global qualified authority."
+  ],
+  "evidence_label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED",
+  "nonclaims": [
+    "External G6 semantic qualification and promotion review did not pass; they are temporarily waived.",
+    "This gate does not authorize L to consume primitive 211000.",
+    "This gate does not claim W primitive closure complete.",
+    "This gate does not authorize recursive W IA before the G7 reconstruction and required downstream replay reach their lawful fixed point."
+  ],
+  "next_lawful_action": "Execute W G7 source-local reconstruction for W-SSC-029 and W-SSC-149 only, using primitive 211000 solely within its explicit axiomatic scope; then rerun the affected W closure pipeline."
+}
