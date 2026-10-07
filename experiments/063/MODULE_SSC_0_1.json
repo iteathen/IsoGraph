@@ -1,0 +1,94 @@
+{
+  "schema": "isograph.exp063-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_G6_MODULE_SSC",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "module_id": "VARIATIONAL_STATIONARITY_INTERFACE_0_1",
+  "candidate": {
+    "md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md",
+      "git_blob_sha": "69334c02e906bc60667745597a7be589ba7f8772"
+    },
+    "native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.isg",
+      "git_blob_sha": "ffed731c2da0293fd14026a6a26dc061bfe94d77"
+    }
+  },
+  "native_support": {
+    "field_vector_md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.md",
+      "git_blob_sha": "7d2aad9eee091438b08c30a18d354252abb2efcc"
+    },
+    "field_vector_native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+      "git_blob_sha": "f234db03e52a0141a6a9fea80af7badd76751d7f"
+    },
+    "primitive_logic": {
+      "path": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+      "git_blob_sha": "2630336da5c4117a15a43c1dc0847536b33ed083"
+    },
+    "primitive_data": {
+      "path": "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "git_blob_sha": "c0479ac1de1a1c8ff5737221133601618b1a56cf"
+    }
+  },
+  "discovery_evidence": {
+    "path": "experiments/062/W_G5_HYPOTHESIS_VARIATIONAL_STATIONARITY_0_1.json",
+    "git_blob_sha": "290aa83aaa1ac2dccf63bfce977868e68e31c35f",
+    "hypothesis_id": "W-G5-HYP-VAR-001"
+  },
+  "assertions": [
+    {
+      "id": "VS-A01",
+      "claim": "C with ADD,MUL,NEG,INV,ZERO,ONE satisfies the frozen commutative-field schema 182003."
+    },
+    {
+      "id": "VS-A02",
+      "claim": "DX with its frozen operations is a vector space over C under schema 182004."
+    },
+    {
+      "id": "VS-A03",
+      "claim": "DY with its frozen operations is a vector space over C under schema 182004."
+    },
+    {
+      "id": "VS-A04",
+      "claim": "ACT is a total single-valued relation X x Y -> C."
+    },
+    {
+      "id": "VS-A05",
+      "claim": "VARX is a total single-valued relation X x Y x DX -> C."
+    },
+    {
+      "id": "VS-A06",
+      "claim": "VARY is a total single-valued relation X x Y x DY -> C."
+    },
+    {
+      "id": "VS-A07",
+      "claim": "STATX(x,y) iff VARX(x,y,dx)=ZERO for every represented dx in DX."
+    },
+    {
+      "id": "VS-A08",
+      "claim": "STATY(x,y) iff VARY(x,y,dy)=ZERO for every represented dy in DY."
+    }
+  ],
+  "explicit_nonclaims": [
+    {
+      "id": "VS-N01",
+      "claim": "The module does not derive VARX or VARY from ACT."
+    },
+    {
+      "id": "VS-N02",
+      "claim": "The module does not define limits, topology, differentiability, manifolds, functional analysis, connections, curvature, torsion, tetrads, or Einstein equations."
+    },
+    {
+      "id": "VS-N03",
+      "claim": "A source instance must independently justify that its declared VARX/VARY relations are first variations of its ACTION."
+    },
+    {
+      "id": "VS-N04",
+      "claim": "Qualification of this module would not by itself close any W occurrence; G7 source-local reconstruction is separately required."
+    }
+  ],
+  "qualification_target": "QUALIFIED_WITH_EXPLICIT_SCOPE",
+  "qualification_scope": "Axiomatic bivariate first-variation/stationarity interface only."
+}
