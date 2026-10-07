@@ -1,0 +1,177 @@
+{
+  "schema": "isograph.exp062-trilinear-product-recovery-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "TRILINEAR_PRODUCT_RECOVERY_0_1",
+  "branch_head_at_creation": "109968b1eb873c8d87bf0f225a9615aa482f5a65",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_TRILINEAR_PRODUCT_RECOVERY_0_1.json",
+      "git_blob_sha": "f2b22e6f1316aa52a4cd34483b1060c049410445"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_TRILINEAR_RECOVERY_MODULE_SSC_0_1.json",
+      "git_blob_sha": "97bc71344944dbd4633552f0f5da39a601c62667"
+    }
+  },
+  "inference_profile": {
+    "id": "trilinear-recovery-schema-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 185005/185006/220000. No external triality or algebra theorem library.",
+    "rules": [
+      {
+        "id": "TR-IA-R1",
+        "trigger": "185005",
+        "derives": [
+          "VECTOR(X)",
+          "VECTOR(Y)",
+          "VECTOR(Z)",
+          "TOTAL_SINGLE_VALUED(T,X,Y,Z,C)",
+          "TRILINEAR(T)"
+        ]
+      },
+      {
+        "id": "TR-IA-R2",
+        "trigger": "185006",
+        "derives": [
+          "185005(T)",
+          "LINEAR(RXY)",
+          "LINEAR(RYZ)",
+          "LINEAR(RZX)",
+          "THREE_STEP_ROUNDTRIPS",
+          "T_CYCLE_PRESERVATION"
+        ]
+      },
+      {
+        "id": "TR-IA-R3",
+        "trigger": "220000",
+        "derives": [
+          "185003(PROD,B,Q)",
+          "185005(T)",
+          "T_PRODUCT_PAIRING_DEFINITION",
+          "REC_ALL_PAIRING_DEFINITION",
+          "REC_EXISTENCE",
+          "REC_EQUALS_PROD",
+          "REC_UNIQUENESS"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "185006 -> triality group",
+      "185006 -> natural/domain identity of X,Y,Z",
+      "220000 -> division",
+      "220000 -> positivity or split classification",
+      "220000 -> alternativity or Moufang laws",
+      "220000 -> reflection semantics",
+      "220000 -> canonical conjugation",
+      "any W/cross-track conclusion"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(185005)",
+        "SCHEMA_DEFINITION(185006)",
+        "SCHEMA_DEFINITION(220000)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "TR-IA-001",
+          "assertion": "185005 entails three exact vector carriers over one scalar field.",
+          "support": [
+            "185005 explicit vector-space conjuncts"
+          ]
+        },
+        {
+          "id": "TR-IA-002",
+          "assertion": "185005 entails a total single-valued scalar T on admitted triples.",
+          "support": [
+            "185005 existence/uniqueness and typing clauses"
+          ]
+        },
+        {
+          "id": "TR-IA-003",
+          "assertion": "185005 entails additivity and scalar linearity independently in each of the three arguments.",
+          "support": [
+            "185005 six explicit linearity clauses"
+          ]
+        },
+        {
+          "id": "TR-IA-004",
+          "assertion": "185006 entails exact 185005 trilinear support plus three exact linear role-cycle maps.",
+          "support": [
+            "185006 explicit dependencies"
+          ]
+        },
+        {
+          "id": "TR-IA-005",
+          "assertion": "185006 entails three exact three-step round-trip identities on X,Y,Z.",
+          "support": [
+            "185006 round-trip clauses"
+          ]
+        },
+        {
+          "id": "TR-IA-006",
+          "assertion": "185006 entails preservation of T under the declared cyclic transport.",
+          "support": [
+            "185006 final equality clause"
+          ]
+        },
+        {
+          "id": "TR-IA-007",
+          "assertion": "220000 entails exact 185003 composition-algebra and 185005 trilinear support.",
+          "support": [
+            "220000 explicit dependencies"
+          ]
+        },
+        {
+          "id": "TR-IA-008",
+          "assertion": "220000 entails T(x,y,z)=B(z,PROD(x,y)) for admitted inputs.",
+          "support": [
+            "220000 T defining clause"
+          ]
+        },
+        {
+          "id": "TR-IA-009",
+          "assertion": "220000 defines REC by equality of all T and B pairings.",
+          "support": [
+            "220000 REC defining clause"
+          ]
+        },
+        {
+          "id": "TR-IA-010",
+          "assertion": "220000 entails existence and uniqueness of REC for every admitted x,y.",
+          "support": [
+            "220000 existence and uniqueness clauses"
+          ]
+        },
+        {
+          "id": "TR-IA-011",
+          "assertion": "220000 entails exact REC/PROD graph equality on admitted x,y,h.",
+          "support": [
+            "220000 IFF clause"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only selected conjunct/dependency projections produces no new assertion and cannot cross prohibited group/identity/division/reflection boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 11,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}
