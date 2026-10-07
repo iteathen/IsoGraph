@@ -110,6 +110,34 @@ The durable L stop record is `experiments/062/L_G5_FIXED_POINT_0_1.json`. Lawful
 
 **W and L have each reached track-local current-authority G5 boundaries. This does not seal either track and does not authorize cross-track comparison, IA, or unification synthesis.**
 
+### G5 fixed points do not prohibit hypothesis-driven discovery
+
+The W/L G5 records establish that the current deterministic graph-first reduction and candidate-synthesis pass did not itself justify a reusable module. They do **not** establish irreducibility and do not prohibit further source-local discovery.
+
+The campaign now follows `../primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md` for this boundary:
+
+```text
+track-local residual / quotient class
+-> explicit HYPOTHESIS_CANDIDATE
+-> source-local predictions and falsifiers
+-> lawful DP 0.10 / EI 0.1 experimentation where warranted
+-> independent qualification
+-> explicit promotion if earned
+-> G7 source-track reopening within the qualified scope
+```
+
+A guessed candidate is not authority. If it survives qualification and is explicitly promoted, the exact revision may become usable authority within the qualified scope while retaining a permanent hypothesis-origin/test-lineage record. The repository may label this provenance `HYPOTHESIS_QUALIFIED`; that label is not a new Core truth value.
+
+For pre-seal W and L work, the anti-bias firewall remains unchanged: W hypotheses may not use L semantics, L hypotheses may not use W semantics, and desired unification correspondences may not be used as confirmation evidence. Cross-track recurrence still cannot bootstrap either source track into authority.
+
+Therefore a G5 fixed point should be read as:
+
+> deterministic reduction exhausted under the current authority tuple; hypothesis generation may now be the lawful discovery tool if it can be tested without violating the track firewall.
+
+It should not be read as:
+
+> no lawful work is possible until an external authority appears.
+
 ## Anti-bias architecture
 
 The campaign has three logically separated surfaces.
