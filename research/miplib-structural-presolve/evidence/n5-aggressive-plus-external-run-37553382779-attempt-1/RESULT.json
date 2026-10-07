@@ -1,0 +1,437 @@
+{
+  "experiment": "n5-aggressive-plus-external-1.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "seeds": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0021": {
+        "original": {
+          "name": "C0021",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0021",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0021",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0026": {
+        "original": {
+          "name": "C0026",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0026",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0026",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0027": {
+        "original": {
+          "name": "C0027",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0027",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0027",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0028": {
+        "original": {
+          "name": "C0028",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0028",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0028",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "frontend": {
+    "stages": {
+      "scip_presolve_s": 0.040040791999985004,
+      "scip_export_s": 0.05600012500002549,
+      "highs_parse_s": 0.009761418000010735,
+      "sparse_materialize_s": 0.003948505000010982,
+      "bulk_graph_data_s": 0.01908680400001117,
+      "igraph_construct_s": 0.0016474980000111827,
+      "bliss_s": 0.004736676999982592,
+      "replay_select_s": 0.047020927000005486,
+      "total_s": 0.19796044700001403
+    },
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "graph_meta": {
+      "active_variables": 2142,
+      "dropped_export_only_variables": 212,
+      "rows": 846,
+      "active_nonzeros": 8316,
+      "vertices": 11304,
+      "edges": 16632,
+      "color_classes": 22
+    },
+    "transformed_breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ],
+    "original_breakers": [
+      [
+        "C0021",
+        "C0026"
+      ],
+      [
+        "C0027",
+        "C0028"
+      ]
+    ]
+  },
+  "trials": [
+    {
+      "seed": 53,
+      "order": "external_first",
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8104.999999999999,
+        "dual": 8104.999999999999,
+        "gap": 0.0,
+        "nodes": 1414,
+        "lp_iterations": 207572,
+        "wall_s": 41.709435901999996,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8104.999999999999,
+        "dual": 8104.999999999999,
+        "gap": 0.0,
+        "nodes": 1115,
+        "lp_iterations": 196188,
+        "wall_s": 39.616840951,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 39.814801398000014
+    },
+    {
+      "seed": 54,
+      "order": "aggressive_first",
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8104.999999999995,
+        "dual": 8104.999999999995,
+        "gap": 0.0,
+        "nodes": 1402,
+        "lp_iterations": 201523,
+        "wall_s": 43.474184933000004,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8105.00000000006,
+        "dual": 8105.00000000006,
+        "gap": 0.0,
+        "nodes": 2128,
+        "lp_iterations": 295911,
+        "wall_s": 54.667718304999994,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 54.86567875200001
+    },
+    {
+      "seed": 55,
+      "order": "external_first",
+      "aggressive": {
+        "status": "timelimit",
+        "objective": 8105.000000000025,
+        "dual": 7862.12373106149,
+        "gap": 0.03089194182724257,
+        "nodes": 2041,
+        "lp_iterations": 324047,
+        "wall_s": 60.00598779799998,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8105.000000000002,
+        "dual": 8105.000000000002,
+        "gap": 0.0,
+        "nodes": 856,
+        "lp_iterations": 143456,
+        "wall_s": 32.939198105,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 33.13715855200002
+    },
+    {
+      "seed": 56,
+      "order": "aggressive_first",
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8104.999999999996,
+        "dual": 8104.999999999996,
+        "gap": 0.0,
+        "nodes": 1075,
+        "lp_iterations": 192719,
+        "wall_s": 39.611445769,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8104.999999999999,
+        "dual": 8104.999999999999,
+        "gap": 0.0,
+        "nodes": 1680,
+        "lp_iterations": 287293,
+        "wall_s": 51.329699682999944,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 51.52766012999996
+    },
+    {
+      "seed": 57,
+      "order": "external_first",
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8104.999999999996,
+        "dual": 8104.999999999996,
+        "gap": 0.0,
+        "nodes": 1501,
+        "lp_iterations": 237940,
+        "wall_s": 46.27188238400004,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8105.000000000001,
+        "dual": 8105.000000000001,
+        "gap": 0.0,
+        "nodes": 1519,
+        "lp_iterations": 206108,
+        "wall_s": 43.388799921999976,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 43.58676036899999
+    },
+    {
+      "seed": 58,
+      "order": "aggressive_first",
+      "aggressive": {
+        "status": "timelimit",
+        "objective": 8105.000000000036,
+        "dual": 7767.878595006723,
+        "gap": 0.04339941734027854,
+        "nodes": 1737,
+        "lp_iterations": 351466,
+        "wall_s": 60.00594015900003,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 548,
+        "lp_iterations": 96123,
+        "wall_s": 23.447969286999978,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 23.645929733999992
+    },
+    {
+      "seed": 59,
+      "order": "external_first",
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8105.000000000031,
+        "dual": 8105.000000000031,
+        "gap": 0.0,
+        "nodes": 1524,
+        "lp_iterations": 231426,
+        "wall_s": 43.27979084100002,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 0
+      },
+      "aggressive_plus_external": {
+        "status": "optimal",
+        "objective": 8104.999999999996,
+        "dual": 8104.999999999996,
+        "gap": 0.0,
+        "nodes": 1185,
+        "lp_iterations": 169487,
+        "wall_s": 37.86742441800004,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        },
+        "added_external_breakers": 2
+      },
+      "external_end_to_end_wall_s": 38.065384865000055
+    }
+  ],
+  "summary": {
+    "paired_both_optimal": 5,
+    "aggressive_median_wall_s": 43.27979084100002,
+    "external_solver_median_wall_s": 43.388799921999976,
+    "external_end_to_end_median_wall_s": 43.58676036899999,
+    "median_external_over_aggressive_ratio": 0.9545753985153002,
+    "external_end_to_end_wins": 3,
+    "external_end_to_end_losses": 2,
+    "frontend_wall_s": 0.19796044700001403,
+    "aggressive_median_nodes": 1414,
+    "external_median_nodes": 1519,
+    "aggressive_median_lp": 207572,
+    "external_median_lp": 206108,
+    "directional_complementarity": false
+  },
+  "status": "BENCHMARKED",
+  "disposition": "PASS"
+}
