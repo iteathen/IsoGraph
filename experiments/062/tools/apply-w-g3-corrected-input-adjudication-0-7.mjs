@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const E=JSON.parse(fs.readFileSync('experiments/062/W_EXTRACTION_RECONCILED_0_22.json','utf8'));
+const P=JSON.parse(fs.readFileSync('experiments/062/W_G3_CORE_DEFINABILITY_0_6.json','utf8'));
+const G2=JSON.parse(fs.readFileSync('experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_3.json','utf8'));
+const A=JSON.parse(fs.readFileSync('experiments/062/W_G3_CORRECTED_INPUT_ADJUDICATION_0_7.json','utf8'));
+const oldRows=new Map(P.items.flatMap(i=>i.occurrences.map(r=>[r.occurrence_id,r])));
+const affected=new Map(A.rows.map(r=>[r.occurrence_id,r]));
+const nodes=new Map();for(const it of G2.items)for(const n of it.graph.nodes||[])if(n.kind==='OPAQUE_SEMANTIC_OCCURRENCE')nodes.set(n.provenance.occurrence_id,n.node_id);
+const items=E.items.map(it=>({census_id:it.census_id,occurrences:it.occurrences.map(o=>{const b=affected.get(o.occurrence_id)||oldRows.get(o.occurrence_id);if(!b)throw new Error('missing '+o.occurrence_id);return{occurrence_id:o.occurrence_id,g2_node_id:nodes.get(o.occurrence_id),disposition:b.disposition,closure_basis:b.closure_basis??null,missing_definition_or_authority:b.missing_definition_or_authority??null,source_provenance:{source_span:o.source_span,relation_span:o.relation_span,logical_force:o.logical_force,definition_status:o.definition_status,argument_spans:o.argument_spans,depends_on:o.depends_on},review_note:b.review_note??null,review_state:b.review_state,review_state_reason:b.review_state_reason};})}));
+const disp={CORE_CLOSED:0,CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION:0,QUALIFIED_QU_BOUNDARY_CANDIDATE:0,UNEXPANDED_DEMAND:0},review={FINAL_CORE_CLOSED:0,FINAL_UNEXPANDED_EXTERNAL_DEFINITION:0,FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION:0,FINAL_UNEXPANDED_EXPLICIT_IN_BODY:0};for(const r of items.flatMap(i=>i.occurrences)){disp[r.disposition]++;review[r.review_state]++;}
+const O=JSON.parse(fs.readFileSync('experiments/062/W_G3_CORE_DEFINABILITY_0_7.json','utf8'));O.items=items;O.counts={bodies:84,occurrences:445,...disp};O.review_counts=review;O.fixed_point.reason='All 445 W occurrences have final G3 dispositions: '+disp.CORE_CLOSED+' CORE_CLOSED and '+disp.UNEXPANDED_DEMAND+' UNEXPANDED_DEMAND. No schema or QU candidate is asserted at G3.';fs.writeFileSync('experiments/062/W_G3_CORE_DEFINABILITY_0_7.json',JSON.stringify(O,null,2)+'\n');
