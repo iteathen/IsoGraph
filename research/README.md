@@ -31,6 +31,7 @@ research/
 10. **Keep this index current.** Adding or removing a first-level research directory requires updating this README in the same change.
 11. **Preserve idea/finding provenance.** Major research ideas, methods, mission changes, and material findings intended for publication must follow `../IDEA_PROVENANCE_POLICY.md`: record originator/contributors, earliest evidence currently located, retrospective record date where applicable, reasoning/decision path, and evidence revision. Do not backdate retrospective provenance.
 12. **Separate research direction from formulation.** Human direction, agent-originated formulation, agent-assisted formalization, implementation, finding, verification, and publication authorship are different contribution facts and must not be collapsed.
+13. **Hypothesis qualification does not erase hypothesis provenance.** Research may lawfully generate explicit guesses when current represented reasoning reaches a material gap. Before qualification they remain discovery evidence only. After successful qualification and explicit promotion, the exact revision may be used as authority within the qualified scope, but its hypothesis origin, test lineage, controls/falsifiers, coverage limits, and downstream dependency provenance must remain visible. `HYPOTHESIS_QUALIFIED` is a permitted provenance/qualification label, not a new Core truth value.
 
 ## Current research areas
 
