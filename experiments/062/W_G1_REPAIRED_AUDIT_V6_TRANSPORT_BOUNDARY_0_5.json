@@ -1,0 +1,85 @@
+{
+  "schema": "isograph.exp062-w-g1-repaired-audit-v6-transport-boundary.v0.5",
+  "date": "2026-10-06",
+  "status": "PROCEDURAL_TRANSPORT_BOUNDARY_W_G1_REAUDIT_INCOMPLETE_G2_BLOCKED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "predecessor": "experiments/062/W_G1_REPAIRED_AUDIT_V6_TRANSPORT_BOUNDARY_0_4.json",
+  "purpose": "Append unchanged-input W G1 cold-audit attempts 7 and 8, including the transition from a short quota window to a provider daily-quota boundary, without weakening or bypassing the graph-first G1 completeness gate.",
+  "pinned_input": {
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+    "extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_5.json",
+    "reconciliation": "experiments/062/W_EXTRACTION_RECONCILIATION_0_5.json",
+    "preflight": "experiments/062/tools/verify-w-extraction-reconciled-0-5.mjs",
+    "cold_audit_successor": "experiments/062/W_COLD_AUDIT_SUCCESSOR_0_6.md",
+    "runner": "experiments/062/tools/run-exp062-w-audit-batched-v6.mjs",
+    "workflow": ".github/workflows/experiment-062-w-batched-audit-v6.yml",
+    "request": "experiments/062/W_G1_REPAIRED_AUDIT_RUN.request",
+    "W_items": 84,
+    "W_occurrences": 177
+  },
+  "deterministic_gate": {
+    "pass": true,
+    "item_count": 84,
+    "occurrence_count": 177,
+    "statement": "The unchanged repaired 0.5 extraction passed deterministic preflight again before both attempts entered the provider boundary."
+  },
+  "appended_cold_audit_attempts": [
+    {
+      "workflow_run_id": 37543452440,
+      "attempt": 7,
+      "source_sha": "c8503328aeb4ac18e8fbea8e2534d066c3a4baab",
+      "conclusion": "FAIL_TRANSPORT_QUOTA",
+      "persisted_evidence": "experiments/062/evidence/run-37543452440-attempt-7/CONTROL_W_AUDIT.json",
+      "completed_batches": 0,
+      "complete_84_row_audit": false,
+      "provider_error": {
+        "http_status": 429,
+        "status": "RESOURCE_EXHAUSTED",
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 22.8 seconds"
+      }
+    },
+    {
+      "workflow_run_id": 37543452440,
+      "attempt": 8,
+      "source_sha": "c8503328aeb4ac18e8fbea8e2534d066c3a4baab",
+      "conclusion": "FAIL_TRANSPORT_QUOTA_AFTER_VALID_BATCH_1",
+      "persisted_evidence": "experiments/062/evidence/run-37543452440-attempt-8/",
+      "completed_batches": 1,
+      "covered_rows": 12,
+      "complete_84_row_audit": false,
+      "batch_1": {
+        "report": "experiments/062/evidence/run-37543452440-attempt-8/exp062-w-audit-v6/BATCH_01.json",
+        "validation": "experiments/062/evidence/run-37543452440-attempt-8/exp062-w-audit-v6/BATCH_01_VALIDATION.json",
+        "validation_pass": true,
+        "overall": "PASS",
+        "correction_rows": 0
+      },
+      "provider_error": {
+        "http_status": 429,
+        "status": "RESOURCE_EXHAUSTED",
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 23 hours 58 minutes 10 seconds"
+      }
+    }
+  ],
+  "procedural_findings": [
+    "Attempts 7 and 8 reused the same frozen corpus, repaired 0.5 extraction, graph-first method, runner, occurrence granularity, and semantic audit contract.",
+    "Attempt 8 independently re-audited the first 12 W rows with a structurally valid zero-correction batch, but the all-84 fixed-point requirement is not satisfied by a partial PASS.",
+    "The provider then exposed a daily-scale quota boundary. This is transport unavailability, not semantic correction evidence.",
+    "No semantic input, corpus, occurrence granularity, prompt, or audit contract was changed to evade the quota.",
+    "No G2 neutral occurrence graph, G3 Core-definability pass, G4 structural quotient, G5 basis synthesis, G6 qualification, W source closure, recursive IA, NEI, DTS, or DP is authorized."
+  ],
+  "next_lawful_action": "When the independent provider quota is available again, rerun the unchanged W 0.5 all-84 cold audit to completion. Until then, continue deterministic/source-local checks that do not assume the missing independent result. Do not synthesize partial batches into a false fixed point.",
+  "joint_gate": {
+    "W_G1_complete_for_repaired_0_5": false,
+    "L_G1_complete_for_reconciled_0_13": false,
+    "joint_G2_authorized": false
+  },
+  "authority": false
+}
