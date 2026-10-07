@@ -129,6 +129,10 @@ The system is deliberately **observation-first, primitive-first, and non-evasive
 
 IsoGraph is exercised both through domain applications and through research on the representation/discovery system itself. The complete maintained project index is [research/README.md](research/README.md).
 
+### Reproducible demonstration
+
+- [MIPLIB structural optimization demo](demos/miplib-structural-optimization/README.md) — exact active-support structural discovery on the official MIPLIB `n5-3` instance, direct mapping of the certified treatment back to the original MIP, replicated SCIP timing evidence, orientation sensitivity, and a negative HiGHS cross-solver control. This is an application demo, not IsoGraph semantic authority and not a claim of general MIP speedup.
+
 ### Domain/application research
 
 - [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, representation-relative support growth, and explicit non-resolution of P versus NP.

@@ -1,0 +1,214 @@
+{
+  "schema_version": "isograph-miplib-demo-evidence-0.1",
+  "frozen_on": "2026-10-07",
+  "project": "IsoGraph",
+  "author": "Joshua Oshiro",
+  "status": "application-demo evidence; not IsoGraph semantic authority",
+  "source": {
+    "instance": "n5-3",
+    "url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "exact_treatment": {
+    "transformed_breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ],
+    "original_breakers": [
+      [
+        "C0021",
+        "C0026"
+      ],
+      [
+        "C0027",
+        "C0028"
+      ]
+    ],
+    "mapping_gate": "direct active original-to-transformed mappings; matching type/global bounds; no FIXED/AGGREGATED/MULTAGGR/NEGATED status",
+    "certificate": "replay-verified color-preserving automorphisms of the exact active-support coefficient subdivision graph"
+  },
+  "scip_original_holdout_0_6": {
+    "evidence_commit": "29c56a27f32c61da1d7411a8e146d90b5756e5bc",
+    "seeds": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "limit_s": 60,
+    "frontend_wall_s": 0.1659077119999921,
+    "paired_both_optimal": 5,
+    "paired_end_to_end_wins": 5,
+    "paired_end_to_end_losses": 0,
+    "baseline_median_wall_s": 39.85569788500004,
+    "treated_median_end_to_end_wall_s": 25.26967016899995,
+    "baseline_median_nodes": 1448,
+    "treated_median_nodes": 885,
+    "baseline_median_lp_iterations": 227227,
+    "treated_median_lp_iterations": 139787,
+    "trials": [
+      {
+        "seed": 36,
+        "baseline_wall_s": 43.69909073699999,
+        "treated_end_to_end_wall_s": 27.269942408999995
+      },
+      {
+        "seed": 37,
+        "baseline_wall_s": 50.06761651900001,
+        "treated_end_to_end_wall_s": 24.970099426000004
+      },
+      {
+        "seed": 38,
+        "baseline_wall_s": 35.656592973000016,
+        "treated_end_to_end_wall_s": 27.43445197499996
+      },
+      {
+        "seed": 39,
+        "baseline_wall_s": 39.85569788500004,
+        "treated_end_to_end_wall_s": 25.26967016899995
+      },
+      {
+        "seed": 40,
+        "baseline_wall_s": 35.77866803399996,
+        "treated_end_to_end_wall_s": 15.983314592000013
+      }
+    ]
+  },
+  "scip_original_replication_0_8": {
+    "evidence_commit": "7c0602ab97433f4496a9b78f457e94da055ca18e",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "limit_s": 60,
+    "frontend_wall_s": 0.1973824680000007,
+    "paired_both_optimal": 7,
+    "paired_end_to_end_wins": 7,
+    "paired_end_to_end_losses": 0,
+    "baseline_median_wall_s": 41.90405896699997,
+    "treated_median_end_to_end_wall_s": 30.14179429699999,
+    "median_end_to_end_ratio": 0.7510570281383442,
+    "baseline_median_nodes": 1318,
+    "treated_median_nodes": 936,
+    "baseline_median_lp_iterations": 196706,
+    "treated_median_lp_iterations": 126193,
+    "trials": [
+      {
+        "seed": 41,
+        "baseline_wall_s": 45.276685869999994,
+        "treated_end_to_end_wall_s": 35.952933245000004
+      },
+      {
+        "seed": 42,
+        "baseline_wall_s": 36.064381010000005,
+        "treated_end_to_end_wall_s": 34.82869576900001
+      },
+      {
+        "seed": 43,
+        "baseline_wall_s": 29.071519024000025,
+        "treated_end_to_end_wall_s": 28.327129376000016
+      },
+      {
+        "seed": 44,
+        "baseline_wall_s": 41.90405896699997,
+        "treated_end_to_end_wall_s": 30.14179429699999
+      },
+      {
+        "seed": 45,
+        "baseline_wall_s": 39.154643969000006,
+        "treated_end_to_end_wall_s": 23.84038044900001
+      },
+      {
+        "seed": 46,
+        "baseline_wall_s": 44.86536663100003,
+        "treated_end_to_end_wall_s": 27.99943683600003
+      },
+      {
+        "seed": 47,
+        "baseline_wall_s": 53.735197237999955,
+        "treated_end_to_end_wall_s": 40.35819754400001
+      }
+    ]
+  },
+  "orientation_control_1_3": {
+    "evidence_commit": "7bccc3e1be781b821190fcfff03fe6e339e7bd98",
+    "seeds": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+    ],
+    "classification": "ORIENTATION_SENSITIVE",
+    "forward": {
+      "paired_optimal": 7,
+      "wins": 7,
+      "losses": 0,
+      "baseline_median_wall_s": 49.59722618500001,
+      "treated_median_end_to_end_wall_s": 38.99439329799998,
+      "median_ratio": 0.8821403362922762,
+      "median_nodes": 1064,
+      "median_lp_iterations": 165463
+    },
+    "reverse": {
+      "paired_optimal": 6,
+      "wins": 3,
+      "losses": 3,
+      "baseline_median_wall_s": 50.044491553,
+      "treated_median_end_to_end_wall_s": 48.66921182099999,
+      "median_ratio": 0.9728159900571398,
+      "median_nodes": 1373.5,
+      "median_lp_iterations": 240546
+    }
+  },
+  "highs_cross_solver_1_0": {
+    "evidence_commit": "32e00dc8474dc287687b49437ad337908d287534",
+    "highs_version": "1.15.1",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "metric": "time_to_optimum",
+    "paired_optimal": 5,
+    "baseline_median_s": 17.108777075000006,
+    "treated_median_end_to_end_s": 19.315115481999996,
+    "paired_wins": 2,
+    "directional_cross_solver_positive": false
+  },
+  "lp_mechanism_0_1": {
+    "evidence_run_commit": "b8864f7195126b9805e6316af2e6c92302a7da39",
+    "baseline_lp_objective": 3801.4705882352955,
+    "single_breaker_lp_objective": 3801.4705882352946,
+    "double_breaker_lp_objective": 3801.4705882352946,
+    "interpretation": "No material root-LP objective change; observed SCIP effect is not explained by LP-bound strengthening."
+  },
+  "provenance": {
+    "originating_branch": "experiment/miplib-structural-presolve-20261006",
+    "graph_builder_optimization_evidence_commit": "ff854ff8189a5fdb5c3bb6ec20c2a7a0f64498d7",
+    "note": "This file is a convenience package. Originating research artifacts and raw workflow evidence remain the audit source."
+  },
+  "claim_boundary": [
+    "One exact treatment on one MIPLIB instance produced replicated performance improvement under SCIP.",
+    "The same exact treatment was not directionally positive under HiGHS.",
+    "Equivalent symmetry orientations were not performance-equivalent under SCIP.",
+    "This demo is not the full IsoGraph procedure and does not claim arbitrary-MIP speedup."
+  ]
+}
