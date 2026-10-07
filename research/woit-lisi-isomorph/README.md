@@ -95,6 +95,21 @@ The durable stop record is `experiments/062/W_G5_FIXED_POINT_0_1.json`. Its lawf
 
 **This subsection records W only. It does not adjudicate the L track and does not authorize cross-track comparison or unification synthesis.**
 
+### L track — current authority boundary
+
+L has independently completed the graph-first primitive-demand sequence through its **L-local G5** stage under Experiment 062, without using W evidence:
+
+- G1: source-local fixed point at `L_EXTRACTION_RECONCILED_0_25.json`, 151 unresolved L demand bodies / 818 semantic occurrences.
+- G2: verified neutral occurrence graph over the frozen L occurrence census.
+- G3: verified fixed point, **82 `CORE_CLOSED` / 736 `UNEXPANDED_DEMAND`**; no schema candidate and no qualified-QU boundary candidate.
+- G4: verified L-only alpha-renamed quotient, **345 structural classes** (282 singleton, 63 multi-member; largest 64), with exact rooted-isomorphism, duplicate-class exclusion, source-text relabel invariance, and deterministic replay.
+- G5: verified current-authority fixed point with **0 reusable candidate modules / 345 unresolved boundaries** after class-by-class, cross-class recurrence, and collective L-source sufficiency review.
+- L-local G6 has nothing to qualify. L primitive closure is **not complete**; recursive IA remains unauthorized and the L track is not sealed.
+
+The durable L stop record is `experiments/062/L_G5_FIXED_POINT_0_1.json`. Lawful resume requires new L source semantics, a separately qualified generic module, or a later lawfully authorized graph-first candidate independently qualified before L consumes it under G7.
+
+**W and L have each reached track-local current-authority G5 boundaries. This does not seal either track and does not authorize cross-track comparison, IA, or unification synthesis.**
+
 ## Anti-bias architecture
 
 The campaign has three logically separated surfaces.
