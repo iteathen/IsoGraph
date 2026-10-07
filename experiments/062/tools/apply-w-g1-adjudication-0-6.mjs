@@ -4,6 +4,7 @@ const predecessorPath='experiments/062/W_EXTRACTION_RECONCILED_0_5.json';
 const adjudicationPath='experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_6.json';
 const corpusPath='research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json';
 const outputPath='experiments/062/W_EXTRACTION_RECONCILED_0_6.json';
+// Successor generation is deterministic from the frozen predecessor plus committed adjudication.
 
 const predecessor=JSON.parse(fs.readFileSync(predecessorPath,'utf8'));
 const adjudication=JSON.parse(fs.readFileSync(adjudicationPath,'utf8'));
