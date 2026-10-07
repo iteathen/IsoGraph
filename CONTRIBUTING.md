@@ -123,6 +123,21 @@ Use `git commit -s` to add it automatically.
 
 Do not place credentials, private artifacts, personal data, unpublished scorer material intended to remain sealed, or sensitive security details in public issues or commits. Use GitHub's private security-advisory channel for security-sensitive reports.
 
-## License
+## License, copyright, and contribution rights
 
 Unless explicitly stated otherwise, contributions are accepted under the repository's AGPL-3.0 license.
+
+Before contributing, read:
+
+- `RIGHTS_AND_USE.md`;
+- `NOTICE`;
+- `LICENSE`;
+- `IDEA_PROVENANCE_POLICY.md` when the contribution changes major ideas, methods, or findings.
+
+Submitting a contribution under the repository license does **not** by itself transfer the contributor's copyright ownership to Joshua Oshiro or the IsoGraph Project. A copyright assignment or broader relicensing grant requires a separate written agreement where applicable.
+
+Contributors must have the right to submit their material and must identify third-party content or separate license obligations rather than silently importing them.
+
+If a future component is intended for dual licensing or proprietary relicensing, the project may require a separate contributor agreement before accepting contributions whose copyright would otherwise prevent that licensing.
+
+Modified specifications, forks, or derived documentation must not be presented as unchanged official IsoGraph qualifications. Follow the applicable license's modification/notice requirements and the project-identity boundary in `RIGHTS_AND_USE.md`.

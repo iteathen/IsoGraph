@@ -44,6 +44,24 @@ Historical attribution is evidence-scoped. The repository records the **earliest
 
 For example, the current record attributes the initial agent-context / research-direction problem to Joshua Oshiro, while the specific graph/hypergraph-rewrite substrate and the compact structure-plus-lawful-transformation formulation first appear as an AI-assistant proposal adopted and developed under Joshua's direction.
 
+## Rights, licensing, and project identity
+
+IsoGraph™ is a public specification- and research-driven project. Public availability of the specification does not place the repository's copyrightable text, diagrams, publications, code, or other protected expression into the public domain.
+
+The repository's existing AGPL-3.0 license remains controlling for covered copyrightable material unless a file states different terms. The project expressly distinguishes copyright in the **expression of the specifications** from the underlying ideas, procedures, processes, systems, methods, principles, discoveries, facts, and mathematical relationships that copyright law does not itself monopolize.
+
+Independent implementations may truthfully describe their relationship to the IsoGraph specifications, but the repository license does not authorize false claims that an independent implementation, fork, service, or publication is official, certified, sponsored, or endorsed by the IsoGraph Project or Joshua Oshiro.
+
+Current rights/identity entry points:
+
+- [Repository notice](NOTICE)
+- [Rights, Licensing, and Project Identity](RIGHTS_AND_USE.md)
+- [GNU Affero General Public License v3.0](LICENSE)
+- [IsoGraph Origin and Provenance](ORIGIN_AND_PROVENANCE.md)
+- [Publication Attribution Policy](PUBLICATION_ATTRIBUTION_POLICY.md)
+
+This notice does not retroactively rewrite frozen historical artifacts; current routing documents carry the notice while historical bytes remain preserved.
+
 ---
 IsoGraph is currently in **active research incubation**. Its qualified authority is modular:
 
