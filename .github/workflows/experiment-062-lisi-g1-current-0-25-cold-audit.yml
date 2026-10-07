@@ -1,0 +1,61 @@
+name: Experiment 062 L G1 current 0.25 cold audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-062-l-g1-current-0-25-cold-audit
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  EXP062_L_AUDIT_BATCH_SIZE: 10
+
+jobs:
+  audit-l-g1:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out live research branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: research/woit-lisi-isomorph-20261003
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Deterministic contract preflight
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin research/woit-lisi-isomorph-20261003
+          node --check experiments/062/tools/run-exp062-l-g1-final-audit-0-25.mjs
+          node experiments/062/tools/verify-l-extraction-reconciled-0-25.mjs
+          node experiments/062/tools/verify-l-current-stage-gate-0-1.mjs
+          test -f experiments/062/L_G1_COLD_AUDIT_0_25_CONTRACT_0_1.json
+          test -f experiments/062/L_G1_COMPLETE_REPEAT_AUDIT_0_1.json
+      - name: Audit all 151 current L G1 rows
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/062/tools/run-exp062-l-g1-final-audit-0-25.mjs
+      - name: Persist research evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/062/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -d out/exp062-l-g1-final-audit-0-25 ] && cp -R out/exp062-l-g1-final-audit-0-25 "$E/"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","track":"L","mode":"g1-final-completeness-audit-0-25","extraction":"L_EXTRACTION_RECONCILED_0_25.json","contract":"L_G1_COLD_AUDIT_0_25_CONTRACT_0_1.json"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL_L_G1_FINAL_AUDIT_0_25.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 062 L G1 current 0.25 cold audit run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi
