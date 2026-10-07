@@ -1,0 +1,81 @@
+{
+  "schema": "isograph.exp063-qualification-cases.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_QUALIFICATION_CASES",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "module_ssc": "experiments/063/MODULE_SSC_0_1.json",
+  "cases": [
+    {
+      "id": "Q01",
+      "kind": "positive",
+      "target": "all-zero first variations imply both stationarity predicates",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q02",
+      "kind": "positive",
+      "target": "one nonzero X-variation value makes STATX false while STATY remains true",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q03",
+      "kind": "positive",
+      "target": "one nonzero Y-variation value makes STATY false while STATX remains true",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q04",
+      "kind": "adversarial",
+      "target": "missing ACT tuple violates total-action obligation",
+      "expected": "REJECT_MODEL"
+    },
+    {
+      "id": "Q05",
+      "kind": "adversarial",
+      "target": "two VARX outputs for one input tuple violate single-valuedness",
+      "expected": "REJECT_MODEL"
+    },
+    {
+      "id": "Q06",
+      "kind": "adversarial",
+      "target": "VARX output outside scalar carrier violates typing",
+      "expected": "REJECT_MODEL"
+    },
+    {
+      "id": "Q07",
+      "kind": "adversarial",
+      "target": "same ACT with different lawful VARX/VARY models must not force one derivative semantics",
+      "expected": "PRESERVE_NONCLAIM"
+    },
+    {
+      "id": "Q08",
+      "kind": "reconstruction",
+      "target": "W-SSC-029 paired variation consequences fit the module roles without importing output-equation internals",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q09",
+      "kind": "reconstruction",
+      "target": "W-SSC-149 paired variation consequences fit the module roles without importing output-equation internals",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q10",
+      "kind": "adversarial-reconstruction",
+      "target": "all other W give/gives/giving occurrences remain outside the module instance predicate",
+      "expected": "PASS"
+    }
+  ],
+  "promotion_gate": {
+    "deterministic_required": true,
+    "cold_semantic_required": true,
+    "independent_promotion_verifier_required": true,
+    "allowed_final_dispositions": [
+      "QUALIFIED",
+      "QUALIFIED_WITH_EXPLICIT_SCOPE",
+      "DOES_NOT_QUALIFY",
+      "INCOMPLETE_EVIDENCE",
+      "INFRASTRUCTURE_FAILURE"
+    ]
+  }
+}
