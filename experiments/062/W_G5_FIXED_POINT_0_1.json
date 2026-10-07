@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.exp062-w-g5-fixed-point.v0.1",
+  "date": "2026-10-06",
+  "status": "W_LOCAL_G5_COMPLETE_CURRENT_AUTHORITY_BOUNDARY",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "input": {
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_1.json",
+      "git_blob_sha": "6d88102298f7605aef724d0fa95b5b658cfe1b8a"
+    },
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json",
+      "git_blob_sha": "ed2c107562f8b39196688121ef3c19995adb8ba9"
+    },
+    "source_sufficiency_review": {
+      "path": "experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json",
+      "git_blob_sha": "f6ea750e53057de9be8c0a55677b5fb9e28192d1"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs",
+      "git_blob_sha": "88660a2a6eab384edddbd2936920756a39ee5a2e"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37582081166,
+    "workflow_head_sha": "a2560b632947d617122c7dc783c25842a938c7e6",
+    "conclusion": "success",
+    "quotient_classes": 352,
+    "multi_member_classes": 28,
+    "uniform_multi_member_classes": 5,
+    "heterogeneous_multi_member_classes": 23,
+    "proposed_reusable_candidates": 0,
+    "unresolved_boundaries": 352
+  },
+  "fixed_point": {
+    "W_local_G5_complete": true,
+    "W_local_G6_required": false,
+    "W_track_primitive_closure_complete": false,
+    "W_track_IA_authorized": false,
+    "W_track_NEI_DTS_DP_authorized": false,
+    "W_track_sealed": false,
+    "cross_track_comparison_authorized": false,
+    "boundary_kind": "GENUINE_CURRENT_AUTHORITY_PRIMITIVE_DOMAIN_BOUNDARY"
+  },
+  "boundary_reason": "W-local G4 recurrence does not provide the missing semantic definitions identified by G3. Collective W-source review found no quotient class or cross-class recurrence family with enough frozen source semantics to state an exact reusable candidate expansion/reconstruction contract. Creating a named primitive/module here would add unstated semantics.",
+  "lawful_resume_conditions": [
+    "new frozen W source evidence supplies exact lower semantics for one or more unresolved boundaries",
+    "a separately qualified generic module supplies exact source-faithful semantics for one or more W residuals",
+    "or a later lawfully authorized cross-track graph-first candidate is independently qualified and then consumed by W under G7"
+  ],
+  "nonclaims": [
+    "The 352 boundaries are not proved irreducible.",
+    "No semantic extension is proved impossible.",
+    "G5 completion is not W primitive closure.",
+    "Recursive IA must not start on W at this boundary.",
+    "NEI, DTS, and Discovery Protocol must not be used to bypass this primitive-closure boundary.",
+    "Cross-track comparison remains unauthorized by this W-only record."
+  ]
+}
