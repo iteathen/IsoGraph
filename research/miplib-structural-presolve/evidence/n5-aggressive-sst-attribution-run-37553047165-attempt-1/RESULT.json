@@ -1,0 +1,66 @@
+{
+  "experiment": "n5-aggressive-scip-sst-attribution-0.7a",
+  "date": "2026-10-06",
+  "pyscipopt_version": "6.2.1",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "stage1": {
+    "vars": 2142,
+    "conss": 846
+  },
+  "analysis": {
+    "params": {
+      "misc/usesymmetry": 5,
+      "propagating/symmetry/symtiming": 2,
+      "propagating/symmetry/addstrongsbcs": true,
+      "propagating/symmetry/usedynamicprop": false
+    },
+    "transformed": {
+      "vars": 2142,
+      "conss": 848
+    },
+    "symmetry_named_constraints": [
+      {
+        "name": "SSTcut_161_166",
+        "handler": "linear",
+        "vars": [
+          "t_t_C0162",
+          "t_t_C0167"
+        ]
+      },
+      {
+        "name": "SSTcut_167_168",
+        "handler": "linear",
+        "vars": [
+          "t_t_C0168",
+          "t_t_C0169"
+        ]
+      }
+    ],
+    "exposure_errors": [],
+    "target_attribution": [
+      {
+        "target": [
+          "t_C0021",
+          "t_C0026"
+        ],
+        "constraints": [],
+        "direct": false
+      },
+      {
+        "target": [
+          "t_C0027",
+          "t_C0028"
+        ],
+        "constraints": [],
+        "direct": false
+      }
+    ],
+    "all_targets_direct": false,
+    "attribution_complete": true
+  },
+  "disposition": "PASS"
+}
