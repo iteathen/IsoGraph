@@ -1,0 +1,193 @@
+{
+  "experiment": "neos362-original-breaker-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/neos-3627168-kasai.mps.gz",
+    "gzip_sha256": "adf4a013825ad2932531128132c387eab68470ca087e23ea5cca4d2930954d7e",
+    "mps_sha256": "e0fce9d13f3ec671ad4f7964d1b01a398c9c5d128eca8ba40cf67a4949cca37e"
+  },
+  "mapping_gate": {
+    "licensed": true,
+    "selected_transformed": [
+      "t_C0001",
+      "t_C0003"
+    ],
+    "original_candidates": [
+      [
+        "C0001"
+      ],
+      [
+        "C0003"
+      ]
+    ],
+    "original_pair": [
+      "C0001",
+      "C0003"
+    ]
+  },
+  "exact": {
+    "chosen": {
+      "a_name": "t_C0001",
+      "b_name": "t_C0003",
+      "a_index": 865,
+      "b_index": 867,
+      "generator_index": 0,
+      "active_moved_variables": 1386,
+      "active_generator_count": 2
+    },
+    "generator_count": 2,
+    "graph_meta": {
+      "active_variables": 1400,
+      "dropped_export_only_variables": 59,
+      "rows": 1652,
+      "active_nonzeros": 4158,
+      "vertices": 7210,
+      "edges": 8316,
+      "color_classes": 36
+    }
+  },
+  "frontend": {
+    "scip_presolve_s": 0.03122414300000287,
+    "scip_export_s": 0.03742336700000237,
+    "highs_parse_s": 0.006535673000001907,
+    "sparse_materialize_s": 0.001693421999995337,
+    "bulk_graph_data_s": 0.0125659010000021,
+    "igraph_construct_s": 0.0009290399999954957,
+    "bliss_s": 0.0057610629999942375,
+    "replay_select_s": 0.012442419000002758,
+    "total_s": 0.12543250000000228
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 988598.82,
+        "dual": 980413.2160329652,
+        "gap": 0.008349136703966557,
+        "nodes": 472,
+        "lp_iterations": 158885,
+        "wall_s": 30.004844616000007
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 989561.1799999996,
+        "dual": 984389.315422815,
+        "gap": 0.0052538812603457885,
+        "nodes": 1068,
+        "lp_iterations": 132001,
+        "wall_s": 30.010977349
+      },
+      "ig_end_to_end_wall_s": 30.136409849000003
+    },
+    {
+      "seed": 1,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 990272.0299999994,
+        "dual": 981282.7496672819,
+        "gap": 0.009160744276576272,
+        "nodes": 2487,
+        "lp_iterations": 115138,
+        "wall_s": 30.005215633999995
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 990556.4299999994,
+        "dual": 979667.51265666,
+        "gap": 0.011114911133279046,
+        "nodes": 1706,
+        "lp_iterations": 115498,
+        "wall_s": 30.007796483000007
+      },
+      "ig_end_to_end_wall_s": 30.13322898300001
+    },
+    {
+      "seed": 2,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 990195.9799999996,
+        "dual": 974550.7229422391,
+        "gap": 0.016053815044666252,
+        "nodes": 817,
+        "lp_iterations": 112924,
+        "wall_s": 30.004804000999997
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 988598.8199999995,
+        "dual": 984830.1657565064,
+        "gap": 0.0038267047197911297,
+        "nodes": 1804,
+        "lp_iterations": 121960,
+        "wall_s": 30.00717614199999
+      },
+      "ig_end_to_end_wall_s": 30.132608641999994
+    },
+    {
+      "seed": 3,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 988598.82,
+        "dual": 983417.5390610512,
+        "gap": 0.005268648090103954,
+        "nodes": 1724,
+        "lp_iterations": 124789,
+        "wall_s": 30.004569954000004
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 990599.18,
+        "dual": 970866.3285539018,
+        "gap": 0.020324993117734586,
+        "nodes": 42,
+        "lp_iterations": 134002,
+        "wall_s": 30.007496952999986
+      },
+      "ig_end_to_end_wall_s": 30.13292945299999
+    },
+    {
+      "seed": 4,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 989690.0799999995,
+        "dual": 979901.160395393,
+        "gap": 0.009989701002758894,
+        "nodes": 2010,
+        "lp_iterations": 133499,
+        "wall_s": 30.005060061999984
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 989235.86,
+        "dual": 984217.7035130056,
+        "gap": 0.00509862449037734,
+        "nodes": 1145,
+        "lp_iterations": 114105,
+        "wall_s": 30.006441209000002
+      },
+      "ig_end_to_end_wall_s": 30.131873709000004
+    }
+  ],
+  "summary": {
+    "metric": "final_gap",
+    "paired_optimal": 0,
+    "baseline_median_metric": 0.009160744276576272,
+    "ig_median_metric": 0.0052538812603457885,
+    "paired_wins": 3,
+    "median_ratio": null,
+    "directional_positive": false,
+    "frontend_wall_s": 0.12543250000000228,
+    "baseline_median_nodes": 1724,
+    "ig_median_nodes": 1145,
+    "baseline_median_lp": 124789,
+    "ig_median_lp": 121960
+  },
+  "status": "BENCHMARKED",
+  "disposition": "PASS"
+}
