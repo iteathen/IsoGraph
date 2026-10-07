@@ -80,35 +80,41 @@ See FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md, woit/README.md, and lisi/README.md.
 
 ## Current graph-first source-treatment checkpoint
 
-### W track — current authority boundary
+### W track — corrected-input variation boundary
 
-W has completed the graph-first primitive-demand sequence through its **W-local G5** stage under Experiment 062, without using L evidence:
+W has replayed the graph-first primitive-demand sequence after a targeted source-granularity correction to the already-frozen W01/W02 corpus, without using L evidence:
 
-- G1: source-local fixed point at `W_EXTRACTION_RECONCILED_0_18.json`, 84 unresolved W bodies / 425 occurrences. The campaign used a one-time owner waiver to skip the unavailable independent cold audit; that exception does not amend the general graph-first method.
-- G2: verified neutral occurrence graph, 1,296 nodes / 1,208 edges.
-- G3: verified fixed point, 13 `CORE_CLOSED` and 412 `UNEXPANDED_DEMAND`; no schema or QU candidate.
-- G4: verified W-only alpha-renamed quotient, 352 structural classes (324 singleton, 28 multi-member), with source-text relabel invariance and exact rooted-isomorphism checks.
-- G5: verified current-authority fixed point with **0 reusable candidate modules / 352 unresolved boundaries** after collective W-source sufficiency review.
-- W primitive closure is therefore **not complete**. W-local G6 has nothing to qualify, recursive IA remains unauthorized, and the W track is not sealed.
+- G1: corrected source-local fixed point at `W_EXTRACTION_RECONCILED_0_21.json`, 84 unresolved W bodies / **443 occurrences**. Only W-SSC-029 and W-SSC-149 changed; 82 bodies were exact carry-forwards. The active owner bypass skips unavailable third-party verification only; source conservation and deterministic replay remain satisfied.
+- G2: corrected neutral occurrence graph with **443 occurrence nodes, 903 ordered argument slots, and 366 dependency edges**.
+- G3: corrected fixed point with **13 `CORE_CLOSED` / 430 `UNEXPANDED_DEMAND`**; no schema or QU candidate.
+- G4: corrected W-only alpha-renamed quotient with **370 structural classes** (342 singleton, 28 multi-member; largest 12), exact rooted-isomorphism verification, and source/candidate text excluded from quotient keys.
+- G5: deterministic corrected-input synthesis found **0 reusable candidates / 370 unresolved boundaries**. The four target variation consequences now occupy four distinct quotient classes, so their common `gives` wording is provenance recurrence only.
+- G5H: five lower variation-layer hypotheses were explicitly tested. Incidence-only closure failed exact reconstruction; an opaque `VARIES_TO` relation failed No-Evasion; controlled perturbation/replacement required unstated source behavior; the equations-of-motion bridge failed scope plus No-Evasion; and primitive 211000 retained its prior W source-instance mismatch. **No hypothesis survived to G6.**
 
-The durable stop record is `experiments/062/W_G5_FIXED_POINT_0_1.json`. Its lawful resume conditions require new W source semantics, a separately qualified generic module, or a later lawfully authorized graph-first candidate that is independently qualified before W consumes it under G7.
+The durable W stop records are `experiments/062/W_G5H_VARIATION_LAYER_FALSIFICATION_0_1.json` and `experiments/062/W_G5H_VARIATION_FIXED_POINT_0_1.json`. The controlling boundary is:
 
-**This subsection records W only. It does not adjudicate the L track and does not authorize cross-track comparison or unification synthesis.**
+`SOURCE_INFORMATION_AND_INTERNAL_VARIATION_SEMANTICS_BOUNDARY`
 
-### L track — current authority boundary
+The missing load-bearing layer is the internal selected-role variation operation itself. The current W source supports action/field/result incidence and, on W01, an explicit torsion equation and equation-to-Levi-Civita consequence, but it does not define perturbation/replacement carriers, held-fixed semantics, before/after action evaluation, total first variations, or zero/universal stationarity semantics.
 
-L has independently completed the graph-first primitive-demand sequence through its **L-local G5** stage under Experiment 062, without using W evidence:
+W primitive closure is therefore **not complete**. Recursive W IA remains unauthorized, W is not sealed, and cross-track comparison remains forbidden. This boundary is not mathematical irreducibility: it may reopen on new authoritative W source semantics, a separately qualified generic variation module that W can actually instantiate, or a genuinely new W-only hypothesis that survives Method-0.3 falsifiers.
 
-- G1: source-local fixed point at `L_EXTRACTION_RECONCILED_0_25.json`, 151 unresolved L demand bodies / 818 semantic occurrences.
-- G2: verified neutral occurrence graph over the frozen L occurrence census.
-- G3: verified fixed point, **82 `CORE_CLOSED` / 736 `UNEXPANDED_DEMAND`**; no schema candidate and no qualified-QU boundary candidate.
-- G4: verified L-only alpha-renamed quotient, **345 structural classes** (282 singleton, 63 multi-member; largest 64), with exact rooted-isomorphism, duplicate-class exclusion, source-text relabel invariance, and deterministic replay.
-- G5: verified current-authority fixed point with **0 reusable candidate modules / 345 unresolved boundaries** after class-by-class, cross-class recurrence, and collective L-source sufficiency review.
-- L-local G6 has nothing to qualify. L primitive closure is **not complete**; recursive IA remains unauthorized and the L track is not sealed.
+**This subsection records W only. No L semantics or L provisional authority were used to reach it.**
 
-The durable L stop record is `experiments/062/L_G5_FIXED_POINT_0_1.json`. Lawful resume requires new L source semantics, a separately qualified generic module, or a later lawfully authorized graph-first candidate independently qualified before L consumes it under G7.
+### L track — concurrent Method-0.3 continuation
 
-**W and L have each reached track-local current-authority G5 boundaries. This does not seal either track and does not authorize cross-track comparison, IA, or unification synthesis.**
+The earlier L-local G5 fixed point remains historical evidence for its original deterministic pass, but L has since been **targetedly reopened by a separate concurrent agent under Method 0.3**. This W session does not consume that work.
+
+Current preserved L evidence shows:
+
+- a source-local dependency cone around L125–L130 was reopened;
+- campaign-local hypothesis-qualified field/vector, linear-basis, and triple-role support were used in targeted G7 replay;
+- `L_G7_DEPENDENCY_CONE_REPLAY_0_2.json` records **8 reopened occurrences closed / 20 still unexpanded**, including targeted closure of L128;
+- the next lower residual family was identified as bilinear product / composition-algebra / anti-involution support;
+- `L_G5H_COMPOSITION_ALGEBRA_SUPPORT_0_1.json` is a hypothesis candidate and `L_G6_COMPOSITION_ALGEBRA_MODULE_IA_FIXED_POINT_0_1.json` has reached its **module-local IA fixed point**;
+- deterministic G6 qualification for that composition-algebra candidate was not yet present at the last live sync used for this dossier update.
+
+This is an **in-progress L continuation**, not authority available to W and not authorization for cross-track comparison.
 
 ### G5 fixed points do not prohibit hypothesis-driven discovery
 
