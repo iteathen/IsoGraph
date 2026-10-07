@@ -1,0 +1,40 @@
+{
+  "schema": "isograph.exp062-w-g2-fixed-point.v0.2",
+  "date": "2026-10-07",
+  "status": "W_G2_CORRECTED_INPUT_COMPLETE_W_LOCAL_G3_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_2.json",
+    "git_blob_sha": "6235ff8ec39081a0f97fded5e59c56a4d4c8360b"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w-g2-neutral-occurrence-graph-0-2.mjs",
+    "git_blob_sha": "4d187ed738dad98340f5a1be5fa15d460c1d9151",
+    "workflow_run_id": 37667227929,
+    "conclusion": "success"
+  },
+  "counts": {
+    "frozen_bodies": 84,
+    "semantic_occurrence_nodes": 443,
+    "ordered_argument_slot_nodes": 903,
+    "total_nodes": 1346,
+    "ordered_argument_edges": 903,
+    "dependency_edges": 366,
+    "total_edges": 1269
+  },
+  "fixed_point": {
+    "W_G2_complete": true,
+    "W_local_G3_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "W_recursive_IA_authorized": false
+  },
+  "nonclaims": [
+    "G2 assigns no Core-definability disposition.",
+    "G2 supplies no candidate primitive semantics.",
+    "External third-party semantic verification remains incomplete under the owner bypass."
+  ],
+  "next_stage": "W_G3_QUALIFIED_CORE_DEFINABILITY_CORRECTED_INPUT"
+}
