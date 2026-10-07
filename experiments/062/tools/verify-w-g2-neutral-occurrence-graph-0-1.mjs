@@ -126,9 +126,6 @@ const structuralProjection={
   status:graph.status,
   track:graph.track,
   gate:graph.gate,
-  semantics:{
-    forbidden_inference:graph.semantics?.forbidden_inference
-  },
   counts:graph.counts,
   items:graph.items.map(item=>({
     census_id:item.census_id,
