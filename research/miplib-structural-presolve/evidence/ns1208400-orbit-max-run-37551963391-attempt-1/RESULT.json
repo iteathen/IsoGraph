@@ -1,0 +1,154 @@
+{
+  "experiment": "ns1208400-orbit-max-holdout-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/ns1208400.mps.gz",
+    "gzip_sha256": "993b8f2dce018d3d339334345eb22db979089318e708c45cfbed28b988e4d145",
+    "mps_sha256": "7fb147bfe61f8b028dca80f6b7648a7c82e5dc377885808df18bd3e93704d06d"
+  },
+  "stage1": {
+    "vars": 2596,
+    "conss": 1981,
+    "presolve_wall_s": 0.0802145399999965
+  },
+  "linearized": {
+    "rows": 1981,
+    "cols": 2880,
+    "nonzeros": 73620
+  },
+  "active_graph": {
+    "active_variables": 2596,
+    "dropped_export_only_variables": 284,
+    "rows": 1981,
+    "active_nonzeros": 73620,
+    "vertices": 78197,
+    "edges": 147240,
+    "color_classes": 11
+  },
+  "group": {
+    "generator_count": 7,
+    "active_generator_count": 7,
+    "bliss_wall_s": 0.12530060100000284,
+    "nontrivial_orbit_count": 374,
+    "largest_orbit_size": 24,
+    "representative": "t_C0104",
+    "orbit_names": [
+      "t_C0104",
+      "t_C0124",
+      "t_C0204",
+      "t_C0584",
+      "t_C0604",
+      "t_C0684",
+      "t_C0824",
+      "t_C0844",
+      "t_C0924",
+      "t_C1304",
+      "t_C1324",
+      "t_C1404",
+      "t_C1444",
+      "t_C1484",
+      "t_C1504",
+      "t_C1544",
+      "t_C1684",
+      "t_C1724",
+      "t_C1744",
+      "t_C1784",
+      "t_C2644",
+      "t_C2684",
+      "t_C2704",
+      "t_C2744"
+    ]
+  },
+  "structural_frontend_wall_s": 1.3793907910000023,
+  "trials": [
+    {
+      "seed": 3,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 155,
+        "lp_iterations": 203892,
+        "wall_s": 45.000565679000005,
+        "added_constraints": 0
+      },
+      "orbit_max": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 202,
+        "lp_iterations": 204695,
+        "wall_s": 45.000241157999994,
+        "added_constraints": 23
+      },
+      "ig_end_to_end_wall_s": 46.379631949
+    },
+    {
+      "seed": 4,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 250,
+        "lp_iterations": 223173,
+        "wall_s": 45.000209385999995,
+        "added_constraints": 0
+      },
+      "orbit_max": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 170,
+        "lp_iterations": 352155,
+        "wall_s": 45.00024282999999,
+        "added_constraints": 23
+      },
+      "ig_end_to_end_wall_s": 46.379633620999996
+    },
+    {
+      "seed": 5,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 178,
+        "lp_iterations": 302891,
+        "wall_s": 45.00025205700001,
+        "added_constraints": 0
+      },
+      "orbit_max": {
+        "status": "timelimit",
+        "primal": 1e+20,
+        "dual": 0.0,
+        "gap": 1e+20,
+        "bound_width": 1e+20,
+        "nodes": 237,
+        "lp_iterations": 325787,
+        "wall_s": 45.000153108000006,
+        "added_constraints": 23
+      },
+      "ig_end_to_end_wall_s": 46.37954389900001
+    }
+  ],
+  "summary": {
+    "finite_pairs": 3,
+    "baseline_median_gap": 1e+20,
+    "ig_median_gap": 1e+20,
+    "paired_gap_wins": 0,
+    "status": "NO_DIRECTIONAL_WIN"
+  },
+  "disposition": "PASS"
+}
