@@ -1,0 +1,222 @@
+{
+  "schema": "isograph.exp062-composition-algebra-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "COMPOSITION_ALGEBRA_SUPPORT_0_1",
+  "branch_head_at_creation": "7fe9648e47801b8b4f042d75e92c28c629943520",
+  "hypothesis_origin": {
+    "path": "experiments/062/L_G5H_COMPOSITION_ALGEBRA_SUPPORT_0_1.json",
+    "git_blob_sha": "12e45544e3f48c59347612c1dfecd2ab2987e431"
+  },
+  "scope": {
+    "obligation_count": 32,
+    "selected_relation_ids": [
+      184003,
+      185001,
+      185002,
+      185003,
+      188000,
+      215001
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "CA-SSC-001",
+      "kind": "BILINEAR_PRODUCT_FUNCTION",
+      "body": "184003 requires PROD:V×V->V to be total and single-valued.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-002",
+      "kind": "BILINEAR_PRODUCT_FIRST_ADD",
+      "body": "184003 requires (u+v)w=uw+vw.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-003",
+      "kind": "BILINEAR_PRODUCT_FIRST_SCALE",
+      "body": "184003 requires (a u)w=a(uw).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-004",
+      "kind": "BILINEAR_PRODUCT_SECOND_ADD",
+      "body": "184003 requires u(v+w)=uv+uw.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-005",
+      "kind": "BILINEAR_PRODUCT_SECOND_SCALE",
+      "body": "184003 requires u(a v)=a(uv).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-006",
+      "kind": "ASSOCIATIVE_ALGEBRA_PRODUCT",
+      "body": "185001 includes exact 184003 bilinear product support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-007",
+      "kind": "ASSOCIATIVE_ALGEBRA_UNIT_MEMBER",
+      "body": "185001 requires UNIT to lie in the algebra carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-008",
+      "kind": "ASSOCIATIVE_ALGEBRA_UNIT_LAWS",
+      "body": "185001 requires UNIT*x=x and x*UNIT=x for admitted x.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-009",
+      "kind": "ASSOCIATIVE_ALGEBRA_ASSOCIATIVITY",
+      "body": "185001 requires (xy)z=x(yz).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-010",
+      "kind": "QUADRATIC_FORM_VECTOR",
+      "body": "185002 requires the admitted vector presentation.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-011",
+      "kind": "QUADRATIC_FORM_BILINEAR",
+      "body": "185002 requires exact scalar-valued bilinear B.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-012",
+      "kind": "QUADRATIC_FORM_Q_FUNCTION",
+      "body": "185002 requires total single-valued Q:V->C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-013",
+      "kind": "QUADRATIC_FORM_SYMMETRY",
+      "body": "185002 requires B(u,v)=B(v,u).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-014",
+      "kind": "QUADRATIC_FORM_DIAGONAL",
+      "body": "185002 requires Q(v)=B(v,v).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-015",
+      "kind": "QUADRATIC_FORM_NONDEGENERACY",
+      "body": "185002 requires a vector pairing to scalar zero with every admitted w to be the vector zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-016",
+      "kind": "COMPOSITION_PRODUCT",
+      "body": "185003 requires exact 184003 bilinear product support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-017",
+      "kind": "COMPOSITION_FORM",
+      "body": "185003 requires exact 185002 B/Q presentation.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-018",
+      "kind": "COMPOSITION_UNIT",
+      "body": "185003 requires a represented unit with left/right unit laws.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-019",
+      "kind": "COMPOSITION_NORM_MULTIPLICATIVITY",
+      "body": "185003 requires Q(xy)=Q(x)Q(y).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-020",
+      "kind": "COMPOSITION_NO_ASSOCIATIVITY",
+      "body": "185003 does not require associativity.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-021",
+      "kind": "ASSOCIATIVE_ANTIINVOLUTION_PARENT",
+      "body": "188000 requires exact 185001 associative-algebra support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-022",
+      "kind": "ASSOCIATIVE_ANTIINVOLUTION_LINEAR",
+      "body": "188000 requires exact linear KAPPA:A->A.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-023",
+      "kind": "ASSOCIATIVE_ANTIINVOLUTION_UNIT",
+      "body": "188000 requires KAPPA(UNIT)=UNIT.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-024",
+      "kind": "ASSOCIATIVE_ANTIINVOLUTION_INVOLUTION",
+      "body": "188000 requires KAPPA(KAPPA(x))=x.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-025",
+      "kind": "ASSOCIATIVE_ANTIINVOLUTION_ORDER_REVERSAL",
+      "body": "188000 requires KAPPA(xy)=KAPPA(y)KAPPA(x).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-026",
+      "kind": "COMPOSITION_ANTIINVOLUTION_PARENT",
+      "body": "215001 requires exact 185003 composition-algebra support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-027",
+      "kind": "COMPOSITION_ANTIINVOLUTION_LINEAR",
+      "body": "215001 requires exact linear KAPPA:A->A.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-028",
+      "kind": "COMPOSITION_ANTIINVOLUTION_UNIT",
+      "body": "215001 requires KAPPA(UNIT)=UNIT.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-029",
+      "kind": "COMPOSITION_ANTIINVOLUTION_INVOLUTION",
+      "body": "215001 requires KAPPA(KAPPA(x))=x.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-030",
+      "kind": "COMPOSITION_ANTIINVOLUTION_ORDER_REVERSAL",
+      "body": "215001 requires KAPPA(xy)=KAPPA(y)KAPPA(x).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-031",
+      "kind": "COMPOSITION_ANTIINVOLUTION_NORM",
+      "body": "215001 requires Q(KAPPA(x))=Q(x).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "CA-SSC-032",
+      "kind": "SCOPE_EXCLUSION",
+      "body": "No division, positivity/split, alternativity, Moufang, uniqueness, named-algebra identity, triality, recovery, reflection, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "closure_rule": "All 32 obligations must reconstruct from the six selected exact relation bodies and already-provisional dependencies. The associative and nonassociative-compatible anti-involution routes remain distinct.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
