@@ -1,0 +1,235 @@
+{
+  "experiment": "mcsched-original-s2-0.3",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+    "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+    "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+  },
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0000186": {
+        "original": {
+          "name": "C0000186",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "transformed": {
+          "name": "t_C0000186",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "expected_transformed_name": "t_C0000186",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0001396": {
+        "original": {
+          "name": "C0001396",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "transformed": {
+          "name": "t_C0001396",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "expected_transformed_name": "t_C0001396",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "exact": {
+    "chosen": {
+      "a_name": "t_C0000186",
+      "b_name": "t_C0001396",
+      "a_index": 157,
+      "b_index": 1182,
+      "generator_index": 14,
+      "active_moved_variables": 6,
+      "active_generator_count": 15
+    },
+    "generator_count": 15,
+    "graph_meta": {
+      "active_variables": 1495,
+      "dropped_export_only_variables": 78,
+      "rows": 1853,
+      "active_nonzeros": 4507,
+      "vertices": 7855,
+      "edges": 9014,
+      "color_classes": 98
+    }
+  },
+  "frontend": {
+    "scip_presolve_s": 0.04887660300000363,
+    "scip_export_s": 0.024668036000001337,
+    "highs_parse_s": 0.006383765999999014,
+    "sparse_materialize_s": 0.001933893000000353,
+    "bulk_graph_data_s": 0.012659156999994536,
+    "igraph_construct_s": 0.001024250000000393,
+    "bliss_s": 0.005694726000001538,
+    "replay_select_s": 0.03423186200000572,
+    "total_s": 0.14801817300000408
+  },
+  "trials": [
+    {
+      "seed": 13,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 211936.0,
+        "dual": 196845.4364672593,
+        "gap": 0.07666199330585273,
+        "bound_width": 15090.563532740693,
+        "nodes": 1486,
+        "lp_iterations": 198225,
+        "wall_s": 60.00622308400001
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 211913.0,
+        "dual": 196282.23889209464,
+        "gap": 0.07963410849668526,
+        "bound_width": 15630.76110790536,
+        "nodes": 1153,
+        "lp_iterations": 175493,
+        "wall_s": 60.011229264
+      },
+      "ig_end_to_end_wall_s": 60.159247437000005
+    },
+    {
+      "seed": 14,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 212833.0,
+        "dual": 196384.00560652395,
+        "gap": 0.08375933845872024,
+        "bound_width": 16448.994393476052,
+        "nodes": 1916,
+        "lp_iterations": 221465,
+        "wall_s": 60.006717194000004
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 211966.0,
+        "dual": 196548.0690104167,
+        "gap": 0.07844356379184876,
+        "bound_width": 15417.930989583314,
+        "nodes": 1408,
+        "lp_iterations": 191191,
+        "wall_s": 60.01111611599998
+      },
+      "ig_end_to_end_wall_s": 60.15913428899999
+    },
+    {
+      "seed": 15,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 211955.0,
+        "dual": 196751.7317943836,
+        "gap": 0.0772713310676454,
+        "bound_width": 15203.26820561639,
+        "nodes": 2011,
+        "lp_iterations": 241860,
+        "wall_s": 60.00644507300001
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 212882.0,
+        "dual": 196698.46989865374,
+        "gap": 0.08227583117288409,
+        "bound_width": 16183.53010134626,
+        "nodes": 2027,
+        "lp_iterations": 212176,
+        "wall_s": 60.00896507199997
+      },
+      "ig_end_to_end_wall_s": 60.15698324499997
+    },
+    {
+      "seed": 16,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 211913.0,
+        "dual": 197964.79945799458,
+        "gap": 0.0704579833394322,
+        "bound_width": 13948.20054200542,
+        "nodes": 1873,
+        "lp_iterations": 197297,
+        "wall_s": 60.006491659999995
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 211913.0,
+        "dual": 197402.3694411987,
+        "gap": 0.07350788442852835,
+        "bound_width": 14510.630558801291,
+        "nodes": 1561,
+        "lp_iterations": 188635,
+        "wall_s": 60.00865961400001
+      },
+      "ig_end_to_end_wall_s": 60.156677787000014
+    },
+    {
+      "seed": 17,
+      "order": "ig_first",
+      "baseline": {
+        "status": "timelimit",
+        "objective": 212797.0,
+        "dual": 197598.9534680171,
+        "gap": 0.07691359830224412,
+        "bound_width": 15198.046531982895,
+        "nodes": 1708,
+        "lp_iterations": 202581,
+        "wall_s": 60.00628338000001
+      },
+      "ig": {
+        "status": "timelimit",
+        "objective": 211913.0,
+        "dual": 196746.22931896884,
+        "gap": 0.07708798655776268,
+        "bound_width": 15166.770681031165,
+        "nodes": 1153,
+        "lp_iterations": 185985,
+        "wall_s": 60.008375883999975
+      },
+      "ig_end_to_end_wall_s": 60.15639405699998
+    }
+  ],
+  "summary": {
+    "metric": "final_gap",
+    "paired_optimal": 0,
+    "baseline_median_metric": 0.07691359830224412,
+    "ig_median_metric": 0.07844356379184876,
+    "paired_wins": 1,
+    "median_ratio": null,
+    "directional_positive": false,
+    "frontend_wall_s": 0.14801817300000408,
+    "baseline_median_nodes": 1873,
+    "ig_median_nodes": 1408,
+    "baseline_median_lp": 202581,
+    "ig_median_lp": 188635
+  },
+  "status": "BENCHMARKED",
+  "disposition": "PASS"
+}
