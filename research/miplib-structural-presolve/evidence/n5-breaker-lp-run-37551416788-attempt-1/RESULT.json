@@ -1,0 +1,54 @@
+{
+  "experiment": "n5-breaker-lp-mechanism-0.1",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "stage1": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_s": 0.029175
+  },
+  "exact": {
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ]
+  },
+  "baseline": {
+    "status": "Optimal",
+    "objective": 3801.4705882352955,
+    "simplex_iterations": 644,
+    "wall_s": 0.0120161870000004,
+    "added_breakers": 0
+  },
+  "single": {
+    "status": "Optimal",
+    "objective": 3801.4705882352946,
+    "simplex_iterations": 605,
+    "wall_s": 0.009732397000000503,
+    "added_breakers": 1
+  },
+  "double": {
+    "status": "Optimal",
+    "objective": 3801.4705882352946,
+    "simplex_iterations": 613,
+    "wall_s": 0.00959289000000041,
+    "added_breakers": 2
+  },
+  "objective_deltas": {
+    "single_minus_baseline": -9.094947017729282e-13,
+    "double_minus_baseline": -9.094947017729282e-13
+  },
+  "disposition": "PASS"
+}
