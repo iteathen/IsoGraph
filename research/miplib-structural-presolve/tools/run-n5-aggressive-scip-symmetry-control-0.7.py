@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import gzip, hashlib, json, math, time, urllib.request
+import gzip, hashlib, json, math, statistics, time, urllib.request
 from pathlib import Path
 
 import highspy
