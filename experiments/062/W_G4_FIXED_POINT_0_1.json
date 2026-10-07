@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-w-g4-fixed-point.v0.1",
+  "date": "2026-10-06",
+  "status": "W_G4_FIXED_POINT_COMPLETE_W_LOCAL_G5_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "comparison_scope": "W_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "input": {
+    "g3_fixed_point": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_5.json",
+      "git_blob_sha": "bde960cd84f532ec6e775e84319b94a4a6009275"
+    },
+    "g4_quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_1.json",
+      "git_blob_sha": "9851f6fd5e3c7888bde5609023e1c02ac25a086f"
+    },
+    "generator": {
+      "path": "experiments/062/tools/generate-w-g4-alpha-structural-quotient-0-1.mjs",
+      "git_blob_sha": "e0bd74d9a63ca0ba0ffac70d7a29bfea3399afbf"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g4-alpha-structural-quotient-0-1.mjs",
+      "git_blob_sha": "755bcd8823ff4c906588ad2e8d149232f2cf1ed2"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37581387257,
+    "workflow_head_sha": "83f86b94155cb9c68c22f3534448a77c45d15089",
+    "conclusion": "success",
+    "unresolved_roots": 412,
+    "core_closed_roots": 13,
+    "quotient_classes": 352,
+    "singleton_classes": 324,
+    "multi_member_classes": 28,
+    "largest_class_size": 12,
+    "exact_class_internal_isomorphism": true,
+    "duplicate_isomorphic_class_check": true,
+    "source_text_relabel_invariance": true,
+    "deterministic_replay_exact": true
+  },
+  "fixed_point": {
+    "W_G4_complete": true,
+    "W_local_G5_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "global_G5_authorized": false,
+    "reason": "The exact W-only quotient covers every and only UNEXPANDED_DEMAND root, class membership is exact rooted graph isomorphism after alpha-renaming, source wording is absent from the structural key, and deterministic replay is zero-diff."
+  },
+  "constraints": [
+    "G5 may consume only the frozen W quotient and exact W source/G3 provenance needed to interpret residual behavior.",
+    "A G4 class is structural equivalence only. It does not establish semantic equivalence among its members.",
+    "No L evidence or cross-track correspondence may enter W-local G5.",
+    "No candidate becomes authority by being minimal, frequent, or structurally repeated.",
+    "Singleton and multi-member classes alike require G5 reduction against qualified Core/already-qualified generic modules before any new candidate is proposed."
+  ],
+  "next_stage": "W_LOCAL_G5_CANDIDATE_BASIS_SYNTHESIS"
+}
