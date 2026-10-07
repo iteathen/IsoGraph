@@ -19,7 +19,7 @@ Therefore:
 - W remains at 67/151 primitive-closed and L at 40/191 primitive-closed;
 - recursive IA, NEI, DTS, DP, and W/L consumption of any candidate module remain blocked.
 
-The governing replacement procedure is `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md`.
+The governing replacement procedure is `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md`. Version 0.2 remains historical predecessor evidence.
 
 ## Frozen input
 
@@ -36,11 +36,34 @@ G0 frozen unresolved corpus + exact qualified authority
 -> G3 exact qualified-Core definability marking
 -> G4 alpha-renamed structural quotient
 -> G5 candidate basis synthesis
--> G6 independent module qualification
+-> G5H lawful hypothesis generation / guess-and-test where warranted
+-> G6 independent qualification with hypothesis provenance retained
 -> G7 source-track reopening only for explicitly dependent bodies
 ```
 
 Candidate primitive/schema classes may not be named, selected, or attached before G4 exists.
+
+## Hypothesis / qualification rule
+
+A G5 current-authority fixed point is not a claim that no further discovery is possible. When a material residual remains, the lawful next move may be an explicitly provisional hypothesis generated under the campaign's information firewall and, where applicable, a qualified DP 0.10 Experimental Warrant / EI 0.1 inquiry.
+
+The states must remain distinct:
+
+```text
+HYPOTHESIS_CANDIDATE
+    -> discovery evidence only
+
+tested + independently qualified + explicitly promoted exact revision
+    -> usable authority within the qualified scope
+
+HYPOTHESIS_QUALIFIED
+    -> retained provenance/qualification label
+    -> not a new Core truth value
+```
+
+Qualification may make a hypothesis-derived result authoritative for downstream use. It does not rewrite its origin. The candidate statement, motivating evidence, adaptive selection evidence, controls, falsifiers, fresh-confirmation status, coverage limits, and rejected predecessors remain part of the authority lineage.
+
+See `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md`.
 
 ## G1 working pass
 
@@ -83,7 +106,8 @@ Historical W/L closure packets and campaign-specific schemas remain evidence onl
 ## Provenance / correction pointers
 
 - `PRIMITIVE_DEMAND_REGROUNDING_AUDIT_0_1.json` — authority-routing and circularity correction.
-- `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md` — current graph-first procedure.
+- `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md` — current graph-first procedure with explicit guess/test qualification and retained hypothesis provenance.
+- `PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md` — historical predecessor procedure.
 - `dnwf/DNWF_0_1_QUALIFICATION_REVIEW_0_1.md` / `.json` — immutable DNWF terminal negative evidence.
 
 This dossier is research access/provenance, not semantic authority.
