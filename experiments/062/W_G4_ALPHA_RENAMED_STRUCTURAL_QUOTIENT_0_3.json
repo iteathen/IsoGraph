@@ -29,16 +29,16 @@
   },
   "canonicalization": {
     "root_scope": "Each UNEXPANDED_DEMAND occurrence is a root in its complete same-body dependency-connected occurrence component.",
-    "alpha_renaming": "Source referent text is removed from comparison. Within one occurrence only, exact repeated argument spans are conserved as a local equality pattern; no identity is inferred across occurrences.",
+    "alpha_renaming": "Source referent text is removed from comparison. Within one occurrence only, exact repeated argument spans are conserved as a local equality pattern of fresh integer variables; no identity is inferred across occurrences.",
     "retained_structure": [
       "root position",
-      "G3 closure state",
-      "generic G1 logical force/polarity",
+      "G3 closure state: UNEXPANDED_DEMAND or CORE_CLOSED_BOUNDARY",
+      "generic G1 logical force/polarity descriptor",
       "ordered argument arity",
-      "within-occurrence local argument identity pattern",
+      "within-occurrence local argument identity repetition pattern",
       "directed dependency incidence",
       "dependency position/multiplicity",
-      "full dependency-connected component including Core-closed boundaries"
+      "full dependency-connected component including Core-closed context boundaries"
     ],
     "omitted_from_keys": [
       "source_span",
@@ -48,14 +48,16 @@
       "census_id",
       "occurrence_id",
       "source-domain nouns",
-      "candidate labels"
+      "historical demand categories",
+      "candidate-basis labels"
     ],
-    "exact_match_rule": "Hashed iterative refinement is only a prefilter; class membership requires exact rooted labeled directed-graph isomorphism.",
-    "source_order_role": "Frozen W occurrence order determines deterministic numbering/provenance order only."
+    "binding_status": "Corrected W G1 provides no explicit binder table; no binder ownership is invented.",
+    "exact_match_rule": "Hashed iterative refinement is only a prefilter. Class membership requires exact rooted labeled directed-graph isomorphism by backtracking against the class representative.",
+    "source_order_role": "Frozen corrected W occurrence order determines deterministic class numbering/provenance order only; it is not part of the structural isomorphism key."
   },
   "forbidden_evidence": [
     "No L occurrence, graph, or cross-track correspondence is read.",
-    "No historical W G4/G5/G5H candidate or class ID is used.",
+    "No W G5/G6/G7 hypothesis or candidate ID is used.",
     "No relation/source word is used as an isomorphism key.",
     "No conventional mathematical category is inferred."
   ],
@@ -27789,12 +27791,13 @@
   ],
   "fixed_point": {
     "W_G4_complete": false,
+    "reason": "The corrected-input deterministic quotient candidate must pass exact coverage, reconstruction, isomorphism, and relabel-invariance verification before W-local G4 is frozen.",
     "W_local_G5_authorized": false,
-    "cross_track_comparison_authorized": false,
-    "reason": "Candidate must pass exact coverage, isomorphism and deterministic replay."
+    "cross_track_comparison_authorized": false
   },
   "next_required_steps": [
-    "Verify all 432 unresolved roots and exclusion of Core-closed roots.",
-    "If zero-defect, freeze W-local G4 and only then run deterministic G5."
+    "Verify exact coverage of all 432 unresolved W roots and exclusion of all 13 CORE_CLOSED roots.",
+    "Recompute every rooted component and exact representative isomorphism without source labels.",
+    "If zero-defect, freeze corrected W-local G4; only then begin corrected-input G5 candidate-basis synthesis."
   ]
 }
