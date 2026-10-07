@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const inputPath='experiments/062/L_G3_CORE_DEFINABILITY_0_4.json';
+const adjPath='experiments/062/L_G3_EXPLICIT_IN_BODY_ADJUDICATION_0_5.json';
+const outputPath='experiments/062/L_G3_CORE_DEFINABILITY_0_5.json';
+const input=JSON.parse(fs.readFileSync(inputPath,'utf8'));const adj=JSON.parse(fs.readFileSync(adjPath,'utf8'));
+if(input.schema!=='isograph.exp062-l-g3-core-definability.v0.4')throw new Error('input schema');
+if(adj.input?.g3_path!==inputPath)throw new Error('adjudication input');
+if((adj.rows||[]).length!==141)throw new Error('explicit row count');
+const seen=new Set();for(const r of adj.rows){if(seen.has(r.occurrence_id))throw new Error('duplicate '+r.occurrence_id);seen.add(r.occurrence_id);if(r.decision!=='FINAL_UNEXPANDED_DEMAND'||r.qu_candidate!==false||!r.exact_missing_lower_behavior)throw new Error('bad decision '+r.occurrence_id);}
+const out=JSON.parse(JSON.stringify(input));out.schema='isograph.exp062-l-g3-core-definability.v0.5';out.status='L_G3_FIXED_POINT_COMPLETE_L_LOCAL_G4_AUTHORIZED';out.predecessor=inputPath;out.explicit_in_body_adjudication=adjPath;out.counts={...out.counts,...adj.resulting_counts};out.fixed_point={G3_complete:true,pending_rows:0,L_local_G4_authorized:true,cross_track_G4_authorized:false,G4_authorized:false,reason:'All 818 L occurrences have a final current-authority G3 disposition: 82 CORE_CLOSED and 736 UNEXPANDED_DEMAND. No schema or QU candidate is asserted. L-local alpha-renamed quotienting may proceed over only the 736 unresolved subgraphs; cross-track comparison remains forbidden.'};out.next_required_steps=['Construct the L-local G4 alpha-renamed structural quotient from only the 736 UNEXPANDED_DEMAND subgraphs.','Do not include CORE_CLOSED occurrences as quotient targets, though their structural incidence may remain context where needed to preserve unresolved subgraph boundaries.','Do not use W evidence or source-domain relation labels as quotient keys.','Retain arity, ordered incidence, logical-force/polarity provenance, dependency direction, side-condition placement represented in the neutral graph, and distinctions whose deletion changes exact reconstruction.'];
+fs.writeFileSync(outputPath,JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify({output:outputPath,counts:out.counts,fixed_point:out.fixed_point},null,2));
