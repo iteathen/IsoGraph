@@ -1,0 +1,33 @@
+name: Experiment 062 W G5 fixed point verify
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json
+      - experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json
+      - experiments/062/W_G4_FIXED_POINT_0_1.json
+      - experiments/062/tools/verify-w-g5-candidate-basis-synthesis-0-1.mjs
+      - experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs
+      - .github/workflows/experiment-062-w-g5-fixed-point.yml
+  pull_request:
+    paths:
+      - experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json
+      - experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json
+      - experiments/062/W_G4_FIXED_POINT_0_1.json
+      - experiments/062/tools/verify-w-g5-candidate-basis-synthesis-0-1.mjs
+      - experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs
+      - .github/workflows/experiment-062-w-g5-fixed-point.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: node experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs
