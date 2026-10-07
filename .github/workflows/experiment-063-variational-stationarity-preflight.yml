@@ -1,0 +1,26 @@
+name: Experiment 063 variational stationarity preflight
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/063/**'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.*'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.*'
+      - '.github/workflows/experiment-063-variational-stationarity-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify Experiment 063 deterministic preflight
+        run: node experiments/063/tools/verify-exp063-preflight-0-1.mjs
