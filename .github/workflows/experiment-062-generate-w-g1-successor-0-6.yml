@@ -1,0 +1,54 @@
+name: Experiment 062 generate W G1 successor 0.6
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_5.json"
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_6.json"
+      - "experiments/062/tools/apply-w-g1-adjudication-0-6.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - ".github/workflows/experiment-062-generate-w-g1-successor-0-6.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: exp062-generate-w-g1-successor-0-6
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: research/woit-lisi-isomorph-20261003
+          fetch-depth: 0
+
+      - name: Re-sync without rewriting concurrent work
+        run: |
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git rebase origin/research/woit-lisi-isomorph-20261003
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Generate and validate W successor
+        run: node experiments/062/tools/apply-w-g1-adjudication-0-6.mjs
+
+      - name: Persist generated successor
+        run: |
+          if git diff --quiet -- experiments/062/W_EXTRACTION_RECONCILED_0_6.json; then
+            echo "W 0.6 already matches deterministic generation."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/062/W_EXTRACTION_RECONCILED_0_6.json
+          git commit -m "research: generate W G1 reconciled 0.6"
+          git push origin HEAD:research/woit-lisi-isomorph-20261003
