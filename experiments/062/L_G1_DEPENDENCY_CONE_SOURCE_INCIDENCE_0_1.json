@@ -1,0 +1,786 @@
+{
+  "schema": "isograph.exp062-l-g1-dependency-cone-source-incidence.v0.1",
+  "date": "2026-10-07",
+  "status": "TARGETED_G1_SOURCE_INCIDENCE_REOPEN_CANDIDATE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "844ded0e47ad2fc4d9bfb75f95e98c8c491ad419",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor_extraction": {
+    "path": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+    "git_blob_sha": "80e2f576471aab8396f21f9f0b58e15fb5435c16"
+  },
+  "reopen_audit": {
+    "path": "experiments/062/L_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_2.json",
+    "git_blob_sha": "46019d19a5f9d57b9b50702e17e8347e30a6c833"
+  },
+  "source_pins": {
+    "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json": {
+      "git_blob_sha": "db889137e94759727cfbf8e2c21f6749b728bebd"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_1.md": {
+      "git_blob_sha": "5674ca0d19ecdc87425daa2163e7aad3bce98d7b"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_1.md": {
+      "git_blob_sha": "a7ad51045610af84cb442a09c781a9b1f09df435"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_1.md": {
+      "git_blob_sha": "3fcc67e33ae83788d787c40c3956cebf282dd781"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TYPED_COEFFICIENT_ROLES_SOURCE_INSTANCE_0_1.md": {
+      "git_blob_sha": "3fbbfd8986137b5ef1c36c49e7183160d0a3a6f3"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRILINEAR_PRODUCT_RECOVERY_SOURCE_INSTANCE_0_2.md": {
+      "git_blob_sha": "c0f86553935891e5b5a98c0429b6be45e1d8afb3"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.md": {
+      "git_blob_sha": "077d848b7b6666c8dd58ac47251857936e7b029e"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_ANTIINVARIANCE_0_1.md": {
+      "git_blob_sha": "383d182efa1ac409a14c48edfd0dd8da4ae9ea30"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json": {
+      "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+    }
+  },
+  "scope": {
+    "target_census_ids": [
+      "L-SSC-125",
+      "L-SSC-128",
+      "L-SSC-129",
+      "L-SSC-130"
+    ],
+    "unaffected_bodies": "151-body predecessor remains immutable; this artifact is a targeted successor supplement only.",
+    "source_expansion": false,
+    "cross_track_evidence_used": false
+  },
+  "extraction_rules": {
+    "source_terms_are_provenance_only": true,
+    "historical_candidate_ids_used_as_semantics": false,
+    "formula_ast_status": "REVERSIBLE_SOURCE_FORMULA_PROVENANCE_ONLY",
+    "dependencies_may_cross_the_four_reopened_bodies": true,
+    "familiar_mathematics_not_imported": true,
+    "ordinary_O_repair_forbidden": true
+  },
+  "counts": {
+    "reopened_bodies": 4,
+    "reopened_occurrences": 28,
+    "predecessor_replaced_bodies": 0,
+    "predecessor_mutated": false
+  },
+  "items": [
+    {
+      "census_id": "L-SSC-125",
+      "source_provenance": "L05 §2",
+      "extraction_status": "TARGETED_REOPEN_COMPLETE",
+      "occurrences": [
+        {
+          "occurrence_id": "L-SSC-125-R01",
+          "source_reversible_reference": "L05 §2, displayed C/C'/H/H'/O/O' composition-algebra family",
+          "source_span": "explicit finite bases for C, C', H, H', O, O'",
+          "relation_span": "finite basis",
+          "argument_spans": [
+            "coefficient carrier",
+            "ordered basis"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [],
+          "load_bearing_note": "Exposes the finite source basis rather than leaving the family name opaque.",
+          "raw_case_dimensions": {
+            "C": 2,
+            "Cprime": 2,
+            "H": 4,
+            "Hprime": 4,
+            "O": 8,
+            "Oprime": 8
+          }
+        },
+        {
+          "occurrence_id": "L-SSC-125-R02",
+          "source_reversible_reference": "L05 §2 multiplication tables (1) and source-local table instances",
+          "source_span": "complete source basis multiplication table for each coefficient family",
+          "relation_span": "basis product table",
+          "argument_spans": [
+            "left basis element",
+            "right basis element",
+            "signed basis result"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "The table is raw finite source data. General product behavior beyond table rows is not inferred here."
+        },
+        {
+          "occurrence_id": "L-SSC-125-R03",
+          "source_reversible_reference": "L05 §2 conjugation definition",
+          "source_span": "KAPPA(e0)=e0 and KAPPA(ei)=-ei for i>0",
+          "relation_span": "basis conjugation",
+          "argument_spans": [
+            "basis element",
+            "conjugated signed basis element"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "Exact basis action of source conjugation."
+        },
+        {
+          "occurrence_id": "L-SSC-125-R04",
+          "source_reversible_reference": "L05 §2 conjugation/product law",
+          "source_span": "KAPPA(xy)=KAPPA(y)KAPPA(x) and KAPPA^2=id",
+          "relation_span": "conjugation reverses product order",
+          "argument_spans": [
+            "conjugation",
+            "product",
+            "x",
+            "y"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R02",
+            "L-SSC-125-R03"
+          ],
+          "load_bearing_note": "Load-bearing anti-involution behavior stated by the source."
+        },
+        {
+          "occurrence_id": "L-SSC-125-R05",
+          "source_reversible_reference": "L05 §2 metric/signature data",
+          "source_span": "source diagonal composition metric for each coefficient family",
+          "relation_span": "metric table",
+          "argument_spans": [
+            "basis pair",
+            "scalar value"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "Raw source pairings distinguish ordinary and split signatures.",
+          "raw_signatures": {
+            "C": [
+              "+",
+              "+"
+            ],
+            "Cprime": [
+              "+",
+              "-"
+            ],
+            "H": [
+              "+",
+              "+",
+              "+",
+              "+"
+            ],
+            "Hprime": [
+              "+",
+              "-",
+              "+",
+              "-"
+            ],
+            "O": [
+              "+",
+              "+",
+              "+",
+              "+",
+              "+",
+              "+",
+              "+",
+              "+"
+            ],
+            "Oprime": [
+              "+",
+              "+",
+              "+",
+              "+",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        },
+        {
+          "occurrence_id": "L-SSC-125-R06",
+          "source_reversible_reference": "L05 §2 ordinary/split distinction",
+          "source_span": "split signatures are kept distinct from positive-definite division-algebra cases",
+          "relation_span": "ordinary/split distinction",
+          "argument_spans": [
+            "ordinary cases",
+            "split cases",
+            "metric signatures"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R05"
+          ],
+          "load_bearing_note": "Preserves the source distinction without turning the family names into primitive classes."
+        },
+        {
+          "occurrence_id": "L-SSC-125-R07",
+          "source_reversible_reference": "L05 §2 composition-algebra presentation",
+          "source_span": "basis tables and scalar/vector operations determine products on represented coefficient carriers",
+          "relation_span": "finite-basis algebra extension",
+          "argument_spans": [
+            "scalar carrier",
+            "coefficient carrier",
+            "basis product table",
+            "arbitrary coefficient elements"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+          "depends_on": [
+            "L-SSC-125-R01",
+            "L-SSC-125-R02"
+          ],
+          "load_bearing_note": "This is the first explicit reopened boundary: finite source tables are present, but the generic scalar/vector/bilinear extension behavior must be represented rather than assumed."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-128",
+      "source_provenance": "L05 §2",
+      "extraction_status": "TARGETED_REOPEN_COMPLETE",
+      "occurrences": [
+        {
+          "occurrence_id": "L-SSC-128-R01",
+          "source_reversible_reference": "L05 §2 typed coefficient roles",
+          "source_span": "V, Q_minus, and Q_plus are distinct source role carriers of the same represented real dimension",
+          "relation_span": "typed role carriers",
+          "argument_spans": [
+            "V",
+            "Q_minus",
+            "Q_plus",
+            "dimension"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "Keeps roles distinct while exposing their shared finite basis size."
+        },
+        {
+          "occurrence_id": "L-SSC-128-R02",
+          "source_reversible_reference": "L05 §2 coefficient maps",
+          "source_span": "v_a -> e_a",
+          "relation_span": "V coefficient basis map",
+          "argument_spans": [
+            "V basis element",
+            "coefficient basis element"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-128-R01",
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "Exact basis-level source map."
+        },
+        {
+          "occurrence_id": "L-SSC-128-R03",
+          "source_reversible_reference": "L05 §2 coefficient maps",
+          "source_span": "m_a -> e_a",
+          "relation_span": "Q_minus coefficient basis map",
+          "argument_spans": [
+            "Q_minus basis element",
+            "coefficient basis element"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-128-R01",
+            "L-SSC-125-R01"
+          ],
+          "load_bearing_note": "Exact basis-level source map."
+        },
+        {
+          "occurrence_id": "L-SSC-128-R04",
+          "source_reversible_reference": "L05 §2 positive-spinor tilde convention",
+          "source_span": "p_a -> KAPPA(e_a)",
+          "relation_span": "Q_plus coefficient basis map",
+          "argument_spans": [
+            "Q_plus basis element",
+            "coefficient basis element",
+            "conjugation"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-128-R01",
+            "L-SSC-125-R03"
+          ],
+          "load_bearing_note": "The source tilde/conjugation convention is inside the map."
+        },
+        {
+          "occurrence_id": "L-SSC-128-R05",
+          "source_reversible_reference": "L05 §2 typed coefficient identification",
+          "source_span": "the three basis maps extend as exact linear bijections into the coefficient carrier",
+          "relation_span": "linear bijection extension",
+          "argument_spans": [
+            "role carrier",
+            "coefficient carrier",
+            "basis map",
+            "scalar/vector operations"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+          "depends_on": [
+            "L-SSC-128-R02",
+            "L-SSC-128-R03",
+            "L-SSC-128-R04",
+            "L-SSC-125-R07"
+          ],
+          "load_bearing_note": "Basis incidence is explicit; generic finite-vector and linear-extension behavior must be represented before this may close."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-129",
+      "source_provenance": "L05 §3 eq. (6)",
+      "extraction_status": "TARGETED_REOPEN_COMPLETE",
+      "occurrences": [
+        {
+          "occurrence_id": "L-SSC-129-R01",
+          "source_reversible_reference": "L05 §3 eq. (6)",
+          "source_span": "T(x,y,z)=B(z,x*y)",
+          "relation_span": "trilinear triality definition",
+          "argument_spans": [
+            "x",
+            "y",
+            "z",
+            "product x*y",
+            "pairing B",
+            "scalar result"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R02",
+            "L-SSC-125-R05"
+          ],
+          "load_bearing_note": "Exposes exact ordered product/pairing incidence.",
+          "formula_ast": {
+            "op": "EQUALITY",
+            "left": {
+              "op": "T",
+              "args": [
+                "x",
+                "y",
+                "z"
+              ]
+            },
+            "right": {
+              "op": "B",
+              "args": [
+                "z",
+                {
+                  "op": "PROD",
+                  "args": [
+                    "x",
+                    "y"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "occurrence_id": "L-SSC-129-R02",
+          "source_reversible_reference": "L05 §3 typed triality transport",
+          "source_span": "coefficient-level T is transported to distinct V/Q_minus/Q_plus roles through the source coefficient maps",
+          "relation_span": "typed T transport",
+          "argument_spans": [
+            "V",
+            "Q_minus",
+            "Q_plus",
+            "coefficient maps",
+            "T"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+          "depends_on": [
+            "L-SSC-129-R01",
+            "L-SSC-128-R05"
+          ],
+          "load_bearing_note": "Requires exact map/linear transport rather than raw coefficient swapping."
+        },
+        {
+          "occurrence_id": "L-SSC-129-R03",
+          "source_reversible_reference": "L05 §3 cyclic triality identity",
+          "source_span": "typed T(v,psi,chi)=T(psi,chi,v)=T(chi,v,psi) with the source role transports",
+          "relation_span": "typed cyclicity",
+          "argument_spans": [
+            "typed T",
+            "role-cycle maps"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R02"
+          ],
+          "load_bearing_note": "Preserves cyclicity at the typed-role level."
+        },
+        {
+          "occurrence_id": "L-SSC-129-R04",
+          "source_reversible_reference": "L05 §3 product recovery statement",
+          "source_span": "a coefficient h is recovered from the scalar functional z |-> T(x,y,z) through equality of all pairings B(z,h)",
+          "relation_span": "product recovery",
+          "argument_spans": [
+            "x",
+            "y",
+            "probe z",
+            "T",
+            "pairing B",
+            "recovered h"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "PARTIAL_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R01",
+            "L-SSC-125-R05"
+          ],
+          "load_bearing_note": "Source states recovery; exact generic nondegenerate-recovery behavior remains a lower-schema question."
+        },
+        {
+          "occurrence_id": "L-SSC-129-R05",
+          "source_reversible_reference": "L05 §3 product recovery statement",
+          "source_span": "the recovery graph is identified with the source product graph",
+          "relation_span": "recovery/product graph equality",
+          "argument_spans": [
+            "recovery relation",
+            "product relation"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "PARTIAL_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R04",
+            "L-SSC-125-R07"
+          ],
+          "load_bearing_note": "Structural bidirectionality is load-bearing, not merely notation."
+        },
+        {
+          "occurrence_id": "L-SSC-129-R06",
+          "source_reversible_reference": "L05 source discrepancy preservation",
+          "source_span": "ordinary-O typed cyclicity has source-table failures while the other represented source cases pass the finite checks",
+          "relation_span": "source inconsistency guard",
+          "argument_spans": [
+            "ordinary O",
+            "typed cyclicity",
+            "source table"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "EXPLICIT_PROJECT_EVIDENCE",
+          "depends_on": [
+            "L-SSC-129-R03"
+          ],
+          "load_bearing_note": "Negative control only; no source repair is imported."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-130",
+      "source_provenance": "L05 §3",
+      "extraction_status": "TARGETED_REOPEN_COMPLETE",
+      "occurrences": [
+        {
+          "occurrence_id": "L-SSC-130-R01",
+          "source_reversible_reference": "L05 §3 generalized-reflection signature branch",
+          "source_span": "s_u=+1 -> phase=1; s_u=-1 -> phase=i; Q(u)=s_u",
+          "relation_span": "signature phase branch",
+          "argument_spans": [
+            "unit u",
+            "Q(u)",
+            "s_u",
+            "phase"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-125-R05"
+          ],
+          "load_bearing_note": "Exposes the source branch rather than opaque sqrt(s_u)."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R02",
+          "source_reversible_reference": "L05 §3 ordered generalized reflection R_v^u",
+          "source_span": "v -> -s_u u KAPPA(v) u; chi -> sqrt(s_u) KAPPA(u) tilde(chi); psi -> sqrt(s_u) KAPPA(psi) KAPPA(u)",
+          "relation_span": "R_v map formula",
+          "argument_spans": [
+            "u",
+            "v",
+            "chi",
+            "psi",
+            "v_out",
+            "chi_out",
+            "psi_out"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-130-R01",
+            "L-SSC-125-R02",
+            "L-SSC-125-R03",
+            "L-SSC-128-R05"
+          ],
+          "load_bearing_note": "Ordered products are preserved; no associativity rewrite.",
+          "formula_ast": {
+            "op": "R_v",
+            "outputs": [
+              {
+                "role": "v",
+                "expr": {
+                  "op": "SCALE",
+                  "args": [
+                    {
+                      "op": "NEG",
+                      "args": [
+                        "s_u"
+                      ]
+                    },
+                    {
+                      "op": "PROD",
+                      "args": [
+                        "u",
+                        {
+                          "op": "PROD",
+                          "args": [
+                            {
+                              "op": "KAPPA",
+                              "args": [
+                                "v"
+                              ]
+                            },
+                            "u"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "role": "chi",
+                "expr": {
+                  "op": "SCALE",
+                  "args": [
+                    "phase",
+                    {
+                      "op": "PROD",
+                      "args": [
+                        {
+                          "op": "KAPPA",
+                          "args": [
+                            "u"
+                          ]
+                        },
+                        "tilde_chi"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "role": "psi",
+                "expr": {
+                  "op": "SCALE",
+                  "args": [
+                    "phase",
+                    {
+                      "op": "PROD",
+                      "args": [
+                        {
+                          "op": "KAPPA",
+                          "args": [
+                            "psi"
+                          ]
+                        },
+                        {
+                          "op": "KAPPA",
+                          "args": [
+                            "u"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "occurrence_id": "L-SSC-130-R03",
+          "source_reversible_reference": "L05 §3 ordered generalized reflection R_m^u",
+          "source_span": "chi -> sqrt(s_u) tilde(chi) KAPPA(u); psi -> -s_u u KAPPA(psi) u; v -> sqrt(s_u) KAPPA(u) KAPPA(v)",
+          "relation_span": "R_m map formula",
+          "argument_spans": [
+            "u",
+            "v",
+            "chi",
+            "psi",
+            "v_out",
+            "chi_out",
+            "psi_out"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-130-R01",
+            "L-SSC-125-R02",
+            "L-SSC-125-R03",
+            "L-SSC-128-R05"
+          ],
+          "load_bearing_note": "Ordered products are preserved; no associativity rewrite."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R04",
+          "source_reversible_reference": "L05 §3 ordered generalized reflection R_p^u",
+          "source_span": "psi -> sqrt(s_u) KAPPA(u) KAPPA(psi); v -> sqrt(s_u) KAPPA(v) KAPPA(u); chi -> -s_u u tilde(chi) u",
+          "relation_span": "R_p map formula",
+          "argument_spans": [
+            "u",
+            "v",
+            "chi",
+            "psi",
+            "v_out",
+            "chi_out",
+            "psi_out"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-130-R01",
+            "L-SSC-125-R02",
+            "L-SSC-125-R03",
+            "L-SSC-128-R05"
+          ],
+          "load_bearing_note": "Ordered products are preserved; no associativity rewrite."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R05",
+          "source_reversible_reference": "L05 §3 reflection output typing",
+          "source_span": "each generalized reflection places outputs in the corresponding complexified role carriers; space-like outputs lie in the embedded real subspace while time-like branches carry the source phase i",
+          "relation_span": "typed reflection outputs",
+          "argument_spans": [
+            "reflection",
+            "input roles",
+            "complexified output roles",
+            "signature branch"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "PARTIAL_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-130-R01",
+            "L-SSC-130-R02",
+            "L-SSC-130-R03",
+            "L-SSC-130-R04"
+          ],
+          "load_bearing_note": "Does not identify complexified roles with a later real form."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R06",
+          "source_reversible_reference": "L05 §3 individual reflection anti-invariance",
+          "source_span": "T(R_v v,R_v chi,R_v psi)=-T(v,chi,psi)",
+          "relation_span": "R_v anti-invariance",
+          "argument_spans": [
+            "R_v",
+            "T",
+            "negated T"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R02",
+            "L-SSC-130-R02"
+          ],
+          "load_bearing_note": "Source anti-invariance with typed role ordering."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R07",
+          "source_reversible_reference": "L05 §3 individual reflection anti-invariance",
+          "source_span": "T(R_m chi,R_m psi,R_m v)=-T(chi,psi,v)",
+          "relation_span": "R_m anti-invariance",
+          "argument_spans": [
+            "R_m",
+            "T",
+            "negated T"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R03",
+            "L-SSC-130-R03"
+          ],
+          "load_bearing_note": "Source anti-invariance with source cyclic role ordering."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R08",
+          "source_reversible_reference": "L05 §3 individual reflection anti-invariance",
+          "source_span": "T(R_p psi,R_p v,R_p chi)=-T(psi,v,chi)",
+          "relation_span": "R_p anti-invariance",
+          "argument_spans": [
+            "R_p",
+            "T",
+            "negated T"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "EXPLICIT_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-129-R03",
+            "L-SSC-130-R04"
+          ],
+          "load_bearing_note": "Source anti-invariance with source cyclic role ordering."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R09",
+          "source_reversible_reference": "L05 §3 even generalized-reflection compositions",
+          "source_span": "two/even generalized-reflection compositions preserve the triality form T",
+          "relation_span": "even-composition invariance",
+          "argument_spans": [
+            "reflection 1",
+            "reflection 2",
+            "composition",
+            "T"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "PARTIAL_IN_SOURCE",
+          "depends_on": [
+            "L-SSC-130-R06",
+            "L-SSC-130-R07",
+            "L-SSC-130-R08"
+          ],
+          "load_bearing_note": "Target parity-of-composition behavior; derivation versus direct source assertion remains explicit."
+        },
+        {
+          "occurrence_id": "L-SSC-130-R10",
+          "source_reversible_reference": "L05 source discrepancy preservation",
+          "source_span": "ordinary-O source-table inconsistency propagates where it affects reflection tests and is not repaired",
+          "relation_span": "source inconsistency guard",
+          "argument_spans": [
+            "ordinary O",
+            "reflection tests",
+            "source table"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "EXPLICIT_PROJECT_EVIDENCE",
+          "depends_on": [
+            "L-SSC-130-R02",
+            "L-SSC-130-R03",
+            "L-SSC-130-R04"
+          ],
+          "load_bearing_note": "Adversarial control only."
+        }
+      ]
+    }
+  ],
+  "next_stage": "TARGETED_G2_DEPENDENCY_CLOSED_NEUTRAL_SUBGRAPH"
+}
