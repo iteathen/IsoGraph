@@ -1,0 +1,29 @@
+name: Experiment 062 W G3 fixed point 0.5 verify
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_4.json
+      - experiments/062/W_G3_EXPLICIT_IN_BODY_ADJUDICATION_0_5.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_5.json
+      - experiments/062/tools/apply-w-g3-explicit-adjudication-0-5.mjs
+      - experiments/062/tools/verify-w-g3-fixed-point-0-5.mjs
+      - .github/workflows/experiment-062-w-g3-fixed-point-0-5.yml
+  pull_request:
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_4.json
+      - experiments/062/W_G3_EXPLICIT_IN_BODY_ADJUDICATION_0_5.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_5.json
+      - experiments/062/tools/apply-w-g3-explicit-adjudication-0-5.mjs
+      - experiments/062/tools/verify-w-g3-fixed-point-0-5.mjs
+      - .github/workflows/experiment-062-w-g3-fixed-point-0-5.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: node experiments/062/tools/verify-w-g3-fixed-point-0-5.mjs
