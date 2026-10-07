@@ -1,0 +1,225 @@
+{
+  "experiment": "neos338-optimized-original-breaker-0.3",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/neos-3381206-awhea.mps.gz",
+    "gzip_sha256": "58d33361a14a26ae1c497a9c8726fb33a699205a9dfad4f6c90e18ba7994db56",
+    "mps_sha256": "738f0bf51278e4dd1f0418b149de72ee2614a5a9b805c838705565397cd0514d"
+  },
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0001": {
+        "original": {
+          "name": "C0001",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "transformed": {
+          "name": "t_C0001",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "expected_transformed_name": "t_C0001",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0002": {
+        "original": {
+          "name": "C0002",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "transformed": {
+          "name": "t_C0002",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "BINARY",
+          "lb_global": -0.0,
+          "ub_global": 1.0
+        },
+        "expected_transformed_name": "t_C0002",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "exact": {
+    "generator_count": 474,
+    "chosen": {
+      "a_name": "t_C0001",
+      "b_name": "t_C0002",
+      "a_index": 1,
+      "b_index": 2,
+      "generator_index": 472,
+      "active_moved_variables": 10,
+      "active_generator_count": 474
+    },
+    "graph_meta": {
+      "active_variables": 2375,
+      "dropped_export_only_variables": 0,
+      "rows": 479,
+      "active_nonzeros": 4275,
+      "vertices": 7129,
+      "edges": 8550,
+      "color_classes": 15
+    }
+  },
+  "frontend": {
+    "scip_presolve_s": 0.03591433799999777,
+    "scip_export_s": 0.04002924499999949,
+    "highs_parse_s": 0.007082371999999282,
+    "sparse_materialize_s": 0.0018532450000066092,
+    "bulk_graph_data_s": 0.016389760999999226,
+    "igraph_construct_s": 0.0009222509999986528,
+    "bliss_s": 0.37611615099999796,
+    "replay_select_s": 0.8513667520000041,
+    "total_s": 1.344314894
+  },
+  "trials": [
+    {
+      "seed": 8,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 132,
+        "lp_iterations": 13954,
+        "wall_s": 2.574445406999999
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 120,
+        "lp_iterations": 13453,
+        "wall_s": 2.1575494000000006
+      },
+      "ig_end_to_end_wall_s": 3.5018642940000007
+    },
+    {
+      "seed": 9,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 43,
+        "lp_iterations": 15621,
+        "wall_s": 1.6275672039999947
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 29,
+        "lp_iterations": 11821,
+        "wall_s": 1.3247099949999992
+      },
+      "ig_end_to_end_wall_s": 2.6690248889999992
+    },
+    {
+      "seed": 10,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 56,
+        "lp_iterations": 13184,
+        "wall_s": 1.7281893130000014
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 442,
+        "lp_iterations": 20114,
+        "wall_s": 6.068572996999997
+      },
+      "ig_end_to_end_wall_s": 7.412887890999997
+    },
+    {
+      "seed": 11,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 15075,
+        "wall_s": 1.614954540999996
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 13321,
+        "wall_s": 1.3475958890000044
+      },
+      "ig_end_to_end_wall_s": 2.6919107830000044
+    },
+    {
+      "seed": 12,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 1,
+        "lp_iterations": 12081,
+        "wall_s": 1.1640128550000028
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 453.0,
+        "dual": 453.0,
+        "gap": 0.0,
+        "nodes": 38,
+        "lp_iterations": 13107,
+        "wall_s": 1.5256868880000027
+      },
+      "ig_end_to_end_wall_s": 2.8700017820000028
+    }
+  ],
+  "summary": {
+    "metric": "time_to_optimum",
+    "paired_optimal": 5,
+    "baseline_median_metric": 1.6275672039999947,
+    "ig_median_metric": 2.8700017820000028,
+    "paired_wins": 0,
+    "median_ratio": 1.666864741179121,
+    "directional_positive": false,
+    "frontend_wall_s": 1.344314894,
+    "baseline_median_nodes": 43,
+    "ig_median_nodes": 38,
+    "baseline_median_lp": 13954,
+    "ig_median_lp": 13321
+  },
+  "status": "BENCHMARKED",
+  "disposition": "PASS"
+}
