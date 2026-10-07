@@ -1,0 +1,39 @@
+name: Experiment 062 verify W G1 0.9
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_9.json"
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_8.json"
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_9.json"
+      - "experiments/062/tools/apply-w-g1-adjudication-0-9.mjs"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-9.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - ".github/workflows/experiment-062-verify-w-g1-0-9.yml"
+  pull_request:
+    paths:
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_9.json"
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_8.json"
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_9.json"
+      - "experiments/062/tools/apply-w-g1-adjudication-0-9.mjs"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-9.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - ".github/workflows/experiment-062-verify-w-g1-0-9.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-w-g1-0-9:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Verify W G1 0.9 successor
+        run: node experiments/062/tools/verify-w-extraction-reconciled-0-9.mjs
