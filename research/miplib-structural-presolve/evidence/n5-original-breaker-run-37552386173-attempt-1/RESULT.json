@@ -1,0 +1,357 @@
+{
+  "experiment": "n5-original-breaker-replication-0.8",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "limit_s": 60.0,
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0021": {
+        "original": {
+          "name": "C0021",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0021",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0021",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0026": {
+        "original": {
+          "name": "C0026",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0026",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0026",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0027": {
+        "original": {
+          "name": "C0027",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0027",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0027",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0028": {
+        "original": {
+          "name": "C0028",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0028",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0028",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "frontend": {
+    "stages": {
+      "scip_presolve_s": 0.04039070500000008,
+      "scip_export_s": 0.05590801099999965,
+      "highs_parse_s": 0.00984359899999987,
+      "sparse_materialize_s": 0.002743959000000018,
+      "bulk_graph_data_s": 0.01945089600000216,
+      "igraph_construct_s": 0.0017321799999976406,
+      "bliss_s": 0.00452149399999513,
+      "replay_select_s": 0.04711146500000041,
+      "total_s": 0.1973824680000007
+    },
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "graph_meta": {
+      "active_variables": 2142,
+      "dropped_export_only_variables": 212,
+      "rows": 846,
+      "active_nonzeros": 8316,
+      "vertices": 11304,
+      "edges": 16632,
+      "color_classes": 22
+    },
+    "transformed_breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ],
+    "original_breakers": [
+      [
+        "C0021",
+        "C0026"
+      ],
+      [
+        "C0027",
+        "C0028"
+      ]
+    ]
+  },
+  "trials": [
+    {
+      "seed": 41,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0000000000055,
+        "dual": 8105.0000000000055,
+        "gap": 0.0,
+        "nodes": 1480,
+        "lp_iterations": 219909,
+        "wall_s": 45.276685869999994,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000451,
+        "dual": 8105.000000000451,
+        "gap": 0.0,
+        "nodes": 936,
+        "lp_iterations": 154553,
+        "wall_s": 35.755550777,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 35.952933245000004
+    },
+    {
+      "seed": 42,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.00000000002,
+        "dual": 8105.00000000002,
+        "gap": 0.0,
+        "nodes": 1262,
+        "lp_iterations": 170963,
+        "wall_s": 36.064381010000005,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000247,
+        "dual": 8105.000000000247,
+        "gap": 0.0,
+        "nodes": 954,
+        "lp_iterations": 165169,
+        "wall_s": 34.631313301000006,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 34.82869576900001
+    },
+    {
+      "seed": 43,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 740,
+        "lp_iterations": 120388,
+        "wall_s": 29.071519024000025,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000055,
+        "dual": 8105.000000000055,
+        "gap": 0.0,
+        "nodes": 726,
+        "lp_iterations": 112633,
+        "wall_s": 28.129746908000016,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 28.327129376000016
+    },
+    {
+      "seed": 44,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0000000000055,
+        "dual": 8105.0000000000055,
+        "gap": 0.0,
+        "nodes": 1318,
+        "lp_iterations": 196706,
+        "wall_s": 41.90405896699997,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000413,
+        "dual": 8105.000000000413,
+        "gap": 0.0,
+        "nodes": 956,
+        "lp_iterations": 126193,
+        "wall_s": 29.94441182899999,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 30.14179429699999
+    },
+    {
+      "seed": 45,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8104.999999999982,
+        "dual": 8104.999999999982,
+        "gap": 0.0,
+        "nodes": 838,
+        "lp_iterations": 178420,
+        "wall_s": 39.154643969000006,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000317,
+        "dual": 8105.000000000317,
+        "gap": 0.0,
+        "nodes": 766,
+        "lp_iterations": 100065,
+        "wall_s": 23.642997981000008,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 23.84038044900001
+    },
+    {
+      "seed": 46,
+      "order": "baseline_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1691,
+        "lp_iterations": 222999,
+        "wall_s": 44.86536663100003,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000001,
+        "dual": 8105.000000000001,
+        "gap": 0.0,
+        "nodes": 820,
+        "lp_iterations": 118030,
+        "wall_s": 27.80205436800003,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 27.99943683600003
+    },
+    {
+      "seed": 47,
+      "order": "ig_first",
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.000000000012,
+        "dual": 8105.000000000012,
+        "gap": 0.0,
+        "nodes": 1919,
+        "lp_iterations": 273114,
+        "wall_s": 53.735197237999955,
+        "added_constraints": 0
+      },
+      "ig_original": {
+        "status": "optimal",
+        "objective": 8105.000000000377,
+        "dual": 8105.000000000377,
+        "gap": 0.0,
+        "nodes": 1035,
+        "lp_iterations": 184185,
+        "wall_s": 40.160815076000006,
+        "added_constraints": 2
+      },
+      "ig_end_to_end_wall_s": 40.35819754400001
+    }
+  ],
+  "summary": {
+    "paired_both_optimal": 7,
+    "baseline_median_wall_s": 41.90405896699997,
+    "ig_solver_median_wall_s": 29.94441182899999,
+    "ig_end_to_end_median_wall_s": 30.14179429699999,
+    "paired_end_to_end_wins": 7,
+    "paired_end_to_end_losses": 0,
+    "frontend_wall_s": 0.1973824680000007,
+    "baseline_median_nodes": 1318,
+    "ig_median_nodes": 936,
+    "baseline_median_lp": 196706,
+    "ig_median_lp": 126193,
+    "baseline_median_gap_all": 0.0,
+    "ig_median_gap_all": 0.0,
+    "paired_gap_wins_all": 0,
+    "median_end_to_end_ratio": 0.7510570281383442,
+    "replication_success": true
+  },
+  "status": "MAPPING_LICENSED_AND_BENCHMARKED",
+  "disposition": "PASS"
+}
