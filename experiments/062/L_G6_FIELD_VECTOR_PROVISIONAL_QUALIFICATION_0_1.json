@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.exp062-l-g6-field-vector-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "track_origin": "L",
+  "module": "FIELD_VECTOR_PRESENTATION_0_1",
+  "branch_head_at_creation": "e5bf47955e2f200126cfc940f37038e7729d5834",
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "exact_revision": {
+    "candidate_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "candidate_git_blob_sha": "f234db03e52a0141a6a9fea80af7badd76751d7f",
+    "hypothesis_path": "experiments/062/L_G5H_FIELD_VECTOR_PRESENTATION_0_1.json",
+    "hypothesis_git_blob_sha": "6ebe4bb784ddd6761d69073d0be38806ded5004c",
+    "module_ssc_path": "experiments/062/L_G6_FIELD_VECTOR_MODULE_SSC_0_1.json",
+    "module_ssc_git_blob_sha": "10089721fe2b34af51966e0e3e98dd55ac6b4ab7",
+    "module_ia_path": "experiments/062/L_G6_FIELD_VECTOR_MODULE_IA_FIXED_POINT_0_1.json",
+    "module_ia_git_blob_sha": "0feb7237049945d076abab0a357d64531182a008",
+    "qualifier_path": "experiments/062/tools/qualify-l-g6-field-vector-presentation-0-1.mjs",
+    "qualifier_git_blob_sha": "1eb695fe55d2f1f12973dba24ef5f6cbf9dc6c57"
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L G6 field-vector provisional qualification",
+    "workflow_run_id": 37670058719,
+    "workflow_run_head": "e5bf47955e2f200126cfc940f37038e7729d5834",
+    "job_id": 112959215205,
+    "conclusion": "success",
+    "deterministic_report": {
+      "pass": true,
+      "failures": [],
+      "candidate_git_blob_sha": "f234db03e52a0141a6a9fea80af7badd76751d7f",
+      "module_ssc_git_blob_sha": "10089721fe2b34af51966e0e3e98dd55ac6b4ab7",
+      "module_ia_git_blob_sha": "0feb7237049945d076abab0a357d64531182a008",
+      "hidden_semantic_dependency_ids": [],
+      "ssc_obligations": 23,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 7,
+      "positive_function_cases": 2,
+      "adversarial_function_cases": 4,
+      "positive_field_cases": 3,
+      "adversarial_field_cases": 3,
+      "positive_vector_cases": 3,
+      "adversarial_vector_cases": 3,
+      "reconstruction_patterns": 6
+    }
+  },
+  "qualified_scope": [
+    "182001 total single-valued unary relation schema exactly as pinned",
+    "182002 total single-valued binary relation schema exactly as pinned",
+    "182003 field presentation exactly as pinned",
+    "182004 vector-space presentation exactly as pinned"
+  ],
+  "excluded_scope": [
+    "order/positivity",
+    "basis/dimension",
+    "linear-map/bijection",
+    "bilinear algebra extension",
+    "composition algebra",
+    "conjugation/anti-involution",
+    "triality/reflections",
+    "source-specific truth claims"
+  ],
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "consumption_rule": "Experiment 062/063 may consume only the exact pinned candidate revision, only within the qualified scope, and must preserve this HYPOTHESIS_QUALIFIED provenance in downstream dependency records. Any semantic candidate/SSC/IA change or later external failure reopens every dependent result.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "The L125-L130 dependency cone may now treat the exact field/vector presentation as provisionally qualified campaign-local support.",
+    "No L source occurrence closes solely from this module because finite-basis, linear-map, bilinear-extension, composition, triality, and reflection behavior remain downstream.",
+    "G7 may re-run the affected dependency cone and identify the next lower residual."
+  ],
+  "nonclaims": [
+    "This is not global IsoGraph authority.",
+    "This is not independently/third-party verified.",
+    "This does not rewrite the candidate's hypothesis origin.",
+    "This does not close the L source track or authorize L IA/cross-track comparison."
+  ]
+}
