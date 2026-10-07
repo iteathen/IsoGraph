@@ -1,0 +1,201 @@
+{
+  "experiment": "mcsched-s2-holdout-0.1",
+  "date": "2026-10-06",
+  "results": [
+    {
+      "name": "mcsched",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+        "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+        "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+      },
+      "stage1": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_wall_s": 0.027083144999998865
+      },
+      "linearized": {
+        "rows": 1853,
+        "cols": 1573,
+        "nonzeros": 4507
+      },
+      "active_graph": {
+        "active_variables": 1495,
+        "dropped_export_only_variables": 78,
+        "rows": 1853,
+        "active_nonzeros": 4507,
+        "vertices": 7855,
+        "edges": 9014,
+        "color_classes": 98
+      },
+      "group": {
+        "generator_count": 15,
+        "bliss_wall_s": 0.0022674809999969625,
+        "nontrivial_orbit_count": 45,
+        "largest_orbit": {
+          "size": 2,
+          "names": [
+            "t_C0000186",
+            "t_C0001396"
+          ],
+          "indices": [
+            157,
+            1182
+          ]
+        },
+        "action_order": "2",
+        "factorial_order": "2",
+        "full_symmetric": true,
+        "order_status": "EXACT_ORDER",
+        "order_wall_s": 6.248399999719823e-05
+      },
+      "structural_frontend_wall_s": 0.10216698500000376,
+      "trials": [
+        {
+          "seed": 3,
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211950.0,
+            "dual": 194642.0621001544,
+            "gap": 0.08892187902807809,
+            "bound_width": 17307.937899845594,
+            "nodes": 637,
+            "lp_iterations": 106033,
+            "wall_s": 20.000555400000003,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 212874.0,
+            "dual": 195029.0024154589,
+            "gap": 0.09149919941920709,
+            "bound_width": 17844.997584541095,
+            "nodes": 572,
+            "lp_iterations": 94214,
+            "wall_s": 20.000466765,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 4,
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211939.0,
+            "dual": 195707.21389539423,
+            "gap": 0.08293913025240693,
+            "bound_width": 16231.786104605766,
+            "nodes": 475,
+            "lp_iterations": 92039,
+            "wall_s": 20.00031745000001,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211973.0,
+            "dual": 195330.9881489841,
+            "gap": 0.08519903579417008,
+            "bound_width": 16642.011851015908,
+            "nodes": 783,
+            "lp_iterations": 98986,
+            "wall_s": 20.000593924,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 5,
+          "baseline": {
+            "status": "timelimit",
+            "primal": 213889.0,
+            "dual": 194302.01666666666,
+            "gap": 0.1008068967546314,
+            "bound_width": 19586.983333333337,
+            "nodes": 672,
+            "lp_iterations": 94737,
+            "wall_s": 20.0003519,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211920.0,
+            "dual": 195400.68181818182,
+            "gap": 0.0845407397154797,
+            "bound_width": 16519.318181818177,
+            "nodes": 903,
+            "lp_iterations": 104178,
+            "wall_s": 20.00035336100001,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 6,
+          "baseline": {
+            "status": "timelimit",
+            "primal": 212854.0,
+            "dual": 196002.22543352604,
+            "gap": 0.08597746545581558,
+            "bound_width": 16851.774566473963,
+            "nodes": 666,
+            "lp_iterations": 92922,
+            "wall_s": 20.000315298000004,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 212882.0,
+            "dual": 195507.35660173162,
+            "gap": 0.08886951212614622,
+            "bound_width": 17374.64339826838,
+            "nodes": 591,
+            "lp_iterations": 89746,
+            "wall_s": 20.000340859999994,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 7,
+          "baseline": {
+            "status": "timelimit",
+            "primal": 212892.0,
+            "dual": 194096.3598502981,
+            "gap": 0.09683664425339322,
+            "bound_width": 18795.64014970191,
+            "nodes": 691,
+            "lp_iterations": 106012,
+            "wall_s": 20.000898678,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 212818.0,
+            "dual": 195290.7120001316,
+            "gap": 0.08974972655052116,
+            "bound_width": 17527.287999868393,
+            "nodes": 629,
+            "lp_iterations": 99342,
+            "wall_s": 20.00039807799999,
+            "added_constraints": 1
+          }
+        }
+      ],
+      "summary": {
+        "baseline": {
+          "median_gap": 0.08892187902807809,
+          "median_bound_width": 17307.937899845594,
+          "median_nodes": 666,
+          "median_lp": 94737
+        },
+        "sorted": {
+          "median_gap": 0.08886951212614622,
+          "median_bound_width": 17374.64339826838,
+          "median_nodes": 629,
+          "median_lp": 98986
+        },
+        "paired_gap_wins": 2,
+        "paired_gap_losses": 3
+      }
+    }
+  ],
+  "errors": [],
+  "full_symmetric_count": 1,
+  "disposition": "PASS"
+}
