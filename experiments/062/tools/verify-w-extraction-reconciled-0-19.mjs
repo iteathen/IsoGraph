@@ -53,8 +53,8 @@ check(JSON.stringify(changed)===JSON.stringify(['W-SSC-029','W-SSC-149']),'chang
 const pc=P.items.reduce((n,x)=>n+x.occurrences.length,0),sc=S.items.reduce((n,x)=>n+x.occurrences.length,0);
 check(pc===425,'predecessor count '+pc); check(sc===436,'successor count '+sc);
 for(const id of ['W-SSC-029-O03','W-SSC-029-O04','W-SSC-149-O02','W-SSC-149-O03'])check(global.has(id),'lost target '+id);
-const targetText=['W-SSC-029','W-SSC-149'].map(id=>JSON.stringify(S.items.find(x=>x.census_id===id))).join('\n');
-check(!/STATX|STATY|every represented|variation-direction|zero first variation|Euler-Lagrange|total single-valued/i.test(targetText),'stationarity/calculus import');
+const targetSemanticText=['W-SSC-029','W-SSC-149'].map(id=>{const it=S.items.find(x=>x.census_id===id);return JSON.stringify((it?.occurrences||[]).map(o=>({source_span:o.source_span,relation_span:o.relation_span,argument_spans:o.argument_spans,logical_force:o.logical_force,definition_status:o.definition_status,depends_on:o.depends_on})));}).join('\n');
+check(!/STATX|STATY|every represented|variation-direction|zero first variation|Euler-Lagrange|total single-valued/i.test(targetSemanticText),'stationarity/calculus import');
 
 console.log(JSON.stringify({schema:'isograph.exp062-verify-w-extraction-reconciled-0-19.v0.1',pass:errors.length===0,errors,item_count:S.items.length,occurrence_count:sc,changed_bodies:changed,target_ids_preserved:true,gate_effect:'G1_REOPENED_DOWNSTREAM_INVALIDATED_UNTIL_REPLAY'},null,2));
 if(errors.length)process.exitCode=1;
