@@ -1,0 +1,150 @@
+{
+  "schema": "isograph.exp062-l-g5h-trilinear-product-recovery.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "5144d9606944223ddd481f702dcc80b9f593c8b5",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_3.json",
+    "git_blob_sha": "8f1da4e10b15d85cade1c7add8ee7fde531bde50",
+    "family": "TRILINEAR_PRODUCT_RECOVERY",
+    "occurrences": [
+      "L-SSC-129-R01",
+      "L-SSC-129-R02",
+      "L-SSC-129-R03",
+      "L-SSC-129-R04",
+      "L-SSC-129-R05"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        182004
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        183002
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        185003
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 185005,
+      "role": "total single-valued scalar trilinear form over three vector carriers",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "69f600c2c624bd63e068d6afd7b4d8d7e2478f32"
+    },
+    {
+      "id": 185006,
+      "role": "cyclic typed trilinear form under three linear role-cycle maps with exact round-trip and T-preservation laws",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "69f600c2c624bd63e068d6afd7b4d8d7e2478f32"
+    },
+    {
+      "id": 220000,
+      "role": "composition-product trilinear definition plus exact product recovery through all nondegenerate pairings",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_PRODUCT_TRILINEAR_RECOVERY_SCHEMA_0_2.isg",
+      "source_git_blob_sha": "dedb5867efd83ea3f0caadd76294afbc3847f23d"
+    }
+  ],
+  "candidate_statement": "The exact relations 185005, 185006, and 220000 form a reusable lower semantic layer: 185005 supplies total trilinear scalar evaluation, 185006 adds explicit source-neutral cyclic role transport and T preservation, and 220000 defines T from a qualified composition product/pairing and reconstructs the product uniquely from T through all scalar pairings.",
+  "declared_scope": {
+    "included": [
+      "total single-valued trilinear scalar relation on three represented vector carriers",
+      "linearity in each trilinear argument",
+      "three typed linear role-cycle maps with exact three-step round trips",
+      "T preservation under the typed cyclic transport",
+      "T(x,y,z)=B(z,x*y) over a qualified composition algebra",
+      "REC(x,y,h) defined by equality of every T(x,y,z) and B(z,h) pairing",
+      "existence and uniqueness of recovered h",
+      "REC graph equals the qualified product graph"
+    ],
+    "excluded": [
+      "triality group or automorphism ontology beyond the explicit typed cycle maps",
+      "generalized reflection semantics",
+      "division/positivity/split classification",
+      "named R/C/H/O identity",
+      "alternativity/Moufang laws",
+      "canonical conjugation uniqueness",
+      "generation physics",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "G7 0.3 leaves exactly L129's T/typed-cycle/recovery layer open after product, pairing, vector, basis, and typed-role support were provisionally qualified.",
+    "The frozen L05 L129 source instance uses historical relation forms 185006 and 220000 but those relation IDs are not current authority.",
+    "Exact definition-block audit shows 185005 depends only on 182004, 185006 only on 185005+183002, and 220000 only on 185003+185005."
+  ],
+  "prohibited_evidence": [
+    "W track semantics or artifacts",
+    "cross-track correspondence",
+    "desired W/L unification",
+    "textbook triality semantics not encoded in the selected relations",
+    "historical closure-packet status as authority",
+    "unselected relations 185004, 220001, or later reflection schemas"
+  ],
+  "predicted_consequences": [
+    "A genuinely trilinear scalar form passes 185005; an affine/nontrilinear relation fails.",
+    "An order-three typed role cycle whose three maps round-trip and preserve T passes 185006.",
+    "A wrong role map or a map cycle that fails round-trip is rejected by 185006.",
+    "A trilinear form that is not preserved by the declared role-cycle maps is rejected by 185006 even if each map is linear.",
+    "For a nondegenerate composition algebra with T(x,y,z)=B(z,xy), 220000 recovers exactly h=xy.",
+    "A different trilinear form over the same composition algebra that does not equal B(z,xy) fails 220000 rather than redefining the product.",
+    "A degenerate pairing cannot silently satisfy the uniqueness/recovery obligations."
+  ],
+  "known_alternatives": [
+    "Source-specific Core-only definitions for each L129 case without a reusable generic module.",
+    "Separate qualification of trilinearity, cyclic transport, and recovery as three modules.",
+    "Preserve the L129 residual boundary if the combined candidate exposes hidden dependencies or fails adversarial tests."
+  ],
+  "positive_controls": [
+    "finite coordinatewise trilinear form over F3^2 for 185005",
+    "order-three coordinate rotation over F3^3 with cyclic coordinate-product T for 185006",
+    "finite F3 complex-like composition algebra with T(x,y,z)=B(z,xy) for 220000"
+  ],
+  "negative_adversarial_controls": [
+    "affine/nontrilinear T",
+    "typed cycle with one wrong role map so three-step round trip fails",
+    "trilinear T whose coefficient weighting is not preserved by the role cycle",
+    "same composition algebra with T scaled away from B(z,xy)",
+    "degenerate pairing producing nonunique recovery",
+    "unselected-relation firewall"
+  ],
+  "falsifier": "Reject or split the candidate if any selected definition has a hidden dependency outside qualified 182004/183002/185003 plus the selected relations; if a negative control is accepted; if a positive control fails; if module SSC/IA cannot close; or if exact L129 source reconstruction requires semantics outside the qualified scope.",
+  "adaptive_evidence": "This candidate was generated after the field/vector, linear/basis, triple-role, and composition hypotheses qualified and G7 0.3 isolated the next transitive L129 residual. The historical relation files were inspected only after the residual family was independently exposed; their prior closure labels are not authority.",
+  "fresh_confirmation_status": "PENDING_DETERMINISTIC_G6_QUALIFICATION_UNDER_OWNER_EXTERNAL_BYPASS",
+  "coverage_limits": "Only exact relations 185005, 185006, and 220000 at their pinned source bytes and qualified dependencies. No claim about unselected triality/reflection/group or physical semantics.",
+  "revision_lineage": [
+    "L_G1_DEPENDENCY_CONE_SOURCE_INCIDENCE_0_2",
+    "L_G2_DEPENDENCY_CONE_NEUTRAL_SUBGRAPH_0_1",
+    "L_G3_DEPENDENCY_CONE_CORE_DEFINABILITY_0_1",
+    "L_G7_DEPENDENCY_CONE_REPLAY_0_1",
+    "L_G7_DEPENDENCY_CONE_REPLAY_0_2",
+    "L_G7_DEPENDENCY_CONE_REPLAY_0_3"
+  ],
+  "historical_source_instance": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TRILINEAR_PRODUCT_RECOVERY_SOURCE_INSTANCE_0_2.isg",
+    "git_blob_sha": "a2b2558fbde325ee48cac932f27af3c4a9301ccb",
+    "status": "SOURCE_RECONSTRUCTION_TARGET_ONLY_NOT_CURRENT_AUTHORITY_UNTIL_SELECTED_RELATIONS_QUALIFY"
+  },
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}
