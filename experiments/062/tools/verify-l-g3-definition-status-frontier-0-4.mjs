@@ -1,0 +1,45 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+const g3Path='experiments/062/L_G3_CORE_DEFINABILITY_0_3.json';
+const extractionPath='experiments/062/L_EXTRACTION_RECONCILED_0_25.json';
+const frontierPath='experiments/062/L_G3_DEFINITION_STATUS_FRONTIER_0_4.json';
+const outPath='experiments/062/L_G3_CORE_DEFINABILITY_0_4.json';
+const generator='experiments/062/tools/apply-l-g3-definition-status-frontier-0-4.mjs';
+const g3=JSON.parse(fs.readFileSync(g3Path,'utf8'));
+const extraction=JSON.parse(fs.readFileSync(extractionPath,'utf8'));
+const frontier=JSON.parse(fs.readFileSync(frontierPath,'utf8'));
+const out=JSON.parse(fs.readFileSync(outPath,'utf8'));
+const errors=[],fail=m=>errors.push(m);
+if(frontier.schema!=='isograph.exp062-l-g3-definition-status-frontier.v0.4')fail('frontier schema');
+if(out.schema!=='isograph.exp062-l-g3-core-definability.v0.4')fail('output schema');
+if(frontier.input?.g3_git_blob_sha!==execFileSync('git',['hash-object',g3Path],{encoding:'utf8'}).trim())fail('g3 pin');
+if(frontier.input?.extraction_git_blob_sha!==execFileSync('git',['hash-object',extractionPath],{encoding:'utf8'}).trim())fail('extraction pin');
+const src=new Map();for(const i of extraction.items)for(const o of i.occurrences)src.set(o.occurrence_id,o);
+const g3ById=new Map();for(const i of g3.items)for(const r of i.occurrences)g3ById.set(r.occurrence_id,r);
+if((frontier.rows||[]).length!==818)fail('frontier coverage');
+const seen=new Set(),counts={FINAL_CORE_CLOSED:0,FINAL_UNEXPANDED_EXTERNAL_DEFINITION:0,FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION:0,PENDING_EXPLICIT_SOURCE_ADJUDICATION:0};
+for(const r of frontier.rows||[]){
+ if(seen.has(r.occurrence_id))fail('duplicate '+r.occurrence_id);seen.add(r.occurrence_id);
+ const o=src.get(r.occurrence_id),g=g3ById.get(r.occurrence_id);if(!o||!g){fail('unknown '+r.occurrence_id);continue;}
+ let expected;
+ if(g.disposition==='CORE_CLOSED')expected='FINAL_CORE_CLOSED';
+ else if(g.disposition!=='UNEXPANDED_DEMAND')fail('unexpected disposition '+r.occurrence_id);
+ else if(o.definition_status==='NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED')expected='FINAL_UNEXPANDED_EXTERNAL_DEFINITION';
+ else if(o.definition_status==='PARTIAL_IN_BODY')expected='FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION';
+ else if(o.definition_status==='EXPLICIT_IN_BODY')expected='PENDING_EXPLICIT_SOURCE_ADJUDICATION';
+ else fail('definition status '+r.occurrence_id);
+ if(r.review_state!==expected)fail(r.occurrence_id+': review state');
+ if(r.definition_status!==o.definition_status||r.disposition!==g.disposition||r.source_span!==o.source_span||r.relation_span!==o.relation_span)fail(r.occurrence_id+': provenance');
+ if(expected)counts[expected]++;
+}
+for(const [k,v] of Object.entries({FINAL_CORE_CLOSED:82,FINAL_UNEXPANDED_EXTERNAL_DEFINITION:218,FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION:377,PENDING_EXPLICIT_SOURCE_ADJUDICATION:141}))if(counts[k]!==v||frontier.counts?.[k]!==v)fail('count '+k);
+if(out.counts?.CORE_CLOSED!==82||out.counts?.UNEXPANDED_DEMAND!==736)fail('G3 disposition counts changed');
+if(out.fixed_point?.G3_complete!==false||out.fixed_point?.pending_explicit_rows!==141||out.fixed_point?.G4_authorized!==false)fail('frontier fixed point state');
+const inStruct=JSON.stringify(g3.items.map(i=>i.occurrences.map(r=>[r.occurrence_id,r.disposition])));
+const outStruct=JSON.stringify(out.items.map(i=>i.occurrences.map(r=>[r.occurrence_id,r.disposition])));
+if(inStruct!==outStruct)fail('0.4 must not alter dispositions');
+execFileSync('node',[generator],{stdio:'pipe'});
+const diff=execFileSync('git',['diff','--',frontierPath,outPath],{encoding:'utf8'});
+if(diff.trim())fail('generator replay mismatch');
+console.log(JSON.stringify({schema:'isograph.exp062-verify-l-g3-definition-status-frontier.v0.4',pass:errors.length===0,errors,counts,replay_exact:diff.trim()==='',pending_explicit_rows:141,G3_complete:false,G4_authorized:false},null,2));
+if(errors.length)process.exit(1);
