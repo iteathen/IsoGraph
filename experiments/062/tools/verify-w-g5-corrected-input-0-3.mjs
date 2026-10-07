@@ -1,0 +1,20 @@
+import fs from 'node:fs';import {execFileSync} from 'node:child_process';
+const S=JSON.parse(fs.readFileSync('experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_3.json','utf8'));
+const R=JSON.parse(fs.readFileSync('experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_3.json','utf8'));
+const G4=JSON.parse(fs.readFileSync('experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_3.json','utf8'));
+const G3=JSON.parse(fs.readFileSync('experiments/062/W_G3_CORE_DEFINABILITY_0_7.json','utf8'));
+const e=[],c=(x,m)=>{if(!x)e.push(m)};
+c(S.schema==='isograph.exp062-w-g5-candidate-basis-synthesis.v0.3','schema');
+c(S.track==='W'&&S.comparison_scope==='W_ONLY'&&S.authority===false,'scope');
+c(S.class_results.length===G4.classes.length&&G4.classes.length===372,'class coverage');
+const byId=new Map(G3.items.flatMap(i=>i.occurrences.map(r=>[r.occurrence_id,r]))),classes=new Map(G4.classes.map(q=>[q.class_id,q]));
+let single=0,multi=0,uniform=0,hetero=0;
+for(const row of S.class_results){const q=classes.get(row.class_id);c(!!q,'class '+row.class_id);if(!q)continue;c(JSON.stringify(row.member_occurrence_ids)===JSON.stringify(q.member_occurrence_ids),'members '+row.class_id);c(row.candidate_id===null&&row.residual_disposition==='UNRESOLVED_BOUNDARY','candidate '+row.class_id);const ms=q.member_occurrence_ids.map(id=>byId.get(id));c(ms.every(x=>x?.disposition==='UNEXPANDED_DEMAND'),'G3 '+row.class_id);const rels=[...new Set(ms.map(x=>x.source_provenance.relation_span))];if(q.member_count===1)single++;else{multi++;if(rels.length===1)uniform++;else hetero++;}}
+c(single===344&&multi===28&&uniform===4&&hetero===24,'class counts');
+c(S.counts?.quotient_classes===372&&S.counts?.cross_class_surface_recurrence_probes===63&&S.counts?.proposed_reusable_candidates===0&&S.counts?.unresolved_boundaries===372,'summary');
+c(Array.isArray(S.candidate_basis)&&S.candidate_basis.length===0,'basis');
+const target=['W-SSC-097-O06','W-SSC-097-O04'];const classOf=id=>G4.classes.find(q=>q.member_occurrence_ids.includes(id))?.class_id;c(JSON.stringify(S.target_w097_projective_behavior?.quotient_class_ids)===JSON.stringify(target.map(classOf)),'target classes');c(new Set(target.map(classOf)).size===2,'target separation');
+c(R.target_w097_review?.disposition==='NO_DETERMINISTIC_REUSABLE_CANDIDATE_G5H_WARRANTED','review target');c(R.conclusion?.W_G5H_authorized===true&&R.conclusion?.W_local_G6_required===false,'review stage');
+const txt=JSON.stringify({basis:S.candidate_basis,target:S.target_w097_projective_behavior});c(!/L-SSC-|L_G6_/i.test(txt),'L leak');
+execFileSync('node',['experiments/062/tools/verify-w-g4-alpha-structural-quotient-0-3.mjs'],{stdio:'pipe'});
+console.log(JSON.stringify({schema:'isograph.exp062-w-g5-w097-corrected-verifier.v0.3',pass:!e.length,errors:e,quotient_classes:372,proposed_reusable_candidates:0,G5H_authorized:R.conclusion?.W_G5H_authorized},null,2));if(e.length)process.exitCode=1;
