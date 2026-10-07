@@ -35,7 +35,7 @@ function topBlocks(s){
 }
 function definitionBlock(path,id){
  const blocks=topBlocks(read(path));
- const hit=blocks.filter(b=>new RegExp('\\(\\^150010\\s+'+id+'(?:\\s|\\))').test(b));
+ const hit=blocks.filter(b=>new RegExp('\\(\\^150005\\s+\\(\\^150010\\s+'+id+'(?:\\s|\\))').test(b));
  if(hit.length!==1)throw new Error('definition block count '+id+'='+hit.length);
  return hit[0];
 }
