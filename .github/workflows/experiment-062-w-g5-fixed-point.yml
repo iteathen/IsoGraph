@@ -7,9 +7,11 @@ on:
     paths:
       - experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json
       - experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json
+      - experiments/062/W_G5_FIXED_POINT_0_1.json
       - experiments/062/W_G4_FIXED_POINT_0_1.json
       - experiments/062/tools/verify-w-g5-candidate-basis-synthesis-0-1.mjs
       - experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs
+      - experiments/062/tools/verify-w-g5-boundary-record-0-1.mjs
       - .github/workflows/experiment-062-w-g5-fixed-point.yml
   pull_request:
     paths:
@@ -31,3 +33,4 @@ jobs:
         with:
           persist-credentials: false
       - run: node experiments/062/tools/verify-w-g5-fixed-point-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g5-boundary-record-0-1.mjs
