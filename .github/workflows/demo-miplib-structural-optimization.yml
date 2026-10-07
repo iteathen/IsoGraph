@@ -1,0 +1,52 @@
+name: MIPLIB structural optimization demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - demo/miplib-structural-optimization-20261007
+    paths:
+      - .github/workflows/demo-miplib-structural-optimization.yml
+      - demos/miplib-structural-optimization/**
+
+permissions:
+  contents: read
+
+jobs:
+  certificate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Install pinned demo dependencies
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check -r demos/miplib-structural-optimization/requirements.txt
+
+      - name: Compile demo
+        run: python3 -m py_compile demos/miplib-structural-optimization/demo.py
+
+      - name: Reproduce exact structural certificate
+        run: |
+          set -euo pipefail
+          python3 demos/miplib-structural-optimization/demo.py --out out/ci-result.json
+          python3 - <<'PY'
+          import json
+          p="demos/miplib-structural-optimization/out/ci-result.json"
+          r=json.load(open(p))
+          assert r["disposition"]=="PASS"
+          assert r["certificate"]["transformed_breakers"]==[
+              ["t_C0021","t_C0026"],["t_C0027","t_C0028"]
+          ]
+          assert r["certificate"]["original_breakers"]==[
+              ["C0021","C0026"],["C0027","C0028"]
+          ]
+          print(json.dumps({
+              "disposition":r["disposition"],
+              "transformed_breakers":r["certificate"]["transformed_breakers"],
+              "original_breakers":r["certificate"]["original_breakers"],
+              "frontend_s":r["certificate"]["stages"]["total_s"]
+          },indent=2))
+          PY
