@@ -43,7 +43,7 @@ jobs:
 
       - name: Persist generated successor
         run: |
-          if git diff --quiet -- experiments/062/W_EXTRACTION_RECONCILED_0_6.json; then
+          if [ -z "$(git status --porcelain -- experiments/062/W_EXTRACTION_RECONCILED_0_6.json)" ]; then
             echo "W 0.6 already matches deterministic generation."
             exit 0
           fi
