@@ -1,0 +1,313 @@
+{
+  "experiment": "n5-reentry-attribution-control-0.5",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "seeds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "limit_s": 90.0,
+  "pyscipopt_version": "6.2.1",
+  "highs_version": "1.15.1",
+  "igraph_version": "0.11.9",
+  "frontend": {
+    "stages": {
+      "scip_load_s": 0.008582214000000477,
+      "scip_presolve_s": 0.04226311800000104,
+      "scip_export_s": 0.06458047600000327,
+      "highs_parse_s": 0.009444770999998298,
+      "sparse_materialize_s": 0.0029895699999968883,
+      "bulk_graph_data_s": 0.019593294000003425,
+      "igraph_construct_s": 0.001819905000004951,
+      "bliss_s": 0.004755756000001554,
+      "replay_select_s": 0.04842742499999986,
+      "total_s": 0.20610908100000103
+    },
+    "graph_meta": {
+      "active_variables": 2142,
+      "dropped_export_only_variables": 212,
+      "rows": 846,
+      "active_nonzeros": 8316,
+      "vertices": 11304,
+      "edges": 16632,
+      "color_classes": 22
+    },
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ]
+  },
+  "trials": [
+    {
+      "seed": 29,
+      "order": "C_A_B",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8104.999999999949,
+        "dual": 8104.999999999949,
+        "gap": 0.0,
+        "nodes": 1959,
+        "lp_iterations": 263396,
+        "wall_s": 57.841569127
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.0000000001655,
+        "dual": 8105.0000000001655,
+        "gap": 0.0,
+        "nodes": 822,
+        "lp_iterations": 149181,
+        "wall_s": 34.541201169999994
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8105.000000000307,
+        "dual": 8105.000000000307,
+        "gap": 0.0,
+        "nodes": 476,
+        "lp_iterations": 112211,
+        "wall_s": 28.65210027100001
+      },
+      "B_end_to_end_wall_s": 34.656626978,
+      "C_end_to_end_wall_s": 28.85820935200001
+    },
+    {
+      "seed": 30,
+      "order": "A_B_C",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.000000000006,
+        "dual": 8105.000000000006,
+        "gap": 0.0,
+        "nodes": 2692,
+        "lp_iterations": 497883,
+        "wall_s": 86.560016706
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.000000000301,
+        "dual": 8105.000000000301,
+        "gap": 0.0,
+        "nodes": 862,
+        "lp_iterations": 136180,
+        "wall_s": 32.45851567400001
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8105.000000000358,
+        "dual": 8105.000000000358,
+        "gap": 0.0,
+        "nodes": 822,
+        "lp_iterations": 160030,
+        "wall_s": 35.397092673999964
+      },
+      "B_end_to_end_wall_s": 32.573941482000016,
+      "C_end_to_end_wall_s": 35.603201754999965
+    },
+    {
+      "seed": 31,
+      "order": "B_C_A",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1432,
+        "lp_iterations": 213226,
+        "wall_s": 44.60382429400005
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.000000000635,
+        "dual": 8105.000000000635,
+        "gap": 0.0,
+        "nodes": 1061,
+        "lp_iterations": 197891,
+        "wall_s": 40.92798345099999
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8105.000000000445,
+        "dual": 8105.000000000445,
+        "gap": 0.0,
+        "nodes": 846,
+        "lp_iterations": 189635,
+        "wall_s": 41.89314133900001
+      },
+      "B_end_to_end_wall_s": 41.04340925899999,
+      "C_end_to_end_wall_s": 42.09925042000001
+    },
+    {
+      "seed": 32,
+      "order": "C_A_B",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.000001290893,
+        "dual": 8105.000001290893,
+        "gap": 0.0,
+        "nodes": 1045,
+        "lp_iterations": 202140,
+        "wall_s": 42.90128932999994
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.000000000154,
+        "dual": 8105.000000000154,
+        "gap": 0.0,
+        "nodes": 956,
+        "lp_iterations": 152001,
+        "wall_s": 35.977610359000096
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8105.000000000457,
+        "dual": 8105.000000000457,
+        "gap": 0.0,
+        "nodes": 878,
+        "lp_iterations": 163015,
+        "wall_s": 36.67905234
+      },
+      "B_end_to_end_wall_s": 36.0930361670001,
+      "C_end_to_end_wall_s": 36.885161421
+    },
+    {
+      "seed": 33,
+      "order": "A_B_C",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.000000000001,
+        "dual": 8105.000000000001,
+        "gap": 0.0,
+        "nodes": 1256,
+        "lp_iterations": 236427,
+        "wall_s": 51.46874973599995
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.00000000035,
+        "dual": 8105.00000000035,
+        "gap": 0.0,
+        "nodes": 880,
+        "lp_iterations": 162594,
+        "wall_s": 39.20545313000002
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8104.999999999927,
+        "dual": 8104.999999999927,
+        "gap": 0.0,
+        "nodes": 797,
+        "lp_iterations": 137590,
+        "wall_s": 32.496033904
+      },
+      "B_end_to_end_wall_s": 39.32087893800003,
+      "C_end_to_end_wall_s": 32.702142985
+    },
+    {
+      "seed": 34,
+      "order": "B_C_A",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1178,
+        "lp_iterations": 186333,
+        "wall_s": 44.390842332000034
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.000000000326,
+        "dual": 8105.000000000326,
+        "gap": 0.0,
+        "nodes": 1048,
+        "lp_iterations": 197422,
+        "wall_s": 40.15408432600009
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8104.999999996461,
+        "dual": 8104.999999996461,
+        "gap": 0.0,
+        "nodes": 873,
+        "lp_iterations": 169835,
+        "wall_s": 38.09075395600007
+      },
+      "B_end_to_end_wall_s": 40.26951013400009,
+      "C_end_to_end_wall_s": 38.29686303700007
+    },
+    {
+      "seed": 35,
+      "order": "C_A_B",
+      "A_original": {
+        "status": "optimal",
+        "objective": 8105.0000000000155,
+        "dual": 8105.0000000000155,
+        "gap": 0.0,
+        "nodes": 877,
+        "lp_iterations": 143261,
+        "wall_s": 33.895827714000006
+      },
+      "B_reentry": {
+        "status": "optimal",
+        "objective": 8105.0000000004275,
+        "dual": 8105.0000000004275,
+        "gap": 0.0,
+        "nodes": 946,
+        "lp_iterations": 181535,
+        "wall_s": 38.352667474999976
+      },
+      "C_isograph": {
+        "status": "optimal",
+        "objective": 8105.0000000002565,
+        "dual": 8105.0000000002565,
+        "gap": 0.0,
+        "nodes": 1051,
+        "lp_iterations": 193113,
+        "wall_s": 40.23980986799995
+      },
+      "B_end_to_end_wall_s": 38.46809328299998,
+      "C_end_to_end_wall_s": 40.44591894899995
+    }
+  ],
+  "summary": {
+    "paired_all_optimal": 7,
+    "stage1_wall_s": 0.11542580800000479,
+    "structural_extra_wall_s": 0.09068327299999623,
+    "full_structural_frontend_wall_s": 0.20610908100000103,
+    "A_median_wall_s": 44.60382429400005,
+    "B_median_end_to_end_wall_s": 38.46809328299998,
+    "C_median_end_to_end_wall_s": 36.885161421,
+    "median_B_over_A_ratio": 0.8413042295621876,
+    "median_C_over_A_ratio": 0.8597681327774689,
+    "median_C_over_B_ratio": 1.021946761428847,
+    "B_vs_A_wins": 6,
+    "C_vs_A_wins": 6,
+    "C_vs_B_wins": 3,
+    "C_vs_B_losses": 4,
+    "A_median_nodes": 1256,
+    "B_median_nodes": 946,
+    "C_median_nodes": 846,
+    "A_median_lp": 213226,
+    "B_median_lp": 162594,
+    "C_median_lp": 163015
+  },
+  "disposition": "PASS"
+}
