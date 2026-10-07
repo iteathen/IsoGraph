@@ -1,0 +1,230 @@
+{
+  "schema": "isograph.exp062-scalar-extension-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "SCALAR_EXTENSION_SUPPORT_0_1",
+  "branch_head_at_creation": "00cced08054a6b76ae6aefa25989f413b522eae7",
+  "hypothesis": {
+    "path": "experiments/062/L_G5H_SCALAR_EXTENSION_SUPPORT_0_1.json",
+    "git_blob_sha": "edaa03e9add9a0f64b8a81aa4e30a4a5e7d9a110"
+  },
+  "scope": {
+    "obligation_count": 33,
+    "selected_relation_ids": [
+      193302,
+      193303,
+      193400,
+      222000,
+      222001,
+      222002,
+      225000,
+      231000
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "SE-SSC-001",
+      "kind": "FIELD_EMBED_R",
+      "body": "193302 requires a source field R.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-002",
+      "kind": "FIELD_EMBED_C",
+      "body": "193302 requires a target field C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-003",
+      "kind": "FIELD_EMBED_TOTAL_INJECTIVE",
+      "body": "193302 requires EMB:R->C total, single-valued, and injective.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-004",
+      "kind": "FIELD_EMBED_ZERO_ONE",
+      "body": "193302 requires EMB(0_R)=0_C and EMB(1_R)=1_C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-005",
+      "kind": "FIELD_EMBED_ADD",
+      "body": "193302 requires preservation of scalar addition.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-006",
+      "kind": "FIELD_EMBED_MUL",
+      "body": "193302 requires preservation of scalar multiplication.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-007",
+      "kind": "SCALAR_RESTRICT_PARENT",
+      "body": "193303 requires exact 193302.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-008",
+      "kind": "SCALAR_RESTRICT_C_VECTOR",
+      "body": "193303 requires the carrier V as a C-vector space.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-009",
+      "kind": "SCALAR_RESTRICT_R_VECTOR",
+      "body": "193303 requires the same carrier V as an R-vector space.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-010",
+      "kind": "SCALAR_RESTRICT_AGREEMENT",
+      "body": "193303 requires r·_R v = EMB(r)·_C v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-011",
+      "kind": "LINEAR_INJECTION_PARENT",
+      "body": "193400 requires an exact linear map.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-012",
+      "kind": "LINEAR_INJECTION_INJECTIVITY",
+      "body": "193400 requires equality of outputs to imply equality of inputs.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-013",
+      "kind": "FINITE_EXTENSION_2",
+      "body": "222000 requires exact field embedding, 187600 R/C basis presentations, scalar restriction, linear injection, and all 2 declared basis images.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-014",
+      "kind": "FINITE_EXTENSION_4",
+      "body": "222001 requires exact field embedding, 187601 R/C basis presentations, scalar restriction, linear injection, and all 4 declared basis images.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-015",
+      "kind": "FINITE_EXTENSION_8",
+      "body": "222002 requires exact field embedding, 215000 R/C basis presentations, scalar restriction, linear injection, and all 8 declared basis images.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-016",
+      "kind": "FINITE_EXTENSION_NO_DIMENSION_DRIFT",
+      "body": "The 2/4/8 variants are exact finite cases; no arbitrary-dimension or completeness claim is added.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-017",
+      "kind": "TRI_EXTENSION_FIELD",
+      "body": "225000 requires exact 193302 field embedding.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-018",
+      "kind": "TRI_EXTENSION_RESTRICTIONS",
+      "body": "225000 requires exact scalar restriction on all three C-side role carriers.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-019",
+      "kind": "TRI_EXTENSION_INJECTIONS",
+      "body": "225000 requires exact linear injections JV,JM,JP.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-020",
+      "kind": "TRI_EXTENSION_REAL_T",
+      "body": "225000 requires exact R-trilinear TR.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-021",
+      "kind": "TRI_EXTENSION_COMPLEX_T",
+      "body": "225000 requires exact C-trilinear TC.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-022",
+      "kind": "TRI_EXTENSION_AGREEMENT",
+      "body": "225000 requires TC(JV(v),JM(m),JP(p))=EMB(TR(v,m,p)) on embedded real triples.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-023",
+      "kind": "PARAM_EXTENSION_FIELD",
+      "body": "231000 requires exact 193302 field embedding.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-024",
+      "kind": "PARAM_EXTENSION_INPUT_R",
+      "body": "231000 requires the real input carrier VR.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-025",
+      "kind": "PARAM_EXTENSION_INPUT_C",
+      "body": "231000 requires the complex input carrier VC and exact scalar restriction.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-026",
+      "kind": "PARAM_EXTENSION_OUTPUT_C",
+      "body": "231000 requires the complex output carrier WC and exact scalar restriction.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-027",
+      "kind": "PARAM_EXTENSION_J",
+      "body": "231000 requires exact linear injection J:VR->VC.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-028",
+      "kind": "PARAM_EXTENSION_F_TOTAL",
+      "body": "231000 requires F:PARAM×VR->WC total/single-valued.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-029",
+      "kind": "PARAM_EXTENSION_FC_TOTAL",
+      "body": "231000 requires FC:PARAM×VC->WC total/single-valued.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-030",
+      "kind": "PARAM_EXTENSION_F_LINEAR",
+      "body": "231000 requires F(p,-) to be R-linear for each admitted p.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-031",
+      "kind": "PARAM_EXTENSION_FC_LINEAR",
+      "body": "231000 requires FC(p,-) to be C-linear for each admitted p.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-032",
+      "kind": "PARAM_EXTENSION_AGREEMENT",
+      "body": "231000 requires F(p,v)=FC(p,J(v)) for admitted p,v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "SE-SSC-033",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No reflection, anti-linear real structure, sqrt/signature semantics, positivity/split, triality-group, named algebra, or cross-track semantics.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "completion_rule": "All 33 obligations must be covered or discharged by pinned qualified dependencies; scope firewall is qualification-bearing.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
