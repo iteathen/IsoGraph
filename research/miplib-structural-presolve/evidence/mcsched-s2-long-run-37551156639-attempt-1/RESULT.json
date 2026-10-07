@@ -1,0 +1,209 @@
+{
+  "experiment": "mcsched-s2-long-holdout-0.2",
+  "date": "2026-10-06",
+  "results": [
+    {
+      "name": "mcsched",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/mcsched.mps.gz",
+        "gzip_sha256": "49deeb8c67d5ab6eec17c5e60019b93150773688271dc53510c31945dabed192",
+        "mps_sha256": "39c18a78edecfde12f10f4baf958986d9de827a030c6b25d0d86f46a2ebf4d3a"
+      },
+      "stage1": {
+        "vars": 1495,
+        "conss": 1853,
+        "presolve_wall_s": 0.052845508000004315
+      },
+      "linearized": {
+        "rows": 1853,
+        "cols": 1573,
+        "nonzeros": 4507
+      },
+      "active_graph": {
+        "active_variables": 1495,
+        "dropped_export_only_variables": 78,
+        "rows": 1853,
+        "active_nonzeros": 4507,
+        "vertices": 7855,
+        "edges": 9014,
+        "color_classes": 98
+      },
+      "group": {
+        "generator_count": 15,
+        "bliss_wall_s": 0.0041409009999995305,
+        "nontrivial_orbit_count": 45,
+        "largest_orbit": {
+          "size": 2,
+          "names": [
+            "t_C0000186",
+            "t_C0001396"
+          ],
+          "indices": [
+            157,
+            1182
+          ]
+        },
+        "action_order": "2",
+        "factorial_order": "2",
+        "full_symmetric": true,
+        "order_status": "EXACT_ORDER",
+        "order_wall_s": 8.541000001116572e-05
+      },
+      "structural_frontend_wall_s": 0.19178799599998797,
+      "trials": [
+        {
+          "seed": 8,
+          "order": "baseline_first",
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211939.0,
+            "dual": 197468.30392156861,
+            "gap": 0.07328110785910696,
+            "bound_width": 14470.696078431385,
+            "nodes": 1369,
+            "lp_iterations": 181611,
+            "wall_s": 60.00056372599998,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211920.0,
+            "dual": 196863.33133732533,
+            "gap": 0.07648285010922153,
+            "bound_width": 15056.668662674667,
+            "nodes": 1546,
+            "lp_iterations": 214001,
+            "wall_s": 60.00065201800001,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 9,
+          "order": "sorted_first",
+          "baseline": {
+            "status": "timelimit",
+            "primal": 212797.0,
+            "dual": 196791.72664259927,
+            "gap": 0.08133102763241921,
+            "bound_width": 16005.273357400729,
+            "nodes": 1863,
+            "lp_iterations": 241599,
+            "wall_s": 60.001573207000035,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211920.0,
+            "dual": 197403.09042394016,
+            "gap": 0.07353942405300509,
+            "bound_width": 14516.909576059843,
+            "nodes": 1491,
+            "lp_iterations": 209689,
+            "wall_s": 60.00050330200003,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 10,
+          "order": "baseline_first",
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211913.0,
+            "dual": 197481.95124257158,
+            "gap": 0.07307527936921401,
+            "bound_width": 14431.04875742842,
+            "nodes": 1628,
+            "lp_iterations": 193634,
+            "wall_s": 60.00054869400003,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211913.0,
+            "dual": 197719.85657822172,
+            "gap": 0.07178410741039155,
+            "bound_width": 14193.14342177828,
+            "nodes": 1295,
+            "lp_iterations": 208985,
+            "wall_s": 60.00389916,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 11,
+          "order": "sorted_first",
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211939.0,
+            "dual": 198787.6666666671,
+            "gap": 0.06615769254631598,
+            "bound_width": 13151.333333332906,
+            "nodes": 1552,
+            "lp_iterations": 224629,
+            "wall_s": 60.00225268700001,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211913.0,
+            "dual": 198256.0106740921,
+            "gap": 0.06888562560838705,
+            "bound_width": 13656.989325907896,
+            "nodes": 2402,
+            "lp_iterations": 229546,
+            "wall_s": 60.000622018,
+            "added_constraints": 1
+          }
+        },
+        {
+          "seed": 12,
+          "order": "baseline_first",
+          "baseline": {
+            "status": "timelimit",
+            "primal": 211920.0,
+            "dual": 198405.55396586348,
+            "gap": 0.06811526070717626,
+            "bound_width": 13514.44603413652,
+            "nodes": 2019,
+            "lp_iterations": 235553,
+            "wall_s": 60.000757051999926,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": 211973.0,
+            "dual": 195682.68413978495,
+            "gap": 0.08324863250842443,
+            "bound_width": 16290.31586021505,
+            "nodes": 1933,
+            "lp_iterations": 224086,
+            "wall_s": 60.000892765,
+            "added_constraints": 1
+          }
+        }
+      ],
+      "summary": {
+        "baseline": {
+          "median_gap": 0.07307527936921401,
+          "median_bound_width": 14431.04875742842,
+          "median_nodes": 1628,
+          "median_lp": 224629
+        },
+        "sorted": {
+          "median_gap": 0.07353942405300509,
+          "median_bound_width": 14516.909576059843,
+          "median_nodes": 1546,
+          "median_lp": 214001
+        },
+        "paired_gap_wins": 2,
+        "paired_gap_losses": 3,
+        "paired_gap_ties": 0,
+        "paired_both_optimal": 0,
+        "directional_confirmation": false
+      }
+    }
+  ],
+  "errors": [],
+  "full_symmetric_count": 1,
+  "disposition": "PASS"
+}
