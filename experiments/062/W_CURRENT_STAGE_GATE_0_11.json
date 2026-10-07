@@ -1,0 +1,46 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.11",
+  "date": "2026-10-07",
+  "status": "W_G1_W097_CORRECTED_INPUT_ACCEPTED_UNDER_OWNER_BYPASS_G2_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_10.json",
+    "git_blob_sha": "505487dad3321441e067325d3749e9fea080b4c4",
+    "reason": "W G1 0.22 passed deterministic replay and reached a source-local zero-change fixed point on the W097-corrected source tuple."
+  },
+  "current_G1": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023",
+      "occurrences": 445
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_3.json",
+      "git_blob_sha": "c975248fa988f3187a90f6678a2713f216a250e1"
+    },
+    "bypass_routing": {
+      "path": "experiments/062/W_G1_OWNER_BYPASS_ROUTING_0_2.json",
+      "git_blob_sha": "92e773e1788cf578c00ee20cbab910dbc5cc1d02"
+    },
+    "source_local_zero_change": true,
+    "external_verification_complete": false,
+    "accepted_under_owner_bypass": true
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_authorized": true,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_new_candidate_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Regenerate W G2 neutral occurrence graph from W_EXTRACTION_RECONCILED_0_22.json. No candidate may be qualified before corrected G2-G5 replay."
+}
