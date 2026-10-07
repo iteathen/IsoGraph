@@ -1,0 +1,178 @@
+{
+  "schema": "isograph.exp062-l-g5h-scalar-extension-support.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "c9eed4dc01cd82ca5dfefeb00b5f6abf25a6dd47",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_4.json",
+    "git_blob_sha": "bc7ec731ea4d77db0015615e0ecdf921b4095883",
+    "family": "SCALAR_EXTENSION_AND_REFLECTION_TRANSPORT",
+    "occurrences": [
+      "L-SSC-130-R01",
+      "L-SSC-130-R02",
+      "L-SSC-130-R03",
+      "L-SSC-130-R04",
+      "L-SSC-130-R05"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        182001,
+        182002,
+        182003,
+        182004
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        183002,
+        187600,
+        187601,
+        215000
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_TRILINEAR_RECOVERY_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "74564c22d7a2ca92d32c7951c7fae2220560e44f",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        185005
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 193302,
+      "role": "injective field embedding preserving zero, one, addition, and multiplication",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+      "source_git_blob_sha": "c26db79169c45211a29efc9bc234953e2ade2435"
+    },
+    {
+      "id": 193303,
+      "role": "restriction of a C-vector scalar action along the embedded R field on the same carrier",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+      "source_git_blob_sha": "c26db79169c45211a29efc9bc234953e2ade2435"
+    },
+    {
+      "id": 193400,
+      "role": "injective linear map between vector carriers over one field",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "71020fc0e163454ec6a0c9d0a1f5b25bc8abf0b7"
+    },
+    {
+      "id": 222000,
+      "role": "two-basis-vector R-to-C scalar extension with embedded basis and scalar restriction",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FINITE_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "1520ac6cbb17abcaf25a656691ff489a1e89f6c5"
+    },
+    {
+      "id": 222001,
+      "role": "four-basis-vector R-to-C scalar extension with embedded basis and scalar restriction",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FINITE_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "1520ac6cbb17abcaf25a656691ff489a1e89f6c5"
+    },
+    {
+      "id": 222002,
+      "role": "eight-basis-vector R-to-C scalar extension with embedded basis and scalar restriction",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FINITE_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "1520ac6cbb17abcaf25a656691ff489a1e89f6c5"
+    },
+    {
+      "id": 225000,
+      "role": "trilinear scalar extension preserving values on embedded real triples",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_TRILINEAR_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "9bc8acd2440ac7b733c8c529eef7d089b048778a"
+    },
+    {
+      "id": 231000,
+      "role": "parameterized linear map extension from R-vector inputs to C-vector inputs agreeing on embedded real inputs",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETERIZED_SCALAR_EXTENSION_MAP_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "e0ebd93a87586d479c0acf44488bc6773d2b8f3d"
+    }
+  ],
+  "candidate_statement": "The exact eight relations provide a reusable scalar-extension layer: a field embedding; scalar restriction on complex vector carriers; injective linear embedding of real carriers; finite 2/4/8 basis extensions; extension of trilinear forms; and parameterized extension of real-linear maps to complex-linear maps with exact agreement on embedded real inputs.",
+  "declared_scope": {
+    "included": [
+      "field embedding homomorphism and injectivity",
+      "scalar restriction through the field embedding",
+      "linear injection",
+      "2/4/8 source basis mapping under scalar extension",
+      "trilinear extension agreement on embedded triples",
+      "parameterized real-linear/complex-linear map extension and agreement on embedded real inputs"
+    ],
+    "excluded": [
+      "reflection formulas or reflection invariance",
+      "choice/uniqueness of complexification beyond exact supplied maps",
+      "anti-linear real structures",
+      "square-root or signature-branch semantics",
+      "division/positivity/split classification",
+      "triality-group ontology",
+      "named algebra identity",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "G7 0.4 closes L129 and isolates L130's complexified carrier/scalar-extension dependencies before reflection parity can be evaluated.",
+    "Exact relation audit shows 193302/193303/193400 depend only on already qualified field/vector and linear-map support.",
+    "222000/222001/222002 are finite conjunctions of exact embedding/restriction/injection plus already qualified 2/4/8 basis presentations.",
+    "225000 adds only already qualified trilinearity and embedding/restriction/injection.",
+    "231000 adds only total parameterized functions, vector behavior, embedding/restriction, and linear injection."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "desired unification",
+    "historical L130 closure status",
+    "textbook complexification beyond selected relations",
+    "reflection results as qualification premises"
+  ],
+  "predicted_consequences": [
+    "A field homomorphism that fails unit/additive/multiplicative preservation or injectivity is rejected by 193302.",
+    "R scalar action on a C-vector carrier must exactly agree with C scalar action after embedding for 193303.",
+    "A linear but noninjective map is rejected by 193400.",
+    "The 2/4/8 finite extension relations accept exact basis embeddings and reject a wrong basis image.",
+    "225000 accepts a genuine scalar extension of T and rejects a different C-trilinear form that disagrees on an embedded real triple.",
+    "231000 accepts parameterized C-linear extensions agreeing on embedded inputs and rejects an extension that is linear but changes an embedded input."
+  ],
+  "known_alternatives": [
+    "Qualify only 193302/193303/193400 first, then dimension variants separately.",
+    "Use source-specific scalar extensions without a reusable module.",
+    "Preserve the L130 boundary if any selected relation hides reflection or real-structure semantics."
+  ],
+  "positive_controls": [
+    "F2 -> F4 finite field embedding",
+    "coordinate R/C vector restriction and injection",
+    "2/4/8 coordinate-basis embeddings",
+    "coordinate trilinear form extended from F2 to F4",
+    "two-parameter family of linear maps extended coefficientwise from F2 to F4"
+  ],
+  "negative_adversarial_controls": [
+    "field map sending 1 to nonunit",
+    "scalar restriction mismatch",
+    "linear noninjective map",
+    "wrong basis image",
+    "C-trilinear extension scaled by non-real F4 element",
+    "C-linear parameterized map that disagrees on embedded real input"
+  ],
+  "falsifier": "Reject or split if any relation has a hidden dependency outside qualified field/vector, linear/basis, trilinear support plus selected relations; if a negative control passes; if any positive fails; if module SSC/IA does not close; or if source reconstruction needs anti-linear/reflection/signature semantics not in scope.",
+  "adaptive_evidence": "Generated only after G7 0.4 isolated scalar extension as the next transitive L130 dependency. Historical support files are candidate material, not authority.",
+  "fresh_confirmation_status": "PENDING_DETERMINISTIC_G6_QUALIFICATION_UNDER_OWNER_EXTERNAL_BYPASS",
+  "coverage_limits": "Only exact relations 193302,193303,193400,222000,222001,222002,225000,231000 at pinned bytes and dependencies. No reflection, real-structure, signature, or cross-track conclusion.",
+  "revision_lineage": [
+    "L_G1_DEPENDENCY_CONE_SOURCE_INCIDENCE_0_2",
+    "L_G7_DEPENDENCY_CONE_REPLAY_0_4"
+  ],
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}
