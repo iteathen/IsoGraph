@@ -1,0 +1,513 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.10",
+  "date": "2026-10-06",
+  "status": "SECOND_COMPLETE_84_BODY_SOURCE_AUDIT_CORRECTIONS_SUPPORTED_REAUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/W_EXTRACTION_RECONCILED_0_9.json",
+  "predecessor_adjudication": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_9.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "audit_scope": "All 84 W frozen bodies were reread directly against W 0.9. Corrections below are limited to distinct source-written relations, guards, result roles, exact equalities, and incidence that remained hidden inside larger argument strings or comparison wrappers.",
+  "corrections": [
+    {
+      "census_id": "W-SSC-028",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-028-O03",
+        "source_span": "M(2,C)=Hom(S_R,S_L)",
+        "relation_span": "=",
+        "argument_spans": [
+          "M(2,C)",
+          "Hom(S_R,S_L)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-028-O01"
+        ],
+        "load_bearing_note": "Expose the exact carrier equality embedded in the common-complexification identification."
+      }
+    },
+    {
+      "census_id": "W-SSC-035",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-035-O03",
+        "source_span": "S_L=C^2_0",
+        "relation_span": "=",
+        "argument_spans": [
+          "S_L",
+          "C^2_0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-035-O01"
+        ],
+        "load_bearing_note": "Expose the source-written left-spinor weight equality."
+      }
+    },
+    {
+      "census_id": "W-SSC-035",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-035-O04",
+        "source_span": "S_R=C_-1 + C_+1",
+        "relation_span": "=",
+        "argument_spans": [
+          "S_R",
+          "C_-1 + C_+1"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-035-O01"
+        ],
+        "load_bearing_note": "Expose the source-written right-spinor weight equality."
+      }
+    },
+    {
+      "census_id": "W-SSC-035",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-035-O05",
+        "source_span": "lifted spinor roles have U(1) weights S_L=C^2_0 and S_R=C_-1 + C_+1 under SU(2)_L x U(1)",
+        "relation_span": "under",
+        "argument_spans": [
+          "U(1) weights S_L=C^2_0 and S_R=C_-1 + C_+1",
+          "SU(2)_L x U(1)"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-035-O01"
+        ],
+        "load_bearing_note": "Expose the group context governing the stated weight assignments."
+      }
+    },
+    {
+      "census_id": "W-SSC-036",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-036-O06",
+        "source_span": "L^perp=C4/L",
+        "relation_span": "=",
+        "argument_spans": [
+          "L^perp",
+          "C4/L"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-036-O01"
+        ],
+        "load_bearing_note": "Expose the exact quotient-carrier equality."
+      }
+    },
+    {
+      "census_id": "W-SSC-036",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-036-O07",
+        "source_span": "tautological line L over PT",
+        "relation_span": "over",
+        "argument_spans": [
+          "tautological line L",
+          "PT"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-036-O01"
+        ],
+        "load_bearing_note": "Expose the base incidence of the tautological line."
+      }
+    },
+    {
+      "census_id": "W-SSC-040",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-040-O03",
+        "source_span": "t=0",
+        "relation_span": "=",
+        "argument_spans": [
+          "t",
+          "0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-040-O01"
+        ],
+        "load_bearing_note": "Expose the exact time-slice equality embedded in the S3 identification."
+      }
+    },
+    {
+      "census_id": "W-SSC-040",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-040-O04",
+        "source_span": "Phi(s,s)=0",
+        "relation_span": "=",
+        "argument_spans": [
+          "Phi(s,s)",
+          "0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-040-O01"
+        ],
+        "load_bearing_note": "Expose the exact null-locus equation."
+      }
+    },
+    {
+      "census_id": "W-SSC-047",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-047-O06",
+        "source_span": "omega wedge omega=0",
+        "relation_span": "=",
+        "argument_spans": [
+          "omega wedge omega",
+          "0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-047-O03"
+        ],
+        "load_bearing_note": "Expose the exact Klein relation rather than leaving it only inside the embedding occurrence."
+      }
+    },
+    {
+      "census_id": "W-SSC-062",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-062-O04",
+        "source_span": "Minkowski reality relates the two chiralities by conjugation",
+        "relation_span": "relates",
+        "argument_spans": [
+          "Minkowski reality",
+          "two chiralities",
+          "conjugation"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-062-O01"
+        ],
+        "load_bearing_note": "Expose the Minkowski-reality behavior hidden inside the whereas comparison."
+      }
+    },
+    {
+      "census_id": "W-SSC-062",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-062-O05",
+        "source_span": "Euclidean signature leaves them independent",
+        "relation_span": "leaves",
+        "argument_spans": [
+          "Euclidean signature",
+          "them",
+          "independent"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-062-O01"
+        ],
+        "load_bearing_note": "Expose the Euclidean-independence behavior hidden inside the whereas comparison."
+      }
+    },
+    {
+      "census_id": "W-SSC-068",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-068-O04",
+        "source_span": "SU(1,1)=SL(2,R)",
+        "relation_span": "=",
+        "argument_spans": [
+          "SU(1,1)",
+          "SL(2,R)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-068-O01"
+        ],
+        "load_bearing_note": "Expose the exact real-form equality embedded in the orbit phrase."
+      }
+    },
+    {
+      "census_id": "W-SSC-069",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-069-O05",
+        "source_span": "SU(2,2)=Spin(4,2)",
+        "relation_span": "=",
+        "argument_spans": [
+          "SU(2,2)",
+          "Spin(4,2)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-069-O01"
+        ],
+        "load_bearing_note": "Expose the exact group equality embedded in the PT action actor."
+      }
+    },
+    {
+      "census_id": "W-SSC-083",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-083-O04",
+        "source_span": "antilinear reflection/conjugation Theta",
+        "relation_span": "antilinear",
+        "argument_spans": [
+          "reflection/conjugation Theta"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-083-O01"
+        ],
+        "load_bearing_note": "Expose the source-explicit antilinearity property of Theta."
+      }
+    },
+    {
+      "census_id": "W-SSC-083",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-083-O05",
+        "source_span": "this reflection-positive Euclidean structure",
+        "relation_span": "reflection-positive",
+        "argument_spans": [
+          "Euclidean structure"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-083-O02"
+        ],
+        "load_bearing_note": "Expose the source-explicit reflection-positivity qualifier on the reconstruction source."
+      }
+    },
+    {
+      "census_id": "W-SSC-087",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-087-O05",
+        "source_span": "null region representing chiral Minkowski data",
+        "relation_span": "representing",
+        "argument_spans": [
+          "null region",
+          "chiral Minkowski data"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-087-O02"
+        ],
+        "load_bearing_note": "Expose the representation role hidden inside the boundary-value occurrence."
+      }
+    },
+    {
+      "census_id": "W-SSC-091",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-091-O05",
+        "source_span": "T=C4",
+        "relation_span": "=",
+        "argument_spans": [
+          "T",
+          "C4"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-091-O02"
+        ],
+        "load_bearing_note": "Expose the exact carrier equality inside the spacetime-point identification."
+      }
+    },
+    {
+      "census_id": "W-SSC-108",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-108-O04",
+        "source_span": "canonical quantization through the Heisenberg and Weil representations",
+        "relation_span": "through",
+        "argument_spans": [
+          "canonical quantization",
+          "Heisenberg and Weil representations"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Expose the source-written quantization-through-representations relation without importing representation semantics."
+      }
+    },
+    {
+      "census_id": "W-SSC-123",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-123-O05",
+        "source_span": "positive-time test functions modulo the null space of the OS form",
+        "relation_span": "modulo",
+        "argument_spans": [
+          "positive-time test functions",
+          "null space of the OS form"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-123-O01"
+        ],
+        "load_bearing_note": "Expose the quotient/modulo relation used in the Hilbert-space reconstruction."
+      }
+    },
+    {
+      "census_id": "W-SSC-124",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-124-O06",
+        "source_span": "ordinary Euclidean real form, embedded anti-diagonally in the two-chirality complexification",
+        "relation_span": "embedded anti-diagonally in",
+        "argument_spans": [
+          "ordinary Euclidean real form",
+          "two-chirality complexification"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-124-O02"
+        ],
+        "load_bearing_note": "Expose the embedding incidence hidden inside the compared Euclidean real form."
+      }
+    },
+    {
+      "census_id": "W-SSC-126",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-126-O02",
+        "source_span": "Ward-Penrose transform gives, for suitable holomorphic bundles on PT+, right-handed Weyl solutions coupled to a self-dual connection both on a Euclidean S4 hemisphere and as boundary values on Minkowski spacetime",
+        "relation_span": "for suitable holomorphic bundles on PT+",
+        "argument_spans": [
+          "Ward-Penrose transform",
+          "suitable holomorphic bundles on PT+",
+          "right-handed Weyl solutions coupled to a self-dual connection"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-126-O01"
+        ],
+        "load_bearing_note": "Expose the source-explicit suitability/domain condition on the Ward-Penrose result."
+      }
+    },
+    {
+      "census_id": "W-SSC-126",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-126-O03",
+        "source_span": "right-handed Weyl solutions coupled to a self-dual connection",
+        "relation_span": "coupled to",
+        "argument_spans": [
+          "right-handed Weyl solutions",
+          "self-dual connection"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-126-O01"
+        ],
+        "load_bearing_note": "Expose the coupling incidence of the produced Weyl solutions."
+      }
+    },
+    {
+      "census_id": "W-SSC-126",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-126-O04",
+        "source_span": "right-handed Weyl solutions coupled to a self-dual connection both on a Euclidean S4 hemisphere",
+        "relation_span": "both on",
+        "argument_spans": [
+          "right-handed Weyl solutions coupled to a self-dual connection",
+          "Euclidean S4 hemisphere"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-126-O01"
+        ],
+        "load_bearing_note": "Expose the Euclidean-hemisphere result role."
+      }
+    },
+    {
+      "census_id": "W-SSC-126",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-126-O05",
+        "source_span": "right-handed Weyl solutions coupled to a self-dual connection both on a Euclidean S4 hemisphere and as boundary values on Minkowski spacetime",
+        "relation_span": "as boundary values on",
+        "argument_spans": [
+          "right-handed Weyl solutions coupled to a self-dual connection",
+          "Minkowski spacetime"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-126-O01"
+        ],
+        "load_bearing_note": "Expose the Minkowski boundary-value result role."
+      }
+    },
+    {
+      "census_id": "W-SSC-148",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-148-O04",
+        "source_span": "six-dimensional two-form space split into two three-dimensional chiral sectors",
+        "relation_span": "split into",
+        "argument_spans": [
+          "six-dimensional two-form space",
+          "two three-dimensional chiral sectors"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-148-O02"
+        ],
+        "load_bearing_note": "Expose the chiral-sector split hidden inside the curvature-action target."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 25,
+    "additions": 25,
+    "replacements": 0,
+    "affected_bodies": 16,
+    "predecessor_occurrences": 281,
+    "expected_successor_occurrences": 306
+  },
+  "findings": [
+    "W 0.9 is not a source-local fixed point: the second complete 84-body pass found residual source reconstruction loss.",
+    "The corrections do not import textbook definitions. Each is supported by an exact frozen-body substring and exposes only source-written incidence or modality.",
+    "Formula internals already conserved as one explicit source law were not mechanically exploded merely because they contain arithmetic/operator syntax; this pass only separates distinct semantic relations whose loss would change reconstruction.",
+    "A further complete 84-body no-change pass is required after applying these corrections before W may be frozen as a candidate G1 input.",
+    "Independent cold audit remains mandatory after deterministic source-local fixed point and is currently provider-quota blocked."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_10.json as exact W 0.9 plus this adjudication.",
+    "Verify exact replay, spans, dependencies, duplicate freedom, and anti-pre-G5 constraints.",
+    "Repeat the complete 84-body source-local audit against W 0.10.",
+    "Only after a zero-change complete source-local pass, run a fresh independent all-84 cold audit when provider quota permits.",
+    "Keep joint G2 blocked until both W and L current inputs have structurally valid independent zero-correction fixed points."
+  ],
+  "fixed_point_claim": false,
+  "independent_cold_audit_required": true,
+  "g2_authorized": false,
+  "authority": false
+}
