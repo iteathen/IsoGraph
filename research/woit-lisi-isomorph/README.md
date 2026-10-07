@@ -78,6 +78,23 @@ Passing a bridge-relevant subset is insufficient.
 
 See FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md, woit/README.md, and lisi/README.md.
 
+## Current graph-first source-treatment checkpoint
+
+### W track — current authority boundary
+
+W has completed the graph-first primitive-demand sequence through its **W-local G5** stage under Experiment 062, without using L evidence:
+
+- G1: source-local fixed point at `W_EXTRACTION_RECONCILED_0_18.json`, 84 unresolved W bodies / 425 occurrences. The campaign used a one-time owner waiver to skip the unavailable independent cold audit; that exception does not amend the general graph-first method.
+- G2: verified neutral occurrence graph, 1,296 nodes / 1,208 edges.
+- G3: verified fixed point, 13 `CORE_CLOSED` and 412 `UNEXPANDED_DEMAND`; no schema or QU candidate.
+- G4: verified W-only alpha-renamed quotient, 352 structural classes (324 singleton, 28 multi-member), with source-text relabel invariance and exact rooted-isomorphism checks.
+- G5: verified current-authority fixed point with **0 reusable candidate modules / 352 unresolved boundaries** after collective W-source sufficiency review.
+- W primitive closure is therefore **not complete**. W-local G6 has nothing to qualify, recursive IA remains unauthorized, and the W track is not sealed.
+
+The durable stop record is `experiments/062/W_G5_FIXED_POINT_0_1.json`. Its lawful resume conditions require new W source semantics, a separately qualified generic module, or a later lawfully authorized graph-first candidate that is independently qualified before W consumes it under G7.
+
+**This subsection records W only. It does not adjudicate the L track and does not authorize cross-track comparison or unification synthesis.**
+
 ## Anti-bias architecture
 
 The campaign has three logically separated surfaces.
