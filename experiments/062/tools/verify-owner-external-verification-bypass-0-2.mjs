@@ -26,9 +26,14 @@ check(B.routing?.independently_verified_claim_allowed===false,'independent claim
 check(B.evidence_labels?.global_external_verification_state==='INCOMPLETE_EVIDENCE','global evidence state');
 check(B.routing?.global_qualified_module_manifest_may_be_changed===false,'manifest mutation guard');
 
+const directPins=[
+  {path:B.g1_inputs.W.extraction,git_blob_sha:B.g1_inputs.W.extraction_git_blob_sha},
+  {path:B.g1_inputs.W.fixed_point_record,git_blob_sha:B.g1_inputs.W.fixed_point_git_blob_sha},
+  {path:B.g1_inputs.L.extraction,git_blob_sha:B.g1_inputs.L.extraction_git_blob_sha},
+  {path:B.g1_inputs.L.fixed_point_record,git_blob_sha:B.g1_inputs.L.fixed_point_git_blob_sha}
+];
 for(const rec of [
-  B.g1_inputs.W.extraction,B.g1_inputs.W.fixed_point_record,
-  B.g1_inputs.L.extraction,B.g1_inputs.L.fixed_point_record,
+  ...directPins,
   L.owner_bypass,L.controlling_g1.extraction,L.controlling_g1.source_local_fixed_point,
   L.downstream_pin_chain.g2_graph,L.downstream_pin_chain.g3_fixed_point,L.downstream_pin_chain.g4_fixed_point,
   L.downstream_pin_chain.g5_synthesis,L.downstream_pin_chain.g5_source_sufficiency_review,L.downstream_pin_chain.g5_fixed_point,
