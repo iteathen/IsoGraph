@@ -1,0 +1,27 @@
+name: Experiment 062 L G1 0.15 Verify
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/L_EXTRACTION_RECONCILED_0_15.json'
+      - 'experiments/062/L_G1_SOURCE_LOCAL_ADJUDICATION_0_15.json'
+      - 'experiments/062/L_G1_LOCATOR_ADJUDICATION_0_15.json'
+      - 'experiments/062/tools/verify-l-extraction-reconciled-0-15.mjs'
+      - '.github/workflows/experiment-062-l-g1-0-15-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify L G1 reconciled 0.15
+        run: node experiments/062/tools/verify-l-extraction-reconciled-0-15.mjs
