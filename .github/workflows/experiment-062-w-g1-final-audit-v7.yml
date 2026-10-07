@@ -1,0 +1,70 @@
+name: Experiment 062 W G1 final cold audit v7
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/W_G1_FINAL_AUDIT_V7_RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-062-w-g1-final-audit-v7
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  EXP062_W_AUDIT_BATCH_SIZE: 12
+
+jobs:
+  audit-w-g1:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic current-input preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/062/tools/run-exp062-w-audit-batched-v7.mjs
+          test -f experiments/062/W_EXTRACTION_RECONCILED_0_18.json
+          test -f experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json
+          test -f experiments/062/W_COLD_AUDIT_SUCCESSOR_0_7.md
+          test -f research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json
+          test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
+          node experiments/062/tools/verify-w-extraction-reconciled-0-18.mjs
+          node experiments/062/tools/verify-w-g1-source-local-fixed-point-0-1.mjs
+
+      - name: Audit all 84 W rows in validated batches
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/062/tools/run-exp062-w-audit-batched-v7.mjs
+
+      - name: Persist research evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/062/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -d out/exp062-w-audit-v7 ] && cp -R out/exp062-w-audit-v7 "$E/"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","track":"W","mode":"current-g1-audit-v7","extraction":"W_EXTRACTION_RECONCILED_0_18.json"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL_W_G1_FINAL_AUDIT_V7.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 062 W G1 final audit v7 run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi
