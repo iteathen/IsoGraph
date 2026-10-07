@@ -1,7 +1,7 @@
 # Woit full IsoGraph treatment
 
 **Track:** W
-**Current status:** ACTIVE — source traversal and primitive requirements expansion
+**Current status:** ACTIVE — graph-first primitive-demand G5 boundary; primitive closure incomplete
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
 **Cross-author semantics available:** NO
 
@@ -22,13 +22,13 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | PASS — 9/9 frozen source units |
 | SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
-| primitive math support complete | IN PROGRESS |
+| primitive math support complete | BLOCKED — Experiment 062 W-local G5 reached a current-authority boundary: 352 unresolved quotient classes, 0 lawful reusable candidates |
 | native .isg bundle | PASS — authoritative routing compilation 0.2; semantic closure in progress |
-| graph-derived closure ledger | IN PROGRESS — 0.19: 12 CLOSED_SCHEMA + 9 CLOSED_PRIMITIVE / 130 incomplete |
-| recursive IA fixed point | BLOCKED — mandatory after primitive/schema closure + Core qualification |
-| NEI pass | NOT YET |
+| graph-derived closure ledger | IN PROGRESS — `CORE021_CLOSURE_LEDGER_0_19.json` remains 21/151; Experiment 062 separately regrounds the 84-body unresolved demand path but does not close it |
+| recursive IA fixed point | BLOCKED — primitive/schema closure is still incomplete; W G5 explicitly leaves IA unauthorized |
+| NEI pass | BLOCKED — primitive closure / IA not complete |
 | DTS pass | PARTIAL / PROVISIONAL |
-| DP pass | NOT YET |
+| DP pass | BLOCKED — primitive closure / IA not complete |
 | EI warrants | NONE YET |
 | reconstruction audit | NOT YET |
 | sealed | NO |
@@ -93,6 +93,27 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 The W source corpus is independently frozen at corrected SSC revision 0.2 for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
 
 The next active task is authoritative native W compilation and primitive/schema closure. Existing research-local source instances are reusable components only after their source ownership and reconstruction paths are routed from the frozen census.
+
+## Current graph-first primitive-demand checkpoint — Experiment 062
+
+The prior regex/category primitive-demand path was regrounded under `research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md`. The current W-only state is:
+
+- **G1 semantic occurrence census:** `W_EXTRACTION_RECONCILED_0_18.json` is the frozen W candidate over **84 unresolved W bodies / 425 semantic occurrences**. A complete source-local repeat reached zero corrections. The independent cold audit was skipped by an explicit **one-time owner waiver for this campaign only**; the waiver does not amend Method 0.2 or count as method-conforming cold evidence.
+- **G2 neutral occurrence graph:** verified at **425 opaque semantic-occurrence nodes + 871 ordered argument-slot nodes = 1,296 nodes**, with **871 ordered-argument edges + 337 dependency edges = 1,208 edges**. No PD/B basis category, DNWF/DNIA premise, L evidence, or conventional mathematical category enters the structural key.
+- **G3 qualified-Core definability:** fixed at **13 `CORE_CLOSED` / 412 `UNEXPANDED_DEMAND`**, with zero schema candidates and zero QU-boundary candidates. The unresolved rows remain missing-definition/current-authority boundaries; they are not newly declared primitives.
+- **G4 W-local structural quotient:** mechanically verified and frozen at **352 quotient classes** over the 412 unresolved roots: **324 singleton / 28 multi-member**, largest class size 12. Exact rooted graph isomorphism, duplicate-class exclusion, source-text relabel invariance, and deterministic replay all pass. This is structural equivalence only, not semantic equivalence.
+- **G5 W-local candidate synthesis:** complete under current W-only authority with **0 lawful reusable candidates / 352 unresolved boundaries**. Of the 28 repeated classes, 5 repeat one surface relation label and 23 are surface-semantically heterogeneous; collective source review found no class or cross-class recurrence family with enough frozen W semantics to state an exact reusable expansion/reconstruction contract.
+- **G6:** not entered because G5 produced no proposed reusable module/extension to qualify.
+- **Track consequence:** W primitive closure remains **incomplete**. Recursive IA, final NEI/DTS/DP, sealing, and cross-author comparison remain blocked.
+
+Durable boundary artifacts:
+
+- `experiments/062/W_G4_FIXED_POINT_0_1.json`
+- `experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json`
+- `experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json`
+- `experiments/062/W_G5_FIXED_POINT_0_1.json`
+
+The W track may lawfully reopen from this boundary only if: (1) new frozen W source evidence supplies exact lower semantics; (2) a separately qualified generic module supplies exact source-faithful semantics; or (3) a later lawfully authorized cross-track graph-first candidate is independently qualified and then consumed by W under G7. Do **not** start recursive IA or use NEI/DTS/DP to bypass this boundary.
 
 ## Current primitive-closure checkpoint
 
