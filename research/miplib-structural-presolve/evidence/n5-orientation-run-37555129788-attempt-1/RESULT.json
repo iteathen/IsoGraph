@@ -1,0 +1,402 @@
+{
+  "experiment": "n5-original-breaker-orientation-1.3",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "frontend": {
+    "wall_s": 0.20809110999999803,
+    "stages": {
+      "scip_presolve_s": 0.04197030400000301,
+      "scip_export_s": 0.06298145300000613,
+      "highs_parse_s": 0.0095789840000009,
+      "sparse_materialize_s": 0.004419978999997909,
+      "bulk_graph_data_s": 0.018704165000002604,
+      "igraph_construct_s": 0.0018681050000068922,
+      "bliss_s": 0.004713586000001158,
+      "replay_select_s": 0.047295273999999665,
+      "total_s": 0.20809110999999803
+    },
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "graph_meta": {
+      "active_variables": 2142,
+      "dropped_export_only_variables": 212,
+      "rows": 846,
+      "active_nonzeros": 8316,
+      "vertices": 11304,
+      "edges": 16632,
+      "color_classes": 22
+    }
+  },
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0021": {
+        "original": {
+          "name": "C0021",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0021",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0021",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0026": {
+        "original": {
+          "name": "C0026",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0026",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0026",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0027": {
+        "original": {
+          "name": "C0027",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0027",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0027",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0028": {
+        "original": {
+          "name": "C0028",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0028",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0028",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "trials": [
+    {
+      "seed": 67,
+      "order": [
+        "forward",
+        "reverse",
+        "baseline"
+      ],
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.000000000271,
+        "dual": 8105.000000000271,
+        "gap": 0.0,
+        "nodes": 1396,
+        "lp_iterations": 201459,
+        "wall_s": 43.543622676
+      },
+      "reverse": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1633,
+        "lp_iterations": 236884,
+        "wall_s": 49.68979203699999
+      },
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1392,
+        "lp_iterations": 238880,
+        "wall_s": 49.59722618500001
+      }
+    },
+    {
+      "seed": 68,
+      "order": [
+        "reverse",
+        "baseline",
+        "forward"
+      ],
+      "reverse": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1128,
+        "lp_iterations": 170314,
+        "wall_s": 38.490677965
+      },
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1315,
+        "lp_iterations": 220838,
+        "wall_s": 47.96054816999998
+      },
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.000000000324,
+        "dual": 8105.000000000324,
+        "gap": 0.0,
+        "nodes": 1231,
+        "lp_iterations": 189939,
+        "wall_s": 43.17030637100004
+      }
+    },
+    {
+      "seed": 69,
+      "order": [
+        "baseline",
+        "forward",
+        "reverse"
+      ],
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0000000000655,
+        "dual": 8105.0000000000655,
+        "gap": 0.0,
+        "nodes": 1342,
+        "lp_iterations": 229827,
+        "wall_s": 50.49175692099999
+      },
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.0000000006285,
+        "dual": 8105.0000000006285,
+        "gap": 0.0,
+        "nodes": 901,
+        "lp_iterations": 164864,
+        "wall_s": 38.78630218799998
+      },
+      "reverse": {
+        "status": "optimal",
+        "objective": 8105.000000000011,
+        "dual": 8105.000000000011,
+        "gap": 0.0,
+        "nodes": 1154,
+        "lp_iterations": 244208,
+        "wall_s": 47.232449384999995
+      }
+    },
+    {
+      "seed": 70,
+      "order": [
+        "forward",
+        "reverse",
+        "baseline"
+      ],
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.0000000004275,
+        "dual": 8105.0000000004275,
+        "gap": 0.0,
+        "nodes": 1490,
+        "lp_iterations": 223548,
+        "wall_s": 47.73783572799999
+      },
+      "reverse": {
+        "status": "timelimit",
+        "objective": 8105.0,
+        "dual": 7857.260317013444,
+        "gap": 0.03153003375109275,
+        "nodes": 1452,
+        "lp_iterations": 291699,
+        "wall_s": 60.01022942499998
+      },
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1320,
+        "lp_iterations": 221375,
+        "wall_s": 48.52633732300001
+      }
+    },
+    {
+      "seed": 71,
+      "order": [
+        "reverse",
+        "baseline",
+        "forward"
+      ],
+      "reverse": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1731,
+        "lp_iterations": 245647,
+        "wall_s": 49.909141104000014
+      },
+      "baseline": {
+        "status": "optimal",
+        "objective": 8105.000000000014,
+        "dual": 8105.000000000014,
+        "gap": 0.0,
+        "nodes": 1017,
+        "lp_iterations": 189719,
+        "wall_s": 39.55289420500003
+      },
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.000000000428,
+        "dual": 8105.000000000428,
+        "gap": 0.0,
+        "nodes": 1064,
+        "lp_iterations": 165463,
+        "wall_s": 37.67675810200001
+      }
+    },
+    {
+      "seed": 72,
+      "order": [
+        "baseline",
+        "forward",
+        "reverse"
+      ],
+      "baseline": {
+        "status": "optimal",
+        "objective": 8104.999999999998,
+        "dual": 8104.999999999998,
+        "gap": 0.0,
+        "nodes": 1324,
+        "lp_iterations": 270267,
+        "wall_s": 56.973051930999986
+      },
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.000000000323,
+        "dual": 8105.000000000323,
+        "gap": 0.0,
+        "nodes": 984,
+        "lp_iterations": 132432,
+        "wall_s": 31.995432670000014
+      },
+      "reverse": {
+        "status": "optimal",
+        "objective": 8105.000000000042,
+        "dual": 8105.000000000042,
+        "gap": 0.0,
+        "nodes": 1593,
+        "lp_iterations": 288419,
+        "wall_s": 57.515771942000015
+      }
+    },
+    {
+      "seed": 73,
+      "order": [
+        "forward",
+        "reverse",
+        "baseline"
+      ],
+      "forward": {
+        "status": "optimal",
+        "objective": 8105.0000000003765,
+        "dual": 8105.0000000003765,
+        "gap": 0.0,
+        "nodes": 884,
+        "lp_iterations": 162056,
+        "wall_s": 36.910059778000004
+      },
+      "reverse": {
+        "status": "optimal",
+        "objective": 8104.999999999999,
+        "dual": 8104.999999999999,
+        "gap": 0.0,
+        "nodes": 902,
+        "lp_iterations": 181629,
+        "wall_s": 39.39788400400005
+      },
+      "baseline": {
+        "status": "optimal",
+        "objective": 8104.999999999993,
+        "dual": 8104.999999999993,
+        "gap": 0.0,
+        "nodes": 1547,
+        "lp_iterations": 225007,
+        "wall_s": 54.17338699800007
+      }
+    }
+  ],
+  "forward": {
+    "paired_optimal": 7,
+    "wins": 7,
+    "losses": 0,
+    "baseline_median_wall_s": 49.59722618500001,
+    "external_median_e2e_wall_s": 38.99439329799998,
+    "median_ratio": 0.8821403362922762,
+    "directional_positive": true,
+    "median_nodes": 1064,
+    "median_lp": 165463
+  },
+  "reverse": {
+    "paired_optimal": 6,
+    "wins": 3,
+    "losses": 3,
+    "baseline_median_wall_s": 50.044491553,
+    "external_median_e2e_wall_s": 48.66921182099999,
+    "median_ratio": 0.9728159900571398,
+    "directional_positive": false,
+    "median_nodes": 1373.5,
+    "median_lp": 240546.0
+  },
+  "classification": "ORIENTATION_SENSITIVE",
+  "disposition": "PASS"
+}
