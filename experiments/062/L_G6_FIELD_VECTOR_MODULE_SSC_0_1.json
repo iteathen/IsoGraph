@@ -1,0 +1,165 @@
+{
+  "schema": "isograph.exp062-field-vector-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "FIELD_VECTOR_PRESENTATION_0_1",
+  "hypothesis_origin": {
+    "path": "experiments/062/L_G5H_FIELD_VECTOR_PRESENTATION_0_1.json",
+    "git_blob_sha": "6ebe4bb784ddd6761d69073d0be38806ded5004c"
+  },
+  "exact_candidate": {
+    "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "git_blob_sha": "f234db03e52a0141a6a9fea80af7badd76751d7f"
+  },
+  "scope": {
+    "obligation_count": 23,
+    "source_neutral": true,
+    "track_origin": "L",
+    "cross_track_semantics_used": false,
+    "exact_candidate_bytes_are_frozen": true
+  },
+  "obligations": [
+    {
+      "id": "FV-SSC-001",
+      "kind": "UNARY_FUNCTION_SCHEMA",
+      "body": "182001 defines a relation R:A->B as total and single-valued on A, with every represented R(x,y) lying in the declared A/B carriers.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-002",
+      "kind": "BINARY_FUNCTION_SCHEMA",
+      "body": "182002 defines a relation R:A×B->C as total and single-valued on A×B, with every represented R(x,y,z) lying in the declared carriers.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-003",
+      "kind": "FIELD_OPERATION_TYPING",
+      "body": "182003 requires ADD and MUL to be total single-valued C×C->C, NEG to be total single-valued C->C, and ZERO/ONE to be members of C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-004",
+      "kind": "FIELD_DISTINCT_IDENTITIES",
+      "body": "182003 requires ZERO != ONE.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-005",
+      "kind": "FIELD_ZERO_ONE_IDENTITIES",
+      "body": "For every a in C, a+0=0+a=a and a*1=1*a=a.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-006",
+      "kind": "FIELD_ADDITIVE_INVERSE",
+      "body": "For every a in C, NEG(a)=na implies a+na=na+a=0.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-007",
+      "kind": "FIELD_MULTIPLICATIVE_INVERSE_EXISTENCE",
+      "body": "For every nonzero a in C, an inverse ia exists in C with a*ia=ia*a=1.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-008",
+      "kind": "FIELD_INVERSE_RELATION_SCOPE",
+      "body": "Every represented INV(a,ia) requires a and ia in C and a != 0; the candidate's nested single-valued witness clause prevents two represented inverse outputs for the same nonzero input within the encoded scope.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-009",
+      "kind": "FIELD_ADD_COMMUTATIVITY",
+      "body": "For all a,b in C, represented sums a+b and b+a are equal.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-010",
+      "kind": "FIELD_MUL_COMMUTATIVITY",
+      "body": "For all a,b in C, represented products a*b and b*a are equal.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-011",
+      "kind": "FIELD_ADD_ASSOCIATIVITY",
+      "body": "For all a,b,c in C, (a+b)+c = a+(b+c).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-012",
+      "kind": "FIELD_MUL_ASSOCIATIVITY",
+      "body": "For all a,b,c in C, (a*b)*c = a*(b*c).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-013",
+      "kind": "FIELD_DISTRIBUTIVITY",
+      "body": "For all a,b,c in C, a*(b+c) = a*b + a*c.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-014",
+      "kind": "VECTOR_OPERATION_TYPING",
+      "body": "182004 requires VADD:V×V->V, VNEG:V->V, SCALE:C×V->V to be total single-valued and VZERO to be a member of V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-015",
+      "kind": "VECTOR_ZERO_IDENTITY",
+      "body": "For every v in V, v+VZERO=VZERO+v=v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-016",
+      "kind": "VECTOR_ADDITIVE_INVERSE",
+      "body": "For every v in V, VNEG(v)=nv implies v+nv=nv+v=VZERO.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-017",
+      "kind": "VECTOR_ADD_COMMUTATIVITY",
+      "body": "For all u,v in V, u+v=v+u.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-018",
+      "kind": "VECTOR_ADD_ASSOCIATIVITY",
+      "body": "For all u,v,w in V, (u+v)+w=u+(v+w).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-019",
+      "kind": "SCALAR_DISTRIBUTIVITY_OVER_VECTOR_ADD",
+      "body": "For all a in C and u,v in V, a*(u+v)=a*u+a*v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-020",
+      "kind": "VECTOR_DISTRIBUTIVITY_OVER_SCALAR_ADD",
+      "body": "For all a,b in C and v in V, (a+b)*v=a*v+b*v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-021",
+      "kind": "SCALAR_ACTION_ASSOCIATIVITY",
+      "body": "For all a,b in C and v in V, (a*b)*v=a*(b*v).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-022",
+      "kind": "SCALAR_ONE_ACTION",
+      "body": "For every v in V, 1*v=v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FV-SSC-023",
+      "kind": "SCOPE_EXCLUSION",
+      "body": "No order, positivity, basis, dimension, linear-map, bilinear-algebra, composition-algebra, anti-involution, triality, reflection, or cross-track semantics are part of this module candidate.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "closure_rule": "Qualification must reconstruct all 23 obligations from the exact candidate and must reject any implementation/model violating an in-scope obligation. No extra field/vector theorem is promoted merely because it follows mathematically.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
