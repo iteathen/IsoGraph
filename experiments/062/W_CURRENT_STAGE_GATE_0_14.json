@@ -1,0 +1,40 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.14",
+  "date": "2026-10-07",
+  "status": "W_G4_W097_CORRECTED_INPUT_COMPLETE_G5_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_13.json",
+    "git_blob_sha": "5a87cf980a0c1bf3440c3ec3554d57cc438d2742",
+    "reason": "W097-corrected W-only G4 quotient passed exact deterministic verification."
+  },
+  "current_G4": {
+    "quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_3.json",
+      "git_blob_sha": "9c620fa5dba663d503e96dbe7b2f0849e74f63d5"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_3.json",
+      "git_blob_sha": "7f1e97c11c9bdff3a9feca1bebcfefe75e91eff2"
+    },
+    "workflow_run_id": 37685520705,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_complete": true,
+    "G4_complete": true,
+    "G5_authorized": true,
+    "G5H_new_candidate_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Run deterministic W-local G5 on the W097-corrected G4/G3 tuple. Only after that fixed point may a new W097 projective-involution hypothesis enter G5H."
+}
