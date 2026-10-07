@@ -1,0 +1,30 @@
+name: Experiment 062 L dependency cone reopen
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/L_G1_DEPENDENCY_CONE_SOURCE_INCIDENCE_0_2.json'
+      - 'experiments/062/L_G2_DEPENDENCY_CONE_NEUTRAL_SUBGRAPH_0_1.json'
+      - 'experiments/062/tools/generate-l-g2-dependency-cone-neutral-subgraph-0-1.mjs'
+      - 'experiments/062/tools/verify-l-g1-dependency-cone-source-incidence-0-2.mjs'
+      - 'experiments/062/tools/verify-l-g2-dependency-cone-neutral-subgraph-0-1.mjs'
+      - '.github/workflows/experiment-062-l-dependency-cone-reopen.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify L G1 reopened formula incidence
+        run: node experiments/062/tools/verify-l-g1-dependency-cone-source-incidence-0-2.mjs
+      - name: Verify L G2 neutral dependency subgraph
+        run: node experiments/062/tools/verify-l-g2-dependency-cone-neutral-subgraph-0-1.mjs
