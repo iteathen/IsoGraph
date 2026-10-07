@@ -1,0 +1,257 @@
+{
+  "experiment": "neos-1171737-s30-holdout-0.1",
+  "date": "2026-10-06",
+  "results": [
+    {
+      "name": "neos-1171737",
+      "source": {
+        "source_url": "https://miplib.zib.de/WebData/instances/neos-1171737.mps.gz",
+        "gzip_sha256": "7e58f511e3ca5ae69213fdd78e448a2b6aadbb6b1ed161ae92ad0b74365a953c",
+        "mps_sha256": "9c11ef450081fcac8e6ff4dbbaa695656a2f7d2df3e6cfd3db768e49b932b6dc"
+      },
+      "stage1": {
+        "vars": 2340,
+        "conss": 4179,
+        "presolve_wall_s": 0.16203555500000277
+      },
+      "linearized": {
+        "rows": 4179,
+        "cols": 2340,
+        "nonzeros": 58620
+      },
+      "active_graph": {
+        "active_variables": 2340,
+        "dropped_export_only_variables": 0,
+        "rows": 4179,
+        "active_nonzeros": 58620,
+        "vertices": 65139,
+        "edges": 117240,
+        "color_classes": 38
+      },
+      "group": {
+        "generator_count": 29,
+        "bliss_wall_s": 0.34876897399999507,
+        "nontrivial_orbit_count": 78,
+        "largest_orbit": {
+          "size": 30,
+          "names": [
+            "t_C0001",
+            "t_C0002",
+            "t_C0003",
+            "t_C0004",
+            "t_C0005",
+            "t_C0006",
+            "t_C0007",
+            "t_C0008",
+            "t_C0009",
+            "t_C0010",
+            "t_C0011",
+            "t_C0012",
+            "t_C0013",
+            "t_C0014",
+            "t_C0015",
+            "t_C0016",
+            "t_C0017",
+            "t_C0018",
+            "t_C0019",
+            "t_C0020",
+            "t_C0021",
+            "t_C0022",
+            "t_C0023",
+            "t_C0024",
+            "t_C0025",
+            "t_C0026",
+            "t_C0027",
+            "t_C0028",
+            "t_C0029",
+            "t_C0030"
+          ],
+          "indices": [
+            1170,
+            1171,
+            1172,
+            1173,
+            1174,
+            1175,
+            1176,
+            1177,
+            1178,
+            1179,
+            1180,
+            1181,
+            1182,
+            1183,
+            1184,
+            1185,
+            1186,
+            1187,
+            1188,
+            1189,
+            1190,
+            1191,
+            1192,
+            1193,
+            1194,
+            1195,
+            1196,
+            1197,
+            1198,
+            1199
+          ]
+        },
+        "action_order": "265252859812191058636308480000000",
+        "factorial_order": "265252859812191058636308480000000",
+        "full_symmetric": true,
+        "order_status": "EXACT_ORDER",
+        "order_wall_s": 0.14448792400000343
+      },
+      "structural_frontend_wall_s": 5.327157888000002,
+      "trials": [
+        {
+          "seed": 3,
+          "baseline": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -194.99999999999997,
+            "gap": 0.02631578947368406,
+            "bound_width": 4.999999999999972,
+            "nodes": 79,
+            "lp_iterations": 98002,
+            "wall_s": 20.002082217999998,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -195.0,
+            "gap": 0.02631578947368421,
+            "bound_width": 5.0,
+            "nodes": 81,
+            "lp_iterations": 96156,
+            "wall_s": 20.00471492599999,
+            "added_constraints": 29
+          }
+        },
+        {
+          "seed": 4,
+          "baseline": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -195.0,
+            "gap": 0.015625,
+            "bound_width": 3.0,
+            "nodes": 73,
+            "lp_iterations": 89287,
+            "wall_s": 20.01365616999999,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": -192.0,
+            "dual": -194.99999999999997,
+            "gap": 0.015624999999999853,
+            "bound_width": 2.9999999999999716,
+            "nodes": 131,
+            "lp_iterations": 110288,
+            "wall_s": 20.024334135999993,
+            "added_constraints": 29
+          }
+        },
+        {
+          "seed": 5,
+          "baseline": {
+            "status": "timelimit",
+            "primal": -191.0,
+            "dual": -195.0,
+            "gap": 0.020942408376963352,
+            "bound_width": 4.0,
+            "nodes": 135,
+            "lp_iterations": 56850,
+            "wall_s": 20.005137176999995,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -195.0,
+            "gap": 0.02631578947368421,
+            "bound_width": 5.0,
+            "nodes": 119,
+            "lp_iterations": 93274,
+            "wall_s": 20.001465276000005,
+            "added_constraints": 29
+          }
+        },
+        {
+          "seed": 6,
+          "baseline": {
+            "status": "timelimit",
+            "primal": -190.0,
+            "dual": -194.99999999999997,
+            "gap": 0.02631578947368406,
+            "bound_width": 4.999999999999972,
+            "nodes": 155,
+            "lp_iterations": 41717,
+            "wall_s": 20.001538562999997,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": -189.0,
+            "dual": -194.99999999999997,
+            "gap": 0.0317460317460316,
+            "bound_width": 5.999999999999972,
+            "nodes": 75,
+            "lp_iterations": 74195,
+            "wall_s": 20.004866702000015,
+            "added_constraints": 29
+          }
+        },
+        {
+          "seed": 7,
+          "baseline": {
+            "status": "timelimit",
+            "primal": -185.1,
+            "dual": -194.99999999999983,
+            "gap": 0.05348460291734109,
+            "bound_width": 9.899999999999835,
+            "nodes": 173,
+            "lp_iterations": 64215,
+            "wall_s": 20.017855558000008,
+            "added_constraints": 0
+          },
+          "sorted": {
+            "status": "timelimit",
+            "primal": -190.70999999999998,
+            "dual": -194.99999999999991,
+            "gap": 0.022494887525562036,
+            "bound_width": 4.289999999999935,
+            "nodes": 112,
+            "lp_iterations": 96137,
+            "wall_s": 20.015653138999994,
+            "added_constraints": 29
+          }
+        }
+      ],
+      "summary": {
+        "baseline": {
+          "median_gap": 0.02631578947368406,
+          "median_bound_width": 4.999999999999972,
+          "median_nodes": 135,
+          "median_lp": 64215
+        },
+        "sorted": {
+          "median_gap": 0.02631578947368421,
+          "median_bound_width": 5.0,
+          "median_nodes": 112,
+          "median_lp": 96137
+        },
+        "paired_gap_wins": 2,
+        "paired_gap_losses": 3
+      }
+    }
+  ],
+  "errors": [],
+  "full_symmetric_count": 1,
+  "disposition": "PASS"
+}
