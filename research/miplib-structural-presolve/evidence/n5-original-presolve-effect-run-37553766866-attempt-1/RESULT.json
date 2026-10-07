@@ -1,0 +1,280 @@
+{
+  "experiment": "n5-original-presolve-effect-1.2",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0021": {
+        "original": {
+          "name": "C0021",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0021",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0021",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0026": {
+        "original": {
+          "name": "C0026",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0026",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0026",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0027": {
+        "original": {
+          "name": "C0027",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0027",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0027",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0028": {
+        "original": {
+          "name": "C0028",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0028",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0028",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "exact": {
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "transformed_breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ],
+    "original_breakers": [
+      [
+        "C0021",
+        "C0026"
+      ],
+      [
+        "C0027",
+        "C0028"
+      ]
+    ]
+  },
+  "variants": {
+    "default": {
+      "active_vars": 2142,
+      "active_conss": 846,
+      "presolve_wall_s": 0.039921120000002475,
+      "presolve_reported_s": 0.037655,
+      "handlers": {
+        "linear": 846
+      },
+      "symmetry_named_constraints": [],
+      "target_survival": {
+        "C0021": true,
+        "C0026": true,
+        "C0027": true,
+        "C0028": true
+      },
+      "export_linear": {
+        "rows": 846,
+        "cols": 2354,
+        "nonzeros": 8316
+      },
+      "params": {
+        "misc/usesymmetry": 7,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": false,
+        "propagating/symmetry/usedynamicprop": true
+      }
+    },
+    "aggressive": {
+      "active_vars": 2146,
+      "active_conss": 851,
+      "presolve_wall_s": 0.0356796550000098,
+      "presolve_reported_s": 0.033796,
+      "handlers": {
+        "linear": 848,
+        "orbitope_full": 1,
+        "varbound": 2
+      },
+      "symmetry_named_constraints": [
+        {
+          "name": "SSTcut_167_168",
+          "handler": "linear",
+          "vars": [
+            "t_C0168",
+            "t_C0169"
+          ]
+        },
+        {
+          "name": "SSTcut_161_166",
+          "handler": "linear",
+          "vars": [
+            "t_C0162",
+            "t_C0167"
+          ]
+        },
+        {
+          "name": "orbitope_component_0",
+          "handler": "orbitope_full",
+          "vars": [
+            "t_C2408",
+            "t_C2444"
+          ]
+        }
+      ],
+      "target_survival": {
+        "C0021": true,
+        "C0026": true,
+        "C0027": true,
+        "C0028": true
+      },
+      "export_linear": {
+        "rows": 850,
+        "cols": 2354,
+        "nonzeros": 8324
+      },
+      "params": {
+        "misc/usesymmetry": 5,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": true,
+        "propagating/symmetry/usedynamicprop": false
+      }
+    },
+    "ig": {
+      "active_vars": 2142,
+      "active_conss": 848,
+      "presolve_wall_s": 0.03530797700000221,
+      "presolve_reported_s": 0.033477,
+      "handlers": {
+        "linear": 848
+      },
+      "symmetry_named_constraints": [],
+      "target_survival": {
+        "C0021": true,
+        "C0026": true,
+        "C0027": true,
+        "C0028": true
+      },
+      "export_linear": {
+        "rows": 848,
+        "cols": 2354,
+        "nonzeros": 8320
+      },
+      "params": {
+        "misc/usesymmetry": 7,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": false,
+        "propagating/symmetry/usedynamicprop": true
+      }
+    },
+    "aggressive_plus_ig": {
+      "active_vars": 2146,
+      "active_conss": 851,
+      "presolve_wall_s": 0.034993162999995775,
+      "presolve_reported_s": 0.033070999999999996,
+      "handlers": {
+        "linear": 848,
+        "orbitope_full": 1,
+        "varbound": 2
+      },
+      "symmetry_named_constraints": [
+        {
+          "name": "orbitope_component_0",
+          "handler": "orbitope_full",
+          "vars": [
+            "t_C2408",
+            "t_C2444"
+          ]
+        }
+      ],
+      "target_survival": {
+        "C0021": true,
+        "C0026": true,
+        "C0027": true,
+        "C0028": true
+      },
+      "export_linear": {
+        "rows": 850,
+        "cols": 2354,
+        "nonzeros": 8324
+      },
+      "params": {
+        "misc/usesymmetry": 5,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": true,
+        "propagating/symmetry/usedynamicprop": false
+      }
+    }
+  },
+  "status": "AUDITED",
+  "disposition": "PASS"
+}
