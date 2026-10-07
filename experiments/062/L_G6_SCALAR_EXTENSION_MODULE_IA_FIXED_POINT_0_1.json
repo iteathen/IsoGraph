@@ -1,0 +1,151 @@
+{
+  "schema": "isograph.exp062-scalar-extension-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "SCALAR_EXTENSION_SUPPORT_0_1",
+  "branch_head_at_creation": "173efdcb00bbd4a662bebab5017b153beab7bc00",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_SCALAR_EXTENSION_SUPPORT_0_1.json",
+      "git_blob_sha": "edaa03e9add9a0f64b8a81aa4e30a4a5e7d9a110"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_SCALAR_EXTENSION_MODULE_SSC_0_1.json",
+      "git_blob_sha": "532e2c62c30fde599ac8cfb68d3a97a69d1fda6e"
+    }
+  },
+  "inference_profile": {
+    "id": "scalar-extension-schema-conjunct-projection-0.1",
+    "scope": "Direct conjunct/dependency projections from exact 193302/193303/193400/222000/222001/222002/225000/231000 only.",
+    "prohibited_inferences": [
+      "field embedding -> algebraic closure",
+      "scalar extension -> unique/canonical complexification",
+      "linear injection -> natural/domain identity",
+      "scalar extension -> anti-linear real structure",
+      "scalar extension -> sqrt/signature phase",
+      "scalar extension -> reflection invariance",
+      "scalar extension -> triality group",
+      "any W/cross-track conclusion"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(193302)",
+        "SCHEMA_DEFINITION(193303)",
+        "SCHEMA_DEFINITION(193400)",
+        "SCHEMA_DEFINITION(222000)",
+        "SCHEMA_DEFINITION(222001)",
+        "SCHEMA_DEFINITION(222002)",
+        "SCHEMA_DEFINITION(225000)",
+        "SCHEMA_DEFINITION(231000)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "SE-IA-001",
+          "assertion": "193302 entails source and target field presentations plus a total single-valued injective EMB relation.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-002",
+          "assertion": "193302 entails preservation of zero, one, addition, and multiplication by EMB.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-003",
+          "assertion": "193303 entails exact 193302 plus R- and C-vector presentations on the same carrier.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-004",
+          "assertion": "193303 entails equality of restricted R scalar action and C scalar action through EMB.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-005",
+          "assertion": "193400 entails an exact linear map whose equal outputs force equal inputs.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-006",
+          "assertion": "222000 entails the exact two-basis R/C extension bundle and both declared basis images.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-007",
+          "assertion": "222001 entails the exact four-basis R/C extension bundle and all four declared basis images.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-008",
+          "assertion": "222002 entails the exact eight-basis R/C extension bundle and all eight declared basis images.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-009",
+          "assertion": "225000 entails three exact real-to-complex linear injections plus scalar restrictions and real/complex trilinear relations.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-010",
+          "assertion": "225000 entails TC(JV(v),JM(m),JP(p))=EMB(TR(v,m,p)) on every admitted embedded real triple.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-011",
+          "assertion": "231000 entails total parameterized F and FC relations over real and complex input carriers.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        },
+        {
+          "id": "SE-IA-012",
+          "assertion": "231000 entails R-linearity of F(p,-), C-linearity of FC(p,-), and exact F/FC agreement on J-embedded inputs.",
+          "support": [
+            "direct selected-schema conjunct projection"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No further direct conjunct/dependency projection remains; prohibited reflection/real-structure/canonicality conclusions cannot be generated."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 12,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}
