@@ -1,0 +1,82 @@
+name: MIPLIB neos338 replay optimization 0.2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - experiment/miplib-structural-presolve-20261006
+    paths:
+      - .github/workflows/experiment-miplib-neos338-replay-opt.yml
+      - research/miplib-structural-presolve/NEOS3381206_REPLAY_OPT_0_2.md
+      - research/miplib-structural-presolve/tools/run-neos338-replay-opt-0.2.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miplib-neos338-replay-opt-0.2
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Install frozen tools
+        run: python3 -m pip install --disable-pip-version-check highspy==1.15.1 igraph==0.11.9 pyscipopt==6.2.1
+      - name: Execute exact replay benchmark
+        id: experiment
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          rm -rf out/miplib-neos338-replay-opt-0.2
+          python3 -m py_compile research/miplib-structural-presolve/tools/run-neos338-replay-opt-0.2.py
+          python3 research/miplib-structural-presolve/tools/run-neos338-replay-opt-0.2.py
+      - name: Persist evidence
+        if: always()
+        run: |
+          set -euo pipefail
+          E="research/miplib-structural-presolve/evidence/neos338-replay-opt-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          for f in RESULT.json SUMMARY.md; do
+            [ -f "out/miplib-neos338-replay-opt-0.2/$f" ] && cp "out/miplib-neos338-replay-opt-0.2/$f" "$E/$f"
+          done
+          python3 - <<'PY' > "$E/CONTROL.json"
+          import json, os
+          print(json.dumps({
+            "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+            "workflow_attempt": os.environ["GITHUB_RUN_ATTEMPT"],
+            "source_sha": os.environ["GITHUB_SHA"],
+            "profile": "neos338-replay-opt-0.2"
+          }, indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: neos338 replay optimization ${GITHUB_RUN_ID}"
+            for attempt in 1 2 3; do
+              git fetch origin experiment/miplib-structural-presolve-20261006
+              git rebase origin/experiment/miplib-structural-presolve-20261006
+              if git push origin HEAD:experiment/miplib-structural-presolve-20261006; then break; fi
+              test "$attempt" -lt 3
+            done
+          fi
+      - name: Enforce
+        if: always()
+        env:
+          EXPERIMENT_OUTCOME: ${{ steps.experiment.outcome }}
+        run: |
+          set -euo pipefail
+          test "$EXPERIMENT_OUTCOME" = "success"
+          test -f out/miplib-neos338-replay-opt-0.2/RESULT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open("out/miplib-neos338-replay-opt-0.2/RESULT.json"))
+          print(json.dumps({"disposition":r["disposition"],"speed_ratio":r["median_speed_ratio"],"selection":r["selection"]},indent=2))
+          if r["disposition"]!="PASS": raise SystemExit(1)
+          PY
