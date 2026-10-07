@@ -1,0 +1,103 @@
+{
+  "schema": "isograph.exp062-w-g5-hypothesis-variational-stationarity.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_PENDING_W_LOCAL_FALSIFICATION",
+  "authority_effect": "NONE_RESEARCH_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "user_direction": "Guess and test at the W G5 current-authority boundary.",
+  "inputs": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b"
+    },
+    "g4_quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_1.json",
+      "git_blob_sha": "9851f6fd5e3c7888bde5609023e1c02ac25a086f"
+    },
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_1.json",
+      "git_blob_sha": "6d88102298f7605aef724d0fa95b5b658cfe1b8a"
+    },
+    "g5_synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json",
+      "git_blob_sha": "ed2c107562f8b39196688121ef3c19995adb8ba9"
+    },
+    "g5_fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_1.json",
+      "git_blob_sha": "38f812e179e4bca6165e97ad8bbdcc2e03c40934"
+    }
+  },
+  "hypothesis": {
+    "hypothesis_id": "W-G5-HYP-VAR-001",
+    "working_name": "VARIATIONAL_STATIONARITY_CONSEQUENCE",
+    "kind": "PROPOSED_SEMANTIC_EXTENSION_PENDING_G6",
+    "source_neutral_roles": [
+      "ACTION",
+      "VARIED_ARGUMENT",
+      "STATIONARITY_RESULT"
+    ],
+    "guessed_semantics": [
+      "An ACTION admits a first-variation operation with respect to a VARIED_ARGUMENT.",
+      "A source statement that variation of the ACTION with respect to that argument gives a result is reconstructed as a stationarity consequence of that first variation.",
+      "The result remains an opaque source-local condition unless its internal equation semantics are independently qualified."
+    ],
+    "minimality_guard": "The hypothesis does not identify connection, tetrad, frame, torsion-free, Levi-Civita, or Einstein semantics as primitives. Those are source-local role fillers only.",
+    "nonclaim": "This hypothesis does not derive the named output equations from the action formula on W evidence alone."
+  },
+  "positive_controls": [
+    {
+      "class_id": "W-G4-Q0023",
+      "census_id": "W-SSC-029",
+      "parent_occurrence_id": "W-SSC-029-O01",
+      "occurrence_ids": [
+        "W-SSC-029-O03",
+        "W-SSC-029-O04"
+      ]
+    },
+    {
+      "class_id": "W-G4-Q0351",
+      "census_id": "W-SSC-149",
+      "parent_occurrence_id": "W-SSC-149-O01",
+      "occurrence_ids": [
+        "W-SSC-149-O02",
+        "W-SSC-149-O03"
+      ]
+    }
+  ],
+  "adversarial_negative_controls": [
+    {
+      "occurrence_id": "W-SSC-014-O02",
+      "reason": "Consequence wording without variation-of-action structure."
+    },
+    {
+      "occurrence_id": "W-SSC-104-O02",
+      "reason": "Parameter specialization, not action variation."
+    },
+    {
+      "occurrence_id": "W-SSC-104-O03",
+      "reason": "Parameter specialization, not action variation."
+    },
+    {
+      "occurrence_id": "W-SSC-114-O02",
+      "reason": "Conditional multiplicity consequence, not action variation."
+    },
+    {
+      "occurrence_id": "W-SSC-126-O01",
+      "reason": "Transform output relation, not action variation."
+    }
+  ],
+  "falsification_contract": {
+    "positive_coverage": "All four declared positive occurrences must satisfy the same structural/source-local variation predicate and preserve their exact parent dependencies.",
+    "negative_exclusion": "Every other W occurrence whose relation span is give/gives/giving must fail that predicate.",
+    "cross_class_bridge": "The same hypothesis must cover both W-G4-Q0023 and W-G4-Q0351 without using source-domain labels as the classifier.",
+    "exact_reconstruction": "The hypothesis may reconstruct only the variation-to-result incidence and parent ACTION dependency. It may not invent internal semantics for the result condition.",
+    "overreach_failure": "Any negative control matching the predicate, any missing positive, or any requirement to import a source-specific mathematical name falsifies this hypothesis."
+  },
+  "expected_disposition_on_pass": "SURVIVES_W_LOCAL_FALSIFICATION_PENDING_G6_INDEPENDENT_QUALIFICATION",
+  "expected_disposition_on_fail": "REJECT_HYPOTHESIS_NO_AUTHORITY_EFFECT",
+  "g6_gate": "A passing W-local test authorizes only creation of a separate G6 candidate qualification project. W may not consume the hypothesis until that module is independently qualified and promoted.",
+  "ia_authorized": false,
+  "nei_dts_dp_authorized": false
+}
