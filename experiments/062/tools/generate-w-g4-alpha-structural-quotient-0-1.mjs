@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 
 const g2Path='experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_1.json';
 const g3Path='experiments/062/W_G3_CORE_DEFINABILITY_0_5.json';
@@ -8,6 +9,7 @@ const outputPath='experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_1.jso
 const g2=JSON.parse(fs.readFileSync(g2Path,'utf8'));
 const g3=JSON.parse(fs.readFileSync(g3Path,'utf8'));
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const blob=p=>execFileSync('git',['hash-object',p],{encoding:'utf8'}).trim();
 
 if(g2.track!=='W'||g3.track!=='W') throw new Error('W track mismatch');
 if(g3.fixed_point?.G3_complete!==true||g3.fixed_point?.W_local_G4_authorized!==true) throw new Error('W G3 fixed point does not authorize W-local G4');
@@ -211,8 +213,8 @@ const output={
   comparison_scope:'W_ONLY',
   governing_method:'research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md',
   input:{
-    g2_graph:g2Path,
-    g3_fixed_point:g3Path
+    g2_graph:{path:g2Path,git_blob_sha:blob(g2Path)},
+    g3_fixed_point:{path:g3Path,git_blob_sha:blob(g3Path)}
   },
   gate:{
     W_G3_complete:true,
