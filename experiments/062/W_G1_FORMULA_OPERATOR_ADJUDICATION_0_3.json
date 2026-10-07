@@ -1,0 +1,157 @@
+{
+  "schema": "isograph.exp062-w-g1-formula-operator-adjudication.v0.3",
+  "date": "2026-10-07",
+  "status": "TARGETED_CORRECTED_BODY_FORMULA_OPERATOR_ADJUDICATION_COMPLETE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json",
+    "git_blob_sha": "658a09fefde50e48503aa1d98e23b65225c845bc"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_19.json",
+    "git_blob_sha": "9d86a8b187a44516cb781996419dbda5b321603a"
+  },
+  "predecessor_adjudication": {
+    "path": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_19.json",
+    "git_blob_sha": "3e54c7c749928e6f9b1747a11de1a9f5da2e962b"
+  },
+  "scope": [
+    "W-SSC-029",
+    "W-SSC-149"
+  ],
+  "rule": "Expose every newly introduced source-written formula/operator incidence that remained only inside larger spans after the targeted source-body reconstruction. Do not assign textbook semantics.",
+  "additions": [
+    {
+      "census_id": "W-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-029-O11",
+        "source_span": "integral of epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)",
+        "relation_span": "integral of",
+        "argument_spans": [
+          "epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-029-O01"
+        ],
+        "load_bearing_note": "Exposes the source-named integration operation separately from the action/result relation; no measure or integration theory is imported."
+      }
+    },
+    {
+      "census_id": "W-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-029-O12",
+        "source_span": "de^A",
+        "relation_span": "d",
+        "argument_spans": [
+          "e^A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-029-O09"
+        ],
+        "load_bearing_note": "Exposes the source-written derivative/exterior-derivative application without importing its conventional definition."
+      }
+    },
+    {
+      "census_id": "W-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-029-O13",
+        "source_span": "de^A + omega^A_B wedge e^B",
+        "relation_span": "+",
+        "argument_spans": [
+          "de^A",
+          "omega^A_B wedge e^B"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-029-O09",
+          "W-SSC-029-O12"
+        ],
+        "load_bearing_note": "Exposes the explicit additive composition inside the source equation."
+      }
+    },
+    {
+      "census_id": "W-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-029-O14",
+        "source_span": "omega^A_B wedge e^B",
+        "relation_span": "wedge",
+        "argument_spans": [
+          "omega^A_B",
+          "e^B"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-029-O09"
+        ],
+        "load_bearing_note": "Exposes the distinct wedge application inside the torsion-free equation."
+      }
+    },
+    {
+      "census_id": "W-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-029-O15",
+        "source_span": "Einstein equations in terms of e",
+        "relation_span": "in terms of",
+        "argument_spans": [
+          "Einstein equations",
+          "e"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-029-O04"
+        ],
+        "load_bearing_note": "Preserves the source-stated dependence of the Einstein-equation result on e."
+      }
+    },
+    {
+      "census_id": "W-SSC-149",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-149-O11",
+        "source_span": "integral of Sigma^(dotA dotB) wedge R_(dotA dotB)",
+        "relation_span": "integral of",
+        "argument_spans": [
+          "Sigma^(dotA dotB) wedge R_(dotA dotB)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-149-O01",
+          "W-SSC-149-O08"
+        ],
+        "load_bearing_note": "Exposes the source-named integration operation separately from the action relation; no integration theory is imported."
+      }
+    }
+  ],
+  "counts": {
+    "predecessor_occurrences": 436,
+    "added_occurrences": 6,
+    "successor_occurrences": 442,
+    "affected_bodies": 2
+  },
+  "findings": [
+    "W-SSC-029 required separate occurrences for integration, d(e), addition, the torsion-equation wedge, and the explicit 'in terms of e' dependency.",
+    "W-SSC-149 required a separate occurrence for the integration operation.",
+    "No stationarity, derivative law, variation-direction carrier, or conventional calculus behavior is supplied by these surface occurrences."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_20.json deterministically.",
+    "Verify exact source spans, dependencies, duplicate exclusion, and absence of pre-G5 semantic imports.",
+    "Perform the corrected-input complete conserved-delta source-local repeat before declaring a G1 fixed point."
+  ]
+}
