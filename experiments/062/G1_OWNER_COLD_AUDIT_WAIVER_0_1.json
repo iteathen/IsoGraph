@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-g1-owner-cold-audit-waiver.v0.1",
+  "date": "2026-10-06",
+  "status": "OWNER_EXCEPTION_APPLIED_G1_CAMPAIGN_GATE_SATISFIED",
+  "authority_effect": "CAMPAIGN_PROCEDURE_EXCEPTION_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "method_effect": "DOES_NOT_AMEND_OR_RELAX_GRAPH_FIRST_METHOD_0_2",
+  "decision": {
+    "instruction": "For this one instance, skip the cold test on both sides.",
+    "scope": "Experiment 062 Woit-Lisi campaign only",
+    "waived_requirement": "fresh independent current-input cold audit for both W and L G1 fixed-point candidates",
+    "reusable": false
+  },
+  "pinned_inputs": {
+    "W": {
+      "extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "extraction_git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b",
+      "fixed_point_record": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "fixed_point_git_blob_sha": "c298b613e4f4d1876cbc7c1d93709fac5f6b961b",
+      "frozen_bodies": 84,
+      "occurrences": 425,
+      "source_local_zero_change": true,
+      "repeat_corrections": 0
+    },
+    "L": {
+      "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+      "extraction_git_blob_sha": "80e2f576471aab8396f21f9f0b58e15fb5435c16",
+      "fixed_point_record": "experiments/062/L_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "fixed_point_git_blob_sha": "1ca0f58aac91a7032f6d1595089e948727b4cec9",
+      "frozen_bodies": 151,
+      "occurrences": 818,
+      "source_local_zero_change": true,
+      "repeat_corrections": 0
+    }
+  },
+  "gate_ruling": {
+    "W_G1_method_complete": false,
+    "L_G1_method_complete": false,
+    "reason_method_complete_false": "The independent cold-audit requirement in Graph-First Method 0.2 was explicitly waived rather than satisfied.",
+    "W_G1_accepted_for_this_campaign": true,
+    "L_G1_accepted_for_this_campaign": true,
+    "joint_G1_campaign_gate_satisfied": true,
+    "G2_authorized_for_this_campaign": true,
+    "G2_input_constraint": "Only the exact pinned W 0.18 and L 0.25 artifacts above may enter G2 under this exception."
+  },
+  "risk_record": {
+    "accepted_risk": "Without independent cold review, a systematic source-local extraction blind spot could survive into G2.",
+    "mitigation": "Both tracks reached independently developed source-local zero-change fixed points with deterministic verification before this exception.",
+    "cold_attempts": "Historical Gemini/OpenRouter/Copilot transport attempts remain diagnostic only and are not counted as satisfying the waived requirement."
+  },
+  "invalidation": [
+    "Any semantic change to W_EXTRACTION_RECONCILED_0_18.json invalidates this exception.",
+    "Any semantic change to L_EXTRACTION_RECONCILED_0_25.json invalidates this exception.",
+    "Any successor extraction for W or L requires a new gate decision; this waiver does not transfer.",
+    "This exception does not authorize skipping cold audits in any other IsoGraph experiment, module qualification, or future campaign."
+  ],
+  "next_stage": "G2_NEUTRAL_OCCURRENCE_GRAPH"
+}
