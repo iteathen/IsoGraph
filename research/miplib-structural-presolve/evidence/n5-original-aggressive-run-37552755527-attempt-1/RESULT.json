@@ -1,0 +1,447 @@
+{
+  "experiment": "n5-original-aggressive-scip-control-0.9",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "seeds": [
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "mapping_gate": {
+    "licensed": true,
+    "mapping": {
+      "C0021": {
+        "original": {
+          "name": "C0021",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0021",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0021",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0026": {
+        "original": {
+          "name": "C0026",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0026",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0026",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0027": {
+        "original": {
+          "name": "C0027",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0027",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0027",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      },
+      "C0028": {
+        "original": {
+          "name": "C0028",
+          "status": "ORIGINAL",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "transformed": {
+          "name": "t_C0028",
+          "status": "LOOSE",
+          "active": true,
+          "vtype": "CONTINUOUS",
+          "lb_global": 0.0,
+          "ub_global": 293000.0
+        },
+        "expected_transformed_name": "t_C0028",
+        "name_match": true,
+        "status_acceptable": true,
+        "domain_match": true,
+        "licensed": true
+      }
+    }
+  },
+  "frontend": {
+    "stages": {
+      "scip_presolve_s": 0.025833083999998507,
+      "scip_export_s": 0.043679954000026555,
+      "highs_parse_s": 0.005475401000012425,
+      "sparse_materialize_s": 0.002738416999989113,
+      "bulk_graph_data_s": 0.010602629000004526,
+      "igraph_construct_s": 0.0009448499999962223,
+      "bliss_s": 0.0028619820000130858,
+      "replay_select_s": 0.028445951999998442,
+      "total_s": 0.13073321800001736
+    },
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "graph_meta": {
+      "active_variables": 2142,
+      "dropped_export_only_variables": 212,
+      "rows": 846,
+      "active_nonzeros": 8316,
+      "vertices": 11304,
+      "edges": 16632,
+      "color_classes": 22
+    },
+    "transformed_breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ],
+    "original_breakers": [
+      [
+        "C0021",
+        "C0026"
+      ],
+      [
+        "C0027",
+        "C0028"
+      ]
+    ]
+  },
+  "trials": [
+    {
+      "seed": 48,
+      "order": [
+        "default",
+        "aggressive",
+        "ig"
+      ],
+      "default": {
+        "status": "optimal",
+        "objective": 8104.999999999998,
+        "dual": 8104.999999999998,
+        "gap": 0.0,
+        "nodes": 1412,
+        "lp_iterations": 234362,
+        "wall_s": 29.081818693999992,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8105.000000000118,
+        "dual": 8105.000000000118,
+        "gap": 0.0,
+        "nodes": 1575,
+        "lp_iterations": 336538,
+        "wall_s": 36.48441976500001,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        }
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 8105.000000000334,
+        "dual": 8105.000000000334,
+        "gap": 0.0,
+        "nodes": 1464,
+        "lp_iterations": 214153,
+        "wall_s": 26.735172790000007,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "ig_end_to_end_wall_s": 26.865906008000024
+    },
+    {
+      "seed": 49,
+      "order": [
+        "aggressive",
+        "ig",
+        "default"
+      ],
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8105.0,
+        "dual": 8105.0,
+        "gap": 0.0,
+        "nodes": 1412,
+        "lp_iterations": 224999,
+        "wall_s": 28.469151122,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        }
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 8105.000000000001,
+        "dual": 8105.000000000001,
+        "gap": 0.0,
+        "nodes": 555,
+        "lp_iterations": 89392,
+        "wall_s": 13.851915862999988,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "default": {
+        "status": "optimal",
+        "objective": 8105.000000000024,
+        "dual": 8105.000000000024,
+        "gap": 0.0,
+        "nodes": 937,
+        "lp_iterations": 170249,
+        "wall_s": 22.880207078000012,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "ig_end_to_end_wall_s": 13.982649081000005
+    },
+    {
+      "seed": 50,
+      "order": [
+        "ig",
+        "default",
+        "aggressive"
+      ],
+      "ig": {
+        "status": "optimal",
+        "objective": 8105.0000000005275,
+        "dual": 8105.0000000005275,
+        "gap": 0.0,
+        "nodes": 829,
+        "lp_iterations": 141988,
+        "wall_s": 19.307849887999964,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "default": {
+        "status": "optimal",
+        "objective": 8104.999999999998,
+        "dual": 8104.999999999998,
+        "gap": 0.0,
+        "nodes": 2244,
+        "lp_iterations": 313086,
+        "wall_s": 36.12343924000004,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8104.999999999993,
+        "dual": 8104.999999999993,
+        "gap": 0.0,
+        "nodes": 1250,
+        "lp_iterations": 179725,
+        "wall_s": 24.271386567000036,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        }
+      },
+      "ig_end_to_end_wall_s": 19.43858310599998
+    },
+    {
+      "seed": 51,
+      "order": [
+        "default",
+        "aggressive",
+        "ig"
+      ],
+      "default": {
+        "status": "optimal",
+        "objective": 8104.999999999308,
+        "dual": 8104.999999999308,
+        "gap": 0.0,
+        "nodes": 1073,
+        "lp_iterations": 200595,
+        "wall_s": 25.671888790000025,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8105.000000000008,
+        "dual": 8105.000000000008,
+        "gap": 0.0,
+        "nodes": 724,
+        "lp_iterations": 144185,
+        "wall_s": 20.080475455,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        }
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 8105.0000000005075,
+        "dual": 8105.0000000005075,
+        "gap": 0.0,
+        "nodes": 1217,
+        "lp_iterations": 186764,
+        "wall_s": 25.408154545000002,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "ig_end_to_end_wall_s": 25.53888776300002
+    },
+    {
+      "seed": 52,
+      "order": [
+        "aggressive",
+        "ig",
+        "default"
+      ],
+      "aggressive": {
+        "status": "optimal",
+        "objective": 8105.000000000037,
+        "dual": 8105.000000000037,
+        "gap": 0.0,
+        "nodes": 1107,
+        "lp_iterations": 191363,
+        "wall_s": 26.202553689000013,
+        "params": {
+          "misc/usesymmetry": 5,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": true,
+          "propagating/symmetry/usedynamicprop": false
+        }
+      },
+      "ig": {
+        "status": "optimal",
+        "objective": 8105.0000000004875,
+        "dual": 8105.0000000004875,
+        "gap": 0.0,
+        "nodes": 1020,
+        "lp_iterations": 174980,
+        "wall_s": 24.23300136299997,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "default": {
+        "status": "optimal",
+        "objective": 8105.000000000011,
+        "dual": 8105.000000000011,
+        "gap": 0.0,
+        "nodes": 1701,
+        "lp_iterations": 240982,
+        "wall_s": 31.03764111700002,
+        "params": {
+          "misc/usesymmetry": 7,
+          "propagating/symmetry/symtiming": 2,
+          "propagating/symmetry/addstrongsbcs": false,
+          "propagating/symmetry/usedynamicprop": true
+        }
+      },
+      "ig_end_to_end_wall_s": 24.36373458099999
+    }
+  ],
+  "summary": {
+    "paired_all_optimal": 5,
+    "default_median_wall_s": 29.081818693999992,
+    "aggressive_median_wall_s": 26.202553689000013,
+    "ig_solver_median_wall_s": 24.23300136299997,
+    "ig_end_to_end_median_wall_s": 24.36373458099999,
+    "median_ig_over_aggressive_ratio": 0.800884739416954,
+    "ig_vs_aggressive_wins": 4,
+    "ig_vs_aggressive_losses": 1,
+    "ig_vs_default_wins": 5,
+    "frontend_wall_s": 0.13073321800001736,
+    "default_median_nodes": 1412,
+    "aggressive_median_nodes": 1250,
+    "ig_median_nodes": 1020,
+    "directional_seam_survives": true
+  },
+  "status": "BENCHMARKED",
+  "disposition": "PASS"
+}
