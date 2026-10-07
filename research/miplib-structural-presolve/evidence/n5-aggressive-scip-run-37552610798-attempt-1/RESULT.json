@@ -1,0 +1,246 @@
+{
+  "experiment": "n5-aggressive-scip-symmetry-control-0.7",
+  "date": "2026-10-06",
+  "source": {
+    "source_url": "https://miplib.zib.de/WebData/instances/n5-3.mps.gz",
+    "gzip_sha256": "48efedf21c4057851a4ef7efc79fbbcbd292b68ee5f6b6a16e904d11ab11bacc",
+    "mps_sha256": "9369795c7d1f3943e9204b140fc2c77714790d4b4856fe354d48e6abef00f31f"
+  },
+  "stage1": {
+    "vars": 2142,
+    "conss": 846,
+    "presolve_s": 0.022111
+  },
+  "exact": {
+    "generator_count": 2,
+    "active_generator_count": 2,
+    "breakers": [
+      [
+        "t_C0021",
+        "t_C0026"
+      ],
+      [
+        "t_C0027",
+        "t_C0028"
+      ]
+    ]
+  },
+  "snapshots": {
+    "default": {
+      "params": {
+        "misc/usesymmetry": 7,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": false,
+        "propagating/symmetry/usedynamicprop": true
+      },
+      "vars": 2142,
+      "conss": 846,
+      "symmetry_named_constraints": [],
+      "handlers": {
+        "linear": 846
+      }
+    },
+    "late": {
+      "params": {
+        "misc/usesymmetry": 7,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": false,
+        "propagating/symmetry/usedynamicprop": true
+      },
+      "vars": 2142,
+      "conss": 846,
+      "symmetry_named_constraints": [],
+      "handlers": {
+        "linear": 846
+      }
+    },
+    "aggressive": {
+      "params": {
+        "misc/usesymmetry": 5,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": true,
+        "propagating/symmetry/usedynamicprop": false
+      },
+      "vars": 2142,
+      "conss": 848,
+      "symmetry_named_constraints": [
+        "SSTcut_161_166",
+        "SSTcut_167_168"
+      ],
+      "handlers": {
+        "linear": 848
+      }
+    },
+    "ig": {
+      "params": {
+        "misc/usesymmetry": 0,
+        "propagating/symmetry/symtiming": 2,
+        "propagating/symmetry/addstrongsbcs": false,
+        "propagating/symmetry/usedynamicprop": true
+      },
+      "vars": 2142,
+      "conss": 848,
+      "symmetry_named_constraints": [],
+      "handlers": {
+        "linear": 848
+      }
+    }
+  },
+  "trials": {
+    "default": [
+      {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 8105.000000000325,
+        "dual": 7663.833540869305,
+        "gap": 0.05756472355230444,
+        "nodes": 462,
+        "lp_iterations": 101553,
+        "wall_s": 15.000372709000004
+      },
+      {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8195.000000001168,
+        "dual": 7652.903951344386,
+        "gap": 0.07083533938271261,
+        "nodes": 434,
+        "lp_iterations": 98541,
+        "wall_s": 15.000287630999992
+      },
+      {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8105.00000000037,
+        "dual": 7658.639728601316,
+        "gap": 0.05828192567044435,
+        "nodes": 407,
+        "lp_iterations": 89920,
+        "wall_s": 15.001544232000015
+      }
+    ],
+    "late": [
+      {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 8105.000000000325,
+        "dual": 7663.833540869305,
+        "gap": 0.05756472355230444,
+        "nodes": 467,
+        "lp_iterations": 102390,
+        "wall_s": 15.001597124
+      },
+      {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8195.000000001168,
+        "dual": 7652.903951344386,
+        "gap": 0.07083533938271261,
+        "nodes": 434,
+        "lp_iterations": 98516,
+        "wall_s": 15.000393504000016
+      },
+      {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8105.00000000037,
+        "dual": 7658.639728601316,
+        "gap": 0.05828192567044435,
+        "nodes": 412,
+        "lp_iterations": 90619,
+        "wall_s": 15.001055369000028
+      }
+    ],
+    "aggressive": [
+      {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 8231.000000000371,
+        "dual": 7615.836861982692,
+        "gap": 0.08077420107151931,
+        "nodes": 236,
+        "lp_iterations": 95507,
+        "wall_s": 15.000364181999984
+      },
+      {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8105.000000000184,
+        "dual": 7739.343140039762,
+        "gap": 0.04724649797069767,
+        "nodes": 474,
+        "lp_iterations": 110210,
+        "wall_s": 15.000272648999982
+      },
+      {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8170.00000000009,
+        "dual": 7731.084203093392,
+        "gap": 0.05677286463017406,
+        "nodes": 369,
+        "lp_iterations": 103993,
+        "wall_s": 15.000175933999998
+      }
+    ],
+    "ig": [
+      {
+        "seed": 0,
+        "status": "timelimit",
+        "primal": 8105.000000000404,
+        "dual": 7674.431778628342,
+        "gap": 0.05610424768790086,
+        "nodes": 476,
+        "lp_iterations": 93329,
+        "wall_s": 15.000238709000001
+      },
+      {
+        "seed": 1,
+        "status": "timelimit",
+        "primal": 8170.000000000545,
+        "dual": 7652.333949579852,
+        "gap": 0.0676481258961673,
+        "nodes": 421,
+        "lp_iterations": 103159,
+        "wall_s": 15.000264363000014
+      },
+      {
+        "seed": 2,
+        "status": "timelimit",
+        "primal": 8105.000000000326,
+        "dual": 7669.318748466127,
+        "gap": 0.05680833797934605,
+        "nodes": 360,
+        "lp_iterations": 93645,
+        "wall_s": 15.000161717000026
+      }
+    ]
+  },
+  "summary": {
+    "default": {
+      "median_gap": 0.05828192567044435,
+      "median_nodes": 434,
+      "median_lp_iterations": 98541,
+      "median_wall_s": 15.000372709000004
+    },
+    "late": {
+      "median_gap": 0.05828192567044435,
+      "median_nodes": 434,
+      "median_lp_iterations": 98516,
+      "median_wall_s": 15.001055369000028
+    },
+    "aggressive": {
+      "median_gap": 0.05677286463017406,
+      "median_nodes": 369,
+      "median_lp_iterations": 103993,
+      "median_wall_s": 15.000272648999982
+    },
+    "ig": {
+      "median_gap": 0.05680833797934605,
+      "median_nodes": 421,
+      "median_lp_iterations": 93645,
+      "median_wall_s": 15.000238709000001
+    }
+  },
+  "disposition": "PASS"
+}
