@@ -1,0 +1,149 @@
+{
+  "schema": "isograph.exp062-field-vector-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "FIELD_VECTOR_PRESENTATION_0_1",
+  "inputs": {
+    "module_ssc": {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_MODULE_SSC_0_1.json",
+      "git_blob_sha": "10089721fe2b34af51966e0e3e98dd55ac6b4ab7"
+    },
+    "exact_candidate": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+      "git_blob_sha": "f234db03e52a0141a6a9fea80af7badd76751d7f"
+    }
+  },
+  "inference_profile": {
+    "id": "field-vector-schema-conjunct-projection-0.1",
+    "scope": "Only implication/projection already explicit in the candidate's nested schema bodies. No external field/vector theorem library and no algebraic completion rules.",
+    "rules": [
+      {
+        "id": "IA-R1-FIELD-OPERATION-TYPING",
+        "trigger": "FIELD schema 182003",
+        "derives": [
+          "BINARY_FUNCTION(ADD,C,C,C)",
+          "BINARY_FUNCTION(MUL,C,C,C)",
+          "UNARY_FUNCTION(NEG,C,C)"
+        ]
+      },
+      {
+        "id": "IA-R2-VECTOR-PARENT-FIELD",
+        "trigger": "VECTOR schema 182004",
+        "derives": [
+          "FIELD(C,ADD,MUL,NEG,INV,ZERO,ONE)"
+        ]
+      },
+      {
+        "id": "IA-R3-VECTOR-OPERATION-TYPING",
+        "trigger": "VECTOR schema 182004",
+        "derives": [
+          "BINARY_FUNCTION(VADD,V,V,V)",
+          "UNARY_FUNCTION(VNEG,V,V)",
+          "BINARY_FUNCTION(SCALE,C,V,V)"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "ordered-field consequences",
+      "basis/dimension conclusions",
+      "linear independence/span",
+      "linear-map or bilinear-map conclusions",
+      "algebra/composition-algebra conclusions",
+      "theorems not explicitly projected from the candidate body"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(182001)",
+        "SCHEMA_DEFINITION(182002)",
+        "SCHEMA_DEFINITION(182003)",
+        "SCHEMA_DEFINITION(182004)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "FV-IA-001",
+          "assertion": "FIELD(182003) entails BINARY_FUNCTION(ADD,C,C,C).",
+          "support": [
+            "182003 explicit conjunct",
+            "182002 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-002",
+          "assertion": "FIELD(182003) entails BINARY_FUNCTION(MUL,C,C,C).",
+          "support": [
+            "182003 explicit conjunct",
+            "182002 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-003",
+          "assertion": "FIELD(182003) entails UNARY_FUNCTION(NEG,C,C).",
+          "support": [
+            "182003 explicit conjunct",
+            "182001 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-004",
+          "assertion": "VECTOR(182004) entails FIELD(C,ADD,MUL,NEG,INV,ZERO,ONE).",
+          "support": [
+            "182004 explicit conjunct",
+            "182003 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-005",
+          "assertion": "VECTOR(182004) entails BINARY_FUNCTION(VADD,V,V,V).",
+          "support": [
+            "182004 explicit conjunct",
+            "182002 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-006",
+          "assertion": "VECTOR(182004) entails UNARY_FUNCTION(VNEG,V,V).",
+          "support": [
+            "182004 explicit conjunct",
+            "182001 definition"
+          ]
+        },
+        {
+          "id": "FV-IA-007",
+          "assertion": "VECTOR(182004) entails BINARY_FUNCTION(SCALE,C,V,V).",
+          "support": [
+            "182004 explicit conjunct",
+            "182002 definition"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Applying the frozen projection rules to the seven admitted IAs yields no assertion outside the already explicit/projection-closed set."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 7,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "nonclaims": [
+    "This IA profile does not claim every mathematical consequence of fields or vector spaces.",
+    "This IA fixed point is module-local qualification evidence only.",
+    "No L source body is closed by this IA artifact.",
+    "No W or cross-track evidence is used."
+  ],
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}
