@@ -1,0 +1,742 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.8",
+  "date": "2026-10-06",
+  "status": "SOURCE_SCOPE_GUARD_ROLE_CORRECTIONS_SUPPORTED_FULL_MANUAL_BODY_AUDIT_STILL_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/W_EXTRACTION_RECONCILED_0_7.json",
+  "predecessor_verifier": "experiments/062/tools/verify-w-extraction-reconciled-0-7.mjs",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "diagnostic_inputs": [
+    "experiments/062/W_G1_LOCATOR_ADJUDICATION_0_7.json",
+    "source-local guard/modality token scan over W 0.7",
+    "source-local uncovered-text coverage scan over all 84 W bodies"
+  ],
+  "adjudication_rule": "G1 must conserve load-bearing source scopes, guards, carrier/type roles, result/output roles, comparisons, and qualifications. Shared source conditions are recorded as distinct source-local condition occurrences when they bind already-conserved relations; existing occurrences are replaced only when their own semantic boundary omits required input/output roles. Reporting/motivational/source-status language is not promoted by itself.",
+  "corrections": [
+    {
+      "census_id": "W-SSC-014",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-014-O03",
+        "source_span": "SU(2,2) real form giving positive, negative, and null/boundary orbits for the Minkowski picture",
+        "relation_span": "for the Minkowski picture",
+        "argument_spans": [
+          "positive, negative, and null/boundary orbits",
+          "Minkowski picture"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-014-O02"
+        ],
+        "load_bearing_note": "Preserves the source-explicit Minkowski-picture scope on the SU(2,2) orbit partition."
+      }
+    },
+    {
+      "census_id": "W-SSC-034",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-034-O05",
+        "source_span": "For a chosen orthogonal complex structure J, W01 decomposes R4 tensor C into +i/-i eigenspaces and constructs S_R and S_L through exterior powers; the stabilizer U(2) lifts to SU(2)_L x U(1) with U(1) inside SU(2)_R",
+        "relation_span": "For a chosen orthogonal complex structure J",
+        "argument_spans": [
+          "decomposes R4 tensor C into +i/-i eigenspaces",
+          "constructs S_R and S_L through exterior powers",
+          "stabilizer U(2) lifts to SU(2)_L x U(1)",
+          "U(1) inside SU(2)_R"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-034-O01",
+          "W-SSC-034-O02",
+          "W-SSC-034-O03",
+          "W-SSC-034-O04"
+        ],
+        "load_bearing_note": "Conserves the chosen-orthogonal-complex-structure scope governing the decomposition, spinor construction, stabilizer lift, and U(1) placement."
+      }
+    },
+    {
+      "census_id": "W-SSC-035",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-035-O02",
+        "source_span": "On PT the lifted spinor roles have U(1) weights S_L=C^2_0 and S_R=C_-1 + C_+1 under SU(2)_L x U(1)",
+        "relation_span": "On PT",
+        "argument_spans": [
+          "lifted spinor roles have U(1) weights S_L=C^2_0 and S_R=C_-1 + C_+1 under SU(2)_L x U(1)"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-035-O01"
+        ],
+        "load_bearing_note": "Preserves the PT-domain scope of the lifted-spinor weight assignment."
+      }
+    },
+    {
+      "census_id": "W-SSC-041",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-041-O04",
+        "source_span": "For free massless spinors W01 uses the Penrose transform H^1(PT_+,O(-3)) <-> Weyl solutions on S4_+ and fiber restriction H^1(CP1,O(-3))=C2 to reconstruct pointwise spinor values",
+        "relation_span": "For free massless spinors",
+        "argument_spans": [
+          "Penrose transform H^1(PT_+,O(-3)) <-> Weyl solutions on S4_+",
+          "fiber restriction H^1(CP1,O(-3))=C2 to reconstruct pointwise spinor values"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-041-O01",
+          "W-SSC-041-O02",
+          "W-SSC-041-O03"
+        ],
+        "load_bearing_note": "Conserves the free-massless-spinor scope on the transform, fiber restriction, and pointwise reconstruction."
+      }
+    },
+    {
+      "census_id": "W-SSC-047",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-047-O04",
+        "source_span": "its tautological rank-2 bundle S",
+        "relation_span": "tautological rank-2 bundle",
+        "argument_spans": [
+          "S"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-047-O01"
+        ],
+        "load_bearing_note": "Preserves the source-explicit tautological rank-2 bundle role of S without importing external bundle semantics."
+      }
+    },
+    {
+      "census_id": "W-SSC-047",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-047-O05",
+        "source_span": "quotient S^perp",
+        "relation_span": "quotient",
+        "argument_spans": [
+          "S^perp"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-047-O04"
+        ],
+        "load_bearing_note": "Preserves the source-explicit quotient role of S^perp without importing an external definition."
+      }
+    },
+    {
+      "census_id": "W-SSC-052",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-052-O05",
+        "source_span": "For Minkowski twistor geometry W01 uses a signature-(2,2) Hermitian form Phi, anti-Hermitian affine coordinates, the SU(2,2) orbit decomposition of M/PT, and conjugate-dual left/right spinor actions",
+        "relation_span": "For Minkowski twistor geometry",
+        "argument_spans": [
+          "signature-(2,2) Hermitian form Phi",
+          "anti-Hermitian affine coordinates",
+          "SU(2,2) orbit decomposition of M/PT",
+          "conjugate-dual left/right spinor actions"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-052-O01",
+          "W-SSC-052-O02",
+          "W-SSC-052-O03",
+          "W-SSC-052-O04"
+        ],
+        "load_bearing_note": "Conserves the Minkowski-twistor-geometry scope on the listed form, coordinate, orbit, and spinor-action structures."
+      }
+    },
+    {
+      "census_id": "W-SSC-053",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-053-O07",
+        "source_span": "For Euclidean twistor geometry W01 uses T=H^2, the pseudoreal map sigma with sigma^2=-1 on T and +1 projectively, HP1 homogeneous coordinates, SL(2,H) fractional-linear action, and the CP1 fibration whose sigma action is antipodal on each fiber",
+        "relation_span": "For Euclidean twistor geometry",
+        "argument_spans": [
+          "T=H^2",
+          "pseudoreal map sigma with sigma^2=-1 on T and +1 projectively",
+          "HP1 homogeneous coordinates",
+          "SL(2,H) fractional-linear action",
+          "CP1 fibration whose sigma action is antipodal on each fiber"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-053-O01",
+          "W-SSC-053-O02",
+          "W-SSC-053-O03",
+          "W-SSC-053-O04",
+          "W-SSC-053-O05",
+          "W-SSC-053-O06"
+        ],
+        "load_bearing_note": "Conserves the Euclidean-twistor-geometry scope on the listed carrier, pseudoreal-map, coordinate, action, and fibration structures."
+      }
+    },
+    {
+      "census_id": "W-SSC-062",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-062-O03",
+        "source_span": "In the conventional four-dimensional spinor-vector description W04a represents a complex vector as a map from the dual right spinor to the left spinor; Minkowski reality relates the two chiralities by conjugation whereas Euclidean signature leaves them independent",
+        "relation_span": "In the conventional four-dimensional spinor-vector description",
+        "argument_spans": [
+          "represents a complex vector as a map from the dual right spinor to the left spinor",
+          "Minkowski reality relates the two chiralities by conjugation whereas Euclidean signature leaves them independent"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-062-O01",
+          "W-SSC-062-O02"
+        ],
+        "load_bearing_note": "Conserves the conventional four-dimensional spinor-vector-description scope on both the vector representation and signature-dependent chirality relation."
+      }
+    },
+    {
+      "census_id": "W-SSC-068",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-068-O03",
+        "source_span": "In the CP1 analogue W04b uses the three SU(1,1)=SL(2,R) orbits and hyperfunction boundary values to model the relation between holomorphic domains and Lorentzian boundary data",
+        "relation_span": "In the CP1 analogue",
+        "argument_spans": [
+          "three SU(1,1)=SL(2,R) orbits",
+          "hyperfunction boundary values",
+          "relation between holomorphic domains and Lorentzian boundary data"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-068-O01",
+          "W-SSC-068-O02"
+        ],
+        "load_bearing_note": "Preserves the CP1-analogue scope of the orbit/boundary-value model."
+      }
+    },
+    {
+      "census_id": "W-SSC-069",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-069-O03",
+        "source_span": "In four dimensions W04b uses the SU(2,2)=Spin(4,2) action on PT with positive, negative, and null orbits; compactified Minkowski points are represented by CP1s contained in the null orbit",
+        "relation_span": "In four dimensions",
+        "argument_spans": [
+          "SU(2,2)=Spin(4,2) action on PT with positive, negative, and null orbits",
+          "compactified Minkowski points are represented by CP1s contained in the null orbit"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-069-O01",
+          "W-SSC-069-O02"
+        ],
+        "load_bearing_note": "Conserves the four-dimensional scope of the PT action/orbit structure and Minkowski-point representation."
+      }
+    },
+    {
+      "census_id": "W-SSC-071",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-071-O03",
+        "source_span": "CP3 -> HP1=S4 fibration with CP1 fibers",
+        "relation_span": "with CP1 fibers",
+        "argument_spans": [
+          "CP3 -> HP1=S4 fibration",
+          "CP1 fibers"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-071-O01"
+        ],
+        "load_bearing_note": "Restores the source-explicit CP1 fiber type of the Euclidean fibration used in the Wick-rotation requirement."
+      }
+    },
+    {
+      "census_id": "W-SSC-083",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-083-O03",
+        "source_span": "antilinear reflection/conjugation Theta associated with imaginary-time reflection in Osterwalder-Schrader reconstruction",
+        "relation_span": "in Osterwalder-Schrader reconstruction",
+        "argument_spans": [
+          "imaginary-time reflection",
+          "Osterwalder-Schrader reconstruction"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-083-O01"
+        ],
+        "load_bearing_note": "Preserves the source-explicit Osterwalder-Schrader reconstruction context of Theta's imaginary-time reflection role."
+      }
+    },
+    {
+      "census_id": "W-SSC-087",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-087-O04",
+        "source_span": "In the twistor version W04e uses a Hermitian form Phi to split projective twistor space into positive, negative, and null regions; holomorphic theory on PT+ is proposed to have boundary values on the null region representing chiral Minkowski data, with Penrose/Penrose-Ward constructions supplying part of the reconstruction machinery",
+        "relation_span": "In the twistor version",
+        "argument_spans": [
+          "Hermitian form Phi to split projective twistor space into positive, negative, and null regions",
+          "holomorphic theory on PT+ is proposed to have boundary values on the null region representing chiral Minkowski data",
+          "Penrose/Penrose-Ward constructions supplying part of the reconstruction machinery"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-087-O01",
+          "W-SSC-087-O02",
+          "W-SSC-087-O03"
+        ],
+        "load_bearing_note": "Conserves the twistor-version scope on the region split, null-boundary data relation, and reconstruction role."
+      }
+    },
+    {
+      "census_id": "W-SSC-090",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-090-O06",
+        "source_span": "on the Euclidean slice the latter decomposes as a scalar plus a three-vector and SU(2)_L acts trivially",
+        "relation_span": "on the Euclidean slice",
+        "argument_spans": [
+          "the latter decomposes as a scalar plus a three-vector",
+          "SU(2)_L acts trivially"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-090-O02",
+          "W-SSC-090-O03"
+        ],
+        "load_bearing_note": "Preserves the Euclidean-slice guard shared by the proposed carrier decomposition and trivial SU(2)_L action."
+      }
+    },
+    {
+      "census_id": "W-SSC-093",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-093-O05",
+        "source_span": "Under the SU(2,2) real form W04d defines PT+, PT-, and PT0 by the sign of a signature-(2,2) Hermitian form; compactified Minkowski points are CP1s lying in PT0, and PT0 is the space of Minkowski light rays/celestial spheres",
+        "relation_span": "Under the SU(2,2) real form",
+        "argument_spans": [
+          "PT+, PT-, and PT0 by the sign of a signature-(2,2) Hermitian form",
+          "compactified Minkowski points are CP1s lying in PT0",
+          "PT0 is the space of Minkowski light rays/celestial spheres"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-093-O01",
+          "W-SSC-093-O02",
+          "W-SSC-093-O03",
+          "W-SSC-093-O04"
+        ],
+        "load_bearing_note": "Conserves the SU(2,2)-real-form scope on the PT region definitions and Minkowski/null identifications."
+      }
+    },
+    {
+      "census_id": "W-SSC-094",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-094-O03",
+        "source_span": "Under the Euclidean SL(2,H) real form W04d uses T=C4=H2 and the CP3->HP1=S4 fibration sending each complex line to the quaternionic line it generates",
+        "relation_span": "Under the Euclidean SL(2,H) real form",
+        "argument_spans": [
+          "T=C4=H2",
+          "CP3->HP1=S4 fibration sending each complex line to the quaternionic line it generates"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-094-O01",
+          "W-SSC-094-O02"
+        ],
+        "load_bearing_note": "Conserves the Euclidean SL(2,H) real-form scope on the carrier identification and fibration map."
+      }
+    },
+    {
+      "census_id": "W-SSC-108",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-108-O03",
+        "source_span": "for a quaternion-algebra quadratic carrier, the Brauer class controls whether the associated Weil representation is true or only projective",
+        "relation_span": "for a quaternion-algebra quadratic carrier",
+        "argument_spans": [
+          "Brauer class controls whether the associated Weil representation is true or only projective"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-108-O01"
+        ],
+        "load_bearing_note": "Preserves the explicit quaternion-algebra-quadratic-carrier guard on the Brauer-class control statement."
+      }
+    },
+    {
+      "census_id": "W-SSC-112",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-112-O04",
+        "source_span": "SU(2)-connection/canonical-form pair analogous to Yang-Mills",
+        "relation_span": "analogous to",
+        "argument_spans": [
+          "SU(2)-connection/canonical-form pair",
+          "Yang-Mills"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-112-O01"
+        ],
+        "load_bearing_note": "Restores the source-explicit Yang-Mills analogy of the Ashtekar canonical pair."
+      }
+    },
+    {
+      "census_id": "W-SSC-113",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-113-O06",
+        "source_span": "On PT, W01 uses the tautological complex line l to define the extra electroweak U(1), represents lifted tangent vectors as Hom_C(l,S_L), and states that the Higgs-direction vector transforms under U(1)×SU(2)_L; a nonzero Higgs selects the U(1) subgroup that leaves it invariant, identified with electromagnetism",
+        "relation_span": "On PT",
+        "argument_spans": [
+          "tautological complex line l to define the extra electroweak U(1)",
+          "represents lifted tangent vectors as Hom_C(l,S_L)",
+          "Higgs-direction vector transforms under U(1)×SU(2)_L",
+          "nonzero Higgs selects the U(1) subgroup that leaves it invariant",
+          "identified with electromagnetism"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-113-O01",
+          "W-SSC-113-O02",
+          "W-SSC-113-O03",
+          "W-SSC-113-O04",
+          "W-SSC-113-O05"
+        ],
+        "load_bearing_note": "Conserves the PT-domain scope of the U(1), tangent-vector, Higgs transformation/selection, and electromagnetism identifications."
+      }
+    },
+    {
+      "census_id": "W-SSC-122",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-122-O04",
+        "source_span": "defines Osterwalder-Schrader conjugation on imaginary-time test functions by Theta f(tau)=conjugate(f(-tau))",
+        "relation_span": "on imaginary-time test functions",
+        "argument_spans": [
+          "Osterwalder-Schrader conjugation",
+          "imaginary-time test functions",
+          "Theta f(tau)=conjugate(f(-tau))"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-122-O01"
+        ],
+        "load_bearing_note": "Restores the source-explicit Osterwalder-Schrader role and imaginary-time-test-function domain of the Theta definition."
+      }
+    },
+    {
+      "census_id": "W-SSC-123",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-123-O04",
+        "source_span": "In the free-field example W04e reconstructs the physical one-particle Hilbert space as positive-time test functions modulo the null space of the OS form, and emphasizes that Theta selects an imaginary-time direction, converting SO(4) covariance into Lorentzian SO(3,1) covariance at physical-state reconstruction",
+        "relation_span": "In the free-field example",
+        "argument_spans": [
+          "reconstructs the physical one-particle Hilbert space as positive-time test functions modulo the null space of the OS form",
+          "Theta selects an imaginary-time direction",
+          "converting SO(4) covariance into Lorentzian SO(3,1) covariance at physical-state reconstruction"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-123-O01",
+          "W-SSC-123-O02",
+          "W-SSC-123-O03"
+        ],
+        "load_bearing_note": "Conserves the free-field-example scope on the Hilbert-space reconstruction, Theta direction selection, and covariance conversion."
+      }
+    },
+    {
+      "census_id": "W-SSC-124",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-124-O03",
+        "source_span": "In the two-dimensional chiral model W04e distinguishes the ordinary Euclidean real form, embedded anti-diagonally in the two-chirality complexification, from a purely right-chiral holomorphic Euclidean theory; the corresponding chiral Minkowski theory is selected by a conjugation whose fixed locus is the Minkowski circle rather than by analytic continuation through the two-chirality complexification",
+        "relation_span": "In the two-dimensional chiral model",
+        "argument_spans": [
+          "ordinary Euclidean real form, embedded anti-diagonally in the two-chirality complexification",
+          "purely right-chiral holomorphic Euclidean theory",
+          "chiral Minkowski theory is selected by a conjugation whose fixed locus is the Minkowski circle rather than by analytic continuation through the two-chirality complexification"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-124-O01",
+          "W-SSC-124-O02"
+        ],
+        "load_bearing_note": "Conserves the two-dimensional-chiral-model scope on the Euclidean-form comparison and Minkowski-theory selection mechanism."
+      }
+    },
+    {
+      "census_id": "W-SSC-125",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-125-O03",
+        "source_span": "In four dimensions W04e places chiral SU(2,2) representations in H^1(PT+,O(n-2)) and says an appropriate twistor-transform version of Theta supplies the required conjugation/reality structure for the holomorphic PT+ theory",
+        "relation_span": "In four dimensions",
+        "argument_spans": [
+          "chiral SU(2,2) representations in H^1(PT+,O(n-2))",
+          "appropriate twistor-transform version of Theta supplies the required conjugation/reality structure for the holomorphic PT+ theory"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-125-O01",
+          "W-SSC-125-O02"
+        ],
+        "load_bearing_note": "Conserves the four-dimensional scope on the cohomological representation placement and Theta reality construction."
+      }
+    },
+    {
+      "census_id": "W-SSC-125",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-125-O04",
+        "source_span": "required conjugation/reality structure for the holomorphic PT+ theory",
+        "relation_span": "for",
+        "argument_spans": [
+          "required conjugation/reality structure",
+          "holomorphic PT+ theory"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-125-O02"
+        ],
+        "load_bearing_note": "Restores the source-explicit recipient/domain of the required conjugation/reality structure."
+      }
+    },
+    {
+      "census_id": "W-SSC-126",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "W-SSC-126-O01",
+      "occurrence": {
+        "occurrence_id": "W-SSC-126-O01",
+        "source_span": "Ward-Penrose transform gives, for suitable holomorphic bundles on PT+, right-handed Weyl solutions coupled to a self-dual connection both on a Euclidean S4 hemisphere and as boundary values on Minkowski spacetime",
+        "relation_span": "gives",
+        "argument_spans": [
+          "Ward-Penrose transform",
+          "suitable holomorphic bundles on PT+",
+          "right-handed Weyl solutions coupled to a self-dual connection",
+          "Euclidean S4 hemisphere",
+          "boundary values on Minkowski spacetime"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Expands the existing transform occurrence to conserve its explicit suitable-bundle input guard and both Euclidean-hemisphere and Minkowski-boundary output scopes."
+      }
+    },
+    {
+      "census_id": "W-SSC-129",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-129-O03",
+        "source_span": "real Lorentz group and Euclidean SU(2)_L x SU(2)_R rotation group occur as distinct real forms used in the conventional analytic-continuation picture",
+        "relation_span": "used in",
+        "argument_spans": [
+          "real Lorentz group and Euclidean SU(2)_L x SU(2)_R rotation group",
+          "conventional analytic-continuation picture"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-129-O02"
+        ],
+        "load_bearing_note": "Preserves the source-explicit role of the distinct real forms in the conventional analytic-continuation picture."
+      }
+    },
+    {
+      "census_id": "W-SSC-134",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-134-O04",
+        "source_span": "On the Euclidean real subspace of the right-handed construction, SU(2)_L acts trivially and SU(2)_R acts nontrivially; the right spinor and its conjugate become equivalent SU(2)_R representations",
+        "relation_span": "On the Euclidean real subspace of the right-handed construction",
+        "argument_spans": [
+          "SU(2)_L acts trivially",
+          "SU(2)_R acts nontrivially",
+          "right spinor and its conjugate become equivalent SU(2)_R representations"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-134-O01",
+          "W-SSC-134-O02",
+          "W-SSC-134-O03"
+        ],
+        "load_bearing_note": "Conserves the Euclidean-real-subspace scope on the left/right actions and right-spinor representation equivalence."
+      }
+    },
+    {
+      "census_id": "W-SSC-138",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-138-O03",
+        "source_span": "Under the conventional Euclidean vector-spinor identification, a distinguished nonzero Euclidean vector supplies an isomorphism between the left spinor and the conjugate right spinor, permitting translation between chirally symmetric and asymmetric descriptions",
+        "relation_span": "Under the conventional Euclidean vector-spinor identification",
+        "argument_spans": [
+          "distinguished nonzero Euclidean vector supplies an isomorphism between the left spinor and the conjugate right spinor",
+          "translation between chirally symmetric and asymmetric descriptions"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-138-O01",
+          "W-SSC-138-O02"
+        ],
+        "load_bearing_note": "Conserves the conventional Euclidean vector-spinor-identification scope on the spinor isomorphism and resulting translation."
+      }
+    },
+    {
+      "census_id": "W-SSC-140",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-140-O03",
+        "source_span": "For a right-handed Minkowski Weyl degree of freedom, W02 gives the momentum-space invariant Lagrangian and associates positive-energy solutions with helicity +1/2 and negative-energy solutions with helicity -1/2",
+        "relation_span": "For a right-handed Minkowski Weyl degree of freedom",
+        "argument_spans": [
+          "momentum-space invariant Lagrangian",
+          "associates positive-energy solutions with helicity +1/2 and negative-energy solutions with helicity -1/2"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-140-O01",
+          "W-SSC-140-O02"
+        ],
+        "load_bearing_note": "Conserves the right-handed-Minkowski-Weyl scope on the invariant Lagrangian and energy/helicity association."
+      }
+    },
+    {
+      "census_id": "W-SSC-144",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-144-O06",
+        "source_span": "In Euclidean signature W02 uses Hodge star squared equal to +1 to split two-forms into self-dual and anti-self-dual sectors; self-dual two-forms correspond to su(2)_R and anti-self-dual two-forms to su(2)_L",
+        "relation_span": "In Euclidean signature",
+        "argument_spans": [
+          "Hodge star squared equal to +1 to split two-forms into self-dual and anti-self-dual sectors",
+          "self-dual two-forms correspond to su(2)_R",
+          "anti-self-dual two-forms to su(2)_L"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-144-O01",
+          "W-SSC-144-O02",
+          "W-SSC-144-O03"
+        ],
+        "load_bearing_note": "Conserves the Euclidean-signature scope on the Hodge-star split and chiral-sector correspondences."
+      }
+    },
+    {
+      "census_id": "W-SSC-144",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-144-O07",
+        "source_span": "In Minkowski signature star squared is -1 and the corresponding chiral decomposition requires complexification",
+        "relation_span": "In Minkowski signature",
+        "argument_spans": [
+          "star squared is -1",
+          "corresponding chiral decomposition requires complexification"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-144-O04",
+          "W-SSC-144-O05"
+        ],
+        "load_bearing_note": "Conserves the Minkowski-signature scope on the star-square law and complexification requirement."
+      }
+    },
+    {
+      "census_id": "W-SSC-146",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-146-O02",
+        "source_span": "using only the self-dual curvature component, and therefore only right-handed spacetime spinor geometry",
+        "relation_span": "therefore only",
+        "argument_spans": [
+          "self-dual curvature component",
+          "right-handed spacetime spinor geometry"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-146-O01"
+        ],
+        "load_bearing_note": "Restores the source-explicit consequence that the self-dual-only Yang-Mills rewrite uses only right-handed spacetime spinor geometry."
+      }
+    },
+    {
+      "census_id": "W-SSC-148",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-148-O03",
+        "source_span": "In the chiral GR description cited by W02, curvature acts on the six-dimensional two-form space split into two three-dimensional chiral sectors, and the Einstein equations correspond to vanishing of the off-diagonal curvature blocks",
+        "relation_span": "In the chiral GR description cited by W02",
+        "argument_spans": [
+          "curvature acts on the six-dimensional two-form space split into two three-dimensional chiral sectors",
+          "Einstein equations correspond to vanishing of the off-diagonal curvature blocks"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-148-O01",
+          "W-SSC-148-O02"
+        ],
+        "load_bearing_note": "Conserves the cited chiral-GR-description scope on the curvature action and Einstein-equation correspondence."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 34,
+    "additions": 33,
+    "replacements": 1,
+    "affected_bodies": 31,
+    "predecessor_occurrences": 219,
+    "expected_successor_occurrences": 252
+  },
+  "review_findings": [
+    "The W 0.7 locator closure was not a semantic fixed point: exact source scopes/guards and result roles can sit outside lexical occurrence heads.",
+    "The repair set preserves source-written domain/signature/dimension/model scopes without inflating existing relation spans merely to cover reporting verbs.",
+    "W-SSC-126 requires one same-ID replacement because the prior transform occurrence omitted its explicit suitable-bundle input role and Euclidean/Minkowski output scopes.",
+    "W-SSC-146 omitted the source consequence restricting the rewrite to right-handed spacetime spinor geometry.",
+    "The remaining full manual 84-body source-local audit is still required before freezing a candidate for independent cold auditing."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_8.json by applying exactly these additions/replacement to W 0.7.",
+    "Verify exact predecessor+adjudication conservation, spans, dependencies, duplicates, and anti-pre-G5 leakage.",
+    "Perform a complete manual/source-local audit of all 84 frozen W bodies against W 0.8, not merely locator or uncovered-text heuristics.",
+    "Only a complete source-local no-change pass may freeze the candidate W G1 input for independent all-84 cold auditing.",
+    "Do not authorize G2 or later graph-first stages before both W and L reach structurally valid zero-correction independent cold-audit fixed points."
+  ],
+  "authority": false
+}
