@@ -1,0 +1,34 @@
+name: Experiment 062 W G3 definability 0.2 verify
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_1.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_ADJUDICATION_0_2.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_2.json
+      - experiments/062/tools/apply-w-g3-core-definability-adjudication-0-2.mjs
+      - experiments/062/tools/verify-w-g3-core-definability-0-2.mjs
+      - .github/workflows/experiment-062-w-g3-definability-0-2.yml
+  pull_request:
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_1.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_ADJUDICATION_0_2.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_2.json
+      - experiments/062/tools/apply-w-g3-core-definability-adjudication-0-2.mjs
+      - experiments/062/tools/verify-w-g3-core-definability-0-2.mjs
+      - .github/workflows/experiment-062-w-g3-definability-0-2.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify W G3 0.2
+        run: node experiments/062/tools/verify-w-g3-core-definability-0-2.mjs
