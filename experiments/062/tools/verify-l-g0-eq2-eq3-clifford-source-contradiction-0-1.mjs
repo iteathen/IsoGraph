@@ -22,7 +22,7 @@ function analyze(T,mode='transpose'){
  }
  const mismatch=[];
  for(let c=0;c<n;c++)for(let i=0;i<n;i++)for(let k=0;k<n;k++)
-  if(barDirect[c][i][k]!==Gamma[c][k][i])mismatch.push({gamma:c,row:i,col:k,from_printed_M:barDirect[c][i][k],from_transpose:Gamma[c][k][i]});
+  if(barDirect[c][i][k]!==Gamma[c][k][i])mismatch.push({c,row:i,col:k,from_printed_M:barDirect[c][i][k],from_transpose:Gamma[c][k][i]});
  const bar=mode==='transpose'?Gamma.map(transpose):barDirect;
  const mat=Array.from({length:n},(_,c)=>{
   const g=one(2*n,2*n);for(let r=0;r<n;r++)for(let k=0;k<n;k++){g[r][n+k]=-bar[c][r][k];g[n+r][k]=Gamma[c][r][k];}
