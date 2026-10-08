@@ -1,0 +1,370 @@
+{
+  "schema": "isograph.exp062-w05-existing17-primary-source-expectations.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "ALL_17_EXISTING_W05_BODIES_DIRECT_SOURCE_REVIEW_EIGHT_ADDITIONAL_STRUCTURED_SOURCE_OPERAND_REPAIRS_G0",
+  "source": {
+    "id": "W05",
+    "author": "Peter Woit",
+    "revision": "arXiv:2202.02657v2",
+    "pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "html": "https://arxiv.org/html/2202.02657v2",
+    "pages": 16,
+    "author_pdf_byte_identity": "UNVERIFIED"
+  },
+  "existing_item_ids": [
+    "W-SSC-023",
+    "W-SSC-024",
+    "W-SSC-097",
+    "W-SSC-098",
+    "W-SSC-099",
+    "W-SSC-100",
+    "W-SSC-101",
+    "W-SSC-102",
+    "W-SSC-103",
+    "W-SSC-104",
+    "W-SSC-105",
+    "W-SSC-106",
+    "W-SSC-107",
+    "W-SSC-108",
+    "W-SSC-109",
+    "W-SSC-110",
+    "W-SSC-111"
+  ],
+  "changed_item_ids": [
+    "W-SSC-099",
+    "W-SSC-101",
+    "W-SSC-102",
+    "W-SSC-104",
+    "W-SSC-105",
+    "W-SSC-106",
+    "W-SSC-107",
+    "W-SSC-108"
+  ],
+  "incidences": {
+    "W-SSC-099": [
+      {
+        "id": "W05-099-01",
+        "source": "§3 pp.3–4",
+        "modality": "SOURCE_CP3_ANTIPODAL_PROJECTIVE_MAP",
+        "lhs": "rho_tw([z1,z2,z3,z4])",
+        "ordered_rhs": [
+          "-bar(z2)",
+          "bar(z1)",
+          "-bar(z4)",
+          "bar(z3)"
+        ],
+        "domain": "CP3",
+        "codomain": "CP3"
+      },
+      {
+        "id": "W05-099-02",
+        "source": "§3 p.4",
+        "modality": "SOURCE_NONCOMMUTATIVE_QUATERNION_CHART",
+        "lhs": "q",
+        "rhs": "inverse(q2)*q1",
+        "carrier": "HP1",
+        "guard": "Inverse q2 ON LEFT, not commuted."
+      },
+      {
+        "id": "W05-099-03",
+        "source": "§3 p.4",
+        "modality": "SOURCE_PROJECTIVE_FIBRATION_MAP",
+        "map": "pi",
+        "domain": "CP3",
+        "codomain": "HP1",
+        "arguments": [
+          "z1",
+          "z2",
+          "z3",
+          "z4"
+        ],
+        "ordered_output": [
+          "z1+z2*j",
+          "z3+z4*j"
+        ],
+        "fiber": "rho_tw_invariant_CP1",
+        "base": "HP1=S4"
+      }
+    ],
+    "W-SSC-101": [
+      {
+        "id": "W05-101-01",
+        "source": "§4 p.5",
+        "modality": "SOURCE_ORDERED_COMPLEX_STRUCTURE_FIBRATION",
+        "map": "pi",
+        "domain": "R4*CP1",
+        "codomain": "CP1",
+        "output": "CP1_second_factor",
+        "total_space_structure": "BASE_POINT_SELECTS_ORTHOGONAL_COMPLEX_STRUCTURE_ON_R4",
+        "real_map": [
+          "identity_R4",
+          "rho_tw_CP1"
+        ]
+      },
+      {
+        "id": "W05-101-02",
+        "source": "§4 p.5",
+        "modality": "SOURCE_PAULI_POSITIVE_EIGENSPACE",
+        "matrix": "x1*sigma1+x2*sigma2+x3*sigma3",
+        "unit_vector": true,
+        "eigenvalue": "+1",
+        "eigenline": "O(1)",
+        "two_copies": "O(1) directsum O(1)",
+        "general_dimension": "2d O(1) copies",
+        "negative": "NOT_MINUS_ONE_EIGENSPACE"
+      }
+    ],
+    "W-SSC-102": [
+      {
+        "id": "W05-102-01",
+        "source": "§5.1 p.6",
+        "modality": "SOURCE_HYPERKAHLER_KAHLER_SPHERE",
+        "manifold_dimension": "4k",
+        "lhs": "aI+bJ+cK",
+        "relation": "I*J=K",
+        "coefficient_condition": "a^2+b^2+c^2=1"
+      },
+      {
+        "id": "W05-102-02",
+        "source": "§5.1 p.6",
+        "modality": "SOURCE_DIRECTIONAL_REDUCTION_CASES",
+        "parent": "SELF_DUAL_YM_MOD_GAUGE",
+        "cases": [
+          {
+            "directions": 1,
+            "target": "MONOPOLE_BOGOMOLNY"
+          },
+          {
+            "directions": 2,
+            "target": "HIGGS_HITCHIN"
+          },
+          {
+            "directions": 3,
+            "target": "COADJOINT_NAHM"
+          }
+        ],
+        "source_attribution": "Hitchin et al [6], survey [7]"
+      }
+    ],
+    "W-SSC-104": [
+      {
+        "id": "W05-104-01",
+        "source": "§5.3 p.8",
+        "modality": "SOURCE_NONABELIAN_COHOMOLOGY_DEFINITION_WITH_NEGATIVE",
+        "lhs": "M",
+        "rhs": "H^1(X,GL(n,C))",
+        "representation": "pi1(X)->GL(n,C) modulo equivalence",
+        "type": "SET_NOT_VECTOR_SPACE",
+        "higher_cohomology_extension": false
+      },
+      {
+        "id": "W05-104-02",
+        "source": "§5.3 p.8",
+        "modality": "SOURCE_LAMBDA_PARAMETER_CASES",
+        "cases": [
+          {
+            "lambda": 1,
+            "result": "USUAL_CONNECTION"
+          },
+          {
+            "lambda": 0,
+            "result": "HIGGS_BUNDLE"
+          }
+        ],
+        "scope": "CP1_twistor",
+        "negative": "NOT_IDENTICAL_OBJECTS"
+      }
+    ],
+    "W-SSC-105": [
+      {
+        "id": "W05-105-01",
+        "source": "§6.1 p.9",
+        "modality": "SOURCE_PARAMETERIZED_QUATERNION_LAWS",
+        "basis": [
+          "1",
+          "i",
+          "j",
+          "k"
+        ],
+        "field": "F",
+        "a_b_invertible": true,
+        "equations": [
+          "i*j=k",
+          "j*i=-k",
+          "i^2=a",
+          "j^2=b"
+        ]
+      },
+      {
+        "id": "W05-105-02",
+        "source": "§6.1 p.9",
+        "modality": "SOURCE_HILBERT_SYMBOL_TWO_CASES",
+        "positive": {
+          "value": 1,
+          "condition": "(a,b/F)~M(2,F)"
+        },
+        "negative": {
+          "value": -1,
+          "condition": "(a,b/F) NOT~M(2,F)"
+        }
+      },
+      {
+        "id": "W05-105-03",
+        "source": "§6.1 p.9",
+        "modality": "SOURCE_THREE_EXTENSION_P_NOT_TWO",
+        "condition": "p != 2",
+        "u": "NON_SQUARE_UNIT",
+        "ordered_extensions": [
+          "Qp[sqrt(p)]",
+          "Qp[sqrt(u)]",
+          "Qp[sqrt(up)]"
+        ]
+      },
+      {
+        "id": "W05-105-04",
+        "source": "§6.1 p.9",
+        "modality": "SOURCE_SCALAR_EXTENSION_CHAIN_ONLY_AFTER_K",
+        "lhs": "(p,u/Qp) tensor_Qp K",
+        "mid": "M(2,Qp) tensor_Qp K",
+        "rhs": "M(2,K)",
+        "negative": "NOT_EQUAL_DIVISION_SPLIT_BEFORE_K"
+      }
+    ],
+    "W-SSC-106": [
+      {
+        "id": "W05-106-01",
+        "source": "§6.1 p.10",
+        "modality": "SOURCE_GENERAL_QUATERNION_CONIC_ASSOCIATION",
+        "parameter": "(a,b/F)",
+        "conic": "-a*x^2-b*y^2+a*b*z^2=0",
+        "variables": [
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      {
+        "id": "W05-106-02",
+        "source": "§6.1 p.10",
+        "modality": "SOURCE_POINT_EXISTENCE_CASES",
+        "positive": {
+          "Hilbert_sign": 1,
+          "F_points": "YES"
+        },
+        "negative": {
+          "Hilbert_sign": -1,
+          "F_points": "NO"
+        }
+      },
+      {
+        "id": "W05-106-03",
+        "source": "§6.1 p.10",
+        "modality": "SOURCE_FINITE_PRIME_CONIC_GALOIS_ACTION",
+        "equation": "-p*x^2-u*y^2+up*z^2=0",
+        "Qp_points": "NONE",
+        "K_quadratic_points": "EXIST",
+        "Galois": "Gal(K/Qp)=Z/2Z",
+        "Galois_fixed_points": "NONE",
+        "comparison": "ANALOGY_ONLY_TO_CP1_ANTIPODAL"
+      }
+    ],
+    "W-SSC-107": [
+      {
+        "id": "W05-107-03",
+        "source": "§6.1 p.10",
+        "modality": "SOURCE_BRAUER_EQUIVALENCE_AND_PRODUCT",
+        "equivalence": "A~B iff A tensor M_n(F) isomorphic B tensor M_m(F)",
+        "product": "[A][B]=[A tensor B]"
+      },
+      {
+        "id": "W05-107-04",
+        "source": "§6.1 p.11",
+        "modality": "SOURCE_CLIFFORD_COMPLEXIFICATION_CASES",
+        "lhs": "Cliff(r,s,R) tensor_R C",
+        "cases": [
+          {
+            "binder": "r+s=2n",
+            "rhs": "M(2^n,C)"
+          },
+          {
+            "binder": "r+s=2n+1",
+            "rhs": "M(2^n,C) directsum M(2^n,C)"
+          }
+        ]
+      }
+    ],
+    "W-SSC-108": [
+      {
+        "id": "W05-108-01",
+        "source": "§6.2 p.11",
+        "modality": "SOURCE_HEISENBERG_COMMUTATOR",
+        "lhs": "[Q,P]",
+        "rhs": "i*1",
+        "hbar": 1,
+        "position": "q in R",
+        "momentum": "p in R*",
+        "Schwartz": "S(R)"
+      },
+      {
+        "id": "W05-108-02",
+        "source": "§6.2 p.12",
+        "modality": "SOURCE_LOCAL_WEIL_SYMPLECTIC_CARRIER",
+        "symbol": "W_(a,b)",
+        "rhs": "(F directsum F*) tensor (a,b/F)",
+        "Brauer": "[(a,b/F)] in Z/2Z",
+        "local_relation": "TRUE_OR_PROJECTIVE_UP_TO_PLUSMINUS_ONE"
+      },
+      {
+        "id": "W05-108-03",
+        "source": "§6.2 p.12",
+        "modality": "SOURCE_HILBERT_RECIPROCITY",
+        "product": "prod_(finite_primes and infinity) (a,b)_p",
+        "rhs": 1,
+        "premise": "a,b invertible rationals"
+      },
+      {
+        "id": "W05-108-04",
+        "source": "§6.2 p.13",
+        "modality": "SOURCE_ADELIC_TRUE_DIAGONAL_REPRESENTATION",
+        "group": "Sp(W_(a,b),Q)",
+        "ambient": "ADELIC_SYMPLECTIC",
+        "representation": "TRUE",
+        "relation": "SOURCE_STATES_EQUIVALENT_HILBERT_RECIPROCITY",
+        "citation": "Weil[16]",
+        "guard": "LOCAL_PROJECTIVE_DISTINCT_FROM_ADELIC_TRUE_DIAGONAL"
+      }
+    ]
+  },
+  "obligation_append": {
+    "W-SSC-099": " The original ordered CP3 source map is rho_tw([z1,z2,z3,z4])=[-bar(z2),bar(z1),-bar(z4),bar(z3)]. W05 prints the HP1 affine quaternion chart q=(q2)^-1*q1 with inverse on the LEFT and maps CP3 to HP1 by pi([z1,z2,z3,z4])=[z1+z2j,z3+z4j], whose invariant CP1 fibers are not fixed individual projective points.",
+    "W-SSC-101": " The source holomorphic fibration pi:R4×CP1→CP1 projects to the second factor and uses each base point to select an orthogonal complex structure on R4. The Pauli-matrix x1sigma1+x2sigma2+x3sigma3 has a SOURCE +1 eigenspace line O(1), not a -1 eigenline; two copies and then 2d copies are separately source stated.",
+    "W-SSC-102": " W05 explicitly prints the hyperkähler family aI+bJ+cK with IJ=K and (a,b,c) on the unit sphere, then distinguishes invariance in one, two and three directions producing Bogomolny, Hitchin and Nahm/coadjoint-orbit cases respectively; these are cited source examples.",
+    "W-SSC-104": " W05 explicitly gives M=H^1(X,GL(n,C)) as equivalence classes of pi1(X)-representations, a SET not a vector space, with no claimed higher-degree non-abelian cohomology; the distinct source parameter values lambda=1 usual connections and lambda=0 Higgs bundles are conserved.",
+    "W-SSC-105": " W05's printed quaternion parameter laws ij=k, ji=-k, i²=a, j²=b require nonzero a,b in F. Hilbert symbol +1 means split M(2,F), while -1 means NOT split. The three quadratic extensions for p≠2 and equality of formerly different algebras only AFTER tensoring with K are separate source-scoped assertions.",
+    "W-SSC-106": " W05's parameter conic -a*x²-b*y²+ab*z²=0 has F-points on Hilbert-sign +1 but NOT on -1. The finite-p conic -p*x²-u*y²+up*z²=0 has NO Qp points and HAS quadratic-extension K points on which the Z/2Z Galois action has no fixed points; the twistor comparison is an ANALOGY only.",
+    "W-SSC-107": " W05 prints the Brauer equivalence A~B iff A⊗M_n(F) isomorphic B⊗M_m(F), the product [A][B]=[A⊗B], and an even/odd real Clifford complexification case: r+s=2n yields one M(2^n,C), r+s=2n+1 yields a DIRECT SUM of TWO copies. Preserve the branch indices, do not assert a qualified universal theorem.",
+    "W-SSC-108": " W05's source [Q,P]=i1 uses hbar=1 on Schwartz S(R). For a quaternionic V the Weil carrier W_(a,b)=(F⊕F*)⊗(a,b/F) and Brauer Z/2Z class control local true/projective cases; Hilbert reciprocity product over ALL finite primes AND infinity equals 1 and the true adelic Weil representation is restricted to the diagonal Sp(W_(a,b),Q)."
+  },
+  "negative": [
+    "W103 STRICT i>p and unusual F^2=V stay literal",
+    "W109 11 analogies, cell-internal ring equalities not cross-column equality",
+    "W107 H1 two classes source statement scoped/ambiguous, don't promote",
+    "W110 possible no deep link, citations opaque",
+    "All 17 existing items reviewed is not reverse enumeration proof of all source assertions.",
+    "Quaternions LEFT division order in HP1",
+    "W108 reciprocity includes infinity and representation diagonal subgroup only"
+  ],
+  "qualification": {
+    "G0_unfrozen": true,
+    "whole_16_page_assertion_set_exhaustive": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "provenance": {
+    "direction": "Joshua Oshiro",
+    "source_author": "Peter Woit",
+    "source_transcription": "agent-assisted",
+    "earliest_evidence": "2026-10-08 arxiv v2 source direct"
+  }
+}
