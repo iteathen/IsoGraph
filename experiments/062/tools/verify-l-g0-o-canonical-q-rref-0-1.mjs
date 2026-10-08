@@ -125,7 +125,8 @@ function verify(c=certificate,r=risk){
  const old=ledger.basis_multiplication_tables.find(x=>x.carrier==='O')?.entries;
  ck(j(old)===j(table(source_literal)),'G0 literal table not corrected to expected mathematical answer');
  ck(c.all_eight_variants_exact_rational?.length===8,'complete eight source and diagnostic variants');
- ck(c.counterfactual_repair?.not_authorized===true&&c.counterfactual_repair?.source_2026_08_journal_changed===false,'one-cell only diagnostic not source');
+ ck(c.counterfactual_repair?.not_authorized===true&&c.counterfactual_repair?.source_2026_08_journal_changed===false&&c.counterfactual_repair?.editorial_intent_or_formal_erratum_established===false,'one-cell only diagnostic not author erratum or source');
+ ck(c.dependencies_and_gates?.f4_L133_source_mathematics_qualified===false&&c.G1_authorized===false&&c.external_review_passed===false,'never promote canonical source Q calculation to f4, G1, external review');
  ck(r.source_gates?.G1_to_G7_authorized===false&&r.source_gates?.external_cold_review_passed===false,'external review not passed');
  if(errors.length)return errors;
  const t=table(c.independently_visually_transcribed_journal_O_table);
