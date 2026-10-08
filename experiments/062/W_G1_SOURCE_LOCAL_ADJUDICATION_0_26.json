@@ -1,0 +1,422 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.26",
+  "date": "2026-10-08",
+  "status": "W097_SOURCE_COMPLETE_G1_RECONSTRUCTION_COUNT_CORRECTED_DETERMINISTIC_REPLAY_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_5.json",
+    "git_blob_sha": "5df1ec2710aae476e0c1f99dd03851d2056881d7"
+  },
+  "source_semantic_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_6.json",
+    "git_blob_sha": "f9687fb27aefd4764422dc2aa0b8c25b20d0c8bf"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_24.json",
+    "git_blob_sha": "7750fcd91deff3b643f4a4901e74a554735214c7"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_31.json",
+    "git_blob_sha": "cee578c6aca2e6ba6667a3147c98b3d3cf71c910"
+  },
+  "dependency_defect_audit": {
+    "path": "experiments/062/W097_G1_DEPENDENCY_DEFECT_AUDIT_0_1.json",
+    "git_blob_sha": "0e670dcac20a35e3333552c15318590d0f58af7d"
+  },
+  "rules": [
+    "Only W-SSC-097 is replaced; the other 83 W items are byte-identical carry-forwards.",
+    "Every load-bearing map signature, formula, fixed-point definition, carrier-scoped square law, antipodal label, conic equation, field-of-definition statement, and point-existence/absence clause in the corrected W097 body receives an occurrence.",
+    "Ordinary-conjugation real points and conic-scoped real points are not silently identified.",
+    "The conic-scoped O08 predicate remains name-only and NEGATED.",
+    "O04 fixed-point absence does not depend on O06 involution alone.",
+    "No historical W closure packet, textbook geometry, or L evidence is used."
+  ],
+  "replacement_item": {
+    "census_id": "W-SSC-097",
+    "occurrences": [
+      {
+        "occurrence_id": "W-SSC-097-O09",
+        "source_span": "real structure on CP1 as an antiholomorphic map rho: CP1 -> CP1",
+        "relation_span": "as",
+        "argument_spans": [
+          "real structure on CP1",
+          "an antiholomorphic map rho: CP1 -> CP1"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Conserves the source definition of a real structure as a typed antiholomorphic self-map; antiholomorphic behavior remains unresolved."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O10",
+        "source_span": "rho: CP1 -> CP1",
+        "relation_span": "->",
+        "argument_spans": [
+          "CP1",
+          "CP1"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O09"
+        ],
+        "load_bearing_note": "Exposes the source-explicit self-map domain/codomain without importing any additional function theorem."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O11",
+        "source_span": "rho squared equal to 1",
+        "relation_span": "equal to",
+        "argument_spans": [
+          "rho squared",
+          "1"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O09"
+        ],
+        "load_bearing_note": "Conserves the source involution law for a real structure."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O12",
+        "source_span": "rho([z1,z2])=[bar(z1),bar(z2)]",
+        "relation_span": "=",
+        "argument_spans": [
+          "rho([z1,z2])",
+          "[bar(z1),bar(z2)]"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact ordinary-conjugation coordinate formula from the source body."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O13",
+        "source_span": "The ordinary real structure is complex conjugation rho([z1,z2])=[bar(z1),bar(z2)]",
+        "relation_span": "is",
+        "argument_spans": [
+          "The ordinary real structure",
+          "complex conjugation rho([z1,z2])=[bar(z1),bar(z2)]"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O12"
+        ],
+        "load_bearing_note": "Identifies the ordinary real structure with the explicitly stated conjugation formula."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O14",
+        "source_span": "points fixed by rho",
+        "relation_span": "fixed by",
+        "argument_spans": [
+          "points",
+          "rho"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O12"
+        ],
+        "load_bearing_note": "Exposes the source fixed-point relation used in the definition of ordinary real points."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O15",
+        "source_span": "its real points are exactly the points fixed by rho",
+        "relation_span": "are exactly",
+        "argument_spans": [
+          "its real points",
+          "the points fixed by rho"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O13",
+          "W-SSC-097-O14"
+        ],
+        "load_bearing_note": "Source-local definition of ordinary-real-point status through the fixed-point condition."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O16",
+        "source_span": "its real points are exactly the points fixed by rho, forming a circle in CP1",
+        "relation_span": "forming",
+        "argument_spans": [
+          "its real points",
+          "a circle in CP1"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O15"
+        ],
+        "load_bearing_note": "Conserves the source-stated real-point locus without importing circle geometry."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O17",
+        "source_span": "the real line in the affine z coordinate",
+        "relation_span": "in",
+        "argument_spans": [
+          "the real line",
+          "the affine z coordinate"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O16"
+        ],
+        "load_bearing_note": "Conserves the affine-coordinate presentation of the ordinary real-point locus."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O18",
+        "source_span": "rho_tw([z1,z2])=[-bar(z2),bar(z1)]",
+        "relation_span": "=",
+        "argument_spans": [
+          "rho_tw([z1,z2])",
+          "[-bar(z2),bar(z1)]"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact homogeneous-coordinate definition of the twistor real structure."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O19",
+        "source_span": "rho_tw(z)=-1/bar(z)",
+        "relation_span": "=",
+        "argument_spans": [
+          "rho_tw(z)",
+          "-1/bar(z)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact affine-coordinate formula for the twistor real structure."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O20",
+        "source_span": "rho_tw([z1,z2])=[-bar(z2),bar(z1)] (equivalently rho_tw(z)=-1/bar(z))",
+        "relation_span": "equivalently",
+        "argument_spans": [
+          "rho_tw([z1,z2])=[-bar(z2),bar(z1)]",
+          "rho_tw(z)=-1/bar(z)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O18",
+          "W-SSC-097-O19"
+        ],
+        "load_bearing_note": "Conserves the source equivalence of homogeneous and affine presentations."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O03",
+        "source_span": "W05 explicitly contrasts this ordinary real structure with the twistor antipodal real structure rho_tw",
+        "relation_span": "contrasts",
+        "argument_spans": [
+          "this ordinary real structure",
+          "the twistor antipodal real structure rho_tw"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O13"
+        ],
+        "load_bearing_note": "Preserves the source-explicit distinction between ordinary and twistor real structures."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O01",
+        "source_span": "on C2 coordinates rho_tw squared equals -1",
+        "relation_span": "equals",
+        "argument_spans": [
+          "rho_tw squared",
+          "-1",
+          "C2 coordinates"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O18"
+        ],
+        "load_bearing_note": "Vector-coordinate square-minus-one law, scoped separately from projective behavior."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O06",
+        "source_span": "on projective points rho_tw squared equals 1",
+        "relation_span": "equals",
+        "argument_spans": [
+          "rho_tw squared",
+          "1",
+          "projective points"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O18"
+        ],
+        "load_bearing_note": "Projective involution law, sourced from the explicit rho_tw definition."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O07",
+        "source_span": "on C2 coordinates rho_tw squared equals -1, while on projective points rho_tw squared equals 1",
+        "relation_span": "while",
+        "argument_spans": [
+          "on C2 coordinates rho_tw squared equals -1",
+          "on projective points rho_tw squared equals 1"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O01",
+          "W-SSC-097-O06"
+        ],
+        "load_bearing_note": "Preserves the source-scoped vector/projective square contrast."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O21",
+        "source_span": "on the sphere rho_tw is the antipodal map",
+        "relation_span": "is",
+        "argument_spans": [
+          "rho_tw",
+          "the antipodal map",
+          "the sphere"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O18",
+          "W-SSC-097-O19"
+        ],
+        "load_bearing_note": "Conserves the source antipodal characterization without treating the name as a lower definition."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O04",
+        "source_span": "rho_tw is the antipodal map with no projective fixed points",
+        "relation_span": "no projective fixed points",
+        "argument_spans": [
+          "rho_tw"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O18"
+        ],
+        "load_bearing_note": "Fixed-point absence is sourced as an independent property of the explicitly defined rho_tw map; it does not depend on the involution law alone."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O22",
+        "source_span": "x^2+y^2+z^2=0",
+        "relation_span": "=",
+        "argument_spans": [
+          "x^2+y^2+z^2",
+          "0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact source conic equation."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O02",
+        "source_span": "the same twistor P1 as the real projective conic x^2+y^2+z^2=0 in projective two-space",
+        "relation_span": "as",
+        "argument_spans": [
+          "the same twistor P1",
+          "the real projective conic x^2+y^2+z^2=0 in projective two-space"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O22"
+        ],
+        "load_bearing_note": "Conserves the source's alternate projective-conic presentation."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O23",
+        "source_span": "the real projective conic x^2+y^2+z^2=0 in projective two-space, defined over the real numbers",
+        "relation_span": "defined over",
+        "argument_spans": [
+          "the real projective conic x^2+y^2+z^2=0 in projective two-space",
+          "the real numbers"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O22"
+        ],
+        "load_bearing_note": "Conserves the source field-of-definition statement without importing algebraic-geometry semantics."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O24",
+        "source_span": "the real projective conic x^2+y^2+z^2=0 in projective two-space, defined over the real numbers, with complex points",
+        "relation_span": "with",
+        "argument_spans": [
+          "the real projective conic x^2+y^2+z^2=0 in projective two-space",
+          "complex points"
+        ],
+        "logical_force": "EXISTENCE",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O22",
+          "W-SSC-097-O23"
+        ],
+        "load_bearing_note": "Conserves the source assertion that the conic has complex points; point semantics remain unresolved."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O08",
+        "source_span": "no real points",
+        "relation_span": "real",
+        "argument_spans": [
+          "points"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "W-SSC-097-O02"
+        ],
+        "load_bearing_note": "Exposes the conic-scoped real-point predicate only under the source-explicit negation. It is distinct from the separately defined ordinary-conjugation real-point role and imports no equivalence between them."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O05",
+        "source_span": "the real projective conic x^2+y^2+z^2=0 in projective two-space, defined over the real numbers, with complex points but no real points",
+        "relation_span": "no real points",
+        "argument_spans": [
+          "the real projective conic x^2+y^2+z^2=0 in projective two-space",
+          "real points"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O02",
+          "W-SSC-097-O08"
+        ],
+        "load_bearing_note": "Conserves the source no-real-points clause while keeping conic membership and conic-scoped real-point semantics explicit rather than inferred."
+      }
+    ],
+    "extraction_status": "COMPLETE"
+  },
+  "counts": {
+    "frozen_W_bodies": 84,
+    "affected_bodies": 1,
+    "unchanged_bodies": 83,
+    "predecessor_occurrences": 446,
+    "successor_occurrences": 462,
+    "net_occurrence_change": 16,
+    "W097_occurrences": 24
+  },
+  "next_required_steps": [
+    "Run corrected-count exact-replay/source/dependency verifier.",
+    "Establish source-local zero-change fixed point only after this verifier passes.",
+    "Issue a new owner-bypass routing decision only for the passing 0.26 tuple."
+  ],
+  "predecessor_failed_adjudication": {
+    "path": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_25.json",
+    "git_blob_sha": "077e1535bf018982bae06a6ff264b996d02844c8"
+  },
+  "count_metadata_defect": {
+    "path": "experiments/062/W097_G1_COUNT_METADATA_DEFECT_0_1.json",
+    "git_blob_sha": "2b1417e99f129823f32fdafbd1a273b6623a5b43"
+  }
+}

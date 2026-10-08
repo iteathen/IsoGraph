@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.exp062-w097-g1-count-metadata-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_METADATA_VERIFIER_EXPECTATION_DEFECT_NO_SEMANTIC_CHANGE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "failed_run": {
+    "workflow_run_id": 37747798754,
+    "conclusion": "failure",
+    "artifact": "experiments/062/W_EXTRACTION_RECONCILED_0_25.json"
+  },
+  "finding": "The G1 0.25 semantic packet contains 24 W097 occurrences and 462 total W occurrences. Adjudication metadata and verifier expectations incorrectly recorded 23/461. Exact replay, source spans, arguments, dependency ordering, O04 dependency correction, O08 polarity/opacity, and pre-G5 leakage checks all passed.",
+  "classification": [
+    "COUNT_METADATA_DEFECT",
+    "VERIFIER_EXPECTATION_DEFECT"
+  ],
+  "semantic_content_changed": false,
+  "corrected_counts": {
+    "predecessor_occurrences": 446,
+    "predecessor_W097_occurrences": 8,
+    "successor_occurrences": 462,
+    "successor_W097_occurrences": 24,
+    "net_occurrence_change": 16
+  },
+  "next_lawful_action": "Publish successor adjudication/verifier with corrected counts while preserving the exact 0.25 semantic replacement item."
+}
