@@ -22,7 +22,7 @@ function check(next=cur){
  ck(r.source_packet?.path===f.source&&r.source_packet?.git_blob_sha===sha(f.source),'L126 exact source packet pin');
  ck(r.source_expression===source.source_exact_Eq4.printed_eight_member_equality&&r.free_binders===source.source_exact_Eq4.binders&&j(r.four_exact_M_members)===j(source.source_exact_Eq4.members),'full exact four M terms and eight printed source identities conserved');
  ck(j(r.ordinary_C)===j(source.finite_evidence.ordinary_C)&&j(r.ordinary_H)===j(source.finite_evidence.ordinary_H)&&j(r.ordinary_O)===j(source.finite_evidence.ordinary_O),'C H O indexed source observations exact');
- ck(r.CI?.run_id===37840813885&&r.CI?.adversarial_cases_rejected===23&&r.CI?.external_cold_review_passed===false,'L126 source trace/CI evidence');
+ ck(r.CI?.run_id===37840813885&&r.CI?.adversarial_rejected===23&&r.CI?.external_cold_review_passed===false,'L126 source trace/CI evidence');
  ck(r.Gamma_lowered_four_members_audited===false&&r.split_index_lowering_audited===false&&r.full_source_math_qualified===false&&r.G1_authorized===false,'unresolved Gamma/split index/Math burden');
  if(!n){errors.push('L-SSC-126 missing (fail closed)');return errors;}
  ck(n.body.includes(source.source_exact_Eq4.printed_eight_member_equality),'all eight printed source chain members explicitly present'); 
