@@ -108,6 +108,7 @@ function verify(pkt=D,source=SRC){
  ok(eq.upper?.division_algebra==='± tilde(e_c) * (e_d * e_e)'&&eq.lower?.division_algebra==='± e_c * (tilde(e_d) * tilde(e_f))','source right-first nonassociative grouping');
  ok(eq.source_reverse_index_assertion==='gamma_(d,c)=-gamma_(c,d) for c!=d'&&eq.composition?.includes('barGamma_c*Gamma_d for upper, Gamma_c*barGamma_d for lower'),'author assertion not proof by name');
  ok(pkt.version_evidence_NOT_FROZEN?.published?.includes('row e6 col e7 = -e2')&&pkt.version_evidence_NOT_FROZEN?.different_arxiv_revision?.includes('row e6 col e7 = +e2')&&pkt.version_evidence_NOT_FROZEN?.disposition?.includes('NOT_AN_ERRATUM'),'different revision not source edit');
+ if(failures.length)return failures; // fail-closed malformed fixture before costly source math
  const computed={},scans=[];try{for(const t of source.basis_multiplication_tables)scans.push(scan(t,t.carrier==='O'||t.carrier==='H'));}catch(e){failures.push('source matrix computation failed '+e.message);return failures;}
  for(const result of scans)computed[result.carrier]=result;
  ok(scans.reduce((v,x)=>v+x.cellChecks,0)===o.source_M_vs_direct_action_cells*2&&scans.every(x=>x.cellFailures===0),'7568 each-sign source-ordered chiral matrix reconstruction');
@@ -118,13 +119,14 @@ function verify(pkt=D,source=SRC){
  ok(j([O.span.first?.generator_1,O.span.first?.generator_2])===j(obs.first_outside_pair)&&j(O.span.first?.enlarged_ranks)===j([obs.augmented_rank,obs.augmented_rank]),'independent first Lie nonclosure witness');
  const M=inconsistentMatrixCounts(O),exp=o.ordinary_O_direct_M_vs_transpose_bivector_disagreement||{};
  ok(M.upper===1&&M.lower===6&&M.upperCells===exp.upper_cells&&M.lowerCells===exp.lower_cells&&j(M.upp)===j(exp.upper_generator_pairs)&&j(M.low)===j(exp.lower_generator_pairs),'transpose vs printed M Eq5 matrix conflict');
- ok(H.span?.ranks[0]===3&&H.span?.extra[0]===0&&H.span?.extra[1]===0&&O.span.primes.every((p,i)=>H.span.primes[i]===p),'H direct-M chiral positive control');
- ok(split.reverseU===0&&split.reverseV===0,'source split O reverse index positive control');
+ ok(H.span?.ranks[0]===o.control_H_upper?.upper_rank&&H.span?.extra[0]===o.control_H_upper?.commutators_outside_span&&H.span?.extra[1]===o.control_H_upper?.commutators_outside_span&&O.span.primes.every((p,i)=>H.span.primes[i]===p),'H direct-M chiral positive control');
+ ok(split.reverseU===o.control_O_split?.reverse_upper_failure_generator_pairs&&split.reverseV===o.control_O_split?.reverse_lower_failure_generator_pairs,'source split O reverse index positive control');
  const fix=copy(source.basis_multiplication_tables.find(t=>t.carrier==='O'));
  ok(fix.entries[6][7]==='-e2'&&fix.entries[7][6]==='-e2','original contradictory source literal kept');
  fix.entries[6][7]='e2';const hypothetical=scan(fix,true);
  ok(hypothetical.reverseU===0&&hypothetical.reverseV===0&&hypothetical.span.extra.every(v=>v===0),'mathematical one-cell repair candidate not source');
  ok(pkt.version_evidence_NOT_FROZEN?.source_disposition===undefined&&pkt.remaining?.G1_through_G7_authorized===false,'no later source substitution or downstream promotion');
+ ok(!j(pkt).includes('W-SSC-')&&pkt.source?.scope===undefined,'no forbidden W track source or scope change');
  return failures;
 }
 const baseline=verify(),errors=[...baseline],mutants=[
