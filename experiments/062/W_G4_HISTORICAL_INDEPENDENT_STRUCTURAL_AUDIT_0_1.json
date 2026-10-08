@@ -1,0 +1,67 @@
+{
+  "schema": "isograph.exp062-w-g4-historical-independent-structural-audit.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "HISTORICAL_G4_PINNED_GRAPH_STRUCTURAL_ISOMORPHISM_RECHECK_PASS_NOT_CURRENT_STAGE_QUALIFICATION",
+  "inputs": {
+    "g2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_3.json",
+      "git_blob_sha": "c9ee4f844ee1cb5a7b27378779694361c0d17451"
+    },
+    "g3": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_7.json",
+      "git_blob_sha": "62e1236d7aa4c7b2814606b1640e35e280b73919"
+    },
+    "g4": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "g7": {
+      "path": "experiments/062/W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1.json",
+      "git_blob_sha": "4fb7708649aa37807ab87baea9a31c8358ec9b42"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_40.json",
+      "git_blob_sha": "6820a1947d25e0c25a0362d102a72aa787276a65"
+    }
+  },
+  "review_scope": "Independent rooted graph isomorphism reconstruction over G2.0.3/G3.0.7/G7.0.1, NOT current W source or latest G2.0.4.",
+  "mechanics": [
+    "ordered argument arity/local repeated-span identity pattern",
+    "logical force/polarity",
+    "CORE/provisional/unresolved context",
+    "root marker",
+    "directed dependency edge positions/multiplicity",
+    "class coverage and duplicate class exclusion"
+  ],
+  "results": {
+    "historical_root_memberships": 430,
+    "classes": 370,
+    "multi_member_classes": 28,
+    "multi_member_memberships_checked": 88,
+    "independent_rooted_isomorphism_mismatches": 0,
+    "coarse_bucket_cross_class_pairs_checked": 148,
+    "duplicate_isomorphic_classes_found": 0,
+    "mutation_total": 6,
+    "mutations_rejected": 6,
+    "escaped_mutations": []
+  },
+  "positive_control": {
+    "class": "W-G4-Q0063",
+    "root": "W-SSC-036-O02",
+    "paired": "W-SSC-047-O02"
+  },
+  "consequences": {
+    "historical_G4_scoped_internal_check": "PASS",
+    "latest_G2_to_G3_lineage": "FAIL_446_VS_445",
+    "W097_G7_source_instantiation": "FAIL_SOURCE_MAP_RECONSTRUCTION",
+    "W_current_G4_qualified": false
+  },
+  "nonclaims": [
+    "No current G0 source fidelity qualification",
+    "No comparison to G2 0.4 or SSC 0.14",
+    "Structural isomorphism is not semantic identity",
+    "No fresh W G4 authority or cross-track semantics"
+  ]
+}
