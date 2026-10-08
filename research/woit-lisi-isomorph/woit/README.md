@@ -60,6 +60,12 @@ All other **147** source census records stay identical. `experiments/062/W_G0_W0
 
 The hostile audit verifier rejected **20/20** deliberately mutated stage/source/role/lineage conditions in deterministic internal V8; its new Node CI workflow must still be observed at the committed SHA. W G0 remains OPEN/UNFROZEN. G1 through G7, recursive IA, DP, W/L comparison, and generic semantic promotion are unauthorized until lawful replay. The owner bypass covers unavailable third-party review only.
 
+### G4 historical independent recheck (2026-10-08)
+
+The W-only independent hostile audit `experiments/062/W_G4_HISTORICAL_INDEPENDENT_STRUCTURAL_AUDIT_0_1.json` and verifier `experiments/062/tools/verify-w-g4-historical-independent-0-1.mjs` passed in [dedicated Node CI run 37835210814](https://github.com/iteathen/IsoGraph/actions/runs/37835210814), on exact [commit eb318170](https://github.com/iteathen/IsoGraph/commit/eb31817000ee63a21f59cd60cd7989a00a63e0d8). For its **historical pinned** G2 0.3 / G3 0.7 / G7 0.1 tuple, the independent graph algorithm reconstructed all **88 members across 28 multi-member rooted-isomorphism classes**, examined **148** coarse-collision cross-class pairs without finding duplicates, and rejected **6/6** directional, positional, polarity, arity and vertex mutation controls. Thus the *historical* G4 quotient is internally mechanically consistent for its exact stale graph; it does **not** imply semantic identity, certify current G2 0.4's 446th occurrence, validate the disputed W097 G7 source closure, or reopen current G4.
+
+The reviewed G5H/G6/G7 hypothesis ladder retains useful negative evidence. Generic provisional schema **221100** includes total/single-valued fixed-point-free involution laws but its original W G7 source-instance record rejected missing graph-level totality/single-valuedness. Generic **221101** deliberately admits partial, empty and multivalued relations; that generic qualification remains scope-valid, while the later W G7 closure applying it to W097 fails exact source-map reconstruction. The W variation/stationarity G5H hypotheses and G7 source instances remain unsuccessful or incomplete rather than qualifying source semantics. The original post-G7 G5 count of zero new deterministic candidates is a result for its old tuple only, not proof of irreducibility.
+
 ## Full-treatment gates
 
 | Gate | State |
@@ -133,13 +139,15 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `W02_DISTINGUISHED_VECTOR_SPINOR_IDENTIFICATION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact conjugate-right spinor carrier plus distinguished-vector-selected S_L→conjugate(S_R) isomorphism; closes W-SSC-138 with generic conjugate-semilinear support.
 
-## Frozen source-census checkpoint
+## Historical frozen source-census checkpoint (superseded by SSC 0.14 G0)
+
+**Historical evidence only:** SSC 0.2 was frozen for its earlier tuple; it is not the current W source authority. Current SSC 0.14 is unfrozen, controlled by W stage gate 0.40. All old closure, occurrence and G-stage claims in the following legacy checkpoints are non-current pending lawful re-audit and reconstruction.
 
 The W source corpus is independently frozen at corrected SSC revision 0.2 for this treatment revision. Cross-author semantics remain unavailable. Any successor source admission invalidates affected downstream compilation/closure under Core 0.21.
 
 The next active task is authoritative native W compilation and primitive/schema closure. Existing research-local source instances are reusable components only after their source ownership and reconstruction paths are routed from the frozen census.
 
-## Current graph-first primitive-demand checkpoint — Experiment 062
+## Historical graph-first primitive-demand checkpoint — Experiment 062 (superseded)
 
 The prior regex/category primitive-demand path was regrounded under `research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md`. The current W-only state is:
 
@@ -160,7 +168,7 @@ Durable boundary artifacts:
 
 The W track may lawfully reopen from this boundary only if: (1) new frozen W source evidence supplies exact lower semantics; (2) a separately qualified generic module supplies exact source-faithful semantics; or (3) a later lawfully authorized cross-track graph-first candidate is independently qualified and then consumed by W under G7. Do **not** start recursive IA or use NEI/DTS/DP to bypass this boundary.
 
-## Current primitive-closure checkpoint
+## Historical primitive-closure checkpoint (superseded)
 
 - `CORE021_CLOSURE_LEDGER_0_19.json`: 21/151 frozen census obligations closed (12 schema + 9 primitive provenance), 130 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
 - Closed so far include W-SSC-001, 010, 018, 020, 021, 023–027, 046, 058, 078, 098, 111, 121, 128, 131, 138, 144, 145. Exact current dispositions are authoritative in CORE021_CLOSURE_LEDGER_0_19.json.
