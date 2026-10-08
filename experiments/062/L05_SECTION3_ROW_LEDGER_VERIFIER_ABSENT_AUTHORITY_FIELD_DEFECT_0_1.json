@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.exp062-l05-ledger0.2-verifier-absent-authority-flag-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_HISTORICAL_RESEARCH_LEDGER_VERIFIER_EXPECTED_EXPLICIT_FALSE_BUT_SOURCE_ARTIFACT_OMITS_FIELD",
+  "authority": false,
+  "authority_effect": "NONE_INTERNAL_FIXTURE_DEFECT",
+  "failed_run": {
+    "run_id": 37808742208,
+    "conclusion": "failure",
+    "error": "hypothesis/ledger must not claim qualified semantics"
+  },
+  "artifact": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION3_FORMULA_LEDGER_0_2.json",
+    "git_blob_sha": "8e51ac840eccbd068a6e53c3f9f9e8915ef7d65a",
+    "authority_field_present": false,
+    "status": "SOURCE_EQ7_EQ8_ROW_ORDER_REPAIRED_EQ9_INDEXED_PROVENANCE_UNQUALIFIED"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l05-section3-ledger-source-rows-0-2.mjs",
+    "git_blob_sha": "f8bafc22be78a31add1a50646557787fc720b01e"
+  },
+  "contract": "No affirmative authority flag and explicit UNQUALIFIED research status are enough for a non-authoritative ledger, but a candidate without explicit authority=false cannot be treated as a positive qualification or current G0 freeze.",
+  "repair": "Fail if authority===true, status is not explicitly _UNQUALIFIED, or any promotion is claimed; do not rewrite current non-authoritative historical ledger bytes merely to satisfy a verifier fixture.",
+  "stage_impact": "G0 correction research ledger only. No source-census or G1 promotion.",
+  "next_lawful_action": "Repair exact verifier; re-run full CI on same source ledger, preserve all mutation controls."
+}
