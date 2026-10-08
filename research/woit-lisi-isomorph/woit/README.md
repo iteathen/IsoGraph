@@ -17,7 +17,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_38.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_13.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_39.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_14.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -43,13 +43,19 @@ The current `experiments/062/W_G0_W02_SOURCE_DEMAND_PROJECTION_0_3.json` conserv
 
 Version identity caveat: the arXiv v2 PDF displays a December 2023 date, but today's experimental arXiv v2 HTML displays an August 2026 dateline. The v2 PDF is the governing source; the date inconsistency is not used to alter its mathematical claims. The old W109 Node workflow [succeeded at its committed revision](https://github.com/iteathen/IsoGraph/actions/runs/37824130828). The W02 workflow and complete nine-source cold audit remain outstanding at artifact creation. G0 remains **open/unfrozen**; G1–G7 and cross-track synthesis remain blocked.
 
+### W02 §IV.2–§IV.3 late expression audit (2026-10-08)
+
+Another source-conservation defect was identified on direct inspection of W02's frozen [arXiv 2311.00608v2](https://arxiv.org/pdf/2311.00608v2) printed pp.6–9. `SOURCE_SEMANTIC_CENSUS_0_14.json` extends exactly four W items: **W118/W146** now conserve the exact `1/(4g²)|F_A|² = 1/(4g²)∫Tr(F_A∧*F(A))` within-original-action equality and separate `1/(2g²)∫Tr(F_A^+∧*F_A^+)` source-described *equivalent action*, conditional on topological invariance of `∫Tr(F_A∧F_A)`. Those two displayed ACTIONS are **not printed as exactly equal**; their repeated source incidence under W118 and W146 is marked as the same evidence, not independent corroboration. **W144** retains Minkowski Hodge-star `*²=-1` eigenvalues `±i` and explicit **absence** of real self-/anti-self-dual sectors. **W149** retains the action's ordered raised/lowered dotted-index roles, curvature's dual symmetric-spinor carrier, the two variation-argument roles, and Woit's explicit citation of reference [15] as source of the complex chiral gravitational action.
+
+All other **147** source census records stay identical. `experiments/062/W_G0_W02_LATE_SOURCE_DEMAND_PROJECTION_0_4.json` updates four of the pre-existing 86 W demands and preserves 82. The defect is `experiments/062/W02_YM_HODGE_GR_SOURCE_CONSERVATION_DEFECT_0_1.json`; local V8 replay rejected **34/34** mutations, but requires Node/CI verification on committed revision. Prior W02 six-item Node [CI passed](https://github.com/iteathen/IsoGraph/actions/runs/37825203641). W131 historical demand-membership and all-nine-source cold audit remain outstanding. Stage gate: `experiments/062/W_CURRENT_STAGE_GATE_0_39.json` G0 OPEN and NOT FROZEN; G1–G7 blocked.
+
 ## Full-treatment gates
 
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | HISTORICAL 9/9 traversal; complete fresh direct source-census fidelity review is outstanding |
-| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.13 is not frozen pending independent G0 conservation |
+| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.14 is not frozen pending independent G0 conservation |
 | primitive math support complete | BLOCKED at G0 source fidelity; historical 352 G5 quotient classes refer to an incomplete older source tuple |
 | native .isg bundle | HISTORICAL — earlier 0.2 compilation predates new W05 source-level obligations |
 | graph-derived closure ledger | IN PROGRESS — `CORE021_CLOSURE_LEDGER_0_19.json` remains 21/151; Experiment 062 separately regrounds the 84-body unresolved demand path but does not close it |
