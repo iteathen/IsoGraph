@@ -56,12 +56,14 @@ function verify(d=D){
  ck(d.capture?.previous_manifest_path===oldPath&&d.capture?.previous_manifest_git_blob_sha===gitSha(oldPath),'exact pinned prior HEAD manifest');
  ck(d.capture?.source_census_path===srcPath&&d.capture?.source_census_git_blob_sha===gitSha(srcPath)&&d.capture?.gate_path===gatePath,'exact 0.16 source/0.17 gate');
  ck(d.capture?.previous_head===old.captured_HEAD&&d.count?.previous===old.record_count&&d.count?.previous===1191,'old 1191 immutable history');
- ck(d.capture?.head==='35f47c2c967bbe1c11b16275246fb261237d145c'&&d.capture?.previous_workflow_id===37846189663,'historical HEAD exact, not current GH commit');
- ck(d.count?.current===actual.size&&d.count?.current===1204&&d.count?.added===newPaths.length&&d.count?.changed===changed.length&&d.count?.removed===disappeared.length&&d.count?.unchanged===actual.size-newPaths.length-changed.length,'every current scoped file accounted exactly');
+ ck(d.capture?.head==='8f2a70a12b480389775c81622e8f86c7a3ee4ff5'&&d.capture?.previous_workflow_id===37846189663,'historical HEAD exact, not current GH commit');
+ ck(d.count?.current===actual.size&&d.count?.current===1205&&d.count?.added===newPaths.length&&d.count?.changed===changed.length&&d.count?.removed===disappeared.length&&d.count?.unchanged===actual.size-newPaths.length-changed.length,'every current scoped file accounted exactly');
  ck(disappeared.length===0,'no files disappeared silently');
- ck(j(d.exact_added_files)===j(newPaths)&&j(d.exact_changed_files)===j(changed)&&j(d.exact_removed_files)===j(disappeared),'exact literal path/blob/size prior-to-current delta');
+ const canonical=arr=>(arr||[]).slice().sort((a,b)=>a.path.localeCompare(b.path));
+ ck(j(canonical(d.exact_added_files))===j(canonical(newPaths))&&j(canonical(d.exact_changed_files))===j(canonical(changed))&&j(d.exact_removed_files)===j(disappeared),'exact per-path SHA and size delta, independent of presentation grouping');
  ck(j(d.inventory_rules?.excluded_future_files)===j([deltaPath,ownVerifier,ownWorkflow]),'only future self-referential files excluded');
  ck(d.inventory_rules?.selectors_literal_version==='MATCH_ORIGINAL_V0_1'&&d.inventory_rules?.old_manifest_is_snapshot===true,'old scoped source not reinterpreted');
+ ck(d.candidate_replay_revision?.failed_run?.id===37847970197&&d.candidate_replay_revision?.failed_run?.conclusion==='failure'&&d.candidate_replay_revision?.failed_run?.mutations_evaluated===0&&d.candidate_replay_revision?.defect?.path==='experiments/062/L_G0_COVERAGE_DELTA_0_2_PATH_ORDER_VERIFIER_DEFECT_0_1.json'&&d.candidate_replay_revision?.defect?.git_blob_sha===gitSha('experiments/062/L_G0_COVERAGE_DELTA_0_2_PATH_ORDER_VERIFIER_DEFECT_0_1.json'),'failed baseline lineage cannot become PASS');
  for(const group of old.directories){
   const x=d.group_summary?.[group.label];
   ck(x?.count===groups[group.label].length&&x?.original===group.selected.length,'all current files in '+group.label);
@@ -105,7 +107,9 @@ const mutants=[
  ['invent removed path',x=>{x.exact_removed_files.push('research/woit-lisi-isomorph/lisi/README.md')}],
  ['misstate excluded paths',x=>{x.inventory_rules.excluded_future_files=[]}],
  ['change CI run',x=>{x.evidence.stage017_CI.id=0}],
- ['smuggle cross-source',x=>{x.open_source_semantics[0]+=' W-SSC-103'}]
+ ['smuggle cross-source',x=>{x.open_source_semantics[0]+=' W-SSC-103'}],
+ ['erase failed verifier baseline',x=>{delete x.candidate_replay_revision.failed_run}],
+ ['erase newly added defect from inventory',x=>{x.exact_added_files=x.exact_added_files.filter(y=>!y.path.includes('PATH_ORDER_VERIFIER_DEFECT'))}]
 ];
 let rejected=0;
 if(!baseline.length)for(const [label,fn]of mutants){
