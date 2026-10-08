@@ -65,7 +65,7 @@ function scan(t,full=true){
  let span=null;
  if(full){
   const flat=U.map(q=>q.flat()),primes=[1009,10007];
-  const ranks=primes.map(p=>rankMod(flat,p)),extra=[0,0],first=null;
+  const ranks=primes.map(p=>rankMod(flat,p)),extra=[0,0];let first=null;
   for(let i=0;i<U.length;i++)for(let k=i+1;k<U.length;k++){
    const bracket=plus(matrixMul(U[i],U[k]),minus(matrixMul(U[k],U[i]))).flat();
    const enlarged=primes.map(p=>rankMod(flat.concat([bracket]),p));
