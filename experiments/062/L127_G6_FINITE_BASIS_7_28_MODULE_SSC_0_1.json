@@ -1,0 +1,95 @@
+{
+  "schema": "isograph.exp062-l127-finite-basis-7-28-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "FINITE_BASIS_7_28_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L127_G5H_FINITE_BASIS_7_28_0_1.json",
+    "git_blob_sha": "4315768f567dd28815e541d4bcf13b710d14df5f"
+  },
+  "scope": {
+    "obligation_count": 10,
+    "selected_relation_ids": [
+      225000,
+      225001
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "FB-SSC-001",
+      "kind": "VECTOR_PARENT_7",
+      "body": "225000 requires exact vector support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-002",
+      "kind": "BASIS_MEMBERS_7",
+      "body": "All seven declared basis vectors belong to V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-003",
+      "kind": "INDEPENDENCE_7",
+      "body": "Only zero coefficients yield the zero vector.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-004",
+      "kind": "SPAN_7",
+      "body": "Every admitted vector has a seven-coefficient representation.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-005",
+      "kind": "VECTOR_PARENT_28",
+      "body": "225001 requires exact vector support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-006",
+      "kind": "BASIS_MEMBERS_28",
+      "body": "All twenty-eight declared basis vectors belong to V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-007",
+      "kind": "INDEPENDENCE_28",
+      "body": "Only zero coefficients yield the zero vector.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-008",
+      "kind": "SPAN_28",
+      "body": "Every admitted vector has a twenty-eight-coefficient representation.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-009",
+      "kind": "EXACT_ARITIES",
+      "body": "The schemas are exact 7- and 28-element cases, not arbitrary-dimension claims.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "FB-SSC-010",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No metric, operator, Lie, named-so8, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "standard/permuted F3^7 bases",
+      "standard/permuted F3^28 bases"
+    ],
+    "adversarial": [
+      "duplicate basis vector",
+      "zero final basis vector",
+      "rank-deficient tuple"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
