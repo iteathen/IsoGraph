@@ -101,20 +101,15 @@ W primitive closure is therefore **not complete**. Recursive W IA remains unauth
 
 **This subsection records W only. No L semantics or L provisional authority were used to reach it.**
 
-### L track — concurrent Method-0.3 continuation
+### L track — current correctness gate: G0 source census (2026-10-08)
 
-The earlier L-local G5 fixed point remains historical evidence for its original deterministic pass, but L has since been **targetedly reopened by a separate concurrent agent under Method 0.3**. This W session does not consume that work.
+The former L G5 fixed point and the historical L125–L133 targeted repairs are evidence only for their pinned, older source-census scope. **Current L work is halted at G0**, governed by `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`.
 
-Current preserved L evidence shows:
+The corrected L127 SI namespace/G7 0.2 remains preserved locally: SI `225000` retains trilinear scalar extension, dimension-seven uses `225010`, and repaired L127 source referents use `246xxx`. The later source-fidelity audit uncovered omissions in L05 §3 across L-SSC-129–132. New `lisi/SOURCE_SEMANTIC_CENSUS_0_5.json` retains all 191 source-census identities and 187 unchanged items, extending four items with 44 source-expression rows. The revision is **not frozen** or source-complete for L01–L06.
 
-- a source-local dependency cone around L125–L130 was reopened;
-- campaign-local hypothesis-qualified field/vector, linear-basis, and triple-role support were used in targeted G7 replay;
-- `L_G7_DEPENDENCY_CONE_REPLAY_0_2.json` records **8 reopened occurrences closed / 20 still unexpanded**, including targeted closure of L128;
-- the next lower residual family was identified as bilinear product / composition-algebra / anti-involution support;
-- `L_G5H_COMPOSITION_ALGEBRA_SUPPORT_0_1.json` is a hypothesis candidate and `L_G6_COMPOSITION_ALGEBRA_MODULE_IA_FIXED_POINT_0_1.json` has reached its **module-local IA fixed point**;
-- deterministic G6 qualification for that composition-algebra candidate was not yet present at the last live sync used for this dossier update.
+`experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json` and `L_G0_L05_EXPRESSION_CONSERVATION_LOCAL_REPLAY_0_1.json` preserve the exact source modality, roles, index order and negative evidence. The v0.5 verifier failed to reject a removed duality denominator; its defect is preserved, and verifier v0.6 rejected 16/16 mutations in an internal V8 replay of live GitHub bytes. **No dedicated Node/GitHub Actions or external semantic verification passed for this new candidate.** The owner bypass waives external calls only.
 
-This is an **in-progress L continuation**, not authority available to W and not authorization for cross-track comparison.
+L129/L130/L131 must replay from a source-complete G0 before L132, then L133, can resume. Global primitive/schema closure, Recursive IA, W/L comparison, synthesis and Discovery remain unauthorized. This subsection changes L status only; it provides no W semantics.
 
 ### G5 fixed points do not prohibit hypothesis-driven discovery
 
