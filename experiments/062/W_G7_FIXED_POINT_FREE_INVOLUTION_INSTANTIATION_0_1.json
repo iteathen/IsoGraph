@@ -1,0 +1,97 @@
+{
+  "schema": "isograph.exp062-w-g7-fixed-point-free-involution-instantiation.v0.1",
+  "date": "2026-10-07",
+  "status": "SOURCE_INSTANCE_INSUFFICIENT_FOR_TOTAL_SINGLE_VALUED_SELF_MAP_INTERFACE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "candidate": {
+    "id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+    "primitive_id": 221100,
+    "qualification": {
+      "path": "experiments/064/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5acf30d72a80c4b6edcb8f9b192d8b87526687b7"
+    }
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_17.json",
+    "git_blob_sha": "722fabac3420dbe476ca6f036105c8a90d47ed5e"
+  },
+  "source_input": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    }
+  },
+  "scope": {
+    "census_id": "W-SSC-097",
+    "target_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "other_W_occurrences_consumed": [],
+    "L_evidence_used": false
+  },
+  "interface_obligations": [
+    {
+      "id": "P_CARRIER",
+      "required": "represented carrier for the source projective-point scope",
+      "source_support": "SUPPORTED_BY_W_SSC_097_O06_SCOPE_PHRASE",
+      "satisfied": true
+    },
+    {
+      "id": "F_SELF_MAP_TOTALITY",
+      "required": "for every represented projective point, rho_tw has a represented output in the same carrier",
+      "source_support": "NOT_EXPLICITLY_CONSERVED_AS_TOTALITY_OR_EXISTENCE_OCCURRENCE",
+      "satisfied": false
+    },
+    {
+      "id": "F_SINGLE_VALUEDNESS",
+      "required": "rho_tw has exactly one represented output for each represented projective point",
+      "source_support": "NOT_EXPLICITLY_CONSERVED; WOULD_REQUIRE_FUNCTIONAL_INTERPRETATION_OF_SOURCE_NAME/APPLICATION",
+      "satisfied": false
+    },
+    {
+      "id": "INVOLUTION",
+      "required": "double application returns the original represented point",
+      "source_support": "W-SSC-097-O06",
+      "satisfied": true
+    },
+    {
+      "id": "FIXED_POINT_FREE",
+      "required": "no represented point is mapped to itself",
+      "source_support": "W-SSC-097-O04",
+      "satisfied": true
+    }
+  ],
+  "ruling": {
+    "candidate_qualification_preserved": true,
+    "candidate_rejected_glally": false,
+    "W_source_instance_satisfies_candidate": false,
+    "closed_occurrences": [],
+    "remaining_unexpanded": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "reason": "The corrected source explicitly supplies the involution endpoint law and fixed-point absence, but does not separately establish totality and single-valuedness of the underlying self-map. Importing those function semantics from the familiar phrase 'real structure' or from historical closure packets would violate source-local reconstruction."
+  },
+  "failure_classification": {
+    "kind": "OVER_STRONG_INSTANCE_INTERFACE_RELATIVE_TO_CURRENT_SOURCE_GRAPH",
+    "missing": [
+      "totality",
+      "single-valuedness"
+    ],
+    "not_missing": [
+      "carrier scope",
+      "two-step return law",
+      "fixed-point-free law"
+    ],
+    "next_lower_hypothesis": "RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE"
+  },
+  "next_lawful_action": "Generate a weaker source-neutral relation-level hypothesis over represented carrier P and relation R using only two-step return and no-self-loop behavior. Do not assume totality or single-valuedness unless a later source-local step supplies them."
+}
