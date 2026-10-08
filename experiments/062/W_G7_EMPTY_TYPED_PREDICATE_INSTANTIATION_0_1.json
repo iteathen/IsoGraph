@@ -1,0 +1,77 @@
+{
+  "schema": "isograph.exp062-w-g7-empty-typed-predicate-instantiation.v0.1",
+  "date": "2026-10-08",
+  "status": "SOURCE_INSTANCE_REQUIRES_G1_REAL_POINT_PREDICATE_EXPOSURE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "candidate": {
+    "id": "EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE_0_1",
+    "primitive_id": 221103,
+    "qualification": {
+      "path": "experiments/067/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "0563a816a0f5caf1ea5fe7a1c75af78029903e56"
+    }
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_26.json",
+    "git_blob_sha": "7337ec043069ffd0e723c1eed9ba70753a4d11eb"
+  },
+  "source_input": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    }
+  },
+  "scope": {
+    "census_id": "W-SSC-097",
+    "target_occurrence": "W-SSC-097-O05",
+    "L_evidence_used": false
+  },
+  "interface_obligations": [
+    {
+      "id": "U_SCOPED_POINT_DOMAIN",
+      "required": "represented carrier U for the point domain scoped by the named conic phrase",
+      "source_support": "The O05 phrase scopes 'points' to the named real projective conic.",
+      "satisfied": true
+    },
+    {
+      "id": "B_UNARY_PREDICATE_ROLE",
+      "required": "a separately conserved unary predicate B corresponding to the source adjective/classification 'real' on points",
+      "source_support": "The text contains the exact span 'real points', but W G1 0.22 records it only as an argument of O05; no unary semantic occurrence conserves the 'real' predicate role.",
+      "satisfied": false
+    },
+    {
+      "id": "EMPTY_B_ON_U",
+      "required": "no represented U-element satisfies B",
+      "source_support": "W-SSC-097-O05 states 'no real points', conditional on the B role being represented.",
+      "satisfied": false
+    }
+  ],
+  "ruling": {
+    "candidate_qualification_preserved": true,
+    "W_source_instance_satisfies_candidate": false,
+    "closed_occurrences": [],
+    "remaining_unexpanded": [
+      "W-SSC-097-O05"
+    ],
+    "reason": "The source phrase visibly contains the lower predicate role needed by schema 221103, but the current G1 graph failed to conserve that role separately. Binding a unary predicate directly from an argument slot would bypass G1 semantic occurrence conservation."
+  },
+  "failure_classification": {
+    "kind": "SOURCE_GRANULARITY_BOUNDARY_LOWER_PREDICATE_ROLE_HIDDEN_IN_ARGUMENT_SLOT",
+    "missing": [
+      "separately conserved unary REAL predicate occurrence over points"
+    ],
+    "not_missing": [
+      "scoped point domain",
+      "source absence clause"
+    ],
+    "required_reopen": "W_G1_TARGETED_REOPEN_W_SSC_097_REAL_POINT_PREDICATE"
+  },
+  "next_lawful_action": "Reopen only W-SSC-097 G1 and add an exact source-span occurrence for the unary 'real' classification in 'real points'. Keep its internal realness semantics unresolved. Replay downstream W stages before attempting schema 221103 consumption again."
+}
