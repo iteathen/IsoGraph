@@ -1,7 +1,7 @@
 # Woit full IsoGraph treatment
 
 **Track:** W
-**Current status:** ACTIVE — graph-first primitive-demand G5 boundary; primitive closure incomplete
+**Current status:** ACTIVE — correctness-first G0 source-census reopening; historical G5 boundary does not qualify current source tuple
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
 **Cross-author semantics available:** NO
 
@@ -15,15 +15,27 @@ Current provisional formulations are W-F1 Euclidean-first twistor unification, W
 
 See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FORMULATION_FAMILY_GRAPH_0_1.json.
 
+## Current G0 source-fidelity and qualification boundary (2026-10-08)
+
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_36.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_11.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+
+W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
+
+A direct inspection of W05 §5.2 (printed p.7 in the author's PDF) found an additional W103 source-transcription error: the source **prints `F^p=directsum_(i>p) H^q(M,Omega^i)` with STRICT `i>p`**, while the preceding SSC0.10 said “at least p.” The source separately prints `H^(p,q)(M)=F^p intersect conjugate(F^q)`; this was absent from W103. Correction `SOURCE_SEMANTIC_CENSUS_0_11.json` retains 150/151 source items byte-identical, and `experiments/062/W_G0_W103_SOURCE_DEMAND_PROJECTION_0_1.json` regenerates only the W portion of 86 unresolved demand items without rewriting any L content. The historic source's unusual `F^2=V` ending, nonholomorphic-decomposition contrast and mixed-Hodge exclusion are preserved, **not silently corrected**. Exact arXiv v2 to author-PDF byte equivalence remains unconfirmed.
+
+The initial fail-closed verifier crashed on a missing source-demand row; the failure is preserved in `experiments/062/W05_W103_VERIFIER_MISSING_MEMBER_EXCEPTION_DEFECT_0_1.json`. The successor verifier `verify-w05-w103-strict-hodge-source-0-2.mjs` passed a local deterministic V8 replay against live GitHub file contents, rejecting 17/17 source, binder, conjunctive and dependency mutations. This is **not** an independent Node/GitHub Actions or third-party semantic verification. Owner bypass waives external review calls only; all source, module-local IA, deterministic and reconstruction gates remain mandatory.
+
+The next lawful step is a complete source-conservation G0 audit across all frozen W sources; only after a verified and frozen successor can W G1 and the dependent G-chain replay. Cross-track comparison, synthesis and Discovery remain forbidden.
+
 ## Full-treatment gates
 
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
-| source traversal complete | PASS — 9/9 frozen source units |
-| SSC frozen complete | PASS — corrected 151 obligations, SOURCE_SEMANTIC_CENSUS_0_2.json |
-| primitive math support complete | BLOCKED — Experiment 062 W-local G5 reached a current-authority boundary: 352 unresolved quotient classes, 0 lawful reusable candidates |
-| native .isg bundle | PASS — authoritative routing compilation 0.2; semantic closure in progress |
+| source traversal complete | HISTORICAL 9/9 traversal; complete fresh direct source-census fidelity review is outstanding |
+| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.11 is not frozen pending independent G0 conservation |
+| primitive math support complete | BLOCKED at G0 source fidelity; historical 352 G5 quotient classes refer to an incomplete older source tuple |
+| native .isg bundle | HISTORICAL — earlier 0.2 compilation predates new W05 source-level obligations |
 | graph-derived closure ledger | IN PROGRESS — `CORE021_CLOSURE_LEDGER_0_19.json` remains 21/151; Experiment 062 separately regrounds the 84-body unresolved demand path but does not close it |
 | recursive IA fixed point | BLOCKED — primitive/schema closure is still incomplete; W G5 explicitly leaves IA unauthorized |
 | NEI pass | BLOCKED — primitive closure / IA not complete |
