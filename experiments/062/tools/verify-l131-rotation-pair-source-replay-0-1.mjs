@@ -3,7 +3,7 @@ import crypto from 'node:crypto';
 
 const P='experiments/062/';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
-const sha=p=>{const b=fs.readFileSync(p);return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\\0'),b])).digest('hex')};
+const sha=p=>{const b=fs.readFileSync(p);return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex')};
 const oldS=read(P+'L131_G1_SOURCE_INCIDENCE_0_2.json');
 const oldG=read(P+'L131_G2_NEUTRAL_SUBGRAPH_0_2.json');
 const oldQ=read(P+'L131_G3_CORE_DEFINABILITY_0_2.json');
@@ -31,7 +31,6 @@ function verify(s,g,q){
   check(r11?.depends_on?.filter(x=>x==='L-SSC-131-R13').length===1,'missing exact R11-R13 link');
   check(r12?.occurrence_id==='L-SSC-131-R12','R12 identity lost');
   check(r13?.occurrence_id==='L-SSC-131-R13','R13 identity lost');
-  check(j(r13?.exact_source_expression?.assertions)===[expected].map(j).join('') .replace(/^/,'[').replace(/$/ ,']'),'R13 exact typed source operator order');
   // A separate literal comparison cannot derive the source formula from the same artifact.
   check(j(r13?.exact_source_expression?.assertions)===j([expected]),'R13 source expression differs from frozen independent fixture');
   check(r13?.logical_force==='ASSERTED_SOURCE_OPERATOR_EQUALITY','R13 source equality polarity');
