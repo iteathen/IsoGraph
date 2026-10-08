@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const parent='experiments/062/W_EXTRACTION_RECONCILED_0_29.json';
+const adjudication='experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_30.json';
+const output='experiments/062/W_EXTRACTION_RECONCILED_0_30.json';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const p=read(parent),a=read(adjudication),result=JSON.parse(JSON.stringify(p));
+const i=result.items.findIndex(x=>x.census_id==='W-SSC-097');
+if(i<0||a.replacement_item?.census_id!=='W-SSC-097')throw new Error('Invalid W097 replacement');
+result.items[i]=a.replacement_item;
+fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({source:parent,adjudication,output,occurrences:result.items.reduce((n,x)=>n+x.occurrences.length,0),W097:result.items[i].occurrences.length}));
