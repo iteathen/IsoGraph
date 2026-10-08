@@ -8,6 +8,18 @@
 **Base revision:** `f3217af9a4fd50e838db39e249e93f39380e0e4a`  
 **Semantic stack:** current qualified IsoGraph family routed by `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md` and `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`
 
+## Public author-explanation research (2026-10-08; external evidence, not semantic authority)
+
+The owner requested a thorough **public-explanation search before any future author question**, and **no author outreach whatsoever until the complete applicable G-stage sequence, including G7, passes three to four meaningfully independent and adversarial verification passes**. Existing research does not satisfy that outreach gate. The first and second search passes are **NOT exhaustive**, not a verified source semantic census, and not a permission to contact either author.
+
+**Read the appropriate independently scoped reference before re-asking already-public author questions:**
+
+- **W-only research track:** [Woit public explanations, revisions, course notes and author replies](woit/AUTHOR_PUBLIC_EXPLANATIONS_NOTES_2026-10-08.md). Source leads: W05 Hodge strict-index and printed endpoint; CP1/quaternionic twistor constructions; 2022 author question about octonionic geometry; graduate lectures and 2024–2026 Wick rotation/chiral status. Author commentary **cannot** silently revise frozen W source or justify primitive closure.
+- **L-only research track:** [Lisi public explanations, historical notebook, revised manuscripts and forum replies](lisi/AUTHOR_PUBLIC_EXPLANATIONS_NOTES_2026-10-08.md). Source leads: **2025/journal versus September 2026 arXiv octonion-table sign difference**, original author's `U^-` rotor notation in historical notes (scope-specific only), conditional Euclidean quaternion/spinor incidence, authored triality/E8 comments, curricula and public replies. No source version substitution or unqualified interpretation is allowed.
+- **Shared/post-seal research ONLY:** [full two-pass external author-explanation search dossier](AUTHOR_PUBLIC_EXPLANATIONS_SEARCH_DOSSIER_2026-10-08.md). This includes the reported 2024 Lisi interview on possible complementarity, Lisi's published citation to a Woit twistor-incidence source, and historic exploratory overlaps. **Quarantine from either independently rendered pre-seal W or L track**: no cross-track source semantics, factorization choices, question shaping, candidate primitives or desired bridge may be inferred from it.
+
+The full dossier preserves the survey's original URLs, author attribution caveats, source-version observations, question triage, unsearched surfaces and open verification tasks. Claims in that dossier are **historical research leads needing independent primary-source confirmation**, especially automated podcast transcripts, notebook chronology, author-account attribution and source PDF version comparisons. Author clarifications (if ever permitted later) are separately provenance-labeled evidence, never automatic amendments to a source freeze or a substitute for G0–G7 qualification.
+
 ## Primary objective
 
 The project target changed on 2026-10-04.
