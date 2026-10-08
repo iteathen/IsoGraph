@@ -1,0 +1,227 @@
+{
+  "schema": "isograph.exp062-l132-low-dimensional-lie-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "LOW_DIMENSIONAL_LIE_PRESENTATIONS_0_1",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L132_G5H_LOW_DIMENSIONAL_LIE_PRESENTATIONS_0_1.json",
+      "git_blob_sha": "0eb23ce9548cc679b5b39b32c4d7a915c6da0358"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L132_G6_LOW_DIMENSIONAL_LIE_MODULE_SSC_0_1.json",
+      "git_blob_sha": "8b4bd2d3334f121bab7e8c487e295d601f2316d5"
+    }
+  },
+  "inference_profile": {
+    "id": "low-dimensional-lie-conjunct-projection-0.1",
+    "scope": "Direct dependency/conjunct projections from selected exact relations only.",
+    "rules": [
+      {
+        "id": "LDL-IA-R1",
+        "trigger": "184008",
+        "derives": [
+          "184004(domain)",
+          "184004(codomain)",
+          "183002(linear map)",
+          "BRACKET_PRESERVATION"
+        ]
+      },
+      {
+        "id": "LDL-IA-R2",
+        "trigger": "184009",
+        "derives": [
+          "184008",
+          "INJECTIVITY"
+        ]
+      },
+      {
+        "id": "LDL-IA-R3",
+        "trigger": "207000",
+        "derives": [
+          "182004",
+          "THREE_BASIS_MEMBERS",
+          "INDEPENDENCE",
+          "SPANNING"
+        ]
+      },
+      {
+        "id": "LDL-IA-R4",
+        "trigger": "207001",
+        "derives": [
+          "207000",
+          "184004",
+          "NONZERO_TWO",
+          "CYCLIC_2_SCALED_BRACKET_TABLE"
+        ]
+      },
+      {
+        "id": "LDL-IA-R5",
+        "trigger": "236000",
+        "derives": [
+          "182004",
+          "ONE_BASIS_MEMBER",
+          "INDEPENDENCE",
+          "SPANNING"
+        ]
+      },
+      {
+        "id": "LDL-IA-R6",
+        "trigger": "236001",
+        "derives": [
+          "236000",
+          "184004",
+          "ZERO_BRACKET"
+        ]
+      },
+      {
+        "id": "LDL-IA-R7",
+        "trigger": "236002",
+        "derives": [
+          "207000",
+          "184004",
+          "NONZERO_TWO",
+          "SPLIT_HEF_BRACKET_TABLE"
+        ]
+      },
+      {
+        "id": "LDL-IA-R8",
+        "trigger": "236003",
+        "derives": [
+          "184004(A,B,L)",
+          "184009(IA,IB)",
+          "TWO_FACTOR_EXISTENCE",
+          "TWO_FACTOR_UNIQUENESS",
+          "CROSS_BRACKET_ZERO"
+        ]
+      },
+      {
+        "id": "LDL-IA-R9",
+        "trigger": "236004",
+        "derives": [
+          "184004(A,B,D,L)",
+          "184009(IA,IB,ID)",
+          "THREE_FACTOR_EXISTENCE",
+          "THREE_FACTOR_UNIQUENESS",
+          "PAIRWISE_CROSS_BRACKET_ZERO"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "207001 -> named su(2)",
+      "236002 -> named sl(2,R)",
+      "selected relations -> compactness/noncompactness theorem",
+      "selected relations -> Killing-form classification",
+      "selected relations -> group integration or exponential map",
+      "236003/236004 -> arbitrary finite direct-sum schema",
+      "same bracket shape -> source carrier identity"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(184008)",
+        "SCHEMA_DEFINITION(184009)",
+        "SCHEMA_DEFINITION(207000)",
+        "SCHEMA_DEFINITION(207001)",
+        "SCHEMA_DEFINITION(236000)",
+        "SCHEMA_DEFINITION(236001)",
+        "SCHEMA_DEFINITION(236002)",
+        "SCHEMA_DEFINITION(236003)",
+        "SCHEMA_DEFINITION(236004)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "LDL-IA-001",
+          "assertion": "184008 is a linear Lie-homomorphism contract over exact Lie parents.",
+          "support": [
+            "184008 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-002",
+          "assertion": "184009 adds injectivity to exact 184008.",
+          "support": [
+            "184009 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-003",
+          "assertion": "207000 is an exact three-element basis presentation.",
+          "support": [
+            "207000 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-004",
+          "assertion": "207001 adds the exact cyclic 2-scaled 3D bracket table.",
+          "support": [
+            "207001 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-005",
+          "assertion": "236000 is an exact one-element basis presentation.",
+          "support": [
+            "236000 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-006",
+          "assertion": "236001 adds identically zero bracket on that one-dimensional carrier.",
+          "support": [
+            "236001 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-007",
+          "assertion": "236002 adds the exact h/e/f split 3D bracket table.",
+          "support": [
+            "236002 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-008",
+          "assertion": "236003 gives an exact two-factor internal direct sum with unique decomposition and zero cross bracket.",
+          "support": [
+            "236003 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-009",
+          "assertion": "236004 gives an exact three-factor internal direct sum with unique decomposition and pairwise zero cross brackets.",
+          "support": [
+            "236004 body"
+          ]
+        },
+        {
+          "id": "LDL-IA-010",
+          "assertion": "No classical Lie names, classification theorem, or group integration follows from the selected relations.",
+          "support": [
+            "scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplication yields no new selected-scope assertions."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 10,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}
