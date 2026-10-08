@@ -1,0 +1,239 @@
+{
+  "schema": "isograph.exp062-l127-g1-source-incidence.v0.1",
+  "date": "2026-10-07",
+  "status": "L127_TARGETED_G1_SOURCE_INCIDENCE_COMPLETE_CANDIDATE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "2fd5e7cc71e32c33558029a2c1e989f7393800da",
+  "audit": {
+    "path": "experiments/062/L127_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1.json",
+    "git_blob_sha": "4c02a4978377b9083673084c5378cb9a38d8533e"
+  },
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_1.isg",
+      "git_blob_sha": "8e0da96d0a35e627339b756a9af5dc18a385616b"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_SO8_SOURCE_ASSERTION_0_1.isg",
+      "git_blob_sha": "491c04ba18af6b47acc4fe154b2c7dd53526c109"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+      "git_blob_sha": "d0294dfa449422a390eeba58a74b468238946c6c"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+      "git_blob_sha": "e61a4413331d2bb2afee9de8ee406fbdfa96533b"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+      "git_blob_sha": "07b5eb396d7e777b3b02ac99330fe223a7b9fd7a"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/L127_BIPRODUCT_OPERATOR_FALSIFIER_0_1.json",
+      "git_blob_sha": "284e4fa8b888e1af973117d0a16e9503fad36786"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/L127_SO8_SOURCE_FALSIFIER_0_1.json",
+      "git_blob_sha": "23083349ec24c70d10962065d41bd99f17c8f14d"
+    }
+  ],
+  "source_provenance": "L05 §2",
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-127-R01",
+      "source_reversible_reference": "L05 §2 associative-control distinction / C and H source instances",
+      "source_span": "C and H multiplication are represented as associative controls in contrast with octonionic multiplication",
+      "relation_span": "associative C/H controls",
+      "argument_spans": [
+        "C multiplication",
+        "H multiplication",
+        "associativity"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Separates the associative controls from the octonionic nonassociative case without treating family names as semantics."
+    },
+    {
+      "occurrence_id": "L-SSC-127-R02",
+      "source_reversible_reference": "L05 §2 / octonion bi-product source instance explicit witness",
+      "source_span": "the frozen ordinary-O table contains an explicit associativity counterexample (e1 e2)e3 != e1(e2 e3)",
+      "relation_span": "octonion nonassociativity witness",
+      "argument_spans": [
+        "basis elements",
+        "left-associated product",
+        "right-associated product",
+        "inequality"
+      ],
+      "logical_force": "NEGATED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "A finite source witness; no generic nonassociative-algebra primitive is needed.",
+      "formula_ast": {
+        "op": "INEQUALITY",
+        "left": {
+          "op": "PROD",
+          "association": "LEFT",
+          "args": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        "right": {
+          "op": "PROD",
+          "association": "RIGHT",
+          "args": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        }
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-127-R03",
+      "source_reversible_reference": "L05 §2 bi-product operator construction",
+      "source_span": "28 declared bi-product basis operators B_cd act on the octonion carrier with a complete frozen basis action table",
+      "relation_span": "28-dimensional bi-product operator presentation",
+      "argument_spans": [
+        "operator carrier",
+        "28 ordered basis operators",
+        "octonion carrier",
+        "bilinear action",
+        "extensional action table"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "The 28 basis and action rows are explicit; generic finite-vector basis semantics remain a lower-schema question.",
+      "formula_ast": {
+        "op": "FINITE_BASIS_ACTION_PRESENTATION",
+        "args": [
+          "operator carrier",
+          "28 basis",
+          "octonion carrier",
+          "action table"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-127-R04",
+      "source_reversible_reference": "L05 §2 imaginary right-multiplication subspace",
+      "source_span": "7 imaginary right-multiplication basis operators form a represented carrier and inject linearly into the 28-dimensional bi-product operator carrier",
+      "relation_span": "7-dimensional right-multiplication subspace injection",
+      "argument_spans": [
+        "7D carrier",
+        "7 basis",
+        "28D carrier",
+        "linear injection",
+        "basis images"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-127-R03"
+      ],
+      "load_bearing_note": "Requires exact 7- and 28-basis semantics plus an injective linear map; the injection rows are source-explicit.",
+      "formula_ast": {
+        "op": "LINEAR_INJECTION_WITH_BASIS_IMAGES",
+        "args": [
+          "7D carrier",
+          "28D carrier",
+          "basis map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-127-R05",
+      "source_reversible_reference": "L05 §2 proper-extension witness",
+      "source_span": "a represented bi-product basis operator is explicitly outside the image of imaginary right multiplication",
+      "relation_span": "proper extension beyond imaginary right multiplication",
+      "argument_spans": [
+        "7D source carrier",
+        "injection",
+        "28D target carrier",
+        "outside-image operator"
+      ],
+      "logical_force": "NEGATED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-127-R03",
+        "L-SSC-127-R04"
+      ],
+      "load_bearing_note": "Core quantification/negation over the exact injection suffices once the carriers and injection are represented.",
+      "formula_ast": {
+        "op": "NOT_IN_IMAGE",
+        "args": [
+          "injection",
+          "outside operator"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-127-R06",
+      "source_reversible_reference": "L05 §2 structural so(8) source assertion",
+      "source_span": "the bi-product operator carrier is identified with all and only metric-skew linear endomorphisms of the octonion metric, with commutator bracket",
+      "relation_span": "full metric-skew endomorphism Lie presentation",
+      "argument_spans": [
+        "metric vector carrier",
+        "operator carrier",
+        "operator action",
+        "metric-skew condition",
+        "all-and-only endomorphism coverage",
+        "commutator bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-127-R03"
+      ],
+      "load_bearing_note": "The familiar so(8) label is provenance only; the structural semantics are metric-skew endomorphism coverage plus commutator bracket.",
+      "formula_ast": {
+        "op": "FULL_METRIC_SKEW_ENDOMORPHISM_LIE",
+        "args": [
+          "metric",
+          "operator carrier",
+          "action",
+          "bracket"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-127-R07",
+      "source_reversible_reference": "L127 frozen source falsifiers",
+      "source_span": "finite operator tests give rank28 bi-product span and rank7 imaginary-right span; ordinary-O version-of-record table yields 14 metric-skew failures and 336 commutators outside the represented span",
+      "relation_span": "source inconsistency and rank guard",
+      "argument_spans": [
+        "rank28",
+        "rank7",
+        "metric-skew failures",
+        "commutator failures"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_PROJECT_EVIDENCE",
+      "depends_on": [
+        "L-SSC-127-R03",
+        "L-SSC-127-R04",
+        "L-SSC-127-R06"
+      ],
+      "load_bearing_note": "Negative evidence remains separate from representation closure.",
+      "raw_failure_signature": {
+        "biproduct_span_rank": 28,
+        "imaginary_right_span_rank": 7,
+        "metric_skew_failures": 14,
+        "commutators_outside_span": 336
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 7
+  },
+  "next_stage": "TARGETED_G2_NEUTRAL_SUBGRAPH"
+}
