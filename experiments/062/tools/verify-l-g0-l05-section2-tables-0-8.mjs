@@ -8,7 +8,8 @@ const files={
  ledger:root+'LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json',
  oldLedger:root+'LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json',
  historical:root+'LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json',
- defect:ex+'L05_EQ1_OCTONION_SOURCE_TABLE_LITERAL_FIDELITY_DEFECT_0_1.json'
+ defect:ex+'L05_EQ1_OCTONION_SOURCE_TABLE_LITERAL_FIDELITY_DEFECT_0_1.json',
+ originalDefect:ex+'L125_L127_L05_SECTION2_SOURCE_FORMULA_TABLE_CENSUS_DEFECT_0_1.json'
 };
 const data=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const copy=x=>JSON.parse(JSON.stringify(x)),text=x=>JSON.stringify(x);
@@ -135,11 +136,12 @@ function verify(S=cur,L=source){
  if(sourceO){const a=mul(vec(8,6),vec(8,7),sourceO),b=mul(vec(8,7),vec(8,6),sourceO);ck(text(a)===text(b)&&text(a)===text([0,0,-1,0,0,0,0,0]),'printed non-anticommutative e6/e7 witness');ck(text(conj(a))!==text(mul(conj(vec(8,7)),conj(vec(8,6)),sourceO)),'source anti-involution identity must fail at printed witness');const x=[1,0,0,0,0,0,-1,0],y=[0,0,1,0,0,0,0,-1],p=mul(x,y,sourceO);ck(p.every(v=>v===0)&&x.reduce((n,q)=>n+q*q,0)===2&&y.reduce((n,q)=>n+q*q,0)===2,'source zero divisor with both squared lengths 2');}
  for(const [id,rows]of Object.entries(formulaExpected)){
    const item=S.items.find(y=>y.id===id),p=old.items.find(y=>y.id===id);
-   ck(!!item&&item.body.startsWith(p.body+' '),'original '+id+' conserved');
+   ck(!!item&&(id==='L-SSC-125'?item.body.startsWith(p.body+' '):item.body===p.body),'original '+id+' source body exact carry-forward or additive prefix');
    for(const part of requiredFragment[id])ck(item?.body?.includes(part),'source body misses '+id+' '+part);
    const c=item?.source_expression_census;
    ck(c?.source_presentation_ledger?.git_blob_sha===gitHash(files.ledger),'per-item exact table/formula ledger pin '+id);
-   ck(c?.source_defect_audit?.git_blob_sha===gitHash(files.defect),'per-item defect pin '+id);
+   ck(c?.source_defect_audit?.git_blob_sha===gitHash(files.originalDefect),'original source-formula defect pin '+id);
+   ck(c?.source_discrepancy_audit?.git_blob_sha===gitHash(files.defect),'new source-table discrepancy defect pin '+id);
    ck(text(c?.source_formula_ids)===text(rows.map(r=>r[0])),'per-item formula IDs '+id);
    const extracted=L.formulas.filter(y=>y.item===id);
    ck(text(c?.source_assertion_rows)===text(extracted),'per-item formula exact carry-forward '+id);
@@ -167,6 +169,8 @@ const mutants=[
  ['silently restore mathematical repair e7e6=+e2',(S,L)=>{L.basis_multiplication_tables[4].entries[7][6]='e2';}],
  ['change other conflicting source term e6e7=+e2',(S,L)=>{L.basis_multiplication_tables[4].entries[6][7]='e2';}],
  ['erase source discrepancy status',(S,L)=>{L.source_inconsistency.preserved=false;}],
+ ['erase L126 additive discrepancy provenance',(S,L)=>{delete S.items.find(x=>x.id==='L-SSC-126').source_expression_census.source_discrepancy_audit;}],
+ ['replace old source defect pin',(S,L)=>{S.items.find(x=>x.id==='L-SSC-127').source_expression_census.source_defect_audit.git_blob_sha='stale';}],
  ['flip O split nontrivial product',(S,L)=>{L.basis_multiplication_tables[5].entries[4][5]='-e1';}],
  ['swap O operands',(S,L)=>{L.basis_multiplication_tables[4].entries[1][2]='-e4';L.basis_multiplication_tables[4].entries[2][1]='e4';}],
  ['drop all split signs',(S,L)=>{L.basis_multiplication_tables[5].entries[1]=[...L.basis_multiplication_tables[4].entries[1]];}],
