@@ -1,0 +1,31 @@
+name: Experiment 062 W G0 seven-source literal conservation SSC0.16 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_16.json'
+      - 'experiments/062/W_G0_MULTISOURCE_SOURCE_DEMAND_PROJECTION_0_6.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_2.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_1.json'
+      - 'experiments/062/W_G0_SEVEN_SOURCE_LITERAL_ORACLE_0_1.json'
+      - 'experiments/062/W_MULTI_SOURCE_SEAL_MUTATION_ESCAPE_0_1.json'
+      - 'experiments/062/tools/verify-w-multisource-seven-ssc-0-16-0-2.mjs'
+      - '.github/workflows/experiment-062-w-multisource-seven-ssc-0-16-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w05-w103-strict-hodge-source-0-2.mjs
+      - run: node experiments/062/tools/verify-w05-w109-completed-local-ring-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-exact-source-equations-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-late-source-expressions-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g0-w097-151-member-0-1.mjs
+      - run: node experiments/062/tools/verify-w097-projective-coordinate-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w097-g0-cross-occurrence-si-0-2.mjs
+      - run: node experiments/062/tools/verify-w-multisource-seven-ssc-0-16-0-2.mjs
+      - run: node experiments/062/tools/verify-w-active-g0-stage-0-3.mjs

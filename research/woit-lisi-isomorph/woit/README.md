@@ -18,7 +18,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_42.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_15.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_43.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_16.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -96,6 +96,16 @@ The versioned local replay `experiments/062/W_ACTIVE_G0_STAGE_GUARD_LOCAL_REPLAY
 
 **Committed Node result:** The successor [Actions run 37840850776](https://github.com/iteathen/IsoGraph/actions/runs/37840850776) completed **SUCCESS** against exact W-only commit [e91ad461](https://github.com/iteathen/IsoGraph/commit/e91ad461878df30113f2b6d4db3b7365933791c9). The stage guard verifier v0.2 passed its pinned Node run; its 26/26 hostile controls are internal qualification evidence for the stage-routing guard only. The prior v0.1 CI failure and its source-capture root cause remain preserved and independently distinguishable. The versioned result is `experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CI_0_2.json`. W gate 0.42 and SSC0.15 remain G0 open/unfrozen, with no new G-stage authorization.
 
+### W04a/W04b/W04d/W04e/W05 G0 literal-source and 151-row audit (2026-10-08)
+
+The newest W source-census candidate `SOURCE_SEMANTIC_CENSUS_0_16.json` conserves 22 additional source-printed equation/operand incidences in **seven** W SSC bodies, leaving all other **144** source objects exactly unchanged. The affected rows are W059 and W061 (W04a Weyl operator, factor ordering, energy/helicity sign, printed Wightman inverse and failed Wick Schwinger attempt); W066 (W04b Minkowski embedding `g -> (conjugate(g),g)` with conjugation on the first factor, distinct Euclidean `SU(2)_L x SU(2)_R`); W079 (W04d `U(z)=exp(-izH)` and the **lower** complex-time half-plane `s<0` under energy positivity); W107 (W05 arXiv v2 §6.1 the printed `H^1(Gal(Fbar/F),PGL_2(Fbar))` *"has two elements"* wording, with F quantifier scope explicitly uncertain); and W122/W124 (the linked W04e preliminary paper's exact Osterwalder–Schrader `Theta` formula, two chiral equation signs, Cayley numerator/denominator and distinct signed Minkowski/Euclidean conjugations).
+
+**Do not correct the source**: W04e prints `Theta(lambda f)=conjugate(lambda) f` with a bare `f` on the RHS, while describing `Theta` as an antilinear involution in surrounding prose. Both are conserved as printed, with the source inconsistency unresolved. W05's `H^1` cardinality claim is not promoted to a universally quantified mathematical theorem. All seven revisions retain author provenance and conditional/negative claims.
+
+Evidence: `experiments/062/W_MULTI_SOURCE_SEVEN_EXPRESSION_G0_DEFECT_0_1.json`, `experiments/062/W_G0_SEVEN_SOURCE_LITERAL_ORACLE_0_1.json`, and `experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_1.json`. Six existing W members of the **historical** 86-demand projection were updated; W066 is an old nonmember explicitly still pending new 151-source qualification. The 151-row register v0.2 preserves all item identities, current bodies, old membership and *lack of current authority*. The coverage file **records all 151 item rows**, but only seven new target rows received direct source-literal audit in this revision: **144 remain pending cold source comparison**, so neither source completeness nor G0 freeze is claimed. The frozen source revisions/source blog snapshots are not demonstrated byte-identical to currently retrieved mutable web pages. Historical G1–G7 remain invalidated.
+
+A first local hostile checker failed to reject `sealed=true` (43/44 controls). That prepublication failed control is retained in `experiments/062/W_MULTI_SOURCE_SEAL_MUTATION_ESCAPE_0_1.json`. Versioned hardened verifier `experiments/062/tools/verify-w-multisource-seven-ssc-0-16-0-2.mjs` passed local V8 positive reconstruction and rejected **45/45** adversarial mutations. This is **not** a Node CI or independent source-review pass until confirmed on its exact committed run. The former v0.42 stage-guard workflow is manual-only as historical evidence; the new v0.43 W gate and its exact CI guard must pass on the successor commit. Stage authority remains G0 ONLY.
+
 ## Full-treatment gates
 
 | Gate | State |
@@ -169,7 +179,7 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `W02_DISTINGUISHED_VECTOR_SPINOR_IDENTIFICATION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact conjugate-right spinor carrier plus distinguished-vector-selected S_L→conjugate(S_R) isomorphism; closes W-SSC-138 with generic conjugate-semilinear support.
 
-## Historical frozen source-census checkpoint (superseded by SSC 0.14 G0)
+## Historical frozen source-census checkpoint (superseded by SSC 0.16 G0)
 
 **Historical evidence only:** SSC 0.2 was frozen for its earlier tuple; it is not the current W source authority. Current SSC 0.14 is unfrozen, controlled by W stage gate 0.40. All old closure, occurrence and G-stage claims in the following legacy checkpoints are non-current pending lawful re-audit and reconstruction.
 
