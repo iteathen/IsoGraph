@@ -41,7 +41,7 @@ for(const d of src.six_source_decompositions)ck(body.includes(d.source_carrier)&
 for(const [carrier,matrix]of [['C',matrixC],['H',matrixH]]){ck(matrix?.length===3&&matrix?.every(row=>row.length===3),'source matrix 3x3 '+carrier);for(let i=0;i<3;i++)for(const s of matrix?.[i]||[])ck(body.includes(s),'source matrix cell '+carrier+' row '+i+' ='+s);}
 for(const c of [...src.su3_commutator.components,...src.sp3_commutator.components])ck(body.includes(c.id+': '+c.lhs+' = '+c.rhs),'source commutator fully reconstructable '+c.id);
 for(const [x,y]of [...src.su3_basis_brackets.finite_rows,...src.su3_basis_brackets.parameterized_rows])ck(body.includes(x+'='+y),'source basis bracket reconstructable '+x);
-ck(body.includes('remain unextracted')&&body.includes('Eq.(13)')&&body.includes('full-source'),'open source families and nonclaims');
+ck(body.includes('remain unextracted')&&body.includes('Eq.(13)')&&body.includes('G0-complete or G3 CORE_CLOSED')&&r.unexpanded_other_section4?.length===8,'open source families and nonclaims');
 for(const id of ['L-SSC-125','L-SSC-126','L-SSC-127','L-SSC-128','L-SSC-129','L-SSC-130','L-SSC-131','L-SSC-132'])ck(json(S.items.find(x=>x.id===id))===json(old.items.find(x=>x.id===id)),'prior corrected G0 item exact carry '+id);
 ck(old.items.find(x=>x.id==='L-SSC-125').body.includes('BOTH e6 e7=-e2 and e7 e6=-e2'),'source octonion discrepancy never normalized');
 ck(!json(now).includes('W-SSC-')&&!(S.guards?.whole_L_source_cold_audit_complete),'track fire wall/full-source nonclaim');
