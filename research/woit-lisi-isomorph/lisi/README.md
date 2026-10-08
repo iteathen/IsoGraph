@@ -17,7 +17,18 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity audit and invalidation (2026-10-08)
 
-The controlling L stage gate is `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`. Targeted repair `L127_G7_TARGETED_CLOSURE_0_2.json` preserves the corrected SI namespace (scalar-extension 225000, dimension-seven 225010, corrected L127 source 246xxx), but it is not a whole-track source-closure certificate.
+### Current 0.7 source-census candidate and G0 gate
+
+The controlling procedural gate is `experiments/062/L_CURRENT_STAGE_GATE_0_6.json`. The latest unqualified **NOT FROZEN** source-census candidate is `SOURCE_SEMANTIC_CENSUS_0_7.json`; no G1-G7 replay, source-track Recursive IA or unification is authorized.
+
+Direct frozen L05 section 2 inspection exposed omitted source-level behavior in L-SSC-125 to L-SSC-127. `LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json` conserves six signed ordinary/split multiplication tables (168 row/column signed source entries) and 15 explicit formula records for equations (1)-(5). The source ledger is manual primary-source transcription, not independently cold-reviewed. Source Eq.(5) precise matrix-index positions and the Cl(0,2) worked example remain to be reconstructed.
+
+The 0.7 SSC changed only L125-L127 versus 0.6, preserving 188 other items, six L128 coefficient formulas and 44 L129-L132 expression records. GitHub Actions CI run `37807515374` passed all 168 source-cell checks and 20 adversarial mutation cases after correcting a premature-G1 flag mutation escape in historical run `37807377432`. L128's separate local source-census CI run `37806073112` also passed; none establish full six-source SSC completeness.
+
+L127's SI-repaired G7 0.2 remains historical campaign-local scoped evidence only. L129-L131, L132 and L133 current replay remain blocked by upstream source completeness. Owner bypass waives third-party reviewer calls, not source-fidelity verification or stage ordering.
+
+### Historical 0.5 source-census checkpoint
+The preceding L stage gate was `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`. Targeted repair `L127_G7_TARGETED_CLOSURE_0_2.json` preserves the corrected SI namespace (scalar-extension 225000, dimension-seven 225010, corrected L127 source 246xxx), but it is not a whole-track source-closure certificate.
 
 The L05 §3 source audit reopened **L-SSC-129–132** for omitted assertions and compressed equation modality. `SOURCE_SEMANTIC_CENSUS_0_5.json` retains 191 identities and 187 unrelated source items unchanged, adding 44 exact-role/index/polarity/approximation source-expression rows. The source audit is `experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json`. SSC0.5 is **candidate, not frozen, not qualified**.
 
@@ -31,7 +42,7 @@ Because the upstream frozen SSC is incomplete for this revised source target, L1
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | HISTORICAL — previous six-source traversal ledger exists; current full-source semantic completeness is reopened after L05 §3 omissions |
-| SSC frozen complete | **REOPENED/NOT CURRENT** — historical 0.2 is retained as a defective-completeness baseline; 0.5 is an expression-level successor candidate, **not frozen** |
+| SSC frozen complete | **REOPENED/NOT CURRENT** — historical 0.2 is retained as a defective-completeness baseline; 0.7 is the latest source-expression/table successor candidate, **not frozen** |
 | primitive math support complete | BLOCKED — G0 source-census correctness gate; historical G5 (345 unresolved classes) is for an incomplete predecessor source tuple |
 | native .isg bundle | HISTORICAL / PARTIAL — previous renderings exist but cannot reconstruct newly restored G0 source obligations |
 | graph-derived closure ledger | IN PROGRESS — existing Core-0.21 ledger/gates remain separate closure evidence; Experiment 062 does not convert unresolved G5 classes into closures |
@@ -68,7 +79,7 @@ Current working assertion base: `ASSERTION_BASE_A0_0_12.md`.
 
 Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_10.json`.
 
-Historical frozen SSC baseline (source-incomplete for L05 §3): `SOURCE_SEMANTIC_CENSUS_0_2.json`. Current NOT-FROZEN expression-census candidate: `SOURCE_SEMANTIC_CENSUS_0_5.json`.
+Historical frozen SSC baseline (source-incomplete for L05 §3): `SOURCE_SEMANTIC_CENSUS_0_2.json`. Latest NOT-FROZEN source-census candidate: `SOURCE_SEMANTIC_CENSUS_0_7.json`.
 
 Historical working census immediately before freeze: `../TRACK_L_WORKING_SSC_0_8.md`.
 
