@@ -86,6 +86,12 @@ A source-neutral falsifier distinguishes `R(m,p), NOT Fixed(m,q)` (one shared ma
 
 Current gate `experiments/062/W_CURRENT_STAGE_GATE_0_42.json`: G0 remains **unfrozen**, and all G1–G7 current authorizations remain **false**. No new shared SI, primitive, functionhood, or cross-track equivalence has been promoted. After the full nine-source audit, a **new G1** must introduce explicit binder/SI provenance for the projective map, separately typed vector map and source-given projectivization relationship; only then may G2/G3/G4 be rebuilt in order.
 
+### Active W G0 stage-routing fail-closed guard (2026-10-08)
+
+To prevent the repeated historical W G1–G7 green CI results from being misread as current qualification, `experiments/062/tools/verify-w-active-g0-stage-0-1.mjs` independently pins W stage gate 0.42, SSC 0.15, the 151-row conservation register, the old 86-member W demand projection, the G1/G2 446-versus-G3 445 lineage, and the rejected W097 relational G7 source instantiation. It fails closed if the active stage is marked frozen or any G1–G7/IA/DP authorization becomes true without a separately versioned lawful successor. It preserves the owner bypass as waiver of **third-party** review only. The predecessor tests have already checked source fidelity and negative evidence; this guard checks *current procedural routing and dependency invalidation*.
+
+The versioned local replay `experiments/062/W_ACTIVE_G0_STAGE_GUARD_LOCAL_REPLAY_0_1.json` rejected **26/26** adversarial mutations in an internal V8 check; this is not Node CI or new stage qualification. Dedicated workflow `.github/workflows/experiment-062-w-active-g0-stage-0-1.yml` executes the pinned guard on W-related changes. This guard is revision-specific to gate 0.42: a future lawful successor must version and requalify its routing rather than silently changing hashes. G0 remains **unfrozen**.
+
 ## Full-treatment gates
 
 | Gate | State |
