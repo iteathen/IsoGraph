@@ -100,7 +100,8 @@ function basisChecks(){
  return{count,failed};
 }
 const issues=audit(),finite=basisChecks();
-if(finite.count!==198||finite.failed.length)issues.push('finite matrix source reconstruction');
+const expectedCaseCount=3*3*3+6*3*4+6*4*4+9+12; // 216, all Eq13 index pairs and 21 Eq14 generators
+if(finite.count!==expectedCaseCount||finite.failed.length)issues.push('finite matrix source reconstruction');
 const mutations=[];
 for(let i=0;i<15;i++)mutations.push(['Eq13 row '+(i+1),(p,l)=>{p.brackets[i].rhs+=' + WRONG'}]);
 mutations.push(
