@@ -29,7 +29,7 @@ const expected7=[
 ['chi','R_p^u','chi','-s_u·u·tilde(chi)·u']
 ];
 const expected8=[
-['gamma'_c','R_v^u','(delta^a_c - 2 s_u u^a u_c) gamma_a'],
+["gamma'_c",'R_v^u','(delta^a_c - 2 s_u u^a u_c) gamma_a'],
 ["gamma'_c",'R_m^u','sqrt(s_u) u^a (Gamma_a)^b_c Q^+_b'],
 ["gamma'_c",'R_p^u','sqrt(s_u) u^b (barGamma_b)^a_c Q^-_a'],
 ["(Q^-_a)'",'R_v^u','sqrt(s_u) u^c (barGamma_c)^b_a Q^+_b'],
