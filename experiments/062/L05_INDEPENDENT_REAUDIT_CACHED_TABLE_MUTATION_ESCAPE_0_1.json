@@ -1,0 +1,37 @@
+{
+  "schema": "isograph.exp062-l05-independent-reaudit-cached-input-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_ADVERSARIAL_VERIFIER_TWO_CACHED_SOURCE_TABLE_MUTATION_ESCAPES",
+  "failed_run": {
+    "id": 37851631738,
+    "head_sha": "ca5b1c145637978b7abb0d10d0b60a95adf8ec86",
+    "conclusion": "failure",
+    "mathematical_baseline_results": [
+      "original conjugation/metric 2 ordered pair failures",
+      "barGamma direct-vs-transpose 2 entries",
+      "Clifford direct/transpose 7 of 36 pairs, 28 cells each",
+      "Eq4 4 of 512, bivector Lie span 168 of 378",
+      "one-cell later revision removes these scoped failures"
+    ],
+    "mutation_controls_defined": 22,
+    "rejected": 20,
+    "escaped": [
+      "correct frozen table illicitly",
+      "erase late revision change"
+    ]
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l05-octonion-independent-version-reaudit-0-1.mjs",
+    "git_blob_sha": "976132b752e29a99881c768995c265c2f8098c5a"
+  },
+  "cause": "verify(d) compared source-table input fields against srcJ/srcA arrays evaluated only once from baseline D at module startup, not recomputed from each mutated input d; journal and later arxiv table edits were therefore not detected.",
+  "repair": "Move parsing of d.manually_transcribed_primary_tables.journal_O_rows and arxiv_v1_O_rows INSIDE audit(d) and compare every signed cell to independently authored literal journal/arxiv oracles. Keep entire source math calculations and 22 hostile controls, baseline-first effective mutation requirement.",
+  "interpretation": "A verifier implementation failure, not a disproven mathematical counterexample. No adversarial qualification granted until all 22 mutations are rejected and fresh CI passes.",
+  "source_original_table_unchanged": true,
+  "article_conclusion_not_authority": true,
+  "external_review_passed": false,
+  "G1_authorized": false
+}
