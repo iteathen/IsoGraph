@@ -172,7 +172,7 @@ const baseline=audit(),errors=[...baseline],mutants=[
  ['invent 2025 correction',x=>{x.source_revision_facts.previous_preprint.row_e6_col_e7='e2';}],
  ['erase late revision change',x=>{x.manually_transcribed_primary_tables.arxiv_v1_O_rows[6]=x.manually_transcribed_primary_tables.journal_O_rows[6];}],
  ['swap publication versions',x=>{x.source_revision_facts.frozen.date='2026-09-10';}],
- ['normalize conjugation hypothesis',x=>{x.primary_source_semantics.antiinvolution='x'= 'not-source';}],
+ ['normalize conjugation hypothesis',x=>{x.primary_source_semantics.antiinvolution='not-source';}],
  ['misstate scalar metric',x=>{x.primary_source_semantics.metric='not-source-metric';}],
  ['invent no source-zero-divisor',x=>{x.independent_findings.zero_divisor.source_product='2 e2';}],
  ['hide basis anti-involution mismatch',x=>{x.independent_findings.conjugation_reversal.journal_failed_ordered_pairs=[];}],
