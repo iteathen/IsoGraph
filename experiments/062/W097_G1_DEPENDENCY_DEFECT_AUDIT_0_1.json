@@ -1,0 +1,35 @@
+{
+  "schema": "isograph.exp062-w097-g1-dependency-defect-audit.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_PREDECESSOR_DEPENDENCY_EDGE_DEFECT_CORRECTED_IN_G1_REBUILD",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "predecessor": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_24.json",
+    "git_blob_sha": "7750fcd91deff3b643f4a4901e74a554735214c7"
+  },
+  "source_input": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_5.json",
+    "git_blob_sha": "5df1ec2710aae476e0c1f99dd03851d2056881d7"
+  },
+  "finding": "Predecessor W-SSC-097-O04 made no-projective-fixed-points depend on the projective square/involution occurrence O06. The source does not state that fixed-point-freeness follows from involution, and involution alone admits fixed points. Corrected G1 binds O04 to the explicit rho_tw map definition instead and preserves fixed-point absence as a separately asserted source property.",
+  "classification": [
+    "INCORRECT_DEPENDENCY_EDGE",
+    "UNSUPPORTED_IMPLICATION"
+  ],
+  "correction": {
+    "old_dependency": [
+      "W-SSC-097-O06"
+    ],
+    "new_dependency": [
+      "W-SSC-097-O18"
+    ],
+    "reason": "Explicit rho_tw definition is the source object whose fixed-point behavior is asserted; projective square +1 is a sibling property, not sufficient cause."
+  },
+  "nonclaims": [
+    "No mathematical theorem beyond source incidence is imported.",
+    "No generic module is qualified here.",
+    "No L evidence is used."
+  ]
+}
