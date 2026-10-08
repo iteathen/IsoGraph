@@ -119,7 +119,7 @@ function bivectors(T,mode,block,p){
  return{basisRank:B.piv.length,commutatorTests:ops.length*(ops.length-1)/2,outside:fails,notSkew:skew};
 }
 const JOURNAL=parse(sourceExpected),ARXIV=parse(laterExpected);
-const srcJ=parse(D.manually_transcribed_primary_tables.journal_O_rows),srcA=parse(D.manually_transcribed_primary_tables.arxiv_v1_O_rows);
+
 const original=checkBasisTable(JOURNAL),corrected=checkBasisTable(ARXIV);
 const Cj=Clifford(JOURNAL,'direct'),Ct=Clifford(JOURNAL,'transpose');
 const Ca=Clifford(ARXIV,'direct'),Cat=Clifford(ARXIV,'transpose');
@@ -133,6 +133,7 @@ const refRows=ledger.basis_multiplication_tables.find(x=>x.carrier==='O').entrie
 const computed={original,corrected,Cj,Ct,Ca,Cat,cyclicJ,cyclicA,biv,revisions};
 function audit(d=D){
  const errors=[],ok=(v,s)=>{if(!v)errors.push(s)};
+ const srcJ=parse(d.manually_transcribed_primary_tables?.journal_O_rows??[]),srcA=parse(d.manually_transcribed_primary_tables?.arxiv_v1_O_rows??[]);
  ok(d.schema==='isograph.lisi-l05-octonion-independent-version-adversarial-review.v0.1'&&d.track==='L'&&d.stage==='G0'&&d.authority===false,'source observation not qualified theorem');
  ok(d.author_intent_known===false&&d.official_journal_erratum_located===false&&d.full_paper_theorem_qualified===false&&d.G1_authorized===false&&d.external_cold_review_passed===false,'no unwarranted intent/erratum/theorem claims');
  ok(d.source_revision_facts?.frozen?.date==='2026-08-29'&&d.source_revision_facts?.frozen?.doi==='10.1007/s00006-026-01447-5'&&d.source_revision_facts?.frozen?.eq==='(1)','exact frozen publication');
