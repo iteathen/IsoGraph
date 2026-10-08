@@ -67,7 +67,8 @@
     "gamma_definition": "(Gamma_c)^b_a=M_(c,a)^(tilde b)",
     "barGamma_direct_M": "(barGamma_c)^a_b=M_(tilde c,tilde b)^a",
     "barGamma_transpose": "author separately prints barGamma_c=n_cc*(Gamma_c)^T; this claim is inconsistent with source original O table and cannot override raw M entries",
-    "evaluation_order": "apply source rightmost factor first; no reassociation for O/O_split"
+    "evaluation_order": "apply source rightmost factor first; no reassociation for O/O_split",
+    "matrix_incidence": "matrix row is output, column is input; explicit internal binder must be summed; row/column names are scoped to their chiral blocks"
   },
   "eq5": {
     "upper": {
@@ -186,5 +187,10 @@
     "Eq5 source algebra Lie closure not mathematically validated",
     "G1-G7 historical checks are not current",
     "No Recursive IA, Discovery, unification or merge"
-  ]
+  ],
+  "failed_baseline_fixture": {
+    "path": "experiments/062/L127_EQ5_G0_INDEX_INCIDENCE_SOURCE_PACKET_OMISSION_DEFECT_0_1.json",
+    "status": "FAILED_BASELINE_HISTORICAL_REPAIRED_CANDIDATE_NOT_CI_VERIFIED",
+    "run_id": 37838619149
+  }
 }
