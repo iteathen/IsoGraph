@@ -18,7 +18,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_43.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_16.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_44.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_17.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -106,6 +106,18 @@ Evidence: `experiments/062/W_MULTI_SOURCE_SEVEN_EXPRESSION_G0_DEFECT_0_1.json`, 
 
 A first local hostile checker failed to reject `sealed=true` (43/44 controls). That prepublication failed control is retained in `experiments/062/W_MULTI_SOURCE_SEAL_MUTATION_ESCAPE_0_1.json`. Versioned hardened verifier `experiments/062/tools/verify-w-multisource-seven-ssc-0-16-0-2.mjs` passed local V8 positive reconstruction and rejected **45/45** adversarial mutations. This is **not** a Node CI or independent source-review pass until confirmed on its exact committed run. The former v0.42 stage-guard workflow is manual-only as historical evidence; the new v0.43 W gate and its exact CI guard must pass on the successor commit. Stage authority remains G0 ONLY.
 
+### W04c original author-post full direct audit and W075 role correction (2026-10-08)
+
+An independent, item-by-item comparison covered **34 W source-semantic items** against the original author text of [W04a](https://www.math.columbia.edu/~woit/wordpress/?p=15574), [W04b](https://www.math.columbia.edu/~woit/wordpress/?p=15600), [W04c](https://www.math.columbia.edu/~woit/wordpress/?p=15620), the mutable [W03 project page](https://www.math.columbia.edu/~woit/wordpress/?page_id=12263) and [W04e](https://www.math.columbia.edu/~woit/wordpress/?p=15768) (Woit's own July 10 comment and linked preliminary PDF date; not independent commenters' mathematics). The record `experiments/062/W_G0_AUTHOR_POSTS_34_ROW_SOURCE_COLD_REVIEW_0_1.json` gives every SSC ID, author post, exact page line span, local source-role checks and *current-rendering* status. This completed an actual per-item comparison of the mapped source passages—not merely a verifier/metadata scan—but **does not** establish that the mutable webpages' October 3 frozen bytes were identical to today's retrieval.
+
+**One source-fidelity defect W075** emerged. In W04c original authored line 25, `SL(2,C)_L` acts on the **tangent space to the space parametrizing the embedded CP1s**; line 29 separately introduces the canonical line and rank-three quotient bundles with `U(1)×U(3)`. Former SSC0.16's phrase *"left factor acts on tangent/quotient data"* conflated these distinct source roles and implied an unattributed chiral-factor action on that rank-three quotient. SSC0.17 corrects only W075, preserving all **other 150 source objects exactly**, and adds three source-local role/conditional incidences with an explicit *non-assertion provenance guard* (not an invented author statement denying such an action). W077's separate quotient-bundle source claim is unchanged. See `experiments/062/W04C_W075_TANGENT_QUOTIENT_SOURCE_DEFECT_0_1.json` and versioned G0 successor `SOURCE_SEMANTIC_CENSUS_0_17.json`.
+
+The 151-row W source register version 0.3 and coverage ledger version 0.2 retain old source/demand provenance and mark all G0 closure as pending. Combined with four previously directly checked sources outside these 34, **38/151** rows now have targeted original-author-source comparisons, and **113/151** require direct review. The older 86-member W projection from SSC0.16 is kept historical, **not** magically rehashed to SSC0.17; W075 was an old nonmember. The current scope remains unqualified, and full independent Oct3 source revision identity is unresolved.
+
+Internal deterministic V8 replay of `experiments/062/tools/verify-w04c-w075-source-role-0-1.mjs` rejects **31/31** adversarial mutations and preserves W097 typed map, W103 strict Hodge, W109 analogy guard and W04e printed Theta anomaly. Node CI verification is separate and must be checked against its actual successor SHA. The older v0.43 active guard is archived/manual-only; new guard workflow `.github/workflows/experiment-062-w-active-g0-stage-0-4.yml` operates against current stage `experiments/062/W_CURRENT_STAGE_GATE_0_44.json`.
+
+**Current status:** G0 open and not frozen; no new primitive, Core, IA, DP, G1–G7, global or cross-track authority.
+
 ## Full-treatment gates
 
 | Gate | State |
@@ -179,7 +191,7 @@ No Lisi fact, notation, triality construction, E8 embedding, or source-native Wo
 
 - `W02_DISTINGUISHED_VECTOR_SPINOR_IDENTIFICATION_SOURCE_INSTANCE_0_1.isg` / `.md` — exact conjugate-right spinor carrier plus distinguished-vector-selected S_L→conjugate(S_R) isomorphism; closes W-SSC-138 with generic conjugate-semilinear support.
 
-## Historical frozen source-census checkpoint (superseded by SSC 0.16 G0)
+## Historical frozen source-census checkpoint (superseded by SSC 0.17 G0)
 
 **Historical evidence only:** SSC 0.2 was frozen for its earlier tuple; it is not the current W source authority. Current SSC 0.14 is unfrozen, controlled by W stage gate 0.40. All old closure, occurrence and G-stage claims in the following legacy checkpoints are non-current pending lawful re-audit and reconstruction.
 
