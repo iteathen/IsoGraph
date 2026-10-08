@@ -90,7 +90,7 @@ function verify(pkt=D,source=SRC){
  const frozen=[
  ['table_ledger',paths.ledger],['ssc_013',paths.ssc],['stage_gate_014',paths.gate],['Eq2_Eq3_negative',paths.eq2],['Eq5_reverse_index_negative',paths.eq5]
  ];
- ok(pkt.schema==='isograph.lisi-l05-eq5-chiral-indexed-source.g0.v0.1'&&pkt.track==='L'&&pkt.stage==='G0'&&pkt.authority===false&&pkt.G1_authorized===false,'only L G0 source packet');
+ ok(pkt.schema==='isograph.lisi-l05-eq5-chiral-indexed-source.g0.v0.1'&&pkt.track==='L'&&pkt.stage==='G0'&&pkt.authority===false&&pkt.G1_authorized===false&&pkt.primitive_or_theorem_qualification===false&&pkt.source_complete===false&&pkt.source_census_frozen===false&&pkt.external_review_passed===false,'only L G0 source packet');
  ok(pkt.source?.revision==='2026-08-29 published journal version of record'&&pkt.source?.pdf_zero_index===4&&pkt.source?.equation==='(5)','primary source exact revision/location');
  for(const [name,p]of frozen)ok(parent[name]?.path===p&&parent[name]?.git_blob_sha===gitsha(p),'immutable pinned '+name);
  ok(SSC.items?.length===191&&GATE.current_lawful_state?.G1_authorized===false&&GATE.current_lawful_state?.G0_source_census_frozen===false,'current gate forbids descendants');
@@ -151,6 +151,9 @@ const baseline=verify(),errors=[...baseline],mutants=[
  ['erase exact source version',p=>{p.version_evidence_NOT_FROZEN.different_arxiv_revision='same as journal'}],
  ['try G1 promotion',p=>{p.G1_authorized=true}],
  ['try declaring theorem',p=>{p.primitive_or_theorem_qualification=true}],
+ ['try source complete',p=>{p.source_complete=true}],
+ ['try source census freeze',p=>{p.source_census_frozen=true}],
+ ['try external cold review',p=>{p.external_review_passed=true}],
  ['alter original O source cell',(_p,s)=>{s.basis_multiplication_tables.find(x=>x.carrier==='O').entries[6][7]='e2'}],
  ['alter unrelated original C cell',(_p,s)=>{s.basis_multiplication_tables.find(x=>x.carrier==='C').entries[1][1]='e0'}],
  ['W source import',p=>{p.source.scope='W-SSC-103'}]
