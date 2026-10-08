@@ -85,7 +85,7 @@ function verify(S=cur,L=source){
  const e=[],ck=(v,m)=>{if(!v)e.push(m)};
  ck(S.item_count===191&&S.items.length===191,'complete source census item count');
  ck(text(S.items.map(x=>x.id))===text(old.items.map(x=>x.id)),'source ids/order preserved');
- ck(S.status.includes('NOT_FROZEN')&&S.guards.source_census_freeze_complete===false&&S.guards.L132_replay_authorized===false,'no premature G0/G1/L132 promotion');
+ ck(S.status.includes('NOT_FROZEN')&&S.guards.source_census_freeze_complete===false&&S.guards.L_G1_source_reextraction_complete===false&&S.guards.L132_replay_authorized===false,'no premature G0/G1/L132 promotion');
  ck(S.revision?.predecessor_git_blob_sha===gitHash(files.prior),'correct predecessor source blob');
  ck(S.revision?.source_table_ledger_git_blob_sha===gitHash(files.ledger),'correct Eq1-5 ledger blob');
  ck(S.revision?.source_defect_audit_git_blob_sha===gitHash(files.defect),'defect provenance pinned');
