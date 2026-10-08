@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062-w097-source-census-conservation-defect.v0.3",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_SOURCE_CENSUS_CONSERVATION_REGRESSION_SUCCESSOR_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_5.json",
+    "git_blob_sha": "0c845ff40c1f5a4513ca52b65e8462013b4c1721"
+  },
+  "parent_defect_audit": {
+    "path": "experiments/062/W097_SOURCE_COMPLETENESS_DEFECT_AUDIT_0_2.json",
+    "git_blob_sha": "1c0dd9cc28af3dd2bfbedc83f04cdb03f97687cd"
+  },
+  "finding": "Adversarial source-conservation review of the 0.5 successor found that its expanded W097 body accidentally dropped two source-visible predecessor/W05 semantics: the explicit ordinary-versus-twistor contrast and the explicit antipodal characterization of rho_tw. W05 §2 also states the ordinary real-point locus as a circle/affine real line. These facts are preserved in the successor before any G1 consumer is allowed.",
+  "classification": [
+    "ASSERTION_CENSUS_CONSERVATION_REGRESSION",
+    "SOURCE_SCOPE_SHRINKAGE"
+  ],
+  "source_expansion": false,
+  "L_evidence_used": false,
+  "correction": {
+    "changed_body": "W-SSC-097 only",
+    "preserve": [
+      "real-structure map and square law",
+      "ordinary conjugation formula",
+      "ordinary real-point fixed-point definition",
+      "ordinary real-point circle/affine-real-line locus",
+      "explicit ordinary-versus-twistor contrast",
+      "rho_tw coordinate formulas",
+      "vector/projective square distinction",
+      "antipodal characterization",
+      "no projective fixed points",
+      "real conic equation/presentation",
+      "defined-over-R clause",
+      "complex-but-no-real-points clause"
+    ],
+    "corrected_body": "W05 defines a real structure on CP1 as an antiholomorphic map rho: CP1 -> CP1 with rho squared equal to 1. The ordinary real structure is complex conjugation rho([z1,z2])=[bar(z1),bar(z2)]; its real points are exactly the points fixed by rho, forming a circle in CP1 (the real line in the affine z coordinate). W05 explicitly contrasts this ordinary real structure with the twistor antipodal real structure rho_tw, defined by rho_tw([z1,z2])=[-bar(z2),bar(z1)] (equivalently rho_tw(z)=-1/bar(z)); on C2 coordinates rho_tw squared equals -1, while on projective points rho_tw squared equals 1, and on the sphere rho_tw is the antipodal map with no projective fixed points. W05 also presents the same twistor P1 as the real projective conic x^2+y^2+z^2=0 in projective two-space, defined over the real numbers, with complex points but no real points."
+  },
+  "invalidation": {
+    "SOURCE_SEMANTIC_CENSUS_0_5_current": false,
+    "SOURCE_DEMAND_CENSUS_0_4_current": false,
+    "W_CURRENT_STAGE_GATE_0_30_current": false,
+    "any_W_G1_built_from_0_5_authorized": false
+  },
+  "nonclaims": [
+    "This correction adds no new source.",
+    "No downstream W source instance is closed here.",
+    "No L evidence is used."
+  ],
+  "next_lawful_action": "Create W source semantic census 0.6 and source-demand corpus 0.5, verify exact assertion conservation, then begin G1 from that tuple."
+}
