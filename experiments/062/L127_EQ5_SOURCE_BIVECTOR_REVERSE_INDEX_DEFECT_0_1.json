@@ -1,0 +1,131 @@
+{
+  "schema": "isograph.exp062-l05-eq5-source-bivector-antisymmetry-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_FINITE_SOURCE_INTERNAL_EQ5_BIVECTOR_REVERSE_INDEX_COUNTEREXAMPLES_G0_OPEN",
+  "authority": false,
+  "authority_effect": "NONE_ADVERSARIAL_SOURCE_CONSISTENCY_EVIDENCE_ONLY",
+  "frozen_source": {
+    "source_id": "L05",
+    "source_revision": "2026-08-29, Division Algebras, Triality, and Exceptional Magic",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "location": "printed page 5 of 51 Eq.(5) immediately below source O/Oprime table Eq.(1)",
+    "source_expansion": false
+  },
+  "predecessors": {
+    "section2_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "source_discrepancy": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json",
+      "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+    },
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_10.json",
+      "git_blob_sha": "9b0637ffce4d47f422d33147c51f8ace4701e2c2"
+    },
+    "current_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_10.json",
+      "git_blob_sha": "8681806380cef69468357dfcee65532acbf91154"
+    }
+  },
+  "source_reconstruction": {
+    "table_operand_rule": "Rows index the left basis factor and columns index the right basis factor, preserving all six source-written signed multiplication tables; conjugation fixes e0 and negates all e_i with i>0.",
+    "Eq5_explicit_evaluation_order": "The source states e_d multiplies on the right FIRST before tilde(e_c) multiplies the result. The corresponding lower block applies tilde(e_d) on the right before e_c on the left.",
+    "upper_bivector_application": "UPPER(c,d,x)=left_multiply(tilde(e_c),left_multiply(e_d,x))",
+    "lower_bivector_application": "LOWER(c,d,x)=left_multiply(e_c,left_multiply(tilde(e_d),x))",
+    "reverse_index_claim": "gamma_(d c) = -gamma_(c d) for c!=d, printed after Eq.(5)",
+    "test_c_d_domain": "Distinct source basis indices c<d, and each source basis input e_x. The global +/- carrier-sign case is irrelevant to whether reverse-index sums are zero; no global Clifford theorem is imported.",
+    "operator_index_gap": "Exact Gamma/M-indexed matrix equivalence subexpressions of Eq.(5) remain independently UNEXTRACTED; this finite operator test is not a solution to that omission."
+  },
+  "finite_counterexample": {
+    "case": "ordinary O printed source table",
+    "ordered_source_basis_cases": 224,
+    "upper_reverse_index_failures": 12,
+    "lower_reverse_index_failures": 12,
+    "first_upper": {
+      "c": 1,
+      "d": 6,
+      "input_basis": 3,
+      "reverse_sum_coefficient": "+2*e2"
+    },
+    "first_lower": {
+      "c": 1,
+      "d": 6,
+      "input_basis": 3,
+      "reverse_sum_coefficient": "+2*e2"
+    },
+    "independent_historical_source_discrepancy_support": "both e6e7 and e7e6 are -e2 in printed source; source conjugation/product reversal is inconsistent"
+  },
+  "finite_positive_controls": [
+    {
+      "carrier": "C",
+      "basis_test_cases": 2,
+      "upper_failures": 0,
+      "lower_failures": 0
+    },
+    {
+      "carrier": "C_split",
+      "basis_test_cases": 2,
+      "upper_failures": 0,
+      "lower_failures": 0
+    },
+    {
+      "carrier": "H",
+      "basis_test_cases": 24,
+      "upper_failures": 0,
+      "lower_failures": 0
+    },
+    {
+      "carrier": "H_split",
+      "basis_test_cases": 24,
+      "upper_failures": 0,
+      "lower_failures": 0
+    },
+    {
+      "carrier": "O_split",
+      "basis_test_cases": 224,
+      "upper_failures": 0,
+      "lower_failures": 0
+    }
+  ],
+  "diagnostic_counterfactuals": [
+    {
+      "change": "ordinary O Eq1 row e6 column e7 -e2 -> +e2",
+      "status": "MATHEMATICAL_REPAIR_CANDIDATE_NOT_FROZEN_SOURCE",
+      "upper_failures": 0,
+      "lower_failures": 0,
+      "consequence": "Source consistency can be restored under this alternative but it changes the published assertion."
+    },
+    {
+      "change": "ordinary O Eq1 row e7 column e6 -e2 -> +e2",
+      "status": "REJECTED_SOURCE_NORMALIZATION_NOT_FROZEN_SOURCE",
+      "upper_failures": 22,
+      "lower_failures": 22,
+      "consequence": "This was the silent normalization in older 0.1 ledger; reverse-index failure is not fully repaired."
+    }
+  ],
+  "invalidation": {
+    "historical_name_based_L127_G7_not_requalified": false,
+    "source_claim_gamma_reverse_index_TRUE_not_licensed": true,
+    "new_G1_replay_authorized": false,
+    "current_SSC_0_10_frozen": false,
+    "L_primitive_schema_closure": false
+  },
+  "adversarial_control_contract": [
+    "Recompute both operator applications directly from current six frozen source tables, with fresh source-basis vectors and explicit right-first multiplication.",
+    "Check every c<d and every basis input, not selected examples alone.",
+    "Check exact 12/12 ordinary O discrepancy and zeros for other five source tables, retaining independent source oracle.",
+    "Detect both source-cell repairs as out-of-source mutations; do not conflate algebraic consistency with source fidelity.",
+    "Keep source Eq5 Γ/M-indexed equality and Cl02 reconstruction as distinct obligations.",
+    "Never interpret a source contradiction as a qualifying mathematical theorem or as permission to repair the source."
+  ],
+  "next_lawful_step": "Run deterministic and adversarial Node CI, preserve the source-inconsistency and Eq5 open-index obligation in G0. Continue exact original Eq5 Gamma/M-index transcription and complete all frozen L01–L06 SSC before G1.",
+  "nonclaims": [
+    "This finite counterexample does not prove or disprove all source propositions under arbitrary carriers.",
+    "No external verification passed.",
+    "No source literal changed.",
+    "No W evidence, unification or global module promotion used."
+  ]
+}
