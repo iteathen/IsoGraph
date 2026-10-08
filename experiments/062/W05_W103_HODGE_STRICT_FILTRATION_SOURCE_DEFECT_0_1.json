@@ -1,0 +1,84 @@
+{
+  "schema": "isograph.exp062-w05-w103-hodge-strict-filtration-source-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "CONFIRMED_SOURCE_CENSUS_BOUND_INDEX_POLARITY_DRIFT_AND_MISSING_HODGE_INTERSECTION_REOPEN_G0",
+  "authority": false,
+  "authority_effect": "SOURCE_FIDELITY_DIAGNOSTIC_INVALIDATES_W103_CURRENT_G0_CENSUS",
+  "branch_head_at_detection": "9dce4ec0dffe198cfac115fb6582cff623945e55",
+  "PR": 70,
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "frozen_source": {
+    "id": "W05",
+    "title": "Notes on the Twistor P1",
+    "frozen_revision": "arXiv:2202.02657v2",
+    "checked_author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "author_date": "2022-02-08",
+    "checked_location": "Section 5.2, printed page 7 (PDF page index 6), first display after mixed-Hodge nonclaim",
+    "source_identity_note": "Author PDF visually checked; byte identity with arXiv v2 not independently established."
+  },
+  "source_formulas": [
+    {
+      "id": "W103-FILTRATION",
+      "modality": "SOURCE_DISPLAYED_EQUALITY",
+      "exact": "F^p = ⨁_{i>p} H^q(M,Ω^i)",
+      "binder": "i",
+      "comparison": "STRICT_GREATER_THAN",
+      "right_scope": "H^q(M,Ω^i) with source-written q and Ω index i",
+      "antecedent": "Taking V=H^n(M,C) with usual real structure",
+      "source_display_vs_standard": "PRESERVE_AUTHOR_TEXT_NOT_TEXTBOOK_REPAIR"
+    },
+    {
+      "id": "W103-INTERSECTION",
+      "modality": "SOURCE_DISPLAYED_EQUALITY",
+      "exact": "H^{p,q}(M) = F^p ∩ conjugate(F^q)",
+      "op": "INTERSECTION",
+      "right_operand": "CONJUGATE_OF_Fq",
+      "antecedent": "Same source Hodge paragraph",
+      "source_scope": "source assertion; not imported general Hodge reconstruction theorem"
+    }
+  ],
+  "observed_mismatch": {
+    "current_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_10.json",
+      "git_blob_sha": "de9bfe271bdd094bbd93b786b38bd3936cc054ee"
+    },
+    "current_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_9.json",
+      "git_blob_sha": "aa47277aa590332b6c87f79f725297be9283c3bc"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_35.json",
+      "git_blob_sha": "8f1c9e2a26ee194a93dd17380c98e8234e5f81a7"
+    },
+    "old_phrase": "a later explanatory formula gives F^p as sums of H^q(M,Omega^i) for i at least p",
+    "error_type": "NON_STRICT_GE_BROADENING_VERSUS_SOURCE_STRICT_GT",
+    "omitted": "The same printed sentence also explicitly states H^{p,q}(M)=F^p intersect conjugate(F^q), a separate source relation absent from W103's 0.10 body.",
+    "scope_guard": "The historical unusual F^2=V terminal chain and F^p ⊕ conjugate(F^{n-p+1})=V remain source texts, not mathematical corrections. The new strict index cannot be silently converted to the conventional ≥."
+  },
+  "invalidation": {
+    "earliest_lawful_stage": "G0 source semantic assertion census W-SSC-103",
+    "SSC_0_10": "HISTORICAL_TARGET_MISMATCH_W103",
+    "SOURCE_DEMAND_0_9": "HISTORICAL_W103_PROJECTION_STALE_WHEN_SOURCE_CENSUS_CORRECTED",
+    "W_G1_0_31": "ALREADY_STALE_DUE_EARLIER_W05_G0_DEFECTS",
+    "W_G2_G7": "STILL_STALE_AND_UNAUTHORIZED",
+    "W109_W110": "REMAIN_OPEN_UNDER_PREVIOUS_DEFECTS; DO_NOT_CLOSE",
+    "qualified_manifest": "UNAFFECTED_NO_SEMANTIC_AUTHORITY_ADDED",
+    "cross_track": "W_ONLY_NO_L_SEMANTICS"
+  },
+  "repair_order": [
+    "Preserve the W103 defect and exact original author-pdf display; no source repair.",
+    "Versioned source SSC successor preserving all 151 identities and other 150 items, replacing only the mistaken ≥ text and separately exposing exact intersection source relation.",
+    "Create corresponding source-demand successor only after independently checked projection; maintain 86 W unresolved and 151 L untouched, no hash-only repair.",
+    "Add fail-closed verifier with strict/weak comparison mutation, bar/role swap, omission of intersection and negative/modality controls, plus unchanged predecessor checks.",
+    "Run deterministic local/CI qualification where available; keep W stage gate G0-only and downstream stopped.",
+    "Continue W05 and all frozen W source-unit cold source-conservation audit before G1."
+  ],
+  "nonclaims": [
+    "No claim source's Hodge formulas are mathematically consistent or conventional.",
+    "No silent correction of F^2=V terminal source rendering.",
+    "No third-party semantic review passed; owner bypass waives only external calls.",
+    "No W/L correspondence used.",
+    "No primitive/schema promotion or Recursive IA authorization."
+  ]
+}
