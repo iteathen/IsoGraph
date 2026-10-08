@@ -68,7 +68,7 @@ function evaluate(S=curr,C=demand,Q=ssc,A=adj){
    if(w.census_id!=='W-SSC-097')check(JSON.stringify(w)===JSON.stringify(pred.items[i]),'unchanged other 83 body G1 '+w.census_id);
  }
  const occs=target?.occurrences||[],o=n=>occs.find(x=>x.occurrence_id===id(n));
- const must=['complex lines in C2','a projective equivalence class of nonzero complex pairs','z=z1/z2','rho(z)=bar(z)','z=-1/bar(z)','|z|^2=-1','Gal(C/R)','x^2+y^2+z^2=0','no real points','on C2 coordinates rho_tw squared equals -1','on projective points rho_tw squared equals 1','forming a circle in CP1','the antipodal map','rho([z1,z2])=[z1,z2]','rho_tw([z1,z2])=[z1,z2]'];
+ const must=['complex lines in C2','an equivalence class of pairs of complex numbers','z=z1/z2','rho(z)=bar(z)','z=-1/bar(z)','|z|^2=-1','Gal(C/R)','x^2+y^2+z^2=0','no real points','on C2 coordinates rho_tw squared equals -1','on projective points rho_tw squared equals 1','forming a circle in CP1','the antipodal map','rho([z1,z2])=[z1,z2]','rho_tw([z1,z2])=[z1,z2]'];
  for(const term of must)check(body?.includes(term)&&occs.some(x=>x.source_span.includes(term)),'source-visible term missing in G1 '+term);
  const req=[25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57];
  for(const n of req)check(!!o(n),'new source and operator occurrence missing '+id(n));
