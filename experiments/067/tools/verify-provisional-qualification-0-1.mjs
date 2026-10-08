@@ -1,0 +1,13 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p)),blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex')};
+const e=[],c=(x,m)=>{if(!x)e.push(m)},Q=json('experiments/067/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json'),B=json('experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json');
+c(Q.status==='HYPOTHESIS_QUALIFIED_EMPTY_TYPED_PREDICATE_CAMPAIGN_LOCAL_OWNER_BYPASS','status');c(Q.primitive_id===221103,'primitive');c(B.status==='OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE','bypass');
+for(const rec of Object.values(Q.frozen_inputs||{}))c(rec.git_blob_sha===blob(rec.path),'pin '+rec.path);
+c(Q.provenance?.hypothesis?.git_blob_sha===blob('experiments/062/W_G5H_EMPTY_TYPED_PREDICATE_0_1.json'),'hypothesis pin');
+c(Q.deterministic_qualification?.workflow_run_id===37738690419&&Q.deterministic_qualification?.conclusion==='success','workflow');
+c(Q.deterministic_qualification?.fresh_positive_passes===3&&Q.deterministic_qualification?.fresh_adversarial_expected_rejections===2,'controls');
+c(Q.internal_scope_review?.hidden_domain_semantics_detected===false&&Q.internal_scope_review?.L_evidence_used===false,'scope');
+c(Q.external_verification?.complete===false&&Q.external_verification?.independently_verified===false,'external');
+c(Q.campaign_disposition?.W_may_consume_candidate===true&&Q.campaign_disposition?.L_may_consume_candidate===false,'routing');
+c(JSON.stringify(Q.campaign_disposition?.permitted_W_occurrences)===JSON.stringify(['W-SSC-097-O05']),'W scope');
+console.log(JSON.stringify({schema:'isograph.exp067-provisional-qualification-verifier.v0.1',pass:!e.length,errors:e,candidate:Q.candidate_id,W_G7_authorized:Q.campaign_disposition?.G7_authorized_for_explicit_dependencies_only,external_verified:false},null,2));if(e.length)process.exitCode=1;
