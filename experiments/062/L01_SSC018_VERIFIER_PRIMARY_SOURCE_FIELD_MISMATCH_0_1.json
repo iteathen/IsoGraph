@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-l01-ssc018-source-primary-field-baseline-fixture.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_VERIFIER_BASELINE_WRONG_PRIMARY_SOURCE_FIELD_NO_MUTATIONS_TESTED",
+  "workflow": {
+    "id": 37858044746,
+    "head_sha": "a5d98936aa1a57d4f7ac6e656e36cafb89019942",
+    "conclusion": "failure",
+    "baseline": "exact 2007 primary-source v1 and 8 identified defects",
+    "mutations_defined": 21,
+    "mutations_tested": 0
+  },
+  "source_verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l01-source-locators-ssc-0-18.mjs",
+    "git_blob_sha": "a3b84af059ceb2197384b7dbe9634d9ae3347d12"
+  },
+  "cause": "Defect audit packet records manuscript under primary_source.revision (arXiv:0711.0770v1, 2007-11-06), but verifier referenced absent D.source.revision. No source fact or actual printed equation target was wrong.",
+  "repair": "Use D.primary_source.revision exact journal/arxiv authority, preserve all hardcoded 8 Eq locator expected labels, source 30-item/31-page coverage, old 183 body conservation and no-op fail-closed mutation gate.",
+  "stage_effect": "G0 source-only, no G1, no IA, no source full-cold certification",
+  "external_review_passed": false
+}
