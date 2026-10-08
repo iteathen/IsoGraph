@@ -18,7 +18,21 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity audit and invalidation (2026-10-08)
 
-### Governing current source checkpoint: G0, SSC 0.12 / stage gate 0.12
+### Governing current source checkpoint: G0, SSC 0.13 / stage gate 0.14
+
+**Status: G0 OPEN / SSC NOT FROZEN / G1–G7 NOT AUTHORIZED.** The governing L procedural record is `experiments/062/L_CURRENT_STAGE_GATE_0_14.json`; its predecessor 0.13 and all earlier stage gates remain historical evidence. `SOURCE_SEMANTIC_CENSUS_0_13.json` contains **191 stable identities** and adds direct negative-source evidence only to **L-SSC-126**, conserving all **190** unrelated source items verbatim from 0.12.
+
+Independent hostile reconstruction of L05 §2's published ordinary-octonion table into both source versions of Γ/barΓ found a new source-level inconsistency: Eq. (2)'s `barGamma = Gamma^T` and coefficient-table definition differ in two entries (c=6, positions (2,7) and (7,2)). Eq. (3)'s negative-Clifford anticommutator then fails for **7 of 36** unordered generator pairs, at **28 entries** of the reconstructed 16×16 matrices. The direct-M and transpose variants independently show 7/28, while ordinary complex and quaternionic controls remain consistent. The earlier printed Eq.(1) octonionic double-negative cells are conserved unchanged; alternative one-cell repairs are **diagnostic only, never replacements for source text**. Audit: `experiments/062/L126_L05_EQ2_EQ3_OCTONION_CLIFFORD_SOURCE_CONTRADICTION_0_1.json`.
+
+The hostile mathematical checker passed **20 effective mutations** at run `37834203305`. The new SSC0.13 exact-provenance/190-body conservation checker passed **21 effective mutations** at run `37834466685`. Its earlier checker attempts `37833925600` and `37834051764` failed on witness-key fixture mismatches; neither evaluated adversarial mutations and both are preserved in the defect ledger.
+
+Separate G0–G7 hostility review `experiments/062/L_G0_TO_G7_HOSTILE_STAGE_PROVENANCE_AUDIT_0_1.json` traced the real historical stage chain: old G1 extraction 0.25, G2 occurrence graph, G3's **151 scoped bodies / 818 occurrences**, G4 and G5 old fixed points, G6 campaign-local hypothesis qualifications, and G7's **four-body** targeted replay. Its independent Node CI `37834981548` rejected **26/26** stage-provenance mutations. The latest procedural gate verifier `37835368480` rejected **18/18** further unauthorized-stage and stale-green-CI mutations. These passes establish defensive routing **only**, not full-source correctness, mathematical theorem validation, or current G-stage closure.
+
+The current counterexample directly affects source-asserted Clifford `L-SSC-126`, the dependent `L-SSC-127` bivectors, and the `L-SSC-133` `f4` use of Γ operators. The past G7 and provisional G6 results remain scoped historical evidence for their exact old authority tuples, not current L source authority. Third-party review is bypassed only by the owner's temporary external-call exception, never passed.
+
+**Next lawful step:** continue the exact independent G0 source audit of L05 §2 Eq.(5) Γ/M indexed operators, §4.1 split/Cartan roots, §4.2 alternate realizations and phases, §4.3 Eq.(17) onward, and the remainder of frozen L01–L06. Conserve source-negative evidence and reach a full source-local fixed point before any G1 replay, primitive closure, Recursive IA, Discovery or W/L comparison. PR #70 remains draft and unmerged.
+
+### Historical predecessor source checkpoint: G0, SSC 0.12 / stage gate 0.12
 
 `experiments/062/L_CURRENT_STAGE_GATE_0_12.json` supersedes gate 0.11 for L-only G0 source work. `SOURCE_SEMANTIC_CENSUS_0_12.json` retains **191/191 source identities**, changes only **L-SSC-133** from 0.11 and conserves the other **190 complete source items**; no freeze, G1 approval, SI promotion, Recursive IA, DP, Discovery or W/L synthesis follows.
 
