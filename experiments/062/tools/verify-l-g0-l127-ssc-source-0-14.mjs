@@ -23,7 +23,8 @@ function verify(c=now){
  ck(rev.source_census_frozen===false&&rev.G1_authorized===false&&rev.full_L01_L06_source_census_complete===false&&rev.entire_Eq5_source_consistency_and_theorem_complete===false,'no stale downstream promotion');
  ck(guard.section2_Eq5_index_transcribed_G0_candidate===true&&guard.section2_Eq5_index_complete===false&&guard.section2_Eq5_operator_math_theorem_qualified===false&&guard.section2_Eq5_printed_O_Lie_closure_inconsistent===true,'transcription != source-consistency closure');
  ck(guard.section2_Eq5_source_cold_audit_passed===false&&guard.source_census_freeze_complete===false&&guard.L127_Eq5_and_L133_f4_current_promotion_allowed===false&&guard.L_G1_source_reextraction_complete===false&&guard.recursive_IA_authorized===false,'source audit still open');
- ck(guard.cross_author_semantics_available===false&&!j(a).includes('W-SSC-'),'track firewall');
+ ck(Boolean(a),'L127 source item must exist');
+ ck(guard.cross_author_semantics_available===false&&!j(a??{}).includes('W-SSC-'),'track firewall');
  ck(r.packet?.path===P.source&&r.packet?.git_blob_sha===sha(P.source),'L127 exact packet pin');
  ck(j(r.upper)===j(src.eq5.upper)&&j(r.lower)===j(src.eq5.lower)&&j(r.binders)===j(src.index_semantics),'complete ordered Γ/M incidence and quantifier binders');
  ck(j(r.negative_source_tests)===j(src.observations_to_test)&&r.source_index_transcribed_G0_candidate===true&&r.source_math_claims_qualified===false&&r.G1_authorized===false,'source negative and source syntax only');
