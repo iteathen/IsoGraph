@@ -1,0 +1,36 @@
+{
+  "schema": "isograph.exp062-l01-real-spin-source-verifier-negative-authority-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_ADVERSARIAL_VERIFIER_TWO_SCOPED_AUTHORITY_GUARD_ESCAPES",
+  "failed_run": {
+    "id": 37858550146,
+    "head_sha": "b2e3c1822c4bdaa3fc9ae32a58ae9f986650766d",
+    "conclusion": "failure",
+    "math_baseline_result": "SL2(C) as real and SL2(R)xSL2(R) have centers 2 versus 4 and six-dimensional real Killing form inertia (3,3) versus (4,2), independently reconstructed in exact integer structure coefficients",
+    "mutations_defined": 21,
+    "mutations_rejected": 19,
+    "escaped_mutations": [
+      "claim source full cold review",
+      "claim author corrected source"
+    ]
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l01-spin-real-form-source-0-1.mjs",
+    "git_blob_sha": "eed9247c3592c360fe4cfbf88c0bed1d86e8412e"
+  },
+  "source_defect_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SPIN_REAL_GROUP_ISOMORPHISM_SOURCE_DEFECT_G0_0_1.json",
+    "git_blob_sha": "13bc77b555444f2e5395bed8035b2d4d80f7eece"
+  },
+  "violated_contract": "Fail-closed preservation of published-source literal assertion and unqualified full source formula audit. Source-negative proof of single real group equality does NOT qualify entire 31-page paper or authorize source correction.",
+  "cause": "Verifier checked exact group center, Killing matrix, source locator and G1, but failed to assert source_disposition.printed_author_claim_preserved_verbatim===true and qualification_boundary.source_31_page_VISUAL_audit_full_formula_closure===false.",
+  "minimum_causal_repair": "Add both two exact negative qualifiers, keep 21 non-no-op mutation definitions and require baseline pass before mutation credit. Rerun exact scope and record source/math result under G0 only.",
+  "repair_disposition": "VERIFIER_FIELD_GUARDS_REPAIR_NEEDED",
+  "discovery_disposition": "SINGLE_SOURCE_GROUP_EQUALITY_COUNTEREXAMPLE_SURVIVES_INDEPENDENT_OF_TEST_GUARD",
+  "source_version_frozen": "arXiv:0711.0770v1",
+  "W_source_imported": false,
+  "external_review_passed": false
+}
