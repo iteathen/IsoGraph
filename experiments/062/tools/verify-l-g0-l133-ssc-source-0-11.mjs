@@ -31,7 +31,7 @@ function verify(c=now){
  for(const cell of src.matrix_basis.entries.flat())ck(body.includes(cell),'Eq13 exact source matrix cell retained: '+cell);
  for(const x of src.brackets)ck(body.includes(x.id+': '+x.lhs+' = '+x.rhs),'Eq13 source formula reconstructed in body: '+x.id);
  ck(body.includes(src.eq14.reflection.output)&&body.includes(j(src.eq14.reflection.gR)),'Eq14 ordered output and signed gR');
- ck(body.includes('DO NOT themselves specify phases')&&body.includes('SOURCE ASSERTIONS')&&body.includes('G1 and descendant closure remain OPEN'),'negative phase/scope authority nonclaims');
+ ck(body.includes('do NOT themselves specify phases')&&body.includes('SOURCE ASSERTIONS')&&body.includes('G1 and descendant closure remain OPEN'),'negative phase/scope authority nonclaims');
  const other=n?.source_expression_census?.unexpanded_other_section4||[];
  ck(other.length===8&&other[3]?.id==='L4-OTHER-04'&&other[4]?.id==='L4-OTHER-05','all eight section4 role IDs still present');
  ck(other[3]?.status?.includes('G1_AND_RECONSTRUCTION_OPEN')&&other[4]?.behavior?.includes('do not fix root-vector phases')&&other[4]?.status?.includes('ROOT_PHASE_NONDETERMINATION'),'closed-only-source transcript, not math reduction');
@@ -40,7 +40,7 @@ function verify(c=now){
  ck(def.affected_id==='L-SSC-133'&&def.stage==='G0'&&def.authority===false,'defect retained');
  return errs;
 }
-const errors=verify();
+const baselineErrors=verify(),errors=[...baselineErrors];
 const muts=[];
 for(let i=0;i<15;i++)muts.push(['remove exact formula '+(i+1),c=>{c.items.find(x=>x.id==='L-SSC-133').source_expression_census.sp3_eq13_eq14_source.eq13_rows[i].rhs='MISSING'}]);
 muts.push(
@@ -54,9 +54,10 @@ muts.push(
  ['delete old SSC claim',c=>{c.items.find(x=>x.id==='L-SSC-127').body='discarded'}],
  ['G1 unauthorized',c=>{c.revision.G1_authorized=true}],
  ['root phase false source claim',c=>{c.items.find(x=>x.id==='L-SSC-133').source_expression_census.unexpanded_other_section4[4].behavior='exact root vector phases fully known'}],
- ['phase nonclaim lost',c=>{c.items.find(x=>x.id==='L-SSC-133').body=c.items.find(x=>x.id==='L-SSC-133').body.replace('DO NOT themselves specify phases','fully specify phases')}],
+ ['phase nonclaim lost',c=>{c.items.find(x=>x.id==='L-SSC-133').body=c.items.find(x=>x.id==='L-SSC-133').body.replace('do NOT themselves specify phases','fully specify phases')}],
  ['external verification fabricated',c=>{c.revision.finite_replay.external_verification_passed=true}]
 );
-for(const [name,change]of muts){const mutant=copy(now);change(mutant);if(verify(mutant).length===0)errors.push('mutation escaped: '+name);}
-const out={schema:'isograph.exp062-l-ssc011-source-fidelity-replay.v0.1',pass:errors.length===0,errors,source_items:191,unchanged_previous_source_items:190,changed_source_item:'L-SSC-133',eq13_bracket_rows:15,adversarial_mutations_rejected:muts.length,G1_authorized:false,external_verification_claimed:false};
+let rejections=0;
+if(!baselineErrors.length)for(const [name,change]of muts){const mutant=copy(now),before=j(mutant);change(mutant);if(j(mutant)===before)errors.push('mutation no-op: '+name);else if(verify(mutant).length===0)errors.push('mutation escaped: '+name);else rejections++;}
+const out={schema:'isograph.exp062-l-ssc011-source-fidelity-replay.v0.1',pass:errors.length===0,errors,source_items:191,unchanged_previous_source_items:190,changed_source_item:'L-SSC-133',eq13_bracket_rows:15,adversarial_mutations_rejected:rejections,adversarial_mutations_defined:muts.length,mutation_gate:baselineErrors.length?'UNTESTED_BASELINE_FAILURE':'TESTED',G1_authorized:false,external_verification_claimed:false};
 console.log(JSON.stringify(out,null,2));if(errors.length)process.exitCode=1;
