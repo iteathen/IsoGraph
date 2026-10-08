@@ -1,0 +1,122 @@
+{
+  "schema": "isograph.exp062-l127-g5h-metric-skew-endomorphism-lie.v0.2",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "25dbeb406c8a58480b653b44201f65d498e059e8",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L127_G3_CORE_DEFINABILITY_0_2.json",
+    "git_blob_sha": "39a07f8ab58a0705070de3beaba31e560914743e",
+    "family": "FULL_METRIC_SKEW_ENDOMORPHISM_LIE",
+    "occurrence_ids": [
+      "L-SSC-127-R06"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        183002
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        184003,
+        185002
+      ]
+    },
+    {
+      "path": "experiments/062/L126_G6_TYPED_ACTION_REVERSE_Q_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "38db5fb49657834f1f9a0830eb21f3e7f7e11c37",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        187200
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 184004,
+      "role": "Lie bracket: bilinear vector-valued product with antisymmetry and Jacobi identity",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "47397bc66824c9361e2b2930157efb62c185075d"
+    },
+    {
+      "id": 227000,
+      "role": "all-and-only metric-skew linear endomorphisms with faithful action and commutator bracket",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_FULL_METRIC_SKEW_ENDOMORPHISM_LIE_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "e3eae0163ffa4df3d88d1b641df6e5bcfb17639e"
+    }
+  ],
+  "candidate_statement": "Exact 184004/227000 form a source-neutral structural operator layer. 184004 is a Lie bracket defined by bilinearity, antisymmetry, and Jacobi. 227000 presents a Lie carrier whose faithful typed action consists exactly of all linear endomorphisms skew with respect to a nondegenerate symmetric form, and whose bracket action equals the endomorphism commutator.",
+  "declared_scope": {
+    "included": [
+      "bilinear Lie bracket",
+      "antisymmetry",
+      "Jacobi identity",
+      "metric-skew action condition",
+      "faithful/extensional operator identity by action",
+      "coverage of every metric-skew linear endomorphism",
+      "commutator realization of the bracket"
+    ],
+    "excluded": [
+      "dimension 28",
+      "so(8) name or classification",
+      "orthogonal group/Spin/Pin integration",
+      "exponential map",
+      "representation irreducibility",
+      "octonion-specific semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "L127 R06 is stated structurally as all and only metric-skew linear endomorphisms with commutator bracket.",
+    "227000 has an exact dependency surface over already qualified form/action/linear-map support plus unqualified 184004.",
+    "The so(8) name is unnecessary for the candidate semantics."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "desired unification",
+    "classification of skew endomorphism Lie algebras by dimension",
+    "historical L127 closure status"
+  ],
+  "predicted_consequences": [
+    "A zero bracket passes 184004; a symmetric bracket fails antisymmetry; an antisymmetric bilinear bracket with nonzero Jacobiator fails.",
+    "For V=F3^2 with dot form, the carrier a↦[[0,a],[-a,0]] contains exactly all metric-skew endomorphisms and has zero commutator bracket.",
+    "A non-skew action fails 227000.",
+    "A nonfaithful action fails 227000 even if each represented operator is skew.",
+    "A wrong bracket that disagrees with commutators fails 227000."
+  ],
+  "positive_controls": [
+    "zero Lie bracket",
+    "complete F3^2 metric-skew endomorphism model enumerating all 81 matrices"
+  ],
+  "negative_adversarial_controls": [
+    "symmetric non-Lie bracket",
+    "antisymmetric Jacobi-violating bracket",
+    "non-skew action",
+    "nonfaithful action",
+    "wrong commutator bracket"
+  ],
+  "falsifier": "Reject or split if selected definitions have hidden dependencies outside already qualified linear/form/action support plus 184004/227000; if the complete F3^2 model fails; if any adversarial model passes; or if dimension/name/group semantics are required.",
+  "adaptive_evidence": "Generated only after L127 G3 isolated structural metric-skew/commutator behavior.",
+  "fresh_confirmation_status": "PENDING_REPLAYED_G6_DETERMINISTIC_QUALIFICATION; external third-party review bypassed but not passed.",
+  "coverage_limits": "Only exact 184004/227000 at pinned bytes. No dimension-28 or so(8) classification claim.",
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA",
+  "predecessor": {
+    "path": "experiments/062/L127_G5H_METRIC_SKEW_ENDOMORPHISM_LIE_0_1.json",
+    "git_blob_sha": "ea0ef8c48b64efa49926a50344906fe9ae538f0c",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_G1_SI_COLLISION"
+  },
+  "replay_note": "Candidate statement, exact 184004/227000 definitions, controls, and scope are unchanged; this successor re-establishes provenance from corrected L127 G3."
+}
