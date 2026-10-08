@@ -1,0 +1,100 @@
+{
+  "schema": "isograph.exp062-l125-l127-l05-section2-source-formula-table-census-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_G0_FROZEN_L05_SECTION2_MULTIPLICATION_TABLE_AND_FORMULA_OMISSIONS",
+  "track": "L",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "earliest_lawful_reopen": "G0_SOURCE_SEMANTIC_CENSUS",
+  "frozen_source": {
+    "source_id": "L05",
+    "title": "Division Algebras, Triality, and Exceptional Magic",
+    "doi": "10.1007/s00006-026-01447-5",
+    "revision": "published 2026-08-29",
+    "locator": "§2 printed pages 3–5, Eq.(1) through Eq.(5)",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "source_expansion": false
+  },
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_6.json",
+    "git_blob_sha": "a41f5258a63886a4ec3bf7e216e628ae2c4a51c3",
+    "local_G0_status": "CANDIDATE_NOT_FROZEN"
+  },
+  "findings": [
+    {
+      "id": "L125-TABLE-COMPLETENESS",
+      "census_id": "L-SSC-125",
+      "severity": "LOAD_BEARING_ASSERTION_CENSUS_OMISSION",
+      "source": "Explicit signed basis multiplication tables for C, split C', H, split H', O, split O' at Eq.(1), including 2x2,4x4,8x8 row/column ordered entries",
+      "old_census_loss": "Mentions 'multiplication tables' but cannot reconstruct a single table's complete signed entries or split contrast."
+    },
+    {
+      "id": "L125-CONJ-METRIC-OPERATORS",
+      "census_id": "L-SSC-125",
+      "severity": "LOAD_BEARING_SOURCE_OPERATOR_OMISSION",
+      "source": "tilde(e0)=e0=1, tilde(e_i)=-e_i; e_a e_b=M_ab^c e_c; n_ab=1/2(tilde(ea) eb+tilde(eb) ea), n_ab=delta_ab for usual, split signs for split; tilde(ea eb)=tilde eb tilde ea and corresponding M coefficient identity",
+      "old_census_loss": "Defines these roles by nouns without their printed formula incidence."
+    },
+    {
+      "id": "L126-CLIFFORD-CHIRAL-MATRIX",
+      "census_id": "L-SSC-126",
+      "severity": "EXPLICIT_FORMULA_OMISSION",
+      "source": "Eq.(2) gamma_c = chiral 2x2 block [0,±tilde ec; ec,0] ~ [0,±barGamma_c;Gamma_c,0]=[0,±M_tildec_tildeb^a;M_ca^tildeb,0], Psi=[psi;tildechi] ~ typed Q^-/Q^+ columns",
+      "old_census_loss": "Does not conserve two block forms, division-to-Clifford correspondence and exact position of split sign."
+    },
+    {
+      "id": "L126-SIGNATURE-TRANSPOSE-CLIFFORD-IDENTITY",
+      "census_id": "L-SSC-126",
+      "severity": "EXPLICIT_FORMULA_OMISSION",
+      "source": "barGamma_c=n_cc Gamma_c^T and Gamma_c^b_a=M_ca^tildeb; Eq.(3) gamma_a dot gamma_b=1/2(gamma_a gamma_b+gamma_b gamma_a)=±n_ab=eta_ab with block structure; Eq.(4) complete cyclic coefficient equalities",
+      "old_census_loss": "Names adjusted transpose/cyclic identity, not exact operator and index dependencies."
+    },
+    {
+      "id": "L127-BIVECTOR-PRODUCT-ORDER",
+      "census_id": "L-SSC-127",
+      "severity": "NONASSOCIATIVE_ORDER_AND_QUANTIFIER_OMISSION",
+      "source": "Eq.(5) 1/2 n(n−1) gamma_cd for c<d from bi-products, ed acts to right BEFORE tilde ec, reverse gamma_dc = −gamma_cd and ec tilde(ed) = -ed tilde(ec), B=1/2 B^cd gamma_cd",
+      "old_census_loss": "Names octonion nonassociativity and a 28-dimensional span but omits the source-defined operation ordering and coefficient equations."
+    },
+    {
+      "id": "L127-REPRESENTATION-EXAMPLE",
+      "census_id": "L-SSC-127",
+      "severity": "EXPLICIT_EXAMPLE_OMISSION",
+      "source": "Printed Cl(0,2) example from complex multiplication coefficients, explicit Gamma0/Gamma1 and gamma0/gamma1 plus Q^- and Q^+ basis matrix representatives; source SO(2),SO(4),SO(8) contrast 1,6,28",
+      "old_census_loss": "Can reconstruct high-level rank contrast but not the exact example and its signs."
+    }
+  ],
+  "scope": {
+    "candidate_repair_items": [
+      "L-SSC-125",
+      "L-SSC-126",
+      "L-SSC-127"
+    ],
+    "preserve": [
+      "L-SSC-128",
+      "L-SSC-129",
+      "L-SSC-130",
+      "L-SSC-131",
+      "L-SSC-132"
+    ],
+    "unmodified_frozen_L01_L04": true,
+    "no_W_semantics_used": true
+  },
+  "control_requirements": [
+    "Every table cell indexed by ordered row, column and signed output; preserve distinction between ordinary and split carrier.",
+    "A flipped sign or swapped operand in O/O' must be independently detected.",
+    "Scalar signature and source Clifford '±' remain scoped to source cases rather than imported conventions.",
+    "No implicit associativity of octonions; preserve source right-multiplication-before-left-multiplication order.",
+    "Preserve gamma_cd antisymmetry as source claim without assuming general commutator Lie laws.",
+    "Continue source audit across remaining L05 and L01–L06 before any 191-item SSC-completeness claim."
+  ],
+  "invalidation": {
+    "SSC_0_6_global_source_complete": false,
+    "L_current_stage_gate_0_4_superseded_for_known_source_gap": true,
+    "L_G1_before_successor_current": false,
+    "L_G2_to_G7_current": false,
+    "global_L_recursive_IA_authorized": false,
+    "L132_L133_replay_authorized": false
+  },
+  "next_lawful_action": "Construct source-verbatim L05 §2 signed table and operator ledger under L provenance; append exact obligations to successor SSC only after checking signs/index scope; run strong adverse cases, keep G0 open; only after full frozen source scope passes can rebuild L G1."
+}
