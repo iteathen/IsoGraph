@@ -53,6 +53,7 @@ function check(m=manifest){
  ck(m.source_census_git_blob_sha===observed.get(L+'SOURCE_SEMANTIC_CENSUS_0_15.json')?.sha&&m.source_census===L+'SOURCE_SEMANTIC_CENSUS_0_15.json','exact current L source blob reference');
  ck(m.current_gate==='experiments/062/L_CURRENT_STAGE_GATE_0_16.json'&&gate.current_lawful_state?.G1_authorized===false&&gate.current_lawful_state?.G0_source_census_frozen===false,'current L G0 gate only');
  ck(m.PR===70&&m.branch==='research/woit-lisi-isomorph-20261003','branch ownership');
+ ck(m.rules?.primary_source==='Frozen L01-L06 revisions in research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md; no parallel W facts or hypotheses as source L premises.','strict L-only source firewall');
  ck(m.rules?.external_bypass?.includes('no external test is passed')&&m.audit_deficit?.source_traversal_fixed_point==='NOT_ESTABLISHED_FOR_CURRENT_SSC0.15','explicit source and review deficit');
  ck(j(m.rules?.excluded_from_own_manifest)===j([manifestPath,verifierPath,workflowPath]),'self-reference exclusions exactly pinned');
  ck(m.directories?.length===5&&j(m.directories.map(x=>x.label))===j(['L_RESEARCH','SHARED_SUPPORT','L_CAMPAIGN','L_TOOLS','L_WORKFLOWS']),'all five required research and workflow surfaces');
