@@ -17,9 +17,19 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity audit and invalidation (2026-10-08)
 
-### Governing current source checkpoint: G0, SSC 0.11 / stage gate 0.11
+### Governing current source checkpoint: G0, SSC 0.12 / stage gate 0.12
 
-`experiments/062/L_CURRENT_STAGE_GATE_0_11.json` now governs this L-only lane. `SOURCE_SEMANTIC_CENSUS_0_11.json` is a 191-ID **UNFROZEN, SOURCE-INCOMPLETE G0 candidate**. Its one changed body is L-SSC-133; the other 190 full predecessor items are exactly conserved. No historical G1–G7, IA, DP, cross-track or primitive qualification is restored.
+`experiments/062/L_CURRENT_STAGE_GATE_0_12.json` supersedes gate 0.11 for L-only G0 source work. `SOURCE_SEMANTIC_CENSUS_0_12.json` retains **191/191 source identities**, changes only **L-SSC-133** from 0.11 and conserves the other **190 complete source items**; no freeze, G1 approval, SI promotion, Recursive IA, DP, Discovery or W/L synthesis follows.
+
+L05 §4.3 Eq.(15)/(16) is now transcribed in `LISI_L05_F4_EQ15_EQ16_SOURCE_G0_0_1.json`: Eq.(15) is a **compositional octonionic bi-product representation**, not a naive associative `su(3,O)` matrix Lie identity, with right-first octonion multiplication. Eq.(16) has **10 exact bracket families**, and the paper separately gives **three split `f4(4)` sign rows**. The `∓` sign branches for ordinary `f4(-52)` and `f4(-20)` are distinct from split `f4(4)` with metric `diag(++++----)`. The author's equality-of-metrics requirement for triality is conditional source modality. The printed ordinary-O contradictory table and Eq.(5) Γ/M gaps remain unresolved; **no finite octonion Lie-algebra mathematics was tested or claimed**.
+
+G0 exact source packet CI `37825594872` passed ten Eq.(16) rows, three split rows and **26/26 effective mutation controls**. SSC 0.12 CI `37825937865` passed exact 191-ID/190-body conservation with **26/26 effective mutations**, retaining the previous Eq.(13)/(14) source checkpoint. Stage gate0.12 integrity CI `37826248923` passed all mandatory source replay and procedural checks. Earlier 0.11 CI and the two recorded failed verifier fixtures remain historical evidence; the owner bypass still exempts only outside reviewer calls.
+
+L05 §4.3 **Eq.(17) onward**, the full ordered octonion operator/triality, reflection and phase rules, and all source coverage beyond these two pages remain open. So do L05 §2 Eq.(5), §4.1 root/split, §4.2 alternate realizations and t orientation, and the complete L01–L06 assertion census. The only lawful next steps remain G0 source-accurate conservation and independent adversarial replay; no G1–G7 descendant may be reused as current authority.
+
+### Historical predecessor source checkpoint: G0, SSC 0.11 / stage gate 0.11
+
+`experiments/062/L_CURRENT_STAGE_GATE_0_11.json` governed this historical L-only checkpoint. `SOURCE_SEMANTIC_CENSUS_0_11.json` is a 191-ID **UNFROZEN, SOURCE-INCOMPLETE G0 candidate**. Its one changed body is L-SSC-133; the other 190 full predecessor items are exactly conserved. No historical G1–G7, IA, DP, cross-track or primitive qualification is restored.
 
 New L05 §4.2 ordinary-quaternion source packet `LISI_L05_SP3_EQ13_EQ14_SOURCE_G0_0_1.json` records all 15 ordered Eq. (13) bracket families (A,B,C imaginary indices 1..3, a,b,c full indices 0..3), the separately Killing-normalized 1/sqrt(2) 3x3 basis, and Eq. (14)'s signed matrix-reflection action. The phase observation is **negative**: the printed root/Cartan reflection by itself does not fix root-vector phases. `experiments/062/L05_SP3_EQ14_ROOT_PHASE_SOURCE_FIDELITY_DEFECT_0_1.json` preserves a historical occurrence's erroneous conflation of conjugation with completed root phases.
 
