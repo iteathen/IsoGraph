@@ -11,7 +11,7 @@ function audit(g=G){
  check(g.current_source_census?.path===paths.ssc&&g.current_source_census?.git_blob_sha===sha(paths.ssc),'SSC0.15 exact source SHA');
  check(S.item_count===191&&S.items.length===191&&g.current_source_census?.source_identities===191&&g.current_source_census?.unchanged_from_predecessor===190&&j(g.current_source_census?.changed_from_predecessor)===j(['L-SSC-126']),'191 IDs with one L126 body revised');
  check(g.current_source_census?.frozen===false&&g.current_source_census?.source_complete===false&&S.guards.source_census_freeze_complete===false,'G0 still incomplete');
- check(a.path===paths.source&&a.git_blob_sha===sha(paths.source)&&a.four_exact_M_expressions_transcribed===true,'frozen Eq4 source packet');
+ check(a.path===paths.source&&a.git_blob_sha===sha(paths.source)&&a.four_exact_M_expressions_transcribed===true&&a.frozen_source==='L05 published 2026-08-29 journal §2 Eq4 printed p4','frozen Eq4 source packet, date and modality');
  check(a.source_four_M_control_C===8&&a.source_four_M_control_H===64&&a.source_ordinary_O_triples===512&&a.source_ordinary_O_counterexamples===4,'exact ordinary source domain');
  for(const k of ['split_index_lowering_tested','source_Gamma_lowered_four_members_tested','source_whole_Eq4_eight_members_closed','mathematical_theorem_qualified'])check(a[k]===false,'do not promote unknown '+k);
  check(a.source_article_unmodified===true&&P.finite_evidence?.ordinary_O?.counterexamples?.length===4,'source under real printed O');
