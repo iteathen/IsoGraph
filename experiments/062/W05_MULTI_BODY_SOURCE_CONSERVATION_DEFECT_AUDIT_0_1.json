@@ -1,0 +1,118 @@
+{
+  "schema": "isograph.exp062-w05-multi-body-source-conservation-defect-audit.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_FROZEN_W05_MULTI_BODY_SOURCE_CENSUS_OMISSIONS_REOPEN_G0",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "frozen_source": {
+    "source_id": "W05",
+    "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "revision": "arXiv:2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "observed": "author PDF printed pp.3-5, §§2-4 (2022-02-08). arXiv PDF byte equivalence not independently verified. No new source or scope expansion."
+  },
+  "predecessor": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_8.json",
+      "git_blob_sha": "b0a87489b1c04fcfc2a191d42964648d6e686ef0"
+    },
+    "demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_7.json",
+      "git_blob_sha": "a6cb48c82e5fa72a5820e01da80711eaf96ac2d0"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_33.json",
+      "git_blob_sha": "950b063d47c42dfe70db0b8cf504c59d7f428519"
+    },
+    "G1": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_31.json",
+      "git_blob_sha": "a87da9d8de2a68fdf60df6c32ddfb5f5e4b4376e"
+    }
+  },
+  "findings": [
+    {
+      "id": "W05-098-A",
+      "census_id": "W-SSC-098",
+      "source": "quaternion-to-C2 identification x0+x1i+x2j+x3k <-> (x0+x1i,x2+x3i), q=z1+z2j, j(z1+z2j)=-bar(z2)+bar(z1)j with source intermediate multiplication steps",
+      "defect": "The W098 body names multiplication by j but omits exact coordinate-map and anti-conjugate multiplication formulas."
+    },
+    {
+      "id": "W05-099-A",
+      "census_id": "W-SSC-099",
+      "source": "CP3 ordinary real map rho([z1,z2,z3,z4])=[bar(z1),bar(z2),bar(z3),bar(z4)]; twistor rho_tw([z1,z2,z3,z4])=[-bar(z2),bar(z1),-bar(z4),bar(z3)]; ordinary real-point locus RP3 of real dimension 3; no rho_tw real points but invariant twistor P1 real lines",
+      "defect": "W099 omits exact CP3 real-structure formulas, usual-real RP3 locus and fixed-real-line scope separation."
+    },
+    {
+      "id": "W05-099-B",
+      "census_id": "W-SSC-099",
+      "source": "HP1 homogeneous quaternion classes [q1,q2], ordered affine quotient q=(q2)^-1 q1, H chart excluding [q1,0], map pi:[z1,z2,z3,z4] in CP3 -> [z1+z2j,z3+z4j] in HP1, quaternionic-line fibers over HP1=S4",
+      "defect": "W099 names fibration/family but omits source's quotient order, exact map, chart and fiber incidence."
+    },
+    {
+      "id": "W05-100-A",
+      "census_id": "W-SSC-100",
+      "source": "only two inequivalent real structures rho and rho_tw on CP3; Minkowski PT reality does not act on PT but maps PT to dual PT*, interchanging chiral spinor roles",
+      "defect": "W100 conserves the Minkowski contrast but omits explicit two-inequivalent-CP3-real-structures claim."
+    },
+    {
+      "id": "W05-100-B",
+      "census_id": "W-SSC-100",
+      "source": "SL(2,C) induces CP1 conformal action from C2, noncommuting with its real structure; SL(2,H)=Spin(5,1) acts on CP3 from H2, again noncommuting",
+      "defect": "Explicit action/noncommutation, conformal-role and group-representation semantics absent from W100 body (and not stated with these operators elsewhere in census)."
+    },
+    {
+      "id": "W05-101-A",
+      "census_id": "W-SSC-101",
+      "source": "unit imaginary quaternion x1i+x2j+x3k with x unit parametrizes orthogonal complex structures; R4 x CP1 -> CP1 projection on second factor; real structure identity on R4 and rho_tw on CP1",
+      "defect": "W101 omits the parameter formula, projection role and factorwise real-structure identity."
+    },
+    {
+      "id": "W05-101-B",
+      "census_id": "W-SSC-101",
+      "source": "pi holomorphic for the stated fiberwise complex structure; holomorphic fibration O(1) direct-sum O(1); Pauli matrices x1sigma1+x2sigma2+x3sigma3, +1 eigenspace above x acting on C2 gives O(1), two copies yield O(1)+O(1), R4≈C+C=C2; quaternionic dimension d gives 2d O(1) copies",
+      "defect": "The W101 summary names O(1) copies but elides source's Pauli/eigenspace generating construction and explicit projection holomorphy."
+    },
+    {
+      "id": "W05-101-C",
+      "census_id": "W-SSC-101",
+      "source": "self-dual Yang-Mills solutions on S4 correspond to holomorphic structures on bundles over CP3; extension to self-dual Einstein solutions via Penrose nonlinear graviton",
+      "defect": "W101 omits source-stated correspondence/extension."
+    }
+  ],
+  "scope": {
+    "affected_W_semantic_bodies": [
+      "W-SSC-098",
+      "W-SSC-099",
+      "W-SSC-100",
+      "W-SSC-101"
+    ],
+    "source_expansion": false,
+    "L_semantics_used": false,
+    "other_W_items_not_evaluated_for_this_audit": true
+  },
+  "impact": {
+    "ssc_0_8_source_complete": false,
+    "demand_0_7_current": false,
+    "gate_0_33_current": false,
+    "G1_0_31_current": false,
+    "all_W_G2_G3_G4_G5_G5H_G7_instances_current": false,
+    "generic_source_neutral_qualification_changed": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false
+  },
+  "process": [
+    "Stop G1 advancement and downstream propagation.",
+    "Correct frozen W05 source census directly against §2-4 for W098-W101, preserving already corrected W097.",
+    "Continue W05 source sweep for additional defects before claiming complete G0.",
+    "Generate new source-demand corpus, invalidate/rebuild all affected W bodies and downstream G chain only after G0 source conservation.",
+    "No cross-track or L evidence."
+  ],
+  "nonclaims": [
+    "This audit does not certify the remaining W05 §5-7 source items complete.",
+    "CI success for G1 0.31 is mechanical evidence for its old tuple only.",
+    "Third-party semantic/cold verification has not passed."
+  ],
+  "next_lawful_action": "Reopen W05 source G0, repair W098-W101 source semantics and audit remaining W05 source sections before any current G1 fixed-point/routing."
+}
