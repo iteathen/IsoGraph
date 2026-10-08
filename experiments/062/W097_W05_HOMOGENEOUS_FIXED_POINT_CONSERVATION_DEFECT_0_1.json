@@ -1,0 +1,78 @@
+{
+  "schema": "isograph.exp062-w097-w05-homogeneous-fixedpoint-conservation-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "CONFIRMED_FROZEN_W05_HOMOGENEOUS_FIXED_POINT_EQUATION_OMISSION_AND_NONLITERAL_STRENGTHENING_G0_REOPEN",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "source": {
+    "id": "W05",
+    "locator": "Notes on the Twistor P1 §2, printed pp.2-3",
+    "frozen_reference": "arXiv:2202.02657v2",
+    "reviewed_primary_publication": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "review_type": "AUTHOR_PDF_DIRECT_PAGE_IMAGE_READ",
+    "source_expansion": false
+  },
+  "predecessor": {
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_7.json",
+      "git_blob_sha": "80d385ca61e4f8479cfc609ffe23c81cb5a7d23a"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_6.json",
+      "git_blob_sha": "0eec499667552803359057c2dff8e4a5e014fdca"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_32.json",
+      "git_blob_sha": "05cb4abc6f72ec9698d5529728bd58c1b9fdacc4"
+    },
+    "last_G1": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_28.json",
+      "git_blob_sha": "84bb0b2239deb625800fb94b5a248f59d7bee049"
+    }
+  },
+  "findings": [
+    {
+      "id": "W097-FIX-01",
+      "category": "SOURCE_FIXEDPOINT_EQUATION_OMISSION",
+      "source": "The source explicitly writes rho([z1,z2])=[z1,z2] as the ordinary real-point fixed-point criterion.",
+      "hazard": "An abstract 'fixed by rho' noun phrase cannot reconstruct exact homogeneous-map equality."
+    },
+    {
+      "id": "W097-FIX-02",
+      "category": "NEGATED_FIXEDPOINT_EQUATION_OMISSION",
+      "source": "The source explicitly prints rho_tw([z1,z2])=[z1,z2] under its claim that no point satisfies it, then supplies affine contradiction z=-1/bar(z) => |z|^2=-1.",
+      "hazard": "Do not promote a hypothetical/equality formula into a positive fixed-point existence assertion."
+    },
+    {
+      "id": "W097-FIX-03",
+      "category": "SOURCE_NONLITERAL_STRENGTHENING",
+      "source": "W05 says homogeneous coordinate points are equivalence classes of pairs of complex numbers.",
+      "current_census": "projective equivalence class of nonzero complex pairs",
+      "hazard": "The 'nonzero' representer constraint is projective mathematical convention; it is not independently source-stated in the cited phrase."
+    }
+  ],
+  "repair_scope": {
+    "modified_W_semantic_bodies": [
+      "W-SSC-097"
+    ],
+    "other_W_source_bodies_unchanged": 150,
+    "other_W_demand_bodies_unchanged": 83,
+    "source_expansion": false,
+    "L_evidence_used": false
+  },
+  "required_actions": [
+    "Replace nonliteral 'nonzero complex pairs' with source-written 'pairs of complex numbers' in W097, without asserting a zero pair is an admissible coordinate.",
+    "Restore the ordinary homogeneous fixed-point equality and explicitly NEGATED twistor homogeneous fixed-point equality, including the scope distinction.",
+    "Repin source-demand tuple; invalidate current G1 and every W descendant.",
+    "Reextract all W097 G1 spans affected by source wording and both homogeneous equations.",
+    "Adversarially check no fixed-point existence, no involution->fixedpointfree dependency, no imported projective convention."
+  ],
+  "nonclaims": [
+    "This is not external semantic verification.",
+    "No downstream primitive or W G7 source instance is qualified.",
+    "No L or desired cross-track comparison evidence is used."
+  ],
+  "next_lawful_action": "Add corrected W source census 0.8, demand 0.7, gate 0.33, then re-extract W097 G1 and repeat zero-change before any G2 replay."
+}
