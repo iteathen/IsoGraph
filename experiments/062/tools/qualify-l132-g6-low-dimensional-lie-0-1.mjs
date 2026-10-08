@@ -9,8 +9,17 @@ check(S.obligations?.length===32,'SSC');
 check(IA.fixed_point?.reached===true&&IA.fixed_point?.admitted_implicit_assertions===10&&IA.fixed_point?.unresolved_ia_obligations===0,'IA');
 for(const q of [M,FV,LB])check(q.status==='HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS','dep status');
 check(By.status==='OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE','bypass');
-function topBlocks(s){const out=[];let d=0,st=-1;for(let i=0;i<s.length;i++){if(s[i]==='['){if(d===0)st=i;d++;}else if(s[i]===']'){d--;if(d===0&&st>=0){out.push(s.slice(st,i+1));st=-1;}}}return out;}
-function defBlock(path,id){const hits=topBlocks(read(path)).filter(b=>new RegExp('\\(\\^150005\\s+\\(\\^150010\\s+'+id+'(?:\\s|\\))').test(b));if(hits.length!==1)throw new Error('definition block '+id+' count '+hits.length);return hits[0];}
+function defBlock(path,id){
+ const s=read(path),marker='(^150005 (^150010 '+id;
+ const start=s.indexOf(marker);
+ if(start<0)throw new Error('definition start missing '+id);
+ let d=0;
+ for(let i=start;i<s.length;i++){
+  if(s[i]==='(')d++;
+  else if(s[i]===')'){d--;if(d===0)return s.slice(start,i+1);}
+ }
+ throw new Error('definition expression unterminated '+id);
+}
 const allowed={
  184008:new Set([183002,184004,184008]),
  184009:new Set([184008,184009]),
