@@ -1,0 +1,100 @@
+{
+  "schema": "isograph.exp062-l127-quaternion-presentation-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "QUATERNION_PRESENTATION_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L127_G5H_QUATERNION_PRESENTATION_0_1.json",
+    "git_blob_sha": "4991cd9594531dda75d8db1543a5e7c036097803"
+  },
+  "scope": {
+    "obligation_count": 11,
+    "selected_relation_ids": [
+      193100
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "QP-SSC-001",
+      "kind": "ASSOCIATIVE_PARENT",
+      "body": "193100 requires exact 185001 associative algebra support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-002",
+      "kind": "FOUR_BASIS_PARENT",
+      "body": "193100 requires exact 187601 four-basis support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-003",
+      "kind": "ANTIINVOLUTION_PARENT",
+      "body": "193100 requires exact 188000 anti-involution support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-004",
+      "kind": "CHARACTERISTIC_GUARD",
+      "body": "193100 requires ONE+ONE != ZERO.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-005",
+      "kind": "UNIT_PRODUCTS",
+      "body": "UNIT multiplies each basis element to itself on both sides.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-006",
+      "kind": "SQUARES",
+      "body": "I^2=J^2=K^2=-UNIT.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-007",
+      "kind": "POSITIVE_CYCLE",
+      "body": "IJ=K, JK=I, KI=J.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-008",
+      "kind": "REVERSED_PRODUCTS",
+      "body": "JI=-K, KJ=-I, IK=-J.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-009",
+      "kind": "CONJUGATION_UNIT",
+      "body": "KAPPA(UNIT)=UNIT.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-010",
+      "kind": "CONJUGATION_IMAGINARY",
+      "body": "KAPPA(I/J/K) equals the corresponding additive negative.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "QP-SSC-011",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No division, norm/positivity, classification, octonion, operator/Lie, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "full F3^4 standard quaternion presentation"
+    ],
+    "adversarial": [
+      "F2 characteristic-two",
+      "wrong JI sign",
+      "wrong KAPPA(I)",
+      "duplicate basis"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
