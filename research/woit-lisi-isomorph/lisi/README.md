@@ -17,9 +17,22 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity audit and invalidation (2026-10-08)
 
-### Current 0.7 source-census candidate and G0 gate
+### Governing current source checkpoint: G0, SSC 0.10 / stage gate 0.10
 
-The controlling procedural gate is `experiments/062/L_CURRENT_STAGE_GATE_0_8.json`. The latest unqualified **NOT FROZEN** source-census candidate is `SOURCE_SEMANTIC_CENSUS_0_7.json`; no G1-G7 replay, source-track Recursive IA or unification is authorized.
+`experiments/062/L_CURRENT_STAGE_GATE_0_10.json` controls the L lane. `SOURCE_SEMANTIC_CENSUS_0_10.json` is the newest 191-item **source-census candidate, not frozen or qualified**. It preserves all eight previously corrected L125–L132 source items and adds explicit L133 §4 source equations, changing exactly one body from SSC 0.9. Full source Assertion Census Conservation, primitive/schema closure, global source-track G1–G7, Recursive IA, Discovery Protocol, and any W/L comparison remain unauthorized.
+
+The direct frozen L05 Eq.(1) source check identified a severe source-fidelity failure in the earlier signed table ledger: the printed ordinary-octonion table has **both** `e6 e7=-e2` and `e7 e6=-e2`, although its conjugation-reversal axiom conflicts with that pair. `LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json` silently replaced the second with `+e2`, and the old green CI oracle repeated that mathematical normalization. `...LEDGER_0_2.json` restores the exact printed two-negative-cell source, preserves the inconsistency and previous negative witnesses, retains the other 167 table entries and 15 formula rows, and makes no mathematical repair. `SOURCE_SEMANTIC_CENSUS_0_8.json` attaches corrected source provenance. Source-literal test run **37813728562** passed 168 cell assertions and 25 adversarial controls. Earlier CI run **37807515374** is historical, not source-completeness authority.
+
+The printed L05 §2 `Cl(0,2)` worked example is now conserved explicitly in `LISI_L05_CL02_WORKED_EXAMPLE_SOURCE_MATRICES_0_1.json` with its two `Gamma` 2×2 matrices, two chiral `gamma` 4×4 matrices and four typed basis spinors. Exact finite reconstruction and 17 adversarial controls passed in GitHub Actions run **37814117693**. `SOURCE_SEMANTIC_CENSUS_0_9.json` carries that single L127 addition with the other 190 identities unchanged; run **37814407801** verified this replay and 11 additional source-census mutations. This does not qualify general Clifford identities. L05 §2 Eq.(5) full `Gamma/M` source-index presentation remains open.
+
+L05 §4/L133 was independently reopened because historical `L133_G1_SOURCE_INCIDENCE_0_1.json` and `L133_G3_CORE_DEFINABILITY_0_1.json` did not reconstruct printed formulas. SSC **0.10** now includes six ordinary/split labelled decompositions, the su(3) and sp(3) exact 3×3 source matrices, 5+6 component commutator equations, and 13+3 explicit su(3) basis-bracket rows, preserving the other 190 SSC records. Run **37815232875** passed six finite direct matrix-commutator comparisons with seven adversarial controls, plus SSC0.10 structural/source replay and 15 mutations. These tests do not establish a universal Lie theorem. The complete §4.1 root/Cartan/phase table, split-complex formula family, §4.2 Eq.(13)/(14) and §4.3 f4/split cases remain incomplete.
+
+L127 SI-corrected G7 0.2 remains narrow historical evidence; it does not override newly discovered source defects. L129/L130/L131 must be rebuilt before L132, and L133 after verified L132. Owner external-verification bypass remains active only for outside-review calls; no external review passed. No new SI/module has been promoted and PR #70 must remain draft/unmerged.
+
+### Historical source-census checkpoints (0.7/0.8 and earlier)
+### Former SSC 0.7 and G0 gate 0.8 (superseded)
+
+The historical procedural gate was `experiments/062/L_CURRENT_STAGE_GATE_0_8.json`. The former unqualified **NOT FROZEN** source-census candidate was `SOURCE_SEMANTIC_CENSUS_0_7.json`; no G1-G7 replay, source-track Recursive IA or unification is authorized.
 
 Direct frozen L05 section 2 inspection exposed omitted source-level behavior in L-SSC-125 to L-SSC-127. `LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json` conserves six signed ordinary/split multiplication tables (168 row/column signed source entries) and 15 explicit formula records for equations (1)-(5). The source ledger is manual primary-source transcription, not independently cold-reviewed. Source Eq.(5) precise matrix-index positions and the Cl(0,2) worked example remain to be reconstructed.
 
@@ -31,7 +44,7 @@ L127's SI-repaired G7 0.2 remains historical campaign-local scoped evidence only
 
 The independent §4 audit confirmed that historical `L133_G1_SOURCE_INCIDENCE_0_1.json` and `L133_G3_CORE_DEFINABILITY_0_1.json` do not reconstruct the source's explicit bracket equations from their broad source-family labels. The defect is preserved as `experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json`. A targeted `L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json` now conserves the six family-role decompositions, source `su(3)` and `sp(3)` matrix expressions, five complex and six quaternionic commutator components, and partial basis-bracket data.
 
-A separate `verify-l-g0-l05-section4-matrix-source-0-1.mjs` passed **six finite matrix-commutator pairs and seven adversarial source mutations** in a local V8 replay, pinned by `L_G0_L05_SECTION4_MATRIX_SOURCE_LOCAL_REPLAY_0_1.json`. This is not a universal theorem, GitHub Actions CI qualification, or a full §4 source census: the complete `su(3)` root/Cartan bracket table, split variants, quaternionic Eq.(13), and `f_4` cases remain unexpanded. SSC0.7 currently lacks the Section 4 additions and remains unfrozen. L133 G1/G3 are not current even though the earlier local pass used five `CORE_CLOSED` dispositions.
+A separate `verify-l-g0-l05-section4-matrix-source-0-1.mjs` passed **six finite matrix-commutator pairs and seven adversarial source mutations** in a local V8 replay, pinned by `L_G0_L05_SECTION4_MATRIX_SOURCE_LOCAL_REPLAY_0_1.json`. This is not a universal theorem, GitHub Actions CI qualification, or a full §4 source census: the complete `su(3)` root/Cartan bracket table, split variants, quaternionic Eq.(13), and `f_4` cases remain unexpanded. SSC0.7 then lacked the Section 4 additions; successor SSC0.10 now carries a source-conserved subset and remains unfrozen. L133 G1/G3 are not current even though the earlier local pass used five `CORE_CLOSED` dispositions.
 
 ### Historical 0.5 source-census checkpoint
 The preceding L stage gate was `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`. Targeted repair `L127_G7_TARGETED_CLOSURE_0_2.json` preserves the corrected SI namespace (scalar-extension 225000, dimension-seven 225010, corrected L127 source 246xxx), but it is not a whole-track source-closure certificate.
@@ -48,7 +61,7 @@ Because the upstream frozen SSC is incomplete for this revised source target, L1
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | HISTORICAL — previous six-source traversal ledger exists; current full-source semantic completeness is reopened after L05 §3 omissions |
-| SSC frozen complete | **REOPENED/NOT CURRENT** — historical 0.2 is retained as a defective-completeness baseline; 0.7 is the latest source-expression/table successor candidate, **not frozen** |
+| SSC frozen complete | **REOPENED/NOT CURRENT** — historical 0.2 is retained as a defective-completeness baseline; 0.10 is the latest source-expression successor candidate, **not frozen** |
 | primitive math support complete | BLOCKED — G0 source-census correctness gate; historical G5 (345 unresolved classes) is for an incomplete predecessor source tuple |
 | native .isg bundle | HISTORICAL / PARTIAL — previous renderings exist but cannot reconstruct newly restored G0 source obligations |
 | graph-derived closure ledger | IN PROGRESS — existing Core-0.21 ledger/gates remain separate closure evidence; Experiment 062 does not convert unresolved G5 classes into closures |
@@ -85,7 +98,7 @@ Current working assertion base: `ASSERTION_BASE_A0_0_12.md`.
 
 Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_10.json`.
 
-Historical frozen SSC baseline (source-incomplete for L05 §3): `SOURCE_SEMANTIC_CENSUS_0_2.json`. Latest NOT-FROZEN source-census candidate: `SOURCE_SEMANTIC_CENSUS_0_7.json`.
+Historical frozen SSC baseline (source-incomplete for L05 §3): `SOURCE_SEMANTIC_CENSUS_0_2.json`. Latest NOT-FROZEN source-census candidate: `SOURCE_SEMANTIC_CENSUS_0_10.json`.
 
 Historical working census immediately before freeze: `../TRACK_L_WORKING_SSC_0_8.md`.
 
