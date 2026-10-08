@@ -1,0 +1,118 @@
+{
+  "schema": "isograph.exp062-l127-si-namespace-collision-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_HIGH_SEVERITY_SI_COLLISION_FORWARD_PROPAGATION_STOPPED",
+  "authority_effect": "INVALIDATION_AND_REPLAY_REQUIRED",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "f7bd2f4ec5e194dd51dbdeb2f8cbc42b0b4c425a",
+  "defect": {
+    "semantic_identity": 225000,
+    "earlier_owner": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_TRILINEAR_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+      "git_blob_sha": "9bc8acd2440ac7b733c8c529eef7d089b048778a",
+      "meaning": "trilinear scalar extension agreeing with the real trilinear form on embedded triples",
+      "qualified_by": {
+        "path": "experiments/062/L_G6_SCALAR_EXTENSION_PROVISIONAL_QUALIFICATION_0_1.json",
+        "git_blob_sha": "5fc627050dd1c96c7d7742c5e2b0ee45b83ffd18"
+      }
+    },
+    "conflicting_later_owner": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_1.isg",
+      "git_blob_sha": "416c60587de54b81ec0293fde05b590791d01429",
+      "meaning": "exact seven-element basis presentation"
+    },
+    "rule_violated": [
+      "Same SI means the same represented referent within the applicable SI namespace.",
+      "Freshness is SI-namespace-relative.",
+      "No downstream authority may depend on an ambiguous SI handle."
+    ],
+    "severity": "HIGH",
+    "source_fidelity_impact": "The source statements themselves are unchanged, but authority routing and reconstruction by bare SI are ambiguous and therefore not trustworthy."
+  },
+  "earliest_affected_stage": {
+    "path": "experiments/062/L127_G5H_FINITE_BASIS_7_28_0_1.json",
+    "git_blob_sha": "4315768f567dd28815e541d4bcf13b710d14df5f",
+    "stage": "L127 G5H finite-basis hypothesis",
+    "reason": "This is the first artifact that treats the already-owned 225000 SI as a different semantic relation."
+  },
+  "correction": {
+    "preserve_earlier_si_225000": true,
+    "defective_dimension7_file_preserved": true,
+    "corrected_dimension7_successor": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_2.isg",
+      "git_blob_sha": "0644b2d16b1ea78313fed7a784a0c5967a2e6a0a",
+      "semantic_identity": 225010
+    },
+    "rule": "Repair the later claimant only. Do not rewrite the earlier scalar-extension SI or historical evidence."
+  },
+  "invalidation": {
+    "semantically_invalid_until_replayed": [
+      {
+        "path": "experiments/062/L127_G5H_FINITE_BASIS_7_28_0_1.json",
+        "git_blob_sha": "4315768f567dd28815e541d4bcf13b710d14df5f"
+      },
+      {
+        "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_PROVISIONAL_QUALIFICATION_0_1.json",
+        "git_blob_sha": "a2c6ca97a1f9c93e1a8cc8a5dc7b888fda0ede12"
+      },
+      {
+        "path": "experiments/062/L127_CURRENT_RECONSTRUCTION_ROUTING_0_1.json",
+        "git_blob_sha": "3fce7a1c3d89f6004b7ed23e5c58c4b56621b5ac"
+      },
+      {
+        "path": "experiments/062/L127_G7_TARGETED_CLOSURE_0_1.json",
+        "git_blob_sha": "38b9376d3a86c1c13dc78a064f1c7ac364de3ccf"
+      }
+    ],
+    "procedurally_stale_pending_dependency_replay": [
+      {
+        "path": "experiments/062/L132_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1.json",
+        "git_blob_sha": "17e53a413c147657592a6bdcd17803d43517123d",
+        "reason": "pins/assumes prior L127 targeted closure"
+      },
+      {
+        "path": "experiments/062/L132_G3_CORE_DEFINABILITY_0_1.json",
+        "git_blob_sha": "9582e299279317be501c67c38bcc4ee73d6329d3",
+        "reason": "descends from stale L132 G1/G2 chain"
+      },
+      {
+        "path": "experiments/062/L132_G7_TARGETED_CLOSURE_0_1.json",
+        "git_blob_sha": "fe9ce0679e546cb0b90bf5543790682dd955dc1e",
+        "reason": "descends from stale L132 chain"
+      },
+      {
+        "path": "experiments/062/L133_G3_CORE_DEFINABILITY_0_1.json",
+        "git_blob_sha": "42cd4066975eec56b15323e72f58255df711195b",
+        "reason": "L133 descendants were created after and from the L132 closure chain"
+      }
+    ],
+    "unaffected_load_bearing_authority": [
+      "L scalar-extension provisional qualification using the earlier 225000 meaning",
+      "L127 targeted G1/G2/G3 artifacts prior to finite-basis G5H",
+      "L127 quaternion-presentation qualification",
+      "L127 metric-skew Lie qualification",
+      "L126 typed-action qualification",
+      "L125/L128/L129/L130/L131 corrected closures"
+    ]
+  },
+  "required_replay_order": [
+    "Install a cross-module SI collision guard and verify the current support namespace.",
+    "Recreate L127 finite-basis G5H using 225010/225001.",
+    "Replay L127 module SSC, IA, deterministic qualification, source reconstruction routing, and G7 targeted closure.",
+    "Reopen/replay every L132 artifact that descended from the stale L127 closure; do not merely edit hashes in place.",
+    "Invalidate/replay L133 descendants after corrected L132 closure.",
+    "Resume further L work only after the replayed chain passes fail-closed verification."
+  ],
+  "provenance": {
+    "discovery_mode": "adversarial correctness audit requested by owner",
+    "historical_artifacts_rewritten": false,
+    "failed_old_verifiers_preserved": true,
+    "third_party_testing": "BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "The collision does not by itself show the underlying finite-basis or scalar-extension mathematics is false.",
+    "The collision does invalidate ambiguous SI-based authority routing.",
+    "No W evidence was used to detect or repair this L-track defect."
+  ]
+}
