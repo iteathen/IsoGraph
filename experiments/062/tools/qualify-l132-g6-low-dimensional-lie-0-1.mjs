@@ -10,9 +10,11 @@ check(IA.fixed_point?.reached===true&&IA.fixed_point?.admitted_implicit_assertio
 for(const q of [M,FV,LB])check(q.status==='HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS','dep status');
 check(By.status==='OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE','bypass');
 function defBlock(path,id){
- const s=read(path),marker='(^150005 (^150010 '+id;
- const start=s.indexOf(marker);
- if(start<0)throw new Error('definition start missing '+id);
+ const s=read(path);
+ const re=new RegExp('\\(\\^150005\\s+\\(\\^150010\\s+'+id+'(?:\\s|\\))');
+ const m=re.exec(s);
+ if(!m)throw new Error('definition start missing '+id);
+ const start=m.index;
  let d=0;
  for(let i=start;i<s.length;i++){
   if(s[i]==='(')d++;
