@@ -1,0 +1,22 @@
+import fs from 'node:fs';import {execFileSync} from 'node:child_process';
+const G3=JSON.parse(fs.readFileSync('experiments/062/W_G3_CORE_DEFINABILITY_0_7.json','utf8'));
+const Q=JSON.parse(fs.readFileSync('experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_3.json','utf8'));
+const e=[],c=(x,m)=>{if(!x)e.push(m)};
+c(Q.schema==='isograph.exp062-w-g4-alpha-renamed-structural-quotient.v0.3','schema');
+c(Q.track==='W'&&Q.comparison_scope==='W_ONLY'&&Q.authority===false,'scope');
+const unresolved=G3.items.flatMap(i=>i.occurrences).filter(r=>r.disposition==='UNEXPANDED_DEMAND').map(r=>r.occurrence_id);
+const closed=new Set(G3.items.flatMap(i=>i.occurrences).filter(r=>r.disposition==='CORE_CLOSED').map(r=>r.occurrence_id));
+const members=Q.classes.flatMap(q=>q.member_occurrence_ids);
+c(unresolved.length===432,'unresolved count');
+c(members.length===432&&new Set(members).size===432,'member coverage');
+c(JSON.stringify([...members].sort())===JSON.stringify([...unresolved].sort()),'exact root coverage');
+for(const id of members)c(!closed.has(id),'core root included '+id);
+c(Q.counts?.quotient_classes===372&&Q.counts?.singleton_classes===344&&Q.counts?.multi_member_classes===28&&Q.counts?.largest_class_size===12,'counts');
+for(const q of Q.classes){c(q.member_count===q.member_occurrence_ids.length,'member count '+q.class_id);c(q.exact_isomorphism_verified_against_representative===true,'iso marker '+q.class_id);c(Array.isArray(q.structural_feature_multiset),'features '+q.class_id);}
+const structural=JSON.stringify(Q.classes.map(q=>({class_id:q.class_id,member_count:q.member_count,component_node_count:q.component_node_count,component_dependency_edge_count:q.component_dependency_edge_count,structural_invariant_sha256:q.structural_invariant_sha256,structural_feature_multiset:q.structural_feature_multiset})));
+for(const re of [/L-SSC-/i,/W-SSC-/i,/source_span/i,/relation_span/i,/load_bearing_note/i,/FIXED_POINT_FREE_INVOLUTION/i,/VARIATIONAL_STATIONARITY/i])c(!re.test(structural),'source/candidate token in key '+re);
+execFileSync('node',['experiments/062/tools/generate-w-g4-alpha-structural-quotient-0-3.mjs'],{stdio:'pipe'});
+const diff=execFileSync('git',['diff','--','experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_3.json'],{encoding:'utf8'});
+c(!diff.trim(),'generator replay');
+console.log(JSON.stringify({schema:'isograph.exp062-w-g4-w097-corrected-quotient-verifier.v0.3',pass:!e.length,errors:e,counts:Q.counts,replay_exact:!diff.trim(),W_local_G5_authorized_if_pass:!e.length},null,2));
+if(e.length)process.exitCode=1;

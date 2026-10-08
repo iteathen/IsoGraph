@@ -1,0 +1,24 @@
+{
+  "schema": "woit.w047-abstraction-boundary.v0.1",
+  "status": "FROZEN_FOR_W_SSC_047",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-047",
+  "source": "W01 Appendix A.1",
+  "represented_semantics": {
+    "compactified_complex_spacetime": "exact carrier of all complex two-dimensional subspace relations S of exact T=C4",
+    "tautological_bundle": "exact base/fiber incidence TAUT(S,t) iff S is a represented two-plane and t belongs to S",
+    "quotient_bundle": "for every S, an exact two-dimensional quotient package Q=T/S with surjective linear projection, kernel S, and coset equivalence",
+    "tangent_bundle": "for every quotient package, an exact carrier of all complex-linear maps S -> T/S",
+    "klein_embedding": "exact projective bijection from the two-plane carrier to the decomposable/Klein locus in P(Lambda^2 T)",
+    "klein_relation": "p01*p23 - p02*p13 + p03*p12 = 0, represented in basis convention f31=-f13"
+  },
+  "intentionally_abstracted_non_load_bearing_semantics": [
+    "topological local triviality of the named bundles",
+    "holomorphic transition functions",
+    "scheme structure",
+    "analytic manifold charts beyond the exact algebraic fiber-family representation"
+  ],
+  "invalidation_rule": "If a later frozen W source assertion uses transition functions, local trivializations, topology, scheme structure, or analytic bundle behavior as a premise, W-SSC-047 closure must be revisited and the abstraction boundary extended.",
+  "rationale": "W01 Appendix A.1 uses the tautological/quotient/tangent bundle structures here through their base, fibers, quotient and Hom identities plus the projective Klein embedding. Those load-bearing structures are represented exactly without importing unused global analytic machinery.",
+  "cross_author_semantics_available": false
+}

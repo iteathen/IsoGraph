@@ -1,0 +1,104 @@
+{
+  "schema": "isograph.exp067-module-ia-fixed-point.v0.1",
+  "date": "2026-10-08",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module": "EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE_0_1",
+  "primitive_id": 221103,
+  "module_ssc": {
+    "path": "experiments/067/MODULE_SSC_0_1.json",
+    "git_blob_sha": "d4660845d93057fdda96a7f2ed48f4e719496319"
+  },
+  "inference_profile": {
+    "id": "empty-typed-predicate-conjunct-profile-0.1",
+    "scope": "Only direct consequences of ETP-A01..A02 under qualified Core logic. No source-domain theorem library.",
+    "rules": [
+      {
+        "id": "ETP-IA-R1",
+        "premises": [
+          "ETP-A01"
+        ],
+        "consequence": "Every realized B-member is U-typed."
+      },
+      {
+        "id": "ETP-IA-R2",
+        "premises": [
+          "ETP-A02"
+        ],
+        "consequence": "Every represented U-element is excluded from B."
+      }
+    ],
+    "prohibited_inferences": [
+      "nonemptiness of U",
+      "existence of B-members",
+      "meaning of B",
+      "projective/conic/real-form/conjugation interpretation"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "ETP-A01",
+        "ETP-A02"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "ETP-IA-001",
+          "premises": [
+            "ETP-A01"
+          ],
+          "consequence": "Realized B-members are U-typed."
+        },
+        {
+          "id": "ETP-IA-002",
+          "premises": [
+            "ETP-A02"
+          ],
+          "consequence": "B has no represented member inside U."
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only the two direct projections yields no new assertion and cannot derive existence or source-domain meaning."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "ETP-IA-X01",
+      "claim": "U is nonempty.",
+      "reason": "No existence axiom."
+    },
+    {
+      "id": "ETP-IA-X02",
+      "claim": "B has any represented member.",
+      "reason": "The module instead excludes represented U-membership in B."
+    },
+    {
+      "id": "ETP-IA-X03",
+      "claim": "B denotes real points.",
+      "reason": "The candidate is source-neutral and leaves B meaning external."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 2,
+    "rejected_overreach_assertions": 3,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "downstream": {
+    "nei_authorized": false,
+    "dts_authorized": false,
+    "dp_authorized": false,
+    "reason": "No downstream module is required for this first-order schema."
+  }
+}

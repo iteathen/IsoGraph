@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.21",
+  "date": "2026-10-08",
+  "status": "W_G5_POST_G7_COMPLETE_EMPTY_INTERSECTION_G5H_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_20.json",
+    "git_blob_sha": "9ec415a220236fa1f3165c36e8a3ee7f444ea2fe",
+    "reason": "Post-G7 W G5 replay passed dedicated verification and identified the next material W097 residual family."
+  },
+  "current_G5": {
+    "fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_4.json",
+      "git_blob_sha": "d8f87b6875e542adf84fd2bbce3aec615ff3542f"
+    },
+    "workflow_run_id": 37737067387,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G5_complete": true,
+    "G5H_authorized": true,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "G5H_scope": {
+    "target_occurrence": "W-SSC-097-O05",
+    "candidate_family": "SOURCE_NEUTRAL_EMPTY_INTERSECTION_DECOMPOSITION",
+    "prohibited_shortcuts": [
+      "Do not define REAL_POINT using conjugation/fixed-point semantics absent from current W097 authority.",
+      "Do not define CONIC_POINT using historical closure packets.",
+      "Do not use L evidence.",
+      "Do not treat predicate names as candidate semantics."
+    ]
+  },
+  "next_lawful_action": "Freeze and falsify a W-only empty-intersection hypothesis for W-SSC-097-O05. Open G6 only if the decomposition adds genuine lower behavior and leaves predicate semantics explicit."
+}

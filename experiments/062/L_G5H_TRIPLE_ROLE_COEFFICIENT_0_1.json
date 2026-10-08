@@ -1,0 +1,82 @@
+{
+  "schema": "isograph.exp062-l-g5h-triple-role-coefficient.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "branch_head_at_creation": "1c1c4a3214cfcc88046efd007adbd8ad032628b6",
+  "origin": "HYPOTHESIS",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_g7": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_1.json",
+    "git_blob_sha": "b3996dda5eccdb7f07af052d1e64c81f3011019b",
+    "family": "TRIPLE_ROLE_COEFFICIENT_2_4_8"
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+    }
+  ],
+  "exact_candidate": {
+    "path": "research/woit-lisi-isomorph/support/PRIMITIVE_TRIPLE_ROLE_COEFFICIENT_SCHEMA_0_1.isg",
+    "git_blob_sha": "bfb25f1f1fff7260d0088bca6d454099cacb2e1f",
+    "selected_relation_ids": [
+      219000,
+      219001,
+      219002
+    ],
+    "dimension_mapping": {
+      "219000": 2,
+      "219001": 4,
+      "219002": 8
+    }
+  },
+  "candidate_statement": "The exact three selected wrappers are source-neutral closed schemas for three distinct role carriers linearly bijected to one coefficient carrier with matching 2/4/8 bases, where the positive-role basis is mapped to the coefficient basis after an explicit total KAPPA map.",
+  "declared_scope": {
+    "included": [
+      "four matching 2/4/8 basis presentations: coefficient A plus role carriers V, M, P",
+      "KAPPA as exact total single-valued A->A relation only",
+      "linear bijections FV:V->A, FM:M->A, FP:P->A",
+      "basis anchor FV(v_i)=e_i and FM(m_i)=e_i",
+      "positive-role anchor: KAPPA(e_i)=ke_i and FP(p_i)=ke_i"
+    ],
+    "excluded": [
+      "KAPPA involution, anti-involution, multiplicativity, or conjugation identity",
+      "natural identity of V/M/P/A",
+      "triality or cyclicity",
+      "algebra product/norm",
+      "reflection semantics",
+      "dimensions outside 2/4/8",
+      "W/cross-track semantics"
+    ]
+  },
+  "predicted_consequences": [
+    "Identity FV/FM plus negation KAPPA/FP over finite vector spaces satisfy all three dimension wrappers.",
+    "A positive-role map that ignores nontrivial KAPPA fails.",
+    "A role map with wrong basis anchor fails even if it is a linear bijection.",
+    "A non-bijective role map fails.",
+    "No KAPPA property beyond total single-valuedness is required."
+  ],
+  "adversarial_controls": [
+    "wrong FP basis image under nontrivial KAPPA",
+    "swapped FM basis anchors",
+    "non-bijective role map",
+    "missing KAPPA output"
+  ],
+  "falsifier": "Any hidden dependency outside Core plus exact provisionally qualified 182001, 187600, 187601, 215000, and 193200; any positive 2/4/8 model rejection; any adversarial false acceptance; or any reconstruction/IA failure.",
+  "adaptive_evidence": "Generated only after G7 replay exposed 219000/219001/219002 as the common remaining L128 wrapper.",
+  "fresh_confirmation_status": "PENDING_INTERNAL_DETERMINISTIC_QUALIFICATION; third-party review waived but not passed.",
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "next_stage": "G6_CAMPAIGN_LOCAL_PROVISIONAL_QUALIFICATION"
+}

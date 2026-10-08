@@ -1,0 +1,645 @@
+{
+  "schema": "isograph.exp062-w-g1-complete-repeat-audit.v0.1",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_ZERO_CHANGE_FIXED_POINT_CANDIDATE_INDEPENDENT_COLD_AUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "current_input": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+  "current_verifier": "experiments/062/tools/verify-w-extraction-reconciled-0-18.mjs",
+  "lineage": [
+    "experiments/062/W_EXTRACTION_RECONCILED_0_15.json",
+    "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_16.json",
+    "experiments/062/W_EXTRACTION_RECONCILED_0_16.json",
+    "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_2.json",
+    "experiments/062/W_EXTRACTION_RECONCILED_0_17.json",
+    "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18.json",
+    "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18_ERRATA_0_1.json",
+    "experiments/062/W_EXTRACTION_RECONCILED_0_18.json"
+  ],
+  "method": "A complete 84-body source-local repeat was performed through conserved delta review: every frozen W body was directly reviewed in the immediately preceding complete passes; bodies whose current occurrence record is byte-identical retain that no-correction judgment under the same frozen source, while every body changed by the 0.17/0.18 successors was directly reread after its corrections. Formula/operator and high-signal guard diagnostics were then repeated against the current W 0.18 content.",
+  "counts": {
+    "frozen_bodies": 84,
+    "current_occurrences": 425,
+    "byte_identical_from_W_0_16": 71,
+    "changed_from_W_0_16": 13,
+    "product_corrected_bodies": 7,
+    "semantic_atom_corrected_bodies": 6,
+    "current_repeat_corrections": 0
+  },
+  "deterministic_conservation": {
+    "changed_body_ids": [
+      "W-SSC-034",
+      "W-SSC-035",
+      "W-SSC-036",
+      "W-SSC-037",
+      "W-SSC-055",
+      "W-SSC-062",
+      "W-SSC-101",
+      "W-SSC-113",
+      "W-SSC-123",
+      "W-SSC-124",
+      "W-SSC-129",
+      "W-SSC-134",
+      "W-SSC-142"
+    ],
+    "expected_changed_body_union": [
+      "W-SSC-034",
+      "W-SSC-035",
+      "W-SSC-036",
+      "W-SSC-037",
+      "W-SSC-055",
+      "W-SSC-062",
+      "W-SSC-101",
+      "W-SSC-113",
+      "W-SSC-123",
+      "W-SSC-124",
+      "W-SSC-129",
+      "W-SSC-134",
+      "W-SSC-142"
+    ],
+    "exact_changed_body_union": true,
+    "W_0_16_to_W_0_18_unexpected_body_changes": [],
+    "all_items_complete": true
+  },
+  "formula_operator_repeat": {
+    "original_frontier": "experiments/062/W_G1_FORMULA_OPERATOR_FRONTIER_0_2.json",
+    "original_candidate_tokens": 110,
+    "original_adjudication": "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_1.json",
+    "original_corrections": 53,
+    "original_corrections_missing_in_current": [],
+    "product_frontier": "experiments/062/W_G1_FORMULA_OPERATOR_FRONTIER_0_3.json",
+    "product_candidate_tokens": 14,
+    "product_adjudication": "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_2.json",
+    "product_promoted_tokens": 9,
+    "source_variable_x_tokens": 5,
+    "product_corrections": 8,
+    "product_corrections_missing_in_current": [],
+    "new_formula_operator_corrections_required": 0
+  },
+  "residual_high_signal_adjudication": [
+    {
+      "census_id": "W-SSC-031",
+      "cue": "if",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-031-O03 is CONDITIONAL, carries 'torsion is allowed' as the condition argument, and depends on the chiral-formulation occurrence; O05 separately conserves 'is allowed'."
+    },
+    {
+      "census_id": "W-SSC-034",
+      "cue": "through",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-034-O02 already represents constructs(S_R and S_L, exterior powers), while O07 exposes the exterior-powers construction; a separate 'through' edge would duplicate that incidence."
+    },
+    {
+      "census_id": "W-SSC-049",
+      "cue": "same",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-049-O03 uses one shared 'same projective twistor' argument for the two spacetime points, preserving common-reference incidence without inventing two twistor nodes."
+    },
+    {
+      "census_id": "W-SSC-097",
+      "cue": "same",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-097-O02 preserves 'the same real form' verbatim and depends on O01; the dependency plus shared source referent conserves the anaphoric identity."
+    },
+    {
+      "census_id": "W-SSC-098",
+      "cue": "same",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-098-O02 preserves 'the same quaternionic mechanism' verbatim and depends on the rho_tw derivation O01; no new conventional meaning is introduced."
+    },
+    {
+      "census_id": "W-SSC-108",
+      "cue": "only",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-108-O01 explicitly controls whether the associated Weil representation is 'true' or 'only projective'; the exclusive alternative is already an explicit result role of the source relation."
+    },
+    {
+      "census_id": "W-SSC-142",
+      "cue": "same",
+      "disposition": "NO_NEW_OCCURRENCE",
+      "reason": "W-SSC-142-O04 explicitly conserves the 'same ... as the spacetime construction' comparison; O05 separately conserves the after-guard on the conventional interpretation."
+    }
+  ],
+  "items": [
+    {
+      "census_id": "W-SSC-001",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 1,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-014",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-022",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-026",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-027",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-028",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-029",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-030",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-031",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-032",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-033",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-034",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-035",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-036",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 9,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-037",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-039",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-040",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-041",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-042",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-043",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-047",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 9,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-048",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-049",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-050",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-051",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-052",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-053",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-054",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-055",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-056",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-059",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-061",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-062",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 9,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-068",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-069",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-071",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-079",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-083",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-084",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-087",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-090",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-091",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-092",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-093",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-094",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-095",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-097",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-098",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-099",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-100",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-101",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-102",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-103",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-104",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-105",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-106",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-107",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-108",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-112",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-113",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 10,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-114",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-116",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 1,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-118",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 17,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-119",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-122",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-123",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-124",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-125",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-126",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-128",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-129",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "POST_PRODUCT_CORRECTION_REREAD_THEN_BYTE_IDENTICAL_TO_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-130",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 6,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-133",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-134",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-135",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-138",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-140",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 3,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-142",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "POST_SEMANTIC_CORRECTION_REREAD_W_0_18"
+    },
+    {
+      "census_id": "W-SSC-144",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 8,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-145",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 5,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-146",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 7,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-147",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 2,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-148",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    },
+    {
+      "census_id": "W-SSC-149",
+      "status": "PASS_NO_CORRECTION",
+      "occurrence_count": 4,
+      "review_basis": "BYTE_IDENTICAL_FROM_W_0_16_COMPLETE_REPEAT_NO_CORRECTION"
+    }
+  ],
+  "fixed_point": {
+    "source_local_zero_change": true,
+    "W_candidate_frozen_for_independent_cold_audit": true,
+    "W_G1_complete": false,
+    "reason_W_G1_not_complete": "A fresh structurally valid independent all-84 cold audit against W_EXTRACTION_RECONCILED_0_18.json has not yet produced a zero-correction PASS.",
+    "joint_G1_complete": false,
+    "G2_authorized": false
+  },
+  "next_required_steps": [
+    "Freeze a fresh independent all-84 cold-audit contract pinned exactly to W_EXTRACTION_RECONCILED_0_18.json and its deterministic verifier.",
+    "Do not reuse or combine partial audit evidence from older W successors.",
+    "Run the current-input cold audit only when provider quota is available; if transport remains unavailable, record the current-input boundary without changing semantic input.",
+    "Keep G2 blocked until the L track independently reaches the same current-input zero-correction cold-audit condition."
+  ],
+  "authority": false
+}

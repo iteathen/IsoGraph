@@ -1,0 +1,110 @@
+{
+  "schema": "isograph.exp062-w-g5h-fixed-point-free-involution.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_PRE_G6_FALSIFICATION",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "origin": "HYPOTHESIS",
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent": {
+    "g5_fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_3.json",
+      "git_blob_sha": "a48cf1fbe27eb7d42c6e4aea391b379a363f3615"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_15.json",
+      "git_blob_sha": "12a820bcfbd47277a5ae7599e9d587933cfc7c2e"
+    },
+    "residual_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "residual_classes": [
+      "W-G4-Q0204",
+      "W-G4-Q0206"
+    ]
+  },
+  "candidate_id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+  "candidate_statement": {
+    "carrier": "A represented carrier P.",
+    "map": "A total single-valued self-map F:P->P.",
+    "involution": "For every represented x in P, F(F(x))=x.",
+    "fixed_point_free": "For every represented x in P, F(x) != x.",
+    "semantic_level": "Pure first-order/Core-definable map behavior; no projective, quaternionic, topological, geometric, or field semantics."
+  },
+  "declared_scope": {
+    "generic": "Any represented carrier with a total single-valued self-map satisfying the two laws.",
+    "intended_W_reconstruction": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "excluded": [
+      "W-SSC-097 vector-level square-minus-one law",
+      "ordinary CP1 conjugation",
+      "quaternionic left multiplication",
+      "projective quotient construction",
+      "real-conic presentation",
+      "invariant-line/fiber geometry",
+      "L track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "Corrected W-SSC-097-O06 explicitly states that applying rho_tw twice to projective points returns the same projective point.",
+    "Corrected W-SSC-097-O04 explicitly states that rho_tw has no projective fixed points.",
+    "The W097 source correction separated these statements from the distinct vector-level square-minus-one law."
+  ],
+  "prohibited_evidence": [
+    "L track source semantics, hypotheses, provisional qualifications, or replay results",
+    "historical W closure packets as semantic authority",
+    "PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1 as candidate authority",
+    "textbook antipodal/projective/quaternionic semantics",
+    "desired W/L unification"
+  ],
+  "predicted_consequences": [
+    "A two-element swap model satisfies the candidate.",
+    "A four-element product of two swaps satisfies the candidate.",
+    "An identity self-map fails fixed-point-freeness.",
+    "A three-cycle fails involution.",
+    "A partial map fails totality.",
+    "A multivalued relation fails single-valuedness.",
+    "A map whose output leaves P fails typing.",
+    "The empty-carrier model is vacuously permitted unless nonemptiness is separately required; the candidate does not assert nonemptiness.",
+    "Qualification alone does not prove that W097 supplies the total-self-map interface; G7 source instantiation is separate."
+  ],
+  "known_alternatives": [
+    "A weaker relation-level fixed-point-free involution without total-function semantics.",
+    "A source-specific projective involution schema.",
+    "Reuse of historical pseudoreal/projective support after independent requalification.",
+    "Preserve the W097 boundary if the total-self-map interface cannot be source-instantiated."
+  ],
+  "positive_controls": [
+    "synthetic 2-point swap",
+    "synthetic 4-point disjoint-swap model"
+  ],
+  "negative_adversarial_controls": [
+    "identity map on a nonempty carrier",
+    "3-cycle",
+    "partial self-map",
+    "multivalued relation",
+    "map with codomain leakage"
+  ],
+  "falsifiers": [
+    "Any positive control rejected by the exact expansion.",
+    "Any adversarial control accepted contrary to its declared failure mode.",
+    "Any need for projective/quaternionic/topological semantics to state the generic candidate.",
+    "Failure of the candidate to expand entirely into already qualified Core/data/function/equality/logic structure.",
+    "Failure at G7 of W097 to source-establish the total-self-map interface."
+  ],
+  "adaptive_evidence": [
+    "W097 source-granularity correction and corrected G1-G5 replay were performed specifically because the earlier body conflated vector and projective square behavior."
+  ],
+  "confirmation_status": "PENDING_FRESH_SOURCE_NEUTRAL_DETERMINISTIC_CONTROLS",
+  "coverage_limits": "No claim beyond the generic map laws and the two named W097 residual occurrences. No source instance is closed by this hypothesis.",
+  "revision_lineage": [
+    "W097_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1",
+    "W_G5_FIXED_POINT_0_3",
+    "W_CURRENT_STAGE_GATE_0_15"
+  ],
+  "pre_G6_disposition": "ELIGIBLE_FOR_SOURCE_NEUTRAL_G6_IF_DETERMINISTIC_HYPOTHESIS_VERIFIER_PASSES"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "woit.revision-scope-guards-closure-packet.v0.1",
+  "status": "CANDIDATE_MULTI_CLOSED_PRIMITIVE_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_ids": [
+    "W-SSC-021",
+    "W-SSC-058",
+    "W-SSC-121"
+  ],
+  "representation_class": "RAW_DATA_ATOM",
+  "exact_authority": [
+    "../SOURCE_CORPUS_FREEZE_0_2.md",
+    "SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "SOURCE_TRAVERSAL_LEDGER_0_9.json",
+    "ASSERTION_BASE_A0_0_12.md"
+  ],
+  "items": [
+    {
+      "census_id": "W-SSC-021",
+      "body": "W04e says the author's interpretation is still changing and therefore later claims must remain revision-scoped.",
+      "source": "W04e",
+      "raw_role": "latest frozen mutable source; interpretation explicitly still changing"
+    },
+    {
+      "census_id": "W-SSC-058",
+      "body": "The July-2026 W03 status explicitly says the current notes are work in progress, are unlikely to be updated in place, and a future write-up is expected to differ significantly; mutable status evidence therefore cannot retroactively rewrite W01/W02.",
+      "source": "W03",
+      "raw_role": "mutable project-status evidence; no retroactive rewrite of frozen papers"
+    },
+    {
+      "census_id": "W-SSC-121",
+      "body": "The linked W04e notes are a preliminary version dated 2026-07-14, while the author-maintained W03/W04e status explicitly says the interpretation is still changing and a later account is expected to differ substantially; the preliminary notes therefore remain revision-scoped.",
+      "source": "W04e notes / W03",
+      "raw_role": "preliminary dated note + mutable author status; revision-scoped"
+    }
+  ],
+  "guards": [
+    "These closures preserve source revision/modality only; they do not decide DTS successor edges.",
+    "No mathematical object named in the surrounding sources is promoted or matched through these raw nodes.",
+    "The raw provenance nodes are excluded from any claim of source-formulation identity.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_PRIMITIVE",
+    "leaf_classification": "RAW_DATA_ATOM",
+    "item_count": 3
+  }
+}

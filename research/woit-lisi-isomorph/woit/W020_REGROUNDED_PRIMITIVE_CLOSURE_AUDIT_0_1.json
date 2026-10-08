@@ -1,0 +1,92 @@
+{
+  "schema": "woit.w020-regrounded-primitive-closure-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_CANDIDATE_CLOSED_PRIMITIVE",
+  "census_id": "W-SSC-020",
+  "source_body": "W04d explicitly states that the exact new Wick-rotation implementation remains unresolved.",
+  "governing_authority": [
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "qualification/CORE_0_21_LEDGER_CONTRACT.md"
+  ],
+  "native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_2.isg",
+  "native_derivation": "W020_REGROUNDED_NATIVE_DERIVATION_0_1.json",
+  "body_analysis": {
+    "load_bearing_clauses": [
+      "the source identifies an implementation target",
+      "the source marks that target unresolved"
+    ],
+    "target_internal_behavior_load_bearing": false,
+    "target_internal_behavior_reason": "W020 does not define or use the implementation; it records only its unresolved realization status. Mathematical Wick/holomorphy/reconstruction obligations remain separate census items.",
+    "exact_source_provenance_already_routed": true,
+    "primitive_extensional_incidences": [
+      [
+        934000,
+        932020,
+        934010
+      ],
+      [
+        934001,
+        932020,
+        934011
+      ]
+    ],
+    "terminal_atoms": [
+      {
+        "id": 934000,
+        "classification": "RAW_DATA_ATOM",
+        "role": "opaque extensional relation identity"
+      },
+      {
+        "id": 934001,
+        "classification": "RAW_DATA_ATOM",
+        "role": "opaque extensional relation identity"
+      },
+      {
+        "id": 934010,
+        "classification": "RAW_DATA_ATOM",
+        "role": "opaque implementation-target identity"
+      },
+      {
+        "id": 934011,
+        "classification": "RAW_DATA_ATOM",
+        "role": "source status value: unresolved"
+      }
+    ]
+  },
+  "core_gates": {
+    "body_primitive_closed": true,
+    "support_primitive_closed": true,
+    "transitive_dependencies_primitive_closed": true,
+    "definitionally_reducible_hidden_operator_present": false,
+    "source_semantics_conserved": true,
+    "unsupported_native_addition_present": false,
+    "qualified_qu_required": false,
+    "qu_reason": "The source records unresolved status but supplies no structured admissible realization family. Treating that absence as QU would invent possibility semantics.",
+    "schema_closure_applicable": false,
+    "materialization_applicable": false,
+    "cross_author_semantics_used": false
+  },
+  "anti_leak_guards": [
+    "934010 is opaque to IA/NEI/DTS/DP as mathematical content",
+    "no twistor, analytic continuation, boundary-value, field, spinor, or other Wick-rotation semantics are attached to 934010",
+    "historical W020 closure packets are not premises",
+    "the closure mode concerns faithful representation of the source-status assertion, not resolution of the unresolved implementation"
+  ],
+  "reconstruction": {
+    "all_and_only_source_body": true,
+    "path": [
+      "W-SSC-020",
+      "routing source provenance W04d",
+      "W-BODY-020",
+      "primitive extensional target incidence",
+      "primitive extensional unresolved-status incidence"
+    ]
+  },
+  "proposed_disposition": "CLOSED_PRIMITIVE",
+  "core021_qualification_stage_complete": false,
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}

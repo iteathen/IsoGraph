@@ -1,0 +1,90 @@
+{
+  "schema": "isograph.exp062-l131-source-fidelity-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_L131_EQ9_FACTORIZATION_OMISSION_REOPEN_G1",
+  "authority": false,
+  "authority_effect": "INVALIDATE_L131_AND_L132_L133_DOWNSTREAM_TARGETED_CHAIN",
+  "track": "L",
+  "head_at_record_creation": "1ebd6ca71f1052968fabb7707b26be9e368d31b1",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source": {
+    "census_id": "L-SSC-131",
+    "frozen_source": "L05 §3, published 2026-08-29; lines after displayed equation (9), canonical u=w=1 case",
+    "source_url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "source_census": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json"
+  },
+  "defect": {
+    "id": "L131_D1_SOURCE_FACTORIZATION_NOT_RECONSTRUCTED",
+    "source_equations": [
+      [
+        "EQUAL",
+        "t^(uw)",
+        [
+          "COMPOSE",
+          "R_p^w",
+          "R_v^u",
+          "R_m^tilde(u)",
+          "R_p^tilde(u)"
+        ]
+      ],
+      [
+        "EQUAL",
+        "t^(uw)",
+        [
+          "COMPOSE",
+          "R_p^w",
+          "R_p^u",
+          "t"
+        ]
+      ],
+      [
+        "EQUAL",
+        "t^(uw)",
+        [
+          "COMPOSE",
+          "R_p^(uw)",
+          "t"
+        ]
+      ],
+      [
+        "EQUAL",
+        "t^(uw)",
+        [
+          "COMPOSE",
+          "t",
+          "R_v^(uw)"
+        ]
+      ]
+    ],
+    "source_assertion": "Even generalized-reflection compositions admit the displayed canonical-triality/rotation factorization (the text's general statement), with explicit t^(uw) equality chain.",
+    "omission": "L131 G1 0.1 R01–R10 preserve t^(uw) value formula, T-invariance, canonical role cycle and same/different type role maps but no exact source equality comparing those four transformation composites. L131 source instances likewise lack the factorization relation; L131 G7 0.1 closes without testing it.",
+    "required_semantics": [
+      "source order of four reflections",
+      "canonical t role-cycle with v/m/p domain distinction",
+      "same source element u/w and tilde role",
+      "composite equality as transformations (not merely same role permutation)",
+      "statement scope for generalized even-reflection factorization; do not invent all-and-only generation theorem",
+      "ordinary-O source inconsistency unchanged"
+    ],
+    "earliest_affected_stage": "L131 source granular extraction/G1, before G2 and G3"
+  },
+  "invalidation": {
+    "L131": "L131_G1_SOURCE_INCIDENCE_0_1, G2_0_1, G3_0_1, current reconstruction and G7_0_1 stale for expanded source target",
+    "L132": "ALL older L132 0.1/0.2 replay, including new L132 G1 0.3/0.4 and G2 0.3, remain downstream-incomplete until corrected L131 closure",
+    "L133": "Existing 0.1 chain remains blocked/stale",
+    "L127": "Corrected L127 G7 0.2 unaffected by this L131 source omission"
+  },
+  "verifier_defect": "Existing L131 G7/routing success only checks already declared paths/relations; an omitted eq.(9) factorization does not fail without independently comparing the source formula set.",
+  "next_action": [
+    "reopen L131 G1 exact source factorization and dependency incidence",
+    "replay G2/G3 before any L132 propagation",
+    "if transformations cannot be proved equal under current authority, leave explicit unexpanded L131 demand and do not issue G7",
+    "replay repaired L132 source granularity and lower modules only after L131 verified"
+  ],
+  "nonclaims": [
+    "No group-generation classification theorem or imported Spin/Pin interpretation is asserted.",
+    "The source identity formula is the source claim, not independently established mathematical truth.",
+    "No W evidence or unification hypothesis used.",
+    "No third-party review has passed."
+  ]
+}

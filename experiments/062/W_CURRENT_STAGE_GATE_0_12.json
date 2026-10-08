@@ -1,0 +1,40 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.12",
+  "date": "2026-10-07",
+  "status": "W_G2_W097_CORRECTED_INPUT_COMPLETE_G3_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_11.json",
+    "git_blob_sha": "31a8286a15e807912757e7834021ee863aa41d42",
+    "reason": "W097-corrected neutral G2 graph passed deterministic verification."
+  },
+  "current_G2": {
+    "graph": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_3.json",
+      "git_blob_sha": "c9ee4f844ee1cb5a7b27378779694361c0d17451"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G2_FIXED_POINT_0_3.json",
+      "git_blob_sha": "234a6baf1353c945cb12ec3611c3aa764edfb300"
+    },
+    "workflow_run_id": 37684104837,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_authorized": true,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_new_candidate_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Re-adjudicate the W097 G3 delta against exact qualified Core, carry forward all byte-identical predecessor occurrence rulings, and do not consume the fixed-point-free involution hypothesis as authority."
+}

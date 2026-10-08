@@ -1,0 +1,106 @@
+{
+  "schema": "isograph.exp062-w097-cross-occurrence-si-conservation-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "HISTORICAL_G1_G2_EXPLICIT_SOURCE_REFERENT_COREFERENCE_NOT_CONSERVED_BLOCK_CURRENT_G0_RECONSTRUCTION",
+  "source": {
+    "source_id": "W05",
+    "frozen_revision": "arXiv:2202.02657v2",
+    "location": "§2 printed pp.2–3",
+    "current_source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_15.json",
+      "git_blob_sha": "4a39e2d36465519a91731d193128dbd4b0720192"
+    },
+    "projective_map_referent": "W05 §2 rho_tw: CP1->CP1, same defined projective real structure for twice-applied law, antipodal comparison and no-fixed-point clause",
+    "vector_referent": "source writes rho_tw on C2 coordinate carrier, a different typed application from induced projective map; same printed symbol alone is NOT SI evidence of identical typed functions",
+    "typed_dependency": "Preserve source-supported vector-to-projective inducement/quotient relation without merging different carrier functions."
+  },
+  "historical_inputs": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+    },
+    "g2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_4.json",
+      "git_blob_sha": "4a6ef4b2e4987c6875e6fc4c0205a04f84c37b57"
+    },
+    "g4": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "stage": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_41.json",
+      "git_blob_sha": "ea07a62ec68157a4d9823c48d88b45f7c2a581ed"
+    }
+  },
+  "observations": {
+    "W097_historical_extracted_occurrences": [
+      {
+        "id": "W-SSC-097-O06",
+        "argument_spans": [
+          "applying rho_tw twice",
+          "the same projective point"
+        ],
+        "depends_on": []
+      },
+      {
+        "id": "W-SSC-097-O04",
+        "argument_spans": [
+          "rho_tw",
+          "projective fixed points"
+        ],
+        "depends_on": [
+          "W-SSC-097-O06"
+        ]
+      },
+      {
+        "id": "W-SSC-097-O03",
+        "argument_spans": [
+          "ordinary conjugation on CP1",
+          "twistor antipodal real structure rho_tw"
+        ],
+        "depends_on": []
+      }
+    ],
+    "W097_historical_graph_node_count": 24,
+    "W097_historical_edge_types": {
+      "ORDERED_ARGUMENT_INCIDENCE": 16,
+      "INTRA_BODY_DEPENDENCY_INCIDENCE": 6
+    },
+    "W097_explicit_SI_or_binder_identity_edges": 0,
+    "G4_0_4_key_declares_local_per_occurrence_arg_pattern_only": true,
+    "distinction": "Within-occurrence repeated argument spans are conserved, but same typed projective-map referent across distinct occurrences has no shared identity/binder link in historical G1/G2."
+  },
+  "falsifier": {
+    "source_model_A": "R(map,point1) AND NOT Fixed(map,point2), one shared map referent",
+    "source_model_B": "R(map1,point1) AND NOT Fixed(map2,point2), two distinct map referents",
+    "same_local_structure": true,
+    "distinct_global_alpha_incidences": true,
+    "positive_alpha_relabel": "Rename the one shared map consistently; global identity partition survives.",
+    "positive_within_occurrence_repetition": "Changing local identical operands is already detected by the historical algorithm.",
+    "negative_role": "Do not equate vector-level rho_tw:C2->C2 with projective rho_tw:CP1->CP1 solely because their print name is the same."
+  },
+  "repair_boundary": {
+    "earliest_affected_historical_stage": "G1_SEMANTIC_OCCURRENCE_BINDING_AND_COREFERENCE",
+    "current_stage": "G0_OPEN_W097_TYPED_SOURCE_CONSERVED_IN_SSC0_15",
+    "required_next": "After complete frozen-source G0: rebuild G1 with explicit source-local SI namespace, CP1 map referent across O03/O04/O06, separate typed C2/J referent, projectivization dependency, ordered binder/role incidence. Then G2 must represent shared-source-reference edges, G3/G4 must re-derive quotient from corrected G2.",
+    "forbidden": "Never edit historical G1/G2/G4 blobs, guess shared identity by matching textual source words in unrelated occurrences, or equate distinct typed carrier maps.",
+    "G7_previous_closure": "REMAINS_INVALID_AFTER_EXPLICIT_SOURCE_MAP_AND_SI_REOPENING",
+    "generic_221101": "UNAFFECTED_OWN_PROVISIONAL_RELATIONAL_SCOPE"
+  },
+  "source_scope_review": "This is a reconstruction completeness defect, not a proof historical G4 graph matcher is wrong on its reduced input or that two unlike W source objects are one.",
+  "provenance": {
+    "origin": "research_finding",
+    "source_author": "Peter Woit",
+    "direction": "Joshua Oshiro's IsoGraph source-faithful review",
+    "formalization": "agent-assisted",
+    "earliest_evidence_currently_located": "W05 frozen §2; W_G1 0.23/G2 0.4, 2026-10-08 audit"
+  },
+  "nonclaims": [
+    "No G0 freeze or lawful G1 entry",
+    "No L evidence",
+    "No new SI merging asserted between distinct carriers",
+    "No generic G4 equality theorem"
+  ]
+}

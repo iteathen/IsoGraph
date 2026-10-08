@@ -1,0 +1,130 @@
+{
+  "schema": "lisi.l128-typed-coefficient-roles-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "L-SSC-128",
+  "frozen_body": "L05 identifies vector, negative-chiral spinor, and positive-chiral spinor coefficient carriers with three division-algebra carriers and preserves the tilde/conjugation convention on the positive-spinor representative.",
+  "source": "L05 §2",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TYPED_COEFFICIENT_ROLES_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TYPED_COEFFICIENT_ROLES_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TRIPLE_ROLE_COEFFICIENT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 17,
+    "declared_local_ids": 363,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "schema_variants": {
+      "dimension2": 219000,
+      "dimension4": 219001,
+      "dimension8": 219002
+    },
+    "cases": {
+      "C": {
+        "coefficient": 214000,
+        "V": 218000,
+        "Qminus": 218020,
+        "Qplus": 218040,
+        "maps": [
+          218060,
+          218061,
+          218062
+        ]
+      },
+      "Cprime": {
+        "coefficient": 214100,
+        "V": 218100,
+        "Qminus": 218120,
+        "Qplus": 218140,
+        "maps": [
+          218160,
+          218161,
+          218162
+        ]
+      },
+      "H": {
+        "coefficient": 189200,
+        "V": 218200,
+        "Qminus": 218220,
+        "Qplus": 218240,
+        "maps": [
+          218260,
+          218261,
+          218262
+        ]
+      },
+      "Hprime": {
+        "coefficient": 214200,
+        "V": 218300,
+        "Qminus": 218320,
+        "Qplus": 218340,
+        "maps": [
+          218360,
+          218361,
+          218362
+        ]
+      },
+      "O": {
+        "coefficient": 214300,
+        "V": 218400,
+        "Qminus": 218420,
+        "Qplus": 218440,
+        "maps": [
+          218460,
+          218461,
+          218462
+        ]
+      },
+      "Oprime": {
+        "coefficient": 214400,
+        "V": 218500,
+        "Qminus": 218520,
+        "Qplus": 218540,
+        "maps": [
+          218560,
+          218561,
+          218562
+        ]
+      }
+    },
+    "positive_role_rule": "basis p_a maps to KAPPA(e_a), preserving the source tilde/conjugated basis convention"
+  },
+  "semantic_guards": [
+    "V, Qminus, and Qplus remain separate represented carriers",
+    "linear bijection does not imply NEI SAME",
+    "positive-spinor tilde convention is inside the coefficient map",
+    "ordinary and split coefficient carriers remain separate",
+    "no triality, Clifford identity, generation role, Woit semantics, or synthesis hypothesis is imported",
+    "ordinary-O table inconsistency is not repaired and is not required to establish the role-copy relation itself"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

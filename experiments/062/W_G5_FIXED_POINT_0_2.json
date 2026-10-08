@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-w-g5-fixed-point.v0.2",
+  "date": "2026-10-07",
+  "status": "W_LOCAL_G5_CORRECTED_INPUT_COMPLETE_CURRENT_AUTHORITY_BOUNDARY_G5H_AVAILABLE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_2.json",
+      "git_blob_sha": "5da6192eb8c261a969351fa0bf611b3e68727f72"
+    },
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_2.json",
+      "git_blob_sha": "f32a9ef0bda90b249be132373d69d8ced625b377"
+    },
+    "source_sufficiency_review": {
+      "path": "experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_2.json",
+      "git_blob_sha": "e7c129bb197f5c2a4d5402aeaa2787430bd221fb"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g5-corrected-input-0-2.mjs",
+      "git_blob_sha": "caaf85b18971c1c5acb73d5916043b5c0a027ddf"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37673639491,
+    "workflow_head_sha": "7ea03e08e104aef3dbb9a4cc69da5e7d343d5738",
+    "conclusion": "success",
+    "quotient_classes": 370,
+    "multi_member_classes": 28,
+    "uniform_multi_member_classes": 4,
+    "heterogeneous_multi_member_classes": 24,
+    "cross_class_recurrence_probes": 62,
+    "proposed_reusable_candidates": 0,
+    "unresolved_boundaries": 370
+  },
+  "fixed_point": {
+    "W_local_G5_complete": true,
+    "W_local_G6_required": false,
+    "W_G5H_hypothesis_generation_authorized": true,
+    "W_track_primitive_closure_complete": false,
+    "W_track_IA_authorized": false,
+    "W_track_sealed": false,
+    "cross_track_comparison_authorized": false,
+    "boundary_kind": "GENUINE_CURRENT_AUTHORITY_PRIMITIVE_DOMAIN_BOUNDARY_WITH_G5H_AVAILABLE"
+  },
+  "boundary_reason": "Corrected W G1-G4 structure improved source fidelity but did not supply an exact deterministic reusable semantic candidate. The variation family is now distributed across distinct quotient classes; the remaining missing behavior is the internal meaning of variation/transformation rather than action/role incidence. Method 0.3 authorizes explicit hypothesis generation and falsification without granting authority.",
+  "lawful_resume_conditions": [
+    "a G5H hypothesis with genuinely lower non-evasive behavior survives its declared falsifiers and proceeds to independent G6 qualification",
+    "new frozen W source evidence supplies the missing variation/transformation semantics",
+    "a separately qualified generic module independently supplies exact source-faithful semantics",
+    "otherwise preserve the boundary after the lawful hypothesis space currently identified is falsified"
+  ],
+  "nonclaims": [
+    "The 370 boundaries are not proved irreducible.",
+    "No semantic extension is proved impossible.",
+    "Hypothesis generation is not authority.",
+    "Recursive IA remains unauthorized.",
+    "No L evidence or cross-track semantics may be used in W G5H."
+  ],
+  "next_stage": "W_G5H_CORRECTED_INPUT_VARIATION_LAYER_HYPOTHESIS_FALSIFICATION"
+}

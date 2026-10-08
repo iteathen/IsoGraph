@@ -1,0 +1,27 @@
+name: Experiment 062 L quaternion anti-involution source reconstruction
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ANTIINVOLUTION_SOURCE_RECONSTRUCTION_0_1.isg'
+      - 'experiments/062/tools/verify-l-quaternion-antiinvolution-source-reconstruction-0-1.mjs'
+      - '.github/workflows/experiment-062-l-quaternion-antiinvolution-reconstruction.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify quaternion anti-involution source reconstruction
+        run: node experiments/062/tools/verify-l-quaternion-antiinvolution-source-reconstruction-0-1.mjs

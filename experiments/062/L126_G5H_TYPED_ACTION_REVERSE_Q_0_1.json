@@ -1,0 +1,119 @@
+{
+  "schema": "isograph.exp062-l126-g5h-typed-action-reverse-q.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "bc4a21214e0ec7097a21c7bc694f80161a896c2b",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L126_G3_CORE_DEFINABILITY_0_1.json",
+    "git_blob_sha": "f9320447db41f8d0cce77206d80435685dc0b27c",
+    "family": "TYPED_BILINEAR_ACTION_AND_REVERSE_Q_COMPOSITION",
+    "occurrence_ids": [
+      "L-SSC-126-R03",
+      "L-SSC-126-R04"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        182002,
+        182004
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        183003
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        185002
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 187200,
+      "role": "total typed bilinear action V×M->P with linearity in each input",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "7310e55f93ece427327d08060157bf2497b06e8a"
+    },
+    {
+      "id": 195000,
+      "role": "paired opposite typed actions over an exact quadratic-form carrier with both reverse compositions equal to Q(v) scaling",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_CHIRAL_CLIFFORD_PAIR_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "ac6cf5e2b9338753e33fd7324cf75034f304a97e"
+    }
+  ],
+  "candidate_statement": "Exact 187200 and 195000 form a reusable source-neutral action layer: 187200 supplies a bilinear typed action between three vector carriers, and 195000 pairs two opposite actions over an exact quadratic-form carrier so applying them successively at the same vector returns Q(v) times the starting chiral element in either direction.",
+  "declared_scope": {
+    "included": [
+      "total single-valued typed action V×M->P",
+      "linearity in the V input",
+      "linearity in the M input",
+      "two opposite typed bilinear actions V×SM->SP and V×SP->SM",
+      "exact quadratic form dependency 185002",
+      "reverse composition equals Q(v) scalar action on SM",
+      "reverse composition equals Q(v) scalar action on SP"
+    ],
+    "excluded": [
+      "generic Clifford algebra ontology or universal property",
+      "matrix representation or transpose semantics",
+      "coefficient cyclic identity",
+      "spin-group or Pin/Spin group semantics",
+      "irreducibility/chirality ontology beyond the two typed carriers",
+      "triality/reflection semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "L126 targeted G3 leaves only R03/R04 unexpanded after raw coefficient and cyclic-equality structure close.",
+    "Historical 187200/195000 definitions have exact lower dependency surfaces matching those two residuals.",
+    "The familiar Clifford name is unnecessary: the source behavior is fully described by bilinear actions plus reverse-Q composition."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "desired unification",
+    "textbook Clifford semantics beyond selected exact relations",
+    "historical L126 closure status as authority"
+  ],
+  "predicted_consequences": [
+    "A bilinear coordinate action satisfies 187200; an affine or nonlinear action fails.",
+    "For one-dimensional F3 carriers with GM(v,m)=v*m, GP(v,p)=v*p, B(v,w)=v*w, Q(v)=v^2, 195000 holds in both directions.",
+    "Changing one reverse action by a nonunit factor breaks the Q-scaling identity while preserving bilinearity and must be rejected.",
+    "195000 does not imply any coefficient cyclic identity or named Clifford algebra semantics."
+  ],
+  "positive_controls": [
+    "F3^2 componentwise bilinear action for 187200",
+    "one-dimensional F3 paired multiplication actions with Q(v)=v^2 for 195000"
+  ],
+  "negative_adversarial_controls": [
+    "affine-shifted action",
+    "action nonlinear in the first input",
+    "action nonlinear in the second input",
+    "paired bilinear actions with one reverse action multiplied by 2 so Q-scaling fails",
+    "paired action satisfying only one reverse-composition direction"
+  ],
+  "falsifier": "Reject or split if 187200/195000 have hidden dependencies outside already qualified field/vector/form support plus the selected relations; if any negative control passes; if any positive control fails; if module SSC/IA does not close; or if L126 source reconstruction requires coefficient cyclic or matrix semantics inside the generic module.",
+  "adaptive_evidence": "Generated after current targeted G3 isolated R03/R04. Historical files are candidate material only.",
+  "fresh_confirmation_status": "PENDING_G6_DETERMINISTIC_QUALIFICATION; external third-party review bypassed but not passed.",
+  "coverage_limits": "Only exact 187200/195000 at pinned bytes and dependencies. No named Clifford, matrix, cyclic coefficient, Pin/Spin, triality, reflection, or cross-track conclusion.",
+  "revision_lineage": [
+    "L126_G3_CORE_DEFINABILITY_0_1"
+  ],
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}

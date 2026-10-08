@@ -1,0 +1,110 @@
+{
+  "schema": "isograph.exp063-owner-waiver-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "OWNER_WAIVER_PROVISIONAL_QUALIFIED_WITH_EXPLICIT_SCOPE",
+  "authority_effect": "CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY_ONLY",
+  "global_semantic_authority": false,
+  "campaign_semantic_authority": true,
+  "candidate_id": "VARIATIONAL_STATIONARITY_INTERFACE_0_1",
+  "primitive_id": 211000,
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "frozen_inputs": {
+    "module_ssc": {
+      "path": "experiments/063/MODULE_SSC_0_1.json",
+      "git_blob_sha": "6dae3a9e96867c703ad49c12dada58e3bfd3f40a"
+    },
+    "module_ia_fixed_point": {
+      "path": "experiments/063/MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "fddf00b62f3f279570edea0b3d65f5c578a76187"
+    },
+    "qualification_cases": {
+      "path": "experiments/063/QUALIFICATION_CASES_0_1.json",
+      "git_blob_sha": "57647e3e6ea9b036ca10fe4141c22c20df466057"
+    },
+    "candidate_md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md",
+      "git_blob_sha": "69334c02e906bc60667745597a7be589ba7f8772"
+    },
+    "candidate_native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.isg",
+      "git_blob_sha": "ffed731c2da0293fd14026a6a26dc061bfe94d77"
+    },
+    "w_hypothesis": {
+      "path": "experiments/062/W_G5_HYPOTHESIS_VARIATIONAL_STATIONARITY_0_1.json",
+      "git_blob_sha": "290aa83aaa1ac2dccf63bfce977868e68e31c35f"
+    },
+    "w_reopening": {
+      "path": "experiments/062/W_G5_HYPOTHESIS_REOPENING_0_1.json",
+      "git_blob_sha": "cb56c2a9a7b47b660a340d39af97254e7bb93c6f"
+    }
+  },
+  "deterministic_preflight": {
+    "workflow_run_id": 37588974970,
+    "workflow_name": "Experiment 063 variational stationarity preflight",
+    "conclusion": "success",
+    "cases_passed": 10,
+    "cases_total": 10,
+    "frozen_assertions": 8,
+    "explicit_nonclaims": 4,
+    "ia_fixed_point_complete": true,
+    "open_module_local_ia": 0
+  },
+  "internal_scope_review": {
+    "result": "PASS_WITH_EXPLICIT_SCOPE",
+    "checks": [
+      "Candidate is an axiomatic bivariate action/first-variation/stationarity interface only.",
+      "VARX and VARY are total single-valued source-declared relations; the candidate does not derive them from ACT.",
+      "STATX/STATY are extensional zero-first-variation predicates over represented directions only.",
+      "No limit, topology, differentiability, manifold, functional-analysis, gravity, connection, curvature, torsion, tetrad, or Einstein semantics are imported.",
+      "W source instances must independently justify that their source-local variation relations instantiate VARX/VARY.",
+      "Qualification does not close any W occurrence by itself; G7 source-local reconstruction remains mandatory.",
+      "Positive W scope is limited to W-SSC-029-O03/O04 and W-SSC-149-O02/O03.",
+      "Five declared non-variation give/gives/giving controls remain excluded."
+    ],
+    "semantic_overreach_detected": false,
+    "hidden_ACT_to_VARIATION_derivation_detected": false,
+    "W_domain_leakage_into_candidate_detected": false
+  },
+  "external_verification": {
+    "complete": false,
+    "provider_boundary": {
+      "path": "experiments/063/PROVIDER_BOUNDARY_0_1.json",
+      "git_blob_sha": "d47a1bc441a45b6eb2f54ddb45ef05a07bfb45ee"
+    },
+    "global_disposition": "INCOMPLETE_EVIDENCE",
+    "bypassed_under_owner_instruction": true,
+    "independently_verified": false
+  },
+  "campaign_disposition": {
+    "disposition": "PROVISIONAL_QUALIFIED_WITH_EXPLICIT_SCOPE_UNDER_OWNER_BYPASS",
+    "W_may_consume_candidate": true,
+    "permitted_W_bodies": [
+      "W-SSC-029",
+      "W-SSC-149"
+    ],
+    "permitted_W_occurrences": [
+      "W-SSC-029-O03",
+      "W-SSC-029-O04",
+      "W-SSC-149-O02",
+      "W-SSC-149-O03"
+    ],
+    "G7_authorized_for_explicit_dependencies_only": true,
+    "global_qualified_module_manifest_update": false
+  },
+  "nonclaims": [
+    "This is not a normal QUALIFIED or QUALIFIED_WITH_EXPLICIT_SCOPE disposition under the unwaived G6 contract.",
+    "No external semantic decoder or independent promotion reviewer has passed the candidate.",
+    "Primitive 211000 is not globally qualified authority and must not be added to the qualified-module manifest from this record.",
+    "No L body may consume this W-discovered candidate solely because of this W-local provisional qualification.",
+    "The candidate does not derive the named W output equations from the W actions."
+  ],
+  "invalidation": [
+    "Any semantic change to the candidate MD/native files, MODULE_SSC_0_1, MODULE_IA_FIXED_POINT_0_1, or QUALIFICATION_CASES_0_1 invalidates this record.",
+    "Revocation of OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2 removes campaign consumption authority until normal G6 qualification completes.",
+    "A later external semantic rejection reopens every W result that consumed primitive 211000 under this bypass."
+  ],
+  "next_stage": "W_G7_SOURCE_TRACK_REOPEN_EXPLICIT_DEPENDENCIES_ONLY"
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "woit-lisi.lisi-pre-dp-ia-gate.v0.12",
+  "date": "2026-10-05",
+  "track": "L",
+  "status": "BLOCKED_PROCESS_REGROUNDED_14_OF_191_ACCEPTED",
+  "predecessor": "LISI_PRE_DP_IA_GATE_0_11.json",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "current_ledger": "CORE021_CLOSURE_LEDGER_0_25.json",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "source_revision": "LISI_SSC_SOURCE_CORRECTION_0_2.json",
+  "current_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_18.json",
+  "current_native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_18.isg",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "current_closed_census_items": 14,
+  "total_census_items": 191,
+  "current_closed_ids": [
+    "L-SSC-022",
+    "L-SSC-048",
+    "L-SSC-049",
+    "L-SSC-069",
+    "L-SSC-074",
+    "L-SSC-090",
+    "L-SSC-091",
+    "L-SSC-121",
+    "L-SSC-122",
+    "L-SSC-148",
+    "L-SSC-154",
+    "L-SSC-189",
+    "L-SSC-190",
+    "L-SSC-191"
+  ],
+  "structural_gate_state": {
+    "SOUNDNESS_STRUCTURE": true,
+    "COVERAGE": true,
+    "RECONSTRUCTION": true,
+    "SCOPE_INTEGRITY": true,
+    "AUTHORITY_ROUTING_STRUCTURE": true,
+    "IA_FIXED_POINT_CURRENT": true,
+    "STRICT_CLOSURE": false
+  },
+  "required_order": [
+    "native_body_compilation",
+    "primitive_schema_closure",
+    "core021_closure_ledger_and_gates",
+    "recursive_implicit_assertions",
+    "primitive_close_all_ia_bodies_support_dependencies",
+    "ia_no_change_pass",
+    "record_current_ia_fixed_point",
+    "nei",
+    "dts",
+    "dp"
+  ],
+  "current_ia_fixed_point": null,
+  "current_input_tuple": {
+    "primitive_kernel_sha256": "38bfe3811d70b00803c7021ad428f7c63c47fffc2d057aabec685deb2d6d1fef",
+    "source_semantic_census_sha256": "87f31b343bfcde73c79b1e63b553b51b5aaf160ccc5ef3e1de267af3618eb099",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "6008b0a7049a6c2f5a90912585beaafda69f9fcf510825effc5291c16d4ea112"
+  },
+  "closure_admission_rule": "DERIVE_FROM_FROZEN_SSC_PLUS_AUTHORITATIVE_NATIVE_GRAPH_AND_QUALIFIED_AUTHORITY",
+  "historical_closure_evidence": {
+    "prior_authority_ledger": "CORE021_CLOSURE_LEDGER_0_16.json",
+    "prior_promoted_count": 39,
+    "later_non_authoritative_ledger": "CORE021_CLOSURE_LEDGER_0_17.json",
+    "accepted_currently": 14,
+    "disposition": "PRESERVED_RESEARCH_EVIDENCE_REQUIRES_GRAPH_FIRST_REDERIVATION"
+  },
+  "cross_author_semantics_allowed": false,
+  "dp_allowed": false,
+  "scope_revision_repair": "L_REGROUNDED_SCOPE_REVISION_REPAIR_0_1.json"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.27",
+  "date": "2026-10-08",
+  "status": "W_G1_REOPENED_FOR_W097_REAL_POINT_PREDICATE_EXPOSURE",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_26.json",
+    "git_blob_sha": "7337ec043069ffd0e723c1eed9ba70753a4d11eb",
+    "reason": "G7 against schema 221103 demonstrated that the lower unary real-point predicate is source-visible but hidden inside a G1 argument slot."
+  },
+  "granularity_basis": {
+    "path": "experiments/062/W_G7_EMPTY_TYPED_PREDICATE_INSTANTIATION_0_1.json",
+    "git_blob_sha": "d334c2f8ce34dedee3463fa1fe7c06d42443d3c9",
+    "workflow_run_id": 37739153759,
+    "conclusion": "success"
+  },
+  "source_input": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+    "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce",
+    "source_body_changed": false,
+    "target": "W-SSC-097 only"
+  },
+  "downstream_invalidation": {
+    "W_G1_current": false,
+    "W_G2_current": false,
+    "W_G3_current": false,
+    "W_G4_current": false,
+    "W_G5_current": false,
+    "W_source_instantiation_current": false,
+    "generic_221101_qualification_preserved": true,
+    "generic_221102_qualification_preserved": true,
+    "generic_221103_qualification_preserved": true
+  },
+  "current_lawful_state": {
+    "G1_targeted_reopen_authorized": true,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Rebuild W-SSC-097 G1 with a separate 'real points' unary predicate occurrence, validate exact source conservation, then establish a new W G1 zero-change fixed point before replaying G2 onward."
+}

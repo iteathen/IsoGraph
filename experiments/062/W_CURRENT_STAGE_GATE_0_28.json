@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.28",
+  "date": "2026-10-08",
+  "status": "W_G1_REAL_PREDICATE_CORRECTED_INPUT_ACCEPTED_G2_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_27.json",
+    "git_blob_sha": "2dea5e49ce7843679a5df59d89b39bf467678f4b",
+    "reason": "W G1 0.23 passed deterministic replay and reached a source-local zero-change fixed point after exposing the real-point predicate."
+  },
+  "current_G1": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22",
+      "occurrences": 446
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_4.json",
+      "git_blob_sha": "34c30f8576ab7f910b64cd8eeffff8527c7fbbac"
+    },
+    "bypass_routing": {
+      "path": "experiments/062/W_G1_OWNER_BYPASS_ROUTING_0_3.json",
+      "git_blob_sha": "754247d67cb4718e3f3ea68e573271cf9a05c1fd"
+    },
+    "external_verification_complete": false,
+    "accepted_under_owner_bypass": true
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_authorized": true,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Regenerate W G2 neutral occurrence graph from W_EXTRACTION_RECONCILED_0_23.json and replay downstream W stages before reattempting schema 221103 at G7."
+}

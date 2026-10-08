@@ -1,0 +1,114 @@
+{
+  "schema": "isograph.exp062-triple-role-coefficient-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "TRIPLE_ROLE_COEFFICIENT_2_4_8_0_1",
+  "branch_head_at_creation": "178b8aeec793f01e9e5dbdbdacbcbd399600609d",
+  "hypothesis_origin": {
+    "path": "experiments/062/L_G5H_TRIPLE_ROLE_COEFFICIENT_0_1.json",
+    "git_blob_sha": "a330e06693baa9239224a5fea1aca978ce87bc8c"
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b"
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    }
+  ],
+  "scope": {
+    "obligation_count": 12,
+    "selected_relation_ids": [
+      219000,
+      219001,
+      219002
+    ],
+    "variant_dimensions": [
+      2,
+      4,
+      8
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "TR-SSC-001",
+      "kind": "DIMENSION_VARIANTS",
+      "body": "The module contains exactly three selected variants for basis sizes 2, 4, and 8.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-002",
+      "kind": "COEFFICIENT_BASIS",
+      "body": "Each variant requires an exact admitted basis presentation for coefficient carrier A of the matching size.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-003",
+      "kind": "ROLE_BASES",
+      "body": "Each variant requires exact admitted basis presentations of the same size for three distinct role carriers V, M, and P.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-004",
+      "kind": "KAPPA_FUNCTION",
+      "body": "Each variant requires KAPPA to be a total single-valued unary relation A->A, and no stronger KAPPA law.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-005",
+      "kind": "FV_LINEAR_BIJECTION",
+      "body": "Each variant requires FV:V->A to satisfy the exact linear-bijection schema.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-006",
+      "kind": "FM_LINEAR_BIJECTION",
+      "body": "Each variant requires FM:M->A to satisfy the exact linear-bijection schema.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-007",
+      "kind": "FP_LINEAR_BIJECTION",
+      "body": "Each variant requires FP:P->A to satisfy the exact linear-bijection schema.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-008",
+      "kind": "FV_BASIS_ANCHORS",
+      "body": "For every basis index i in the selected variant, FV(v_i)=e_i.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-009",
+      "kind": "FM_BASIS_ANCHORS",
+      "body": "For every basis index i in the selected variant, FM(m_i)=e_i.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-010",
+      "kind": "FP_KAPPA_BASIS_ANCHORS",
+      "body": "For every basis index i, some ke_i is the KAPPA image of e_i and FP(p_i)=ke_i.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-011",
+      "kind": "ROLE_SEPARATION",
+      "body": "The wrapper does not identify V, M, P, or A; their relation is only through the represented maps.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-012",
+      "kind": "SCOPE_EXCLUSION",
+      "body": "No involution/anti-involution, algebra product, triality, reflection, or cross-track semantics is part of the selected wrapper module.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "closure_rule": "Every selected wrapper must reconstruct exactly from already-provisional basis/function/linear-bijection authority and explicit basis-anchor incidence. No stronger KAPPA or role-identity semantics may be inferred.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

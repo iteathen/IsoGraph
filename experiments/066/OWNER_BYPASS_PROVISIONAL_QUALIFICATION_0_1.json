@@ -1,0 +1,105 @@
+{
+  "schema": "isograph.exp066-owner-bypass-provisional-qualification.v0.1",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_QUALIFIED_DISJOINT_UNARY_PREDICATES_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_PROVISIONAL_SCHEMA_AUTHORITY_ONLY",
+  "global_semantic_authority": false,
+  "campaign_semantic_authority": true,
+  "candidate_id": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+  "primitive_id": 221102,
+  "provenance": {
+    "origin": "HYPOTHESIS",
+    "hypothesis": {
+      "path": "experiments/062/W_G5H_EMPTY_INTERSECTION_0_1.json",
+      "git_blob_sha": "5e41558bf1268002ff2346df61d09c6396d9f920"
+    }
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE"
+  },
+  "frozen_inputs": {
+    "module_ssc": {
+      "path": "experiments/066/MODULE_SSC_0_1.json",
+      "git_blob_sha": "766d2e18b53c170e491c04adbef3ca6d8f0df731"
+    },
+    "module_ia_fixed_point": {
+      "path": "experiments/066/MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "11294d2c2ef1a9fc232b1b4eaafba72403a74c2c"
+    },
+    "qualification_cases": {
+      "path": "experiments/066/QUALIFICATION_CASES_0_1.json",
+      "git_blob_sha": "2e02bcb4eced8aec7d56ccec1c79523622f4f26a"
+    },
+    "qualifier": {
+      "path": "experiments/066/tools/qualify-disjoint-unary-predicates-0-1.mjs",
+      "git_blob_sha": "54c12adea6257477b09230ffc9080af10ac7bf99"
+    },
+    "candidate_md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DISJOINT_UNARY_PREDICATES_SCHEMA_0_1.md",
+      "git_blob_sha": "8b89ca4ad8fedca357cf1f0d84e8316c8c46a9f1"
+    },
+    "candidate_native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DISJOINT_UNARY_PREDICATES_SCHEMA_0_1.isg",
+      "git_blob_sha": "1dd0663fc51f08c752601b37238114fb57d602e7"
+    }
+  },
+  "deterministic_qualification": {
+    "workflow_run_id": 37737699776,
+    "workflow_name": "Experiment 066 disjoint unary predicates qualification",
+    "conclusion": "success",
+    "cases_total": 7,
+    "fresh_positive_passes": 4,
+    "fresh_adversarial_expected_rejections": 3,
+    "module_local_ia_fixed_point": true,
+    "open_module_local_ia": 0
+  },
+  "internal_scope_review": {
+    "result": "PASS_WITH_EXPLICIT_SCOPE",
+    "checks": [
+      "Candidate is source-neutral and Core-definable.",
+      "A and B are typed unary predicates over U; only overlap is excluded.",
+      "Empty U/A/B models pass.",
+      "Nonexhaustive carrier elements pass.",
+      "No complementarity or nonemptiness is imported.",
+      "No projective, conic, real-form, conjugation, geometry, topology, W, or L semantics occur in the native schema.",
+      "W097 must independently justify its source predicate roles at G7."
+    ],
+    "semantic_overreach_detected": false,
+    "hidden_domain_semantics_detected": false,
+    "L_evidence_used": false
+  },
+  "external_verification": {
+    "complete": false,
+    "bypassed_under_owner_instruction": true,
+    "independently_verified": false,
+    "global_disposition": "INCOMPLETE_EVIDENCE"
+  },
+  "campaign_disposition": {
+    "disposition": "PROVISIONAL_QUALIFIED_CORE_DEFINABLE_DISJOINTNESS_SCHEMA_UNDER_OWNER_BYPASS",
+    "W_may_consume_candidate": true,
+    "permitted_W_bodies": [
+      "W-SSC-097"
+    ],
+    "permitted_W_occurrences": [
+      "W-SSC-097-O05"
+    ],
+    "G7_authorized_for_explicit_dependencies_only": true,
+    "L_may_consume_candidate": false,
+    "global_qualified_module_manifest_update": false
+  },
+  "nonclaims": [
+    "This is not global qualified authority.",
+    "No external semantic or promotion reviewer has passed the candidate.",
+    "Schema 221102 must not be added to the global qualified-module manifest from this record.",
+    "The record does not define conic-point or real-point semantics.",
+    "No L body may consume this W-discovered candidate."
+  ],
+  "invalidation": [
+    "Any semantic change to the candidate, SSC, IA, controls, or qualifier invalidates this record.",
+    "Revocation of the owner external-verification bypass removes campaign consumption authority until normal G6 completes.",
+    "A failed W G7 instantiation preserves the generic schema qualification but blocks W consumption."
+  ],
+  "next_stage": "W097_G7_EMPTY_INTERSECTION_SOURCE_INSTANTIATION"
+}

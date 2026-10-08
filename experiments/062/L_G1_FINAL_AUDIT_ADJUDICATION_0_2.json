@@ -1,0 +1,226 @@
+{
+  "artifact": "L_G1_FINAL_AUDIT_ADJUDICATION_0_2",
+  "schema": "isograph.exp062-l-g1-final-audit-adjudication.v0.2",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_ADJUDICATION_COMPLETE_FOR_RUN_37519703856_ATTEMPT_1",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "purpose": "Resolve only the validated correction leads from the second final L G1 cold audit against frozen source bodies and L_EXTRACTION_RECONCILED_0_3.json.",
+  "inputs": {
+    "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "graph_first_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+    "predecessor_extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_3.json",
+    "audit": "experiments/062/evidence/run-37519703856-attempt-1/exp062-l-g1-final-audit-v2/AUDIT.json",
+    "audit_validation": "experiments/062/evidence/run-37519703856-attempt-1/exp062-l-g1-final-audit-v2/AUDIT_VALIDATION.json"
+  },
+  "rules": [
+    "Expose distinct source-stated relation/side-condition structure when the predecessor only conserved it as undifferentiated wording.",
+    "Preserve negation and modality without promoting them to new mathematical categories.",
+    "A source possibility may be conserved as an unresolved occurrence so that G3 can later decide Core/QU definability; G1 does not classify it as QU.",
+    "No source-domain category, primitive class, quotient class, or cross-track identity is inferred."
+  ],
+  "counts": {
+    "correction_rows": 5,
+    "audit_omission_leads": 6,
+    "accepted_as_stated": 3,
+    "accepted_with_source_local_narrowing": 3,
+    "rejected": 0,
+    "proposed_occurrences": 8,
+    "boundary_notes_resolved": 1
+  },
+  "decisions": [
+    {
+      "census_id": "L-SSC-110",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "t not commuting with C but commuting with CPT",
+          "decision": "ACCEPT_WITH_SOURCE_LOCAL_NARROWING",
+          "reason": "The predecessor conserves the whole phrase only under a generic triality-extension relation. The two source-stated commutation conditions must be structurally explicit.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "t not commuting with C",
+              "relation_span": "commuting with",
+              "argument_spans": [
+                "t",
+                "C"
+              ],
+              "logical_force": "NEGATED",
+              "definition_status": "EXPLICIT_IN_BODY",
+              "depends_on": [
+                "L-SSC-110-O01"
+              ],
+              "load_bearing_note": "Explicit negative commutation condition between t and C."
+            },
+            {
+              "candidate_id": "C02",
+              "source_span": "t not commuting with C but commuting with CPT",
+              "relation_span": "commuting with CPT",
+              "argument_spans": [
+                "t",
+                "CPT"
+              ],
+              "logical_force": "ASSERTED",
+              "definition_status": "EXPLICIT_IN_BODY",
+              "depends_on": [
+                "L-SSC-110-O01"
+              ],
+              "load_bearing_note": "Explicit positive commutation condition between t and CPT."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": []
+    },
+    {
+      "census_id": "L-SSC-113",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "these conjugations are load-bearing for the discrete generators",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "This is an explicit source dependency between the already distinguished conjugations and the discrete generators, not merely an epistemic status statement.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "these conjugations are load-bearing for the discrete generators",
+              "relation_span": "load-bearing for",
+              "argument_spans": [
+                "these conjugations",
+                "discrete generators"
+              ],
+              "logical_force": "ASSERTED",
+              "definition_status": "PARTIAL_IN_BODY",
+              "depends_on": [
+                "L-SSC-113-O01"
+              ],
+              "load_bearing_note": "Source-stated dependency of the conjugation structure on the discrete generators."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": []
+    },
+    {
+      "census_id": "L-SSC-115",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "with quaternionic multiplication acting from the right",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "The direction of multiplication is an explicit side condition on the source's operator presentation and is absent from O01.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "quaternionic multiplication acting from the right",
+              "relation_span": "acting from the right",
+              "argument_spans": [
+                "quaternionic multiplication"
+              ],
+              "logical_force": "ASSERTED",
+              "definition_status": "EXPLICIT_IN_BODY",
+              "depends_on": [
+                "L-SSC-115-O01"
+              ],
+              "load_bearing_note": "Right-action convention for quaternionic multiplication in the stated C/P/T/CPT presentation."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": []
+    },
+    {
+      "census_id": "L-SSC-117",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "is explicitly not considered a symmetry of nature despite belonging to the finite group",
+          "decision": "ACCEPT_WITH_SOURCE_LOCAL_NARROWING",
+          "reason": "The span states two distinct relations: a negated physical-symmetry classification and finite-group membership. Preserve both without importing a definition of physical symmetry.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "is explicitly not considered a symmetry of nature",
+              "relation_span": "considered",
+              "argument_spans": [
+                "K",
+                "symmetry of nature"
+              ],
+              "logical_force": "NEGATED",
+              "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+              "depends_on": [],
+              "load_bearing_note": "Source's explicit negative classification of K as a symmetry of nature."
+            },
+            {
+              "candidate_id": "C02",
+              "source_span": "belonging to the finite group",
+              "relation_span": "belonging to",
+              "argument_spans": [
+                "K",
+                "finite group"
+              ],
+              "logical_force": "ASSERTED",
+              "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+              "depends_on": [
+                "C01"
+              ],
+              "load_bearing_note": "Source-stated membership of K in the finite group, contrasted with its negative physical-symmetry classification."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": []
+    },
+    {
+      "census_id": "L-SSC-188",
+      "lead_resolutions": [
+        {
+          "audit_source_span": "superposition of triality-related regional spacetimes",
+          "decision": "ACCEPT_WITH_SOURCE_LOCAL_NARROWING",
+          "reason": "The predecessor preserves the adjective inside O01 but does not expose the source-stated triality relation as structure. Preserve that relation without assigning it a conventional category.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C01",
+              "source_span": "triality-related regional spacetimes",
+              "relation_span": "triality-related",
+              "argument_spans": [
+                "regional spacetimes"
+              ],
+              "logical_force": "OTHER",
+              "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+              "depends_on": [
+                "L-SSC-188-O01"
+              ],
+              "load_bearing_note": "Unexpanded source-stated triality relation qualifying the regional spacetimes."
+            }
+          ]
+        },
+        {
+          "audit_source_span": "possible four-fermion interaction",
+          "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+          "reason": "The source possibility modality is load-bearing and must be structurally recoverable. Record it as an unresolved occurrence for later G3 Core/QU definability; this adjudication does not classify it as QU.",
+          "proposed_occurrences": [
+            {
+              "candidate_id": "C02",
+              "source_span": "possible four-fermion interaction",
+              "relation_span": "possible",
+              "argument_spans": [
+                "four-fermion interaction"
+              ],
+              "logical_force": "OTHER",
+              "definition_status": "PARTIAL_IN_BODY",
+              "depends_on": [
+                "L-SSC-188-O03"
+              ],
+              "load_bearing_note": "Explicit source possibility modality on the four-fermion interaction; qualification/classification is deferred to G3."
+            }
+          ]
+        }
+      ],
+      "boundary_note_resolutions": [
+        {
+          "audit_boundary_note": "The extraction of L-SSC-188-O01 treats 'superposition' as a primitive relation without accounting for the structural dependency on 'triality-related' regional spacetimes.",
+          "decision": "RESOLVED_BY_ADDED_SOURCE_LOCAL_RELATION",
+          "reason": "C01 exposes the triality-related qualifier as its own unresolved source relation while retaining O01 unchanged."
+        }
+      ]
+    }
+  ],
+  "downstream_boundary": "Append exactly eight accepted occurrences to L_EXTRACTION_RECONCILED_0_3.json, conserve every predecessor occurrence byte-identically, validate, and run a newly frozen independent 151-row audit. G2 remains blocked until a zero-correction audit."
+}

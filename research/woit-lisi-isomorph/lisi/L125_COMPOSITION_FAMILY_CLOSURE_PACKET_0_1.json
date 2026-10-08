@@ -1,0 +1,179 @@
+{
+  "schema": "lisi.l125-composition-family-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "L-SSC-125",
+  "frozen_body": "L05 defines division and split-composition algebras by explicit basis, conjugation, multiplication tables, and metric, with conjugation reversing product order and split signatures kept distinct from positive-definite division algebras.",
+  "source": "L05 §2",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_ORDER_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPOSITION_SIGNATURE_SOURCE_OVERLAY_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_DIVISION_PROPERTY_SOURCE_OVERLAY_0_1.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_ORDER_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPOSITION_SIGNATURE_SOURCE_OVERLAY_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_DIVISION_PROPERTY_SOURCE_OVERLAY_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_ORDERED_FIELD_POSDEF_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_NEGATIVE_NORM_WITNESS_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_DIVISION_COMPOSITION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 19,
+    "declared_local_ids": 167,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "scalar": {
+      "carrier": 189100,
+      "ordered_field_relation": 216100
+    },
+    "ordinary_complex": {
+      "carrier": 214000,
+      "basis": [
+        214010,
+        214011
+      ],
+      "product": 214005,
+      "conjugation": 214009,
+      "bilinear_form": 214007,
+      "norm": 214008,
+      "division_schema": 216003,
+      "positive_definite_schema": 216001
+    },
+    "quaternion": {
+      "carrier": 189200,
+      "basis": [
+        189206,
+        189210,
+        189211,
+        189212
+      ],
+      "product": 189205,
+      "conjugation": 189209,
+      "bilinear_form": 189207,
+      "norm": 189208,
+      "division_schema": 216003,
+      "positive_definite_schema": 216001
+    },
+    "ordinary_octonion": {
+      "carrier": 214300,
+      "basis": [
+        214310,
+        214311,
+        214312,
+        214313,
+        214314,
+        214315,
+        214316,
+        214317
+      ],
+      "product": 214305,
+      "conjugation": 214309,
+      "bilinear_form": 214307,
+      "norm": 214308,
+      "division_schema": 216003,
+      "positive_definite_schema": 216001,
+      "source_consistency": "INCONSISTENT_SOURCE_TABLE_VS_COMPOSITION_AND_ANTIINVOLUTION"
+    },
+    "split_complex": {
+      "carrier": 214100,
+      "basis": [
+        214110,
+        214111
+      ],
+      "product": 214105,
+      "conjugation": 214109,
+      "bilinear_form": 214107,
+      "norm": 214108,
+      "negative_norm_witness": [
+        214111,
+        214112
+      ]
+    },
+    "split_quaternion": {
+      "carrier": 214200,
+      "basis": [
+        214210,
+        214211,
+        214212,
+        214213
+      ],
+      "product": 214205,
+      "conjugation": 214209,
+      "bilinear_form": 214207,
+      "norm": 214208,
+      "negative_norm_witness": [
+        214211,
+        214218
+      ]
+    },
+    "split_octonion": {
+      "carrier": 214400,
+      "basis": [
+        214410,
+        214411,
+        214412,
+        214413,
+        214414,
+        214415,
+        214416,
+        214417
+      ],
+      "product": 214405,
+      "conjugation": 214409,
+      "bilinear_form": 214407,
+      "norm": 214408,
+      "negative_norm_witness": [
+        214414,
+        214426
+      ]
+    }
+  },
+  "evidence": {
+    "dispositions": [
+      "SOURCE_ASSERTED",
+      "INCONSISTENT_SOURCE"
+    ],
+    "inconsistency_witness": "LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json",
+    "inconsistency_falsifier": "LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_FALSIFIER_0_1.json",
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "representation closure is orthogonal to truth/consistency disposition under Core 0.21",
+    "the exact version-of-record ordinary-octonion table is preserved even where it conflicts with source composition/conjugation claims",
+    "the project-generated one-sign repair diagnostic is not part of Track L semantics",
+    "division is expanded by unique left/right solution semantics and is not an opaque label",
+    "positive-definite is expanded through the L-local ordered-field/Q schema",
+    "split structure is witnessed by explicit negative-norm source basis values",
+    "ordinary and split carriers remain distinct",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

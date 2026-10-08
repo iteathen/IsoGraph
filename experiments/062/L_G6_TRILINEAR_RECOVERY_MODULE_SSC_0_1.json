@@ -1,0 +1,171 @@
+{
+  "schema": "isograph.exp062-trilinear-product-recovery-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "TRILINEAR_PRODUCT_RECOVERY_0_1",
+  "branch_head_at_creation": "765e9318a57ca2382e73b013c66d4250a14910a0",
+  "hypothesis": {
+    "path": "experiments/062/L_G5H_TRILINEAR_PRODUCT_RECOVERY_0_1.json",
+    "git_blob_sha": "f2b22e6f1316aa52a4cd34483b1060c049410445"
+  },
+  "scope": {
+    "obligation_count": 24,
+    "selected_relation_ids": [
+      185005,
+      185006,
+      220000
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "TR-SSC-001",
+      "kind": "TRILINEAR_CARRIERS",
+      "body": "185005 requires three represented vector carriers over one scalar field.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-002",
+      "kind": "TRILINEAR_TOTAL_FUNCTION",
+      "body": "185005 requires T:X×Y×Z->C to be total and single-valued.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-003",
+      "kind": "TRILINEAR_FIRST_ADD",
+      "body": "185005 requires additivity in the first argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-004",
+      "kind": "TRILINEAR_FIRST_SCALE",
+      "body": "185005 requires scalar linearity in the first argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-005",
+      "kind": "TRILINEAR_SECOND_ADD",
+      "body": "185005 requires additivity in the second argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-006",
+      "kind": "TRILINEAR_SECOND_SCALE",
+      "body": "185005 requires scalar linearity in the second argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-007",
+      "kind": "TRILINEAR_THIRD_ADD",
+      "body": "185005 requires additivity in the third argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-008",
+      "kind": "TRILINEAR_THIRD_SCALE",
+      "body": "185005 requires scalar linearity in the third argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-009",
+      "kind": "CYCLIC_PARENT",
+      "body": "185006 requires exact 185005 trilinear support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-010",
+      "kind": "CYCLIC_MAP_XY",
+      "body": "185006 requires exact linear RXY:X->Y.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-011",
+      "kind": "CYCLIC_MAP_YZ",
+      "body": "185006 requires exact linear RYZ:Y->Z.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-012",
+      "kind": "CYCLIC_MAP_ZX",
+      "body": "185006 requires exact linear RZX:Z->X.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-013",
+      "kind": "CYCLIC_ROUNDTRIP_X",
+      "body": "185006 requires RZX(RYZ(RXY(x)))=x.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-014",
+      "kind": "CYCLIC_ROUNDTRIP_Y",
+      "body": "185006 requires RXY(RZX(RYZ(y)))=y.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-015",
+      "kind": "CYCLIC_ROUNDTRIP_Z",
+      "body": "185006 requires RYZ(RXY(RZX(z)))=z.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-016",
+      "kind": "CYCLIC_T_PRESERVATION",
+      "body": "185006 requires T(x,y,z)=T(RZX(z),RXY(x),RYZ(y)).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-017",
+      "kind": "RECOVERY_COMPOSITION_PARENT",
+      "body": "220000 requires exact 185003 composition-algebra support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-018",
+      "kind": "RECOVERY_TRILINEAR_PARENT",
+      "body": "220000 requires exact 185005 trilinear support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-019",
+      "kind": "RECOVERY_T_PRODUCT_PAIRING",
+      "body": "220000 requires T(x,y,z)=B(z,PROD(x,y)).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-020",
+      "kind": "RECOVERY_DEFINITION",
+      "body": "220000 defines REC(x,y,h) by equality of all T(x,y,z) and B(z,h) scalar pairings.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-021",
+      "kind": "RECOVERY_EXISTENCE",
+      "body": "220000 requires a recovered h for every admitted x,y.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-022",
+      "kind": "RECOVERY_PRODUCT_EQUALITY",
+      "body": "220000 requires REC(x,y,h) iff PROD(x,y,h) for admitted x,y,h.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-023",
+      "kind": "RECOVERY_UNIQUENESS",
+      "body": "220000 requires any two recovered h values for the same x,y to be equal.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TR-SSC-024",
+      "kind": "SCOPE_EXCLUSION",
+      "body": "No triality-group/reflection, division/positivity/split, named-algebra identity, alternativity/Moufang, canonical conjugation, generation, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "completion_rule": "All 24 obligations must be represented in the deterministic qualification surface or explicitly discharged by a pinned qualified dependency. Scope exclusions are qualification-bearing.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

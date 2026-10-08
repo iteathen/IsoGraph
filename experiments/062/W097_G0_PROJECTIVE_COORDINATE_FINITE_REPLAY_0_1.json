@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062-w097-finite-coordinate-independent-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "source": "arXiv:2202.02657v2 W05 §2 printed pp.2-3",
+  "source_oracle_sha": "3a448c9e762578e6ce6796123155f3ca3c2b5032",
+  "source_census_successor_sha": "4a39e2d36465519a91731d193128dbd4b0720192",
+  "method": "Independent Gaussian-integer finite sample of homogeneous anti-conjugate source coordinate map J(z1,z2)=(-bar z2,bar z1), distinct from map-type and full CP1 source semantics. Finite controls are implementation falsifiers, not a universal C proof.",
+  "domain": "Complex Gaussian integer coordinates with each real/imag component -1/0/1, excluding zero vector; four nonzero scalar multipliers 1,i,1+i,-1+i",
+  "positive": {
+    "vectors": 80,
+    "compositions": 80,
+    "homogeneity": 320,
+    "antilinearity": 320,
+    "projective_no_fixed": 80,
+    "ordinary_map_compositions": 80,
+    "infinity_case": true
+  },
+  "expected_j_squared": "-Identity_on_C2",
+  "expected_projective_squared": "Identity_on_CP1",
+  "expected_no_fixed_projective_sample": true,
+  "mutations": [
+    {
+      "label": "missing first negative",
+      "rejected": true
+    },
+    {
+      "label": "missing conjugation",
+      "rejected": true
+    },
+    {
+      "label": "swapped coordinates",
+      "rejected": true
+    },
+    {
+      "label": "wrong second negative",
+      "rejected": true
+    },
+    {
+      "label": "identity disguised",
+      "rejected": true
+    }
+  ],
+  "adversarial_total": 5,
+  "adversarial_rejected": 5,
+  "qualification": "G0_SOURCE_FORMULA_TEST_ONLY_NOT_FULL_W_CORPUS_AUDIT_NOT_MATHEMATICAL_PROOF",
+  "external_review": "OWNER_BYPASSED_NOT_PASSED",
+  "nonclaims": [
+    "No universal theorem about CP1 proven by finite enumeration",
+    "No affine -1/conj z extension to z=0 imported",
+    "No G7 reconstruction or current G1 authorization"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "isograph.exp063-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "module_ssc": "experiments/063/MODULE_SSC_0_1.json",
+  "admitted": [
+    {
+      "id": "VS-IA01",
+      "premises": [
+        "VS-A02"
+      ],
+      "consequence": "DX is nonempty because its vector-zero witness is represented in the carrier."
+    },
+    {
+      "id": "VS-IA02",
+      "premises": [
+        "VS-A03"
+      ],
+      "consequence": "DY is nonempty because its vector-zero witness is represented in the carrier."
+    },
+    {
+      "id": "VS-IA03",
+      "premises": [
+        "VS-A05",
+        "VS-A07"
+      ],
+      "consequence": "For fixed represented x,y, STATX truth is extensionally determined by VARX, DX, and ZERO."
+    },
+    {
+      "id": "VS-IA04",
+      "premises": [
+        "VS-A06",
+        "VS-A08"
+      ],
+      "consequence": "For fixed represented x,y, STATY truth is extensionally determined by VARY, DY, and ZERO."
+    },
+    {
+      "id": "VS-IA05",
+      "premises": [
+        "VS-A05"
+      ],
+      "consequence": "Every represented x,y,dx tuple has exactly one scalar VARX value."
+    },
+    {
+      "id": "VS-IA06",
+      "premises": [
+        "VS-A06"
+      ],
+      "consequence": "Every represented x,y,dy tuple has exactly one scalar VARY value."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "VS-IA-R01",
+      "claim": "ACT determines VARX/VARY.",
+      "reason": "No candidate axiom links ACT values to first-variation values; this is explicitly forbidden by VS-N01."
+    },
+    {
+      "id": "VS-IA-R02",
+      "claim": "STATX or STATY implies any named physical equation.",
+      "reason": "No domain-specific equation semantics are in the module."
+    },
+    {
+      "id": "VS-IA-R03",
+      "claim": "VARX/VARY are analytic derivatives.",
+      "reason": "Limit/topological semantics are explicitly outside candidate scope."
+    }
+  ],
+  "fixed_point": {
+    "admitted_count": 6,
+    "rejected_count": 3,
+    "open_module_local_ia": 0,
+    "complete": true,
+    "note": "Fixed point is relative to the frozen eight SSC assertions and four explicit nonclaims only."
+  },
+  "downstream": {
+    "nei_authorized": false,
+    "dts_authorized": false,
+    "dp_authorized": false,
+    "reason": "No downstream module is needed to qualify the base interface semantics."
+  }
+}

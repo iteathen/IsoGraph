@@ -1,0 +1,17 @@
+import fs from "node:fs";
+const native=fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_REGROUNDED_0_15.isg","utf8");
+const ssc=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json","utf8"));
+const manifest=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_15.json","utf8"));
+const d=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/L148_REGROUNDED_CORE_LOGIC_NATIVE_DERIVATION_0_1.json","utf8"));
+const errors=[];const norm=s=>s.replace(/\s+/g,"");
+if(d.frozen_body!==ssc.items.find(x=>x.id==="L-SSC-148")?.body)errors.push("frozen body");
+if(!norm(native).includes(norm(d.serialized_formula)))errors.push("formula missing");
+if(!native.includes("(^150010 940005 941148 940104)"))errors.push("source provenance missing");
+if(!native.includes("(^150010 940002 941148 940010)"))errors.push("closure disposition changed");
+if(!native.includes("(^150010 940003 942148 940014)"))errors.push("compiled state missing");
+if(native.includes("(^150010 940003 942148 940011)"))errors.push("stale unexpanded state");
+const mi=manifest.items.find(x=>x.census_id==="L-SSC-148");
+if(mi?.closure_mode!=="INCOMPLETE_UNEXPANDED"||mi?.semantic_compilation_state!=="COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT")errors.push("manifest state");
+if(d.closure_claim!==false||d.target_internal_behavior_imported!==false||manifest.regrounded_compilation?.accepted_closed_census_items!==10)errors.push("premature closure/firewall");
+const result={pass:errors.length===0,errors,census_id:"L-SSC-148",formula:d.serialized_formula,pending:manifest.regrounded_compilation?.compiled_pending_primitive_closure_audit};
+console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;

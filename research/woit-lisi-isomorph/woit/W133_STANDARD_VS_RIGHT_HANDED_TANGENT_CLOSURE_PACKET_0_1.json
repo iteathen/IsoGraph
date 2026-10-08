@@ -1,0 +1,43 @@
+{
+  "schema": "woit.w133-standard-vs-right-handed-tangent-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-133",
+  "source_assertion_id": "W-A0-052",
+  "frozen_body": "W02 distinguishes the standard twistor construction, where a point is a right-handed C2 subspace of C4 and left-handed spinors are the quotient, from its stronger proposal that the tangent bundle itself be chirally asymmetric and purely right-handed.",
+  "source": "W02 §II",
+  "support_packets": [
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_1.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json"
+  ],
+  "source_role_instance": "research/woit-lisi-isomorph/woit/W02_STANDARD_VS_RIGHT_HANDED_TANGENT_ROLE_SOURCE_INSTANCE_0_1.isg",
+  "reconstruction": {
+    "standard_twistor_point_carrier": 947100,
+    "standard_reference_right_spinor_plane": 947110,
+    "standard_left_spinor_quotient": 189020,
+    "standard_quotient_package_family": 947101,
+    "standard_tangent_hom_family": 947200,
+    "proposed_right_handed_complex_spacetime_carrier": 204110,
+    "proposed_right_handed_group_role": 205132,
+    "proposed_right_handed_action": 205120,
+    "standard_tangent_role_atom": 949010,
+    "proposed_right_handed_tangent_role_atom": 949011,
+    "source_role_relation": 949000,
+    "source_contrast_relation": 949001
+  },
+  "semantic_guards": [
+    "The standard construction uses exact quotient semantics T/S and does not choose a complement.",
+    "The tangent-Hom family uses the W047 frozen axiomatic bundle boundary.",
+    "The right-handed proposal uses the already exact W131 carrier/action and does not infer a left action.",
+    "The contrast relation is extensional source metadata only; it does not assert a mathematical isomorphism between the two tangent descriptions.",
+    "No electroweak/internal interpretation and no Lisi semantics are added."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

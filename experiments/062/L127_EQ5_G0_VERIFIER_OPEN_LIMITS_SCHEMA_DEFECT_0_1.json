@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.exp062-l127-eq5-g0-verifier-open-limits-lookup.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "failed_run": {
+    "id": 37838925736,
+    "head": "26213fbc769168883366df06a70eec92992f9bbd",
+    "conclusion": "failure",
+    "error": "no later source substitution or downstream promotion",
+    "adversarial_mutants_evaluated": 0
+  },
+  "verifier_old": {
+    "path": "experiments/062/tools/verify-l-g0-l127-eq5-indexed-source-0-1.mjs",
+    "git_blob_sha": "5f2a3b44969a1b64e6e6bcb42a5f295e8d9f1877"
+  },
+  "cause": "Verifier attempted to read absent packet.remaining.G1_through_G7_authorized while current source packet stores the unresolved scope and stage nonclaims in open_limits array and top-level G1_authorized=false. This was an unmapped fixture field, not evidence of source math success or failure.",
+  "numeric_preliminary": "The evaluator finished source arithmetic before failed final guard; values must be recomputed after fixing guard in a passing run.",
+  "minimum_repair": "Fail-closed validate top-level G1_authorized=false and exact required open_limits members (source-wide G0 incomplete, G1–G7 historically stale); preserve source checks and rerun baseline before all 24 mutations.",
+  "nonclaims": [
+    "no mathematical claim qualified on failed run",
+    "no mutations evaluated on failed baseline",
+    "no source data or prior gate modified"
+  ],
+  "downstream_authorized": false
+}

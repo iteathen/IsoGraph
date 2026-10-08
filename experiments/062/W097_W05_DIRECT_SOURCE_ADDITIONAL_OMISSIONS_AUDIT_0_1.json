@@ -1,0 +1,72 @@
+{
+  "schema": "isograph.exp062-w097-w05-direct-source-additional-omissions-audit.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_ADDITIONAL_G0_SOURCE_SEMANTIC_OMISSIONS_REOPEN_BEFORE_G1",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "source": {
+    "id": "W05",
+    "locator": "Notes on the Twistor P1, §2, pp.2-3",
+    "frozen_revision": "arXiv:2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "audit_evidence": "Manual reading of author-hosted February 8 2022 PDF text and page images, primary author but independent byte identity to arXiv v2 not confirmed. Frozen source scope unchanged."
+  },
+  "predecessor": {
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_6.json",
+      "git_blob_sha": "f9687fb27aefd4764422dc2aa0b8c25b20d0c8bf"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_5.json",
+      "git_blob_sha": "5df1ec2710aae476e0c1f99dd03851d2056881d7"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "cee578c6aca2e6ba6667a3147c98b3d3cf71c910"
+    }
+  },
+  "findings": [
+    {
+      "id": "W097-ADD01",
+      "classification": "CARRIER_QUOTIENT_AFFINE_CHART_OMISSION",
+      "source": "CP1 as Riemann sphere and complex lines C2; [z1,z2] projective quotient classes; affine z=z1/z2 excluding [z1,0]"
+    },
+    {
+      "id": "W097-ADD02",
+      "classification": "AFFINE_ORDINARY_CONJUGATION_OMISSION",
+      "source": "rho(z)=bar(z)"
+    },
+    {
+      "id": "W097-ADD03",
+      "classification": "SOURCE_GIVEN_FIXED_POINT_PROOF_OMISSION",
+      "source": "z=-1/bar(z) implies |z|^2=-1"
+    },
+    {
+      "id": "W097-ADD04",
+      "classification": "GALOIS_ACTION_PRESENTATION_OMISSION",
+      "source": "twistor P1 as complex projective CP1 with action of Gal(C/R), besides its real conic presentation"
+    }
+  ],
+  "correction_contract": [
+    "Append conservatively to existing W097 source obligation; delete no predecessor source claims.",
+    "Expose the additional quotient, chart, map, proof and Galois-action semantics at G1 without conventional imports.",
+    "Only source-local W evidence; W G1 and every dependent G2/G3/G4/G5/G5H/G7 source instance remain historical until replay."
+  ],
+  "invalidation": {
+    "ssc_0_6_current": false,
+    "demand_0_5_current": false,
+    "gate_0_31_current": false,
+    "g1_0_26_current": false,
+    "G2_and_beyond_authorized": false,
+    "generic_source_neutral_G6_modules_unaffected_by_this_W_source_repair": true
+  },
+  "source_expansion": false,
+  "changed_W_bodies": [
+    "W-SSC-097"
+  ],
+  "other_W_bodies_unmodified": 83,
+  "L_semantics_used": false,
+  "next_lawful_action": "Publish frozen SSC 0.7 and demand 0.6; re-extract W097 G1 and test source-local zero-change before any downstream stage."
+}

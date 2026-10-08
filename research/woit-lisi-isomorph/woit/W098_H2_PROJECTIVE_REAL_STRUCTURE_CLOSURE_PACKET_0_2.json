@@ -1,0 +1,103 @@
+{
+  "schema": "woit.w098-h2-projective-real-structure-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_AFTER_H_C2_CORRECTION",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-098",
+  "frozen_body": "W05 derives rho_tw from the chosen H=C2 presentation by left multiplication by quaternion j and uses the same quaternionic mechanism on C4=H2 to define the Euclidean projective-twistor real structure.",
+  "source": "W05 §§2–3",
+  "root_native": "research/woit-lisi-isomorph/woit/W05_H2_PROJECTIVE_REAL_STRUCTURE_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "compositional_interface": {
+    "external_local_refs": [
+      187400,
+      187401,
+      187402,
+      189000,
+      189001,
+      189002,
+      189003,
+      189004,
+      189005,
+      189006,
+      189310,
+      189315,
+      189319,
+      197012,
+      202003,
+      202004,
+      202100,
+      202101,
+      202102,
+      202103,
+      202104,
+      202105,
+      202106,
+      202111,
+      202112,
+      202113,
+      202114,
+      202199
+    ],
+    "providers": {
+      "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json": [
+        187400,
+        187401,
+        187402,
+        189000,
+        189001,
+        189002,
+        189003,
+        189004,
+        189005,
+        189006,
+        189310,
+        189315,
+        189319,
+        197012
+      ],
+      "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json": [
+        202003,
+        202004,
+        202100,
+        202101,
+        202102,
+        202103,
+        202104,
+        202105,
+        202106,
+        202111,
+        202112,
+        202113,
+        202114,
+        202199
+      ]
+    },
+    "result": "PASS_ALL_REFS_COVERED"
+  },
+  "reconstruction": {
+    "source_C2_quaternionic_packet": "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json",
+    "twistor_direct_sum_projective_packet": "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "twistor_pseudoreal_map": 943000,
+    "induced_projective_real_structure": 943001,
+    "pinning": "left multiplication by source quaternion j on both exact H-derived chiral summands"
+  },
+  "semantic_guards": [
+    "the C2 left-j pseudoreal mechanism is reused from an already closed source-local packet",
+    "the C4=H2 direct-sum and PT projective quotient are reused from an already closed source-local packet",
+    "the four-real-dimensional family of invariant CP1 lines and HP1=S4 topology are not claimed here",
+    "no Lisi or unification premise is used"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W098_H2_PROJECTIVE_REAL_STRUCTURE_CLOSURE_PACKET_0_1.json",
+  "correction_revalidation": "PASS compositionally after W023/W024 successors revalidated against H↔C2 0.3."
+}

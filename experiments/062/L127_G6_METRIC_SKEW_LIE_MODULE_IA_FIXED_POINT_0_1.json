@@ -1,0 +1,145 @@
+{
+  "schema": "isograph.exp062-l127-metric-skew-lie-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "METRIC_SKEW_ENDOMORPHISM_LIE_0_1",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_METRIC_SKEW_ENDOMORPHISM_LIE_0_1.json",
+      "git_blob_sha": "ea0ef8c48b64efa49926a50344906fe9ae538f0c"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_METRIC_SKEW_LIE_MODULE_SSC_0_1.json",
+      "git_blob_sha": "f62fe657241ae93ddf55a98c74c4a1e84adb6284"
+    }
+  },
+  "inference_profile": {
+    "id": "metric-skew-lie-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 184004/227000. No Lie classification theorem or group integration.",
+    "rules": [
+      {
+        "id": "MSL-IA-R1",
+        "trigger": "184004",
+        "derives": [
+          "184003(BR)",
+          "BRACKET_ANTISYMMETRY",
+          "BRACKET_JACOBI"
+        ]
+      },
+      {
+        "id": "MSL-IA-R2",
+        "trigger": "227000",
+        "derives": [
+          "185002(V,B,Q)",
+          "184004(L,BR)",
+          "187200(ACT,L,V,V)",
+          "METRIC_SKEW_ALL_L",
+          "ACTION_FAITHFUL",
+          "ALL_METRIC_SKEW_LINEAR_F_COVERED",
+          "BRACKET_COMMUTATOR_ACTION"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "227000 -> dimension 28",
+      "227000 -> so(8)",
+      "227000 -> orthogonal group",
+      "227000 -> Spin/Pin group",
+      "227000 -> exponential surjectivity",
+      "227000 -> octonion semantics"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(184004)",
+        "SCHEMA_DEFINITION(227000)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "MSL-IA-001",
+          "assertion": "184004 entails an exact bilinear vector-valued bracket.",
+          "support": [
+            "184004 explicit dependency"
+          ]
+        },
+        {
+          "id": "MSL-IA-002",
+          "assertion": "184004 entails antisymmetry.",
+          "support": [
+            "184004 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-003",
+          "assertion": "184004 entails Jacobi.",
+          "support": [
+            "184004 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-004",
+          "assertion": "227000 entails exact metric-form, Lie-bracket, and typed-action parents.",
+          "support": [
+            "227000 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "MSL-IA-005",
+          "assertion": "227000 entails every represented action is metric-skew.",
+          "support": [
+            "227000 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-006",
+          "assertion": "227000 entails action faithfulness/extensional operator identity.",
+          "support": [
+            "227000 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-007",
+          "assertion": "227000 entails coverage of every metric-skew linear endomorphism.",
+          "support": [
+            "227000 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-008",
+          "assertion": "227000 entails bracket action equals the commutator action.",
+          "support": [
+            "227000 explicit body"
+          ]
+        },
+        {
+          "id": "MSL-IA-009",
+          "assertion": "No dimension/name/group/octonion classification follows from selected relations alone.",
+          "support": [
+            "candidate scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No further assertion follows without crossing prohibited classification/group boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 9,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

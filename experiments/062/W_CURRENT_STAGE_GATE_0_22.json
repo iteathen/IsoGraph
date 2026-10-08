@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.22",
+  "date": "2026-10-08",
+  "status": "W_G5H_EMPTY_INTERSECTION_PASSED_G6_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_21.json",
+    "git_blob_sha": "64eb3713ec996dda0b4b7e983f43f81a359c44dd",
+    "reason": "W-only empty-intersection hypothesis passed its pre-G6 structural/falsifier packet without domain leakage."
+  },
+  "current_G5H": {
+    "hypothesis": {
+      "path": "experiments/062/W_G5H_EMPTY_INTERSECTION_0_1.json",
+      "git_blob_sha": "5e41558bf1268002ff2346df61d09c6396d9f920"
+    },
+    "workflow_run_id": 37737466813,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G5H_complete_for_empty_intersection": true,
+    "G6_new_candidate_authorized": true,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "G6_scope": {
+    "candidate_id": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+    "primitive_id": 221102,
+    "qualification_mode": "SOURCE_NEUTRAL_CORE_DEFINABLE_SCHEMA",
+    "must_preserve": [
+      "predicate meanings opaque",
+      "empty carrier allowed",
+      "either predicate may be empty",
+      "nonexhaustive carrier elements allowed"
+    ],
+    "forbidden": [
+      "projective semantics",
+      "real-form semantics",
+      "conjugation semantics",
+      "conic equations",
+      "L evidence"
+    ],
+    "global_manifest_update_authorized": false
+  },
+  "next_lawful_action": "Freeze source-neutral schema 221102, module SSC, IA fixed point, and fresh disjointness controls. Consume W097 O05 only after G6 provisional qualification and separate G7 source instantiation."
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "woit-lisi.bt01.spin4-chiral-role-packet.v0.1",
+  "status": "STRONG_SOURCE_SUPPORTED_PRESEAL_CANDIDATE",
+  "mapping": [
+    {
+      "neutral": "input_chiral_factor",
+      "W": "SU(2)_R",
+      "L": "SU(2)_M",
+      "basis": "factor acts on input chiral carrier"
+    },
+    {
+      "neutral": "output_chiral_factor",
+      "W": "SU(2)_L",
+      "L": "SU(2)_P",
+      "basis": "factor acts on output chiral carrier"
+    },
+    {
+      "neutral": "input_chiral_carrier",
+      "W": "S_R",
+      "L": "Q_minus",
+      "basis": "domain of typed vector action"
+    },
+    {
+      "neutral": "output_chiral_carrier",
+      "W": "S_L",
+      "L": "Q_plus",
+      "basis": "codomain of typed vector action"
+    },
+    {
+      "neutral": "vector_action",
+      "W": "Hom(S_R,S_L)",
+      "L": "Gamma(v):Q_minus->Q_plus",
+      "basis": "typed cross-chiral action"
+    }
+  ],
+  "dimension_check": {
+    "W_spinor": "2 complex = 4 real",
+    "L_spinor": "4 real quaternionic coefficients",
+    "status": "MATCH_AT_REAL_DIMENSION"
+  },
+  "reverse_orientation": {
+    "W": "dual/conjugate map S_L->S_R when represented",
+    "L": "barGamma(v):Q_plus->Q_minus",
+    "status": "SEPARATE_REFINEMENT"
+  },
+  "residuals": {
+    "W": [
+      "twistor/projective geometry",
+      "real-form continuation",
+      "internal-role reinterpretation"
+    ],
+    "L": [
+      "Clifford square",
+      "division algebra",
+      "triality",
+      "exceptional extensions"
+    ]
+  },
+  "admitted_isomorphism": false
+}

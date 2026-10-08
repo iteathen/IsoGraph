@@ -1,0 +1,150 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.7",
+  "date": "2026-10-08",
+  "status": "L_G0_MULTILANE_SOURCE_CENSUS_INCOMPLETE_SECTION2_SECTION3_SECTION4_REPLAY_CONVERGENCE",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "L",
+  "branch_head_at_creation": "4ed51820c32325d63a3721f544907d05da037f48",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_6.json",
+    "git_blob_sha": "f09aac65dd283890b092c11a9e97a61bfb94b8b6",
+    "status": "L_G0_SECTION2_AND3_SOURCE_CENSUS_0_7_LOCAL_CI_VERIFIED_NOT_SOURCE_COMPLETE_NOT_FROZEN"
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_7.json",
+    "git_blob_sha": "93ab6465bb03c943427d57c0c5f33d3e2bc8b948",
+    "status": "L05_SECTION2_AND_3_CORRECTED_SOURCE_CENSUS_CANDIDATE_G0_AUDIT_ONLY_NOT_FROZEN",
+    "frozen": false,
+    "changed_since_frozen_0_2": [
+      "L-SSC-125",
+      "L-SSC-126",
+      "L-SSC-127",
+      "L-SSC-128",
+      "L-SSC-129",
+      "L-SSC-130",
+      "L-SSC-131",
+      "L-SSC-132"
+    ]
+  },
+  "section2_concurrent_repair": {
+    "source_signed_table_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json",
+      "git_blob_sha": "01fd0aff86aabaab128512117d608386bdc5ebf5"
+    },
+    "source_defect": {
+      "path": "experiments/062/L125_L127_L05_SECTION2_SOURCE_FORMULA_TABLE_CENSUS_DEFECT_0_1.json",
+      "git_blob_sha": "e89d99b8c4925bfdafc7fd3c052da1e6a8b89a64"
+    },
+    "formula_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-section2-tables-0-7.mjs",
+      "git_blob_sha": "806d59d0a4183e6c70ed61e364587977b7c01290"
+    },
+    "signed_entries": 168,
+    "carriers": 6,
+    "new_operator_rows": 15,
+    "CI": {
+      "run_id": 37807515374,
+      "result": "SUCCESS",
+      "verified_head": "db9211bc6e79f7986c4012dfef27415fcc3631e1",
+      "scope": "source table and coefficient formula controls only"
+    },
+    "source_table_anomaly": "Eq5 complete Γ/M index subexpressions and exact worked Cl(0,2) example still open"
+  },
+  "section3_repair": {
+    "source_expression_census": "SOURCE_SEMANTIC_CENSUS_0_5.json",
+    "total_additional_formula_rows": 44,
+    "current_status": "INHERITED_BY_L_SOURCE_SSC_0_7_BUT_NOT_G0_FROZEN",
+    "verifier_mutations_rejected": 16,
+    "Node_CI": "NOT_DEMONSTRATED_FOR_STANDALONE_0_6_INTERNAL_VERIFIER"
+  },
+  "section4_repair": {
+    "defect": {
+      "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+      "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+    },
+    "expression_inventory": {
+      "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json",
+      "git_blob_sha": "09b7e87f5652530c65ae1094793c6c7c51adcda0"
+    },
+    "matrix_commutator_controls": {
+      "path": "experiments/062/L_G0_L05_SECTION4_MATRIX_COMMUTATOR_CONTROLS_0_1.json",
+      "git_blob_sha": "695cc66da4d262ed77ff2acac06e187f9758d0ad"
+    },
+    "confirmed_source_fidelity_gap": "L133 source paper §4 provides su3 3x3 and 5 explicit commutator component formulas and sp3 3x3 with 6 exact component formulas; L133 G1 0.1 retains category-like wrappers but no corresponding exact expression graph. Its G3 R04/R05 CORE_CLOSED do not prove full-source reconstruction.",
+    "source_census_0_7_contains_L133_expression_extension": false,
+    "finite_matrix_controls": {
+      "su3": 3,
+      "sp3": 3,
+      "passed": 6,
+      "CI": "NOT_RUN_LOCAL_DETERMINISTIC_TEST_ONLY"
+    },
+    "open_source_families": [
+      "su3 complete root and Cartan bracket/phase table",
+      "split complex bracket table",
+      "sp3 Eq13 exact generator-indexed table",
+      "full f4/octic section4 source and real forms"
+    ]
+  },
+  "source_conservation": {
+    "all_legacy_items_retained": 191,
+    "unchanged_since_SSC_0_2": 183,
+    "eight_L05_items_extended_since_SSC0_2": true,
+    "L133_status": "G0_DEFECT_RECORDED_PENDING_SOURCE_CENSUS_SUCCESSOR",
+    "scope": "L_SOURCE_ONLY_NO_W_EVIDENCE"
+  },
+  "historical_downstream": {
+    "L127_local_SI_corrected": {
+      "path": "experiments/062/L127_G7_TARGETED_CLOSURE_0_2.json",
+      "git_blob_sha": "4cec11048544188a7f61f7a0e2a533330cf7904d"
+    },
+    "L132_G1_stale": {
+      "path": "experiments/062/L132_G1_SOURCE_INCIDENCE_0_4.json",
+      "git_blob_sha": "0373431a5e5c0bfe341a0ba4f0c1f9e06f619258"
+    },
+    "L133_G3_stale": {
+      "path": "experiments/062/L133_G3_CORE_DEFINABILITY_0_1.json",
+      "git_blob_sha": "42cd4066975eec56b15323e72f58255df711195b"
+    }
+  },
+  "owner_external_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "waives_only": "UNAVAILABLE_EXTERNAL_VERIFICATION"
+  },
+  "current_lawful_state": {
+    "G0_source_traversal_open": true,
+    "G0_frozen_complete": false,
+    "G0_all_L01_L06_conserved": false,
+    "G1_authorized": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5H_authorized": false,
+    "G6_new_campaign_promotion_authorized": false,
+    "G7_authorized": false,
+    "L127_local_SI_0_2_result_preserved": true,
+    "L131_G7_current": false,
+    "L132_G7_current": false,
+    "L133_G7_current": false,
+    "global_L_primitive_schema_closure": false,
+    "recursive_IA_authorized": false,
+    "discovery_authorized": false,
+    "cross_track_unification_authorized": false,
+    "global_module_manifest_change_allowed": false
+  },
+  "replay_frontier": [
+    "Complete source equation/typed-role/binder census first, including unsatisfied L05 §2 (Γ/M and Cl(0,2) worked example), §4 L133 and other L05 sections, then all L01–L06.",
+    "Do not promote source SSC until source-conservation, exact reconstruction, and required deterministic CI/adversarial controls complete.",
+    "From complete G0, rebuild G1/G2/G3/G4 and module G5H/G6; replay L129/130/131 then L132 then L133, preserving old provisional module provenance and ordinary-O source discrepancy.",
+    "Only after full L primitive/schema closure and Core ledger can Recursive IA begin, then appropriate other extensions/discovery."
+  ],
+  "nonclaims": [
+    "No full L-source census fixed point.",
+    "No external semantic verification passed.",
+    "No L133 G3 0.1 source-complete closure.",
+    "No proof that source-specified Lie formulas form all admissible Lie representations.",
+    "No active W track is modified or consumed."
+  ]
+}

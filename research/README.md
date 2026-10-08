@@ -31,6 +31,7 @@ research/
 10. **Keep this index current.** Adding or removing a first-level research directory requires updating this README in the same change.
 11. **Preserve idea/finding provenance.** Major research ideas, methods, mission changes, and material findings intended for publication must follow `../IDEA_PROVENANCE_POLICY.md`: record originator/contributors, earliest evidence currently located, retrospective record date where applicable, reasoning/decision path, and evidence revision. Do not backdate retrospective provenance.
 12. **Separate research direction from formulation.** Human direction, agent-originated formulation, agent-assisted formalization, implementation, finding, verification, and publication authorship are different contribution facts and must not be collapsed.
+13. **Hypothesis qualification does not erase hypothesis provenance.** Research may lawfully generate explicit guesses when current represented reasoning reaches a material gap. Before qualification they remain discovery evidence only. After successful qualification and explicit promotion, the exact revision may be used as authority within the qualified scope, but its hypothesis origin, test lineage, controls/falsifiers, coverage limits, and downstream dependency provenance must remain visible. `HYPOTHESIS_QUALIFIED` is a permitted provenance/qualification label, not a new Core truth value.
 
 ## Current research areas
 
@@ -40,8 +41,10 @@ research/
 - [Navier–Stokes proof rendering](navier-stokes-proof/README.md) — source-faithful structural rendering and reduction research over a pinned proof corpus.
 - [NEI research](nei/README.md) — historical/design research surrounding Natural Entropic Identity; qualified NEI authority remains separately versioned.
 - [P versus NP](p-vs-np/README.md) — primitive computation and continuation-support research; theorem status remains open.
+- [Primitive-demand qualification](primitive-demand-qualification/README.md) — domain-neutral demand extraction and candidate primitive-basis qualification work intended to unblock source bodies without promoting campaign-specific schemas.
 - [Primitive logic](primitive-logic/README.md) — supporting primitive-logic/kernel research used during Core primitive-closure development.
 - [Project Discovery](project-discovery/README.md) — current proof-of-function campaigns and the long-term plan for large-scale, massively parallel within-domain and cross-domain research synthesis using coordinated agents, substantial compute, independent verification, and human/domain expertise.
+- [Woit–Lisi IsoGraph unification synthesis](woit-lisi-isomorph/README.md) — full independent source renderings plus constructive synthesis over a frozen quaternionic/chiral common kernel; bridge work is retained as evidence, while current research targets a minimal conservative unified formulation.
 - [Research publications](publications/README.md) — publication-facing outputs and revision indexes.
 - [Repository reconciliation](repository-reconciliation/README.md) — preserved research/provenance review of surviving historical branches.
 

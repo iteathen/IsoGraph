@@ -1,0 +1,70 @@
+{
+  "schema": "woit-lisi.l05-octonion-source-discrepancy.v0.1",
+  "date": "2026-10-04",
+  "status": "SOURCE_INTERNAL_DISCREPANCY",
+  "source": "L05 version of record 2026-08-29, §2, multiplication table (1) and equations defining metric/conjugation",
+  "census_ids": [
+    "L-SSC-125",
+    "L-SSC-126"
+  ],
+  "source_facts": {
+    "ordinary_octonion_metric": "n_ab = delta_ab",
+    "conjugation_rule": "KAPPA(xy)=KAPPA(y)KAPPA(x)",
+    "table_e6_e7": "-e2",
+    "table_e7_e6": "-e2"
+  },
+  "direct_contradiction": {
+    "lhs": "KAPPA(e6 e7)=KAPPA(-e2)=+e2",
+    "rhs": "KAPPA(e7) KAPPA(e6)=(-e7)(-e6)=e7 e6=-e2",
+    "consequence": "+e2 = -e2 would be required over the real carrier"
+  },
+  "norm_zero_divisor_witness": {
+    "x": "e0-e6",
+    "y": "e2-e7",
+    "source_table_product": "0",
+    "norm_x": 2,
+    "norm_y": 2,
+    "norm_product": 0,
+    "expected_by_composition": 4
+  },
+  "sparse_falsifier": {
+    "vectors": 73,
+    "ordered_pairs": 5329,
+    "exact_source_table": {
+      "norm_failures": 28,
+      "antiinvolution_failures": 506
+    },
+    "split_quaternion_control": {
+      "norm_failures": 0,
+      "antiinvolution_failures": 0
+    },
+    "split_octonion_control": {
+      "norm_failures": 0,
+      "antiinvolution_failures": 0
+    }
+  },
+  "repair_diagnostics": {
+    "source_semantics_changed": false,
+    "candidates": [
+      {
+        "change": "e6 e7: -e2 -> +e2",
+        "norm_failures": 0,
+        "antiinvolution_failures": 0,
+        "disposition": "PROJECT_GENERATED_REPAIR_CANDIDATE_NOT_SOURCE"
+      },
+      {
+        "change": "e7 e6: -e2 -> +e2",
+        "norm_failures": 48,
+        "antiinvolution_failures": 0,
+        "disposition": "REJECTED_BY_COMPOSITION_FALSIFIER"
+      }
+    ],
+    "note": "The passing one-entry repair is diagnostic evidence only and is not used to rewrite the frozen source."
+  },
+  "representation_policy": {
+    "exact_source_table_preserved": true,
+    "source_composition_and_conjugation_claims_preserved": true,
+    "inconsistency_not_repaired_for_track_L": true,
+    "dp_use": "later discrepancy/clue input only after pre-DP gates"
+  }
+}

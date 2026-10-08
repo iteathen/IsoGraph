@@ -1,0 +1,37 @@
+name: Experiment 062 materialize L G5 synthesis
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/tools/generate-l-g5-candidate-basis-synthesis-0-1.mjs'
+      - '.github/workflows/experiment-062-materialize-l-g5-synthesis-0-1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: research/woit-lisi-isomorph-20261003
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Fast-forward to live branch
+        run: git pull --ff-only origin research/woit-lisi-isomorph-20261003
+      - name: Materialize L G5 synthesis
+        run: node experiments/062/tools/generate-l-g5-candidate-basis-synthesis-0-1.mjs
+      - name: Commit L G5 synthesis
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/062/L_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "research: complete L-local G5 candidate synthesis"
+          git push origin HEAD:research/woit-lisi-isomorph-20261003

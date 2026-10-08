@@ -1,0 +1,25 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
+const errors=[],check=(x,m)=>{if(!x)errors.push(m);};
+const R=json('experiments/062/L126_CURRENT_RECONSTRUCTION_ROUTING_0_1.json');
+check(R.status==='L126_CURRENT_RECONSTRUCTION_ROUTED','status');check(R.authority===false&&R.track==='L','authority/track');
+for(const x of [R.predecessor_g3,R.consumed_authority,...R.source_instances]){check(fs.existsSync(x.path),'missing '+x.path);if(fs.existsSync(x.path))check(blob(x.path)===x.git_blob_sha,'pin '+x.path);}
+const q=json(R.consumed_authority.path);check(q.status==='HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS','qualification');
+const overlay=read(R.source_instances[0].path),assertions=read(R.source_instances[1].path),fals=json(R.source_instances[2].path);
+for(const id of [217000,217001,217002,217010,217011,217012])check(overlay.includes('(^150014 '+id+')'),'overlay declaration '+id);
+check((assertions.match(/\(\^150010\s+195000\b/g)||[]).length===6,'195000 source instance count');
+check((assertions.match(/\(\^150010\s+217160\b/g)||[]).length===7,'217160 definition/use count');
+for(const id of [217100,217110,217120,217130,217140,217150])check(new RegExp('\\(\\^150005\\s+\\(\\^150010\\s+'+id+'(?:\\s|\\))').test(assertions),'reverse action definition '+id);
+check(fals.pass===true,'falsifier pass flag');
+const by=Object.fromEntries((fals.results||[]).map(x=>[x.name,x]));
+for(const name of ['C','Cprime','H','Hprime','Oprime'])check(by[name]?.cyclic_failures===0&&by[name]?.clifford_identity_failures===0,'clean control '+name);
+check(by.O?.cyclic_failures===2&&by.O?.clifford_identity_failures===28,'ordinary-O signature');
+check(fals.source_repair_used===false,'source repair');
+const routed=R.occurrence_routing||[];
+check(routed.length===6,'occurrence routing count');
+for(let i=1;i<=6;i++)check(routed.some(x=>x.occurrence_id==='L-SSC-126-R0'+i),'missing route R0'+i);
+check(R.current_method_ruling?.new_generic_candidate_after_187200_195000_required===false,'unnecessary new primitive');
+check(R.source_inconsistency_policy?.representation_closure_distinct_from_truth_disposition===true,'representation/truth collapse');
+check(!/W-SSC-|\/woit\//i.test(JSON.stringify(R)),'W leak');
+console.log(JSON.stringify({schema:'isograph.exp062-l126-current-reconstruction-routing-verifier.v0.1',pass:!errors.length,errors,source_195000_instances:6,ordinary_O_expected:{cyclic:2,reverse_composition:28},external_third_party_verification:'BYPASSED_BY_OWNER_NOT_PASSED'},null,2));if(errors.length)process.exit(1);

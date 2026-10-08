@@ -1,0 +1,164 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.24",
+  "date": "2026-10-08",
+  "status": "TARGETED_W097_REAL_PREDICATE_POLARITY_CORRECTION_COMPLETE_DETERMINISTIC_REPLAY_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+    "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+    "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+  },
+  "defect_audit": {
+    "path": "experiments/062/W097_REAL_PREDICATE_POLARITY_DEFECT_AUDIT_0_1.json",
+    "git_blob_sha": "2317993e02c645bf1cbe31b2351876a6d4a6ec86"
+  },
+  "rules": [
+    "Only W-SSC-097-O08 changes; every other occurrence in all 84 bodies is byte-identical to W G1 0.23.",
+    "O08 source_span includes the source-explicit negation side condition: 'no real points'.",
+    "O08 relation_span remains 'real' and argument remains 'points'.",
+    "O08 logical_force is NEGATED, never ASSERTED or EXISTENCE.",
+    "O08 remains NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED; no realness semantics are imported.",
+    "O05 continues to depend on O08.",
+    "No L evidence is used."
+  ],
+  "replacement_item": {
+    "census_id": "W-SSC-097",
+    "occurrences": [
+      {
+        "occurrence_id": "W-SSC-097-O01",
+        "source_span": "on the C2 coordinate carrier rho_tw squared equals -1",
+        "relation_span": "equals",
+        "argument_spans": [
+          "rho_tw squared",
+          "-1",
+          "C2 coordinate carrier"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Separates the vector-level square-minus-one law from the distinct projective square law."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O06",
+        "source_span": "on projective points applying rho_tw twice returns the same projective point",
+        "relation_span": "returns",
+        "argument_spans": [
+          "applying rho_tw twice",
+          "the same projective point"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exposes the source-explicit projective involution law independently of the vector square-minus-one law."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O07",
+        "source_span": "on the C2 coordinate carrier rho_tw squared equals -1, while on projective points applying rho_tw twice returns the same projective point",
+        "relation_span": "while",
+        "argument_spans": [
+          "on the C2 coordinate carrier rho_tw squared equals -1",
+          "on projective points applying rho_tw twice returns the same projective point"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O01",
+          "W-SSC-097-O06"
+        ],
+        "load_bearing_note": "Preserves the source-scoped contrast between vector and projective square behavior."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O04",
+        "source_span": "rho_tw has no projective fixed points",
+        "relation_span": "has no",
+        "argument_spans": [
+          "rho_tw",
+          "projective fixed points"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O06"
+        ],
+        "load_bearing_note": "The fixed-point-free projective behavior now depends on the separately conserved projective involution law."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O02",
+        "source_span": "the same real form as a real projective conic with complex but no real points",
+        "relation_span": "as",
+        "argument_spans": [
+          "the same real form",
+          "a real projective conic with complex but no real points"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O07"
+        ],
+        "load_bearing_note": "The source presents the same real form through the stated projective-conic description and point condition."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O03",
+        "source_span": "distinguishes ordinary conjugation on CP1 from the twistor antipodal real structure rho_tw",
+        "relation_span": "distinguishes",
+        "argument_spans": [
+          "ordinary conjugation on CP1",
+          "twistor antipodal real structure rho_tw"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Explicit distinction between the ordinary and antipodal conjugation structures."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O08",
+        "source_span": "no real points",
+        "relation_span": "real",
+        "argument_spans": [
+          "points"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Exposes the source-visible unary classification 'real' on points only within the source-explicit negated absence phrase 'no real points'. This occurrence does not assert that any real point exists or that any represented point satisfies the predicate; realness behavior remains unresolved."
+      },
+      {
+        "occurrence_id": "W-SSC-097-O05",
+        "source_span": "real projective conic with complex but no real points",
+        "relation_span": "no real points",
+        "argument_spans": [
+          "real projective conic",
+          "real points"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-097-O02",
+          "W-SSC-097-O08"
+        ],
+        "load_bearing_note": "The no-real-points absence relation now explicitly depends on the lower unary 'real' predicate occurrence rather than hiding that predicate in an argument slot."
+      }
+    ],
+    "extraction_status": "COMPLETE"
+  },
+  "counts": {
+    "frozen_W_bodies": 84,
+    "affected_bodies": 1,
+    "affected_occurrences": 1,
+    "predecessor_occurrences": 446,
+    "successor_occurrences": 446,
+    "net_occurrence_change": 0
+  },
+  "next_required_steps": [
+    "Verify exact replay and that only W-SSC-097-O08 changed.",
+    "Require explicit polarity/side-condition checks that predecessor verifier omitted.",
+    "Establish new source-local zero-change fixed point on W_EXTRACTION_RECONCILED_0_24.json.",
+    "Issue a new exact-input owner-bypass routing decision, then rebuild G2."
+  ]
+}

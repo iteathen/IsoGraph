@@ -1,0 +1,161 @@
+{
+  "schema": "isograph.lisi-l05-eq4-cyclic-source-ordinary-g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "FOUR_FINITE_SOURCE_INTERNAL_CYCLIC_COEFFICIENT_CONTRADICTIONS_ORDINARY_O_ONLY_G0",
+  "authority": false,
+  "source_census_frozen": false,
+  "source_complete": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L05",
+    "article": "Division Algebras, Triality, and Exceptional Magic",
+    "author": "A. Garrett Lisi",
+    "doi": "10.1007/s00006-026-01447-5",
+    "frozen_published": "2026-08-29 journal version of record",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "printed_page": 4,
+    "pdf_zero_based_page": 3,
+    "section": "§2 Eq.(4)",
+    "modality": "SOURCE_ASSERTED_EIGHT_MEMBER_CYCLIC_IDENTITY_NOT_PROVEN_MATHEMATICAL_AXIOM"
+  },
+  "upstream": {
+    "ordinary_tables": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "ssc_014": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_14.json",
+      "git_blob_sha": "32ee69909a3821a70996ad8197ab90855f01661c"
+    },
+    "gate_015": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_15.json",
+      "git_blob_sha": "c1b6042c958b1a600e7cad61580fdcb67def4b0f"
+    },
+    "Eq2_Eq3_defect": {
+      "path": "experiments/062/L126_L05_EQ2_EQ3_OCTONION_CLIFFORD_SOURCE_CONTRADICTION_0_1.json",
+      "git_blob_sha": "61d5afddc7c406b03c2f61c4abe7e0dbdc448e66"
+    }
+  },
+  "source_exact_Eq4": {
+    "printed_eight_member_equality": "barGamma_{a b c} = barGamma_{b c a} = Gamma_{a c b} = Gamma_{c b a} = M_{c a}^{tilde b} = M_{a b}^{tilde c} = M_{tilde a tilde c}^{b} = M_{tilde c tilde b}^{a}",
+    "tested_subscope": "SOURCE_FOUR_EXPLICIT_M_COEFFICIENT_MEMBERS_ONLY; all four Gamma/barGamma lowered-index members remain independent untested obligations",
+    "ordinary_metric": "n_ab=delta_ab in ordinary C,H,O; no signature-adjusted split index lowering inferred",
+    "binders": "a,b,c independently range 0..n-1 for each source ordinary carrier; all three positions are FREE for equality, not summed",
+    "evaluation": "source coefficient product is row LEFT and column RIGHT, signed output basis coordinate; tilde(e0)=e0, tilde(e_i)=-e_i for i>0",
+    "members": [
+      {
+        "id": "Eq4_M1",
+        "source": "M_{c a}^{tilde b}",
+        "exact_calculation": "sigma(b)*coeff(c,a,b)"
+      },
+      {
+        "id": "Eq4_M2",
+        "source": "M_{a b}^{tilde c}",
+        "exact_calculation": "sigma(c)*coeff(a,b,c)"
+      },
+      {
+        "id": "Eq4_M3",
+        "source": "M_{tilde a tilde c}^{b}",
+        "exact_calculation": "sigma(a)*sigma(c)*coeff(a,c,b)"
+      },
+      {
+        "id": "Eq4_M4",
+        "source": "M_{tilde c tilde b}^{a}",
+        "exact_calculation": "sigma(c)*sigma(b)*coeff(c,b,a)"
+      }
+    ],
+    "sig": "sigma(0)=+1; sigma(i>0)=-1",
+    "scope_caution": "This is not the general split-Clifford gamma-lowering identity; preserve all four source Gamma index roles as still untested, not omitted."
+  },
+  "finite_evidence": {
+    "ordinary_C": {
+      "dimension": 2,
+      "index_triples": 8,
+      "contradicting_triples": 0
+    },
+    "ordinary_H": {
+      "dimension": 4,
+      "index_triples": 64,
+      "contradicting_triples": 0
+    },
+    "ordinary_O": {
+      "dimension": 8,
+      "index_triples": 512,
+      "contradicting_triples": 4,
+      "counterexamples": [
+        {
+          "a": 2,
+          "b": 7,
+          "c": 6,
+          "terms": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        {
+          "a": 6,
+          "b": 2,
+          "c": 7,
+          "terms": [
+            1,
+            1,
+            -1,
+            1
+          ]
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "c": 2,
+          "terms": [
+            -1,
+            1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "a": 7,
+          "b": 2,
+          "c": 6,
+          "terms": [
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ],
+      "other_triples_consistent": 508,
+      "diagnostic": "all four counterexamples involve the original source pair {e6,e7} and coefficient e2; a different source-version cell removes them without editing this packet"
+    },
+    "counterfactual_NOT_SOURCE": {
+      "table_cell": "O row e6 column e7 -e2 -> +e2",
+      "contradicting_triples": 0,
+      "source_literal_mutated": false,
+      "modality": "MATHEMATICAL_COUNTERFACTUAL_NOT_FROZEN_ARTICLE_OR_AUTHOR_ERRATUM"
+    }
+  },
+  "negative_scope_guards": {
+    "source_Eq1_journal_cells": "e6*e7=-e2 AND e7*e6=-e2, preserved",
+    "source_Eq2_barGamma_discrepancy": "two coefficients disagree from M versus transpose (old L-SSC-126)",
+    "source_Eq3_anticommutator_failures": "7/36 ordinary O Clifford generator pairs and 28 matrix entries, preserved",
+    "source_Eq5_reverse_antisymmetry_and_Lie_nonclosure": "original printed ordinary O matrix bivectors fail reverse index and 168/378 commutator span tests; preserved",
+    "split_C_H_O_signature_sufficiency": "NOT_TESTED; the source uses n_ab to lower Clifford indices, and naive ordinary δ substitutions into split tables are not authority",
+    "whole_eight_member_Eq4_qualified": false,
+    "ordinary_O_M_four_member_equality_true": false,
+    "source_syntax_complete_G0": false,
+    "cross_track_semantics_imported": false
+  },
+  "next_lawful_work": [
+    "Independent direct-source G0 test of all four M components and 512 ordinary-O triples, two ordinary positive control carriers, independent counterfactual, and all source polarity/sign mutations.",
+    "Conserve exact negative finding in L-SSC-126 under next unfrozen 0.15 successor (190 old full items unchanged) after CI.",
+    "Separately reconstruct the four source Gamma/barGamma fully lowered-index members with n_ab typing, especially split metric; do not infer equivalence from 4 M members.",
+    "Complete source audit of L01-L06 and full frozen L05, then re-run lawful G stages only if source G0 completeness attained."
+  ]
+}

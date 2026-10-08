@@ -1,0 +1,44 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.8",
+  "date": "2026-10-07",
+  "status": "W_G5_CORRECTED_INPUT_COMPLETE_G5H_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_7.json",
+    "git_blob_sha": "185b616bc30ac67e682b1ed1e389113c5cd81ea6",
+    "reason": "Corrected-input W G5 deterministic synthesis/source review passed with zero reusable candidates and an explicit Method-0.3 hypothesis-generation boundary."
+  },
+  "current_G5": {
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_2.json",
+      "git_blob_sha": "f32a9ef0bda90b249be132373d69d8ced625b377"
+    },
+    "review": {
+      "path": "experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_2.json",
+      "git_blob_sha": "e7c129bb197f5c2a4d5402aeaa2787430bd221fb"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_2.json",
+      "git_blob_sha": "907199a26dab98683adfcbccfd4e9122531893f2"
+    },
+    "workflow_run_id": 37673639491,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_complete": true,
+    "G4_complete": true,
+    "G5_complete": true,
+    "G5H_authorized": true,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Run W-only G5H hypotheses against the corrected source/graph. Reject opaque renaming and any candidate requiring unstated perturbation, derivative, stationarity, or universal-direction semantics. Open G6 only for a survivor."
+}

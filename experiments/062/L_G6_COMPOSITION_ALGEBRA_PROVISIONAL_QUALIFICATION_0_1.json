@@ -1,0 +1,169 @@
+{
+  "schema": "isograph.exp062-l-g6-composition-algebra-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "COMPOSITION_ALGEBRA_SUPPORT_0_1",
+  "branch_head_at_creation": "65ec0449e3b4862c3ea4d727824fe95403eaad5d",
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_COMPOSITION_ALGEBRA_SUPPORT_0_1.json",
+      "git_blob_sha": "12e45544e3f48c59347612c1dfecd2ab2987e431"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_MODULE_SSC_0_1.json",
+      "git_blob_sha": "f094df9a1fa378864fdec43f07334415bce03675"
+    },
+    "module_ia": {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "dc011b4583048d856ab9b9ab19efc7b6441d0ca9"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l-g6-composition-algebra-support-0-1.mjs",
+      "git_blob_sha": "e1cc94af874e708c6a2bf99921ddeb14e541d124"
+    },
+    "field_vector_dependency": {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b"
+    },
+    "linear_basis_dependency": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L G6 composition-algebra provisional qualification",
+    "workflow_run_id": 37682417161,
+    "workflow_run_head": "65ec0449e3b4862c3ea4d727824fe95403eaad5d",
+    "job_id": 113001578334,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      184003,
+      185001,
+      185002,
+      185003,
+      188000,
+      215001
+    ],
+    "dependency_audit": {
+      "184003": [
+        182002,
+        182004,
+        184003
+      ],
+      "185001": [
+        184003,
+        185001
+      ],
+      "185002": [
+        182001,
+        182004,
+        183003,
+        185002
+      ],
+      "185003": [
+        184003,
+        185002,
+        185003
+      ],
+      "188000": [
+        183002,
+        185001,
+        188000
+      ],
+      "215001": [
+        183002,
+        185003,
+        215001
+      ]
+    },
+    "tests": {
+      "ssc_obligations": 32,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 11,
+      "positive_bilinear_product": 1,
+      "adversarial_bilinear_product": 2,
+      "positive_associative_algebra": 1,
+      "nonassociative_bilinear_unit_control": 1,
+      "positive_quadratic_form": 1,
+      "adversarial_quadratic_form": 3,
+      "positive_composition": 1,
+      "adversarial_norm_multiplicativity": 1,
+      "positive_associative_antiinvolution": 1,
+      "adversarial_associative_antiinvolution": 1,
+      "positive_composition_antiinvolution": 1,
+      "adversarial_composition_antiinvolution": 1,
+      "composition_associativity_dependency_absent": true
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      {
+        "id": 184003,
+        "meaning": "total vector-valued bilinear product"
+      },
+      {
+        "id": 185001,
+        "meaning": "unital associative algebra over the qualified field/vector substrate"
+      },
+      {
+        "id": 185002,
+        "meaning": "symmetric nondegenerate bilinear form with Q(v)=B(v,v)"
+      },
+      {
+        "id": 185003,
+        "meaning": "unital composition algebra with multiplicative Q and no associativity requirement"
+      },
+      {
+        "id": 188000,
+        "meaning": "linear unit-fixing involutive order-reversing map over exact 185001"
+      },
+      {
+        "id": 215001,
+        "meaning": "linear unit-fixing involutive order-reversing Q-preserving map over exact 185003"
+      }
+    ],
+    "explicit_exclusions": [
+      "division property",
+      "positive-definite or split classification",
+      "alternativity or Moufang laws",
+      "canonical conjugation uniqueness",
+      "named R/C/H/O identity",
+      "triality or product-recovery semantics",
+      "generalized-reflection semantics",
+      "W/cross-track semantics"
+    ],
+    "associativity_boundary": "185001 requires associativity; 185003 explicitly does not. No associativity is inherited into composition-algebra consumers unless separately supplied."
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "consumption_rule": "Experiment 062/063 may consume only exact 184003/185001/185002/185003/188000/215001 under the pinned provisional dependencies and qualified scope. Historical closure packets are not promoted wholesale, and composition consumers must not infer associativity, division, positivity, canonicality, triality, or reflection semantics.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "L125 may consume exact bilinear product, composition-form, and composition anti-involution support where its L05 source instance reconstructs those interfaces.",
+    "L129 may consume product/pairing support only after source-local reconstruction; triality and product recovery remain separate residuals.",
+    "L130 may consume product/conjugation support only after source-local reconstruction; scalar extension, T, and reflection semantics remain separate residuals."
+  ],
+  "nonclaims": [
+    "No historical support file is globally promoted.",
+    "No division/positivity/split or alternativity/Moufang semantics are qualified.",
+    "No canonical conjugation uniqueness is qualified.",
+    "No triality/product-recovery/reflection behavior is qualified.",
+    "No global IsoGraph authority changes.",
+    "No third-party verification is claimed.",
+    "No W/cross-track evidence is used."
+  ]
+}

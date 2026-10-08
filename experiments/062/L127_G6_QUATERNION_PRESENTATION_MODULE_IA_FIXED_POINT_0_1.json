@@ -1,0 +1,108 @@
+{
+  "schema": "isograph.exp062-l127-quaternion-presentation-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "QUATERNION_PRESENTATION_0_1",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_QUATERNION_PRESENTATION_0_1.json",
+      "git_blob_sha": "4991cd9594531dda75d8db1543a5e7c036097803"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_SSC_0_1.json",
+      "git_blob_sha": "29d1b46d92f82ff7e99361341f3196d6f18b5055"
+    }
+  },
+  "inference_profile": {
+    "id": "quaternion-presentation-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 193100. No external quaternion classification theorem.",
+    "rules": [
+      {
+        "id": "QP-IA-R1",
+        "trigger": "193100",
+        "derives": [
+          "185001",
+          "187601",
+          "188000",
+          "CHARACTERISTIC_NOT_TWO",
+          "UNIT_TABLE",
+          "SQUARE_TABLE",
+          "CYCLE_TABLE",
+          "REVERSED_TABLE",
+          "BASIS_KAPPA_TABLE"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "193100 -> division algebra",
+      "193100 -> positive norm",
+      "193100 -> unique/canonical quaternion algebra",
+      "193100 -> octonion semantics",
+      "193100 -> operator/Lie semantics"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(193100)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "QP-IA-001",
+          "assertion": "193100 entails exact associative-algebra, four-basis, and anti-involution parents.",
+          "support": [
+            "193100 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "QP-IA-002",
+          "assertion": "193100 entails 1+1 != 0.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-003",
+          "assertion": "193100 entails the explicit unit and signed quaternion basis multiplication table.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-004",
+          "assertion": "193100 entails the explicit basis conjugation table.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-005",
+          "assertion": "No division/norm/classification/operator semantics follow from selected relation alone.",
+          "support": [
+            "candidate scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No additional assertion follows without crossing prohibited division/norm/classification boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 5,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

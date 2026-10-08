@@ -1,0 +1,86 @@
+{
+  "schema": "lisi.l131-generalized-triality-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "L-SSC-131",
+  "frozen_body": "Compositions of generalized reflections produce ordinary rotations and generalized triality automorphisms t^(uw); the canonical u=w=1 case cycles (v,psi,chi)->(psi,chi,v).",
+  "source": "L05 §3 eq. (9)",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_TRIALITY_TUW_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REFLECTION_COMPOSITION_ROLE_CLASSIFICATION_0_1.isg"
+  ],
+  "prior_closed_dependencies": [
+    "L125-BODY",
+    "L128-BODY",
+    "L129-BODY",
+    "L130-BODY"
+  ],
+  "mechanical_dependency_check": {
+    "root_file_count": 2,
+    "declared_local_ids": 39,
+    "nonlocal_reference_sets_exact": true,
+    "stale_namespace_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "equation9": "LISI_L05_GENERALIZED_TRIALITY_TUW_0_2.isg",
+    "role_composition_classification": "LISI_L05_REFLECTION_COMPOSITION_ROLE_CLASSIFICATION_0_1.isg",
+    "source_four_reflection_sequence": "R_p^w R_v^u R_m^(KAPPA(u)) R_p^(KAPPA(u))",
+    "phase_relation": 234001,
+    "generalized_t_relations": [
+      234200,
+      234210,
+      234220,
+      234230,
+      234240,
+      234250
+    ],
+    "invariance_relations": [
+      234201,
+      234211,
+      234221,
+      234231,
+      234241,
+      234251
+    ],
+    "canonical_relations": [
+      234202,
+      234212,
+      234222,
+      234232,
+      234242,
+      234252
+    ],
+    "role_permutation_relation": 235010,
+    "two_reflection_composition_relation": 235011,
+    "same_type_identity_class": 235012,
+    "different_type_order3_class": 235013,
+    "four_reflection_role_cycle": 235014
+  },
+  "evidence": {
+    "tuw_falsifier": "L131_GENERALIZED_TRIALITY_TUW_FALSIFIER_0_1.json",
+    "role_falsifier": "L131_REFLECTION_ROLE_COMPOSITION_FALSIFIER_0_1.json",
+    "ordinary_controls": "C,Cprime,H,Hprime,Oprime pass equation-(9) invariance and canonical cycle",
+    "ordinary_O_disposition": "INCONSISTENT_SOURCE_PROPAGATED",
+    "ordinary_O_equation9_invariance_failures": 500,
+    "canonical_failures_all_cases": 0,
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "same-type rotation is reduced to T-invariant even composition plus identity role permutation",
+    "different-type non-rotation triality element is reduced to T-invariant even composition plus an order-three role permutation",
+    "equation-(9) mixed-sign outputs remain on collision-safe complexified roles",
+    "u=w=1 is compared to the typed L129 cycle, not a raw coefficient permutation",
+    "the alternate real-form claim belongs to L-SSC-135 and is not imported here",
+    "ordinary-O source inconsistency is preserved and not repaired",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

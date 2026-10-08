@@ -1,0 +1,49 @@
+{
+  "schema": "woit-lisi.bt01-falsifier-suite.v0.1",
+  "status": "DEDUCTIVE_CONTROLS_COMPLETE_PRESEAL",
+  "controls": [
+    {
+      "id": "F1",
+      "mutation": "remove Cl(0,4) minus sign",
+      "result": "REJECTED",
+      "witness": "v=1; composition gives +N rather than -N",
+      "load_bearing": "quadratic sign"
+    },
+    {
+      "id": "F2",
+      "mutation": "remove quaternion conjugation",
+      "result": "REJECTED",
+      "witness": "v=1+i gives v^2=2i while N(v)=2",
+      "load_bearing": "anti-involution"
+    },
+    {
+      "id": "F3",
+      "mutation": "swap chiral roles without reversing action",
+      "result": "REJECTED",
+      "witness": "typed domain/codomain mismatch",
+      "load_bearing": "action orientation"
+    },
+    {
+      "id": "F4",
+      "mutation": "identify pseudoreal J with ordinary real involution",
+      "result": "REJECTED",
+      "witness": "J^2=-1 versus sigma^2=+1",
+      "load_bearing": "real-structure type"
+    },
+    {
+      "id": "F5",
+      "mutation": "promote affine H match to global HP1 identity",
+      "result": "REJECTED",
+      "witness": "Lisi track lacks infinity/global fibration support",
+      "load_bearing": "global residual structure"
+    },
+    {
+      "id": "F6",
+      "mutation": "drop positive-spinor tilde representation",
+      "result": "REJECTED",
+      "witness": "breaks source-faithful action transport",
+      "load_bearing": "representation convention"
+    }
+  ],
+  "conclusion": "Candidate requires sign, conjugation, typed chirality orientation, real-structure distinction, source representation convention, and residual scope."
+}

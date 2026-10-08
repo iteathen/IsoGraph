@@ -1,0 +1,173 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.11",
+  "date": "2026-10-08",
+  "status": "L_G0_SSC_0_11_SP3_EQ13_EQ14_CI_VERIFIED_PARTIAL_UNFROZEN_G1_FORBIDDEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "L",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_10.json",
+    "git_blob_sha": "8681806380cef69468357dfcee65532acbf91154",
+    "reason": "L133 ordinary H Eq13 fifteen source bracket families and Eq14 reflection/phase nonclaim added with 190-body conservation, leaving G0 incomplete"
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_11.json",
+    "git_blob_sha": "b5fda60a505cdf33924eec549d174ff5c212324d",
+    "frozen": false,
+    "source_complete": false,
+    "changed_from_predecessor": [
+      "L-SSC-133"
+    ],
+    "unchanged_from_predecessor": 190,
+    "source_identities": 191
+  },
+  "source_expression_audit": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json",
+    "git_blob_sha": "09b7e87f5652530c65ae1094793c6c7c51adcda0"
+  },
+  "source_fidelity_defect": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+  },
+  "source_matrix_adversarial_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-10.mjs",
+    "git_blob_sha": "3f659001597d49bfc9b27889d04eea02f3817a76"
+  },
+  "G0_10_CI": {
+    "run_id": 37815232875,
+    "conclusion": "success",
+    "tests": [
+      "su3 3x3 5 bracket and sp3 3x3 6 bracket arithmetic against independently calculated matrix commutators, 7 negative source controls",
+      "SSC0.10 6 decomposition roles, two full source matrix rows, eleven ordered commutator components and 16 basis/parameterized bracket rows",
+      "190 exact previous L SSC bodies unchanged and 15 adversarial source/polarity/scope mutations rejected"
+    ],
+    "source_scope": "L05 section 4.1/4.2 ordinary C and H only, plus source-labelled ordinary/split decompositions",
+    "external_review_passed": false
+  },
+  "historical_failures": [
+    {
+      "run_id": 37815089562,
+      "status": "failed",
+      "reason": "Verifier fixture demanded literal English 'full-source' although source explicitly declares 'G0-complete or G3 CORE_CLOSED' as forbidden",
+      "not_semantic_conservation_failure": true
+    },
+    {
+      "run_id": 37823733174,
+      "status": "failed",
+      "reason": "Eq13 first CI expected old 198-case subset after actually checking complete 216-case domain; 0 matrix mismatches, 24 source mutants rejected; fixture repaired.",
+      "not_semantic_conservation_failure": true
+    },
+    {
+      "run_id": 37824412749,
+      "status": "failed",
+      "reason": "SSC0.11 verifier case mismatch and mutation-baseline masking; baseline required to pass first; fixed and preserved as adversarial infrastructure defect.",
+      "not_semantic_conservation_failure": true
+    }
+  ],
+  "previous_G0_9_source_CI": [
+    {
+      "run_id": 37813728562,
+      "conclusion": "success",
+      "scope": "published Eq1 ordinary-O exact source literal and 25 adversarial tests"
+    },
+    {
+      "run_id": 37814117693,
+      "conclusion": "success",
+      "scope": "Cl02 exact 2x2/4x4 source matrix and 17 adversarial tests"
+    },
+    {
+      "run_id": 37814407801,
+      "conclusion": "success",
+      "scope": "SSC0.9 exact Cl02 source text one-body replay and 11 adversarial tests"
+    }
+  ],
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE",
+    "effect": "ONLY_OUTSIDE_REVIEW_CALLS_WAIVED"
+  },
+  "outstanding_source_reconstruction": [
+    "L05 §2 Eq.(5) complete Γ/M-indexed bivector matrix equality, both chiral blocks, source antisymmetry contradiction, and all source sign/index cases.",
+    "L05 §4.1 complete su3 root/Cartan/phase table and split Cprime source bracket images.",
+    "L05 §4.2 Eq13 still needs native primitive/binder-level reconstruction and non-H carrier qualification; Eq14 full phase mapping, t matrix-vs-text orientation, and 12x12 real/6x6 complex realizations remain open.",
+    "L05 §4.3 full f4 ordinary/split octonionic bracket cases and exact real forms.",
+    "Complete independent source assertion census, source-local zero-change G0 fixed point, and cold reconstruction for all frozen L01–L06."
+  ],
+  "historical_invalidation": {
+    "L127_local_SI_0_2_G7": "HISTORICAL_SCOPED_EVIDENCE_ONLY_SOURCE_CONSISTENCY_DISCREPANCY_PRESERVED",
+    "L129_L130_L131": "UPSTREAM_REPLAY_BLOCKED_BY_G0_SOURCE_GRANULARITY_AND_DEPENDENT_ORDER",
+    "L132": "G1_G7_PREVIOUS_DESCENDANTS_STALE_NO_CURRENT_QUALIFICATION",
+    "L133": "OLD_G1_0_1_G3_0_1_CORE_CLOSED_DISPOSITIONS_INVALID_FOR_FULL_SOURCE_BODY",
+    "L134": "SOURCE_DEPENDENCY_ON_UNFINISHED_L133",
+    "source_demand_census": "HISTORICAL_OLD_FROZEN_L_TUPLE_NOT_REPLAYED"
+  },
+  "current_lawful_state": {
+    "G0_source_audit_authorized": true,
+    "G0_source_local_CI_verified": true,
+    "G0_source_census_frozen": false,
+    "G0_full_source_assertion_census_complete": false,
+    "G1_authorized": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G6_campaign_new_promotion_authorized": false,
+    "G7_authorized": false,
+    "L_primitive_schema_closure_complete": false,
+    "L_recursive_IA_authorized": false,
+    "L_Discovery_Protocol_authorized": false,
+    "WL_cross_track_comparison_authorized": false,
+    "global_qualified_module_manifest_change_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next_lawful_step": "Continue exact G0 source-conservation audits: L05 §2 Eq5 full indexed Γ/M semantics, §4.1 split/roots and §4.3 f4; traverse L01-L06, preserve exact assertions and source negative evidence; require source-complete fixed point before any new G1/G7/Recursive IA, DP or W/L synthesis.",
+  "nonclaims": [
+    "G0 is not a complete source-census fixed point.",
+    "No L G1–G7 qualification is current on new SSC0.10.",
+    "No external semantic cold verification passed.",
+    "No standard Lie/Clifford theorem imported as primitive authority.",
+    "No W evidence or desired cross-track correspondence used.",
+    "The 216 finite quaternionic matrix checks and 27 SSC mutants are internal G0 checks, not full-source theorem or external verification.",
+    "L05 Eq13 is transcribed as 15 source families, not globally Core-closed or qualified primitive reduction.",
+    "The Eq14 root-space phase ambiguity remains an explicit source limitation; no automatic root-vector phase mapping has been inferred."
+  ],
+  "sp3_source_exact_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SP3_EQ13_EQ14_SOURCE_G0_0_1.json",
+    "git_blob_sha": "7d1eab909c3175dd2dd70e550ca11044dfdb4000",
+    "source": "L05 §4.2 ordinary H, PDF printed page 15, Eq13/Eq14",
+    "eq13_bracket_families": 15,
+    "eq14_signed_conjugation_source_transcribed": true,
+    "root_vector_phases_determined": false
+  },
+  "sp3_root_phase_modality_defect": {
+    "path": "experiments/062/L05_SP3_EQ14_ROOT_PHASE_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "8e99498f8bb2012f9b87f0c6b4bab91e18ec93bc"
+  },
+  "sp3_adversarial_baseline_masking_defect": {
+    "path": "experiments/062/L_SSC_0_11_ADVERSARIAL_VERIFIER_BASELINE_MASKING_DEFECT_0_1.json",
+    "git_blob_sha": "9deb9553829bd74b7de2a6d11f777db2df8b6e04"
+  },
+  "G0_11_CI": {
+    "run_id": 37824604048,
+    "head_sha": "cd32c7bfc3166153b29f6bd2e4bc9a20ec8d61fc",
+    "conclusion": "success",
+    "source_scope": "L05 §4.2 ordinary quaternion H exact Eq13/14 source expressions and SSC0.11 conservation",
+    "tests": [
+      "216/216 finite independent 3x3 quaternion matrix basis commutator/reflection tests",
+      "15 printed Eq13 ordered family expressions source conserved",
+      "24 source-packet mutants rejected",
+      "191 fixed L-SSC identities, only L133 revised, 190 unchanged complete bodies",
+      "27 effective SSC0.11 adversarial mutants rejected with baseline-before-mutation and non-noop enforcement",
+      "source Eq14 generator reflection and negative phase modality preserved"
+    ],
+    "SSC_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-11.mjs",
+      "git_blob_sha": "d7eabe63269985c54c965e0b2f8c53e8469da368"
+    },
+    "external_review_passed": false,
+    "full_L_source_fidelity_qualified": false
+  }
+}

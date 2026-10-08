@@ -1,0 +1,40 @@
+name: Experiment 062 materialize L G4 structural quotient
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/tools/generate-l-g4-alpha-structural-quotient-0-1.mjs'
+      - '.github/workflows/experiment-062-materialize-l-g4-0-1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: research/woit-lisi-isomorph-20261003
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Fast-forward to live branch
+        run: git pull --ff-only origin research/woit-lisi-isomorph-20261003
+      - name: Materialize L-local G4
+        run: node experiments/062/tools/generate-l-g4-alpha-structural-quotient-0-1.mjs
+      - name: Commit L-local G4
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/062/L_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_1.json
+          if git diff --cached --quiet; then
+            echo "No materialization change."
+            exit 0
+          fi
+          git commit -m "research: materialize exact L G4 structural quotient"
+          git push origin HEAD:research/woit-lisi-isomorph-20261003

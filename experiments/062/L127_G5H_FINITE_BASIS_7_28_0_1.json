@@ -1,0 +1,93 @@
+{
+  "schema": "isograph.exp062-l127-g5h-finite-basis-7-28.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "9a5f2af5e48ef98c20ece6315d961efe2b8863d7",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L127_G3_CORE_DEFINABILITY_0_1.json",
+    "git_blob_sha": "c0cab960d3c0a86d98feca6424fccca776d5d38d",
+    "family": "FINITE_BASIS_7_AND_28",
+    "occurrence_ids": [
+      "L-SSC-127-R03",
+      "L-SSC-127-R04",
+      "L-SSC-127-R05"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        182004
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 225000,
+      "role": "exact seven-element basis presentation",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "416c60587de54b81ec0293fde05b590791d01429"
+    },
+    {
+      "id": 225001,
+      "role": "exact twenty-eight-element basis presentation",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_28_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "39388dc881d23e1acdff13dd37fcf0ae09242630"
+    }
+  ],
+  "candidate_statement": "Exact 225000/225001 are source-neutral finite basis schemas over an already represented vector space: the declared 7 or 28 vectors are members, linearly independent, and span every admitted vector.",
+  "declared_scope": {
+    "included": [
+      "7-element basis presentation",
+      "28-element basis presentation",
+      "basis membership",
+      "linear independence",
+      "all-vector spanning"
+    ],
+    "excluded": [
+      "dimension beyond exactly 7 or 28",
+      "orthogonality or metric properties",
+      "operator/Lie semantics",
+      "named so(8) ontology",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "L127 source gives exactly seven imaginary-right basis operators and twenty-eight bi-product basis operators.",
+    "Current G3 isolates only generic basis closure for the carrier dimensions; action and injection semantics are already separately qualified."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "desired unification",
+    "so(8) naming",
+    "historical closure status"
+  ],
+  "predicted_consequences": [
+    "Standard 7- and 28-coordinate bases pass.",
+    "Permuted bases pass.",
+    "Any duplicate/dependent tuple fails.",
+    "Any tuple of fewer effective rank than the carrier fails spanning."
+  ],
+  "positive_controls": [
+    "standard F3^7 and F3^28 coordinate bases",
+    "permuted F3^7/F3^28 bases"
+  ],
+  "negative_adversarial_controls": [
+    "duplicate final basis vector",
+    "zero final basis vector",
+    "rank-deficient shear/duplicate construction"
+  ],
+  "falsifier": "Reject if either schema has dependencies beyond exact vector support; if rank-deficient tuples pass; if a valid basis fails; or if the candidate silently adds metric/Lie/named-ontology semantics.",
+  "adaptive_evidence": "Generated after L127 targeted G3 isolated basis size as an independent reusable lower demand.",
+  "fresh_confirmation_status": "PENDING_G6_DETERMINISTIC_QUALIFICATION; external third-party review bypassed but not passed.",
+  "coverage_limits": "Only exact 225000/225001 at pinned bytes. No arbitrary dimension or metric/operator semantics.",
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}

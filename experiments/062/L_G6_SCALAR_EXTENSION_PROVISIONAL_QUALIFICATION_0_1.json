@@ -1,0 +1,211 @@
+{
+  "schema": "isograph.exp062-l-g6-scalar-extension-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "SCALAR_EXTENSION_SUPPORT_0_1",
+  "branch_head_at_creation": "699bff9ebe15ffefa75af9b1c52cb8a2baec9b3c",
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_SCALAR_EXTENSION_SUPPORT_0_1.json",
+      "git_blob_sha": "edaa03e9add9a0f64b8a81aa4e30a4a5e7d9a110"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_SCALAR_EXTENSION_MODULE_SSC_0_1.json",
+      "git_blob_sha": "532e2c62c30fde599ac8cfb68d3a97a69d1fda6e"
+    },
+    "module_ia": {
+      "path": "experiments/062/L_G6_SCALAR_EXTENSION_MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "84443f1345302386f75786971200c7cc74be68ff"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l-g6-scalar-extension-support-0-1.mjs",
+      "git_blob_sha": "0987f74e7ed88575323f5e46a272b956defbbd17"
+    },
+    "field_vector_dependency": {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b"
+    },
+    "linear_basis_dependency": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    },
+    "trilinear_dependency": {
+      "path": "experiments/062/L_G6_TRILINEAR_RECOVERY_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "74564c22d7a2ca92d32c7951c7fae2220560e44f"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L G6 scalar-extension provisional qualification",
+    "workflow_run_id": 37709108838,
+    "workflow_run_head": "699bff9ebe15ffefa75af9b1c52cb8a2baec9b3c",
+    "job_id": 113090528600,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      193302,
+      193303,
+      193400,
+      222000,
+      222001,
+      222002,
+      225000,
+      231000
+    ],
+    "dependency_audit": {
+      "193302": [
+        182001,
+        182003,
+        193302
+      ],
+      "193303": [
+        182004,
+        193302,
+        193303
+      ],
+      "193400": [
+        183002,
+        193400
+      ],
+      "222000": [
+        187600,
+        187601,
+        193302,
+        193303,
+        193400,
+        215000,
+        222000,
+        222001,
+        222002
+      ],
+      "222001": [
+        187600,
+        187601,
+        193302,
+        193303,
+        193400,
+        215000,
+        222000,
+        222001,
+        222002
+      ],
+      "222002": [
+        187600,
+        187601,
+        193302,
+        193303,
+        193400,
+        215000,
+        222000,
+        222001,
+        222002
+      ],
+      "225000": [
+        185005,
+        193302,
+        193303,
+        193400,
+        225000
+      ],
+      "231000": [
+        182002,
+        182004,
+        193302,
+        193303,
+        193400,
+        231000
+      ]
+    },
+    "tests": {
+      "ssc_obligations": 33,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 12,
+      "positive_field_embedding": 1,
+      "wrong_unit_embedding": 1,
+      "positive_scalar_restriction": 1,
+      "scalar_restriction_mismatch": 1,
+      "positive_linear_injection": 1,
+      "noninjective_linear_map": 1,
+      "positive_finite_extensions": 3,
+      "wrong_basis_image_cases": 3,
+      "positive_trilinear_extension": 1,
+      "altered_C_trilinear_extension": 1,
+      "positive_parameterized_extension": 1,
+      "C_linear_embedded_disagreement": 1
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      {
+        "id": 193302,
+        "meaning": "injective field embedding preserving zero, one, addition, and multiplication"
+      },
+      {
+        "id": 193303,
+        "meaning": "restriction of a target-field vector scalar action along exact 193302 on the same carrier"
+      },
+      {
+        "id": 193400,
+        "meaning": "injective linear map between vector carriers over one field"
+      },
+      {
+        "id": 222000,
+        "meaning": "exact two-basis-vector scalar extension with fixed embedded basis images"
+      },
+      {
+        "id": 222001,
+        "meaning": "exact four-basis-vector scalar extension with fixed embedded basis images"
+      },
+      {
+        "id": 222002,
+        "meaning": "exact eight-basis-vector scalar extension with fixed embedded basis images"
+      },
+      {
+        "id": 225000,
+        "meaning": "trilinear scalar extension agreeing with the real trilinear form on embedded triples"
+      },
+      {
+        "id": 231000,
+        "meaning": "parameterized real-linear to target-field-linear map extension agreeing on embedded inputs"
+      }
+    ],
+    "explicit_exclusions": [
+      "reflection formulas or reflection invariance",
+      "choice or uniqueness of complexification beyond the exact supplied maps",
+      "anti-linear real structures",
+      "square-root or signature-branch semantics",
+      "division/positivity/split classification",
+      "triality-group ontology",
+      "named algebra identity",
+      "W/cross-track semantics"
+    ]
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "consumption_rule": "Experiment 062/063 may consume only exact 193302/193303/193400/222000/222001/222002/225000/231000 under their pinned provisional dependencies and exact qualified scope. No reflection, real-structure, signature/square-root, positivity/split, named-algebra, or cross-track semantics are inherited.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "L130 may consume exact finite role complexifications, trilinear scalar extension, and parameterized reflection-map extensions only where its frozen L05 source-native instances instantiate these exact relations.",
+    "L130 reflection formulas, phase/signature branch, and odd/even invariance remain separate source-specific obligations.",
+    "L125 positive-definite/split classification remains outside this module."
+  ],
+  "nonclaims": [
+    "No global IsoGraph authority changes.",
+    "No third-party verification is claimed.",
+    "No reflection or real-structure behavior is qualified.",
+    "No square-root/signature-branch semantics is qualified.",
+    "No W/cross-track evidence is used."
+  ]
+}

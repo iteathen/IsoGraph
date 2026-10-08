@@ -1,0 +1,102 @@
+{
+  "schema": "isograph.exp062-l-g5h-composition-algebra-support.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "branch_head_at_creation": "4d843b4ce696ec593ced8c322d346e5bcf15b188",
+  "origin": "HYPOTHESIS",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_g7": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_2.json",
+    "git_blob_sha": "b37b4f9d07f8c89a88184118e35d63bd14e5f17d",
+    "family": "BILINEAR_PRODUCT_COMPOSITION_ANTIINVOLUTION"
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 184003,
+      "role": "vector-valued bilinear product",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "47397bc66824c9361e2b2930157efb62c185075d"
+    },
+    {
+      "id": 185001,
+      "role": "unital associative algebra",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "69f600c2c624bd63e068d6afd7b4d8d7e2478f32"
+    },
+    {
+      "id": 185002,
+      "role": "nondegenerate symmetric bilinear form with Q(v)=B(v,v)",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "69f600c2c624bd63e068d6afd7b4d8d7e2478f32"
+    },
+    {
+      "id": 185003,
+      "role": "unital composition algebra without associativity requirement",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "69f600c2c624bd63e068d6afd7b4d8d7e2478f32"
+    },
+    {
+      "id": 188000,
+      "role": "linear anti-involution on a unital associative algebra",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+      "source_git_blob_sha": "f6698932d118c88728c0e23bcd8301b2820f4c44"
+    },
+    {
+      "id": 215001,
+      "role": "linear norm-preserving anti-involution on a unital composition algebra",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "87e38e143f2717924a775af0a9208fe4cc8a556a"
+    }
+  ],
+  "candidate_statement": "The six exact selected relations form a dependency-closed generic algebra layer over the already qualified field/vector/linear-form substrate, distinguishing associative anti-involution from composition-algebra anti-involution so nonassociative source cases do not inherit associativity.",
+  "declared_scope": {
+    "included": [
+      "bilinear vector-valued product",
+      "unital associative algebra with explicit associativity",
+      "symmetric nondegenerate bilinear form with Q(v)=B(v,v)",
+      "unital composition algebra with Q(xy)=Q(x)Q(y) and no associativity requirement",
+      "linear involutive unit-fixing multiplication-order reversal for associative algebra",
+      "linear involutive unit-fixing multiplication-order reversal plus Q preservation for composition algebra"
+    ],
+    "excluded": [
+      "division property",
+      "positive definiteness or split classification",
+      "named R/C/H/O identity",
+      "alternativity/Moufang laws",
+      "canonical conjugation uniqueness",
+      "triality/product-recovery/reflection semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "predicted_consequences": [
+    "Finite bilinear products satisfy 184003 exactly when both argument linearity laws hold.",
+    "A deliberately nonassociative unital bilinear table fails 185001 while remaining a valid 184003 product.",
+    "Dot-product Q over a finite vector space passes 185002; degenerate/asymmetric forms fail.",
+    "A finite composition example passes 185003; a unital bilinear algebra with nonmultiplicative Q fails.",
+    "Matrix transpose on 2x2 matrices passes 188000 while identity KAPPA fails order reversal on a noncommutative pair.",
+    "Complex-like conjugation passes 215001; a different linear involution fixing the unit but breaking product/norm compatibility fails."
+  ],
+  "falsifier": "Any hidden semantic dependency outside Core plus already provisional 182001-182004/183002/183003 and the selected internal relations; or any adversarial false acceptance/positive rejection; or SSC/IA/reconstruction failure.",
+  "adaptive_evidence": "Generated after L128 closure moved the first unresolved dependency to arbitrary-element product/pairing/composition/conjugation in L125-L130.",
+  "fresh_confirmation_status": "PENDING_INTERNAL_DETERMINISTIC_QUALIFICATION; external review waived but not passed.",
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "next_stage": "G6_CAMPAIGN_LOCAL_PROVISIONAL_QUALIFICATION"
+}

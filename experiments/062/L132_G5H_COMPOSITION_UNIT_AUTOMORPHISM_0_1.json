@@ -1,0 +1,96 @@
+{
+  "schema": "isograph.exp062-l132-g5h-composition-unit-automorphism.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "5d852f033016a239a4a5dda181fe8c2ba6fd93e3",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L132_G3_CORE_DEFINABILITY_0_1.json",
+    "git_blob_sha": "9582e299279317be501c67c38bcc4ee73d6329d3",
+    "family": "COMPOSITION_UNIT_AUTOMORPHISM",
+    "occurrence_ids": [
+      "L-SSC-132-R02"
+    ]
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        185003
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        183002
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 187701,
+      "role": "linear bijection of a composition algebra fixing unit and preserving product and Q",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "656948bc81151d6050c8aa328885209409e125d1"
+    }
+  ],
+  "candidate_statement": "Exact 187701 is a reusable automorphism contract over an already qualified composition algebra: F is a linear bijection A->A, fixes the unit, preserves multiplication, and preserves Q.",
+  "declared_scope": {
+    "included": [
+      "linear bijection",
+      "unit fixing",
+      "product preservation",
+      "Q preservation"
+    ],
+    "excluded": [
+      "group closure/composition law for the set of all such maps",
+      "named Aut(D) group ontology",
+      "inner/outer automorphism classification",
+      "triality/rotation semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "L132 G3 leaves only the exact multiplication-automorphism behavior open for R02.",
+    "187701 depends only on already qualified 185003 and 183002."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "textbook automorphism-group semantics beyond exact 187701",
+    "historical L132 closure status"
+  ],
+  "predicted_consequences": [
+    "F3[i] conjugation satisfies 187701.",
+    "A linear bijection that moves the unit fails.",
+    "A unit-fixing linear bijection that fails product preservation is rejected.",
+    "A product-preserving/nonlinear or nonbijective map is rejected.",
+    "Q preservation is independently required."
+  ],
+  "positive_controls": [
+    "identity on F3[i]",
+    "conjugation on F3[i]"
+  ],
+  "negative_adversarial_controls": [
+    "negation moving the unit",
+    "unit-fixing shear failing product preservation",
+    "projection failing bijectivity",
+    "linear bijection preserving unit/product candidate with altered Q relation"
+  ],
+  "falsifier": "Reject if hidden dependencies exceed qualified 185003/183002, positive controls fail, negative controls pass, SSC/IA fails, or L132 requires group-level semantics beyond the exact map contract.",
+  "adaptive_evidence": "Generated only after L132 targeted G3 isolated R02.",
+  "fresh_confirmation_status": "PENDING_G6_DETERMINISTIC_QUALIFICATION; external review bypassed not passed.",
+  "coverage_limits": "Only exact 187701 at pinned bytes. No automorphism group ontology.",
+  "revision_lineage": [
+    "L132_G3_CORE_DEFINABILITY_0_1"
+  ],
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}

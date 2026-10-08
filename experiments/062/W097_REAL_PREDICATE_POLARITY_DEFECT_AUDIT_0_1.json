@@ -1,0 +1,75 @@
+{
+  "schema": "isograph.exp062-w097-real-predicate-polarity-defect-audit.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_G1_POLARITY_AND_VERIFIER_DEFECT_REOPEN_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "defect": {
+    "earliest_affected_stage": "G1",
+    "census_id": "W-SSC-097",
+    "occurrence_id": "W-SSC-097-O08",
+    "predecessor_input": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+    },
+    "predecessor_record": {
+      "source_span": "real points",
+      "relation_span": "real",
+      "argument_spans": [
+        "points"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED"
+    },
+    "source_context": "W-SSC-097 contains the phrase 'real projective conic with complex but no real points'.",
+    "finding": "The predecessor extraction dropped the load-bearing negation token 'no' from the lower real-point occurrence and labeled the unary 'real' occurrence ASSERTED. That can be read as a positive semantic assertion and does not preserve the source polarity of the occurrence.",
+    "classification": [
+      "SOURCE_POLARITY_LOSS",
+      "SEMANTIC_COMPRESSION",
+      "VERIFIER_WEAKNESS"
+    ],
+    "severity": "LOAD_BEARING_DOWNSTREAM_INVALIDATION"
+  },
+  "verifier_defect": {
+    "path": "experiments/062/tools/verify-w-extraction-reconciled-0-23.mjs",
+    "git_blob_sha": "43027cfe716c3aaba1ad4c224a36bb7134f538e9",
+    "finding": "The verifier checked the O08 substring, relation, argument, and definition status but did not check logical_force and did not require preservation of the source's negating side condition. The incorrect ASSERTED record therefore passed.",
+    "correction_requirement": "The successor verifier must require source_span 'no real points', logical_force NEGATED, relation_span 'real', argument 'points', and must explicitly reject ASSERTED/EXISTENCE polarity for O08."
+  },
+  "repair": {
+    "source_corpus_changed": false,
+    "source_demand_changed": false,
+    "new_source_evidence": false,
+    "replacement": {
+      "source_span": "no real points",
+      "relation_span": "real",
+      "argument_spans": [
+        "points"
+      ],
+      "logical_force": "NEGATED",
+      "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED"
+    },
+    "interpretation": "The lower predicate is source-visible as a semantic role, but only under the source's absence/negation clause. The repair does not define realness and does not assert any positive real-point instance."
+  },
+  "invalidation": {
+    "W_G1_COMPLETE_REPEAT_AUDIT_0_4_current": false,
+    "W_G1_OWNER_BYPASS_ROUTING_0_3_current": false,
+    "W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_4_current": false,
+    "W_G2_FIXED_POINT_0_4_current": false,
+    "W_CURRENT_STAGE_GATE_0_29_current": false,
+    "G3_and_later_on_0_23_tuple_authorized": false,
+    "generic_221101_qualification_preserved": true,
+    "generic_221102_qualification_preserved": true,
+    "generic_221103_qualification_preserved": true,
+    "note": "Generic source-neutral module qualifications do not depend on this W G1 record. Any W source instantiation or downstream W graph result depending on the 0.23 tuple must be replayed."
+  },
+  "nonclaims": [
+    "This audit does not define the real-point predicate.",
+    "This audit does not close W-SSC-097-O05 or O08.",
+    "This audit does not use L evidence.",
+    "This audit does not revoke generic campaign-local qualifications solely because their W source instance changed."
+  ],
+  "next_lawful_action": "Generate W_EXTRACTION_RECONCILED_0_24.json with only the O08 polarity/span repair, validate complete source conservation, establish a new G1 fixed point, then replay G2 before G3."
+}

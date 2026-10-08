@@ -1,0 +1,450 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-section4-l133-source-expression-audit.v0.1",
+  "date": "2026-10-08",
+  "status": "SOURCE_EXPRESSION_INVENTORY_PARTIAL_PRECISE_SU3_SP3_NOT_FROZEN",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_SOURCE_EVIDENCE_ONLY",
+  "track": "L",
+  "branch_head_at_creation": "1b74f400af369e3d31cc2a0c497b0484c455326e",
+  "source": {
+    "article": "L05 Division Algebras, Triality, and Exceptional Magic, published version of record 2026-08-29",
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "section": "§4 Triality Lie Algebras",
+    "verified_subsections": [
+      "§4 opening six-case table",
+      "§4.1 source su(3) matrix Eq.(10) plus commutator output and partial basis brackets",
+      "§4.2 source sp(3) Eq.(12) plus six commutator output formulas",
+      "§4.2 automorphism Eq.(14) source role note"
+    ],
+    "remaining": [
+      "§4.1 entire root/Cartan bracket table",
+      "§4.1 split Cprime bracket source display image",
+      "§4.2 complete Eq.(13) source basis bracket table",
+      "§4.3 complete f4 and split-octonion case"
+    ]
+  },
+  "parent_defect": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+  },
+  "source_specific": {
+    "six_source_decompositions": [
+      {
+        "id": "L4-T01",
+        "family": "ordinary complex",
+        "source_carrier": "su(3)",
+        "triality": "tri(C)=u(1)+u(1)",
+        "roles": [
+          "(1+bar1)_v",
+          "(1+bar1)_m",
+          "(1+bar1)_p"
+        ],
+        "scope": "ORDINARY"
+      },
+      {
+        "id": "L4-T02",
+        "family": "split complex",
+        "source_carrier": "sl(3)",
+        "triality": "tri(Cprime)=gl(1)+gl(1)",
+        "roles": [
+          "(1+bar1)_v",
+          "(1+bar1)_m",
+          "(1+bar1)_p"
+        ],
+        "scope": "SPLIT"
+      },
+      {
+        "id": "L4-T03",
+        "family": "ordinary quaternion",
+        "source_carrier": "sp(3)",
+        "triality": "tri(H)=su(2)_M+su(2)_P+su(2)_V",
+        "roles": [
+          "(2,2,1)_v",
+          "(2,1,2)_m",
+          "(1,2,2)_p"
+        ],
+        "scope": "ORDINARY"
+      },
+      {
+        "id": "L4-T04",
+        "family": "split quaternion",
+        "source_carrier": "sp(6,R)",
+        "triality": "tri(Hprime)=sl(2)_M+sl(2)_P+sl(2)_V",
+        "roles": [
+          "(2,2,1)_v",
+          "(2,1,2)_m",
+          "(1,2,2)_p"
+        ],
+        "scope": "SPLIT"
+      },
+      {
+        "id": "L4-T05",
+        "family": "ordinary octonion",
+        "source_carrier": "f4(-52)",
+        "triality": "tri(O)=so(8)",
+        "roles": [
+          "8_v",
+          "8_sminus",
+          "8_splus"
+        ],
+        "scope": "ORDINARY"
+      },
+      {
+        "id": "L4-T06",
+        "family": "split octonion",
+        "source_carrier": "f4(4)",
+        "triality": "tri(Oprime)=so(4,4)",
+        "roles": [
+          "8_v",
+          "8_sminus",
+          "8_splus"
+        ],
+        "scope": "SPLIT"
+      }
+    ],
+    "su3_matrix": {
+      "id": "L4-SU3-MAT",
+      "source_location": "§4.1, Eq.(10)",
+      "element": "A(B1,B2,v,psi,chi)",
+      "status": "SOURCE_EQUIVALENT_MATRIX_PRESENTATIONS_UNQUALIFIED",
+      "first": [
+        [
+          "i*B1 + i/sqrt(3)*B2",
+          "-v0+i*v1",
+          "psi0+i*psi1"
+        ],
+        [
+          "v0+i*v1",
+          "-i*B1+i/sqrt(3)*B2",
+          "-chi0+i*chi1"
+        ],
+        [
+          "-psi0+i*psi1",
+          "chi0+i*chi1",
+          "-2i/sqrt(3)*B2"
+        ]
+      ],
+      "second": [
+        [
+          "V-M",
+          "-conj(v)",
+          "psi"
+        ],
+        [
+          "v",
+          "P-V",
+          "-conj(chi)"
+        ],
+        [
+          "-conj(psi)",
+          "chi",
+          "M-P"
+        ]
+      ],
+      "third": "B1*T1+B2*T2+v^a gamma_a+psi^a Qminus_a+chi^a Qplus_a",
+      "fourth": "V*H_v+M*H_m+P*H_p+(v Eminus_v-conj(v) Eplus_v)+(psi Eminus_m-conj(psi) Eplus_m)+(chi Eminus_p-conj(chi) Eplus_p)",
+      "guards": [
+        "all three source presentations refer to same explicit 8D carrier but equality of raw syntaxes not admitted without typed realization",
+        "complex v,psi,chi; real B1,B2; purely imaginary V,M,P",
+        "matrix trace exactly zero",
+        "shifting V,M,P simultaneously by a common constant leaves matrix entries V-M,P-V,M-P unchanged, giving only two independent real diagonal parameters",
+        "minus signs on upper/lower off-diagonal locations are load bearing",
+        "not all generic 3x3 complex matrices satisfy the 8D source target"
+      ]
+    },
+    "su3_commutator": {
+      "id": "L4-SU3-BRACKET",
+      "source_location": "§4.1 below Eq.(10) (published HTML display labelled (11))",
+      "prefix": "[A(B1_1,B2_1,v1,psi1,chi1),A(B1_2,B2_2,v2,psi2,chi2)]=A(B1_3,B2_3,v3,psi3,chi3)",
+      "components": [
+        {
+          "id": "L4-SU3-C1",
+          "lhs": "2*i*B1_3",
+          "rhs": "-2*(conj(v1)*v2-conj(v2)*v1)-(psi1*conj(psi2)-psi2*conj(psi1))-(chi1*conj(chi2)-chi2*conj(chi1))"
+        },
+        {
+          "id": "L4-SU3-C2",
+          "lhs": "(2*i/sqrt(3))*B2_3",
+          "rhs": "(chi1*conj(chi2)-chi2*conj(chi1))+(conj(psi1)*psi2-conj(psi2)*psi1)"
+        },
+        {
+          "id": "L4-SU3-C3",
+          "lhs": "v3",
+          "rhs": "-2*i*(B1_1*v2-B1_2*v1)+(conj(chi1)*conj(psi2)-conj(chi2)*conj(psi1))"
+        },
+        {
+          "id": "L4-SU3-C4",
+          "lhs": "psi3",
+          "rhs": "i*(B1_1+sqrt(3)*B2_1)*psi2-i*(B1_2+sqrt(3)*B2_2)*psi1+(conj(v1)*conj(chi2)-conj(v2)*conj(chi1))"
+        },
+        {
+          "id": "L4-SU3-C5",
+          "lhs": "chi3",
+          "rhs": "i*(B1_1-sqrt(3)*B2_1)*chi2-i*(B1_2-sqrt(3)*B2_2)*chi1+(conj(psi1)*conj(v2)-conj(psi2)*conj(v1))"
+        }
+      ],
+      "guards": [
+        "ordered input indices 1,2 and output 3 distinguished",
+        "complex conjugation starred fields not interchangeable with tilde on other source families",
+        "factor 2i and sqrt3 retained",
+        "all equalities are source claims, not a generic classification theorem"
+      ]
+    },
+    "su3_basis_brackets": {
+      "id": "L4-SU3-BASIS",
+      "source_location": "§4.1 immediately after Eq.(11)",
+      "scope": "explicit non-zero representatives plus their antisymmetrized partners",
+      "finite_rows": [
+        [
+          "[T1,gamma0]",
+          "-2 gamma1"
+        ],
+        [
+          "[T1,gamma1]",
+          "+2 gamma0"
+        ],
+        [
+          "[T1,Qminus0]",
+          "+Qminus1"
+        ],
+        [
+          "[T1,Qminus1]",
+          "-Qminus0"
+        ],
+        [
+          "[T1,Qplus0]",
+          "+Qplus1"
+        ],
+        [
+          "[T1,Qplus1]",
+          "-Qplus0"
+        ],
+        [
+          "[T2,Qminus0]",
+          "+sqrt(3) Qminus1"
+        ],
+        [
+          "[T2,Qminus1]",
+          "-sqrt(3) Qminus0"
+        ],
+        [
+          "[T2,Qplus0]",
+          "-sqrt(3) Qplus1"
+        ],
+        [
+          "[T2,Qplus1]",
+          "+sqrt(3) Qplus0"
+        ],
+        [
+          "[gamma0,gamma1]",
+          "-2 T1"
+        ],
+        [
+          "[Qminus0,Qminus1]",
+          "T1+sqrt(3) T2"
+        ],
+        [
+          "[Qplus0,Qplus1]",
+          "T1-sqrt(3) T2"
+        ]
+      ],
+      "parameterized_rows": [
+        [
+          "[gamma_a,Qminus_b]",
+          "-M_{tilde(a)tilde(b)}^c Qplus_c"
+        ],
+        [
+          "[gamma_a,Qplus_b]",
+          "+M_{tilde(a)tilde(b)}^c Qminus_c"
+        ],
+        [
+          "[Qminus_a,Qplus_b]",
+          "-M_{tilde(a)tilde(b)}^c gamma_c"
+        ]
+      ],
+      "remaining_root_cartan_brackets": "NOT_YET_EXTRACTED_AS_EXACT_FINITE_TABLE; do not claim §4.1 complete until root vector definitions and phase tables source conserved",
+      "guards": [
+        "antisymmetrized partners are source stated; only from an independently qualified antisymmetry schema if derived",
+        "source parameterized M has both tildes in signed/ordered positions",
+        "Qminus and Qplus not merged"
+      ]
+    },
+    "sp3_matrix": {
+      "id": "L4-SP3-MAT",
+      "source_location": "§4.2 Eq.(12)",
+      "element": "A(M,P,V,v,psi,chi)",
+      "entries": [
+        [
+          "M",
+          "-tilde(v)",
+          "psi"
+        ],
+        [
+          "v",
+          "P",
+          "-tilde(chi)"
+        ],
+        [
+          "-tilde(psi)",
+          "chi",
+          "V"
+        ]
+      ],
+      "guards": [
+        "M,P,V imaginary quaternion source elements",
+        "v,psi,chi arbitrary quaternions",
+        "three diagonal factors distinct before any triality comparison",
+        "tilde involution source transport not raw complex conjugation"
+      ]
+    },
+    "sp3_commutator": {
+      "id": "L4-SP3-BRACKET",
+      "source_location": "§4.2 source matrix commutator immediately after Eq.(12)",
+      "prefix": "[A(M1,P1,V1,v1,psi1,chi1),A(M2,P2,V2,v2,psi2,chi2)]=A(M3,P3,V3,v3,psi3,chi3)",
+      "components": [
+        {
+          "id": "L4-SP3-C1",
+          "lhs": "M3",
+          "rhs": "M1*M2-M2*M1-(tilde(v1)*v2-tilde(v2)*v1)-(psi1*tilde(psi2)-psi2*tilde(psi1))"
+        },
+        {
+          "id": "L4-SP3-C2",
+          "lhs": "P3",
+          "rhs": "P1*P2-P2*P1-(tilde(chi1)*chi2-tilde(chi2)*chi1)-(v1*tilde(v2)-v2*tilde(v1))"
+        },
+        {
+          "id": "L4-SP3-C3",
+          "lhs": "V3",
+          "rhs": "V1*V2-V2*V1-(tilde(psi1)*psi2-tilde(psi2)*psi1)-(chi1*tilde(chi2)-chi2*tilde(chi1))"
+        },
+        {
+          "id": "L4-SP3-C4",
+          "lhs": "v3",
+          "rhs": "(P1*v2-P2*v1)+(v1*M2-v2*M1)+(tilde(chi1)*tilde(psi2)-tilde(chi2)*tilde(psi1))"
+        },
+        {
+          "id": "L4-SP3-C5",
+          "lhs": "psi3",
+          "rhs": "(M1*psi2-M2*psi1)+(psi1*V2-psi2*V1)+(tilde(v1)*tilde(chi2)-tilde(v2)*tilde(chi1))"
+        },
+        {
+          "id": "L4-SP3-C6",
+          "lhs": "chi3",
+          "rhs": "(V1*chi2-V2*chi1)+(chi1*P2-chi2*P1)+(tilde(psi1)*tilde(v2)-tilde(psi2)*tilde(v1))"
+        }
+      ],
+      "guards": [
+        "ordered quaternion products noncommutative",
+        "tilde/conjugation operands and role positions cannot permute",
+        "all six input-output roles required; no compressed Lie family label substitutes for source",
+        "finite tests must validate exact six component equations and explicit negative mutants"
+      ]
+    },
+    "other": [
+      {
+        "id": "L4-OTHER-01",
+        "source_location": "§4.1",
+        "behavior": "Cartan generators H_v=T1, H_m=-1/2 T1-sqrt3/2 T2, H_p=-1/2 T1+sqrt3/2 T2; source root E± definitions and nonzero brackets",
+        "status": "PARTIAL_ROLE_AND_DEFINITION_PRESENT; FULL ROOT TABLE NOT_EXTRACTED"
+      },
+      {
+        "id": "L4-OTHER-02",
+        "source_location": "§4.1",
+        "behavior": "split Cprime changes signed source basis bracket table; source says triality automorphism shape survives",
+        "status": "SOURCE_BRACKET_IMAGE_PRESENT_IN_PUBLISHER; NOT_YET_EXTRACTED"
+      },
+      {
+        "id": "L4-OTHER-03",
+        "source_location": "§4.2",
+        "behavior": "12x12 real and 6x6 complex source matrix realizations coexist with quaternionic 3x3; no automatic stronger equivalence",
+        "status": "EXPLICIT_SCOPE_NEEDS_EXACT_NATIVE_REALIZATION"
+      },
+      {
+        "id": "L4-OTHER-04",
+        "source_location": "§4.2 Eq.(13)",
+        "behavior": "source lists multiple nonzero basis bracket relations with distinct M tilde index orders, compact factor actions, same-role two-diagonal outputs",
+        "status": "NOT_YET_FULL_SOURCE_EXTRACTION"
+      },
+      {
+        "id": "L4-OTHER-05",
+        "source_location": "§4.2 Eq.(14)",
+        "behavior": "source gives R_p^0 A(M,P,V,v,psi,chi)=A(M,V,P,tilde(psi),tilde(v),-tilde(chi)), exact printed conjugation and root phases",
+        "status": "L134_HISTORICAL_NATIVE_PARTIAL_DEPENDENT_ON_L133"
+      },
+      {
+        "id": "L4-OTHER-06",
+        "source_location": "§4.2",
+        "behavior": "canonical t permutes gamma,Qminus,Qplus and T^M,T^V,T^P by source ordering; printed g_t orientation was historically audited as inverse of textual basis cycle",
+        "status": "KEEP_SOURCE_INCONSISTENCY_NOT_REPAIRED"
+      },
+      {
+        "id": "L4-OTHER-07",
+        "source_location": "§4.3",
+        "behavior": "source f4 compact/noncompact, octonion and split-octonion bracket cases have their own constraints and signature-specific real structure",
+        "status": "NOT_YET_EXHAUSTIVE"
+      },
+      {
+        "id": "L4-OTHER-08",
+        "source_location": "§4.3",
+        "behavior": "non-uniqueness of root diagrams/signs and source assertion that root-space geometric rotations do not determine phases",
+        "status": "PRESERVE_NONDETERMINATION"
+      }
+    ]
+  },
+  "counts": {
+    "source_six_lie_decompositions": 6,
+    "su3_matrix_dimensions": "3x3",
+    "su3_output_components": 5,
+    "su3_basis_explicit_rows": 13,
+    "su3_basis_parameterized_rows": 3,
+    "sp3_matrix_dimensions": "3x3",
+    "sp3_output_components": 6,
+    "other_open_source_obligations": 8
+  },
+  "fidelity_contract": {
+    "roles": [
+      "tri(D)",
+      "V",
+      "M",
+      "P",
+      "B1",
+      "B2",
+      "v",
+      "psi",
+      "chi"
+    ],
+    "do_not_unify": [
+      "ordinary and split carrier names",
+      "unitary and symplectic source matrices",
+      "source conjugation and tilde without declared transport",
+      "su3 and sp3 bracket coefficients",
+      "source root phases with their Lie generator maps"
+    ],
+    "required": [
+      "explicit exact source row identity",
+      "input/output binder names",
+      "noncommutative operand order",
+      "sign",
+      "scalar coefficient factors",
+      "complex conjugate/tilde",
+      "negative/root phase source nonclaims",
+      "representation-equivalence only if source says so"
+    ]
+  },
+  "stage_gate": {
+    "G0_source_census_complete": false,
+    "G1_replay_authorized": false,
+    "G3_Core_closed_R04_R05_current": false,
+    "L132_G7_current": false,
+    "L133_G7_current": false,
+    "L134_promotion_allowed": false,
+    "Recursive_IA_allowed": false
+  },
+  "nonclaims": [
+    "These equations are source asserted, not a proof they satisfy Lie/Jacobi for all admissible carriers.",
+    "This excerpt is not a complete L05 §4 extraction, much less L01–L06.",
+    "The source expressions are recorded for eventual source-census version successor; no current semantic promotion.",
+    "Historical name/role G1 and green G3 are not authoritative after source and parent defects.",
+    "No W or third-party evidence used."
+  ]
+}

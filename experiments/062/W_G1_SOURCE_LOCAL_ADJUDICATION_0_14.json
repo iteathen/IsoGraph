@@ -1,0 +1,94 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.14",
+  "date": "2026-10-06",
+  "status": "FINAL_RELATION_HEAD_CORRECTIONS_SUPPORTED_REAUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/W_EXTRACTION_RECONCILED_0_13.json",
+  "predecessor_adjudication": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_13.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "audit_method": "Re-run of the complete frozen surface-locator relation-head diagnostic against W 0.13 after exact equality/arrow, guard/modality, polarity, and source-local successor audits.",
+  "corrections": [
+    {
+      "census_id": "W-SSC-043",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-043-O04",
+        "source_span": "requires any future PT quantum theory to relate fields on the five-dimensional PT_0 fibered over S3 to ordinary state data on S3",
+        "relation_span": "requires",
+        "argument_spans": [
+          "any future PT quantum theory",
+          "to relate fields on the five-dimensional PT_0 fibered over S3 to ordinary state data on S3"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-043-O02"
+        ],
+        "load_bearing_note": "Expose the requirement modality separately from the underlying relate operation; the future-theory scope remains explicit."
+      }
+    },
+    {
+      "census_id": "W-SSC-062",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-062-O08",
+        "source_span": "represents a complex vector as a map from the dual right spinor to the left spinor",
+        "relation_span": "represents",
+        "argument_spans": [
+          "complex vector",
+          "map from the dual right spinor to the left spinor"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-062-O02"
+        ],
+        "load_bearing_note": "Expose the representation operation while O02 continues to preserve the source's as-identification and O04/O05 preserve map domain/codomain."
+      }
+    },
+    {
+      "census_id": "W-SSC-113",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-113-O08",
+        "source_span": "represents lifted tangent vectors as Hom_C(l,S_L)",
+        "relation_span": "represents",
+        "argument_spans": [
+          "lifted tangent vectors",
+          "Hom_C(l,S_L)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-113-O02"
+        ],
+        "load_bearing_note": "Expose the source representation operation while retaining the existing as-identification."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 3,
+    "additions": 3,
+    "replacements": 0,
+    "affected_bodies": 3,
+    "predecessor_occurrences": 328,
+    "expected_successor_occurrences": 331
+  },
+  "findings": [
+    "All literal equality/map-law checks are clean at W 0.13.",
+    "Three remaining source predicates were semantically load-bearing but not themselves relation edges: one requirement modality and two representation operations.",
+    "Remaining unmatched surface heads after these corrections are source-reporting verbs, mathematical-name nouns such as 'transform', passive auxiliaries whose predicate is already represented, or source-status statements excluded by the G1 contract.",
+    "No conventional mathematical definition was imported."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_14.json as exact W 0.13 plus these three additions.",
+    "Run deterministic successor verification and repeat the complete fixed-point diagnostics.",
+    "If the repeated audit yields zero corrections, freeze W 0.14 as the source-local G1 candidate and prepare a fresh independent all-84 cold audit.",
+    "Do not mark W G1 complete or authorize G2 until the independent cold audit reaches a structurally valid zero-correction fixed point."
+  ],
+  "fixed_point_claim": false,
+  "independent_cold_audit_required": true,
+  "g2_authorized": false,
+  "authority": false
+}

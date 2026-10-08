@@ -1,0 +1,45 @@
+name: Experiment 062 W G1 source-local fixed-point verify
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_18.json"
+      - "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json"
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18.json"
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18_ERRATA_0_1.json"
+      - "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_1.json"
+      - "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_2.json"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-18.mjs"
+      - "experiments/062/tools/verify-w-g1-source-local-fixed-point-0-1.mjs"
+      - ".github/workflows/experiment-062-w-g1-source-local-fixed-point.yml"
+  pull_request:
+    paths:
+      - "experiments/062/W_EXTRACTION_RECONCILED_0_18.json"
+      - "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json"
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18.json"
+      - "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_18_ERRATA_0_1.json"
+      - "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_1.json"
+      - "experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_2.json"
+      - "experiments/062/tools/verify-w-extraction-reconciled-0-18.mjs"
+      - "experiments/062/tools/verify-w-g1-source-local-fixed-point-0-1.mjs"
+      - ".github/workflows/experiment-062-w-g1-source-local-fixed-point.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-w-g1-source-local-fixed-point:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Verify W 0.18 and source-local fixed-point record
+        run: node experiments/062/tools/verify-w-g1-source-local-fixed-point-0-1.mjs

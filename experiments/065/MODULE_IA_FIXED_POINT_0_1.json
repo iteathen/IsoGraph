@@ -1,0 +1,134 @@
+{
+  "schema": "isograph.exp065-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module": "RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE_0_1",
+  "primitive_id": 221101,
+  "module_ssc": {
+    "path": "experiments/065/MODULE_SSC_0_1.json",
+    "git_blob_sha": "f2e84d97c4cd559d2b4b8e76cdd4513648da418b"
+  },
+  "inference_profile": {
+    "id": "relational-two-step-return-conjunct-profile-0.1",
+    "scope": "Only direct consequences of RTR-A01..A03 under qualified Core logic/equality. No source-domain or graph-theoretic theorem library.",
+    "rules": [
+      {
+        "id": "RTR-IA-R1",
+        "premises": [
+          "RTR-A01"
+        ],
+        "consequence": "Every realized R edge has both endpoints in P."
+      },
+      {
+        "id": "RTR-IA-R2",
+        "premises": [
+          "RTR-A02"
+        ],
+        "consequence": "For every realized typed length-two R path x->y->z, z=x."
+      },
+      {
+        "id": "RTR-IA-R3",
+        "premises": [
+          "RTR-A03"
+        ],
+        "consequence": "No represented P-element has a realized R self-loop."
+      }
+    ],
+    "prohibited_inferences": [
+      "existence of any P-element",
+      "existence of any R-edge",
+      "totality",
+      "single-valuedness",
+      "functionhood",
+      "symmetry",
+      "injectivity or surjectivity",
+      "finite/even-cardinality conclusions",
+      "projective/quaternionic/twistor/geometric interpretation"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "RTR-A01",
+        "RTR-A02",
+        "RTR-A03"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "RTR-IA-001",
+          "premises": [
+            "RTR-A01"
+          ],
+          "consequence": "Realized R edges are internally typed P x P."
+        },
+        {
+          "id": "RTR-IA-002",
+          "premises": [
+            "RTR-A02"
+          ],
+          "consequence": "Every realized typed two-step path has endpoint equal to its start."
+        },
+        {
+          "id": "RTR-IA-003",
+          "premises": [
+            "RTR-A03"
+          ],
+          "consequence": "Every represented P-element is excluded from relating to itself."
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only the three direct conjunct projections yields no new assertion and cannot derive prohibited total/function/symmetry/existence properties."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "RTR-IA-X01",
+      "claim": "Every x in P has an R-successor.",
+      "reason": "No existence/totality axiom is present."
+    },
+    {
+      "id": "RTR-IA-X02",
+      "claim": "R is single-valued.",
+      "reason": "No uniqueness/function axiom is present."
+    },
+    {
+      "id": "RTR-IA-X03",
+      "claim": "R is symmetric.",
+      "reason": "Two-step return constrains only realized length-two paths; one-way terminal edges are permitted."
+    },
+    {
+      "id": "RTR-IA-X04",
+      "claim": "P is nonempty.",
+      "reason": "The schema is universally quantified and admits the empty carrier."
+    },
+    {
+      "id": "RTR-IA-X05",
+      "claim": "Finite P has even cardinality.",
+      "reason": "The relation may be empty or partial and is not a fixed-point-free total involutive function."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 3,
+    "rejected_overreach_assertions": 5,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "downstream": {
+    "nei_authorized": false,
+    "dts_authorized": false,
+    "dp_authorized": false,
+    "reason": "No downstream module is required to qualify this first-order relational schema."
+  }
+}

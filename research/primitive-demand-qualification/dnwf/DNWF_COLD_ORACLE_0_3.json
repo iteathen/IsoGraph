@@ -1,0 +1,224 @@
+{
+  "schema": "isograph.dnwf-cold-oracle.v0.3",
+  "date": "2026-10-05",
+  "status": "FROZEN_HIDDEN_ORACLE_TAXONOMY_REPAIR_DO_NOT_SUPPLY_TO_DECODER",
+  "candidate": "DNWF_0_1_CANDIDATE.md",
+  "cases": [
+    {
+      "id": "DNWF-C01",
+      "classification": "CONSISTENT_DNWF",
+      "required": [
+        "constructor coverage",
+        "well-founded finite trees",
+        "structural induction",
+        "unique fold"
+      ],
+      "forbidden": [
+        "arithmetic follows",
+        "cardinality follows"
+      ]
+    },
+    {
+      "id": "DNWF-C02",
+      "classification": "CONSISTENT_DNWF",
+      "required": [
+        "recursive fields",
+        "external field",
+        "field order preserved",
+        "unique fold"
+      ],
+      "forbidden": [
+        "left/right order irrelevant"
+      ]
+    },
+    {
+      "id": "DNWF-C03",
+      "classification": "CONSISTENT_DNWF",
+      "required": [
+        "external field not recursive",
+        "recursive child",
+        "finite termination through Stop"
+      ],
+      "forbidden": [
+        "recurse through Color"
+      ]
+    },
+    {
+      "id": "DNWF-C04",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "constructor coverage or no junk",
+        "least generated carrier"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C05",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "constructor tag disjointness"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C06",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "constructor injectivity or fieldwise equality"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C07",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "well-foundedness",
+        "cycle exclusion"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C08",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "well-foundedness",
+        "no infinite descending recursive chain"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C09",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "fold uniqueness"
+      ],
+      "forbidden": [
+        "existence alone sufficient"
+      ]
+    },
+    {
+      "id": "DNWF-C10",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "structural induction"
+      ],
+      "forbidden": []
+    },
+    {
+      "id": "DNWF-C11",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "external fields pass through unchanged",
+        "recursion only through recursive fields"
+      ],
+      "forbidden": [
+        "external fields may be recursed"
+      ]
+    },
+    {
+      "id": "DNWF-C12",
+      "classification": "DISTINCT_SEMANTICS",
+      "required": [
+        "field order is semantic",
+        "both signatures may separately be consistent"
+      ],
+      "forbidden": [
+        "signatures equivalent by default"
+      ]
+    },
+    {
+      "id": "DNWF-C13",
+      "classification": "OVERCLAIM",
+      "required": [
+        "DNWF does not imply arithmetic",
+        "explicit non-claims"
+      ],
+      "forbidden": [
+        "addition follows",
+        "multiplication follows",
+        "total order follows",
+        "cardinality operation follows"
+      ]
+    },
+    {
+      "id": "DNWF-C14",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "finite well-founded constructor tree",
+        "infinite stream excluded",
+        "no infinite descending recursive chain"
+      ],
+      "forbidden": [
+        "coinduction follows"
+      ]
+    },
+    {
+      "id": "DNWF-C15",
+      "classification": "DISTINCT_SEMANTICS",
+      "required": [
+        "recursive versus external field role is semantic",
+        "changing recursive to external changes generated-carrier/fold semantics"
+      ],
+      "forbidden": [
+        "same DNWF signature semantics by default",
+        "external field still supplies recursive descent"
+      ]
+    },
+    {
+      "id": "DNWF-C16",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "recursive field values lie in Mu",
+        "recursive versus external distinction"
+      ],
+      "forbidden": [
+        "arbitrary external Label values allowed in recursive field"
+      ]
+    },
+    {
+      "id": "DNWF-C17",
+      "classification": "OVERCLAIM",
+      "required": [
+        "structural induction requires every constructor case",
+        "Alt case omitted"
+      ],
+      "forbidden": [
+        "induction conclusion from incomplete constructor cases"
+      ]
+    },
+    {
+      "id": "DNWF-C18",
+      "classification": "OVERCLAIM",
+      "required": [
+        "induction step must cover arbitrary recursive-field instances",
+        "strict subset closure is insufficient"
+      ],
+      "forbidden": [
+        "strict-subset property implies property on all Mu"
+      ]
+    },
+    {
+      "id": "DNWF-C19",
+      "classification": "INCONSISTENT_DNWF",
+      "required": [
+        "signature requires one coherent explicit field correspondence",
+        "malformed first/next/last metadata cannot support ordered constructor fields"
+      ],
+      "forbidden": [
+        "metadata names repair contradictory incidences",
+        "field order may be guessed"
+      ]
+    }
+  ],
+  "qualification_rule": {
+    "required_case_classification_accuracy": "19/19 for each independent decoder",
+    "required_reason_coverage": "Every case must contain at least one semantically matching required concept and must not assert a forbidden concept.",
+    "q5_mutation_coverage": "All twelve frozen Q5 mutation families must be explicitly instantiated.",
+    "all_decoders_must_pass": true,
+    "one_decoder_pass_not_sufficient": true
+  },
+  "predecessor": "DNWF_COLD_ORACLE_0_2.json",
+  "correction": "Expected classifications and semantic obligations are unchanged from 0.2. Successor exists only to bind the clarified 0.3 public cases/prompt after Experiment 061 attempt 1 demonstrated classification-token ambiguity.",
+  "attempt1_evidence": "experiments/061/evidence/run-37414305171-attempt-1",
+  "attempt1_effect": "Preserved negative qualification evidence; not rescored under 0.3."
+}

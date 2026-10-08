@@ -1,0 +1,21 @@
+import fs from "node:fs";
+import {spawnSync} from "node:child_process";
+const ledgerPath="research/woit-lisi-isomorph/lisi/CORE021_CLOSURE_LEDGER_0_24.json";
+const checker="tools/core021/check-core021-ledger.mjs";
+const ledger=JSON.parse(fs.readFileSync(ledgerPath,"utf8"));
+const run=spawnSync(process.execPath,[checker,ledgerPath],{encoding:"utf8"});
+let report;try{report=JSON.parse(run.stdout);}catch{throw new Error("Core checker did not emit JSON\n"+run.stdout+run.stderr);}
+const errors=[];
+const expected={SOUNDNESS_STRUCTURE:true,COVERAGE:true,RECONSTRUCTION:true,SCOPE_INTEGRITY:true,AUTHORITY_ROUTING_STRUCTURE:true,IA_FIXED_POINT_CURRENT:true,STRICT_CLOSURE:false};
+for(const [k,v] of Object.entries(expected))if(report.gates?.[k]!==v)errors.push("gate "+k);
+if(run.status===0||report.qualifies!==false)errors.push("partial ledger unexpectedly qualifies");
+if((report.errors||[]).some(x=>!String(x).startsWith("STRICT_CLOSURE:")))errors.push("non-strict checker error");
+const closed=ledger.dispositions.filter(x=>x.closure_mode!=="INCOMPLETE_UNEXPANDED"),open=ledger.dispositions.filter(x=>x.closure_mode==="INCOMPLETE_UNEXPANDED");
+const ids=closed.map(x=>x.census_id).sort(),expectedIds=["L-SSC-022","L-SSC-048","L-SSC-049","L-SSC-069","L-SSC-091","L-SSC-121","L-SSC-148","L-SSC-154","L-SSC-189","L-SSC-190","L-SSC-191"];
+if(JSON.stringify(ids)!==JSON.stringify(expectedIds)||closed.some(x=>x.closure_mode!=="CLOSED_PRIMITIVE"))errors.push("closed set");
+if(open.length!==180)errors.push("open count");
+const sr=ledger.scope_revision;
+if(!sr||sr.old_target_id!=="LISI_FULL_RENDERING_0_1"||sr.new_target_id!=="LISI_FULL_RENDERING_0_2"||sr.new_scope_sha256!==ledger.frozen.semantic_scope_sha256||sr.old_target_preserved!==true||sr.in_place_mutation!==false)errors.push("scope revision");
+if(ledger.inference_profile?.recursive_ia!==false||ledger.ia_fixed_point!==null)errors.push("IA state");
+const result={pass:errors.length===0,errors,checker_exit:run.status,checker_gates:report.gates,accepted_closed_items:ids,incomplete_unexpanded:open.length,scope_revision:sr,ia_authorized:false,dp_authorized:false};
+console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;

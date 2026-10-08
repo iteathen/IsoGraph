@@ -1,0 +1,81 @@
+{
+  "schema": "woit.w097-twistor-p1-real-conic-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-097",
+  "frozen_body": "W05 distinguishes ordinary conjugation on CP1 from the twistor antipodal real structure rho_tw, with rho_tw squared equal to -1 on the C2 coordinate carrier but +1 projectively and with no projective fixed points; it also presents the same real form as a real projective conic with complex but no real points.",
+  "source": "W05 §§1–2",
+  "root_native": "research/woit-lisi-isomorph/woit/W05_REAL_PROJECTIVE_CONIC_SOURCE_INSTANCE_0_2.isg",
+  "support_packets": [
+    "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "additional_support": [
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg"
+  ],
+  "compositional_interface": {
+    "root_external_refs": [
+      182001,
+      186001,
+      186003,
+      186004,
+      188100,
+      189000,
+      189001,
+      189002,
+      189003,
+      189004,
+      189005,
+      189006,
+      197000,
+      197001,
+      197002,
+      197003,
+      197004,
+      197005,
+      197006,
+      197010,
+      197012,
+      197032,
+      197033,
+      197034,
+      197099,
+      207000
+    ],
+    "provider_rule": "All external refs except 207000 are already contained in the validated W024 dependency graph; 207000 is supplied by PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg.",
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "ordinary_cp1_vector_conjugation": 946060,
+    "ordinary_cp1_projective_conjugation": 946061,
+    "twistor_vector_pseudoreal_map": 197013,
+    "twistor_projective_involution": 197034,
+    "conic_vector_carrier": 946000,
+    "conic_quadratic_form": 946020,
+    "conic_projective_carrier": 946030,
+    "conic_vector_conjugation": 946021,
+    "conic_projective_conjugation": 946035,
+    "quadratic_vector_map": 946010,
+    "projective_bijection": 946040,
+    "concrete_complex_conic_point": 946051,
+    "quadratic_formula": "[u:v] -> [u^2-v^2 : i(u^2+v^2) : 2uv]",
+    "conic_equation": "x^2+y^2+z^2=0",
+    "no_real_point_clause": "forall p, CONIC(p) -> not CONJ_CONIC(p,p)",
+    "intertwining_clause": "Under the projective bijection, rho_tw on P(C2) iff ordinary projective conjugation on the conic."
+  },
+  "semantic_guards": [
+    "Ordinary CP1 conjugation is represented separately from the twistor antipodal structure; they are not collapsed.",
+    "The twistor vector map squares to -1 and the projective map squares to +1 through the already validated W024 support.",
+    "The conic real form is an exact algebraic/projective presentation, not a topology claim.",
+    "The conic has complex points by a pinned projective image and has no real points by the fixed-point-free conjugation clause.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

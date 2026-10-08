@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+const C=JSON.parse(fs.readFileSync('research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json','utf8'));
+const P=JSON.parse(fs.readFileSync('experiments/062/W_EXTRACTION_RECONCILED_0_23.json','utf8'));
+const A=JSON.parse(fs.readFileSync('experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_24.json','utf8'));
+const S=JSON.parse(fs.readFileSync('experiments/062/W_EXTRACTION_RECONCILED_0_24.json','utf8'));
+const D=JSON.parse(fs.readFileSync('experiments/062/W097_REAL_PREDICATE_POLARITY_DEFECT_AUDIT_0_1.json','utf8'));
+const e=[],c=(x,m)=>{if(!x)e.push(m)};
+const E=JSON.parse(JSON.stringify(P));E.items[E.items.findIndex(x=>x.census_id==='W-SSC-097')]=A.replacement_item;c(JSON.stringify(E)===JSON.stringify(S),'deterministic replay');
+const changedBodies=[];let changedOccurrences=[];
+for(let i=0;i<P.items.length;i++){if(JSON.stringify(P.items[i])!==JSON.stringify(S.items[i]))changedBodies.push(P.items[i].census_id);const pm=new Map(P.items[i].occurrences.map(o=>[o.occurrence_id,o]));for(const o of S.items[i].occurrences){if(pm.has(o.occurrence_id)&&JSON.stringify(pm.get(o.occurrence_id))!==JSON.stringify(o))changedOccurrences.push(o.occurrence_id);}}
+c(JSON.stringify(changedBodies)===JSON.stringify(['W-SSC-097']),'changed body set '+JSON.stringify(changedBodies));c(JSON.stringify(changedOccurrences)===JSON.stringify(['W-SSC-097-O08']),'changed occurrence set '+JSON.stringify(changedOccurrences));
+const body=C.items.find(x=>x.track==='W'&&x.census_id==='W-SSC-097')?.body,w=S.items.find(x=>x.census_id==='W-SSC-097'),o08=w?.occurrences.find(o=>o.occurrence_id==='W-SSC-097-O08'),o05=w?.occurrences.find(o=>o.occurrence_id==='W-SSC-097-O05');
+c(body?.includes(o08?.source_span),'O08 source exact');c(o08?.source_span==='no real points','O08 side condition');c(o08?.relation_span==='real','O08 relation');c(JSON.stringify(o08?.argument_spans)===JSON.stringify(['points']),'O08 argument');c(o08?.logical_force==='NEGATED','O08 polarity');c(o08?.logical_force!=='ASSERTED'&&o08?.logical_force!=='EXISTENCE','O08 positive-force leak');c(o08?.definition_status==='NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED','O08 definition');c(o05?.depends_on?.includes('W-SSC-097-O08'),'O05 dependency');
+const ids=new Set();for(const it of S.items){const b=C.items.find(x=>x.track==='W'&&x.census_id===it.census_id)?.body,prior=new Set();for(const o of it.occurrences){c(!ids.has(o.occurrence_id),'duplicate '+o.occurrence_id);ids.add(o.occurrence_id);c(b?.includes(o.source_span),'source '+o.occurrence_id);c(o.source_span.includes(o.relation_span),'relation '+o.occurrence_id);for(const a of o.argument_spans||[])c(o.source_span.includes(a),'arg '+o.occurrence_id+' '+a);for(const dep of o.depends_on||[])c(prior.has(dep),'dep '+o.occurrence_id+'->'+dep);prior.add(o.occurrence_id);}}
+c(S.items.reduce((n,x)=>n+x.occurrences.length,0)===446,'occurrence count');c(D.defect?.classification?.includes('SOURCE_POLARITY_LOSS'),'defect provenance');
+const sem=JSON.stringify({o08,o05});for(const t of ['221103','EMPTY_TYPED_PREDICATE','L-SSC-'])c(!sem.includes(t),'pre-G5 leakage '+t);
+console.log(JSON.stringify({schema:'isograph.exp062-verify-w-extraction-reconciled-0-24.v0.1',pass:!e.length,errors:e,occurrences:446,changed_bodies:changedBodies,changed_occurrences:changedOccurrences,polarity_preserved:o08?.logical_force==='NEGATED'},null,2));if(e.length)process.exitCode=1;

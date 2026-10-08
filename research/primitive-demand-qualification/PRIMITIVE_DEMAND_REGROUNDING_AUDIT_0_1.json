@@ -1,0 +1,107 @@
+{
+  "schema": "isograph.primitive-demand-regrounding-audit.v0.1",
+  "date": "2026-10-06",
+  "status": "V0_1_PRIMITIVE_SELECTION_PATH_REJECTED_AS_AUTHORITY_EVIDENCE_REGROUND_REQUIRED",
+  "purpose": "Reassess the joint W/L primitive-demand path against the exact qualified Core 0.20/0.21 authority and the user's graph-first/no-freestyle requirement. This audit changes no W or L closure state and promotes no semantic primitive.",
+  "pinned_live_state": {
+    "branch_head": "bf15bd673eed01cadb1457c13b3693e7a4354522",
+    "W_manifest": {
+      "path": "research/woit-lisi-isomorph/woit/WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_24.json",
+      "blob": "e0b97cf6c4ad71c78f77e547f339cb464e912eaa",
+      "closed": 67,
+      "unresolved": 84
+    },
+    "L_manifest": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_36.json",
+      "blob": "3675e20bc48a63e6451cc37cbe12cc992f235653",
+      "closed": 40,
+      "unresolved": 151
+    },
+    "frozen_joint_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+  },
+  "exact_qualified_authority": {
+    "core_0_20": {
+      "qualification": "qualification/CORE_0_20_QUALIFICATION.md",
+      "candidate": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+      "candidate_blob": "ef9ea2584ec24f87c956d486040d3cbbd7d49f79",
+      "qualified_sha256": "9a619b552a6ef7719e5b4b5f3a9df4a732ff4377b9bc7b86c385ed5c992b88e7",
+      "experiment": "experiments/048/EXPERIMENT_048_FINAL_QUALIFICATION_REVIEW.md"
+    },
+    "core_0_21": {
+      "qualification": "qualification/CORE_0_21_QUALIFICATION.md",
+      "candidate": "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+      "candidate_blob": "c77e94b872e43d592cc45071c5f06695aa0f4225",
+      "qualified_sha256": "f76bc94748ab5f970fe6b21ae4734919df241912c7e5e13e07177896e5f01820",
+      "experiments": [
+        "experiments/057/EXPERIMENT_057_FINAL_QUALIFICATION_REVIEW.md",
+        "experiments/058/EXPERIMENT_058_FINAL_QUALIFICATION_REVIEW.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "PDQ-RG-001",
+      "disposition": "AUTHORITY_ROUTING_DEFECT",
+      "subject": "DNWF necessity argument",
+      "evidence": [
+        "research/primitive-demand-qualification/CORE_DEFINABILITY_AUDIT_0_2.json cites research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md#K7-K8 as governing authority.",
+        "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md explicitly labels itself an unqualified supporting candidate.",
+        "Core 0.20 qualification records the exact Core 0.20 candidate as the qualified semantic target; Experiment 048 does not include or promote the supporting Primitive Logic Kernel.",
+        "Core 0.21 qualification adds no recursion primitive and states recursion is represented through existing primitive logical/relational structure."
+      ],
+      "conclusion": "K7 cannot be used as qualified authority for the claim that a new WF_TERM_ALGEBRA semantic primitive is forced. DNWF 0.1 remains useful historical research evidence and independently has terminal Q7 DOES_NOT_QUALIFY, but its 'only forced primitive' premise must be re-derived from exact qualified authority."
+    },
+    {
+      "id": "PDQ-RG-002",
+      "disposition": "EXTRACTION_CIRCULARITY",
+      "subject": "PRIMITIVE_DEMAND_GRAPH_0_1 and CANDIDATE_PRIMITIVE_BASIS_0_1",
+      "evidence": [
+        "DEMAND_EXTRACTION_RULES_0_1.json freezes 31 hand-authored regex demand categories before extraction.",
+        "Those same rules contain requires arrays naming candidate basis IDs before PRIMITIVE_DEMAND_GRAPH_0_1 is generated.",
+        "generate_joint_primitive_demand_graph.mjs mechanically reproduces the predeclared category matches and copies the predeclared requires sets into graph demand nodes.",
+        "Candidate-basis minimality is therefore downstream of assumptions already embedded in the extractor rather than independent graph emergence."
+      ],
+      "conclusion": "The v0.1 demand graph is reproducible diagnostic evidence, but it is not admissible evidence that its candidate primitive basis was selected by W/L graph structure."
+    },
+    {
+      "id": "PDQ-RG-003",
+      "disposition": "MISSING_GRAPH_STAGE",
+      "subject": "unresolved W/L native compilation",
+      "evidence": [
+        "Open W items in WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_24.json are INCOMPLETE_UNEXPANDED routing shells pointing to frozen SSC bodies.",
+        "Open L items in LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_36.json are likewise INCOMPLETE_UNEXPANDED routing shells.",
+        "Their current native body roots do not expose the internal load-bearing operation/relation incidence needed for structural quotienting."
+      ],
+      "conclusion": "A neutral source-body-to-unexpanded-operation graph compilation stage is required before any lawful cross-track primitive-demand quotient can be claimed."
+    }
+  ],
+  "dispositions": {
+    "SOURCE_DEMAND_CENSUS_0_1": "RETAIN_FROZEN_INPUT_CORPUS",
+    "DEMAND_EXTRACTION_RULES_0_1": "HISTORICAL_DIAGNOSTIC_EVIDENCE_ONLY",
+    "PRIMITIVE_DEMAND_GRAPH_0_1": "HISTORICAL_DIAGNOSTIC_EVIDENCE_ONLY",
+    "CANDIDATE_PRIMITIVE_BASIS_0_1": "UNQUALIFIED_HYPOTHESIS_ONLY_NOT_GRAPH_SELECTED_AUTHORITY",
+    "CORE_DEFINABILITY_AUDIT_0_2": "SUPERSEDED_FOR_AUTHORITY_ROUTING_BY_THIS_REGROUNDING_AUDIT",
+    "DNWF_0_1": "TERMINAL_DOES_NOT_QUALIFY_AND_NOT_AUTHORITY",
+    "W": "UNCHANGED_67_OF_151_BLOCKED_ON_PRIMITIVE_DOMAIN_BOUNDARY",
+    "L": "UNCHANGED_40_OF_191_BLOCKED_ON_PRIMITIVE_DOMAIN_BOUNDARY",
+    "recursive_IA": "NOT_AUTHORIZED",
+    "NEI_DTS_DP": "NOT_AUTHORIZED"
+  },
+  "required_replacement_order": [
+    "Pin the exact 84 W + 151 L unresolved frozen bodies and exact qualified Core authority.",
+    "Create a complete per-body occurrence census of every load-bearing non-Core operation/relation occurrence, preserving exact source spans and argument/dependency incidence without assigning candidate primitive categories.",
+    "Compile those occurrences to a neutral graph using only qualified Core logical/structural roles plus explicitly marked UNEXPANDED semantic occurrences; source-domain names may identify provenance but may not determine quotient class.",
+    "Mechanically classify each occurrence as reducible under exact qualified Core, or unresolved with the exact missing semantic definition/authority.",
+    "Canonicalize only by alpha-renaming and exact incidence/dependency graph isomorphism. Do not quotient by regex category, conventional mathematical label, or desired W/L correspondence.",
+    "Only after the quotient exists, synthesize candidate reusable schemas/extensions from uncovered quotient classes.",
+    "Freeze and independently qualify each candidate as its own project before either W or L may consume it.",
+    "Re-run W/L closure and continue to recursive IA only after complete Core 0.21 closure."
+  ],
+  "nonclaims": [
+    "This audit does not prove that no new semantic extension will be required.",
+    "This audit does not prove DNWF semantics false.",
+    "This audit does not identify any W/L cross-author correspondence.",
+    "This audit does not reopen or alter any previously closed W or L census item."
+  ],
+  "authority": false
+}

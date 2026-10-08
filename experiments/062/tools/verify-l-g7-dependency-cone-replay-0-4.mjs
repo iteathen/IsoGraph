@@ -1,0 +1,21 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
+const errors=[],check=(x,m)=>{if(!x)errors.push(m);};
+const p='experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_4.json',R=json(p);
+check(R.status==='G7_REPLAY_L129_CLOSED_NEXT_SCALAR_EXTENSION_REFLECTION_DEMAND_EXPOSED','status');
+check(R.authority===false&&R.track==='L','authority');
+for(const x of [R.predecessor,R.consumed_authority,R.source_reconstruction]){check(fs.existsSync(x.path),'missing '+x.path);if(fs.existsSync(x.path))check(blob(x.path)===x.git_blob_sha,'pin '+x.path);}
+const q=json(R.consumed_authority.path);check(q.status==='HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS','qualified status');
+const routing=json(R.source_reconstruction.path);check(routing.status==='L129_CURRENT_RECONSTRUCTION_DEPENDENCIES_ROUTED','routing status');
+check(R.source_reconstruction.verification_conclusion==='success','routing verification');
+const rs=R.results||[],closed=rs.filter(x=>x.disposition==='CLOSED_WITH_CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY'),open=rs.filter(x=>x.disposition==='UNEXPANDED_DEMAND');
+check(closed.length===18&&open.length===10,'counts');
+for(const id of ['L-SSC-129-R01','L-SSC-129-R02','L-SSC-129-R03','L-SSC-129-R04','L-SSC-129-R05','L-SSC-129-R06'])check(closed.some(x=>x.occurrence_id===id),'L129 open '+id);
+check(R.closure_findings?.L129?.disposition==='TARGETED_REOPEN_CLOSED','L129 closure');
+check(open.some(x=>x.occurrence_id==='L-SSC-125-R06'),'R06 overclosed');
+for(let i=1;i<=9;i++)check(open.some(x=>x.occurrence_id==='L-SSC-130-R'+String(i).padStart(2,'0')),'L130 overclosed R'+i);
+check(R.next_reusable_lower_demand?.family==='SCALAR_EXTENSION_AND_REFLECTION_TRANSPORT','next family');
+check(JSON.stringify(R.next_reusable_lower_demand?.immediate_historical_relation_candidates)===JSON.stringify([193302,193303,193400,222000,222001,222002,225000,231000]),'next IDs');
+check(!/W-SSC-|\/woit\//i.test(JSON.stringify(R)),'W leak');
+console.log(JSON.stringify({schema:'isograph.exp062-l-g7-replay-verifier.v0.4',pass:!errors.length,errors,closed:closed.length,open:open.length,next:R.next_reusable_lower_demand?.family,external_third_party_verification:'BYPASSED_BY_OWNER_NOT_PASSED'},null,2));if(errors.length)process.exit(1);

@@ -1,0 +1,61 @@
+{
+  "schema": "woit.w027-spin4-closure-packet.v0.2",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "predecessor": "W027_SPIN4_ACTION_CLOSURE_PACKET_0_1.json",
+  "correction": "0.1 checked only relation-head calls and missed relation handles passed as schema arguments. 0.2 scans all referenced project-local IDs and adds WOIT_BT01_SOURCE_INSTANCE plus the parameter/projective action schema chain.",
+  "census_id": "W-SSC-027",
+  "frozen_body": "W01 represents Spin(4) by independent left/right SU(2)=Sp(1) actions, with the Euclidean vector action x -> g_L x g_R^{-1}; the two factors are structurally independent in Euclidean signature.",
+  "source": "W01 §2.1",
+  "root_native": "research/woit-lisi-isomorph/woit/WOIT_BT01_SPIN4_UNIT_QUATERNION_ACTION_0_1.isg",
+  "dependency_files": [
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETER_LINEAR_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 17,
+    "declared_local_ids": 113,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "left_factor_role": 199106,
+    "right_factor_role": 199107,
+    "unit_group_carrier": 199102,
+    "group_schema": 199000,
+    "action_relation": 199105,
+    "quaternion_carrier": 189310,
+    "product": 189315,
+    "conjugation_inverse": 189317,
+    "source_complex_spinor_action_schema": 187300
+  },
+  "semantic_guards": [
+    "left/right factor roles remain distinct even when backed by the same exact unit-quaternion group schema",
+    "all referenced 180000-299999 local IDs resolve inside the packet",
+    "SU(2), Sp(1), Spin(4), group, inverse and quaternion labels are non-authoritative navigation names",
+    "no topology, smooth structure, global bundle action or later physical/internal factor-role semantics are added"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

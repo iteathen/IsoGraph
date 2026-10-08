@@ -1,0 +1,28 @@
+name: Verify owner external verification bypass
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_2.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_1.json'
+      - 'experiments/063/OWNER_WAIVER_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/tools/verify-owner-external-verification-bypass-0-2.mjs'
+      - '.github/workflows/verify-owner-external-verification-bypass.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify temporary external-verification bypass
+        run: node experiments/062/tools/verify-owner-external-verification-bypass-0-2.mjs

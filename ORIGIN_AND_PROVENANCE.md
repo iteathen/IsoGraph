@@ -590,6 +590,7 @@ If older commits, issue records, local archives, emails, notebooks, or other con
 | Core 0.21 SSC / Schema Closure machinery | Agent formalization of Joshua no-evasion/closure pressure |
 | Project Discovery corpus-wide vision | Joshua-originated direction; agent elaboration |
 | Project Discovery grand-scale hundreds/thousands-agent mission | Joshua-originated direction; agent formalization |
+| Guess-test qualification with retained hypothesis provenance | Joshua-originated governing idea; agent-assisted formalization |
 | Publications | Joshua Oshiro author under current policy; agent assistance disclosed per work |
 
 ---
@@ -611,3 +612,68 @@ idea proposed
 ~~~
 
 See `IDEA_PROVENANCE_POLICY.md`.
+
+---
+
+# 18. Guess-test qualification and retained authority provenance
+
+On 2026-10-07 Joshua clarified an important methodological point that had not been stated strongly enough in the repository specifications.
+
+The governing idea is:
+
+~~~text
+when deduction/reduction runs out:
+    a hypothesis may be generated
+
+hypothesis
+    != authority
+
+hypothesis + successful qualification + explicit promotion
+    -> usable authority within the qualified scope
+
+promotion
+    != erasure of hypothesis origin
+~~~
+
+Joshua's direction was specifically that IsoGraph should not confuse uncertainty during discovery with a prohibition on informed guessing. Guesswork is lawful as a discovery operation. A guess does not become authority merely because it is plausible, elegant, familiar, or useful.
+
+Once the exact hypothesis is subjected to sufficiently strong testing and qualification, the promoted revision may be used as current authority within the scope actually earned by those tests. Its epistemic provenance remains visible: the system records that the result began as a hypothesis, what evidence selected it, what controls and falsifiers were used, what confirmation was fresh or independently fixed, and what scope was actually covered.
+
+The repository may use the provenance label:
+
+~~~text
+HYPOTHESIS_QUALIFIED
+~~~
+
+for that condition. This label is not a new Core truth value, primitive, or universal ontology category.
+
+The rule is therefore:
+
+> **Qualification grants scoped authority; qualification does not erase provenance.**
+
+If later work derives the same result from stronger independent authority, the current authority basis may be upgraded or superseded. The historical hypothesis-and-test lineage remains part of the provenance record.
+
+This clarification also changes how current-authority fixed points should be read. A deterministic G5 fixed point means that the current reduction/synthesis pass has no further justified candidate. It does not establish irreducibility and does not prohibit a lawful hypothesis / falsification campaign.
+
+Attribution:
+
+- **governing guess-test / retained-provenance rule:** Joshua Oshiro — HUMAN_ORIGINATED_IDEA;
+- **formal repository language and Graph-First Method 0.3 structure:** AI assistant — AGENT_ASSISTED_FORMALIZATION.
+
+Earliest evidence currently located:
+
+~~~text
+2026-10-07
+preserved dated project conversation
+~~~
+
+Public formalization:
+
+- `AGENTS.md`;
+- `research/README.md`;
+- `research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md`;
+- `research/primitive-demand-qualification/README.md`;
+- `research/woit-lisi-isomorph/README.md`.
+
+The already-qualified DP 0.10 and EI 0.1 exact bytes remain immutable. This clarification composes with those qualified mechanisms and does not retroactively rewrite their qualification records.
+

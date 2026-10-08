@@ -1,0 +1,637 @@
+{
+  "artifact": "W_FULL_AUDIT_LEAD_ADJUDICATION_0_1",
+  "status": "SOURCE_LOCAL_ADJUDICATION_COMPLETE_FOR_RUN_37494259981",
+  "date": "2026-10-06",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "purpose": "Adjudicate every correction lead from the complete seven-batch W diagnostic audit against the frozen source bodies before producing a successor G1 occurrence census.",
+  "inputs": {
+    "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "frozen_corpus_blob_sha": "0b1c0e1bb9a742a0c219b0953b77aabe9f90e802",
+    "predecessor_extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_2.json",
+    "predecessor_extraction_blob_sha": "bf0f534a952302686e7429ccbab1cf23e79117ce",
+    "audit": "experiments/062/evidence/run-37494259981-attempt-1/exp062-w-audit/AUDIT.json",
+    "audit_blob_sha": "4ca43ee9b40576d0063e5362fe1c1983fdebc7a6",
+    "audit_validation": "experiments/062/evidence/run-37494259981-attempt-1/exp062-w-audit/AUDIT_VALIDATION.json",
+    "audit_validation_blob_sha": "e1611967e84cb7e1e690644f7aeb4225bb630431",
+    "audit_source_sha": "238ebefe740df177d0ec95e543b895b553a527cc"
+  },
+  "audit_validation_context": {
+    "item_count": 84,
+    "correction_count": 46,
+    "global_pass": false,
+    "validation_errors": [
+      "batch 6: W-SSC-124: omission span not exact"
+    ],
+    "interpretation": "The audit is diagnostic rather than authoritative. Its only deterministic serialization defect is W-SSC-124's non-literal omission span; every lead below was independently checked against the frozen body."
+  },
+  "rules": [
+    "No audit lead is promoted automatically.",
+    "Ordinary logic and source-status, motivational, prescriptive, or evaluative modality do not become G1 primitive-demand occurrences.",
+    "Mathematical operations, relations, equations, actions, decompositions, representations, and load-bearing side conditions are conserved source-locally.",
+    "No textbook semantics, conventional mathematical category assignment, primitive proposal, or W/L correspondence is introduced.",
+    "Additional omissions found during source-local adjudication are recorded separately rather than attributed to the cold auditor."
+  ],
+  "counts": {
+    "audit_correction_rows": 46,
+    "accepted_audit_rows": 43,
+    "rejected_audit_rows": 3,
+    "additional_source_local_findings": 14
+  },
+  "decisions": [
+    {
+      "census_id": "W-SSC-014",
+      "audit_leads": [
+        {
+          "source_span": "with an SU(2,2) real form giving positive, negative, and null/boundary orbits for the Minkowski picture.",
+          "reason": "The extraction omits the load-bearing specification of the SU(2,2) real form and the associated orbit structure, which are critical for the Minkowski-picture boundary condition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-026",
+      "audit_leads": [
+        {
+          "source_span": "with determinant equal to positive Euclidean norm squared and an equivalent quaternion presentation with x KAPPA(x).",
+          "reason": "The extraction omits the determinant constraint and the quaternion presentation, which are load-bearing conditions for the real-form definition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-027",
+      "audit_leads": [
+        {
+          "source_span": "the two factors are structurally independent in Euclidean signature.",
+          "reason": "The extraction omits the explicit statement of structural independence, which is a load-bearing condition for the Euclidean-signature decomposition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-028",
+      "audit_leads": [
+        {
+          "source_span": "while retaining different real-form/action constraints for each signature.",
+          "reason": "The extraction omits the load-bearing condition regarding the retention of distinct real-form/action constraints."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-029",
+      "audit_leads": [
+        {
+          "source_span": "distinguishes spin-connection one-forms from canonical/frame one-forms",
+          "reason": "The extraction omits the fundamental distinction between spin-connection and frame one-forms, which is load-bearing for the Palatini action."
+        },
+        {
+          "source_span": "connection variation gives torsion-free Levi-Civita structure and frame variation gives Einstein equations.",
+          "reason": "The extraction omits the functional consequences of the action variation."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-033",
+      "audit_leads": [
+        {
+          "source_span": "with J^2=-1.",
+          "reason": "The extraction omits the algebraic condition J^2=-1, which is a load-bearing side condition for the complex structure."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-034",
+      "audit_leads": [
+        {
+          "source_span": "constructs S_R and S_L through exterior powers; the stabilizer U(2) lifts to SU(2)_L x U(1) with U(1) inside SU(2)_R.",
+          "reason": "The extraction omits the construction of S_R/S_L and the stabilizer lifting conditions, which are load-bearing for the decomposition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-036",
+      "audit_leads": [
+        {
+          "source_span": "the determinant-one condition fixes the relative U(1) weights",
+          "reason": "Omitted load-bearing semantic constraint on the U(1) weight structure."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-037",
+      "audit_leads": [
+        {
+          "source_span": "the listed quark/lepton transformation roles including a right-handed neutrino",
+          "reason": "Omitted load-bearing semantic content regarding the specific transformation roles and the inclusion of the right-handed neutrino."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-039",
+      "audit_leads": [
+        {
+          "source_span": "a full interacting theory on PT is explicitly left undeveloped",
+          "reason": "Omitted load-bearing semantic boundary condition regarding the scope of the theory."
+        }
+      ],
+      "decision": "REJECT_AUDIT_LEAD_SOURCE_STATUS_MODALITY",
+      "reason": "The lead 'a full interacting theory on PT is explicitly left undeveloped' reports development status, not a mathematical operation/relation occurrence. A separate source-local boundary repair preserves the already-stated 'rather than pullbacks from S4' contrast."
+    },
+    {
+      "census_id": "W-SSC-040",
+      "audit_leads": [
+        {
+          "source_span": "upper/lower Euclidean hemispheres correspond to positive/negative imaginary-time regions",
+          "reason": "Omitted load-bearing semantic mapping between geometric regions and temporal regions."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-041",
+      "audit_leads": [
+        {
+          "source_span": "fiber restriction H^1(CP1,O(-3))=C2 to reconstruct pointwise spinor values",
+          "reason": "Omitted load-bearing semantic operation for pointwise reconstruction."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-042",
+      "audit_leads": [
+        {
+          "source_span": "with the explicit limitation that this directly covers anti-self-dual rather than general Yang-Mills fields",
+          "reason": "Omitted load-bearing semantic boundary condition on the scope of the correspondence."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ACCEPT_AS_SCOPE_SIDE_CONDITION_ON_EXISTING_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-043",
+      "audit_leads": [
+        {
+          "source_span": "relate fields on the five-dimensional PT_0 fibered over S3 to ordinary state data on S3",
+          "reason": "Omitted load-bearing semantic requirement for the future quantum theory."
+        },
+        {
+          "source_span": "ordinary pullback correspondence is insufficient",
+          "reason": "Omitted load-bearing semantic constraint on the correspondence method."
+        }
+      ],
+      "decision": "REJECT_AUDIT_LEADS_PRESCRIPTIVE_OR_EVALUATIVE_MODALITY",
+      "reason": "The future-theory requirement and 'ordinary pullback correspondence is insufficient' are prescription/evaluation statements. The actual source-local behavior already retained is that intrinsic PT gauge bundles vary along CP1 fibers."
+    },
+    {
+      "census_id": "W-SSC-047",
+      "audit_leads": [
+        {
+          "source_span": "the Klein relation omega wedge omega=0 embeds the Grassmannian into projective Lambda^2(C4)",
+          "reason": "Omitted load-bearing semantic embedding relation."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-048",
+      "audit_leads": [
+        {
+          "source_span": "the fractional-linear SL(4,C) action Z -> (C+DZ)(A+BZ)^-1",
+          "reason": "Omitted load-bearing semantic action definition."
+        },
+        {
+          "source_span": "the correspondence space P(S) links PT and M",
+          "reason": "Omitted load-bearing semantic linkage definition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-049",
+      "audit_leads": [
+        {
+          "source_span": "two spacetime points incident with the same projective twistor have null separation in the determinant quadratic form",
+          "reason": "Omitted load-bearing semantic relation between incidence and null separation."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-050",
+      "audit_leads": [
+        {
+          "source_span": "including open-set and fiber-triviality side conditions",
+          "reason": "Omitted load-bearing semantic side conditions."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-051",
+      "audit_leads": [
+        {
+          "source_span": "each with different fixed/orbit/signature conditions; these real forms may not be collapsed into one representation",
+          "reason": "The extraction omits the load-bearing constraint that these real forms are non-collapsible, which is a primary semantic boundary condition for the source."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-052",
+      "audit_leads": [
+        {
+          "source_span": "anti-Hermitian affine coordinates, the SU(2,2) orbit decomposition of M/PT, and conjugate-dual left/right spinor actions",
+          "reason": "The extraction omits three load-bearing semantic components (coordinates, orbit decomposition, and spinor actions) essential to the Minkowski twistor geometry model."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-053",
+      "audit_leads": [
+        {
+          "source_span": "sigma^2=-1 on T and +1 projectively, HP1 homogeneous coordinates, SL(2,H) fractional-linear action, and the CP1 fibration whose sigma action is antipodal on each fiber",
+          "reason": "The extraction omits the specific algebraic properties of the pseudoreal map and the structural components of the Euclidean twistor geometry."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-054",
+      "audit_leads": [
+        {
+          "source_span": "states that the resulting distinction between positive and negative imaginary time breaks SO(4) despite SO(4)-invariant Schwinger functions",
+          "reason": "The extraction omits the load-bearing semantic boundary regarding the breaking of SO(4) symmetry."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-055",
+      "audit_leads": [
+        {
+          "source_span": "this motivates the source's alternative interpretation",
+          "reason": "The extraction omits the motivational modality linking the obstruction to the source's alternative interpretation."
+        }
+      ],
+      "decision": "REJECT_AUDIT_LEAD_MOTIVATIONAL_MODALITY",
+      "reason": "The phrase 'this motivates the source's alternative interpretation' is explicitly motivational linkage and is excluded from G1 occurrence demand extraction."
+    },
+    {
+      "census_id": "W-SSC-056",
+      "audit_leads": [
+        {
+          "source_span": "makes positive/negative holomorphic-domain decomposition load-bearing to the source's analytic-continuation discussion",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the holomorphic-domain decomposition."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-059",
+      "audit_leads": [
+        {
+          "source_span": "derives the Klein-Gordon mass-shell consequence, and associates its positive- and negative-energy branches with opposite helicities",
+          "reason": "The extraction omits the load-bearing semantic occurrences of the mass-shell derivation and the helicity association."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-061",
+      "audit_leads": [
+        {
+          "source_span": "contrasts the right-handed Minkowski Wightman kernel with the naive Euclidean substitution",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the contrast between the Wightman kernel and the Euclidean substitution."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-062",
+      "audit_leads": [
+        {
+          "source_span": "represents a complex vector as a map from the dual right spinor to the left spinor; Minkowski reality relates the two chiralities by conjugation whereas Euclidean signature leaves them independent",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the complex vector representation and the distinction between Minkowski and Euclidean chirality relations."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-068",
+      "audit_leads": [
+        {
+          "source_span": "model the relation between holomorphic domains and Lorentzian boundary data",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the modeling relation between domains and boundary data."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-069",
+      "audit_leads": [
+        {
+          "source_span": "compactified Minkowski points are represented by CP1s contained in the null orbit",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the representation of compactified Minkowski points."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-071",
+      "audit_leads": [
+        {
+          "source_span": "Wick rotation requires choosing such a Euclidean fibration and its intersection with the Minkowski null geometry",
+          "reason": "The extraction omits the load-bearing semantic occurrence of the Wick rotation requirement."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-112",
+      "audit_leads": [
+        {
+          "source_span": "Gauss constraint plus three spatial-diffeomorphism constraints and a Hamiltonian/time-translation constraint that vanishes in the boundary-free case",
+          "reason": "Load-bearing semantic occurrence of constraint relations omitted from extraction."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-113",
+      "audit_leads": [
+        {
+          "source_span": "nonzero Higgs selects the U(1) subgroup that leaves it invariant",
+          "reason": "Load-bearing semantic occurrence of symmetry breaking/selection omitted."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-114",
+      "audit_leads": [
+        {
+          "source_span": "Weyl degree of freedom comes from the CP1 fiber rather than from the exterior/Clifford algebra itself",
+          "reason": "The extraction omits the crucial contrastive side condition regarding the origin of the Weyl degree of freedom."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ACCEPT_AS_CONTRASTIVE_SIDE_CONDITION_ON_EXISTING_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-119",
+      "audit_leads": [
+        {
+          "source_span": "carries the additional canonical/tetrad one-form theta absent from a generic internal gauge bundle",
+          "reason": "The extraction omits the load-bearing distinction regarding the tetrad one-form theta."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-123",
+      "audit_leads": [
+        {
+          "source_span": "Theta selects an imaginary-time direction, converting SO(4) covariance into Lorentzian SO(3,1) covariance",
+          "reason": "The extraction omits the load-bearing semantic operation of covariance conversion."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-124",
+      "audit_leads": [
+        {
+          "source_span": "not by analytic continuation through the two-chirality complexification",
+          "reason": "The extraction omits the negative side condition defining the selection mechanism."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ACCEPT_SEMANTICS_WITH_SOURCE_LITERAL_REPAIR",
+      "literal_repair": {
+        "invalid_audit_span": "not by analytic continuation through the two-chirality complexification",
+        "exact_source_span": "rather than by analytic continuation through the two-chirality complexification"
+      }
+    },
+    {
+      "census_id": "W-SSC-125",
+      "audit_leads": [
+        {
+          "source_span": "appropriate twistor-transform version of Theta supplies the required conjugation/reality structure",
+          "reason": "The extraction omits the load-bearing operation of the twistor-transform version of Theta."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-129",
+      "audit_leads": [
+        {
+          "source_span": "the real Lorentz group and Euclidean SU(2)_L x SU(2)_R rotation group occur as distinct real forms used in the conventional analytic-continuation picture",
+          "reason": "The extraction omits the load-bearing identification of the real forms."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-130",
+      "audit_leads": [
+        {
+          "source_span": "equivalently the (1/2)_L tensor (1/2)_R representation",
+          "reason": "The extraction omits the load-bearing representation-theoretic identification."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-133",
+      "audit_leads": [
+        {
+          "source_span": "tangent bundle itself be chirally asymmetric and purely right-handed",
+          "reason": "Omitted load-bearing semantic claim regarding the chiral asymmetry of the tangent bundle."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-135",
+      "audit_leads": [
+        {
+          "source_span": "decomposing into an SU(2)_R scalar plus vector; this produces one SU(2)_R-invariant distinguished direction and a complementary three-dimensional vector subspace",
+          "reason": "Omitted load-bearing structural decomposition of the spacetime real subspace."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-142",
+      "audit_leads": [
+        {
+          "source_span": "may be interpreted purely right-handed or conventionally after a distinguished Euclidean vector identifies the two Euclidean chiral spinor spaces",
+          "reason": "Omitted load-bearing semantic boundary condition regarding the interpretation of the operator."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-144",
+      "audit_leads": [
+        {
+          "source_span": "In Minkowski signature star squared is -1 and the corresponding chiral decomposition requires complexification",
+          "reason": "Omitted load-bearing semantic condition for Minkowski signature."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-145",
+      "audit_leads": [
+        {
+          "source_span": "equivalently traceless endomorphisms of the right spinor and the symmetric square of two right spinors",
+          "reason": "Omitted load-bearing identification of the sl(2,C)_R structure."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-148",
+      "audit_leads": [
+        {
+          "source_span": "curvature acts on the six-dimensional two-form space split into two three-dimensional chiral sectors",
+          "reason": "Omitted load-bearing structural premise regarding the curvature action."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    },
+    {
+      "census_id": "W-SSC-149",
+      "audit_leads": [
+        {
+          "source_span": "varying the connection gives the torsion-free relation and varying the tetrad gives the Einstein equations",
+          "reason": "Omitted load-bearing operational definitions for the action variation."
+        }
+      ],
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_OR_REFINE_SOURCE_LOCAL_OCCURRENCE"
+    }
+  ],
+  "additional_source_local_findings": [
+    {
+      "census_id": "W-SSC-027",
+      "source_span": "Euclidean vector action x -> g_L x g_R^{-1}",
+      "reason": "Explicit source equation/action omitted by both the provisional extraction and the correction lead."
+    },
+    {
+      "census_id": "W-SSC-036",
+      "source_span": "PT is SU(4)/S(U(1)xU(3))",
+      "reason": "Explicit source identification omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-036",
+      "source_span": "SU(3) acts on L^perp as the color group",
+      "reason": "Explicit source action omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-039",
+      "source_span": "rather than pullbacks from S4",
+      "reason": "Negative source-local contrast belongs to the existing bundle-origin occurrence even though the audit's development-status lead is rejected."
+    },
+    {
+      "census_id": "W-SSC-040",
+      "source_span": "null PT_0 locus Phi(s,s)=0",
+      "reason": "The source jointly identifies t=0 compactified Minkowski S3 with both the Euclidean equator and this null locus; the provisional occurrence conserved only the equator."
+    },
+    {
+      "census_id": "W-SSC-047",
+      "source_span": "tangent bundle TM=Hom(S,S^perp)",
+      "reason": "Explicit source identification omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-050",
+      "source_span": "distinguishes the Penrose transform for massless helicity equations from the Penrose-Ward extension with gauge fields",
+      "reason": "The provisional occurrence named only the first transform and did not conserve the stated distinction relation."
+    },
+    {
+      "census_id": "W-SSC-053",
+      "source_span": "T=H^2",
+      "reason": "Explicit source equality embedded in a broader 'uses' occurrence must remain separately visible."
+    },
+    {
+      "census_id": "W-SSC-113",
+      "source_span": "represents lifted tangent vectors as Hom_C(l,S_L)",
+      "reason": "Explicit representation omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-113",
+      "source_span": "Higgs-direction vector transforms under U(1)×SU(2)_L",
+      "reason": "Explicit transformation relation omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-113",
+      "source_span": "identified with electromagnetism",
+      "reason": "The selected invariant subgroup's source identification must remain attached to the selection occurrence."
+    },
+    {
+      "census_id": "W-SSC-124",
+      "source_span": "distinguishes the ordinary Euclidean real form, embedded anti-diagonally in the two-chirality complexification, from a purely right-chiral holomorphic Euclidean theory",
+      "reason": "The source's first contrast was omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-144",
+      "source_span": "self-dual two-forms correspond to su(2)_R",
+      "reason": "Explicit chiral-sector correspondence omitted by the provisional extraction."
+    },
+    {
+      "census_id": "W-SSC-144",
+      "source_span": "anti-self-dual two-forms to su(2)_L",
+      "reason": "Second explicit chiral-sector correspondence omitted by the provisional extraction."
+    }
+  ],
+  "downstream_boundary": "This artifact authorizes only construction and deterministic validation of a successor W G1 occurrence census. It does not authorize G2 quotienting, primitive selection, W closure, IA, NEI, DTS, DP, or cross-track synthesis."
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062-l05-section3-source-row-order-ledger-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_RESEARCH_LEDGER_SOURCE_ROW_ORDINAL_MAPPING_DEFECT_RESEARCH_SUCCESSOR_REQUIRED",
+  "authority": false,
+  "authority_effect": "NO_QUALIFIED_SOURCE_SSC_CHANGED",
+  "predecessors": {
+    "exploratory_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION3_FORMULA_LEDGER_0_1.json",
+      "git_blob_sha": "200c27108c1e27479d257b4e3beede78ea1949ab"
+    },
+    "source_native_expression_audit": {
+      "path": "experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json",
+      "git_blob_sha": "860b0a964c98ce224e7a595768240a176b73a8ba"
+    }
+  },
+  "finding": "The exploratory ledger E07/E08 numeric suffixes enumerate reflection-major (v-reflection, m-reflection, p-reflection) order, while the frozen L05 Eq.(7)/(8) matrices and independent source-expression audit enumerate output-role-major rows: v output for all reflection columns, then ψ, then χ (for Eq7), and γ, Qminus, Qplus outputs (for Eq8). Thus 6 of 9 numeric row identifiers in each family point to a different source cell even though formulas themselves are retained. The separate v0.5-v0.7 source SSC uses the 44-row native audit and does not inherit these exploratory ledger ID mismappings.",
+  "matrix_mapping": {
+    "source_order_1_through_9_to_exploratory_old_ordinal": [
+      1,
+      4,
+      7,
+      2,
+      5,
+      8,
+      3,
+      6,
+      9
+    ]
+  },
+  "additional_risk": "Eq.(9) division-algebra/Clifford index expressions in exploratory ledger were marked mnemonic and cannot substitute for audited source Eq9 index fixtures. Successor must retain exact audited Eq9 expressions and source input/output roles.",
+  "scope": {
+    "repair_only_research_ledger": true,
+    "SSC_0_7_semantics_changed": false,
+    "G1_dependency_invalidated_by_this_mismatch": false,
+    "external_validation_claimed": false,
+    "L_only": true
+  },
+  "guards": [
+    "Do not silently renumber original historical file; publish successor with lineage.",
+    "Sort Eq7/Eq8 by source row output roles, link exact source row ID and source-provenance fields.",
+    "Retain all nine distinct entries and source equation RHS; no row can merge ordinary/split roles.",
+    "Eq9 division/clifford index strings must be copied from independent v0.3 native source audit, not reconstructed from old mnemonic.",
+    "Do not use hypothesis modules or cross-track evidence."
+  ],
+  "next": "Publish exploratory ledger0.2, compare every corrected Eq7/Eq8/Eq9 row to the independently recorded L05 G0 source-expression audit, verify 70-row conservation and negative row-order controls."
+}

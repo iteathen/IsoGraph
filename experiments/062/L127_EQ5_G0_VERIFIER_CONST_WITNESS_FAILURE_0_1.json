@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-l127-eq5-source-verifier-const-witness-failure.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_BASELINE_BEFORE_FINITE_RESULT_AND_BEFORE_ALL_MUTATION_TESTS",
+  "failed_run": {
+    "id": 37838782350,
+    "head_sha": "f1f0d7e1822f93daf370a0877756b7e17e84212b",
+    "conclusion": "failure",
+    "error": "source matrix computation failed Assignment to constant variable.",
+    "mutations_defined": 24,
+    "mutations_tested": 0
+  },
+  "source_verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l127-eq5-indexed-source-0-1.mjs",
+    "git_blob_sha": "55c57cd034eb44889ea1b9783c3b1205a21d7361"
+  },
+  "cause": "The verifier's scan() Lie witness accumulator first was declared const in a combined declaration despite first?? assignment once the first nonclosure witness is found. Runtime exception incorrectly interrupted a source-local numerical check; no source semantics need correction.",
+  "repair": "Change witness accumulator to let first=null, retaining all rank, product and exact-source comparisons; rerun Node baseline and all effective mutants.",
+  "impact": "No current G0 source check qualified on failed run, no G1 or downstream permissions established.",
+  "external_review_passed": false
+}

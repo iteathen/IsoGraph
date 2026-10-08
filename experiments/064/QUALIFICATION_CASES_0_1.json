@@ -1,0 +1,117 @@
+{
+  "schema": "isograph.exp064-qualification-cases.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_FRESH_SOURCE_NEUTRAL_QUALIFICATION_CASES",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "module_ssc": {
+    "path": "experiments/064/MODULE_SSC_0_1.json",
+    "git_blob_sha": "394a60f5c1b28d77b367db2d4983c41b450b6d0a"
+  },
+  "module_ia_fixed_point": {
+    "path": "experiments/064/MODULE_IA_FIXED_POINT_0_1.json",
+    "git_blob_sha": "f29365c5798e236ce4cade9c2ca3573adf2620bd"
+  },
+  "hypothesis": {
+    "path": "experiments/062/W_G5H_FIXED_POINT_FREE_INVOLUTION_0_1.json",
+    "git_blob_sha": "1512c37b82f3676abe06cd0a57c9decfc82aa27f"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_16.json",
+    "git_blob_sha": "a7a072a7493ba7796148ca695193193f30a1d13a"
+  },
+  "source_neutral": true,
+  "cases": [
+    {
+      "id": "Q01",
+      "kind": "positive",
+      "model": "two_point_swap",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q02",
+      "kind": "positive",
+      "model": "four_point_disjoint_swaps",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q03",
+      "kind": "positive-nonclaim",
+      "model": "empty_carrier",
+      "expected": "PASS",
+      "note": "Preserves the explicit nonclaim that P need not be nonempty."
+    },
+    {
+      "id": "Q04",
+      "kind": "adversarial",
+      "model": "identity_map",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "fixed_point_free"
+    },
+    {
+      "id": "Q05",
+      "kind": "adversarial",
+      "model": "three_cycle",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "involution"
+    },
+    {
+      "id": "Q06",
+      "kind": "adversarial",
+      "model": "partial_map",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "totality"
+    },
+    {
+      "id": "Q07",
+      "kind": "adversarial",
+      "model": "multivalued_relation",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "single_valuedness"
+    },
+    {
+      "id": "Q08",
+      "kind": "adversarial",
+      "model": "codomain_leakage",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "typing"
+    },
+    {
+      "id": "Q09",
+      "kind": "adversarial",
+      "model": "swap_plus_fixed_point",
+      "expected": "REJECT_MODEL",
+      "expected_failure": "fixed_point_free"
+    },
+    {
+      "id": "Q10",
+      "kind": "structural",
+      "target": "native schema expands only through qualified Core/data/function/equality/logic primitives and contains no W/L source-domain term",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q11",
+      "kind": "ia",
+      "target": "module-local IA fixed point is complete with no open obligation",
+      "expected": "PASS"
+    },
+    {
+      "id": "Q12",
+      "kind": "provenance",
+      "target": "adaptive W evidence is not reused as fresh confirmation; Q01-Q11 are source-neutral qualification evidence",
+      "expected": "PASS"
+    }
+  ],
+  "promotion_gate": {
+    "deterministic_required": true,
+    "module_local_ia_required": true,
+    "source_neutral_controls_required": true,
+    "external_semantic_and_promotion_review_required_under_normal_contract": true,
+    "owner_bypass_may_replace_only_external_substeps": true,
+    "global_manifest_update_authorized": false,
+    "allowed_campaign_dispositions": [
+      "PROVISIONAL_QUALIFIED_CORE_SCHEMA_UNDER_OWNER_BYPASS",
+      "DOES_NOT_QUALIFY",
+      "INFRASTRUCTURE_FAILURE"
+    ]
+  }
+}

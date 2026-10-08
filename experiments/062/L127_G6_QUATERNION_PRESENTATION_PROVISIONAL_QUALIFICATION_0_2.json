@@ -1,0 +1,113 @@
+{
+  "schema": "isograph.exp062-l127-g6-quaternion-presentation-provisional-qualification.v0.2",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "QUATERNION_PRESENTATION_0_2",
+  "branch_head_at_creation": "a1ecf2acd08be9ac4062c1cf2dfbf3686d76e341",
+  "predecessor": {
+    "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_PROVISIONAL_QUALIFICATION_0_1.json",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_G1_SI_COLLISION"
+  },
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_QUATERNION_PRESENTATION_0_2.json",
+      "git_blob_sha": "a263b46f75db6e44a0c6c8abf419502c92736636"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_SSC_0_2.json",
+      "git_blob_sha": "f214372ab7fe2d72499cb8a8e4316589d0d154e9"
+    },
+    "module_ia": {
+      "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_IA_FIXED_POINT_0_2.json",
+      "git_blob_sha": "46bd3c2f45980be9e3d3571649be8b09eb2489f6"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l127-g6-quaternion-presentation-0-2.mjs",
+      "git_blob_sha": "67b3a15877dbfb10afccec9c48807b42801c8745"
+    },
+    "linear_basis_dependency": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    },
+    "composition_dependency": {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L127 G6 quaternion replay qualification",
+    "workflow_run_id": 37747649661,
+    "workflow_run_head": "25dbeb406c8a58480b653b44201f65d498e059e8",
+    "job_id": 113212864470,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      193100
+    ],
+    "dependency_audit": [
+      185001,
+      187601,
+      188000,
+      193100
+    ],
+    "tests": {
+      "ssc_obligations": 11,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 5,
+      "positive_F3": 1,
+      "wrong_reversed_sign_negative": 1,
+      "wrong_kappa_negative": 1,
+      "characteristic_two_negative": 1,
+      "dependent_basis_negative": 1
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      {
+        "id": 193100,
+        "meaning": "exact associative four-basis quaternion-style presentation with characteristic-not-two guard, signed basis multiplication table, and basis anti-involution table"
+      }
+    ],
+    "explicit_exclusions": [
+      "division property",
+      "positive-definite norm",
+      "classification theorem or uniqueness",
+      "octonion semantics",
+      "operator or Lie-algebra semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "identity_repair": {
+    "upstream_parent": "experiments/062/L127_G3_CORE_DEFINABILITY_0_2.json",
+    "old_authority_invalidated": true,
+    "semantic_candidate_unchanged": true,
+    "source_namespace_change": "226xxx -> 246xxx does not alter 193100 semantics"
+  },
+  "consumption_rule": "Experiment 062/063 may consume only exact 193100 from this 0.2 promotion under the pinned qualified associative-algebra, four-basis, and anti-involution dependencies. No downstream consumer may cite the invalidated 0.1 promotion as current authority.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "Corrected L127 may consume the exact H source instance of 193100 as its associative H control.",
+    "This authority supplies no octonion or bi-product behavior."
+  ],
+  "nonclaims": [
+    "No global authority change.",
+    "No division/norm/classification claim.",
+    "No third-party verification claim.",
+    "No W/cross-track evidence used."
+  ]
+}

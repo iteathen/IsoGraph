@@ -1,0 +1,88 @@
+{
+  "schema": "isograph.exp062-w-g7-disjoint-unary-predicates-instantiation.v0.1",
+  "date": "2026-10-08",
+  "status": "SOURCE_INSTANCE_INSUFFICIENT_FOR_TWO_INDEPENDENT_PREDICATE_INTERFACE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "candidate": {
+    "id": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+    "primitive_id": 221102,
+    "qualification": {
+      "path": "experiments/066/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "1b5126b4c0c8e110f46d57afa054b3835dc3fe3a"
+    }
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_23.json",
+    "git_blob_sha": "166f88e6a0d6dc80b8581c55c9ddee4708d385f0"
+  },
+  "source_input": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    }
+  },
+  "scope": {
+    "census_id": "W-SSC-097",
+    "target_occurrences": [
+      "W-SSC-097-O05"
+    ],
+    "other_W_occurrences_consumed": [],
+    "L_evidence_used": false
+  },
+  "interface_obligations": [
+    {
+      "id": "U_POINT_DOMAIN",
+      "required": "represented common point domain for the scoped absence statement",
+      "source_support": "W-SSC-097-O05 occurs inside 'real projective conic with complex but no real points'; the point scope is source-visible",
+      "satisfied": true
+    },
+    {
+      "id": "A_FIRST_UNARY_PREDICATE",
+      "required": "a separately source-justified unary predicate A corresponding to conic-point membership inside U",
+      "source_support": "NOT_SEPARATELY_CONSERVED; current G1 has the named conic and the absence of real points but no distinct conic-membership predicate occurrence",
+      "satisfied": false
+    },
+    {
+      "id": "B_REAL_POINT_PREDICATE",
+      "required": "a source-justified unary predicate B for real-point status within the scoped point domain",
+      "source_support": "W-SSC-097-O05 explicitly names 'real points' in the scoped absence clause; internal realness semantics remain unresolved",
+      "satisfied": true
+    },
+    {
+      "id": "DISJOINTNESS",
+      "required": "no represented scoped point satisfies both A and B",
+      "source_support": "W-SSC-097-O05 states 'no real points', but the two-predicate form depends on the unsupported separate A role",
+      "satisfied": false
+    }
+  ],
+  "ruling": {
+    "candidate_qualification_preserved": true,
+    "candidate_rejected_globally": false,
+    "W_source_instance_satisfies_candidate": false,
+    "closed_occurrences": [],
+    "remaining_unexpanded": [
+      "W-SSC-097-O05"
+    ],
+    "reason": "The source supports a scoped point-domain and an explicit absence of real points, but the current W097 graph does not separately expose a second conic-membership predicate A. Creating A merely to fit schema 221102 would add a redundant unsourced role."
+  },
+  "failure_classification": {
+    "kind": "OVER_STRONG_TWO_PREDICATE_INTERFACE_RELATIVE_TO_CURRENT_SOURCE_GRAPH",
+    "missing": [
+      "separate A/conic-membership predicate role"
+    ],
+    "not_missing": [
+      "scoped point domain",
+      "real-point predicate role",
+      "absence relation"
+    ],
+    "next_lower_hypothesis": "EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE"
+  },
+  "next_lawful_action": "Generate a weaker source-neutral hypothesis with only carrier U, typed unary predicate B, and the law that no represented U-element satisfies B. Keep B semantics unresolved. Do not reopen source granularity unless that lower interface also fails source instantiation."
+}

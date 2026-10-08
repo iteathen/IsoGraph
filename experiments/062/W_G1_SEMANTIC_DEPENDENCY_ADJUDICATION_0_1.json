@@ -1,0 +1,49 @@
+{
+  "schema": "isograph.exp062-w-g1-semantic-dependency-adjudication.v0.1",
+  "date": "2026-10-07",
+  "status": "TARGETED_CORRECTED_BODY_DEPENDENCY_ADJUDICATION_COMPLETE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json",
+    "git_blob_sha": "658a09fefde50e48503aa1d98e23b65225c845bc"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_20.json",
+    "git_blob_sha": "bc2272dfb0241f6cab8aa5556ee8d75dd6c6a59e"
+  },
+  "correction": {
+    "census_id": "W-SSC-029",
+    "action": "ADD_OCCURRENCE",
+    "occurrence": {
+      "occurrence_id": "W-SSC-029-O16",
+      "source_span": "de^A + omega^A_B wedge e^B = 0 and thereby the torsion-free Levi-Civita connection determined by e",
+      "relation_span": "thereby",
+      "argument_spans": [
+        "de^A + omega^A_B wedge e^B = 0",
+        "the torsion-free Levi-Civita connection determined by e"
+      ],
+      "logical_force": "OTHER",
+      "definition_status": "PARTIAL_IN_BODY",
+      "depends_on": [
+        "W-SSC-029-O09",
+        "W-SSC-029-O10"
+      ],
+      "load_bearing_note": "Exposes the source-written consequence edge from the explicit torsion-free equation to the Levi-Civita result; it does not import an equivalence or variational-calculus law."
+    }
+  },
+  "reason": "The corrected W01 body explicitly uses 'thereby' to connect the written torsion equation to the torsion-free Levi-Civita result. Leaving that consequence only inside O03 would underrepresent dependency incidence.",
+  "nonclaims": [
+    "No equivalence between the equation and a stationarity predicate is asserted.",
+    "No derivative, first-variation, Euler-Lagrange, or universal variation-direction semantics are imported.",
+    "No L or cross-track evidence is used."
+  ],
+  "counts": {
+    "predecessor_occurrences": 442,
+    "added_occurrences": 1,
+    "successor_occurrences": 443
+  },
+  "next_required_step": "Verify W_EXTRACTION_RECONCILED_0_21.json deterministically, then perform the complete corrected-input conserved-delta zero-change review."
+}

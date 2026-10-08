@@ -1,0 +1,45 @@
+{
+  "schema": "woit-lisi.lisi-pre-dp-ia-gate.v0.1",
+  "date": "2026-10-04",
+  "track": "L",
+  "status": "BLOCKED_PENDING_PRIMITIVE_CLOSURE_AND_IA_FIXED_POINT",
+  "authority": [
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "research/woit-lisi-isomorph/FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md"
+  ],
+  "ia_profile": "IMPLICIT_ASSERTION_PROFILE_0_1.md",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_1.json",
+  "fixed_point_inputs": [
+    "primitive_kernel",
+    "source_semantic_census",
+    "semantic_scope",
+    "qu_state",
+    "governing_authority",
+    "selected_inference_search_profile"
+  ],
+  "invalidation_triggers": [
+    "primitive_kernel_change",
+    "ssc_change",
+    "scope_change",
+    "qu_state_change",
+    "governing_authority_change",
+    "inference_profile_change"
+  ],
+  "required_order": [
+    "native_compilation",
+    "primitive_schema_closure",
+    "core021_closure_ledger",
+    "core021_structural_and_semantic_gates",
+    "recursive_implicit_assertions",
+    "primitive_close_all_ia_bodies_support_dependencies",
+    "ia_no_change_pass",
+    "record_current_ia_fixed_point",
+    "nei",
+    "dts",
+    "dp"
+  ],
+  "recursive_rule": "newly validated implicit assertions may become premises in later IA rounds",
+  "cross_author_semantics_allowed": false,
+  "dp_allowed": false
+}

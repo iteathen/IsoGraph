@@ -1,0 +1,40 @@
+{
+  "schema": "woit.w091-compactified-spacetime-twistor-summary-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-091",
+  "frozen_body": "W04d identifies conformally compactified complex spacetime with Gr(2,4,C), a spacetime point with a right-handed C2 plane in T=C4, and projective twistor space with CP3 containing the corresponding CP1.",
+  "source": "W04d slides pp. 17–19",
+  "support_packets": [
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "twistor_vector_dimension": "exact complex basis of length 4",
+    "compactified_complex_spacetime": 990100,
+    "spacetime_point": "exact complex two-plane relation S subset T",
+    "reference_right_spinor_plane": 990110,
+    "projective_twistor_space": 202113,
+    "projective_twistor_meaning": "exact projective quotient of nonzero T vectors",
+    "twistor_fiber_projection": 202126,
+    "finite_twistor_fiber_membership": 202123,
+    "infinity_twistor_fiber_membership": 202124,
+    "projective_line_reason": "each represented fiber is the projectivization of an exact two-complex-dimensional plane"
+  },
+  "rationale": "W-SSC-091 is a later-source summary of the same exact Grassmannian/projective/fiber structures already closed independently under W047 and W023. The census identity remains separate; no source assertion is deleted or merged.",
+  "semantic_guards": [
+    "Gr(2,4,C), CP3, and CP1 are navigation labels only; exact dimension/subspace/projective behavior is authoritative.",
+    "No HP1=S4 topology or Euclidean real-form structure is imported.",
+    "No SL(4,C) fractional-linear action is inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

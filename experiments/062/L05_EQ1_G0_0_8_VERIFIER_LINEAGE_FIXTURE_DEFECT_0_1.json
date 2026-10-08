@@ -1,0 +1,41 @@
+{
+  "schema": "isograph.exp062-l05-eq1-g0-0-8-verifier-lineage-fixture-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_STALE_VERIFIER_LINEAGE_EXPECTATIONS_AFTER_ADDITIVE_REPLACEMENT",
+  "authority": false,
+  "authority_effect": "NONE_VERIFIER_FIXTURE_DEFECT_NOT_SOURCE_DATA_CHANGE",
+  "run": {
+    "id": 37813582577,
+    "conclusion": "failure",
+    "failed_stage": "verify-l-g0-l05-section2-tables-0-8.mjs",
+    "exact_errors": [
+      "per-item defect pin L-SSC-125",
+      "original L-SSC-126 conserved",
+      "per-item defect pin L-SSC-126",
+      "original L-SSC-127 conserved",
+      "per-item defect pin L-SSC-127"
+    ],
+    "positive_result": "No source-table cell/sign/conjugation-contradiction error observed in this run."
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l05-section2-tables-0-8.mjs",
+    "git_blob_sha": "25994d88b1c4e1cbf2afa1a2a5cd5e1875def496"
+  },
+  "diagnosis": {
+    "body_lineage": "L125 body receives source discrepancy addendum, while L126/L127 bodies remain exact 0.7 carry-forwards. Previous fixture incorrectly demanded each body be strictly longer.",
+    "defect_pins": "The original per-item L125–L127 source-formula omission audit remains valid historical provenance. A new separate source_discrepancy_audit is additive. Previous fixture incorrectly expected source_defect_audit to be overwritten."
+  },
+  "repair": "Preserve predecessor source_defect_audit pin to original L125-L127 omission record and additionally check new source_discrepancy_audit pin. Enforce exact bodies for L126/L127 and an additive exact prefix only for L125. Run all 23+ mutations again.",
+  "invalidation": {
+    "CI_run_pass": false,
+    "SSC0_8_frozen": false,
+    "G1_authorized": false,
+    "source_census_source_correction_invalidated": false
+  },
+  "nonclaims": [
+    "No new source semantics imported.",
+    "No external semantic reviewer passed.",
+    "No G-stage promotion or L132 replay."
+  ]
+}

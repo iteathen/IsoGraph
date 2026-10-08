@@ -1,0 +1,414 @@
+{
+  "schema": "isograph.domain-neutral-candidate-primitive-basis.v0.1",
+  "date": "2026-10-05",
+  "status": "CANDIDATE_UNQUALIFIED_DO_NOT_USE_AS_AUTHORITY",
+  "demand_graph": "PRIMITIVE_DEMAND_GRAPH_0_1.json",
+  "minimality_scope": "Minimal only relative to the frozen v0.1 demand->capability map and dependency model. This is not a claim of absolute mathematical irreducibility.",
+  "selection_method": {
+    "step_1": "Take the union of capability requirements attached to every supported structural demand quotient.",
+    "step_2": "Factor capabilities that are definable as generic schemas from other capabilities plus qualified Core logic.",
+    "step_3": "Retain as foundational semantic extensions only capabilities with a witness demand not covered by the remaining foundations under this dependency model.",
+    "step_4": "Keep reusable derived schemas explicit because W/L may consume only independently qualified schemas, not hand-expanded campaign logic."
+  },
+  "result": {
+    "foundational_basis": [
+      "B-TYPED-MAP",
+      "B-FINITE-PRODUCT-INDEX",
+      "B-SUBOBJECT-QUOTIENT",
+      "B-TOPOLOGY-LIMIT",
+      "B-AGGREGATE"
+    ],
+    "derived_generic_schemas": [
+      "B-OPERATION-LAW",
+      "B-INDEXED-FAMILY",
+      "B-ADDITIVE-SCALAR",
+      "B-MULTILINEAR-FORM",
+      "B-INVOLUTION-GRADING",
+      "B-DIFFERENTIAL",
+      "B-PARITY-GRADED"
+    ],
+    "foundational_count": 5,
+    "derived_schema_count": 7
+  },
+  "candidates": {
+    "B-TYPED-MAP": {
+      "id": "B-TYPED-MAP",
+      "name": "Typed map/function graph",
+      "class": "FOUNDATIONAL_SEMANTIC_EXTENSION",
+      "dependencies": [],
+      "witness": "PD-MAP-APPLY",
+      "meaning": "Domain/codomain, application graph, totality/partiality and uniqueness without importing domain-specific operator semantics.",
+      "support": {
+        "demand_ids": [
+          "PD-MAP-APPLY",
+          "PD-COMPOSE",
+          "PD-ID-INVERSE",
+          "PD-ACTION-LAW",
+          "PD-LINEAR",
+          "PD-FORM-PAIRING",
+          "PD-INVOLUTION",
+          "PD-INDEXED-FAMILY",
+          "PD-LIMIT-REGULARITY",
+          "PD-LOCAL-RESTRICT",
+          "PD-DIFFERENTIAL",
+          "PD-CONNECTION-CURVATURE",
+          "PD-INTEGRAL-FUNCTIONAL",
+          "PD-VARIATION",
+          "PD-EQUATION-SOLUTION",
+          "PD-DISCRETE-AUTOMORPHISM",
+          "PD-LAW-CONSTRAINT"
+        ],
+        "assertion_counts": {
+          "W": 83,
+          "L": 148,
+          "total": 231
+        },
+        "cross_track": true
+      }
+    },
+    "B-FINITE-PRODUCT-INDEX": {
+      "id": "B-FINITE-PRODUCT-INDEX",
+      "name": "Indexed collection and finite product",
+      "class": "FOUNDATIONAL_SEMANTIC_EXTENSION",
+      "dependencies": [],
+      "witness": "PD-DIMENSION",
+      "meaning": "Finite tuples/products, explicit index carriers and cardinality/dimension bookkeeping.",
+      "support": {
+        "demand_ids": [
+          "PD-COMPOSE",
+          "PD-ACTION-LAW",
+          "PD-LINEAR",
+          "PD-FORM-PAIRING",
+          "PD-DECOMPOSE",
+          "PD-DIMENSION",
+          "PD-SUPER-PARITY",
+          "PD-DISCRETE-AUTOMORPHISM",
+          "PD-FINITE-PRESENTATION",
+          "PD-COUNT-CARDINALITY"
+        ],
+        "assertion_counts": {
+          "W": 77,
+          "L": 145,
+          "total": 222
+        },
+        "cross_track": true
+      }
+    },
+    "B-SUBOBJECT-QUOTIENT": {
+      "id": "B-SUBOBJECT-QUOTIENT",
+      "name": "Subcarrier, equivalence and quotient",
+      "class": "FOUNDATIONAL_SEMANTIC_EXTENSION",
+      "dependencies": [
+        "B-TYPED-MAP"
+      ],
+      "witness": "PD-QUOTIENT",
+      "meaning": "Inclusion/subcarrier semantics, equivalence relations, quotient carriers and canonical quotient maps.",
+      "support": {
+        "demand_ids": [
+          "PD-DECOMPOSE",
+          "PD-SUBOBJECT",
+          "PD-QUOTIENT",
+          "PD-INCIDENCE",
+          "PD-POSITIVITY-COMPLETION",
+          "PD-EQUATION-SOLUTION",
+          "PD-REAL-FORM",
+          "PD-TOPOLOGICAL-CLASS"
+        ],
+        "assertion_counts": {
+          "W": 74,
+          "L": 99,
+          "total": 173
+        },
+        "cross_track": true
+      }
+    },
+    "B-TOPOLOGY-LIMIT": {
+      "id": "B-TOPOLOGY-LIMIT",
+      "name": "Domain, topology and limit",
+      "class": "FOUNDATIONAL_SEMANTIC_EXTENSION",
+      "dependencies": [
+        "B-SUBOBJECT-QUOTIENT"
+      ],
+      "witness": "PD-DOMAIN-BOUNDARY",
+      "meaning": "Open/domain/boundary structure, neighborhood or convergence semantics, limits and completion hooks.",
+      "support": {
+        "demand_ids": [
+          "PD-DOMAIN-BOUNDARY",
+          "PD-LIMIT-REGULARITY",
+          "PD-LOCAL-RESTRICT",
+          "PD-POSITIVITY-COMPLETION",
+          "PD-TOPOLOGICAL-CLASS",
+          "PD-LOCAL-GLOBAL"
+        ],
+        "assertion_counts": {
+          "W": 38,
+          "L": 38,
+          "total": 76
+        },
+        "cross_track": true
+      }
+    },
+    "B-AGGREGATE": {
+      "id": "B-AGGREGATE",
+      "name": "Measure and aggregate functional",
+      "class": "FOUNDATIONAL_SEMANTIC_EXTENSION",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-TOPOLOGY-LIMIT"
+      ],
+      "witness": "PD-INTEGRAL-FUNCTIONAL",
+      "meaning": "Measure/aggregation/integration interface sufficient to state source functionals without domain-specific actions.",
+      "support": {
+        "demand_ids": [
+          "PD-INTEGRAL-FUNCTIONAL",
+          "PD-VARIATION",
+          "PD-LOCAL-GLOBAL"
+        ],
+        "assertion_counts": {
+          "W": 22,
+          "L": 39,
+          "total": 61
+        },
+        "cross_track": true
+      }
+    },
+    "B-OPERATION-LAW": {
+      "id": "B-OPERATION-LAW",
+      "name": "Operation and law schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX"
+      ],
+      "witness": "PD-COMPOSE",
+      "meaning": "N-ary operations represented as typed maps from indexed products, with laws stated in qualified Core logic.",
+      "support": {
+        "demand_ids": [
+          "PD-COMPOSE",
+          "PD-ID-INVERSE",
+          "PD-ACTION-LAW",
+          "PD-CONNECTION-CURVATURE",
+          "PD-DISCRETE-AUTOMORPHISM",
+          "PD-FINITE-PRESENTATION",
+          "PD-LAW-CONSTRAINT"
+        ],
+        "assertion_counts": {
+          "W": 55,
+          "L": 133,
+          "total": 188
+        },
+        "cross_track": true
+      }
+    },
+    "B-INDEXED-FAMILY": {
+      "id": "B-INDEXED-FAMILY",
+      "name": "Indexed family, projection and section schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-SUBOBJECT-QUOTIENT"
+      ],
+      "witness": "PD-INDEXED-FAMILY",
+      "meaning": "Total/base projection, fibers as preimages, sections and pullback/restriction constructions.",
+      "support": {
+        "demand_ids": [
+          "PD-INDEXED-FAMILY",
+          "PD-INCIDENCE",
+          "PD-LOCAL-RESTRICT",
+          "PD-CONNECTION-CURVATURE",
+          "PD-LOCAL-GLOBAL"
+        ],
+        "assertion_counts": {
+          "W": 37,
+          "L": 58,
+          "total": 95
+        },
+        "cross_track": true
+      }
+    },
+    "B-ADDITIVE-SCALAR": {
+      "id": "B-ADDITIVE-SCALAR",
+      "name": "Additive and scalar-combination schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-OPERATION-LAW"
+      ],
+      "witness": "PD-LINEAR",
+      "meaning": "Additive operation, scalar action and distributive/linearity laws over opaque carriers.",
+      "support": {
+        "demand_ids": [
+          "PD-LINEAR",
+          "PD-FORM-PAIRING",
+          "PD-DIFFERENTIAL"
+        ],
+        "assertion_counts": {
+          "W": 56,
+          "L": 90,
+          "total": 146
+        },
+        "cross_track": true
+      }
+    },
+    "B-MULTILINEAR-FORM": {
+      "id": "B-MULTILINEAR-FORM",
+      "name": "Multilinear form and positivity schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-ADDITIVE-SCALAR"
+      ],
+      "witness": "PD-FORM-PAIRING",
+      "meaning": "Multilinear/sesquilinear pairings, quadratic values, positivity and null-carrier predicates.",
+      "support": {
+        "demand_ids": [
+          "PD-FORM-PAIRING",
+          "PD-POSITIVITY-COMPLETION",
+          "PD-REAL-FORM"
+        ],
+        "assertion_counts": {
+          "W": 50,
+          "L": 56,
+          "total": 106
+        },
+        "cross_track": true
+      }
+    },
+    "B-INVOLUTION-GRADING": {
+      "id": "B-INVOLUTION-GRADING",
+      "name": "Involution, fixed-subcarrier and grading schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-FINITE-PRODUCT-INDEX",
+        "B-SUBOBJECT-QUOTIENT",
+        "B-OPERATION-LAW"
+      ],
+      "witness": "PD-INVOLUTION",
+      "meaning": "Finite-order maps, involutions, fixed sets/eigenspaces, gradings and decomposition laws.",
+      "support": {
+        "demand_ids": [
+          "PD-INVOLUTION",
+          "PD-DECOMPOSE",
+          "PD-REAL-FORM"
+        ],
+        "assertion_counts": {
+          "W": 57,
+          "L": 80,
+          "total": 137
+        },
+        "cross_track": true
+      }
+    },
+    "B-DIFFERENTIAL": {
+      "id": "B-DIFFERENTIAL",
+      "name": "Differential, derivation and chain schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-TYPED-MAP",
+        "B-ADDITIVE-SCALAR",
+        "B-OPERATION-LAW"
+      ],
+      "witness": "PD-DIFFERENTIAL",
+      "meaning": "Differentials/derivations, nilpotent chains, kernels/images and operator composition; connection/curvature are later schemas built from this plus actions/families.",
+      "support": {
+        "demand_ids": [
+          "PD-LIMIT-REGULARITY",
+          "PD-DIFFERENTIAL",
+          "PD-CONNECTION-CURVATURE",
+          "PD-VARIATION",
+          "PD-TOPOLOGICAL-CLASS"
+        ],
+        "assertion_counts": {
+          "W": 31,
+          "L": 61,
+          "total": 92
+        },
+        "cross_track": true
+      }
+    },
+    "B-PARITY-GRADED": {
+      "id": "B-PARITY-GRADED",
+      "name": "Parity-graded sign schema",
+      "class": "DERIVED_GENERIC_SCHEMA",
+      "dependencies": [
+        "B-FINITE-PRODUCT-INDEX",
+        "B-OPERATION-LAW",
+        "B-ADDITIVE-SCALAR"
+      ],
+      "witness": "PD-SUPER-PARITY",
+      "meaning": "Z2-style parity index and sign rule sufficient for graded/super products without source-specific superalgebra objects.",
+      "support": {
+        "demand_ids": [
+          "PD-SUPER-PARITY"
+        ],
+        "assertion_counts": {
+          "W": 1,
+          "L": 19,
+          "total": 20
+        },
+        "cross_track": true
+      }
+    }
+  },
+  "foundational_witnesses": [
+    {
+      "basis_id": "B-TYPED-MAP",
+      "witness_demand": "PD-MAP-APPLY",
+      "witness_counts": {
+        "W": 23,
+        "L": 39,
+        "total": 62
+      },
+      "cross_track": true
+    },
+    {
+      "basis_id": "B-FINITE-PRODUCT-INDEX",
+      "witness_demand": "PD-DIMENSION",
+      "witness_counts": {
+        "W": 18,
+        "L": 38,
+        "total": 56
+      },
+      "cross_track": true
+    },
+    {
+      "basis_id": "B-SUBOBJECT-QUOTIENT",
+      "witness_demand": "PD-QUOTIENT",
+      "witness_counts": {
+        "W": 17,
+        "L": 5,
+        "total": 22
+      },
+      "cross_track": true
+    },
+    {
+      "basis_id": "B-TOPOLOGY-LIMIT",
+      "witness_demand": "PD-DOMAIN-BOUNDARY",
+      "witness_counts": {
+        "W": 17,
+        "L": 14,
+        "total": 31
+      },
+      "cross_track": true
+    },
+    {
+      "basis_id": "B-AGGREGATE",
+      "witness_demand": "PD-INTEGRAL-FUNCTIONAL",
+      "witness_counts": {
+        "W": 19,
+        "L": 37,
+        "total": 56
+      },
+      "cross_track": true
+    }
+  ],
+  "guards": [
+    "No basis item contains Woit, Lisi, twistor, triality, quaternion, group, bundle, Hodge, Penrose, Yang-Mills, Einstein, Clifford, octonion, or other source-domain object names.",
+    "Candidate basis and schemas are not qualified authority.",
+    "W and L remain blocked from consuming these candidates until this separate project completes source conservation, Core closure, recursive IA fixed point, NEI/DTS where applicable, and qualification.",
+    "Cross-track support is a prioritization signal only, never a source-object identity premise."
+  ]
+}

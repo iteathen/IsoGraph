@@ -1,0 +1,111 @@
+{
+  "schema": "woit.regrounded-source-logic-primitive-closure-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_4_CANDIDATE_CLOSED_PRIMITIVE",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "frontier": "W_REGROUNDED_SOURCE_LOGIC_FRONTIER_0_1.json",
+  "native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_8.isg",
+  "native_derivation": "W_SOURCE_LOGIC_REGROUNDED_NATIVE_DERIVATION_0_1.json",
+  "governing_authority": [
+    "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "qualification/CORE_0_21_LEDGER_CONTRACT.md"
+  ],
+  "shared_findings": {
+    "logical_operators_are_core_primitives": true,
+    "operators_used": [
+      "AND",
+      "NOT",
+      "IMPLIES",
+      "PREDICATE_APPLICATION",
+      "DEFINITION_EXPANDS_TO"
+    ],
+    "raw_predicates_have_hidden_behavior": false,
+    "raw_predicate_semantics": "finite extensional source-fact incidence only; all conditional force is supplied by Core NOT/IMPLIES/AND",
+    "domain_target_internal_behavior_load_bearing": false,
+    "qualified_qu_required": false,
+    "schema_closure_applicable": false,
+    "historical_closure_packets_used": false,
+    "cross_author_semantics_used": false
+  },
+  "items": [
+    {
+      "census_id": "W-SSC-021",
+      "result": "PASS_CLOSED_PRIMITIVE",
+      "source_body": "W04e says the author's interpretation is still changing and therefore later claims must remain revision-scoped.",
+      "reconstruction": "DEFINITION_EXPANDS_TO(body, AND(changing, IMPLIES(changing, revision_scoped(later_claims))))",
+      "support_incidences": [
+        [
+          930005,
+          931021,
+          930107
+        ]
+      ],
+      "all_and_only_reconstruction": true
+    },
+    {
+      "census_id": "W-SSC-025",
+      "result": "PASS_CLOSED_PRIMITIVE",
+      "source_body": "W03 is mutable project-status evidence and cannot overwrite frozen source revisions without an explicit successor target.",
+      "reconstruction": "DEFINITION_EXPANDS_TO(body, AND(mutable_status, IMPLIES(overwrites_frozen_revisions, has_explicit_successor_target)))",
+      "support_incidences": [
+        [
+          930005,
+          931025,
+          930102
+        ]
+      ],
+      "all_and_only_reconstruction": true,
+      "guard": "No explicit successor target is asserted to exist; only the source's necessary condition on overwrite is represented."
+    },
+    {
+      "census_id": "W-SSC-058",
+      "result": "PASS_CLOSED_PRIMITIVE",
+      "source_body": "The July-2026 W03 status explicitly says the current notes are work in progress, are unlikely to be updated in place, and a future write-up is expected to differ significantly; mutable status evidence therefore cannot retroactively rewrite W01/W02.",
+      "reconstruction": "DEFINITION_EXPANDS_TO(body, AND(work_in_progress, unlikely_update_in_place, dated_July_2026, future_writeup_differs, IMPLIES(AND(those facts), NOT(retroactively_rewrites(W01_W02)))))",
+      "support_incidences": [
+        [
+          930005,
+          931058,
+          930102
+        ]
+      ],
+      "all_and_only_reconstruction": true
+    },
+    {
+      "census_id": "W-SSC-121",
+      "result": "PASS_CLOSED_PRIMITIVE",
+      "source_body": "The linked W04e notes are a preliminary version dated 2026-07-14, while the author-maintained W03/W04e status explicitly says the interpretation is still changing and a later account is expected to differ substantially; the preliminary notes therefore remain revision-scoped.",
+      "reconstruction": "DEFINITION_EXPANDS_TO(body, AND(preliminary, exact_date, changing_interpretation, later_account_differs, IMPLIES(AND(those facts), revision_scoped(notes))))",
+      "support_incidences": [
+        [
+          930005,
+          931121,
+          930107
+        ],
+        [
+          930005,
+          931121,
+          930102
+        ]
+      ],
+      "all_and_only_reconstruction": true
+    }
+  ],
+  "primitive_closure_gates": {
+    "every_body_primitive_closed": true,
+    "every_support_primitive_closed": true,
+    "every_transitive_dependency_primitive_closed": true,
+    "definitionally_reducible_conditional_operator_left_hidden": false,
+    "unsupported_native_addition_present": false,
+    "source_semantics_conserved": true,
+    "reconstruction_exact_at_frozen_census_scope": true
+  },
+  "proposed_disposition": "CLOSED_PRIMITIVE",
+  "core021_qualification_stage_complete": false,
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}

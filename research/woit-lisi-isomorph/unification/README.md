@@ -1,0 +1,100 @@
+# Woit–Lisi Unification Workbench
+
+**Status:** ACTIVE EXPLORATORY SYNTHESIS  
+**Primary objective:** discover the most complete source-faithful conservative unification by reducing both programs to invariant primitive structure first; minimize synthesis support only after the maximal viable structure is known.
+
+This directory contains project-generated synthesis artifacts.
+
+Nothing here is attributed to Peter Woit or Garrett Lisi unless separately sourced.
+
+## Current architecture
+
+~~~text
+Woit source treatment ----+
+                          |
+                          v
+                    shared kernel U0
+                          |
+                          v
+                    unification U
+                          ^
+                          |
+Lisi source treatment ----+
+~~~
+
+The historical bridge work supplied the first U0 kernel.
+
+The new work begins where bridge-finding stopped: attach compatible residuals and determine whether one structure can reconstruct meaningful parts of both programs simultaneously.
+
+## Current kernel
+
+`UNIFICATION_KERNEL_U0_0_1.isg` freezes the initial synthesis interface.
+
+It is based on:
+- the quaternionic/chiral action correspondence;
+- the scoped chiral Clifford alignment;
+- projective/twistor incidence;
+- Spin(4) role structure;
+- pseudoreal/complex-structure transport;
+- the BT01 falsifier suite.
+
+## Active discovery method
+
+The active program is now **primitive-first and anti-bias**.
+
+No successor global carrier, dynamical architecture, triality mechanism, octonionic extension, or exceptional algebra is selected in advance.
+
+The campaign first completes source census, primitive/schema closure, recursive IA, NEI, DTS, and DP. Cross-track correspondence is then searched over reduced/anonymized structure so patterns can emerge without theory labels choosing the answer.
+
+See `UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md`.
+
+Existing U-candidate names remain historical/retrieval buckets and prior experimental results.
+
+## Historical leading candidate
+
+**U1-TC — twistor/Clifford amalgam**
+
+U1 now has a first concrete phase:
+
+**U1.0-PC — projective compactification**
+
+The finite Lisi quaternionic action is identified with the finite Woit graph family through U0; Woit's infinity fiber then compactifies the incidence family without defining a fictional Lisi operator at infinity.
+
+Use Woit's global twistor geometry as the first geometric extension of U0 and test whether Lisi's Clifford/triality residuals admit a chart-consistent, pseudoreal-compatible extension over it.
+
+The first U1 result must reconstruct U0 on every local chart.
+
+### U1.1-TR result
+
+The strong global triality/fiber extension has now been tested and **rejected**.
+
+The finite U0 graph/incidence relation survives the W01↔W05 projective convention change when quaternion conjugation, homogeneous-coordinate swap, and the induced left/right multiplication side-swap are all retained. However, a total Lisi triality action over the U1.0 compactification would require a source-backed vector/algebra role at the infinity patch, or an exact source-backed family-preservation law. Neither is currently present.
+
+No Lisi operator, division-algebra element, or triality role is invented at infinity. L-ALG therefore remains a preserved residual outside U1.0, and U1-TC remains structurally consistent through U1.0-PC rather than being expanded by force.
+
+A successor finite-chart audit now closes the quaternionic L05 scalar triality slice and resolves the former chart-transport QU. Quaternion conjugation sends the oriented tensor to the tensor with its two chiral arguments exchanged. Conjugation plus an explicit coherent Q_minus/Q_plus exchange restores exact invariance, but W05 does not source-type its homogeneous q1/q2 coordinates with those chiral roles. Therefore strict source-role-preserving triality chart invariance fails, and no new U-edge is admitted.
+
+## Later candidates
+
+- U2-DYN — Woit chiral YM/GR + Lisi gauge/gravity/Higgs/Cartan dynamics.
+- U3-OT — octonionic/triality extension.
+- U4-EX — exceptional realization, including E8 only if lower levels survive.
+
+## Files
+
+- `../UNIFICATION_TARGET_REVISION_0_1.md` — objective change from bridge search to constructive unification, now corrected to maximal primitive-first discovery before final minimization.
+- `UNIFICATION_PRIMITIVE_DISCOVERY_METHOD_0_1.md` — active anti-bias discovery method: full source reduction and blind structural correspondence before new U construction.
+- `UNIFICATION_SYNTHESIS_PROTOCOL_0_1.md` — synthesis rules, reconstruction requirements, and promotion vocabulary.
+- `UNIFICATION_KERNEL_U0_0_1.isg` / `.md` — current shared synthesis kernel.
+- `UNIFICATION_RESIDUAL_PORTS_0_1.md` — W/L residual classification and first interaction hypotheses.
+- `UNIFICATION_CANDIDATE_MANIFEST_0_1.json` — machine-readable candidate state.
+- `UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.isg` / `.md` / `.json` — first constructive U1 candidate: Woit's global projective family as a conservative compactification of Lisi's affine chiral graph relation.
+- `UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.isg` / `.md` / `.json` — U1.1 global audit: the strong global triality extension is rejected at the compactification patch.
+- `UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_0_1.isg` / `.md` / `.json` — finite audit: the source L05 tensor survives conjugation only with explicit chiral-role exchange; strict role-preserving transport fails.
+- `UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_FALSIFIER_0_1.json` — exhaustive 64-basis-triple check of cyclicity and the conjugation/role-swap laws.
+
+## Firewall
+
+Exploratory synthesis may proceed now from frozen evidence.
+
+Formal promotion remains blocked until both source treatments independently seal and the synthesis survives post-seal NEI/DP/DTS, reconstruction, falsifiers, and relevant obstruction audits.

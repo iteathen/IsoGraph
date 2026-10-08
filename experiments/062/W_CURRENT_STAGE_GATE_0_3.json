@@ -1,0 +1,65 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.3",
+  "date": "2026-10-07",
+  "status": "W_G1_REOPENED_BY_TARGETED_SOURCE_SEMANTIC_CORRECTION",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_2.json",
+    "git_blob_sha": "16c10ab40eaf9d663ba14650b5a68edb3fe38fe2",
+    "reason": "Already-frozen W01/W02 evidence exposed missing load-bearing source structure in W-SSC-029 and W-SSC-149. A successor source census and source-demand corpus therefore reopen W at G1."
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "active": true,
+    "waived_only": "unavailable third-party/external verification"
+  },
+  "current_source_input": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json",
+    "git_blob_sha": "658a09fefde50e48503aa1d98e23b65225c845bc",
+    "changed_bodies": [
+      "W-SSC-029",
+      "W-SSC-149"
+    ],
+    "source_expansion": false
+  },
+  "g1_successor": {
+    "adjudication_path": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_19.json",
+    "extraction_path": "experiments/062/W_EXTRACTION_RECONCILED_0_19.json",
+    "status": "DETERMINISTIC_VALIDATION_PENDING"
+  },
+  "downstream_invalidation": {
+    "predecessor_G1_fixed_point_current": false,
+    "predecessor_G2_current": false,
+    "predecessor_G3_current": false,
+    "predecessor_G4_current": false,
+    "predecessor_G5_current": false,
+    "predecessor_G7_current": false,
+    "note": "Historical artifacts remain valid evidence for their exact predecessor source tuple but are not current for the corrected W source input."
+  },
+  "primitive_211000": {
+    "campaign_provisional_qualification_preserved": true,
+    "candidate_semantics_changed": false,
+    "current_W_instantiation_authorized": false,
+    "prior_G7_result": "SOURCE_INSTANCE_INSUFFICIENT_FOR_CANDIDATE_INTERFACE"
+  },
+  "current_lawful_state": {
+    "G1_source_local_successor_generated": true,
+    "G1_deterministic_validation_complete": false,
+    "G1_source_local_zero_change_fixed_point": false,
+    "G1_campaign_accepted_under_owner_bypass": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Validate W G1 successor 0.19 against SOURCE_DEMAND_CENSUS_0_2.json, establish the corrected source-local zero-change fixed point, then accept the unavailable external audit only through the explicit owner bypass before replaying G2 onward."
+}

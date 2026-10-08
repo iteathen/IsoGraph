@@ -1,0 +1,159 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.22",
+  "date": "2026-10-07",
+  "status": "TARGETED_W097_GRANULARITY_RECONSTRUCTION_COMPLETE_DETERMINISTIC_REPLAY_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+    "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_21.json",
+    "git_blob_sha": "0c82bedc5bfe8fc72910ddfba74220237044ac59"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_10.json",
+    "git_blob_sha": "505487dad3321441e067325d3749e9fea080b4c4"
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_verification_complete": false
+  },
+  "rules": [
+    "Only W-SSC-097 is replaced; all other 83 W occurrence items are byte-identical carry-forwards.",
+    "W-SSC-097-O01 is retained as the vector-level square-minus-one occurrence.",
+    "W-SSC-097-O06 separately conserves the projective involution law.",
+    "W-SSC-097-O04 now depends on the projective involution occurrence, not on the vector square law.",
+    "W-SSC-097-O07 preserves the explicit scope contrast between the vector and projective square laws.",
+    "No quaternionic, vector-space, projective-quotient, or topological textbook semantics are imported.",
+    "No L evidence is used."
+  ],
+  "replacement": {
+    "census_id": "W-SSC-097",
+    "action": "REPLACE_ITEM",
+    "replacement_item": {
+      "census_id": "W-SSC-097",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-097-O01",
+          "source_span": "on the C2 coordinate carrier rho_tw squared equals -1",
+          "relation_span": "equals",
+          "argument_spans": [
+            "rho_tw squared",
+            "-1",
+            "C2 coordinate carrier"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [],
+          "load_bearing_note": "Separates the vector-level square-minus-one law from the distinct projective square law."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O06",
+          "source_span": "on projective points applying rho_tw twice returns the same projective point",
+          "relation_span": "returns",
+          "argument_spans": [
+            "applying rho_tw twice",
+            "the same projective point"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "EXPLICIT_IN_BODY",
+          "depends_on": [],
+          "load_bearing_note": "Exposes the source-explicit projective involution law independently of the vector square-minus-one law."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O07",
+          "source_span": "on the C2 coordinate carrier rho_tw squared equals -1, while on projective points applying rho_tw twice returns the same projective point",
+          "relation_span": "while",
+          "argument_spans": [
+            "on the C2 coordinate carrier rho_tw squared equals -1",
+            "on projective points applying rho_tw twice returns the same projective point"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "W-SSC-097-O01",
+            "W-SSC-097-O06"
+          ],
+          "load_bearing_note": "Preserves the source-scoped contrast between vector and projective square behavior."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O04",
+          "source_span": "rho_tw has no projective fixed points",
+          "relation_span": "has no",
+          "argument_spans": [
+            "rho_tw",
+            "projective fixed points"
+          ],
+          "logical_force": "NEGATED",
+          "definition_status": "EXPLICIT_IN_BODY",
+          "depends_on": [
+            "W-SSC-097-O06"
+          ],
+          "load_bearing_note": "The fixed-point-free projective behavior now depends on the separately conserved projective involution law."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O02",
+          "source_span": "the same real form as a real projective conic with complex but no real points",
+          "relation_span": "as",
+          "argument_spans": [
+            "the same real form",
+            "a real projective conic with complex but no real points"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "W-SSC-097-O07"
+          ],
+          "load_bearing_note": "The source presents the same real form through the stated projective-conic description and point condition."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O03",
+          "source_span": "distinguishes ordinary conjugation on CP1 from the twistor antipodal real structure rho_tw",
+          "relation_span": "distinguishes",
+          "argument_spans": [
+            "ordinary conjugation on CP1",
+            "twistor antipodal real structure rho_tw"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [],
+          "load_bearing_note": "Explicit distinction between the ordinary and antipodal conjugation structures."
+        },
+        {
+          "occurrence_id": "W-SSC-097-O05",
+          "source_span": "real projective conic with complex but no real points",
+          "relation_span": "no real points",
+          "argument_spans": [
+            "real projective conic",
+            "real points"
+          ],
+          "logical_force": "NEGATED",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "W-SSC-097-O02"
+          ],
+          "load_bearing_note": "Makes the source-explicit absence of real points visible rather than leaving it hidden inside the conic description."
+        }
+      ],
+      "extraction_status": "COMPLETE"
+    }
+  },
+  "counts": {
+    "frozen_W_bodies": 84,
+    "affected_bodies": 1,
+    "unchanged_bodies": 83,
+    "predecessor_occurrences": 443,
+    "successor_occurrences": 445,
+    "net_occurrence_change": 2
+  },
+  "next_required_steps": [
+    "Verify exact source spans, dependency ordering, duplicate exclusion, and byte-identical carry-forward for 83 bodies.",
+    "Establish a corrected W G1 zero-change fixed point on W_EXTRACTION_RECONCILED_0_22.json.",
+    "Issue a new exact-input owner-bypass routing decision before corrected G2."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.1",
+  "date": "2026-10-06",
+  "status": "L_G1_CURRENT_INPUT_COLD_AUDIT_REQUIRED_DOWNSTREAM_G2_G5_PROVISIONAL_UNAUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "L",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "controlling_gate": {
+    "source_local_fixed_point": {
+      "path": "experiments/062/L_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "git_blob_sha": "1ca0f58aac91a7032f6d1595089e948727b4cec9"
+    },
+    "cold_audit_contract": {
+      "path": "experiments/062/L_G1_COLD_AUDIT_0_25_CONTRACT_0_1.json",
+      "git_blob_sha": "e290eb1dea7ff6d1d366277c147cc1b516225365"
+    }
+  },
+  "current_lawful_state": {
+    "G1_source_local_zero_change": true,
+    "G1_independent_cold_audit_complete": false,
+    "L_G1_complete": false,
+    "joint_G1_complete": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G6_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "track_sealed": false
+  },
+  "downstream_artifact_disposition": {
+    "status": "PROVISIONAL_UNAUTHORIZED_DOWNSTREAM_EVIDENCE_DO_NOT_CONSUME_AS_STAGE_COMPLETION",
+    "artifacts": [
+      "experiments/062/L_G2_NEUTRAL_OCCURRENCE_GRAPH_0_1.json",
+      "experiments/062/L_G3_CORE_DEFINABILITY_0_5.json",
+      "experiments/062/L_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_1.json",
+      "experiments/062/L_G4_FIXED_POINT_0_1.json",
+      "experiments/062/L_G5_RESIDUAL_RECONSTRUCTION_FRONTIER_0_1.json",
+      "experiments/062/L_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json",
+      "experiments/062/L_G5_SOURCE_SUFFICIENCY_REVIEW_0_1.json",
+      "experiments/062/L_G5_FIXED_POINT_0_1.json"
+    ],
+    "reason": "These artifacts were generated after the controlling L G1 record explicitly held G2_authorized=false pending fresh independent cold evidence against L 0.25. They are preserved for possible deterministic replay/revalidation after lawful G1 closure, but their G2-G5 completion/gate claims are superseded for stage routing by this correction."
+  },
+  "provider_transport_boundary": {
+    "latest_known_quota_attempt": {
+      "workflow_run_id": 37544009233,
+      "attempt": 4,
+      "completed_at_utc": "2026-10-07T00:16:07Z",
+      "retry_hint": "23h43m52.892119499s",
+      "implied_not_before_utc": "2026-10-08T00:00:00Z"
+    },
+    "request_emitted_for_L_0_25": false,
+    "reason_no_request": "The provider-declared daily quota interval from the latest known attempt is still active. Current method forbids repeated provider requests inside a known quota interval."
+  },
+  "next_lawful_action": "At or after 2026-10-08T00:00:00Z, run exactly one fresh independent all-151 audit using the frozen L 0.25 contract. If PASS, explicitly authorize G1/G2 and revalidate/replay downstream stages before promotion. If corrections are found, reopen only affected L G1 bodies and invalidate downstream artifacts.",
+  "nonclaims": [
+    "The provisional G2-G5 artifacts are not deleted and are not claimed semantically false.",
+    "The prior G5 boundary is not a lawful stop condition until G1 independently closes and downstream stages are replayed/revalidated.",
+    "The old L 0.13 cold-audit evidence does not satisfy the L 0.25 cold-audit requirement."
+  ]
+}

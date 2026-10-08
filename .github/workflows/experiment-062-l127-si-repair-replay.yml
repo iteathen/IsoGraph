@@ -1,0 +1,27 @@
+name: Experiment 062 L127 SI repair replay
+
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_2.isg'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_SO8_SOURCE_ASSERTION_0_2.isg'
+      - 'experiments/062/L127_G1_SOURCE_INCIDENCE_0_2.json'
+      - 'experiments/062/L127_G2_NEUTRAL_SUBGRAPH_0_2.json'
+      - 'experiments/062/L127_G3_CORE_DEFINABILITY_0_2.json'
+      - 'experiments/062/tools/verify-l127-si-repair-replay-0-1.mjs'
+      - '.github/workflows/experiment-062-l127-si-repair-replay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - run: node experiments/062/tools/verify-l127-si-repair-replay-0-1.mjs

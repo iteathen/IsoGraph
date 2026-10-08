@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-l125-l127-g0-0-7-g1-premature-gate-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_INTERNAL_G0_VERIFIER_FALSE_NEGATIVE_ON_PREMATURE_G1_FLAG",
+  "track": "L",
+  "authority": false,
+  "authority_effect": "NONE_TEST_QUALITY_DEFECT_ONLY",
+  "failed_run": {
+    "run_id": 37807377432,
+    "job_id": 113415071623,
+    "conclusion": "failure",
+    "failed_mutant": "authorize premature G1",
+    "log": "mutation escaped authorize premature G1",
+    "other_adversarial_controls": "PASS_THROUGH_THIS_FAILURE_NOT_A_WHOLE_SUITE_QUALIFICATION"
+  },
+  "defect": {
+    "path": "experiments/062/tools/verify-l-g0-l05-section2-tables-0-7.mjs",
+    "blob_sha": "30c3b0d9fe0bd63e310a3854cae3a6a2edd2a8f2",
+    "earliest_owner": "G0_VERIFIER",
+    "cause": "Checker asserted SSC not frozen and L132 not authorized, but did not explicitly assert L_G1_source_reextraction_complete === false, permitting a contradictory early-stage flag."
+  },
+  "source_packet_semantically_changed": false,
+  "minimum_repair": "Require source_census_freeze_complete false, L_G1_source_reextraction_complete false, L132_replay_authorized false in the same gate assertion; retain mutant and rerun live Github Actions.",
+  "nonclaims": [
+    "G0 source table census remains candidate and incomplete.",
+    "External review not passed.",
+    "No L G1/L132 closure authorized."
+  ]
+}

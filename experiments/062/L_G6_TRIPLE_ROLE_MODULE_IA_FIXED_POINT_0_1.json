@@ -1,0 +1,165 @@
+{
+  "schema": "isograph.exp062-triple-role-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "TRIPLE_ROLE_COEFFICIENT_2_4_8_0_1",
+  "branch_head_at_creation": "bc1ac99890877da9a5e453afaa098eb716360243",
+  "inputs": {
+    "module_ssc": {
+      "path": "experiments/062/L_G6_TRIPLE_ROLE_MODULE_SSC_0_1.json",
+      "git_blob_sha": "fb5e9b249cc759fd6fb127cc4c5f494fa13036f4"
+    },
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_TRIPLE_ROLE_COEFFICIENT_0_1.json",
+      "git_blob_sha": "a330e06693baa9239224a5fea1aca978ce87bc8c"
+    }
+  },
+  "inference_profile": {
+    "id": "triple-role-schema-conjunct-projection-0.1",
+    "scope": "Only direct wrapper conjunct projections. No inference from the word coefficient, chirality, triality, or conjugation.",
+    "rules": [
+      {
+        "id": "TR-IA-R1",
+        "trigger": "219000",
+        "derives": [
+          "BASIS_2(A)",
+          "BASIS_2(V)",
+          "BASIS_2(M)",
+          "BASIS_2(P)",
+          "UNARY_FUNCTION(KAPPA,A,A)",
+          "LINEAR_BIJECTION(FV,V,A)",
+          "LINEAR_BIJECTION(FM,M,A)",
+          "LINEAR_BIJECTION(FP,P,A)",
+          "BASIS_ANCHORS_2"
+        ]
+      },
+      {
+        "id": "TR-IA-R2",
+        "trigger": "219001",
+        "derives": [
+          "BASIS_4(A)",
+          "BASIS_4(V)",
+          "BASIS_4(M)",
+          "BASIS_4(P)",
+          "UNARY_FUNCTION(KAPPA,A,A)",
+          "LINEAR_BIJECTION(FV,V,A)",
+          "LINEAR_BIJECTION(FM,M,A)",
+          "LINEAR_BIJECTION(FP,P,A)",
+          "BASIS_ANCHORS_4"
+        ]
+      },
+      {
+        "id": "TR-IA-R3",
+        "trigger": "219002",
+        "derives": [
+          "BASIS_8(A)",
+          "BASIS_8(V)",
+          "BASIS_8(M)",
+          "BASIS_8(P)",
+          "UNARY_FUNCTION(KAPPA,A,A)",
+          "LINEAR_BIJECTION(FV,V,A)",
+          "LINEAR_BIJECTION(FM,M,A)",
+          "LINEAR_BIJECTION(FP,P,A)",
+          "BASIS_ANCHORS_8"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "KAPPA involution or anti-involution",
+      "KAPPA linearity",
+      "V/M/P/A identity",
+      "triality or cyclic equivalence",
+      "algebraic product semantics",
+      "canonical basis claims"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(219000)",
+        "SCHEMA_DEFINITION(219001)",
+        "SCHEMA_DEFINITION(219002)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "TR-IA-001",
+          "assertion": "219000 entails matching two-element basis presentations for A,V,M,P.",
+          "support": [
+            "219000 explicit conjuncts",
+            "187600 provisionally qualified"
+          ]
+        },
+        {
+          "id": "TR-IA-002",
+          "assertion": "219001 entails matching four-element basis presentations for A,V,M,P.",
+          "support": [
+            "219001 explicit conjuncts",
+            "187601 provisionally qualified"
+          ]
+        },
+        {
+          "id": "TR-IA-003",
+          "assertion": "219002 entails matching eight-element basis presentations for A,V,M,P.",
+          "support": [
+            "219002 explicit conjuncts",
+            "215000 provisionally qualified"
+          ]
+        },
+        {
+          "id": "TR-IA-004",
+          "assertion": "Each selected wrapper entails KAPPA is only a total unary function A->A.",
+          "support": [
+            "219000/1/2 explicit 182001 conjunct"
+          ]
+        },
+        {
+          "id": "TR-IA-005",
+          "assertion": "Each selected wrapper entails FV, FM, and FP are linear bijections into A.",
+          "support": [
+            "219000/1/2 explicit 193200 conjuncts"
+          ]
+        },
+        {
+          "id": "TR-IA-006",
+          "assertion": "Each selected wrapper anchors FV and FM basis images directly to the coefficient basis.",
+          "support": [
+            "219000/1/2 explicit basis equations"
+          ]
+        },
+        {
+          "id": "TR-IA-007",
+          "assertion": "Each selected wrapper anchors FP basis images to represented KAPPA images of the coefficient basis.",
+          "support": [
+            "219000/1/2 explicit existential KAPPA/FP equations"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No rule can generate a stronger KAPPA, role-identity, or triality conclusion; direct conjunct projection is closed."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 7,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "nonclaims": [
+    "KAPPA is not inferred to be involutive, linear, multiplicative, or an anti-involution.",
+    "Role carriers are not identified.",
+    "No source-track IA is performed.",
+    "This artifact is qualification evidence only."
+  ],
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

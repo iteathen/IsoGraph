@@ -1,0 +1,50 @@
+{
+  "schema": "woit.w052-minkowski-su22-twistor-real-form-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-052",
+  "frozen_body": "For Minkowski twistor geometry W01 uses a signature-(2,2) Hermitian form Phi, anti-Hermitian affine coordinates, the SU(2,2) orbit decomposition of M/PT, and conjugate-dual left/right spinor actions.",
+  "source": "W01 Appendix A.3.2",
+  "support_packets": [
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json",
+    "W100_EUCLIDEAN_VS_MINKOWSKI_REAL_STRUCTURE_CLOSURE_PACKET_0_1.json",
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json"
+  ],
+  "root_native": "research/woit-lisi-isomorph/woit/W01_MINKOWSKI_ANTIHERMITIAN_AFFINE_SOURCE_INSTANCE_0_1.isg",
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "projective_twistor_space": 202113,
+    "signature_22_hermitian_form": 995110,
+    "su22_source_group": 995100,
+    "su22_projective_action": 995120,
+    "positive_orbit": 995130,
+    "negative_orbit": 995131,
+    "null_orbit": 995132,
+    "null_twistor_two_plane_carrier": 995140,
+    "hermitian_minkowski_matrix_carrier": 204124,
+    "antihermitian_affine_carrier": 996100,
+    "hermitian_to_antihermitian_bijection": 996110,
+    "minkowski_vector_to_antihermitian_affine_map": 996120,
+    "dual_twistor_carrier": 994100,
+    "dual_pairing": 994110,
+    "minkowski_conjugate_dual_map": 994130,
+    "dual_right_chiral_subspace": 994120,
+    "dual_left_chiral_subspace": 994121,
+    "chiral_exchange": "right plane <-> dual-left annihilator; left plane <-> dual-right annihilator"
+  },
+  "semantic_guards": [
+    "The (2,2) Hermitian form and SU(2,2) orbit structure are reused from current W014 authority.",
+    "Anti-Hermitian affine coordinates are represented by an exact convention bijection X -> iX from the qualified Hermitian Minkowski matrix carrier.",
+    "Conjugate-dual left/right reality is reused from current W100 authority.",
+    "Euclidean real-form structure is not imported into this Minkowski closure.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

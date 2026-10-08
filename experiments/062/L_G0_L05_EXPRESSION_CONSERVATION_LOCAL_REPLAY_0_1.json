@@ -1,0 +1,108 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-expression-conservation-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "PASS_LOCAL_DETERMINISTIC_V8_REPLAY_WITH_NODE_FILE_SHIM_NOT_COLD_CI",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_QUALIFICATION_EVIDENCE_ONLY",
+  "branch_head_at_run_snapshot": "cc4224ed162e63a5bbebf28b7ce1e1ad1ccb130f",
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_4.json",
+      "git_blob_sha": "a55dceaace0f5a6280b83c578d19abc885bd0d93"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_5.json",
+      "git_blob_sha": "49a458ebd39e08770967afeb1a9f1f6d53a4b06c"
+    },
+    {
+      "path": "experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json",
+      "git_blob_sha": "860b0a964c98ce224e7a595768240a176b73a8ba"
+    },
+    {
+      "path": "experiments/062/L_G0_L05_EXPRESSION_VERIFIER_MUTATION_ESCAPE_DEFECT_0_1.json",
+      "git_blob_sha": "458dd19e014dda69547efe990d8cd3c56435ce19"
+    },
+    {
+      "path": "experiments/062/tools/verify-l-g0-l05-expression-census-0-5.mjs",
+      "git_blob_sha": "910f07cb219cabe276f9667ccccc3b8e4c8ad26a"
+    },
+    {
+      "path": "experiments/062/tools/verify-l-g0-l05-expression-census-0-6.mjs",
+      "git_blob_sha": "74cafe6ee07a9f98e4740cecfa8e146cfba54f9c"
+    }
+  ],
+  "execution": {
+    "mode": "Exact v0.6 verifier source was loaded from GitHub, Node import lines removed, native filesystem reads mapped to independent live GitHub file contents, and Git blob computation was mapped to independently returned live GitHub blob SHAs; remaining verifier code including mutation loop executed directly in V8.",
+    "limitations": [
+      "This is NOT Node runtime execution in GitHub Actions.",
+      "File API shim uses already retrieved GitHub response bytes, not cold checkout.",
+      "Validation fixtures were produced by this research process, not an external independent semantic auditor.",
+      "An incomplete G0 source census may still omit source assertions outside the checked L05 section-3 packet."
+    ],
+    "test_program": "experiments/062/tools/verify-l-g0-l05-expression-census-0-6.mjs",
+    "test_program_git_blob_sha": "74cafe6ee07a9f98e4740cecfa8e146cfba54f9c",
+    "result": "PASS",
+    "errors": [],
+    "adversarial_mutations_total": 16,
+    "adversarial_mutations_rejected": 16,
+    "mutation_families": [
+      "division-product reflection order",
+      "Clifford chiral target and Gamma/barGamma differentiation",
+      "negated nonrotation class",
+      "exact vs first-order approximation",
+      "U^- source unary marker vs unqualified inverse",
+      "Eq9 carrier transport similarity",
+      "source Q^- vs gamma output",
+      "conditional T=1 denominator",
+      "conditional numerator and denominator operand order",
+      "reflection operator factorization order",
+      "Eq9 multiplication-table index order",
+      "bivector generator chiral placement",
+      "split vs ordinary Lie-carrier signatures",
+      "rotor first-order sign"
+    ]
+  },
+  "conservation": {
+    "source_items_old": 191,
+    "source_items_candidate": 191,
+    "unchanged_items": 187,
+    "changed_source_items": [
+      "L-SSC-129",
+      "L-SSC-130",
+      "L-SSC-131",
+      "L-SSC-132"
+    ],
+    "expression_rows_total": 44,
+    "division_reflection_actions_eq7": 9,
+    "clifford_index_reflection_actions_eq8": 9,
+    "eq9_role_representations": 3,
+    "other_source_groups": 23
+  },
+  "failed_predecessor": {
+    "path": "experiments/062/tools/verify-l-g0-l05-expression-census-0-5.mjs",
+    "git_blob_sha": "910f07cb219cabe276f9667ccccc3b8e4c8ad26a",
+    "mutation_escape": "missing T=1 duality norm denominator",
+    "defect_path": "experiments/062/L_G0_L05_EXPRESSION_VERIFIER_MUTATION_ESCAPE_DEFECT_0_1.json",
+    "defect_git_blob_sha": "458dd19e014dda69547efe990d8cd3c56435ce19",
+    "preserved_unmodified": true
+  },
+  "dependency_effect": {
+    "G0_complete": false,
+    "SSC_0_5_frozen": false,
+    "L_G1_current": false,
+    "L132_replay_authorized": false,
+    "L133_replay_authorized": false,
+    "Recursive_IA_authorized": false,
+    "source_semantic_authority_effect": false
+  },
+  "external_review": "TEMPORARILY_OWNER_BYPASSED_NOT_PASSED",
+  "next": "Complete L05 direct source assertion conservation review; ensure complete L01–L06 census before freeze, then run independent deterministic Node/CI qualification before promoting G0/performing dependent G1 replay.",
+  "nonclaims": [
+    "No full L05 section-3 completeness proof.",
+    "No entire six-source L1–L6 source-census closure.",
+    "No in-source mathematical theorem proof beyond exact textual rendering.",
+    "No GitHub Actions success for this versioned test.",
+    "No W evidence used."
+  ]
+}

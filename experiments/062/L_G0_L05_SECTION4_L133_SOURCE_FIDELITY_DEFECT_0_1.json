@@ -1,0 +1,122 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-section4-l133-source-fidelity-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_L133_SOURCE_FORMULA_OMISSION_AND_PREMATURE_G3_CLOSURE_REOPEN_G0_G1",
+  "authority": false,
+  "authority_effect": "STOP_L133_G3_DISPOSITION_AND_REQUIRE_SOURCE_CENSUS_REEXTRACTION",
+  "track": "L",
+  "branch_head_at_detection": "e6cebd27a74daff4d9cb78c9a05177e216411f9e",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source": {
+    "article": "L05 Division Algebras, Triality, and Exceptional Magic, published version of record 2026-08-29",
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "section": "§4 Triality Lie Algebras",
+    "locations": [
+      "§4 opening six-form decomposition Eq under title",
+      "§4.1 su(3) 3x3 matrix Eq.(10), commutator output five component equations immediately below, explicit basis brackets and Cartan-root brackets",
+      "§4.2 sp(3) quaternionic 3x3 matrix Eq.(12), commutator output six component equations, exact Clifford basis brackets Eq.(13)",
+      "§4.2 generalized reflection and canonical triality conjugation Eq.(14)",
+      "§4.3 f4 and split analogues: source-specific forms (still require full separate census)"
+    ]
+  },
+  "historical_inputs": {
+    "legacy_ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_5.json",
+      "git_blob_sha": "49a458ebd39e08770967afeb1a9f1f6d53a4b06c",
+      "source_item": "L-SSC-133",
+      "body": "The triality Lie algebras are constructed by adjoining three D-role carriers to tri(D), yielding su(3), sp(3), f4(-52) and split/noncompact analogues with explicit representation decompositions and Lie brackets."
+    },
+    "G1": {
+      "path": "experiments/062/L133_G1_SOURCE_INCIDENCE_0_1.json",
+      "git_blob_sha": "8298d95d69e007a8ce5acbc2d3f8358fde4dae7f",
+      "status": "L133_TARGETED_G1_SOURCE_INCIDENCE_COMPLETE_CANDIDATE"
+    },
+    "G2": {
+      "path": "experiments/062/L133_G2_NEUTRAL_SUBGRAPH_0_1.json",
+      "git_blob_sha": "368eaff622992785e46a356b2e23f5bcf4e68e9b",
+      "status": "L133_TARGETED_G2_NEUTRAL_SUBGRAPH_CANDIDATE"
+    },
+    "G3": {
+      "path": "experiments/062/L133_G3_CORE_DEFINABILITY_0_1.json",
+      "git_blob_sha": "42cd4066975eec56b15323e72f58255df711195b",
+      "status": "L133_TARGETED_G3_FIXED_POINT_FOUR_SUMMAND_LIE_ASSEMBLY_DEMAND"
+    },
+    "stage_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_5.json",
+      "git_blob_sha": "9b6c8414766ae0a5144ff3b91dc9428125eb96a8"
+    }
+  },
+  "defects": [
+    {
+      "id": "L133_D1_SU3_EXACT_MATRIX_AND_BRACKET_COMPONENTS_MISSING",
+      "evidence": "L133 G1 R07 refers to an explicit eight-dimensional bracket system, but its formula_ast contains only SOURCE_FAMILY_BRACKET_SYSTEM(C-family,eq4.2). It does not preserve source five independent commutator component equations or source 3x3 traceless anti-Hermitian matrix equality with its multiple source presentations, signs, conjugations, roles and factors.",
+      "source_semantics_missing": [
+        "3x3 matrix entries and real/complex role binding; traceless source 2-parameter gauge",
+        "five commutator outputs B1_3, B2_3, v_3, psi_3, chi_3 with exact source order and signs",
+        "explicit nonzero basis-level root/Cartan brackets and antisymmetrized partners"
+      ],
+      "affected_g1": [
+        "L-SSC-133-R07",
+        "L-SSC-133-R04",
+        "L-SSC-133-R05"
+      ]
+    },
+    {
+      "id": "L133_D2_SP3_SIX_EXACT_BRACKET_COMPONENTS_MISSING",
+      "evidence": "L133 G1 R08 says 'explicit twenty-one-dimensional bracket systems' but does not conserve the quaternionic 3x3 source matrix nor six ordered bracket expressions for (M3,P3,V3,v3,psi3,chi3). The source separately prints 12-by-12 real and 6-by-6 complex presentation information; none follows from name sp(3).",
+      "source_semantics_missing": [
+        "3x3 anti-Hermitian quaternionic off-diagonal tilde layout",
+        "six commutator component equations preserving noncommutative order and inner conjugation",
+        "two distinct source matrix realization scopes and dimension claims"
+      ],
+      "affected_g1": [
+        "L-SSC-133-R08",
+        "L-SSC-133-R04",
+        "L-SSC-133-R05"
+      ]
+    },
+    {
+      "id": "L133_D3_G3_PREMATURE_CORE_DISPOSITION",
+      "evidence": "G3 0.1 R04 and R05 are marked CORE_CLOSED because source-specific maps are said to be explicit/already represented. Actual L133 G1 0.1/G2 0.1 contain only high-level family descriptors and no exact tensor-index or ordered product formula trees; this does not establish an exact reconstructable map. The old parent closure pins L127 G7 0.1 and L132 G7 0.1, both stale.",
+      "affected_g3": [
+        "L-SSC-133-R02",
+        "L-SSC-133-R04",
+        "L-SSC-133-R05"
+      ],
+      "disposition": "INVALIDATE_OLD_G3_DISPOSITIONS_FOR_COMPLETE_L133_SOURCE_TARGET",
+      "why": "A Core-closed outcome cannot be justified solely by pointing to names or unrepresented source coefficients."
+    },
+    {
+      "id": "L133_D4_SOURCE_REAL_SPLIT_AND_ROOT_PHASE_GUARDS",
+      "evidence": "Source §4.1/§4.2 states presentation-specific matrix systems, coefficients and an explicitly phase-incomplete root-space view. The old G1 does not expose these as separately reversible source relations, potentially collapsing source-representation non-equivalence.",
+      "needs_audit": [
+        "separate Eq.11 split-complex source sign table",
+        "exact H/Hprime coefficient roles and timelike real-structure qualifier",
+        "root-space phases and explicit automorphism matrices without inventing root mappings"
+      ]
+    }
+  ],
+  "earliest_lawful_reopen": "G0 L-SSC-133 source semantic granularity of the frozen 191-item source target; then re-extract L133 G1 from corrected source, only after parent L127/L129/L130/L131/L132 invalidation chains are repaired.",
+  "relationship_to_existing_L133_audit": "Historical L133_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1 correctly rejected name-only extraction, but its 12-occurrence G1 successor still abstracted away the printed source equations. This new defect is stricter: source equation/operand-level conservation is required.",
+  "invalidation": {
+    "L_G0": "Existing L source census 0.2 and new 0.5 are source-incomplete for L133 §4 as well as the previously discovered L05 §2/§3 issues.",
+    "L133_G1_G3": "Treat historical L133 G1/G2/G3 0.1 as stale and source-incomplete; no prior Core-closed disposition is current for expanded target.",
+    "L134": "Historical L134 native inner-triality packet does not qualify L133's missing full bracket and total Lie assembly.",
+    "L132": "Still upstream blocked independently by G0 and L131; do not advance.",
+    "L127": "Separate corrected SI namespace G7 0.2 preserved for its narrowly qualified old local target, no global source completeness inferred.",
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "required_repair": [
+    "Freeze an independent source expression list for §4.1 and §4.2 with source equation identity, ordered operands, role carrier, binder incidence, negative/exclusion, exact vs heuristic and split/ordinary scope.",
+    "Finish §4.3 and remaining §4 source census before claiming source completeness.",
+    "New versioned SSC successor preserving the 191-item identities and every earlier assertion, appending source expression records for L133/L134 where load-bearing.",
+    "Re-extract source-local G1, regenerate neutral G2 with proof of source reconstruction, only then adjudicate G3 without stale L132 or L127 authorities.",
+    "Replay G4/G5H/G6/G7 only after corrected parents; no Rec IA while global primitive closure incomplete."
+  ],
+  "nonclaims": [
+    "Source equations are assertions of the published L05 corpus, not independently proved mathematical theorems.",
+    "No external verifier passed.",
+    "No W evidence or hypotheses used.",
+    "This is not an exhaustive six-paper source census."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-expression-verifier-mutation-escape-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_G0_VERIFIER_ADVERSARIAL_ESCAPE_NO_SOURCE_PROMOTION",
+  "authority": false,
+  "track": "L",
+  "head_at_discovery": "1af89247364614ca2286048cd47300078e2c5b40",
+  "source": {
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "section": "L05 §3, conditional T=1 duality, published Eq. following anti-invariance",
+    "verified_census_id": "L-SSC-129"
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l05-expression-census-0-5.mjs",
+    "git_blob_sha": "910f07cb219cabe276f9667ccccc3b8e4c8ad26a",
+    "mode": "In-memory execution of the exact Node verifier program body with readFileSync and Git-blob SHA mapped from the live repository; NOT a GitHub Actions CI execution",
+    "result": "FAIL_8_OF_9_MUTATIONS_REJECTED"
+  },
+  "target_candidate": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_5.json",
+    "git_blob_sha": "49a458ebd39e08770967afeb1a9f1f6d53a4b06c",
+    "status": "NOT_FROZEN",
+    "source_audit_path": "experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json",
+    "source_audit_git_blob_sha": "860b0a964c98ce224e7a595768240a176b73a8ba"
+  },
+  "failure": {
+    "mutation": "Delete denominator from v=tilde(psi chi)/|psi chi|^2 while keeping T=1 condition and three terms",
+    "actual": "Verifier checked only the number of terms and condition text, so the mutant was not rejected.",
+    "class": "FALSE_POSITIVE_SOURCE_FIDELITY_CONTROL_WEAKNESS",
+    "earliest_lawful_reopen": "G0 candidate verifier fixture/controls; source SSC 0.5 and its 0.3 transcription remain candidates, not invalidated by the test bug unless independent source comparison finds a semantic difference."
+  },
+  "independent_source_contract": {
+    "conditional_scope": "T(v,psi,chi)=1 for a matched triple",
+    "three_ordered_equations": [
+      "v=tilde(psi chi)/|psi chi|^2",
+      "psi=tilde(chi v)/|chi v|^2",
+      "chi=tilde(v psi)/|v psi|^2"
+    ],
+    "modality": "SOURCE_CONDITIONAL_EQUATIONS",
+    "guards": [
+      "Each numerator and conjugation placement source-specific",
+      "Each denominator matches the numerator's ordered product and is squared",
+      "Do not infer all denominators nonzero as an unconditional source theorem",
+      "Keep all three role equations and the matched-triple hypothesis"
+    ]
+  },
+  "other_unchecked_source_risks": [
+    "Eq9 indexed Clifford and division-algebra expressions must be controlled by independently frozen fixtures.",
+    "Eq9 five-term factorization and rotation pairs must be ordered and binder-conserved.",
+    "Six real/split triality table equalities are not established by count alone.",
+    "Exact/approximate distinction and source superscript-minus have independent controls but demand replay after verifier revision."
+  ],
+  "next": "Create a new verifier 0.6 with exact, independently fixed source expectations for the three duality equations and additional Eq9/full-expression adversarial controls, preserve the 0.5 script as failed evidence, execute a local deterministic pass; no G0 freeze before full source-level audit and lawful CI.",
+  "nonclaims": [
+    "An in-memory local execution is not a successful GitHub Actions CI run.",
+    "The source paper's asserted mathematics is not independently proved.",
+    "No L132 or L133 replay authorized.",
+    "No W premise used."
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "isograph.exp062-w-g7-source-granularity-audit.v0.1",
+  "date": "2026-10-07",
+  "status": "SOURCE_LOCAL_GRANULARITY_AUDIT_COMPLETE_TARGETED_SSC_CORRECTION_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "active": true,
+    "scope_note": "Only unavailable third-party/external verification is bypassed. Source conservation, No-Evasion Primitive Closure, deterministic replay, qualification controls, reconstruction, and track independence remain required."
+  },
+  "scope": {
+    "target_census_ids": [
+      "W-SSC-029",
+      "W-SSC-149"
+    ],
+    "target_occurrences": [
+      "W-SSC-029-O03",
+      "W-SSC-029-O04",
+      "W-SSC-149-O02",
+      "W-SSC-149-O03"
+    ],
+    "source_expansion": false,
+    "source_corpus_unchanged": true,
+    "cross_track_evidence_used": false,
+    "L_evidence_used": false
+  },
+  "inputs": {
+    "source_corpus": {
+      "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+      "git_blob_sha": "5775af1ab9289f97d903b39d5eb8eda241bafe78"
+    },
+    "W_source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_2.json",
+      "git_blob_sha": "25bff8c3320a73f9f20c3532c31c33918b120648"
+    },
+    "source_demand_census": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+      "git_blob_sha": "0b1c0e1bb9a742a0c219b0953b77aabe9f90e802"
+    },
+    "W_extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b"
+    },
+    "prior_G7": {
+      "path": "experiments/062/W_G7_VARIATIONAL_STATIONARITY_INSTANTIATION_0_1.json",
+      "git_blob_sha": "6c153edb677bf13b30667ca31b9ad762ec58d196"
+    },
+    "primitive_211000": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md",
+      "git_blob_sha": "69334c02e906bc60667745597a7be589ba7f8772"
+    }
+  },
+  "source_local_observations": [
+    {
+      "census_id": "W-SSC-029",
+      "source_locator": "W01 §3.1, arXiv:2104.05099v2, printed pp. 6-7",
+      "current_body": "W01's frame-bundle description distinguishes spin-connection one-forms from canonical/frame one-forms and uses the Palatini action integral epsilon e wedge e wedge Omega; connection variation gives torsion-free Levi-Civita structure and frame variation gives Einstein equations.",
+      "source_visible_structure_not_conserved_in_current_body": [
+        "The Palatini presentation explicitly identifies e and omega as the fundamental fields.",
+        "The action explicitly contains curvature as Omega(omega), preserving dependence of curvature on the connection.",
+        "The two variation consequences are explicitly introduced as equations of motion.",
+        "The connection-variation branch gives an explicit torsion-free equation before identifying the resulting connection as Levi-Civita.",
+        "The torsion-free statement explicitly determines omega in terms of e."
+      ],
+      "load_bearing_for_current_boundary": [
+        "fundamental-field role incidence",
+        "action-to-connection dependency through Omega(omega)",
+        "explicit result-equation structure on the connection-variation branch",
+        "dependency of the torsion-free result on both omega and e"
+      ],
+      "insufficient_even_after_conservation": [
+        "No explicit carrier of admissible variation directions is defined.",
+        "No total or single-valued first-variation relation is defined.",
+        "No zero-first-variation predicate is stated.",
+        "No universal quantification over variation directions is stated.",
+        "No iff equates a zero-first-variation predicate with the source equations."
+      ]
+    },
+    {
+      "census_id": "W-SSC-149",
+      "source_locator": "W02 §IV.3, arXiv:2311.00608v2, printed pp. 8-9",
+      "current_body": "W02 records a chiral gravitational action involving a self-dual two-form Sigma constructed from the tetrad and a right-handed curvature two-form; varying the connection gives the torsion-free relation and varying the tetrad gives the Einstein equations.",
+      "source_visible_structure_not_conserved_in_current_body": [
+        "The source writes the action as an explicit pairing of Sigma with the right-handed curvature.",
+        "Sigma is explicitly constructed from the tetrad.",
+        "The source says the action is varied with respect to the connection and separately with respect to the tetrad.",
+        "The torsion-free result is explicitly a relation between the tetrad and the connection."
+      ],
+      "load_bearing_for_current_boundary": [
+        "selected varied-role incidence",
+        "tetrad-to-Sigma action dependency",
+        "connection/tetrad participation in the source result relation"
+      ],
+      "insufficient_even_after_conservation": [
+        "No explicit carrier of admissible variation directions is defined.",
+        "No total or single-valued first-variation relation is defined.",
+        "No zero-first-variation predicate is stated.",
+        "No universal quantification over variation directions is stated.",
+        "No iff equates a zero-first-variation predicate with the torsion-free relation or Einstein equations."
+      ]
+    }
+  ],
+  "source_conservation_ruling": {
+    "result": "TARGETED_SSC_CORRECTION_REQUIRED_BEFORE_ANY_LOWER_CANDIDATE_MAY_CONSUME_THE_NEW_DETAIL",
+    "reason": "The additional facts are already inside the frozen W01/W02 corpus and therefore are not source expansion. They are load-bearing to the attempted decomposition and must be conserved in a successor SSC/source-demand input before downstream reasoning may rely on them.",
+    "historical_inputs_immutable": true,
+    "reopen_only": [
+      "W-SSC-029",
+      "W-SSC-149"
+    ],
+    "downstream_invalidation": "Any semantic successor to the W source census invalidates the affected G1 source bodies and every downstream G2/G3/G4/G5 result that depends on the changed occurrence graph. Unaffected source bodies may be carried forward only by exact predecessor pin/replay, not by assumption."
+  },
+  "primitive_211000_ruling": {
+    "result": "UNCHANGED_SOURCE_INSTANCE_INSUFFICIENT_FOR_211000",
+    "candidate_preserved": true,
+    "candidate_rejected_globally": false,
+    "source_instance_closed_occurrences": 0,
+    "reason": "The newly recovered source-visible detail improves action/role/result structure but still does not supply 211000's direction-carrier, total first-variation, zero-stationarity, or universal-quantification obligations."
+  },
+  "decomposition_layers": [
+    {
+      "layer": "D0",
+      "name": "action_and_role_incidence",
+      "source_support": "SUPPORTED_MORE_STRONGLY_AFTER_SOURCE_CORRECTION"
+    },
+    {
+      "layer": "D1",
+      "name": "selected_role_variation_operation",
+      "source_support": "NAMED_AND_ROLE_INDEXED_BUT_INTERNAL_BEHAVIOR_UNDEFINED"
+    },
+    {
+      "layer": "D2",
+      "name": "variation_to_result_consequence",
+      "source_support": "ASSERTED_FOR_THE_FOUR_TARGET_OCCURRENCES_BUT_TRANSFORMATION_SEMANTICS_UNDEFINED"
+    },
+    {
+      "layer": "D3",
+      "name": "result_internal_semantics",
+      "source_support": "PARTIAL_W01_TORSION_BRANCH; OTHERWISE_NAMED_OR_PARTIAL"
+    },
+    {
+      "layer": "D4",
+      "name": "zero_stationarity_over_variation_directions",
+      "source_support": "ABSENT"
+    }
+  ],
+  "hypothesis_probes": [
+    {
+      "hypothesis_id": "W-G5H-VAR-LOWER-001",
+      "origin": "HYPOTHESIS",
+      "parent_residual": [
+        "W-G4-Q0023",
+        "W-G4-Q0351"
+      ],
+      "candidate_statement": "Represent a generic action-parent, selected varied role, and resulting condition as a reusable variation-result relation without specifying the internal variation transformation.",
+      "declared_scope": "Only the four W variation-result occurrences.",
+      "motivating_evidence": "Two W source bodies each exhibit one action parent and two distinct varied roles with source-declared results.",
+      "prohibited_evidence": [
+        "L track",
+        "cross-track correspondence",
+        "textbook variational calculus",
+        "Euler-Lagrange semantics",
+        "unfrozen external mathematics"
+      ],
+      "predicted_consequences": [
+        "All four target occurrences fit the same role pattern.",
+        "Non-variation give/gives/giving controls remain excluded."
+      ],
+      "known_alternatives": [
+        "A genuine selected-role perturbation/replacement operator.",
+        "Primitive 211000 stationarity interface.",
+        "Preserve the current boundary."
+      ],
+      "positive_controls": [
+        "W-SSC-029-O03",
+        "W-SSC-029-O04",
+        "W-SSC-149-O02",
+        "W-SSC-149-O03"
+      ],
+      "negative_adversarial_controls": [
+        "W-SSC-014-O02",
+        "W-SSC-104-O02",
+        "W-SSC-104-O03",
+        "W-SSC-114-O02",
+        "W-SSC-126-O01"
+      ],
+      "falsifier": "If the candidate's only behavior is the same undefined source variation/consequence relation expressed with new names, No-Evasion Primitive Closure rejects it.",
+      "adaptive_evidence": "The candidate was proposed specifically in response to the 211000 G7 source-instance mismatch.",
+      "fresh_confirmation_status": "NOT_APPLICABLE_REJECTED_BEFORE_G6",
+      "coverage_limits": "No claim outside the four target W occurrences.",
+      "revision_lineage": [
+        "W_G5_HYPOTHESIS_VARIATIONAL_STATIONARITY_0_1",
+        "W_G7_VARIATIONAL_STATIONARITY_INSTANTIATION_0_1"
+      ],
+      "disposition": "REJECT_BEFORE_G6_NO_EVASION_OPAQUE_VARIATION_RENAMING"
+    },
+    {
+      "hypothesis_id": "W-G5H-VAR-LOWER-002",
+      "origin": "HYPOTHESIS",
+      "parent_residual": [
+        "W-G4-Q0023",
+        "W-G4-Q0351"
+      ],
+      "candidate_statement": "Model variation as a genuine selected-role replacement/perturbation comparison: replace one represented action role while other represented roles are held fixed, evaluate the action relation before/after, and derive a result relation from that comparison.",
+      "declared_scope": "Generic source-neutral selected-role perturbation candidate, tested only for potential instantiation at the four target W occurrences.",
+      "motivating_evidence": "The frozen sources explicitly vary the action with respect to selected fields/roles.",
+      "prohibited_evidence": [
+        "L track",
+        "cross-track correspondence",
+        "textbook variational calculus",
+        "Euler-Lagrange semantics",
+        "unfrozen external mathematics"
+      ],
+      "predicted_consequences": [
+        "The varied role must be a represented dependency of the action.",
+        "A replacement/perturbation carrier and a before/after evaluation relation must be source-instantiable.",
+        "Role swapping or varying a non-dependent role must be rejected."
+      ],
+      "known_alternatives": [
+        "Weak opaque variation-result relation.",
+        "Primitive 211000 stationarity interface.",
+        "Preserve the current boundary."
+      ],
+      "positive_controls": [
+        "W-SSC-029-O03",
+        "W-SSC-029-O04",
+        "W-SSC-149-O02",
+        "W-SSC-149-O03"
+      ],
+      "negative_adversarial_controls": [
+        "vary a role absent from the represented action dependency",
+        "swap selected varied role while retaining the original result",
+        "treat ordinary parameter specialization as variation",
+        "accept arbitrary consequence language without action dependency"
+      ],
+      "falsifier": "If the W source does not state replacement/perturbation carriers, held-fixed roles, and before/after action comparison semantics, the candidate cannot instantiate source-locally.",
+      "adaptive_evidence": "The candidate was constructed to add genuine transformation behavior missing from the weak relation candidate.",
+      "fresh_confirmation_status": "NOT_APPLICABLE_SOURCE_INSTANCE_FALSIFIED",
+      "coverage_limits": "No source-neutral qualification attempted because W source instantiation already fails.",
+      "revision_lineage": [
+        "W-G5H-VAR-LOWER-001"
+      ],
+      "disposition": "REJECT_FOR_W_SOURCE_INSTANCE_UNSUPPORTED_TRANSFORMATION_SEMANTICS"
+    }
+  ],
+  "conclusion": {
+    "lower_generic_candidate_currently_justified": false,
+    "source_information_is_part_of_block": true,
+    "primitive_211000_is_over_strong_for_current_W_instance": true,
+    "lower_decomposition_needed": true,
+    "current_source_supports_internal_variation_behavior": false,
+    "preserve_boundary_if_no_new_authority": true
+  },
+  "next_lawful_actions": [
+    "Create a successor W Source Semantic Census that corrects only W-SSC-029 and W-SSC-149 using the already frozen W01/W02 evidence; do not add new sources.",
+    "Create a successor source-demand input pinned to that W census successor while leaving L unchanged.",
+    "Re-extract and re-audit the two affected W source bodies and deterministically replay unaffected W bodies.",
+    "Regenerate affected G2/G3/G4/G5 products under Method 0.3.",
+    "Only if the corrected graph exposes a genuinely lower non-evasive behavior should a new G5H candidate enter G6. Otherwise preserve the W current-authority boundary."
+  ],
+  "nonclaims": [
+    "This audit does not qualify a new primitive or module.",
+    "This audit does not close any W occurrence.",
+    "This audit does not authorize W recursive IA.",
+    "This audit does not use L evidence.",
+    "This audit does not claim the four W residuals are mathematically irreducible.",
+    "This audit does not claim external verification passed."
+  ]
+}

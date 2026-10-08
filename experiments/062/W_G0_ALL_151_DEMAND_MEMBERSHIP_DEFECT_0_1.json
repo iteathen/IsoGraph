@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w-g0-full-demand-membership-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "HISTORICAL_86_DEMAND_MEMBERSHIP_NOT_ASSERTION_CONSERVING_AS_COMPLETE_UNRESOLVED_CORPUS",
+  "branch_head_at_detection": "448b586e2bc1a425b1d8d16f55dba772939d1b8f",
+  "source_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_14.json",
+    "git_blob_sha": "2912ed46355a73f3368f428fc2478cc8e5ce4d4e",
+    "items": 151
+  },
+  "historical_projection": {
+    "path": "experiments/062/W_G0_W02_LATE_SOURCE_DEMAND_PROJECTION_0_4.json",
+    "git_blob_sha": "000f2dd31e66823a1974d3076c9c01bafdb23f9a",
+    "items": 86
+  },
+  "historical_ledger": {
+    "path": "research/woit-lisi-isomorph/woit/CORE021_CLOSURE_LEDGER_0_19.json",
+    "git_blob_sha": "cb0563a66fc6af881efcb66b04faa78631405ea4",
+    "qualification": "STALE_SSC0_2_NOT_CURRENT_AUTHORITY"
+  },
+  "categories": {
+    "IN__CLOSED_SCHEMA": 8,
+    "OUT__INCOMPLETE_UNEXPANDED": 52,
+    "OUT__CLOSED_SCHEMA": 4,
+    "IN__INCOMPLETE_UNEXPANDED": 78,
+    "OUT__CLOSED_PRIMITIVE": 9
+  },
+  "finding": "52 W source items omitted from the 86-member unresolved projection were themselves historically marked INCOMPLETE_UNEXPANDED. Eight source items historically CLOSED_SCHEMA were included as unresolved. Old membership therefore is not the full source-derived unresolved set and cannot be treated as a lawful G0 demand census.",
+  "earliest_stage": "G0_ASSERTION_CENSUS_CONSERVATION_SOURCE_TO_DEMAND_MEMBERSHIP",
+  "invalidation": [
+    "OLD_86_DEMAND_FROZEN_SCOPE_IF_ASSERTED",
+    "HISTORICAL_W_G1_TO_G7_COMPLETION",
+    "OLD_W131_CLOSED_SCHEMA_IMPLICIT_EXCLUSION"
+  ],
+  "repair": "Produce a 151-row W-only membership conservation ledger with historical classification as evidence only and all 151 rows PENDING CURRENT G0 source semantics; do not assume historical closure or remove 86 members by score. Regenerate unresolved-set eligibility after complete source audit and primitive/schema closure.",
+  "no_evasion": [
+    "Open historical 52 missing rows remain explicit",
+    "Do not promote old closed items",
+    "Do not read L semantic inputs or mutate shared 237-member ledger",
+    "No G1 or G7 can consume old 86 until frozen SSC review"
+  ],
+  "owner_bypass": "THIRD_PARTY_REVIEW_ONLY_NOT_SOURCE_CENSUS_OR_NODE_CI",
+  "provenance": {
+    "original_source_authors": "Peter Woit",
+    "audit": "Agent-assisted W source/provenance reconciliation under project direction",
+    "earliest_evidence_currently_located": "2026-10-08 preserved W SSC 0.14 / prior demand 0.4 / historical Core-0.21 ledger 0.19"
+  }
+}

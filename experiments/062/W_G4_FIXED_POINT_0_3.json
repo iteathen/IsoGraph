@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062-w-g4-fixed-point.v0.3",
+  "date": "2026-10-07",
+  "status": "W_G4_W097_CORRECTED_INPUT_FIXED_POINT_COMPLETE_W_LOCAL_G5_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "comparison_scope": "W_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g3_fixed_point": {
+      "path": "experiments/062/W_G3_FIXED_POINT_0_7.json",
+      "git_blob_sha": "2c3841ade0eb9bf5c62e3317a92548138c4f0214"
+    },
+    "g4_quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_3.json",
+      "git_blob_sha": "9c620fa5dba663d503e96dbe7b2f0849e74f63d5"
+    },
+    "generator": {
+      "path": "experiments/062/tools/generate-w-g4-alpha-structural-quotient-0-3.mjs",
+      "git_blob_sha": "1236409a791361c281fa2135dc8004f5390d649b"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g4-alpha-structural-quotient-0-3.mjs",
+      "git_blob_sha": "ccd75d2cac284135af524aa41d99737068ffd418"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37685520705,
+    "conclusion": "success",
+    "unresolved_roots": 432,
+    "core_closed_roots": 13,
+    "quotient_classes": 372,
+    "singleton_classes": 344,
+    "multi_member_classes": 28,
+    "largest_class_size": 12,
+    "deterministic_replay_exact": true
+  },
+  "fixed_point": {
+    "W_G4_complete": true,
+    "W_local_G5_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "global_G5_authorized": false
+  },
+  "constraints": [
+    "G5 may consume only corrected W quotient plus W source/G3 provenance.",
+    "No L evidence or cross-track recurrence may enter W G5.",
+    "Historical W G4 class IDs are not authority.",
+    "The fixed-point-free involution idea remains hypothesis-only until deterministic G5 completes."
+  ],
+  "next_stage": "W_LOCAL_G5_W097_CORRECTED_INPUT_CANDIDATE_BASIS_SYNTHESIS"
+}

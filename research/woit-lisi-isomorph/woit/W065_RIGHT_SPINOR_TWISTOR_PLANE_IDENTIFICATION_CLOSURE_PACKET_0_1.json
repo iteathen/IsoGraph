@@ -1,0 +1,34 @@
+{
+  "schema": "woit.w065-right-spinor-twistor-plane-identification-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-065",
+  "frozen_body": "W04a identifies the right-handed spinor plane appearing in the vector construction with the tautological right-handed plane used to represent a twistor spacetime point.",
+  "source": "W04a",
+  "support_packets": [
+    "W135_RIGHT_SPINOR_TENSOR_EUCLIDEAN_SPLIT_CLOSURE_PACKET_0_1.json",
+    "W133_STANDARD_VS_RIGHT_HANDED_TANGENT_CLOSURE_PACKET_0_2.json",
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "right_spinor_carrier": 189010,
+    "right_spinor_vector_construction": "W-SSC-135",
+    "right_spinor_injection_into_T": 202105,
+    "reference_twistor_plane": 990110,
+    "twistor_plane_definition": "image of exact S_R injection into T",
+    "tautological_incidence": 990210
+  },
+  "rationale": "The same exact S_R carrier used in W135 is injected by 202105 into T; W047/W133 define 990110 as precisely that image plane.",
+  "guards": [
+    "This identifies the source carrier/plane only; it does not equate all Grassmannian planes with a fixed S_R copy.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

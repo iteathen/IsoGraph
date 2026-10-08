@@ -1,0 +1,63 @@
+{
+  "schema": "isograph.exp062-l-g1-source-local-adjudication.v0.25",
+  "date": "2026-10-06",
+  "status": "COMPLETE_151_BODY_REPEAT_AUDIT_SINGLE_RESIDUAL_CORRECTION_SUPPORTED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "extraction_contract": "experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md",
+  "predecessor_input": "experiments/062/L_EXTRACTION_RECONCILED_0_24.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "audit_scope": {
+    "track": "L",
+    "frozen_bodies_reviewed": 151,
+    "coverage": "151/151",
+    "mode": "COMPLETE_MANUAL_SOURCE_LOCAL_REPEAT_AUDIT"
+  },
+  "purpose": "Preserve the one residual load-bearing referential-identity relation found by the complete 0.24 audit. Other apparent modal/reporting heads were adjudicated as already reconstructible from existing relation/dependency structure or as non-load-bearing source narration.",
+  "corrections": [
+    {
+      "census_id": "L-SSC-075",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-075-O08",
+        "source_span": "The same spin(11,3) Clifford presentation",
+        "relation_span": "same",
+        "argument_spans": [
+          "spin(11,3) Clifford presentation"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source's referential identity claim that this is the same spin(11,3) Clifford presentation rather than a newly introduced presentation."
+      }
+    }
+  ],
+  "rejected_as_redundant_or_narrative": [
+    "L-SSC-076 'combines' is reconstructible from the explicit H equality together with component-role incidence.",
+    "L-SSC-097 'so' is already represented by the not-identical conclusion's explicit dependencies on group generation, P/CP violation, and CPT preservation.",
+    "L-SSC-132 'source-specific' is source-narrative qualification already guaranteed by G1's frozen-source provenance and adds no new underlying relation."
+  ],
+  "counts": {
+    "corrections": 1,
+    "additions": 1,
+    "replacements": 0,
+    "affected_bodies": 1,
+    "predecessor_occurrences": 817,
+    "expected_successor_occurrences": 818
+  },
+  "protected_semantics": [
+    "L-SSC-130 corrected individual-versus-even-composition semantics remain pinned.",
+    "L05 ordinary-octonion discrepancy remains uncorrected.",
+    "No superseded scalar, Woit, or historical-U semantics are imported.",
+    "L-SSC-177 and L-SSC-178 remain unresolved semantic-decomposition demands."
+  ],
+  "fixed_point_claim": false,
+  "g2_authorized": false,
+  "next_required_steps": [
+    "Generate and deterministically verify L_EXTRACTION_RECONCILED_0_25.json.",
+    "Run one complete 151-body source-local audit against 0.25.",
+    "Only if that pass yields zero corrections may the L source-local G1 fixed point be frozen.",
+    "Then perform one fresh independent all-151 cold audit against exactly that fixed-point candidate, subject to the documented provider boundary.",
+    "Keep G2 blocked."
+  ]
+}

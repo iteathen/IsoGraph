@@ -1,0 +1,475 @@
+{
+  "schema": "lisi.regrounded-l06-action-summary-logic-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_BODIES_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "frontier": "L_REGROUNDED_L06_ACTION_SUMMARY_LOGIC_FRONTIER_0_1.json",
+  "native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_23.isg",
+  "relation_atoms": {
+    "actionContainsTerm": 944115,
+    "actionDefinedOver": 944116,
+    "sourceConditionHolds": 944117,
+    "dependsSolelyOn": 944118,
+    "reducesTo": 944119,
+    "inducedUsing": 944123,
+    "introducedIndependently": 944124
+  },
+  "target_atoms": {
+    "gravityAction": 944192,
+    "ehCosmoTerms": 944193,
+    "kretschmannSkyTerm": 944194,
+    "torsionTerm": 944195,
+    "gravityDynamics": 944196,
+    "pureEHDynamics": 944197,
+    "extendedGeneralizedYMAction": 944198,
+    "fullDeformingGroup": 944199,
+    "hRigidEnough": 944200,
+    "gOverG0RigidEnough": 944201,
+    "integrand": 944202,
+    "embeddedSpacetimeCoordinates": 944203,
+    "spacetimeAction": 944204,
+    "reducedSuperconnectionAction": 944205,
+    "bosonicCurvatureTerm": 944206,
+    "secondOrderFermionKineticTerm": 944207,
+    "fourFermionTerm": 944208,
+    "potentiallyNonzero": 944209,
+    "fermionConjugation": 944210,
+    "deformingGroupMetricKillingStructure": 944211
+  },
+  "items": [
+    {
+      "census_id": "L-SSC-167",
+      "frozen_body": "The resulting gravity action contains Einstein-Hilbert/cosmological terms together with a Kretschmann/SKY curvature-squared term and torsion term, so its gravitational dynamics are explicitly not identical to pure Einstein-Hilbert gravity.",
+      "source_provenance": "L06 §§10,17",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944115
+              },
+              {
+                "kind": "RAW",
+                "id": 942167
+              },
+              {
+                "kind": "RAW",
+                "id": 944192
+              },
+              {
+                "kind": "RAW",
+                "id": 944193
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944115
+              },
+              {
+                "kind": "RAW",
+                "id": 942167
+              },
+              {
+                "kind": "RAW",
+                "id": 944192
+              },
+              {
+                "kind": "RAW",
+                "id": 944194
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944115
+              },
+              {
+                "kind": "RAW",
+                "id": 942167
+              },
+              {
+                "kind": "RAW",
+                "id": 944192
+              },
+              {
+                "kind": "RAW",
+                "id": 944195
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "IMPLIES",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "AND",
+                "args": [
+                  {
+                    "kind": "OP",
+                    "role": "PREDICATE_APPLICATION",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944115
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 942167
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944192
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944194
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "OP",
+                    "role": "PREDICATE_APPLICATION",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944115
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 942167
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944192
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944195
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "OP",
+                "role": "NOT",
+                "args": [
+                  {
+                    "kind": "OP",
+                    "role": "EQUAL",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944196
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944197
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150010 944115 942167 944192 944193) (^150010 944115 942167 944192 944194) (^150010 944115 942167 944192 944195) (^150004 (^150001 (^150010 944115 942167 944192 944194) (^150010 944115 942167 944192 944195)) (^150003 (^150008 944196 944197))))",
+      "support_incidences": [
+        [
+          940005,
+          941167,
+          940105
+        ]
+      ],
+      "target_internal_behavior_imported": false
+    },
+    {
+      "census_id": "L-SSC-177",
+      "frozen_body": "L06 derives an extended generalized Yang-Mills action over the full deforming group and reduces it to spacetime only when H and G/G0 remain rigid enough that the integrand depends solely on embedded-spacetime coordinates.",
+      "source_provenance": "L06 §13 eqs. (13.8)–(13.10)",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944116
+              },
+              {
+                "kind": "RAW",
+                "id": 942177
+              },
+              {
+                "kind": "RAW",
+                "id": 944198
+              },
+              {
+                "kind": "RAW",
+                "id": 944199
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "IMPLIES",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "AND",
+                "args": [
+                  {
+                    "kind": "OP",
+                    "role": "PREDICATE_APPLICATION",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944117
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 942177
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944200
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "OP",
+                    "role": "PREDICATE_APPLICATION",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944117
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 942177
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944201
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "OP",
+                    "role": "PREDICATE_APPLICATION",
+                    "args": [
+                      {
+                        "kind": "RAW",
+                        "id": 944118
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 942177
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944202
+                      },
+                      {
+                        "kind": "RAW",
+                        "id": 944203
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944119
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942177
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944198
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944204
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150010 944116 942177 944198 944199) (^150004 (^150001 (^150010 944117 942177 944200) (^150010 944117 942177 944201) (^150010 944118 942177 944202 944203)) (^150010 944119 942177 944198 944204)))",
+      "support_incidences": [
+        [
+          940005,
+          941177,
+          940105
+        ]
+      ],
+      "target_internal_behavior_imported": false
+    },
+    {
+      "census_id": "L-SSC-178",
+      "frozen_body": "The reduced superconnection action contains bosonic curvature, a second-order fermion kinetic term and a potentially nonzero four-fermion term; fermion conjugation is induced using deforming-group metric/Killing structure rather than introduced independently.",
+      "source_provenance": "L06 §13 eqs. (13.11)–(13.12)",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944115
+              },
+              {
+                "kind": "RAW",
+                "id": 942178
+              },
+              {
+                "kind": "RAW",
+                "id": 944205
+              },
+              {
+                "kind": "RAW",
+                "id": 944206
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944115
+              },
+              {
+                "kind": "RAW",
+                "id": 942178
+              },
+              {
+                "kind": "RAW",
+                "id": 944205
+              },
+              {
+                "kind": "RAW",
+                "id": 944207
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944006
+              },
+              {
+                "kind": "RAW",
+                "id": 942178
+              },
+              {
+                "kind": "RAW",
+                "id": 944208
+              },
+              {
+                "kind": "RAW",
+                "id": 944209
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944123
+              },
+              {
+                "kind": "RAW",
+                "id": 942178
+              },
+              {
+                "kind": "RAW",
+                "id": 944210
+              },
+              {
+                "kind": "RAW",
+                "id": 944211
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "NOT",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944124
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942178
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944210
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150010 944115 942178 944205 944206) (^150010 944115 942178 944205 944207) (^150010 944006 942178 944208 944209) (^150010 944123 942178 944210 944211) (^150003 (^150010 944124 942178 944210)))",
+      "support_incidences": [
+        [
+          940005,
+          941178,
+          940105
+        ]
+      ],
+      "target_internal_behavior_imported": false
+    }
+  ],
+  "guards": [
+    "no curvature, gravity, Yang-Mills, group, Hodge, or fermion mathematics is imported",
+    "raw relations have only the finite represented source incidences",
+    "no historical closure packet is a premise",
+    "no Woit or synthesis semantics are premises"
+  ],
+  "closure_claim": false
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "woit-lisi.track-l-source-census-correction-audit.v0.3",
+  "date": "2026-10-08",
+  "status": "SOURCE_CENSUS_CANDIDATE_CORRECTION_AUDIT_NO_NEW_FREEZE",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "f69d29c62dc48e73f7ad20c5c8ce0ff763a05c39",
+  "source": {
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "article": "L05 version of record 2026-08-29",
+    "scope": "§3 only, source paper text unchanged"
+  },
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "git_blob_sha": "db889137e94759727cfbf8e2c21f6749b728bebd",
+    "source_item_count": 191,
+    "status": "FROZEN_COMPLETE_SOURCE_SEMANTIC_CENSUS_CORRECTED"
+  },
+  "confirmed_defect": {
+    "path": "experiments/062/L_G0_L05_SOURCE_CENSUS_OMISSION_DEFECT_0_2.json",
+    "git_blob_sha": "9701509995bac11ec1f09e378abe2445d20d607c"
+  },
+  "source_assertion_inventory": {
+    "path": "experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_1.json",
+    "git_blob_sha": "2b466419ce3c438b6b712b53ddc396391a0ac1a6"
+  },
+  "change_policy": {
+    "unchanged_items_expected": 187,
+    "changed_items_expected": 4,
+    "source_identities_reused": true,
+    "new_or_recycled_SI_allocations": 0,
+    "old_191_item_ids_exactly_preserved": true,
+    "old_item_bodies_preserved_as_exact_prefixes": true,
+    "negative_and_inconsistency_source_records_preserved": true,
+    "broad_source_claims_NOT_sufficient_to_reconstruct_added_math": true
+  },
+  "changes": [
+    {
+      "id": "L-SSC-129",
+      "previous_source_provenance": "L05 §3 eq. (6)",
+      "new_source_provenance": "L05 §3 Eq. (6) and dualization/incidence paragraphs",
+      "previous_body": "The real cyclic trilinear triality form T(v,psi,chi) is defined from multiplication and can conversely define the division-algebra product; the source treats this bidirectionality as structural, not merely notation.",
+      "appended_body": "The same source separately states a conditional T(v,psi,chi)=1 three-role dualization with inverse squared product norms and ordered conjugated products, plus non-unit/generalized reflection dualization and a chiral-spinor incidence equation. Conditional scope and denominator guards are not inferred from mere generic product recovery.",
+      "after_body": "The real cyclic trilinear triality form T(v,psi,chi) is defined from multiplication and can conversely define the division-algebra product; the source treats this bidirectionality as structural, not merely notation. The same source separately states a conditional T(v,psi,chi)=1 three-role dualization with inverse squared product norms and ordered conjugated products, plus non-unit/generalized reflection dualization and a chiral-spinor incidence equation. Conditional scope and denominator guards are not inferred from mere generic product recovery.",
+      "required_source_fidelity": [
+        "SOURCE_ORDER",
+        "PARAMETER_BINDING",
+        "ROLE",
+        "SCOPE",
+        "POLARITY",
+        "EXACT_VS_APPROXIMATE",
+        "NEGATIVE_EVIDENCE"
+      ]
+    },
+    {
+      "id": "L-SSC-130",
+      "previous_source_provenance": "L05 §3",
+      "new_source_provenance": "L05 §3 unit/reflection paragraphs and Eqs. (7)-(8)",
+      "previous_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T.",
+      "appended_body": "It additionally asserts the action R^u A=(u gamma) A (u gamma)^- on an arbitrary Clifford element A using the Clifford pseudoscalar, with the source describing (u gamma) as a Pin element; this broader adjoint domain is distinguished from the source vector/negative-spinor/positive-spinor role maps.",
+      "after_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T. It additionally asserts the action R^u A=(u gamma) A (u gamma)^- on an arbitrary Clifford element A using the Clifford pseudoscalar, with the source describing (u gamma) as a Pin element; this broader adjoint domain is distinguished from the source vector/negative-spinor/positive-spinor role maps.",
+      "required_source_fidelity": [
+        "SOURCE_ORDER",
+        "PARAMETER_BINDING",
+        "ROLE",
+        "SCOPE",
+        "POLARITY",
+        "EXACT_VS_APPROXIMATE",
+        "NEGATIVE_EVIDENCE"
+      ]
+    },
+    {
+      "id": "L-SSC-131",
+      "previous_source_provenance": "L05 §3 eq. (9)",
+      "new_source_provenance": "L05 §3 Eq. (9), factorization, and following Clifford-rotor/rotation-conjugation formulas",
+      "previous_body": "Compositions of generalized reflections produce ordinary rotations and generalized triality automorphisms t^(uw); the canonical u=w=1 case cycles (v,psi,chi)->(psi,chi,v).",
+      "appended_body": "The written operator chain t^(uw)=R_p^w R_v^u R_m^tilde(u) R_p^tilde(u)=R_p^w R_p^u t=R_p^(uw)t=t R_v^(uw) and arbitrary-even-word factorization must be retained. A simple rotation is source-defined by R_v^(uw)=R_v^w R_v^u. Independently, the source gives U=exp(B/2), v'=R_v^B v=U v U^-1, Psi'=R_v^B Psi=U Psi and separately first-order (approximately-equal, not exact) B expansions; B=(1/2)B^cd gamma_cd has distinct chiral B_m and B_p blocks. It also writes R_m^B=t^2 R_v^B t and R_p^B=t R_v^B t^2, with ordered composition and source powers preserved.",
+      "after_body": "Compositions of generalized reflections produce ordinary rotations and generalized triality automorphisms t^(uw); the canonical u=w=1 case cycles (v,psi,chi)->(psi,chi,v). The written operator chain t^(uw)=R_p^w R_v^u R_m^tilde(u) R_p^tilde(u)=R_p^w R_p^u t=R_p^(uw)t=t R_v^(uw) and arbitrary-even-word factorization must be retained. A simple rotation is source-defined by R_v^(uw)=R_v^w R_v^u. Independently, the source gives U=exp(B/2), v'=R_v^B v=U v U^-1, Psi'=R_v^B Psi=U Psi and separately first-order (approximately-equal, not exact) B expansions; B=(1/2)B^cd gamma_cd has distinct chiral B_m and B_p blocks. It also writes R_m^B=t^2 R_v^B t and R_p^B=t R_v^B t^2, with ordered composition and source powers preserved.",
+      "required_source_fidelity": [
+        "SOURCE_ORDER",
+        "PARAMETER_BINDING",
+        "ROLE",
+        "SCOPE",
+        "POLARITY",
+        "EXACT_VS_APPROXIMATE",
+        "NEGATIVE_EVIDENCE"
+      ]
+    },
+    {
+      "id": "L-SSC-132",
+      "previous_source_provenance": "L05 §3",
+      "new_source_provenance": "L05 §3 Tri(D) linear action, infinitesimal T equation, and tri(D) table",
+      "previous_body": "L05 distinguishes the triality group Tri(D) from ordinary rotation and automorphism groups and gives source-specific triality algebras tri(C), tri(H), tri(O) and split analogues with different real forms.",
+      "appended_body": "The source additionally states a linear three-role Tri(D) action preserving the exact trilinear T, inclusion of rotations and triality transformations in Tri(D), and the three-position infinitesimal condition T(Rv,psi,chi)+T(v,Rpsi,chi)+T(v,psi,Rchi)=0 together with explicit B-generator actions. None of these expressions is established by a conventional Lie-group name.",
+      "after_body": "L05 distinguishes the triality group Tri(D) from ordinary rotation and automorphism groups and gives source-specific triality algebras tri(C), tri(H), tri(O) and split analogues with different real forms. The source additionally states a linear three-role Tri(D) action preserving the exact trilinear T, inclusion of rotations and triality transformations in Tri(D), and the three-position infinitesimal condition T(Rv,psi,chi)+T(v,Rpsi,chi)+T(v,psi,Rchi)=0 together with explicit B-generator actions. None of these expressions is established by a conventional Lie-group name.",
+      "required_source_fidelity": [
+        "SOURCE_ORDER",
+        "PARAMETER_BINDING",
+        "ROLE",
+        "SCOPE",
+        "POLARITY",
+        "EXACT_VS_APPROXIMATE",
+        "NEGATIVE_EVIDENCE"
+      ]
+    }
+  ],
+  "require_more_source_audit": [
+    "Check L05 §3 Eqs. (7)-(8) coefficient cases against current native compilation before finalizing the G0 source census.",
+    "Check possible unrepresented source semantics in the remaining L01–L06 corpus, not only the 26 §3 inventory.",
+    "Produce an actual complete G1 source-extraction/reconstruction and repeat audit with independent tests before freezing any corrected census."
+  ],
+  "nonclaims": [
+    "A four-item candidate extension is not a new frozen source-census completion certificate.",
+    "No mathematical theorem follows from the source strings.",
+    "No L source G3/G4/G5 closure or module promotion.",
+    "No third-party verification passed and no W evidence used."
+  ]
+}

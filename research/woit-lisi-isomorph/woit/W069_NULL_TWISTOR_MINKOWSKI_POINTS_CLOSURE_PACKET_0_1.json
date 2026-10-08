@@ -1,0 +1,35 @@
+{
+  "schema": "woit.w069-null-twistor-minkowski-points-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-069",
+  "frozen_body": "In four dimensions W04b uses the SU(2,2)=Spin(4,2) action on PT with positive, negative, and null orbits; compactified Minkowski points are represented by CP1s contained in the null orbit.",
+  "source": "W04b",
+  "support_packets": [
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "positive_orbit": 995130,
+    "negative_orbit": 995131,
+    "null_orbit": 995132,
+    "totally_null_two_plane_carrier": 995140,
+    "twistor_projective_space": 202113,
+    "twistor_P1_reason": "projectivization of an exact complex two-plane",
+    "null_plane_fiber_clause": "every projective line of a 995140 plane lies in 995132"
+  },
+  "guards": [
+    "Spin(4,2) is retained as source navigation/cover-role metadata at the W014 boundary; cover topology is not used.",
+    "No light-ray differential geometry is inferred.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

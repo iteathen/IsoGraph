@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.exp062-w-g4-fixed-point.v0.4",
+  "date": "2026-10-07",
+  "status": "W_G4_POST_G7_RELATIONAL_CLOSURE_FIXED_POINT_COMPLETE_W_LOCAL_G5_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "comparison_scope": "W_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g4_quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "g7_closure": {
+      "path": "experiments/062/W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1.json",
+      "git_blob_sha": "4fb7708649aa37807ab87baea9a31c8358ec9b42"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g4-post-g7-0-4.mjs",
+      "git_blob_sha": "69510ed5cddfbf085928869e976c6d01374132dd"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37720396046,
+    "conclusion": "success",
+    "effective_unresolved_roots": 430,
+    "quotient_classes": 370,
+    "singleton_classes": 342,
+    "multi_member_classes": 28,
+    "largest_class_size": 12,
+    "qualified_module_closed_context_nodes": 2,
+    "deterministic_replay_exact": true
+  },
+  "fixed_point": {
+    "W_G4_complete": true,
+    "W_local_G5_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "W_recursive_IA_authorized": false
+  },
+  "constraints": [
+    "O06/O04 are excluded as unresolved roots but retained as QUALIFIED_MODULE_CLOSED_BOUNDARY context inside W097 components.",
+    "No L evidence or candidate semantics enters quotient keys.",
+    "G5 must consume the current G7 closure overlay rather than historical W G4/G5 tuples."
+  ],
+  "next_stage": "W_LOCAL_G5_POST_G7_RELATIONAL_CLOSURE_REPLAY"
+}

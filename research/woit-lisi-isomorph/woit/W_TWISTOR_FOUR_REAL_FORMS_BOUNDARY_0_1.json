@@ -1,0 +1,43 @@
+{
+  "schema": "woit.twistor-four-real-forms-boundary.v0.1",
+  "status": "FROZEN_FOR_W051_W092",
+  "date": "2026-10-05",
+  "common_complex_carrier": "202100 = exact four-complex-dimensional T=C4",
+  "represented_real_forms": {
+    "compact_SU4_role": {
+      "hermitian_form": 999120,
+      "signature": "positive definite (+,+,+,+)",
+      "group": 999130,
+      "vector_action": 999134,
+      "projective_action": 999135
+    },
+    "split_SL4R_role": {
+      "ordinary_conjugation": 999100,
+      "real_fixed_carrier": 999150,
+      "real_dimension": 4,
+      "group": 999160,
+      "complex_vector_action": 999164,
+      "real_action": 999166,
+      "projective_action": 999165
+    },
+    "minkowski_SU22_role": {
+      "authority": "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json",
+      "hermitian_signature": "(+,+,-,-)",
+      "positive_negative_null_orbits": true
+    },
+    "euclidean_SL2H_role": {
+      "authority": "W053_EUCLIDEAN_SL2H_TWISTOR_CLOSURE_PACKET_0_1.json",
+      "quaternionic_real_structure": true,
+      "fractional_HP1_action": true
+    }
+  },
+  "intentionally_abstracted_non_load_bearing_semantics": [
+    "explicit determinant-one normalization equations for SU4/SL4R/SL2H at the group-matrix level",
+    "explicit embeddings of all four source group carriers into one common matrix carrier for SL(4,C)",
+    "Lie-group topology",
+    "the Spin(6,C), Spin(5,1), and Spin(4,2) covering maps/topology"
+  ],
+  "rationale": "W051/W092 distinguish the four real-form structures by their fixed loci, Hermitian signatures, quaternionic structures, orbit decompositions, and geometric roles. Those behaviors are represented exactly on a common C4 carrier. The omitted determinant/cover data are not used by these obligations.",
+  "invalidation_rule": "If later W semantics use exact determinant normalization, parent-group embeddings, or Spin covering data, extend this boundary before treating those later obligations as closed.",
+  "cross_author_semantics_available": false
+}

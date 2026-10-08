@@ -1,0 +1,53 @@
+{
+  "schema": "woit-lisi.unification-u1-triality-fiber-extension.v0.1",
+  "date": "2026-10-04",
+  "phase": "U1.1-TR",
+  "parent": "U1.0-PC",
+  "status": "REJECTED",
+  "tested_hypothesis": {
+    "id": "UH-001B",
+    "statement": "Lisi quaternionic division-algebra/triality structure extends as a total source-faithful action over the U1.0 projective family including the compactification patch.",
+    "admitted_as_u_edge": false
+  },
+  "evidence": {
+    "u0": "UNIFICATION_KERNEL_U0_0_1.isg",
+    "u1_0": "UNIFICATION_U1_PROJECTIVE_COMPACTIFICATION_0_1.md",
+    "lisi_assertions": "../lisi/ASSERTION_BASE_A0_0_5.md",
+    "lisi_traversal": "../lisi/SOURCE_TRAVERSAL_LEDGER_0_2.json",
+    "triality_schema": "../support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.md",
+    "antiinvolution_side_swap": "../support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.md",
+    "pseudoreal_schema": "../support/PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.md",
+    "projective_convention_transform": "../woit/WOIT_HP1_PROJECTIVE_CONVENTION_TRANSFORM_0_1.md"
+  },
+  "tests": {
+    "finite_u0_reconstruction": "PASS",
+    "lisi_affine_restriction": "PASS",
+    "woit_u1_0_reconstruction": "PASS",
+    "w01_w05_represented_geometry": "PASS_WITH_KAPPA_SWAP_AND_ACTION_SIDE_SWAP",
+    "source_specific_triality_chart_transport": "QU_NOT_SOURCE_CLOSED",
+    "pseudoreal_triality_compatibility": "QU_NOT_ESTABLISHED",
+    "source_backed_vector_role_at_infinity": "FAIL_ABSENT",
+    "unsupported_lisi_operator_at_infinity": "ABSENT_BY_GUARD",
+    "total_global_triality_without_new_infinity_algebra": "FAIL",
+    "source_native_lisi_to_woit_citation_used_as_premise": false
+  },
+  "obstruction": {
+    "id": "U1.1-O1",
+    "class": "OBSTRUCTION",
+    "statement": "A total triality action over the U1.0 compactification requires source-backed algebraic/vector-role semantics at the infinity patch or an exact family-preservation law; neither is currently available.",
+    "forbidden_repair": [
+      "invent v=infinity",
+      "invent Gamma(infinity)",
+      "extend quaternion multiplication/norm/triality to the compactification point without a separately labeled synthesis candidate",
+      "rewrite Woit projective geometry merely to make triality total"
+    ]
+  },
+  "residual": {
+    "id": "L-ALG",
+    "disposition": "PRESERVED_OUTSIDE_U1_0",
+    "finite_chart_incidence_transport": "AVAILABLE",
+    "full_triality_transport": "OPEN_AFTER_SOURCE_CLOSURE"
+  },
+  "synthesis_edges_accepted": [],
+  "result": "U1-TC remains structurally consistent through U1.0-PC; strong U1.1-TR global triality/fiber extension is rejected."
+}

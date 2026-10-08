@@ -1,0 +1,160 @@
+{
+  "schema": "isograph.exp062-ordered-positivity-split-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "ORDERED_POSITIVITY_SPLIT_WITNESS_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L_G5H_ORDERED_POSITIVITY_SPLIT_WITNESS_0_1.json",
+    "git_blob_sha": "b638267672dbf92fad21dafa660f7b5d9d88fe08"
+  },
+  "scope": {
+    "obligation_count": 20,
+    "selected_relation_ids": [
+      216000,
+      216001,
+      216002
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "OPS-SSC-001",
+      "kind": "ORDERED_FIELD_PARENT",
+      "body": "216000 requires exact field support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-002",
+      "kind": "ORDER_ZERO_ONE",
+      "body": "216000 requires 0 <= 1.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-003",
+      "kind": "ORDER_DOMAIN",
+      "body": "Every admitted LE(a,b) pair is field-typed.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-004",
+      "kind": "ORDER_REFLEXIVE",
+      "body": "216000 requires a <= a.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-005",
+      "kind": "ORDER_ANTISYMMETRIC",
+      "body": "216000 requires a<=b and b<=a to imply a=b.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-006",
+      "kind": "ORDER_TRANSITIVE",
+      "body": "216000 requires a<=b and b<=c to imply a<=c.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-007",
+      "kind": "ORDER_TOTAL",
+      "body": "216000 requires a<=b or b<=a for all field a,b.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-008",
+      "kind": "ORDER_TRANSLATION",
+      "body": "216000 requires a<=b to imply a+c<=b+c.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-009",
+      "kind": "ORDER_NONNEGATIVE_PRODUCT",
+      "body": "216000 requires 0<=a and 0<=b to imply 0<=ab.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-010",
+      "kind": "POSDEF_ORDER",
+      "body": "216001 requires exact 216000 order.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-011",
+      "kind": "POSDEF_VECTOR",
+      "body": "216001 requires exact vector support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-012",
+      "kind": "POSDEF_Q_FUNCTION",
+      "body": "216001 requires total single-valued Q:V->C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-013",
+      "kind": "POSDEF_ZERO",
+      "body": "216001 requires Q(0_V)=0_C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-014",
+      "kind": "POSDEF_NONNEGATIVE",
+      "body": "216001 requires 0<=Q(v) for admitted v.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-015",
+      "kind": "POSDEF_ZERO_ONLY",
+      "body": "216001 requires Q(v)=0 to imply v=0.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-016",
+      "kind": "NEG_WITNESS_ORDER",
+      "body": "216002 requires exact 216000 order.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-017",
+      "kind": "NEG_WITNESS_VECTOR",
+      "body": "216002 requires exact vector and Q-function support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-018",
+      "kind": "NEG_WITNESS_MEMBER",
+      "body": "216002 requires the declared witness to lie in V and qneg=Q(vneg).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-019",
+      "kind": "NEG_WITNESS_STRICT",
+      "body": "216002 requires qneg<=0 and qneg!=0.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "OPS-SSC-020",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No division, field completeness, named-algebra identity, triality/reflection, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "Q-order on exact rationals",
+      "positive-definite rational two-vector Q",
+      "indefinite rational two-vector Q with explicit negative witness"
+    ],
+    "adversarial": [
+      "non-total comparator",
+      "translation-incompatible comparator",
+      "degenerate Q",
+      "indefinite Q mislabeled positive-definite",
+      "zero witness",
+      "positive witness"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

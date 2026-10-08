@@ -1,0 +1,150 @@
+{
+  "schema": "isograph.exp062-ordered-positivity-split-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "ORDERED_POSITIVITY_SPLIT_WITNESS_0_1",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_ORDERED_POSITIVITY_SPLIT_WITNESS_0_1.json",
+      "git_blob_sha": "b638267672dbf92fad21dafa660f7b5d9d88fe08"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_ORDERED_POSITIVITY_SPLIT_MODULE_SSC_0_1.json",
+      "git_blob_sha": "1f1b9b67a1b092051e7443d9abef5d4edb41e229"
+    }
+  },
+  "inference_profile": {
+    "id": "ordered-positivity-schema-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 216000/216001/216002. No external ordered-field or quadratic-form theorem library.",
+    "rules": [
+      {
+        "id": "OPS-IA-R1",
+        "trigger": "216000",
+        "derives": [
+          "FIELD",
+          "LE_TYPED",
+          "ZERO_LE_ONE",
+          "REFLEXIVE",
+          "ANTISYMMETRIC",
+          "TRANSITIVE",
+          "TOTAL",
+          "TRANSLATION_MONOTONE",
+          "NONNEGATIVE_PRODUCT_CLOSED"
+        ]
+      },
+      {
+        "id": "OPS-IA-R2",
+        "trigger": "216001",
+        "derives": [
+          "216000",
+          "VECTOR",
+          "Q_FUNCTION",
+          "Q_ZERO",
+          "Q_NONNEGATIVE",
+          "Q_ZERO_ONLY_AT_VECTOR_ZERO"
+        ]
+      },
+      {
+        "id": "OPS-IA-R3",
+        "trigger": "216002",
+        "derives": [
+          "216000",
+          "VECTOR",
+          "Q_FUNCTION",
+          "WITNESS_MEMBER",
+          "Q_WITNESS_VALUE",
+          "Q_WITNESS_LE_ZERO",
+          "Q_WITNESS_NE_ZERO"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "216002 -> named split algebra",
+      "216002 -> division property",
+      "216001 -> field completeness or Archimedean property",
+      "216001 -> canonical Euclidean norm",
+      "216000 -> real-closed field",
+      "positive/negative norm classification -> triality/reflection semantics"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(216000)",
+        "SCHEMA_DEFINITION(216001)",
+        "SCHEMA_DEFINITION(216002)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "OPS-IA-001",
+          "assertion": "216000 entails an exact field dependency and typed total-order relation satisfying the encoded order laws.",
+          "support": [
+            "216000 explicit body"
+          ]
+        },
+        {
+          "id": "OPS-IA-002",
+          "assertion": "216000 entails translation compatibility and nonnegative-product closure exactly as encoded.",
+          "support": [
+            "216000 explicit body"
+          ]
+        },
+        {
+          "id": "OPS-IA-003",
+          "assertion": "216001 entails exact 216000 order plus vector/Q-function support.",
+          "support": [
+            "216001 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "OPS-IA-004",
+          "assertion": "216001 entails Q(0)=0, Q(v)>=0, and Q(v)=0 -> v=0.",
+          "support": [
+            "216001 explicit body"
+          ]
+        },
+        {
+          "id": "OPS-IA-005",
+          "assertion": "216002 entails exact 216000 order plus vector/Q-function support and one declared witness/value pair.",
+          "support": [
+            "216002 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "OPS-IA-006",
+          "assertion": "216002 entails qneg<=0 and qneg!=0 for the declared witness, hence strict negativity relative to exact 216000.",
+          "support": [
+            "216002 explicit body"
+          ]
+        },
+        {
+          "id": "OPS-IA-007",
+          "assertion": "216002 does not by itself identify a named split algebra, division law, or canonical form.",
+          "support": [
+            "candidate scope firewall and absence of stronger dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only selected conjunct/dependency projections yields no new assertion and cannot cross division/completeness/named-algebra/triality boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 7,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "isograph.dnwf-attempt1-classification-taxonomy-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "QUALIFICATION_HOLDOUT_DEFECT_CONFIRMED_ATTEMPT1_NOT_A_PASS",
+  "experiment_run": 37414305171,
+  "evidence_root": "experiments/061/evidence/run-37414305171-attempt-1",
+  "frozen_source_sha": "4d6c931ba8fbc7f0cd059086e16423a443cab0de",
+  "decoder_score": "SCORE_DECODERS.json",
+  "deterministic_result": {
+    "decoder_A": "16/19",
+    "decoder_B": "16/19",
+    "exact_mismatches": [
+      "DNWF-C15",
+      "DNWF-C17",
+      "DNWF-C18"
+    ]
+  },
+  "finding": "The three exact label mismatches are classification-taxonomy ambiguities, not observed semantic-loss failures. Both independent decoders reconstruct the hidden load-bearing distinction in their reasons but select INCONSISTENT_DNWF because the public prompt defines the token set without defining mutually exclusive usage conditions.",
+  "evidence": [
+    {
+      "case_id": "DNWF-C15",
+      "oracle_label": "DISTINCT_SEMANTICS",
+      "decoder_labels": [
+        "INCONSISTENT_DNWF",
+        "INCONSISTENT_DNWF"
+      ],
+      "decoder_semantics": [
+        "Recursive and external fields have distinct semantic roles; changing the field role changes generated-carrier semantics.",
+        "Changing recursive to external changes constructor signature/generated-carrier semantics; signatures must be treated as distinct."
+      ],
+      "oracle_required": [
+        "recursive versus external field role is semantic",
+        "changing recursive to external changes generated-carrier/fold semantics"
+      ],
+      "diagnosis": "The case simultaneously describes two distinct signatures and a false report claiming sameness. Without label definitions, either DISTINCT_SEMANTICS (difference classification) or INCONSISTENT_DNWF (the report/case package violates DNWF) is linguistically defensible."
+    },
+    {
+      "case_id": "DNWF-C17",
+      "oracle_label": "OVERCLAIM",
+      "decoder_labels": [
+        "INCONSISTENT_DNWF",
+        "INCONSISTENT_DNWF"
+      ],
+      "decoder_semantics": [
+        "Structural induction requires every constructor case; Alt must be proven.",
+        "DNWF structural induction must cover every constructor; omitting Alt is forbidden."
+      ],
+      "oracle_required": [
+        "structural induction requires every constructor case",
+        "Alt case omitted"
+      ],
+      "diagnosis": "The intended target is proof overclaim, but the prompt asks whether the described structure is consistent and never says INCONSISTENT_DNWF is reserved for relation/structure violations while OVERCLAIM is reserved for invalid conclusions."
+    },
+    {
+      "case_id": "DNWF-C18",
+      "oracle_label": "OVERCLAIM",
+      "decoder_labels": [
+        "INCONSISTENT_DNWF",
+        "INCONSISTENT_DNWF"
+      ],
+      "decoder_semantics": [
+        "Closure must be shown for all recursive cases, not a strict subset.",
+        "DNWF induction requires closure for arbitrary recursive instances; partial coverage is insufficient."
+      ],
+      "oracle_required": [
+        "induction step must cover arbitrary recursive-field instances",
+        "strict subset closure is insufficient"
+      ],
+      "diagnosis": "Same token-boundary ambiguity as C17; semantic reasoning matches the oracle while classification namespace is underspecified."
+    }
+  ],
+  "repair_requirements": [
+    "Preserve attempt-1 evidence and DOES_NOT_QUALIFY result unchanged.",
+    "Do not modify DNWF candidate semantics.",
+    "Freeze a successor public prompt defining mutually exclusive classification-token meanings.",
+    "Clarify C15 that each signature may separately be valid and the tested defect is semantic sameness.",
+    "Clarify C17/C18 that the underlying signature/carrier is otherwise DNWF-consistent and the tested defect is the asserted proof conclusion.",
+    "Freeze a successor oracle/cases/prompt before any rerun.",
+    "Rerun because the qualification corpus materially changes to repair a demonstrated ambiguity; do not rerun the predecessor."
+  ],
+  "disposition": "SUCCESSOR_HOLDOUT_REQUIRED",
+  "qualification_effect": "Attempt 1 remains negative evidence for exact-token scoring and positive diagnostic evidence that the underlying DNWF distinctions were reconstructed. It is not a qualification pass.",
+  "candidate_changed": false
+}

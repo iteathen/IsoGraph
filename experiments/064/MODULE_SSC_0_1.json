@@ -1,0 +1,72 @@
+{
+  "schema": "isograph.exp064-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_G6_MODULE_SSC",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module_id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+  "primitive_id": 221100,
+  "candidate": {
+    "md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIXED_POINT_FREE_INVOLUTION_SCHEMA_0_1.md",
+      "git_blob_sha": "1e0db252cc8ff7fd1b92622aa435955eb779afe8"
+    },
+    "native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIXED_POINT_FREE_INVOLUTION_SCHEMA_0_1.isg",
+      "git_blob_sha": "12f5fc5949ddd19fdfb319133529d41a5525c7c1"
+    }
+  },
+  "discovery_evidence": {
+    "path": "experiments/062/W_G5H_FIXED_POINT_FREE_INVOLUTION_0_1.json",
+    "git_blob_sha": "1512c37b82f3676abe06cd0a57c9decfc82aa27f",
+    "origin": "HYPOTHESIS"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_16.json",
+    "git_blob_sha": "a7a072a7493ba7796148ca695193193f30a1d13a"
+  },
+  "native_support": {
+    "primitive_logic": {
+      "path": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+      "git_blob_sha": "2630336da5c4117a15a43c1dc0847536b33ed083"
+    },
+    "primitive_data": {
+      "path": "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "git_blob_sha": "c0479ac1de1a1c8ff5737221133601618b1a56cf"
+    }
+  },
+  "assertions": [
+    {
+      "id": "FPI-A01",
+      "claim": "P is a represented carrier predicate and F is a total single-valued self-map P -> P via qualified schema 182001."
+    },
+    {
+      "id": "FPI-A02",
+      "claim": "For every represented x in P, if F(x,y) and F(y,z), then z=x."
+    },
+    {
+      "id": "FPI-A03",
+      "claim": "For every represented x in P, if F(x,y), then y is not equal to x."
+    }
+  ],
+  "explicit_nonclaims": [
+    {
+      "id": "FPI-N01",
+      "claim": "The module does not assert that P is nonempty, finite, even-cardinality, projective, geometric, topological, linear, or field-valued."
+    },
+    {
+      "id": "FPI-N02",
+      "claim": "The module does not define a vector-level square-minus-one operator or any relation between vector and projective carriers."
+    },
+    {
+      "id": "FPI-N03",
+      "claim": "The module does not define antipodal, quaternionic, conjugation, real-form, twistor, or source-domain semantics."
+    },
+    {
+      "id": "FPI-N04",
+      "claim": "Qualification does not close W-SSC-097; a separate G7 source instance must establish the exact P/F interface."
+    }
+  ],
+  "qualification_target": "CORE_DEFINABLE_SCHEMA_WITH_EXPLICIT_SCOPE",
+  "qualification_scope": "Total single-valued fixed-point-free involutions on represented carriers only."
+}

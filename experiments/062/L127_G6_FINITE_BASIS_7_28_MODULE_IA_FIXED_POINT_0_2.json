@@ -1,0 +1,139 @@
+{
+  "schema": "isograph.exp062-l127-finite-basis-7-28-module-ia-fixed-point.v0.2",
+  "date": "2026-10-08",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "FINITE_BASIS_7_28_0_2",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_FINITE_BASIS_7_28_0_2.json",
+      "git_blob_sha": "24d6b841cefd61076ad05ee33e3297ac4fa666ba"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_SSC_0_2.json",
+      "git_blob_sha": "0807fe01058061f45b36d71e5d30b9147df8405d"
+    }
+  },
+  "inference_profile": {
+    "id": "finite-basis-7-28-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 225010/225001.",
+    "rules": [
+      {
+        "id": "FB-IA-R1",
+        "trigger": "225010",
+        "derives": [
+          "VECTOR(V)",
+          "SEVEN_MEMBERS",
+          "SEVEN_INDEPENDENT",
+          "SEVEN_SPAN"
+        ]
+      },
+      {
+        "id": "FB-IA-R2",
+        "trigger": "225001",
+        "derives": [
+          "VECTOR(V)",
+          "TWENTYEIGHT_MEMBERS",
+          "TWENTYEIGHT_INDEPENDENT",
+          "TWENTYEIGHT_SPAN"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "basis -> orthogonality",
+      "basis -> metric",
+      "basis -> operator algebra",
+      "basis -> Lie algebra",
+      "225001 -> so(8)",
+      "225010/225001 -> arbitrary-dimension theorem"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(225010)",
+        "SCHEMA_DEFINITION(225001)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "FB-IA-001",
+          "assertion": "225010 entails exact vector support and seven declared member vectors.",
+          "support": [
+            "225010 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-002",
+          "assertion": "225010 entails linear independence of the seven declarations.",
+          "support": [
+            "225010 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-003",
+          "assertion": "225010 entails spanning of every admitted vector by those seven declarations.",
+          "support": [
+            "225010 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-004",
+          "assertion": "225001 entails exact vector support and twenty-eight declared member vectors.",
+          "support": [
+            "225001 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-005",
+          "assertion": "225001 entails linear independence of the twenty-eight declarations.",
+          "support": [
+            "225001 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-006",
+          "assertion": "225001 entails spanning of every admitted vector by those twenty-eight declarations.",
+          "support": [
+            "225001 explicit body"
+          ]
+        },
+        {
+          "id": "FB-IA-007",
+          "assertion": "No metric/operator/Lie/named-so8 semantics follow from the selected basis schemas alone.",
+          "support": [
+            "candidate scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No further assertion follows without crossing prohibited metric/operator/Lie boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 7,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES",
+  "predecessor": {
+    "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_IA_FIXED_POINT_0_1.json",
+    "git_blob_sha": "17a5a82c63d37a868709068360fc2b27c027e735",
+    "status": "INVALIDATED_BY_SI_COLLISION"
+  },
+  "identity_repair": {
+    "old_dimension7_si": 225000,
+    "new_dimension7_si": 225010,
+    "ia_semantics_unchanged": true
+  }
+}

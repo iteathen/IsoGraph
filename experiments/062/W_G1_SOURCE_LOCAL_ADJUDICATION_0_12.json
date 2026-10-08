@@ -1,0 +1,152 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.12",
+  "date": "2026-10-06",
+  "status": "LITERAL_LAW_SWEEP_CORRECTIONS_SUPPORTED_REAUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/W_EXTRACTION_RECONCILED_0_11.json",
+  "predecessor_adjudication": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_11.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "audit_method": "All-84 literal-law sweep after the W 0.11 successor audit: every literal equality and map arrow in each frozen W body was checked for an explicit enclosing law occurrence. Name-internal notation such as N=2/N=4 was excluded when it is not asserted as an equation.",
+  "corrections": [
+    {
+      "census_id": "W-SSC-027",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-027-O04",
+        "source_span": "SU(2)=Sp(1)",
+        "relation_span": "=",
+        "argument_spans": [
+          "SU(2)",
+          "Sp(1)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-027-O01"
+        ],
+        "load_bearing_note": "Expose the exact equality identifying the source-written left/right action factor notation."
+      }
+    },
+    {
+      "census_id": "W-SSC-033",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-033-O04",
+        "source_span": "CP3 -> S4",
+        "relation_span": "->",
+        "argument_spans": [
+          "CP3",
+          "S4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-033-O01"
+        ],
+        "load_bearing_note": "Expose the explicit projective-twistor-to-base map arrow rather than leaving it only inside the bundle identity."
+      }
+    },
+    {
+      "census_id": "W-SSC-071",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-071-O07",
+        "source_span": "CP3 -> HP1=S4",
+        "relation_span": "->",
+        "argument_spans": [
+          "CP3",
+          "HP1=S4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-071-O01"
+        ],
+        "load_bearing_note": "Expose the explicit Euclidean fibration map arrow; the HP1=S4 equality is already separately conserved."
+      }
+    },
+    {
+      "census_id": "W-SSC-094",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-094-O06",
+        "source_span": "CP3->HP1=S4",
+        "relation_span": "->",
+        "argument_spans": [
+          "CP3",
+          "HP1=S4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-094-O01"
+        ],
+        "load_bearing_note": "Expose the explicit Euclidean fibration map arrow; the HP1=S4 equality is already separately conserved."
+      }
+    },
+    {
+      "census_id": "W-SSC-104",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-104-O04",
+        "source_span": "lambda=1",
+        "relation_span": "=",
+        "argument_spans": [
+          "lambda",
+          "1"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-104-O02"
+        ],
+        "load_bearing_note": "Expose the source-written parameter value that selects ordinary flat connections."
+      }
+    },
+    {
+      "census_id": "W-SSC-104",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-104-O05",
+        "source_span": "lambda=0",
+        "relation_span": "=",
+        "argument_spans": [
+          "lambda",
+          "0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "W-SSC-104-O03"
+        ],
+        "load_bearing_note": "Expose the source-written parameter value that selects Higgs bundles."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 6,
+    "additions": 6,
+    "replacements": 0,
+    "affected_bodies": 5,
+    "predecessor_occurrences": 317,
+    "expected_successor_occurrences": 323
+  },
+  "findings": [
+    "W 0.11 is not yet a source-local fixed point because six source-written equality/map laws remained only inside larger argument strings.",
+    "The six additions are exact source-local laws: SU(2)=Sp(1), three explicit CP3 map arrows, and lambda=1/lambda=0.",
+    "N=2/N=4 in the speculative clue body is nomenclature, not a source assertion of numerical equality, and was deliberately not promoted.",
+    "The polarity sweep found no additional mathematical occurrence requiring promotion: source-status wording such as 'not adopted dynamics' remains excluded by the G1 contract."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_12.json as exact W 0.11 plus these six additions.",
+    "Run deterministic exact-replay/source-span/dependency/duplicate/anti-pre-G5 verification.",
+    "Repeat the complete W source-local fixed-point audit on W 0.12, including literal equality/arrow, modality, polarity, and incidence sweeps.",
+    "Only a zero-change complete pass may freeze the W G1 candidate for a fresh independent cold audit.",
+    "Keep joint G2 blocked until both W and L independently obtain structurally valid zero-correction cold audits."
+  ],
+  "fixed_point_claim": false,
+  "independent_cold_audit_required": true,
+  "g2_authorized": false,
+  "authority": false
+}

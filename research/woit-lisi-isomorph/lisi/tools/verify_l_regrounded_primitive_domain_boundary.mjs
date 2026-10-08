@@ -1,0 +1,23 @@
+import fs from "node:fs";
+const boundary=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/L_REGROUNDED_PRIMITIVE_DOMAIN_BOUNDARY_0_1.json","utf8"));
+const manifest=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_36.json","utf8"));
+const ledger=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/CORE021_CLOSURE_LEDGER_0_33.json","utf8"));
+const ssc=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json","utf8"));
+const errors=[];
+const openManifest=manifest.items.filter(x=>x.closure_mode==="INCOMPLETE_UNEXPANDED").map(x=>x.census_id).sort();
+const openLedger=ledger.dispositions.filter(x=>x.closure_mode==="INCOMPLETE_UNEXPANDED").map(x=>x.census_id).sort();
+const assigned=Object.values(boundary.categories).flatMap(x=>x.ids);
+const unique=[...new Set(assigned)].sort();
+if(boundary.status!=="GENUINE_PRIMITIVE_DOMAIN_BOUNDARY_L_TRACK")errors.push("status");
+if(openManifest.length!==151||openLedger.length!==151)errors.push("open count");
+if(JSON.stringify(openManifest)!==JSON.stringify(openLedger))errors.push("manifest/ledger open mismatch");
+if(JSON.stringify(unique)!==JSON.stringify(openManifest))errors.push("boundary assignment mismatch");
+if(assigned.length!==unique.length)errors.push("duplicate assignment");
+if(boundary.conservation_check?.missing?.length||boundary.conservation_check?.extra?.length||boundary.conservation_check?.duplicates?.length)errors.push("recorded conservation");
+if(manifest.regrounded_compilation?.accepted_closed_census_items!==40)errors.push("closed count");
+for(const id of ["L-SSC-013","L-SSC-177","L-SSC-178"])if(!openManifest.includes(id))errors.push("required blocker "+id);
+if(ledger.inference_profile?.recursive_ia!==false||ledger.ia_fixed_point!==null)errors.push("IA state");
+const validSources=new Set(["L01","L02","L03","L04","L05","L06"]);
+for(const id of unique){const s=ssc.items.find(x=>x.id===id);const m=(s?.source_provenance||"").match(/L0[1-6]/)?.[0];if(!validSources.has(m))errors.push("source family "+id);}
+const result={pass:errors.length===0,errors,closed:40,open:151,category_counts:Object.fromEntries(Object.entries(boundary.categories).map(([k,v])=>[k,v.count])),ia_authorized:false,dp_authorized:false};
+console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;

@@ -1,0 +1,83 @@
+{
+  "schema": "lisi.l132-triality-lie-group-distinction-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "L-SSC-132",
+  "frozen_body": "L05 distinguishes the triality group Tri(D) from ordinary rotation and automorphism groups and gives source-specific triality algebras tri(C), tri(H), tri(O) and split analogues with different real forms.",
+  "source": "L05 §3",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_LIE_ALGEBRA_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_ROTATION_AUTOMORPHISM_DISTINCTION_0_1.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_LIE_ALGEBRA_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_ROTATION_AUTOMORPHISM_DISTINCTION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LOW_DIMENSIONAL_LIE_DIRECT_SUM_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FULL_METRIC_SKEW_ENDOMORPHISM_LIE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg"
+  ],
+  "prior_closed_dependencies": [
+    "L125-BODY",
+    "L131-BODY"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 12,
+    "declared_local_ids": 194,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "transformation_roles": {
+      "multiplication_automorphism": "exact linear bijection fixing unit and preserving product/norm via 187701 wrappers 238010-238015",
+      "ordinary_rotation": "same-type even reflection composition with identity role permutation via 238020 -> 235012",
+      "nonrotation_triality": "different-type even reflection composition with nontrivial order-three role permutation via 238021 -> 235013"
+    },
+    "role_category_atoms": {
+      "automorphism": 238001,
+      "rotation": 238002,
+      "triality": 238003
+    },
+    "category_distinction": "238001,238002,238003 are explicitly non-identical; no claim of set-theoretic disjointness of individual transformations is made",
+    "source_triality_lie_carriers": {
+      "C": 237000,
+      "Cprime": 237100,
+      "H": 237200,
+      "Hprime": 237300,
+      "O": 237400,
+      "Oprime": 237500
+    },
+    "reduced_shapes": {
+      "C": "exact direct sum of two 1D abelian Lie algebras",
+      "Cprime": "separate exact direct sum of two 1D abelian Lie algebras",
+      "H": "exact direct sum of three compact-type 3D 207001 Lie presentations",
+      "Hprime": "exact direct sum of three split sl2-type 236002 Lie presentations",
+      "O": "all metric-skew endomorphisms of the positive 8D source coefficient space",
+      "Oprime": "all metric-skew endomorphisms of the split (4,4) 8D source coefficient space"
+    }
+  },
+  "semantic_guards": [
+    "C and Cprime triality Lie carriers have the same reduced abelian Lie-bracket shape but remain separate source carriers; NEI has not run",
+    "rotation and triality are distinguished by role-permutation structure inherited from closed L131",
+    "Aut(D) is represented by multiplication/norm-preserving linear bijections and not by named group labels",
+    "the packet does not claim automorphism, rotation, and triality transformation sets are pairwise disjoint",
+    "ordinary-O source inconsistency remains preserved through the L125 dependency",
+    "no Woit or synthesis semantics occur in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062-w-g5-source-sufficiency-review.v0.4",
+  "date": "2026-10-07",
+  "status": "W_G5_POST_G7_NO_DETERMINISTIC_CANDIDATE_NEXT_W097_HYPOTHESIS_IDENTIFIED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "synthesis": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_4.json",
+    "g4_fixed_point": "experiments/062/W_G4_FIXED_POINT_0_4.json",
+    "g7_closure": "experiments/062/W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1.json"
+  },
+  "remaining_W097_review": [
+    {
+      "occurrence_id": "W-SSC-097-O05",
+      "priority": 1,
+      "disposition": "G5H_WARRANTED_SOURCE_GRANULARITY_TEST",
+      "reason": "The phrase 'no real points' asserts a concrete absence relation. A source-neutral empty-intersection decomposition can be falsified without defining realness, while any residual REAL_POINT/CONIC_POINT predicates remain explicit lower demands rather than hidden semantics."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O01",
+      "priority": 2,
+      "disposition": "HYPOTHESIS_POSSIBLE_BUT_LOWER_NEGATION_ACTION_UNREPRESENTED",
+      "reason": "The vector square-minus-one law is explicit but still hides one-step application and vector/scalar negation semantics."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O07",
+      "priority": 3,
+      "disposition": "DEPENDENT_ON_O01",
+      "reason": "The contrast is structurally dependent on O01 and already-closed O06; it should not be attacked before the vector branch is decomposed."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O02",
+      "priority": 4,
+      "disposition": "SOURCE_EQUIVALENCE_PRESENTATION_SEMANTICS_MISSING",
+      "reason": "The 'same real form as' claim requires a source-faithful equivalence/presentation witness not supplied by current represented authority."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O03",
+      "priority": 5,
+      "disposition": "ORDINARY_CONJUGATION_BEHAVIOR_MISSING",
+      "reason": "The distinction claim names two structures but current W097 graph does not yet supply enough behavior for ordinary conjugation to reconstruct the distinction generically."
+    }
+  ],
+  "next_hypothesis": {
+    "target_occurrence": "W-SSC-097-O05",
+    "target_class": "W-G4-Q0206",
+    "hypothesis_family": "SOURCE_NEUTRAL_EMPTY_INTERSECTION_DECOMPOSITION",
+    "question": "Can 'no real points' be decomposed into a Core-definable empty intersection between represented CONIC_POINT and REAL_POINT predicates while leaving the predicates themselves as explicit lower semantic demands?",
+    "required_falsifier": "Reject the hypothesis if it merely renames 'no real points' or if it silently defines REAL_POINT through conjugation/fixed-point semantics absent from the current W097 source graph."
+  },
+  "conclusion": {
+    "proposed_reusable_candidates": 0,
+    "unresolved_boundaries": 370,
+    "W_local_G5_complete": true,
+    "W_G5H_authorized": true,
+    "W_local_G6_required": false,
+    "W_track_primitive_closure_complete": false,
+    "W_track_sealed": false,
+    "cross_track_comparison_authorized": false
+  },
+  "nonclaims": [
+    "G7 closure of O06/O04 does not imply closure of any other W097 occurrence.",
+    "No historical W closure packet is authority for the next hypothesis.",
+    "No L evidence is used.",
+    "The empty-intersection hypothesis is not yet authority."
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "schema": "isograph.exp065-qualification-cases.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_SOURCE_NEUTRAL_RELATION_CONTROLS",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "module_ssc": {
+    "path": "experiments/065/MODULE_SSC_0_1.json",
+    "git_blob_sha": "f2e84d97c4cd559d2b4b8e76cdd4513648da418b"
+  },
+  "hypothesis": {
+    "path": "experiments/062/W_G5H_RELATIONAL_TWO_STEP_RETURN_0_1.json",
+    "git_blob_sha": "c1d4e3eb1f626233c8d56f87ceea3c05666e77d0"
+  },
+  "adaptive_controls": [
+    {
+      "id": "A01",
+      "kind": "positive-adaptive",
+      "model": {
+        "P": [
+          "a",
+          "b"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ]
+        ]
+      },
+      "expected": "ACCEPT",
+      "provenance": "Two-point swap was used by the stronger function-level candidate; regression only, not fresh confirmation."
+    },
+    {
+      "id": "A02",
+      "kind": "positive-adaptive",
+      "model": {
+        "P": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "d",
+            "c"
+          ]
+        ]
+      },
+      "expected": "ACCEPT",
+      "provenance": "Disjoint-pair pattern was used by the stronger function-level candidate; regression only."
+    }
+  ],
+  "fresh_positive_controls": [
+    {
+      "id": "P01",
+      "kind": "positive-fresh",
+      "model": {
+        "P": [],
+        "R": []
+      },
+      "expected": "ACCEPT",
+      "target": "empty carrier/nonexistence nonclaim"
+    },
+    {
+      "id": "P02",
+      "kind": "positive-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b"
+        ],
+        "R": []
+      },
+      "expected": "ACCEPT",
+      "target": "nonempty carrier with empty relation; no edge-existence/totality"
+    },
+    {
+      "id": "P03",
+      "kind": "positive-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ]
+        ]
+      },
+      "expected": "ACCEPT",
+      "target": "one-way terminal edge; no symmetry/totality"
+    },
+    {
+      "id": "P04",
+      "kind": "positive-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b",
+          "c"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ]
+        ]
+      },
+      "expected": "ACCEPT",
+      "target": "multivalued terminal fan; single-valuedness must not leak"
+    }
+  ],
+  "fresh_adversarial_controls": [
+    {
+      "id": "N01",
+      "kind": "negative-fresh",
+      "model": {
+        "P": [
+          "a"
+        ],
+        "R": [
+          [
+            "a",
+            "a"
+          ]
+        ]
+      },
+      "expected": "REJECT_SELF_LOOP"
+    },
+    {
+      "id": "N02",
+      "kind": "negative-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b",
+          "c"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ]
+      },
+      "expected": "REJECT_NONRETURNING_TWO_STEP"
+    },
+    {
+      "id": "N03",
+      "kind": "negative-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b",
+          "c"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "a",
+            "c"
+          ]
+        ]
+      },
+      "expected": "REJECT_NONRETURNING_TWO_STEP"
+    },
+    {
+      "id": "N04",
+      "kind": "negative-fresh",
+      "model": {
+        "P": [
+          "a"
+        ],
+        "R": [
+          [
+            "a",
+            "outside"
+          ]
+        ]
+      },
+      "expected": "REJECT_TYPING"
+    },
+    {
+      "id": "N05",
+      "kind": "negative-fresh",
+      "model": {
+        "P": [
+          "a",
+          "b",
+          "c"
+        ],
+        "R": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ]
+      },
+      "expected": "REJECT_NONRETURNING_TWO_STEP"
+    }
+  ],
+  "qualification_questions": [
+    "Do relation models lacking totality, functionhood, symmetry, nonemptiness, or single-valuedness remain admissible when they satisfy the exact laws?",
+    "Does every realized edge stay within P?",
+    "Does every realized typed length-two path return to its start?",
+    "Are all self-loops excluded?",
+    "Is the native candidate source-neutral?"
+  ],
+  "promotion_gate": {
+    "deterministic_required": true,
+    "module_local_ia_required": true,
+    "fresh_relation_controls_required": true,
+    "external_semantic_review_required_normally": true,
+    "external_semantic_review_bypassed_under_current_owner_exception_only_after_internal_pass": true,
+    "global_manifest_update_authorized": false
+  }
+}

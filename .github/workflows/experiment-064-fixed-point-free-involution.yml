@@ -1,0 +1,21 @@
+name: Experiment 064 fixed-point-free involution qualification
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/064/QUALIFICATION_CASES_0_1.json'
+      - 'experiments/064/tools/qualify-fixed-point-free-involution-0-1.mjs'
+      - '.github/workflows/experiment-064-fixed-point-free-involution.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - run: node experiments/064/tools/qualify-fixed-point-free-involution-0-1.mjs

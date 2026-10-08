@@ -1,0 +1,77 @@
+# Woit–Lisi full-treatment primitive support
+
+This subdirectory contains research-local reusable primitive/schema support for the two full-treatment tracks.
+
+These files are not Core authority and do not become semantic primitives merely because they are low-level.
+
+Current support:
+- PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg — native abstract commutative-field and vector-space schema.
+- PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.md — role map, closure audit, and limitations.
+- PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg — native conjugation, linear/bilinear/Hermitian, subspace, and chiral direct-sum schemas.
+- PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.md — closure audit and limitations for that slice.
+- PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg — native group, action, Lie algebra, subalgebra, representation, homomorphism, and embedding schemas.
+- PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.md — closure audit and limitations for that slice.
+- PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg — associative/composition algebra, quadratic-space, Clifford-module, trilinear, and cyclic-triality schemas.
+- PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.md — closure audit and limitations for that slice.
+- PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.isg — algebraic real structures, projective quotient, subspace-family, and projective-incidence schemas.
+- PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.md — closure audit and dimension/real-form limitations.
+- PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg — typed bilinear V x S_minus -> S_plus action, simultaneous projective pair equivalence, and homogeneous incidence schema for B01/BT01.
+- PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.md — derivation scope and projective-well-definedness limits.
+- PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg — exact quotient of nonzero chiral pairs by simultaneous scaling and parameterized projective incidence induced by a typed action.
+- PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.md — graph/projectivization interpretation and source-specific dimension limits.
+- PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg — antilinear J with J^2=-1 and the induced projective involution for B03.Q.
+- PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.md — separates pseudoreal/projective semantics from ordinary real fixed-point involutions.
+- PRIMITIVE_PAIRED_COMPLEX_STRUCTURE_ACTION_SCHEMA_0_1.isg — paired square-minus-one chiral structures plus parameterized action intertwinement, current lowest BT01 action frontier.
+- PRIMITIVE_PAIRED_COMPLEX_STRUCTURE_ACTION_SCHEMA_0_1.md — convention-safe interpretation and exclusions.
+- PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg — exact finite-basis schemas for complex/vector dimensions 2 and 4 via spanning + linear independence.
+- PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.md — source-mapping limits and BT01 use.
+- PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.isg — composition-algebra unit-norm locus and explicit norm/product-preserving automorphism schema for B05.
+- PRIMITIVE_COMPOSITION_UNIT_AUTOMORPHISM_SCHEMA_0_1.md — B05 abstraction levels and evidence limits.
+- PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg — associative algebra anti-involution and exact left/right multiplication side-swap lemma for B06.
+- PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.md — role-sensitive interpretation and limits.
+- PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg — explicit bijections and exact action-incidence transport between source and alternate presentations.
+- PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.md — representation-change semantics and BT01 limits.
+- PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.isg — finite Schema Closure for a chosen direct-sum chart, parameterized graph family, and projective incidence.
+- PRIMITIVE_SPLIT_GRAPH_PROJECTIVE_CHART_SCHEMA_0_1.md — exact semantics and chart/global limitations.
+- PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.isg — extensional graph-chart equivalence and induced projective-incidence invariance.
+- PRIMITIVE_CHART_PROJECTIVE_INVARIANCE_SCHEMA_0_1.md — chart-choice firewall and limits.
+- PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg — finite 1,i,j,k multiplication/conjugation presentation closing the source-specific quaternion algebra used by BT01.
+- PRIMITIVE_QUATERNION_PRESENTATION_0_1.md — closure scope and exclusions.
+- PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg — exact linear + bijective representation-map schema used to close BT01 coefficient transports.
+- PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.md — scope and identity guard.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.isg — field embedding plus exact restriction-of-scalars semantics for real/complex source presentations.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_1.md — BT01 use and limits.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg — corrected total-injective field embedding and restriction-of-scalars semantics; current authority for this local support.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.md — successor contract; 0.1 rejected as surjectivity defect.
+- PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_0_1_CORRECTION.md — defect and no-dependent-impact record.
+- PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg — exact linear injective map for real-form/subcarrier embeddings into larger representations.
+- PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.md — scope and BT01 use.
+- PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.isg — sign-correct construction from normed associative algebra + conjugation into the paired chiral Clifford schema.
+- PRIMITIVE_QUATERNION_CHIRAL_CLIFFORD_SCHEMA_0_1.md — explicit Q_C=-N and reverse-action semantics.
+- PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.isg — exact quaternion conjugation norm and polarized bilinear form, with composition-norm closure.
+- PRIMITIVE_QUATERNION_NORM_FROM_CONJUGATION_SCHEMA_0_1.md — scope and BT01 use.
+- PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.isg — bridge-safe field isomorphism, semilinear bijection, and involutive-algebra isomorphism support.
+- PRIMITIVE_FIELD_SEMILINEAR_ALGEBRA_ISOMORPHISM_SCHEMA_0_1.md — source-separation and analytic-scope guards.
+- PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg — exact finite M2(C)-style algebra presentation via matrix-unit basis and complete multiplication table.
+- PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.md — closure scope and exclusions.
+- PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.isg — unit-norm group derived from associative composition algebra product/conjugation.
+- PRIMITIVE_UNIT_NORM_GROUP_SCHEMA_0_1.md — group semantics and SU(2) source-role guard.
+- PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.isg — exact vector-space direct sum and affine-carrier-plus-infinity schemas for global Woit twistor rendering.
+- PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.md — scope and topology guard.
+- PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg — exact M2 coordinates, determinant, conjugate-transpose, and Hermitian predicate over the finite matrix-unit algebra.
+- PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.md — scope and exclusions.
+- PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.isg — determinant-one M2 group and adjoint-equals-inverse special-unitary subgroup schemas.
+- PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.md — algebraic SL/SU scope and topology guard.
+- PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg — exact six-basis vector-space support for four-dimensional two-form carriers.
+- PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg — finite exterior-2 presentation and signature-neutral Hodge eigenspace decomposition.
+- PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.md — W02 self-duality reduction scope.
+- PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg — exact three-element basis witness.
+- PRIMITIVE_DIMENSION_3_SCHEMA_0_1.md — scope and finite-basis semantics.
+- PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg — exact 3D su(2)-type Lie algebra with [t1,t2]=2t3 cyclically.
+- PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.md — normalization and topology guard.
+- PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.isg — Hodge-compatible symmetric bilinear functional and exact self-dual projection for chiral action identities.
+- PRIMITIVE_HODGE_PAIRING_ACTION_SCHEMA_0_1.md — abstraction boundary and orthogonality consequence.
+- PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.isg — parameterized linear endomorphisms of a Hodge split with exact vanishing-off-diagonal/sector-preservation predicate.
+- PRIMITIVE_HODGE_GRADED_ENDOMORPHISM_SCHEMA_0_1.md — chiral-GR abstraction boundary.
+- PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.isg — bivariate action plus explicit first-variation/stationarity interface for source variational claims.
+- PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md — calculus boundary and limitations.

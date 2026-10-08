@@ -1,0 +1,64 @@
+{
+  "schema": "woit.core021-regrounded-ledger-audit.v0.3",
+  "date": "2026-10-05",
+  "status": "PASS_STRUCTURAL_PARTIAL_CLOSURE",
+  "predecessor": "CORE021_CLOSURE_LEDGER_0_51_AUDIT.json",
+  "ledger": "CORE021_CLOSURE_LEDGER_0_52.json",
+  "authoritative_native_manifest": "WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_9.json",
+  "authoritative_native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_9.isg",
+  "source_semantic_census": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "counts": {
+    "census": 151,
+    "closed_primitive": 14,
+    "closed_schema": 0,
+    "incomplete_unexpanded": 137,
+    "nodes": 388,
+    "reachable_authoritative_nodes": 388
+  },
+  "accepted_closed_ids": [
+    "W-SSC-016",
+    "W-SSC-018",
+    "W-SSC-020",
+    "W-SSC-021",
+    "W-SSC-025",
+    "W-SSC-044",
+    "W-SSC-046",
+    "W-SSC-057",
+    "W-SSC-058",
+    "W-SSC-078",
+    "W-SSC-109",
+    "W-SSC-110",
+    "W-SSC-111",
+    "W-SSC-121"
+  ],
+  "core_logic_closed_ids": [
+    "W-SSC-021",
+    "W-SSC-025",
+    "W-SSC-058",
+    "W-SSC-121"
+  ],
+  "deterministic_gates": {
+    "coverage": "PASS",
+    "reconstruction_structure": "PASS",
+    "scope_integrity": "PASS",
+    "authority_routing_structure": "PASS",
+    "canonical_hash_recomputation": "PASS",
+    "core_formula_reachability": "PASS",
+    "ia_fixed_point_current": "NOT_ASSERTED_NULL",
+    "strict_closure": "FAIL_EXPECTED_137_INCOMPLETE"
+  },
+  "hashes": {
+    "source_semantic_census_sha256": "014ba3612f18c95d237998241c447f758b8c25e1f543baea1b87e9dd4f18cfc9",
+    "semantic_scope_sha256": "c1d09649c78a763d217c4fe4d1b5285b5ae81b3e4cc2639ee71f3a8a5777443c",
+    "primitive_kernel_sha256": "d4b8c2baacc9364e0ec08cf5334d3fcb19157abb6245182825006267450ca814",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "07c7ee97472f8f3afb67ac3ed5e8af8bce8d9020886e607d1ab5fbf6dfe9cdbe",
+    "inference_profile_sha256": "8bc4ea76c953a7bdccb9b855cfd2c734570e4b902f8ecab72817f8ec4b5b1f86"
+  },
+  "guards": [
+    "structural qualification only; no domain-truth claim",
+    "historical packet-driven closures remain evidence only",
+    "IA/NEI/DTS/DP remain blocked"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "isograph.exp062-l127-si-namespace-collision-defect.v0.2",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_TWO_COLLISIONS_EARLIEST_AFFECTED_STAGE_L127_G1_FORWARD_PROPAGATION_STOPPED",
+  "authority_effect": "INVALIDATION_AND_REPLAY_REQUIRED",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "93aa528cb1cac58e6f31ff75514aa23ff79660e5",
+  "predecessor": {
+    "path": "experiments/062/L127_SI_NAMESPACE_COLLISION_DEFECT_0_1.json",
+    "git_blob_sha": "2067514b7e5bdb07109fc88e4373939a9989bbaa",
+    "correction": "The first record identified the support 225000 collision and placed the earliest boundary at G5H. Adversarial expansion found a second active collision inside the L127 source rendering, moving the earliest affected stage to G1."
+  },
+  "confirmed_defects": [
+    {
+      "id": "D1_SUPPORT_225000",
+      "semantic_identity": 225000,
+      "earlier_owner": {
+        "path": "research/woit-lisi-isomorph/support/PRIMITIVE_TRILINEAR_SCALAR_EXTENSION_SCHEMA_0_1.isg",
+        "meaning": "trilinear scalar extension"
+      },
+      "later_conflicting_owner": {
+        "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_1.isg",
+        "meaning": "seven-element basis presentation"
+      },
+      "correction": {
+        "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_2.isg",
+        "git_blob_sha": "0644b2d16b1ea78313fed7a784a0c5967a2e6a0a",
+        "fresh_si": 225010
+      }
+    },
+    {
+      "id": "D2_SOURCE_226_RANGE",
+      "semantic_identity_range": "226000-226199 (overlap includes 226000-226033)",
+      "earlier_owner": {
+        "path": "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_ANTIINVARIANCE_0_1.isg",
+        "git_blob_sha": "37892266a2ff35035875a3f66b5f68177726ce92",
+        "committed_at": "2026-10-05T05:49:22Z",
+        "meaning": "L130 scalar-extended reflection anti-invariance relations"
+      },
+      "later_conflicting_owner": {
+        "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_1.isg",
+        "git_blob_sha": "8e0da96d0a35e627339b756a9af5dc18a385616b",
+        "committed_at": "2026-10-05T06:01:31Z",
+        "meaning": "L127 bi-product operator carrier/action/basis/injection/witness relations"
+      },
+      "correction": {
+        "biproduct_successor": {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_BIPRODUCT_OPERATOR_SOURCE_INSTANCE_0_2.isg",
+          "git_blob_sha": "57a1023001c5eb718392a959b41043186cc22fd6",
+          "fresh_range": "246000-246199",
+          "dimension7_si": 225010
+        },
+        "so8_successor": {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_SO8_SOURCE_ASSERTION_0_2.isg",
+          "git_blob_sha": "f568cdf88a15faa6a69d8b49e582fe157fe3755a",
+          "fresh_range": "246xxx"
+        },
+        "earlier_L130_range_preserved": true
+      }
+    }
+  ],
+  "earliest_affected_stage": {
+    "path": "experiments/062/L127_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1.json",
+    "git_blob_sha": "4c02a4978377b9083673084c5378cb9a38d8533e",
+    "stage": "L127 targeted G1 audit/source rendering",
+    "reason": "The audit and subsequent G1 pin the later L127 source files whose local SIs collided with already-existing L130 referents. Source meaning is recoverable, but the exact rendered source identity graph is not trustworthy."
+  },
+  "invalidation": {
+    "L127": [
+      "L127_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1",
+      "L127_G1_SOURCE_INCIDENCE_0_1",
+      "L127_G2_NEUTRAL_SUBGRAPH_0_1",
+      "L127_G3_CORE_DEFINABILITY_0_1",
+      "all three L127 G5H branches as descendants of stale G3",
+      "all L127 G6 module SSC/IA/qualification records as descendants of stale hypotheses",
+      "L127_CURRENT_RECONSTRUCTION_ROUTING_0_1",
+      "L127_G7_TARGETED_CLOSURE_0_1"
+    ],
+    "L132": "all L132 artifacts from targeted G1 audit onward are procedurally stale because their chain was opened after/pinned against the invalid L127 closure; replay required even where semantic candidate bytes are unchanged",
+    "L133": "all current L133 artifacts are stale descendants of the invalid L132 closure chain"
+  },
+  "unaffected": [
+    "L125/L128/L129/L130/L131 corrected closures",
+    "L126 typed-action module and closure",
+    "the earlier scalar-extension meaning of SI 225000",
+    "frozen L127 project falsifier numeric evidence, which does not depend on the collided local SIs"
+  ],
+  "namespace_verification": {
+    "workflow": "Experiment 062 Woit-Lisi SI namespace guard",
+    "run_id": 37746242966,
+    "conclusion": "success",
+    "meaning": "active support cross-module namespace passes with defective dimension-7 0.1 quarantined; corrected L127 fresh 246xxx block is exclusively owned by the two successor source files"
+  },
+  "replay_order": [
+    "L127 G1 audit 0.2 using corrected source successors",
+    "L127 G1 incidence 0.2",
+    "L127 G2 0.2",
+    "L127 G3 0.2",
+    "three L127 G5H/G6 branches replayed against corrected G3, with finite-basis relation 225010/225001",
+    "L127 source reconstruction and G7 closure replay using 246xxx",
+    "L132 full targeted chain replay from G1 audit",
+    "L133 full current chain replay after corrected L132 closure"
+  ],
+  "provenance": {
+    "owner_priority": "correctness_over_forward_progress",
+    "historical_artifacts_rewritten": false,
+    "external_third_party_testing": "BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "No W evidence is used.",
+    "The collisions establish authority-routing defects, not falsity of the underlying source mathematics."
+  ]
+}

@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const blobSha=p=>{const b=Buffer.from(read(p),'utf8');return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
+const errors=[],check=(ok,m)=>{if(!ok)errors.push(m);};
+const C=json('research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json');
+const P=json('experiments/062/W_EXTRACTION_RECONCILED_0_19.json');
+const A=json('experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_3.json');
+const S=json('experiments/062/W_EXTRACTION_RECONCILED_0_20.json');
+check(A.source_corpus?.git_blob_sha===blobSha('research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json'),'source pin');
+check(A.predecessor_input?.git_blob_sha===blobSha('experiments/062/W_EXTRACTION_RECONCILED_0_19.json'),'predecessor pin');
+const E=JSON.parse(JSON.stringify(P)),by=new Map(E.items.map(x=>[x.census_id,x]));
+for(const c of A.additions||[])by.get(c.census_id)?.occurrences.push(c.occurrence);
+check(JSON.stringify(E)===JSON.stringify(S),'replay mismatch');
+const bodies=new Map(C.items.filter(x=>x.track==='W').map(x=>[x.census_id,x.body]));
+const ids=new Set(),changed=[];
+for(let i=0;i<S.items.length;i++){if(JSON.stringify(P.items[i])!==JSON.stringify(S.items[i]))changed.push(S.items[i].census_id);const body=bodies.get(S.items[i].census_id),prior=new Set();for(const o of S.items[i].occurrences){check(!ids.has(o.occurrence_id),'dup '+o.occurrence_id);ids.add(o.occurrence_id);check(body?.includes(o.source_span),'source '+o.occurrence_id);check(o.source_span.includes(o.relation_span),'rel '+o.occurrence_id);for(const a of o.argument_spans||[])check(o.source_span.includes(a),'arg '+o.occurrence_id);for(const d of o.depends_on||[])check(prior.has(d),'dep '+o.occurrence_id+'->'+d);prior.add(o.occurrence_id);}}
+check(JSON.stringify(changed)===JSON.stringify(['W-SSC-029','W-SSC-149']),'changed '+JSON.stringify(changed));
+const pc=P.items.reduce((n,x)=>n+x.occurrences.length,0),sc=S.items.reduce((n,x)=>n+x.occurrences.length,0);
+check(pc===436,'pc '+pc);check(sc===442,'sc '+sc);check((A.additions||[]).length===6,'additions');
+const added=(A.additions||[]).map(x=>x.occurrence);
+for(const rel of ['integral of','d','+','wedge','in terms of'])check(added.some(o=>o.relation_span===rel),'missing relation '+rel);
+const semantic=JSON.stringify(added.map(o=>({source_span:o.source_span,relation_span:o.relation_span,argument_spans:o.argument_spans,definition_status:o.definition_status})));
+check(!/STATX|STATY|zero first variation|Euler-Lagrange|variation-direction|total single-valued/i.test(semantic),'semantic import');
+console.log(JSON.stringify({schema:'isograph.exp062-verify-w-extraction-reconciled-0-20.v0.1',pass:errors.length===0,errors,occurrence_count:sc,added:(A.additions||[]).length,changed_bodies:changed},null,2));
+if(errors.length)process.exitCode=1;

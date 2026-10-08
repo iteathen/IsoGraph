@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062-partial-cold-audit-diagnostic-review.v0.1",
+  "date": "2026-10-06",
+  "status": "PARTIAL_EVIDENCE_REVIEWED_NO_OPEN_CORRECTION_LEADS_G1_STILL_INCOMPLETE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "W_partial_evidence": {
+    "input": "experiments/062/W_EXTRACTION_RECONCILED_0_5.json",
+    "run_id": 37543452440,
+    "attempts_reviewed": [
+      {
+        "attempt": 1,
+        "batch": "experiments/062/evidence/run-37543452440-attempt-1/exp062-w-audit-v6/BATCH_01.json",
+        "rows": 12,
+        "overall": "PASS",
+        "correction_rows": 0
+      },
+      {
+        "attempt": 2,
+        "batch": "experiments/062/evidence/run-37543452440-attempt-2/exp062-w-audit-v6/BATCH_01.json",
+        "rows": 12,
+        "overall": "PASS",
+        "correction_rows": 0
+      }
+    ],
+    "distinct_covered_prefix_rows": 12,
+    "open_source_local_correction_leads_from_reviewed_partial_evidence": 0,
+    "G1_effect": "NONE_PARTIAL_ONLY"
+  },
+  "L_partial_evidence": {
+    "input": "experiments/062/L_EXTRACTION_RECONCILED_0_13.json",
+    "run_id": 37544009233,
+    "attempt": 1,
+    "batches_reviewed": [
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_01.json",
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_02.json",
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_03.json",
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_04.json",
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_05.json",
+      "experiments/062/evidence/run-37544009233-attempt-1/exp062-l-g1-final-audit-v12/BATCH_06.json"
+    ],
+    "rows_reviewed": 60,
+    "all_reviewed_batches": "PASS",
+    "correction_rows": 0,
+    "open_source_local_correction_leads_from_reviewed_partial_evidence": 0,
+    "G1_effect": "NONE_PARTIAL_ONLY"
+  },
+  "procedural_findings": [
+    "Every persisted partial batch currently available for the repaired W 0.5 and reconciled L 0.13 cold-audit contracts was inspected for CORRECTION_REQUIRED rows.",
+    "No correction lead exists in those reviewed partial outputs, so there is no source-local reconciliation action justified by partial evidence at this time.",
+    "Partial PASS rows cannot be spliced into a synthetic fixed point or substituted for a structurally valid complete independent all-row cold audit.",
+    "No semantic input was changed and no G2/G3/G4/G5/G6/G7 or source-closure step is authorized."
+  ],
+  "next_lawful_action": "Obtain complete unchanged-input independent cold audits: W 0.5 all 84 rows and L 0.13 all 151 rows. If either complete audit produces correction leads, adjudicate each lead source-locally before any successor audit."
+}

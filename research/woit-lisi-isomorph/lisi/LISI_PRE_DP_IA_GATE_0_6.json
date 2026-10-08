@@ -1,0 +1,59 @@
+{
+  "schema": "woit-lisi.lisi-pre-dp-ia-gate.v0.6",
+  "date": "2026-10-05",
+  "track": "L",
+  "status": "BLOCKED_PROCESS_REGROUNDED_1_OF_191_ACCEPTED",
+  "predecessor": "LISI_PRE_DP_IA_GATE_0_5.json",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "current_ledger": "CORE021_CLOSURE_LEDGER_0_19.json",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "source_revision": "LISI_SSC_SOURCE_CORRECTION_0_2.json",
+  "current_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_6.json",
+  "current_native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_6.isg",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "current_closed_census_items": 1,
+  "total_census_items": 191,
+  "current_closed_ids": [
+    "L-SSC-191"
+  ],
+  "structural_gate_state": {
+    "SOUNDNESS_STRUCTURE": true,
+    "COVERAGE": true,
+    "RECONSTRUCTION": true,
+    "SCOPE_INTEGRITY": true,
+    "AUTHORITY_ROUTING_STRUCTURE": true,
+    "IA_FIXED_POINT_CURRENT": true,
+    "STRICT_CLOSURE": false
+  },
+  "required_order": [
+    "native_body_compilation",
+    "primitive_schema_closure",
+    "core021_closure_ledger_and_gates",
+    "recursive_implicit_assertions",
+    "primitive_close_all_ia_bodies_support_dependencies",
+    "ia_no_change_pass",
+    "record_current_ia_fixed_point",
+    "nei",
+    "dts",
+    "dp"
+  ],
+  "current_ia_fixed_point": null,
+  "current_input_tuple": {
+    "primitive_kernel_sha256": "1a2e4476e83508a7cc9aefdcadc63acaf74b2a4a9a2620edc9a7a6f30e5519a5",
+    "source_semantic_census_sha256": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "0f0fd13b7de4d830706f3252a162676e2f141fc5a5ed166b0ead00a9d649dfee"
+  },
+  "closure_admission_rule": "DERIVE_FROM_FROZEN_SSC_PLUS_AUTHORITATIVE_NATIVE_GRAPH_AND_QUALIFIED_AUTHORITY",
+  "historical_closure_evidence": {
+    "prior_authority_ledger": "CORE021_CLOSURE_LEDGER_0_16.json",
+    "prior_promoted_count": 39,
+    "later_non_authoritative_ledger": "CORE021_CLOSURE_LEDGER_0_17.json",
+    "accepted_currently": 1,
+    "disposition": "PRESERVED_RESEARCH_EVIDENCE_REQUIRES_GRAPH_FIRST_REDERIVATION"
+  },
+  "cross_author_semantics_allowed": false,
+  "dp_allowed": false
+}

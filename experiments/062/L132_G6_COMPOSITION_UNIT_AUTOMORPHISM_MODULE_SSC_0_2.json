@@ -1,0 +1,87 @@
+{
+  "schema": "isograph.exp062-l132-composition-unit-automorphism-module-ssc.v0.2",
+  "date": "2026-10-08",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "COMPOSITION_UNIT_AUTOMORPHISM_0_2",
+  "hypothesis": {
+    "path": "experiments/062/L132_G5H_COMPOSITION_UNIT_AUTOMORPHISM_0_2.json",
+    "git_blob_sha": "e0ea597c795fcd7e870deb781312d6ebfc6cab26"
+  },
+  "scope": {
+    "obligation_count": 7,
+    "selected_relation_ids": [
+      187701
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "AUT-SSC-001",
+      "kind": "COMPOSITION_PARENT",
+      "body": "187701 requires exact 185003 composition-algebra support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-002",
+      "kind": "LINEAR_MAP_PARENT",
+      "body": "187701 requires exact 183002 linear-map support A->A.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-003",
+      "kind": "BIJECTION",
+      "body": "187701 requires the linear map to be bijective.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-004",
+      "kind": "UNIT_FIXING",
+      "body": "187701 requires F(unit)=unit.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-005",
+      "kind": "PRODUCT_PRESERVATION",
+      "body": "187701 requires F(xy)=F(x)F(y) for admitted x,y.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-006",
+      "kind": "Q_PRESERVATION",
+      "body": "187701 requires Q(F(x))=Q(x).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "AUT-SSC-007",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No group-set closure, inner/outer classification, triality/rotation, or cross-track semantics.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "identity on F3[i]",
+      "conjugation on F3[i]"
+    ],
+    "adversarial": [
+      "negation moving unit",
+      "unit-fixing shear",
+      "projection",
+      "Q-altered control"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT",
+  "predecessor": {
+    "path": "experiments/062/L132_G6_COMPOSITION_UNIT_AUTOMORPHISM_MODULE_SSC_0_1.json",
+    "git_blob_sha": "a0928667866d36ec16e69b62f2625f0c2f0f9ecc",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_SI_COLLISION"
+  },
+  "replay_invariance": {
+    "obligations_unchanged": true,
+    "controls_unchanged": true,
+    "scope_unchanged": true
+  }
+}

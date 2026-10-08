@@ -1,0 +1,242 @@
+{
+  "schema": "isograph.exp062-l132-low-dimensional-lie-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "LOW_DIMENSIONAL_LIE_PRESENTATIONS_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L132_G5H_LOW_DIMENSIONAL_LIE_PRESENTATIONS_0_1.json",
+    "git_blob_sha": "0eb23ce9548cc679b5b39b32c4d7a915c6da0358"
+  },
+  "scope": {
+    "obligation_count": 32,
+    "selected_relation_ids": [
+      184008,
+      184009,
+      207000,
+      207001,
+      236000,
+      236001,
+      236002,
+      236003,
+      236004
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "LDL-SSC-001",
+      "kind": "HOM_DOMAIN",
+      "body": "184008 requires exact Lie algebra A.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-002",
+      "kind": "HOM_CODOMAIN",
+      "body": "184008 requires exact Lie algebra B.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-003",
+      "kind": "HOM_LINEAR",
+      "body": "184008 requires exact linear map A->B.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-004",
+      "kind": "HOM_BRACKET",
+      "body": "184008 requires F([x,y]_A)=[F(x),F(y)]_B.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-005",
+      "kind": "INJECTIVE_HOM",
+      "body": "184009 requires exact 184008 plus injectivity.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-006",
+      "kind": "BASIS3_VECTOR",
+      "body": "207000 requires exact vector carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-007",
+      "kind": "BASIS3_MEMBERS",
+      "body": "207000 requires three declared members.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-008",
+      "kind": "BASIS3_INDEPENDENCE",
+      "body": "207000 requires only zero scalar combination equals vector zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-009",
+      "kind": "BASIS3_SPANNING",
+      "body": "207000 requires every vector to be a scalar combination of the three members.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-010",
+      "kind": "COMPACT3_BASIS",
+      "body": "207001 requires exact 207000 basis.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-011",
+      "kind": "COMPACT3_LIE",
+      "body": "207001 requires exact Lie bracket 184004.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-012",
+      "kind": "COMPACT3_CHAR",
+      "body": "207001 requires 2=1+1 to be nonzero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-013",
+      "kind": "COMPACT3_TABLE",
+      "body": "207001 requires the three cyclic 2-scaled bracket rows.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-014",
+      "kind": "BASIS1_VECTOR",
+      "body": "236000 requires exact vector carrier and one declared member.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-015",
+      "kind": "BASIS1_INDEPENDENCE",
+      "body": "236000 requires the declared vector to be nonzero in scalar-coordinate form.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-016",
+      "kind": "BASIS1_SPANNING",
+      "body": "236000 requires every vector to be a scalar multiple of the declared member.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-017",
+      "kind": "ABELIAN1_PARENT",
+      "body": "236001 requires exact 236000 and 184004.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-018",
+      "kind": "ABELIAN1_ZERO_BRACKET",
+      "body": "236001 requires all brackets to equal vector zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-019",
+      "kind": "SPLIT3_BASIS",
+      "body": "236002 requires exact 207000 basis h,e,f.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-020",
+      "kind": "SPLIT3_LIE",
+      "body": "236002 requires exact 184004 and nonzero scalar 2.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-021",
+      "kind": "SPLIT3_TABLE",
+      "body": "236002 requires [h,e]=2e, [h,f]=-2f, [e,f]=h.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-022",
+      "kind": "SUM2_PARENTS",
+      "body": "236003 requires Lie algebras A,B,L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-023",
+      "kind": "SUM2_INJECTIONS",
+      "body": "236003 requires injective Lie homomorphisms IA,IB into L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-024",
+      "kind": "SUM2_EXISTENCE",
+      "body": "236003 requires every l in L to decompose as IA(a)+IB(b).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-025",
+      "kind": "SUM2_UNIQUENESS",
+      "body": "236003 requires uniqueness of that decomposition.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-026",
+      "kind": "SUM2_CROSS_ZERO",
+      "body": "236003 requires bracket of IA(A) with IB(B) to be zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-027",
+      "kind": "SUM3_PARENTS",
+      "body": "236004 requires Lie algebras A,B,D,L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-028",
+      "kind": "SUM3_INJECTIONS",
+      "body": "236004 requires injective Lie homomorphisms IA,IB,ID.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-029",
+      "kind": "SUM3_EXISTENCE",
+      "body": "236004 requires every l to decompose as IA(a)+IB(b)+ID(d).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-030",
+      "kind": "SUM3_UNIQUENESS",
+      "body": "236004 requires uniqueness of triple decomposition.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-031",
+      "kind": "SUM3_CROSS_ZERO",
+      "body": "236004 requires all three pairwise cross brackets to be zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LDL-SSC-032",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No classical Lie names/classification, group integration, arbitrary arity, or cross-track semantics.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "1D F5 abelian",
+      "3D compact table",
+      "3D split table",
+      "injective Lie homomorphism",
+      "2-factor coordinate sum",
+      "3-factor coordinate sum"
+    ],
+    "adversarial": [
+      "dependent 3-basis",
+      "noninjective homomorphism",
+      "bracket-breaking linear injection",
+      "wrong compact table",
+      "wrong split sign",
+      "overlapping sum injections",
+      "nonzero cross bracket"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

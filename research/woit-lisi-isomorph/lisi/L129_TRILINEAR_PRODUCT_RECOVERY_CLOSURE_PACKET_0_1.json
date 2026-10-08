@@ -1,0 +1,143 @@
+{
+  "schema": "lisi.l129-trilinear-product-recovery-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "L-SSC-129",
+  "frozen_body": "The real cyclic trilinear triality form T(v,psi,chi) is defined from multiplication and can conversely define the division-algebra product; the source treats this bidirectionality as structural, not merely notation.",
+  "source": "L05 §3 eq. (6)",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRILINEAR_PRODUCT_RECOVERY_SOURCE_INSTANCE_0_2.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRILINEAR_PRODUCT_RECOVERY_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PRODUCT_TRILINEAR_RECOVERY_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TYPED_COEFFICIENT_ROLES_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TRIPLE_ROLE_COEFFICIENT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 19,
+    "declared_local_ids": 402,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "generic_product_trilinear_schema": 220000,
+    "cyclic_triality_schema": 185006,
+    "cases": {
+      "C": {
+        "coefficient": 214000,
+        "T": 221000,
+        "recover": 221001,
+        "typed_T": 221002,
+        "cycle": [
+          221003,
+          221004,
+          221005
+        ]
+      },
+      "Cprime": {
+        "coefficient": 214100,
+        "T": 221010,
+        "recover": 221011,
+        "typed_T": 221012,
+        "cycle": [
+          221013,
+          221014,
+          221015
+        ]
+      },
+      "H": {
+        "coefficient": 189200,
+        "T": 221020,
+        "recover": 221021,
+        "typed_T": 221022,
+        "cycle": [
+          221023,
+          221024,
+          221025
+        ]
+      },
+      "Hprime": {
+        "coefficient": 214200,
+        "T": 221030,
+        "recover": 221031,
+        "typed_T": 221032,
+        "cycle": [
+          221033,
+          221034,
+          221035
+        ]
+      },
+      "O": {
+        "coefficient": 214300,
+        "T": 221040,
+        "recover": 221041,
+        "typed_T": 221042,
+        "cycle": [
+          221043,
+          221044,
+          221045
+        ]
+      },
+      "Oprime": {
+        "coefficient": 214400,
+        "T": 221050,
+        "recover": 221051,
+        "typed_T": 221052,
+        "cycle": [
+          221053,
+          221054,
+          221055
+        ]
+      }
+    },
+    "product_recovery_rule": "REC is defined solely by equality of all scalar pairings T(x,y,z,-)=B(z,h,-), then REC and source PROD have the same graph"
+  },
+  "evidence": {
+    "falsifier": "L129_TRILINEAR_PRODUCT_RECOVERY_FALSIFIER_0_1.json",
+    "product_recovery_failures_all_cases": 0,
+    "typed_cycle_failures": {
+      "C": 0,
+      "Cprime": 0,
+      "H": 0,
+      "Hprime": 0,
+      "O": 2,
+      "Oprime": 0
+    },
+    "ordinary_O_disposition": "INCONSISTENT_SOURCE",
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "raw coefficient permutation is not used as typed cyclicity",
+    "the positive-spinor tilde convention is inherited from the closed L128 coefficient maps",
+    "product recovery is represented through the nondegenerate pairing, not by a named duality primitive",
+    "the ordinary-O source discrepancy is preserved and not repaired",
+    "representation closure is distinct from source consistency/truth",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

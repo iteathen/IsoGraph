@@ -1,0 +1,242 @@
+{
+  "schema": "isograph.exp062-w-g-stage-hostile-audit.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "CONFIRMED_HISTORICAL_G7_W097_UNSOUND_SOURCE_CLOSURE_AND_G2_G3_VERSION_SKEW",
+  "semantic_authority": false,
+  "authority_effect": "INVALIDATION_EVIDENCE_ONLY_NO_SOURCE_OR_PRIMITIVE_PROMOTION",
+  "checkpoint_branch_head": "02cc35efdf1ec1fc2690baeeae027836c29add7a",
+  "source_primary": {
+    "W05_revision": "arXiv:2202.02657v2",
+    "arxiv_html": "https://arxiv.org/html/2202.02657v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "location": "§2, printed pp.2–3, real-structure map and rho_tw homogeneous formula",
+    "source_facts": [
+      "Definition of real structure: antiholomorphic map rho: CP1 -> CP1 with rho squared identity.",
+      "rho_tw homogeneous coordinates [-conj(z2),conj(z1)], projective square identity, vector square minus identity.",
+      "No projective fixed point satisfies rho_tw(point)=point.",
+      "These are source-local map assertions, not new generic module semantics."
+    ]
+  },
+  "exact_G_artifact_inputs": {
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_39.json",
+      "git_blob_sha": "3e32bf53f2b36e0312a0ffeb9ca291b26d57a898"
+    },
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_14.json",
+      "git_blob_sha": "2912ed46355a73f3368f428fc2478cc8e5ce4d4e"
+    },
+    "demand": {
+      "path": "experiments/062/W_G0_W02_LATE_SOURCE_DEMAND_PROJECTION_0_4.json",
+      "git_blob_sha": "000f2dd31e66823a1974d3076c9c01bafdb23f9a"
+    },
+    "g1": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+    },
+    "g2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_4.json",
+      "git_blob_sha": "4a6ef4b2e4987c6875e6fc4c0205a04f84c37b57"
+    },
+    "g3": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_7.json",
+      "git_blob_sha": "62e1236d7aa4c7b2814606b1640e35e280b73919"
+    },
+    "g4": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "g5": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_4.json",
+      "git_blob_sha": "e0c3afe21f88e36c3b7a6843a08cb64897df1a00"
+    },
+    "g7": {
+      "path": "experiments/062/W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1.json",
+      "git_blob_sha": "4fb7708649aa37807ab87baea9a31c8358ec9b42"
+    },
+    "qual": {
+      "path": "experiments/065/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "08b76b3c01ff82b5ee64de8e00fa8e692881f77d"
+    },
+    "ledger": {
+      "path": "research/woit-lisi-isomorph/woit/CORE021_CLOSURE_LEDGER_0_19.json",
+      "git_blob_sha": "cb0563a66fc6af881efcb66b04faa78631405ea4"
+    },
+    "bypass": {
+      "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+      "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+    }
+  },
+  "findings": [
+    {
+      "id": "W-G-HOSTILE-001",
+      "classification": "SOURCE_INSTANCE_RECONSTRUCTION_DEFECT",
+      "earliest_historical_stage": "G1_EXTRACTION_SOURCE_MAP_OPERATION_NOT_CONSERVED_THEN_G7_FALSE_CLOSURE",
+      "current_lawful_stage": "G0_OPEN",
+      "scope": [
+        "W-SSC-097",
+        "W-SSC-097-O06",
+        "W-SSC-097-O04"
+      ],
+      "observation": "W097 directly declares a CP1 -> CP1 real-structure map; G1 0.23 still omits map declaration/totality/functionhood as a separate semantic occurrence. G7 substitutes relation R carrying only realized application incidences and then closes O06/O04.",
+      "reason": "Universal equation rho_tw^2=id is a total map assertion over source projective points. A relation with no two-step paths satisfies universal two-step-return implication vacuously, but cannot reconstruct source map application on every point. Positive partial/multivalued countermodels of schema 221101 exhibit the gap.",
+      "effect": "The G7 campaign-local W097 O06/O04 CLOSED_WITH_CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY disposition is unsupported by exact source reconstruction. Reopen both as incomplete after G0; G4/G5 consumption of their closure is historical/stale. Do not revoke generic schema 221101 G6 qualification, whose scope explicitly permits partial relations.",
+      "model_controls": [
+        {
+          "name": "empty relation on nonempty P",
+          "P": [
+            "a",
+            "b"
+          ],
+          "R": [],
+          "generic": true,
+          "mapRequired": false
+        },
+        {
+          "name": "one-way partial relation",
+          "P": [
+            "a",
+            "b"
+          ],
+          "R": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "generic": true,
+          "mapRequired": false
+        },
+        {
+          "name": "multivalued partial relation",
+          "P": [
+            "a",
+            "b",
+            "c"
+          ],
+          "R": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "a",
+              "c"
+            ]
+          ],
+          "generic": true,
+          "mapRequired": false
+        },
+        {
+          "name": "total two-point involution",
+          "P": [
+            "a",
+            "b"
+          ],
+          "R": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "a"
+            ]
+          ],
+          "generic": true,
+          "mapRequired": true
+        },
+        {
+          "name": "self-loop forbidden",
+          "P": [
+            "a",
+            "b"
+          ],
+          "R": [
+            [
+              "a",
+              "a"
+            ]
+          ],
+          "generic": false,
+          "mapRequired": false
+        },
+        {
+          "name": "nonreturning two-step forbidden",
+          "P": [
+            "a",
+            "b",
+            "c"
+          ],
+          "R": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ]
+          ],
+          "generic": false,
+          "mapRequired": false
+        }
+      ],
+      "enumeration_counts": {
+        "2": {
+          "generic": 4,
+          "meetsNecessaryMap": 1,
+          "genericButNotMap": 3
+        },
+        "3": {
+          "generic": 16,
+          "meetsNecessaryMap": 0,
+          "genericButNotMap": 16
+        }
+      },
+      "no_false_math_claim": "These finite structures falsify semantic entailment of source map obligations by the generic schema, not Woit's actual twistor map or the qualified generic relation schema."
+    },
+    {
+      "id": "W-G-HOSTILE-002",
+      "classification": "UPSTREAM_VERSION_LINEAGE_MISMATCH",
+      "earliest_historical_stage": "G3",
+      "current_lawful_stage": "G0_OPEN",
+      "observation": "G1 0.23/G2 0.4 contain 446 occurrences including W097-O08; latest historical G3 0.7 uses G1 0.22/G2 0.3 and 445 occurrences. G4 0.4/G5 0.4 inherit that old G3/G2 tuple and cannot establish any current 446-occurrence G3 fixed point.",
+      "effect": "No historical G3, G4 or G5 completion certificate may be used as a current post-G2-0.4 or post-G0 completion; there is no proved 446-occurrence G3 replay."
+    },
+    {
+      "id": "W-G-HOSTILE-003",
+      "classification": "ASSERTION_CENSUS_AND_DEMAND_MEMBERSHIP_SCOPE_BOUNDARY",
+      "earliest_historical_stage": "G0",
+      "current_lawful_stage": "G0_OPEN",
+      "observation": "Current W SSC0.14 has 151 source items, but its W-only historical unresolved projection has 86. W131 was marked CLOSED_SCHEMA in old 0.19 closure ledger and omitted from unresolved projection; its source semantics changed in newer SSC, invalidating closure inference.",
+      "effect": "All 65 members excluded from the old unresolved projection require source-local re-adjudication rather than assuming historical closure. Existing green G1–G7 verification is only old-tuple verification."
+    }
+  ],
+  "qualification": {
+    "G0_frozen": false,
+    "full_nine_source_cold_audit_complete": false,
+    "G1_to_G7_current_authorized": false,
+    "owner_external_bypass": "THIRD_PARTY_ONLY",
+    "current_W_SSC": "0.14_UNFROZEN",
+    "generic_G6_schema_221101": "PRESERVED_WITH_ITS_ORIGINAL_PROVISIONAL_SCOPE",
+    "L_semantics_used": false,
+    "L_artifacts_modified": false
+  },
+  "adversarial_replay": {
+    "method": "DETERMINISTIC_FINITE_MODEL_ENUMERATION_AND_EXACT_ARTIFACT_PROVENANCE_GUARD",
+    "local_V8_pass": true,
+    "mutation_count": 20,
+    "mutations_rejected": 20,
+    "mutations_escaped": []
+  },
+  "next": "Keep W G0 open, externally and internally audit exact frozen source; add explicit W097 source map/application semantic occurrences before G1; rebuild W G1 151-item closure demand membership and downstream versioned stage tuple in lawful order. Do not treat provisional generic relational schema as W097 full source law.",
+  "nonclaims": [
+    "No actual mathematical counterexample to Woit rho_tw",
+    "No invalidation of source-neutral qualified G6 schema 221101",
+    "No all-W G0 freeze",
+    "No G1-G7 reopening satisfied by hash updates",
+    "No L work"
+  ]
+}

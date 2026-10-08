@@ -1,0 +1,230 @@
+{
+  "schema": "isograph.exp062-linear-basis-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "LINEAR_BASIS_SUPPORT_0_1",
+  "branch_head_at_creation": "5cf78f5c8616ec5f1cb744284d734fc736edc45f",
+  "inputs": {
+    "module_ssc": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_MODULE_SSC_0_1.json",
+      "git_blob_sha": "97a9408d06ea5bdbab11f99e2027b2009b31ffe3"
+    },
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_LINEAR_BASIS_SUPPORT_0_1.json",
+      "git_blob_sha": "4205a98a50f1d0320bf1250ef3de1658f1b8a120"
+    }
+  },
+  "inference_profile": {
+    "id": "linear-basis-schema-conjunct-projection-0.1",
+    "scope": "Only exact conjunct projections from the seven selected relation definitions and dependency projections into already-qualified field/vector schemas. No external linear algebra theorem library.",
+    "rules": [
+      {
+        "id": "LB-IA-R1",
+        "trigger": "LINEAR 183002",
+        "derives": [
+          "UNARY_FUNCTION(F,A,B)",
+          "VECTOR(A)",
+          "VECTOR(B)",
+          "ZERO_PRESERVING(F)",
+          "ADD_PRESERVING(F)",
+          "SCALE_PRESERVING(F)"
+        ]
+      },
+      {
+        "id": "LB-IA-R2",
+        "trigger": "BILINEAR 183003",
+        "derives": [
+          "BINARY_FUNCTION(BFORM,V,V,C)",
+          "VECTOR(V)",
+          "LINEAR_FIRST(BFORM)",
+          "LINEAR_SECOND(BFORM)"
+        ]
+      },
+      {
+        "id": "LB-IA-R3",
+        "trigger": "BIJECTION 188100",
+        "derives": [
+          "UNARY_FUNCTION(F,A,B)",
+          "INJECTIVE(F)",
+          "SURJECTIVE(F)"
+        ]
+      },
+      {
+        "id": "LB-IA-R4",
+        "trigger": "LINEAR_BIJECTION 193200",
+        "derives": [
+          "LINEAR(F)",
+          "BIJECTION(F)"
+        ]
+      },
+      {
+        "id": "LB-IA-R5",
+        "trigger": "BASIS_187600",
+        "derives": [
+          "VECTOR(V)",
+          "BASIS_MEMBERS(e1,e2)",
+          "INDEPENDENCE_2",
+          "SPANNING_2"
+        ]
+      },
+      {
+        "id": "LB-IA-R6",
+        "trigger": "BASIS_187601",
+        "derives": [
+          "VECTOR(V)",
+          "BASIS_MEMBERS(e1,e2,e3,e4)",
+          "INDEPENDENCE_4",
+          "SPANNING_4"
+        ]
+      },
+      {
+        "id": "LB-IA-R7",
+        "trigger": "BASIS_215000",
+        "derives": [
+          "VECTOR(V)",
+          "BASIS_MEMBERS(e1..e8)",
+          "INDEPENDENCE_8",
+          "SPANNING_8"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "dimension equality outside selected 2/4/8 schemas",
+      "canonical basis status",
+      "orthogonality",
+      "dual-space identification",
+      "determinant/invertibility theorems",
+      "composition-algebra or triality consequences",
+      "natural identity from bijection"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(183002)",
+        "SCHEMA_DEFINITION(183003)",
+        "SCHEMA_DEFINITION(188100)",
+        "SCHEMA_DEFINITION(193200)",
+        "SCHEMA_DEFINITION(187600)",
+        "SCHEMA_DEFINITION(187601)",
+        "SCHEMA_DEFINITION(215000)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "LB-IA-001",
+          "assertion": "LINEAR(183002) entails UNARY_FUNCTION(F,A,B).",
+          "support": [
+            "183002 explicit conjunct",
+            "182001 provisionally qualified dependency"
+          ]
+        },
+        {
+          "id": "LB-IA-002",
+          "assertion": "LINEAR(183002) entails admitted vector presentations for source and target.",
+          "support": [
+            "183002 explicit conjunct",
+            "182004 provisionally qualified dependency"
+          ]
+        },
+        {
+          "id": "LB-IA-003",
+          "assertion": "LINEAR(183002) entails zero/addition/scalar-action preservation exactly as encoded.",
+          "support": [
+            "183002 explicit body"
+          ]
+        },
+        {
+          "id": "LB-IA-004",
+          "assertion": "BILINEAR(183003) entails BINARY_FUNCTION(BFORM,V,V,C).",
+          "support": [
+            "183003 explicit conjunct",
+            "182002 provisionally qualified dependency"
+          ]
+        },
+        {
+          "id": "LB-IA-005",
+          "assertion": "BILINEAR(183003) entails additivity and scalar-linearity in each argument.",
+          "support": [
+            "183003 explicit body"
+          ]
+        },
+        {
+          "id": "LB-IA-006",
+          "assertion": "BIJECTION(188100) entails UNARY_FUNCTION(F,A,B).",
+          "support": [
+            "188100 explicit conjunct",
+            "182001 provisionally qualified dependency"
+          ]
+        },
+        {
+          "id": "LB-IA-007",
+          "assertion": "BIJECTION(188100) entails injectivity and surjectivity exactly as encoded.",
+          "support": [
+            "188100 explicit body"
+          ]
+        },
+        {
+          "id": "LB-IA-008",
+          "assertion": "LINEAR_BIJECTION(193200) entails LINEAR(183002) for the same map.",
+          "support": [
+            "193200 explicit conjunct"
+          ]
+        },
+        {
+          "id": "LB-IA-009",
+          "assertion": "LINEAR_BIJECTION(193200) entails BIJECTION(188100) for the same map.",
+          "support": [
+            "193200 explicit conjunct"
+          ]
+        },
+        {
+          "id": "LB-IA-010",
+          "assertion": "BASIS(187600) entails two admitted members, exact two-coordinate independence, and spanning.",
+          "support": [
+            "187600 explicit body"
+          ]
+        },
+        {
+          "id": "LB-IA-011",
+          "assertion": "BASIS(187601) entails four admitted members, exact four-coordinate independence, and spanning.",
+          "support": [
+            "187601 explicit body"
+          ]
+        },
+        {
+          "id": "LB-IA-012",
+          "assertion": "BASIS(215000) entails eight admitted members, exact eight-coordinate independence, and spanning.",
+          "support": [
+            "215000 explicit body"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only the frozen conjunct-projection rules yields no new assertion beyond iteration 1."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 12,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "nonclaims": [
+    "No theorem about all finite-dimensional vector spaces is inferred.",
+    "No canonicality or natural identity is inferred.",
+    "No unselected historical relation is admitted.",
+    "This is qualification evidence, not L source-track IA."
+  ],
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

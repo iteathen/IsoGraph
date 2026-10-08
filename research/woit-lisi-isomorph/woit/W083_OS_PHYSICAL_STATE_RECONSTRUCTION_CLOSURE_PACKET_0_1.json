@@ -1,0 +1,33 @@
+{
+  "schema": "woit.w083-os-physical-state-reconstruction-closure.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-083",
+  "frozen_body": "W04e instead uses an antilinear reflection/conjugation Theta associated with imaginary-time reflection in Osterwalder-Schrader reconstruction; the Hilbert-space inner product and physical state space are reconstructed from this reflection-positive Euclidean structure.",
+  "source": "W04e notes",
+  "support_packets": [
+    "W122_OS_THETA_FORM_CLOSURE_PACKET_0_1.json"
+  ],
+  "support_root": "W_OS_REFLECTION_POSITIVE_SUPPORT_PACKET_0_1.json",
+  "reconstruction": {
+    "theta": 996112,
+    "reflection_positive_os_form": 996151,
+    "null_subspace": 996153,
+    "physical_state_quotient": 996140,
+    "quotient_projection": 996145,
+    "physical_inner_product": 996160,
+    "physical_norm": 996161
+  },
+  "guards": [
+    "Hilbert completion is abstracted at the frozen boundary; the exact positive-definite quotient inner-product space is represented.",
+    "No cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

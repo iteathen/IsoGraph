@@ -1,0 +1,117 @@
+{
+  "schema": "isograph.exp062-l127-g6-finite-basis-7-28-provisional-qualification.v0.2",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "FINITE_BASIS_7_28_0_2",
+  "branch_head_at_creation": "5fd033cab7389d830b9434db2b720c87223984aa",
+  "predecessor": {
+    "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_PROVISIONAL_QUALIFICATION_0_1.json",
+    "status": "INVALIDATED_BY_SI_COLLISION_225000"
+  },
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_FINITE_BASIS_7_28_0_2.json",
+      "git_blob_sha": "24d6b841cefd61076ad05ee33e3297ac4fa666ba"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_SSC_0_2.json",
+      "git_blob_sha": "0807fe01058061f45b36d71e5d30b9147df8405d"
+    },
+    "module_ia": {
+      "path": "experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_IA_FIXED_POINT_0_2.json",
+      "git_blob_sha": "8b2ebb2337f2375c47f9b3ed24c800085e5f686f"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l127-g6-finite-basis-7-28-0-2.mjs",
+      "git_blob_sha": "f8dbcc9a3c02712661b1ae513518bbbbaa624532"
+    },
+    "field_vector_dependency": {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L127 G6 finite-basis replay qualification",
+    "workflow_run_id": 37747039354,
+    "workflow_run_head": "afeeca8837ae2073acaba6760f2cb601593b94f7",
+    "job_id": 113210861254,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      225010,
+      225001
+    ],
+    "dependency_audit": {
+      "225001": [
+        182004,
+        225001
+      ],
+      "225010": [
+        182004,
+        225010
+      ]
+    },
+    "tests": {
+      "ssc_obligations": 10,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 7,
+      "positive_standard": 2,
+      "positive_permuted": 2,
+      "duplicate_negative": 2,
+      "zero_negative": 2,
+      "rank_deficient_negative": 2
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      {
+        "id": 225010,
+        "meaning": "exact seven-element basis presentation: membership, independence, and spanning"
+      },
+      {
+        "id": 225001,
+        "meaning": "exact twenty-eight-element basis presentation: membership, independence, and spanning"
+      }
+    ],
+    "explicit_exclusions": [
+      "arbitrary-dimension theorem",
+      "orthogonality or metric semantics",
+      "operator or Lie-algebra semantics",
+      "so(8) name/classification",
+      "W/cross-track semantics"
+    ]
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "identity_repair": {
+    "old_dimension7_si": 225000,
+    "new_dimension7_si": 225010,
+    "old_authority_invalidated": true,
+    "mathematical_scope_unchanged": true
+  },
+  "consumption_rule": "Experiment 062/063 may consume only exact 225010/225001 under the pinned field/vector dependency. No consumer may interpret 225000 as dimension-7; 225000 remains owned by the earlier trilinear scalar-extension relation.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "Corrected L127 source reconstruction may consume 225010 for the exact seven-element imaginary-right basis and 225001 for the exact twenty-eight-element bi-product basis.",
+    "The corrected L127 source-local carrier/action namespace is 246xxx, not the collided historical 226xxx block."
+  ],
+  "nonclaims": [
+    "No global authority change.",
+    "No so(8) classification.",
+    "No third-party verification claim.",
+    "No W/cross-track evidence used."
+  ]
+}

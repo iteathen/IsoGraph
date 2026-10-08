@@ -1,0 +1,131 @@
+{
+  "schema": "lisi.l126-chiral-clifford-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "L-SSC-126",
+  "frozen_body": "L05 constructs chiral Clifford-vector matrices directly from multiplication-table coefficients, with signature-dependent signs and a cyclic coefficient identity linking Clifford and division-algebra indices.",
+  "source": "L05 §2 eqs. (2)–(4)",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_COEFFICIENT_SOURCE_OVERLAY_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_ASSERTION_SCHEMA_0_1.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_COEFFICIENT_SOURCE_OVERLAY_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_ASSERTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_SCALAR_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_SPLIT_COMPLEX_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_QUATERNION_ALGEBRA_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_SPLIT_QUATERNION_OCTONION_SOURCE_INSTANCES_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_CHIRAL_CLIFFORD_PAIR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_COMPOSITION_ANTIINVOLUTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 17,
+    "declared_local_ids": 196,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "duplicate_declarations": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "coefficient_tensor": {
+      "raw_gamma_relation": 217001,
+      "lowered_gamma_relation": 217002,
+      "bar_gamma_relation": 217005,
+      "basis_membership_relation": 217000,
+      "sign_atoms": {
+        "negative": 217010,
+        "zero": 217011,
+        "positive": 217012
+      }
+    },
+    "source_assertions": {
+      "cyclic_coefficient_predicate": 217160,
+      "primitive_chiral_clifford_schema": 195000,
+      "carrier_specific_reverse_actions": [
+        217100,
+        217110,
+        217120,
+        217130,
+        217140,
+        217150
+      ],
+      "carrier_specific_clifford_bilinear_forms": [
+        217101,
+        217111,
+        217121,
+        217131,
+        217141,
+        217151
+      ],
+      "carrier_specific_clifford_quadratic_forms": [
+        217102,
+        217112,
+        217122,
+        217132,
+        217142,
+        217152
+      ]
+    },
+    "carriers": {
+      "C": 214000,
+      "Cprime": 214100,
+      "H": 189200,
+      "Hprime": 214200,
+      "O": 214300,
+      "Oprime": 214400
+    }
+  },
+  "finite_source_check": {
+    "verifier": "tools/verify_l126_chiral_clifford_source.mjs",
+    "result_artifact": "L126_CHIRAL_CLIFFORD_SOURCE_FALSIFIER_0_1.json",
+    "clean_controls": [
+      "C",
+      "Cprime",
+      "H",
+      "Hprime",
+      "Oprime"
+    ],
+    "ordinary_O": {
+      "cyclic_coefficient_failures": 2,
+      "clifford_identity_failures": 28,
+      "disposition": "INCONSISTENT_SOURCE",
+      "inherited_discrepancy": "LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json"
+    }
+  },
+  "evidence": {
+    "dispositions": [
+      "SOURCE_ASSERTED",
+      "INCONSISTENT_SOURCE"
+    ],
+    "source_repair_used": false,
+    "source_formula_reference": "L05 equations (2)-(4)",
+    "external_source_reconstruction_note": "Gamma_c^b_a=M_ca^(tilde b); barGamma_c=n_cc Gamma_c^T; source asserts Clifford and cyclic identities"
+  },
+  "semantic_guards": [
+    "representation closure is separate from consistency/truth disposition",
+    "the exact ordinary-O version-of-record table is preserved even where it contradicts the source Clifford/cyclic assertions",
+    "the project-generated one-sign O repair is not used",
+    "split-signature lowering is represented in the coefficient tensor",
+    "barGamma signature-adjusted transpose is represented explicitly",
+    "named Clifford algebra labels are reconstruction glosses; the native body is chiral actions, forms, coefficients, and quantified identities",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "COMPLETE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

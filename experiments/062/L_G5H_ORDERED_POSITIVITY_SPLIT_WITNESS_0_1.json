@@ -1,0 +1,131 @@
+{
+  "schema": "isograph.exp062-l-g5h-ordered-positivity-split-witness.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "origin": "HYPOTHESIS",
+  "branch_head_at_creation": "021d3de43474f9e435314ac07fde8cc05b2c4dd8",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_residual": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_6.json",
+    "git_blob_sha": "0bee7ad0dd75fe758e6503c89e4e891f196f40a5",
+    "occurrence_id": "L-SSC-125-R06",
+    "family": "ORDERED_SCALAR_POSITIVITY_AND_NEGATIVE_NORM_WITNESS"
+  },
+  "dependency_authority": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        182001,
+        182003,
+        182004
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+      "required_relations": [
+        185002,
+        185003
+      ]
+    }
+  ],
+  "exact_scoped_relations": [
+    {
+      "id": 216000,
+      "role": "ordered-field relation over an exact field carrier",
+      "source_path": "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_ORDERED_FIELD_POSDEF_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "8dfa4337aa0b3d977eaae5ba4f6ec6cca0108f98"
+    },
+    {
+      "id": 216001,
+      "role": "positive-definite quadratic form over exact 216000 order",
+      "source_path": "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_ORDERED_FIELD_POSDEF_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "8dfa4337aa0b3d977eaae5ba4f6ec6cca0108f98"
+    },
+    {
+      "id": 216002,
+      "role": "explicit negative-norm witness over exact 216000 order",
+      "source_path": "research/woit-lisi-isomorph/lisi/LISI_PRIMITIVE_NEGATIVE_NORM_WITNESS_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "c70fb82e4c6f0c1200884089f48784878b3a5cfb"
+    }
+  ],
+  "candidate_statement": "The exact relations 216000/216001/216002 form a reusable lower layer sufficient to distinguish source-positive-definite norm carriers from source-split carriers: 216000 supplies a field-compatible total order, 216001 requires nonnegative Q with zero only at the vector zero, and 216002 records an explicit admitted vector with strictly negative Q.",
+  "declared_scope": {
+    "included": [
+      "field-compatible total order with zero <= one",
+      "positive-definite Q relative to that order",
+      "strictly negative Q witness relative to that order"
+    ],
+    "excluded": [
+      "division property or relation 216003",
+      "completeness/Archimedean/real-closed field semantics",
+      "named R/C/H/O identity",
+      "signature classification beyond positive-definite versus explicit negative witness",
+      "alternativity/Moufang/canonical conjugation",
+      "triality/reflection semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "G7 replay 0.6 leaves only L-SSC-125-R06 open in the targeted dependency cone.",
+    "The frozen L05 source overlay already instantiates 216001 for ordinary C/H/O norm carriers and 216002 for Cprime/Hprime/Oprime using explicit negative-norm source witnesses.",
+    "L05 real-order source instance explicitly instantiates 216000; these historical files are hypothesis material, not authority."
+  ],
+  "prohibited_evidence": [
+    "W track",
+    "cross-track correspondence",
+    "desired unification",
+    "textbook classification by familiar algebra names",
+    "historical closure-packet status as authority"
+  ],
+  "predicted_consequences": [
+    "A standard exact rational order satisfies 216000; a non-total or translation-incompatible relation fails.",
+    "Q(x)=sum_i x_i^2 over a rational vector carrier satisfies 216001 on the tested exact domain; a degenerate or indefinite Q fails positive-definiteness.",
+    "An indefinite Q with an explicit vector of Q<0 satisfies 216002; a zero/positive witness fails.",
+    "216002 does not imply any stronger split-composition ontology beyond existence of the declared negative witness.",
+    "216001 and 216002 are mutually incompatible for the same Q/order when their declarations are both applied without changing scope."
+  ],
+  "known_alternatives": [
+    "Preserve L125-R06 as an unresolved source-information boundary.",
+    "Qualify a stronger division/ordered-composition bundle including 216003 (rejected as unnecessary for this residual).",
+    "Materialize source signatures directly without a generic reusable order/Q layer (insufficient for arbitrary-element positive-definiteness)."
+  ],
+  "positive_controls": [
+    "exact rational field/order with <= and Q(x,y)=x^2+y^2",
+    "exact rational field/order with Q(x,y)=x^2-y^2 and witness (0,1)"
+  ],
+  "negative_adversarial_controls": [
+    "strict-order-only or non-total comparator",
+    "translation-incompatible comparator",
+    "degenerate Q(x,y)=x^2",
+    "indefinite Q presented as positive-definite",
+    "negative-witness candidate whose Q value is zero",
+    "negative-witness candidate whose Q value is positive"
+  ],
+  "falsifier": "Reject or split if 216000/216001/216002 have hidden semantic dependencies outside qualified field/vector/function support plus the selected relations; if positive controls fail; if any negative/adversarial control is accepted; if module SSC/IA cannot close; or if L125 source reconstruction requires stronger division or named-algebra semantics.",
+  "adaptive_evidence": "Generated only after G7 replay 0.6 closed L130 and isolated L125-R06 as the sole residual in the reopened cone.",
+  "fresh_confirmation_status": "PENDING_G6_DETERMINISTIC_QUALIFICATION; external third-party review bypassed but not passed under owner exception.",
+  "coverage_limits": "Only exact 216000/216001/216002 at pinned bytes and exact dependencies. No 216003, named algebra identity, or global authority claim.",
+  "revision_lineage": [
+    "L_G7_DEPENDENCY_CONE_REPLAY_0_6"
+  ],
+  "source_reconstruction_targets": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_ORDER_SOURCE_INSTANCE_0_2.isg",
+      "git_blob_sha": "e2ade7b84bf53f59a8425cd6ce6510f88a27c97c",
+      "role": "L05 exact real ordered-field instance selecting 216000"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_COMPOSITION_SIGNATURE_SOURCE_OVERLAY_0_1.isg",
+      "git_blob_sha": "77c416436463a1fd51a413d053ae3d707b2d237e",
+      "role": "L05 source signature overlay selecting 216001 for ordinary cases and 216002 for split cases"
+    }
+  ],
+  "next_stage": "G6_MODULE_SSC_AND_MODULE_LOCAL_IA"
+}

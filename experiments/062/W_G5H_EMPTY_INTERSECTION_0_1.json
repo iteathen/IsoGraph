@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.exp062-w-g5h-empty-intersection.v0.1",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_CANDIDATE_PRE_G6_FALSIFICATION",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "origin": "HYPOTHESIS",
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent": {
+    "g5_fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_4.json",
+      "git_blob_sha": "d8f87b6875e542adf84fd2bbce3aec615ff3542f"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_21.json",
+      "git_blob_sha": "64eb3713ec996dda0b4b7e983f43f81a359c44dd"
+    },
+    "residual_occurrence": "W-SSC-097-O05",
+    "residual_class": "W-G4-Q0206"
+  },
+  "candidate_id": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+  "candidate_statement": {
+    "carrier": "A represented carrier U.",
+    "left_predicate": "A represented unary predicate A typed on U.",
+    "right_predicate": "A represented unary predicate B typed on U.",
+    "disjointness": "No represented x in U satisfies both A(x) and B(x).",
+    "semantic_level": "Pure first-order/Core-definable predicate disjointness; A and B meanings remain unresolved external predicates."
+  },
+  "intended_W_binding": {
+    "U": "represented point-domain used only as a common typing carrier",
+    "A": "CONIC_POINT-like source predicate, semantics not defined by the candidate",
+    "B": "REAL_POINT-like source predicate, semantics not defined by the candidate",
+    "target": "W-SSC-097-O05 only"
+  },
+  "motivating_evidence": [
+    "W-SSC-097-O05 isolates the source statement 'real projective conic with complex but no real points'.",
+    "The post-G7 G5 review identifies the absence clause as a candidate logical decomposition while requiring conic-point and real-point semantics to remain explicit lower demands."
+  ],
+  "prohibited_evidence": [
+    "L track semantics or results",
+    "historical W real-conic closure packets as authority",
+    "defining REAL_POINT by conjugation or fixed-point semantics",
+    "defining CONIC_POINT from projective equations absent from the current source graph",
+    "desired W/L unification"
+  ],
+  "predicted_consequences": [
+    "Two nonempty disjoint predicates pass.",
+    "Either predicate may be empty.",
+    "The common carrier may be empty.",
+    "Elements may satisfy neither predicate.",
+    "The candidate does not imply that A or B is the complement of the other.",
+    "Any represented element satisfying both predicates falsifies the candidate.",
+    "Qualification cannot close the meanings of A or B; those remain lower semantic demands.",
+    "G7 must independently justify that W097's phrase supplies the two predicate roles and common point-domain typing."
+  ],
+  "known_alternatives": [
+    "Preserve W-SSC-097-O05 as an opaque absence relation.",
+    "Reopen W097 source granularity to expose explicit point-membership predicates before consumption.",
+    "Use a source-specific real-conic module only if separately sourced and qualified."
+  ],
+  "positive_controls": [
+    "nonempty disjoint A/B on a three-element carrier",
+    "A empty / B nonempty",
+    "B empty / A nonempty",
+    "empty carrier"
+  ],
+  "negative_adversarial_controls": [
+    "one element in both A and B",
+    "predicate membership outside U"
+  ],
+  "falsifiers": [
+    "Any overlap model accepted.",
+    "Any lawful empty/partial model rejected because complement/exhaustiveness/nonemptiness leaked in.",
+    "Any need to define A or B using projective, real-form, conjugation, or geometry semantics.",
+    "Failure at G7 to source-establish two predicate roles over one represented point domain."
+  ],
+  "adaptive_evidence": [
+    "The candidate was selected after schema 221101 closed W097 O06/O04 and the post-G7 G5 replay ranked O05 as the next material W-only residual."
+  ],
+  "confirmation_status": "PENDING_FRESH_SOURCE_NEUTRAL_DISJOINTNESS_CONTROLS",
+  "coverage_limits": "Only generic typed predicate disjointness. No semantics of conic, realness, complexness, projective geometry, or point existence.",
+  "revision_lineage": [
+    "W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1",
+    "W_G5_SOURCE_SUFFICIENCY_REVIEW_0_4",
+    "W_G5_FIXED_POINT_0_4"
+  ],
+  "pre_G6_disposition": "ELIGIBLE_FOR_SOURCE_NEUTRAL_G6_IF_PRE_G6_FALSIFIERS_PASS"
+}

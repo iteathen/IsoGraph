@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.exp062-w-g5-fixed-point.v0.3",
+  "date": "2026-10-07",
+  "status": "W_LOCAL_G5_W097_CORRECTED_INPUT_COMPLETE_CURRENT_AUTHORITY_BOUNDARY_G5H_AVAILABLE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_3.json",
+      "git_blob_sha": "7f1e97c11c9bdff3a9feca1bebcfefe75e91eff2"
+    },
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_3.json",
+      "git_blob_sha": "3096dc8f9d76f7718ca6e54bc02f8d52637a0293"
+    },
+    "source_sufficiency_review": {
+      "path": "experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_3.json",
+      "git_blob_sha": "4d75b5d21b216ceb99779618674be0d2c624e007"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g5-corrected-input-0-3.mjs",
+      "git_blob_sha": "25e0d193f7dfe8a094764a0c6ea6245f20daefd6"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37685929048,
+    "conclusion": "success",
+    "quotient_classes": 372,
+    "proposed_reusable_candidates": 0,
+    "unresolved_boundaries": 372
+  },
+  "fixed_point": {
+    "W_local_G5_complete": true,
+    "W_local_G6_required": false,
+    "W_G5H_hypothesis_generation_authorized": true,
+    "W_track_primitive_closure_complete": false,
+    "W_track_IA_authorized": false,
+    "W_track_sealed": false,
+    "cross_track_comparison_authorized": false,
+    "boundary_kind": "GENUINE_CURRENT_AUTHORITY_PRIMITIVE_DOMAIN_BOUNDARY_WITH_G5H_AVAILABLE"
+  },
+  "target_w097": {
+    "occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "classes": [
+      "W-G4-Q0204",
+      "W-G4-Q0206"
+    ],
+    "status": "MATERIAL_EXPLICIT_RESIDUAL_FAMILY"
+  },
+  "nonclaims": [
+    "No deterministic projective-involution candidate is authority.",
+    "The W097 source correction does not by itself close any residual.",
+    "No L evidence is available to W.",
+    "External verification remains incomplete."
+  ],
+  "next_stage": "W_G5H_FIXED_POINT_FREE_INVOLUTION_HYPOTHESIS"
+}

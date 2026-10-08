@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w-g1-owner-bypass-routing.v0.2",
+  "date": "2026-10-07",
+  "status": "W_G1_W097_CORRECTED_INPUT_ACCEPTED_UNDER_OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS",
+  "authority_effect": "CAMPAIGN_PROCEDURE_EXCEPTION_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE"
+  },
+  "invalidation_response": "The W097 semantic correction invalidates the predecessor exact-input routing. This artifact accepts only W_EXTRACTION_RECONCILED_0_22.json under the existing owner exception and does not broaden the bypass.",
+  "pinned_inputs": {
+    "source_corpus": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    },
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_3.json",
+      "git_blob_sha": "c975248fa988f3187a90f6678a2713f216a250e1"
+    }
+  },
+  "internal_requirements": {
+    "source_local_zero_change": true,
+    "deterministic_replay": true,
+    "source_scope_unchanged": true,
+    "L_evidence_used": false,
+    "third_party_external_verification_complete": false
+  },
+  "routing": {
+    "W_G1_campaign_accepted_under_owner_bypass": true,
+    "W_G2_authorized": true,
+    "W_G3_authorized_after_valid_G2": true,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "independently_verified_claim_allowed": false
+  },
+  "nonclaims": [
+    "Third-party verification did not pass and is not represented as passed.",
+    "This is not global semantic authority.",
+    "This does not authorize the fixed-point-free involution hypothesis or any G6 candidate.",
+    "This does not authorize recursive W IA or cross-track comparison."
+  ]
+}
