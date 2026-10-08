@@ -96,7 +96,7 @@ function evaluate(S=curr,C=demand,Q=ssc,A=adj){
  check(o(23)?.depends_on?.includes(id(2))&&o(24)?.depends_on?.includes(id(2)),'conic field/point predicates depend on conic presentation');
  check(o(58)?.source_span==='-bar(z2)'&&o(58)?.relation_span==='-'&&o(58)?.depends_on?.includes(id(39))&&o(18)?.depends_on?.includes(id(58)),'homogeneous twistor map unary negation retained');
  check(o(45)?.surface_operator_ordinal===1&&o(59)?.surface_operator_ordinal===2&&o(45)?.surface_operator_total===2&&o(59)?.surface_operator_total===2&&o(22)?.depends_on?.includes(id(45))&&o(22)?.depends_on?.includes(id(59)),'two printed conic plus tokens separately conserved');
- check((o(22)?.source_span?.match(/\\+/g)||[]).length===2,'source conic contains exactly two plus glyphs');
+ check((o(22)?.source_span?.match(/\+/g)||[]).length===2,'source conic contains exactly two plus glyphs');
  check(o(60)?.source_span==='an antiholomorphic map rho: CP1 -> CP1'&&o(60)?.definition_status==='NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED'&&o(9)?.depends_on?.includes(id(60)),'antiholomorphic predicate represented, remains unexpanded');
  check(!/L-SSC-|FIXED_POINT_FREE_INVOLUTION_INTERFACE|EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE|22110[0-3]/.test(JSON.stringify(occs)),'no L/G5/G6 template leakage');
  const derived=S.items.reduce((sum,x)=>sum+(x.occurrences||[]).length,0);
