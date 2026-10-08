@@ -13,7 +13,7 @@ const p={
 };
 const read=path=>fs.readFileSync(path,'utf8');
 const json=path=>JSON.parse(read(path));
-const blob=path=>{const b=Buffer.from(read(path));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\\0'),b])).digest('hex');};
+const blob=path=>{const b=Buffer.from(read(path));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
 const copy=x=>JSON.parse(JSON.stringify(x)),old=json(p.oldDemand),demand=json(p.demand),ssc=json(p.ssc),audit=json(p.audit),gate=json(p.gate),pred=json(p.predecessor),adj=json(p.adjudication),curr=json(p.extracted);
 const find=(items,id)=>(items||[]).find(x=>x.census_id===id);
 const id=n=>'W-SSC-097-O'+String(n).padStart(2,'0');
