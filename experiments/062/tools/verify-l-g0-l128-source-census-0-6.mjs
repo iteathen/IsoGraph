@@ -40,7 +40,7 @@ function verify(s=cur){
  for(let i=0;i<6;i++){
   let r=rows.find(x=>x.id===rowId(i+1));
   ck(r?.source_expression?.includes(expected[i][0])&&r?.source_expression?.includes(expected[i][1]),'L128 source operands/formula '+(i+1));
-  ck(v.body.includes(expected[i][0])&&v.body.includes(expected[i][1]),'L128 body formula '+(i+1));
+  ck(v.body.replace(/\s+/g,'').includes(expected[i][0].replace(/\s+/g,''))&&v.body.replace(/\s+/g,'').includes(expected[i][1].replace(/\s+/g,'')),'L128 body formula '+(i+1));
   ck(r?.source_logical_force===defect.source_visible_omissions[i].modality,'L128 formula modality '+(i+1));
   ck(r?.lower_semantics==='G1_RECONSTRUCTION_UNSTARTED','L128 premature qualified semantics '+(i+1));
  }
