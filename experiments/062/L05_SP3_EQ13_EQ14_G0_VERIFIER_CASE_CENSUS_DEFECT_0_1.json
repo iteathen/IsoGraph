@@ -1,0 +1,37 @@
+{
+  "schema": "isograph.exp062.l-sp3-eq13-eq14-case-census-verifier-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_EXPECTED_BASIS_CASE_COUNT_FIXTURE_DEFECT_NO_SOURCE_MISMATCH",
+  "source_path": "research/woit-lisi-isomorph/lisi/LISI_L05_SP3_EQ13_EQ14_SOURCE_G0_0_1.json",
+  "verifier_path": "experiments/062/tools/verify-l-g0-l05-sp3-eq13-eq14-0-1.mjs",
+  "ci_failure": {
+    "run_id": 37823733174,
+    "head_sha": "33164dc24cac7e3fad0418cacf49ece7212c285f",
+    "conclusion": "failure",
+    "actual_finite_cases": 216,
+    "actual_matrix_discrepancies": 0,
+    "adversarial_mutations_rejected": 24,
+    "fixture_expected_cases": 198,
+    "https": "https://github.com/iteathen/IsoGraph/actions/runs/37823733174"
+  },
+  "failure_cause": "The initial local 198-case feasibility check constrained the second imaginary basis index to one value on each of the first three T-T bracket families. The checked-in CI verifier correctly enlarged these to all 3x3 pairings, but erroneously retained expected count 198.",
+  "correct_expected_coverage": {
+    "imaginary_imaginary": "3 bracket families x (3 x 3)=27",
+    "imaginary_quaternion": "6 bracket families x (3 x 4)=72",
+    "quaternion_quaternion": "6 bracket families x (4 x 4)=96",
+    "reflection": "9 imaginary plus 12 quaternion source generator basis checks =21",
+    "total": 216
+  },
+  "repair_plan": [
+    "retain failed run as historical negative verifier infrastructure evidence",
+    "change only expected coverage check to 216 with independent arithmetic derivation",
+    "rerun same finite reconstructed matrix and 24 mutation controls via Node CI",
+    "no source SSC or downstream replay advancement until a passing deterministic run"
+  ],
+  "source_semantic_status": "No source Eq13/14 inconsistency detected by this finite test; this does not prove source completeness or theorem truth",
+  "G1_authorized": false,
+  "external_review_passed": false
+}
