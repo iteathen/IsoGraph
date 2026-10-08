@@ -7,7 +7,7 @@
   "status": "FULL_MEMBERSHIP_AND_CONTENT_DELTA_CURRENT_HEAD_MECHANICAL_ONLY_SOURCE_SEMANTIC_AUDIT_OPEN",
   "authority": false,
   "capture": {
-    "head": "35f47c2c967bbe1c11b16275246fb261237d145c",
+    "head": "8f2a70a12b480389775c81622e8f86c7a3ee4ff5",
     "source_census_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_16.json",
     "source_census_git_blob_sha": "9418c4f8f0e91aef8f352b9fa762a5d7c9088360",
     "gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_17.json",
@@ -18,8 +18,8 @@
   },
   "count": {
     "previous": 1191,
-    "current": 1204,
-    "added": 13,
+    "current": 1205,
+    "added": 14,
     "changed": 1,
     "removed": 0,
     "unchanged": 1190,
@@ -37,7 +37,7 @@
       "original": 114
     },
     "L_CAMPAIGN": {
-      "count": 330,
+      "count": 331,
       "original": 328
     },
     "L_TOOLS": {
@@ -78,6 +78,12 @@
       "path": "experiments/062/L_CURRENT_STAGE_GATE_0_17.json",
       "sha": "14a8c8c0dcd72fff94476ea543699b52563bac27",
       "bytes": 26529,
+      "group": "L_CAMPAIGN"
+    },
+    {
+      "path": "experiments/062/L_G0_COVERAGE_DELTA_0_2_PATH_ORDER_VERIFIER_DEFECT_0_1.json",
+      "sha": "68a76177addaf0ba40338b8ee387d53f76fb1d43",
+      "bytes": 1450,
       "group": "L_CAMPAIGN"
     },
     {
@@ -1919,5 +1925,20 @@
       "mutants": 19,
       "external": false
     }
+  },
+  "candidate_replay_revision": {
+    "status": "PENDING_CI_AFTER_ORDER_CANONICALIZATION",
+    "previous_delta_blob_sha": "81be680774c19218dc1ed35084e8e770644e0787",
+    "failed_run": {
+      "id": 37847970197,
+      "conclusion": "failure",
+      "mutations_evaluated": 0
+    },
+    "defect": {
+      "path": "experiments/062/L_G0_COVERAGE_DELTA_0_2_PATH_ORDER_VERIFIER_DEFECT_0_1.json",
+      "git_blob_sha": "68a76177addaf0ba40338b8ee387d53f76fb1d43"
+    },
+    "source_semantic_impact": "NONE; journal source/SSC0.16/gate0.17 unchanged",
+    "reason": "Directory-group presentation order must not be mistaken for a semantic ordering of file identities; canonical full-path sort is permitted only for membership/byte comparisons."
   }
 }
