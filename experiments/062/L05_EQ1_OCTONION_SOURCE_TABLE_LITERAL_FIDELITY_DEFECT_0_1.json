@@ -1,0 +1,86 @@
+{
+  "schema": "isograph.exp062-l05-eq1-source-table-corrective-normalization-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_G0_SOURCE_TABLE_LITERAL_FIDELITY_AND_VERIFIER_ORACLE_DEFECT",
+  "authority": false,
+  "authority_effect": "INVALIDATE_L_G0_TABLE_0_7_CI_SOURCE_FIDELITY_CLAIM_AND_REOPEN_EARLIEST_G0",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS_TABLE_TRANSCRIPTION",
+  "source": {
+    "frozen_id": "L05",
+    "revision": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic, published 2026-08-29",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "locator": "section 2, Eq.(1), printed page 4 of 51, ordinary O matrix, row e7 column e6",
+    "read_method": "Direct PDF printed page visual inspection and source PDF text extraction; historic project discrepancy record independently confirms the two exact printed signs."
+  },
+  "predecessor": {
+    "ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json",
+      "git_blob_sha": "01fd0aff86aabaab128512117d608386bdc5ebf5"
+    },
+    "census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_7.json",
+      "git_blob_sha": "93ab6465bb03c943427d57c0c5f33d3e2bc8b948"
+    },
+    "historical_source_discrepancy": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json",
+      "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-section2-tables-0-7.mjs",
+      "git_blob_sha": "806d59d0a4183e6c70ed61e364587977b7c01290"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_8.json",
+      "git_blob_sha": "5d6b3466165c2e9e8e1ba76ca28cfc385fdb279e"
+    }
+  },
+  "source_cells": [
+    {
+      "carrier": "ordinary O",
+      "row": "e6",
+      "column": "e7",
+      "source_literal": "-e2",
+      "historical_0_1_ledger": "-e2",
+      "status": "CONSERVED"
+    },
+    {
+      "carrier": "ordinary O",
+      "row": "e7",
+      "column": "e6",
+      "source_literal": "-e2",
+      "historical_0_1_ledger": "+e2",
+      "status": "SOURCE_CHANGED_UNLAWFULLY_IN_LEDGER"
+    }
+  ],
+  "semantic_diagnosis": {
+    "source_internal_contradiction": "Source conjugation rule tilde(xy)=tilde(y)tilde(x) conflicts with its own two negative e6e7/e7e6 values. The source inconsistency must remain visible; the compiler may not silently repair either entry.",
+    "older_ledger_behavior": "Transcribed e7·e6 as +e2, which is the conventional antisymmetric repair candidate, not the printed source.",
+    "verifier_failure": "The passing verifier 0.7 embedded the same normalized +e2 expected cell, so its self-agreeing 168-cell test did not reconstruct the independent frozen source and falsely enforced every imaginary off-diagonal pair anticommutes.",
+    "positive_evidence": "Historical LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json already states both source products are -e2 and records direct contradiction and sparse falsifier."
+  },
+  "invalidation": {
+    "ledger0_1_current_source_faithful": false,
+    "census0_7_current_source_faithful": false,
+    "CI_run_37807515374_complete_source_conservation": false,
+    "gate0_8_source_validation_current": false,
+    "G1_authorized": false,
+    "G2_through_G7_authorized": false,
+    "L127_local_SI_replay_erased": false,
+    "qualified_module_promotion_allowed": false
+  },
+  "repair_contract": [
+    "Freeze literal successor table replacing only ordinary-O row e7 column e6 +e2 with -e2, preserving all other 167 Eq.(1) cells and all 15 source formula rows byte-equivalently as JSON records.",
+    "Preserve explicit incompatible source claims; never modify the source table to make anti-commutation or composition pass.",
+    "Regenerate only the earliest source-dependent G0 SSC candidate and repin only directly affected source table support; retain other 188 L SSC item records exactly.",
+    "Build verifier fixtures against independently inspected published source and historical discrepancy, include forced source-negation sign mutation, source inconsistency positive control and prior conventional repair negative control.",
+    "Run Node CI before asserting even local source fidelity, then continue remaining G0 source Eq.(5) and Cl(0,2) reconstruction. Do not advance G1/G7."
+  ],
+  "nonclaims": [
+    "Not a proof of the source mathematics.",
+    "No external third-party semantic verification passed.",
+    "No W evidence or cross-track semantics used.",
+    "This defect is independent of the L127 Semantic Identity repair."
+  ],
+  "next_lawful_step": "Publish literal table v0.2 and corrected L SSC0.8 G0 candidate, adversarially verify source-cell fidelity, update gate, then continue missing L05 source matrices."
+}
