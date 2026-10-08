@@ -14,7 +14,7 @@ function evaluate(packet=candidate){
  ck(packet.predecessor?.git_blob_sha===blob(files.old),'predecessor blob pin');
  ck(packet.correction_basis?.defect?.git_blob_sha===blob(files.defect),'row-order defect pin');
  ck(packet.correction_basis?.source_audit?.git_blob_sha===blob(files.source),'source expression audit pin');
- ck(packet.authority===false&&!packet.status.includes('PROMOTED'), 'hypothesis/ledger must not claim qualified semantics');
+ ck(packet.authority!==true&&packet.status.endsWith('_UNQUALIFIED')&&!packet.status.includes('PROMOTED'), 'hypothesis/ledger must not claim qualified semantics');
  ck(packet.interpretation_boundary?.external_verification_passed===false,'no outside review');
  const originalOther=prior.rows.filter(x=>!['S07','S08'].includes(x.assertion_group)&&!['L05-S15-V-MATRIX','L05-S15-PSI-MATRIX','L05-S15-CHI-MATRIX'].includes(x.formula_id));
  const newOther=packet.rows.filter(x=>!['S07','S08'].includes(x.assertion_group)&&!['L05-S15-V-MATRIX','L05-S15-PSI-MATRIX','L05-S15-CHI-MATRIX'].includes(x.formula_id));
