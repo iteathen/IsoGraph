@@ -77,7 +77,7 @@ const formulaExpected={
 ]
 };
 const requiredFragment={
-'L-SSC-125':['six','168','C_split','O_split','e_a e_b=M_ab^c e_c','tilde(e_a e_b)','signed'],
+'L-SSC-125':['SIX','168','C_split','O_split','e_a e_b=M_ab^c e_c','tilde(e_a e_b)','signed'],
 'L-SSC-126':['Eq.(2)','gamma_c=','M_ca^(tilde b)','barGamma_c=n_cc','Eq.(3)','Eq.(4)','octonions'],
 'L-SSC-127':['Eq.(5)','e_d multiplies','RIGHT before','gamma_dc=-gamma_cd','28-dimensional','7-dimensional','remain explicitly awaiting separate source-exact transcription']
 };
@@ -106,7 +106,7 @@ function verify(S=cur,L=source){
     const want=rows[i].split(' '),got=table.entries[i];
     ck(text(got)===text(want),'source Eq.(1) table sign/column mismatch '+table.carrier+' row '+i);
     ck(got.length===d,'ordered column count '+table.carrier+' '+i);
-    ck(got[i>=0?0:0]==='e'+i,'source e0 left/right identity '+table.carrier+' row '+i);
+    ck(got[0]==='e'+i,'source e0 left/right identity '+table.carrier+' row '+i);
     for(let j=0;j<d;j++){
       cells++;
       if(i===0)ck(got[j]==='e'+j,'source left e0 identity '+table.carrier+' '+j);
