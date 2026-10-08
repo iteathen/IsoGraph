@@ -80,9 +80,9 @@ function sum2Check(brL,IA,IB){
  for(const l of V2){let count=0;for(const a of V1)for(const b of V1)if(eq(add(IA(a),IB(b)),l))count++;if(count!==1)return false;}
  for(const a of V1)for(const b of V1)if(!eq(brL(IA(a),IB(b)),[0,0]))return false;return true;
 }
-const IA=x=>[x[0],0],IB=x=>[0,x[0]],IBover=x=>[x[0],0];
-check(sum2Check(Z2,IA,IB),'236003 positive');check(!sum2Check(Z2,IA,IBover),'236003 overlap accepted');
-const aff2Table=[[ [0,0],[0,1] ],[ [0,4],[0,0] ]],brAff2=bracketFromTable(2,aff2Table);check(lieCheck(2,brAff2),'aff2 not Lie');check(!sum2Check(brAff2,IA,IB),'236003 cross bracket accepted');
+const injA2=x=>[x[0],0],injB2=x=>[0,x[0]],injBOverlap2=x=>[x[0],0];
+check(sum2Check(Z2,injA2,injB2),'236003 positive');check(!sum2Check(Z2,injA2,injBOverlap2),'236003 overlap accepted');
+const aff2Table=[[ [0,0],[0,1] ],[ [0,4],[0,0] ]],brAff2=bracketFromTable(2,aff2Table);check(lieCheck(2,brAff2),'aff2 not Lie');check(!sum2Check(brAff2,injA2,injB2),'236003 cross bracket accepted');
 
 function sum3Check(brL,IA3,IB3,ID3){
  for(const F of [IA3,IB3,ID3])if(!lieHom(V1,V3,Z1,brL,F)||!injective(V1,F))return false;
