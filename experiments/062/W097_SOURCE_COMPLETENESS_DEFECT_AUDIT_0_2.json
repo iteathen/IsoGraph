@@ -1,0 +1,97 @@
+{
+  "schema": "isograph.exp062-w097-source-completeness-defect-audit.v0.2",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_FROZEN_SOURCE_SEMANTIC_CENSUS_OMISSION_REOPEN_G0_G1_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "frozen_source": {
+    "corpus": {
+      "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+      "git_blob_sha": "5775af1ab9289f97d903b39d5eb8eda241bafe78"
+    },
+    "source_id": "W05",
+    "locator": "W05 §2, arXiv:2202.02657v2",
+    "source_expansion": false
+  },
+  "predecessor": {
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_4.json",
+      "git_blob_sha": "34e3584b3a2d6ffbf72085b0ea6aaa230bee3729"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    },
+    "polarity_defect_audit": {
+      "path": "experiments/062/W097_REAL_PREDICATE_POLARITY_DEFECT_AUDIT_0_1.json",
+      "git_blob_sha": "2317993e02c645bf1cbe31b2351876a6d4a6ec86"
+    }
+  },
+  "omitted_source_facts": [
+    {
+      "id": "W097-SF01",
+      "fact": "W05 explicitly defines a real structure on CP1 as an antiholomorphic map rho:CP1->CP1 satisfying rho^2=1.",
+      "load_bearing_reason": "This supplies explicit map/self-map and involution structure that predecessor W097 compressed into a name."
+    },
+    {
+      "id": "W097-SF02",
+      "fact": "W05 explicitly gives ordinary conjugation rho([z1,z2])=[bar(z1),bar(z2)] and defines its real points as the fixed points satisfying rho(p)=p.",
+      "load_bearing_reason": "This is a source-local definition of a real-point role, not merely a noun phrase."
+    },
+    {
+      "id": "W097-SF03",
+      "fact": "W05 explicitly defines rho_tw in homogeneous coordinates by rho_tw([z1,z2])=[-bar(z2),bar(z1)] and in affine coordinate by rho_tw(z)=-1/bar(z).",
+      "load_bearing_reason": "The explicit source map invalidates the prior claim that total/self-map behavior was absent merely because the compressed G1 graph did not expose it."
+    },
+    {
+      "id": "W097-SF04",
+      "fact": "W05 states rho_tw^2=-1 on C2 coordinates, rho_tw^2=1 on complex lines/projective points, and no projective fixed points.",
+      "load_bearing_reason": "These laws must be represented with their carrier scopes and depend on the explicit map."
+    },
+    {
+      "id": "W097-SF05",
+      "fact": "W05 explicitly gives the alternate projective-curve presentation x^2+y^2+z^2=0 in projective two-space, says it is defined over the real numbers, and says it has complex but no real points.",
+      "load_bearing_reason": "The predecessor source body named a conic but omitted the source equation/presentation behavior, which directly affects later conic-point and real-point hypotheses."
+    }
+  ],
+  "defect_findings": [
+    "W-SSC-097 was not source-complete for the current primitive-demand questions.",
+    "The earlier W G7 failure of schema 221100 on totality/single-valuedness was evaluated against a graph that omitted W05's explicit self-map definition and is therefore not current evidence about the corrected source instance.",
+    "The earlier W G7 failure of schema 221102 for lack of an independent conic-membership role was evaluated against a source body that omitted the explicit conic equation and is therefore not current evidence about the corrected source instance.",
+    "The later schema-221103 path and W_G1 0.23 real-predicate reopen are downstream of the compressed source body and cannot remain current after this correction.",
+    "The O08 polarity defect remains a valid local defect, but the source-completeness omission is earlier and controlling."
+  ],
+  "correction": {
+    "changed_source_body": "W-SSC-097 only",
+    "new_source_evidence": false,
+    "new_source_corpus": false,
+    "source_expansion": false,
+    "preserve_track_independence": true,
+    "corrected_body": "W05 defines a real structure on CP1 as an antiholomorphic map rho: CP1 -> CP1 with rho squared equal to 1; ordinary complex conjugation rho([z1,z2])=[bar(z1),bar(z2)] is one such real structure, and its real points are exactly the points fixed by rho. W05 then defines the twistor real structure rho_tw by rho_tw([z1,z2])=[-bar(z2),bar(z1)] (equivalently rho_tw(z)=-1/bar(z)); on C2 coordinates rho_tw squared equals -1, while on projective points rho_tw squared equals 1 and rho_tw has no projective fixed points. W05 also presents the same twistor P1 as the real projective conic x^2+y^2+z^2=0 in projective two-space, defined over the real numbers, with complex points but no real points."
+  },
+  "invalidation": {
+    "all_W_G1_and_downstream_artifacts_on_SOURCE_DEMAND_CENSUS_0_3_current": false,
+    "current_gate_0_29": false,
+    "generic_source_neutral_qualifications_preserved": [
+      "221100 FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+      "221101 RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE_0_1",
+      "221102 DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+      "221103 EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE_0_1"
+    ],
+    "W_source_instantiations_to_retest": [
+      "W_G7_FIXED_POINT_FREE_INVOLUTION_INSTANTIATION_0_1",
+      "W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1",
+      "W_G7_DISJOINT_UNARY_PREDICATES_INSTANTIATION_0_1",
+      "W_G7_EMPTY_TYPED_PREDICATE_INSTANTIATION_0_1"
+    ],
+    "L_semantics_changed": false
+  },
+  "verifier_lessons": [
+    "Mechanical exact-substring replay is insufficient to prove source completeness.",
+    "A source-completeness audit must compare load-bearing source definitions/formulas against the frozen census before interpreting missing semantics as a primitive-domain boundary.",
+    "Failure-to-instantiate evidence is only valid relative to the exact source-conserved graph used by the test."
+  ],
+  "next_lawful_action": "Create successor W source semantic census and source-demand corpus with W097-SF01..SF05 conserved; then rebuild W097 G1 from that body before any G2/G3/G5/G7 reuse."
+}
