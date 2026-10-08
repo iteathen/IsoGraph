@@ -76,8 +76,8 @@ function sourceMath(d=S){
  ck(j(lsign)===j({positive:3,negative:3,zero:0})&&j(rsign)===j({positive:4,negative:2,zero:0}),'real Killing form inertia differs 3/3 vs4/2');
  ck(j(basis.signature_sl2C_R)===j(lsign)&&j(basis.signature_sl2R_plus_sl2R)===j(rsign)&&basis.real_Lie_algebra_isomorphism_possible===false,'semantic signature conclusion correct');
  ck(basis.Chevalley_relation==='[E,F]=H; [H,E]=2E; [H,F]=-2F; i²=-1 for realification; cross-factor brackets zero in direct product','exact source-independent 6D bracket law');
- ck(d.source_disposition?.source_group_equality_false_under_stated_real_category===true&&d.source_disposition?.source_external_math_disagrees===true&&d.source_disposition?.no_claim_full_2007_E8_model_invalid===true,'source correction scoped to one printed equality only');
- ck(route.L_G0_source_census_frozen===false&&route.L_G1_through_G7_authorized===false&&route.full_primitive_closure===false&&route.external_review_passed===false,'scope and third party review unqualified');
+ ck(d.source_disposition?.source_group_equality_false_under_stated_real_category===true&&d.source_disposition?.source_external_math_disagrees===true&&d.source_disposition?.no_claim_full_2007_E8_model_invalid===true&&d.source_disposition?.printed_author_claim_preserved_verbatim===true,'source correction scoped to one printed equality only');
+ ck(route.L_G0_source_census_frozen===false&&route.L_G1_through_G7_authorized===false&&route.full_primitive_closure===false&&route.source_31_page_VISUAL_audit_full_formula_closure===false&&route.external_review_passed===false,'scope and third party review unqualified');
  ck(!j(d).includes('W-SSC-'),'independent L-only source');
  return e;
 }
