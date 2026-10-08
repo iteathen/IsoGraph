@@ -80,26 +80,17 @@ See FULL_ISOGRAPH_TREATMENT_CONTRACT_0_1.md, woit/README.md, and lisi/README.md.
 
 ## Current graph-first source-treatment checkpoint
 
-### W track — corrected-input variation boundary
+### W track — correctness-first G0 source-census replay (2026-10-08)
 
-W has replayed the graph-first primitive-demand sequence after a targeted source-granularity correction to the already-frozen W01/W02 corpus, without using L evidence:
+The earlier W G1–G5/G5H results were obtained against source-census tuples now invalidated by direct W05 source-granularity defects. They remain historical research evidence for those old tuples, **not current primitive closure**. The controlling gate is `experiments/062/W_CURRENT_STAGE_GATE_0_36.json`.
 
-- G1: corrected source-local fixed point at `W_EXTRACTION_RECONCILED_0_21.json`, 84 unresolved W bodies / **443 occurrences**. Only W-SSC-029 and W-SSC-149 changed; 82 bodies were exact carry-forwards. The active owner bypass skips unavailable third-party verification only; source conservation and deterministic replay remain satisfied.
-- G2: corrected neutral occurrence graph with **443 occurrence nodes, 903 ordered argument slots, and 366 dependency edges**.
-- G3: corrected fixed point with **13 `CORE_CLOSED` / 430 `UNEXPANDED_DEMAND`**; no schema or QU candidate.
-- G4: corrected W-only alpha-renamed quotient with **370 structural classes** (342 singleton, 28 multi-member; largest 12), exact rooted-isomorphism verification, and source/candidate text excluded from quotient keys.
-- G5: deterministic corrected-input synthesis found **0 reusable candidates / 370 unresolved boundaries**. The four target variation consequences now occupy four distinct quotient classes, so their common `gives` wording is provenance recurrence only.
-- G5H: five lower variation-layer hypotheses were explicitly tested. Incidence-only closure failed exact reconstruction; an opaque `VARIES_TO` relation failed No-Evasion; controlled perturbation/replacement required unstated source behavior; the equations-of-motion bridge failed scope plus No-Evasion; and primitive 211000 retained its prior W source-instance mismatch. **No hypothesis survived to G6.**
+The latest W-only Source Semantic Census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_11.json` (151 stable identities; NOT FROZEN). It preserves the earlier W05 §§2–7 formula/table/negative and cited-context corrections, including reopening W109's eleven analogy-table rows and W110's contextual claims. Neither W109 nor W110 may inherit its historic `CLOSED_PRIMITIVE` disposition.
 
-The durable W stop records are `experiments/062/W_G5H_VARIATION_LAYER_FALSIFICATION_0_1.json` and `experiments/062/W_G5H_VARIATION_FIXED_POINT_0_1.json`. The controlling boundary is:
+A new direct W05 §5.2 author-PDF audit found that W103 had converted the printed strict Hodge filtration index `i>p` to non-strict "at least p" and omitted the separately printed `H^(p,q)(M)=F^p intersect conjugate(F^q)` relation. Source successor 0.11 corrects W103 only (150 others unchanged), and `W_G0_W103_SOURCE_DEMAND_PROJECTION_0_1.json` regenerates just the W-only 86-demand projection, preserving every other W item and without rewriting L source. The author's unusual printed `F^2=V` terminal notation and negative Hodge/scope claims remain unrepaired.
 
-`SOURCE_INFORMATION_AND_INTERNAL_VARIATION_SEMANTICS_BOUNDARY`
+The first W103 verifier failed an adversarial missing-member test by throwing; the failure is preserved. The replacement `verify-w05-w103-strict-hodge-source-0-2.mjs` rejected 17/17 mutations in local deterministic V8 replay. **That is not a cold Node/GitHub Actions or external semantic qualification.** Exact author-PDF/arXiv-v2 byte identity and all-source W source conservation remain outstanding.
 
-The missing load-bearing layer is the internal selected-role variation operation itself. The current W source supports action/field/result incidence and, on W01, an explicit torsion equation and equation-to-Levi-Civita consequence, but it does not define perturbation/replacement carriers, held-fixed semantics, before/after action evaluation, total first variations, or zero/universal stationarity semantics.
-
-W primitive closure is therefore **not complete**. Recursive W IA remains unauthorized, W is not sealed, and cross-track comparison remains forbidden. This boundary is not mathematical irreducibility: it may reopen on new authoritative W source semantics, a separately qualified generic variation module that W can actually instantiate, or a genuinely new W-only hypothesis that survives Method-0.3 falsifiers.
-
-**This subsection records W only. No L semantics or L provisional authority were used to reach it.**
+Consequently G0 is reopened: W G1 through G7, primitive/schema closure, Recursive IA, and cross-track comparison remain unauthorized until complete, fail-closed source verification and lawful replay. This W track uses no L semantic premises or hypotheses.
 
 ### L track — current correctness gate: G0 source census (2026-10-08)
 
