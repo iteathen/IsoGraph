@@ -1,0 +1,41 @@
+{
+  "schema": "isograph.exp062-l-ssc011-verifier-baseline-masking-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_VERIFIER_BASELINE_FAILURE_MASKS_MUTATION_ESCAPES_NO_ADVERSARIAL_QUALIFICATION",
+  "source_census": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_11.json",
+  "verifier": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-11.mjs",
+  "failed_CI": {
+    "run_id": 37824412749,
+    "sha": "5d452d5feb0d40de1538b61b0d3b8dd000dbc0e8",
+    "conclusion": "failure",
+    "failure": "negative phase/scope authority nonclaims",
+    "erroneous_reported_rejections": 27
+  },
+  "defects": [
+    {
+      "id": "D1",
+      "kind": "FIXTURE_LEXEME_CASE_MISMATCH",
+      "observation": "Actual SSC body says 'do NOT themselves specify phases'; verifier demanded 'DO NOT themselves specify phases'. Both keep negative modality; test requirement mismatched its source assertion.",
+      "repair": "Use exact existing body lexeme, and make phase-erasure mutant target that same string."
+    },
+    {
+      "id": "D2",
+      "kind": "ADVERSARIAL_VERIFIER_FALSE_REJECTION_MASKING",
+      "observation": "Mutation loop interpreted any verifier error as successful mutation rejection even when unmutated baseline itself failed. An attempted phase-erasure replacement also matched no substring and did nothing.",
+      "repair": "Only run and count mutations after baseline passes. Assert every mutation changes its target, otherwise fail as mutation-no-op, and separately report effective rejections."
+    }
+  ],
+  "semantic_source_status": "No separate Eq13/14 source inconsistency shown by this run; L G0 still incomplete",
+  "invalidation": "SSC0.11 source conservation not yet CI-verified; no G0 freeze, G1 extraction, downstream closure, IA or cross-track use authorized.",
+  "required_replay": [
+    "fix both source-assertion lexeme and mutation replacement",
+    "enforce unmutated baseline PASS before mutation loop",
+    "reject no-op mutation injections",
+    "run 216 Eq13/14 tests and SSC0.11 conservation CI",
+    "preserve all 190 unchanged SSC records and existing open negative evidence"
+  ],
+  "external_verification": "OWNER_BYPASSED_NOT_PASSED"
+}
