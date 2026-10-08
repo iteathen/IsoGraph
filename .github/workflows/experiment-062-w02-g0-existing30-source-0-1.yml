@@ -1,0 +1,31 @@
+name: Experiment 062 W02 G0 all 30 existing source bodies 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_19.json'
+      - 'experiments/062/W_G0_W02_30_SOURCE_DEMAND_PROJECTION_0_8.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_5.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_4.json'
+      - 'experiments/062/W02_G0_EXISTING_30_SOURCE_LITERAL_EXPECTATIONS_0_1.json'
+      - 'experiments/062/W02_G0_30_DIRECT_SOURCE_REVIEW_0_1.json'
+      - 'experiments/062/W02_G0_30_DIRECT_SOURCE_CENSUS_DEFECT_0_1.json'
+      - 'experiments/062/tools/verify-w02-g0-existing30-0-1.mjs'
+      - 'experiments/062/W02_G0_SOURCE_MATRIX_DETERMINANT_INDEPENDENT_REPLAY_0_1.json'
+      - 'experiments/062/tools/verify-w02-g0-source-matrix-det-0-1.mjs'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_46.json'
+      - 'experiments/062/W02_G0_30_LOCAL_DETERMINISTIC_REPLAY_0_1.json'
+      - '.github/workflows/experiment-062-w02-g0-existing30-source-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-g0-existing-44-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w01-g0-stage-0-45-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-g0-existing30-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-g0-source-matrix-det-0-1.mjs
