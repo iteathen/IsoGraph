@@ -1,0 +1,71 @@
+{
+  "schema": "isograph.exp062-w097-cross-occurrence-si-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_V8_PASS_21_OF_21_REJECTED_G1_G2_SHARED_SI_CONTROLS_NODE_CI_PENDING",
+  "inputs": {
+    "current_ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_15.json",
+      "git_blob_sha": "4a39e2d36465519a91731d193128dbd4b0720192"
+    },
+    "historical_G1": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+    },
+    "historical_G2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_4.json",
+      "git_blob_sha": "4a6ef4b2e4987c6875e6fc4c0205a04f84c37b57"
+    },
+    "historical_G4": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "new_defect": {
+      "path": "experiments/062/W097_G0_CROSS_OCCURRENCE_SI_DEFECT_0_1.json",
+      "git_blob_sha": "ec80a867e5ec5373183f134e462aebc6386604d1"
+    },
+    "failed_control": {
+      "path": "experiments/062/W097_G0_SI_VERIFIER_STAGE_ESCAPE_DEFECT_0_1.json",
+      "git_blob_sha": "8b53a02df3c24a1597b5368c7d2e35aa7b3a6843"
+    },
+    "successor_verifier": {
+      "path": "experiments/062/tools/verify-w097-g0-cross-occurrence-si-0-2.mjs",
+      "git_blob_sha": "0de61e22a0711c318f55cda04661f386f5b3e48c"
+    }
+  },
+  "source_distinctions": {
+    "single_CP1_map_appears_in_several_W097_occurrences": true,
+    "vector_C2_action_distinct_typed_referent_from_projective_CP1_map": true,
+    "historical_G2_reference_identity_edges": 0,
+    "historical_W097_G2_nodes": 24,
+    "historical_W097_G2_edges": 22
+  },
+  "synthetic_alpha_falsifier": {
+    "one_shared_map_model_local_signature_equals_two_distinct_maps": true,
+    "full_source_referent_partition_distinguishes": true,
+    "consistent_alpha_renaming_preserves_partition": true
+  },
+  "tests": {
+    "positive_errors": [],
+    "mutation_total": 21,
+    "mutation_rejected": 21,
+    "mutation_escaped": 0,
+    "failed_predecessor_internal_mutation_escaped": "source defect prematurely G1 closed",
+    "failed_predecessor_state": "PREPUBLICATION_LOCAL_ONLY"
+  },
+  "qualification": {
+    "local_V8": "PASS",
+    "Node_CI": "NOT_RUN_AT_RECORD_CREATION",
+    "W_G0_source_151_all_cold_audited": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "No evidence of incorrect graph isomorphism within historical reduced graph",
+    "No G0 freeze",
+    "No L semantics",
+    "No generic 221101 invalidation"
+  ]
+}
