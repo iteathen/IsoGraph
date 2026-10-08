@@ -17,7 +17,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_37.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_12.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_38.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_13.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -35,13 +35,21 @@ The [arXiv v2 HTML](https://arxiv.org/html/2202.02657v2) and [author PDF](https:
 
 Current gate: `experiments/062/W_CURRENT_STAGE_GATE_0_37.json`. G0 remains **open and unfrozen**; W109/W110 premature closure is still invalid; G1–G7, recursive IA, DP, primitive promotion, and all W/L comparison remain blocked.
 
+### New W02 source fidelity defect and partial replay (2026-10-08)
+
+A direct frozen **arXiv:2311.00608v2 PDF** inspection (W02) showed that six source-census descriptions preserve prose but omit explicit operator/operand details. `SOURCE_SEMANTIC_CENSUS_0_13.json` now includes source-scoped expression records for **W128** (ordered Hermitian 2×2 matrix, source's *minus* Minkowski-norm determinant wording, Lorentz action and dagger condition); **W130** (conventional L/R tensor product); **W131** (nonholomorphic right/right tensor with conjugation on the second factor); **W135** (right-handed scalar-plus-vector decomposition); **W140** (ordered Minkowski Weyl Lagrangian and helicity operator with energy signs); **W142** (exact momentum substitution `p0 -> i*p0` and resulting Dirac operator). The other **145** source items are unchanged, including the prior W103 and W109 source corrections. This is source transcription, **not** primitive promotion or mathematical normalization.
+
+The current `experiments/062/W_G0_W02_SOURCE_DEMAND_PROJECTION_0_3.json` conserves the **86 historical members**, changing five W02 existing members and leaving 81 identical. **W131 was not among the prior 86 members.** Its historic primitive closure must remain invalid, and a fresh all-151-source demand-membership reconstruction is required: this interim projection does **not** claim complete G0 demand closure. The defect is `experiments/062/W02_SIX_EXACT_SOURCE_EXPRESSIONS_G0_DEFECT_0_1.json`; a local V8 reconstruction rejected **31/31 adversarial mutations** but does not establish the Node/CI result. See `experiments/062/W_CURRENT_STAGE_GATE_0_38.json`.
+
+Version identity caveat: the arXiv v2 PDF displays a December 2023 date, but today's experimental arXiv v2 HTML displays an August 2026 dateline. The v2 PDF is the governing source; the date inconsistency is not used to alter its mathematical claims. The old W109 Node workflow [succeeded at its committed revision](https://github.com/iteathen/IsoGraph/actions/runs/37824130828). The W02 workflow and complete nine-source cold audit remain outstanding at artifact creation. G0 remains **open/unfrozen**; G1–G7 and cross-track synthesis remain blocked.
+
 ## Full-treatment gates
 
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | HISTORICAL 9/9 traversal; complete fresh direct source-census fidelity review is outstanding |
-| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.12 is not frozen pending independent G0 conservation |
+| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.13 is not frozen pending independent G0 conservation |
 | primitive math support complete | BLOCKED at G0 source fidelity; historical 352 G5 quotient classes refer to an incomplete older source tuple |
 | native .isg bundle | HISTORICAL — earlier 0.2 compilation predates new W05 source-level obligations |
 | graph-derived closure ledger | IN PROGRESS — `CORE021_CLOSURE_LEDGER_0_19.json` remains 21/151; Experiment 062 separately regrounds the 84-body unresolved demand path but does not close it |
