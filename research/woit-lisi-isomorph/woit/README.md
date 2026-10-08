@@ -92,6 +92,8 @@ To prevent the repeated historical W G1–G7 green CI results from being misread
 
 The versioned local replay `experiments/062/W_ACTIVE_G0_STAGE_GUARD_LOCAL_REPLAY_0_1.json` rejected **26/26** adversarial mutations in an internal V8 check; this is not Node CI or new stage qualification. Dedicated workflow `.github/workflows/experiment-062-w-active-g0-stage-0-1.yml` executes the pinned guard on W-related changes. This guard is revision-specific to gate 0.42: a future lawful successor must version and requalify its routing rather than silently changing hashes. G0 remains **unfrozen**.
 
+**Node guard successor (2026-10-08):** The first v0.1 guard workflow [run 37840552477](https://github.com/iteathen/IsoGraph/actions/runs/37840552477) **failed** with `ReferenceError: s is not defined`: its emitted Node script omitted a readonly input-hash alias that the internal V8 closure had supplied. The failure is preserved in `experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CAPTURE_DEFECT_0_1.json`. The successor `experiments/062/tools/verify-w-active-g0-stage-0-2.mjs` makes the captured SHA alias explicit and is routed through `.github/workflows/experiment-062-w-active-g0-stage-0-2.yml`; the former v0.1 workflow is archived/manual-only. **The 26/26 internal controls are not proof of Node success**; the successor's exact committed CI result must be checked. The G0 authority gate, W097 source census and 151-row register are unchanged.
+
 ## Full-treatment gates
 
 | Gate | State |
