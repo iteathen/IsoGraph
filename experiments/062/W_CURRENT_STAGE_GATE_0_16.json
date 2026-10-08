@@ -1,0 +1,46 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.16",
+  "date": "2026-10-07",
+  "status": "W_G5H_FIXED_POINT_FREE_INVOLUTION_PASSED_G6_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_15.json",
+    "git_blob_sha": "12a820bcfbd47277a5ae7599e9d587933cfc7c2e",
+    "reason": "The W-only fixed-point-free involution hypothesis passed its pre-G6 structural/falsifier packet without domain leakage."
+  },
+  "current_G5H": {
+    "hypothesis": {
+      "path": "experiments/062/W_G5H_FIXED_POINT_FREE_INVOLUTION_0_1.json",
+      "git_blob_sha": "1512c37b82f3676abe06cd0a57c9decfc82aa27f"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g5h-fixed-point-free-involution-0-1.mjs",
+      "git_blob_sha": "c44adcb8a81e5e8675e4f5873e27365f8245633b"
+    },
+    "workflow_run_id": 37709737785,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_complete": true,
+    "G4_complete": true,
+    "G5_complete": true,
+    "G5H_complete_for_fixed_point_free_involution": true,
+    "G6_new_candidate_authorized": true,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "G6_scope": {
+    "candidate_id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+    "qualification_mode": "SOURCE_NEUTRAL_CORE_DEFINABLE_SCHEMA",
+    "external_review_bypassed_only_if_internal_G6_passes": true,
+    "global_manifest_update_authorized": false
+  },
+  "next_lawful_action": "Freeze the generic candidate and G6 module SSC, close module-local IA, then run fresh source-neutral deterministic positive/adversarial controls. Do not consume W097 until G6 promotion succeeds within campaign scope."
+}
