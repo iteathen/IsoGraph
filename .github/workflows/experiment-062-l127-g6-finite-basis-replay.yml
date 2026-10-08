@@ -1,0 +1,27 @@
+name: Experiment 062 L127 G6 finite-basis replay qualification
+
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/L127_G5H_FINITE_BASIS_7_28_0_2.json'
+      - 'experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_SSC_0_2.json'
+      - 'experiments/062/L127_G6_FINITE_BASIS_7_28_MODULE_IA_FIXED_POINT_0_2.json'
+      - 'experiments/062/tools/qualify-l127-g6-finite-basis-7-28-0-2.mjs'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_7_SCHEMA_0_2.isg'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_28_SCHEMA_0_1.isg'
+      - '.github/workflows/experiment-062-l127-g6-finite-basis-replay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - run: node experiments/062/tools/qualify-l127-g6-finite-basis-7-28-0-2.mjs
