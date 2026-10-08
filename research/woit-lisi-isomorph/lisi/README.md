@@ -18,7 +18,19 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity audit and invalidation (2026-10-08)
 
-### Governing current source checkpoint: G0, SSC 0.13 / stage gate 0.14
+### Governing current source checkpoint: G0, SSC 0.15 / stage gate 0.16
+
+**Current lawful status: G0 OPEN; 191 source obligations; source census UNFROZEN; G1–G7 and source-track Recursive IA UNAUTHORIZED.** `experiments/062/L_CURRENT_STAGE_GATE_0_16.json` is the current L-only procedural authority-routing record, consuming `SOURCE_SEMANTIC_CENSUS_0_15.json`. The latter changes only **L-SSC-126** from 0.14, preserves the other **190 full previous source items**, and retains all 191 source identities. This is Assertion Census Conservation relative to the previous candidate, **not** full primary-source assertion completeness or primitive closure.
+
+L05 §2 Eq. (5) was further transcribed in `LISI_L05_EQ5_INDEXED_BIVECTOR_SOURCE_RECONSTRUCTION_0_1.json`, preserving the upper free `a,e` / bound `b`, lower free `b,f` / bound `a`, signed chiral matrix operands, conjugated indices and right-first octonionic application. Finite source-only verification `37839333341` checked **15,136 signed matrix-cell cases** and rejected **27 effective mutants**. SSC 0.14 conservation passed `37839907021` with **22 mutants**; G0 stage gate 0.15 passed `37840304665`. The printed ordinary-octonion table remains internally incompatible with source Clifford and bivector assertions: the 28 upper source matrices have **168/378 commutators outside their span** in two finite-field rank checks. No author-table cell was normalized, no universal Clifford/Lie theorem qualified, and the later arXiv source version is not interchangeable with the frozen journal.
+
+L05 §2 Eq. (4) is now conserved at four exact ordered source multiplication-coefficient members in `LISI_L05_EQ4_CYCLIC_SOURCE_G0_0_1.json`. Direct ordinary C/H source-table controls pass, but the frozen journal ordinary O has **four counterexample triples among 512**, preserving every index and sign. Source packet CI `37840813885` rejected **23 mutants**, SSC 0.15 CI `37841417817` rejected **20**, and G0 gate 0.16 CI `37841785711` rejected **20**. The other four lowered `Γ/̄Γ` terms of Eq. (4) and split-metric index lowering remain **unverified**, as do the rest of frozen L01–L06. Failed intermediate verifiers, including source-version guard escapes, packet field mismatches and mutation-crash fixes, remain in `experiments/062` as negative infrastructure evidence; they are not silently reported as passes.
+
+**Historical completeness warning:** `SOURCE_TRAVERSAL_LEDGER_0_11.json` reports six-source completion for its pinned **SSC 0.2**, not for SSC 0.15. None of the older G1–G7 fixed-point/qualification workflows establishes current source closure. The owner bypass waives **external reviewer calls only**; an external verification PASS may not be asserted. The new audit coverage inventory records every known L research/support/G-stage artifact as examined mechanically, directly reviewed, or explicitly *not yet line-by-line source audited*; it is not a blanket completion certificate.
+
+Immediate lawful work remains complete primary-source G0 transcription and adversarial review of the unverified Eq. (4) Γ/index cases, L05 §4.1 root/split and §4.3 Eq. (17)-onward formulas, and the remaining L01–L06 source assertions. Every unexamined item must stay open. PR #70 is draft, unmerged, and no cross-track semantics, hypothesis or bridge is authority.
+
+### Historical predecessor source checkpoint: G0, SSC 0.13 / stage gate 0.14
 
 **Status: G0 OPEN / SSC NOT FROZEN / G1–G7 NOT AUTHORIZED.** The governing L procedural record is `experiments/062/L_CURRENT_STAGE_GATE_0_14.json`; its predecessor 0.13 and all earlier stage gates remain historical evidence. `SOURCE_SEMANTIC_CENSUS_0_13.json` contains **191 stable identities** and adds direct negative-source evidence only to **L-SSC-126**, conserving all **190** unrelated source items verbatim from 0.12.
 
