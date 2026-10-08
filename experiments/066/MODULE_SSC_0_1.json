@@ -1,0 +1,66 @@
+{
+  "schema": "isograph.exp066-module-ssc.v0.1",
+  "date": "2026-10-08",
+  "status": "FROZEN_G6_MODULE_SSC",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module_id": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+  "primitive_id": 221102,
+  "candidate": {
+    "md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DISJOINT_UNARY_PREDICATES_SCHEMA_0_1.md",
+      "git_blob_sha": "8b89ca4ad8fedca357cf1f0d84e8316c8c46a9f1"
+    },
+    "native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_DISJOINT_UNARY_PREDICATES_SCHEMA_0_1.isg",
+      "git_blob_sha": "1dd0663fc51f08c752601b37238114fb57d602e7"
+    }
+  },
+  "discovery_evidence": {
+    "path": "experiments/062/W_G5H_EMPTY_INTERSECTION_0_1.json",
+    "git_blob_sha": "5e41558bf1268002ff2346df61d09c6396d9f920",
+    "origin": "HYPOTHESIS"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_22.json",
+    "git_blob_sha": "af87c9ed5b118fd66c23433c983f2a884da6b2c1"
+  },
+  "assertions": [
+    {
+      "id": "DUP-A01",
+      "claim": "A is a represented unary predicate whose realized members are typed by U."
+    },
+    {
+      "id": "DUP-A02",
+      "claim": "B is a represented unary predicate whose realized members are typed by U."
+    },
+    {
+      "id": "DUP-A03",
+      "claim": "No represented U-element satisfies both A and B."
+    }
+  ],
+  "explicit_nonclaims": [
+    {
+      "id": "DUP-N01",
+      "claim": "U, A, and B may each be empty."
+    },
+    {
+      "id": "DUP-N02",
+      "claim": "A and B need not be exhaustive or complementary on U."
+    },
+    {
+      "id": "DUP-N03",
+      "claim": "The module does not define the source meanings of A or B."
+    },
+    {
+      "id": "DUP-N04",
+      "claim": "The module contains no projective, conic, real-form, conjugation, geometric, topological, vector, field, W, or L semantics."
+    },
+    {
+      "id": "DUP-N05",
+      "claim": "Qualification does not close W-SSC-097-O05; G7 source reconstruction is separate."
+    }
+  ],
+  "qualification_target": "CORE_DEFINABLE_SCHEMA_WITH_EXPLICIT_SCOPE",
+  "qualification_scope": "Typed unary-predicate disjointness only."
+}
