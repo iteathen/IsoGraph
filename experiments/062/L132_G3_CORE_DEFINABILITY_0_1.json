@@ -1,0 +1,151 @@
+{
+  "schema": "isograph.exp062-l132-g3-core-definability.v0.1",
+  "date": "2026-10-07",
+  "status": "L132_TARGETED_G3_FIXED_POINT_TWO_REUSABLE_LOWER_DEMANDS",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "049544b6e93d4b01ceb505f93e7c0506cb6d8f1c",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "path": "experiments/062/L132_G2_NEUTRAL_SUBGRAPH_0_1.json",
+    "git_blob_sha": "7ff1aab976f4916c2f8e473f0d27703498aa8bf3"
+  },
+  "source_incidence": {
+    "path": "experiments/062/L132_G1_SOURCE_INCIDENCE_0_1.json",
+    "git_blob_sha": "ca6800951cdc722c66bfd0ded1945001bd3dc0a0"
+  },
+  "source_dependencies": [
+    {
+      "path": "experiments/062/L131_G7_TARGETED_CLOSURE_0_1.json",
+      "git_blob_sha": "33b7a55edb18fb7f17280b7e70dfb28398ac14da",
+      "closed_census_ids": [
+        "L-SSC-131"
+      ]
+    }
+  ],
+  "authority_tuple": [
+    {
+      "path": "experiments/062/L127_G6_METRIC_SKEW_LIE_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "c31638cd45fb5df0e03a6779dfc102bcaf75aaec",
+      "required_relations": [
+        184004,
+        227000
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "required_relations": [
+        185003
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "required_relations": [
+        183002
+      ]
+    }
+  ],
+  "counts": {
+    "reopened_occurrences": 10,
+    "CORE_CLOSED": 6,
+    "UNEXPANDED_DEMAND": 4,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0
+  },
+  "results": [
+    {
+      "occurrence_id": "L-SSC-132-R01",
+      "disposition": "CORE_CLOSED",
+      "reason": "The three transformation-role atoms are explicit source identities with pairwise nonidentity; Core equality/inequality suffices and no claim of pairwise-disjoint transformation sets is made."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R02",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "The source gives exact automorphism behavior, but the reusable unit-fixing product/norm-preserving linear-bijection contract 187701 is not yet qualified."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R03",
+      "disposition": "CORE_CLOSED",
+      "reason": "Closed L131 already reconstructs same-type T-preserving even compositions with identity role permutation. The rotation label adds no semantic burden."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R04",
+      "disposition": "CORE_CLOSED",
+      "reason": "Closed L131 already reconstructs different-type T-preserving even compositions with fixed-point-free order-three role permutation. The triality label adds no semantic burden."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R05",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "The two separate C/Cprime carriers require exact 1D abelian Lie presentations and an exact two-factor Lie direct sum; the historical 236001/236003 path depends on unqualified 184008/184009."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R06",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "The H carrier requires exact compact-type 3D Lie presentation 207001 and exact three-factor direct sum 236004; dimension-3 and Lie embedding support are not yet qualified."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R07",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "The Hprime carrier requires exact split 3D Lie presentation 236002 and exact three-factor direct sum 236004; dimension-3 and Lie embedding support are not yet qualified."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R08",
+      "disposition": "CORE_CLOSED",
+      "reason": "The O source instance can consume qualified 227000 from the L127 metric-skew Lie module over the already reconstructed positive metric carrier."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R09",
+      "disposition": "CORE_CLOSED",
+      "reason": "The Oprime source instance can consume qualified 227000 over the already reconstructed split metric carrier; no so(4,4) name is required."
+    },
+    {
+      "occurrence_id": "L-SSC-132-R10",
+      "disposition": "CORE_CLOSED",
+      "reason": "Source carrier identities and category-role identities remain explicit and distinct even when reduced structural shapes coincide; this is Core identity bookkeeping, not NEI."
+    }
+  ],
+  "reusable_lower_demands": [
+    {
+      "family": "COMPOSITION_UNIT_AUTOMORPHISM",
+      "supporting_occurrences": [
+        "L-SSC-132-R02"
+      ],
+      "historical_relation_candidates": [
+        187701
+      ],
+      "dependency_expectation": "qualified 185003 + 183002 only"
+    },
+    {
+      "family": "FINITE_LOW_DIMENSIONAL_LIE_PRESENTATIONS_AND_DIRECT_SUMS",
+      "supporting_occurrences": [
+        "L-SSC-132-R05",
+        "L-SSC-132-R06",
+        "L-SSC-132-R07"
+      ],
+      "historical_relation_candidates": [
+        184008,
+        184009,
+        207000,
+        207001,
+        236000,
+        236001,
+        236002,
+        236003,
+        236004
+      ],
+      "dependency_expectation": "qualified field/vector/linear map + qualified 184004 plus selected relations"
+    }
+  ],
+  "next_stage": {
+    "stage": "G5H",
+    "action": "Qualify the automorphism and low-dimensional Lie bundles independently, then replay L132. Do not package them as a generic Tri(D) or named classical-Lie module."
+  },
+  "nonclaims": [
+    "No historical L132 closure packet is current authority.",
+    "No named classical group/Lie algebra is promoted.",
+    "No W/cross-track evidence is used."
+  ]
+}
