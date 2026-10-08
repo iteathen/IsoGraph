@@ -1,0 +1,605 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.18",
+  "date": "2026-10-08",
+  "status": "L_G0_SSC_0_17_Q_RATIONAL_SOURCE_NEGATIVE_CI_AND_STALE_STATUS_REPAIRED_PARTIAL_UNFROZEN_G1_G7_FORBIDDEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "L",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_17.json",
+    "git_blob_sha": "14a8c8c0dcd72fff94476ea543699b52563bac27",
+    "reason": "Correct contradictory Eq5 and Eq17 expression-extraction status in current procedural gate; conserve new exact rational L127 negative finite source evidence without claiming full source or primitive theorem closure."
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_17.json",
+    "git_blob_sha": "55f63c44da2fdf8bed1a38e063508a5fd8ef4677",
+    "source_identities": 191,
+    "changed_from_predecessor": [
+      "L-SSC-127"
+    ],
+    "unchanged_from_predecessor": 190,
+    "frozen": false,
+    "source_complete": false
+  },
+  "source_expression_audit": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json",
+    "git_blob_sha": "09b7e87f5652530c65ae1094793c6c7c51adcda0"
+  },
+  "source_fidelity_defect": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+  },
+  "source_matrix_adversarial_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-10.mjs",
+    "git_blob_sha": "3f659001597d49bfc9b27889d04eea02f3817a76"
+  },
+  "G0_10_CI": {
+    "run_id": 37815232875,
+    "conclusion": "success",
+    "tests": [
+      "su3 3x3 5 bracket and sp3 3x3 6 bracket arithmetic against independently calculated matrix commutators, 7 negative source controls",
+      "SSC0.10 6 decomposition roles, two full source matrix rows, eleven ordered commutator components and 16 basis/parameterized bracket rows",
+      "190 exact previous L SSC bodies unchanged and 15 adversarial source/polarity/scope mutations rejected"
+    ],
+    "source_scope": "L05 section 4.1/4.2 ordinary C and H only, plus source-labelled ordinary/split decompositions",
+    "external_review_passed": false
+  },
+  "historical_failures": [
+    {
+      "run_id": 37815089562,
+      "status": "failed",
+      "reason": "Verifier fixture demanded literal English 'full-source' although source explicitly declares 'G0-complete or G3 CORE_CLOSED' as forbidden",
+      "not_semantic_conservation_failure": true
+    },
+    {
+      "run_id": 37823733174,
+      "status": "failed",
+      "reason": "Eq13 first CI expected old 198-case subset after actually checking complete 216-case domain; 0 matrix mismatches, 24 source mutants rejected; fixture repaired.",
+      "not_semantic_conservation_failure": true
+    },
+    {
+      "run_id": 37824412749,
+      "status": "failed",
+      "reason": "SSC0.11 verifier case mismatch and mutation-baseline masking; baseline required to pass first; fixed and preserved as adversarial infrastructure defect.",
+      "not_semantic_conservation_failure": true
+    },
+    {
+      "run_id": 37833925600,
+      "status": "failed",
+      "reason": "New Clifford checker baseline mismatch in witness c/gamma field schema; no adversarial cases tested.",
+      "not_math_or_source_counterexample_failure": true
+    },
+    {
+      "run_id": 37834051764,
+      "status": "failed",
+      "reason": "New Clifford checker baseline mismatch in from_table/from_printed_M field schema; no adversarial cases tested.",
+      "not_math_or_source_counterexample_failure": true
+    },
+    {
+      "run_id": 37838619149,
+      "status": "failed",
+      "reason": "missing matrix row/column incidence field, baseline failed no mutations",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37838782350,
+      "status": "failed",
+      "reason": "const-witness runtime declaration, baseline failed no mutations",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37838925736,
+      "status": "failed",
+      "reason": "obsolete `remaining` fixture key instead of open_limits, baseline failed no mutations",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37839051903,
+      "status": "failed",
+      "reason": "23/24 mutants rejected; theorem promotion mutant escaped; verifier repaired",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37839225214,
+      "status": "failed",
+      "reason": "hardened verifier discovered missing explicit source_census_frozen and primitive_or_theorem_qualification=false; baseline failed no mutations",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37839683075,
+      "status": "failed",
+      "reason": "SSC0.14 adversarial identity-collision mutation caused verifier exception; repaired to fail closed in 37839907021.",
+      "not_current_source_qualification": true
+    },
+    {
+      "run_id": 37840691538,
+      "status": "failed",
+      "reason": "Eq4 exact frozen-source version mutation escaped 22/23 source verifier; failed result retained, fixed on run 37840813885.",
+      "not_semantic_source_fidelity_failure": true
+    },
+    {
+      "run_id": 37841277279,
+      "status": "failed",
+      "reason": "SSC0.15 verifier searched wrong CI.adversarial_cases_rejected key; baseline failed and 0 mutants executed; fixed on 37841417817.",
+      "not_semantic_source_fidelity_failure": true
+    },
+    {
+      "run_id": 37851631738,
+      "status": "failed",
+      "reason": "earlier L05 publication recheck cached mutated-source table inputs, 20/22 hostile mutants rejected; exact source re-read repaired in run 37851752108",
+      "not_semantic_source_fidelity_failure": true
+    },
+    {
+      "run_id": 37856511570,
+      "status": "failed",
+      "reason": "SSC0.17 verifier baseline lacked exact COUNTERFACTUAL negative-evidence label, zero mutations tested; label repaired and 20/20 passed in run 37856608771",
+      "not_semantic_source_fidelity_failure": true
+    }
+  ],
+  "previous_G0_9_source_CI": [
+    {
+      "run_id": 37813728562,
+      "conclusion": "success",
+      "scope": "published Eq1 ordinary-O exact source literal and 25 adversarial tests"
+    },
+    {
+      "run_id": 37814117693,
+      "conclusion": "success",
+      "scope": "Cl02 exact 2x2/4x4 source matrix and 17 adversarial tests"
+    },
+    {
+      "run_id": 37814407801,
+      "conclusion": "success",
+      "scope": "SSC0.9 exact Cl02 source text one-body replay and 11 adversarial tests"
+    }
+  ],
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE",
+    "effect": "ONLY_OUTSIDE_REVIEW_CALLS_WAIVED"
+  },
+  "outstanding_source_reconstruction": [
+    "L05 §2 Eq(2)/(3) original ordinary O Γ/barΓ and Clifford source assertions demonstrably contradict the frozen Eq(1) table, but Eq(5) Γ/M-indexed formulas ARE TRANSCRIBED at G0 and source-native typed index fidelity locally tested. Eq(5) is NOT mathematical Clifford/Spin/so(8) qualification, complete cold source audit or primitive closure.",
+    "L05 §4.3 Eq(17) four compact-source bracket components and three diagonal B roles ARE TRANSCRIBED at G0, but printed reflection matrices and the subsequent source formulas AFTER Eq(17), t/t² semantics, split/noncompact sign/metric cases and phase/root maps remain untranscribed or unresolved.",
+    "L05 §4.3 Eq17 source component strings and three B diagonal roles transcribed G0 only, with first-spinor operand tilde correction; primitive/all-and-only t and t² operators, ordered composition on full source domains, Eq17 Lie theorem and split/noncompact cases NOT qualified.",
+    "L05 §2 Eq.(4): four signed source M coefficient identities transcribed, with ordinary O 4/512 internal counterexamples; full eight-term cyclic identity Gamma/barGamma lowered-index source reconstruction and all split n_ab metric cases remain independently OPEN.",
+    "L05 §2 Eq.(5) exact printed Γ/M source index positions now transcribed and tested at G0 only; published ordinary O reverse-bivector identity and so(8) Lie commutator closure contradicted by frozen Eq1, full source-consistency and cold reconstruction remain open.",
+    "L05 §4.1 complete su3 root/Cartan/phase table and split Cprime source bracket images.",
+    "L05 §4.2 Eq13 still needs native primitive/binder-level reconstruction and non-H carrier qualification; Eq14 full phase mapping, t matrix-vs-text orientation, and 12x12 real/6x6 complex realizations remain open.",
+    "Complete independent source assertion census, source-local zero-change G0 fixed point, and cold reconstruction for all frozen L01–L06."
+  ],
+  "historical_invalidation": {
+    "L127_local_SI_0_2_G7": "HISTORICAL_SCOPED_EVIDENCE_ONLY_SOURCE_CONSISTENCY_DISCREPANCY_PRESERVED",
+    "L129_L130_L131": "UPSTREAM_REPLAY_BLOCKED_BY_G0_SOURCE_GRANULARITY_AND_DEPENDENT_ORDER",
+    "L132": "G1_G7_PREVIOUS_DESCENDANTS_STALE_NO_CURRENT_QUALIFICATION",
+    "L133": "HISTORICAL_EQ16_EQ17_SOURCE_ONLY_G0_OLDER_G1_G7_STALE",
+    "L134": "SOURCE_DEPENDENCY_L133_UNFROZEN_T_REFLECTION_AND_PHASE_UNEXPANDED",
+    "source_demand_census": "HISTORICAL_OLD_FROZEN_L_TUPLE_NOT_REPLAYED",
+    "L126": "JOURNAL_TABLE_ANTICONJUGATION_CLIFFORD_CYCLIC_INTERNAL_INCONSISTENCIES_PRESERVED_NOT_EDITORIALLY_REPAIRED",
+    "L127": "G0_SOURCE_INDEX_TRANSCRIBED_ORIGINAL_O_NOT_SO8_LIE_CLOSED_IN_EXACT_Q_168_OF_378_ALL_FOUR_CONSTRUCTIONS",
+    "legacy_G1_green_CI_run_37826407305": "HISTORICAL_0_25_INPUTS_ONLY_NOT_CURRENT_G1_SOURCE_CLOSURE",
+    "G1_to_G7_hostile_audit": "PASS_PROVES_NO_CURRENT_AUTHORITY_NOT_THEOREM_VALIDITY",
+    "historical_gate_017_extraction_status": "REPAIRED_IN_SUCCESSOR_G0_018_WITHOUT_UPGRADING_SCOPE"
+  },
+  "current_lawful_state": {
+    "G0_source_audit_authorized": true,
+    "G0_source_local_CI_verified": true,
+    "G0_source_census_frozen": false,
+    "G0_full_source_assertion_census_complete": false,
+    "G1_authorized": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G6_campaign_new_promotion_authorized": false,
+    "G7_authorized": false,
+    "L_primitive_schema_closure_complete": false,
+    "L_recursive_IA_authorized": false,
+    "L_Discovery_Protocol_authorized": false,
+    "WL_cross_track_comparison_authorized": false,
+    "global_qualified_module_manifest_change_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next_lawful_step": "Remain in L-only G0. Cold-review every load-bearing assertion, source binder and modality in all six frozen L01-L06 manuscripts. For L05, independently finish Eq(4) lowered Gamma and split metric, §4.1 su3/split roots, §4.3 after-Eq17 reflection/t/t²/root-phase and remaining exceptional/Lie formulas. Preserve all printed journal contradictions and alternate-version diagnostics. Then only after full source-local zero-change fixed point seek lawful G1; no new G2-G7, IA, module promotion, cross-track, author outreach, or PR merge before gates.",
+  "nonclaims": [
+    "G0 is not a complete source-census fixed point.",
+    "No L G1–G7 qualification is current on new SSC0.10.",
+    "No external semantic cold verification passed.",
+    "No standard Lie/Clifford theorem imported as primitive authority.",
+    "No W evidence or desired cross-track correspondence used.",
+    "The 216 finite quaternionic matrix checks and 27 SSC mutants are internal G0 checks, not full-source theorem or external verification.",
+    "L05 Eq13 is transcribed as 15 source families, not globally Core-closed or qualified primitive reduction.",
+    "The Eq14 root-space phase ambiguity remains an explicit source limitation; no automatic root-vector phase mapping has been inferred.",
+    "f4(-20) ordinary noncompact and f4(4) split are source-distinct; neither follows from simply changing the sign of f4(-52) without its source carrier/metric assumptions.",
+    "Eq.(15) uses compositional octonionic bi-product operators; no associative 3x3 matrix Lie equality is inferred.",
+    "Eq.(16) source brackets and sign tables have source-only CI; the printed O multiplication table and Eq.(5) index claims remain inconsistent/unclosed, so finite octonion Lie theorem tests are NOT RUN.",
+    "Published L05 ordinary-O multiplication table, Eq(2) barGamma definitions, and Eq(3) Clifford identity are not jointly consistent; this is a source observation, not a qualified repair.",
+    "Independent verified 7/36 failing pairs and 28 matrix entries do not establish general mathematical theorem or source completeness.",
+    "Legacy G1–G7 green verifier workflow checks do not promote results from an invalidated source tuple.",
+    "26/26 hostile G1–G7 stage-provenance mutations rejected establishes procedural non-promotion, not full semantic qualification of current L source.",
+    "Old G3 151-body occurrence population and old G7 four-body targeted replay cannot reconstruct all 191 current source obligations without new source re-extraction.",
+    "The old G6 scoped provisional hypothesis-module may retain its old contract but does not grant current L consumption or global Core/module promotion.",
+    "Eq(5) exact index transcription is a source G0 syntax/provenance result, not mathematical Clifford/Spin/so(8) qualification.",
+    "168/378 source O nonclosure cases are finite contradictions under published Eq1; one-cell alternative and later arXiv printing do not rewrite the frozen journal.",
+    "Source and SSC CI tests use internal deterministic execution; they do not satisfy outside cold review waived by owner.",
+    "4 ordinary-O Eq4 source tensor coefficient counterexamples in 512 cases do not validate or refute the separately printed Gamma lowered-index tensors or split n_ab cases.",
+    "Passing source and SSC internal CI demonstrates only the stated finite and conservation evidence, not external semantic audit or mathematical qualification.",
+    "Journal 2026-08-29 printed O cell is not altered by a different arXiv source edition or repair counterfactual.",
+    "Eq17 compact f4(-52) four source bracket components are literal assertions only, not established mathematical f4 Lie-group closure under the printed inconsistent O table.",
+    "t and t² are named unresolved compositional transformations; they cannot be swallowed as implicit Core primitive or reused source-independent qualifications.",
+    "The 2026-08-29 original journal remains frozen; alternate arXiv or conventional correction cannot silently substitute for the source.",
+    "Inventory 0.1 was a precise historical 1191-file HEAD snapshot, not a refreshed complete semantic audit after new G0 files are added.",
+    "Current G0 Eq5 Γ/M index positions and Eq17 four source components are transcribed, but their source mathematical and primitive semantics are not closed; stale older gate copy asserted wrongly they remained unextracted.",
+    "Eight exact BigInt rational finite operator cases confirm source-only original-O 168/378 outside-span commutators in four prescribed matrix models, plus four diagnostic one-cell alternatives. This does not refute the legitimate intended so(8) or f4 Lie algebra construction.",
+    "No versioned author erratum or full L01-L06 source assertion census fixed point was established by the publisher/arxiv comparison.",
+    "Passing internal source and G0 census CI does not establish outside independent external cold review."
+  ],
+  "sp3_source_exact_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SP3_EQ13_EQ14_SOURCE_G0_0_1.json",
+    "git_blob_sha": "7d1eab909c3175dd2dd70e550ca11044dfdb4000",
+    "source": "L05 §4.2 ordinary H, PDF printed page 15, Eq13/Eq14",
+    "eq13_bracket_families": 15,
+    "eq14_signed_conjugation_source_transcribed": true,
+    "root_vector_phases_determined": false
+  },
+  "sp3_root_phase_modality_defect": {
+    "path": "experiments/062/L05_SP3_EQ14_ROOT_PHASE_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "8e99498f8bb2012f9b87f0c6b4bab91e18ec93bc"
+  },
+  "sp3_adversarial_baseline_masking_defect": {
+    "path": "experiments/062/L_SSC_0_11_ADVERSARIAL_VERIFIER_BASELINE_MASKING_DEFECT_0_1.json",
+    "git_blob_sha": "9deb9553829bd74b7de2a6d11f777db2df8b6e04"
+  },
+  "G0_11_CI": {
+    "run_id": 37824604048,
+    "head_sha": "cd32c7bfc3166153b29f6bd2e4bc9a20ec8d61fc",
+    "conclusion": "success",
+    "source_scope": "L05 §4.2 ordinary quaternion H exact Eq13/14 source expressions and SSC0.11 conservation",
+    "tests": [
+      "216/216 finite independent 3x3 quaternion matrix basis commutator/reflection tests",
+      "15 printed Eq13 ordered family expressions source conserved",
+      "24 source-packet mutants rejected",
+      "191 fixed L-SSC identities, only L133 revised, 190 unchanged complete bodies",
+      "27 effective SSC0.11 adversarial mutants rejected with baseline-before-mutation and non-noop enforcement",
+      "source Eq14 generator reflection and negative phase modality preserved"
+    ],
+    "SSC_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-11.mjs",
+      "git_blob_sha": "d7eabe63269985c54c965e0b2f8c53e8469da368"
+    },
+    "external_review_passed": false,
+    "full_L_source_fidelity_qualified": false
+  },
+  "f4_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_F4_EQ15_EQ16_SOURCE_G0_0_1.json",
+    "git_blob_sha": "45aaaa3420fccc708d8249578b8380bcd6ed06a9",
+    "source": "L05 §4.3 pp.17–18 Eq15 Eq16",
+    "eq16_bracket_families": 10,
+    "split_source_sign_rows": 3,
+    "distinct_source_forms": [
+      "f4(-52)",
+      "f4(-20)",
+      "f4(4)"
+    ],
+    "nonassociative_right_first": true,
+    "no_naive_octonionic_matrix_Lie_theorem": true,
+    "finite_octonion_math_tests": "NOT_RUN"
+  },
+  "G0_12_CI": {
+    "run_id": 37825937865,
+    "head_sha": "4d36f0b8c6a1d4ae6c6bdf27a7df670c12d2e136",
+    "conclusion": "success",
+    "source_scope": "L05 §4.3 first two pages exact f4 sign/Γ syntax, 191 source IDs and 190 unchanged full SSC predecessors",
+    "source_packet_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-f4-eq15-eq16-source-0-1.mjs",
+      "git_blob_sha": "344bf811b36a5f1aef2dc54ba53aea14fe75bd05"
+    },
+    "source_census_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-12.mjs",
+      "git_blob_sha": "023b2b9ee351589ffd183f8ea1738d60861d8e9d"
+    },
+    "tests": [
+      "Eq15 matrix source modality and octonion right-first nonassociativity",
+      "10 Eq16 literal bracket families, ordinary f4(-52)/f4(-20) branch signs, 3 split f4(4) sign rows",
+      "26 source-packet adversarial mutations with passing-baseline and non-noop gates",
+      "191 L identities and 190 unchanged prior full bodies",
+      "26 SSC0.12 adversarial mutations with prior Eq13/Eq14 exact-source retention",
+      "No finite octonion Lie computation under inconsistent source Eq1; Eq17 onward remains unextracted"
+    ],
+    "external_review_passed": false,
+    "full_L_source_fidelity_qualified": false,
+    "G1_authorized": false
+  },
+  "L126_new_source_discrepancy": {
+    "path": "experiments/062/L126_L05_EQ2_EQ3_OCTONION_CLIFFORD_SOURCE_CONTRADICTION_0_1.json",
+    "git_blob_sha": "61d5afddc7c406b03c2f61c4abe7e0dbdc448e66",
+    "status": "CONFIRMED_FINITE_SOURCE_EQ2_EQ3_INTERNAL_CONTRADICTION_G0_OPEN",
+    "scope": "source-printed Eq(1), Eq(2), Eq(3) ordinary O; not a correction of author source",
+    "Clifford_unordered_pairs": 36,
+    "failing_pairs": 7,
+    "failing_16x16_entries": 28,
+    "barGamma_source_definitions_incompatible_entries": 2,
+    "unchanged_original_source_table": true,
+    "mathematical_Clifford_truth_qualified": false,
+    "affects": [
+      "L-SSC-126",
+      "L-SSC-127",
+      "L-SSC-133"
+    ]
+  },
+  "G0_13_CI": {
+    "run_id": 37834466685,
+    "head_sha": "7f5e592f470b7082d31ace3277f95200f21638b7",
+    "conclusion": "success",
+    "source_scope": "L-SSC-126 Eq2/3 source-assertion consistency negative witness added under 191-ID frozen historical count and 190 exact unchanged items",
+    "source_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-eq2-eq3-clifford-source-contradiction-0-1.mjs",
+      "git_blob_sha": "59573b508a48e70a3929bef44b04cdd7262019a0"
+    },
+    "SSC_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l126-ssc-source-0-13.mjs",
+      "git_blob_sha": "4a8f82e31bf0a25f1b5a741cb2ee66324570a7b3"
+    },
+    "tests": [
+      "36 ordinary O unordered Clifford pair identities x full 16x16 coefficient matrices",
+      "7 failing pairs and 28 matrix-entry failures under barGamma transpose and independent printed-M definition",
+      "two exact barGamma table-vs-transpose source coefficient discrepancies",
+      "ordinary complex and quaternionic positive controls",
+      "20/20 effective hostile source-computation mutations rejected",
+      "21/21 effective SSC0.13 conservation mutations rejected",
+      "all 190 unrelated source claims byte-conserved; G0 still unfrozen"
+    ],
+    "external_review_passed": false,
+    "complete_L_source_semantics_qualified": false,
+    "source_mathematical_theorem_proved": false
+  },
+  "G0_14_hostile_stage_audit": {
+    "audit": {
+      "path": "experiments/062/L_G0_TO_G7_HOSTILE_STAGE_PROVENANCE_AUDIT_0_1.json",
+      "git_blob_sha": "9654196eaad58ed476ee6f89b5bdf221df6b1ee1"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-l-g0-to-g7-hostile-stage-provenance-0-1.mjs",
+      "git_blob_sha": "5a710781a5352221f41bbadc021a2247d51b4908"
+    },
+    "CI": {
+      "run_id": 37834981548,
+      "head_sha": "f35a6a16698272992043ba761f2c9fb4318956f1",
+      "conclusion": "success",
+      "verified_current_source_census": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_13.json",
+      "verified_older_stages": [
+        "G1 0.25 source occurrence extraction and audit",
+        "G2 neutral graph historical SHA",
+        "G3 151 old bodies and 818 source occurrences",
+        "G4 old G3 fixed point dependency",
+        "G5 old local primitive boundary",
+        "G6 scoped hypothesis-qualified provisional module, not global authority",
+        "G7 old targeted four-body fixed point"
+      ],
+      "source_mathematical_conflict_known": true,
+      "stage_mutations_defined": 26,
+      "stage_mutations_rejected": 26,
+      "external_cold_review_passed": false
+    }
+  },
+  "Eq5_G0_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_EQ5_INDEXED_BIVECTOR_SOURCE_RECONSTRUCTION_0_1.json",
+    "git_blob_sha": "a0e1e6380f72779bce2f5114bdba83619be97e1f",
+    "source": "L05 journal published 2026-08-29 §2 Eq5 printed p5",
+    "G0_source_indexed_transcription": true,
+    "mathematical_clifford_or_so8_qualification": false,
+    "source_version_unchanged": true,
+    "free_upper_indices": [
+      "a",
+      "e"
+    ],
+    "bound_upper_index": "b",
+    "free_lower_indices": [
+      "b",
+      "f"
+    ],
+    "bound_lower_index": "a",
+    "source_signed_chiral_cases": 15136,
+    "source_ordinary_O_reverse_fail_pairs_upper": 6,
+    "source_ordinary_O_reverse_fail_pairs_lower": 6,
+    "source_ordinary_O_Lie_commutators_outside_span": 168,
+    "source_ordinary_O_CLIFFORD_Eq2_discrepancies_retained": true,
+    "unfrozen_arxiv_version_not_frozen_L05_authority": true
+  },
+  "G0_15_CI": {
+    "Eq5_exact_source_run": {
+      "id": 37839333341,
+      "commit_sha": "c553ad6b1337c10592de5f428c324a8bb8f68e44",
+      "conclusion": "success",
+      "source_sign_matrix_cells": 15136,
+      "adversarial_defined": 27,
+      "adversarial_rejected": 27,
+      "external_cold_review_passed": false
+    },
+    "SSC0_14_run": {
+      "id": 37839907021,
+      "commit_sha": "6d12909d3b179c3c1615325977b2a82ac57a7a84",
+      "conclusion": "success",
+      "source_identities": 191,
+      "unchanged_source_items": 190,
+      "adversarial_defined": 22,
+      "adversarial_rejected": 22,
+      "external_cold_review_passed": false
+    },
+    "Eq5_source_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l127-eq5-indexed-source-0-1.mjs",
+      "git_blob_sha": "247ed12a10103efcf7b3567332ee8b2cf2bf88bf"
+    },
+    "SSC0_14_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l127-ssc-source-0-14.mjs",
+      "git_blob_sha": "8d9518393195894410b0e066162cf788f7f2db5d"
+    },
+    "asserted_math_qualified": false,
+    "full_source_census_qualified": false,
+    "gate_G1_authorized": false
+  },
+  "Eq4_G0_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_EQ4_CYCLIC_SOURCE_G0_0_1.json",
+    "git_blob_sha": "4294679d606ea3a0fe2b5c552027fa01e732ab26",
+    "frozen_source": "L05 published 2026-08-29 journal §2 Eq4 printed p4",
+    "four_exact_M_expressions_transcribed": true,
+    "source_four_M_control_C": 8,
+    "source_four_M_control_H": 64,
+    "source_ordinary_O_triples": 512,
+    "source_ordinary_O_counterexamples": 4,
+    "split_index_lowering_tested": false,
+    "source_Gamma_lowered_four_members_tested": false,
+    "source_whole_Eq4_eight_members_closed": false,
+    "mathematical_theorem_qualified": false,
+    "source_article_unmodified": true
+  },
+  "G0_16_CI": {
+    "source_CI": {
+      "run_id": 37840813885,
+      "head_sha": "a97ec408d891a4d78c1b70c3c6a03602a21ab986",
+      "conclusion": "success",
+      "source_ordinary_O_counterexamples": 4,
+      "adversarial_mutations": 23,
+      "external_cold_review_passed": false
+    },
+    "SSC_CI": {
+      "run_id": 37841417817,
+      "head_sha": "0de932bc2dcae9460d13dd2331e1183005d074e1",
+      "conclusion": "success",
+      "L_190_unmodified_items": 190,
+      "adversarial_mutations": 20,
+      "external_cold_review_passed": false
+    },
+    "source_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-eq4-cyclic-source-0-1.mjs",
+      "git_blob_sha": "f4a8bf4627524f103fe891e8005c249989836c90"
+    },
+    "source_census_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l126-ssc-source-0-15.mjs",
+      "git_blob_sha": "0bd1933ed6a95f8a0c52a3eb0ce72c7b2e9b675b"
+    },
+    "mathematical_qualification": false,
+    "external_review_passed": false,
+    "source_census_frozen": false,
+    "G1_authorized": false
+  },
+  "Eq17_G0_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_F4_EQ17_SOURCE_G0_0_1.json",
+    "git_blob_sha": "8f21515823c614a3dd8a8dd8a07158a0d83ccb2f",
+    "frozen_source": "L05 2026-08-29 journal version §4.3 Eq17, printed page 19/51",
+    "source_f4_real_form": "compact f4(-52) ordinary O ONLY",
+    "source_component_equations": 4,
+    "source_B_diag_roles": 3,
+    "source_right_first_octonion_rule": true,
+    "source_t_t2_primitive_definition_closed": false,
+    "source_reflections_and_split_complete": false,
+    "universal_f4_mathematics_qualified": false,
+    "source_error_published_not_repaired": true
+  },
+  "G0_17_CI": {
+    "source_eq17": {
+      "id": 37846801752,
+      "head_sha": "642189b0d929abd14ce193a23767d6d31bcc7d7b",
+      "conclusion": "success",
+      "source_rows": 4,
+      "diagonal_roles": 3,
+      "adversarial_rejected": 29,
+      "external_cold_review_passed": false
+    },
+    "SSC_016": {
+      "id": 37847116335,
+      "head_sha": "e8f4ced72e1bbb70513faba62e14c26c13516f92",
+      "conclusion": "success",
+      "source_items": 191,
+      "unchanged_source_items": 190,
+      "adversarial_rejected": 24,
+      "external_cold_review_passed": false
+    },
+    "source_checker": {
+      "path": "experiments/062/tools/verify-l-g0-l05-f4-eq17-source-0-1.mjs",
+      "git_blob_sha": "cd3619259a654ce9cb105f20e54742665256de3e"
+    },
+    "SSC_checker": {
+      "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-16.mjs",
+      "git_blob_sha": "eb8906e8893451ce14aa210183ab29152c43d838"
+    },
+    "original_source_packet_defect": {
+      "path": "experiments/062/L133_EQ17_PSI_CONJUGATION_SOURCE_FIDELITY_DEFECT_0_1.json",
+      "git_blob_sha": "b003f6efd084a565d8e01ea7d2f169268c1d95c5"
+    },
+    "source_census_frozen": false,
+    "source_closure_verified": false,
+    "mathematical_theorem_qualified": false,
+    "G1_authorized": false
+  },
+  "current_Eq5_exact_Q_certificate": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_O_RATIONAL_BIVECTOR_CERTIFICATE_G0_0_1.json",
+    "git_blob_sha": "4c7768cf4108a1851f46c52e3256f7188e989779",
+    "scope": "journal L05 2026-08-29 original O 8x8 source table, four Eq2 barGamma×chiral interpretations plus one-cell counterfactual",
+    "original_signed_source_cell_e6e7": "-e2",
+    "original_signed_source_cell_e7e6": "-e2",
+    "source_repaired": false,
+    "rational_source_operator_variants": 4,
+    "diagnostic_counterfactual_variants": 4,
+    "generator_basis_rank_Q": 28,
+    "commutators_tested_each": 378,
+    "original_outside_span_Q_each": 168,
+    "alternative_outside_span_Q_each": 0,
+    "sparse_analytic_witness": "all 28 B generators obey one two-entry signed functional; commutator [B01,B06] evaluates +2 on it",
+    "full_ordinary_O_source_assertion_consistency": false,
+    "intended_corrected_full_f4_theorem_qualified": false,
+    "author_erratum_proved": false,
+    "G1_authorized": false
+  },
+  "G0_18_CI": {
+    "original_publication_technical_recheck": {
+      "id": 37851752108,
+      "head_sha": "bc5682f932ccf5a039ec746e221c15895841bb8c",
+      "conclusion": "success",
+      "source_scope": "journal original-vs-later version finite-source comparison only",
+      "adversarial_rejected": 22,
+      "external_review_passed": false
+    },
+    "exact_rational_CI": {
+      "id": 37856322251,
+      "head_sha": "4709bdec26d1112bd815c8f7568b7ee2fcbc9a07",
+      "conclusion": "success",
+      "source_scoped_exact_Q_rational_variants": 8,
+      "adversarial_rejected": 24,
+      "external_review_passed": false
+    },
+    "SSC0_17_CI": {
+      "id": 37856608771,
+      "head_sha": "3927417a03c75f68f08bd2bc7515f691f63e59c4",
+      "conclusion": "success",
+      "changed_source_ids": [
+        "L-SSC-127"
+      ],
+      "unchanged_complete_source_items": 190,
+      "adversarial_rejected": 20,
+      "external_review_passed": false
+    },
+    "exact_Q_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-o-rational-bivector-0-1.mjs",
+      "git_blob_sha": "fabc65808a71534b60a7a553dc2e820172dee62a"
+    },
+    "SSC0_17_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l127-ssc-source-0-17.mjs",
+      "git_blob_sha": "7b011ebda17fc050d4b57dcaf89d9ed8757d98f5"
+    },
+    "old_gate_status_defect": {
+      "path": "experiments/062/L_G0_GATE017_STALE_EQ5_INDEX_STATUS_DEFECT_0_1.json",
+      "git_blob_sha": "e3385164e96cdbc02ca0f48853fc8e4baf5a44fa"
+    },
+    "independent_publication_version_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_INDEPENDENT_VERSION_REAUDIT_0_1.json",
+      "git_blob_sha": "9ec1acd5ae21ad4b38b5c3dca0e5c699f8d84f43"
+    },
+    "source_census_frozen": false,
+    "mathematical_theorem_qualified": false,
+    "G1_authorized": false
+  }
+}
