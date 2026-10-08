@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-w05-g0-negative-conic-verifier-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "CONFIRMED_ADVERSARIAL_NEGATED_POINT_PREDICATE_MUTATION_ESCAPED_G0_VERIFIER",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "earliest_affected_stage": "G0_VERIFICATION",
+  "source": "W05 §6.1 conic has no Qp solutions (source printed p.10)",
+  "failed_run": {
+    "id": 37798905431,
+    "conclusion": "failure",
+    "failed_control": "erase_conic_negation",
+    "symptom": "The mutation changed 'no Qp points' to 'Qp points' while the verifier's required semantic-term checklist did not include the negated locus"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w05-source-conservation-0-9.mjs",
+    "blob_sha": "9ceca14f8ce0d6171330cfa3744f176cea224f1d"
+  },
+  "repair": "Require exact negated source phrase 'no Qp points' for W106 and compare W109 point negation separately. Keep mutation and rerun the entire suite.",
+  "ssc_semantic_change_required": false,
+  "source_authority_changed": false,
+  "downstream_G1_authorized": false
+}
