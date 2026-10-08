@@ -1,0 +1,85 @@
+{
+  "schema": "isograph.exp062-w-g5h-empty-typed-predicate.v0.1",
+  "date": "2026-10-08",
+  "status": "HYPOTHESIS_CANDIDATE_PRE_G6_FALSIFICATION",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "origin": "HYPOTHESIS_REVISION",
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent": {
+    "g5_fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_4.json",
+      "git_blob_sha": "d8f87b6875e542adf84fd2bbce3aec615ff3542f"
+    },
+    "failed_G7": {
+      "path": "experiments/062/W_G7_DISJOINT_UNARY_PREDICATES_INSTANTIATION_0_1.json",
+      "git_blob_sha": "e5b7e9f033a660e755b8c3c85bb64856050570ac"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_24.json",
+      "git_blob_sha": "022867f494da8ba2df5fa14e73b76a604915f352"
+    },
+    "residual_occurrence": "W-SSC-097-O05"
+  },
+  "candidate_id": "EMPTY_TYPED_PREDICATE_ON_CARRIER_INTERFACE_0_1",
+  "primitive_id": 221103,
+  "candidate_statement": {
+    "carrier": "A represented carrier U.",
+    "predicate": "A represented unary predicate B typed on U.",
+    "emptiness": "For every represented x in U, B(x) is false.",
+    "semantic_level": "Pure first-order/Core-definable typed predicate emptiness; B meaning remains unresolved."
+  },
+  "intended_W_binding": {
+    "U": "point-domain scoped by the named conic phrase",
+    "B": "real-point status predicate as named by the source",
+    "target": "W-SSC-097-O05 only"
+  },
+  "motivating_evidence": [
+    "The two-predicate candidate failed W G7 only because the source did not separately supply a conic-membership predicate A.",
+    "W-SSC-097-O05 still supplies a scoped point domain and the absence of real points."
+  ],
+  "prohibited_evidence": [
+    "L track evidence",
+    "historical W conic closure packets as authority",
+    "defining B by conjugation/fixed-point semantics",
+    "projective or real-form textbook semantics",
+    "desired W/L unification"
+  ],
+  "predicted_consequences": [
+    "An empty carrier passes.",
+    "A nonempty carrier with empty B passes.",
+    "Any represented B-member inside U falsifies the candidate.",
+    "B-members outside U violate typing.",
+    "The candidate does not assert nonemptiness, complementarity, projective structure, realness semantics, or point existence.",
+    "G7 must independently justify that the source phrase supplies U and B roles."
+  ],
+  "known_alternatives": [
+    "Preserve O05 as opaque absence relation.",
+    "Reopen W097 source granularity if even the U/B roles cannot be source-instantiated."
+  ],
+  "positive_controls": [
+    "empty U and B",
+    "nonempty U with empty B"
+  ],
+  "negative_adversarial_controls": [
+    "one B-member in U",
+    "B-member outside U"
+  ],
+  "falsifiers": [
+    "Any lawful empty-B model rejected.",
+    "Any B-overlap model accepted.",
+    "Any need for domain-specific semantics to state the candidate.",
+    "Failure at G7 to source-establish U and B roles."
+  ],
+  "adaptive_evidence": [
+    "Direct revision after schema 221102 failed only because of the redundant A predicate role."
+  ],
+  "confirmation_status": "PENDING_FRESH_SOURCE_NEUTRAL_EMPTY_PREDICATE_CONTROLS",
+  "coverage_limits": "Only typed predicate emptiness. No meaning of B or U beyond source-provided role binding.",
+  "revision_lineage": [
+    "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+    "W_G7_DISJOINT_UNARY_PREDICATES_INSTANTIATION_0_1"
+  ],
+  "pre_G6_disposition": "ELIGIBLE_FOR_SOURCE_NEUTRAL_G6_IF_PRE_G6_FALSIFIERS_PASS"
+}
