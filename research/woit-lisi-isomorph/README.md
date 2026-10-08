@@ -92,15 +92,15 @@ The first W103 verifier failed an adversarial missing-member test by throwing; t
 
 Consequently G0 is reopened: W G1 through G7, primitive/schema closure, Recursive IA, and cross-track comparison remain unauthorized until complete, fail-closed source verification and lawful replay. This W track uses no L semantic premises or hypotheses.
 
-### L track — current correctness gate: G0 source census (2026-10-08)
+### L track — current correctness gate: G0 SSC 0.11 (2026-10-08)
 
-The former L G5 fixed point and the historical L125–L133 targeted repairs are evidence only for their pinned, older source-census scope. **Current L work is halted at G0**, governed by `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`.
+The former L G5 fixed point and L125–L134 targeted G1–G7 packets remain historical for their old source tuples. **Current L is reopened at G0** under `experiments/062/L_CURRENT_STAGE_GATE_0_11.json`. `lisi/SOURCE_SEMANTIC_CENSUS_0_11.json` retains all **191** stable source identities and changes only L-SSC-133 from 0.10, conserving the other **190 full source items**; the candidate is explicitly **not frozen or source-complete**.
 
-The corrected L127 SI namespace/G7 0.2 remains preserved locally: SI `225000` retains trilinear scalar extension, dimension-seven uses `225010`, and repaired L127 source referents use `246xxx`. The later source-fidelity audit uncovered omissions in L05 §3 across L-SSC-129–132. New `lisi/SOURCE_SEMANTIC_CENSUS_0_5.json` retains all 191 source-census identities and 187 unchanged items, extending four items with 44 source-expression rows. The revision is **not frozen** or source-complete for L01–L06.
+Direct L05 §4.2 source reconstruction now conserves the ordinary-H Killing-normalized 3x3 presentation and all fifteen exact Eq. (13) basis bracket families, with noncommutative operand/index order, plus Eq. (14)'s signed conjugation and separately preserved root-phase underdetermination. See `lisi/LISI_L05_SP3_EQ13_EQ14_SOURCE_G0_0_1.json` and the negative-modality defect `experiments/062/L05_SP3_EQ14_ROOT_PHASE_SOURCE_FIDELITY_DEFECT_0_1.json`. Source-only finite Node CI passed **216/216** matrix generator cases and **24** mutations (run `37823910939`); new SSC0.11 CI passed **190 unchanged items, 15 exact source row reconstructions and 27 effective adversarial mutations** (run `37824604048`).
 
-`experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json` and `L_G0_L05_EXPRESSION_CONSERVATION_LOCAL_REPLAY_0_1.json` preserve the exact source modality, roles, index order and negative evidence. The v0.5 verifier failed to reject a removed duality denominator; its defect is preserved, and verifier v0.6 rejected 16/16 mutations in an internal V8 replay of live GitHub bytes. **No dedicated Node/GitHub Actions or external semantic verification passed for this new candidate.** The owner bypass waives external calls only.
+The failed intermediate runs `37823733174` (test-case count expectation) and `37824412749` (baseline-mask/phase-lexeme verifier error) are retained with defect records. These internal replays are not mathematical theorem proof, complete source reconstruction, or external cold-verification passes. The owner's temporary exception waives only external reviewer calls. The L05 §2 **source octonion contradiction and Eq.(5) Γ/M-index gap**, §4.1 root/split cases, §4.2 phase/t presentation and §4.3 f4/split cases remain open, as does the full L01–L06 census.
 
-L129/L130/L131 must replay from a source-complete G0 before L132, then L133, can resume. Global primitive/schema closure, Recursive IA, W/L comparison, synthesis and Discovery remain unauthorized. This subsection changes L status only; it provides no W semantics.
+All L G1–G7, global primitive/schema closure, Recursive IA, Discovery and W/L synthesis remain unauthorized. No W source semantics or proposed cross-author correspondences enter L's authority. Source-complete G0 with independent replay must precede L129/L130/L131 → L132 → L133/L134 regeneration.
 
 ### G5 fixed points do not prohibit hypothesis-driven discovery
 
