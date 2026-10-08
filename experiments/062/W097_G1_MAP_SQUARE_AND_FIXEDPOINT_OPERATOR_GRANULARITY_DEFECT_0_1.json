@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-w097-g1-map-square-fixedpoint-operator-granularity-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_G1_FORMULA_OPERATOR_UNDERDECOMPOSITION_G1_REOPEN_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G1_SEMANTIC_OCCURRENCE_EXTRACTION",
+  "input": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_27.json",
+      "git_blob_sha": "e10e171dac5b7296e30ee708290eaf95a33e4b21"
+    },
+    "adjudication": {
+      "path": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_27.json",
+      "git_blob_sha": "f75abe1c9c2d7aafeb160df9b64b495b27042623"
+    },
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_7.json",
+      "git_blob_sha": "80d385ca61e4f8479cfc609ffe23c81cb5a7d23a"
+    }
+  },
+  "violated_contract": "Method 0.3 G1 load-bearing operation incidence; Core 0.21 No-Evasion Primitive Closure. G1 0.27 conserves whole formulas but leaves source-visible subordinate square, equality and norm-square operations without their own semantic occurrences.",
+  "missing_instances": [
+    {
+      "id": "W097-OP51",
+      "source": "fixed-point equation z=-1/bar(z)",
+      "issue": "O31 stores the fixed-point equality only as an implication argument, no separately scoped hypothetical equality occurrence."
+    },
+    {
+      "id": "W097-OP52",
+      "source": "|z|^2=-1",
+      "issue": "O32 preserves equality consequent, but norm/magnitude-square operator |z|^2 remains embedded."
+    },
+    {
+      "id": "W097-OP53",
+      "source": "rho squared equal to 1",
+      "issue": "O11 gives equality but does not separately expose source-written rho square/composition operator."
+    },
+    {
+      "id": "W097-OP54",
+      "source": "on C2 coordinates rho_tw squared equals -1",
+      "issue": "O01 gives result but no distinct vector-carrier rho_tw-square operator."
+    },
+    {
+      "id": "W097-OP55",
+      "source": "on projective points rho_tw squared equals 1",
+      "issue": "O06 gives result but no distinct projective-carrier rho_tw-square operator."
+    }
+  ],
+  "repair_constraints": [
+    "No modification to source census 0.7 or demand corpus 0.6.",
+    "Add five lower source-syntactic/operator occurrences; preserve all 48 previous semantic occurrences and their logical polarity.",
+    "Keep fixed-point equality hypothetical, the impossible norm-square consequent CONDITIONAL, and the fixed-point-free property independent of square-law inference.",
+    "Do not equate vector-level square -1 to projective-level square +1.",
+    "Preserve all other 83 W bodies and refrain from downstream G2 until new source-local zero-change audit."
+  ],
+  "prior_ci": {
+    "workflow_run_id": 37793729210,
+    "conclusion": "success",
+    "limitation": "Verifier checks its occurrence list but did not demand all lower semantic operator incidences; green does not certify source completeness."
+  },
+  "next_lawful_action": "Rebuild W097-only G1 0.28, update deterministic verifier and independent adversarial controls, then re-run before fixed-point promotion."
+}
