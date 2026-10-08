@@ -4,6 +4,7 @@
 **Current status:** ACTIVE — correctness-first G0 source-census reopening; historical G5 boundary does not qualify current source tuple
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
 **Cross-author semantics available:** NO
+**W-only public-explanation leads:** [2026-10-08 author-source search notes](AUTHOR_PUBLIC_EXPLANATIONS_NOTES_2026-10-08.md) — external authored commentary, version history, teaching and replies to independently verify; not an amendment to the frozen W source, primitive authority, or a W–L hypothesis. No outreach before complete G7, three/four independent adversarial passes, and question-specific exhaustive prior-public search.
 
 ## Objective
 
