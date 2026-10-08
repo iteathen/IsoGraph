@@ -19,13 +19,19 @@ See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FOR
 
 ### Current 0.7 source-census candidate and G0 gate
 
-The controlling procedural gate is `experiments/062/L_CURRENT_STAGE_GATE_0_6.json`. The latest unqualified **NOT FROZEN** source-census candidate is `SOURCE_SEMANTIC_CENSUS_0_7.json`; no G1-G7 replay, source-track Recursive IA or unification is authorized.
+The controlling procedural gate is `experiments/062/L_CURRENT_STAGE_GATE_0_8.json`. The latest unqualified **NOT FROZEN** source-census candidate is `SOURCE_SEMANTIC_CENSUS_0_7.json`; no G1-G7 replay, source-track Recursive IA or unification is authorized.
 
 Direct frozen L05 section 2 inspection exposed omitted source-level behavior in L-SSC-125 to L-SSC-127. `LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json` conserves six signed ordinary/split multiplication tables (168 row/column signed source entries) and 15 explicit formula records for equations (1)-(5). The source ledger is manual primary-source transcription, not independently cold-reviewed. Source Eq.(5) precise matrix-index positions and the Cl(0,2) worked example remain to be reconstructed.
 
 The 0.7 SSC changed only L125-L127 versus 0.6, preserving 188 other items, six L128 coefficient formulas and 44 L129-L132 expression records. GitHub Actions CI run `37807515374` passed all 168 source-cell checks and 20 adversarial mutation cases after correcting a premature-G1 flag mutation escape in historical run `37807377432`. L128's separate local source-census CI run `37806073112` also passed; none establish full six-source SSC completeness.
 
 L127's SI-repaired G7 0.2 remains historical campaign-local scoped evidence only. L129-L131, L132 and L133 current replay remain blocked by upstream source completeness. Owner bypass waives third-party reviewer calls, not source-fidelity verification or stage ordering.
+
+### Additional L05 section 4 source-granularity defect
+
+The independent §4 audit confirmed that historical `L133_G1_SOURCE_INCIDENCE_0_1.json` and `L133_G3_CORE_DEFINABILITY_0_1.json` do not reconstruct the source's explicit bracket equations from their broad source-family labels. The defect is preserved as `experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json`. A targeted `L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json` now conserves the six family-role decompositions, source `su(3)` and `sp(3)` matrix expressions, five complex and six quaternionic commutator components, and partial basis-bracket data.
+
+A separate `verify-l-g0-l05-section4-matrix-source-0-1.mjs` passed **six finite matrix-commutator pairs and seven adversarial source mutations** in a local V8 replay, pinned by `L_G0_L05_SECTION4_MATRIX_SOURCE_LOCAL_REPLAY_0_1.json`. This is not a universal theorem, GitHub Actions CI qualification, or a full §4 source census: the complete `su(3)` root/Cartan bracket table, split variants, quaternionic Eq.(13), and `f_4` cases remain unexpanded. SSC0.7 currently lacks the Section 4 additions and remains unfrozen. L133 G1/G3 are not current even though the earlier local pass used five `CORE_CLOSED` dispositions.
 
 ### Historical 0.5 source-census checkpoint
 The preceding L stage gate was `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`. Targeted repair `L127_G7_TARGETED_CLOSURE_0_2.json` preserves the corrected SI namespace (scalar-extension 225000, dimension-seven 225010, corrected L127 source 246xxx), but it is not a whole-track source-closure certificate.
