@@ -94,6 +94,8 @@ The versioned local replay `experiments/062/W_ACTIVE_G0_STAGE_GUARD_LOCAL_REPLAY
 
 **Node guard successor (2026-10-08):** The first v0.1 guard workflow [run 37840552477](https://github.com/iteathen/IsoGraph/actions/runs/37840552477) **failed** with `ReferenceError: s is not defined`: its emitted Node script omitted a readonly input-hash alias that the internal V8 closure had supplied. The failure is preserved in `experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CAPTURE_DEFECT_0_1.json`. The successor `experiments/062/tools/verify-w-active-g0-stage-0-2.mjs` makes the captured SHA alias explicit and is routed through `.github/workflows/experiment-062-w-active-g0-stage-0-2.yml`; the former v0.1 workflow is archived/manual-only. **The 26/26 internal controls are not proof of Node success**; the successor's exact committed CI result must be checked. The G0 authority gate, W097 source census and 151-row register are unchanged.
 
+**Committed Node result:** The successor [Actions run 37840850776](https://github.com/iteathen/IsoGraph/actions/runs/37840850776) completed **SUCCESS** against exact W-only commit [e91ad461](https://github.com/iteathen/IsoGraph/commit/e91ad461878df30113f2b6d4db3b7365933791c9). The stage guard verifier v0.2 passed its pinned Node run; its 26/26 hostile controls are internal qualification evidence for the stage-routing guard only. The prior v0.1 CI failure and its source-capture root cause remain preserved and independently distinguishable. The versioned result is `experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CI_0_2.json`. W gate 0.42 and SSC0.15 remain G0 open/unfrozen, with no new G-stage authorization.
+
 ## Full-treatment gates
 
 | Gate | State |

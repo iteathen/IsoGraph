@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-w-active-g0-node-ci-result.v0.2",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PASS_NODE_CI_VERSIONED_G0_STAGE_GUARD_VERIFIER_V0_2_NOT_G0_COMPLETE",
+  "verified_commit": "e91ad461878df30113f2b6d4db3b7365933791c9",
+  "workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-2.yml",
+    "git_blob_sha": "31ee80d4b5a57231df88f324d66df5e5ca841a13",
+    "run_id": 37840850776,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37840850776",
+    "status": "completed",
+    "conclusion": "success",
+    "job": "verify",
+    "node_step": "node experiments/062/tools/verify-w-active-g0-stage-0-2.mjs",
+    "step_conclusion": "success"
+  },
+  "current_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-2.mjs",
+    "git_blob_sha": "594138f7407fc509fb163d7c4587129d1272ab31",
+    "local_adversarial_total": 26,
+    "local_adversarial_rejected": 26,
+    "Node_CI": "PASS"
+  },
+  "failed_predecessor": {
+    "path": "experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CAPTURE_DEFECT_0_1.json",
+    "git_blob_sha": "e882eb8a9bd13c1f86811048feca3ec49a71fd8f",
+    "CI_run_id": 37840552477,
+    "CI_url": "https://github.com/iteathen/IsoGraph/actions/runs/37840552477",
+    "result": "failure",
+    "cause": "ReferenceError: s is not defined",
+    "disposition": "PRESERVED_HISTORICAL_NEGATIVE_EVIDENCE"
+  },
+  "pinned_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_42.json",
+    "git_blob_sha": "7fa332e0811d3229035a413b345e3a2350bbcd7c",
+    "source_census": "W_SSC0.15_151_UNFROZEN",
+    "G0_complete": false,
+    "G1_to_G7_authorized": false
+  },
+  "claims_limited_to": [
+    "Exact committed Node execution of fail-closed stage/provenance guard",
+    "Adversarial mutant rejection in the verifier at its pinned tuple",
+    "The earlier CI harness runtime defect is repaired by a versioned successor"
+  ],
+  "nonclaims": [
+    "No nine-source cold source fidelity freeze",
+    "No G1-G7 current qualification",
+    "No independent third-party semantic review",
+    "No W/L source equivalence"
+  ],
+  "authorship_and_research_provenance": {
+    "research_owner": "Joshua Oshiro",
+    "formalization_and_testing": "agent-assisted",
+    "earliest_verified_repository_evidence": "Commit e91ad461878df30113f2b6d4db3b7365933791c9 and Actions 37840850776"
+  }
+}
