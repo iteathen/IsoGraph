@@ -1,0 +1,28 @@
+name: Experiment 062 L127 G6 quaternion provisional qualification
+
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/L127_G5H_QUATERNION_PRESENTATION_0_1.json'
+      - 'experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_SSC_0_1.json'
+      - 'experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_IA_FIXED_POINT_0_1.json'
+      - 'experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/tools/qualify-l127-g6-quaternion-presentation-0-1.mjs'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg'
+      - '.github/workflows/experiment-062-l127-g6-quaternion-provisional.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - run: node experiments/062/tools/qualify-l127-g6-quaternion-presentation-0-1.mjs
