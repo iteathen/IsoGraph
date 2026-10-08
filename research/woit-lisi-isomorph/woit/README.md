@@ -18,7 +18,7 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_40.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_14.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_41.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_15.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -66,13 +66,25 @@ The W-only independent hostile audit `experiments/062/W_G4_HISTORICAL_INDEPENDEN
 
 The reviewed G5H/G6/G7 hypothesis ladder retains useful negative evidence. Generic provisional schema **221100** includes total/single-valued fixed-point-free involution laws but its original W G7 source-instance record rejected missing graph-level totality/single-valuedness. Generic **221101** deliberately admits partial, empty and multivalued relations; that generic qualification remains scope-valid, while the later W G7 closure applying it to W097 fails exact source-map reconstruction. The W variation/stationarity G5H hypotheses and G7 source instances remain unsuccessful or incomplete rather than qualifying source semantics. The original post-G7 G5 count of zero new deterministic candidates is a result for its old tuple only, not proof of irreducibility.
 
+### W097 typed-map correction and complete 151-item G0 membership inventory (2026-10-08)
+
+The W05 [frozen arXiv 2202.02657v2](https://arxiv.org/pdf/2202.02657v2), §2 printed pp.2–3, explicitly defines a real structure as an **antiholomorphic map from CP1 to CP1**, and defines `rho_tw` through the ordered homogeneous coordinate output `[-bar(z2),bar(z1)]`. It asserts its projective square is the identity on the CP1 carrier, while its vector-coordinate square is negative identity on C², and states that **no projective point is fixed**. The affine `-1/bar(z)` is a chart formula, not a globally total affine map. These source semantics were present only in prose in SSC0.14 and were lost in the historical G1/G7 decomposition: G7 closed O06/O04 with a partial, potentially multivalued relation which cannot reconstruct the declared CP1 map. The general weaker schema 221101 remains provisional in its own scope; the W097 source-instance closure stays invalid.
+
+Successor `SOURCE_SEMANTIC_CENSUS_0_15.json` adds **eight typed source-expression records for W097 only**, retains the other **150/151** source objects verbatim, and has a W-only 86-member historical-demand replay `experiments/062/W_G0_W097_SOURCE_DEMAND_PROJECTION_0_5.json` preserving **85/86** other demand entries. The direct-source fixture `experiments/062/W05_W097_PRIMARY_SOURCE_TYPED_INCIDENCE_ORACLE_0_1.json` preserves frozen v2 revision and coordinate/type/negative modalities. Exact author-PDF/arXiv-v2 PDF byte identity is not demonstrated. This is G0 repair, **not** G1 extraction or module authority.
+
+A separate `experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_1.json` exhaustively inventories all 151 W source items for future **source-local G0 review**. It is not a qualifying unresolved-demand list. Comparing old 86-member projection to the historical 0.19 Core ledger exposes **52 omitted items already marked INCOMPLETE_UNEXPANDED** and **8 historically CLOSED_SCHEMA items included as unresolved**. The remaining historical outside-projection group comprises four old CLOSED_SCHEMA and nine old CLOSED_PRIMITIVE claims; their old statuses confer **no current authority**. The mismatch is preserved in `experiments/062/W_G0_ALL_151_DEMAND_MEMBERSHIP_DEFECT_0_1.json`, and every row remains review-pending.
+
+The corrected fail-closed local V8 replay rejects **31/31** adversarial mutations. The first prepublication checker crashed on a missing source member; this failed control is retained in `experiments/062/W097_G0_REGISTER_VERIFIER_MISSING_MEMBER_DEFECT_0_1.json` and the repaired verifier now fails closed. An independent finite source-coordinate test exercises **80 nonzero complex coordinate vectors**, **320 scalar cases**, infinity-point behavior and **5/5 rejected malformed map variants**; this is neither a universal projective theorem nor whole-source verification. The dedicated Node CI workflow `.github/workflows/experiment-062-w-g0-w097-source-151-members-0-1.yml` must be separately checked after commit.
+
+**Current stage:** `experiments/062/W_CURRENT_STAGE_GATE_0_41.json`; G0 OPEN/UNFROZEN, full nine-source cold audit pending, source demand closure incomplete, historical G1–G7 and W097/O04/O06 closures unauthorized. No L semantic or artifact consumption.
+
 ## Full-treatment gates
 
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
 | source traversal complete | HISTORICAL 9/9 traversal; complete fresh direct source-census fidelity review is outstanding |
-| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.14 is not frozen pending independent G0 conservation |
+| SSC frozen complete | **REOPENED / NOT CURRENT** — 151-item source-census successor 0.15 is not frozen pending independent G0 conservation |
 | primitive math support complete | BLOCKED at G0 source fidelity; historical 352 G5 quotient classes refer to an incomplete older source tuple |
 | native .isg bundle | HISTORICAL — earlier 0.2 compilation predates new W05 source-level obligations |
 | graph-derived closure ledger | IN PROGRESS — `CORE021_CLOSURE_LEDGER_0_19.json` remains 21/151; Experiment 062 separately regrounds the 84-body unresolved demand path but does not close it |
