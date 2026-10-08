@@ -1,7 +1,7 @@
 # Lisi full IsoGraph treatment
 
 **Track:** L
-**Current status:** ACTIVE — graph-first primitive-demand G5 current-authority boundary; primitive closure incomplete
+**Current status:** ACTIVE — source-fidelity correctness reopening at G0; historical G5 boundary superseded for complete-source claims; primitive closure incomplete
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
 **Cross-author semantics available:** NO
 
@@ -15,15 +15,25 @@ Current provisional formulations are L-F1 E8 principal-bundle/superconnection fo
 
 See ../TRACK_L_FORMULATION_MAP_0_1.md, ../TRACK_L_DTS_WORKING_0_1.md, and ../FORMULATION_FAMILY_GRAPH_0_1.json.
 
+## Current G0 source-fidelity audit and invalidation (2026-10-08)
+
+The controlling L stage gate is `experiments/062/L_CURRENT_STAGE_GATE_0_5.json`. Targeted repair `L127_G7_TARGETED_CLOSURE_0_2.json` preserves the corrected SI namespace (scalar-extension 225000, dimension-seven 225010, corrected L127 source 246xxx), but it is not a whole-track source-closure certificate.
+
+The L05 §3 source audit reopened **L-SSC-129–132** for omitted assertions and compressed equation modality. `SOURCE_SEMANTIC_CENSUS_0_5.json` retains 191 identities and 187 unrelated source items unchanged, adding 44 exact-role/index/polarity/approximation source-expression rows. The source audit is `experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_3.json`. SSC0.5 is **candidate, not frozen, not qualified**.
+
+The v0.5 standalone source verifier failed one adversarial test involving a missing duality denominator. The defect and failed verifier remain historical evidence. Corrected verifier v0.6 rejected 16/16 mutations under local deterministic V8 replay of current GitHub file contents; a separate Node/GitHub Actions qualifying run has **not** passed. External review remains owner-bypassed, not passed.
+
+Because the upstream frozen SSC is incomplete for this revised source target, L129/L130/L131 must be replayed before L132, and L133 remains downstream of L132. No source-local Recursive IA, cross-track synthesis or Discovery Protocol is authorized.
+
 ## Full-treatment gates
 
 | Gate | State |
 |---|---|
 | corpus frozen | PASS — 0.2 |
-| source traversal complete | PASS — L01–L06 complete |
-| SSC frozen complete | PASS — corrected `SOURCE_SEMANTIC_CENSUS_0_2.json`, 191 obligations |
-| primitive math support complete | BLOCKED — Experiment 062 L-local G5 reached a current-authority boundary: 345 unresolved quotient classes, 0 lawful reusable candidates |
-| native .isg bundle | PRESENT — authoritative/re-grounded routing artifacts exist; semantic primitive/schema closure remains incomplete |
+| source traversal complete | HISTORICAL — previous six-source traversal ledger exists; current full-source semantic completeness is reopened after L05 §3 omissions |
+| SSC frozen complete | **REOPENED/NOT CURRENT** — historical 0.2 is retained as a defective-completeness baseline; 0.5 is an expression-level successor candidate, **not frozen** |
+| primitive math support complete | BLOCKED — G0 source-census correctness gate; historical G5 (345 unresolved classes) is for an incomplete predecessor source tuple |
+| native .isg bundle | HISTORICAL / PARTIAL — previous renderings exist but cannot reconstruct newly restored G0 source obligations |
 | graph-derived closure ledger | IN PROGRESS — existing Core-0.21 ledger/gates remain separate closure evidence; Experiment 062 does not convert unresolved G5 classes into closures |
 | recursive IA fixed point | BLOCKED — primitive/schema closure incomplete; L G5 explicitly leaves IA unauthorized |
 | NEI pass | BLOCKED — primitive closure / IA not complete |
@@ -58,7 +68,7 @@ Current working assertion base: `ASSERTION_BASE_A0_0_12.md`.
 
 Current source traversal ledger: `SOURCE_TRAVERSAL_LEDGER_0_10.json`.
 
-Frozen Source Semantic Census: corrected `SOURCE_SEMANTIC_CENSUS_0_2.json`.
+Historical frozen SSC baseline (source-incomplete for L05 §3): `SOURCE_SEMANTIC_CENSUS_0_2.json`. Current NOT-FROZEN expression-census candidate: `SOURCE_SEMANTIC_CENSUS_0_5.json`.
 
 Historical working census immediately before freeze: `../TRACK_L_WORKING_SSC_0_8.md`.
 
@@ -74,8 +84,8 @@ Discovery Protocol is blocked.
 The required order is:
 
 ~~~text
-frozen L SSC [PASS]
--> compile authoritative L native .isg bundle [CURRENT]
+corrected L SSC G0 [REOPENED — NOT YET SOURCE COMPLETE]
+-> rebuild authoritative L native .isg source bundle [BLOCKED ON G0]
 -> primitive/schema closure
 -> mechanically derived Core-0.21 closure ledger
 -> five Core qualification gates
@@ -89,7 +99,7 @@ frozen L SSC [PASS]
 Existing partial native source instances remain evidence/components; they do not constitute the authoritative full-track compilation while the SSC is open.
 
 
-## Current graph-first primitive-demand checkpoint — Experiment 062
+## Historical graph-first primitive-demand checkpoint — Experiment 062 (superseded by G0 source-fidelity reopening)
 
 The prior category/regex primitive-demand line has been superseded by the graph-first procedure in `research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md`. The current **L-only** state is:
 
