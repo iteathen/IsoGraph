@@ -7,6 +7,7 @@ on:
       - 'experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_28.json'
       - 'experiments/062/W_EXTRACTION_RECONCILED_0_28.json'
       - 'experiments/062/tools/verify-w-extraction-reconciled-0-28.mjs'
+      - 'experiments/062/tools/apply-w-g1-adjudication-0-28.mjs'
       - '.github/workflows/experiment-062-verify-w-g1-0-28.yml'
   workflow_dispatch:
 permissions: {contents: read}
@@ -17,4 +18,6 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/apply-w-g1-adjudication-0-28.mjs
+      - run: git diff --exit-code -- experiments/062/W_EXTRACTION_RECONCILED_0_28.json
       - run: node experiments/062/tools/verify-w-extraction-reconciled-0-28.mjs
