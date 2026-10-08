@@ -125,7 +125,7 @@ function verify(pkt=D,source=SRC){
  ok(fix.entries[6][7]==='-e2'&&fix.entries[7][6]==='-e2','original contradictory source literal kept');
  fix.entries[6][7]='e2';const hypothetical=scan(fix,true);
  ok(hypothetical.reverseU===0&&hypothetical.reverseV===0&&hypothetical.span.extra.every(v=>v===0),'mathematical one-cell repair candidate not source');
- ok(pkt.version_evidence_NOT_FROZEN?.source_disposition===undefined&&pkt.remaining?.G1_through_G7_authorized===false,'no later source substitution or downstream promotion');
+ ok(pkt.version_evidence_NOT_FROZEN?.source_disposition===undefined&&pkt.G1_authorized===false&&pkt.open_limits?.includes('G1-G7 historical checks are not current')&&pkt.open_limits?.includes('Full independent all-source G0 L01-L06 census not yet complete'),'no later source substitution or downstream promotion');
  ok(!j(pkt).includes('W-SSC-')&&pkt.source?.scope===undefined,'no forbidden W track source or scope change');
  return failures;
 }
