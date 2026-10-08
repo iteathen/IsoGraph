@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l127-eq5-theorem-authority-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_HOSTILE_MUTATION_ESCAPE_IN_SOURCE_PACKET_AUTHORITY_GUARD",
+  "failed_run": {
+    "id": 37839051903,
+    "head_sha": "65a4a5e34dd3adb57387f1dee66454b07460d601",
+    "conclusion": "failure",
+    "baseline": "PASS (finite source index, 6 tables, O Lie counterexamples)",
+    "adversarial_defined": 24,
+    "adversarial_rejected": 23,
+    "escaped_mutation": "try declaring theorem"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l127-eq5-indexed-source-0-1.mjs",
+    "git_blob_sha": "a315d4d9132a34e358a205a767157d8888de77e3"
+  },
+  "defect": "Source packet top-level primitive_or_theorem_qualification could be changed false->true without any verification failure. Source-level finite reconstruction and Lie nonclosure do not justify this authority flag; verifier failed mandatory qualification-route fail-closure.",
+  "repair": "Require top-level primitive_or_theorem_qualification=false, source_complete=false, external_review_passed=false and source_census_frozen=false, alongside G1_authorized=false and existing scope guards; add independent mutations for each adjacent forbidden promotion.",
+  "baseline_truth": "Numeric counters may be used as preliminary evidence, but the current adversarial verifier is FAILED until this escaped mutation is stopped and full suite passes.",
+  "next": "Rerun deterministic complete Eq5 source-check baseline and adversarial mutants in Node CI before using source packet in SSC.",
+  "G1_authorized": false,
+  "mathematical_qualification": false,
+  "external_review_passed": false
+}
