@@ -24,7 +24,8 @@ function check(next=cur){
  ck(j(r.ordinary_C)===j(source.finite_evidence.ordinary_C)&&j(r.ordinary_H)===j(source.finite_evidence.ordinary_H)&&j(r.ordinary_O)===j(source.finite_evidence.ordinary_O),'C H O indexed source observations exact');
  ck(r.CI?.run_id===37840813885&&r.CI?.adversarial_cases_rejected===23&&r.CI?.external_cold_review_passed===false,'L126 source trace/CI evidence');
  ck(r.Gamma_lowered_four_members_audited===false&&r.split_index_lowering_audited===false&&r.full_source_math_qualified===false&&r.G1_authorized===false,'unresolved Gamma/split index/Math burden');
- ck(n.body.includes(source.source_exact_Eq4.printed_eight_member_equality)&&n.body.includes('ordinary C')===false?true:true,'source claim positive no arbitrary normalized mismatch'); 
+ if(!n){errors.push('L-SSC-126 missing (fail closed)');return errors;}
+ ck(n.body.includes(source.source_exact_Eq4.printed_eight_member_equality),'all eight printed source chain members explicitly present'); 
  for(const row of source.finite_evidence.ordinary_O.counterexamples)ck(n.body.includes('('+row.a+','+row.b+','+row.c+')=['+row.terms.join(',')+']'),'every source negative witness visibly reconstructable '+[row.a,row.b,row.c]);
  for(const x of source.source_exact_Eq4.members)ck(n.body.includes(x.source+' = '+x.exact_calculation),'source ordered and conjugated operands '+x.source);
  for(const s of ['four source M coefficient','among 512','UNTESTED','COUNTERFACTUAL ONLY','G1–G7'])ck(n.body.includes(s),'negative/source scope text '+s);
