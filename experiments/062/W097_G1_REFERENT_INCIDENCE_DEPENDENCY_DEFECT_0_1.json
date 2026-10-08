@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062-w097-g1-referent-incidence-dependency-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_SOURCE_REFERENT_INCIDENCE_LOSS_G1_SUCCESSOR_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G1",
+  "source": {
+    "id": "W05",
+    "frozen_locator": "Notes on the Twistor P1 §2, printed p.3",
+    "source_demand_path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_7.json",
+    "source_demand_sha": "a6cb48c82e5fa72a5820e01da80711eaf96ac2d0",
+    "source_expansion": false,
+    "reference": "https://www.math.columbia.edu/~woit/twistorp1.pdf"
+  },
+  "predecessor": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_29.json",
+    "git_blob_sha": "8207dd8519ae4d2563f86639a7670caed19c00ca"
+  },
+  "defects": [
+    {
+      "id": "W097-RID01",
+      "occurrence": "W-SSC-097-O34",
+      "finding": "Galois-action occurrence extracts the fragment 'complex projective variety CP1 equipped with ... Gal(C/R)' but omits the sentence's SUBJECT 'twistor P1' and has no dependency on the source-explicit twistor rho_tw map occurrence O18.",
+      "repair": "Use complete source span containing 'the twistor P1', include twistor P1 as ordered argument and link to O18."
+    },
+    {
+      "id": "W097-RID02",
+      "occurrence": "W-SSC-097-O02",
+      "finding": "The real-conic presentation names 'the same twistor P1' but has no edge to the source twistor-map O18.",
+      "repair": "Link to O18 as source referent support, keeping O22 conic equation."
+    },
+    {
+      "id": "W097-RID03",
+      "occurrences": [
+        "W-SSC-097-O23",
+        "W-SSC-097-O24"
+      ],
+      "finding": "Conic 'defined over R' and complex-point claims were linked to equation O22 but not the source 'real projective conic' presentation O02.",
+      "repair": "Link each to O02 in addition to the already retained equation/field-definition dependencies."
+    }
+  ],
+  "controls": [
+    "No involution property is allowed to imply fixed-point-freeness.",
+    "No positive fixedpoint is inferred from the homogeneous equality.",
+    "No named Galois/action laws are imported; the source as-above relationship is incidence only.",
+    "Conic field/point relations remain conic-scoped and do not define the separate twistor-map real-point predicate.",
+    "Other 83 W body records remain byte-identical."
+  ],
+  "next_lawful_action": "Make W097-only G1 0.30 adjacency successor, run full 0.30 deterministic/adversarial verifier, re-establish source-local fixed point before any W G2 route."
+}
