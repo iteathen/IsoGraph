@@ -1,0 +1,460 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-section3-source-fidelity-defect.v0.3",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_L05_G0_SOURCE_GAP_WITH_MINUS_OPERATOR_SOURCE_FIDELITY_REPAIR",
+  "authority": false,
+  "authority_effect": "HALT_DOWNSTREAM_L_PROPAGATION_PENDING_SOURCE_CENSUS_CORRECTION",
+  "track": "L",
+  "pr": 70,
+  "branch_head_at_detection": "c1a881cac47d2488a651c82167588fa91fe5c058",
+  "source": {
+    "frozen_article": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic, published 2026-08-29",
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "location": "L05 §3 directly after Eq. (9): two-reflection rotation, Clifford rotor alternative, and triality conjugates; between displayed t^(uw) factorization and tri(D) Lie-algebra equation",
+    "census_ids": [
+      "L-SSC-131",
+      "L-SSC-132"
+    ],
+    "source_scope_change": false
+  },
+  "frozen_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "git_blob_sha": "db889137e94759727cfbf8e2c21f6749b728bebd",
+    "item_count": 191,
+    "reported_status": "FROZEN_COMPLETE_SOURCE_SEMANTIC_CENSUS_CORRECTED",
+    "diagnosis": "No frozen SSC item directly expresses the independent finite rotor exponential, exact vector/spinor actions, infinitesimal approximations, or t-conjugate m/p rotations. L-SSC-131 only names ordinary rotations arising from generalized-reflection compositions; that does not reconstruct these source written alternative expressions."
+  },
+  "findings": [
+    {
+      "id": "G0_D1_CLIFFORD_ROTOR_ALTERNATIVE",
+      "source_behavior": "A rotation R_v^B may alternatively be presented by the rotor U=exp(B/2), with exact role-distinct actions v'=U v U^{-1} and Psi'=U Psi; the source additionally writes first-order approximations (not exact equalities).",
+      "required_equations": [
+        [
+          "DEFINE",
+          "U",
+          [
+            "EXP",
+            [
+              "HALF",
+              "B"
+            ]
+          ]
+        ],
+        [
+          "EQUAL",
+          [
+            "ACT",
+            "R_v^B",
+            "v"
+          ],
+          [
+            "ORDERED_PRODUCT",
+            "U",
+            "v",
+            [
+              "SOURCE_SUPERSCRIPT_MINUS",
+              "U"
+            ]
+          ]
+        ],
+        [
+          "EQUAL",
+          [
+            "ACT",
+            "R_v^B",
+            "Psi"
+          ],
+          [
+            "ORDERED_PRODUCT",
+            "U",
+            "Psi"
+          ]
+        ],
+        [
+          "FIRST_ORDER_APPROX",
+          [
+            "ACT",
+            "R_v^B",
+            "v"
+          ],
+          [
+            "SUM",
+            "v",
+            [
+              "HALF",
+              [
+                "ORDERED_PRODUCT",
+                "B",
+                "v"
+              ]
+            ],
+            [
+              "NEGATE",
+              [
+                "HALF",
+                [
+                  "ORDERED_PRODUCT",
+                  "v",
+                  "B"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "FIRST_ORDER_APPROX",
+          [
+            "ACT",
+            "R_v^B",
+            "Psi"
+          ],
+          [
+            "SUM",
+            "Psi",
+            [
+              "HALF",
+              [
+                "ORDERED_PRODUCT",
+                "B",
+                "Psi"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "missing_in": "Frozen SSC L-SSC-131 body and L131 G1 0.3 R01-R13 have no rotor/exponential or exact-vs-first-order branch.",
+      "logical_guard": "Do not promote approximate equality to exact equality; preserve v and Psi as different carriers; exact inverse differs from exponential approximation. Source-written U^- or (u gamma)^- is retained as an opaque unary marker; not a justified inverse or named involution.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G0_D2_BIVECTOR_TYPED_BLOCK",
+      "source_behavior": "B=(1/2)B^{cd}gamma_cd is a Clifford bivector with separate chiral blocks B_m and B_p.",
+      "required_structure": [
+        "B",
+        "B^{cd}",
+        "gamma_cd",
+        "one_half",
+        "B_m",
+        "B_p",
+        "block diagonal"
+      ],
+      "missing_in": "L-SSC-131 and source-complete L131 replay; L132 G1 R14 contains an infinitesimal chiral generator claim but cannot substitute for L131 finite rotor action.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G0_D3_TRIALITY_CONJUGATE_ROTATIONS",
+      "source_behavior": "Generalized m- and p-role rotations are explicitly written as t-conjugates of the v-role rotor: R_m^B=t^2 R_v^B t and R_p^B=t R_v^B t^2.",
+      "required_equations": [
+        [
+          "EQUAL",
+          "R_m^B",
+          [
+            "COMPOSE_ORDERED",
+            [
+              "POWER",
+              "t",
+              2
+            ],
+            "R_v^B",
+            "t"
+          ]
+        ],
+        [
+          "EQUAL",
+          "R_p^B",
+          [
+            "COMPOSE_ORDERED",
+            "t",
+            "R_v^B",
+            [
+              "POWER",
+              "t",
+              2
+            ]
+          ]
+        ]
+      ],
+      "missing_in": "Neither frozen L-SSC-131 body nor L131 G1 current expression reconstruction contains both conjugation equalities.",
+      "guard": "Preserve precise t powers and composition order; do not import a group-conjugacy theorem.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G1_D4_BINDER_INCIDENCE_G4_FRONTIER",
+      "source_behavior": "The current G1/G2 factorization and R_v^(uw) source expressions encode u/w and tilde(u) as raw source strings without explicit binder/operand ownership edges. Under subsequent alpha-renaming a swap of differently bound source reflection operands may become indistinguishable.",
+      "missing_in": "L131 G2 0.3 has RAW_SOURCE_TERM leaves, but no parameter-binding edges for the R11/R13 operator terms.",
+      "earliest_lawful_reopen": "Targeted G1/G2 binding-incidence within same source-census repair",
+      "guard": "Avoid claiming complete G4 graph isomorphism from the current 13-occurrence graph without binder ownership.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G0_D4_T_EQUAL_ONE_CONDITIONAL_DUALIZATION",
+      "source_behavior": "Under the explicitly stated T(v,psi,chi)=1 matching condition, the source solves for each typed role via an inverse squared product-norm and conjugated ordered product; distinct inverse identities are not supplied by mere unnormalized product-recovery.",
+      "required_equations": [
+        [
+          "CONDITIONAL",
+          [
+            "EQUAL",
+            [
+              "T",
+              "v",
+              "psi",
+              "chi"
+            ],
+            1
+          ],
+          [
+            "EQUAL",
+            "v",
+            [
+              "SCALAR_DIVIDE",
+              [
+                "TILDE",
+                [
+                  "ORDERED_PRODUCT",
+                  "psi",
+                  "chi"
+                ]
+              ],
+              [
+                "SQUARED_NORM",
+                [
+                  "ORDERED_PRODUCT",
+                  "psi",
+                  "chi"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "CONDITIONAL",
+          [
+            "EQUAL",
+            [
+              "T",
+              "v",
+              "psi",
+              "chi"
+            ],
+            1
+          ],
+          [
+            "EQUAL",
+            "psi",
+            [
+              "SCALAR_DIVIDE",
+              [
+                "TILDE",
+                [
+                  "ORDERED_PRODUCT",
+                  "chi",
+                  "v"
+                ]
+              ],
+              [
+                "SQUARED_NORM",
+                [
+                  "ORDERED_PRODUCT",
+                  "chi",
+                  "v"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "CONDITIONAL",
+          [
+            "EQUAL",
+            [
+              "T",
+              "v",
+              "psi",
+              "chi"
+            ],
+            1
+          ],
+          [
+            "EQUAL",
+            "chi",
+            [
+              "SCALAR_DIVIDE",
+              [
+                "TILDE",
+                [
+                  "ORDERED_PRODUCT",
+                  "v",
+                  "psi"
+                ]
+              ],
+              [
+                "SQUARED_NORM",
+                [
+                  "ORDERED_PRODUCT",
+                  "v",
+                  "psi"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "missing_in": "Frozen L-SSC-129 item and its current product-recovery reconstruction do not preserve the T=1 normalized conditional three-equation source family or inverse denominator provenance.",
+      "logical_guard": "Record nonzero denominator guards and exact order separately. Do not infer from a textbook nondegeneracy theorem, and do not conflate source coefficient product recovery with these normalized conditional dualities.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G0_D5_NON_UNIT_REFLECTION_DUALITY",
+      "source_behavior": "The source separately gives non-unit duality and the negative-spinor incidence relation with product/conjugation order and coefficient/Clifford representatives.",
+      "required_equations": [
+        [
+          "SOURCE_DUALITY_EXAMPLE",
+          "psi",
+          [
+            "TILDE",
+            [
+              "ORDERED_PRODUCT",
+              "chi",
+              "v"
+            ]
+          ]
+        ],
+        [
+          "SOURCE_INCIDENCE",
+          "psi",
+          [
+            "ORDERED_PRODUCT",
+            [
+              "TILDE",
+              "v"
+            ],
+            [
+              "TILDE",
+              "chi"
+            ]
+          ]
+        ]
+      ],
+      "missing_in": "No frozen L-SSC-129/130 item explicitly conserves the non-unit dualization case and its role-specific source incidence relation; current L129 native product recovery does not independently reconstruct this contextual extension.",
+      "logical_guard": "Prose source's non-unit generalization and displayed vector/spinor incidence equation must retain distinct assumptions; do not assert their equivalence universally without actual source coercions.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    },
+    {
+      "id": "G0_D6_CLIFFORD_ADJOINT_GENERAL_REFLECTION",
+      "source_behavior": "The source explicitly describes reflection of an arbitrary Clifford algebra element A via the Clifford pseudoscalar adjoint R^u A=(u gamma) A (u gamma)^-, and identifies (u gamma) with a pin-group role.",
+      "required_equations": [
+        [
+          "EQUAL",
+          [
+            "ACT",
+            "R^u",
+            "A"
+          ],
+          [
+            "COMPOSED_CLIFFORD_ADJOINT",
+            [
+              "ORDERED_PRODUCT",
+              "u",
+              "gamma"
+            ],
+            "A",
+            [
+              "SOURCE_SUPERSCRIPT_MINUS",
+              [
+                "ORDERED_PRODUCT",
+                "u",
+                "gamma"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "missing_in": "Frozen L-SSC-130 body only conserves three-role generalized reflections and their T anti-invariance, not the separately quantified Clifford-element adjoint action; no current L130 routed source claim reconstitutes arbitrary A.",
+      "logical_guard": "Do not import a global Pin theorem or identify involutive reflection with arbitrary Clifford adjoint automatically; source scope and operand order require their own exact representation. Source-written U^- or (u gamma)^- is retained as an opaque unary marker; not a justified inverse or named involution.",
+      "source_status": "SOURCE_ASSERTED_L05_NOT_INDEPENDENTLY_PROVED"
+    }
+  ],
+  "other_source_obligations_to_audit_not_yet_confirmed_defects": [
+    "T=1 conditional dualization and denominator/order semantics near L05 §3 Eq.(6)-(7)",
+    "Clifford adjoint/pseudoscalar realization of reflections on arbitrary Clifford elements",
+    "unit role/signature and non-unit dualization scope",
+    "possible additional L05 §3 formulas missing from frozen L-SSC-129–132"
+  ],
+  "pinned_downstream_at_detection": {
+    "extraction": {
+      "path": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+      "git_blob_sha": "80e2f576471aab8396f21f9f0b58e15fb5435c16"
+    },
+    "L131_G1": {
+      "path": "experiments/062/L131_G1_SOURCE_INCIDENCE_0_3.json",
+      "git_blob_sha": "2228bd5ff11d7eae9d6010ef7aba1fdb3c78f596"
+    },
+    "L131_G2": {
+      "path": "experiments/062/L131_G2_NEUTRAL_SUBGRAPH_0_3.json",
+      "git_blob_sha": "9850a53221a5101247110364935470f840472719"
+    },
+    "L131_G3": {
+      "path": "experiments/062/L131_G3_CORE_DEFINABILITY_0_3.json",
+      "git_blob_sha": "18ca1d606dd1b61e1dd9fbbcf35b23b4bc2cdee1"
+    }
+  },
+  "invalidation": {
+    "earliest_lawful_stage": "Frozen L SSC/G0 source semantic census 0.2 (L-SSC-129,130,131; and re-audit 132), followed by exact source G1 for all affected bodies",
+    "frozen_census_0_2": "HISTORICAL_REPRODUCIBLE_INPUT_NOT_COMPLETE_AUTHORITY_FOR_ADDED_L05_SECTION3_BEHAVIORS",
+    "L_extraction_0_25": "HISTORICAL_SOURCE_CENSUS_PROJECTION; REOPEN AND REPLAY FOR EXPANDED L05 SOURCE",
+    "L131": "Existing 0.1/0.2/0.3 replay packet is limited to represented clauses and cannot close L05 §3; G4/G5H/G6/G7 propagation blocked",
+    "L132": "Existing 0.1/0.2/0.3/0.4 dependent chain stale; D3-D5 independent source omission record remains outstanding",
+    "L133": "All old G1-G3 stale, remain blocked",
+    "L127": "Corrected targeted SI 0.2 relation qualifications remain historically valid for their exact original local scope, but global L fixed-point or expanded full-source closure cannot be inherited from old frozen census",
+    "L_global": "The 191-item inventory count is historically preserved but source-meaning coverage remains incomplete for L05 §3; no global L graph fixed point or downstream dependent promotion can be considered current without versioned source-census repair.",
+    "G0_0_3": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_3.json was a not-frozen candidate but interpreted source U^- as U^-1; do not promote or consume."
+  },
+  "next_lawful_action": [
+    "Repair G0 source candidate with literal U^- and (u gamma)^- operator tokens, not an imported inverse, before any G1 replay.",
+    "Complete source-conserved L05 §3 direct read including rotor, T=1 inverse formulas, non-unit duality, arbitrary Clifford adjoint; preserve logical polarity, exact/approximate distinction, and all typed roles.",
+    "Create versioned corrected source semantic census and source-local extraction with conservation mapping, no overwrite of frozen 0.2",
+    "Replay G1 with typed finite rotor, approximation modality, bivector roles, m/p conjugations, explicit u/w binder incidence",
+    "Replay G2 graph from complete corrected G1, with exact-order and source-variable binding mutational tests",
+    "Adjudicate G3 by current qualified authority; leave unsupported exponential/group semantics UNEXPANDED_DEMAND",
+    "Only then undertake G4–G6 qualification and L131 G7; subsequently replay L132 then L133"
+  ],
+  "bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "meaning": "Third-party calls waived temporarily; internal deterministic tests, source conservation, stage order, IA, precise reconstruction not waived."
+  },
+  "nonclaims": [
+    "This record does not itself repair G0 or any source semantics.",
+    "Does not show all L05 omissions have been found.",
+    "Does not invalidate the independent correctness of previous L127 SI namespace repair.",
+    "No named group/Clifford/exponential semantics is treated as qualified by name.",
+    "No W/cross-track premise or third-party verification claim.",
+    "The source is the authority for its written equations, but source mathematics is not deemed independently verified.",
+    "This additional defect inventory is not an independent full six-paper source census certificate."
+  ],
+  "predecessor": {
+    "path": "experiments/062/L_G0_L05_SOURCE_CENSUS_OMISSION_DEFECT_0_2.json",
+    "git_blob_sha": "9701509995bac11ec1f09e378abe2445d20d607c",
+    "defect": "D1/D6 used INVERSE for source U^- and (u gamma)^- without independent operator identification"
+  },
+  "section3_inventory": {
+    "path": "experiments/062/L_G0_L05_SECTION3_SOURCE_ASSERTION_REOPEN_AUDIT_0_2.json",
+    "git_blob_sha": "e466e52c1e0dd1ca74f23dff24aae62ed716a7ca"
+  },
+  "more_source_fidelity_review_needed": [
+    "Check L05 Eq.(8) full Clifford coefficient mappings and source parameter-binder incidence in future source graph.",
+    "Check precise scope of Pin comment before using any named group.",
+    "Check L05 §3 source T=1 inverse denominators under split families; do not conflate source assertion with universal source consistency.",
+    "Investigate source omission risks elsewhere in L01–L06 before claiming full corpus fixed point."
+  ],
+  "additional_correction": {
+    "earliest_stage": "G0 source statement term polarity/operator identity",
+    "source_literal_operator": "superscript minus on U and u gamma",
+    "forbidden_normalizations": [
+      "INVERSE",
+      "HERMITE_ADJOINT",
+      "CLIFFORD_REVERSION",
+      "NEGATION"
+    ],
+    "reason": "No independent qualified source identity was supplied; operator treatment is open pending source definition or lawful derivation."
+  }
+}
