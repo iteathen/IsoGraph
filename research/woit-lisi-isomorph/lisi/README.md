@@ -4,6 +4,7 @@
 **Current status:** ACTIVE — source-fidelity correctness reopening at G0; historical G5 boundary superseded for complete-source claims; primitive closure incomplete
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
 **Cross-author semantics available:** NO
+**L-only public-explanation leads:** [2026-10-08 author-source search notes](AUTHOR_PUBLIC_EXPLANATIONS_NOTES_2026-10-08.md) — external authored commentary, version history, historical notebook and replies to independently verify; not an amendment to the frozen L source, primitive authority, or a W–L hypothesis. No outreach before complete G7, three/four independent adversarial passes, and question-specific exhaustive prior-public search.
 
 ## Objective
 
