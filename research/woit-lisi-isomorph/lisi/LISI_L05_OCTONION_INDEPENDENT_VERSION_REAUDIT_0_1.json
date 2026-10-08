@@ -1,0 +1,330 @@
+{
+  "schema": "isograph.lisi-l05-octonion-independent-version-adversarial-review.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "INDEPENDENT_PRIMARY_VISUAL_AND_FINITE_RECONSTRUCTION_REVIEW_CANDIDATE_NOT_SEMANTIC_AUTHORITY",
+  "authority": false,
+  "author_intent_known": false,
+  "official_journal_erratum_located": false,
+  "full_paper_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source_revision_facts": {
+    "frozen": {
+      "citation": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic, Advances in Applied Clifford Algebras 36, article 45",
+      "date": "2026-08-29",
+      "doi": "10.1007/s00006-026-01447-5",
+      "pdf": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+      "pdf_page_zero_based": 3,
+      "printed_page": "Page 4 of 51",
+      "eq": "(1)",
+      "visual_audit": "Springer native article image and PDF page 4 both show ordinary-O row e6 col e7 = -e2 AND row e7 col e6 = -e2."
+    },
+    "previous_preprint": {
+      "identity": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic, viXra 2504.0179v1",
+      "pdf": "https://rxiv.org/pdf/2504.0179v1.pdf",
+      "published_or_archived": "2025-04",
+      "page_pdf_zero_based": 2,
+      "printed_equation": "(2.1)",
+      "row_e6_col_e7": "-e2",
+      "row_e7_col_e6": "-e2",
+      "interpretation": "Earlier 2025 publicly archived manuscript also displays duplicated negative cells; cannot attribute discrepancy solely to Springer typesetting."
+    },
+    "later_arxiv": {
+      "identity": "arXiv:2609.12112v1 by A. Garrett Lisi",
+      "posted": "2026-09-10",
+      "source": "https://arxiv.org/abs/2609.12112v1",
+      "rendered_html": "https://arxiv.org/html/2609.12112v1",
+      "table_expression": "(2.1)",
+      "row_e6_col_e7": "e2",
+      "row_e7_col_e6": "-e2",
+      "table_64_cell_discrepancies_relative_to_journal": 1,
+      "claim": "One cell difference within printed ordinary-O 8x8 basis table. No assertion that entire documents are equal or publisher filed a formal correction."
+    }
+  },
+  "primary_source_semantics": {
+    "ordered_multiplication": "e_a e_b = M_ab^c e_c; row a times column b, with e0 identity in both first row and column.",
+    "conjugation": "tilde(e0)=e0; tilde(e_i)=-e_i for i=1...7.",
+    "antiinvolution": "tilde(e_a e_b) = tilde(e_b) tilde(e_a) on source basis.",
+    "metric": "(e_a,e_b)=(tilde(e_a)e_b+tilde(e_b)e_a)/2=n_ab, ordinary division algebra n_ab=delta_ab.",
+    "Clifford": "Eq(2) gamma_c=[[0,-barGamma_c],[Gamma_c,0]] choosing source sign minus; (Gamma_c)^b_a=M_ca^(tilde b); direct (barGamma_c)^a_b=M_(tilde c)(tilde b)^a; separate source claim barGamma_c=(Gamma_c)^T for ordinary n_cc=+1. Eq(3) {gamma_a,gamma_b}=-2 delta_ab I_16.",
+    "Eq4_four_M": "The four separately printed M-coefficient cyclic forms with all free indices a,b,c, ordinary metric delta, tested; other four lowered Gamma terms and all split metrics remain untested.",
+    "Eq5_source_bivector": "Upper U_cd=barGamma_c Gamma_d and lower V_cd=Gamma_c barGamma_d for c<d as source-written ordered operators; composition right-factor acts first. These may be inconsistent as literal published-source matrices.",
+    "nonassociativity": "No parenthesis reassociation used in any fundamental two-factor contradiction. Bivector matrix tests use associative 8x8 operator matrices as the author prescribes, not a false claim that octonions themselves associate."
+  },
+  "manually_transcribed_primary_tables": {
+    "journal_O_rows": [
+      "e0 e1 e2 e3 e4 e5 e6 e7",
+      "e1 -e0 e4 e7 -e2 e6 -e5 -e3",
+      "e2 -e4 -e0 e5 e1 -e3 e7 -e6",
+      "e3 -e7 -e5 -e0 e6 e2 -e4 e1",
+      "e4 e2 -e1 -e6 -e0 e7 e3 -e5",
+      "e5 -e6 e3 -e2 -e7 -e0 e1 e4",
+      "e6 e5 -e7 e4 -e3 -e1 -e0 -e2",
+      "e7 e3 e6 -e1 e5 -e4 -e2 -e0"
+    ],
+    "arxiv_v1_O_rows": [
+      "e0 e1 e2 e3 e4 e5 e6 e7",
+      "e1 -e0 e4 e7 -e2 e6 -e5 -e3",
+      "e2 -e4 -e0 e5 e1 -e3 e7 -e6",
+      "e3 -e7 -e5 -e0 e6 e2 -e4 e1",
+      "e4 e2 -e1 -e6 -e0 e7 e3 -e5",
+      "e5 -e6 e3 -e2 -e7 -e0 e1 e4",
+      "e6 e5 -e7 e4 -e3 -e1 -e0 e2",
+      "e7 e3 e6 -e1 e5 -e4 -e2 -e0"
+    ],
+    "table_axis0": "left factor e_a",
+    "table_axis1": "right factor e_b",
+    "signed_entries": 64,
+    "note": "Two independent published/archived source surfaces visually consulted. Journal table literal remains authority for frozen L05; arXiv table is an external-version diagnostic, not an adopted correction."
+  },
+  "independent_findings": {
+    "single_table_pair": {
+      "journal_e6e7": "-e2",
+      "journal_e7e6": "-e2",
+      "imaginary_e6_e7_anticommutator": "-2 e2, not zero"
+    },
+    "conjugation_reversal": {
+      "basis_ordered_cases": 64,
+      "journal_failed_ordered_pairs": [
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "revised_failed": 0,
+      "manual_proof": "tilde(e6e7)=tilde(-e2)=+e2, but tilde(e7)tilde(e6)=(-e7)(-e6)=e7e6=-e2."
+    },
+    "metric": {
+      "basis_ordered_cases": 64,
+      "journal_failed_ordered_pairs": [
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "journal_metric_67": "e2",
+      "source_delta_67": "0",
+      "revised_failed": 0
+    },
+    "zero_divisor": {
+      "x": "e0-e6",
+      "y": "e2-e7",
+      "source_product": "0",
+      "source_norm_x": "2",
+      "source_norm_y": "2",
+      "revised_source_product": "2 e2",
+      "status": "Independent finite witness that the literal journal table cannot define the asserted real division algebra; no associativity assumptions."
+    },
+    "two_barGamma_definitions": {
+      "journal_mismatch_entries": [
+        {
+          "c": 6,
+          "row": 2,
+          "col": 7,
+          "directM": -1,
+          "transpose": 1
+        },
+        {
+          "c": 6,
+          "row": 7,
+          "col": 2,
+          "directM": -1,
+          "transpose": 1
+        }
+      ],
+      "later_revision_mismatches": 0
+    },
+    "Eq3_Clifford_directM": {
+      "journal_unordered_generator_pairs_tested": 36,
+      "journal_failed_pairs": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "journal_failed_entries": 28,
+      "later_revision_failed_pairs": 0,
+      "later_revision_failed_entries": 0
+    },
+    "Eq3_Clifford_transpose": {
+      "journal_unordered_generator_pairs_tested": 36,
+      "journal_failed_pairs": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "journal_failed_entries": 28,
+      "later_revision_failed_pairs": 0,
+      "later_revision_failed_entries": 0
+    },
+    "Eq4_four_M": {
+      "journal_free_index_triples_tested": 512,
+      "journal_failed_triples": [
+        {
+          "a": 2,
+          "b": 7,
+          "c": 6,
+          "source_member_values": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        {
+          "a": 6,
+          "b": 2,
+          "c": 7,
+          "source_member_values": [
+            1,
+            1,
+            -1,
+            1
+          ]
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "c": 2,
+          "source_member_values": [
+            -1,
+            1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "a": 7,
+          "b": 2,
+          "c": 6,
+          "source_member_values": [
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ],
+      "later_revision_failed_triples": 0,
+      "untested_four_Gamma_members": true,
+      "untested_split_metric": true
+    },
+    "Eq5_bivector_scope": {
+      "source_generator_pairs_c_lt_d": 28,
+      "commutator_pairs": 378,
+      "basis_rank_over_two_primes": 28,
+      "primes": [
+        1009,
+        10007
+      ],
+      "journal_outside_span_commutators": 168,
+      "journal_Euclidean_nonskew_upper_bivectors": 7,
+      "variants": [
+        "direct-M upper",
+        "direct-M lower",
+        "transpose upper",
+        "transpose lower"
+      ],
+      "later_revision_outside_span_commutators": 0,
+      "qualifier": "These are defects in the matrices constructed by this literal table, not a theorem that canonical so(8) or intended f4 is mathematically invalid."
+    }
+  },
+  "logical_disposition": {
+    "source_table_internally_inconsistent": true,
+    "strongest_source_internal_proofs": [
+      "Conjugation-reversal contradicts journal table.",
+      "Metric n_67 defined both as delta_67=0 and as octonion vector e2.",
+      "Two nonzero journal algebra elements multiply to zero."
+    ],
+    "earlier_L_claims_independently_reproduced": true,
+    "publication_error_hypothesis": "SUPPORTED_POSSIBLE_NOT_PROVEN_CAUSE",
+    "publisher_only_typesetting_error_claim": "NOT_SUPPORTED_BY_2025_PREPRINT",
+    "author_intent_or_erratum": "UNRESOLVED; arxiv later changed sign but that is not a formal journal erratum in reviewed evidence",
+    "intended_corrected_table_full_f4_theorem": "NOT_QUALIFIED",
+    "current_L_stage": "G0_OPEN_UNFROZEN",
+    "source_not_changed": true,
+    "PR_merge_authorized": false,
+    "cross_track_source_authority": false
+  },
+  "repository_source_inputs": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    {
+      "path": "experiments/062/L126_L05_EQ2_EQ3_OCTONION_CLIFFORD_SOURCE_CONTRADICTION_0_1.json",
+      "git_blob_sha": "61d5afddc7c406b03c2f61c4abe7e0dbdc448e66"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json",
+      "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+    },
+    {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_17.json",
+      "git_blob_sha": "14a8c8c0dcd72fff94476ea543699b52563bac27"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_16.json",
+      "git_blob_sha": "9418c4f8f0e91aef8f352b9fa762a5d7c9088360"
+    }
+  ]
+}
