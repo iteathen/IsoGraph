@@ -1,0 +1,133 @@
+{
+  "schema": "isograph.exp062-l127-metric-skew-lie-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "METRIC_SKEW_ENDOMORPHISM_LIE_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L127_G5H_METRIC_SKEW_ENDOMORPHISM_LIE_0_1.json",
+    "git_blob_sha": "ea0ef8c48b64efa49926a50344906fe9ae538f0c"
+  },
+  "scope": {
+    "obligation_count": 16,
+    "selected_relation_ids": [
+      184004,
+      227000
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "MSL-SSC-001",
+      "kind": "LIE_VECTOR_PARENT",
+      "body": "184004 requires exact vector support on L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-002",
+      "kind": "LIE_BRACKET_BILINEAR",
+      "body": "184004 requires exact bilinear vector-valued bracket support.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-003",
+      "kind": "LIE_ANTISYMMETRY",
+      "body": "184004 requires [y,x]=-[x,y].",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-004",
+      "kind": "LIE_JACOBI",
+      "body": "184004 requires the Jacobi sum to equal zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-005",
+      "kind": "METRIC_PARENT",
+      "body": "227000 requires exact symmetric nondegenerate B/Q support on V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-006",
+      "kind": "LIE_PARENT",
+      "body": "227000 requires exact 184004 on L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-007",
+      "kind": "ACTION_PARENT",
+      "body": "227000 requires exact typed bilinear action L×V->V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-008",
+      "kind": "METRIC_SKEW",
+      "body": "Every represented operator a satisfies B(a·x,y)+B(x,a·y)=0.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-009",
+      "kind": "FAITHFUL_ACTION",
+      "body": "If two represented operators act equally on all admitted vectors, they are equal in L.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-010",
+      "kind": "LINEAR_ENDOMORPHISM_COVERAGE",
+      "body": "Every linear endomorphism F satisfying the metric-skew equation is represented by some a in L with identical action.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-011",
+      "kind": "BRACKET_MEMBER",
+      "body": "Bracket outputs remain in L through the 184004 parent.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-012",
+      "kind": "COMMUTATOR_ACTION",
+      "body": "The represented bracket acts as a∘b - b∘a on every admitted vector.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-013",
+      "kind": "NO_DIMENSION_CLAIM",
+      "body": "227000 does not fix dimension.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-014",
+      "kind": "NO_NAMED_LIE_CLASSIFICATION",
+      "body": "No so(n) name/classification is implied.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-015",
+      "kind": "NO_GROUP_INTEGRATION",
+      "body": "No orthogonal/Spin/Pin group integration or exponential claim is included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "MSL-SSC-016",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No octonion-specific, irreducibility, W, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "zero Lie bracket",
+      "complete F3^2 metric-skew model"
+    ],
+    "adversarial": [
+      "symmetric bracket",
+      "Jacobi-violating antisymmetric bracket",
+      "non-skew action",
+      "nonfaithful action",
+      "wrong commutator bracket"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}
