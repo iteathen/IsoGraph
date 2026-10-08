@@ -37,7 +37,7 @@ function enumerate(t){
 function sourceVerifier(pkt=packet,t=source){
  const errors=[],ck=(b,m)=>{if(!b)errors.push(m)},s=pkt.source_exact_Eq4||{},ev=pkt.finite_evidence||{},guards=pkt.negative_scope_guards||{};
  ck(pkt.schema==='isograph.lisi-l05-eq4-cyclic-source-ordinary-g0.v0.1'&&pkt.track==='L'&&pkt.stage==='G0'&&pkt.authority===false&&pkt.G1_authorized===false,'L source G0 research only');
- ck(pkt.source?.id==='L05'&&pkt.source?.printed_page===4&&pkt.source?.pdf_zero_based_page===3&&pkt.source?.section==='§2 Eq.(4)','frozen source exact section/equation');
+ ck(pkt.source?.id==='L05'&&pkt.source?.frozen_published==='2026-08-29 journal version of record'&&pkt.source?.doi==='10.1007/s00006-026-01447-5'&&pkt.source?.url==='https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf'&&pkt.source?.printed_page===4&&pkt.source?.pdf_zero_based_page===3&&pkt.source?.section==='§2 Eq.(4)','frozen source exact version/section/equation');
  ck(pkt.source_census_frozen===false&&pkt.source_complete===false&&pkt.external_cold_review_passed===false,'no external/source qualification');
  for(const [name,sourcePath]of [['ordinary_tables',paths.table],['ssc_014',paths.ssc],['gate_015',paths.gate],['Eq2_Eq3_defect',paths.eq2]])
   ck(pkt.upstream?.[name]?.path===sourcePath&&pkt.upstream?.[name]?.git_blob_sha===sha(sourcePath),'exact source pin '+name);
