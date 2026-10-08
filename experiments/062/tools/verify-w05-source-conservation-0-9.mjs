@@ -27,7 +27,7 @@ const patterns={
   103:['H^n(M,C)','F^p','conjugate(F^(n-p+1))','O_(P1_tw)(w/2)','rank two for odd','rank one for even','lambda=1/z','E1=V tensor_R','U(1)'],
   104:['M=H^1(X,GL(n,C))','set, not a vector space','higher-degree','lambda=1','lambda=0'],
   105:['|x|_p=p^(-a)','ij=-ji=k','i^2=a','j^2=b','H=(-1,-1/R)','M(2,C)','(p,u/Qp)','+1 exactly','-1 otherwise'],
-  106:['-a x^2-b y^2+ab z^2=0','(a,b)_F=+1','-1','-p x^2-u y^2+up z^2=0','Gal(K/Qp)=Z/2Z','without fixed points'],
+  106:['-a x^2-b y^2+ab z^2=0','(a,b)_F=+1','-1','-p x^2-u y^2+up z^2=0','no Qp points','with no fixed points','Gal(K/Qp)=Z/2Z','without fixed points'],
   107:['A~B','[A][B]=[A tensor B]','Br(R)=Z/2Z','Br(Qp)=Q/Z','H^1(Gal(Fbar/F),PGL2(Fbar))','I^2/I^3','SBr(R)=Z/8Z','even r+s=2n','odd r+s=2n+1'],
   108:['[Q,P]=i1','W_(a,b)=(F directsum F*) tensor V','product_over_all_primes (a,b)_p=1','adelic','Howe-duality','Sp(U) x O(V)'],
   109:['[W05-T01]','[W05-T02]','[W05-T03]','[W05-T04]','[W05-T05]','[W05-T06]','[W05-T07]','[W05-T08]','[W05-T09]','[W05-T10]','[W05-T11]','analogy','does not claim expertise']
