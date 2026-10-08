@@ -17,7 +17,7 @@ function scan(t){
  const n=t.dimension,one=i=>Array.from({length:n},(_,k)=>+(k===i)),tilde=x=>x.map((v,i)=>i? -v:v);
  function mul(x,y){
   const z=Array(n).fill(0);
-  for(let i=0;i<n;i++)for(let k=0;k<n;k++)for(let m=0;m<n;m++){
+  for(let k=0;k<n;k++)for(let m=0;m<n;m++){
    const entry=t.entries[k][m];
    if(!/^-?e[0-7]$/.test(entry))throw Error('invalid source cell '+entry);
    const col=Number(entry.replace(/^-?e/,''));
