@@ -1,0 +1,100 @@
+{
+  "schema": "isograph.exp062-l128-section2-coefficient-identification-source-census-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_FROZEN_L05_SECTION2_EXPLICIT_SOURCE_FORMULAS_COMPRESSED_IN_L128_G0",
+  "track": "L",
+  "authority": false,
+  "authority_effect": "G0_SOURCE_FIDELITY_REOPEN_CURRENT_L_STAGE_HALT_CONTINUES",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "frozen_source": {
+    "id": "L05",
+    "article": "Division Algebras, Triality, and Exceptional Magic",
+    "version_of_record": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "pdf": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "locator": "§2, printed page 6 of 51; typed triplet coefficient carriers; immediately before §3 Eq.(6)",
+    "frozen_revision_unchanged": true
+  },
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_4.json",
+    "git_blob_sha": "a55dceaace0f5a6280b83c578d19abc885bd0d93",
+    "item": "L-SSC-128",
+    "current_body": "L05 identifies vector, negative-chiral spinor, and positive-chiral spinor coefficient carriers with three division-algebra carriers and preserves the tilde/conjugation convention on the positive-spinor representative."
+  },
+  "source_visible_omissions": [
+    {
+      "id": "L128-S01",
+      "source": "v=v^c e_c ~ v=v^c gamma_c",
+      "modality": "TYPED_REPRESENTATION_CORRESPONDENCE",
+      "roles": [
+        "division-vector",
+        "Clifford-vector"
+      ]
+    },
+    {
+      "id": "L128-S02",
+      "source": "psi=psi^a e_a ~ psi=psi^a Q^-_a",
+      "modality": "TYPED_REPRESENTATION_CORRESPONDENCE",
+      "roles": [
+        "division-negative-spinor",
+        "Clifford-negative-spinor"
+      ]
+    },
+    {
+      "id": "L128-S03",
+      "source": "tilde(chi)=chi^b tilde(e_b) ~ chi=chi^b Q+_b",
+      "modality": "TYPED_REPRESENTATION_CORRESPONDENCE",
+      "roles": [
+        "division-conjugated-positive",
+        "Clifford-positive-spinor"
+      ]
+    },
+    {
+      "id": "L128-S04",
+      "source": "tilde(chi)=v psi ~ chi=v psi",
+      "modality": "TYPED_REPRESENTATION_CORRESPONDENCE",
+      "roles": [
+        "division-algebra-product",
+        "Clifford-multiplication"
+      ]
+    },
+    {
+      "id": "L128-S05",
+      "source": "chi^b e_(tilde b)=tilde(chi)=v psi = v^c psi^a M_ca^(tilde b) e_(tilde b)",
+      "modality": "SOURCE_EQUALITY_CHAIN_WITH_ORDERED_PRODUCT",
+      "roles": [
+        "v^c",
+        "psi^a",
+        "M_ca^(tilde b)",
+        "e_(tilde b)"
+      ]
+    },
+    {
+      "id": "L128-S06",
+      "source": "chi^b = v^c psi^a (Gamma_c)^b_a; (Gamma_c)^b_a=M_ca^(tilde b)",
+      "modality": "TYPED_COEFFICIENT_REPRESENTATION_CORRESPONDENCE",
+      "roles": [
+        "coefficient identity",
+        "matrix incidence"
+      ]
+    }
+  ],
+  "finding": "The 0.4 SSC L128 body only describes a typed carrier identification and conjugation convention, but cannot reconstruct the six source-written equations and representation correspondence structure. This is not solved by their appearance in non-authoritative native .isg historical renderings.",
+  "scope": {
+    "additional_modified_census_item": "L-SSC-128",
+    "previous_L05_corrected_items": [
+      "L-SSC-129",
+      "L-SSC-130",
+      "L-SSC-131",
+      "L-SSC-132"
+    ],
+    "new_source": false,
+    "L_only": true
+  },
+  "guards": [
+    "Source tilde and chirality are typed; no physical ontology imported.",
+    "The source '~' is a representation correspondence, not a first-order approximation.",
+    "Nonassociative multiplication grouping and index position must remain intact.",
+    "No W semantics or source-native citation contents used."
+  ],
+  "action": "Source SSC 0.5 candidate must conserve all 191 old items, include L128 equations in their own scope and source-formula ledger, preserve the four corrected L129–L132 bodies, then rerun G0 before any G1."
+}
