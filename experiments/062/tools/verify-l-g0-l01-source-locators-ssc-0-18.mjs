@@ -36,7 +36,7 @@ function check(x=n){
  ok(guard.L01_visually_checked_all_31_pdf_pages===true&&guard.L01_eight_source_equation_provenances_corrected===true&&guard.L01_30_SI_identities_preserved===undefined,'scope guard limited to actual 31-page source visual audit');
  ok(guard.L01_all_source_formula_bindings_fully_qualified===false&&guard.L01_source_30_obligation_completeness_proved===false&&guard.L01_7_additional_source_formula_gaps_remain_open===true,'no fake L01 source semantic completeness');
  for(const key of ['source_census_freeze_complete','whole_L_source_cold_audit_complete','L_G1_source_reextraction_complete','recursive_IA_authorized'])ok(guard[key]===false,'G0/IA only '+key);
- ok(D.source?.revision==='arXiv:0711.0770v1, 2007-11-06'&&D.confirmed_locator_corrections?.length===8,'exact 2007 primary-source v1 and 8 identified defects');
+ ok(D.primary_source?.revision==='arXiv:0711.0770v1, 2007-11-06'&&D.confirmed_locator_corrections?.length===8,'exact 2007 primary-source v1 and 8 identified defects');
  ok(A.page_ledger?.length===31&&A.page_ledger.every((y,i)=>y.pdf_page_index===i&&y.visual_read===true&&y.complete_formula_AST_reconstructed===false&&y.source_semantic_closure===false),'ALL 31 source page review coverage, no AST theorem completion');
  ok(A.L01_related_source_items?.length===30&&A.coverage_count?.complete_source_item_cold_reconstructions===0&&A.seven_additional_source_granularity_obligations?.length===7,'all thirty L01 items looked at with explicit seven AST gaps');
  ok(J(D.confirmed_locator_corrections.map(y=>[y.id,y.source_old_locator,y.source_exact_printed_locator,y.pdf_zero_based_page]))===J(literal),'independent hardcoded 8 source Eq labels/pages, not self-referential anticipated answer');
