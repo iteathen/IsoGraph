@@ -1,0 +1,538 @@
+{
+  "schema": "isograph.exp062-l131-g1-source-incidence.v0.3",
+  "date": "2026-10-08",
+  "status": "L131_G1_EXPLICIT_ROTATION_PAIR_SOURCE_REPLAY_CANDIDATE_NOT_CLOSED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "be2f794d10c56e2cefc59e82c5c1d94755f760a2",
+  "audit": {
+    "path": "experiments/062/L131_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_4.json",
+    "git_blob_sha": "83dc1bfab381cd3e84efb11f656658e00d9fc16d"
+  },
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_TRIALITY_TUW_0_2.isg",
+      "git_blob_sha": "86798d08ba4ce5098736645ffa5489a9c14fbf10"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_REFLECTION_COMPOSITION_ROLE_CLASSIFICATION_0_1.isg",
+      "git_blob_sha": "e9d0cb3f78f3bd06ffdf42e668d10cf5f8806234"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/L131_GENERALIZED_TRIALITY_TUW_FALSIFIER_0_1.json",
+      "git_blob_sha": "93d92d056b28d8772edbd4fcd194014616998fbb"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/L131_REFLECTION_ROLE_COMPOSITION_FALSIFIER_0_1.json",
+      "git_blob_sha": "45704efc1c0242f6bd32e8477751aa75fc76a988"
+    }
+  ],
+  "source_provenance": "L05 §3 eq. (9) and source reflection-role classification",
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-131-R01",
+      "source_reversible_reference": "L05 §3 eq. (9) phase branch",
+      "source_span": "s_u s_w=+1 -> phase=1; s_u s_w=-1 -> phase=i",
+      "relation_span": "triality phase branch",
+      "argument_spans": [
+        "unit u",
+        "unit w",
+        "s_u",
+        "s_w",
+        "phase"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Finite source branch for the coefficient multiplying the first two output roles.",
+      "formula_ast": {
+        "op": "PHASE_BRANCH",
+        "args": [
+          "s_u",
+          "s_w",
+          "phase"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R02",
+      "source_reversible_reference": "L05 §3 eq. (9)",
+      "source_span": "t^(uw)(v,psi,chi)=(sqrt(s_us_w) KAPPA(w)(u psi), sqrt(s_us_w)(chi u)KAPPA(w), s_us_w w(KAPPA(u)vKAPPA(u))w)",
+      "relation_span": "explicit generalized triality map",
+      "argument_spans": [
+        "u",
+        "w",
+        "v",
+        "psi",
+        "chi",
+        "Vout",
+        "Mout",
+        "Pout"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R01"
+      ],
+      "load_bearing_note": "Preserves ordered products and typed outputs; no named triality primitive.",
+      "formula_ast": {
+        "op": "T_UW_MAP",
+        "args": [
+          "u",
+          "w",
+          "v",
+          "psi",
+          "chi",
+          "phase"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R03",
+      "source_reversible_reference": "L05 §3 eq. (9) invariance",
+      "source_span": "T(t^(uw)(v,psi,chi))=T(v,psi,chi)",
+      "relation_span": "triality-form invariance",
+      "argument_spans": [
+        "t^(uw)",
+        "typed T",
+        "input triple",
+        "output triple"
+      ],
+      "logical_force": "EQUALITY_OR_IDENTIFICATION",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R02"
+      ],
+      "load_bearing_note": "Source invariant scalar statement on the reconstructed map.",
+      "formula_ast": {
+        "op": "EQUALITY",
+        "args": [
+          "T(T_UW(input))",
+          "T(input)"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R04",
+      "source_reversible_reference": "L05 §3 canonical u=w=1 case",
+      "source_span": "u=w=1 gives (v,psi,chi)->(psi,chi,v)",
+      "relation_span": "canonical typed cycle",
+      "argument_spans": [
+        "u=1",
+        "w=1",
+        "input triple",
+        "typed cyclic output"
+      ],
+      "logical_force": "CONDITIONAL",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R02"
+      ],
+      "load_bearing_note": "Compares the explicit equation-(9) map to the already source-defined typed L129 cycle.",
+      "formula_ast": {
+        "op": "CANONICAL_CASE_EQUALITY",
+        "args": [
+          "u=1",
+          "w=1",
+          "T_UW",
+          "typed cycle"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R05",
+      "source_reversible_reference": "L05 reflection-role classification",
+      "source_span": "R_v, R_m, R_p act on V,Q_minus,Q_plus as three explicit transpositions",
+      "relation_span": "odd-reflection role permutation table",
+      "argument_spans": [
+        "reflection type",
+        "input role",
+        "output role"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Finite role incidence only; no reflection-name semantics.",
+      "formula_ast": {
+        "op": "FINITE_ROLE_PERMUTATION",
+        "args": [
+          "type",
+          "role_in",
+          "role_out"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R06",
+      "source_reversible_reference": "L05 two-reflection role composition",
+      "source_span": "role output of reflection 2 after reflection 1 is defined through an explicit intermediate role",
+      "relation_span": "two-reflection role composition",
+      "argument_spans": [
+        "type1",
+        "type2",
+        "input role",
+        "mid role",
+        "output role"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R05"
+      ],
+      "load_bearing_note": "Ordinary relational composition over finite role incidence.",
+      "formula_ast": {
+        "op": "RELATIONAL_COMPOSITION",
+        "args": [
+          "R1",
+          "R2",
+          "role"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R07",
+      "source_reversible_reference": "L05 same-type classification",
+      "source_span": "same reflection type -> composed role map is identity",
+      "relation_span": "same-type identity role class",
+      "argument_spans": [
+        "type1",
+        "type2",
+        "composed role map"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R06"
+      ],
+      "load_bearing_note": "Structural content of the source rotation label.",
+      "formula_ast": {
+        "op": "FOR_ALL_ROLE_IDENTITY",
+        "args": [
+          "type1=type2",
+          "composition"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R08",
+      "source_reversible_reference": "L05 different-type classification",
+      "source_span": "different reflection types -> composed role map has no fixed role and has order three",
+      "relation_span": "different-type order-three role class",
+      "argument_spans": [
+        "type1",
+        "type2",
+        "composed role map",
+        "three-step return"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R06"
+      ],
+      "load_bearing_note": "Structural content of the source non-rotation triality-element label.",
+      "formula_ast": {
+        "op": "FIXED_POINT_FREE_ORDER_THREE",
+        "args": [
+          "type1!=type2",
+          "composition"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R09",
+      "source_reversible_reference": "L05 eq. (9) reflection sequence",
+      "source_span": "R_p R_v R_m R_p maps V->Q_plus, Q_minus->V, Q_plus->Q_minus",
+      "relation_span": "four-reflection role cycle",
+      "argument_spans": [
+        "four reflection types",
+        "V",
+        "Q_minus",
+        "Q_plus",
+        "cycled outputs"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-131-R05"
+      ],
+      "load_bearing_note": "Finite source role-composition check for the canonical equation-(9) sequence.",
+      "formula_ast": {
+        "op": "FOUR_STEP_ROLE_COMPOSITION",
+        "args": [
+          "Rp",
+          "Rv",
+          "Rm",
+          "Rp",
+          "roles"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R10",
+      "source_reversible_reference": "L131 project falsifiers",
+      "source_span": "C,Cprime,H,Hprime,Oprime have zero equation-(9) invariance/canonical failures; ordinary O has 500 invariance failures and zero canonical failures; role composition controls have zero failures",
+      "relation_span": "source inconsistency/control guard",
+      "argument_spans": [
+        "six coefficient families",
+        "equation-(9) invariance failures",
+        "canonical failures",
+        "role classification failures"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_PROJECT_EVIDENCE",
+      "depends_on": [
+        "L-SSC-131-R03",
+        "L-SSC-131-R04",
+        "L-SSC-131-R07",
+        "L-SSC-131-R08",
+        "L-SSC-131-R09"
+      ],
+      "load_bearing_note": "Negative evidence preserved; ordinary-O is not repaired.",
+      "raw_failure_signature": {
+        "ordinary_O_invariance": 500,
+        "ordinary_O_canonical": 0,
+        "same_type_identity_failures": 0,
+        "different_type_order3_failures": 0
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R11",
+      "source_reversible_reference": "L05 §3 after Eq. (9), displayed four-part factorization",
+      "source_span": "t^(uw) = R_p^w R_v^u R_m^tilde(u) R_p^tilde(u) = R_p^w R_p^u t = R_p^(uw) t = t R_v^(uw)",
+      "relation_span": "operator-composition equality to canonical role-cycle and same-type rotation",
+      "argument_spans": [
+        "u",
+        "w",
+        "tilde(u)",
+        "R_p^w",
+        "R_v^u",
+        "R_m^tilde(u)",
+        "R_p^tilde(u)",
+        "R_p^u",
+        "canonical t",
+        "R_p^(uw)",
+        "R_v^(uw)",
+        "t^(uw)",
+        "ordered transformation composition equality"
+      ],
+      "logical_force": "ASSERTED_EQUALITY_CHAIN",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-131-R02",
+        "L-SSC-131-R04",
+        "L-SSC-131-R06",
+        "L-SSC-131-R07",
+        "L-SSC-131-R09",
+        "L-SSC-131-R13"
+      ],
+      "load_bearing_note": "Equality of actual typed transformation operations is stronger than the role permutation cycle. Cannot reconstruct merely by R07/R09 and matching types; do not infer nonassociative operator equivalence from names.",
+      "formula_ast": {
+        "op": "SOURCE_TUW_FOUR_REFLECTION_FACTOR_CHAIN",
+        "args": [
+          "u",
+          "w",
+          "tilde(u)",
+          "R_p^w",
+          "R_v^u",
+          "R_m^tilde(u)",
+          "R_p^tilde(u)",
+          "R_p^u",
+          "t",
+          "R_p^(uw)",
+          "R_v^(uw)",
+          "t^(uw)"
+        ]
+      },
+      "exact_source_expression": {
+        "anchor": "L05 §3 immediately after equation (9) canonical t",
+        "assertions": [
+          [
+            "EQUAL",
+            "t^(uw)",
+            [
+              "COMPOSE_ORDERED",
+              "R_p^w",
+              "R_v^u",
+              "R_m^tilde(u)",
+              "R_p^tilde(u)"
+            ]
+          ],
+          [
+            "EQUAL",
+            "t^(uw)",
+            [
+              "COMPOSE_ORDERED",
+              "R_p^w",
+              "R_p^u",
+              "t"
+            ]
+          ],
+          [
+            "EQUAL",
+            "t^(uw)",
+            [
+              "COMPOSE_ORDERED",
+              "R_p^(uw)",
+              "t"
+            ]
+          ],
+          [
+            "EQUAL",
+            "t^(uw)",
+            [
+              "COMPOSE_ORDERED",
+              "t",
+              "R_v^(uw)"
+            ]
+          ]
+        ],
+        "scope": "Same u,w in all terms, fixed source order. Core equality may be used only once both sides are typed and constructible. Not equal merely because role permutations agree."
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R12",
+      "source_reversible_reference": "L05 §3 sentence before displayed t^(uw) factorization, after canonical t",
+      "source_span": "Even numbers of generalized reflections—elements of the triality group—can be factored into canonical triality automorphisms and rotations; the t^(uw) equation is the displayed source example.",
+      "relation_span": "source even-composition family factorization",
+      "argument_spans": [
+        "even-length sequence of generalized reflections",
+        "source role-alternation and types",
+        "composed transformation",
+        "canonical triality factors",
+        "rotation factors",
+        "existence of ordered factorization",
+        "scope of group membership claim"
+      ],
+      "logical_force": "SOURCE_GENERAL_FACTOR_EXISTENCE_ASSERTION",
+      "definition_status": "UNEXPANDED_SOURCE_FAMILY_SEMANTICS",
+      "depends_on": [
+        "L-SSC-131-R06",
+        "L-SSC-131-R07",
+        "L-SSC-131-R08",
+        "L-SSC-131-R11"
+      ],
+      "load_bearing_note": "The source family statement is more general than the displayed u/w equality example; no unqualified normal-form theorem or group-word rewrite operator may be imported.",
+      "formula_ast": {
+        "op": "SOURCE_EVEN_REFLECTION_WORD_FACTORIZATION",
+        "args": [
+          "evenSequence",
+          "composition",
+          "canonicalTriality",
+          "rotation",
+          "factorizationWitness"
+        ]
+      },
+      "exact_source_expression": {
+        "anchor": "L05 §3 text immediately before t^(uw) factorization; no explicit arbitrary-sequence normal form supplied",
+        "assertions": [
+          [
+            "SOURCE_GENERAL_EXISTENCE",
+            "for each source even-reflection composition",
+            [
+              "FACTOR_IN",
+              "canonical triality automorphisms",
+              "ordinary rotations"
+            ]
+          ],
+          [
+            "EXAMPLE_WITNESS",
+            "t^(uw)",
+            "L-SSC-131-R11"
+          ]
+        ],
+        "scope": "Qualify as source assertion with unspecified general normalization algorithm; cannot claim theorem proven or that arbitrary words have explicit bound/form without new lower semantics."
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-131-R13",
+      "source_reversible_reference": "L05 §3 first sentence after displayed t^(uw) source-factorization chain",
+      "source_span": "A simple rotation, R_v^(uw) = R_v^w R_v^u, is two source reflections through vector elements u and w, acting on V, Q_minus and Q_plus.",
+      "relation_span": "explicit ordered two-reflection simple-rotation definition",
+      "argument_spans": [
+        "u",
+        "w",
+        "R_v^w",
+        "R_v^u",
+        "R_v^(uw)",
+        "typed vector carrier V",
+        "typed negative-chiral carrier Q_minus",
+        "typed positive-chiral carrier Q_plus",
+        "source operator-order convention"
+      ],
+      "logical_force": "ASSERTED_SOURCE_OPERATOR_EQUALITY",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-131-R05",
+        "L-SSC-131-R06",
+        "L-SSC-131-R07"
+      ],
+      "load_bearing_note": "The paper explicitly defines the vector rotation as the ordered composite of two same-type generalized reflections. It is an operator equality on all typed coefficient carriers, not just equal action on three role names. (uw) is a pair index, not a permitted field multiplication or generic rotation-group import.",
+      "formula_ast": {
+        "op": "SOURCE_TYPED_SIMPLE_ROTATION_PAIR_DEFINITION",
+        "args": [
+          "R_v^(uw)",
+          "R_v^w",
+          "R_v^u",
+          "V",
+          "Q_minus",
+          "Q_plus",
+          "u",
+          "w"
+        ]
+      },
+      "exact_source_expression": {
+        "anchor": "L05 §3 immediately after t^(uw) factorization and before bivector rotor formula",
+        "assertions": [
+          [
+            "EQUAL",
+            "R_v^(uw)",
+            [
+              "COMPOSE_ORDERED",
+              "R_v^w",
+              "R_v^u"
+            ]
+          ]
+        ],
+        "scope": "The same source u and w across the two factors. Written order is preserved; the eventual evaluation direction requires the source composition convention and must not be inferred from the superscript. Equality of full typed maps must be checked before source reconstruction."
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 13,
+    "unchanged_predecessor_occurrences": 10,
+    "restored_source_occurrences": 3
+  },
+  "next_stage": "TARGETED_G2_L131_0_3_FROM_THIRTEEN_SOURCE_OCCURRENCES",
+  "predecessor": {
+    "path": "experiments/062/L131_G1_SOURCE_INCIDENCE_0_2.json",
+    "git_blob_sha": "44fa43addb1629e64f38478139330a9ef1139b3a",
+    "status": "OMITTED_DIRECT_SOURCE_TWO_REFLECTION_ROTATION_EQUALITY"
+  },
+  "replay_invariance": {
+    "old_R01_R10_verbatim": true,
+    "old_R11_only_adds_R13_dependency": true,
+    "old_R12_verbatim": true,
+    "source_scope_unchanged": true,
+    "new_source_R13_explicit_formula": true,
+    "no_source_claim_promoted": true
+  },
+  "defects": [
+    {
+      "path": "experiments/062/L131_SOURCE_FIDELITY_DEFECT_0_1.json",
+      "git_blob_sha": "aa38a3e96e597fd4fb57c51aa194905c250c0ef0"
+    },
+    {
+      "path": "experiments/062/L131_ROTATION_PAIR_SOURCE_FIDELITY_DEFECT_0_1.json",
+      "git_blob_sha": "8924e3cef9a5343c39290991cfbf1a88ce46a0ca"
+    }
+  ],
+  "nonclaims": [
+    "The direct R_v two-reflection source identity is represented, not proved.",
+    "No named rotation-group ontology is imported.",
+    "L132/L133 remain blocked."
+  ]
+}
