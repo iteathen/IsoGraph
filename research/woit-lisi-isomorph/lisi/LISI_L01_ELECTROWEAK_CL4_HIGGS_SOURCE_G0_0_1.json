@@ -1,0 +1,166 @@
+{
+  "schema": "isograph.lisi-l01-electroweak-cl4-higgs-g0-source.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "source_complete": false,
+  "source_census_frozen": false,
+  "mathematical_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_review_passed": false,
+  "status": "SOURCE_EXACT_L01_SECTION2_2_2_HIGGS_CL4_FINITE_CANDIDATE_NOT_G0_FIXED_POINT",
+  "primary_source": {
+    "id": "L01",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1, 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_section": "§2.2.2 Electroweak D2",
+    "printed_page": 10,
+    "pdf_zero_based_page": 10,
+    "original_scope": "Four real Higgs components forming a vector of Cl(4), proposed electroweak so(4) role",
+    "source_modality": "AUTHOR_PROPOSES_SENSIBLE_REPRESENTATION_AND_WRITES_EXACT_MATRIX; NOT_FULL_PHYSICAL_DERIVATION"
+  },
+  "predecessors": {
+    "ssc_020": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_20.json",
+      "git_blob_sha": "183e9b8212217054a9b0ac1269d417c26fdbea7c"
+    },
+    "gate_020": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_20.json",
+      "git_blob_sha": "48734395a914ceade6c84be04f0a318f6e1abaec"
+    },
+    "gravitational_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_EQ2_8_CHIRAL_SOURCE_FINITE_G0_0_1.json",
+      "git_blob_sha": "d96013288afa911b67d4fe92f5d17b6fb6cb2726"
+    },
+    "L01_31_page_visual": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    }
+  },
+  "source_clifford": {
+    "carrier": "Cl(4) positive Euclidean signature, not earlier gravitational Cl(3,1)",
+    "Pauli_2x2": {
+      "sigma1": "[[0,1],[1,0]]",
+      "sigma2": "[[0,-i],[i,0]]",
+      "sigma3": "[[1,0],[0,-1]]",
+      "identity": "[[1,0],[0,1]]"
+    },
+    "generators_ordered": [
+      {
+        "source_label": "gammaPrime1",
+        "Kronecker": "sigma1 tensor sigma1"
+      },
+      {
+        "source_label": "gammaPrime2",
+        "Kronecker": "sigma1 tensor sigma2"
+      },
+      {
+        "source_label": "gammaPrime3",
+        "Kronecker": "sigma1 tensor sigma3"
+      },
+      {
+        "source_label": "gammaPrime4",
+        "Kronecker": "sigma2 tensor identity"
+      }
+    ],
+    "source_vector": "phi = sum_{mu=1}^4 phi^mu gammaPrime_mu; phi^1,phi^2,phi^3,phi^4 are real independent source components",
+    "source_blocks": {
+      "upper_right": "-i*phi^4*I2 + sum_{eps=1}^3 phi^eps*sigma_eps",
+      "lower_left": "+i*phi^4*I2 + sum_{eps=1}^3 phi^eps*sigma_eps",
+      "diag_upper": "0_2x2",
+      "diag_lower": "0_2x2"
+    },
+    "source_4x4_matrix": [
+      [
+        "0",
+        "0",
+        "-phiOne",
+        "phiPlus"
+      ],
+      [
+        "0",
+        "0",
+        "phiMinus",
+        "phiZero"
+      ],
+      [
+        "-phiZero",
+        "phiPlus",
+        "0",
+        "0"
+      ],
+      [
+        "phiMinus",
+        "phiOne",
+        "0",
+        "0"
+      ]
+    ],
+    "source_labels": {
+      "phiPlus": "phi^1 - i*phi^2",
+      "phiMinus": "phi^1 + i*phi^2",
+      "phiZero": "-phi^3 - i*phi^4",
+      "phiOne": "-phi^3 + i*phi^4"
+    },
+    "distinct_binders": [
+      "mu ranges 1..4 and is summed in phi^mu*gammaPrime_mu",
+      "eps ranges 1..3 and is summed in Pauli spatial block",
+      "4-by-4 rows are source spinor matrix output, columns input; Higgs doublet (phiPlus,phiZero) is not a 4-by-4 spinor column"
+    ],
+    "dangerous_identity": "phiOne is NOT the real field coefficient phi^1; phiOne is a distinct complex source Higgs label formed from phi^3 and phi^4",
+    "source_reality_conditions": [
+      "phiMinus=conjugate(phiPlus)",
+      "phiOne=conjugate(phiZero)",
+      "phi^1..phi^4 are four real fields; arbitrary complex phi^mu are outside the stated source scope"
+    ],
+    "preserved_modalities": [
+      "The source says it is sensible to CONSIDER the four real Higgs fields as a vector of so(4), not that this alone proves the full proposed E8 dynamics.",
+      "The source's electroweak W and B1 gauge fields act on different fermion chiralities; they must not be identified.",
+      "The source's so(4)=su(2)L+su(2)R is a Lie algebra decomposition; global Spin/SO group isomorphism is not asserted by this specific formula."
+    ]
+  },
+  "finite_scope": {
+    "real_input_values": [
+      -1,
+      0,
+      1
+    ],
+    "real_phi_tuples": 81,
+    "Clifford_ordered_generator_pairs": 16,
+    "Clifford_expected_anticommutator": "gammaPrime_mu gammaPrime_nu + gammaPrime_nu gammaPrime_mu = 2*delta_{mu nu}*I4",
+    "Higgs_4x4_entries_per_tuple": 16,
+    "finite_vector_matrix_cells": 1296,
+    "finite_positive_checks": [
+      "Exact Gamma' Pauli products and all 16 ordered generator anticommutators",
+      "All 81 real phi^mu tuples have exact source Higgs matrix entries, using source phi labels not conventional label guessing",
+      "Phi matrix is Hermitian in the real source domain: Phi^dagger=Phi",
+      "For 81 real cases, Phi^2=(sum_mu (phi^mu)^2)*I4"
+    ],
+    "source_excluded_negative_case": {
+      "phi_components": [
+        "0",
+        "0",
+        "0",
+        "i"
+      ],
+      "source_real_coefficients_violated": true,
+      "expected_phiHermitian": false,
+      "disposition": "DOMAIN_NEGATIVE_CONTROL_NOT_SOURCE_COUNTEREXAMPLE"
+    },
+    "historical_real_form_warning": "L01's separately printed real SL(2,C)=SL(2,R)xSL(2,R) group assertion already has a finite center/Killing counterexample and is not repaired by Cl(4) source success."
+  },
+  "unresolved": {
+    "electroweak_connection": "L01 §2.2.2 printed wew su(2)L+su(2)R block and its V,U coefficient transport/2.9 rotation require separate typed source audit; not inferred from Phi representation.",
+    "Cartan_and_weights": "L01 source electroweak Cartan matrix, Table 4 source weighted charge/hypercharge, matching of two D2 sectors and subsequent Cl(7,1) generators remain unresolved.",
+    "full_L01_primary_source_assertion_census": false,
+    "whole_source_L01_L06_census_complete": false,
+    "G0_fixed_point": false,
+    "G1_to_G7_authorized": false,
+    "cross_track_synthesis": false,
+    "external_cold_review_passed": false
+  },
+  "next_lawful_step": "Independently calculate gammaPrime, source labeled Higgs field four-by-four, 16 Cl4 anticommutators and all 81 real phi tuples with mutation tests. Admit only G0 source partial evidence into L-SSC-031 successor after a passing baseline; no G1/G7 or unreviewed electroweak dynamics."
+}
