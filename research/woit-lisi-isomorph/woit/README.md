@@ -36,7 +36,7 @@ See `experiments/062/W_G5H_HISTORICAL_SHARED_README_VERIFIER_DEFECT_0_1.json` an
 
 
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_60.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_32.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_61.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_32.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 ### Current W04d/W04e 23-source-item completion — G0 unfrozen
 
@@ -283,6 +283,12 @@ Primary source oracle `experiments/062/W01_G0_SECTIONS_31_32_PRIMARY_SOURCE_ORAC
 A dedicated **current** G0 stage verifier `experiments/062/tools/verify-w01-section31-32-current-g0-gate-0-1.mjs` additionally checks gate 0.60 and SSC 0.32 against all 151 register/coverage rows, the old 86-member view, and all G1–G7/IA/DP nonpromotion flags; its local reconstruction rejected **32/32** adverse mutations. The older `verify-w-active-g0-stage-0-7.mjs` remains a passing **historical** gate 0.52/SSC 0.25 fixture, not a current-source gate. The new workflow uses the current verifier and must be checked on committed CI.
 
 **Current procedural boundary:** `experiments/062/W_CURRENT_STAGE_GATE_0_60.json`, **G0 OPEN/UNFROZEN**. G1–G7, primitive promotion, IA, NEI/DTS/DP and all W/L semantic comparison remain prohibited. The owner bypass affects unavailable third-party review only.
+
+### W01 §3 gate Node failure and corrected current source verifier (2026-10-09)
+
+The [first committed CI workflow](https://github.com/iteathen/IsoGraph/actions/runs/37913281430) at `4730c206fa275a4f2f4fe98895aa64fe1109b5df` **FAILED overall**. Its source-conservation verifier passed, as did both independently scoped W01 §3 nonunit-inverse tests, but the new current-stage guard crashed: `ReferenceError: artifact is not defined`. The local V8 harness had captured a name omitted by the generated Node script. See `experiments/062/W01_S31_32_NODE_GATE_VERIFIER_ALIAS_FAILURE_0_1.json`. The failed v0.1 gate verifier and predecessor CI remain historical **negative evidence**, not qualified checks.
+
+Versioned successor `experiments/062/tools/verify-w01-section31-32-current-g0-gate-0-2.mjs` defines the missing input alias explicitly and targets **gate 0.61**, with the same strict 151-item source/demand/register/coverage reconstruction and 32 hostile stage mutations. The previous 0.2 workflow is restricted to manual historical replay; the new `.github/workflows/experiment-062-w01-section31-32-source-0-3.yml` reruns the source and both quaternion tests plus the corrected **current gate** verifier. The claimed scope remains G0 only: SSC0.32 is unfrozen, original W01 and nine-source reverse assertions remain incomplete, Oct 3 mutable source byte identities are unverified, and no G1–G7, primitive, recursive IA, NEI/DTS/DP or W/L synthesis is authorized.
 
 ## Full-treatment gates
 
