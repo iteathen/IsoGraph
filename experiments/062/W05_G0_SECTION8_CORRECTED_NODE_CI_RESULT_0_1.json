@@ -1,0 +1,83 @@
+{
+  "schema": "isograph.exp062-w05-s8-node-success-and-preserved-failures.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "source_revision": {
+    "commit": "62a9505c473a25d16a3c640e216e61af16e46155",
+    "source_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_34.json",
+    "source_blob": "115f62f1ebb801b1e0f8ccb1cbe8f8821dc8611b",
+    "gate67_blob": "03fdcee964d9d7ec975fb7796c294bc2e443a22d",
+    "verifier02_blob": "8903414d19847b3a3f84d4bfd72c429cae926a6c"
+  },
+  "CI": {
+    "run_id": 37956974726,
+    "job_id": 113909844401,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37956974726",
+    "head_sha": "62a9505c473a25d16a3c640e216e61af16e46155",
+    "result": "SUCCESS",
+    "node": "26.7.0",
+    "ubuntu": "24.04",
+    "positive_baseline_pass": true,
+    "positive_errors": [],
+    "source_items": 151,
+    "W05_source_occurrences": 42,
+    "hostile_mutations": {
+      "total": 29,
+      "rejected": 29,
+      "escaped": 0,
+      "crashed": 0
+    },
+    "w05_selected_division_scope": {
+      "total": 37,
+      "rejected": 37
+    },
+    "prior_p2u7_split": {
+      "total": 21,
+      "rejected": 21
+    }
+  },
+  "concurrent_historical_run_results": [
+    {
+      "id": 37956974588,
+      "result": "SUCCESS",
+      "qualification": "HISTORICAL_W_ACTIVE_G0_GATE0_52_PIN_NOT_GATE0_67"
+    },
+    {
+      "id": 37956974519,
+      "result": "SUCCESS",
+      "qualification": "HISTORICAL_W05_17"
+    },
+    {
+      "id": 37956974650,
+      "result": "SUCCESS",
+      "qualification": "HISTORICAL_G_STAGE_NOT_AUTHORIZED"
+    }
+  ],
+  "preserved_invalid_CI": [
+    {
+      "run_id": 37956466200,
+      "head_sha": "e02fe76d362a23c4a0d8c9039be8161edbd83ca5",
+      "result": "FAILURE",
+      "positive_baseline": "FAILED",
+      "mutations": "25/25 REJECTED BUT UNQUALIFIED"
+    },
+    {
+      "run_id": 37956974680,
+      "head_sha": "62a9505c473a25d16a3c640e216e61af16e46155",
+      "result": "FAILURE",
+      "positive_baseline": "FAILED_SAME_OBSOLETE_CHECKER"
+    }
+  ],
+  "prior_error_record": {
+    "path": "experiments/062/W05_G0_SECTION8_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json",
+    "git_blob_sha": "78bd6effcb6b41642c1479e2a29f757949d66eab"
+  },
+  "qualification": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "all_nine_full_reverse_complete": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "G1_G7_authorized": false
+  }
+}

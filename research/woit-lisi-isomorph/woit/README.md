@@ -1,5 +1,12 @@
 # Woit full IsoGraph treatment
 
+## Current W G0 gate 0.68 — 2026-10-09 verified CI and original-page provenance blocker
+
+SSC **0.34** remains the unchanged 151-item source candidate (315 structured incidences), register **0.20** and coverage **0.19**. At [run 37956974726](https://github.com/iteathen/IsoGraph/actions/runs/37956974726), Node 26.7.0 passed the corrected positive baseline, **29/29** new hostile controls, 37/37 W05 selected-division controls, and 21/21 p=2,u=7 controls. Original verifier v0.1 failed positive at [37956466200](https://github.com/iteathen/IsoGraph/actions/runs/37956466200) and again [37956974680](https://github.com/iteathen/IsoGraph/actions/runs/37956974680); preserve both as unqualified. This evidence is internal and narrow.
+
+The 7,023-entry nontruncated Git tree at tested head `62a9505c473a25d16a3c640e216e61af16e46155` contains **no W original raw webpage snapshot files matching examined extensions/names**; the October 3 freeze references live URLs and dates without page-byte digests. This does *not* establish that no historical archive or object exists. **Original October 3 mutable-source bytes remain unverified.** The W gate **0.68** remains G0 open/unfrozen. Older checkpoint claims below are historical, not the live gate.
+
+
 ## W G0 source-provenance verifier correction — 2026-10-09 (unqualified until current Node CI)
 
 W05 SSC0.34 one-item source correction and 151-row register remain unchanged. Versioned checker v0.1 **FAILED** its positive Node baseline at [run 37956466200](https://github.com/iteathen/IsoGraph/actions/runs/37956466200), although 25/25 mutants were rejected; the checker mistakenly expected the characteristic-two example's `therefore_central_simple` value to be absent instead of the correctly recorded `false`. The v0.1 checker and CI failure are retained immutably in `W05_G0_SECTION8_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json`. New checker v0.2 independently checks the nonzero GF(2) nilpotent `1+i`, expects central simplicity to be **false**, and adds four controls (29 total). W gate 0.67 keeps G0 open; new Node/GitHub CI must pass its baseline before any mutant score counts. No change to W sources, existing-item coverage, or frozen source-corpus scope.
