@@ -109,6 +109,7 @@ function check(p=Packet,cl=G){
  ok(j(cl.gamma_source?.eight_ordered_generators.map(x=>x.source_tensor))===j(gammaLiteral),'exact original eight source tensor gammas, independent literal oracle');
  ok(j(p.definition?.Clifford_generators_source_order.map(x=>x.source_tensor))===j(gammaLiteral)&&j(p.definition?.metric_signature)===j([1,1,1,-1,1,1,1,1]),'source gamma order/signature preserved');
  ok(p.definition?.mixed_source_basis?.includes('gravity-first product')&&p.definition?.H1==='H1=(1/2)*omega+(1/4)*E+(W+B1)','mixed Clifford source-normalized roles');
+ ok(p.definition?.mixed_1form_E==='E=sum_mu sum_alpha e^mu*phi^alpha*M_(mu,alpha) with e^mu 1-form and phi^alpha real scalar, do not commute exterior factors across sign','source φ degree-zero scalar and e degree-one form, ordered mixed basis');
  ok(p.definition?.source_named_mixed_formula==='F_gw=(de+(1/2)[omega,e])*phi-e*(dphi+[W+B1,phi])','exact Eq3.4 source print');
  ok(p.definition?.source_gravity_formula==='F_G=(1/2)*(R-(1/8)*e wedge e*phi^2)','exact Eq3.3 grav sign/coefficient');
  ok(p.independent_algebra_predictions?.quadratic_source_coefficient?.includes('-1/16')&&p.independent_algebra_predictions?.graded_derivative?.includes('(1/4)')&&p.independent_algebra_predictions?.graded_derivative?.includes('-e wedge d(phi)'),'graded derivative and quadratic coefficient signs preserved');
