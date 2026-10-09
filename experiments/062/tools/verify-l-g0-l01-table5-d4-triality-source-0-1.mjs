@@ -60,7 +60,7 @@ function verify(x=src){
  ck(t.source_example?.includes('omega_R^wedge -> B1^+ -> omega_L^wedge'),'source sample cyclic orbit');
  ck(t.source_no_physical_obligation?.includes('No inference'),'triality three physical generations NOT proved');
  ck(t6source.status==='EIGHT_PRINTED_SOURCE_PLUS_MINUS_ROWS_CONSERVED_G0_CANDIDATE'&&j(t6source.eight_rows_expected?.map(z=>[z.id,z.source,z.from,z.expected]))===j(t6),'all eight Table6 companion source rows');
- ck(t6source.full_F4_root_set_cardinality_expected===48&&t6source.not_claims?.some(z=>z.includes('global F4')),'F4 named correspondence source only');
+ ck(t6source.full_F4_root_set_cardinality_expected===48&&t6source.not_claims?.some(z=>z.includes('full exceptional F4 brackets')&&z.includes('real-form Lie/algebra representation')),'F4 named correspondence source only');
  ck(scope.Table5_printed_rows===16&&scope.root_pair_rows===12&&scope.spin_pair_rows===4&&scope.expanded_D4_source_roots===24&&scope.expanded_8Splus_weights===8,'source table count and pairing');
  ck(scope.Table6_printed_companion_rows===8&&scope.expanded_8Sminus_weights===8&&scope.expanded_8V_weights===8&&scope.expected_combined_root_candidates===48,'source Table6 companion count');
  ck(scope.expected_D4_norm2_numerator_square===4&&scope.expected_spin_weight_norm2_numerator_square===2&&scope.expected_permutation_order===3,'source metric and finite T typed domain');
