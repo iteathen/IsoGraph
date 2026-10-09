@@ -28,7 +28,17 @@ The new independent [source-version re-audit](LISI_L05_OCTONION_INDEPENDENT_VERS
 
 The independent replay CI [`37851752108`](https://github.com/iteathen/IsoGraph/actions/runs/37851752108) passed **22/22 effective adversarial mutants**. Its first run `37851631738` failed because two mutated table inputs bypassed a cached input oracle (20/22); the defect is explicitly preserved in `experiments/062/L05_INDEPENDENT_REAUDIT_CACHED_TABLE_MUTATION_ESCAPE_0_1.json` and the verifier re-reads the mutated table fields on every invocation. **All results are internal source-scoped finite evidence, not external cold verification, full mathematical qualification, or authorization to reopen G1–G7.**
 
-### Governing current source checkpoint: G0, SSC 0.34 / stage gate 0.34 (2026-10-09)
+### Governing current source checkpoint: G0, SSC 0.35 / stage gate 0.35 (2026-10-09)
+
+**L01 Table 9 source-root reconstruction:** [source packet](LISI_L01_TABLE9_D4_XPHI_Q_ROOT_SUPPORT_G0_0_1.json) reconstructs the paper's 24 so(8) D4 roots: six strong su(3) roots plus three six-root xPhi families. H2 has three *groups*: combined abelian w+B2, mixed xPhi, and strong g, although four curvature terms Fw/FB2/Fx/Fg are individually named. This resolves the counting interpretation but not the quadratic Q projection.
+
+Among 153 unordered mixed-root pairs the verified root-addition outcomes are 9 Cartan, 18 strong, 36 mixed, 90 absent. The source's simple 3-by-6 x(one-form) Phi(scalar) factorization removes same-generation self-wedges; its 108 cross-generation pairs retain 6 Cartan, 12 strong, 36 mixed, 54 absent cases. The [exact verifier](../../../experiments/062/tools/verify-l-g0-l01-table9-d4-q-source-0-1.mjs) independently checks all 276 D4 root-matrix brackets and the factorized Phi polynomial in a **chosen complex Chevalley representation**. Its Q trace-square polynomial is nonzero for an explicit coefficient example. This is NOT source authorization of root-vector phases, real E8 field constraints, Hodge norms, or an author mathematical-error claim.
+
+[SSC0.35](SOURCE_SEMANTIC_CENSUS_0_35.json) preserves all 191 identities and 189 unchanged complete records, extends only L-SSC-040/L-SSC-044 and remains UNFROZEN. [G0 gate0.35](../../../experiments/062/L_CURRENT_STAGE_GATE_0_35.json) denies G1–G7 and cross-author use. [G0 source coverage](LISI_L040_L044_TABLE9_D4_Q_SOURCE_G0_COVERAGE_0_1.json) retains all unexamined original-source scope. CI is pending at this candidate revision.
+
+#### Historical predecessor: SSC 0.34 / G0 gate 0.34
+
+
 
 **L01 source-conditioned so(8) action expansion and missing-pairing frontier (NOT an author-error ruling).** [Source L01 S2 exact packet](LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.json) preserves frozen Eq.(3.6) printed p24 `F2=Fw+FB2+Fx+Fg+Q` with shared `Q=(xPhi)(xPhi)`, and L01 §3.2.2 printed p27 `S2=-1/4*integral<trace(F2*star(F2))>`. The source next displays four standalone -1/4 quadratic named-component terms plus **-1/2** of `<((Fw+FB2+Fx+Fg+Q)*star(Q))>`. The original paper explicitly says `Q` does not easily separate, affects multiple so(8) sectors, and that the *new-field action is a first guess likely to change*. It also questions the need to extract and invert the E8 frame to build the Hodge star. Original wording is never silently repaired.
 
