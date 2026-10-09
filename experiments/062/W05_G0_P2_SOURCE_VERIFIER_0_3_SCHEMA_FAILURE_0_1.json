@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062-w05-current-gate-stale-schema-verifier-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_0_3_POSITIVE_GATE_SCHEMA_STALE_37_OF_37_NEGATIVE_REJECTED_NOT_CI_PASS",
+  "failed_run": {
+    "id": 37916670722,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37916670722",
+    "commit": "32c5d8daaef3c200e1a255ec567b586186ee8862",
+    "conclusion": "failure",
+    "Node": "26.7.0"
+  },
+  "failed_artifacts": {
+    "verifier": {
+      "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-3.mjs",
+      "git_blob_sha": "b032f4b69525d71da5fa39b834f1be393ffaff90"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_64.json",
+      "git_blob_sha": "77def906aa91a324bca0c42b590258334b97e664"
+    }
+  },
+  "observation": {
+    "positive_error": "active W current gate correct lineage",
+    "rejected_mutations": 37,
+    "mutation_total": 37,
+    "mutation_escaped": 0,
+    "source_conservation_errors": 0
+  },
+  "cause": "Current gate test checked schema v0.62 while source candidate used active schema v0.64; the previous correction fixed supersedes but omitted schema update. This is a stale positive verifier fixture, not source/field mathematics.",
+  "repair": {
+    "new_verifier": {
+      "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-4.mjs",
+      "git_blob_sha": "71bfd3838b9fe8acce48fa45f6aaee30fa1792a7"
+    },
+    "new_stage": "experiments/062/W_CURRENT_STAGE_GATE_0_65.json",
+    "check": "exact gate schema v0.65 AND SHA of immediately superseded v0.64, alongside all 37 negative mutants"
+  },
+  "negative_guards": {
+    "historical_failures_retained": true,
+    "source_census_frozen": false,
+    "all_nine_reverse_complete": false,
+    "G1_G7": false,
+    "L_semantics_imported": false
+  },
+  "external_review": "OWNER_BYPASSED_NOT_PASSED",
+  "provenance": {
+    "project_research_direction": "Joshua Oshiro",
+    "agent_assisted_reconstruction": "2026-10-09"
+  }
+}
