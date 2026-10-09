@@ -1,0 +1,172 @@
+{
+  "schema": "isograph.lisi-L01-first-generation-chiral-gauge-support-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": {
+    "G0_open": true,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_authority": false,
+    "source_equivalent_fully_qualified": false,
+    "original_E8_full_right_sign_map_qualified": false,
+    "author_typo_proved": false,
+    "second_third_generation_actions_proved": false,
+    "outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "authority": false,
+  "status": "ORIGINAL_H1_P12_CHIRAL_GAUGE_BLOCK_SUPPORT_SCOPED_PROOF__FULL_E8_FERMION_ACTION_OPEN",
+  "original_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      10,
+      11,
+      12,
+      23,
+      24,
+      27,
+      28
+    ],
+    "primary_visual_confirmation": "L01 original v1 direct visual printed p12 Eq2.10 block and p24/p27 operator expressions; source labels and selected original 8S+ quadrant; no extra fermion-generation matrix invented Stage0.42 is CI verification evidence of SSC0.41, not G1 promotion."
+  },
+  "parent_evidence": {
+    "H1_chiral": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "right_module_041": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_RIGHT_ACTION_CONTRAGREDIENT_G0_0_1.json",
+      "git_blob_sha": "4f9136f043636306b5e24697dd1e6ea28b67656e"
+    },
+    "census041": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_41.json",
+      "git_blob_sha": "993f5785eb4f3b1ee7c7c0be72680d407c0c6451"
+    },
+    "gate041": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_41.json",
+      "git_blob_sha": "23b4d17aab8701c0985dbb594cfb86b2ab936a6b"
+    },
+    "gate042": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_42.json",
+      "git_blob_sha": "ec283ea8d5a73ca16af1bda0d044177947846a77"
+    }
+  },
+  "original_chiral_gauge_block": {
+    "source": "L01 §2.2.3 printed p12 H1 positive-chiral displayed 4x4 array of 2x2 spin matrices",
+    "column_labels": [
+      "nu_eL",
+      "eL",
+      "nu_eR",
+      "eR"
+    ],
+    "block_carrier": "4 field-labelled slots tensor 2-spin components = 8 complex matrix rows, source 8S+ representation",
+    "original_total_H1": "H1=omega/2 + e phi/4 + w_ew",
+    "W_source_coefficients": [
+      {
+        "symbol": "W3",
+        "row": 0,
+        "col": 0,
+        "factor": "i/2"
+      },
+      {
+        "symbol": "W3",
+        "row": 1,
+        "col": 1,
+        "factor": "-i/2"
+      },
+      {
+        "symbol": "Wplus",
+        "row": 0,
+        "col": 1,
+        "factor": "1"
+      },
+      {
+        "symbol": "Wminus",
+        "row": 1,
+        "col": 0,
+        "factor": "1"
+      }
+    ],
+    "B1_source_coefficients": [
+      {
+        "symbol": "B13",
+        "row": 2,
+        "col": 2,
+        "factor": "i/2"
+      },
+      {
+        "symbol": "B13",
+        "row": 3,
+        "col": 3,
+        "factor": "-i/2"
+      },
+      {
+        "symbol": "B1plus",
+        "row": 2,
+        "col": 3,
+        "factor": "1"
+      },
+      {
+        "symbol": "B1minus",
+        "row": 3,
+        "col": 2,
+        "factor": "1"
+      }
+    ],
+    "H1_mixed_ephi_role": "e phi/4 includes genuine left/right off-diagonal source field operators on p12; do NOT identify full H1 or Higgs with block-preserving W+B1",
+    "source_spin_2x2_caveat": "W and B1 coefficient blocks multiply I2; source gravitational omega_L/R and Higgs e_L/R multiply nontrivial 2-spin matrices"
+  },
+  "two_source_expression_layers": {
+    "curvature_page24": "W*Psi_L+B1*Psi_R-Psi*(w+B2+xPhi)-Psi_q*g",
+    "action_page27": "(W+B1)*Psi-Psi*(w+B2+xPhi+g)",
+    "component_page27": "W_i*Psi+B1_i*Psi+Psi*w_i+Psi*B2_i+Psi*x_i*Phi+Psi*g_i",
+    "right_sign_unresolved": true,
+    "quark_projection_unresolved_original_E8": true
+  },
+  "mathematical_reconstruction": {
+    "classification": "SOURCE-SUPPORTED GAUGE-BLOCK LOCATIONS_WITH_PROJECT-CHOSEN_IDENTIFICATION_OF_CURVATURE_CHIRAL_COMPONENTS",
+    "chiral_projections": "P_L=diag(1,1,0,0), P_R=diag(0,0,1,1) on p12 four source-labeled slots; lifted to p12 positive-chiral 8x8 by tensor I2",
+    "exact_support": "W=P_L W P_L; B1=P_R B1 P_R; W P_R=0, B1 P_L=0",
+    "iff_statement": "For all field-slot Psi, (W+B1)Psi=W(P_L Psi)+B1(P_R Psi) iff W P_R=0 and B1 P_L=0, for fixed P_L+P_R=I. This holds for the source-p12 PURE ELECTROWEAK blocks by their printed positions.",
+    "independent_coefficients": "W3/Wplus/Wminus and B13/B1plus/B1minus are independent typed complex fields, not fixed measured values; exact Gaussian-integer finite samples are diagnostics of the symbolic support identity.",
+    "Higgs_negative_control": "A source-style mixed frame-Higgs coefficient K with any generic nonzero off-chiral block has K P_R !=0 or K P_L !=0; the pure EW projection identity must not be extended to K or full H1.",
+    "source_application_status": "Conditional on identifying first-generation Psi_L/R chiral components with the displayed p12 slot projectors; this is not the complete original E8/Grassmann fermion representation map.",
+    "right_sector_separate": "The proof never changes source -Psi H2 or printed +Psi T_i, never assumes a dual normalization and never changes H2 strong color sectors."
+  },
+  "verification_contract": {
+    "exact_modes": [
+      "field-slot complex 4x4 matrix",
+      "positive-chiral lifted complex 8x8 field-slot ⊗ I2"
+    ],
+    "seeds": 4,
+    "source_field_basis_tests": 16,
+    "source_spin_basis_tests": 64,
+    "independent_projected_coordinate_oracle": true,
+    "hostile_matrix_crossblock_gauge_leakage": true,
+    "hostile_higgs_crossblock_projection": true,
+    "hostile_transcription_sign_and_label": true,
+    "parent_blob_guards": true,
+    "census_full_record_conservation": true,
+    "source_mutation_guards": true
+  },
+  "source_census_delta": {
+    "successor": "SOURCE_SEMANTIC_CENSUS_0_42.json",
+    "changed_only": [
+      "L-SSC-032",
+      "L-SSC-041",
+      "L-SSC-046"
+    ],
+    "unchanged_full_records": 188,
+    "identity_count": 191,
+    "frozen": false
+  },
+  "next": "Audit p12 full 2-spin coefficient entries relative to source p24 fermion embedding beyond isolated positive-chiral block; reconstruct original E8 H2 component normalization and graded action or preserve missing source inputs. Then continue L01 §3.2.2 F2/Hodge and L02-L06 G0.",
+  "provenance": {
+    "human_direction": "Joshua Oshiro: complete independent frozen-source Track L",
+    "agent_formulation": "2026-10-09 direct p12 gauge-only 4x4 to 8x8 chiral projector relation, with exact separate-action and frame-Higgs falsifier",
+    "external_antecedent": "Lisi arXiv:0711.0770v1 and elementary linear algebra; no original-author claim about project field-slot projector theorem as physics"
+  }
+}
