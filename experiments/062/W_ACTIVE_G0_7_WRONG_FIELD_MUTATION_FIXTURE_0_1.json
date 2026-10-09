@@ -1,0 +1,17 @@
+{
+  "schema": "isograph.exp062-w-active-g0-7-wrong-field-mutation-fixture.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_V8_MUTATION_INEFFECTIVE_53_OF_54_REJECTIONS_NOT_QUALIFYING",
+  "verifier_candidate_sha": "6473201c133bf9a77eb8826cf90b7b58ceb76eae",
+  "positive_baseline": "PASS",
+  "mutants_total": 54,
+  "rejected": 53,
+  "ineffective_mutation": "relabel old86 current SSC",
+  "cause": "The validator correctly checks SSC0.25 field current_ssc0_25_not_regenerated_historical_only. The inherited mutator assigned nonexistent SSC0.24 field and did not alter the tested value.",
+  "repair": "Target exact current SSC0.25 field, require Node CI positive pass and 54/54 effective mutation rejections.",
+  "publication_impact": "NONE_FROM_FAILED_LOCAL_TEST",
+  "G0_frozen": false,
+  "external_review": "OWNER_BYPASSED_NOT_PASSED"
+}
