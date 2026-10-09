@@ -1,0 +1,186 @@
+{
+  "schema": "isograph.lisi-l01-h1-graded-common-basis-normalization-g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "INDEPENDENT_MIXED_CURVATURE_PROJECT_DIAGNOSTIC_WITH_NONDEGENERATE_COFRAME_AND_EXPLICIT_NORMALIZATION_GAP",
+  "source_census_frozen": false,
+  "full_source_cold_audit_complete": false,
+  "author_mathematical_error_confirmed": false,
+  "source_math_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "article": "An Exceptionally Simple Theory of Everything",
+    "author": "A. Garrett Lisi",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "examined_pages": [
+      8,
+      9,
+      12,
+      23,
+      24
+    ],
+    "primary_source_statements": [
+      "§2.2.3 Eq(2.10), PDF page 12: H1=(1/2)*omega+(1/4)*e*phi+w_ew in Cl(7,1), e is Clifford vector ONE_FORM and phi is four-real-component Clifford vector SCALAR.",
+      "§3.1 printed page 23: W+B1 are distinct electroweak one-form connections; e*phi is the ordered mixed graviweak 1-form.",
+      "§3.1 Eq(3.2), printed page 24: F=d(A)+A*A in differential-form graded algebra with F1=F_G+F_gw+F_ew.",
+      "§3.1 Eq(3.3), printed page 24: F_G=(1/2)*(R-(1/8)*e*e*phi^2); when omega=0 and d(omega)=0, R=0 and the Higgs quadratic term has coefficient -1/16.",
+      "§3.1 Eq(3.4), printed page 24: F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi]); omega=W=B1=0 gives d(e)*phi-e*d(phi)."
+    ]
+  },
+  "parents": {
+    "current_G0_gate030": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_30.json",
+      "git_blob_sha": "b7a7cd3b391f7b431e34aa37421c4d22942c8d2d"
+    },
+    "current_SSC030": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_30.json",
+      "git_blob_sha": "f8ff8cc3c01799b4eac8cab71b8c2ab6820e2351"
+    },
+    "graded_source_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json",
+      "git_blob_sha": "ab7b453996f14561982f858b06356592b54a49a5"
+    },
+    "Cl71_gamma_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "source_chiral_8x8": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    }
+  },
+  "definition": {
+    "Clifford_generators_source_order": [
+      {
+        "label": "Gamma1",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma1",
+        "metric_role": "SPACE_POSITIVE"
+      },
+      {
+        "label": "Gamma2",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma2",
+        "metric_role": "SPACE_POSITIVE"
+      },
+      {
+        "label": "Gamma3",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma3",
+        "metric_role": "SPACE_POSITIVE"
+      },
+      {
+        "label": "Gamma4",
+        "source_tensor": "i*sigma1 tensor I2 tensor I2 tensor I2",
+        "metric_role": "TIME_NEGATIVE"
+      },
+      {
+        "label": "GammaPrime1",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma1 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE"
+      },
+      {
+        "label": "GammaPrime2",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE"
+      },
+      {
+        "label": "GammaPrime3",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma3 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE"
+      },
+      {
+        "label": "GammaPrime4",
+        "source_tensor": "sigma2 tensor sigma2 tensor I2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE"
+      }
+    ],
+    "metric_signature": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "primitive_source_role": "eight Cl(7,1) 16x16 source gamma generators are real/complex Gaussian coefficient matrices built from source-printed Pauli tensor product. First four are gravity, last four primed electroweak; no imported cross-domain theorem.",
+    "mixed_source_basis": "M_(mu,alpha)=Gamma_mu*GammaPrime_alpha for mu=0..3 and alpha=0..3, ordered gravity-first product, 16 independent even-grade basis matrices",
+    "mixed_1form_E": "E=sum_mu sum_alpha e^mu*phi^alpha*M_(mu,alpha) with e^mu 1-form and phi^alpha real scalar, do not commute exterior factors across sign",
+    "H1": "H1=(1/2)*omega+(1/4)*E+(W+B1)",
+    "curvature": "F(H1)=d(H1)+H1 wedge H1, with matrix products and exterior wedge; do not interpret matrix multiplications as same thing as graded differential-form products",
+    "source_named_mixed_formula": "F_gw=(de+(1/2)[omega,e])*phi-e*(dphi+[W+B1,phi])",
+    "source_gravity_formula": "F_G=(1/2)*(R-(1/8)*e wedge e*phi^2)",
+    "restricted_variables": "omega=W=B1=0 as 1-forms in neighbourhood, d(omega)=d(W)=d(B1)=0, e is an INVERTIBLE coframe (nondegenerate at origin), phi real in Cl(4), no spinor/Grassmann excitation",
+    "source_jets": "All diagnostics are off-shell local 1-jets satisfying the stated field types; no claim that they solve the source dynamics or Einstein constraints."
+  },
+  "independent_algebra_predictions": {
+    "Clifford_anticonmutation": "Gamma_I Gamma_J+Gamma_J Gamma_I=2*eta_IJ*I16 for all 64 ordered source generator pairs",
+    "mixed_mixed_commutator": "For M_(mu,a)=Gamma_mu GammaPrime_a, [M_(mu,a),M_(nu,b)] equals -2*Gamma_mu Gamma_nu when mu!=nu and a==b; equals -2*eta_mu*GammaPrime_a GammaPrime_b when mu==nu and a!=b; equals 0 for mu!=nu,a!=b or identical indices.",
+    "commutator_population": "16 mixed generators -> 120 unordered pairs. 24 same electroweak index/different gravity pairs, 24 same gravity index/different EW pairs, 72 zero pairs. No commutator maps to mixed span.",
+    "quadratic_pure_gravity": "For arbitrary real phi=(phi1,...,phi4) and distinct mu,nu, let X_mu=sum_alpha phi_alpha*M_(mu,alpha). Then [X_mu,X_nu]=-(sum_alpha phi_alpha^2)*[Gamma_mu,Gamma_nu].",
+    "quadratic_source_coefficient": "(1/4)^2*E wedge E=-(1/16)*(e wedge e)*phi^2, where e wedge e uses original unscaled gravity Clifford coefficients. This matches source Eq(3.3)'s -1/2*1/8=-1/16 under omega=0.",
+    "graded_derivative": "Since e is degree1 and phi degree0, d(e*phi)=d(e)*phi-e wedge d(phi). Thus the raw mixed coefficient in the source Gamma_mu*GammaPrime_alpha basis is (1/4)*(d(e)*phi-e*d(phi)) when omega=W=B1 vanish."
+  },
+  "admissible_source_field_controls": [
+    {
+      "id": "NONDEGENERATE_FLAT_FRAME_VARIABLE_HIGGS",
+      "scope": "Flat invertible source frame, phi!=0, torsion-free connection chosen zero; smooth off-shell Higgs gradient.",
+      "coordinate_model": "x=(x1,x2,x3,x4). e^mu=dx^mu all mu; phi^1=1+x1; phi^(2..4)=0; omega=W=B1=0; at x=0 det(e)=1, dphi^1=dx1, de^mu=0.",
+      "expected_coframe_det_at_origin": 1,
+      "source_form_degree_guard": true,
+      "output_2form": "mixed component dx1 wedge dx2 along M_(mu2,alpha1) is +1/4 from d(H1); printed unscaled F_gw is +1 under same unscaled M coordinate convention. Pure H1^2 has NO mixed component.",
+      "literal_common_M_ratio": 4,
+      "named_source_operator_qualification": false
+    },
+    {
+      "id": "NONDEGENERATE_TORSION_TEST_WITH_CONSTANT_HIGGS",
+      "scope": "Source coframe still invertible at origin, phi!=0, torsion may be nonzero off-shell with zero spin connection.",
+      "coordinate_model": "e^1=(1+x2)*dx1, e^2=dx2, e^3=dx3, e^4=dx4; phi^1=1 other phi=0; omega=W=B1=0; at x=0 det(e)=1, de^1=dx2 wedge dx1.",
+      "expected_coframe_det_at_origin": 1,
+      "source_form_degree_guard": true,
+      "output_2form": "mixed dx1 wedge dx2 along M_(mu1,alpha1) is -1/4 from d(H1); printed F_gw is -1 under same unscaled M coordinates.",
+      "literal_common_M_ratio": 4,
+      "named_source_operator_qualification": false
+    }
+  ],
+  "finite_coverage_expectations": {
+    "original_Clifford_pairs": 64,
+    "source_mixed_basis_matrices": 16,
+    "matrix_commutator_pair_population": {
+      "total": 120,
+      "gravity_pure": 24,
+      "EW_pure": 24,
+      "zero": 72,
+      "remaining_mixed": 0
+    },
+    "real_Higgs_scoped_test_vectors": 81,
+    "quadratic_gravity_pair_tests": 486,
+    "quadratic_matrix_entry_checks": 124416,
+    "nondegenerate_gradient_jet_controls": 48,
+    "nondegenerate_torsion_jet_controls": 48,
+    "expected_common_M_projection_gradient": "all 48 test cases have raw derivative 1/4 of the named source coefficient; after expressing in project-defined basis N=M/4, all 48 scalar coefficients agree",
+    "expected_common_M_projection_torsion": "all 48 test cases have raw derivative 1/4 of the named source coefficient; after expressing in project-defined basis N=M/4, all 48 scalar coefficients agree"
+  },
+  "competing_comparison_contracts": [
+    {
+      "id": "COMMON_UNSCALED_M",
+      "statement": "Assume printed named F_gw and raw d(H1) mixed term are presented in exact same unscaled source M=Gamma_mu GammaPrime_alpha basis and are compared as algebra-valued two-forms.",
+      "predicted_result": "They differ by factor 4 on admissible nondegenerate field jets.",
+      "status": "PROJECT_CONDITIONAL_COUNTEREXAMPLE_NOT_AUTHOR_MATH_ERROR"
+    },
+    {
+      "id": "PROJECT_NORMALIZED_OUTPUT_BASIS",
+      "statement": "Define N_(mu,alpha)=M_(mu,alpha)/4 as a project-level output generator convention; then the raw mixed coefficient in N coordinates equals the unscaled source Eq(3.4) coefficient.",
+      "predicted_result": "No factor-four numerical discrepancy remains in those normalized coordinates.",
+      "status": "POSSIBLE_CONSISTENT_OUTPUT_CONVENTION_NOT_TRACED_TO_AUTHOR_SOURCE"
+    }
+  ],
+  "repair_disposition": "No correction to original L01 formulas justified: missing author-specified common-output projection or generator normalization is load-bearing. The older e=0-at-point witness is a degenerate coframe and cannot alone establish physical frame admissibility; the two new nondegenerate off-shell jets test the same conditional difference without that issue.",
+  "discovery_disposition": "The apparent factor 4 is evidence of a required basis/projection role distinction. Whether source intended output basis M or N (or another normalization) remains unresolved; do not label it an erratum or assume N is source-approved.",
+  "relevant_external_knowledge": "None. No W mathematics, other author's independent scheme, or conventional Clifford repair used as an unexamined source-authority premise.",
+  "next_lawful_step": "Independently replay the eight source Gamma matrices, all mixed brackets, all signed Higgs quadratic cases and two nondegenerate graded one-form jets with malicious source/index/sign/norm mutations. Then conserve only conditional G0 findings in L-SSC-039 if the scope-limited replay passes. Full graded connection source output normalization still open, G1–G7 still forbidden."
+}
