@@ -28,7 +28,7 @@ function check(g=Gate){
  ck(q.failed_bracket_baseline?.path===p.failed&&q.failed_bracket_baseline?.git_blob_sha===sha(p.failed)&&q.failed_bracket_baseline?.run_id===37893439563&&q.failed_bracket_baseline?.mutants_executed===0,'failed baseline preserved not counted');
  ck(Failed.failed_run?.id===37893439563&&Failed.failed_run?.adversarial_executed===0,'truth of historical failed mutation gate');
  ck(q.external_semantic_review_passed===false&&q.global_L01_L06_math_theorem_qualified===false&&q.G1_authorized===false,'no CI to theorem laundering');
- ck(g.outstanding_source_reconstruction?.some(t=>t.includes('MATRIX-OPERATOR commutators')&&t.includes('unadjudicated')),'explicit G0 gap retained');
+ ck(g.outstanding_source_reconstruction?.some(t=>t.includes('MATRIX-OPERATOR commutators')&&t.includes('does NOT adjudicate source coefficient normalizations')),'explicit G0 gap retained');
  ck(g.next_lawful_step?.startsWith('Continue L-only G0')&&g.next_lawful_step?.includes('full graded curvature'),'no future premature stage');
  ck(s.G0_source_audit_authorized===true&&s.G0_source_local_CI_verified===true,'G0 only');
  for(const k of ['G0_source_census_frozen','G0_full_source_assertion_census_complete','G1_authorized','G2_authorized','G3_authorized','G4_authorized','G5_authorized','G5H_authorized','G6_campaign_new_promotion_authorized','G7_authorized','L_primitive_schema_closure_complete','L_recursive_IA_authorized','L_Discovery_Protocol_authorized','WL_cross_track_comparison_authorized','global_qualified_module_manifest_change_authorized','PR70_merge_authorized'])ck(s[k]===false,'no source-stage authority '+k);
