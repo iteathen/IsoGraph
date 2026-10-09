@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.exp062-w05-s23-left-j-real-quaternion-independent-calculation.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NONAUTHOR_EXACT_GAUSSIAN_INTEGER_CALCULATION_CHECKS_SOURCE_SIGNS_AND_CARRIER_DISTINCTION",
+  "original_context": {
+    "source_id": "W05",
+    "revision": "arXiv:2202.02657v2",
+    "page": 3,
+    "html_lines": [
+      99,
+      110
+    ],
+    "source_first_evidence_path": "experiments/062/W05_G0_S23_J_LEFT_SOURCE_FIRST_0_1.json"
+  },
+  "calculation": {
+    "quaternion_basis": [
+      "1",
+      "bold_i",
+      "bold_j",
+      "bold_k"
+    ],
+    "selected_real_coefficients": {
+      "x0": 2,
+      "x1": 3,
+      "x2": 5,
+      "x3": -7
+    },
+    "input_complex_pairs": [
+      {
+        "re": 2,
+        "im": 3
+      },
+      {
+        "re": 5,
+        "im": -7
+      }
+    ],
+    "basis_left_j_multiplication": {
+      "j_times_1": "bold_j",
+      "j_times_bold_i": "-bold_k",
+      "j_times_bold_j": "-1",
+      "j_times_bold_k": "bold_i"
+    },
+    "expected_left_J_quaternion_coefficients": {
+      "x0": -5,
+      "x1": -7,
+      "x2": 2,
+      "x3": -3
+    },
+    "expected_left_J_complex_pairs": [
+      {
+        "re": -5,
+        "im": -7
+      },
+      {
+        "re": 2,
+        "im": -3
+      }
+    ],
+    "expected_second_left_J_quaternion_coefficients": {
+      "x0": -2,
+      "x1": -3,
+      "x2": -5,
+      "x3": 7
+    },
+    "expected_squared_action": "NEGATIVE_IDENTITY_ON_C2_NOT_ON_CP1",
+    "complex_antilinearity_example": {
+      "lambda": {
+        "re": 2,
+        "im": 1
+      },
+      "identity": "J(lambda*v)=conj(lambda)*J(v)",
+      "false_identity": "J(lambda*v)=lambda*J(v)"
+    },
+    "projective_squared_action": "IDENTITY_ON_CP1_WHEN_MINUS_SIGN_IS_QUOTIENTED",
+    "not_author_priority_claim": true
+  },
+  "negative": [
+    "MATH_POINT_CHECK_IS_NOT_COMPLETE_AUTHOR_TEXT_EXHAUSTIVENESS",
+    "CP3_DUPLICATE_SOURCE_DISPLAY_IS_NOT_NEW_INDEPENDENT_VALIDATION",
+    "NO_GENERAL_CHAR2_QUATERNION_EXTENSION",
+    "NO_SOURCE_THEOREM_W_L",
+    "DO_NOT_SUPPRESS_FAILED_CONTROLS"
+  ],
+  "W_source_census_frozen": false,
+  "G1_authorized": false
+}
