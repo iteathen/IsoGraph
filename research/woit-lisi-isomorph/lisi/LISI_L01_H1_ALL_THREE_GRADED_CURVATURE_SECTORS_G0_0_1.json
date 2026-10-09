@@ -1,0 +1,82 @@
+{
+  "schema": "isograph.lisi-l01-graded-H1-three-curvature-sectors-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_CONDITIONED_BOSONIC_H1_THREE_SECTOR_PROJECT_RECONSTRUCTION_UNQUALIFIED",
+  "frozen_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "printed_pages": [
+      12,
+      23,
+      24
+    ],
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "H1": "H1=(1/2)*omega+(1/4)*e*phi+(W+B1)",
+    "FG": "F_G=(1/2)*(R-(1/8)*e wedge e*phi^2)",
+    "Fgw": "F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])",
+    "Few": "F_ew=(d(W)+W wedge W)+(d(B1)+B1 wedge B1)",
+    "field_roles": "omega,e,W,B1 degree-one differential forms, phi four-real-component degree-zero scalar"
+  },
+  "dependencies": {
+    "predecessor_ssc031": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "6004578250d4e742f70406f4a547410699ecd813"
+    },
+    "predecessor_g0_gate031": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea"
+    },
+    "nonzero_mixed_projection": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_NONZERO_CONNECTION_GRADED_MIXED_PROJECTION_G0_0_1.json",
+      "git_blob_sha": "a5f7b099d2ff1fff9c6f3c4e0d97d30aea66a8f6"
+    },
+    "graded_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json",
+      "git_blob_sha": "ab7b453996f14561982f858b06356592b54a49a5"
+    }
+  },
+  "project_typed_setup": {
+    "metric": "eta=(+,+,+,-,+,+,+,+) on eight original source ordered gamma generators",
+    "pure_G": "six Gamma_a Gamma_b, a<b<=4",
+    "pure_EW": "six GammaPrime_c GammaPrime_d, c<d<=4",
+    "mixed_M": "sixteen M_ac=Gamma_a GammaPrime_c, gravity-first ordered",
+    "H": "H_i=Omega_i/2+(e_i*Phi)/4+V_i, V_i=W_i+B1_i",
+    "curvature": "F_pq=partial_p H_q-partial_q H_p+[H_p,H_q], the coefficient of dx^p wedge dx^q for p<q",
+    "field_jets": "15 deterministic independent coefficient seeds on invertible identity coframes with nonzero arbitrary Omega,V, derivatives of Omega,V,e,Phi; offshell and not E8/H2/Grassmann/dynamics"
+  },
+  "conditional_reconstruction": {
+    "gravity": "P_G(F)=(1/2)*(R-(1/8)*(e wedge e)*phi^2), with R=d(Omega)+(1/2)*Omega wedge Omega",
+    "mixed": "4*P_M(F)=(d(e)+(1/2)*[Omega,e])*Phi-e wedge (d(Phi)+[V,Phi])",
+    "EW": "P_EW(F)=d(V)+V wedge V; V decomposes into commuting selfdual and antiselfdual primed-bivector triples corresponding only to the source W/B1 chiral algebra roles",
+    "no_residual": "F=d(H)+H wedge H lies entirely in 28-dimensional pure-G/mixed/pure-EW bivector span on the restricted source Cl(7,1) H1, without other Clifford-grade output",
+    "EW_chiral_split": "For primed J=(gamma23,gamma31,gamma12), K=(gamma14,gamma24,gamma34), L_i=J_i+K_i and R_i=J_i-K_i; all 9 cross L/R brackets vanish. Any primed bivector V has a unique L+R split; this is project source-bivector algebra, not identification of full physical gauge fields.",
+    "literal_source_output_basis_qualification": "The project P_G and P_EW coordinate comparisons match the printed coefficient structure; the mixed equality is after factor 4 in unscaled M generators. Treating Fgw's printed coefficient formula as coordinates in project N=M/4 produces a consistent restricted decomposition, but the author explicitly specifying that output coordinate convention is NOT established.",
+    "scope_warning": "This is a project-reconstructed restricted bosonic H1 Clifford/exterior algebra identity with finite exact checks. It neither proves global E8 superconnection actions nor licenses an author mathematical-error claim, physical unification, or G1."
+  },
+  "finite_checks": {
+    "field_seeds": 15,
+    "oriented_twoforms_per_seed": 6,
+    "oriented_twoform_checks": 90,
+    "three_sector_comparisons": 270,
+    "non_bivector_residual_checks": 90,
+    "EW_LR_cross_brackets": 9,
+    "Clifford_generator_pure_gravity_EW_mixed_brackets_inherited_from_predecessor": true
+  },
+  "limitations": {
+    "source_census_frozen": false,
+    "full_L01_L06_source_audit_complete": false,
+    "primitive_closure_complete": false,
+    "full_superconnection_mathematical_theorem_qualified": false,
+    "mixed_output_basis_source_normalization_qualified": false,
+    "author_mathematical_error_proved": false,
+    "external_cold_review_passed": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_semantic_use_authorized": false
+  },
+  "next_lawful_step": "Independently check every pure-G, pure-EW and mixed graded source coefficient with derivative and bracket sign mutants. Source-native Fgw output and spinor action/basis still require original-paper evidence, then full G0 census and primitive/schema closure."
+}
