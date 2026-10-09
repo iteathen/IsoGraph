@@ -1,0 +1,63 @@
+{
+  "schema": "isograph.exp062-w05-s4-source-verifier-v01-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "ORIGINAL_NODE_POSITIVE_BASELINE_FAILED_46_MUTANTS_UNQUALIFIED",
+  "run": {
+    "id": 37990121656,
+    "job_id": 114021837538,
+    "head_sha": "03fd2daeebf1378305914f84e448e962afe93684",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37990121656",
+    "conclusion": "failure",
+    "positive_baseline_pass": false,
+    "positive_errors": [
+      "oracle not false G0 completeness"
+    ],
+    "mutations_total": 46,
+    "rejected": 46,
+    "escaped": 0,
+    "crashed": 0,
+    "score_qualified": false
+  },
+  "cause": {
+    "verifier": {
+      "path": "experiments/062/tools/verify-w05-s4-fibrations-source-g0-0-1.mjs",
+      "git_blob_sha": "581ec2be24de692ff80c42347d92660f6f47d983"
+    },
+    "source_oracle": {
+      "path": "experiments/062/W05_G0_S4_FIBRATIONS_PRIMARY_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "50032bcd8c56bd83730e1dcd59efb0fb6125b3fa"
+    },
+    "bad_checks": [
+      {
+        "nonexistent": "O.expected.unaffected_others",
+        "actual": "O.expected.unchanged_others",
+        "correct_value": 150
+      },
+      {
+        "nonexistent": "O.original_nine_source_reverse_exhaustiveness",
+        "actual": "O.method.original_all_nine_reverse_complete",
+        "correct_value": false
+      }
+    ],
+    "source_oracle_not_defective": true,
+    "source_item_W101_unmodified_by_repair": true
+  },
+  "predecessor_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_83.json",
+    "git_blob_sha": "62520849c9ba96046a601e8cb5005b5b02ba9c72"
+  },
+  "conservation_scope": {
+    "SSC": "SOURCE_SEMANTIC_CENSUS_0_40.json",
+    "source_items": 151,
+    "typed_incidences": 345,
+    "old_items_preserved": 150,
+    "owner_external_review": "BYPASSED_NOT_PASSED",
+    "G0_open": true,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false
+  },
+  "next": "Correct validator positive oracle in immutable successor v0.2, preserve this failed v0.1 verifier and CI, run fresh positive baseline before counting adversarial mutation score."
+}
