@@ -1,0 +1,51 @@
+{
+  "schema": "isograph.exp062-w05-s52-verifier-v01-prepublication-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_V8_POSITIVE_BASELINE_FAILED_MUTATION_TALLY_NOT_QUALIFIED",
+  "actual_execution": {
+    "host": "V8 isolate",
+    "file_access": "Exact GitHub-retrieved committed predecessor and staged successor blob contents mapped as readFileSync",
+    "git_blob_pins": "LOOKUP_VALUES_FROM_GITHUB_BLOB_SHA_NOT_NATIVE_CRYPTO",
+    "native_Node_run": false,
+    "GitHub_Actions_run": false,
+    "source_item_count": 151,
+    "typed_source_incidents": 371
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w05-s52-hodge-source-g0-0-1.mjs",
+    "git_blob_sha": "5b5dc9ab8e73450682abeee4d18665056a49d280"
+  },
+  "failed_candidate_stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_90.json",
+    "git_blob_sha": "28d3d19569dfe1a50dc7d8feeab37dbc64e5c0b1",
+    "committed_to_branch": false
+  },
+  "result": {
+    "positive_pass": false,
+    "positive_errors": [
+      "external bypass not a source/semantic proof"
+    ],
+    "mutations_total": 59,
+    "mutations_rejected": 59,
+    "mutations_escaped": 0,
+    "mutations_crashed": 0,
+    "mutations_qualify": false
+  },
+  "root_cause": {
+    "checker_expected_missing_field": "O.full_original_W05_reverse_exhaustiveness",
+    "actual_oracle_field": "O.original_nine_source_reverse_exhaustiveness",
+    "actual_value": false,
+    "scope": "SOURCE_AUTHOR_ORACLE_NEGATIVE_ALL_NINE_COMPLETENESS",
+    "correction_required": "Change positive test to real field; update hostile mutation target to real field; preserve original source oracle content."
+  },
+  "nonclaims": [
+    "No Node or GitHub CI claim",
+    "No positive qualification from 59/59 when baseline failed",
+    "No author source item content change",
+    "No source freeze or full 151 semantic-demand requalification",
+    "No L semantic input"
+  ],
+  "recommended_next": "Versioned verifier v0.2 prepublish V8 recheck; only after positive and all hostile controls pass commit and native GitHub Node."
+}
