@@ -1,0 +1,97 @@
+{
+  "schema": "isograph.exp062-w02-s43-curvature-v04-exact-node-ci-evidence.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INTERNAL_EXACT_SCOPE_PASS_NOT_W_G0_SOURCE_QUALIFICATION",
+  "run": {
+    "id": 37974732198,
+    "job_id": 113970025021,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37974732198",
+    "head_sha": "de3e43e71b1c129450f76e76863d2019c710c7be",
+    "conclusion": "success",
+    "positive_pass": true,
+    "positive_errors": [],
+    "hostile_total": 52,
+    "hostile_rejected": 52,
+    "escaped": 0,
+    "crashed": 0,
+    "node": "26.7.0",
+    "runner": "ubuntu-24.04",
+    "suite": "W02 §IV.3 source chiral curvature non-Einstein mixed block G0 0.1"
+  },
+  "test_inputs": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_36.json",
+      "git_blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b",
+      "source_items": 151,
+      "structured_source_incidences": 327
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_76.json",
+      "git_blob_sha": "5013f9cb0b59f6918565b964fc0961f78fdbff22"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w02-s43-mixed-curvature-source-g0-0-4.mjs",
+      "git_blob_sha": "40cb797f27dcf4fb45e62692ea4119fa0b242cb3"
+    },
+    "original_author_source": {
+      "path": "experiments/062/W02_G0_S43_CHIRAL_CURVATURE_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "7ac32b4ec3ab9c4a90debdb73f2c58e4d322dafa"
+    },
+    "non_author_negative_control": {
+      "path": "experiments/062/W02_G0_S43_MIXED_BLOCK_NEGATIVE_CONTROL_0_1.json",
+      "git_blob_sha": "0e55755baa7e41299e7044d61bce31571daee80f",
+      "negative_mixing": "1/2",
+      "paired_mixing": "0",
+      "source_author_text_unchanged": true
+    }
+  },
+  "unqualified_predecessors": [
+    {
+      "run": 37973537552,
+      "positive_pass": false,
+      "total_mutations": 42,
+      "rejected": 42,
+      "reason": "failed positive baseline"
+    },
+    {
+      "run": 37973892281,
+      "positive_pass": false,
+      "total_mutations": 46,
+      "rejected": 46,
+      "reason": "failed positive baseline"
+    },
+    {
+      "run": 37974415601,
+      "positive_pass": true,
+      "total_mutations": 49,
+      "rejected": 48,
+      "escaped": 1,
+      "reason": "hostile mutation escaped"
+    }
+  ],
+  "same_commit_historical_workflows": [
+    {
+      "run": 37974731881,
+      "conclusion": "success",
+      "scope": "historical W active G0 0.7 guard"
+    },
+    {
+      "run": 37974731870,
+      "conclusion": "success",
+      "scope": "historical G-stage source audit"
+    }
+  ],
+  "qualification_limits": {
+    "full_nine_original_W_source_reverse_complete": false,
+    "current_151_demand_membership_qualified": false,
+    "original_oct03_mutable_W_source_bytes_verified": false,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "W_L_synthesis_authorized": false
+  },
+  "version_lineage": "W02_v0.4_PASS_ONLY_ON_SOURCE0.36;_NEVER_TREAT_AS_NEW_SOURCE0.37_G0_QUALIFICATION"
+}
