@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-l039-graded-curvature-source-fixture-v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "VERIFIER_BASELINE_FAILED_THREE_NON_SOURCE_FIELD_FIXTURE_ERRORS_NO_MUTATIONS_RUN",
+  "failed_CI": {
+    "run_id": 37904227568,
+    "head_sha": "624770884f91dcf77f82b061b7b323df9e240570",
+    "conclusion": "failure",
+    "failure_labels": [
+      "exact frozen L01 source revision and pages",
+      "normalization interpretation not invented theorem",
+      "cannot claim identical source output basis"
+    ],
+    "adversarial_cases_defined": 24,
+    "adversarial_cases_executed": 0
+  },
+  "original_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json",
+    "git_blob_sha": "ab7b453996f14561982f858b06356592b54a49a5"
+  },
+  "original_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-h1-graded-curvature-source-0-1.mjs",
+    "git_blob_sha": "e3f8cd2330b7fdcdad1262f1fea57b9a8830aa74"
+  },
+  "causes": [
+    {
+      "incorrect_check": "source.linked_previous_equation",
+      "actual_field": "source.link_to",
+      "intent": "§2.2.3 source Eq.(2.10) page dependency"
+    },
+    {
+      "incorrect_check": "conditional_normalization_check.owner",
+      "actual_field": "conditional_normalization_check.status and setup",
+      "intent": "preserve unresolved comparison contract without importing error conclusion"
+    },
+    {
+      "incorrect_check": "missing_premise must contain literal `output generator`",
+      "actual_source": "missing_premise states projected curvature F1 mixed generator normalization unqualified",
+      "intent": "unqualified common output role; original assertion text authoritative, not a guessed prose fixture"
+    }
+  ],
+  "minimal_causal_repair": "Verifier-only: test packet.link_to, packet.status/setup, and exact existing missing_premise qualifier. Preserve all seven equations and complete 11 actor degrees. Rerun unmutated baseline before counting 24 effective mutants.",
+  "source_correction": "NONE",
+  "author_math_error_claimed": false,
+  "source_census_frozen": false,
+  "G1_authorized": false
+}
