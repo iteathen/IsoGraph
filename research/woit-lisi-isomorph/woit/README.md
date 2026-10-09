@@ -18,6 +18,14 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
+### Historical G5H verifier and shared-dossier CI correction (2026-10-08)
+
+Repeated GitHub Actions failures in the **historical** W G5H variation fixed-point workflow do **not** negate its five archived rejection results. The v0.1 verifier required the **current shared** `research/woit-lisi-isomorph/README.md` to retain literal obsolete phrases about 443 occurrences, 370 classes, and even a foreign L_G7 artifact filename; [run 37874462094](https://github.com/iteathen/IsoGraph/actions/runs/37874462094) failed precisely those five README requirements. This is a **procedural verifier/workflow scope defect**: the shared dossier has changed lawfully, and neither L context nor contemporary prose is an input to frozen W G5H evidence. The original failing verifier and workflow are preserved; the v0.1 push trigger is retired to manual dispatch.
+
+See `experiments/062/W_G5H_HISTORICAL_SHARED_README_VERIFIER_DEFECT_0_1.json` and `experiments/062/W_G5H_HISTORICAL_VERIFIER_COVERAGE_AUDIT_0_1.json`. The W-only successor `experiments/062/tools/verify-w-g5h-historical-nonpromotion-0-2.mjs` checks all five historical variation hypotheses and their No-Evasion failures, pins the original W-only G4/G5/H/F tuple, and **separately** asserts that current W SSC0.22/gate0.49 still blocks G1–G7, IA and synthesis. Its initial local V8 reconstruction rejected **37/37** adversarial mutations, but Node CI is distinct and must be checked at the committed revision. The new workflow is `.github/workflows/experiment-062-w-g5h-historical-nonpromotion-0-2.yml`. The historical W G5H negative result remains **limited to its old variation scope**; current G0 is open and unfrozen, with source reverse enumeration and October 3 mutable-source identity unresolved.
+
+
+
 **Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_49.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_22.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 ### Current W04d/W04e 23-source-item completion — G0 unfrozen

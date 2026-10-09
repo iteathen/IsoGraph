@@ -1,0 +1,150 @@
+{
+  "schema": "isograph.exp062-w-g5h-historical-complete-verifier-coverage-review.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "COMPLETE_VERIFIER_CONTRACT_AUDIT_HISTORICAL_G5H_ONLY_CURRENT_G0_REMAINS_OPEN",
+  "scope": {
+    "original_verifier": {
+      "path": "experiments/062/tools/verify-w-g5h-fixed-point-0-1.mjs",
+      "git_blob_sha": "25e9b0df2fbbe40937436962f8afc8948264e91a"
+    },
+    "original_workflow": {
+      "path": ".github/workflows/experiment-062-w-g5h-fixed-point-0-1.yml",
+      "git_blob_sha": "29aea191bcb7329846a349ce1a39a6ec4f9a722b"
+    },
+    "historical_falsifier": {
+      "path": "experiments/062/W_G5H_VARIATION_LAYER_FALSIFICATION_0_1.json",
+      "git_blob_sha": "00088c30b59088c319dc23ae577b1ee142d15ba5"
+    },
+    "historical_fixed_point": {
+      "path": "experiments/062/W_G5H_VARIATION_FIXED_POINT_0_1.json",
+      "git_blob_sha": "33cd3aefaed73f551bfc2369e030b95da0113107"
+    },
+    "historical_route": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_9.json",
+      "git_blob_sha": "617d891004543efae8c1d6d7a19d8e80d310ad76"
+    },
+    "current_route": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_49.json",
+      "git_blob_sha": "94d45e7946e035d9664669a80e95f5de4fa3707f"
+    }
+  },
+  "original_verifier_clause_census": [
+    {
+      "id": "V01",
+      "check": "H/F/G old tuple and immutable source/artifact/qualifier pins",
+      "disposition": "RETAIN_HISTORICAL_PIN_ONLY"
+    },
+    {
+      "id": "V02",
+      "check": "F.workflow_run_id 37674234072 success; survivors 0",
+      "disposition": "RETAIN_HISTORICAL_CI_NOT_CURRENT"
+    },
+    {
+      "id": "V03",
+      "check": "F W G5H scoped completion and G6/G7/IA/cross-track false",
+      "disposition": "RETAIN_EXACT_SCOPE"
+    },
+    {
+      "id": "V04",
+      "check": "G0.9 gate old fixed point pin and W 211000 not instantiable",
+      "disposition": "RETAIN_BUT_LABEL_OLD_GATE"
+    },
+    {
+      "id": "V05",
+      "check": "H all five distinct hypothesis IDs, failure results, negative controls and provenance",
+      "disposition": "STRENGTHEN_ALL_FIVE_INDEPENDENT_NEGATIVE_RESULTS"
+    },
+    {
+      "id": "V06",
+      "check": "Shared root README must include 443 occurrences",
+      "disposition": "REJECT_STALE_NONSEMANTIC_PROSE_REQUIREMENT"
+    },
+    {
+      "id": "V07",
+      "check": "Shared root README must include 370 structural classes",
+      "disposition": "REJECT_STALE_NONSEMANTIC_PROSE_REQUIREMENT"
+    },
+    {
+      "id": "V08",
+      "check": "Shared root README must include No hypothesis survived to G6",
+      "disposition": "REJECT_STALE_NONSEMANTIC_PROSE_REQUIREMENT"
+    },
+    {
+      "id": "V09",
+      "check": "Shared root README must include SOURCE_INFORMATION_AND_INTERNAL_VARIATION_SEMANTICS_BOUNDARY",
+      "disposition": "REJECT_STALE_NONSEMANTIC_PROSE_REQUIREMENT"
+    },
+    {
+      "id": "V10",
+      "check": "Shared root README must include foreign L_G7_DEPENDENCY_CONE_REPLAY_0_2.json",
+      "disposition": "REJECT_CROSS_TRACK_SHARED_DOCUMENT_README_DEPENDENCY"
+    },
+    {
+      "id": "V11",
+      "check": "Current SSC0.22/G0.49 151-member source conservation and downstream blocks",
+      "disposition": "ADD_EXPLICIT_CURRENT_ROUTING_ONLY"
+    }
+  ],
+  "five_hypothesis_lineage": [
+    {
+      "id": "W-G5H-VAR-INCIDENCE-003",
+      "disposition": "REJECT_BEFORE_G6_CORE_REPRESENTABLE_INCIDENCE_INSUFFICIENT"
+    },
+    {
+      "id": "W-G5H-VAR-OPAQUE-004",
+      "disposition": "REJECT_BEFORE_G6_OPAQUE_RENAMING"
+    },
+    {
+      "id": "W-G5H-VAR-PERTURB-005",
+      "disposition": "REJECT_BEFORE_G6_UNSUPPORTED_TRANSFORMATION_SEMANTICS"
+    },
+    {
+      "id": "W-G5H-VAR-EOM-006",
+      "disposition": "REJECT_BEFORE_G6_SOURCE_SCOPE_MISMATCH_AND_UNRESOLVED_D1"
+    },
+    {
+      "id": "W-G5H-VAR-STATIONARITY-007",
+      "disposition": "RETAIN_NEGATIVE_EVIDENCE_NO_W_G6_REOPEN"
+    }
+  ],
+  "new_verifier": {
+    "path": "experiments/062/tools/verify-w-g5h-historical-nonpromotion-0-2.mjs",
+    "git_blob_sha": "2c8d66a130510e8bd555e73964b6f9892413a772",
+    "positive_local_V8": "PASS",
+    "mutation_total": 37,
+    "mutations_rejected": 37,
+    "method": "STORED_HISTORICAL_TUPLE_AND_CURRENT_ROUTING_RECONSTRUCTION_NO_SHARED_DOSSIER_READ"
+  },
+  "historical_result": {
+    "W_G5H_declared_variation_scope_only": true,
+    "H_survivors": 0,
+    "G6_new_candidate_authorized": false,
+    "old_workflow_0_1_current_CI": "FAIL_DUE_TO_README_ASSERTIONS",
+    "old_F_0_1_workflow": "HISTORICAL_SUCCESS"
+  },
+  "current_result": {
+    "SSC0_22_source_count": 151,
+    "all_nine_source_reverse_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false
+  },
+  "unreviewed_in_this_packet": [
+    "Full nine W source reverse-assertion census",
+    "Current SSC0.22 semantic truth",
+    "Current G0 primitive closure",
+    "G1-G7 fresh dependency replay"
+  ],
+  "cross_track": {
+    "L_semantics_used": false,
+    "L_artifacts_read": false,
+    "L_artifacts_modified": false
+  },
+  "nonclaims": [
+    "Historical W G5H result remains non-current",
+    "No W primitive discovery",
+    "No external verification passed",
+    "No source closure outside this verifier contract"
+  ]
+}
