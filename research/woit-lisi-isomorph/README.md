@@ -8,6 +8,10 @@
 **Base revision:** `f3217af9a4fd50e838db39e249e93f39380e0e4a`  
 **Semantic stack:** current qualified IsoGraph family routed by `qualification/QUALIFIED_MODULES_2026-09-29_CORE_0_21.md` and `qualification/CURRENT_INTEGRATED_STACK_WITH_CORE_0_21_2026-09-29.md`
 
+## L-only G0 universal H1 polynomial check (2026-10-09)
+
+The L track's [current dossier](lisi/README.md) adds an exact symbolic all-coefficient test of the *restricted bosonic* L01 H1 Clifford/exterior curvature, supplementing earlier finite field jets: [research packet](lisi/LISI_L01_H1_UNIVERSAL_SYMBOLIC_CURVATURE_G0_0_1.json). The check separately reconstructs the gravitational, primed EW and mixed curvature sector identities in all six spacetime two-form components; the mixed result uses the project's unscaled gamma-bivector output basis and **does not establish the original paper's named Fgw output normalization**. The L 191-item source census remains unfrozen at SSC0.31, its G0 gate prohibits G1–G7, the unverified source output-basis question stays open, and W-source semantics and cross-author synthesis remain quarantined. This is internal algebraic evidence, not external theory qualification.
+
 ## Public author-explanation research (2026-10-08; external evidence, not semantic authority)
 
 The owner requested a thorough **public-explanation search before any future author question**, and **no author outreach whatsoever until the complete applicable G-stage sequence, including G7, passes three to four meaningfully independent and adversarial verification passes**. Existing research does not satisfy that outreach gate. The first and second search passes are **NOT exhaustive**, not a verified source semantic census, and not a permission to contact either author.
