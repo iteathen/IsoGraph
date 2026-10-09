@@ -1,0 +1,109 @@
+{
+  "schema": "isograph.exp062-w01-bc-v2-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INTERNAL_V8_56_OF_56_ADVERSARIAL_MUTATIONS_REJECTED_NODE_CI_NOT_RUN_AT_RECORD_CREATION",
+  "source_predecessor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_27.json",
+    "git_blob_sha": "040d45a3c963ef9250124aee37c6bed9126bb857"
+  },
+  "source_successor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_28.json",
+    "git_blob_sha": "0fce5475cac8be4b9938f036a380fe1c4d7b6249"
+  },
+  "W_historical_projection_predecessor": {
+    "path": "experiments/062/W_G0_W02_V2_SOURCE_DEMAND_PROJECTION_0_13.json",
+    "git_blob_sha": "ccd1c811896b1b830633074267becc1bcea6d2d5"
+  },
+  "W_historical_projection_successor": {
+    "path": "experiments/062/W_G0_W01_BC_SOURCE_DEMAND_PROJECTION_0_14.json",
+    "git_blob_sha": "3d979fbd50b27a8056b24278043f9b73e78ddc39"
+  },
+  "W_151_register_successor": {
+    "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_14.json",
+    "git_blob_sha": "8db5f7c08406a3942427310799ddef33bb3382ba"
+  },
+  "W_151_coverage_successor": {
+    "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_13.json",
+    "git_blob_sha": "e53c89f97cbaf92eb812d4659df9fe0d51636aa2"
+  },
+  "source_oracle": {
+    "path": "experiments/062/W01_G0_BC_COMPLETE_SOURCE_ASSERTION_ORACLE_0_2.json",
+    "git_blob_sha": "c48ab46697a412a4b10fbbf796071ea396e9502c"
+  },
+  "failed_prepublication_oracle": {
+    "path": "experiments/062/W01_G0_BC_REJECTED_SOURCE_ORACLE_0_1.json",
+    "git_blob_sha": "927f73b66ae30a872b4da76eb3ef3f961d5cb9b9",
+    "disposition": "DO_NOT_USE_MATHEMATICALLY_NORMALIZED_DELTA_NUMERATOR"
+  },
+  "printed_source_discrepancy": {
+    "path": "experiments/062/W01_C2_DELTA_EPSILON_SOURCE_DISCREPANCY_0_1.json",
+    "git_blob_sha": "8257cb451b663ae61f8ab7023005751be89f7787"
+  },
+  "source_defect": {
+    "path": "experiments/062/W01_G0_BC_FORMULA_AND_SCOPE_SOURCE_DEFECT_0_1.json",
+    "git_blob_sha": "6b6097f748932a9f54f1d546c9f1383ba8faeb25"
+  },
+  "W01_page_coverage": {
+    "path": "experiments/062/W01_G0_ORIGINAL_V2_48PAGE_SOURCE_REVERSE_COVERAGE_0_1.json",
+    "git_blob_sha": "b82cf93c1e58e80645d209084404e9fdb9b2b8d9"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w01-original-bc-source-reconstruction-0-1.mjs",
+    "git_blob_sha": "381d5330c2588fcebd24c46857425bef7ba7a807"
+  },
+  "CI": {
+    "path": ".github/workflows/experiment-062-w01-bc-source-reversal-0-1.yml",
+    "git_blob_sha": "a36bb607bffedf86f3cdc87e212852620dce0b15",
+    "run_status_at_creation": "PENDING"
+  },
+  "results": {
+    "all_W_sources": 151,
+    "other_unchanged_sources": 148,
+    "changed": [
+      "W-SSC-054",
+      "W-SSC-055",
+      "W-SSC-056"
+    ],
+    "new_formula_incidences": 30,
+    "W01_previous_expressions": 50,
+    "W01_successor_expressions": 80,
+    "W_historical_demands": 86,
+    "other_unchanged_W_demands": 83,
+    "W151_register_rows": 151,
+    "W151_coverage_rows": 151,
+    "local_positive_errors": [],
+    "local_mutations_total": 56,
+    "local_mutations_rejected": 56,
+    "local_mutations_escaped": 0
+  },
+  "source_negative_and_math_inconsistency": {
+    "W01_appendix_C2_printed_equation_right_missing_eps_numerator": true,
+    "printed_RHS_times_pi_eps2_tomega": "1/4",
+    "derived_LHS_times_pi_eps2_tomega": "1/2",
+    "printed_not_normalized": true,
+    "W01_AppB_source_E1plus_tau_lt0": true,
+    "W01_AppB4_positive_time_phrase_source_tension": true,
+    "W01_AppC2_PhiMinus_malformed_lower_upper_wording": true,
+    "complex_Fourier_positive_energy_lower_halfplane": true
+  },
+  "qualifications": {
+    "W01_all48_pages_visually_examined": true,
+    "W01_source_wide_assertion_exhaustive": false,
+    "original_nine_W_source_assertion_reverse_complete": false,
+    "October3_mutable_source_identity_complete": false,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "Node_CI": "NOT_RUN_AT_ARTIFACT_CREATION"
+  },
+  "nonclaims": [
+    "No external semantic audit success",
+    "No mathematical normalization of author's delta formula",
+    "No completed primitive or schema closure",
+    "No L source semantics consulted",
+    "No W G0 freeze or G1 promotion"
+  ]
+}

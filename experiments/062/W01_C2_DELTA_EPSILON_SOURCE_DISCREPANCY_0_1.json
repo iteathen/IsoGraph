@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-w01-c2-delta-missing-epsilon-source-and-oracle-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_ORIGINAL_PRINTED_C2_DELTA_ALGEBRAIC_MISMATCH_AND_PREPUBLICATION_ORACLE_NORMALIZATION",
+  "source": {
+    "id": "W01",
+    "revision": "arXiv:2104.05099v2",
+    "section": "Appendix C.2",
+    "printed_page": 42,
+    "pdf_index": 41,
+    "pdf_url": "https://arxiv.org/pdf/2104.05099v2",
+    "arxiv_html": "https://arxiv.org/html/2104.05099v2"
+  },
+  "printed_source": {
+    "lhs": "i/(2*pi)*(1/(t+i*eps-omega)-1/(t-i*eps-omega))",
+    "rhs": "(1/pi)*(1/((t-omega)^2+eps^2))",
+    "claim": "AUTHOR_DISPLAYS_EQUALITY_AND_DESCRIBES_DELTA_LIMIT",
+    "eps": "eps>0,eps approaches 0 from above"
+  },
+  "independent_algebra": {
+    "simplified_lhs": "eps/(pi*((t-omega)^2+eps^2))",
+    "literal_rhs": "1/(pi*((t-omega)^2+eps^2))",
+    "witness": {
+      "t_minus_omega": 0,
+      "eps": 2,
+      "lhs_times_pi": "1/2",
+      "rhs_times_pi": "1/4",
+      "equal": false
+    },
+    "for_eps_positive_general": "LHS/RHS=eps, not identically 1",
+    "qualification": "FINITE_SYMBOLIC_ALGEBRA_OF_PRINTED_EXPRESSION_NOT_SOURCE_CORRECTION"
+  },
+  "failed_prepublication_oracle": {
+    "git_blob_sha": "927f73b66ae30a872b4da76eb3ef3f961d5cb9b9",
+    "source_formula": "Phi(z)=i/(2*pi)/(z-omega), omega REAL; delta(t-omega)=lim_eps_down0 (1/pi)*eps/((t-omega)^2+eps^2)",
+    "status": "REJECTED_MATHEMATICALLY_NORMALIZED_THE_AUTHOR_SOURCE"
+  },
+  "repair": "Correct source oracle successor v0.2, preserve original W01 W056 printed RHS missing epsilon with explicit negative/uncertainty; no hidden numerator correction. Fail closed on transcribing mathematically normalized RHS.",
+  "earliest_affected_stage": "G0_SOURCE_FIDELITY_AND_ORACLE",
+  "downstream": "W056 old source summaries lack distinction, SSC0.27 still G0 open; G1_G7 forbidden",
+  "negative_evidence": [
+    "Do not assert incorrect printed formula yields delta approximation algebraically under usual limit without addressing absent numerator.",
+    "Do not infer author intended corrected epsilon without external source revision verification.",
+    "Keep printed equation, derived discrepancy and uncertainty separate; no automatic source fix."
+  ],
+  "provenance": {
+    "source_author": "Peter Woit",
+    "formalization": "agent-assisted direct arXiv v2 PDF/HTML",
+    "owner_direction": "Joshua Oshiro",
+    "earliest_evidence_currently_located": "2026-10-08 W01 v2 Appendix C.2"
+  },
+  "scope": "W_SOURCE_ONLY",
+  "external_verification": "OWNER_BYPASSED_NOT_PASSED"
+}
