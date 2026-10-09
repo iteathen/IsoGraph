@@ -4,8 +4,8 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 const R='research/woit-lisi-isomorph/lisi/',E='experiments/062/';
 const P=R+'LISI_L01_FIRST_GEN_CHIRAL_GAUGE_PROJECTOR_G0_0_1.json';
-const O=R+'SOURCE_SEMANTIC_CENSUS_0_41.json',N=R+'SOURCE_SEMANTIC_CENSUS_0_42.json';
-const G041=E+'L_CURRENT_STAGE_GATE_0_41.json',G0=E+'L_CURRENT_STAGE_GATE_0_42.json',G1=E+'L_CURRENT_STAGE_GATE_0_43.json';
+const C041=R+'SOURCE_SEMANTIC_CENSUS_0_41.json',O=R+'SOURCE_SEMANTIC_CENSUS_0_42.json',N=R+'SOURCE_SEMANTIC_CENSUS_0_43.json';
+const G041=E+'L_CURRENT_STAGE_GATE_0_41.json',G042=E+'L_CURRENT_STAGE_GATE_0_42.json',G0=E+'L_CURRENT_STAGE_GATE_0_43.json',G1=E+'L_CURRENT_STAGE_GATE_0_44.json';
 const CH=R+'LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json';
 const RT=R+'LISI_L01_RIGHT_ACTION_CONTRAGREDIENT_G0_0_1.json';
 const SELF=E+'tools/verify-l-g0-l01-first-gen-chiral-gauge-projector-0-1.mjs';
@@ -92,7 +92,7 @@ function sourceCheck(p,old,newC,gate){
  const errors=[],ck=(x,msg)=>{if(!x)errors.push(msg)};
  ck(p.schema==='isograph.lisi-L01-first-generation-chiral-gauge-support-G0.v0.1'&&p.track==='L'&&p.stage==='G0'&&p.authority===false,'source only G0');
  ck(p.original_source?.revision==='arXiv:0711.0770v1'&&p.original_source.id==='L01'&&p.original_source.printed_pages?.join('|')==='10|11|12|23|24|27|28','original source page/modality exact');
- for(const [name,path]of [['H1_chiral',CH],['right_module_041',RT],['census041',O],['gate041',G041],['gate042',G0]])
+ for(const [name,path]of [['H1_chiral',CH],['right_module_041',RT],['census041',C041],['gate041',G041],['gate042',G042],['census042',O],['gate043',G0]])
   ck(p.parent_evidence?.[name]?.path===path&&p.parent_evidence[name].git_blob_sha===blob(path),'original frozen parent '+name);
  const b=p.original_chiral_gauge_block;
  ck(b?.column_labels?.join('|')==='nu_eL|eL|nu_eR|eR'&&b.block_carrier?.includes('8 complex')&&b.original_total_H1==='H1=omega/2 + e phi/4 + w_ew','printed column chirality and full H1 role');
