@@ -1,0 +1,184 @@
+{
+  "schema": "isograph.lisi-l01-graviweak-cl71-source-g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "L01_SECTION2_2_3_EIGHT_GAMMA_SOURCE_AND_MIXED_FRAME_HIGGS_CANDIDATE_UNFROZEN",
+  "source_complete": false,
+  "source_census_frozen": false,
+  "mathematical_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "author": "A. Garrett Lisi",
+    "section": "§2.2.3 Graviweak D4",
+    "printed_page": 12,
+    "pdf_page_zero_based": 12,
+    "modality": "AUTHOR_WRITTEN_CLIFFORD_CONSTRUCTION_AND_H1_FORMULA_NOT_GLOBAL_UNIFICATION_QUALIFICATION"
+  },
+  "parent": {
+    "source_SSC_022": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_22.json",
+      "git_blob_sha": "523165aebe2aa4a19746018f88f69f38a2e88b28"
+    },
+    "gate_022": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_22.json",
+      "git_blob_sha": "84bca5d95005c08bbb1e136d593c06f36ade60b2"
+    },
+    "electroweak_wew_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ELECTROWEAK_WEW_CARTAN_TABLE4_G0_0_1.json",
+      "git_blob_sha": "fc36d4892f51be4ab3d64323751391fc9dfe28c7"
+    },
+    "gravity_clifford_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_EQ2_8_CHIRAL_SOURCE_FINITE_G0_0_1.json",
+      "git_blob_sha": "d96013288afa911b67d4fe92f5d17b6fb6cb2726"
+    }
+  },
+  "gamma_source": {
+    "source_carrier": "Cl(7,1) represented by sixteen-by-sixteen complex chiral matrix coefficients, unlike previous separate four-by-four gravitational/electroweak matrices",
+    "source_metric": "eta=diag(+1,+1,+1,-1,+1,+1,+1,+1) for THIS SOURCE GENERATOR ORDER (first 3 grav space; Gamma4 grav time; four prime electroweak positive)",
+    "eight_ordered_generators": [
+      {
+        "label": "Gamma1",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma1",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 0
+      },
+      {
+        "label": "Gamma2",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma2",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 1
+      },
+      {
+        "label": "Gamma3",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma3",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 2
+      },
+      {
+        "label": "Gamma4",
+        "source_tensor": "i*sigma1 tensor I2 tensor I2 tensor I2",
+        "metric_role": "TIME_NEGATIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 3
+      },
+      {
+        "label": "GammaPrime1",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma1 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 4
+      },
+      {
+        "label": "GammaPrime2",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 5
+      },
+      {
+        "label": "GammaPrime3",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma3 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 6
+      },
+      {
+        "label": "GammaPrime4",
+        "source_tensor": "sigma2 tensor sigma2 tensor I2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 7
+      }
+    ],
+    "common_pauli": {
+      "sigma1": "[[0,1],[1,0]]",
+      "sigma2": "[[0,-i],[i,0]]",
+      "sigma3": "[[1,0],[0,-1]]",
+      "identity": "[[1,0],[0,1]]"
+    },
+    "two_algebra_roles": [
+      "Gamma1..Gamma4 are space/time gravity Cl(3,1) vector generators, NOT the earlier 4x4 gamma matrices literally.",
+      "GammaPrime1..GammaPrime4 are four orthonormal electroweak Cl(4) vector generators, NOT the earlier 4x4 gamma-prime coefficients literally.",
+      "All eight source 16x16 generators are ordered outer-to-inner Kronecker products; do not permute tensor factors."
+    ],
+    "source_narrow_math": "Clifford anticommutator Gamma_I Gamma_J+Gamma_J Gamma_I=2 eta_IJ I16; source's source-specific ordinary complex matrix realization only.",
+    "positive_chirality_orientation": "source uses the first 8x8 quadrant of 16x16 chiral representation for source 8_S+; first outer Pauli factor yields chirality parity in this chosen source basis, no cross-track spinor equivalence",
+    "source_bivector": "Gamma_{I J}=(1/2)[Gamma_I,Gamma_J], including gravity/electroweak and mixed ordered pairs; source H1 chiral even connection only."
+  },
+  "H1": {
+    "source_formula": "H_1=(1/2)*omega+(1/4)*e*phi+w_ew",
+    "gravity_connection": "omega=(1/2)*sum_{mu,nu=1}^4 omega^{mu nu}*Gamma_{mu nu}, sum over antisymmetric 4D source bivector indices",
+    "electroweak_connection": "w_ew=(1/2)*sum_{mu,nu=1}^4 w_ew^{mu nu}*GammaPrime_{mu nu}, with distinct independent w/B1 U/V source coefficient roles",
+    "frame": "e=sum_{mu=1}^4 e^mu*Gamma_mu, gravity 1-form with four frame component roles",
+    "higgs": "phi=sum_{nu=1}^4 phi^nu*GammaPrime_nu, four REAL scalar source coefficients, not a second independent 1-form",
+    "mixed_operator": "e*phi=sum_mu sum_nu e^mu*phi^nu*(Gamma_mu*GammaPrime_nu), ordered first gravity vector then electroweak vector; never reassociate with external operators",
+    "source_relative_coefficients": [
+      "1/2 for omega",
+      "1/4 for e phi",
+      "1 for w_ew"
+    ],
+    "mixed_source_role": "e phi is a GRAVITY/ELECTROWEAK mixed Clifford bivector-valued ONE-FORM; gamma grav and gamma-prime EW anticommute; no scalar contraction between independent carriers",
+    "source_modality": "Source says fractions are necessary for fitting fields together and obtaining correct curvature dynamics. This is an AUTHOR CLAIM, not proved by the matrix Clifford check.",
+    "full_8x8_display": "Source displays positive-chiral 8x8 action on 8_S+ using four-by-four block of two-by-two Weyl/frame entries; exact individual connection matrix entries require separate source-native binder/field one-form cold transcription."
+  },
+  "finite_math_scope": {
+    "Clifford_ordered_generator_pairs": 64,
+    "source_gamma_matrix_cells": 256,
+    "expected_diagonal_signature": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mixed_frame_Higgs_basis_products": 16,
+    "mixed_operators_even_under_outer_chirality": true,
+    "source_quadrant": "upper 8x8 first quadrant of 16x16, lower equally even; no off-diagonal chiral spin map for source H1",
+    "test_real_e_components": [
+      -1,
+      0,
+      1
+    ],
+    "test_real_phi_components": [
+      -1,
+      0,
+      1
+    ],
+    "source_B1_Higgs_Cl4_ordinary_verified_only": "Bounded predecessor SSC0.22; not source-wide graviweak dynamics closure",
+    "nonclaims": [
+      "No demonstration that arbitrary spacetime 1-form coefficients yield the correct physics or source-grading semantics.",
+      "No full 8x8 printed H1 matrix-element reconstruction in this packet.",
+      "No complete Table5 24-root/8-spinor weight audit.",
+      "No primitive closure or G1-G7/IA/DP/unification authority."
+    ]
+  },
+  "source_table5_boundary": {
+    "printed_page": 12,
+    "source_description": "The printed Table 5 asserts graviweak D4 roots for 24 bosons and 8_S+ fermion weights, using joined gravitational and electroweak Table3 and Table4 coordinates.",
+    "root_weight_rows_exactly_checked": false,
+    "root_triality_rotation_all_source_orbits_checked": false,
+    "source_physical_identification": "Author tentatively identifies T-related spinor vector representations with fermion generations and explicitly says exact generation relationship is unclear, not a forced theorem.",
+    "scope_caution": "Do not collapse source D4 triality to unique physical generation labelling or assume all source weight/root assertions without exact Table5 row audit."
+  },
+  "negative_evidence": {
+    "L01_real_Spin_Lie_group": "Published L01 SL(2,C)=SL(2,R)xSL(2,R) as REAL groups has separate center and Killing counterexamples; no repair from this Cl(7,1) coefficient example.",
+    "L05_original_O": "Original published L05 ordinary-O two-negative table and Clifford/noncommutator failures preserved unchanged.",
+    "source_dynamics": "Source Eq2.10 coefficient/aesthetic claim is not independent full physical unification/curvature theorem.",
+    "missing_exact_H1_source_elements": "Printed 8x8 quadrant formula has individual fields, charge, chirality and one-form grading not yet source-native fully extracted.",
+    "no_W_source_import": true
+  },
+  "next_lawful_step": "Independently replay all 8 Kronecker Cl(7,1) generators, 64 ordered anticommutator cells, and 16 mixed e phi ordered basis products with positive-chiral projection and source-reality negative controls. Treat success as source-only G0 finite evidence, not Table5, H1 full 8x8 or L01 whole-source closure."
+}
