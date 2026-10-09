@@ -1,0 +1,26 @@
+{
+  "schema": "isograph.exp062-l032-ssc028-failed-workflow-provenance-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_ADVERSARIAL_VERIFIER_ESCAPED_FAILED_RUN_ID_SOURCE_PROVENANCE_NOT_G1",
+  "run": {
+    "id": 37896672136,
+    "head_sha": "5ef37d2af8c3cab5b1388911c055f00472628a12",
+    "conclusion": "failure",
+    "baseline_source_checks_passed": true,
+    "mutation_defined": 23,
+    "rejected": 22,
+    "escaped": "rewrite first failed baseline as PASS"
+  },
+  "cause": "SSC0.28 verifier checked exact SHA of both failure records but did not check the revision.failed_fixtures[].id values against their actual GitHub runs. A hostile rewrite of the first failed run ID escaped its authority-routing contract.",
+  "repair": "Require both failed run IDs 37896172149 and 37896285018 in original order and the item-level source failed_fixtures run IDs with exact 0 mutations executed, preserving error status; re-run baseline and 23 effective mutations.",
+  "dispositions": {
+    "numeric_source_G0_baseline_math_unchanged": true,
+    "old_failed_runs_count_as_pass": false,
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "external_review_passed": false
+  }
+}
