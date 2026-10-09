@@ -1,0 +1,117 @@
+{
+  "schema": "isograph.exp062-w04de-23-source-expression-scope-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_W04D_E_G0_PRINTED_SOURCE_SCOPE_AND_EXPRESSION_CONSERVATION_DEFECT",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "predecessor": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_20.json",
+      "git_blob_sha": "f99127726608cc69216175d3b36fad0873aba4d3"
+    },
+    "historical_W86": {
+      "path": "experiments/062/W_G0_W05_17_SOURCE_DEMAND_PROJECTION_0_9.json",
+      "git_blob_sha": "ca3d39a70a7c265f7da66de69da7ae6e1182b29a"
+    }
+  },
+  "primary_existing_source_review": {
+    "path": "experiments/062/W04DE_G0_EXISTING_23_PRIMARY_SOURCE_DIRECT_REVIEW_0_1.json",
+    "git_blob_sha": "20bff13a791d9c1ca13babafb768860ec708ba82"
+  },
+  "affected_source_item_ids": [
+    "W-SSC-019",
+    "W-SSC-080",
+    "W-SSC-082",
+    "W-SSC-083",
+    "W-SSC-085",
+    "W-SSC-086",
+    "W-SSC-087",
+    "W-SSC-089",
+    "W-SSC-090",
+    "W-SSC-092",
+    "W-SSC-093",
+    "W-SSC-094",
+    "W-SSC-123",
+    "W-SSC-125",
+    "W-SSC-127"
+  ],
+  "affected_historical_86_ids": [
+    "W-SSC-083",
+    "W-SSC-087",
+    "W-SSC-090",
+    "W-SSC-092",
+    "W-SSC-093",
+    "W-SSC-094",
+    "W-SSC-123",
+    "W-SSC-125"
+  ],
+  "unmodified_pending_ids": [
+    "W-SSC-020",
+    "W-SSC-081",
+    "W-SSC-084",
+    "W-SSC-088",
+    "W-SSC-091",
+    "W-SSC-095",
+    "W-SSC-096",
+    "W-SSC-126"
+  ],
+  "issue_classes": [
+    {
+      "id": "W04E_UPPER_LOWER",
+      "source_id": "W04e",
+      "source_printed_substitution": "z=t-i*tau",
+      "condition": "tau>0",
+      "source_printed_claim": "holomorphic open upper-half z plane",
+      "kernel": "exp(-izE)=exp(-itE)exp(-tauE)",
+      "independently_implied_sign": "Im(z)=-tau<0",
+      "disposition": "SOURCE_INCONSISTENCY_PRESERVED_NOT_QUIETLY_FIXED"
+    },
+    {
+      "id": "W125_THETA",
+      "source_id": "W04e",
+      "predecessor_overclaim": "constructed sufficient twistor Theta already supplies conjugation",
+      "actual_source_claim": "finding appropriate version of Theta is related to twistor transform",
+      "disposition": "MODAL_OVERCLAIM_REOPENED_AND_CORRECTED"
+    },
+    {
+      "id": "W090_BAR",
+      "source_id": "W04d",
+      "source_prose": "S_R tensor conjugate(S_R)",
+      "source_displayed_relation": "S_R tensor S_R = 1 direct_sum V3",
+      "disposition": "LITERAL_SOURCE_DIFFERENCE_PRESERVED_NO_NORMALIZATION"
+    },
+    {
+      "id": "W04DE_STRUCTURAL_SCOPE",
+      "source_ids": [
+        "W04d",
+        "W04e"
+      ],
+      "issue": "Exact operators, Fourier energy/half-plane conditions, theta/OS form and free-field quotient, Euclidean/Minkowski conjugations, real-form group correspondence, null orbit topology/choice and hypothetical gauge bundles compressed to prose.",
+      "disposition": "SOURCE_STATEMENTS_VERSIONED_AND_SCOPED"
+    },
+    {
+      "id": "W04E_MUTABILITY",
+      "source_id": "W04e",
+      "source_pdf_date": "2026-07-14",
+      "blog_post_date": "2026-07-09",
+      "source_owner_update": "THINKING_CHANGING",
+      "disposition": "NO_OCT03_BYTE_IDENTITY_CLAIM"
+    }
+  ],
+  "source_not_mathematically_normalized": true,
+  "source_expansion": false,
+  "qualification": {
+    "G0_frozen": false,
+    "complete_reverse_assertion_enumeration": false,
+    "historical_W_G1_to_G7": "INVALIDATED",
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "discovery": "NO_W_L_SYNTHESIS_OR_UNSUPPORTED_PRIMITIVE_DEFINITION",
+  "provenance": {
+    "source_author": "Peter Woit",
+    "research_direction_owner": "Joshua Oshiro",
+    "direct_source_review": "agent-assisted; authored blog/slides/preliminary notes",
+    "earliest_evidence_currently_located": "2026-10-08 W04d/e primary author files and present web renderings"
+  }
+}

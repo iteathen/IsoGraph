@@ -1,0 +1,27 @@
+name: Experiment 062 W04d/e all 23 existing G0 source bodies 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_21.json'
+      - 'experiments/062/W04DE_G0_*'
+      - 'experiments/062/W_G0_W04DE_23_SOURCE_DEMAND_PROJECTION_0_10.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_6.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_7.json'
+      - 'experiments/062/W_G0_CARRIED_GATE_COUNTER_DEFECT_0_1.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_48.json'
+      - 'experiments/062/tools/verify-w04de-*'
+      - '.github/workflows/experiment-062-w04de-g0-source-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  source-verification:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Conserved 151 W source bodies and G0 gate
+        run: node experiments/062/tools/verify-w04de-existing23-source-0-1.mjs
+      - name: Independent finite chiral signs and complex time falsifiers
+        run: node experiments/062/tools/verify-w04de-independent-finite-source-0-1.mjs

@@ -18,7 +18,15 @@ See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FOR
 
 ## Current G0 source-fidelity and qualification boundary (2026-10-08)
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_47.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_20.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_48.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_21.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+
+### Current W04d/W04e 23-source-item completion — G0 unfrozen
+
+The W04d author [April blog](https://www.math.columbia.edu/~woit/wordpress/?p=15663), [28-slide presentation](https://www.math.columbia.edu/~woit/twistorunification/marseille.pdf), and W04e [July preliminary notes](https://www.math.columbia.edu/~woit/twistorunification/chiralwick-sketch.pdf) were directly compared with the last **23 previously pending existing SSC bodies**. `experiments/062/W04DE_G0_EXISTING_23_PRIMARY_SOURCE_DIRECT_REVIEW_0_1.json` inventories **all 23** individually. The new `SOURCE_SEMANTIC_CENSUS_0_21.json` applies **15 source-fidelity revisions** and leaves the other **136 W source objects exactly unchanged**. The historical 86-member W demand projection 0.10 changes only eight entries, leaving 78 unchanged; it remains **historical**, not the qualified full W demand corpus.
+
+Two particularly important source distinctions are retained without mathematical normalization: W04e prints `z=t-iτ` for positive `τ`, which algebraically places `z` in the *lower* half-plane, **but the source calls the domain upper**. W04d instead uses `z=t+iτ` with negative `τ` and lower-half holomorphy. W04e merely connects **finding** an appropriate twistor `Θ` to the transform; it does **not construct** an exact operator. W04d's proposed tensor product with a conjugate factor and its displayed Euclidean decomposition *without* that bar stay separately recorded. July `Φ` gauge/hypercharge and color constructions remain **potential**, not accomplished physical unification. All deviations and proposed repairs are scoped in `experiments/062/W04DE_G0_EXISTING_23_SOURCE_DEFECT_0_1.json`.
+
+The source inventory `experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_7.json` and review ledger `experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_6.json` now show **151/151 existing SSC bodies directly reviewed, zero existing bodies pending**, but **this does not prove complete reverse enumeration of every assertion in the original nine frozen sources**, nor verify byte identity with the exact October 3 retrievals of mutable pages and PDFs. `experiments/062/W_G0_CARRIED_GATE_COUNTER_DEFECT_0_1.json` preserves contradictory inherited historical stage-gate counters; gate 0.48 is rebuilt without them. The local deterministic test rejected **46/46** adversarial source/register/gate mutations and an independent finite arithmetic test rejected **8/8** wrong-map/half-plane controls over 81 chiral pairs and 45 energy-time cases. These are *internal* controls; Node CI must be verified after commit. No source claim or primitive has been promoted; G0 remains **open and unfrozen** with G1–G7 blocked.
 
 W05 §2–§7 was reopened for explicit formulas, negations and source table rows. Historical premature `CLOSED_PRIMITIVE` claims for W-SSC-109 and W-SSC-110 remain invalid. W109's eleven comparisons are source-author analogies only, not mathematical cross-domain equivalence.
 
@@ -253,7 +261,7 @@ The W track may lawfully reopen from this boundary only if: (1) new frozen W sou
 ## Historical primitive-closure checkpoint (superseded)
 
 - `CORE021_CLOSURE_LEDGER_0_19.json`: 21/151 frozen census obligations closed (12 schema + 9 primitive provenance), 130 INCOMPLETE_UNEXPANDED on corrected SSC 0.2.
-- Closed so far include W-SSC-001, 010, 018, 020, 021, 023–027, 046, 058, 078, 098, 111, 121, 128, 131, 138, 144, 145. Exact current dispositions are authoritative in CORE021_CLOSURE_LEDGER_0_19.json.
+- Closed so far include W-SSC-001, 010, 018, 020, 021, 023–027, 046, 058, 078, 098, 111, 121, 128, 131, 138, 144, 145. Those dispositions are historical evidence for the old SSC 0.2 tuple, **not current authority**.
 - `PRE_DP_GATE_0_1.json` explicitly blocks recursive IA until full primitive/schema closure and Core qualification, then requires IA fixed point -> NEI -> DTS -> DP.
 - No Lisi semantics are available to the W closure process.
 
