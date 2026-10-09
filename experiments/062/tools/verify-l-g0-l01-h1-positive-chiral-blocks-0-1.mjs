@@ -62,7 +62,7 @@ function verify(packet=D){
  for(const key of ['source_census_frozen','source_complete','G1_authorized','mathematical_8x8_gamma_equivalence_qualified','external_cold_review_passed'])ck(packet[key]===false,'no manufactured source/Clifford authority '+key);
  ck(packet.source?.section==='§2.2.3 Graviweak D4' || packet.source?.subsource?.length===3,'source hierarchy and prior frame/Higgs dependencies');
  ck(roles.whole_source_connection==='H_1=(1/2)*omega+(1/4)*e*phi+w_ew'&&roles.ordered_mixed_ephi==='e*phi=sum_{mu,nu} e^mu phi^nu Gamma_mu GammaPrime_nu, source order e then phi and graded ONE_FORM result; no commutation or reassociation assumption.','H1 mixed real source coefficient and form grading');
- ck(roles.frame_e?.includes('ONE_FORM')&&roles.higgs_phi?.includes('SCALAR')&&roles.electroweak_wew?.includes('independent RIGHT Pati-Salam B_1'),'source type of frame, Higgs and W/B1 actors');
+ ck(roles.frame_e?.includes('ONE_FORM')&&roles.higgs_phi?.includes('REAL source scalar components')&&roles.electroweak_wew?.includes('independent RIGHT Pati-Salam B_1'),'source type of frame, Higgs and W/B1 actors');
  ck(j(ch.printed_block_shape)===j([4,4])&&ch.block_entry_carrier?.includes('2x2')&&ch.source_statement?.includes('(8×8)')===false&&ch.source_statement?.includes('8x8'),'4-by-4 block matrix of 2-by-2 spinors is 8-by-8');
  ck(j(ch.spinor_input_column)===j(spinLabels)&&r.source_not_a_flat_4x4_scalar_matrix===true,'source spinor input actor column 4 x 2');
  ck(ch.source_2x2_block_action_proved_from_16x16_gamma_basis===false&&r.source_mathematical_8x8_Clifford_or_spinor_equivalence_not_independently_derived===true,'representational bridge NOT qualified');
