@@ -15,7 +15,7 @@ function check(q=G){
  const c=q.current_lawful_state||{},p=q.L01_07_modality_fidelity||{},ci=q.G0_19_CI||{};
  ck(q.schema==='isograph.exp062-l-current-stage-gate.v0.19'&&q.status==='L_G0_SSC_0_19_L01_SEVEN_FROZEN_SOURCE_MODALITIES_CI_PARTIAL_UNFROZEN_G1_G7_FORBIDDEN'&&q.track==='L'&&q.semantic_authority===false&&q.authority_effect==='PROCEDURAL_STAGE_ROUTING_ONLY','current L G0 routing only');
  ck(q.supersedes?.path===P.pre&&q.supersedes?.git_blob_sha===sha(P.pre)&&Previous.current_lawful_state?.G1_authorized===false,'exact old G0 gate');
- ck(q.current_source_census?.path===P.ssc&&q.current_source_census?.git_blob_sha===sha(P.ssc)&&q.current_source_census?.source_identities===191&&J(q.current_source_census?.changed_from_predecessor)===j(ids)&&q.current_source_census?.unchanged_from_predecessor===184,'current source SSC0.19 parent and conservation');
+ ck(q.current_source_census?.path===P.ssc&&q.current_source_census?.git_blob_sha===sha(P.ssc)&&q.current_source_census?.source_identities===191&&j(q.current_source_census?.changed_from_predecessor)===j(ids)&&q.current_source_census?.unchanged_from_predecessor===184,'current source SSC0.19 parent and conservation');
  ck(q.current_source_census?.frozen===false&&q.current_source_census?.source_complete===false&&S.guards?.source_census_freeze_complete===false&&S.revision?.G1_authorized===false,'source not frozen/qualified');
  ck(p.packet?.path===P.source&&p.packet?.git_blob_sha===sha(P.source)&&p.source_visual_pages?.path===P.visual&&p.source_visual_pages?.git_blob_sha===sha(P.visual),'source and primary visual audit SHA pins');
  ck(p.published_group_discrepancy?.path===P.spin&&p.published_group_discrepancy?.git_blob_sha===sha(P.spin),'real group source counterexample provenance');
