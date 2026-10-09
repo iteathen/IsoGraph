@@ -1,0 +1,25 @@
+name: Experiment 062 W01 Appendix B C second primary-source adversarial audit G0 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_29.json'
+      - 'experiments/062/W01_G0_BC_SECOND_PASS_*.json'
+      - 'experiments/062/W_G0_W01_BC_SECOND_SOURCE_DEMAND_PROJECTION_0_15.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_15.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_14.json'
+      - 'experiments/062/tools/verify-w01-bc-second-pass-0-1.mjs'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_56.json'
+      - '.github/workflows/experiment-062-w01-bc-source-second-pass-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-original-bc-source-reconstruction-0-1.mjs
+      - run: node experiments/062/tools/verify-w01-bc-second-pass-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-original-v2-reverse-0-1.mjs
