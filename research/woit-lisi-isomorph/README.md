@@ -104,7 +104,13 @@ The first W103 verifier failed an adversarial missing-member test by throwing; t
 
 Consequently G0 is reopened: W G1 through G7, primitive/schema closure, Recursive IA, and cross-track comparison remain unauthorized until complete, fail-closed source verification and lawful replay. This W track uses no L semantic premises or hypotheses.
 
-### L track — current SSC 0.30 / G0 gate 0.30 (2026-10-09)
+### L track — current SSC 0.31 / G0 gate 0.31 (2026-10-09)
+
+L-only SSC 0.31 conserves 191 source identities (190 entire predecessor records unchanged), extending L039 with the exact finite Clifford/Higgs gravity-quadratic consistency result and a *conditional* nondegenerate mixed-curvature factor-four comparison. The raw `(e phi)/4` derivative and named source `T phi-e Dphi` are not yet proved to use the same source output normalization. The author source, including L05's original inconsistent ordinary-octonion signs, is unchanged.
+
+The historical H1 common-basis verifier CI `37912033114` has a scoped **jet-verification defect**: the 96 quoted nondegenerate jet comparisons constructed both operands identically and did not independently check the factor four. Its Clifford/bracket tests and packet mutations remain historical evidence, *not* source-normalization qualification. See `experiments/062/L039_GRADED_JET_NORMALIZATION_TAUTOLOGY_VERIFIER_DEFECT_0_1.json`, the independent graded 1-jet successor under `experiments/062/tools/`, and `experiments/062/L_CURRENT_STAGE_GATE_0_31.json`. Current G0 remains unfrozen; complete source traversal, common-output maps, primitive closure, IA and G1–G7 are still forbidden until their actual obligations are discharged.
+
+#### Historical predecessor: SSC 0.30 / G0 gate 0.30
 
 **L remains independently OPEN and UNFROZEN at G0.** Current L-only source census `lisi/SOURCE_SEMANTIC_CENSUS_0_30.json` retains **191 stable source identities**, changes only L-SSC-039, and preserves 190 predecessor records; the procedural gate is `experiments/062/L_CURRENT_STAGE_GATE_0_30.json`. Historical G1–G7, Recursive IA, Discovery, W/L synthesis, global module promotion and draft PR #70 merge remain forbidden. The temporary owner bypass waives only external verifier *calls* and does not supply an external PASS.
 

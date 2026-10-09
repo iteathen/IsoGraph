@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l039-graded-jet-verifier-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "historical_workflow_run": 37912033114,
+  "historical_workflow_sha": "d045199ff64c32d3a92f2f4997b65d78ea45fd4f",
+  "affected_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l039-common-basis-normalization-0-1.mjs",
+    "git_blob_sha": "99ec2fc30c40f3835008701988cde07339f757dc"
+  },
+  "affected_scope": "96 NONDEGENERATE COFRAME JETS ONLY",
+  "observation": "In historical independentlyCompute, gradient and torsion Graw4 and Gnamed were each constructed by scaling the same mixed generator with the same hard-coded sign, and equality was then tested. Both values were the same before any source factor-1/4 comparison. The recorded ratio 4 was a fixed explanatory string rather than a source-derived compared coefficient.",
+  "violated_contract": "The narrow normalization claim requires independently evaluating source connection d((1/4)*e*phi) and named Eq3.4 F_gw=T*phi-e*Dphi, including signs and grading on genuine off-shell invertible-coframe jets. Equality of two copies of one constructed matrix cannot discharge this burden.",
+  "correction": {
+    "path": "experiments/062/tools/verify-l-g0-l039-independent-graded-jets-0-2.mjs",
+    "description": "Evaluate the raw one-form connection coefficient and named torsion/Higgs exterior form by separate 1-jet calculations at 48 gradient and 48 torsion cases; exercise all six oriented two-form coefficients in each case, exact factors, deterministic source/census routing and hostile mutations; import previous Clifford checks without rewriting them."
+  },
+  "repair_disposition": "REOPEN_JET_CALCULATION_NOT_SOURCE_AUTHORITY",
+  "discovery_disposition": "The conditional factor-four algebraic lead remains open and requires independent graded-jet replay. The normalizations could refer to different source output quantities. Neither a mathematical error in the author source nor a source-authorized N=M/4 basis identification follows.",
+  "owner": "HISTORICAL_PROJECT_VERIFIER_ONLY",
+  "source_author_fidelity_changed": false,
+  "old_CI_still_historical": true,
+  "external_cold_review_passed": false,
+  "qualifies_source_theory": false,
+  "G1_authorized": false
+}
