@@ -1,0 +1,45 @@
+{
+  "schema": "isograph.exp062-l039-ssc030-body-normalization-and-wedge-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_ADVERSARIAL_CENSUS_BODY_ESCAPE_TWO_LOAD_BEARING_ASSERTIONS_NEED_PROTECTION",
+  "failed_run": {
+    "id": 37904658269,
+    "head_sha": "bd2e49b1c101e3729e3bb52d6b6fb66604b51fca",
+    "conclusion": "failure",
+    "source_packet_verifier": "PASS 24/24",
+    "SSC_verifier": "FAIL 21/23 hostile mutations rejected",
+    "mutants_defined": 23,
+    "mutants_rejected": 21,
+    "mutants_escaped": [
+      "erase H1 source normalization",
+      "erase source wedge"
+    ]
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l039-ssc-source-0-30.mjs",
+    "git_blob_sha": "98772068ecae0cebb4f273f53a97e81041952e8c"
+  },
+  "causal_defects": [
+    {
+      "contract": "SSC039 newly conserves source H1=(1/2)*omega+(1/4)*e*phi+w_ew",
+      "failure": "body mutation removed 1/4 factor, but prior Fg text and unchanged packet still satisfied loose prose fragments",
+      "repair": "Require exact full printed H1 source connection in body, not just packet SHA."
+    },
+    {
+      "contract": "SSC039 must distinguish exterior W wedge W and B1 wedge B1 from ordinary matrix coefficient products",
+      "failure": "body mutation erased exterior-curvature W*W while duplicated literal Eq3.5 source still contained W*W",
+      "repair": "Require explicit full source interpretation fragment `independent exterior-curvature W*W and B1*B1`."
+    }
+  ],
+  "nonclaims": [
+    "No evidence the source author formula is wrong: this was a project-written verifier coverage gap.",
+    "No G1 or source-wide closure follows from 21/23 mutation rejections.",
+    "The source packet CI 37904387927 remains strictly finite source-only evidence."
+  ],
+  "minimal_repair": "Harden SSC verifier body preservation checks for both exact strings, rerun unmutated baseline and all 23 effective mutations. No change to frozen source or prior 190 items.",
+  "G1_authorized": false,
+  "source_census_frozen": false
+}
