@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-l01-table5-d4-f4-nonclaim-verifier-baseline-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_VERIFIER_NONCLAIM_STRING_EXPECTATION_BASELINE_FAILURE_NO_NUMERIC_MUTANTS_TESTED",
+  "failed_run": {
+    "id": 37885206752,
+    "head": "7695bd194897f6040cf75f83c8249bcf4a4be308",
+    "conclusion": "failure",
+    "baseline_error": "F4 named correspondence source only",
+    "adversarial_cases_defined": 31,
+    "adversarial_cases_tested": 0,
+    "triality_root_integer_computation_executed": false
+  },
+  "checker_before": {
+    "path": "experiments/062/tools/verify-l-g0-l01-table5-d4-triality-source-0-1.mjs",
+    "git_blob_sha": "c6a2681bae5f1fbc63832132e7dafd88adceddee"
+  },
+  "premise": "L01 §2.2.4 source only asserts D4 root and 8S+/8S−/8V weights as F4 root coordinates and tentatively identifies generation carriers; it does not prove all F4 brackets, real-form representation or physical equivalence.",
+  "cause": "Verifier required a not_claims array string to contain exact substring 'global F4', although the packet's first nonclaim says 'No proof of the full exceptional F4 brackets or faithful real-form Lie/algebra representation from these finite coordinates.' The source nonclaim is complete and stronger than the display token requirement.",
+  "repair": "Check the exact existing source-negative statement concerning full exceptional F4 brackets, not an artificial 'global F4' substring; then require passing baseline and effective hostile mutations before any promotion.",
+  "source_evidence_unchanged": true,
+  "source_PDF_revision": "arXiv:0711.0770v1 2007-11-06",
+  "source_census_frozen": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false
+}
