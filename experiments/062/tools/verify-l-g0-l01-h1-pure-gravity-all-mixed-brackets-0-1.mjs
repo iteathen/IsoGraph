@@ -67,7 +67,7 @@ function printedMatrix(mu,nu,rows=expectedRows){
  return a;
 }
 function printedGravityPair(mu,k){
- const a=zeros(8),spatial=k<4,space=spatial?6-mu-k:mu-1;
+ const a=zeros(8),spatial=k<3;
  // source mu,k zero-based; for spatial pairs, remaining spatial index is 0+1+2-mu-k=3-mu-k.
  const which=spatial?3-mu-k:mu;
  const spin=[s1,s2,s3][which];if(!spin)throw Error('bad spatial Clifford index');
