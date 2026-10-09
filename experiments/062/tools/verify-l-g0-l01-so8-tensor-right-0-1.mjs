@@ -10,7 +10,7 @@ function mathAudit(m={}){
  const Z=(r,c)=>Array.from({length:r},()=>Array(c).fill(0));
  const I=n=>Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>+(i===j)));
  const E=(n,i,j)=>{const a=Z(n,n);a[i][j]=1;return a};
- const mul=(a,b)=>{if(a[0].length!==b.length)throw Error('DIMENSION_MISMATCH');return a.map(row=>b[0].map((_,j)=>row.reduce((s,x,i)=>s+x*b[i][j],0))};
+ const mul=(a,b)=>{if(a[0].length!==b.length)throw Error('DIMENSION_MISMATCH');return a.map(row=>b[0].map((_,j)=>row.reduce((s,x,i)=>s+x*b[i][j],0)))};
  const T=a=>a[0].map((_,i)=>a.map(row=>row[i]));
  const sc=(a,v)=>a.map(row=>row.map(x=>x*v));
  const plus=(a,b)=>a.map((row,i)=>row.map((x,j)=>x+b[i][j]));
