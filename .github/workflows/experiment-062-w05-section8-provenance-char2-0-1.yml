@@ -1,20 +1,12 @@
-name: Experiment 062 W05 G0 section8 attribution and char2 hostile audit 0.1
+# This obsolete v0.1 verifier is retained only to reproduce known FAILED positive baselines.
+# Source G0 current testing uses experiment-062-w05-section8-provenance-char2-0-2.yml.
+# Archived failures: 37956466200, 37956974680, 37957892952.
+name: Experiment 062 W05 G0 obsolete failed checker 0.1 (manual-only)
 on:
-  push:
-    branches: [research/woit-lisi-isomorph-20261003]
-    paths:
-      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_34.json'
-      - 'experiments/062/W_CURRENT_STAGE_GATE_0_66.json'
-      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_20.json'
-      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_19.json'
-      - 'experiments/062/W05_G0_SECTION8_*.json'
-      - 'experiments/062/W05_G0_CHAR2_*.json'
-      - 'experiments/062/tools/verify-w05-section8-provenance-char2-0-1.mjs'
-      - '.github/workflows/experiment-062-w05-section8-provenance-char2-0-1.yml'
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
-  verify:
+  historical-failure-reproduction:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:

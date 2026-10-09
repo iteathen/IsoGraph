@@ -1,5 +1,10 @@
 # Woit full IsoGraph treatment
 
+## Post-CI W G0 workflow hygiene — 2026-10-09
+
+Current gate **0.68** [Node G0 guard run 37957893004](https://github.com/iteathen/IsoGraph/actions/runs/37957893004) passes the positive and **25/25** hostile controls against all 151 source items and 315 current structured incidences, while affirming G0 open. The obsolete v0.1 checker was *also* automatically retriggered and failed a third time at [run 37957892952](https://github.com/iteathen/IsoGraph/actions/runs/37957892952) because its workflow's broad `W05_G0_SECTION8_*.json` push filter matched new evidence. Its failure is unchanged, saved alongside the other two runs in `W05_G0_SECTION8_OBSOLETE_WORKFLOW_RETRIGGER_DEFECT_0_1.json`; the old workflow is now **manual-only**, and corrected v0.2 is the positive qualification test. This is CI housekeeping only; no source, gate, qualification, or L artifacts are altered.
+
+
 ## Current W G0 gate 0.68 — 2026-10-09 verified CI and original-page provenance blocker
 
 SSC **0.34** remains the unchanged 151-item source candidate (315 structured incidences), register **0.20** and coverage **0.19**. At [run 37956974726](https://github.com/iteathen/IsoGraph/actions/runs/37956974726), Node 26.7.0 passed the corrected positive baseline, **29/29** new hostile controls, 37/37 W05 selected-division controls, and 21/21 p=2,u=7 controls. Original verifier v0.1 failed positive at [37956466200](https://github.com/iteathen/IsoGraph/actions/runs/37956466200) and again [37956974680](https://github.com/iteathen/IsoGraph/actions/runs/37956974680); preserve both as unqualified. This evidence is internal and narrow.

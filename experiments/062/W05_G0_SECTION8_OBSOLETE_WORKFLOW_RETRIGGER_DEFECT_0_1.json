@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-w05-section8-obsolete-workflow-retrigger-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "VERIFIED_CI_WASTE_OBSOLETE_UNQUALIFIED_VERIFIER_0_1_RETRIGGERED_ON_NEW_EVIDENCE",
+  "source_original_workflow": {
+    "path": ".github/workflows/experiment-062-w05-section8-provenance-char2-0-1.yml",
+    "git_blob_sha": "cfd287f49edf8f3ff5e2d671cc1f81e74a96ab3a",
+    "workflow_name": "Experiment 062 W05 G0 section8 attribution and char2 hostile audit 0.1",
+    "original_paths_match": "experiments/062/W05_G0_SECTION8_*.json",
+    "verifier": "experiments/062/tools/verify-w05-section8-provenance-char2-0-1.mjs",
+    "known_positive_baseline": "FAIL_EXPECTED_UNDEFINED_WHERE_EVIDENCE_FALSE"
+  },
+  "preserved_actions_runs": [
+    {
+      "id": 37956466200,
+      "head": "e02fe76d362a23c4a0d8c9039be8161edbd83ca5",
+      "result": "FAILURE"
+    },
+    {
+      "id": 37956974680,
+      "head": "62a9505c473a25d16a3c640e216e61af16e46155",
+      "result": "FAILURE"
+    },
+    {
+      "id": 37957892952,
+      "head": "8268e22648ed77f53072872b323775b33bf5755f",
+      "result": "FAILURE"
+    }
+  ],
+  "replacement": {
+    "same_workflow_path": ".github/workflows/experiment-062-w05-section8-provenance-char2-0-1.yml",
+    "policy": "MANUAL_ONLY_FOR_HISTORICAL_FAILURE_REPRODUCTION",
+    "new_workflow_filename_required": false,
+    "versioned_defect_retained": true,
+    "original_verifier_unchanged": true,
+    "still_reproducible_if_dispatched": true,
+    "positive_replacement_workflow": ".github/workflows/experiment-062-w05-section8-provenance-char2-0-2.yml",
+    "current_passed_run": 37956974726
+  },
+  "CI_resource_effect": "NO_MORE_AUTOMATIC_FAILURE_ON_NEW_W05_SECTION8_JSON_FILES",
+  "G0_effect": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "source_semantics_changed": false,
+    "151_source_items_changed": false,
+    "stage_gate_0_68_remains_current": true,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "Historical v0.1 verifier never passed its positive baseline",
+    "Turning off push does not turn failed run into a pass",
+    "Source original Oct03 retrieval bytes remain unknown"
+  ]
+}
