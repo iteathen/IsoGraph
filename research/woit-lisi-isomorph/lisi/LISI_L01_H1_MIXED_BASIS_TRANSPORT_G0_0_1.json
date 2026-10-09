@@ -1,0 +1,129 @@
+{
+  "schema": "isograph.lisi-l01-mixed-basis-transport-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_CONDITIONED_UNIFORM_COORDINATE_TRANSPORT_NOT_AUTOMORPHISM_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "work": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      12,
+      23,
+      24
+    ],
+    "author_written_H1": "H_1=(1/2)*omega+(1/4)*e*phi+w_ew",
+    "author_written_Fgw": "F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])",
+    "source_roles": "Original 16x16 complex Clifford Gamma, gravity ordered Gamma_1..4 with Gamma4^2=-1; four positive GammaPrime, e one-form, phi real four-component scalar degree zero, omega W B1 independent degree-one connection forms."
+  },
+  "frozen_inputs": {
+    "gamma": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "graded": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json",
+      "git_blob_sha": "ab7b453996f14561982f858b06356592b54a49a5"
+    },
+    "symbolic": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_UNIVERSAL_SYMBOLIC_CURVATURE_G0_0_1.json",
+      "git_blob_sha": "bae5146f24f3d3559bfdbc39903e68b4e0defa59"
+    },
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "6004578250d4e742f70406f4a547410699ecd813"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea"
+    }
+  },
+  "scope": "Source-local restricted bosonic H1 and linear uniform real mixed-generator scaling only, holding original e, phi, omega and W/B1 components fixed. Project-coordinate construction, not an amendment to L01 or a semantic correspondence to any other theory.",
+  "coordinate_transport": {
+    "original_basis": "G_ab=Gamma_a Gamma_b, E_cd=GammaPrime_c GammaPrime_d, M_ac=Gamma_a GammaPrime_c; a,b,c,d in 1..4, G and E each six, M sixteen",
+    "N_basis": "N_ac=(1/4)*Gamma_a*GammaPrime_c",
+    "H1_mixed_term": "(1/4) sum_a,c e^a phi^c M_ac = sum_a,c e^a phi^c N_ac",
+    "general_constant_uniform_basis": "N=s*M for a single nonzero real s, fixing every G,E,source coefficient and differential first jet",
+    "curvature_mixed_coordinate": "coefficient_N=(1/(4*s))*printed_Fgw_polynomial; for s=1/4 coefficient_N=printed_Fgw_polynomial",
+    "uniqueness_proof": "At a nonzero independent de^a phi^c coefficient jet with omega=W=B1=0 and e=0, the raw H1 derivative in M coordinates is 1/4; the target printed symbolic polynomial coefficient is 1. Thus 1/(4s)=1, uniquely s=1/4 among uniform nonzero constant scalings. The full earlier H1 symbolic source-conditioned identity checks that the same factor holds with arbitrary omega,V,dphi as well.",
+    "G_action": "[G_ab,N_calpha]=2(eta_bc N_aalpha-eta_ac N_balpha), same coefficients as [G,M] expressed in M.",
+    "EW_action": "[E_ab,N_calpha]=2(delta_balpha N_ca-delta_aalpha N_cb), same coefficients as [EW,M] expressed in M.",
+    "mixed_bracket": "[N_aalpha,N_bbeta]=-(1/8)*(delta_alphabeta G_ab+eta_ab E_alphabeta), with antisymmetric index-ordered G/E and vanishing diagonal terms",
+    "pure_commutation": "[G_ab,E_cd]=0",
+    "bracket_transport_not_automorphism": "A uniform map f(G)=G, f(E)=E, f(M)=sM preserves the source mixed/mixed brackets iff s^2=1, since [M,M] is nonzero. s=1/4 fails. This does NOT contradict the validity of a mere basis-coordinate rescaling, which changes the numerical structure constants.",
+    "proof_boundary": "The exact printed source does not yet supply an independently reconstructed identification of named F_gw output coordinates with N=M/4. Therefore the basis is one lawful project representation explaining the arithmetic, not an author-stated solution or author error falsification."
+  },
+  "finite_evidence": {
+    "exact_source_metric": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clifford_bivector_dimension": 28,
+    "gravity_mixed_actions": 96,
+    "EW_mixed_actions": 96,
+    "mixed_mixed_actions": 120,
+    "mixed_to_gravity_nonzero": 24,
+    "mixed_to_EW_nonzero": 24,
+    "mixed_mixed_zero": 72,
+    "pure_G_EW_commuting": 36,
+    "whole_unordered_generator_pairs": 378,
+    "all_distinct_jacobi_triples": 3276,
+    "transformed_basis_jacobi_failures": 0,
+    "independent_original_16x16_Pauli_Kronecker_gamma_anticommutators": 64,
+    "positive_chirality_bivectors": 28,
+    "direct_matrix_tests_include_full_16x16_and_first_8x8": true,
+    "wrong_sign_mutant": {
+      "mutation": "Reverse all mixed/mixed bracket signs while keeping pure/mixed actions unchanged.",
+      "jacobi_triples_checked": 3276,
+      "jacobi_failures": 0,
+      "direct_original_source_matrix_bracket_mismatches": 48,
+      "consequence": "Jacobi closure alone accepts a source-wrong sign convention; exact original Pauli-product and source metric/basis alignment are independent necessary checks, even where the changed bracket defines a mathematically consistent alternative algebra."
+    },
+    "uniform_scale_adversarial_cases": 5,
+    "scale_mutants_rejected_local": 5,
+    "source_provenance_adversarial_cases": 7,
+    "source_mutants_status": "pending full checker CI",
+    "local_math_preflight": "PASS in two independently written JavaScript implementations",
+    "CI_status": "PENDING_AFTER_COMMIT"
+  },
+  "repair_vs_discovery": {
+    "repair_disposition": "No correction to source frozen PDF, prior L source packets, SSC0.31 or G0 gate; optional future verifier repair only if actual CI exposes an owner-specific issue.",
+    "discovery_disposition": "The fourfold normalization is mathematically realizable as a nonautomorphic mixed coordinate basis. Author's intended F_gw output map remains unresolved. A distinct Jacobi-only false positive is now preserved as an adversarial source fidelity warning."
+  },
+  "next_lawful_work": [
+    "Obtain independent paper-native generator and output-coordinate evidence for Eq3.4, beyond mere existence of a consistent coordinate choice.",
+    "Reconcile the independently preserved original 16x16 gamma and printed 8x8 chiral field blocks with exact phases/real coefficient roles; do not invent a relative i repair.",
+    "Finish full L01–L06 source-census audit, including L05 frozen-journal octonion sign inconsistency and source limits.",
+    "Only after frozen complete SSC proceed to G1 source reconstruction, primitive/schema closure and downstream applicable gates."
+  ],
+  "scope_guards": {
+    "printed_Fgw_output_basis_source_authorized": false,
+    "original_source_full_audit_complete": false,
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "cross_track_semantics_authorized": false,
+    "source_math_error_proved": false,
+    "external_cold_review_passed": false,
+    "physical_unification_qualified": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro — HUMAN_ORIGINATED_DIRECTION: independent full IsoGraph treatment of L, preserving source fidelity, before cross-track synthesis.",
+    "exact_formulation": "AI assistant — AGENT_ORIGINATED_FORMULATION: local G0 distinction of coordinate reparametrization versus source Lie-automorphism and exact Jacobi-fooling sign mutant.",
+    "evidence_method": "agent-assisted source-pinned original L01 PDF visual review and separately implemented bit-Clifford and 16x16 Pauli finite checks on 2026-10-09.",
+    "earliest_evidence_currently_located": "This 2026-10-09 research round and subsequent pinned GitHub public commit; no global novelty/priority claim.",
+    "external_antecedent": "Standard Clifford/Lie-algebra basis transformation, invariant Jacobi property, and frozen 2007 L01 formulas; no claim to invent these mathematical ideas."
+  }
+}
