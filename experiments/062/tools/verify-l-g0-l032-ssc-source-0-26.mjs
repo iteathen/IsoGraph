@@ -40,7 +40,7 @@ function verify(s=cur){
  ck(j(r0.source_discrepancy_disposition)===j(Packet.discrepancy_disposition),'research dispute owner and nonclaims not normalized');
  ck(r0.source_first_quadrant_CI?.run_id===37892025204&&r0.source_first_quadrant_CI?.adversarial_rejected===21&&r0.trace_square_CI?.run_id===37892401781&&r0.trace_square_CI?.matrix_pairs===16&&r0.trace_square_CI?.matrix_cells===1024&&r0.trace_square_CI?.adversarial_rejected===26,'item source CI exact');
  ck(r0.basis_only_similarity_falsified_under_declared_coefficient_scope===true&&r0.source_error_owner==='UNRESOLVED'&&r0.full_source_math_qualified===false&&r0.full_source_primitive_closed===false&&r0.G1_authorized===false&&r0.external_cold_review_passed===false,'strict source interpretation boundary');
- for(const token of ['trace=-8','trace=+8','16 independent','128 differing entries','1024 tested','source native','NO CONSTANT INVERTIBLE COMPLEX SIMILARITY','trace(S^-1 X^2 S)=trace(X^2)','COEFFICIENT','PROJECT-GENERATED','OPEN/UNAUTHORIZED'])
+ for(const token of ['trace=-8','trace=+8','16 independent','128 differing entries','1024 tested','source-native','NO CONSTANT INVERTIBLE COMPLEX SIMILARITY','trace(S^-1 X^2 S)=trace(X^2)','COEFFICIENT','PROJECT-GENERATED','OPEN/UNAUTHORIZED'])
  ck(item.body.includes(token),'record complete source detail literal '+token);
  ck(!item.body.includes('W-SSC-')&&s.guards.cross_author_semantics_available===false,'L-only firewall');
  return errors;
