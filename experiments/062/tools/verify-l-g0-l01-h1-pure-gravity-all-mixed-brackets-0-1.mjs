@@ -40,8 +40,8 @@ const sourcePairs=[[1,2],[1,3],[2,3],[1,4],[2,4],[3,4]];
 const printedOmega=[
  ['[i*sigma3,i*sigma3,i*sigma3,i*sigma3]','omega_S^3=+1'],
  ['[-i*sigma2,-i*sigma2,-i*sigma2,-i*sigma2]','omega_S^2=-1'],
- ['[+sigma1,+sigma1,-sigma1,-sigma1]','omega_T^1=+1'],
  ['[i*sigma1,i*sigma1,i*sigma1,i*sigma1]','omega_S^1=+1'],
+ ['[+sigma1,+sigma1,-sigma1,-sigma1]','omega_T^1=+1'],
  ['[+sigma2,+sigma2,-sigma2,-sigma2]','omega_T^2=+1'],
  ['[+sigma3,+sigma3,-sigma3,-sigma3]','omega_T^3=+1']
 ];
