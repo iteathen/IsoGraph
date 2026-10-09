@@ -1,0 +1,26 @@
+name: Experiment 062 W05 G0 6.2–6.3 source first and lineage 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_35.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_69.json'
+      - 'experiments/062/W05_G0_SECTIONS62_63_*.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_21.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_20.json'
+      - 'experiments/062/W_G0_W05_S62_S63_SOURCE_DEMAND_PROJECTION_0_19.json'
+      - 'experiments/062/tools/verify-w05-sections62-63-primary-source-g0-0-1.mjs'
+      - '.github/workflows/experiment-062-w05-section62-63-source-g0-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w05-sections62-63-primary-source-g0-0-1.mjs
+      - run: node experiments/062/tools/verify-w05-section8-provenance-char2-0-2.mjs
+      - run: node experiments/062/tools/verify-w-current-g0-stage-0-8.mjs
