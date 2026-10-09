@@ -1,0 +1,152 @@
+{
+  "schema": "isograph.lisi-l01-cl71-to-H1-native-basis-mixed-phase-diagnostic.g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "EXACT_SAME_COEFFICIENT_NATURAL_BASIS_MIXED_PHASE_DISCREPANCY_SOURCE_OWNER_UNKNOWN_UNQUALIFIED",
+  "authority": false,
+  "source_census_frozen": false,
+  "source_math_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_locator": [
+      "§2.2.1 p8 original chiral e_R/e_L spin frame matrices",
+      "§2.2.2 p10 Higgs phi labels and Pauli factors",
+      "§2.2.3 p12 eight source Cl(7,1) 16x16 Gamma tensors, Eq.(2.10), H1 positive chiral 8x8 labelled matrix"
+    ],
+    "scope": "G0 source-native SAME e^mu and phi^nu coefficient labels, natural exact printed Kronecker product factor order and first eight rows/columns. Does NOT test all possible source-equivalent spinor basis changes, phase maps or coefficient redefinitions."
+  },
+  "parents": {
+    "Cl71_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "H1_printed_2x2_blocks": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "current_SSC_0_25": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_25.json",
+      "git_blob_sha": "a72816c54ed0668622ba28ebb81966b6b8232f2a"
+    },
+    "G0_GATE_0_25": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_25.json",
+      "git_blob_sha": "6e09aecabecca945627ad82bc990a122f6fc3230"
+    }
+  },
+  "mathematical_sources": {
+    "Gamma_roles": [
+      {
+        "label": "Gamma1",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma1",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 0
+      },
+      {
+        "label": "Gamma2",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma2",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 1
+      },
+      {
+        "label": "Gamma3",
+        "source_tensor": "sigma2 tensor sigma3 tensor I2 tensor sigma3",
+        "metric_role": "SPACE_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 2
+      },
+      {
+        "label": "Gamma4",
+        "source_tensor": "i*sigma1 tensor I2 tensor I2 tensor I2",
+        "metric_role": "TIME_NEGATIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 3
+      },
+      {
+        "label": "GammaPrime1",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma1 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 4
+      },
+      {
+        "label": "GammaPrime2",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 5
+      },
+      {
+        "label": "GammaPrime3",
+        "source_tensor": "sigma2 tensor sigma1 tensor sigma3 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 6
+      },
+      {
+        "label": "GammaPrime4",
+        "source_tensor": "sigma2 tensor sigma2 tensor I2 tensor I2",
+        "metric_role": "ELECTROWEAK_POSITIVE",
+        "carrier": "16x16 complex source matrix",
+        "order": 7
+      }
+    ],
+    "source_first_quadrant": "Use source eight ordered 16x16 Clifford tensors, form 16 ordered products Gamma_mu GammaPrime_nu (mu,nu=1..4), extract row/column 0..7, no hidden basis permutation.",
+    "source_H1_equation": "H_1=omega/2 + (e phi)/4 + w_ew; source e phi=sum_mu nu e^mu phi^nu Gamma_mu GammaPrime_nu.",
+    "printed_H1_source": "Reconstruct source mixed term from printed 4x4 of 2x2 blocks, with e_R=i(e^4-sum e^eps sigma_eps), e_L=i(e^4+sum e^eps sigma_eps), and phiPlus/Minus/Zero/One with all four REAL phi components.",
+    "coefficient_provenance": "Treat e^mu (gravity frame ONE-FORM) and phi^nu (real Higgs scalar) as independent source coefficient roles, do not change those under a tensor-basis-only test.",
+    "source_T_quarantine": "No L/W comparison, no W premises, no conventional group isomorphism or physical three generations."
+  },
+  "finite_claim_under_declared_representation": {
+    "ordered_basis_product_pairs": 16,
+    "matrix_dimension": 8,
+    "cells_compared_per_basis_pair": 64,
+    "direct_native_tensor_vs_printed_H1_mixed_pairs_exactly_equal": 0,
+    "direct_native_tensor_vs_printed_H1_mixed_coefficient_mismatches": 128,
+    "direct_source_pair_nonzero_mismatched_entries_each": 8,
+    "first_counterexample": {
+      "mu": 1,
+      "nu": 1,
+      "source_row": 0,
+      "source_col": 7,
+      "direct_first_quadrant_Gamma_mu_GammaPrime_nu": "1",
+      "printed_8x8_H1_block_ephi_coefficient": "-i",
+      "direct_product_times_minus_i": "-i",
+      "source_full_H1_mixed_prefactor": "1/4 on both representations"
+    },
+    "project_generated_scalar_diagnostic_NOT_SOURCE": {
+      "factor": "-i",
+      "native_tensor_to_printed_mixed_mismatch_after_factor": 0,
+      "pairs_checked": 16,
+      "disposition": "DIAGNOSTIC_POSSIBLE_PHASE_OR_NORMALIZATION_DIFFERENCE_NOT_SOURCE_CORRECTION",
+      "global_gamma_Clifford_redefinition_authorized": false,
+      "field_coefficient_redefinition_authorized": false,
+      "field_grading_or_dynamics_qualified": false
+    }
+  },
+  "positive_controls": {
+    "pure_gravity_Gamma1Gamma2": "Natural selected upper 8x8 source gamma product Gamma1 Gamma2 acts as +i sigma3 on each of four spinor doublets; source omega_S^3 coefficient also multiplies i sigma3. This fixes at least one Pauli orientation independent of the mixed factor.",
+    "pure_EW_GammaPrime1GammaPrime2": "Natural selected upper 8x8 source gamma-prime bivector has ±i*I2 diagonal on EW SU2_doublet labels; the source W3/B1^3 diagonal operator conventions contain corresponding i signs.",
+    "signed_Cl71_metric": "The source has signature (+,+,+,-,+,+,+,+) in exact printed eight Gamma order; no euclideanization or spin time sign repair allowed."
+  },
+  "strict_nonconclusions": [
+    "Direct mismatch in one source-order basis is NOT proof of an intrinsic mathematical inconsistency; an admissible but unrepresented similarity transform, spinor-state phase, field-coefficient convention or other source semantic distinction may reconcile the two displays.",
+    "Applying global -i to the Gamma mixed products is an independent diagnostic interpolation, NOT a source-asserted operator identity or lawful correction of published Eq.(2.10).",
+    "Do not identify exact physical fields, group phases, Lie brackets or independent real forms from this finite comparison.",
+    "The original frozen L01 real SL(2,C) group assertion and L05 journal original octonion contradictions remain separate proven source-internal negative evidence.",
+    "No current L01–L06 source census completeness, primitive closure, G1–G7, IA or external cold review follows."
+  ],
+  "discrepancy_disposition": {
+    "representation_owner": "UNRESOLVED_CANDIDATE",
+    "source_published_error": "NOT_ESTABLISHED",
+    "comparison_field_roles": "EQUAL_DECLARED_e_mu_phi_nu_SCOPE_ONLY",
+    "operator_target": "SOURCE_CLAIMED_POSITIVE_CHIRAL_8x8_VERSUS_EXPLICIT_16x16_CL71_FIRST_BLOCK",
+    "next_step": "Cold-source search for source-published change-of-basis/phase transformation, alternative chiral spinor ordering, hidden i field normalization or bracket convention; require independent 16 source pair reconstruction and witness countercontrols first."
+  }
+}
