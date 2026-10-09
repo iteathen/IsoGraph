@@ -34,6 +34,8 @@ The L track's [G0 source packet](lisi/LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.
 
 The predecessor BF auxiliary action-source run [37976439279](https://github.com/iteathen/IsoGraph/actions/runs/37976439279) succeeded with exact source and stage guards; its [immutable audit](../../experiments/062/L042_L043_BF_G0_CI_AND_CONSERVATION_0_1.json) preserves the limited result. No external cold proof or physics qualification follows.
 
+**L S2 source-scope CI verified (run 37977585087):** [GitHub Actions](https://github.com/iteathen/IsoGraph/actions/runs/37977585087) passed the G0 checker over all 15 abstract Hodge/trace Gram entries, 5 algebraic falsifiers and 12 source mutations. [Exact run/census evidence](../../experiments/062/L044_L045_SO8_S2_G0_CI_AND_CONSERVATION_0_1.json) conserves 189 untouched L-SSC predecessor records and retains the original author's speculative-action caveat. There is no source-derived E8 counterexample or full action-equivalence qualification; no stage or merger promotion follows.
+
 ## Public author-explanation research (2026-10-08; external evidence, not semantic authority)
 
 The owner requested a thorough **public-explanation search before any future author question**, and **no author outreach whatsoever until the complete applicable G-stage sequence, including G7, passes three to four meaningfully independent and adversarial verification passes**. Existing research does not satisfy that outreach gate. The first and second search passes are **NOT exhaustive**, not a verified source semantic census, and not a permission to contact either author.

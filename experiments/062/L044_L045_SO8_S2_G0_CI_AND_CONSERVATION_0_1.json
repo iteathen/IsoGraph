@@ -1,0 +1,116 @@
+{
+  "schema": "isograph.exp062-L044-L045-S2-quadratic-G0-CI-and-source-audit.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "run": {
+    "id": 37977585087,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37977585087",
+    "head_sha": "ad2d15e42dc22b6639cdfe316558b746bf863e95",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 113979648783,
+    "external_cold_review_passed": false
+  },
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "printed_pages": [
+      24,
+      26,
+      27
+    ],
+    "modality": "source proposal, action for new fields is speculative"
+  },
+  "source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.json",
+    "git_blob_sha": "114d7746efc074a15dae814f708f21758b86c507"
+  },
+  "checker": {
+    "path": "experiments/062/tools/verify-l-g0-l01-so8-s2-quadratic-0-1.mjs",
+    "git_blob_sha": "338014a3e1c9dd1342561b8592e07ccf61941e65"
+  },
+  "verification": {
+    "schema": "isograph.exp062-L01-so8-S2-conditional-Gram-G0.v0.1",
+    "status": "PASS",
+    "issues": [],
+    "abstract_Gram_variables": 15,
+    "exact_Gram_coefficients": 15,
+    "nonzero_residual_coefficients": [
+      [
+        "Fw",
+        "FB2",
+        2
+      ],
+      [
+        "Fw",
+        "Fx",
+        2
+      ],
+      [
+        "Fw",
+        "Fg",
+        2
+      ],
+      [
+        "FB2",
+        "Fx",
+        2
+      ],
+      [
+        "FB2",
+        "Fg",
+        2
+      ],
+      [
+        "Fx",
+        "Fg",
+        2
+      ],
+      [
+        "Q",
+        "Q",
+        -1
+      ]
+    ],
+    "coefficients_scaled_by_four": true,
+    "generic_Q_only_residual": "-1/4",
+    "generic_named_cross_residual": "+1/2",
+    "math_mutation_classes_defined": 5,
+    "math_mutation_classes_rejected": 5,
+    "source_revision_role_scope_mutations_defined": 12,
+    "source_revision_role_scope_mutations_rejected": 12,
+    "actual_E8_admissible_counterexample_proved": false,
+    "extra_condition": "H(Q,Q)=2*sum_0<=i<j<4 H(Fi,Fj) for equality under abstract symmetric pairing H",
+    "pairings_unconstrained_in_test": true,
+    "countermodel_not_source_theory_counterexample": true
+  },
+  "census": {
+    "old_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_33.json",
+    "old_blob_sha": "d3fb7f7cd752a286dea438fcd714cba38d6adb6a",
+    "new_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_34.json",
+    "new_blob_sha": "fd7a7376670bc00a585a6da56feae0a69593c6d7",
+    "source_IDs_old": 191,
+    "source_IDs_new": 191,
+    "unique_source_IDs": 191,
+    "changed_full_records": [
+      "L-SSC-044",
+      "L-SSC-045"
+    ],
+    "untouched_complete_records": 189,
+    "source_semantic_audit_of_other_189_newly_performed": false
+  },
+  "dispositions": {
+    "repair": "No source or implementation error diagnosed; no changes to original L01 source paper or historical SSC0.33 and gate0.33.",
+    "discovery": "Generic Gram residual is a concrete missing source constraint; preserve as source local evidence until E8 root-generator, Hodge metric, coupling and Q pairing are reconstructed.",
+    "qualifies_full_E8_quadratic_action": false,
+    "qualifies_source_author_math_error": false,
+    "qualifies_source_census_freeze": false,
+    "authorizes_G1": false,
+    "authorizes_cross_author_semantics": false,
+    "authorizes_author_outreach": false,
+    "authorizes_PR70_merge": false
+  },
+  "next": "Independently source-construct Q=(xPhi)(xPhi) and its trace/Hodge pairings with four source Fw/FB2/Fx/Fg sectors. Determine the exact author's 'three parts' grouping only from frozen L sources, not from desired comparison. Preserve prior H1 Fgw normalization and BF action boundary issues."
+}
