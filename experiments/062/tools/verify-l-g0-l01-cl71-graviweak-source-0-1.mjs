@@ -69,6 +69,7 @@ function typedSourceCheck(p=src){
  ck(p.source_table5_boundary?.root_weight_rows_exactly_checked===false&&p.source_table5_boundary?.root_triality_rotation_all_source_orbits_checked===false&&p.source_table5_boundary?.source_physical_identification?.includes("tentatively"),"Table5 and triality physical generation OPEN");
  ck(p.negative_evidence?.no_W_source_import===true&&p.negative_evidence?.source_dynamics?.includes("not independent full physical")&&p.finite_math_scope?.nonclaims?.some(x=>x.includes("No full 8x8")),"negative outcomes and open G0 source");
  ck(p.next_lawful_step?.includes("64 ordered anticommutator")&&p.next_lawful_step?.includes("16 mixed")&&!str(p).includes("W-SSC-"),"source-only next work");
+ if(errors.length)return {errors,stats:null}; // baseline-first: effective hostile source mutations fail structurally before expensive finite suite.
  // Independent two-dimensional Pauli matrices reconstruct all 16x16 source gamma products.
  let ordered=0,cellFailures=0,diagNeg=0;
  for(let i=0;i<8;i++)for(let j=0;j<8;j++){
