@@ -1,0 +1,149 @@
+{
+  "schema": "isograph.lisi-L01-BF-action-gravity-auxiliary-G0.v0.1",
+  "recorded_date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_CONSERVED_GRAVITY_AND_NON_GRAV_AUXILIARY_ELIMINATION_DIAGNOSTIC_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1",
+    "pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      25,
+      26
+    ],
+    "sections": [
+      "3.2",
+      "3.2.1"
+    ],
+    "modality": "source-authored proposed action, not externally verified mathematical or physical dynamical equivalence"
+  },
+  "dependencies": {
+    "prior_ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_32.json",
+      "git_blob_sha": "1d0c6b019244379c7bbd21843613ed5aa255107e"
+    },
+    "prior_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_32.json",
+      "git_blob_sha": "cfd62d851a0fce0ac980a7be992e5ddd632e1dd7"
+    },
+    "original_gamma": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "prior_visual_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    }
+  },
+  "source_facts": {
+    "action_3_7": "S=integral<trace(Bdot Fdot + (pi*G/4)*BG*BG*gamma - Bprime*star(Bprime))>",
+    "source_curvature_F": "Fdot=F1+F2+D(Psi_I)+D(Psi_II)+D(Psi_III); bosonic and fermionic graded terms have distinct form/statistics",
+    "bosonic_B": "B=e8-valued 2-form Lagrange multiplier, BG is so(3,1) 2-form, Bprime is complementary bosonic 2-form",
+    "fermionic_B": "anti-Grassmann 3-form Lagrange-multiplier component in Bdot, distinct from bosonic B and never used in bosonic stationary substitution",
+    "gamma": "gamma=Gamma1 Gamma2 Gamma3 Gamma4, gravitational Clifford volume element in original gamma order",
+    "scalar_pairing": "<...> is the scalar part / trace of the Clifford coefficient product, including exterior-form degree",
+    "source_gravity_onshell_B": "BG=(2/(pi*G))*FG*gamma",
+    "source_gravity_onshell_action": "SG=(1/(pi*G))*integral<trace(FG*FG*gamma)>",
+    "source_non_gravity_action": "Sprime=-(1/4)*integral<trace(Fprime*star(Fprime))>",
+    "reduced_3_8": "S=integral<trace(Bfermion*D(Psi)) + volume4*(phi^2/(16*pi*G))*(Rscalar-(3/2)*phi^2) -(1/4)*trace(Fprime*star(Fprime))> [UP_TO_BOUNDARY]",
+    "source_gravity_FG": "FG=(1/2)*(Rcurvature-(1/8)*e*e*phi^2)",
+    "source_curvature_boundary": "<Rcurvature*Rcurvature*gamma>=d(<(omega*d(omega)+(1/3)*omega*omega*omega)*gamma>)",
+    "gravitational_after_discard": "SG=(1/(16*pi*G))*integral volume4*phi^2*(Rscalar-(3/2)*phi^2), AFTER dropping curvature boundary term",
+    "cosmological_scale": "Lambda=(3/4)*phi^2, as source vacuum-sector interpretation",
+    "physical_model_qualification": "proposed matching to Standard Model and gravity, not an established externally qualified theory"
+  },
+  "roles": {
+    "BG": {
+      "form_degree": 2,
+      "gravity_so31": true,
+      "bosonic": true
+    },
+    "Bprime": {
+      "form_degree": 2,
+      "complementary_non_gravity": true,
+      "bosonic": true
+    },
+    "Bfermion": {
+      "form_degree": 3,
+      "anti_Grassmann": true,
+      "not_bosonic": true
+    },
+    "FG": {
+      "form_degree": 2,
+      "gravity": true
+    },
+    "Fprime": {
+      "form_degree": 2,
+      "non_gravity": true
+    },
+    "gamma": {
+      "Clifford_grade": 4,
+      "spacetime_form_degree": 0,
+      "source_gravitational_generator_order": [
+        "Gamma1",
+        "Gamma2",
+        "Gamma3",
+        "Gamma4"
+      ]
+    },
+    "star": {
+      "maps": "spacetime two-forms to two-forms",
+      "requires": "invertible four-dimensional Lorentzian frame/coframe"
+    },
+    "volume4": {
+      "form_degree": 4
+    },
+    "phi": {
+      "form_degree": 0,
+      "source_real_Higgs_scalar_multiplet": true
+    }
+  },
+  "project_math": {
+    "metric": "gravitational and spacetime local orthonormal signature (+,+,+,-)",
+    "gamma_square": "gamma^2=-1 in the original source Cl(3,1) realization; gamma commutes with each of six gravity bivectors",
+    "gravity_rescaling": "Y=(pi*G/2)*BG; the gravitational Lagrangian times pi*G becomes <2 Y wedge FG + Y wedge Y gamma>",
+    "gravitational_Euler_Lagrange": "FG + Y gamma=0 -> Y=FG gamma because gamma^2=-1",
+    "grav_on_shell": "(pi*G)*LG_on_shell=<FG wedge FG gamma>; valid as an exact local algebraic density, not after dropping source Rcurvature Rcurvature boundary",
+    "lorentzian_hodge": "star^2=-1 on spacetime 2-forms in 4D Lorentzian signature; star-pairing is symmetric under integration",
+    "non_grav_Euler_Lagrange": "Fprime-2 star(Bprime)=0 -> Bprime=-(1/2)star(Fprime)",
+    "non_grav_on_shell": "Lprime_on_shell=-(1/4)<Fprime wedge star(Fprime)>",
+    "exact_finite_checks": "36 gravity Clifford-bivector/spacetime-bivector source basis carriers -> 1296 ordered basis-pair on-shell and stationarity checks; six spacetime twoform carriers -> 36 ordered Hodge-stationarity and on-shell pair checks, not finite random samples.",
+    "direct_source_Pauli": "The previously reconstructed original 16x16 source Pauli tensors separately check all 64 gamma anticommutators and source Clifford signature. This packet independently checks the graded blade product and internal pseudoscalar.",
+    "does_not_prove": "Actual full e8 action, Grassmann sector dynamics, boundary conditions and global variational equivalence, coframe existence/physical invertibility, topological characteristic class, arbitrary gauge sector signature, or correctness of an author's physics."
+  },
+  "source_modality_guards": {
+    "original_3_8_only_up_to_boundary": true,
+    "gravitational_RR_term_retained_before_reduction": true,
+    "boundary_discard_is_explicit": true,
+    "arbitrary_boundaries_equivalent": false,
+    "fermionic_multiplier_not_eliminated_by_bosonic_variation": true,
+    "Hodge_requires_non_degenerate_Lorentzian_coframe": true,
+    "full_E8_action_derivation_complete": false,
+    "arbitrary_signatures_covered": false,
+    "all_source_assertions_cold_audited": false,
+    "G1_authorized": false,
+    "current_source_census_frozen": false,
+    "author_math_error_proved": false,
+    "cross_author_semantics_authorized": false,
+    "external_cold_qualification_passed": false
+  },
+  "source_census_delta": {
+    "current_source_items": 191,
+    "changed_only": [
+      "L-SSC-042",
+      "L-SSC-043"
+    ],
+    "unchanged_complete_records": 189,
+    "frozen": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro: independent full source-faithful L IsoGraph research",
+    "formalization": "AI-assisted source Eq3.7–3.8 typed G0 conservation and exact finite algebraic proof on 2026-10-09",
+    "external_antecedents": "A. Garrett Lisi original 2007 source; standard Clifford gamma and Lorentzian Hodge identities; no priority claim",
+    "source_evidence": "Direct visual inspection of original arXiv:0711.0770v1 PDF zero-based pp25–26, distinct from secondary descriptions"
+  },
+  "next_lawful_step": "Continue source exact gravitational Palatini/Hodge/fermionic boundary and full source census, preserving incomplete primitive closure and G0-only stage; do not merge or contact authors."
+}
