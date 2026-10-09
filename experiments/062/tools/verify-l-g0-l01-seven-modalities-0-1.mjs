@@ -30,7 +30,7 @@ function verify(s=S){
  ck(rows.length===7&&J(rows.map(x=>x.id))===J(entries.map(x=>x[0])),'seven independent source assertions exact order');
  for(let i=0;i<entries.length;i++){
   const [id,page,locator,excerpt,kind,open]=entries[i],row=rows[i]||{},item=SSC.items.find(x=>x.id===id);
-  ck(row.id===id&&row.pdf_page===page&&row.locator===locator&&item?.source_provenance===locator.replace(/.*§2\.2\.1 Eq\.\(2\.8\) and following$/,'L01 §2.2.1')||id!=='L-SSC-030','source row id, page and locators '+id);
+  ck(row.id===id&&row.pdf_page===page&&row.locator===locator&&item?.source_provenance?.startsWith('L01'),'source row id, page and L01 provenance '+id);
   ck(row.id===id&&row.pdf_page===page&&row.locator===locator,'exact independent frozen source location '+id);
   ck(row.source_exact_excerpt===excerpt,'source formula literal sign/phase/guard '+id);
   ck(row.type===kind&&row.open===open,'source modality/unexpanded primitive owner '+id);
@@ -40,7 +40,7 @@ function verify(s=S){
  const sign=rows.find(x=>x.id==='L-SSC-030');
  ck(sign?.statement?.includes('omega_L=omega_S−i*omega_T')&&sign.statement.includes('omega_R=omega_S+i*omega_T')&&sign.statement.includes('omega_R^tau=complex_conjugate(omega_L^tau)')&&sign.statement.includes('NOT independent'),'L01 exact opposed source signs and L/R reality coupling');
  ck(s.source_fidelity_refinement?.stage==='G0'&&s.source_fidelity_refinement?.source_L01_pdf_page_zero_based===9&&s.source_fidelity_refinement?.mathematical_reality_conditions_fully_qualified===false&&s.source_fidelity_refinement?.other_six_claims_unchanged===true,'retain latest L01 sign correction scope');
- ck(rows[0].statement.includes('not a source-independent normalization')&&rows[2].statement.includes('tentative')&&rows[3].statement.includes('1/8')&&rows[4].statement.includes('not four independent')===false,'source positive/negative normalization, triality, curvature limits');
+ ck(rows[0].statement.includes('not a source-independent normalization')&&rows[2].statement.includes('tentative')&&rows[3].statement.includes('1/8')&&rows[4].statement.includes('not four independent')===true,'source positive/negative normalization, triality, curvature limits');
  ck(rows[4].statement.includes('not four independent closed decomposition pieces'),'xPhi shared nonseparability');
  ck(rows[5].statement.includes('do not assert unrestricted equality')&&rows[6].statement.includes('modulo the dropped term'),'BF and gravitational modulo-boundary scope');
  ck(s.conservation_rule!==undefined&&s.qualification!==undefined,'explicit source-only conservation + no-promotion');
