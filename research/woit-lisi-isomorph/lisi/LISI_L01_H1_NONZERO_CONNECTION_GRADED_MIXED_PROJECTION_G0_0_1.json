@@ -1,0 +1,82 @@
+{
+  "schema": "isograph.lisi-l01-nonzero-connection-graded-mixed-projection-g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_CONDITIONED_NONZERO_GRAVITY_ELECTROWEAK_MIXED_PROJECTION_PROJECT_DIAGNOSTIC_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      12,
+      23,
+      24
+    ],
+    "source_H1": "H1=(1/2)*omega+(1/4)*e*phi+(W+B1)",
+    "source_Fgw": "F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])",
+    "source_curvature": "F1=d(H1)+H1 wedge H1 (graded coefficient algebra in restricted bosonic Cl(7,1) sector)",
+    "source_higgs_form_degree": 0,
+    "source_e_form_degree": 1,
+    "source_omega_form_degree": 1,
+    "source_W_B1_form_degree": 1
+  },
+  "parents": {
+    "predecessor_ssc031": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "6004578250d4e742f70406f4a547410699ecd813"
+    },
+    "current_G0_gate031": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea"
+    },
+    "previous_common_basis_diagnostic": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRADED_H1_COMMON_BASIS_NORMALIZATION_G0_0_1.json",
+      "git_blob_sha": "8ded0dde3d3fecafb3a5962809bc12f497c8f05e"
+    },
+    "graded_source_Eq31_Eq35": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json",
+      "git_blob_sha": "ab7b453996f14561982f858b06356592b54a49a5"
+    }
+  },
+  "exact_scope": {
+    "Clifford_basis": "Eight original source ordered Cl(7,1) gamma operators; eta=(+,+,+,-,+,+,+,+). Use 256 signed Clifford blades as a project algebraic reconstruction, source Gamma Pauli 16x16 direct tests are independently retained in predecessor verifier.",
+    "generators": "Pure gravitational six G_ab=Gamma_a Gamma_b; pure primed electroweak six V_cd=GammaPrime_c GammaPrime_d; mixed 16 M_ac=Gamma_a GammaPrime_c.",
+    "differential_forms": "e,omega,W,B1 are degree-one forms and phi is degree-zero scalar; form 2-coefficients use dA_pq=partial_p A_q-partial_q A_p and [A_p,A_q] for wedge product.",
+    "frozen_roles": "omega in the gravitational bivectors, W+B1 in six primed electroweak bivectors, e in four gravitational gamma directions, phi in four primed gamma directions. All coefficient 1-jets off shell and frame invertible at chosen base point.",
+    "scalar_fields": "Real independent coefficient samples only; no Grassmann, H2, dynamical action, E8 global embedding, source field normalizer or physical solutions."
+  },
+  "project_derivation": {
+    "H1_coefficient": "H_i=(1/2)*Omega_i+(1/4)*e_i*Phi+V_i, with V_i=W_i+B1_i",
+    "differential": "partial_p(e_q*Phi)-partial_q(e_p*Phi)=[partial_p(e_q)-partial_q(e_p)]*Phi+e_q*partial_p(Phi)-e_p*partial_q(Phi)",
+    "mixed_pure_cross": "[Omega_p,e_q*Phi]-[Omega_q,e_p*Phi]=([Omega_p,e_q]-[Omega_q,e_p])*Phi, because gravity bivectors commute with primed Higgs vectors",
+    "EW_mixed_cross": "[V_p,e_q*Phi]-[V_q,e_p*Phi]=e_q*[V_p,Phi]-e_p*[V_q,Phi], since primed bivectors commute with gravity vectors",
+    "quadratic_closure": "[M_ac,M_bd] has only gravity or primed-electroweak bivector output or zero, never a mixed M term; pure gravity and pure EW sectors commute",
+    "predicted_conditional_equality": "4*P_M(dH1+H1 wedge H1)=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])",
+    "projection_P_M": "Project to span of ordered mixed Clifford two-blades Gamma_a GammaPrime_c with UNscaled M generators and unchanged component labels.",
+    "open_normalization": "The printed named source F_gw is NOT proven to share this unscaled M output basis. Defining project N=M/4 would reconcile scalar coordinates but is not an author-specified source normalization.",
+    "inference_scope": "Algebraic consequence of project-assigned source generator factorization and graded product law under the restricted bosonic H1. NOT a theorem about the entire L01 source or source author mathematical error."
+  },
+  "finite_coverage": {
+    "gravity_mixed_generator_actions": 96,
+    "EW_mixed_generator_actions": 96,
+    "mixed_mixed_commutators": 120,
+    "pure_gravity_EW_commutations": 36,
+    "independent_nonzero_connection_field_seeds": 12,
+    "oriented_twoform_comparisons": 72,
+    "coframe_determinant": 1
+  },
+  "caveats": {
+    "G0_source_census_frozen": false,
+    "L01_L06_source_complete": false,
+    "source_math_theorem_qualified": false,
+    "common_source_output_generator_basis_qualified": false,
+    "author_mathematical_error_proved": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "cross_author_semantics_available": false,
+    "external_cold_review_passed": false
+  },
+  "status_next": "Check all generator bracket and graded 1-jet signs with hostile source/factor/derivative mutations. Preserve result as G0 math diagnostic; next obtain actual source common output generator basis and full source/primitive treatment."
+}
