@@ -1,0 +1,109 @@
+{
+  "schema": "isograph.lisi-L01-D4-compact-phase-Q-witness-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "SOURCE_TABLE9_COMPATIBLE_CHOSEN_COMPACT_SO8_REAL_FORM_Q_WITNESS_NOT_AUTHOR_PHASE_QUALIFIED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      16,
+      18,
+      21,
+      22,
+      23,
+      24,
+      27
+    ],
+    "source_model": "H2 in so(8), proposed 3 x (3+bar3) factorized xPhi, F2 nonseparable Q and explicitly tentative so8 S2 action"
+  },
+  "frozen_parents": {
+    "source_census035": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_35.json",
+      "git_blob_sha": "1328fd2474287da1fc5929977348c60caec22885"
+    },
+    "G0_gate035": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_35.json",
+      "git_blob_sha": "27242fd18f41c4d1f386f6d707f051fbd66e501f"
+    },
+    "root_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_TABLE9_D4_XPHI_Q_ROOT_SUPPORT_G0_0_1.json",
+      "git_blob_sha": "4f4f5e75d2dd46ba8cf6793ea140eaf2405cc199"
+    },
+    "S2_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.json",
+      "git_blob_sha": "114d7746efc074a15dae814f708f21758b86c507"
+    },
+    "H2_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H2_F2_FERMION_GRADED_SOURCE_G0_0_1.json",
+      "git_blob_sha": "68a3fa00fbd61d03bfe3931aa3e90753e647a74c"
+    }
+  },
+  "project_chosen_realization": {
+    "matrix_carrier": "8x8 complex matrices preserving J=[[0,I4],[I4,0]], compact Lie algebra = J-skew + skew-Hermitian intersection, a model of compact real so8.",
+    "D4_root_basis": "Project integral Chevalley root matrices for source Table9 24 root vectors and four Cartan generators.",
+    "rephase": "lambda_(x2,color c_i)=-1 for all three color-positive x2 root vectors, lambda=+1 for all other x1/x2/x3 source mixed roots.",
+    "chosen_phi_reality": "Phi_anti_i=complexConjugate(Phi_color_i) for each of three color labels.",
+    "chosen_x_reality": "x2_p=-complexConjugate(x1_p) for each spacetime 1-form coefficient, x3_p real.",
+    "compact_antiHermitian_identity": "Y2=(Y1)^dagger, Y3=-(Y3)^dagger; X_p=x1_p Y1-conjugate(x1_p) Y2+x3_p Y3 is skew-Hermitian.",
+    "J_bilinear_identity": "X_p^T J+J X_p=0 for all chosen project D4 generators.",
+    "not_source_fixed": "The original PDF supplies roots/roles but does not fix these precise Chevalley phases, compact source field reality identifications, or scalar normalization.",
+    "not_equivalence_to_an_author_original_matrix": true
+  },
+  "exact_witness": {
+    "phi": "Phi_color1=Phi_anti1=1, remaining four Phi components=0",
+    "oneforms": "Spatial local coframe directions p=0,q=1; x1_p=1, x1_q=i, x2_p=-1, x2_q=i, x3=0, all components constant at the point",
+    "source_background": "Set w=B2=g=0, d(x_a)=0, d(Phi)=0 in the restricted local test; Fx=0, Fw=0, FB2=0, Fg=0 while Q=[X_p,X_q] survives",
+    "matrix_Q": "diag(-4i,0,0,0,4i,0,0,0), exact 8x8 project matrices",
+    "matrix_trace_Q_squared": -32,
+    "J_condition_Q_satisfied": true,
+    "compact_condition_Q_satisfied": true,
+    "nonzero_trace_on_chosen_compact_real_model": true,
+    "Lorentzian_spatial_twoform": "For a unit spacelike p<q 2-form, beta wedge * beta = +oriented volume in (+,+,+,-) convention; this is a CHOSEN local metric and not source-extracted globally.",
+    "unit_volume_model_S2_unexpanded": 8,
+    "unit_volume_model_S2_displayed": 16,
+    "unit_volume_model_display_minus_unexpanded": 8,
+    "pairing_normalization": "These are model 8x8 vector traces per unit coordinate volume, not demonstrated equal to the author's E8 Clifford scalar bracket normalization.",
+    "full_source_real_model_counterexample_qualified": false,
+    "source_author_mathematical_error_established": false
+  },
+  "verification_contract": {
+    "source_named_components_zero_only_in_restricted_offshell_background": true,
+    "chosen_project_lie_basis_algebra_exact": true,
+    "source_G0_root_table_conserved": true,
+    "minimum_real_witness_exact_matrix_checks": true,
+    "adversarial_noncompact_and_phase_controls_required": true,
+    "source_field_reality_rules_exactly_the_author_intended": false,
+    "full_fermion_and_boson_action_validated": false,
+    "local_offshell_not_equation_of_motion_solution": true,
+    "Hodge_original_e_frame_extraction_verified": false,
+    "external_cold_qualification": false
+  },
+  "source_census_target": {
+    "new_revision": 36,
+    "changed_only": [
+      "L-SSC-044"
+    ],
+    "untouched_records": 190,
+    "IDs": 191,
+    "frozen": false
+  },
+  "stage_guards": {
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "source_census_frozen": false,
+    "real_E8_original_author_phase_qualified": false,
+    "physical_source_error_proved": false,
+    "cross_author_semantics_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro: complete independent L source IsoGraph work",
+    "agent_formulation": "Project-generated phase-adjusted compact D4/root factorization witness, internally exact, dated 2026-10-09",
+    "external_antecedent": "Lisi arXiv:0711.0770v1 and standard compact so8/Cartan-Weyl conjugation; no global novelty or publication priority claim"
+  },
+  "next": "Recover source's actual real-form/phase and coefficient identifications. Audit source Hodge/clifford scalar trace against this complex-coordinate witness before allowing any author-error or global-theory claim."
+}
