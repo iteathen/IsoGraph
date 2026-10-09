@@ -1,0 +1,265 @@
+{
+  "schema": "isograph.exp062-w01-section31-32-direct-primary-source-oracle.v0.2",
+  "recorded_on": "2026-10-09",
+  "track": "W",
+  "status": "CORRECTED_ASHTEKAR_ROLE_LABELS_WITHOUT_SOURCE_SCOPE_CHANGE_NOT_FROZEN",
+  "semantic_authority": false,
+  "source": {
+    "id": "W01",
+    "title": "Euclidean Twistor Unification",
+    "author": "Peter Woit",
+    "revision": "arXiv:2104.05099v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2104.05099v2",
+    "arxiv_version_visible": true,
+    "pages_printed": [
+      8,
+      9
+    ],
+    "pages_pdf_zero_based": [
+      7,
+      8
+    ],
+    "source_revision_identity": "ARXIV_V2_EXPLICIT_AUTHOR_PDF_NOT_BYTE_COMPARED",
+    "date": "2021-10-14 arXiv v2"
+  },
+  "statements": {
+    "W-SSC-112": [
+      {
+        "id": "W01-SEC31-HAM-01",
+        "page": 8,
+        "category": "CITED_HAMILTONIAN_FORMULATION",
+        "kind": "SOURCE_ATTRIBUTED_ASHTEKAR_REFORMULATION",
+        "claim": "Author identifies chiral Hamiltonian gravity with formulation studied by Ashtekar and others and as a starting point of loop quantum gravity",
+        "cited_refs": [
+          "[4]",
+          "[5]"
+        ],
+        "source_modality": "SOURCE_AUTHOR_DESCRIPTION_WITH_CITATIONS_NOT_NEW_PROOF"
+      },
+      {
+        "id": "W01-SEC31-HAM-02",
+        "page": 8,
+        "category": "THREE_DIMENSIONAL_REDUCTION",
+        "kind": "SOURCE_CHOSEN_TIME_AND_HYPERSURFACE_BINDER",
+        "source_symbol": "M",
+        "source_binding": "THREE_DIMENSIONAL_HYPERSURFACE",
+        "preexisting_symbol_scope": "EARLIER_M_IS_FOUR_DIMENSIONAL_RIEMANNIAN_MANIFOLD",
+        "operands": [
+          "time coordinate",
+          "three-dimensional hypersurface M"
+        ],
+        "required": "CHOICE_BEFORE_HAMILTONIAN_RESTRICTION",
+        "guard": "Same printed M must be locally rebound by dimensional context; do not merge 3D and 4D M carriers."
+      },
+      {
+        "id": "W01-SEC31-HAM-03",
+        "page": 8,
+        "category": "THREE_DIMENSIONAL_REDUCTION",
+        "kind": "SOURCE_RIGHT_SPINOR_RESTRICTION",
+        "source": "four-dimensional right-handed spinor fields",
+        "target": "three-dimensional spinor fields S",
+        "conditions": [
+          "chosen time coordinate",
+          "chosen M3"
+        ],
+        "guard": "Source specifies restriction to M and use of time coordinate, not global equality S_R=S."
+      },
+      {
+        "id": "W01-SEC31-HAM-04",
+        "page": 8,
+        "category": "THREE_DIMENSIONAL_REDUCTION",
+        "kind": "SOURCE_CANONICAL_ONE_FORM_TYPED_RESTRICTION",
+        "source_field": "theta",
+        "restricted_to": "M3",
+        "result": "R3_VALUED_CANONICAL_ONE_FORM",
+        "source_inclusion": "R3 subset End(S)",
+        "guard": "Canonical 1-form role belongs to frame/spin geometry and requires chosen 3D hypersurface."
+      },
+      {
+        "id": "W01-SEC31-HAM-05",
+        "page": 8,
+        "category": "ASHTEKAR_VS_YM",
+        "kind": "SOURCE_MATCHED_EUCLIDEAN_PHASE_VARIABLES",
+        "signature": "EUCLIDEAN",
+        "source_relation": "SAME_CANONICAL_VARIABLE_TYPES_WITH_DIFFERENT_INTERPRETATIONS",
+        "cases": [
+          {
+            "theory": "SU2_YANG_MILLS",
+            "first": "GAUGE_FIELD",
+            "second": "ELECTRIC_FIELD"
+          },
+          {
+            "theory": "ASHETKAR_CHIRAL_GRAVITY",
+            "first": "SPIN_CONNECTION",
+            "second": "CANONICAL_ONE_FORM"
+          }
+        ],
+        "guard": "Do not infer equality of dynamics, physical fields, or ontological carriers from comparison."
+      },
+      {
+        "id": "W01-SEC31-HAM-06",
+        "page": 8,
+        "category": "ASHTEKAR_VS_YM",
+        "kind": "SOURCE_SHARED_GAUSS_LAW_CONSTRAINT",
+        "theories": [
+          "SU2_YANG_MILLS",
+          "ASHETKAR_CHIRAL_GRAVITY"
+        ],
+        "origin": "ACTION_OF_SU2_GAUGE_TRANSFORMATIONS",
+        "source_modality": "ASSERTED_BOTH_CASES"
+      },
+      {
+        "id": "W01-SEC31-HAM-07",
+        "page": 8,
+        "category": "ASHTEKAR_VS_YM",
+        "kind": "SOURCE_YANG_MILLS_HAMILTONIAN",
+        "hamiltonian": "SUM_NORM_SQUARES_ELECTRIC_MAGNETIC_FIELDS",
+        "theory": "SU2_YANG_MILLS",
+        "guard": "Not source gravitational Hamiltonian."
+      },
+      {
+        "id": "W01-SEC31-HAM-08",
+        "page": 8,
+        "category": "ASHTEKAR_VS_YM",
+        "kind": "SOURCE_CHIRAL_GRAVITY_EXTRA_CONSTRAINTS",
+        "cause": "DIFFEOMORPHISM_INVARIANCE",
+        "total_extra": 4,
+        "spatial_translations": 3,
+        "time_translations": 1,
+        "time_constraint_result": "HAMILTONIAN_EQUAL_ZERO",
+        "side_condition": "AT_LEAST_WHEN_NO_BOUNDARIES",
+        "guard": "No unconditional Hamiltonian=0 assertion in arbitrary boundary setting."
+      },
+      {
+        "id": "W01-SEC31-HAM-09",
+        "page": 8,
+        "category": "AUTHOR_LIMITATION",
+        "kind": "SOURCE_NEGATIVE_QG_COMPLETION_AND_PROSPECTIVE_LANGUAGE",
+        "negative": "CHIRAL_FORMALISM_DOES_NOT_BY_ITSELF_RESOLVE_QUANTUM_GRAVITY_QUANTIZATION",
+        "future": "DIFFERENT_TREATMENT_OTHER_CHIRALITY_AND_IMAGINARY_TIME_COMPONENT_MAY_OFFER_POSSIBILITIES",
+        "source_modality": "AUTHOR_QUALIFIED_PROPOSAL_NOT_COMPLETION"
+      }
+    ],
+    "W-SSC-032": [
+      {
+        "id": "W01-SEC32-EW-01",
+        "pages": [
+          8,
+          9
+        ],
+        "kind": "SOURCE_GRAVITY_AND_WEAK_ROLE_SEPARATION",
+        "gravity": {
+          "field": "R4_VALUED_CANONICAL_FORM_THETA",
+          "connection": "SU2_R_SPIN_CONNECTION_OMEGA_R"
+        },
+        "electroweak": {
+          "field": "IMAGINARY_TIME_COMPONENT_OF_THETA_AS_HIGGS",
+          "connection": "SU2_L_SPIN_CONNECTION_OMEGA_L"
+        },
+        "source_modality": "SOURCE_EUCLIDEAN_FIRST_PROPOSAL",
+        "guard": "Roles are not interchangeable and do not establish final electroweak/GR unification."
+      },
+      {
+        "id": "W01-SEC32-EW-02",
+        "pages": [
+          8
+        ],
+        "kind": "SOURCE_AUTHOR_DYNAMICS_CONSTRUCTION_CLAIM",
+        "source_quoted_clause": "These can be given exactly the dynamics of the Standard Model",
+        "methods": [
+          "USUAL_YANG_MILLS_ACTION",
+          "STANDARD_HIGGS_KINETIC_TERM",
+          "STANDARD_HIGGS_POTENTIAL"
+        ],
+        "source_modality": "AUTHOR_ASSERTS_POSSIBILITY_WITH_CONVENTIONAL_DYNAMICS_NOT_GIVEN_COMPLETE_DERIVATION",
+        "guard": "Do not turn the possibility statement into demonstrated physical model closure."
+      },
+      {
+        "id": "W01-SEC32-EW-03",
+        "pages": [
+          8,
+          9
+        ],
+        "kind": "SOURCE_NEGATIVE_U1_DEFICIT",
+        "first_problem": "ELECTROWEAK_U1_EXTRA_GAUGE_SYMMETRY_NOT_SUPPLIED_BY_SU2_L_ALONE",
+        "source_modality": "AUTHOR_EXPLICIT_PROBLEM"
+      },
+      {
+        "id": "W01-SEC32-EW-04",
+        "pages": [
+          9
+        ],
+        "kind": "SOURCE_HIGGS_ONE_FORM_TRANSFORMATION_OBSTACLE",
+        "source_carrier": "ONE_FORM_HIGGS_COMPONENT",
+        "acts_nontrivially": [
+          "SU2_L",
+          "SU2_R"
+        ],
+        "author_wants_invariant_under": "SU2_R",
+        "source_modality": "AUTHOR_EXPLICIT_PROBLEM_NOT_SOLVED_IN_THIS_SECTION",
+        "guard": "Do not assume the SU2_R invariance already holds for the unmodified one-form."
+      },
+      {
+        "id": "W01-SEC32-EW-05",
+        "pages": [
+          9
+        ],
+        "kind": "SOURCE_DESIRED_EXTENDED_GAUGE_REPRESENTATION",
+        "extra_group": "U1",
+        "combine_with": "SU2_L",
+        "desired_group": "U2",
+        "desired_Higgs_representation": "DEFINING_C2_OF_U2",
+        "source_modality": "AUTHOR_DESIRED_CONSTRUCTION",
+        "guard": "Printed U(2) proposal not a proven existing factor; do not silently replace with SU2×U1 as an identical group."
+      },
+      {
+        "id": "W01-SEC32-EW-06",
+        "pages": [
+          9
+        ],
+        "kind": "SOURCE_FORWARD_TWISTOR_SOLUTION",
+        "author_wording": "A solution to these problems can be found by formulating the theory in twistor space",
+        "location": "DESCRIBED_NEXT_SECTION",
+        "source_modality": "AUTHOR_FORWARD_PROPOSAL_NOT_ESTABLISHED_WITHIN_SECTION3_2",
+        "guard": "No completed Higgs dynamics or source-equivalent electroweak solution is established in §3.2 alone."
+      }
+    ]
+  },
+  "counts": {
+    "source_items": 2,
+    "section31_items": 9,
+    "section32_items": 6,
+    "total": 15
+  },
+  "provenance": {
+    "original_author": "Peter Woit",
+    "research_direction": "Joshua Oshiro",
+    "source_transcription_and_audit": "agent-assisted",
+    "earliest_evidence_currently_located": "W01 arXiv:2104.05099v2 source printed pp.8-9, 2026-10-09 direct inspection",
+    "recorded_on": "2026-10-09"
+  },
+  "negative_controls": [
+    "The author draws analogy between Hamiltonian variables, not identity of dynamical theories",
+    "Boundary-free qualifier must remain attached to gravitational Hamiltonian=0",
+    "M symbol is locally rebound on three-dimensional hypersurface, not same 4D manifold M",
+    "Unmodified Higgs 1-form does NOT already satisfy SU2R invariance",
+    "Desired U2 and C2 representation not independently obtained just by group label",
+    "Twistor future section source claim is author proposal, not qualification"
+  ],
+  "predecessor_candidate": {
+    "path": "experiments/062/W01_G0_SECTIONS_31_32_PRIMARY_SOURCE_ORACLE_0_1.json",
+    "git_blob_sha": "21c785409bfe6c8026f225d84e99398e9001baab",
+    "disposition": "REJECTED_PREPUBLICATION_MALFORMED_ASHETKAR_ROLE_LABEL_TOKENS"
+  },
+  "correction": {
+    "changed_statement_fields": [
+      "W01-SEC31-HAM-01.kind",
+      "W01-SEC31-HAM-05.category",
+      "W01-SEC31-HAM-06.category",
+      "W01-SEC31-HAM-07.category",
+      "W01-SEC31-HAM-08.category"
+    ],
+    "source_statement_count_unchanged": 15,
+    "mathematical_source_meaning_changed": false
+  }
+}
