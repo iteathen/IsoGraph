@@ -124,8 +124,8 @@ function check(p=Packet,cl=G){
  ok(p.admissible_source_field_controls?.length===2&&p.admissible_source_field_controls?.every(x=>x.expected_coframe_det_at_origin===1&&x.literal_common_M_ratio===4&&x.named_source_operator_qualification===false),'valid source coframe determinant and only diagnostic comparison');
  ok(p.admissible_source_field_controls?.[0].coordinate_model?.includes('phi^1=1+x1')&&p.admissible_source_field_controls?.[1].coordinate_model?.includes('phi^1=1'),'gradient/torsion source field scopes');
  const contract=p.competing_comparison_contracts||[];
- ok(contract.length===2&&contract[0].id==='COMMON_UNSCALED_M'&&contract[0].status==='PROJECT_CONDITIONAL_COUNTEREXAMPLE_NOT_AUTHOR_MATH_ERROR','unscaled interpretation conditional only');
- ok(contract[1].id==='PROJECT_NORMALIZED_OUTPUT_BASIS'&&contract[1].statement.includes('N_(mu,alpha)=M_(mu,alpha)/4')&&contract[1].status==='POSSIBLE_CONSISTENT_OUTPUT_CONVENTION_NOT_TRACED_TO_AUTHOR_SOURCE','normalized output alternative not source authority');
+ ok(contract.length===2&&contract?.[0]?.id==='COMMON_UNSCALED_M'&&contract?.[0]?.status==='PROJECT_CONDITIONAL_COUNTEREXAMPLE_NOT_AUTHOR_MATH_ERROR','unscaled interpretation conditional only');
+ ok(contract?.[1]?.id==='PROJECT_NORMALIZED_OUTPUT_BASIS'&&contract?.[1]?.statement?.includes('N_(mu,alpha)=M_(mu,alpha)/4')&&contract?.[1]?.status==='POSSIBLE_CONSISTENT_OUTPUT_CONVENTION_NOT_TRACED_TO_AUTHOR_SOURCE','normalized output alternative not source authority');
  ok(p.repair_disposition?.includes('No correction to original L01 formulas justified')&&p.repair_disposition?.includes('degenerate coframe')&&p.discovery_disposition?.includes('remains unresolved'),'correctly preserve earlier degenerate frame weakness without author blame');
  ok(p.next_lawful_step?.startsWith('Independently replay')&&p.next_lawful_step?.includes('G1–G7 still forbidden'),'source audit rather than promotion');
  ok(!j(p).includes('W-SSC-'),'no W-source contamination');
