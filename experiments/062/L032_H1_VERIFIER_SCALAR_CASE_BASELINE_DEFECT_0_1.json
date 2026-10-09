@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-l032-h1-verifier-scalar-case-baseline-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "VERIFIER_SOURCE_ROLE_CASE_SENSITIVE_FIXTURE_BASELINE_FAILURE",
+  "failed_run": {
+    "id": 37886785922,
+    "head_sha": "8d1493bf007695397ae479dbf06ad94b61707731",
+    "conclusion": "failure",
+    "error": "source type of frame, Higgs and W/B1 actors",
+    "adversarial_defined": 34,
+    "adversarial_executed": 0
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l01-h1-positive-chiral-blocks-0-1.mjs",
+    "git_blob_sha": "f7eda76cd3d79377939b26db7f710c6f4d3c11c1"
+  },
+  "cause": "Source packet describes phi^nu as 'four REAL source scalar components', correctly preserving scalar-vs-frame ONE_FORM semantics. Verifier expected literal uppercase 'SCALAR', rejecting a correct source role because of spelling case. Source frame ONE_FORM and independent Pati-Salam B1 checks passed.",
+  "minimal_repair": "Match lowercase 'scalar components' or role semantic rather than artificial uppercase. Keep real coefficient/higgs source domain, eight source mixed roles, sixteen typed 2x2 blocks, no math theorem and strict baseline-before-mutation gate.",
+  "nonclaims": [
+    "No 6561-case H1 signed matrix arithmetic or effective adversarial mutation passed the failed run.",
+    "No source Table5, SSC0.24, G0 gate or W data modified by this fixture.",
+    "No complete 16x16 Gamma to chiral 8x8 change-of-basis proved."
+  ],
+  "G1_authorized": false,
+  "external_cold_review_passed": false
+}
