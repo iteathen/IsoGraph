@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062-w02-II-III-prepublication-v8-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_POSITIVE_BASELINE_FAILED_55_REJECTIONS_DISQUALIFIED",
+  "first_candidate": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_45.json",
+      "git_blob_sha": "fa113859790cc0b13066bfd013c564cc6d3e72f8",
+      "source_items": 151,
+      "typed_incidents": 391
+    },
+    "candidate_gate_not_committed": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_94.json",
+      "git_blob_sha": "3b2ffcd9d03b449a9eec09d73cd09a0412850673"
+    },
+    "failed_verifier_orphan": {
+      "path": "experiments/062/tools/verify-w02-sii-siii-chiral-scope-g0-0-1.mjs",
+      "git_blob_sha": "652c322372a0b0fd2aa06112526d0e937c97133e"
+    },
+    "running_environment": "V8_PREPUBLICATION_IN_MEMORY_BLOB_BYTES_FROM_GITHUB_CONNECTOR_NOT_NODE_ACTIONS",
+    "result": {
+      "positive_baseline_pass": false,
+      "positive_errors": [
+        "SU2 compact conjugate representation intertwiner and unitary",
+        "complex SL2 noncompact diagonal fails same epsilon intertwiner"
+      ],
+      "mutations_total": 55,
+      "mutations_rejected": 55,
+      "mutations_escaped": 0,
+      "mutations_crashed": 0,
+      "mutation_score_qualified": false
+    }
+  },
+  "actual_defect": {
+    "faulty_expression": "const complex=x=>{if(typeof x==='string') {...} return [x.re,x.im]};",
+    "source_matrix_shape": "epsilon_matrix rows contain primitive integer entries (0,+1,-1)",
+    "failure": "Integer matrix entries have no .re/.im properties; [undefined,undefined] generates NaN arithmetic, causing spurious negative results even when the source math witness is correct.",
+    "repair": "Accept primitive numeric x via return [x,0] BEFORE accessing .re and .im; preserve complex object entries and rational strings as before.",
+    "source_artifacts_not_defective": true,
+    "expected_repair_version": "verify-w02-sii-siii-chiral-scope-g0-0-2.mjs"
+  },
+  "provenance": {
+    "original_W_source_author": "Peter Woit",
+    "math_negative": "NONAUTHOR_EPSILON_INTERTWINER_RESTRICTED_SU2_VS_SL2C",
+    "original_author_source_text_not_rewritten": true,
+    "prepublication_candidate_not_a_current_repo_revision": true,
+    "prior_G0_gate": "W_CURRENT_STAGE_GATE_0_93.json",
+    "G1_G7_authorized": false,
+    "third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "L_not_accessed_for_semantics": true
+  }
+}
