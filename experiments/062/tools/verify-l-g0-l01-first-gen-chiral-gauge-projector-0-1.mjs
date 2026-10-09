@@ -105,8 +105,8 @@ function sourceCheck(p,old,newC,gate){
  ck(p.mathematical_reconstruction?.iff_statement?.includes('iff W P_R=0 and B1 P_L=0')&&p.mathematical_reconstruction?.Higgs_negative_control?.includes('must not be extended to K or full H1.')&&p.mathematical_reconstruction?.source_application_status?.includes('Conditional'),'projection proof scoped');
  ck(p.verification_contract?.seeds===4&&p.verification_contract?.source_field_basis_tests===16&&p.verification_contract?.source_spin_basis_tests===64,'finite baseline counts');
  ck(p.source_census_delta?.changed_only?.join('|')==='L-SSC-032|L-SSC-041|L-SSC-046'&&p.source_census_delta.unchanged_full_records===188&&p.source_census_delta.identity_count===191,'three exact changed source records');
- for(const id of ['G1_authorized','G2_G7_authorized','recursive_IA_authorized','cross_track_authority','source_equivalent_fully_qualified','original_E8_full_right_sign_map_qualified','author_typo_proved','second_third_generation_actions_proved','outreach_authorized','PR70_merge_authorized'])ck(p.stage?.[id]===false,'stage/source not overpromoted '+id);
- ck(p.stage?.G0_open===true,'G0 still open');
+ for(const id of ['G1_authorized','G2_G7_authorized','recursive_IA_authorized','cross_track_authority','source_equivalent_fully_qualified','original_E8_full_right_sign_map_qualified','author_typo_proved','second_third_generation_actions_proved','outreach_authorized','PR70_merge_authorized'])ck(p.stage_locks?.[id]===false,'stage/source not overpromoted '+id);
+ ck(p.stage_locks?.G0_open===true,'G0 still open');
  const a=new Map(old.items.map(x=>[x.id,x])),bmap=new Map(newC.items.map(x=>[x.id,x])),changes=[];
  ck(a.size===191&&bmap.size===191&&old.items.length===191&&newC.items.length===191,'191 unique full record identities');
  for(const [id,x]of a){if(!bmap.has(id))errors.push('missing old record '+id);else if(JSON.stringify(x)!==JSON.stringify(bmap.get(id)))changes.push(id)}
@@ -164,11 +164,11 @@ if(!process.argv.includes('--math-only')){
  ['p27 negative right erased',x=>{x.two_source_expression_layers.action_page27=x.two_source_expression_layers.action_page27.replace('-Psi*','+Psi*')}],
  ['component right changed',x=>{x.two_source_expression_layers.component_page27='W_i*Psi+B1_i*Psi-Psi*w_i'}],
  ['claim right sign fixed',x=>{x.two_source_expression_layers.right_sign_unresolved=false}],
- ['G1 promotion',x=>{x.stage.G1_authorized=true}],
- ['author typo verdict',x=>{x.stage.author_typo_proved=true}],
- ['invent later generations',x=>{x.stage.second_third_generation_actions_proved=true}],
+ ['G1 promotion',x=>{x.stage_locks.G1_authorized=true}],
+ ['author typo verdict',x=>{x.stage_locks.author_typo_proved=true}],
+ ['invent later generations',x=>{x.stage_locks.second_third_generation_actions_proved=true}],
  ['false parent hash',x=>{x.parent_evidence.census041.git_blob_sha='STALE'}],
- ['source E8 qualified',x=>{x.stage.source_equivalent_fully_qualified=true}],
+ ['source E8 qualified',x=>{x.stage_locks.source_equivalent_fully_qualified=true}],
  ['source multi-ID dropped',x=>{x.source_census_delta.changed_only.pop()}]
  ];
  if(!issues.length)for(const [name,mut]of sourceMutants){

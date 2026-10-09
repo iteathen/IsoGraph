@@ -1,0 +1,41 @@
+{
+  "schema": "isograph.exp062-L032-L041-L046-initial-packet-stage-schema-failed-CI.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "baseline_commit": "768bf891d2d62a11a846f5a3423bc0a933dc5c93",
+  "failing_run_id": 38006560947,
+  "job_id": 114076579165,
+  "conclusion": "failure",
+  "baseline_packet_blob": "36add216fc6c0a4b62a9462dc297882b189a5e1d",
+  "baseline_verifier_blob": "2e7a5b0fd604d2eac8eaecde72377d698f8585d2",
+  "baseline_census_blob": "ed9975c0baebeb538368b4ce0989c62238f3158f",
+  "baseline_gate_blob": "5e5c9856a46ebf30db3ba8d9b5e0ff615d3cca6c",
+  "original_job_evidence": {
+    "reported_issue": "source only G0",
+    "math_pass": true,
+    "math_fails": [],
+    "math_mutants_rejected": 12,
+    "math_mutants_total": 12,
+    "source_mutants_rejected": 0,
+    "source_mutants_total": 16,
+    "source_mutants_execution_reached": false
+  },
+  "analysis": {
+    "classification": "SOFTWARE_PACKET_SCHEMA_DEFECT_NOT_SOURCE_MATHEMATICAL_DISCREPANCY",
+    "cause": "JS packet literal reused 'stage' key for both G0 stage string and stage-locks object; last object property replaced initial string. Verifier sourceCheck enforced p.stage==='G0' and correctly rejected packet.",
+    "corrective_action": "Keep stage='G0' and put locks under stage_locks; update verifier to check p.stage_locks and stage mutation controls, rebinding packet/census/gate hashes.",
+    "no_author_claim_impacted": true
+  },
+  "repaired_candidate": {
+    "packet_git_blob_sha": "f27ba5b32194dd5637b5f072d5f4d2afc42764e5",
+    "verifier_git_blob_sha": "064518af2b2b964be8da3a1673efb8c04290e5a3",
+    "ssc042_git_blob_sha": "09e9182b9e16ec12fdd17461a18ee1b3db635603",
+    "gate043_git_blob_sha": "a8ed4dbf27d14615efef048d74ccefd0c8097dc7"
+  },
+  "G0_open": true,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "cross_track_authority": false
+}

@@ -15,11 +15,11 @@
   },
   "source_packet": {
     "path": "research/woit-lisi-isomorph/lisi/LISI_L01_FIRST_GEN_CHIRAL_GAUGE_PROJECTOR_G0_0_1.json",
-    "git_blob_sha": "36add216fc6c0a4b62a9462dc297882b189a5e1d"
+    "git_blob_sha": "f27ba5b32194dd5637b5f072d5f4d2afc42764e5"
   },
   "verifier": {
     "path": "experiments/062/tools/verify-l-g0-l01-first-gen-chiral-gauge-projector-0-1.mjs",
-    "git_blob_sha": "2e7a5b0fd604d2eac8eaecde72377d698f8585d2"
+    "git_blob_sha": "064518af2b2b964be8da3a1673efb8c04290e5a3"
   },
   "old_census": {
     "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_41.json",
@@ -27,7 +27,7 @@
   },
   "new_census": {
     "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_42.json",
-    "git_blob_sha": "ed9975c0baebeb538368b4ce0989c62238f3158f",
+    "git_blob_sha": "09e9182b9e16ec12fdd17461a18ee1b3db635603",
     "identities": 191,
     "changed": [
       "L-SSC-032",
@@ -39,7 +39,7 @@
   },
   "new_gate": {
     "path": "experiments/062/L_CURRENT_STAGE_GATE_0_43.json",
-    "git_blob_sha": "5e5c9856a46ebf30db3ba8d9b5e0ff615d3cca6c",
+    "git_blob_sha": "a8ed4dbf27d14615efef048d74ccefd0c8097dc7",
     "G1_authorized": false
   },
   "positive_source_scope": "Pure source W upper-left two field slots and pure source B1 lower-right two field slots in original p12 matrix: exact chiral projector shorthand possible for original p24 and p27 left gauge pieces under explicitly chosen Psi_L/R field-slot identification.",
@@ -57,5 +57,11 @@
     "direction": "Joshua Oshiro independent L source treatment",
     "agent_formulation": "2026-10-09 printed H1 block chiral projector to Dirac operator conditional link",
     "external_prior_art": "Lisi 0711.0770v1; exact finite matrices"
+  },
+  "historical_initial_failed_run": {
+    "run_id": 38006560947,
+    "commit": "768bf891d2d62a11a846f5a3423bc0a933dc5c93",
+    "status": "failure",
+    "reason": "Packet key stage was reused for its stage-locks object; source guard expects stage=='G0'. Independent math PASS, 12/12 math mutants rejected; source mutant loop not reached; patched packet schema key and checker stage_locks references."
   }
 }
