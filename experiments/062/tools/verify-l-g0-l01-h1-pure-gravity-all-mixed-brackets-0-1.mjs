@@ -36,7 +36,7 @@ const expectedRows=[
  ['+(1/4)*e_L*phiMinus','+(1/4)*e_L*phiOne','B1minus','(1/2)*omega_R-(i/2)*B_1^3']
 ];
 const phi={phiPlus:[Z(1),Z(0,-1),Z(),Z()],phiMinus:[Z(1),Z(0,1),Z(),Z()],phiZero:[Z(),Z(),Z(-1),Z(0,-1)],phiOne:[Z(),Z(),Z(-1),Z(0,1)]};
-const sourcePairs=[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]];
+const sourcePairs=[[1,2],[1,3],[2,3],[1,4],[2,4],[3,4]];
 const printedOmega=[
  ['[i*sigma3,i*sigma3,i*sigma3,i*sigma3]','omega_S^3=+1'],
  ['[-i*sigma2,-i*sigma2,-i*sigma2,-i*sigma2]','omega_S^2=-1'],
