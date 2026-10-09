@@ -27,7 +27,7 @@ function verify(g=G){
  for(const key of ['full_primary_source_complete','G1_authorized','global_qualified_module_promotion'])ck(ci[key]===false,'no stage promotion through CI '+key);
  ck(g.outstanding_source_reconstruction?.some(t=>t.includes('§2.2.2 Cl(4)')&&t.includes('unexpanded')),'unexamined electroweak and graviweak source still explicit');
  ck(g.outstanding_source_reconstruction?.some(t=>t.includes('L05')&&t.includes('Γ')),'L05 prior source gaps retained');
- ck(g.next_lawful_step?.startsWith('Continue independent L G0')&&g.next_lawful_step.includes('U-V'),'L-only next source domain');
+ ck(g.next_lawful_step?.startsWith('Continue independent L G0')&&g.next_lawful_step.includes('electroweak wew su(2)L/su(2)R block roles'),'L-only next source domain');
  ck(C.G0_source_audit_authorized===true&&C.G0_source_local_CI_verified===true,'G0 source-only allowed');
  for(const key of ['G0_source_census_frozen','G0_full_source_assertion_census_complete','G1_authorized','G2_authorized','G3_authorized','G4_authorized','G5_authorized','G5H_authorized','G6_campaign_new_promotion_authorized','G7_authorized','L_primitive_schema_closure_complete','L_recursive_IA_authorized','L_Discovery_Protocol_authorized','WL_cross_track_comparison_authorized','global_qualified_module_manifest_change_authorized','PR70_merge_authorized'])ck(C[key]===false,'illegal promotion '+key);
  ck(Packet.source_complete===false&&Packet.G1_authorized===false&&Packet.mathematical_theorem_qualified===false&&g.owner_external_verification_bypass?.status==='OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE','source facts and external waiver boundary');
