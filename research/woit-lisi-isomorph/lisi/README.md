@@ -36,6 +36,8 @@ At **fixed** source-style factor coordinates, the project unphased x1/x2 bracket
 
 [SSC0.37](SOURCE_SEMANTIC_CENSUS_0_37.json) preserves all **191 source identities** and **189 unchanged full predecessor records**, extending only L-SSC-040/L-SSC-044. [G0 gate0.37](../../../experiments/062/L_CURRENT_STAGE_GATE_0_37.json) remains OPEN and UNFROZEN; no G1–G7, W source use, Recursive IA, outreach or merge. The [coverage ledger](LISI_L040_L044_ROOT_PHASE_RANK_ONE_G0_COVERAGE_0_1.json) retains remaining source obligations. Candidate CI is pending.
 
+**Verified phase/rank-one G0 source CI (run 37990455177):** [GitHub Actions](https://github.com/iteathen/IsoGraph/actions/runs/37990455177) completed successfully on `bbc6e6a8371264784df3203a8182ccfae86f09ec`, with source checks and exact Git blob parent lineage enabled. The verifier checked 45 source-style phase minors, four coefficient-transport field/curvature pairs, both exact six-term quartic trace polynomials, and changes between the two project D4 Q channel decompositions. It rejected **4/4 phase/algebra falsifiers** and **12/12 source/provenance mutants**. Independent full SSC0.36-to-0.37 comparison confirms 191 distinct IDs, 189 unchanged entire records, only L-SSC-040/L-SSC-044 revised, and no added/deleted identity. [The durable CI/repair/discovery record](../../../experiments/062/L040_L044_D4_PHASE_RANK_ONE_G0_CI_AND_SCOPE_0_1.json) classifies the distinction without asserting source-specific E8 root phases, qualified field equivalence, a physical error or G1 authority.
+
 #### Historical predecessor: SSC 0.36 / G0 gate 0.36
 
 
