@@ -1,0 +1,82 @@
+{
+  "schema": "isograph.exp062-w05-w103-cp1-node-ci-evidence.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "input": {
+    "head_sha": "73c11f974788b7cc0e2297b10b09f17e7eed3c0e",
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_36.json",
+      "git_blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_72.json",
+      "git_blob_sha": "bcbc90e48b1c6490741f4ccdeb67b83a275485e6"
+    },
+    "source_first_oracle": {
+      "path": "experiments/062/W05_G0_W103_SOURCE_FIRST_CONJUNCTION_REVERSE_0_1.json",
+      "git_blob_sha": "81c0e2d5fa18f3a4ce868f2c69b369e561a7e904"
+    },
+    "negative_control": {
+      "path": "experiments/062/W05_G0_W103_CP1_PRINTED_FILTRATION_FALSIFIER_0_1.json",
+      "git_blob_sha": "2c6786ae62c057ea9fb6e8a35653c69444f92412"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w05-w103-cp1-printed-hodge-g0-0-1.mjs",
+      "git_blob_sha": "bce0cdbc79afa64520741ae423cf8a8d92e7b5d7"
+    }
+  },
+  "confirmed_GitHub_Actions": {
+    "run_id": 37972460893,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37972460893",
+    "job_id": 113962282840,
+    "conclusion": "SUCCESS",
+    "positive_baseline": "PASS",
+    "hostile_controls": 41,
+    "rejected": 41,
+    "escaped": 0,
+    "crashed": 0,
+    "source_items": 151,
+    "source_structured_incidents": 327,
+    "cp1_H11_dimension": 1,
+    "source_strict_F1_dimension": 0,
+    "source_strict_F2_dimension": 0,
+    "G0_status": "OPEN_UNFROZEN"
+  },
+  "other_same_commit_workflows": [
+    {
+      "id": 37972460658,
+      "conclusion": "SUCCESS",
+      "scope": "OLDER_W_G_STAGE_LINEAGE_GUARD"
+    },
+    {
+      "id": 37972460660,
+      "conclusion": "SUCCESS",
+      "scope": "OLDER_W_ACTIVE_G0_GUARD"
+    },
+    {
+      "id": 37972460841,
+      "conclusion": "SUCCESS",
+      "scope": "OLDER_W05_17_SOURCE_EXISTING_GUARD"
+    }
+  ],
+  "retained_prior_failed_node_ids": [
+    37916217524,
+    37916409759,
+    37916670722,
+    37956466200,
+    37956974680,
+    37957892952
+  ],
+  "qualification_limits": {
+    "source_semantic_census_changed": false,
+    "original_nine_source_reverse_complete": false,
+    "complete_all151_current_W_demands_qualified": false,
+    "Oct03_mutable_W03_W04_bytes_verified": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "mathematical_scope": "CP1_EXPLICIT_NEGATIVE_WITNESS_NOT_HODGE_THEOREM_OR_WOIT_PROGRAM_REFUTATION"
+  },
+  "no_L_semantic_data": true
+}

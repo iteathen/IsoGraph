@@ -1,0 +1,177 @@
+{
+  "schema": "isograph.exp062-w02-curvature-self-anti-mixed-block-negative.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INDEPENDENT_NON_AUTHOR_MATHEMATICAL_NEGATIVE_WITNESS_NOT_SOURCE_CORRECTION",
+  "source_context": {
+    "author": "Peter Woit",
+    "source_id": "W02",
+    "revision": "arXiv:2311.00608v2",
+    "section": "IV.3",
+    "html_lines": [
+      129,
+      135
+    ],
+    "pdf_printed_page": 8,
+    "pdf_index": 7,
+    "existing_item": "W-SSC-148",
+    "existing_typed_ids": [
+      "W02-COLD-CURV-BLOCK-01",
+      "W02-COLD-CURV-BLOCK-02"
+    ],
+    "original_source_first_ledger": "experiments/062/W02_G0_S43_CHIRAL_CURVATURE_SOURCE_FIRST_0_1.json",
+    "source_printed_two_roles": [
+      "CURVATURE_ENDOMORPHISM_SIX_TWO_FORMS_SPLIT_3_PLUS_3_BLOCK_DIAGONAL_PHRASE",
+      "EINSTEIN_EQUATIONS_OFFDIAGONAL_BLOCKS_VANISH"
+    ],
+    "preserve_source_phrasing_not_qualify_global_block_diagonal": true
+  },
+  "analytic_construction": {
+    "pointwise_carrier": "oriented four-dimensional Riemannian product two oriented constant-curvature surfaces",
+    "coframe": "e1,e2 on factor1; e3,e4 on factor2; positive orientation e1234",
+    "ordered_twoform_basis": [
+      "e12",
+      "e13",
+      "e14",
+      "e34",
+      "e42",
+      "e23"
+    ],
+    "real_hodge_star_pairs": [
+      [
+        "e12",
+        "e34"
+      ],
+      [
+        "e13",
+        "e42"
+      ],
+      [
+        "e14",
+        "e23"
+      ]
+    ],
+    "plus_basis": [
+      "(e12+e34)/sqrt2",
+      "(e13+e42)/sqrt2",
+      "(e14+e23)/sqrt2"
+    ],
+    "minus_basis": [
+      "(e12-e34)/sqrt2",
+      "(e13-e42)/sqrt2",
+      "(e14-e23)/sqrt2"
+    ],
+    "curvature_wedge_matrix_rule": "diag(k1,0,0,k2,0,0)",
+    "curvature_chiral_block_rule": "B_plus_minus = diag((k1-k2)/2,0,0)",
+    "curvature_2x2_chiral_first_pair_rule": "1/2 * [[k1+k2,k1-k2],[k1-k2,k1+k2]]",
+    "Ricci_eigenvalues_rule": [
+      "k1",
+      "k1",
+      "k2",
+      "k2"
+    ],
+    "for_this_family_only_Einstein_criterion": "k1=k2"
+  },
+  "negative_case": {
+    "manifold": "S2 unit curvature times flat T2",
+    "k1": 1,
+    "k2": 0,
+    "six_twoform_curvature_eigenvalues": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mixing_block": [
+      [
+        "1/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "Ricci_eigenvalues": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "mixed_block_zero": false,
+    "Einstein": false
+  },
+  "paired_control": {
+    "manifold": "S2 unit curvature times S2 unit curvature",
+    "k1": 1,
+    "k2": 1,
+    "six_twoform_curvature_eigenvalues": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "mixing_block": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "Ricci_eigenvalues": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "mixed_block_zero": true,
+    "Einstein": true
+  },
+  "conclusions": {
+    "disproven_scope": "ALL_RIEMANNIAN_FOUR_DIMENSIONAL_CURVATURE_ENDOMORPHISMS_IDENTICALLY_BLOCK_DIAGONAL_IN_SELFDUAL_ANTI_SELFDUAL_BASIS",
+    "supports_scoped_distinction": "SIX_DIMENSION_SPACE_CAN_BE_DECOMPOSED_INTO_TWO_THREE_DIMENSION_SUBSPACES_WITH_NONZERO_MIXED_BLOCKS_IN_GENERAL",
+    "not_disproven": [
+      "EINSTEIN_OFFDIAGONAL_ZERO_CONDITION_IN_APPROPRIATE_CONTEXT",
+      "CHIRAL_GR_FORMULATIONS",
+      "WOIT_PHYSICAL_UNIFICATION_HYPOTHESIS",
+      "AUTHOR_SOURCE_TEXT_FIDELITY"
+    ],
+    "source_unchanged": true,
+    "source_census_blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b",
+    "existing_source_count": 151,
+    "existing_typed_incidence_count": 327,
+    "full_W_original_source_reverse_complete": false,
+    "current_G0_frozen": false,
+    "third_party_review": "OWNER_BYPASSED_NOT_PASSED",
+    "W_L_synthesis_permitted": false
+  },
+  "negative_guards": [
+    "BLOCK_DECOMPOSITION_NE_BLOCK_DIAGONAL",
+    "MATHEMATICAL_NON_AUTHOR_WITNESS_NE_SOURCE_ASSERTION",
+    "TWO_EXAMPLES_DO_NOT_QUALIFY_GENERIC_EINSTEIN_IFF_THEOREM",
+    "NO_W03_W04_OCT03_BYTE_VERIFICATION",
+    "NO_G1_G7_PROMOTION"
+  ]
+}
