@@ -1,0 +1,182 @@
+{
+  "schema": "isograph.exp062-w05-p2-nonsquare-unit-source-quantifier-counterexample.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "EXACT_P2_NON_SQUARE_UNIT_COUNTEREXAMPLE_TO_UNQUALIFIED_W05_QUATERNION_CONIC_ANISOTROPY_NOT_SOURCE_REPLACEMENT",
+  "source": {
+    "work": "W05",
+    "author": "Peter Woit",
+    "title": "Notes on the Twistor P1",
+    "revision": "arXiv:2202.02657v2",
+    "pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "section": "§6.1",
+    "printed_pages": [
+      9,
+      10
+    ],
+    "pdf_zero_based_pages": [
+      8,
+      9
+    ],
+    "source_statement": "W05 presents a division representative (p,u)/Qp with u a nonsquare unit and gives the finite-prime conic -p*x^2-u*y^2+u*p*z^2=0 with no Qp-points; only the subsequent count of three quadratic extensions explicitly carries p != 2.",
+    "source_quantifier_fidelity": "The paper does not explicitly say EVERY nonsquare unit u must give a division representative. This artifact falsifies that possible universal interpretation, not the existential existence of a division representative.",
+    "original_Oct03_author_pdf_byte_identity": "NOT_ESTABLISHED"
+  },
+  "anchored_source_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_32.json",
+    "git_blob_sha": "04212aa6fc74c679fb4744aa038df0ef43b83262",
+    "predecessor_git_blob_sha": "75dd724efbfffdcd5d475769cb5f3bea6eaaa97b",
+    "identities": [
+      "W-SSC-105",
+      "W-SSC-106"
+    ],
+    "source_objects_identical_to_predecessor": true,
+    "source_items_total": 151,
+    "changed_source_items": 0,
+    "source_items_frozen": false,
+    "full_nine_source_reverse": false,
+    "G1_authorized": false
+  },
+  "witness": {
+    "p": 2,
+    "u": 7,
+    "field": "Q_2",
+    "u_is_unit": "ODD_2_ADIC_INTEGER",
+    "non_square_certificate": {
+      "criterion": "odd 2-adic squares are 1 modulo 8",
+      "u_mod8": 7,
+      "odd_residues": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "odd_square_residues_mod8": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "conic": {
+      "formula": "-p*x^2-u*y^2+p*u*z^2",
+      "projective_point": [
+        7,
+        2,
+        3
+      ],
+      "integer_terms": [
+        -98,
+        -28,
+        126
+      ],
+      "exact_sum": 0,
+      "nonzero_point": true,
+      "field_inclusion": "Q subset Q_2"
+    },
+    "quaternion_algebra": {
+      "parameters": [
+        2,
+        7
+      ],
+      "i_matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "j_matrix": [
+        [
+          3,
+          -2
+        ],
+        [
+          1,
+          -3
+        ]
+      ],
+      "i_squared": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "j_squared": [
+        [
+          7,
+          0
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "ij_matrix": [
+        [
+          2,
+          -6
+        ],
+        [
+          3,
+          -2
+        ]
+      ],
+      "ji_matrix": [
+        [
+          -2,
+          6
+        ],
+        [
+          -3,
+          2
+        ]
+      ],
+      "basis_order": [
+        "I",
+        "i",
+        "j",
+        "ij"
+      ],
+      "basis_coordinate_determinant": 56,
+      "conclusion": "(2,7) over Q_2 is split M_2(Q_2) by explicit rational four-dimensional basis representation",
+      "Hilbert_symbol": 1
+    }
+  },
+  "conclusions": {
+    "counterexample": "u nonsquare alone DOES NOT suffice for p=2 division/conic-no-Qp-point conclusion.",
+    "qualified_scope": "At odd p, nonsquare unit u is the ordinary unramified nonsquare case; p=2 requires additional parameter/valuation tests. Neither statement upgrades the source claims to a universal theorem.",
+    "preserves_source": "Do not substitute these math conclusions for Woit's words; mark the universal interpretation falsified and require G0 adjudication before any promotion.",
+    "necessary_G0_follow_up": [
+      "Qualify existential versus universal meaning of (p,u) representative and derived conic claims at W-SSC-105/106.",
+      "Retain p != 2 explicit source guard on three named quadratic extensions; do not infer it silently for other source sentences.",
+      "Independently audit source's asserted Gal(K/Qp) fixed-point-free claim under the actual division representative.",
+      "No change to frozen-source census or downstream modules until G0 requalification."
+    ],
+    "scope": "EXACT_SINGLE_WITNESS_AND_ISOMORPHISM_RECONSTRUCTION_NOT_COMPLETE_LOCAL_FIELD_CLASSIFICATION",
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "L_artifacts_used": false
+  },
+  "provenance": {
+    "source_author": "Peter Woit",
+    "project_research_direction": "Joshua Oshiro",
+    "counterexample_found": "2026-10-09 agent-assisted adversarial source-scope audit",
+    "recorded_on": "2026-10-09",
+    "earliest_evidence_currently_located": "source arXiv:2202.02657v2 printed pp.9-10, exact rational witness reconstructed during 2026-10-09 audit"
+  },
+  "nonclaims": [
+    "No claim Woit stated a universal all-u theorem.",
+    "No claimed issue with p-odd representative case.",
+    "No W original source byte freeze or full G0 closure.",
+    "No proof/qualification of the full Langlands or Brauer claims.",
+    "No L-track or unification semantics."
+  ]
+}
