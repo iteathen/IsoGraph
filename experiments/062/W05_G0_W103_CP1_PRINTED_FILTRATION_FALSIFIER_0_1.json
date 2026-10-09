@@ -1,0 +1,137 @@
+{
+  "schema": "isograph.exp062-w05-w103-cp1-hodge-print-conjunction-negative-witness.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INDEPENDENT_MATHEMATICAL_COUNTEREXAMPLE_TO_SIMULTANEOUS_LITERAL_SOURCE_FORMULAE_NO_AUTHOR_TEXT_CORRECTION",
+  "original_text": {
+    "id": "W05",
+    "revision": "arXiv:2202.02657v2",
+    "section": "5.2",
+    "html_lines": [
+      177,
+      189
+    ],
+    "printed_pdf_pages": [
+      6,
+      7
+    ],
+    "pdf_indices": [
+      5,
+      6
+    ],
+    "source_first_ledger": "experiments/062/W05_G0_W103_SOURCE_FIRST_CONJUNCTION_REVERSE_0_1.json",
+    "source_items": [
+      "W-SSC-103"
+    ],
+    "source_formulae": [
+      {
+        "key": "DECOMPOSITION",
+        "literal": "H^n(M,C) = directsum_(p+q=n) H^(p,q)(M)"
+      },
+      {
+        "key": "DECREASING_CHAIN_TERMINAL",
+        "literal": "0 subset F^n subset F^(n-1) subset ... subset F^1 subset F^2 = V"
+      },
+      {
+        "key": "COMPLEMENT",
+        "literal": "F^p directsum conjugate(F^(n-p+1)) = V"
+      },
+      {
+        "key": "STRICT_FILTRATION",
+        "literal": "F^p = directsum_(i>p) H^q(M,Omega^i)"
+      },
+      {
+        "key": "INTERSECTION",
+        "literal": "H^(p,q)(M) = F^p intersect conjugate(F^q)"
+      }
+    ]
+  },
+  "counterexample": {
+    "manifold": "complex projective line CP1",
+    "underlying_topology": "S2",
+    "complex_dimension": 1,
+    "smooth_compact_Kahler": true,
+    "cohomology_degree_n": 2,
+    "weight_w": 2,
+    "p": 1,
+    "q": 1,
+    "mathematical_independent_inputs": [
+      {
+        "name": "NONZERO_KAHLER_CLASS",
+        "fact": "H^(1,1)(CP1) = C",
+        "dimension": 1,
+        "proof": "Fubini-Study (1,1)-form has nonzero positive integral over compact oriented CP1; H^2(CP1,C) is one-dimensional because underlying manifold is S2."
+      },
+      {
+        "name": "HOLOMORPHIC_COTANGENT_RANK_ONE",
+        "fact": "Omega^i_CP1 = 0 for all i>1",
+        "proof": "The holomorphic cotangent bundle has complex rank one and higher exterior powers vanish."
+      }
+    ],
+    "V": {
+      "symbol": "H^2(CP1,C)",
+      "dimension_complex": 1
+    },
+    "source_strict_i_greater_than_p": {
+      "p": 1,
+      "eligible_degrees": [],
+      "F1_dimension": 0,
+      "reason": "Every index i>1 has Omega^i=0",
+      "F2_dimension": 0
+    },
+    "source_intersection_consequence": {
+      "lhs": "H^(1,1)(CP1)",
+      "lhs_dimension": 1,
+      "rhs": "F^1 intersect conjugate(F^1)",
+      "rhs_dimension": 0,
+      "consistent": false
+    },
+    "source_complement_consequence": {
+      "lhs": "F^1 directsum conjugate(F^(2-1+1))",
+      "lhs_dimension": 0,
+      "rhs": "V=H^2(CP1,C)",
+      "rhs_dimension": 1,
+      "consistent": false
+    },
+    "source_terminal_F2_consequence": {
+      "lhs": "F^2",
+      "lhs_dimension": 0,
+      "rhs": "V",
+      "rhs_dimension": 1,
+      "consistent": false
+    },
+    "independent_comparison_not_author_text": {
+      "hypothetical_index_relation": "i>=p",
+      "hypothetical_F1_dimension": 1,
+      "non_author_patch_proposed": false,
+      "reason": "Contrast solely verifies that the source-strict comparison is load-bearing; no redefinition of W103 source is licensed."
+    }
+  },
+  "inference": {
+    "falsified": "CONJUNCTION_OF_THESE_SOURCE_PRINTED_HODGE_IDENTITIES_INTERPRETED_AS_GENERAL_TRUE_THEOREM_ON_ALL_SMOOTH_COMPACT_KAHLER_MANIFOLDS",
+    "not_falsified": [
+      "SOURCE_FIDELITY_OF_PRINTED_FORMULAS",
+      "SIMPSON_ACTUAL_TWISTOR_THEORY",
+      "WOIT_PHYSICAL_UNIFICATION_PROGRAM",
+      "VALIDITY_OF_PURE_HODGE_DECOMPOSITION_BY_ITSELF"
+    ],
+    "logical_status": "NON_AUTHOR_EXTERNAL_MATH_NEGATIVE_CONTROL",
+    "relation_to_source": "KEEP_ALL_AUTHOR_PRINTED_ASSERTIONS_WITH_EPistemic_GUARD_DO_NOT_REPAIR",
+    "qualification": "LOCAL_EXACT_COUNTEREXAMPLE_ONLY_NOT_A_FULL_NINE_SOURCE_G0_QUALIFICATION"
+  },
+  "exact_source_preservation": {
+    "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_36.json",
+    "git_blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b",
+    "item": "W-SSC-103",
+    "structured_occurrences": [
+      "W103-G0-F01",
+      "W103-G0-F02"
+    ],
+    "source_bodies_changed": false,
+    "full_151_demand_qualified": false,
+    "G0_frozen": false,
+    "external_verification": "OWNER_BYPASSED_NOT_PASSED",
+    "cross_track_semantics_available": false
+  }
+}
