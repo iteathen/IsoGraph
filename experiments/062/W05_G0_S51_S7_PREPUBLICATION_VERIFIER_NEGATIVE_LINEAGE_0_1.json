@@ -1,0 +1,133 @@
+{
+  "schema": "isograph.exp062-w05-s51-s7-prepublication-verifier-negative-lineage.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_PREPUBLICATION_NEGATIVE_BASELINES_AND_ESCAPE_PRESERVED_SUCCESS_CLAIMS_EXACT_NODE_ONLY",
+  "audit_method": "Production Node verifier code evaluated in a V8 isolate with GitHub-fetched exact JSON file contents mapped to readFileSync and separately verified git-blob-SHA returns; NOT a native Node/GitHub Actions qualification, and any mutant tally is invalid if positive baseline fails or controls escape.",
+  "scope_and_versions": {
+    "s51_source": "SOURCE_SEMANTIC_CENSUS_0_41.json",
+    "s51_source_sha": "64d51e3bd41b816fc415b47012089518156bcb28",
+    "s7_source": "SOURCE_SEMANTIC_CENSUS_0_42.json",
+    "s7_source_sha": "77a7e7c3442e9bdd6d781279f327805ba59c0e6e",
+    "W_items": 151,
+    "s51_all_typed": 351,
+    "s7_all_typed": 357
+  },
+  "prepublication_attempts": [
+    {
+      "scope": "W05 §5.1",
+      "verifier_blob": "2332239b535dc55076ad50b8eb4d95ebd07fc602",
+      "stage_gate_blob": "aad5a3dc79b21e4d0ec618e70e12bb86a8ded6bc",
+      "positive": "FAIL",
+      "positive_errors": [
+        "source proof qualifier",
+        "original source defect typed only no phantom omissions"
+      ],
+      "mutants_rejected": 58,
+      "total": 58,
+      "qualification": false,
+      "cause": "Checker assumed missing original source-qualifier and defect flag names. Source JSON authoritative; no source content changed."
+    },
+    {
+      "scope": "W05 §5.1",
+      "verifier_blob": "f60aacfda6e0a9c1417db4f29d06fcdf3dfc9854",
+      "stage_gate_blob": "1b38952567e8c949aaf5ef05723c185f2aadd9de",
+      "positive": "FAIL",
+      "positive_errors": [
+        "source proof qualifier"
+      ],
+      "mutants_rejected": 60,
+      "total": 60,
+      "qualification": false,
+      "cause": "Original oracle kept third_party disposition under limits.third_party; prior checker still addressed absent limits.external_semantic_verification."
+    },
+    {
+      "scope": "W05 §5.1",
+      "verifier_blob": "86e7cb673ae7f5f3013712de00d2615a5541e1e0",
+      "stage_gate_blob": "72ef59024aaf7cb4103f555e35a9c0651fc51c40",
+      "positive": "PASS",
+      "positive_errors": [],
+      "mutants_rejected": 59,
+      "total": 61,
+      "escapes": [
+        "original author no longer opaque",
+        "source interval counter wrong"
+      ],
+      "qualification": false,
+      "cause": "Two controls targeted an absent field or an unguarded metadata counter, not the effective source claim. New checks added."
+    },
+    {
+      "scope": "W05 §5.1",
+      "verifier_blob": "1380b54363c033778f37027c934c9de958156b07",
+      "stage_gate_blob": "c1a908623733326995ce9d999fa63db62898ca22",
+      "positive": "PASS",
+      "mutants_rejected": 61,
+      "total": 61,
+      "escaped": 0,
+      "crashed": 0,
+      "local_preflight_pass": true,
+      "exact_following_native_GitHub_run": 37997843016
+    },
+    {
+      "scope": "W05 §7",
+      "verifier_blob": "9b144b1035ecf2626603de880899428423cd10c5",
+      "stage_gate_blob": "9862581ae227e66a4b196ea7287f187c4ee1be04",
+      "positive": "PASS",
+      "positive_errors": [],
+      "mutants_rejected": 57,
+      "total": 58,
+      "escapes": [
+        "F says original W110 prose absent"
+      ],
+      "qualification": false,
+      "cause": "The attempted defect-record narrative_correct=false mutation was not guarded in the verifier's positive contract."
+    },
+    {
+      "scope": "W05 §7",
+      "verifier_blob": "0f69d2c5312882974888007ab798e1439a5830a8",
+      "stage_gate_blob": "17386424a1d66c971c665170090ea9aa78bf548c",
+      "positive": "PASS",
+      "mutants_rejected": 58,
+      "total": 58,
+      "escaped": 0,
+      "crashed": 0,
+      "local_preflight_pass": true,
+      "exact_following_native_GitHub_run": 37998556037
+    }
+  ],
+  "native_GitHub_Actions_scope_successes": [
+    {
+      "run": 37997843016,
+      "job": 114048313781,
+      "commit": "83e05874ce53618fa29de865d8d7c115a94e4c9d",
+      "scope": "W05 §5.1 source0.41",
+      "positive": "PASS",
+      "rejected": 61,
+      "total": 61
+    },
+    {
+      "run": 37998556037,
+      "job": 114050696505,
+      "commit": "185ab4fef1694efe68514c9b67e4a9676a4aebfe",
+      "scope": "W05 §7 source0.42",
+      "positive": "PASS",
+      "rejected": 58,
+      "total": 58
+    }
+  ],
+  "negative_provenance_rules": [
+    "Failed V8 preflights do not become actual CI or qualified mutation scores",
+    "Escaped hostile mutations remain recorded even if a later checker corrects the coverage",
+    "Uncommitted orphan Git blobs are historical negative references only, not branch-authorized source revisions",
+    "Corrected Node CI only qualifies exact scoped source/routing contracts and never proves original all-nine-source exhaustive reverse",
+    "G0 remains unfrozen and third-party review bypassed, not passed"
+  ],
+  "source_corpus_modified": false,
+  "source_items_modified": false,
+  "all9_original_source_reverse_qualified": false,
+  "Oct03_W03_W04_mutable_bytes_verified": false,
+  "full_current_W151_demand_qualified": false,
+  "G1_G7_authorized": false,
+  "L_semantics_consumed": false
+}
