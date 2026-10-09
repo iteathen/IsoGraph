@@ -1,0 +1,24 @@
+name: Experiment 062 W01 printed sections 1 2.1 2.2 source conservation v0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_30.json'
+      - 'experiments/062/W_G0_W01_MAIN_SOURCE_DEMAND_PROJECTION_0_16.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_16.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_15.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_57.json'
+      - 'experiments/062/tools/verify-w01-main-source-21-22-0-2.mjs'
+      - 'experiments/062/W01_G0_MAIN_21_22_LOCAL_REPLAY_0_1.json'
+      - '.github/workflows/experiment-062-w01-main-source-21-22-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  source-and-conservation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-bc-second-pass-0-1.mjs
+      - run: node experiments/062/tools/verify-w01-main-source-21-22-0-2.mjs

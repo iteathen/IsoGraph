@@ -1,0 +1,26 @@
+{
+  "schema": "isograph.exp062-w01-main-21-22-second-verifier-status-fixture-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_SECOND_LOCAL_BASELINE_FAILED_ZERO_MUTATIONS_QUALIFIED",
+  "target_revision": {
+    "source": "SSC0.30",
+    "register": "W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_16.json",
+    "register_blob": "23a425d58b2bf8b1936a5475c722819c5739b5d2"
+  },
+  "observed": "Independent verifier expected literal status ALL151_W01_MAIN_1_2_1_2_2_SOURCE_MAIN_NINE_ROLES_RESTORED_UNFROZEN while the actual register status is ALL151_W01_1_2_1_2_2_SOURCE_MAIN_NINE_ROLES_RESTORED_UNFROZEN.",
+  "cause": "Overly strict invented status token, not a substantive source difference. This is distinct from the earlier NOT_FROZEN-vs-UNFROZEN substring mistake.",
+  "repair": "Use exactly the immutable source-registered status when checking the candidate. Positive baseline must pass before any mutation rejection is qualified.",
+  "qualification": {
+    "baseline_pass": false,
+    "mutations_qualified": 0,
+    "Node_CI": "NOT_RUN",
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "Neither failed validator counted as an adversarial pass",
+    "No change to W01 source oracle or 151-item conservation caused by this error",
+    "No G0 freeze"
+  ]
+}
