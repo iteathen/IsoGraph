@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062-l031-ssc022-source-revision-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_FROZEN_REVISION_PROVENANCE_MUTATION_ESCAPED_SSC022_VERIFIER",
+  "failed_workflow": {
+    "run_id": 37879042139,
+    "head_sha": "b98de26b619c0b508735435670be33aaf114ff8e",
+    "conclusion": "failure",
+    "source_step": "verify-l-g0-l01-wew-cartan-table4-source-0-1.mjs SUCCESS",
+    "ssc_step": "verify-l-g0-l031-ssc-source-0-22.mjs FAIL",
+    "baseline": "SOURCE AND SSC BASELINES BOTH PASS",
+    "adversarial_defined": 25,
+    "adversarial_rejected": 24,
+    "escaped_mutation": "change source publisher/version",
+    "mutated_field": "items[L-SSC-031].source_expression_census.L01_wew_Cartan_Table4_G0.frozen_revision"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l031-ssc-source-0-22.mjs",
+    "git_blob_sha": "f31491da2fd1dfc84a8b3329c3837ec492886b2b"
+  },
+  "cause": "SSC0.22 source record includes frozen_revision, but the new checker validated only source packet hash, not the item-level source revision label. A hostile mutation changed that label to a different paper without violating old checks.",
+  "repair": "Require exact item-level frozen_revision = source packet revision = arXiv:0711.0770v1 2007-11-06, preserve all 190 unchanged full SSC items and source formulas; rerun full baseline and all 25 non-noop mutants.",
+  "source_truth_effect": "None; the 729 real wew cases and all Table4 arithmetic passed separately. No editorial replacement of frozen L01, no mathematical theorem qualification or external verification passed.",
+  "current_stage": "G0_UNFROZEN_SOURCE_CENSUS_NOT_COMPLETE",
+  "G1_to_G7_authorized": false,
+  "external_cold_review_passed": false
+}
