@@ -1,0 +1,102 @@
+{
+  "schema": "isograph.exp062-w01-section3-source-verifier-repair-local-replay.v0.2",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "G0_INTERNAL_RECONSTRUCTION_CANDIDATE_WITH_NODE_CI_PENDING",
+  "input_tuple": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "75dd724efbfffdcd5d475769cb5f3bea6eaaa97b"
+    },
+    "current_gate_predecessor": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_58.json",
+      "git_blob_sha": "981e31812f30baa204b067c049eb69a1187aef3d"
+    },
+    "W01_primary_oracle": {
+      "path": "experiments/062/W01_G0_E0_SPATIAL_SOURCE_ORACLE_0_1.json",
+      "git_blob_sha": "c0c2864aaa6f4cb7d826540f8237706ce7a997d9"
+    },
+    "source_verifier": {
+      "path": "experiments/062/tools/verify-w01-section3-e0-source-0-2.mjs",
+      "git_blob_sha": "6dfa64a9ab045a9c990a92165a1574861df3cb9e"
+    },
+    "quaternion_verifier": {
+      "path": "experiments/062/tools/verify-w01-section3-e0-quaternion-0-2.mjs",
+      "git_blob_sha": "beaf2cd20dfb9d56f0a127307943ae6f27aae5d3"
+    }
+  },
+  "preserved_failed_evidence": {
+    "failed_0_1_CI": "https://github.com/iteathen/IsoGraph/actions/runs/37905359267",
+    "failed_verifier": {
+      "path": "experiments/062/tools/verify-w01-section3-e0-source-0-1.mjs",
+      "git_blob_sha": "df40834a9bff981f4da7b62779754e2a1ddc529c"
+    },
+    "CI_failure_record": {
+      "path": "experiments/062/W01_G0_S3_SOURCE_VERIFIER_NODE_FAILURE_0_1.json",
+      "git_blob_sha": "964999ff57b8e62af84e3a40d1edd018709d47cd"
+    },
+    "inverse_test_defect": {
+      "path": "experiments/062/W01_G0_S3_INVERSE_NORMALIZATION_DEFECT_0_1.json",
+      "git_blob_sha": "1d90c21b17d0212a405783092c2406e4dadd04cd"
+    }
+  },
+  "corrected_source_falsifier_design": [
+    "explicit Oct03 original mutable-source byte-identity flag remains false",
+    "current source frozen flag remains false",
+    "missing or malformed source statement arrays fail closed, not TypeError",
+    "static W002/W003 text suffix witnesses prevent joint in-memory source/register/coverage forgery",
+    "adversarial stage gate0.59 checks must remain G0-only"
+  ],
+  "corrected_quaternion_inverse": {
+    "formula": "inverse(e)=conjugate(e)/norm_squared(e)",
+    "sample_e0": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "sample_norm_squared": 2,
+    "old_conjugate_times_e0": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "correct_inverse_times_e0": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "e0_choices": 6,
+    "Q8_left": 8,
+    "Q8_right": 8,
+    "vector_domain": 81,
+    "ordered_inverse_equivariance_cases": 31104,
+    "nonunit_vector_cases": 20736,
+    "relative_e0_temporal_cases": 384,
+    "spatial_direction_cases": 1152,
+    "local_integer_numerator_reconstruction": "PASS",
+    "negative_action_falsifiers": "7 CANDIDATES_PENDING_NODE"
+  },
+  "verification": {
+    "internal_rational_reconstruction": "PASS_V8_31104",
+    "source_verifier_new_Node": "PENDING",
+    "quaternion_new_Node": "PENDING",
+    "workflow": "PENDING",
+    "full48_W01_reverse": false,
+    "nine_source_reverse": false,
+    "original_Oct03_mutable_byte_identity": false,
+    "G0_frozen": false,
+    "G1_to_G7": false,
+    "external_third_party": "BYPASSED_NOT_PASSED"
+  },
+  "no_L_changes": true,
+  "nonclaims": [
+    "Source math is not repaired/normalized; only finite verifier now represents printed inverse",
+    "No universal Spin4 theorem is proven by finite cases",
+    "No new source assertion was proven/frozen",
+    "Failed predecessor has not been upgraded to passing"
+  ]
+}

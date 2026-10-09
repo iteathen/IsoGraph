@@ -16,7 +16,17 @@ Current provisional formulations are W-F1 Euclidean-first twistor unification, W
 
 See ../TRACK_W_FORMULATION_MAP_0_1.md, ../TRACK_W_DTS_WORKING_0_1.md, and ../FORMULATION_FAMILY_GRAPH_0_1.json.
 
-## Current G0 source-fidelity and qualification boundary (2026-10-08)
+## Current G0 source-fidelity and qualification boundary (2026-10-09)
+
+### W01 §3 latest source verifier and inverse-normalization repair (2026-10-09)
+
+The latest W01 printed-page-6 G0 suite at [run 37905359267](https://github.com/iteathen/IsoGraph/actions/runs/37905359267) **FAILED**. Its v0.1 source verifier allowed two adversarial mutations (false Oct03 mutable-source byte identity and prematurely frozen source object) and threw on deletion of a source statement. The failure is preserved in `experiments/062/W01_G0_S3_SOURCE_VERIFIER_NODE_FAILURE_0_1.json`, with the original failed verifier unchanged. `experiments/062/tools/verify-w01-section3-e0-source-0-2.mjs` now rejects all these conditions, guards missing W002/W003 assertion arrays, fixes the source-body witness independent of the mutable candidate, and routes to the W-only successor gate 0.59. Node CI must be checked against its exact commit before claiming qualification.
+
+A separate correctness defect was confirmed in the old finite quaternion test: W01 **prints `e_0^{-1}x`**, but the test used `conjugate(e_0)*x`, which equals the inverse only for unit-norm choices. For `e_0=1+i` and `x=e_0`, the old temporal expectation incorrectly returned **2** instead of the correct **1**. See `experiments/062/W01_G0_S3_INVERSE_NORMALIZATION_DEFECT_0_1.json`. The v0.2 rational-inverse test `experiments/062/tools/verify-w01-section3-e0-quaternion-0-2.mjs` represents `e_0^{-1}=conjugate(e_0)/|e_0|²`, cross-multiplies exact integer numerators, and examines 31,104 ordered unit-spin action cases, of which 20,736 have nonunit `e_0`. These finite results are *checks of source reconstruction*, not universal proof or a source alteration.
+
+The v0.1 failed CI and conjugate-only numerical test are **historical negative evidence**. All 151 source item identities, SSC0.31, historical 86-member projection, source coverage16/register17 remain unchanged in this repair. Current stage gate `experiments/062/W_CURRENT_STAGE_GATE_0_59.json` is **G0 OPEN/UNFROZEN**, G1–G7 and recursive IA blocked. Dedicated corrected workflow: `.github/workflows/experiment-062-w01-section3-e0-source-0-2.yml`; all CI claims await committed evidence.
+
+
 
 ### Historical G5H verifier and shared-dossier CI correction (2026-10-08)
 
@@ -26,7 +36,7 @@ See `experiments/062/W_G5H_HISTORICAL_SHARED_README_VERIFIER_DEFECT_0_1.json` an
 
 
 
-**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_58.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_31.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
+**Controlling W stage gate:** `experiments/062/W_CURRENT_STAGE_GATE_0_59.json`. The original nine-source corpus in `SOURCE_CORPUS_FREEZE_0_2.md` is unchanged. The latest W source-census successor is `woit/SOURCE_SEMANTIC_CENSUS_0_31.json`, carrying all 151 source-census identities, but it is **not frozen / not a complete cold source audit**. The former G1–G7 qualification passes and older W G5 current-authority boundary are historical for their invalidated source tuple; no present W G1/G2/G3/recursive IA is authorized.
 
 ### Current W04d/W04e 23-source-item completion — G0 unfrozen
 

@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-w01-e0-inverse-vs-quaternion-conjugate-test-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_OLD_FINITE_TEST_NORMALIZES_SOURCE_INVERSE_INCORRECTLY",
+  "source": {
+    "id": "W01",
+    "revision": "arXiv:2104.05099v2",
+    "pdf": "https://arxiv.org/pdf/2104.05099v2",
+    "printed_page": 6,
+    "pdf_index": 5,
+    "source_expression": "e_0^{-1}x \\mapsto g_R e_0^{-1}g_L^{-1}g_L xg_R^{-1}=g_R e_0^{-1}xg_R^{-1}"
+  },
+  "old_checker": {
+    "path": "experiments/062/tools/verify-w01-section3-e0-quaternion-0-1.mjs",
+    "git_blob_sha": "060ca7cc1dd6fca9c52192183b213d6824cda28a"
+  },
+  "error": "Old finite test represented e0^-1 by quaternion conjugate(e0), without denominator |e0|^2. It tested numerator-only covariance under unit Spin4 elements and for temporal x=e0 expected |e0|^2, but the source's relative inverse should yield 1.",
+  "explicit_counterexample": {
+    "e0": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "x": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "norm_squared": 2,
+    "source_correct_inverse_times_e0": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "old_implemented_conjugate_times_e0": [
+      2,
+      0,
+      0,
+      0
+    ]
+  },
+  "effect": "Old test's 31104 numerator-order checks were not a test of full source inverse for four nonunit e0 choices; numeric result cannot qualify expression role or source-correct temporal normalization.",
+  "repair": {
+    "successor": "experiments/062/tools/verify-w01-section3-e0-quaternion-0-2.mjs",
+    "source_math": "For quaternion e!=0, e^-1=conjugate(e)/norm_squared(e). Compare rational results by cross multiplication and enforce e^-1 e=1 for all chosen e0.",
+    "no_change_to_W_SSC0_31": true
+  },
+  "evidence_routing": "Source formula is authoritative as printed; this correction changes only computational falsifiers/verification, not W01 mathematics and not Core semantic authority.",
+  "scope": "FINITE_Q8_GAUSSIAN_QUATERNION_TEST_NOT_UNIVERSAL_SPIN4_THEOREM",
+  "external_review": "OWNER_BYPASSED_NOT_PASSED",
+  "W_G0_frozen": false,
+  "no_L_changes": true
+}
