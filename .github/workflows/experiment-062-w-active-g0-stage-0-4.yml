@@ -1,19 +1,5 @@
-name: Experiment 062 W active G0 stage guard 0.4
+name: Experiment 062 W G0 historical gate0.44 guard 0.4 (manual only)
 on:
-  push:
-    branches: [research/woit-lisi-isomorph-20261003]
-    paths:
-      - 'experiments/062/W_CURRENT_STAGE_GATE_*.json'
-      - 'experiments/062/W_G0_*.json'
-      - 'experiments/062/W_G1_*.json'
-      - 'experiments/062/W_G2_*.json'
-      - 'experiments/062/W_G3_*.json'
-      - 'experiments/062/W_G4_*.json'
-      - 'experiments/062/W_G5_*.json'
-      - 'experiments/062/W_G7_*.json'
-      - 'experiments/062/tools/verify-w-*.mjs'
-      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_*.json'
-      - '.github/workflows/experiment-062-w-active-g0-stage-0-4.yml'
   workflow_dispatch:
 permissions: {contents: read}
 jobs:

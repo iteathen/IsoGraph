@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062-w-active-g0-stage-local-replay.v0.5",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_V8_POSITIVE_PASS_35_OF_35_ADVERSARIAL_STAGE_MUTATIONS_REJECTED_NODE_CI_PENDING",
+  "current": {
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_50.json",
+      "git_blob_sha": "b28f4d8408b576c25f1ada2eaff35acce31c087b"
+    },
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_23.json",
+      "git_blob_sha": "bc86b39fdd69a3afb4c802771fcc330711683391"
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_9.json",
+      "git_blob_sha": "c9e21f6ff2ea7dae1dd04a1fcfea0a50ff1b66a3"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_8.json",
+      "git_blob_sha": "43f0ce96eedbd2c3f6879c7fec14b097cf15f15e"
+    },
+    "historical_86_W": {
+      "path": "experiments/062/W_G0_W04B_SOURCE_DEMAND_PROJECTION_0_11.json",
+      "git_blob_sha": "4300200cdf41650d52cd8ba782d4e561195994b3"
+    }
+  },
+  "predecessor_active_guard": {
+    "workflow": ".github/workflows/experiment-062-w-active-g0-stage-0-4.yml",
+    "git_blob_sha": "93a85ab1612b201003913087f5a449fb42ac61a5",
+    "disposition": "HISTORICAL_PINNED_TO_GATE0_44_SSC0_17_NOT_CURRENT"
+  },
+  "stale_guard_defect": {
+    "path": "experiments/062/W_ACTIVE_G0_STAGE_04_STALE_PIN_DEFECT_0_1.json",
+    "git_blob_sha": "6b7ceacc9f11a6590352d0a2e27c0cd2a989ba7e"
+  },
+  "guard_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-5.mjs",
+    "git_blob_sha": "f73e8ba797f4086d66a297e18247b69bfcea25ce"
+  },
+  "CI": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-5.yml",
+    "git_blob_sha": "fc8202720ec602c7a7b0d50f71e6f0a659470135",
+    "pending": true
+  },
+  "method": "Direct V8 pure-validator replay over exact pinned GitHub source G0.50/SSC0.23/register0.9/coverage0.8/86 historical view, and false G1-G7/IA/DP/Oct03 source identity mutants.",
+  "positive_errors": [],
+  "adversarial_mutations_total": 35,
+  "adversarial_mutations_rejected": 35,
+  "escaped": 0,
+  "critical_negative_evidence": [
+    "Old G1 446 to G3 445 mismatch",
+    "Old G7 partial source W097 map source closure invalid",
+    "52 historical omitted-incomplete W items and eight old closed schema members inside 86 view",
+    "No full nine-source reverse",
+    "Old G0.4 CI cannot qualify current G0.50"
+  ],
+  "stage": {
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "No Node CI asserted at artifact creation",
+    "No mathematical theorem",
+    "No full W source G0 closure"
+  ]
+}

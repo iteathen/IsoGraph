@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062-w-live-g0-stage-verifier-stale-pins-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_ACTIVE_W_G0_WORKFLOW_0_4_VERIFIES_HISTORICAL_GATE_0_44_NOT_ACTUAL_GATE_0_49",
+  "old_active_workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-4.yml",
+    "git_blob_sha": "93a85ab1612b201003913087f5a449fb42ac61a5"
+  },
+  "old_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-4.mjs",
+    "git_blob_sha": "602583ec04c6143f7d445fb28d4e3e0b530698d1"
+  },
+  "observed_old_verifier_inputs": {
+    "stage": "W_CURRENT_STAGE_GATE_0_44.json",
+    "source": "SOURCE_SEMANTIC_CENSUS_0_17.json",
+    "source_coverage": "W_G0_LINE_BY_LINE_151_COVERAGE_0_2.json"
+  },
+  "actual_live_at_discovery": {
+    "stage": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_49.json",
+      "git_blob_sha": "94d45e7946e035d9664669a80e95f5de4fa3707f"
+    },
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_22.json",
+      "git_blob_sha": "874ce443edaad2cb256d1c1bf1dc5f5dec6f05bf"
+    },
+    "source_coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_7.json",
+      "git_blob_sha": "ed88140c50421aa7f7f645b7a1ee30e1c3f1df17"
+    }
+  },
+  "defect": "Successful W active G0 0.4 action tests only its pinned historical G0.44/SSC0.17 fixture. Its name and triggering path patterns could be misinterpreted as current source/routing proof.",
+  "impact": "HISTORICAL_GREEN_CI_IS_NOT_CURRENT_G0_AUTHORITY; G1-G7 REMAIN BLOCKED",
+  "correction": "Version a successor W active stage verifier pinned to the latest current stage and source/register/coverage, with explicit source-revision/negative guards and hostile mutations. Archive predecessor automatic push workflow while keeping its file and failed/passing historical workflow evidence.",
+  "no_qualified_invalidation": "Existing W04a source verifier CI remains true for SSC0.22; only the alleged current-stage inference is rejected.",
+  "no_L_semantics_used": true
+}

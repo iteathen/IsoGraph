@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-w04b-g0-verifier-prepublication-baseline-filter-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "FAILED_POSITIVE_BASELINE_PRESERVED_NOT_CI",
+  "candidate_source_sha": "bc86b39fdd69a3afb4c802771fcc330711683391",
+  "predecessor_source_sha": "874ce443edaad2cb256d1c1bf1dc5f5dec6f05bf",
+  "source_line_oracle_sha": "1c5b8e1bcaed4dba555711a06b8cbc35d2cffa0a",
+  "observed_positive_failure": "source-literal cross-appearance W-SSC-066",
+  "adversarial_mutations_run": 42,
+  "mutations_reported_rejected": 42,
+  "mutations_counted_as_qualification": 0,
+  "cause": "The checker filtered W066 source_expression_census.statements by generic regex ^W04B-[0-9]{3}-, thereby selecting three predecessor W04B-066-01..03 expressions in addition to three new reverse-audit incidences W04B-066-04..06. The golden reverse-audit oracle intentionally includes only the 22 NEW incidences, so the valid W066 predecessor statements were mistakenly treated as an error.",
+  "correction": "Select new source incidences by exact frozen audit ID membership, not a broad W04B prefix regex; retain predecessor W066 01-03 unchanged. Rerun positive baseline before mutation testing, require baseline pass and non-vacuous mutant failures.",
+  "impact": {
+    "source_candidate_changed": false,
+    "source_lines_changed": false,
+    "stage": "G0_UNFROZEN",
+    "No_G1_G7_promotion": true,
+    "Node_CI_not_executed": true,
+    "L_semantics_used": false
+  },
+  "nonclaims": [
+    "Not a source-fidelity contradiction",
+    "Not a successful adversarial qualification",
+    "No published failing verifier code"
+  ]
+}
