@@ -34,7 +34,7 @@ function verify(c=Current){
  ck(data.failed_verifier_baseline?.run_id===37904227568&&data.failed_verifier_baseline?.provenance?.git_blob_sha===sha(F.failure)&&data.failed_verifier_baseline?.mutation_cases_run===0,'failed baseline never reclassified');
  for(const k of ['current_source_complete','graded_curvature_math_theorem_qualified','conditional_factor4_author_error_confirmed','G1_authorized'])ck(data[k]===false,'new artifact cannot self-authorize '+k);
  for(const z of Packet.source_equations.filter(x=>x.item==='L-SSC-039'))ck(body.includes(z.id+': '+z.source_literal),'all four L039 source expressions exact in body '+z.id);
- for(const t of ['OUTER 1/2','INNER 1/8','F_gw','W*W','B1*B1','ONE-FORMS','Higgs phi','factor four','not a CONFIRMED AUTHOR DEFECT','G1–G7'])ck(body.includes(t),'typed body source/nonclaim '+t);
+ for(const t of ['H1=(1/2)*omega+(1/4)*e*phi+w_ew','independent exterior-curvature W*W and B1*B1','OUTER 1/2','INNER 1/8','F_gw','W*W','B1*B1','ONE-FORMS','Higgs phi','factor four','not a CONFIRMED AUTHOR DEFECT','G1–G7'])ck(body.includes(t),'typed body source/nonclaim '+t);
  ck(Packet.source_complete===false&&Packet.open_conditions?.conditional_factor4_author_error_confirmed===false&&Gate.current_lawful_state?.G1_authorized===false,'underlying source method still open');
  ck(c.items?.some(x=>x.id==='L-SSC-032')&&!j(i??{}).includes('W-SSC-'),'source independent, earlier H1 not rewritten');
  return errs;
