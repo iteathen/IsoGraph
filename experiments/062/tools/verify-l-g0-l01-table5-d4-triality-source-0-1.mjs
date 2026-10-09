@@ -48,7 +48,7 @@ function verify(x=src){
  for(const [name,p]of [['ssc_023',files.ssc],['gate_023',files.gate],['cl71_source',files.cl71],['wew_Cartan_Table4',files.ew]])ck(x.parents?.[name]?.path===p&&x.parents?.[name]?.git_blob_sha===blob(p),'exact previous source dependency '+name);
  ck(ssc.items.length===191&&gate.current_lawful_state.G1_authorized===false&&gate.current_lawful_state.G0_source_census_frozen===false,'G0 still source-incomplete');
  ck(x.source_complete===false&&x.source_census_frozen===false&&x.mathematical_theorem_qualified===false&&x.G1_authorized===false&&x.external_cold_review_passed===false,'no arbitrary G0/G1 promotion');
- ck(j(s.header)===j(header)&&s.signed_coordinate_encoding?.includes('CORRELATED'),'exact four source axes and no independent sign symbols');
+ ck(j(s.header)===j(header)&&s.signed_coordinate_encoding?.includes('correlated'),'exact four source axes and no independent sign symbols');
  ck(s.bosonic_rows_ordered?.length===12&&s.spinor8Splus_rows_ordered?.length===4,'16 rows, no missing source line');
  ck(j(table(s.bosonic_rows_ordered))===j(expectedTable5),'all twelve signed bosonic source rows complete, exact ordered wedge/vee signs');
  ck(j(table(s.spinor8Splus_rows_ordered))===j(expected8Splus),'all four spinor paired source weights correct');
