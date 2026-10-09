@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.exp062-l039-common-basis-normalization-contract-array-crash.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_VERIFIER_MUTATION_DELETE_CONTRACT_UNCAUGHT_TYPEERROR",
+  "failed_ci": {
+    "run_id": 37911765046,
+    "head_sha": "678c6f77b0f064e7595895ad573d4725d1a76288",
+    "conclusion": "failure",
+    "failure": "TypeError Cannot read properties of undefined (reading id) at check() second normalization contract",
+    "baseline_numerical_counts": "Execution got beyond standalone Clifford calculations and entered mutation loop; cannot claim a full suite PASS",
+    "adversarial_round_complete": false,
+    "adversarial_rejected_total_unestablished": true
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l039-common-basis-normalization-0-1.mjs",
+    "git_blob_sha": "d6175e54eb196268b4f8bec446b85d4d4d7b525f"
+  },
+  "root_cause": "Hostile deletion of the second project-only output-normalization comparison contract caused check() to access contract[1].id without a missing-element guard. An exception, unlike a structured rejection, masks exact mutation reporting.",
+  "minimal_repair": "Require contract length two; use guarded contract?.[0]? and contract?.[1]? checks; ensure baseline PASS then count only changed/effectively rejected mutations. No changes to source, Clifford gamma inputs, common frame jets, or numeric expected results.",
+  "G1_authorized": false,
+  "source_complete": false,
+  "author_math_error_confirmed": false,
+  "external_cold_review_passed": false
+}
