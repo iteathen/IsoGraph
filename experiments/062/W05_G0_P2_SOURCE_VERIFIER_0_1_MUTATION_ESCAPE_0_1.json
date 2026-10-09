@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062-w05-G0-verifier-nine-source-reverse-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "FAILED_NODE_MUTATION_33_OF_34_9_SOURCE_REVERSE_GATE_ESCAPE_PRESERVED",
+  "source_candidate": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_33.json",
+    "git_blob_sha": "a801ef92059de4ac81bcb7e0960ff998aa8a04fc",
+    "source_items": 151,
+    "frozen": false
+  },
+  "gate_at_failure": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_62.json",
+    "git_blob_sha": "6a093262ec10ace4ade7bd943f117e0ea35a70a2"
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-1.mjs",
+    "git_blob_sha": "6e0b8eed09375e11d692f8ea4e589359c37fc803"
+  },
+  "run": {
+    "id": 37916217524,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37916217524",
+    "commit": "f9c811dfc9447b5f935c94b21e85b0b13ca6fe18",
+    "conclusion": "failure",
+    "Node": "26.7.0"
+  },
+  "observed": {
+    "base_conservation_error_count": 0,
+    "adversarial_mutations": 34,
+    "mutations_rejected": 33,
+    "escaped_mutation": "nine sources reverse claimed complete",
+    "escaped_assignment": "gate.current_source_coverage.reverse_all_original_nine_sources_complete = true"
+  },
+  "cause": "Verifier guarded underlying source+coverage original_nine_source_reverse_assertion_enumeration_complete but failed to check the separately displayed CURRENT stage-gate W05/current coverage reverse flag, allowing assertion by stage alias.",
+  "repair": {
+    "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-2.mjs",
+    "action": "Add exact false current gate coverage/full-151/status flags to positive verifier AND adversarially mutate each; preserve old failing test immutable.",
+    "Node_CI": "PENDING_COMMIT"
+  },
+  "negative_controls": [
+    "Do not relabel failed 33/34 run as pass.",
+    "Do not promote the 151 source census or G0 frozen gate.",
+    "Do not claim full reverse audit across nine primary W papers.",
+    "Do not import L track or blend with unification."
+  ],
+  "external_review": "OWNER_BYPASSED_NOT_PASSED",
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "agent_assisted_verifier_reconstruction": "2026-10-09"
+  }
+}
