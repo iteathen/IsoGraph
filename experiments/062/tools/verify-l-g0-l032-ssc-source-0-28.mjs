@@ -24,7 +24,7 @@ function verify(s=Current){
  ok(rev.source_packet?.path===path.packet&&rev.source_packet?.git_blob_sha===sha(path.packet),'source packet exact SHA');
  ok(rev.source_verifier?.path===path.checker&&rev.source_verifier?.git_blob_sha===sha(path.checker),'source arithmetic checker exact SHA');
  ok(rev.predecessor_gate?.path===path.gate&&rev.predecessor_gate?.git_blob_sha===sha(path.gate),'prior L G0 gate');
- ok(rev.failed_fixtures?.length===2&&rev.failed_fixtures[0].path===path.fail1&&rev.failed_fixtures[1].path===path.fail2&&rev.failed_fixtures[0].git_blob_sha===sha(path.fail1)&&rev.failed_fixtures[1].git_blob_sha===sha(path.fail2),'failed baseline fixture provenance exact');
+ ok(rev.failed_fixtures?.length===2&&rev.failed_fixtures[0].path===path.fail1&&rev.failed_fixtures[1].path===path.fail2&&rev.failed_fixtures[0].git_blob_sha===sha(path.fail1)&&rev.failed_fixtures[1].git_blob_sha===sha(path.fail2)&&rev.failed_fixtures[0].id===37896172149&&rev.failed_fixtures[1].id===37896285018,'failed baseline fixture provenance exact');
  ok(rev.node_CI?.id===37896380480&&rev.node_CI?.conclusion==='success'&&rev.node_CI?.adversarial_rejected===23&&rev.node_CI?.pure_gravity_pairs===6&&rev.node_CI?.mixed_brackets===120&&rev.node_CI?.source_typed_gravity_output_countercases===24&&rev.node_CI?.external_review_passed===false,'source CI exact bounded scope');
  ok(rev.unchanged_source_items===190&&j(rev.changed_source_items)===j(['L-SSC-032']),'conservation metadata');
  for(const k of ['whole_L01_L06_source_complete','whole_L01_H1_graded_source_qualified','source_census_frozen','G1_authorized','full_core_primitive_closure'])ok(rev[k]===false,'no qualification claim '+k);
@@ -32,7 +32,7 @@ function verify(s=Current){
  ok(j(detail.source_printed_omega_coefficients)===j(Pkt.independent_printed_omega_six_cases),'six source omega configurations and real sign/orientation');
  ok(j(detail.source_operator_roles)===j(Pkt.source_roles)&&j(detail.finite_scope)===j(Pkt.finite_observations)&&j(detail.negative_scope_limits)===j(Pkt.source_implications_and_nonclaims),'every source coefficient role and negative scope tracked');
  ok(detail.ci?.run_id===37896380480&&detail.ci?.adversarial_mutants===23&&detail.ci?.external_cold_review_passed===false,'item scoped evidence not external PASS');
- ok(detail.failed_fixtures?.length===2&&detail.failed_fixtures.every(f=>f.mutations_executed===0),'failed baseline does not pass mutations');
+ ok(detail.failed_fixtures?.length===2&&detail.failed_fixtures.every(f=>f.mutations_executed===0)&&detail.failed_fixtures[0].run_id===37896172149&&detail.failed_fixtures[1].run_id===37896285018,'failed baseline does not pass mutations');
  for(const k of ['source_full_curvature_proved','paper_math_error_owner_known','source_authorized_rephasing_found','all_primed_electroweak_source_identification_verified','stage_G1_authorized'])ok(detail[k]===false,'source residual boundary '+k);
  for(const [k,v]of Object.entries({
  L032_H1_independent_pure_omega_six_source_operators_G0_verified:true,
