@@ -68,6 +68,9 @@ function typedSourceCheck(p=src){
  ck(p.finite_math_scope?.mixed_operators_even_under_outer_chirality===true&&p.finite_math_scope?.source_quadrant?.includes("upper 8x8 first quadrant"),"correct chirality projection");
  ck(p.source_table5_boundary?.root_weight_rows_exactly_checked===false&&p.source_table5_boundary?.root_triality_rotation_all_source_orbits_checked===false&&p.source_table5_boundary?.source_physical_identification?.includes("tentatively"),"Table5 and triality physical generation OPEN");
  ck(p.negative_evidence?.no_W_source_import===true&&p.negative_evidence?.source_dynamics?.includes("not independent full physical")&&p.finite_math_scope?.nonclaims?.some(x=>x.includes("No full 8x8")),"negative outcomes and open G0 source");
+ ck(p.negative_evidence?.L01_real_Spin_Lie_group==="Published L01 SL(2,C)=SL(2,R)xSL(2,R) as REAL groups has separate center and Killing counterexamples; no repair from this Cl(7,1) coefficient example.","L01 real Spin-group source counterexample not erased");
+ ck(p.negative_evidence?.L05_original_O==="Original published L05 ordinary-O two-negative table and Clifford/noncommutator failures preserved unchanged.","L05 ordinary-O source contradiction must not be normalized");
+
  ck(p.next_lawful_step?.includes("64 ordered anticommutator")&&p.next_lawful_step?.includes("16 mixed")&&!str(p).includes("W-SSC-"),"source-only next work");
  if(errors.length)return {errors,stats:null}; // baseline-first: effective hostile source mutations fail structurally before expensive finite suite.
  // Independent two-dimensional Pauli matrices reconstruct all 16x16 source gamma products.
