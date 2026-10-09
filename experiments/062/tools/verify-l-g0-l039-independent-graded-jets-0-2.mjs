@@ -35,7 +35,7 @@ function sourceGuards(c=Current,p=Packet,g=Gate){
  require(p.definition?.H1==='H1=(1/2)*omega+(1/4)*E+(W+B1)'&&p.definition?.mixed_1form_E?.includes('phi^alpha real scalar'),'source 1/4 and graded Higgs typing');
  require(p.definition?.source_named_mixed_formula==='F_gw=(de+(1/2)[omega,e])*phi-e*(dphi+[W+B1,phi])','printed unscaled named Eq3.4');
  require(Graded.actor_degrees?.find(x=>x.id==='e')?.form_degree===1&&Graded.actor_degrees?.find(x=>x.id==='phi')?.form_degree===0,'frozen source e one-form phi scalar');
- require(Graded.source_equations?.find(x=>x.id==='L01-EQ3.4-FGW')?.source_literal===p.definition?.source_named_mixed_formula,'source Eq3.4 output actor identification remains explicit');
+ require(Graded.source_equations?.find(x=>x.id==='L01-EQ3.4-FGW')?.source_literal==='F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])=T*phi-e*D(phi)'&&p.definition?.source_named_mixed_formula==='F_gw=(de+(1/2)[omega,e])*phi-e*(dphi+[W+B1,phi])','source Eq3.4 compact project notation and exact printed source tokens independently conserved');
  require(g.schema==='isograph.exp062-l-current-stage-gate.v0.31'&&g.current_source_census?.path===path.current&&g.current_source_census?.git_blob_sha===sha(path.current),'successor procedural gate pinned to SSC31');
  require(g.predecessor_gate?.path===path.priorGate&&g.predecessor_gate?.git_blob_sha===sha(path.priorGate),'historical G0 gate30 pin');
  require(g.corrective_verifier?.path==='experiments/062/tools/verify-l-g0-l039-independent-graded-jets-0-2.mjs'&&g.verifier_defect?.path===path.defect,'corrective provenance routed');
