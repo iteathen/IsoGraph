@@ -1,0 +1,162 @@
+{
+  "schema": "isograph.lisi-l01-chiral-Cl31-spin-Eq2_8-source-g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "PRIMARY_SOURCE_EQ2_8_EXACT_FINITE_CLIFFORD_CHIRAL_BLOCK_SOURCE_CANDIDATE_NOT_WHOLE_THEOREM",
+  "authority": false,
+  "source_complete": false,
+  "mathematical_qualification": false,
+  "full_L01_ASTS_compiled": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1, 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_locations": [
+      "§2.2.1 printed page 8: generators gamma1..gamma4",
+      "§2.2.1 printed page 9: Eq(2.8), spin connection and its chiral blocks",
+      "§2.2.1 printed page 9: six real ωS/ωT coefficients, conjugation coupling"
+    ],
+    "source_modality": "AUTHOR_SOURCE_PRINTED_MATRIX_EXPRESSIONS_AND_SIX_REAL_COEFFICIENTS_NOT_A_UNIVERSAL_PHYSICAL_THEOREM"
+  },
+  "predecessors": {
+    "source_census0_19": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_19.json",
+      "git_blob_sha": "fe136b5540bedd8a262a894afa656f30a124c23c"
+    },
+    "current_gate0_19": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_19.json",
+      "git_blob_sha": "c1e46c8c78ec20e7bc4e7f405f160c29c59e0095"
+    },
+    "seven_original_modality_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SEVEN_SOURCE_MODALITY_ASSERTIONS_G0_0_1.json",
+      "git_blob_sha": "d8346b2d10afbb3625301570ad0351807b77c847"
+    },
+    "separate_real_group_counterexample": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SPIN_REAL_GROUP_ISOMORPHISM_SOURCE_DEFECT_G0_0_1.json",
+      "git_blob_sha": "13bc77b555444f2e5395bed8035b2d4d80f7eece"
+    },
+    "full_L01_visual_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    }
+  },
+  "matrix_role": {
+    "source_signature": "Cl(3,1), three positive spatial generators and one negative gamma4",
+    "source_Pauli_2x2": {
+      "sigma1": "[[0,1],[1,0]]",
+      "sigma2": "[[0,-i],[i,0]]",
+      "sigma3": "[[1,0],[0,-1]]",
+      "identity": "[[1,0],[0,1]]"
+    },
+    "original_gamma": {
+      "gamma1": "sigma2 ⊗ sigma1",
+      "gamma2": "sigma2 ⊗ sigma2",
+      "gamma3": "sigma2 ⊗ sigma3",
+      "gamma4": "i*sigma1 ⊗ identity2"
+    },
+    "Clifford_definition": "gamma_mu*gamma_nu + gamma_nu*gamma_mu = 2*g_munu*I4 with g=diag(+,+,+,-)",
+    "bivector_definition": "gamma_munu = (gamma_mu*gamma_nu-gamma_nu*gamma_mu)/2; 1<=mu<nu<=4",
+    "spin_connection_full_sum": "omega = (1/2)*sum_{mu,nu=1..4} omega^{mu,nu} gamma_{mu,nu} with omega anti-symmetric; equals sum_{mu<nu} omega^{mu,nu} gamma_{mu,nu}",
+    "chiral_block_role": "left spinor rows/cols 0,1 and right spinor rows/cols 2,3; no cross-block mixing for bivectors",
+    "six_source_coefficients": "omega^{mu,nu} real and antisymmetric, 6 free real components; complex extension NOT source admissible"
+  },
+  "independent_expected_bivectors": [
+    {
+      "mu": 1,
+      "nu": 2,
+      "left": "i*sigma3",
+      "right": "i*sigma3"
+    },
+    {
+      "mu": 1,
+      "nu": 3,
+      "left": "-i*sigma2",
+      "right": "-i*sigma2"
+    },
+    {
+      "mu": 1,
+      "nu": 4,
+      "left": "+sigma1",
+      "right": "-sigma1"
+    },
+    {
+      "mu": 2,
+      "nu": 3,
+      "left": "i*sigma1",
+      "right": "i*sigma1"
+    },
+    {
+      "mu": 2,
+      "nu": 4,
+      "left": "+sigma2",
+      "right": "-sigma2"
+    },
+    {
+      "mu": 3,
+      "nu": 4,
+      "left": "+sigma3",
+      "right": "-sigma3"
+    }
+  ],
+  "source_omega_role_reconstruction": {
+    "spatial_rotations": "omegaS=(omega23,-omega13,omega12); omegaS^tau=(1/2)*sum_{eps,pi=1..3} omega^{eps,pi} epsilon_{eps,pi,tau}",
+    "temporal_boosts": "omegaT=(omega14,omega24,omega34)",
+    "upper": "omega_L = sum_tau (omegaS^tau-i*omegaT^tau)*(i*sigma_tau)",
+    "lower": "omega_R = sum_tau (omegaS^tau+i*omegaT^tau)*(i*sigma_tau)",
+    "component_condition": "omega_R^tau=complex_conjugate(omega_L^tau) for SIX REAL primitive connection coefficients",
+    "do_not_infer": "The 2x2 ωR matrix itself is the entrywise complex conjugate of 2x2 ωL in every displayed basis. Only author-written coefficient conjugation is asserted."
+  },
+  "finite_source_test": {
+    "source_signatures_and_ordered_gamma_pairs": 16,
+    "exact_ordered_bivectors": 6,
+    "coefficients_real_set": [
+      -1,
+      0,
+      1
+    ],
+    "real_connection_tuples": 729,
+    "cells_of_full_4x4_connection_per_tuple": 16,
+    "tested_block_matrix_cells": 11664,
+    "six_basis_generator_signs_expected": 6,
+    "expected_unmatched_source_gamma_cases": 0,
+    "expected_unmatched_omega_cases": 0,
+    "expected_nonzero_chiral_cross_blocks": 0,
+    "reality_guard_negative_control": {
+      "omegaS": [
+        0,
+        0,
+        0
+      ],
+      "omegaT_complex": [
+        "i",
+        "0",
+        "0"
+      ],
+      "source_admissible": false,
+      "expected_L1": "1",
+      "expected_R1": "-1",
+      "expected_R1_conjugate_of_L1": "1",
+      "lesson": "Complex ωT^1 violates author's SIX REAL coefficient domain; do not promote chiral-conjugation identity to arbitrary complex coefficients."
+    }
+  },
+  "independent_negative_evidence": {
+    "printed_real_group_equality": "Spin^+(3,1) ≅ SL(2,C) = SL(2,R)×SL(2,R) is false as a REAL group equality, 2 vs4 center orders, distinct real Killing signatures",
+    "source_author_formula_unchanged": true,
+    "author_intended_correction_known": false,
+    "whole_E8_model_refuted": false,
+    "mathematical_clifford_general_theorem_proven": false,
+    "source_L01_complete": false,
+    "no_external_cold_review_passed": true
+  },
+  "required_next": [
+    "Fresh independent finite Node replay of all 16 Clifford pair anticommutators, six chiral bivector signs and all 729 real coefficient tuples, with negative mutants, not a theorem oracle copied from the source.",
+    "Preserve direct real-group counterexample as independent source-assertion incompatibility, not failed Clifford-block algebra.",
+    "Retain existing L-SSC-030 source-positive text; add this finite source subcase only in a separately versioned G0 SSC candidate after independent CI.",
+    "All 30 L01 paper source bodies and L02–L06 original assertions remain unqualified; no G1/G7 or cross-track use."
+  ]
+}
