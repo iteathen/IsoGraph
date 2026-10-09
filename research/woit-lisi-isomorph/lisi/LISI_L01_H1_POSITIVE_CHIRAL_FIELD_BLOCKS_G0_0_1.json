@@ -72,7 +72,8 @@
     "upper_left_block": "gravitational omega_L 2x2 and W SU2_L source coefficients; output left-chiral states",
     "lower_right_block": "gravitational omega_R 2x2 and distinct B1 SU2_R source coefficients; output right-chiral states",
     "upper_right_block": "e_R chiral 2x2 source frame ONE_FORM times four scalar Higgs labels; preserve e_R to LEFT of phi.",
-    "lower_left_block": "e_L chiral 2x2 source frame ONE_FORM times four scalar Higgs labels; preserve e_L to LEFT of phi."
+    "lower_left_block": "e_L chiral 2x2 source frame ONE_FORM times four scalar Higgs labels; preserve e_L to LEFT of phi.",
+    "source_2x2_block_action_proved_from_16x16_gamma_basis": false
   },
   "displayed_4x4_2x2_field_blocks": {
     "ordered_rows": [
@@ -129,7 +130,7 @@
   },
   "source_frame_and_spin_rules": {
     "source_chiral_frame": "e_(L/R)=i*(e^4 ± sum_{eps=1}^3 e^eps sigma_eps), upper/RIGHT uses MINUS (e_R), lower/LEFT uses PLUS (e_L); each carries frame 1-form components and acts on spinor two-component carriers.",
-    "source_chiral_spin": "omega_(L/R)=(omega_S^tau ∓ i*omega_T^tau)*i*sigma_tau, sum tau=1..3; omega_R=omega_L^{*} only under original REAL gravity connection coefficient domain, not independent new gauge field.",
+    "source_chiral_spin": "omega_(L/R)=sum_tau=1..3 (omega_S^tau ∓ i*omega_T^tau)*i*sigma_tau; for REAL omega_S^tau and omega_T^tau, only the SOURCE COEFFICIENTS obey omega_R^tau=(omega_L^tau)^*. Matrix-level entrywise omega_R=(omega_L)^* is NOT asserted (i*sigma_tau includes complex Pauli factors).",
     "frame_source_example": "e^(eps) spin frame coefficients are ONE_FORMS; any real-sample matrix diagnostic must retain the field domain and cannot prove full field/differential geometry."
   },
   "important_defect_hazards": [
@@ -145,5 +146,10 @@
     "Complete full graded field dynamics/curvature/action and all source L01–L06 assertions remain open; no primitive/schema closure.",
     "The source identification with physical generations, full D4/F4 algebra brackets and current G1–G7 remain unauthorized."
   ],
-  "next_lawful_step": "Independently verify all printed source H1 4x4 block cells, chiral frame/spin/gauge role types and real Higgs labels against original L01 p8–12. Reject sign/phase/order/domain mutations. Distinguish source literal reconstruction from any unproved 16x16 gamma equivalence. Only afterward conserve exact L-SSC-032 source G0 with 190 unchanged full items."
+  "next_lawful_step": "Independently verify all printed source H1 4x4 block cells, chiral frame/spin/gauge role types and real Higgs labels against original L01 p8–12. Reject sign/phase/order/domain mutations. Distinguish source literal reconstruction from any unproved 16x16 gamma equivalence. Only afterward conserve exact L-SSC-032 source G0 with 190 unchanged full items.",
+  "source_fidelity_repair": {
+    "path": "experiments/062/L032_H1_SPIN_COEFFICIENT_VS_MATRIX_CONJUGATION_FIDELITY_DEFECT_0_1.json",
+    "scope": "SOURCE_OPERATOR_COEFFICIENT_CONJUGATION_ONLY_NOT_MATRIX",
+    "status": "REPAIRED_IN_G0_SOURCE_PACKET_UNQUALIFIED"
+  }
 }
