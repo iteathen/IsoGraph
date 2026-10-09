@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062-w05-g0-source-verifier-lineage-positive-failure.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_POSITIVE_LINEAGE_FAILURE_37_OF_37_ADVERSARIAL_MUTATIONS_REJECTED_NOT_PASS",
+  "run": {
+    "id": 37916409759,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37916409759",
+    "commit": "fd257a47bc2da49e275a8ecd703f0f1d7ec20e87",
+    "conclusion": "failure",
+    "Node": "26.7.0"
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-2.mjs",
+    "git_blob_sha": "d3b8fe2d3ed9b7b292498706630090420668c3f7"
+  },
+  "failed_current_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_63.json",
+    "git_blob_sha": "c4971d3dd7044b5eedfcd33a39c280295655288d"
+  },
+  "observed": {
+    "positive_errors": [
+      "active W current gate correct lineage"
+    ],
+    "mutations_total": 37,
+    "mutations_rejected": 37,
+    "mutations_escaped": 0
+  },
+  "diagnosis": "Verifier v0.2 retained an exact supersedes check for historical gate 0.61 while candidate active stage 0.63 superseded 0.62; baseline failed solely because its immediate current stage parent differs from historical 0.61.",
+  "repair": {
+    "path": "experiments/062/tools/verify-w05-p2-source-scope-conservation-0-3.mjs",
+    "git_blob_sha": "b032f4b69525d71da5fa39b834f1be393ffaff90",
+    "new_active_stage": "experiments/062/W_CURRENT_STAGE_GATE_0_64.json",
+    "immediate_predecessor": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_63.json",
+      "git_blob_sha": "c4971d3dd7044b5eedfcd33a39c280295655288d"
+    },
+    "status": "PENDING_NODE_CI"
+  },
+  "preservation": {
+    "source_census_0_33_sha": "a801ef92059de4ac81bcb7e0960ff998aa8a04fc",
+    "source_151": true,
+    "old_W86": true,
+    "G0_frozen": false,
+    "complete_nine_source_reverse": false,
+    "G1_G7": false,
+    "L_track_untouched": true
+  },
+  "review": "OWNER_BYPASSED_NOT_PASSED",
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "agent_assisted_recording_date": "2026-10-09"
+  }
+}
