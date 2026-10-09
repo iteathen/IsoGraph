@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l032-h1-pure-gravity-ordered-pair-fixture-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "BASELINE_FAILED_DUE_TO_PAIR_ENUMERATION_ORDER_NO_MUTATIONS_RUN",
+  "run": {
+    "id": 37896172149,
+    "head_sha": "9049a97798b5b8f308491cd181d3d4775c6e6045",
+    "conclusion": "failure",
+    "errors": [
+      "Eq2.8 gravitational source spinor blocks pair 2",
+      "Eq2.8 Levi/T signs pair 2",
+      "Eq2.8 gravitational source spinor blocks pair 3",
+      "Eq2.8 Levi/T signs pair 3"
+    ],
+    "adversarial_defined": 23,
+    "adversarial_executed": 0
+  },
+  "source_reference": "L01 original arXiv:0711.0770v1 §2.2.1 printed p9 and §2.2.3 p12",
+  "diagnosis": "Source packet orders six gravity-bivector witness records spatial first [(1,2),(1,3),(2,3)] then timelike boosts [(1,4),(2,4),(3,4)]; independent verifier enumerated all six in lexicographic order [(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)] and compared positional records. Both sets refer to the same six source pairs, but the verifier's expected source labels for positions 2 and 3 were wrong.",
+  "repair": "Change verifier expected sourcePairs order to source packet's explicit spatial-then-boost order. Preserve real source gamma tensor bytes, Pauli products and printed omega sign definitions; rerun baseline before any effective adversarial mutation counts.",
+  "source_publication_defect_proven": false,
+  "math_counterexample_invalidated": false,
+  "current_G1_authorized": false,
+  "external_review_passed": false
+}
