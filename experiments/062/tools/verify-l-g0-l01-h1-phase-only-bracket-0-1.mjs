@@ -66,7 +66,7 @@ function verify(pkt=A,cl=Cl,h1=H){
  ok(roots.conditional_bracket_preservation===false&&roots.source_published_bracket_equivalence_for_all_generator_roles_certified===false,'no global Lie promotion');
  ok(range.gravity_unordered_index_pairs===6&&range.fixed_electroweak_index_choices===4&&range.independent_mixed_mixed_bracket_cases===24&&range.matrix_cells_changing_between_commutators===192&&range.each_case_changing_matrix_cells===8,'all 24 homogeneous source fixed-prime brackets');
  ok(range.all_native_commutators_equal_minus2_original_gravity_bivector===true&&range.all_printed_commutators_equal_plus2_original_gravity_bivector===true&&range.source_pure_gravity_fixed===true&&range.global_phase_only_operator_Lie_automorphism===false&&range.diagnostic_phase_is_not_source_authority===true,'no phase-only Lie algebra homomorphism fixing source pure sector');
- ok(pkt.hypotheses_not_ruled_out?.length===4&&pkt.falsifiers?.length===3&&pkt.next_lawful_step?.includes('G0'),'residual alternatives and dependency ordering');
+ ok(pkt.hypotheses_not_ruled_out?.length===4&&pkt.falsifiers?.length===3&&pkt.next_lawful_step?.includes('source-census L032 replay'),'residual alternatives and dependency ordering');
  ok(!j(pkt).includes('W-SSC-'),'W track firewall');
  if(issues.length)return{issues,math:null};
  try{
