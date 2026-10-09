@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w02-IV1-prepublication-verifier-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "V8_POSITIVE_PASS_ONE_HOSTILE_MUTANT_ESCAPE_ALL_CONTROLS_UNQUALIFIED",
+  "candidate": {
+    "census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_46.json",
+      "git_blob_sha": "853a0e30b6ed659d177e2129bcb06be74987b532",
+      "source_items": 151,
+      "total_typed": 400
+    },
+    "uncommitted_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_95.json",
+      "git_blob_sha": "b621a53df3fa2e5aa5c48d4a54a0adeca973c0db"
+    },
+    "orphan_verifier": {
+      "path": "experiments/062/tools/verify-w02-siv1-spin4-weyl-source-g0-0-1.mjs",
+      "git_blob_sha": "2adea11ba81b8f1f2b5606128bc3b8cf77b1722e"
+    },
+    "runner": "IN_MEMORY_V8_FROM_EXACT_GITHUB_BLOBS_NOT_NODE_CI",
+    "baseline": {
+      "pass": true,
+      "positive_errors": []
+    },
+    "hostile": {
+      "total": 62,
+      "rejected": 61,
+      "escaped": 1,
+      "crashed": 0,
+      "escaped_name": "nine source inventory false complete",
+      "qualified": false
+    }
+  },
+  "correction": {
+    "gap": "New validator checked U.summary.G0_frozen but not U.summary.all_nine_original_source_reverse_exhaustive; mutant sets this actual source key true and escapes.",
+    "fix": "Validate that real inventory completeness key is false in the positive baseline and all mutated packets.",
+    "new_version": "verify-w02-siv1-spin4-weyl-source-g0-0-2.mjs",
+    "source_artifacts_changed": false,
+    "stage_G0_remains_open": true
+  },
+  "provenance": {
+    "prior_prepublication_W02_II_III_failure_preserved": true,
+    "old_failed_checker_and_gate_git_blobs_persist": true,
+    "not_node_ci": true,
+    "no_third_party_pass": true,
+    "L_semantics_used": false
+  }
+}
