@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-w05-char2-arbitrary-field-counterexample.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INDEPENDENT_MATH_NEGATIVE_SOURCE_SCOPE_W105_NOT_AUTHOR_CORRECTION",
+  "source": {
+    "revision": "arXiv:2202.02657v2",
+    "section": "§6.1",
+    "printed_page": 9,
+    "pdf_index": 8,
+    "html_lines": [
+      229,
+      241
+    ],
+    "census_id": "W-SSC-105",
+    "printed_domain": "arbitrary field F",
+    "relations": [
+      "i*j=k",
+      "j*i=-k",
+      "i^2=a",
+      "j^2=b"
+    ],
+    "parameters": "a,b invertible"
+  },
+  "proof": {
+    "field": "GF(2)",
+    "a": 1,
+    "b": 1,
+    "minus_one": 1,
+    "ji_equals_ij": true,
+    "commutative_generated_algebra": true,
+    "nonzero_witness": "1+i",
+    "nilpotent_witness": "(1+i)^2 = 1+2i+i^2 = 0",
+    "nonscalar_center_element": "i",
+    "therefore_central_simple": false,
+    "reason": "four-dimensional source-presented algebra in characteristic 2 has nonzero nilpotent central elements"
+  },
+  "positive_contrast": {
+    "field": "GF(3)",
+    "minus_one": 2,
+    "ij_coefficient": 1,
+    "ji_coefficient": 2,
+    "distinct_anticommuting_signs": true
+  },
+  "separation_from_prior_counterexample": "p=2,u=7 uses Q_2, characteristic 0, a different quantifier/scope defect",
+  "governance": {
+    "do_not_rewrite_printed_source": true,
+    "do_not_infer_universal_central_simplicity": true,
+    "G0_unfrozen": true,
+    "source_algebra_relations_remain_recorded": true,
+    "not_a_refutation_of_Qp_R_classification": true,
+    "L_artifacts_used": false
+  },
+  "external_review": "OWNER_BYPASSED_NOT_PASSED"
+}

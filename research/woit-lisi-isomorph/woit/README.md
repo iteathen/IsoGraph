@@ -1,5 +1,11 @@
 # Woit full IsoGraph treatment
 
+## W G0 source-provenance correction — 2026-10-09 (candidate, unfrozen)
+
+W05 §8 (arXiv:2202.02657v2, printed p.14/HTML line 388) explicitly credits **Peter Scholze** with pointing out to Woit the Euclidean twistor P1–Fargues-Fontaine infinite-prime **analogy**, and separately acknowledges Johan de Jong, David Ben-Zvi and Brian Conrad. The previous W111 expository scope guard omitted this named attribution. SSC **0.34** adds one exact W111 source-provenance occurrence; 150 other W item objects remain unchanged and the 151 identity count is preserved. Versioned defect/oracle, register **0.20**, 151-row coverage **0.19**, gate **0.66**, and hostile verifier are under `experiments/062`. This is not evidence of mathematical equivalence, author-original priority, or third-party review.
+
+An independent characteristic-two control shows that W05 §6.1's printed arbitrary-field quaternion presentation cannot by itself certify a **central simple** quaternion algebra in characteristic two (F2, a=b=1, central nonzero nilpotent 1+i). This source-mathematical warning is not an author-text emendation and is distinct from the historical p=2,u=7 Q2 split counterexample. **G0 remains open and unfrozen**: existing 151-item body review does not seal all-nine-source reverse enumeration, Oct03 mutable byte identity, full 151 demand membership, primitive closure or later stages. Owner third-party bypass is not a completed external review.
+
 **Track:** W
 **Current status:** ACTIVE — correctness-first G0 source-census reopening; historical G5 boundary does not qualify current source tuple
 **Source target:** ../SOURCE_CORPUS_FREEZE_0_2.md
