@@ -33,6 +33,7 @@ function check(c=now){
  const expectedPrefix=prior.body.replace(gap,successor);
  ok(item.body.startsWith(expectedPrefix+" "),"conserve prior source body exactly except superseded verified gap clause");
  ok(a.source_packet?.path===paths.packet&&a.source_packet?.git_blob_sha===sha(paths.packet)&&a.source_verifier?.git_blob_sha===sha(paths.sourceVerifier),"item-L031 exact packet/verifier dependency");
+ ok(a.frozen_revision===packet.source.revision&&a.frozen_revision==="arXiv:0711.0770v1 2007-11-06","source L01 item-level frozen version matches exact journal/preprint provenance");
  ok(j(a.gauge_and_chirality_roles)===j(packet.fermion_and_gauge_roles)&&j(a.wew_source_block_and_index_roles)===j(packet.wew)&&j(a.cartan_weight_and_eigenbracket)===j(packet.cartan),"full relevant source semantics and two chiral roles preserved");
  ok(j(a.printed_all_16_weight_rows)===j(packet.table4)&&j(a.limited_finite_domain)===j(packet.expected_limited_finite_reconstruction),"all 16 weight rows, finite coverage and limitations copied exactly");
  ok(a.CI?.run_id===37878875571&&a.CI?.source_matrix_cells===11664&&a.CI?.cartan_cases===9&&a.CI?.Table4_rows===16&&a.CI?.Table4_exact_rational_identities===32&&a.CI?.adversarial_rejected===32&&a.CI?.external_cold_review_passed===false,"precise CI witness and negative external result");
