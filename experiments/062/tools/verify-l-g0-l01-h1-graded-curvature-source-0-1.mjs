@@ -27,7 +27,7 @@ const frag=(s,p)=>s?.includes(p)===true;
 function verify(v=Source){
  const errors=[],ok=(yes,msg)=>{if(!yes)errors.push(msg)};
  ok(v.schema==='isograph.lisi-l01-graded-h1-curvature-source.g0.v0.1'&&v.track==='L'&&v.stage==='G0'&&v.status==='FROZEN_L01_EQ31_EQ35_GRADED_SOURCE_LITERAL_PARTIAL_UNQUALIFIED'&&v.authority===false,'current L source G0 partial');
- ok(v.source?.id==='L01'&&v.source?.revision==='arXiv:0711.0770v1 2007-11-06'&&v.source?.url==='https://arxiv.org/pdf/0711.0770v1'&&v.source?.section==='§3.1 Curvature'&&j(v.source.printed_pages)===j([23,24])&&v.source?.linked_previous_equation?.includes('Eq.(2.10)'),'exact frozen L01 source revision and pages');
+ ok(v.source?.id==='L01'&&v.source?.revision==='arXiv:0711.0770v1 2007-11-06'&&v.source?.url==='https://arxiv.org/pdf/0711.0770v1'&&v.source?.section==='§3.1 Curvature'&&j(v.source.printed_pages)===j([23,24])&&v.source?.link_to?.includes('Eq.(2.10)'),'exact frozen L01 source revision and pages');
  for(const [key,p]of parentNames)ok(v.parents?.[key]?.path===p&&v.parents?.[key]?.git_blob_sha===gitsha(p),'exact source predecessor '+key);
  ok(SSC.items?.length===191&&SSC.guards?.source_census_freeze_complete===false&&Gate.current_lawful_state?.G1_authorized===false,'SSC0.29/current G0 not promoted');
  for(const key of ['source_complete','source_census_frozen','graded_curvature_theorem_qualified','G1_authorized','external_cold_review_passed'])ok(v[key]===false,'source packet not authority '+key);
@@ -46,11 +46,11 @@ function verify(v=Source){
  ok(frag(v.source_composition.source_signs?.[1],'+de phi')&&frag(v.source_composition.source_signs?.[1],'-e(Dphi)'),'mixed torsion plus derivative minus');
  ok(frag(v.source_composition.source_signs?.[2],'no mixed W B1'),'pure su2L and su2R source 2-form sectors');
  const x=v.conditional_normalization_check||{};
- ok(x.owner==='PROJECT_UNRESOLVED_SOURCE_COMPARISON_CONTRACT_NOT_PUBLISHED_ERROR'&&x.status==='OPEN_QUANTITY_IDENTIFICATION_NOT_A_CONFIRMED_AUTHOR_MATH_ERROR','normalization interpretation not invented theorem');
+ ok(x.status==='OPEN_QUANTITY_IDENTIFICATION_NOT_A_CONFIRMED_AUTHOR_MATH_ERROR'&&x.setup?.includes('omega=W=B1=0'),'normalization interpretation not invented theorem');
  ok(x.source_H1_differential_term==='d((1/4)*e*phi)=(1/4)*d(e)*phi when d(phi)=0','source H1 differential exact 1/4');
  ok(x.printed_Fgw_rhs==='F_gw=d(e)*phi when T=d(e),D(phi)=0','author Eq3.4 unscaled source expression');
  ok(x.apparent_factor==='4 between raw mixed connection derivative coefficient and printed named curvature component','real numerical factor under stated comparison contract');
- ok(frag(x.missing_premise,'output generator')&&x.disposition==='UNRESOLVED_SOURCE_NORMALIZATION_AND_GRADED_PROJECTION; neither source erratum nor phase repair inferred','cannot claim identical source output basis');
+ ok(frag(x.missing_premise,'projected curvature F1 mixed generator normalization')&&x.disposition==='UNRESOLVED_SOURCE_NORMALIZATION_AND_GRADED_PROJECTION; neither source erratum nor phase repair inferred','cannot claim identical source output basis');
  const rawDerivative=1/4,printedExpression=1;
  ok(rawDerivative*4===printedExpression&&rawDerivative!==printedExpression,'arithmetic raw-derivative-only conditional diagnostic');
  ok(v.retained_negative_evidence?.length===4&&v.retained_negative_evidence.some(t=>t.includes('120 mixed/mixed'))&&v.retained_negative_evidence.some(t=>t.includes('octonion')),'negative prior evidence and scope');
