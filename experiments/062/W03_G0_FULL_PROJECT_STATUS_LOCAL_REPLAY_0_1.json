@@ -1,0 +1,70 @@
+{
+  "schema": "isograph.exp062-w03-full-project-status-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_V8_BASELINE_PASS_40_OF_40_MUTATIONS_REJECTED_NODE_CI_PENDING",
+  "inputs": {
+    "predecessor_SSC": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_23.json",
+      "sha": "bc86b39fdd69a3afb4c802771fcc330711683391"
+    },
+    "current_SSC": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_24.json",
+      "sha": "d67d6a27ca604e774a82f0e6a8daa0e9f80b8ab4"
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_10.json",
+      "sha": "56cf158ec5e7acdce596601f672863bf40a53bf0"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_9.json",
+      "sha": "d9fe088096724e00533f3bd1c0918c1cdff306eb"
+    },
+    "historical_W86": {
+      "path": "experiments/062/W_G0_W04B_SOURCE_DEMAND_PROJECTION_0_11.json",
+      "sha": "4300200cdf41650d52cd8ba782d4e561195994b3"
+    },
+    "source_audit": {
+      "path": "experiments/062/W03_G0_FULL_PROJECT_STATUS_REVERSE_AUDIT_0_1.json",
+      "sha": "1f4485d628ca161fdbd7c3ce81e84718ae3a7d62"
+    },
+    "defect": {
+      "path": "experiments/062/W03_G0_PROJECT_STATUS_ASSERTION_DEFECT_0_1.json",
+      "sha": "3223df780ecaa12ad23a2337c0d0139baa9e0fd6"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w03-full-project-status-reverse-source-0-1.mjs",
+      "sha": "8911e3fb2439ce66efe86d6ed509df6214b78d57"
+    },
+    "stage": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_51.json",
+      "sha": "933f615ac4ce3a290e3648f33fa31dbc9c325b42"
+    }
+  },
+  "result": {
+    "positive_errors": [],
+    "adversarial_total": 40,
+    "rejected": 40,
+    "escaped": 0,
+    "source_count": 151,
+    "changed_source_items": 2,
+    "unchanged_other_source_items": 149,
+    "changed_old_86_members": 0,
+    "source_page_current_lines": 23,
+    "source_claims_new": 17
+  },
+  "scope": {
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "source_oct03_mutable_bytes_verified": false,
+    "all_9_source_reverse_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "Node_CI": "NOT_RUN_AT_CREATION"
+  },
+  "nonclaims": [
+    "No direct Node or CI success yet",
+    "No theorem established from 2022 proposal",
+    "Historical 86 member demand not requalified"
+  ]
+}

@@ -1,0 +1,23 @@
+name: Experiment 062 W active G0 stage guard 0.6
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_CURRENT_STAGE_GATE_*.json'
+      - 'experiments/062/W_G0_*.json'
+      - 'experiments/062/W03_*.json'
+      - 'experiments/062/tools/verify-w-*.mjs'
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_*.json'
+      - 'research/woit-lisi-isomorph/woit/README.md'
+      - '.github/workflows/experiment-062-w-active-g0-stage-0-6.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w03-full-project-status-reverse-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w-active-g0-stage-0-6.mjs
