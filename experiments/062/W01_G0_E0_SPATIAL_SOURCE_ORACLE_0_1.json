@@ -1,0 +1,174 @@
+{
+  "schema": "isograph.exp062-w01-distinguished-e0-independent-source-oracle.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SIX_SOURCE_PRINTED_W01_SECTION3_INCIDENCES_W002_W003",
+  "source": {
+    "id": "W01",
+    "author": "Peter Woit",
+    "frozen_revision": "arXiv:2104.05099v2",
+    "pdf": "https://arxiv.org/pdf/2104.05099v2",
+    "printed_page": 6,
+    "pdf_page_index": 5,
+    "source_revision_marker": "arXiv:2104.05099v2 [hep-th] 14 Oct 2021",
+    "visual_primary_pdf": true,
+    "Oct3_2026_original_frozen_retrieval_byte_identity": "NOT_ESTABLISHED"
+  },
+  "claims": {
+    "W-SSC-002": [
+      {
+        "id": "W01-SEC3-PRIOR-01",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "CITED_PREDECESSOR_PROPOSALS_CONTRAST_NOT_ADOPTION",
+        "source_claim": "Various prior proposals gauge SU(2) and Lorentz SL(2,C) subgroups of the complexified spacetime symmetry Spin(4,C)",
+        "source_citations": [
+          "[3]",
+          "[30]"
+        ],
+        "author_contrast": "EUCLIDEAN_SPIN4_INSTEAD_OF_PRIOR_COMPLEXIFIED_APPROACH",
+        "source_modality": "PRIOR_CITED_WORK_PLUS_AUTHOR_PREFERENCE_NOT_PROOF",
+        "negative_guard": "No proposal from [3] or [30] is imported as semantics; their citation role is preserved source-locally."
+      },
+      {
+        "id": "W01-SEC3-ROLES-02",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "AUTHOR_SOURCE_DISTINCT_INTERNAL_SPACETIME_GAUGING_ROLES",
+        "source_group": "Spin(4)=SU(2)_L × SU(2)_R",
+        "factor_roles": [
+          {
+            "factor": "SU(2)_L",
+            "role": "INTERNAL_WEAK_SYMMETRY",
+            "dynamics": "GAUGE_SU2_YANG_MILLS"
+          },
+          {
+            "factor": "SU(2)_R",
+            "role": "SPACETIME_ROTATION_SYMMETRY",
+            "dynamics": "GAUGED_CHIRAL_SPIN_CONNECTION_GR"
+          }
+        ],
+        "source_modality": "SOURCE_AUTHOR_PROPOSED_CONSTRUCTION",
+        "negative_guard": "Does not prove a complete quantum theory or equate SU2_L with SU2_R; roles depend on the proposed Euclidean-first formulation."
+      }
+    ],
+    "W-SSC-003": [
+      {
+        "id": "W01-SEC3-E0-03",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "SOURCE_NONZERO_DISTINGUISHED_TIME_VECTOR_TYPE_AND_CONDITION",
+        "typed_object": "e_0",
+        "carrier": "Hom(S_R,S_L)",
+        "source_predicate": "NONZERO_AND_IMAGINARY_TIME_DIRECTION",
+        "source_role": "NECESSARY_TO_RECONSTRUCT_MINKOWSKI_STATE_THEORY_IN_PROPOSAL",
+        "source_term": "e_0 ∈ Hom(S_R,S_L)",
+        "negative_guard": "Nonzero e0 is a source premise for the following inverse expression; no arbitrary Hom(S_R,S_L) vector outside the Euclidean real-form is declared invertible."
+      },
+      {
+        "id": "W01-SEC3-REL-04",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "SOURCE_RELATIVE_VECTOR_IDENTIFICATION",
+        "source_input": "x ∈ Hom(S_R,S_L)",
+        "source_choice": "e_0 nonzero imaginary-time vector",
+        "expression": "e_0^{-1} x",
+        "result_carrier": "Hom(S_R,S_R)",
+        "modality": "SOURCE_SELECTED_TIME_DIRECTION_RELATIVE_IDENTIFICATION",
+        "source_literal": "Identifying an arbitrary vector x with e_0^{-1}x ∈ Hom(S_R,S_R)",
+        "negative_guard": "This is e0-relative, not a canonical independent-of-e0 identification or a global equality of spinor spaces."
+      },
+      {
+        "id": "W01-SEC3-ACT-05",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "SOURCE_ORDERED_SPIN4_ACTION_ON_E0_RELATIVE_VECTOR",
+        "lhs": "e_0^{-1} x",
+        "mapsto": "g_R e_0^{-1} g_L^{-1} g_L x g_R^{-1}",
+        "source_printed_equality": "g_R e_0^{-1} g_L^{-1} g_L x g_R^{-1} = g_R e_0^{-1} x g_R^{-1}",
+        "rhs": "g_R e_0^{-1} x g_R^{-1}",
+        "ordered_middle_factors": [
+          "g_R",
+          "e_0^{-1}",
+          "g_L^{-1}",
+          "g_L",
+          "x",
+          "g_R^{-1}"
+        ],
+        "ordered_reduced_factors": [
+          "g_R",
+          "e_0^{-1}",
+          "x",
+          "g_R^{-1}"
+        ],
+        "source_latex": "e_0^{-1}x\\longmapsto g_R e_0^{-1}g_L^{-1}g_Lxg_R^{-1}=g_R e_0^{-1}xg_R^{-1}",
+        "operator": "MAPS_TO_AND_PRINTED_EQUALITY",
+        "role_condition": "e0 and x simultaneously transform under independent Spin4 factors; SU2_L cancels in e0-relative expression",
+        "negative_guard": "Do not replace this with x->g_L x g_R^-1 alone, freeze e0 under transformation, reverse factor order, or infer source action for absent e0."
+      },
+      {
+        "id": "W01-SEC3-SPATIAL-06",
+        "source_revision": "arXiv:2104.05099v2",
+        "printed_page": 6,
+        "pdf_page_index": 5,
+        "source_section": "§3 pre-§3.1",
+        "kind": "SOURCE_CONDITIONAL_TEMPORAL_VS_SPATIAL_VECTOR_TRANSFORMATION",
+        "cases": [
+          {
+            "premise": "x in e0 direction",
+            "consequence": "e_0^{-1}x is invariant under displayed Spin4 relative action"
+          },
+          {
+            "premise": "x spatial relative to chosen e0 direction",
+            "consequences": [
+              "e_0^{-1}x invariant under SU(2)_L",
+              "e_0^{-1}x transforms as usual E3 vector under SU(2)_R"
+            ]
+          }
+        ],
+        "source_consequence": "SU(2)_R is the spin double cover of SO(3) spatial rotations; S_R is the usual 3D spin representation",
+        "source_modality": "AUTHOR_SOURCE_CONDITIONAL_AFTER_DISTINGUISHED_E0_CHOICE",
+        "negative_guard": "Temporal invariance is conditional on x parallel to e0; SU2R rotates spatial components and does not act trivially on every x."
+      }
+    ]
+  },
+  "counts": {
+    "source_items": 2,
+    "source_incidents": 6,
+    "W02": 2,
+    "W03": 4
+  },
+  "negative_roles": [
+    "prior-group-gauging source references cited but not imported",
+    "SU2L internal and SU2R geometric roles remain distinct",
+    "e0 choice and nonzero premise load-bearing",
+    "ordered inverse factors cannot commute or swap",
+    "temporal invariance not spatial invariance",
+    "no global time-independent spinor equivalence"
+  ],
+  "scope": "SOURCE_LITERAL_AND_ALGEBRAIC_INCIDENTS_NOT_THEOREM_OR_PHYSICAL_VALIDITY",
+  "provenance": {
+    "source_author": "Peter Woit",
+    "human_research_direction": "Joshua Oshiro / IsoGraph project",
+    "source_revision_reconstruction": "agent-assisted",
+    "earliest_evidence_currently_located": "2026-10-09 frozen arXiv v2 source printed page 6, web PDF index 5"
+  },
+  "third_party_review": "OWNER_BYPASSED_NOT_PASSED",
+  "nonclaims": [
+    "No full W01 source reverse completion",
+    "No SU2 action theorem promoted as Core primitive",
+    "No W/L semantics",
+    "No exact source PDF byte match to October3 mutable external retrieval"
+  ]
+}

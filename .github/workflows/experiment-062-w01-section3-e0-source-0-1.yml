@@ -1,0 +1,27 @@
+name: Experiment 062 W01 printed page 6 e0 spatial and factor roles source G0 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W01_G0_E0_SPATIAL_SOURCE_ORACLE_0_1.json'
+      - 'experiments/062/W01_G0_E0_SPATIAL_SOURCE_OMISSION_DEFECT_0_1.json'
+      - 'experiments/062/W01_G0_S3_REGISTER_FLAG_BASELINE_DEFECT_0_1.json'
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_31.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_17.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_16.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_58.json'
+      - 'experiments/062/W01_G0_S3_E0_LOCAL_DETERMINISTIC_REPLAY_0_1.json'
+      - 'experiments/062/tools/verify-w01-section3-e0-source-0-1.mjs'
+      - 'experiments/062/tools/verify-w01-section3-e0-quaternion-0-1.mjs'
+      - '.github/workflows/experiment-062-w01-section3-e0-source-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-section3-e0-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w01-section3-e0-quaternion-0-1.mjs
