@@ -34,7 +34,7 @@ function verify(s=Current){
  'L_G1_source_reextraction_complete','recursive_IA_authorized'
  ])ok(guard[k]===false,'unresolved source and stage '+k);
  ok(d.packet?.path===p.packet&&d.packet?.git_blob_sha===sha(p.packet)&&d.source_verifier?.git_blob_sha===sha(p.verifier),'item source/replay exact lineage');
- ok(d.source_revision==='L01 arXiv 0711.0770v1 2007-11-06','exact original source, not Sept variant');
+ ok(d.source_revision==='L01 arXiv:0711.0770v1 2007-11-06, printed p10 and p12','exact original source, not Sept variant');
  ok(j(d.pure_electroweak_images)===j(Pkt.six_exact_source_pair_images),'all six W/B1 source pair roles conserved');
  ok(j(d.source_roles)===j(Pkt.basis_coefficient_contract)&&j(d.finite_scope)===j(Pkt.finite_evidence)&&j(d.limitations)===j(Pkt.reconstruction_limits),'complete positive source and negative scope data');
  ok(d.CI?.run_id===37897875620&&d.CI?.conclusion==='success'&&d.CI?.source_primed_pairs===6&&d.CI?.source_mixed_brackets===120&&d.CI?.adversarial_rejected===20&&d.CI?.external_cold_review_passed===false,'per-obligation exact CI evidence');
@@ -42,7 +42,7 @@ function verify(s=Current){
  ok(d.source_gamma_16x16_to_8x8_pure_EW_matrix_coefficient_identity_verified===true,'source independent primed six');
  for(const phrase of [
  'SOURCE-LOCAL G0 SUCCESSOR p10/p12 EW CHIRAL MATRIX COEFFICIENT RECONSTRUCTION',
- 'p10 defines the exact γ′1..4 Pauli products','same printed source COEFFICIENT matrices',
+ 'p10 defines the exact γ′1..4 Pauli products','exact printed source COEFFICIENT matrices',
  'zero differing matrix entries','all 96 EW/MIXED','all 15 pure EW/EW',
  'all 36 pure-gravity/EW brackets vanish','six timelike fixed-μ4',
  '72 other pairs commute','NOT a proof of graded one-form H1 wedge/curvature',
