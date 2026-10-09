@@ -1,0 +1,53 @@
+{
+  "schema": "isograph.exp062-w05-section8-verifier-v01-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "REJECTED_PREPUBLICATION_VERIFIER_POSITIVE_BASELINE_FAILED",
+  "source_anchor": {
+    "branch": "research/woit-lisi-isomorph-20261003",
+    "head_at_failed_run": "e02fe76d362a23c4a0d8c9039be8161edbd83ca5",
+    "source_census": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_34.json",
+    "source_blob": "115f62f1ebb801b1e0f8ccb1cbe8f8821dc8611b"
+  },
+  "preserve": {
+    "original_verifier": "experiments/062/tools/verify-w05-section8-provenance-char2-0-1.mjs",
+    "original_verifier_blob": "e24922c502067cd8c80daf49e33ec4c9eb5b2e0a",
+    "original_gate": "experiments/062/W_CURRENT_STAGE_GATE_0_66.json",
+    "original_gate_blob": "63a6c828ef8777af660094ad81c75e53eb4d765e",
+    "workflow": ".github/workflows/experiment-062-w05-section8-provenance-char2-0-1.yml",
+    "run_id": 37956466200,
+    "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/37956466200",
+    "job_id": 113908129187,
+    "run_head": "e02fe76d362a23c4a0d8c9039be8161edbd83ca5",
+    "runner": "ubuntu-24.04 Node26.7.0",
+    "conclusion": "FAILURE",
+    "positive_errors": [
+      "F2 center and nonzero nilpotent recomputation"
+    ],
+    "hostile_mutations_rejected": 25,
+    "hostile_mutations_total": 25,
+    "mutations_escaped": 0,
+    "mutations_crashed": 0
+  },
+  "cause": {
+    "actual_negative_evidence_record": "proof.therefore_central_simple === false",
+    "defective_verifier_expected": "proof.therefore_central_simple === undefined",
+    "semantically_correct_assertion": "GF2 a=b=1 algebra is NOT central simple",
+    "kind": "VERIFIER_ORACLE_EXPECTATION_ERROR_NOT_SOURCE_ITEM_DEFECT",
+    "positive_baseline_passed": false,
+    "hostile_mutation_score_qualified": false
+  },
+  "correction_policy": {
+    "do_not_change_source_census": true,
+    "do_not_alter_char2_counterexample": true,
+    "version_new_verifier": true,
+    "add_negative_mutant_false_to_true": true,
+    "rerun_positive_baseline_before_mutant_credit": true
+  },
+  "qualification": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  }
+}

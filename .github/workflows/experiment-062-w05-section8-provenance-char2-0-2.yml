@@ -1,0 +1,22 @@
+name: Experiment 062 W05 G0 section8 corrected verifier and char2 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/verify-w05-section8-provenance-char2-0-2.mjs'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_67.json'
+      - 'experiments/062/W05_G0_SECTION8_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json'
+      - '.github/workflows/experiment-062-w05-section8-provenance-char2-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w05-section8-provenance-char2-0-2.mjs
+      - run: node experiments/062/tools/verify-w05-p2-source-scope-conservation-0-4.mjs
+      - run: node experiments/062/tools/verify-w05-p2-nonsquare-conic-0-2.mjs

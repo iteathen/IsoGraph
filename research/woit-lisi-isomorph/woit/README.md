@@ -1,5 +1,10 @@
 # Woit full IsoGraph treatment
 
+## W G0 source-provenance verifier correction — 2026-10-09 (unqualified until current Node CI)
+
+W05 SSC0.34 one-item source correction and 151-row register remain unchanged. Versioned checker v0.1 **FAILED** its positive Node baseline at [run 37956466200](https://github.com/iteathen/IsoGraph/actions/runs/37956466200), although 25/25 mutants were rejected; the checker mistakenly expected the characteristic-two example's `therefore_central_simple` value to be absent instead of the correctly recorded `false`. The v0.1 checker and CI failure are retained immutably in `W05_G0_SECTION8_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json`. New checker v0.2 independently checks the nonzero GF(2) nilpotent `1+i`, expects central simplicity to be **false**, and adds four controls (29 total). W gate 0.67 keeps G0 open; new Node/GitHub CI must pass its baseline before any mutant score counts. No change to W sources, existing-item coverage, or frozen source-corpus scope.
+
+
 ## W G0 source-provenance correction — 2026-10-09 (candidate, unfrozen)
 
 W05 §8 (arXiv:2202.02657v2, printed p.14/HTML line 388) explicitly credits **Peter Scholze** with pointing out to Woit the Euclidean twistor P1–Fargues-Fontaine infinite-prime **analogy**, and separately acknowledges Johan de Jong, David Ben-Zvi and Brian Conrad. The previous W111 expository scope guard omitted this named attribution. SSC **0.34** adds one exact W111 source-provenance occurrence; 150 other W item objects remain unchanged and the 151 identity count is preserved. Versioned defect/oracle, register **0.20**, 151-row coverage **0.19**, gate **0.66**, and hostile verifier are under `experiments/062`. This is not evidence of mathematical equivalence, author-original priority, or third-party review.
