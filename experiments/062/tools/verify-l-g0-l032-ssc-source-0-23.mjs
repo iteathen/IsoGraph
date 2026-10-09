@@ -37,7 +37,7 @@ function verify(x=now){
  }
  ck(curr.body.includes("source Eq.(2.10)")&&curr.body.includes("H1=1/2 omega+1/4 e phi+w_ew"),"source H1 1/2,1/4 normalization not removed");
  ck(curr.body.includes("center/Killing counterexamples")&&curr.body.includes("octonionic sign/Clifford counterexamples"),"prior independent negative source evidence must remain");
- ck(curr.body.includes("No normalization")&&curr.body.includes("remain OPEN"),"source and qualification nonclaims preserved");
+ ck(curr.body.includes("no normalization")&&curr.body.includes("remain OPEN"),"source and qualification nonclaims preserved");
  ck(gate.current_lawful_state?.G1_authorized===false&&source.G1_authorized===false&&guard.cross_author_semantics_available===false&&!j(curr).includes("W-SSC-"),"no G1/cross-track import");
  return err;
 }
