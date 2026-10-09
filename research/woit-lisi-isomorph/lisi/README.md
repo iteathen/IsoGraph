@@ -36,6 +36,8 @@ Among 153 unordered mixed-root pairs the verified root-addition outcomes are 9 C
 
 [SSC0.35](SOURCE_SEMANTIC_CENSUS_0_35.json) preserves all 191 identities and 189 unchanged complete records, extends only L-SSC-040/L-SSC-044 and remains UNFROZEN. [G0 gate0.35](../../../experiments/062/L_CURRENT_STAGE_GATE_0_35.json) denies G1–G7 and cross-author use. [G0 source coverage](LISI_L040_L044_TABLE9_D4_Q_SOURCE_G0_COVERAGE_0_1.json) retains all unexamined original-source scope. CI is pending at this candidate revision.
 
+**Verified Table 9 / rank-one complex D4 G0 CI:** [GitHub Actions run 37984162417](https://github.com/iteathen/IsoGraph/actions/runs/37984162417) **PASSED** against exact candidate commit `30fe8a331f60dac6f8a540ed5aeaa5c3413a6995`. All source/parent SHA and no-G1 guards were active. The checker verified 24 source D4 roots, 276 complex root-matrix brackets, 153 mixed-root pairs, 108 source oneform-factorized cross-generation pairs, and an exact six-coefficient conditional nonzero quartic trace. **3/3 mathematical** and **13/13 source/provenance** hostile mutations were rejected. A fresh entire-record comparison independently confirms **191 distinct** SSC0.34/0.35 IDs, **189 complete predecessor records unchanged**, and only L-SSC-040/L-SSC-044 changed. The [immutable post-run evidence](../../../experiments/062/L040_L044_TABLE9_D4_Q_G0_CI_AND_SCOPE_0_1.json) records the exact result and its source-phase/real-form/Hodge limitations. Historical pending candidate fields remain frozen; passing this G0 verifier neither freezes the source census nor qualifies L or author physics.
+
 #### Historical predecessor: SSC 0.34 / G0 gate 0.34
 
 
