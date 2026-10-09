@@ -1,0 +1,72 @@
+{
+  "schema": "isograph.exp062-w02-s43-mixed-block-verifier-v02-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_SECOND_POSITIVE_FAILURE_MUTANT_SCORE_UNQUALIFIED",
+  "run": {
+    "id": 37973892281,
+    "job_id": 113967147587,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37973892281",
+    "head_sha": "4c4334d818d084152de23744df259163642cdd4c",
+    "conclusion": "failure",
+    "positive_baseline_pass": false,
+    "positive_errors": [
+      "G0 gate successor current",
+      "W02 verifier self pin",
+      "source already conserved no edit/no thirdparty theorem",
+      "failed v0.1 exact pin and disqualification",
+      "W02 new CI pending, W103 past CI correct"
+    ],
+    "input_sha_mismatch": [
+      "oldG"
+    ],
+    "mutations_total": 46,
+    "mutations_rejected": 46,
+    "mutations_escaped": 0,
+    "mutations_crashed": 0,
+    "mutation_score_qualified": false
+  },
+  "causes": [
+    {
+      "id": "P_SWAP",
+      "mistake": "Automated string replacement for current gate suffix overlapped oldG path, producing P.oldG = gate0.74 and P.G = gate0.73 (swapped)",
+      "effect": "stale predecessor SHA, wrong verifier-self pin, wrong gate fields, CI metadata mismatch",
+      "fix": "Replace the complete P block with literal correct oldG=0.74 and G=0.75, not overlapping substring replacement"
+    },
+    {
+      "id": "SOURCE_COMPLETE_FIELD",
+      "mistake": "Checked undefined nine_source_full_reverse_qualified rather than actual full_nine_source_reverse_qualified=false in W02 source-first ledger",
+      "effect": "positive fails source-conserved guard even after first field name repair",
+      "fix": "Use exact source-first oracle key full_nine_source_reverse_qualified"
+    }
+  ],
+  "predecessors": {
+    "failed_v01_run": 37973537552,
+    "failed_v01_record": {
+      "path": "experiments/062/W02_G0_S43_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json",
+      "blob_sha": "ed9e239f3633401765b8ca2c77655af828345c7f"
+    },
+    "failed_v02_verifier": {
+      "path": "experiments/062/tools/verify-w02-s43-mixed-curvature-source-g0-0-2.mjs",
+      "blob_sha": "2df0ec7ef65da6b244c3f92754affad2a4c743ec"
+    },
+    "failed_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_74.json",
+      "blob_sha": "6b214062562b47f5a19c982dd2399d329fe05e15"
+    }
+  },
+  "source_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_36.json",
+    "blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b",
+    "source_items": 151,
+    "typed_incidents": 327,
+    "unchanged": true
+  },
+  "nonclaims": [
+    "46/46 mutations rejected by a failed positive baseline do not qualify",
+    "Do not overwrite failed v0.1/v0.2 checker or CI logs",
+    "No W02 author assertion changed",
+    "No external verification, no G0 freeze, no G1–G7"
+  ]
+}
