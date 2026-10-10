@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.exp062.L.G0.L02.original-unnumbered-first-source-verifier-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "head_sha": "fc9f74f23cae0ae8fea48d61e121a1549024ebc4",
+  "run_id": 38084802980,
+  "job_id": 114308979425,
+  "conclusion": "failure",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38084802980",
+  "observed_baseline": {
+    "original_arxiv_revision": "arXiv:1004.4866v2",
+    "source_original_PDF_SHA256_verified": true,
+    "source_PDF_pages": 12,
+    "seven_scoped_original_source_loci_present": true,
+    "SSC_items_191_conserved": true,
+    "other_187_predecessor_records_preserved": true,
+    "all_original_source_cold_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false
+  },
+  "hostile_result": {
+    "hostiles_defined": 28,
+    "hostiles_rejected": 25,
+    "escape_names": [
+      "regress_fixed_Phi_source_row",
+      "remove_L03_debt",
+      "pdf_Phi_source"
+    ]
+  },
+  "cause_analysis": [
+    {
+      "hostile": "regress_fixed_Phi_source_row",
+      "class": "SOURCE_SEMANTIC_BODY_CONSERVATION_VERIFIER_GAP",
+      "failed_precondition": "Replaced original source-first L02-S021 semantic body while retaining evidence packet SHA; checker guarded row ID/pointer but not actual load-bearing text.",
+      "method_correction": "Require actual source-first semantic body clauses for ALL seven touched rows with signed coefficients and group roles, including original exact formula content. An evidence pointer alone does not prove source fidelity."
+    },
+    {
+      "hostile": "remove_L03_debt",
+      "class": "CROSS_SOURCE_CONVERGENCE_COUNT_CONSERVATION_GAP",
+      "failed_precondition": "Checker validated L02 current scope but did not detect rewritten outstanding L03 exact formula-group count.",
+      "method_correction": "Pin all six original per-source pending source-exactness counts and global full-original cold flags in shared convergence, while not importing W semantics."
+    },
+    {
+      "hostile": "pdf_Phi_source",
+      "class": "INERT_ADVERSARIAL_MUTATION",
+      "failed_precondition": "Hostile used string replacement on layout text with line breaks; replacement was no-op and falsely escaped.",
+      "method_correction": "Require every hostile mutation to visibly change its target; normalize source layout or use whitespace-tolerant anchor replacement. Never accept no-op controls as successful adversarial tests."
+    }
+  ],
+  "original_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-unnumbered-original-source-0-1.mjs",
+    "git_blob_sha": "8a8d65d4d2fc79cabfe6c7b7bfff28408c058e38"
+  },
+  "history": {
+    "earlier_L02_original_numbered_first_failed_run_ids": [
+      38082065162,
+      38082259879
+    ],
+    "latest_L02_original_numbered_success_run_id": 38082445672,
+    "prior_failures_still_failed": true,
+    "this_first_unnumbered_run_still_failed": true
+  },
+  "preservation": {
+    "source_SSC_content_unchanged_in_verifier_only_repair": true,
+    "all_original_source_first_rows_unchanged": true,
+    "physical_PDF_claim_not_retracted": true,
+    "no_source_semantic_omission_proven_by_test_failure": true,
+    "source_original_unnumbered_closure_not_yet_CI_qualified": true,
+    "G0_open": true,
+    "G1_authorized": false,
+    "W_track_untouched": true
+  }
+}
