@@ -1,0 +1,25 @@
+name: Experiment 062 L G0 L03 frozen original Eq3.10 and Eq3.11 conditional 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/LISI_L03_EQ3_10_EQ3_11_CONDITIONAL_SPINOR_SOURCE_G0_0_1.json'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L03_SOURCE_FIRST_REVERSE_COVERAGE_0_6.json'
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_60.json'
+      - 'research/woit-lisi-isomorph/lisi/L_G0_SIX_ORIGINAL_FINITE_SOURCE_FIRST_CONVERGENCE_0_9.json'
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_27.json'
+      - 'experiments/062/tools/verify-l-g0-l03-eq310-spinor-conditional-0-1.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_93.json'
+      - '.github/workflows/experiment-062-l-g0-l03-eq310-spinor-conditional-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L03-original-Eq310-Eq311:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: node experiments/062/tools/verify-l-g0-l03-eq310-spinor-conditional-0-1.mjs
