@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062-w02-sv-verifier-v01-prepublication-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "V8_PRECOMMIT_POSITIVE_PASS_BUT_TWO_HOSTILE_CONTROLS_ESCAPED_UNQUALIFIED",
+  "prepublication_input": {
+    "source": "SSC0.48 W151 typed 7; 151 source items; 407 typed incidences",
+    "checker": {
+      "path": "experiments/062/tools/verify-w02-sv-conclusion-source-g0-0-1.mjs",
+      "git_blob_sha": "acf6d47f1e125ce3135f21004eeb079ec1289a3c"
+    },
+    "candidate_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_99.json",
+      "git_blob_sha": "fc4278ebb9125ff50f0ff0b4d548b07f8960ef78",
+      "not_committed": true
+    },
+    "not_Github_Node": true,
+    "method": "Exact Node verifier logic evaluated against all actual pinned GitHub source blobs in isolated V8 with virtual fs and exact Git object hashes"
+  },
+  "test_result": {
+    "positive_baseline_pass": true,
+    "positive_errors": [],
+    "hostile_total": 59,
+    "rejected": 57,
+    "escaped": 2,
+    "crashed": 0,
+    "escaped_names": [
+      "source defect arbitrary repaired text",
+      "W86 claimed full 151 current demand"
+    ],
+    "qualifies": false
+  },
+  "causes": [
+    {
+      "negative_control": "source defect arbitrary repaired text",
+      "mutated": "F.no_author_narrative_text_changed=false",
+      "missing_positive_check": "F.no_author_narrative_text_changed===true"
+    },
+    {
+      "negative_control": "W86 claimed full 151 current demand",
+      "mutated": "D.counts.full_151_source_semantic_demand_qualified=true",
+      "missing_positive_check": "D.counts.full_151_source_semantic_demand_qualified===false"
+    }
+  ],
+  "remediation": "Version verifier 0.2 with two corresponding positive checks, carry old prepub failure as pinned evidence, independently replay positive+all mutants BEFORE CI and source commit.",
+  "no_original_source_changed": true,
+  "old_source_F_data_correct": true,
+  "old_W86_data_correct": true,
+  "all_nine_original_source_reverse_complete": false,
+  "G0_open": true,
+  "G1_G7_authorized": false,
+  "third_party": "OWNER_BYPASSED_NOT_PASSED"
+}
