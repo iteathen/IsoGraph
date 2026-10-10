@@ -1,0 +1,49 @@
+{
+  "schema": "isograph.exp062.l-G0-L05-initial-original-journal-source-first-CI-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "CI": {
+    "run_id": 38037253826,
+    "job_id": 114170163084,
+    "head_sha": "ca3136105fb7679f708acb98ae33744e1e5e6019",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38037253826",
+    "status": "completed",
+    "conclusion": "failure",
+    "original_errors": [
+      "G0 original source L-only nonauthority"
+    ],
+    "original_hostiles_defined": 37,
+    "original_hostiles_rejected": 37
+  },
+  "artifacts": {
+    "audit0_1": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "sha": "8b23538d1cb34bc47d1fba0150f59914750d8c7d"
+    },
+    "traversal0_18": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_18.json",
+      "sha": "21dcce7bdb1b01e1662b21058dd2b394ae0d61ba"
+    },
+    "gate0_79": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_79.json",
+      "sha": "68232327ea9fd20c80599824f770397ec9d332d2"
+    },
+    "verifier0_1": {
+      "path": "experiments/062/tools/verify-l-g0-l05-source-first-reverse-0-1.mjs",
+      "sha": "7b809323b8724d236bacaf1be4a8accc5f601efc"
+    }
+  },
+  "cause_class": "AUDIT_SERIALIZATION_SCHEMA_TYPE_SHADOWING",
+  "precise_cause": "Producer initialized stage as 'G0' and overwrote it by stage lock object at final serialization. Existing checker correctly rejected its baseline stage string, despite rejecting all 37 mutations.",
+  "systemic_repair": "Require both exact scalar stage==='G0' and separate stage_locks object. Verify schema and ancestor identity, source-page inventory and all SSC 191 bodies unchanged, and hostile mutation that attempts to turn stage into object.",
+  "original_source_fidelity_defect_found": false,
+  "source_semantic_paper_same_VOR": true,
+  "source_51_pages_same": true,
+  "source_38_SSC_same": true,
+  "first_failed_run_preserved_failure": true,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_track_changed": false
+}
