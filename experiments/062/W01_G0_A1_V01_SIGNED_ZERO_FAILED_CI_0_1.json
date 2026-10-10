@@ -1,0 +1,23 @@
+{
+  "schema": "isograph.exp062-w01-a1-failed-predecessor-verifier-0-1.v0.1",
+  "track": "W",
+  "status": "FAILED_PREPUBLICATION_POSITIVE_SIGNED_ZERO_CHECK_NO_ADVERSARIAL_QUALIFICATION",
+  "run_id": 38045862687,
+  "commit": "9ee58eac25a71325519b1c317e84cd0efcdb436e",
+  "workflow": "Experiment 062 W01 Appendix A1 exact original source G0 0.1",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38045862687",
+  "predecessor_verifier_path": "experiments/062/tools/verify-w01-a1-original-source-g0-0-1.cjs",
+  "predecessor_verifier_blob_sha": "41583b1381ee2122e80b3cb6f542f7c4c7f123a4",
+  "conclusion": "failure",
+  "positive_baseline_passed": false,
+  "negative_controls_executed": false,
+  "reclassified_as_pass": false,
+  "failure_step": "Run node experiments/062/tools/verify-w01-a1-original-source-g0-0-1.cjs",
+  "cause": "The finite witness determinant computes -0 because JS signs one zero product; node:assert/strict's strictEqual compares with Object.is and rejects -0 against 0, even though the complex/rational determinant is algebraically zero.",
+  "preceding_source_fidelity_result": "SSC0.59_G0_OPEN_UNFROZEN",
+  "repair": "Use arithmetic equality for the zero determinant and separately check finiteness; do not adjust source PDF, the finite matrix witness, the SSC mathematical claim, or predecessor failed CI.",
+  "owner": "VERIFIER_NUMERIC_EQUALITY_SCOPE",
+  "no_author_source_revision": true,
+  "no_qualified_physics_or_G0_conclusion": true,
+  "first_run_preserved": true
+}
