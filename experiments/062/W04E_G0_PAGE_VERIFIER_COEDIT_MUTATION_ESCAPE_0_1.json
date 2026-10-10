@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062-w04e-g0-original-page-verifier-coedit-mutation-escape.v0.1",
+  "date": "2026-10-10",
+  "track": "W",
+  "status": "HISTORICAL_GITHUB_CI_FAILURE_RETAINED_CORRECTIVE_VERIFIER_REQUIRED",
+  "source_revision": "W04e available 2026-07-14 PDF; original 2026-10-03 byte identity NOT established",
+  "exact_failure": {
+    "run_id": 38094604332,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38094604332",
+    "commit": "ed09f9949e94f385ada264ec9cb0b691b73425bf",
+    "job_id": 114337821987,
+    "conclusion": "failure",
+    "old_checker": "experiments/062/tools/verify-w04e-g0-original-page-boundaries-0-2.cjs",
+    "old_checker_blob": "35087d3d97ab82dc82f27b963e6659e322387112",
+    "positive_scope": "PAGE_BOUNDARY_SOURCE_CONTEXT_POSITIVE_PASS_NOT_COLD_GLOBAL_COMPLETENESS",
+    "failed_control": "coedit source to change existing five atoms",
+    "observed_error": "ADVERSARIAL_ESCAPE coedit source to change existing five atoms",
+    "adversarial_rejected_all_16": false,
+    "mutants_before_escape": 7,
+    "mutant_at_escape": 8
+  },
+  "cause_class": "MUTUALLY_EDITABLE_ORACLES_AS_SINGLE_SOURCE_OF_TRUTH",
+  "cause": "Checker only compared current v0.2 source-first oracle with predecessor v0.1 and lacked independently fixed original mathematical source literals. Both editable copies could be jointly corrupted and still pass.",
+  "systemic_repair": "Fix source-first exact mathematical literals independently inside successor checker, verify previous/current source-first evidence and current SSC against fixed source meaning; retain independent PDF page bounds; test coordinated corruption and preserve historical FAILED run.",
+  "successor_checker": {
+    "path": "experiments/062/tools/verify-w04e-g0-original-page-boundaries-0-3.cjs",
+    "git_blob_sha": "a78a4e3f79ea14077b2972977af14647079df114"
+  },
+  "semantic_item_count_unchanged": 151,
+  "typed_incidences_unchanged": 531,
+  "G0": {
+    "open": true,
+    "frozen": false,
+    "oct03_six_mutable_original_bytes_verified": false,
+    "all_nine_independent_original_source_audit_complete": false
+  },
+  "no_source_reinterpretation": true,
+  "other_track_untouched": true
+}
