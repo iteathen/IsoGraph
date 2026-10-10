@@ -1,0 +1,59 @@
+{
+  "schema": "isograph.exp062-w01-s5-verifier-v01-prepublication-hostile-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_POSITIVE_PASS_ONE_REAL_MUTANT_ESCAPE_NOT_QUALIFIED",
+  "method": "Pure original V8 validation callback re-executed on exact GitHub JSON blobs; 151-row source, historical-86, register, coverage, original-source oracle, G0 candidate gate; one-by-one deterministic hostile clone+mutation; GitHub Actions NOT RUN",
+  "source_snapshot": {
+    "census": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_50.json",
+    "git_blob_sha": "d139d5a0b2790524b379d148baffb360c71ba429",
+    "W_source_ids": 151,
+    "source_typed_occurrences": 429
+  },
+  "predecessor_tested_checker": {
+    "path": "experiments/062/tools/verify-w01-s5-speculative-source-g0-0-1.mjs",
+    "git_blob_sha": "9bcbaab723956ada40ade04e59795b7dda8c032b"
+  },
+  "prepublication_gate_candidate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_105.json",
+    "git_blob_sha": "1b633977d75e60f61a12ccf3720b8123b3243a27",
+    "branch_committed": false
+  },
+  "result": {
+    "positive_pass": true,
+    "positive_errors": [],
+    "mutants_total": 71,
+    "mutants_rejected": 70,
+    "mutants_escaped": 1,
+    "mutants_crashed": 0,
+    "escaped_mutation": "current register W045 historical mode forged closed",
+    "qualified": false,
+    "Node_GitHubCI": "NOT_RUN"
+  },
+  "failure_owner": {
+    "type": "MISSING_HISTORICAL_CLOSURE_MODE_CONSERVATION",
+    "actual_field": "R.rows[census_id=W-SSC-045].historical_ledger_0_19_mode",
+    "expected_value": "INCOMPLETE_UNEXPANDED",
+    "forge_value": "CLOSED_SCHEMA",
+    "why_it_matters": "Old86 selected members are only an incomplete historical view, and source-excluded W045 must not be silently promoted to a schema-closed demand."
+  },
+  "repair_contract": {
+    "successor_verifier": "verify-w01-s5-speculative-source-g0-0-2.mjs",
+    "source_census_changed": false,
+    "source_first_oracle_changed": false,
+    "all_151_source_bodies_changed": false,
+    "check_all151_current_historical_modes_against_predecessor_register_and_coverage": true,
+    "add_mutants_for_excluded_and_selected_modes": true,
+    "preserve_unqualified_prepublication_baseline": true
+  },
+  "G0_law": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "all_nine_source_reverse_complete": false,
+    "all_151_semantic_demand_requalified": false,
+    "third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "G1_G7_authorized": false,
+    "L_semantics_used": false
+  }
+}
