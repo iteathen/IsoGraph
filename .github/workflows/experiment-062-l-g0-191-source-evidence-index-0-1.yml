@@ -1,0 +1,20 @@
+name: Experiment 062 L G0 191 item source evidence index 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/LISI_G0_191_SOURCE_EVIDENCE_INDEX_COVERAGE_0_1.json'
+      - 'experiments/062/tools/verify-l-g0-191-source-evidence-index-0-1.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_62.json'
+      - '.github/workflows/experiment-062-l-g0-191-source-evidence-index-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  source-index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-l-g0-191-source-evidence-index-0-1.mjs
