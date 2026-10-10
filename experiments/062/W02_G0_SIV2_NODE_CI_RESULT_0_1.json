@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.exp062-w02-iv2-source-first-hodge-ym-exact-node-ci.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "W02_IV2_SSC0_47_EXACT_POSITIVE_AND_ALL_63_HOSTILES_PASS_ONLY",
+  "exact_input": {
+    "head_sha": "c4bc4be414f46a38e5d40a3c394056345f629d03",
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_47.json",
+      "git_blob_sha": "a7921a4434fcede276869c5334f1adc3711d4ad9",
+      "items": 151,
+      "typed_total": 404,
+      "W02_typed": 66,
+      "original_source_bodies_changed": 0
+    },
+    "stage_gate_at_run": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_97.json",
+      "git_blob_sha": "937e5cc45efd94407f8aa50891068ffb9017d17c"
+    },
+    "oracle": {
+      "path": "experiments/062/W02_G0_SIV2_HODGE_YM_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "552654a27dbaa5ec99d78d07ed87f7afa3efbc91"
+    },
+    "negative": {
+      "path": "experiments/062/W02_G0_SIV2_YM_ACTION_LOCAL_NEGATIVE_0_1.json",
+      "git_blob_sha": "1a06bbddb3d58a4418a818cd4b7b887420cceb97"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w02-siv2-hodge-ym-source-g0-0-1.mjs",
+      "git_blob_sha": "07344e1f65edc60d783da8f29d1127b9b1a219d8"
+    }
+  },
+  "verified_node": {
+    "run_id": 38008120874,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38008120874",
+    "job_id": 114081562411,
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "node": "26.7.0",
+    "positive_baseline": true,
+    "positive_errors": [],
+    "hostile_controls": 63,
+    "rejected": 63,
+    "escaped": 0,
+    "crashed": 0,
+    "third_party": false
+  },
+  "coincident_old_source_guards": [
+    {
+      "run_id": 38008120850,
+      "conclusion": "success",
+      "scope": "OLDER_ACTIVE_G0_LINEAGE_GUARD"
+    },
+    {
+      "run_id": 38008120827,
+      "conclusion": "success",
+      "scope": "OLDER_W_G_STAGE_SOURCE_LINEAGE_AUDIT"
+    }
+  ],
+  "qualification_limits": {
+    "full_nine_original_source_reverse": false,
+    "Oct03_mutable_W03_W04_source_identity_verified": false,
+    "all_current_151_W_source_demand_qualified": false,
+    "G0_open": true,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "L_semantics_not_used": true
+  },
+  "next": "Continue original W02 §V and W01–W04 G0 source first audit; historical W86 remains partial, no G1."
+}
