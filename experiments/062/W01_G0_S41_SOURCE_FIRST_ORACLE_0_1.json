@@ -1,0 +1,267 @@
+{
+  "schema": "isograph.exp062-w01-section41-original-source-first-oracle.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "source": {
+    "unit": "W01",
+    "revision": "arXiv:2104.05099v2",
+    "author": "Peter Woit",
+    "section": "§4.1 Projective twistors as the bundle of complex structures",
+    "original_html_url": "https://arxiv.org/html/2104.05099v2",
+    "html_lines": [
+      246,
+      290
+    ],
+    "original_pdf_url": "https://arxiv.org/pdf/2104.05099v2",
+    "pdf_printed_pages": [
+      9,
+      10,
+      11
+    ],
+    "pdf_page_indices": [
+      8,
+      9,
+      10
+    ],
+    "pdf_visually_examined": true,
+    "Oct03_author_byte_identity": "UNVERIFIED"
+  },
+  "method": "INDEPENDENT_FULL_SECTION41_PDF_IMAGE_AND_ORIGINAL_HTML_REVERSE_BEFORE_CURRENT_SSC_ITEM_COMPARISON",
+  "source_first_assertion_inventory": [
+    {
+      "lines": [
+        247,
+        251
+      ],
+      "claim": "2D ±J, 4D S2 J, PT=S2 over S4=HP1 and CP3 complex, all ASD 4-manifold condition scoped"
+    },
+    {
+      "lines": [
+        252,
+        261
+      ],
+      "claim": "C line tautological H right spinor, tangent Hom(SR,SL) and l-specific Hom_C(l,SL) complex dim2, conditional Pauli coordinate example"
+    },
+    {
+      "lines": [
+        262,
+        270
+      ],
+      "claim": "Unit vectors l define U1, lifted Hom domain/codomain U1 x SU2L roles, imaginary time Higgs proposal, chosen Higgs U1 stabilizer claimed electromagnetic"
+    },
+    {
+      "lines": [
+        272,
+        284
+      ],
+      "claim": "J eigenvalue +i/-i conj pair and Eq4.1 half-conjugate determinant, three spinor exterior-power equations; previously conserved W034 subject to later comparison"
+    },
+    {
+      "lines": [
+        286,
+        290
+      ],
+      "claim": "J-selected U2 double cover SU2L x U1 inside Spin4, U1 subset SU2R, signed S_L C2_0 and S_R C_-1 ⊕ C_+1, cited [41] PDF is chapter31 (HTML [49] wrapper link text)"
+    }
+  ],
+  "new_typed_statements": [
+    {
+      "id": "W01-S41-033-01",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_J_SQUARE_AND_DIMENSIONAL_CHOICES",
+      "html_lines": [
+        247,
+        248
+      ],
+      "two_dimensions": {
+        "ambient": "E^2",
+        "group": "SO(2)",
+        "equation": "J^2=-1",
+        "solutions": "TWO_OPPOSITE_SIGNS"
+      },
+      "four_dimensions": {
+        "ambient": "E^4",
+        "group": "SO(4)",
+        "equation": "J^2=-1",
+        "family": "S^2_WORTH"
+      },
+      "modality": "AUTHOR_MATHEMATICAL_GEOMETRY_NOT_ONE_CANONICAL_J"
+    },
+    {
+      "id": "W01-S41-033-02",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_EUCLIDEAN_PT_FIBRATION_COMPLEX_STRUCTURE_SCOPE",
+      "html_lines": [
+        248,
+        251
+      ],
+      "fibration": {
+        "total": "PT=CP^3",
+        "base": "S^4=HP^1",
+        "fiber": "S^2=CP^1",
+        "projection": "pi"
+      },
+      "base_complex": false,
+      "total_complex": true,
+      "conditional_generalization": {
+        "premise": "ANY_4_MANIFOLD_WITH_ANTI_SELF_DUAL_METRIC",
+        "consequence": "ITS_BUNDLE_OF_COMPLEX_STRUCTURES_IS_COMPLEX_MANIFOLD"
+      },
+      "guard": "CONDITIONAL_ASD_ONLY_NOT_ALL_METRICS"
+    },
+    {
+      "id": "W01-S41-033-03",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_QUATERNION_TAUTOLOGICAL_LINE_SPINOR_CARRIER",
+      "html_lines": [
+        252,
+        253
+      ],
+      "quaternion_bundle": "TAUTOLOGICAL_H_OVER_HP1",
+      "fiber_line": "l COMPLEX_LINE_SUBSET C^2=H",
+      "right_spinor": "S_R=C^2",
+      "tangent_full": "Hom(S_R,S_L)",
+      "point_in_PT": "l SUBSET C^4 AND l SUBSET S_R",
+      "guard": "FIBER_POINTWISE_NOT_GLOBAL_CANONICAL_SPINOR"
+    },
+    {
+      "id": "W01-S41-033-04",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_SELECTED_l_TANGENT_HOM_C_COMPLEX_DIM2",
+      "html_lines": [
+        253,
+        256
+      ],
+      "premise": "GIVEN_SELECTED_COMPLEX_LINE_l_IN_PT",
+      "carrier": "Hom_C(l,S_L)",
+      "dimension_complex": 2,
+      "argument_domain": "l",
+      "argument_codomain": "S_L",
+      "guard": "SELECTED_l_DEPENDENT_NOT_CANONICAL_INDEPENDENT_OF_J"
+    },
+    {
+      "id": "W01-S41-033-05",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_CONDITIONAL_PAULI_COORDINATE_EXAMPLE",
+      "html_lines": [
+        256,
+        261
+      ],
+      "premise": "l=span((1,0)^T)",
+      "lhs": "(x0,x1,x2,x3) in R^4",
+      "matrix_operator": "(x0 I -i(x1 sigma1+x2 sigma2+x3 sigma3))",
+      "input_vector": "(1,0)^T",
+      "ordered_output": [
+        "x0-i*x3",
+        "-i*x1+x2"
+      ],
+      "modality": "AUTHOR_ONE_EXPLICIT_EXAMPLE_NOT_GLOBAL_COORDINATE_FREE_IDENTITY"
+    },
+    {
+      "id": "W01-S41-033-06",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_U1_PRINCIPAL_BUNDLE_UNIT_LINE_VECTORS",
+      "html_lines": [
+        262,
+        266
+      ],
+      "base": "PT",
+      "point": "l COMPLEX_LINE",
+      "bundle_fiber": "UNIT_VECTORS_IN_l",
+      "fiber_group": "U(1)",
+      "author_role": "PROPOSED_EXTRA_ELECTROWEAK_U1",
+      "negative": "NOT_FINAL_INTERACTING_ACTION_ON_PT"
+    },
+    {
+      "id": "W01-S41-033-07",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_LIFTED_TANGENT_HOM_WEAK_HIGGS_TRANSFORMATION",
+      "html_lines": [
+        267,
+        269
+      ],
+      "carrier": "Hom_C(l,S_L)",
+      "group_actions": [
+        {
+          "group": "U(1)",
+          "on": "l_DOMAIN"
+        },
+        {
+          "group": "SU(2)_L",
+          "on": "S_L_CODOMAIN"
+        }
+      ],
+      "proposed_field": "LIFTED_IMAGINARY_TIME_VECTOR",
+      "author_claim": "TRANSFORMS_AS_HIGGS_UNDER_U1_AND_SU2L",
+      "guard": "DO_NOT_INFER_COMPLETED_HIGGS_DYNAMICS_OR_UNSTATED_U1_SIGN"
+    },
+    {
+      "id": "W01-S41-033-08",
+      "owner": "W-SSC-033",
+      "kind": "SOURCE_HIGGS_VECTOR_STABILIZER_U1_ELECTROMAGNETIC_ROLE",
+      "html_lines": [
+        270,
+        270
+      ],
+      "premise": "SPECIFIC_SELECTED_HIGGS_VECTOR",
+      "ambient_group": "U(2)",
+      "subgroup": "U(1)_FIXING_SELECTED_VECTOR",
+      "author_claim": "ELECTROMAGNETISM_GAUGE_SYMMETRY_AS_USUAL",
+      "modality": "AUTHOR_INTERPRETATIVE_ROLE_NOT_DERIVED_INTERACTING_THEORY"
+    },
+    {
+      "id": "W01-S41-035-01",
+      "owner": "W-SSC-035",
+      "kind": "SOURCE_SPINOR_COVER_AND_U1_CHIRAL_LOCATION",
+      "html_lines": [
+        286,
+        290
+      ],
+      "condition": "CHOICE_OF_J_AT_POINT_PT",
+      "subgroup": "U(2) SUBSET SO(4)",
+      "lift": "SU(2)_L x U(1) SUBSET Spin(4)",
+      "u1_inside": "SU(2)_R",
+      "representation_carriers": [
+        "S_L",
+        "S_R"
+      ],
+      "guard": "DO_NOT_EXCHANGE_LEFT_RIGHT_OR_ASSIGN_U1_GLOBALLY_INDEPENDENT_OF_PT"
+    },
+    {
+      "id": "W01-S41-035-02",
+      "owner": "W-SSC-035",
+      "kind": "SOURCE_SPINOR_WEIGHT_SIGNED_DIRECT_SUM",
+      "html_lines": [
+        287,
+        290
+      ],
+      "lhs": [
+        "S_L",
+        "S_R"
+      ],
+      "values": [
+        "C^2_(0)",
+        "C_(-1) DIRECT_SUM C_(+1)"
+      ],
+      "left_weight": 0,
+      "right_weights_ordered": [
+        -1,
+        1
+      ],
+      "source_latex": "S_L=\\mathbf C^2_0,\\quad S_R=\\mathbf C_{-1}\\oplus\\mathbf C_{+1}",
+      "modality": "EXACT_SOURCE_WEIGHT_NOT_POST_RENORMALIZED"
+    }
+  ],
+  "affected_existing_handles": [
+    "W-SSC-033",
+    "W-SSC-035"
+  ],
+  "source_claims_mathematically_proven_by_this_research": false,
+  "original_section_reverse_scoped_complete_claim": false,
+  "all_W01_reverse_complete": false,
+  "all_nine_original_reverse_complete": false,
+  "old_Oct03_mutable_sources_verified": false,
+  "G0": "OPEN_UNFROZEN",
+  "source_semantics_qualified": false,
+  "L_semantics_used": false
+}

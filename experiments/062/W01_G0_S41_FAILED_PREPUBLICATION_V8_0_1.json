@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062-w01-s41-verifier-prepublication-failed-v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "source_blob_sha": "0b751fcbc4134852b21c60c7d5a84eaccb05866c",
+  "gate_blob_sha": "df9ac0b721e5939f484770a45f04a686f0afd684",
+  "positive_baseline": true,
+  "hostile_total": 77,
+  "hostile_rejected": 76,
+  "escaped": [
+    "O.source_first_assertion_inventory.3.claim"
+  ],
+  "crashed": [],
+  "disposition": "FAIL_UNQUALIFIED",
+  "cause": "Checker required five independent source-first audit rows but omitted validation of Eq4.1 continuity row text; hostile mutation escaped despite otherwise positive baseline",
+  "successor": "v0.2 guard requires Eq4.1 half-conjugate determinant and all three exterior-power roles in the oracle row",
+  "CI": "NOT_RUN",
+  "source_stage": "G0_OPEN_UNFROZEN"
+}
