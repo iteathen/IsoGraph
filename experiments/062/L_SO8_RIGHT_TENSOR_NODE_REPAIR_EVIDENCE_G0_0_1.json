@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062-L01-so8-tensor-right-candidate-repair-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "g0_only": true,
+  "actual_original_candidate_commit": "982079487d3ce47dedb2a3f908dde95390b76cf3",
+  "pre_repair_verifier_blob": "68f9e71fd3f741b081ca891220466da8062d320e",
+  "first_repaired_commit": "6d2d2dc338f0dfa0ad011f30c3d0485b82301547",
+  "first_repaired_blob": "0e8e1201a5c73ef091b33df58b93bffa81ce5e57",
+  "repaired_verifier_blob": "a3e8b0aaccdac666244a1daa9f12032ff923c13d",
+  "existing_original_G0_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_43.json",
+    "git_blob_sha": "60ef1c9cbcd6ba1c855a361b6a5ef18c160c169e"
+  },
+  "semantics_of_stage_pinning": "G0 gate0.43 pins original candidate verifier from first so8 research commit; this evidence records later parser-only correction without mutating gate and without cascading gate0.44/checker ancestries written by a concurrent independent L agent.",
+  "original_selected_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_42.json",
+    "git_blob_sha": "22eb618a2a5983dc1608a45cabe0c53ce5616151"
+  },
+  "failure_history": [
+    {
+      "run_id": 38006663593,
+      "head": "982079487d3ce47dedb2a3f908dde95390b76cf3",
+      "cause": "Node parse-time missing ) in matrix multiplication; math source model not run."
+    },
+    {
+      "run_id": 38006976694,
+      "head": "6d2d2dc338f0dfa0ad011f30c3d0485b82301547",
+      "cause": "Actual math baseline PASS, 12/12 math hostiles and 16/16 source hostiles all rejected; single escaped gate-verifier hash assertion still expected original pre-repair checker blob rather than later parser-only repaired checker."
+    }
+  ],
+  "mathematical_implementation_unchanged": true,
+  "code_repair_scope": "One missing parenthesis in arrow-matrix-multiply function, plus explicit audit binding of repair SHA to historical G0 gate original checker SHA; no changes to actual 8x8 basis, su3 representation, 28-generator Lie module or mathematical adversarial witnesses.",
+  "cold_external_review_passed": false,
+  "source_original_E8_root_carrier_map_qualified": false,
+  "source_author_mathematical_error_proved": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "cross_track_synthesis_authorized": false,
+  "next_required": "Run latest GitHub path-filtered verify-l-g0-l01-so8-tensor-right-0-1.mjs to independent completion; inspect full CI logs and pin run evidence."
+}

@@ -2,7 +2,7 @@
 // Exact project real so8=su3+2u1+three six-real SU3 submodules; not source E8 matrices.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-const P={"packet":"research/woit-lisi-isomorph/lisi/LISI_L01_SO8_TENSOR_RIGHT_TRANSPOSE_G0_0_1.json","oldPacket":"research/woit-lisi-isomorph/lisi/LISI_L01_RIGHT_ACTION_CONTRAGREDIENT_G0_0_1.json","oldCensus":"research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_41.json","census":"research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_42.json","oldGate":"experiments/062/L_CURRENT_STAGE_GATE_0_42.json","gate":"experiments/062/L_CURRENT_STAGE_GATE_0_43.json","checker":"experiments/062/tools/verify-l-g0-l01-so8-tensor-right-0-1.mjs"};
+const P={"packet":"research/woit-lisi-isomorph/lisi/LISI_L01_SO8_TENSOR_RIGHT_TRANSPOSE_G0_0_1.json","oldPacket":"research/woit-lisi-isomorph/lisi/LISI_L01_RIGHT_ACTION_CONTRAGREDIENT_G0_0_1.json","oldCensus":"research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_41.json","census":"research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_42.json","oldGate":"experiments/062/L_CURRENT_STAGE_GATE_0_42.json","gate":"experiments/062/L_CURRENT_STAGE_GATE_0_43.json","checker":"experiments/062/tools/verify-l-g0-l01-so8-tensor-right-0-1.mjs","repairEvidence":"experiments/062/L_SO8_RIGHT_TENSOR_NODE_REPAIR_EVIDENCE_G0_0_1.json"};
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const blob=p=>{const b=fs.readFileSync(p);return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex')};
 function mathAudit(m={}){
@@ -173,7 +173,8 @@ function sourceAudit(packet,old,current,gate){
  ck(current.guards?.source_census_freeze_complete===false&&current.guards?.dp_allowed===false,'SSC unfinished');
  ck(gate.stage==='G0'&&gate.semantic_authority===false&&gate.track==='L'&&gate.predecessor_gate?.git_blob_sha===blob(P.oldGate),'gate G0 only and parent hash');
  ck(gate.current_source_census?.path===P.census&&gate.current_source_census?.git_blob_sha===blob(P.census)&&gate.current_source_census?.frozen===false,'gate exact SSC42');
- ck(gate.current_source_packet?.git_blob_sha===blob(P.packet)&&gate.source_verifier?.git_blob_sha===blob(P.checker),'gate packet and code blob');
+ const repair=read(P.repairEvidence);
+ ck(gate.current_source_packet?.git_blob_sha===blob(P.packet)&&gate.source_verifier?.git_blob_sha===repair.pre_repair_verifier_blob&&repair.pre_repair_verifier_blob==='68f9e71fd3f741b081ca891220466da8062d320e'&&repair.repaired_verifier_blob===blob(P.checker)&&repair.g0_only===true&&repair.mathematical_implementation_unchanged===true,'gate original verifier pin and exact newer syntax-repair audit binding');
  ck(gate.current_lawful_state?.G1_authorized===false&&gate.current_lawful_state?.cross_track_synthesis_authorized===false&&gate.current_lawful_state?.source_E8_right_transpose_map_qualified===false,'gate downstream lock');
  return issues;
 }
