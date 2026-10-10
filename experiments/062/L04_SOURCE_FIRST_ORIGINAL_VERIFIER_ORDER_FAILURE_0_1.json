@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062.L04-source-first-initial-verifier-order-defect.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "status": "PRESERVED_COMPLETED_FAILURE_IMPLEMENTATION_DEFECT_NO_SOURCE_INFERENCE",
+  "failure": {
+    "run_id": 38024978592,
+    "job_id": 114133797894,
+    "head_sha": "7006e73e0e77acee59c16b08bd5f8178e0eb39d1",
+    "workflow": ".github/workflows/experiment-062-l-g0-l04-source-first-reverse-0-1.yml",
+    "checker": "experiments/062/tools/verify-l-g0-l04-source-first-reverse-0-1.mjs",
+    "checker_sha": "c896fdb185b30f1f894436e5eafbe002ca64f263",
+    "conclusion": "failure",
+    "actual_issue": "mechanically derived 53 source dispositions",
+    "hostiles_defined": 17,
+    "hostiles_rejected": 17,
+    "original_pdf_complete_review_claimed": false
+  },
+  "cause": "Verifier serialized JS dictionary insertion order and incorrectly required it to equal packet disposition-count key insertion order. Same five key/value pairs, different ordering by source-location traversal. This is an implementation defect in metadata checking, not author/source inconsistency or a reason to re-open additional mathematical obligations.",
+  "correction": {
+    "checker": "experiments/062/tools/verify-l-g0-l04-source-first-reverse-0-2.mjs",
+    "checker_sha": "2c872d5b24976ece614275d606fc0d39a9202cbe",
+    "method": "Check exact same disposition keys and all numerical values independent of object key enumeration order. Keep 17 original adversarial controls and original failure intact."
+  },
+  "current_G0": "OPEN_UNFROZEN",
+  "original_source_semantic_change_required": false,
+  "W_track_mutated": false,
+  "first_run_reclassified_as_success": false,
+  "source_census_frozen": false
+}
