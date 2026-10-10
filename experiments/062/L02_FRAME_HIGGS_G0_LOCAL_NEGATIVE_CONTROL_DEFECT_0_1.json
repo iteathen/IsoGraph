@@ -1,0 +1,36 @@
+{
+  "schema": "isograph.exp062-l-L02-frame-Higgs-local-preflight-negative-control-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "mode": "LOCAL_V8_PREFLIGHT_ONLY_NOT_A_GITHUB_ACTIONS_RUN",
+  "baseline_verifier_blob": "fad5e29ba3ff29b42895b001011f334c36be7968",
+  "reported_baseline_math_pass": false,
+  "reported_errors": [
+    "distinct Clifford external and internal gamma factors anticommute with 1-form wedge ordering"
+  ],
+  "baseline_successful_case_subchecks": {
+    "exact_full_Eq14_decompositions": 5,
+    "independent_sector_projections": 15,
+    "graded_Leibniz": 5,
+    "Clifford_frameHiggs_square": 5,
+    "nonzero_grav_mixed_YM_all_cases": true,
+    "hostile_math_mutations_all_detected": 13
+  },
+  "cause": "A project verifier negative-control assertion expected anticommutation of gamma0 dx0 and gamma4 dx1 after multiplying TWO distinct graded algebras. Clifford odd gamma anticommutator is - but exterior dx0 dx1 anti gives a second -, hence these independent degree-one vector-valued forms commute.",
+  "correction": "Use degree-zero gamma0 and gamma4 to test Clifford anticommute; separately test degree-one gamma0 dx0 and gamma4 dx1 commute. Independent source Eq14 verifier checks unchanged.",
+  "corrected_packet_blob": "a5a9dc6bbe656a680cebb02bc272c56401dc4b14",
+  "corrected_verifier_blob": "60fd57bd7e58938f66c301c22efda1246ee42467",
+  "corrected_LOCAL_result": {
+    "baseline_math_pass": true,
+    "exact_full_Eq14_cases": 5,
+    "sector_projections": 15,
+    "adversarial_math_mutants_rejected": 13
+  },
+  "source_author_error_confirmed": false,
+  "source_original_mathematical_discrepancy_confirmed": false,
+  "original_source_claims_modified": false,
+  "cold_GitHub_verification_pending": true,
+  "G1_authorized": false
+}
