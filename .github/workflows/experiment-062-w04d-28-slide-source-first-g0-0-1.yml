@@ -1,19 +1,7 @@
 name: Experiment 062 W04d original 28-slide source-first G0 0.1
+# Historical FAILED at 38081030764; archived manual-only, no retroactive CI qualification.
+# Historical v0.1 expected a nonexistent SSC0.63 correction metadata flag; corrected v0.2 succeeded at run 38077778127.
 on:
-  push:
-    branches:
-      - research/woit-lisi-isomorph-20261003
-    paths:
-      - 'experiments/062/W04D_G0_28_SLIDE_6_POST_SOURCE_FIRST_0_1.json'
-      - 'experiments/062/W04D_G0_FULL_DECK_PREDECESSOR_SOURCE_DEFECT_0_1.json'
-      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_63.json'
-      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_49.json'
-      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_48.json'
-      - 'experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_30.json'
-      - 'experiments/062/W_CURRENT_STAGE_GATE_0_123.json'
-      - 'experiments/062/tools/verify-w04d-28-slide-source-first-g0-0-1.cjs'
-      - '.github/workflows/experiment-062-w04d-28-slide-source-first-g0-0-1.yml'
-      - 'research/woit-lisi-isomorph/woit/README.md'
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
