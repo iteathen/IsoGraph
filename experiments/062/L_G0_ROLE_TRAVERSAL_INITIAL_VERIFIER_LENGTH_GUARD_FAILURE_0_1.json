@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-L-G0-role-traversal-initial-CI-verifier-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "first_run": {
+    "id": 38021665167,
+    "head_sha": "2eabfa5c6a9ec2974c6f97af5726aa4e3959b317",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38021665167",
+    "job_id": 114123781467,
+    "conclusion": "failure",
+    "cause": "Verifier author required original_source_evidence locator string length >30. Existing anchored source locators for L-G0-SR-05, -06 and -08 are 22,26,24 characters respectively. This is a superficial evidence-locator minimum-length threshold, not a semantic source contradiction.",
+    "source_math_tests_executed": 0,
+    "source_role_relations_executed": 16,
+    "adversarial_mutants_defined": 18,
+    "adversarial_mutants_rejected": 18,
+    "baseline_issues": [
+      "explicit source modality/evidence L-G0-SR-05",
+      "explicit source modality/evidence L-G0-SR-06",
+      "explicit source modality/evidence L-G0-SR-08"
+    ],
+    "complete_job_log_reviewed": true
+  },
+  "historical_original_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-source-role-and-traversal-reconciliation-0-1.mjs",
+    "git_blob_sha": "fb8b5ba4e7237d27d19a78186c6ed2f32490d428"
+  },
+  "historical_candidate_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_57.json",
+    "git_blob_sha": "01ab97e7a48a55b8d208f9898aea5d309ac8d591"
+  },
+  "corrected_successor_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-source-role-and-traversal-reconciliation-0-2.mjs",
+    "git_blob_sha": "03795cdee8342133afeec23526039c0e8b98533a"
+  },
+  "source_relations_unchanged": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_G0_SOURCE_NATIVE_ROLE_RELATIONS_0_1.json",
+    "git_blob_sha": "bb8c115f16c43f8b2f3800eecedfeb9d7b718316"
+  },
+  "census_unchanged": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_49.json",
+    "git_blob_sha": "cdf56a95b04a2f3bff90c68dd49f0618d8e868d8"
+  },
+  "traversal_unchanged": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_12.json",
+    "git_blob_sha": "c95aaa5cea9e6d83e8cbf1cd70a4c8698d3baa88"
+  },
+  "minimum_causal_fix": "Replace unsupported >30 character threshold with >=20 while retaining source-item anchor, exact source relation type, original locator and all hostile mutation controls. New immutable verifier version 0.2 and successor G0 gate0.58; do not rewrite original v0.1 or gate0.57.",
+  "cold_external_source_review_passed": false,
+  "author_error_proved": false,
+  "G1_authorized": false,
+  "NEI_pass_authorized": false,
+  "DTS_pass_authorized": false,
+  "cross_track_synthesis_authorized": false
+}
