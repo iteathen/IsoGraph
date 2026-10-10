@@ -1,0 +1,71 @@
+{
+  "schema": "isograph.exp062-w01-abstract-corrected-exact-node-ci-result.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "source": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_56.json",
+    "git_blob_sha": "7ffd2718e2b3f661a67b8e6e12a72bca0644715a",
+    "source_items": 151,
+    "typed": 471,
+    "W01_typed": 186
+  },
+  "corrected": {
+    "sha": "76ce78fd643b11fbccb9e250e6b1f02f8cf86a0e",
+    "run_id": 38025138690,
+    "job_id": 114134285089,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38025138690",
+    "verifier": {
+      "path": "experiments/062/tools/verify-w01-abstract-original-source-g0-0-2.mjs",
+      "git_blob_sha": "3ac4a270b8a7248ca872158c2e7870ef07eaf941"
+    },
+    "conclusion": "success",
+    "positive_baseline": true,
+    "source_hash_mismatch": [],
+    "positive_errors": [],
+    "hostile_total": 93,
+    "hostile_rejected": 93,
+    "escaped": [],
+    "crashed": []
+  },
+  "preserved_failed_predecessor": {
+    "path": "experiments/062/W01_G0_ABSTRACT_FAILED_V01_NODE_CI_0_1.json",
+    "git_blob_sha": "a0d8e2aa0cf2be968882f2c7c23764bfec025eb8",
+    "run_id": 38024962358,
+    "positive_baseline": true,
+    "hostile_total": 90,
+    "hostile_rejected": 89,
+    "escaped": [
+      "N.scope_guards.0"
+    ],
+    "crashed": [],
+    "qualified": false
+  },
+  "exact_commit_other_CI": [
+    {
+      "run_id": 38025138542,
+      "name": "W_G_STAGE_HOSTILE_SOURCE_LINEAGE",
+      "conclusion": "success"
+    },
+    {
+      "run_id": 38025138472,
+      "name": "W_G0_FINITE_SOURCE_FIRST_COVERAGE",
+      "conclusion": "success"
+    },
+    {
+      "run_id": 38025138587,
+      "name": "W_ACTIVE_G0_STAGE_GUARD",
+      "conclusion": "success"
+    }
+  ],
+  "qualified_scope": "W01_ORIGINAL_ABSTRACT_SOURCE_FIDELITY_ONLY",
+  "not_qualified": [
+    "FULL_ORIGINAL_W01_REVERSE",
+    "NINE_SOURCE_REVERSE",
+    "OCT03_MUTABLE_BYTES",
+    "ALL151_DEMAND_MEMBERSHIP",
+    "G1_G7",
+    "PHYSICAL_MODEL"
+  ],
+  "external_review": "OWNER_BYPASSED_NOT_PASSED",
+  "G0": "OPEN_UNFROZEN"
+}
