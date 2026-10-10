@@ -1,12 +1,7 @@
 name: Experiment 062 W01 A3 original source exact corrected G0 0.2
+# Historical FAILED workflow on run 38078531819; retained as manual-only, never retrospectively qualified.
+# Source owner omission hostile control escaped; preserve failed v0.2.
 on:
-  push:
-    branches: [research/woit-lisi-isomorph-20261003]
-    paths:
-      - 'experiments/062/tools/verify-w01-a3-original-source-g0-0-2.cjs'
-      - 'experiments/062/W01_G0_A3_V01_METADATA_FIELD_FAILED_CI_0_1.json'
-      - '.github/workflows/experiment-062-w01-a3-original-source-g0-0-2.yml'
-      - 'research/woit-lisi-isomorph/woit/README.md'
   workflow_dispatch:
 permissions: {contents: read}
 jobs:

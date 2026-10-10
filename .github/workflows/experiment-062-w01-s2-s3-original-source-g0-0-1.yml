@@ -1,18 +1,7 @@
 name: Experiment 062 W01 original source §§2–3 G0 0.1
+# Historical FAILED workflow on run 38078531868; retained as manual-only, never retrospectively qualified.
+# Prior SSC mutation escaped v0.1; corrected v0.2 distinct.
 on:
-  push:
-    branches: [research/woit-lisi-isomorph-20261003]
-    paths:
-      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_58.json'
-      - 'experiments/062/W01_G0_S2_S3_FULL_SOURCE_FIRST_INTERVAL_0_1.json'
-      - 'experiments/062/W01_G0_S21_DIMENSION_EXCEPTION_PREDECESSOR_DEFECT_0_1.json'
-      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_44.json'
-      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_43.json'
-      - 'experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_25.json'
-      - 'experiments/062/W_CURRENT_STAGE_GATE_0_118.json'
-      - 'experiments/062/tools/verify-w01-s2-s3-original-source-g0-0-1.cjs'
-      - '.github/workflows/experiment-062-w01-s2-s3-original-source-g0-0-1.yml'
-      - 'research/woit-lisi-isomorph/woit/README.md'
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
