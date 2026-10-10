@@ -1,0 +1,61 @@
+{
+  "schema": "isograph.exp062-w01-s6-conclusion-verifier-v02-hostile-membership-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "POSITIVE_PASS_ONE_MUTANT_ESCAPES_NOT_QUALIFIED",
+  "run": {
+    "id": 38018459741,
+    "job_id": 114113933961,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38018459741",
+    "head_sha": "09fe7b9e1d4da42a7a17ee0fd91729d28e9f835d",
+    "conclusion": "failure",
+    "positive_baseline_pass": true,
+    "positive_errors": [],
+    "hostile_total": 59,
+    "hostile_rejected": 58,
+    "hostile_escaped": 1,
+    "hostile_crashed": 0,
+    "escaped_name": "register W117 membership falsified",
+    "qualification": false
+  },
+  "root_cause": {
+    "real_register_field": "rows[census_id=W-SSC-117].historical_86_member",
+    "expected_value": false,
+    "tested_field_only": "historical_W86_projection.items excludes W-SSC-117",
+    "mistake": "Verifier tested old projection exclusion but not the same false historical membership flag copied on W117's current 151-row register.",
+    "required_fix": "Use W117 R.row historical_86_member false, historical_ledger_0_19_mode INCOMPLETE_UNEXPANDED, C.row historical_in_86 false and old projection absence as independent coupled positive oracle; ensure hostile mutation affects real field."
+  },
+  "predecessor": {
+    "source_census": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_49.json",
+    "source_git_blob": "a414b5e0e6d9b84e30aa1f2278da8fea60aae54c",
+    "verifier_path": "experiments/062/tools/verify-w01-s6-conclusion-source-g0-0-2.mjs",
+    "verifier_git_blob": "40959aa9e22a8c73bf7758895c33112281d0a649",
+    "gate": "experiments/062/W_CURRENT_STAGE_GATE_0_102.json",
+    "gate_git_blob": "7615a7d01c2865e37a3d3ba77dec9e988deffd89"
+  },
+  "other_failed_test": {
+    "run": 38018234785,
+    "positive_baseline_failed": true,
+    "hostile_rejections": 55,
+    "qualified": false
+  },
+  "stage": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "all_nine_source_reverse_exhaustive": false,
+    "source_original_author_bodies_unchanged": true,
+    "source_items": 151,
+    "typed_source_occurrences": 417,
+    "all_151_demand_membership_qualified": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "G1_G7_authorized": false,
+    "no_L_semantics": true
+  },
+  "preservation": [
+    "Do not count positive pass plus 58 of 59 adversarial rejections as qualification",
+    "Do not overwrite v0.2 validator or CI failure",
+    "Version corrected v0.3 and preserve source0.49 evidence"
+  ],
+  "next": "Correct membership guard, add hostile controls for historical W117 misclassification, then rerun v0.3 Node/GitHub Actions."
+}
