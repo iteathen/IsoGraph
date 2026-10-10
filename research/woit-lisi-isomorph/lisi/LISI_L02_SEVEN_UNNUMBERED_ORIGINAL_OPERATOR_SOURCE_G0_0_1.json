@@ -1,0 +1,175 @@
+{
+  "schema": "isograph.track-L.G0.L02-frozen-v2-seven-unnumbered-source-operator-conservation.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_original": {
+    "id": "L02",
+    "title": "Unification of gravity, gauge fields, and Higgs bosons",
+    "authors": [
+      "A. Garrett Lisi",
+      "Lee Smolin",
+      "Simone Speziale"
+    ],
+    "revision": "arXiv:1004.4866v2",
+    "PDF": "https://arxiv.org/pdf/1004.4866v2",
+    "frozen_PDF_SHA256": "1c2764dc498a3b118253f97447249e58a07e7c9ff4eb7fa72a48633061bfd25a",
+    "pdf_pages": 12,
+    "primary_visual_method": "original-v2 PDF exact page image visually checked source equations, including non-numbered display spans",
+    "secondary_not_authority": "https://arxiv.org/html/1004.4866v2",
+    "secondary_version_only": "v2",
+    "HTML_render_date_not_source_revision": "The current HTML renderer may show a newer generated date; original PDF carries frozen v2 arxiv date 2010-10-13",
+    "qualified_original_byte_ci": {
+      "run_id": 38046224902,
+      "head_sha": "7d208f477f92b4d84cc3a67276ee735c511739a7",
+      "conclusion": "success"
+    }
+  },
+  "independent_source_first_unnumbered_groups": [
+    {
+      "location": "L02-S018",
+      "pdf_page_zero_based": 3,
+      "printed_page": 4,
+      "source_role": "Lie-algebra bivector dual, carrier indices and coeffs",
+      "existing_ssc": [
+        "L-SSC-054"
+      ],
+      "semantic_fidelity": "For spin(1,3) bivector B=(1/2)B^{ab}gamma_ab the source Lie-bivector star satisfies star_Lie(B)=(1/2)B^{ab}((1/2)epsilon_ab^{cd}gamma_cd)=(1/2)B^{star cd}gamma_cd with B^{star cd}=(1/2)B^{ab}epsilon_ab^{cd}; a,b=1..4 while internal m,n=5..4+N.",
+      "source_modality": "DEFINITION_OF_SELECTED_LIE_DUAL",
+      "previous_ssc_gap": "Source summary mentioned distinct dualities without actual epsilon coefficient/binder for the Lie one."
+    },
+    {
+      "location": "L02-S019",
+      "pdf_page_zero_based": 3,
+      "printed_page": 4,
+      "source_role": "Spacetime Hodge dual for arbitrary 2form and e-built gravitational area carrier",
+      "existing_ssc": [
+        "L-SSC-054"
+      ],
+      "semantic_fidelity": "For any B=(1/2)e^a wedge e^b B_ab, *(B)=(1/2)[(1/2)epsilon^{ab}_{cd} e^c wedge e^d]B_ab=(1/2)e^c wedge e^d B_{*cd}; B_{*cd}=(1/2)B_ab epsilon^{ab}_{cd}. Source further defines Sigma=e wedge e (Clifford vector frame), with *Sigma=star_Lie(Sigma) under the stated Lorentzian e carrier.",
+      "source_modality": "DEFINITION_REQUIRES_NONDEGENERATE_E_AND_INV_E",
+      "previous_ssc_gap": "General arbitrary-form Hodge epsilon binder and 1/2 factors not reconstructable from source SSC dimension/signature summary."
+    },
+    {
+      "location": "L02-S020",
+      "pdf_page_zero_based": 4,
+      "printed_page": 5,
+      "source_role": "Phi Eq7 four-factor indexed operator ansatz and distinct spacetime/Lie binders",
+      "existing_ssc": [
+        "L-SSC-055"
+      ],
+      "semantic_fidelity": "Phi_{mu nu cd}^{rho sigma ab}=a delta_{mu nu}^{rho sigma}delta_{cd}^{ab} + b(e_mu)^e(e_nu)^f epsilon_{ef}^{gh}(e_g)^rho(e_h)^sigma delta_{cd}^{ab} + c delta_{mu nu}^{rho sigma}epsilon^{ab}_{cd} + d epsilon_{mu nu}^{rho sigma}epsilon^{ab}_{cd}. This is source's indexed realization of Phi=a+b*+c star_Lie+d*star_Lie.",
+      "source_modality": "PROPOSED_SOURCE_ANSATZ_NOT_ALL_ALLOWED_PHI",
+      "previous_ssc_gap": "Four abstract operators already present, but full original source index-carrier distinction and e-built Hodge component action were absent."
+    },
+    {
+      "location": "L02-S021",
+      "pdf_page_zero_based": 4,
+      "printed_page": 5,
+      "source_role": "Unnumbered exact Phi Phi polynomial controlling source branches",
+      "existing_ssc": [
+        "L-SSC-055"
+      ],
+      "semantic_fidelity": "Phi Phi=(a^2-b^2-c^2+d^2) + 2(ab-cd)* + 2(ac-bd)star_Lie + 2(ad+bc)*star_Lie. First selected branch a=0,b=1,c=0,d=0 implies Phi Phi=-1 for any B in the source sufficiency statement; other nontrivial parameter values give a DIFFERENT class with source conditions on B not analyzed further.",
+      "original_coeff_order": [
+        [
+          "identity",
+          "a^2-b^2-c^2+d^2"
+        ],
+        [
+          "spacetime_star",
+          "2(ab-cd)"
+        ],
+        [
+          "Lie_star",
+          "2(ac-bd)"
+        ],
+        [
+          "product",
+          "2(ad+bc)"
+        ]
+      ],
+      "source_modality": "AUTHOR_ALGEBRAIC_ASSERTION_AND_SELECTED_BRANCH_NOT_UNIVERSAL_SOLUTION_PROOF",
+      "previous_ssc_gap": "Source Eq7 Phi and selected Phi^2=-1 were indexed, but intermediate complete 4-coefficient polynomial was not recoverable."
+    },
+    {
+      "location": "L02-S025",
+      "pdf_page_zero_based": 4,
+      "printed_page": 5,
+      "source_role": "Original Eq11 non-numbered vectorized connection action",
+      "existing_ssc": [
+        "L-SSC-055"
+      ],
+      "semantic_fidelity": "vecH F=* H *F= H_d eta^{ad} vec e_a (1/2)e^b wedge e^c F_bc = H_d eta^{ad} delta_a^{[b} e^{c]}F_bc = H^a F_ac e^c. This defines the original H operator/contraction alongside vecdelta=*d* lowering form grade; not a generic arbitrary-connection field solution.",
+      "source_modality": "SOURCE_DEFINITION_OF_VECTOR_CONTRACTION_OPERATOR",
+      "previous_ssc_gap": "The source SSC knew vecH was a separate Clifford contraction but omitted H-index raising, antisymmetrizer, output form carrier and last H^aF_ac e^c formula."
+    },
+    {
+      "location": "L02-S038",
+      "pdf_page_zero_based": 6,
+      "printed_page": 7,
+      "source_role": "Original unnumbered contraction of source Eq21 prior to Eq23",
+      "existing_ssc": [
+        "L-SSC-060"
+      ],
+      "semantic_fidelity": "With restricted e'=e, T=0, and nonzero Higgs phi, contraction by vec e of Eq21 prints 0=(1/2)R_scalar phi -(3/2)phi^3 - 4 vecD D phi + vec e [vec e phi,F_A], where R_scalar=vec e dot Ricci_vector. It is a selected intermediate SOURCE EQUALITY used before Eq23; Eq20 remains an additional field equation, and printed phi^- in Eq23 remains an unresolved literal.",
+      "source_modality": "AUTHOR_INTERMEDIATE_RESTRICTED_DERIVATION_NOT_INDEPENDENT_PROOF",
+      "previous_ssc_gap": "Existing L-SSC-060 preserved Eq20-23 but omitted separate contracted Eq21 intermediate identity and 1/2,3/2,4 coefficient sequence."
+    },
+    {
+      "location": "L02-S052",
+      "pdf_page_zero_based": 8,
+      "printed_page": 9,
+      "source_role": "Source conclusion degree/derivative structure of g-invariant action",
+      "existing_ssc": [
+        "L-SSC-067"
+      ],
+      "semantic_fidelity": "The authors describe the chosen action as a perturbation of topological BF: cubic and quintic polynomial terms, with one derivative in only one term, all conditional on the chosen action and NOT a theorem that generic U(Phi) has the same degrees.",
+      "source_modality": "AUTHOR_SOURCE_STRUCTURAL_DESCRIPTION_NOT_GUARANTEED_OTHER_POTENTIAL",
+      "previous_ssc_gap": "Existing SSC conclusion preserved restricted sector and ansatze, but omitted the polynomial degree and single-derivative structural claim."
+    }
+  ],
+  "source_coverage_method": {
+    "source_first_scan": "Traverse visible original PDF by page INCLUDING unnumbered display equations between Eqs(1)-(30), author modality words, action-degree statements and indexed epsilon/fiber carrier definitions.",
+    "disposition": "Underindex existing source semantics; extend four existing SSC items, do not invent any typed occurrence.",
+    "systematic_failure": "NUMBERED_EQUATION_ONLY_FIDELITY_DENOMINATOR_AND_SUMMARY_SUPPRESSED_SOURCE_GENERATING_DEFINITIONS",
+    "cause_owner": "SOURCE_TRAVERSAL_GRANULARITY_PLUS_EXPRESSION_INDEXING",
+    "source_revision_not_changed": true,
+    "source_formula_repetition_not_deduplicated_across_different_carriers": true,
+    "source_author_math_theorems_not_needed_for_G0": true
+  },
+  "conservation": {
+    "original_L02_inventory_59_locations_preserved": true,
+    "old_source_first_locations_touched": [
+      "L02-S018",
+      "L02-S019",
+      "L02-S020",
+      "L02-S021",
+      "L02-S025",
+      "L02-S038",
+      "L02-S052"
+    ],
+    "other_old_source_first_locations_unchanged": 52,
+    "prior_SSC_191_identities_preserved": true,
+    "SSC_items_edited": [
+      "L-SSC-054",
+      "L-SSC-055",
+      "L-SSC-060",
+      "L-SSC-067"
+    ],
+    "other_SSC_records_unchanged": 187,
+    "new_SSC_identity_count": 0,
+    "selected_prior_9_exact_groups_untouched": true,
+    "L02_all_30_numbered_eq_source_owner_links_unchanged": true,
+    "six_original_source_count": 6,
+    "all_six_original_whole_source_cold_pass": 0
+  },
+  "all_seven_scoped_original_visual_fidelity": "SOURCE_EXPRESSION_TRANSCRIPTION_REQUIRES_FRESH_INDEPENDENT_GITHUB_SHA_VERIFIER",
+  "whole_L02_original_PDF_complete_cold": false,
+  "G0_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}
