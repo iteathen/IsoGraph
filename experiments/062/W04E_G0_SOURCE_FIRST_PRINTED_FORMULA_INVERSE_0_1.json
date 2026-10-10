@@ -1,0 +1,393 @@
+{
+  "schema": "isograph.exp062-W04e-source-first-formula-and-binder-coverage.v0.1",
+  "date": "2026-10-10",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "FIVE_ADDITIONAL_TRUE_CURRENT_W04E_SOURCE_FORMULA_GAPS_LOCAL_REVERSE_NO_GLOBAL_G0_CLAIM",
+  "method": "Original author PDF line-and-rendered-page first (not SSC enumeration), source §2–§4 displayed equation and source-dependent operator/representation obligations. Each row is fixed to a recoverable original PDF page and exact document line span; statuses for prior represented material distinguished from five proven gaps. This is a bounded source-first audit, NOT a claim that all other narrative/citation/figure atoms on all fifteen pages have been independently cold-qualified.",
+  "source": {
+    "unit": "W04e",
+    "url": "https://www.math.columbia.edu/~woit/twistorunification/chiralwick-sketch.pdf",
+    "author": "Peter Woit",
+    "printed_date": "2026-07-14",
+    "printed_page_count": 15,
+    "original_oct03_sha256": "UNRECOVERED",
+    "original_oct03_bytes_verified": false,
+    "pages_directly_visually_compared": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "role": "CURRENT_AUTHOR_REVISION_ONLY_NOT_AUTHENTICATED_OCT3_CAPTURE"
+  },
+  "previous": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_66.json",
+      "git_blob_sha": "b0e1a52b0ed14bcafd16abaa34f34c66bc00d8d3"
+    },
+    "page_ledger": "experiments/062/W04E_G0_FULL_15PAGE_POST_AUTHOR_REPLY_SOURCE_FIRST_0_1.json",
+    "G0_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_126.json",
+      "git_blob_sha": "715135677163fedf1b9999f84dbaeaa0005a5aff"
+    }
+  },
+  "source_first_missing_atoms": [
+    {
+      "key": "F-LAPLACE-01",
+      "page": 3,
+      "pdf_index": 2,
+      "original_pdf_text_lines": [
+        78,
+        102
+      ],
+      "section": "§2 equations (1) and (2)",
+      "owner": "W-SSC-082",
+      "typed": "W04E-082-08",
+      "kind": "SOURCE_FOURIER_INVERSION_AND_SCHWINGER_LAPLACE_CHAIN",
+      "source_exact": {
+        "FT": "Wtilde2(E) = (1/(2*pi))*integral_R exp(i*t*E)*W2(t) dt",
+        "complex_inverse": "W2(z) = integral_R exp(-i*z*E)*Wtilde2(E) dE",
+        "Schwinger": "S2(tau)=W2(-i*tau)=integral_0_to_infinity exp(-tau*E)*Wtilde2(E) dE",
+        "spectrum_side_condition": "Wtilde2 support E>=0"
+      },
+      "modality": "AUTHOR_REVIEW_OF_CONVENTIONAL_ANALYTIC_CONTINUATION_NOT_NEW_CHIRAL_PROOF",
+      "guard": "AUTHOR_PRINTED_Z_SIGN_HALF_PLANE_CONTRADICTION_REMAINS_DISTINCT"
+    },
+    {
+      "key": "F-KG-04",
+      "page": 6,
+      "pdf_index": 5,
+      "original_pdf_text_lines": [
+        209,
+        232
+      ],
+      "section": "§2.1 equation (4)",
+      "owner": "W-SSC-082",
+      "typed": "W04E-082-09",
+      "kind": "SOURCE_RELATIVISTIC_COMPLEX_SCALAR_FREQUENCY_FACTORIZATION",
+      "source_exact": {
+        "ordered_operator": "(-d2_dt2-omega^2)*psi=(i*d_dt+omega)*(i*d_dt-omega)*psi=0",
+        "frequency": "omega=sqrt(|p|^2+m^2)",
+        "positive_negative_energy": true,
+        "second_annihilator": "b",
+        "second_creator": "b_dagger",
+        "real_field_restriction": "b=a"
+      },
+      "modality": "SOURCE_RELATIVISTIC_COMPLEX_SCALAR_CONVENTIONAL_EXAMPLE",
+      "guard": "SECOND_ORDER_FACTORIZATION_NOT_SOURCE_PROOF_ALL_COMPLEX_FIELD_DYNAMICS"
+    },
+    {
+      "key": "F-HYPERFUNCTION-01",
+      "page": 8,
+      "pdf_index": 7,
+      "original_pdf_text_lines": [
+        302,
+        306
+      ],
+      "section": "§3 hyperfunction conjugation",
+      "owner": "W-SSC-122",
+      "typed": "W04E-122-05",
+      "kind": "SOURCE_HYPERFUNCTION_PAIR_CHIRAL_CONJUGATION",
+      "source_exact": {
+        "carrier": "equivalence_classes_of_pairs_[F_plus,F_minus]",
+        "domains": [
+          "F_plus holomorphic on upper half plane",
+          "F_minus holomorphic on lower half plane"
+        ],
+        "map_from": "[F(z),0]",
+        "map_to": "[0,overline(F(overline(z)))]",
+        "source_relation": "SAME_CONJUGATION_IDEA_AS_OS_REFLECTION_IN_SOURCE_DISCUSSION"
+      },
+      "modality": "AUTHOR_CITED_HYPERFUNCTION_CONTEXT_NOT_NEW_BIJECTION_THEOREM",
+      "guard": "DONT_DELETE_CONJUGATION_OR_IDENTIFY_TWO_SOURCE_CHIRAL_CARRIERS"
+    },
+    {
+      "key": "F-OS-LAPLACE-01",
+      "page": 8,
+      "pdf_index": 7,
+      "original_pdf_text_lines": [
+        307,
+        332
+      ],
+      "section": "§3 OS transform calculation",
+      "owner": "W-SSC-123",
+      "typed": "W04E-123-03",
+      "kind": "SOURCE_OS_LAPLACE_RECONSTRUCTION_INNER_PRODUCT_IDENTITY",
+      "source_exact": {
+        "positive_time_test_space": "S_plus(R)",
+        "OS_form": "<f,g>_OS=S2(Theta(f),g)",
+        "spectral_integral": "integral_R overline(Lf(E))*Lg(E)*Wtilde2(E) dE",
+        "conclusion": "<f,g>_OS=<Lf,Lg>",
+        "quotient": "S(R_plus)/{f:<f,f>_OS=0}",
+        "premises": [
+          "FREE_FIELD_EXAMPLE",
+          "SCHWINGER_FROM_LAPLACE_WIGHTMAN",
+          "REFLECTION_POSITIVITY"
+        ]
+      },
+      "modality": "CONDITIONAL_AUTHOR_PRESENTED_FREE_FIELD_OS_CALCULATION",
+      "guard": "DO_NOT_EQUATE_WITH_ORIGINAL_MINKOWSKI_SCHWARTZ_R_QUOTIENT_AS_IDENTICAL_SOURCE_DEF"
+    },
+    {
+      "key": "F-PAULI-2D4D-01",
+      "page": 9,
+      "pdf_index": 8,
+      "original_pdf_text_lines": [
+        355,
+        369
+      ],
+      "section": "§4 two-dimensional chiral to Weyl analog",
+      "owner": "W-SSC-085",
+      "typed": "W04E-085-03",
+      "kind": "SOURCE_TWO_DIMENSIONAL_TO_FOUR_DIMENSIONAL_CHIRAL_DIFFERENTIAL_OPERATOR_ANALOG",
+      "source_exact": {
+        "source_operator": "partial_x",
+        "analogue": "sum_{j=1}^3 sigma_j*partial_{x_j}",
+        "moving_modes": [
+          "RIGHT_MOVER_FROM_(partial_t+partial_x)_psi_R=0",
+          "LEFT_MOVER_FROM_(partial_t-partial_x)_psi_L=0"
+        ],
+        "chiral_coordinates": [
+          "x_R=x-t",
+          "x_L=x+t"
+        ],
+        "reduced_dependence": "RIGHT_ONLY_x_R_LEFT_ONLY_x_L"
+      },
+      "modality": "SOURCE_ANALOGY_NOT_IDENTIFICATION_OF_TWO_AND_FOUR_DIMENSIONAL_THEORIES",
+      "guard": "NOT_A_NEW_EQUIVALENCE_OF_SPINOR_CARRIERS_OR_COMPLETE_4D_THEORY"
+    }
+  ],
+  "already_represented_or_evidence_index_only": [
+    {
+      "label": "P1-INTRO-SCOPE",
+      "page": 1,
+      "lines": [
+        5,
+        23
+      ],
+      "owner": "W-SSC-121",
+      "disposition": "PROVENANCE_AND_PRELIMINARY_NOTES_MODALITY_ALREADY_CONSERVED"
+    },
+    {
+      "label": "P2-MOTIVATION",
+      "page": 2,
+      "lines": [
+        29,
+        50
+      ],
+      "owner": "W-SSC-082",
+      "disposition": "AUTHOR_LIMITATIONS_AND_PROPOSAL_PRESENT_IN_EXISTING_PROSE_AND_TYPED"
+    },
+    {
+      "label": "P3-SIGN-DISCREPANCY",
+      "page": 3,
+      "lines": [
+        90,
+        102
+      ],
+      "owner": "W-SSC-082",
+      "disposition": "PRINTED_UPPER_HALF_VS_Z_T_MINUS_I_TAU_DISCREPANCY_ALREADY_PRESERVED"
+    },
+    {
+      "label": "P4-OSCILLATOR-EOM",
+      "page": 4,
+      "lines": [
+        126,
+        151
+      ],
+      "owner": "W-SSC-082",
+      "typed": "W04E-082-06",
+      "disposition": "SOURCE_ORDERED_BOSONIC_HAMILTONIAN_ALREADY_TYPED_0_66"
+    },
+    {
+      "label": "P5-OSCILLATOR-TWOPOINT",
+      "page": 5,
+      "lines": [
+        152,
+        198
+      ],
+      "owner": "W-SSC-082",
+      "typed": "W04E-082-07",
+      "disposition": "WIGHTMAN_SCHWINGER_AND_DELTA_ALREADY_TYPED_0_66"
+    },
+    {
+      "label": "P5-WIGHTMAN-QUOTIENT",
+      "page": 5,
+      "lines": [
+        199,
+        208
+      ],
+      "owner": "W-SSC-123",
+      "typed": "W04E-123-02",
+      "disposition": "DISTINCT_WIGHTMAN_QUOTIENT_ALREADY_TYPED_0_66"
+    },
+    {
+      "label": "P6-COMPLEX-SCALAR-ANTIPARTICLE",
+      "page": 6,
+      "lines": [
+        225,
+        240
+      ],
+      "owner": "W-SSC-082",
+      "typed": "W04E-082-04",
+      "disposition": "INDEPENDENT_ANTIPARTICLE_AND_FORMAL_PHASE_SPACE_ALREADY_TYPED"
+    },
+    {
+      "label": "P7-OS-HISTORY",
+      "page": 7,
+      "lines": [
+        262,
+        286
+      ],
+      "owner": "W-SSC-083",
+      "typed": "W04E-083-03",
+      "disposition": "SOURCE_CITED_OS_MISTAKE_CORRECTION_AND_CONDITIONALITY_ALREADY_TYPED"
+    },
+    {
+      "label": "P7-THETA",
+      "page": 7,
+      "lines": [
+        292,
+        296
+      ],
+      "owner": "W-SSC-122",
+      "typed": "W04E-122-02",
+      "disposition": "ODD_PRINTED_SCALAR_RULE_AND_INVOLUTION_PRESERVED"
+    },
+    {
+      "label": "P8-OS-QUOTIENT",
+      "page": 8,
+      "lines": [
+        329,
+        337
+      ],
+      "owner": "W-SSC-123",
+      "typed": "W04E123-E01",
+      "disposition": "OS_QUOTIENT_AND_SPACETIME_ROTATION_GUARD_CONSERVED"
+    },
+    {
+      "label": "P9-CHIRAL-EOM",
+      "page": 9,
+      "lines": [
+        338,
+        355
+      ],
+      "owner": "W-SSC-085",
+      "typed": "W04E085-E01",
+      "disposition": "CHIRAL_EOM_AND_COORDINATES_ALREADY_TYPED"
+    },
+    {
+      "label": "P9-REAL-FORMS",
+      "page": 9,
+      "lines": [
+        389,
+        408
+      ],
+      "owner": "W-SSC-124",
+      "typed": "W04E-124-03",
+      "disposition": "MINKOWSKI_AND_EUCLIDEAN_SOURCE_FIXED_SETS_ALREADY_TYPED"
+    },
+    {
+      "label": "P10-SEGAL",
+      "page": 10,
+      "lines": [
+        410,
+        460
+      ],
+      "owner": "W-SSC-124",
+      "typed": "W04E-124-07",
+      "disposition": "SEGAL_AND_ONE_CHIRALITY_SCOPE_ALREADY_TYPED"
+    },
+    {
+      "label": "P11-4D-HODGE",
+      "page": 11,
+      "lines": [
+        473,
+        501
+      ],
+      "owner": "W-SSC-086",
+      "typed": "W04E086-E02",
+      "disposition": "FOUR_DIMENSIONAL_HODGE_AND_DOUBLE_OBSTACLE_ALREADY_TYPED"
+    },
+    {
+      "label": "P12-NULL-RAYS",
+      "page": 12,
+      "lines": [
+        521,
+        550
+      ],
+      "owner": "W-SSC-087",
+      "typed": "W04E087-E02",
+      "disposition": "DISTINCT_MINKOWSKI_POINT_VS_NULL_RAY_GEOMETRY_ALREADY_TYPED"
+    },
+    {
+      "label": "P13-EUCLIDEAN-FIBER",
+      "page": 13,
+      "lines": [
+        563,
+        595
+      ],
+      "owner": "W-SSC-087",
+      "disposition": "TWISTOR_FIBER_SOURCE_ROLE_PREVIOUSLY_REVIEWED_IN_W04E_PAGE_FIRST_AND_SAME_AUTHOR_W01_W05;SOURCE_SPECIFIC_ATOM_EXHAUSTIVENESS_NOT_INDEPENDENTLY_QUALIFIED"
+    },
+    {
+      "label": "P14-OPEN-THETA",
+      "page": 14,
+      "lines": [
+        626,
+        640
+      ],
+      "owner": "W-SSC-125",
+      "typed": "W04E125-E02",
+      "disposition": "OPEN_TWISTOR_THETA_ALREADY_EXPLICIT"
+    },
+    {
+      "label": "P14-GAUGE-PROPOSAL",
+      "page": 14,
+      "lines": [
+        648,
+        672
+      ],
+      "owner": "W-SSC-127",
+      "typed": "W04E127-E02",
+      "disposition": "CONDITIONAL_INTERNAL_GAUGE_AND_UNFINISHED_THEORY_ALREADY_TYPED"
+    },
+    {
+      "label": "P15-BIBLIOGRAPHY",
+      "page": 15,
+      "lines": [
+        673,
+        693
+      ],
+      "owner": null,
+      "disposition": "BIBLIOGRAPHIC_PROVENANCE_NOT_NEW_AUTHOR_MATHEMATICAL_CLAIMS"
+    }
+  ],
+  "stats": {
+    "new_source_atoms": 5,
+    "distinct_changed_existing_owners": 4,
+    "preexisting_disposition_rows": 19,
+    "source_first_rows": 24,
+    "pdf_source_units_in_campaign": 9,
+    "immutable_versioned_original_intervals_preserved": 437
+  },
+  "failure_class": "SOURCE_PAGE_OR_PAGE_SECTION_OWNER_NOT_COMPLETE_PRINTED_OPERATOR_ARGUMENT_RESULT_CONSERVATION",
+  "systemic_fix": "Audit every explicitly printed displayed formula/operation and each dependent source side condition/lineage separately from page ownership. Map to an existing SSC owner if a genuine omission; do not spawn unnecessary new source identities. Require source-origin fixed literal controls that reject changed signs, argument order, dimensions, modalities or reinterpretation as theorems. Missing source index and missing research must remain distinguishable.",
+  "scope_guard": {
+    "no_oct03_substitution": true,
+    "no_G0_freeze": true,
+    "no_G1_to_G7": true,
+    "no_L_import": true,
+    "no_math_or_physical_truth_promotion": true,
+    "source_not_falsified_by_independent_counterexample": true
+  }
+}
