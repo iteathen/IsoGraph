@@ -1,0 +1,97 @@
+{
+  "schema": "isograph.lisi-L02-hodge-auxiliary-source-G0-coverage.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": "L02 arXiv:1004.4866v2 original PDF visually checked pp3-5,7,8; exact version-specific Eqs1,3,4/5,6,7-10,24,25,27",
+  "source_roles": [
+    "L-SSC-052",
+    "L-SSC-053",
+    "L-SSC-054",
+    "L-SSC-055",
+    "L-SSC-057",
+    "L-SSC-061"
+  ],
+  "source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json",
+    "git_blob_sha": "831279f107a7d36f49580179e6970468a457f044"
+  },
+  "exact_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-plebanski-lorentzian-hodge-auxiliary-0-1.mjs",
+    "git_blob_sha": "396ce74eff731312b4e5b566f4924c890fe8ad75"
+  },
+  "predecessor_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_43.json",
+    "git_blob_sha": "afb81fbc69bb8f60480d6654dbcc1ebfdfbd5f35"
+  },
+  "successor_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_44.json",
+    "git_blob_sha": "a1814158b7fd79e8322394e29e63031aa1cc5d7e",
+    "total_source_identities": 191,
+    "changed_ids": [
+      "L-SSC-052",
+      "L-SSC-053",
+      "L-SSC-054",
+      "L-SSC-055",
+      "L-SSC-057",
+      "L-SSC-061"
+    ],
+    "unchanged_complete_predecessor_records": 185,
+    "source_census_frozen": false
+  },
+  "predecessor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_46.json",
+    "git_blob_sha": "b85b14dd8bf8cbdeb4e77e88307141e3ccc82357"
+  },
+  "successor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_47.json",
+    "git_blob_sha": "f8eb041a40e152852727f221b843358a6789c8aa",
+    "G1_authorized": false
+  },
+  "independent_exact_math": {
+    "source_reduced_action": "Phi=* with Lorentzian **=-1 => B=(3/4)*F and S=(3/(8g)) int <F wedge *F> exactly",
+    "coframes": 6,
+    "paired_source_2form_samples_per_frame": 5,
+    "source_equation3_and_equation5_cases_each": 30,
+    "action_eq1_eq24_eq25_cases": 30,
+    "hodge_bilinear_basis_pairs": 216,
+    "hodge_involution_basis_probes": 36,
+    "nonzero_action_cases": 28,
+    "independent_oracles": [
+      "metric inverse and signed gravitational volume on coordinate 2-forms",
+      "orthonormal complement-star transported via 2nd exterior power of source gravitational tetrad"
+    ],
+    "negative_controls": [
+      "Euclidean star^2=+1 excludes nonzero B via source Eq5",
+      "orientation reversing e star changes sign while metric remains same",
+      "wrong cubic Phi coefficient",
+      "wrong B source 3/4 coefficient",
+      "wrong wedge/Hodge orientation",
+      "star transposition and scale mutation"
+    ],
+    "math_mutants": 10,
+    "source_and_provenance_mutants": 16,
+    "initial_V8_preflight": "PASS_LOCAL_INDEPENDENT_MATH_ONLY_NOT_CI",
+    "GitHub_CI": "PENDING_FIRST_BRANCH_PUSH",
+    "external_independent_mathematical_review_passed": false
+  },
+  "scope": {
+    "supported": "Source-original L02 v2 first Lorentzian Phi=* algebraic sector only, no author typo.",
+    "excluded": [
+      "different potential U(Phi) and other Phi ansatz branches",
+      "full Spin(1+N,3) source Clifford generator scalar trace and nontrivial quantum/gravitational dynamics",
+      "global field equations and actual solutions",
+      "prematurely imposing frame equality e'=e",
+      "torsion-free restriction not implied solely by selected Phi=* algebra",
+      "full source L02 specification maturity",
+      "W/L comparisons"
+    ]
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro: complete independent Track L source-fidelity research",
+    "external_antecedent": "Lisi, Smolin and Speziale 2010 arXiv:1004.4866v2; standard Lorentzian Hodge dual",
+    "agent_derived": "2026-10-09 independent coordinate/coframe exact rational reconstruction and hostile tests"
+  },
+  "next": "Study L02 source broken H/connection Hodge metric dependency and field constraints Eqs14–23, with explicit separation of e and e', while L01 original E8 H2 signed module remains open."
+}
