@@ -1,0 +1,188 @@
+{
+  "schema": "isograph.track-L.G0.L04-original-source-exact-table3-triality-matrix.v0.2",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "original_pdf": "https://arxiv.org/pdf/2407.02497v2",
+    "pdf_byte_sha_verified": false,
+    "original_pdf_visual_source_locations": [
+      "§5 Table 3 printed p11",
+      "§6 first-generation matrices and triality printed p14"
+    ]
+  },
+  "ancestors": {
+    "source_first_inventory_path": "research/woit-lisi-isomorph/lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_first_inventory_git_blob_sha": "aaea7dee2c01b6dd04bfbb47ce7743e92866b675",
+    "source_census_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_50.json",
+    "source_census_git_blob_sha": "b2c436f79ec787c13d7a44c6c5c724c6c0eb2b7b",
+    "stage_gate_predecessor": "experiments/062/L_CURRENT_STAGE_GATE_0_65.json"
+  },
+  "Table3": {
+    "source_location": "L04-S026",
+    "source_printed_location": "§5 Table 3 printed p11",
+    "SSC_ID": "L-SSC-108",
+    "printed_column_order": [
+      "1",
+      "C",
+      "P",
+      "T",
+      "CP",
+      "CT",
+      "PT",
+      "CPT"
+    ],
+    "printed_nonidentity_rows": {
+      "C": [
+        "C",
+        "+1",
+        "CP",
+        "CT",
+        "P",
+        "T",
+        "CPT",
+        "PT"
+      ],
+      "P": [
+        "P",
+        "CP",
+        "-1",
+        "PT",
+        "-C",
+        "CPT",
+        "-T",
+        "-CT"
+      ],
+      "T": [
+        "T",
+        "CT",
+        "-PT",
+        "-1",
+        "-CPT",
+        "-C",
+        "P",
+        "CP"
+      ],
+      "CP": [
+        "CP",
+        "P",
+        "-C",
+        "CPT",
+        "-1",
+        "PT",
+        "-CT",
+        "-T"
+      ],
+      "CT": [
+        "CT",
+        "T",
+        "-CPT",
+        "-C",
+        "-PT",
+        "-1",
+        "CP",
+        "P"
+      ],
+      "PT": [
+        "PT",
+        "CPT",
+        "T",
+        "-P",
+        "CT",
+        "-CP",
+        "-1",
+        "-C"
+      ],
+      "CPT": [
+        "CPT",
+        "PT",
+        "CT",
+        "-CP",
+        "T",
+        "-P",
+        "-C",
+        "-1"
+      ]
+    },
+    "printed_entries": 56,
+    "note": "The author prints seven nonidentity rows and eight columns. The caption infers the additional negative-one products; a 16x16 table was not printed.",
+    "source_relations_for_reconstruction": {
+      "C_squared": "+1",
+      "P_squared": "-1",
+      "T_squared": "-1",
+      "C_commutes_with_P_T": true,
+      "T_times_P": "-PT",
+      "P_times_T": "PT",
+      "group": "Q8 x Z2 with central C"
+    }
+  },
+  "triality": {
+    "source_location": "L04-S039",
+    "source_printed_location": "§6 first-generation C_I/P_I/T_I and triality 4x4 matrices printed p14",
+    "SSC_ID": "L-SSC-119",
+    "weight_order": [
+      "omega_t",
+      "omega_S",
+      "h",
+      "q"
+    ],
+    "first_generation_diagonal_sign_strings": {
+      "C_I": "-++-",
+      "P_I": "-+-+",
+      "T_I": "--++"
+    },
+    "triality_integer_sign_rows": [
+      "+-++",
+      "+---",
+      "+++-",
+      "++-+"
+    ],
+    "each_triality_integer_entry_divided_by": 2,
+    "source_generation_II_relation": "C_II=t C_I t^2; P_II=t P_I t^2; T_II=t T_I t^2",
+    "source_generation_III_relation": "Requires further triality transport; no plain first-generation Lorentz-coordinate identification",
+    "corrected_source_location": "§6 printed p14 first triality matrix row, fourth column is +, not predecessor -"
+  },
+  "evidence_scope": {
+    "source_literal_cells_replayed": 56,
+    "source_original_signed_4_by_4_triality_rows_replayed": 4,
+    "group_order_from_rules": 16,
+    "checked_products": 256,
+    "associativity_triples": 4096,
+    "triality_t_cubed_identity": true,
+    "source_semantic_reconstruction_not_physical_truth": true,
+    "independent_complete_original_PDF_cold_review_passed": false,
+    "original_pdf_transcription_corrected": true,
+    "initial_CI_failed_and_preserved": true,
+    "initial_CI_run_id": 38025480834,
+    "failure_owner": "Original source transcription error in candidate packet; previous verifier correctly rejected t³ and transported matrices"
+  },
+  "convergence": {
+    "frozen_L_sources": 6,
+    "previous_L04_source_locations": 53,
+    "original_L04_ssc_ids": 34,
+    "previous_exact_unverified_locations": 18,
+    "exact_original_source_groups_replayed": [
+      "L04-S026",
+      "L04-S039"
+    ],
+    "remaining_exact_unverified_locations": 16,
+    "G0_original_L04_complete": false,
+    "any_full_source_cold_complete": false,
+    "source_census_frozen": false,
+    "G1_authorized": false
+  },
+  "preservation": {
+    "new_SSC_item_ids": [],
+    "old_191_SSC_identities_unchanged": true,
+    "semantic_W_imports": false,
+    "author_correction_declared": false
+  },
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L04_TABLE3_TRIALITY_MATRIX_EXACT_G0_0_1.json",
+    "git_blob_sha": "c5e1e4ede1bd5d119a4d7005d98b89782947c000",
+    "status": "FAILED_INITIAL_SOURCE_TRANSCRIPTION"
+  }
+}
