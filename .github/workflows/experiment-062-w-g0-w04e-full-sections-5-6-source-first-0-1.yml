@@ -1,0 +1,33 @@
+name: "Experiment 062 W G0 W04e complete sections 5-6 source-first 0.1"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_69.json"
+      - "experiments/062/W04E_G0_FULL_SECTIONS_5_6_SOURCE_FIRST_INVERSE_0_1.json"
+      - "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_55.json"
+      - "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_54.json"
+      - "experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_36.json"
+      - "experiments/062/W_CURRENT_STAGE_GATE_0_130.json"
+      - "experiments/062/W_G0_FINITE_BIDIRECTIONAL_CONVERGENCE_0_8.json"
+      - "experiments/062/tools/verify-w04e-full-sections-5-6-source-first-0-1.cjs"
+      - ".github/workflows/experiment-062-w-g0-w04e-full-sections-5-6-source-first-0-1.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w_full_source_5_6:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Historical SSC0.68 W04e original section 5.2 source-first gate
+        run: |
+          node --check experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs
+          node experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs
+      - name: Current SSC0.69 W04e full original sections 5-6 source-first and hostile controls
+        run: |
+          node --check experiments/062/tools/verify-w04e-full-sections-5-6-source-first-0-1.cjs
+          node experiments/062/tools/verify-w04e-full-sections-5-6-source-first-0-1.cjs
