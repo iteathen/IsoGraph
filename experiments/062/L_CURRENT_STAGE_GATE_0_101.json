@@ -1,0 +1,101 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.101",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "status": "L_G0_SSC062_COMPLETE_FROZEN_L02_PDF_LAYOUT_LINE_CONSERVATION_COLD_SEMANTIC_PENDING",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "predecessor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_100.json",
+    "git_blob_sha": "09d10d2ee89ae8d9a85492803131b9bb5837251c",
+    "historical_source_g0_tests_preserved": true
+  },
+  "source_freeze": {
+    "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "git_blob_sha": "5775af1ab9289f97d903b39d5eb8eda241bafe78",
+    "frozen_L_source_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06"
+    ],
+    "full_PDF_source_revision_verification_count": 6
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_62.json",
+    "git_blob_sha": "f072530356472ed23c5e92b8f000ea3cf1c12866",
+    "identities": 191,
+    "source_census_frozen": false
+  },
+  "source_original_first_inventory": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L02_SOURCE_FIRST_REVERSE_COVERAGE_0_6.json",
+    "git_blob_sha": "dcae524a79c30d6cbbf1b54fac560637a3da8aaa",
+    "source_locations": 59,
+    "current_complete_source_cold_review": false
+  },
+  "current_convergence": {
+    "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_ORIGINAL_FINITE_SOURCE_FIRST_CONVERGENCE_0_13.json",
+    "git_blob_sha": "c6024a6e312834115ee532080573bd9e612d6293",
+    "original_first_mixed_locations": 350,
+    "all_original_cold_completed": 0,
+    "G0_SSC_complete": false
+  },
+  "source_layout_manifest": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L02_FROZEN_12_PAGE_ORIGINAL_LAYOUT_ATOMIC_COVERAGE_0_1.json",
+    "git_blob_sha": "512072e74144cbc9a0eb84b124e0d81762e3e739",
+    "original_revision": "arXiv:1004.4866v2",
+    "PDF_SHA256": "1c2764dc498a3b118253f97447249e58a07e7c9ff4eb7fa72a48633061bfd25a",
+    "pages": 12,
+    "source_layout_blocks": 81,
+    "original_nonblank_text_lines": 614,
+    "precise_semantic_occurrences_completed": 0,
+    "original_extracted_layout_not_equal_semantic_claims": true
+  },
+  "source_layout_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-full-original-layout-inventory-0-1.mjs",
+    "git_blob_sha": "ac05d3a3d31a1b5879657841b3da62b14d342dd2",
+    "scope": "Independently re-fetch original frozen arxiv v2 SHA, Poppler re-extract all 12 pages, hash each of 81 text source blocks and verify 614 nonblank original-extracted lines uniquely owned, page candidate groups, unchanged SSC and all six source G0 locks",
+    "hostiles_defined": 20,
+    "does_not_prove_semantic_cold_review": true
+  },
+  "prior_layout_probe_CI": {
+    "run_id": 38085924026,
+    "job_id": 114312284714,
+    "head_sha": "973b49823dab3edb3f935cf01010dd61451e50c1",
+    "conclusion": "success",
+    "hostiles_defined": 13,
+    "hostiles_rejected": 13,
+    "original_v2_PDF_SHA256_verified": true,
+    "source_layout_blocks": 81,
+    "nonblank_lines": 614,
+    "source_blocks_semantically_qualified": 0
+  },
+  "last_original_eq27_CI": {
+    "run_id": 38085674853,
+    "job_id": 114311537458,
+    "head_sha": "ed3d09080f6996151fb66e392b811189d92af141",
+    "conclusion": "success",
+    "hostiles_rejected": 27,
+    "scope": "Scoped frozen original Eq27 source coefficients and bare coupling semantics, not G0 whole original"
+  },
+  "new_source_CI": {
+    "status": "PENDING_GITHUB_ACTIONS",
+    "result": null,
+    "hostiles_defined": 20,
+    "whole_cold_complete": false
+  },
+  "current_lawful_state": {
+    "G0_frozen": false,
+    "G0_SSC_complete": false,
+    "G0_independent_six_source_cold_complete": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "recursive_IA_NEI_DTS_DP_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
