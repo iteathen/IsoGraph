@@ -1,0 +1,114 @@
+{
+  "schema": "isograph.exp062-w01-s6-source-conclusion-v03-node-qualified-scope.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "W01_SOURCE_CONCLUSION_TYPED_G0_POSITIVE_AND_65_OF_65_HOSTILES_PASS_NOT_NINE_SOURCE_QUALIFICATION",
+  "tested": {
+    "head_sha": "3678a930c7f9203b67cf0d899e2d0880fa62f2e3",
+    "run_id": 38018636384,
+    "job_id": 114114488746,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38018636384",
+    "conclusion": "success",
+    "node_version": "26.7.0",
+    "runner": "ubuntu-24.04",
+    "positive_baseline_pass": true,
+    "positive_errors": [],
+    "hostile_controls_total": 65,
+    "hostile_rejected": 65,
+    "hostile_escaped": 0,
+    "hostile_crashed": 0,
+    "source_count": 151,
+    "total_typed_incidences": 417,
+    "W01_typed_incidences": 132,
+    "source_bodies_changed": 0,
+    "source_W117_historical_W86_member": false,
+    "stage": "G0_OPEN_UNFROZEN"
+  },
+  "exact_inputs": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_49.json",
+      "git_blob_sha": "a414b5e0e6d9b84e30aa1f2278da8fea60aae54c"
+    },
+    "source_oracle": {
+      "path": "experiments/062/W01_G0_S6_CONCLUSION_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "9cd6c7e8eb5c29941081fc34d67568733fea963c"
+    },
+    "source_defect": {
+      "path": "experiments/062/W01_G0_S6_CONCLUSION_TYPED_SOURCE_DEFECT_0_1.json",
+      "git_blob_sha": "638b8e6b702857491310b342430df6a5dc8be252"
+    },
+    "historical86": {
+      "path": "experiments/062/W_G0_W01_S6_SOURCE_DEMAND_PROJECTION_0_33.json",
+      "git_blob_sha": "94b6154b07d837cd6af25429ad6769c58ec401b2"
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_35.json",
+      "git_blob_sha": "7192eb3c34c14d4e6de92637c18c6c63da0cae78"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_34.json",
+      "git_blob_sha": "72a9613c90fc987b5148141b912847800e9ff424"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_103.json",
+      "git_blob_sha": "c18045379bf7e6936b5184619d26a39df4543899"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w01-s6-conclusion-source-g0-0-3.mjs",
+      "git_blob_sha": "d75aad0e99735b4a8f01f014fddc9417d32fda30"
+    }
+  },
+  "preserved_predecessor_failure_evidence": [
+    {
+      "run_id": 38018234785,
+      "head": "1092e6a7c4e391d2898b0bdbabfd8ca4f0032dbe",
+      "result": "UNMUTATED_POSITIVE_FAILED",
+      "rejected": 55,
+      "total": 55,
+      "qualified": false,
+      "report": {
+        "path": "experiments/062/W01_G0_S6_VERIFIER_0_1_POSITIVE_FAILURE_0_1.json",
+        "git_blob_sha": "03cfe40c6b51317d1a6dca6a8142ea76b821edaa"
+      }
+    },
+    {
+      "run_id": 38018459741,
+      "head": "09fe7b9e1d4da42a7a17ee0fd91729d28e9f835d",
+      "result": "UNMUTATED_POSITIVE_PASS_ONE_MUTANT_ESCAPE",
+      "rejected": 58,
+      "total": 59,
+      "qualified": false,
+      "report": {
+        "path": "experiments/062/W01_G0_S6_VERIFIER_0_2_MEMBERSHIP_ESCAPE_0_1.json",
+        "git_blob_sha": "c15a820323c9dc45052c442bbd741885267126d6"
+      }
+    }
+  ],
+  "same_exact_HEAD_historical_checks": [
+    {
+      "run_id": 38018636415,
+      "scope": "OLDER_W_ACTIVE_G0_0_7_GUARD",
+      "conclusion": "success"
+    },
+    {
+      "run_id": 38018636352,
+      "scope": "OLDER_W_G_STAGE_HOSTILE_LINEAGE_CHECK",
+      "conclusion": "success"
+    }
+  ],
+  "limits": {
+    "full_W_original_all_nine_reverse_done": false,
+    "original_mutable_W03_W04_Oct03_bytes_verified": false,
+    "all_current_W151_demand_membership_requalified": false,
+    "all_source_census_frozen": false,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "third_party_external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "cross_track_synthesis": false,
+    "underlying_Woit_physics_confirmed": false
+  },
+  "source_assertion_roles": "TEN_AUTHOR_CONCLUSIONS_NOT_COMPLETED_PT_DYNAMICS_OR_OBSERVED_PREDICTIONS",
+  "G0_firewall": "PRESERVED"
+}
