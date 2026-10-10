@@ -7,7 +7,7 @@ const R='research/woit-lisi-isomorph/lisi/',E='experiments/062/';
 const paths={
  packet:R+'LISI_L02_EQ28_LORENTZIAN_MINIMUM_SCOPE_G0_0_1.json',
  old:R+'SOURCE_SEMANTIC_CENSUS_0_46.json',census:R+'SOURCE_SEMANTIC_CENSUS_0_47.json',
- oldGate:E+'L_CURRENT_STAGE_GATE_0_51.json',gate:E+'L_CURRENT_STAGE_GATE_0_52.json',
+ ancestralGate:E+'L_CURRENT_STAGE_GATE_0_51.json',oldGate:E+'L_CURRENT_STAGE_GATE_0_52.json',gate:E+'L_CURRENT_STAGE_GATE_0_53.json',
  oldEq26:R+'LISI_L02_E26_HODGE_TRACE_SECTOR_G0_0_1.json',
  oldHodge:R+'LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json',
  math:E+'tools/l02-eq28-lorentzian-minimum-scope-math-0-1.mjs',
@@ -30,7 +30,7 @@ function audit(packet,prev,cur,gate){
  const eq=packet?.source?.source_equations||[];
  ck(eq.length===6&&new Set(eq.map(e=>e.id)).size===6,'all six source layers retained');
  for(const [k,v]of Object.entries(original))ck(eq.find(x=>x.id===k)?.expression===v,'original source '+k);
- for(const [k,p]of [['ssc046',paths.old],['gate051',paths.oldGate],['eq26',paths.oldEq26],['hodgeAux',paths.oldHodge]])
+ for(const [k,p]of [['ssc046',paths.old],['gate051',paths.ancestralGate],['eq26',paths.oldEq26],['hodgeAux',paths.oldHodge]])
  ck(packet.parents?.[k]?.path===p&&packet.parents[k]?.git_blob_sha===blob(p),'source ancestry '+k);
  const m=packet.math_model||{};
  ck(m.signature?.join('|')==='1|-1|-1|-1|1|1|1'&&m.scope?.includes('Clifford(4,3)')&&m.unbroken_internal_u1?.includes('gamma5*gamma6'),'conditional Lorentzian Clifford source model');
@@ -40,7 +40,7 @@ function audit(packet,prev,cur,gate){
  const result=packet.result_classification||{};
  ck(result.original_vacuum_zero_curvature_from_E28==='CONFIRMED_EXACT_ALGEBRA_IN_SOURCE_SELECTED_BACKGROUND','Eq28 source-algebra yes');
  ck(result.unrestricted_Lorentzian_quadratic_local_minimum==='OBSTRUCTED_IN_SELECTED_FINITE_MODEL','project conditional sign indefinite');
- ck(result.author_strict_minimum_as_printed==='OPEN_SCOPE_UNDETERMINED'&&result.genuine_author_discrepancy_or_typo==='NOT_ESTABLISHED','original author's global strict minimum scope is NOT declared contradicted');
+ ck(result.author_strict_minimum_as_printed==='OPEN_SCOPE_UNDETERMINED'&&result.genuine_author_discrepancy_or_typo==='NOT_ESTABLISHED',"original author's global strict minimum scope is NOT declared contradicted");
  for(const k of ['source_census_frozen','source_strict_minimum_qualified','source_author_error_proved','global_offshell_variation_class_qualified','source_all_spinN_qualified','G1_authorized','G2_G7_authorized','recursive_IA_authorized','cross_track_synthesis_authorized','external_independent_cold_math_review_passed','author_outreach_authorized','PR70_merge_authorized'])
  ck(packet.stage_locks?.[k]===false,'no disallowed source/higher authority '+k);
  const a=new Map(prev.items.map(x=>[x.id,x])),b=new Map(cur.items.map(x=>[x.id,x])),changed=[];

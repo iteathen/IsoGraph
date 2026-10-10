@@ -1,0 +1,36 @@
+{
+  "schema": "isograph.exp062-L02-Eq28-verifier-first-parser-failure-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failing_workflow": {
+    "run_id": 38019168608,
+    "head_sha": "f3442f3a5a429c267bb2d3584816936b0e5d02bc",
+    "job_id": 114116099921,
+    "conclusion": "failure",
+    "runner": "ubuntu-24.04",
+    "node": "26.7.0",
+    "first_failed_code": "SyntaxError missing ) from an unescaped apostrophe in verifier source literal 'original author's', before math or source tests ran.",
+    "math_checks_executed": 0,
+    "source_checks_executed": 0,
+    "complete_logs_reviewed": true
+  },
+  "separate_owner": "Agent-authored test harness JavaScript parser defect; this is NOT evidence of a source author's mathematics/physics error or a failed finite mathematical witness.",
+  "pre_repair_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-eq28-minimum-scope-0-1.mjs",
+    "git_blob_sha": "714f55e1dc5f453b2cc71eaf543316334dffe0f1"
+  },
+  "repaired_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-eq28-minimum-scope-0-1.mjs",
+    "git_blob_sha": "7367e8675a30d80b396f88efdb4ea25ac6655e94"
+  },
+  "repair_scope": "Replace only malformed JS quotation and route verifier to a new procedural G0 gate0.53 (gate0.52 remains historical exact failed candidate); source packet, math engine and SSC0.47 remain unchanged.",
+  "pending_replay": true,
+  "external_cold_review_passed": false,
+  "source_census_frozen": false,
+  "G1_authorized": false,
+  "cross_track_synthesis_authorized": false,
+  "author_outreach_authorized": false,
+  "PR70_merge_authorized": false
+}
