@@ -1,0 +1,59 @@
+{
+  "schema": "isograph.exp062-w01-s6-conclusion-checker-v01-positive-baseline-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "POSITIVE_BASELINE_FAILED_MUTATION_SCORE_UNQUALIFIED",
+  "run": {
+    "id": 38018234785,
+    "job_id": 114113233629,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38018234785",
+    "head_sha": "1092e6a7c4e391d2898b0bdbabfd8ca4f0032dbe",
+    "conclusion": "failure",
+    "positive_baseline_pass": false,
+    "positive_errors": [
+      "oracle scopes G0-only and excludes W117 old86"
+    ],
+    "hostile_total": 55,
+    "hostile_rejected": 55,
+    "hostile_escaped": 0,
+    "hostile_crashed": 0,
+    "qualification": false
+  },
+  "input_source": {
+    "source_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_49.json",
+    "blob_sha": "a414b5e0e6d9b84e30aa1f2278da8fea60aae54c",
+    "source_items": 151,
+    "source_typed_incidents": 417,
+    "author_source_bodies_modified": 0
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w01-s6-conclusion-source-g0-0-1.mjs",
+    "blob_sha": "77770eee665074d3db84f7dda03c7bf30bbbd5f2"
+  },
+  "tested_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_101.json",
+    "blob_sha": "0235c74e0c8a4e262dff1f0ddad0e7d1fcf89b0c"
+  },
+  "diagnosis": {
+    "test_field": "all_nine_original_source_reverse_exhaustiveness",
+    "actual_source_oracle_field": "all_nine_original_source_reverse_exhaustive",
+    "actual_source_oracle_value": false,
+    "reason": "Validator looked up a nonexistent name, so undefined did not equal false; the same wrong key was mutated as a hostile source-completeness control.",
+    "source_oracle_not_wrong": true,
+    "source_fidelity_not_repaired": true
+  },
+  "fix": {
+    "new_verifier": "verify-w01-s6-conclusion-source-g0-0-2.mjs",
+    "new_gate": "W_CURRENT_STAGE_GATE_0_102.json",
+    "correct_positive_field": true,
+    "correct_hostile_mutation_field": true,
+    "old_checker_and_workflow_unchanged": true,
+    "source0_49_and_register_unchanged": true
+  },
+  "nonclaims": [
+    "55/55 hostile rejections from failed unmutated baseline are NOT qualified.",
+    "Do not erase failed run, weaken G0, promote original all-nine-source reverse, or conflate current 151 source identities with qualified 151 demand memberships.",
+    "No L material, third-party review, author text repair, or G1-G7."
+  ]
+}
