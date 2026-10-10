@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062-w-g0-cumulative-source-verifier-v01-failure.v0.1",
+  "track": "W",
+  "status": "FAILED_POSITIVE_CHECKER_FIELD_PATH_NO_ADVERSARIAL_QUALIFICATION",
+  "run_id": 38047071742,
+  "commit": "754704f78bcaf79bc595c7034728dfbb78641dc8",
+  "workflow": "Experiment 062 W G0 cumulative original-source convergence 0.1",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38047071742",
+  "conclusion": "failure",
+  "old_verifier_path": "experiments/062/tools/verify-w-g0-cumulative-original-first-convergence-0-1.cjs",
+  "old_verifier_git_blob_sha": "e1856e9cc4892ac1da60e89d7f8489af0a14abd4",
+  "syntax_check_passed": true,
+  "positive_baseline_passed": false,
+  "hostile_controls_executed": false,
+  "reclassified_as_pass": false,
+  "original_manifest_sha": "9fdcb132cd71b118aa78f32c90a168e0f463cf43",
+  "cause": "The checker accessed W01 A.2 original source oct03 provenance via w01a2.source.source instead of the actual w01a2.source object, throwing before completing its positive validation. It is a checker reference path bug, not a source-semantic defect or an adverse original-first finding.",
+  "repair": "v0.2 reads w01a2.source.Oct03_original_pdf_bytes_digest; all frozen source-first manifests, source SSC0.60 and stage tuple unchanged; add hostile mutations to preserve failed-CI status.",
+  "G0": "OPEN_UNFROZEN"
+}
