@@ -1,0 +1,75 @@
+{
+  "schema": "isograph.exp062-w01-a1-original-first-systematic-semantic-extraction-defect.v0.1",
+  "track": "W",
+  "status": "A1_EXACT_PRINTED_SOURCE_MATHEMATICS_AND_PDF_ONLY_DIAGRAM_MEANINGS_UNDERREPRESENTED_BY_PRIOR_SSC",
+  "original_revision": "arXiv:2104.05099v2",
+  "source_first_oracle": "experiments/062/W01_G0_A1_ORIGINAL_SOURCE_FIRST_REVERSE_0_1.json",
+  "source_literal_discrepancy": "experiments/062/W01_G0_A1_AUTHOR_LITERAL_AND_NONAUTHOR_DISCREPANCY_0_1.json",
+  "old_ssc": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_58.json",
+  "affected": [
+    "W-SSC-047",
+    "W-SSC-048",
+    "W-SSC-049"
+  ],
+  "types": [
+    {
+      "class": "SOURCE_FORMULA_TRAVERSAL_AND_TYPED_BINDER_OMISSION",
+      "spans": [
+        [
+          392,
+          405
+        ],
+        [
+          434,
+          476
+        ]
+      ],
+      "cause": "Existing SSC body/typed entries recorded general Klein chart/incidence but underindexed exact bivector, quotient tensor, block spinor action, determinant form and constrained subgroup representation.",
+      "systematic_fix": "Source-first figure/equation/subexpression inventory with printed operator/argument role; check all remaining printed locations across original frozen sources."
+    },
+    {
+      "class": "PDF_RENDERING_VS_HTML_OMISSION",
+      "spans": [
+        [
+          477,
+          480
+        ],
+        [
+          482,
+          485
+        ]
+      ],
+      "cause": "HTML rendered diagram placeholders blank while PDF has two explicit commutative map direction graphs.",
+      "systematic_fix": "Always audit PDF for source diagrams when source HTML displays blank containers; require named graph map input and output anchors."
+    },
+    {
+      "class": "SILENT_SOURCE_MATH_NORMALIZATION",
+      "spans": [
+        [
+          407,
+          418
+        ],
+        [
+          486,
+          490
+        ]
+      ],
+      "cause": "Source literally prints duplicate local chart Z coordinate and a zero-equality chain not warranted by incidence; ordinary factorization summaries can accidentally normalize both.",
+      "systematic_fix": "Conserve original exact equation symbols, ordered entries and modalities plus separately record NONAUTHOR finite discrepancy witnesses; never substitute mathematical repair for source evidence."
+    },
+    {
+      "class": "MISSING_CROSS_SECTION_MAP_AND_FIBER_ROLES",
+      "spans": [
+        [
+          477,
+          484
+        ]
+      ],
+      "cause": "A generic statement correspondence space links PT/M loses mu/nu map direction and alpha(p)=CP2 fiber.",
+      "systematic_fix": "Require exact map carriers, domains/codomains, fiber and binder ownership for all depicted original-source maps."
+    }
+  ],
+  "old_source_research_not_proved_absent_from_missing_typed_array": true,
+  "no_new_source_unit_or_external_theorem": true,
+  "G0": "OPEN_UNFROZEN"
+}

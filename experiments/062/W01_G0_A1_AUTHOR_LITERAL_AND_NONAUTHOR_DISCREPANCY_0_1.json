@@ -1,0 +1,150 @@
+{
+  "schema": "isograph.exp062-w01-a1-literal-source-and-independent-math-discrepancy.v0.1",
+  "track": "W",
+  "source_revision": "arXiv:2104.05099v2",
+  "semantic_authority": false,
+  "observations": [
+    {
+      "key": "PRINTED_DUPLICATED_Z01",
+      "html": [
+        407,
+        418
+      ],
+      "pdf_printed_page": 17,
+      "source_printed_4x2_matrix": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "z01",
+          "z01"
+        ],
+        [
+          "z10",
+          "z11"
+        ]
+      ],
+      "source_printed_Z": [
+        [
+          "z01",
+          "z01"
+        ],
+        [
+          "z10",
+          "z11"
+        ]
+      ],
+      "author_tangent_dimension": 4,
+      "nonauthor_sanity": {
+        "printed_rule": "Z=[[a,a],[b,c]]",
+        "distinct_parameters": [
+          "a",
+          "b",
+          "c"
+        ],
+        "author_declared_complex_chart_dimension": 4,
+        "conditional_distinct_parameter_count": 3,
+        "witness_missing_matrix": "[[1,0],[0,0]] cannot be represented by Z=[[a,a],[b,c]]",
+        "source_prescription": "PRESERVE_PRINTED_Z_DO_NOT_RENAME_FIRST_a_TO_NEW_z00"
+      },
+      "meaning": "Unrepaired source-literal chart and independently recorded rank/parameter discrepancy."
+    },
+    {
+      "key": "PRINTED_FULL_NULL_CHAIN",
+      "html": [
+        486,
+        490
+      ],
+      "pdf_printed_page": 19,
+      "source_printed": "sperp=(Z1-Z2)s=0",
+      "earlier_source_incidence": "sperp=Zs, HTML432-433",
+      "independent_finite_witness": {
+        "premises": "TWO_DISTINCT_CHART_MATRICES_Z1_Z2_WITH_SAME_SOURCE_TWISTOR_[s;sperp]_INCIDENT_RELATION",
+        "Z1": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "Z2": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "s": [
+          1,
+          0
+        ],
+        "sperp": [
+          1,
+          0
+        ],
+        "Z1s": [
+          1,
+          0
+        ],
+        "Z2s": [
+          1,
+          0
+        ],
+        "difference": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "difference_times_s": [
+          0,
+          0
+        ],
+        "det_difference": 0,
+        "author_printed_chain": "sperp=(Z1-Z2)s=0",
+        "nonauthor_result": "Literal chain would require sperp=[0,0] but source-compatible incidence gives sperp=[1,0]; the final (Z1-Z2)s=0 and determinant nullness remain valid.",
+        "math_scope": "FINITE_RATIONAL_COMPLEX_MATRIX_POINTWISE_COUNTERMODEL_NOT_A_REPAIR_OF_PRINTED_SOURCE"
+      },
+      "meaning": "Independent counterexample to literal s_perp=0 chain; conserve source assertion as printed, and distinguish valid difference-null implication from unsupported s_perp zero."
+    },
+    {
+      "key": "TWO_SOURCE_PDF_DIAGRAMS_MISSING_HTML",
+      "html": [
+        477,
+        485
+      ],
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "html_placeholders": [
+        479,
+        484
+      ],
+      "pdf_diagrams": [
+        "P(S) via mu to PT and via nu to M",
+        "(Z,s) via mu to [s;Zs] and via nu to Z"
+      ],
+      "meaning": "PDF-rendered source diagrams contain binder and map-direction meaning absent from arXiv HTML; no source-scope extension."
+    }
+  ],
+  "qualifies_w01_physics": false,
+  "G0_frozen": false,
+  "no_source_repair_done": true,
+  "independent_sanity_not_author_theorem": true
+}

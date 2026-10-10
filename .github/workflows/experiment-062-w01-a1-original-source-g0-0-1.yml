@@ -1,0 +1,27 @@
+name: Experiment 062 W01 Appendix A1 exact original source G0 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_59.json'
+      - 'experiments/062/W01_G0_A1_ORIGINAL_SOURCE_FIRST_REVERSE_0_1.json'
+      - 'experiments/062/W01_G0_A1_AUTHOR_LITERAL_AND_NONAUTHOR_DISCREPANCY_0_1.json'
+      - 'experiments/062/W01_G0_A1_SYSTEMATIC_OMISSION_CLASS_0_1.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_45.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_44.json'
+      - 'experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_26.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_119.json'
+      - 'experiments/062/tools/verify-w01-a1-original-source-g0-0-1.cjs'
+      - '.github/workflows/experiment-062-w01-a1-original-source-g0-0-1.yml'
+      - 'research/woit-lisi-isomorph/woit/README.md'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-a1-original-source-g0-0-1.cjs
