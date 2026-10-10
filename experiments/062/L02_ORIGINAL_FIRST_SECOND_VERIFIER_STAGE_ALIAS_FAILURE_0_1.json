@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062.l-g0-l02-source-first-v02-original-failed-CI.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "run": {
+    "id": 38027452819,
+    "job_id": 114141217556,
+    "head_sha": "160169d3fce0cd248ce126be436d3c1c9bef7595",
+    "conclusion": "failure",
+    "status": "completed",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38027452819",
+    "workflow_name": "Experiment 062 L G0 L02 original-first inverse 0.2"
+  },
+  "exact_baseline_errors": [
+    "no early stage promotion or W import"
+  ],
+  "checker": {
+    "path": "experiments/062/tools/verify-l-g0-l02-source-first-reverse-0-2.mjs",
+    "git_blob_sha": "8d272bbc5b6d9d45ac4578a50e90adcedd9fecc6",
+    "source_line_58": "ck(a.stage_locks?.G0_open===true&&a.stage?.source_census_frozen===false&&a.stage?.G1_authorized===false&&a.stage?.W_synthesis_allowed===false,'no early stage promotion or W import')"
+  },
+  "retained_first_failure": {
+    "run_id": 38027183302,
+    "head_sha": "c5f0aa76af7894ef6cd3e878f9fcf0e2caf8805e",
+    "conclusion": "failure",
+    "evidence_path": "experiments/062/L02_ORIGINAL_FIRST_INITIAL_VERIFIER_SCOPE_FAILURE_0_1.json",
+    "git_blob_sha": "c3fd90edafa90607caf26e1aa3ab52fda17b9c01"
+  },
+  "cause": "VERIFIER_STALE_STAGE_ALIAS_THREE_UNREWRITTEN_REFERENCES",
+  "classification": "MECHANICAL_VERIFIER_FIELD_RENAMING_ERROR",
+  "affected_source_semantics": false,
+  "validated_by_first_failing_run": {
+    "source_groups": 59,
+    "equations": 30,
+    "footnotes": 3,
+    "source_owners": 21,
+    "changed_original_records": 7,
+    "complete_predecessor_records_conserved": 184,
+    "hostiles_defined": 30,
+    "hostiles_rejected": 30,
+    "source_full_original_cold_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false
+  },
+  "correction": "In successor checker0.3 replace all three remaining stage object references with stage_locks, preserve stage='G0' scalar and prior verifier0.2/first 0.1 failures. No SSC, source inventory or traversal revision required; all 191 source bodies retained.",
+  "status": "RETAIN_FAILED_ORIGINAL_SUCCESSOR_PENDING_RETEST",
+  "W_semantics": false,
+  "no_G1_G7": true,
+  "PR70_merge_allowed": false
+}
