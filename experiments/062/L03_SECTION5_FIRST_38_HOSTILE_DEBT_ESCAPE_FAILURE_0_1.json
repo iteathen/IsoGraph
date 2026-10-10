@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062.L.G0.L03-section5-original-source-first-hostile-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "exact_failed_CI": {
+    "run_id": 38095413498,
+    "job_id": 114340178334,
+    "head_sha": "41aabde28cef459de393ef6f2a857a9a9ce73eda",
+    "conclusion": "failure",
+    "source_frozen_arxiv_revision": "arXiv:1006.4908v1",
+    "original_v1_PDF_SHA256_verified": true,
+    "source_original_pages_checked": [
+      13,
+      14
+    ],
+    "source_original_block_SHA256_verified": true,
+    "baseline_source_2_rows_repaired": [
+      "L03-S040",
+      "L03-S041"
+    ],
+    "SSC_changed_existing": [
+      "L-SSC-090",
+      "L-SSC-091"
+    ],
+    "untouched_complete_SSC_records": 189,
+    "hostiles_defined": 38,
+    "hostiles_rejected": 37,
+    "only_escaped_hostile": "forge_original_formula_debt_retired"
+  },
+  "failure_class": "G0_SOURCE_FORMULA_DEBT_COUNTER_VERIFIER_OMISSION",
+  "cause": "Verifier confirmed L03 source inverse still records 15 outstanding exact matrix/formula groups, but did not independently check the convergence register's per_source L03 exact count. Mutation to 0 wrongly passed.",
+  "systematic_correction": "Verify exact six-source outstanding formula-cell debt counters from independently preserved original-first inventories; never infer G0 completeness from original source text hashes, local text role repair or global 350/191 membership.",
+  "semantic_source_record_changed_for_verifier_fix": false,
+  "first_run_still_failure": true,
+  "prior_original_source_block_CI": {
+    "run_id": 38094818994,
+    "conclusion": "success",
+    "hostiles_rejected": 9
+  },
+  "actual_G0": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
