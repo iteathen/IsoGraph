@@ -1,0 +1,33 @@
+name: Experiment 062 L G0 six frozen original PDF source-first coverage 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/probe-l-g0-all-six-frozen-original-layout-sourcefirst-0-1.mjs'
+      - 'experiments/062/tools/verify-l-g0-l02-original-planck-quantum-modality-0-3.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_108.json'
+      - '.github/workflows/experiment-062-l-g0-six-original-sourcefirst-layout-and-modality-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  original-source-first-all-six:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: |
+          node --check experiments/062/tools/verify-l-g0-l02-original-planck-quantum-modality-0-3.mjs
+          node --check experiments/062/tools/probe-l-g0-all-six-frozen-original-layout-sourcefirst-0-1.mjs
+      - name: Frozen L02 original source modality + independent all-six source-first coverage
+        shell: bash
+        run: |
+          set +e
+          node experiments/062/tools/verify-l-g0-l02-original-planck-quantum-modality-0-3.mjs
+          L02_RESULT=$?
+          node experiments/062/tools/probe-l-g0-all-six-frozen-original-layout-sourcefirst-0-1.mjs
+          SIX_RESULT=$?
+          echo "FROZEN_L_G0_CHECK_RESULTS L02=$L02_RESULT SIX=$SIX_RESULT"
+          test "$L02_RESULT" -eq 0 && test "$SIX_RESULT" -eq 0
