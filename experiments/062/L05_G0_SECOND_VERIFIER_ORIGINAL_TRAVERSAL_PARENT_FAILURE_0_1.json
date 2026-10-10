@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.exp062.l-g0-l05-second-original-VOR-traversal-parent-CI-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "CI": {
+    "run_id": 38037457984,
+    "job_id": 114170779624,
+    "head_sha": "c20e9b5aa94fad69631d1c1f2d56856337e329e7",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38037457984",
+    "conclusion": "failure",
+    "status": "completed",
+    "baseline_error": "frozen prior SSC and traversal source",
+    "hostiles_defined": 39,
+    "hostiles_rejected": 39
+  },
+  "original_first_failed_run": {
+    "run_id": 38037253826,
+    "head_sha": "ca3136105fb7679f708acb98ae33744e1e5e6019",
+    "conclusion": "failure",
+    "failure_path": "experiments/062/L05_G0_ORIGINAL_JOURNAL_FIRST_CI_STAGE_SCHEMA_FAILURE_0_1.json",
+    "git_blob_sha": "ac6a2e65c66a8a52d22d05959c573d582b8ba4c9"
+  },
+  "source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SOURCE_FIRST_REVERSE_COVERAGE_0_2.json",
+    "git_blob_sha": "6a23839e35f5dfa404f64e61985a8ff34379816d",
+    "historical_traversal_parent": "SOURCE_TRAVERSAL_LEDGER_0_17.json"
+  },
+  "traversal_current": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_19.json",
+    "git_blob_sha": "e7b255a79f474019244853ec9e9822a041d28347",
+    "immediate_predecessor": "SOURCE_TRAVERSAL_LEDGER_0_18.json"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l05-source-first-reverse-0-2.mjs",
+    "git_blob_sha": "55d0337099addb296229516240cbdf79818e3689"
+  },
+  "root_cause": "SOURCE_AUDIT_HISTORICAL_PARENT_VS_MOVING_TRAVERSAL_PREDECESSOR_CONFLATION",
+  "classification": "VERIFIER_PROVENANCE_ROUTING_ERROR",
+  "correction": "Keep original audit's frozen traversal parent0.17 pinned unchanged; separately verify traversal0.19 predecessor0.18 and stage0.81 gate parent0.80. Separate source authority identities from moving procedural predecessors. Preserve both first and second failed CI as failure.",
+  "false_physical_theory_claim": false,
+  "original_source_assertions_changed": false,
+  "original_SSC_changed": false,
+  "source_cold_complete": false,
+  "G0_open": true
+}
