@@ -1,0 +1,60 @@
+{
+  "schema": "isograph.exp062.L.G0.six-original-PDF-layout-first-hostile-verifier-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "source_commit": "a4da19b7d55a3794ae0f47c1d5bf1fa415a804e1",
+  "CI": {
+    "run_id": 38094187829,
+    "job_id": 114336569972,
+    "conclusion": "failure",
+    "combined_workflow": "Experiment 062 L G0 six frozen original PDF source-first coverage 0.1",
+    "corrected_L02_modal_subtest": {
+      "pass": true,
+      "hostiles_rejected": 29,
+      "hostiles_defined": 29,
+      "original_PDF_SHA256_verified": true,
+      "SSC_repaired_existing": [
+        "L-SSC-064",
+        "L-SSC-069"
+      ]
+    },
+    "six_frozen_source_layout_subtest": {
+      "pass": false,
+      "original_6_official_PDF_SHA256_verified": true,
+      "source_PDF_pages": 167,
+      "original_layout_blocks": 1112,
+      "nonblank_extracted_lines": 8927,
+      "source_first_groups": 350,
+      "existing_SSC_identity_roots": 191,
+      "hostiles_defined": 24,
+      "hostiles_rejected": 23,
+      "reason": "HOSTILE_TEST_EXCEPTION_remove_source: TypeError: Cannot read properties of undefined (reading 'source_first_original_groups')",
+      "original_pdf_semantics_cold_complete": false
+    }
+  },
+  "cause": {
+    "class": "MISSING_COMPLETE_SOURCE_ROW_FAIL_CLOSED_VERIFIER_GUARD",
+    "detail": "A valid hostile removes one of six whole source manifest records. Validator checked the record’s presence but then unconditionally dereferenced its source_first_original_groups, crashing instead of returning a deterministic failed invariant.",
+    "corrective_method": "Guard absent original source record before reading children. Count it as a rejected hostile; do not weaken complete six-source source/SSC identity or original PDF byte tests."
+  },
+  "preserved_first_source_manifest": {
+    "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_FROZEN_ORIGINAL_LAYOUT_SOURCE_FIRST_MANIFEST_0_1.json",
+    "git_blob_sha": "1ff8ff04547a938b19c7530de7741c3f1eec54a9",
+    "CI_complete_first_original_source_scan": true,
+    "CI_verifier_entire_workflow_success": false
+  },
+  "history": {
+    "failed_run_kept_failed": true,
+    "new_CI_must_reverify_original_bytes_and_full_manifest": true,
+    "earlier_original_PDF_byte_provenance_CI": 38046224902
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "QU_as_missing_source_evidence": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}

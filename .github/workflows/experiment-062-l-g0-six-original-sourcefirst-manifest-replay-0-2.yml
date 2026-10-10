@@ -1,0 +1,25 @@
+name: Experiment 062 L G0 six frozen original source-first manifest replay 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/L_G0_SIX_FROZEN_ORIGINAL_LAYOUT_SOURCE_FIRST_MANIFEST_0_1.json'
+      - 'research/woit-lisi-isomorph/lisi/L_G0_SIX_ORIGINAL_FINITE_SOURCE_FIRST_CONVERGENCE_0_16.json'
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_33.json'
+      - 'experiments/062/L_G0_SIX_ORIGINAL_LAYOUT_FIRST_HOSTILE_FAILURE_0_1.json'
+      - 'experiments/062/tools/verify-l-g0-all-six-frozen-original-layout-sourcefirst-0-2.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_109.json'
+      - '.github/workflows/experiment-062-l-g0-six-original-sourcefirst-manifest-replay-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L-six-original-source-first-cold-boundary:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: node --check experiments/062/tools/verify-l-g0-all-six-frozen-original-layout-sourcefirst-0-2.mjs
+      - run: node experiments/062/tools/verify-l-g0-all-six-frozen-original-layout-sourcefirst-0-2.mjs
