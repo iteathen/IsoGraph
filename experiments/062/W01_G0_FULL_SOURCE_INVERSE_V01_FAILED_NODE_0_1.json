@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-w01-full-inverse-v01-ci-failure.v0.1",
+  "track": "W",
+  "status": "FAILED_POSITIVE_BIBLIOGRAPHY_STRING_ASSERTION_BEFORE_NEGATIVE_CONTROLS",
+  "qualification": "FAILED_UNQUALIFIED",
+  "run_id": 38074190955,
+  "commit": "8da0244e9253871885b902cbca747c4e4deb6e19",
+  "workflow": "Experiment 062 W01 all original source bidirectional G0 0.1",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38074190955",
+  "conclusion": "failure",
+  "positive_baseline": false,
+  "adversarial_controls_executed": false,
+  "predecessor_checker_path": "experiments/062/tools/verify-w01-full-frozen-original-bidirectional-0-1.cjs",
+  "predecessor_checker_blob_sha": "b13b25594e6fcac5e61ec043c1da17684401ebf3",
+  "source_census_changed": false,
+  "ledger_changed": false,
+  "cause": "Verifier demanded phrase 'not another source item' in bibliography source-disposition prose. The actual original-first ledger truthfully says 'One original author reference identity [i] despite mirrored arXiv HTML item.' Semantic reference identity correct; positive assertion was overfit to surface phrasing.",
+  "repair": "v0.2 checks source reference ID 1..76 and exact primary↔mirrored HTML line map, source interval uniqueness, single original-source identity, nonempty descriptive provenance; no literal English phrase requirement. Historical v01 failure retained.",
+  "effect": "VERIFIER_PROSE_CHECK_DEFECT_NOT_MISSING_ORIGINAL_SEMANTICS",
+  "G0": "OPEN_UNFROZEN",
+  "negative_tests_unqualified_v01": true
+}
