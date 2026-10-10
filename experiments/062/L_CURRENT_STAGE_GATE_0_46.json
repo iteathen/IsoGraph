@@ -1,0 +1,127 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.46",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "L_G0_SSC043_BOTH_CHIRAL_GAUGE_AND_SO8_TENSOR_RIGHT_56_OF_56_HOSTILE_CI_SOURCE_OPEN_UNFROZEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "predecessor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_45.json",
+    "git_blob_sha": "4f9be0c72bbb5608af4abb1907b951dc27750e20"
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_43.json",
+    "git_blob_sha": "afb81fbc69bb8f60480d6654dbcc1ebfdfbd5f35",
+    "source_identities": 191,
+    "changed": [],
+    "unchanged": 191,
+    "frozen": false,
+    "complete": false,
+    "latest_material_delta": {
+      "source0_42": [
+        "L-SSC-040",
+        "L-SSC-041",
+        "L-SSC-046"
+      ],
+      "source0_43": [
+        "L-SSC-032",
+        "L-SSC-041",
+        "L-SSC-046"
+      ]
+    }
+  },
+  "current_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_TENSOR_RIGHT_TRANSPOSE_G0_0_1.json",
+    "git_blob_sha": "94ce20166dac8820005c8d8f5ff01037b9d013c1",
+    "source_revision": "L01 arXiv:0711.0770v1"
+  },
+  "source_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-so8-tensor-right-0-1.mjs",
+    "git_blob_sha": "a3e8b0aaccdac666244a1daa9f12032ff923c13d",
+    "status": "EXACT_NODE_GITHUB_SUCCESS_AFTER_PROVENANCE_PARSER_REPAIR",
+    "run_id": 38007096806,
+    "head_sha": "01be01a473efc758f95d428969076917d209184c",
+    "math_mutants_rejected": 12,
+    "source_mutants_rejected": 16,
+    "independent_cold_mathematical_review_passed": false
+  },
+  "source_CI": {
+    "conclusion": "success",
+    "run_id": 38007096806,
+    "head_sha": "01be01a473efc758f95d428969076917d209184c",
+    "job_id": 114078283926,
+    "so8_basis": 28,
+    "so8_rank_mod101": 28,
+    "su3_bracket_checks": 64,
+    "so8_Lie_module_pair_checks": 378,
+    "math_mutants_rejected": 12,
+    "source_mutants_rejected": 16,
+    "total_L_G0_since_source0_41_math_mutants_successful": 24,
+    "total_L_G0_since_source0_41_source_mutants_successful": 32,
+    "external_cold_review_passed": false
+  },
+  "CI_evidence": {
+    "path": "experiments/062/L_SO8_TENSOR_RIGHT_TRANSPOSE_G0_CI_SUCCESS_AND_REPAIRS_0_1.json",
+    "git_blob_sha": "026bbe2e5564bdd0142a0fc3ac52b2a318697d78"
+  },
+  "historical_failures": [
+    "38006560947: packet G0 stage field collision, corrected",
+    "38006663585: concurrent SSC0.42/gate0.43 replacement guard fail, corrected by nonoverwriting 0.43/0.44 rebase",
+    "38006663593: so8 checker syntax failure before any mathematical test; parser repaired",
+    "38006976694: 12/12 + 16/16 so8 math/source checks passed but original gate checker checksum pinned candidate; repaired with explicit provenance evidence"
+  ],
+  "preserved_concurrent_L_source": {
+    "name": "Source-shaped so8 tensor-right transpose",
+    "packet": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_TENSOR_RIGHT_TRANSPOSE_G0_0_1.json",
+    "git_blob_sha": "94ce20166dac8820005c8d8f5ff01037b9d013c1",
+    "census0_42_git_blob_sha": "22eb618a2a5983dc1608a45cabe0c53ce5616151",
+    "gate0_43_git_blob_sha": "60ef1c9cbcd6ba1c855a361b6a5ef18c160c169e",
+    "source_model_not_author_qualified": true
+  },
+  "current_lawful_state": {
+    "G0_source_audit_open": true,
+    "source_census_frozen": false,
+    "source_census_complete": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "original_E8_full_chiral_source_embedding_qualified": false,
+    "original_E8_source_right_component_map_qualified": false,
+    "full_first_generation_fermionic_action_qualified": false,
+    "second_third_generation_actions_qualified": false,
+    "H1_mixed_curvature_output_normalization_qualified": false,
+    "H2_quadratic_Hodge_source_action_qualified": false,
+    "whole_L01_L06_primary_corpus_cold_audit_complete": false,
+    "external_cold_mathematical_review_passed": false,
+    "original_source_author_typo_proved": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false,
+    "actual_source_E8_right_component_transpose_qualified": false,
+    "actual_source_full_8Splus_spinor_rep_qualified": false,
+    "author_source_fermionic_trace_qualified": false,
+    "author_2nd_3rd_generation_actions_complete": false
+  },
+  "next": "L01 original full 8S+ tensor-to-source first-generation fermion operator/pairing source normalization; preserve project-chosen sign conventions; independently pursue §3.2.2 S2 so8 Hodge trace and remaining L02-L06 G0 source completeness.",
+  "W_track_mutated": false,
+  "other_current_verification": {
+    "chiral_first_generation": {
+      "run_id": 38006899819,
+      "status": "SUCCESS",
+      "evidence": {
+        "path": "experiments/062/L032_L041_L046_CHIRAL_GAUGE_G0_CI_AND_CONSERVATION_0_1.json",
+        "git_blob_sha": "ce555ef89f9a5744e9c60e694c9fc76b2f8792ed"
+      },
+      "source0_43_preserved": true
+    }
+  },
+  "retained_unresolved": [
+    "All 28 project-so8 generators and 378 operator Lie brackets pass chosen real right-index-transpose identity; original L01 printed right generator identification, 8S+ source root matrix normalization and graded action pairing are NOT qualified.",
+    "Two independent L source rounds (chiral and so8) have distinct 12/12 mathematical and 16/16 provenance hostile pass evidence, not external mathematical cold review.",
+    "Original rank-one shared color Phi restrictions do not follow from project so8 decomposition, and original p27 source coefficient signs remain notation/representation obligation."
+  ],
+  "next_lawful_step": "Investigate frozen original L01 8S+ spinor root/bilinear and specific component g_i,w_i,B2_i,x_iPhi transpose convention; if absent, preserve precise gap and continue L01 H1 mixed Fgw / S2 Hodge and L02–L06 source audit.",
+  "author_outreach_authorized": false,
+  "PR70_merge_authorized": false
+}
