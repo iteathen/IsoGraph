@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062.L.G0.L02-planck-quantum-first-source-verifier-baseline-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "source_commit": "46cc1dd9904ef19f67f30b32641823d0771020f4",
+  "CI": {
+    "run_id": 38093477978,
+    "job_id": 114334488647,
+    "conclusion": "failure",
+    "hostiles_defined": 29,
+    "hostiles_rejected": 29,
+    "baseline_failed_only": [
+      "SSC author bare scale/negative + modality Planck scale"
+    ],
+    "official_original_PDF_sha256_verified": true,
+    "source_pages_replayed": [
+      8,
+      10
+    ],
+    "original_text_block_hashes_verified": true,
+    "source_original_test_mutations_all_rejected": true
+  },
+  "cause": {
+    "class": "VERIFIER_STRING_CASE_AND_HYPHENATION_EXPECTATION_MISMATCH",
+    "detail": "SSC preserves Planck-scale physical parameter scope as uppercase AT THE PLANCK SCALE / PLANCK-SCALE, but checker searched for case-sensitive literal 'Planck scale'. Baseline false-negative, not original source omission or SSC incorrect semantics.",
+    "repair": "Guard exact known original source carrier and semantic interpretation case-insensitively /planck[\\s-]+scale/i together with bare g_YM^2, rather than requiring case-sensitive editorial spelling. Do not weaken original other core checks."
+  },
+  "preservation": {
+    "source_SSC_0_64_stays_unchanged": true,
+    "original_first_L02_0_8_stays_unchanged": true,
+    "whole_source_COLD_not_qualified": true,
+    "CI_never_reclassified_as_success": true,
+    "G0_open": true,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
