@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062.L.G0.L02.original-eq27-five-term-first-CI-baseline-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  },
+  "exact_commit": "b234eec9e0beab443752978eecdbe4c825e1a0a1",
+  "run_id": 38085493600,
+  "job_id": 114311002386,
+  "conclusion": "failure",
+  "html_url": "https://github.com/iteathen/IsoGraph/actions/runs/38085493600",
+  "source_original_probe": {
+    "arxiv_revision": "arXiv:1004.4866v2",
+    "SHA256_verified": true,
+    "original_p8_source_scoping_verified": true,
+    "numbered_Eq27_source_found": true,
+    "source_packet_and_SSC_body_conservation_baseline_failure_cause": "Verifier used non-normalized whitespace and a literal phrase not present in equivalent source-scope text; no physical source math discrepancy thereby established."
+  },
+  "controls": {
+    "defined": 27,
+    "rejected": 27,
+    "escaped": [],
+    "CI_success": false,
+    "basecheck_problems": [
+      "source original full 5-sector Eq27 body",
+      "original coupling status, not measured physical truth"
+    ]
+  },
+  "causes": [
+    {
+      "check": "source original full 5-sector Eq27 body",
+      "cause_class": "VERIFIER_LITERAL_SPACING_NOT_AUTHOR_FIDELITY",
+      "actual": "Source packet spaces after '+' and between '-' and (1/2), while guard canonical literal omitted them.",
+      "minimum_repair": "Compare whitespace-insensitive exact character/token sequence for the source original five-term equation; do not normalize signs, coefficients, factors, carriers, or order."
+    },
+    {
+      "check": "original coupling status, not measured physical truth",
+      "cause_class": "VERIFIER_EXPECTED_PHRASE_NOT_ACTUAL_GUARD_SCOPE",
+      "actual": "Source packet modulus explicitly marked THESE_ARE_SOURCE_CLAIMED_BARE_RELATIONS_NOT_MEASURED_VALUES..., and scope_guard says bare values far from experiment rather than exact English 'not measured values'.",
+      "minimum_repair": "Enforce source status on the explicit modality key and actual scope_guard 'bare values far from experiment', not invented prose expected elsewhere."
+    }
+  ],
+  "history": {
+    "failure_retained": true,
+    "old_success_CI_38084996608_retained_as_scope_only": true,
+    "source_census_0_62_original_body_changed_for_verifier": false,
+    "source_first0_6_original_groups_changed_for_verifier": false
+  }
+}
