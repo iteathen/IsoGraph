@@ -1,3 +1,9 @@
+## Current Track L G0 source-first convergence: original L04 v2 (2026-10-09)
+
+**Current source SSC0.50, traversal0.13, gate0.64: G0 OPEN / UNFROZEN.** Rather than an additional physics-first calculation, the [L04 source-first 53-location reverse audit](LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json) independently starts with frozen arXiv:2407.02497v2 (abstract, §§1–7, tables, figures, original references), then maps to **all 34 L04 SSC identities**. It identifies **18 mapped original formula/table/figure groups** whose *exact* reconstruction is not yet evidenced by this reverse register. That is an explicit verification debt, not evidence that no earlier repository work exists. No source presently passes complete independent cold source-fidelity review.
+
+Two genuine source-semantic fidelity issues were narrowly repaired without extra SSC occurrence IDs. Source item **L-SSC-116** now retains both original **§6 Eq. (6.2) negative** and **§7 positive** quaternionic triality generator representatives, distinguishing literal element order from identical adjoint action without asserting a source typo. Item **L-SSC-121** now preserves that the actual 2024 frozen reference [6] was **in preparation**, rather than importing the later frozen L05 published revision. The other **189 original 191 complete SSC records are unchanged**, and six original frozen L sources remain G0-open. The [mechanical source-fidelity/conservation verifier](../../../experiments/062/tools/verify-l-g0-l04-source-first-reverse-0-1.mjs) and [procedural gate0.64](../../../experiments/062/L_CURRENT_STAGE_GATE_0_64.json) distinguish exact record conservation and hostile tests from unavailable complete original-PDF cold qualification. **Initial GitHub CI pending**, not called success in advance. Later G1/G7, W semantics, synthesis, author outreach and merge not authorized.
+
 # Lisi full IsoGraph treatment
 
 **Track:** L
