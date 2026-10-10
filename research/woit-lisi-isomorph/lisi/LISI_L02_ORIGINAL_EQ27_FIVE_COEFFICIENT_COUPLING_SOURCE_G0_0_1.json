@@ -1,0 +1,115 @@
+{
+  "schema": "isograph.track-L.G0.L02-source-v2-Eq27-five-term-coupling-literal.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "original_source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "official_PDF": "https://arxiv.org/pdf/1004.4866v2",
+    "sha256": "1c2764dc498a3b118253f97447249e58a07e7c9ff4eb7fa72a48633061bfd25a",
+    "pdf_zero_based_page": 7,
+    "original_printed_page": 8,
+    "governing_corpus": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "byte_CI": {
+      "run_id": 38046224902,
+      "head_sha": "7d208f477f92b4d84cc3a67276ee735c511739a7",
+      "conclusion": "success"
+    }
+  },
+  "source_first_scope": [
+    {
+      "location_id": "L02-S043",
+      "source_literal": "Original Eq(27) restricted five sector tensor-component action",
+      "owner": "L-SSC-062",
+      "source_formula": "S(e,phi,A)=(3/(8g)) int d4x |e| [-phi2 R/16 +3 phi4/32 + Rab^cd R^ab_cd/16 - (1/2) Da phi^m D^a phi_m -(1/4) Fab^mn F^ab_mn]",
+      "prefactor": "3/(8g)",
+      "five_terms_in_source_order": [
+        {
+          "carrier": "EinsteinHilbert_phi2_R",
+          "coefficient": "-1/16",
+          "scope": "nonzero Higgs/gravity"
+        },
+        {
+          "carrier": "HiggsPotential_phi4",
+          "coefficient": "+3/32",
+          "scope": "quartic scalar"
+        },
+        {
+          "carrier": "RiemannCurvatureSquare_R_ab_cd_Rab_cd",
+          "coefficient": "+1/16",
+          "scope": "SKY-type correction"
+        },
+        {
+          "carrier": "HiggsKinetic_D_a_phi_m_Da_phi_m",
+          "coefficient": "-1/2",
+          "scope": "internal spin(N) Higgs"
+        },
+        {
+          "carrier": "YMFieldTensorSquare_F_ab_mn_Fab_mn",
+          "coefficient": "-1/4",
+          "scope": "internal spin(N) YM"
+        }
+      ],
+      "required_prior_scope": [
+        "chosen Phi=* built from e and auxiliary B elimination Eq25",
+        "chosen simple bivector E=ePrime phi Eq13",
+        "further separate restriction ePrime=e",
+        "torsion T=0 only in ignored fermionic-source sector"
+      ],
+      "author_literal_vs_project_discrepancy": "Positive Eq(26) and Eq(27) quartic terms conserved, while previously reported conditional selected Cl(4,3) trace-sign tension remains project evidence, not author erratum or theorem."
+    },
+    {
+      "location_id": "L02-S044",
+      "source_literal": "Bare lower-energy coupling and vacuum normalization claims following Eq27",
+      "owner": "L-SSC-063",
+      "source_equalities": {
+        "Newton_constant": "G_N=128 g / (3 v^2)",
+        "cosmological_constant": "Lambda=3 v^2 / 4",
+        "Yang_Mills_squared_coupling": "g_YM^2=2 g / 3",
+        "vacuum_norm": "v^2=<phi_0^2>"
+      },
+      "source_modality": "THESE_ARE_SOURCE_CLAIMED_BARE_RELATIONS_NOT_MEASURED_VALUES_OR_PROVEN_RUNNING_FIXED_POINT",
+      "scope_guard": "G_N, Lambda and g_YM^2 are derived within the restricted source ansatz; author notes bare values far from experiment, with UV fixed point only a speculation; no global physical parameter theorem required at G0."
+    }
+  ],
+  "root_cause": {
+    "class": "SOURCE_EXACT_COEFFICIENT_VECTOR_AND_NORMALIZATION_UNDERINDEXED_AS_SECTOR_SUMMARY",
+    "source_first_location_partition_reused": true,
+    "previous_exact_analytical_E26_E27_packets_not_discarded": true,
+    "existing_SSC_owners_already_carried_roles_but_not_ALL_component_coefficients": true,
+    "repair": "Place exact 5-component Eq27 signed coefficients and three bare coupling equalities in existing SSC bodies and source-first location record, keep source Eq26 prior positive quartic plus independent discrepancy separate; run original PDF source-fidelity and hostile controls, not physics proof.",
+    "same_failure_class_must_be_checked_in_other_source_equations": true,
+    "missing_metadata_not_missing_prior_research": true
+  },
+  "conservation": {
+    "existing_L02_source_locations": 59,
+    "changed_old_location_ids": [
+      "L02-S043",
+      "L02-S044"
+    ],
+    "other_original_L02_rows_unchanged": 57,
+    "existing_L_SSC_ids": 191,
+    "existing_changed_items": [
+      "L-SSC-062",
+      "L-SSC-063"
+    ],
+    "unmodified_complete_SSC_items": 189,
+    "new_typed_ids": 0,
+    "L02_full_cold_pass": false,
+    "other_frozen_source_units_unmodified": true
+  },
+  "source_proof_boundary": {
+    "source_original_signed_numbers_visually_inspected": true,
+    "complete_original_source_PDF_cold_review": false,
+    "source_Eq26_to_Eq27_mathematical_equality_qualified": false,
+    "strict_minimum_or_model_viability_proved": false,
+    "coupling_actual_physical_prediction_proved": false
+  },
+  "G0_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}
