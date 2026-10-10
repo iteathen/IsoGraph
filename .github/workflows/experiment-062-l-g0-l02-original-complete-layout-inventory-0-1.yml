@@ -1,0 +1,20 @@
+name: Experiment 062 L G0 frozen L02 complete original PDF layout atoms 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/probe-l-g0-l02-complete-original-layout-blocks-0-1.mjs'
+      - '.github/workflows/experiment-062-l-g0-l02-original-complete-layout-inventory-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L02-original-source-layout:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: node --check experiments/062/tools/probe-l-g0-l02-complete-original-layout-blocks-0-1.mjs
+      - run: node experiments/062/tools/probe-l-g0-l02-complete-original-layout-blocks-0-1.mjs
