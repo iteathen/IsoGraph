@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.exp062-w01-a3-quaternion-inverse-literal-negative.v0.1",
+  "track": "W",
+  "semantic_authority": false,
+  "source": {
+    "revision": "arXiv:2104.05099v2",
+    "section": "Appendix A.3.3",
+    "eq": "(A.5)",
+    "html_lines": [
+      682,
+      683
+    ],
+    "pdf_printed_page": 25
+  },
+  "source_direct_verbatim_math": {
+    "source_defining_s": "s=s1+s2*j",
+    "source_ratio": "s_perp*s^-1",
+    "source_denominator": "|s1|^2+|s2|^2",
+    "source_middle_inverse_factor": "conj(s1)-s1*j",
+    "source_final_expanded_j_coeff": "-s_perp1*s2+s_perp2*s1"
+  },
+  "independent_non_author_recheck": {
+    "chosen_real_quaternion_components": {
+      "s1": 1,
+      "s2": 2,
+      "sperp1": 1,
+      "sperp2": 0
+    },
+    "quaternion_algebra": "j²=-1, scalar real coefficients",
+    "computed_denominator": 5,
+    "actual_left_result": [
+      "1/5",
+      "-2/5"
+    ],
+    "source_middle_result": [
+      "1/5",
+      "-1/5"
+    ],
+    "source_expanded_result": [
+      "1/5",
+      "-2/5"
+    ],
+    "left_coeff_pair": [
+      0.2,
+      -0.4
+    ],
+    "middle_coeff_pair": [
+      0.2,
+      -0.2
+    ],
+    "right_coeff_pair": [
+      0.2,
+      -0.4
+    ],
+    "equal_left_right": true,
+    "equal_left_middle": false
+  },
+  "interpretation": "A.5 middle printed factor references s1 twice; source previously defined s=s1+s2j. Counterexample shows middle formula is not generally equal to the left ratio or the final expansion. Preserve every literal source display; do not silently replace printed s1 with s2. This nonauthor arithmetic check is not mathematical authority for the rest of the physics proposal.",
+  "source_correction_made": false,
+  "author_claim_automatically_false_elsewhere": false,
+  "G0": "OPEN_UNFROZEN"
+}
