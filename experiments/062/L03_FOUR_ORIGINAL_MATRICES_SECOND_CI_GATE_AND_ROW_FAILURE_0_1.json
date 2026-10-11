@@ -1,0 +1,61 @@
+{
+  "schema": "isograph.exp062.L.G0.L03.four-original-matrix-second-preflight-gate-and-hostile-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_run": {
+    "run_id": 38112911977,
+    "job_id": 114392005422,
+    "head_sha": "313a96cabe1f9e4143e2e3f36fe5ac3f6ead36dc",
+    "conclusion": "failure",
+    "hostiles_defined": 22,
+    "hostiles_rejected": 21,
+    "issues": [
+      "historical initial source coefficient-domain CI failure preserved",
+      "HOSTILE_EXCEPTION_missing_source_gamma_row:TypeError Cannot read properties of undefined (reading length)"
+    ],
+    "original_frozen_v1_PDF_sha256_verified": true,
+    "source_printed_pages_verified": [
+      6,
+      7,
+      8
+    ],
+    "source_chosen_18_R64_matrices_numerical_agreement": true,
+    "source_14_gamma_Cl11_3_involutions_and_anticommutation_tested": true,
+    "source_Pati_Salam_rank_21": true,
+    "source_specific_original_formula_semantics_whole_cold_qualified": false
+  },
+  "systematic_verifier_causes": [
+    {
+      "failure_class": "CURRENT_VS_PREDECESSOR_STAGE_EVIDENCE_MISROUTING",
+      "cause": "The v0.2 source test reads new first-run failed CI provenance from d.oldGate (0.115) instead of d.gate (0.116), which actually contains the preserved first-failure packet.",
+      "repair": "Assert predecessor gate 0.116 authority and successor 0.117 failure provenance via different objects, with exact Git blob SHA pointers."
+    },
+    {
+      "failure_class": "MISSING_ORIGINAL_GENERATOR_ROW_DOES_NOT_FAIL_CLOSED",
+      "cause": "Cl source row array mutation from 14 to 13 correctly fails source-row count, but matrix anticommutation loops then dereference nonexistent 14th generator and throw rather than return a failed invariant.",
+      "repair": "Stop sourceMatrixArithmetic after invalid row counts or missing source matrix keys before indexed matrix construction; a hostile then rejects deterministically."
+    }
+  ],
+  "parent_source": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L03_ORIGINAL_FOUR_REMAINING_MATRIX_TABLES_SOURCE_G0_0_1.json",
+    "git_blob_sha": "f2dfaf59542331ed65852b3d8e6dcf06f93a49eb",
+    "author_1_over_6_coefficient_retained": true,
+    "frozen_revision": "arXiv:1006.4908v1"
+  },
+  "history": {
+    "first_failed_run_id": 38100555833,
+    "first_failed_status": "failure",
+    "second_failed_status": "failure",
+    "no_success_claim_before_corrected_CI": true,
+    "source_SSC0_67_IDs_191_unmodified": true
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
