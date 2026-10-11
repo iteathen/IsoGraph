@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062.W-G1-W04b-V02-extraneous-freeze-input-oracle.v0.1",
+  "track": "W",
+  "failed_run": {
+    "id": 38176046371,
+    "job_id": 114578542125,
+    "head": "b73cd9b05148eefbac32bf7722fa4ec30c03c68d",
+    "conclusion": "FAILURE",
+    "cold_original_article": "PASS_19_ANCHORS_TWO_READS",
+    "G1_positive_oracle_pass": false
+  },
+  "cause": "Candidate frozen_inputs map has stage, original_G0, SSC, inverse and author scope; checker also iterated an external global G0 freeze pin and demanded nonexistent candidate.frozen_inputs.freeze.sha. The freeze itself is already SHA-checked from the genuine on-disk file independently.",
+  "correction": "v0.3 skips non-candidate freeze entry when comparing candidate input pointers, retains direct immutable global freeze SHA check. Also asserts the source_unit field itself agrees with exact W04b G0 inverse.",
+  "previously_failed_source_anchor_run": 38175961045,
+  "historical_failures_preserved": true,
+  "SSC_unchanged": true,
+  "L_semantics_used": false,
+  "G1_global_not_yet_complete": true,
+  "G2_not_authorized": true
+}
