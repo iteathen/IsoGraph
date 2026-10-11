@@ -1,0 +1,103 @@
+{
+  "schema": "isograph.track-L.G0.L04-section1-spin-factor-source-fidelity-defect.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "qualification": "PRIMARY_V2_P3_VISUALLY_READ; LOCAL_EXACT_MONOMIAL_PREFLIGHT; NEW_GITHUB_ACTIONS_COLD_CHECK_PENDING",
+  "frozen_original": {
+    "revision": "arXiv:2407.02497v2",
+    "pdf": "https://arxiv.org/pdf/2407.02497v2",
+    "sha256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "bytes": 348134,
+    "pages": 17,
+    "printed_page": 3,
+    "original_text_page_sha256": "7f569c8a8ef99942eb0bb318bdaff4e9509d923ada6b0bd81540a57947d044bf",
+    "original_source_atom": "L04-P003-B001",
+    "original_source_atom_sha256": "599069870dfbe88de38891eb84e32d38aed9ca92ca66a0cee397c2cb98c15f5f",
+    "historical_visual_success_run": 38120301520,
+    "original_html_same_revision": "https://arxiv.org/html/2407.02497v2"
+  },
+  "source_roles": [
+    {
+      "locus": "§1 printed p2 Pin extension",
+      "notation": "⋊",
+      "claim": "Spin+(1,3) ⋊ {1,P,T,PT}=Spin(1,3) ⋊ {1,P}=Pin(1,3)",
+      "source_only": true
+    },
+    {
+      "locus": "§1 printed p3 after Pin(1,3) vs Pin(3,1) squares",
+      "notation": "×",
+      "claim": "Spin(1,3)=Spin+(1,3) × {1,PT_U}",
+      "source_only": true
+    },
+    {
+      "locus": "§1 printed p3 after CPT physical discussion",
+      "notation": "×",
+      "claim": "Spin(1,3)=Spin+(1,3) × {1,PT_U}",
+      "source_only": true
+    },
+    {
+      "locus": "§1 printed p3 finite PT_U representative",
+      "notation": "(PT_U)^2=-1",
+      "claim": "U'_PT=gamma, P T_U=-T_U P, and (U'_PT)^2=-1",
+      "source_only": true
+    }
+  ],
+  "transcription_defect": {
+    "class": "ORIGINAL_DIRECT_PRODUCT_SYMBOL_MISTRANSCRIBED_AS_SEMIDIRECT_IN_G0_SSC",
+    "original_source_packet_path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION1_CLIFFORD_ADJOINT_REFLECTION_PTU_SOURCE_G0_0_1.json",
+    "original_source_packet_git_blob_sha": "d6eabc3c0032992de42705938a79b61982496ff1",
+    "retain_original_packet_unchanged": true,
+    "existing_source_group": "L04-S003",
+    "existing_SSC_owner": "L-SSC-094",
+    "previous_SSC_literal": "Spin(1,3)=Spin+(1,3) semidirect {1,P T_U} (author original subgroup assertion)",
+    "correct_printed_SSC_literal": "Spin(1,3)=Spin+(1,3) × {1,P T_U} (source-literal ×, not ⋊)",
+    "repair_status": "REQUIRES_SSC_SOURCE_FIRST_GATE_SUCCESSOR"
+  },
+  "finite_model": {
+    "carrier": "unquotiented real Cl(1,3), gamma0 squared +1, three spatial gamma squared -1, distinct basis elements anticommute",
+    "basis_monomial_masks": {
+      "P": 1,
+      "T_U": 14,
+      "PT_U": 15
+    },
+    "P_squared": "+1",
+    "T_U_squared": "+1",
+    "P_T_U": "gamma",
+    "T_U_P": "-gamma",
+    "PT_U_squared": "-1",
+    "PT_U_order": 4,
+    "proposed_factor_elements": [
+      "1",
+      "PT_U"
+    ],
+    "proposed_factor_multiplicatively_closed": false,
+    "conditional_result": "As a literal direct product of abstract groups, the specified two-element factor {1,PT_U} is not a subgroup of the unquotiented Clifford carrier; this does not exclude a source-intended quotient or coset-representative shorthand.",
+    "proof_scope": "Exact finite algebra witness, not a proof of global extension structure or physical viability."
+  },
+  "unresolved_semantics": [
+    "Does the original × denote an internal group direct product or only two components/coset representatives?",
+    "Was a projective identification of ±1 intended here despite the original phase-sensitive Pin square?",
+    "The earlier semidirect transcription is not a source-licensed repair and must remain historical defect evidence."
+  ],
+  "conservation": {
+    "frozen_sources": 6,
+    "source_location_groups": 350,
+    "L04_groups": 53,
+    "L04_SSC_owners": 34,
+    "L_SSC_ids": 191,
+    "new_typed_source_ids": 0,
+    "physical_source_revision_changed": false
+  },
+  "locks": {
+    "G0_open": true,
+    "SSC_frozen": false,
+    "G1_authorized": false,
+    "higher_stages_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_authorized": false,
+    "PR70_merge_authorized": false,
+    "author_outreach_authorized": false
+  }
+}
