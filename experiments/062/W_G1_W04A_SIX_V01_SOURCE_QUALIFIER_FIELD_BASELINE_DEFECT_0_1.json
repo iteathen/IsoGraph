@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062.W.G1.W04a-six-initial-verifier-field-not-source.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "failed_exact_CI": {
+    "run_id": 38168733900,
+    "job_id": 114556643740,
+    "commit_sha": "a3fd7539b85b93a7f9e92a754df6f790c0b9ec4c",
+    "conclusion": "FAILURE",
+    "original_author_cold_source_passed": true,
+    "initial_positive_G1_baseline_passed": false,
+    "adversarial_controls_executed": false
+  },
+  "issue": "The verification code asserted a hypothetical 'qualifier' member; the immutable G1 candidate actually represents the same negative qualification using source_truth_not_scientific_verification=true. It was a checker schema error, not source-semantic loss.",
+  "correction": "Distinct v0.2 verifier uses exact existing G1 field for no scientific-theory truth promotion, retains all 15 original candidate occurrences and tests.",
+  "frozen_source_changed": false,
+  "source_candidate_changed": false,
+  "original_target_Oct03_G0_open": true,
+  "new_target_G0_frozen": true,
+  "prior_failed_run_not_rescored": true
+}
