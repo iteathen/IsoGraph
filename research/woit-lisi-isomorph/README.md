@@ -1,3 +1,7 @@
+## L source G0 — 26/26 original CPT/triality source verification (2026-10-11)
+
+Current [L dossier](lisi/README.md) and SSC **0.88** / [G0 gate0.164](../../experiments/062/L_CURRENT_STAGE_GATE_0_164.json) record [bounded original L04 source CI](https://github.com/iteathen/IsoGraph/actions/runs/38183907130): frozen original p3/p4/p15 PDF SHA and **26/26 hostile controls PASS** for CPT16 vs eight projective classes and author's nontrivial CPTt96 claim. These are source and exact finite-matrix evidence, not a physical-unification or group-uniqueness theorem. **12 broadly mapped L04 groups and 0/6 whole-original-source cold audits remain open**; all G1+, W/L synthesis and PR merge blocked. Earlier CI failures are preserved.
+
 ## L-track source G0 successor — L04 CPT/triality (2026-10-11)
 
 Current L source records [SSC0.88](lisi/SOURCE_SEMANTIC_CENSUS_0_88.json), [G0 gate0.163](../../experiments/062/L_CURRENT_STAGE_GATE_0_163.json), source inverse0.21 and convergence0.43 preserve the independent signed CPT16/projective-eight distinction and the author's narrower nontrivial CPTt96 proposal. **12 broadly mapped L04 original groups remain**, 191 SSC IDs / 350 source locations, **0/6 whole original source cold audits** complete. New scoped original PDF CI is pending; G0 unfrozen, all G1+ and cross-author work blocked. W records remain untouched.
