@@ -1,0 +1,163 @@
+{
+  "schema": "isograph.track-L.G0.L04-frozen-original-Cartan-Weyl-complex-real-root-operators.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_original": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "url": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "PDF_bytes": 348134,
+    "pages": 17,
+    "printed_page": 4,
+    "pdf_page_zero_based": 3
+  },
+  "original_visual_evidence": {
+    "run_id": 38117619140,
+    "job_id": 114405576573,
+    "head_sha": "de0ab78d5b8bb06b815448da1f519102dd919ca6",
+    "conclusion": "success",
+    "page_4_original_PNG_SHA256": "77ab96bf89d97d29fa260572feb3340f45d67005e3e0e9286ec4bc794d31f23d",
+    "independent_source_math_theorem_proved": false
+  },
+  "original_source_text_blocks": [
+    {
+      "source_atom_id": "L04-P004-B006",
+      "source_line_span": [
+        17,
+        29
+      ],
+      "SHA256": "ed3f203b07c2d349376a83990125ea2223d5d3a426f97138ab393f855b917df8",
+      "content": "complex left/right root eigensystems and raising/lowering complex carrier expressions"
+    },
+    {
+      "source_atom_id": "L04-P004-B007",
+      "source_line_span": [
+        31,
+        35
+      ],
+      "SHA256": "acdf390d62067927b57fdeb12587c71acd23f40047d8eef48ae5eb56f0393a4c",
+      "content": "nonorthogonal Cartan H_L/R and printed Chevalley-Serre brackets"
+    },
+    {
+      "source_atom_id": "L04-P004-B008",
+      "source_line_span": [
+        37,
+        55
+      ],
+      "SHA256": "80d9a5c40b20931e205ada7f0f5bfd605ed2d125d69af90ebdf4c744187bf46a",
+      "content": "real root transform and original signed J/K actions/brackets"
+    }
+  ],
+  "source_semantic_groups": [
+    {
+      "id": "L04-S009-COMPLEX",
+      "original_group": "L04-S009",
+      "source_first_locators": [
+        "L04-P004-B006"
+      ],
+      "SSC_owner": "L-SSC-098",
+      "carrier": "Lorentz spin(1,3) complex Cartan–Weyl E_L/E_R; vee/wedge selects COUPLED upper/lower signs; E_L and E_R are different root actions",
+      "source_asserted_formulas": [
+        "[J3,E_L^{vee/wedge}]=(±i) E_L^{vee/wedge}",
+        "[K3,E_L^{vee/wedge}]=(∓1) E_L^{vee/wedge}",
+        "E_L^{vee/wedge}=(1/2)(∓J1+iJ2±iK1+K2)",
+        "[J3,E_R^{vee/wedge}]=(±i) E_R^{vee/wedge}",
+        "[K3,E_R^{vee/wedge}]=(±1) E_R^{vee/wedge}",
+        "E_R^{vee/wedge}=(1/2)(±J1−iJ2±iK1+K2)",
+        "[E_L^vee,E_L^wedge]=−iJ3−K3",
+        "[E_R^vee,E_R^wedge]=−iJ3+K3"
+      ]
+    },
+    {
+      "id": "L04-S009-H",
+      "original_group": "L04-S009",
+      "source_first_locators": [
+        "L04-P004-B007"
+      ],
+      "SSC_owner": "L-SSC-098",
+      "carrier": "Nonorthogonal Cartan roots H_L/R in the same complex source presentation",
+      "source_asserted_formulas": [
+        "H_L=−iJ3−K3; H_R=−iJ3+K3",
+        "[H_L,E_L^{vee/wedge}]=±2i E_L^{vee/wedge} (printed)",
+        "[E_L^vee,E_L^wedge]=H_L",
+        "[H_R,E_R^{vee/wedge}]=±2i E_R^{vee/wedge} (printed)",
+        "[E_R^vee,E_R^wedge]=H_R"
+      ]
+    },
+    {
+      "id": "L04-S009-REAL",
+      "original_group": "L04-S009",
+      "source_first_locators": [
+        "L04-P004-B008"
+      ],
+      "SSC_owner": "L-SSC-098",
+      "carrier": "Alternative REAL Cartan–Weyl basis, with real structure constants; ± is generator identity and eigenbranch",
+      "source_asserted_formulas": [
+        "[J3,E_±^R]=(+1) E_±^I",
+        "[J3,E_±^I]=(−1) E_±^R",
+        "[K3,E_±^R]=(±1) E_±^R",
+        "[K3,E_±^I]=(±1) E_±^I",
+        "E_±^R=(1/2)(±J1+K2)",
+        "E_±^I=(1/2)(±J2−K1)",
+        "[E_+^R,E_-^I]=[E_-^R,E_+^I]=−(1/2)J3",
+        "[E_+^R,E_-^R]=[E_+^I,E_-^I]=+(1/2)K3"
+      ]
+    }
+  ],
+  "source_internal_discrepancy": {
+    "status": "PRESERVE_AUTHOR_ASSERTION_AND_INDEPENDENT_ALGEBRAIC_OBSERVATION_SEPARATELY",
+    "source_locators": [
+      "L04-P004-B006",
+      "L04-P004-B007"
+    ],
+    "author_printed_claim": "[H_L/R,E_L/R^{vee/wedge}]=±2i E_L/R^{vee/wedge}",
+    "author_source_definitions": [
+      "H_L/R=−iJ3∓K3",
+      "[J3,E_L/R^{vee/wedge}]=±i E_L/R^{vee/wedge}",
+      "[K3,E_L^{vee/wedge}]=∓E_L^{vee/wedge}",
+      "[K3,E_R^{vee/wedge}]=±E_R^{vee/wedge}"
+    ],
+    "independent_source_internal_calculation": "Using bilinearity of the author's own J3/K3 eigenbrackets, [−iJ3−K3,E_L^s]=−i(s i)E_L^s−(−s)E_L^s=2s E_L^s; [−iJ3+K3,E_R^s]=−i(s i)E_R^s+(s)E_R^s=2s E_R^s for s=±1. Printed coefficient is ±2i, not ±2.",
+    "source_value_repaired": false,
+    "author_typos_or_physical_validity_adjudicated": false,
+    "not_a_G0_requirement_to_prove_underlying_source_math": true
+  },
+  "repair_diagnosis": {
+    "class": "ORIGINAL_SOURCE_OPERATOR_COEFFICIENT_SIGN_AND_PAIRED_BINDER_UNDERINDEXED_IN_EXISTING_SSC_SUMMARY",
+    "why_previous_audit_missed": "Existing L-SSC-098 summarized Cartan–Weyl basis, J/K root coordinates and Table1 weights without transcribing the exact original complex and real root generator rows. Existing original PDF text blocks were already indexed; missing exact in-record meaning is not evidence of missing full source research.",
+    "systematic_rule": "For every remaining exact-source group, compare the SHA-pinned ORIGINAL VISUAL formula rows against the owning SSC, checking all coefficients, complex versus real carriers, coupled alternative signs, source-modality and internal contradictions; reuse existing owner identity; run one-difference adversarial controls, then update only affected groups.",
+    "affected_existing_source_group": "L04-S009",
+    "affected_existing_ssc_id": "L-SSC-098",
+    "no_new_typed_id": true
+  },
+  "conservation": {
+    "original_six_source_units": 350,
+    "original_L04_groups": 53,
+    "original_L04_ssc_owner_ids": 34,
+    "original_L_SSC_identities": 191,
+    "changed_existing_L04_groups": [
+      "L04-S009"
+    ],
+    "unchanged_existing_L04_groups": 52,
+    "changed_existing_SSC_records": [
+      "L-SSC-098"
+    ],
+    "unchanged_whole_existing_SSC_records": 190,
+    "new_typed_SSC_ids": 0,
+    "selected_exact_L04_debt_previous": 12,
+    "selected_exact_L04_debt_now": 11
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "whole_L04_source_semantic_cold_pass": false,
+    "source_math_correctness_qualified": false,
+    "W_semantics_imported": false,
+    "cross_author_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
