@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-W-G1-W04c-failed-baseline-correction.v0.2",
+  "date": "2026-10-11",
+  "track": "W",
+  "status": "HISTORICAL_FAILED_CI_PRESERVED_METADATA_POLARITY_CORRECTED",
+  "predecessor": {
+    "path": "experiments/062/W_G1_W04C_V01_FAILED_NODE_BASELINE_0_1.json",
+    "sha": "f32da7cfaab04ec667d29f4f462df162b4bf6178",
+    "preserved_unmodified": true
+  },
+  "diagnosis": "The original v0.1 failure record incorrectly set `no_G2_or_later=false`, a metadata double-negative contradiction. This successor corrects it to true without editing its original version or changing the failed CI.",
+  "source_metadata_invalidated_in_v0_1": {
+    "field": "no_G2_or_later",
+    "incorrect_value": false,
+    "correct_value": true
+  },
+  "correct_scope": {
+    "G2_authorized": false,
+    "G3_G7_authorized": false,
+    "global_G1_complete": false,
+    "historical_Oct03_G0_complete": false,
+    "current_Author_G0_frozen": true,
+    "cold_semantic_validation_of_new_ten": false
+  },
+  "failed_run": {
+    "id": 38177970440,
+    "job_id": 114584290303,
+    "sha": "2fc96cb8cdb69ff3ad98ce2e340845137b5de5c3",
+    "conclusion": "failure",
+    "positive_baseline": false,
+    "hostile_mutations_executed": 0,
+    "qualified_hostiles": 0,
+    "reason": "Wrong Git SHA blob header terminator in v0.1 test code"
+  },
+  "corrected_run": {
+    "id": 38178062324,
+    "job_id": 114584556393,
+    "sha": "f4a7469024c8591988e52e7b5b12a8efd213f56f",
+    "conclusion": "success",
+    "source_candidate_sha": "83034d70d8ffd2bf60cb8a8686986ce942a73a25",
+    "verifier_sha": "0de4e14aaefd14a2ee2aab3f86c7195452e54b82",
+    "mechanical_positive": true,
+    "hostiles_passed": 23,
+    "hostiles_total": 23,
+    "global_G1_qualified": false
+  },
+  "no_retroactive_success": false,
+  "external_third_party_review": "NOT_PERFORMED",
+  "no_L_semantics": true
+}
