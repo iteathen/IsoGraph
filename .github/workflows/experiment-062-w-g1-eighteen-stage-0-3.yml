@@ -1,0 +1,26 @@
+name: Experiment 062 W G1 eighteen source-local convergence 0.3
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_3.json'
+      - 'experiments/062/tools/verify-w-g1-eighteen-stage-0-3.cjs'
+      - '.github/workflows/experiment-062-w-g1-eighteen-stage-0-3.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-eighteen-stage-0-3.cjs
+      - name: Qualified 18 current G1 source-local body conservation and 22 hostile cases
+        run: node experiments/062/tools/verify-w-g1-eighteen-stage-0-3.cjs
+      - name: Six original author body candidate adversarial and original frozen W G0
+        run: |
+          node experiments/062/tools/verify-w-g1-six-exact-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-qualified-stage-0-1.cjs
