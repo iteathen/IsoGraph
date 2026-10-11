@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04.p11-second-SSC-predecessor-binding-verifier-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_CI": {
+    "run_id": 38169776094,
+    "job_id": 114559758465,
+    "head_sha": "7db6b9a794547a83bc8b8c98d862d0ebfd766194",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38169776094",
+    "result": "failure",
+    "source_PDF_original_sha256_verified": true,
+    "source_p11_actual_page_sha256_verified": true,
+    "all_original_7_block_sha256_verified": true,
+    "source_original_visual_sha256_verified": true,
+    "hostiles_defined": 32,
+    "hostiles_rejected": 0,
+    "all_failures_inherited_from_one_checker_binding_inversion": true,
+    "issues": [
+      "original SSC107 claim evidence original source recoverable pointer",
+      "exact SSC predecessor, source and no freeze",
+      "current finite source global denominator and meaningful 24→22 mapped convergence",
+      "current traversal exact source-file parents and freeze open",
+      "current G0 gate source and checker SHA"
+    ],
+    "not_retrospectively_passed": true
+  },
+  "root_cause": {
+    "class": "VALIDATION_VERIFIER_PRIOR_CURRENT_SSC_INPUT_ROUTING_INVERSION",
+    "mechanism": "A string substitution during verifier v0.2 retargeting changed the oldSSC path to v0.82 then matched the substring 'SSC:' at the end of oldSSC and changed it to v0.83. The distinct current SSC key stayed incorrectly v0.82. Five dependent pin checks failed even though all current actual Git blobs match live stage gate.",
+    "prior_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-p11-Eq5_4-source-0-2.mjs",
+      "git_blob_sha": "503a2b827cc48efa7ffbc534ff6fc88d36d9e573"
+    },
+    "corrected_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-p11-Eq5_4-source-0-3.mjs",
+      "git_blob_sha": "a3bbc6afc8300aa55b99761719339746ae8cb479"
+    },
+    "correction": "Bind oldSSC exactly to original v0.82; bind SSC exactly to current v0.83. Enforce both complete key-level filename contracts at verifier startup, then independently rerun frozen-original PDF page visual, 7 source blocks, source-to-SSC/current gate hashes and all 32 hostile controls. Do not touch correct source or SSC artifacts.",
+    "current_source_claim_rewritten": false,
+    "previous_first_failed_CI_38169316874_preserved": true
+  },
+  "scope": {
+    "current_exact_SSC": "SOURCE_SEMANTIC_CENSUS_0_83.json",
+    "all_SSC_identities": 191,
+    "original_L04_locations": 53,
+    "all_original_L_location_groups": 350,
+    "mapped_original_cold_pending": 22,
+    "whole_original_source_cold_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
