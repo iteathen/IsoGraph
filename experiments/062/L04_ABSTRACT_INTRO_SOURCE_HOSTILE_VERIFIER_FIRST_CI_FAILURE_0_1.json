@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-abstract-intro-first-hostile-verifier-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "first_CI": {
+    "run_id": 38181212146,
+    "job_id": 114593971462,
+    "head_sha": "e64812f8fc4e8888677e9b8aead4cd75179665b5",
+    "conclusion": "failure",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-original-abstract-intro-source-0-1.mjs",
+    "verifier_git_blob_sha": "a4c8ce28012c0804d382d611d14ca72c7598adeb",
+    "source_original_pdf_sha256_verified": true,
+    "original_PDF_pages_SHA256_verified": 2,
+    "source_semantic_baseline_passed": true,
+    "SSC_IDs": 191,
+    "source_groups": 350,
+    "hostiles_defined": 23,
+    "hostiles_rejected": 22,
+    "hostile_exception": 1,
+    "escaped_mutation": "erase_abstract_group",
+    "failure": "TypeError: Cannot read properties of undefined (reading 'source_roles')"
+  },
+  "diagnosis": {
+    "defect": "VERIFIER_UNCONTROLLED_EXCEPTION_ON_DELETED_SOURCE_GROUP",
+    "not_source_semantic_defect": true,
+    "original_source_math_changed": false,
+    "all_prior_CI_dispositions_retained": true,
+    "fix": "Check source-group/role shape via optional chaining before dereference; exceptions remain checker failures rather than counted as successful rejection; reread frozen original PDF on corrected CI",
+    "CI_retest_reason": "1/23 adversarial mutation not safely rejected"
+  },
+  "locks": {
+    "G0_frozen": false,
+    "SSC_frozen": false,
+    "full_cold_sources": 0,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
