@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.exp062.L.G0.L04.figure-graph-first-original-reverse-baseline-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "historical_CI": {
+    "run_id": 38159001915,
+    "job_id": 114527790674,
+    "head_sha": "9d880c9b9d063e43bd6c5b87316f69b49c906e64",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38159001915",
+    "conclusion": "failure",
+    "source_original_PDF_SHA256_verified": true,
+    "source_original_pages": [
+      14,
+      16
+    ],
+    "source_original_SVG_SHA_verified": true,
+    "figure1_24_original_vertices_60_original_edges_extracted": true,
+    "figure2_192_original_vertices_192_original_edges_extracted": true,
+    "baseline_failure": [
+      "frozen original Figure1 author caption term cpt"
+    ],
+    "hostiles_defined": 50,
+    "hostiles_rejected": 0,
+    "reason_no_hostiles": "The checker deliberately gates controls on a clean baseline; the literal token comparator failed first.",
+    "do_not_reclassify_as_success": true
+  },
+  "causes": [
+    {
+      "class": "ORIGINAL_TEX_LAYOUT_SPACING_IN_SOURCE_LABEL",
+      "source_block": "L04-P014-B003",
+      "original_crosswalk_excerpt": "24 ... acted on by the CP T t Group. The CP T",
+      "issue": "Source TeX ligatures/letter spacing render CPT as CP T in pdftotext -layout although original visual and caption semantics are CPT. Original PDF sha and block hash still exact; no omission or mathematical error.",
+      "corrected_rule": "Anchor on immutable original text block SHA and accept the source-equivalent display spelling CP T or CPT via narrowly targeted lexical normalization c\\s*p\\s*t => cpt. Preserve source text/historical failure; do not weaken page/atom SHA, graph incidence, or glyph validation."
+    },
+    {
+      "class": "FIGURE_GLYPH_POLARITY_FIVE_CORNER_FLAT_TIP_UNDEREXTRACTION",
+      "original_polarity_probe": {
+        "run_id": 38159001903,
+        "head_sha": "9d880c9b9d063e43bd6c5b87316f69b49c906e64",
+        "conclusion": "success",
+        "prior_unclassified_fig1": 12,
+        "prior_unclassified_fig2": 96
+      },
+      "issue": "Marker polygons have five source corners, with 50% showing two vertices at each y-extreme; naive one-point triangle-tip test leaves these source marks UNCLASSIFIED. This is visual source-fidelity debt even after complete source edge incidences.",
+      "corrected_rule": "Preserve original five-corner source SVG polygon and classify UP/DOWN by comparing narrower horizontal width at top vs bottom. Assert source Fig1 12 up /12 down (4/4 per colored cube) and Figure2 96 up /96 down (12/12 per species), with each of 64 triality triplets of uniform source polarity. No spin/charge meaning is inferred from graphic orientation."
+    }
+  ],
+  "candidate_unchanged": {
+    "source_figure1_edges": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_FIGURE1_24_VERTEX_60_EDGE_SOURCE_CELLS_0_1.json",
+      "git_blob_sha": "e31517f9484a75f21d46de383843404b38caf0ca"
+    },
+    "source_figure2_edges": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_FIGURE2_192_VERTEX_192_EDGE_SOURCE_CELLS_0_1.json",
+      "git_blob_sha": "ba0321a49d2f016e01cfd1752bc545a11c241d70"
+    },
+    "source_packet_predecessor": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_FIGURES_SOURCE_FULL_VERTEX_EDGE_INCIDENCE_G0_0_1.json",
+      "git_blob_sha": "3d75681c05dbba0ec43f0d950208ea1e83b3a108"
+    },
+    "original_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-full-figures-source-0-1.mjs",
+      "git_blob_sha": "eb98762277d5f5832b3eba4437481001e10b84c5"
+    },
+    "L04_source_groups_remaining_open": 2,
+    "whole_six_source_cold_complete": 0,
+    "new_SSC_items_created": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
