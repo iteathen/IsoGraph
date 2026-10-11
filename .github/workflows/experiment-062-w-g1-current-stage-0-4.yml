@@ -1,0 +1,33 @@
+name: Experiment 062 W G1 current W21 source-local stage conservation 0.4
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_4.json'
+      - 'experiments/062/tools/verify-w-g1-current-stage-0-4.cjs'
+      - '.github/workflows/experiment-062-w-g1-current-stage-0-4.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-current-stage-0-4.cjs
+      - name: Exact 21 reviewed of 151 frozen W source bodies and 22 false-promotion hostiles
+        run: node experiments/062/tools/verify-w-g1-current-stage-0-4.cjs
+      - name: Original source-first W043 and W033/W113 G1 occurrence tests
+        run: |
+          node experiments/062/tools/verify-w-g1-w043-current-source-0-1.cjs
+          node experiments/062/tools/verify-w-g1-w033-w113-0-2.cjs
+      - name: Independent original W01 v2 sections 4.3 and 4.1 direct read
+        run: |
+          python3 experiments/062/tools/cold-w043-w01-original-source-0-3.py
+          python3 experiments/062/tools/cold-w033-w113-w01-original-section41-0-1.py
+      - name: Original frozen W G0 exact reciprocal and negative-claim conservation
+        run: |
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
