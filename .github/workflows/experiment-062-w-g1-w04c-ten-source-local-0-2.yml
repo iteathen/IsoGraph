@@ -1,0 +1,28 @@
+name: Experiment 062 W G1 W04c ten author source-local corrected 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/verify-w-g1-w04c-ten-source-first-0-2.cjs'
+      - '.github/workflows/experiment-062-w-g1-w04c-ten-source-local-0-2.yml'
+      - 'experiments/062/W_G1_W04C_V01_FAILED_NODE_BASELINE_0_1.json'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Syntax and exact immutable failed baseline evidence
+        run: |
+          node --check experiments/062/tools/verify-w-g1-w04c-ten-source-first-0-2.cjs
+          node -e "const a=require('./experiments/062/W_G1_W04C_V01_FAILED_NODE_BASELINE_0_1.json'); if(a.positive_baseline!==false || a.hostile_mutations_executed!==0 || a.workflow.conclusion!=='failure')process.exit(1)"
+      - name: Verify exact W04c source-local positive and 23 hostile cases
+        run: node experiments/062/tools/verify-w-g1-w04c-ten-source-first-0-2.cjs
+      - name: Verify prior exact W39 and current G0 frozen source guard
+        run: |
+          node experiments/062/tools/verify-w-g1-current-39-body-stage-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
