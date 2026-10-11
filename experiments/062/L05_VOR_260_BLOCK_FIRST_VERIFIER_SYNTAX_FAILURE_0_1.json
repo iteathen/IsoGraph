@@ -1,0 +1,46 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L05-VOR-260-block-initial-verifier-syntax-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_CI": {
+    "run_id": 38153674586,
+    "job_id": 114512124438,
+    "head_sha": "1e10b551196221aa3e76fe9f2b9243506e16f059",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38153674586",
+    "conclusion": "failure",
+    "failed_at": "node --check before verifier executed",
+    "exact_error": "SyntaxError: missing ) after argument list at line 49",
+    "cause": "Unescaped apostrophe in the single-quoted source-first diagnostic 'doesn't'",
+    "original_source_PDF_SHA256_rechecked_in_this_failed_run": false,
+    "source_semantics_cold_qualified_in_this_failed_run": false,
+    "hostiles_executed": 0,
+    "old_run_retained_as_failure": true
+  },
+  "correction": {
+    "class": "VERIFIER_SYNTAX_PRECHECK_ONLY_NO_SOURCE_OR_SSC_DEFECT",
+    "historical_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-51page-260block-primary-source-0-1.mjs",
+      "git_blob_sha": "7983208204d4f6ae0463a870e14addcd8a4c5ba0"
+    },
+    "corrected_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l05-51page-260block-primary-source-0-2.mjs",
+      "git_blob_sha": "bd309febbe2783a2d2186f8d0239e47864cff7b5"
+    },
+    "method": "Replace unescaped apostrophe in diagnostic with plain 'does not', then rerun the full original 51-page PDF SHA/260-block source re-extraction and all 30 adversarial mutations.",
+    "source_packet_or_SSC_changed_for_this_fix": false,
+    "source_frontier": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_FROZEN_VOR_260_BLOCK_SOURCE_TO_SSC_FRONTIER_0_1.json",
+      "git_blob_sha": "ae5fda4d754b52aef2ec1d74338ca10ab59315cd"
+    },
+    "semantic_inventory": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SOURCE_FIRST_REVERSE_COVERAGE_0_3.json",
+      "git_blob_sha": "2882ae2232c24d1c7d82b49efe81a448ebf68977"
+    },
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
