@@ -1,0 +1,33 @@
+name: Experiment 062 W current-author G0 final source-first preflight 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W04E_CURRENT_AUTHOR_REPLY_SOURCE_FINGERPRINT_0_1.json'
+      - 'experiments/062/tools/verify-w04e-author-reply-fingerprint-0-1.py'
+      - '.github/workflows/experiment-062-w-g0-current-author-final-preflight-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Syntax checks
+        run: |
+          node --check experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          python3 -m py_compile experiments/062/tools/verify-w-current-source-fingerprints-0-1.py
+          python3 -m py_compile experiments/062/tools/verify-w04e-author-reply-fingerprint-0-1.py
+      - name: Whole nine W source first exact original reciprocal and 29 hostile
+        run: node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+      - name: Original three pinned W arXiv paper reciprocal and 22 hostile
+        run: node experiments/062/tools/verify-w-g0-exact-reciprocal-original-index-0-1.cjs
+      - name: Fresh original author and PDF byte capture
+        run: python3 -u experiments/062/tools/capture-w-current-author-sources-0-3.py
+      - name: Six original authored bodies and two linked PDFs fingerprint and eight hostile
+        run: python3 -u experiments/062/tools/verify-w-current-source-fingerprints-0-1.py
+      - name: Separate original Woit July10 comment negative/physical scopes and eight hostile
+        run: python3 -u experiments/062/tools/verify-w04e-author-reply-fingerprint-0-1.py
