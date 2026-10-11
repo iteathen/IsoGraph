@@ -1,3 +1,11 @@
+### W G1 — W03 dated status page 17-occurrence candidate; 39/151 still qualified (2026-10-11)
+
+New [W03 original-author G1 candidate](W_G1_W03_CURRENT_AUTHOR_SOURCE_FIRST_RESULT_0_1.md) / [17-occurrence machine record](../../../experiments/062/W_G1_W03_CURRENT_AUTHOR_SOURCE_FIRST_CANDIDATES_0_1.json) represents two W03 source bodies (`W-SSC-057/058`) across Woit's distinct **2022/2023/2026** dated author revisions. It separately preserves the source's exact Standard Model symmetry assertion (not independent proof), a Fargues–Fontaine analogy (not an identity), the author-**unspecified** chiral SU(2) factor, the 2023 narrower replacement scope, and provisional 2026 chiral Wick/2D work. `W-SSC-025` stays an audit-only source revision guard, not an invented G1 semantic operation.
+
+This is **NOT cold-independent qualified**: the candidate is internally checked against 17 frozen typed author-source oracles and inverse owners, with 16/16 in-memory mutated records rejected, but no new GitHub Actions run or independent semantic reconstruction occurred. Consequently **39/151** is the *only* qualified G1 body count; the 10 W04c candidate bodies also remain mechanical-only pending cold review. The current-author G0 SSC0.70 freeze holds, historical Oct03 mutable-source G0 remains open. No G2–G7, IA/NEI/DTS/DP, synthesis, source seal or PR #70 merge.
+
+---
+
 ### W G1 — 39/151 source-local W bodies verified; complete W04b original March 9 source-local review (2026-10-11)
 
 **Stage:** the owner-authorized 2026-10-11 Woit author-source **G0 SSC0.70 FROZEN / QUALIFIED** remains unchanged. The historical October 3 target G0 remains **OPEN** for unavailable authenticated original mutable-source bytes. The distinct [W G1 stage 0.8](../../../experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_8.json) establishes exactly **39 of 151** current W source bodies locally verified, with **262 author-source relation/operation occurrence candidates**, **112 still unreviewed** (56 historical revised, 56 absent old 84-body G1). The 33 prior qualified source-local bodies and their CI/authority pins are conserved exactly; **global G1/G2/G3–G7, scientific-theory truth, W–L synthesis, track sealing and merge are NOT authorized.**
