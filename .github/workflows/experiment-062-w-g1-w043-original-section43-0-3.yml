@@ -1,0 +1,30 @@
+name: Experiment 062 W G1 W043 original W01 section43 cold source 0.3
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_W043_ORIGINAL_SECTION43_COLD_SOURCE_0_1.json'
+      - 'experiments/062/tools/verify-w-g1-w043-current-source-0-1.cjs'
+      - 'experiments/062/tools/cold-w043-w01-original-source-0-3.py'
+      - '.github/workflows/experiment-062-w-g1-w043-original-section43-0-3.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          node --check experiments/062/tools/verify-w-g1-w043-current-source-0-1.cjs
+          python3 -m py_compile experiments/062/tools/cold-w043-w01-original-source-0-3.py
+      - name: Cold independent original W01 v2 author source separate scopes and eight hostiles
+        run: python3 experiments/062/tools/cold-w043-w01-original-source-0-3.py
+      - name: W043 exact frozen original-source inverse and 20 hostile guards
+        run: node experiments/062/tools/verify-w-g1-w043-current-source-0-1.cjs
+      - name: Current G0 source/full W census and unchanged freeze
+        run: |
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

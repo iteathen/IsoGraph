@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062.W.G1.W043.v02.unsafe_paragraph_start_assumption.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "exact_failed_run": {
+    "run_id": 38153578897,
+    "job_id": 114511858285,
+    "commit_sha": "95f4bfa09bd94a91ce1def9fb6f035160a8030fd",
+    "conclusion": "FAILED"
+  },
+  "cause": "Versioned W01 arXiv HTML extraction yielded the correct original second scope with preceding paragraph lead-in, so strict startswith was invalid as a test of source fidelity.",
+  "successor_correction": "Use unique original author source sentence marker to isolate two non-overlapping section 4.3 source semantic scopes; verify full literal tokens, order and negatives, eight hostile source edits; do not invent a new source.",
+  "prior_failures_stay_failed": [
+    38153444885,
+    38153578897
+  ],
+  "original_author_source_target": "arXiv:2104.05099v2",
+  "W_current_G0_frozen_unchanged": true,
+  "G1_current_local_candidate_not_yet_qualified": true,
+  "G2_blocked": true
+}
