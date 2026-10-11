@@ -1,0 +1,23 @@
+name: "Experiment 062 W05 original 16-page source-first G0 audit 0.1"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W05_G0_INDEPENDENT_16PAGE_SOURCE_FIRST_PDF_AUDIT_0_1.json"
+      - "experiments/062/tools/verify-w05-independent-16page-original-pdf-g0-0-1.cjs"
+      - ".github/workflows/experiment-062-w05-independent-16page-sourcefirst-0-1.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w05_g0_independent_original_source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Validate original-source-first W05 PDF scope and fixed source semantics
+        run: |
+          node --check experiments/062/tools/verify-w05-independent-16page-original-pdf-g0-0-1.cjs
+          node experiments/062/tools/verify-w05-independent-16page-original-pdf-g0-0-1.cjs
