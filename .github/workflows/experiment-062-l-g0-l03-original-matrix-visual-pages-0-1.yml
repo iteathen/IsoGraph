@@ -1,0 +1,29 @@
+name: Experiment 062 L G0 L03 frozen original matrix visual fidelity 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l03-original-matrix-visual-pages-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L03-visual-original-matrix-pages:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Render exact SHA-pinned frozen L03 v1 matrix and equation pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --retry 3 --retry-delay 1 -fLsS https://arxiv.org/pdf/1006.4908v1 -o /tmp/l03-v1.pdf
+          printf '603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e  /tmp/l03-v1.pdf\n' | sha256sum -c
+          pdfinfo /tmp/l03-v1.pdf | grep -E '^Pages: +14$'
+          for p in 2 3 4 5 6 7 8 10 11; do
+            pdftoppm -f "$p" -l "$p" -singlefile -scale-to 1500 -jpeg -jpegopt quality=66 /tmp/l03-v1.pdf "/tmp/L03-ORIGINAL-p${p}" >/dev/null 2>&1
+            echo "L03_ORIGINAL_FROZEN_V1_PAGE_${p}_JPEG_SHA256=$(sha256sum "/tmp/L03-ORIGINAL-p${p}.jpg" | cut -d' ' -f1)"
+            echo "L03_ORIGINAL_FROZEN_V1_PAGE_${p}_JPEG_BEGIN"
+            base64 -w0 "/tmp/L03-ORIGINAL-p${p}.jpg"
+            echo
+            echo "L03_ORIGINAL_FROZEN_V1_PAGE_${p}_JPEG_END"
+          done
