@@ -1,3 +1,9 @@
+### W G1 — W01 original Spin(4)/real-form source-local candidate (2026-10-11)
+
+[W01 versioned-author §§2.1–2.2 packet](../../../experiments/062/W_G1_W01_SPIN_REAL_FORMS_SOURCE_FIRST_CANDIDATES_0_1.json) and [research review](W_G1_W01_SPIN_REAL_FORMS_SOURCE_FIRST_RESULT_0_1.md) record **13 source-local G1 occurrence candidates across W-SSC-027/028**. The source's Euclidean two independent SU(2) actions, sign-pair double-cover quotient, Minkowski inverse-adjoint coupling, split real-matrix action, all three distinct determinant signatures, common complexification without real-form identification, and twistor point-relative quotient survive exact local source checks. Symbolic determinant/sign-pair diagnostics and **24/24 internally generated hostile mutation rejections** passed, but there is **no independent cold G1 source review or GitHub Actions CI** for this packet. It is **not qualified**: current-author G0 remains frozen at 151, W G1 **39/151** is unchanged, and the 2 W03 + 10 W04c candidates remain pending. Historical October 3 G0 still OPEN; no G2–G7, IA/NEI/DTS/DP, W–L synthesis, source seal, or PR #70 merge.
+
+---
+
 ### W G1 — W03 dated status page 17-occurrence candidate; 39/151 still qualified (2026-10-11)
 
 New [W03 original-author G1 candidate](W_G1_W03_CURRENT_AUTHOR_SOURCE_FIRST_RESULT_0_1.md) / [17-occurrence machine record](../../../experiments/062/W_G1_W03_CURRENT_AUTHOR_SOURCE_FIRST_CANDIDATES_0_1.json) represents two W03 source bodies (`W-SSC-057/058`) across Woit's distinct **2022/2023/2026** dated author revisions. It separately preserves the source's exact Standard Model symmetry assertion (not independent proof), a Fargues–Fontaine analogy (not an identity), the author-**unspecified** chiral SU(2) factor, the 2023 narrower replacement scope, and provisional 2026 chiral Wick/2D work. `W-SSC-025` stays an audit-only source revision guard, not an invented G1 semantic operation.
