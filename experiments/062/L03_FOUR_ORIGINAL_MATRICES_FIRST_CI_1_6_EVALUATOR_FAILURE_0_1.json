@@ -1,0 +1,59 @@
+{
+  "schema": "isograph.exp062.L.G0.L03.four-original-matrix-first-CI-source-coefficient-evaluator-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "authority_effect": "NEGATIVE_EVIDENCE_ONLY",
+  "semantic_authority": false,
+  "failed_CI": {
+    "run_id": 38100555833,
+    "job_id": 114355440671,
+    "head_sha": "e7c7a4bd22f383e780196d1a243968eb0885da9a",
+    "conclusion": "failure",
+    "hostiles_defined": 21,
+    "hostiles_rejected": null,
+    "tests_reached": false,
+    "exact_stack": "Error: UNKNOWN_ORIGINAL_SOURCE_COEFFICIENT_1/6; at coeff (verifier line 35), fromMap line 113, sourceMatrixArithmetic line 120, check line 148",
+    "original_PDF_SHA256_qualified_in_this_failed_run": false
+  },
+  "original_scope": {
+    "frozen_source": "L03",
+    "revision": "arXiv:1006.4908v1",
+    "original_PDF_sha256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "packet_path": "research/woit-lisi-isomorph/lisi/LISI_L03_ORIGINAL_FOUR_REMAINING_MATRIX_TABLES_SOURCE_G0_0_1.json",
+    "packet_git_blob_sha": "f2dfaf59542331ed65852b3d8e6dcf06f93a49eb",
+    "source_formula_groups": [
+      "L03-S015",
+      "L03-S017",
+      "L03-S019",
+      "L03-S021"
+    ],
+    "source_paper_original_revision_not_changed": true
+  },
+  "root_cause": {
+    "class": "VERIFIER_EXACT_ORIGINAL_SOURCE_COEFFICIENT_DOMAIN_INCOMPLETE",
+    "why": "Original frozen L03 Eq(3.3) hypercharge coefficient 1/6 appears in three 64-real positive-chiral bivector terms, and an Eq(3.4) source decomposition uses it. The verifier's coefficient dispatch recognized i/6 but omitted the real 1/6 value, so its baseline crashed before original-PDF replay or hostile rejection.",
+    "systemic_repair": "Derive and cover every distinct coefficient literal from all four original source tables before invoking matrix arithmetic, require exact source coefficient-domain conservation and unknown-value fail-closed semantics. Do not alter author table coefficients to fit the verifier.",
+    "adversarial_test_repair": "Add an invalid source coefficient negative control and check that it is rejected deterministically; avoid masking unrelated code errors as pass."
+  },
+  "independent_math_preflight_in_isolated_eval": {
+    "four_source_packet_frozen_rows_not_edited": true,
+    "source_18_Eq2_8_vs_Eq3_3_positive_chiral_R64_Matrices_max_entry_disagreement": 0,
+    "Cl11_3_14_gamma_pair_anticommutation_failures": 0,
+    "Pati_Salam_21_source_basis_rank": 21,
+    "hypercharge_decomposition_max_abs_residual": 1.1102230246251565e-16,
+    "scope": "Internal source-chosen algebraic consistency, not theorem proving or whole source fidelity qualification",
+    "not_historical_GitHub_CI_PASS": true
+  },
+  "qualification_boundary": {
+    "G0_open": true,
+    "preflight_failed_run_retained_as_failure": true,
+    "SSC_0_67_191_IDs_unmodified": true,
+    "current_four_L03_formula_groups_unverified": 4,
+    "other_L03_43_source_groups_preserved": true,
+    "original_author_physics_assertions_unproved": true,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
