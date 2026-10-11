@@ -1,0 +1,19 @@
+name: Experiment 062 W G0 current authored-content normalization probe 0.3
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/capture-w-current-author-sources-0-3.py'
+      - '.github/workflows/experiment-062-w-g0-current-author-byte-probe-0-3.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  capture_hashes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Source syntax and normalized author body extraction
+        run: |
+          python3 -m py_compile experiments/062/tools/capture-w-current-author-sources-0-3.py
+          python3 -u experiments/062/tools/capture-w-current-author-sources-0-3.py
