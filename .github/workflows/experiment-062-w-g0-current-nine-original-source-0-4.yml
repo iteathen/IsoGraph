@@ -1,0 +1,31 @@
+name: Experiment 062 W G0 nine current originals inverse qualification 0.4
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json'
+      - 'experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs'
+      - 'experiments/062/tools/verify-w-current-source-fingerprints-0-1.py'
+      - '.github/workflows/experiment-062-w-g0-current-nine-original-source-0-4.yml'
+      - 'research/woit-lisi-isomorph/woit/W_CURRENT_AUTHOR_SOURCE_SCOPE_2026_10_11_0_1.json'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          node --check experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          python3 -m py_compile experiments/062/tools/verify-w-current-source-fingerprints-0-1.py
+      - name: Full current author source-first provenance and 29 hostile controls
+        run: node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+      - name: Three versioned W originals exact 22 hostile controls
+        run: node experiments/062/tools/verify-w-g0-exact-reciprocal-original-index-0-1.cjs
+      - name: Capture current live W sources without redistributing third party bytes
+        run: python3 -u experiments/062/tools/capture-w-current-author-sources-0-3.py
+      - name: Compare six W author bodies plus two exact PDFs and eight hostile controls
+        run: python3 -u experiments/062/tools/verify-w-current-source-fingerprints-0-1.py

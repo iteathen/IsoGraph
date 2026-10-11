@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062-w-g0-nine-source-v03-aggregate-provenance-hostile-escape.v0.1",
+  "track": "W",
+  "run_id": 38122111843,
+  "job_id": 114418807123,
+  "commit_sha": "6341bed0a82e13c8efac95c64abe002ba5a7a2b3",
+  "conclusion": "FAILURE",
+  "positive_baseline_passed": true,
+  "hostiles_executed_until_failure": 27,
+  "escaped_adversary": "remove original source conservation proof",
+  "cause": "The verifier checked the original source file pinned SHA but did not assert the aggregate inventory's claimed pointer SHA. The hostile changed the aggregate pointer only and the unmutated file still checked clean.",
+  "repair": "Fresh v0.4 verifies that every aggregate source reference path and SHA exactly matches independently pinned original evidence file paths/hashes, then still requires full reciprocal source coverage and stage guards.",
+  "no_semantic_omission_claimed": true,
+  "original_oct03_target_open": true,
+  "reclassified_as_pass": false,
+  "prior_failed_runs_kept": [
+    38121919671,
+    38122045839
+  ]
+}
