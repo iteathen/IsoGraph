@@ -1,0 +1,148 @@
+{
+  "schema": "isograph.track-L.G0.L04-original-p12-Dirac-biquaternion-source-matrix.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_original": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "url": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "bytes": 348134,
+    "pages": 17
+  },
+  "source_first_evidence": {
+    "original_17_page_primary_visual_run": 38120301520,
+    "original_p12_visual_job_id": 114413453012,
+    "original_p12_p13_exact_reextraction_run": 38148126736,
+    "original_p12_p13_exact_reextraction_job_id": 114495675532,
+    "original_p12_p13_probe_head_sha": "2b5a494433bc6ab20f13b662cdc32508c20c7fb1",
+    "original_layout_manifest": {
+      "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_FROZEN_ORIGINAL_LAYOUT_SOURCE_FIRST_MANIFEST_0_1.json",
+      "git_blob_sha": "1ff8ff04547a938b19c7530de7741c3f1eec54a9"
+    },
+    "source_block_SHA256": [
+      [
+        "L04-P012-B001",
+        "1b5f663ffd4df6cb796465ca6a0de1825b20e7fc84d9ea7c1ee3b9e24689d3b9"
+      ],
+      [
+        "L04-P012-B002",
+        "94f5aa7c86b394d7bf93827f2ac6f78989f85d5f864636ce13cf3242256ad6ed"
+      ],
+      [
+        "L04-P012-B003",
+        "ed1618f7ceeaa94f1c6ba0480e1aa091588891443c399f7cf21a72720ac846a1"
+      ],
+      [
+        "L04-P012-B004",
+        "ae34bf236f92eb63d5a852dc2ccde34c1b1d4d1396d9d7a5ecccd2d848026151"
+      ],
+      [
+        "L04-P012-B005",
+        "4ce0d30a85d9b5a367ff8a934505a705891fc1124eb08e4e302e8bd26cf7a4df"
+      ],
+      [
+        "L04-P012-B006",
+        "bc16f9c50b2b681a63209f28000a2c141ebde3d1684bea53c0dd6ffbc4df796e"
+      ]
+    ],
+    "original_page_location": "§6 printed p12 (PDF page 12)",
+    "source_scope_is_only_original_author_L04": true
+  },
+  "original_assertions": [
+    {
+      "source_location": "L04-S030",
+      "SSC": "L-SSC-111",
+      "source_atoms": [
+        "L04-P012-B002",
+        "L04-P012-B003"
+      ],
+      "semantic_role": "Original Dirac + charge conjugation -> 4x2 chiral matrix rearrangement, not a change in physical degrees of freedom and not a general theorem of equivalence.",
+      "printed": [
+        "Psi=(Psi_1,Psi_2,Psi_3,Psi_4)^T",
+        "Psi^C=i gamma_2 (Psi)^* = (-Psi_4^*,Psi_3^*,Psi_2^*,-Psi_1^*)^T",
+        "Psi_Q = [[Psi_1,-Psi_4^*],[Psi_2,Psi_3^*],[Psi_3,Psi_2^*],[Psi_4,-Psi_1^*]] ~ [psi_HL;psi_HR]"
+      ],
+      "source_scope_nonassertion_guard": "Source explicitly says all original Dirac spinor degrees of freedom are rearranged into left/right chiral Dirac biquaternions. Audit inference: this matrix alone does not assert an additional fourth fermion generation, and the guard must not be mistaken for a verbatim source formula. Previous guard wording: psi_HL and psi_HR each carry the author's chiral Dirac degrees of freedom after source rearrangement, NOT independent fourth/new fermion generations."
+    },
+    {
+      "source_location": "L04-S031",
+      "SSC": "L-SSC-112",
+      "source_atoms": [
+        "L04-P012-B003",
+        "L04-P012-B004",
+        "L04-P012-B005"
+      ],
+      "semantic_role": "Exact 2x2 Pauli and biquaternion carrier with source right-chiral relation and four ordered e_mu coefficient claims as printed.",
+      "printed": [
+        "e_0 ~ sigma_0; e_pi ~ -i sigma_pi (pi=1,2,3); e_mu in H; psi_HL = psi_HL^mu e_mu in C tensor H",
+        "psi_QL = [[Psi_1^R+i Psi_1^I,-Psi_4^R+i Psi_4^I],[Psi_2^R+i Psi_2^I,Psi_3^R-i Psi_3^I]]",
+        "psi_QR = i sigma_2 (psi_QL)^* sigma_1 ~ psi_HR = i (psi_HL)^* e_3",
+        "psi_HL coefficient e_0 = (1/2)(Psi_1^R+Psi_3^R -i Psi_1^I+i Psi_3^I) [as printed]",
+        "psi_HL coefficient e_1 = (1/2)(Psi_2^I+Psi_4^I +i Psi_2^R-i Psi_4^R) [as printed]",
+        "psi_HL coefficient e_2 = (1/2)(-Psi_2^R-Psi_4^R +i Psi_2^I-i Psi_4^I) [as printed]",
+        "psi_HL coefficient e_3 = (1/2)(Psi_1^I+Psi_3^I +i Psi_1^R-i Psi_3^R) [as printed]"
+      ],
+      "source_equivalence_kind": "The original uses ~ for matrix/quaternion representation, not a proven universal equality. Do not silently replace its source-specific map by an unstated conventional identification."
+    }
+  ],
+  "adjacent_original_p12_source_claims_not_promoted_by_this_packet": {
+    "S028_S029": "Author distinguishes a mathematically admissible order-48 group with t' commuting C from the conditional physically motivated noncommuting-C model. Do not make this packet certify those sections or a Standard Model prediction.",
+    "S032_S033": "Further complex, quaternionic, Hermitian conjugations and invariant bilinear formulas appear at original p12–13; old SSC113/114 retain their source semantic owner. The exact cell-level global cold reconstruction of those separate source groups is not claimed.",
+    "S034_S035": "Original p13 C/P/T and t group actions remain separate original source identities; no claims of physical proof or group-theoretic completion imported."
+  },
+  "source_internal_distinction_evidence": {
+    "status": "ORIGINAL_PRINT_PRESERVED_SEPARATELY_FROM_CONDITIONAL_READER_CHECK",
+    "source_locators": [
+      "L04-P012-B003",
+      "L04-P012-B004",
+      "L04-P012-B005"
+    ],
+    "original_printed_quaternion_coefficients_not_silently_corrected": true,
+    "reader_test_assumptions": "If ~ is read as literal equality, Pauli e0=I and e_pi=-i sigma_pi with ordinary complex coefficients, the original source p12 two-by-two psi_QL matrix can be numerically compared with its four printed e_mu coefficients.",
+    "conditional_diagnostic": "Choose Psi_1=i with Psi_2=Psi_3=Psi_4=0. The printed psi_QL matrix becomes diag(i,0); taking the printed e0 and e3 coefficients with e3=-i sigma3 gives diag(-i,0). The discrepancy is conditional on interpreting the author's ~ as that literal matrix equality; no unstated conversion or typo correction is imposed.",
+    "asserts_definite_author_error": false,
+    "requires_theory_proof_for_G0": false,
+    "qualifier": "Keep the original exact printed meaning and the observed conditional mismatch separate; no claim about physical validity or a uniquely intended map."
+  },
+  "methodology_correction": {
+    "class": "GENERIC_CHIRAL_CARRIER_SUMMARY_OMITTED_ORIGINAL_MATRIX_CELL_ORDER_AND_COMPLEX_SIGNS",
+    "prior_failure": "Prior SSC111/112 named Dirac-to-biquaternion rearrangement and Pauli realization without the exact charge-conjugate component order, full 4x2 carrier, 2x2 left chiral matrix, right carrier operation, and four signed source e_mu coefficient roles.",
+    "prevent_repeat": "Audit each original displayed matrix with row/column identity, complex conjugation, i signs, +/- alternatives, source-specific ~ versus = and implied carrier. Reuse existing typed SSC owners and independent source-block SHA + original PDF visual, preserve adjacent uncertified mathematics as OPEN rather than creating duplicate SCHEMA or QU.",
+    "new_typed_records_justified": 0,
+    "do_not_treat_analyst_guard_as_original_formula": true
+  },
+  "conservation": {
+    "frozen_L_sources": 6,
+    "source_groups_all": 350,
+    "original_L04_groups": 53,
+    "source_current_L04_SSC_roots": 34,
+    "all_L_SSC_identities": 191,
+    "changed_L04_groups": [
+      "L04-S030",
+      "L04-S031"
+    ],
+    "other_original_L04_groups_unchanged": 51,
+    "changed_existing_L_SSC": [
+      "L-SSC-111",
+      "L-SSC-112"
+    ],
+    "unchanged_existing_L_SSC_items": 189,
+    "new_L_SSC_ids": 0,
+    "current_L04_selected_exact_group_backlog_prior": 4,
+    "current_L04_selected_exact_group_backlog_after_scoped_review": 2,
+    "source_scope_nonassertion_guard_separated_from_author_formula": true
+  },
+  "locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "whole_six_original_cold_sources_completed": 0,
+    "whole_L04_original_cold_complete": false,
+    "no_cross_author_import": true,
+    "source_truth_proof_not_required": true,
+    "PR70_merge_authorized": false
+  }
+}
