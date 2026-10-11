@@ -1,0 +1,84 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04.original-biquaternion-first-original-source-verifier-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "historical_first_CI": {
+    "run_id": 38150257596,
+    "job_id": 114502056407,
+    "head_sha": "4fd82969ae9b33ee7512b7c0522784949acb158e",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38150257596",
+    "conclusion": "failure",
+    "original_PDF_SHA256_verified": true,
+    "original_p12_p13_source_pages_verified": [
+      12,
+      13
+    ],
+    "historical_reported_blocks": 15,
+    "actual_frozen_p12_p13_blocks": 16,
+    "hostiles_defined": 32,
+    "hostiles_rejected": 0,
+    "baseline_failures": [
+      "independent complete page12/13 original layout partition",
+      "existing original source first S031 p13→p12 locator bug repaired",
+      "complete source-specific exact signed quaternion body in SSC112: −Ψ4^R+iΨ4^I"
+    ],
+    "failed_not_promoted": true
+  },
+  "failure_analysis": [
+    {
+      "class": "VERIFIER_LAYOUT_DENOMINATOR_STALE",
+      "source_first_evidence": {
+        "p12_manifest_blocks": 7,
+        "p13_manifest_blocks": 9,
+        "p12_matched_semantic_formula_blocks": 6,
+        "excluded_original_atom": "L04-P012-B007",
+        "excluded_role": "DEFENSIBLE_NONLOAD_PAGE_FURNITURE",
+        "other_exclusion": "L04-P013-B009 (original page furniture)"
+      },
+      "mechanism": "Checker expected 6 page12 blocks as entire page denominator, but original frozen page has 7 including non-load-bearing folio. Prior six block index was formula-target-only, not source partition completeness.",
+      "cross_class_remedy": "Verify exact entire original page layout partition separately from claim-bounded source formula subindices, and check page furniture disposition against independently pinned original 109-block crosswalk; never count formula-subindices as a full-page denominator."
+    },
+    {
+      "class": "VERIFIER_STALE_FIELD_NAME",
+      "actual_field": "corrected_prior_S031_locator_p13_to_original_p12",
+      "stale_expected": "corrected_original_p12_source_locator_for_S031",
+      "mechanism": "Checker mistakenly used a new field not present in current source-first inventory; actual source locator already correctly states §6 p12.",
+      "remedy": "Validate the current exact inventory field, source group identity and recovered printed-page location, not an invented counter."
+    },
+    {
+      "class": "VERIFIER_TYPED_SIGN_GLYPH_DISAGREEMENT",
+      "source_literal": "negative Ψ4 real component in L04 §6 left ψQL top-right matrix cell",
+      "source_packet_formula": "-Psi_4^R+i Psi_4^I",
+      "SSC_body_literal": "-Ψ4^R+iΨ4^I",
+      "stale_checker_literal": "−Ψ4^R+iΨ4^I",
+      "mechanism": "Only the typography of hyphen-minus U+002D vs Unicode minus U+2212 differs; sign polarity and original source coefficient are preserved. Do not convert an evidence-index display mismatch into a source-semantic omission.",
+      "remedy": "Check the actual signed SSC literal as encoded, enforce exact author source expression independently in the source packet, and use a one-difference plus-for-minus adversary."
+    }
+  ],
+  "current_repair": {
+    "source_semantics_changed": false,
+    "SSC_identities_preserved": 191,
+    "source_location_groups_preserved": 350,
+    "original_L04_selected_exact_groups_post_packet": 2,
+    "source_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION6_BIQUATERNION_MATRIX_SOURCE_G0_0_1.json",
+      "git_blob_sha": "a84480d70a63285b85aa4db43227efd90a5c3410"
+    },
+    "original_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section6-biquaternion-matrix-0-1.mjs",
+      "git_blob_sha": "8b1470e3278f5c79f6281ea1dec2d42aa3616bf2"
+    },
+    "replacement_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section6-biquaternion-matrix-0-2.mjs",
+      "git_blob_sha": "bceba3fb858043944654a4cb41504022ce682be5"
+    },
+    "new_adversaries": "Explicit original p12/p13 page-furniture role mutation and real-cell minus→plus SSC mutation (35 total)",
+    "lawful_stage": "G0",
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR_merge_authorized": false
+  }
+}
