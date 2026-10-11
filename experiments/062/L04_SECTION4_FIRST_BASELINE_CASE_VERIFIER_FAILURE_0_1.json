@@ -1,0 +1,49 @@
+{
+  "schema": "isograph.exp062.L.G0.L04.section4-first-source-verifier-baseline-case-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "complete_whole_L_frozen_original_source_reviews": 0
+  },
+  "semantic_authority": false,
+  "historical_failure": {
+    "run_id": 38147522245,
+    "job_id": 114493886934,
+    "head_sha": "e933eb9f8779618bf2a80a98400b7666aa8e0218",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38147522245",
+    "old_verifier_path": "experiments/062/tools/verify-l-g0-l04-original-section4-quantum-commutators-0-1.mjs",
+    "old_verifier_git_blob_sha": "46e03df6a6be9d6f99ccb33a013f4244e39480d0",
+    "actual_baseline_error": "finite source spinor J/K and quantum Fock operator nonidentity",
+    "original_PDF_SHA256_verified": true,
+    "original_pages_reextracted": [
+      8,
+      9
+    ],
+    "original_text_blocks_reextracted_and_sha_checked": 16,
+    "original_32_QFT_commutator_source_rows_indexed": true,
+    "baseline_passed": false,
+    "hostiles_defined": 59,
+    "hostiles_rejected": 0,
+    "not_qualification_evidence": true,
+    "failed_result_never_reclassified": true
+  },
+  "cause": {
+    "failure_class": "VERIFIER_TEXTUAL_CASE_CONTRACT_MISMATCH_NOT_SOURCE_FIDELITY",
+    "source_packet_path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION4_LORENTZ_COMMUTATORS_G0_0_1.json",
+    "source_packet_git_blob_sha": "c0961fe70b89b0480886de991ce5f9652b7e304e",
+    "actual_preserved_original_spinor_text": "anti-Hermitian in finite spinor representation",
+    "incorrect_verifier_expected": "ANTI-HERMITIAN",
+    "finding": "The byte-pinned source packet is correct. The first G0 verification demanded an uppercase textual spelling rather than the preserved original source record's anti-Hermitian convention. This is an acceptance harness string mismatch, not missing original source research.",
+    "repair": "Replace the one verifier expected substring with the source packet exact string and retain source operator roles and all source hashes. Rerun valid baseline before scoring all hostiles, never weaken source scope.",
+    "corrected_verifier_path": "experiments/062/tools/verify-l-g0-l04-original-section4-quantum-commutators-0-2.mjs",
+    "corrected_verifier_git_blob_sha": "fb468fa1612ce8c47f46e7d751b8fb4d1f57aebd",
+    "source_semantics_unchanged": true,
+    "SSC_identity_count_unchanged": 191,
+    "L04_original_source_group_count_unchanged": 53
+  }
+}
