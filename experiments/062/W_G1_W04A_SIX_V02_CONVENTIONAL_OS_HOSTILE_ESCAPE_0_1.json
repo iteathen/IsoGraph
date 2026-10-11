@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-W-G1-W04a-six-v02-OS-mechanism-adversarial-escape.v0.1",
+  "track": "W",
+  "exact_failed_run": {
+    "run_id": 38168824307,
+    "job_id": 114556916730,
+    "head_sha": "02de30d6c6e09cbdfa0cb6d62d87a0932b7ff957",
+    "conclusion": "FAILURE",
+    "original_author_source_cold_pass": true,
+    "positive_G1_baseline_pass": true
+  },
+  "escaped_mutation": "collapse conventional OS into proposed",
+  "cause": "Validator checked that the conventional OS added a left-handed field, but did not independently assert the mechanism provenance CONVENTIONAL_OS. Mutating its label to WOIT_RIGHT_ONLY therefore escaped.",
+  "correction": "Distinct v0.3 requires exact conventional OS mechanism plus opposite-chirality and second-doubling guards, preserving source's separation of baseline and proposal.",
+  "no_SSC_changes": true,
+  "previous_failed_CIs_remain_failed": [
+    38168733900,
+    38168824307
+  ],
+  "G1_still_partial": true,
+  "G2_blocked": true
+}
