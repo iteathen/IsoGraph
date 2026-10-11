@@ -1,0 +1,57 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04.original-CPT-unitarity-word-boundary-hostile-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "historical_source_CI": {
+    "run_id": 38165915822,
+    "job_id": 114548321286,
+    "head_sha": "8366c208ac57c7bce1b497533d9d20e3d839aa7f",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38165915822",
+    "conclusion": "failure",
+    "frozen_original_PDF_SHA256_verified": true,
+    "original_p10_13_layout_block_SHA_passed": true,
+    "original_p10_primary_visual_crop_SHA_passed": true,
+    "valid_source_coverage_baseline": true,
+    "hostiles_defined": 34,
+    "hostiles_rejected": 32,
+    "escaped": [
+      "flip_C_Fock_unitarity",
+      "wrong_T_spinor_unitarity"
+    ],
+    "original_CI_not_reclassified": true
+  },
+  "systematic_method_defect": {
+    "class": "SOURCE_MODALITY_QUALIFIER_VERIFIER_SUBSTRING_CONFLATION",
+    "why": "The previous source validator tested source_modality.includes('UNITARY') to certify exact author C/Fock and T/spinor modality. ANTIUNITARY contains UNITARY as a substring, so reversing either carrier's polarity evaded the validator although source equation and source-index data were intact.",
+    "potential_other_source_effect": "Every source-traversal source modality verifier relying on substring inclusion of UNITARY may fail to detect inverted signed polarity; replace with whole-token modality verification while separately matching carrier/role.",
+    "independent_frozen_original_source": "L04 arXiv:2407.02497v2 §5 p10 C and T finite-spinor versus Fock-space original source operations, not general physics theorem.",
+    "source_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION5_C_P_T_QFT_SIGNED_SOURCE_G0_0_1.json",
+      "git_blob_sha": "8fcc6f1edfc30786eade93ae71d3ea2330adae66"
+    },
+    "old_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section5-CPT-source-0-2.mjs",
+      "git_blob_sha": "bf864a5059f0053de09bcb5d3097385a7cd650bd"
+    },
+    "corrected_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section5-CPT-source-0-3.mjs",
+      "git_blob_sha": "3e2d3a0aad02459e02c19025c0600a47528471d7"
+    },
+    "fix": "Match whole UNITARY and ANTIUNITARY words with lexical boundaries and source-specific C/T carrier-owner rules, reject both wrong polarity mutations. Require full 34 mutation suite on the new exact commit.",
+    "new_math_claims": 0,
+    "new_SSC_IDs": 0
+  },
+  "conservation": {
+    "all_frozen_L_source_units": 6,
+    "original_source_location_units": 350,
+    "all_L_SSC_IDs": 191,
+    "other_track_modified": false,
+    "source_packet_or_SSC_changed_for_verifier_fix": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "whole_original_semantic_cold_source_completed": 0
+  }
+}
