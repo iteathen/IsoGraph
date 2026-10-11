@@ -1,0 +1,156 @@
+{
+  "schema": "isograph.track-L.G0.L04-frozen-original-quantized-field-and-adjoint-column-row.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "source_semantic_authority": false,
+  "frozen_source": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "url": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "PDF_byte_count": 348134,
+    "PDF_pages": 17,
+    "printed_page": 8,
+    "pdf_page_zero_based": 7,
+    "original_extracted_page_SHA256": "f24a077980241cc170f0941f4ac3ac1bb35b961f2bb10c386f93997a3a237b8a"
+  },
+  "frozen_visual_evidence": {
+    "run_id": 38120301520,
+    "source_chunk_job_id": 114413452988,
+    "original_head_sha": "91401ae8b82806779aa5c0437c751c572c88b000",
+    "overall_conclusion": "success",
+    "all_five_original_page_chunk_jobs_passed": true,
+    "source_p8_visual_SHA256": "7ea9fdefd2492f307b29a1118329e81285c301311a18eb7cc86be887efc4b003",
+    "source_p8_visual_PNG_bytes": 297592,
+    "all_original_17_pages_visual_log_recovered": true,
+    "whole_PDF_cold_semantic_qualification_passed": false
+  },
+  "original_source_text_blocks": [
+    {
+      "source_atom_id": "L04-P008-B002",
+      "original_extracted_line_span": [
+        3,
+        13
+      ],
+      "original_source_block_SHA256": "2cb5f103d8acc0c3457f82aa69000ff6395f6884270d4e67f9f3e58c1842cdfe"
+    },
+    {
+      "source_atom_id": "L04-P008-B003",
+      "original_extracted_line_span": [
+        15,
+        25
+      ],
+      "original_source_block_SHA256": "68f3ff1bbc5e929bf89ec0078efa4fc3f23de8ac2ca5a08773fb5ee88f21fc96"
+    },
+    {
+      "source_atom_id": "L04-P008-B004",
+      "original_extracted_line_span": [
+        27,
+        51
+      ],
+      "original_source_block_SHA256": "66cab51b9aa5aaeb402f9350a9f59da02fc80f8a86590b80f730bc921800671f"
+    },
+    {
+      "source_atom_id": "L04-P008-B005",
+      "original_extracted_line_span": [
+        54,
+        61
+      ],
+      "original_source_block_SHA256": "3534705d92d1aefe7878213228dea2e3dd4b700213824d9b7c6918f84e6b1cd1"
+    }
+  ],
+  "source_claims": [
+    {
+      "original_source_group": "L04-S016",
+      "printed_equation": "(4.1)",
+      "source_original_page": 8,
+      "existing_SSC_owner": "L-SSC-102",
+      "blocks": [
+        "L04-P008-B002",
+        "L04-P008-B004"
+      ],
+      "semantics": "Quantum massless Dirac field: a_p annihilates a particle and b_p† creates an antiparticle. General momentum integral sums over original spin branch, and the original four-component z-restricted column uses unaltered negative versus positive z momentum, wedge/vee and component ordering.",
+      "source_asserted_formulas": [
+        "Psi_hat(x)=integral[d^3p/((2pi)^3(2E))](a_hat_p^{wedge/vee} u_p^{wedge/vee} exp(-i p_mu x^mu)+b_hat_p^{wedge/vee dagger} v_p^{wedge/vee} exp(+i p_mu x^mu))",
+        "restrict longitudinal modes p_z = +E or -E; +z/-z momentum subscript ties to exp(∓iE(t∓z))",
+        "Eq4.1 column component 1: a_hat_-^wedge exp(-iE(t+z)) - b_hat_-^{vee dagger} exp(+iE(t+z))",
+        "Eq4.1 column component 2: a_hat_+^vee exp(-iE(t-z)) + b_hat_+^{wedge dagger} exp(+iE(t-z))",
+        "Eq4.1 column component 3: a_hat_+^wedge exp(-iE(t-z)) + b_hat_+^{vee dagger} exp(+iE(t-z))",
+        "Eq4.1 column component 4: a_hat_-^vee exp(-iE(t+z)) - b_hat_-^{wedge dagger} exp(+iE(t+z))"
+      ],
+      "positive_controls_source_scope": [
+        "four ordered column components not four independent equations",
+        "negative z momentum must carry t+z and positive z carries t-z",
+        "particle annihilation a and antiparticle creation b-dagger are distinct carrier roles",
+        "wedge/vee paired in original author index, not arbitrary separate choice"
+      ]
+    },
+    {
+      "original_source_group": "L04-S017",
+      "printed_equation": "(4.2)",
+      "source_original_page": 8,
+      "existing_SSC_owner": "L-SSC-102",
+      "blocks": [
+        "L04-P008-B003",
+        "L04-P008-B005"
+      ],
+      "semantics": "Dirac adjoint is Psi_hat† gamma0; general integral conjugates momentum factors and changes a to particle creation a†, b† to antiparticle annihilation b. Original source Eq4.2 is an ORDERED ROW, not a source Eq4.1 column or a new operator family.",
+      "source_asserted_formulas": [
+        "Psi_bar_hat(x)=Psi_hat(x)dagger gamma_0 = integral[d^3p/((2pi)^3(2E))](a_hat_p^{wedge/vee dagger} u_bar_p^{wedge/vee} exp(+i p_mu x^mu)+b_hat_p^{wedge/vee} v_bar_p^{wedge/vee} exp(-i p_mu x^mu))",
+        "Eq4.2 row component 1: a_hat_+^{wedge dagger} exp(+iE(t-z)) + b_hat_+^vee exp(-iE(t-z))",
+        "Eq4.2 row component 2: a_hat_-^{vee dagger} exp(+iE(t+z)) - b_hat_-^wedge exp(-iE(t+z))",
+        "Eq4.2 row component 3: a_hat_-^{wedge dagger} exp(+iE(t+z)) - b_hat_-^vee exp(-iE(t+z))",
+        "Eq4.2 row component 4: a_hat_+^{vee dagger} exp(+iE(t-z)) + b_hat_+^wedge exp(-iE(t-z))"
+      ],
+      "positive_controls_source_scope": [
+        "four ordered row components",
+        "adjoint a-dagger and b non-dagger ordering",
+        "complex conjugation reverses exp signs",
+        "Eq4.2 differs in component ordering from Eq4.1 owing to gamma0"
+      ]
+    }
+  ],
+  "observed_prior_omission": {
+    "cause_class": "EXACT_SOURCE_OPERATOR_ROLE_ORDER_PHASE_AND_BINDER_UNDERINDEXED_IN_SSC_GENERIC_QUANTIZED_FIELD_SUMMARY",
+    "original_groups": [
+      "L04-S016",
+      "L04-S017"
+    ],
+    "existing_SSC_item": "L-SSC-102",
+    "why_previous_audit_missed": "Prior SSC-102 describes field expansion, roles and later Table2 weights, but does not reversibly represent original p8 Eq4.1's four signed component rows or Eq4.2's changed row permutation with phases, dagger placement and four matching constrained longitudinal momentum signs. The original PDF page/layout source had been indexed; exact cell fidelity not yet embedded in owning SSC.",
+    "systematic_method_repair": "Independently replay source-first original 17 pages and 109 original text blocks; for source equations compare each whole ordered expression, carrier roles, number and scope of spin signs, adjoint and phase inversions against existing in-record semantics. Retain author assertions, field normalization and exact row/column structural differences and do not reclassify future physics checks as G0."
+  },
+  "bidirectional_conservation": {
+    "frozen_original_source_units": 6,
+    "original_L_group_locations": 350,
+    "original_L04_source_groups": 53,
+    "original_L04_SSC_ids": 34,
+    "original_L_SSC_ids": 191,
+    "modified_source_groups": [
+      "L04-S016",
+      "L04-S017"
+    ],
+    "unmodified_L04_source_groups": 51,
+    "modified_existing_SSC": [
+      "L-SSC-102"
+    ],
+    "unmodified_complete_old_SSC": 190,
+    "added_SSC_ids": 0,
+    "old_remaining_original_exact_L04_groups": 11,
+    "new_remaining_original_exact_L04_groups": 9
+  },
+  "explicit_limitations": {
+    "current_109_source_text_blocks_are_evidence_not_source_semantic_completion": true,
+    "new_exact_formula_groups_reconciled": 2,
+    "older_scoped_exact_groups_not_reopened": true,
+    "other_9_selected_L04_exact_groups_remain": true,
+    "whole_17page_source_semantic_cold_complete": false,
+    "all_6_source_cold_complete": false,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
