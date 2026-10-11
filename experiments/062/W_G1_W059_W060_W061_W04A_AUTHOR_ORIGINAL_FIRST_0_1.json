@@ -1,0 +1,636 @@
+{
+  "schema": "isograph.exp062-W-G1-W04a-059-060-061-original-first.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "status": "W04A_THREE_SOURCE_FIRST_CANDIDATE_G1_NOT_QUALIFIED",
+  "target": "W_G0_AUTHOR_WEB_REBASELINE_2026_10_11_0_1",
+  "historic_oct03_G0": "OPEN",
+  "current_new_G0_frozen": true,
+  "G1_global_complete": false,
+  "G2_authorized": false,
+  "L_semantics_included": false,
+  "physics_or_primitive_qualified": false,
+  "source_inputs": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+      "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947"
+    },
+    "inverse": {
+      "path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+      "git_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477"
+    },
+    "gate": {
+      "path": "experiments/062/W_G0_CURRENT_AUTHOR_SOURCE_STAGE_GATE_0_2.json",
+      "git_blob_sha": "e3848f4025a733d33b8b8b3411fa779e8b0a5b9a"
+    },
+    "stage": {
+      "path": "experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_5.json",
+      "git_blob_sha": "25574b0c79b6897119bb291cebf25d66e2b06073"
+    },
+    "frontier": {
+      "path": "experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_REBASELINE_FRONTIER_0_1.json",
+      "git_blob_sha": "0813758c9d11a32fa7e9e90329aaa7cf4d3d4c19"
+    }
+  },
+  "original_first": {
+    "source_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+    "source_date": "2026-03-05",
+    "author_content_sha256": "69792bb18e780484b0bdf491f5029d9bbeef04db7de677bd10122ffe7e869659",
+    "source_line_interval": [
+      12,
+      31
+    ],
+    "no_reader_comments_or_third_party_theorem_in_scope": true
+  },
+  "rows": [
+    {
+      "census_id": "W-SSC-059",
+      "source_unit": "W04a",
+      "frozen_source_body": "W04a writes a right-handed Minkowski Weyl equation of the form (E-sigma dot p) psi_R=0, derives the Klein-Gordon mass-shell consequence, and associates its positive- and negative-energy branches with opposite helicities. It prints the energy-momentum equation (E-sigma·p) tilde_psi_R(E,p)=0, the ordered factorization (E+sigma·p)(E-sigma·p)=E^2-|p|^2, the conditional mass shell E=±|p|, and the helicity operator (1/2)(sigma·p)/|p| with +1/2 for positive-energy particles and -1/2 for negative-energy antiparticles; these are source-written roles, not qualified lower physical laws.",
+      "source_body_identity": {
+        "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "id": "W-SSC-059",
+        "field": "obligation"
+      },
+      "original_author_source_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+      "original_post_date": "2026-03-05",
+      "author_article_normalized_sha256": "69792bb18e780484b0bdf491f5029d9bbeef04db7de677bd10122ffe7e869659",
+      "original_source_location_keys": [
+        "W04a/web_author_article/W04A-L12-13",
+        "W04a/web_author_article/W04A-L14-16",
+        "W04a/web_author_article/W04A-L17-22"
+      ],
+      "original_typed_statement_ids": [
+        "W04A-059-01",
+        "W04A-059-02",
+        "W04A-059-03",
+        "W04A-059-04"
+      ],
+      "source_original_witnesses": [
+        {
+          "line_interval": [
+            12,
+            13
+          ],
+          "anchor": "equation of motion of a right-handed Weyl spinor field",
+          "role": "SOURCE_WEYL_EQUATION"
+        },
+        {
+          "line_interval": [
+            14,
+            16
+          ],
+          "anchor": "solutions will also be solutions of the massless Klein-Gordon equation",
+          "role": "SOURCE_FACTORIZATION_AND_CONDITIONAL_MASS_SHELL"
+        },
+        {
+          "line_interval": [
+            17,
+            22
+          ],
+          "anchor": "Defining helicity as the eigenvalue of the operator",
+          "role": "SOURCE_HELICITY_BRANCHES"
+        }
+      ],
+      "historical_0_31_G1_not_authoritative": true,
+      "current_source_G1_status": "SOURCE_FIRST_CANDIDATE_PENDING_EXACT_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-059-CURG1-01",
+          "source_span": "(E-sigma·p) tilde_psi_R(E,p)=0",
+          "relation_span": "=",
+          "argument_spans": [
+            "(E-sigma·p) tilde_psi_R(E,p)",
+            "0"
+          ],
+          "logical_force": "PRINTED_WEYL_EQUATION",
+          "argument_result_roles": {
+            "operator": "SOURCE_ZERO_EQUATION",
+            "lhs": "ORDERED_E_MINUS_SIGMA_P_ACTION",
+            "rhs": "0"
+          },
+          "source_side_conditions_and_modality": "Right-handed Minkowski Weyl source equation, not independently proven",
+          "depends_on": [],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-059-CURG1-02",
+          "source_span": "(E+sigma·p)(E-sigma·p)=E^2-|p|^2",
+          "relation_span": "=",
+          "argument_spans": [
+            "(E+sigma·p)(E-sigma·p)",
+            "E^2-|p|^2"
+          ],
+          "logical_force": "ORDERED_FACTORIZATION",
+          "argument_result_roles": {
+            "operator": "EQUAL",
+            "ordered_factors": [
+              "E+sigma·p",
+              "E-sigma·p"
+            ],
+            "rhs": "E^2-|p|^2"
+          },
+          "source_side_conditions_and_modality": "Preserve plus-first/minus-second, no inserted normalization",
+          "depends_on": [
+            "W-SSC-059-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-059-CURG1-03",
+          "source_span": "conditional mass shell E=±|p|",
+          "relation_span": "E=",
+          "argument_spans": [
+            "mass shell",
+            "±|p|"
+          ],
+          "logical_force": "WEYL_SOLUTION_CONDITIONAL",
+          "argument_result_roles": {
+            "energy_cases": [
+              "E=+|p|",
+              "E=-|p|"
+            ]
+          },
+          "source_side_conditions_and_modality": "Massless shell follows for Weyl solutions; not all energies",
+          "depends_on": [
+            "W-SSC-059-CURG1-02"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-059-CURG1-04",
+          "source_span": "helicity operator (1/2)(sigma·p)/|p|",
+          "relation_span": "operator",
+          "argument_spans": [
+            "(1/2)",
+            "sigma·p",
+            "|p|"
+          ],
+          "logical_force": "SOURCE_HELICITY_DEFINITION",
+          "argument_result_roles": {
+            "factor": "1/2",
+            "numerator": "sigma·p",
+            "denominator": "|p|"
+          },
+          "source_side_conditions_and_modality": "Source doesn't state a singular p=0 treatment",
+          "depends_on": [],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-059-CURG1-05",
+          "source_span": "+1/2 for positive-energy particles",
+          "relation_span": "for",
+          "argument_spans": [
+            "+1/2",
+            "positive-energy particles"
+          ],
+          "logical_force": "POSITIVE_ENERGY_BRANCH",
+          "argument_result_roles": {
+            "energy": "POSITIVE",
+            "helicity": "+1/2",
+            "role": "PARTICLE"
+          },
+          "source_side_conditions_and_modality": "Conditional on positive-energy Weyl solution",
+          "depends_on": [
+            "W-SSC-059-CURG1-03",
+            "W-SSC-059-CURG1-04"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-059-CURG1-06",
+          "source_span": "-1/2 for negative-energy antiparticles",
+          "relation_span": "for",
+          "argument_spans": [
+            "-1/2",
+            "negative-energy antiparticles"
+          ],
+          "logical_force": "NEGATIVE_ENERGY_BRANCH",
+          "argument_result_roles": {
+            "energy": "NEGATIVE",
+            "helicity": "-1/2",
+            "role": "ANTIPARTICLE"
+          },
+          "source_side_conditions_and_modality": "Conditional on negative-energy Weyl solution",
+          "depends_on": [
+            "W-SSC-059-CURG1-03",
+            "W-SSC-059-CURG1-04"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-060",
+      "source_unit": "W04a",
+      "frozen_source_body": "W04a passes from the classical Weyl equation to the quantum oscillator/field description and treats Standard-Model copies, gauge-covariant derivatives, and Higgs/Yukawa mass couplings as additional matter structure rather than part of the bare spacetime representation. The source says the quantum theory is an infinite collection of complex harmonic oscillators, one for each momentum p, with annihilation and creation operators satisfying anti-commutation relations. No complete anticommutation algebra or coefficient convention is printed; do not invent one.",
+      "source_body_identity": {
+        "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "id": "W-SSC-060",
+        "field": "obligation"
+      },
+      "original_author_source_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+      "original_post_date": "2026-03-05",
+      "author_article_normalized_sha256": "69792bb18e780484b0bdf491f5029d9bbeef04db7de677bd10122ffe7e869659",
+      "original_source_location_keys": [
+        "W04a/web_author_article/W04A-L23-23",
+        "W04a/web_author_article/W04A-L24-24"
+      ],
+      "original_typed_statement_ids": [
+        "W04A060-E01",
+        "W04A060-E02"
+      ],
+      "source_original_witnesses": [
+        {
+          "line_interval": [
+            23,
+            23
+          ],
+          "anchor": "infinite collection of complex harmonic oscillators",
+          "role": "SOURCE_MOMENTUM_INDEXED_OSCILLATORS"
+        },
+        {
+          "line_interval": [
+            23,
+            23
+          ],
+          "anchor": "annihilation and creation operators satisfying anti-commutation relations",
+          "role": "SOURCE_UNEXPANDED_ANTI_COMMUTATION"
+        },
+        {
+          "line_interval": [
+            24,
+            24
+          ],
+          "anchor": "mass terms coming from Yukawa couplings to the Higgs field",
+          "role": "SOURCE_ADDITIONAL_INTERACTIONS"
+        }
+      ],
+      "historical_0_31_G1_not_authoritative": true,
+      "current_source_G1_status": "SOURCE_FIRST_CANDIDATE_PENDING_EXACT_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-060-CURG1-01",
+          "source_span": "classical Weyl equation to the quantum oscillator/field description",
+          "relation_span": "to",
+          "argument_spans": [
+            "classical Weyl equation",
+            "quantum oscillator/field description"
+          ],
+          "logical_force": "EXPOSITORY_QUANTUM_TRANSITION",
+          "argument_result_roles": {
+            "from": "CLASSICAL_WEYL",
+            "to": "QUANTUM_FIELD"
+          },
+          "source_side_conditions_and_modality": "No constructed quantization map supplied",
+          "depends_on": [],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-060-CURG1-02",
+          "source_span": "infinite collection of complex harmonic oscillators",
+          "relation_span": "collection of",
+          "argument_spans": [
+            "infinite",
+            "complex harmonic oscillators"
+          ],
+          "logical_force": "INFINITE_OSCILLATOR_FAMILY",
+          "argument_result_roles": {
+            "cardinality": "SOURCE_INFINITE",
+            "member": "COMPLEX_OSCILLATOR"
+          },
+          "source_side_conditions_and_modality": "Do not materialize arbitrary infinite family",
+          "depends_on": [
+            "W-SSC-060-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-060-CURG1-03",
+          "source_span": "one for each momentum p",
+          "relation_span": "for each",
+          "argument_spans": [
+            "one",
+            "momentum p"
+          ],
+          "logical_force": "MOMENTUM_INDEX_BINDER",
+          "argument_result_roles": {
+            "binder": "p",
+            "quantifier": "ONE_PER_MOMENTUM"
+          },
+          "source_side_conditions_and_modality": "No measure, cutoff or normalization specified",
+          "depends_on": [
+            "W-SSC-060-CURG1-02"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-060-CURG1-04",
+          "source_span": "annihilation and creation operators satisfying anti-commutation relations",
+          "relation_span": "satisfying",
+          "argument_spans": [
+            "annihilation and creation operators",
+            "anti-commutation relations"
+          ],
+          "logical_force": "ANTICOMMUTATION_SOURCE_TYPE",
+          "argument_result_roles": {
+            "operator_roles": [
+              "ANNIHILATION",
+              "CREATION"
+            ],
+            "relation": "ANTICOMMUTE"
+          },
+          "source_side_conditions_and_modality": "Explicit CAR equation and coefficients absent, leave semantic boundary unexpanded",
+          "depends_on": [
+            "W-SSC-060-CURG1-02"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-060-CURG1-05",
+          "source_span": "Standard-Model copies, gauge-covariant derivatives, and Higgs/Yukawa mass couplings",
+          "relation_span": "and",
+          "argument_spans": [
+            "Standard-Model copies",
+            "gauge-covariant derivatives",
+            "Higgs/Yukawa mass couplings"
+          ],
+          "logical_force": "ADDITIONAL_INTERACTING_MATTER_ROLES",
+          "argument_result_roles": {
+            "roles": [
+              "COPIES",
+              "GAUGE_COVARIANCE",
+              "HIGGS_YUKAWA"
+            ]
+          },
+          "source_side_conditions_and_modality": "Additional interactions, not a completed interacting dynamics source model",
+          "depends_on": [
+            "W-SSC-060-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-060-CURG1-06",
+          "source_span": "gauge-covariant derivatives",
+          "relation_span": "gauge-covariant",
+          "argument_spans": [
+            "derivatives"
+          ],
+          "logical_force": "NAMED_COVARIANT_DERIVATIVE",
+          "argument_result_roles": {
+            "referent": "COVARIANT_DERIVATIVE"
+          },
+          "source_side_conditions_and_modality": "No conventional gauge-derivative equation imported",
+          "depends_on": [
+            "W-SSC-060-CURG1-05"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-061",
+      "source_unit": "W04a",
+      "frozen_source_body": "W04a contrasts the right-handed Minkowski Wightman kernel with the naive Euclidean substitution and makes the failure of a one-chirality Euclidean propagator/Lagrangian a concrete Wick-rotation obstruction. The displayed source Wightman formula is tilde_W2(E,p)=(E-sigma·p)^(-1)=(E+sigma·p)/(E^2-|p|^2), while the candidate naive Schwinger continuation is tilde_S2(E,p)=(iE-sigma·p)^(-1). The second is expressly an unsuccessful conventional Wick-rotation attempt, not an established continuation; the source's conventional vector operator is a map from S_R^* to S_L and the proposed right-handed-only replacement is separate.",
+      "source_body_identity": {
+        "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "id": "W-SSC-061",
+        "field": "obligation"
+      },
+      "original_author_source_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+      "original_post_date": "2026-03-05",
+      "author_article_normalized_sha256": "69792bb18e780484b0bdf491f5029d9bbeef04db7de677bd10122ffe7e869659",
+      "original_source_location_keys": [
+        "W04a/web_author_article/W04A-L25-26",
+        "W04a/web_author_article/W04A-L27-28",
+        "W04a/web_author_article/W04A-L29-31"
+      ],
+      "original_typed_statement_ids": [
+        "W04A-061-01",
+        "W04A-061-02",
+        "W04A-061-03"
+      ],
+      "source_original_witnesses": [
+        {
+          "line_interval": [
+            25,
+            26
+          ],
+          "anchor": "The Wightman function is the two by two matrix",
+          "role": "SOURCE_W2_PRINTED_EQUALITIES"
+        },
+        {
+          "line_interval": [
+            27,
+            28
+          ],
+          "anchor": "The obvious way to do Wick rotation would be",
+          "role": "SOURCE_NAIVE_SCHWINGER_ATTEMPT"
+        },
+        {
+          "line_interval": [
+            29,
+            31
+          ],
+          "anchor": "maps from the space",
+          "role": "SOURCE_CONVENTIONAL_DUAL_RIGHT_TO_LEFT"
+        }
+      ],
+      "historical_0_31_G1_not_authoritative": true,
+      "current_source_G1_status": "SOURCE_FIRST_CANDIDATE_PENDING_EXACT_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-061-CURG1-01",
+          "source_span": "tilde_W2(E,p)=(E-sigma·p)^(-1)=(E+sigma·p)/(E^2-|p|^2)",
+          "relation_span": "=",
+          "argument_spans": [
+            "tilde_W2(E,p)",
+            "(E-sigma·p)^(-1)",
+            "(E+sigma·p)/(E^2-|p|^2)"
+          ],
+          "logical_force": "WIGHTMAN_TWO_SOURCE_EQUALITIES",
+          "argument_result_roles": {
+            "lhs": "W2",
+            "middle": "INVERSE_E_MINUS_SIGMA_P",
+            "rhs": "E_PLUS_SIGMA_P_OVER_E2_MINUS_P2",
+            "equality_count": 2
+          },
+          "source_side_conditions_and_modality": "Author's literal source matrix expression; no pole prescription or distributional repair",
+          "depends_on": [],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-02",
+          "source_span": "(E-sigma·p)^(-1)",
+          "relation_span": "^(-1)",
+          "argument_spans": [
+            "(E-sigma·p)"
+          ],
+          "logical_force": "NAMED_INVERSE_SOURCE_OPERATOR",
+          "argument_result_roles": {
+            "operand": "E-sigma·p"
+          },
+          "source_side_conditions_and_modality": "No unsourced global inverse domain",
+          "depends_on": [
+            "W-SSC-061-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-03",
+          "source_span": "(E+sigma·p)/(E^2-|p|^2)",
+          "relation_span": "/",
+          "argument_spans": [
+            "(E+sigma·p)",
+            "(E^2-|p|^2)"
+          ],
+          "logical_force": "ORDERED_RATIO_SOURCE_EXPRESSION",
+          "argument_result_roles": {
+            "numerator": "E+sigma·p",
+            "denominator": "E^2-|p|^2"
+          },
+          "source_side_conditions_and_modality": "Do not reverse numerator/denominator or sign",
+          "depends_on": [
+            "W-SSC-061-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-04",
+          "source_span": "tilde_S2(E,p)=(iE-sigma·p)^(-1)",
+          "relation_span": "=",
+          "argument_spans": [
+            "tilde_S2(E,p)",
+            "(iE-sigma·p)^(-1)"
+          ],
+          "logical_force": "NAIVE_SCHWINGER_CANDIDATE",
+          "argument_result_roles": {
+            "substitution": "E_TO_iE",
+            "operator": "INVERSE_iE_MINUS_SIGMA_P"
+          },
+          "source_side_conditions_and_modality": "Explicit naive attempt, not valid established reconstruction",
+          "depends_on": [
+            "W-SSC-061-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-05",
+          "source_span": "iE-sigma·p",
+          "relation_span": "-",
+          "argument_spans": [
+            "iE",
+            "sigma·p"
+          ],
+          "logical_force": "SOURCE_IMAGINARY_ENERGY_OPERAND",
+          "argument_result_roles": {
+            "ordered_terms": [
+              "iE",
+              "sigma·p"
+            ]
+          },
+          "source_side_conditions_and_modality": "Retain i factor and minus sign",
+          "depends_on": [
+            "W-SSC-061-CURG1-04"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-06",
+          "source_span": "unsuccessful conventional Wick-rotation attempt",
+          "relation_span": "unsuccessful",
+          "argument_spans": [
+            "conventional Wick-rotation attempt"
+          ],
+          "logical_force": "SOURCE_OBSTRUCTION_NEGATIVE",
+          "argument_result_roles": {
+            "proposed": "NAIVE_SCHWINGER",
+            "disposition": "FAILS_CONVENTIONAL_REPRESENTATION"
+          },
+          "source_side_conditions_and_modality": "Source says fundamental inconsistency with usual vector/spinor transformation",
+          "depends_on": [
+            "W-SSC-061-CURG1-04"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-07",
+          "source_span": "conventional vector operator is a map from S_R^* to S_L",
+          "relation_span": "map from",
+          "argument_spans": [
+            "S_R^*",
+            "S_L"
+          ],
+          "logical_force": "CONVENTIONAL_RIGHT_DUAL_TO_LEFT_MAP",
+          "argument_result_roles": {
+            "domain": "S_R^*",
+            "codomain": "S_L"
+          },
+          "source_side_conditions_and_modality": "Conventional meaning, not Woit's proposed right-only replacement",
+          "depends_on": [
+            "W-SSC-061-CURG1-01"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        },
+        {
+          "occurrence_id": "W-SSC-061-CURG1-08",
+          "source_span": "proposed right-handed-only replacement is separate",
+          "relation_span": "is separate",
+          "argument_spans": [
+            "right-handed-only replacement"
+          ],
+          "logical_force": "PROPOSAL_DISTINCT_FROM_CONVENTIONAL_MAP",
+          "argument_result_roles": {
+            "baseline": "S_R_DUAL_TO_S_L",
+            "proposal": "RIGHT_SPINOR_ONLY"
+          },
+          "source_side_conditions_and_modality": "Provisional source alternative, not proven theory",
+          "depends_on": [
+            "W-SSC-061-CURG1-07"
+          ],
+          "definability": "UNDETERMINED_PENDING_G3",
+          "source_truth_not_scientific_verification": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "new_candidate_bodies": 3,
+    "new_candidate_occurrences": 20,
+    "before_qualified": 24,
+    "qualified_after_exact_source_audit_at_most": 27,
+    "remaining_after_success_at_least": 124,
+    "frozen_SSC_items": 151,
+    "old_G1_bodies_not_current_authority": true
+  },
+  "source_negative": [
+    "conditional mass shell only solutions of Weyl equation",
+    "helicity branches opposite under positive and negative energy",
+    "CAR exact coefficient/normalization not printed",
+    "Wightman equation source literal not independently regularized",
+    "naive S2 candidate runs into representational inconsistency; not completed Wick rotation"
+  ],
+  "no_post_authority_promotion": true
+}
