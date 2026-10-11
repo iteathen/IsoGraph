@@ -1,0 +1,19 @@
+{
+  "schema": "isograph.exp062.W-G1-W04b-original-first-L29-anchor-failure.v0.1",
+  "track": "W",
+  "historical_ci": {
+    "run_id": 38175961045,
+    "job_id": 114578289101,
+    "sha": "3e665f19e6e043656d1a4ea759c4fa764d561b23",
+    "conclusion": "FAILURE",
+    "state": "PRESERVE_UNALTERED"
+  },
+  "original_source_sha256": "b706bc304a45c29059e74c5db0be3e8cd4da25f0d71f68de941d45db38d4cb67",
+  "failure_class": "SOURCE_TEXT_FIXTURE_MATH_MARKUP_BOUNDARY_NOT_SEMANTIC_OMISSION",
+  "cause": "Original W04b article line29 uses inline math before 'will be fibered over this'; the attempted phrase 'N will be fibered over this' is interrupted by MathJax/TeX source syntax. The SHA-pinned authored article text remained unchanged.",
+  "corrective_test": "v0.2 L29 anchor uses nearby directly authored prose 'it no longer is just topologically' with no inline math token in between, retains full exact SHA source and original L29 semantic role checks.",
+  "G0_151_immutable": true,
+  "L_track_untouched": true,
+  "global_G1_complete": false,
+  "G2_authorized": false
+}
