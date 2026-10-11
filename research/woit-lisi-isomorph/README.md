@@ -1,3 +1,7 @@
+## L04 vector-action source-normalization checkpoint (2026-10-11)
+
+Active L [source dossier](lisi/README.md), SSC **0.89**, [G0 gate0.165](../../experiments/062/L_CURRENT_STAGE_GATE_0_165.json), inverse **0.22**, convergence **0.44** and traversal **0.61** now include the frozen original pp4–5 L04-S010 conditional factor-of-four vector-action normalization diagnostic. This conserves both printed author formulas and explicitly withholds an error/physics verdict. Bounded original-source CI is pending. Source corpus remains **six frozen originals / 191 existing SSC IDs / 350 original groups**, with **11** L04 broadly mapped groups outstanding and **0/6** complete original semantic cold audits. G0 UNFROZEN; G1+, W/L semantic import/synthesis and PR70 merge blocked; historical CI failures remain failed.
+
 ## L source G0 — 26/26 original CPT/triality source verification (2026-10-11)
 
 Current [L dossier](lisi/README.md) and SSC **0.88** / [G0 gate0.164](../../experiments/062/L_CURRENT_STAGE_GATE_0_164.json) record [bounded original L04 source CI](https://github.com/iteathen/IsoGraph/actions/runs/38183907130): frozen original p3/p4/p15 PDF SHA and **26/26 hostile controls PASS** for CPT16 vs eight projective classes and author's nontrivial CPTt96 claim. These are source and exact finite-matrix evidence, not a physical-unification or group-uniqueness theorem. **12 broadly mapped L04 groups and 0/6 whole-original-source cold audits remain open**; all G1+, W/L synthesis and PR merge blocked. Earlier CI failures are preserved.

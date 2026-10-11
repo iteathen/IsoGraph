@@ -1,0 +1,239 @@
+{
+  "schema": "isograph.track-L.G0.L04-vector-bivector-source-normalization-audit.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "CANDIDATE_ORIGINAL_SOURCE_AND_INTERNAL_EXACT_MATRIX_DIAGNOSTIC",
+  "source": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "official_pdf_url": "https://arxiv.org/pdf/2407.02497v2",
+    "pdf_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "pdf_bytes": 348134,
+    "pdf_pages": 17,
+    "original_pages": [
+      {
+        "printed_page": 4,
+        "index": 3,
+        "extracted_page_SHA256": "83050c4507bdc31e54e8de57800abc96bc2d01a2789065050d2b087b6c4421b7"
+      },
+      {
+        "printed_page": 5,
+        "index": 4,
+        "extracted_page_SHA256": "59d47b63fe257933226378918d2c613ec5d80494202bece17efcf0978b537c3f"
+      }
+    ],
+    "source_atoms": [
+      {
+        "id": "L04-P004-B009",
+        "page_index": 3,
+        "lines": [
+          57,
+          59
+        ],
+        "sha256": "2bb0418c6c5e8c5eb989b925b98b023c00a7143b74dc1715917d0f95816f2d22"
+      },
+      {
+        "id": "L04-P004-B010",
+        "page_index": 3,
+        "lines": [
+          61,
+          61
+        ],
+        "sha256": "521271c6ea7e503fc4cd2adbed33df4259e91a9b959b80b5f96525814e34e105"
+      },
+      {
+        "id": "L04-P005-B001",
+        "page_index": 4,
+        "lines": [
+          1,
+          6
+        ],
+        "sha256": "12fd5ff98ed1dae207cef2b626b71a151d616cadaf6549b25e7a11d8c4d99cd5"
+      }
+    ]
+  },
+  "original_group": "L04-S010",
+  "existing_ssc_owner": "L-SSC-099",
+  "source_roles": [
+    {
+      "key": "BIVECTOR_BASIS",
+      "kind": "AUTHOR_SOURCE_EQUATION",
+      "literal": "B=B_s^pi J_pi+B_t^pi K_pi=(1/2)B^{mu nu}gamma_{mu nu}",
+      "scope": "Lorentz bivector; no unlicensed rewriting of Einstein summation"
+    },
+    {
+      "key": "VECTOR_CARRIER",
+      "kind": "AUTHOR_SOURCE_EQUATION",
+      "literal": "v=v^rho gamma_rho",
+      "scope": "Cl(1,3) vector; metric signature from frozen Weyl gamma basis"
+    },
+    {
+      "key": "ACTION_FIRST",
+      "kind": "AUTHOR_SOURCE_EQUATION",
+      "literal": "v'=B×v=(1/2)B^{mu nu}v^rho(gamma_{mu nu}×gamma_rho)",
+      "scope": "Source antisymmetric Clifford × not independently primitive-defined"
+    },
+    {
+      "key": "ACTION_MIDDLE",
+      "kind": "AUTHOR_SOURCE_EQUATION",
+      "literal": "=(1/4)B^{mu nu}v^rho(gamma_mu eta_{nu rho}-gamma_nu eta_{mu rho})",
+      "scope": "Printed one-quarter coefficient is load-bearing and must remain source literal"
+    },
+    {
+      "key": "ACTION_FINAL",
+      "kind": "AUTHOR_SOURCE_EQUATION",
+      "literal": "=(1/2)B^{mu nu}v_nu gamma_mu",
+      "scope": "Printed one-half coefficient is load-bearing, not silently multiplied by 4"
+    },
+    {
+      "key": "CARTAN_TWO_OPERATORS",
+      "kind": "SOURCE_DISTINCT_CARRIERS",
+      "literal": "J3=(1/2)gamma12; K3=(1/2)gamma03",
+      "scope": "Bivector J/K and vector adjoint/antisymmetric action"
+    },
+    {
+      "key": "VECTOR_SPIN_BRANCH",
+      "kind": "AUTHOR_EIGENVALUE_EQUATION",
+      "literal": "v_S^{vee/wedge}=gamma1∓i gamma2; J3×v_S^{vee/wedge}=(±i)v_S^{vee/wedge}; K3×v_S=0",
+      "scope": "Paired vee/wedge signs; spin/space vector, not Dirac spinor weight"
+    },
+    {
+      "key": "VECTOR_BOOST_BRANCH",
+      "kind": "AUTHOR_EIGENVALUE_EQUATION",
+      "literal": "v_T^{vee/wedge}=gamma0∓gamma3; J3×v_T=0; K3×v_T^{vee/wedge}=(±1)v_T^{vee/wedge}",
+      "scope": "Paired signs; temporal vector, not spinor K3 ±1/2"
+    },
+    {
+      "key": "DISTINCT_SPINOR_ACTION",
+      "kind": "SOURCE_ADJACENCY_BOUNDARY",
+      "literal": "Eq(2.1) spinors use Psi'=B Psi; this original vector calculation is different from that spinor representation",
+      "scope": "Existing L04-S011 and same L-SSC-099 are conserved, not flattened"
+    },
+    {
+      "key": "FRAME_WEIGHTS",
+      "kind": "AUTHOR_PHYSICAL_INTERPRETATION",
+      "literal": "Vector weights are identified as gravitational frame states, with Table1 signed branch rows",
+      "scope": "Author representation semantics, not established physical viability"
+    },
+    {
+      "key": "RELATIONSHIP_NOT_THEOREM",
+      "kind": "SOURCE_MATH_INTERPRETATION_OPEN",
+      "literal": "Original p4 and p5 formulas are conserved even where selected assumptions yield different normalization",
+      "scope": "Observational discrepancy; not author-typo verdict or license to select a convention"
+    }
+  ],
+  "conditional_exact_reconstruction": {
+    "status": "CONDITIONAL_SOURCE_INTERNAL_NORMALIZATION_TENSION_NOT_ESTABLISHED_AUTHOR_DEFECT",
+    "assumptions": [
+      "Use printed Weyl gamma0=sigma1⊗sigma0 and gamma_i=(-i sigma2)⊗sigma_i; gamma0²=+1,gamma_i²=-1, anticommuting distinct basis.",
+      "Take gamma12=gamma1 gamma2 and gamma03=gamma0 gamma3, as implied by displayed J3/K3 source formulas.",
+      "Read repeated antisymmetric tensor indices as full Einstein sum with B12=+1/2,B21=-1/2 for B=J3, or B03=+1/2,B30=-1/2 for B=K3.",
+      "Use eta=diag(+1,-1,-1,-1), v_nu=eta_nu rho v^rho, the displayed (1/2)B^{mu nu}v_nu gamma_mu formula literally."
+    ],
+    "four_branch_results": [
+      {
+        "branch": "spin-vee",
+        "vector": "gamma1-i gamma2",
+        "generator": "J3",
+        "printed_p5_eigenvalue": "+i",
+        "printed_p4_final_eigenvalue": "+i/4",
+        "full_matrix_commutator_eigenvalue": "+i"
+      },
+      {
+        "branch": "spin-wedge",
+        "vector": "gamma1+i gamma2",
+        "generator": "J3",
+        "printed_p5_eigenvalue": "-i",
+        "printed_p4_final_eigenvalue": "-i/4",
+        "full_matrix_commutator_eigenvalue": "-i"
+      },
+      {
+        "branch": "boost-vee",
+        "vector": "gamma0-gamma3",
+        "generator": "K3",
+        "printed_p5_eigenvalue": "+1",
+        "printed_p4_final_eigenvalue": "+1/4",
+        "full_matrix_commutator_eigenvalue": "+1"
+      },
+      {
+        "branch": "boost-wedge",
+        "vector": "gamma0+gamma3",
+        "generator": "K3",
+        "printed_p5_eigenvalue": "-1",
+        "printed_p4_final_eigenvalue": "-1/4",
+        "full_matrix_commutator_eigenvalue": "-1"
+      }
+    ],
+    "discrepancy": "Given the four explicit assumptions, the printed p4 final expression evaluates to one quarter of the p5 printed J3/K3 vector eigenvalue action; full matrix commutators match the p5 eigenvalues. Both original formulas are source-authored and neither is silently edited.",
+    "critical_limit": "The original does not supply enough explicit × normalization/bivector component convention to infer author intent; do not declare a confirmed typographical error, invalid Lorentz representation or physical falsehood.",
+    "local_exact_check": {
+      "oracle": "SymPy 4×4 Gaussian-rational Weyl-matrix comparison",
+      "positive_branches": 4,
+      "positive_exactly_equal_to_quarter_full_commutator": 4,
+      "printed_p4_equals_full_commutator": 0,
+      "evidence_class": "INTERNAL-QUALIFICATION_ONLY",
+      "external_independent_validation": false
+    }
+  },
+  "source_preservation": {
+    "source_pdf_unchanged": true,
+    "existing_191_SSC_ids_preserved": true,
+    "original_350_group_count_preserved": true,
+    "L04_source_group_count": 53,
+    "changed_existing_ssc": [
+      "L-SSC-099"
+    ],
+    "other_complete_SSC_records_unchanged": 190,
+    "changed_original_group": [
+      "L04-S010"
+    ],
+    "other_complete_L04_groups_unchanged": 52,
+    "original_mapped_groups_remaining": 11,
+    "whole_frozen_source_cold_completed": 0
+  },
+  "predecessors": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_88.json",
+      "git_blob_sha": "ccfc11725e86bb2e9850e27c9e69af4b0ed9555b"
+    },
+    "source_inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_21.json",
+      "git_blob_sha": "bfc5b2e4d177b3240fece1380d640e63d5e968b7"
+    },
+    "current_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_164.json",
+      "git_blob_sha": "92e92ae38032cb3cec58d1ba0d725df4017c8ea7"
+    }
+  },
+  "historical_scoped_source_CI": {
+    "recent_pass": {
+      "run_id": 38183907130,
+      "hostiles_rejected": 26
+    },
+    "first_failures_preserved": [
+      38181212146,
+      38181860303,
+      38178243330
+    ],
+    "new_qualified_source_CI": "PENDING"
+  },
+  "locks": {
+    "G0_frozen": false,
+    "SSC_frozen": false,
+    "G1_authorized": false,
+    "higher_stages_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false,
+    "author_outreach_authorized": false
+  },
+  "provenance": {
+    "source_author": "A. Garrett Lisi",
+    "research_direction": "Joshua Oshiro",
+    "agent_work": "AI-assisted original-source fidelity and bounded exact-normalization diagnostic",
+    "claim_priority": "not investigated outside local frozen corpus",
+    "publication_credit_status": "research note not independent mathematics publication"
+  }
+}
