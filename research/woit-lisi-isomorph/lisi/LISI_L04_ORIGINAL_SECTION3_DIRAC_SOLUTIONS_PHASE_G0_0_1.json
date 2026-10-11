@@ -1,0 +1,259 @@
+{
+  "schema": "isograph.track-L.G0.L04-frozen-original-section3-Dirac-Eq3_1-3_2-source.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_original": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "original_PDF": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "PDF_bytes": 348134,
+    "original_PDF_pages": 17,
+    "source_manifest": {
+      "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_FROZEN_ORIGINAL_LAYOUT_SOURCE_FIRST_MANIFEST_0_1.json",
+      "git_blob_sha": "1ff8ff04547a938b19c7530de7741c3f1eec54a9"
+    }
+  },
+  "independent_original_source": {
+    "all17_visual_run_id": 38120301520,
+    "visual_original_pages": [
+      6,
+      7
+    ],
+    "visual_job_id": 114413452988,
+    "original_p6_p7_text_probe_run_id": 38143503811,
+    "original_p6_p7_text_probe_job_id": 114481984530,
+    "probe_commit": "30b6622ed1beb6174bf8a581602ce28a09f6efe9",
+    "source_byte_and_page_hashes_passed": true,
+    "whole_paper_semantic_cold_qualified": false
+  },
+  "source_first_finite_partition": [
+    {
+      "id": "L04-S013",
+      "old_source_locator": "§3 pp6–7",
+      "paper_page": 6,
+      "source_atoms": [
+        "L04-P006-B002",
+        "L04-P006-B003",
+        "L04-P006-B004",
+        "L04-P006-B005"
+      ],
+      "existing_SSC_owner_ids": [
+        "L-SSC-100"
+      ],
+      "result": "SOURCE_EXACT_EQ3_1_AND_MASSIVE_DIRAC_CARRIER_RECONCILED",
+      "source_scope": "Author's own Minkowski Weyl/Dirac p6 presentation; E, p, p_u and all Pauli matrices are distinct carriers. Positive/negative energy, massless limit, normalization and spinor shape are source statements, not independently proven physics."
+    },
+    {
+      "id": "L04-S014",
+      "old_source_locator": "§3 p7",
+      "paper_page": 7,
+      "source_atoms": [
+        "L04-P007-B001",
+        "L04-P007-B002",
+        "L04-P007-B003"
+      ],
+      "existing_SSC_owner_ids": [
+        "L-SSC-101"
+      ],
+      "result": "ORIGINAL_SOURCE_HELICITY_AND_NEGATIVE_LABEL_SCOPE_INDEX_REPAIRED_GLOBAL_COLD_OPEN",
+      "source_scope": "p7 z-axis condition, eight printed column vectors and negative-energy spin/helicity exception remain original-source-only. Source diagram carries C/P/T role distinctions; complete unnumbered drawn arrow incidence is NOT promoted by this partial packet."
+    },
+    {
+      "id": "L04-S015",
+      "old_source_locator": "§3 p7",
+      "corrected_source_locator": "§3 Eq(3.2) p6, supporting p7 C/P/T description and diagram",
+      "paper_pages": [
+        6,
+        7
+      ],
+      "source_atoms": [
+        "L04-P006-B005",
+        "L04-P006-B006",
+        "L04-P006-B007",
+        "L04-P007-B003",
+        "L04-P007-B004",
+        "L04-P007-B005"
+      ],
+      "existing_SSC_owner_ids": [
+        "L-SSC-100",
+        "L-SSC-101"
+      ],
+      "result": "SCOPED_ORIGINAL_EQ3_2_CPT_PHASE_AND_P7_FOUR_VERTEX_PT_ROLE_INCIDENCE_RECONCILED",
+      "source_scope": "Source Eq(3.2) C/P/T Dirac solution identities for massive and massless cases, preserving momentum inversion, complex conjugation, spinor relabeling and ±/∓ sign-pair branches. p7 limits qualitative interpretation to longitudinal massless z-directed states; quantized QFT operator phase treatment deferred to author's source §5 and SSC owners L-SSC-104–107; do not import those into Eq3.2."
+    }
+  ],
+  "original_p6_source_assertions": {
+    "Dirac_equation": "0 = i gamma^mu partial_mu Psi - m Psi (source)",
+    "Pauli_momentum": {
+      "matrix": "p = sum_{pi=1..3} p^pi sigma_pi = [[p3,p1-i p2],[p1+i p2,-p3]]",
+      "four_momentum": "p^mu=(E,p1,p2,p3)",
+      "energy": "E^2=|p|^2+m^2",
+      "unit_direction": "p=|p| p_u; p_u is dimensionless 2x2 Pauli-direction operator"
+    },
+    "positive_negative_energy": {
+      "solution": "Psi_+ = u_p^{wedge/vee} exp(-i p_mu x^mu); Psi_- = v_p^{wedge/vee} exp(+i p_mu x^mu)",
+      "boost_operator": "U_p=diag(cosh(zeta/2)-p_u sinh(zeta/2), cosh(zeta/2)+p_u sinh(zeta/2))",
+      "u_rest_and_boost": "u_p^{wedge/vee}=U_p (1/sqrt(2))[chi^{wedge/vee};chi^{wedge/vee}]=(1/sqrt(2m))[sqrt(E-p) chi^{wedge/vee};sqrt(E+p) chi^{wedge/vee}]",
+      "v_rest_and_boost": "v_p^{wedge/vee}=U_p (1/sqrt(2))[xi^{wedge/vee};-xi^{wedge/vee}]=(1/sqrt(2m))[sqrt(E-p) xi^{wedge/vee};-sqrt(E+p) xi^{wedge/vee}]",
+      "boost_guards": [
+        "sinh(zeta)=|p|/m",
+        "cosh(zeta)=E/m",
+        "tanh(zeta)=|p|/E"
+      ],
+      "source_spinors": "chi^{wedge/vee} are up/down unit Pauli spinors; xi^{wedge/vee}=epsilon chi^{wedge/vee}=+/- chi^{vee/wedge}, epsilon=-i sigma_2, upper/lower sign coupled",
+      "source_massive_normalization": "bar(u)u=1=-bar(v)v"
+    },
+    "massless_source": {
+      "guard": "m->0 and in the author's written limit cosh(zeta/2)=sinh(zeta/2), followed by massless re-normalization; not an unrestricted finite-mass identity",
+      "eq3_1_u": "u_{p0}^{wedge/vee}=(1/2)[(1-p_u)chi^{wedge/vee};(1+p_u)chi^{wedge/vee}]",
+      "eq3_1_v": "v_{p0}^{wedge/vee}=(1/2)[(1-p_u)xi^{wedge/vee};-(1+p_u)xi^{wedge/vee}]",
+      "source_massless_normalization": [
+        "bar(u)u=bar(v)v=0",
+        "u^dagger u=v^dagger v=1"
+      ],
+      "source_matrix_carriers": [
+        "i gamma_2 = [[0,epsilon],[-epsilon,0]]",
+        "i gamma_0 = [[0,i I],[i I,0]]",
+        "gamma_13 = [[-epsilon,0],[0,-epsilon]]",
+        "sigma_pi^* = epsilon sigma_pi epsilon"
+      ]
+    }
+  },
+  "original_Eq3_2_p6_source": {
+    "source_atoms": [
+      "L04-P006-B005",
+      "L04-P006-B006",
+      "L04-P006-B007"
+    ],
+    "coupling": "wedge/vee are ordered paired spinor alternatives; star means complex conjugation and -p momentum reversal, not adjoint and not antiunitary Fock-space operator",
+    "ordered_six_printed_identities": [
+      "i gamma_2 (u_p^{wedge/vee})^* = v_p^{wedge/vee}",
+      "i gamma_2 (v_p^{wedge/vee})^* = u_p^{wedge/vee}",
+      "i gamma_0 u_{-p}^{wedge/vee} = +i u_p^{wedge/vee}",
+      "i gamma_0 v_{-p}^{wedge/vee} = -i v_p^{wedge/vee}",
+      "gamma_13 u_{-p}^{wedge/vee} = (-/+) (u_p^{vee/wedge})^*",
+      "gamma_13 v_{-p}^{wedge/vee} = (-/+) (v_p^{vee/wedge})^*"
+    ],
+    "source_nonimplication": "Author states these identities also hold for massless case; does not by itself establish physical CP/T invariance or the later QFT phases."
+  },
+  "original_p7_source_scope": {
+    "helicity_guard": "For generic massless momentum, author Eq(3.1) solutions are NOT helicity eigenstates. Only p_u = +/- sigma_3, momentum along/opposite z, is assigned to Eq(2.1) left/right spin-weight vectors.",
+    "helicity_operator": "h=(1/2) sigma_0 tensor p_u; longitudinal L/R helicity corresponds to -1/2 or +1/2, in the author's sign convention",
+    "source_spinor_basis_cardinality": {
+      "positive_energy_column_vectors": 4,
+      "negative_energy_column_vectors": 4,
+      "all_original_column_vector_components_independently_qualified_here": false,
+      "reason": "All eight source 4-component spinor vectors remain for independent full-source cold source-cell crosswalk; this scoped qualification covers only p6 Eq3.2 and p7 qualitative/diagram P-T role incidence."
+    },
+    "negative_energy_source_disclaimer": "Author explicitly says the massless v_{+0/-0} labels have the OPPOSITE physical spin and helicity one would expect from their symbology; do not infer particle-state spin from v superscript alone.",
+    "source_CPT_qualitative": {
+      "C": "massless longitudinal fermion -> antifermion, same spin, helicity, momentum",
+      "P": "massless longitudinal fermion -> fermion, same spin, opposite helicity and momentum",
+      "T": "massless longitudinal fermion -> fermion, opposite spin, same helicity and opposite momentum",
+      "boundary": "These are p7 source statements and diagram role descriptions, NOT quantitative §5 QFT operator actions; author explicitly defers precise phase to quantized Dirac treatment."
+    },
+    "unnumbered_diagram": "p7 source diagram has four labelled chiral spinor vertices (Psi_L^wedge, Psi_R^wedge top; Psi_R^vee, Psi_L^vee bottom), two horizontal P relations and two crossing T relations; these four unordered edge incidences are source-first transcribed from original visual. Arrows' full directed and phase realization remains unqualified, and individual p7 eight 4-component spinor columns remain unqualified.",
+    "diagram_original_visual_graph": {
+      "source_page": 7,
+      "original_page_SHA256": "8b40b6901b5cfcbb654d22a128a4763a04e399d927e437dc51a60714784a20ea",
+      "vertices": [
+        {
+          "id": "TL",
+          "label": "Psi_L^wedge",
+          "role": "top left"
+        },
+        {
+          "id": "TR",
+          "label": "Psi_R^wedge",
+          "role": "top right"
+        },
+        {
+          "id": "BL",
+          "label": "Psi_R^vee",
+          "role": "bottom left"
+        },
+        {
+          "id": "BR",
+          "label": "Psi_L^vee",
+          "role": "bottom right"
+        }
+      ],
+      "source_labelled_unordered_edges": [
+        {
+          "op": "P",
+          "pair": [
+            "TL",
+            "TR"
+          ]
+        },
+        {
+          "op": "P",
+          "pair": [
+            "BL",
+            "BR"
+          ]
+        },
+        {
+          "op": "T",
+          "pair": [
+            "TL",
+            "BR"
+          ]
+        },
+        {
+          "op": "T",
+          "pair": [
+            "TR",
+            "BL"
+          ]
+        }
+      ],
+      "complete_original_undirected_role_incidence": true,
+      "arrow_directionality_and_phase_independently_qualified": false,
+      "not_the_separate_8_vertex_CPT_cube_at_p11": true
+    }
+  },
+  "failure_class_and_prevention": {
+    "class": "GENERIC_SSC_DOMAIN_SUMMARY_OMITS_SOURCE_EQUATION_ARGUMENT_ORDER_AND_MASSLESS_CONDITION",
+    "prior_failure": "Source p6 Eq3.1 matrices, boost/rapidity constraints, massless projectors and normalization; p6 Eq3.2 exact C/P/T gamma, momentum reversal, star and coupled signs; p7 exclusion for non-z helicity and v negative label role were summarized without source-specific operator and binder ordering.",
+    "generalized_method": "For each unresolved original formula group, compare entire SHA-pinned original PDF formula block + printed visual page against exact SSC owner. Census all operators, argument order, sign branches, indices, fixed and variable source domains, qualifiers, negative claims and nonimplications. Preserve a separate source-first subindex and verify adversarial omission/flip of every load-bearing distinction. Do not add duplicate typed SSC records.",
+    "missing_index_vs_missing_research": "Prior original page SHA/layout and group-owner maps existed; underindexed exact source-meaning relative to generic SSC is the verified deficiency, not missing frozen source research."
+  },
+  "conservation": {
+    "six_original_sources": 6,
+    "original_all_source_location_groups": 350,
+    "original_L04_source_groups": 53,
+    "original_L04_ssc_roots": 34,
+    "original_L_SSC_identity_count": 191,
+    "modified_existing_original_groups": [
+      "L04-S013",
+      "L04-S014",
+      "L04-S015"
+    ],
+    "unmodified_existing_original_groups": 50,
+    "modified_existing_SSC_items": [
+      "L-SSC-100",
+      "L-SSC-101"
+    ],
+    "unchanged_complete_existing_SSC_records": 189,
+    "new_typed_SSC_items": 0,
+    "prior_selected_L04_exact_groups": 7,
+    "after_scoped_selected_exact_groups": 5
+  },
+  "status": {
+    "source_scoped_S013_formula_cold_candidate": true,
+    "source_scoped_S015_formula_cold_candidate": true,
+    "p7_eight_spinor_components_cold_verified": false,
+    "full_L04_original_source_cold_qualified": false,
+    "all_six_original_cold_qualified": 0,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "external_source_mathematics_truth_not_required_for_G0": true,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}
