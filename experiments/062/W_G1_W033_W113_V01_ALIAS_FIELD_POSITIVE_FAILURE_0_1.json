@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062-W-G1-W033-W113-v1-FALSE_W113_ALIAS_FIELD_ORACLE.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "exact_failure": {
+    "run_id": 38154072894,
+    "job_id": 114513299634,
+    "head_sha": "87da36c04f512be910fbd402a4c3a9ca1b94757e",
+    "conclusion": "FAILURE",
+    "primary_author_original_source_first_step": "SUCCESS_12_OF_12_ADVERSARIAL",
+    "occurrence_positive_baseline": "FAILURE_UNJUSTIFIED_ROW_FIELD"
+  },
+  "cause": "Checker demanded row.source_typed_witness_alias_from_W033, but the exact source record expresses shared W033↔W113 provenance in each occurrence and top-level source_evidence_index_disposition. W113 has no separate G0 typed IDs and must not invent any.",
+  "correction": "Distinct successor requires top-level shared-source disposition, per-occurrence typed ownership and exact source body, plus explicit S4-vs-PT shape and selected-l conditions so negative mutations cannot escape.",
+  "historical_failure_preserved": true,
+  "no_source_research_omission_inferred": true,
+  "source_G0_untouched": true,
+  "G1_global_incomplete": true,
+  "G2_unauthorized": true
+}
