@@ -1,0 +1,28 @@
+name: Experiment 062 W G0 current-author structural conservation 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G0_AUTHOR_HTML_STRUCTURAL_FINGERPRINT_SUPPLEMENT_0_1.json'
+      - 'experiments/062/tools/audit-w-current-author-html-structure-0-2.py'
+      - 'experiments/062/tools/verify-w-current-author-html-structure-0-2.cjs'
+      - '.github/workflows/experiment-062-w-g0-author-structural-conservation-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          python3 -m py_compile experiments/062/tools/audit-w-current-author-html-structure-0-2.py
+          node --check experiments/062/tools/verify-w-current-author-html-structure-0-2.cjs
+      - run: python3 -u experiments/062/tools/audit-w-current-author-html-structure-0-2.py
+      - run: node experiments/062/tools/verify-w-current-author-html-structure-0-2.cjs
+      - run: |
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+          node experiments/062/tools/verify-w-g0-current-qualified-stage-0-1.cjs
