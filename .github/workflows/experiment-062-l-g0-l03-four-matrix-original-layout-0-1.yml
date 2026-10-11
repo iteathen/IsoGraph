@@ -1,0 +1,27 @@
+name: Experiment 062 L G0 L03 remaining four original matrix table source 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l03-four-matrix-original-layout-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L03-four-original-matrix-text:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Independent frozen-original matrix line capture
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --retry 3 -fLsS https://arxiv.org/pdf/1006.4908v1 -o /tmp/l03-v1.pdf
+          printf '603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e  /tmp/l03-v1.pdf\n' | sha256sum -c
+          pdfinfo /tmp/l03-v1.pdf | grep -E '^Pages: +14$'
+          for p in 6 7 8; do
+            echo "L03_FROZEN_V1_PRINTED_PAGE_${p}_LAYOUT_BEGIN"
+            pdftotext -f "$p" -l "$p" -layout -enc UTF-8 /tmp/l03-v1.pdf -
+            echo "L03_FROZEN_V1_PRINTED_PAGE_${p}_LAYOUT_END"
+          done
