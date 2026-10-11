@@ -1,3 +1,7 @@
+## L04 source verifier 0.2 retry — first failed CI retained (2026-10-11)
+
+Track L [dossier](lisi/README.md) retains first original S010 verifier run [38185057415](https://github.com/iteathen/IsoGraph/actions/runs/38185057415) as **FAILURE / baseline field-name mismatch / 0 of 27 hostiles executed**, despite original PDF SHA/page/block and four exact matrix checks passing. [G0 gate0.166](../../experiments/062/L_CURRENT_STAGE_GATE_0_166.json) routes a corrected *verifier-only* original-source replay; SSC0.89 and source inverse0.22 are unchanged. 11 mapped L04 original groups and 0/6 whole cold source audits remain; G0 unfrozen and all G1+/cross-track/PR merge gates blocked.
+
 ## L04 vector-action source-normalization checkpoint (2026-10-11)
 
 Active L [source dossier](lisi/README.md), SSC **0.89**, [G0 gate0.165](../../experiments/062/L_CURRENT_STAGE_GATE_0_165.json), inverse **0.22**, convergence **0.44** and traversal **0.61** now include the frozen original pp4–5 L04-S010 conditional factor-of-four vector-action normalization diagnostic. This conserves both printed author formulas and explicitly withholds an error/physics verdict. Bounded original-source CI is pending. Source corpus remains **six frozen originals / 191 existing SSC IDs / 350 original groups**, with **11** L04 broadly mapped groups outstanding and **0/6** complete original semantic cold audits. G0 UNFROZEN; G1+, W/L semantic import/synthesis and PR70 merge blocked; historical CI failures remain failed.
