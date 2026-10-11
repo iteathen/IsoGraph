@@ -1,0 +1,38 @@
+{
+  "schema": "isograph.exp062-w01-independent-original-48page-initial-verifier-failure.v0.1",
+  "track": "W",
+  "date": "2026-10-10",
+  "semantic_authority": false,
+  "historical_run": {
+    "id": 38113963638,
+    "commit_sha": "4466e866f0151a75be9902595c4109d9fe5ed99b",
+    "job_id": 114395034454,
+    "status": "FAILURE",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38113963638",
+    "step": "Check and verify original W01 48-page PDF source-first G0 with adversarial cases",
+    "failed_before_adversarial": true
+  },
+  "failure": "AssertionError: source-first original page obligation removed 4",
+  "failure_class": "OVERLY_SYNTACTIC_ORIGINAL_SOURCE_PAGE_ROLE_VERIFIER_NOT_SOURCE_SEMANTIC_OMISSION",
+  "root_cause": "The verifier expected literal 'Spin4 double cover' but the independent original-first page role stated 'Euclidean double cover Spin4' with same source semantics. Full page-marker audit revealed a second inert word-form difference: 'pseudoreal' versus 'sigma antilinear square−1'.",
+  "systemic_fix": "Check every fixed W01 source-page marker against its corresponding source-first PDF page record BEFORE rerunning. Correct both overly textual marker expectations, preserve all 48 independently authored page obligations and every existing SSC object unchanged; continue using independently fixed original mathematics and hostile controls.",
+  "predecessor_verifier": {
+    "path": "experiments/062/tools/verify-w01-independent-48page-original-pdf-g0-0-1.cjs",
+    "git_blob_sha": "01035dfbe8d44a6f77709504339c708024fbfe9d"
+  },
+  "successor_verifier": {
+    "path": "experiments/062/tools/verify-w01-independent-48page-original-pdf-g0-0-2.cjs",
+    "git_blob_sha": "b2ce6dcd5ad0558a65ce184f48ab7fbeba21e62c"
+  },
+  "source_first_record": {
+    "path": "experiments/062/W01_G0_INDEPENDENT_48PAGE_SOURCE_FIRST_PDF_AUDIT_0_1.json",
+    "git_blob_sha": "798a812767b28694a8f2deff9f3cde6383313bda"
+  },
+  "original_arxiv_v2_not_oct03_bytes": true,
+  "source_semantics_changed": false,
+  "current_W_SSC0_69_unchanged": true,
+  "G0_open": true,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "cross_author_semantics": false
+}
