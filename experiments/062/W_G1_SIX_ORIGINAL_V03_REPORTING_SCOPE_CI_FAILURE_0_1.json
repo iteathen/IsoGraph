@@ -1,0 +1,18 @@
+{
+  "schema": "isograph.exp062.w.g1.six-original-author-v03-report-scope-bug.v0.1",
+  "track": "W",
+  "failed_run": {
+    "id": 38151522936,
+    "job_id": 114505805257,
+    "commit": "c0a3a27e6e7961f506a72d9e0b7618e137a666e2",
+    "conclusion": "FAILURE"
+  },
+  "error": "Final success report attempted len(seen) even though seen was local to verify(); correct verified findings returned list should supply count.",
+  "evidence_boundary": "Source-first read and ten adversarial tests completed before reporting exception; cannot reclassify failed run as success, downstream frozen SSC/G1 checker did not execute.",
+  "fix": "Distinct v0.4 reporter uses len(findings), no original author anchors, bodies or 29 candidate occurrences changed.",
+  "historical_run_status_preserved": true,
+  "old_oct03_g0_open": true,
+  "current_g0_frozen": true,
+  "current_global_g1_open": true,
+  "g2_blocked": true
+}
