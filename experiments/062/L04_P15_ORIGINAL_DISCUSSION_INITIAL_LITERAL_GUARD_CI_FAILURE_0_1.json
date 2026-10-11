@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062.L.G0.original-L04-p15-v0_1-baseline-metadata-guard-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "failed_run": {
+    "run_id": 38176395190,
+    "job_id": 114579585605,
+    "head_sha": "fae335d36e964abfcff612105d49cda6f4e8db28",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38176395190",
+    "conclusion": "failure",
+    "baseline_PASS": false,
+    "original_frozen_PDF_SHA256_verified": true,
+    "original_p15_page_SHA256_verified": true,
+    "original_p15_all_three_source_blocks_SHA256_verified": true,
+    "original_5_source_groups_and_7_new_owner_links_reported": true,
+    "hostiles_defined": 34,
+    "hostiles_rejected": 0,
+    "exact_baseline_issue": "source indexing versus source interpretation distinct and no new source ID",
+    "failure_not_reclassified": true
+  },
+  "diagnosis": {
+    "class": "VERIFIER_LITERAL_PROSE_EXPECTATION_MISMATCH_WITH_PRESERVED_SOURCE_MODALITY",
+    "issue": "Verifier v0.1 demanded adjacent words 'literal equality' in the diagnostic text, whereas the frozen original-source packet records the more precise '§7 p15 uses equality C=i e1 ... §6 Eq6.1 ∼' with identical load-bearing distinction. This is verifier wording, not an original-source omission.",
+    "source_first_semantics_changed": false,
+    "original_source_bytes_or_revision_replaced": false
+  },
+  "correction": {
+    "previous_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-p15-discussion-source-reverse-0-1.mjs",
+      "git_blob_sha": "a7fae9df265b0b0e92d12e83b003a2ccbe9ce3d0"
+    },
+    "corrected_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-p15-discussion-source-reverse-0-2.mjs",
+      "git_blob_sha": "82a4ec3cb6b18e906347328a8b0df2a15f13562f"
+    },
+    "evidence_scope": "Require actual equality C=i e1 under §7 and earlier tilde ∼ under §6 rather than arbitrary prose exact-phrase; additionally require role-sensitive 16-vs-eight distinction, regex whole word 'possible' vs 'impossible', and exact item_count 191.",
+    "new_CI_status": "PENDING_GITHUB_ACTIONS",
+    "old_failed_CI_remains_failure": true
+  },
+  "conservation": {
+    "source_first_frozen_groups": 350,
+    "L04_original_groups": 53,
+    "existing_L_SSC_IDs": 191,
+    "prior_completed_original_semantic_cold_sources": 0,
+    "L04_mapped_meaning_groups_candidate_scoped_replayed": 4,
+    "L04_mapped_meaning_groups_remaining_cold_open": 18,
+    "no_new_original_semantic_assumption": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
