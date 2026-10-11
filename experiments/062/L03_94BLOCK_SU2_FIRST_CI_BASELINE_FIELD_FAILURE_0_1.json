@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062.L.G0.L03.original-94block-SU2-first-CI-source-field-mismatch.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_CI": {
+    "run_id": 38114079576,
+    "job_id": 114395373569,
+    "head_sha": "6aac85103cc8badc7015b2ee89b1449b18029bf3",
+    "conclusion": "failure",
+    "issues": [
+      "SU2 original source semantics, signed scalar and indexed K"
+    ],
+    "hostiles_defined": 25,
+    "hostiles_rejected": 25,
+    "hostile_rejections_not_valid_qualification_because_baseline_false": true,
+    "original_PDF_v1_SHA256_verified": true,
+    "original_94_block_SHA_reconstructed": true,
+    "source_first_47_and_SSC26_membership_baseline_completed": true
+  },
+  "cause": {
+    "class": "VERIFIER_ORIGINAL_SOURCE_FIELD_ALIAS_MISMATCH_AND_SPURIOUS_ADVERSARIAL_REJECTIONS",
+    "source_row_actual_field": "source_semantic_group",
+    "wrong_checker_field": "original_source_semantic_group",
+    "meaning": "The original L03-S010 source semantic body holds exact i/2 Pauli bracket scalar and negative epsilon signs but checker read nonexistent property. All hostile tests seemed rejected because every trial inherited the baseline failure.",
+    "repair": "Check actual source_semantic_group field and separately assert baseline passes BEFORE interpreting mutation kills. Reject a hostile only if original unmodified baseline passes and mutated check fails, so spurious all-pass illusions cannot mask validator defects.",
+    "source_item_or_original_semantic_omission_newly_proven_by_test": false
+  },
+  "source_provenance": {
+    "frozen_pdf_sha256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "source_packet": "research/woit-lisi-isomorph/lisi/LISI_L03_UNNUMBERED_SU2_SOURCE_LIE_BRACKET_G0_0_1.json",
+    "source_source_first_inverse": "research/woit-lisi-isomorph/lisi/LISI_L03_SOURCE_FIRST_REVERSE_COVERAGE_0_11.json",
+    "SSC_revision_unchanged": "SOURCE_SEMANTIC_CENSUS_0_69.json",
+    "verified_data_not_rewritten_to_appease_checker": true
+  },
+  "G0_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}
