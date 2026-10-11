@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062.L.G0.L04.section4-second-hostile-local-owner-escape-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "original_failed_CI": {
+    "run_id": 38147768929,
+    "job_id": 114494614354,
+    "head_sha": "63c27ac5af67a596aee748c08d23ba1781bd5a53",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38147768929",
+    "original_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section4-quantum-commutators-0-2.mjs",
+      "git_blob_sha": "fb468fa1612ce8c47f46e7d751b8fb4d1f57aebd"
+    },
+    "clean_source_baseline": true,
+    "original_frozen_L04_PDF_SHA256_verified": true,
+    "original_pdf_pages_reextracted": [
+      8,
+      9
+    ],
+    "original_source_blocks_16_reverified": true,
+    "source_signed_commutator_rows": 32,
+    "hostiles_defined": 59,
+    "hostiles_rejected": 58,
+    "escaped": "remove_original_owner",
+    "result_must_remain_failure": true
+  },
+  "defect": {
+    "failure_class": "BIDIRECTIONAL_CORRESPONDENCE_OWNER_EDGE_CONSERVATION_INCOMPLETE",
+    "mechanism": "A hostile deleted S018's source-to-SSC owner list. Global 34-owner set remained unchanged because S018's owners also occurred at other source locations. The checker compared only union of owners and SSC IDs, rather than preserving exact owner links on each original source row.",
+    "generalized_resolution": "Check each of the 53 original source rows' individual SSC owner IDs against the historically pinned immediate parent, including owner order and multiplicity; explicitly require S018's two owner IDs and keep the 34-owner union check as separate coverage defense.",
+    "original_semantic_packet_unchanged": true,
+    "previous_current_source_first_sha": "bfd9b1767d3f11ea97f81d3489ee1c8d08dbc93c",
+    "previous_current_ssc_sha": "3b2a62cece6074516c41261cca800cc5c54e5a0f",
+    "new_checker": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section4-quantum-commutators-0-3.mjs",
+      "git_blob_sha": "9661c16c3a5249375a1b439a0db50b9f463bda03"
+    },
+    "whole_original_source_cold_complete": false
+  },
+  "source_G0_locks": {
+    "source_count": 6,
+    "original_groups": 350,
+    "SSC_identities": 191,
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
