@@ -51,6 +51,12 @@ The researcher argues that even when a program intends to reread **the same phys
 
 The defensible lesson is that **storage width, entropy of the time-indexed readout history, and entropy of the final logical result are not interchangeable**. Conditional Shannon entropy and entropy-rate modeling apply to stochastic physical processes. Fault tolerance may suppress their logical effects. The researcher's broader concern that an observer/indistinguishability problem recurs through every physical implementation is an **unresolved suspicion**, not a universal theorem.
 
+## Quantum encrypted superposition and measurement
+
+The researcher asks whether **the encrypted data itself might be a quantum superposition**, so that even its legitimate holder does not know a particular classical measurement outcome before reading it. See [quantum encrypted superposition and readout identity](reviews/2026-10-12-encrypted-quantum-superposition-and-readout-identity.md). Quantum ciphertext encoding a **definite classical message** can permit deterministic authorized recovery; a **quantum plaintext in superposition** instead decrypts to a quantum state whose measurement can yield different classical values. For example, |+> has zero von Neumann entropy but a computational-basis measurement yielding one bit of Shannon outcome entropy. A pure superposition and a classical mixture can have the same single-basis statistics but differ under other measurements; the strongest physically exhaustive natural-identity claim must count those alternative quantum interactions.
+
+This is an exploratory quantum-information example, **not** a new encryption theorem, a result about ordinary semiconductor error caches, or a demonstration that distinct physical histories are naturally identical.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
