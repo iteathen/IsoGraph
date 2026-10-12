@@ -2,13 +2,13 @@
 
 **Source:** preserved ChatGPT research discussion, dated 2026-10-12  
 **Record created:** 2026-10-12, retrospectively  
-**Nature:** initial conversation backfill plus continuing prompt log  
+**Nature:** substantive research-discussion backfill plus continuing research-idea log  
 **Status:** research discussion, not a verified formal or physical result  
 **Project dossier:** [README.md](README.md)
 
 ## Fidelity and attribution
 
-The **User (verbatim)** blocks below reproduce the user utterances visible in the conversation at record creation. Capitalization, colloquialisms, and possible voice-transcription artifacts are retained. **Assistant response (retrospective summary)** blocks preserve the substance and concessions of earlier assistant messages, **not their complete literal wording**; this file is not represented as a verbatim export of the full ChatGPT transcript. No independent precise timestamp for each individual message is available in the exported context, so only the discussion date is given. The original chat remains the more complete source for assistant wording.
+The **User (verbatim)** blocks below reproduce the substantive research utterances visible in the conversation at record creation. Capitalization, colloquialisms, and possible voice-transcription artifacts are retained. **Assistant response (retrospective summary)** blocks preserve the substance and concessions of earlier assistant messages, **not their complete literal wording**; this file is not represented as a verbatim export of the full ChatGPT transcript. No independent precise timestamp for each individual message is available in the exported context, so only the discussion date is given. The original chat remains the more complete source for assistant wording.
 
 The user, Joshua Oshiro, originated the central research direction and motivating questions. The assistant proposed some names, distinctions, and candidate mechanisms during discussion, as identified below. Recording a hypothesis does not establish its truth or priority.
 
@@ -84,62 +84,10 @@ The user, Joshua Oshiro, originated the central research direction and motivatin
 
 **Assistant response (retrospective summary):** Introduced the working name **generative–reconstructive asymmetry** for the idea that local generation, global prediction, and inverse recovery have different complexity. Suggested comparing rewrite systems on generated configuration count, relational dependencies, forward cost, backward precursor ambiguity, and persistence of structural invariants. Accepted the empirical graph-rewrite experience as a user's report, not as an independently verified complexity result. Did not claim P = NP, P ≠ NP, or a direct mapping between the conventional complexity classes and physical emergence.
 
-### Turn 09 — Standing request for a persistent conversation record
-
-**User (verbatim):**
-
-> From now on, document the discussion somewhere. Maybe in the research repo, on each submission, on each prompt I give, can you update the conversation log there so that we have a permanent record?
-
-**Assistant action before this record:** The assistant stated an intention to identify the repository and record the discussion, but did **not** persist the conversation to GitHub in that earlier response.
-
-### Turn 10 — Minimal prompt while waiting for logging
-
-**User (verbatim):**
-
-> .
-
-**Assistant action:** No substantive logged answer occurred before the user requested a status.
-
-### Turn 11 — User requests an actual reply and completion
-
-**User (verbatim):**
-
-> What's going on? You didn't, you didn't talk to me.
-
-**Assistant response (retrospective summary):** Acknowledged that merely remembering a future logging preference was insufficient; began checking connected GitHub repositories and research governance for an actual persisted record.
-
-### Turn 12 — User selects the repository and location
-
-**User (verbatim):**
-
-> Just build a new folder inside of ISOgraph for this conversation because we don't have research dedicated to this particular topic yet. But ISOgraph is where we're keeping all of our research. So it's fine. Put it in the ISOgraph research directory.
-
-### Turn 13 — User requires a distinct named subdirectory
-
-**User (verbatim):**
-
-> In its own subdirectory, you know, find a good name for it.
-
-**Assistant action being completed:** Created a dedicated working branch in the user's public repository, selected the project path **research/emergent-reality-foundations/**, wrote a consolidated dossier, created this discussion log, and updated the research directory index. The authoritative outcome of the GitHub write, branch, and pull request is determined by repository commit / PR state; this paragraph is a retrospective description, not a claim that this exact file was already on the default branch when the conversation began.
-
-### Turn 14 — Google Drive folder link supplied
-
-**User (link supplied; URL intentionally withheld from public log):**
-
-> [Google Drive folder URL provided in the conversation; exact identifier not reproduced in this public repository.]
-
-**Provenance and handling:** The user supplied a Google Drive folder link without an explicit instruction. The folder's intended role relative to this research record remains unresolved. This is a privacy-preserving exception to verbatim public logging, since sharing a link in private conversation does not necessarily authorize publication of its folder identifier. No Google Drive file or folder has been altered by this entry. The public GitHub discussion log remains the active persistent record on the working branch pending PR #74.
-
-### Turn 15 — Request to inspect Drive folder and create separate research projects for papers
-
-**User (verbatim):**
-
-> I want to know if you can see its contents, and we... we... I want to store it in the research folder, but these are different research papers, so you'll need to separate them into their own research projects, give them their own folders inside the research directory on the repo. And I'm okay with it being shared publicly.
-
-**Source reference and permission:** The preceding user-provided Google Drive URL is `https://drive.google.com/drive/folders/13Haaqr6RZ5yLc48hrkxhB72l2h4CAExR`. The user explicitly authorizes public sharing of the intended research materials. This does not establish that third-party copyrighted papers are redistributable without checking their licenses.
-
-**Assistant action and limitation:** Verified that the Google Drive plugin is installed, but no Google Drive folder-listing or file-reading actions were available to the assistant in this session. Attempting to open the URL through available web access did not expose a file inventory. No source-paper titles, file contents, counts, or research classifications have been verified. Consequently no separate paper project folders, full-text repository uploads, or research dossiers have been created from this Drive folder. The existing IsoGraph research log is updated to preserve the request and its blocked status. Once source files are accessible, group by distinct research question, establish one research/<project>/README.md per project, retain original source/provenance, and update research/README.md and the root front door as repository checks require.
-
 ## Continuing log protocol
 
-Append later turns in order, with date and exact user wording when available. Preserve meaningful assistant arguments and corrections with explicit fidelity labels. Never silently rewrite an earlier message to make the research history appear cleaner; clarify later in a new entry. Record failures to save rather than implying automatic persistence. The current dossier [README.md](README.md) is a consolidated, revisable access surface; this log is the accumulating discussion record.
+Record **substantive research contributions only**: new hypotheses, conceptual distinctions, explicit premises, derivations, falsifiers, counterexamples, experiments, evidence, corrections of research claims, and meaningful changes to the research agenda. Preserve the exact wording of the user's research contribution when available. Label assistant material verbatim only when exact; otherwise identify it as a summary.
+
+**Do not log procedural conversation** about GitHub administration, folder/file organization, Google Drive access, uploads, transfers, permissions, status checks, or routine archival instructions. Carry out such operations as needed and report actual success/failure in chat, without creating research-dialogue entries for them.
+
+The initial backfill contains the eight substantive research turns visible at creation. Earlier procedural turns formerly included in this working log were removed from the *current* research log after an explicit scope correction by the researcher; Git history independently retains the earlier committed revisions. Do not silently rewrite substantive historical discussion. Update the consolidated dossier when research ideas change. GitHub writes require an active tool call and never occur autonomously between messages.
