@@ -1,51 +1,52 @@
-# Minimal Productive-Role Reduction Adapter
+# Archived sketches — Minimal Rule and Minimum Representation research
 
-**Current research dossier:** this README  
-**Research status:** imported methodology sketches; proposed research program, not implemented or verified  
-**Source provenance:** author-supplied notes archived 2026-10-12  
-**Authority:** unqualified exploratory research separate from IsoGraph Core and the three-role manuscript
+**Current research dossier:** this README is the index for a **historical source bundle**, not a separate third active research project.  
+**Status:** two imported, unqualified methodology sketches, retained byte-for-byte with original titles and archive provenance.  
+**Research taxonomy corrected by Joshua Oshiro:** 2026-10-12, retrospectively recorded in this dossier.  
+**Authority:** research only; no promotion to IsoGraph Core or any qualified specification.
 
-## Question and scope
+## Correct research ownership
 
-If a physical relation has an effective executable formulation, can its behavior be faithfully represented in a universal symbolic form, and can method-specific implementation structure be removed to expose candidate relational invariants across equivalent formulations?
+The two files were bundled together in the supplied upload, but **they do not constitute one standalone research program**. The archive's original container directory name is preserved for provenance rather than treated as a research classification.
 
-The supplied notes propose a two-stage program using the source manuscript's schematic productive-role questions (α transition, β determinate presence, γ applicable bearing). These role labels are descriptive tests of counted apparatus, not physical primitive particles, forces, or ontological classes.
+| Archived research sketch | Correct research home | Connection |
+| --- | --- | --- |
+| [Minimal Productive-Role Reduction as an Adapter Between Computation and Physical Structure](evidence/source/minimal-role-reduction-adapter-sketch.md) | **Minimal Rule research** — [emergent-reality foundations dossier](https://github.com/iteathen/IsoGraph/blob/research/emergent-reality-foundations-20261012/research/emergent-reality-foundations/README.md) | A historical speculative bridge from computational/formal reduction toward minimal generative rules, emergent physical dynamics, and recurring candidate structure. The three old role names are working analytical placeholders; the unproved three-role theorem is **not** adopted as a new minimal-rule result. |
+| [Two-Track Sketch: Physics-to-SKI Bridge and Later Signal Reduction](evidence/source/two-track-physics-to-ski-sketch.md) | **Minimum Representation research** — [Primitive Presentation dossier](https://github.com/iteathen/IsoGraph/blob/research/primitive-presentation-adversarial-review-20261012/research/primitive-presentation/README.md) | A proposed representational methodology: first translate *program plus executor semantics* faithfully into a formal IR/lambda/SKI representation; then compare multiple equivalent implementations to isolate representation-independent relational content. It belongs to the research on **minimum/primitive representation**, not the first sketch's minimal-rule topic. |
 
-## Two research tracks — do not conflate
+The research homes above are separate investigations even when they share concerns about invariants, translations, and emergent physical explanation.
 
-**Track 1 — reproducible bridge (translation).** Translate ordinary correctly executing mathematical or physics programs, **including executor semantics**, into a formal intermediate representation, lambda calculus, and possibly SKI. The first objective is faithful behavioral translation, *not* reduction, minimality, or discovery. The notes mention a bytecode-first route and a possible IBM 650 instruction-semantics route as alternative prototypes.
+## What survives from the original sketches
 
-**Track 2 — signal extraction (discovery).** Only after multiple validated mappings exist, remove representational and executor redundancy under a declared behavior-preservation criterion, then compare independent implementations, algorithms, and formulations for surviving structural patterns. Do not tune reductions to preserve a hoped-for physical motif.
+### Sketch A — Minimal Rule direction
 
-Track 1 success does **not** imply Track 2 success, and neither alone licenses a conclusion about prephysical reality.
+The imported adapter sketch explores how a candidate relation could be translated through executed programs and reduced to a smaller structural description. Its original `α/β/γ` bookkeeping comes from the historical Primitive Presentation attempt.
 
-## Source documents
+For **Minimal Rule** purposes, treat these as a proposed investigative tool for comparing generative behavior and finding candidate constraints; they are **not** evidence that reality has three irreducible rules, or that the original minimum-role theorem was established.
 
-- [Minimal productive-role reduction adapter sketch](evidence/source/minimal-role-reduction-adapter-sketch.md) — purpose, invariant search, correspondence burden, controls, and open leads.
-- [Two-track physics-to-SKI bridge and later signal reduction](evidence/source/two-track-physics-to-ski-sketch.md) — distinct translation and reduction tracks, executor accounting, and prototype ideas.
-- [SOURCE_IMPORT.json](SOURCE_IMPORT.json) — exact byte-preserving source identities and provenance.
+### Sketch B — Minimum Representation direction
 
-## Main boundaries, falsifiers, and current state
+The physics-to-SKI sketch has two explicitly separated tracks:
 
-- Translating **code alone** while leaving the interpreter or machine semantics implicit violates the proposal's own completeness requirement.
-- Formally equivalent computations may differ wildly in implementation and numerical approximation. Equivalence claims must specify the observable interface and preservation conditions.
-- A structure present in just one encoding or algorithm is at risk of being a representation-dependent artifact.
-- Successful reduction may eliminate the anticipated motif; this is valuable negative evidence, not necessarily a failed bridge.
-- Correctly encoded mathematical dynamics are not automatically the microscopic or ontological structure of physical reality.
-- No implementation, quantitative trace analysis, faithful translation proof, cross-method invariant, or independent physical validation was present in the supplied two markdown sketches.
+1. **Faithful translation:** program and complete executor semantics → formal IR / lambda calculus → SKI or another universal representation. The initial aim is operational preservation, not minimizing or discovering physics.
+2. **Cross-formulation reduction:** use multiple valid translations and implementations, then remove representation-specific scaffolding under a **declared equivalence criterion**, retaining candidate structural invariants only where independently supported.
 
-## Evidence and provenance boundary
+The later approach remains a **draft methodology**, not a valid proof of the original three-symbol minimum, the completeness of all physics, or a demonstrated physical invariant.
 
-This project is logically adjacent to [Three Roles in Effective Symbolic Presentation](../primitive-presentation/README.md), but its proposed physics-facing methodology is **not** a corollary of the manuscript's claimed theorem. The imported source uses some historical terms and role labels; those are preserved as historical evidence, not inserted as qualified IsoGraph semantics.
+## Preserved source evidence
 
-- **Research direction:** source notes provided by the user (Joshua Oshiro), first publicly preserved here 2026-10-12; no independent historical priority claim.
-- **Assistant contribution:** archival project organization and annotated research dossier; no claim that the proposals have been independently tested.
-- **Current stage:** design sketch. Source notes, not executable deliverables.
+- [Minimal productive-role reduction adapter sketch](evidence/source/minimal-role-reduction-adapter-sketch.md) — source for the Minimal Rule investigation.
+- [Two-track physics-to-SKI sketch](evidence/source/two-track-physics-to-ski-sketch.md) — source for the Minimum Representation investigation.
+- [SOURCE_IMPORT.json](SOURCE_IMPORT.json) — the original archive path, file lengths, exact hashes, and byte-preserving import record.
 
-## Near-term experimental targets
+The files remain at their original imported repository paths **only to retain exact source evidence and avoid severing existing archive links**. Logical research ownership is specified above and indexed in the respective research dossiers. No second copy of either source is asserted to be independent evidence.
 
-1. Fix a tiny exact arithmetic or finite-state physics-inspired relation and a reference semantics.
-2. Translate a fully counted executor-plus-program into a universal formal representation and verify reconstruction across inputs.
-3. Repeat with at least two independently written implementations and one different formulation.
-4. Declare observational equivalence, reduction operations, and negative controls *before* selecting candidate invariants.
-5. Preserve cases where equivalence fails or where the proposed invariant disappears. Only then discuss physics-facing implications.
+## Boundaries and provenance
+
+- **Research direction and classification:** Joshua Oshiro, including the correction of which project owns each sketch.
+- **Original texts:** user-supplied, historically preserved; the working role terminology and draft claims remain as written.
+- **Retrospective organization:** agent-assisted GitHub dossier and routing updates dated 2026-10-12; this does not backdate, repair, or independently verify the sketches.
+- **Negative evidence:** there are no verified executors-to-SKI translations, multi-method reductions, primitive-role independence proofs, or empirical physical invariants established by the imported sketches alone.
+- **Semantic authority:** neither research area acquires qualified IsoGraph authority merely by being listed here.
+
+**Research boundary:** Minimal Rule investigates candidate generative rules/relations from which physical regularity might emerge. Minimum Representation investigates faithful formal mappings and what structural content survives changes of representation. The projects may inform one another; their evidence and scope remain distinct.
