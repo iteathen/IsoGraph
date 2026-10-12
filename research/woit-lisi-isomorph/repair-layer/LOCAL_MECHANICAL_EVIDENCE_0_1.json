@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.woit-lisi-repair-layer-replay.v0.1",
+  "recorded_on": "2026-10-11",
+  "tested_code_git_blob_sha": "e1424f34baec6aea075c2461e938f74827d81177",
+  "execution": "Initial deterministic same-project V8 replay; branch CI checks identical committed Node script",
+  "authority": false,
+  "independent_external_validation": false,
+  "cold_source_reconstruction": false,
+  "source_papers_changed": false,
+  "pass_count": 6,
+  "tests": [
+    {
+      "id": "R01",
+      "center_orders": [
+        2,
+        4
+      ],
+      "killing_inertia": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "original_real_group_isomorphism": false
+    },
+    {
+      "id": "R02",
+      "source_failures": {
+        "involution": 2,
+        "composition": 28,
+        "clifford_pairs": 7
+      },
+      "counterfactual_failures": {
+        "involution": 0,
+        "composition": 0,
+        "clifford_pairs": 0
+      },
+      "wrong_sign_control": {
+        "involution": 0,
+        "composition": 48,
+        "clifford_pairs": 12
+      },
+      "coefficient_vectors": 73,
+      "ordered_vector_pairs": 5329
+    },
+    {
+      "id": "R03",
+      "Q8_order": 8,
+      "extension_order": 16,
+      "central_product_preimages_each": 2,
+      "nontrivial_semidirect_alternative": true
+    },
+    {
+      "id": "R04",
+      "tested_vector_eigenbranches": 4,
+      "printed_p4_commutator_gap_factor": 4
+    },
+    {
+      "id": "R05",
+      "mixed_bracket_class_counts": {
+        "gravity": 24,
+        "primed": 24,
+        "zero": 72
+      },
+      "phase_reversed_nonzero_pairs": 48,
+      "trace_square_native": -8,
+      "trace_square_phased": 8,
+      "mixed_basis_reexpression_N_over_M": 0.25
+    },
+    {
+      "id": "R06",
+      "triality_basis_triples": 64,
+      "strict_role_swap_counterexamples": 6,
+      "finite_chart_pairs": 16,
+      "global_infinity_triality_pass": false
+    }
+  ],
+  "guarded_nonclaims": [
+    "PASS only denotes declared bounded model checks",
+    "Original 2007/2024/2026 Lisi publications are unchanged",
+    "No global Spin proof, complete Lie/graded curvature proof, physical equivalence or unification",
+    "Cross-track triality global rejection is preserved",
+    "No G0 completion, W G1 promotion, source seal, PR #70 merge"
+  ]
+}

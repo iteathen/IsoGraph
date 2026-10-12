@@ -1,0 +1,127 @@
+{
+  "schema": "isograph.woit-lisi-isolated-repair-candidates.v0.1",
+  "recorded_on": "2026-10-11",
+  "base_research_head_sha": "21727ea5792aa8eeea322752054f2694bf25446b",
+  "branch": "research/woit-lisi-repair-sandbox-20261011",
+  "authority": false,
+  "qualification": "PROJECT_GENERATED_EXPLORATORY_NOT_SOURCE_OR_CORE_AUTHORITY",
+  "source_census_changed": false,
+  "source_bytes_changed": false,
+  "source_tracks_W_and_L_untouched": true,
+  "G0_G1_gate_effect": "NONE",
+  "cross_track_admission": false,
+  "merge_authorized": false,
+  "verifier": {
+    "path": "research/woit-lisi-isomorph/repair-layer/verify-repairs.cjs",
+    "git_blob_sha": "e1424f34baec6aea075c2461e938f74827d81177"
+  },
+  "cases": [
+    {
+      "id": "R01",
+      "domain": "L",
+      "status": "SCOPED_MATHEMATICAL_RECLASSIFICATION_NOT_SOURCE_CORRECTION",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SPIN_REAL_GROUP_ISOMORPHISM_SOURCE_DEFECT_G0_0_1.json",
+          "git_blob_sha": "13bc77b555444f2e5395bed8035b2d4d80f7eece"
+        }
+      ],
+      "proposed": "Keep Spin+(3,1) approximately SL(2,C); distinguish split-signature real form Spin(2,2) approximately SL(2,R) x SL(2,R) instead of asserting equality of these real groups.",
+      "tested": "Center orders 2 versus 4; real Killing-form inertias (3+,3-) versus (4+,2-).",
+      "unresolved": "Author intended real form and global-group normalization; no changes to frozen 2007 formula or wider E8 model."
+    },
+    {
+      "id": "R02",
+      "domain": "L",
+      "status": "COUNTERFACTUAL_ONE_CELL_REPAIR_PASSES_FINITE_TESTS",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_INDEPENDENT_VERSION_REAUDIT_0_1.json",
+          "git_blob_sha": "9ec1acd5ae21ad4b38b5c3dca0e5c699f8d84f43"
+        },
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json",
+          "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+        }
+      ],
+      "proposed": "In a counterfactual table only change e6*e7 from -e2 to +e2; later separate arXiv 2609.12112v1 already displays that sign. Keep journal L05 exact, unchanged.",
+      "tested": "Basis antiinvolution failures 2->0, 73x73 integer sparse norm-composition failures 28->0, 36 Clifford generator pair failures 7->0; opposite-cell-only change retains 48 composition failures.",
+      "unresolved": "No journal erratum established or full L05 triality, bivector and f4 mathematical proof."
+    },
+    {
+      "id": "R03",
+      "domain": "L",
+      "status": "FINITE_ALTERNATIVES_PASS; FULL_SPIN_GROUP_OPEN",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L04_SPIN_DIRECT_PRODUCT_SOURCE_FIDELITY_DEFECT_G0_0_1.json",
+          "git_blob_sha": "b207f770e70768e731a35363ea94d0909092e5d4"
+        },
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L04_SPIN_COMPONENT_CENTRAL_PRODUCT_DIAGNOSTIC_G0_0_1.md",
+          "git_blob_sha": "1f96c28361c2f6cc05a3049140e838346aa82b60"
+        }
+      ],
+      "proposed": "Finite Q8 subgroup with z=PT_U of order 4 has size-16 extension (Q8 x C4)/<(-1,c^2)>; using involutory x=(gamma1 gamma2)z gives nontrivial Q8 semidirect C2. These presentations refer to same finite model, not original paper's full group.",
+      "tested": "H order8/G order16, quotient fibers 2, center order4 contains order4 z, involutory x conjugates b to -b.",
+      "unresolved": "Whole Spin component/central extension, quotient, author's literal multiplication sign and intent."
+    },
+    {
+      "id": "R04",
+      "domain": "L",
+      "status": "CONDITIONAL_COMMUTATOR_ALTERNATIVE; SOURCE_NORMALIZATION_OPEN",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION2_VECTOR_BIVECTOR_NORMALIZATION_G0_0_1.json",
+          "git_blob_sha": "9a6415c46c3afb390361c168f64658f41ef3ad0e"
+        }
+      ],
+      "proposed": "Use project-defined action [B,v] with B=J3 or K3 in standard Clifford algebra, rather than silently changing printed p4 tensor contraction.",
+      "tested": "All four vector eigenbranches yield p5 eigenvalues +/-i and +/-1; the original p4 final expression evaluates to a quarter of full commutator in these explicitly assumed conventions.",
+      "unresolved": "Exact author definition of cross action and antisymmetric component normalization; no proven author typo."
+    },
+    {
+      "id": "R05",
+      "domain": "L",
+      "status": "NAIVE_PHASE_AUTOMORPHISM_REJECTED; NORMALIZED_COORDINATES_CONDITIONAL",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_MIXED_TRACE_SQUARE_SIMILARITY_OBSTRUCTION_G0_0_1.json",
+          "git_blob_sha": "6a1412c782eb2034bfb0553bd8248faabcb14870"
+        },
+        {
+          "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_MIXED_BASIS_TRANSPORT_G0_0_1.json",
+          "git_blob_sha": "cb0414646189d84e29682e46563ef77aa33638ce"
+        }
+      ],
+      "proposed": "Keep two separate counterfactual maps: P=(-i)X explains mixed 8x8 entries but fails brackets if pure sectors remain fixed; N=M/4 is instead a basis-coordinate re-expression for the distinct H1/Fgw factor-four diagnostic, with transported structure constants.",
+      "tested": "trace(X11^2)=-8, trace(P11^2)=+8; 24 gravity/24 primed nonzero mixed brackets invert phase sign, 72 zero; [N11,N21]=-G12/8 while [M11,M21]=-2G12.",
+      "unresolved": "No source-attested common output basis, full graded Lie/curvature transport or full H1 equivalence. These are not one repair."
+    },
+    {
+      "id": "R06",
+      "domain": "U-exploratory",
+      "status": "AFFINE_ROLE_SWAPPED_ALTERNATIVE_PASS; GLOBAL_EXTENSION_REJECTED",
+      "source": [
+        {
+          "path": "research/woit-lisi-isomorph/unification/UNIFICATION_U1_TRIALITY_FINITE_TRANSPORT_0_1.md",
+          "git_blob_sha": "320aab4b8abcad33ace210da320024791d43a3a0"
+        },
+        {
+          "path": "research/woit-lisi-isomorph/unification/UNIFICATION_U1_TRIALITY_FIBER_EXTENSION_0_1.md",
+          "git_blob_sha": "674d54567d84b3f40722053ec945ab01b8b79638"
+        }
+      ],
+      "proposed": "On finite quaternionic charts explicitly exchange two chiral roles with conjugation T(kv,kchi,kpsi)=T(v,psi,chi); preserve W01->W05 graph incidence by conjugation, homogeneous-coordinate swap and action side swap. No Lisi product at infinity.",
+      "tested": "64 basis triples satisfy cyclic/conjugation/swap identities; 6 strict no-role-swap counterexamples; 16 finite graph-basis pairs transport.",
+      "unresolved": "W05 original chiral typing not established. Global U1.1 triality remains rejected; no postseal cross-track admission."
+    }
+  ],
+  "admission_requirements": [
+    "Independent original-source review",
+    "Separate exact source-version and convention adjudication",
+    "All load-bearing reconstruction and authority gates",
+    "Hostile qualification and scope review",
+    "Explicit authorization before any source-facing change"
+  ]
+}

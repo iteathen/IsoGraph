@@ -1,3 +1,9 @@
+## Isolated repair-hypothesis sandbox (branch-only, 2026-10-11)
+
+A new [separate proposed-repair layer](repair-layer/README.md) records six counterfactual mathematical models and their falsifiers. It is **not source authority**, does not repair or complete L G0, does not change W G0/G1, and cannot promote cross-track synthesis or PR #70. Its mechanical checks include reproducing original failures as negative controls. This notice is present only on the isolated experiment branch; the concurrent source-research branch has not been modified.
+
+---
+
 ## L04 commuting-C source CI 34/34 qualified within G0 (2026-10-11)
 
 Current [L track dossier](lisi/README.md), [SSC0.91](lisi/SOURCE_SEMANTIC_CENSUS_0_91.json), [inverse0.24](lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_24.json), and [gate0.172](../../experiments/062/L_CURRENT_STAGE_GATE_0_172.json) record [original L04 p12/p15 scoped CI 38190883923](https://github.com/iteathen/IsoGraph/actions/runs/38190883923) **SUCCESS with 34/34 adversarial rejections** for the author-accepted 48-element commuting-C triality alternative. [First CI 38190554058](https://github.com/iteathen/IsoGraph/actions/runs/38190554058) remains **FAILURE (0/34 hostiles executed)**; both outcomes are preserved. Distinct historical alternatives (48, 96 and trivial 192-group product) and the 192 *weight* count are not identified. **8 original L04 source groups remain broadly mapped; 0/6 full cold-paper semantic reviews complete; G0/SSC UNFROZEN**, so L G1+ and W/L synthesis/PR merge are prohibited. This is project-controlled internal source qualification, not independent external or physical validation.
