@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-sec3-first-CI-setup-failure.v0.1",
+  "recorded_date": "2026-10-11",
+  "source_track": "W",
+  "initial_commit_sha": "19ad932514e844e9b94b508fd0e032920cacad6e",
+  "original_CI_run": {
+    "id": 38190309565,
+    "job_id": 114621443804,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38190309565",
+    "status": "COMPLETED",
+    "conclusion": "FAILURE",
+    "step": "Set up job",
+    "executed_verifier": false,
+    "executed_hostile_mutations": 0
+  },
+  "log_evidence": "GitHub runner refused actions/checkout@v4 because all actions must be pinned to full-length commit SHA.",
+  "defect_owner": "NEW_WORKFLOW_UNPINNED_ACTION_REFERENCE_LOCAL_CI_CONFIGURATION",
+  "repair": "Pin actions/checkout to the repository precedent full SHA 11d5960a326750d5838078e36cf38b85af677262, and make changes to workflow itself trigger the check.",
+  "failed_result_not_rescored": true,
+  "candidate_or_source_changed": false,
+  "qualification_effect": "NONE_W_G1_REMAINS_39_151",
+  "independent_cold_G1_review": false,
+  "future_CI_result": "NOT_YET_RECORDED"
+}

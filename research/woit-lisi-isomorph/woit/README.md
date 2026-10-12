@@ -1,3 +1,9 @@
+### W G1 W01 §3 initial mechanical CI failed at setup; action pinned (2026-10-11)
+
+[First CI 38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) is **FAILED before verifier execution**: unpinned checkout violates repository full-SHA Actions policy. [Immutable failure record](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_FIRST_CI_SETUP_FAILURE_0_1.json) preserves 0 hostile tests executed. A separate workflow-only correction pins checkout to the existing full SHA; the 13 new W01 G1 occurrences remain unqualified and **39/151** remains the only qualified W G1 stage.
+
+---
+
 ### W G1 W01 Intro / §3 current-source candidate, 39/151 still qualified (2026-10-11)
 
 [W01 W-SSC-002/003 original-source-first research](W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_RESULT_0_1.md) and [13-occurrence machine packet](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_CANDIDATES_0_1.json) preserve asymmetric Euclidean SU(2)_L internal / SU(2)_R spacetime source roles, the **nonzero selected e0**-relative action with **ordered gL cancellation**, distinct temporal/spatial invariance, and a proposed Higgs role without complete dynamics. A finite exact 2×2 calculation passes five local algebraic controls; a [22-hostile mechanical verifier](../../../experiments/062/tools/verify-w-g1-w01-sec3-gauge-e0-0-1.cjs) has an Actions workflow but is **not** independent cold source verification. New candidates **0 qualified**; frozen current-author G0 remains 151, qualified G1 stays **39/151**, old October 3 source-byte target OPEN. No G2–G7, track seal, W/L semantic import or PR merge.
