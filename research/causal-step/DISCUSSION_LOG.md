@@ -102,3 +102,27 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Research-status instruction:** The two Causal Step working premises and the author's definition of time as causal-event succession remain unchanged. Future discussions should reason **from** the stipulated premises, state new consequences/contradictions directly, and avoid repeatedly asking the author to justify their provisional status.
 
+## 2026-10-12 — Executing archived emergent-universe Model A and documenting its behavior
+
+**Researcher (verbatim, identification of the model and reported resource limit):**
+
+> I made a toy model of an emergent universe. It, uh, it kind of, um, it's only capable of playing out a couple hundred steps before it becomes too difficult to run it. But I have it as, um... I have it as, um... It's in one of the research folders. I think it's in the... Oh, I can't remember the name of the research. It's an HTML file with some JavaScript, I think.
+
+**Researcher (verbatim, request for execution and visual inspection):**
+
+> Yeah, take a look at the way it works, and if you can, even simulate it, maybe not graphically, but computationally, so you can produce the numbers. Also might be good for you to get a snapshot of what it looks like graphically as it plays out in animated motion, because with the given properties, it starts to take on some of its own emergent qualities, as you'll notice if you look at it.
+
+**Researcher-originated direction:** Inspect the actual executed behavior of the author's historical HTML/JavaScript **Supplementary Model A — Dimension Birth**, including its apparently emerging visual structures and its computational growth limits. This is a request for measurement and exploration, not a claim that the observed motifs validate any emergent-universe physics.
+
+**Assistant executed local investigation (summary, not verbatim):** Found the unchanged original under Primitive Presentation supplementary archive (raw Git blob `4d7e6f4bb594204afa92534d697a9a32fc3ea9a0`; original SHA-256 `f23d0de70b309e3428d4987f72432d7a02b7d2f9543f6aa100695757ee388b80`). Executed the actual browser JavaScript through locally installed Chromium and non-semantic telemetry hooks. Captured screenshots, an accelerated 0–1,000 model-step animation, CSV and JSON checkpoints, and ran the default trajectory to **2,500 steps**. The original supplied source remained unedited. No GitHub Actions/CI runner was used to execute the model.
+
+**Observed behavior:** The model begins with one root, grows deterministic pseudorandom graph edges and nodes, numerically relaxes them with springs, and adds coordinate dimensions when constraints fail. New dimensions occur precisely at steps `1,22,...,232` at intervals of 21, then stop at the configured **12-dimensional cap**. The browser only plots the first three coordinates. At step 200 there are **533 nodes / 682 edges / 10 dimensions**; at 500 **1,321 / 1,705 / 12**; at 1,000 **2,599 / 3,364 / 12**. The connected graph forms a compact central cloud; radial extent stays roughly stable through step 1,200. Beyond the near-3,000 node cap, truncation/pruning contributes to a breakup: **33 connected components at step 1,250**, **150 at 1,500**, **209 at 2,500**, and the earliest root node disappears from the node list.
+
+**Source-specific defect detected:** `reset()` calls `nodes.push(makeNode(null,false))` even though `makeNode` already appends its node. This duplicates the initial object/ID 0; after 50 model steps a fresh page has **118 nodes/147 edges**, while a reset page has **119 nodes/151 edges**. This is reproducible and makes reset trajectories structurally incomparable without correction. The frozen original was **not** repaired. Also, the advertised quantum-fluctuation-like generator is presently deterministic hash/optional Rule 30, not measured quantum entropy; the spring dynamics and `dt` are chosen host numerical physics, not a derivation of the researcher's causal-step or relativity premises.
+
+**Control:** The alternate deterministic Rule 30 mode uses a different node/edge distribution but has exactly the same dimension-birth schedule. Reported “energy conservation” drift cannot be read as a closed-system conservation test, because the simulator keeps changing its masses, edges, topology and coordinates.
+
+**Audit and supporting evidence:** [Model A executed simulation and structural audit](reviews/2026-10-12-model-a-execution-audit.md). The full generated numeric data, screenshot time-lapse, and reproduction scripts were packaged for the user as conversation artifacts (not published as binaries in this PR).
+
+**Status:** Source-faithful local reproduction and narrow implementation findings, not a physical law or an additional adopted Causal Step premise. Preservation-first: historical source and prior research claims untouched.
+
