@@ -1,3 +1,7 @@
+## L-track current G0 — L04 p14 original source 40/40 PASS (2026-10-12)
+
+The [L research dossier](lisi/README.md) now routes SSC0.96, source inverse0.29, six-source convergence0.51, traversal0.68 and [G0 gate0.187](../../experiments/062/L_CURRENT_STAGE_GATE_0_187.json). [Scoped GitHub Actions source replay 38273902610](https://github.com/iteathen/IsoGraph/actions/runs/38273902610) **passed 40/40 hostile controls**, original frozen L04 p9/p14 SHA and exact 24-cell geometric checks; [evidence](../../experiments/062/L04_P14_24CELL_ORIGINAL_SOURCE_CI_40_HOSTILE_SUCCESS_0_1.json). Three earlier CI failures remain preserved as failures. **0/6 full original-source semantic cold audits**, 191 SSC identities, 350 source groups, G0 UNFROZEN. No W semantic import, G1, synthesis, or merge.
+
 ## L04 p14 first source verifier failure preserved (2026-10-12)
 
 The L-only SSC0.96/source-first0.29 remains a **G0 source candidate**, not frozen. The original 40-control p14 verifier [CI 38243765870](https://github.com/iteathen/IsoGraph/actions/runs/38243765870) **failed before any PDF/hostile tests**, from a JS syntax error; the first failure is retained unchanged. [Gate0.184](../../experiments/062/L_CURRENT_STAGE_GATE_0_184.json) routes a corrected verifier pending new CI without changing source records, the 0/6 whole-source cold-audit count, the W firewall or merge authorization.
