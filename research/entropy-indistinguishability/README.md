@@ -25,6 +25,10 @@ The author clarified that the starting problem was **one identical output from d
 
 The [formal clarification and elementary proof](reviews/2026-10-12-single-output-source-nonidentifiability.md) distinguishes this precise outsider/inverse problem from the much stronger **natural identity** question explored later. The original experiment and its proposed quantum-error cache are presented as a **thought experiment**, not a verified hardware entropy source. The researcher's wording is preserved in the [discussion log](DISCUSSION_LOG.md).
 
+## Known generating process: newer research question
+
+A later question asks whether a shorter physical entropy seed can be as valuable as a longer seed when the transformation is public. This is distinct from the original unknown-generator inference problem. See the [known-generator comparison](reviews/2026-10-12-known-generator-seed-value.md). It separates exact output equality, information-theoretic entropy, and task-relative computational security. No universal equality claim is asserted.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
