@@ -95,6 +95,18 @@ The author's historical **[Supplementary Model A — Dimension Birth](https://gi
 
 [Full reproducible orbital measurement, caution and correction](reviews/2026-10-12-model-a-orbital-motion-control.md). The withdrawn dimensional coincidence and the user's insistence that **the orbiting pattern remains** are preserved verbatim in the [discussion log](DISCUSSION_LOG.md).
 
+## Uncapped dimension-control experiment — October 12, 2026
+
+The researcher expressly **withdrew** an apparent 12-dimensional coincidence with Lisi/Woit after confirming that the archived Model A has an explicit 12-dimension ceiling. The researcher then requested: **“We need to uncap the dimensions to see if it stabilizes.”** The separate controlled experiment changed only `internalDimCap: 12` to `internalDimCap: Number.POSITIVE_INFINITY`; historical source and all other original model rules remained unchanged.
+
+**Executed finding:** Dimensions continue beyond twelve: **15 at step 300, 24 at 500, 48 at 1,000, 72 at 1,500, 96 at 2,000 and 120 at 2,500**, with no plateau. Rule 30 input gives the same 48 dimensions at step 1,000 despite different graph topology. All 120 observed dimension births occur at `step = 1+21*(dimension−1)`. The cause is **code-driven**: each newborn initially shares the parent's coordinates yet receives a unit-length edge, triggering the maximum-error test, while the 20-step cooldown permits another dimension every 21 updates. This archived model therefore **does not self-select a fixed spatial dimensionality** after uncapping.
+
+**Independent orbital-motion control:** Projected circulation persists. In the same 107-node cohort, **64 uncapped versus 65 capped** trajectories completed more than one net x–y revolution relative to the evolving center from steps 200–950. This does not establish closed, persistent bound orbits in the full high-dimensional system.
+
+- [Reproducible uncapped-control audit and checkpoint comparison](reviews/2026-10-12-model-a-uncapped-dimension-control.md)
+- [Runnable uncapped experimental HTML (one-line derived copy)](experiments/2026-10-12-model-a-uncapped.html)
+- Original preserved under Primitive Presentation, unchanged; full local CSV measurements, screenshot comparison and reproduction scripts separately provided as conversation artifacts.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.

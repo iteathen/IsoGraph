@@ -142,3 +142,19 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Status:** Dimensional coincidence **withdrawn**; orbit-like behavior **quantitatively supported**, with scope limited to the toy dynamics.
 
+## 2026-10-12 — Uncapping Model A dimensions to test stabilization
+
+**Researcher (verbatim):**
+
+> We need to uncap the dimensions to see if it stabilizes.
+
+**Researcher-originated test request:** Remove the twelve-dimension ceiling from the existing HTML model, run the actual dynamics, and determine whether dimension formation eventually levels off. This follows the researcher's explicit withdrawal of the twelve-dimensional Lisi/Woit coincidence while retaining a separate claim of orbital-looking motion.
+
+**Assistant executed control (summary, not verbatim):** In a fresh unreset browser run, change only `internalDimCap: 12` to `Number.POSITIVE_INFINITY`; invoke original growth, dimension, spring-force and integration operations with test-only telemetry. Confirmed original capped model remains at 12 from step 232 onward, whereas uncapped hash input creates 15, 24, 48, 72, 96, and 120 dimensions at steps 300, 500, 1,000, 1,500, 2,000, and 2,500 respectively, without numerical nonfiniteness. An independent uncapped Rule 30 run reaches 48 at step 1,000. All 120 observed births occur precisely 21 steps apart. This is not a natural stabilization phenomenon: every new child initially coincides with its parent yet has a required unit edge, guaranteeing a large fresh edge-length error, so the routine gives birth to a dimension whenever its explicit cooldown permits. The project source file was not altered.
+
+**Independent motion comparison:** Tangential-velocity mean in first 3 coordinates at step 1,000 is ~0.7385 uncapped versus ~0.7425 capped. In a 107-node cohort tracked at every step from 200 to 950, 64 uncapped vs 65 capped trajectories make more than one net revolution around the moving center of mass in the first-two-coordinate projection. This preserves the observation of projected circulation but not proof of stable full-dimensional orbits.
+
+**Supporting evidence:** [Model A uncapped dimensional-control audit](reviews/2026-10-12-model-a-uncapped-dimension-control.md) and [one-line-change executable experimental HTML](experiments/2026-10-12-model-a-uncapped.html). Full local Playwright reproduction code and generated CSV/visual artifacts were delivered in the conversation; they were **not run via GitHub Actions**.
+
+**Status:** Controlled negative finding for twelve-dimensional self-selection under this implementation; user's withdrawal of the earlier coincidence stands. Model keeps other limits such as `maxNodes=3000`.
+
