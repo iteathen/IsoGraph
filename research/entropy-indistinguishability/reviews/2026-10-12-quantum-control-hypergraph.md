@@ -31,6 +31,28 @@ The global GHZ state is pure, with von Neumann entropy zero; its complete Z-basi
 
 The incoherent all-zero/all-one mixture has identical Z-basis outcome statistics but can be distinguished from coherent GHZ by a global coherence-sensitive measurement. Thus an unknown original readout need not mean total physical indistinguishability.
 
+## Basis-sensitive measurement entropy
+
+The same pure three-qubit GHZ state also illustrates how different quantum measurement choices yield different Shannon randomness **without changing global von Neumann entropy**:
+
+```
+|GHZ_3> = (|000> + |111>)/sqrt(2)
+
+Measure every qubit in Z:
+    000 or 111, each with probability 1/2
+    Shannon entropy = 1 bit
+
+Apply H to every qubit, then measure in Z:
+    000, 011, 101 or 110, each with probability 1/4
+    Shannon entropy = 2 bits
+
+Global pure-state von Neumann entropy = 0 in both cases.
+```
+
+For an n-qubit GHZ state, applying H to every qubit followed by computational-basis measurement yields a uniform distribution over the 2^(n-1) strings with even parity. Its Shannon readout entropy is n−1 bits, despite the underlying global state remaining pure until measurement. This is a **different physical measurement protocol and quantum resource model**, not deterministic Shannon entropy amplification from one initially unknown classical bit. Each initialized ancillary qubit and coherent operation belongs to the physical apparatus being counted.
+
+This example supports the researcher's distinction between **small classical randomness at preparation** and **many-body quantum unpredictability at readout**, while cautioning that the result need not be computationally hard to predict or undo for a known preparation circuit.
+
 ## Computational status
 
 The researcher's proposed graph may exhibit serious computational complexity for **specific** classical-simulation or measurement-probability tasks. However, publicly specified unitary gates admit inverse operations, and complicated graph evolution alone does not prove difficulty for every recovery task. If additional physical variables are unknown, they must be included in the comparison. Quantum complexity classes such as BQP are relevant; P versus NP does not by itself determine whether the proposed task has an efficient method.
