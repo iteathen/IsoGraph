@@ -84,3 +84,21 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Research status:** The original two premises and the explicit definition of *causal time* are preserved; this is a new **thought experiment/candidate interpretation**, not an added proven principle or derivation of relativity.
 
+## 2026-10-12 — Light proper time, observer causal chains, and premise-first analysis
+
+**Researcher (verbatim, substantive question):**
+
+> From the perspective of a light beam, how does time pass? As opposed to from our perspective, how does time pass? So relativity comes into play here, and I wonder if light experiences time as a causal step, and that could also explain the relative difference between observers and the passage of time.
+
+**Researcher (verbatim, correction of research posture):**
+
+> Yeah, I know. I know that it's, uh... that's why we labeled it as a premise.
+
+**Researcher-originated speculation:** Take the project's existing causal-step premise as the working assumption, then investigate whether differences between lightlike propagation and observer histories may explain relative rates of event succession. The researcher explicitly objects to repeatedly reminding them that the premise is not established; the appropriate next work is conditional deduction and consistency-testing, **not reiterating caveats already acknowledged**.
+
+**Agent scientific analysis (summary, not verbatim):** Established relativity distinguishes lightlike curves of zero metric proper time from timelike worldlines along which observers' clocks accrue proper time. Massless particles have no inertial rest frame, so literal phenomenology from a photon's viewpoint is not defined. Under the researcher's proposed terminology, one direct light-causal link might correspond to emission-to-detection while observers undergo many local causal events. Testing the hypothesis means discovering whether graph relations and counts can reproduce observer-dependent clock rates and the Lorentz-factor relationship. The usual flat-spacetime formula is an **emergent target to derive**, not a definition of causal step. A null-related emission/detection pair must not simultaneously be represented as endpoints of a positive-timelike-clock chain; a radar round-trip with distinct send/receive events supports the relevant comparison.
+
+**Technical note:** [Null proper time and candidate causal-step correspondence](reviews/2026-10-12-null-proper-time-and-causal-step-correspondence.md).
+
+**Research-status instruction:** The two Causal Step working premises and the author's definition of time as causal-event succession remain unchanged. Future discussions should reason **from** the stipulated premises, state new consequences/contradictions directly, and avoid repeatedly asking the author to justify their provisional status.
+
