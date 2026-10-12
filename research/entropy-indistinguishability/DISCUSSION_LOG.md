@@ -95,6 +95,18 @@
 
 **Status:** Hypothesis retained and analysis saved; no crypto-security proof or claim of equal average brute-force cost.
 
+## 2026-10-12 — Chaotic dynamics with smaller versus larger entropy budgets
+
+**Researcher (verbatim):**
+
+> Yes, and furthermore, there might be ways to reconstruct a three-body-like problem with a minimum set of bits. So, you know, in a larger sense, I'm not talking about one bit. One bit is like the extreme, okay? And I've shown even with only one bit you could do a lot. But really my point is about smaller or larger, okay? So what if there was a way to construct a true three-body problem with a relatively small number of bits? Then you would be able to extract something of an unpredictable value from it, right? And that's very similar to using the Rule 110 approach, which is also theoretically computationally irreducible. Now, in such a situation, is a larger entropic seed value any different in any meaningful or realistic or real way by any measurable means? Or is it just a difference in the processes that led to it?
+
+**Researcher-originated refinement:** The one-bit seed is an extreme illustration; the general claim concerns **smaller versus larger source-entropy budgets**. Chaotic three-body-like dynamics or a complex universal rewriting process might produce difficult-to-predict results from compact initial randomness. The substantive research question is whether any possible physical observation of the resulting system distinguishes these outcomes from those of a larger source, or whether the entropy difference characterizes their preparation histories/descriptions rather than the resulting physical state. This is asked as a **question/hypothesis**, not a claimed new entropy theorem.
+
+**Assistant formal analysis (summary, not verbatim):** Deterministic chaos can amplify sensitivity without producing new independent source entropy. The relevant proof target is equality of all admitted downstream physical consequences, not mere unpredictability. A one-bit source S and two independent bits U,V can yield identical output distributions through X_A=S and X_B=U XOR V, despite source entropies 1 and 2. Passing these identically distributed outputs through the same arbitrary causal transition/observation kernels preserves exact **downstream** equivalence. Yet the complete generating histories could differ if discarded source records or environmental effects remain physically accessible. For any fixed deterministic k-bit source, output support is bounded by 2^k, even if dynamics are chaotic. A genuine physical three-body realization can depend on additional initial-state precision and environmental uncertainty beyond the stated control seed. See [Dynamical complexity, source entropy, and physical identity](reviews/2026-10-12-dynamical-complexity-vs-physical-entropy-identity.md).
+
+**Status:** Conditional exact downstream indistinguishability illustration saved; no claim of global physical identity or universal computational irreducibility. Historical sources unchanged.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
