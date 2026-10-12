@@ -1,3 +1,7 @@
+## L G0 p9 source verification 34/34 PASS (2026-10-11)
+
+Current [L dossier](lisi/README.md), SSC0.90 and [stage gate0.169](../../experiments/062/L_CURRENT_STAGE_GATE_0_169.json) record [bounded original L04 p9 Table2 verification](https://github.com/iteathen/IsoGraph/actions/runs/38188484102) with **34/34 hostile controls PASS** for source weight matching and Table1 correspondence. **10 broadly mapped L04 semantic groups / 0 of 6 complete original paper cold reviews** remain; SSC/G0 are not frozen, W/L independence and draft PR70 no-merge gate preserved.
+
 ## L-only G0: p9 creation-weight source review candidate (2026-10-11)
 
 [Lisi dossier](lisi/README.md) now routes [SSC0.90](lisi/SOURCE_SEMANTIC_CENSUS_0_90.json) and [G0 gate0.168](../../experiments/062/L_CURRENT_STAGE_GATE_0_168.json). L04-S020 original p9/p5 source-first review checks 16 helicity rows, 8 creation sign-flips, 8 unique annihilation/opposite-family creation *weight* matches, and 8 Table1 spinor-weight correspondences without equating field operators. New independent original PDF CI is pending; **10** broadly mapped L04 groups and **0/6** whole-original semantic cold reviews still OPEN. No new source identities, W import, gate promotion, or PR merge.
