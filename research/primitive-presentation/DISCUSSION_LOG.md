@@ -92,6 +92,18 @@
 
 **Assistant editorial disposition:** Preserve the historical source without amendment; do not present an established irreducible three-role minimum or a universal physical no-go theorem. Preserve complete comparison of productive apparatus, the bounded SKI encoding example, the negative historical proof outcome, and the conjectured self-grounding boundary. An explicitly unapproved retrospective redraft is located at [drafts/2026-10-12-retrospective-reframing.md](drafts/2026-10-12-retrospective-reframing.md).
 
+## 2026-10-12 — Rewrite as incomplete inquiry; boundary explicitly suspected
+
+**Researcher (verbatim):**
+
+> Yeah, go ahead and rewrite the paper with the new approach. Preserve enough of it to preserve the history, but frame it under the new framework that it's an incomplete work. I do not believe I can prove the case I'm making here. It does not invalidate the work, but the work can't be substantiated by proof or evidence, as far as I can tell. And I am stuck at what appears to be a Gödel-style boundary, is my suspicion. Don't write that in stone, but label it as a suspicion.
+
+**Researcher-originated clarification and decision:** The investigation's desired theorem remains unproved; the author currently sees no available evidentiary or proof route for the overarching claim. This is not a statement that all future proof routes are demonstrably impossible. The suspected Gödel-style self-grounding boundary must be presented only as a *suspicion*, and historical construction and failed attempts must remain visible. The author requested a substantive rewritten **incomplete** paper rather than continued proof research.
+
+**Assistant document action (research-content summary; not a verbatim assistant reply):** Authored [Primitive Presentation: An Incomplete Inquiry into Representation, Minimality, and Self-Grounding](drafts/PRIMITIVE_PRESENTATION_INCOMPLETE_INQUIRY_2026-10-12.md) as a full replacement working manuscript, retaining the original research motivation, complete comparison of productive apparatus, illustrative three-symbol SKI construction, α/β/γ factorization, failure of the two-role lower-bound argument, and the conjectural self-reference interpretation. Explicitly withdrew an asserted universal minimality theorem and avoided asserting a new physical incompleteness result. The source manuscript under [evidence/source](evidence/source/primitive-presentation.md) remains unchanged; the rewritten paper is an AI-assisted editorial draft awaiting author acceptance, not a qualified or peer-reviewed publication.
+
+**Current scope:** Research marked *concluded and incomplete*. No further proof campaign initiated.
+
 ## Logging protocol
 
 Append future **research-substantive** turns, with the original researcher wording when available and honest fidelity labels. Do not append routine repository/file-management conversation. Record corrections as subsequent research entries rather than silently editing the earlier argument. Track whether each proposed lemma is established, falsified, or unresolved.
