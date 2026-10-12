@@ -26,12 +26,12 @@ Original source is not truly random: its default `mix32`/hash source is determin
 | 900 | 2,375 | 3,071 | 12 | 1.608 | 0.387 | 1 | ~0 |
 | 1,000 | 2,599 | 3,364 | 12 | 1.608 | 0.384 | 1 | 0.521 |
 | 1,200 | 2,980 | 3,884 | 12 | 1.601 | 0.391 | 1 | 4.087 |
-| 1,250 | ~3,000 | ~3,700 | 12 | ~1.6 | recorded independently | 33 | nonzero |
+| 1,250 | 2,999 | 3,698 | 12 | 1.602 | 0.384 | 33 | 5.550 |
 | 1,500 | 2,999 | 3,234 | 12 | 1.868 | 0.402 | 150 | 10.897 |
 | 2,000 | 2,994 | 3,124 | 12 | 2.802 | 0.495 | 195 | 13.176 |
 | 2,500 | 2,999 | 3,088 | 12 | 3.286 | 0.583 | 209 | 8.228 |
 
-For a row explicitly labeled “not checked,” no exact component claim is inferred in that table. The early trajectory was also inspected from stored node/edge geometry and is connected through these initial stages. The `~` figures at step 1,250 are rough presentation values; the exact saved structure results are accessible from the separate local `late_structure.json` audit artifact.
+For a row explicitly labeled “not checked,” no exact component claim is inferred in that table. The early trajectory was also inspected from stored node/edge geometry and is connected through these initial stages. The step 1,250 values are taken from a separate structure-diagnostic run of the same deterministic default-source model. The exact trajectory and component-level details are preserved in local `late_structure.json`.
 
 **Dimension-birth event indices:** `1, 22, 43, 64, 85, 106, 127, 148, 169, 190, 211, 232`. The **21-step periodicity** follows the explicit cooldown plus persistent edge errors. Internal dimension growth stops at the manually set **12-dimensional cap**; the 3D browser view shows only the first **three** coordinates. It does not demonstrate automatic selection of physical three-dimensional space.
 
