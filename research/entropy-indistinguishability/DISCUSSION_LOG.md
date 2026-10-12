@@ -65,6 +65,20 @@
 
 **Assistant correction (summary, not verbatim):** Explicitly acknowledged misreading the user's word “suspect” by treating the possible equality in average brute-force difficulty as a claim of fact requiring defensive caution. It is appropriate to investigate this hypothesis with a clearly defined task, algorithm family, auxiliary-information model and expected-cost criterion, but inappropriate to attribute a claim of proof or certainty to the researcher. The research record must preserve this tentative status in subsequent summaries.
 
+## 2026-10-12 — Public generator: can a short source seed match a longer seed?
+
+**Researcher (verbatim):**
+
+> There's another claim that's harder to make, and that is what's changed the situation a little bit. Let's say the outsider knows the process by which you applied the seed. Now, can a short seed be manipulated in a way that makes it just as valuable as a longer seed? This is a harder question to address.
+
+**Researcher-originated new comparison question:** The outsider now knows the seed-processing method, unlike the original one-output inverse-reconstruction experiment where the algorithm was unknown. The question is whether a smaller source of genuine entropy can attain the same *value* as a longer source under a publicly specified transformation. It is explicitly asked as a research **question**, not an assertion that such equality holds universally.
+
+**Assistant research response (summary, not verbatim):** Distinguished equality of particular realized outputs, information-theoretic entropy, security against computationally bounded adversaries, and utility relative to a specific application. For a fixed public deterministic map G with k-bit seed, at most 2^k outputs can occur, and H(G(S)) ≤ H(S) ≤ k. The seed-space enumeration and range-membership distinguisher show that a known 1–2-bit generator cannot offer security comparable to a long independent random key when the output is available to test. But a sufficiently large, unpredictable seed (illustratively 128 bits) expanded through a properly designed *public* cryptographic generator may give the same practical security or functional benefit as a longer physical entropy source for a task whose target is 128-bit security. Such task-relative equivalence does not claim full output-distribution equality or a higher brute-force security bound. NIST's SP 800-90A/B/C series explicitly supports physical entropy sources combined with deterministic random-bit generators. The application-relative "as valuable" interpretation remains to be specified for novel claims.
+
+**Saved supporting analysis:** [Known generator: can a short physical seed match a longer seed?](reviews/2026-10-12-known-generator-seed-value.md). Sources: [NIST SP 800-90A Rev. 1](https://csrc.nist.gov/pubs/sp/800/90/a/r1/final), [NIST SP 800-90B](https://csrc.nist.gov/pubs/sp/800/90/b/final), and [NIST SP 800-90C (2025)](https://csrc.nist.gov/pubs/sp/800/90/c/final).
+
+**Status:** Distinct research question logged and mathematically scoped; no novel entropy theorem or security-equivalence result is claimed on the user's behalf.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
