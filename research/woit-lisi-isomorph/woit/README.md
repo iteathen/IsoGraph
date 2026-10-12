@@ -1,3 +1,9 @@
+### W G1 W01 §3.1 verified mechanical successor, no source-local promotion (2026-10-11)
+
+[Corrected CI 38188685767](https://github.com/iteathen/IsoGraph/actions/runs/38188685767), exact head `d05c3a617819526d8d54cdb67ed96c594ef6f13b`, **SUCCESS**: W-SSC-029/030 2-body / 7 typed / 13 candidate occurrence consistency, scoped six-basis Hodge involution, **28/28** corrected hostility rejections, qualified 39-body W G1 regression **28/28** and frozen current-author W G0 regression **22/22**. [Exact evidence/gates](../../../experiments/062/W_G1_W01_PALATINI_HODGE_CORRECTED_CI_GATES_0_1.json) retains [first failed CI 38188527495](https://github.com/iteathen/IsoGraph/actions/runs/38188527495) as failure. The candidate is **not independent cold G1 qualification**; only **39/151** remains qualified, historical Oct03 G0 open, all G2+/W-L/merge gates blocked.
+
+---
+
 ### W G1 verifier correction — first hostile failure preserved (2026-10-11)
 
 [Exact first failed W01 Palatini/Hodge CI](https://github.com/iteathen/IsoGraph/actions/runs/38188527495) rejected the first 12 hostile mutations but allowed deletion of a load-bearing dependency in its thirteenth case; later controls were unexecuted and **no qualification** follows. The [separate correction review](W_G1_W01_PALATINI_HODGE_VERIFIER_SUCCESSOR_0_2.md) and [v0.2 verifier](../../../experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-2.cjs) pin exact dependency and argument/result roles. Corrected CI is pending; old v0.1 failure stays failed; G1 remains **39/151**, no G2+/cross-author/merge.
