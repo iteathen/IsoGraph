@@ -11,6 +11,14 @@
 
 The main research question is **separate** from the user's exploratory use of *entropy* as a prephysical organizing/back-pressure principle in the emergent-reality discussion.
 
+## Research clarification — strict natural identity (2026-10-12)
+
+The researcher specified that **indistinguishability means absolutely no physical difference under any possible physical interaction, even with complete knowledge of the universe**. It does **not** mean merely that a limited observer or currently feasible test cannot distinguish the systems. The researcher calls the resulting principle **natural identity**: when every genuine physical property, relation, and identifying fact is identical, the two descriptions should not be treated as separate physical entities solely because they have different labels.
+
+The [strict-natural-identity clarification](reviews/2026-10-12-strict-natural-identity-clarification.md) updates the earlier assessment accordingly. The apparently large step from *limited operational equivalence* to ontological identity becomes a much smaller interpretive choice under the stronger, exhaustive premise, unless one adopts a form of primitive identity or 'thisness' with no distinguishing physical content. This is closely related to the **identity of indiscernibles** but is not established by finite observation. Different genuinely physical histories or different possible measurement statistics would violate that exhaustive premise; mere alternative descriptions would not.
+
+This is a proposed **global physical identity** principle, not a scoped convenience quotient and not an amendment to qualified IsoGraph NEI. Missing evidence for difference must not be mistaken for positive proof that no possible difference exists. See also [substantive discussion log](DISCUSSION_LOG.md).
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
