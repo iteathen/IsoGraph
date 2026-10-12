@@ -74,6 +74,19 @@ In standard relativity, **null paths have zero metric proper-time length**, wher
 - [Detailed comparison of null proper time and observer event sequences](reviews/2026-10-12-null-proper-time-and-causal-step-correspondence.md)
 - [Researcher's question and subsequent explicit instruction to reason from the premise](DISCUSSION_LOG.md)
 
+## Executed supporting toy model — Model A Dimension Birth
+
+The author's historical **[Supplementary Model A — Dimension Birth](https://github.com/iteathen/IsoGraph/blob/research/import-archived-papers-20261012/research/primitive-presentation/evidence/source/supplementary/model-a-dimension-birth.html)** (original archived under Primitive Presentation, source-import PR #75) has now been **actually executed locally**, not merely read. It is a useful **supporting toy model**, not the Causal Step theory itself and not a theorem. The historical source has been preserved byte-for-byte.
+
+- [2026-10-12 reproducible computational/visual audit and comparative source test](reviews/2026-10-12-model-a-execution-audit.md) — numerical checkpoints to **2,500** model steps, actual browser renderer screenshots and animation, source review, and a reproducible defect.
+- [Verbatim request and complete attribution of the results](DISCUSSION_LOG.md).
+
+**Verified observations:** Fresh default runs produce **533 nodes, 682 edges, and 10 internal dimensions by step 200**; **1,321 nodes / 1,705 edges / 12 dimensions by step 500**; and **2,599 nodes / 3,364 edges by step 1,000**. A dense connected central structure emerges visually as graph size increases. Coordinate dimensions are introduced at steps **1, 22, ..., 232**, reaching the programmed **12-dimensional cap**; the browser renderer plots only the first three dimensions. A hard **3,000-node cap and older-node pruning** create a distinct later regime: the graph fragments into **33 components by step 1,250** and **209 by step 2,500**. Do not confuse this implementation-driven fragmentation with established physics.
+
+**Reproducible defect:** Pressing Reset duplicates the starting node because `reset()` pushes the return value of `makeNode()`, which already adds the node. The resulting graph is not identical to a fresh-run graph. The source remains unmodified; a separately labeled correction/control layer would be required before treating reset trajectories as comparable.
+
+**Research interpretation:** The run supplies concrete evidence of how **the program's own chosen rules** produce branching, central concentration, extended coordinate structure and late graph fragmentation. It **does not yet derive** the Causal Step unit, causal-event time, lightlike propagation, intrinsic 3D dimensionality or relativistic clock rates. Its input source is deterministic hash/optional Rule 30, not an actual stochastic quantum source. Treat it as a computational test substrate for further causality hypotheses and independently defined geometry measurements.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
