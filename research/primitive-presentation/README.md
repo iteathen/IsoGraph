@@ -13,6 +13,14 @@ The original manuscript is retained byte-for-byte under [evidence/source](eviden
 
 **Neither the current draft nor the historical manuscript establishes that two irreducible productive roles are impossible, that all formal structures are computationally representable, or that physical reality must obey a new Gödel theorem.**
 
+## Minimum Representation research — two-track physics-to-SKI methodology
+
+The researcher has clarified that the [*Two-Track Sketch: Physics-to-SKI Bridge and Later Signal Reduction*](../minimal-role-reduction-adapter/evidence/source/two-track-physics-to-ski-sketch.md) belongs to **Minimum Representation / Primitive Presentation research**. Its placement in the same uploaded archive as a different sketch did not make those sketches one unified research project.
+
+The sketch's **two tracks remain distinct**: (1) translate a complete, effectively executable physics/mathematics formulation **including interpreter/executor semantics** to a formal IR and, where suitable, lambda/SKI; (2) compare many behaviorally validated, alternative formulations to remove representation-dependent scaffolding and identify **candidate structural invariants** under an explicit equivalence criterion. Neither a faithful translation nor candidate invariance is a proof of primitive physical ontology, universal formalizability, or the historical three-role minimum.
+
+This is a retrospective **research ownership correction by Joshua Oshiro** recorded on 2026-10-12. It is a methodology sketch, not a validated adapter or an instruction to reopen the abandoned three-role minimality proof. The [source-import manifest](../minimal-role-reduction-adapter/SOURCE_IMPORT.json) preserves its exact archival provenance and hashes. The **other** imported minimal-role-reduction sketch belongs with [Minimal Rule / emergent-reality foundations research](https://github.com/iteathen/IsoGraph/blob/research/emergent-reality-foundations-20261012/research/emergent-reality-foundations/README.md).
+
 ## Question and scope
 
 What must be counted as primitive when a productive, effectively presented symbolic formal system has a very small visible syntax but relies on a parser, evaluator, state discipline, application structure, rule-use conditions, or readout? The manuscript argues that a **complete comparison of productive apparatus**, called *fair accounting* in this historical source, must identify three dependency questions:
