@@ -34,6 +34,7 @@ research/
 
 ## Current research areas
 
+- [Causal Step](causal-step/README.md) — new independent research folder; the project's scientific question and scope have not yet been supplied.
 - [Discovery-method research](discovery/README.md) — research notes supporting Discovery Protocol development; current DP authority remains under `extensions/discovery/` and qualification routing.
 - [DTS research](dts/README.md) — development history and implementation research behind the Detailed Transition System.
 - [Glycan cleavage](glycan-cleavage/README.md) — exact phase-algebra, path-coverage, witness-width, and algorithmic research in the frozen biochemical model.
