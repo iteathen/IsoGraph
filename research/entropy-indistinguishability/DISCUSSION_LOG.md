@@ -141,6 +141,18 @@ Both turns are preserved verbatim with scope-specific analysis in [the dated res
 
 **Status:** Exploratory, mathematically conditioned example. No proof that two physically distinct generating histories are globally identical or that quantum state measurements violate Shannon entropy. Original source files unchanged.
 
+## 2026-10-12 — Unmeasured quantum control propagating through a hypergraph
+
+**Researcher (verbatim):**
+
+> Well, it's kind of interesting to this problem because we're talking about using an entropic seed source, right? But if you base the state of another value on the entropic... if you base the state of something else entirely on the outcome of a quantum tunneling event, but you don't read those values yet, then you've formed something of a superposition between them, where the superposition is now extended into another bit location. So with this method, you could apply the quantum function at every node in a hypergraph without having to re-read the values at all. And I just don't know what would end up happening in that situation. From a purely computational information standpoint, it doesn't seem like you're adding any more than one bit of entropy into the system. But from any practical, realizable, real situation, even if you had access to every bit of information in the universe other than the original... you know what I mean? Even if you had every tool and resource at your disposal, I still think you're forced to brute force this problem the same way you would a larger entropic seed value problem, because you just, you have to resolve the whole graph to find the answer, unless P equals NP, right?
+
+**Researcher-originated proposal:** A single unmeasured tunneling-related quantum state could coherently influence other nodes in a hypergraph, creating a potentially extensive quantum-correlated computation without repeated sampling of an initial bit. The researcher **suspects** an irreducible computational inverse problem with absolute work comparable to a larger classical secret. The comparison to P versus NP is a question, not a derived hardness theorem.
+
+**Assistant analysis (summary, not verbatim):** Distinguished an unread but decohered classical tunneling record from a coherent quantum control. Coherent controlled gates can indeed entangle many graph qubits: a GHZ state is an exact example, but its public preparation circuit is easily invertible gate-by-gate. The global pure state may have zero von Neumann entropy while its computational-basis measurement has one bit of Shannon outcome entropy. Some graph measurement/simulation problems can be computationally hard, but that is a task- and circuit-dependent claim, not an automatic consequence of one control qubit, many graph nodes or P≠NP. The relevant quantum class BQP differs from the classical P-versus-NP question. See [coherent quantum control of a hypergraph](reviews/2026-10-12-quantum-control-hypergraph.md).
+
+**Research status:** Explicit speculative extension, no verified quantum device, no established algorithmic lower bound or new entropy theorem. Original archived sources untouched.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
