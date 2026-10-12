@@ -38,7 +38,7 @@ Term ::= 00 | 01 | 1 Term Term
 1xy = application of parsed term x to parsed term y
 ~~~
 
-The parse is deterministically recoverable because the first bit selects an atom or application; in an atom the second bit disambiguates K or S; in an application the grammar recursively parses **exactly two complete subterms**. Program termination can be determined by complete consumption of a finite input string. The *metasyntactic* words Term, K, S, and x/y are names used to describe the language, not additional program tokens.
+The parse is deterministically recoverable because the first bit selects an atom or application; in an atom the second bit disambiguates K or S; in an application the grammar recursively parses **exactly two complete subterms**. The end of a **well-formed input term** can be determined by complete consumption of a finite input string; this does **not** decide whether reduction evaluation terminates. The *metasyntactic* words Term, K, S, and x/y are names used to describe the language, not additional program tokens.
 
 A **counted** operational specification must additionally define:
 
