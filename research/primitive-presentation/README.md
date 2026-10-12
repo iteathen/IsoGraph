@@ -27,6 +27,10 @@ The researcher identified the deeper original concern as **self-reference and se
 - [Research discussion record](DISCUSSION_LOG.md)
 - Original manuscript and supplemental historical sources remain unchanged under [evidence/source](evidence/source/primitive-presentation.md).
 
+## Retrospective editorial disposition (2026-10-12)
+
+The author identifies the current theorem manuscript as unsuccessful, does not request further primitive-minimality research, and prefers preserving the genuine motivating problem rather than manufacturing a lower-bound proof. An explicitly provisional [retrospective replacement draft](drafts/2026-10-12-retrospective-reframing.md) records complete-apparatus comparison, a small-alphabet construction of limited scope, the unproved two-role lower bound, and the conjectural self-grounding obstruction. This **does not** supersede the original historical source or claim formal, physical, or philosophical validation. It remains unapproved editorial text and is not a research-campaign restart.
+
 ## Current state and strongest source-level claims
 
 The uploaded manuscript, *Three Roles in Effective Symbolic Presentation: Fair Accounting, Local Syntax, and Visible Role-Carriers*, is explicitly labeled an **inquiry submission draft**. It gives a dependency argument for an asserted three-role lower bound in productive effective presentations; SKI, Rule 110, delimiter-based syntax, encodings, and various formal systems are used as witnesses or stress tests.
