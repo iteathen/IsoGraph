@@ -45,6 +45,12 @@ The researcher has clarified that **one bit was an extreme illustration**, not t
 
 A scoped exact example exists: a fair source bit S and two independent fair bits (U,V) have source entropies one and two, but X_A=S and X_B=U XOR V induce the **same output distribution**. Subsequent common dynamics preserve that equality for all interactions limited to the exposed state. This is not proof of **total physical history identity**; discarded source information or other physical environmental effects could still distinguish the complete histories. Chaotic amplification does not itself increase the initial source Shannon entropy.
 
+## Physical execution and time-indexed entropy — 2026-10-12
+
+The researcher argues that even when a program intends to reread **the same physical storage bit**, the real register may fluctuate between operations. Every actual computation involves time, potentially introducing environmental/noise input omitted by a purely symbolic map. See the [verbatim substantive discussion](discussion/2026-10-12-unstable-bit-and-time-in-physical-execution.md) and [technical assessment](reviews/2026-10-12-time-dependent-physical-execution-and-entropy.md).
+
+The defensible lesson is that **storage width, entropy of the time-indexed readout history, and entropy of the final logical result are not interchangeable**. Conditional Shannon entropy and entropy-rate modeling apply to stochastic physical processes. Fault tolerance may suppress their logical effects. The researcher's broader concern that an observer/indistinguishability problem recurs through every physical implementation is an **unresolved suspicion**, not a universal theorem.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
