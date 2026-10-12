@@ -29,3 +29,18 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 **Status:** First substantive research record; exactly two premises, no proof, test, or independent scientific evidence asserted.
 
 
+
+## 2026-10-12 — Explicit redefinition of light speed as a causal-step unit
+
+**Researcher (verbatim):**
+
+> To clarify that I'm redefining lightspeed as a new unit, and that unit is called causal step. It's not attached to any Einsteinian ideas of what lightspeed is. It's attached to causal step.
+
+**Researcher-originated terminology correction:** In this research, “light speed” (or “lightspeed”) is being **redefined** as a new unit named **causal step**. It is **not** an assertion that Einstein's speed-of-light constant c equals one conventional physical clock step, nor is it presently expressed in meters per second, Planck units, or any pre-existing spacetime metric. The author is stipulating what the term refers to in the new framework, not relying on conventional relativistic semantics.
+
+**Effect on earlier premises:** The original two-premise statement is preserved verbatim above as research history. Premise 1 remains unchanged. Premise 2 must be read through this new definition: “one unit of light speed is one causal step” uses the **newly defined term**, rather than relating an existing measured velocity to an already defined physical step. The original word “likely” expresses a tentative physical research idea; the decision to *name the new unit causal step* is definitive terminology within the working model. No new physical premises, formulas, or propagation rules are added by the clarification.
+
+**Assistant attribution:** Interpretation and repository documentation are agent-assisted. This entry corrects an earlier assistant framing that risked silently importing Einsteinian velocity, distance/time, and discretization into an origin-first research question.
+
+**Status:** Terminological clarification of Premise 2, not a new proof, physically confirmed law, or third premise.
+
