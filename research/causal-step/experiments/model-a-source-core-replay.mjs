@@ -430,6 +430,6 @@ report.survival={
  aliveByStep:[200,900,950,1000,1100,1200,1250,1500,1750,2000].filter(x=>x<=horizon).map(t=>({step:t,alive:[...cohort.values()].filter(x=>x.lastAlive>=t).length})),
  late950to1200:{atEnd:[...cohort.values()].filter(x=>x.lastAlive>=1200).length,moreOneNetRevolution:[...cohort.values()].filter(x=>x.lastAlive>=1200&&Math.abs(x.lateWinding)>1).length}
 };
-fs.writeFileSync(prefix+'-survival.csv',['node_id,last_alive_step,late950to1200winding,late_samples',...[...cohort.entries()].map(([id,r])=>[id,r.lastAlive,r.lateWinding,r.lateSamples].join(','))].join('\\n')+'\\n');
+fs.writeFileSync(prefix+'-survival.csv',['node_id,last_alive_step,late950to1200winding,late_samples',...[...cohort.entries()].map(([id,r])=>[id,r.lastAlive,r.lateWinding,r.lateSamples].join(','))].join('\n')+'\n');
 fs.writeFileSync(prefix+'-summary.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({mode,horizon,births:report.birthCount,atEnd:checkpoint.at(-1),orbitOverOne:report.orbit.over1,outputPrefix:prefix}));
