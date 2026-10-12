@@ -1,0 +1,23 @@
+# W G1 — W01 §3.1 Palatini/Hodge original-source occurrence candidate 0.1
+
+**Disposition:** original-source-first G1 **candidate, not cold-independent qualified** (2026-10-11). [Frozen current-author W G0 SSC 0.70](SOURCE_SEMANTIC_CENSUS_0_70.json) has 151 bodies. [Exact qualified W G1 stage 0.8](../../../experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_8.json) remains **39/151 reviewed, 262 candidate occurrences**. This candidate covers **two previously unreviewed W01 source bodies** W-SSC-029/030 and **13 scoped load-bearing occurrences** from seven existing typed G0 assertions. W04c (10), W03 (2), and W01 §§2.1–2.2 (2) separately remain unqualified candidates; no addition to 39 is authorized.
+
+## Source-first research
+
+Directly read **Peter Woit, [*Euclidean Twistor Unification*, arXiv:2104.05099v2](https://arxiv.org/html/2104.05099v2), §3.1 (HTML text lines 159–203)** before consulting the existing W G0 source-typed crosswalk. The version is exactly the frozen W01 version. The public rendered HTML line locations are locators, **not a fresh independently authenticated complete HTML byte hash or a new October 3 historical source identity proof**.
+
+W-SSC-029's six G1 occurrences conserve two different frame-bundle one-form carriers: the spin connection `ω` and canonical form `e`; the ordered Palatini integral `∫_M ε_ABCD e^A ∧ e^B ∧ Ω^CD(ω)` (Eq. 3.1); the dependence of curvature `Ω(ω)` on connection; separate `ω^AB` variation giving `de^A + ω^A_B ∧ e^B = 0`; its stated torsion-free/Levi-Civita interpretation; and separate `e^A` variation yielding Einstein equations **without source-printed full component equations here**. One may not replace the latter with a guessed generic stationarity operator or swap the two variations.
+
+W-SSC-030's seven G1 occurrences conserve the ordered Lie algebra split `spin(4)=su(2)_R ⊕ su(2)_L`, the connection split `ω_R+ω_L`, and connection-dependent curvature split `Ω_R(ω_R)+Ω_L(ω_L)`; the respective right/left `End(S_R)` and `End(S_L)` action carriers; **Hodge-star ±1 two-form eigenspaces**; the source's specific **inclusions** `Λ²_+ ⊂ Hom(S_R,S_R)` and `Λ²_- ⊂ Hom(S_L,S_L)`; and the four ordered curvature terms **(+R, +L, −R, −L)**. Spin chirality and Hodge duality are distinct source-semantic axes, not one interchangeable dichotomy.
+
+## Exact trace and verification boundary
+
+The [machine candidate](../../../experiments/062/W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_CANDIDATES_0_1.json) conserves the complete frozen SSC obligation strings, seven G0 typed statement IDs, and original G0 reciprocal inverse sets W01-INVERSE-041…047, pinned to the exact input blob SHAs. The [bounded mechanical checker](../../../experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-1.cjs) checks exact pins, all typed body/source inverses, operation/negative-role guards, within-body dependency edges, and denies all stage promotion, plus a finite Euclidean Hodge *²=+1 six-coordinate local diagnostic. Mutation controls deliberately test deletion, duplicate source IDs, action/wedge swaps, variation-role reversal, curvature-dependency loss, Hodge sign/role swaps, four-component omission, false cross-track/G2/cold promotion and other losses. **Both checker and candidate were authored by the same agent.** Passing this test, including GitHub Actions, would be **mechanical integrity only**, not independent cold semantic reconstruction.
+
+The local Hodge six-coordinate test only checks one oriented orthonormal four-dimensional algebraic representative; it does not prove the source's spinor-bundle geometry, physical field equations, or entire Riemannian theory. W-SSC-031 remains separate and must not be imported to manufacture a W029/030 conclusion. All named mathematical operations continue as **UNEXPANDED** G1 semantic demands, not automatically Core-closed primitives.
+
+## Open gates and next lawful work
+
+An isolated reviewer must reconstruct W01 §3.1 using only versioned original source + frozen G0 SSC/inverse and record its result **before** seeing this candidate or the expected operation list. Then independently adjudicate disagreements, qualify an exact source-local successor if warranted, and only then change the 39/151 count. The original Oct03 mutable target remains unauthenticated and open. G1 global completion, G2–G7, Core closure, recursive IA, NEI/DTS/DP, cross-track W/L synthesis, source sealing and PR #70 merge all remain blocked. Historical source or CI failures are not rescored.
+
+**Provenance:** Peter Woit (external author); Joshua Oshiro (full independent track research direction); agent-assisted W-only source-local extraction/formalization recorded 2026-10-11; no new physics or mathematical-theory qualification claimed.

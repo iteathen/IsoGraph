@@ -1,0 +1,616 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-palatini-hodge-original-first.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "status": "SELF_AUTHORED_SOURCE_LOCAL_CANDIDATE_NOT_INDEPENDENTLY_COLD_QUALIFIED",
+  "semantic_authority": false,
+  "qualified_current_target": "W_G0_AUTHOR_WEB_REBASELINE_2026_10_11_0_1",
+  "source": {
+    "external_author": "Peter Woit",
+    "title": "Euclidean Twistor Unification",
+    "original_version": "arXiv:2104.05099v2",
+    "url": "https://arxiv.org/html/2104.05099v2",
+    "section": "3.1",
+    "original_html_lines": [
+      159,
+      203
+    ],
+    "authoring_session_direct_source_review": true,
+    "current_session_primary_source_byte_hash_independently_recomputed": false,
+    "oct03_mutable_source_identity_authenticated": false
+  },
+  "frozen_inputs": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+      "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+      "items": 151
+    },
+    "inverse": {
+      "path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+      "git_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477"
+    },
+    "g0": {
+      "path": "experiments/062/W_G0_CURRENT_AUTHOR_SOURCE_STAGE_GATE_0_2.json",
+      "git_blob_sha": "e3848f4025a733d33b8b8b3411fa779e8b0a5b9a"
+    },
+    "qualified_G1_predecessor": {
+      "path": "experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_8.json",
+      "git_blob_sha": "8dced9390509bbb18e22a9327c8acf1d6013c23c",
+      "qualified_bodies": 39,
+      "qualified_occurrence_candidates": 262
+    }
+  },
+  "source_first_method": "Read exact Peter Woit versioned original §3.1 first, freeze local relation/argument/result/dependency and negative scopes, then cross-check exact already frozen G0 typed source identities and reciprocal SSC owner. Do not import W31, textbook theorems, L, bridge, primitive basis, source truth, or physics qualification.",
+  "rows": [
+    {
+      "census_id": "W-SSC-029",
+      "source_unit": "W01",
+      "source_scope": "W01 §3.1 eqs. 3.1-3.2",
+      "exact_frozen_census_body": "W01's frame-bundle description distinguishes spin-connection one-forms omega from canonical/frame one-forms e, takes e and omega as the fundamental Palatini fields, and writes the action as the integral of epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega); its equations of motion are obtained by varying omega^AB, which gives de^A + omega^A_B wedge e^B = 0 and thereby the torsion-free Levi-Civita connection determined by e, and by varying e^A, which gives the Einstein equations in terms of e. Its printed source action is precisely integral_M epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega), where Omega(omega) denotes curvature of the spin connection, not an independent arbitrary field. Varying omega^AB gives the source-printed torsion equation de^A+omega^A_B wedge e^B=0; varying e^A separately gives Einstein equations. No generic zero-stationarity operator or variation-direction carrier is claimed.",
+      "exact_G0_source_expression_statements": [
+        {
+          "id": "W01-029-PALATINI-01",
+          "scope": "§3.1 Eq.(3.1) printed p.6",
+          "kind": "SOURCE_ACTION_INTEGRAL",
+          "expression": "integral_M epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)",
+          "ordered_factors": [
+            "epsilon_ABCD",
+            "e^A",
+            "WEDGE",
+            "e^B",
+            "WEDGE",
+            "Omega^CD(omega)"
+          ],
+          "index_roles": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "curvature_dependency": "Omega(omega)",
+          "source_latex": "\\int_M\\epsilon_{ABCD} e^A\\wedge e^B\\wedge\\Omega^{CD}(\\omega)"
+        },
+        {
+          "id": "W01-029-VAR-02",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_CONNECTION_VARIATION_CONDITIONAL",
+          "varied": "omega^AB",
+          "result": "de^A+omega^A_B wedge e^B=0",
+          "modality": "EQUATIONS_OF_MOTION_TORSION_FREE",
+          "source_latex": "de^A+\\omega^A{}_B\\wedge e^B=0"
+        },
+        {
+          "id": "W01-029-VAR-03",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_FRAME_VARIATION_CONDITIONAL",
+          "varied": "e^A",
+          "result": "EINSTEIN_EQUATIONS_EXPRESSED_IN_E",
+          "guard": "SOURCE_GIVES_NO_FULL_EINSTEIN_COMPONENT_EQUATIONS_HERE"
+        }
+      ],
+      "original_G0_reciprocal_locators": [
+        "W01/versioned_original_HTML/W01-INVERSE-041",
+        "W01/versioned_original_HTML/W01-INVERSE-042",
+        "W01/versioned_original_HTML/W01-INVERSE-043",
+        "W01/versioned_original_HTML/W01-INVERSE-044"
+      ],
+      "original_G0_typed_statement_ids": [
+        "W01-029-PALATINI-01",
+        "W01-029-VAR-02",
+        "W01-029-VAR-03"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-01",
+          "original_G0_typed_statement_id": "W01-029-PALATINI-01",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              159,
+              166
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "FRAME_SPIN_CONNECTION_VERSUS_CANONICAL_FORM_ROLES",
+          "source_argument_or_carrier_roles": [
+            "omega: spin-connection one-form valued in spin(n) Lie algebra",
+            "e: canonical frame one-form valued in R^n"
+          ],
+          "source_result_role": "TWO_DISTINCT_FRAME_BUNDLE_FORM_ROLES",
+          "source_side_condition_and_negative_guard": "FRAME_FORMS_HAVE_DISTINCT_CARRIERS_AND_PURPOSES",
+          "dependency_operation_names_in_same_body": [],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-02",
+          "original_G0_typed_statement_id": "W01-029-PALATINI-01",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              167,
+              171
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "PALATINI_ORDERED_WEDGE_ACTION_INTEGRAL",
+          "source_argument_or_carrier_roles": [
+            "M: four-dimensional Riemannian integration domain",
+            "A,B,C,D: index roles 0..3",
+            "e^A,e^B: canonical one-forms",
+            "Omega^CD(omega): connection-dependent curvature two-form"
+          ],
+          "source_result_role": "integral_M epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)",
+          "source_side_condition_and_negative_guard": "ORDER_EA_WEDGE_EB_WEDGE_OMEGA_AND_INDEX_0123_NOT_DISCARDABLE",
+          "dependency_operation_names_in_same_body": [
+            "FRAME_SPIN_CONNECTION_VERSUS_CANONICAL_FORM_ROLES"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-03",
+          "original_G0_typed_statement_id": "W01-029-PALATINI-01",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              169,
+              171
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "CURVATURE_TWO_FORM_DEPENDS_ON_SPIN_CONNECTION",
+          "source_argument_or_carrier_roles": [
+            "omega: source spin connection",
+            "Omega^CD(omega): source curvature two-form"
+          ],
+          "source_result_role": "CURVATURE_DEPENDENT_ON_OMEGA_NOT_FREE_ACTION_FIELD",
+          "source_side_condition_and_negative_guard": "SOURCE_DEPENDENCY_OMEGA_MUST_NOT_BE_REMOVED",
+          "dependency_operation_names_in_same_body": [
+            "FRAME_SPIN_CONNECTION_VERSUS_CANONICAL_FORM_ROLES"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-04",
+          "original_G0_typed_statement_id": "W01-029-VAR-02",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              173,
+              178
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "SPIN_CONNECTION_VARIATION_TORSION_EQUATION",
+          "source_argument_or_carrier_roles": [
+            "varied field: omega^AB",
+            "e^A: frame one-form",
+            "d: exterior differential",
+            "wedge: ordered product"
+          ],
+          "source_result_role": "de^A + omega^A_B wedge e^B = 0",
+          "source_side_condition_and_negative_guard": "VARIED_OMEGA_NOT_E_AND_EQUATION_NOT_UNIVERSAL_ZERO_STATIONARITY",
+          "dependency_operation_names_in_same_body": [
+            "PALATINI_ORDERED_WEDGE_ACTION_INTEGRAL"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-05",
+          "original_G0_typed_statement_id": "W01-029-VAR-02",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              177,
+              180
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "TORSION_FREE_DETERMINES_LEVI_CIVITA_OMEGA",
+          "source_argument_or_carrier_roles": [
+            "source torsion equation: de^A + omega^A_B wedge e^B = 0",
+            "e: frame form determining connection"
+          ],
+          "source_result_role": "SOURCE_IDENTIFIES_OMEGA_AS_LEVI_CIVITA_CONNECTION_UNDER_TORSION_FREE_CONDITION",
+          "source_side_condition_and_negative_guard": "SOURCE_CONDITIONAL_NOT_ARBITRARY_OMEGA_AND_NOT_NEW_PRIMITIVE",
+          "dependency_operation_names_in_same_body": [
+            "SPIN_CONNECTION_VARIATION_TORSION_EQUATION"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-029-CURG1-PH-06",
+          "original_G0_typed_statement_id": "W01-029-VAR-03",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              182,
+              184
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "FRAME_VARIATION_EINSTEIN_EQUATIONS",
+          "source_argument_or_carrier_roles": [
+            "varied field: e^A",
+            "Palatini source fields: e and omega"
+          ],
+          "source_result_role": "EINSTEIN_EQUATIONS_IN_E_PER_AUTHOR",
+          "source_side_condition_and_negative_guard": "NO_FULL_EINSTEIN_COMPONENT_EQUATIONS_PRINTED_HERE_AND_NOT_OMEGA_VARIATION",
+          "dependency_operation_names_in_same_body": [
+            "PALATINI_ORDERED_WEDGE_ACTION_INTEGRAL"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-030",
+      "source_unit": "W01",
+      "source_scope": "W01 §3.1",
+      "exact_frozen_census_body": "W01 decomposes spin connection, curvature, and two-forms into chiral/Hodge sectors; the right and left connection-curvature pairs act on S_R and S_L respectively. The printed chiral decomposition is spin(4)=su(2)_R direct-sum su(2)_L; omega=omega_R+omega_L; Omega=Omega_R(omega_R)+Omega_L(omega_L); two-forms split Lambda^2(M)=Lambda^2_+(M) direct-sum Lambda^2_-(M), with Lambda^2_+ subset Hom(S_R,S_R) and Lambda^2_- subset Hom(S_L,S_L). Finally Omega(omega)=Omega_(+,R)(omega)+Omega_(+,L)(omega)+Omega_(-,R)(omega)+Omega_(-,L)(omega). Each sign/chiral subscript is a source role, not an interchangeable normalization.",
+      "exact_G0_source_expression_statements": [
+        {
+          "id": "W01-030-SPIN-01",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_LIE_ALGEBRA_DIRECT_SUM",
+          "lhs": "spin(4)",
+          "rhs": [
+            "su(2)_R",
+            "su(2)_L"
+          ],
+          "operator": "DIRECT_SUM_SOURCE_ORDER"
+        },
+        {
+          "id": "W01-030-CONN-02",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_CONNECTION_CURVATURE_SPLIT",
+          "omega": [
+            "omega_R",
+            "omega_L"
+          ],
+          "Omega": [
+            "Omega_R(omega_R)",
+            "Omega_L(omega_L)"
+          ],
+          "operator": "SUM"
+        },
+        {
+          "id": "W01-030-HODGE-03",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_HODGE_PLUS_MINUS_SPINOR_ROLES",
+          "Lambda2": [
+            "Lambda2_+(M)",
+            "Lambda2_-(M)"
+          ],
+          "eigenspaces": [
+            "+1",
+            "-1"
+          ],
+          "spinor_roles": [
+            {
+              "side": "+",
+              "carrier": "Hom(S_R,S_R)"
+            },
+            {
+              "side": "-",
+              "carrier": "Hom(S_L,S_L)"
+            }
+          ]
+        },
+        {
+          "id": "W01-030-CURV-04",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_ORDERED_CURVATURE_COMPONENTS",
+          "lhs": "Omega(omega)",
+          "rhs": [
+            "Omega_(+,R)(omega)",
+            "Omega_(+,L)(omega)",
+            "Omega_(-,R)(omega)",
+            "Omega_(-,L)(omega)"
+          ],
+          "operator": "SUM_ORDERED"
+        }
+      ],
+      "original_G0_reciprocal_locators": [
+        "W01/versioned_original_HTML/W01-INVERSE-045",
+        "W01/versioned_original_HTML/W01-INVERSE-046",
+        "W01/versioned_original_HTML/W01-INVERSE-047"
+      ],
+      "original_G0_typed_statement_ids": [
+        "W01-030-SPIN-01",
+        "W01-030-CONN-02",
+        "W01-030-HODGE-03",
+        "W01-030-CURV-04"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-01",
+          "original_G0_typed_statement_id": "W01-030-SPIN-01",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              186,
+              187
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "ORDERED_SPIN4_CHIRAL_LIE_ALGEBRA_DIRECT_SUM",
+          "source_argument_or_carrier_roles": [
+            "spin(4): source algebra",
+            "su(2)_R: right chiral role",
+            "su(2)_L: left chiral role"
+          ],
+          "source_result_role": "spin(4) = su(2)_R direct_sum su(2)_L",
+          "source_side_condition_and_negative_guard": "RIGHT_LEFT_ORDERED_ROLES_NO_FACTOR_COLLAPSE",
+          "dependency_operation_names_in_same_body": [],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-02",
+          "original_G0_typed_statement_id": "W01-030-CONN-02",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              189,
+              191
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "SPIN_CONNECTION_RIGHT_LEFT_COMPONENT_SUM",
+          "source_argument_or_carrier_roles": [
+            "omega: original connection",
+            "omega_R: right-chiral connection",
+            "omega_L: left-chiral connection"
+          ],
+          "source_result_role": "omega = omega_R + omega_L",
+          "source_side_condition_and_negative_guard": "CONNECTION_SUM_DISTINCT_FROM_CURVATURE_SUM",
+          "dependency_operation_names_in_same_body": [
+            "ORDERED_SPIN4_CHIRAL_LIE_ALGEBRA_DIRECT_SUM"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-03",
+          "original_G0_typed_statement_id": "W01-030-CONN-02",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              189,
+              193
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "CURVATURE_RIGHT_LEFT_CONNECTION_DEPENDENT_COMPONENTS",
+          "source_argument_or_carrier_roles": [
+            "Omega: full spin-connection curvature",
+            "Omega_R(omega_R): right-chiral curvature",
+            "Omega_L(omega_L): left-chiral curvature"
+          ],
+          "source_result_role": "Omega = Omega_R(omega_R) + Omega_L(omega_L)",
+          "source_side_condition_and_negative_guard": "EACH_CURVATURE_DEPENDS_ON_MATCHING_CHIRAL_CONNECTION_NOT_CROSS_COMPONENT",
+          "dependency_operation_names_in_same_body": [
+            "SPIN_CONNECTION_RIGHT_LEFT_COMPONENT_SUM"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-04",
+          "original_G0_typed_statement_id": "W01-030-CONN-02",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              193,
+              193
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "RIGHT_LEFT_SPINOR_ENDOMORPHISM_ACTION_ROLES",
+          "source_argument_or_carrier_roles": [
+            "omega_R,Omega_R: right connection and curvature",
+            "omega_L,Omega_L: left connection and curvature",
+            "S_R,S_L: distinct spinor spaces"
+          ],
+          "source_result_role": "R-valued actions in End(S_R); L-valued actions in End(S_L)",
+          "source_side_condition_and_negative_guard": "NO_CROSS_CHIRAL_IDENTIFICATION_OR_GLOBAL_SPINOR_EQUALITY",
+          "dependency_operation_names_in_same_body": [
+            "CURVATURE_RIGHT_LEFT_CONNECTION_DEPENDENT_COMPONENTS"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-05",
+          "original_G0_typed_statement_id": "W01-030-HODGE-03",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              194,
+              198
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "HODGE_TWO_FORM_SIGNED_EIGENSPACE_DIRECT_SUM",
+          "source_argument_or_carrier_roles": [
+            "Lambda^2(M): source two-forms in four-dimensional Riemannian signature",
+            "star: Hodge operator",
+            "Lambda^2_+: eigenvalue +1",
+            "Lambda^2_-: eigenvalue -1"
+          ],
+          "source_result_role": "Lambda^2(M) = Lambda^2_+(M) direct_sum Lambda^2_-(M)",
+          "source_side_condition_and_negative_guard": "HODGE_PLUS_AND_MINUS_DISTINCT_EIGENSUBSPACES_NOT_CHIRAL_FACTOR_NAMES",
+          "dependency_operation_names_in_same_body": [],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-06",
+          "original_G0_typed_statement_id": "W01-030-HODGE-03",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              198,
+              199
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "HODGE_SIGNED_SECTORS_SPINOR_HOM_INCLUSIONS",
+          "source_argument_or_carrier_roles": [
+            "Lambda^2_+(M): Hodge + sector",
+            "Lambda^2_-(M): Hodge - sector",
+            "S_R,S_L: spinor action carriers"
+          ],
+          "source_result_role": "Lambda^2_+(M) subset Hom(S_R,S_R); Lambda^2_-(M) subset Hom(S_L,S_L)",
+          "source_side_condition_and_negative_guard": "SOURCE_PRINTS_INCLUSIONS_NOT_EQUALITIES_AND_NO_PLUS_LEFT_SWAP",
+          "dependency_operation_names_in_same_body": [
+            "HODGE_TWO_FORM_SIGNED_EIGENSPACE_DIRECT_SUM",
+            "RIGHT_LEFT_SPINOR_ENDOMORPHISM_ACTION_ROLES"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        },
+        {
+          "occurrence_id": "W-SSC-030-CURG1-PH-07",
+          "original_G0_typed_statement_id": "W01-030-CURV-04",
+          "original_author_source": {
+            "url": "https://arxiv.org/html/2104.05099v2",
+            "revision": "arXiv:2104.05099v2",
+            "section": "3.1",
+            "rendered_html_line_range": [
+              201,
+              203
+            ],
+            "exact_original_source_byte_digest_reverified_here": false
+          },
+          "source_semantic_operation_or_relation": "FOUR_ORDERED_HODGE_BY_CHIRAL_CURVATURE_COMPONENTS",
+          "source_argument_or_carrier_roles": [
+            "Omega(omega): full curvature",
+            "Omega_(+,R): plus right",
+            "Omega_(+,L): plus left",
+            "Omega_(-,R): minus right",
+            "Omega_(-,L): minus left"
+          ],
+          "source_result_role": "Omega(omega) = Omega_(+,R)(omega) + Omega_(+,L)(omega) + Omega_(-,R)(omega) + Omega_(-,L)(omega)",
+          "source_side_condition_and_negative_guard": "FOUR_DISTINCT_SIGN_X_CHIRAL_COMPONENTS_NOT_INTERCHANGEABLE_AND_NO_W031_EINSTEIN_VANISHING_IMPORTED",
+          "dependency_operation_names_in_same_body": [
+            "CURVATURE_RIGHT_LEFT_CONNECTION_DEPENDENT_COMPONENTS",
+            "HODGE_SIGNED_SECTORS_SPINOR_HOM_INCLUSIONS"
+          ],
+          "source_binder_ownership": "AUTHOR_FORMULA_SYMBOLS_SCOPED_TO_LOCAL_SECTION_INDEX_ABCD_0123_ONLY_WHERE_PRINTED_NO_UNIVERSAL_THEOREM_ADDED",
+          "source_connective_polarity": "SOURCE_ASSERTED_FORMULA_OR_CONDITIONAL_AUTHOR_DESCRIPTION_WITH_PRINTED_DEPENDENCIES",
+          "source_modality": "WOIT_SOURCE_ASSERTION_OR_DESCRIPTION_NOT_INDEPENDENT_PHYSICAL_THEOREM",
+          "noncore_behavior": "UNEXPANDED_NO_NEW_PRIMITIVE_OR_SCHEMA_AUTHORITY",
+          "G1_disposition": "SOURCE_LOCAL_CANDIDATE_PENDING_INDEPENDENT_COLD_SOURCE_RECONSTRUCTION"
+        }
+      ]
+    }
+  ],
+  "extraction_summary": {
+    "candidate_bodies": 2,
+    "source_typed_assertions": 7,
+    "local_semantic_occurrence_candidates": 13,
+    "qualified_bodies_unchanged": 39,
+    "additional_unreviewed_bodies_remaining_if_these_later_qualify": 110,
+    "global_G1_complete": false
+  },
+  "gates": {
+    "current_author_G0_frozen": true,
+    "old_Oct03_G0_complete": false,
+    "this_packet_independent_cold_source_review": false,
+    "this_packet_G1_qualified": false,
+    "global_G1_complete": false,
+    "G2_G7_authorized": false,
+    "IA_NEI_DTS_DP_authorized": false,
+    "W_L_synthesis_authorized": false,
+    "source_sealed": false,
+    "PR70_merge_authorized": false
+  },
+  "important_residuals": [
+    "Source describes Palatini field variations without full Einstein component formula here; no project-invented stationarity definition may fill it.",
+    "Hodge ± eigenspace and right/left chirality are distinct axes; printed +R,+L,-R,-L source order must survive.",
+    "The source two-form spinor relations are inclusions, not direct equalities or a source-licensed arbitrary carrier identification.",
+    "W-SSC-031 conditions and chiral-only action remain outside this two-body G1 candidate; no W031 Einstein tensor result imported.",
+    "Named Lie algebra, Hodge, curvature, exterior differential, integral, and field-variation semantics remain unexpanded non-Core demands at G1."
+  ],
+  "checks": {
+    "self_authored_structural_guards_planned": true,
+    "independent_cold_semantic_reconstruction": "NOT_PERFORMED",
+    "CI_at_authorship": "NOT_YET_RUN",
+    "same_author_expected_result_control_not_independent": true
+  },
+  "provenance": {
+    "external_source_author": "Peter Woit",
+    "human_full_treatment_direction": "Joshua Oshiro",
+    "extraction_formalization": "agent-assisted W-only source research",
+    "recorded_on": "2026-10-11",
+    "earliest_evidence_current_frozen_target": "2026-10-11 G0 source baseline",
+    "retrospective": false
+  }
+}

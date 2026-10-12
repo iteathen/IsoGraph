@@ -1,3 +1,9 @@
+### W G1 — W01 §3.1 Palatini/Hodge 13-occurrence candidate (2026-10-11)
+
+[Original-source W-only research review](W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_RESULT_0_1.md) and [machine candidate](../../../experiments/062/W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_CANDIDATES_0_1.json) preserve **13 load-bearing local occurrences** across previously unqualified W-SSC-029/030: distinct `e`/`ω` variations, ordered Palatini integrand, dependent curvature, separate chiral and Hodge axes, and four signed-chiral curvature components. Mechanical checks are not independent source reconstruction; **qualified G1 remains 39/151**, G0 current-author 151 frozen, historical Oct03 open. No G2–G7, IA/NEI/DTS/DP, W/L synthesis, source seal or PR merge.
+
+---
+
 ### W G1 — W01 original Spin(4)/real-form source-local candidate (2026-10-11)
 
 [W01 versioned-author §§2.1–2.2 packet](../../../experiments/062/W_G1_W01_SPIN_REAL_FORMS_SOURCE_FIRST_CANDIDATES_0_1.json) and [research review](W_G1_W01_SPIN_REAL_FORMS_SOURCE_FIRST_RESULT_0_1.md) record **13 source-local G1 occurrence candidates across W-SSC-027/028**. The source's Euclidean two independent SU(2) actions, sign-pair double-cover quotient, Minkowski inverse-adjoint coupling, split real-matrix action, all three distinct determinant signatures, common complexification without real-form identification, and twistor point-relative quotient survive exact local source checks. Symbolic determinant/sign-pair diagnostics and **24/24 internally generated hostile mutation rejections** passed, but there is **no independent cold G1 source review or GitHub Actions CI** for this packet. It is **not qualified**: current-author G0 remains frozen at 151, W G1 **39/151** is unchanged, and the 2 W03 + 10 W04c candidates remain pending. Historical October 3 G0 still OPEN; no G2–G7, IA/NEI/DTS/DP, W–L synthesis, source seal, or PR #70 merge.
