@@ -39,6 +39,12 @@ The researcher proposes that **one total genuinely random bit** can select a pat
 
 The explicit distinction is between **the number of independent unknown inputs** (one bit if all other state is public), **the computational cost of evaluating the resulting two possible histories**, and **the advantage of an attacker over an authorized participant**. Universality does not imply a hard inverse for every particular finite evolution. This is separate from the earlier serial one-bit source that provided potentially fresh entropy at every clock cycle.
 
+## Small versus large source entropy in chaotic dynamics
+
+The researcher has clarified that **one bit was an extreme illustration**, not the limit of the claim. The broader question compares **smaller and larger physical randomness budgets** used to initialize complex processes such as chaotic three-body-like systems or Rule 110-like dynamics: if they give no physically possible difference in the resulting system, is the source-entropy distinction a physical property of the outcome or only a feature of its genesis? See [dynamical complexity versus physical entropy identity](reviews/2026-10-12-dynamical-complexity-vs-physical-entropy-identity.md).
+
+A scoped exact example exists: a fair source bit S and two independent fair bits (U,V) have source entropies one and two, but X_A=S and X_B=U XOR V induce the **same output distribution**. Subsequent common dynamics preserve that equality for all interactions limited to the exposed state. This is not proof of **total physical history identity**; discarded source information or other physical environmental effects could still distinguish the complete histories. Chaotic amplification does not itself increase the initial source Shannon entropy.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
