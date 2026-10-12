@@ -1,3 +1,9 @@
+### W G1 W01 §3 exact corrected CI — 22/22 hostiles, G1 still 39/151 (2026-10-11)
+
+[Corrected GitHub Actions run 38190425787](https://github.com/iteathen/IsoGraph/actions/runs/38190425787), exact head `b6569657be8af178cc5cca5fe5c535a17d300cec`, job `114621815721`, **SUCCESS**: W-SSC-002/003 exact frozen G0 source crosswalk, 13 source-local candidates, required roles/dependencies and **22/22 mechanical hostile rejections**. [Immutable convergence/status report](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_CORRECTED_CI_AND_STAGE_LOCK_0_1.json) separately conserves [first setup FAIL 38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) (0 hostiles executed). Same-author verifier and candidate are **not independent cold G1**. Qualified G1 **39/151** unchanged, old Oct03 G0 OPEN, G2+, W/L, sealing and merge blocked.
+
+---
+
 ### W G1 W01 §3 initial mechanical CI failed at setup; action pinned (2026-10-11)
 
 [First CI 38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) is **FAILED before verifier execution**: unpinned checkout violates repository full-SHA Actions policy. [Immutable failure record](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_FIRST_CI_SETUP_FAILURE_0_1.json) preserves 0 hostile tests executed. A separate workflow-only correction pins checkout to the existing full SHA; the 13 new W01 G1 occurrences remain unqualified and **39/151** remains the only qualified W G1 stage.

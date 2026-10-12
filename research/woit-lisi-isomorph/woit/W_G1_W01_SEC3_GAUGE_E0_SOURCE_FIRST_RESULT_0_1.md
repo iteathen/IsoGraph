@@ -25,6 +25,9 @@ The [bounded mechanical verifier](../../../experiments/062/tools/verify-w-g1-w01
 
 **First CI run failed at runner setup, not in semantic verification:** [38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) / job 114621443804, exact commit `19ad932514e844e9b94b508fd0e032920cacad6e`. GitHub rejected the new workflow's unpinned `actions/checkout@v4`; **0 verifier/hostile cases executed**. This failure is preserved separately in [the first CI failure record](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_FIRST_CI_SETUP_FAILURE_0_1.json). The successor pins checkout to the existing repository-approved full SHA, leaving the candidate and G0/39-body G1 authority unchanged. A future PASS must be verified at its exact commit; it does not itself supply independent cold review.
 
+
+**Verified corrected CI at exact prior head:** [GitHub Actions run 38190425787](https://github.com/iteathen/IsoGraph/actions/runs/38190425787), commit `b6569657be8af178cc5cca5fe5c535a17d300cec`, job `114621815721`, **SUCCESS** with **22/22 hostile mutation rejections** and source/census reciprocal pins checked. [Immutable qualification-limited evidence](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_CORRECTED_CI_AND_STAGE_LOCK_0_1.json) records both this PASS and original [setup failure 38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) without changing either historical outcome. Candidate and verifier authored together; this proves internal conservation/integrity only. Independent cold G1 and G1 promotion remain outstanding.
+
 ## Provenance and next gate
 
 External source author: **Peter Woit**. Full independent W treatment direction: **Joshua Oshiro**. New source-local extraction, finite algebra diagnostic, machine packet and checker: **agent-assisted research/formalization**, recorded 2026-10-11; no global priority or new physics claim. The prior 39-body G1 qualification and all historical failures remain untouched.
