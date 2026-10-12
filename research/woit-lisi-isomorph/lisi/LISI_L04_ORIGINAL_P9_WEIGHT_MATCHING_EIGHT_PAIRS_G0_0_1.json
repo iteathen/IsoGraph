@@ -1,0 +1,348 @@
+{
+  "schema": "isograph.track-L.G0.L04-original-p9-weight-matching-and-Table1-correspondence.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "primary_original": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "url": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "PDF_bytes": 348134,
+    "pages": 17,
+    "page9_pdf_zero_based": 8,
+    "page9_extracted_SHA256": "73b67cf3b71ce663fd662e87677e64c48c737be5e2a840dcbe8ec8052219e7a5",
+    "page5_pdf_zero_based": 4,
+    "page5_extracted_SHA256": "59d47b63fe257933226378918d2c613ec5d80494202bece17efcf0978b537c3f",
+    "p9_original_source_blocks": [
+      {
+        "id": "L04-P009-B003",
+        "original_extracted_line_range": [
+          100,
+          103
+        ],
+        "original_source_block_SHA256": "477738922937c795d1eb378f79a9e343bd64230ae6fba037bc2ddf7cccf505cc"
+      },
+      {
+        "id": "L04-P009-B004",
+        "original_extracted_line_range": [
+          105,
+          142
+        ],
+        "original_source_block_SHA256": "5ec2985125c32d3e849052be08ceadff4f0fc20b99d1fa73a25281a00f86b63b"
+      },
+      {
+        "id": "L04-P009-B005",
+        "original_extracted_line_range": [
+          144,
+          145
+        ],
+        "original_source_block_SHA256": "080e1055c8a6bad79fc745bf5f3a7e05d018db6b8ca8988a1f11472d704a4f79"
+      },
+      {
+        "id": "L04-P009-B006",
+        "original_extracted_line_range": [
+          147,
+          153
+        ],
+        "original_source_block_SHA256": "1da09c3c2a7e41b9ca9dde0792ebff367e09dceaac2309f9f41a5a23cfc6e4b7"
+      }
+    ]
+  },
+  "original_source_locus": "§4 printed p9 Table2 and its source closing paragraph; §2 printed p5 Table1 massless spinor weights (comparison only)",
+  "historical_qualified_table_source": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L04_TABLE1_TABLE2_AND_FIGURES_COLD_G0_0_1.json",
+    "git_blob_sha": "b19b6c2ecc6678121b4ec865334f5f8a358a90b6",
+    "source_group_id": "L04-S019",
+    "original_numeric_cell_count": 64,
+    "original_T1_row_instances": 12,
+    "old_scoped_Table2_source_visual_qualified": true,
+    "source_S019_existing_disposition_unchanged": true
+  },
+  "source_first": {
+    "original_group": "L04-S020",
+    "predecessor_existing_ssc_owners": [
+      "L-SSC-103"
+    ],
+    "current_existing_ssc_owners": [
+      "L-SSC-099",
+      "L-SSC-102",
+      "L-SSC-103"
+    ],
+    "roles": [
+      {
+        "role": "SOURCE_HELICITY_DEFINITION",
+        "owner": "L-SSC-102",
+        "kind": "ORIGINAL_SOURCE_DEFINITION",
+        "body": "For longitudinal massless source roles h=p_z s_z=2 omega_T omega_S. This is the source's paired weight formula; it is not unrestricted arbitrary-momentum QFT helicity."
+      },
+      {
+        "role": "SOURCE_Q_INTERNAL_LABEL",
+        "owner": "L-SSC-102",
+        "kind": "ORIGINAL_SOURCE_SCOPE_RESTRICTION",
+        "body": "q=±1/2 is the selected sign-valued internal-charge label; the paper qualifies it as whatever internal charge the particle has, not universal Standard Model electric-charge quantization."
+      },
+      {
+        "role": "CREATION_SAME_BOOST_OTHER_SIGNS_INVERT",
+        "owner": "L-SSC-103",
+        "kind": "ORIGINAL_SOURCE_CROSS_ROW_SIGN_RELATION",
+        "body": "Corresponding annihilation/creation source rows preserve omega_T and reverse omega_S, h, q. Exact 8 source-paired rows pass."
+      },
+      {
+        "role": "EIGHT_UNIQUE_CROSS_FAMILY_WEIGHT_MATCHES",
+        "owner": "L-SSC-103",
+        "kind": "FINITE_SOURCE_TABLE_DERIVED_BIJECTION",
+        "body": "All 8 source annihilation rows have exactly one creation row with identical full (omega_T,omega_S,h,q), necessarily from the opposite particle family. This is a computed source-table witness, not eight author-printed examples."
+      },
+      {
+        "role": "PRINTED_EQUALITY_WEIGHT_CONTEXT",
+        "owner": "L-SSC-103",
+        "kind": "PRINTED_SOURCE_EQUALS_SIGN_WITH_WEIGHTS_ONLY",
+        "body": "Original p9 prints bar_a_L^(wedge dagger) = a_R^(vee) as an example in the immediately stated weight-match context: Table2 C05 and A04 share weight (-1/2,-1/2,+1/2,+1/2). Original printed '=' retained; operator identity explicitly NOT inferred."
+      },
+      {
+        "role": "TABLE1_MASSLESS_SPINOR_WEIGHT_MATCH",
+        "owner": "L-SSC-099",
+        "kind": "SOURCE_NATIVE_PRIOR_TABLE_CORRESPONDENCE",
+        "body": "The author's p9 final sentence says annihilated massless particle/antiparticle spin and boost quantum numbers match first-quantized spinor Table1. All eight Table2 annihilation rows match the four corresponding Table1 left/right upper/lower spinor branches."
+      },
+      {
+        "role": "OPERATOR_AND_WEIGHT_CARRIER_FIREWALL",
+        "owner": "L-SSC-103",
+        "kind": "SOURCE_RELATION_SCOPE_BOUNDARY",
+        "body": "Equality of table weight tuples is NOT equality of physical annihilation and creation operators; spinor-versus-Fock carrier, dagger, particle role, and charge label remain distinct."
+      }
+    ]
+  },
+  "recomputed_finite_table_witness": {
+    "all_helicity_h2_equals_omegaT2_times_omegaS2_count": 16,
+    "all_corresponding_creation_sign_rules_count": 8,
+    "annihilation_to_opposite_creation_unique_matches_count": 8,
+    "all_8_Table1_spin_boost_correspondences_count": 8,
+    "annihilation_to_creation_weight_matches": [
+      {
+        "annihilation_row_id": "T2-A01",
+        "annihilation_symbol": "a_L_up",
+        "creation_row_id": "T2-C08",
+        "creation_symbol": "bar_a_R_down^dagger",
+        "weight_twice": {
+          "omegaT2": -1,
+          "omegaS2": 1,
+          "h2": -1,
+          "q2": 1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A02",
+        "annihilation_symbol": "a_L_down",
+        "creation_row_id": "T2-C07",
+        "creation_symbol": "bar_a_R_up^dagger",
+        "weight_twice": {
+          "omegaT2": 1,
+          "omegaS2": -1,
+          "h2": -1,
+          "q2": 1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A03",
+        "annihilation_symbol": "a_R_up",
+        "creation_row_id": "T2-C06",
+        "creation_symbol": "bar_a_L_down^dagger",
+        "weight_twice": {
+          "omegaT2": 1,
+          "omegaS2": 1,
+          "h2": 1,
+          "q2": 1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A04",
+        "annihilation_symbol": "a_R_down",
+        "creation_row_id": "T2-C05",
+        "creation_symbol": "bar_a_L_up^dagger",
+        "weight_twice": {
+          "omegaT2": -1,
+          "omegaS2": -1,
+          "h2": 1,
+          "q2": 1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A05",
+        "annihilation_symbol": "bar_a_L_up",
+        "creation_row_id": "T2-C04",
+        "creation_symbol": "a_R_down^dagger",
+        "weight_twice": {
+          "omegaT2": -1,
+          "omegaS2": 1,
+          "h2": -1,
+          "q2": -1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A06",
+        "annihilation_symbol": "bar_a_L_down",
+        "creation_row_id": "T2-C03",
+        "creation_symbol": "a_R_up^dagger",
+        "weight_twice": {
+          "omegaT2": 1,
+          "omegaS2": -1,
+          "h2": -1,
+          "q2": -1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A07",
+        "annihilation_symbol": "bar_a_R_up",
+        "creation_row_id": "T2-C02",
+        "creation_symbol": "a_L_down^dagger",
+        "weight_twice": {
+          "omegaT2": 1,
+          "omegaS2": 1,
+          "h2": 1,
+          "q2": -1
+        },
+        "operator_identity_asserted": false
+      },
+      {
+        "annihilation_row_id": "T2-A08",
+        "annihilation_symbol": "bar_a_R_down",
+        "creation_row_id": "T2-C01",
+        "creation_symbol": "a_L_up^dagger",
+        "weight_twice": {
+          "omegaT2": -1,
+          "omegaS2": -1,
+          "h2": 1,
+          "q2": -1
+        },
+        "operator_identity_asserted": false
+      }
+    ],
+    "source_Table1_spinor_branches": [
+      {
+        "annihilation_row_id": "T2-A01",
+        "source_Table1_branch_id": "T1-R05-PLUS",
+        "omegaT2": -1,
+        "omegaS2": 1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A02",
+        "source_Table1_branch_id": "T1-R05-MINUS",
+        "omegaT2": 1,
+        "omegaS2": -1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A03",
+        "source_Table1_branch_id": "T1-R06-PLUS",
+        "omegaT2": 1,
+        "omegaS2": 1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A04",
+        "source_Table1_branch_id": "T1-R06-MINUS",
+        "omegaT2": -1,
+        "omegaS2": -1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A05",
+        "source_Table1_branch_id": "T1-R05-PLUS",
+        "omegaT2": -1,
+        "omegaS2": 1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A06",
+        "source_Table1_branch_id": "T1-R05-MINUS",
+        "omegaT2": 1,
+        "omegaS2": -1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A07",
+        "source_Table1_branch_id": "T1-R06-PLUS",
+        "omegaT2": 1,
+        "omegaS2": 1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      },
+      {
+        "annihilation_row_id": "T2-A08",
+        "source_Table1_branch_id": "T1-R06-MINUS",
+        "omegaT2": -1,
+        "omegaS2": -1,
+        "kind": "SOURCE_REPRESENTATION_WEIGHT_CORRESPONDENCE_NOT_FIELD_IDENTITY"
+      }
+    ],
+    "printed_example": {
+      "annihilation_row_id": "T2-A04",
+      "creation_row_id": "T2-C05",
+      "printed_source_relation": "bar_a_L^wedge_dagger = a_R^vee",
+      "relation_kind": "EQUALITY_OF_WEIGHTS_IN_SOURCE_CONTEXT_NOT_PHYSICAL_OPERATOR_EQUALITY",
+      "values_twice": {
+        "omegaT2": -1,
+        "omegaS2": -1,
+        "h2": 1,
+        "q2": 1
+      }
+    },
+    "new_physical_claims": 0
+  },
+  "conservation": {
+    "six_frozen_originals": 6,
+    "original_group_denominator": 350,
+    "SSC_IDs": 191,
+    "L04_original_groups": 53,
+    "modified_source_group": [
+      "L04-S020"
+    ],
+    "other_entire_L04_records_unchanged": 52,
+    "modified_existing_SSC_item": [
+      "L-SSC-103"
+    ],
+    "other_entire_SSC_records_unchanged": 190,
+    "new_SSC_IDs": 0,
+    "new_original_source_groups": 0,
+    "old_L04_mapped_source_groups_pending": 11,
+    "new_L04_mapped_source_groups_pending": 10,
+    "whole_original_source_cold_complete": 0
+  },
+  "predecessor": {
+    "SSC": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_89.json",
+      "git_blob_sha": "dda345b0ca5e5e8a00706516a89f97a1008e613f"
+    },
+    "source_first": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_22.json",
+      "git_blob_sha": "bc5569a294249749f2d4a173c259c3e3d2cd9fc8"
+    }
+  },
+  "evidence_boundary": {
+    "source_exact_label_and_scoped_role_reconstruction": true,
+    "source_math_context_nonuniversal": true,
+    "no_fabricated_operator_identity": true,
+    "no_new_proof_of_fermion_dynamics_or_physics": true,
+    "original_pdf_independent_new_CI": "NOT_RUN",
+    "whole_original_cold_complete": false
+  },
+  "locks": {
+    "G0_frozen": false,
+    "SSC_frozen": false,
+    "G1_authorized": false,
+    "higher_stages_authorized": false,
+    "W_source_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
