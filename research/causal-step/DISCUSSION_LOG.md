@@ -126,3 +126,19 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Status:** Source-faithful local reproduction and narrow implementation findings, not a physical law or an additional adopted Causal Step premise. Preservation-first: historical source and prior research claims untouched.
 
+## 2026-10-12 — Withdrawn twelve-dimension coincidence; orbital behavior retained
+
+**Researcher (verbatim, initial observation):**
+
+> One of the things I found peculiar here is that it seemed to stabilize at 12 dimensions, which aligns with Lisi's work, L-I-S-I, and Woit's work, W-O-I-T, which also show 12 dimensions. And those dimensions were not programmed into this model, and that was a complete surprise. The other thing that surprised me about this is that once I applied a minimum distance of one causal step between nodes, applied conservation of energy and momentum to new nodes that are created in an update cycle, they started to take on an orbiting pattern once there were enough of them. And you can see it sort of develop once you get over 200 steps. You can see the orbiting pattern starting to develop.
+
+**Researcher (verbatim, explicit correction):**
+
+> If 12 dimensions was set as a ceiling, I was unaware of it, and that would explain everything. So that sucks. Forget it then. If 12 was set as a ceiling arbitrarily in the program, then forget what I just said about 12 dimensions. But the orbiting pattern is still there.
+
+**Interpretation / author correction:** The archived code explicitly sets `internalDimCap: 12`, invalidating the earlier inference of *spontaneous* stabilization at twelve in this version. **The researcher withdraws that observation as evidence of a Lisi/Woit coincidence.** The separate qualitative observation of orbiting nodes, especially after approximately 200 updates, remains an active finding to test. The author's earlier description of applying conservation laws is retained verbatim as a design intention; it is **not** a verified conservation theorem for changing topology.
+
+**Assistant measured follow-up (summary, not verbatim):** Ran the unmodified model update rules in a test-only instrumented browser. With default nonrotating camera and damping off, tracked 107 nodes every update from step 200 to 950. Using the XY projection and evolving center of mass, 65 nodes completed over one net revolution and 33 over two; clockwise/counterclockwise directions balanced (32/33 for the over-one group). A control fixing the reference center at step 200 still found 63 nodes with over one revolution. Node 400 completed about 6.64 full net turns relative to that fixed reference. Apparent orbits are real motions within the simulated first-three-coordinate spring dynamics but do not establish stable full-dimensional astronomical orbits or conservation during graph growth. [Detailed audit](reviews/2026-10-12-model-a-orbital-motion-control.md).
+
+**Status:** Dimensional coincidence **withdrawn**; orbit-like behavior **quantitatively supported**, with scope limited to the toy dynamics.
+

@@ -87,6 +87,14 @@ The author's historical **[Supplementary Model A — Dimension Birth](https://gi
 
 **Research interpretation:** The run supplies concrete evidence of how **the program's own chosen rules** produce branching, central concentration, extended coordinate structure and late graph fragmentation. It **does not yet derive** the Causal Step unit, causal-event time, lightlike propagation, intrinsic 3D dimensionality or relativistic clock rates. Its input source is deterministic hash/optional Rule 30, not an actual stochastic quantum source. Treat it as a computational test substrate for further causality hypotheses and independently defined geometry measurements.
 
+## User correction and reproduced orbital motion (2026-10-12)
+
+**Dimensional correction (user-confirmed):** The author withdraws the claimed surprising correspondence of **twelve spontaneously stabilized dimensions** with Lisi/Woit. The program explicitly caps dimensional growth at twelve. No physical/dimensional correspondence is supported by this observation.
+
+**Orbital motion (retained and quantitatively checked):** Local execution of the *unchanged* model, with the camera stationary, produced persistent first-two-coordinate circulation around the graph center of mass between steps 200 and 950. **65 of 107** tracked nodes completed more than one net projected revolution, **33** more than two; **32** of the former turned one direction and **33** the opposite. Using a fixed reference center at step 200 still gave **63 of 107** with more than one net revolution; node ID 400 traversed **about 6.64** net turns. The paths are irregular and generated within the toy spring-force dynamics, not independently validated gravitational orbits.
+
+[Full reproducible orbital measurement, caution and correction](reviews/2026-10-12-model-a-orbital-motion-control.md). The withdrawn dimensional coincidence and the user's insistence that **the orbiting pattern remains** are preserved verbatim in the [discussion log](DISCUSSION_LOG.md).
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
