@@ -10,27 +10,27 @@
 
 This directory reserves the research project name **Causal Step**, as requested by Joshua Oshiro.
 
-The title alone is **not** a full definition of a causal step. The first two **researcher-proposed premises** are recorded below, but they do not yet define a causal step mathematically, nor specify how space, time, distance, speed, or propagation are to be measured in the proposed emergent model. No such definitions are presumed by this dossier.
+The title now has a **researcher-specified terminological meaning**: **causal step** is the newly defined unit the researcher intends when using the term *light speed* in this inquiry. This is **not** the Einsteinian speed of light or a unit derived from conventional relativistic distance/time. The exact mathematical operations and any possible relationship to observable propagation have **not** yet been specified. Do not impose existing spacetime or velocity semantics.
 
 This is a separate research folder. Its creation does not merge it into Minimal Rule, Minimum Representation, Entropy and Indistinguishability, or any other existing research topic.
 
 ## Working premises — established for investigation, not proved
 
 1. **Emergent reality (Premise 1).** Reality is **largely an emergent effect from a simple set of conditions**.
-2. **Light speed as causal step (Premise 2).** **Light speed is likely a single causal step**; in the researcher's formulation, **one unit of light speed is one causal step**.
+2. **Causal step as the newly defined light-speed unit (Premise 2).** The researcher explicitly **redefines “light speed” as a new unit called “causal step.”** In this inquiry, **one unit of this redefined “light speed” is one causal step**. The original statement that light speed is *likely* a single causal step remains a provisional physical hypothesis, while the **unit's chosen meaning is a deliberate definition**, not an inference from established relativity.
 
-These are **provisional assumptions** for Causal Step research, not independently established findings or accepted laws of physics. Premise 2 is explicitly tentative (*likely*). No additional premises are adopted. The relation between the dimensional physical speed of light and any abstract discrete causal update is left **undefined pending further research discussion**; do not infer a specific time interval, spatial length, Planck unit, propagation graph, or step rule from the current wording.
+**Epistemic status:** Premise 1 is provisional. Premise 2 contains a **stipulated new unit definition** (*causal step*) and a provisional suggestion about causal-step-based reality. Neither supplies experimental evidence or a derivation of actual physical laws. **Terminological separation is mandatory:** do not identify this unit with the conventional physical constant \(c\), Einsteinian kinematics, distance per time, the Planck scale, a photon path, or a discretized spacetime interval. No further physical premises or quantitative rules are adopted.
 
 ## Current research state
 
 - **Research question:** detailed formalization remains open beyond the two premises above.
-- **Starting hypotheses:** two provisional premises, recorded above and verbatim in the discussion log.
+- **Starting premises:** two researcher-originated premises; Premise 2's causal-step unit meaning is clarified in a subsequent verbatim discussion entry.
 - **Candidate models, evidence, or experiments:** none supplied or performed.
 - **Negative results and open contradictions:** none established.
 - **Findings, proofs, or physical claims:** none asserted.
-- **Next substantive step:** await further researcher-supplied definitions, arguments, or premises; do not introduce assumptions beyond the two recorded here.
+- **Next substantive step:** await further researcher-supplied mechanics, arguments, or premises; do not add physical units, transformations, or assumptions beyond the two recorded here.
 
-The absence of a mathematical model or explanatory mechanism is intentional. Neither the project name nor these proposed premises constitutes proof of a particular ontology, physical discretization, or rule.
+The absence of a mathematical model or explanatory mechanism is intentional. Defining the unit *causal step* does not itself establish any physical ontology, discretization, propagation speed, or dynamical rule.
 
 ## Discussion and evidence
 
