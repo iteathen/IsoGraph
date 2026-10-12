@@ -113,6 +113,20 @@ The researcher supplied two substantive examples: repeatedly reading **the same 
 
 Both turns are preserved verbatim with scope-specific analysis in [the dated research discussion](discussion/2026-10-12-unstable-bit-and-time-in-physical-execution.md). The [technical assessment](reviews/2026-10-12-time-dependent-physical-execution-and-entropy.md) distinguishes a one-bit storage location from the entropy in its time-indexed history, treats noise as a model-dependent physical process rather than as randomness of time itself, and notes that fault tolerance can suppress physical noise in logical output.
 
+## 2026-10-12 — Simultaneous readout: fresh uncertainty versus temporal separation
+
+**Researcher (verbatim, question):**
+
+> Here's another bit of information. Even if you accessed the same entropic value at the same time multiple times, it would still be entropic. So time doesn't even need to come into play here. So the value would only be determined at the time it's read, and no matter how many times it was read at a given time. So maybe that's depending on how you generate this entropic value, that could be true, I think. I think in the typical experimental sense, it's not true, like a double-slit experiment. But depending on how you came to this value, it might be true. I'm not certain now. So time may not. I'm not sure. Why don't you tell me? Is a time separation a necessary component, or can the same value be read simultaneously several times and still be random each time it's done?
+
+**Researcher (verbatim, subsequent revision):**
+
+> Yeah, that's what I thought. I thought I might be wrong on that. Time separation is necessary. Otherwise you're... yeah, right. I remember the double slit experiment. I should have known.
+
+**Assistant scientific clarification (summary, not verbatim):** The same fixed physical bit read by multiple ideal instruments at one instant produces perfectly correlated readouts. Each result can be marginally unpredictable, but the joint readout has at most the uncertainty of that one bit; copying a result does not produce new independent entropy. For a fresh random outcome from *repeated observations of the same physical degree of freedom*, there must be some further physical uncertainty, for example stochastic evolution, reset/repreparation, measurement backaction, or separately noisy measurement channels. Time separation may permit such changes but does not itself guarantee them. Conversely, independent quantum events may produce fresh randomness simultaneously, so time separation is not a universal requirement. The double-slit experiment is not the most direct illustration of ideal repeated measurement; projective measurement and QND repeatability are more direct.
+
+**Status:** The researcher's self-correction and the important qualification are both preserved. This is ordinary conditional information theory and quantum measurement, not a new entropy or identity theorem.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
