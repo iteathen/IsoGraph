@@ -71,6 +71,8 @@ A separate bounded test implemented the paper's §7 grammar and sample SKI reduc
 (∅(∅))     rejected by §7 Term grammar
 ~~~
 
+The bounded check is reproducible with [witness_grammar_check.py](evidence/witness_grammar_check.py); the [saved result](evidence/witness_grammar_check_results.json) preserves the output. Run the checker with Python 3; it uses only the standard library.
+
 The §14 examples may have been intended as informal *delimiter sketches*, not valid SKI witness terms. If so, label them accordingly. As presented they blur the grammar boundary. This is a repairable illustration-level discrepancy, **not** proof the universal encoding fails. Bounded testing does not qualify universality or minimality; the historical witness source remains unchanged.
 
 ### A6. Universal operational simulation does not preserve physical ontology
