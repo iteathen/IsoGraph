@@ -21,14 +21,29 @@ This is a separate research folder. Its creation does not merge it into Minimal 
 
 **Epistemic status:** Premise 1 is provisional. Premise 2 contains a **stipulated new unit definition** (*causal step*) and a provisional suggestion about causal-step-based reality. Neither supplies experimental evidence or a derivation of actual physical laws. **Terminological separation is mandatory:** do not identify this unit with the conventional physical constant `c`, Einsteinian kinematics, distance per time, the Planck scale, a photon path, or a discretized spacetime interval. No further physical premises or quantitative rules are adopted.
 
+## First substantive research question — causal origin before space
+
+The researcher now asks how a simple set of conditions could generate reality **without presupposing physical space**, and whether the relevant causal beginning is unique, multiply rooted, repeated without bound, or better understood as an **atemporal space of possible histories**. A Ruliad-like all-possibilities model and observer-conditioned access to connected or persisting portions of it are **hypotheses and comparisons**, not yet adopted physical premises.
+
+**Central distinction:** A **causal source / earliest event** in a pregeometric ordering is not automatically a **spatial center** of an emergent three-dimensional universe. If no space exists initially, the primitive cause has no spatial “where.” Likewise, “all beginning simultaneously” presupposes a global time convention that may not exist if time emerges from causal ordering; incomparable causal events do not necessarily possess a unique shared timestamp.
+
+**Three-dimensionality remains to be derived.** A possible mathematical test is whether sufficiently large intrinsic balls of radius r in an **emergent spatial adjacency graph**, not merely in the causal event graph or Ruliad multiway graph, contain a number of accessible nodes proportional to r cubed. Arbitrary branching does not guarantee this: a regular tree has exponentially increasing volume. The requirements for stable structures, observer access, and effective matter remain to be specified separately.
+
+**Matter near an origin?** A first causal event by itself does **not** require a density maximum around a position in present-day space. A particular model may introduce a persistent preferred spatial location or an initial density gradient, but then the effect is a **model-dependent testable consequence**, not an implication of the two premises alone. Ordinary Big Bang cosmology also distinguishes early dense conditions from an explosion at one center.
+
+**Competing origin structures under review:** single minimal causal condition, multiple minimal causal conditions, no privileged first cause, and atemporal totality of possible computations. These are **candidate formulations rather than third/fourth/etc. premises**. The compatibility of the Wolfram Ruliad proposal with the new causal-step unit has not been shown.
+
+- [Detailed comparison, mathematical geometry test, limitations and source links](reviews/2026-10-12-causal-beginnings-and-emergent-three-dimensional-space.md)
+- [Researcher's complete originating question, preserved verbatim](DISCUSSION_LOG.md)
+
 ## Current research state
 
-- **Research question:** detailed formalization remains open beyond the two premises above.
+- **Research question:** first substantive question concerns nonspatial causal beginning(s), observer-visible possibilities, emergence of three-dimensional geometry and whether a causal root entails matter concentration; see above. No specific origin model selected.
 - **Starting premises:** two researcher-originated premises; Premise 2's causal-step unit meaning is clarified in a subsequent verbatim discussion entry.
-- **Candidate models, evidence, or experiments:** none supplied or performed.
+- **Candidate models, evidence, or experiments:** several unselected conceptual origin models and a prospective dimension-scaling criterion are recorded for analysis; no experiment conducted and no physical hypothesis validated.
 - **Negative results and open contradictions:** none established.
 - **Findings, proofs, or physical claims:** none asserted.
-- **Next substantive step:** await further researcher-supplied mechanics, arguments, or premises; do not add physical units, transformations, or assumptions beyond the two recorded here.
+- **Next substantive step:** compare the candidate origin models using only declared nonspatial structure, define the admissible causal relation and possible emergent spatial metric, and seek falsifiers without adding physical premises unless the researcher expressly adopts them.
 
 The absence of a mathematical model or explanatory mechanism is intentional. Defining the unit *causal step* does not itself establish any physical ontology, discretization, propagation speed, or dynamical rule.
 
