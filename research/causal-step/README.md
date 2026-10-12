@@ -21,11 +21,23 @@ This is a separate research folder. Its creation does not merge it into Minimal 
 
 **Epistemic status:** Premise 1 is provisional. Premise 2 contains a **stipulated new unit definition** (*causal step*) and a provisional suggestion about causal-step-based reality. Neither supplies experimental evidence or a derivation of actual physical laws. **Terminological separation is mandatory:** do not identify this unit with the conventional physical constant `c`, Einsteinian kinematics, distance per time, the Planck scale, a photon path, or a discretized spacetime interval. No further physical premises or quantitative rules are adopted.
 
+## Explicit definition of time — causal succession (2026-10-12)
+
+**The researcher defines time as the sequence of causal events.** In *Causal Step*, time does **not** mean a pre-existing duration, clock parameter, seconds, minutes, hours, days, or other conventional temporal measurement. A causal step belongs to a sequence or connection of causal occurrences, not a unit of Einsteinian light speed and not a fixed duration of conventional time.
+
+Accordingly:
+- **“Earlier” / “later”** mean relations of causal precedence or succession, not readings from an external clock.
+- **“Beginning”** means a first causal event/condition or a minimal causal starting relation **if one exists**, not a point at conventional time zero.
+- **“Multiple beginnings” or “simultaneous possibilities”** may mean causally independent branches with no predecessor relationship between them; do **not** import a universal clock to interpret the researcher's use of “simultaneous.”
+- The researcher has specified that **time is the sequence of causal events**, but has **not** yet required that every event belong to one global total order. A branching or partial causal order remains an *optional mathematical representation* to assess, not an additional premise.
+
+This is an **explicit terminology correction to prior assistant reasoning**, not a new physical hypothesis, a measured time scale, or a modification of the two working premises. When analyzing future origin models, reason in terms of causal succession first, and discuss conventional spacetime only as a separately emergent or comparative description.
+
 ## First substantive research question — causal origin before space
 
 The researcher now asks how a simple set of conditions could generate reality **without presupposing physical space**, and whether the relevant causal beginning is unique, multiply rooted, repeated without bound, or better understood as an **atemporal space of possible histories**. A Ruliad-like all-possibilities model and observer-conditioned access to connected or persisting portions of it are **hypotheses and comparisons**, not yet adopted physical premises.
 
-**Central distinction:** A **causal source / earliest event** in a pregeometric ordering is not automatically a **spatial center** of an emergent three-dimensional universe. If no space exists initially, the primitive cause has no spatial “where.” Likewise, “all beginning simultaneously” presupposes a global time convention that may not exist if time emerges from causal ordering; incomparable causal events do not necessarily possess a unique shared timestamp.
+**Central distinction:** A **causal source / earliest event** in a pregeometric ordering is not automatically a **spatial center** of an emergent three-dimensional universe. If no space exists initially, the primitive cause has no spatial “where.” Likewise, the researcher's “all beginning simultaneously” must be read in the causal-step sense: **multiple histories may begin without any causal precedence between them**. No conventional synchronized timestamps are assumed. Whether incomparable events form a useful formal notion of contemporaneity is an open modeling question.
 
 **Three-dimensionality remains to be derived.** A possible mathematical test is whether sufficiently large intrinsic balls of radius r in an **emergent spatial adjacency graph**, not merely in the causal event graph or Ruliad multiway graph, contain a number of accessible nodes proportional to r cubed. Arbitrary branching does not guarantee this: a regular tree has exponentially increasing volume. The requirements for stable structures, observer access, and effective matter remain to be specified separately.
 
@@ -39,7 +51,7 @@ The researcher now asks how a simple set of conditions could generate reality **
 ## Current research state
 
 - **Research question:** first substantive question concerns nonspatial causal beginning(s), observer-visible possibilities, emergence of three-dimensional geometry and whether a causal root entails matter concentration; see above. No specific origin model selected.
-- **Starting premises:** two researcher-originated premises; Premise 2's causal-step unit meaning is clarified in a subsequent verbatim discussion entry.
+- **Starting premises:** exactly two researcher-originated premises; Premise 2's causal-step unit and the term *time* are explicitly clarified in subsequent verbatim discussion entries.
 - **Candidate models, evidence, or experiments:** several unselected conceptual origin models and a prospective dimension-scaling criterion are recorded for analysis; no experiment conducted and no physical hypothesis validated.
 - **Negative results and open contradictions:** none established.
 - **Findings, proofs, or physical claims:** none asserted.
