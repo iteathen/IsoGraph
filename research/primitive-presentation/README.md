@@ -1,9 +1,17 @@
-# Three Roles in Effective Symbolic Presentation
+# Primitive Presentation — Incomplete Inquiry and Historical Sources
 
 **Current research dossier:** this README  
-**Research status:** imported historical inquiry manuscript and supplementary research — **unqualified and not independently verified**  
+**Research status:** historical investigation concluded; original three-role proof withdrawn as an established result; rewritten paper explicitly **incomplete and unqualified**  
 **Source author:** Josh Oshiro (source attribution); project author-name authority: Joshua Oshiro  
 **Repository import recorded:** 2026-10-12
+
+## Current rewritten manuscript
+
+**[Primitive Presentation: An Incomplete Inquiry into Representation, Minimality, and Self-Grounding](drafts/PRIMITIVE_PRESENTATION_INCOMPLETE_INQUIRY_2026-10-12.md)** is the new substantive paper draft. It preserves the historical construction, the complete-comparison question, and the inability to establish the three-role minimum. It explicitly labels the proposed Gödel-style self-grounding boundary as **the author's suspicion, not a result proved by this investigation**.
+
+The original manuscript is retained byte-for-byte under [evidence/source](evidence/source/primitive-presentation.md). The earlier [short editorial reframing](drafts/2026-10-12-retrospective-reframing.md) remains historical preliminary editorial work, not the current replacement manuscript. The author has chosen to end this proof-search program rather than treat the unresolved questions as instructions to begin another campaign.
+
+**Neither the current draft nor the historical manuscript establishes that two irreducible productive roles are impossible, that all formal structures are computationally representable, or that physical reality must obey a new Gödel theorem.**
 
 ## Question and scope
 
@@ -29,7 +37,7 @@ The researcher identified the deeper original concern as **self-reference and se
 
 ## Retrospective editorial disposition (2026-10-12)
 
-The author identifies the current theorem manuscript as unsuccessful, does not request further primitive-minimality research, and prefers preserving the genuine motivating problem rather than manufacturing a lower-bound proof. An explicitly provisional [retrospective replacement draft](drafts/2026-10-12-retrospective-reframing.md) records complete-apparatus comparison, a small-alphabet construction of limited scope, the unproved two-role lower bound, and the conjectural self-grounding obstruction. This **does not** supersede the original historical source or claim formal, physical, or philosophical validation. It remains unapproved editorial text and is not a research-campaign restart.
+The author identifies the current theorem manuscript as unsuccessful, does not request further primitive-minimality research, and prefers preserving the genuine motivating problem rather than manufacturing a lower-bound proof. The current [rewritten incomplete inquiry](drafts/PRIMITIVE_PRESENTATION_INCOMPLETE_INQUIRY_2026-10-12.md) records complete-apparatus comparison, a small-alphabet construction of limited scope, the unproved two-role lower bound, and the conjectural self-grounding suspicion. It supersedes the earlier *editorial draft* as the preferred working paper, **not** the original historical source. It is not a publication or a request to restart research.
 
 ## Current state and strongest source-level claims
 
@@ -43,7 +51,7 @@ Its physics-facing statement is conditional: **if** a physical account is comple
 
 The original uploaded filenames and contents are kept unchanged below `evidence/source/`. See [SOURCE_IMPORT.json](SOURCE_IMPORT.json) for the archive paths, byte counts, and independently compared SHA-256 / Git blob identities.
 
-- [Main inquiry manuscript](evidence/source/primitive-presentation.md) — active draft; historical argument and limitations.
+- [Main historical inquiry manuscript](evidence/source/primitive-presentation.md) — **superseded as current thesis**; exact preserved historical argument and limitations.
 - [Inquiry summary](evidence/source/primitive-presentation-inquiry-summary.md) — author-supplied overview and targeted review questions.
 - [Original package README](evidence/source/README.txt) — submitted package scope and instructions.
 - [Development notes](evidence/source/supplementary/primitive-presentation-development-notes.md) — historical exploratory terminology and discarded possibilities, **not proof premises**.
@@ -67,10 +75,12 @@ The original uploaded filenames and contents are kept unchanged below `evidence/
 
 See [IsoGraph idea provenance policy](../../IDEA_PROVENANCE_POLICY.md). No broad scientific novelty, external priority, or independent validation is claimed.
 
-## Open work
+## Unresolved questions — not an active research plan
 
-- Reconstruct and adversarially assess the lower-bound argument against actual primitive-closed counterexamples.
-- Define presentation scope, counted apparatus, and equivalence criteria precisely enough for repeatable comparison.
-- Distinguish the author's proof obligations from illustrative computational programs and formal witnesses.
-- Obtain competent independent review in formal semantics, proof theory, computability, and philosophy of formal practice.
-- Compare the claimed role families with [minimal-role-reduction-adapter](../minimal-role-reduction-adapter/README.md), without treating the adapter's conjectured physical relevance as already established.
+The following remain unresolved within the archived study; they are not claims of pending tasks or an instruction to restart the investigation.
+
+- Whether any independently defined primitive-role criterion establishes a nontrivial lower bound across relevant formulations.
+- Whether a complete two-role presentation is impossible under a carefully specified comparison criterion.
+- Whether the observed recurrence of circular proof attempts reflects a general self-reference boundary or the historical factorization used in those attempts.
+- Whether a cross-formulation representation can be grounded in observable physical reality without assuming the very correspondence it is intended to establish.
+- How the historical role factorization compares with the separate [minimal-role-reduction-adapter research](../minimal-role-reduction-adapter/README.md), without asserting either project has demonstrated a physical invariant.
