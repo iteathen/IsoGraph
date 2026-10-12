@@ -158,3 +158,19 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Status:** Controlled negative finding for twelve-dimensional self-selection under this implementation; user's withdrawal of the earlier coincidence stands. Model keeps other limits such as `maxNodes=3000`.
 
+## 2026-10-12 — Further handoff: extended horizon and independent mechanism controls
+
+**Researcher (substantive direction, verbatim excerpts):**
+
+> Determine whether the emergent-universe toy model naturally stabilizes at a particular number of dimensions when its artificial dimension ceiling is removed.
+
+> Separately, investigate the orbital motion observed after approximately 200 simulation steps and determine whether it represents sustained orbital behavior, transient circulation, or a visualization/numerical effect.
+
+**Context correction:** The handoff reiterated the earlier status that the uncapped model had not been executed. Resynchronization with PR #78 revealed that the original one-line-change uncapped browser experiment **had already been performed** and documented. That finding was preserved rather than duplicated or misrepresented as a new browser result. This follow-up added independent numerical controls.
+
+**Agent-assisted extended measurements:** A locally executed source-faithful Node 22 dynamics extraction reproduced earlier browser checkpoint and projected winding counts; an uncapped extension generated dimensions **143 at step 3,000**, still exactly one new dimension every 21 steps. The user-originated 12-dimensional coincidence remains **withdrawn**. An isolated **no-node-cap** control stayed connected at step 1,500 (3,471 nodes, 72 dimensions) whereas the default capped-node model had already fragmented. An isolated **zero-spring** control still created 46 dimensions by step 950 but had **no >1-winding x–y trajectories** among the 107-node cohort. The prior 64/107 uncapped projected winding observation survived, including 58/107 with near-axis increments excluded, but substantial full-space radial changes and high-dimensional projection differences give **no evidence sufficient to certify stable full-space or gravitational orbits**.
+
+**Reproduction provenance and scope:** Source-exact Chromium results belong to the prior audit. This extension actually executed **locally transcribed dynamics under Node 22** and a new mechanically source-extracted replay script was committed to the research branch for future independent checking; the latter's own execution has not been verified here. No GitHub Actions or external hosted runner used. Full local CSV datasets remain conversation artifacts; quantitative conclusions and reproducibility instructions are committed in [extended audit](reviews/2026-10-12-model-a-extended-local-controls.md), with replay code at [Node source extraction](experiments/model-a-source-core-replay.mjs). No reinterpretation of Causal Step's two original premises or time definition is made.
+
+**Research disposition:** Refutes 12-dimensional self-stabilization *for this implementation*; separates the mechanisms of dimension birth, node-cap fragmentation, and projected circulation; leaves intrinsic full-space orbital persistence and emergence of physical spacetime unverified.
+
