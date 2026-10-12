@@ -37,7 +37,7 @@ This is an **explicit terminology correction to prior assistant reasoning**, not
 
 The researcher now asks how a simple set of conditions could generate reality **without presupposing physical space**, and whether the relevant causal beginning is unique, multiply rooted, repeated without bound, or better understood as an **atemporal space of possible histories**. A Ruliad-like all-possibilities model and observer-conditioned access to connected or persisting portions of it are **hypotheses and comparisons**, not yet adopted physical premises.
 
-**Central distinction:** A **causal source / earliest event** in a pregeometric ordering is not automatically a **spatial center** of an emergent three-dimensional universe. If no space exists initially, the primitive cause has no spatial “where.” Likewise, the researcher's “all beginning simultaneously” must be read in the causal-step sense: **multiple histories may begin without any causal precedence between them**. No conventional synchronized timestamps are assumed. Whether incomparable events form a useful formal notion of contemporaneity is an open modeling question.
+**Central distinction (clarified):** A **causal source / earliest event** may be a fully meaningful **causal center**, defined by common ancestry, even before space exists. It is not automatically a **spatial center** of a later three-dimensional universe. If no space exists initially, the primitive cause has no spatial “where.” Likewise, the researcher's “all beginning simultaneously” must be read in the causal-step sense: **multiple histories may begin without any causal precedence between them**. No conventional synchronized timestamps are assumed. Whether incomparable events form a useful formal notion of contemporaneity is an open modeling question.
 
 **Three-dimensionality remains to be derived.** A possible mathematical test is whether sufficiently large intrinsic balls of radius r in an **emergent spatial adjacency graph**, not merely in the causal event graph or Ruliad multiway graph, contain a number of accessible nodes proportional to r cubed. Arbitrary branching does not guarantee this: a regular tree has exponentially increasing volume. The requirements for stable structures, observer access, and effective matter remain to be specified separately.
 
@@ -48,14 +48,29 @@ The researcher now asks how a simple set of conditions could generate reality **
 - [Detailed comparison, mathematical geometry test, limitations and source links](reviews/2026-10-12-causal-beginnings-and-emergent-three-dimensional-space.md)
 - [Researcher's complete originating question, preserved verbatim](DISCUSSION_LOG.md)
 
+## Causal center and the near/far light-link puzzle
+
+**Causal origin and time, as the researcher intends them:** A shared earliest causal condition **can be a causal center**—a root defined by ancestry, despite there being no pre-existing physical coordinates. A first causal event can equally be a beginning in **causal time**, since time means the sequence of causal events. Neither idea requires a conventional spatial center or clock-time origin. The previous analysis was too restrictive when it treated the absence of space as a reason to deny *any* center.
+
+**New research example:** The investigator proposes counting a single uninterrupted light transmission from emitter to observer as **one causal step**, both for a nearby lamp and for a very distant astronomical source. These are candidate *direct causal light links*, regardless of the observed geometric separation. **This is a proposed interpretation, not yet a derived fundamental update rule.**
+
+**Possible reconciliation:** The number of direct light links is not necessarily the same observable as the distance or event-history length measured using other parts of the causal network. A two-way signal experiment can have two light connections—send-to-reflector and reflector-to-receiver—while the observer's **local causal-clock chain** between sending and receiving contains small or large numbers of tick events depending on the experiment. Those are *causal sequences*, not conventional seconds imported as primitives. Deriving a spatial distance from these relations still requires a defined invariant mapping; shortest unweighted path counting across arbitrary light links would incorrectly collapse near/far separation.
+
+**Relativity as a correspondence, not the unit definition:** Standard **special relativity** treats unobstructed lightlike connections as *null* regardless of spatial travel distance, although a zero spacetime interval does **not** establish that the signal took one elementary graph update. **General relativity** extends the macroscopic account to curved and cosmologically expanding geometry, including different redshifts and distance measures. Conventional constant `c` and metric time appear only within these proposed **emergent comparison theories**; they are not synonymous with the user's primitive causal-step unit.
+
+The precise link semantics and emergent distance map remain open. These are questions for comparative model research, not additional adopted premises.
+
+- [Detailed near/far causal-link model comparison, radar example, relativistic analogies and test obligations](reviews/2026-10-12-one-light-link-and-emergent-distance.md)
+- [Researcher's complete original example and causal-center correction](DISCUSSION_LOG.md)
+
 ## Current research state
 
-- **Research question:** first substantive question concerns nonspatial causal beginning(s), observer-visible possibilities, emergence of three-dimensional geometry and whether a causal root entails matter concentration; see above. No specific origin model selected.
+- **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
 - **Starting premises:** exactly two researcher-originated premises; Premise 2's causal-step unit and the term *time* are explicitly clarified in subsequent verbatim discussion entries.
-- **Candidate models, evidence, or experiments:** several unselected conceptual origin models and a prospective dimension-scaling criterion are recorded for analysis; no experiment conducted and no physical hypothesis validated.
+- **Candidate models, evidence, or experiments:** unselected origin models, candidate direct-light-link and layered clock-chain interpretations, and a prospective dimension-scaling criterion; no experiment conducted or physical hypothesis validated.
 - **Negative results and open contradictions:** none established.
 - **Findings, proofs, or physical claims:** none asserted.
-- **Next substantive step:** compare the candidate origin models using only declared nonspatial structure, define the admissible causal relation and possible emergent spatial metric, and seek falsifiers without adding physical premises unless the researcher expressly adopts them.
+- **Next substantive step:** compare single-light-link semantics against causal-set-like links and local update sequences; test whether causal clock chains recover near/far observational differences and possible relativistic correspondence without presupposing conventional spacetime. Retain the two original premises unless expressly revised.
 
 The absence of a mathematical model or explanatory mechanism is intentional. Defining the unit *causal step* does not itself establish any physical ontology, discretization, propagation speed, or dynamical rule.
 
