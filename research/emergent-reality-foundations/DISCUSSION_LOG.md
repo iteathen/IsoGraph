@@ -130,6 +130,16 @@ The user, Joshua Oshiro, originated the central research direction and motivatin
 
 **Provenance and handling:** The user supplied a Google Drive folder link without an explicit instruction. The folder's intended role relative to this research record remains unresolved. This is a privacy-preserving exception to verbatim public logging, since sharing a link in private conversation does not necessarily authorize publication of its folder identifier. No Google Drive file or folder has been altered by this entry. The public GitHub discussion log remains the active persistent record on the working branch pending PR #74.
 
+### Turn 15 — Request to inspect Drive folder and create separate research projects for papers
+
+**User (verbatim):**
+
+> I want to know if you can see its contents, and we... we... I want to store it in the research folder, but these are different research papers, so you'll need to separate them into their own research projects, give them their own folders inside the research directory on the repo. And I'm okay with it being shared publicly.
+
+**Source reference and permission:** The preceding user-provided Google Drive URL is `https://drive.google.com/drive/folders/13Haaqr6RZ5yLc48hrkxhB72l2h4CAExR`. The user explicitly authorizes public sharing of the intended research materials. This does not establish that third-party copyrighted papers are redistributable without checking their licenses.
+
+**Assistant action and limitation:** Verified that the Google Drive plugin is installed, but no Google Drive folder-listing or file-reading actions were available to the assistant in this session. Attempting to open the URL through available web access did not expose a file inventory. No source-paper titles, file contents, counts, or research classifications have been verified. Consequently no separate paper project folders, full-text repository uploads, or research dossiers have been created from this Drive folder. The existing IsoGraph research log is updated to preserve the request and its blocked status. Once source files are accessible, group by distinct research question, establish one research/<project>/README.md per project, retain original source/provenance, and update research/README.md and the root front door as repository checks require.
+
 ## Continuing log protocol
 
 Append later turns in order, with date and exact user wording when available. Preserve meaningful assistant arguments and corrections with explicit fidelity labels. Never silently rewrite an earlier message to make the research history appear cleaner; clarify later in a new entry. Record failures to save rather than implying automatic persistence. The current dossier [README.md](README.md) is a consolidated, revisable access surface; this log is the accumulating discussion record.
