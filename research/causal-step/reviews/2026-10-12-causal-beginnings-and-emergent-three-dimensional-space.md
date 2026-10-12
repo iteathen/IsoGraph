@@ -2,7 +2,7 @@
 
 **Recorded:** 2026-10-12  
 **Research project:** Causal Step  
-**Status:** exploratory reasoning and falsifiable-model criteria; no derived physical origin, dimension-selection theorem, proven all-branches ontology, or established mass-origin result.  
+**Status:** exploratory reasoning and possible test criteria; **revised after the researcher's explicit definition of time as causal-event succession**. No derived physical origin, dimension-selection theorem, proven all-branches ontology, or established mass-origin result.  
 **Human research direction:** Joshua Oshiro's two premises—(1) reality largely emerges from a simple set of conditions, and (2) “light speed” is redefined as the primitive unit **causal step**, explicitly unrelated to the conventional Einsteinian speed of light—and the newer questions about causal beginning(s), all possibilities, observer-connected Ruliad branches, emergent 3D space, and whether mass would concentrate near a causal origin.  
 **Agent contribution:** separation of temporal and spatial origins, alternative causal structures, formal graph growth tests, challenges and caveats.  
 **Verbatim discussion:** [Discussion log](../DISCUSSION_LOG.md).
@@ -16,7 +16,7 @@ Use this separation:
 - **Generative specification:** rule(s) or constraint(s) determining admissible transformations; not necessarily an event.
 - **Causal origin:** a minimal element, initial state, or ancestry condition in an order of events; not necessarily a unique spatial location.
 - **Space:** a derived network of relational proximity whose 3-dimensionality has to be demonstrated.
-- **Time:** a derived ordering, sequence, or observer's coarse-grained foliation; do not silently insert an external master clock.
+- **Time (explicitly defined by the researcher):** **the sequence of causal events**. It is *not* seconds, a clock parameter, a pre-existing physical duration, or a foliation to be chosen by an observer. A model may represent the causal sequence through a graph/order, but this is a modeling method rather than a replacement for the researcher's definition.
 - **Matter:** a separately derived property of persistent/dynamically stable structure; no primitive matter-location variable has been supplied.
 
 The researcher's proposed unit **causal step** is neither a distance divided by time nor Einstein's constant c. This inquiry must not take the word *speed* as automatic permission to import metric notions before they emerge.
@@ -27,20 +27,22 @@ The researcher's proposed unit **causal step** is neither a distance divided by 
 | --- | --- | --- | --- |
 | Single minimal causal root | One initial relation/state has descendants under local or global update constraints. | **No, not intrinsically.** Rooted causal ancestry need not correspond to one later spatial position. | Explain how one pregeometric origin yields homogeneous geometry and lawlike regularity. |
 | Several causally unrelated roots | Multiple minimal events/relations have no known predecessor and may generate disconnected or later connected histories. | **No, not intrinsically.** “Several” is a count, not a spatial placement. | Explain overlap, merging, interaction and what sets observer accessibility. |
-| Atemporal totality of possibilities | All admissible histories are represented without any primitive “before,” as in a Ruliad-like formal construct. | **No, because “where” and “simultaneous” are not primitive.** | Define physical realization versus mere formal existence, observation/selection and a measure over possibilities. |
-| No first event / cyclic or unbounded ancestry | Causal structure need not possess a least element. | No spatial center implied. | Explain observed finite-time cosmology or its emergent effective beginning, and possibility of stable histories. |
+| Collection of possible causal histories | Admissible histories can coexist as formal alternatives, each with its own causal-event succession; no external global clock is required. | **No pre-existing spatial center.** Independent histories may lack mutual causal precedence. | Define physical realization versus formal possibility, observer access/selection and a measure over possibilities. |
+| No first event / cyclic or unbounded ancestry | Causal succession may have no minimal event. | No spatial center implied. | Explain a seemingly finite observed causal past or its effective beginning, and persistence of stable histories. |
 
 None is forced by the two existing Causal Step premises. They are **alternative research formulations**, not additional adopted premises.
 
 A unique root can be mathematically introduced into a rule by adding a transition “null → all permitted initial conditions”; Wolfram explicitly discusses this kind of construction. That underscores the need to distinguish a **chosen notation or seed representation** from a distinguished *physical* birth event.
 
-## 3. “All at once” needs an interpretation without primitive time
+## 3. “All at once” in the researcher's causal-event meaning of time
 
-If time itself emerges from causal structure, there may be no physically meaningful global timestamp at which *all histories began simultaneously*. An atemporal space of possible histories can be defined mathematically, and causal events can be partially ordered. Events incomparable by ancestry need not be declared “simultaneous in a universal clock.”
+**Correction to the initial assistant framing:** The researcher explicitly defines **time as the sequence of causal events**. It is an error to recast the original question as though “time” meant an external parameter that must be eliminated, or to treat “simultaneous” automatically as a comparison of clock readings. In this inquiry, time is causal succession *by definition*; seconds, hours, synchronized clocks, and relativistic temporal coordinates are not its primitive meaning.
 
-If a poset (E,≺) has a unique minimal element e0, a researcher can define illustrative generation-depth labels such as the length of a longest causal chain from e0 to e; but such labels are not yet measured seconds or necessarily invariant global time slices. Some posets have many minimal elements; others have none.
+“One beginning” can mean one event/condition causally antecedent to the histories in question. “Many beginnings” can mean several minimal causal events or conditions. “All possibilities simultaneously” can mean that many possible causal sequences exist and do not have to be placed into a single shared total order. Causal independence is not identical to a measurable spatial or clock-time separation. Whether an event network is a total order, partial order, or another structure remains **unselected** and requires mathematical definition, not a conventional-time assumption.
 
-**Consequence:** the alternatives “one beginning, infinitely many beginnings, or everything simultaneously” are not mutually exhaustive. A static possibility structure can be represented using a single formal origin without asserting that a physical event occurred outside time.
+An optional partial-order model (E,≺) can encode the claim that event a causally precedes event b. Incomparable events have no established precedence **under that relation**. They can be called “parallel” as an informal picture, but equality of an external timestamp or physically measured simultaneity does **not** follow. A chain count or causal-depth number may be a convenient discrete summary of succession; it is not yet seconds or a proof that causation is globally clocked.
+
+**Consequence:** With time defined by causal succession, the alternatives “one beginning,” “many causal beginnings,” and “multiple coexisting causal histories” remain live candidate structures. There is no need to posit an external master time to discuss them; nor does the presence of a first causal event imply a privileged spatial location in a later emergent geometry.
 
 ## 4. What Wolfram's Ruliad does and does not assert
 
@@ -100,7 +102,7 @@ https://plato.stanford.edu/entries/spacetime-singularities/
 Hold the two original premises fixed and keep the four origin scenarios as **alternatives**. Before arguing from a beginning to observable matter concentration, separately specify:
 
 1. what counts as one causal step without using spatial distance or clock duration;
-2. whether primitive causation is a total order, partial order, branching relation, or timeless relational constraint;
+2. whether the researcher's **causal-event sequence** is best represented as a total order, partial order, branching relation, or a family of possible event sequences;
 3. what maps the causal relation to an emergent spatial adjacency relation (do not equate causal graph, branchial graph and physical-space graph);
 4. which constraints on the network yield 3D ball growth and observer-stable structures;
 5. what physical state observable corresponds to *matter density*, and whether it correlates with an identifiable origin vertex/region rather than merely with generation depth;
@@ -112,6 +114,8 @@ These are **test obligations and uncommitted model dimensions**, not six new pre
 
 The researcher's rejection of pre-existing *where* is logically consistent with Premise 1. A **causal beginning without a spatial center** is a coherent candidate. The Ruliad supplies a significant adjacent speculative formalization for many possible rule histories and observer-conditioned observations, not a proof that all are physically executed. Three-dimensional geometry requires identifiable connectivity scaling, not just indefinite branching. **Matter concentration around a spatial root is a model-dependent possibility but not a logical consequence of a single causal source.**
 
-A constructive way to proceed is to test multiple causal-generation rules—including a rooted model, an initially multiply rooted model and a timeless possibility model—against independently specified geometry and observer-access tests. Do not bake three-dimensionality or mass concentration into the representation before the test.
+A constructive way to proceed is to test multiple causal-generation rules—including a rooted causal-event model, an initially multiply rooted model and a collection of alternative causal histories—against independently specified geometry and observer-access tests. Do not bake three-dimensionality or mass concentration into the representation before the test.
 
 **Provenance:** The causal-step terminology and proposed questions are Joshua Oshiro's. The four-way model table, formal graph-growth criterion, potential counterexamples, and research assessment are agent-assisted analysis and external-prior-art comparisons. No qualified IsoGraph semantics changed.
+
+**Terminology provenance:** Joshua Oshiro's later clarification that time means **a sequence of causal events**, not conventional elapsed duration, supersedes the original AI phrasing in this assessment. This editorial revision does not claim the researcher adopted any mathematical model of causal ordering or an additional premise.
