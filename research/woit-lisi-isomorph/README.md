@@ -1,3 +1,7 @@
+## L S037 scoped frozen-original verification complete; G0 still open (2026-10-11)
+
+[Successful S037 original source CI 38212524368](https://github.com/iteathen/IsoGraph/actions/runs/38212524368) passed **33/33** source/group adversarial controls. [Gate0.182](../../experiments/062/L_CURRENT_STAGE_GATE_0_182.json), SSC0.95, inverse0.28, convergence0.50 and traversal0.67 preserve original L04 p13/p14 2T/D4/K group assertions and the conditional same-carrier center obstruction, without silently repairing the author's inclusion or claiming global physical proof. [First failed source CI 38212309646](https://github.com/iteathen/IsoGraph/actions/runs/38212309646) remains a failure (0/33 controls executed). **L04-S038/S040 remain mapped-only; 0/6 whole papers cold semantic reviewed**, no G0 freeze, G1 advancement, W import, cross-track synthesis or merge.
+
 ## L S037 source verifier baseline failure preserved (2026-10-11)
 
 Track L retains SSC0.95 / inverse0.28 and the conditional, source-unresolved 2T/D4/K interpretation. The [first S037 original-source CI 38212309646](https://github.com/iteathen/IsoGraph/actions/runs/38212309646) **FAILED its verifier wording oracle (0/33 hostile cases executed)** despite source PDF/hash and exact group-model baseline passing. [Gate0.181](../../experiments/062/L_CURRENT_STAGE_GATE_0_181.json) retains the failure and pins a corrected read-only rerun as pending. **Two mapped L04 groups and 0/6 whole-source cold audits remain incomplete**; no G0 freeze, G1+, cross-author import or merge.
