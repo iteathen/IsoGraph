@@ -33,6 +33,12 @@ A later question asks whether a shorter physical entropy seed can be as valuable
 
 The researcher corrected a prior one-draw model by specifying a **one-bit-wide physical entropy source sampled once per clock cycle over 512 cycles** to modify a clock-derived seed before a public generator is invoked. The [source-width versus total-entropy analysis](reviews/2026-10-12-one-bit-stream-512-cycle-seed.md) distinguishes one sampled bit reused throughout the run from 512 potential fresh random samples. Under independent fair samples the accumulated stream carries 512 bits of entropy; under correlated or unchanged samples it carries less. This is valid sequential accumulation, not deterministic creation of entropy from one *total* random bit.
 
+## Single-bit adaptive computation and possible irreducibility
+
+The researcher proposes that **one total genuinely random bit** can select a path through a publicly specified, adaptive deterministic computation, including possible Rule 110 or multiway graph rewrites, whose evaluation and attempted inversion could be very expensive. The proposed comparison with the absolute work of brute-forcing a much longer conventional key is a **research suspicion, not a proved theorem**. Read the [computational-irreducibility and one-bit attack-work analysis](reviews/2026-10-12-computational-irreducibility-vs-one-bit-security.md).
+
+The explicit distinction is between **the number of independent unknown inputs** (one bit if all other state is public), **the computational cost of evaluating the resulting two possible histories**, and **the advantage of an attacker over an authorized participant**. Universality does not imply a hard inverse for every particular finite evolution. This is separate from the earlier serial one-bit source that provided potentially fresh entropy at every clock cycle.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
