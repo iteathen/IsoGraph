@@ -76,6 +76,22 @@
 
 **Evidence / analytical record:** [Self-reference as an obstruction certificate](reviews/2026-10-12-self-reference-as-obstruction-certificate.md). Relevant antecedents: [Gödel historical development (SEP)](https://plato.stanford.edu/entries/goedel/), [Gödel incompleteness (SEP)](https://plato.stanford.edu/entries/goedel-incompleteness/), and [Tarski truth definitions (SEP)](https://plato.stanford.edu/entries/tarski-truth/).
 
+## 2026-10-12 — Retrospective rather than a rescued minimality theorem
+
+**Researcher (excerpts, verbatim):**
+
+> Well, no doubt the paper, as written, is a failure. The question is, is how to rewrite it in a form that preserves the real point here.
+
+> And I'm honestly not really interested in doing any more research on this because I'm almost certain that it's a self-reference dead end.
+
+> We're not talking about any structured language in particular. We're talking about all structured language.
+
+> But to prove that you can't do it in two, I think that's impossible. And you're just going to constantly run into self-reference problems.
+
+**Researcher-originated position (summary, not full transcript):** The symbols are placeholders for functions common to structured presentations, rather than the glyphs of any one formal language. The author accepts that the original proof has failed and does not want more investigations. The remaining difficulty is the lack of a non-circular proof of a complete two-role lower bound, with recurring self-reference interpreted as a probable boundary.
+
+**Assistant editorial disposition:** Preserve the historical source without amendment; do not present an established irreducible three-role minimum or a universal physical no-go theorem. Preserve complete comparison of productive apparatus, the bounded SKI encoding example, the negative historical proof outcome, and the conjectured self-grounding boundary. An explicitly unapproved retrospective redraft is located at [drafts/2026-10-12-retrospective-reframing.md](drafts/2026-10-12-retrospective-reframing.md).
+
 ## Logging protocol
 
 Append future **research-substantive** turns, with the original researcher wording when available and honest fidelity labels. Do not append routine repository/file-management conversation. Record corrections as subsequent research entries rather than silently editing the earlier argument. Track whether each proposed lemma is established, falsified, or unresolved.
