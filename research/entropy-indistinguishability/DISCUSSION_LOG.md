@@ -27,6 +27,18 @@
 
 **Status:** Substantive clarified research hypothesis, not a newly verified theorem or physical NEI identity result. Original source working note and initial review remain unchanged as historical evidence.
 
+## 2026-10-12 — Objection to identity accounting in neutrino discussion
+
+**Researcher (verbatim):**
+
+> I should stop you there because I know the identity you're referring to is simply an accounting trick. It has no basis in reality.
+
+**Attribution / interpretation pending:** This is a substantive challenge to the assistant's preceding framing of neutrino and antineutrino identity. The pronoun “identity” may refer to assigned lepton-number labels (+1/-1), to the Dirac/Majorana field classification, or to another distinction. **Do not resolve this ambiguity by retrospective paraphrase.** The researcher challenges treating an assigned theoretical label as demonstrated physical identity. Further clarification is required before attributing a more specific objection.
+
+**Assistant research response (summary, not verbatim):** A lepton-number assignment is a bookkeeping/conservation label, not independent empirical proof that neutrino and antineutrino constitute distinct ontological species. Whether the conservation law is exact is unresolved. The Majorana self-conjugacy equation is a theoretical condition rather than an experimental determination of natural identity; nonetheless Dirac versus Majorana models can differ in physical predictions (for example, lepton-number-violating processes). Distinguish label from observable consequence; do not substitute the conventional classification for the user's strict criterion.
+
+**Status:** Open clarification. No conclusion about neutrino nature or change to qualified IsoGraph NEI semantics.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
