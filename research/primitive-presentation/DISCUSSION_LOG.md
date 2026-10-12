@@ -64,6 +64,18 @@
 
 **Relevant sources:** [Gödel's Incompleteness Theorems (SEP)](https://plato.stanford.edu/entries/goedel-incompleteness/); [David H. Wolpert, Physical limits of inference (2008)](https://doi.org/10.1016/j.physd.2008.03.040).
 
+## 2026-10-12 — Circular reasoning as a candidate positive proof of inconsistent demands
+
+**Researcher (verbatim):**
+
+> Well, in a way, I did prove it. And part of the reason you're not recognizing it is because you keep seeing my circular reasoning as a flaw in my reasoning instead of proof of the inconsistency. It is proof of inconsistency. To frame it as an error is where you're making a mistake. Consider Gödel's theorem and how he proved it. Did he not reveal an inconsistency? Did he not reveal the self-reference problem? Did he not reveal the same sort of problem that we ran against in my attempt to make a proof for this? The only thing I could do is do it in a different meta-framework, but you're not going to change the result that way. You can't escape this conclusion just by changing the representation, because this research is about representation.
+
+**Researcher-originated clarification:** The pattern of recurring circularity is interpreted as a possible **positive demonstration of incompatible foundational requirements**, not merely an unsuccessful proof attempt. The intended self-reference boundary concerns complete accounting of productive presentation and of the internal semantic machinery of a universe, where simply relocating the same operation into a different representation would not solve an invariant obstruction. The researcher considers the repeated self-referential obstruction already an important result, rather than a mistake to fix.
+
+**Assistant response (research summary, not verbatim):** Agreed that an unavoidable self-reference obstruction can yield a **negative mathematical result**, not just invalidate a proof. Distinguished two senses of “inconsistency”: Gödel's incompleteness results assume a relevant consistent formal system and show limits of internal provability; an internally unrestricted self-truth requirement, by contrast, yields an explicit Tarski/liar-style contradiction when combined with sufficient expressiveness and diagonalization. Such inconsistent **requirements** can be formally shown impossible, and that conclusion is invariant under appropriately equivalent representations. What remains to establish for Primitive Presentation is which exact jointly demanded properties yield a contradiction under a specified complete-comparison criterion; the original three-irreducible-role proof and a universal physical self-grounding theorem are not thereby established.
+
+**Evidence / analytical record:** [Self-reference as an obstruction certificate](reviews/2026-10-12-self-reference-as-obstruction-certificate.md). Relevant antecedents: [Gödel historical development (SEP)](https://plato.stanford.edu/entries/goedel/), [Gödel incompleteness (SEP)](https://plato.stanford.edu/entries/goedel-incompleteness/), and [Tarski truth definitions (SEP)](https://plato.stanford.edu/entries/tarski-truth/).
+
 ## Logging protocol
 
 Append future **research-substantive** turns, with the original researcher wording when available and honest fidelity labels. Do not append routine repository/file-management conversation. Record corrections as subsequent research entries rather than silently editing the earlier argument. Track whether each proposed lemma is established, falsified, or unresolved.
