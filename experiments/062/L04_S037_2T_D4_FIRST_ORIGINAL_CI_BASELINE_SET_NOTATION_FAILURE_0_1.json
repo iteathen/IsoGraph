@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062-L-G0-L04-S037-first-original-CI-baseline-wording-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "first_original_CI": {
+    "run_id": 38212309646,
+    "job_id": 114689003984,
+    "head_sha": "be4e3abf8e1e52d1bee6d82930e8a50534515b6f",
+    "conclusion": "failure",
+    "verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-s037-source-0-1.mjs",
+      "git_blob_sha": "7396e8785493b11bebf8c8f3b1d928a406aa02d9"
+    },
+    "frozen_PDF_SHA256_verified": true,
+    "original_full_pages_13_14_SHA256_verified": 2,
+    "original_source_blocks_SHA256_verified": 3,
+    "scoped_source_group": "L04-S037",
+    "source_roles": 17,
+    "finite_product_order": 96,
+    "finite_product_center": 2,
+    "model_K_in_2T": false,
+    "SSC_IDs": 191,
+    "source_first_groups": 350,
+    "hostiles_defined": 33,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0,
+    "baseline_error": "exact original D4 and common center"
+  },
+  "diagnosis": {
+    "category": "VERIFIER_LITERAL_SYNTAX_FALSE_NEGATIVE_NOT_SOURCE_MATH_DEFECT",
+    "incorrect_oracle": "expected source packet common Z2 meaning includes shorthand ±1",
+    "actual_source_packet": "The named normal groups share center Z2={1,-1}",
+    "scope": "These are equivalent set notations; original source packet, 2T/D4 math, and entire SSC0.95 do not require changes.",
+    "corrected_verifier": "experiments/062/tools/verify-l-g0-l04-s037-source-0-2.mjs",
+    "corrected_git_blob_sha": "734e28ee44657b72e3422c286120c6c2b558f1a4",
+    "original_failed_run_not_reclassified": true,
+    "source_defect_not_proven": true
+  },
+  "stage_locks": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_author_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
