@@ -5,6 +5,20 @@
 **Source provenance:** user-provided separate research project, archived 2026-10-12  
 **Current authority:** research-only, not qualified IsoGraph semantics
 
+## Central research question
+
+Can different amounts of **source randomness** produce physically indistinguishable resulting systems, and under what conditions is the distinction between their generative histories physically meaningful rather than merely descriptive? This is separate from limited computational indistinguishability and separate from a proved claim of natural identity.
+
+The source distinguishes:
+
+- **source entropy:** randomness in the input/generative history;
+- **apparent entropy:** randomness of the resulting observable presentation relative to an observer or model;
+- **total physical indistinguishability (conjectural):** no admissible physical interaction, not merely a currently feasible test, distinguishes the histories.
+
+The note explores an operational or physical equivalence criterion; it **does not** claim that deterministic computation produces more Shannon entropy than its input.
+
+This question is the project’s organizing subject. Short/long seeds, deterministic pseudorandom operations, chaotic three-body-like dynamics, Rule 110, time-dependent noisy hardware, and quantum-coherent graph operations are **illustrative mechanisms**, not independent headlines or the thesis of the paper. One-bit examples are deliberately extreme cases of the general smaller-versus-larger source comparison.
+
 ## Initial critical assessment — 2026-10-12
 
 **[Read the broad assessment](reviews/2026-10-12-broad-assessment.md).** The investigation poses a coherent question about when distinct generative histories should be treated as operationally or physically equivalent. The bounded-observer and specified-interaction formulations have clear mathematical precedents. The stronger claim that *no physically possible distinction means no underlying physical difference* remains an **unproved identity/ontology principle**, not a result of observer indistinguishability alone. A central correction is that source Shannon entropy characterizes a distribution over generating possibilities, not an individual realized history; low-seed pseudorandom outputs can also remain far from uniform under unrestricted tests. No physical equivalence or novelty was established in this initial review.
@@ -51,29 +65,7 @@ The researcher argues that even when a program intends to reread **the same phys
 
 The defensible lesson is that **storage width, entropy of the time-indexed readout history, and entropy of the final logical result are not interchangeable**. Conditional Shannon entropy and entropy-rate modeling apply to stochastic physical processes. Fault tolerance may suppress their logical effects. The researcher's broader concern that an observer/indistinguishability problem recurs through every physical implementation is an **unresolved suspicion**, not a universal theorem.
 
-## Quantum encrypted superposition and measurement
-
-The researcher asks whether **the encrypted data itself might be a quantum superposition**, so that even its legitimate holder does not know a particular classical measurement outcome before reading it. See [quantum encrypted superposition and readout identity](reviews/2026-10-12-encrypted-quantum-superposition-and-readout-identity.md). Quantum ciphertext encoding a **definite classical message** can permit deterministic authorized recovery; a **quantum plaintext in superposition** instead decrypts to a quantum state whose measurement can yield different classical values. For example, |+> has zero von Neumann entropy but a computational-basis measurement yielding one bit of Shannon outcome entropy. A pure superposition and a classical mixture can have the same single-basis statistics but differ under other measurements; the strongest physically exhaustive natural-identity claim must count those alternative quantum interactions.
-
-This is an exploratory quantum-information example, **not** a new encryption theorem, a result about ordinary semiconductor error caches, or a demonstration that distinct physical histories are naturally identical.
-
-## Unmeasured quantum control propagated through graph nodes
-
-The researcher proposed allowing an **unmeasured, coherently controlled quantum state** influenced by tunneling to propagate entanglement and conditional operations across a hypergraph, rather than repeatedly reading or re-seeding an ordinary bit. The researcher suspects the resulting inverse problem could be computationally irreducible or comparable in work to recovering a much larger classical source. This is an **open hypothesis**, not an established complexity lower bound.
-
-See [coherent quantum control of a hypergraph](reviews/2026-10-12-quantum-control-hypergraph.md) and the [verbatim research log](DISCUSSION_LOG.md). The physics requires distinguishing coherent controls from unread classical/decohered tunneling records; GHZ states confirm entanglement propagation but show that large entangled graphs can also have efficient inverse circuits. Quantum BQP complexity is not automatically determined by classical P versus NP. This note does not change qualified IsoGraph semantics.
-
-## Research question
-
-Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
-
-The source distinguishes:
-
-- **source entropy:** randomness in the input/generative history;
-- **apparent entropy:** randomness of the resulting observable presentation relative to an observer or model;
-- **total physical indistinguishability (conjectural):** no admissible physical interaction, not merely a currently feasible test, distinguishes the histories.
-
-The note explores an operational or physical equivalence criterion; it **does not** claim that deterministic computation produces more Shannon entropy than its input.
+An optional quantum-information illustration considers coherent superposition and graph-node correlations alongside the other examples. It is documented separately in [quantum encryption and readout](reviews/2026-10-12-encrypted-quantum-superposition-and-readout-identity.md) and [coherent graph evolution](reviews/2026-10-12-quantum-control-hypergraph.md); neither defines or establishes the central entropy/indistinguishability hypothesis.
 
 ## Current state and claims under investigation
 
