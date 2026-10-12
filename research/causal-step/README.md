@@ -63,6 +63,17 @@ The precise link semantics and emergent distance map remain open. These are ques
 - [Detailed near/far causal-link model comparison, radar example, relativistic analogies and test obligations](reviews/2026-10-12-one-light-link-and-emergent-distance.md)
 - [Researcher's complete original example and causal-center correction](DISCUSSION_LOG.md)
 
+## Lightlike paths and observer causal time — current comparison
+
+**Conditional investigation based on the adopted causal-step premise:** The researcher asks whether light's relativistic *null* behavior might provide a bridge between a direct emission-to-detection causal step and the different rates at which observers accumulate causally successive events. The premise is accepted as the starting assumption of this research, not repeatedly challenged for lack of proof.
+
+In standard relativity, **null paths have zero metric proper-time length**, whereas an observer's **timelike** path carries a clock whose proper time accumulates. Light has no rest frame, so this is a geometric statement, not a claim about what a photon subjectively experiences. In the proposed Causal Step interpretation, an emission-to-detection *direct causal link* might coexist with many causally ordered events recorded by a physical observer. A properly formed two-way light-signal comparison makes this compatible with separate observer histories.
+
+**Open structural target:** determine whether a chosen causal-event graph can produce not only different event counts but the quantitative relative clock-rate relationships of special relativity, while preserving the project's original meanings of **causal step** and **time as causal succession**. This is a **deduction/search target**, not a third premise.
+
+- [Detailed comparison of null proper time and observer event sequences](reviews/2026-10-12-null-proper-time-and-causal-step-correspondence.md)
+- [Researcher's question and subsequent explicit instruction to reason from the premise](DISCUSSION_LOG.md)
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
