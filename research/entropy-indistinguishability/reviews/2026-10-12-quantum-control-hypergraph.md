@@ -1,7 +1,7 @@
-# Quantum control extending through a hypergraph
+# Supporting illustration: coherent graph-state correlations
 
 **Date:** 2026-10-12  
-**Status:** exploratory research note; not a theorem or experimental result.  
+**Status:** optional supporting example within the broader Entropy and Indistinguishability inquiry; not a separate research thesis, a theorem, or an experimental result.  
 **Researcher contribution:** Joshua Oshiro proposes letting a single unmeasured tunneling-sensitive quantum state control operations across a hypergraph. He suspects that analyzing or reconstructing the graph could require extensive computation despite a very small initial entropy source, possibly connecting to complexity-class limitations.  
 **Assistant contribution:** coherent-state model, physical constraints, comparison with established quantum-information results.
 
