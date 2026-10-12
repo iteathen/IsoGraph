@@ -5,6 +5,12 @@
 **Source provenance:** user-provided separate research project, archived 2026-10-12  
 **Current authority:** research-only, not qualified IsoGraph semantics
 
+## Initial critical assessment — 2026-10-12
+
+**[Read the broad assessment](reviews/2026-10-12-broad-assessment.md).** The investigation poses a coherent question about when distinct generative histories should be treated as operationally or physically equivalent. The bounded-observer and specified-interaction formulations have clear mathematical precedents. The stronger claim that *no physically possible distinction means no underlying physical difference* remains an **unproved identity/ontology principle**, not a result of observer indistinguishability alone. A central correction is that source Shannon entropy characterizes a distribution over generating possibilities, not an individual realized history; low-seed pseudorandom outputs can also remain far from uniform under unrestricted tests. No physical equivalence or novelty was established in this initial review.
+
+The main research question is **separate** from the user's exploratory use of *entropy* as a prephysical organizing/back-pressure principle in the emergent-reality discussion.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
