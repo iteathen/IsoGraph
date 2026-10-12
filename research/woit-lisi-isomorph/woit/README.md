@@ -1,3 +1,9 @@
+### W G1 W01 Einstein/weak source-first candidate (2026-10-11)
+
+The [current W01 §§3.1–3.2 original-source-first review](W_G1_W01_EINSTEIN_WEAK_SOURCE_FIRST_RESULT_0_1.md) and [two-body occurrence packet](../../../experiments/062/W_G1_W01_EINSTEIN_WEAK_SOURCE_FIRST_CANDIDATES_0_1.json) preserve **15 W-only source-semantic occurrence candidates across W-SSC-031/032**, covering 10 exact frozen typed source statements. Separate torsion-free vacuum Einstein minus-right condition, consequent plus-left, distinct left-minus half-flat, chiral variation and left-connection freedom, missing electroweak U(1), unwanted Higgs SU(2)_R action and only proposed U(2)/twistor repair are conserved. The [same-agent 38-hostile mechanical verifier](../../../experiments/062/tools/verify-w-g1-w01-einstein-weak-0-1.cjs) is **NOT independent cold G1 qualification**; workflow outcome must be checked at its exact head. Current W G0 151 remains frozen, **qualified W G1 remains 39/151**, 112 bodies remain, historical Oct03 G0 remains OPEN, all G2+/IA/NEI/DTS/DP, L import, synthesis, seal and PR #70 merge blocked.
+
+---
+
 ### W G1 W01 §3 exact corrected CI — 22/22 hostiles, G1 still 39/151 (2026-10-11)
 
 [Corrected GitHub Actions run 38190425787](https://github.com/iteathen/IsoGraph/actions/runs/38190425787), exact head `b6569657be8af178cc5cca5fe5c535a17d300cec`, job `114621815721`, **SUCCESS**: W-SSC-002/003 exact frozen G0 source crosswalk, 13 source-local candidates, required roles/dependencies and **22/22 mechanical hostile rejections**. [Immutable convergence/status report](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_CORRECTED_CI_AND_STAGE_LOCK_0_1.json) separately conserves [first setup FAIL 38190309565](https://github.com/iteathen/IsoGraph/actions/runs/38190309565) (0 hostiles executed). Same-author verifier and candidate are **not independent cold G1**. Qualified G1 **39/151** unchanged, old Oct03 G0 OPEN, G2+, W/L, sealing and merge blocked.
