@@ -55,6 +55,12 @@ Additional **full-internal-dimensional** kinematic diagnostics (do not confuse t
 
 The originally reported visible circulation is a **genuine numerical trajectory phenomenon** for the simulated spring system, and robust to the 12-dimension ceiling removal. **Long-lived, radially confined, gravitational or Keplerian orbital motion has not been established.** The graph grows and prunes nodes, changes effective masses and edges, and periodically adjusts coordinates when introducing dimensions; it is not a closed Hamiltonian system for which standard orbit/energy invariants can simply be assumed.
 
+### Post-950 persistence and programmed survival horizon (separate telemetry-only follow-up)
+
+A second local **uncapped source-faithful Node extraction** continued the *same step-200 cohort of 107 IDs*, with no change to source dynamics, through 2,000 steps. Surviving cohort nodes numbered **107 at 950**, **105 at 1,000**, **93 at 1,200**, **73 at 1,250**, **21 at 1,500**, and **0 by 1,750**. Among the **93 surviving throughout the interval 950–1,200**, **46** performed **more than one additional net x–y revolution** during those 250 steps, around the evolving center of mass. This establishes ongoing projected circulation beyond the original 200–950 measurement rather than a single early transient.
+
+The loss of every original ID by 1,750 follows the program's old-node pruning and maximum-node truncation regime; it does **not** demonstrate physical orbital decay or gravitational stability. The follow-up tracked individual ID existence and late projected winding; **full-dimensional orbit closure remains unverified**. The portable source-extracted replay now contains the corresponding post-950 ID-survival/late-winding telemetry (its own post-commit execution remains an independent check), and local raw survivor CSVs were generated.
+
 ## D. Energy, momentum, numerical and computational diagnostics
 
 - At step 1,000, capped `KE+PE` ≈ **745.45**, uncapped ≈ **689.12**. Both energy totals rise as new springs and zero-initial-velocity mass are introduced: they do **not** establish a failure of spring-force conservation in a fixed-mass closed graph.
