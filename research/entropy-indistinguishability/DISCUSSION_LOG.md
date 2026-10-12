@@ -153,6 +153,16 @@ Both turns are preserved verbatim with scope-specific analysis in [the dated res
 
 **Research status:** Explicit speculative extension, no verified quantum device, no established algorithmic lower bound or new entropy theorem. Original archived sources untouched.
 
+## 2026-10-12 — Quantum-controlled hypergraph is an example, not the research focus
+
+**Researcher (verbatim):**
+
+> I don't want to focus on quantum controlled hypergraph because that's just one example amongst many possible ones that support the entropy and indistinguishability issue in general. So let's not make that a title headline. Let's keep that as just like a casual mention kind of example.
+
+**Researcher-originated research framing:** The governing inquiry remains **Entropy and Indistinguishability**: whether unequal source randomness yields physically distinguishable results, and what physical significance follows if it does not. Quantum-controlled graph dynamics belong among the non-exclusive examples alongside pseudorandom processes, chaotic dynamics, Rule 110, and noisy physical hardware. The quantum mechanism should not determine the title, lead section, or prominence of the research.
+
+**Assistant editorial action:** Updated the project's lead research question and PR description to prioritize the general inquiry; relegated the quantum discussion to a brief supporting illustration. Prior supporting technical analysis and the earlier verbatim discussion were preserved, not treated as superseded research evidence.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
