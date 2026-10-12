@@ -1,3 +1,9 @@
+### W G1 W01 Intro / §3 current-source candidate, 39/151 still qualified (2026-10-11)
+
+[W01 W-SSC-002/003 original-source-first research](W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_RESULT_0_1.md) and [13-occurrence machine packet](../../../experiments/062/W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_CANDIDATES_0_1.json) preserve asymmetric Euclidean SU(2)_L internal / SU(2)_R spacetime source roles, the **nonzero selected e0**-relative action with **ordered gL cancellation**, distinct temporal/spatial invariance, and a proposed Higgs role without complete dynamics. A finite exact 2×2 calculation passes five local algebraic controls; a [22-hostile mechanical verifier](../../../experiments/062/tools/verify-w-g1-w01-sec3-gauge-e0-0-1.cjs) has an Actions workflow but is **not** independent cold source verification. New candidates **0 qualified**; frozen current-author G0 remains 151, qualified G1 stays **39/151**, old October 3 source-byte target OPEN. No G2–G7, track seal, W/L semantic import or PR merge.
+
+---
+
 ### W G1 W01 §3.1 verified mechanical successor, no source-local promotion (2026-10-11)
 
 [Corrected CI 38188685767](https://github.com/iteathen/IsoGraph/actions/runs/38188685767), exact head `d05c3a617819526d8d54cdb67ed96c594ef6f13b`, **SUCCESS**: W-SSC-029/030 2-body / 7 typed / 13 candidate occurrence consistency, scoped six-basis Hodge involution, **28/28** corrected hostility rejections, qualified 39-body W G1 regression **28/28** and frozen current-author W G0 regression **22/22**. [Exact evidence/gates](../../../experiments/062/W_G1_W01_PALATINI_HODGE_CORRECTED_CI_GATES_0_1.json) retains [first failed CI 38188527495](https://github.com/iteathen/IsoGraph/actions/runs/38188527495) as failure. The candidate is **not independent cold G1 qualification**; only **39/151** remains qualified, historical Oct03 G0 open, all G2+/W-L/merge gates blocked.
