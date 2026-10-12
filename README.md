@@ -145,6 +145,7 @@ IsoGraph is exercised both through domain applications and through research on t
 
 ### IsoGraph-family and research-method work
 
+- [Causal Step](research/causal-step/README.md) — independent new research folder; no defined hypothesis or disciplinary scope yet.
 - [Discovery-method research](research/discovery/README.md) — discrepancy adjudication, Minimum Sufficient Support / Valuation development, and IA-oriented discovery guidance behind later DP revisions.
 - [DTS research](research/dts/README.md) — detailed transition anatomy, Transition Isomorph controls, decomposition, QU projection, and interpretation barriers.
 - [NEI research](research/nei/README.md) — the design/correction history behind conservative natural/domain identity reasoning and the rejection of unsupported coarsening.
