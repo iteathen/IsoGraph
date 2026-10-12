@@ -29,6 +29,10 @@ The [formal clarification and elementary proof](reviews/2026-10-12-single-output
 
 A later question asks whether a shorter physical entropy seed can be as valuable as a longer seed when the transformation is public. This is distinct from the original unknown-generator inference problem. See the [known-generator comparison](reviews/2026-10-12-known-generator-seed-value.md). It separates exact output equality, information-theoretic entropy, and task-relative computational security. No universal equality claim is asserted.
 
+## One-bit noise stream — 512 sequential seed updates
+
+The researcher corrected a prior one-draw model by specifying a **one-bit-wide physical entropy source sampled once per clock cycle over 512 cycles** to modify a clock-derived seed before a public generator is invoked. The [source-width versus total-entropy analysis](reviews/2026-10-12-one-bit-stream-512-cycle-seed.md) distinguishes one sampled bit reused throughout the run from 512 potential fresh random samples. Under independent fair samples the accumulated stream carries 512 bits of entropy; under correlated or unchanged samples it carries less. This is valid sequential accumulation, not deterministic creation of entropy from one *total* random bit.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
