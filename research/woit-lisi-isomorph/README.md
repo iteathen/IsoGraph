@@ -1,3 +1,7 @@
+## L04 p14 first source verifier failure preserved (2026-10-12)
+
+The L-only SSC0.96/source-first0.29 remains a **G0 source candidate**, not frozen. The original 40-control p14 verifier [CI 38243765870](https://github.com/iteathen/IsoGraph/actions/runs/38243765870) **failed before any PDF/hostile tests**, from a JS syntax error; the first failure is retained unchanged. [Gate0.184](../../experiments/062/L_CURRENT_STAGE_GATE_0_184.json) routes a corrected verifier pending new CI without changing source records, the 0/6 whole-source cold-audit count, the W firewall or merge authorization.
+
 ## L-track p14 original triality source scope (2026-10-12)
 
 The independent L track is still **G0 OPEN**, with [SSC 0.96](lisi/SOURCE_SEMANTIC_CENSUS_0_96.json), [stage gate 0.183](../../experiments/062/L_CURRENT_STAGE_GATE_0_183.json), and current [L source dossier](lisi/README.md). Original L04 p14 **Euclidean `ω_t` versus Lorentz `ω_T`**, 24 distinct triality-generated vertices and 96 mathematical 24-cell edges versus 60 drawn Figure1 action segments are now **scoped source/finite-model candidates**, not theory proof. Source-first successor corrects the omitted original p14 B001 links to S038 and S040. All 53 L04 source groups now have scoped dispositions, but **0/6 entire original sources have completed semantic cold review**. New scoped original-PDF CI is pending, SSC/G0 remain unfrozen; no G1+ or W/L bridge/merge authority.
