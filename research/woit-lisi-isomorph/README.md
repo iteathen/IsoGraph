@@ -1,3 +1,7 @@
+## Current L-track G0 checkpoint — triality alternative (2026-10-11)
+
+Current [Lisi dossier](lisi/README.md), [SSC0.91](lisi/SOURCE_SEMANTIC_CENSUS_0_91.json), [original source inverse0.24](lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_24.json), and [G0 gate0.170](../../experiments/062/L_CURRENT_STAGE_GATE_0_170.json) record the scoped p12 commuting-C t′ triality alternative (**order48**, mathematically viable but disfavored by author's chosen physics requirements). A signed source-tilde correction and author-modality correction are candidates for new original-PDF CI; earlier source failures remain preserved. **8 L04 broadly mapped groups, 0/6 entire cold paper reviews remain**. G0/SSC unfrozen; G1 onward and W/L synthesis remain blocked; PR #70 draft/unmerged.
+
 ## L G0 p9 source verification 34/34 PASS (2026-10-11)
 
 Current [L dossier](lisi/README.md), SSC0.90 and [stage gate0.169](../../experiments/062/L_CURRENT_STAGE_GATE_0_169.json) record [bounded original L04 p9 Table2 verification](https://github.com/iteathen/IsoGraph/actions/runs/38188484102) with **34/34 hostile controls PASS** for source weight matching and Table1 correspondence. **10 broadly mapped L04 semantic groups / 0 of 6 complete original paper cold reviews** remain; SSC/G0 are not frozen, W/L independence and draft PR70 no-merge gate preserved.
