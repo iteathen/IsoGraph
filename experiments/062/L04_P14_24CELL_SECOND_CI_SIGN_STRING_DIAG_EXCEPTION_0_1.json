@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-p14-second-CI-sign-diagonal-exception.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "INTERNAL-QUALIFICATION_FAILURE",
+  "failed_CI": {
+    "run_id": 38244222240,
+    "job_id": 114793992844,
+    "head_sha": "6a3cb35b13a768740645b2e0b37a02b275485967",
+    "conclusion": "failure",
+    "status": "completed",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-2.mjs",
+    "verifier_blob_sha": "965a22530ef6b03e8b1ff1f61f1e7c45dfa4d262",
+    "source_pdf_fetch_sha_check_reached_before_exception": true,
+    "source_original_semantic_baseline_complete": false,
+    "hostiles_defined": 40,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0
+  },
+  "diagnosis": {
+    "class": "VERIFIER_RUNTIME_TYPE_ERROR_STRING_DIAGONAL_CONSTRUCTION",
+    "step": "node experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-2.mjs",
+    "line": 36,
+    "exception": "TypeError: s.map is not a function",
+    "cause": "The three first-generation C_I/P_I/T_I diagonal sign rows are frozen strings, e.g. '-++-', whereas diag(s) assumed a sign array. JS strings do not implement .map().",
+    "baseline_source_math_proven_wrong": false,
+    "source_corpus_or_ssc_defect_proven": false,
+    "original_source_and_fixed_model_unchanged": true,
+    "scoped_correction": "Use exact four-character +/- string decoding in the checker, not a source or SSC rewrite.",
+    "new_verifier_path": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-3.mjs",
+    "new_verifier_blob_sha": "79d662c61831be33d089b630813d2070217a2d48",
+    "fresh_40_hostile_replay_required": true
+  },
+  "predecessor_failure": {
+    "run_id": 38243765870,
+    "conclusion": "failure",
+    "hostiles_defined": 40,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0,
+    "packet_path": "experiments/062/L04_P14_24CELL_FIRST_CI_NODE_SYNTAX_FAILURE_0_1.json",
+    "retained_unchanged": true
+  },
+  "unmodified_source_artifacts": {
+    "source_packet": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_P14_24CELL_WEIGHT_TRIALITY_SOURCE_G0_0_1.json",
+    "ssc": "SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "inverse": "LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_29.json",
+    "all_191_ssc_ids": true,
+    "all_350_source_first_groups": true
+  },
+  "independent_local_rational_crosscheck": {
+    "triality_cubed_identity": true,
+    "orthogonal": true,
+    "transported_24_distinct_vertices": true,
+    "geometric_24cell_edges": 96,
+    "each_degree": 8,
+    "source_Figure1_drawn_segments": 60,
+    "qualifier": "Separate project-internal finite check, not the failed CI's result or a full-domain qualification"
+  },
+  "locks": {
+    "G0_frozen": false,
+    "whole_six_original_source_cold_passes": 0,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}
