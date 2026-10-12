@@ -1,0 +1,32 @@
+{
+  "status": "PASS_BOUNDED_TEST",
+  "theory": "binary combinatory logic (two object-language characters, fully specified grammar and reduction)",
+  "alphabet": [
+    "0",
+    "1"
+  ],
+  "grammar": "Term ::= 00 | 01 | 1 Term Term",
+  "parse_semantics": "00=K, 01=S, 1xy=App(x,y) for complete recursively parsed x,y",
+  "rewrite_schemas": [
+    "1100xy -> x",
+    "11101xyz -> 11xz1yz"
+  ],
+  "selection_strategy": "leftmost-outermost",
+  "max_application_nodes": 4,
+  "numbers_of_distinct_terms_by_exact_application_count": [
+    2,
+    4,
+    16,
+    80,
+    448
+  ],
+  "total_distinct_terms_roundtripped": 550,
+  "sample_reductions_checked": 3,
+  "malformed_binary_strings_rejected": 8,
+  "scope_limitations": [
+    "No independent proof of universality from bounded tests",
+    "No proof of a two-primitive-role realization or lower bound",
+    "Parser, rewrite schemas, strategy, readout, and a concrete executor must be counted as apparatus",
+    "No claim that a symbolic formalism provides unconditional physical self-grounding"
+  ]
+}
