@@ -1,0 +1,175 @@
+{
+  "schema": "isograph.woit-lisi-isolated-repair-candidates.v0.2",
+  "date": "2026-10-11",
+  "branch": "research/woit-lisi-repair-sandbox-20261011",
+  "source_head_at_initial_branch_creation": "21727ea5792aa8eeea322752054f2694bf25446b",
+  "predecessor": {
+    "path": "research/woit-lisi-isomorph/repair-layer/CANDIDATES_0_1.json",
+    "git_blob_sha": "8578f312ea77ad61067bf85d2dae33015f04efbd",
+    "case_ids_preserved": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06"
+    ]
+  },
+  "additive_only": true,
+  "aggregate_case_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08"
+  ],
+  "new_model_count": 2,
+  "verifier": {
+    "path": "research/woit-lisi-isomorph/repair-layer/verify-woit-repairs.cjs",
+    "git_blob_sha": "498ee1610bd507b20aaacbddc799e61abedd603d"
+  },
+  "mathematical_evidence_scope": "source-pinned original discrepancy + exact project-generated reconstruction and group calculations; independent source-cold qualification and external physics validation absent",
+  "scope_guards": {
+    "author_formulas_modified": false,
+    "W_source_census_modified": false,
+    "L_source_census_modified": false,
+    "original_research_branch_modified": false,
+    "G0_G1_promoted": false,
+    "discovery_authority": false,
+    "W_L_synthesis_admitted": false,
+    "PR70_merge_authorized": false
+  },
+  "added_cases": [
+    {
+      "id": "R07",
+      "track": "W",
+      "paper": "W01",
+      "stage": "PROJECT_ISOLATED_COUNTERFACTUAL",
+      "status": "BOUNDED_SIX_WEIGHT_AND_RANK_CORRECTION_PASSES_NOT_SOURCE_EDIT",
+      "original_frozen_sources": {
+        "version": "arXiv:2104.05099v2",
+        "sections": [
+          "§4.2"
+        ],
+        "source_identity": "W-SSC-037",
+        "source_occurrences": [
+          "W01-037-HOM-00",
+          "W01-037-REP-01",
+          "W01-037-REP-02"
+        ],
+        "source_blob": {
+          "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+          "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947"
+        },
+        "negative_audit": {
+          "path": "experiments/062/W01_G0_S42_INDEPENDENT_DIMENSION_NEGATIVE_0_1.json",
+          "git_blob_sha": "0d5737e6439741b52759da68b5743c03dd1b67b0"
+        }
+      },
+      "printed": "(C[-1] TENSOR C3[+1/3]) TENSOR (C2[0] DIRECT_SUM C[-1] DIRECT_SUM C[+1])",
+      "hypothesized_project_alternative": "(C[-1] DIRECT_SUM C3[+1/3]) TENSOR (C2[0] DIRECT_SUM C[-1] DIRECT_SUM C[+1])",
+      "formal_prediction": {
+        "hom_dimension": 16,
+        "original_intermediate_dimension": 12,
+        "proposed_intermediate_dimension": 16,
+        "printed_final_component_dimensions": [
+          2,
+          1,
+          1,
+          6,
+          3,
+          3
+        ],
+        "third_unit_hypercharges": [
+          -3,
+          -6,
+          0,
+          1,
+          -2,
+          4
+        ],
+        "all_six_match": true
+      },
+      "source_preservation": [
+        "Original tensor operator preserved as printed, not interpreted as direct sum",
+        "Original final join-glyph distinction 3 times direct-sum followed by 2 plus retained",
+        "No claim that this defines physical fields or Woit's editorial intent"
+      ],
+      "falsifiers": [
+        "Independent source-native explanation giving 16-dimensional first tensor expression without change",
+        "Any failure in six dimension and source-hypercharge distribution checks",
+        "Any wrong source version or altered original source scope"
+      ]
+    },
+    {
+      "id": "R08",
+      "track": "W",
+      "paper": "W01",
+      "stage": "PROJECT_ISOLATED_COUNTERFACTUAL",
+      "status": "CORRECT_GLOBAL_QUOTIENT_REPRESENTATION_FINITE_COVER_PROVED; SOURCE_SHORTHAND_UNRESOLVED",
+      "original_frozen_sources": {
+        "version": "arXiv:2104.05099v2",
+        "sections": [
+          "§1",
+          "§4.2"
+        ],
+        "source_identities": [
+          "W-SSC-005",
+          "W-SSC-036"
+        ],
+        "source_occurrences": [
+          "W01-005-Q-01",
+          "W01-036-PT-01",
+          "W01-036-WEIGHT-03"
+        ],
+        "source_blob": {
+          "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+          "git_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947"
+        }
+      },
+      "original_intro": "CP3 = SU(4)/(U(1)×SU(3))",
+      "original_detailed": "CP3 = SU(4)/S(U(1)×U(3)) = SU(4)/U(3)",
+      "precise_model": "H={diag(det(B)^-1,B):B∈U(3)} ≅ U(3) ≅ (U(1)×SU(3))/Z3",
+      "threefold_cover": "(z,A) ↦ diag(z^-3,z A); kernel {(ζ,ζ^-1 I3):ζ^3=1}",
+      "proof_basis": [
+        "Block-diagonal stabilizer of a complex line in unitary SU(4)",
+        "Determinant-one constraint a det(B)=1",
+        "Surjectivity uses cube root of det(B), and Z3 kernel is exact"
+      ],
+      "local_vs_global": "SU(3) and U(1) Lie-algebra factors do not imply an injective direct product subgroup with unchanged global group",
+      "charge_guard": "The author states line/quotient relative weights +1 and -1/3; a global integer-weight lift has +3 and -1, and det(B)^(-1/3) is not a globally single-valued character without lifting.",
+      "finite_prediction": {
+        "root_order": 12,
+        "discrete_U3_stabilizer_elements": 1728,
+        "cover_parameter_pairs": 1728,
+        "discrete_image_elements": 576,
+        "preimages_per_element": 3,
+        "kernel_exponents": [
+          0,
+          4,
+          8
+        ]
+      },
+      "source_preservation": [
+        "Neither printed formula changed",
+        "Intro may be shorthand; no paper typo verdict",
+        "No transformation from homogeneous stabilizer to full Standard Model gauge group is claimed"
+      ],
+      "falsifiers": [
+        "Show claimed product is an actual subgroup of the source SU4 line stabilizer with the same action and no discrete identification",
+        "Find a globally consistent unlifted fractional U3 character that survives one determinant winding",
+        "Disprove determinant, image or kernel identities for original group action"
+      ]
+    }
+  ],
+  "prerequisites_before_any_promotion": [
+    "Cold independent source reconstruction of exact W01 version",
+    "Adjudicate intended meanings and all load-bearing source roles",
+    "Exact complete SSC/closure stage qualification",
+    "Preserve historical negatives and mutation test lineage",
+    "Explicit scoped promotion authority"
+  ]
+}

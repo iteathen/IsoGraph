@@ -1,0 +1,28 @@
+name: Experiment 062 isolated Woit repair models v0.2
+on:
+  push:
+    branches: [research/woit-lisi-repair-sandbox-20261011]
+    paths:
+      - 'research/woit-lisi-isomorph/repair-layer/CANDIDATES_0_2.json'
+      - 'research/woit-lisi-isomorph/repair-layer/LOCAL_MECHANICAL_EVIDENCE_0_2.json'
+      - 'research/woit-lisi-isomorph/repair-layer/WOIT_R07_R08_ALTERNATIVES_0_1.md'
+      - 'research/woit-lisi-isomorph/repair-layer/verify-woit-repairs.cjs'
+      - '.github/workflows/experiment-062-repair-models-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  full-sandbox-and-woit-source-pinned-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '22.16.0'}
+      - name: Syntax checks
+        run: |
+          node --check research/woit-lisi-isomorph/repair-layer/verify-repairs.cjs
+          node --check research/woit-lisi-isomorph/repair-layer/verify-woit-repairs.cjs
+      - name: Preserve six prior mechanical models
+        run: node research/woit-lisi-isomorph/repair-layer/verify-repairs.cjs
+      - name: Replay pinned W01 source scope and two new models
+        run: node research/woit-lisi-isomorph/repair-layer/verify-woit-repairs.cjs
