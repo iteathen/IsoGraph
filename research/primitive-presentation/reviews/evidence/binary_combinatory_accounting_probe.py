@@ -98,7 +98,6 @@ def main():
     assert len(candidates) == 550, len(candidates)
     assert len(set(encodings)) == len(candidates)
     assert all(decode(code) == tree for code, tree in zip(encodings, candidates))
-    assert all(decode(code + "0") != tree for code, tree in zip(encodings[:0], candidates[:0]))
     samples = (
         (app(app(K, S), K), S),
         (app(app(app(S, K), K), S), app(app(K, S), app(K, S))),
