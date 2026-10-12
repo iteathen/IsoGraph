@@ -122,6 +122,14 @@ The user, Joshua Oshiro, originated the central research direction and motivatin
 
 **Assistant action being completed:** Created a dedicated working branch in the user's public repository, selected the project path **research/emergent-reality-foundations/**, wrote a consolidated dossier, created this discussion log, and updated the research directory index. The authoritative outcome of the GitHub write, branch, and pull request is determined by repository commit / PR state; this paragraph is a retrospective description, not a claim that this exact file was already on the default branch when the conversation began.
 
+### Turn 14 — Google Drive folder link supplied
+
+**User (link supplied; URL intentionally withheld from public log):**
+
+> [Google Drive folder URL provided in the conversation; exact identifier not reproduced in this public repository.]
+
+**Provenance and handling:** The user supplied a Google Drive folder link without an explicit instruction. The folder's intended role relative to this research record remains unresolved. This is a privacy-preserving exception to verbatim public logging, since sharing a link in private conversation does not necessarily authorize publication of its folder identifier. No Google Drive file or folder has been altered by this entry. The public GitHub discussion log remains the active persistent record on the working branch pending PR #74.
+
 ## Continuing log protocol
 
 Append later turns in order, with date and exact user wording when available. Preserve meaningful assistant arguments and corrections with explicit fidelity labels. Never silently rewrite an earlier message to make the research history appear cleaner; clarify later in a new entry. Record failures to save rather than implying automatic persistence. The current dossier [README.md](README.md) is a consolidated, revisable access surface; this log is the accumulating discussion record.
