@@ -19,6 +19,12 @@ The [strict-natural-identity clarification](reviews/2026-10-12-strict-natural-id
 
 This is a proposed **global physical identity** principle, not a scoped convenience quotient and not an amendment to qualified IsoGraph NEI. Missing evidence for difference must not be mistaken for positive proof that no possible difference exists. See also [substantive discussion log](DISCUSSION_LOG.md).
 
+## Original motivating problem restated — 2026-10-12
+
+The author clarified that the starting problem was **one identical output from differently sized physical-entropy seeds, where the outsider knows neither the seed nor the method used to generate that value**. From that output **alone**, the outsider cannot uniquely reconstruct the hidden generative history or establish the seed size when both generating explanations remain admissible. This is a **single-sample source-provenance non-identifiability** claim, not an assertion that deterministic processing creates extra Shannon entropy or that the two underlying probability distributions necessarily have equal cryptographic security.
+
+The [formal clarification and elementary proof](reviews/2026-10-12-single-output-source-nonidentifiability.md) distinguishes this precise outsider/inverse problem from the much stronger **natural identity** question explored later. The original experiment and its proposed quantum-error cache are presented as a **thought experiment**, not a verified hardware entropy source. The researcher's wording is preserved in the [discussion log](DISCUSSION_LOG.md).
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
