@@ -1,0 +1,158 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-g-marker-visual-vs-action-discriminator.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "classification": "UNCOLD_VISUAL_DIAGNOSTIC_NOT_ORIGINAL_VECTOR_EDGE_QUALIFICATION",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "pdf_page_zero_based": 2,
+    "printed_page": 2,
+    "figure": "Figure 1",
+    "prior_frozen_pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_binary_reverified_this_pass": false,
+    "source_svg_available_this_pass": false
+  },
+  "parents": {
+    "candidate": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ORIGINAL_FIG1_SM_PERIODIC_TABLE_SOURCE_CANDIDATE_G0_0_2.json",
+      "git_blob_sha": "2f38cc22709cfd9c92d0aca2997390da03a06767"
+    },
+    "method": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_FIG1_DRAWN_VS_DECLARED_INCIDENCE_METHOD_G0_0_1.json",
+      "git_blob_sha": "093eda74443eb7c1332c990d19ada00e380d98c7"
+    },
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_191.json",
+      "git_blob_sha": "6211130c2ade9859018e992b075f1648cf096ec4"
+    }
+  },
+  "observations": [
+    {
+      "id": "V1",
+      "type": "NONBLIND_ORIGINAL_PDF_PAGE_VISUAL",
+      "finding": "Circled g appears below the colored-quark columns, visually separated from the W/omega/e/phi/B cluster at the left; no continuous connector to the g circle is visible at this display resolution.",
+      "scope": "APPARENT_DISCONNECTION_IN_RENDER_ONLY; NO ORIGINAL_VECTOR_STROKE_ABSENCE_PROOF"
+    },
+    {
+      "id": "V2",
+      "type": "NONBLIND_ORIGINAL_PDF_PAGE_VISUAL",
+      "finding": "Other left-side marker glyphs have linework extending toward the four-by-four grid. Exact line endpoints, intersections and source glyph memberships were not established.",
+      "scope": "NO_DRAWN_ADJACENCY_MATRIX"
+    },
+    {
+      "id": "P1",
+      "type": "FROZEN_AUTHOR_PROSE",
+      "finding": "Lisi explicitly describes strong g acting on colored-quark triplets and electroweak W and B field actions adjacent to Fig1.",
+      "scope": "TEXTUAL_ACTION_CLAIMS_NOT_DRAWN_EDGES"
+    }
+  ],
+  "competing_hypotheses": [
+    {
+      "id": "H1",
+      "hypothesis": "g placement beneath the colored columns conveys schematic association, not an explicit drawn connector.",
+      "status": "CONSISTENT_UNQUALIFIED"
+    },
+    {
+      "id": "H2",
+      "hypothesis": "A thin/overlapped/clipped source vector path reaches g but is not resolved in the page preview.",
+      "status": "OPEN_NEEDS_VECTOR_RASTER_TRACE"
+    },
+    {
+      "id": "H3",
+      "hypothesis": "Source prose action suffices to declare ink connector topology.",
+      "status": "REJECT_AS_QUALIFICATION_ORACLE"
+    },
+    {
+      "id": "H4",
+      "hypothesis": "The figure is an explanatory schematic omitting some algebraic action links.",
+      "status": "CONSISTENT_UNQUALIFIED"
+    }
+  ],
+  "selected_followup": "Source-pinned SVG use/symbol resolution plus nested affine transforms and inherited styles, clip and stroke/glyph separation; high-resolution independent raster observation, reversible segment IDs, ambiguous crossings flagged, separate blind endpoint reconstruction. Test H1/H2/H4 without preloading action-text edges. Preserve H3 as rejected source-exact shortcut.",
+  "negative_controls": [
+    {
+      "id": "N1",
+      "forbidden": "assert a g-to-triplet DRAWN edge using prose alone"
+    },
+    {
+      "id": "N2",
+      "forbidden": "assert an original-vector g-edge ABSENCE using preview alone"
+    },
+    {
+      "id": "N3",
+      "forbidden": "collapse six printed marker glyphs into five drawn source glyphs because e/phi is one semantic role"
+    },
+    {
+      "id": "N4",
+      "forbidden": "count all SVG raw path/use tags as visible source connectors"
+    },
+    {
+      "id": "N5",
+      "forbidden": "reclassify L01-S004 source figure closed or G0 frozen without a cold source test"
+    },
+    {
+      "id": "N6",
+      "forbidden": "import Woit or cross-track unification expectations into L source decoding"
+    }
+  ],
+  "status": {
+    "drawn_incidence": "UNKNOWN_NOT_QUALIFIED",
+    "author_prose_separate": true,
+    "g_absence_claim_qualified": false,
+    "g_presence_claim_qualified": false,
+    "cold_glyph_decoding": false,
+    "new_CI_run": false,
+    "source_SSC_revision": "0.96",
+    "source_SSC_count": 191,
+    "source_first_groups": 350,
+    "L01_inverse_groups": 98,
+    "L01_open_exact_visual_groups": 16,
+    "whole_original_semantic_cold_complete_sources": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "history": {
+    "CI_candidate": {
+      "run": 38279423956,
+      "status": "success",
+      "hostiles": "26/26",
+      "scope": "candidate only"
+    },
+    "CI_vector": {
+      "run": 38294391911,
+      "status": "success",
+      "hostiles": "10/10",
+      "scope": "vector carrier only"
+    },
+    "CI_historical_failure": {
+      "run": 38279072465,
+      "status": "failure",
+      "hostiles": "22/23",
+      "escaped_mutation": "alter_unrelated_SSC",
+      "retained": true
+    }
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro — independent full W/L source treatments",
+    "forensic_observation": "Agent-assisted original-page visual/prose discriminator; not a novel mathematical claim",
+    "earliest_evidence_currently_located": "2026-10-12 original source viewed directly",
+    "recorded_on": "2026-10-12",
+    "retrospective": false
+  },
+  "qualification_boundary": "This source preview is non-cold and not a complete semantic oracle. No theory equivalence, author error, qualified missing edge, empirical claim, or source-packet promotion."
+}
