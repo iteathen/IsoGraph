@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-palatini-hodge-initial-hostile-verifier-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "disposition": "FAILED_NOT_QUALIFIED",
+  "workflow": {
+    "run_id": 38188527495,
+    "job_id": 114616029319,
+    "commit_sha": "38b027280f730c1cf3ca3ce270a5668177efeab3",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38188527495"
+  },
+  "first_verifier": {
+    "path": "experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-1.cjs",
+    "git_blob_sha": "ab8960327d36be631f9c8b642b2cbc2e6cf97d65"
+  },
+  "source_candidate": {
+    "path": "experiments/062/W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_CANDIDATES_0_1.json",
+    "git_blob_sha": "cc8cbc9cec1f68855a009d09ece2ccf83e58e66c",
+    "source_local_census_bodies": 2,
+    "typed_G0_assertions": 7,
+    "source_local_occurrences": 13,
+    "scientific_authority": false
+  },
+  "positive_before_hostiles": "PASSED_SCOPED_CENSUS_INVERSE_AND_LOCAL_HODGE_DIAGNOSTIC",
+  "hostile_controls": {
+    "total_planned": 24,
+    "first_12_mutations_rejected": 12,
+    "thirteenth_mutation": "drop-dependency",
+    "thirteenth_escape": true,
+    "subsequent_mutations_executed": 0,
+    "overall_qualified_rejection_count": 0
+  },
+  "observed_failure": "AssertionError: hostile mutation escaped drop-dependency",
+  "established_contract_violation": "Verifier checked only that every listed dependency had a known owner, so deleting a load-bearing dependence gave an empty list that vacuously passed Array.every.",
+  "repair_disposition": "REPAIR_VERIFIER_ONLY_EXACT_WITHIN_BODY_DEPENDENCY_CONTRACT_AND_SOURCE_ARGUMENT_RESULT_PINS_IN_NEW_0_2; retain original 0.1 script and failed run immutable.",
+  "discovery_disposition": "NO_INDEPENDENT_SOURCE_MATHEMATICAL_ANOMALY_ESTABLISHED_BY_THIS_VERIFIER_ESCAPE; source-original G1 extraction candidate remains pending cold review.",
+  "current_G1_qualified_bodies": 39,
+  "global_G1_complete": false,
+  "G2_G7_authorized": false,
+  "W_L_synthesis_authorized": false,
+  "PR70_merge_authorized": false
+}

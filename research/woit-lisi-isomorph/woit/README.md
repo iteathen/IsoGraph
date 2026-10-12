@@ -1,3 +1,9 @@
+### W G1 verifier correction — first hostile failure preserved (2026-10-11)
+
+[Exact first failed W01 Palatini/Hodge CI](https://github.com/iteathen/IsoGraph/actions/runs/38188527495) rejected the first 12 hostile mutations but allowed deletion of a load-bearing dependency in its thirteenth case; later controls were unexecuted and **no qualification** follows. The [separate correction review](W_G1_W01_PALATINI_HODGE_VERIFIER_SUCCESSOR_0_2.md) and [v0.2 verifier](../../../experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-2.cjs) pin exact dependency and argument/result roles. Corrected CI is pending; old v0.1 failure stays failed; G1 remains **39/151**, no G2+/cross-author/merge.
+
+---
+
 ### W G1 — W01 §3.1 Palatini/Hodge 13-occurrence candidate (2026-10-11)
 
 [Original-source W-only research review](W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_RESULT_0_1.md) and [machine candidate](../../../experiments/062/W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_CANDIDATES_0_1.json) preserve **13 load-bearing local occurrences** across previously unqualified W-SSC-029/030: distinct `e`/`ω` variations, ordered Palatini integrand, dependent curvature, separate chiral and Hodge axes, and four signed-chiral curvature components. Mechanical checks are not independent source reconstruction; **qualified G1 remains 39/151**, G0 current-author 151 frozen, historical Oct03 open. No G2–G7, IA/NEI/DTS/DP, W/L synthesis, source seal or PR merge.
