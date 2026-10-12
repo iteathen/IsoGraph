@@ -57,6 +57,12 @@ The researcher asks whether **the encrypted data itself might be a quantum super
 
 This is an exploratory quantum-information example, **not** a new encryption theorem, a result about ordinary semiconductor error caches, or a demonstration that distinct physical histories are naturally identical.
 
+## Unmeasured quantum control propagated through graph nodes
+
+The researcher proposed allowing an **unmeasured, coherently controlled quantum state** influenced by tunneling to propagate entanglement and conditional operations across a hypergraph, rather than repeatedly reading or re-seeding an ordinary bit. The researcher suspects the resulting inverse problem could be computationally irreducible or comparable in work to recovering a much larger classical source. This is an **open hypothesis**, not an established complexity lower bound.
+
+See [coherent quantum control of a hypergraph](reviews/2026-10-12-quantum-control-hypergraph.md) and the [verbatim research log](DISCUSSION_LOG.md). The physics requires distinguishing coherent controls from unread classical/decohered tunneling records; GHZ states confirm entanglement propagation but show that large entangled graphs can also have efficient inverse circuits. Quantum BQP complexity is not automatically determined by classical P versus NP. This note does not change qualified IsoGraph semantics.
+
 ## Research question
 
 Can two generative histories with different amounts of **source randomness** count as the same physical situation if every physically possible interaction yields indistinguishable consequences? How does this differ from merely looking random to a computationally limited observer?
