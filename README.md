@@ -135,6 +135,9 @@ IsoGraph is exercised both through domain applications and through research on t
 
 ### Domain/application research
 
+- [Three roles in effective symbolic presentation](research/primitive-presentation/README.md) — unqualified, original author-supplied inquiry draft and supporting source evidence on primitive dependency questions in complete symbolic presentations.
+- [Entropy and indistinguishability](research/entropy-indistinguishability/README.md) — source/apparent randomness, total physical indistinguishability conjecture, and critical adjacent literature (unverified working notes).
+- [Minimal productive-role reduction adapter](research/minimal-role-reduction-adapter/README.md) — translation of computation including executor semantics, then cross-formulation invariant extraction (proposed methodology).
 - [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, representation-relative support growth, and explicit non-resolution of P versus NP.
 - [Glycan cleavage research](research/glycan-cleavage/README.md) — exact phase dynamics, quotient structure, path coverage, shortest-common-supersequence boundaries, witness-width growth, algorithmic reductions, and discrepancy-driven bug discovery in an idealized biochemical model.
 - [Navier–Stokes proof rendering](research/navier-stokes-proof/README.md) — source-faithful proof decomposition, generator/closure separation, minimum-support analysis inside frozen deletion spaces, packaging-dependency discovery, and dimensional-equivalence analysis of a pinned proof corpus.
