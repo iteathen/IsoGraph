@@ -1,3 +1,7 @@
+## L-only Figure1 scoped source-pinned CI success without G0 promotion (2026-10-12)
+
+[GitHub Actions 38279423956](https://github.com/iteathen/IsoGraph/actions/runs/38279423956) passed the L01 Figure1 **48-role candidate regression with 26/26 adversarial controls**, frozen original PDF SHA/page text SHA and rendered-page SHA. [Gate0.189](../../experiments/062/L_CURRENT_STAGE_GATE_0_189.json) and the [L dossier](lisi/README.md) retain the initial failed 22/23 run. Figure glyph placement was not independently raster-decoded, so **16 L01 original exact groups and 0/6 whole-source cold reviews remain open**; SSC0.96/G0 unfrozen, W/L firewall and PR70 merge restriction unchanged.
+
 ## L G0 Figure1 original-source model first CI preserved as failed (2026-10-12)
 
 The [current L research dossier](lisi/README.md) and [G0 gate0.188](../../experiments/062/L_CURRENT_STAGE_GATE_0_188.json) preserve [CI 38279072465](https://github.com/iteathen/IsoGraph/actions/runs/38279072465) as **FAILURE 22/23** due to a verifier conservation gap (unrelated SSC body mutation escaped). Corrected Figure1 source model verifier0.3 pending. SSC0.96 / 191 source identities / 350 source groups, 16 unresolved L01 visual exact-source groups and 0/6 full cold original reviews remain unchanged. W source isolation, G1+ and PR merge remain blocked.
