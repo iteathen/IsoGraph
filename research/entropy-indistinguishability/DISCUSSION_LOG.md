@@ -107,6 +107,12 @@
 
 **Status:** Conditional exact downstream indistinguishability illustration saved; no claim of global physical identity or universal computational irreducibility. Historical sources unchanged.
 
+## 2026-10-12 — Time-dependent physical readout and persistent observer limitation
+
+The researcher supplied two substantive examples: repeatedly reading **the same unstable physical bit** can yield different values, and every actual execution of an abstract algorithm involves physical time during which device state and environmental effects can matter. The latter point is a **suspicion** about an observer/indistinguishability issue persisting through physical realization, **not** a proven universal barrier.
+
+Both turns are preserved verbatim with scope-specific analysis in [the dated research discussion](discussion/2026-10-12-unstable-bit-and-time-in-physical-execution.md). The [technical assessment](reviews/2026-10-12-time-dependent-physical-execution-and-entropy.md) distinguishes a one-bit storage location from the entropy in its time-indexed history, treats noise as a model-dependent physical process rather than as randomness of time itself, and notes that fault tolerance can suppress physical noise in logical output.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
