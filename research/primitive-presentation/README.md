@@ -15,6 +15,16 @@ What must be counted as primitive when a productive, effectively presented symbo
 
 These are **questions/role families**, not a fixed ontology, three separate devices, or a requirement for exactly three alphabetic glyphs. A single mechanism may answer several questions, depending on the formal presentation and the scope of comparison.
 
+## 2026-10-12 adversarial review and researcher correction
+
+**Current reviewed disposition:** the manuscript's **unique irreducible three-role minimum is unproved**. Its most defensible contribution is a complete-dependency comparison method that counts parsers, execution, rule application, conventions, and readout instead of equating a tiny printed alphabet with a complete productive system. The SKI encoding illustrates operational representability, **not** a physical ontology or an independently proved three-role lower bound.
+
+The researcher identified the deeper original concern as **self-reference and semantic self-grounding**: investigators, measurements, and the semantic language used to describe a universe are themselves within that universe. An internally complete formalism may face a recurring question of how it certifies correspondence to the underlying physical world. This is an important research hypothesis **but is not yet a proved Gödel-style limitation on physical theories**; Gödel and Tarski results have additional technical assumptions. Keep distinct the manuscript's local definitional/independence problem and the broader reflexive-validation problem.
+
+- [Critical adversarial review and self-reference research boundary](reviews/2026-10-12-critical-review-and-self-reference.md)
+- [Research discussion record](DISCUSSION_LOG.md)
+- Original manuscript and supplemental historical sources remain unchanged under [evidence/source](evidence/source/primitive-presentation.md).
+
 ## Current state and strongest source-level claims
 
 The uploaded manuscript, *Three Roles in Effective Symbolic Presentation: Fair Accounting, Local Syntax, and Visible Role-Carriers*, is explicitly labeled an **inquiry submission draft**. It gives a dependency argument for an asserted three-role lower bound in productive effective presentations; SKI, Rule 110, delimiter-based syntax, encodings, and various formal systems are used as witnesses or stress tests.
