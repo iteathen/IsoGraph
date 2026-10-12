@@ -22,6 +22,7 @@ These are **questions/role families**, not a fixed ontology, three separate devi
 The researcher identified the deeper original concern as **self-reference and semantic self-grounding**: investigators, measurements, and the semantic language used to describe a universe are themselves within that universe. An internally complete formalism may face a recurring question of how it certifies correspondence to the underlying physical world. This is an important research hypothesis **but is not yet a proved Gödel-style limitation on physical theories**; Gödel and Tarski results have additional technical assumptions. Keep distinct the manuscript's local definitional/independence problem and the broader reflexive-validation problem.
 
 - [Critical adversarial review and self-reference research boundary](reviews/2026-10-12-critical-review-and-self-reference.md)
+- [Self-reference as a candidate obstruction certificate](reviews/2026-10-12-self-reference-as-obstruction-certificate.md) — distinguishes an inconsistent demand for unrestricted internal truth from incompleteness of a consistent theory and tracks which primitive-representation self-reference claims remain to be proved.
 - [Two-symbol complete-apparatus test and evidential-boundary analysis](reviews/2026-10-12-two-symbol-boundary-and-counted-executor.md)
 - [Research discussion record](DISCUSSION_LOG.md)
 - Original manuscript and supplemental historical sources remain unchanged under [evidence/source](evidence/source/primitive-presentation.md).
