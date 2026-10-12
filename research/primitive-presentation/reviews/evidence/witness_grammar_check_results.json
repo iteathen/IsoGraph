@@ -1,0 +1,25 @@
+{
+  "scope": "bounded decode/encode grammar and sample SKI reductions; not theorem qualification",
+  "max_application_nodes": 4,
+  "distinct_source_terms_roundtripped": 3873,
+  "tested_reductions": 3,
+  "witness_section_14_examples": [
+    {
+      "string": "∅",
+      "accepted_by_section_7_grammar": false
+    },
+    {
+      "string": "(∅)",
+      "accepted_by_section_7_grammar": true
+    },
+    {
+      "string": "((∅))",
+      "accepted_by_section_7_grammar": false
+    },
+    {
+      "string": "(∅(∅))",
+      "accepted_by_section_7_grammar": false
+    }
+  ],
+  "result": "PASS with 3/4 section 14 displayed examples ill-formed under section 7 grammar"
+}
