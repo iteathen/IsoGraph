@@ -50,6 +50,20 @@
 
 **Evidence and next test:** [Counted two-symbol stress test and boundary analysis](reviews/2026-10-12-two-symbol-boundary-and-counted-executor.md); [bounded executable probe](reviews/evidence/binary_combinatory_accounting_probe.py). Formal independence of primitive roles and the meaning of an intrinsic executor remain open.
 
+## 2026-10-12 — Potential impossibility of absolute proof of the self-grounding boundary
+
+**Researcher (verbatim):**
+
+> I agree. It would be nice to have a more rigorous result. But if what I'm saying is true, you're never going to be able to find it. You got to— If what I'm saying is true, you're going to be up against Gödel-type constraints, and you are always going to find that you can't prove this.
+
+**Researcher-originated clarification:** The proposed boundary is reflexive: if fully internal, unconditional proof of reality's ultimate foundation is subject to Gödel-like self-reference restrictions, demanding a rigorous *absolute* proof of precisely that limit could itself be an impossible requirement. This reinforces the investigator's earlier distinction between a **sign** of reaching a boundary and an independently conclusive proof.
+
+**Assistant research response (substantive summary, not verbatim):** A distinguished metatheory may prove that a specified sufficiently expressive theory cannot establish its own consistency or truth by internal resources. Such relative impossibility proofs do **not** automatically provide self-certifying, unconditional foundations for the metatheory or physical reality as a whole. This makes a conditional limit theorem compatible with the researcher's concern. Strong antecedents include Gödel's scoped incompleteness theorems and David Wolpert's impossibility results for sufficiently general physical inference devices embedded in a universe. The research program should distinguish (1) absolute certification of the entirety of reality, (2) a precise conditional theorem about self-certification within an explicitly defined class, and (3) the evidence that a particular historical proof strategy repeatedly encountered circularity. No claim that the proposed physical impossibility has already been proved.
+
+**Further research obligation:** Define the exact requirement allegedly impossible to prove *within* the represented system, the inference apparatus, its assumed closure and expressive strength, and what counts as an external validating metatheory. Preserve the possibility that mathematical scope-relative boundary theorems can be proved even if unconditional physical self-grounding cannot be.
+
+**Relevant sources:** [Gödel's Incompleteness Theorems (SEP)](https://plato.stanford.edu/entries/goedel-incompleteness/); [David H. Wolpert, Physical limits of inference (2008)](https://doi.org/10.1016/j.physd.2008.03.040).
+
 ## Logging protocol
 
 Append future **research-substantive** turns, with the original researcher wording when available and honest fidelity labels. Do not append routine repository/file-management conversation. Record corrections as subsequent research entries rather than silently editing the earlier argument. Track whether each proposed lemma is established, falsified, or unresolved.
