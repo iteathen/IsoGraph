@@ -127,6 +127,20 @@ Both turns are preserved verbatim with scope-specific analysis in [the dated res
 
 **Status:** The researcher's self-correction and the important qualification are both preserved. This is ordinary conditional information theory and quantum measurement, not a new entropy or identity theorem.
 
+## 2026-10-12 — Encrypted data prepared in quantum superposition
+
+**Researcher (verbatim):**
+
+> Here's a weird one. Our encrypted data could have been placed in superposition. So even we wouldn't know what it is until we read it.
+
+**Researcher-originated thought experiment:** The stored encrypted information might be **quantum** rather than classical, and the authorized user might lack a determined classical outcome until performing a measurement. This adds a quantum-state/measurement distinction to the earlier source-entropy, physical-read timing, and observer-indistinguishability investigations. The author did not assert that this is already realized in ordinary computer memory or an established new theorem.
+
+**Assistant scientific analysis (summary, not verbatim):** Quantum *ciphertext* can preserve a known definite classical plaintext in an appropriate protocol; mere quantum encoding does not force the authorized party to receive a random message. But if the **plaintext quantum state itself** is superposed, authorized decryption recovers that quantum state, whose measurement in a specified basis can give different classical results under the Born rule. Example: |+>=(|0>+|1>)/√2 has zero von Neumann state entropy but a Z-basis readout yields one Shannon bit. A 50/50 classical mixture yields the same Z-basis statistics yet differs under X-basis measurement, showing why the user's strongest natural-identity requirement must account for all possible quantum observations, not only the chosen readout. The quantum one-time pad is existing prior art for encrypting genuine quantum states; not a novel physics or cryptographic result.
+
+**Research note:** [Quantum encrypted superposition and operational readout identity](reviews/2026-10-12-encrypted-quantum-superposition-and-readout-identity.md).
+
+**Status:** Exploratory, mathematically conditioned example. No proof that two physically distinct generating histories are globally identical or that quantum state measurements violate Shannon entropy. Original source files unchanged.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
