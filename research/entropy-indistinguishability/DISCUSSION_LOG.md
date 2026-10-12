@@ -79,6 +79,22 @@
 
 **Status:** Distinct research question logged and mathematically scoped; no novel entropy theorem or security-equivalence result is claimed on the user's behalf.
 
+## 2026-10-12 — Rule 110 irreducibility and one-bit computational work
+
+**Researcher (verbatim excerpts):**
+
+> You could seed a ruleyad structure and then branch the ruleyad structure an arbitrary number of times based off of a pseudo-random generated value
+
+> The point of mentioning Rule 110 was just to say that you could bury this in something that's computationally irreversible, or at least theoretically computationally irreversible.
+
+> So then you're left with nothing but brute force, because an arbitrarily large computation could be designed in such a way that it's computationally irreducible
+
+**Researcher hypothesis (summary):** A single sampled physical bit affects a publicly specified adaptive process. Dynamic pseudorandom sampling and Rule 110/Ruliad-like rewrites may produce arbitrarily complex paths. The researcher suspects the absolute computational cost of reconstructing a result can approach brute-forcing a much larger conventional secret. This is a **suspicion**, not an asserted hardness theorem; Rule 110 is invoked to illustrate universality/irreducibility, not as a ready-made cipher.
+
+**Review (summary):** Universality permits undecidable unbounded-future prediction questions but does not establish a lower bound for one particular finite computation or inversion problem. With only one unknown bit and all other state public, at most two complete forward paths need evaluation. Either path can nonetheless be extremely costly. A costly public computation may match large-key brute-force *absolute work* while giving little attacker-versus-honest-party cost advantage, absent a separately justified asymmetry. This is distinct from Shannon output entropy. See [computational irreducibility analysis](reviews/2026-10-12-computational-irreducibility-vs-one-bit-security.md).
+
+**Status:** Hypothesis retained and analysis saved; no crypto-security proof or claim of equal average brute-force cost.
+
 ## Future logging rule
 
 Record only new research reasoning, hypotheses, proposed counterexamples, evidence, and substantive revisions. Preserve the researcher's exact wording when available; do not mislabel assistant summaries as verbatim. No file transfer, PR administration, status checks, or publication logistics belong in this dialogue record.
