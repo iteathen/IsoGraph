@@ -107,12 +107,26 @@ The researcher expressly **withdrew** an apparent 12-dimensional coincidence wit
 - [Runnable uncapped experimental HTML (one-line derived copy)](experiments/2026-10-12-model-a-uncapped.html)
 - Original preserved under Primitive Presentation, unchanged; full local CSV measurements, screenshot comparison and reproduction scripts separately provided as conversation artifacts.
 
+## Extended Causal Step Model A controls — 3,000 steps (2026-10-12)
+
+An independently transcribed **source-dynamics Node 22** experiment reproduced the original capped and uncapped step-1,000 checkpoints and cohort windings. The uncapped run continued to **143 internal dimensions at step 3,000**, with births strictly at steps `1+21*(d−1)`, no detected intrinsic plateau and no nonfinite coordinates/velocities at sampled checkpoints. At step 3,000 the default node ceiling was active: **2,994 nodes, 3,056 edges, 227 connected components**.
+
+**Separately controlled interventions:** eliminating only the 3,000-node ceiling produced **3,471 nodes, 72 dimensions and one connected component at step 1,500**; setting only the spring constant to zero left **46 dimensions by step 950** but **0/107 projected cohort trajectories** with >1 x–y revolution (compared with **64/107** with springs). This supports different causal mechanisms for dimensions, fragmentation, and circulation.
+
+The 64 projected orbit-like trajectories did **not** demonstrate stable full-dimensional orbits: their median full-space radial coefficient of variation is ≈0.304, no >1-winding trajectory in the cohort has full-space radial CV below 0.1, and first-two-coordinate radius is only about 24.3% of full-space *squared* radius at step 950 (cohort median). A radius-exclusion robustness check still yielded **58/107** >1 windings, supporting real projected circulation without proving gravitational binding.
+
+- [Extended numerical audit, full dimensional cautions, and all experimental controls](reviews/2026-10-12-model-a-extended-local-controls.md)
+- [Reproducible source-extracted Node replay script](experiments/model-a-source-core-replay.mjs) — executable separate from historical browser HTML; its own post-commit execution is outstanding
+- [Earlier browser-executed one-line uncapped baseline](experiments/2026-10-12-model-a-uncapped.html)
+
+This is a **toy model with explicitly prescribed forces, thresholds, coordinate dimensions and numeric stepping**. No additional Causal Step premise, effective physical geometry, naturally preferred dimension count, or full-space gravitational orbit is qualified.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
 - **Starting premises:** exactly two researcher-originated premises; Premise 2's causal-step unit and the term *time* are explicitly clarified in subsequent verbatim discussion entries.
-- **Candidate models, evidence, or experiments:** unselected origin models, candidate direct-light-link and layered clock-chain interpretations, and a prospective dimension-scaling criterion; no experiment conducted or physical hypothesis validated.
-- **Negative results and open contradictions:** none established.
+- **Candidate models, evidence, or experiments:** unselected origin models, candidate direct-light-link and layered clock-chain interpretations, and a prospective dimension-scaling criterion; Model A numerical toy simulations were executed, but no physical hypothesis validated.
+- **Negative results and open contradictions:** Model A has no observed intrinsic 12-dimensional selection after uncapping; simulated projected circulation is not established as stable full-dimensional orbital physics.
 - **Findings, proofs, or physical claims:** none asserted.
 - **Next substantive step:** compare single-light-link semantics against causal-set-like links and local update sequences; test whether causal clock chains recover near/far observational differences and possible relativistic correspondence without presupposing conventional spacetime. Retain the two original premises unless expressly revised.
 
@@ -121,7 +135,7 @@ The absence of a mathematical model or explanatory mechanism is intentional. Def
 ## Discussion and evidence
 
 - [Substantive discussion log](DISCUSSION_LOG.md) — the original wording of Premises 1 and 2, and future research arguments, corrections, and evidence.
-- Supporting artifacts and source documents will be indexed here when provided; no documents have been imported into this folder.
+- Supporting Model A audit/experiment records are indexed above; the frozen original source remains in the separate Primitive Presentation import branch.
 
 Keep exploratory hypotheses, tested propositions, mathematical results, and physical evidence separate. Use a specified equivalence criterion for any claim of structural invariance, and retain negative findings rather than altering history to favor a candidate model.
 
