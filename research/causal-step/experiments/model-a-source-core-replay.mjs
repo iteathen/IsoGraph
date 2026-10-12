@@ -390,7 +390,7 @@ for(let i=0;i<horizon;i++){
    const center=cm();
    if(step===200){
      fixedCenter={x:center.c[0]||0,y:center.c[1]||0};
-     for(const n of nodes)if(n.id%5===0)cohort.set(n.id,{last:null,net:0,abs:0,radSum:0,rad2:0,n:0});
+     for(const n of nodes)if(n.id%5===0)cohort.set(n.id,{last:null,net:0,abs:0,radSum:0,rad2:0,n:0,lastAlive:200,lateLast:null,lateWinding:0,lateSamples:0});
    }
    for(const [id,record] of cohort){
      const n=nodeById(id);if(!n)continue;
@@ -407,11 +407,29 @@ for(let i=0;i<horizon;i++){
      traces.push([step,id,x,y,z,radius,tang,angle].join(','));
    }
  }
+ // Separate post-950 cohort-persistence diagnostic, not part of source dynamics.
+ if(step>=200)for(const [id,r] of cohort){if(nodeById(id))r.lastAlive=step;}
+ if(step>950&&step<=1200){
+  const center=cm();
+  for(const [id,r] of cohort){
+   const n=nodeById(id);if(!n)continue;
+   const x=(n.x[0]||0)-center.c[0],y=(n.x[1]||0)-center.c[1];
+   const a=Math.atan2(y,x);
+   if(r.lateLast!==null)r.lateWinding+=deltaAngle(r.lateLast,a)/(2*Math.PI);
+   r.lateLast=a;r.lateSamples++;
+  }
+ }
  const mem=(step%25===0||isCheckpoint)?process.memoryUsage():null;
  steps.push([step,dim,nodes.length,edges.length,didBirth?1:0,didBirth?st.mean:'',didBirth?st.max:'',didBirth?st.coll:'',cc,largest,energy?.KE??'',energy?.PE??'',energy?.total??'',L,mem?.rss??'',mem?.heapUsed??'',ms].join(','));
 }
 const orbit=[...cohort.entries()].map(([id,r])=>({id,samples:r.n,winding:r.net,absoluteCumulativeTurns:r.abs,radialCV:Math.sqrt(Math.max(0,r.rad2/r.n-(r.radSum/r.n)**2))/(r.radSum/r.n)}));
 for(const [name,lines] of [['steps',steps],['births',births],['orbit-trace',traces]])fs.writeFileSync(prefix+'-'+name+'.csv',lines.join('\n')+'\n');
 const report={mode,horizon,source_blob:'4d7e6f4bb594204afa92534d697a9a32fc3ea9a0',changes:'selection of 4 controlled cfg/physics parameters only',meanSourceUpdateMs:totalMs/horizon,checkpoints:checkpoint,birthCount:births.length,orbit:{selected:orbit.length,over1:orbit.filter(a=>Math.abs(a.winding)>1).length,over2:orbit.filter(a=>Math.abs(a.winding)>2).length,perNode:orbit}};
+report.survival={
+ originalCohort:cohort.size,
+ aliveByStep:[200,900,950,1000,1100,1200,1250,1500,1750,2000].filter(x=>x<=horizon).map(t=>({step:t,alive:[...cohort.values()].filter(x=>x.lastAlive>=t).length})),
+ late950to1200:{atEnd:[...cohort.values()].filter(x=>x.lastAlive>=1200).length,moreOneNetRevolution:[...cohort.values()].filter(x=>x.lastAlive>=1200&&Math.abs(x.lateWinding)>1).length}
+};
+fs.writeFileSync(prefix+'-survival.csv',['node_id,last_alive_step,late950to1200winding,late_samples',...[...cohort.entries()].map(([id,r])=>[id,r.lastAlive,r.lateWinding,r.lateSamples].join(','))].join('\\n')+'\\n');
 fs.writeFileSync(prefix+'-summary.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({mode,horizon,births:report.birthCount,atEnd:checkpoint.at(-1),orbitOverOne:report.orbit.over1,outputPrefix:prefix}));
