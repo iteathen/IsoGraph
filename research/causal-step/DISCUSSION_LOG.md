@@ -58,3 +58,15 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Status:** Substantive exploration recorded. **Still exactly two adopted working premises** (with Premise 2's non-Einsteinian terminology), and no experimental evidence, chosen origin model or derived matter-center theorem. Future alternatives are documented as alternatives, not automatically approved premises.
 
+## 2026-10-12 — Time explicitly defined as causal-event succession
+
+**Researcher (verbatim):**
+
+> Okay, I need to stop you because you're framing time in the traditional, in the traditional sense. When I say time in an emergent universe Rouliad-like structure, I mean a sequence of causal events. So time, time is not to be thought of in the traditional sense, like a unit of time: minutes, hours, seconds, days, weeks. No, you got to think of time as the sequence of causal events.
+
+**Researcher-originated definition / correction:** In Causal Step, **time is the sequence of causal events**. It is not an independently existing physical duration, a metric expressed in calendar/clock units, or Einsteinian time. The wording directly corrects prior assistant use of conventional clock time to frame questions about one or several generative beginnings. This is a definitional clarification **within the two already stated premises**, not a claim that a particular physical time-emergence model has been proved.
+
+**Assistant correction (summary, not verbatim):** Reinterpret “beginning” as earliest causal event/condition (when one exists); “before” and “after” as causal succession, and “many at once” as possibly independently arising histories with no specified precedence, not synchronized clock times. The researcher has not imposed a single universal total order: partial orders and branching processes remain optional formalizations rather than new assumptions. The original verbatim discussion and both premises are retained. The [causal-origin and emergent-3D review](reviews/2026-10-12-causal-beginnings-and-emergent-three-dimensional-space.md) and the current dossier now use the corrected meaning of *time*.
+
+**Status:** Explicit user definition of time adopted for the working research. No additional premises, physical measurements, global-clock assumptions, or verified new theorems.
+
