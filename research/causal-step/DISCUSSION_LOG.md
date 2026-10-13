@@ -484,3 +484,238 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Agent workflow (not a new physical premise):** Build and source-check an annotated register of candidate theory families, sort by *fundamental-mechanism proximity* and *observational coverage* separately, record where models import geometry, clocks, Hilbert spaces, energy or matter fields, and compare to both ΛCDM/GR benchmarks and data that stress alternatives (galaxy RAR, merger lensing, CMB spectra, BAO/SN/growth). Include null outcomes, reproducibility, model equivalence and exact scope of 'emergence'. Do not introduce a new entropy force or observationally declare dark matter/energy fictitious. Preserve source fidelity and human/AI/third-party attribution.
 
+
+
+## 2026-10-13 — Researcher substantive foundational-physics handoff (verbatim)
+
+**Researcher (verbatim, including its research and process constraints):**
+
+~~~markdown
+# Causal Step — Foundational Physics Research Handoff
+ 
+Resume substantive research in **`iteathen/IsoGraph`**, specifically the **Causal Step** research track.
+ 
+## 1. Resynchronize with GitHub
+ 
+Last verified research branch:
+ 
+`research/causal-step-foundational-bridges-20261013`
+ 
+Last verified HEAD:
+ 
+`edd49d2bc0c42aa38c8d1177e3062a6261aea32b`
+ 
+These are historical checkpoints, not assumptions about the current repository state.
+ 
+Before proceeding:
+ 
+- Inspect the current branch, HEAD, commits, PRs, and intervening work.
+- Read `AGENTS.md`, repository governance, provenance policies, and relevant research specifications.
+- Read `research/causal-step/README.md` and `research/causal-step/DISCUSSION_LOG.md`.
+- Preserve independence from the Woit and Lisi tracks.
+- Work on an appropriate research branch. Do not merge without authorization.
+
+ 
+## 2. Research objective
+ 
+We are investigating whether reality, including spacetime, matter, gravity, and quantum behavior, could emerge from relatively simple foundational causal relationships.
+ 
+The current research uses **genuinely higher-order causal hypergraphs**, not merely pairwise connections.
+ 
+We want to identify serious physics research that could contain mathematical or mechanistic pieces useful for developing or evaluating this approach.
+ 
+**Search broadly across fundamental physics**, particularly work that connects seemingly unrelated physical phenomena through a common underlying mechanism.
+ 
+Important targets include:
+ 
+- Emergent spacetime, topology, dimensionality, and locality.
+- Emergent gravity, including gravity derived from entropy, information, or collective dynamics.
+- Explanations for the gravitational effects attributed to dark matter.
+- Explanations for the observed effects attributed to dark energy or cosmic acceleration.
+- Emergent quantum behavior, matter, elementary particles, and stable excitations.
+- Common structural mechanisms connecting several of these phenomena.
+
+ 
+**Do not assume that dark matter, dark energy, or gravity must be fundamental substances or independent forces.** Their observed effects require explanation, but their conventional ontological interpretations remain open research questions.
+ 
+Do not assume they are nonexistent either.
+ 
+## 3. Existing research
+ 
+The previous research cycle registered:
+ 
+- **17 foundational/emergence research families**
+- **17 gravity/apparent-dark-sector research families**
+- **14 observational and falsification checkpoints**
+
+ 
+Read the completed review:
+ 
+`research/causal-step/reviews/2026-10-13-broad-foundational-physics-dark-sector-bridges.md`
+ 
+Supporting source registers:
+ 
+`research/causal-step/references/2026-10-13-fundamentals-emergence-candidate-register.json`
+ 
+`research/causal-step/references/2026-10-13-apparent-dark-sector-gravity-candidate-register.json`
+ 
+`research/causal-step/references/2026-10-13-cosmology-observational-and-falsification-gates.json`
+ 
+Also review the previous investigations into entropy-model completeness, holography, higher-order graph rewriting, and internal model equivalence.
+ 
+Do not merely repeat the existing survey. **Advance it substantively.**
+ 
+## 4. Existing promising research directions
+ 
+The initial shortlist identified two complementary groups.
+ 
+**Foundational and generative mechanisms:**
+ 
+1. Rideout–Sorkin causal-set sequential growth.
+2. Markopoulou quantum causal histories.
+3. Group field theory condensate cosmology.
+4. Causal fermion systems.
+5. Jacobson's thermodynamic and entanglement-based derivations of gravity.
+
+ 
+**Explanations of apparent dark-sector effects:**
+ 
+1. Aether–Scalar–Tensor gravity (AeST).
+2. Blanchet–Le Tiec gravitational polarization.
+3. Buchert backreaction and Wiltshire timescape cosmology.
+4. Verlinde's emergent gravity.
+5. Causal-set everpresent cosmological constant.
+
+ 
+Other registered approaches include quantum graphity, string-net condensation, tensor-network holography, nonlocal gravity, MOND, TeVeS, superfluid dark matter, causal dynamical triangulations, loop quantum gravity, asymptotic safety, and spectral-action approaches.
+ 
+These are **research leads, not endorsed theories**.
+ 
+Continue searching for additional credible candidates rather than restricting the investigation to this list.
+ 
+## 5. Critical research requirements
+ 
+### A. Internal mechanisms matter more than numerical resemblance
+ 
+We are not simply seeking theories that reproduce the same outputs.
+ 
+For each candidate, determine:
+ 
+- What are its fundamental mathematical objects?
+- What are its primitive assumptions?
+- What transformations actually occur?
+- What determines their sequence and composition?
+- What structures and quantities emerge?
+- What is introduced by assumption rather than derived?
+- Which operations could correspond to higher-order causal rewriting?
+- What information would be lost by translating the theory into a causal hypergraph?
+
+ 
+Two formulations are not equivalent merely because they share formulas, entropy values, observational predictions, or mathematical notation.
+ 
+Specify the equivalence criterion before claiming structural correspondence.
+ 
+### B. Do not presuppose what we seek to derive
+ 
+The foundational causal model must not silently introduce:
+ 
+- Fixed physical dimensionality or a dimension ceiling.
+- Pre-existing spatial coordinates or metric distances.
+- Newtonian forces, mass, or energy.
+- A physical clock or externally imposed time step.
+- Matter fields, quantum Hilbert spaces, or gravitational geometry.
+- Entropy-driven dynamics without independent justification.
+
+ 
+External theories may assume these structures. Identify those assumptions explicitly and assess whether their methods remain useful.
+ 
+The Causal Step project's proposed primitive organizing/back-pressure interpretation of entropy must not be conflated with conventional statistical, von Neumann, relative, holographic, or spectral entropy.
+ 
+### C. Preserve physical and empirical constraints
+ 
+Any theory replacing conventional dark-sector explanations must eventually explain the relevant independent observations:
+ 
+- Galaxy rotation and radial acceleration relationships.
+- Galaxy-cluster dynamics and merger lensing.
+- CMB acoustic peaks, polarization, and lensing.
+- Large-scale structure formation and growth.
+- BAO and supernova expansion histories.
+- Gravitational-wave propagation.
+- Relevant local gravity and laboratory constraints.
+
+ 
+A successful galaxy-scale fit does not establish a complete replacement for dark matter.
+ 
+Likewise, matching cosmic acceleration does not demonstrate that dark energy is emergent or nonexistent.
+ 
+Distinguish published results, provisional fits, numerical demonstrations, conjectures, and known failures.
+ 
+### D. Preserve the established Causal Step experimental filters
+ 
+The previous higher-order hypergraph work established two selection criteria:
+ 
+1. **Noncollapse:** A system can continue growing indefinitely. A fixed point or equilibrium is not required.
+2. **Complexity capacity:** Endless simple repetition is insufficient. The system must be capable of generating nontrivial structured behavior.
+
+ 
+Existing 8,000-rewrite tests identify promising synthetic candidates, but they do not demonstrate physical particle emergence or computational universality.
+ 
+Do not alter those historical results to favor a new theory.
+ 
+## 6. Next substantive work
+ 
+Proceed through these stages.
+ 
+**Stage 1 — Broaden and verify the candidate search.** Investigate additional serious foundational theories, especially those deriving multiple physical effects from a common mechanism. Verify important claims against primary research.
+ 
+**Stage 2 — Perform a mechanism-level comparison.** Compare leading candidates using separate criteria for mathematical soundness, physical evidence, foundational assumption burden, structural compatibility with causal networks, and explanatory coverage.
+ 
+**Stage 3 — Identify reusable pieces.** Extract concrete mathematical structures, transition rules, invariants, emergence mechanisms, and potential falsification tests. Distinguish genuinely transferable methods from superficial analogies.
+ 
+**Stage 4 — Select the strongest candidates.** Produce a ranked shortlist of approximately three to five particularly valuable directions. Explain why each was selected and record serious objections and known counterexamples.
+ 
+**Stage 5 — Design targeted verification.** For each top candidate, identify a small, testable mathematical or computational question that would tell us whether its structural content might transfer to a higher-order causal network.
+ 
+When feasible, implement and locally execute non-invasive observer-level diagnostics or exact mathematical comparisons. Do not install speculative forces or modify the primitive causal generator merely to reproduce desired results.
+ 
+**Stage 6 — Save the results.** Update the research dossier, source registers, comparative reviews, discussion log and provenance records. Commit and push verified work.
+ 
+## 7. Execution discipline
+ 
+Follow all governing IsoGraph research procedures.
+ 
+Preserve exact source attribution, failures, negative results, uncertainties, and alternative interpretations.
+ 
+Record new substantive researcher instructions verbatim in the Causal Step discussion log.
+ 
+Work in manageable batches and commit meaningful intermediate results so UI desynchronization does not destroy the research record.
+ 
+Avoid GitHub Actions; use available local testing facilities where appropriate.
+ 
+Do not claim simulations, source verification, commits, or publication qualification unless actually performed and verified.
+ 
+Do not merge any branch without authorization.
+ 
+## 8. Deliverable
+ 
+Provide:
+ 
+1. The most promising newly identified foundational connections.
+2. The strongest candidates from the combined old and new literature.
+3. A mechanism-level comparison explaining what each theory actually does internally.
+4. The specific mathematical pieces worth investigating for Causal Step.
+5. The most serious obstacles, counterexamples and missing assumptions.
+6. A prioritized next experimental plan.
+7. Exact GitHub branch, commits, saved evidence and unresolved blockers.
+
+ 
+**The governing goal is not to make an existing theory fit our causal hypergraph. It is to discover whether independently developed fundamental theories contain common structural content that can be faithfully represented, compared, and eventually tested within an emergent causal framework.**
+ 
+Begin by resynchronizing and reading the existing work, then proceed with substantive research rather than stopping at a status summary.
+~~~
+
+**Agent execution and contribution summary, not researcher text:** GitHub resynchronization found the supplied branch still at the historical HEAD. Expanded primary-source leads: Arrighi et al. 2026 asynchronous causal graph rewriting; related 2025 reversible framework, Arrighi–Martiel–Perdrix synchronous reversible CGD, Cortês–Smolin energetic causal sets, relative locality, Benincasa–Dowker curvature, operational quantum reconstructions, indefinite-order quantum process matrices, informational Dirac QCA, and vacuum-energy sequestering/unimodular alternatives. Original two Causal Step premises and all archival synthetic results remain unchanged. Independent source authors retain attribution.
+
+**Actually executed finite control:** k-ary joint event `{a,b}->c` versus two binary events `a->c,b->c` have the same pairwise shadow but two differing interventions among four possible pre-inputs; relabeling checked in all six permutations; disjoint rules commute at final state and dependent rules do not commute as if independent. See [code](experiments/2026-10-13-higher-order-causal-projection-and-scheduling.mjs), [observed output](experiments/results/2026-10-13-higher-order-causal-projection-and-scheduling.json), [mechanism review](reviews/2026-10-13-asynchronous-causal-physics-mechanism-comparison.md), and separate extension registers F18–F27/D18–D19. This is a three-node exact mathematical observer test, **not** a simulation of physical laws, not a proof of the new preprint's theorem and not new IsoGraph qualification.
+
+**Evidence and blockers:** The 2026 Arrighi paper's abstract and provenance were checked; its detailed proof is not yet independently audited. Neither a faithful equivalence to the current higher-order generator nor any physical cosmology/particle generation has been established. No new assumptions, dimensional ceiling, physical clock, force, Hilbert state, or entropy dynamics have been installed.
