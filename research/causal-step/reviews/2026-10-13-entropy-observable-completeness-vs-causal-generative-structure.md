@@ -101,3 +101,52 @@ A separate observer-vs-driver ablation should verify whether any candidate “en
 - **Most informative next action:** Treat **informational completeness of the chosen comparison map** as an independent falsification gate; do not let a possibly lossy entropy observable dictate what a foundational causal network can contain or how it must evolve.
 
 **Provenance:** The completeness worry, motivation from a carried-versus-dynamical quantity, and proposed comparison with causal hypergraphs originate with Joshua Oshiro. Source research, the three-completeness distinction, the exact all-terminal cut counterexample and experimental test design are AI-assisted. Third-party results are attributed to their original authors, with no new claims of mathematical or physical discovery.
+
+## Appendix: internal model equivalence and selection (2026-10-13)
+
+**Researcher-specified decision problem:** A prior model may calculate correct outputs while failing to preserve the actual internal causal processes. The comparison must therefore be *model-to-model*, not merely observable-to-observable. Never call alternative formulations equivalent without specifying exactly which structure/operations and assumptions are preserved.
+
+### Levels of correspondence (not interchangeable)
+
+**L0: formal resemblance.** Same notation or analytical form, e.g. `-Tr rho ln rho`, but the `rho` operands denote different constructions.
+
+**L1: genuine derivation.** One quantity is computed within the same underlying theory from states and regions, e.g. Kitaev–Preskill `gamma` from quantum-state entanglement entropies.
+
+**L2: equal observable images.** Two distinct representations generate the same set of entropy vectors, or one is a proper subset of the other, for a specified number of parties. The identity of outputs does not guarantee a correspondence between states, internal relations or transformations.
+
+**L3: controlled approximate physical mapping.** A stated quantum or semiclassical construction reproduces the other framework's entropy in a proven expansion or asymptotic limit, with correction terms and an applicability domain.
+
+**L4: compositional structural equivalence.** A map preserves and—under the chosen relevant equivalence—can reconstruct relationships, k-way interactions, boundary/interior partitions, orientations and operator composition without hidden auxiliaries that change the claim.
+
+**L5: mechanism/process equivalence.** A proposed state map `F:X→Y` preserves dynamical steps `F(T_X(s)) ~ T_Y(F(s))` for an explicitly stated `~`, including the allowed interventions and system histories; a reverse simulation or counterexample search must test that no relevant mechanism is lost. This is more demanding than L2 and cannot be inferred from entropy cones.
+
+**L6: physical correspondence.** The common structure predicts additional independent observables beyond those used to construct the map, against realistic null models; agreement must not result from chosen boundary conditions or built-in update rules.
+
+### Concrete equivalence audit
+
+| Models | Actual warranted relationship | Internals that are not thereby shared |
+|---|---|---|
+| **Physical quantum von Neumann S; topological entanglement gamma** | `gamma` is an invariant derived from von Neumann subsystem entropies in gapped 2D topologically ordered phases (L1). | One gamma does not determine quantum statistics/braiding, full state, or its Hamiltonian. |
+| **Physical quantum S; higher-order Hodge spectral S** | Same trace functional applied to different constructed matrices (L0). Baccini–Geraci–Bianconi use `rho_n=exp(-beta L_n)/Tr exp(-beta L_n)` for a chosen weighted simplicial complex, not necessarily a physical reduced quantum state. | Boundary maps/face closure, weight choices, beta and Laplacian spectra are not a Hilbert-system entanglement mechanism. |
+| **Static RT surface entropy; weighted graph cuts** | Equivalent entropy-vector *cones* in the Ryu–Takayanagi classical static framework (L2); graph models encode cutting/gluing relations. | Graph edges do not become microscopic bulk causal events, fields or geometry dynamics. |
+| **Graph-cut; higher-order hypergraph-cut** | Same general minimum-cut scoring idea, but rank≥3 hyperedges extend the set of possible entropy vectors. | A hyperedge is not interchangeable with its pairwise clique; neither static cut rule defines event evolution or quantum phase. |
+| **Hypergraph-cut; stabilizer quantum entropies** | Entropy cone equality at up to four parties; Walter–Witteveen prove general weighted hypergraph mincut vectors approximable by stabilizer entropies up to overall scale, while higher-party equality is disproved. | Quantum Hilbert state, stabilizer operators and tensors are extra ontology; matching entropy vector does not imply same quantum time evolution. |
+| **Hypergraph-cut; topological-link cut** | Link model attains entropy vectors, e.g. five-party ray15, excluded by an inequality for the chosen hypergraph min-cut model. | Does not establish any impossibility for general hypergraph causal computation. Link model assumes embedded loops in 3D and a different cut procedure. |
+| **RT vs FLM / quantum extremal surface** | Same holographic physical program at different orders/approximations (L3), quantum entanglement contributes to generalized entropy. | An area-only leading term does not contain all subleading quantum correlations. |
+| **Bianconi network-metric relative entropy vs quantum S or graph mincut** | Different proposed action using a quantum-relative-entropy-shaped functional of two geometry/matter-induced metric operators. It is not the same operand or numerical observable as subsystem entanglement or terminal mincut. | Requires geometry (and fields) as given inputs; modified field equations are a postulated dynamical extension rather than a pre-geometric rewrite derivation. |
+| **Causal-set spacetime entropy vs quantum state theory** | Uses Wightman and commutator correlators of a chosen field on a chosen causal order, with cutoff/truncation dependence; same physical quantum objective in a different setting (L3 only under stated mapping). | Quantum field/correlations and known spacetime background in test cases are not derivable from the poset alone. |
+| **Quantum relative entropy / multitime process tensor vs scalar entropy** | They supply additional state distinguishability, modular data or response to interventions. These are distinct enriched observers within specified quantum setups, not new primordial entropy laws. | Operational equality for a limited intervention family still does not identify unique inaccessible microscopic environments. |
+
+**Concrete within-the-same-quantum-theory witness:** `|0><0|` and `|+><+|` both have physical von Neumann entropy `0` but give different `Z` measurement probabilities: `P(0)=1` vs `1/2`. Even a correct microscopic entropy functional is not injective as a state readout. The already executed [all-terminal hypergraph cut counterexample](../experiments/results/2026-10-13-entropic-observer-incompleteness-witness.json) shows a parallel problem when distinct internal higher-order interactions have identical entire boundary-cut vectors.
+
+### Provisional starting choice, separated by research goal
+
+**Most physically secure entropy target:** the established quantum state/operator algebra framework, beginning with physical subsystem **von Neumann entropy** and **relative entropy**. It defines what many of the other entropy papers are trying to reproduce. However, the entropy functions do not themselves define causal evolution; add state evolution and operational interventions if comparing physical mechanism. [Jafferis–Lewkowycz–Maldacena–Suh 2016](https://doi.org/10.1007/JHEP06(2016)004) and [Pollock et al. 2018](https://doi.org/10.1103/PhysRevLett.120.040405) illustrate richer comparisons, each with their own inputs.
+
+**Closest source-level structural competitor:** a causal order and stateful higher-order event-rewrite history itself. If developing topology, the Major–Rideout–Surya **antichain/nerve homology** path is more naturally organized around causal precedence than entropy minimization, but its continuum-recovery theorem assumes manifoldlikeness. The Sorkin–Yazdi causal-set entropy requires an independently specified quantum field/correlation prescription. No existing cut-cone theorem shows either is the world's fundamental mechanism.
+
+**Best inexpensive observable, not primary ontology:** weighted **hypergraph min-cuts** and optional Hodge spectral diagnostics, explicitly declaring boundaries, hyperedge weights, simplicial closure and normalization as presentation choices. Their exact tractability makes them good *falsifiers* for purported model equivalences; this is not evidence that nature evolves by minimizing cuts.
+
+**Not recommended at the primordial stage:** extending Bianconi's given-metric gravity-from-entropy action, RT/QES with already-established bulk, or pre-embedded topological-link entropy into the foundational update law. Those import structure that Causal Step is seeking to derive.
+
+**Decision gate before declaring two models 'the same':** freeze states/primitive relations, admitted source-to-target map, equivalence criterion, observers, transitions, interventions and physical domain. Test output agreement and diagram commutation **separately**; use matched counterexamples where one representation's entropy cannot distinguish states that have distinct future causal behaviors. No adopted physical entropy force or new third Causal Step premise results from this review.
