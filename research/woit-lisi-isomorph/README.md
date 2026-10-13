@@ -1,3 +1,7 @@
+## L G0 full original Table 2 source-assisted projection fiber audit (2026-10-13)
+
+[Lisi's current source-first dossier](lisi/README.md) now preserves all 26 assisted Table 2 XYZ weights and their Equation 2.4 projection: **26 distinct source positions produce 13 projected 2D positions**, partitioned into six singleton gluon fibers, six size-three quark-series fibers, and a two-element leptonic origin fiber. [Local exact arithmetic and 12 negative controls](../../experiments/062/L01_TABLE2_26_SOURCE_ASSISTED_PROJECTION_LOCAL_SUCCESS_0_1.json) passed; no independent cold source reading, identity inference, or Lie-algebra quotient is qualified. [G0 stage gate0.202](../../experiments/062/L_CURRENT_STAGE_GATE_0_202.json) remains open, holding the complete source corpus and all W/L firewalls.
+
 ## L G0 Eq2.4 root-projection mathematical discriminator (2026-10-13)
 
 The independent Lisi [source-first Eq2.4 / Table2 discriminator](lisi/LISI_L01_EQ24_SOURCE_ROOT_PROJECTION_VS_LIE_QUOTIENT_FRONTIER_G0_0_1.json) locally confirms 12/12 source-assisted root-coordinate projections. It independently rejects a stronger *Lie-algebra quotient* reading of su(4) after discarding a u(1) direction, while leaving the original geometric diagram and Lisi's intended arrow scope open. The [G0 gate0.201](../../experiments/062/L_CURRENT_STAGE_GATE_0_201.json) is procedural only: no cold semantic promotion, no Woit import or PR merge.
