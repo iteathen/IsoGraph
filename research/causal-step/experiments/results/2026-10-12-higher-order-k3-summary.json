@@ -1,0 +1,35 @@
+{
+  "scheme": "source-independent higher-order hypergraph branching",
+  "k": 3,
+  "ruleCount": 192,
+  "eligibleFiniteSymmetricRules": {
+    "arity": 3,
+    "inputHyperedgePositions": 1,
+    "labeledInputHypergraphs": "2^1",
+    "newbornContainingHyperedgePositions": 4,
+    "possibleSubsetsOfNewbornHyperedges": "2^4",
+    "binaryInputNodePatterns": 8,
+    "fullStateLookupTableBinaryExponent": 40,
+    "symmetricNonemptyRuleFamilies": 450
+  },
+  "conditions": "k-uniform hyperedges, immutable binary node states, one birth per applied rule; rank3+ output including newborn; only k-arity hyperedges fire in fixed-arity sweeps",
+  "resourceLimits": {
+    "nodes": 2000,
+    "hyperedges": 16000,
+    "rewrites": 400
+  },
+  "sampling": "seeded uniform-without-replacement over nonempty symmetric rule tables; canonical initial Hamming weights 0..k; FIFO/random scheduler",
+  "summary": {
+    "name": "k3",
+    "trials": 1536,
+    "absorbed": 1076,
+    "resourceCensored": 0,
+    "horizonCensored": 460,
+    "trialsWithAnyRewrite": 856,
+    "activeHorizonCensored": 460,
+    "meanMaxDepth": 13.741,
+    "nearFlatBacklogAmongHorizonCensored": 46,
+    "maxRecordedDepth": 400,
+    "maxRecordedNodes": 403
+  }
+}
