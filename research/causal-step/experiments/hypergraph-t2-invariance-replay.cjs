@@ -131,7 +131,7 @@ function permutations(n){
   {name:'reversal',map:Array.from({length:n},(_,i)=>n-1-i)}];
 }
 function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
-  includeTransport=true,includeNaive=true,alternateRandom=false,ruleIds=null,schedulers=['fifo','random']}={}){
+  includeTransport=true,includeNaive=true,alternateRandom=false,ruleIds=null,schedulers=['fifo','random'],permutationNames=null}={}){
  const supported=[3,4,5];if(!ks.length||ks.some(k=>!supported.includes(k)))throw Error('Unsupported arity');
  if(!Number.isInteger(horizon)||horizon<1||horizon>10000)throw Error('Bad horizon');
  if(!schedulers.length||schedulers.some(x=>!['fifo','random'].includes(x)))throw Error('Bad scheduler filter');
@@ -157,7 +157,7 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
      scheduler,seed:baseline.summary.seed,rewrites:baseline.summary.executedRewrites,
      status:baseline.summary.status,baselineDigest32:digest32(baseline.events),
      legacy,transport:[],untransported:[]};
-   if(includeTransport)for(const permutation of permutations(initialN)){
+   if(includeTransport)for(const permutation of permutations(initialN).filter(p=>permutationNames===null||permutationNames.includes(p.name))){
     const permuted=runOne(compiled,{...opts,permutation:permutation.map,transport:baseline.events.map(e=>e.origin)});
     const diff=exactDiff(baseline.events,permuted.events);
     const fields=['executedRewrites','status','nodes','liveHyperedges','eligibleFrontier',
@@ -204,7 +204,7 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
   originalRunnerBlobSha:PINNED_RUNNER_BLOB,
   referenceCsvBlobSha:PINNED_REFERENCE_CSV_BLOB,
   methodology:'source-text observer instrumentation with checked insertion anchors; no edits to generator or selected rules; transported event occurrence schedule versus raw order of eligible edges',
-  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom,ruleIds,schedulers},
+  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom,ruleIds,schedulers,permutationNames},
   totals:{baseHistories:reports.length,baselineMatches:fullReference,
      matchedHistoricalScalarFields:fullRefFields,
      transportedPermutationRuns:checked,
@@ -233,7 +233,8 @@ if(typeof require!=='undefined' && require.main===module){
  const outfile=process.argv[4]||path.join(here,'results/t2-replay-'+ks.join('-')+'-'+horizon+'.json');
  const ruleIds=process.argv[5]?process.argv[5].split(',').map(Number):null;
  const schedulers=process.argv[6]?process.argv[6].split(','):['fifo','random'];
- const result=runT2(source,csv,{ks,horizon,ruleIds,schedulers});
+ const permutationNames=process.argv[7]?process.argv[7].split(','):null;
+ const result=runT2(source,csv,{ks,horizon,ruleIds,schedulers,permutationNames});
  fs.writeFileSync(outfile,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({outfile,totals:result.totals}));
 }
