@@ -1,0 +1,49 @@
+name: Experiment 062 L G0 L01 SVG clip and stroke-footprint audit 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-1.yml'
+      - 'experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  original-L01-figure-stroke-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Exact source/gate/tool preflight and synthetic controls
+        run: |
+          set -euo pipefail
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py)" = "4b4ca5243a6787bfc5ee46e9d73a930458ee83ae"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py)" = "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json)" = "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json)" = "24163965af4d1e13e75371638fcfd70b793db2ac"
+          test "$(git hash-object experiments/062/L_CURRENT_STAGE_GATE_0_193.json)" = "3f6b39fbb8314bad167402a208d301f6d725bc7d"
+          python3 -m py_compile experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py
+          python3 experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py --self-test
+      - name: Frozen source renderer dependency
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Exact original source clip polygons and W stroke ink test
+        run: |
+          set -euo pipefail
+          scratch="$(mktemp -d)"
+          trap 'rm -rf "$scratch"' EXIT
+          export FROZEN_L01_PDF="$scratch/L01-v1.pdf"
+          node --input-type=module -e '
+            import {createHash} from "node:crypto";
+            import {writeFileSync} from "node:fs";
+            const r=await fetch("https://arxiv.org/pdf/0711.0770v1",{signal:AbortSignal.timeout(65000)});
+            if(!r.ok)throw Error("ORIGINAL_PDF_HTTP_"+r.status);
+            const bytes=Buffer.from(await r.arrayBuffer());
+            const sha=createHash("sha256").update(bytes).digest("hex");
+            if(bytes.length!==623525||sha!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")
+              throw Error("FROZEN_SOURCE_SHA_MISMATCH");
+            writeFileSync(process.env.FROZEN_L01_PDF,bytes);
+            console.log(JSON.stringify({frozen_pdf:"PINNED",sha256:sha,bytes:bytes.length}));
+          '
+          python3 experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py \
+            --pdf "$FROZEN_L01_PDF"
