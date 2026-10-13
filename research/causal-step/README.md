@@ -177,6 +177,36 @@ The first 1,000-step controlled sweep found the following (all uncapped):
 
 **Current disposition:** Bianconi's topology is a lead to study when relevant representations exist; **direct correspondence and publication readiness remain unverified**. No entropic dynamics or fixed topology imported into the coordinate-free model.
 
+## Genuine higher-order hypergraph branching — controlled rule-space search (2026-10-12)
+
+The researcher requires **genuinely higher-order relations**, not a collection of pairwise links, when exploring rule × node combinations and spontaneous steady states. A separate [source-independent k-ary hypergraph laboratory](experiments/hypergraph-rewrite-lab.mjs) now matches **atomic unordered 3-, 4-, and 5-node hyperedges**, tests aggregate binary participant states and rewrites the whole relation to spawn one node plus higher-order child hyperedges. It has **no assigned metric, mass, springs, Newtonian time integration or hard-coded physical dimension**. Its operational node/hyperedge/rewrite budgets are deliberately separate from candidate law semantics. Initial graphs and rewrite rules are still *chosen by the program*, not derived from Causal Step theory.
+
+**Combinatorial scope:** For k old participating nodes plus a newborn, there are `2^k-k-1` possible newborn-containing hyperedges of rank ≥3: **4, 11, 26** at k=3,4,5, hence **16, 2,048, 67,108,864** independently selectable output subsets. Adding a binary newborn state and independently specified mappings for each labeled binary input pattern gives candidate lookup-table spaces `2^40,2^192,2^864`. Those counts are relative to their exact representation, **not physically inequivalent laws**. The actual symmetric sampled rule families have only **450, 2,170, 9,450** possible parameter combinations respectively; **192** were sampled per k in the first phase.
+
+**Executed controlled measurements:**
+
+| Test | Runs | Absorbed before any rewrite | Absorbed after ≥1 rewrite | Still productive at cap |
+|---|---:|---:|---:|---:|
+| k=3, fixed states | 1,536 | 680 | 396 | 460 |
+| k=4, fixed states | 1,920 | 970 | 462 | 488 |
+| k=5, fixed states | 2,304 | 1,134 | 676 | 494 |
+| Mixed k=3,4,5 rules | 640 | 272 | 96 | 272 |
+
+The fixed-arity trials that halted after activating **all halted after precisely one rewrite**. That is a failure to generate rich nontrivial steady states, not a success to reinterpret as an attractor. Among mixed-arity runs, **80/640** actually fired rewrites at all three arities, confirmed by recorded firing counters.
+
+**Strict higher-order null control:** A genuine full k-hyperedge and its complete family of proper (k−1)-hyperedges have the **same complete pairwise projection**; yet the k-hyperedge rule branches in the former and not in the latter, tested separately at k=3,4,5. Passive pairs were used solely as diagnostic nulls and cannot activate any rule. This does not rule out more elaborate pairwise encodings with auxiliary objects.
+
+**Matched overlapping-relation feedback:** A second layer lets one k-ary rewrite change the states of *all* participating nodes at once, thereby sometimes changing eligibility of **old, overlapping higher-order hyperedges**. Among **1,440 matched mutable/fixed-state pairs**, **134** mutable runs showed at least one old-edge reactivation (none in fixed controls); **97** pairs changed absorbing/continued classification, and **19** mutated runs halted after ≥2 rewrites (none in controls). The state-update functions are exploratory and explicitly programmed—not derived particle interactions or laws.
+
+**No nontrivial global steady-state proof:** Every successful rewrite creates one more node and never deletes one, so exact full-graph recurrence is impossible in this family. Absorption means no eligible rule; continuation to the **400-rewrite** or **160-rewrite** limit is right-censored and not proof of infinite survival or stationary macroscopic statistics. No run in these sweeps hit the independent 2,000-node/16,000-hyperedge computational limits.
+
+- [Complete design, formulas, verified results, restrictions and falsifiers](reviews/2026-10-12-genuine-higher-order-rewrite-combinatorics-and-controls.md)
+- [Reproducible higher-order rewrite runner](experiments/hypergraph-rewrite-lab.mjs)
+- [Committed per-rule/per-trial CSVs, mixed-arity firing counters, no-pairwise controls and relabeling samples](experiments/results/)
+- [Verbatim researcher direction, rule-space question and exact no-pairwise correction](DISCUSSION_LOG.md)
+
+**Status:** genuinely higher-order causal-like rewriting demonstrated **as a computational toy**; no validated unbounded hypergraph physics, emergence of elementary particles, intrinsic dimensionality, or objective empirical correspondence. The two provisional Causal Step premises are unchanged.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
