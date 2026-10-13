@@ -3,7 +3,8 @@
  * Causal Step: true higher-order hypergraph branching laboratory.
  *
  * This is a NEW, separately scoped experiment, not archived Model A.
- * A primitive hyperedge is an unordered set of >=3 distinct node IDs, and
+ * A primitive ACTIVE hyperedge is an unordered set of >=3 distinct node IDs;
+ * passive size-2 diagnostic links are admitted in null controls ONLY; and
  * activating it tests the state of ALL participating nodes simultaneously.
  * There is no metric, pairwise spring, gravity, mass, time-dt or dimension cap.
  * One rewrite consumes or retains an activated hyperedge, adds exactly one
@@ -94,18 +95,18 @@ function runTrial({initialArity,initialBits,rules,scheduler='fifo',seed=1,limit=
  let edgeList=[],liveEdges=0,queue=[],head=0,active=0,rewrites=0,totalCreated=0,last50=[],maxDepth=0;
  let finalStatus='limit',stopCause='',rankCounts={},firedByRank={};
  function ruleFor(arity){return rules[arity];}
- function addEdge(ids){
-  if(ids.length<3)throw new Error('Pairwise relations forbidden in this lab');
+ function addEdge(ids,passiveControl=false){
+  if(ids.length<3&&!(passiveControl&&ids.length===2))throw new Error('Only diagnostic null controls may contain pairwise links');
   let e={ids:ids.slice().sort((a,b)=>a-b),alive:true,fired:false};
   const edgeID=edgeList.length;edgeList.push(e);liveEdges++;
   rankCounts[ids.length]=(rankCounts[ids.length]||0)+1;
-  const rule=ruleFor(ids.length);
+  const rule=ids.length>=3?ruleFor(ids.length):null;
   if(rule){
    let ones=0;for(const id of e.ids)ones+=nodes[id].bit;
    if(rule.weights&(1<<ones)){queue.push(edgeID);active++;}
   }
  }
- if(initialHyperedges!==null){for(let ids of initialHyperedges)addEdge(ids);}
+ if(initialHyperedges!==null){for(let ids of initialHyperedges)addEdge(ids,true);}
  else addEdge(Array.from({length:initialArity},(_,i)=>i));
  function dequeue(){
   if(scheduler==='fifo')return queue[head++];
@@ -195,11 +196,13 @@ function nullControl(arity){
  const completePairs=[];
  for(const pair of combinations(id,2))completePairs.push(pair);
  const allProper=[];
- for(const proper of combinations(id,arity-1))if(proper.length>=3)allProper.push(proper);
+ for(const proper of combinations(id,arity-1))allProper.push(proper);
+ const pairsOf=sets=>{const out=new Set();for(const e of sets)for(const pair of combinations(e,2))out.add(pair.join(':'));return [...out].sort().join('|');};
  const high=runTrial({initialArity:arity,initialBits:inputBits,rules:{[arity]:rule},limit:6,initialHyperedges:[id]});
- const low=runTrial({initialArity:arity,initialBits:inputBits,rules:{[arity]:rule},limit:6,initialHyperedges:arity===3?[]:allProper});
+ const low=runTrial({initialArity:arity,initialBits:inputBits,rules:{[arity]:rule},limit:6,initialHyperedges:allProper});
  // The 2-section of complete k-hyperedge and all its (k-1)-faces is the same K_k.
- return {k:arity,highOrderInitialRelation:'one genuine k-hyperedge',controlRelation:arity===3?'all pairwise edges only (not entered into high-order engine)':'all proper (k-1)-hyperedges; same K_k 2-section',
+ return {k:arity,highOrderInitialRelation:'one genuine k-hyperedge',controlRelation:arity===3?'all three pairwise edges, explicitly passive':'all proper (k-1)-hyperedges; no k-ary edge',
+  pairwiseProjectionIdentical:pairsOf([id])===pairsOf(allProper),properFaceCount:allProper.length,
   highOrderRewrites:high.rewrites,controlRewrites:low.rewrites,highOrderStatus:high.status,controlStatus:low.status};
 }
 
