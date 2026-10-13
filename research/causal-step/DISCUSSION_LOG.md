@@ -265,3 +265,21 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Current disposition:** Keep Bianconi as a literature/reference candidate; develop the necessary topology/node-structure foundations internally and separately; leave direct connection and publication readiness **unverified**. The two original Causal Step premises and metric-free graph baseline are not changed.
 
+## 2026-10-12 — Particle emergence depth conjecture and researcher correction on rule dependence
+
+**Researcher (verbatim):**
+
+> So I find myself speculating about the scope of unbounded hypergraphs' representation of causal networks and what level of, what depth of rewrite becomes necessary before you can start representing elementary particles, or even, you know, neutrons and protons, or even neutrinos. And I can't help but, for some reason, and I can't put my finger on why, but it's my feeling that we need an incredible amount of depth in the causal network before I would expect things like elementary particles to show up. What's your guess?
+
+**Subsequent researcher correction (verbatim):**
+
+> Your graph heavily depends on which initial conditions and rules you're using.
+
+**Researcher-originated hypothesis and correction:** A possibly large number of *causally dependent rewriting layers* could be needed before any structures with the properties of recognizable particles are representable. This is an exploratory depth conjecture, not a predicted numerical threshold or claim that particle physics has already emerged. Critically, the researcher rejects treating the depth measured in one **arbitrarily selected** toy graph as representative of a general unbounded causal hypergraph. Depth depends on initial seed(s), parent/event choice, edge/hyperedge admission, update order, and other rewrite rules.
+
+**Existing model observation (agent executed, strictly conditional):** The no-pruning, 9,000-node/30,000-edge-cap strict new-event-link source with default deterministic hash has 7,820 nodes and a maximum recorded causal predecessor depth of **20** after 3,000 *host* simulation updates. Intermediate checkpoints: 533 nodes / depth 13 at 200; 2,621 / depth 18 at 1,000; 5,220 / depth 20 at 2,000. The source globally selects a parent using `active[word % liveCount]`. Its breadth-versus-depth behavior is a **consequence of that rule and its initial one-root condition**; neither number diagnoses physical dimensionality, particle-production depth, or the real universe.
+
+**Agent reasoning correction:** Distinguish (a) graph cardinality/event count, (b) longest causal predecessor chain under a *declared* directed causal relation, (c) number of host scheduling updates, (d) depth of nested rewrite provenance, and (e) existence of a persistent invariant particle-like pattern. They are different quantities. The presence of closed graph paths is not itself a bound particle; with a coordinate-free graph, mass, spin, charges, gauge fields, conservation laws, and 3D/4D representation remain undefined. Simple discrete quantum automata can give analogues of free-particle dynamics under specially chosen microscopic Hilbert/operator structure, which does **not** demonstrate that the unbounded hypergraph has those properties or predict when particles appear. No universal monotonic relationship between graph depth and particle complexity has been established.
+
+**Research program:** Isolate initial-condition and rewrite-rule sensitivity of measured causal depth before using it in any particle-emergence argument. Use identical source and node production while varying one parent-selection rule at a time, and independently vary initial roots; report the resulting depth range as evidence **against** extrapolating from one convenient graph. Independently specify a falsifiable, representation-invariant candidate for a persistent particle-like structure before any test of minimum depth. Experimental outcomes, if executed, belong in a separately referenced review; no physical model is adopted by this discussion.
+
