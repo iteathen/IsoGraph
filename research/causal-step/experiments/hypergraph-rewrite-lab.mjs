@@ -91,7 +91,7 @@ function runTrial({initialArity,initialBits,rules,scheduler='fifo',seed=1,limit=
  const R=rng(seed),nodes=[];
  for(let i=0;i<initialArity;i++)nodes.push({id:i,bit:(initialBits>>i)&1,depth:0});
  let edgeList=[],liveEdges=0,queue=[],head=0,active=0,rewrites=0,totalCreated=0,last50=[],maxDepth=0;
- let finalStatus='limit',stopCause='',rankCounts={};
+ let finalStatus='limit',stopCause='',rankCounts={},firedByRank={};
  function ruleFor(arity){return rules[arity];}
  function addEdge(ids){
   if(ids.length<3)throw new Error('Pairwise relations forbidden in this lab');
@@ -126,7 +126,7 @@ function runTrial({initialArity,initialBits,rules,scheduler='fifo',seed=1,limit=
   if(nodes.length+1>nodeCap||liveEdges-(rule.keep?0:1)+newEdges>edgeCap){
    finalStatus='resource-censored';stopCause=nodes.length+1>nodeCap?'node budget':'hyperedge budget';break;
   }
-  edge.fired=true;
+  edge.fired=true;firedByRank[edge.ids.length]=(firedByRank[edge.ids.length]||0)+1;
   if(!rule.keep){edge.alive=false;liveEdges--;rankCounts[edge.ids.length]--;}
   let ones=0,maxParentDepth=0;
   for(const id of edge.ids){ones+=nodes[id].bit;maxParentDepth=Math.max(maxParentDepth,nodes[id].depth);}
@@ -150,12 +150,13 @@ function runTrial({initialArity,initialBits,rules,scheduler='fifo',seed=1,limit=
  return {status:final,stopCause,initialWeight:startWeight,initialEnabled:firstEnabled,
   rewrites,nodes:nodes.length,liveEdges,hyperedgesCreated:totalCreated,activeFrontier:backlog(),
   maxDepth,finalBacklogChange:last-first,nearFlatBacklogWindow:nearFlat,
+  fired3:firedByRank[3]||0,fired4:firedByRank[4]||0,fired5:firedByRank[5]||0,
   count3:rankCounts[3]||0,count4:rankCounts[4]||0,count5:rankCounts[5]||0,count6:rankCounts[6]||0};
 }
 
 function csvField(x){return String(x).replaceAll('"','""').includes(',')?'"'+String(x).replaceAll('"','""')+'"':String(x);}
 function toCSV(items,columns){return columns.join(',')+'\n'+items.map(x=>columns.map(k=>csvField(x[k]??'')).join(',')).join('\n')+'\n';}
-const stats=['status','stopCause','initialWeight','initialEnabled','rewrites','nodes','liveEdges','hyperedgesCreated','activeFrontier','maxDepth','nearFlatBacklogWindow','count3','count4','count5','count6'];
+const stats=['status','stopCause','initialWeight','initialEnabled','rewrites','nodes','liveEdges','hyperedgesCreated','activeFrontier','maxDepth','nearFlatBacklogWindow','fired3','fired4','fired5','count3','count4','count5','count6'];
 function sweepOne(arity,n,steps){
  const rules=chooseRuleSample(arity,n),trials=[],ruleRecords=[];
  for(let j=0;j<rules.length;j++){
