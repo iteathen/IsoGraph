@@ -1,0 +1,102 @@
+{
+  "schema": "isograph.track-L.G0.L01-p4-p5-semantic-priority-extension-local-preflight.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "scope": "AUTHOR_SIDE_SCHEMA_CROSSWALK_CONSERVATION_ONLY_NOT_A_COLD_SEMANTIC_QUALIFICATION",
+  "source_pdf_revision": "arXiv:0711.0770v1",
+  "source_pdf_visual_direct_review": true,
+  "source_pdf_sha_this_run_verified": false,
+  "parents": {
+    "source_pilot_blob": "919dbb1092cdff216238b4d8b986779a49f0f3a5",
+    "blind_packet_blob": "badb430f7ec76cdb27894e035833ccabc29cecde",
+    "source_inverse_blob": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "SSC_blob": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "gate_199_blob": "74f1fb96448c759d3711d6c539f798cb1a631c42"
+  },
+  "checks": {
+    "baseline": "PASS",
+    "source_loci": 4,
+    "source_atoms": 15,
+    "source_exact_tables_cold": 0,
+    "whole_six_sources_cold": 0,
+    "negative_mutations": [
+      {
+        "name": "invent_global_unit_structure_constants",
+        "rejected": true,
+        "triggered": [
+          "EQ21_GLOBAL_COEFFICIENT_PROMOTION"
+        ]
+      },
+      {
+        "name": "mark_table_exact_cells_verified",
+        "rejected": true,
+        "triggered": [
+          "PROMOTED_L01-P45-011"
+        ]
+      },
+      {
+        "name": "remove_one_source_obligation",
+        "rejected": true,
+        "triggered": [
+          "ATOM_SET",
+          "LOCAL_ATOM_MISSING_L01-P45-015"
+        ]
+      },
+      {
+        "name": "erase_ssc_owner",
+        "rejected": true,
+        "triggered": [
+          "SOURCE_INVERSE_L01-S010",
+          "OWNER_L01-P45-001",
+          "OWNER_L01-P45-002"
+        ]
+      },
+      {
+        "name": "promote_g0",
+        "rejected": true,
+        "triggered": [
+          "GATE_UNLOCK"
+        ]
+      },
+      {
+        "name": "forge_independent_review",
+        "rejected": true,
+        "triggered": [
+          "FAKE_COLD"
+        ]
+      },
+      {
+        "name": "swap_pdf_page",
+        "rejected": true,
+        "triggered": [
+          "PAGE_SOURCE_L01-P45-001"
+        ]
+      },
+      {
+        "name": "assign_different_source_locus",
+        "rejected": true,
+        "triggered": [
+          "LOCAL_ATOM_MISSING_L01-P45-001",
+          "PAGE_SOURCE_L01-P45-001",
+          "OWNER_L01-P45-001"
+        ]
+      }
+    ],
+    "blind_contamination_mutation_rejected": true,
+    "defined_hostiles": 9,
+    "rejected_hostiles": 9
+  },
+  "limits": [
+    "The source has not been cold independently decoded",
+    "Exact Table1/Eq2.2 mathematical AST incomplete",
+    "The local audit cannot establish correctness of author assertions or full G0 reconstruction",
+    "No G0 gate, SSC or W author semantics mutated"
+  ],
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "analysis_and_validation": "agent-assisted",
+    "recorded_on": "2026-10-13"
+  }
+}
