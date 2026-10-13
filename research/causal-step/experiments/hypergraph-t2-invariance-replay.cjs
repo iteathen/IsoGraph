@@ -131,9 +131,10 @@ function permutations(n){
   {name:'reversal',map:Array.from({length:n},(_,i)=>n-1-i)}];
 }
 function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
-  includeTransport=true,includeNaive=true,alternateRandom=false,ruleIds=null}={}){
+  includeTransport=true,includeNaive=true,alternateRandom=false,ruleIds=null,schedulers=['fifo','random']}={}){
  const supported=[3,4,5];if(!ks.length||ks.some(k=>!supported.includes(k)))throw Error('Unsupported arity');
  if(!Number.isInteger(horizon)||horizon<1||horizon>10000)throw Error('Bad horizon');
+ if(!schedulers.length||schedulers.some(x=>!['fifo','random'].includes(x)))throw Error('Bad scheduler filter');
  const code=instrument(original)+'\nreturn results;';
  const compiled=new Function('process','fs','path','__trialOptions','__observe',code);
  const ref=parseReference(referenceCsv);
@@ -145,7 +146,7 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
   const origCase = c.k===3&&c.ruleId===28?'overlap':
      c.k===5&&(c.ruleId===81||c.ruleId===4)?'overlap':'single';
   const initialN=c.k+(origCase==='overlap'?1:0);
-  for(const scheduler of ['fifo','random']){
+  for(const scheduler of schedulers){
    const opts={...c,horizon,scheduler,seedOffset:0};
    const baseline=runOne(compiled,opts);
    const legacy=matchReference(baseline.summary,ref,horizon);
@@ -193,8 +194,8 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
   const b=reports.find(x=>x.k===c.k&&x.ruleId===c.ruleId&&x.scheduler==='random');
   const first=a&&b&&a.baselineDigest32===b.baselineDigest32;
   schedulerPairs.push({k:c.k,ruleId:c.ruleId,
-    sameFullProvenanceDigest:first,fifoRecent64:a?.baselineDigest32,
-    randomRecent64:b?.baselineDigest32,
+    sameFullProvenanceDigest:a&&b?first:null,fifoDigest32:a?.baselineDigest32||null,
+    randomDigest32:b?.baselineDigest32||null,
     reportedGateDifference:a?.legacy.status==='PASS'&&b?.legacy.status==='PASS'&&
       (a.ruleId===21&&a.k===4||a.ruleId===81&&a.k===5)});
  }
@@ -203,7 +204,7 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
   originalRunnerBlobSha:PINNED_RUNNER_BLOB,
   referenceCsvBlobSha:PINNED_REFERENCE_CSV_BLOB,
   methodology:'source-text observer instrumentation with checked insertion anchors; no edits to generator or selected rules; transported event occurrence schedule versus raw order of eligible edges',
-  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom,ruleIds},
+  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom,ruleIds,schedulers},
   totals:{baseHistories:reports.length,baselineMatches:fullReference,
      matchedHistoricalScalarFields:fullRefFields,
      transportedPermutationRuns:checked,
@@ -231,7 +232,8 @@ if(typeof require!=='undefined' && require.main===module){
  const horizon=Number(process.argv[3]||8000);
  const outfile=process.argv[4]||path.join(here,'results/t2-replay-'+ks.join('-')+'-'+horizon+'.json');
  const ruleIds=process.argv[5]?process.argv[5].split(',').map(Number):null;
- const result=runT2(source,csv,{ks,horizon,ruleIds});
+ const schedulers=process.argv[6]?process.argv[6].split(','):['fifo','random'];
+ const result=runT2(source,csv,{ks,horizon,ruleIds,schedulers});
  fs.writeFileSync(outfile,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({outfile,totals:result.totals}));
 }
