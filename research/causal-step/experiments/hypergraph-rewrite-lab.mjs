@@ -18,6 +18,7 @@
  *      node hypergraph-rewrite-lab.mjs multi 3 160 250 results
  *      node hypergraph-rewrite-lab.mjs symmetry 5 0 200 results
  *      node hypergraph-rewrite-lab.mjs coupled 4 32 160 results
+ *      node hypergraph-rewrite-lab.mjs initial 5 64 200 results
  * node >=18; no external dependencies.
  */
 import fs from 'node:fs';
@@ -26,7 +27,7 @@ import path from 'node:path';
 const args=process.argv.slice(2), phase=args[0]||'sweep';
 const k=Number(args[1]||3), ruleCount=Number(args[2]||128), horizon=Number(args[3]||250);
 const folder=path.resolve(args[4]||'./hypergraph-results');
-if(!['sweep','controls','multi','symmetry','coupled'].includes(phase))throw new Error('Unknown phase');
+if(!['sweep','controls','multi','symmetry','coupled','initial'].includes(phase))throw new Error('Unknown phase');
 if(phase!=='controls'&&(![3,4,5].includes(k)||!Number.isSafeInteger(ruleCount)||ruleCount<1||ruleCount>10000||!Number.isSafeInteger(horizon)||horizon<1||horizon>5000))throw new Error('Invalid bounded arguments');
 const NODE_LIMIT=2000,EDGE_LIMIT=16000,BUILD_SEED=20261012;
 
@@ -296,6 +297,49 @@ function coupledSweep(arity,number,steps){
  return {trials,summary:{arity,mutated:summarizeMutation(1),fixedStateControl:summarizeMutation(0),
    limitations:'binary arbitrary state mutation; one newborn per rewrite; no representation of matter, physical geometry or energy; no exact nonabsorbing steady states possible with monotonically increasing nodes'}};
 }
+
+function initialIncidenceSample(ruleN,steps){
+ const n=5,oldIDs=Array.from({length:n},(_,i)=>i);
+ const places=[];for(let r=3;r<=n;r++)for(let sub of combinations(oldIDs,r))places.push(sub);
+ if(places.length!==16)throw new Error('unexpected five-node higher-order incidence count');
+ const R=rng(BUILD_SEED+501),trials=[],rulesets=[];
+ const pools={3:chooseRuleSample(3,ruleN+20),4:chooseRuleSample(4,ruleN+20),5:chooseRuleSample(5,ruleN+20)};
+ for(let j=0;j<ruleN;j++){
+  const rules={3:pools[3][(j*13+5)%pools[3].length],4:pools[4][(j*17+7)%pools[4].length],5:pools[5][(j*19+11)%pools[5].length]};
+  const bits=Math.floor(R()*32);
+  const initMasks=[1, (1<<10)-1, ((1<<5)-1)<<10,1<<15,(1<<16)-1];
+  while(initMasks.length<8){
+   const v=1+Math.floor(R()*65535);if(!initMasks.includes(v))initMasks.push(v);
+  }
+  rulesets.push({rule:j,states:bits,rank3weights:rules[3].weights,rank4weights:rules[4].weights,rank5weights:rules[5].weights,
+   rank3outputs:rules[3].ranks,rank4outputs:rules[4].ranks,rank5outputs:rules[5].ranks});
+  for(let t=0;t<initMasks.length;t++){
+   const mask=initMasks[t],initialHyperedges=[];
+   for(let ix=0;ix<places.length;ix++)if(mask&(1<<ix))initialHyperedges.push(places[ix]);
+   const oldCount={3:0,4:0,5:0};for(const edge of initialHyperedges)oldCount[edge.length]++;
+   for(const scheduler of ['fifo','random']){
+    const z=runTrial({initialArity:n,initialBits:bits,rules,initialHyperedges,scheduler,
+       seed:BUILD_SEED+j*37,limit:steps});
+    trials.push({rule:j,mask:mask.toString(16).padStart(4,'0'),initialBits:bits,initialRank3:oldCount[3],
+      initialRank4:oldCount[4],initialRank5:oldCount[5],scheduler,...z});
+   }
+  }
+ }
+ let differingGroups=0;
+ for(let j=0;j<ruleN;j++){
+  const z=trials.filter(x=>x.rule===j&&x.scheduler==='fifo');
+  const outcomes=new Set(z.map(x=>x.status));if(outcomes.size>1)differingGroups++;
+ }
+ return {rulesets,trials,summary:{ruleSets:ruleN,initialConfigurationsPerRule:8,schedulers:2,totalTrials:trials.length,
+  initialIncidencePositions:16,allLabeledIncidencePatterns:65536,
+  initiallyInert:trials.filter(x=>x.status==='initially-inert').length,
+  absorbedAfterFiring:trials.filter(x=>x.status==='absorbed').length,
+  stillProductiveAtHorizon:trials.filter(x=>x.status==='limit').length,
+  budgetCensored:trials.filter(x=>x.status==='resource-censored').length,
+  rulesetsWithDifferentOutcomesAcrossIncidences:differingGroups,
+  actualFiredRank4:trials.filter(x=>x.fired4>0).length,
+  actualFiredRank5:trials.filter(x=>x.fired5>0).length}};
+}
 function relabelSymmetryControls(arity,steps){
  const rows=[],mismatches=[];
  const ruleSet=[
@@ -360,6 +404,12 @@ if(phase==='sweep'){
  fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-coupled-trials.csv'),toCSV(z.trials,['rule','weightsMask','rankMask','mode','keep','arity','mutation','initialOnes','scheduler','status','originalEligible','rewrites','nodes','liveEdges','maxDepth','frontier','reactivationEvents','activatedOld']));
  fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-coupled-summary.json'),JSON.stringify(z.summary,null,2)+'\n');
  console.log(JSON.stringify({phase,k,summary:z.summary}));
+ }else if(phase==='initial'){
+ const z=initialIncidenceSample(ruleCount,horizon);
+ fs.writeFileSync(path.join(folder,'higher-order-initial-incidence-rules.csv'),toCSV(z.rulesets,['rule','states','rank3weights','rank4weights','rank5weights','rank3outputs','rank4outputs','rank5outputs']));
+ fs.writeFileSync(path.join(folder,'higher-order-initial-incidence-trials.csv'),toCSV(z.trials,['rule','mask','initialBits','initialRank3','initialRank4','initialRank5','scheduler',...stats]));
+ fs.writeFileSync(path.join(folder,'higher-order-initial-incidence-summary.json'),JSON.stringify(z.summary,null,2)+'\n');
+ console.log(JSON.stringify({phase,summary:z.summary}));
 }else if(phase==='multi'){
  const z=multiSample(ruleCount,horizon);
  fs.writeFileSync(path.join(folder,'higher-order-multi-rules.csv'),toCSV(z.rules,['j','rank3weights','rank4weights','rank5weights','rank3outputs','rank4outputs','rank5outputs']));
