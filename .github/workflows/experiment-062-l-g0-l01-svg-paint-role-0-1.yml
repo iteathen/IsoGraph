@@ -1,0 +1,50 @@
+name: Experiment 062 L G0 L01 SVG paint role census 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py'
+      - '.github/workflows/experiment-062-l-g0-l01-svg-paint-role-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L01-original-svg-paint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Deterministic source-paint preregistration and code checks
+        run: |
+          set -euo pipefail
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py)" = "cd7acce6f596738752dc45319cc0ca7d1a37eba7"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py)" = "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json)" = "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json)" = "24163965af4d1e13e75371638fcfd70b793db2ac"
+          test "$(git hash-object experiments/062/L_CURRENT_STAGE_GATE_0_191.json)" = "6211130c2ade9859018e992b075f1648cf096ec4"
+          python3 -m py_compile research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py
+          python3 research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py --self-test
+      - name: Source renderer requirement
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Source-pinned original PDF to paint and curved-path role inventory
+        run: |
+          set -euo pipefail
+          scratch="$(mktemp -d)"
+          trap 'rm -rf "$scratch"' EXIT
+          export L01_ORIGINAL="$scratch/l01-v1.pdf"
+          node --input-type=module -e '
+            import {writeFileSync} from "node:fs";
+            import {createHash} from "node:crypto";
+            const r=await fetch("https://arxiv.org/pdf/0711.0770v1",{signal:AbortSignal.timeout(65000)});
+            if(!r.ok)throw Error("frozen-primary-HTTP-"+r.status);
+            const bytes=Buffer.from(await r.arrayBuffer());
+            const digest=createHash("sha256").update(bytes).digest("hex");
+            if(bytes.length!==623525||digest!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")
+              throw Error("original-primary-sha-or-byte-size-mismatch");
+            writeFileSync(process.env.L01_ORIGINAL,bytes);
+            console.log(JSON.stringify({binary:"VERIFIED",sha256:digest,bytes:bytes.length}));
+          '
+          python3 research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py \
+            --pdf "$L01_ORIGINAL" \
+            --extractor research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py

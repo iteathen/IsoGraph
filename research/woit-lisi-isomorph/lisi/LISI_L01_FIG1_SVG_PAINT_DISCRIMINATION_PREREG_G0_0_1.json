@@ -1,0 +1,121 @@
+{
+  "schema": "isograph.track-L.G0.L01-source-SVG-paint-role-prospective-check.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "FROZEN_INTERNAL_SOURCE_GEOMETRY_DIAGNOSTIC_PREREGISTRATION",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "svg_sha256_from_prior_CI": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "raster_sha256_from_prior_CI": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "original_pdf_page_zero_based": 2,
+    "figure": "Figure 1"
+  },
+  "parent_head": "caf49007c55a588d6c001a12b780b28a6b70d611",
+  "preserved_previous_source_run": {
+    "workflow_id": 38335787442,
+    "source_verified": true,
+    "source_candidate_linear_segments": 108,
+    "expanded_shapes": 2354,
+    "unresolved_entries": 2263,
+    "curved_path_reason_occurrences": 2256,
+    "clip_path_reason_occurrences": 11,
+    "source_graph_qualified": false
+  },
+  "frozen_inputs": {
+    "profile": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py",
+      "git_blob_sha": "cd7acce6f596738752dc45319cc0ca7d1a37eba7"
+    },
+    "extractor": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py",
+      "git_blob_sha": "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+    },
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_191.json",
+      "git_blob_sha": "6211130c2ade9859018e992b075f1648cf096ec4"
+    },
+    "workflow": {
+      "path": ".github/workflows/experiment-062-l-g0-l01-svg-paint-role-0-1.yml",
+      "git_blob_sha": "6ecbbf85cbe62829e69f63a829a28bad95a7f71a"
+    }
+  },
+  "question": "Of the 2256 curve-related incomplete candidates in full original page3 SVG, how many are sourced from explicitly fill-only, stroke-bearing, both-paint, unpainted or unknown paint occurrences? Do the complete rendered shape count and 108 linear cropped candidates match a separate paint walk?",
+  "method": "Independent XML occurrence walk resolves use references and inherited inline shape style, preserving fill-only curved artwork as possible source glyphs OR filled connectors; carries clip/style uncertainties without interpreting field action. Run on frozen original PDF and SVG, compare v0.2 expansion count, and inventory all >=10pt provisional straight segments in Figure1 crop.",
+  "competing_hypotheses": [
+    {
+      "id": "P1",
+      "description": "Most curve flags are fill-only glyph/vector outlines, not stroke-bearing curves",
+      "disposition": "TEST_MECHANICALLY_WITHOUT_GLYPH_PROMOTION"
+    },
+    {
+      "id": "P2",
+      "description": "Some curve flags are stroke-bearing drawn connectors",
+      "disposition": "TEST_MECHANICALLY_WITHOUT_ENDPOINT_PROMOTION"
+    },
+    {
+      "id": "P3",
+      "description": "Some fill-only curved artwork may depict thick drawn connectors rather than glyphs",
+      "disposition": "RETAIN_UNRESOLVED_DESPITE_FILL_ONLY_PAINT"
+    },
+    {
+      "id": "P4",
+      "description": "All curved flags can be safely discarded as irrelevant",
+      "disposition": "REJECT_UNSAFE_SCOPE_SHRINK"
+    }
+  ],
+  "falsifiers": [
+    "Rendered XML shape occurrence count differs from the pinned v0.2 parser's 2354 expansion count.",
+    "Frozen PDF, SVG, or 96-DPI raster SHA differs from pinned source.",
+    "Any stroke-bearing curve is silently reclassified as fill-only or discarded.",
+    "Any fill-only image is asserted to be a verified font glyph without vector-to-raster role reconstruction.",
+    "Clip/mask/filter unknowns disappear without independent clipping evaluation.",
+    "108 straight-line candidates are called 108 field connector edges or the 2256 curved flags are called distinct physics claims.",
+    "An asserted W-to-doublet or g-to-quark action is imported from paper prose as graphical edge or from Woit semantics."
+  ],
+  "qualification_limits": {
+    "source_image_role_cold_decoded": false,
+    "field_connector_endpoints_qualified": false,
+    "figure1_original_source_S004_closed": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "stage_tuple": {
+    "ssc_revision": "0.96",
+    "ssc_count": 191,
+    "source_first_groups": 350,
+    "L01_source_first_groups": 98,
+    "unqualified_original_L01_exact_visual_groups": 16,
+    "complete_original_six_source_cold_reviews": 0
+  },
+  "resource_record": {
+    "external_semantic_model_calls": 0,
+    "planned_new_GitHub_Actions_source_runs": 1,
+    "workflow_trigger": "path-filtered push",
+    "manual_dispatch": false,
+    "workflow_artifacts_retained": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro: complete source-faithful independent W/L renderings",
+    "technical_hypothesis_and_diagnostic": "agent-assisted SVG ink-role classifier; project internal execution",
+    "earliest_evidence_currently_located": "2026-10-12 G0 run 38335787442 curved-path debts",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "original_paper": "A. Garrett Lisi arXiv:0711.0770v1"
+  }
+}
