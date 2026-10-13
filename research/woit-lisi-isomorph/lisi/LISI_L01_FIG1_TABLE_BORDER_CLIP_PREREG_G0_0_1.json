@@ -1,0 +1,76 @@
+{
+  "schema": "isograph.track-L.G0.original-Fig1-table-border-clip-evidence-prereg.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "paper": "A. Garrett Lisi original 2007",
+    "arxiv": "0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "SVG_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "page_zero_based": 2
+  },
+  "parent_expected_head": "e19fc145344d40daf48daf4da648e6d2456c6f57",
+  "dependencies": {
+    "gate194": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_194.json",
+      "blob_sha": "cc9e1a133fbfdbc2c98c868812ca61f69feffb0f"
+    },
+    "source_ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "source_inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "prior_exact_ink_evidence": {
+      "path": "experiments/062/L01_FIG1_ORIGINAL_SVG_THREE_STROKE_INK_AND_CLIP_CI_SUCCESS_0_1.json",
+      "blob_sha": "0a721d865a7cf9cff0bb475363b43ef22c20ecd1",
+      "run_id": 38341969223
+    }
+  },
+  "script": {
+    "path": "experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py",
+    "blob_sha": "78cd3a96fbebde311b31b3908ff5608deea8c59c",
+    "workflow": ".github/workflows/experiment-062-l-g0-l01-clipped-table-border-0-1.yml",
+    "workflow_blob_sha": "469d8c5b77538ceb682521c8b3de6017669b93f5"
+  },
+  "question": "Is the original rectangle outline root/svg[216]/g[0]/path, previously excluded by conservative clip-path handling, a visible drawn table frame that meets ink paths 249,251,256 in source vector geometry? What actual source clip references, transforms, raw polygon bounds, and line widths determine it?",
+  "actions": [
+    "Download exact primary source only after deterministic script syntax/fixture and frozen SSC/G0 blob preflight.",
+    "Re-export pinned page3 SVG and audit 11 original top-level clip-group anchors, raw affine matrices, clip polygon bounding boxes and path descendants.",
+    "Expand clipped table frame source path root/svg[216]/g[0]/path through inherited affine/paint style while preserving clip ancestor as an explicit unresolved visibility predicate.",
+    "Compute conditional filled stroke intersection between frame segments and the exact un-clipped W-side source ink strokes 249,251,256, without certifying final clipped frame visibility.",
+    "Do not import Lisi's electroweak source prose as the original SVG connector topology."
+  ],
+  "negative_controls": [
+    "A clipped source shape must not be treated as visible ink merely because it is a resolved linear stroke.",
+    "If any unexpected clip group geometry/transform or incomplete path exists, preserve it as debt.",
+    "Reject hypothetical unlipped W/frame ink overlap as conclusive graph edge.",
+    "Reject all cross-track Woit structural expectations.",
+    "Preserve all earlier source-check failure runs and preserve current SSC/gate untouched."
+  ],
+  "qualifications": {
+    "source_figure_exhaustively_visual_cold": false,
+    "L01_S004_completed": false,
+    "SSC_revision": "0.96",
+    "SSC_count": 191,
+    "L01_exact_visual_groups_open": 16,
+    "all_original_source_cold_reviews_completed": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR_merge_authorized": false
+  },
+  "provenance": {
+    "human_source_treatment_direction": "Joshua Oshiro",
+    "technical_diagnostic_design": "agent-assisted",
+    "recorded_on": "2026-10-12",
+    "earliest_evidence": "source CI 38341969223 and prior source screenshot",
+    "external_source": "A. Garrett Lisi 0711.0770v1",
+    "retrospective": false
+  }
+}
