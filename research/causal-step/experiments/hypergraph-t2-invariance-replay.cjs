@@ -25,6 +25,7 @@ function instrument(original){
  let s=original.replace(/^#![^\n]*\n/, '');
  s=exactReplace(s,"import fs from 'node:fs';","");
  s=exactReplace(s,"import path from 'node:path';","");
+ s=exactReplace(s,'console.log(JSON.stringify({meta,concise}));','');
  s=exactReplace(s,
  "const bits=spec.initial==='zero'?0:spec.initial==='one'?(1<<initialN)-1:(1<<Math.floor(initialN/2))-1;\n const rand=rng(sourceSeed);",
  "const bits=spec.initial==='zero'?0:spec.initial==='one'?(1<<initialN)-1:(1<<Math.floor(initialN/2))-1;\n"+
