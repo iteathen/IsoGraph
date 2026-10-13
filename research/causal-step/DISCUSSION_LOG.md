@@ -355,3 +355,17 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Disposition:** Preserve original trial CSVs and their measured stopping/continuing classifications, correct research prose, and assess candidates according to the researcher's actual noncollapse criterion. No particle, spacetime, entropy mechanism, new physical rule or publication claim is inferred.
 
+## 2026-10-12 — Researcher adds expressive-complexity filter to indefinite noncollapse
+
+**Researcher (verbatim):**
+
+> All right. Another filter you can use is the ones that form very simple reoccurring patterns indefinitely can pretty much be ruled out. Only the ones that exhibit behavior of being able to represent some complexity are actually valid for this.
+
+**Researcher-originated selection requirement:** Noncollapse alone is insufficient. Reject or decisively deprioritize **trivially periodic/repetitive behavior that can continue indefinitely yet displays no capacity to represent meaningful complexity**, while retaining candidate higher-order rewrite systems that exhibit **complexity-generating potential**. This is a **second criterion layered on top of persistent survival**, not a redefinition of “steady state” back to equilibrium, a demand for maximal entropy or a declaration that every complicated-looking random trace is viable physics.
+
+**Agent methodological interpretation (not a third physical premise):** Separate *a trajectory's observed repetitive simplicity* from *a rule's expressiveness across admissible initial states and interacting hypergraphs*. A simple periodic orbit cannot support this project by itself; conversely, finding one trivial orbit does **not** certify that its underlying rule is incapable of complex structures on different initial configurations. Classify strong negative cases where limited complexity is established for the **whole stated scope**, finite-window repetition as a **provisional screen**, and positive capacity only where multiple causally interacting hyperedges, nontrivial structured novelty, distinct reachable patterns, and holdout/source variations are demonstrated. Avoid mistaking unique node IDs, a larger node count, an imposed branching rule, scheduler randomness, or arbitrary label entropy for complexity.
+
+**Existing evidence revealing the issue:** The current fixed-arity hypergraph family contains provably indefinitely branching homogeneous-bit rules whose enabled frontier satisfies `F(t)=1+(k-1)t`. These prove survival **by construction**, not complexity. A later coupled-state control shows that some of the **same source activation/output predicates** can participate in reactivation of previously ineligible overlapping hyperedges **if an additional state-update mechanism is introduced**; that is a distinct variant, not proof that the original immutable-state system was complex. The detailed complexity screen and the limits of this inference are in [complexity-capacity follow-up](reviews/2026-10-12-higher-order-complexity-capacity-filter.md).
+
+**Research disposition:** Evaluate both **(1) productive noncollapse** and **(2) nontrivial higher-order complexity capacity**. Neither proof of infinite branching nor a single noisy growth plot automatically passes the second criterion. Source, original trials, historical HTML and earlier negative findings remain unchanged.
+
