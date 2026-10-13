@@ -1,0 +1,67 @@
+{
+  "schema": "isograph.track-L.G0.original-Fig1-clip-and-stroke-ink-successor-prereg.v0.2",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "parent_commit_expected": "4cc9a9b78e2c7a54deb08e17c7e2fc98f84997b7",
+  "original_predecessor": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_FIG1_CLIP_STROKE_FOOTPRINT_PREREG_G0_0_1.json",
+    "git_blob_sha": "e72c0b145e0abd6d6e114bdd402d78fde3a798c0"
+  },
+  "first_failed_CI": {
+    "path": "experiments/062/L01_FIG1_STROKE_FOOTPRINT_FIRST_SYNTAX_FAILURE_0_1.json",
+    "git_blob_sha": "2344349d1d25b6f7514302a693c073b8fa3a54e0",
+    "run_id": 38341563620,
+    "conclusion": "failure",
+    "source_PDF_downloaded": false,
+    "no_original_source_claim": true
+  },
+  "minimum_successor": {
+    "script": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-2.py",
+    "git_blob_sha": "69256743104e4ebadd29e1693b9bc4043e787bc0",
+    "workflow": ".github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-2.yml",
+    "workflow_blob_sha": "73add86c898d1d8836c3f2f2e968f14b88313d3b",
+    "changes": "One-character extra closing parenthesis removed in signed_area; report schema version incremented; all SVG clipping and stroke geometry/anti-promotion tests otherwise unchanged."
+  },
+  "reused_source": {
+    "arxiv": "0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "png96_sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "current_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_193.json",
+    "current_gate_blob_sha": "3f6b39fbb8314bad167402a208d301f6d725bc7d",
+    "ssc_revision": "0.96"
+  },
+  "target": "11 original clipPath closed-geometry checks; source paths 249,251,256 actual transformed stroke-width and butt cap geometry; pairwise/triple ink-footprint area; 384dpi same-source raster witness. All remain nonsemantic.",
+  "adversaries": [
+    "Any Python compile/synthetic selftest failure aborts before source download.",
+    "Source binary or renderer SHA mismatch invalidates original-source observations.",
+    "Any nonuniform stroke transform, dash, clip/filter or non-butt linecap makes rectangle ink model inapplicable and UNKNOWN.",
+    "Never conflate direct ink footprint overlap with graph topology or Lisi field-action from paper prose.",
+    "No G0, G1, full cold original semantic review or PR merge promotion."
+  ],
+  "qualification_boundaries": {
+    "source_graph_qualified": false,
+    "independent_image_semantic_read_complete": false,
+    "L01_S004_cold_qualified": false,
+    "source_census_0_96_frozen": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR_merge_authorized": false
+  },
+  "resources": {
+    "successor_one_new_scoped_push_CI": true,
+    "external_semantic_calls": 0,
+    "manual_workflow_dispatch": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "diagnosis_and_successor": "agent-assisted development",
+    "source_event": "2026-10-12 failed CI 38341563620",
+    "recorded_on": "2026-10-12",
+    "original_external": "A. Garrett Lisi v1"
+  }
+}

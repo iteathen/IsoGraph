@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062.L.G0.Fig1-clip-stroke-footprint-first-syntax-failure.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "historical_run": {
+    "run_id": 38341563620,
+    "job_id": 115113482490,
+    "head_sha": "4cc9a9b78e2c7a54deb08e17c7e2fc98f84997b7",
+    "event": "push",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38341563620",
+    "failed_step": "Exact source/gate/tool preflight and synthetic controls",
+    "error": "SyntaxError: unmatched ')' at source script line 38",
+    "failed_code_path": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py",
+    "failed_code_blob_sha": "4b4ca5243a6787bfc5ee46e9d73a930458ee83ae",
+    "source_PDF_downloaded": false,
+    "SVG_examined": false
+  },
+  "diagnosis": {
+    "owner": "SOURCE_TOOL_AUTHOR_PYTHON_SYNTAX",
+    "cause": "A superfluous close parenthesis following /2 in signed_area conditional return statement",
+    "selected_remediation": "Preserve v0.1 as failed in branch history, create v0.2 source script with one-character correction, rerun deterministic compilation and synthetic guards before original source fetch",
+    "not_theory_error": true,
+    "not_original_source_failure": true
+  },
+  "successor": {
+    "file": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-2.py",
+    "git_blob_sha": "69256743104e4ebadd29e1693b9bc4043e787bc0",
+    "workflow": ".github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-2.yml",
+    "workflow_blob_sha": "73add86c898d1d8836c3f2f2e968f14b88313d3b",
+    "source_semantic_targets_unmodified": true
+  },
+  "historical_lineage": {
+    "prior_source_g0_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_193.json",
+    "prior_gate_blob_sha": "3f6b39fbb8314bad167402a208d301f6d725bc7d",
+    "original_source_replay_CI": 38338924212,
+    "source_figure_semantic_stage": "OPEN"
+  },
+  "status": "FROZEN_FAILURE_NOT_RECLASSIFIED",
+  "authority_effect": "NONE",
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_imported": false,
+  "PR_merge_authorized": false,
+  "provenance": {
+    "direction": "Joshua Oshiro: independent full W/L treatments",
+    "technical_failure": "agent-authored syntax and CI diagnosis",
+    "first_failing_evidence": "2026-10-12 CI 38341563620",
+    "recorded_on": "2026-10-12",
+    "retrospective": false
+  }
+}
