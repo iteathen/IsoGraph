@@ -162,6 +162,8 @@ The first 1,000-step controlled sweep found the following (all uncapped):
 - [Detailed source audit, exact assumptions, references, falsifiers and pre-metric experimental program](reviews/2026-10-12-bianconi-gravity-from-entropy-comparison.md)
 - [Researcher's exact priority statement and agent bibliographic clarification](DISCUSSION_LOG.md)
 
+**Researcher's subsequent clarification — conditional simple-origin hypothesis:** If we provisionally assume that reality is emergent, the researcher regards a *relatively simple foundation rather than an already complex starting structure* as the **better explanatory guess**, not as a proved law or unique conclusion. Bianconi's node/network and gravity-from-entropy results are treated as **distant conceptual clues** only; the current Causal Step graph has no established representation of matter/Higgs fields, or derived 3D/4D geometry. Thus **no formal connection or entropic-force insertion is authorized**. Preserve the comparison as a research prioritization under Premise 1, not a new premise requiring matter or geometry to be assumed. See the [verbatim clarification](DISCUSSION_LOG.md).
+
 **Qualification:** Comparative research priority only; neither the frozen Primitive Presentation toy simulation nor the force-free coordinate-free ablation has been altered by this literature study. Independent physical correspondence remains unverified.
 
 ## Current research state
