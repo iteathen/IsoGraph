@@ -1,0 +1,166 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.relative-singlet-coupling-normalization-parameter.v0.1",
+  "scope": "PROJECT_COMPARISON_NOT_ORIGINAL_SOURCE_REPAIR",
+  "source_original": {
+    "b": 1,
+    "rank14_minor": "-2",
+    "invariant_source_generators": 8,
+    "non_invariant_generators": [
+      "q_r",
+      "q_g",
+      "q_b",
+      "qbar_r",
+      "qbar_g",
+      "qbar_b"
+    ],
+    "witness": {
+      "commutator_1_2": "2",
+      "commutator_5_6": "-1",
+      "qbar_b_1_2": "-1",
+      "qbar_b_5_6": "1",
+      "cross_product": "1"
+    }
+  },
+  "comparison_b2": {
+    "b": 2,
+    "rank14_minor": "-128",
+    "invariant_source_generators": 14,
+    "non_invariant_generators": [],
+    "witness": {
+      "commutator_1_2": "4",
+      "commutator_5_6": "-2",
+      "qbar_b_1_2": "-2",
+      "qbar_b_5_6": "1",
+      "cross_product": "0"
+    }
+  },
+  "comparison_b3": {
+    "b": 3,
+    "rank14_minor": "-1458",
+    "invariant_source_generators": 8,
+    "non_invariant_generators": [
+      "q_r",
+      "q_g",
+      "q_b",
+      "qbar_r",
+      "qbar_g",
+      "qbar_b"
+    ],
+    "witness": {
+      "commutator_1_2": "6",
+      "commutator_5_6": "-3",
+      "qbar_b_1_2": "-3",
+      "qbar_b_5_6": "1",
+      "cross_product": "-3"
+    }
+  },
+  "decoupled_b0": {
+    "b": 0,
+    "rank14_minor": "0",
+    "invariant_source_generators": 8,
+    "non_invariant_generators": [
+      "q_r",
+      "q_g",
+      "q_b",
+      "qbar_r",
+      "qbar_g",
+      "qbar_b"
+    ],
+    "witness": {
+      "commutator_1_2": "0",
+      "commutator_5_6": "0",
+      "qbar_b_1_2": "0",
+      "qbar_b_5_6": "1",
+      "cross_product": "0"
+    }
+  },
+  "normalized_family": "Rescale only the six first-row quark/antiquark coefficients after a fixed invertible per-generator source-to-integer rescaling; b=1 frozen original; b=2 externally hypothesized, not a source correction.",
+  "exact_two_cell_polynomial": "b*(2-b)",
+  "inferred_conditions": "At nonzero coupling, necessary two-cell condition b=2; whole 14-generator comparison at b=2 spans the 14D stabilizer of the displayed phi.",
+  "comparison_threeform_nonzero_terms": [
+    [
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      4,
+      -1
+    ],
+    [
+      0,
+      5,
+      6,
+      -1
+    ],
+    [
+      1,
+      4,
+      6,
+      -2
+    ],
+    [
+      2,
+      3,
+      5,
+      2
+    ]
+  ],
+  "comparison_gl7_stabilizer_rank_mod_p": [
+    35,
+    35
+  ],
+  "comparison_gl7_stabilizer_dimension_exact": 14,
+  "comparison_ordinary_commutator_pairs_preserving_phi": 91,
+  "source_first_author_error_established": false,
+  "source_49cell_independent_cold": false,
+  "original_source_7x7_fixture_unchanged": true,
+  "G0_frozen": false,
+  "controls_defined": 8,
+  "controls_rejected": 8,
+  "negative_controls": [
+    {
+      "name": "mutate_printed_first_row",
+      "rejected": true,
+      "reason": "COMPARISON_INVARIANT_OR_SOURCE_PIN_CHANGE"
+    },
+    {
+      "name": "mutate_printed_internal_q",
+      "rejected": true,
+      "reason": "COMPARISON_INVARIANT_OR_SOURCE_PIN_CHANGE"
+    },
+    {
+      "name": "source_claims_cold",
+      "rejected": true,
+      "reason": "SOURCE_AUTHORITY_full_49_cells_source_cold_qualified"
+    },
+    {
+      "name": "source_claims_error",
+      "rejected": true,
+      "reason": "SOURCE_AUTHORITY_source_author_error_proven"
+    },
+    {
+      "name": "source_unlocks_G1",
+      "rejected": true,
+      "reason": "SOURCE_AUTHORITY_G1_authorized"
+    },
+    {
+      "name": "source_W_import",
+      "rejected": true,
+      "reason": "SOURCE_AUTHORITY_W_semantics_imported"
+    },
+    {
+      "name": "source_matrix_incomplete",
+      "rejected": true,
+      "reason": "SOURCE_MATRIX_SIZE"
+    },
+    {
+      "name": "source_wrong_revision",
+      "rejected": true,
+      "reason": "SOURCE_REVISION"
+    }
+  ]
+}
