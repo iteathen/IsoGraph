@@ -64,11 +64,11 @@ At **step 1,000**, `nodeLimit=9,000`, `edgeLimit=30,000`, age pruning **disabled
 
 | Connection rule | Nodes | Edges | Components | Largest component |
 |---|---:|---:|---:|---:|
-| Original mandatory parent edge plus other connections | 2,621 | 3,386 | **1** | 2,621 |
+| Strict new-event links: mandatory parent plus optional secondary | 2,621 | 3,250 | **1** | 2,621 |
 | No mandatory parent link; occasional old-to-newborn optional link retained | 2,621 | 630 | **1,991** | 16 |
 | No links at all | 2,621 | **0** | **2,621** | **1** |
 
-The latter two are **null interventions**, not endorsed physical laws. Their point is causal attribution: source-level compulsory ancestry explains much of the apparent connected universe. The optional-link implementation still makes a global parent selection as host bookkeeping; it is not a fully unbiased causal-origin model.
+The first row is the strictly new-event-link `causal` control, not the separate legacy mode with old-to-old edges; therefore dropping the compulsory parent link changes only that rule. The latter two are **null interventions**, not endorsed physical laws. Their point is causal attribution: source-level compulsory ancestry explains much of the apparent connected universe. The optional-link implementation still makes a global parent selection as host bookkeeping; it is not a fully unbiased causal-origin model.
 
 ## What can be measured without introducing physical space?
 
@@ -94,7 +94,7 @@ Even the pure tree produces an apparent value *near three*, despite having **no 
 - **The graph survived, not spacetime:** Connectivity and branching result from explicit link-admission rules; strong graph-cycle counts remain only because cross-links are programmed.
 - **Computational cap is nonphysical:** It is monitored and separately varied; high-cap tests show default fragmentation is not robust.
 - **Unknown natural geometry:** No independently specified observer/spatial reconstruction or continuum-limit tests were performed, so no finite physical dimension or Newtonian/relativistic dynamics is derived.
-- **The source still has assumptions:** one starting event, global parent sampling, a specific deterministic random generator, 1–6 (?) offspring chosen by bit operations per host update, and graph birth/pruning rules. These have not been established as physics. In the hash-source setting births range from one to six depending on bit fields; this is implementation data, not a proved causal-step law.
+- **The source still has assumptions:** one starting event, global parent sampling, a specific deterministic random generator, 1–6 offspring for the hash source chosen by bit operations per host update, and graph birth/pruning rules. These have not been established as physics. In the hash-source setting births range from one to six depending on bit fields; this is implementation data, not a proved causal-step law.
 - **No convention silently replaced:** the researcher's `causal step` and time-as-causal succession remain the two-premise project's own terms. Numerical host update indices do not define physical time or a light-speed correspondence.
 
 ## Best next experiment
