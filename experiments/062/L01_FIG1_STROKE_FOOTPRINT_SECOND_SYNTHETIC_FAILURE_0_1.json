@@ -1,0 +1,92 @@
+{
+  "schema": "isograph.exp062.L.G0.Fig1-footprint-second-synthetic-fixture-failure.v0.1",
+  "recorded_on": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "historical_run": {
+    "run_id": 38341793310,
+    "job_id": 115114206927,
+    "head_sha": "f5dd4e244474c8bc70beb92587d46f80dfc70703",
+    "event": "push",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38341793310",
+    "failed_step": "Exact source/gate/tool preflight and synthetic controls",
+    "error": "AssertionError: SYNTHETIC_THREE_STROKE_CONTACT_EXPECTED",
+    "file": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-2.py",
+    "line": 76,
+    "source_PDF_downloaded": false,
+    "source_SVG_examined": false
+  },
+  "actual_reason": "The synthetic test lines A:[0,0]->[10,0], B:[10.3,.2]->[5,8], C:[9.7,-.2]->[5,-8] fail to share nonempty three-way butt-cap footprint area. Therefore the positive assertion is invalid; this is not evidence about Lisi's original SVG.",
+  "minimum_causal_successor": {
+    "path": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-3.py",
+    "git_blob_sha": "c340c117fc90369cec830811762c1bb2e684d9e6",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-3.yml",
+    "workflow_git_blob_sha": "6c0c4e193e0b8f70e59ff3109c7c4960e761140a",
+    "changes": "Replace synthetic B and C with two length>10 vectors whose terminal endpoint exactly coincides with A at [10,0], producing a known positive footprint intersection; preserve all actual source geometry and all algorithms.",
+    "independent_local_polygon_positive_witness": {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "B": [
+        [
+          10,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "C": [
+        [
+          10,
+          0
+        ],
+        [
+          0,
+          -8
+        ]
+      ],
+      "stroke_widths": [
+        1,
+        1,
+        1
+      ],
+      "area_three_way": 0.3125,
+      "unit": "synthetic square units",
+      "model": "butt-ended rectangles and Sutherland-Hodgman intersection",
+      "scope": "LOCAL_SYNTHETIC_ONLY_NOT_SOURCE_PAPER"
+    }
+  },
+  "predecessor_failure": {
+    "run_id": 38341563620,
+    "conclusion": "failure",
+    "reason": "SyntaxError unmatched parentheses",
+    "retained": true
+  },
+  "G0_status": {
+    "source_census": "0.96",
+    "source_IDs": 191,
+    "current_gate": "0.193",
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR_merge_authorized": false
+  },
+  "classification": "FAILED_AUTHOR_SIDE_SYNTHETIC_VERIFIER_NOT_PHYSICS_OR_SOURCE_PROBLEM",
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "technical_failure_and_fix": "agent-assisted synthetic geometry",
+    "recorded_on": "2026-10-12",
+    "retrospective": false
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "isograph.track-L.G0.Fig1-clip-stroke-footprint-successor-0.3-prereg.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "parent_expected_HEAD": "f5dd4e244474c8bc70beb92587d46f80dfc70703",
+  "source": {
+    "revision": "arXiv:0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "png96_sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe"
+  },
+  "governing": {
+    "gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_193.json",
+    "gate_sha": "3f6b39fbb8314bad167402a208d301f6d725bc7d",
+    "source_census_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "source_census_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "source_inverse_path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_inverse_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+  },
+  "historical_immutable_failures": [
+    {
+      "run": 38341563620,
+      "disposition": "FAILURE",
+      "reason": "Python syntax preflight",
+      "packet": "experiments/062/L01_FIG1_STROKE_FOOTPRINT_FIRST_SYNTAX_FAILURE_0_1.json",
+      "blob_sha": "2344349d1d25b6f7514302a693c073b8fa3a54e0"
+    },
+    {
+      "run": 38341793310,
+      "disposition": "FAILURE",
+      "reason": "synthetic overlap fixture false-positive expectation",
+      "packet": "experiments/062/L01_FIG1_STROKE_FOOTPRINT_SECOND_SYNTHETIC_FAILURE_0_1.json",
+      "blob_sha": "3ba067e1e9a1300eb14f24f190d3fee4a0da9d23"
+    }
+  ],
+  "current_source_code": {
+    "path": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-3.py",
+    "blob_sha": "c340c117fc90369cec830811762c1bb2e684d9e6",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-3.yml",
+    "workflow_blob_sha": "6c0c4e193e0b8f70e59ff3109c7c4960e761140a"
+  },
+  "frozen_hypotheses": [
+    "Three actual source ink-stroke footprints may have common nonzero overlap if all have uniform transforms, butt caps, no clips/masks/filters, no non-scaling stroke or dashes, and specified widths.",
+    "Actual source path 249/251/256 geometry, style and 11 SVG clip polygons should be inspected before claiming even graphical ink contact.",
+    "The overlap of drawn vector stroke envelopes, even if established, does not fix any semantic field-action or graph-node ontology."
+  ],
+  "independent_mechanical_preflight": {
+    "synthetic_positive_source_agnostic_example": {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "B": [
+        [
+          10,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "C": [
+        [
+          10,
+          0
+        ],
+        [
+          0,
+          -8
+        ]
+      ],
+      "each_width": 1,
+      "local_polygon_intersection_area": 0.3125
+    },
+    "separated_negative_control": true,
+    "source_geometry_not_used_to_select_fixture": true
+  },
+  "target": "Read source bytes and test original Figure 1 clip path closure, inherited stroke cap/dash/mask/style/scale, exact butt stroke envelopes plus 384DPI raster without classifying author's intended physics.",
+  "falsifiers": [
+    "Python compile/synthetic fixture invalid before source fetch; fail clearly and preserve history.",
+    "Exact source binary/render hash drifts; abort.",
+    "Any unsupported style/dash/caps/transform/clipping invalidates the butt stroke polygon claim; maintain UNKNOWN.",
+    "Positive SVG ink overlap never authorizes field action or source cold semantic graph qualification.",
+    "No G0, SSC, G1, W semantic import or PR merge update from this scope."
+  ],
+  "authorizations": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "original_full_cold_sources": 0,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "resources": {
+    "one_new_source_workflow_intended": true,
+    "external_semantic_model_calls": 0,
+    "manual_dispatch": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "agent_formalization": "source-faithful mechanical pen geometry and controls",
+    "earliest_evidence": "2026-10-12 source prior/failed runs",
+    "recorded_on": "2026-10-12",
+    "retrospective": false
+  }
+}
