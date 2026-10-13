@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-next-clip-polygon-and-stroke-envelope.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source_evidence": {
+    "path": "experiments/062/L01_FIG1_CLIP_W_JUNCTION_FROZEN_SOURCE_CI_SUCCESS_0_1.json",
+    "CI": 38338924212
+  },
+  "observed": {
+    "clip_definitions": 11,
+    "clip_references": 11,
+    "all_definitions_linear": true,
+    "W_paths": [
+      "root/svg[249]/path",
+      "root/svg[251]/path",
+      "root/svg[256]/path"
+    ],
+    "W_proximity_pdfpt_max": 0.425369,
+    "W_raster_192dpi_three_sites_all_positive": true,
+    "full_source_graph_qualified": false
+  },
+  "ranked_next_options": [
+    {
+      "method": "Exact clip-path line/polygon closure and transformed group-space crop, preserving unsupported fill rules",
+      "priority": 1
+    },
+    {
+      "method": "Stroke cap/join and pen width comparison to original 192/384dpi pixels at the W boundary",
+      "priority": 2
+    },
+    {
+      "method": "Independent blind original Figure1 raster glyph/stroke incidence read",
+      "priority": 3
+    },
+    {
+      "method": "Infer field edges from author prose or Woit theory",
+      "priority": 999,
+      "rejected": true
+    }
+  ],
+  "falsifiers": [
+    "A referenced clip with nonclosing or non-convex geometry may require a more exact polygon semantics; never infer visibility from mere definition existence.",
+    "Centerline co-location can disappear or sharpen at higher resolution and after cap treatment.",
+    "Any field action inferred solely from source text violates source-figure graphical fidelity.",
+    "Fill-only curved artworks remain in scope; no figure-caption or particle type may be used as a glyph oracle."
+  ],
+  "unqualified": {
+    "clip_visibility": true,
+    "full_source_glyphs": true,
+    "field_action_topology": true,
+    "L01_S004": true,
+    "G0": true,
+    "G1": true
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "formalization": "agent-assisted",
+    "recorded_on": "2026-10-12"
+  }
+}
