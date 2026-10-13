@@ -17,6 +17,7 @@
  *      node hypergraph-rewrite-lab.mjs controls 0 0 0 results
  *      node hypergraph-rewrite-lab.mjs multi 3 160 250 results
  *      node hypergraph-rewrite-lab.mjs symmetry 5 0 200 results
+ *      node hypergraph-rewrite-lab.mjs coupled 4 32 160 results
  * node >=18; no external dependencies.
  */
 import fs from 'node:fs';
@@ -25,7 +26,7 @@ import path from 'node:path';
 const args=process.argv.slice(2), phase=args[0]||'sweep';
 const k=Number(args[1]||3), ruleCount=Number(args[2]||128), horizon=Number(args[3]||250);
 const folder=path.resolve(args[4]||'./hypergraph-results');
-if(!['sweep','controls','multi','symmetry'].includes(phase))throw new Error('Unknown phase');
+if(!['sweep','controls','multi','symmetry','coupled'].includes(phase))throw new Error('Unknown phase');
 if(phase!=='controls'&&(![3,4,5].includes(k)||!Number.isSafeInteger(ruleCount)||ruleCount<1||ruleCount>10000||!Number.isSafeInteger(horizon)||horizon<1||horizon>5000))throw new Error('Invalid bounded arguments');
 const NODE_LIMIT=2000,EDGE_LIMIT=16000,BUILD_SEED=20261012;
 
@@ -206,6 +207,95 @@ function nullControl(arity){
   highOrderRewrites:high.rewrites,controlRewrites:low.rewrites,highOrderStatus:high.status,controlStatus:low.status};
 }
 
+
+/** Follow-up: changing ALL participants' bits in a single k-hyperedge rewrite
+ * can change whether OTHER overlapping hyperedges become eligible. This is
+ * more strongly coupled than the initial fixed-state branching laboratory.
+ * Mutation variants are arbitrary hypothesis probes, not physical laws.
+ */
+function coupledTrial({arity,bits,rule,mutate=0,scheduler='fifo',seed=1,limit=160}){
+ const R=rng(seed),nodes=Array.from({length:arity},(_,i)=>({bit:(bits>>i)&1,depth:0}));
+ const edges=[{ids:Array.from({length:arity},(_,i)=>i),alive:true,fired:false}],rankCounts={};
+ rankCounts[arity]=1;
+ let live=1,rewrites=0,maxDepth=0,reactivationEvents=0,activatedOld=0,status='limit';
+ function eligibleSet(){
+   const ids=[];
+   for(let i=0;i<edges.length;i++){
+    const e=edges[i];if(!e.alive||e.fired||e.ids.length!==arity)continue;
+    let ones=0;for(const id of e.ids)ones+=nodes[id].bit;
+    if(rule.weights&(1<<ones))ids.push(i);
+   }
+   return ids;
+ }
+ const originalEligible=eligibleSet().length>0;
+ function setGroupBits(edge,ones){
+   if(mutate===0)return;
+   for(const id of edge.ids){
+    const prev=nodes[id].bit;
+    if(mutate===1)nodes[id].bit=1-prev;
+    else if(mutate===2)nodes[id].bit=prev^(ones&1);
+    else if(mutate===3)nodes[id].bit=Number(2*ones>=arity);
+    else if(mutate===4)nodes[id].bit=(2*ones>=arity)?1-prev:prev;
+   }
+ }
+ const childRanks=offspringLayers(rule);
+ let childCount=0;for(const r of childRanks)childCount+=choose(arity,r-1);
+ while(rewrites<limit){
+   const eligible=eligibleSet();
+   if(!eligible.length){status='absorbed';break;}
+   const selected=scheduler==='random'?eligible[Math.floor(R()*eligible.length)]:eligible[0],edge=edges[selected];
+   if(nodes.length+1>NODE_LIMIT||live-(rule.keep?0:1)+childCount>EDGE_LIMIT){status='resource-censored';break;}
+   let ones=0,depth=0;for(const id of edge.ids){ones+=nodes[id].bit;depth=Math.max(depth,nodes[id].depth);}
+   const oldEligible=new Set(eligible);
+   edge.fired=true;
+   if(!rule.keep){edge.alive=false;live--;rankCounts[arity]--;}
+   setGroupBits(edge,ones);
+   // Evaluate mutated OLD hyperedges before generating any fresh ones.
+   let activated=0;
+   for(const id of eligibleSet())if(!oldEligible.has(id))activated++;
+   if(activated>0){reactivationEvents++;activatedOld+=activated;}
+   const newborn={bit:newbornState(rule.mode,ones,arity),depth:depth+1};
+   maxDepth=Math.max(maxDepth,newborn.depth);nodes.push(newborn);
+   for(const r of childRanks)for(const included of combinations(edge.ids,r-1)){
+    edges.push({ids:[...included,nodes.length-1].sort((a,b)=>a-b),alive:true,fired:false});
+    live++;rankCounts[r]=(rankCounts[r]||0)+1;
+   }
+   rewrites++;
+ }
+ const frontier=eligibleSet().length;
+ if(rewrites>=limit&&status==='limit')status='horizon-censored';
+ return {arity,mutation:mutate,initialOnes:(bits.toString(2).match(/1/g)||[]).length,
+  scheduler,status,originalEligible,rewrites,nodes:nodes.length,liveEdges:live,maxDepth,
+  frontier,reactivationEvents,activatedOld,fired3:arity===3?rewrites:0,fired4:arity===4?rewrites:0,fired5:arity===5?rewrites:0};
+}
+function coupledSweep(arity,number,steps){
+ const rules=chooseRuleSample(arity,number),trials=[];
+ for(let j=0;j<rules.length;j++){
+  const rule=rules[j],mutate=1+(j%4);
+  for(let weight=0;weight<=arity;weight++){
+   const bits=(1<<weight)-1;
+   for(const scheduler of ['fifo','random']){
+    const sd=BUILD_SEED+101*j+53*weight+arity;
+    for(const mutation of [0,mutate]){
+     const x=coupledTrial({arity,bits,rule,mutate:mutation,scheduler,seed:sd,limit:steps});
+     trials.push({rule:j,weightsMask:rule.weights,rankMask:rule.ranks,mode:MODES[rule.mode],keep:rule.keep,...x});
+    }
+   }
+  }
+ }
+ function summarizeMutation(mode){
+  const values=trials.filter(t=>mode===0?t.mutation===0:t.mutation!==0);
+  return {trials:values.length,initiallyInert:values.filter(x=>!x.originalEligible).length,
+   absorbedAfterFiring:values.filter(x=>x.status==='absorbed'&&x.rewrites>0).length,
+   absorbedAfter2orMore:values.filter(x=>x.status==='absorbed'&&x.rewrites>=2).length,
+   survivedObservation:values.filter(x=>x.status==='horizon-censored').length,
+   resourceCensored:values.filter(x=>x.status==='resource-censored').length,
+   runsWithReactivation:values.filter(x=>x.activatedOld>0).length,
+   totalActivatedOld:values.reduce((a,x)=>a+x.activatedOld,0)};
+ }
+ return {trials,summary:{arity,mutated:summarizeMutation(1),fixedStateControl:summarizeMutation(0),
+   limitations:'binary arbitrary state mutation; one newborn per rewrite; no representation of matter, physical geometry or energy; no exact nonabsorbing steady states possible with monotonically increasing nodes'}};
+}
 function relabelSymmetryControls(arity,steps){
  const rows=[],mismatches=[];
  const ruleSet=[
@@ -265,6 +355,11 @@ if(phase==='sweep'){
  const r=[3,4,5].map(nullControl);
  fs.writeFileSync(path.join(folder,'higher-order-irreducibility-controls.json'),JSON.stringify(r,null,2)+'\n');
  console.log(JSON.stringify({phase,controls:r}));
+ }else if(phase==='coupled'){
+ const z=coupledSweep(k,ruleCount,horizon);
+ fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-coupled-trials.csv'),toCSV(z.trials,['rule','weightsMask','rankMask','mode','keep','arity','mutation','initialOnes','scheduler','status','originalEligible','rewrites','nodes','liveEdges','maxDepth','frontier','reactivationEvents','activatedOld']));
+ fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-coupled-summary.json'),JSON.stringify(z.summary,null,2)+'\n');
+ console.log(JSON.stringify({phase,k,summary:z.summary}));
 }else if(phase==='multi'){
  const z=multiSample(ruleCount,horizon);
  fs.writeFileSync(path.join(folder,'higher-order-multi-rules.csv'),toCSV(z.rules,['j','rank3weights','rank4weights','rank5weights','rank3outputs','rank4outputs','rank5outputs']));
