@@ -166,6 +166,17 @@ The first 1,000-step controlled sweep found the following (all uncapped):
 
 **Qualification:** Comparative research priority only; neither the frozen Primitive Presentation toy simulation nor the force-free coordinate-free ablation has been altered by this literature study. Independent physical correspondence remains unverified.
 
+## Topology and node-structure evidence gate for publication (2026-10-12)
+
+**Researcher qualification of the Bianconi lead:** The investigator has only preliminarily examined her topology papers and does not claim that her broader work is mathematically simple. More extensive prior art includes evolving **simplicial** complexes in arbitrary selected dimension (Bianconi & Rahmede 2016), **polytope-based cell complexes** and spectral dimension (Mulder & Bianconi 2018), and weighted higher-order network/spectral topology tested on collaboration data (Baccini, Geraci & Bianconi 2022). These are substantial mathematical leads, but **none currently establishes a mapping to our as-yet-unformalized unbounded causal hypergraph or validates emergent physical space**. Do not conflate a freely selected `d` with naturally generated dimension.
+
+**Researcher-established threshold:** Do not characterize any claimed **causal-graph ↔ topology connection as publication-ready** merely because published network topologies resemble our model. First require a well-founded and explicitly specified **node, event, hyperedge and topology representation**, with “unbounded” defined rather than presumed; rigorous structural invariants/claim-specific mathematical proof and counterexamples; finite-model reproducibility and resource-limit sensitivity analysis; and **independent objective empirical physical evidence when claiming a physical correspondence**. Computed graphs or real social-network validation alone do not prove a physical-origin account. This is a publication-readiness constraint specific to such a connection, **not a ban on exploratory internal work** and not an added Causal Step physical premise.
+
+- [Internal prior-art distinctions, counterexample criteria and staged publication gate](reviews/2026-10-12-topology-hypergraph-evidence-publication-gate.md)
+- [Researcher's exact wording in the discussion log](DISCUSSION_LOG.md)
+
+**Current disposition:** Bianconi's topology is a lead to study when relevant representations exist; **direct correspondence and publication readiness remain unverified**. No entropic dynamics or fixed topology imported into the coordinate-free model.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
