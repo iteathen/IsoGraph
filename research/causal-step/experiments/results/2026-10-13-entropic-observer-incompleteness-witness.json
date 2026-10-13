@@ -1,0 +1,166 @@
+{
+  "source_sha": "79b09f3c8487a77a172e1ac9e47c3e3f9f9359e4",
+  "source_path": "research/causal-step/experiments/2026-10-13-entropic-observer-incompleteness-witness.mjs",
+  "result": {
+    "observerMap": "all minimum cut costs for every subset of four designated terminal vertices",
+    "terminalSet": [
+      "A",
+      "B",
+      "C",
+      "P"
+    ],
+    "network0": {
+      "vertexCount": 4,
+      "hyperedgeCount": 1,
+      "rankCounts": {
+        "4": 1
+      },
+      "canMatchSpecificThreeWayRewrite": false
+    },
+    "network1": {
+      "vertexCount": 6,
+      "hyperedgeCount": 2,
+      "rankCounts": {
+        "3": 1,
+        "4": 1
+      },
+      "canMatchSpecificThreeWayRewrite": true
+    },
+    "completeTerminalMinCutVector0": [
+      {
+        "boundaryRegion": "empty",
+        "mincut": 0
+      },
+      {
+        "boundaryRegion": "A",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "B",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AB",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "C",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "P",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "CP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ACP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BCP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABCP",
+        "mincut": 0
+      }
+    ],
+    "completeTerminalMinCutVector1": [
+      {
+        "boundaryRegion": "empty",
+        "mincut": 0
+      },
+      {
+        "boundaryRegion": "A",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "B",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AB",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "C",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABC",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "P",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "AP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "CP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ACP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "BCP",
+        "mincut": 1
+      },
+      {
+        "boundaryRegion": "ABCP",
+        "mincut": 0
+      }
+    ],
+    "equalityOfAllTerminalMinCutCosts": true,
+    "countOfTerminalPartitionsTested": 16,
+    "witness": "Added rank3 relation {A,x,y} of weight 2 can always keep x,y on same cut side as A. The rank4 terminal edge forces the original cost; therefore cuts agree. The rank3 relation can match a separate high-order rewrite in H1 but not H0.",
+    "qualification": "Noninjective entropy cut readout does not imply the quantum information entropy formula is mathematically wrong, physically incomplete, or incapable of encoding internal structure by another readout."
+  }
+}
