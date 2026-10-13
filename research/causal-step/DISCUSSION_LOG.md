@@ -226,3 +226,23 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Disposition:** Important candidate literature and comparative research target, **not** physically verified, adopted as a third Causal Step premise, or implemented as additional spring-like confinement. Specific source review: [Bianconi comparative paper audit](reviews/2026-10-12-bianconi-gravity-from-entropy-comparison.md).
 
+## 2026-10-12 — Researcher identifies simple origins as the better conditional guess
+
+**Researcher (verbatim):**
+
+> No, I wouldn't immediately add it either. We have no way of connecting it because we can't represent matter fields or Higgs fields, and we can't represent three-dimensional objects. We don't even know exactly how to represent three-dimensional space or four-dimensional space. So no, we don't have a way to connect it. But her research is definitely a clue that an emergent structure like ours may be at the center of everything in some degree. And, I mean, it's unknown whether or not it comes from simple structure, but it's not a bad guess, since everything in our reality looks like it tends towards the minimal state. There's no reason to... and we can already see the emergent quality. So, you know, if we imagine play the emergence backwards, and we can kind of see how this might lead you to believe that the system reduces to something simplistic at the origin of everything. So I think it's a pretty good guess that a simpler system gave rise to all this complexity. And her research, and her node graph research, and her gravity from entropy research all support what we're doing in a distant way, although we can't connect it in yet.
+
+**Researcher then specifies the comparison (verbatim):**
+
+> Yeah, I'm aware of the differences. I'm just saying I think that if you were to guess whether or not this... okay, let's assume for the moment that all reality is emergent. Which is a better guess? It started complex or it started simple?
+
+**Researcher final clarification (verbatim):**
+
+> Good. That's exactly why I said it's a good- it's the better guess.
+
+**Interpretive correction:** The researcher makes a **conditional, comparative inference**: *assuming reality is emergent*, a simpler generative origin is the **better working guess** than an origin already bearing the full apparent complexity. The researcher did **not** claim that physical simplicity was proved, that every physical configuration minimizes a scalar cost, that there is a unique primordial simple rule, or that Bianconi's field/metric constructions can now be implemented in Causal Step. Do not repeatedly respond by treating this comparison as an absolute assertion of physical minimality; the user has explicitly acknowledged the difference between a hypothesis and a physical law.
+
+**Bianconi boundary retained:** The Bianconi work is considered **distant, conceptually relevant supporting context** for an emergence-oriented research program, not direct evidence that the specific Causal Step model is correct. The current graph cannot represent matter/Higgs fields or validated intrinsic 3D/4D geometry, so no formal mapping or entropic feedback is presently justified.
+
+**Research status:** A prioritization rationale and clarification of existing Premise 1, not a third adopted premise, physical proof, newly executed test, or modification to any simulation mechanism.
+
