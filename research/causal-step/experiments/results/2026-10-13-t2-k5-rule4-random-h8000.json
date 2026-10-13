@@ -1,0 +1,214 @@
+{
+  "experiment": "T2 exact provenance-preserving relabel/scheduler replay",
+  "date": "2026-10-13",
+  "authority": "exploratory exact observer diagnostic, not physical theory",
+  "originalRunnerBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+  "referenceCsvBlobSha": "d2d40f87d59a5a94d2df71a69543e521f6ad807f",
+  "methodology": "source-text observer instrumentation with checked insertion anchors; no edits to generator or selected rules; transported event occurrence schedule versus raw order of eligible edges",
+  "configuration": {
+    "ks": [
+      5
+    ],
+    "horizon": 8000,
+    "naiveHorizon": 400,
+    "includeTransport": true,
+    "includeNaive": true,
+    "alternateRandom": false,
+    "ruleIds": [
+      4
+    ],
+    "schedulers": [
+      "random"
+    ],
+    "permutationNames": [
+      "rotation"
+    ]
+  },
+  "totals": {
+    "baseHistories": 1,
+    "baselineMatches": 1,
+    "matchedHistoricalScalarFields": 9,
+    "transportedPermutationRuns": 1,
+    "transportedExactEqual": 1,
+    "naivePermutationRuns": 1,
+    "naiveDivergences": 1
+  },
+  "cases": [
+    {
+      "k": 5,
+      "ruleId": 4,
+      "initial": "mixed",
+      "kind": "overlap",
+      "mutation": 1,
+      "scheduler": "random",
+      "seed": 20261556,
+      "rewrites": 8000,
+      "status": "horizon-censored",
+      "baselineDigest32": "48315250",
+      "legacy": {
+        "status": "PASS",
+        "fieldsCompared": 9,
+        "mismatches": []
+      },
+      "transport": [
+        {
+          "permutation": "rotation",
+          "map": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "48315250",
+          "error": null
+        }
+      ],
+      "untransported": [
+        {
+          "permutation": "rotation",
+          "horizon": 400,
+          "traceSame": false,
+          "firstDifferentStep": 2,
+          "baselineEvent": {
+            "step": 2,
+            "origin": "birth1:1,3,4,5,6",
+            "participants": [
+              [
+                1,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                6,
+                0
+              ]
+            ],
+            "frontierBefore": 10,
+            "ones": 3,
+            "newborn": 1,
+            "changed": 5,
+            "overlap": 8,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:1,3,4,5,6,7",
+              "birth2:1,3,4,5,7",
+              "birth2:1,3,4,6,7",
+              "birth2:1,3,5,6,7",
+              "birth2:1,3,7",
+              "birth2:1,4,5,6,7",
+              "birth2:1,4,7",
+              "birth2:1,5,7",
+              "birth2:1,6,7",
+              "birth2:3,4,5,6,7",
+              "birth2:3,4,7",
+              "birth2:3,5,7",
+              "birth2:3,6,7",
+              "birth2:4,5,7",
+              "birth2:4,6,7",
+              "birth2:5,6,7"
+            ],
+            "frontierAfter": 12,
+            "nodeCount": 8,
+            "liveEdges": 38
+          },
+          "relabelEvent": {
+            "step": 2,
+            "origin": "birth1:0,1,3,4,6",
+            "participants": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                6,
+                0
+              ]
+            ],
+            "frontierBefore": 10,
+            "ones": 2,
+            "newborn": 0,
+            "changed": 5,
+            "overlap": 8,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:0,1,3,4,6,7",
+              "birth2:0,1,3,4,7",
+              "birth2:0,1,3,6,7",
+              "birth2:0,1,4,6,7",
+              "birth2:0,1,7",
+              "birth2:0,3,4,6,7",
+              "birth2:0,3,7",
+              "birth2:0,4,7",
+              "birth2:0,6,7",
+              "birth2:1,3,4,6,7",
+              "birth2:1,3,7",
+              "birth2:1,4,7",
+              "birth2:1,6,7",
+              "birth2:3,4,7",
+              "birth2:3,6,7",
+              "birth2:4,6,7"
+            ],
+            "frontierAfter": 14,
+            "nodeCount": 8,
+            "liveEdges": 38
+          }
+        }
+      ]
+    }
+  ],
+  "schedulerPairs": [
+    {
+      "k": 5,
+      "ruleId": 4,
+      "sameFullProvenanceDigest": null,
+      "fifoDigest32": null,
+      "randomDigest32": "48315250",
+      "reportedGateDifference": false
+    }
+  ],
+  "caveats": [
+    "Original 8000-rewrite generator and mutation rules untouched",
+    "Canonical initial labels and corresponding event occurrence schedules are observer controls, not new physics",
+    "Transported replay is stronger than equality of terminal node count but only across tested histories",
+    "Raw FIFO or seeded-random scheduler may depend on original edge enumeration; distinguish from rule covariance",
+    "FNV-1a32 digests are navigation aids only; full receipts were compared exactly in memory",
+    "Events are host rewrites not physical clock units; no demonstration of particles, GR, universality or quantum dynamics"
+  ],
+  "execution": {
+    "engine": "local V8 isolate",
+    "actual_executed": true,
+    "runnerGitBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "elapsedWallMilliseconds": 41615
+  }
+}
