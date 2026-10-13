@@ -1,0 +1,98 @@
+{
+  "schema": "isograph.track-L.G0.L01-original-source-ink-vs-glyph-discrimination-frontier.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_anchor": {
+    "path": "experiments/062/L01_FIG1_SOURCE_SVG_PAINT_ROLE_CI_0_1.json",
+    "run_id": 38336896386,
+    "source_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe"
+  },
+  "source_obs": {
+    "full_page_paint_counts": {
+      "rendered_shapes": 2354,
+      "curved_paths": 2256,
+      "fill_only_curves": 2114,
+      "filled_and_stroked_curves": 133,
+      "stroke_only_curves": 9,
+      "stroke_bearing_curves": 142,
+      "non_curved_fill_only": 38,
+      "non_curved_stroke_only": 60,
+      "clip_context_occurrences": 11
+    },
+    "source_figure_crop": {
+      "bounds_PDF_points": [
+        270,
+        275,
+        540,
+        495
+      ],
+      "unclassified_line_segments": 108,
+      "long_segment_count_at_least_10_pdf_points": 14
+    },
+    "W_adjacent_candidate": {
+      "svg_path": "root/svg[251]/path",
+      "start": [
+        303.296875,
+        322.1289062
+      ],
+      "end": [
+        357.2265625,
+        321.9804687
+      ],
+      "source_style": "black stroke",
+      "from_svg_raw_source": true,
+      "source_raster_observer_scope": "nonblind visual of original page3 screenshot only",
+      "field_marker_association": "PROVISIONAL_NEEDS_INDEPENDENT_RASTER_NODE_RECONSTRUCTION",
+      "action_relation": "NOT_QUALIFIED"
+    }
+  },
+  "hypothesis_comparison": [
+    {
+      "id": "F1",
+      "model": "Fill-only curves are mostly typeset glyph ink",
+      "status": "PLAUSIBLE_NOT_GLYPH_PROVEN",
+      "risk": "Filled diagrams or line artwork could be lost if removed"
+    },
+    {
+      "id": "F2",
+      "model": "Some stroke-bearing curves are source diagram connectors",
+      "status": "OPEN_NEEDS_CLIPPING_AND_RASTER"
+    },
+    {
+      "id": "F3",
+      "model": "Some filled+stroked curves are colored particle glyphs rather than connectors",
+      "status": "OPEN_NEEDS_SYMBOL_SOURCE_COORDINATES"
+    },
+    {
+      "id": "F4",
+      "model": "All original curved shapes may be discarded from source G0 once a line inventory exists",
+      "status": "REJECT_AS_UNJUSTIFIED_SCOPE_TRUNCATION"
+    }
+  ],
+  "next_priority": "Establish reversible source path/filled-shape raster crosswalk in Figure1 viewport, resolve 11 clip-context occurrences by original clip definition and transformed coordinates, independently classify candidate line endpoints at table borders and figure symbols; freeze a blind image-only endpoint review packet before using the existing 48 printed glyph candidate. Do not infer action from adjacent prose.",
+  "falsifiers": [
+    "Find any long fill-only curve drawing an actual connector; this refutes discarding all fill-only curves.",
+    "Find stroke-only curved paths that form particle letter outlines; this refutes calling all 142 curved stroke occurrences field connectors.",
+    "Changing SVG viewport or clip region changes exact ink-to-raster mapping; current geometric subset is not globally certified.",
+    "A field-to-fermion edge not traced to exact ink endpoint/visible stroke must be rejected.",
+    "A source W-line candidate meets a row seam, not a uniquely proven particle action.",
+    "Any change to L01-S004 frozen disposition before cold/source semantic closure violates stage gating."
+  ],
+  "qualified_burden_remaining": {
+    "complete_source_semantic_cold": false,
+    "source_figure_endpoint_graph": false,
+    "source_figure_glyphs_decoded_independently": false,
+    "source_clip_masks_resolved": false,
+    "full_L_six_source_cold": false,
+    "G0_frozen": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "agent_finding": "source-pinned paint-role partition and analysis",
+    "date": "2026-10-12",
+    "external_origin": "original Lisi author paper",
+    "not_mathematical_novelty_claim": true
+  }
+}
