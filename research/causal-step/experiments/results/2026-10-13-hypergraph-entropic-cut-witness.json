@@ -1,0 +1,119 @@
+{
+  "experiment_date": "2026-10-13",
+  "source_blob_sha": "a286232986ff36043ee5c4ff1f940b9f1b114953",
+  "source_file": "research/causal-step/experiments/2026-10-13-hypergraph-entropic-cut-witness.mjs",
+  "result": {
+    "research_scope": "finite, undirected, four-terminal abstract weighted cut functions",
+    "vertices": [
+      "A",
+      "B",
+      "C",
+      "P"
+    ],
+    "hyperedge": {
+      "edges": [
+        [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          1
+        ]
+      ],
+      "entropies": {
+        "empty": 0,
+        "A": 1,
+        "B": 1,
+        "AB": 1,
+        "C": 1,
+        "AC": 1,
+        "BC": 1,
+        "ABC": 1,
+        "P": 1,
+        "AP": 1,
+        "BP": 1,
+        "ABP": 1,
+        "CP": 1,
+        "ACP": 1,
+        "BCP": 1,
+        "ABCP": 0
+      },
+      "I3": 1
+    },
+    "pairwiseProjection": {
+      "edges": [
+        [
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          1
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          1
+        ]
+      ],
+      "entropies": {
+        "empty": 0,
+        "A": 3,
+        "B": 3,
+        "AB": 4,
+        "C": 3,
+        "AC": 4,
+        "BC": 4,
+        "ABC": 3,
+        "P": 3,
+        "AP": 4,
+        "BP": 4,
+        "ABP": 3,
+        "CP": 4,
+        "ACP": 3,
+        "BCP": 3,
+        "ABCP": 0
+      },
+      "I3": 0
+    },
+    "holographicMMIinequality": "I3(A:B:C) <= 0 for RT graph / geometric holographic entropy vectors",
+    "notes": [
+      "All four nodes are designated terminals, with P as purifier, so each min-cut is the unique partition cut.",
+      "A rank-4 unit hyperedge yields S(nonempty proper subset)=1, I3=+1, violating holographic MMI.",
+      "K4 unit pairs yields S(single)=3, S(pair)=4, S(ABC)=3, I3=0.",
+      "This is an exact *representation separation*, not evidence that causal networks are quantum/holographic or that aux-node pairwise encodings can never simulate a hyperedge.",
+      "In standard quantum information the rank-4 vector matches the four-qubit GHZ entropy vector up to choice of logarithm normalization."
+    ]
+  }
+}
