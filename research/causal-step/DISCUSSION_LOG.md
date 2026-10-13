@@ -210,3 +210,19 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Evidence disposition:** The earlier uncapped source, previous control suite, and historical HTML remain preserved. Experimental outcomes to be appended separately; no result or law is anticipated or qualified by making this request.
 
+## 2026-10-12 — Researcher elevates *Gravity from Entropy* as a cross-cutting emergence-research lead
+
+**Researcher (verbatim):**
+
+> I read about this before, but I forgot about it. The paper called Gravity from Entropy, I think, is going to be a very important consideration for all work regarding emergence reality.
+
+**Researcher-originated assessment and research direction:** Treat the identified literature as potentially important to inquiries into reality emerging from simpler conditions, including but not limited to Causal Step. The researcher's wording is a *prospective priority judgment*, not endorsement of a proof, specific entropic action, conservation law, extra physical premise, or software intervention.
+
+**Bibliographic resolution by the assistant:** The exact-title work is Ginestra Bianconi, *Gravity from entropy*, *Physical Review D* **111**, 066001 (published 3 March 2025), DOI https://doi.org/10.1103/PhysRevD.111.066001, preprint https://arxiv.org/abs/2408.14391 (first posted 26 August 2024). This is **not** Erik Verlinde's distinct 2010/2011 *On the Origin of Gravity and the Laws of Newton*. Bianconi's direct discrete-network predecessor is *Quantum entropy couples matter with geometry*, *Journal of Physics A* **57** 365002 (27 August 2024), DOI https://doi.org/10.1088/1751-8121/ad6f7e, https://arxiv.org/abs/2404.08556. Relevant follow-up: *Thermodynamics of the gravity from entropy theory*, *Physical Review D* **114**, 024042 (16 July 2026), DOI https://doi.org/10.1103/26kn-thgp.
+
+**Source-level distinction:** The 2025 paper proposes a gravity action built from quantum-relative-entropy-like comparison of a *Lorentzian spacetime metric* and a *matter-induced metric*, recovers Einstein equations in a stated weak-coupling limit, and postulates an auxiliary G-field. It does **not** derive the starting Lorentzian metric, the manifold, or matter from the pre-geometric Causal Step substrate. The 2024 predecessor develops a quantum relative entropy action on **fixed** higher-order cell complexes with metric matrices and chosen matter/gauge fields; one illustration/continuation assumes a 3-dimensional lattice topology. Even its useful discrete graph/operator formulation does **not** establish emergence of an unassumed topology, metric, dimensions, or time. Neither construction should be copied into the fully non-metric control and renamed a derived law.
+
+**Agent research plan, not an adopted premise:** Preserve the latest force-free/metric-free graph model as a baseline. Audit exact representation, coarse-graining, positivity, metric, topology, and causal-time assumptions before comparing it with Bianconi's operator-level mechanism. First measure any proposed information/entropy diagnostic **without affecting graph dynamics**, with null and relabeling controls. Only consider a separately labeled dynamic action variant if a noncircular causal/relational construction supplies its two compared operators and a justified update rule. Keep conventional quantum relative entropy, thermodynamic entropy and the researcher's broad speculative entropy-as-back-pressure notion **distinct**.
+
+**Disposition:** Important candidate literature and comparative research target, **not** physically verified, adopted as a third Causal Step premise, or implemented as additional spring-like confinement. Specific source review: [Bianconi comparative paper audit](reviews/2026-10-12-bianconi-gravity-from-entropy-comparison.md).
+
