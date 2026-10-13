@@ -1,0 +1,77 @@
+{
+  "schema": "isograph.track-L.G0.L01-table-clip1-literal-polygon-successor-prereg.v0.2",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "parent_HEAD": "97dd790f6536e0a28d204cc5d2d5d192efcc62fe",
+  "source_original": {
+    "revision": "arXiv:0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "PDF_page_zero_based": 2
+  },
+  "historical_prior_evidence": {
+    "path": "experiments/062/L01_FIG1_ORIGINAL_CLIPPED_TABLE_BORDER_W_INK_CI_SUCCESS_0_1.json",
+    "git_blob_sha": "4913b792b8cae24df6ebe2b49226a898502a7990",
+    "run_id": 38342627424,
+    "conclusion": "success",
+    "source_limit": "clip bounds without exact vertex/filled polygon adjudication"
+  },
+  "gate195": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_195.json",
+    "blob_sha": "e4f692966353f34db53197cfada5b91c1eade084",
+    "G0_frozen": false
+  },
+  "frozen_SSC": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "items": 191
+  },
+  "frozen_inverse": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "L01_source_groups": 98
+  },
+  "successor": {
+    "source_script": "experiments/062/tools/audit-l-g0-l01-table-border-clip-0-2.py",
+    "git_blob_sha": "22fd2cf6e6093fd14a7ca4fe8d401308c66a313f",
+    "CI_workflow": ".github/workflows/experiment-062-l-g0-l01-clipped-table-border-0-2.yml",
+    "workflow_git_blob_sha": "361d98dff6ff384a113440c6233cc033ed622898"
+  },
+  "source_specific_question": "Are original source clip-1's four line-path vertices exactly the four corners of its already recorded bounding rectangle, with identity clip group transform and supported clipPathUnits/clip-rule? Is the complete original left border butt stroke rectangle inside that literal source clipping polygon, so previously conditional W ink intersections become clip-certified graphical ink contact?",
+  "method": "Reconstruct all source clipPath literal vertex sequences (not only bounding boxes), check ordered linear closure and axis-aligned four-corner rectangle equality. For clip-1 specifically require userSpaceOnUse, identity referencing group affine, no path/clipPath transform, default/explicit recognized clip rule. Construct original border left-segment width footprint, and verify all four footprint vertices lie inside the exactly-certified source rectangle.",
+  "controls": [
+    "Synthetic closed rectangle passes vertex checks, path ancestor clip membership and a positive orthogonal stroke ink-overlap fixture.",
+    "If clip-1 is not rectangular or uses unresolved rules/transform, the source-specific test FAILS CLOSED, not automatically declared visible.",
+    "Report all other 10 source clip vertices without conferring global figure-edge semantic qualification.",
+    "Actual original left-border stroke join outside its interior can remain unresolved; focus on left straight-side butt footprint and its ink overlap with specific W-side lines.",
+    "W physical electroweak doublet action is paper prose not implied by source ink contact.",
+    "No G1/SSC/W import/cross-track/merge stage changes."
+  ],
+  "stage_conservation": {
+    "SSC_rev": "0.96",
+    "SSC_count": 191,
+    "source_locations": 350,
+    "L01_groups": 98,
+    "L01_exact_visual_groups_unqualified": 16,
+    "complete_original_six_source_cold": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "synthesis_authorized": false,
+    "PR_merge_authorized": false
+  },
+  "resources": {
+    "planned_workflow_runs": 1,
+    "manual_dispatch": false,
+    "external_semantic_calls": 0
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro",
+    "agent_technique": "literal SVG rectangle clip proof for graphics only",
+    "recorded_on": "2026-10-12",
+    "first_evidence": "source CI 38342627424",
+    "original_source": "A. Garrett Lisi 0711.0770v1"
+  }
+}
