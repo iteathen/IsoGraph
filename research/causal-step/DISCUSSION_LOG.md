@@ -198,3 +198,15 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Research priority proposed by agent, subject to later evaluation:** Isolate topology-first, directed causally ordered growth without imposed Euclidean coordinates; only then test dimension via intrinsic relational structure, observer maps, and sensitivity to node-cap and label-selection choices.
 
+## 2026-10-12 — Researcher rejects imposed spatial back-pressure and requests full Newtonian ablation
+
+**Researcher (verbatim):**
+
+> Another artificial constraint here is, I mean, something is doing back pressure here to keep them close to each other. So it's almost as if I put a tax on existing in space, where it's easier to exist in space next to something. That's artificial entirely. So that we need to experiment with taking that out. We need to experiment with taking out all the Newtonian stuff. Everything.
+
+**Researcher-originated direction:** Investigate removing every Newtonian/spatial/inertial modeling assumption from the Model A toy host mechanics, including the apparent neighbor-confining back-pressure, while preserving operational resource safeguards as distinctly nonphysical. Do not assume a cost of separation or an embedding space exists before spatial structure is derived. The request follows the earlier directed broad constraint sweep and the requirement that borrowed physics make sense at the proposed pre-geometric scale.
+
+**Pre-registered model-ablation distinction (agent plan, not a new premise):** (a) spring-force-only ablation, preserving the archived host's coordinate machinery as a control; (b) completely coordinate-free graph evolution, discarding `x,v,f,dt,mass,springK,targetUnit,mergeDistance,dimBirthCooldown` and the dimension-birth criterion itself; (c) vary *only* graph-edge admission (historical all-link topology versus newly born events receiving only older causal predecessors, tree-only, and limited graph-neighbor options); (d) compare graph-resource limits/pruning separately and measure graph-theoretic observables. Graph shortest paths are **diagnostic hop counts**, not assumed physical distances. Causal predecessors induce a partial order only in oriented new-event-link variants; old-to-old links in the historical host are not automatically causal arrows. Model "steps" are simulation update indices, not a derived Einsteinian time parameter.
+
+**Evidence disposition:** The earlier uncapped source, previous control suite, and historical HTML remain preserved. Experimental outcomes to be appended separately; no result or law is anticipated or qualified by making this request.
+
