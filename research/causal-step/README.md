@@ -2,7 +2,7 @@
 
 **Project title:** Causal Step  
 **Current research dossier:** this README  
-**Status:** new, independent exploratory research area; **two provisional premises recorded**, formal definitions and tests pending  
+**Status:** independent exploratory research; **two provisional premises recorded**, formal causal-step theory still open, supporting Model A numerical controls executed  
 **Authority:** exploratory research only; no qualified IsoGraph semantic status  
 **Recorded:** 2026-10-12
 
@@ -122,6 +122,34 @@ The 64 projected orbit-like trajectories did **not** demonstrate stable full-dim
 - [Earlier browser-executed one-line uncapped baseline](experiments/2026-10-12-model-a-uncapped.html)
 
 This is a **toy model with explicitly prescribed forces, thresholds, coordinate dimensions and numeric stepping**. No additional Causal Step premise, effective physical geometry, naturally preferred dimension count, or full-space gravitational orbit is qualified.
+
+## Model A physics-inspired constraint exploration (2026-10-12)
+
+The researcher requested a deliberately broad exploration of existing modeling assumptions—**removing, replacing and combining constraints**—and subsequently required that candidate *physics* rules only be borrowed where appropriate at a pre-geometric causal scale. Hard node/edge limits remain marked computational safeguards, **not** physics.
+
+The first 1,000-step controlled sweep found the following (all uncapped):
+
+| Intervention | Dimensions at 1,000 | Projected >1-revolution node tracks / 107 |
+|---|---:|---:|
+| Original uncapped baseline | 48 | 64 |
+| Remove linked-endpoint separation on dimension birth | 48 | 0 (no motion; collapsed spring edges) |
+| Ignore new-edge stress for 1 or 20 updates | 48 | 64 |
+| Restrict secondary attachments to a parent's graph neighbors | 48 | 52 |
+| Only add links into newly born nodes (no old-to-old insertion) | 48 | 68 |
+| Combined causal-neighbor and new-event-only attachment | 48 | 48 |
+| Replace spring mechanics with graph-local coordinate diffusion | 48 | 0 |
+| Use mean-error birth threshold 0.4 / 0.6, without max-error trigger | **27 / 2** | 68 / 51 |
+
+**Crucial falsifier:** Threshold 0.6 creates an apparent two-dimensional plateau lasting from step 22 until another birth at step **1,975** after default node-cap fragmentation. At step 2,000 the default-cap model has **3 dimensions, 2,994 nodes, 195 components**; changing only the node limit yields **2 dimensions, 4,162 nodes, 1 component**. Threshold 0.4 reaches **59** dimensions at step 2,000. None of these numbers is a preferred dimension discovered in physics.
+
+**Scale-appropriate physics candidates:** causal event precedence/partial order (causal-set research), relational neighborhood selection, and local propagation or exchange on a graph. The tested versions are **limited analogies**, not actual Lorentz-covariant causal-set dynamics; in particular initial parent selection remains global and coordinate arrays/springs remain explicit in most runs. No mandatory conservation rule has been added: conserved quantities require an identified symmetry/closed-system model, and energy/momentum are currently merely diagnostics.
+
+- [Exact design, physics references, results, limitations and next research criterion](reviews/2026-10-12-model-a-constraint-physics-laboratory.md)
+- [Runnable independent constraint-laboratory script](experiments/model-a-constraint-lab.mjs)
+- [1,000-step checkpoints](experiments/results/2026-10-12-constraint-1000-checkpoints.csv) and [birth-event evidence](experiments/results/2026-10-12-constraint-1000-birth-events.csv)
+- [2,000-step threshold and node-cap follow-up](experiments/results/2026-10-12-threshold-2000-checkpoints.csv)
+
+**Next research test:** a separate **graph-first causal-event model** without a programmed ambient dimension; evaluate relational dimension/geometry as an observation rather than a forced response to an arbitrarily chosen edge-length threshold. Preserve multi-candidate falsification and the provisional status of the original two Causal Step premises.
 
 ## Current research state
 
