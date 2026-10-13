@@ -164,19 +164,26 @@ function trialTrace({k,rule,bits,initKind,mutate,scheduler,seed,limit}){
  if(rewrites>=limit&&status==='limit')status='horizon-censored';
  activeFrontier=eligible().length;
  const eventPeriod=suffixPeriod(signatures),structurePeriod=suffixPeriod(structureSignatures);
+ const recentEventSignatures=signatures.slice(-64),recentReactivationEvents=incidenceChanges.slice(-64).filter(x=>x>0).length;
+ const recentDistinctEventSignatures=new Set(recentEventSignatures).size;
  const uniqueEventSignatures=new Set(signatures).size,uniqueContextSignatures=new Set(structureSignatures).size;
  const homogenousTrace=signatures.length>=64&&uniqueEventSignatures===1&&eventPeriod===1;
  const unchangingGlobalBits=stateWeights.length>=2&&Math.max(...stateWeights)-Math.min(...stateWeights)<1e-10;
  const dynamicsLead=(totalOldActivated>0&&uniqueEventSignatures>1);
- const statusLabel=rewrites===0?'no-productive-trajectory':
-    homogenousTrace&&totalOldActivated===0?'simple-repeating-local-trajectory':
-    dynamicsLead?'context-sensitive-overlap-lead':'capacity-unresolved';
+ const sustainedStructuredLead=(status==='horizon-censored'&&eventPeriod===null&&
+   recentDistinctEventSignatures>=3&&recentReactivationEvents>=2);
+ const simplePeriodicTail=(status==='horizon-censored'&&eventPeriod!==null&&recentDistinctEventSignatures<=2);
+ const statusLabel=rewrites===0?'initially-inert':
+    status!=='horizon-censored'?'stopped-rewriting':
+    sustainedStructuredLead?'structured-dynamics-candidate':
+    simplePeriodicTail?'simple-periodic-local-tail':'complexity-not-yet-established';
  return {arity:k,mode:MODES[rule.mode],weights:rule.weights,ranks:rule.ranks,keep:rule.keep,
   initKind,scheduler,mutation:mutate,initialNodes:n,initialEdges,initialBits:bits,initialOnes:hamming(bits,n),
   originallyEligible,status,rewrites,nodes:nodes.length,liveHyperedges:live,activeFrontier,causalDepth,
   uniqueEventSignatures,uniqueContextSignatures,eventSuffixPeriod:eventPeriod,contextSuffixPeriod:structurePeriod,
+  recentDistinctEventSignatures,recentReactivationEvents,
   homogenousTrace,unchangingGlobalBits,changedStateEvents,oldOverlapEvents:overlapEvents,
-  reactivatedOldHyperedges:totalOldActivated,dynamicsLead,statusLabel,
+  reactivatedOldHyperedges:totalOldActivated,dynamicsLead,sustainedStructuredLead,simplePeriodicTail,statusLabel,
   firstSignatures:signatures.slice(0,6).join('|'),lastSignatures:signatures.slice(-6).join('|')};
 }
 function selectCandidateRules(k){
@@ -207,27 +214,30 @@ for(const {ruleId,rule,uniformCertificate} of selected){
   }
  }
 }
-const results=out.filter(r=>r.statusLabel==='simple-repeating-local-trajectory');
-const positives=out.filter(r=>r.statusLabel==='context-sensitive-overlap-lead');
+const results=out.filter(r=>r.statusLabel==='simple-periodic-local-tail');
+const positives=out.filter(r=>r.statusLabel==='structured-dynamics-candidate');
 const positiveRuleIds=new Set(positives.map(x=>x.ruleId));
 const uniformCertificateIds=new Set(selected.filter(c=>c.uniformCertificate).map(c=>c.ruleId));
 const report={arity,horizon,ruleCount:selected.length,runs:out.length,selectedRules:metadata,
  trajectoryTags:{
-  noProductive:out.filter(t=>t.statusLabel==='no-productive-trajectory').length,
-  simpleLocal:results.length,
-  overlappingInteractionLead:positives.length,
-  unresolved:out.filter(t=>t.statusLabel==='capacity-unresolved').length
+  initiallyInert:out.filter(t=>t.statusLabel==='initially-inert').length,
+  stoppedRewriting:out.filter(t=>t.statusLabel==='stopped-rewriting').length,
+  simplePeriodicLocalTail:results.length,
+  structuredDynamicsCandidates:positives.length,
+  complexityUnresolved:out.filter(t=>t.statusLabel==='complexity-not-yet-established').length
  },
+ meanRecentDynamicSignaturesAmongCandidates:positives.length?Number((positives.reduce((z,x)=>z+x.recentDistinctEventSignatures,0)/positives.length).toFixed(3)):null,
  certifiedUniformRulesSelected:uniformCertificateIds.size,
  certifiedUniformRulesWithOtherCoupledOverlapLead:[...uniformCertificateIds].filter(id=>positiveRuleIds.has(id)).length,
  noCapsHit:out.every(t=>t.status!=='resource-censored'),
- caveats:['local rule/event signatures are not complete graph isomorphism tests','simple local periods do not prove rule-wide incapacity for complex organization','overlap reactivation demonstrates dependence but is not alone evidence of physical structured complexity','synthetic aggregate binary-state mutations are deliberately supplied controls, not emergent laws','no attempt at exhaustive search over general hypergraph rewrite systems']};
+ caveats:['the strict structured-dynamics tag is an experimental candidate gate, not a proven complexity capacity','local rule/event signatures are not complete graph isomorphism tests','simple local periods do not prove rule-wide incapacity for complex organization','overlap reactivation demonstrates dependence but is not alone evidence of physical structured complexity','synthetic aggregate binary-state mutations are deliberately supplied controls, not emergent laws','no attempt at exhaustive search over general hypergraph rewrite systems']};
 fs.mkdirSync(folder,{recursive:true});
 const prefix='complexity-screen-k'+arity;
 const cols=['ruleId','uniformCertificate','initial','arity','mode','weights','ranks','keep','initKind','scheduler','mutation',
 'initialNodes','initialEdges','initialBits','initialOnes','status','rewrites','nodes','liveHyperedges','activeFrontier','causalDepth',
-'uniqueEventSignatures','uniqueContextSignatures','eventSuffixPeriod','contextSuffixPeriod','homogenousTrace','unchangingGlobalBits',
-'changedStateEvents','oldOverlapEvents','reactivatedOldHyperedges','dynamicsLead','statusLabel','firstSignatures','lastSignatures'];
+'uniqueEventSignatures','uniqueContextSignatures','eventSuffixPeriod','contextSuffixPeriod','recentDistinctEventSignatures','recentReactivationEvents',
+'homogenousTrace','unchangingGlobalBits','changedStateEvents','oldOverlapEvents','reactivatedOldHyperedges',
+'dynamicsLead','sustainedStructuredLead','simplePeriodicTail','statusLabel','firstSignatures','lastSignatures'];
 fs.writeFileSync(path.join(folder,prefix+'-trials.csv'),toCsv(out,cols));
 fs.writeFileSync(path.join(folder,prefix+'-summary.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({arity,horizon,runs:out.length,tags:report.trajectoryTags,
