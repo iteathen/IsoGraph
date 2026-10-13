@@ -209,6 +209,35 @@ The fixed-arity trials that halted after activating **all halted after precisely
 
 **Status:** genuinely higher-order causal-like rewriting demonstrated **as a computational toy**; no validated unbounded hypergraph physics, emergence of elementary particles, intrinsic dimensionality, or objective empirical correspondence. The two provisional Causal Step premises are unchanged.
 
+## Second rule-selection filter — persistence **and** complexity capacity (2026-10-12)
+
+The researcher clarified a necessary second filter: **indefinite repetition of a trivial pattern is not enough**. An acceptable generative candidate must both avoid collapse (allowing unlimited growth) **and** exhibit an ability to represent/generate nontrivial complexity. The requirement is *not* a return to equilibrium, a demand for maximal disorder, or proof of computation universality. Judge a **trajectory** against its initial structure and rule, and never infer global incapacity of a rule from one simple periodic start.
+
+**Executed, explicitly preliminary laboratory screen:** [source-independent complexity probe](experiments/hypergraph-complexity-screen.mjs) checked **864 trajectories**, using 12 deliberately selected 3/4/5-node rules per arity (six with certified homogeneous perpetual branching and six without), three binary-state starts, two higher-order incidence starts, FIFO/random scheduling and mutation-off/on controls. Local rewrite behavior was measured over the last 64 events; a candidate was required to remain productive through 120 rewrites with ≥3 distinct recent transition signatures, ≥2 recent reactivations of previously ineligible overlapping hyperedges, and no exact repeating local period ≤12 events.
+
+| Screen tag | k=3 | k=4 | k=5 | Total |
+|---|---:|---:|---:|---:|
+| Initially inactive | 84 | 112 | 84 | **280** |
+| Began rewriting then ceased | 62 | 92 | 77 | **231** |
+| Productive but simple-periodic recent local behavior | 85 | 64 | 88 | **237** |
+| Productive, richer feedback **candidate** | 18 | 12 | 14 | **44** |
+| Capacity still unresolved | 39 | 8 | 25 | **72** |
+
+**44 is a count of trajectories, not distinct underlying theories or validated complex structures.** This selected sample was purposely enriched with trivial perpetual certificates; percentages are not population estimates. Thresholds were refined after an initial screen and are exploratory, not a preregistered statistical test. A simple *local* event stream may still hide complex global structural incidence; conversely a nonperiodic stream or reactivation event is not by itself proof of structured complexity.
+
+**Controlled exception to careless global rejection:** k=5 sampled rule ID 21 with the **same full mutation operator and FIFO scheduling** produced a repeating period-1 local trace from all-zero nodes, but sustained more varied behavior and causal reactivation from a mixed-state start. Hence screen **the trivial trajectory**, and investigate the rule's other contexts rather than discarding its entire expressive capacity.
+
+**Longer tests and reproducibility:** Seven selected rule/starting configurations were checked at 400 events under matched mutation-off/on and FIFO/random scheduling (28 trajectories). All continued productively, **12 of the 14 state-changing trajectories** retained the exploratory feedback/aperiodicity candidate tag, while zero fixed-state controls did. A different PRNG scheduling seed produced the same counts; FIFO paths were deterministic duplicates, not separate randomized checks. The source-extracted [400-event/alternate-seed runner](experiments/hypergraph-complexity-holdout.mjs) reproduced the earlier 28 saved trajectories **exactly**. Cross-check of the 120-event single-edge dynamics against the original coupled higher-order code matched **432/432** cases on status, rewrite count, live edge count and eligible frontier. No node or hyperedge limit was encountered.
+
+**Next gate:** require substantive tests of information storage, transmission, conditional transformation, structural motif diversity and loss/resilience under competing higher-order rewrites. Do not label arbitrary numerical noise “complexity,” and do not mistake perpetual self-replication *by construction* for physical emergence.
+
+- [Source-grounded experimental analysis, all numerical results, caveats and falsifiers](reviews/2026-10-12-persistent-complexity-capacity-filter.md)
+- [Reproducible complexity-screen source](experiments/hypergraph-complexity-screen.mjs) and [holdout source](experiments/hypergraph-complexity-holdout.mjs)
+- [Saved k3/4/5 120-event CSVs, 400-event and independent-PRNG-seed control JSONs](experiments/results/)
+- [Researcher's exact additional filter](DISCUSSION_LOG.md)
+
+**No change** to the Causal Step premises, physical meaning of time, archived HTML, prior numeric raw results or higher-order rewrite rule semantics.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
