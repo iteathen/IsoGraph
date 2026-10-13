@@ -1,0 +1,352 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01.originalEq23-asssisted-source-no-invariant-3form-certificate.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "author_original_defect_qualified": false,
+  "whole_source_cold_complete": false,
+  "status": "EXACT_MATHEMATICAL_NONEXISTENCE_CONDITIONAL_ON_ASSISTED_EQ2_3_SOURCE_INPUT_AND_ORDINARY_MATRIX_GENERATORS",
+  "original_source": {
+    "author": "A. Garrett Lisi",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1",
+    "original_pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "original_pdf_page_zero_based": 6,
+    "source_equation_label": "2.3",
+    "source_locus": "L01-S014",
+    "SSC_owner": "L-SSC-029",
+    "previously_verified_original_pdf_binary_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_pdf_binary_reacquired_or_hashed_current_batch": false,
+    "original_pdf_page_visually_read_this_batch": true,
+    "secondary_same_original_math_rendering": "https://ar5iv.labs.arxiv.org/html/0711.0770",
+    "secondary_renderer_equation_number": "5 (corresponds to original printed Eq2.3)",
+    "source_author_declaration": "The passage presents a chosen smallest irreducible 7-by-7 matrix representation of g2 with coefficients g, q, and qbar; original §1.1 describes fermionic Grassmann fields in the superconnection.",
+    "independent_cold_matrix_cells_qualified": 0,
+    "source_49_cell_fixture_already_present": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "source_fixture_git_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a"
+  },
+  "mathematics": {
+    "theorem": "Every 7-dimensional irreducible representation of the complex g2 Lie algebra preserves a nonzero alternating three-form; a generator set with no common nonzero alternating three-form therefore cannot be this representation under ordinary 7-by-7 matrix Lie commutation.",
+    "external_mathematical_context": [
+      {
+        "source": "A.J. Macfarlane, Lie algebra and invariant tensor technology for g2",
+        "url": "https://arxiv.org/abs/math-ph/0103021",
+        "role": "external prior G2 invariant representation theory, not an oracle for Lisi's printed glyphs"
+      },
+      {
+        "source": "G2 as stabilizer of 7-dimensional associative alternating 3-form",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0723086922000603",
+        "role": "external theorem background, not source semantic replacement"
+      }
+    ],
+    "source_original_generator_count": 14,
+    "source_gauge_gluon_generators_count": 8,
+    "source_odd_q_generator_used": "q_r",
+    "source_conjugate_qbar_generator_used": "qbar_r",
+    "wedge_three_dimensional_space_dimension": 35,
+    "infinitesimal_action": "For A in 7x7 and covariant alternating phi, (A*phi)(e_i,e_j,e_k) = phi(A e_i,e_j,e_k)+phi(e_i,A e_j,e_k)+phi(e_i,e_j,A e_k). Its 35-by-35 exact integer matrix is computed from the matrix's source coefficients after nonzero complex rescaling.",
+    "exact_rescaling_source_basis": {
+      "g3": "-2i",
+      "g8": "-2i sqrt(3)",
+      "all_quarks_and_antiquarks": "sqrt(2)",
+      "offdiagonal_gluons": "1",
+      "invariant_zero_set_under_individual_nonzero_generator_rescalings": "UNCHANGED",
+      "source_real_form_semantics_proven": false
+    },
+    "exact_scoped_invariant_dimension_sequence": [
+      {
+        "generators": "original 8 gluon coefficients only",
+        "minor_size": 32,
+        "determinant": "65536",
+        "explicit_kernel_dimension_lower_bound": 3,
+        "exact_kernel_dimension": 3
+      },
+      {
+        "generators": "8 gluons and original q_r coefficient",
+        "minor_size": 34,
+        "determinant": "65536",
+        "explicit_kernel_dimension_lower_bound": 1,
+        "exact_kernel_dimension": 1
+      },
+      {
+        "generators": "8 gluons, original q_r and original qbar_r",
+        "minor_size": 35,
+        "determinant": "65536",
+        "exact_kernel_dimension": 0
+      }
+    ],
+    "first_8_gluon_exact_null_vectors_nonzero_components_zero_based": [
+      [
+        [
+          0,
+          -1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          14,
+          1
+        ]
+      ],
+      [
+        [
+          23,
+          1
+        ]
+      ],
+      [
+        [
+          26,
+          1
+        ]
+      ]
+    ],
+    "gluon_plus_qr_exact_kernel_vector_zero_based": [
+      [
+        0,
+        1
+      ],
+      [
+        9,
+        -1
+      ],
+      [
+        14,
+        -1
+      ],
+      [
+        23,
+        -2
+      ],
+      [
+        26,
+        1
+      ]
+    ],
+    "original_input_needed_for_nonexistence_certificate": "Only 10 of the 14 original coefficient generators suffice to force a full-rank 35-by-35 invariant-form constraint system. This does not prove minimality across arbitrary subsets.",
+    "exact_35_by_35_certificate": {
+      "stacked_10_generator_constraint_matrix_row_count": 350,
+      "source_generator_order": [
+        "g3",
+        "g8",
+        "g_rg",
+        "g_gr",
+        "g_rb",
+        "g_br",
+        "g_gb",
+        "g_bg",
+        "q_r",
+        "qbar_r"
+      ],
+      "selected_zero_based_row_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        27,
+        28,
+        31,
+        32,
+        33,
+        34,
+        45,
+        48,
+        54,
+        55,
+        59,
+        60,
+        64,
+        65,
+        81,
+        141,
+        284,
+        295,
+        322
+      ],
+      "selected_column_indices_zero_based": "0 through 34",
+      "exact_integer_determinant": "65536",
+      "proof": "A nonzero 35-by-35 constraint minor proves the common alternating 3-form invariant kernel is zero."
+    },
+    "canonical_valid_G2_positive_control": {
+      "phi_zero_based_nonzero_triplet_coefficients": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            5,
+            6
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            3,
+            5
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            4,
+            6
+          ],
+          -1
+        ],
+        [
+          [
+            2,
+            3,
+            6
+          ],
+          -1
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          -1
+        ]
+      ],
+      "independent_stabilizing_skew_generators": 14,
+      "exact_operator_rank7_certificate": {
+        "selected_rows_zero_based": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11,
+          21
+        ],
+        "selected_columns_zero_based": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "determinant": "-1"
+      },
+      "stabilizer_dimension_in_so7": 14,
+      "all_generator_pairs_have_commutator_preserving_phi": "91 of 91",
+      "source_Lisi_input_used_to_construct_positive_control": false
+    },
+    "independent_secondary_calculation": {
+      "implementation": "Python SymPy exact rational 490-by-35 source invariant-form constraints plus independent canonical G2 35-by-21 stabilizer map",
+      "original_source_hardcoded_from_same_assisted_original_eq2_3_transcription": true,
+      "rank_full_source_matrix": 35,
+      "rank_eight_gluon_only": 32,
+      "rank_eight_gluon_plus_qr": 34,
+      "rank_eight_gluon_plus_qr_plus_qbar_r": 35,
+      "canonical_G2_rank_on_so7": 7,
+      "canonical_G2_stabilizer_dim": 14,
+      "canonical_G2_bracket_pair_checks": 91,
+      "second_implementation_does_not_independently_cold_qualify_original_PDF": true
+    }
+  },
+  "reproduced_evidence": {
+    "input_path": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "input_git_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "exact_verifier_path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_threeform_nonexistence_0_1.mjs",
+    "exact_verifier_git_blob_sha": "d9062567f7f8b8fbbf9fcaed4a9704434554dab6",
+    "exact_output_path": "experiments/062/L01_EQ23_THREEFORM_EXACT_NONEXISTENCE_LOCAL_OUTPUT_0_1.json",
+    "exact_output_git_blob_sha": "07c908293e674a46db62eadb016a8dd48784d16f",
+    "executable_command": "node research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_threeform_nonexistence_0_1.mjs",
+    "execution": "GitHub exact verifier and frozen source matrix blob rerun in V8 with only Node file read/import/shebang adapted; resulting output JSON saved as exact Git blob.",
+    "controls_defined": 10,
+    "controls_rejected": 10,
+    "version_before_first_local_replay": {
+      "candidate_blob_sha": "550582ff82c86bdec01500b5b9ec47da49cb9983",
+      "disposition": "UNCOMMITTED_PRECHECK_SYNTAX_LOAD_AND_PIVOT_INDEX_ERROR",
+      "error_causes": [
+        "V8 Function shim initially included Node shebang",
+        "35th row index 392 applied to compressed 10-generator stack, should be 322"
+      ],
+      "repair": "Replace only runtime shebang in host shim and correct 10-generator row coordinate, no source coefficients changed",
+      "production_git_CI_run": false
+    },
+    "method_note": "The host-side source assembly and controls were actually run; a green result is not declared independent source semantics."
+  },
+  "relation_to_predecessor": {
+    "prior_evidence": "experiments/062/L01_EQ23_ASSISTED_COMPLEX_LIE_GENERATED_SO7_EXACT_CERTIFICATE_G0_0_1.json",
+    "prior_generated_complex_Lie_algebra": "so(7,C) from 14 assisted 7x7 coefficients",
+    "this_test_uses_no_Lie_closure_dimension_classifier": true,
+    "conclusion_consistency": "A full orthogonal Lie closure need not preserve any nonzero alternating 3-form; both tests independently expose absence of the additional G2 invariant on the same assisted source.",
+    "no_extra_spacetime_dimensions_implied": true,
+    "no_new_Lie_ideal_or_quotient_implied": true,
+    "source_representation_ambiguity_and_operator_scope_remain_open": true
+  },
+  "competing_dispositions": [
+    {
+      "explanation": "Original printed matrix transcribed incorrectly or glyph/overbar/sign ambiguity",
+      "status": "OPEN_INDEPENDENT_SOURCE_ONLY_COLD_REVIEW_NEEDED"
+    },
+    {
+      "explanation": "Original Eq2.3 assigns a different source-defined product, or source constraints restrict independent generator coefficients",
+      "status": "OPEN_GRASSMANN_GRADED_SOURCE_OPERATOR_REVIEW_NEEDED"
+    },
+    {
+      "explanation": "Original printed Eq2.3 may not realize the claimed ordinary 7D G2 representation",
+      "status": "CONDITIONAL_CANDIDATE_NOT_AN_ESTABLISHED_AUTHOR_ERROR"
+    },
+    {
+      "explanation": "The 7D matrix is actually an alternative G2 real form restored by an invertible change of basis",
+      "status": "NOT_A_REPAIR_FOR_ABSENCE_OF_COMPLEX_ALTERNATING_THREEFORM"
+    }
+  ],
+  "G0_locks": {
+    "SSC_revision": "0.96",
+    "SSC_item_count": 191,
+    "L01_original_source_locations": 98,
+    "source_first_groups_all_six": 350,
+    "L01_exact_visual_groups_cold_unqualified": 16,
+    "whole_source_cold_complete_count": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "direction": "Joshua Oshiro",
+    "original_source": "A. Garrett Lisi (2007)",
+    "technical_formulation_and_exact_verifier": "agent-assisted",
+    "date": "2026-10-13"
+  }
+}
