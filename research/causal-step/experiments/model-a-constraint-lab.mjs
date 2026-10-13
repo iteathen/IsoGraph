@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { performance } from 'node:perf_hooks';
 const variant=process.argv[2] || 'baseline';
-const knownVariants=['baseline','no-clearance','aged1','aged20','local-crosslinks','no-old-links','causal-local-hybrid','diffusion','mean-only','mean-only-0.4','mean-only-0.6'];
+const knownVariants=['baseline','no-clearance','aged1','aged20','local-crosslinks','no-old-links','causal-local-hybrid','diffusion','mean-only','mean-only-0.4','mean-only-0.6','mean-only-0.6-no-node-cap'];
 if(!knownVariants.includes(variant))throw Error('Unknown laboratory variant: '+variant);
 const mode='uncapped';
 const horizon=Number(process.argv[3] || 1000);
@@ -30,10 +30,10 @@ const targetDir=path.resolve(process.argv[4] || './model-a-output');
 fs.mkdirSync(targetDir,{recursive:true});
 // BEGIN original dynamics with explicitly marked laboratory interventions.
 const cfg = {
-  maxNodes: mode === 'no-node-cap' ? Number.POSITIVE_INFINITY : 3000,
+  maxNodes: variant==='mean-only-0.6-no-node-cap' ? Number.POSITIVE_INFINITY : 3000,
   maxEdges: 9000,
   targetUnit: 1.0,
-  birthThreshold: variant==='mean-only-0.4'?0.4:variant==='mean-only-0.6'?0.6:0.20,
+  birthThreshold: variant==='mean-only-0.4'?0.4:(variant==='mean-only-0.6'||variant==='mean-only-0.6-no-node-cap')?0.6:0.20,
   internalDimCap: mode === 'capped' ? 12 : Number.POSITIVE_INFINITY,
   mergeDistance: variant==='no-clearance'?0:0.055,
   qfWidth: 1024,
@@ -451,11 +451,11 @@ for(let i=0;i<horizon;i++){
 }
 const orbit=[...cohort.entries()].map(([id,r])=>({id,samples:r.n,winding:r.net,absoluteCumulativeTurns:r.abs,radialCV:Math.sqrt(Math.max(0,r.rad2/r.n-(r.radSum/r.n)**2))/(r.radSum/r.n)}));
 for(const [name,lines] of [['steps',steps],['births',births],['orbit-trace',traces]])fs.writeFileSync(prefix+'-'+name+'.csv',lines.join('\n')+'\n');
-const report={variant,mode,horizon,source_blob:'4d7e6f4bb594204afa92534d697a9a32fc3ea9a0',changes:'see named laboratory variant; exactly one controlled parameter/rule change except the explicitly labeled causal-local-hybrid',meanSourceUpdateMs:totalMs/horizon,checkpoints:checkpoint,birthCount:births.length,orbit:{selected:orbit.length,over1:orbit.filter(a=>Math.abs(a.winding)>1).length,over2:orbit.filter(a=>Math.abs(a.winding)>2).length,perNode:orbit}};
+const report={variant,mode,horizon,source_blob:'4d7e6f4bb594204afa92534d697a9a32fc3ea9a0',changes:'see named laboratory variant; exactly one controlled parameter/rule change except the explicitly labeled causal-local-hybrid',meanSourceUpdateMs:totalMs/horizon,checkpoints:checkpoint,birthCount:births.length-1,orbit:{selected:orbit.length,over1:orbit.filter(a=>Math.abs(a.winding)>1).length,over2:orbit.filter(a=>Math.abs(a.winding)>2).length,perNode:orbit}};
 report.survival={
  originalCohort:cohort.size,
  aliveByStep:[200,900,950,1000,1100,1200,1250,1500,1750,2000].filter(x=>x<=horizon).map(t=>({step:t,alive:[...cohort.values()].filter(x=>x.lastAlive>=t).length})),
- late950to1200:{atEnd:[...cohort.values()].filter(x=>x.lastAlive>=1200).length,moreOneNetRevolution:[...cohort.values()].filter(x=>x.lastAlive>=1200&&Math.abs(x.lateWinding)>1).length}
+ late950to1200:horizon<1200?null:{atEnd:[...cohort.values()].filter(x=>x.lastAlive>=1200).length,moreOneNetRevolution:[...cohort.values()].filter(x=>x.lastAlive>=1200&&Math.abs(x.lateWinding)>1).length}
 };
 fs.writeFileSync(prefix+'-survival.csv',['node_id,last_alive_step,late950to1200winding,late_samples',...[...cohort.entries()].map(([id,r])=>[id,r.lastAlive,r.lateWinding,r.lateSamples].join(','))].join('\n')+'\n');
 fs.writeFileSync(prefix+'-summary.json',JSON.stringify(report,null,2)+'\n');
