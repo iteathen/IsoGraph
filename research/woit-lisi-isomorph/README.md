@@ -1,3 +1,7 @@
+## L G0 Eq2.4 root-projection mathematical discriminator (2026-10-13)
+
+The independent Lisi [source-first Eq2.4 / Table2 discriminator](lisi/LISI_L01_EQ24_SOURCE_ROOT_PROJECTION_VS_LIE_QUOTIENT_FRONTIER_G0_0_1.json) locally confirms 12/12 source-assisted root-coordinate projections. It independently rejects a stronger *Lie-algebra quotient* reading of su(4) after discarding a u(1) direction, while leaving the original geometric diagram and Lisi's intended arrow scope open. The [G0 gate0.201](../../experiments/062/L_CURRENT_STAGE_GATE_0_201.json) is procedural only: no cold semantic promotion, no Woit import or PR merge.
+
 ## L G0 source-first Table 1 algebraic pilot (2026-10-13)
 
 The independent L source dossier now records [12 assisted original Table1 rows](lisi/tools/l01_table1_assisted_source_cells_0_1.json) and an [exact symbolic source-row consistency witness](../../experiments/062/L01_TABLE1_ASSISTED_SOURCE_12_WEIGHT_ALGEBRA_LOCAL_SUCCESS_0_1.json): 144/144 root-reflection checks, 10/10 hostile mutations rejected, and a reproduced SU(3) 3x3 Eq2.2 matrix. This is **local mathematical verification of assisted data**, not independent cold source reading, field-action graph qualification, or physics validation. [L G0 gate 0.200](../../experiments/062/L_CURRENT_STAGE_GATE_0_200.json) retains the unqualified six-original source census and all other G1+/cross-track/merge locks.
