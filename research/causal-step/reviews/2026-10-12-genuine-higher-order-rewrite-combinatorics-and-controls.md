@@ -151,9 +151,35 @@ To study genuine nonabsorbing dynamical stationary patterns or cycles, a **diffe
 
 - **Source:** [hypergraph-rewrite-lab.mjs](../experiments/hypergraph-rewrite-lab.mjs), self-contained Node-compatible ECMAScript module, no dependencies. Exact active firing semantics and order-specific output layers are in the code, not a screenshot. Distinct phases are `sweep`, `multi`, `controls`, `symmetry`, `coupled`. Representative commands are in the header.
 - **Execution method:** source was executed in a local V8 isolate with Node-style filesystem/path/process adapters and results saved through the connected GitHub repository. **Not GitHub Actions; not a Node process test of the committed file itself.** JavaScript source parsed and the run function executed, and results were reread from GitHub. This distinguishes runtime compatibility from numerical output.
-- **Executed trial count:** 5,760 immutable fixed-rank + 640 mixed + 2,880 matched coupled/control = **9,280**, plus **168** illustrative initial-relabel and three higher-order-versus-2-section controls. Each family has a distinct observation cap and bounded definition.
+- **Executed trial count:** 5,760 immutable fixed-rank + 640 mixed + 2,880 matched coupled/control + 1,024 varied five-node initial-incidence runs = **10,304**, plus **168** illustrative initial-relabel and three higher-order-versus-2-section controls. Each family has a distinct observation cap and bounded definition.
 - **Input restrictions:** binary *immutable* or binary *aggregate-mutating* node states; one local hyperedge match per rewrite; output contains the newborn and at least two older nodes; finite ranks 3, 4, 5 (with rank-6 outputs passive); chosen input-weight predicate; node birth on every productive update; one or several rules per run. No general multi-hyperedge left-hand-side matching, nested/hyperedge-valued nodes, causal-order covariance theorem, field theory or universal hypergraph class.
 - **Scaling:** full unbounded hypergraph rewriting is **not** exhausted by any tested family. Counts of rules are relative to the representation. No inference about elementary particles, stable bound states, intrinsic dimension, neutrinos, protons, cosmology, matter fields or gravity.
-- **Independent next tests:** broaden left-hand-side patterns to *multiple* interacting hyperedges, allow changes in higher-order incidence without compelled node growth (controlled), use an explicit exact or bounded-certificate graph equivalence where needed, vary initial hypergraphs rather than only one k-edge, and test holdouts/relabel invariance/resource limits before calling any pattern intrinsic.
+- **Independent next tests:** broaden left-hand-side patterns to *multiple* interacting hyperedges, allow changes in higher-order incidence without compelled node growth (controlled), use an explicit exact or bounded-certificate graph equivalence where needed, broaden initial hypergraph sampling beyond the five-node incidence sweep, and test holdouts/relabel invariance/resource limits before calling any pattern intrinsic.
 
 **Interpretive status:** The user-required genuinely higher-order relation has been implemented and verified against lossy pairwise projections. The most informative negative result is the absence of a demonstrated nontrivial steady state under **strictly birth-only rewrite semantics**; the most informative positive result is that changing all members of a k-ary relation can change the future eligibility of other overlapping k-ary relations without installing a Euclidean physical background. **No physical identification has been made.**
+
+
+## 8. Five-node structural initial-condition sweep (later controlled extension)
+
+The earlier sweeps deliberately started with **one** k-hyperedge and varied node-state Hamming weights; that is only one point in the much larger space of **initial higher-order incidence**. At five labeled nodes, all rank-3, rank-4 and rank-5 hyperedge positions total `C(5,3)+C(5,4)+C(5,5)=10+5+1=16`, giving **65,536** possible labeled incidence configurations (including empty). This is not a count modulo graph isomorphism.
+
+The source runner's separately labeled `initial` phase created **64 combinations of rank-3, -4 and -5 rules**, each with a **fixed binary node state pattern**, and ran each ruleset against **eight chosen incidence masks**—five deliberately contrasted structures (one triple, all ten triples, all five 4-edges, one 5-edge, all 16 hyperedges), plus three seeded random masks. Each setting used FIFO and seeded-random scheduling, giving `64×8×2=1,024` trials. All had a 200-rewrite horizon and no node/edge resource limit was reached.
+
+| Category | Trials |
+|---|---:|
+| Initially no activated rewrite | 154 |
+| Activated, later absorbed | 204 |
+| Still rewriting at 200-event horizon | 666 |
+| Resource-censored | 0 |
+| Trials that actually fired rank 4 | 654 |
+| Trials that actually fired rank 5 | 424 |
+
+**50 of the 64 fixed rule/state sets** changed their absorbing-versus-horizon outcome when only the initial hyperedge incidence pattern changed (comparison within the FIFO scheduler). This is **direct evidence of initial-incidence dependence in the toy**, not a general theorem about physical initial conditions.
+
+A reproducible example is ruleset **0**, with fixed initial node bitmask **28**. Starting with one selected triple (`0x0001`) yields **zero** rewrites, while activating all ten possible triples (`0x03ff`) continues through all **200** updates under the same rules; initializing all five 4-hyperedges (`0x7c00`) also continues through 200, and actually fires **three** order-4 rewrites. The value of a possible relation is not inferable from the pairwise projection or node count alone.
+
+- [Ruleset assignments and fixed initial bits](../experiments/results/2026-10-12-higher-order-initial-incidence-rules.csv)
+- [Every executed incidence/run and rank firing](../experiments/results/2026-10-12-higher-order-initial-incidence-trials.csv)
+- [Numerical summary](../experiments/results/2026-10-12-higher-order-initial-incidence-summary.json)
+
+**Caution:** Only eight of 65,536 labeled topologies were sampled per ruleset, and only 64 rulesets; these tests do not establish an attractor, a universal causal law, or an unbounded hypergraph theorem. The next candidate experiment must expand **multi-hyperedge left-hand-side rewrite patterns** and test exact representation-aware invariance and temporal stability, not infer physics from finite censored growth.
