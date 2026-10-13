@@ -1,3 +1,7 @@
+## L G0 Eq2.3 cited-reference real-form firewall (2026-10-13)
+
+The new [exact auxiliary real-form evidence](../../experiments/062/L01_EQ23_AUX_REALFORM_VS_CACCIATORI_EXACT_G0_0_1.json) establishes that the project integer-rescaled b=1 and hypothetical b=2 models preserve unique indefinite symmetric forms (4 positive, 3 negative), so they cannot be related by *real GL7 similarity* to Cacciatori's explicit compact real skew G2 basis. **This is a comparison of auxiliary real matrix spans, not identification of Lisi's source real form; complex comparison remains open.** [Gate0.207](../../experiments/062/L_CURRENT_STAGE_GATE_0_207.json) retains all source-cold and W/L independence locks.
+
 ## L G0 Eq2.3 original-versus-comparison normalization discriminator (2026-10-13)
 
 The [new exact source-assisted comparison](../../experiments/062/L01_EQ23_SOURCE_ASSISTED_NORMALIZATION_FORK_EXACT_SUCCESS_G0_0_1.json) localizes the source Eq2.3 14-to-21 algebraic discrepancy to a relative first-row coupling pattern: the original assisted matrix (b=1) retains nonclosure; a **different, explicitly non-authoritative** six-cell b=2 comparison yields an exact 14D G2 three-form stabilizer and bracket closure. The result is a research discriminator, **not** a correction to the source or approval to replace its coefficients. An independent original Eq2.3 49-cell source-only reading and source-defined operator typing remain mandatory. [L gate0.206](../../experiments/062/L_CURRENT_STAGE_GATE_0_206.json) holds all prior G0 and W/L isolation requirements.
