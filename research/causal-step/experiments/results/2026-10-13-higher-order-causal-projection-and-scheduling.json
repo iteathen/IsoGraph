@@ -1,0 +1,84 @@
+{
+  "experiment": "2026-10-13-higher-order-causal-projection-and-scheduling",
+  "scope": "exact finite observer-level semantics; not a causal physics simulation",
+  "pairwise_shadow": [
+    "a>c",
+    "b>c"
+  ],
+  "same_pairwise_shadow": true,
+  "joint_kary_incidence": {
+    "source_count": 2,
+    "total_incidence_rank": 3
+  },
+  "split_incidence": {
+    "edge_count": 2,
+    "incidence_rank_each": 2
+  },
+  "intervention_truth_table": [
+    {
+      "active": [],
+      "joint": false,
+      "split": false
+    },
+    {
+      "active": [
+        "a"
+      ],
+      "joint": false,
+      "split": true
+    },
+    {
+      "active": [
+        "b"
+      ],
+      "joint": false,
+      "split": true
+    },
+    {
+      "active": [
+        "a",
+        "b"
+      ],
+      "joint": true,
+      "split": true
+    }
+  ],
+  "distinguishing_interventions": 2,
+  "relabel_permutations_checked": 6,
+  "disjoint_rewrite_terminal_states": {
+    "R1_then_R2": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "R2_then_R1": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "same": true
+  },
+  "overlapping_rewrite_order": {
+    "R1_then_R3": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "R3_initially_enabled": false,
+    "unrestricted_commutation": false
+  },
+  "conclusion": "Pairwise reachability cannot reconstruct primitive joint-input event enabling; disjoint-rule final-state commutation does not imply all overlap schedules commute.",
+  "limitations": [
+    "3-node exact comparison only",
+    "No probabilistic weights, quantum process, action, metric or effective gravitational result",
+    "Relabel invariance in this local witness does not prove global covariance",
+    "Historical 8000-rewrite persistence and complexity results untouched"
+  ]
+}
