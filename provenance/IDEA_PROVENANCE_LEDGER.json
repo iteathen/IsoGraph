@@ -791,7 +791,24 @@
         ]
       },
       "findings": "864 exploratory trajectories: 280 initially inert; 231 stopped rewriting after activity; 237 remained productive with simple periodic local tails; 44 remained productive with provisional sustained diverse feedback; 72 unresolved. 432/432 baseline single-edge cases matched prior dynamics in selected diagnostics. At 400 rewrites, 12/14 mutated cases retained provisional feedback complexity screen and 0/14 fixed-state controls did; alternate scheduler seed preserved candidate counts. One complete k5 rule plus same FIFO scheduler exhibited simple and more varied activity under different initial node-bit states.",
-      "limits": "These are selected, finite k-ary toy models with aggregate binary states and deliberately supplied state mutation; initial rule sampling is enriched, thresholds post-hoc, signatures not graph-isomorphism invariants, no proof of algorithmic complexity/universality/particle structure, and no model of natural physical space/time. Trivial forever-branching witness may coexist with other global structural behavior and is not a rule-wide impossibility proof."
+      "limits": "These are selected, finite k-ary toy models with aggregate binary states and deliberately supplied state mutation; initial rule sampling is enriched, thresholds post-hoc, signatures not graph-isomorphism invariants, no proof of algorithmic complexity/universality/particle structure, and no model of natural physical space/time. Trivial forever-branching witness may coexist with other global structural behavior and is not a rule-wide impossibility proof.",
+      "long_horizon_followup": {
+        "request_date": "2026-10-12",
+        "researcher_instruction": "Do longer tests on the promising candidates.",
+        "implementation_attribution": "AI-assisted, using an incidence-indexed/Fenwick exact-prefix-verified replay of the previously published source semantics.",
+        "evidence": {
+          "branch": "research/causal-step-complexity-long-horizon-20261012",
+          "report": "research/causal-step/reviews/2026-10-12-higher-order-long-horizon-complexity-candidates.md",
+          "runner": "research/causal-step/experiments/hypergraph-long-horizon.mjs",
+          "frozen_manifest": "research/causal-step/experiments/results/2026-10-12-higher-order-long-horizon-manifest.json",
+          "source_fidelity": "research/causal-step/experiments/results/2026-10-12-higher-order-long-source-agreement-400.json",
+          "summary_3000": "research/causal-step/experiments/results/2026-10-12-higher-order-long-3000-summary.csv",
+          "summary_8000": "research/causal-step/experiments/results/2026-10-12-higher-order-long-8000-summary.csv",
+          "alt_seed": "research/causal-step/experiments/results/2026-10-12-higher-order-long-8000-alt-seed-summary.csv"
+        },
+        "findings": "A total of 53 finite longer-run replay trajectories were actually executed, totaling 284,000 simulated rewrite events: 28 at 3,000, 18 at 8,000 and seven different scheduler-seed 8,000 runs. All remained active without resource censoring. The original source's 400-rewrite results matched 448/448 tested fields exactly. Of 14 state-mutating primary contexts, 11 passed the exploratory local complexity screen at 3,000 and 12 at 8,000; the seven alternate scheduler-seed random versions also passed. k5 rule81 FIFO retained exact period5 local behavior despite ongoing growth and reactivation. k4 rule21 FIFO had only two recent local event types and remained unresolved; five other rule-context combinations passed under both schedulers.",
+        "boundaries": "An observed finite-horizon local event trace is not a proof of computation universality, graph-invariant organized complexity, indefinite survival, particle emergence, or physical law. The model guarantees one node per productive rewrite. The local feedback/period criteria were selected after prior exploration."
+      }
     }
   ]
 }
