@@ -1,3 +1,7 @@
+## Lisi G0: Figure1 seam geometry and SVG stroke extraction tool (2026-10-12)
+
+The [Lisi current dossier](lisi/README.md) now routes the [non-promoted seam-incidence research packet](lisi/LISI_L01_FIG1_BOUNDARY_AND_SVG_STROKE_FRONTIER_G0_0_1.json) and [source-SVG stroke candidate extractor](lisi/tools/extract_l01_svg_strokes_0_1.py). A synthetic 4x4 finite-grid countermodel establishes that a boundary endpoint does not choose one unique cell action (3 possible nonempty subsets for a two-cell seam, 15 for four-way contact). The source Figure1 W-to-grid seam appearance is a NON-COLD visual candidate without exact vector coordinates. Only author-side synthetic tool tests passed; no frozen-source binary or cold visual decoder ran. SSC0.96 (191), 350 source units, 16 original L01 visual groups and 0/6 full cold audits remain unchanged; G0 unfrozen, G1 and cross-track work blocked.
+
 ## L-only Figure1 scoped source-pinned CI success without G0 promotion (2026-10-12)
 
 [GitHub Actions 38279423956](https://github.com/iteathen/IsoGraph/actions/runs/38279423956) passed the L01 Figure1 **48-role candidate regression with 26/26 adversarial controls**, frozen original PDF SHA/page text SHA and rendered-page SHA. [Gate0.189](../../experiments/062/L_CURRENT_STAGE_GATE_0_189.json) and the [L dossier](lisi/README.md) retain the initial failed 22/23 run. Figure glyph placement was not independently raster-decoded, so **16 L01 original exact groups and 0/6 whole-source cold reviews remain open**; SSC0.96/G0 unfrozen, W/L firewall and PR70 merge restriction unchanged.

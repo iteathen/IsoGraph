@@ -1,0 +1,262 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-boundary-and-svg-strokes-research.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "date": "2026-10-12",
+  "semantic_authority": false,
+  "scope": "L01-S004 original Figure 1. Source-scoped diagram geometry and separate author prose; not W/L bridge or physical theory verification.",
+  "original_source": {
+    "id": "L01",
+    "arxiv": "0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "pdf_page_zero_based": 2,
+    "printed_page": 2,
+    "figure": "Figure 1",
+    "pdf_sha256_from_prior_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "binary_reverified_this_batch": false,
+    "original_svg_recreated_this_batch": false
+  },
+  "pinned_predecessors": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "candidate": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ORIGINAL_FIG1_SM_PERIODIC_TABLE_SOURCE_CANDIDATE_G0_0_2.json",
+      "git_blob_sha": "2f38cc22709cfd9c92d0aca2997390da03a06767"
+    },
+    "prior": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_FIG1_G_MARKER_VISUAL_VS_ACTION_DISCRIMINATOR_G0_0_1.json",
+      "git_blob_sha": "c569547a2b25ac25f7d14543493ee03627611c56"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_191.json",
+      "git_blob_sha": "6211130c2ade9859018e992b075f1648cf096ec4"
+    }
+  },
+  "source_visual_observation": {
+    "class": "NON_COLD_SOURCE_PDF_SCREENSHOT",
+    "claim": "The W roundel shows a horizontal line apparently meeting the table left boundary near the seam between the two left-chiral rows; the circled g appears below colored columns and visually separate at screenshot resolution.",
+    "exact_W_endpoint_coordinates": "UNMEASURED",
+    "exact_g_stroke_presence_or_absence": "UNRESOLVED",
+    "source_view_does_not_qualify_endpoints": true
+  },
+  "source_prose_separate": {
+    "L01_page": "printed p2 section 1.1",
+    "description": "W acts on left-chiral fermion doublets, g on red/green/blue quark triplets, B on hypercharge assignments; these are the author's prose and do not independently define source ink stroke edges."
+  },
+  "synthetic_geometry": {
+    "source_specific_coordinates_claimed": false,
+    "domain": "Closed unit rectangles [c,c+1] x [r,r+1] on a synthetic 4 by 4 lattice",
+    "witnesses": [
+      {
+        "id": "seam",
+        "point": [
+          0,
+          1
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "possible_nonempty_subsets": 3
+      },
+      {
+        "id": "cross",
+        "point": [
+          1,
+          1
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "possible_nonempty_subsets": 15
+      },
+      {
+        "id": "center",
+        "point": [
+          0.5,
+          0.5
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            0,
+            0
+          ]
+        ],
+        "possible_nonempty_subsets": 1
+      },
+      {
+        "id": "outer-corner",
+        "point": [
+          0,
+          0
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            0,
+            0
+          ]
+        ],
+        "possible_nonempty_subsets": 1
+      },
+      {
+        "id": "upper-perturb",
+        "point": [
+          0,
+          0.999
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            0,
+            0
+          ]
+        ],
+        "possible_nonempty_subsets": 1
+      },
+      {
+        "id": "lower-perturb",
+        "point": [
+          0,
+          1.001
+        ],
+        "geometrically_touched_closed_rectangles": [
+          [
+            1,
+            0
+          ]
+        ],
+        "possible_nonempty_subsets": 1
+      }
+    ],
+    "demonstrated_nonuniqueness": "Two closed cells touch an outer row-seam endpoint; choosing a nonempty subset gives 3 projections. Four cells touch an interior cross; 15 projections. Identical geometric data do not force a unique physical field action.",
+    "nonimplication": "Synthetic grid geometry does NOT establish the actual source stroke endpoint, glyph identity, author convention, hyperedge meaning or physical action."
+  },
+  "rival_models": [
+    {
+      "id": "R1",
+      "model": "A shared row-boundary endpoint encodes a doublet-level or multi-target pictorial relation.",
+      "status": "OPEN_UNQUALIFIED"
+    },
+    {
+      "id": "R2",
+      "model": "A seeming row-seam endpoint actually lands above or below the line in source vectors.",
+      "status": "OPEN_UNQUALIFIED"
+    },
+    {
+      "id": "R3",
+      "model": "Figure uses schematic group markings instead of exact binary action edges.",
+      "status": "OPEN_UNQUALIFIED"
+    },
+    {
+      "id": "R4",
+      "model": "Author action prose automatically determines every pictured edge.",
+      "status": "REJECT_AS_ORIGINAL_SOURCE_TOPOLOGY_ORACLE"
+    }
+  ],
+  "new_tool": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_1.py",
+    "git_blob_sha": "8f7501e721f4441ac91e184f7c8deeedf0faa9d6",
+    "sha256": "03c0645f9cec83c07bd7b6867012f2e015223c2c0bbd1d751998de0bdf863faa",
+    "language": "Python3 standard library",
+    "function": "Expand SVG use/glyph references, affines and inline inherited strokes into provenance-marked candidate line segments; preserve raw counts and unresolved geometry.",
+    "qualifying_semantics": false,
+    "local_selftest": {
+      "result": "PASS",
+      "synthetic_stroke_candidates": 4,
+      "unresolved_items": 3,
+      "left_seam_interpretations": 3,
+      "interior_cross_interpretations": 15,
+      "python_bytecode_compile": "PASS",
+      "original_L01_pdf_source_ran": false,
+      "original_L01_svg_ran": false
+    },
+    "initial_local_fixture_issue": "First author-side synthetic expectation counted a clipped line as completed; corrected expectation to fail closed and then reran successfully. Not a frozen historical CI qualification run.",
+    "known_incomplete_modes": [
+      "SVG curves/arc not exact",
+      "clipPath/mask/filter not resolved",
+      "CSS classes not fully resolved",
+      "no source raster correspondence",
+      "no glyph vs connector semantic classifier",
+      "no cold independently reconstructed Figure1 endpoint map"
+    ]
+  },
+  "negative_controls": [
+    "No pictured W action restricted to lepton-only from near-seam line.",
+    "No physics action edge deduced solely from any border or crossing.",
+    "No g connector invented from author prose and no original absence of g connector proved from screenshot.",
+    "No source path/use raw count reinterpreted as distinct visible connectors.",
+    "No unresolved clipping, nested use, CSS or curved path silently promoted as complete visible ink.",
+    "No 48 role candidates turned into independently verified raster-semantic roles.",
+    "No G0/SSC freeze, G1+ stage transition, W import, cross-track synthesis or PR merge."
+  ],
+  "next": "Acquire frozen original PDF binary and verify SHA; export SVG with logged Poppler version and high-resolution raster; run candidate extractor; resolve its incomplete objects; map exact transformed visible endpoints to independent source raster and glyphs; cold/blind review source-specific group and revise source inverse/SSC only with complete evidence.",
+  "stage_conservation": {
+    "SSC_revision": "0.96",
+    "SSC_items": 191,
+    "source_first_groups": 350,
+    "L01_groups": 98,
+    "L01_exact_visual_groups_open": 16,
+    "full_cold_sources_passed": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "historic_CI": {
+    "first_source_candidate": {
+      "run_id": 38279072465,
+      "conclusion": "failure",
+      "rejections": "22/23"
+    },
+    "scoped_candidate": {
+      "run_id": 38279423956,
+      "conclusion": "success",
+      "rejections": "26/26",
+      "full_cold": false
+    },
+    "vector_carrier": {
+      "run_id": 38294391911,
+      "conclusion": "success",
+      "rejections": "10/10",
+      "topology_closed": false
+    },
+    "new_CI_qualification_executed": false
+  },
+  "provenance": {
+    "direction": "Joshua Oshiro: full independent L and W treatment",
+    "formalization": "agent-assisted geometric source audit and tool prototype",
+    "first_source_preview": "2026-10-12 arXiv original Figure1 page viewed non-blind",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "original_author": "A. Garrett Lisi",
+    "synthetic_geometry": "standard elementary combinatorics, no novelty or priority claim"
+  }
+}
