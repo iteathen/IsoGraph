@@ -1,0 +1,578 @@
+{
+  "experiment": "T2 exact provenance-preserving relabel/scheduler replay",
+  "date": "2026-10-13",
+  "authority": "exploratory exact observer diagnostic, not physical theory",
+  "originalRunnerBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+  "referenceCsvBlobSha": "d2d40f87d59a5a94d2df71a69543e521f6ad807f",
+  "methodology": "source-text observer instrumentation with checked insertion anchors; no edits to generator or selected rules; transported event occurrence schedule versus raw order of eligible edges",
+  "configuration": {
+    "ks": [
+      3
+    ],
+    "horizon": 8000,
+    "naiveHorizon": 400,
+    "includeTransport": true,
+    "includeNaive": true,
+    "alternateRandom": false
+  },
+  "totals": {
+    "baseHistories": 4,
+    "baselineMatches": 4,
+    "matchedHistoricalScalarFields": 36,
+    "transportedPermutationRuns": 8,
+    "transportedExactEqual": 8,
+    "naivePermutationRuns": 4,
+    "naiveDivergences": 4
+  },
+  "cases": [
+    {
+      "k": 3,
+      "ruleId": 4,
+      "initial": "zero",
+      "kind": "single",
+      "mutation": 1,
+      "scheduler": "fifo",
+      "seed": 20261515,
+      "rewrites": 8000,
+      "status": "horizon-censored",
+      "baselineDigest32": "699b0321",
+      "legacy": {
+        "status": "PASS",
+        "fieldsCompared": 9,
+        "mismatches": []
+      },
+      "transport": [
+        {
+          "permutation": "rotation",
+          "map": [
+            1,
+            2,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "699b0321",
+          "error": null
+        },
+        {
+          "permutation": "reversal",
+          "map": [
+            2,
+            1,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "699b0321",
+          "error": null
+        }
+      ],
+      "untransported": [
+        {
+          "permutation": "rotation",
+          "horizon": 400,
+          "traceSame": false,
+          "firstDifferentStep": 2,
+          "baselineEvent": {
+            "step": 2,
+            "origin": "birth1:0,1,3",
+            "participants": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "frontierBefore": 3,
+            "ones": 3,
+            "newborn": 1,
+            "changed": 3,
+            "overlap": 2,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:0,1,4",
+              "birth2:0,3,4",
+              "birth2:1,3,4"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 5,
+            "liveEdges": 5
+          },
+          "relabelEvent": {
+            "step": 2,
+            "origin": "birth1:0,2,3",
+            "participants": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "frontierBefore": 3,
+            "ones": 3,
+            "newborn": 1,
+            "changed": 3,
+            "overlap": 2,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:0,2,4",
+              "birth2:0,3,4",
+              "birth2:2,3,4"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 5,
+            "liveEdges": 5
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 4,
+      "initial": "zero",
+      "kind": "single",
+      "mutation": 1,
+      "scheduler": "random",
+      "seed": 20261515,
+      "rewrites": 8000,
+      "status": "horizon-censored",
+      "baselineDigest32": "3dbc26a8",
+      "legacy": {
+        "status": "PASS",
+        "fieldsCompared": 9,
+        "mismatches": []
+      },
+      "transport": [
+        {
+          "permutation": "rotation",
+          "map": [
+            1,
+            2,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "3dbc26a8",
+          "error": null
+        },
+        {
+          "permutation": "reversal",
+          "map": [
+            2,
+            1,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "3dbc26a8",
+          "error": null
+        }
+      ],
+      "untransported": [
+        {
+          "permutation": "rotation",
+          "horizon": 400,
+          "traceSame": false,
+          "firstDifferentStep": 2,
+          "baselineEvent": {
+            "step": 2,
+            "origin": "birth1:0,1,3",
+            "participants": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "frontierBefore": 3,
+            "ones": 3,
+            "newborn": 1,
+            "changed": 3,
+            "overlap": 2,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:0,1,4",
+              "birth2:0,3,4",
+              "birth2:1,3,4"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 5,
+            "liveEdges": 5
+          },
+          "relabelEvent": {
+            "step": 2,
+            "origin": "birth1:0,2,3",
+            "participants": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "frontierBefore": 3,
+            "ones": 3,
+            "newborn": 1,
+            "changed": 3,
+            "overlap": 2,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth2:0,2,4",
+              "birth2:0,3,4",
+              "birth2:2,3,4"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 5,
+            "liveEdges": 5
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "initial": "mixed",
+      "kind": "overlap",
+      "mutation": 1,
+      "scheduler": "fifo",
+      "seed": 20264230,
+      "rewrites": 8000,
+      "status": "horizon-censored",
+      "baselineDigest32": "145de75c",
+      "legacy": {
+        "status": "PASS",
+        "fieldsCompared": 9,
+        "mismatches": []
+      },
+      "transport": [
+        {
+          "permutation": "rotation",
+          "map": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "145de75c",
+          "error": null
+        },
+        {
+          "permutation": "reversal",
+          "map": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "145de75c",
+          "error": null
+        }
+      ],
+      "untransported": [
+        {
+          "permutation": "rotation",
+          "horizon": 400,
+          "traceSame": false,
+          "firstDifferentStep": 54,
+          "baselineEvent": {
+            "step": 54,
+            "origin": "birth17:1,8,20",
+            "participants": [
+              [
+                1,
+                1
+              ],
+              [
+                8,
+                1
+              ],
+              [
+                20,
+                1
+              ]
+            ],
+            "frontierBefore": 68,
+            "ones": 3,
+            "newborn": 0,
+            "changed": 3,
+            "overlap": 3,
+            "reactivated": 6,
+            "reactivatedOrigins": [
+              "birth18:3,8,21",
+              "birth21:0,1,24",
+              "birth25:1,3,28",
+              "birth29:0,1,32",
+              "birth52:1,3,55",
+              "birth52:3,20,55"
+            ],
+            "emitted": [
+              "birth54:1,20,57",
+              "birth54:1,8,20,57",
+              "birth54:1,8,57",
+              "birth54:8,20,57"
+            ],
+            "frontierAfter": 56,
+            "nodeCount": 58,
+            "liveEdges": 220
+          },
+          "relabelEvent": {
+            "step": 54,
+            "origin": "birth17:3,8,20",
+            "participants": [
+              [
+                3,
+                0
+              ],
+              [
+                8,
+                1
+              ],
+              [
+                20,
+                1
+              ]
+            ],
+            "frontierBefore": 68,
+            "ones": 2,
+            "newborn": 0,
+            "changed": 3,
+            "overlap": 3,
+            "reactivated": 16,
+            "reactivatedOrigins": [
+              "birth18:2,3,21",
+              "birth22:3,10,25",
+              "birth22:3,5,25",
+              "birth25:1,3,28",
+              "birth25:3,10,28",
+              "birth36:3,14,39",
+              "birth37:3,14,40",
+              "birth37:3,5,40",
+              "birth38:3,15,41",
+              "birth38:3,6,41",
+              "birth39:3,16,42",
+              "birth39:3,6,42",
+              "birth40:3,15,43",
+              "birth42:2,3,45",
+              "birth42:3,16,45",
+              "birth52:1,3,55"
+            ],
+            "emitted": [
+              "birth54:3,20,57",
+              "birth54:3,8,20,57",
+              "birth54:3,8,57",
+              "birth54:8,20,57"
+            ],
+            "frontierAfter": 75,
+            "nodeCount": 58,
+            "liveEdges": 220
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "initial": "mixed",
+      "kind": "overlap",
+      "mutation": 1,
+      "scheduler": "random",
+      "seed": 20264230,
+      "rewrites": 8000,
+      "status": "horizon-censored",
+      "baselineDigest32": "e5efdd2a",
+      "legacy": {
+        "status": "PASS",
+        "fieldsCompared": 9,
+        "mismatches": []
+      },
+      "transport": [
+        {
+          "permutation": "rotation",
+          "map": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "e5efdd2a",
+          "error": null
+        },
+        {
+          "permutation": "reversal",
+          "map": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "sameReceipts": true,
+          "firstDifferentStep": null,
+          "sameSummary": true,
+          "summaryDifferences": [],
+          "digest32": "e5efdd2a",
+          "error": null
+        }
+      ],
+      "untransported": [
+        {
+          "permutation": "rotation",
+          "horizon": 400,
+          "traceSame": false,
+          "firstDifferentStep": 3,
+          "baselineEvent": {
+            "step": 3,
+            "origin": "birth1:0,3,4",
+            "participants": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                4,
+                0
+              ]
+            ],
+            "frontierBefore": 8,
+            "ones": 2,
+            "newborn": 0,
+            "changed": 3,
+            "overlap": 3,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth3:0,3,4,6",
+              "birth3:0,3,6",
+              "birth3:0,4,6",
+              "birth3:3,4,6"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 7,
+            "liveEdges": 16
+          },
+          "relabelEvent": {
+            "step": 3,
+            "origin": "birth1:1,3,4",
+            "participants": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                4,
+                0
+              ]
+            ],
+            "frontierBefore": 8,
+            "ones": 2,
+            "newborn": 0,
+            "changed": 3,
+            "overlap": 3,
+            "reactivated": 0,
+            "reactivatedOrigins": [],
+            "emitted": [
+              "birth3:1,3,4,6",
+              "birth3:1,3,6",
+              "birth3:1,4,6",
+              "birth3:3,4,6"
+            ],
+            "frontierAfter": 5,
+            "nodeCount": 7,
+            "liveEdges": 16
+          }
+        }
+      ]
+    }
+  ],
+  "schedulerPairs": [
+    {
+      "k": 3,
+      "ruleId": 4,
+      "sameFullProvenanceDigest": false,
+      "fifoRecent64": "699b0321",
+      "randomRecent64": "3dbc26a8",
+      "reportedGateDifference": false
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "sameFullProvenanceDigest": false,
+      "fifoRecent64": "145de75c",
+      "randomRecent64": "e5efdd2a",
+      "reportedGateDifference": false
+    }
+  ],
+  "caveats": [
+    "Original 8000-rewrite generator and mutation rules untouched",
+    "Canonical initial labels and corresponding event occurrence schedules are observer controls, not new physics",
+    "Transported replay is stronger than equality of terminal node count but only across tested histories",
+    "Raw FIFO or seeded-random scheduler may depend on original edge enumeration; distinguish from rule covariance",
+    "FNV-1a32 digests are navigation aids only; full receipts were compared exactly in memory",
+    "Events are host rewrites not physical clock units; no demonstration of particles, GR, universality or quantum dynamics"
+  ],
+  "execution": {
+    "engine": "local V8 isolate; original runner source embedded by exact anchor rewrites",
+    "actual_executed": true,
+    "sourceGitBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "observerSourcePath": "research/causal-step/experiments/hypergraph-t2-invariance-replay.cjs",
+    "elapsedWallMilliseconds": 19663
+  }
+}
