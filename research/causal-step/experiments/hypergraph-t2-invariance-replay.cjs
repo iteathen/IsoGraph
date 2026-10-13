@@ -131,13 +131,14 @@ function permutations(n){
   {name:'reversal',map:Array.from({length:n},(_,i)=>n-1-i)}];
 }
 function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
-  includeTransport=true,includeNaive=true,alternateRandom=false}={}){
+  includeTransport=true,includeNaive=true,alternateRandom=false,ruleIds=null}={}){
  const supported=[3,4,5];if(!ks.length||ks.some(k=>!supported.includes(k)))throw Error('Unsupported arity');
  if(!Number.isInteger(horizon)||horizon<1||horizon>10000)throw Error('Bad horizon');
  const code=instrument(original)+'\nreturn results;';
  const compiled=new Function('process','fs','path','__trialOptions','__observe',code);
  const ref=parseReference(referenceCsv);
- const cases=T2_CASES.filter(c=>ks.includes(c.k));
+ const cases=T2_CASES.filter(c=>ks.includes(c.k)&&(ruleIds===null||ruleIds.includes(c.ruleId)));
+ if(!cases.length)throw Error('No selected cases');
  const reports=[];let checked=0,fullReference=0,fullRefFields=0;
  for(const c of cases){
   const n=c.k+([28,81,4].includes(c.ruleId)&&c.k===3?1:0); // replaced below using true case mapping
@@ -202,7 +203,7 @@ function runT2(original,referenceCsv,{ks=[3,4,5],horizon=8000,naiveHorizon=400,
   originalRunnerBlobSha:PINNED_RUNNER_BLOB,
   referenceCsvBlobSha:PINNED_REFERENCE_CSV_BLOB,
   methodology:'source-text observer instrumentation with checked insertion anchors; no edits to generator or selected rules; transported event occurrence schedule versus raw order of eligible edges',
-  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom},
+  configuration:{ks,horizon,naiveHorizon,includeTransport,includeNaive,alternateRandom,ruleIds},
   totals:{baseHistories:reports.length,baselineMatches:fullReference,
      matchedHistoricalScalarFields:fullRefFields,
      transportedPermutationRuns:checked,
@@ -229,7 +230,8 @@ if(typeof require!=='undefined' && require.main===module){
  const ks=(process.argv[2]||'3,4,5').split(',').map(Number);
  const horizon=Number(process.argv[3]||8000);
  const outfile=process.argv[4]||path.join(here,'results/t2-replay-'+ks.join('-')+'-'+horizon+'.json');
- const result=runT2(source,csv,{ks,horizon});
+ const ruleIds=process.argv[5]?process.argv[5].split(',').map(Number):null;
+ const result=runT2(source,csv,{ks,horizon,ruleIds});
  fs.writeFileSync(outfile,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({outfile,totals:result.totals}));
 }
