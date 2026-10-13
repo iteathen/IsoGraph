@@ -285,6 +285,27 @@ Total **53 executed longer-run trajectories / 284,000 individual rewrite firings
 
 **Authority unchanged:** no original Causal Step premise, historical source HTML, qualified IsoGraph semantics or unrelated Woit/Lisi track modified. No paper or physical correspondence has been declared validated.
 
+## Entropy-model completeness versus underlying causal structure (2026-10-13)
+
+The researcher raises a specific structural-comparison concern: **an entropy theory may be accurate and agree with other literature while its selected observables omit information necessary for reconstructing a more foundational causal network.** This does not imply the theory is false or that our causal rewriting system is the correct physics. Use three independent questions: **(1) formal correctness in the published regime; (2) sufficiency for the observables predicted; (3) completeness for reconstructing the generating structure under a stated equivalence.** The third is not an ordinary promise of entropy/RT/cut-cone papers.
+
+**Source-grounded physical precedents:**
+- Kitaev & Preskill, [topological entanglement entropy (2006)](https://doi.org/10.1103/PhysRevLett.96.110404): `gamma=log D` is a valid invariant, yet **toric code and double semion both have `gamma=log 2`** and distinct braiding/topological spin. Braiding is not determined by the entropy scalar.
+- Faulkner–Lewkowycz–Maldacena, [quantum holographic entropy corrections (2013)](https://arxiv.org/abs/1307.2892); Engelhardt–Wall, [quantum extremal surfaces (2015)](https://doi.org/10.1007/JHEP01(2015)073): the classical geometric RT term needs bulk quantum contributions outside leading order. [JLMS relative entropy and modular flow (2016)](https://doi.org/10.1007/JHEP06(2016)004) involve additional state information. An effective leading term is not consequently wrong.
+- [Naskar–Samal (2026)](https://doi.org/10.1103/hvf8-jcff): holographic entropy inequalities can hold in certain **non-gravitational, topologically ordered** quantum ground states. Matching entropy inequalities is not unique evidence of a gravitational bulk.
+- [Bao et al. (2022)](https://doi.org/10.22331/q-2022-06-20-741) and [hypergraph/stabilizer gap (2020)](https://arxiv.org/abs/2006.16292) are precisely about specified **entropy-cut model images**, not general no-go theorems for causal hypergraphs.
+
+**Exact executed mathematical non-injectivity witness:** Two networks share the same entire 16-value entropy-min-cut readout for boundary terminals `A,B,C,P`: `H0={A,B,C,P}` has one unit-weight rank-4 relation; `H1` adds an internal rank-3 `{A,x,y}` relation with weight 2. The internal vertices can be placed on A's side under every terminal cut, so **all 16 costs agree**, but only H1 can match a rewrite activated by the added triple. This establishes information loss under a defined **observer map**, not real physical inequivalence, and proves no entropy law incomplete within its claimed domain. [Source](experiments/2026-10-13-entropic-observer-incompleteness-witness.mjs) · [Result](experiments/results/2026-10-13-entropic-observer-incompleteness-witness.json).
+
+**Parallel example / qualification:** The researcher's Navier–Stokes analogy concerns a recurring five-row obstruction-repair interface and a separate downstream **finite-energy closure**. The role separation is meaningful; energy still supplies a necessary admissibility bound, not a dispensable term. September 2026 forced-breakdown work was publicly **announced**; Clay described it as “apparently settled” but its evaluation is ongoing and the prize is not formally awarded. Unforced regularity remains open.
+
+**Forward research gate:** For any Causal Step ↔ holography comparison, specify a representation map `Φ` from higher-order causal-network histories to entropy or geometry readouts, **and a target equivalence criterion**. Test whether identical values of `Φ` can coexist with differing causal rewrite behavior. If so, enrich the **observer/comparison representation first**, rather than imposing entropy-driven dynamics or modifying the primitive generator. Confirm information storage/transmission and alternative readouts under perturbations and null networks. No preassigned spatial dimensionality, metric, Hilbert state, “entropy pressure,” or physical particle identity is licensed.
+
+- [Source-grounded completeness audit, precise limits, Navier comparison and experimental implications](reviews/2026-10-13-entropy-observable-completeness-vs-causal-generative-structure.md)
+- [User's verbatim scientific question and exact research findings](DISCUSSION_LOG.md)
+
+**Disposition:** Entropy-observable completeness is a **separate research gate**, not a new physical Causal Step premise or qualified correspondence. No historical simulation or independent Lisi/Woit track modified.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
