@@ -238,6 +238,31 @@ The researcher clarified a necessary second filter: **indefinite repetition of a
 
 **No change** to the Causal Step premises, physical meaning of time, archived HTML, prior numeric raw results or higher-order rewrite rule semantics.
 
+## Longer-horizon higher-order complexity tests — 3,000 and 8,000 rewrites (2026-10-12)
+
+**Researcher direction:** “Do longer tests on the promising candidates.” After the original 120/400-event screen, the same seven selected rule/initial-hypergraph contexts were reproduced using an **incidence-indexed, exact-prefix-verified** simulator. Replaying all **28** prior 400-event cases gave **448/448 exact matches** across 16 source diagnostics, then the new observation windows were extended.
+
+| Long-run cohort | Executions | State-changing | Still productive (state-changing) | Still passes exploratory complexity screen | Resource stops |
+|---|---:|---:|---:|---:|---:|
+| All original selected contexts at **3,000** rewrites | 28 | 14 | 14 | **11** | 0 |
+| All selected state-changing cases plus four controls at **8,000** | 18 | 14 | 14 | **12** | 0 |
+| Seven random-scheduler state-changing cases at **8,000**, independent PRNG seed | 7 | 7 | 7 | **7** | 0 |
+
+Total **53 executed longer-run trajectories / 284,000 individual rewrite firings** (overlapping choices re-executed from the same initial state at longer horizons, not independent candidate discoveries). Extended operational limits of **12,000 nodes/250,000 live hyperedges** were never triggered (observed maxima 8,006 nodes and 208,001 live hyperedges). No external GitHub Actions were used.
+
+**Current dispositions:**
+- **Retain for deeper functional-information tests under both schedulers:** k3 rules **4, 28**; k4 rule **0**; k5 rules **21, 4**—each maintains finite-horizon productive growth, diverse local transitions and new eligibility among overlapping hyperedges through 8,000.
+- **Scheduler-sensitive / weaker:** k4 rule **21** fails the exploratory diversity threshold under FIFO (two recent event types), while randomized scheduling passes. k5 rule **81** shows a demonstrably **period-5** local event loop under FIFO at 8,000 despite continuing growth and 25 old-edge activation events per final 64 rewrites; its random-schedule trajectory passes the current screen.
+- **Negative controls:** immutable-node-state reference k3 rule 4 and k4 rule 0 repeated a single local event signature through 8,000 while continuing to generate nodes; this falsifies treating indefinite growth or a larger eligible frontier as proof of expressive complexity.
+
+**Epistemic boundary:** Local signature diversity, reactivation and lack of short periods across up to 256 recent events remain **provisional, post-hoc diagnostic screens**, not a proof of information storage, computation universality, algorithmic irreducibility, natural physical dimensionality, persistent particle states or mathematically infinite complexity. A simple repeating local signature need not imply trivial global graph structure. Indefinite branching certificates established earlier remain valid **for productive noncollapse only**.
+
+- [Full results, case-by-case 8,000-step disposition, failure modes and reproduction](reviews/2026-10-12-higher-order-long-horizon-complexity-candidates.md)
+- [Optimized full-rule replay source](experiments/hypergraph-long-horizon.mjs)
+- [Frozen run manifest, primary and alternate-seed summaries/checkpoints, individual raw JSONs and exact 400-step replay validation](experiments/results/)
+
+**Next significant experiment:** demonstrate *functional* information storage, transmission and conditional transformation by overlapping higher-order relations under structural-loss controls and independently specified graph-invariant readouts, rather than extrapolating a physical theory from long nonperiodic finite traces.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
