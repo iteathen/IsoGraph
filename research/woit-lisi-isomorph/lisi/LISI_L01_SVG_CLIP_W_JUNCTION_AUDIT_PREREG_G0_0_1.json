@@ -1,0 +1,141 @@
+{
+  "schema": "isograph.track-L.G0.L01-svg-clip-and-W-junction-source-audit-preregistration.v0.1",
+  "recorded_on": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "classification": "FROZEN_PROSPECTIVE_INTERNAL_SOURCE_MECHANICAL_GEOMETRY_AND_RASTER_OBSERVATION",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "pdf_page_index_zero_based": 2,
+    "printed_page": 2,
+    "figure": "Figure 1",
+    "pdf_bytes": 623525,
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "page_svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "page_96dpi_PNG_sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe"
+  },
+  "frozen_parent_head": "6432f26f433571b0b0dae6e811acd2e4d9d0266b",
+  "provenance_inputs": {
+    "previous_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_192.json",
+      "git_blob_sha": "deb7b56f5b20e11923aade102fc6f9acb7d1830a"
+    },
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "source_inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "prior_paint_CI": {
+      "path": "experiments/062/L01_FIG1_SOURCE_SVG_PAINT_ROLE_CI_0_1.json",
+      "git_blob_sha": "702c83c5ac46b02407c176661855cfab2d68f303",
+      "run_id": 38336896386
+    },
+    "prior_extractor": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py",
+      "git_blob_sha": "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+    },
+    "prior_paint_census_tool": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_paint_0_1.py",
+      "git_blob_sha": "cd7acce6f596738752dc45319cc0ca7d1a37eba7"
+    }
+  },
+  "frozen_candidate": {
+    "tool_path": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_2.py",
+    "tool_blob_sha": "d01c5ef68aaf35937ce161815e0ab2a608005bea",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-svg-clip-w-junction-0-1.yml",
+    "workflow_blob_sha": "f1b79d757d69c765f0e63b71b7cd379c295f970d",
+    "synthetic_controls": "Inherited 0.1 paint selftest plus two independent new synthetic guards: one known SVG clipPath reference and a three-segment point-cluster countermodel stable at 0.5 pt but not 0.1 pt.",
+    "original_source_tests": "Single pinned L01 PDF source replay, fresh 192dpi PPM raster probe against preidentified W-near horizontal line, raw clip definitions/references, and endpoint proximity clusters."
+  },
+  "key_question": "Do three already source-pinned line segments really converge within a tiny geometric neighborhood at the left border? Is the horizontal W-adjacent source path unclipped, and does the separately rendered raster show consistent dark ink along its centerline? Which of eleven predecessor clip-context occurrences are covered by actual clip definitions?",
+  "objectives": [
+    "Distinguish SVG `<clipPath>` definitions, raw references, and inherited clipping from guesses about finally visible ink.",
+    "Preserve the three raw root path occurrences 249, 251 and 256 and their unmodified SVG centerline coordinates.",
+    "Compare endpoint neighborhoods at tolerances 0.25, 0.5, 0.75 and 1 PDF point; avoid treating tolerance-based connected components as source ontology.",
+    "Sample same-source independently rerendered 192dpi raster at three interior points of W-adjacent line and displaced controls; report actual pixel counts, not a cold visual semantic verdict.",
+    "Keep all 2,114 fill-only curves, 142 stroke-bearing curves, unresolved masks/clip contexts, and unqualified source Figure1 cell assignment in scope."
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "claim": "The W-adjacent horizontal, diagonal and neighboring line centers are within a sub-point junction neighborhood at the grid's left border.",
+      "qualification": "GEOMETRIC_CANDIDATE_ONLY"
+    },
+    {
+      "id": "H2",
+      "claim": "The W-adjacent horizontal line is not suppressed by an SVG clipPath ancestor and raster samples support actual ink along the predicted centerline.",
+      "qualification": "MECHANICAL_VISIBLE_INK_CANDIDATE_NOT_FIELD_ACTION"
+    },
+    {
+      "id": "H3",
+      "claim": "Some of the eleven clip contexts affect elements beyond the Figure1 connector foreground; one-to-one source-figure mapping cannot be assumed.",
+      "qualification": "OPEN"
+    },
+    {
+      "id": "H4",
+      "claim": "A proximity cluster identifies the author's intended W field action on specific fermion entries.",
+      "qualification": "REJECT_AS_SOURCE_SEMANTIC_ORACLE"
+    }
+  ],
+  "falsifiers": [
+    "Frozen PDF / exact SVG / earlier 96dpi raster hash mismatch aborts before source conclusions.",
+    "Stored W-adjacent source line path 251 is not unique or its exact recovered endpoints drift from the pinned predecessor.",
+    "A supposedly valid clip reference lacks a `<clipPath>` definition, or clipping logic could not resolve source visibility.",
+    "Raster displaced controls show comparable darkness or source scale/resolution mismatch: no verified raster-to-vector support.",
+    "Source topology does not imply physical W/g action even if ink lines meet; source text action claims remain a separate ledger.",
+    "The geometric endpoint-proximity tolerance changes the component graph; document tolerance sensitivity instead of canonical node declaration.",
+    "No L current gate / SSC promotion, source-inverse rewrite, W semantics import, synthesis, outreach, or PR merge without independent G0 qualification."
+  ],
+  "expected_output_scope": {
+    "clip_records": "original SVG named clip definitions and references, no promise of full geometric clip evaluation",
+    "W_anchor": "direct original path 251 geometry and line style, plus 192dpi raster neighborhood dark/neutral samples",
+    "clusters": "source-path occurrence sets clustered by tolerance, not physics edges",
+    "full_figure_semantics_qualified": false,
+    "selected_competing_classification": "SOURCE-GEOMETRY_CANDIDATE_ONLY"
+  },
+  "historical_provenance": {
+    "first_Fig1_source_model_failed_CI": 38279072465,
+    "disposition": "FAILURE 22/23",
+    "corrected_Fig1_source_model_CI": 38279423956,
+    "disposition_corrected": "SUCCESS 26/26 bounded candidate",
+    "vector_presence_CI": 38294391911,
+    "full_vector_source_replay_CI": 38335787442,
+    "scoped_paint_role_CI": 38336896386
+  },
+  "authority_firewall": {
+    "L_SSC_revision": "0.96",
+    "items": 191,
+    "source_first_groups": 350,
+    "L01_groups": 98,
+    "L01_visual_groups_open": 16,
+    "full_original_source_cold_complete": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "resources": {
+    "planned_new_source_CI_runs": 1,
+    "external_semantic_model_calls": 0,
+    "workflow_auto_path_triggered": true,
+    "persistent_GitHub_Actions_artifacts": false,
+    "manually_requested_workflow_run": false
+  },
+  "attribution": {
+    "human_project_direction": "Joshua Oshiro",
+    "technical_formulation": "agent-assisted geometrical test and program",
+    "external_antecedent": "A. Garrett Lisi, 2007 frozen arXiv primary",
+    "earliest_evidence_currently_located": "2026-10-12 Figure1 original SHA-pinned source replay and raster",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "novelty_or_priority_claim": false
+  }
+}
