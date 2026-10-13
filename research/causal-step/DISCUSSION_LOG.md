@@ -431,3 +431,16 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Agent research workflow:** Perform a cited prior-art survey including both demonstrations **and no-go/gap results** (e.g., hypergraph-versus-stabilizer entropy cone and link topology beyond standard hypergraphs), with source-faithful priorities, a list of independent assumptions, concrete falsifying null tests, and a clear record of which work was actually executed. No Causal Step premises, archived HTML simulations, or qualified IsoGraph semantic authority are changed by this literature survey.
 
+## 2026-10-13 — Researcher clarifies the scope of Bao et al. 2022 entropy-cone result
+
+**Researcher (verbatim):**
+
+> Okay, elaborate on that. Topological information beyond hypergraphs. This paper, Bao and collaborators, 2022, proves that some information structures representable by topological links cannot be represented by the graph or hypergraph entropy models under comparison. Okay. So graph or hypergraph entropy models. That's different than just saying cannot be represented by hypergraphs. So causal networks. It's not making a statement about causal networks. It's making a statement about hypergraph entropy models.
+
+**Researcher correction:** Bao et al. 2022 proves a limitation of a specified graph/hypergraph *min-cut entropy model*, not an impossibility theorem for abstract hypergraphs or evolving causal networks with arbitrary relational state, rewrite rules, or readouts. The assistant's earlier broader presentation was inaccurate.
+
+**Primary-paper scope verified by assistant:** The published article, https://doi.org/10.22331/q-2022-06-20-741, defines static weighted graph/hypergraph cut entropy vectors and produces a five-party entropy vector (ray 15) represented by a topology-of-embedded-loops min-cut but excluded by a hypergraph-cut entropy inequality. The link construction presupposes loop embeddings in three dimensions. These are specific observer/readout model classes, not exhaustive mathematical expressivity statements about causal hypergraphs.
+
+**Correction to future research usage:** Rename any apparent broad limitation as a strict *link-cut versus hypergraph-cut entropy-vector* separation. A bare unlabeled/unembedded hypergraph does not automatically come equipped with knot or link topology, but richer graph/hypergraph encodings can in principle record link diagrams, crossings and related structure. Whether causal rewriting would generate that information is unknown, and no 3D embedding may be imposed as a foundational explanation.
+
+**Disposition:** Update comparative review, current research dossier, source register and provenance. Research hypotheses, code and previously recorded numerical evidence remain unchanged.
