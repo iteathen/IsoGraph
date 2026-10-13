@@ -263,6 +263,28 @@ Total **53 executed longer-run trajectories / 284,000 individual rewrite firings
 
 **Next significant experiment:** demonstrate *functional* information storage, transmission and conditional transformation by overlapping higher-order relations under structural-loss controls and independently specified graph-invariant readouts, rather than extrapolating a physical theory from long nonperiodic finite traces.
 
+## Topology/holography prior-art research lead — mathematical pieces, no adopted physical bridge (2026-10-13)
+
+**Researcher directive:** Investigate whether results in higher-order topology and holography contain mathematical pieces useful for the emergent **causal hypergraph** program. This is broad research, **not** a third physical premise, a new generative law, a demand to install entropic back-pressure, or a claim that metric, dimensional space, matter or Hilbert-state quantum entropy are already available.
+
+**Highest-relevance source-grounded discoveries:**
+
+1. **Exact hypergraph min-cut and quantum entropy links:** Bao et al., [*The Quantum Entropy Cone of Hypergraphs* (2020)](https://doi.org/10.21468/SciPostPhys.9.5.067); Walter & Witteveen, [*Hypergraph min-cuts from quantum entropies* (2021)](https://doi.org/10.1063/5.0043993). Finite weighted hypergraph-cut vectors have a mathematical relationship to stabilizer-state entropy vectors **under their separate quantum construction**, but not to Causal Step physics by default. Bao et al.'s [2020/2021 six-qubit counterexample](https://arxiv.org/abs/2006.16292) **disproves** the broader higher-party equality conjecture. Real high-order co-incidence matters and graph/hypergraph/stabilizer models are not identical.
+2. **Causal order → topology:** Major, Rideout & Surya, [continuum homology recovery from causal sets (2007)](https://doi.org/10.1063/1.2435599), [numerical stable-homology tests (2009)](https://arxiv.org/abs/0902.0434). The method uses *thickened antichains* and their nerves, but requires a legitimate causal partial order and manifoldlike/scaling assumptions for continuum recovery. **No derived 3D/4D** or spacetime reconstruction has yet been established for our rewrites.
+3. **A strict representational boundary beyond abstract hypergraphs:** Bao et al., [*Topological Link Models of Multipartite Entanglement* (2022)](https://doi.org/10.22331/q-2022-06-20-741), exhibit link entropies outside the ordinary graph/hypergraph-cut framework. This is a possible later test of representational sufficiency, **not** permission to assume ambient 3D braids now.
+4. **Conditions for quantum holographic reconstruction:** Colafranceschi–Chirco–Oriti, [quantum-geometric graph bulk/boundary maps (2022)](https://doi.org/10.1103/PhysRevD.105.066005), and [HaPPY holographic quantum error-correcting codes (2015)](https://doi.org/10.1007/JHEP06(2015)149) give precise coding/isometry criteria, but already assume Hilbert states, quantum geometry or entangled tensors and chosen boundaries.
+5. **Bianconi and 2026 update:** [Network Geometry with Flavor (2016)](https://doi.org/10.1103/PhysRevE.93.032315) contains higher-order simplicial growth and a generalized area law, but **chooses dimension `d`**. [The holographic multi-entropy cone (2026)](https://doi.org/10.1007/JHEP09(2026)253) offers exact higher-party inequality methods with specified quantum/holographic inputs. [Topological order satisfying holographic inequalities (2026)](https://doi.org/10.1103/hvf8-jcff) warns that matching an entropic inequality alone does **not** prove a unique gravitational origin.
+
+**Exact minimal null calculation actually executed:** A unit-weight four-way hyperedge on terminals `A,B,C,P` has the abstract min-cut `I3(A:B:C)=+1`, **outside** the holographic RT condition `I3<=0`. Replacing it with six unit-weight pairwise `K4` edges changes the cut relation to `I3=0`. The observation is a **mathematical representation/cut-function distinction only**, not measured physical entropy, particles or gravity. [Reproducible code](experiments/2026-10-13-hypergraph-entropic-cut-witness.mjs) and [exact output](experiments/results/2026-10-13-hypergraph-entropic-cut-witness.json).
+
+**Research disposition and next steps:** Keep all original no-metric higher-order rewrite dynamics fixed. Priority is **observational** topology and cut/partition measurements with re-labeling, input state and boundary/weight null controls; only afterward investigate whether any independent physical information or a true quantum coding map can be *derived*. Do not mistake any area-like combinatorial scaling, a stable homology window, or an inequality match for objective evidence of emergent spacetime. Continue to enforce the researcher's earlier publication evidence threshold.
+
+- [Detailed 2026-10-13 cross-literature audit, exact bridge assumptions, tests, negative findings](reviews/2026-10-13-topology-holography-causal-hypergraph-source-audit.md)
+- [21-source machine-readable bibliography, with explicit assumptions and priority](references/2026-10-13-topology-holography-source-register.json)
+- [Exact researcher prompt and chronology](DISCUSSION_LOG.md)
+
+**Authority unchanged:** no original Causal Step premise, historical source HTML, qualified IsoGraph semantics or unrelated Woit/Lisi track modified. No paper or physical correspondence has been declared validated.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
