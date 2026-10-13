@@ -1,0 +1,250 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01.assisted-7x7-conditional-complex-Lie-generated-algebra-exact-certificate.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "research_finding_disposition": "EXACT_CONDITIONAL_MATRIX_THEOREM_ON_ASSISTED_SOURCE_TRANSCRIPTION__NOT_ORIGINAL_SOURCE_SEMANTIC_QUALIFICATION",
+  "original_source": {
+    "author": "A. Garrett Lisi",
+    "paper": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1",
+    "original_pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "original_pdf_zero_based_page": 6,
+    "source_eq_label": "(2.3)",
+    "source_first_location": "L01-S014",
+    "previous_frozen_original_pdf_SHA256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_pdf_binary_reacquired_or_rehashed_in_this_batch": false,
+    "observed_original_pdf_screenshot": true,
+    "secondary_original_source_TeX_conversion": "https://ar5iv.labs.arxiv.org/html/0711.0770",
+    "secondary_conversion_eq_number": "(5)",
+    "secondary_conversion_not_independent_semantic_oracle": true,
+    "author_explicit_scope": "Proposes the smallest irreducible seven-dimensional matrix representation of g2 for g+q+qbar; source elsewhere assigns fermion coefficients as Grassmann valued.",
+    "source_49_cells_independent_cold_transcription_completed": false
+  },
+  "frozen_input": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "git_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "original_matrix_size": [
+      7,
+      7
+    ],
+    "source_coeff_symbol_count": 14,
+    "source_nonzero_ink_entries": 42,
+    "full_source_semantic_AST_reconstructed": false,
+    "original_SSC_owner": "L-SSC-029"
+  },
+  "exact_reproducibility": {
+    "verifier_path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_lie_generated_dimension_0_1.mjs",
+    "verifier_git_blob_sha": "6be5b99c80ebb3b4268edf6d59c77358088e3b3d",
+    "output_path": "experiments/062/L01_EQ23_EXACT_COMPLEX_LIE_CLOSURE_DIMENSION_LOCAL_OUTPUT_0_1.json",
+    "output_git_blob_sha": "7f62f235915ca2a3b40f0176f9901e0ceac192ac",
+    "command": "node research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_lie_generated_dimension_0_1.mjs",
+    "executed_in_isolated_V8_using_exact_GitHub_source_and_fixture_blobs": true,
+    "execution_adaptation": "Node file-system loading replaced by injected frozen JSON object; all mathematics and controls executed unchanged; output JSON compared exactly",
+    "exact_arithmetic": "BigInt integer-scaled coefficient matrices, Bareiss exact integer determinant and invariant symmetric bilinear form checks; no floating point or black-box Lie closure solver",
+    "independent_secondary_implementation": "Local Python Sympy rational Lie-span and nullspace computation on same source-assisted cells; rank 14 -> 21 and identical metric. Three finite-field incremental closures modulo 1009,1013,1031 also report 21.",
+    "source_49_cell_transcription_independently_verified": false,
+    "negative_controls_defined": 12,
+    "negative_controls_rejected": 12
+  },
+  "candidate_exact_mathematics": {
+    "scaling_from_source_matrices": {
+      "source_Cartan_g3": "multiply by -2i",
+      "source_Cartan_g8": "multiply by -2i sqrt(3)",
+      "source_q_and_qbar": "multiply by sqrt(2)",
+      "source_offdiagonal_gluons": "multiply by 1",
+      "interpretation": "Over the complex field, every scaling is invertible and leaves the generated Lie subalgebra unchanged. The scaled real matrix span is an auxiliary computational object, not an asserted original source real form."
+    },
+    "selected_independent_brackets_of_integer_rescaled_matrices": [
+      [
+        "q_r",
+        "q_g"
+      ],
+      [
+        "q_r",
+        "q_b"
+      ],
+      [
+        "q_r",
+        "qbar_r"
+      ],
+      [
+        "q_g",
+        "q_b"
+      ],
+      [
+        "qbar_r",
+        "qbar_g"
+      ],
+      [
+        "qbar_r",
+        "qbar_b"
+      ],
+      [
+        "qbar_g",
+        "qbar_b"
+      ]
+    ],
+    "fourteen_original_generators_and_seven_brackets_compose_21_columns": true,
+    "matrix_entry_row_indices_zero_based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      17,
+      18,
+      19,
+      20,
+      24,
+      26,
+      27,
+      33,
+      34,
+      40
+    ],
+    "exact_selected_21x21_minor_determinant": "-2",
+    "lower_bound_of_generated_complex_Lie_algebra_dimension": 21,
+    "preserved_symmetric_metric": {
+      "nonzero_H_entries_one_based": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "all_nonzero_entries_equal": 1,
+      "determinant": "-1",
+      "inverse_exists": true,
+      "exact_invariant_relation": "M^T H + H M = 0 for every one of 14 rescaled source-derived generator matrices",
+      "signature_of_auxiliary_real_H": "(4 positive, 3 negative)",
+      "source_original_real_form_identified": false,
+      "complex_metric_orthogonal_Lie_algebra_dimension": 21
+    },
+    "upper_bound_generated_complex_Lie_algebra_dimension": 21,
+    "equality_of_generated_complex_Lie_algebra_with_metric_Lie_algebra": "Exact equality to so(H,C), abstractly so(7,C), under ordinary matrix commutator, conditional on assisted source input",
+    "source_declared_g2_complex_dimension": 14,
+    "independent_derived_commutator_directions_over_original_complex_span": 7,
+    "graded_parity_test": {
+      "relevant_odd_odd_pair": [
+        "q_r",
+        "q_g"
+      ],
+      "scaled_commutator_entries_one_based": {
+        "1,2": "2",
+        "5,6": "-1"
+      },
+      "scaled_anticommutator_entries_one_based": {
+        "1,2": "0",
+        "5,6": "-1"
+      },
+      "only_original_generator_with_nonzero_entries_at_both_positions": "qbar_b",
+      "scaled_qbar_b_entries": {
+        "1,2": "-1",
+        "5,6": "1"
+      },
+      "ordinary_commutator_not_in_14D_span": true,
+      "odd_odd_anticommutator_not_in_14D_span": true,
+      "conclusion": "A naive parity-sign switch alone does not restore the asserted 14D matrix closure; no general graded source-operator theorem inferred."
+    },
+    "supplemental_91_pair_probe": {
+      "original_generator_pairs_tested": 91,
+      "ordinary_matrix_commutator_pairs_inside_source_linear_span": 82,
+      "pairs_outside": 9,
+      "secondary_math_from": "Local Sympy exact and NumPy numerical array replays, subject to same source-assisted transcription",
+      "full_91_pair_test_not_part_of_exact_frozen_BigInt_verifier": true,
+      "pair_scope": "Corroboration; selected 21x21 exact determinant and preserved metric independently establish the 21D Lie closure."
+    },
+    "no_spacetime_dimension_implication": true,
+    "not_a_Lie_quotient_claim": true,
+    "no_natural_unique_complement_representation_claim": true
+  },
+  "competing_causal_explanations": [
+    {
+      "id": "S1",
+      "kind": "SOURCE_GLYPH_FIDELITY",
+      "status": "OPEN",
+      "hypothesis": "An original Eq2.3 sign/coefficient/label was misread or the printed source has a typo.",
+      "test": "Independent original PDF 49-cell source-only reading, then compare frozen output to the seven load-bearing coefficients and all other printed cells."
+    },
+    {
+      "id": "S2",
+      "kind": "SOURCE_OPERATOR_SCOPE",
+      "status": "OPEN",
+      "hypothesis": "Grassmann-valued coefficients or a further graded/representation operation change the applicable closure claim.",
+      "test": "Freeze independent exact Eq1.1 and Eq2.3 carrier/operator semantics; produce an explicit closed 14D realization without changing source claims."
+    },
+    {
+      "id": "S3",
+      "kind": "SOURCE_MODEL_UNEXPRESSED_CONSTRAINTS",
+      "status": "OPEN",
+      "hypothesis": "A source-imposed relation among q and qbar coefficient fields restricts the admitted matrix family and its generated Lie algebra.",
+      "test": "Locate and reconstruct that constraint in the original paper with source-specific support; do not import later formulations."
+    },
+    {
+      "id": "S4",
+      "kind": "ORDINARY_BASIS_CHANGE",
+      "status": "REJECT_AS_STANDALONE_REPAIR",
+      "hypothesis": "Merely changing the 7-dimensional matrix basis or rescaling generators can restore 14D ordinary commutator closure.",
+      "test": "Similarity transformations and nonzero rescalings preserve complex span closure dimension."
+    },
+    {
+      "id": "S5",
+      "kind": "AUTHOR_PRESENTATION_DISCREPANCY",
+      "status": "MATHEMATICAL_CANDIDATE_NOT_AUTHOR_ERROR_VERDICT",
+      "hypothesis": "The 2007 printed 7x7 candidate alone does not present a g2 ordinary Lie representation as claimed.",
+      "test": "After independently freezing source cells and source operator scope, qualify the exact discrepancy or identify a source-supported repair."
+    }
+  ],
+  "repair_disposition": "NO_SOURCE_MODIFICATION_OR_THEORY_PATCH",
+  "discovery_disposition": "EXACT_SOURCE_ASSISTED_CONDITIONAL_SO7_CLOSURE_CANDIDATE_RETAINED",
+  "G0_stage": {
+    "SSC_revision": "0.96",
+    "SSC_items": 191,
+    "six_source_first_groups": 350,
+    "L01_source_locations": 98,
+    "L01_original_exact_visual_groups_cold_open": 16,
+    "six_original_source_full_cold_reviews": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "external_original_author": "A. Garrett Lisi",
+    "technical_discovery_and_exact_certificate": "agent-assisted",
+    "date": "2026-10-13"
+  }
+}
