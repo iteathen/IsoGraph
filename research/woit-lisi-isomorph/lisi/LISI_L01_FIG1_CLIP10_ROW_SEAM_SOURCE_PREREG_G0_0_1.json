@@ -1,0 +1,80 @@
+{
+  "schema": "isograph.track-L.G0.original-Fig1-clip10-row-divider-vs-W-border-prereg.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "parent_expected": "722a6de3baa60174acfa3d639c918194910e9b27",
+  "source": {
+    "revision": "arXiv:0711.0770v1",
+    "PDF_SHA256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "SVG_SHA256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "page_zero_based": 2
+  },
+  "frozen_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_196.json",
+    "git_blob_sha": "778e063a03c1d1d060bad17b9380152494123e9a",
+    "G0_open": true
+  },
+  "SSC": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "items": 191
+  },
+  "inverse": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+  },
+  "earlier_left_border_CI": {
+    "path": "experiments/062/L01_FIG1_SOURCE_CLIP1_LITERAL_VISIBLE_TABLE_W_INK_CI_SUCCESS_0_1.json",
+    "git_blob_sha": "9c070a7604d58c42079a108a2058471ed1268e1d",
+    "run": 38343093403
+  },
+  "candidate": {
+    "path": "experiments/062/tools/audit-l-g0-l01-table-border-row-rule-0-3.py",
+    "git_blob_sha": "674adc02e88a06403ef1267722ff5b1bc2149dc5",
+    "workflow": ".github/workflows/experiment-062-l-g0-l01-clipped-table-border-row-0-3.yml",
+    "workflow_git_blob_sha": "dc9ddef99f972d515a7ba09ea949a29cd031e764"
+  },
+  "question": "Does original source clip-10 (already literal axis-aligned rectangle at y=321..323 PDFpt) contain the visible black horizontal row-divider source stroke at root/svg[274]/g[0]/path? Does that stroke overlap the clip-certified table left border, making the W-side ink cluster geometrically connected to an exact printed row seam?",
+  "method": "Read original SVG exact clipped source group 274, inherit pen/style/transform, list long source horizontal butt-stroke segments, calculate original source row ink intersecting the literal clip10 polygon, left table border and original W path strokes with the same convex polygon algorithm and source SHA preflight.",
+  "alternatives": [
+    {
+      "id": "A",
+      "interpretation": "Row-divider source stroke appears in clip10 and joins table left outline under clip semantics",
+      "test": "positive pen overlap and rectangle-contained source clip",
+      "status": "TO_BE_TESTED"
+    },
+    {
+      "id": "B",
+      "interpretation": "Source group 274 contains a visually similar decorated filled shape but not visible continuous separator",
+      "test": "source pen/style/path type or clip mismatch",
+      "status": "TO_BE_TESTED"
+    },
+    {
+      "id": "C",
+      "interpretation": "If source row seam touches W graphic junction, it proves physical electroweak doublet action",
+      "status": "REJECT_AS_UNQUALIFIED_SOURCE_SEMANTIC_INFERENCE"
+    }
+  ],
+  "hard_stops": [
+    "Any script syntax/synthetic preflight failure blocks PDF source replay.",
+    "Original PDF or SVG SHA mismatch aborts.",
+    "No source group/clip-10 matches means figure row-divider attribution remains unknown.",
+    "Clip10 bounding rectangle never substitutes for vertex equality already source certified; retain source polygon witness.",
+    "The graphical ink junction cannot determine which field acts on which fermion without independent cold source image meaning.",
+    "No G0/SSC/G1/W import/PR70 merge change."
+  ],
+  "resource": {
+    "scoped_GitHub_source_job": 1,
+    "manual_run": false,
+    "external_semantic_model_calls": 0
+  },
+  "provenance": {
+    "user_direction": "Joshua Oshiro full independent original-source treatments",
+    "technical_test": "agent-assisted source G0 row-seam ink",
+    "recorded_on": "2026-10-12",
+    "earliest_source": "source CI 38343093403",
+    "original_author": "A. Garrett Lisi"
+  }
+}
