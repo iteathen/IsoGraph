@@ -151,6 +151,19 @@ The first 1,000-step controlled sweep found the following (all uncapped):
 
 **Next research test:** a separate **graph-first causal-event model** without a programmed ambient dimension; evaluate relational dimension/geometry as an observation rather than a forced response to an arbitrarily chosen edge-length threshold. Preserve multi-candidate falsification and the provisional status of the original two Causal Step premises.
 
+## Cross-cutting reference: Bianconi's *Gravity from entropy* (2026-10-12)
+
+**Researcher's direction:** the exact-title **[Ginestra Bianconi, *Gravity from entropy* (2025)](https://doi.org/10.1103/PhysRevD.111.066001)** should be given substantial consideration in research on emergent reality. This is a **high-relevance literature lead**, not a third Causal Step premise, a proved physical theory or an authorized change to the simulation. The full paper has two published corrections (2025 and 2026). Do not conflate it with **Erik Verlinde's** separate entropic-*force* framework.
+
+**Crucial companion:** [Bianconi, *Quantum entropy couples matter with geometry* (2024)](https://doi.org/10.1088/1751-8121/ad6f7e) proposes an entropic action coupling metric matrices and induced matter/gauge geometry on **discrete higher-order networks/cell complexes**. The 2025 formulation instead starts with an existing **Lorentzian manifold and metric** and obtains modified gravity equations via a quantum-relative-entropy-like action. The 2024 model starts from a **fixed cell complex with a metric matrix**; a more specialized section assumes a 3D lattice topology. Neither paper derives a dimension, a metric, matter, or Causal Step's causal time from the initially metric-free graph.
+
+**Research consequence:** Do not repeat Model A's arbitrary back-pressure by inserting an “entropy penalty” with hand-chosen spatial meaning. Track conventional Shannon/quantum relative entropy, thermodynamic entropy, and the researcher's proposed broader pre-geometry organizing tendency **as distinct candidates**. Prefer the paper as a possible **bridge from relational topology to dynamic geometry**. First perform **diagnostic-only** entropy/operator comparisons on unchanged graph histories and verify their null behavior, source/cap dependence and node-relabeling invariance; only introduce a separately labeled entropic-action dynamical variant when the compared operators and evolution rule are justified independently of a target gravitational result. The follow-up [*Thermodynamics of the gravity from entropy theory* (2026)](https://doi.org/10.1103/26kn-thgp) also reinforces that geometric relative entropy is not simply required to monotonically increase.
+
+- [Detailed source audit, exact assumptions, references, falsifiers and pre-metric experimental program](reviews/2026-10-12-bianconi-gravity-from-entropy-comparison.md)
+- [Researcher's exact priority statement and agent bibliographic clarification](DISCUSSION_LOG.md)
+
+**Qualification:** Comparative research priority only; neither the frozen Primitive Presentation toy simulation nor the force-free coordinate-free ablation has been altered by this literature study. Independent physical correspondence remains unverified.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
