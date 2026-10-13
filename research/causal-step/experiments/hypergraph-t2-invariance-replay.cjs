@@ -22,7 +22,7 @@ function exactReplace(s,a,b){
  return s.replace(a,b);
 }
 function instrument(original){
- let s=original;
+ let s=original.replace(/^#![^\n]*\n/, '');
  s=exactReplace(s,"import fs from 'node:fs';","");
  s=exactReplace(s,"import path from 'node:path';","");
  s=exactReplace(s,
