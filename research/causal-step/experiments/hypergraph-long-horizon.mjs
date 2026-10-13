@@ -9,6 +9,8 @@
  * node hypergraph-long-horizon.mjs 3 5000 results 982451653
  * node hypergraph-long-horizon.mjs 4 5000 results 0
  * node hypergraph-long-horizon.mjs 5 5000 results 0
+ * Optional: add rule_id, scheduler ('fifo'|'random'|'both'), mutation ('fixed'|'active'|'both')
+ * node hypergraph-long-horizon.mjs 5 7500 results 982451653 21 random active
  * CAUTION: a random-seed change alters scheduler choices only.
  * Every source rule in this experiment forces node birth on successful rewrites;
  * survival and complexity must remain independently assessed.
@@ -17,6 +19,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 const k=Number(process.argv[2]??3), horizon=Number(process.argv[3]??400);
 const folder=path.resolve(process.argv[4]||'./long-results'),seedOffset=Number(process.argv[5]??0);
+const ruleFilter=process.argv[6]===undefined?null:Number(process.argv[6]);
+const scheduleFilter=process.argv[7]||'both',mutationFilter=process.argv[8]||'both';
+if(ruleFilter!==null&&(!Number.isSafeInteger(ruleFilter)||ruleFilter<0||ruleFilter>191))throw Error('Bad rule ID');
+if(!['both','fifo','random'].includes(scheduleFilter)||!['both','fixed','active'].includes(mutationFilter))throw Error('Bad run filter');
 const NODE_LIMIT=12000, EDGE_LIMIT=250000, BUILD_SEED=20261012;
 if(![3,4,5].includes(k)||!Number.isSafeInteger(horizon)||horizon<1||horizon>10000||
  !Number.isSafeInteger(seedOffset)||seedOffset<0||seedOffset>1000000000)throw Error('Bad experiment parameters');
@@ -292,19 +298,23 @@ function trial(spec,rule,mutation,scheduler,sourceSeed,limit){
 }
 const candidates=selectCandidateRules(k),results=[];
 for(const spec of CASES[k]){
+ if(ruleFilter!==null&&spec.ruleId!==ruleFilter)continue;
  const candidate=candidates.find(x=>x.ruleId===spec.ruleId);
  if(!candidate)throw Error('Selected candidate not in reference sample');
  const n=k+(spec.kind==='overlap'?1:0);
  const bits=spec.initial==='zero'?0:spec.initial==='one'?(1<<n)-1:(1<<Math.floor(n/2))-1;
  for(const scheduler of ['fifo','random'])for(const mutation of [0,1+(spec.ruleId%4)]){
+  if(scheduleFilter!=='both'&&scheduleFilter!==scheduler)continue;
+  if(mutationFilter==='fixed'&&mutation!==0)continue;
+  if(mutationFilter==='active'&&mutation===0)continue;
   const seed=BUILD_SEED+spec.ruleId*113+k*17+bits+seedOffset;
   results.push(trial({...spec,k},candidate.rule,mutation,scheduler,seed,horizon));
  }
 }
 const meta={experiment:'long-horizon higher-order complexity screen, exact event selection optimized using Fenwick+incidence index',
  originSourceSha:'563d9e93ec1a2610fe60fcbfa17c7d37f326d885',
- k,horizon,seedOffset,limits:{nodes:NODE_LIMIT,liveEdges:EDGE_LIMIT},runs:results.length};
-const destination='higher-order-long-k'+k+'-h'+horizon+'-seed'+seedOffset;
+ k,horizon,seedOffset,ruleFilter,scheduleFilter,mutationFilter,limits:{nodes:NODE_LIMIT,liveEdges:EDGE_LIMIT},runs:results.length};
+const destination='higher-order-long-k'+k+'-h'+horizon+'-seed'+seedOffset+'-rule'+(ruleFilter===null?'all':ruleFilter)+'-'+scheduleFilter+'-'+mutationFilter;
 fs.mkdirSync(folder,{recursive:true});
 fs.writeFileSync(path.join(folder,destination+'.json'),JSON.stringify({...meta,runs:results},null,2)+'\n');
 const concise=results.map(r=>({k:r.k,id:r.ruleId,initial:r.initial,kind:r.kind,schedule:r.scheduler,mut:r.mutation,
