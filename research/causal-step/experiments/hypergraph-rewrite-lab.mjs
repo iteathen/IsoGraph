@@ -15,6 +15,7 @@
  *      node hypergraph-rewrite-lab.mjs sweep 5 128 250 results
  *      node hypergraph-rewrite-lab.mjs controls 0 0 0 results
  *      node hypergraph-rewrite-lab.mjs multi 3 160 250 results
+ *      node hypergraph-rewrite-lab.mjs symmetry 5 0 200 results
  * node >=18; no external dependencies.
  */
 import fs from 'node:fs';
@@ -23,7 +24,7 @@ import path from 'node:path';
 const args=process.argv.slice(2), phase=args[0]||'sweep';
 const k=Number(args[1]||3), ruleCount=Number(args[2]||128), horizon=Number(args[3]||250);
 const folder=path.resolve(args[4]||'./hypergraph-results');
-if(!['sweep','controls','multi'].includes(phase))throw new Error('Unknown phase');
+if(!['sweep','controls','multi','symmetry'].includes(phase))throw new Error('Unknown phase');
 if(phase!=='controls'&&(![3,4,5].includes(k)||!Number.isSafeInteger(ruleCount)||ruleCount<1||ruleCount>10000||!Number.isSafeInteger(horizon)||horizon<1||horizon>5000))throw new Error('Invalid bounded arguments');
 const NODE_LIMIT=2000,EDGE_LIMIT=16000,BUILD_SEED=20261012;
 
@@ -201,6 +202,32 @@ function nullControl(arity){
  return {k:arity,highOrderInitialRelation:'one genuine k-hyperedge',controlRelation:arity===3?'all pairwise edges only (not entered into high-order engine)':'all proper (k-1)-hyperedges; same K_k 2-section',
   highOrderRewrites:high.rewrites,controlRewrites:low.rewrites,highOrderStatus:high.status,controlStatus:low.status};
 }
+
+function relabelSymmetryControls(arity,steps){
+ const rows=[],mismatches=[];
+ const ruleSet=[
+  {arity,weights:(1<<(arity+1))-1,ranks:1<<(arity-3),mode:2,keep:false},
+  {arity,weights:(1<<(arity+1))-1,ranks:1<<(arity-3),mode:3,keep:true},
+  {arity,weights:(1<<(arity+1))-1,ranks:((1<<(arity-3))|(1<<(arity-2))),mode:4,keep:false}
+ ];
+ for(let ri=0;ri<ruleSet.length;ri++){
+  const rule=ruleSet[ri];
+  for(let weight=0;weight<=arity;weight++){
+   const results=[];
+   for(let bits=0;bits<(1<<arity);bits++){
+    let pop=0;for(let i=0;i<arity;i++)pop+=(bits>>i)&1;
+    if(pop!==weight)continue;
+    const x=runTrial({initialArity:arity,initialBits:bits,rules:{[arity]:rule},scheduler:'fifo',
+       seed:BUILD_SEED+ri,limit:steps});
+    const signature=[x.status,x.rewrites,x.liveEdges,x.activeFrontier,x.maxDepth,x.fired3,x.fired4,x.fired5].join('|');
+    rows.push({arity,rule:ri,inputWeight:weight,inputBits:bits,signature,...x});
+    results.push(signature);
+   }
+   if(new Set(results).size>1)mismatches.push({arity,rule:ri,inputWeight:weight,distinctSignatures:new Set(results).size});
+  }
+ }
+ return {rows,mismatches};
+}
 function multiSample(ruleN,steps){
  const results=[],ruleRecords=[];
  for(let j=0;j<ruleN;j++){
@@ -235,10 +262,15 @@ if(phase==='sweep'){
  const r=[3,4,5].map(nullControl);
  fs.writeFileSync(path.join(folder,'higher-order-irreducibility-controls.json'),JSON.stringify(r,null,2)+'\n');
  console.log(JSON.stringify({phase,controls:r}));
-}else{
+}else if(phase==='multi'){
  const z=multiSample(ruleCount,horizon);
  fs.writeFileSync(path.join(folder,'higher-order-multi-rules.csv'),toCSV(z.rules,['j','rank3weights','rank4weights','rank5weights','rank3outputs','rank4outputs','rank5outputs']));
  fs.writeFileSync(path.join(folder,'higher-order-multi-trials.csv'),toCSV(z.trials,['rule','initialOnes',...stats]));
  fs.writeFileSync(path.join(folder,'higher-order-multi-summary.json'),JSON.stringify({summary:z.summary,limits:{nodes:NODE_LIMIT,edges:EDGE_LIMIT,rewrites:horizon}},null,2)+'\n');
  console.log(JSON.stringify({phase,summary:z.summary}));
+}else{
+ const z=relabelSymmetryControls(k,horizon);
+ fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-relabel-controls.csv'),toCSV(z.rows,['arity','rule','inputWeight','inputBits','signature',...stats]));
+ fs.writeFileSync(path.join(folder,'higher-order-k'+k+'-relabel-summary.json'),JSON.stringify({arity:k,comparisons:z.rows.length,mismatches:z.mismatches},null,2)+'\n');
+ console.log(JSON.stringify({phase,k,comparisons:z.rows.length,groupsWithRelabelSensitivity:z.mismatches.length,sensitiveExamples:z.mismatches.slice(0,8)}));
 }
