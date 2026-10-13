@@ -419,3 +419,15 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Disposition:** Interesting rule to compare against already extended finalists, but the prior data establish only finite productive survival and some coupled-state reactivation. Longer horizon and stronger structural/information-capacity controls are needed before calling it a promising generator rather than repetitive expansion.
 
+## 2026-10-13 — Researcher requests topological and holographic prior-art comparison with causal network emergence
+
+**Researcher (verbatim):**
+
+> work in topology and holography might closely align with emergent causal graph network kind of approaches. So let's do some research on that, gather some web resources, and see if we can find anything that looks like it might contain some pieces.
+
+**Researcher-originated research direction:** Perform broad, source-grounded public-literature research on possible common **structural content** among topology, holography, and causally evolving higher-order graph/hypergraph representations. Gather verifiable links, identify mathematical techniques and concrete constraints that *might* become useful in Causal Step, and preserve limitations/contradictions rather than declaring a holographic or physical derivation. This is exploratory *comparison*, not authorization to assume a quantum Hilbert space, a bulk/boundary mapping, pre-existing spacetime geometry or 3D/4D, gauge/matter fields, a preferred physical dimension, or a gravitational/entropic force in the primitive rewrite model.
+
+**Agent evidence-standard clarification:** Match theoretical descriptions at the level they actually prove; distinguish representability/min-cut theorems, topology recovery *given a manifoldlike causal set*, toy bulk-boundary tensor networks, quantum gravity kinematics, and any independent physical measurement. The researcher's publication evidence gate remains intact: do not claim publishable Causal Step causal-topology/holography correspondences without explicit node/edge/higher-order incidence semantics, actual invariant/complete comparison, validation of numerical experiments, and claim-appropriate external empirical correspondence.
+
+**Agent research workflow:** Perform a cited prior-art survey including both demonstrations **and no-go/gap results** (e.g., hypergraph-versus-stabilizer entropy cone and link topology beyond standard hypergraphs), with source-faithful priorities, a list of independent assumptions, concrete falsifying null tests, and a clear record of which work was actually executed. No Causal Step premises, archived HTML simulations, or qualified IsoGraph semantic authority are changed by this literature survey.
+
