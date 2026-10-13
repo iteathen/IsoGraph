@@ -5,6 +5,8 @@
 **Evidence:** source-executed bounded sweeps and newly checked rule-level mathematical certificates.  
 **No inference:** physical persistence, particles, spacetime, gravity, entropy, or real-world causality.
 
+> **Later researcher correction — second necessary research filter (same date):** “The ones that form very simple reoccurring patterns indefinitely can pretty much be ruled out. Only the ones that exhibit behavior of being able to represent some complexity are actually valid for this.” Therefore the 1,344 perpetual rule settings and 59 sampled certificates below **prove productive noncollapse only**; the uniform-state repeated witness must **not** be misclassified as demonstrating useful complexity. The rule-wide capacity is a distinct, initial-condition-dependent question. See [the higher-order complexity-capacity screen and falsification controls](2026-10-12-persistent-complexity-capacity-filter.md). Neither the original theorem nor the finite data is revised.
+
 ## 1. Correct meaning and three distinct questions
 
 Joshua Oshiro explicitly states:
