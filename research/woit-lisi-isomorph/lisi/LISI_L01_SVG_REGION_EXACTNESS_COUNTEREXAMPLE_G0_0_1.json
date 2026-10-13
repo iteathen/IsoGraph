@@ -1,0 +1,178 @@
+{
+  "schema": "isograph.track-L.G0.L01-svg-region-false-positive-causal-repair.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "UNQUALIFIED_MECHANICAL_TOOL_REPAIR_WITH_EXACT_SYNTHETIC_FRACTION_ORACLE",
+  "original_source": {
+    "source_id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_page": 2,
+    "figure": 1,
+    "original_pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_source_binary_read_this_batch": false,
+    "original_svg_available_this_batch": false
+  },
+  "predecessors": {
+    "source_tool_v0_1": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_1.py",
+      "git_blob_sha": "8f7501e721f4441ac91e184f7c8deeedf0faa9d6"
+    },
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "source_inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "stage_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_191.json",
+      "git_blob_sha": "6211130c2ade9859018e992b075f1648cf096ec4"
+    },
+    "prior_branch_head": "c1aa80211a676159e28fa03147dd83643d13b2af"
+  },
+  "observation": {
+    "class": "REGION_FILTER_OVERINCLUSION_DURING_SOURCE_PREP",
+    "exact_counterexample": {
+      "line_segment_p": [
+        0,
+        10
+      ],
+      "line_segment_q": [
+        10,
+        0
+      ],
+      "crop": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "old_v0_1_envelope_overlap": true,
+      "exact_segment_crop_intersection": false,
+      "proof": "Every point on the segment satisfies x+y=10. Every point in the crop satisfies x+y<=4. Therefore there is no intersection despite intersecting bounding rectangles."
+    },
+    "owner_assessment": "Bounding-box prefilter is lawful as an explicitly overinclusive retrieval hint, but insufficient for a source-cropped exact line-intersection claim. No retroactive historical CI score or author theory error inferred.",
+    "repair_disposition": "NEW_TOOL_VERSION_ONLY_NO_HISTORY_REWRITE",
+    "discovery_disposition": "Figure1 semantic connector incidence remains OPEN despite upgraded geometric predicate."
+  },
+  "strategies": [
+    {
+      "id": "A",
+      "method": "Keep original bbox test as may-overlap candidate retrieval only",
+      "benefit": "cheap superset",
+      "cost": "false positives if mistaken for source-cropped exactness",
+      "disposition": "PRESERVE_HISTORICAL_RETRIEVAL_HINT"
+    },
+    {
+      "id": "B",
+      "method": "Inclusive Liang-Barsky parametric segment-rectangle clipping",
+      "benefit": "exact intersection of linear segment and axis-aligned crop with boundary-tangent retention",
+      "cost": "does not resolve source glyphs, curved paths or clipping definitions",
+      "disposition": "SELECTED_MINIMAL_CAUSAL_REGION_REPAIR"
+    },
+    {
+      "id": "C",
+      "method": "Endpoint-inside plus orientation based polygon boundary crossing",
+      "benefit": "alternative independent computational formulation",
+      "cost": "more branch/degeneracy cases and greater verification surface",
+      "disposition": "RETAIN_ALTERNATIVE"
+    }
+  ],
+  "derived_geometry": {
+    "model": "p + t(q-p), t in [0,1]; intersect four linear constraints x_min<=x<=x_max, y_min<=y<=y_max.",
+    "predicate": "nonempty intersection of resulting parameter intervals",
+    "scope_limit": "Only exact mathematical segment/crop incidence; not glyph-to-field semantic edges, clipping, fill shapes, or physical action."
+  },
+  "new_tool": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py",
+    "git_blob_sha": "f0f144e06dc17992a8b3ea2bae9e32299ed848b5",
+    "predecessor_preserved": true,
+    "change_class": "REGION_TEST_0_1_TO_0_2",
+    "changes": [
+      "replace envelope retrieval filter with inclusive parametric segment-rectangle test",
+      "reject invalid region bounds",
+      "add four deterministic self-test expectations for false positive, true diagonal, crossing and miss",
+      "bump output schema to v0.2"
+    ],
+    "not_ran_on_original_source": true,
+    "untested_remaining": [
+      "full Python-script execution of exact committed file pending independent runnable host",
+      "actual pdftocairo SVG source reconstruction absent",
+      "rounded coordinate/tolerance edge cases outside bounded integer oracle not certified",
+      "SVG clip/mask and CSS remain unresolved by older extractor"
+    ]
+  },
+  "independent_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-svg-region-0-1.py",
+    "git_blob_sha": "3e7c1d334db608f07eeb1ba8a7afad3f42eaf9b5",
+    "test_type": "DETERMINISTIC_SYNTHETIC_INTEGER_GRID_WITH_INDEPENDENT_EXACT_FRACTION_INTERVAL_ORACLE",
+    "segment_endpoint_coordinate_range": "integers -2 through 2 inclusive",
+    "axis_aligned_box_bounds": "all 15 closed intervals per axis with endpoints in -2..2",
+    "cases": 140625,
+    "positive_exact_intersections": 60865,
+    "negative_exact_nonintersections": 79760,
+    "old_envelope_false_positive_cases": 14760,
+    "local_equivalent_geometry_predicate_test": "PASS",
+    "committed_repo_full_script_executed_here": false,
+    "external_cold_source_semantic_validation": false
+  },
+  "historical_preservation": {
+    "source_visual_candidate_initial_run": {
+      "run_id": 38279072465,
+      "conclusion": "failure",
+      "hostiles_rejected": 22,
+      "hostiles_defined": 23
+    },
+    "source_model_scoped_run": {
+      "run_id": 38279423956,
+      "conclusion": "success",
+      "hostiles_rejected": 26,
+      "hostiles_defined": 26,
+      "semantics_at_original_source_visual_graph_qualified": false
+    },
+    "vector_carrier_probe": {
+      "run_id": 38294391911,
+      "conclusion": "success",
+      "hostiles_rejected": 10,
+      "hostiles_defined": 10,
+      "endpoint_topology_qualified": false
+    },
+    "prior_general_verify_run": {
+      "run_id": 38328656231,
+      "conclusion": "failure",
+      "failure_scope": "existing mutable documentation TeX markup, not a source qualification",
+      "all_original_failed_CI_unchanged": true
+    }
+  },
+  "stage_conservation": {
+    "SSC_revision": "0.96",
+    "existing_source_items": 191,
+    "original_first_locations": 350,
+    "L01_source_locations": 98,
+    "L01_exact_visual_groups_open": 16,
+    "full_cold_L_sources_completed": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false,
+    "modified_SSC": false,
+    "modified_original_source_inverse": false,
+    "modified_W_track": false,
+    "modified_qualified_Core": false
+  },
+  "next": "Run versioned verifier and v0.2 selftest against checked-out exact committed bytes; obtain frozen L01 PDF+SVG bytes, recheck source SHA and renderer environment, then analyze incomplete clip/CSS/filled geometry and an independent raster endpoint review before any source semantic promotion.",
+  "provenance": {
+    "research_direction": "Joshua Oshiro — independent complete W and L IsoGraph source treatment",
+    "technical_observation": "agent-assisted verifier audit of prior L01 source geometry candidate extraction",
+    "first_evidence": "2026-10-12 local deterministic counterexample and exact rational interval oracle",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "external_math": "standard segment-rectangle clipping, not a new mathematical discovery"
+  }
+}
