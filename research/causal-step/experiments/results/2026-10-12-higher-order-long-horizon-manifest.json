@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-12",
+  "repository": "iteathen/IsoGraph",
+  "branch": "research/causal-step-complexity-long-horizon-20261012",
+  "parentBranch": "research/causal-step-complexity-filter-20261012",
+  "enginePath": "research/causal-step/experiments/hypergraph-long-horizon.mjs",
+  "engineBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+  "priorDynamicalSourceBlobSha": "563d9e93ec1a2610fe60fcbfa17c7d37f326d885",
+  "executionMethod": "Committed Node-compatible JS executed with V8 isolate plus Node-like fs/path/process adapters, no GitHub Actions",
+  "controlAgreement": {
+    "runs": 28,
+    "fieldsPerRun": 16,
+    "comparisons": 448,
+    "discrepancies": 0
+  },
+  "cases": {
+    "3000": {
+      "trials": 28,
+      "mutated": 14,
+      "mutatedProvisional": 11,
+      "fixedStateControls": 14
+    },
+    "8000": {
+      "trials": 18,
+      "mutated": 14,
+      "mutatedProvisional": 12,
+      "fixedStateControls": 4
+    },
+    "8000-alternate-seed": {
+      "trials": 7,
+      "mutated": 7,
+      "mutatedProvisional": 7,
+      "fixedStateControls": 0,
+      "offset": 982451653
+    }
+  },
+  "totalLongRuns": 53,
+  "totalSourceRewriteUpdates": 284000,
+  "operationalLimits": {
+    "maxNodes": 12000,
+    "maxLiveHyperedges": 250000,
+    "maxObservedNodes": 8006,
+    "maxObservedLiveHyperedges": 208001,
+    "resourceStops": 0
+  },
+  "context": "Seven previously selected rule×initial-incidence contexts: k3 ids 4,28; k4 ids 0,21; k5 ids 21,81,4. FIFO and seeded random, aggregate-bit mutations active/disabled as controls.",
+  "postHocExploratoryGate": "Active at horizon; last 64 events have >=3 distinct local event signatures and >=2 events reactivating existing hyperedges; last 64 has no exact period<=12. Period<=128 in last 256 also monitored.",
+  "caveats": [
+    "Rules guarantee one newborn per successful rewrite; graph nonemptiness is forced, not a discovered stable physical structure.",
+    "A finite observation horizon does not prove infinite persistence.",
+    "Periodicity/aperiodicity of local event signatures does not bound global graph complexity or computational universality.",
+    "Mutation and random scheduler are explicit model choices; candidate labels are not predictions for elementary particles or fields."
+  ],
+  "evidenceFiles": [
+    {
+      "dataset": "research/causal-step/experiments/results/2026-10-12-higher-order-long-3000-summary.csv",
+      "sha": "43484356567b0386f4d96c885ee6f33d93fd6d91",
+      "runs": 28,
+      "mutated": 14,
+      "mutatedPass": 11,
+      "canceled": 0
+    },
+    {
+      "dataset": "research/causal-step/experiments/results/2026-10-12-higher-order-long-8000-summary.csv",
+      "sha": "d2d40f87d59a5a94d2df71a69543e521f6ad807f",
+      "runs": 18,
+      "mutated": 14,
+      "mutatedPass": 12,
+      "canceled": 0
+    },
+    {
+      "dataset": "research/causal-step/experiments/results/2026-10-12-higher-order-long-8000-alt-seed-summary.csv",
+      "sha": "2159e37dc4b35b6116d0a634dd35a2d6243778c8",
+      "runs": 7,
+      "mutated": 7,
+      "mutatedPass": 7,
+      "canceled": 0
+    },
+    {
+      "dataset": "research/causal-step/experiments/results/2026-10-12-higher-order-long-source-agreement-400.json",
+      "sha": "3933f7a1dd25bf231d9ff5c6db554e902cc4afc0",
+      "referenceComparisons": 448,
+      "referenceMismatches": 0
+    }
+  ]
+}
