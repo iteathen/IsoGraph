@@ -1,0 +1,70 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-source-stroke-vs-glyph-and-clip-discriminator.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_anchor": {
+    "path": "experiments/062/L01_FIG1_FROZEN_SOURCE_VECTOR_REPLAY_108_CANDIDATES_0_1.json",
+    "run_id": 38335787442,
+    "head_sha": "012ff64c619c3ce3c2f8f55e198cafc805855f29",
+    "source_svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430"
+  },
+  "question": "Which of the 108 cropped straight-stroke geometric candidates are actual drawn field-marker connector strokes, which are cell borders or decoration, and which necessary parts of the 2263 unresolved extraction entries are source glyph or clipping obligations?",
+  "observed_counts": {
+    "raw_path_tags": 357,
+    "raw_use_tags": 2124,
+    "expanded_shapes": 2354,
+    "cropped_provisional_line_segments": 108,
+    "unresolved_extraction_entries": 2263,
+    "curved_path_reason_occurrences": 2256,
+    "clip_path_reason_occurrences": 11,
+    "multiple_reasons_per_item_possible": true
+  },
+  "current_nonclosure": "No source-to-role crosswalk, no complete clipped visible-stroke set, no independently decoded 48 printed glyphs or endpoint/junction topology; L01-S004 exact-visual remains OPEN.",
+  "competing_hypotheses": [
+    {
+      "id": "A",
+      "claim": "Most curved paths are fill-only font/symbol glyph outlines, not connector-ink strokes.",
+      "status": "CANDIDATE_REQUIRES_STROKE_VS_FILL_STYLE_PROVENANCE"
+    },
+    {
+      "id": "B",
+      "claim": "Some curved paths describe actual source connector geometry, so omitting all curved shapes loses load-bearing incidence.",
+      "status": "CANDIDATE_REQUIRES_VISIBILITY_AND_PIXEL_CROSSCHECK"
+    },
+    {
+      "id": "C",
+      "claim": "Some of the 108 linear stroke segments are table borders, not field-marker action connectors.",
+      "status": "CANDIDATE_SOURCE_ILLUSTRATION_SUPPORTS_DIFFERENT_INK_ROLES"
+    },
+    {
+      "id": "D",
+      "claim": "SVG path geometry and source prose together directly determine full field-to-cell adjacency.",
+      "status": "REJECT_AS_SOURCE_EXACT_ORACLE"
+    }
+  ],
+  "next_selected": "Separate source vector glyph/fill/outline/mixed-style occurrences, preserve all curved and clip uncertainty, then get independent 2x raster and label each candidate as field-marker line, border, glyph or unresolved. Trace source-specific endpoint/junction including seams; require reversible SVG occurrence and raster location and cold external image-only adjudication before qualifying L01-S004.",
+  "falsifiers": [
+    "A curved vector path with supported visible stroke reaching marker/cell invalidates blanket glyph-outline dismissal.",
+    "A purported connector without a source stroke or raster trace is rejected.",
+    "A claimed endpoint/junction may not use closest-cell or author action prose alone.",
+    "SVG output hash equality is not source-topology proof.",
+    "Overlapping unresolved reason counts do not indicate independent missing semantic claims.",
+    "No L/SSC/G0 gate promotion without complete cold/source coverage."
+  ],
+  "stage_locks": {
+    "SSC_revision": "0.96",
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "forensic_decision": "agent-assisted based on source-run CI output",
+    "earliest_evidence": "2026-10-12 CI 38335787442",
+    "recorded_on": "2026-10-12",
+    "hypothesis_not_authority": true
+  }
+}
