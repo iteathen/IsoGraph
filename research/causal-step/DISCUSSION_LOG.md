@@ -401,3 +401,21 @@ Where possible, quote the researcher's exact wording; identify agent explanation
 
 **Evidence:** [long-horizon experiment audit](reviews/2026-10-12-higher-order-long-horizon-complexity-candidates.md), [frozen source and run manifest](experiments/results/2026-10-12-higher-order-long-horizon-manifest.json), [8,000-rewrite primary statuses](experiments/results/2026-10-12-higher-order-long-8000-summary.csv), [alternate-seed results](experiments/results/2026-10-12-higher-order-long-8000-alt-seed-summary.csv), [400-step source-verification record](experiments/results/2026-10-12-higher-order-long-source-agreement-400.json). Previous raw evidence was retained unchanged, and archived Primitive Presentation HTML/physical premises remain unmodified.
 
+## 2026-10-12 — Researcher asks specifically about four-node rewrite rule 20
+
+**Researcher (verbatim, interpreted in current experimental context):**
+
+> Tell me about 4 20
+
+**Interpretation (not a new premise):** In the immediate context of enumerated `k`-node, numbered hypergraph rewrite rules, read “4 20” as **k=4, sampled rule ID #20**, distinct from k=4 rule #21 that was among the seven 8,000-rewrite finalists. The phrase is ambiguous outside the project; do not silently treat this as a changed research hypothesis.
+
+**Existing source-verified configuration:** [saved k4 rule table](experiments/results/2026-10-12-higher-order-k4-rules.csv): `k=4, id=20, weights=29, ranks=3, mode=parity, keep=false`. Activation accepts input Hamming weights 0,2,3,4 but **not** weight1. Firing the single *four-way* source hyperedge creates one parity-bit newborn, **six rank-3 plus four rank-4** newborn-containing hyperedges, and consumes the fired source hyperedge. No active pairwise rewrite is used.
+
+**Results already executed (no new run claimed for this query):**
+- [k4 source-family trials](experiments/results/2026-10-12-higher-order-k4-trials.csv): for initial weights 0,2,3,4, both FIFO and seeded-random runs reached the **400-rewrite horizon**, with 404 total nodes and 3,601 live hyperedges; eligible frontier 1,201 except weight2 with 401. Initial weight1 had zero eligible rewrites. No resource censoring. The six rank-3 output hyperedges are passive when only the fixed rank-4 rule is installed, rather than evidence of rank-3 rules firing.
+- [k4 coupled control](experiments/results/2026-10-12-higher-order-k4-coupled-trials.csv): with **all participant bits inverted** as a separate mutation mechanism, all four initially productive Hamming weights remained active through 160 rewrites under both FIFO and random scheduling. For all-zero FIFO, 155 rewrite events newly reactivated old overlapping eligible relations, vs **0** with fixed node bits; eligible frontiers at 160 were 341 and 481 respectively. This verifies rule-dependent feedback **only when this added state mutation is part of the full dynamical rule**.
+- k4 #20 was **not** among the source-selected seven extended 3,000/8,000-rewrite candidates, and so its eight-thousand-rewrite behavior and local-periodicity/functional-complexity classification **remain untested** in that campaign. Its exclusion is not a demonstrated collapse or failure of the researcher's complexity criterion.
+- An all-zero **immutable** subcase does admit an immediate simple inductive branching witness, because parity(0,0,0,0)=0 and each fired all-zero rank-4 source generates four eligible all-zero rank-4 children. This proves nontermination under unlimited resources but **not complexity capacity**, and does not carry over automatically to the state-inverting version.
+
+**Disposition:** Interesting rule to compare against already extended finalists, but the prior data establish only finite productive survival and some coupled-state reactivation. Longer horizon and stronger structural/information-capacity controls are needed before calling it a promising generator rather than repetitive expansion.
+
