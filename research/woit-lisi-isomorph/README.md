@@ -1,3 +1,7 @@
+## L G0 source-first Table 1 algebraic pilot (2026-10-13)
+
+The independent L source dossier now records [12 assisted original Table1 rows](lisi/tools/l01_table1_assisted_source_cells_0_1.json) and an [exact symbolic source-row consistency witness](../../experiments/062/L01_TABLE1_ASSISTED_SOURCE_12_WEIGHT_ALGEBRA_LOCAL_SUCCESS_0_1.json): 144/144 root-reflection checks, 10/10 hostile mutations rejected, and a reproduced SU(3) 3x3 Eq2.2 matrix. This is **local mathematical verification of assisted data**, not independent cold source reading, field-action graph qualification, or physics validation. [L G0 gate 0.200](../../experiments/062/L_CURRENT_STAGE_GATE_0_200.json) retains the unqualified six-original source census and all other G1+/cross-track/merge locks.
+
 ## Track L G0 source Fig1 clip-1 W-to-table visible ink (2026-10-12)
 
 [CI 38343093403](https://github.com/iteathen/IsoGraph/actions/runs/38343093403) and [L dossier](lisi/README.md) now establish **clip-certified original SVG ink continuity** from the W-side three-stroke junction to the left border of Figure1's standard model table. Literal source `clip-1` has verified rectangle corners/nonzero clip rule, and all 11 source clip definitions are axis rectangles. This does **not** identify an intended field-to-fermion edge, complete glyph semantics or a cold source reconstruction. [G0 gate0.196](../../experiments/062/L_CURRENT_STAGE_GATE_0_196.json): SSC0.96/191 and all six-source requirements unchanged; G0 still open and G1+/W/L synthesis/PR70 merge blocked.

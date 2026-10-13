@@ -1,0 +1,211 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-Table1-source-assisted-12-weight-algebra-scoped-local-success.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "author": "A. Garrett Lisi",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1",
+    "original_pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "source_pdf_sha256_verified_by_prior_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_pdf_binary_reacquired_this_batch": false,
+    "original_pdf_page_visual_direct_review": true,
+    "original_pdf_page_index": 5,
+    "ar5iv_secondary_source_url": "https://ar5iv.labs.arxiv.org/html/0711.0770",
+    "ar5iv_conversion_not_source_binary_or_frozen_revision_authority": true,
+    "original_source_loci": [
+      "L01-S012",
+      "L01-S013"
+    ],
+    "source_pilot_parent": "514fedff16956869e0c872f0125305332c278364"
+  },
+  "machine_input": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/l01_table1_assisted_source_cells_0_1.json",
+    "git_blob_sha": "7109062125d2b649c44d39e7f76d9095c1f93b26",
+    "row_count": 12,
+    "scheme": "isograph.track-L.G0.L01.Table1-assisted-visual-cell-transcription.v0.1",
+    "transcriber": "agent-assisted source-pdf visual and source-math reading, NONCOLD"
+  },
+  "reproducible_verifier": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_table1_assisted_0_1.py",
+    "git_blob_sha": "c782faf3797da91dfb3229952990a59902398cec",
+    "python_environment": "Python 3 + Sympy 1.14.0",
+    "command": "python research/woit-lisi-isomorph/lisi/tools/verify_l01_table1_assisted_0_1.py",
+    "local_output_json_git_blob_sha": "d49f8c112080b923836c33c9eb718704fa7ca151",
+    "execution_environment": "local isolated Python environment (not GitHub Actions)",
+    "original_source_binary_downloaded_by_verifier": false
+  },
+  "local_execution_result": {
+    "adversarial_controls": [
+      {
+        "name": "swap_gluon_g3_sign",
+        "reasons": [
+          "row1:source adjoint weights",
+          "distinct root coordinates",
+          "Weyl reflection missing"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "invert_rbar_gluon_g8",
+        "reasons": [
+          "row4:source adjoint weights",
+          "distinct root coordinates",
+          "Weyl reflection missing"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "transcribe_wrong_v_generator",
+        "reasons": [
+          "row3:source V coefficient mapping",
+          "row3:source adjoint weights"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "wrong_matrix_unit",
+        "reasons": [
+          "row5:source V coefficient mapping",
+          "six matrix units"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "wrong_antiquark_weight",
+        "reasons": [
+          "row8:fundamental/dual weights",
+          "distinct root coordinates",
+          "Weyl reflection missing"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "duplicate_weight",
+        "reasons": [
+          "row12:fundamental/dual weights",
+          "distinct root coordinates",
+          "Weyl reflection missing"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "remove_table_row",
+        "reasons": [
+          "12 table rows",
+          "6+3+3 category counts",
+          "row order"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "mark_cold_complete",
+        "reasons": [
+          "false cold promotion"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "promote_G1",
+        "reasons": [
+          "false cold promotion"
+        ],
+        "rejected": true
+      },
+      {
+        "name": "invent_alternate_marker",
+        "reasons": [
+          "unique source markers"
+        ],
+        "rejected": true
+      }
+    ],
+    "baseline_errors": [],
+    "controls_defined": 10,
+    "controls_rejected": 10,
+    "direct_computation": {
+      "Eq2_2_matrix": "EXACT_ALGEBRA_MATCH",
+      "adversarial_domain": "SOURCE_DERIVED_MATH_NOT_COLD",
+      "mapped_offdiagonal_positions": 6,
+      "root_norm_squares": {
+        "1": 6,
+        "1/3": 6
+      },
+      "root_reflections": 144,
+      "rows": 12
+    },
+    "independent_cold_review": false,
+    "schema": "isograph.L01.G0.Table1.local-exact-algebra-verification.v0.1",
+    "source_semantic_authority": false
+  },
+  "source_classification": {
+    "original_table_1_caption": "SU(3) gluon, quark, antiquark weights together form a G2 root arrangement (original author claim)",
+    "exactly_six_printed_gluon_root_rows": true,
+    "exactly_six_printed_fundamental_dual_rows": true,
+    "source_gell_mann_convention": "T_A = (i/2) lambda_A (Eq2.2)",
+    "chosen_Cartan": "C = g^3 T3 + g^8 T8",
+    "formal_action_test": "[C,V] for six off-diagonal SU3 root units, C on defining 3 and -C^T on dual 3bar",
+    "source_exact_SVG_semantic_graph_not_used": true,
+    "source_values_form_two_norm_shells": "six norm squared 1, six norm squared 1/3",
+    "finite_reflection_closure": "144 of 144 exact symbolic reflections close the 12 point set",
+    "Lie_group_G2_embedding_proof": false,
+    "physical_theory_validated": false
+  },
+  "independent_implementation_limit": "The verifier computes with manually transcribed source coordinates and standard SU3 Gell-Mann matrices. Mathematical independence of the direct equations is stronger than a visual source reading but does not make the input an independent cold transcription.",
+  "source_semantic_reconciliation": {
+    "previous_pilot_location": "L01-S012 originally ORIGINAL_TABLE_FIGURE_OR_MATRIX_EXACT_CELLS_UNVERIFIED",
+    "previous_pilot_L01_P45_011": "Only a provisional 6+3+3 table-role count",
+    "current_addition": "Now all twelve displayed table weight-coordinate pairs and generator/basis-row entries are explicitly stored as assisted source transcription with algebraic cross-check.",
+    "source_pilot_equation_2_2": "3x3 matrix expression independently reconstructed from T_A = i/2 lambda_A; exact cold graphical/AST comparison remains incomplete",
+    "carrier_distinction": "Quark q^a and antiquark bar(q)^a display the same [1,0,0], [0,1,0], or [0,0,1] arrays, but act in defining 3 and dual 3bar with opposite Cartan eigenweights; coordinate equality alone does NOT imply carrier identity or NEI SAME.",
+    "e_phi_source_notation": "Original Eq1.1 contains (1/4) e phi as multiplicative frame-Higgs composite. Historical assisted pilot L01-PILOT-015 used hyphenated 'e-phi'; this successor clarifies that it must never be read as subtraction. Do not modify frozen pilot bytes.",
+    "drawing_semantics": "No Figure1 ink intersection or source g-marker absence/presence promoted into physical action edge."
+  },
+  "local_validation": {
+    "baseline_table1_symbolic_check": "PASS",
+    "source_row_count": 12,
+    "source_distinct_weight_points": 12,
+    "Cartan_eigenvalue_equations": "PASS",
+    "six_gluon_matrix_units": "PASS",
+    "quark_vs_dual_action_checks": "PASS",
+    "root_reflection_closure_count": 144,
+    "counterexamples_defined": 10,
+    "counterexamples_rejected": 10,
+    "draft_crosswalk_test_failure": {
+      "issue": "Original guard required both coordinate components of each quark/antiquark pair to differ, but the blue-pair g3 coordinates are both zero.",
+      "resolution": "Corrected guard to require distinct representation carriers with same basis array and changed g8; source table untouched.",
+      "classification": "LOCAL_TEST_DESIGN_ERROR_NOT_ORIGINAL_SOURCE_DEFECT",
+      "failed_GitHub_CI": false
+    }
+  },
+  "parent_authority": {
+    "L_G0_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_199.json",
+    "gate_git_blob_sha": "74f1fb96448c759d3711d6c539f798cb1a631c42",
+    "SSC": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "SSC_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "source_inverse": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_inverse_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+  },
+  "qualifications_and_blocks": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "six_original_papers_fully_cold_reviewed": 0,
+    "remaining_L01_exact_visual_table_matrix_groups_cold_unqualified": 16,
+    "source_L01_S012_exact_cell_cold_qualified": false,
+    "source_L01_S013_exact_AST_cold_qualified": false,
+    "external_independent_review_performed": false,
+    "source_semantic_authority": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false,
+    "previous_failures_and_source_records_rewritten": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "mathematical_source": "A. Garrett Lisi",
+    "technical_review_and_exact_mathematical_verification": "agent-assisted",
+    "recorded_on": "2026-10-13"
+  }
+}

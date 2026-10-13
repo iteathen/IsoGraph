@@ -1,0 +1,103 @@
+{
+  "adversarial_controls": [
+    {
+      "name": "swap_gluon_g3_sign",
+      "reasons": [
+        "row1:source adjoint weights",
+        "distinct root coordinates",
+        "Weyl reflection missing"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "invert_rbar_gluon_g8",
+      "reasons": [
+        "row4:source adjoint weights",
+        "distinct root coordinates",
+        "Weyl reflection missing"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "transcribe_wrong_v_generator",
+      "reasons": [
+        "row3:source V coefficient mapping",
+        "row3:source adjoint weights"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "wrong_matrix_unit",
+      "reasons": [
+        "row5:source V coefficient mapping",
+        "six matrix units"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "wrong_antiquark_weight",
+      "reasons": [
+        "row8:fundamental/dual weights",
+        "distinct root coordinates",
+        "Weyl reflection missing"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "duplicate_weight",
+      "reasons": [
+        "row12:fundamental/dual weights",
+        "distinct root coordinates",
+        "Weyl reflection missing"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "remove_table_row",
+      "reasons": [
+        "12 table rows",
+        "6+3+3 category counts",
+        "row order"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "mark_cold_complete",
+      "reasons": [
+        "false cold promotion"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "promote_G1",
+      "reasons": [
+        "false cold promotion"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "invent_alternate_marker",
+      "reasons": [
+        "unique source markers"
+      ],
+      "rejected": true
+    }
+  ],
+  "baseline_errors": [],
+  "controls_defined": 10,
+  "controls_rejected": 10,
+  "direct_computation": {
+    "Eq2_2_matrix": "EXACT_ALGEBRA_MATCH",
+    "adversarial_domain": "SOURCE_DERIVED_MATH_NOT_COLD",
+    "mapped_offdiagonal_positions": 6,
+    "root_norm_squares": {
+      "1": 6,
+      "1/3": 6
+    },
+    "root_reflections": 144,
+    "rows": 12
+  },
+  "independent_cold_review": false,
+  "schema": "isograph.L01.G0.Table1.local-exact-algebra-verification.v0.1",
+  "source_semantic_authority": false
+}
