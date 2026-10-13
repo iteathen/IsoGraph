@@ -1,0 +1,77 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-svg-clip-junction-preflight-failure.v0.1",
+  "recorded_on": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "evidence_class": "FROZEN_FAILED_INTERNAL_CI_PRELIMINARY_CONTROL",
+  "original_run": {
+    "run_id": 38338693014,
+    "job_id": 115104558819,
+    "head_sha": "a8567ee2869ccc9f1fbdf3d1f366ded284687cd2",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38338693014",
+    "conclusion": "failure",
+    "failed_step": "Frozen revision and synthetic controls",
+    "failed_file": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_2.py",
+    "failed_function": "supplemental_selftest",
+    "failed_assertion": "assert any(c['path_count']==3 for c in endpoint_neighborhoods(s,.5)['candidate_multi_path_clusters'])",
+    "line": 283,
+    "source_download_performed": false,
+    "source_original_SVG_examined": false
+  },
+  "owner_and_diagnosis": {
+    "class": "SYNTHETIC_VERIFIER_FIXTURE_MISMATCH",
+    "contract": "endpoint_neighborhoods deliberately selects source-path segments of length >=10 PDF points",
+    "fixture_observed": "Three test segments had lengths 5, 4.731279, and 5.515433 PDF points; all were below the intentionally required 10-point minimum and therefore filtered before clustering",
+    "scope": "Failure occurs before original binary download; no judgment on original Lisi Figure1 topology.",
+    "repair_disposition": "NEW_FIXTURE_ONLY_REVISION_NEEDED",
+    "discovery_disposition": "SOURCE_FIGURE_CLIPPING_AND_ENDPOINT_MEANING_STILL_OPEN"
+  },
+  "preserved_predecessors": {
+    "script_path": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_2.py",
+    "script_git_blob_sha": "d01c5ef68aaf35937ce161815e0ab2a608005bea",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-svg-clip-w-junction-0-1.yml",
+    "workflow_git_blob_sha": "f1b79d757d69c765f0e63b71b7cd379c295f970d",
+    "first_prereg_path": "research/woit-lisi-isomorph/lisi/LISI_L01_SVG_CLIP_W_JUNCTION_AUDIT_PREREG_G0_0_1.json",
+    "first_prereg_git_blob_sha": "94f73f6ceff30934528cb4b90dc78d54c79fd278"
+  },
+  "candidate_successor": {
+    "script": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py",
+    "git_blob_sha": "fbde8648c8e8e222e1036847005c3b84b4513ad5",
+    "changes": "Only fixture endpoints updated to satisfy intentional >=10 pt filter and report schema version incremented to v0.3; source extraction code otherwise unchanged.",
+    "workflow": ".github/workflows/experiment-062-l-g0-l01-svg-clip-w-junction-0-2.yml",
+    "workflow_git_blob_sha": "8122b4809de2f660e1e811a3551bbce8c17bc597",
+    "synthetic_lengths_pt": [
+      10,
+      14.27883,
+      15.401948
+    ],
+    "synthetic_endpoint_pairwise_distances_pt": [
+      0.291548,
+      0.141421,
+      0.291548
+    ],
+    "same_clustering_0_5_true_and_0_1_false": true,
+    "local_fixture_math_preflight": "PASS",
+    "original_pdf_not_yet_rechecked_after_failure": true
+  },
+  "failure_disposition": "FAILURE_IMMUTABLE_NOT_RECLASSIFIED",
+  "qualification_effect": "NONE",
+  "stage_locks": {
+    "SSC_revision": "0.96",
+    "SSC_count": 191,
+    "L01_visual_groups_open": 16,
+    "full_source_cold_completed": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "specific_fixture_diagnosis": "agent-assisted internal test review",
+    "source_of_failure": "CI run 38338693014",
+    "recorded_on": "2026-10-12",
+    "no_source_theorem_claim": true
+  }
+}

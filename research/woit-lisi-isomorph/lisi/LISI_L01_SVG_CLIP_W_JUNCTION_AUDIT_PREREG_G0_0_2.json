@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.track-L.G0.L01-svg-clip-W-junction-source-audit-successor-prereg.v0.2",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "predecessor_prereg": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SVG_CLIP_W_JUNCTION_AUDIT_PREREG_G0_0_1.json",
+    "git_blob_sha": "94f73f6ceff30934528cb4b90dc78d54c79fd278"
+  },
+  "historical_failure": {
+    "path": "experiments/062/L01_FIG1_CLIP_W_JUNCTION_FIRST_SYNTHETIC_PREFLIGHT_FAILURE_0_1.json",
+    "run_id": 38338693014,
+    "conclusion": "failure",
+    "source_pdf_replayed": false,
+    "unmodified_failure": true,
+    "git_blob_sha": "b6ce4e8111d70f90aa39d009b256a012965d53fd"
+  },
+  "new_exact_candidates": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py",
+    "git_blob_sha": "fbde8648c8e8e222e1036847005c3b84b4513ad5",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-svg-clip-w-junction-0-2.yml",
+    "workflow_blob_sha": "8122b4809de2f660e1e811a3551bbce8c17bc597",
+    "changes": [
+      "Synthetic endpoints widened so all segments are >=10pt without altering the clustering threshold",
+      "Incremented candidate report schema v0.3",
+      "Preserved v0.2 source code and CI failure immutably"
+    ]
+  },
+  "source_and_gates": {
+    "source_revision": "arXiv:0711.0770v1",
+    "source_pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "source_SVG_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "source_96dpi_raster_sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "current_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_192.json",
+    "gate_blob_sha": "deb7b56f5b20e11923aade102fc6f9acb7d1830a",
+    "SSC_revision": "0.96",
+    "L01_S004_source_exact_qualified": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_import": false,
+    "PR_merge_authorized": false
+  },
+  "unchanged_research_question": "Measure source-original SVG clip refs and W-near three-line endpoint distances against same-source raster, without treating geometric contact as physical field action.",
+  "falsifiers": [
+    "Any synthetic preflight failure blocks source interpretation without changing failed history.",
+    "Any mismatch to frozen original PDF or previously pinned SVG/raster hashes fails source replay.",
+    "Unresolved clip paths remain evidence debt rather than silently excluded ink.",
+    "The three source endpoints may cluster numerically but still not form a physical action graph.",
+    "No SSC, G0, W/L bridge, or PR authorization changes."
+  ],
+  "resources": {
+    "source_CI_rounds_requested": 1,
+    "manual_dispatch": false,
+    "external_semantic_model_calls": 0
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "successor_fixture": "agent-assisted correction, first evidence 2026-10-12 CI 38338693014",
+    "recorded_on": "2026-10-12"
+  }
+}

@@ -1,0 +1,51 @@
+name: Experiment 062 L G0 original Fig1 clip and W-junction audit 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l01-svg-clip-w-junction-0-2.yml'
+      - 'research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  frozen-L01-clip-W-raster-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Frozen revision and synthetic controls
+        run: |
+          set -euo pipefail
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py)" = "fbde8648c8e8e222e1036847005c3b84b4513ad5"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py)" = "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json)" = "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json)" = "24163965af4d1e13e75371638fcfd70b793db2ac"
+          test "$(git hash-object experiments/062/L_CURRENT_STAGE_GATE_0_192.json)" = "deb7b56f5b20e11923aade102fc6f9acb7d1830a"
+          python3 -m py_compile research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py
+          python3 research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py --self-test
+          python3 research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py --self-test
+      - name: PDF renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Frozen-original source, clip references, and W candidate raster replay
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          export L01_FROZEN_PDF="$work/L01-v1.pdf"
+          node --input-type=module -e '
+            import {writeFileSync} from "node:fs";
+            import {createHash} from "node:crypto";
+            const r=await fetch("https://arxiv.org/pdf/0711.0770v1",{signal:AbortSignal.timeout(65000)});
+            if(!r.ok)throw Error("SOURCE_HTTP_"+r.status);
+            const bytes=Buffer.from(await r.arrayBuffer());
+            const sha=createHash("sha256").update(bytes).digest("hex");
+            if(bytes.length!==623525||sha!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")
+              throw Error("WRONG_FROZEN_PRIMARY_SOURCE");
+            writeFileSync(process.env.L01_FROZEN_PDF,bytes);
+            console.log(JSON.stringify({source:"frozen-L01-arxiv-v1",SHA256:sha,bytes:bytes.length}));
+          '
+          python3 research/woit-lisi-isomorph/lisi/tools/profile_l01_svg_clip_W_0_3.py \
+            --pdf "$L01_FROZEN_PDF" \
+            --extractor research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py
