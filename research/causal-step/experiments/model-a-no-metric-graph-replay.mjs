@@ -10,6 +10,8 @@
  *        node model-a-no-metric-graph-replay.mjs causal 3000 ./out --limit=9000 --prune=none --edges=30000
  *        node model-a-no-metric-graph-replay.mjs tree 3000 ./out
  *        node model-a-no-metric-graph-replay.mjs causal-local 3000 ./out
+ *        node model-a-no-metric-graph-replay.mjs optional-link 1000 ./out --limit=9000 --prune=none
+ *        node model-a-no-metric-graph-replay.mjs unlinked 1000 ./out --limit=9000 --prune=none
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,7 +20,7 @@ const variant=process.argv[2]||'legacy';
 const horizon=Number(process.argv[3]||3000);
 const folder=path.resolve(process.argv[4]||'./out');
 const options=Object.fromEntries(process.argv.slice(5).map(x=>{const q=/^--([a-z]+)=(.+)$/.exec(x);if(!q)throw Error('Bad option: '+x);return [q[1],q[2]];}));
-if(!['legacy','causal','tree','causal-local'].includes(variant))throw Error('Unsupported variant');
+if(!['legacy','causal','tree','causal-local','optional-link','unlinked'].includes(variant))throw Error('Unsupported variant');
 if(!Number.isSafeInteger(horizon)||horizon<1||horizon>30000)throw Error('Bad horizon');
 const nodeLimit=Number(options.limit||3000),edgeLimit=Number(options.edges||9000);
 if(!Number.isSafeInteger(nodeLimit)||nodeLimit<1||nodeLimit>30000||!Number.isSafeInteger(edgeLimit)||edgeLimit<1||edgeLimit>90000)throw Error('Unsafe limits');
@@ -84,8 +86,10 @@ function grow(){
  const parent=active[word%active.length];
  const births=1+((word>>>7)&3)+(cfg.forceRule30?((word>>>3)&1):0)+(((word>>>13)&15)===0?2:0);
  for(let k=0;k<births;k++){
-  const child=makeNode(parent);makeEdge(parent,child,'unit');
-  if(variant!=='tree'&&active.length>3&&((word>>>(k+17))&3)===0){
+  const independent=variant==='optional-link'||variant==='unlinked';
+  const child=makeNode(independent?null:parent);
+  if(!independent)makeEdge(parent,child,'unit');
+  if(variant!=='tree'&&variant!=='unlinked'&&active.length>3&&((word>>>(k+17))&3)===0){
    const other=variant==='causal-local'?selectLocalOther(parent,active,word):active[(word>>>11)%active.length];
    if(other&&other.id!==parent.id)makeEdge(other,child,'unit');
   }
