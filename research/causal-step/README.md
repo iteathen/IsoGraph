@@ -306,6 +306,20 @@ The researcher raises a specific structural-comparison concern: **an entropy the
 
 **Disposition:** Entropy-observable completeness is a **separate research gate**, not a new physical Causal Step premise or qualified correspondence. No historical simulation or independent Lisi/Woit track modified.
 
+## Entropy-model mechanism-equivalence gate (2026-10-13)
+
+**Researcher criterion:** Choose any entropy model for possible extension by inspecting **its internal variables, relational structure, composition rules, dynamics, and supported interventions**, not merely input/output agreement. Equality of a scalar, formula, or entire entropy-vector cone is not by itself equivalence of the generating systems. This extends the earlier entropy-observable completeness gate and is not a new Causal Step physical premise.
+
+**Verified taxonomy:** Physical subsystem von Neumann entropy and derived topological entanglement entropy belong to the same quantum-state framework, while Hodge spectral entropy substitutes a normalized Laplacian-based matrix for the physical reduced state. Static holographic RT graph cuts agree with selected entropy-vector outcomes but do not recover bulk causal microdynamics. Higher-order hypergraph cuts, stabilizer-state entropy and topological-link cuts differ in their achievable entropy-vector sets. Bianconi's metric-relative-entropy action assumes metric and matter/geometric structure that the primitive model is supposed to explain. Causal-set spacetime entropy requires extra quantum-field correlation data and truncation choices. Quantum process tensors retain multitime response information but are not a primitive graph-rewrite theory.
+
+**Working selection:** For physical quantum entropy, prefer the established quantum-state/operator-algebraic formalism as the external benchmark, while preserving the Causal Step network's own high-order event/causal-rewrite history as the candidate source structure. Use hypergraph cuts and Hodge spectra only as transparent observer-level diagnostics. Defer RT/QES to an independently justified geometric/quantum stage; do not impose Bianconi geometry or a putative entropy force on the primitive layer. No current model is independently established as a complete causal origin.
+
+**Formal test:** Given candidate state translation F and rewrite transitions T_C and T_M, compare output equality separately from internal process preservation `F(T_C(x)) ~ T_M(F(x))`, where ~ is a deliberately specified equivalence. Preserve/reconstruct k-ary incidence, event ancestry and intervention responses, or record precisely which information is lost. Test negative pairs already known to have equal complete boundary-cut vectors but different possible internal rewrites.
+
+**Direct sources:** [Holographic graph cone](https://doi.org/10.1007/JHEP09(2015)130), [hypergraph cut cone](https://arxiv.org/abs/2002.05317), [stabilizer realization](https://doi.org/10.1063/5.0043993), [Hodge spectral entropy](https://doi.org/10.1103/PhysRevE.106.034319), [topological entanglement](https://doi.org/10.1103/PhysRevLett.96.110404), [Bianconi discrete entropy action](https://doi.org/10.1088/1751-8121/ad6f7e), [relative entropy and modular flow](https://doi.org/10.1007/JHEP06(2016)004), [operational quantum processes](https://doi.org/10.1103/PhysRevLett.120.040405).
+
+**No simulation rule change or physical correspondence claim.** [Exact researcher prompt](DISCUSSION_LOG.md).
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
