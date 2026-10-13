@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-original-clip-paint-preflight-first-failure.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "previous_head": "a9d9b6d193ab99f0ecb9b7562f27a1fcd5c3ba1e",
+  "failed_candidate": "experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-4.py",
+  "failed_candidate_git_blob_sha": "50b89059dd7c6d66ea1e1e6c35da1c91eb3c6043",
+  "first_run": {
+    "id": 38364138208,
+    "job_id": 115185099742,
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38364138208",
+    "failed_step": "Exact source and synthetic controls preflight",
+    "failure_message": "SyntaxError: unterminated string literal (detected at line 121)",
+    "source_PDF_downloaded": false,
+    "original_SVG_examined": false,
+    "synthetic_controls_executed": false
+  },
+  "causal_owner": "Generation-time JS string replacement interpreted the $' substring in a Python regex as a JavaScript replacement token and inserted the original source-script suffix into the candidate, truncating the regex. This was a packaging/assembly defect, not a source or mathematics discrepancy.",
+  "repair": "Build a new source successor from the failed candidate, surgically removing the accidentally duplicated original-script suffix and restoring the complete Python regular expression; retain prior .py/.yml/prereg/failed run unchanged.",
+  "successor": {
+    "script_path": "experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-5.py",
+    "git_blob_sha": "eda1e1a861963561373147ef903dec832cf51a0d",
+    "preliminary_structural_checks": {
+      "main_count": 1,
+      "entrypoint_count": 1,
+      "dash_controls_count": 1,
+      "paint_inventory_count": 1
+    },
+    "source_reverification_pending": true
+  },
+  "disposition": {
+    "historical_first_run": "FAILURE_IMMUTABLE",
+    "current_source_semantics": "UNVERIFIED",
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "W_semantics_imported": false
+  }
+}
