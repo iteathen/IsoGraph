@@ -1,0 +1,49 @@
+name: Experiment 062 L G0 L01 original Figure1 source vector replay 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l01-original-figure-source-replay-0-1.yml'
+      - 'experiments/062/tools/replay-l-g0-l01-original-figure-source-0-1.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  frozen-L01-figure-preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Source-replay dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Bounded synthetic preflight and full exact-rational verifier
+        run: |
+          set -euo pipefail
+          python3 -m py_compile \
+            experiments/062/tools/replay-l-g0-l01-original-figure-source-0-1.py \
+            experiments/062/tools/verify-l-g0-l01-svg-region-0-1.py \
+            research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py
+          python3 experiments/062/tools/replay-l-g0-l01-original-figure-source-0-1.py --self-test
+          python3 research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py --self-test
+          python3 experiments/062/tools/verify-l-g0-l01-svg-region-0-1.py
+      - name: Exact frozen original PDF to SVG source diagnostic
+        run: |
+          set -euo pipefail
+          scratch="$(mktemp -d)"
+          trap 'rm -rf "$scratch"' EXIT
+          export L01_SOURCE_DOWNLOAD="$scratch/l01-v1.pdf"
+          node --input-type=module -e '
+            import {writeFileSync} from "node:fs";
+            import {createHash} from "node:crypto";
+            const u="https://arxiv.org/pdf/0711.0770v1";
+            const r=await fetch(u,{signal:AbortSignal.timeout(65000)});
+            if(!r.ok)throw Error("FROZEN_SOURCE_HTTP_"+r.status);
+            const bytes=Buffer.from(await r.arrayBuffer());
+            const hash=createHash("sha256").update(bytes).digest("hex");
+            if(bytes.length!==623525||hash!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")
+              throw Error("FROZEN_PDF_CONTENT_MISMATCH_"+hash);
+            writeFileSync(process.env.L01_SOURCE_DOWNLOAD,bytes);
+            console.log(JSON.stringify({source_binary:"PINNED_SHA256_VERIFIED",sha256:hash,bytes:bytes.length}));
+          '
+          python3 experiments/062/tools/replay-l-g0-l01-original-figure-source-0-1.py --pdf "$L01_SOURCE_DOWNLOAD"
