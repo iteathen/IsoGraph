@@ -35,10 +35,10 @@ research/
 ## Current research areas
 
 - [Emergent reality foundations](emergent-reality-foundations/README.md) — conditional constraints for a pre-spacetime generative origin, foundational entropy-like back-pressure, structural admissibility, and generative–reconstructive asymmetry; exploratory conversation log.
-- [Three roles in effective symbolic presentation](primitive-presentation/README.md) — imported inquiry manuscript and supplements on the dependency requirements of effective formal presentations; archived, not qualified.
+- [Primitive Presentation — incomplete inquiry](primitive-presentation/README.md) — source-preserved historical manuscript, concluded incomplete redraft, critical lower-bound review and minimum-representation sketches; unqualified.
 - [Entropy and indistinguishability](entropy-indistinguishability/README.md) — independent working notes on source/apparent randomness and physically indistinguishable generative histories.
 - [Archived sketches: Minimal Rule / Minimum Representation](minimal-role-reduction-adapter/README.md) — original imported source bundle; the minimum-rule-related sketch belongs with emergent-reality foundations, while the two-track physics-to-SKI sketch belongs with Primitive Presentation / minimum-representation research.
-- [Causal Step](causal-step/README.md) — independent Causal Step research with two provisional premises and executed supplementary Model A dimension/orbital controls.
+- [Causal Step](causal-step/README.md) — exploratory genuinely higher-order causal research, with two provisional premises and executed T1–T4 structural/commutation tests; consolidated continuation branch `research/causal-step`.
 - [Discovery-method research](discovery/README.md) — research notes supporting Discovery Protocol development; current DP authority remains under `extensions/discovery/` and qualification routing.
 - [DTS research](dts/README.md) — development history and implementation research behind the Detailed Transition System.
 - [Glycan cleavage](glycan-cleavage/README.md) — exact phase-algebra, path-coverage, witness-width, and algorithmic research in the frozen biochemical model.
