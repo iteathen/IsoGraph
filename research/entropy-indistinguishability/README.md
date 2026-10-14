@@ -92,7 +92,7 @@ All source bytes are retained without alteration.
 
 ## Critical terminological separation
 
-This project studies **source entropy, appearance, and indistinguishability**. The separate [emergent-reality-foundations discussion](https://github.com/iteathen/IsoGraph/pull/74) (preserved separately in PR #74 pending incorporation into the default branch) uses *entropy* as a hypothesized **prephysical organizing back-pressure**. Neither meaning should silently be substituted for the other; a proposed correspondence between them would require independent demonstration.
+This project studies **source entropy, appearance, and indistinguishability**. The separate [emergent-reality-foundations research dossier](../emergent-reality-foundations/README.md) (now available on the common research branch, without a default-branch merge) uses *entropy* as a hypothesized **prephysical organizing back-pressure**. Neither meaning should silently be substituted for the other; a proposed correspondence between them would require independent demonstration.
 
 ## Provenance and authority
 
