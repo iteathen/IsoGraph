@@ -6,6 +6,12 @@
 **Authority:** exploratory research only; no qualified IsoGraph semantic status  
 **Recorded:** 2026-10-12
 
+## Continuous research branch and consolidation (2026-10-13)
+
+**Single long-lived active branch:** `research/causal-step`. This branch contains all prior Causal Step experimental commits plus the reviewed and integrated foundational archive, Primitive Presentation and entropy research, and emergent-reality foundation records. **These remain separate scientific projects with independent current dossiers and provenance**; a shared Git lineage is not a declaration of scientific equivalence or common physical theory. See the [branch and PR consolidation audit](reviews/2026-10-13-research-branch-consolidation.md), including exact original source hashes, PR review/dispositions and deliberate exclusions.
+
+Older dated `research/causal-step-*` branches remain **historical stage references**, not active parallel heads; new Causal Step work should continue on this stable branch instead of creating a fresh dated branch for each stage. Do not merge this branch into `main` without separate authorization, and do not absorb the independent Woit/Lisi tracks by administrative convenience. Current repository branch/pull request state must still be resynchronized from GitHub at the start of each substantive continuation.
+
 ## Purpose and scope
 
 This directory reserves the research project name **Causal Step**, as requested by Joshua Oshiro.
@@ -76,7 +82,7 @@ In standard relativity, **null paths have zero metric proper-time length**, wher
 
 ## Executed supporting toy model — Model A Dimension Birth
 
-The author's historical **[Supplementary Model A — Dimension Birth](https://github.com/iteathen/IsoGraph/blob/research/import-archived-papers-20261012/research/primitive-presentation/evidence/source/supplementary/model-a-dimension-birth.html)** (original archived under Primitive Presentation, source-import PR #75) has now been **actually executed locally**, not merely read. It is a useful **supporting toy model**, not the Causal Step theory itself and not a theorem. The historical source has been preserved byte-for-byte.
+The author's historical **[Supplementary Model A — Dimension Birth](../primitive-presentation/evidence/source/supplementary/model-a-dimension-birth.html)** (original archived under Primitive Presentation, source-import PR #75) has now been **actually executed locally**, not merely read. It is a useful **supporting toy model**, not the Causal Step theory itself and not a theorem. The historical source has been preserved byte-for-byte.
 
 - [2026-10-12 reproducible computational/visual audit and comparative source test](reviews/2026-10-12-model-a-execution-audit.md) — numerical checkpoints to **2,500** model steps, actual browser renderer screenshots and animation, source review, and a reproducible defect.
 - [Verbatim request and complete attribution of the results](DISCUSSION_LOG.md).
