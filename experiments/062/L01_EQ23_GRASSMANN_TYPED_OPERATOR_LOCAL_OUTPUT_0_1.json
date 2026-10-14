@@ -1,0 +1,101 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.grassmann-even-generator-layer-firewall.v0.1",
+  "stage": "G0",
+  "track": "L",
+  "source_semantic_authority": false,
+  "source_cold_review_complete": false,
+  "claim_scope": "Conditional algebra for source-assisted Eq2.3 coefficient matrices and standard Grassmann parity; not a source-certified physical graded operator",
+  "source_fidelity": "ASSISTED_ORIGINAL_ARXIV_0711_0770v1_NOT_INDEPENDENT_COLD",
+  "formal_assumption": "theta,eta are independent odd Grassmann generators and coefficient matrices represent even Lie generators in a graded associative tensor algebra",
+  "exterior_algebra": {
+    "theta_eta": "+",
+    "eta_theta": "-",
+    "theta_squared": "0",
+    "eta_squared": "0",
+    "theta_eta_is_nonzero": true
+  },
+  "superbracket_even_odd": "[G,theta Q]_s = theta [G,Q] (matrices even)",
+  "superbracket_odd_odd": "[theta Qr,eta Qg]_s = theta eta (QrQg-QgQr) for even Q matrices",
+  "ordinary_commutator_odd_odd": "[theta Qr,eta Qg]_ordinary = theta eta (QrQg+QgQr)",
+  "generated_coefficient_parity": "even degree2",
+  "mismatch": {
+    "superbracket_generated_from_two_independent_odd_coefficients": {
+      "grassmann_component": "theta_eta, even degree 2",
+      "row1_col2": "2",
+      "row5_col6": "-1"
+    },
+    "ordinary_commutator_of_the_odd_Grassmann_matrices": {
+      "grassmann_component": "theta_eta, even degree 2",
+      "row1_col2": "0",
+      "row5_col6": "-1"
+    },
+    "source_anti_b_coefficient_matrix": {
+      "row1_col2": "-1",
+      "row5_col6": "1"
+    },
+    "ordinary_generator_commutator_mismatch_crossproduct": "1",
+    "alternative_matrix_anticommutator_mismatch_crossproduct": "-1"
+  },
+  "source_g2_generator_closure_repaired_by_plain_Grassmann_coefficients": false,
+  "naive_matrix_anticommutator_repairs_source_closure": false,
+  "original_source_operator_unique_qualified": false,
+  "original_source_49cells_cold_qualified": false,
+  "original_Eq1_1_AST_complete": false,
+  "no_inference_of_a_specific_Lie_superalgebra": true,
+  "source_original_and_b2_project_comparison_untouched": true,
+  "G0_frozen": false,
+  "controls_defined": 10,
+  "controls_rejected": 10,
+  "negative_controls": [
+    {
+      "name": "flip_source_qr",
+      "rejected": true,
+      "reason": "PRIOR_LIE_WITNESS_MISMATCH"
+    },
+    {
+      "name": "flip_source_qg",
+      "rejected": true,
+      "reason": "PRIOR_LIE_WITNESS_MISMATCH"
+    },
+    {
+      "name": "flip_source_qbarb",
+      "rejected": true,
+      "reason": "MISCLASSIFIED_SPAN_WITNESS"
+    },
+    {
+      "name": "delete_source_matrix_cell",
+      "rejected": true,
+      "reason": "SOURCE_7x7_REQUIRED"
+    },
+    {
+      "name": "forge_source_cold",
+      "rejected": true,
+      "reason": "FALSE_QUALIFICATION_full_49_cells_source_cold_qualified"
+    },
+    {
+      "name": "forge_source_author_error",
+      "rejected": true,
+      "reason": "FALSE_QUALIFICATION_source_author_error_proven"
+    },
+    {
+      "name": "forge_G1",
+      "rejected": true,
+      "reason": "FALSE_QUALIFICATION_G1_authorized"
+    },
+    {
+      "name": "allow_cross_track",
+      "rejected": true,
+      "reason": "FALSE_QUALIFICATION_W_semantics_imported"
+    },
+    {
+      "name": "alter_revision",
+      "rejected": true,
+      "reason": "SOURCE_REV_CHANGED"
+    },
+    {
+      "name": "reverse_grassmann_eta_theta_sign",
+      "rejected": true,
+      "reason": "ETA_THETA_SIGN"
+    }
+  ]
+}

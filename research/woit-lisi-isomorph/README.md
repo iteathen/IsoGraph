@@ -1,3 +1,7 @@
+## L G0 Eq1.1–2.3 Grassmann coefficient versus even Lie-generator type check (2026-10-13)
+
+The [Lisi source-first typed-operator test](../../experiments/062/L01_EQ11_EQ12_EQ23_GRASSMANN_TYPED_LIE_OPERATOR_DIAGNOSTIC_G0_0_1.json) establishes that, for odd Grassmann field coefficients multiplying even Lie generator matrices, a graded field commutator retains the **ordinary matrix Lie commutator** on those generator matrices. In the unchanged assisted original Eq2.3 fixture, neither this product nor a naive matrix anticommutator restores the two-cell 14D coefficient-span closure. This narrows one potential explanatory shortcut but does **not** settle source BRST typing, original matrix cold fidelity or any author error. [G0 gate0.208](../../experiments/062/L_CURRENT_STAGE_GATE_0_208.json) remains open, W/L isolation intact and PR70 unmerged.
+
 ## L G0 Eq2.3 cited-reference real-form firewall (2026-10-13)
 
 The new [exact auxiliary real-form evidence](../../experiments/062/L01_EQ23_AUX_REALFORM_VS_CACCIATORI_EXACT_G0_0_1.json) establishes that the project integer-rescaled b=1 and hypothetical b=2 models preserve unique indefinite symmetric forms (4 positive, 3 negative), so they cannot be related by *real GL7 similarity* to Cacciatori's explicit compact real skew G2 basis. **This is a comparison of auxiliary real matrix spans, not identification of Lisi's source real form; complex comparison remains open.** [Gate0.207](../../experiments/062/L_CURRENT_STAGE_GATE_0_207.json) retains all source-cold and W/L independence locks.
