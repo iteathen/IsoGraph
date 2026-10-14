@@ -36,6 +36,22 @@ function canonicalUnlabeledHypergraph(edges){
 function enabling(model,mask){return model.some(edge=>(edge&mask)===edge)?1:0}
 function shadow(model){return model.reduce((a,x)=>a|x,0)}
 function incidence(model){return Array.from({length:5},(_,i)=>model.map(e=>(e>>i)&1))}
+function incidenceGraphHomology(model){
+ // A separately DECLARED graph 1-complex of source + typed event vertices.
+ // It is not an inferred simplicial closure of rank-4 multiway events.
+ const parent=Array.from({length:8},(_,i)=>i);
+ const find=i=>parent[i]===i?i:(parent[i]=find(parent[i]));
+ const union=(a,b)=>{const x=find(a),y=find(b);if(x!==y)parent[x]=y;};
+ let links=0;
+ for(let j=0;j<model.length;j++)for(let i=0;i<5;i++)if(model[j]&(1<<i)){
+  union(i,5+j);links++;
+ }
+ check(links===9,'Every rank-4 model has nine source-event graph incidence links');
+ const components=new Set(parent.map((_,i)=>find(i))).size;
+ return {declaredComplex:'bipartite incidence graph, no 2-cells',
+  graphVertices:8,graphIncidenceLinks:links,
+  b0:components,b1:links-8+components,b2:0};
+}
 function gram(model){
  const X=incidence(model);
  return Array.from({length:3},(_,a)=>Array.from({length:3},(_,b)=>X.reduce((s,row)=>s+row[a]*row[b],0)));
@@ -70,6 +86,7 @@ function witness(){
   degrees:[degree(A),degree(B)],allFiveSourceShadow:true,
   incidenceSourceByEvent:[incidence(A),incidence(B)],
   incidenceGrams:[gA,gB],exactCharacteristicPolynomials:[pA,pB],
+  declaredIncidenceGraphHomologies:[incidenceGraphHomology(A),incidenceGraphHomology(B)],
   exactEigenvalueForms:['7, 1, 1','1, 4+sqrt(3), 4-sqrt(3)'],
   interpretation:"Same complete binary source-to-target order; different exact joint-input activation truth tables and different incidence Gram spectra, under fixed named-source intervention semantics. No metric, quantum density matrix or Dirac/Hodge operator inferred."};
 }
@@ -174,6 +191,7 @@ function catalog(){
  const models=combinations.map((e,i)=>({
   id:i,edges:e,shadow:shadow(e),
   gramPolynomial:symmetricPoly(e),isomorphismOrbit:canonicalUnlabeledHypergraph(e),
+  graphHomology:incidenceGraphHomology(e),
   truthVector:Array.from({length:32},(_,m)=>enabling(e,m)).join(''),
   outcomes:Array.from({length:32},(_,m)=>enabling(e,m))
  }));
@@ -233,9 +251,15 @@ function catalog(){
   }
  }
  check(Number.isFinite(best)&&best<=9,'nine triplet tests must suffice under exactly three distinct events');
- const gramShapes=new Map(),orbitShapes=new Map(),gramToOrbits=new Map();
+ const gramShapes=new Map(),orbitShapes=new Map(),gramToOrbits=new Map(),
+ homologyShapes=new Map(),jointSpectralHomologyToOrbits=new Map();
  for(const m of models){
   gramShapes.set(m.gramPolynomial,(gramShapes.get(m.gramPolynomial)||0)+1);
+  const h=m.graphHomology.b0+','+m.graphHomology.b1+','+m.graphHomology.b2;
+  homologyShapes.set(h,(homologyShapes.get(h)||0)+1);
+  const joint=h+'|'+m.gramPolynomial;
+  if(!jointSpectralHomologyToOrbits.has(joint))jointSpectralHomologyToOrbits.set(joint,new Set());
+  jointSpectralHomologyToOrbits.get(joint).add(m.isomorphismOrbit);
   if(!orbitShapes.has(m.isomorphismOrbit))orbitShapes.set(m.isomorphismOrbit,{
     count:0,representativeSourceTriples:m.edges.map(trikey),polynomial:m.gramPolynomial,
     sourceShadowCardinality:popcount(m.shadow)});
@@ -258,6 +282,9 @@ function catalog(){
    proofScope:'exhaustive all 2^15 subsets of the 10 size-3 and 5 size-4 masks; size 0/1/2 always disable, size 5 always enables; exactly three distinct rank-4 occurrences known'},
   numberOfUnlabeledIsomorphismClasses:orbitShapes.size,
   sourceRelabelPermutationsCheckedPerModel:sourceLabelPermutations.length,
+  declaredBipartiteGraphHomologyClasses:homologyShapes.size,
+  declaredBipartiteGraphHomologyHistogram:Object.fromEntries(homologyShapes),
+  gramPolynomialPlusDeclaredHomologySeparatesUnlabeledTypes:[...jointSpectralHomologyToOrbits].every(([,orbits])=>orbits.size===1),
   unlabeledOrbitCensus:[...orbitShapes].map(([canonical,r])=>({canonical,count:r.count,
     representativeSourceTriples:r.representativeSourceTriples,polynomial:r.polynomial,
     sourceShadowCardinality:r.sourceShadowCardinality})),
@@ -281,7 +308,8 @@ function run(){
   'These are directed AND-source / OR-across-edge events, intentionally not the native unordered higher-order bit-mutation generator.',
   'Classical D_KL and total variation on investigator-imposed intervention/output distributions are not quantum relative entropy, spacetime geometry, gravitational dynamics or fundamental entropy back-pressure.',
   'The artificial binary-output flip channel eta is a regularization/control, not intrinsic physical stochasticity; eta=0 deterministic differences yield infinite KL, even though TV is finite.',
-  'The full binary order loses genuine k-ary joint enabling; an incidence Gram operator can distinguish the T3 witness but does not reconstruct all named interventions and does not define an oriented cellular boundary complex.',
+  'The full binary order loses genuine k-ary joint enabling; a static incidence Gram operator can distinguish the T3 witness but does not reconstruct all named interventions or define an oriented cellular boundary complex.',
+  'The deliberately constructed bipartite graph 1-complex has well-defined b0/b1 but imposes no original k-way AND semantics: the T3 witness has identical graph homology despite different event incidence Gram spectra.',
   'Exact full-output recoverability in a predeclared finite hypothesis class is not equal to microscopic-source reconstruction in all causal models.',
   'Fixed labeled input-node interventions are part of operational equivalence; re-label invariance must be specified and checked separately.',
   'Petz recovery and holographic bulk/boundary statements require quantum state/channel or code-subspace assumptions not available in this experiment.'
