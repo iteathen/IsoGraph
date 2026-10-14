@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062.l-g0-l04-original-triality-matrix-transcription-failure.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "date": "2026-10-09",
+  "run": {
+    "workflow_run_id": 38025480834,
+    "workflow_name": "Experiment 062 L G0 L04 original Table3 triality 0.1",
+    "head_sha": "ba8171296cf3d5f3cb871cc05627eecaaf832717",
+    "job_id": 114135316144,
+    "conclusion": "failure",
+    "failed_checks": [
+      "triality t^3=1 exact signed integer matrix",
+      "triality-transported signed permutation C_I",
+      "triality-transported signed permutation P_I",
+      "triality-transported signed permutation T_I"
+    ],
+    "hostile_controls_rejected": 17,
+    "hostile_controls_total": 17,
+    "Table3_printed_cells_verified": 56
+  },
+  "discrepancy_owner": "Candidate packet original-source transcription error, not author proof error, checker logic error or source semantic inconsistency.",
+  "primary_original": {
+    "revision": "arXiv:2407.02497v2",
+    "printed_page": 14,
+    "source_row_number": 1,
+    "source_column_number": 4,
+    "visual_original_sign": "+",
+    "failed_candidate_sign": "-",
+    "correct_source_row_signs": "+-++",
+    "failed_candidate_row_signs": "+-+-",
+    "pdf_url": "https://arxiv.org/pdf/2407.02497v2"
+  },
+  "correction": {
+    "failed_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_TABLE3_TRIALITY_MATRIX_EXACT_G0_0_1.json",
+      "git_blob_sha": "c5e1e4ede1bd5d119a4d7005d98b89782947c000"
+    },
+    "successor_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_TABLE3_TRIALITY_MATRIX_EXACT_G0_0_2.json",
+      "git_blob_sha": "dc7526d811c4130a774663cfb7aa869eece843b2"
+    },
+    "mathematical_witness": "Under corrected four signed rows, integer matrix cube is 8*I; after factor 1/2 the matrix cube is I.",
+    "failure_is_reclassified_success": false
+  },
+  "convergence": {
+    "original_paper_assertion_changed": false,
+    "original_source_census_changed": false,
+    "SSC191_identities_changed": false,
+    "L04_2_source_expression_groups_STILL_need_successor_CI": true,
+    "G0_open": true,
+    "G1_blocked": true
+  },
+  "W_track_mutated": false
+}

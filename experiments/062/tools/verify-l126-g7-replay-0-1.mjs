@@ -1,0 +1,20 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
+const errors=[],check=(x,m)=>{if(!x)errors.push(m);};
+const R=json('experiments/062/L126_G7_REPLAY_0_1.json');
+check(R.status==='L126_TARGETED_REOPEN_CLOSED_CURRENT_METHOD','status');check(R.authority===false&&R.track==='L','authority');
+for(const x of [R.predecessor_g3,R.source_reconstruction]){check(fs.existsSync(x.path),'missing '+x.path);if(fs.existsSync(x.path))check(blob(x.path)===x.git_blob_sha,'pin '+x.path);}
+check(R.source_reconstruction.verification_conclusion==='success','routing not verified');
+const rs=R.results||[];
+check(rs.length===6,'result count');
+check(rs.filter(x=>x.disposition==='CORE_CLOSED').length===4,'core count');
+check(rs.filter(x=>x.disposition==='CLOSED_WITH_CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY').length===2,'provisional count');
+check(rs.every(x=>x.disposition!=='UNEXPANDED_DEMAND'),'open residual');
+for(const id of ['L-SSC-126-R03','L-SSC-126-R04'])check(rs.some(x=>x.occurrence_id===id&&x.disposition==='CLOSED_WITH_CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY'),'action closure '+id);
+check(R.closure_findings?.ordinary_O_expected_failures?.cyclic===2&&R.closure_findings?.ordinary_O_expected_failures?.reverse_composition===28,'O signature');
+check(R.closure_findings?.source_repair_used===false,'repair leak');
+check(R.fixed_point?.global_L_primitive_closure_complete===false,'global overclaim');
+check(R.fixed_point?.source_track_IA_authorized===false,'IA overclaim');
+check(!/W-SSC-|\/woit\//i.test(JSON.stringify(R)),'W leak');
+console.log(JSON.stringify({schema:'isograph.exp062-l126-g7-replay-verifier.v0.1',pass:!errors.length,errors,closed:6,next:R.next_lawful_action?.candidate,external_third_party_verification:'BYPASSED_BY_OWNER_NOT_PASSED'},null,2));if(errors.length)process.exit(1);

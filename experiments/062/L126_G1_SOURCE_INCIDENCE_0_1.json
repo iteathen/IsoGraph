@@ -1,0 +1,201 @@
+{
+  "schema": "isograph.exp062-l126-g1-source-incidence.v0.1",
+  "date": "2026-10-07",
+  "status": "L126_TARGETED_G1_SOURCE_INCIDENCE_COMPLETE_CANDIDATE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "b6590d807162c6236ab96bb21b56ce084ec840db",
+  "audit": {
+    "path": "experiments/062/L126_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1.json",
+    "git_blob_sha": "af0935cb996cfd0b9f567c42fe6c8890545ccb42"
+  },
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_COEFFICIENT_SOURCE_OVERLAY_0_2.isg",
+      "git_blob_sha": "3ba8ca29c34f911fedb800777e5707bf6ab5bf0b"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_CHIRAL_CLIFFORD_ASSERTION_SCHEMA_0_1.isg",
+      "git_blob_sha": "3e8c6d6d25697d0bac9478561308eecb40419493"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/L126_CHIRAL_CLIFFORD_SOURCE_FALSIFIER_0_1.json",
+      "git_blob_sha": "db72ac250d798f217806f9cafbe72ed145dd2b29"
+    }
+  ],
+  "source_provenance": "L05 §2 eqs. (2)-(4)",
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-126-R01",
+      "source_reversible_reference": "L05 §2 coefficient construction / frozen coefficient overlay",
+      "source_span": "for each C,C',H,H',O,O' carrier, the basis multiplication coefficients determine a finite signed Gamma coefficient tensor",
+      "relation_span": "finite coefficient tensor from multiplication table",
+      "argument_spans": [
+        "coefficient carrier",
+        "basis index a",
+        "basis index b",
+        "basis index c",
+        "signed coefficient"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Raw finite source incidence; no generic Clifford semantics are inferred.",
+      "formula_ast": {
+        "op": "FINITE_COEFFICIENT_LOOKUP",
+        "args": [
+          "carrier",
+          "a",
+          "b",
+          "c",
+          "sign"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-126-R02",
+      "source_reversible_reference": "L05 §2 eq. (2)",
+      "source_span": "Gamma_c^b_a = M_ca^(tilde b), with output-index lowering/sign determined by the source metric",
+      "relation_span": "signature-lowered coefficient construction",
+      "argument_spans": [
+        "raw coefficient",
+        "metric sign",
+        "lowered coefficient"
+      ],
+      "logical_force": "EQUALITY_OR_IDENTIFICATION",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-126-R01"
+      ],
+      "load_bearing_note": "Separates raw multiplication coefficient from the source signature-adjusted/lowered coefficient.",
+      "formula_ast": {
+        "op": "SIGNED_COEFFICIENT_LOWERING",
+        "args": [
+          "raw coefficient",
+          "metric sign",
+          "lowered coefficient"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-126-R03",
+      "source_reversible_reference": "L05 §2 chiral matrix construction",
+      "source_span": "the coefficient tensor defines typed chiral vector actions between the two chiral role carriers; the reverse action uses the signature-adjusted conjugate/transpose construction",
+      "relation_span": "typed chiral action",
+      "argument_spans": [
+        "vector carrier",
+        "negative-chiral carrier",
+        "positive-chiral carrier",
+        "forward action",
+        "reverse action"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-126-R02"
+      ],
+      "load_bearing_note": "Action incidence is source-visible; generic bilinear action behavior is not assumed.",
+      "formula_ast": {
+        "op": "TYPED_CHIRAL_ACTION_PAIR",
+        "args": [
+          "v",
+          "m",
+          "p",
+          "forward action",
+          "reverse action"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-126-R04",
+      "source_reversible_reference": "L05 §2 eq. (3)",
+      "source_span": "applying the two opposite chiral actions in succession returns Q(v) times the starting spinor",
+      "relation_span": "chiral Clifford reverse-composition identity",
+      "argument_spans": [
+        "v",
+        "spinor",
+        "forward action",
+        "reverse action",
+        "Q(v) scaling"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-126-R03"
+      ],
+      "load_bearing_note": "This is the source Clifford identity rendered behaviorally rather than by the familiar name.",
+      "formula_ast": {
+        "op": "REVERSE_COMPOSITION_EQUALS_Q_SCALE",
+        "args": [
+          "forward action",
+          "reverse action",
+          "v",
+          "spinor",
+          "Q(v)"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-126-R05",
+      "source_reversible_reference": "L05 §2 eq. (4)",
+      "source_span": "the signature-lowered coefficient tensor obeys the source cyclic coefficient identity under the stated index cycle",
+      "relation_span": "cyclic coefficient identity",
+      "argument_spans": [
+        "carrier",
+        "a",
+        "b",
+        "c",
+        "lowered coefficient under cycle 1",
+        "lowered coefficient under cycle 2"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-126-R02"
+      ],
+      "load_bearing_note": "Exact quantified coefficient equality; no external Clifford definition is imported.",
+      "formula_ast": {
+        "op": "FOR_ALL_BASIS_TRIPLES_EQUALITY",
+        "args": [
+          "carrier",
+          "a",
+          "b",
+          "c",
+          "lowered Gamma(c,a,b)",
+          "lowered Gamma(a,b,c)"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-126-R06",
+      "source_reversible_reference": "L05 ordinary-O discrepancy preservation / project falsifier",
+      "source_span": "the exact ordinary-O source table produces two cyclic-coefficient failures and twenty-eight Clifford-identity failures, while C,C',H,H',O' controls are clean",
+      "relation_span": "source inconsistency guard",
+      "argument_spans": [
+        "ordinary O",
+        "cyclic identity",
+        "Clifford identity",
+        "failure counts"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_PROJECT_EVIDENCE",
+      "depends_on": [
+        "L-SSC-126-R04",
+        "L-SSC-126-R05"
+      ],
+      "load_bearing_note": "Negative evidence is preserved; no source repair is allowed.",
+      "raw_failure_signature": {
+        "cyclic": 2,
+        "clifford": 28
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 6
+  },
+  "next_stage": "TARGETED_G2_NEUTRAL_SUBGRAPH"
+}

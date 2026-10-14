@@ -1,0 +1,169 @@
+{
+  "schema": "isograph.track-L.G0.L04-frozen-original-section2-Weyl-and-spinor-exact-source.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_source": {
+    "id": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "original_pdf_URL": "https://arxiv.org/pdf/2407.02497v2",
+    "SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "pages": 17,
+    "original_source_visual_CI": {
+      "run_id": 38117058546,
+      "job_id": 114403932568,
+      "head_sha": "f3bd6e802a81cdfedfb8474650673cb0bbd5885a",
+      "conclusion": "success",
+      "original_PDF_SHA256_independently_verified": true,
+      "source_rendered_original_pages": [
+        4,
+        5
+      ]
+    },
+    "prior_exact_block_CI": {
+      "run_id": 38116944041,
+      "job_id": 114403591539,
+      "conclusion": "success",
+      "original_source_exact_pdf_blocks": [
+        "L04-P004-B002",
+        "L04-P004-B003",
+        "L04-P004-B005",
+        "L04-P004-B009",
+        "L04-P004-B010",
+        "L04-P005-B001",
+        "L04-P005-B002"
+      ]
+    }
+  },
+  "original_source_block_SHA256": {
+    "L04-P004-B002": {
+      "page_zero_based": 3,
+      "first_line": 3,
+      "last_line": 8,
+      "original_text_block_SHA256": "c25d6a75c5237e68ee035a0197549aa5f557e7d56c86e3d74a40a6c3a78c6f8d"
+    },
+    "L04-P004-B003": {
+      "page_zero_based": 3,
+      "first_line": 10,
+      "last_line": 10,
+      "original_text_block_SHA256": "1cd0f8bf81b512abfbe83a3d026f8df11b2537f5131407dd3dec9203b7a342af"
+    },
+    "L04-P004-B005": {
+      "page_zero_based": 3,
+      "first_line": 15,
+      "last_line": 15,
+      "original_text_block_SHA256": "45e3b0dec86c29b8b1a67ad420a2cf302a10dc2de26a79b78131239cc2de0c18"
+    },
+    "L04-P004-B009": {
+      "page_zero_based": 3,
+      "first_line": 57,
+      "last_line": 59,
+      "original_text_block_SHA256": "2bb0418c6c5e8c5eb989b925b98b023c00a7143b74dc1715917d0f95816f2d22"
+    },
+    "L04-P004-B010": {
+      "page_zero_based": 3,
+      "first_line": 61,
+      "last_line": 61,
+      "original_text_block_SHA256": "521271c6ea7e503fc4cd2adbed33df4259e91a9b959b80b5f96525814e34e105"
+    },
+    "L04-P005-B001": {
+      "page_zero_based": 4,
+      "first_line": 1,
+      "last_line": 6,
+      "original_text_block_SHA256": "12fd5ff98ed1dae207cef2b626b71a151d616cadaf6549b25e7a11d8c4d99cd5"
+    },
+    "L04-P005-B002": {
+      "page_zero_based": 4,
+      "first_line": 8,
+      "last_line": 20,
+      "original_text_block_SHA256": "d047c217a27aba4c7b903f01c47e000b34b4e051ec2ae90739f6b579508a3126"
+    }
+  },
+  "source_claims": [
+    {
+      "original_group": "L04-S008",
+      "original_section": "§2 printed page4",
+      "current_SSC_owner_ID": "L-SSC-098",
+      "source_relation": "ORIGINAL_WEYL_CLIFFORD_AND_LORENTZ_BIVECTOR_GENERATOR_BASIS",
+      "source_formula": [
+        "gamma_0 = sigma_1 tensor sigma_0",
+        "gamma_pi = -i sigma_2 tensor sigma_pi (pi=1,2,3)",
+        "J_pi = (1/4) epsilon_{pi rho sigma} gamma_{rho sigma} = -(i/2) sigma_0 tensor sigma_pi",
+        "K_pi = (1/2) gamma_{0 pi} = (1/2) sigma_3 tensor sigma_pi",
+        "[J_pi,J_rho] = epsilon_{pi rho sigma} J_sigma",
+        "[J_pi,K_rho] = epsilon_{pi rho sigma} K_sigma",
+        "[K_pi,K_rho] = -epsilon_{pi rho sigma} J_sigma"
+      ],
+      "source_carriers": "Complex Weyl 4×4 Cl(1,3) using 2×2 Pauli tensor factors; J rotation, K boost; original author's Lie brackets and epsilon sign conventions are source assertions.",
+      "independent_source_math_theorem_proved": false
+    },
+    {
+      "original_group": "L04-S010",
+      "original_section": "§2 printed pp4–5",
+      "current_SSC_owner_ID": "L-SSC-099",
+      "source_relation": "ORIGINAL_CLIFFORD_BIVECTOR_VECTOR_ACTION_AND_EIGENWEIGHTS",
+      "source_formula": [
+        "B=B_s^pi J_pi + B_t^pi K_pi = (1/2) B^{mu nu} gamma_{mu nu}",
+        "v'=B cross v=(1/2) B^{mu nu} v^rho (gamma_{mu nu} cross gamma_rho) = (1/4) B^{mu nu} v^rho (gamma_mu eta_{nu rho}-gamma_nu eta_{mu rho}) = (1/2) B^{mu nu} v_nu gamma_mu",
+        "J_3=(1/2) gamma_{12}; K_3=(1/2) gamma_{03}",
+        "J_3 cross v_S^{vee/wedge}=(+/- i)v_S; K_3 cross v_S=0; v_S^{vee/wedge}=gamma_1 (-/+) i gamma_2",
+        "J_3 cross v_T^{vee/wedge}=0; K_3 cross v_T^{vee/wedge}=(+/-1)v_T; v_T^{vee/wedge}=gamma_0 (-/+) gamma_3"
+      ],
+      "source_scope": "Author Clifford anticommuting vector presentation; +/- and -/+ are COUPLED ordered alternatives; v_S spatial/spin, v_T temporal/boost carriers distinguished, not a general physics theorem.",
+      "source_math_theorem_proved": false
+    },
+    {
+      "original_group": "L04-S011",
+      "original_section": "§2 printed p5 Eq(2.1)",
+      "current_SSC_owner_ID": "L-SSC-099",
+      "source_relation": "ORIGINAL_EQ2_1_SPINOR_WEIGHT_ACTION_WITH_CHIRAL_COMPONENT_ORDER",
+      "source_formula": [
+        "Psi = Psi^a Q_a; Psi' = B Psi = (1/2) B^{mu nu}(gamma_{mu nu})^b_c Psi^c Q_b",
+        "J_3=-(i/2) sigma_0 tensor sigma_3; K_3=(1/2) sigma_3 tensor sigma_3",
+        "J_3 Psi_L^{vee/wedge}=(+/- i/2)Psi_L; K_3 Psi_L^{vee/wedge}=(-/+ 1/2)Psi_L",
+        "J_3 Psi_R^{vee/wedge}=(+/- i/2)Psi_R; K_3 Psi_R^{vee/wedge}=(+/- 1/2)Psi_R",
+        "Psi_L^wedge=Q_1; Psi_R^wedge=Q_3; Psi_L^vee=Q_2; Psi_R^vee=Q_4"
+      ],
+      "source_pair_sign_coupling": "Upper/lower sign order preserved; left K_3 has opposite source sign pairing from right K_3. Do not mix spinor eigenvectors with vector eigenvectors or Table1 numeric sign rows.",
+      "author_scope": "Spin(1,3) Dirac pinor complex Weyl source basis, not an independent proof of SM generation mapping."
+    }
+  ],
+  "systematic_G0_correction": {
+    "class": "SOURCE_WEYL_GENERATOR_OPERATOR_AND_SIGNED_CHIRAL_BINDER_UNDERINDEXED_IN_PRIOR_SSC_SUMMARY",
+    "why": "Prior L-SSC-098/099 described representation names, J/K roles and Table1 weights; did not reconstruct exact gamma tensor operators, Lorentz bracket sign, vector action coefficients and full original Eq(2.1) Q_1,Q_2,Q_3,Q_4 eigenbasis mappings.",
+    "method": "Use original SHA-pinned PDF VISUAL source pages 4–5 and exact text block digests; capture full source ordered coefficients, coupled signs, representation carriers and binder direction in EXISTING two SSC identities. Conserve unmodified 189 items; no added SI. Keep §2 complex-to-real Cartan root table as separate open L04-S009 obligation.",
+    "no_original_math_accuracy_proof_at_G0": true
+  },
+  "conservation": {
+    "old_L04_source_groups": 53,
+    "changed_old_groups": [
+      "L04-S008",
+      "L04-S010",
+      "L04-S011"
+    ],
+    "unchanged_original_L04_groups": 50,
+    "old_L_SSC_IDs": 191,
+    "SSC_items_changed": [
+      "L-SSC-098",
+      "L-SSC-099"
+    ],
+    "unchanged_complete_SSC_records": 189,
+    "typed_items_added": 0,
+    "old_source_group_exact_G0_pending": 14,
+    "old_source_group_exact_dispositions_repaired": [
+      "L04-S008",
+      "L04-S011"
+    ],
+    "new_source_group_exact_pending_after_scoped_pass": 12
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "source_whole_L04_cold_complete": false,
+    "cross_author_synthesis": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-W-G1-W04a-v03-hostile-physics-authority-inert-property.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "failed_CI": {
+    "run_id": 38164520912,
+    "job_id": 114544183192,
+    "head_sha": "a40fc1732d144515886dabcbea2c58548feb0eda",
+    "result": "FAILURE",
+    "original_cold_read": "PASS",
+    "original_source_hostiles": "6/6",
+    "G1_positive_baseline": "PASS",
+    "hostile_failure": "source physics false authority"
+  },
+  "cause": "Hostile injected nonexistent qualifies_primitive_or_physical_theory instead of modifying actual candidate.physics_or_primitive_qualified, creating an inert extra field and false negative.",
+  "repair": "Successor v0.4 mutates the correct authority field, rejects the obsolete alias outright, and repeats all 28 hostile controls.",
+  "old_failed_result_preserved": true,
+  "current_source_151_SSC_unchanged": true,
+  "G0_current_frozen": true,
+  "Oct03_historical_G0_open": true,
+  "G1_global_closed": false
+}

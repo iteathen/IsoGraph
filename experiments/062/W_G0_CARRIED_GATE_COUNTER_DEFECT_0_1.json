@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-w-g0-carried-stage-counter-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_STALE_DUPLICATED_STAGE_COUNTERS_IN_G0_GATE0_47",
+  "earliest_affected_stage": "G0_PROCEDURAL_STATUS_PROJECTION",
+  "predecessor": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_47.json",
+    "git_blob_sha": "f1b57fc76bc73b9395d6d134f102bc7e572e4ae6"
+  },
+  "existing_coverage": {
+    "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_5.json",
+    "git_blob_sha": "a957e7b79c620e16380af680f1891b31c968d25f",
+    "direct_reviews": 128,
+    "pending": 23
+  },
+  "contradiction": [
+    {
+      "path": "W_CURRENT_STAGE_GATE_0_47.source_conservation.current_direct_existing_source_rows_reviewed",
+      "value": 82,
+      "conflict": "gate0.47 status and source coverage0.5:128"
+    },
+    {
+      "path": "W_CURRENT_STAGE_GATE_0_47.source_conservation.direct_existing_source_reviews_total",
+      "value": 112,
+      "conflict": "coverage0.5:128"
+    },
+    {
+      "path": "W_CURRENT_STAGE_GATE_0_47.source_conservation.still_pending_39",
+      "value": true,
+      "conflict": "coverage0.5 23 pending"
+    },
+    {
+      "path": "W_CURRENT_STAGE_GATE_0_47.source_conservation.source_items_outstanding_cold_source_comparison",
+      "value": 144,
+      "conflict": "coverage0.5 23 remaining existing-item direct comparisons"
+    },
+    {
+      "path": "W_CURRENT_STAGE_GATE_0_47.source_reconstruction",
+      "value": "COPIES_SOURCE_CONSERVATION_STALE_HISTORY",
+      "conflict": "duplicated current-value projection, not versioned historical-only"
+    }
+  ],
+  "cause": "Additive inheritance of progressively superseded counters under current status keys without routing older counters to historical provenance, permitting contradictory current claims.",
+  "repair": "Use fresh explicit W G0 stage-gate0.48 instead of spreading old gate object; pin exact new SSC, direct-review ledger, register and historical-only W86; keep all old artifacts immutable. This does not establish full reverse nine-source assertion enumeration.",
+  "invalidation": {
+    "old_gate_current_counter_claims": "STALE",
+    "source_semantics": "NO_CHANGE_REQUIRED_BY_THIS_COUNTER_DEFECT",
+    "G1_to_G7": "STILL_BLOCKED",
+    "L": "NOT_TOUCHED"
+  },
+  "negative": [
+    "Do not infer 151 direct existing-item audits imply all authored assertion-set coverage",
+    "No byte identity established Oct 3 for mutable source renderings",
+    "Historical W86 not source-complete unresolved corpus",
+    "No old pass used as current authority"
+  ],
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "analysis": "Agent-assisted mechanical counter and provenance crosscheck",
+    "earliest_evidence_currently_located": "2026-10-08 W current G0 gate0.47 vs coverage0.5"
+  }
+}

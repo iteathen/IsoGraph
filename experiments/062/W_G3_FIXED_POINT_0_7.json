@@ -1,0 +1,49 @@
+{
+  "schema": "isograph.exp062-w-g3-fixed-point.v0.7",
+  "date": "2026-10-07",
+  "status": "W_G3_W097_CORRECTED_INPUT_COMPLETE_W_LOCAL_G4_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_7.json",
+    "git_blob_sha": "62e1236d7aa4c7b2814606b1640e35e280b73919"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w-g3-corrected-input-0-7.mjs",
+    "git_blob_sha": "d9a420b295af97cf96552d2204e54a6be6c64487",
+    "workflow_run_id": 37684649110,
+    "conclusion": "success"
+  },
+  "upstream_g2": {
+    "path": "experiments/062/W_G2_FIXED_POINT_0_3.json",
+    "git_blob_sha": "234a6baf1353c945cb12ec3611c3aa764edfb300"
+  },
+  "counts": {
+    "bodies": 84,
+    "occurrences": 445,
+    "CORE_CLOSED": 13,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0,
+    "UNEXPANDED_DEMAND": 432
+  },
+  "review_counts": {
+    "FINAL_CORE_CLOSED": 13,
+    "FINAL_UNEXPANDED_EXTERNAL_DEFINITION": 72,
+    "FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION": 318,
+    "FINAL_UNEXPANDED_EXPLICIT_IN_BODY": 42
+  },
+  "fixed_point": {
+    "W_G3_complete": true,
+    "W_local_G4_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "W_recursive_IA_authorized": false
+  },
+  "nonclaims": [
+    "No schema or QU candidate is asserted at G3.",
+    "No fixed-point-free involution hypothesis is consumed as G3 authority.",
+    "No L evidence is used."
+  ],
+  "next_stage": "W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_W097_CORRECTED_INPUT"
+}

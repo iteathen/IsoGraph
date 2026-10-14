@@ -1,0 +1,79 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-palatini-hodge-mechanical-CI-and-gate-lineage.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "disposition": "SOURCE_LOCAL_MECHANICAL_VERIFIER_PASS_NOT_COLD_G1_QUALIFICATION",
+  "original_source": "Peter Woit arXiv:2104.05099v2 section 3.1",
+  "W_source_current_target": "W_G0_AUTHOR_WEB_REBASELINE_2026_10_11_0_1",
+  "source_candidate": {
+    "path": "experiments/062/W_G1_W01_PALATINI_HODGE_SOURCE_FIRST_CANDIDATES_0_1.json",
+    "git_blob_sha": "cc8cbc9cec1f68855a009d09ece2ccf83e58e66c",
+    "census_ids": [
+      "W-SSC-029",
+      "W-SSC-030"
+    ],
+    "G0_typed_source_assertions": 7,
+    "source_local_G1_occurrence_candidates": 13
+  },
+  "corrected_verifier": {
+    "path": "experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-2.cjs",
+    "git_blob_sha": "2044b37bb9e32f5e1baea8b56e6ef843662d205a"
+  },
+  "exact_successful_CI": {
+    "run_id": 38188685767,
+    "job_id": 114616504452,
+    "head_sha": "d05c3a617819526d8d54cdb67ed96c594ef6f13b",
+    "workflow_name": "Experiment 062 W G1 W01 Palatini Hodge corrected 0.2",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38188685767",
+    "conclusion": "success",
+    "source_local_frozen_input_and_typed_reciprocal": "PASS_2_BODIES_7_TYPED_ASSERTIONS_13_OCCURRENCES",
+    "finite_Euclidean_Hodge_involution": "PASS_6_2FORM_BASIS_ONLY",
+    "corrected_same_author_hostiles": {
+      "rejected": 28,
+      "total": 28
+    },
+    "qualified_G1_39_body_stage_regression": {
+      "pass": true,
+      "adversarial": {
+        "rejected": 28,
+        "total": 28
+      },
+      "previous_qualified_occurrence_candidates": 262
+    },
+    "qualified_G0_151_item_freeze_regression": {
+      "pass": true,
+      "adversarial": {
+        "rejected": 22,
+        "total": 22
+      },
+      "nine_sources": 9,
+      "source_locations": 649,
+      "reciprocal_memberships": 560
+    }
+  },
+  "immutable_historical_failure": {
+    "run_id": 38188527495,
+    "job_id": 114616029319,
+    "head_sha": "38b027280f730c1cf3ca3ce270a5668177efeab3",
+    "conclusion": "failure",
+    "mechanism": "Deletion of load-bearing within-body occurrence dependency vacuously passed known-edge-only validation",
+    "original_verifier_preserved": "experiments/062/tools/verify-w-g1-w01-palatini-hodge-0-1.cjs",
+    "failure_record": "experiments/062/W_G1_W01_PALATINI_HODGE_INITIAL_DEPENDENCY_MUTATION_ESCAPE_0_1.json"
+  },
+  "flags": {
+    "current_author_G0_frozen": true,
+    "old_Oct03_G0_frozen": false,
+    "current_qualified_G1_bodies": 39,
+    "current_unqualified_G1_bodies": 112,
+    "additional_candidate_bodies_not_added_to_qualified_count": 2,
+    "independent_cold_G1_source_reconstruction": false,
+    "global_G1_complete": false,
+    "G2_G7_authorized": false,
+    "IA_NEI_DTS_DP_authorized": false,
+    "source_track_sealed": false,
+    "W_L_semantic_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next": "Only a separate clean/cold auditor blinded to candidate and its expected semantic list can qualify a W029/W030 body-local G1 successor. Continue source-original-first on remaining 112 bodies; do not double count candidate or import other W/L source semantics.",
+  "provenance": "CI assertions were performed by same-candidate-family verifier; passing Actions and hostile mutations are bounded mechanical integrity evidence, not independent original-author truth or complete physical-theory proof."
+}

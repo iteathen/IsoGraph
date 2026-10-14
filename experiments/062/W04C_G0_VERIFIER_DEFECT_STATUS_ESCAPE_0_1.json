@@ -1,0 +1,32 @@
+{
+  "schema": "isograph.exp062-w04c-verifier-defect-status-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "authority": false,
+  "status": "PREPUBLICATION_V8_MUTATION_ESCAPE_PRESERVED_NOT_QUALIFICATION",
+  "positive_source_candidate": {
+    "source_sha": "986489b933e805fd17b305b014e5e18b1e3813bd",
+    "register_sha": "c365969b51c7b76c5750218e3dfcce0b66e85e04",
+    "coverage_sha": "d8b7bdf994aefa98d9aae8c6bfedc23e3eeee778"
+  },
+  "source_evidence": {
+    "audit_sha": "53bd1785921745f7bb50c0d622440b45d028e55b",
+    "defect_sha": "34d48fe663e91ca4dbedb5be21284c8961b21b81"
+  },
+  "first_test": {
+    "positive_baseline": "PASS",
+    "mutations_total": 46,
+    "mutations_rejected": 45,
+    "mutation_escaped": "source defect denied",
+    "qualification_counted_as_pass": false
+  },
+  "cause": "Initial validator checked defect.affected_items and omitted_source_incidences but did not pin defect.status. A mutated defect classification remained unnoticed.",
+  "required_fix": "Require exact confirmed defect status plus predecessor/negative scope and rerun fresh complete positive+adversarial source reconstruction. Do not claim 46/46 until corrected verifier rejects this mutant.",
+  "scope": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "Node_CI_not_run": true,
+    "L_not_modified": true
+  },
+  "no_source_math_changed": true
+}

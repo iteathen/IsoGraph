@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062-w02-ym-hodge-gr-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "LOCAL_V8_POSITIVE_PASS_34_OF_34_ADVERSARIAL_MUTATIONS_REJECTED_CI_PENDING",
+  "semantic_authority": false,
+  "source_predecessor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_13.json",
+    "git_blob_sha": "d63a1a71492cb1ea3f5f5be6dc28d83645f395fc"
+  },
+  "source_successor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_14.json",
+    "git_blob_sha": "2912ed46355a73f3368f428fc2478cc8e5ce4d4e"
+  },
+  "demand_predecessor": {
+    "path": "experiments/062/W_G0_W02_SOURCE_DEMAND_PROJECTION_0_3.json",
+    "git_blob_sha": "ecb6b8a3aa57c0982ca5f79ea2361d7b66a12a26"
+  },
+  "demand_successor": {
+    "path": "experiments/062/W_G0_W02_LATE_SOURCE_DEMAND_PROJECTION_0_4.json",
+    "git_blob_sha": "000f2dd31e66823a1974d3076c9c01bafdb23f9a"
+  },
+  "defect": {
+    "path": "experiments/062/W02_YM_HODGE_GR_SOURCE_CONSERVATION_DEFECT_0_1.json",
+    "git_blob_sha": "e42e6755d967aa18dd85f5efa9ce0f7fbcaf4c6c"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w02-late-source-expressions-0-1.mjs",
+    "git_blob_sha": "40d476c5797eadfaf8ccd8a36e7d1d15bb8ece37"
+  },
+  "input_source": "arXiv:2311.00608v2 W02 §§IV.2-IV.3 printed pp.6–9",
+  "result": {
+    "positive_pass": true,
+    "positive_errors": [],
+    "adversarial_total": 34,
+    "rejected": 34,
+    "escaped": 0,
+    "source_items": 151,
+    "source_items_unchanged": 147,
+    "source_changed": [
+      "W-SSC-118",
+      "W-SSC-144",
+      "W-SSC-146",
+      "W-SSC-149"
+    ],
+    "W_demand_members": 86,
+    "W_demand_other_unchanged": 82,
+    "W131_still_unprojected": true,
+    "L_semantics_used": false
+  },
+  "method": "Internal V8 deterministic replay of same validation/mutation functions against GitHub-created JSON objects. Node and GitHub Actions not run at artifact creation; CI must be independently checked.",
+  "gates": {
+    "source_complete": false,
+    "nine_source_cold_audit_complete": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "external": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "negative_evidence": [
+    "Two Yang-Mills action formulas are source-described equivalent modulo topological invariant, not asserted pointwise equal",
+    "Minkowski Hodge ±i implies no real self-dual/anti-self-dual forms in source",
+    "Chiral gravitational action attributed to cited reference [15]"
+  ],
+  "nonclaims": [
+    "No independent source verification from V8 alone",
+    "No W131 primitive closure",
+    "No source corpus G0 qualification"
+  ]
+}

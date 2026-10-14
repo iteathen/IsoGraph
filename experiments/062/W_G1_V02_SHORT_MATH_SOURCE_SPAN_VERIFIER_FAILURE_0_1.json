@@ -1,0 +1,17 @@
+{
+  "schema": "isograph.exp062-W-G1-verifier-v02-unjustified-short-span-gate.v0.1",
+  "track": "W",
+  "exact_failed_run": {
+    "id": 38147320057,
+    "job_id": 114493301232,
+    "commit_sha": "c63f270a3668eac09323083c0fdc2cba3531517b",
+    "conclusion": "FAILURE",
+    "failed_before_hostile_controls": true
+  },
+  "cause": "Old positive-baseline validator required occurrence.source_span.length >=4, rejecting source literal 'n-2' which is a real source mathematical index. The span's source-body inclusion and exact relational/argument witnesses are the actual validity controls.",
+  "correction": "Source-boundary check now permits any nonempty source literal while still checking exact frozen source body substring, relation, args, source provenance, dependencies, author modality and hostile controls.",
+  "prior_CI_remains_FAILED": true,
+  "current_G0_not_reopened": true,
+  "source_G1_27_occurrences_unmodified": true,
+  "G2_unauthorized": true
+}

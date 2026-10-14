@@ -210,6 +210,49 @@ Keep these distinctions explicit:
 - local factorization-node claim != factorization-space completeness
 - witness equivalence in one frozen claim context != global witness equivalence
 
+## Hypothesis generation, qualification, and authority provenance
+
+A material residual, failed closure, or current-authority fixed point may justify hypothesis generation. It does not justify automatic promotion, and it does not require discovery to stop merely because mechanical derivation has stopped.
+
+When qualified DP 0.10 / EI 0.1 or another applicable discovery path supports further inquiry, agents MAY use judgment, analogy, gap-directed invention, and explicit guess-and-test inside the lawful information boundary.
+
+Keep these states separate:
+
+~~~text
+HYPOTHESIS_CANDIDATE
+    = discovery state
+    = not semantic authority
+
+successful qualification + explicit promotion
+    = exact revision usable as authority
+      within the qualified scope
+
+HYPOTHESIS_QUALIFIED
+    = permitted provenance/qualification label
+    = not a new Core truth value or primitive
+~~~
+
+For a hypothesis-derived promotion:
+
+- preserve that the result originated as a hypothesis;
+- freeze the exact candidate, scope, predicted consequences, controls, falsifiers, and prohibited evidence;
+- distinguish adaptive evidence used to select the candidate from fresh or independently fixed confirmation;
+- preserve failed/rejected predecessors as evidence;
+- route successful candidates through the same reconstruction, scope, authority-routing, and promotion discipline required for their claim class;
+- allow downstream work to rely on the exact promoted revision only within its qualification contract;
+- keep downstream dependency lineage traceable to hypothesis-qualified ancestors;
+- never rewrite a successful tested guess as though it had been directly stated by source authority or deductively forced from earlier authority;
+- if stronger independent derivation later replaces the authority basis, preserve the earlier hypothesis-and-test provenance;
+- if an in-scope counterexample appears, reopen the affected authority under the applicable invalidation rules.
+
+The governing rule is:
+
+> **Qualification grants scoped authority; qualification does not erase provenance.**
+
+Test strength is claim-relative. More independent, adversarial, fresh, and coverage-complete qualification can strengthen the supported authority scope; successful testing never silently establishes more than the qualification contract covered.
+
+A G5/current-authority fixed point therefore means that the present reduction has no further justified candidate. It is not proof of irreducibility and not a prohibition on lawful hypothesis generation.
+
 ## Semantic Identity discipline
 
 - Bare integer IDs are SI handles, not natural/ontological identity certificates.

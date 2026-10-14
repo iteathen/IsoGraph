@@ -1,0 +1,26 @@
+name: "Experiment 062 W G0 W04e S52 corrected source-first 0.2"
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - "experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs"
+      - "experiments/062/W04E_G0_S52_V01_PROSE_LITERAL_BASELINE_CI_FAILURE_0_1.json"
+      - ".github/workflows/experiment-062-w-g0-w04e-s52-source-first-0-2.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w_original_s52:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Preserve prior SSC0.67 qualification on its historical tuple
+        run: |
+          node --check experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-5.cjs
+          node experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-5.cjs
+      - name: Check W source0.68 original S52 and adversarial controls
+        run: |
+          node --check experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs
+          node experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs

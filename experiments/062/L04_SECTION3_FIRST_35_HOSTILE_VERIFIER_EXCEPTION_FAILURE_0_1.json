@@ -1,0 +1,44 @@
+{
+  "schema": "isograph.exp062.L.G0.L04.original-section3-first-hostile-verifier-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "failed_original_CI": {
+    "run_id": 38144694064,
+    "job_id": 114485484259,
+    "head_sha": "981f8f43619cd39f848b5717e686d220a0146d01",
+    "html_url": "https://github.com/iteathen/IsoGraph/actions/runs/38144694064",
+    "conclusion": "failure",
+    "original_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section3-Dirac-0-1.mjs",
+      "git_blob_sha": "4422bb02c0168b0d3c9d1a174f4b3fc1de8c504d"
+    },
+    "failure_at_source_line": 113,
+    "exception_type": "TypeError",
+    "exact_failure": "Cannot read properties of undefined (reading 'id')",
+    "failure_call_site": "check(d,pages) inside 35 hostile mutations: drop_source_group removes one of 53 inventory rows, then unguarded fixed-size loop dereferences cur.id",
+    "baseline_before_mutation": "No reported baseline issues before hostile loop; this is not independently logged as a completed qualification",
+    "number_hostile_controls_qualified": 0,
+    "failed_run_retained_as_failure": true
+  },
+  "source_packet_untouched": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION3_DIRAC_SOLUTIONS_PHASE_G0_0_1.json",
+    "git_blob_sha": "3127823df7c31eca60f097c2a7f97bd5838be354",
+    "frozen_PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "original_source_semantics_changed_for_verifier_fix": false
+  },
+  "remediation": {
+    "failure_class": "VERIFIER_MALFORMED_MUTANT_RUNTIME_EXCEPTION_NOT_FAIL_CLOSED",
+    "contract_violation": "A hostile source row deletion should be reported as a rejected mutation by controlled diagnostic, not abort the entire qualification without results.",
+    "corrected_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section3-Dirac-0-2.mjs",
+      "git_blob_sha": "e1d6b4e82d51725f4e00049055fc89ae23a49bfc"
+    },
+    "method_correction": "Presence-check every expected source original location before dereferencing, reject altered source count before computing bidirectional correspondence, require a clean baseline before mutation scoring; do not count the failed original run as PASS.",
+    "whole_six_original_cold_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

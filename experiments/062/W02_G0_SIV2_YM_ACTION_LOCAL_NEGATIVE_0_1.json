@@ -1,0 +1,105 @@
+{
+  "schema": "isograph.exp062-w02-iv2-local-ym-action-equality-negative.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NONAUTHOR_EXACT_LOCAL_WEDGE_COEFFICIENT_CONTROL_SOURCE_ACTION_EQUIVALENT_NOT_EXACT_EQUAL",
+  "source": {
+    "author": "Peter Woit",
+    "unit": "W02",
+    "arxiv": "2311.00608v2",
+    "section": "IV.2",
+    "pdf_printed_page": 7,
+    "html_lines": [
+      115,
+      122
+    ],
+    "source_first_ledger": "experiments/062/W02_G0_SIV2_HODGE_YM_SOURCE_FIRST_0_1.json",
+    "source_semantic_census_original": "SOURCE_SEMANTIC_CENSUS_0_46.json"
+  },
+  "normalization": {
+    "euclidean_oriented_orthonormal_coframe": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "orientation": "e1234",
+    "Hodge_star_on_relevant_twoforms": {
+      "e12": "e34",
+      "e34": "e12"
+    },
+    "single_commuting_internal_T_trace_square": 1,
+    "gauge_coupling_squared": 1,
+    "field_strength_local": "F=(a e12 + b e34)*T",
+    "curvature_projection": "Fplus=((a+b)/2)*(e12+e34)*T",
+    "scope": "LOCAL_POINTWISE_ALGEBRA_ONLY_NOT_GLOBAL_BUNDLE_SECTOR_OR_TOPOLOGICAL_INVARIANCE"
+  },
+  "source_action_equations": {
+    "S": "(a^2+b^2)/4",
+    "Splus": "(a+b)^2/4",
+    "difference": "a*b/2",
+    "topological_expression": "(1/4)*Tr(F wedge F)=(a*b)/2"
+  },
+  "cases": [
+    {
+      "a": 2,
+      "b": 3,
+      "S": "13/4",
+      "Splus": "25/4",
+      "difference": "3",
+      "topological": "3",
+      "exact_equal": false
+    },
+    {
+      "a": 2,
+      "b": -3,
+      "S": "13/4",
+      "Splus": "1/4",
+      "difference": "-3",
+      "topological": "-3",
+      "exact_equal": false
+    },
+    {
+      "a": 2,
+      "b": 0,
+      "S": "1",
+      "Splus": "1",
+      "difference": "0",
+      "topological": "0",
+      "exact_equal": true
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "S": "2",
+      "Splus": "4",
+      "difference": "2",
+      "topological": "2",
+      "exact_equal": false
+    },
+    {
+      "a": 2,
+      "b": -2,
+      "S": "2",
+      "Splus": "0",
+      "difference": "-2",
+      "topological": "-2",
+      "exact_equal": false
+    }
+  ],
+  "epistemic": {
+    "proves_not": "SOURCE_DISPLAYED_ACTIONS_ARE_IDENTICAL_POINTWISE_FOR_ARBITRARY_CURVATURE",
+    "shows": "S_PLUS_MINUS_S_EQUALS_QUARTER_TOPOLOGICAL_DENSITY_UNDER_THE_LOCAL_NORMALIZATION",
+    "does_not_show": [
+      "UNIVERSAL_GLOBAL_TOPOLOGICAL_INVARIANCE_WITHOUT_FIXED_BUNDLE_AND_BOUNDARY_GUARDS",
+      "INDEPENDENT_YANG_MILLS_FIELD_EQUATIONS",
+      "ALL_GAUGE_DYNAMICS_RIGHT_ONLY",
+      "SOURCE_ORIGINAL_WOIT_PROOF"
+    ],
+    "not_author_source_equation": true,
+    "not_G1_theorem_authority": true,
+    "source_census0_46_not_qualified_as_complete": true,
+    "G0_unfrozen": true
+  }
+}

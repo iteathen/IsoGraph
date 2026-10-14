@@ -1,0 +1,40 @@
+{
+  "schema": "woit.core021-regrounded-ledger-audit.v0.9",
+  "date": "2026-10-05",
+  "status": "PASS_STRUCTURAL_PARTIAL_CLOSURE",
+  "ledger": "CORE021_CLOSURE_LEDGER_0_59.json",
+  "authoritative_native_manifest": "WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_24.json",
+  "authoritative_native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_27.isg",
+  "source_semantic_census": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "counts": {
+    "census": 151,
+    "closed_primitive": 67,
+    "closed_schema": 0,
+    "incomplete_unexpanded": 84,
+    "nodes": 1306,
+    "reachable_authoritative_nodes": 1306
+  },
+  "deterministic_gates": {
+    "coverage": "PASS",
+    "reconstruction_structure": "PASS",
+    "scope_integrity": "PASS",
+    "authority_routing_structure": "PASS",
+    "canonical_hash_recomputation": "PASS",
+    "ia_fixed_point_current": "NOT_ASSERTED_NULL",
+    "strict_closure": "FAIL_EXPECTED_84_INCOMPLETE"
+  },
+  "hashes": {
+    "source_semantic_census_sha256": "014ba3612f18c95d237998241c447f758b8c25e1f543baea1b87e9dd4f18cfc9",
+    "semantic_scope_sha256": "c1d09649c78a763d217c4fe4d1b5285b5ae81b3e4cc2639ee71f3a8a5777443c",
+    "primitive_kernel_sha256": "5bcde417687e915d2056d1b73cd1f4b10265ec730c11ffcb72f514e475ea403e",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "07c7ee97472f8f3afb67ac3ed5e8af8bce8d9020886e607d1ab5fbf6dfe9cdbe",
+    "inference_profile_sha256": "e5139d69424c3b2c63932f26d50e8afd8e0db9b58620b8886879debb9fd59f1b"
+  },
+  "guards": [
+    "structural qualification only",
+    "historical packet-driven closures remain evidence only",
+    "recursive IA/NEI/DTS/DP remain blocked"
+  ]
+}

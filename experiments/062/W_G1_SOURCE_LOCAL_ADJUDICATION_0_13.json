@@ -1,0 +1,190 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.13",
+  "date": "2026-10-06",
+  "status": "RELATION_HEAD_AND_GUARD_CORRECTIONS_SUPPORTED_REAUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/W_EXTRACTION_RECONCILED_0_12.json",
+  "predecessor_adjudication": "experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_12.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "audit_method": "Complete successor review using the frozen 535-head surface locator as a relation-head diagnostic, plus source-local modality/guard adjudication. Reporting/source-status heads and mathematical-name tokens remain diagnostic only.",
+  "corrections": [
+    {
+      "census_id": "W-SSC-027",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "W-SSC-027-O01",
+      "occurrence": {
+        "occurrence_id": "W-SSC-027-O01",
+        "source_span": "W01 represents Spin(4) by independent left/right SU(2)=Sp(1) actions",
+        "relation_span": "represents",
+        "argument_spans": [
+          "Spin(4)",
+          "independent left/right SU(2)=Sp(1) actions"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserve the source predicate as representation rather than serializing only its 'by' complement."
+      }
+    },
+    {
+      "census_id": "W-SSC-031",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-031-O04",
+        "source_span": "For a torsion-free connection W01 states the vacuum Einstein condition as vanishing of a specified mixed/chiral curvature component",
+        "relation_span": "For a torsion-free connection",
+        "argument_spans": [
+          "torsion-free connection",
+          "vacuum Einstein condition as vanishing of a specified mixed/chiral curvature component"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-031-O01"
+        ],
+        "load_bearing_note": "Expose the torsion-free guard that scopes the vacuum-Einstein identification."
+      }
+    },
+    {
+      "census_id": "W-SSC-031",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-031-O05",
+        "source_span": "torsion is allowed",
+        "relation_span": "is allowed",
+        "argument_spans": [
+          "torsion"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-031-O03"
+        ],
+        "load_bearing_note": "Expose the source-written condition governing when the omitted left connection becomes unconstrained."
+      }
+    },
+    {
+      "census_id": "W-SSC-042",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-042-O03",
+        "source_span": "this directly covers anti-self-dual rather than general Yang-Mills fields",
+        "relation_span": "directly covers",
+        "argument_spans": [
+          "this",
+          "anti-self-dual rather than general Yang-Mills fields"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-042-O01",
+          "W-SSC-042-O02"
+        ],
+        "load_bearing_note": "Expose the coverage predicate whose restricted target is already conserved by the rather-than occurrence."
+      }
+    },
+    {
+      "census_id": "W-SSC-084",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-084-O04",
+        "source_span": "underlying Euclidean correlation data are SO(4)-covariant",
+        "relation_span": "are",
+        "argument_spans": [
+          "underlying Euclidean correlation data",
+          "SO(4)-covariant"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-084-O03"
+        ],
+        "load_bearing_note": "Expose the covariance predicate inside the even-when guard."
+      }
+    },
+    {
+      "census_id": "W-SSC-123",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "W-SSC-123-O01",
+      "occurrence": {
+        "occurrence_id": "W-SSC-123-O01",
+        "source_span": "reconstructs the physical one-particle Hilbert space as positive-time test functions modulo the null space of the OS form",
+        "relation_span": "reconstructs",
+        "argument_spans": [
+          "physical one-particle Hilbert space",
+          "positive-time test functions modulo the null space of the OS form"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserve reconstruction as the source operation; the modulo quotient remains separately exposed by O05."
+      }
+    },
+    {
+      "census_id": "W-SSC-129",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "W-SSC-129-O04",
+        "source_span": "complex spacetime acted on by SL(2,C)_L x SL(2,C)_R",
+        "relation_span": "acted on by",
+        "argument_spans": [
+          "complex spacetime",
+          "SL(2,C)_L x SL(2,C)_R"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-129-O01"
+        ],
+        "load_bearing_note": "Expose the action incidence attached to the complex spacetime produced by coordinate complexification."
+      }
+    },
+    {
+      "census_id": "W-SSC-129",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "W-SSC-129-O02",
+      "occurrence": {
+        "occurrence_id": "W-SSC-129-O02",
+        "source_span": "real Lorentz group and Euclidean SU(2)_L x SU(2)_R rotation group occur as distinct real forms",
+        "relation_span": "occur as",
+        "argument_spans": [
+          "real Lorentz group",
+          "Euclidean SU(2)_L x SU(2)_R rotation group",
+          "distinct real forms"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "W-SSC-129-O01"
+        ],
+        "load_bearing_note": "Preserve the source predicate relating the two listed groups to distinct real forms."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 8,
+    "additions": 5,
+    "replacements": 3,
+    "affected_bodies": 6,
+    "predecessor_occurrences": 323,
+    "expected_successor_occurrences": 328
+  },
+  "findings": [
+    "W 0.12 passes exact equality/arrow coverage but is not yet a source-local fixed point.",
+    "The residual defects are predicate-boundary defects, not new mathematical categories: representation, torsion guards, restricted coverage, reconstruction, covariance, group action, and real-form occurrence.",
+    "Surface heads such as 'transform' when used as a noun, source-reporting verbs, and source-status clauses such as 'not adopted dynamics' were deliberately not promoted.",
+    "No textbook definition or cross-track premise was used."
+  ],
+  "next_required_steps": [
+    "Generate W_EXTRACTION_RECONCILED_0_13.json as exact replay of W 0.12 plus this adjudication.",
+    "Run deterministic successor verification.",
+    "Repeat the complete source-local fixed-point audit using literal-law, relation-head, guard/modality, polarity, dependency, and duplicate checks.",
+    "Only after a zero-change pass freeze the W G1 candidate for a fresh independent cold audit.",
+    "Keep joint G2 blocked until both current W and L inputs independently reach structurally valid zero-correction cold audits."
+  ],
+  "fixed_point_claim": false,
+  "independent_cold_audit_required": true,
+  "g2_authorized": false,
+  "authority": false
+}

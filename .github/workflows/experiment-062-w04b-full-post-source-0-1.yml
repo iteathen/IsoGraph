@@ -1,0 +1,27 @@
+name: Experiment 062 W04b full live article reverse source 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_23.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_9.json'
+      - 'experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_8.json'
+      - 'experiments/062/W_G0_W04B_SOURCE_DEMAND_PROJECTION_0_11.json'
+      - 'experiments/062/W04B_G0_FULL_AUTHOR_POST_REVERSE_AUDIT_0_1.json'
+      - 'experiments/062/W04B_G0_SOURCE_REVERSE_OMISSION_DEFECT_0_1.json'
+      - 'experiments/062/W04B_G0_VERIFIER_SOURCE_ID_FILTER_BASELINE_DEFECT_0_1.json'
+      - 'experiments/062/tools/verify-w04b-full-article-reverse-source-0-2.mjs'
+      - 'experiments/062/W04B_G0_FULL_LIVE_POST_REVERSE_LOCAL_REPLAY_0_1.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_50.json'
+      - '.github/workflows/experiment-062-w04b-full-post-source-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w04a-full-post-reverse-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w04b-full-article-reverse-source-0-2.mjs

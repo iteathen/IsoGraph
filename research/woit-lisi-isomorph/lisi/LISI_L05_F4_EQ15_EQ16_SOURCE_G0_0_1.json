@@ -1,0 +1,241 @@
+{
+  "schema": "isograph.lisi-l05-f4-eq15-eq16-g0-source.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "SOURCE_EQ15_EQ16_AND_SPLIT_SIGN_SUBSCOPE_TRANSCRIBED_NOT_FULL_SECTION4_3",
+  "authority": false,
+  "source_census_frozen": false,
+  "source_claims_are_qualified_theorems": false,
+  "source_complete": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L05",
+    "author": "A. Garrett Lisi",
+    "title": "Division Algebras, Triality, and Exceptional Magic",
+    "revision": "published version of record 2026-08-29",
+    "doi": "10.1007/s00006-026-01447-5",
+    "pdf": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "section": "4.3",
+    "printed_pages": [
+      17,
+      18
+    ],
+    "pdf_pages_zero_based": [
+      16,
+      17
+    ],
+    "equations": [
+      "15",
+      "16"
+    ],
+    "scope_note": "First two source pages of §4.3 only; Eq17 and rest of §4.3 not audited in this packet."
+  },
+  "eq15": {
+    "id": "L4-F4-EQ15",
+    "sum": "A(B,v,psi,chi)=B^{ab}*gamma_ab/2+v^a*gamma_a+psi^a*Qminus_a+chi^a*Qplus_a",
+    "matrix": [
+      [
+        "B_M",
+        "-tilde(v)",
+        "psi"
+      ],
+      [
+        "v",
+        "B_P",
+        "-tilde(chi)"
+      ],
+      [
+        "-tilde(psi)",
+        "chi",
+        "B_V"
+      ]
+    ],
+    "printed_relation": "tilde-element-of su(3,O) ~ f4",
+    "relation_modality": "INSPIRATION_APPROXIMATE_COMPOSITIONAL_REALIZATION_NOT_LITERAL_LIE_MATRIX_MEMBERSHIP",
+    "source_nonassociativity": "cannot directly identify with su(3,O) because octonion multiplication is nonassociative",
+    "source_composition_order": "octonions multiply to their right before being multiplied by octonions from their left",
+    "diagonal_roles": [
+      "B_M",
+      "B_P",
+      "B_V"
+    ],
+    "one_to_one_source_matrix_theorem": false,
+    "source_clifford_realization": "Cl(0,8) vector, bivector, chiral-spinor maps constructed compositionally; Γ index formulas refer back to uncompleted L05 §2 Eq(2)/Eq(5)",
+    "guards": [
+      "do not replace bi-product operators by single octonions",
+      "preserve A as a source-described representative operator; no associative 3x3 octonion matrix algebra",
+      "independent vector, negative-spinor and positive-spinor carriers"
+    ]
+  },
+  "indices": {
+    "octonion_basis": "a,b,c,d range 0..7",
+    "bivectors": "gamma_ab=-gamma_ba, 28 representatives a<b, SOURCE_ASSERTED_INDEX_IDENTITY_CONFLICT_AUDIT_OPEN",
+    "repeated_indices": "sums on repeated upper/lower indices as source printed; no undocumented transpose/commutation of Gamma",
+    "ordinary_metric": "n_ab=delta_ab",
+    "split_metric": "nprime_ab=diag(++++----)",
+    "spinor_metrics": "nprime_minus=nprime_plus=nprime, source asserted from gamma0 gamma1 gamma2 gamma3",
+    "mp_token": "MP means printed \\mp, NOT minus times plus, alternatives are explicit source sign branches"
+  },
+  "eq16": {
+    "id": "L4-F4-EQ16",
+    "printed_modality": "SU3_O_INSPIRED_F4_SOURCE_ASSERTED_BRACKETS",
+    "number_of_rows": 10,
+    "brackets": [
+      {
+        "id": "L4-F4-EQ16-01",
+        "lhs": "[gamma_ab,gamma_cd]",
+        "rhs": "2*(n_ac*gamma_bd-n_ad*gamma_bc-n_bc*gamma_ad+n_bd*gamma_ac)",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-02",
+        "lhs": "[gamma_ab,gamma_c]",
+        "rhs": "2*(-n_bc*gamma_a+n_ac*gamma_b)",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-03",
+        "lhs": "[gamma_a,gamma_b]",
+        "rhs": "2*gamma_ab",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-04",
+        "lhs": "[gamma_ab,Qminus_c]",
+        "rhs": "Qminus_d*(-barGamma_a*Gamma_b)^d_c",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-05",
+        "lhs": "[gamma_c,Qminus_a]",
+        "rhs": "Qplus_b*(Gamma_c)^b_a",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-06",
+        "lhs": "[gamma_ab,Qplus_c]",
+        "rhs": "Qplus_d*(-Gamma_a*barGamma_b)^d_c",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-07",
+        "lhs": "[gamma_c,Qplus_b]",
+        "rhs": "Qminus_a*(-barGamma_c)^a_b",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-08",
+        "lhs": "[Qminus_a,Qminus_b]",
+        "rhs": "gamma_cd*(MP_barGamma^c*Gamma^d)_ab",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-09",
+        "lhs": "[Qminus_a,Qplus_b]",
+        "rhs": "gamma_c*(MP_barGamma^c)_ab",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      },
+      {
+        "id": "L4-F4-EQ16-10",
+        "lhs": "[Qplus_a,Qplus_b]",
+        "rhs": "gamma_cd*(MP_Gamma^c*barGamma^d)_ab",
+        "source": "§4.3 Eq.(16)",
+        "operand_order": "PRESERVE_EXACT",
+        "index_binders": "SOURCE_PRINTED",
+        "sign_modal": "ROWS_08_TO_10_HAVE_PRINTED_MP_SIGN"
+      }
+    ],
+    "ordinary_real_form_signs": [
+      {
+        "form": "f4(-52)",
+        "carrier": "ordinary O",
+        "mp_selection": "MINUS",
+        "source_modality": "COMPACT_REAL_FORM"
+      },
+      {
+        "form": "f4(-20)",
+        "carrier": "ordinary O",
+        "mp_selection": "PLUS",
+        "source_modality": "OTHER_REAL_FORM_NOT_IDENTICAL_TO_SPLIT"
+      }
+    ],
+    "split_real_form": {
+      "form": "f4(4)",
+      "carrier": "split Oprime",
+      "metric": "diag(++++----)",
+      "source_clifford": "Cl(4,4)",
+      "sign_changes_count": 3,
+      "brackets": [
+        {
+          "id": "L4-F4-SPLIT-01",
+          "lhs": "[Qminus_a,Qplus_b]",
+          "rhs": "gamma_c*(-barGamma^c)_ab",
+          "source": "§4.3 split f4(4) three explicit changed sign rows",
+          "operand_order": "PRESERVE_EXACT"
+        },
+        {
+          "id": "L4-F4-SPLIT-02",
+          "lhs": "[Qminus_a,Qminus_b]",
+          "rhs": "gamma_cd*(+barGamma^c*Gamma^d)_ab",
+          "source": "§4.3 split f4(4) three explicit changed sign rows",
+          "operand_order": "PRESERVE_EXACT"
+        },
+        {
+          "id": "L4-F4-SPLIT-03",
+          "lhs": "[Qplus_a,Qplus_b]",
+          "rhs": "gamma_cd*(+Gamma^c*barGamma^d)_ab",
+          "source": "§4.3 split f4(4) three explicit changed sign rows",
+          "operand_order": "PRESERVE_EXACT"
+        }
+      ],
+      "warning": "split f4(4) sign table is not interchangeable with ordinary f4(-20) even if some minus/plus source branches coincide"
+    },
+    "canonical_triality_condition": "source claims canonical triality automorphism requires vector, Qminus and Qplus metrics to be equal and match Killing form"
+  },
+  "preserved_source_negative_evidence": {
+    "octonion_table_source_conflict": "Printed Eq(1) ordinary O has both e6*e7=-e2 and e7*e6=-e2; source Eq(5) reverse-index/antiinvolution claims have explicit counterexamples. This source packet does not repair the table.",
+    "general_clifford_indices_unclosed": true,
+    "no_octonion_naive_matrix_commutator": true,
+    "no_premature_G3_CORE_CLOSED": true,
+    "no_cross_track_semantics": true,
+    "no_third_party_semantic_review_passed": true
+  },
+  "open_scope": [
+    "§4.3 remaining Eq.(17), diagonal B_M/B_P/B_V triality, reflection actions, later source equations and root/spinor phases",
+    "F4 three real-form native representation and operator-domain primitive reduction",
+    "full L05 §4 and all L01-L06 assertion census",
+    "L05 §2 Eq(5) exact Γ/M-index syntax and O source inconsistencies"
+  ],
+  "invalidation_dependency": "Current L G0 SSC0.11 did not yet incorporate this new Eq15/16 source packet; a new one-item L133 SSC successor is necessary before any further stage replay.",
+  "parent_current_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_11.json",
+  "parent_source_census": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_11.json"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "isograph.exp062-w097-source-and-151-membership-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_DETERMINISTIC_V8_31_OF_31_SOURCE_MEMBER_MUTATIONS_REJECTED_AND_FINITE_MAP_5_OF_5_CONTROLS_REJECTED",
+  "inputs": {
+    "source_predecessor": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_14.json",
+      "git_blob_sha": "2912ed46355a73f3368f428fc2478cc8e5ce4d4e"
+    },
+    "source_successor": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_15.json",
+      "git_blob_sha": "4a39e2d36465519a91731d193128dbd4b0720192"
+    },
+    "demand_predecessor": {
+      "path": "experiments/062/W_G0_W02_LATE_SOURCE_DEMAND_PROJECTION_0_4.json",
+      "git_blob_sha": "000f2dd31e66823a1974d3076c9c01bafdb23f9a"
+    },
+    "demand_successor": {
+      "path": "experiments/062/W_G0_W097_SOURCE_DEMAND_PROJECTION_0_5.json",
+      "git_blob_sha": "2f45b3c137b7de051e36c2e20d8bf95b647eb110"
+    },
+    "historical_core_ledger": {
+      "path": "research/woit-lisi-isomorph/woit/CORE021_CLOSURE_LEDGER_0_19.json",
+      "git_blob_sha": "cb0563a66fc6af881efcb66b04faa78631405ea4"
+    },
+    "member_register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_1.json",
+      "git_blob_sha": "ef5ed068a8241479b5db60814a369b2796f568e4"
+    },
+    "source_oracle": {
+      "path": "experiments/062/W05_W097_PRIMARY_SOURCE_TYPED_INCIDENCE_ORACLE_0_1.json",
+      "git_blob_sha": "3a448c9e762578e6ce6796123155f3ca3c2b5032"
+    },
+    "member_defect": {
+      "path": "experiments/062/W_G0_ALL_151_DEMAND_MEMBERSHIP_DEFECT_0_1.json",
+      "git_blob_sha": "bd8daeb03a44da8c0a778b7265c06d10a7c49885"
+    },
+    "verifier_defect": {
+      "path": "experiments/062/W097_G0_REGISTER_VERIFIER_MISSING_MEMBER_DEFECT_0_1.json",
+      "git_blob_sha": "d7a65d5134934c07ef38b6ca7fc09aa026548925"
+    },
+    "source_verifier": {
+      "path": "experiments/062/tools/verify-w-g0-w097-151-member-0-1.mjs",
+      "git_blob_sha": "af6f86da7f5973fe9873105b5797621997993e2c"
+    },
+    "arithmetic_verifier": {
+      "path": "experiments/062/tools/verify-w097-projective-coordinate-source-0-1.mjs",
+      "git_blob_sha": "4b6352ecf2ea2fe6ad5405f173b5a29afdea7a56"
+    }
+  },
+  "source_reconstruction": {
+    "source_items": 151,
+    "unchanged_other_source_items": 150,
+    "changed": "W-SSC-097",
+    "W_only_historical_members": 86,
+    "unchanged_other_historical_W_demands": 85,
+    "all_item_register_rows": 151,
+    "old_omitted_marked_incomplete": 52,
+    "old_included_marked_closed_schema": 8,
+    "old_excluded_closed_schema": 4,
+    "old_excluded_closed_primitive": 9
+  },
+  "tests": {
+    "W097_G0_and_register_mutations_total": 31,
+    "rejected": 31,
+    "escaped": 0,
+    "finite_nonzero_complex_vectors": 80,
+    "finite_antilinear_cases": 320,
+    "finite_wrong_map_controls_total": 5,
+    "rejected_wrong_map_controls": 5,
+    "old_verifier_missing_member_exception_preserved": true
+  },
+  "verification_qualification": {
+    "local": "PASS_V8_NO_NODE",
+    "Node": "NOT_RUN_AT_RECORD_CREATION",
+    "GitHub_Actions": "PENDING_COMMIT_TRIGGER",
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "all_nine_source_audit_complete": false,
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false
+  },
+  "source_identity": "arXiv 2202.02657v2 visually matched on pages 2-3 with author PDF; byte identity unverified",
+  "nonclaims": [
+    "No universal CP1 identity proof by finite tests",
+    "No direct G7 closure",
+    "All-151-member conservation register is not completed primitive/semantic demand adjudication",
+    "No W/L cross-track use"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062-l032-l033-ssc024-source-verifier-schema-baseline-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_SSC024_CHECKER_BASELINE_SIX_FIELD_NAME_MISMATCHES_NO_MUTATIONS_EVALUATED",
+  "run": {
+    "id": 37885659932,
+    "head_sha": "34787b03ea4fff2a7f524712ef2d8376fac1bc41",
+    "conclusion": "failure",
+    "source_verifier_step": "SUCCESS (all original D4 printed Table5/T3 rows; 31 source mutants rejected)",
+    "ssc_verifier_step": "FAIL baseline",
+    "ssc_adversarial_defined": 20,
+    "ssc_adversarial_tested": 0,
+    "reported_errors": [
+      "source nonclaim and proof context source 8Splus",
+      "exact four Cartan axes and correlation",
+      "limited L032 source scope",
+      "failed L032 nonclaim fixture retained",
+      "G0 truly incomplete and unqualified",
+      "scoped source success L032_Table5_boson_root_24_spinor8Splus_8_G0_verified"
+    ]
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l032-l033-ssc-source-0-24.mjs",
+    "git_blob_sha": "82ed9e8d79a8e9adaa71262f94167892d40d4185"
+  },
+  "ssc_before": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_24.json",
+    "git_blob_sha": "64bd7cb56bdf57844481a51e58e9c154866a66e0"
+  },
+  "causal_mapping": [
+    {
+      "checker": "source 8Splus",
+      "artifact": "8Splus SPINOR",
+      "resolution": "check role, not arbitrary word pair; preserve all typed source rows"
+    },
+    {
+      "checker": "source_Cartan_columns",
+      "artifact": "header",
+      "resolution": "compare ordered actual header to pinned Table5 header"
+    },
+    {
+      "checker": "finite_scope.bosonic_root_instances / spinor_weight_instances",
+      "artifact": "finite_scope.D4_boson_roots / spinor8Splus_weights",
+      "resolution": "check exact counts 24 and 8 with recorded source-role fields"
+    },
+    {
+      "checker": "historical_failed_baseline.mutation_tests_run",
+      "artifact": "historical_failed_baseline.mutation_tests_executed",
+      "resolution": "require 0; preserve failed source verifier baseline"
+    },
+    {
+      "checker": "revision.source_L01_complete / source_L01_L06_complete",
+      "artifact": "revision.entire_L01_source_complete / entire_L01_L06_source_complete",
+      "resolution": "require both false; no G1 promotion"
+    },
+    {
+      "checker": "guards.L032_Table5_boson_root_24_spinor8Splus_8_G0_verified",
+      "artifact": "guards.L032_Table5_24_roots_8spinor_source_G0_verified",
+      "resolution": "use actual exact scoped-G0 source pass guard"
+    }
+  ],
+  "repair_policy": "Correct checker field paths to exact authored packet/census contract. Do not alter source rows, printed sign choices, old source records, or CI pass claims. Require passing baseline before any effective mutations.",
+  "full_source_cold_audit_complete": false,
+  "G1_to_G7_authorized": false,
+  "external_semantic_review_passed": false
+}

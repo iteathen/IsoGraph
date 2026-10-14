@@ -1,0 +1,126 @@
+{
+  "schema": "isograph.exp066-module-ia-fixed-point.v0.1",
+  "date": "2026-10-08",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module": "DISJOINT_UNARY_PREDICATES_INTERFACE_0_1",
+  "primitive_id": 221102,
+  "module_ssc": {
+    "path": "experiments/066/MODULE_SSC_0_1.json",
+    "git_blob_sha": "766d2e18b53c170e491c04adbef3ca6d8f0df731"
+  },
+  "inference_profile": {
+    "id": "disjoint-unary-predicates-conjunct-profile-0.1",
+    "scope": "Only direct consequences of DUP-A01..A03 under qualified Core logic/equality. No source-domain theorem library.",
+    "rules": [
+      {
+        "id": "DUP-IA-R1",
+        "premises": [
+          "DUP-A01"
+        ],
+        "consequence": "Every realized A-member is in U."
+      },
+      {
+        "id": "DUP-IA-R2",
+        "premises": [
+          "DUP-A02"
+        ],
+        "consequence": "Every realized B-member is in U."
+      },
+      {
+        "id": "DUP-IA-R3",
+        "premises": [
+          "DUP-A03"
+        ],
+        "consequence": "No represented element is simultaneously an A-member and B-member."
+      }
+    ],
+    "prohibited_inferences": [
+      "nonemptiness",
+      "A union B equals U",
+      "A is complement of B",
+      "B is complement of A",
+      "A subset of not-B as a named set object",
+      "projective/conic/real-form/conjugation interpretation"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "DUP-A01",
+        "DUP-A02",
+        "DUP-A03"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "DUP-IA-001",
+          "premises": [
+            "DUP-A01"
+          ],
+          "consequence": "Realized A-members are U-typed."
+        },
+        {
+          "id": "DUP-IA-002",
+          "premises": [
+            "DUP-A02"
+          ],
+          "consequence": "Realized B-members are U-typed."
+        },
+        {
+          "id": "DUP-IA-003",
+          "premises": [
+            "DUP-A03"
+          ],
+          "consequence": "A/B overlap is excluded on represented elements."
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying the three direct projections yields no new assertion and cannot derive nonemptiness, complementarity, or exhaustiveness."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "DUP-IA-X01",
+      "claim": "U is nonempty.",
+      "reason": "No existence axiom."
+    },
+    {
+      "id": "DUP-IA-X02",
+      "claim": "Every U-element is in A or B.",
+      "reason": "No exhaustiveness axiom."
+    },
+    {
+      "id": "DUP-IA-X03",
+      "claim": "A is exactly the complement of B.",
+      "reason": "Disjointness is weaker than complementarity."
+    },
+    {
+      "id": "DUP-IA-X04",
+      "claim": "B is exactly the complement of A.",
+      "reason": "Disjointness is weaker than complementarity."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 3,
+    "rejected_overreach_assertions": 4,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "downstream": {
+    "nei_authorized": false,
+    "dts_authorized": false,
+    "dp_authorized": false,
+    "reason": "No downstream module is required for this first-order schema."
+  }
+}

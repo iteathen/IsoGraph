@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062-w-g0-all-nine-source-verifier-v01-failed-baseline-and-v02-correction.v0.1",
+  "track": "W",
+  "historical_run": {
+    "run_id": 38121919671,
+    "job_id": 114418220463,
+    "commit_sha": "28f47dbd30a13cb3412ab488e4734aff9186e75d",
+    "result": "FAILURE",
+    "positive_baseline_passed": false,
+    "hostile_controls_executed": false
+  },
+  "failure_class": "VERIFIER_POSITIVE_ORACLE_CONTRADICTION",
+  "cause": "Verifier v0.1 simultaneously asserted m.no_W_L_synthesis === false and === true. The actual W-only source inventory correctly declares true; erroneous false requirement rejected the positive baseline before hostile tests.",
+  "verified_correction": "v0.2 deletes false contradictory demand and keeps m.no_W_L_synthesis === true; source inventory and SSC unchanged.",
+  "historical_reclassification": "PROHIBITED",
+  "old_run_preserved": true,
+  "old_original_2026_10_03_status": "OPEN",
+  "new_current_source_target": "PENDING_REPLACEMENT_CI",
+  "no_cross_track_semantics_used": true,
+  "source_research_omission_established_by_failure": false
+}

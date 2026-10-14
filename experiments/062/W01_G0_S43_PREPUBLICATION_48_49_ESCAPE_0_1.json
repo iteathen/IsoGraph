@@ -1,0 +1,19 @@
+{
+  "schema": "isograph.exp062-w01-s43-prepublication-hostile-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "scope": "W01 §4.3 15 typed source incidences source0.51",
+  "positive_baseline": "PASS",
+  "hostile_total": 49,
+  "hostile_rejected": 48,
+  "hostile_escaped": 1,
+  "hostile_crashed": 0,
+  "escaped_mutation": "coverage W01 typed count mutated without detection",
+  "source_historical_hashes_preserved": true,
+  "defect": "Verifier checked coverage total and 151-row source/register relationships but not by_unit.W01.source_expression_statements; mutation of only this aggregate count escaped.",
+  "corrective_requirement": "Independently validate coverage.by_unit.W01.source_expression_statements===159 and inventory per-unit W01 count and rerun both positive baseline and all hostile controls.",
+  "scope_qualified": false,
+  "NodeCI": "NOT_RUN",
+  "G0_frozen": false
+}

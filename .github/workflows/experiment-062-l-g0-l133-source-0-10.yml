@@ -1,0 +1,19 @@
+name: Experiment 062 L G0 L133 exact source 0.10
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_10.json'
+      - 'experiments/062/tools/verify-l-g0-l133-ssc-source-0-10.mjs'
+      - '.github/workflows/experiment-062-l-g0-l133-source-0-10.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-l-g0-l05-section4-matrix-source-0-1.mjs
+      - run: node experiments/062/tools/verify-l-g0-l133-ssc-source-0-10.mjs

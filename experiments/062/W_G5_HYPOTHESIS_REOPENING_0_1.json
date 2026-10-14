@@ -1,0 +1,53 @@
+{
+  "schema": "isograph.exp062-w-g5-hypothesis-reopening.v0.1",
+  "date": "2026-10-07",
+  "status": "W_G5_BOUNDARY_REOPENED_BY_USER_DIRECTED_GUESS_AND_TEST_G6_CANDIDATE_PENDING",
+  "authority_effect": "PROCEDURAL_RESEARCH_ROUTING_ONLY",
+  "track": "W",
+  "supersedes_for_routing_only": {
+    "path": "experiments/062/W_G5_FIXED_POINT_0_1.json",
+    "preserved_status": "W_LOCAL_G5_COMPLETE_CURRENT_AUTHORITY_BOUNDARY",
+    "note": "The prior fixed point remains valid for the no-guess current-authority pass. It is not rewritten."
+  },
+  "user_direction": "Guess and test at the W current-authority boundary.",
+  "hypothesis": {
+    "path": "experiments/062/W_G5_HYPOTHESIS_VARIATIONAL_STATIONARITY_0_1.json",
+    "verifier": "experiments/062/tools/verify-w-g5-hypothesis-variational-stationarity-0-1.mjs",
+    "workflow_run_id": 37588320556,
+    "result": "SURVIVES_W_LOCAL_FALSIFICATION_PENDING_G6_INDEPENDENT_QUALIFICATION",
+    "covered_classes": [
+      "W-G4-Q0023",
+      "W-G4-Q0351"
+    ],
+    "positive_occurrences": [
+      "W-SSC-029-O03",
+      "W-SSC-029-O04",
+      "W-SSC-149-O02",
+      "W-SSC-149-O03"
+    ],
+    "adversarial_negative_count": 5
+  },
+  "rediscovered_existing_candidate": {
+    "primitive_id": 211000,
+    "path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIVARIATE_ACTION_VARIATION_SCHEMA_0_1.md",
+    "status": "RESEARCH_LOCAL_UNQUALIFIED",
+    "experiment_063": "experiments/063/QUALIFICATION_PLAN_0_1.md"
+  },
+  "current_gate": {
+    "W_local_G5_complete": true,
+    "G6_candidate_exists": true,
+    "G6_deterministic_preflight_pass": true,
+    "G6_cold_semantic_complete": false,
+    "candidate_qualified": false,
+    "W_may_consume_candidate": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_IA_authorized": false
+  },
+  "boundary": {
+    "kind": "G6_EXTERNAL_QUALIFICATION_PROVIDER_BOUNDARY",
+    "evidence": "experiments/063/PROVIDER_BOUNDARY_0_1.json",
+    "not_before_utc": "2026-10-08T00:00:00Z"
+  },
+  "next_lawful_action": "Resume Experiment 063 at the frozen cold semantic qualification gate when the provider window opens. Only a promoted G6 result may be consumed by W under G7."
+}

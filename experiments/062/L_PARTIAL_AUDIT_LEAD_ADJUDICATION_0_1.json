@@ -1,0 +1,490 @@
+{
+  "artifact": "L_PARTIAL_AUDIT_LEAD_ADJUDICATION_0_1",
+  "status": "SOURCE_LOCAL_PARTIAL_ADJUDICATION_BATCHES_1_TO_3_ONLY",
+  "date": "2026-10-06",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "purpose": "Adjudicate only the validated correction leads from batches 1-3 of Experiment 062 L batched audit run 37502616897. This does not freeze a successor G1 census.",
+  "inputs": {
+    "audit_run": "experiments/062/evidence/run-37502616897-attempt-1/exp062-l-batched-audit",
+    "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_1.json",
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md"
+  },
+  "rules": [
+    "Accept only source-local non-Core semantic operations/relations or load-bearing side conditions.",
+    "Ordinary logical composition and source-status/motivational modality do not create a G1 non-Core occurrence by themselves.",
+    "Every proposed occurrence span is exact and every relation span lies inside its source span.",
+    "No primitive category, candidate basis, cross-track identity, or textbook definition is introduced.",
+    "No successor extraction is frozen until the complete 151-row audit is valid."
+  ],
+  "counts": {
+    "rows_adjudicated": 20,
+    "accepted": 19,
+    "rejected": 1,
+    "proposed_occurrences": 22
+  },
+  "decisions": [
+    {
+      "census_id": "L-SSC-013",
+      "decision": "REJECT_AS_NONCORE_G1_OCCURRENCE",
+      "resolution": "MARK_COMPLETE_CORE_ONLY_NO_NONCORE_OCCURRENCE",
+      "reason": "The body states unresolved/completeness modality. Qualified Core logic can preserve the negated completeness/status statement; no non-Core operation behavior is asserted by this body itself."
+    },
+    {
+      "census_id": "L-SSC-025",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-025-O01",
+          "source_span": "places gauge fields, gravitational spin connection, frame, Higgs multiplet, and Grassmann-valued fermions over a four-dimensional base manifold",
+          "relation_span": "places",
+          "argument_spans": [
+            "gauge fields, gravitational spin connection, frame, Higgs multiplet, and Grassmann-valued fermions",
+            "four-dimensional base manifold"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Structural placement of the listed fields over the stated base manifold."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-026",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-026-O02",
+          "source_span": "fixed coefficients on the spin-connection and frame-Higgs terms",
+          "relation_span": "fixed coefficients on",
+          "argument_spans": [
+            "spin-connection",
+            "frame-Higgs terms"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "L-SSC-026-O01"
+          ],
+          "load_bearing_note": "Load-bearing coefficient constraint on the superconnection terms."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-027",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-027-O02",
+          "source_span": "uses Lie brackets both as algebraic interaction structure and, in selected exceptional embeddings, as the source of subgroup-representation actions",
+          "relation_span": "uses",
+          "argument_spans": [
+            "Lie brackets",
+            "algebraic interaction structure",
+            "selected exceptional embeddings",
+            "subgroup-representation actions"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-027-O01"
+          ],
+          "load_bearing_note": "Dual source role of the bracket beyond its explicit curvature equation."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-028",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-028-O02",
+          "source_span": "root addition corresponds to nonzero Lie brackets and particle interaction incidence",
+          "relation_span": "corresponds to",
+          "argument_spans": [
+            "root addition",
+            "nonzero Lie brackets",
+            "particle interaction incidence"
+          ],
+          "logical_force": "EQUALITY_OR_IDENTIFICATION",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-028-O01"
+          ],
+          "load_bearing_note": "Extends the root-addition correspondence to source particle-interaction incidence."
+        },
+        {
+          "occurrence_id": "L-SSC-028-O03",
+          "source_span": "weight coordinates are interpreted as particle quantum numbers",
+          "relation_span": "interpreted as",
+          "argument_spans": [
+            "weight coordinates",
+            "particle quantum numbers"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Source interpretation of weight coordinates."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-029",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-029-O02",
+          "source_span": "treating quark/anti-quark generators as Lie-algebra root vectors rather than only external representation vectors",
+          "relation_span": "treating",
+          "argument_spans": [
+            "quark/anti-quark generators",
+            "Lie-algebra root vectors",
+            "external representation vectors"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-029-O01"
+          ],
+          "load_bearing_note": "Source role distinction for the embedded generators."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-030",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-030-O02",
+          "source_span": "represents gravitational so(3,1)=Cl^2(3,1) using explicit chiral Clifford matrices",
+          "relation_span": "represents",
+          "argument_spans": [
+            "gravitational so(3,1)=Cl^2(3,1)",
+            "explicit chiral Clifford matrices"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Representation relation for the gravitational carrier."
+        },
+        {
+          "occurrence_id": "L-SSC-030-O03",
+          "source_span": "represents the frame in Cl^1(3,1)",
+          "relation_span": "represents",
+          "argument_spans": [
+            "frame",
+            "Cl^1(3,1)"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Representation relation for the frame."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-031",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-031-O02",
+          "source_span": "represents electroweak structure through a second Clifford/D2 sector",
+          "relation_span": "represents",
+          "argument_spans": [
+            "electroweak structure",
+            "second Clifford/D2 sector"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Representation relation for the electroweak sector."
+        },
+        {
+          "occurrence_id": "L-SSC-031-O03",
+          "source_span": "combines the frame with a Higgs vector",
+          "relation_span": "combines",
+          "argument_spans": [
+            "frame",
+            "Higgs vector"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Combination relation used before the graviweak joining."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-032",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-032-O02",
+          "source_span": "acting chirally on an 8-dimensional positive-chiral spinor carrier",
+          "relation_span": "acting chirally on",
+          "argument_spans": [
+            "8-dimensional positive-chiral spinor carrier"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-032-O01"
+          ],
+          "load_bearing_note": "Action side condition of the explicitly defined graviweak connection."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-033",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-033-O02",
+          "source_span": "tentatively uses the three triality-related 8-dimensional roles for the three fermion generations",
+          "relation_span": "uses",
+          "argument_spans": [
+            "three triality-related 8-dimensional roles",
+            "three fermion generations"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-033-O01"
+          ],
+          "load_bearing_note": "Source assignment of triality-related roles to generations; tentative modality is provenance, not primitive semantics."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-034",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-034-O02",
+          "source_span": "represents graviweak particle interactions by root addition/Lie brackets inside that exceptional algebra",
+          "relation_span": "represents",
+          "argument_spans": [
+            "graviweak particle interactions",
+            "root addition/Lie brackets",
+            "that exceptional algebra"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-034-O01"
+          ],
+          "load_bearing_note": "Source representation of particle interactions inside the embedding."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-035",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-035-O02",
+          "source_span": "222 gravitational/Standard-Model field weights match 222 of the 240 E8 roots before the remaining roots are assigned to new fields",
+          "relation_span": "match",
+          "argument_spans": [
+            "222 gravitational/Standard-Model field weights",
+            "222 of the 240 E8 roots",
+            "remaining roots",
+            "new fields"
+          ],
+          "logical_force": "COMPARISON",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "L-SSC-035-O01"
+          ],
+          "load_bearing_note": "Finite matching/assignment constraint in the source construction."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-036",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-036-O02",
+          "source_span": "introduces an additional quantum number w and new w and xPhi field sectors",
+          "relation_span": "introduces",
+          "argument_spans": [
+            "additional quantum number w",
+            "new w and xPhi field sectors"
+          ],
+          "logical_force": "EXISTENCE",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [],
+          "load_bearing_note": "Introduction of the additional source quantum number and field sectors."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-037",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-037-O02",
+          "source_span": "associated with triality-related 8-dimensional roles and color/lepton factors",
+          "relation_span": "associated with",
+          "argument_spans": [
+            "triality-related 8-dimensional roles",
+            "color/lepton factors"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-037-O01"
+          ],
+          "load_bearing_note": "Load-bearing role/factor association on the fermionic sectors."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-038",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-038-O02",
+          "source_span": "retaining the E8-valued 2-form/Grassmann-form grading",
+          "relation_span": "retaining",
+          "argument_spans": [
+            "E8-valued 2-form/Grassmann-form grading"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-038-O01"
+          ],
+          "load_bearing_note": "Grading side condition retained by the curvature expansion."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-040",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-040-O02",
+          "source_span": "decomposes curvature into w, B2, x, and strong su(3) parts plus an xPhi xPhi contribution",
+          "relation_span": "decomposes",
+          "argument_spans": [
+            "curvature",
+            "w, B2, x, and strong su(3) parts",
+            "xPhi xPhi contribution"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-040-O01"
+          ],
+          "load_bearing_note": "Additional source decomposition of the F2 curvature sector."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-041",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-041-O02",
+          "source_span": "left and right algebra actions include spin, frame-Higgs, electroweak, new-field, and color terms",
+          "relation_span": "include",
+          "argument_spans": [
+            "left and right algebra actions",
+            "spin, frame-Higgs, electroweak, new-field, and color terms"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-041-O01"
+          ],
+          "load_bearing_note": "Term inventory of the left/right algebra actions."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-042",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-042-O02",
+          "source_span": "eliminating the bosonic multiplier yields gravitational, fermionic, and non-gravitational gauge/action terms",
+          "relation_span": "yields",
+          "argument_spans": [
+            "eliminating the bosonic multiplier",
+            "gravitational, fermionic, and non-gravitational gauge/action terms"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "PARTIAL_IN_BODY",
+          "depends_on": [
+            "L-SSC-042-O01"
+          ],
+          "load_bearing_note": "Operational consequence of eliminating the multiplier."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-043",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-043-O02",
+          "source_span": "Higgs magnitude acting as a conformal factor for the frame",
+          "relation_span": "acting as",
+          "argument_spans": [
+            "Higgs magnitude",
+            "conformal factor for the frame"
+          ],
+          "logical_force": "OTHER",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-043-O01"
+          ],
+          "load_bearing_note": "Load-bearing role of the Higgs magnitude in the reduced gravitational action."
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-047",
+      "decision": "ACCEPT_SOURCE_LOCAL_CORRECTION",
+      "resolution": "ADD_SOURCE_LOCAL_OCCURRENCE",
+      "proposed_occurrences": [
+        {
+          "occurrence_id": "L-SSC-047-O02",
+          "source_span": "claims no free parameters at that level",
+          "relation_span": "claims",
+          "argument_spans": [
+            "no free parameters",
+            "that level"
+          ],
+          "logical_force": "ASSERTED",
+          "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+          "depends_on": [
+            "L-SSC-047-O01"
+          ],
+          "load_bearing_note": "Source constraint on parameter freedom at the stated level."
+        }
+      ]
+    }
+  ],
+  "downstream_boundary": "WAIT_FOR_COMPLETE_VALID_151_ROW_AUDIT_BEFORE_FREEZING_L_EXTRACTION_RECONCILED_0_2"
+}

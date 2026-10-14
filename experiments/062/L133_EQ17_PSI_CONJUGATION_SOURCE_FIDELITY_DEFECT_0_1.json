@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062-l133-eq17-source-conjugation-role-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_EQ17_B3_PSI_SOURCE_OPERAND_CONJUGATION_AND_PSI_CARRIER_SCOPE_DEFECT",
+  "owner": "PROJECT_G0_SOURCE_PACKET_TRANSCRIPTION_NOT_AUTHOR_PUBLICATION",
+  "exact_frozen_source": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic, 2026-08-29 published version, §4.3 Eq.(17), printed page 19 of 51",
+  "source_url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+  "source_primary_visual_review": {
+    "pdf_page_index": 18,
+    "source_display": "-t²(tilde(psi1)*psi2-tilde(psi2)*psi1)",
+    "operator": "source t² applied to first-conjugated negative-spinor product difference",
+    "input_output": "psi_i negative spinor, t² output bivector role"
+  },
+  "packet_before": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_F4_EQ17_SOURCE_G0_0_1.json",
+    "git_blob_sha": "c3fcf4f5197027276a2fc38b31384ed88f15c7cb"
+  },
+  "defects": [
+    {
+      "field": "eq17_components[L4-EQ17-B3].rhs",
+      "wrong_fragment": "-t²(psi1*tilde(psi2)-psi2*tilde(psi1))",
+      "correct_fragment": "-t²(tilde(psi1)*psi2-tilde(psi2)*psi1)",
+      "cause": "Wrong operand conjugated in ordered noncommutative product; not harmless notation."
+    },
+    {
+      "field": "ordered_composition_example.free_result",
+      "wrong_fragment": "quaternion/octonion typed source psi carrier",
+      "correct_fragment": "ordinary octonion negative-spinor role, compact f4(-52) source scope only",
+      "cause": "Unlawful broadening of strictly octonionic f4(−52) Eq17 expression to a quaternionic carrier."
+    }
+  ],
+  "scope": "SOURCE_ASSERTION_PRESERVATION_ONLY; no mathematical Lie theorem or whole L05 source closure",
+  "downstream": {
+    "ssc015_unchanged": true,
+    "source_propagation_not_started": true,
+    "G1_to_G7_authorized": false,
+    "external_cold_verification_passed": false
+  },
+  "required_repair": [
+    "Correct exactly the B3 spinor-pair first-operand tilde incidence and correct source carrier scope.",
+    "Compare every Eq17 component, diagonal B role and right-first nested action to frozen printed page.",
+    "Add baseline-first non-noop mutation tests for all source equation subterms and negative limitations.",
+    "Commit only if G0 source-only CI passes; never infer split-form or source-wide closure."
+  ]
+}

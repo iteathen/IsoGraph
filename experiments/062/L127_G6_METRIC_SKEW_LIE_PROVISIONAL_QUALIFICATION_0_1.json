@@ -1,0 +1,125 @@
+{
+  "schema": "isograph.exp062-l127-g6-metric-skew-lie-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "METRIC_SKEW_ENDOMORPHISM_LIE_0_1",
+  "branch_head_at_creation": "458355cc7fbea2988364d6a2b1ac73f435aada47",
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_METRIC_SKEW_ENDOMORPHISM_LIE_0_1.json",
+      "git_blob_sha": "ea0ef8c48b64efa49926a50344906fe9ae538f0c"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_METRIC_SKEW_LIE_MODULE_SSC_0_1.json",
+      "git_blob_sha": "f62fe657241ae93ddf55a98c74c4a1e84adb6284"
+    },
+    "module_ia": {
+      "path": "experiments/062/L127_G6_METRIC_SKEW_LIE_MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "879bb9a29bcfcec2ece2b3fb1c48a7f1580b4fb7"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l127-g6-metric-skew-lie-0-1.mjs",
+      "git_blob_sha": "5c78860054272ee43670cfe75729759f1a1fd9c9"
+    },
+    "linear_dependency": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    },
+    "composition_dependency": {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c"
+    },
+    "typed_action_dependency": {
+      "path": "experiments/062/L126_G6_TYPED_ACTION_REVERSE_Q_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "38db5fb49657834f1f9a0830eb21f3e7f7e11c37"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L127 G6 metric-skew Lie provisional qualification",
+    "workflow_run_id": 37720989659,
+    "workflow_run_head": "f62a8e8c87855aabe43547436eef3dde1bf83242",
+    "job_id": 113128325000,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      184004,
+      227000
+    ],
+    "dependency_audit": {
+      "184004": [
+        184003,
+        184004
+      ],
+      "227000": [
+        183002,
+        184004,
+        185002,
+        187200,
+        227000
+      ]
+    },
+    "tests": {
+      "ssc_obligations": 16,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 9,
+      "zero_lie_positive": 1,
+      "symmetric_bracket_negative": 1,
+      "jacobi_negative": 1,
+      "enumerated_matrices": 19683,
+      "metric_skew_matrices": 27,
+      "complete_metric_skew_model_positive": 1,
+      "non_skew_negative": 1,
+      "nonfaithful_negative": 1,
+      "wrong_commutator_negative": 1
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      {
+        "id": 184004,
+        "meaning": "bilinear Lie bracket with antisymmetry and Jacobi identity"
+      },
+      {
+        "id": 227000,
+        "meaning": "faithful typed action presenting exactly all metric-skew linear endomorphisms of a nondegenerate symmetric form, with bracket action equal to the endomorphism commutator"
+      }
+    ],
+    "explicit_exclusions": [
+      "dimension 28",
+      "so(8) name or classification",
+      "orthogonal/Spin/Pin group integration",
+      "exponential-map claims",
+      "representation irreducibility",
+      "octonion-specific semantics",
+      "W/cross-track semantics"
+    ]
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "consumption_rule": "Experiment 062/063 may consume only exact 184004/227000 under pinned dependencies. No dimension, so(8) classification, group integration, octonion identity, or cross-track semantics are inherited.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "L127 may consume exact 227000 where its frozen source operator carrier/action/form/bracket instantiate that relation.",
+    "The L127 dimension-28 and 7-vs-28 properness claims remain dependent on the separate finite-basis authority."
+  ],
+  "nonclaims": [
+    "No global authority change.",
+    "No so(8) classification claim.",
+    "No group-integration claim.",
+    "No third-party verification claim.",
+    "No W/cross-track evidence used."
+  ]
+}

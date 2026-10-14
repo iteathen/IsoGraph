@@ -1,0 +1,78 @@
+{
+  "schema": "isograph.exp062-w05-w109-local-ring-source-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "authority": false,
+  "status": "CONFIRMED_OMITTED_TWO_SOURCE_INTERNAL_EQUATIONS_W109_G0",
+  "detected_at_head": "f0ffedb64041b073f4d411311c337fc0adbb4c5b",
+  "source": {
+    "work": "Peter Woit, Notes on the Twistor P1",
+    "frozen_revision": "arXiv:2202.02657v2",
+    "arxiv_v2_html": "https://arxiv.org/html/2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "location": "§6.3 table row 10, printed p.14 / PDF index 13",
+    "author_pdf_vs_arxiv_pdf_byte_identity": "UNVERIFIED"
+  },
+  "previous_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_11.json",
+    "sha": "05c0b665a7ec6cf97573856bbc1eb3e809a014f7"
+  },
+  "previous_demand": {
+    "path": "experiments/062/W_G0_W103_SOURCE_DEMAND_PROJECTION_0_1.json",
+    "sha": "aa6cf9a640ce3899e56b26b6ef4e9b75639655c2"
+  },
+  "missing_source_cell_equalities": [
+    {
+      "id": "W109-T10-FINITE",
+      "row_id": "W05-T10",
+      "side": "finite_p",
+      "modality": "SOURCE_TABLE_CELL_EQUALITY",
+      "lhs": "B^+_{dR}",
+      "op": "EQUAL",
+      "rhs": {
+        "symbol": "O_hat",
+        "carrier": "FF_p",
+        "index": "infinity"
+      },
+      "source_latex": "B^{+}_{dR}=\\widehat{\\mathcal{O}}_{FF_{p},\\infty}"
+    },
+    {
+      "id": "W109-T10-INFINITE",
+      "row_id": "W05-T10",
+      "side": "infinite_p",
+      "modality": "SOURCE_TABLE_CELL_EQUALITY",
+      "lhs": "C[[lambda]]",
+      "op": "EQUAL",
+      "rhs": {
+        "symbol": "O_hat",
+        "carrier": "P1_tw",
+        "index": "infinity"
+      },
+      "source_latex": "\\mathbf{C}[[\\lambda]]=\\widehat{\\mathcal{O}}_{\\mathbf{P}^{1}_{tw},\\infty}"
+    }
+  ],
+  "defect": "Predecessor W109 compressed two distinct source-printed, within-cell equalities into completed-local-ring prose, omitting each equality operator and indexed O_hat RHS.",
+  "epistemic_guard": "Author expressly warns the 11 rows are analogies between columns; no ring equivalence or W/L structural identity follows.",
+  "invalidation": {
+    "earliest_stage": "G0",
+    "changed_item": "W-SSC-109",
+    "predecessor_source_and_demand": "HISTORICAL_INCOMPLETE",
+    "G1_G7": "HISTORICAL_STALE_UNAUTHORIZED",
+    "W109": "STAYS_OPEN_ANALOGY",
+    "W110": "STAYS_OPEN_CITED_CONTEXT",
+    "L": "NOT_USED_OR_MODIFIED"
+  },
+  "recovery": "Versioned W109-only source candidate, W-only exact demand regeneration, fail-closed controls and CI. Full 151-item nine-source audit remains mandatory before freeze.",
+  "provenance": {
+    "source_author": "Peter Woit",
+    "research_direction": "Joshua Oshiro",
+    "transcription_audit": "agent-assisted",
+    "first_evidence_located": "2026-10-08 direct W05 v2 and author-PDF inspection"
+  },
+  "nonclaims": [
+    "No equivalence across columns",
+    "No qualified primitive",
+    "No current G0 freeze",
+    "No independent external verification"
+  ]
+}

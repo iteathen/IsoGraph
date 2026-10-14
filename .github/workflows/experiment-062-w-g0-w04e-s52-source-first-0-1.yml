@@ -1,0 +1,33 @@
+name: "Experiment 062 W G0 W04e Euclidean twistor S52 original source fidelity 0.1"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_68.json"
+      - "experiments/062/W04E_G0_S52_EUCLIDEAN_TWISTOR_ORIGINAL_FIRST_0_1.json"
+      - "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_54.json"
+      - "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_53.json"
+      - "experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_35.json"
+      - "experiments/062/W_CURRENT_STAGE_GATE_0_129.json"
+      - "experiments/062/W_G0_FINITE_BIDIRECTIONAL_CONVERGENCE_0_7.json"
+      - "experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-1.cjs"
+      - ".github/workflows/experiment-062-w-g0-w04e-s52-source-first-0-1.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w_source_first_s52:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Preserve historical W0.67 original source-scoped 24-hostile result on its own tuple
+        run: |
+          node --check experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-5.cjs
+          node experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-5.cjs
+      - name: Verify current W0.68 source-first S52 and 151 original reciprocal SSC owners
+        run: |
+          node --check experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-1.cjs
+          node experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-1.cjs

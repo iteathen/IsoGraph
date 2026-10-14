@@ -1,0 +1,26 @@
+name: Experiment 062 L G0 L02 original printed formula reconciliation 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/lisi/LISI_L02_ORIGINAL_PRINTED_EQUATIONS_RECONCILIATION_G0_0_1.json'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L02_SOURCE_FIRST_REVERSE_COVERAGE_0_3.json'
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_53.json'
+      - 'research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_16.json'
+      - 'experiments/062/tools/verify-l-g0-l02-exact-source-equations-0-1.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_73.json'
+      - '.github/workflows/experiment-062-l-g0-l02-original-printed-formulas-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  source-printed-equations:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Preserve passing earlier original source-first regression
+        run: node experiments/062/tools/verify-l-g0-l02-source-first-reverse-0-3.mjs
+      - name: Test nine original printed equation obligations and hostiles
+        run: node experiments/062/tools/verify-l-g0-l02-exact-source-equations-0-1.mjs

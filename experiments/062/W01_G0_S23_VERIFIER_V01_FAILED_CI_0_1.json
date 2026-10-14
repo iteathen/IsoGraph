@@ -1,0 +1,23 @@
+{
+  "schema": "isograph.exp062-w01-s23-verifier-v01-failed-ci.v0.1",
+  "track": "W",
+  "status": "FAILED_UNQUALIFIED_HISTORICAL_SOURCE_REWRITE_ESCAPE_PRESERVED",
+  "run_id": 38036423232,
+  "workflow": "Experiment 062 W01 original source §§2–3 G0 0.1",
+  "workflow_url": "https://github.com/iteathen/IsoGraph/actions/runs/38036423232",
+  "commit": "52287fc5f67897ff938a4a2570ffd1adbe3633e1",
+  "predecessor_verifier_path": "experiments/062/tools/verify-w01-s2-s3-original-source-g0-0-1.cjs",
+  "predecessor_verifier_blob_sha": "306a7bb625c987db9a3e28a81669f0bbae1a26fb",
+  "positive_baseline": true,
+  "hostile_total": 30,
+  "hostile_rejected": 29,
+  "hostile_escaped": [
+    "rewrite old 151 source record"
+  ],
+  "qualified": false,
+  "cause": "Local checker compared 150 untouched successor records with historical ones and checked W027 old typed-count, but failed to independently pin the complete historical W027 object against its immutable Git blob. An in-memory alteration of W027 historical obligation escaped.",
+  "repair": "Successor v0.2 enforces exact git-blob identity of full 151-item historical SSC 0.57 parsed object before source and stage checks; adds cold mutation on unaffected historical source record and on this failed-test provenance.",
+  "discovery_disposition": "CHECKER_CONSERVATION_DEFECT_NOT_AUTHOR_MATH_PROOF_OR_NEW_SOURCE_SEMANTIC_OMISSION",
+  "current_source0_58_G0": "OPEN_UNFROZEN",
+  "original_result_never_retrospectively_reclassified": true
+}

@@ -1,0 +1,1717 @@
+{
+  "schema": "isograph.exp062-w-g1-formula-operator-frontier.v0.2",
+  "date": "2026-10-06",
+  "status": "DIAGNOSTIC_SOURCE_ONLY_OPERATOR_FRONTIER_NOT_G1_COMPLETENESS",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "predecessor": "experiments/062/W_G1_FORMULA_OPERATOR_FRONTIER_0_1.json",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_14.json",
+  "generator": "experiments/062/tools/generate-w-g1-formula-operator-frontier-0-2.mjs",
+  "purpose": "Extend the W source-visible formula frontier to Unicode wedge/integral glyphs and compact numeric fractions missed by v0.1. No token receives mathematical semantics automatically.",
+  "token_kinds": [
+    "EQUALS",
+    "APPROX",
+    "TILDE",
+    "ARROW_ASCII",
+    "WEDGE_SYMBOL",
+    "INTEGRAL_SYMBOL",
+    "TENSOR_SYMBOL",
+    "CENTRAL_PRODUCT",
+    "SUBSET_SYMBOL",
+    "PLUS",
+    "STAR",
+    "CARET",
+    "NUMERIC_FRACTION",
+    "WORD_TENSOR",
+    "WORD_WEDGE"
+  ],
+  "guards": [
+    "Token kinds are lexical/source-visible only; no kind predeclares mathematical semantics.",
+    "Hyphen/minus and generic slash remain excluded because prose/names use them ambiguously; NUMERIC_FRACTION records only digit/digit substrings.",
+    "Compact named operators and source juxtaposition require separate source-local review.",
+    "A token inside an identifier, exponent label, sign label, helicity label, or role name may be NON_OPERATOR_SOURCE_TOKEN.",
+    "This frontier neither closes G1 nor authorizes G2."
+  ],
+  "counts": {
+    "bodies_with_tokens": 41,
+    "total_tokens": 110,
+    "by_kind": {
+      "CARET": 23,
+      "EQUALS": 35,
+      "ARROW_ASCII": 7,
+      "WORD_WEDGE": 4,
+      "PLUS": 22,
+      "WORD_TENSOR": 5,
+      "WEDGE_SYMBOL": 3,
+      "INTEGRAL_SYMBOL": 3,
+      "STAR": 2,
+      "NUMERIC_FRACTION": 6
+    }
+  },
+  "items": [
+    {
+      "census_id": "W-SSC-014",
+      "body": "Twistor space is C^4 / projective CP^3 with an SU(2,2) real form giving positive, negative, and null/boundary orbits for the Minkowski picture.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 18,
+          "end": 19,
+          "enclosing_occurrence_ids": [
+            "W-SSC-014-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 36,
+          "end": 37,
+          "enclosing_occurrence_ids": [
+            "W-SSC-014-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-027",
+      "body": "W01 represents Spin(4) by independent left/right SU(2)=Sp(1) actions, with the Euclidean vector action x -> g_L x g_R^{-1}; the two factors are structurally independent in Euclidean signature.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 54,
+          "end": 55,
+          "enclosing_occurrence_ids": [
+            "W-SSC-027-O01",
+            "W-SSC-027-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-027-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 105,
+          "end": 107,
+          "enclosing_occurrence_ids": [
+            "W-SSC-027-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-027-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 117,
+          "end": 118,
+          "enclosing_occurrence_ids": [
+            "W-SSC-027-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-028",
+      "body": "W01 identifies the common complexification of Euclidean, Minkowski, and split-signature four-vector spaces with M(2,C)=Hom(S_R,S_L), while retaining different real-form/action constraints for each signature.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 118,
+          "end": 119,
+          "enclosing_occurrence_ids": [
+            "W-SSC-028-O01",
+            "W-SSC-028-O03",
+            "W-SSC-028-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-028-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-029",
+      "body": "W01's frame-bundle description distinguishes spin-connection one-forms from canonical/frame one-forms and uses the Palatini action integral epsilon e wedge e wedge Omega; connection variation gives torsion-free Levi-Civita structure and frame variation gives Einstein equations.",
+      "tokens": [
+        {
+          "kind": "WORD_WEDGE",
+          "lexeme": "wedge",
+          "start": 150,
+          "end": 155,
+          "enclosing_occurrence_ids": [
+            "W-SSC-029-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WORD_WEDGE",
+          "lexeme": "wedge",
+          "start": 158,
+          "end": 163,
+          "enclosing_occurrence_ids": [
+            "W-SSC-029-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-033",
+      "body": "W01 identifies Euclidean projective twistor space CP3 -> S4 as the bundle whose CP1/S2 fiber parametrizes orthogonal complex structures J on each R4 tangent space, with J^2=-1.",
+      "tokens": [
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 54,
+          "end": 56,
+          "enclosing_occurrence_ids": [
+            "W-SSC-033-O01",
+            "W-SSC-033-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-033-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 170,
+          "end": 171,
+          "enclosing_occurrence_ids": [
+            "W-SSC-033-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 172,
+          "end": 173,
+          "enclosing_occurrence_ids": [
+            "W-SSC-033-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-033-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-034",
+      "body": "For a chosen orthogonal complex structure J, W01 decomposes R4 tensor C into +i/-i eigenspaces and constructs S_R and S_L through exterior powers; the stabilizer U(2) lifts to SU(2)_L x U(1) with U(1) inside SU(2)_R.",
+      "tokens": [
+        {
+          "kind": "WORD_TENSOR",
+          "lexeme": "tensor",
+          "start": 63,
+          "end": 69,
+          "enclosing_occurrence_ids": [
+            "W-SSC-034-O01",
+            "W-SSC-034-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 77,
+          "end": 78,
+          "enclosing_occurrence_ids": [
+            "W-SSC-034-O01",
+            "W-SSC-034-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-035",
+      "body": "On PT the lifted spinor roles have U(1) weights S_L=C^2_0 and S_R=C_-1 + C_+1 under SU(2)_L x U(1).",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 51,
+          "end": 52,
+          "enclosing_occurrence_ids": [
+            "W-SSC-035-O01",
+            "W-SSC-035-O02",
+            "W-SSC-035-O03",
+            "W-SSC-035-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-035-O03",
+            "W-SSC-035-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 53,
+          "end": 54,
+          "enclosing_occurrence_ids": [
+            "W-SSC-035-O01",
+            "W-SSC-035-O02",
+            "W-SSC-035-O03",
+            "W-SSC-035-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 65,
+          "end": 66,
+          "enclosing_occurrence_ids": [
+            "W-SSC-035-O01",
+            "W-SSC-035-O02",
+            "W-SSC-035-O04",
+            "W-SSC-035-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-035-O03",
+            "W-SSC-035-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 71,
+          "end": 72,
+          "enclosing_occurrence_ids": [
+            "W-SSC-035-O01",
+            "W-SSC-035-O02",
+            "W-SSC-035-O04",
+            "W-SSC-035-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 75,
+          "end": 76,
+          "enclosing_occurrence_ids": [
+            "W-SSC-035-O01",
+            "W-SSC-035-O02",
+            "W-SSC-035-O04",
+            "W-SSC-035-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-036",
+      "body": "W01 defines the tautological line L over PT and the rank-3 quotient L^perp=C4/L; PT is SU(4)/S(U(1)xU(3)), SU(3) acts on L^perp as the color group, and the determinant-one condition fixes the relative U(1) weights.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 69,
+          "end": 70,
+          "enclosing_occurrence_ids": [
+            "W-SSC-036-O01",
+            "W-SSC-036-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 74,
+          "end": 75,
+          "enclosing_occurrence_ids": [
+            "W-SSC-036-O01",
+            "W-SSC-036-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-036-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 122,
+          "end": 123,
+          "enclosing_occurrence_ids": [
+            "W-SSC-036-O03",
+            "W-SSC-036-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-037",
+      "body": "W01 represents one Standard Model generation by Hom(l + l^perp, S_R + S_L), whose SU(3)xSU(2)_LxU(1) decomposition reproduces the listed quark/lepton transformation roles including a right-handed neutrino.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 54,
+          "end": 55,
+          "enclosing_occurrence_ids": [
+            "W-SSC-037-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 57,
+          "end": 58,
+          "enclosing_occurrence_ids": [
+            "W-SSC-037-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 68,
+          "end": 69,
+          "enclosing_occurrence_ids": [
+            "W-SSC-037-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-040",
+      "body": "W01 identifies the t=0 compactified Minkowski S3 with the equator of Euclidean S4 and the null PT_0 locus Phi(s,s)=0; upper/lower Euclidean hemispheres correspond to positive/negative imaginary-time regions.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 20,
+          "end": 21,
+          "enclosing_occurrence_ids": [
+            "W-SSC-040-O01",
+            "W-SSC-040-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-040-O03",
+            "W-SSC-040-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 114,
+          "end": 115,
+          "enclosing_occurrence_ids": [
+            "W-SSC-040-O01",
+            "W-SSC-040-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-040-O03",
+            "W-SSC-040-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-041",
+      "body": "For free massless spinors W01 uses the Penrose transform H^1(PT_+,O(-3)) <-> Weyl solutions on S4_+ and fiber restriction H^1(CP1,O(-3))=C2 to reconstruct pointwise spinor values.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 58,
+          "end": 59,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O01",
+            "W-SSC-041-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 64,
+          "end": 65,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O01",
+            "W-SSC-041-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 74,
+          "end": 76,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O01",
+            "W-SSC-041-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 98,
+          "end": 99,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O01",
+            "W-SSC-041-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 123,
+          "end": 124,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O02",
+            "W-SSC-041-O03",
+            "W-SSC-041-O04",
+            "W-SSC-041-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 136,
+          "end": 137,
+          "enclosing_occurrence_ids": [
+            "W-SSC-041-O02",
+            "W-SSC-041-O03",
+            "W-SSC-041-O04",
+            "W-SSC-041-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-041-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-047",
+      "body": "Appendix A identifies compactified complex spacetime with G_2,4(C), its tautological rank-2 bundle S and quotient S^perp, and tangent bundle TM=Hom(S,S^perp); the Klein relation omega wedge omega=0 embeds the Grassmannian into projective Lambda^2(C4).",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 115,
+          "end": 116,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 143,
+          "end": 144,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-047-O02",
+            "W-SSC-047-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 151,
+          "end": 152,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WORD_WEDGE",
+          "lexeme": "wedge",
+          "start": 184,
+          "end": 189,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O03",
+            "W-SSC-047-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 195,
+          "end": 196,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O03",
+            "W-SSC-047-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-047-O02",
+            "W-SSC-047-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 244,
+          "end": 245,
+          "enclosing_occurrence_ids": [
+            "W-SSC-047-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-048",
+      "body": "Appendix A defines the line-plane incidence relation s^perp=Zs and the fractional-linear SL(4,C) action Z -> (C+DZ)(A+BZ)^-1; the correspondence space P(S) links PT and M.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 54,
+          "end": 55,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 59,
+          "end": 60,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O01"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-048-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 106,
+          "end": 108,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-048-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 111,
+          "end": 112,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 117,
+          "end": 118,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 121,
+          "end": 122,
+          "enclosing_occurrence_ids": [
+            "W-SSC-048-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-053",
+      "body": "For Euclidean twistor geometry W01 uses T=H^2, the pseudoreal map sigma with sigma^2=-1 on T and +1 projectively, HP1 homogeneous coordinates, SL(2,H) fractional-linear action, and the CP1 fibration whose sigma action is antipodal on each fiber.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 41,
+          "end": 42,
+          "enclosing_occurrence_ids": [
+            "W-SSC-053-O01",
+            "W-SSC-053-O02",
+            "W-SSC-053-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-053-O02",
+            "W-SSC-053-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 43,
+          "end": 44,
+          "enclosing_occurrence_ids": [
+            "W-SSC-053-O01",
+            "W-SSC-053-O02",
+            "W-SSC-053-O07"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 82,
+          "end": 83,
+          "enclosing_occurrence_ids": [
+            "W-SSC-053-O03",
+            "W-SSC-053-O07"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 84,
+          "end": 85,
+          "enclosing_occurrence_ids": [
+            "W-SSC-053-O03",
+            "W-SSC-053-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-053-O02",
+            "W-SSC-053-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 97,
+          "end": 98,
+          "enclosing_occurrence_ids": [
+            "W-SSC-053-O03",
+            "W-SSC-053-O07"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-059",
+      "body": "W04a writes a right-handed Minkowski Weyl equation of the form (E-sigma dot p) psi_R=0, derives the Klein-Gordon mass-shell consequence, and associates its positive- and negative-energy branches with opposite helicities.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 84,
+          "end": 85,
+          "enclosing_occurrence_ids": [
+            "W-SSC-059-O01"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-059-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-068",
+      "body": "In the CP1 analogue W04b uses the three SU(1,1)=SL(2,R) orbits and hyperfunction boundary values to model the relation between holomorphic domains and Lorentzian boundary data.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 47,
+          "end": 48,
+          "enclosing_occurrence_ids": [
+            "W-SSC-068-O01",
+            "W-SSC-068-O03",
+            "W-SSC-068-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-068-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-069",
+      "body": "In four dimensions W04b uses the SU(2,2)=Spin(4,2) action on PT with positive, negative, and null orbits; compactified Minkowski points are represented by CP1s contained in the null orbit.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 40,
+          "end": 41,
+          "enclosing_occurrence_ids": [
+            "W-SSC-069-O01",
+            "W-SSC-069-O03",
+            "W-SSC-069-O04",
+            "W-SSC-069-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-069-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-071",
+      "body": "For the Euclidean real form W04b uses SL(2,H)=Spin(5,1), C4=H2, and the CP3 -> HP1=S4 fibration with CP1 fibers; Wick rotation requires choosing such a Euclidean fibration and its intersection with the Minkowski null geometry.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 45,
+          "end": 46,
+          "enclosing_occurrence_ids": [
+            "W-SSC-071-O01",
+            "W-SSC-071-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-071-O04",
+            "W-SSC-071-O05",
+            "W-SSC-071-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 59,
+          "end": 60,
+          "enclosing_occurrence_ids": [
+            "W-SSC-071-O01",
+            "W-SSC-071-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-071-O04",
+            "W-SSC-071-O05",
+            "W-SSC-071-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 76,
+          "end": 78,
+          "enclosing_occurrence_ids": [
+            "W-SSC-071-O01",
+            "W-SSC-071-O03",
+            "W-SSC-071-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-071-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 82,
+          "end": 83,
+          "enclosing_occurrence_ids": [
+            "W-SSC-071-O01",
+            "W-SSC-071-O03",
+            "W-SSC-071-O06",
+            "W-SSC-071-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-071-O04",
+            "W-SSC-071-O05",
+            "W-SSC-071-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-079",
+      "body": "W04d identifies the spectral positivity of time evolution with holomorphy of U(z)=exp(-izH) in a complex-time half-plane and treats this holomorphic-domain structure as the operational core of Wick rotation.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 81,
+          "end": 82,
+          "enclosing_occurrence_ids": [
+            "W-SSC-079-O01",
+            "W-SSC-079-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-079-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-087",
+      "body": "In the twistor version W04e uses a Hermitian form Phi to split projective twistor space into positive, negative, and null regions; holomorphic theory on PT+ is proposed to have boundary values on the null region representing chiral Minkowski data, with Penrose/Penrose-Ward constructions supplying part of the reconstruction machinery.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 155,
+          "end": 156,
+          "enclosing_occurrence_ids": [
+            "W-SSC-087-O02",
+            "W-SSC-087-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-090",
+      "body": "W04d explicitly contrasts the conventional complex vector carrier S_L tensor S_R with the proposed right-handed carrier S_R tensor conjugate(S_R); on the Euclidean slice the latter decomposes as a scalar plus a three-vector and SU(2)_L acts trivially.",
+      "tokens": [
+        {
+          "kind": "WORD_TENSOR",
+          "lexeme": "tensor",
+          "start": 70,
+          "end": 76,
+          "enclosing_occurrence_ids": [
+            "W-SSC-090-O04",
+            "W-SSC-090-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-090-O01",
+            "W-SSC-090-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WORD_TENSOR",
+          "lexeme": "tensor",
+          "start": 124,
+          "end": 130,
+          "enclosing_occurrence_ids": [
+            "W-SSC-090-O01",
+            "W-SSC-090-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-090-O01",
+            "W-SSC-090-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-091",
+      "body": "W04d identifies conformally compactified complex spacetime with Gr(2,4,C), a spacetime point with a right-handed C2 plane in T=C4, and projective twistor space with CP3 containing the corresponding CP1.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 126,
+          "end": 127,
+          "enclosing_occurrence_ids": [
+            "W-SSC-091-O02",
+            "W-SSC-091-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-091-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-092",
+      "body": "W04d lists SU(4), SL(4,R), SL(2,H), and SU(2,2) as real forms of SL(4,C)=Spin(6,C), with the SL(2,H) and SU(2,2) forms assigned Euclidean and Minkowski geometric roles respectively.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 72,
+          "end": 73,
+          "enclosing_occurrence_ids": [
+            "W-SSC-092-O01",
+            "W-SSC-092-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-092-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-093",
+      "body": "Under the SU(2,2) real form W04d defines PT+, PT-, and PT0 by the sign of a signature-(2,2) Hermitian form; compactified Minkowski points are CP1s lying in PT0, and PT0 is the space of Minkowski light rays/celestial spheres.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 43,
+          "end": 44,
+          "enclosing_occurrence_ids": [
+            "W-SSC-093-O01",
+            "W-SSC-093-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-094",
+      "body": "Under the Euclidean SL(2,H) real form W04d uses T=C4=H2 and the CP3->HP1=S4 fibration sending each complex line to the quaternionic line it generates.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 49,
+          "end": 50,
+          "enclosing_occurrence_ids": [
+            "W-SSC-094-O02",
+            "W-SSC-094-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-094-O02",
+            "W-SSC-094-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 52,
+          "end": 53,
+          "enclosing_occurrence_ids": [
+            "W-SSC-094-O02",
+            "W-SSC-094-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-094-O02",
+            "W-SSC-094-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 67,
+          "end": 69,
+          "enclosing_occurrence_ids": [
+            "W-SSC-094-O01",
+            "W-SSC-094-O03",
+            "W-SSC-094-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-094-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 72,
+          "end": 73,
+          "enclosing_occurrence_ids": [
+            "W-SSC-094-O01",
+            "W-SSC-094-O03",
+            "W-SSC-094-O04",
+            "W-SSC-094-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-094-O02",
+            "W-SSC-094-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-097",
+      "body": "W05 distinguishes ordinary conjugation on CP1 from the twistor antipodal real structure rho_tw, with rho_tw squared equal to -1 on the C2 coordinate carrier but +1 projectively and with no projective fixed points; it also presents the same real form as a real projective conic with complex but no real points.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 161,
+          "end": 162,
+          "enclosing_occurrence_ids": [
+            "W-SSC-097-O01",
+            "W-SSC-097-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-098",
+      "body": "W05 derives rho_tw from the chosen H=C2 presentation by left multiplication by quaternion j and uses the same quaternionic mechanism on C4=H2 to define the Euclidean projective-twistor real structure.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 36,
+          "end": 37,
+          "enclosing_occurrence_ids": [
+            "W-SSC-098-O01",
+            "W-SSC-098-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-098-O03",
+            "W-SSC-098-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 138,
+          "end": 139,
+          "enclosing_occurrence_ids": [
+            "W-SSC-098-O02",
+            "W-SSC-098-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-098-O03",
+            "W-SSC-098-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-099",
+      "body": "W05 states that rho_tw on CP3 has no fixed projective points but has a four-real-dimensional family of invariant CP1 real lines parametrized by HP1=S4; each such line is a twistor P1.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 147,
+          "end": 148,
+          "enclosing_occurrence_ids": [
+            "W-SSC-099-O03",
+            "W-SSC-099-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-099-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-102",
+      "body": "W05 records the hyperkahler generalization as a sphere aI+bJ+cK of compatible complex/Kahler structures and relates the corresponding twistor spaces to hyperkahler quotients and moduli spaces generated from self-dual Yang-Mills and its dimensional reductions.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 57,
+          "end": 58,
+          "enclosing_occurrence_ids": [
+            "W-SSC-102-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 60,
+          "end": 61,
+          "enclosing_occurrence_ids": [
+            "W-SSC-102-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-104",
+      "body": "W05 presents the non-abelian Hodge example in which the hyperkahler moduli space is viewed over CP1 through lambda-connections, with lambda=1 giving ordinary flat connections and lambda=0 giving Higgs bundles.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 139,
+          "end": 140,
+          "enclosing_occurrence_ids": [
+            "W-SSC-104-O02",
+            "W-SSC-104-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-104-O04",
+            "W-SSC-104-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 185,
+          "end": 186,
+          "enclosing_occurrence_ids": [
+            "W-SSC-104-O03",
+            "W-SSC-104-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-104-O04",
+            "W-SSC-104-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-116",
+      "body": "W01 notes that anti-self-duality can be written as a moment-map zero condition and speculates about relations to twisted N=2/N=4 Yang-Mills and geometric Langlands; these are clues, not adopted dynamics of the proposal.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 122,
+          "end": 123,
+          "enclosing_occurrence_ids": [],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 126,
+          "end": 127,
+          "enclosing_occurrence_ids": [],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-118",
+      "body": "W02 fixes the exact Euclidean Yang-Mills normalization used in the self-dual rewrite: (1/4g^2)∫Tr(F∧*F) differs from (1/2g^2)∫Tr(F^+∧*F^+) by the topological ∫Tr(F∧F) term.",
+      "tokens": [
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/4",
+          "start": 87,
+          "end": 90,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 91,
+          "end": 92,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "INTEGRAL_SYMBOL",
+          "lexeme": "∫",
+          "start": 94,
+          "end": 95,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WEDGE_SYMBOL",
+          "lexeme": "∧",
+          "start": 99,
+          "end": 100,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 100,
+          "end": 101,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 118,
+          "end": 121,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 122,
+          "end": 123,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "INTEGRAL_SYMBOL",
+          "lexeme": "∫",
+          "start": 125,
+          "end": 126,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 130,
+          "end": 131,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 131,
+          "end": 132,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WEDGE_SYMBOL",
+          "lexeme": "∧",
+          "start": 132,
+          "end": 133,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 133,
+          "end": 134,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 135,
+          "end": 136,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 136,
+          "end": 137,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "INTEGRAL_SYMBOL",
+          "lexeme": "∫",
+          "start": 158,
+          "end": 159,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WEDGE_SYMBOL",
+          "lexeme": "∧",
+          "start": 163,
+          "end": 164,
+          "enclosing_occurrence_ids": [
+            "W-SSC-118-O01",
+            "W-SSC-118-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-122",
+      "body": "W04e defines Osterwalder-Schrader conjugation on imaginary-time test functions by Theta f(tau)=conjugate(f(-tau)), with Theta an antilinear involution, and defines the OS Hermitian form by <f,g>_OS=S2(Theta f,g).",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 94,
+          "end": 95,
+          "enclosing_occurrence_ids": [
+            "W-SSC-122-O01",
+            "W-SSC-122-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-122-O01",
+            "W-SSC-122-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 197,
+          "end": 198,
+          "enclosing_occurrence_ids": [
+            "W-SSC-122-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-122-O01",
+            "W-SSC-122-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-125",
+      "body": "In four dimensions W04e places chiral SU(2,2) representations in H^1(PT+,O(n-2)) and says an appropriate twistor-transform version of Theta supplies the required conjugation/reality structure for the holomorphic PT+ theory.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 66,
+          "end": 67,
+          "enclosing_occurrence_ids": [
+            "W-SSC-125-O01",
+            "W-SSC-125-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 71,
+          "end": 72,
+          "enclosing_occurrence_ids": [
+            "W-SSC-125-O01",
+            "W-SSC-125-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 214,
+          "end": 215,
+          "enclosing_occurrence_ids": [
+            "W-SSC-125-O03",
+            "W-SSC-125-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-126",
+      "body": "W04e states that the Ward-Penrose transform gives, for suitable holomorphic bundles on PT+, right-handed Weyl solutions coupled to a self-dual connection both on a Euclidean S4 hemisphere and as boundary values on Minkowski spacetime.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 89,
+          "end": 90,
+          "enclosing_occurrence_ids": [
+            "W-SSC-126-O01",
+            "W-SSC-126-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-128",
+      "body": "W02 begins from the conventional Hermitian 2x2 complex-matrix realization of Minkowski vectors, with determinant equal to minus Minkowski length-squared and Lorentz action x -> Omega_L x Omega_R^{-1}.",
+      "tokens": [
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 174,
+          "end": 176,
+          "enclosing_occurrence_ids": [
+            "W-SSC-128-O01"
+          ],
+          "exact_relation_occurrence_ids": [
+            "W-SSC-128-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 194,
+          "end": 195,
+          "enclosing_occurrence_ids": [
+            "W-SSC-128-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-130",
+      "body": "The conventional complex-spacetime vector representation is chirally symmetric: matrices are linear maps from the dual of the right spinor to the left spinor, equivalently the (1/2)_L tensor (1/2)_R representation.",
+      "tokens": [
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 177,
+          "end": 180,
+          "enclosing_occurrence_ids": [
+            "W-SSC-130-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "WORD_TENSOR",
+          "lexeme": "tensor",
+          "start": 184,
+          "end": 190,
+          "enclosing_occurrence_ids": [
+            "W-SSC-130-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 192,
+          "end": 195,
+          "enclosing_occurrence_ids": [
+            "W-SSC-130-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-135",
+      "body": "Euclidean spacetime in the right-handed construction is a real subspace of the right-spinor tensor its conjugate, decomposing into an SU(2)_R scalar plus vector; this produces one SU(2)_R-invariant distinguished direction and a complementary three-dimensional vector subspace.",
+      "tokens": [
+        {
+          "kind": "WORD_TENSOR",
+          "lexeme": "tensor",
+          "start": 92,
+          "end": 98,
+          "enclosing_occurrence_ids": [
+            "W-SSC-135-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-140",
+      "body": "For a right-handed Minkowski Weyl degree of freedom, W02 gives the momentum-space invariant Lagrangian and associates positive-energy solutions with helicity +1/2 and negative-energy solutions with helicity -1/2.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 158,
+          "end": 159,
+          "enclosing_occurrence_ids": [
+            "W-SSC-140-O01",
+            "W-SSC-140-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 159,
+          "end": 162,
+          "enclosing_occurrence_ids": [
+            "W-SSC-140-O01",
+            "W-SSC-140-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 208,
+          "end": 211,
+          "enclosing_occurrence_ids": [
+            "W-SSC-140-O01",
+            "W-SSC-140-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-144",
+      "body": "In Euclidean signature W02 uses Hodge star squared equal to +1 to split two-forms into self-dual and anti-self-dual sectors; self-dual two-forms correspond to su(2)_R and anti-self-dual two-forms to su(2)_L. In Minkowski signature star squared is -1 and the corresponding chiral decomposition requires complexification.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 60,
+          "end": 61,
+          "enclosing_occurrence_ids": [
+            "W-SSC-144-O01",
+            "W-SSC-144-O06",
+            "W-SSC-144-O08"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-146",
+      "body": "W02 rewrites the Euclidean Yang-Mills action, up to the topological integral of Tr(F wedge F), using only the self-dual curvature component, and therefore only right-handed spacetime spinor geometry.",
+      "tokens": [
+        {
+          "kind": "WORD_WEDGE",
+          "lexeme": "wedge",
+          "start": 85,
+          "end": 90,
+          "enclosing_occurrence_ids": [
+            "W-SSC-146-O01",
+            "W-SSC-146-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    }
+  ]
+}

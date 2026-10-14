@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062-w04d-v01-verifier-metadata-access-failure.v0.1",
+  "track": "W",
+  "status": "V01_POSITIVE_BASELINE_FAILED_BEFORE_HOSTILE_CONTROLS_NOT_QUALIFIED",
+  "run_id": 38077584684,
+  "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38077584684",
+  "commit": "477211089441abb982095c91b0e2754168dbc738",
+  "workflow": "Experiment 062 W04d original 28-slide source-first G0 0.1",
+  "predecessor_verifier_path": "experiments/062/tools/verify-w04d-28-slide-source-first-g0-0-1.cjs",
+  "predecessor_verifier_blob_sha": "9be5c81f69654987e24f84b48f4f6e4a03d6e9e5",
+  "conclusion": "failure",
+  "positive_baseline_complete": false,
+  "hostile_controls_executed": false,
+  "qualification": false,
+  "cause": "Checker compared the nonexistent ssc.correction.other148_source_items_exact (undefined) with true; actual source0.63 field is other148_source_objects_exact=true. This is an evidence-schema field access error in verifier, not a W04d source-origin or mathematical discrepancy.",
+  "repair": "Correct the field access only, preserve failed SHA/run, add adversarial checks protecting failed-run historical status; keep exact 151 source identities and 511 incidences.",
+  "no_source_semantics_changed": true,
+  "original_source0_63_frozen": false,
+  "G0": "OPEN_UNFROZEN"
+}

@@ -1,0 +1,217 @@
+{
+  "schema": "lisi.l148-regrounded-core-logic-primitive-closure-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_CANDIDATE_CLOSED_PRIMITIVE",
+  "census_id": "L-SSC-148",
+  "source_body": "L05 states that direct three-linearly-independent-generation e8 assignments have Euclidean/signature and natural-two-grading drawbacks, so they are not presented as a complete Lorentzian physical model.",
+  "governing_authority": [
+    "CORE_SPEC_DRAFT_0_19_IMPLICIT_ASSERTIONS_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md"
+  ],
+  "native_compilation": "LISI_NATIVE_COMPILATION_REGROUNDED_0_15.isg",
+  "native_derivation": "L148_REGROUNDED_CORE_LOGIC_NATIVE_DERIVATION_0_1.json",
+  "body_analysis": {
+    "explicit_facts": [
+      "the specified assignment referent has the source-recorded Euclidean/signature drawback",
+      "the same referent has the source-recorded natural-two-grading drawback",
+      "the same referent is not presented as a complete Lorentzian physical model"
+    ],
+    "explicit_source_support_relation": "The source word 'so' is represented by proposition-level IMPLIES from the conjunction of the two drawback facts to the non-completeness presentation fact.",
+    "body_formula": {
+      "kind": "OP",
+      "role": "AND",
+      "args": [
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944006
+            },
+            {
+              "kind": "RAW",
+              "id": 942148
+            },
+            {
+              "kind": "RAW",
+              "id": 944101
+            },
+            {
+              "kind": "RAW",
+              "id": 944098
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944006
+            },
+            {
+              "kind": "RAW",
+              "id": 942148
+            },
+            {
+              "kind": "RAW",
+              "id": 944101
+            },
+            {
+              "kind": "RAW",
+              "id": 944099
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "PREDICATE_APPLICATION",
+          "args": [
+            {
+              "kind": "RAW",
+              "id": 944006
+            },
+            {
+              "kind": "RAW",
+              "id": 942148
+            },
+            {
+              "kind": "RAW",
+              "id": 944101
+            },
+            {
+              "kind": "RAW",
+              "id": 944100
+            }
+          ]
+        },
+        {
+          "kind": "OP",
+          "role": "IMPLIES",
+          "args": [
+            {
+              "kind": "OP",
+              "role": "AND",
+              "args": [
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 944006
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 942148
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944101
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944098
+                    }
+                  ]
+                },
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 944006
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 942148
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944101
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 944099
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "OP",
+              "role": "PREDICATE_APPLICATION",
+              "args": [
+                {
+                  "kind": "RAW",
+                  "id": 944006
+                },
+                {
+                  "kind": "RAW",
+                  "id": 942148
+                },
+                {
+                  "kind": "RAW",
+                  "id": 944101
+                },
+                {
+                  "kind": "RAW",
+                  "id": 944100
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "serialized_formula": "(^150001 (^150010 944006 942148 944101 944098) (^150010 944006 942148 944101 944099) (^150010 944006 942148 944101 944100) (^150004 (^150001 (^150010 944006 942148 944101 944098) (^150010 944006 942148 944101 944099)) (^150010 944006 942148 944101 944100)))",
+    "support_incidences": [
+      [
+        940005,
+        941148,
+        940104
+      ]
+    ],
+    "target_internal_behavior_load_bearing": false,
+    "target_internal_behavior_reason": "The formula reasons only over source-characterization predicates attached to one opaque referent. No E8, generation, signature, grading, or Lorentzian mathematics is used.",
+    "causal_semantics_imported": false,
+    "implication_scope": "specific represented propositions only; no universal rule over assignments is introduced"
+  },
+  "core_gates": {
+    "body_primitive_closed": true,
+    "support_primitive_closed": true,
+    "transitive_dependencies_primitive_closed": true,
+    "only_qualified_core_logic_roles": true,
+    "definitionally_reducible_hidden_operator_present": false,
+    "source_semantics_conserved": true,
+    "qualified_qu_required": false,
+    "schema_closure_applicable": false,
+    "cross_author_semantics_used": false
+  },
+  "anti_leak_guards": [
+    "the assignment target and all source-characterization values are opaque categorical SIs",
+    "their declarations carry identity only; all semantic behavior is in the predicate incidences and Core logic",
+    "the source's 'so' is not inflated into a causal mechanism",
+    "historical closure packets are not premises",
+    "no Woit or synthesis semantics are premises"
+  ],
+  "reconstruction": {
+    "all_and_only_source_body": true,
+    "path": [
+      "L-SSC-148",
+      "source provenance L05",
+      "qualified Core formula AST"
+    ]
+  },
+  "proposed_disposition": "CLOSED_PRIMITIVE",
+  "core021_qualification_stage_complete": false,
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}

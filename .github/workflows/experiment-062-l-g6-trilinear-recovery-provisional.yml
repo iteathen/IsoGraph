@@ -1,0 +1,32 @@
+name: Experiment 062 L G6 trilinear-recovery provisional qualification
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/L_G5H_TRILINEAR_PRODUCT_RECOVERY_0_1.json'
+      - 'experiments/062/L_G6_TRILINEAR_RECOVERY_MODULE_SSC_0_1.json'
+      - 'experiments/062/L_G6_TRILINEAR_RECOVERY_MODULE_IA_FIXED_POINT_0_1.json'
+      - 'experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json'
+      - 'experiments/062/tools/qualify-l-g6-trilinear-product-recovery-0-1.mjs'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg'
+      - 'research/woit-lisi-isomorph/support/PRIMITIVE_PRODUCT_TRILINEAR_RECOVERY_SCHEMA_0_2.isg'
+      - '.github/workflows/experiment-062-l-g6-trilinear-recovery-provisional.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Run deterministic G6 trilinear-recovery qualification
+        run: node experiments/062/tools/qualify-l-g6-trilinear-product-recovery-0-1.mjs

@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-p14-first-original-CI-node-syntax-failure.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "INTERNAL-QUALIFICATION_FAILURE",
+  "CI": {
+    "run_id": 38243765870,
+    "job_id": 114792485507,
+    "head_sha": "d98ba24a2710ed1ab3d8f76f9efe8207e6ac766c",
+    "conclusion": "failure",
+    "status": "completed",
+    "original_verifier_path": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-1.mjs",
+    "original_verifier_git_blob_sha": "4106eeaa97d56c78f5aa231a6fd8d4550ac11369",
+    "original_PDF_download_executed": false,
+    "original_PDF_SHA256_verified": false,
+    "original_page_block_checks_executed": false,
+    "baseline_verification_executed": false,
+    "hostiles_defined": 40,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0
+  },
+  "failure": {
+    "type": "VERIFIER_JAVASCRIPT_SYNTAX_ERROR",
+    "step": "node --check original verifier 0.1",
+    "line": 49,
+    "diagnostic": "SyntaxError: missing ) after argument list",
+    "specific_fault": "missing third-generation transported-op outer every(...) closing parenthesis",
+    "source_or_ssc_defect_demonstrated": false
+  },
+  "repair": {
+    "script_path": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-2.mjs",
+    "script_git_blob_sha": "965a22530ef6b03e8b1ff1f61f1e7c45dfa4d262",
+    "change": "syntactic closure and versioned evidence header only; source mathematics and frozen qualification obligations unchanged",
+    "fresh_original_CI_required": true,
+    "historical_first_run_never_reclassified": true
+  },
+  "preservation": {
+    "SSC": "0.96",
+    "inverse": "0.29",
+    "crosswalk": "0.2",
+    "current_source_packet": "LISI_L04_ORIGINAL_P14_24CELL_WEIGHT_TRIALITY_SOURCE_G0_0_1.json",
+    "all_191_ssc_items_preserved": true,
+    "all_350_source_groups_preserved": true,
+    "whole_source_cold_passes": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "PR70_merge_authorized": false
+  }
+}

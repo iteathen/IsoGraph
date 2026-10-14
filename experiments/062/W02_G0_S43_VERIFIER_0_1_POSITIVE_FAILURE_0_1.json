@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-w02-s43-mixed-block-verifier-v01-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_POSITIVE_BASELINE_FAIL_MUTANT_SCORE_UNQUALIFIED",
+  "run": {
+    "id": 37973537552,
+    "job_id": 113965941081,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37973537552",
+    "head_sha": "1dea98efe57928a1da5c4e9b2cc1be24644e1728",
+    "conclusion": "failure",
+    "node": "26.7.0",
+    "github_os": "ubuntu-24.04",
+    "source_log_suite": "W02 §IV.3 source chiral curvature non-Einstein mixed block G0 0.1",
+    "positive_baseline_pass": false,
+    "positive_errors": [
+      "source already conserved no edit/no thirdparty theorem"
+    ],
+    "mutations_total": 42,
+    "mutations_rejected": 42,
+    "mutations_escaped": 0,
+    "mutations_crashed": 0,
+    "score_not_qualified": true
+  },
+  "source_fixture": {
+    "path": "experiments/062/W02_G0_S43_CHIRAL_CURVATURE_SOURCE_FIRST_0_1.json",
+    "blob_sha": "7ac32b4ec3ab9c4a90debdb73f2c58e4d322dafa",
+    "source_correct_fields": {
+      "added_source_incidents": 0,
+      "source_census_changed": false,
+      "original_both_author_phrases_conserved": true
+    },
+    "source_census_modified": false
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w02-s43-mixed-curvature-source-g0-0-1.mjs",
+    "blob_sha": "ace7f6b29cda0b6ef7ce804dc3a573fe76997d8e",
+    "actual_bug": "Check uses source_item_modified === false, but source first oracle defines source_census_changed === false. Undefined !== false triggers false positive."
+  },
+  "stage_input": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_73.json",
+    "blob_sha": "d1a4a088fee417e084ff9b39af2d5326d39f1044",
+    "status": "G0_OPEN_UNFROZEN"
+  },
+  "correction_policy": {
+    "fix_verifier_in_version": "verify-w02-s43-mixed-curvature-source-g0-0-2.mjs",
+    "fix_stage_in_version": "W_CURRENT_STAGE_GATE_0_74.json",
+    "do_not_overwrite_failed_run": true,
+    "do_not_count_42_mutations_as_qualified": true,
+    "freeze_source0_36_no_changes": true,
+    "source_still_151": true,
+    "typed_incidence_count_327": true,
+    "old_W86_partial": true,
+    "third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "no_G1_G7": true
+  }
+}

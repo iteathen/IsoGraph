@@ -1,0 +1,26 @@
+name: W source census targeted correction verify
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_3.json'
+      - 'research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json'
+      - 'experiments/062/tools/verify-w-source-census-targeted-correction-0-1.mjs'
+      - '.github/workflows/experiment-062-w-source-census-targeted-correction.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify targeted W source census correction
+        run: node experiments/062/tools/verify-w-source-census-targeted-correction-0-1.mjs

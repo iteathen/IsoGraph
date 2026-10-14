@@ -1,0 +1,118 @@
+{
+  "schema": "isograph.exp062-l126-g3-core-definability.v0.1",
+  "date": "2026-10-07",
+  "status": "L126_TARGETED_G3_FIXED_POINT_TYPED_ACTION_PAIR_DEMAND_EXPOSED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "8ecae117603621396218f9f30be39aab95997cfc",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "path": "experiments/062/L126_G2_NEUTRAL_SUBGRAPH_0_1.json",
+    "git_blob_sha": "5b8f2c1389bc0d242add4feb0f074e3c7443304a"
+  },
+  "source_incidence": {
+    "path": "experiments/062/L126_G1_SOURCE_INCIDENCE_0_1.json",
+    "git_blob_sha": "a3ca8c200852be52d74c074f90812c9e16edbd0b"
+  },
+  "authority_tuple": [
+    {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+      "required_relations": [
+        182001,
+        182002,
+        182003,
+        182004
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff",
+      "required_relations": [
+        183002,
+        183003
+      ]
+    },
+    {
+      "path": "experiments/062/L_G6_COMPOSITION_ALGEBRA_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "5b44b8f27c62acf4b3110215db03f1a9989ae08c",
+      "required_relations": [
+        185002
+      ]
+    }
+  ],
+  "source_falsifier": {
+    "path": "research/woit-lisi-isomorph/lisi/L126_CHIRAL_CLIFFORD_SOURCE_FALSIFIER_0_1.json",
+    "git_blob_sha": "db72ac250d798f217806f9cafbe72ed145dd2b29",
+    "ordinary_O_expected_failures": {
+      "cyclic": 2,
+      "clifford": 28
+    }
+  },
+  "counts": {
+    "reopened_occurrences": 6,
+    "CORE_CLOSED": 4,
+    "UNEXPANDED_DEMAND": 2,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0
+  },
+  "results": [
+    {
+      "occurrence_id": "L-SSC-126-R01",
+      "disposition": "CORE_CLOSED",
+      "reason": "The finite coefficient tensor is fully materialized as raw finite source incidence. No hidden semantic operator is needed beyond relation membership, ordered arguments, and the three distinct sign atoms."
+    },
+    {
+      "occurrence_id": "L-SSC-126-R02",
+      "disposition": "CORE_CLOSED",
+      "reason": "The signature-lowered coefficient relation is already materialized extensionally as 217002 for every frozen source basis tuple; the source metric/sign effect is represented in the raw relation rather than inferred through an opaque lowering operator."
+    },
+    {
+      "occurrence_id": "L-SSC-126-R03",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "The source gives typed forward/reverse action behavior, but the current graph lacks a qualified reusable bilinear typed-action contract connecting the vector and two chiral carriers."
+    },
+    {
+      "occurrence_id": "L-SSC-126-R04",
+      "disposition": "UNEXPANDED_DEMAND",
+      "reason": "Core equality and quantification are sufficient wrappers, and Q is already qualified through 185002, but the paired forward/reverse action semantics are not yet qualified."
+    },
+    {
+      "occurrence_id": "L-SSC-126-R05",
+      "disposition": "CORE_CLOSED",
+      "reason": "The source relation 217160 is an exact quantified equality over finite basis membership and the raw lowered coefficient relation 217002; its load-bearing structure is expressible by qualified Core logic/equality over represented raw incidence."
+    },
+    {
+      "occurrence_id": "L-SSC-126-R06",
+      "disposition": "CORE_CLOSED",
+      "reason": "The exact project falsifier is represented as raw finite negative evidence/provenance with frozen failure counts; closing the evidence occurrence does not assert the ordinary-O source claims are true."
+    }
+  ],
+  "first_reusable_lower_demand": {
+    "family": "TYPED_BILINEAR_ACTION_AND_REVERSE_Q_COMPOSITION",
+    "supporting_occurrences": [
+      "L-SSC-126-R03",
+      "L-SSC-126-R04"
+    ],
+    "immediate_historical_relation_candidates": [
+      187200,
+      195000
+    ],
+    "rationale": "187200 expands a total typed action V×M->P with linearity in both inputs. 195000 composes two opposite 187200 actions over an exact quadratic-form carrier and requires each reverse composition to equal Q(v) scaling. These are genuinely lower and falsifiable; no familiar Clifford name is needed.",
+    "dependency_expectation": {
+      "187200": "only field/vector/function support",
+      "195000": "exact 185002 plus two instances of 187200"
+    }
+  },
+  "next_stage": {
+    "stage": "G5H",
+    "action": "Freeze a source-neutral typed bilinear action/reverse-Q hypothesis over exact 187200/195000, construct module SSC and module-local IA, and run deterministic positive/adversarial qualification under the owner external-verification bypass."
+  },
+  "nonclaims": [
+    "No historical L126 closure packet is current authority.",
+    "No generic Clifford-algebra ontology is introduced.",
+    "No source inconsistency is repaired.",
+    "No W/cross-track semantics are used."
+  ]
+}

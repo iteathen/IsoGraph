@@ -1,0 +1,144 @@
+{
+  "schema": "lisi.l178-regrounded-core-support-native-derivation.v0.2",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_BODY_RECOMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "census_id": "L-SSC-178",
+  "frozen_body": "The reduced superconnection action contains bosonic curvature, a second-order fermion kinetic term and a potentially nonzero four-fermion term; fermion conjugation is induced using deforming-group metric/Killing structure rather than introduced independently.",
+  "source_provenance": "L06 §13 eqs. (13.11)–(13.12)",
+  "native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_25.isg",
+  "predecessor": "L_L06_ACTION_SUMMARY_LOGIC_REGROUNDED_NATIVE_DERIVATION_0_1.json",
+  "body_formula": {
+    "kind": "OP",
+    "role": "AND",
+    "args": [
+      {
+        "kind": "OP",
+        "role": "PREDICATE_APPLICATION",
+        "args": [
+          {
+            "kind": "RAW",
+            "id": 944115
+          },
+          {
+            "kind": "RAW",
+            "id": 942178
+          },
+          {
+            "kind": "RAW",
+            "id": 944205
+          },
+          {
+            "kind": "RAW",
+            "id": 944206
+          }
+        ]
+      },
+      {
+        "kind": "OP",
+        "role": "PREDICATE_APPLICATION",
+        "args": [
+          {
+            "kind": "RAW",
+            "id": 944115
+          },
+          {
+            "kind": "RAW",
+            "id": 942178
+          },
+          {
+            "kind": "RAW",
+            "id": 944205
+          },
+          {
+            "kind": "RAW",
+            "id": 944207
+          }
+        ]
+      },
+      {
+        "kind": "OP",
+        "role": "PREDICATE_APPLICATION",
+        "args": [
+          {
+            "kind": "RAW",
+            "id": 944006
+          },
+          {
+            "kind": "RAW",
+            "id": 942178
+          },
+          {
+            "kind": "RAW",
+            "id": 944208
+          },
+          {
+            "kind": "RAW",
+            "id": 944209
+          }
+        ]
+      },
+      {
+        "kind": "OP",
+        "role": "PRIMITIVE_SUPPORT",
+        "args": [
+          {
+            "kind": "RAW",
+            "id": 944210
+          },
+          {
+            "kind": "RAW",
+            "id": 944211
+          }
+        ]
+      },
+      {
+        "kind": "OP",
+        "role": "NOT",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944124
+              },
+              {
+                "kind": "RAW",
+                "id": 942178
+              },
+              {
+                "kind": "RAW",
+                "id": 944210
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "serialized_formula": "(^150001 (^150010 944115 942178 944205 944206) (^150010 944115 942178 944205 944207) (^150010 944006 942178 944208 944209) (^150023 944210 944211) (^150003 (^150010 944124 942178 944210)))",
+  "support_incidences": [
+    [
+      940005,
+      941178,
+      940105
+    ]
+  ],
+  "replacement": {
+    "removed_opaque_relation": 944123,
+    "replacement_core_role": "PRIMITIVE_SUPPORT",
+    "primitive_role_id": 150023,
+    "support_from": 944211,
+    "supported_object": 944210
+  },
+  "target_internal_behavior_imported": false,
+  "guards": [
+    "no formula for fermion conjugation is invented",
+    "metric/Killing internal mathematics remains opaque",
+    "PRIMITIVE_SUPPORT records only source support/dependency lineage at this summary scope",
+    "the previous inducedUsing candidate remains historical failed evidence in native revision 0.24",
+    "L177 remains blocked independently"
+  ],
+  "closure_claim": false
+}

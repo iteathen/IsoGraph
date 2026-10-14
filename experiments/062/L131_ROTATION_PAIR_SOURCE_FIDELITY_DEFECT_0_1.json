@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-l131-rotation-pair-source-fidelity-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_L131_DIRECT_ROTATION_PAIR_DEFINITION_MISSING_REOPEN_G1",
+  "authority": false,
+  "authority_effect": "DEFECT_EVIDENCE_INVALIDATES_L131_G1_0_2_AND_DOWNSTREAM",
+  "track": "L",
+  "head_at_record_creation": "4afdd0136243f58354047078a991c15a09f7db10",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source": {
+    "frozen_census_id": "L-SSC-131",
+    "frozen_paper": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic (published 2026-08-29), section 3, sentence immediately after displayed t^(uw) factorization",
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "exact_source_operator_assertion": [
+      "EQUAL",
+      "R_v^(uw)",
+      [
+        "COMPOSE_ORDERED",
+        "R_v^w",
+        "R_v^u"
+      ]
+    ],
+    "semantics": "simple source rotation is explicitly a two-reflection composite acting on vectors and both spinor roles; superscript (uw) is NOT permission to import multiplication or group-classification semantics"
+  },
+  "observed_missing": {
+    "g1": "experiments/062/L131_G1_SOURCE_INCIDENCE_0_2.json",
+    "g1_git_blob_sha": "44fa43addb1629e64f38478139330a9ef1139b3a",
+    "g2": "experiments/062/L131_G2_NEUTRAL_SUBGRAPH_0_2.json",
+    "g2_git_blob_sha": "86178b9e8f8d957b7519f220d88669621b97f968",
+    "g3": "experiments/062/L131_G3_CORE_DEFINABILITY_0_2.json",
+    "g3_git_blob_sha": "62f05b6d56f5ff8fc3de80e1801c5cf5dea8195a",
+    "specific_defect": "L-SSC-131-R11 stores R_v^(uw) as an opaque raw source term in its fourth equality. Neither the L131 G1 0.2 occurrence list nor its G2 expression graph separately exposes the direct source definition R_v^(uw)=R_v^w R_v^u. The R12 even-word factorization refers to rotations without supplying this exact operator-level definition.",
+    "why_material": "A verifier could claim reconstruction by comparing the four recorded names while leaving the right-side rotation uninterpreted. Equality of three-role permutations does not establish equality of typed coefficient transformations.",
+    "distinguish": "R_p^(uw) occurs in the displayed four-part chain, but its direct identification with the two p-reflections must be established from exact source/typed operations; do not invent a separate source equation without labeling derivation."
+  },
+  "invalidation": {
+    "earliest_lawful_reopen": "L131 targeted G1 semantic incidence (L05 section 3); retain historical 0.2 as defective evidence",
+    "L131": "L131 G1 0.2/G2 0.2/G3 0.2 still useful historical checks for recorded clauses, but incomplete for this source target; G7 0.1 already stale.",
+    "L132": "L132 G1 0.3/0.4, G2 0.3, older G3/G6 and reconstruction cannot close while L131 is open; retain the independent L132 D3-D5 omissions.",
+    "L133": "Blocked by missing verified L131/L132 closure.",
+    "L127": "Corrected L127 G7 0.2 unaffected."
+  },
+  "required_replay": [
+    "Freeze new source occurrence for the explicit ordered two-reflection rotation equality, including shared u,w binders and three-role scope; do not collapse into generic ROTATION predicate.",
+    "Regenerate G2 ordered-expression graph deterministically from corrected G1 and preserve the prior 12 occurrences verbatim.",
+    "Adjudicate corrected G3; require a qualified exact map-composition contract for the new expression before claiming operator equality.",
+    "Use failure controls for swapped reflection order, swapped u/w, missing vector/spinor role, identity-only role map, and uninterpreted rotation aliases.",
+    "Only after verified L131 G7 may L132 and then L133 replay their stale chains."
+  ],
+  "epistemic_boundary": {
+    "source_assertion_not_independent_theorem": true,
+    "source_O_inconsistency_preserved": true,
+    "no_external_review_claim": true,
+    "cross_track_evidence_used": false,
+    "no_new_SI_allocated": true,
+    "campaign_local_only": true
+  },
+  "nonclaims": [
+    "Does not prove equality of the rotations.",
+    "Does not assert a generic group or Spin/Pin classification.",
+    "Does not resolve the existing R11 extensional-equality or R12 unbounded-even-word demands.",
+    "Does not authorize dependent L132 work or Recursive IA."
+  ]
+}

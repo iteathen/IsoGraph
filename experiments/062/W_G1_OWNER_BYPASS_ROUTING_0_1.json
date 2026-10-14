@@ -1,0 +1,59 @@
+{
+  "schema": "isograph.exp062-w-g1-owner-bypass-routing.v0.1",
+  "date": "2026-10-07",
+  "status": "W_G1_CORRECTED_INPUT_ACCEPTED_UNDER_OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS",
+  "authority_effect": "CAMPAIGN_PROCEDURE_EXCEPTION_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE"
+  },
+  "invalidation_response": "OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2 requires a new W G1 routing decision after semantic change to the W extraction. This artifact is that new routing decision for the corrected W 0.21 tuple; it does not alter or broaden the bypass.",
+  "pinned_inputs": {
+    "source_corpus": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json",
+      "git_blob_sha": "658a09fefde50e48503aa1d98e23b65225c845bc"
+    },
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_21.json",
+      "git_blob_sha": "0c82bedc5bfe8fc72910ddfba74220237044ac59"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_2.json",
+      "git_blob_sha": "10a8c3e0240c1479cd994c4010c0ea3263d47605"
+    }
+  },
+  "internal_requirements": {
+    "source_local_zero_change": true,
+    "deterministic_replay": true,
+    "source_scope_unchanged": true,
+    "L_evidence_used": false,
+    "third_party_external_verification_complete": false
+  },
+  "routing": {
+    "W_G1_campaign_accepted_under_owner_bypass": true,
+    "joint_G1_campaign_gate_satisfied_with_existing_L_bypass": true,
+    "W_G2_authorized": true,
+    "W_G3_authorized_after_valid_G2": true,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "independently_verified_claim_allowed": false
+  },
+  "L_dependency": {
+    "stage_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_2.json",
+      "git_blob_sha": "2328cdd8aa9cc04e75f25c69fd5c4b37f76990fe"
+    },
+    "semantics_consumed": false,
+    "use": "Only confirms that L remains separately campaign-accepted under the same owner bypass; no L semantic evidence is available to W."
+  },
+  "nonclaims": [
+    "Third-party verification did not pass and is not represented as passed.",
+    "This is not global semantic authority.",
+    "This does not qualify or instantiate primitive 211000.",
+    "This does not authorize recursive W IA or cross-track comparison."
+  ]
+}

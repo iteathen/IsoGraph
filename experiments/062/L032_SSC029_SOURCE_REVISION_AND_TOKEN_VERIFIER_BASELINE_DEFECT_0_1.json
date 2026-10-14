@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-l032-ssc029-verifier-source-revision-label-and-prose-fixture.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SSC029_SOURCE_VERIFIER_BASELINE_FAILED_TWO_PRESENTATION_TOKENS_ZERO_ADVERSARIAL_MUTATIONS_EXECUTED",
+  "run": {
+    "id": 37898129132,
+    "head_sha": "2d6e96a44890a10ed043b29f271be6b4400da3f2",
+    "conclusion": "failure",
+    "source_math_step": "L01 EW pure bivector source verifier PASS 20/20",
+    "source_census_step_errors": [
+      "exact original source, not Sept variant",
+      "source claim bounded same printed source COEFFICIENT matrices"
+    ],
+    "mutation_defined": 23,
+    "mutation_executed": 0
+  },
+  "actual_source": {
+    "frozen_source_revision": "L01 arXiv:0711.0770v1 2007-11-06, printed p10 and p12",
+    "conserved_prose": "Under those exact printed source COEFFICIENT matrices",
+    "uri": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_29.json"
+  },
+  "cause": "Source checker expected abbreviation without printed p10/p12 and a non-source prose fragment `same printed source COEFFICIENT matrices`, whereas SSC has precise version/page and uses `exact printed source COEFFICIENT matrices`. Test blocked at baseline correctly; no source math contradiction follows.",
+  "minimal_repair": "Require full exact original revision with page locations and exact existing source-semantic prose token. Keep all source equations, 191 SI, 190 previous item bytes and no G1. Replay baseline before mutation claims.",
+  "G1_authorized": false,
+  "external_review_passed": false
+}

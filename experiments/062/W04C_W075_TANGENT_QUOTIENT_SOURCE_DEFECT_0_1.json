@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-w04c-w075-left-factor-quotient-overreach-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_G0_SOURCE_ROLE_CONFLATION_W075",
+  "source": {
+    "id": "W04c",
+    "author": "Peter Woit",
+    "frozen_source": "W04c March 10, 2026 original author blog post",
+    "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15620",
+    "source_role_line": 25,
+    "source_bundle_line": 29,
+    "verbatim_source_role": "The SL(2,C)_R is what acts on the CP1s that describe points. The SL(2,C)_L locally acts on the tangent space to the space parametrizing the CP1s.",
+    "separate_bundle_claim": "Above CP3 there’s a canonical line bundle and a three complex dimensional quotient bundle, with a U(1)×U(3) local symmetry.",
+    "source_revision_identity": "CURRENT_AUTHOR_POST_VISUALLY_READ_NOT_BYTE_IDENTICAL_TO_2026_10_03_FROZEN_RETRIEVAL"
+  },
+  "prior": {
+    "source_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_16.json",
+    "source_blob": "34be22f77f84e9f40c9a9d7c92a7eab76b4e7d03",
+    "census_id": "W-SSC-075",
+    "prior_body": "In the revised W04c role assignment SL(2,C)_R acts on the twistor CP1 point data while the left factor acts on tangent/quotient data; after the Wick-rotation choice an SU(2)_L role is interpreted internally."
+  },
+  "defect": "The current W075 text 'left factor acts on tangent/quotient data' merges the source's SL2C_L tangent-space role with a separate rank-three quotient-bundle description, for which W04c does not assert an SL2C_L action.",
+  "earliest_affected_stage": "G0_ASSERTION_SOURCE_ROLE_INCIDENTS",
+  "repair": {
+    "replace_exact": "left factor acts on tangent/quotient data",
+    "with_exact": "left factor acts on the tangent space to the space parametrizing the CP1s",
+    "keep_w077_rank_three_quotient_separate": true,
+    "change_only_id": "W-SSC-075",
+    "source_scope_expansion": false
+  },
+  "negative_evidence": "No source-asserted relation identifying SL2C_L action on the rank-three quotient has been located in W04c's original author post. This records missing provenance, not an author claim of mathematical impossibility.",
+  "dependencies": {
+    "prior_W075_G1_G7": "HISTORICAL_STALE",
+    "historical_86_projection": "W075_NOT_MEMBER_NO_HASH_REPAIR_OR_PROMOTION",
+    "W077": "NOT_MODIFIED",
+    "L": "NOT_ACCESSED"
+  },
+  "provenance": {
+    "author_of_source": "Peter Woit",
+    "project_research_direction": "Joshua Oshiro",
+    "agent_source_audit": "source/factor-role exact W04c original author post comparison",
+    "earliest_evidence_located": "2026-10-08 W04c post lines25 vs29"
+  },
+  "qualifications": {
+    "G0_frozen": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "nine_source_cold_complete": false
+  },
+  "nonclaims": [
+    "No quotient bundle action theorem asserted or denied",
+    "No historical W closure restored",
+    "No hypothesis or W/L bridge introduced"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-drawn-versus-declared-incidence-study.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "UNVALIDATED_RESEARCH_METHOD_AND_SOURCE_SCOPE_INVENTORY",
+  "object": "L01-S004 — original Figure 1 drawn glyph and connector incidence vs accompanying prose assertions",
+  "original": {
+    "source": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "PDF_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "bytes": 623525,
+    "pages": 31,
+    "pdf_page_zero_based": 2,
+    "printed_page": 2,
+    "caption": "A periodic table of the standard model.",
+    "original_rendered_page_sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "render_width": 816,
+    "render_height": 1056,
+    "source_verified_prior_CI": 38279423956,
+    "not_rechecked_binary_in_this_study": true
+  },
+  "frozen_earlier_evidence": {
+    "current_candidate": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ORIGINAL_FIG1_SM_PERIODIC_TABLE_SOURCE_CANDIDATE_G0_0_2.json",
+      "git_blob_sha": "2f38cc22709cfd9c92d0aca2997390da03a06767"
+    },
+    "source_first": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "SSC": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "convergence": {
+      "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_ORIGINAL_FINITE_SOURCE_FIRST_CONVERGENCE_0_51.json",
+      "git_blob_sha": "480b374f7bae67be3efcb7b4c54569cf53002f0c"
+    },
+    "traversal": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_68.json",
+      "git_blob_sha": "b1da59f119a5c037c0106195cbef8325bd9eb83a"
+    },
+    "G0_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_189.json",
+      "git_blob_sha": "16e7d3a9d89031e6d45201dff6fef033b478e8f5"
+    },
+    "scoped_CI_success": {
+      "run_id": 38279423956,
+      "hostiles_defined": 26,
+      "hostiles_rejected": 26,
+      "external_validation": false,
+      "independent_raster_glyph_decoding": false
+    },
+    "historical_failure": {
+      "run_id": 38279072465,
+      "conclusion": "failure",
+      "hostiles_defined": 23,
+      "hostiles_rejected": 22,
+      "escaped_mutation": "alter_unrelated_SSC",
+      "not_reclassified": true
+    }
+  },
+  "source_visual_inventory_candidate": {
+    "visible_grid": {
+      "rows": 4,
+      "columns": 4,
+      "cell_count": 16,
+      "generation_glyph_placements": 48,
+      "one_printed_hypercharge_per_cell": true,
+      "printed_Y_values": 16
+    },
+    "original_field_marker_symbols": [
+      "W",
+      "ω",
+      "e",
+      "φ",
+      "B",
+      "g"
+    ],
+    "marker_group_roles": [
+      "electroweak W",
+      "gravitational spin connection ω",
+      "frame e + Higgs φ",
+      "hypercharge B",
+      "strong g"
+    ],
+    "observation": "Field-marker roundels/boxes and several connecting strokes are visibly placed to the left of the 4×4 table; g is drawn below the quark-color columns. This observation by itself is NOT an exact endpoint, crossing, object membership, or six-to-four-columns adjacency map.",
+    "direct_field_stroke_graph_status": "UNKNOWN_NOT_QUALIFIED",
+    "all_48_glyph_positions_from_frozen_candidate_not_redecoded_in_this_study": true,
+    "source_viewed_as_visual": "frozen author PDF page index2 raster; no newly persisted independent pixel-level semantic oracle"
+  },
+  "source_prose_relations_separate": [
+    {
+      "role": "W",
+      "relation": "acts on doublets of left-chiral fermions",
+      "source_class": "AUTHOR_PROSE_NOT_DRAWN_EDGE"
+    },
+    {
+      "role": "g",
+      "relation": "acts on triplets of red/green/blue quarks",
+      "source_class": "AUTHOR_PROSE_NOT_DRAWN_EDGE"
+    },
+    {
+      "role": "B",
+      "relation": "acts on all fermion hypercharge assignments",
+      "source_class": "AUTHOR_PROSE_NOT_DRAWN_EDGE"
+    },
+    {
+      "role": "ω",
+      "relation": "acts on frame and left/right chiral fermions",
+      "source_class": "AUTHOR_PROSE_NOT_DRAWN_EDGE"
+    },
+    {
+      "role": "e_φ",
+      "relation": "frame combined with Higgs multiplet and involved in interaction/generation of mass",
+      "source_class": "AUTHOR_PROSE_WITH_MODEL_SCOPE_NOT_DRAWN_EDGE"
+    }
+  ],
+  "hypothesis_comparison": [
+    {
+      "id": "A",
+      "method": "derive drawn incidence directly from author prose",
+      "source_fidelity": "FAIL_CONFUNDS_PROSE_AND_STROKE",
+      "verification_cost": "LOW",
+      "disposition": "REJECT_AS_SOURCE_EXACT_ORACLE"
+    },
+    {
+      "id": "B",
+      "method": "raster segmentation; group color/glyph bounding boxes and trace each continuous black stroke",
+      "source_fidelity": "POTENTIALLY_HIGH",
+      "verification_cost": "MEDIUM",
+      "disposition": "RETAIN_FOR_SOURCE_PIXEL_OBSERVATION",
+      "failure_modes": [
+        "line crossings",
+        "clipped vertices",
+        "shared table borders",
+        "anti-aliased connections"
+      ]
+    },
+    {
+      "id": "C",
+      "method": "decompose frozen PDF source page vector commands into clipped polylines/segments with affine transforms",
+      "source_fidelity": "POTENTIALLY_HIGH",
+      "verification_cost": "MEDIUM_HIGH",
+      "disposition": "PREFERRED_GEOMETRY_CANDIDATE_IF_VECTOR_EXISTS",
+      "failure_modes": [
+        "path expansion from embedded artwork",
+        "font outlines read as paths",
+        "overlapping strokes",
+        "line crossing not node incidence"
+      ]
+    },
+    {
+      "id": "D",
+      "method": "independent image-only visual tracing of each connector with uncertainty marks",
+      "source_fidelity": "SOURCE_DIRECT_BUT_REVIEWER_DEPENDENT",
+      "verification_cost": "MEDIUM",
+      "disposition": "SECOND_MODALITY_CONFIRMATION_CANDIDATE",
+      "failure_modes": [
+        "poor zoom",
+        "visual grouping bias"
+      ]
+    }
+  ],
+  "selected_workflow": "Treat source prose and drawn graph as two independent, reversible evidence ledgers. Build C exact vector-path candidate if source vectors survive extraction, cross-check with B raster line trace, then a fresh D blind review; only merge identical endpoints/relations supported across representations. Preserve unresolved glyphs/crossings as open, not guess edges.",
+  "falsifiers": [
+    "Any claimed drawn edge whose exact stroke endpoint cannot be located in frozen source geometry",
+    "Any textual action claim represented as a source-drawn edge solely because the author's prose mentions it",
+    "Any junction claimed at a mere crossing without source dot/endpoint evidence",
+    "Any inferred g connector added because quarks have color even if no ink path supports it",
+    "Any failure to recover 48 source glyph placements, all 16 hypercharges, or all six visible symbols",
+    "Any relabeling of author's drawn right-handed neutrino as experimental detection",
+    "Any suppression of the early failed source CI or unearned G0/SSC freeze"
+  ],
+  "next_qualification": "Generate frozen-source vector+raster trace packet with exact page hash/transform and explicit path-to-role reversible crosswalk, independent glyph read and adversarial mutation controls. If vector carrier absent, preserve failure and constrain to raster-only scoped review. Do not edit L01 inverse/SSC before qualifying drawn edges.",
+  "stage_conservation": {
+    "SSC_revision": "0.96",
+    "SSC_IDs": 191,
+    "source_groups": 350,
+    "L01_original_locations": 98,
+    "L01_unqualified_original_visual_groups": 16,
+    "L01_S004_disposition": "ORIGINAL_TABLE_FIGURE_OR_MATRIX_EXACT_CELLS_UNVERIFIED",
+    "whole_source_cold_complete": 0,
+    "source_SSC_changed": false,
+    "source_inverse_changed": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

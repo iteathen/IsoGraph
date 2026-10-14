@@ -1,0 +1,205 @@
+{
+  "schema": "isograph.exp062-w01-21-22-independent-source-oracle.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "source": {
+    "revision": "arXiv:2104.05099v2",
+    "location": "§1 printed p.3; §§2.1–2.2 printed pp.3–5",
+    "pdf": "https://arxiv.org/pdf/2104.05099v2",
+    "visual_check": "PDF_IMAGES_FOR_PAGES_3_4_5_INSPECTED",
+    "author_copy_sha256": "NOT_ESTABLISHED"
+  },
+  "status": "NINE_SOURCE_LOCAL_INCIDENCES_FOR_ONLY_W005_W027_W028",
+  "source_items": [
+    "W-SSC-005",
+    "W-SSC-027",
+    "W-SSC-028"
+  ],
+  "incidence_count": 9,
+  "claims": {
+    "W-SSC-005": [
+      {
+        "id": "W01-005-Q-01",
+        "source_id": "W01",
+        "section": "§1",
+        "printed_page": 3,
+        "kind": "SOURCE_DISPLAYED_HOMOGENEOUS_QUOTIENT_PRESENTATION",
+        "lhs": "CP3",
+        "operator": "SOURCE_PRINTED_EQUALITY",
+        "rhs": {
+          "numerator": "SU(4)",
+          "denominator": {
+            "operator": "SOURCE_PRINTED_DIRECT_PRODUCT",
+            "factors": [
+              "U(1)",
+              "SU(3)"
+            ]
+          }
+        },
+        "source_latex": "\\mathbf{CP}^{3}=\\frac{SU(4)}{U(1)\\times SU(3)}",
+        "source_modality": "AUTHOR_PRINTED_SOURCE_GEOMETRY_NOT_NEWLY_QUALIFIED_GROUP_QUOTIENT",
+        "negative_guard": "Preserve author's printed U(1)×SU(3); do not substitute S(U(1)×U(3)) or assume the quotient representation has been mathematically qualified."
+      },
+      {
+        "id": "W01-005-H-02",
+        "source_id": "W01",
+        "section": "§1",
+        "printed_page": 3,
+        "kind": "SOURCE_ROLE_AND_MODALITY_CLAIM",
+        "subject": "lifted imaginary-time tangent vector from Euclidean spacetime to PT",
+        "acting_source_group": {
+          "operator": "PRODUCT",
+          "factors": [
+            "U(1)",
+            "SU(2)"
+          ]
+        },
+        "target": "HIGGS_DEGREE_OF_FREEDOM",
+        "author_relation": "ACTS_IN_THE_SAME_WAY_AS_STANDARD_MODEL_ELECTROWEAK_ON_HIGGS",
+        "source_literal": "internal U(1) × SU(2) acts on this degree of freedom in the same way the Standard Model electroweak symmetry acts on the Higgs field",
+        "negative_guard": "U(1)×SU(2) in this sentence is not the U(1)×SU(3) quotient denominator, nor a proved completed Standard Model field theory."
+      }
+    ],
+    "W-SSC-027": [
+      {
+        "id": "W01-027-E-01",
+        "source_id": "W01",
+        "section": "§2.1",
+        "printed_page": 3,
+        "kind": "SOURCE_EUCLIDEAN_SPIN_LIFT_ACTION",
+        "carrier": "E4_SUBSPACE_M2C",
+        "input": "x",
+        "acting_group": "SU(2)_L TIMES SU(2)_R",
+        "ordered_factors": [
+          "g_L",
+          "x",
+          "INVERSE(g_R)"
+        ],
+        "source_latex": "x\\longmapsto g_L xg_R^{-1}",
+        "guard": "g_L and g_R are independent Euclidean Spin(4) factors, not the Minkowski conjugate-coupled action."
+      },
+      {
+        "id": "W01-027-K-02",
+        "source_id": "W01",
+        "section": "§2.1",
+        "printed_page": 4,
+        "kind": "SOURCE_SAME_ROTATION_UNDER_SIMULTANEOUS_SIGN_CHANGE",
+        "lhs_pair": [
+          "g_L",
+          "g_R"
+        ],
+        "rhs_pair": [
+          "-g_L",
+          "-g_R"
+        ],
+        "relation": "SAME_SO4_ROTATION",
+        "source_double_cover": "Spin(4)=SU(2)_L×SU(2)_R is a double cover of SO(4)",
+        "negative_guard": "Source equality of induced rotations is not literal equality of SU(2)×SU(2) group elements; do not normalize pairwise sign changes separately."
+      },
+      {
+        "id": "W01-027-H-03",
+        "source_id": "W01",
+        "section": "§2.1",
+        "printed_page": 4,
+        "kind": "SOURCE_UNIT_QUATERNION_GROUP_ACTION",
+        "source_identification": "SU(2)=Sp(1)=GROUP_OF_UNIT_QUATERNIONS",
+        "factors": [
+          "Sp(1)_L",
+          "Sp(1)_R"
+        ],
+        "action": "INDEPENDENT_LEFT_AND_RIGHT_QUATERNION_MULTIPLICATION",
+        "distinguished_direction": "identity quaternion / identity matrix",
+        "modality": "AUTHOR_SOURCE_REAL_FORM_CONVENTION",
+        "negative_guard": "Do not conflate quaternion x with the distinct Pauli-matrix carrier of W026."
+      }
+    ],
+    "W-SSC-028": [
+      {
+        "id": "W01-028-SPIN-06",
+        "source_id": "W01",
+        "section": "§2.2",
+        "printed_page": 5,
+        "kind": "SOURCE_SPINOR_CARRIER_AND_REAL_FORM_TYPES",
+        "complexified_vector": "Hom(S_R,S_L)",
+        "domain": "S_R",
+        "codomain": "S_L",
+        "split_signature_spinor": "R2_INSTEAD_OF_C2",
+        "Euclidean_spinor": "C2",
+        "Minkowski_spinor": "C2",
+        "source_literal": "In E2,2 one can use R2 instead of C2, while for E4 and E3,1 one needs C2",
+        "negative_guard": "No identity of the signature real forms follows from the common complexification."
+      },
+      {
+        "id": "W01-028-IND-07",
+        "source_id": "W01",
+        "section": "§2.2",
+        "printed_page": 5,
+        "kind": "SOURCE_SIGNATURE_SCOPED_SPINOR_ACTION_DEPENDENCE",
+        "Euclidean": {
+          "left": "SU(2)_L",
+          "right": "SU(2)_R",
+          "relation": "INDEPENDENT"
+        },
+        "Minkowski": {
+          "group": "Spin(3,1)=SL(2,C)",
+          "on_SR": "g",
+          "on_SL": "INVERSE(ADJOINT(g))",
+          "source_latex": "(g^\\dagger)^{-1}"
+        },
+        "modality": "SOURCE_COMPARISON_OF_DIFFERENT_REAL_FORM_ACTIONS",
+        "negative_guard": "Do not use two free Euclidean SU(2) factors to define a Minkowski spinor transformation."
+      },
+      {
+        "id": "W01-028-TW-08",
+        "source_id": "W01",
+        "section": "§2.2",
+        "printed_page": 5,
+        "kind": "SOURCE_TWISTOR_POINT_PLANE_QUOTIENT_AND_TANGENT",
+        "twistor_space": "T=C4",
+        "point": "S_R=C2_SUBSPACE_OF_T",
+        "quotient": "S_L=T/S_R",
+        "tangent": "Hom(S_R,S_L)",
+        "carrier_scope": "AT_THE_SELECTED_TWISTOR_SPACETIME_POINT",
+        "negative_guard": "Quotient S_L is point-relative, not a globally source-identified fixed two-plane complement."
+      },
+      {
+        "id": "W01-028-CF-09",
+        "source_id": "W01",
+        "section": "§2.2",
+        "printed_page": 5,
+        "kind": "SOURCE_COMPLEX_CONFORMAL_ACTION_AND_REAL_COMPACTIFICATION_ASSIGNMENT",
+        "complexified_spacetime": "G_2,4(C)",
+        "acting_complex_group": "SL(4,C)",
+        "source_ordered_real_forms": [
+          {
+            "group": "Spin(5,1)",
+            "real_form": "E4",
+            "compactification": "S4"
+          },
+          {
+            "group": "Spin(4,2)",
+            "real_form": "E3,1",
+            "compactification": "S3×S1"
+          },
+          {
+            "group": "Spin(3,3)",
+            "real_form": "E2,2",
+            "compactification": "G_2,4(R)"
+          }
+        ],
+        "source_modality": "AUTHOR_PRINTED_SUBGROUP_AND_CONFORMAL_ACTION_ASSIGNMENTS",
+        "negative_guard": "Source groups and compactifications are listed in matched order; do not identify different real compactifications or silently replace the source's literal S3×S1."
+      }
+    ]
+  },
+  "roles_negative_evidence": [
+    "Two different U1 products preserved",
+    "SO4 rotation equivalence not spin-group SI equality",
+    "E3,1 left/right spinor not independent",
+    "Local tangent quotient not global fixed complement",
+    "Source group compactifications order and no real-signature collapsing"
+  ],
+  "epistemic_scope": "W01_SOURCE_TRANSCRIPTION_NOT_THEOREM_PROOF",
+  "third_party_review": "BYPASSED_NOT_PASSED"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.semantic-occurrence-census-working-audit.v0.1",
+  "date": "2026-10-06",
+  "status": "PASS_SOURCE_CONSERVATION_AND_LOCATOR_REPRODUCIBILITY_G1_COMPLETENESS_NOT_CLAIMED",
+  "input": {
+    "source_demand_census": "SOURCE_DEMAND_CENSUS_0_1.json",
+    "source_demand_census_blob": "0b1c0e1bb9a742a0c219b0953b77aabe9f90e802",
+    "profile": "SEMANTIC_OCCURRENCE_EXTRACTION_PROFILE_0_1.json"
+  },
+  "checks": {
+    "exact_body_conservation": "PASS_235_OF_235",
+    "track_counts": "PASS_W84_L151",
+    "clause_span_reconstruction": "PASS_327_OF_327",
+    "surface_head_locator_coverage": "PASS_LOCATOR_FOUND_AT_LEAST_ONE_HEAD_IN_327_OF_327_CLAUSES",
+    "candidate_basis_firewall": "PASS",
+    "cross_track_premise_firewall": "PASS",
+    "semantic_occurrence_completeness": "NOT_ESTABLISHED",
+    "argument_role_completeness": "NOT_ESTABLISHED",
+    "G1_fixed_point": "NOT_REACHED"
+  },
+  "counts": {
+    "bodies": 235,
+    "W": 84,
+    "L": 151,
+    "clauses": 327,
+    "surface_relation_head_occurrences": 535,
+    "clauses_with_zero_surface_heads": 0,
+    "clauses_with_one_surface_head": 183,
+    "clauses_with_multiple_surface_heads": 144,
+    "clauses_requiring_semantic_review": 327
+  },
+  "disposition": {
+    "working_census": "ADMISSIBLE_G1_WORKING_EVIDENCE_ONLY",
+    "g1_complete": false,
+    "g2_complete": false,
+    "g3_allowed": false,
+    "g4_allowed": false,
+    "new_primitive_selection_allowed": false,
+    "W_L_reopen_allowed": false
+  },
+  "next_lawful_work": [
+    "Source-locally review every clause and enumerate all load-bearing semantic operation/relation occurrences, including behavior hidden behind named referents when load-bearing.",
+    "Preserve exact spans and explicit argument/result/dependency incidence where stated.",
+    "Mark semantic boundaries that cannot yet be extracted source-faithfully as OCCURRENCE_EXTRACTION_INCOMPLETE.",
+    "Only after a complete audited G1 census may neutral G2 occurrence compilation and exact qualified-Core G3 definability advance."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-original-Table1-Table2-first-CI-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_CI": {
+    "run_id": 38073635148,
+    "job_id": 114275964034,
+    "head_sha": "c0e449c71caad16363469fc97736746225185e72",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38073635148",
+    "status": "completed",
+    "conclusion": "failure"
+  },
+  "original_scope": {
+    "SSC": "SOURCE_SEMANTIC_CENSUS_0_56.json",
+    "source_first": "LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_2.json",
+    "source_packet": "LISI_L04_TABLE1_TABLE2_AND_FIGURES_COLD_G0_0_1.json",
+    "source_count": 53,
+    "existing_L04_SSC_IDs": 34,
+    "original_numbered_Table1_signed_branches": 12,
+    "original_Table2_source_numeric_cells": 64,
+    "remaining_original_exact_G0_groups": 14
+  },
+  "initial_test_outcome": {
+    "baseline_source_evidence_valid": true,
+    "hostiles_defined": 49,
+    "hostiles_rejected": 48,
+    "escaped": [
+      "erase_Source_Table1_SSC"
+    ],
+    "G0_frozen": false,
+    "G1_authorized": false
+  },
+  "root_cause": {
+    "class": "SOURCE_SEMANTIC_BODY_VS_EVIDENCE_POINTER_ORACLE_GAP",
+    "failure": "Verifier checked changed SSC identities, evidence hashes, table values and conservation, but did not independently assert that L-SSC-098 retained its newly load-bearing Table1 coupled sign and Cartan-projection semantics. A hostile replacing that body with generic text passed.",
+    "systemic_repair": "Require source-specific literal body/binder/negative-claim roles for all six changed original-source SSC records, with adversarial controls that remove each representative repaired meaning. Check source actual expression as well as source evidence pointer and identity."
+  },
+  "prior_source_data_rewritten": false,
+  "prior_191_SSC_body_sha_unchanged": true,
+  "source_original_pdf_sha256_qualified": true,
+  "original_failed_result_must_remain_FAILED": true,
+  "successor_CI_status": "NOT_YET_TESTED",
+  "W_track_not_modified": true,
+  "PR70_merge_not_authorized": true
+}

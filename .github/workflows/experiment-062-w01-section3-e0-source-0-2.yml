@@ -1,0 +1,24 @@
+name: Experiment 062 W01 Section 3 e0 source and inverse corrected 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_59.json'
+      - 'experiments/062/tools/verify-w01-section3-e0-source-0-2.mjs'
+      - 'experiments/062/tools/verify-w01-section3-e0-quaternion-0-2.mjs'
+      - 'experiments/062/W01_G0_S3_SOURCE_VERIFIER_NODE_FAILURE_0_1.json'
+      - 'experiments/062/W01_G0_S3_INVERSE_NORMALIZATION_DEFECT_0_1.json'
+      - 'experiments/062/W01_G0_S3_VERIFIER_REPAIR_LOCAL_REPLAY_0_2.json'
+      - '.github/workflows/experiment-062-w01-section3-e0-source-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-section3-e0-source-0-2.mjs
+      - run: node experiments/062/tools/verify-w01-section3-e0-quaternion-0-2.mjs
+      - run: node experiments/062/tools/verify-w-active-g0-stage-0-7.mjs

@@ -1,0 +1,18 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p)),blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex')};
+const e=[],c=(x,m)=>{if(!x)e.push(m)};
+const E=json('experiments/062/W_EXTRACTION_RECONCILED_0_22.json'),F=json('experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_3.json'),R=json('experiments/062/W_G1_OWNER_BYPASS_ROUTING_0_2.json'),B=json('experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json'),G=json('experiments/062/W_CURRENT_STAGE_GATE_0_11.json');
+c(B.status==='OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE','bypass');
+c(F.current_input?.git_blob_sha===blob('experiments/062/W_EXTRACTION_RECONCILED_0_22.json'),'FP input');
+c(F.fixed_point?.source_local_zero_change===true,'zero');
+c(F.counts?.current_occurrences===445,'count');
+c(F.items?.length===84,'coverage');
+c(F.corrected_body_review?.['W-SSC-097']?.occurrence_count===7,'W097 count');
+c(R.pinned_inputs?.fixed_point?.git_blob_sha===blob('experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_3.json'),'routing FP');
+c(R.routing?.W_G2_authorized===true&&R.routing?.independently_verified_claim_allowed===false,'routing');
+c(G.current_G1?.bypass_routing?.git_blob_sha===blob('experiments/062/W_G1_OWNER_BYPASS_ROUTING_0_2.json'),'gate pin');
+c(G.current_lawful_state?.G2_authorized===true&&G.current_lawful_state?.G3_authorized===false,'stage');
+const w=E.items.find(x=>x.census_id==='W-SSC-097');
+c(w?.occurrences.find(o=>o.occurrence_id==='W-SSC-097-O04')?.depends_on?.[0]==='W-SSC-097-O06','dependency');
+console.log(JSON.stringify({schema:'isograph.exp062-w-g1-w097-fixed-point-verifier.v0.1',pass:!e.length,errors:e,occurrences:445,G2_authorized:G.current_lawful_state?.G2_authorized},null,2));
+if(e.length)process.exitCode=1;

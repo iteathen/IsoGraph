@@ -1,0 +1,115 @@
+{
+  "schema": "isograph.exp062-w05-s53-simpson-deligne-primary-source-node-ci-evidence.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "EXACT_W05_SOURCE0_37_POSITIVE_AND_39_OF_39_HOSTILE_CONTROLS_PASS_ONLY",
+  "original_primary_source": {
+    "id": "W05",
+    "revision": "arXiv:2202.02657v2",
+    "section": "§5.3",
+    "printed_pdf_page": 8,
+    "pdf_index": 7,
+    "source_first_HTML_lines": [
+      212,
+      219
+    ],
+    "author": "Peter Woit"
+  },
+  "verified_GitHub_Actions": {
+    "run_id": 37977208937,
+    "job_id": 113978397923,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37977208937",
+    "head_sha": "bd13e9b49f0a73b7f729b3e7df1e8c35b5814668",
+    "conclusion": "success",
+    "positive_pass": true,
+    "positive_errors": [],
+    "new_scope_hostile_total": 39,
+    "new_scope_rejected": 39,
+    "new_scope_escaped": 0,
+    "new_scope_crashed": 0,
+    "node": "26.7.0",
+    "runner": "ubuntu-24.04",
+    "successful_steps": [
+      {
+        "step": "node experiments/062/tools/verify-w05-s53-source-origin-g0-0-1.mjs",
+        "conclusion": "success",
+        "baseline": "PASS",
+        "hostile_rejected": "39/39"
+      },
+      {
+        "step": "node experiments/062/tools/verify-w02-s43-mixed-curvature-source-g0-0-4.mjs",
+        "conclusion": "success",
+        "baseline": "PASS",
+        "hostile_rejected": "52/52",
+        "input_semantic_scope": "HISTORICAL_SSC0_36_ONLY"
+      }
+    ]
+  },
+  "source_inputs": {
+    "census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_37.json",
+      "git_blob_sha": "7ff385d7194cb98faa71119eb51545cce1da41e1",
+      "source_items": 151,
+      "typed_incidences": 330
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_23.json",
+      "git_blob_sha": "1e977b5d9285c2df0e23b3d113d0aaeef1fe2155"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_22.json",
+      "git_blob_sha": "2874adbd70adac2858cef3e4c00b8d97a9ea4a3d"
+    },
+    "historical86": {
+      "path": "experiments/062/W_G0_W05_S53_SOURCE_DEMAND_PROJECTION_0_21.json",
+      "git_blob_sha": "7920016c19aede43dd81287761793ee331cb5955",
+      "qualification": false
+    },
+    "source_oracle": {
+      "path": "experiments/062/W05_G0_S53_NONABELIAN_HODGE_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "5ff946f6152818171fb3e9751895317dc671f4ae"
+    },
+    "source_defect": {
+      "path": "experiments/062/W05_G0_S53_SIMPSON_DELIGNE_SOURCE_DEFECT_0_1.json",
+      "git_blob_sha": "f566b683ce0545142490c73b6aa60e7d30afbed8"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w05-s53-source-origin-g0-0-1.mjs",
+      "git_blob_sha": "41670f100259ebe7045eeb8ab396445118c79eb5"
+    },
+    "stage_gate_at_run": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_77.json",
+      "git_blob_sha": "e1a3e6fa0ce3377a16e81634515c864e12a06326"
+    },
+    "oct03_audit": {
+      "path": "experiments/062/W_G0_OCT03_HISTORICAL_TREE_ARTIFACT_RECOVERY_0_2.json",
+      "git_blob_sha": "e8e34ef6f6d117adeffa1ff3b17a7a0668dc9a5c"
+    }
+  },
+  "failure_provenance": {
+    "W02_v01_positive_fail_run": 37973537552,
+    "W02_v02_positive_fail_run": 37973892281,
+    "W02_v03_mutation_escape_run": 37974415601,
+    "none_retroactively_counted_as_qualified": true
+  },
+  "qualification_limits": {
+    "W05_source_first_s53_only": true,
+    "all_original_nine_source_full_reverse_complete": false,
+    "all_151_semantic_demand_memberships_requalified": false,
+    "oct03_W03_W04_mutable_source_byte_identity_verified": false,
+    "G0_open": true,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "original_author_frozen_corpus_changed": false,
+    "third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "cross_track_synthesis_authorized": false
+  },
+  "resource_notes": {
+    "this_revision_Node_runs": 1,
+    "external_semantic_model_calls": 0,
+    "third_party_cold_verifier_calls": 0,
+    "hostile_controls_batched_into_single_job": true
+  }
+}

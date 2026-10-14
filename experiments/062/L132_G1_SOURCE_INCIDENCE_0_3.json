@@ -1,0 +1,474 @@
+{
+  "schema": "isograph.exp062-l132-g1-source-incidence.v0.3",
+  "date": "2026-10-08",
+  "status": "L132_G1_REPLAY_SOURCE_COMPLETE_CANDIDATE_WITH_FIVE_RESTORED_GROUP_AND_GENERATOR_OCCURRENCES",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "b45bf4fdcfeed9a2834e887818a3bb982d363862",
+  "audit": {
+    "path": "experiments/062/L132_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_3.json",
+    "git_blob_sha": "6a8e4892c41b01e4934c5ca47d912a275cc2e1a3"
+  },
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_LIE_ALGEBRA_SOURCE_INSTANCE_0_1.isg",
+      "git_blob_sha": "c636288092d3ac1afa1dec4238ec9214d1fc1f26"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_ROTATION_AUTOMORPHISM_DISTINCTION_0_1.isg",
+      "git_blob_sha": "88684c8af094faf45c50c5948c694fbbd4433deb"
+    }
+  ],
+  "source_provenance": "L05 §3 triality transformation and Lie-algebra table",
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-132-R01",
+      "source_reversible_reference": "L05 transformation-category distinction",
+      "source_span": "multiplication automorphism, ordinary rotation, and nonrotation triality are represented as distinct source roles",
+      "relation_span": "transformation-role distinction",
+      "argument_spans": [
+        "automorphism category",
+        "rotation category",
+        "triality category"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Category atoms are distinct; no set-disjointness claim.",
+      "formula_ast": {
+        "op": "PAIRWISE_CATEGORY_NONIDENTITY",
+        "args": [
+          "AutRole",
+          "RotationRole",
+          "TrialityRole"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R02",
+      "source_reversible_reference": "L05 automorphism source instance",
+      "source_span": "multiplication automorphism is a linear bijection fixing unit and preserving product and norm",
+      "relation_span": "composition-unit automorphism",
+      "argument_spans": [
+        "coefficient carrier",
+        "product",
+        "unit",
+        "norm",
+        "linear bijection"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Exact structural content of source Aut(D) label.",
+      "formula_ast": {
+        "op": "UNIT_PRODUCT_NORM_AUTOMORPHISM",
+        "args": [
+          "carrier",
+          "product",
+          "unit",
+          "Q",
+          "map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R03",
+      "source_reversible_reference": "L05 rotation distinction via closed L131",
+      "source_span": "ordinary rotation is a same-type even generalized-reflection composition with identity role permutation",
+      "relation_span": "same-type rotation class",
+      "argument_spans": [
+        "same reflection type",
+        "T-preserving composition",
+        "identity role permutation"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Name reduced to closed L131 structural behavior.",
+      "formula_ast": {
+        "op": "STRUCTURAL_CLASS",
+        "args": [
+          "same-type",
+          "T-invariant",
+          "identity-role-map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R04",
+      "source_reversible_reference": "L05 triality distinction via closed L131",
+      "source_span": "nonrotation triality is a different-type even generalized-reflection composition with nontrivial order-three role permutation",
+      "relation_span": "different-type triality class",
+      "argument_spans": [
+        "different reflection types",
+        "T-preserving composition",
+        "order-three role permutation"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Name reduced to closed L131 structural behavior.",
+      "formula_ast": {
+        "op": "STRUCTURAL_CLASS",
+        "args": [
+          "different-type",
+          "T-invariant",
+          "order-three-role-map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R05",
+      "source_reversible_reference": "L05 triality Lie table C/Cprime",
+      "source_span": "C and Cprime triality Lie carriers are separate direct sums of two one-dimensional abelian Lie factors",
+      "relation_span": "two-factor 1D abelian Lie presentation",
+      "argument_spans": [
+        "C carrier",
+        "Cprime carrier",
+        "factor A",
+        "factor B",
+        "direct-sum injections",
+        "zero cross bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Same reduced shape does not identify the two source carriers.",
+      "formula_ast": {
+        "op": "TWO_FACTOR_1D_ABELIAN_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "factor1",
+          "factor2"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R06",
+      "source_reversible_reference": "L05 triality Lie table H",
+      "source_span": "H triality Lie carrier is a direct sum of three compact-type three-dimensional Lie factors",
+      "relation_span": "three-factor compact 3D Lie presentation",
+      "argument_spans": [
+        "H triality carrier",
+        "three 3D factors",
+        "factor brackets",
+        "direct-sum injections"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Compact-type factor behavior must be represented, not inferred from su(2) name.",
+      "formula_ast": {
+        "op": "THREE_FACTOR_COMPACT_3D_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "A",
+          "B",
+          "D"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R07",
+      "source_reversible_reference": "L05 triality Lie table Hprime",
+      "source_span": "Hprime triality Lie carrier is a direct sum of three split three-dimensional Lie factors",
+      "relation_span": "three-factor split 3D Lie presentation",
+      "argument_spans": [
+        "Hprime triality carrier",
+        "three split 3D factors",
+        "factor brackets",
+        "direct-sum injections"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Split bracket table must be represented, not inferred from sl2 name.",
+      "formula_ast": {
+        "op": "THREE_FACTOR_SPLIT_3D_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "A",
+          "B",
+          "D"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R08",
+      "source_reversible_reference": "L05 triality Lie table O",
+      "source_span": "O triality Lie carrier is all metric-skew endomorphisms of the positive eight-dimensional coefficient space",
+      "relation_span": "positive-form metric-skew Lie carrier",
+      "argument_spans": [
+        "O coefficient space",
+        "positive metric",
+        "endomorphism carrier",
+        "commutator bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Can reuse exact current metric-skew Lie authority.",
+      "formula_ast": {
+        "op": "FULL_METRIC_SKEW_LIE",
+        "args": [
+          "O-space",
+          "B",
+          "endomorphisms"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R09",
+      "source_reversible_reference": "L05 triality Lie table Oprime",
+      "source_span": "Oprime triality Lie carrier is all metric-skew endomorphisms of the split (4,4) coefficient space",
+      "relation_span": "split-form metric-skew Lie carrier",
+      "argument_spans": [
+        "Oprime coefficient space",
+        "split metric",
+        "endomorphism carrier",
+        "commutator bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Can reuse exact current metric-skew Lie authority; no so(4,4) name required.",
+      "formula_ast": {
+        "op": "FULL_METRIC_SKEW_LIE",
+        "args": [
+          "Oprime-space",
+          "B",
+          "endomorphisms"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R10",
+      "source_reversible_reference": "L05 source-carrier/role distinction guard",
+      "source_span": "C/Cprime carriers remain separate despite same reduced shape; transformation categories are distinct roles without pairwise-set-disjointness claim",
+      "relation_span": "source distinction guard",
+      "argument_spans": [
+        "source carrier identity",
+        "reduced structural shape",
+        "category role identity"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-132-R01",
+        "L-SSC-132-R05"
+      ],
+      "load_bearing_note": "Prevents structural reduction from collapsing source identities.",
+      "formula_ast": {
+        "op": "PRESERVE_SOURCE_IDENTITY_WITH_SHARED_SHAPE",
+        "args": [
+          "carriers",
+          "shape",
+          "categories"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R11",
+      "source_reversible_reference": "L05 §3, triality-group action after equation (6)",
+      "source_span": "For every declared triality-group transformation r, the source gives a three-role linear action (v,psi,chi) to (v',psi',chi') preserving T(v',psi',chi') = T(v,psi,chi).",
+      "relation_span": "triality-group typed linear action and simultaneous T invariance",
+      "argument_spans": [
+        "coefficient family D",
+        "Tri(D) group-carrier referent",
+        "element r and membership",
+        "vector role v and transformed vprime",
+        "negative-spinor role psi and transformed psiprime",
+        "positive-spinor role chi and transformed chiprime",
+        "linear action",
+        "trilinear T",
+        "equality of before and after scalar values"
+      ],
+      "logical_force": "UNIVERSAL_ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "A source group action/equality is not reconstructed by category atoms or individual L131 reflection examples. No unsupported converse/all-and-only claim.",
+      "formula_ast": {
+        "op": "SOURCE_TYPED_THREE_ROLE_LINEAR_T_PRESERVATION",
+        "args": [
+          "D",
+          "TriCarrier",
+          "r",
+          "V",
+          "M",
+          "P",
+          "actV",
+          "actM",
+          "actP",
+          "T",
+          "equals"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R12",
+      "source_reversible_reference": "L05 §3 paragraph after generalized rotations, before infinitesimal triality equation",
+      "source_span": "The triality group contains rotations and triality automorphisms as transformations.",
+      "relation_span": "two source subgroup/class inclusion incidences in triality group",
+      "argument_spans": [
+        "Tri(D) transformation carrier",
+        "ordinary-rotation transformation class",
+        "triality-automorphism transformation class",
+        "membership/inclusion direction"
+      ],
+      "logical_force": "INCLUSION_ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-132-R03",
+        "L-SSC-132-R04",
+        "L-SSC-132-R11"
+      ],
+      "load_bearing_note": "Distinct category-role atoms alone do not imply set inclusion; inclusion direction must be preserved without assuming disjoint transformation sets.",
+      "formula_ast": {
+        "op": "SOURCE_TWO_INCLUSIONS_IN_TRIALITY_CARRIER",
+        "args": [
+          "RotationClass",
+          "TriAutomorphismClass",
+          "TriCarrier"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R13",
+      "source_reversible_reference": "L05 §3 infinitesimal triality equation and Lie algebra of triality group",
+      "source_span": "The triality algebra tri(D) is the Lie algebra of Tri(D); each stated infinitesimal three-role generator R obeys T(Rv,psi,chi)+T(v,Rpsi,chi)+T(v,psi,Rchi)=0.",
+      "relation_span": "triality Lie/carrier link and 3-term infinitesimal T-invariance condition",
+      "argument_spans": [
+        "Tri(D) transformation carrier",
+        "tri(D) Lie carrier",
+        "infinitesimal generator R",
+        "three role actions Rv,Rpsi,Rchi",
+        "trilinear T",
+        "three summands with ordered role positions",
+        "source real scalar addition",
+        "zero"
+      ],
+      "logical_force": "UNIVERSAL_ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-132-R08",
+        "L-SSC-132-R09",
+        "L-SSC-132-R11"
+      ],
+      "load_bearing_note": "The Lie algebra bracket table alone cannot imply the displayed three-term equation or the Lie-group relation; do not import integration/classification.",
+      "formula_ast": {
+        "op": "SOURCE_LIE_GROUP_GENERATOR_T_CANCELLATION",
+        "args": [
+          "TriCarrier",
+          "triLieCarrier",
+          "R",
+          "actV",
+          "actM",
+          "actP",
+          "T",
+          "scalarAdd",
+          "zero"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R14",
+      "source_reversible_reference": "L05 §3 bivector generator B action and calculation immediately after the infinitesimal T equation",
+      "source_span": "A source Clifford-bivector generator with chiral blocks B_m and B_p acts on the vector and two spinor roles by displayed half-scaled block formulas; the source explicitly verifies the three T derivative terms cancel using the conjugation relation for B_p.",
+      "relation_span": "explicit bivector three-role generator action and cancellation witness",
+      "argument_spans": [
+        "bivector B with blocks B_m,B_p",
+        "vector chiral blocks v_m,v_p",
+        "half-scaling and ordered matrix products",
+        "negative-spinor psi and B_m action",
+        "positive-spinor chi and B_p action",
+        "B_p conjugation sign",
+        "T-sum cancellation result"
+      ],
+      "logical_force": "EXPLICIT_SOURCE_WITNESS",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-132-R13"
+      ],
+      "load_bearing_note": "A generic metric-skew Lie table does not substitute for this source role-resolved generator formula or the ordered-term cancellation.",
+      "formula_ast": {
+        "op": "SOURCE_CHIRAL_BIVECTOR_GENERATOR_AND_T_WITNESS",
+        "args": [
+          "B_m",
+          "B_p",
+          "v_m",
+          "v_p",
+          "psi",
+          "chi",
+          "half",
+          "orderedProducts",
+          "barB_p",
+          "T",
+          "zero"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R15",
+      "source_reversible_reference": "L-SSC-132 frozen body group distinction, L05 §9 source automorphism-group paragraph separately censused as L-SSC-153",
+      "source_span": "The frozen L132 distinction names the multiplication-automorphism group, not an isolated predicate for one map. The fuller source later describes automorphism maps as a group and relates their multiplication-preserving action to the triality group.",
+      "relation_span": "group-operation and subgroup-dependency boundary for automorphism transformations",
+      "argument_spans": [
+        "Aut(D) source transformation collection",
+        "member satisfying multiplication/unit/norm map behavior",
+        "identity",
+        "map composition",
+        "map inverse",
+        "Tri(D) source group",
+        "later L-SSC-153 source dependency"
+      ],
+      "logical_force": "SOURCE_GROUP_NOUN_WITH_LATER_EXPLICIT_RELATION",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-132-R02",
+        "L-SSC-132-R11"
+      ],
+      "load_bearing_note": "No group ontology or Aut(D) subgroup theorem is declared closed merely from 187701. The L153 evidence is preserved as a prospective L-local dependency, not silently consumed.",
+      "formula_ast": {
+        "op": "SOURCE_AUTOMORPHISM_GROUP_OPERATION_BOUNDARY",
+        "args": [
+          "AutCarrier",
+          "automorphismMember",
+          "identity",
+          "composition",
+          "inverse",
+          "TriCarrier",
+          "laterL153"
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 15,
+    "unchanged_predecessor_occurrences": 10,
+    "restored_occurrences": 5
+  },
+  "next_stage": "TARGETED_G2_NEUTRAL_SUBGRAPH_REPLAY_0_3",
+  "predecessor": {
+    "path": "experiments/062/L132_G1_SOURCE_INCIDENCE_0_2.json",
+    "git_blob_sha": "264ad937bae619fc458d23186a707b5f923c3880",
+    "status": "INCOMPLETE_SOURCE_SEMANTIC_CENSUS"
+  },
+  "replay_invariance": {
+    "ten_old_source_occurrences_unchanged": true,
+    "source_semantic_census_expanded_to_restore_omissions": true,
+    "global_L_SSC_scope_unchanged": true
+  },
+  "defect": {
+    "path": "experiments/062/L132_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "b5b3e2b1c7a040950054c6b67b5569ef6bcce34f"
+  },
+  "nonclaims": [
+    "Source occurrences are not qualification or group-theory authority.",
+    "No late L153 proposition is treated as closed authority.",
+    "No W/synthesis evidence used."
+  ]
+}

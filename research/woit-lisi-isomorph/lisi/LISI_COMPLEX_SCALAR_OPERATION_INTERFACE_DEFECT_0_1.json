@@ -1,0 +1,44 @@
+{
+  "schema": "woit-lisi.lisi-complex-scalar-operation-interface-defect.v0.1",
+  "date": "2026-10-05",
+  "status": "NATIVE_INTERFACE_DEFECT_CORRECTED_BY_SUCCESSOR",
+  "affected_predecessor": "LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_1.isg",
+  "successor": "LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_2.isg",
+  "source_documentation": "LISI_BT01_PAULI_MATRIX_SOURCE_INSTANCE_0_1.md",
+  "defect": {
+    "field_schema_assignment": {
+      "add": 198101,
+      "multiply": 198102,
+      "negate": 198103,
+      "inverse": 198104,
+      "zero": 198105,
+      "one": 198106
+    },
+    "malformed_predecessor_facts": [
+      "198103(i,i,-1)",
+      "198103(198104,1,-1)",
+      "198103(1,198104,-1)",
+      "198103(198104,i,-i)"
+    ],
+    "explanation": "The predecessor used the negation relation handle 198103 as a ternary multiplication-like relation and used the inverse relation handle 198104 as if it were a scalar in three malformed facts. No explicit multiplication facts were stated under 198102."
+  },
+  "corrected_successor_facts": [
+    "i, -1, -i are explicit members of the complex scalar carrier",
+    "198102(i,i,-1)",
+    "198103(1,-1)",
+    "198103(i,-i)",
+    "198104(i,-i)"
+  ],
+  "downstream_scope": {
+    "directly_affected_closed_item": "L-SSC-130",
+    "transitively_dependent_closed_items": [
+      "L-SSC-131",
+      "L-SSC-132",
+      "L-SSC-134"
+    ],
+    "action": "rebuild L130 dependency graph against source successor 0.2 and revalidate downstream closed bodies before further real-form closure"
+  },
+  "source_semantics_changed": false,
+  "qualification_bytes_changed": true,
+  "no_source_repair_claim": "This fixes an IsoGraph native-interface encoding defect; it does not alter L05 source claims."
+}

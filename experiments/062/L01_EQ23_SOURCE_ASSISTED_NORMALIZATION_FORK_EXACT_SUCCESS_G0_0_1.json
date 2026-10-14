@@ -1,0 +1,207 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.eq23-normalization-fork-source-assisted-exact-comparison.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "SOURCE_FIDELITY_UNCHANGED__EXACT_MATHEMATICAL_COMPARISON_OF_ORIGINAL_VS_HYPOTHETICAL_RELATIVE_COUPLING",
+  "source": {
+    "original_author": "A. Garrett Lisi",
+    "original_title": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1",
+    "original_pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "source_original_PDF_page_index": 6,
+    "original_equation": "(2.3)",
+    "source_first_locus": "L01-S014",
+    "SSC_owner": "L-SSC-029",
+    "source_assertion": "Author explicitly describes Eq2.3 as a smallest irreducible 7x7 matrix representation of g2 and states that squaring the matrix gives gluon-quark interactions.",
+    "exact_source_49_cell_older_assisted_fixture": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "fixture_git_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "author_source_49_cells_edited": false,
+    "original_source_binary_reacquired_or_hashed_this_batch": false,
+    "original_PDF_page6_visually_inspected_again_via_arxiv": true,
+    "original_pdf_sha256_known_from_prior_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "independent_cold_original_source_cell_verification_done": false,
+    "separately_original_cited_reference": {
+      "title": "Euler angles for G2",
+      "authors": "S. L. Cacciatori et al.",
+      "arxiv_id": "hep-th/0503106v2",
+      "url": "https://arxiv.org/pdf/hep-th/0503106",
+      "original_PDF_pages_zero_based": [
+        4,
+        5
+      ],
+      "note": "Lisi's cited [6] displays independent seven-dimensional G2 generators, including one generator with singlet-row entry magnitude 2 and other off-diagonal entries magnitude 1 under a different basis. This is contextual support for comparing normalization roles, NOT an established source-identical change of basis or original-paper correction."
+    }
+  },
+  "original_vs_parameterized_algebra": {
+    "family_authority": "PROJECT_GENERATED_COMPARISON_NOT_PART_OF_FROZEN_SOURCE",
+    "rescaling_to_integer_source_generator_matrices": {
+      "g3": "source coefficient matrix times -2i",
+      "g8": "times -2i sqrt(3)",
+      "quark_and_antiquark": "times sqrt(2)",
+      "six_offdiagonal_gluons": "unchanged",
+      "role": "invertible complex scalar rescalings preserve original generator spans; not a source real-form identification"
+    },
+    "modification": "In integer-rescaled matrices multiply precisely six entries in row index zero and columns 1-6 that are q or qbar coefficients by common b. Keep source gluon sector, all first-column quark entries and all remaining 7x7 cells fixed. For the original assisted printed matrix b=1.",
+    "symmetric_alternative_equivalence": "For b>0 the comparison is similar to scaling both first-row and first-column quark entries by a=sqrt(b): D=diag(a,1,1,1,1,1,1) gives M_b=D M_(symmetric-a) D^-1. This comparison is not a similarity transformation of the original b=1 model.",
+    "two_cell_exact_ratio_conditional": {
+      "selected": "[Q_r,Q_g] compared with Qbar_b",
+      "commutator_entries_in_integer_units_1based": {
+        "1,2": "2b",
+        "5,6": "-b"
+      },
+      "Qbar_b_entries_1based": {
+        "1,2": "-b",
+        "5,6": "1"
+      },
+      "cross_multiplication_obstruction": "b*(2-b)",
+      "nonzero_coupling_necessary_condition": "b=2",
+      "result_b1": "b*(2-b)=1, nonclosure",
+      "result_b2": "b*(2-b)=0, necessary condition satisfied",
+      "result_b3": "b*(2-b)=-3, nonclosure",
+      "zero_coupling_b0_note": "b=0 also annihilates the selected witness but violates other source required couplings; does not pass full stabilizer test."
+    },
+    "frozen_original_b1": {
+      "source_14_generator_minor": "-2",
+      "invariant_3form_generators_for_comparison_phi": 8,
+      "generators_not_preserving_comparison_phi": [
+        "q_r",
+        "q_g",
+        "q_b",
+        "qbar_r",
+        "qbar_g",
+        "qbar_b"
+      ],
+      "original_91_pair_ordinary_closure_prior_exact_probe": "82/91 inside and 9/91 outside",
+      "source_earlier_full_complex_generated_Lie_closure": "so(7,C), dimension21",
+      "earlier_independent_3form_nonexistence": "exact 35x35 rank certificate",
+      "source_49_cell_original_fixture_immutable": true
+    },
+    "alternative_b2": {
+      "original_14_generator_minor": "-128",
+      "all_14_generator_coefficients_preserve_explicit_phi": true,
+      "phi_nonzero_wedge_triples_zero_based": [
+        [
+          0,
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          4,
+          -1
+        ],
+        [
+          0,
+          5,
+          6,
+          -1
+        ],
+        [
+          1,
+          4,
+          6,
+          -2
+        ],
+        [
+          2,
+          3,
+          5,
+          2
+        ]
+      ],
+      "dimension_of_wedge_3": "35",
+      "full_gl7_invariant_3form_map_shape": [
+        35,
+        49
+      ],
+      "rank_mod_1009": 35,
+      "rank_mod_1013": 35,
+      "exact_rank_over_rationals": 35,
+      "gl7_stabilizer_dimension_over_complex": 14,
+      "stabilizer_isomorphic_to_complex_g2": true,
+      "source_14_generator_comparison_span_equals_full_stabilizer": true,
+      "bracket_pairs_with_phi_invariant": "91 of 91",
+      "independent_SymPy_secondary_check": "Original source integer matrices with only first-row q/qbar coupling b=2 give 14 independent generators; all 91 commutators in span; unique nonzero invariant 3-form with listed coefficients; 35x49 infinitesimal GL7 action rank35.",
+      "b_2_is_an_original_author_correction": false,
+      "all_6_original_source_first_row_cells_changed_in_comparison": true
+    },
+    "alternate_b3": {
+      "source_14_generator_minor": "-1458",
+      "generators_preserving_phi": 8,
+      "two_cell_crossproduct": "-3",
+      "ordinary_commutators_outside_14D_span_in_SymPy": "9 of 91"
+    },
+    "new_evidence_type": "NORMALIZATION_DEPENDENCE_DISCRIMINATOR_NOT_SILENT_PATCH",
+    "no_new_spacetime_dimensions_proved": true,
+    "no_Lie_ideal_or_quotient_proved": true,
+    "source_author_error_proven": false
+  },
+  "mechanical_verification": {
+    "script_path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_normalization_family_0_1.mjs",
+    "script_git_blob_sha": "d3a104262425b7061df142e3b71e180cf893e341",
+    "raw_output_path": "experiments/062/L01_EQ23_NORMALIZATION_FAMILY_EXACT_LOCAL_OUTPUT_0_1.json",
+    "output_git_blob_sha": "d371b778b2ddaf98122281bf38ca95ab6388e132",
+    "test_runtime": "Exact BigInt matrix multiplications, Bareiss exact integer determinant, wedge 3-form actions, two independent finite-prime rank lower-bound checks; exact GitHub script blob executed against exact GitHub input fixture with only Node file input adapted.",
+    "output_compared_and_mathematically_reviewed": true,
+    "negative_controls_defined": 8,
+    "negative_controls_rejected": 8,
+    "original_PDF_downloaded_by_verifier": false,
+    "source_semantics_independent_cold_qualified": false
+  },
+  "competing_explanations": [
+    {
+      "id": "N1",
+      "hypothesis": "The original Eq2.3 coefficient mismatch is caused by source glyph or matrix transcription error.",
+      "status": "OPEN_ONLY_INDEPENDENT_SOURCE_COLD_CAN_SETTLE"
+    },
+    {
+      "id": "N2",
+      "hypothesis": "The original paper contains a relative normalization problem that breaks the intended ordinary 14D G2 representation.",
+      "status": "PROJECT_RESEARCH_CANDIDATE_STRONGLY_SUPPORTED_MATHEMATICALLY_BUT_NOT_SOURCE_AUTHOR_ERROR_QUALIFIED"
+    },
+    {
+      "id": "N3",
+      "hypothesis": "Source-defined Grassmann/graded or constrained field algebra legitimately changes the required relation between printed coefficient matrices.",
+      "status": "OPEN_NEEDS_SOURCE_1_1_PLUS_2_3_OPERAND_AND_BRACKET_TYPING"
+    },
+    {
+      "id": "N4",
+      "hypothesis": "A global similarity transform or a mere uniform rescaling of each original quark variable fixes the printed b=1 model.",
+      "status": "FALSIFIED_FOR_COMPLEX_ORDINARY_MATRIX_LIE_CLOSURE; ORIGINAL_SPAN_INVARIANT"
+    },
+    {
+      "id": "N5",
+      "hypothesis": "Replacing b=1 by b=2 is a source-faithful repair because the new model closes.",
+      "status": "REJECTED_NO_SOURCE_AUTHORITY_FOR_REPLACEMENT"
+    }
+  ],
+  "repair_disposition": "DO_NOT_REPLACE_EQ2_3_OR_SSC_OR_ANY_ORIGINAL_AUTHOR_CLAIM_WITH_B2",
+  "discovery_disposition": "PRESERVE_SOURCE_ORIGINAL_B1_FAILURE_AND_EXPLICIT_G2_COMPATIBLE_B2_COMPARISON_IN_SEPARATE_L_ONLY_LAYER",
+  "governing": {
+    "source_rollback_or_historical_test_status_changed": false,
+    "current_qualified_Core_changed": false,
+    "gate_before": "experiments/062/L_CURRENT_STAGE_GATE_0_205.json",
+    "SSC_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "SSC_items": 191,
+    "six_source_first_groups": 350,
+    "L01_original_locations": 98,
+    "unqualified_L01_exact_visual_matrix_groups": 16,
+    "full_six_original_cold_semantic_reviews": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "Woit_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro",
+    "original_source": "A. Garrett Lisi",
+    "external_mathematics": "Cacciatori et al. G2 7D basis",
+    "technical_comparison": "Agent-assisted exact mathematical derivation and candidate-specific test",
+    "recorded_on": "2026-10-13"
+  }
+}

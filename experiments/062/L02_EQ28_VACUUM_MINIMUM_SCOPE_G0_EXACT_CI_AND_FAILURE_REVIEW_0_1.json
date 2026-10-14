@@ -1,0 +1,110 @@
+{
+  "schema": "isograph.exp062-L02-Eq28-Lorentzian-minimum-scope-G0-CI.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "authors": "A. Garrett Lisi, Lee Smolin, Simone Speziale",
+    "printed_page": 8,
+    "exact_observation": "Eq28 zero unified curvature F0=0 asserted to solve Eq11 and strictly minimize the reduced Lorentzian Eq25 action.",
+    "source_error_established": false
+  },
+  "exact_ci": {
+    "run_id": 38019291166,
+    "job_id": 114116468766,
+    "head_sha": "4f5c7716f13eff726d15f552b1b90134c8cd6eb1",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38019291166",
+    "completed_at": "2026-10-10T03:05:05Z",
+    "status": "completed",
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "node_version": "26.7.0",
+    "complete_job_log_reviewed": true,
+    "baseline": "PASS",
+    "issues": [],
+    "math_hostiles_defined": 14,
+    "math_hostiles_rejected": 14,
+    "source_hostiles_defined": 16,
+    "source_hostiles_rejected": 16,
+    "escaped": 0,
+    "negative_quadratic_local_witnesses": 24,
+    "positive_quadratic_local_witnesses": 24,
+    "exact_Hodge_involutions": 216,
+    "sign_both_couplings_checks": 96,
+    "scalar_vacuum_cases": 5,
+    "nondegenerate_lorentzian_coframes": 6,
+    "unchanged_source_records": 189,
+    "source_identities": 191,
+    "source_changed": [
+      "L-SSC-061",
+      "L-SSC-063"
+    ]
+  },
+  "exact_files": {
+    "source_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_EQ28_LORENTZIAN_MINIMUM_SCOPE_G0_0_1.json",
+      "git_blob_sha": "ee2834d6c7b88a2b655e497ba96331b0085a1091"
+    },
+    "math": {
+      "path": "experiments/062/tools/l02-eq28-lorentzian-minimum-scope-math-0-1.mjs",
+      "git_blob_sha": "36721f84baf567018eb029e016cafeb0b453b426"
+    },
+    "checker": {
+      "path": "experiments/062/tools/verify-l-g0-l02-eq28-minimum-scope-0-1.mjs",
+      "git_blob_sha": "7367e8675a30d80b396f88efdb4ea25ac6655e94"
+    },
+    "SSC": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_47.json",
+      "git_blob_sha": "0217e92b11ac0aba5c15ec065899a7b65b23268d"
+    },
+    "candidate_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_53.json",
+      "git_blob_sha": "d9cdf762587c89ee3f138219341c82ed1e136c98"
+    }
+  },
+  "prior_failure": {
+    "run_id": 38019168608,
+    "job_id": 114116099921,
+    "head_sha": "f3442f3a5a429c267bb2d3584816936b0e5d02bc",
+    "conclusion": "failure",
+    "cause": "Node verifier contained an unescaped apostrophe within a JS source-guard literal; SyntaxError before mathematical/source check execution.",
+    "source_verifier_defect_record": {
+      "path": "experiments/062/L02_EQ28_MINIMUM_SCOPE_G0_INITIAL_NODE_PARSER_DEFECT_0_1.json",
+      "git_blob_sha": "cb62110616822fc44c6bb90f37aec06fd016b933"
+    },
+    "repair_commit": "4f5c7716f13eff726d15f552b1b90134c8cd6eb1",
+    "semantic_model_changed": false,
+    "original_failed_gate_retained": true
+  },
+  "mathematical_disposition": {
+    "Eq28_F0_vanishing": "EXACT_SELECTED_BACKGROUND_ALGEBRA",
+    "fixed_scalar_R_Higgs_stationary": "EXACT_SELECTED_POLYNOMIAL_POINTWISE",
+    "chosen_Lorentzian_offshell_gauge_quadratic": "INDEFINITE_LOCAL_WITNESSES_FOR_INTERNAL_UNBROKEN_U1",
+    "unrestricted_global_minimum_claim": "NOT_QUALIFIED_FROM_ZERO_CURVATURE_ALONE",
+    "full_author_strict_minimum_disproved": false,
+    "author_math_error_proved": false,
+    "missing": "Source-authorized variation/solution domain, boundary conditions, possible energy-versus-Lorentzian action interpretation or Euclidean rotation."
+  },
+  "scope_locks": {
+    "L_G0_open": true,
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "IA_authorized": false,
+    "W_L_semantics_authorized": false,
+    "external_cold_theory_review_passed": false,
+    "PR70_merge_authorized": false,
+    "author_outreach_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "source_authors": "Lisi/Smolin/Speziale (original frozen v2)",
+    "agent_reconstruction": "2026-10-09 exact rational Hodge/Clifford source-conditional local gauge Hessian sign",
+    "software_repair": "separately diagnosed Node parser quote and preserved failed CI",
+    "CI_execution": "GitHub external runner, not independent theory proof",
+    "priority_claim": "NONE"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "isograph.exp062.L.G0.frozen-original-official-byte-probe-initial-failed-CI.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_CI": {
+    "run_id": 38046100421,
+    "job_id": 114195831324,
+    "head_sha": "2faa89f517ca53875978e986c500e128a69b77ae",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38046100421",
+    "conclusion": "failure",
+    "status": "completed"
+  },
+  "original_corpus": {
+    "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "git_blob_sha": "5775af1ab9289f97d903b39d5eb8eda241bafe78",
+    "current_SSC_git_blob_sha": "ce8b4de22b27f553272e526d3985c8ef67fb364f",
+    "number_of_frozen_sources": 6
+  },
+  "original_all_six_url_retrieval_attempt": {
+    "methods": "One official versioned HTTPS GET for each of L01/L02/L03/L04/L05/L06 in GitHub Actions runner, no unversioned/preprint fallback, no source PDFs committed.",
+    "all_responses_HTTP_200_and_pdf_magic": true,
+    "SHA256_candidates_from_exact_requested_urls": [
+      {
+        "id": "L01",
+        "version_requested": "arXiv:0711.0770v1",
+        "official_url": "https://arxiv.org/pdf/0711.0770v1",
+        "returned_url": "https://arxiv.org/pdf/0711.0770v1",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 623525,
+        "provisional_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      },
+      {
+        "id": "L02",
+        "version_requested": "arXiv:1004.4866v2",
+        "official_url": "https://arxiv.org/pdf/1004.4866v2",
+        "returned_url": "https://arxiv.org/pdf/1004.4866v2",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 179663,
+        "provisional_sha256": "1c2764dc498a3b118253f97447249e58a07e7c9ff4eb7fa72a48633061bfd25a",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      },
+      {
+        "id": "L03",
+        "version_requested": "arXiv:1006.4908v1",
+        "official_url": "https://arxiv.org/pdf/1006.4908v1",
+        "returned_url": "https://arxiv.org/pdf/1006.4908v1",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 194263,
+        "provisional_sha256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      },
+      {
+        "id": "L04",
+        "version_requested": "arXiv:2407.02497v2",
+        "official_url": "https://arxiv.org/pdf/2407.02497v2",
+        "returned_url": "https://arxiv.org/pdf/2407.02497v2",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 348134,
+        "provisional_sha256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      },
+      {
+        "id": "L05",
+        "version_requested": "Springer Version of Record 2026-08-29 DOI 10.1007/s00006-026-01447-5",
+        "official_url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+        "returned_url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf?error=cookies_not_supported&code=f72353af-bafd-49a4-89fb-4bf3ddf93039",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 1432661,
+        "provisional_sha256": "03f6ffbb04640051101e20985556d8dec81631adbe44672b907204e9e84cf880",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      },
+      {
+        "id": "L06",
+        "version_requested": "arXiv:1506.08073v2",
+        "official_url": "https://arxiv.org/pdf/1506.08073v2",
+        "returned_url": "https://arxiv.org/pdf/1506.08073v2",
+        "HTTP_status": 200,
+        "PDF_magic_accepted": true,
+        "bytes_received": 802927,
+        "provisional_sha256": "e2649e8cbccb4a7fb8f876b8a3a53a8abc795dfeac4c6b4177ce13dac103f0be",
+        "PDF_page_count_verified": false,
+        "original_revision_header_verified": false
+      }
+    ],
+    "retrieved_PDF_binary_count": 6,
+    "individually_original_revision_and_pages_qualified": 0
+  },
+  "reported_failure_class": "GITHUB_RUNNER_PDF_TOOLING_UNAVAILABLE",
+  "actual_original_failure": "pdfinfo and pdftotext were absent (ENOENT) on Ubuntu runner, while HTTPS retrieval and SHA256 succeeded for all six.",
+  "repair_method": "Install/poppler-utils on CI runner, then independently verify original PDF page count plus first-page original revision marker/DOI against exact source freeze before promoting any byte hash.",
+  "original_run_conclusion_remains_FAILURE": true,
+  "original_source_bytes_no_substitution": true,
+  "original_PDF_sha256_list_unqualified_pending_version_checks": true,
+  "all_six_original_semantic_cold_reviews_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false
+}

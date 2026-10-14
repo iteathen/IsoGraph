@@ -1,0 +1,38 @@
+{
+  "schema": "isograph.exp062-w-active-g0-stage-verifier-ci-capture-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_FIRST_NODE_CI_FAILURE_UNCAPTURED_INPUT_SHA_CONSTANT",
+  "source": {
+    "failed_commit": "a9d488493c61b20b8fb8d3ba6835db68217d3aee",
+    "CI_url": "https://github.com/iteathen/IsoGraph/actions/runs/37840552477",
+    "run_id": 37840552477,
+    "conclusion": "failure",
+    "failed_step": "node experiments/062/tools/verify-w-active-g0-stage-0-1.mjs",
+    "exception": "ReferenceError: s is not defined",
+    "line": 14
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-1.mjs",
+    "git_blob_sha": "c989104f31205179ab1ca10c4ba637be6c2c3141"
+  },
+  "cause": "Verifier's runtime function check(z) captured s.src, s.register and other input hashes from a local V8 closure, but the emitted Node script only declared shaExpected and omitted s=shaExpected.",
+  "repair": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-2.mjs",
+    "git_blob_sha": "594138f7407fc509fb163d7c4587129d1272ab31",
+    "mutation_scope": "DECLARE_THE_FROZEN_READONLY_SHA_ALIAS_AND_UPDATE_VERIFIER_SCHEMA_ONLY",
+    "old_program_preserved": true
+  },
+  "impact": {
+    "source_census_W_SSC_0_15": "UNCHANGED",
+    "gate_W_0_42": "UNCHANGED_G0_OPEN",
+    "W_151_inventory": "UNCHANGED",
+    "G1_G7": "STILL_UNAUTHORIZED",
+    "historical_successful_W097_CI": "UNAFFECTED",
+    "v0_1_workflow": "HISTORICAL_FAILED_NOT_QUALIFIED"
+  },
+  "replay_requirement": "Node CI new v0.2 must pass positive 151-member/lineage reconstruction and 26/26 adversarial mutations; previous local V8 result did not prove Node readiness.",
+  "no_L_change": true,
+  "negative_evidence_preserved": true
+}

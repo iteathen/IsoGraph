@@ -1,0 +1,159 @@
+{
+  "schema": "isograph.lisi-L02-Eq28-Lorentzian-minimum-scope-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "ORIGINAL_L02_EQ28_VACUUM_ZERO_CURVATURE_CONFIRMED__STRICT_MINIMUM_SOURCE_DOMAIN_UNDETERMINED",
+  "source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "authors": [
+      "A. Garrett Lisi",
+      "Lee Smolin",
+      "Simone Speziale"
+    ],
+    "pdf": "https://arxiv.org/pdf/1004.4866",
+    "printed_pages": [
+      7,
+      8
+    ],
+    "zero_based_pdf_pages": [
+      6,
+      7
+    ],
+    "source_method": "Direct original frozen arXiv v2 PDF p7 Eq25 and p8 Eqs27–28 and adjoining author prose; no replacement from v1 or other author source.",
+    "source_equations": [
+      {
+        "id": "E25",
+        "page": 7,
+        "role": "AUTHOR_SELECTED_PHI_HODGE_B_ELIMINATED_ACTION",
+        "expression": "S(H,e)=3/(8*g)*int< F wedge star_e(F) >"
+      },
+      {
+        "id": "E27",
+        "page": 8,
+        "role": "AUTHOR_RESTRICTED_E_PRIME_EQUALS_E_T_ZERO_COMPONENT_ACTION",
+        "expression": "S(e,phi,A)=3/(8*g)*int|e|(-phi2*R/16+3*phi4/32+R_abcd*R_cdab/16-Dphi2/2-FA2/4)"
+      },
+      {
+        "id": "E28",
+        "page": 8,
+        "role": "AUTHOR_DE_SITTER_NONZERO_HIGGS_VACUUM",
+        "expression": "phi0^2=R_scalar0/3; R_twoform0=(v2/8)*Sigma0; Ricci0=(3*v2/4)*e0; R_scalar0=3*v2=4*Lambda"
+      },
+      {
+        "id": "E28_VANISH",
+        "page": 8,
+        "role": "AUTHOR_VACUUM_CURVATURE_CANCEL",
+        "expression": "F0=(1/2)*R_twoform0-(1/16)*Sigma0*phi0^2=0"
+      },
+      {
+        "id": "AUTHOR_MIN",
+        "page": 8,
+        "role": "AUTHOR_STRICT_MINIMUM_ASSERTION",
+        "expression": "Eq28 F0=0 solves Eq11 and strictly minimizes the action Eq25"
+      },
+      {
+        "id": "AUTHOR_LIMIT",
+        "page": 8,
+        "role": "SOURCE_SCOPE_UNSTATED",
+        "expression": "Source does not explicitly delimit strict minimum to offshell Lorentzian gauge perturbations, fixed-metric compact perturbations, a Euclidean functional, positive energy, or a restricted solution/variation family."
+      }
+    ]
+  },
+  "parents": {
+    "ssc046": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_46.json",
+      "git_blob_sha": "e3ce369dd0c93216bfc0e45a5e617e5948f86751"
+    },
+    "gate051": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_51.json",
+      "git_blob_sha": "671f63af26ae6d033719ccbcfff414e75b78fc92"
+    },
+    "eq26": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_E26_HODGE_TRACE_SECTOR_G0_0_1.json",
+      "git_blob_sha": "d63304811b1ed204c36f93a315ae5df2888b578a"
+    },
+    "hodgeAux": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json",
+      "git_blob_sha": "831279f107a7d36f49580179e6970468a457f044"
+    }
+  },
+  "math_model": {
+    "scope": "Exact local rational Clifford(4,3) bosonic pointwise model only, six fixed nondegenerate oriented and orientation-reversing Lorentzian coframes, not complete E8, all SpinN or global actions.",
+    "signature": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "higgs_vacuum": "phi0=v*gamma4, v^2>0, e'=e and T=0 as additional Eq27 solution restrictions",
+    "unbroken_internal_u1": "Generator U=gamma5*gamma6, U^2=-1 (negative Clifford scalar part), [U,gamma4]=0, so a U(1) internal gauge direction preserves the selected Higgs vacuum.",
+    "off_shell_perturbation": "Hold background gravitational/Higgs connection, frame and Hodge star fixed, shift A -> A+epsilon*U*alpha in the commuting internal gauge direction. Locally F0=0 and F(shift)=epsilon*U*d(alpha), because U commutes with the Higgs carrier and abelian A wedge A vanishes.",
+    "electric_magnetic_coordinates": "alpha_E=x0 dx1 yields d alpha_E=dx0 wedge dx1; alpha_B=x2 dx3 yields d alpha_B=dx2 wedge dx3 in an orthonormal Lorentz frame, extend by basis transport under independent coframes.",
+    "pointwise_second_variation": "Clifford scalar <U^2>=-1. Lorentzian metric twoform norms satisfy ||dx0 wedge dx1||^2=-1, ||dx2 wedge dx3||^2=+1; hence <F_E wedge *F_E>/vol_e=+epsilon^2, <F_B wedge *F_B>/vol_e=-epsilon^2. Thus the chosen Lorentzian pointwise quadratic action has opposite-sign offshell directions even when g≠0; F0=0 alone is not a positive-definite variational minimum theorem.",
+    "independent_math_oracles": "Compute Lorentzian Hodge from exact coordinate inverse tetrad/metric and signed wedge, compare Hodge scalar pairing with orthonormal vector wedge metric times independent Clifford bitmask square.",
+    "vacuum_scalar_potential": "At fixed R_scalar0=3v^2, the restricted Higgs polynomial V(x)=-R_scalar0*x/16+3*x^2/32 has derivative zero at x=v^2 and Hessian +3/16. Restricted scalar stationarity is compatible with an indefinite full Lorentzian curvature-squared functional.",
+    "what_must_not_be_claimed": "Local sign witnesses do not themselves prove that the source's actual selected on-shell solution family includes all compactly supported offshell gauge perturbations, nor disprove a Euclidean positive-energy or restricted-boundary notion of minimum; no source author error is established."
+  },
+  "mathematics": {
+    "coframes": 6,
+    "local_electric_and_magnetic_pairs": 24,
+    "positive_local_density_witnesses": 24,
+    "negative_local_density_witnesses": 24,
+    "twoform_Hodge_involution_checks": 216,
+    "coupling_sign_checks": 96,
+    "source_vacuum_potential_cases": 5,
+    "math_hostiles": 14,
+    "source_hostiles": 16
+  },
+  "result_classification": {
+    "original_vacuum_zero_curvature_from_E28": "CONFIRMED_EXACT_ALGEBRA_IN_SOURCE_SELECTED_BACKGROUND",
+    "positive_scalar_Higgs_Hessian_fixed_R": "CONDITIONAL_G_POSITIVE_RESTRICTED_POLYNOMIAL",
+    "unrestricted_Lorentzian_quadratic_local_minimum": "OBSTRUCTED_IN_SELECTED_FINITE_MODEL",
+    "author_strict_minimum_as_printed": "OPEN_SCOPE_UNDETERMINED",
+    "genuine_author_discrepancy_or_typo": "NOT_ESTABLISHED",
+    "source_equivalent_E8_global_physics": "NOT_QUALIFIED"
+  },
+  "remaining_inputs": [
+    "Original author-specified domain for strict minimization, spacetime integration and boundary conditions.",
+    "Whether varying A locally with frozen e/ePrime, phi and Phi=* is admitted by intended variational comparison versus only classical solutions.",
+    "Whether an energy/Hamiltonian, Wick-rotated Euclidean positive form or restricted solution class rather than the displayed Lorentzian action is intended.",
+    "Original complete Spin(1+N,3) normalization, source fields obeying nonlinear gravitational/Higgs dynamics and fixed-point renormalization beyond bare couplings."
+  ],
+  "source_census": {
+    "successor": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_47.json",
+    "changed_only": [
+      "L-SSC-061",
+      "L-SSC-063"
+    ],
+    "unchanged_full_records": 189,
+    "source_identities": 191,
+    "source_frozen": false
+  },
+  "stage_locks": {
+    "source_census_frozen": false,
+    "source_strict_minimum_qualified": false,
+    "source_author_error_proved": false,
+    "global_offshell_variation_class_qualified": false,
+    "source_all_spinN_qualified": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "external_independent_cold_math_review_passed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next": "Investigate actual L02 v2 Eq28 de Sitter compact perturbation/variation domain and Lorentzian vs physical Hamiltonian energy. Source-conserve Eq27 coefficients and Eqs15–23 full field equations separately, then remaining L03–L06 corpus. Never import W mathematics into L.",
+  "provenance": {
+    "human_direction": "Joshua Oshiro, full independent Track L IsoGraph source fidelity",
+    "source_authors": "A. Garrett Lisi, Lee Smolin and Simone Speziale (frozen 2010 v2)",
+    "agent_formulation": "2026-10-09 local Lorentzian Hessian-sign and unbroken-u1 source-scope audit",
+    "external_antecedent": "Standard indefinite Lorentzian Yang-Mills action, Clifford bimultiplication and Hodge dual; no global novelty claim"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "schema": "isograph.exp062-g1-source-span-enclosure-audit.v0.1",
+  "date": "2026-10-06",
+  "status": "PREDECESSOR_G1_SERIALIZATION_DEFECT_REPAIRED_BY_MECHANICAL_SOURCE_SPAN_ENCLOSURE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_contracts": [
+    "experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md",
+    "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md"
+  ],
+  "inputs": {
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "W": "experiments/062/W_EXTRACTION_RECONCILED_0_4.json",
+    "L": "experiments/062/L_EXTRACTION_RECONCILED_0_11.json"
+  },
+  "defect": {
+    "rule": "Each source_span must preserve the occurrence and its stated arguments/side condition; every argument_span therefore must lie inside the source_span used for that occurrence.",
+    "affected_occurrences": 26,
+    "affected_argument_spans": 31,
+    "W_affected_occurrences": 1,
+    "L_affected_occurrences": 25,
+    "finding": "The historical exact-span verifier checked body.includes(argument_span) but did not check source_span.includes(argument_span). Historical cold-audit completeness records therefore cannot by themselves authorize G2."
+  },
+  "repair_rule": "For each affected occurrence, preserve every field except source_span and replace source_span with the unique shortest contiguous substring of the frozen body enclosing the predecessor source_span and every declared argument_span. If the minimum enclosure is non-unique, do not repair mechanically.",
+  "checks": {
+    "all_repairs_unique_minimum": true,
+    "relation_span_unchanged": true,
+    "argument_spans_unchanged": true,
+    "logical_force_unchanged": true,
+    "definition_status_unchanged": true,
+    "dependencies_unchanged": true,
+    "W_occurrence_count_unchanged": 177,
+    "L_occurrence_count_unchanged": 317
+  },
+  "repairs": [
+    {
+      "track": "W",
+      "census_id": "W-SSC-119",
+      "occurrence_id": "W-SSC-119-O02",
+      "old_source_span": "carries the additional canonical/tetrad one-form theta absent from a generic internal gauge bundle",
+      "new_source_span": "the latter's structure group is determined by spacetime geometry and carries the additional canonical/tetrad one-form theta absent from a generic internal gauge bundle",
+      "outside_argument_spans": [
+        "the latter's structure group"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-006",
+      "occurrence_id": "L-SSC-006-O01",
+      "old_source_span": "converted to a 64-real carrier",
+      "new_source_span": "32 complex components can be converted to a 64-real carrier",
+      "outside_argument_spans": [
+        "32 complex components"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-007",
+      "occurrence_id": "L-SSC-007-O01",
+      "old_source_span": "identified with a positive-chiral real Majorana-Weyl Spin(11,3) spinor representation",
+      "new_source_span": "64-real carrier is identified with a positive-chiral real Majorana-Weyl Spin(11,3) spinor representation",
+      "outside_argument_spans": [
+        "64-real carrier"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-008",
+      "occurrence_id": "L-SSC-008-O01",
+      "old_source_span": "embeds into",
+      "new_source_span": "Spin(11,3) GraviGUT structure embeds into Spin(12,4)",
+      "outside_argument_spans": [
+        "Spin(11,3) GraviGUT structure",
+        "Spin(12,4)"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-014",
+      "occurrence_id": "L-SSC-014-O01",
+      "old_source_span": "extends them with order-three triality between generations",
+      "new_source_span": "C, P, T as discrete operations on fermion states and extends them with order-three triality between generations",
+      "outside_argument_spans": [
+        "C, P, T"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-025",
+      "occurrence_id": "L-SSC-025-O02",
+      "old_source_span": "with different form degree/statistics/representation roles",
+      "new_source_span": "gauge fields, gravitational spin connection, frame, Higgs multiplet, and Grassmann-valued fermions over a four-dimensional base manifold, with different form degree/statistics/representation roles",
+      "outside_argument_spans": [
+        "gauge fields, gravitational spin connection, frame, Higgs multiplet, and Grassmann-valued fermions"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-032",
+      "occurrence_id": "L-SSC-032-O02",
+      "old_source_span": "acting chirally on an 8-dimensional positive-chiral spinor carrier",
+      "new_source_span": "H1=1/2 omega+1/4 e phi+w_ew, acting chirally on an 8-dimensional positive-chiral spinor carrier",
+      "outside_argument_spans": [
+        "H1"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-037",
+      "occurrence_id": "L-SSC-037-O02",
+      "old_source_span": "triality-related 8-dimensional roles and color/lepton factors",
+      "new_source_span": "Psi_I, Psi_II, Psi_III associated with triality-related 8-dimensional roles and color/lepton factors",
+      "outside_argument_spans": [
+        "Psi_I, Psi_II, Psi_III"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-038",
+      "occurrence_id": "L-SSC-038-O02",
+      "old_source_span": "retaining the E8-valued 2-form/Grassmann-form grading",
+      "new_source_span": "unified curvature into F1, F2, and covariant derivatives of the three fermion sectors, retaining the E8-valued 2-form/Grassmann-form grading",
+      "outside_argument_spans": [
+        "unified curvature"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-041",
+      "occurrence_id": "L-SSC-041-O02",
+      "old_source_span": "the other generations are asserted to have analogous curvature pieces",
+      "new_source_span": "fermionic curvature as a covariant massive Dirac derivative whose left and right algebra actions include spin, frame-Higgs, electroweak, new-field, and color terms; the other generations are asserted to have analogous curvature pieces",
+      "outside_argument_spans": [
+        "fermionic curvature"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-065",
+      "occurrence_id": "L-SSC-065-O02",
+      "old_source_span": "after breaking this yields spin, frame-Higgs, and Yang-Mills interactions",
+      "new_source_span": "(d+H)psi; after breaking this yields spin, frame-Higgs, and Yang-Mills interactions",
+      "outside_argument_spans": [
+        "(d+H)psi"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-067",
+      "occurrence_id": "L-SSC-067-O02",
+      "old_source_span": "the latter two do not necessarily follow from symmetry breaking",
+      "new_source_span": "matched frames, and vanishing-torsion restriction; the latter two do not necessarily follow from symmetry breaking",
+      "outside_argument_spans": [
+        "matched frames, and vanishing-torsion restriction"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-071",
+      "occurrence_id": "L-SSC-071-O01",
+      "old_source_span": "act on the 64-real fermion column exactly as their 32-complex counterparts act on the original generation",
+      "new_source_span": "18 gravity+Standard-Model generators in the 64-real realization retain real Lie-algebra structure constants and act on the 64-real fermion column exactly as their 32-complex counterparts act on the original generation",
+      "outside_argument_spans": [
+        "18 gravity+Standard-Model generators"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-073",
+      "occurrence_id": "L-SSC-073-O01",
+      "old_source_span": "numerically identical, in the chosen representation, to specified positive-chiral spin(11,3) bivector combinations",
+      "new_source_span": "18 conventional gravity+Standard-Model 64-real generators are numerically identical, in the chosen representation, to specified positive-chiral spin(11,3) bivector combinations",
+      "outside_argument_spans": [
+        "18 conventional gravity+Standard-Model 64-real generators"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-079",
+      "occurrence_id": "L-SSC-079-O01",
+      "old_source_span": "represented as a subalgebra of this GraviGUT semidirect algebra",
+      "new_source_span": "conventional Standard Model algebra with its 64-real fermion carrier is likewise represented as a subalgebra of this GraviGUT semidirect algebra",
+      "outside_argument_spans": [
+        "conventional Standard Model algebra"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-113",
+      "occurrence_id": "L-SSC-113-O01",
+      "old_source_span": "explicit conversion identities among them",
+      "new_source_span": "quaternionic conjugation, matrix complex conjugation, and Hermitian adjoint distinct, with explicit conversion identities among them",
+      "outside_argument_spans": [
+        "complex conjugation",
+        "quaternionic conjugation",
+        "matrix complex conjugation",
+        "Hermitian adjoint"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-116",
+      "occurrence_id": "L-SSC-116-O02",
+      "old_source_span": "constructs a complex/creation conjugation K",
+      "new_source_span": "C/P/T/t the source also constructs a complex/creation conjugation K",
+      "outside_argument_spans": [
+        "C/P/T/t"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-117",
+      "occurrence_id": "L-SSC-117-O04",
+      "old_source_span": "belonging to the finite group",
+      "new_source_span": "K commutes with P,T,t and anticommutes with C; on QFT operators it exchanges annihilation with creation, maps positive-energy states to nonphysical negative-energy states, and is explicitly not considered a symmetry of nature despite belonging to the finite group",
+      "outside_argument_spans": [
+        "K"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-120",
+      "occurrence_id": "L-SSC-120-O03",
+      "old_source_span": "only acquire the intended meaning through the triality relation",
+      "new_source_span": "second- and third-generation weights are nonsensical under direct first-generation Lorentz-weight interpretation and only acquire the intended meaning through the triality relation",
+      "outside_argument_spans": [
+        "second- and third-generation weights"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-127",
+      "occurrence_id": "L-SSC-127-O02",
+      "old_source_span": "cannot be reduced to imaginary-octonion multiplication alone",
+      "new_source_span": "octonionic bi-product operators span so(8) and cannot be reduced to imaginary-octonion multiplication alone",
+      "outside_argument_spans": [
+        "octonionic bi-product operators"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-130",
+      "occurrence_id": "L-SSC-130-O02",
+      "old_source_span": "explicit signature factors sqrt(s_u)",
+      "new_source_span": "generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u)",
+      "outside_argument_spans": [
+        "generalized reflections"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-130",
+      "occurrence_id": "L-SSC-130-O04",
+      "old_source_span": "with role exchange/sign",
+      "new_source_span": "individual generalized reflections are anti-invariant on the triality form with role exchange/sign",
+      "outside_argument_spans": [
+        "individual generalized reflections"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-142",
+      "occurrence_id": "L-SSC-142-O03",
+      "old_source_span": "which need not coincide for every real form",
+      "new_source_span": "complex eigenspace decompositions from real gradings, which need not coincide for every real form",
+      "outside_argument_spans": [
+        "complex eigenspace decompositions",
+        "real gradings"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-146",
+      "occurrence_id": "L-SSC-146-O03",
+      "old_source_span": "cannot simultaneously house all chiral/antiparticle partners in the same real form",
+      "new_source_span": "complex/triality three-generation interpretation that cannot simultaneously house all chiral/antiparticle partners in the same real form",
+      "outside_argument_spans": [
+        "complex/triality three-generation interpretation"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-177",
+      "occurrence_id": "L-SSC-177-O02",
+      "old_source_span": "reduces it to spacetime only when H and G/G0 remain rigid enough that the integrand depends solely on embedded-spacetime coordinates",
+      "new_source_span": "extended generalized Yang-Mills action over the full deforming group and reduces it to spacetime only when H and G/G0 remain rigid enough that the integrand depends solely on embedded-spacetime coordinates",
+      "outside_argument_spans": [
+        "extended generalized Yang-Mills action"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    },
+    {
+      "track": "L",
+      "census_id": "L-SSC-181",
+      "occurrence_id": "L-SSC-181-O01",
+      "old_source_span": "with spin(4,4) they close to split F4(4)",
+      "new_source_span": "positive-spinor, negative-spinor and vector fermionic generators in three triality-related regions; with spin(4,4) they close to split F4(4)",
+      "outside_argument_spans": [
+        "positive-spinor, negative-spinor and vector fermionic generators"
+      ],
+      "selection": "UNIQUE_MINIMAL_CONTIGUOUS_ENCLOSURE"
+    }
+  ],
+  "downstream": "Run deterministic successor verification and independent cold completeness audits on both repaired W and L G1 inputs before authorizing joint G2."
+}

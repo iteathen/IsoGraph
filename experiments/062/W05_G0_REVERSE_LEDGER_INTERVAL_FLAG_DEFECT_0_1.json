@@ -1,0 +1,34 @@
+{
+  "schema": "isograph.exp062-w05-w108-reverse-ledger-wrong-new-citation-flags-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_VERIFIER_POSITIVE_BASELINE_FAILED_LEDGER_INTERVAL_MARKERS_MISASSIGNED",
+  "historical_failed_ledger": {
+    "path": "experiments/062/W05_G0_FULL_PRIMARY_SOURCE_REVERSE_0_1.json",
+    "git_blob_sha": "94b3c44e7935fa79b769146d4c960a35af683206"
+  },
+  "observed": {
+    "bad_new_claim_intervals": [
+      317,
+      326
+    ],
+    "expected_new_cited_claim_intervals": [
+      333,
+      335
+    ],
+    "failed_positive_check": "W05 missing cited source blocks/HTML diagram guard",
+    "earliest_detection": "Local V8 prepublication positive baseline; mutation count 34 cannot be called successful baseline passing despite 34 individually rejecting under flawed oracle"
+  },
+  "cause": "The review table generator used zero-based array positions 33 and 34 to mark newly corrected §6.2 source clauses. These positions correspond to HTML lines317–332, not the actual new claims at 333–335.",
+  "correction": "Retain all 42 interval source ranges and reviews. Change only new_W108_correction flags, moving true from 317–325 and 326–332 to 333–334 and 335–335. Keep original failed candidate immutable and create successor 0.2.",
+  "impact": {
+    "source_census_026": "NONE",
+    "demand_source_projection_012": "NONE",
+    "W05_v2_primary_source_claims": "NONE",
+    "stage_G0": "REMAINS_OPEN",
+    "Node_CI": "NOT_YET_STARTED",
+    "external_review": "NOT_PASSED"
+  },
+  "negative_evidence_preserved": true
+}

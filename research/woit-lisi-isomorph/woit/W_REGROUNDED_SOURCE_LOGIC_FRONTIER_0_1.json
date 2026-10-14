@@ -1,0 +1,48 @@
+{
+  "schema": "woit.regrounded-source-logic-frontier.v0.1",
+  "date": "2026-10-05",
+  "status": "FROZEN_CORE_LOGIC_COMPILATION_FRONTIER_NO_CLOSURE_CLAIM",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "governing_basis": {
+    "primitive_logic_kernel": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md",
+    "native_examples": [
+      "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "research/primitive-logic/PRIMITIVE_L_CALCULUS_0_2.isg"
+    ],
+    "core020": "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "core021": "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+  },
+  "included": [
+    {
+      "census_id": "W-SSC-021",
+      "reason": "finite source fact plus direct implication: changing interpretation -> later claims revision-scoped"
+    },
+    {
+      "census_id": "W-SSC-025",
+      "reason": "finite source status plus direct implication: no explicit successor target -> no overwrite of frozen source revisions"
+    },
+    {
+      "census_id": "W-SSC-058",
+      "reason": "three finite source-status facts plus direct implication to no retroactive rewrite of W01/W02"
+    },
+    {
+      "census_id": "W-SSC-121",
+      "reason": "four finite provenance/status facts plus direct implication to revision-scoped preliminary notes"
+    }
+  ],
+  "primitive_operators": {
+    "AND": 150001,
+    "NOT": 150003,
+    "IMPLIES": 150004,
+    "PREDICATE_APPLICATION": 150010,
+    "DEFINITION_EXPANDS_TO": 150019
+  },
+  "guards": [
+    "all domain-bearing source/version/note identities remain raw atoms",
+    "conditional/causal wording is represented with Core logical operators rather than a campaign-specific guard schema",
+    "no mathematical content of W04e, W03, W01, or W02 is imported",
+    "no historical closure packet is a premise",
+    "no Lisi or cross-track semantics are premises"
+  ],
+  "closure_claim": false
+}

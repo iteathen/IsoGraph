@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062.L.G0.L02-frozen-original-layout-initial-hostile-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "first_failed_CI": {
+    "run_id": 38091806603,
+    "job_id": 114329581570,
+    "head_sha": "b8ab130df13bc76c28a0785d20ebcafc562181f3",
+    "conclusion": "failure",
+    "verifier": "experiments/062/tools/verify-l-g0-l02-full-original-layout-inventory-0-1.mjs",
+    "verifier_git_blob_sha": "ac05d3a3d31a1b5879657841b3da62b14d342dd2",
+    "hostiles_defined": 20,
+    "hostiles_rejected": 19,
+    "hostile_escaped": [
+      "erase_original_source_SSC_owner"
+    ],
+    "baseline_original_PDF_sha256_verified": true,
+    "original_pages": 12,
+    "original_source_blocks": 81,
+    "original_source_nonblank_extracted_lines": 614
+  },
+  "error_class": "SOURCE_TO_SSC_OWNER_CONSERVATION_VERIFIER_GAP",
+  "cause": "Verifier checked that all 21 distinct L02 SSC owners occurred somewhere in the 59 source rows, but did not check exact membership of each individual source-first location. Removing a nonunique SSC membership from L02-S001 did not alter owner set cardinality.",
+  "corrective_rule": "Pin complete original-first 59-location owner arrays and all existing SSC refs against immutable current predecessor; require every load-bearing original source row to have an owner, every non-loadbearing row to have none. Re-extract 81 blocks independently from original PDF, not from ledger-only agreement.",
+  "scope": "L-only procedural verifier, no SSC/source original edits and no whole original-PDF cold semantic claim",
+  "prior_successful_source_probe": {
+    "run_id": 38085924026,
+    "head_sha": "973b49823dab3edb3f935cf01010dd61451e50c1",
+    "conclusion": "success",
+    "hostiles_rejected": 13
+  },
+  "historical_CI_never_reclassified": true,
+  "G0_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

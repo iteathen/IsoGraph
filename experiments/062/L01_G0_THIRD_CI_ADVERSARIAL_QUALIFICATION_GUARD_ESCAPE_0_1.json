@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062.l.G0.L01.original-first-third-CI-adversarial-escape.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_CI": {
+    "run_id": 38036309909,
+    "job_id": 114167349452,
+    "head_sha": "be8b54c6d4c6556619cf60650f4d801c73347259",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38036309909",
+    "status": "completed",
+    "conclusion": "failure",
+    "baseline_errors": [
+      "ESCAPED_HOSTILE forge_cross_source_Historical",
+      "ESCAPED_HOSTILE forge_empirical_promotion"
+    ],
+    "hostiles_defined": 32,
+    "hostiles_rejected": 30
+  },
+  "historical_failed_runs": [
+    {
+      "run_id": 38035978814,
+      "head_sha": "98b9fbfb0bc6b857a71c411aa60ff6adcdf15a08",
+      "conclusion": "failure",
+      "cause": "stage freeze field typo"
+    },
+    {
+      "run_id": 38036133384,
+      "head_sha": "ed83a4a70502e8a3f5e159052d9f4f9472942fd3",
+      "conclusion": "failure",
+      "cause": "historical source audit vs current gate provenance mixup"
+    }
+  ],
+  "preserved_exact_artifacts": {
+    "original_source_packet_path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "original_source_packet_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "SSC_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_54.json",
+    "SSC_sha": "ce8b4de22b27f553272e526d3985c8ef67fb364f",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l01-source-first-reverse-0-3.mjs",
+    "verifier_sha": "04c51153eb25f7524049ee3a8adfbcbeda0ac9f7"
+  },
+  "cause_class": "ADVERSARIAL_ORACLE_DID_NOT_CHECK_ALL_QUALIFICATION_NONPROMOTION_GUARDS",
+  "escaped_attacks": [
+    {
+      "name": "forge_cross_source_Historical",
+      "mutation": "audit.qualification_boundary.L03_later_generation_source_correction_not_retroactively_applied=false",
+      "risk": "retroactive substitution of later author revision into original 2007 source"
+    },
+    {
+      "name": "forge_empirical_promotion",
+      "mutation": "census.guards.L01_complete_original_pdf_cold_pass=true",
+      "risk": "passing correspondence checker could fraudulently claim independent original-PDF full source completeness"
+    }
+  ],
+  "systemic_fix": "Require exact source-revision separation, unknown original field-degree constraint, author/discrepancy separation, frozen source bytes, proof-not-required policy, original external cold completion negative status, G0 false freeze, and G1/DP/W isolation at BOTH packet and SSC and gate. Reject all adverse flips via independent explicit guards, not only local item-count tests.",
+  "prior_semantic_assertions_revised": false,
+  "prior_source_locations_unchanged": 98,
+  "prior_SSC_bodies_unchanged": 191,
+  "new_CI_pending": true,
+  "first_three_failed_results_retained": true,
+  "G0_frozen": false,
+  "G1_authorized": false
+}

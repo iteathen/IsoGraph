@@ -1,0 +1,82 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-p14-third-CI-hostile-guard-failure.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "INTERNAL-QUALIFICATION_FAILURE",
+  "failed_run": {
+    "run_id": 38273439935,
+    "job_id": 114893060835,
+    "head_sha": "7a159cf5b088269bcecd8d3d9457c0b4b538acaa",
+    "status": "completed",
+    "conclusion": "failure",
+    "verifier": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-3.mjs",
+    "verifier_git_blob_sha": "79d662c61831be33d089b630813d2070217a2d48",
+    "frozen_pdf_sha256_verified": true,
+    "original_source_pages_verified": 2,
+    "original_source_blocks_verified": 4,
+    "source_semantic_roles_checked": 19,
+    "census_items_conserved": 191,
+    "source_groups_conserved": 350,
+    "model_24cell_vertices": 24,
+    "model_geometry_edges": 96,
+    "source_figure_drawn_segments": 60,
+    "hostiles_defined": 40,
+    "hostiles_rejected": 37,
+    "hostiles_unrejected": 3
+  },
+  "unrejected_hostiles": [
+    {
+      "id": "break_triality_matrix_source",
+      "disposition": "CHECKER_EXCEPTION_NOT_COUNTED_AS_REJECTION",
+      "original_error": "Error: noninteger triality transport",
+      "cause": "Mutation invalidates the input triality matrix; the bounded exact reconstruction throws rather than returning a controlled verifier error."
+    },
+    {
+      "id": "fake_original_fig60_to96",
+      "disposition": "HOSTILE_ESCAPED",
+      "cause": "Verifier guarded length of 60 figure edge objects but did not check separately stored incidence_summary.edges number."
+    },
+    {
+      "id": "undispose_S038",
+      "disposition": "HOSTILE_ESCAPED",
+      "cause": "Verifier trusted cached by_disposition counts rather than recomputing original source group dispositions."
+    }
+  ],
+  "repair": {
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-p14-weight-triality-source-0-4.mjs",
+    "verifier_git_blob_sha": "75ff110212b57a67c93f977de8c6e8fe02295a1a",
+    "bounded_finite_model_exception_to_failed_invariant": true,
+    "verify_stored_figure_edge_count": true,
+    "derive_source_disposition_counts_from_original_locations": true,
+    "changes_to_original_source": false,
+    "changes_to_SSC096": false,
+    "changes_to_original_L04_inverse029": false,
+    "changes_to_finite_model": false,
+    "fresh_40_hostile_original_CI_required": true
+  },
+  "predecessor_CI": [
+    {
+      "run_id": 38243765870,
+      "conclusion": "failure",
+      "hostiles_rejected": 0,
+      "hostiles_defined": 40
+    },
+    {
+      "run_id": 38244222240,
+      "conclusion": "failure",
+      "hostiles_rejected": 0,
+      "hostiles_defined": 40
+    }
+  ],
+  "all_predecessor_failures_remain_failures": true,
+  "state_locks": {
+    "G0_frozen": false,
+    "whole_original_source_cold_complete": 0,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

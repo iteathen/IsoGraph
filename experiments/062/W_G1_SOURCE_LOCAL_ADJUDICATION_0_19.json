@@ -1,0 +1,379 @@
+{
+  "schema": "isograph.exp062-w-g1-source-local-adjudication.v0.19",
+  "date": "2026-10-07",
+  "status": "TARGETED_SOURCE_BODY_CORRECTION_RECONSTRUCTION_COMPLETE_DETERMINISTIC_REPLAY_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "source_corpus": {
+    "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_2.json",
+    "git_blob_sha": "658a09fefde50e48503aa1d98e23b65225c845bc"
+  },
+  "predecessor_input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+    "git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b"
+  },
+  "correction_audit": {
+    "path": "experiments/062/W_G7_SOURCE_GRANULARITY_AUDIT_0_1.json",
+    "git_blob_sha": "f735280562ee657aba255504228daca79c3ea720"
+  },
+  "prior_stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_2.json",
+    "git_blob_sha": "16c10ab40eaf9d663ba14650b5a68edb3fe38fe2",
+    "disposition": "HISTORICAL_FOR_PREDECESSOR_SOURCE_INPUT"
+  },
+  "rules": [
+    "Only W-SSC-029 and W-SSC-149 are reconstructed because only those frozen source-demand bodies changed.",
+    "All other 82 W occurrence items are carried forward byte-identically from W_EXTRACTION_RECONCILED_0_18.json.",
+    "The four prior target occurrence IDs are preserved for dependency lineage.",
+    "Source-visible field-role, explicit-equation, and role-selection incidence is conserved.",
+    "Variation remains an unresolved semantic operation; no stationarity, derivative, direction-carrier, totality, or Euler-Lagrange semantics are imported.",
+    "No L or cross-track evidence is used."
+  ],
+  "replacements": [
+    {
+      "census_id": "W-SSC-029",
+      "action": "REPLACE_ITEM",
+      "replacement_item": {
+        "census_id": "W-SSC-029",
+        "occurrences": [
+          {
+            "occurrence_id": "W-SSC-029-O01",
+            "source_span": "writes the action as the integral of epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)",
+            "relation_span": "writes",
+            "argument_spans": [
+              "the action",
+              "the integral of epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)"
+            ],
+            "logical_force": "ASSERTED",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [],
+            "load_bearing_note": "Conserves the source-written Palatini action relation without importing a calculus semantics."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O02",
+            "source_span": "distinguishes spin-connection one-forms omega from canonical/frame one-forms e",
+            "relation_span": "distinguishes",
+            "argument_spans": [
+              "spin-connection one-forms omega",
+              "canonical/frame one-forms e"
+            ],
+            "logical_force": "COMPARISON",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [],
+            "load_bearing_note": "Preserves the explicit distinction between the connection and frame/canonical one-form roles."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O05",
+            "source_span": "epsilon_ABCD e^A wedge e^B wedge Omega^CD(omega)",
+            "relation_span": "wedge",
+            "argument_spans": [
+              "epsilon_ABCD e^A",
+              "e^B",
+              "Omega^CD(omega)"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O01"
+            ],
+            "load_bearing_note": "Exposes the source-written wedge-composition chain in the action integrand without importing associativity or exterior-calculus laws."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O06",
+            "source_span": "takes e and omega as the fundamental Palatini fields",
+            "relation_span": "as",
+            "argument_spans": [
+              "e and omega",
+              "the fundamental Palatini fields"
+            ],
+            "logical_force": "EQUALITY_OR_IDENTIFICATION",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [],
+            "load_bearing_note": "Preserves the source-explicit field-role assignment needed to distinguish which action roles are varied."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O07",
+            "source_span": "Omega^CD(omega)",
+            "relation_span": "Omega^CD",
+            "argument_spans": [
+              "omega"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+            "depends_on": [
+              "W-SSC-029-O01"
+            ],
+            "load_bearing_note": "Exposes the source-written dependence of the curvature expression on omega without importing a conventional curvature definition."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O08",
+            "source_span": "equations of motion are obtained by varying omega^AB",
+            "relation_span": "obtained by varying",
+            "argument_spans": [
+              "equations of motion",
+              "omega^AB"
+            ],
+            "logical_force": "ASSERTED",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O01",
+              "W-SSC-029-O06"
+            ],
+            "load_bearing_note": "Conserves the source-explicit equations-of-motion framing and selected varied role; it does not define the internal variation operation."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O03",
+            "source_span": "varying omega^AB, which gives de^A + omega^A_B wedge e^B = 0 and thereby the torsion-free Levi-Civita connection determined by e",
+            "relation_span": "gives",
+            "argument_spans": [
+              "varying omega^AB",
+              "de^A + omega^A_B wedge e^B = 0 and thereby the torsion-free Levi-Civita connection determined by e"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O01",
+              "W-SSC-029-O06",
+              "W-SSC-029-O08"
+            ],
+            "load_bearing_note": "Connection-role variation consequence with its source-written equation and result structure; variation semantics remain unresolved."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O09",
+            "source_span": "de^A + omega^A_B wedge e^B = 0",
+            "relation_span": "=",
+            "argument_spans": [
+              "de^A + omega^A_B wedge e^B",
+              "0"
+            ],
+            "logical_force": "EQUALITY_OR_IDENTIFICATION",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O03"
+            ],
+            "load_bearing_note": "Conserves the explicit source equation produced on the connection-variation branch; derivative/exterior semantics are not imported."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O10",
+            "source_span": "torsion-free Levi-Civita connection determined by e",
+            "relation_span": "determined by",
+            "argument_spans": [
+              "torsion-free Levi-Civita connection",
+              "e"
+            ],
+            "logical_force": "ASSERTED",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O03",
+              "W-SSC-029-O09"
+            ],
+            "load_bearing_note": "Preserves the source-stated dependence of the resulting Levi-Civita connection on the frame field."
+          },
+          {
+            "occurrence_id": "W-SSC-029-O04",
+            "source_span": "varying e^A, which gives the Einstein equations in terms of e",
+            "relation_span": "gives",
+            "argument_spans": [
+              "varying e^A",
+              "the Einstein equations in terms of e"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-029-O01",
+              "W-SSC-029-O06"
+            ],
+            "load_bearing_note": "Frame-role variation consequence; no stationarity or Euler-Lagrange semantics are imported."
+          }
+        ],
+        "extraction_status": "COMPLETE"
+      }
+    },
+    {
+      "census_id": "W-SSC-149",
+      "action": "REPLACE_ITEM",
+      "replacement_item": {
+        "census_id": "W-SSC-149",
+        "occurrences": [
+          {
+            "occurrence_id": "W-SSC-149-O01",
+            "source_span": "writes a chiral gravitational action as the integral of Sigma^(dotA dotB) wedge R_(dotA dotB)",
+            "relation_span": "writes",
+            "argument_spans": [
+              "a chiral gravitational action",
+              "the integral of Sigma^(dotA dotB) wedge R_(dotA dotB)"
+            ],
+            "logical_force": "ASSERTED",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [],
+            "load_bearing_note": "Conserves the source-written action relation without importing variational-calculus semantics."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O04",
+            "source_span": "Sigma is a self-dual two-form constructed from the tetrad",
+            "relation_span": "constructed from",
+            "argument_spans": [
+              "Sigma",
+              "the tetrad"
+            ],
+            "logical_force": "ASSERTED",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01"
+            ],
+            "load_bearing_note": "Preserves the source-explicit tetrad dependency of Sigma."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O08",
+            "source_span": "Sigma^(dotA dotB) wedge R_(dotA dotB)",
+            "relation_span": "wedge",
+            "argument_spans": [
+              "Sigma^(dotA dotB)",
+              "R_(dotA dotB)"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01"
+            ],
+            "load_bearing_note": "Exposes the source-written action pairing without importing exterior-product laws."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O09",
+            "source_span": "R is the right-handed curvature two-form",
+            "relation_span": "is",
+            "argument_spans": [
+              "R",
+              "the right-handed curvature two-form"
+            ],
+            "logical_force": "EQUALITY_OR_IDENTIFICATION",
+            "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+            "depends_on": [
+              "W-SSC-149-O01"
+            ],
+            "load_bearing_note": "Preserves the source-stated role of R while leaving curvature behavior unresolved."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O10",
+            "source_span": "Sigma is a self-dual two-form",
+            "relation_span": "is",
+            "argument_spans": [
+              "Sigma",
+              "a self-dual two-form"
+            ],
+            "logical_force": "EQUALITY_OR_IDENTIFICATION",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01"
+            ],
+            "load_bearing_note": "Separates the source-stated self-dual two-form role from the tetrad-construction relation."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O05",
+            "source_span": "varying this action with respect to the connection",
+            "relation_span": "with respect to",
+            "argument_spans": [
+              "varying this action",
+              "the connection"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01"
+            ],
+            "load_bearing_note": "Preserves the selected connection role of the source variation without defining the internal variation operation."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O02",
+            "source_span": "varying this action with respect to the connection gives the torsion-free (Levi-Civita) relation between the tetrad and the connection",
+            "relation_span": "gives",
+            "argument_spans": [
+              "varying this action with respect to the connection",
+              "the torsion-free (Levi-Civita) relation between the tetrad and the connection"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01",
+              "W-SSC-149-O05"
+            ],
+            "load_bearing_note": "Connection-selected variation consequence; stationarity and derivative semantics remain unresolved."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O07",
+            "source_span": "torsion-free (Levi-Civita) relation between the tetrad and the connection",
+            "relation_span": "between",
+            "argument_spans": [
+              "torsion-free (Levi-Civita) relation",
+              "the tetrad",
+              "the connection"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O02",
+              "W-SSC-149-O04"
+            ],
+            "load_bearing_note": "Preserves the explicit two-role incidence of the torsion-free result."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O06",
+            "source_span": "varying it with respect to the tetrad",
+            "relation_span": "with respect to",
+            "argument_spans": [
+              "varying it",
+              "the tetrad"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01",
+              "W-SSC-149-O04"
+            ],
+            "load_bearing_note": "Preserves the selected tetrad role of the source variation without defining the internal variation operation."
+          },
+          {
+            "occurrence_id": "W-SSC-149-O03",
+            "source_span": "varying it with respect to the tetrad gives the Einstein equations",
+            "relation_span": "gives",
+            "argument_spans": [
+              "varying it with respect to the tetrad",
+              "the Einstein equations"
+            ],
+            "logical_force": "OTHER",
+            "definition_status": "PARTIAL_IN_BODY",
+            "depends_on": [
+              "W-SSC-149-O01",
+              "W-SSC-149-O06"
+            ],
+            "load_bearing_note": "Tetrad-selected variation consequence; no zero-stationarity or Euler-Lagrange semantics are imported."
+          }
+        ],
+        "extraction_status": "COMPLETE"
+      }
+    }
+  ],
+  "counts": {
+    "frozen_W_bodies": 84,
+    "affected_bodies": 2,
+    "unchanged_bodies": 82,
+    "predecessor_occurrences": 425,
+    "successor_occurrences": 436,
+    "net_occurrence_change": 11
+  },
+  "findings": [
+    "The corrected W01 body exposes fundamental-field roles, action dependence on omega through Omega(omega), the explicit torsion-free equation, and its dependence on e.",
+    "The corrected W02 body exposes explicit with-respect-to selected roles and the two-role incidence of the torsion-free result.",
+    "The corrected source still does not define the internal variation operation needed for a non-evasive lower generic transformation candidate.",
+    "Primitive 211000 remains too strong for these source instances because its variation-direction and zero-stationarity obligations remain absent."
+  ],
+  "next_required_steps": [
+    "Regenerate W_EXTRACTION_RECONCILED_0_19.json deterministically from W 0.18 plus these two replacements.",
+    "Verify exact source-span, argument, dependency, duplicate, and anti-pre-G5 conservation against SOURCE_DEMAND_CENSUS_0_2.json.",
+    "Establish a source-local zero-change fixed point for the corrected W input using a complete conserved-delta review: reread the two changed bodies and carry forward only byte-identical judgments for the other 82.",
+    "Use the owner external-verification bypass only for unavailable third-party audit calls; do not label external verification as passed.",
+    "Only after the corrected G1 campaign gate is accepted may G2/G3/G4/G5 be regenerated."
+  ]
+}

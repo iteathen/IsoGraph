@@ -1,0 +1,82 @@
+{
+  "schema": "woit-lisi.lisi-pre-dp-ia-gate.v0.15",
+  "date": "2026-10-05",
+  "track": "L",
+  "status": "BLOCKED_PROCESS_REGROUNDED_17_OF_191_ACCEPTED_CENSUS_KIND_REPAIRED",
+  "predecessor": "LISI_PRE_DP_IA_GATE_0_14.json",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "current_ledger": "CORE021_CLOSURE_LEDGER_0_28.json",
+  "frozen_ssc": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "source_revision": "LISI_SSC_SOURCE_CORRECTION_0_2.json",
+  "current_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_22.json",
+  "current_native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_22.isg",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "current_closed_census_items": 17,
+  "total_census_items": 191,
+  "current_closed_ids": [
+    "L-SSC-009",
+    "L-SSC-011",
+    "L-SSC-022",
+    "L-SSC-023",
+    "L-SSC-048",
+    "L-SSC-049",
+    "L-SSC-069",
+    "L-SSC-074",
+    "L-SSC-090",
+    "L-SSC-091",
+    "L-SSC-121",
+    "L-SSC-122",
+    "L-SSC-148",
+    "L-SSC-154",
+    "L-SSC-189",
+    "L-SSC-190",
+    "L-SSC-191"
+  ],
+  "structural_gate_state": {
+    "SOUNDNESS_STRUCTURE": true,
+    "COVERAGE": true,
+    "RECONSTRUCTION": true,
+    "SCOPE_INTEGRITY": true,
+    "AUTHORITY_ROUTING_STRUCTURE": true,
+    "IA_FIXED_POINT_CURRENT": true,
+    "STRICT_CLOSURE": false
+  },
+  "required_order": [
+    "native_body_compilation",
+    "primitive_schema_closure",
+    "core021_closure_ledger_and_gates",
+    "recursive_implicit_assertions",
+    "primitive_close_all_ia_bodies_support_dependencies",
+    "ia_no_change_pass",
+    "record_current_ia_fixed_point",
+    "nei",
+    "dts",
+    "dp"
+  ],
+  "current_ia_fixed_point": null,
+  "current_input_tuple": {
+    "primitive_kernel_sha256": "cf2030c59e26760a930b62debf61a68bb9c5711f42371827adcd22a7ee34cc5f",
+    "source_semantic_census_sha256": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "2d1a1aa92eb00d820dfb8afcea8887805cb969ae25820974bb0afc5ae5e2f842"
+  },
+  "closure_admission_rule": "DERIVE_FROM_FROZEN_SSC_PLUS_AUTHORITATIVE_NATIVE_GRAPH_AND_QUALIFIED_AUTHORITY",
+  "historical_closure_evidence": {
+    "prior_authority_ledger": "CORE021_CLOSURE_LEDGER_0_16.json",
+    "prior_promoted_count": 39,
+    "later_non_authoritative_ledger": "CORE021_CLOSURE_LEDGER_0_17.json",
+    "accepted_currently": 17,
+    "disposition": "PRESERVED_RESEARCH_EVIDENCE_REQUIRES_GRAPH_FIRST_REDERIVATION"
+  },
+  "cross_author_semantics_allowed": false,
+  "dp_allowed": false,
+  "scope_revision_repair": "L_REGROUNDED_SCOPE_REVISION_REPAIR_0_1.json",
+  "current_ledger_audit": "CORE021_CLOSURE_LEDGER_0_28_AUDIT.json",
+  "census_kind_conservation_repair": "L_REGROUNDED_CENSUS_KIND_CONSERVATION_REPAIR_0_1.json",
+  "invalidated_predecessor_gate": "LISI_PRE_DP_IA_GATE_0_12.json",
+  "current_open_dependency_blockers": [
+    "L-SSC-013 -> L-SSC-188"
+  ]
+}

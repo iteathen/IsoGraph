@@ -1,0 +1,408 @@
+{
+  "schema": "isograph.lisi-l05-source-o-rational-bivector-span-certificate.g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "EXACT_RATIONAL_SOURCE_BIVECTOR_NONCLOSURE_CERTIFICATE_NOT_FULL_THEOREM_QUALIFICATION",
+  "authority": false,
+  "mathematical_scope": "SOURCE_DEFINED_ORDINARY_O_OPERATOR_MATRICES_ONLY",
+  "G1_authorized": false,
+  "semantic_source_complete": false,
+  "external_review_passed": false,
+  "source": {
+    "id": "L05",
+    "author": "A. Garrett Lisi",
+    "title": "Division Algebras, Triality, and Exceptional Magic",
+    "frozen_version": "2026-08-29 published Springer version of record",
+    "doi": "10.1007/s00006-026-01447-5",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "pdf_zero_based_pages": [
+      2,
+      3,
+      4
+    ],
+    "printed_page_table": 4,
+    "section": "§2 Eqs. (1), (2), (3), (5)",
+    "method": "Independent direct visual reading of journal PDF images, followed by exact symbolic integer/rational matrix evaluation; no source-alternative normalization."
+  },
+  "inputs": {
+    "current_ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_16.json",
+      "git_blob_sha": "9418c4f8f0e91aef8f352b9fa762a5d7c9088360"
+    },
+    "frozen_printed_table_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "earlier_version_independent_reaudit": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_INDEPENDENT_VERSION_REAUDIT_0_1.json",
+      "git_blob_sha": "9ec1acd5ae21ad4b38b5c3dca0e5c699f8d84f43"
+    },
+    "current_procedural_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_17.json",
+      "git_blob_sha": "14a8c8c0dcd72fff94476ea543699b52563bac27"
+    }
+  },
+  "independently_visually_transcribed_journal_O_table": [
+    "e0 e1 e2 e3 e4 e5 e6 e7",
+    "e1 -e0 e4 e7 -e2 e6 -e5 -e3",
+    "e2 -e4 -e0 e5 e1 -e3 e7 -e6",
+    "e3 -e7 -e5 -e0 e6 e2 -e4 e1",
+    "e4 e2 -e1 -e6 -e0 e7 e3 -e5",
+    "e5 -e6 e3 -e2 -e7 -e0 e1 e4",
+    "e6 e5 -e7 e4 -e3 -e1 -e0 -e2",
+    "e7 e3 e6 -e1 e5 -e4 -e2 -e0"
+  ],
+  "input_guards": {
+    "row_index": "left basis factor e_a",
+    "column_index": "right basis factor e_b",
+    "indexed_table_cells": 64,
+    "original_e6e7": "-e2",
+    "original_e7e6": "-e2",
+    "conjugation": "epsilon(0)=+1 and epsilon(i)=−1 for 1≤i≤7",
+    "source_ordinary_metric": "n_ab=delta_ab",
+    "source_nonassociativity": "ONLY composition of 8x8 REAL LINEAR MAPS is associative. Octonion scalar multiplication is not reassociated.",
+    "two_source_barGamma_claims": "Direct-M coefficient and ordinary-metric Gamma transpose are both separately source asserted, not silently identified on the inconsistent source table.",
+    "signature": "The nonclosure count is sign-insensitive for simultaneous ± on source bivectors, but block coefficient formulas must preserve source polarity."
+  },
+  "operator_construction": {
+    "G_c_matrix": "G_c[b,a]=epsilon(b)*M[c,a]^b, output row b (conjugated-basis coordinates), input a",
+    "bar_D_matrix": "D_c[b,a]=epsilon(c)*epsilon(a)*M[c,a]^b, output row b ordinary-basis coordinates, input a conjugated basis",
+    "bar_T_matrix": "T_c=transpose(G_c), ordinary metric n_cc=+1",
+    "upper_U_cd": "U_cd = barGamma_c * Gamma_d (c<d, rightmost Gamma_d applied first)",
+    "lower_V_cd": "V_cd = Gamma_c * barGamma_d (c<d, rightmost barGamma_d applied first)",
+    "bracket": "[X,Y]=X*Y−Y*X using ordinary associative composition of endomorphism matrices, NOT octonion multiplication",
+    "span": "span_Q of the exactly 28 source matrices indexed by all c<d in {0,...,7}",
+    "test_domain": "All 28 choose 2 = 378 unordered distinct pairs of source generators; full 8×8 matrix commutators; both source barGamma constructions and both chiral blocks."
+  },
+  "exact_method": {
+    "scalars": "Q rational arithmetic with BigInt numerator/denominator reduced by gcd after every operation. No finite fields, floating point tolerances or matrix name imports.",
+    "source_basis_rank": "Exact rational forward Gaussian row echelon over 64 matrix entries, retains all 28 source generator rows and their leading pivots.",
+    "membership": "Reduce the full flattened commutator against rational row echelon; zero residual means IN span_Q; nonzero rational residual means OUT of span_Q.",
+    "sparse_witness": "For first [U_01,U_06] or [V_01,V_06], linear functional is sum of two matrix entries; all 28 generators have value exactly zero but the commutator has value +2, independently certifying non-membership without full rank calculation.",
+    "qualification_boundary": "The exact rational proof concerns finite matrix operators constructed from the source-literal table. It does not prove/deny canonical octonion spin algebra or f4 theorem after a source correction."
+  },
+  "all_eight_variants_exact_rational": [
+    {
+      "source_version": "FROZEN_JOURNAL",
+      "barGamma_convention": "DIRECT_PUBLISHED_M",
+      "chiral_block": "upper",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 168,
+      "inside_span_Q": 210,
+      "first_outside_witness": {
+        "generators": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "rational_residual_coordinate": [
+          3,
+          2
+        ],
+        "residual_numerator": "2",
+        "residual_denominator": "1"
+      },
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 2,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "FROZEN_JOURNAL",
+      "barGamma_convention": "DIRECT_PUBLISHED_M",
+      "chiral_block": "lower",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 168,
+      "inside_span_Q": 210,
+      "first_outside_witness": {
+        "generators": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "rational_residual_coordinate": [
+          3,
+          2
+        ],
+        "residual_numerator": "2",
+        "residual_denominator": "1"
+      },
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 2,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "FROZEN_JOURNAL",
+      "barGamma_convention": "PUBLISHED_SIGNATURE_ADJUSTED_TRANSPOSE",
+      "chiral_block": "upper",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 168,
+      "inside_span_Q": 210,
+      "first_outside_witness": {
+        "generators": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "rational_residual_coordinate": [
+          3,
+          2
+        ],
+        "residual_numerator": "2",
+        "residual_denominator": "1"
+      },
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 2,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "FROZEN_JOURNAL",
+      "barGamma_convention": "PUBLISHED_SIGNATURE_ADJUSTED_TRANSPOSE",
+      "chiral_block": "lower",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 168,
+      "inside_span_Q": 210,
+      "first_outside_witness": {
+        "generators": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "rational_residual_coordinate": [
+          4,
+          7
+        ],
+        "residual_numerator": "4",
+        "residual_denominator": "1"
+      },
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 2,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "ONE_CELL_ALTERNATIVE_NOT_FROZEN",
+      "barGamma_convention": "DIRECT_PUBLISHED_M",
+      "chiral_block": "upper",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 0,
+      "inside_span_Q": 378,
+      "first_outside_witness": null,
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 0,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "ONE_CELL_ALTERNATIVE_NOT_FROZEN",
+      "barGamma_convention": "DIRECT_PUBLISHED_M",
+      "chiral_block": "lower",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 0,
+      "inside_span_Q": 378,
+      "first_outside_witness": null,
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 0,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "ONE_CELL_ALTERNATIVE_NOT_FROZEN",
+      "barGamma_convention": "PUBLISHED_SIGNATURE_ADJUSTED_TRANSPOSE",
+      "chiral_block": "upper",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 0,
+      "inside_span_Q": 378,
+      "first_outside_witness": null,
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 0,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    },
+    {
+      "source_version": "ONE_CELL_ALTERNATIVE_NOT_FROZEN",
+      "barGamma_convention": "PUBLISHED_SIGNATURE_ADJUSTED_TRANSPOSE",
+      "chiral_block": "lower",
+      "generator_basis_rank_Q": 28,
+      "generator_count": 28,
+      "commutators_tested": 378,
+      "outside_span_Q": 0,
+      "inside_span_Q": 378,
+      "first_outside_witness": null,
+      "sparse_pair_relation": {
+        "coordinate_pairs": [
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "all_28_generator_values_sum_zero": true,
+        "commutator_B01_B06_values_sum": 0,
+        "source_formula": "f(M)=M[r1,c1]+M[r2,c2]",
+        "ordinary_Q_linear_functional": true
+      }
+    }
+  ],
+  "counterfactual_repair": {
+    "edit_source": "ordinary O row e6 column e7: -e2 -> +e2",
+    "not_authorized": true,
+    "invariant_after_edit": "All eight scoped operator variants have rank 28 and zero nonclosing commutators for the edited table in this finite test.",
+    "other_source_cell_e7e6_unmodified": "-e2",
+    "source_2026_08_journal_changed": false,
+    "editorial_intent_or_formal_erratum_established": false,
+    "causal_inference": "Changing a single source bit cures these concrete finite failures; no global f4/Clifford theorem, all-paper equivalence or author intent follows."
+  },
+  "dependencies_and_gates": {
+    "SSC0_16_source_frozen": false,
+    "G1_to_G7_authorized": false,
+    "primitive_closure_complete": false,
+    "f4_L133_source_mathematics_qualified": false,
+    "source_identity_counts_reduced": false,
+    "original_source_table_preserved": true,
+    "source_census_full_cold_audit_passed": false,
+    "existing_negative_Eq2_Eq3_Eq4_Eq5_retained": true,
+    "potential_defect_owner": "Published frozen-source table assertion relative to other published source axioms; not necessarily a defect in the author's corrected/desired construction.",
+    "next_required_work": "Independently rerun exact-rational all-eight variants with baseline-first hostile source table, index, field and authority mutations. Conserve source-negative evidence in G0 and keep SSC exact body/census stable. Continue full L01–L06 primary-source cold review; no G1/IA before full G0."
+  },
+  "idea_provenance": {
+    "research_direction": "Human project owner demands hostile complete correctness-first review of L source; implementation of exact rational independent witness agent-assisted.",
+    "earliest_located_project_evidence": "Earlier exact source anti-involution discrepancy in 2026-10-04 LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json; previous 2026-10-08 modular 168-case results in LISI_L05_EQ5_INDEXED_BIVECTOR_SOURCE_RECONSTRUCTION_0_1.json.",
+    "recorded_on": "2026-10-08",
+    "retrospective_for_prior_findings": true,
+    "independent_calculation_date": "2026-10-08",
+    "third_party_primary_source": "Lisi 2026 Springer published mathematical presentation, not an IsoGraph invention."
+  },
+  "nonclaims": [
+    "No full line-by-line frozen L01-L06 primary-source audit.",
+    "No current full 191 obligation primitive/schema closure or source G0 fixed point.",
+    "No W source premise or cross-track quotient.",
+    "No author-approved publication erratum established.",
+    "Passing source-literal matrix tests does not demonstrate general f4 construction.",
+    "No external cold semantic reviewer pass."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "isograph.exp062.W.G1.six-original-verify-v06-g3-field-gate-defect.v0.1",
+  "track": "W",
+  "failed_run": {
+    "id": 38151924084,
+    "job_id": 114506965535,
+    "commit": "5b7ca1d31ee5b6a31487cca9768a52dab1e83bf4",
+    "conclusion": "FAILURE"
+  },
+  "positive_source_evidence": "PASS_6_AUTHOR_ORIGINALS_17_ANCHORS_10_NEGATIVE",
+  "root_cause": "Verifier required an operator_definition_status field which was not part of frozen G1 source-first candidate and would incorrectly impose G3 primitive definability classification at G1 source extraction.",
+  "repair": "Separate v0.4 drops G3-only source operator definability assertion, still demands exact frozen source G0 body, original source link, 29 G1 source spans, argument/result roles, source modality and no primitive or G2 promotion.",
+  "all_other_referenced_G1_fields_checked_against_candidate": true,
+  "run_reclassification": "PROHIBITED",
+  "old_oct03_G0_open": true,
+  "new_current_G0_frozen": true,
+  "G2_authorized": false
+}

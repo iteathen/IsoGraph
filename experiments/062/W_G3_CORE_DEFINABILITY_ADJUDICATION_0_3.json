@@ -1,0 +1,84 @@
+{
+  "schema": "isograph.exp062-w-g3-core-definability-adjudication.v0.3",
+  "date": "2026-10-06",
+  "status": "SIX_CORE_WRAPPERS_CLOSED_G3_STILL_OPEN",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "input": {
+    "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_2.json",
+    "git_blob_sha": "38a87a4e46e408b6b7c7978a0d4d9b87273daabe"
+  },
+  "corrections": [
+    {
+      "occurrence_id": "W-SSC-033-O02",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "The outer source assertion is primitive equality between the result term J^2 and exact literal -1. The square operation is already a distinct unresolved occurrence W-SSC-033-O05, so closing the equality wrapper imports no exponentiation semantics."
+    },
+    {
+      "occurrence_id": "W-SSC-047-O06",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "The outer Klein-law assertion is primitive equality between the separately exposed wedge-result term and exact literal 0. Wedge remains unresolved at W-SSC-047-O08; this closure imports no wedge semantics."
+    },
+    {
+      "occurrence_id": "W-SSC-033-O04",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence exists only to expose the source-written directional map incidence CP3 -> S4 already nested in the separate bundle occurrence. Core ordered/directional relation incidence is sufficient for this arrow; bundle/fibration behavior remains unresolved in W-SSC-033-O01/O03."
+    },
+    {
+      "occurrence_id": "W-SSC-071-O07",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence exists only to expose the directional fibration arrow CP3 -> HP1=S4. Core directional/ordered incidence closes the arrow itself; the HP1=S4 identification and fibration/fiber behavior remain separate unresolved occurrences."
+    },
+    {
+      "occurrence_id": "W-SSC-094-O06",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence isolates only the source-written directional arrow of the Euclidean fibration. The target identification and the source-defined line-to-quaternionic-line generating behavior remain independently unresolved."
+    },
+    {
+      "occurrence_id": "W-SSC-122-O05",
+      "from": "UNEXPANDED_DEMAND",
+      "to": "CORE_CLOSED",
+      "basis": "This occurrence isolates application of the source-defined Theta symbol to the test-function value. Function application is primitive logical structure; Theta's defining equation/properties remain separate occurrences and are not closed by this application incidence."
+    }
+  ],
+  "reviewed_not_closed": [
+    {
+      "occurrence_id": "W-SSC-027-O02",
+      "reason": "The action formula still hides multiplication/juxtaposition semantics beyond the separately exposed inverse; the whole arrow occurrence is not merely directional incidence."
+    },
+    {
+      "occurrence_id": "W-SSC-048-O02",
+      "reason": "The fractional-linear action formula still contains multiplication/juxtaposition beyond the separately exposed additions and inverse. Do not close the whole action arrow."
+    },
+    {
+      "occurrence_id": "W-SSC-128-O01",
+      "reason": "The Lorentz action formula still hides multiplication/juxtaposition semantics beyond the separately exposed inverse. Do not close the whole action arrow."
+    },
+    {
+      "occurrence_id": "W-SSC-144-O04",
+      "reason": "The Hodge-star square operation is not separately represented; closing the equality-like wrapper would hide the load-bearing star/square operation."
+    },
+    {
+      "occurrence_id": "W-SSC-144-O08",
+      "reason": "The Hodge-star square operation is not separately represented; closing the equality-like wrapper would hide the load-bearing star/square operation."
+    }
+  ],
+  "resulting_counts": {
+    "CORE_CLOSED": 13,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0,
+    "UNEXPANDED_DEMAND": 412
+  },
+  "fixed_point": {
+    "G3_complete": false,
+    "G4_authorized": false
+  },
+  "next": "Continue complete W-only G3 definability adjudication."
+}

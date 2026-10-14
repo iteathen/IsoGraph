@@ -1,0 +1,16 @@
+name: Experiment 062 W01 A3 original source exact corrected G0 0.2
+# Historical FAILED workflow on run 38078531819; retained as manual-only, never retrospectively qualified.
+# Source owner omission hostile control escaped; preserve failed v0.2.
+on:
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w01-a3-original-source-g0-0-2.cjs
+      - run: node experiments/062/tools/verify-w01-a3-original-source-g0-0-2.cjs

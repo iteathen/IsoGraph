@@ -1,0 +1,38 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04.original-figure-graph-reverse-syntax-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_run": {
+    "run_id": 38159496330,
+    "job_id": 114529251526,
+    "head_sha": "c60982a8444cebc8c7b9ec1bff453cef432fba32",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38159496330",
+    "conclusion": "failure",
+    "failure_stage": "node --check",
+    "exact_cause": "SyntaxError: Identifier 'ys' has already been declared, line 124 in v0.2 reverse source glyph polygon checker",
+    "source_original_PDF_pass_claimed": false,
+    "adversarial_controls_executed": 0,
+    "not_reclassified_as_success": true
+  },
+  "method_defect": {
+    "class": "VERIFIER_JAVASCRIPT_BLOCK_SCOPE_VARIABLE_REDECLARATION",
+    "old_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-full-figures-source-0-2.mjs",
+      "git_blob_sha": "b4635213b9b491d3198112e45cd2564d89bf5868"
+    },
+    "correction": "Rename the new polygon extremal y-coordinate local to polyYs to avoid clashing with the existing glyph bbox ys declaration in the same for block; no graph data, SVG parser expectations or source semantics changed.",
+    "new_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-full-figures-source-0-3.mjs",
+      "git_blob_sha": "42913a9275a42331b378552185155aff6f7b0fbb"
+    },
+    "source_figure_graph_packet_unchanged_SHA": "92cbd335c9a187fb2f8f46f70a38ab5c0cc09e5c"
+  },
+  "stage_locks": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "source_scope_complete": false,
+    "PR70_merge_authorized": false
+  }
+}

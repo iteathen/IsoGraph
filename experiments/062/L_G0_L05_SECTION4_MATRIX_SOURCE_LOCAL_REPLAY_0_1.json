@@ -1,0 +1,73 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-section4-matrix-source-local-replay.v0.1",
+  "date": "2026-10-08",
+  "status": "PASS_LOCAL_V8_MATRIX_COMMUTATOR_REPLAY_SEVEN_MUTATIONS_NOT_CI",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_TEST_EVIDENCE_ONLY",
+  "track": "L",
+  "branch_head_at_creation": "1dd961fb8951846902a546a1c5f5cfe1d7e0dd99",
+  "pinned": [
+    {
+      "path": "experiments/062/tools/verify-l-g0-l05-section4-matrix-source-0-1.mjs",
+      "git_blob_sha": "22fdf222de282a691c809214902a9d7ec8659540"
+    },
+    {
+      "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json",
+      "git_blob_sha": "09b7e87f5652530c65ae1094793c6c7c51adcda0"
+    },
+    {
+      "path": "experiments/062/L_G0_L05_SECTION4_MATRIX_COMMUTATOR_CONTROLS_0_1.json",
+      "git_blob_sha": "695cc66da4d262ed77ff2acac06e187f9758d0ad"
+    },
+    {
+      "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+      "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+    }
+  ],
+  "method": {
+    "exact_program": "experiments/062/tools/verify-l-g0-l05-section4-matrix-source-0-1.mjs",
+    "execution": "Node imports removed and only fs.readFileSync mapped to live GitHub file bytes; all matrix and source assertions, loops and adversarial tests executed in V8 unmodified.",
+    "limitations": [
+      "Not execution in a Node GitHub Actions worker or independent cold semantic audit.",
+      "Tests use associative complex and standard quaternion arithmetic, not split or octonion carriers.",
+      "Finite fixtures do not establish universal Lie algebra closure."
+    ]
+  },
+  "result": {
+    "pass": true,
+    "errors": [],
+    "su3_component_equations": 5,
+    "sp3_component_equations": 6,
+    "su3_finite_pairs": 3,
+    "sp3_finite_pairs": 3,
+    "maximum_absolute_error": 3.552713678800501e-15,
+    "mutation_controls_rejected": 7,
+    "mutation_controls_total": 7,
+    "mutants": [
+      "su3 bracket wrong sign",
+      "su3 source diagonal changed",
+      "sp3 noncommutative operand swapped",
+      "sp3 tilde omitted",
+      "sp3 source bracket omitted",
+      "premature G3 closure",
+      "source family omitted"
+    ]
+  },
+  "parent_frontier": {
+    "L133_source_census_complete": false,
+    "G0_full_L_frozen": false,
+    "L133_G1_G3_stale": true,
+    "L132_current_verified_G7": false,
+    "Recursive_IA_authorized": false
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "next": "Complete L05 §4 source expression inventory (split Cprime, root Cartan, sp3 Eq13, all f4); include L133 and L134 in a new versioned source-census successor only after complete source-conservation checks; qualify independent Node/CI tests; never consume stale G1/G3 before G0 freeze.",
+  "nonclaims": [
+    "No source-body theorem proved.",
+    "No external review performed or passed.",
+    "No direct global Core qualified-module change or W evidence."
+  ]
+}

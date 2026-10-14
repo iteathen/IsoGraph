@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.exp062.L.G0.L04-original109-first-verifier-baseline-field-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "original_frozen_source": "arXiv:2407.02497v2",
+  "failed_CI": {
+    "run_id": 38116665825,
+    "job_id": 114402784888,
+    "head_sha": "976e485b8cb71e44506e9fdb07633aaa27ffeff8",
+    "conclusion": "failure",
+    "hostiles_defined": 24,
+    "hostiles_rejected": 24,
+    "issues": [
+      "finite original source first denominator and both correspondences",
+      "original source original 17p 848 lines 109 independent dispositions"
+    ],
+    "official_frozen_PDF_SHA256_verified": true,
+    "original_PDF_pages": 17,
+    "source_original_layout_blocks": 109,
+    "source_original_nonblank_lines": 848,
+    "SSC_identities": 34,
+    "source_first_group_ids": 53,
+    "whole_original_semantic_cold_complete": false
+  },
+  "verified_original_evidence": {
+    "crosswalk": "research/woit-lisi-isomorph/lisi/LISI_L04_109_ORIGINAL_PDF_SOURCE_BLOCK_SSC_REVERSE_0_1.json",
+    "git_blob_sha": "094bc17ad381b761dc71668c142ebd3574bfcdb3",
+    "source_first_original_CI_38114397470": "success"
+  },
+  "mismatch_type": {
+    "owner": "VERIFIER_FIELD_SCHEMA",
+    "defect": "Verifier demanded integer totals.existing_original_source_first_groups_referenced=53 and totals.existing_L04_SSC_owner_ids_referenced=34, although actual packet declares totals.prior_53_source_group_ids_all_referenced=true and totals.prior_34_SSC_root_ids_all_referenced=true. It also demanded totals.original_pages=17 although actual packet uses totals.frozen_original_pages=17.",
+    "not_an_original_source_omission": true
+  },
+  "method_repair": "Read actual source packet fields, explicitly guard true coverage booleans and 17-page integer, additionally independently recompute all 53/34 membership sets from the original block records. Keep original crosswalk immutable and do not retroactively call CI 38116665825 successful.",
+  "original_exact_source_debt": {
+    "L04_selected_unverified_groups": 14,
+    "L04_complete_original_cold": false,
+    "six_complete_sources": 0
+  },
+  "historical_failure_retained": true,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

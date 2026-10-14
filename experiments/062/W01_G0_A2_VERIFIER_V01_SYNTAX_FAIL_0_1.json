@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062-w01-a2-verifier-syntax-failure.v0.1",
+  "track": "W",
+  "status": "FAILED_PREPUBLICATION_PARSER_NO_SOURCE_G0_QUALIFICATION",
+  "run_id": 38046477920,
+  "commit": "6dc6018f78bdc29f58137db67d3f93782b878860",
+  "workflow": "Experiment 062 W01 Appendix A2 original source G0 0.1",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38046477920",
+  "old_verifier_path": "experiments/062/tools/verify-w01-a2-original-source-g0-0-1.cjs",
+  "old_verifier_git_blob_sha": "d6c2a386df2d8c31c48e868c25d76cf3bb330a93",
+  "conclusion": "failure",
+  "parse_success": false,
+  "positive_baseline_executed": false,
+  "adversarial_controls_executed": false,
+  "reclassified_as_pass": false,
+  "failure_step": "Node.js CommonJS compile on verify-w01-a2-original-source-g0-0-1.cjs line 53",
+  "cause": "An assert.deepEqual call closes too early; a message argument outside the call leaves an unexpected closing parenthesis. This is a JavaScript checker syntax issue, not a source-counterexample, SSC-binder defect or failed theorem.",
+  "repair": "Exact successor v0.2 fixes the argument placement, adds separate node --check syntax CI step and preserves source-first original/audit/SSC/gate predecessor bytes unmodified.",
+  "current_W_G0": "OPEN_UNFROZEN",
+  "source_semantics_still_unqualified_by_this_run": true
+}

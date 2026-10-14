@@ -1,0 +1,31 @@
+name: Experiment 062 W G1 original W01 section41 W033 W113 two owner source 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_W033_W113_ORIGINAL_AUTHOR_SECTION41_0_1.json'
+      - 'experiments/062/tools/cold-w033-w113-w01-original-section41-0-1.py'
+      - 'experiments/062/tools/verify-w-g1-w033-w113-0-1.cjs'
+      - '.github/workflows/experiment-062-w-g1-w033-w113-original-section41-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          node --check experiments/062/tools/verify-w-g1-w033-w113-0-1.cjs
+          python3 -m py_compile experiments/062/tools/cold-w033-w113-w01-original-section41-0-1.py
+      - name: Independent actual original arXiv v2 section 4.1, 15 anchor classes and 12 hostile
+        run: python3 experiments/062/tools/cold-w033-w113-w01-original-section41-0-1.py
+      - name: Original source semantic operators shared G0 typed provenance and 25 hostiles
+        run: node experiments/062/tools/verify-w-g1-w033-w113-0-1.cjs
+      - name: Existing W043 original source 8 occurrence CI and W G0 conservation
+        run: |
+          node experiments/062/tools/verify-w-g1-w043-current-source-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

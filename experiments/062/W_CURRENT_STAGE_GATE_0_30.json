@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.30",
+  "date": "2026-10-08",
+  "status": "W_SOURCE_SEMANTIC_CENSUS_REOPENED_FOR_W097_COMPLETENESS_DEFECT",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_29.json",
+    "git_blob_sha": "91daa9c600fc2ab4e3ed00fb03550d1357254e58",
+    "reason": "Defect audit found omitted frozen W05 definitions/formulas in W-SSC-097, earlier than the current G1/G2 tuple."
+  },
+  "defect_audit": {
+    "path": "experiments/062/W097_SOURCE_COMPLETENESS_DEFECT_AUDIT_0_2.json",
+    "git_blob_sha": "1c0dd9cc28af3dd2bfbedc83f04cdb03f97687cd"
+  },
+  "corrected_source": {
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_5.json",
+      "git_blob_sha": "0c845ff40c1f5a4513ca52b65e8462013b4c1721"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_4.json",
+      "git_blob_sha": "ca44dbf71dbdab519aeb3c9fbb0979460ef41311"
+    },
+    "changed_bodies": [
+      "W-SSC-097"
+    ],
+    "source_expansion": false
+  },
+  "downstream_invalidation": {
+    "G1_current": false,
+    "G2_current": false,
+    "G3_current": false,
+    "G4_current": false,
+    "G5_current": false,
+    "G7_source_instantiations_current": false,
+    "generic_221100_qualification_preserved": true,
+    "generic_221101_qualification_preserved": true,
+    "generic_221102_qualification_preserved": true,
+    "generic_221103_qualification_preserved": true
+  },
+  "current_lawful_state": {
+    "source_correction_complete": true,
+    "G1_rebuild_authorized": true,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Re-extract W-SSC-097 from SOURCE_DEMAND_CENSUS_0_4.json with every load-bearing map/fixed-point/conic formula occurrence conserved, carry forward the other 83 W items exactly, then establish a new G1 fixed point before any downstream replay."
+}

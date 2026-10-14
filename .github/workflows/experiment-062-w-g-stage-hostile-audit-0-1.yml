@@ -1,0 +1,24 @@
+name: Experiment 062 W G-stage hostile source and lineage audit 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G_STAGE_HOSTILE_AUDIT_0_1.json'
+      - 'experiments/062/tools/verify-w-g-stage-hostile-audit-0-1.mjs'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_40.json'
+      - 'research/woit-lisi-isomorph/woit/README.md'
+      - '.github/workflows/experiment-062-w-g-stage-hostile-audit-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w05-w103-strict-hodge-source-0-2.mjs
+      - run: node experiments/062/tools/verify-w05-w109-completed-local-ring-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-exact-source-equations-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-late-source-expressions-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g-stage-hostile-audit-0-1.mjs

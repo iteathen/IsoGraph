@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062-l032-gate027-open-source-wording-fixture.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "VERIFIER_FALSE_BASELINE_FAILURE_OPEN_SOURCE_MODALITY_KEYWORD_NO_MUTATIONS_EVALUATED",
+  "failed_run": {
+    "run_id": 37894084450,
+    "head_sha": "a52e83f6f64187cec2e719efc8eef91d4f1819bb",
+    "conclusion": "failure",
+    "prior_math": "pass",
+    "prior_SSC": "pass",
+    "gate_error": "explicit G0 gap retained",
+    "adversarial_defined": 25,
+    "adversarial_executed": 0
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-stage-gate-0-27.mjs",
+    "git_blob_sha": "655670da5ef2bfd485af10480dcc572d80a2d5c2"
+  },
+  "cause": "Gate verifier demanded literal 'unadjudicated' while the actual G0 record explicitly uses 'does NOT adjudicate', an equivalent and equally explicit unresolved status. An expression-form mismatch should not override the source/provenance scope.",
+  "repair": "Verify the exact 'does NOT adjudicate source coefficient normalizations' residual instead, keep 25 baseline-gated source/authority mutations and positive syntax checks unchanged.",
+  "nonclaims": [
+    "No stage0.27 gate was qualified by failed baseline",
+    "No mutations were run",
+    "No author-source mathematics repaired",
+    "G1-G7 and external reviews remain unqualified"
+  ]
+}

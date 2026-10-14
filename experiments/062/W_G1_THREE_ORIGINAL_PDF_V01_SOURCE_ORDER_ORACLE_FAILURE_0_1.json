@@ -1,0 +1,29 @@
+{
+  "schema": "isograph.exp062-W-G1-three-PDF-v01-source-vs-topological-order-failure.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "failed_run": {
+    "run_id": 38161466294,
+    "job_id": 114535092062,
+    "commit_sha": "0b99209254153dc7ddd1f54baea0efaa3c7b938b",
+    "conclusion": "FAILURE",
+    "not_reclassified": true
+  },
+  "original_download_and_raw_pdf_SHA256_both_verified": true,
+  "defect": "The first verifier wrongly expected increasing printed PDF offsets in occurrence dependency order. W095 title 'Two interpretations' precedes the presentations it relates, so valid topological dependency order differs from printed page order.",
+  "actual_W095_offsets_in_semantic_order": [
+    30,
+    63,
+    110,
+    189,
+    8,
+    299,
+    324,
+    416
+  ],
+  "fix": "Independent source order permutation verifies original page text sequence while existing dependence checks verify directed semantic role incidence. Source G0 and author evidence unchanged.",
+  "old_Oct03_G0_open": true,
+  "current_G0_frozen": true,
+  "G1_global_incomplete": true,
+  "G2_unauthorized": true
+}

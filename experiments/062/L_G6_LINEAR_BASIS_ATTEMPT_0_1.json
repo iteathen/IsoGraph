@@ -1,0 +1,32 @@
+{
+  "schema": "isograph.exp062-l-g6-linear-basis-attempt.v0.1",
+  "date": "2026-10-07",
+  "status": "INFRASTRUCTURE_FAILURE_NO_SEMANTIC_DISPOSITION",
+  "authority_effect": "NONE",
+  "authority": false,
+  "hypothesis": {
+    "path": "experiments/062/L_G5H_LINEAR_BASIS_SUPPORT_0_1.json",
+    "git_blob_sha": "4205a98a50f1d0320bf1250ef3de1658f1b8a120"
+  },
+  "qualifier": {
+    "path": "experiments/062/tools/qualify-l-g6-linear-basis-support-0-1.mjs",
+    "git_blob_sha": "78b6ce24d95472e84e47431b350143e2181217e1"
+  },
+  "workflow_run_id": 37670982619,
+  "job_id": 112962369352,
+  "head_sha": "96d4f98ce4702babde0593fac0a71a6590696c22",
+  "failure": {
+    "stage": "static definition-block selection before qualification cases",
+    "error": "definition block count 183002=2",
+    "cause": "The checker searched every top-level block containing an application of relation 183002, so it matched both the 183002 definition block and a later 183006 block that consumes 183002.",
+    "semantic_cases_started": false,
+    "candidate_disposition": "UNTESTED"
+  },
+  "correction_rule": "Refine only the generic definition selector to require the selected relation as the direct body of the defining ^150005 wrapper. Preserve the frozen hypothesis, SSC, IA, and selected source bytes unchanged.",
+  "rerun_authorized": true,
+  "nonclaims": [
+    "This failure is not evidence for or against the linear-basis hypothesis.",
+    "No candidate bytes are changed by the tooling repair.",
+    "The failed run remains immutable evidence."
+  ]
+}

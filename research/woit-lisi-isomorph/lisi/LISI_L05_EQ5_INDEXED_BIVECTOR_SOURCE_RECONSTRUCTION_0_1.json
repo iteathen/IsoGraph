@@ -1,0 +1,221 @@
+{
+  "schema": "isograph.lisi-l05-eq5-chiral-indexed-source.g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "PARTIAL_SOURCE_EXACT_EQ5_INDEX_AND_BINDER_TRANSCRIPTION_UNFROZEN",
+  "authority": false,
+  "source_complete": false,
+  "G1_authorized": false,
+  "external_review_passed": false,
+  "source": {
+    "id": "L05",
+    "revision": "2026-08-29 published journal version of record",
+    "doi": "10.1007/s00006-026-01447-5",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "section": "§2",
+    "printed_page": 5,
+    "pdf_zero_index": 4,
+    "equation": "(5)",
+    "description": "Four aligned representations of each chiral bivector; note explicitly states right multiplication by e_d occurs before left by tilde(e_c)."
+  },
+  "parents": {
+    "table_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "ssc_013": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_13.json",
+      "git_blob_sha": "f480c9c6b573095643513d5f52dfd9cde59f9247"
+    },
+    "stage_gate_014": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_14.json",
+      "git_blob_sha": "d1fdb5ab9b02bd37a429defc5df995a79e999f6c"
+    },
+    "Eq2_Eq3_negative": {
+      "path": "experiments/062/L126_L05_EQ2_EQ3_OCTONION_CLIFFORD_SOURCE_CONTRADICTION_0_1.json",
+      "git_blob_sha": "61d5afddc7c406b03c2f61c4abe7e0dbdc448e66"
+    },
+    "Eq5_reverse_index_negative": {
+      "path": "experiments/062/L127_EQ5_SOURCE_BIVECTOR_REVERSE_INDEX_DEFECT_0_1.json",
+      "git_blob_sha": "324d77b688ba3add5d21ba51383b420903d3b0d2"
+    }
+  },
+  "scope": {
+    "carrier_dimensions": [
+      2,
+      4,
+      8
+    ],
+    "source_tables": [
+      "C",
+      "C_split",
+      "H",
+      "H_split",
+      "O",
+      "O_split"
+    ],
+    "free_generator_indices": "0<=c<d<n",
+    "signature": "± applies to both source-written diagonal blocks; test separately rather than omit",
+    "no_source_correction": true
+  },
+  "index_semantics": {
+    "ordinary_basis": "e_i; tilde(e0)=e0; tilde(e_i)=-e_i for i>0",
+    "coefficient_definition": "M_(u,v)^w is coefficient of e_w in ordered left(u)*right(v), with tilde on input/output index meaning signed conjugated basis, not an inverse index",
+    "chiral_type_guard": "upper block input e_e/output e_a; lower block input tilde(e_f)/output tilde(e_b)",
+    "summation": "source upper summed b; source lower summed a; all free and summed indices run 0..n-1",
+    "gamma_definition": "(Gamma_c)^b_a=M_(c,a)^(tilde b)",
+    "barGamma_direct_M": "(barGamma_c)^a_b=M_(tilde c,tilde b)^a",
+    "barGamma_transpose": "author separately prints barGamma_c=n_cc*(Gamma_c)^T; this claim is inconsistent with source original O table and cannot override raw M entries",
+    "evaluation_order": "apply source rightmost factor first; no reassociation for O/O_split",
+    "matrix_incidence": "matrix row is output, column is input; explicit internal binder must be summed; row/column names are scoped to their chiral blocks"
+  },
+  "eq5": {
+    "upper": {
+      "row": "a",
+      "col": "e",
+      "binder": "b",
+      "division_algebra": "± tilde(e_c) * (e_d * e_e)",
+      "Gamma_block": "± sum_b (barGamma_c)^a_b*(Gamma_d)^b_e",
+      "M_block": "± sum_b M_(tilde c,tilde b)^a*M_(d,e)^(tilde b)",
+      "typed_result": "ordinary e_a coordinates"
+    },
+    "lower": {
+      "row": "b",
+      "col": "f",
+      "binder": "a",
+      "division_algebra": "± e_c * (tilde(e_d) * tilde(e_f))",
+      "Gamma_block": "± sum_a (Gamma_c)^b_a*(barGamma_d)^a_f",
+      "M_block": "± sum_a M_(c,a)^(tilde b)*M_(tilde d,tilde f)^a",
+      "typed_result": "conjugated tilde(e_b) coordinates"
+    },
+    "source_reverse_index_assertion": "gamma_(d,c)=-gamma_(c,d) for c!=d",
+    "source_dimension_assertion": "for O, 28 ordered c<d bivectors are asserted as the so(8) chiral spin Lie algebra basis; rank and commutator closure are separate obligations",
+    "composition": "ordered matrix multiplication barGamma_c*Gamma_d for upper, Gamma_c*barGamma_d for lower; no scalar-octonion product shortcuts"
+  },
+  "observations_to_test": {
+    "source_M_vs_direct_action_cells": 7568,
+    "ordinary_O_reverse_generator_failures": {
+      "upper": 6,
+      "lower": 6,
+      "basis_inputs_upper": 12,
+      "basis_inputs_lower": 12
+    },
+    "ordinary_O_direct_M_vs_transpose_bivector_disagreement": {
+      "upper_generator_pairs": [
+        [
+          6,
+          7
+        ]
+      ],
+      "upper_cells": 2,
+      "lower_generator_pairs": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "lower_cells": 12
+    },
+    "ordinary_O_upper_Lie_span": {
+      "generator_rank_two_mod_primes": 28,
+      "primes": [
+        1009,
+        10007
+      ],
+      "upper_generators_non_euclidean_skew": 7,
+      "commutators_tested": 378,
+      "outside_span_both_mod_primes": 168,
+      "first_outside_pair": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "augmented_rank": 29
+    },
+    "control_H_upper": {
+      "upper_rank": 3,
+      "commutators_outside_span": 0
+    },
+    "control_O_split": {
+      "reverse_upper_failure_generator_pairs": 0,
+      "reverse_lower_failure_generator_pairs": 0
+    },
+    "diagnostic_edit_NOT_SOURCE": {
+      "cell": "ordinary O table row e6 column e7 -e2 -> +e2",
+      "reverse_failures": 0,
+      "commutators_outside_span": 0,
+      "source_changed": false
+    }
+  },
+  "version_evidence_NOT_FROZEN": {
+    "published": "29 August 2026 DOI PDF row e6 col e7 = -e2 and row e7 col e6 = -e2",
+    "different_arxiv_revision": "arXiv:2609.12112v1 September 10 2026 PDF row e6 col e7 = +e2, row e7 col e6 = -e2",
+    "url": "https://arxiv.org/pdf/2609.12112v1",
+    "disposition": "VISIBLE_VERSION_DIFFERENCE_NOT_AN_ERRATUM_OR_PERMISSION_TO_REPLACE_FROZEN_JOURNAL",
+    "no_claim": "No exhaustive claim about all content differences between versions or author intent"
+  },
+  "open_limits": [
+    "Full independent all-source G0 L01-L06 census not yet complete",
+    "Published source Eq2/3 remain internally inconsistent under original O table",
+    "Eq4 full eight-term cyclic equality independent derivation still required",
+    "Eq5 source algebra Lie closure not mathematically validated",
+    "G1-G7 historical checks are not current",
+    "No Recursive IA, Discovery, unification or merge"
+  ],
+  "failed_baseline_fixture": {
+    "path": "experiments/062/L127_EQ5_G0_INDEX_INCIDENCE_SOURCE_PACKET_OMISSION_DEFECT_0_1.json",
+    "status": "FAILED_BASELINE_HISTORICAL_REPAIRED_CANDIDATE_NOT_CI_VERIFIED",
+    "run_id": 37838619149
+  },
+  "primitive_or_theorem_qualification": false,
+  "source_census_frozen": false,
+  "source_packet_G0_completion_status": "EXACT_EQ5_LITERAL_SUBSCOPE_ONLY_MATHEMATICAL_CONTRADICTIONS_UNREPAIRED",
+  "historical_failed_CI": [
+    {
+      "run_id": 37838619149,
+      "reason": "missing matrix row/column incidence field, baseline failed no mutations"
+    },
+    {
+      "run_id": 37838782350,
+      "reason": "const-witness runtime declaration, baseline failed no mutations"
+    },
+    {
+      "run_id": 37838925736,
+      "reason": "obsolete `remaining` fixture key instead of open_limits, baseline failed no mutations"
+    },
+    {
+      "run_id": 37839051903,
+      "reason": "23/24 mutants rejected; theorem promotion mutant escaped; verifier repaired"
+    },
+    {
+      "run_id": 37839225214,
+      "reason": "hardened verifier discovered missing explicit source_census_frozen and primitive_or_theorem_qualification=false; baseline failed no mutations"
+    }
+  ]
+}

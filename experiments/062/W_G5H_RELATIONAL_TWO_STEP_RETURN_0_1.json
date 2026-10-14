@@ -1,0 +1,101 @@
+{
+  "schema": "isograph.exp062-w-g5h-relational-two-step-return.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_PRE_G6_FALSIFICATION",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "origin": "HYPOTHESIS_REVISION",
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent": {
+    "g5_fixed_point": {
+      "path": "experiments/062/W_G5_FIXED_POINT_0_3.json",
+      "git_blob_sha": "a48cf1fbe27eb7d42c6e4aea391b379a363f3615"
+    },
+    "failed_G7": {
+      "path": "experiments/062/W_G7_FIXED_POINT_FREE_INVOLUTION_INSTANTIATION_0_1.json",
+      "git_blob_sha": "24989d559227027d4cb2ed543dd85e85590ce382"
+    },
+    "residual_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ]
+  },
+  "candidate_id": "RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE_0_1",
+  "candidate_statement": {
+    "carrier": "A represented carrier P.",
+    "relation": "A typed binary relation R on represented P-elements.",
+    "two_step_return": "For represented x,y,z, P(x), P(y), P(z), R(x,y), R(y,z) imply z=x.",
+    "no_self_loop": "For represented x in P, not R(x,x).",
+    "semantic_level": "Pure first-order/Core-definable relation behavior; no totality, single-valuedness, function, geometry, projective, quaternionic, topology, or field semantics."
+  },
+  "declared_scope": {
+    "generic": "Any represented carrier and typed binary relation satisfying two-step return and no-self-loop.",
+    "intended_W_reconstruction": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "excluded": [
+      "totality",
+      "single-valuedness",
+      "functionhood",
+      "vector-level square-minus-one",
+      "projective quotient construction",
+      "quaternionic structure",
+      "L track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "The prior total-self-map candidate passed source-neutral G6 but failed W G7 only on totality and single-valuedness.",
+    "W-SSC-097-O06 directly supplies the two-step-return law.",
+    "W-SSC-097-O04 directly supplies no projective fixed points."
+  ],
+  "prohibited_evidence": [
+    "L track semantics or results",
+    "historical W closure packets as authority",
+    "textbook map/function semantics for rho_tw",
+    "projective/quaternionic geometric interpretation",
+    "desired W/L unification"
+  ],
+  "predicted_consequences": [
+    "A symmetric two-point relation aRb,bRa passes.",
+    "A four-point disjoint-pair relation passes.",
+    "A self-loop fails.",
+    "A two-step chain aRb,bRc with c!=a fails.",
+    "An empty relation passes; the candidate does not assert existence or totality.",
+    "A one-way edge aRb with no outgoing edge from b passes; the candidate does not assert symmetry, totality, or functionhood.",
+    "Multivalued relations are permitted only insofar as every realized two-step path returns to its start and no self-loop exists."
+  ],
+  "known_alternatives": [
+    "Preserve the W097 boundary.",
+    "Reopen source granularity if exact source application incidence cannot be represented even relationally.",
+    "A stronger function schema if later source evidence explicitly supplies totality/single-valuedness."
+  ],
+  "positive_controls": [
+    "symmetric 2-point pair",
+    "two disjoint symmetric pairs",
+    "empty relation",
+    "one-way edge with no two-step continuation"
+  ],
+  "negative_adversarial_controls": [
+    "self-loop",
+    "nonreturning two-step chain",
+    "extra continuation from partner that fails return"
+  ],
+  "falsifiers": [
+    "Any need for totality or single-valuedness to state the candidate.",
+    "Any positive nonclaim model rejected because function semantics leaked in.",
+    "Any negative two-step-return or self-loop control accepted.",
+    "Failure of W G7 to match O06/O04 even after removing the unsupported function obligations."
+  ],
+  "adaptive_evidence": [
+    "The candidate is a direct revision after W_G7_FIXED_POINT_FREE_INVOLUTION_INSTANTIATION_0_1 falsified only totality/single-valuedness."
+  ],
+  "confirmation_status": "PENDING_FRESH_SOURCE_NEUTRAL_RELATION_CONTROLS",
+  "coverage_limits": "No claim about existence, totality, uniqueness, symmetry, projective geometry, or vector-level structure.",
+  "revision_lineage": [
+    "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+    "W_G7_FIXED_POINT_FREE_INVOLUTION_INSTANTIATION_0_1"
+  ],
+  "pre_G6_disposition": "ELIGIBLE_FOR_SOURCE_NEUTRAL_G6_IF_DETERMINISTIC_HYPOTHESIS_VERIFIER_PASSES"
+}

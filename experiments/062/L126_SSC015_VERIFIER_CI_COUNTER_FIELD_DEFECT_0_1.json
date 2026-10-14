@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-l126-ssc015-ci-counter-field-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SSC015_VERIFIER_BASELINE_FIELD_MISMATCH_NO_ADVERSARIAL_CHECKS_RUN",
+  "failed_workflow": {
+    "run_id": 37841277279,
+    "head_sha": "fa7247a78b5be4d04813a8f33aa7c507b3a96b6b",
+    "conclusion": "failure",
+    "failed_assertion": "L126 source trace/CI evidence",
+    "adversarial_defined": 20,
+    "adversarial_run": 0
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l126-ssc-source-0-15.mjs",
+    "git_blob_sha": "ac9d35098e44f51b00dbb946d1845afa9872379c"
+  },
+  "defect": "Checker used r.CI.adversarial_cases_rejected but the frozen new L126 source data carries r.CI.adversarial_rejected=23. Equal record meaning but unequal property name; baseline blocked.",
+  "repair": "Read exact CI.adversarial_rejected and otherwise preserve full source assertions, old 190 bodies, negative evidence; do not mark failed run as PASS.",
+  "source_data_status": "Exact Eq4 four source M term and 4 ordinary-O index counterexamples confirmed separately by passing source run 37840813885; no downstream stage authorized.",
+  "external_cold_review_passed": false
+}

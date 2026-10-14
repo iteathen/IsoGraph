@@ -1,0 +1,27 @@
+name: Experiment 062 W G1 four original stale source-local exactness 0.3
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_FOUR_STALE_SOURCE_LOCAL_REPAIRS_0_2.json'
+      - 'experiments/062/tools/verify-w-g1-four-stale-0-3.cjs'
+      - '.github/workflows/experiment-062-w-g1-four-stale-0-3.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-four-stale-0-3.cjs
+      - name: Exact author source scopes 50 occurrences and 32 adversarial controls
+        run: node experiments/062/tools/verify-w-g1-four-stale-0-3.cjs
+      - name: Previous three-body author G1, entire 151 W G1 frontier and G0 freeze guard
+        run: |
+          node experiments/062/tools/verify-w-g1-current-high-risk-0-3.cjs
+          node experiments/062/tools/verify-w-g1-current-source-frontier-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

@@ -1,0 +1,246 @@
+{
+  "schema": "isograph.exp062-l-g1-source-granularity-reopen-audit.v0.1",
+  "date": "2026-10-07",
+  "status": "TARGETED_G1_G2_REOPEN_JUSTIFIED_L130",
+  "authority_effect": "NONE_RESEARCH_DIAGNOSTIC_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "07b68af38dac03ea3b816792560503344763001c",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "scope": {
+    "census_ids": [
+      "L-SSC-130"
+    ],
+    "source": "L05 §3",
+    "cross_track_semantics_used": false,
+    "W_semantics_used": false,
+    "synthesis_semantics_used": false
+  },
+  "pinned_inputs": {
+    "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md": {
+      "git_blob_sha": "9c03fc5825e4ed5750f376464c01bf77116f3aa2"
+    },
+    "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json": {
+      "git_blob_sha": "db889137e94759727cfbf8e2c21f6749b728bebd"
+    },
+    "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_11.json": {
+      "git_blob_sha": "ec2efca1122bd48d2f9c740a26e5f9100cb6a564"
+    },
+    "experiments/062/L_EXTRACTION_RECONCILED_0_25.json": {
+      "git_blob_sha": "80e2f576471aab8396f21f9f0b58e15fb5435c16"
+    },
+    "experiments/062/L_G2_NEUTRAL_OCCURRENCE_GRAPH_0_1.json": {
+      "git_blob_sha": "b7755259a51baca9da02db99c61ff32b445d621d"
+    },
+    "experiments/062/L_G3_CORE_DEFINABILITY_0_5.json": {
+      "git_blob_sha": "0cba7dfdf3409bdf3ab76ee29b4ae794d3d178d5"
+    },
+    "experiments/062/L_G5_FIXED_POINT_0_1.json": {
+      "git_blob_sha": "2dceb241f581438a74255d408890b1efc5e25dc4"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.md": {
+      "git_blob_sha": "077d848b7b6666c8dd58ac47251857936e7b029e"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_ANTIINVARIANCE_0_1.md": {
+      "git_blob_sha": "383d182efa1ac409a14c48edfd0dd8da4ae9ea30"
+    },
+    "research/woit-lisi-isomorph/lisi/L130_SPACELIKE_REFLECTION_FALSIFIER_0_1.json": {
+      "git_blob_sha": "1e85eda206771826a5a9548641d46cda73f98adb"
+    },
+    "research/woit-lisi-isomorph/lisi/L130_TIMELIKE_REFLECTION_FALSIFIER_0_1.json": {
+      "git_blob_sha": "b73365713dd48735447ee90e9b730350576b86f3"
+    },
+    "research/woit-lisi-isomorph/lisi/L130_COMPLEX_REFLECTION_FALSIFIER_0_1.json": {
+      "git_blob_sha": "6e3ceee2df9e39494523d3e3787477aa0af1d4ee"
+    },
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TABLE_SOURCE_DISCREPANCY_0_1.json": {
+      "git_blob_sha": "5dc0a82a6c3576379bc20e6889456e2a5f97b5c4"
+    }
+  },
+  "question": "Is the L-SSC-130 G5 boundary caused wholly by missing source semantics, or did the current G1/G2 representation preserve the source behavior too coarsely to expose already-frozen L-only lower incidence?",
+  "current_graph_state": {
+    "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+    "occurrence_count": 8,
+    "occurrences": [
+      {
+        "occurrence_id": "L-SSC-130-O01",
+        "source_span": "individual generalized reflections are anti-invariant on the triality form",
+        "relation_span": "are anti-invariant on",
+        "argument_spans": [
+          "individual generalized reflections",
+          "triality form"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Corrected source semantics: anti-invariance applies to individual generalized reflections."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O02",
+        "source_span": "generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u)",
+        "relation_span": "with explicit signature factors",
+        "argument_spans": [
+          "generalized reflections",
+          "vector and spinor roles",
+          "sqrt(s_u)"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Restores role and signature-factor incidence of generalized reflections."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O03",
+        "source_span": "even compositions yield triality-group transformations preserving T",
+        "relation_span": "yield",
+        "argument_spans": [
+          "even compositions",
+          "triality-group transformations"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Defines the result of the composition operation."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O04",
+        "source_span": "individual generalized reflections are anti-invariant on the triality form with role exchange/sign",
+        "relation_span": "role exchange/sign",
+        "argument_spans": [
+          "individual generalized reflections"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-130-O01"
+        ],
+        "load_bearing_note": "Source-stated role-exchange/sign side condition attached to generalized-reflection anti-invariance."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O05",
+        "source_span": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases",
+        "relation_span": "including",
+        "argument_spans": [
+          "generalized reflections",
+          "time-like split-algebra cases"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-130-O02"
+        ],
+        "load_bearing_note": "Preserves the explicitly included time-like split-algebra scope without altering the corrected individual-versus-even-composition semantics."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O06",
+        "source_span": "triality-group transformations preserving T",
+        "relation_span": "preserving",
+        "argument_spans": [
+          "triality-group transformations",
+          "T"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-130-O03"
+        ],
+        "load_bearing_note": "Corrected source semantics: even-composition transformations preserve T."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O07",
+        "source_span": "sqrt(s_u)",
+        "relation_span": "sqrt",
+        "argument_spans": [
+          "s_u"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Named source sqrt application used in signature factors; external square-root semantics are not imported. This record preserves only source-visible boundary and ordered incidence; no conventional mathematical semantics are imported."
+      },
+      {
+        "occurrence_id": "L-SSC-130-O08",
+        "source_span": "individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T",
+        "relation_span": "while",
+        "argument_spans": [
+          "individual generalized reflections are anti-invariant on the triality form with role exchange/sign",
+          "even compositions yield triality-group transformations preserving T"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Explicitly preserves the corrected individual-versus-even-composition distinction."
+      }
+    ],
+    "observation": "Current G1 preserves eight summary-level L-SSC-130 occurrences. G2 consequently represents those occurrences as opaque semantic nodes plus ordered argument/dependency incidence; it does not expose the internal ordered reflection formulas, signature branch, transformed-role incidence, or triality-value equations as neutral substructure."
+  },
+  "frozen_L_source_recovery": {
+    "source_semantic_census_body": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases; individual generalized reflections are anti-invariant on the triality form with role exchange/sign, while even compositions yield triality-group transformations preserving T.",
+    "already_traversed_source_material": [
+      "L05 §3 generalized vector/spinor reflection formulas",
+      "signature branch s_u=+1 versus s_u=-1 with source phase sqrt(s_u)",
+      "three ordered reflection-role maps R_v, R_m, R_p",
+      "individual-reflection anti-invariance of the triality form with the source role ordering",
+      "even-composition preservation of the triality form"
+    ],
+    "diagnostic_source_local_artifacts": [
+      "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.md",
+      "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_ANTIINVARIANCE_0_1.md"
+    ],
+    "historical_artifact_status": "HYPOTHESIS_AND_TEST_EVIDENCE_ONLY_NOT_CURRENT_AUTHORITY",
+    "ordinary_octonion_policy": "Preserve the frozen L05 ordinary-octonion table inconsistency and its failure signatures. No sign repair is permitted in the L track."
+  },
+  "competing_explanations": [
+    {
+      "id": "E1_MISSING_SOURCE_SEMANTICS",
+      "prediction": "The frozen L corpus lacks lower behavior needed to expose the reflection invariant, so a more detailed G1/G2 pass cannot add exact source-conserved incidence.",
+      "result": "DISFAVORED_FOR_L130",
+      "basis": "The completed L05 traversal and source-local formula records already preserve explicit ordered reflection formulas, signature branches, anti-invariance equations, and even-composition behavior."
+    },
+    {
+      "id": "E2_GRAPH_GRANULARITY_LOSS",
+      "prediction": "Exact L-only source behavior exists but the current L130 G1/G2 node boundary hides it behind summary occurrences.",
+      "result": "SUPPORTED_FOR_L130",
+      "basis": "The current eight G1 occurrences contain summary relation/argument spans, while the frozen L05 treatment contains lower ordered formula and triality-incidence structure not represented as internal G2 topology."
+    },
+    {
+      "id": "E3_NEW_PRIMITIVE_REQUIRED_NOW",
+      "prediction": "A new semantic primitive should be hypothesized before source granularity is repaired.",
+      "result": "NOT_YET_JUSTIFIED",
+      "basis": "Method 0.3 requires using available source-conserved lower structure before promoting a residual to a new hypothesis-derived authority."
+    }
+  ],
+  "historical_test_evidence": {
+    "use": "DISCRIMINATING_AND_ADVERSARIAL_EVIDENCE_ONLY",
+    "positive_controls": [
+      "spacelike C, Cprime, H, Hprime, Oprime branches have zero recorded involution/anti-invariance/even-composition failures",
+      "timelike Cprime, Hprime, Oprime real-core cubic checks have zero recorded failures",
+      "complexified Cprime, Hprime, Oprime checks cover 6552 odd and 76104 even basis cases with zero recorded failures"
+    ],
+    "negative_control": [
+      "ordinary O retains the source-table discrepancy and recorded failures rather than being normalized away"
+    ],
+    "nonclaim": "These historical results do not promote their predecessor closure packets. They justify where to reopen the current graph and provide falsifiers for a fresh current-method derivation."
+  },
+  "decision": {
+    "disposition": "REOPEN_G1_G2_FOR_L130_ONLY",
+    "rationale": "The strongest lawful next move is to expose the already-frozen L-only reflection/triality incidence under the current graph-first method before inventing a new primitive. The prior G5 fixed point remains valid for its pinned G1/G2 graph but is not a final source-information boundary for L-SSC-130.",
+    "affected_scope_only": [
+      "L-SSC-130"
+    ],
+    "unaffected_L_items_remain_pinned_to": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+    "next_steps": [
+      "Construct a source-conserved L130 G1 formula-incidence successor without importing W or synthesis semantics.",
+      "Compile a neutral L130 G2 subgraph exposing ordered operation/role/dependency incidence only.",
+      "Run deterministic anti-leakage and reconstruction checks.",
+      "Re-run G3 definability for the affected L130 subgraph under exact current qualified authority.",
+      "Only if residual behavior remains after this repaired granularity may G5H generate a narrow hypothesis candidate.",
+      "Do not authorize IA, final NEI/DTS/DP, sealing, or cross-track comparison from this audit."
+    ]
+  },
+  "third_party_testing": {
+    "status": "NOT_APPLICABLE_AT_THIS_DIAGNOSTIC_STEP",
+    "owner_instruction": "Third-party testing may be skipped for this campaign instance because it is not currently available.",
+    "deterministic_repository_verification_required": true
+  }
+}

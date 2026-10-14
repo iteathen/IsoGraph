@@ -1,0 +1,65 @@
+{
+  "schema": "woit.w134-euclidean-su2-role-pseudoreal-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-134",
+  "source_assertion_id": "W-A0-053",
+  "frozen_body": "On the Euclidean real subspace of the right-handed construction, SU(2)_L acts trivially and SU(2)_R acts nontrivially; the right spinor and its conjugate become equivalent SU(2)_R representations.",
+  "source": "W02 §III",
+  "source_components": [
+    "W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_2.isg",
+    "W02_SU2R_PSEUDOREAL_SPINOR_EQUIVALENCE_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "support_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json",
+    "W138_DISTINGUISHED_VECTOR_SPINOR_ISOMORPHISM_CLOSURE_PACKET_0_2.json",
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_ids": 113,
+    "additional_declared_ids": 109,
+    "total_provider_ids": 222,
+    "unresolved_local_refs": 0,
+    "all_extra_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "su2_L_role": 205130,
+    "su2_L_vector_action": 205122,
+    "su2_L_spacetime_action": "TRIVIAL",
+    "su2_R_role": 205131,
+    "su2_R_vector_action": 205121,
+    "su2_R_nontrivial_witness": {
+      "group_element": 205150,
+      "input": 205107,
+      "output": 205151
+    },
+    "right_spinor_carrier": 189010,
+    "conjugate_right_spinor_carrier": 944100,
+    "source_spinor_action": 945101,
+    "conjugate_spinor_action": 945102,
+    "pseudoreal_linear_intertwiner": 945110,
+    "group_identity_bijection": 945120
+  },
+  "pseudoreal_basis_convention": {
+    "conjugate_e1_to_e2": true,
+    "conjugate_e2_to_minus_e1": true,
+    "source_family_convention": "quaternionic left-j / epsilon witness"
+  },
+  "semantic_guards": [
+    "The SU(2)_L and SU(2)_R group/action schemas use corrected matrix identity 204116=I.",
+    "Representation equivalence is exact action transport through a complex-linear bijection, not a label match.",
+    "No physical electroweak identification is inferred from the trivial SU(2)_L spacetime action.",
+    "No topology or smooth Lie-group structure is added.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

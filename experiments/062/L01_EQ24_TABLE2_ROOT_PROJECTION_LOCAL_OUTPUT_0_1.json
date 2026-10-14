@@ -1,0 +1,67 @@
+{
+  "G0_frozen": false,
+  "baseline": "PASS",
+  "cold_source_review_complete": false,
+  "math": {
+    "B2_gluon_grade": 0,
+    "B2_q_I_grades": [
+      "-1/6",
+      "1/6",
+      "-1/6",
+      "1/6",
+      "-1/6",
+      "1/6"
+    ],
+    "Eq2_4_scaled_rotation_AAt": "Matrix([[1/2, 0, 0], [0, 1/2, 0], [0, 0, 1/2]])",
+    "conclusion": "ROOT_WEIGHT_PROJECTION_MATCHES_12_SOURCE_ROWS_BUT_NO_SO6_TO_G2_LIE_ALGEBRA_QUOTIENT_PROVED",
+    "first_series_q_I_projection_equal_Table1": 6,
+    "gluon_2D_projection_equal_Table1": 6,
+    "original_source_semantic_cold_qualified": false,
+    "projection_kernel": "span(1,1,1)",
+    "su4_nonclosure_witness": {
+      "X": "E14-E41",
+      "Y": "i(E14+E41)",
+      "bracket": "2i(E11-E44)",
+      "bracket_H_component": "2/3",
+      "u1_H": "i diag(1,1,1,-3)",
+      "u1_not_Lie_ideal": true
+    }
+  },
+  "mutants_rejected": 4,
+  "negative_controls": [
+    {
+      "name": "reverse_gluon_row",
+      "reasons": [
+        "projection mismatch row=0 axis=0",
+        "projection mismatch row=0 axis=1"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "alter_qI_first_coordinate",
+      "reasons": [
+        "projection mismatch row=6 axis=0",
+        "projection mismatch row=6 axis=1",
+        "q_I B2 grade mismatch row=6"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "drop_gluon_source_row",
+      "reasons": [
+        "twelve source pairs",
+        "projection mismatch row=5 axis=0",
+        "projection mismatch row=5 axis=1"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "forge_first_B2_grade",
+      "reasons": [
+        "q_I B2 grade mismatch row=6"
+      ],
+      "rejected": true
+    }
+  ],
+  "schema": "isograph.L01.G0.Eq2.4.Table2.local-source-algebra-scoped.v0.1"
+}

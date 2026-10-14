@@ -1,0 +1,105 @@
+{
+  "schema": "isograph.exp064-owner-bypass-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CORE_SCHEMA_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_PROVISIONAL_SCHEMA_AUTHORITY_ONLY",
+  "global_semantic_authority": false,
+  "campaign_semantic_authority": true,
+  "candidate_id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+  "primitive_id": 221100,
+  "provenance": {
+    "origin": "HYPOTHESIS",
+    "hypothesis": {
+      "path": "experiments/062/W_G5H_FIXED_POINT_FREE_INVOLUTION_0_1.json",
+      "git_blob_sha": "1512c37b82f3676abe06cd0a57c9decfc82aa27f"
+    }
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE"
+  },
+  "frozen_inputs": {
+    "module_ssc": {
+      "path": "experiments/064/MODULE_SSC_0_1.json",
+      "git_blob_sha": "394a60f5c1b28d77b367db2d4983c41b450b6d0a"
+    },
+    "module_ia_fixed_point": {
+      "path": "experiments/064/MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "f29365c5798e236ce4cade9c2ca3573adf2620bd"
+    },
+    "qualification_cases": {
+      "path": "experiments/064/QUALIFICATION_CASES_0_1.json",
+      "git_blob_sha": "a92252f7831f73eabdac4f086dc08de77dda197f"
+    },
+    "qualifier": {
+      "path": "experiments/064/tools/qualify-fixed-point-free-involution-0-1.mjs",
+      "git_blob_sha": "1cc2e7cc6e876fe2aea5d440dfd5ef1845eb38a2"
+    },
+    "candidate_md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIXED_POINT_FREE_INVOLUTION_SCHEMA_0_1.md",
+      "git_blob_sha": "1e0db252cc8ff7fd1b92622aa435955eb779afe8"
+    },
+    "candidate_native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_FIXED_POINT_FREE_INVOLUTION_SCHEMA_0_1.isg",
+      "git_blob_sha": "12f5fc5949ddd19fdfb319133529d41a5525c7c1"
+    }
+  },
+  "deterministic_qualification": {
+    "workflow_run_id": 37710344775,
+    "workflow_name": "Experiment 064 fixed-point-free involution qualification",
+    "conclusion": "success",
+    "cases_total": 12,
+    "positive_structural_passes": 6,
+    "adversarial_rejections_as_expected": 6,
+    "ia_fixed_point_complete": true,
+    "open_module_local_ia": 0
+  },
+  "internal_scope_review": {
+    "result": "PASS_WITH_EXPLICIT_SCOPE",
+    "checks": [
+      "Candidate native expansion is source-neutral and uses only represented carrier/function/equality/logic structure.",
+      "Totality, single-valuedness, involution, and fixed-point-freeness are independently exercised by frozen finite controls.",
+      "Empty carrier is permitted; nonemptiness is not smuggled into the module.",
+      "No finiteness/even-cardinality conclusion is admitted.",
+      "No projective, quaternionic, vector, field, topology, real-form, twistor, or antipodal semantics are part of the candidate.",
+      "W source instances must separately establish their carrier and total self-map roles under G7.",
+      "Qualification does not close W-SSC-097 by itself."
+    ],
+    "semantic_overreach_detected": false,
+    "W_domain_leakage_into_candidate_detected": false,
+    "L_evidence_used": false
+  },
+  "external_verification": {
+    "complete": false,
+    "bypassed_under_owner_instruction": true,
+    "independently_verified": false,
+    "global_disposition": "INCOMPLETE_EVIDENCE"
+  },
+  "campaign_disposition": {
+    "disposition": "PROVISIONAL_QUALIFIED_CORE_SCHEMA_UNDER_OWNER_BYPASS",
+    "W_may_consume_candidate": true,
+    "permitted_W_bodies": [
+      "W-SSC-097"
+    ],
+    "permitted_W_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "G7_authorized_for_explicit_dependencies_only": true,
+    "L_may_consume_candidate": false,
+    "global_qualified_module_manifest_update": false
+  },
+  "nonclaims": [
+    "This is not global qualified authority.",
+    "No external semantic or promotion reviewer has passed the candidate.",
+    "Schema 221100 must not be added to the global qualified-module manifest from this record.",
+    "The record does not establish that W097 supplies the total self-map interface.",
+    "No L body may consume this W-discovered candidate from this campaign-local record."
+  ],
+  "invalidation": [
+    "Any semantic change to candidate MD/native, MODULE_SSC_0_1, MODULE_IA_FIXED_POINT_0_1, QUALIFICATION_CASES_0_1, or the qualifier invalidates this record.",
+    "Revocation of OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2 removes campaign consumption authority until normal G6 completes.",
+    "A failed W G7 source instantiation does not invalidate the generic schema; it only blocks W consumption."
+  ]
+}

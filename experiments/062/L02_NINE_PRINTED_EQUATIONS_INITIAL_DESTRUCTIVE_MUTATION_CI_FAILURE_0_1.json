@@ -1,0 +1,49 @@
+{
+  "schema": "isograph.exp062.track-l.L02-original-print-source-CI-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "run": {
+    "id": 38027967509,
+    "job_id": 114142762714,
+    "head_sha": "754b3e7a57d1c464fba700060f56337544dd4a38",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38027967509",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow": "Experiment 062 L G0 L02 original printed formula reconciliation 0.1"
+  },
+  "first_step_success": {
+    "name": "Preserve passing earlier original source-first regression",
+    "pass": true,
+    "source_groups": 59,
+    "eqs": 30,
+    "footnotes": 3,
+    "source_ids": 21,
+    "hostiles_rejected": 31,
+    "hostiles_defined": 31
+  },
+  "failed_step": {
+    "name": "Test nine original printed equation obligations and hostiles",
+    "error_kind": "UNCAUGHT_TYPEERROR_DURING_DESTRUCTIVE_ADVERSARIAL_MUTATION",
+    "file": "experiments/062/tools/verify-l-g0-l02-exact-source-equations-0-1.mjs",
+    "git_blob_sha": "7bad9a6b7892888db40248c6e0787a5e26d2671c",
+    "line": 55,
+    "message": "Cannot read properties of undefined (reading 'normalized_original_printed_expression')",
+    "root_cause": "Mutation drop_exact_eq pops last indexed Eq23, yet verifier dereferences [8] unconditionally instead of returning a controlled failed test; another deleted inventory row risks direct dereference in source conservation loop.",
+    "code_at_failure": "const eq23=q.exact_original_printed_equation_groups[8].normalized_original_printed_expression;"
+  },
+  "exact_material": {
+    "printed_source_packet": "research/woit-lisi-isomorph/lisi/LISI_L02_ORIGINAL_PRINTED_EQUATIONS_RECONCILIATION_G0_0_1.json",
+    "source_packet_git_blob_sha": "949a556641615d6c3e90019d686d462d79e31dbe",
+    "SSC": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_53.json",
+    "SSC_git_blob_sha": "8e97575df6379ad548b4911fcd8ea7c0d3daaf54",
+    "audit_git_blob_sha": "1a40968ce9eab430ad6901a9eecab505e80ccf98"
+  },
+  "correction": "New verifier guards adversarially deleted equation and original source rows; original packet, 191 SSC IDs, 59 source locations, previous 31/31 regression remain unchanged. This specific run remains FAIL. It is not a source semantic mismatch or proof that the previous source packets are complete.",
+  "original_source_meaning_changed": false,
+  "unsupported_source_completion_not_claimed": true,
+  "CI_failure_reclassified_as_success": false,
+  "W_changes": false,
+  "G1_authorized": false
+}

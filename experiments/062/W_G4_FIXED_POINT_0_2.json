@@ -1,0 +1,57 @@
+{
+  "schema": "isograph.exp062-w-g4-fixed-point.v0.2",
+  "date": "2026-10-07",
+  "status": "W_G4_CORRECTED_INPUT_FIXED_POINT_COMPLETE_W_LOCAL_G5_AUTHORIZED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "comparison_scope": "W_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g3_fixed_point": {
+      "path": "experiments/062/W_G3_FIXED_POINT_0_6.json",
+      "git_blob_sha": "4027304439514fd1f65f760888073fcc092a0845"
+    },
+    "g4_quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_2.json",
+      "git_blob_sha": "fb46b4d42afd26da956dc96870dd4cfe22e6b9d6"
+    },
+    "generator": {
+      "path": "experiments/062/tools/generate-w-g4-alpha-structural-quotient-0-2.mjs",
+      "git_blob_sha": "f3dc20f248cd2cf43b0aa9d0784bd7d66c4aa65e"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g4-alpha-structural-quotient-0-2.mjs",
+      "git_blob_sha": "3e89e104bd00eb640daa56dcae18f27cd0afad90"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37668356980,
+    "workflow_head_sha": "2a4a7fce74d112eb681b3d3fce65fec7964f0c69",
+    "conclusion": "success",
+    "unresolved_roots": 430,
+    "core_closed_roots": 13,
+    "quotient_classes": 370,
+    "singleton_classes": 342,
+    "multi_member_classes": 28,
+    "largest_class_size": 12,
+    "exact_class_internal_isomorphism": true,
+    "source_text_absent_from_structural_key": true,
+    "deterministic_replay_exact": true
+  },
+  "fixed_point": {
+    "W_G4_complete": true,
+    "W_local_G5_authorized": true,
+    "cross_track_comparison_authorized": false,
+    "global_G5_authorized": false,
+    "reason": "The corrected W-only quotient covers every and only UNEXPANDED_DEMAND root, class membership is exact rooted graph isomorphism after alpha-renaming, source wording/candidate semantics are absent from the structural key, and deterministic replay is zero-diff."
+  },
+  "constraints": [
+    "G5 may consume only the corrected W quotient and exact W source/G3 provenance needed to interpret residual behavior.",
+    "A G4 class is structural equivalence only; it does not establish semantic equivalence.",
+    "No L evidence or cross-track correspondence may enter W-local G5.",
+    "No W G5/G6/G7 predecessor hypothesis may be treated as authority during corrected-input G5 synthesis.",
+    "Singleton and multi-member classes alike require current-authority reduction before a new candidate is proposed."
+  ],
+  "next_stage": "W_LOCAL_G5_CORRECTED_INPUT_CANDIDATE_BASIS_SYNTHESIS"
+}

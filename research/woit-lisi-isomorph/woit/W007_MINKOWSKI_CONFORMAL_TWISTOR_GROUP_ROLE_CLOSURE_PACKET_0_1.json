@@ -1,0 +1,33 @@
+{
+  "schema": "woit.w007-minkowski-conformal-twistor-group-role-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-007",
+  "frozen_body": "Minkowski conformal/twistor geometry uses SU(2,2) / Spin(4,2) structure.",
+  "source": "W01/W04b",
+  "support_packets": [
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "twistor_carrier": 202100,
+    "projective_twistor_space": 202113,
+    "hermitian_form": 995110,
+    "conformal_twistor_group_role": 995100,
+    "vector_action": 995104,
+    "projective_action": 995120,
+    "source_cover_role": "SU(2,2) / Spin(4,2)"
+  },
+  "rationale": "W007 is the coarse source-role statement whose load-bearing group/projective behavior is fully rendered by W014 at the frozen SU22 abstraction boundary.",
+  "guards": [
+    "The Spin double-cover topology is not inferred; the source role is closed only at the exact W014 behavior boundary.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

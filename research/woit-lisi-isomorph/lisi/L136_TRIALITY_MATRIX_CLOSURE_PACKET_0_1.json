@@ -1,0 +1,75 @@
+{
+  "schema": "lisi.l136-triality-matrix-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "L-SSC-136",
+  "frozen_body": "L05 derives canonical so(8)/so(4,4) triality matrices from octonion/split-octonion multiplication tables, with allowed Cartan-signature patterns and block-Hadamard structure, while allowing noncanonical sign variants.",
+  "source": "L05 §4",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TRIALITY_MATRIX_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "dependency_files": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_OCTONION_TRIALITY_MATRIX_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_28_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_SIGNED_HALF_BLOCK4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg"
+  ],
+  "prior_closed_dependencies": [
+    "L125-BODY",
+    "L132-BODY"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 4,
+    "declared_local_ids": 136,
+    "duplicate_declarations": 0,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "ordinary_octonion_triality_carrier": 237400,
+    "split_octonion_triality_carrier": 237500,
+    "ordinary_28_basis": [240100,240127],
+    "split_28_basis": [240200,240227],
+    "ordinary_triality_coefficients": 240000,
+    "split_triality_coefficients": 240001,
+    "ordinary_block_incidence": 240052,
+    "split_block_incidence": 240053,
+    "ordinary_bivector_pair_relation": 240054,
+    "split_bivector_pair_relation": 240055,
+    "dimension28_schema": 225001,
+    "signed_half_orthogonal_block_schema": 239001,
+    "split_signature_pattern_schema": 239002,
+    "coefficient_rule": "table-derived signed one-half coefficients with the split case retaining n_aa on the lowered input-spinor index and n_dd on the raised Clifford index",
+    "block_structure": "seven disjoint four-bivector support blocks on each 28-dimensional carrier",
+    "noncanonical_sign_variants": "schema 239001 constrains signed-half orthogonality without fixing one global sign pattern; the source-derived canonical pattern remains materialized separately"
+  },
+  "evidence": {
+    "source_falsifier": "L136_TRIALITY_MATRIX_FALSIFIER_0_1.json",
+    "source_verifier": "tools/verify_l136_triality_matrix.mjs",
+    "closure_verifier": "tools/verify_l136_triality_matrix_closure.mjs",
+    "ordinary_octonion_table_disposition": "INCONSISTENT_SOURCE",
+    "ordinary_octonion_orthogonality_failures": 36,
+    "ordinary_octonion_order3_failures": 100,
+    "split_octonion_orthogonality_failures": 0,
+    "split_octonion_order3_failures": 0,
+    "split_signature_pattern_failures": 0,
+    "source_repair_used": false
+  },
+  "semantic_guards": [
+    "representation closure is independent of truth/consistency disposition under Core 0.21",
+    "the exact version-of-record ordinary-octonion multiplication table is retained even though its derived canonical matrix conflicts with the source rotation/Hadamard assertions",
+    "the one-sign repair diagnostic is not used by Track L",
+    "the split-octonion control remains source-clean and preserves the allowed Cartan-signature block pattern",
+    "noncanonical sign variants are allowed only at the schema boundary and do not overwrite the exact source-derived coefficient relation",
+    "no Woit or synthesis premise occurs in the packet"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "FINITE_EXACT_SOURCE_INSTANCE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

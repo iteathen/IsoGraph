@@ -1,0 +1,52 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01.original-first-initial-CI-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_CI": {
+    "run_id": 38035978814,
+    "job_id": 114166362900,
+    "head_sha": "98b9fbfb0bc6b857a71c411aa60ff6adcdf15a08",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38035978814",
+    "status": "completed",
+    "conclusion": "failure"
+  },
+  "exact_artifacts": {
+    "source_inverse_path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_inverse_git_blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "source_SSC_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_54.json",
+    "source_SSC_git_blob_sha": "ce8b4de22b27f553272e526d3985c8ef67fb364f",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l01-source-first-reverse-0-1.mjs",
+    "verifier_git_blob_sha": "64db3938dc3cad9e7961debad44a5e416962500a",
+    "gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_75.json",
+    "gate_git_blob_sha": "2f908ca54bd0c0d20b1d92b989d7ba679ec29609"
+  },
+  "original_output": {
+    "pass": false,
+    "errors": [
+      "no global original source or G1 freeze claim"
+    ],
+    "source_locations": 98,
+    "source_SSC_ids": 30,
+    "numbered_equations": 22,
+    "numbered_tables": 9,
+    "numbered_figures": 5,
+    "newly_repaired_original_meaning_clusters": 8,
+    "unverified_exact_original_visual_matrix_groups": 16,
+    "changed_source_items": 4,
+    "unchanged_complete_predecessor_SSC_records": 187,
+    "hostiles_defined": 30,
+    "hostiles_rejected": 30,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "external_complete_original_review": false
+  },
+  "classification": "VERIFIER_SCHEMA_FIELD_NAME_MISMATCH",
+  "cause": "Verifier called audit.stage_locks.G0_frozen but source original-first audit uses audit.stage_locks.SSC_frozen=false. The invariant is correctly represented by the existing source property; do not rewrite source to match a mistaken checker.",
+  "correction": "Use audit.stage_locks.SSC_frozen===false in versioned checker0.2; retain original version0.1 and failure result. No change to SSC, frozen paper, source inventory or W commits.",
+  "source_semantic_omission_established_by_failure": false,
+  "original_CI_must_remain_FAILURE": true,
+  "new_CI_pending": true,
+  "W_source_semantics_imported": false
+}

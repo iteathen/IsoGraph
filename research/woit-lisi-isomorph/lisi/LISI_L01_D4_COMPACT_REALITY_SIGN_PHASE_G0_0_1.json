@@ -1,0 +1,136 @@
+{
+  "schema": "isograph.lisi-L01-D4-compact-reality-phase-obstruction-G0.v0.1",
+  "recorded_date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_ROOT_COMPATIBLE_PROJECT_COMPACT_REALITY_REQUIRES_NONSEPARABLE_PHASE_UNDER_EXPLICIT_ANSATZ",
+  "original_source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "paper_pages": [
+      "Table 9 printed p16",
+      "§2.4.1 printed p22",
+      "§3.1 printed pp23–24",
+      "§3.2.2 printed p27"
+    ],
+    "original_assertions": [
+      "Table9 groups 18 xPhi root weights into 3 six-root sets in so(8), with 6 strong roots and 4 Cartan directions.",
+      "§2.4.1 presents factorization into 3 x and 6 colored/anti-colored Phi as a natural proposal, NOT a demonstrated uniqueness or mandatory theorem.",
+      "§3.1 treats x_a as 1-forms and Phi_c as shared Higgs 0-form roles; curvature Q=(xPhi)(xPhi) is nonseparable.",
+      "§3.2.2 flags the new-field bosonic action as speculative and its frame-derived Hodge as awkward."
+    ]
+  },
+  "frozen_parents": {
+    "ssc037": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_37.json",
+      "git_blob_sha": "994e8b4cd2e32aae8efad908398bb62e99941fdd"
+    },
+    "gate037": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_37.json",
+      "git_blob_sha": "fb9705ea3bf4d0be65724890039c477160fcfee4"
+    },
+    "rankone": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_ROOT_PHASE_RANK_ONE_TRANSPORT_G0_0_1.json",
+      "git_blob_sha": "4857a88a16d30be1a9da115b5e87eed25e2d7168"
+    },
+    "compact": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_COMPACT_PHASE_Q_WITNESS_G0_0_1.json",
+      "git_blob_sha": "68181be4192da8621842289ac6b46476a4f377a9"
+    },
+    "table9": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_TABLE9_D4_XPHI_Q_ROOT_SUPPORT_G0_0_1.json",
+      "git_blob_sha": "4f4f5e75d2dd46ba8cf6793ea140eaf2405cc199"
+    }
+  },
+  "project_model": {
+    "carrier": "chosen complex 8x8 J-orthogonal D4 root matrices, J=[[0,I4],[I4,0]], whose skew-Hermitian intersection defines one compact real so8",
+    "color_roles": [
+      "c1",
+      "c2",
+      "c3",
+      "a1",
+      "a2",
+      "a3"
+    ],
+    "families": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "root_matrix_reality": [
+      "E_(1,ci)^dagger=+E_(2,ai)",
+      "E_(1,ai)^dagger=-E_(2,ci)",
+      "E_(3,ci)^dagger=-E_(3,ai)"
+    ],
+    "matrix_checks": 18,
+    "chosen_field_reality": [
+      "Phi_ai=complexConjugate(Phi_ci), i=1..3",
+      "x2=-complexConjugate(x1) as complex 1-form coefficients",
+      "x3 real 1-form coefficients"
+    ],
+    "chosen_phase_class": "Each generator root-vector lambda_(a,c) is restricted to signs +/-1; the original paper does not select these signs.",
+    "necessary_sufficient_compact_sign_constraints": [
+      "lambda_(2,ai)=lambda_(1,ci) for i=1..3",
+      "lambda_(2,ci)=-lambda_(1,ai) for i=1..3",
+      "lambda_(3,ai)=lambda_(3,ci) for i=1..3"
+    ],
+    "independent_sign_choices": 9,
+    "compact_sign_assignments_enumerated": 512,
+    "all_45_rank_one_minors_defined": true,
+    "compact_phase_nonzero_minors_histogram": {
+      "18": 32,
+      "22": 192,
+      "26": 288
+    },
+    "minimum_nonzero_minors": 18,
+    "maximum_nonzero_minors": 26,
+    "rank_one_compact_sign_assignments": 0,
+    "local_phase_plaquette_identity": "For each color i, lambda_(1,ci)*lambda_(2,ai)-lambda_(1,ai)*lambda_(2,ci)=+2 for all admissible +/-1 compact-phase assignments.",
+    "rank_one_transport_plaquette_identity": "For separable lambda_(a,c)=u_a*v_c, every 2x2 minor vanishes, including each color/anti-color plaquette.",
+    "consequence": "Under these chosen conjugacy assumptions and sign-root completion family, a fully source-style 3x6 shared-Phi rank-one coordinate normalization cannot simultaneously realize compact skew-Hermitian operators for generic nonzero x1/x2 and Phi. This is only a chosen-model no-go, not an original source theory impossibility proof.",
+    "source_reality_choice_qualified": false,
+    "all_complex_U1_phase_choices_exhausted": false,
+    "real_E8_source_root_generators_identified": false
+  },
+  "negative_controls": {
+    "identity_root_signs": "Project unphased root matrices do not satisfy the same chosen skew-Hermitian shared-Phi field reality for generic nonzero x1/x2.",
+    "last_round_compact_signs": "lambda1 all +; lambda2 c1/c2/c3 -, lambda2 a1/a2/a3 +; lambda3 all +. Has 18 nonzero rank-one minors, minimal among the 512 sign completions.",
+    "separable_rephasing": "Can preserve the shared-Phi rank-one coordinate family, but is incompatible with chosen compact dagger constraints when both x1 and x2 active.",
+    "noncompact_model_not_excluded": true,
+    "other_field_reality_and_phase_classes_not_excluded": true
+  },
+  "conservation_target": {
+    "successor": "SSC0.38",
+    "changed_only": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged_complete_records": 189,
+    "total_source_identities": 191,
+    "source_census_frozen": false
+  },
+  "source_scope_guards": {
+    "source_factorization_mandatory_theorem": false,
+    "source_root_phases_fixed_by_table9": false,
+    "source_compact_conjugacy_fixed": false,
+    "source_full_E8_model_obstruction_proved": false,
+    "source_action_equality_falsified": false,
+    "author_mathematical_error_proved": false,
+    "external_cold_independent_review_passed": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro — full independent IsoGraph L source-faithful rendering and no cross-author shortcut.",
+    "agent_formulation": "Exact conditional compact skew-Hermitian root-phase obstruction over 512 sign-completions, including source-ansatz rank-one distinction, 2026-10-09.",
+    "external_antecedents": "Lisi 2007 v1 Table9 and §2.4.1; elementary Cartan-Weyl D4, complex conjugation and 3x6 minors; no priority claim."
+  },
+  "next_lawful_step": "Identify original-author root phases, real form and actual Phi/x conjugation from frozen L01–L06. Test source-allowed complex/U(1) choices and alternate source field constraints, then reconstruct original Hodge/trace Q; no G1 or W source."
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.exp062-l128-g0-verifier-whitespace-expectation-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_TEST_FIXTURE_WHITESPACE_MISMATCH_NOT_SOURCE_SEMANTIC_CHANGE",
+  "authority": false,
+  "authority_effect": "NONE_CORRECTNESS_EVIDENCE_ONLY",
+  "failed_workflow": {
+    "run_id": 37805926111,
+    "conclusion": "failure",
+    "message": "L128 body formula 6"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l128-source-census-0-6.mjs",
+    "blob_sha": "92874c0c0e8b7cfc8c1146fa23886361e16873f4"
+  },
+  "source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_6.json",
+    "blob_sha": "a41f5258a63886a4ec3bf7e216e628ae2c4a51c3"
+  },
+  "finding": "The independent formula verifier demands a space after the equals sign in 'chi^b = v^c...' while the source census body writes the identical equation without that spacing. The complete typed equation is present in the source_formula row. No semantically load-bearing operand changed.",
+  "classification": [
+    "VERIFIER_LITERAL_FORMAT_EXPECTATION",
+    "NO_SEMANTIC_SOURCE_CORRECTION"
+  ],
+  "repair": "Compare body-contained formulas after whitespace normalization only, retaining the original formula-row exact operand/source constraints and all adversarial controls.",
+  "nonclaims": [
+    "Failed CI is not green.",
+    "G0 source-census candidate still unqualified.",
+    "No L132 replay or G1 promotion."
+  ],
+  "next": "Correct verifier; rerun same workflow on corrected commit and inspect failure details."
+}

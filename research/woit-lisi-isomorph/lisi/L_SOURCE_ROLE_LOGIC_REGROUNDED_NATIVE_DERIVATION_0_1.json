@@ -1,0 +1,334 @@
+{
+  "schema": "lisi.regrounded-source-role-logic-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_ROLE_BODIES_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "frontier": "L_REGROUNDED_SOURCE_ROLE_LOGIC_FRONTIER_0_1.json",
+  "native_bundle": "LISI_NATIVE_COMPILATION_REGROUNDED_0_17.isg",
+  "relation_atoms": {
+    "944105": "source classifies opaque target as opaque source-status/role value",
+    "944106": "source dependence claim between opaque referents",
+    "944108": "source proposition: opaque interpretation is adopted",
+    "944109": "source proposition: opaque condition is satisfied",
+    "944110": "source prediction provenance relation",
+    "944111": "source theorem-provenance relation",
+    "944112": "source preference relation"
+  },
+  "value_atoms": {
+    "944120": "representation-dependent source classification",
+    "944121": "representation-independent source classification",
+    "944130": "model-building choice source classification",
+    "944131": "mathematical impossibility result source classification"
+  },
+  "target_atoms": {
+    "l074NumericalCoincidence": 944150,
+    "l074Embedding": 944151,
+    "l074MatrixRealization": 944152,
+    "l090PrincipalBundleInterpretation": 944170,
+    "l090NonzeroFrameHiggsBackground": 944171,
+    "l090NewParticleSpectrum": 944172,
+    "l090EmbeddingAlone": 944173,
+    "l122NonDirectCPTt": 944180,
+    "l122TrivialCPTA4": 944181,
+    "l122PreferenceClaim": 944182
+  },
+  "items": [
+    {
+      "census_id": "L-SSC-074",
+      "frozen_body": "L03 explicitly separates representation-dependent numerical coincidence from the representation-independent subalgebra embedding: the gravity+SM Lie algebra embedding into spin(11,3) via bivector generators does not depend on the convenient matrix realization.",
+      "source_provenance": "L03 §3",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944105
+              },
+              {
+                "kind": "RAW",
+                "id": 942074
+              },
+              {
+                "kind": "RAW",
+                "id": 944150
+              },
+              {
+                "kind": "RAW",
+                "id": 944120
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944105
+              },
+              {
+                "kind": "RAW",
+                "id": 942074
+              },
+              {
+                "kind": "RAW",
+                "id": 944151
+              },
+              {
+                "kind": "RAW",
+                "id": 944121
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "NOT",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944106
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942074
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944151
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944152
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150010 944105 942074 944150 944120) (^150010 944105 942074 944151 944121) (^150003 (^150010 944106 942074 944151 944152)))",
+      "support_incidence": [
+        940005,
+        941074,
+        940102
+      ],
+      "target_internal_behavior_imported": false
+    },
+    {
+      "census_id": "L-SSC-090",
+      "frozen_body": "L03 conditions any E8 principal-bundle physical interpretation on symmetry breaking by a nonzero frame-Higgs background and treats the resulting direct-E8 new-particle spectrum as a prediction of that interpretation rather than a theorem of the embedding alone.",
+      "source_provenance": "L03 §5",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "IMPLIES",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944108
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942090
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944170
+                  }
+                ]
+              },
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944109
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942090
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944171
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944110
+              },
+              {
+                "kind": "RAW",
+                "id": 942090
+              },
+              {
+                "kind": "RAW",
+                "id": 944172
+              },
+              {
+                "kind": "RAW",
+                "id": 944170
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "NOT",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944111
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942090
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944172
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944173
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150004 (^150010 944108 942090 944170) (^150010 944109 942090 944171)) (^150010 944110 942090 944172 944170) (^150003 (^150010 944111 942090 944172 944173)))",
+      "support_incidence": [
+        940005,
+        941090,
+        940102
+      ],
+      "target_internal_behavior_imported": false
+    },
+    {
+      "census_id": "L-SSC-122",
+      "frozen_body": "L04 prefers the non-direct-product CPTt construction over a trivial CPT×A4 extension as a model-building choice rather than a mathematical impossibility result.",
+      "source_provenance": "L04 §7",
+      "body_formula": {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944112
+              },
+              {
+                "kind": "RAW",
+                "id": 942122
+              },
+              {
+                "kind": "RAW",
+                "id": 944180
+              },
+              {
+                "kind": "RAW",
+                "id": 944181
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 944006
+              },
+              {
+                "kind": "RAW",
+                "id": 942122
+              },
+              {
+                "kind": "RAW",
+                "id": 944182
+              },
+              {
+                "kind": "RAW",
+                "id": 944130
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "NOT",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 944006
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 942122
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944182
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 944131
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "serialized_formula": "(^150001 (^150010 944112 942122 944180 944181) (^150010 944006 942122 944182 944130) (^150003 (^150010 944006 942122 944182 944131)))",
+      "support_incidence": [
+        940005,
+        941122,
+        940103
+      ],
+      "target_internal_behavior_imported": false
+    }
+  ],
+  "guards": [
+    "all named mathematical/physical objects are opaque source identities",
+    "all logical force is supplied by Core AND/NOT/IMPLIES",
+    "raw predicates have only the finite represented source-role/provenance applications",
+    "no historical closure packet or research-local mathematical schema is a premise",
+    "no Woit or cross-track semantics are premises"
+  ],
+  "closure_claim": false
+}

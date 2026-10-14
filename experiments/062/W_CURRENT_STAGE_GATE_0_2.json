@@ -1,0 +1,79 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.2",
+  "date": "2026-10-07",
+  "status": "W_G7_SOURCE_INSTANCE_BOUNDARY_CURRENT_AUTHORITY_HOLD",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_1.json",
+    "git_blob_sha": "93044f358732cff89b46a86452f9a7fafc5a91b1",
+    "reason": "G7 source-local instantiation was executed. Primitive 211000 could not lawfully close the four target W occurrences because required source-instance semantics are absent."
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "active": true
+  },
+  "g6_candidate": {
+    "path": "experiments/063/OWNER_WAIVER_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "b69940a5dd1ef85c8a78114e0989ec7e6e68c99a",
+    "primitive_id": 211000,
+    "campaign_provisional_qualification_preserved": true,
+    "externally_verified": false,
+    "global_disposition": "INCOMPLETE_EVIDENCE"
+  },
+  "g7_result": {
+    "path": "experiments/062/W_G7_VARIATIONAL_STATIONARITY_INSTANTIATION_0_1.json",
+    "git_blob_sha": "6c153edb677bf13b30667ca31b9ad762ec58d196",
+    "result": "SOURCE_INSTANCE_INSUFFICIENT_FOR_CANDIDATE_INTERFACE",
+    "affected_occurrences": [
+      "W-SSC-029-O03",
+      "W-SSC-029-O04",
+      "W-SSC-149-O02",
+      "W-SSC-149-O03"
+    ],
+    "closure_changes": 0,
+    "all_affected_dispositions": "REMAINS_UNEXPANDED_DEMAND"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_complete": true,
+    "G4_complete": true,
+    "G5_complete": true,
+    "G6_candidate_campaign_provisionally_qualified": true,
+    "G6_external_verification_complete": false,
+    "G7_executed": true,
+    "G7_closed_any_W_occurrence": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "track_sealed_at_current_authority_boundary": true
+  },
+  "controlling_boundary": {
+    "kind": "SOURCE_INFORMATION_AND_INSTANCE_SEMANTICS_BOUNDARY",
+    "provider_related": false,
+    "statement": "The current blocker is not third-party verification. The frozen W01/W02 source does not supply the total/single-valued first-variation and zero-stationarity instance semantics required by primitive 211000. Using conventional calculus meaning to fill those gaps would violate source-local reconstruction.",
+    "source": "experiments/062/W_G7_VARIATIONAL_STATIONARITY_INSTANTIATION_0_1.json"
+  },
+  "external_verification_routing": {
+    "bypass_active": true,
+    "third_party_calls_required_now": false,
+    "independently_verified_claim_allowed": false,
+    "note": "Restoring third-party verification later does not by itself solve the current G7 source-instance mismatch."
+  },
+  "lawful_unblock_paths": [
+    "Provide independently authoritative W-source information that explicitly supplies the missing instance semantics; reopen only W-SSC-029/W-SSC-149 and rerun affected downstream stages.",
+    "Propose and test another generic semantic candidate only if it genuinely reduces the missing behavior rather than renaming the source phrase 'variation gives result'.",
+    "If no such source information or non-evasive candidate exists, preserve this as the W current-authority boundary."
+  ],
+  "prohibited_shortcuts": [
+    "Do not mark W-SSC-029-O03/O04 or W-SSC-149-O02/O03 closed under primitive 211000.",
+    "Do not infer Euler-Lagrange/stationarity semantics from conventional mathematical familiarity.",
+    "Do not use L evidence or final W/L correspondence to backfill W source semantics.",
+    "Do not claim external verification passed."
+  ],
+  "next_lawful_action": "Hold W at the G7 source-instance boundary unless new authoritative W source semantics or a genuinely lower, separately qualified non-evasive candidate is supplied."
+}

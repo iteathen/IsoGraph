@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const p=JSON.parse(fs.readFileSync('experiments/062/W_EXTRACTION_RECONCILED_0_20.json','utf8'));
+const a=JSON.parse(fs.readFileSync('experiments/062/W_G1_SEMANTIC_DEPENDENCY_ADJUDICATION_0_1.json','utf8'));
+const o=JSON.parse(JSON.stringify(p));
+const it=o.items.find(x=>x.census_id===a.correction.census_id);
+if(!it)throw new Error('missing item');
+if(it.occurrences.some(x=>x.occurrence_id===a.correction.occurrence.occurrence_id))throw new Error('collision');
+it.occurrences.push(a.correction.occurrence);
+fs.writeFileSync('experiments/062/W_EXTRACTION_RECONCILED_0_21.json',JSON.stringify(o,null,2)+'\n');
+console.log(JSON.stringify({pass:true,occurrences:o.items.reduce((n,x)=>n+x.occurrences.length,0)},null,2));

@@ -1,0 +1,54 @@
+{
+  "schema": "woit-lisi.bt01.exact-matrix-alignment.v0.1",
+  "status": "VERY_STRONG_PRESEAL_ALIGNMENT_NOT_ADMITTED_ISOMORPHISM",
+  "basis": [
+    {
+      "index": 0,
+      "W": "I",
+      "L": "sigma0",
+      "relation": "same identity matrix"
+    },
+    {
+      "index": 1,
+      "W": "-i sigma1",
+      "L": "-i sigma1",
+      "relation": "exact"
+    },
+    {
+      "index": 2,
+      "W": "-i sigma2",
+      "L": "-i sigma2",
+      "relation": "exact"
+    },
+    {
+      "index": 3,
+      "W": "-i sigma3",
+      "L": "-i sigma3",
+      "relation": "exact"
+    }
+  ],
+  "parameter_map": "x_a <-> v_a",
+  "matrix_relation": "rho_W(x) = rho_L(v) coefficient-for-coefficient",
+  "chiral_map": {
+    "input": {
+      "W": "S_R",
+      "L": "Q_minus"
+    },
+    "output": {
+      "W": "S_L",
+      "L": "Q_plus"
+    },
+    "action": {
+      "W": "matrix evaluation x*s_R",
+      "L": "Gamma(v)*Q_minus / quaternion multiplication"
+    }
+  },
+  "source_convention_residual": "Lisi Q_plus maps to conjugated division representative tilde(chi)",
+  "external_cross_reference_used_as_proof": false,
+  "remaining": [
+    "global projective reconstruction",
+    "primitive output representation map",
+    "group phase/sign reconstruction",
+    "post-seal NEI/DP"
+  ]
+}

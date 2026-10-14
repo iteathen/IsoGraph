@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062-w-g1-owner-bypass-routing.v0.3",
+  "date": "2026-10-08",
+  "status": "W_G1_REAL_PREDICATE_CORRECTED_INPUT_ACCEPTED_UNDER_OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS",
+  "authority_effect": "CAMPAIGN_PROCEDURE_EXCEPTION_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE"
+  },
+  "pinned_inputs": {
+    "source_corpus": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    },
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_23.json",
+      "git_blob_sha": "ccf4713009d624c4f9f84010f48f899e3aae2e22"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_4.json",
+      "git_blob_sha": "34c30f8576ab7f910b64cd8eeffff8527c7fbbac"
+    }
+  },
+  "internal_requirements": {
+    "source_local_zero_change": true,
+    "deterministic_replay": true,
+    "source_scope_unchanged": true,
+    "L_evidence_used": false,
+    "third_party_external_verification_complete": false
+  },
+  "routing": {
+    "W_G1_campaign_accepted_under_owner_bypass": true,
+    "W_G2_authorized": true,
+    "W_G3_authorized_after_valid_G2": true,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "independently_verified_claim_allowed": false
+  },
+  "nonclaims": [
+    "Third-party verification did not pass.",
+    "This is not global semantic authority.",
+    "This does not automatically authorize schema 221103 consumption; downstream replay and G7 are still required."
+  ]
+}

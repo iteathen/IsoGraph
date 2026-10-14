@@ -1,0 +1,31 @@
+{
+  "schema": "isograph.exp062-w097-g1-029-stale-verifier-expectation-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_TEST_EXPECTATION_STALE_AFTER_G0_NONLITERAL_STRENGTHENING_REPAIR",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G1_VERIFIER",
+  "failure": {
+    "workflow_run_id": 37795493149,
+    "conclusion": "failure",
+    "failed_step": "node experiments/062/tools/verify-w-extraction-reconciled-0-29.mjs",
+    "observed_error": "source-visible term missing in G1 a projective equivalence class of nonzero complex pairs",
+    "generator_and_diff_steps": "success"
+  },
+  "source": {
+    "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_8.json",
+    "source_correction": "W097 source deliberately removed non-literal 'nonzero complex pairs' and retains 'equivalence class of pairs of complex numbers'."
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w-extraction-reconciled-0-29.mjs",
+    "git_blob_sha": "9c6338b589551d3c6c0a0c0afaee1c4ff3a57eab"
+  },
+  "classification": [
+    "STALE_EXPECTED_SOURCE_LITERAL",
+    "CI_ASSERTION_DEFECT"
+  ],
+  "semantic_packet_repair_required": false,
+  "repair": "Update the fixed mandatory-source-term list to require the corrected source-written equivalence-class phrase; preserve the explicit rejection of the unsupported nonzero version.",
+  "next_lawful_action": "Rerun the exact G1 verifier in a fresh CI workflow and only then perform G1 zero-change repeat."
+}

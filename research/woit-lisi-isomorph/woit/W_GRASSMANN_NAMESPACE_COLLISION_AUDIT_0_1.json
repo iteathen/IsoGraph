@@ -1,0 +1,65 @@
+{
+  "schema": "woit.grassmann-namespace-collision-audit.v0.1",
+  "status": "CORRECTED_BY_NAMESPACE_REBASE",
+  "date": "2026-10-05",
+  "collision": {
+    "preexisting_owners": [
+      {
+        "file": "WOIT_PRIMITIVE_DUAL_PAIRING_SCHEMA_0_1.isg",
+        "ids": [
+          947000
+        ]
+      },
+      {
+        "file": "W02_CONVENTIONAL_HOM_TENSOR_SOURCE_INSTANCE_0_1.isg",
+        "ids": [
+          947100,
+          947101,
+          947102,
+          947103,
+          947104,
+          947105,
+          947106,
+          947110,
+          947120,
+          947130,
+          947199
+        ]
+      }
+    ],
+    "collided_new_files": [
+      "WOIT_PRIMITIVE_VECTOR_QUOTIENT_GRASSMANN_SCHEMA_0_1.isg",
+      "WOIT_PRIMITIVE_GRASSMANN_TANGENT_HOM_SCHEMA_0_1.isg",
+      "WOIT_STANDARD_TWISTOR_QUOTIENT_SOURCE_INSTANCE_0_1.isg",
+      "WOIT_GRASSMANN_BUNDLE_FIBERS_SOURCE_INSTANCE_0_1.isg",
+      "WOIT_GRASSMANN_PLUCKER_KLEIN_SOURCE_INSTANCE_0_1.isg",
+      "W02_STANDARD_VS_RIGHT_HANDED_TANGENT_ROLE_SOURCE_INSTANCE_0_1.isg"
+    ]
+  },
+  "corrected_namespace": {
+    "support_range": "990000-990999",
+    "plucker_range": "991000-991999",
+    "source_role_range": "992000-992999",
+    "successor_files": [
+      "WOIT_PRIMITIVE_VECTOR_QUOTIENT_GRASSMANN_SCHEMA_0_2.isg",
+      "WOIT_PRIMITIVE_GRASSMANN_TANGENT_HOM_SCHEMA_0_2.isg",
+      "WOIT_STANDARD_TWISTOR_QUOTIENT_SOURCE_INSTANCE_0_2.isg",
+      "WOIT_GRASSMANN_BUNDLE_FIBERS_SOURCE_INSTANCE_0_2.isg",
+      "WOIT_GRASSMANN_PLUCKER_KLEIN_SOURCE_INSTANCE_0_2.isg",
+      "W02_STANDARD_VS_RIGHT_HANDED_TANGENT_ROLE_SOURCE_INSTANCE_0_2.isg"
+    ]
+  },
+  "affected_closures": [
+    "W-SSC-047",
+    "W-SSC-133"
+  ],
+  "affected_ledgers": [
+    "CORE021_CLOSURE_LEDGER_0_28.json",
+    "CORE021_CLOSURE_LEDGER_0_29.json"
+  ],
+  "unaffected_closures": [
+    "W-SSC-097"
+  ],
+  "ia_fixed_point_invalidated": false,
+  "rule": "W047/W133 must be reissued against the 990xxx–992xxx successors before current closure authority is restored. Ledgers 0.28–0.29 remain historical/stale."
+}

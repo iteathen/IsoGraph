@@ -1,0 +1,111 @@
+{
+  "schema": "isograph.track-L.G0.L03-original-Eq3.10-3.11-spinor-action-conditional-zero.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_source": {
+    "id": "L03",
+    "revision": "arXiv:1006.4908v1",
+    "official_pdf": "https://arxiv.org/pdf/1006.4908v1",
+    "SHA256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "pages": 14,
+    "original_page_zero_based": 9,
+    "printed_page": 10,
+    "section": "3.2",
+    "original_source_locations": [
+      "L03-S027",
+      "L03-S028"
+    ],
+    "original_eqs": [
+      "3.10",
+      "3.11"
+    ],
+    "existing_SSC_owner": "L-SSC-078"
+  },
+  "exact_original_meaning": {
+    "original_spinor_carrier": "positive-chiral 64-real Majorana-Weyl spinor basis generators Q_iota with psi=psi^iota Q_iota",
+    "Eq3_10": "[Gamma_ij,Q_iota]=GammaPlus_ij Q_iota=Q_kappa (GammaPlus_ij)^kappa_iota",
+    "coefficient_index_roles": {
+      "input": "iota",
+      "output": "kappa",
+      "positive_chiral_generator": "GammaPlus_ij",
+      "Q_generator_output_basis": "Q_kappa",
+      "operator_action": "Left multiplication by spin(11,3) bivector on 64-real positive-chiral Majorana-Weyl spinor"
+    },
+    "author_generalized_algebra_caveat": "The word algebra is used in a generalized sense even though the bracket between two spinors may be undefined",
+    "hypothetical_zero_choice": "If we define such a bracket trivially, [Q_iota,Q_kappa]=0",
+    "hypothesized_antisymmetry": "and presume [Q_iota,Gamma_ij]=-[Gamma_ij,Q_iota]",
+    "author_conditional_conclusion": "then brackets (3.9)–(3.11) are Lie brackets of the completed GraviGUT Lie algebra with the 64-real spinor carrier an ideal",
+    "conventional_SM_condition": "Likewise, the Standard Model bracket uses its (2.8) matrix representation under (3.10), producing the author's stated SM subalgebra only under that construction",
+    "modality": "AUTHOR_CONDITIONAL_IF_DEFINE_ZERO_AND_PRESUME_ANTISYMMETRY_NOT_UNCONDITIONAL_INITIAL_BRACKET",
+    "source_E8_nonzero_spinor_spinor_not_overwritten": true
+  },
+  "original_source_evidence": {
+    "original_eq3_10_nearby_text_sha256": "2e3373dea5e9796dc5257e3e8d4f67b492f2c6bcb3683942cefad350878ec25f",
+    "original_eq3_11_nearby_text_sha256": "5313835a30f48bf1ded182c65efe928226b6461aa46d339cb75fb5d3b2dedab3",
+    "original_text_extract": "(3.10) [Γij , Qι ] = Γ+ ij Qι = Qκ (Γ+ ij)^κ_ι ... The word 'algebra' is used here in a generalized sense, even though the bracket between two spinors may be undefined. If we define such a bracket trivially, (3.11) [Qι , Qκ ] = 0 and presume [Qι , Γij ] = −[Γij , Qι ], then these brackets (3.9–3.11) are the Lie brackets of a Lie algebra ... spinors are an ideal",
+    "original_first_CI": {
+      "run_id": 38071927170,
+      "head_sha": "6b4e3a334701a249939b55c5e9b4f3e4a034c039",
+      "job_id": 114270923513,
+      "conclusion": "success",
+      "source_label_index_not_complete_formula_reconstruction": true
+    },
+    "previous_eq4_4_CI": {
+      "run_id": 38080830103,
+      "head_sha": "28b212daef59ce643afe39eba4aae3a6fb8bbd80",
+      "job_id": 114297212957,
+      "conclusion": "success",
+      "hostiles_rejected": 28,
+      "not_a_pass_for_eq3_10": true
+    },
+    "original_pdf_binary_ci": {
+      "run_id": 38046224902,
+      "head_sha": "7d208f477f92b4d84cc3a67276ee735c511739a7",
+      "conclusion": "success"
+    }
+  },
+  "failure_mechanism": {
+    "class": "SOURCE_CONDITIONAL_BINDER_SCOPE_ERASED_PLUS_ACTION_INDEX_ORDER_UNDERINDEXED",
+    "source_traversal_omission": false,
+    "source_interpretation_defect": true,
+    "source_exact_formula_defect": true,
+    "previous_SSC_item": "L-SSC-078",
+    "previous_source_body_issue": "Says the fermion bracket is simply defined zero as a completed algebra while omitting the original author's hypothetical 'if' and 'presume' and not preserving Eq3.10 coefficient slot order",
+    "repair": "Append source-exact positive-chiral action and conditional presumption to existing source SSC root, without importing complete E8 spinor-spinor bracket or mathematical truth proof",
+    "new_typed_SSC_identity_needed": false
+  },
+  "systematic_control": {
+    "method": "Inspect each original source assertion's antecedent, hypothetical/conjectural modalities and action index direction together with adjacent equations before claiming exact source semantics; verify original v1 PDF directly and reject deletion of 'if', 'presume', 64-real carrier or coefficient index order.",
+    "other_source_units_in_same_equation_block_reexamined": [
+      "L03-S026",
+      "L03-S027",
+      "L03-S028",
+      "L03-S031",
+      "L03-S033"
+    ],
+    "cannot_auto_reclassify_unchanged_evidence": true
+  },
+  "conservation": {
+    "original_L03_locations": 47,
+    "existing_SSC_identities": 191,
+    "only_changed_SSC_identity": "L-SSC-078",
+    "entire_unchanged_SSC_records": 190,
+    "changed_original_locations": [
+      "L03-S027",
+      "L03-S028"
+    ],
+    "unchanged_original_locations": 45,
+    "exact_original_formula_groups_before": 16,
+    "after_success": 15,
+    "whole_original_L03_cold_complete": false,
+    "all_six_original_cold_complete": 0
+  },
+  "G0_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "post_G0_primitive_closure_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

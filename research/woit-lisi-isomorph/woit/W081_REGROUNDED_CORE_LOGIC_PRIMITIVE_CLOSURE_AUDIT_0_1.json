@@ -1,0 +1,136 @@
+{
+  "schema": "woit.w081-regrounded-core-logic-primitive-closure-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_CANDIDATE_CLOSED_PRIMITIVE",
+  "census_id": "W-SSC-081",
+  "source_body": "W04d says a Euclidean realization requires additional quaternionic/fibration structure and explicitly leaves the exact new spinor/twistor Wick-rotation implementation unresolved.",
+  "governing_authority": [
+    "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md",
+    "qualification/CORE_0_21_LEDGER_CONTRACT.md"
+  ],
+  "native_compilation": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_12.isg",
+  "native_derivation": "W081_REGROUNDED_CORE_LOGIC_NATIVE_DERIVATION_0_1.json",
+  "body_analysis": {
+    "logical_reading": "AND(IMPLIES(euclidean_realization_occurs, additional_quaternionic_fibration_structure_present), body_target_status(exact_new_spinor_twistor_wick_implementation, unresolved))",
+    "body_formula": {
+      "kind": "OP",
+      "role": "DEFINITION_EXPANDS_TO",
+      "args": [
+        {
+          "kind": "RAW",
+          "id": 932081
+        },
+        {
+          "kind": "OP",
+          "role": "AND",
+          "args": [
+            {
+              "kind": "OP",
+              "role": "IMPLIES",
+              "args": [
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 934065
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 934440
+                    }
+                  ]
+                },
+                {
+                  "kind": "OP",
+                  "role": "PREDICATE_APPLICATION",
+                  "args": [
+                    {
+                      "kind": "RAW",
+                      "id": 934066
+                    },
+                    {
+                      "kind": "RAW",
+                      "id": 934441
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "OP",
+              "role": "PREDICATE_APPLICATION",
+              "args": [
+                {
+                  "kind": "RAW",
+                  "id": 934002
+                },
+                {
+                  "kind": "RAW",
+                  "id": 932081
+                },
+                {
+                  "kind": "RAW",
+                  "id": 934442
+                },
+                {
+                  "kind": "RAW",
+                  "id": 934011
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "support_incidences": [
+      [
+        930005,
+        931081,
+        930106
+      ]
+    ],
+    "target_internal_behavior_load_bearing": false,
+    "target_internal_behavior_reason": "The source requirement is represented by Core implication. The quaternionic/fibration and spinor/twistor/Wick targets are opaque referents whose internal mathematics is not used.",
+    "raw_predicate_hidden_behavior": false,
+    "raw_predicate_reason": "934065 and 934066 have only their represented proposition applications. They do not encode quaternionic/fibration or Wick semantics."
+  },
+  "core_gates": {
+    "body_primitive_closed": true,
+    "support_primitive_closed": true,
+    "transitive_dependencies_primitive_closed": true,
+    "definitionally_reducible_logical_operator_left_hidden": false,
+    "source_semantics_conserved": true,
+    "unsupported_native_addition_present": false,
+    "qualified_qu_required": false,
+    "qu_reason": "The body reports that an implementation remains unresolved but does not characterize an admissible realization family. QU would add semantics.",
+    "schema_closure_applicable": false,
+    "cross_author_semantics_used": false
+  },
+  "anti_leak_guards": [
+    "all named mathematical targets remain opaque raw identities",
+    "requirement force is owned only by Core IMPLIES",
+    "unresolved status is not interpreted as a realization family",
+    "historical closure packets are not premises",
+    "no Lisi or synthesis semantics are premises"
+  ],
+  "reconstruction": {
+    "all_and_only_source_body": true,
+    "path": [
+      "W-SSC-081",
+      "routing source provenance W04d",
+      "W-BODY-081",
+      "Core DEFINITION_EXPANDS_TO/AND/IMPLIES formula",
+      "primitive source provenance support"
+    ]
+  },
+  "proposed_disposition": "CLOSED_PRIMITIVE",
+  "core021_qualification_stage_complete": false,
+  "ia_authorized": false,
+  "nei_authorized": false,
+  "dts_authorized": false,
+  "dp_authorized": false
+}

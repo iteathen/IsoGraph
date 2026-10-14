@@ -1,0 +1,121 @@
+{
+  "schema": "isograph.track-L.G0.L01-Fig1-frozen-original-SVG-source-replay-preregistration.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "FROZEN_PROSPECTIVE_PROJECT_CONTROLLED_MECHANICAL_SOURCE_REPLAY",
+  "parent_branch_commit": "206b5281f9bc17eb869173be1be5a16355dff9c5",
+  "primary_source": {
+    "source": "L01",
+    "author": "A. Garrett Lisi",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "arxiv": "0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "PDF_SHA256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "PDF_bytes": 623525,
+    "pages": 31,
+    "zero_based_PDF_page": 2,
+    "printed_page": 2,
+    "figure": "Figure 1",
+    "source_text_page_SHA256_prior": "5fb73737e292efe76f68ee31e1857132896d5c290a64c94c4c71cc51f47f5de7",
+    "raster_96dpi_SHA256_prior": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "SVG_sha256_prior": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430"
+  },
+  "frozen_dependencies": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ORIGINAL_FIG1_SM_PERIODIC_TABLE_SOURCE_CANDIDATE_G0_0_2.json",
+      "sha": "2f38cc22709cfd9c92d0aca2997390da03a06767"
+    },
+    {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_191.json",
+      "sha": "6211130c2ade9859018e992b075f1648cf096ec4"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py",
+      "sha": "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+    },
+    {
+      "path": "experiments/062/tools/verify-l-g0-l01-svg-region-0-1.py",
+      "sha": "3e7c1d334db608f07eeb1ba8a7afad3f42eaf9b5"
+    }
+  ],
+  "source_replay_code": {
+    "path": "experiments/062/tools/replay-l-g0-l01-original-figure-source-0-1.py",
+    "git_blob_sha": "b4948706b305f0734f9378405c559f12b3d70d37",
+    "language": "Python3 standard library",
+    "local_preflight": {
+      "py_compile": "PASS",
+      "self_test": "PASS",
+      "original_pdf_bytes_available_locally": false
+    }
+  },
+  "workflow": {
+    "path": ".github/workflows/experiment-062-l-g0-l01-original-figure-source-replay-0-1.yml",
+    "git_blob_sha": "d56ce7a79010cf604d20a4e4a04e6ae15ace895e",
+    "trigger": "one path-filtered push workflow plus existing repository automatic workflows",
+    "manual_dispatch_requested": false,
+    "external_semantic_model_calls": 0,
+    "artifact_retention": false,
+    "source_fetch": "Node fetch directly from frozen arxiv revision; reject wrong length or SHA256 before processing",
+    "time_cap_minutes": 8
+  },
+  "phase_plan": [
+    "Recheck exact source/gate/tool Git blob revisions and the open original L01-S004 disposition on branch checkout.",
+    "Run exact pinned-v0.2 Python selftest and 140625 synthetic independent-fraction oracle cases locally within one workflow job before original replay.",
+    "Fetch original PDF v1 from arxiv and require 623525 bytes and pinned SHA256.",
+    "Check PDF 31 pages, Figure 1 original caption, page-3 extracted text SHA256 and 96-DPI raster SHA256 (compare renderer-dependent hashes separately).",
+    "Run pdftocairo source SVG export and compare predecessor SVG hash as environment-specific diagnostic, not an intrinsic source identity.",
+    "Execute v0.2 transform-aware SVG candidate stroke extraction in a bounded PDF-points crop [270,275,540,495]; report candidate samples, raw/expanded counts and unresolved clip/CSS/use/curved-path obligations.",
+    "Preserve all pre-existing research failures/limitations and report source-graph/topology as UNQUALIFIED; acquire independent image-only graph endpoint decoding in a later phase."
+  ],
+  "falsifiers": [
+    "Any original PDF byte/hash/page-count mismatch aborts immediately.",
+    "Any source SSC, L01 source-inverse, candidate model, stage-gate or selected tool blob mismatch aborts before source interpretation.",
+    "A failed synthetic region oracle cannot be masked by a successful source download.",
+    "Missing SVG or unexpected source page dimensions aborts this mechanical attempt.",
+    "SVG parse incomplete, transformed glyphs, clipped drawings, and visually ambiguous geometry must remain explicit open debts.",
+    "Identical SVG/raster hashes do not imply source semantic reconstruction; changed renderer hashes do not imply changed source binary.",
+    "Proposed physical field actions from the author's prose must not be imported as ink-stroke edge oracle.",
+    "Woit source semantics and project unification hypotheses remain unavailable to L G0 source interpretation."
+  ],
+  "historical_retained": {
+    "original_Fig1_candidate_failed_run_id": 38279072465,
+    "failed_run_disposition": "FAILURE_22_OF_23",
+    "corrected_scoped_model_run_id": 38279423956,
+    "scoped_model_disposition": "PASS_26_OF_26_NOT_COLD",
+    "source_vector_capability_run_id": 38294391911,
+    "source_vector_capability_disposition": "PASS_10_OF_10_NOT_TOPOLOGY",
+    "region_synthetic_repair_commit": "206b5281f9bc17eb869173be1be5a16355dff9c5"
+  },
+  "stage_locks": {
+    "SSC_revision": "0.96",
+    "SSC_IDs": 191,
+    "source_first_groups": 350,
+    "L01_source_first_locations": 98,
+    "L01_unqualified_visual_groups": 16,
+    "complete_original_source_cold_reviews": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro — full independent W and L programs",
+    "experiment_design_and_implementation": "agent-assisted L-only G0 source reconstruction diagnostics",
+    "earliest_evidence_currently_located": "2026-10-12 prior pinned L01 source evidence and geometry stage",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "source_scientific_claims": "EXTERNAL_ANTECEDENT",
+    "theory_unification_claim": false
+  }
+}

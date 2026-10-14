@@ -1,0 +1,295 @@
+{
+  "schema": "isograph.exp062-w01-appendix-bc-additional-12-source-incidences-oracle.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SECOND_INDEPENDENT_SOURCE_PAGE_REVIEW_FOUND_TWELVE_APPENDIX_BC_SOURCE_ASSERTIONS_NOT_IN_30_FIRST_CORRECTION",
+  "source": {
+    "id": "W01",
+    "revision": "arXiv:2104.05099v2",
+    "PDF": "https://arxiv.org/pdf/2104.05099v2",
+    "page_indices": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      40,
+      42,
+      43
+    ],
+    "author_pdf_bytes": "NOT_COMPARED"
+  },
+  "predecessor": {
+    "SSC": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_28.json",
+      "git_blob_sha": "0fce5475cac8be4b9938f036a380fe1c4d7b6249"
+    },
+    "oracle": {
+      "path": "experiments/062/W01_G0_BC_COMPLETE_SOURCE_ASSERTION_ORACLE_0_2.json",
+      "git_blob_sha": "c48ab46697a412a4b10fbbf796071ea396e9502c"
+    }
+  },
+  "new_source_claims": [
+    {
+      "id": "W01-APP-B13",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.1",
+      "pdf_page_indices": [
+        31
+      ],
+      "kind": "IMAGINARY_TIME_TRANSLATION_DELTA_FAMILY",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "(a*delta(tau),b*delta(tau-tau0))_E1tensorC = a*b*exp(-omega*abs(tau0)); H=omega; U(t)=exp(-i*t*omega)",
+      "semantic_roles": {
+        "source_kernel": "EUCLIDEAN_CONFIGURATION_TEST_DISTRIBUTION",
+        "tau0": "REAL_IMAGINARY_TIME_TRANSLATION",
+        "analytic_continuation": "TAU0_POSITIVE_SEMIGROUP_TO_REAL_t_UNITARY_U"
+      },
+      "negative_guard": "NOT_EUCLIDEAN_FULL_SO4_INVARIANT_RECONSTRUCTION_OR_UNQUALIFIED_DELTA_PRODUCT_THEOREM"
+    },
+    {
+      "id": "W01-APP-B14",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.2",
+      "pdf_page_indices": [
+        32
+      ],
+      "kind": "FREE_SCALAR_MODIFIED_BESSEL_SCHWINGER_KERNEL",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "S2(tau,x) = m/((2*pi)^3*sqrt(tau^2+|x|^2)) * K1(m*sqrt(tau^2+|x|^2))",
+      "semantic_roles": {
+        "mass": "m",
+        "Bessel": "MODIFIED_K1",
+        "spatial_radius": "|x|",
+        "imaginary_time": "tau",
+        "Euclidean_fourier": "integral_R4 exp(i*(tau*s+x dot p))/(s^2+omega_p^2)"
+      },
+      "negative_guard": "DO_NOT_OMIT_BESSEL_K1_OR_CHANGE_TAU_SQUARED_SIGN"
+    },
+    {
+      "id": "W01-APP-B15",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.2",
+      "pdf_page_indices": [
+        33
+      ],
+      "kind": "FREE_SCALAR_ANALYTIC_BRANCH_CUT_CAUSALITY",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "Complex z=t+i*tau analytic continuation has t-axis cuts [|x|,+infty) and (-infty,-|x|]; W2_plus boundary from tau<0 is analytic for spacelike t<|x|, approaches cut for timelike t>|x|",
+      "semantic_roles": {
+        "right_cut": "t >= |x|",
+        "left_cut": "t <= -|x|",
+        "middle": "-abs(x)<t<abs(x)",
+        "spacelike": "SPACELIKE_UNCUT_IN_OPEN_INTERIOR",
+        "timelike": "CROSS_REAL_BRANCH_CUT"
+      },
+      "negative_guard": "NO_CLAIM_ALL_TIMELIKE_FIELD_COMMUTATORS_VANISH"
+    },
+    {
+      "id": "W01-APP-B16",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.2",
+      "pdf_page_indices": [
+        33
+      ],
+      "kind": "FREE_SCALAR_WIGHTMAN_POSITION_KERNEL",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "W2_plus(t,x)=(2*pi)^(-4)*integral_R3 d^3p/(2*omega_p) * exp(-i*omega_p*t)*exp(i*p dot x)",
+      "semantic_roles": {
+        "time_frequency": "-i*omega_p*t",
+        "momentum_phase": "+i*p dot x",
+        "energy": "POSITIVE_omega_p",
+        "normalization": "(2*pi)^-4",
+        "field": "FREE_REAL_SCALAR"
+      },
+      "negative_guard": "NOT_NEGATIVE_ENERGY_BRANCH_OR_TWISTOR_SPINOR_FIELD"
+    },
+    {
+      "id": "W01-APP-B17",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.2",
+      "pdf_page_indices": [
+        35
+      ],
+      "kind": "FREE_SCALAR_EUCLIDEAN_EQUAL_TIME_SLICE",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "f(tau,x)=(1/(2*pi))*delta(tau)*F(x); H1 inner product integral_R3 conj(Ftilde(p))*Gtilde(p) d3p/(2*omega_p)",
+      "semantic_roles": {
+        "time_slice": "tau=0",
+        "E3_rotations": "PRESERVE_SLICE",
+        "Euclidean_translation": "E4_ON_E1",
+        "Minkowski_group": "POINCARE_ON_H1",
+        "analytic_group_relation": "NOT_ANALYTIC_CONTINUATION_OF_UNITARY_REPRESENTATIONS"
+      },
+      "negative_guard": "DO_NOT_EQUATE_EUCLIDEAN_E4_UNITARY_REP_WITH_LORENTZ_POINCARE_REP"
+    },
+    {
+      "id": "W01-APP-B18",
+      "owner": "W-SSC-054",
+      "source": "W01 App. B.1-B.2",
+      "pdf_page_indices": [
+        31,
+        34
+      ],
+      "kind": "EUCLIDEAN_CONFIGURATIONS_NOT_REAL_TIME_OPERATOR_STATES",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "E=S*(E1 tensor C), fields phi_E(tau) commute at ALL tau, satisfy NO equation of motion; physical H=S*(H1) has particles and EOM",
+      "semantic_roles": {
+        "Euclidean": "CONFIGURATION_PATHS",
+        "Minkowski": "ONE_PARTICLE_AND_PHYSICAL_FOCK",
+        "Euclidean_quantum_operators": "COMMUTATIVE_EUCLIDEAN_FIELDS",
+        "source_negative": "NO_EUCLIDEAN_EQUATION_OF_MOTION"
+      },
+      "negative_guard": "DONOT_IDENTIFY_E_OR_ITS_PATH_CONFIGURATION_QUANTA_WITH_H_PHYSICAL_KET"
+    },
+    {
+      "id": "W01-APP-W10",
+      "owner": "W-SSC-055",
+      "source": "W01 App. B.3",
+      "pdf_page_indices": [
+        37
+      ],
+      "kind": "SPINOR_MINKOWSKI_VS_EUCLIDEAN_2X2_MATRIX_PRESENTATION",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "M(t,x)=[[t+x3,x1-i*x2],[x1+i*x2,t-x3]], det(M)=-Minkowski_norm; M_E(tau,x)=[[i*tau+x3,x1-i*x2],[x1+i*x2,i*tau-x3]]",
+      "semantic_roles": {
+        "coordinates": [
+          "t",
+          "x1",
+          "x2",
+          "x3"
+        ],
+        "Minkowski": "HERMITIAN_TWO_BY_TWO",
+        "Euclidean": "TAU_REPLACES_TIME_WITH_iTAU",
+        "action": "SL(2,C)_LxSL(2,C)_R_COMPLEXIFICATION"
+      },
+      "negative_guard": "DO_NOT_EQUATE_DIFFERENT_REAL_FORM_MATRIX_SUBSPACES"
+    },
+    {
+      "id": "W01-APP-W11",
+      "owner": "W-SSC-055",
+      "source": "W01 App. B.3",
+      "pdf_page_indices": [
+        38
+      ],
+      "kind": "WEYL_WICK_TWO_INDEPENDENT_OBSTRUCTIONS_AND_PARTIAL_REMEDY",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "After Wick rotation E+sigma dot p maps right SU2_R spinors to left SU2_L; Euclidean factor is NEITHER self-adjoint NOR skew-adjoint; adding opposite chirality addresses first obstacle but adjointness remains",
+      "semantic_roles": {
+        "remedy": "OPPOSITE_CHIRALITY_DOUBLING_TRADITIONAL_OS",
+        "first_obstacle": "SU2_R_TO_SU2_L_CARRIER",
+        "second_obstacle": "ADJOINTNESS_NOT_REPAIRED_BY_FIRST_REMEDY"
+      },
+      "negative_guard": "DO_NOT_INFER_CHIRAL_DOUBLING_SOLVES_BOTH_PROBLEMS"
+    },
+    {
+      "id": "W01-APP-C10",
+      "owner": "W-SSC-056",
+      "source": "W01 App. C.1",
+      "pdf_page_indices": [
+        39,
+        40
+      ],
+      "kind": "SL2R_CIRCLE_HYPERFUNCTION_DISCRETE_SERIES",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "SL(2,R) orbits on the Riemann sphere: UPPER_HEMISPHERE, LOWER_HEMISPHERE, EQUATOR; discrete-series representations are boundary-value hyperfunctions of holomorphic sections of a line bundle on either hemisphere",
+      "semantic_roles": {
+        "group": "SL(2,R)",
+        "orbit_count": 3,
+        "orbit_carrier": "RIEMANN_SPHERE",
+        "representation": "DISCRETE_SERIES_HYPERFUNCTION_LINE_BUNDLE_BOUNDARY"
+      },
+      "negative_guard": "SOURCE_ANALOGY_TO_HALFPLANE_NOT_AN_ASSERTION_OF_TWISTOR_WARD_EQUIVALENCE"
+    },
+    {
+      "id": "W01-APP-C11",
+      "owner": "W-SSC-056",
+      "source": "W01 App. C.2",
+      "pdf_page_indices": [
+        40
+      ],
+      "kind": "ONE_SIDED_BOUNDARY_LINEAR_FUNCTIONAL_AND_GROWTH_SCOPE",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "f -> lim_eps_down0 integral_R Phi_plus(t+i*eps)*f(t)dt, analytic f with appropriate growth",
+      "semantic_roles": {
+        "domain": "REAL_ANALYTIC_TEST_FUNCTIONS_WITH_GROWTH",
+        "upper": "Phi_plus_UPPER_HALF_PLANE",
+        "method": "CONTOUR_DEFORMATION_RESIDUE",
+        "limit": "eps_to_0_positive"
+      },
+      "negative_guard": "DO_NOT_DEMOTE_FUNCTIONAL_TO_REAL_POINTWISE_EVALUATION"
+    },
+    {
+      "id": "W01-APP-C12",
+      "owner": "W-SSC-056",
+      "source": "W01 App. C.2",
+      "pdf_page_indices": [
+        42
+      ],
+      "kind": "FOURIER_HYPERFUNCTION_SPLIT_TIME_HALF_INTEGRALS",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "tilde_phi(E)=(1/(2*pi))*lim_eps_down0 [integral_(-infty,0) exp(i*(E-i*eps-omega)*t)dt + integral_(0,infty) exp(i*(E+i*eps-omega)*t)dt]",
+      "semantic_roles": {
+        "split_at_time": "t=0",
+        "negative_time": "E-i*eps-omega",
+        "positive_time": "E+i*eps-omega",
+        "energy_distribution": "POSITIVE_POLE_AT_E=omega"
+      },
+      "negative_guard": "DO_NOT_OMIT_HALF_LINE_SPLIT_OR_INTERCHANGE_EPSILON_SIGNS"
+    },
+    {
+      "id": "W01-APP-C13",
+      "owner": "W-SSC-056",
+      "source": "W01 App. C.2",
+      "pdf_page_indices": [
+        43
+      ],
+      "kind": "SIGNED_OSCILLATOR_HYPERFUNCTION_COMPONENTS",
+      "modality": "ORIGINAL_SOURCE_DISPLAY_AND_QUALIFIED_SCOPE_NOT_MATHEMATICAL_PROMOTION",
+      "source_formula": "first positive_E_term=(i*pi/(omega*sqrt(2*pi)))*[exp(i*omega*z),0]; second negative_E_term=(i*pi/(omega*sqrt(2*pi)))*[0,exp(-i*omega*z)]",
+      "semantic_roles": {
+        "source_timeline": "FROM_ENERGY_TWO_POLES_E_plusomega_E_minusomega",
+        "positive_term": "UPPER_COMPONENT_NONZERO",
+        "negative_term": "LOWER_COMPONENT_NONZERO",
+        "overall_prefactor": "i*pi/(omega*sqrt(2*pi))"
+      },
+      "negative_guard": "DO_NOT_DROP_I_PI_OVER_OMEGA_OR_SWAP_HOLOMORPHIC_PAIR_COMPONENTS"
+    }
+  ],
+  "total_claims": 12,
+  "changed_W_ids": [
+    "W-SSC-054",
+    "W-SSC-055",
+    "W-SSC-056"
+  ],
+  "counts_by_id": {
+    "W-SSC-054": 6,
+    "W-SSC-055": 2,
+    "W-SSC-056": 4
+  },
+  "negative_evidence": [
+    "Original previous 30-claim source oracle not exhaustive despite its title. Do not treat direct page access as proof there are no omitted equations.",
+    "Massive K1 modified Bessel kernel and two causal branch cuts are source-distinct from single rational momentum propagator.",
+    "Euclidean time slice/state construction and full Euclidean quantum-state space are different from Lorentzian positive-energy physical state.",
+    "Two distinct Weyl Wick problems require different status; doubling first chirality does not automatically fix adjointness.",
+    "Hyperfunction examples carry their own half-plane roles, growth assumptions and source coefficients."
+  ],
+  "status_gates": {
+    "G0_complete": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "full_W01_page_by_page_independent_no_omissions": false,
+    "full_nine_frozen_W_source_corpus_complete": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "provenance": {
+    "source_author": "Peter Woit",
+    "owner_direction": "Joshua Oshiro",
+    "first_evidence_currently_located": "2026-10-08 W01 v2 pp.32–44 direct independent second visual page pass",
+    "formalizer": "agent-assisted"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "woit.w023-twistor-p1-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_AFTER_H_C2_CORRECTION",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-023",
+  "frozen_body": "In Euclidean twistor geometry, a spacetime point is represented by a twistor P1.",
+  "source": "W05",
+  "root_native": "research/woit-lisi-isomorph/woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg",
+  "dependency_files": [
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_3.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_EUCLIDEAN_QUATERNION_PARAMETER_TRANSPORT_0_1.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_BT01_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIRECT_SUM_ONE_POINT_CHART_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_REAL_PROJECTIVE_INCIDENCE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PSEUDOREAL_PROJECTIVE_STRUCTURE_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_QUATERNION_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_CLIFFORD_TRIALITY_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_ALGEBRA_ANTIINVOLUTION_SIDE_SWAP_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_VECTOR_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_GROUP_LIE_REP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_FIELD_EMBEDDING_SCALAR_RESTRICTION_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_INJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETER_LINEAR_PROJECTIVE_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_PARAMETERIZED_PROJECTIVE_ACTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_TYPED_CHIRAL_ACTION_PROJECTIVE_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "file_count": 21,
+    "unresolved_local_refs": 0,
+    "unreachable_files": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "twistor_space_carrier": 202100,
+    "projective_twistor_carrier": 202113,
+    "base_point_carrier": 202120,
+    "projection": 202126,
+    "finite_fiber_membership": 202123,
+    "infinity_fiber_membership": 202124,
+    "fiber_dimension_reason": "each fiber is the projectivization of an exact two-complex-dimensional graph plane or the exact two-complex-dimensional S_L infinity plane"
+  },
+  "semantic_guards": [
+    "the closure establishes the algebraic/projective P1 fiber representation of a Euclidean twistor base point",
+    "HP1=S4 topology, compactness, smooth structure, and sphere identity are not used and remain separate obligations",
+    "CP1 is represented as the projectivization of an exact two-complex-dimensional complex vector plane, not as an opaque topological label",
+    "no cross-author or unification semantics are premises"
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W023_TWISTOR_P1_CLOSURE_PACKET_0_1.json",
+  "correction_revalidation": "PASS via WOIT_H_C2_CORRECTION_INTERFACE_AUDIT_0_1.json; dependency topology unchanged and corrected scalar semantics now satisfy the source C2/quaternion presentation."
+}

@@ -1,0 +1,30 @@
+name: Experiment 062 W G1 six author originals exact source-local 0.4
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SIX_SOURCE_FIRST_EXACT_BODIES_0_1.json'
+      - 'experiments/062/tools/verify-w-g1-six-original-author-0-4.py'
+      - 'experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs'
+      - '.github/workflows/experiment-062-w-g1-six-exact-original-0-4.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          python3 -m py_compile experiments/062/tools/verify-w-g1-six-original-author-0-4.py
+          node --check experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs
+      - name: Four live original author works, six original G1 body anchor audits, ten negative controls
+        run: python3 -u experiments/062/tools/verify-w-g1-six-original-author-0-4.py
+      - name: Exact source G0 inverse, 29 occurrences and 30 source-role hostiles
+        run: node experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs
+      - name: Prior current-author G0 immutable source stage suite
+        run: |
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+          node experiments/062/tools/verify-w-g0-current-qualified-stage-0-1.cjs

@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062-W-G1-W04a-v02-positive-oracle-label-and-guard-error.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "failure": {
+    "run_id": 38164409214,
+    "job_id": 114543855189,
+    "commit": "d5c603c94d6def65436188b0c07f1c1df49b2b6a",
+    "conclusion": "FAILURE",
+    "source_original_two_reads_passed": true,
+    "source_original_hostile_rejections": 6,
+    "source_g1_guard_positive_passed": false
+  },
+  "failure_class": "VERIFIER_FIELD_LITERAL_AND_CAR_LIMITATION_CHECKER_MISMATCH",
+  "reason": "Verifier v0.2 required literal ANTI_COMMUTATION but candidate occurrence correctly marks action ANTICOMMUTE. It also expected 'No concrete CAR equation' instead of candidate source negative 'Explicit CAR equation and coefficients absent'.",
+  "correction": "Verifier v0.3 recognizes the candidate's exact anticommute role, cross-checks frozen G0 typed relation=ANTI_COMMUTATION and absence of printed exact CAR equations. No source or G1 candidate changed.",
+  "preserves_historical_failure": true,
+  "G0_frozen": true,
+  "historical_Oct03_G0_open": true,
+  "G2_not_authorized": true
+}

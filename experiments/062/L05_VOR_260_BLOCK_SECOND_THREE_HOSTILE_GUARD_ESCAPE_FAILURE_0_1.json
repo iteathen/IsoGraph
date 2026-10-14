@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L05.publisher-260-block-second-hostile-qualification-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failed_run": {
+    "run_id": 38153988393,
+    "job_id": 114513048130,
+    "head_sha": "1c558849d8f6beea6c4c2457d8d8e99b7093a7f4",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38153988393",
+    "original_official_Springer_VOR_SHA_verified": true,
+    "original_bytes": 1432661,
+    "publisher_DOI": "10.1007/s00006-026-01447-5",
+    "original_pages_independently_sha_verified": 51,
+    "original_source_text_blocks_independently_sha_verified": 260,
+    "all_existing_original_L05_SSC_objects_conserved": 38,
+    "all_existing_L_SSC": 191,
+    "hostiles_defined": 30,
+    "hostiles_rejected": 27,
+    "escaped_hostiles": [
+      "falsify_frozen_DOI",
+      "source_arxiv_substitution",
+      "miscount_original_260_blocks"
+    ],
+    "not_a_Pass": true
+  },
+  "cause": {
+    "class": "G0_ACCEPTANCE_VERIFIER_SOURCE_REVISION_AND_DENOMINATOR_GUARD_INCOMPLETE",
+    "mechanism": "The original SHA/51-page/260-block baseline passed, but the verifier did not explicitly compare packet publisher DOI, packet arxiv_not_substituted flag or current register L05 original_source_block_frontier.original_layout_blocks. Mutating each escaped despite valid original source recovery.",
+    "other_scope": "No source semantic omission inferred from absent verifier guard; those three guards must be validated without rewriting historical original source or SSC.",
+    "fix": {
+      "new_verifier_path": "experiments/062/tools/verify-l-g0-l05-51page-260block-primary-source-0-3.mjs",
+      "new_verifier_git_blob_sha": "bbc66385315092807b7be71ad518dc37b7badc3a",
+      "prior_verifier_path": "experiments/062/tools/verify-l-g0-l05-51page-260block-primary-source-0-2.mjs",
+      "prior_verifier_git_blob_sha": "bd309febbe2783a2d2186f8d0239e47864cff7b5",
+      "three_explicit_new_guards": true,
+      "full_30_hostile_requalification_required": true
+    }
+  },
+  "source_untouched": {
+    "source_PDF_SHA256": "03f6ffbb04640051101e20985556d8dec81631adbe44672b907204e9e84cf880",
+    "existing_L05_source_inventory": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SOURCE_FIRST_REVERSE_COVERAGE_0_3.json",
+      "git_blob_sha": "2882ae2232c24d1c7d82b49efe81a448ebf68977"
+    },
+    "existing_260_original_block_frontier": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_FROZEN_VOR_260_BLOCK_SOURCE_TO_SSC_FRONTIER_0_1.json",
+      "git_blob_sha": "ae5fda4d754b52aef2ec1d74338ca10ab59315cd"
+    },
+    "historical_first_syntax_run_38153674586_retained": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "schema": "isograph.track-L.G0.L04-frozen-original-Eq4_3-4_5-quantum-Lorentz-commutator-source.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L04",
+    "original_revision": "arXiv:2407.02497v2",
+    "original_PDF": "https://arxiv.org/pdf/2407.02497v2",
+    "original_PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "original_PDF_bytes": 348134,
+    "original_PDF_pages": 17,
+    "printed_pages": [
+      8,
+      9
+    ],
+    "original_17_page_visual_run_id": 38120301520,
+    "original_page8_visual_job_id": 114413452988,
+    "original_page9_visual_job_id": 114413453012,
+    "original_pdf_manifest": {
+      "path": "research/woit-lisi-isomorph/lisi/L_G0_SIX_FROZEN_ORIGINAL_LAYOUT_SOURCE_FIRST_MANIFEST_0_1.json",
+      "git_blob_sha": "1ff8ff04547a938b19c7530de7741c3f1eec54a9"
+    }
+  },
+  "original_source_first": {
+    "location": "L04-S018",
+    "original_quoted_locator": "§4 Eqs.(4.3)–(4.5), printed pp8–9",
+    "original_semantics": [
+      "One-point quantum-field and adjoint operator action via Lorentz Lie generators, including conjugation and side of multiplication",
+      "Distinct finite-dimensional anti-Hermitian rotation J3 and Hermitian boost K3 vs anti-Hermitian Fock-space generators",
+      "Commutator eigenweights of the 16 original annihilation/creation Table2 row roles, with 32 signed K and J coefficients printed on p9",
+      "Careful creation versus annihilation and internal particle versus antiparticle charge roles"
+    ],
+    "source_atoms": [
+      "L04-P008-B006",
+      "L04-P008-B007",
+      "L04-P008-B008",
+      "L04-P009-B001",
+      "L04-P009-B002"
+    ],
+    "existing_ssc_owners": [
+      "L-SSC-102",
+      "L-SSC-103"
+    ],
+    "full_original_source_cold": false
+  },
+  "printed_author_equations": {
+    "source_gamma_operator_context": [
+      "Spinor J3 = (1/2) gamma12 = -(i/2) sigma0 tensor sigma3 = -i S_z, anti-Hermitian in finite spinor representation",
+      "Spinor K3 = (1/2) gamma03 = (1/2) sigma3 tensor sigma3, Hermitian finite spinor matrix",
+      "Corresponding Fock-space J_hat3 and K_hat3 are anti-Hermitian operators in the infinite-dimensional unitary representation, including for finite-spinor Hermitian K3; this is author source choice not full QFT physical proof"
+    ],
+    "eq4_3": [
+      "[O_hat, Psi_hat] = O Psi_hat",
+      "[J_hat3,Psi_hat] = J3 Psi_hat"
+    ],
+    "eq4_4": [
+      "[O_hat^dagger,Psi_bar_hat] = -Psi_bar_hat (gamma0 O^dagger gamma^0)",
+      "[J_hat3,Psi_bar_hat] = -Psi_bar_hat J3"
+    ],
+    "eq4_5": [
+      "[K_hat3,Psi_hat] = K3 Psi_hat",
+      "[K_hat3,Psi_bar_hat] = +Psi_bar_hat (gamma0 K3^dagger gamma^0) = -Psi_bar_hat K3"
+    ],
+    "source_unqualified_semantic_guard": "Original adjoint field is Psi_hat^dagger gamma^0. Do not exchange order, infer K3 is anti-Hermitian as a 4x4 matrix, equate original Fock operator K_hat3 with finite spinor K3, or drop the gamma0 conjugation term. This is author-printed source not a mathematical/physical proof."
+  },
+  "source_p9_commutator_reverse": {
+    "original_finite_source_role_count": 16,
+    "original_source_action_equations": 32,
+    "source_T2_existing_original_weight_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L04_TABLE1_TABLE2_AND_FIGURES_COLD_G0_0_1.json",
+      "git_blob_sha": "b19b6c2ecc6678121b4ec865334f5f8a358a90b6",
+      "table2_source_unit": "L04-S019",
+      "eight_annihilation_rows": 8,
+      "eight_creation_rows": 8,
+      "all_64_weight_numeric_cells_historically_original_visual_verified": true
+    },
+    "source_comparison_method": "Original p9 lists all 16 QFT a/b annihilation and creation roles with one commutator [Khat3,O] and one [Jhat3,O]. Compare original printed p9 coefficients directly against author Table2 p9 omegaT=-k3^R and omegaS=-j3^I under the source's finite sign encoding. A table-source row fixes the separate 2 source commutator coefficients without proving underlying QFT unitarity.",
+    "literal_sign_interpretation": "`original_p9_K3_eigencommutator_coefficient_twice=+1` means author prints +(1/2), `-1` means −(1/2). For J3, `original_p9_J3_eigencommutator_coefficient_twice_i=+1` means author prints +(i/2), `-1` means −(i/2). Never silently turn K3 coefficients into J3 coefficients or merge dagger and non-dagger source rows.",
+    "original_source_16_operator_signed_rows": [
+      {
+        "source_T2_row_id": "T2-A01",
+        "source_symbol": "a_L_up",
+        "operator_kind": "annihilation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A02",
+        "source_symbol": "a_L_down",
+        "operator_kind": "annihilation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A03",
+        "source_symbol": "a_R_up",
+        "operator_kind": "annihilation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A04",
+        "source_symbol": "a_R_down",
+        "operator_kind": "annihilation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A05",
+        "source_symbol": "bar_a_L_up",
+        "operator_kind": "annihilation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A06",
+        "source_symbol": "bar_a_L_down",
+        "operator_kind": "annihilation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A07",
+        "source_symbol": "bar_a_R_up",
+        "operator_kind": "annihilation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-A08",
+        "source_symbol": "bar_a_R_down",
+        "operator_kind": "annihilation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C01",
+        "source_symbol": "a_L_up^dagger",
+        "operator_kind": "creation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C02",
+        "source_symbol": "a_L_down^dagger",
+        "operator_kind": "creation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C03",
+        "source_symbol": "a_R_up^dagger",
+        "operator_kind": "creation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C04",
+        "source_symbol": "a_R_down^dagger",
+        "operator_kind": "creation",
+        "particle_family": "particle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C05",
+        "source_symbol": "bar_a_L_up^dagger",
+        "operator_kind": "creation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C06",
+        "source_symbol": "bar_a_L_down^dagger",
+        "operator_kind": "creation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C07",
+        "source_symbol": "bar_a_R_up^dagger",
+        "operator_kind": "creation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": 1,
+        "author_source_weight_omegaS_twice": -1,
+        "original_p9_K3_eigencommutator_coefficient_twice": -1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": 1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      },
+      {
+        "source_T2_row_id": "T2-C08",
+        "source_symbol": "bar_a_R_down^dagger",
+        "operator_kind": "creation",
+        "particle_family": "antiparticle",
+        "source_table2_subtable": "4_s^dagger",
+        "author_source_weight_omegaT_twice": -1,
+        "author_source_weight_omegaS_twice": 1,
+        "original_p9_K3_eigencommutator_coefficient_twice": 1,
+        "original_p9_J3_eigencommutator_coefficient_twice_i": -1,
+        "source_relations": [
+          "[K_hat3,operator]=(-omegaT)*operator",
+          "[J_hat3,operator]=(-i omegaS)*operator"
+        ],
+        "source_derivation_role": "Original p9 commutator coefficient col from the existing original p9 Table2 weights; both are from L04 frozen original, not new physics inferred."
+      }
+    ]
+  },
+  "diagnosis": {
+    "class": "GENERIC_FIELD_WEIGHT_SUMMARY_OMITS_SOURCE_LIE_COMMUTATOR_ADJOINT_SIDE_AND_HERMITICITY",
+    "previous_lack": "SSC102/103 already fully represent original Table2 numeric weights, but did not preserve exact author Eqs4.3–4.5 operator and adjoint order, gamma0 conjugation, finite spinor Hermitian boost versus anti-Hermitian Fock operator, or 32 source eigencommutator identities.",
+    "systematic_prevention": "For each original source group, inspect full source equation, its adjoint and original displayed consequences together, check signs/roles against separately pinned source tables, and use source-first block/page SHA and polarity/side one-feature hostile controls; never equate source evidence indexing with a new typed source identity.",
+    "do_not_expand_to_later_stages": true
+  },
+  "conservation": {
+    "L_total_frozen_original_sources": 6,
+    "source_first_location_groups": 350,
+    "L04_locations": 53,
+    "L04_SSC_owners": 34,
+    "all_SSC_ids": 191,
+    "changed_original_source_groups": [
+      "L04-S018"
+    ],
+    "unchanged_original_source_groups": 52,
+    "changed_existing_SSC_records": [
+      "L-SSC-102",
+      "L-SSC-103"
+    ],
+    "unchanged_whole_SSC_records": 189,
+    "typed_SSC_records_added": 0,
+    "old_selected_L04_exact_source_groups": 5,
+    "new_selected_L04_exact_source_groups": 4,
+    "original_p7_eight_spinor_vector_cells_whole_cold": false
+  },
+  "locks": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "all_six_original_source_cold_complete": 0,
+    "L04_whole_source_cold_complete": false,
+    "physical_math_theorem_proof_is_G0_prerequisite": false,
+    "PR70_merge_authorized": false,
+    "W_semantics_imported": false
+  }
+}

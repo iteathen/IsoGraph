@@ -1,0 +1,94 @@
+{
+  "schema": "isograph.exp062-l132-source-fidelity-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_SOURCE_SEMANTIC_OMISSION_L132_REOPEN_FROM_SOURCE_EXTRACTION_G1",
+  "authority": false,
+  "authority_effect": "STOP_L132_G7_AND_INVALIDATE_DOWNSTREAM_RECONSTRUCTION",
+  "track": "L",
+  "branch_head_at_discovery": "22e2fe5b87c5e221fd6077bf473b9565ad38a246",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "frozen_source": {
+    "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "item": "L05 Division Algebras, Triality, and Exceptional Magic, section 3, published version 2026-08-29",
+    "census_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json",
+    "census_git_blob_sha": "db889137e94759727cfbf8e2c21f6749b728bebd",
+    "census_id": "L-SSC-132",
+    "publisher_url": "https://link.springer.com/article/10.1007/s00006-026-01447-5"
+  },
+  "findings": [
+    {
+      "id": "D3_TRIALITY_GROUP_ACTION_INVARIANCE",
+      "source_location": "L05 section 3 near displayed triality-group action after equation (6)",
+      "source_behavior": "For elements r of Tri(D), a linear transformation of the three role carriers sends (v,psi,chi) to (v',psi',chi') preserving T(v',psi',chi')=T(v,psi,chi). The source presents an actual transformation/invariant relation, not only a category name.",
+      "omission": "L132 G1 0.2 has source role atoms and wrappers for automorphism/rotation/triality, but no separately recoverable Tri(D) membership-to-linear-action/invariant-T formula or group carrier. L131 only closes explicit selected generalized-reflection compositions.",
+      "required_fidelity": "Preserve linear three-role action with T equality and group/source carrier scope; do not assert an unsupported all-and-only characterization or group integration theorem."
+    },
+    {
+      "id": "D4_ROTATION_TRIALITY_INCLUSION",
+      "source_location": "L05 section 3 paragraph immediately preceding triality Lie-algebra equation",
+      "source_behavior": "Tri(D) includes ordinary rotations and triality automorphisms.",
+      "omission": "L132 G1 0.2 records distinct category atoms and same/different-type structural aliases, but no source inclusion/member incidence connecting those classes to Tri(D).",
+      "required_fidelity": "Add source inclusion relations without inventing pairwise disjointness or automatic equivalence between all group elements and a subset of generators."
+    },
+    {
+      "id": "D5_INFINITESIMAL_T_CONSTRAINT",
+      "source_location": "L05 section 3 displayed infinitesimal triality-algebra equation immediately before the table of tri(C), tri(H), tri(O) and split analogues",
+      "source_behavior": "The source identifies tri(D) as the Lie algebra of Tri(D) and imposes T(Rv,psi,chi)+T(v,Rpsi,chi)+T(v,psi,Rchi)=0 on an infinitesimal three-role generator R. The source also gives explicit generator actions.",
+      "omission": "L132 G1 0.2 enumerates Lie-carrier bracket tables and metric-skew realizations, but not the generator-action incidence or the three-term infinitesimal T-invariance equality, nor an exact link to the triality transformation carrier.",
+      "required_fidelity": "Preserve all three derivative/action positions, the zero equality, source role typing, source Lie-carrier link, and scope. Do not infer the Lie-algebra/group correspondence from a familiar name or from the finite Lie-table presentation."
+    }
+  ],
+  "affected_artifacts": [
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_ROTATION_AUTOMORPHISM_DISTINCTION_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_LIE_ALGEBRA_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/lisi/L132_TRIALITY_LIE_GROUP_DISTINCTION_CLOSURE_PACKET_0_1.json",
+    "experiments/062/L132_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_2.json",
+    "experiments/062/L132_G1_SOURCE_INCIDENCE_0_2.json",
+    "experiments/062/L132_G2_NEUTRAL_SUBGRAPH_0_2.json",
+    "experiments/062/L132_G3_CORE_DEFINABILITY_0_2.json",
+    "experiments/062/L132_G5H_COMPOSITION_UNIT_AUTOMORPHISM_0_2.json",
+    "experiments/062/L132_G5H_LOW_DIMENSIONAL_LIE_PRESENTATIONS_0_2.json",
+    "experiments/062/L132_G6_COMPOSITION_UNIT_AUTOMORPHISM_PROVISIONAL_QUALIFICATION_0_2.json",
+    "experiments/062/L132_G6_LOW_DIMENSIONAL_LIE_PROVISIONAL_QUALIFICATION_0_2.json",
+    "experiments/062/L132_CURRENT_RECONSTRUCTION_ROUTING_0_1.json",
+    "experiments/062/L132_G7_TARGETED_CLOSURE_0_1.json",
+    "experiments/062/L133_G1_SOURCE_INCIDENCE_0_1.json",
+    "experiments/062/L133_G2_NEUTRAL_SUBGRAPH_0_1.json",
+    "experiments/062/L133_G3_CORE_DEFINABILITY_0_1.json"
+  ],
+  "disposition": {
+    "earliest_lawful_reopen": "L132 source-local rendering/semantic granularity and targeted G1",
+    "L127": "UNAFFECTED_BY_THIS_DEFECT_CORRECTED_G7_0_2_REMAINS_SEPARATE",
+    "L132_G6_0_2": "RECORDED_INTERNAL_MODULE_TESTS_REMAIN_HISTORICAL_FOR_PINNED_CANDIDATES; NOT_SUFFICIENT_TO_CLOSE_EXPANDED_L132_AND_REQUIRE_REPLAY_OR_SCOPE_RECONFIRMATION",
+    "L132_G7": "DO_NOT_CREATE_CORRECTED_CLOSURE_UNTIL_ALL_THREE_OMISSIONS_RECONSTRUCTED_AND_TESTED",
+    "L133": "STALE_CONTINUE_BLOCKED_BY_L132"
+  },
+  "verifier_defect": {
+    "path": "experiments/062/tools/verify-l132-current-reconstruction-routing-0-1.mjs",
+    "failure_mode": "Counts source relation calls and checks declared route statuses/hashes, but does not independently compare the complete frozen L05 section-3 semantic equation/inclusion census with rendered source and G1/G7.",
+    "new_control_requirements": [
+      "Fail when any of the three source obligations is absent.",
+      "Fail on changed T argument position, changed source role, or omitted infinitesimal term even if all old call counts are preserved.",
+      "Do not count self-asserted artifact fields as independent reconstruction.",
+      "Do not claim source reconstruction by matching only Semantic Identity numbers."
+    ]
+  },
+  "next_lawful_order": [
+    "preserve this defect",
+    "source-local G1 source-granularity correction with exact spans",
+    "G1 source occurrence replay with every missing relation exposed",
+    "G2 neutral graph from corrected G1",
+    "G3 qualified-Core definability on corrected G2",
+    "replay affected G5H/G6 only against corrected parent",
+    "exact source reconstruction and adversarial verifier",
+    "new L132 G7 closure only if truly complete",
+    "reopen L133 after verified L132"
+  ],
+  "nonclaims": [
+    "No L132 corrected G7 closure currently established.",
+    "No group/Lie integration theorem is imported.",
+    "No W semantics or cross-track classification used.",
+    "External review is owner-bypassed, not independently passed.",
+    "This is a source-fidelity defect of the targeted L132 representation, not a claim that the source's mathematics is false."
+  ]
+}

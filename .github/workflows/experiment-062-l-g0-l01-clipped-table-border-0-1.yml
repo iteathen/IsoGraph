@@ -1,0 +1,49 @@
+name: Experiment 062 L G0 original Figure1 clipped table border audit 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - '.github/workflows/experiment-062-l-g0-l01-clipped-table-border-0-1.yml'
+      - 'experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  original-L01-clipped-table-ink:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Source, gate, and synthetic verifier preflight
+        run: |
+          set -euo pipefail
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py)" = "78cd3a96fbebde311b31b3908ff5608deea8c59c"
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-3.py)" = "c340c117fc90369cec830811762c1bb2e684d9e6"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py)" = "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+          test "$(git hash-object experiments/062/L_CURRENT_STAGE_GATE_0_194.json)" = "cc9e1a133fbfdbc2c98c868812ca61f69feffb0f"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json)" = "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json)" = "24163965af4d1e13e75371638fcfd70b793db2ac"
+          python3 -m py_compile experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py
+          python3 experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py --self-test
+      - name: Original source PDF renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Frozen original L01 vector table-border clipping audit
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          export FROZEN_L01="$work/L01-source-v1.pdf"
+          node --input-type=module -e '
+            import {createHash} from "node:crypto";
+            import {writeFileSync} from "node:fs";
+            const res=await fetch("https://arxiv.org/pdf/0711.0770v1",{signal:AbortSignal.timeout(65000)});
+            if(!res.ok)throw Error("L01_SOURCE_HTTP_"+res.status);
+            const data=Buffer.from(await res.arrayBuffer());
+            const sha=createHash("sha256").update(data).digest("hex");
+            if(data.length!==623525||sha!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")
+              throw Error("ORIGINAL_SOURCE_PDF_SHA_MISMATCH");
+            writeFileSync(process.env.FROZEN_L01,data);
+            console.log(JSON.stringify({original_l01_binary_sha256:sha,bytes:data.length}));
+          '
+          python3 experiments/062/tools/audit-l-g0-l01-table-border-clip-0-1.py --pdf "$FROZEN_L01"

@@ -1,0 +1,17 @@
+{
+  "schema": "isograph.exp062-w-g0-freeze-v01-failure-ssc-denominator-hostile.v0.1",
+  "track": "W",
+  "exact_run": {
+    "run_id": 38122669284,
+    "job_id": 114420450947,
+    "commit_sha": "0deff57a93d77a99e280c760ff49c03da1cc09a4",
+    "conclusion": "FAILURE",
+    "baseline_positive": true
+  },
+  "escaped_hostile": "invent new source item",
+  "cause": "Verifier read exact immutable 151-item SSC but neglected to compare the proposed new-target certificate's declared SSC item count against those 151 original items. One aggregate metadata counter could therefore claim 152 while source remained unchanged.",
+  "fix": "Distinct 0.2 freeze verifier explicitly requires 151 SSC items, 539 typed incidence, 537 distinct statement IDs from the new G0 certificate, as well as original immutable file hashes.",
+  "prior_CI_not_rescored": true,
+  "source_research_omission": false,
+  "old_oct03_target_open": true
+}

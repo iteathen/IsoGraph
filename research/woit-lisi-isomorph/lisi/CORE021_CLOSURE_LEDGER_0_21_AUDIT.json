@@ -1,0 +1,48 @@
+{
+  "schema": "lisi.core021-regrounded-ledger-audit.v0.3",
+  "date": "2026-10-05",
+  "status": "PASS_STRUCTURAL_PARTIAL_CLOSURE",
+  "ledger": "CORE021_CLOSURE_LEDGER_0_21.json",
+  "authoritative_native_manifest": "LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_10.json",
+  "authoritative_native_compilation": "LISI_NATIVE_COMPILATION_REGROUNDED_0_10.isg",
+  "source_semantic_census": "SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "process_regrounding_audit": "../PROCESS_REGROUNDING_AUDIT_0_2.json",
+  "counts": {
+    "census": 191,
+    "closed_primitive": 5,
+    "closed_schema": 0,
+    "incomplete_unexpanded": 186,
+    "nodes": 278,
+    "reachable_authoritative_nodes": 278
+  },
+  "accepted_closed_ids": [
+    "L-SSC-022",
+    "L-SSC-121",
+    "L-SSC-189",
+    "L-SSC-190",
+    "L-SSC-191"
+  ],
+  "deterministic_gates": {
+    "coverage": "PASS",
+    "reconstruction_structure": "PASS",
+    "scope_integrity": "PASS",
+    "authority_routing_structure": "PASS",
+    "canonical_hash_recomputation": "PASS",
+    "ia_fixed_point_current": "NOT_ASSERTED_NULL",
+    "strict_closure": "FAIL_EXPECTED_186_INCOMPLETE"
+  },
+  "hashes": {
+    "source_semantic_census_sha256": "60ea1b8210005dd08e275fa1e6b08080f57a7e3a73f8aa91fd292037c908b6c7",
+    "semantic_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "primitive_kernel_sha256": "faa8177494c0d14e29b14795e01c2e0d8edd214d7ffbbb69244f61137d267e65",
+    "qu_state_sha256": "NONE",
+    "governing_authority_sha256": "9a60baaa2d862b2811a659d1ddf234b7237909040381255fb26716408641650e",
+    "inference_profile_sha256": "27108fc1d2a4f43df324b212886a48f628015e743e593138b7208b541e3c60b0"
+  },
+  "guards": [
+    "Structural partial-closure evidence only; domain truth remains separately governed.",
+    "L013 and L023 remain open because their summary dependencies terminate in open source bodies.",
+    "Historical packet-driven closures remain research evidence only.",
+    "Recursive IA, NEI, DTS, and DP remain blocked."
+  ]
+}

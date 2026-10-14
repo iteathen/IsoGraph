@@ -1,0 +1,90 @@
+{
+  "schema": "isograph.exp062-l-g1-final-audit-v12-transport-boundary.v0.2",
+  "date": "2026-10-06",
+  "status": "PROCEDURAL_TRANSPORT_BOUNDARY_L_G1_REAUDIT_INCOMPLETE_G2_BLOCKED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "predecessor": "experiments/062/L_G1_FINAL_AUDIT_V12_TRANSPORT_BOUNDARY_0_1.json",
+  "purpose": "Append unchanged-input L G1 cold-audit attempts 2 and 3, including the attempt-3 evidence-persistence ref race, without weakening or bypassing the graph-first G1 completeness gate.",
+  "pinned_input": {
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+    "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_13.json",
+    "reconciliation": "experiments/062/L_EXTRACTION_RECONCILIATION_0_13.json",
+    "adjudication": "experiments/062/L_G1_FINAL_AUDIT_V11_ADJUDICATION_0_1.json",
+    "preflight": "experiments/062/tools/verify-l-extraction-reconciled-0-13.mjs",
+    "runner": "experiments/062/tools/run-exp062-l-g1-final-audit-v12.mjs",
+    "workflow": ".github/workflows/experiment-062-lisi-g1-final-audit-v12.yml",
+    "request": "experiments/062/L_G1_FINAL_AUDIT_V12_RUN.request",
+    "L_items": 151,
+    "L_occurrences": 319
+  },
+  "deterministic_gate": {
+    "pass": true,
+    "latest_attempt_preflight": {
+      "attempt": 3,
+      "item_count": 151,
+      "predecessor_occurrence_count": 317,
+      "occurrence_count": 319,
+      "errors": []
+    },
+    "statement": "The unchanged 0.13 extraction passed deterministic verification again before attempts 2 and 3 reached the provider quota boundary."
+  },
+  "appended_cold_audit_attempts": [
+    {
+      "workflow_run_id": 37544009233,
+      "attempt": 2,
+      "source_sha": "0fb8b452d6c7aaab50cb59161c0b9fc32d32ae20",
+      "conclusion": "FAIL_TRANSPORT_QUOTA",
+      "persisted_evidence": "experiments/062/evidence/run-37544009233-attempt-2/",
+      "completed_batches": 0,
+      "covered_rows": 0,
+      "complete_151_row_audit": false,
+      "provider_error": {
+        "http_status": 429,
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 57 minutes 39 seconds"
+      }
+    },
+    {
+      "workflow_run_id": 37544009233,
+      "attempt": 3,
+      "source_sha": "0fb8b452d6c7aaab50cb59161c0b9fc32d32ae20",
+      "conclusion": "FAIL_TRANSPORT_QUOTA",
+      "persisted_evidence": "experiments/062/evidence/run-37544009233-attempt-3/",
+      "completed_batches": 0,
+      "covered_rows": 0,
+      "complete_151_row_audit": false,
+      "provider_error": {
+        "http_status": 429,
+        "metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+        "limit": 500,
+        "model": "gemini-3.1-flash-lite",
+        "provider_retry_hint": "approximately 24 minutes 29 seconds"
+      },
+      "evidence_persistence": {
+        "workflow_push_result": "FAILED_REF_LOCK_RACE",
+        "concurrent_remote_head_observed": "62b9c8889638aa78569b0cb26e33f7c4af826f83",
+        "automatic_push_expected_parent": "9f5c26d51a6cec00da0f01184ebfb07536d7467e",
+        "recovery": "CONTROL_L_G1_FINAL_AUDIT_V12.json manually persisted source-faithfully after resync",
+        "recovery_commit": "fba26efa4c00f0459114e43a57a6c6a718272615",
+        "semantic_evidence_loss": false
+      }
+    }
+  ],
+  "procedural_findings": [
+    "Attempts 2 and 3 reused the same frozen corpus, reconciled 0.13 extraction, graph-first method, runner, and semantic audit contract.",
+    "Deterministic G1 verification remains green at 151 bodies and 319 occurrences.",
+    "Both attempts failed before any batch completed; they supply no new semantic correction evidence and cannot establish L G1 completeness.",
+    "Attempt 3's workflow-side persistence failed only because the concurrent W evidence commit advanced the shared branch; the one-line control record was recovered after resynchronization.",
+    "No G2 neutral occurrence graph, G3 Core-definability pass, G4 structural quotient, G5 basis synthesis, G6 qualification, L closure, recursive IA, NEI, DTS, or DP is authorized."
+  ],
+  "next_lawful_action": "Re-run the unchanged Experiment 062 L v12 audit only after the independent cold-call provider quota is available. Do not alter the 0.13 extraction, corpus, graph-first method, or audit contract merely to bypass transport.",
+  "joint_gate": {
+    "L_G1_complete_for_0_13": false,
+    "W_G1_complete_for_repaired_0_5": false,
+    "joint_G2_authorized": false
+  },
+  "authority": false
+}

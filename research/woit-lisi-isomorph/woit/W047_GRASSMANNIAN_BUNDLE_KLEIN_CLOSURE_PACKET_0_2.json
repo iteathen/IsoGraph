@@ -1,0 +1,67 @@
+{
+  "schema": "woit.w047-grassmannian-bundle-klein-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_AFTER_NAMESPACE_REBASE",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-047",
+  "frozen_body": "Appendix A identifies compactified complex spacetime with G_2,4(C), its tautological rank-2 bundle S and quotient S^perp, and tangent bundle TM=Hom(S,S^perp); the Klein relation omega wedge omega=0 embeds the Grassmannian into projective Lambda^2(C4).",
+  "source": "W01 Appendix A.1",
+  "abstraction_boundary": "W047_ABSTRACTION_BOUNDARY_0_1.json",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/woit/WOIT_GRASSMANN_BUNDLE_FIBERS_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_GRASSMANN_PLUCKER_KLEIN_SOURCE_INSTANCE_0_2.isg"
+  ],
+  "support_packet": "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+  "added_support": [
+    "research/woit-lisi-isomorph/woit/WOIT_PRIMITIVE_VECTOR_QUOTIENT_GRASSMANN_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_PRIMITIVE_GRASSMANN_TANGENT_HOM_SCHEMA_0_2.isg",
+    "research/woit-lisi-isomorph/woit/WOIT_STANDARD_TWISTOR_QUOTIENT_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg"
+  ],
+  "reconstruction": {
+    "twistor_vector_space": 202100,
+    "grassmannian_two_plane_carrier": 990100,
+    "quotient_package_family": 990101,
+    "tautological_incidence": 990210,
+    "tangent_hom_package_family": 990200,
+    "exterior_two_form_carrier": 991000,
+    "wedge": 991011,
+    "decomposable_two_form_carrier": 991030,
+    "klein_quadratic_carrier": 991031,
+    "projective_klein_locus": 991032,
+    "plucker_bijection": 991040,
+    "reference_right_spinor_plane": 990110,
+    "reference_left_spinor_quotient": 189020,
+    "reference_projection": 990111,
+    "reference_coset_equivalence": 990112
+  },
+  "source_equations": {
+    "quotient": "Q = T/S with kernel(projection)=S",
+    "tangent": "Tangent_S = Hom(S,T/S)",
+    "klein": "p01*p23 - p02*p13 + p03*p12 = 0",
+    "embedding": "S -> [e1 wedge e2]"
+  },
+  "semantic_guards": [
+    "No preferred complement is part of the Grassmannian or quotient semantics.",
+    "Bundle names are closed at the frozen axiomatic fiber-family boundary W047_ABSTRACTION_BOUNDARY_0_1.json.",
+    "No topological/scheme/analytic bundle behavior is imported.",
+    "The Plucker/Klein embedding is represented by exact finite-basis wedge/projective behavior, not by a name.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_1.json",
+  "namespace_revalidation": {
+    "audit": "W_GRASSMANN_NAMESPACE_COLLISION_AUDIT_0_1.json",
+    "predecessor_ids": "947xxx/948xxx",
+    "successor_ids": "990xxx/991xxx",
+    "semantic_interface_preserved": true,
+    "result": "PASS"
+  }
+}

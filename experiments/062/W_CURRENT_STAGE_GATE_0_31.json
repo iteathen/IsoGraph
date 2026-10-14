@@ -1,0 +1,45 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.31",
+  "date": "2026-10-08",
+  "status": "W_SOURCE_SEMANTIC_CENSUS_0_6_READY_G1_REBUILD_ONLY",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_30.json",
+    "git_blob_sha": "a582fd1e769b0ede45e48ec14b3bb575dc694fc2",
+    "reason": "Adversarial conservation audit found source-scope shrinkage in W097 source census 0.5 before any G1 consumer."
+  },
+  "defect_audit": {
+    "path": "experiments/062/W097_SOURCE_CENSUS_CONSERVATION_DEFECT_0_3.json",
+    "git_blob_sha": "f6e6ba798ead6bff82b1ae8ab6eaf942a67fd1bc"
+  },
+  "corrected_source": {
+    "source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_6.json",
+      "git_blob_sha": "f9687fb27aefd4764422dc2aa0b8c25b20d0c8bf"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_5.json",
+      "git_blob_sha": "5df1ec2710aae476e0c1f99dd03851d2056881d7"
+    },
+    "changed_bodies": [
+      "W-SSC-097"
+    ],
+    "source_expansion": false
+  },
+  "current_lawful_state": {
+    "G1_rebuild_authorized": true,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Verify source census 0.6/demand 0.5 conservation, then re-extract W-SSC-097 completely from the corrected body and carry forward the other 83 W bodies exactly."
+}

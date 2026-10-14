@@ -1,0 +1,130 @@
+{
+  "schema": "isograph.exp066-qualification-cases.v0.1",
+  "date": "2026-10-08",
+  "status": "FROZEN_SOURCE_NEUTRAL_DISJOINTNESS_CONTROLS",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "module_ssc": {
+    "path": "experiments/066/MODULE_SSC_0_1.json",
+    "git_blob_sha": "766d2e18b53c170e491c04adbef3ca6d8f0df731"
+  },
+  "hypothesis": {
+    "path": "experiments/062/W_G5H_EMPTY_INTERSECTION_0_1.json",
+    "git_blob_sha": "5e41558bf1268002ff2346df61d09c6396d9f920"
+  },
+  "positive_controls": [
+    {
+      "id": "P01",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [
+          "a",
+          "b",
+          "c"
+        ],
+        "A": [
+          "a"
+        ],
+        "B": [
+          "b"
+        ]
+      },
+      "expected": "ACCEPT",
+      "target": "nonempty disjoint predicates with neither-member witness c"
+    },
+    {
+      "id": "P02",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "A": [],
+        "B": [
+          "a"
+        ]
+      },
+      "expected": "ACCEPT",
+      "target": "A may be empty"
+    },
+    {
+      "id": "P03",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "A": [
+          "a"
+        ],
+        "B": []
+      },
+      "expected": "ACCEPT",
+      "target": "B may be empty"
+    },
+    {
+      "id": "P04",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [],
+        "A": [],
+        "B": []
+      },
+      "expected": "ACCEPT",
+      "target": "U may be empty"
+    }
+  ],
+  "adversarial_controls": [
+    {
+      "id": "N01",
+      "kind": "negative-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "A": [
+          "a"
+        ],
+        "B": [
+          "a"
+        ]
+      },
+      "expected": "REJECT_OVERLAP"
+    },
+    {
+      "id": "N02",
+      "kind": "negative-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "A": [
+          "outside"
+        ],
+        "B": []
+      },
+      "expected": "REJECT_A_TYPING"
+    },
+    {
+      "id": "N03",
+      "kind": "negative-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "A": [],
+        "B": [
+          "outside"
+        ]
+      },
+      "expected": "REJECT_B_TYPING"
+    }
+  ],
+  "promotion_gate": {
+    "deterministic_required": true,
+    "module_local_ia_required": true,
+    "fresh_controls_required": true,
+    "external_semantic_review_required_normally": true,
+    "external_semantic_review_bypassed_under_current_owner_exception_only_after_internal_pass": true,
+    "global_manifest_update_authorized": false
+  }
+}

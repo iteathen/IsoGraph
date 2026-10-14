@@ -1,0 +1,58 @@
+{
+  "schema": "isograph.exp062.L.G0.L02-second-81-block-BPhiB-adversarial-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "failed_run": {
+    "id": 38092843369,
+    "head_sha": "ba35db79265eb4183b1a45cf3b6061a8dbb60e0f",
+    "job_id": 114332640382,
+    "conclusion": "failure",
+    "hostiles_defined": 27,
+    "hostiles_rejected": 25,
+    "escaped_mutations": [
+      "source_left_B_wrong",
+      "forge_global_freeze"
+    ],
+    "original_PDF_sha256_verified": true,
+    "source_first_81_original_blocks_valid": true,
+    "source_first_source_to_SSC_owner_mapping_valid": true,
+    "no_new_source_semantic_fidelity_defect_proven_by_verifier_failure": true
+  },
+  "causes": [
+    {
+      "class": "EXACT_SOURCE_INPUT_BINDER_NOT_GUARDED",
+      "owner": "Verifier",
+      "failed_hostile": "source_left_B_wrong",
+      "failure": "Verifier checked source original epsilon, Phi output, right B indices, but not four ordered left B indices μ,ν,I,J.",
+      "systemic_repair": "Require exact input and output binder arrays (and Phi input/output) in every reconstructed original bilinear component before source-exact PASS."
+    },
+    {
+      "class": "G0_EXIT_CONTRACT_WAS_UNGUARDED",
+      "owner": "Verifier",
+      "failed_hostile": "forge_global_freeze",
+      "failure": "Verifier checked procedural explicit_locks.G0_frozen but ignored convergence.exit_acceptance_contract.G0_SSC_frozen, allowing contradictory premature G0 source freeze.",
+      "systemic_repair": "Check all coupled G0 freeze/completion flags in source census, six-source convergence exit acceptance and procedural gates, not only one lock."
+    }
+  ],
+  "history": {
+    "previous_first_failed_run_id": 38092660546,
+    "previous_first_failed_conclusion": "failure",
+    "this_second_failed_conclusion": "failure",
+    "future_success_does_not_reclassify_failures": true,
+    "source_verifier_predecessor": {
+      "path": "experiments/062/tools/verify-l-g0-l02-original-81-block-ssc-repair-0-2.mjs",
+      "git_blob_sha": "4d8de9c6e9063a3be07301b3dd7026557d970b40"
+    }
+  },
+  "changes_permitted": "Verifier and procedural gate only, no original source/SSC item/content edits",
+  "frozen_corpus_originals": 6,
+  "existing_source_SSC_IDs": 191,
+  "old_source_first_L02_groups": 59,
+  "L02_original_PDF_layout_blocks": 81,
+  "whole_original_sources_cold_completed": 0,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

@@ -1,0 +1,31 @@
+name: Experiment 062 W G1 W04a six remaining author originals 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_W04A_SIX_REMAINING_AUTHOR_SOURCE_FIRST_0_1.json'
+      - 'experiments/062/tools/verify-w-g1-w04a-six-0-2.cjs'
+      - 'experiments/062/tools/audit-w-g1-w04a-six-original-0-1.py'
+      - '.github/workflows/experiment-062-w-g1-w04a-six-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          python3 -m py_compile experiments/062/tools/audit-w-g1-w04a-six-original-0-1.py
+          node --check experiments/062/tools/verify-w-g1-w04a-six-0-2.cjs
+      - name: Two fresh author original reads, 11 anchors, 8 effective hostile
+        run: python3 -u experiments/062/tools/audit-w-g1-w04a-six-original-0-1.py
+      - name: Six current frozen source body G1 corrections and 28 effective hostile
+        run: node experiments/062/tools/verify-w-g1-w04a-six-0-2.cjs
+      - name: Exact prior W27 stage and immutable W nine-original G0 guards
+        run: |
+          node experiments/062/tools/verify-w-g1-current-27-body-stage-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

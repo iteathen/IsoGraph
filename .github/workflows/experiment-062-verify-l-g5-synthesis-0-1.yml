@@ -1,0 +1,27 @@
+name: Experiment 062 verify L G5 synthesis
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/L_G5_CANDIDATE_BASIS_SYNTHESIS_0_1.json'
+      - 'experiments/062/L_G5_RESIDUAL_RECONSTRUCTION_FRONTIER_0_1.json'
+      - 'experiments/062/tools/generate-l-g5-candidate-basis-synthesis-0-1.mjs'
+      - 'experiments/062/tools/verify-l-g5-candidate-basis-synthesis-0-1.mjs'
+      - '.github/workflows/experiment-062-verify-l-g5-synthesis-0-1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - name: Verify L-local G5 synthesis
+        run: node experiments/062/tools/verify-l-g5-candidate-basis-synthesis-0-1.mjs

@@ -1,0 +1,100 @@
+{
+  "schema": "isograph.exp062-w05-residual-source-formula-and-w110-closure-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_W05_SOURCE_CENSUS_RESIDUAL_OMISSIONS_W110_PREMATURE_CLOSED_PRIMITIVE",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "track": "W",
+  "earliest_affected_stage": "G0_SOURCE_SEMANTIC_CENSUS",
+  "source": {
+    "id": "W05",
+    "corpus": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "revision": "arXiv:2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "reviewed_page_numbers": [
+      6,
+      7,
+      9,
+      11,
+      12,
+      14
+    ],
+    "source_expansion": false,
+    "source_revision_identity_unmodified": true,
+    "independent_byte_identity_to_arxiv_pdf_confirmed": false
+  },
+  "predecessor": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_9.json",
+      "git_blob_sha": "77da6774f9c868f2c8da230ff069acb65484d474"
+    },
+    "historical_manifest": {
+      "path": "research/woit-lisi-isomorph/woit/WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_24.json",
+      "git_blob_sha": "e0b97cf6c4ad71c78f77e547f339cb464e912eaa"
+    }
+  },
+  "findings": [
+    {
+      "id": "W05-W103-M1",
+      "census_id": "W-SSC-103",
+      "source": "§5.2 p.6 Hodge decomposition itself does not vary holomorphically under complex-structure change; the filtration does. Source prints the descending F^p chain and a conjugate complement formula.",
+      "defect": "0.9 conserves the Hodge decomposition and complement but not negative holomorphic-variation contrast or the source filtration-chain incidence."
+    },
+    {
+      "id": "W05-W105-M1",
+      "census_id": "W-SSC-105",
+      "source": "§6.1 p.9 for p ≠ 2 gives three named quadratic extensions Qp[sqrt(p)], Qp[sqrt(u)], Qp[sqrt(up)] before writing the actual scalar extension isomorphism (p,u/Qp) ⊗_Qp K = M(2,Qp) ⊗_Qp K = M(2,K).",
+      "defect": "0.9 compresses the extension class into K and does not preserve the three explicit cases or the operation-level scalar-extension equality."
+    },
+    {
+      "id": "W05-W107-M1",
+      "census_id": "W-SSC-107",
+      "source": "§6.1 p.11 Clifford complexification has the explicit two-case output M(2^n,C) for r+s=2n; M(2^n,C) directsum M(2^n,C) for r+s=2n+1.",
+      "defect": "0.9 describes the even/odd branch but not the exponentiated matrix dimensions and exact two-case result."
+    },
+    {
+      "id": "W05-W108-M1",
+      "census_id": "W-SSC-108",
+      "source": "§6.2 pp.11–12 h3 = R ⊕ R* ⊕ R, state H=S(R) (Schwartz), Sp(2,R)=SL(2,R), unique Heisenberg representation up to unitary equivalence, W=(F⊕F*)⊗V with quadratic carrier V; Brauer class controls projective/true + -1 factor.",
+      "defect": "0.9 mentions canonical operators/Weil but compresses explicit Heisenberg carrier and stated representation/scope properties."
+    },
+    {
+      "id": "W05-W110-M1",
+      "census_id": "W-SSC-110",
+      "source": "§7 p.14 separately cites Ben-Zvi four-dimensional topological QFT comparison to number-theory topics; Kapustin–Witten geometric Langlands realized via electromagnetic duality in four-dimensional quantum field theory; Penrose–Ward twistor transform as a geometric framework for these equations; source keeps all as contextual/cited and finishes with explicitly unresolved significance.",
+      "defect": "W110 source-census body only conserves generic speculative possibility/no-fundamental-significance alternative and omits named contextual relation roles. Its historical CLOSED_PRIMITIVE declaration is premature relative to full frozen-source reconstructability."
+    }
+  ],
+  "scope": {
+    "changed_W_census_bodies": [
+      "W-SSC-103",
+      "W-SSC-105",
+      "W-SSC-107",
+      "W-SSC-108",
+      "W-SSC-110"
+    ],
+    "additional_reopened_demand": [
+      "W-SSC-110"
+    ],
+    "other_146_W_semantic_census_items_preserved": true,
+    "source_expansion": false,
+    "no_L_semantics": true
+  },
+  "invalidation": {
+    "SSC0_9_current": false,
+    "source_demand0_8_current": false,
+    "W110_historical_closed_primitive_current": false,
+    "W109_historical_closed_primitive_current": false,
+    "G1_0_31_current": false,
+    "G2_to_G7_current": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false
+  },
+  "nonclaims": [
+    "No external third-party semantic review passed.",
+    "Preserve primary author's qualifications and references; do not treat cited external ideas as accepted facts.",
+    "No theorem of geometric Langlands or Clifford algebras imported.",
+    "Other W01–W04 source tracks have not undergone this source-wide audit."
+  ],
+  "next_lawful_action": "Publish source SSC 0.10/demand0.9 preserving earlier 12 W05 corrections and re-opening W110; rerun G0 verifier, keep G1 authorization blocked until source conservation audited."
+}

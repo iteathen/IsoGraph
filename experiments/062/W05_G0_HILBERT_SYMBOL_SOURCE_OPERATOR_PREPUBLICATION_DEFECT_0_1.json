@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.exp062-w05-hilbert-operator-prepublication-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_UNPUBLISHED_SOURCE_ORACLE_RELATION_TYPE_CONFUSION",
+  "source": {
+    "id": "W05",
+    "revision": "arXiv:2202.02657v2",
+    "section": "§6.1",
+    "arxiv_HTML_line": "261-262",
+    "pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "formula": "(a,b)_F=1 iff (a,b/F) ≃ M(2,F); -1 otherwise"
+  },
+  "bad_oracle": {
+    "path": "experiments/062/W05_G0_EXISTING_17_PRIMARY_SOURCE_EXPECTATIONS_0_1.json",
+    "unpublished_blob_sha": "a4026869cd0cc91b717ba017857e57b1f812aa44"
+  },
+  "dependent_unpublished_candidates": {
+    "SSC0_20_unpublished_blob": "92791eae47ebdd00eb486317bce73b9cacdddb54",
+    "W86_projection_unpublished_blob": "568189ffbc524b235cde3cbc6d1f5088e2a20358"
+  },
+  "observed": "W05-105-02 conditional used '(a,b/F)~M(2,F)'; source instead prints an isomorphism sign ≃, while ~ is separately used later for Brauer stabilization A~B iff A⊗M_n(F) ≃ B⊗M_m(F). A local symbol collapse would merge two distinct operators.",
+  "earliest_stage": "G0_SOURCE_LITERAL_OPERATOR",
+  "disposition": "REJECT_UNPUBLISHED_CANDIDATE_REBUILD_W05_ORACLE_0_2_AND_DEPENDENTS_FROM_SSC_0_19",
+  "source_math_repaired": false,
+  "L_semantics_used": false,
+  "nonclaims": [
+    "No published incorrect branch ref or completed CI for failed oracle",
+    "No proof beyond exact source literal",
+    "No G0 freeze"
+  ]
+}

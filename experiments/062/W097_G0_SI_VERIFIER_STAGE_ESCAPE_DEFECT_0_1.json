@@ -1,0 +1,14 @@
+{
+  "schema": "isograph.exp062-w097-cross-occurrence-si-validator-escaped-stage-control.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "PREPUBLICATION_INTERNAL_VALIDATOR_MUTATION_ESCAPE_PRESERVED",
+  "semantic_authority": false,
+  "prepublication_input": "W097 typed SSC0.15 / historical G1 0.23 / G2 0.4 / G4 0.4 / proposed gate0.42",
+  "observed": "Nineteen of twenty proposed adversarial mutations were rejected, but mutating defect.repair_boundary.current_stage to G1_COMPLETE escaped the initial verifier.",
+  "cause": "Verifier did not enforce the earliest-current-stage field on the defect record.",
+  "repair": "Add an exact earliest-stage assertion to the positive validator; require the mutated defect to fail closed and rerun all twenty controls before publishing.",
+  "publication_impact": "NO_BRANCHED_VERIFIER_WAS_PUBLISHED; THE_CANDIDATE_W097_SOURCE_AND_151_MEMBERSHIP_CI_AT_GATE0.41_REMAINS_VALID",
+  "source_claim_impact": "NONE",
+  "external_review": "NOT_PERFORMED"
+}

@@ -1,0 +1,3198 @@
+{
+  "schema": "isograph.exp062-l-g1-formula-operator-adjudication.v0.1",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_FORMULA_OPERATOR_CORRECTIONS_SUPPORTED_REAUDIT_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/L_EXTRACTION_RECONCILED_0_20.json",
+  "frontier": "experiments/062/L_G1_FORMULA_OPERATOR_FRONTIER_0_2.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "adjudication_rule": "Promote only source-visible operator/construction syntax needed for exact reconstruction. Token kinds receive no conventional mathematical semantics by kind. Multi-token expressions are localized by exact source spans; identifier-internal signs and source literals remain explicitly non-operator dispositions.",
+  "corrections": [
+    {
+      "census_id": "L-SSC-027",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "L-SSC-027-O01",
+      "occurrence": {
+        "occurrence_id": "L-SSC-027-O01",
+        "source_span": "F=dA+1/2[A,A]",
+        "relation_span": "=",
+        "argument_spans": [
+          "F",
+          "dA+1/2[A,A]"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact source equality; child source-syntax operators are separately exposed."
+      }
+    },
+    {
+      "census_id": "L-SSC-027",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-027-O04",
+        "source_span": "dA+1/2[A,A]",
+        "relation_span": "+",
+        "argument_spans": [
+          "dA",
+          "1/2[A,A]"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-027-O01"
+        ],
+        "load_bearing_note": "First local plus token on the curvature RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-027",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-027-O05",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-027-O04"
+        ],
+        "load_bearing_note": "Source-written numeric fraction; arithmetic semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-027",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-027-O06",
+        "source_span": "[A,A]",
+        "relation_span": "[A,A]",
+        "argument_spans": [
+          "A",
+          "A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-027-O05"
+        ],
+        "load_bearing_note": "Ordered bracket-delimited source form; Lie-bracket semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-029-O05",
+        "source_span": "g2=g2",
+        "relation_span": "=",
+        "argument_spans": [
+          "g2",
+          "g2"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-029-O04"
+        ],
+        "load_bearing_note": "Exact source equality token inside the decomposition statement."
+      }
+    },
+    {
+      "census_id": "L-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-029-O06",
+        "source_span": "su(3)+3",
+        "relation_span": "+",
+        "argument_spans": [
+          "su(3)",
+          "3"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-029-O04"
+        ],
+        "load_bearing_note": "First local plus token in the source decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-029",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-029-O07",
+        "source_span": "3+bar3",
+        "relation_span": "+",
+        "argument_spans": [
+          "3",
+          "bar3"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-029-O04"
+        ],
+        "load_bearing_note": "Second local plus token in the source decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "L-SSC-032-O01",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O01",
+        "source_span": "H1=1/2 omega+1/4 e phi+w_ew",
+        "relation_span": "=",
+        "argument_spans": [
+          "H1",
+          "1/2 omega+1/4 e phi+w_ew"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Exact source equality with opaque RHS expression; child source syntax is exposed separately."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O06",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-032-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O07",
+        "source_span": "1/2 omega+1/4 e phi",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 omega",
+          "1/4 e phi"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-032-O01"
+        ],
+        "load_bearing_note": "First local plus token on H1 RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O08",
+        "source_span": "1/4",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-032-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O09",
+        "source_span": "1/4 e phi+w_ew",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/4 e phi",
+          "w_ew"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-032-O01"
+        ],
+        "load_bearing_note": "Second local plus token on H1 RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-035",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-035-O05",
+        "source_span": "G2+U(1)",
+        "relation_span": "+",
+        "argument_spans": [
+          "G2",
+          "U(1)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-035-O01"
+        ],
+        "load_bearing_note": "Source-visible combined structure; plus semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-039",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-039-O09",
+        "source_span": "phi^2",
+        "relation_span": "^",
+        "argument_spans": [
+          "phi",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-039-O08"
+        ],
+        "load_bearing_note": "Source-written caret operation inside the curvature term; exponent semantics remain opaque."
+      }
+    },
+    {
+      "census_id": "L-SSC-051",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-051-O05",
+        "source_span": "g=spin(1+N,3)",
+        "relation_span": "=",
+        "argument_spans": [
+          "g",
+          "spin(1+N,3)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-051-O04"
+        ],
+        "load_bearing_note": "Exact source equality for the connection value algebra."
+      }
+    },
+    {
+      "census_id": "L-SSC-051",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-051-O06",
+        "source_span": "1+N",
+        "relation_span": "+",
+        "argument_spans": [
+          "1",
+          "N"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-051-O05"
+        ],
+        "load_bearing_note": "Source-visible plus token in the spin signature expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-052",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-052-O07",
+        "source_span": "dH+1/2[H,H]",
+        "relation_span": "+",
+        "argument_spans": [
+          "dH",
+          "1/2[H,H]"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-052-O06"
+        ],
+        "load_bearing_note": "Local plus token on the curvature RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-052",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-052-O08",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-052-O07"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-052",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-052-O09",
+        "source_span": "[H,H]",
+        "relation_span": "[H,H]",
+        "argument_spans": [
+          "H",
+          "H"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-052-O08"
+        ],
+        "load_bearing_note": "Ordered bracket-delimited source form; bracket semantics remain opaque."
+      }
+    },
+    {
+      "census_id": "L-SSC-055",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-055-O08",
+        "source_span": "3/4",
+        "relation_span": "/",
+        "argument_spans": [
+          "3",
+          "4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-055-O05"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-055",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-055-O09",
+        "source_span": "B=3/4 *F",
+        "relation_span": "*",
+        "argument_spans": [
+          "F"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-055-O05"
+        ],
+        "load_bearing_note": "Source-written star application in the B equation; Hodge semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-055",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-055-O10",
+        "source_span": "D*F",
+        "relation_span": "*",
+        "argument_spans": [
+          "F"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-055-O06"
+        ],
+        "load_bearing_note": "Source-written star application inside D*F; the compact D operator remains separately unresolved."
+      }
+    },
+    {
+      "census_id": "L-SSC-056",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-056-O07",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-056-O05"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-056",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-056-O08",
+        "source_span": "1/2 omega+1/4 E",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 omega",
+          "1/4 E"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-056-O05"
+        ],
+        "load_bearing_note": "First local plus token on H RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-056",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-056-O09",
+        "source_span": "1/4",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-056-O05"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-056",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-056-O10",
+        "source_span": "1/4 E+A",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/4 E",
+          "A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-056-O05"
+        ],
+        "load_bearing_note": "Second local plus token on H RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-058",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-058-O05",
+        "source_span": "1/8",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "8"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-058-O03"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-058",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-058-O06",
+        "source_span": "phi^2",
+        "relation_span": "^",
+        "argument_spans": [
+          "phi",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-058-O03"
+        ],
+        "load_bearing_note": "Source-written caret operation; exponent semantics remain opaque."
+      }
+    },
+    {
+      "census_id": "L-SSC-065",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-065-O06",
+        "source_span": "d+H",
+        "relation_span": "+",
+        "argument_spans": [
+          "d",
+          "H"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-065-O01"
+        ],
+        "load_bearing_note": "Source-visible plus token inside the parenthesized covariant-derivative form; d semantics remain opaque."
+      }
+    },
+    {
+      "census_id": "L-SSC-075",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-075-O06",
+        "source_span": "su(4)+su(2)_L",
+        "relation_span": "+",
+        "argument_spans": [
+          "su(4)",
+          "su(2)_L"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-075-O01"
+        ],
+        "load_bearing_note": "First local plus token in the Pati-Salam expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-075",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-075-O07",
+        "source_span": "su(2)_L+su(2)_R",
+        "relation_span": "+",
+        "argument_spans": [
+          "su(2)_L",
+          "su(2)_R"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-075-O01"
+        ],
+        "load_bearing_note": "Second local plus token in the Pati-Salam expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O03",
+        "source_span": "H=1/2 omega+1/4 e phi+A",
+        "relation_span": "=",
+        "argument_spans": [
+          "H",
+          "1/2 omega+1/4 e phi+A"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-076-O01"
+        ],
+        "load_bearing_note": "Exact source equality for the bosonic connection."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O04",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-076-O03"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O05",
+        "source_span": "1/2 omega+1/4 e phi",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 omega",
+          "1/4 e phi"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-076-O03"
+        ],
+        "load_bearing_note": "First local plus token on H RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O06",
+        "source_span": "1/4",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-076-O03"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O07",
+        "source_span": "1/4 e phi+A",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/4 e phi",
+          "A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-076-O03"
+        ],
+        "load_bearing_note": "Second local plus token on H RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-077",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-077-O05",
+        "source_span": "1/8",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "8"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-077-O03"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-077",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-077-O06",
+        "source_span": "phi^2",
+        "relation_span": "^",
+        "argument_spans": [
+          "phi",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-077-O03"
+        ],
+        "load_bearing_note": "Source-written caret operation; exponent semantics remain opaque."
+      }
+    },
+    {
+      "census_id": "L-SSC-089",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-089-O05",
+        "source_span": "A=H+psi",
+        "relation_span": "=",
+        "argument_spans": [
+          "A",
+          "H+psi"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-089-O01"
+        ],
+        "load_bearing_note": "Exact source superconnection equality."
+      }
+    },
+    {
+      "census_id": "L-SSC-089",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-089-O06",
+        "source_span": "H+psi",
+        "relation_span": "+",
+        "argument_spans": [
+          "H",
+          "psi"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-089-O05"
+        ],
+        "load_bearing_note": "Source-visible plus token on the superconnection RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-095",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-095-O08",
+        "source_span": "U_P=i gamma_0",
+        "relation_span": "=",
+        "argument_spans": [
+          "U_P",
+          "i gamma_0"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-095-O01"
+        ],
+        "load_bearing_note": "Exact source equality for the phase-modified parity representative."
+      }
+    },
+    {
+      "census_id": "L-SSC-095",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-095-O09",
+        "source_span": "P^2",
+        "relation_span": "^",
+        "argument_spans": [
+          "P",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-095-O06"
+        ],
+        "load_bearing_note": "Source-written square operation in the P^2=-1 law."
+      }
+    },
+    {
+      "census_id": "L-SSC-096",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-096-O06",
+        "source_span": "U_C=i gamma_2 K",
+        "relation_span": "=",
+        "argument_spans": [
+          "U_C",
+          "i gamma_2 K"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-096-O01"
+        ],
+        "load_bearing_note": "Exact source equality for charge conjugation."
+      }
+    },
+    {
+      "census_id": "L-SSC-096",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-096-O07",
+        "source_span": "U_T^Q=gamma_13",
+        "relation_span": "=",
+        "argument_spans": [
+          "U_T^Q",
+          "gamma_13"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-096-O02"
+        ],
+        "load_bearing_note": "Exact source equality for quantized time reversal."
+      }
+    },
+    {
+      "census_id": "L-SSC-096",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-096-O08",
+        "source_span": "U_T=gamma_13 K",
+        "relation_span": "=",
+        "argument_spans": [
+          "U_T",
+          "gamma_13 K"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-096-O02"
+        ],
+        "load_bearing_note": "Exact source equality for the unquantized representative."
+      }
+    },
+    {
+      "census_id": "L-SSC-106",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-106-O06",
+        "source_span": "T^2",
+        "relation_span": "^",
+        "argument_spans": [
+          "T",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-106-O05"
+        ],
+        "load_bearing_note": "Source-written square operation in the T^2=-1 law."
+      }
+    },
+    {
+      "census_id": "L-SSC-108",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-108-O04",
+        "source_span": "Q8×Z2",
+        "relation_span": "×",
+        "argument_spans": [
+          "Q8",
+          "Z2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-108-O01"
+        ],
+        "load_bearing_note": "Source-visible cross-separated finite-group expression; product semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O07",
+        "source_span": "t'=-1/2(1+e1+e2+e3)",
+        "relation_span": "=",
+        "argument_spans": [
+          "t'",
+          "-1/2(1+e1+e2+e3)"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O01"
+        ],
+        "load_bearing_note": "Exact source equality for t'."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O08",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O07"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O09",
+        "source_span": "1+e1",
+        "relation_span": "+",
+        "argument_spans": [
+          "1",
+          "e1"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O07"
+        ],
+        "load_bearing_note": "First local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O10",
+        "source_span": "e1+e2",
+        "relation_span": "+",
+        "argument_spans": [
+          "e1",
+          "e2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O07"
+        ],
+        "load_bearing_note": "Second local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O11",
+        "source_span": "e2+e3",
+        "relation_span": "+",
+        "argument_spans": [
+          "e2",
+          "e3"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O07"
+        ],
+        "load_bearing_note": "Third local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-109",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-109-O12",
+        "source_span": "2T×Z2",
+        "relation_span": "×",
+        "argument_spans": [
+          "2T",
+          "Z2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-109-O02"
+        ],
+        "load_bearing_note": "Source-visible cross-separated finite-group expression; product semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-111",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-111-O04",
+        "source_span": "C⊗H",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "C",
+          "H"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-111-O01"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol with ordered operands; tensor semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-116",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-116-O07",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-116-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-116",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-116-O08",
+        "source_span": "1+e1",
+        "relation_span": "+",
+        "argument_spans": [
+          "1",
+          "e1"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-116-O01"
+        ],
+        "load_bearing_note": "First local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-116",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-116-O09",
+        "source_span": "e1+e2",
+        "relation_span": "+",
+        "argument_spans": [
+          "e1",
+          "e2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-116-O01"
+        ],
+        "load_bearing_note": "Second local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-116",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-116-O10",
+        "source_span": "e2+e3",
+        "relation_span": "+",
+        "argument_spans": [
+          "e2",
+          "e3"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-116-O01"
+        ],
+        "load_bearing_note": "Third local plus token in the parenthesized source sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-118",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-118-O06",
+        "source_span": "2T∘D4",
+        "relation_span": "∘",
+        "argument_spans": [
+          "2T",
+          "D4"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-118-O01"
+        ],
+        "load_bearing_note": "Source-visible central-product symbol; the body names the construction but no external group-product semantics are imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-131",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-131-O04",
+        "source_span": "t^(uw)",
+        "relation_span": "^",
+        "argument_spans": [
+          "t",
+          "(uw)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-131-O02"
+        ],
+        "load_bearing_note": "Source-written exponent-like parameterization; conventional power semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-131",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-131-O05",
+        "source_span": "u=w",
+        "relation_span": "=",
+        "argument_spans": [
+          "u",
+          "w"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-131-O03"
+        ],
+        "load_bearing_note": "First exact equality in the canonical parameter chain."
+      }
+    },
+    {
+      "census_id": "L-SSC-131",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-131-O06",
+        "source_span": "w=1",
+        "relation_span": "=",
+        "argument_spans": [
+          "w",
+          "1"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-131-O03"
+        ],
+        "load_bearing_note": "Second exact equality in the canonical parameter chain."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O05",
+        "source_span": "Tri(D')+Tri(D)",
+        "relation_span": "+",
+        "argument_spans": [
+          "Tri(D')",
+          "Tri(D)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "First local plus token in the magic-square decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O06",
+        "source_span": "Tri(D)+D'_v⊗D_v",
+        "relation_span": "+",
+        "argument_spans": [
+          "Tri(D)",
+          "D'_v⊗D_v"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Second local plus token in the magic-square decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O07",
+        "source_span": "D'_v⊗D_v",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "D'_v",
+          "D_v"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the v-role term."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O08",
+        "source_span": "D'_v⊗D_v+D'_m⊗D_m",
+        "relation_span": "+",
+        "argument_spans": [
+          "D'_v⊗D_v",
+          "D'_m⊗D_m"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Third local plus token in the magic-square decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O09",
+        "source_span": "D'_m⊗D_m",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "D'_m",
+          "D_m"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the m-role term."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O10",
+        "source_span": "D'_m⊗D_m+D'_p⊗D_p",
+        "relation_span": "+",
+        "argument_spans": [
+          "D'_m⊗D_m",
+          "D'_p⊗D_p"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Fourth local plus token in the magic-square decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-139",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-139-O11",
+        "source_span": "D'_p⊗D_p",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "D'_p",
+          "D_p"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-139-O04"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the p-role term."
+      }
+    },
+    {
+      "census_id": "L-SSC-141",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-141-O06",
+        "source_span": "g_-1+g_0",
+        "relation_span": "+",
+        "argument_spans": [
+          "g_-1",
+          "g_0"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-141-O01"
+        ],
+        "load_bearing_note": "First local plus token in the grading sequence."
+      }
+    },
+    {
+      "census_id": "L-SSC-141",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-141-O07",
+        "source_span": "g_0+g_+1",
+        "relation_span": "g_0+g_+1",
+        "argument_spans": [
+          "g_0",
+          "g_+1"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-141-O01"
+        ],
+        "load_bearing_note": "Exact source expression preserving the second separator without conflating the identifier-internal plus in g_+1."
+      }
+    },
+    {
+      "census_id": "L-SSC-145",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-145-O06",
+        "source_span": "C⊗O",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "C",
+          "O"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-145-O01"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the e6 input."
+      }
+    },
+    {
+      "census_id": "L-SSC-145",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-145-O07",
+        "source_span": "so(10)+u(1)",
+        "relation_span": "+",
+        "argument_spans": [
+          "so(10)",
+          "u(1)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-145-O03"
+        ],
+        "load_bearing_note": "First local plus token in the e6 decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-145",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-145-O08",
+        "source_span": "u(1)+16",
+        "relation_span": "+",
+        "argument_spans": [
+          "u(1)",
+          "16"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-145-O03"
+        ],
+        "load_bearing_note": "Second local plus token in the e6 decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-145",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-145-O09",
+        "source_span": "16+16",
+        "relation_span": "+",
+        "argument_spans": [
+          "16",
+          "16"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-145-O03"
+        ],
+        "load_bearing_note": "Third local plus token in the e6 decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-146",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-146-O05",
+        "source_span": "H⊗O",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "H",
+          "O"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-146-O01"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the e7 input."
+      }
+    },
+    {
+      "census_id": "L-SSC-147",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-147-O04",
+        "source_span": "O⊗O",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "O",
+          "O"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-147-O01"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the e8 input."
+      }
+    },
+    {
+      "census_id": "L-SSC-160",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-160-O06",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-160-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-160",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-160-O07",
+        "source_span": "1/2 omega+E",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 omega",
+          "E"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-160-O01"
+        ],
+        "load_bearing_note": "Source-visible plus token on H RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-160",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-160-O08",
+        "source_span": "R+EE",
+        "relation_span": "+",
+        "argument_spans": [
+          "R",
+          "EE"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-160-O02"
+        ],
+        "load_bearing_note": "Source-visible plus token in the curvature component."
+      }
+    },
+    {
+      "census_id": "L-SSC-168",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-168-O07",
+        "source_span": "H⊂G0",
+        "relation_span": "⊂",
+        "argument_spans": [
+          "H",
+          "G0"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-168-O04"
+        ],
+        "load_bearing_note": "First exact source-visible containment edge."
+      }
+    },
+    {
+      "census_id": "L-SSC-168",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-168-O08",
+        "source_span": "G0⊂G",
+        "relation_span": "⊂",
+        "argument_spans": [
+          "G0",
+          "G"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-168-O04"
+        ],
+        "load_bearing_note": "Second exact source-visible containment edge."
+      }
+    },
+    {
+      "census_id": "L-SSC-168",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-168-O09",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-168-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-168",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-168-O10",
+        "source_span": "1/2 omega+E",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 omega",
+          "E"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-168-O01"
+        ],
+        "load_bearing_note": "First local plus token on C RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-168",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-168-O11",
+        "source_span": "E+A",
+        "relation_span": "+",
+        "argument_spans": [
+          "E",
+          "A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-168-O01"
+        ],
+        "load_bearing_note": "Second local plus token on C RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-169",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-169-O04",
+        "source_span": "1/2",
+        "relation_span": "/",
+        "argument_spans": [
+          "1",
+          "2"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-169-O01"
+        ],
+        "load_bearing_note": "Source-written numeric fraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-169",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-169-O05",
+        "source_span": "1/2 R+EE",
+        "relation_span": "+",
+        "argument_spans": [
+          "1/2 R",
+          "EE"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-169-O01"
+        ],
+        "load_bearing_note": "Inner plus token in the curvature decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-169",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-169-O06",
+        "source_span": "(1/2 R+EE)+DE",
+        "relation_span": "+",
+        "argument_spans": [
+          "(1/2 R+EE)",
+          "DE"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-169-O01"
+        ],
+        "load_bearing_note": "First outer plus token in the curvature decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-169",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-169-O07",
+        "source_span": "DE+F_A",
+        "relation_span": "+",
+        "argument_spans": [
+          "DE",
+          "F_A"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-169-O01"
+        ],
+        "load_bearing_note": "Second outer plus token in the curvature decomposition."
+      }
+    },
+    {
+      "census_id": "L-SSC-175",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-175-O08",
+        "source_span": "C+Psi",
+        "relation_span": "+",
+        "argument_spans": [
+          "C",
+          "Psi"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-175-O01"
+        ],
+        "load_bearing_note": "Source-visible plus token on the superconnection RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-180",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-180-O06",
+        "source_span": "B=*F",
+        "relation_span": "*",
+        "argument_spans": [
+          "F"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-180-O02"
+        ],
+        "load_bearing_note": "Source-written star application in the B equation; Hodge semantics are not imported."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O04",
+        "source_span": "spin(1,3)+frame⊗Higgs",
+        "relation_span": "+",
+        "argument_spans": [
+          "spin(1,3)",
+          "frame⊗Higgs"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-183-O01"
+        ],
+        "load_bearing_note": "First local plus token in the target-algebra expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O05",
+        "source_span": "frame⊗Higgs",
+        "relation_span": "⊗",
+        "argument_spans": [
+          "frame",
+          "Higgs"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-183-O01"
+        ],
+        "load_bearing_note": "Source-visible tensor symbol in the target-algebra expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O06",
+        "source_span": "frame⊗Higgs+su(2)_L",
+        "relation_span": "+",
+        "argument_spans": [
+          "frame⊗Higgs",
+          "su(2)_L"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-183-O01"
+        ],
+        "load_bearing_note": "Second local plus token in the target-algebra expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O07",
+        "source_span": "su(2)_L+u(1)_Y",
+        "relation_span": "+",
+        "argument_spans": [
+          "su(2)_L",
+          "u(1)_Y"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-183-O01"
+        ],
+        "load_bearing_note": "Third local plus token in the target-algebra expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O08",
+        "source_span": "u(1)_Y+su(3)",
+        "relation_span": "+",
+        "argument_spans": [
+          "u(1)_Y",
+          "su(3)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-183-O01"
+        ],
+        "load_bearing_note": "Fourth local plus token in the target-algebra expression."
+      }
+    },
+    {
+      "census_id": "L-SSC-185",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-185-O05",
+        "source_span": "spin(4,4)+spin(8)",
+        "relation_span": "+",
+        "argument_spans": [
+          "spin(4,4)",
+          "spin(8)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-185-O02"
+        ],
+        "load_bearing_note": "First local plus token on the E8 decomposition RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-185",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-185-O06",
+        "source_span": "spin(8)+three 64-generator triality blocks",
+        "relation_span": "+",
+        "argument_spans": [
+          "spin(8)",
+          "three 64-generator triality blocks"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-185-O02"
+        ],
+        "load_bearing_note": "Second local plus token on the E8 decomposition RHS."
+      }
+    },
+    {
+      "census_id": "L-SSC-186",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-186-O05",
+        "source_span": "spin(4,4)+spin(8)",
+        "relation_span": "+",
+        "argument_spans": [
+          "spin(4,4)",
+          "spin(8)"
+        ],
+        "logical_force": "OTHER",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-186-O02"
+        ],
+        "load_bearing_note": "Source-visible plus token in the non-containment target."
+      }
+    }
+  ],
+  "counts": {
+    "corrections": 99,
+    "additions": 97,
+    "replacements": 2,
+    "affected_bodies": 37,
+    "predecessor_occurrences": 578,
+    "expected_successor_occurrences": 675,
+    "frontier_tokens": 143,
+    "token_disposition_counts": {
+      "PROMOTE_SOURCE_OPERATOR": 98,
+      "ALREADY_EXPLICIT_RELATION": 30,
+      "OPAQUE_NAMED_OR_ROLE_NOTATION_NOT_SOURCE_DEFINED_AS_POWER": 3,
+      "SIGN_OR_IDENTIFIER_TOKEN_NOT_BINARY_OPERATOR": 4,
+      "SOURCE_VALUE_OR_ROLE_LITERAL_NOT_OPERATOR": 3,
+      "NON_OPERATOR_NOMENCLATURE_TOKEN": 4,
+      "SUBTOKEN_OF_EXPLICIT_SOURCE_EXPRESSION": 1
+    }
+  },
+  "token_dispositions": [
+    {
+      "census_id": "L-SSC-027",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 26,
+      "end": 27,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-027-O01"
+    },
+    {
+      "census_id": "L-SSC-027",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 29,
+      "end": 30,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-027-O04"
+    },
+    {
+      "census_id": "L-SSC-027",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 30,
+      "end": 33,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-027-O05"
+    },
+    {
+      "census_id": "L-SSC-027",
+      "kind": "BRACKET_GROUP",
+      "lexeme": "[A,A]",
+      "start": 33,
+      "end": 38,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-027-O06"
+    },
+    {
+      "census_id": "L-SSC-029",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 79,
+      "end": 80,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-029-O05"
+    },
+    {
+      "census_id": "L-SSC-029",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 102,
+      "end": 103,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-029-O06"
+    },
+    {
+      "census_id": "L-SSC-029",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 104,
+      "end": 105,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-029-O07"
+    },
+    {
+      "census_id": "L-SSC-030",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 36,
+      "end": 37,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-030-O04"
+    },
+    {
+      "census_id": "L-SSC-030",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 39,
+      "end": 40,
+      "disposition": "OPAQUE_NAMED_OR_ROLE_NOTATION_NOT_SOURCE_DEFINED_AS_POWER"
+    },
+    {
+      "census_id": "L-SSC-030",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 180,
+      "end": 181,
+      "disposition": "OPAQUE_NAMED_OR_ROLE_NOTATION_NOT_SOURCE_DEFINED_AS_POWER"
+    },
+    {
+      "census_id": "L-SSC-032",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 70,
+      "end": 71,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-032-O01"
+    },
+    {
+      "census_id": "L-SSC-032",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 71,
+      "end": 74,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-032-O06"
+    },
+    {
+      "census_id": "L-SSC-032",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 80,
+      "end": 81,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-032-O07"
+    },
+    {
+      "census_id": "L-SSC-032",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/4",
+      "start": 81,
+      "end": 84,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-032-O08"
+    },
+    {
+      "census_id": "L-SSC-032",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 90,
+      "end": 91,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-032-O09"
+    },
+    {
+      "census_id": "L-SSC-033",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 71,
+      "end": 72,
+      "disposition": "SIGN_OR_IDENTIFIER_TOKEN_NOT_BINARY_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-035",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 22,
+      "end": 23,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-035-O05"
+    },
+    {
+      "census_id": "L-SSC-039",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 161,
+      "end": 162,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-039-O09"
+    },
+    {
+      "census_id": "L-SSC-051",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 103,
+      "end": 104,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-051-O05"
+    },
+    {
+      "census_id": "L-SSC-051",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 110,
+      "end": 111,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-051-O06"
+    },
+    {
+      "census_id": "L-SSC-052",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 117,
+      "end": 118,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-052-O06"
+    },
+    {
+      "census_id": "L-SSC-052",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 120,
+      "end": 121,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-052-O07"
+    },
+    {
+      "census_id": "L-SSC-052",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 121,
+      "end": 124,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-052-O08"
+    },
+    {
+      "census_id": "L-SSC-052",
+      "kind": "BRACKET_GROUP",
+      "lexeme": "[H,H]",
+      "start": 124,
+      "end": 129,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-052-O09"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 146,
+      "end": 147,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-055-O04"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "STAR",
+      "lexeme": "*",
+      "start": 147,
+      "end": 148,
+      "disposition": "SOURCE_VALUE_OR_ROLE_LITERAL_NOT_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 154,
+      "end": 155,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-055-O05"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "3/4",
+      "start": 155,
+      "end": 158,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-055-O08"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "STAR",
+      "lexeme": "*",
+      "start": 159,
+      "end": 160,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-055-O09"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "STAR",
+      "lexeme": "*",
+      "start": 199,
+      "end": 200,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-055-O10"
+    },
+    {
+      "census_id": "L-SSC-055",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 201,
+      "end": 202,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-055-O06"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 40,
+      "end": 41,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-056-O05"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 41,
+      "end": 44,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-056-O07"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 50,
+      "end": 51,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-056-O08"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/4",
+      "start": 51,
+      "end": 54,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-056-O09"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 56,
+      "end": 57,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-056-O10"
+    },
+    {
+      "census_id": "L-SSC-056",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 172,
+      "end": 173,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-056-O06"
+    },
+    {
+      "census_id": "L-SSC-057",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 166,
+      "end": 167,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-057-O03"
+    },
+    {
+      "census_id": "L-SSC-058",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/8",
+      "start": 53,
+      "end": 56,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-058-O05"
+    },
+    {
+      "census_id": "L-SSC-058",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 67,
+      "end": 68,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-058-O06"
+    },
+    {
+      "census_id": "L-SSC-059",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 141,
+      "end": 142,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-059-O06"
+    },
+    {
+      "census_id": "L-SSC-061",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 8,
+      "end": 9,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-061-O05"
+    },
+    {
+      "census_id": "L-SSC-061",
+      "kind": "STAR",
+      "lexeme": "*",
+      "start": 9,
+      "end": 10,
+      "disposition": "SOURCE_VALUE_OR_ROLE_LITERAL_NOT_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-062",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 8,
+      "end": 9,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-062-O03"
+    },
+    {
+      "census_id": "L-SSC-065",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 57,
+      "end": 58,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-065-O06"
+    },
+    {
+      "census_id": "L-SSC-071",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 14,
+      "end": 15,
+      "disposition": "NON_OPERATOR_NOMENCLATURE_TOKEN"
+    },
+    {
+      "census_id": "L-SSC-073",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 27,
+      "end": 28,
+      "disposition": "NON_OPERATOR_NOMENCLATURE_TOKEN"
+    },
+    {
+      "census_id": "L-SSC-075",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 77,
+      "end": 78,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-075-O06"
+    },
+    {
+      "census_id": "L-SSC-075",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 85,
+      "end": 86,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-075-O07"
+    },
+    {
+      "census_id": "L-SSC-076",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 181,
+      "end": 182,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-076-O03"
+    },
+    {
+      "census_id": "L-SSC-076",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 182,
+      "end": 185,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-076-O04"
+    },
+    {
+      "census_id": "L-SSC-076",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 191,
+      "end": 192,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-076-O05"
+    },
+    {
+      "census_id": "L-SSC-076",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/4",
+      "start": 192,
+      "end": 195,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-076-O06"
+    },
+    {
+      "census_id": "L-SSC-076",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 201,
+      "end": 202,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-076-O07"
+    },
+    {
+      "census_id": "L-SSC-077",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/8",
+      "start": 77,
+      "end": 80,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-077-O05"
+    },
+    {
+      "census_id": "L-SSC-077",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 87,
+      "end": 88,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-077-O06"
+    },
+    {
+      "census_id": "L-SSC-077",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 217,
+      "end": 218,
+      "disposition": "NON_OPERATOR_NOMENCLATURE_TOKEN"
+    },
+    {
+      "census_id": "L-SSC-084",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 67,
+      "end": 68,
+      "disposition": "NON_OPERATOR_NOMENCLATURE_TOKEN"
+    },
+    {
+      "census_id": "L-SSC-089",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 29,
+      "end": 30,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-089-O05"
+    },
+    {
+      "census_id": "L-SSC-089",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 31,
+      "end": 32,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-089-O06"
+    },
+    {
+      "census_id": "L-SSC-093",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 87,
+      "end": 88,
+      "disposition": "SIGN_OR_IDENTIFIER_TOKEN_NOT_BINARY_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-095",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 136,
+      "end": 137,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-095-O08"
+    },
+    {
+      "census_id": "L-SSC-095",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 167,
+      "end": 168,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-095-O09"
+    },
+    {
+      "census_id": "L-SSC-095",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 169,
+      "end": 170,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-095-O06"
+    },
+    {
+      "census_id": "L-SSC-095",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 203,
+      "end": 204,
+      "disposition": "SIGN_OR_IDENTIFIER_TOKEN_NOT_BINARY_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-095",
+      "kind": "APPROX",
+      "lexeme": "≈",
+      "start": 209,
+      "end": 210,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-095-O07"
+    },
+    {
+      "census_id": "L-SSC-096",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 62,
+      "end": 63,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-096-O06"
+    },
+    {
+      "census_id": "L-SSC-096",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 120,
+      "end": 121,
+      "disposition": "OPAQUE_NAMED_OR_ROLE_NOTATION_NOT_SOURCE_DEFINED_AS_POWER"
+    },
+    {
+      "census_id": "L-SSC-096",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 122,
+      "end": 123,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-096-O07"
+    },
+    {
+      "census_id": "L-SSC-096",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 183,
+      "end": 184,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-096-O08"
+    },
+    {
+      "census_id": "L-SSC-106",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 134,
+      "end": 135,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-106-O06"
+    },
+    {
+      "census_id": "L-SSC-106",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 136,
+      "end": 137,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-106-O05"
+    },
+    {
+      "census_id": "L-SSC-108",
+      "kind": "CROSS",
+      "lexeme": "×",
+      "start": 34,
+      "end": 35,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-108-O04"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 86,
+      "end": 87,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O07"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 88,
+      "end": 91,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O08"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 93,
+      "end": 94,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O09"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 96,
+      "end": 97,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O10"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 99,
+      "end": 100,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O11"
+    },
+    {
+      "census_id": "L-SSC-109",
+      "kind": "CROSS",
+      "lexeme": "×",
+      "start": 116,
+      "end": 117,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-109-O12"
+    },
+    {
+      "census_id": "L-SSC-111",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 167,
+      "end": 168,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-111-O04"
+    },
+    {
+      "census_id": "L-SSC-112",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 63,
+      "end": 64,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-112-O04"
+    },
+    {
+      "census_id": "L-SSC-112",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 76,
+      "end": 77,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-112-O05"
+    },
+    {
+      "census_id": "L-SSC-114",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 61,
+      "end": 62,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-114-O01"
+    },
+    {
+      "census_id": "L-SSC-115",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 58,
+      "end": 59,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-115-O04"
+    },
+    {
+      "census_id": "L-SSC-115",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 66,
+      "end": 67,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-115-O05"
+    },
+    {
+      "census_id": "L-SSC-115",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 75,
+      "end": 76,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-115-O06"
+    },
+    {
+      "census_id": "L-SSC-115",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 90,
+      "end": 91,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-115-O07"
+    },
+    {
+      "census_id": "L-SSC-116",
+      "kind": "TILDE",
+      "lexeme": "~",
+      "start": 8,
+      "end": 9,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-116-O01"
+    },
+    {
+      "census_id": "L-SSC-116",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 10,
+      "end": 13,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-116-O07"
+    },
+    {
+      "census_id": "L-SSC-116",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 15,
+      "end": 16,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-116-O08"
+    },
+    {
+      "census_id": "L-SSC-116",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 18,
+      "end": 19,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-116-O09"
+    },
+    {
+      "census_id": "L-SSC-116",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 21,
+      "end": 22,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-116-O10"
+    },
+    {
+      "census_id": "L-SSC-118",
+      "kind": "CENTRAL_PRODUCT",
+      "lexeme": "∘",
+      "start": 63,
+      "end": 64,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-118-O06"
+    },
+    {
+      "census_id": "L-SSC-118",
+      "kind": "BRACKET_GROUP",
+      "lexeme": "[96,202]",
+      "start": 148,
+      "end": 156,
+      "disposition": "SOURCE_VALUE_OR_ROLE_LITERAL_NOT_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-119",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 93,
+      "end": 94,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-119-O01"
+    },
+    {
+      "census_id": "L-SSC-131",
+      "kind": "CARET",
+      "lexeme": "^",
+      "start": 107,
+      "end": 108,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-131-O04"
+    },
+    {
+      "census_id": "L-SSC-131",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 129,
+      "end": 130,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-131-O05"
+    },
+    {
+      "census_id": "L-SSC-131",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 131,
+      "end": 132,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-131-O06"
+    },
+    {
+      "census_id": "L-SSC-131",
+      "kind": "ARROW_ASCII",
+      "lexeme": "->",
+      "start": 157,
+      "end": 159,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-131-O01"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 53,
+      "end": 54,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O05"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 60,
+      "end": 61,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O06"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 65,
+      "end": 66,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O07"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 69,
+      "end": 70,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O08"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 74,
+      "end": 75,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O09"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 78,
+      "end": 79,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O10"
+    },
+    {
+      "census_id": "L-SSC-139",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 83,
+      "end": 84,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-139-O11"
+    },
+    {
+      "census_id": "L-SSC-141",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 83,
+      "end": 84,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-141-O06"
+    },
+    {
+      "census_id": "L-SSC-141",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 87,
+      "end": 88,
+      "disposition": "SUBTOKEN_OF_EXPLICIT_SOURCE_EXPRESSION",
+      "occurrence_id": "L-SSC-141-O07"
+    },
+    {
+      "census_id": "L-SSC-141",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 90,
+      "end": 91,
+      "disposition": "SIGN_OR_IDENTIFIER_TOKEN_NOT_BINARY_OPERATOR"
+    },
+    {
+      "census_id": "L-SSC-145",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 24,
+      "end": 25,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-145-O06"
+    },
+    {
+      "census_id": "L-SSC-145",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 113,
+      "end": 114,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-145-O07"
+    },
+    {
+      "census_id": "L-SSC-145",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 118,
+      "end": 119,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-145-O08"
+    },
+    {
+      "census_id": "L-SSC-145",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 121,
+      "end": 122,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-145-O09"
+    },
+    {
+      "census_id": "L-SSC-146",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 24,
+      "end": 25,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-146-O05"
+    },
+    {
+      "census_id": "L-SSC-147",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 24,
+      "end": 25,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-147-O04"
+    },
+    {
+      "census_id": "L-SSC-160",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 106,
+      "end": 107,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-160-O01"
+    },
+    {
+      "census_id": "L-SSC-160",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 107,
+      "end": 110,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-160-O06"
+    },
+    {
+      "census_id": "L-SSC-160",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 116,
+      "end": 117,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-160-O07"
+    },
+    {
+      "census_id": "L-SSC-160",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 126,
+      "end": 127,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-160-O04"
+    },
+    {
+      "census_id": "L-SSC-160",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 193,
+      "end": 194,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-160-O08"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "SUBSET_SYMBOL",
+      "lexeme": "⊂",
+      "start": 18,
+      "end": 19,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-168-O07"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "SUBSET_SYMBOL",
+      "lexeme": "⊂",
+      "start": 21,
+      "end": 22,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-168-O08"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 70,
+      "end": 71,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-168-O01"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 71,
+      "end": 74,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-168-O09"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 80,
+      "end": 81,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-168-O10"
+    },
+    {
+      "census_id": "L-SSC-168",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 82,
+      "end": 83,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-168-O11"
+    },
+    {
+      "census_id": "L-SSC-169",
+      "kind": "NUMERIC_FRACTION",
+      "lexeme": "1/2",
+      "start": 56,
+      "end": 59,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-169-O04"
+    },
+    {
+      "census_id": "L-SSC-169",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 61,
+      "end": 62,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-169-O05"
+    },
+    {
+      "census_id": "L-SSC-169",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 65,
+      "end": 66,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-169-O06"
+    },
+    {
+      "census_id": "L-SSC-169",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 68,
+      "end": 69,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-169-O07"
+    },
+    {
+      "census_id": "L-SSC-175",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 35,
+      "end": 36,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-175-O01"
+    },
+    {
+      "census_id": "L-SSC-175",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 37,
+      "end": 38,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-175-O08"
+    },
+    {
+      "census_id": "L-SSC-180",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 156,
+      "end": 157,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-180-O02"
+    },
+    {
+      "census_id": "L-SSC-180",
+      "kind": "STAR",
+      "lexeme": "*",
+      "start": 157,
+      "end": 158,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-180-O06"
+    },
+    {
+      "census_id": "L-SSC-183",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 63,
+      "end": 64,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-183-O04"
+    },
+    {
+      "census_id": "L-SSC-183",
+      "kind": "TENSOR",
+      "lexeme": "⊗",
+      "start": 69,
+      "end": 70,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-183-O05"
+    },
+    {
+      "census_id": "L-SSC-183",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 75,
+      "end": 76,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-183-O06"
+    },
+    {
+      "census_id": "L-SSC-183",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 83,
+      "end": 84,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-183-O07"
+    },
+    {
+      "census_id": "L-SSC-183",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 90,
+      "end": 91,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-183-O08"
+    },
+    {
+      "census_id": "L-SSC-185",
+      "kind": "EQUALS",
+      "lexeme": "=",
+      "start": 28,
+      "end": 29,
+      "disposition": "ALREADY_EXPLICIT_RELATION",
+      "occurrence_id": "L-SSC-185-O02"
+    },
+    {
+      "census_id": "L-SSC-185",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 38,
+      "end": 39,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-185-O05"
+    },
+    {
+      "census_id": "L-SSC-185",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 46,
+      "end": 47,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-185-O06"
+    },
+    {
+      "census_id": "L-SSC-186",
+      "kind": "PLUS",
+      "lexeme": "+",
+      "start": 53,
+      "end": 54,
+      "disposition": "PROMOTE_SOURCE_OPERATOR",
+      "occurrence_id": "L-SSC-186-O05"
+    }
+  ],
+  "protected_semantics": [
+    "L-SSC-130 individual generalized-reflection anti-invariance plus role exchange/sign remains distinct from even-composition triality transformations preserving T.",
+    "The L05 ordinary-octonion source discrepancy is preserved without repair.",
+    "No superseded complex-scalar support is imported.",
+    "Named mathematical semantics are not imported merely from '+', '/', '^', '*', '⊗', '×', '∘', '⊂', brackets, or other source notation.",
+    "L-SSC-177 and L-SSC-178 remain unresolved semantic-decomposition demands."
+  ],
+  "fixed_point_claim": false,
+  "g2_authorized": false,
+  "next_required_steps": [
+    "Generate and deterministically verify L_EXTRACTION_RECONCILED_0_21.json.",
+    "Run a separate source-local compact-operator/juxtaposition frontier for dA, dH, Dphi, Dpsi, det(...), tilde(...), bar(...), trace/integration-like names if source-visible, and other load-bearing compact forms not safely tokenized by the symbol frontier.",
+    "Repeat the complete 151-body manual source-local audit against the resulting successor until a full zero-correction pass occurs.",
+    "Only then run a fresh independent all-151 cold audit against that current candidate.",
+    "Do not authorize G2/G3/primitive categorization/IA/NEI/DTS/DP before the fixed-point and independent-audit requirements are met."
+  ]
+}

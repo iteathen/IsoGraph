@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-second-CI-green-but-coverage-missing.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_second_run": {
+    "id": 38364647037,
+    "job_id": 115186752014,
+    "conclusion": "success",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38364647037",
+    "PDF_SHA256_verified": true,
+    "SVG_SHA256_verified": true,
+    "new_11clip_source_inventory_executed": false,
+    "new_16_dash_controls_executed": false,
+    "emitted_source_report_schema": "isograph.exp062.track-L.G0.L01-clipped-original-table-outline-ink-audit.v0.3",
+    "old_fig1_11_clip_polygon_metadata_preserved": true
+  },
+  "qualified_scope": "ONLY_OLD_V0_3_SOURCE_PROCEDURES_REEXECUTED; NEW_V0_5_SCOPE_DOES_NOT_PASS",
+  "root_cause": "The first repair removed an accidental duplicate of the old main body. The 0.4 wiring edits had been applied to that duplicate, so v0.5 contained uncalled successor paint functions and continued to run the original 0.3 main body.",
+  "causal_repair": "New v0.6 script explicitly wires the eleven-clip inventory and synthetic dash controls into the unique executable main, renames the old continuous-rectangle field as overinclusive, and has static checks for single occurrences of each output/call site before committing.",
+  "frozen_predecessors": {
+    "first_failed_run": 38364138208,
+    "first_failed_record": "experiments/062/L01_FIG1_ALL11_CLIP_FIRST_CI_SYNTAX_ASSEMBLY_FAILURE_0_1.json",
+    "v0_5_candidate_git_blob_sha": "eda1e1a861963561373147ef903dec832cf51a0d"
+  },
+  "successor": {
+    "script_path": "experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py",
+    "blob_sha": "476114cc86250d159a34f591982592fa9bb29fea",
+    "source_CI_pending": true
+  },
+  "no_promotions": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "figure_semantic_graph_qualified": false,
+    "W_imported": false
+  }
+}

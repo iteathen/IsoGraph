@@ -1,0 +1,152 @@
+{
+  "schema": "isograph.lisi-l01-h1-mixed-generator-trace-square-obstruction.g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "FINITE_SAME_COEFFICIENT_COMPLEX_SIMILARITY_OBSTRUCTION_CANDIDATE_INTERNAL_VERIFICATION_REQUIRED",
+  "authority": false,
+  "source_census_frozen": false,
+  "full_L01_source_audited": false,
+  "source_mathematical_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "work": "An Exceptionally Simple Theory of Everything",
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1 dated 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "locations": [
+      "printed p8: e=i[[0,e_R],[e_L,0]], e_R=i(e^4−Σe^εσ_ε), e_L=i(e^4+Σe^εσ_ε)",
+      "printed p10: phiPlus=phi1−i phi2, phiMinus=phi1+i phi2, phiZero=−phi3−i phi4, phiOne=−phi3+i phi4",
+      "printed p12: 8 explicit Cl(7,1) Gamma Kronecker matrices, eφ=e^μ φ^ν Γ_μ Γ′_ν, H1=omega/2+(eφ)/4+w_ew, printed first positive-chiral 8x8 quadrant 4x4 of two-spinor blocks"
+    ],
+    "source_claim": "The author explicitly introduces the printed chiral 8x8 as the first quadrant of the 16x16 Clifford realization with same e^mu and phi^nu coefficients; no relative -i scalar is printed in the eφ formula.",
+    "source_statement_qualification": "SOURCE_LITERAL_CONSISTENCY_TEST_ONLY; not proof of author's intended changes or complete L01 mathematics"
+  },
+  "input_blobs": {
+    "phase_diagnostic": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GAMMA_TO_PRINTED_RELATIVE_PHASE_DIAGNOSTIC_G0_0_1.json",
+      "git_blob_sha": "52dd94fa97c2b9cac7f811cd1f43880a91363eab"
+    },
+    "Cl71_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "H1_printed": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "SSC0_25": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_25.json",
+      "git_blob_sha": "a72816c54ed0668622ba28ebb81966b6b8232f2a"
+    },
+    "current_gate0_25": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_25.json",
+      "git_blob_sha": "6e09aecabecca945627ad82bc990a122f6fc3230"
+    },
+    "prior_phase_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l01-h1-gamma-relative-phase-0-1.mjs",
+      "git_blob_sha": "aa04b721b28daf3f390a3ff926a734a8ea05da27"
+    }
+  },
+  "scalar_and_matrix_domain": {
+    "coefficients": "four e^mu are independent REAL-sampled frame one-form coefficients, four phi^nu are independent real Higgs scalar coefficients; test the coefficient matrix of e^mu phi^nu after factoring common 1/4",
+    "matrix_field": "complex 8x8 matrices; Pauli i in author's source is scalar imaginary unit and commutes with source coefficients",
+    "source_native_matrix": "X_mu_nu = projection first rows/cols 0..7 of Gamma_mu*GammaPrime_nu, with exact source four-factor Pauli Kronecker definitions and no inserted phase",
+    "printed_field_matrix": "P_mu_nu=coefficient extracted from H1 displayed 4x4 of two-spinor blocks using eR/L source i, phiPlus/Minus/Zero/One; no modification to the original gamma or printed matrix",
+    "basis_change_claim_tested": "CONSTANT_INVERTIBLE_COMPLEX_SIMILARITY acting on the same 8d positive-chiral carrier with source coefficient labels fixed. This includes permutations and diagonal spinor rephasings; no field-dependent non-linear transport or coefficient renormalization tested.",
+    "invariance_lemma": "For any invertible complex S, tr((S^-1 X S)^2)=tr(S^-1 X^2 S)=tr(X^2). Therefore unequal trace-square values obstruct complex similarity. This is elementary exact finite matrix algebra, not a new source axiom.",
+    "other_transforms_unexamined": "Antilinear/nonconjugation source interpretation, varying coefficient definitions, a non-similarity/field-dependent operator map, and author's intended normalization remain unadjudicated."
+  },
+  "source_pauli_analytic_first_witness": {
+    "mu": 1,
+    "nu": 1,
+    "normalization": "compare unscaled mixed e^1 phi^1 coefficients (both 1/4 in H1)",
+    "native_source_Clifford": "X_11 = (Gamma1 GammaPrime1)_{0..7,0..7} = i*(sigma2 tensor sigma1 tensor sigma1)",
+    "printed_source_H1": "P_11 = sigma2 tensor sigma1 tensor sigma1 from e_R=-i sigma1, e_L=+i sigma1 and phiPlus=phiMinus=phi^1",
+    "native_matrix_square": "X_11^2=-I_8",
+    "printed_matrix_square": "P_11^2=+I_8",
+    "native_trace_square": -8,
+    "printed_trace_square": 8,
+    "nonzero_trace_gap": 16,
+    "basis_only_similarity_possible": false,
+    "source_exact_coefficient_match_possible_in_same_fixed_conventions": false
+  },
+  "source_all_pairs_expected": {
+    "generator_pairs": 16,
+    "each_matrix_dimension": 8,
+    "source_mixed_matrix_cells_per_pair": 64,
+    "total_cells": 1024,
+    "direct_native_vs_printed_mismatch_cells": 128,
+    "source_native_square_traces": [
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "printed_H1_square_traces": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      -8,
+      -8,
+      -8,
+      -8
+    ],
+    "different_trace_squares_pairs": 16,
+    "global_phase_diagnostic": "P_mu_nu=(-i)*X_mu_nu on all sixteen tested coefficient matrices",
+    "basis_only_similarity_obstructed_for_each_pair": true,
+    "source_full_H1_or_theorem_qualified": false
+  },
+  "positive_controls": {
+    "native_source_Cl71_signature": "diag(+,+,+,-,+,+,+,+), including Gamma4^2=-I16",
+    "negative_source_control": "one-cell eigenvalue/trace contrast survives any similarity on the 8-dimensional positive-chiral operator, regardless of row permutation or constant spinor phase",
+    "source_role_control": "Test mixed coefficient e^1 phi^1 rather than whole H1 with independent omega/W/B gauge terms set to zero, preserving one-form and scalar types."
+  },
+  "discrepancy_disposition": {
+    "observed": "SOURCE_SAME_COEFFICIENT_MIXED_BLOCK_EQUALITY_FAILS_EVEN_UP_TO_COMPLEX_SIMILARITY",
+    "comparison_scope": "UNSCALED_1_4_COMMON_COEFFICIENTS_IN_SOURCE_FIRST_POSITIVE_CHIRAL_QUADRANT",
+    "source_equation_contradiction_if_interpreted_as_exact_same_linear_operator": true,
+    "source_error_ownership": "UNRESOLVED; hidden source normalization or field embedding not exhaustively characterized",
+    "basis_only_explanation": "FALSIFIED_IN_DECLARED_SCOPE",
+    "independent_external_referee_passed": false,
+    "no_implied_universal_Cl71_or_D4_failure": true,
+    "prior_uncertain_relation": "Refines previously natural-order-only mismatch, but does not establish author's intended repair."
+  },
+  "required_next_checks": [
+    "Independently reconstruct all 16 native 16x16 Pauli mixed products and all 16 printed 8x8 two-spinor field coefficient blocks; square all and check full matrices equal exact ±I8, not only traces.",
+    "Enforce exact source field/one-form roles, coefficient order, source revision and 8x8 first-quadrant location with adversarial mutations.",
+    "Test both source pure gravity and pure electroweak bivector positive controls and false input/source-version changes.",
+    "Preserve typed invariant and all 16 signed source results as G0 research evidence; no SSC freeze or promotion.",
+    "After confirmed CI, conservatively update L-SSC-032 only if source-literal scope warrants, retaining other 190 source items byte-for-byte."
+  ],
+  "nonclaims": [
+    "The author's whole 2007 physical theory is mathematically invalid.",
+    "No other source normalizations, field or source-on-paper phase maps exist.",
+    "This mathematical invariant certifies a corrected replacement formula or author intention.",
+    "A changed gauge representation is equivalent to a scalar rephasing of source fields.",
+    "G0 complete, G1-G7 authorized, Recursive IA authorized, external reviewer passed, W/L bridge available."
+  ]
+}

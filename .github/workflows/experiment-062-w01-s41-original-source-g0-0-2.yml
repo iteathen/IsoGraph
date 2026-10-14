@@ -1,0 +1,29 @@
+name: Experiment 062 W01 section41 original source G0 0.2
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_53.json
+      - experiments/062/W_G0_W01_S41_SOURCE_DEMAND_PROJECTION_0_37.json
+      - experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_39.json
+      - experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_38.json
+      - experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_20.json
+      - experiments/062/W_CURRENT_STAGE_GATE_0_110.json
+      - experiments/062/W01_G0_S41_SOURCE_FIRST_ORACLE_0_1.json
+      - experiments/062/W01_G0_S41_TYPED_SOURCE_DEFECT_0_1.json
+      - experiments/062/W01_G0_S41_INDEPENDENT_SCOPE_NEGATIVE_0_1.json
+      - experiments/062/tools/verify-w01-s41-original-source-g0-0-2.mjs
+      - .github/workflows/experiment-062-w01-s41-original-source-g0-0-2.yml
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.7.0'
+      - run: node experiments/062/tools/verify-w01-s41-original-source-g0-0-2.mjs

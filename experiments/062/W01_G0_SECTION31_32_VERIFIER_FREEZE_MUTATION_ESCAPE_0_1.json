@@ -1,0 +1,38 @@
+{
+  "schema": "isograph.exp062-w01-s31-s32-verifier-false-freeze-mutation-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_V8_VERIFIER_MUTATION_ESCAPE_PRESERVED",
+  "candidate_inputs": {
+    "oracle": "68746cd9046143e6bc807698fa8588b09d05305c",
+    "ssc": "04212aa6fc74c679fb4744aa038df0ef43b83262",
+    "demand": "ea9690fdeb1e8d1349aab3b7e4e1641502628f39",
+    "register": "180c367a94457344ac6168eca0ea9f4f354709a1",
+    "coverage": "bc2eedcf813167d09935f2b948c0849a47443ea8"
+  },
+  "observed": {
+    "positive_validator_errors": 0,
+    "adversarial_total": 43,
+    "adversarial_rejected": 42,
+    "escaped_mutation": "source frozen falsely",
+    "mutation": "ssc.freeze_rule = 'G0 FROZEN'",
+    "observed_result": "VALIDATOR_ERRONEOUSLY_ACCEPTED"
+  },
+  "violation": "G0 cannot be frozen by altering a top-level textual freeze rule; SSC0.32 remains candidate/unqualified and lacks all-nine-source reverse enumeration and frozen mutable source identity.",
+  "owner": "VERIFIER_FREEZE_RULE_FIELD_NOT_CHECKED",
+  "repair": "Fail closed on exact source freeze-rule string plus correction.G0_frozen===false, retain negative explicit 151-body stage status. Rerun all negative tests under Node CI only after 43/43 local V8 controls reject.",
+  "publication_state": "NO_CORRECTED_BRANCH_OR_VERIFIER_PUBLISHED_FOR_THIS_CONTROL_YET",
+  "source_semantics_modified": false,
+  "provenance": {
+    "earliest_evidence_currently_located": "2026-10-09 prepublication local adversarial mutation",
+    "recorded_on": "2026-10-09",
+    "research_direction": "Joshua Oshiro",
+    "formalization": "agent-assisted"
+  },
+  "nonclaims": [
+    "Not a published CI failure",
+    "No claim the source oracle itself was incorrect",
+    "No stage progression authorized"
+  ]
+}

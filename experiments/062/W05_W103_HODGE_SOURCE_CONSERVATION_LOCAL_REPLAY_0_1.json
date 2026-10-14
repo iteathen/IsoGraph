@@ -1,0 +1,106 @@
+{
+  "schema": "isograph.exp062-w05-w103-hodge-source-conservation-local-replay.v0.1",
+  "date": "2026-10-08",
+  "status": "PASS_DETERMINISTIC_V8_W103_SOURCE_CENSUS_AND_W_ONLY_DEMAND_PROJECTION_NOT_CI_OR_G0_COMPLETE",
+  "track": "W",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_TEST_EVIDENCE_ONLY",
+  "pinned_live_inputs": [
+    {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_10.json",
+      "git_blob_sha": "de9bfe271bdd094bbd93b786b38bd3936cc054ee"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_11.json",
+      "git_blob_sha": "05c0b665a7ec6cf97573856bbc1eb3e809a014f7"
+    },
+    {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_9.json",
+      "git_blob_sha": "aa47277aa590332b6c87f79f725297be9283c3bc"
+    },
+    {
+      "path": "experiments/062/W_G0_W103_SOURCE_DEMAND_PROJECTION_0_1.json",
+      "git_blob_sha": "aa6cf9a640ce3899e56b26b6ef4e9b75639655c2"
+    },
+    {
+      "path": "experiments/062/W05_W103_HODGE_STRICT_FILTRATION_SOURCE_DEFECT_0_1.json",
+      "git_blob_sha": "25c42af74e23e964ceb1a3d746a65948f8765b15"
+    },
+    {
+      "path": "experiments/062/W05_W103_VERIFIER_MISSING_MEMBER_EXCEPTION_DEFECT_0_1.json",
+      "git_blob_sha": "cb9846832f131c12edbd73d575d47819d2804df2"
+    },
+    {
+      "path": "experiments/062/tools/verify-w05-w103-strict-hodge-source-0-1.mjs",
+      "git_blob_sha": "8cb2435213feb66bb863d0b5aba154634be3e0a1"
+    },
+    {
+      "path": "experiments/062/tools/verify-w05-w103-strict-hodge-source-0-2.mjs",
+      "git_blob_sha": "2dc743e1c41d1e097a8bd72933bb2f54230005a6"
+    }
+  ],
+  "test_execution": {
+    "method": "The exact v0.2 verifier source was fetched from the live GitHub branch; Node module imports removed, source file reads backed by separately fetched GitHub content, git-blob SHA computation replaced by separately returned blob SHA. All validation logic and 17 mutation tests executed in V8.",
+    "result": "PASS",
+    "reported_errors": [],
+    "adversarial_mutations_rejected": 17,
+    "adversarial_mutations_total": 17,
+    "Node_GitHubActions_qualification": "NOT_RUN",
+    "limitations": [
+      "Not a Node runner/GitHub Actions CI execution.",
+      "Primary source checked from visually inspected author PDF, arXiv v2 byte identity not independently demonstrated.",
+      "The full nine-source W census has not received a fresh complete cold source-semantics audit.",
+      "No mathematical correctness proof of Hodge identities; this is an exact-author-source-transcription and projection test."
+    ]
+  },
+  "source_conservation": {
+    "old_source_census_items": 151,
+    "successor_items": 151,
+    "unchanged_other_source_items": 150,
+    "corrected_item": "W-SSC-103",
+    "condition": "STRICT_GT (i>p) preserved rather than i>=p",
+    "restored_statement": "H^(p,q)(M)=F^p intersection conjugate(F^q)",
+    "retained_negative": "Hodge decomposition does NOT vary holomorphically; filtration does",
+    "retained_printed_anomaly": "F^2=V terminal printed filtration",
+    "retained_mixed_scope_exclusion": true
+  },
+  "demand_conservation": {
+    "W_unresolved": 86,
+    "other_W_demand_records_identical": 85,
+    "changed_exact_W_demand": "W-SSC-103",
+    "L_items_read_for_semantics": false,
+    "L_items_mutated": false,
+    "combined_demand_0_9_status": "HISTORICAL_STALE_W103_PROJECTION",
+    "previous_false_closed_W109_W110_still_OPEN": true
+  },
+  "historical_verifier_failure": {
+    "path": "experiments/062/W05_W103_VERIFIER_MISSING_MEMBER_EXCEPTION_DEFECT_0_1.json",
+    "git_blob_sha": "cb9846832f131c12edbd73d575d47819d2804df2",
+    "failed_verifier_path": "experiments/062/tools/verify-w05-w103-strict-hodge-source-0-1.mjs",
+    "failed_verifier_sha": "8cb2435213feb66bb863d0b5aba154634be3e0a1",
+    "repair": "v0.2 returns a controlled source-demand absence failure instead of unhandled TypeError"
+  },
+  "source_reference": {
+    "id": "W05",
+    "revision": "arXiv:2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "author_pdf_page": "printed p.7 / PDF index 6",
+    "comparison_caveat": "Author PDF visually verified; arxiv bytes unverified"
+  },
+  "current_lawful_status": {
+    "G0_source_census_frozen": false,
+    "G0_full_source_review_passed": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "global_qualified_module_manifest_modified": false
+  },
+  "next_action": "Continue W05 and W01-W04 G0 primary-source assertion conservation, independently verify exact frozen arxiv v2 source revision, perform true Node/CI verification on final successor before G1, rebuild combined source-demand only from current pinned W plus independent L state without consuming L semantics.",
+  "nonclaims": [
+    "No external semantic verification claimed.",
+    "No source-census freeze or source schema qualification.",
+    "No W/L cross-track conclusion.",
+    "No repair of the author's unconventional printed Hodge expressions."
+  ]
+}

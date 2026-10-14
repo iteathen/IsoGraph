@@ -1,0 +1,144 @@
+{
+  "schema": "isograph.lisi-L01-so8-tensor-right-transpose-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "EXACT_PROJECT_SO8_TENSOR_INDEX_SIGN_COMPLETION__ORIGINAL_SOURCE_MATRIX_CONVENTION_UNRESOLVED",
+  "frozen_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      21,
+      22,
+      23,
+      24,
+      27,
+      28
+    ],
+    "roles": [
+      {
+        "id": "E8_TENSOR",
+        "page": 21,
+        "statement": "e8=so(7,1)+so(8)+(8S+ x 8S+)+(8S- x 8S-)+(8V x 8V)",
+        "role": "SOURCE_DECOMPOSITION"
+      },
+      {
+        "id": "SO8_COLOR_SPLIT",
+        "page": 21,
+        "statement": "so(8)=su(3)+u(1)+u(1)+3 x (3+3bar)",
+        "role": "SOURCE_DECOMPOSITION"
+      },
+      {
+        "id": "H2_TERMS",
+        "page": 23,
+        "statement": "H2=w+B2+xPhi+g in so(8)",
+        "role": "SOURCE_CONNECTION"
+      },
+      {
+        "id": "FERMION_FIRST",
+        "page": 23,
+        "statement": "Psi_I in 8S+ x 8S+",
+        "role": "FIRST_GENERATION_CARRIER"
+      },
+      {
+        "id": "FERMION_OPERATOR",
+        "page": 24,
+        "statement": "-Psi(w+B2+xPhi)-Psi_q*g",
+        "role": "NEGATIVE_RIGHT_OPERATOR"
+      },
+      {
+        "id": "FERMION_ACTION",
+        "page": 27,
+        "statement": "-Psi(w+B2+xPhi+g) then +Psi*w_i+Psi*B2_i+Psi*x_i*Phi+Psi*g_i",
+        "role": "OPERATOR_VS_COMPONENT_SIGN"
+      },
+      {
+        "id": "FERMION_LIMIT",
+        "page": 28,
+        "statement": "Other two generation fermionic actions not understood enough to write down",
+        "role": "EXPLICIT_LIMIT"
+      }
+    ]
+  },
+  "parents": {
+    "previous_right_action_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_RIGHT_ACTION_CONTRAGREDIENT_G0_0_1.json",
+      "git_blob_sha": "4f9136f043636306b5e24697dd1e6ea28b67656e"
+    },
+    "ssc041": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_41.json",
+      "git_blob_sha": "993f5785eb4f3b1ee7c7c0be72680d407c0c6451"
+    },
+    "gate042": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_42.json",
+      "git_blob_sha": "ec283ea8d5a73ca16af1bda0d044177947846a77"
+    }
+  },
+  "model": {
+    "scope": "PROJECT_CHOSEN real orthogonal 8x8 model of the so(8) right carrier, not Lisi's fully specified 8S+ root-basis representation or E8 real form",
+    "basis": "Realify anti-Hermitian traceless 3x3 su3 as 6x6 real skew acting on real 3+3bar; append two annihilated real singlets; include J=iI3 realification and K=E67-E76, and eighteen mixed generators in three stable 6-real-dimensional submodules.",
+    "exact_dimensions": {
+      "su3": 8,
+      "abelian_su3_commutant": 2,
+      "mixed_three_sixes": 18,
+      "so8_total": 28
+    },
+    "mixed_decomposition": {
+      "first": "6-dimensional anti-complex-linear skew matrices inside real so(6), anticommuting with the complex structure J",
+      "second": "6-dimensional quark to first singlet cross-block",
+      "third": "6-dimensional quark to second singlet cross-block",
+      "source_label_equivalence_qualified": false,
+      "root_vector_phase_matching_qualified": false,
+      "shared_Phi_rank_one_coefficient_restriction_implied": false
+    },
+    "index_convention": {
+      "source": "D_right(X)Psi=-Psi R(X)",
+      "tensor_right_index": "(D_right(X)Psi)_(a,b)=sum_c Psi_(a,c) R(X)_(b,c)",
+      "component": "D_right(X)Psi=+Psi R(X)^T",
+      "identity": "R(X)^T=-R(X) for project real so8 carrier; thus -Psi R(X)=+Psi R(X)^T on unchanged rectangular Psi carrier",
+      "nonabelian_composition": "Because X->R(X)^T is an opposite-matrix assignment on the right, [D_right(X),D_right(Y)]=D_right([X,Y]) despite the positive component multiplication",
+      "requires_missing_source_authorization": "Identify printed component w_i,B2_i,x_iPhi,g_i as the right-index-transposed matrices R(H2)_i^T, rather than as unchanged raw source H2 generators, and explicitly select a compatible invariant bilinear/right-index orientation."
+    }
+  },
+  "math_evidence": {
+    "exact_integer_8x8_so8_basis_rank_mod_101": 28,
+    "su3_complex_real_bracket_pairs": 64,
+    "su3_color_mixed_module_checks": 144,
+    "right_transpose_source_coincidences": 28,
+    "all_nonabelian_pair_module_tests": 378,
+    "baseline_raw_positive_right_mismatches": 28,
+    "raw_positive_right_antirepresentation_counterexamples": 256,
+    "math_hostiles": 12,
+    "source_hostiles": 16
+  },
+  "classification": {
+    "source_equivalent_representation_change": "NOT_ESTABLISHED_FOR_ORIGINAL_L01",
+    "unstated_convention_completion": "MATHEMATICALLY_SUFFICIENT_CONDITIONAL_SO8_MODEL",
+    "source_discrepancy": "STILL_OPEN_NOT_CONFIRMED_AUTHOR_ERROR",
+    "do_not_infer_from_dimensional_split": "Author-motivated rank-one shared Phi factorization is an additional field-subfamily restriction not implied by so8=8+2+18.",
+    "what_is_closed": "Project-chosen all-28-generator exact integer right module and decomposition, with finite-model conditional numerical sign reconciliation",
+    "what_is_open": "Original source E8 8S+ generator/root phases, real form and specific printed right component matrices; source pairing/right dualization; original factorized xPhi transport; complete generation-2/3 actions; actual source action/physics."
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "source_census_frozen": false,
+    "source_E8_right_map_qualified": false,
+    "source_full_fermionic_action_qualified": false,
+    "other_generation_actions_qualified": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "W_semantics_available": false,
+    "cross_track_synthesis_allowed": false,
+    "external_cold_review_passed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro: continue independent source-faithful L treatment and reconstruct p24/p27 right sign with maximal exact model",
+    "source_author": "A. Garrett Lisi, original 2007 arXiv 0711.0770v1",
+    "project_mathematical_reconstruction": "Agent-generated 2026-10-09 orthogonal right-index transpose completion based on existing elementary su3-realification and matrix Lie algebra",
+    "prior_external_mathematics": "Ordinary SO8/SU3 representation theory, realification, Lie modules, dual tensor-index conventions; no novel global priority claim"
+  }
+}

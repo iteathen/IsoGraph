@@ -1,0 +1,70 @@
+{
+  "schema": "isograph.exp062-w02-s43-verifier-v03-hostile-control-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_POSITIVE_PASS_BUT_HOSTILE_ESCAPE_UNQUALIFIED",
+  "run": {
+    "id": 37974415601,
+    "job_id": 113968936698,
+    "head_sha": "cd7235d6b07a8e3a7a217af2f8287b3e42be176d",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37974415601",
+    "conclusion": "failure",
+    "positive_baseline_pass": true,
+    "positive_errors": [],
+    "mutants_total": 49,
+    "mutants_rejected": 48,
+    "escaped": 1,
+    "crashed": 0,
+    "escaped_name": "W02 oracle prematurely source closed",
+    "qualification": false
+  },
+  "defect": {
+    "source_first_oracle": {
+      "path": "experiments/062/W02_G0_S43_CHIRAL_CURVATURE_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "7ac32b4ec3ab9c4a90debdb73f2c58e4d322dafa",
+      "genuine_field": "full_nine_source_reverse_qualified",
+      "genuine_value": false
+    },
+    "failed_mutation": {
+      "name": "W02 oracle prematurely source closed",
+      "incorrect_target": "nine_source_full_reverse_qualified",
+      "correct_target": "full_nine_source_reverse_qualified",
+      "type": "NO_EFFECT_SEMANTIC_GUARD_MUTANT"
+    },
+    "source_math_or_author_body_defect": false
+  },
+  "previous_failures": [
+    {
+      "run_id": 37973537552,
+      "kind": "POSITIVE_FAILED_42_42_NOT_QUALIFIED"
+    },
+    {
+      "run_id": 37973892281,
+      "kind": "POSITIVE_FAILED_46_46_NOT_QUALIFIED"
+    }
+  ],
+  "retention": {
+    "v03_verifier": {
+      "path": "experiments/062/tools/verify-w02-s43-mixed-curvature-source-g0-0-3.mjs",
+      "git_blob_sha": "35117c4c19f28a295170d55432bb7c34af1fa982"
+    },
+    "input_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_75.json",
+      "git_blob_sha": "80f08c1a1cfb5cc64e8d96c6f4f90162987abe29"
+    },
+    "next_verifier": "verify-w02-s43-mixed-curvature-source-g0-0-4.mjs",
+    "not_rewrite_original": true
+  },
+  "stage_qualification": {
+    "W_G0_open": true,
+    "W_G0_frozen": false,
+    "G1_G7_authorized": false,
+    "source_SSC_0_36_unchanged": true,
+    "source_items": 151,
+    "typed_incidents": 327,
+    "full_original_reverse_unqualified": true,
+    "Oct03_mutable_bytes_unverified": true,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  }
+}

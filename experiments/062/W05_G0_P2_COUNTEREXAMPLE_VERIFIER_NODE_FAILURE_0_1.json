@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.exp062-w05-p2-conic-verifier-node-baseline-defect.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PRESERVED_NODE_FAIL_0_1_VERIFIER_EXPECTATION_ERRORS_NO_SOURCE_MATHEMATICS_FAILURE",
+  "source_reconstruction": {
+    "path": "experiments/062/W05_G0_P2_NONSQUARE_UNIT_CONIC_COUNTEREXAMPLE_0_1.json",
+    "git_blob_sha": "bc86be42057c5ab6fe71a5ae7f81466e92ec80a9"
+  },
+  "failed": {
+    "run_id": 37914365529,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37914365529",
+    "commit": "fc079ec5f6eba0729925e0e4157b0a1eb416ce01",
+    "verifier_path": "experiments/062/tools/verify-w05-p2-nonsquare-conic-0-1.mjs",
+    "verifier_blob_sha": "032bb9e8f773629761bda13eb3e13d1d261c573d",
+    "conclusion": "failure",
+    "Node": "26.7.0",
+    "positive_verifier_errors": [
+      "W05 G0 source item open W-SSC-105",
+      "W05 G0 source item open W-SSC-106",
+      "do not attribute universal to author"
+    ],
+    "mutation_negative_controls_rejected": 21,
+    "mutation_negative_controls_total": 21
+  },
+  "diagnosis": [
+    {
+      "cause": "The source items are source-labeled OPEN_EXPOSITORY, not OPEN, as correctly preserved in SSC0.32. The verifier assumed an incorrect status string.",
+      "scope": "VERIFIER_POSITIVE_BASELINE_ONLY"
+    },
+    {
+      "cause": "The original evidence nests owner external-review qualifier in conclusions.external_review, whereas verifier incorrectly inspects top-level external_review.",
+      "scope": "VERIFIER_POSITIVE_BASELINE_AND_NEGATIVE_FALSIFIER_PATH"
+    }
+  ],
+  "successor": {
+    "path": "experiments/062/tools/verify-w05-p2-nonsquare-conic-0-2.mjs",
+    "status": "NODE_CI_PENDING",
+    "changed_expected_roles": [
+      "OPEN->OPEN_EXPOSITORY in W105 W106",
+      "top-level external_review->conclusions.external_review for positive and falsifier"
+    ]
+  },
+  "negative_guards": [
+    "Do not overwrite failed verifier, workflow, run, or source corpus",
+    "Do not conflate passing 21/21 mutations with passing positive baseline",
+    "Preserve Woit source existential/universal interpretation unresolved",
+    "No G0 freeze, G1/IA/DP promotion, L data, or third-party pass"
+  ],
+  "provenance": {
+    "source_author": "Peter Woit",
+    "research_direction": "Joshua Oshiro",
+    "agent_assisted_reconstruction": "2026-10-09",
+    "recorded_on": "2026-10-09"
+  },
+  "nonclaims": [
+    "No independent third-party mathematical verification",
+    "No full W05 nine-source audit",
+    "No source correction or universal field theorem"
+  ]
+}

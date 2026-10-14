@@ -1,0 +1,47 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.20",
+  "date": "2026-10-07",
+  "status": "W_G4_POST_G7_RELATIONAL_CLOSURE_COMPLETE_G5_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_19.json",
+    "git_blob_sha": "be8ff79ef93fcba70dd9f2b73f68c7d0d32d58ef",
+    "reason": "W097 relational G7 closure passed and the effective post-G7 G4 quotient replay passed deterministic verification."
+  },
+  "current_G7": {
+    "artifact": {
+      "path": "experiments/062/W_G7_RELATIONAL_TWO_STEP_RETURN_INSTANTIATION_0_1.json",
+      "git_blob_sha": "4fb7708649aa37807ab87baea9a31c8358ec9b42"
+    },
+    "closed_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ]
+  },
+  "current_G4": {
+    "quotient": {
+      "path": "experiments/062/W_G4_ALPHA_RENAMED_STRUCTURAL_QUOTIENT_0_4.json",
+      "git_blob_sha": "4895485b27489fc8028f5b7804ef6d9a6021ffaa"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_4.json",
+      "git_blob_sha": "57392c7f4fa78cfcfdab8af8ba794f36190a22b8"
+    },
+    "workflow_run_id": 37720396046,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G7_relational_closure_complete": true,
+    "G4_post_G7_complete": true,
+    "G5_authorized": true,
+    "G5H_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Replay W-local G5 on the post-G7 430-root frontier. Then select the next W-only material residual family; do not reopen the already-closed O06/O04 family."
+}

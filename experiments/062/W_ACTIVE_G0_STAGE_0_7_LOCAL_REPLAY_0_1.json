@@ -1,0 +1,79 @@
+{
+  "schema": "isograph.exp062-w-active-g0-7-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_53_OF_54_PREDECESSOR_MUTATIONS_REJECTED_INERT_FIX_APPLIED_CI_REQUIRED",
+  "stage": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_52.json",
+    "git_blob_sha": "0571d8385c6177b659c2a33da8fc70dd6bb821b9",
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false
+  },
+  "source": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_25.json",
+    "git_blob_sha": "986489b933e805fd17b305b014e5e18b1e3813bd"
+  },
+  "register": {
+    "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_11.json",
+    "git_blob_sha": "c365969b51c7b76c5750218e3dfcce0b66e85e04"
+  },
+  "coverage": {
+    "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_10.json",
+    "git_blob_sha": "d8b7bdf994aefa98d9aae8c6bfedc23e3eeee778"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-7.mjs",
+    "git_blob_sha": "f8c885d21354596c46409ea6c779c38247258a0e"
+  },
+  "failed_predecessors": [
+    {
+      "path": "experiments/062/W_ACTIVE_G0_STAGE_0_7_SOURCE_REGRESSION_ESCAPE_DEFECT_0_1.json",
+      "git_blob_sha": "1adef87893f4a0ab27786cc16e59ffe4bbc01149"
+    },
+    {
+      "path": "experiments/062/W_ACTIVE_G0_7_WRONG_FIELD_MUTATION_FIXTURE_0_1.json",
+      "git_blob_sha": "8c361780f64eb92e2d8c4fe470bdeaab65ee4dba"
+    }
+  ],
+  "original_local_run": {
+    "positive_errors": [],
+    "adversarial_total": 44,
+    "rejected": 42,
+    "escaped": [
+      "W03 2022 exactly normalized some",
+      "W04b preserved 3 orbit lost"
+    ]
+  },
+  "second_local_run": {
+    "positive_errors": [],
+    "adversarial_total": 54,
+    "rejected": 53,
+    "escaped": [
+      "relabel old86 current SSC"
+    ],
+    "classification": "INEFFECTIVE_TEST_WRONG_FIELD_NOT_A_REAL_SOURCE_ESCAPE"
+  },
+  "successor_revision": {
+    "corrected_target_field": "current_ssc0_25_not_regenerated_historical_only",
+    "expected_mutation_count": 54,
+    "qualified_status": "NOT_YET_NODE_CI_VERIFIED",
+    "node": "PENDING_RUN"
+  },
+  "historical_active_workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-6.yml",
+    "old_git_blob_sha": "fb6695a0ba31f7ea85245d9330461127fca6e2a2",
+    "manual_only_successor_sha": "05410789e14281bf0bee00d868fd634a03280f60"
+  },
+  "current_workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-7.yml",
+    "git_blob_sha": "9965c59a39950ab229c4ab11b660bfbc70df542d"
+  },
+  "nonclaims": [
+    "No 54/54 local success falsely claimed before CI",
+    "No source G0 freeze",
+    "No cross-track or source theorem promotion"
+  ],
+  "external_review": "OWNER_BYPASSED_NOT_PASSED"
+}

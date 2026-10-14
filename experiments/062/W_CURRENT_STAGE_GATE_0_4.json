@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.4",
+  "date": "2026-10-07",
+  "status": "W_G1_CORRECTED_INPUT_ACCEPTED_UNDER_OWNER_BYPASS_G2_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_3.json",
+    "git_blob_sha": "994e740d91f0eda0bf95d56871a6e2b363ac3b3c",
+    "reason": "Corrected W G1 0.21 passed deterministic replay and reached a source-local zero-change fixed point; a new exact-input routing decision accepts the unavailable external audit under the active owner bypass."
+  },
+  "current_G1": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_21.json",
+      "git_blob_sha": "0c82bedc5bfe8fc72910ddfba74220237044ac59",
+      "occurrences": 443
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_2.json",
+      "git_blob_sha": "10a8c3e0240c1479cd994c4010c0ea3263d47605"
+    },
+    "bypass_routing": {
+      "path": "experiments/062/W_G1_OWNER_BYPASS_ROUTING_0_1.json",
+      "git_blob_sha": "cddbb33d4b390c30b37612f08b17a0c22be4e65d"
+    },
+    "source_local_zero_change": true,
+    "external_verification_complete": false,
+    "accepted_under_owner_bypass": true
+  },
+  "predecessor_downstream": {
+    "G2_through_G7_status": "HISTORICAL_FOR_PREDECESSOR_W_G1_0_18_TUPLE",
+    "current_for_corrected_input": false
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_authorized": true,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "primitive_211000": {
+    "campaign_provisional_qualification_preserved": true,
+    "candidate_semantics_changed": false,
+    "W_source_instantiation_must_be_retested_only_after_corrected_G2_G5_replay": true,
+    "prior_G7_closure_changes": 0
+  },
+  "next_lawful_action": "Generate corrected-input W G2 neutral occurrence graph from W_EXTRACTION_RECONCILED_0_21.json under W_G1_OWNER_BYPASS_ROUTING_0_1.json."
+}

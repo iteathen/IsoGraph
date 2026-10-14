@@ -1,0 +1,21 @@
+name: Experiment 062 W G1 original PDF three exact-body source audit 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_W084_W095_W126_CURRENT_ORIGINAL_FIRST_0_1.json'
+      - 'experiments/062/tools/verify-w-g1-three-original-PDF-0-2.py'
+      - '.github/workflows/experiment-062-w-g1-three-original-pdf-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  cold_author_original:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: |
+          command -v pdfinfo || { sudo apt-get update -qq && sudo apt-get install -y poppler-utils; }
+          command -v pdftotext
+          python3 -m py_compile experiments/062/tools/verify-w-g1-three-original-PDF-0-2.py
+      - run: python3 -u experiments/062/tools/verify-w-g1-three-original-PDF-0-2.py

@@ -1,0 +1,64 @@
+{
+  "schema": "isograph.exp062-L-G0-role-traversal-second-CI-gate-parent-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "failing_run": {
+    "id": 38021795060,
+    "job_id": 114124176233,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38021795060",
+    "commit": "951932ecdc95b0b5908236504883f107c6a8e4a9",
+    "conclusion": "failure",
+    "baseline_issues": [
+      "current source gate/parent exact hashes"
+    ],
+    "adversarial_mutants_defined": 18,
+    "adversarial_mutants_rejected": 18,
+    "complete_job_log_reviewed": true
+  },
+  "diagnosis": {
+    "type": "AGENT_VERIFIER_PROCEDURAL_ANCESTRY_OWNER",
+    "not_source_semantic_defect": true,
+    "cause": "Checker v0.2 used paths.previousGate for BOTH immutable role packet G0 original gate0.56 AND immediate successor procedural gate0.58 predecessor gate0.57. The two are different references by design.",
+    "causal_fix": "Separate packetParentGate0.56 from procedural previousGate0.58, with gate0.59 as successor; preserve exact packet, SSC0.49 and traversal0.12 unchanged.",
+    "republish_old_files": false,
+    "source_role_or_physics_changed": false
+  },
+  "original_unchanged": {
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_49.json",
+      "sha": "cdf56a95b04a2f3bff90c68dd49f0618d8e868d8"
+    },
+    "source_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_G0_SOURCE_NATIVE_ROLE_RELATIONS_0_1.json",
+      "sha": "bb8c115f16c43f8b2f3800eecedfeb9d7b718316"
+    },
+    "source_traversal": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_TRAVERSAL_LEDGER_0_12.json",
+      "sha": "c95aaa5cea9e6d83e8cbf1cd70a4c8698d3baa88"
+    }
+  },
+  "verifiers": {
+    "historical_v02": {
+      "path": "experiments/062/tools/verify-l-g0-source-role-and-traversal-reconciliation-0-2.mjs",
+      "sha": "03795cdee8342133afeec23526039c0e8b98533a"
+    },
+    "new_v03": {
+      "path": "experiments/062/tools/verify-l-g0-source-role-and-traversal-reconciliation-0-3.mjs",
+      "sha": "d14b1a348b7bc6826be553e0497c4612fe4bac71"
+    }
+  },
+  "historical_gate0_58": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_58.json",
+    "sha": "1ef64cdfd8f6352382fc7d9f122d556ffc118713"
+  },
+  "higher_stages": {
+    "G0_open": true,
+    "G1_authorized": false,
+    "NEI_pass_authorized": false,
+    "DTS_pass_authorized": false,
+    "cross_track_synthesis_authorized": false
+  },
+  "next": "Cold replay with exact current procedural G0 gate0.59 after no-op source semantic change"
+}

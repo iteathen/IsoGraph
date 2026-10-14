@@ -1,0 +1,45 @@
+{
+  "schema": "isograph.exp062.L.G0.L02.second-original30-hostile-verifier-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "source_commit": "7dd9929c10ec64624aadc4f212dd2298f714b8b8",
+  "run_id": 38082259879,
+  "job_id": 114301422674,
+  "conclusion": "failure",
+  "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38082259879",
+  "previous_failed_run_id": 38082065162,
+  "previous_failed_run_conclusion": "failure",
+  "source_result": {
+    "original_revision": "arXiv:1004.4866v2",
+    "original_PDF_SHA256_verified": true,
+    "source_original_eq_labels_found": 30,
+    "source_pdf_pages": 12,
+    "full_original_L02_source_semantic_cold_pass": false,
+    "existing_191_SSC_membership_preserved": true
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-original-30-eq-boundary-0-2.mjs",
+    "git_blob_sha": "99bd77f98b857a2d9847111dba1f16cd2826c831",
+    "hostiles_defined": 28,
+    "hostiles_rejected": 27,
+    "failed": [
+      {
+        "name": "drop_original_eq30",
+        "kind": "VERIFIER_EXCEPTION",
+        "actual": "TypeError: Cannot read properties of undefined (reading 'other_source_research_still_requires_per_expression_source_fidelity_adjudication')",
+        "cause": "Deleting original last equation row follows else path for non-selected equation and accesses nested object without null guard.",
+        "correction": "Use optional-chain on non-selected source packet details so missing row becomes check failure instead of exception."
+      }
+    ]
+  },
+  "preservation": {
+    "source_items_changed": 0,
+    "source_rows_changed": 0,
+    "old_fails_never_reclassified": true,
+    "not_a_confirmed_original_source_semantic_omission": true,
+    "whole_G0_open": true,
+    "G1_authorized": false,
+    "W_track_untouched": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "isograph.exp062-w01-main-21-22-prepublication-verifier-status-token-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PRESERVED_LOCAL_V8_BASELINE_FAILURE_ZERO_QUALIFIED_MUTATIONS",
+  "scope": "W01 §1 §§2.1–2.2 W005 W027 W028 source successor SSC0.30; 151 membership/coverage and historical 86 W demands",
+  "prepublication_baseline": {
+    "success": false,
+    "errors": [
+      "all 151 W inventory pins"
+    ],
+    "mutations_attempted": 41,
+    "mutations_eligible_for_qualification": 0,
+    "note": "Although 41 mutated fixtures produced validator errors, none count as a qualified adversarial pass until the positive baseline is corrected."
+  },
+  "cause": "Verifier expected register.status to include literal NOT_FROZEN; successor register status uses UNFROZEN with same procedural meaning. Source/register pins were not the failure.",
+  "correction": "Replace arbitrary NOT_FROZEN substring assertion with exactly pinned register.schema and expected complete status string; continue fail-closed source count, 151 item body, and G0-open checks. Run full positive baseline before mutants.",
+  "rejected_claims": [
+    "No adversarial pass claimed from failed baseline",
+    "No source mathematical theorem proved",
+    "No G0 freeze or promotion"
+  ],
+  "historical_input_blobs": {
+    "source": "58cfe934b2cef6c2db0b5e4eca14c7bc1e60eb78",
+    "register": "23a425d58b2bf8b1936a5475c722819c5739b5d2",
+    "coverage": "b18b1a720f48d13d75e74e5480f9d5d53ef50d5b"
+  },
+  "qualification": {
+    "Node": "NOT_RUN",
+    "CI": "NOT_RUN",
+    "third_party": "OWNER_BYPASSED_NOT_PASSED"
+  }
+}

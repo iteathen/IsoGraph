@@ -1,0 +1,134 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.6",
+  "date": "2026-10-08",
+  "status": "L_G0_SECTION2_AND3_SOURCE_CENSUS_0_7_LOCAL_CI_VERIFIED_NOT_SOURCE_COMPLETE_NOT_FROZEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "L",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_5.json",
+    "git_blob_sha": "9b6c8414766ae0a5144ff3b91dc9428125eb96a8",
+    "status": "L_G0_0_5_EXPRESSION_CENSUS_PROVISIONAL_LOCAL_VERIFIER_PASS_NOT_SOURCE_COMPLETE_OR_CI_GREEN"
+  },
+  "source_semantic_census_candidate": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_7.json",
+    "git_blob_sha": "93ab6465bb03c943427d57c0c5f33d3e2bc8b948"
+  },
+  "source_formula_table_ledger": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_1.json",
+    "git_blob_sha": "01fd0aff86aabaab128512117d608386bdc5ebf5"
+  },
+  "source_defect_audit": {
+    "path": "experiments/062/L125_L127_L05_SECTION2_SOURCE_FORMULA_TABLE_CENSUS_DEFECT_0_1.json",
+    "git_blob_sha": "e89d99b8c4925bfdafc7fd3c052da1e6a8b89a64"
+  },
+  "deterministic_adversarial_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l05-section2-tables-0-7.mjs",
+    "git_blob_sha": "806d59d0a4183e6c70ed61e364587977b7c01290"
+  },
+  "prior_L128_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_6.json",
+    "git_blob_sha": "a41f5258a63886a4ec3bf7e216e628ae2c4a51c3"
+  },
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "source_conservation": {
+    "total_L_SSC_items": 191,
+    "changed_since_frozen_0_2": [
+      "L-SSC-125",
+      "L-SSC-126",
+      "L-SSC-127",
+      "L-SSC-128",
+      "L-SSC-129",
+      "L-SSC-130",
+      "L-SSC-131",
+      "L-SSC-132"
+    ],
+    "unchanged_items_from_frozen_0_2": 183,
+    "changed_in_latest_successor": [
+      "L-SSC-125",
+      "L-SSC-126",
+      "L-SSC-127"
+    ],
+    "unchanged_from_0_6": 188,
+    "L05_section2_table_carriers": 6,
+    "L05_section2_signed_source_entries": 168,
+    "L05_section2_operator_formula_rows": 15,
+    "L128_source_formula_rows": 6,
+    "L129_L132_source_expression_rows": 44,
+    "stage_status": "LOCAL_PRIMARY_SOURCE_TRANSCRIPTION_AND_FAIL_CLOSED_REPLAY_ONLY",
+    "source_complete": false,
+    "source_frozen": false,
+    "external_semantic_verification_passed": false
+  },
+  "CI": {
+    "L128_source_0_6": {
+      "run_id": 37806073112,
+      "conclusion": "success",
+      "scope": "six L128 typed formulas plus prior 44 source expression rows and 13 adversarial mutants"
+    },
+    "L125_L127_source_0_7": {
+      "run_id": 37807515374,
+      "conclusion": "success",
+      "scope": "all 168 directly transcribed Eq1 cells, 15 formula metadata, 20 adversarial mutation classes, conservation 188 unchanged items"
+    },
+    "failed_verifier_predecessor": {
+      "run_id": 37807377432,
+      "conclusion": "failure",
+      "defect": "Premature G1 flag escaped mutant; corrected in verified successor."
+    },
+    "external_review": "NOT_PERFORMED"
+  },
+  "known_outstanding_source_obligations": [
+    "L05 §2 Eq(5) exact printed Γ/M coefficient-index block subexpressions remain untranscribed (ledger marks incomplete).",
+    "L05 §2 Cl(0,2) worked example exact gamma matrices and spinor basis signs remain untranscribed.",
+    "Full L05 source sections outside this targeted audit and all L01–L04/L06 items have not earned fresh direct full-source conservation audit.",
+    "Even completed source-body extraction cannot count as primitive/schema or recursive IA closure.",
+    "Current L source-demand corpus and downstream G1/G2/G3/G4/G5 are historical relative to SSC0.7; no hash rebinding."
+  ],
+  "historical_dependency_status": {
+    "L127_corrected_SI_G7": {
+      "path": "experiments/062/L127_G7_TARGETED_CLOSURE_0_2.json",
+      "git_blob_sha": "4cec11048544188a7f61f7a0e2a533330cf7904d",
+      "status": "HISTORICAL_LOCAL_SI_CORRECTED_REPLAY_NOT_GLOBAL_L_SOURCE_COMPLETENESS"
+    },
+    "L129_to_L131": "WAITING_SOURCE_COMPLETE_G0_REPLAY",
+    "L132": "STALE_WAITING_L131_CORRECTED_G7",
+    "L133": "STALE_WAITING_L132_CORRECTED_G7",
+    "L_G6_qualified_hypotheses": "HISTORICAL_SOURCE_TUPLE_ONLY_UNTIL_VALID_G7_REPLAY"
+  },
+  "current_lawful_state": {
+    "G0_source_audit_authorized": true,
+    "G0_replay_partial_verified": true,
+    "G0_full_source_complete": false,
+    "G0_source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G7_authorized": false,
+    "L_primitive_schema_closed": false,
+    "L_recursive_IA_authorized": false,
+    "L_discovery_protocol_authorized": false,
+    "L_W_cross_track_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next_lawful_actions": [
+    "Cold-read the two still-unreconstructed L05 §2 source formula families and preserve each equation/matrix row with exact binder and sign.",
+    "Extend the frozen-source direct census audit across remaining L05 sections, and the frozen L01–L06 corpus without assuming source completeness from previous green verifiers.",
+    "Only after complete G0 source conservation and qualified authority routing freeze the successor source corpus, update source-demand membership, rebuild G1 and all stale descendants.",
+    "Preserve L127 local SI-qualified evidence; replay L129/130/131 → L132 → L133 in their lawful dependency order only when source-complete."
+  ],
+  "nonclaims": [
+    "No G1, G6 or G7 global L qualification.",
+    "No recursive IA or W/L synthesis.",
+    "No full L-source correctness theorem.",
+    "No external semantic review passed.",
+    "No global qualification manifest promotion."
+  ]
+}

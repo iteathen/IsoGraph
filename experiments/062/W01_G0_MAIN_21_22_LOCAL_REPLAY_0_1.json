@@ -1,0 +1,130 @@
+{
+  "schema": "isograph.exp062-w01-main-21-22-local-source-replay.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_DETERMINISTIC_SOURCE_RECONSTRUCTION_PASS_38_OF_38_MUTATIONS_REJECTED_NOT_NODE_CI",
+  "source": {
+    "id": "W01",
+    "frozen_revision": "arXiv:2104.05099v2",
+    "printed_pages": [
+      3,
+      4,
+      5
+    ],
+    "pdf_indices": [
+      2,
+      3,
+      4
+    ],
+    "author_copy_byte_identical": "NOT_VERIFIED"
+  },
+  "predecessor": {
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_29.json",
+      "git_blob_sha": "801b83c0ef323233f4e2feab926ff63f0ad4fa13"
+    },
+    "stage": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_56.json",
+      "git_blob_sha": "ded8d5fa71528e9536644efa6447e6089a4ba9e5"
+    }
+  },
+  "successor": {
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_30.json",
+      "git_blob_sha": "58cfe934b2cef6c2db0b5e4eca14c7bc1e60eb78"
+    },
+    "demand": {
+      "path": "experiments/062/W_G0_W01_MAIN_SOURCE_DEMAND_PROJECTION_0_16.json",
+      "git_blob_sha": "5415ad2e1e6491e89657e0f2d59804108f6bf163"
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_16.json",
+      "git_blob_sha": "23a425d58b2bf8b1936a5475c722819c5739b5d2"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_15.json",
+      "git_blob_sha": "b18b1a720f48d13d75e74e5480f9d5d53ef50d5b"
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_57.json",
+      "git_blob_sha": "75c2927216a9d4f0452f695bae97a33f06550ac5"
+    }
+  },
+  "source_oracle": {
+    "path": "experiments/062/W01_G0_21_22_SOURCE_ROLE_ORACLE_0_1.json",
+    "git_blob_sha": "edb03bb27474f42c8988655640e2fd32078cc537"
+  },
+  "source_defect": {
+    "path": "experiments/062/W01_G0_21_22_SOURCE_ROLE_OMISSIONS_DEFECT_0_1.json",
+    "git_blob_sha": "7cf0f0898c257c3add03c08575daa0ce52fe5a0d"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w01-main-source-21-22-0-2.mjs",
+    "git_blob_sha": "add9a6df732fad438c5d497be53f8030b1f233fa"
+  },
+  "CI_workflow": {
+    "path": ".github/workflows/experiment-062-w01-main-source-21-22-0-2.yml",
+    "git_blob_sha": "fc4cbdfe9c4542b95d8790599943ee47f1110f11"
+  },
+  "positive_controls": {
+    "source_items": 151,
+    "W_source_changed": [
+      "W-SSC-005",
+      "W-SSC-027",
+      "W-SSC-028"
+    ],
+    "other_W_source_items_unchanged": 148,
+    "source_incidents_added": 9,
+    "W01_total_incidents": 101,
+    "historical_W_demand_members": 86,
+    "changed_historical_demand_items": [
+      "W-SSC-027",
+      "W-SSC-028"
+    ],
+    "other_historical_W_demands_unchanged": 84,
+    "register_rows": 151,
+    "coverage_rows": 151
+  },
+  "adversarial_controls": {
+    "mutations_total": 38,
+    "rejected": 38,
+    "escaped": [],
+    "positive_baseline_pass": true,
+    "exceptions": []
+  },
+  "preserved_prepublication_baseline_failures": [
+    {
+      "path": "experiments/062/W01_MAIN_G0_VERIFIER_STATUS_BASELINE_DEFECT_0_1.json",
+      "git_blob_sha": "25cdb450d1dbe9d00d25ebddcccac3998e0eae1c"
+    },
+    {
+      "path": "experiments/062/W01_MAIN_G0_VERIFIER_SECOND_STATUS_BASELINE_DEFECT_0_1.json",
+      "git_blob_sha": "0abe249044601659290e2e06a071cf628a8ce1a5"
+    },
+    {
+      "path": "experiments/062/W01_MAIN_G0_VERIFIER_POLICY_BOOLEAN_CHAIN_DEFECT_0_1.json",
+      "git_blob_sha": "b88a2702ca8045f38894ed03cf2a136688212df3"
+    },
+    {
+      "path": "experiments/062/W01_MAIN_G0_VERIFIER_FOURTH_FIXTURE_STATUS_DEFECT_0_1.json",
+      "git_blob_sha": "e4ef81000e508166a9bcdc70e84f6b0bb937ba0f"
+    }
+  ],
+  "limitations": {
+    "source_only_three_printed_pages": true,
+    "W01_original_all48page_reverse_complete": false,
+    "nine_source_reverse_complete": false,
+    "mutable_Oct03_original_bytes_verified": false,
+    "all151_semantic_demands_qualified": false,
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "No mathematical proof of printed quotient or compactification groups",
+    "No full G0 source conservation conclusion",
+    "Local V8 replay is not committed Node CI",
+    "No W/L cross-track synthesis"
+  ]
+}

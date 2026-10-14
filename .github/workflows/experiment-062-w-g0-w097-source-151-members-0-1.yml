@@ -1,0 +1,34 @@
+name: Experiment 062 W G0 W097 source and all-151 census 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_15.json'
+      - 'experiments/062/W_G0_W097_SOURCE_DEMAND_PROJECTION_0_5.json'
+      - 'experiments/062/W05_W097_PRIMARY_SOURCE_TYPED_INCIDENCE_ORACLE_0_1.json'
+      - 'experiments/062/W_G0_ALL_151_DEMAND_MEMBERSHIP_DEFECT_0_1.json'
+      - 'experiments/062/W097_G0_REGISTER_VERIFIER_MISSING_MEMBER_DEFECT_0_1.json'
+      - 'experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_1.json'
+      - 'experiments/062/W097_G0_PROJECTIVE_COORDINATE_FINITE_REPLAY_0_1.json'
+      - 'experiments/062/tools/verify-w-g0-w097-151-member-0-1.mjs'
+      - 'experiments/062/tools/verify-w097-projective-coordinate-source-0-1.mjs'
+      - 'experiments/062/W097_G0_SOURCE_151_MEMBERSHIP_LOCAL_REPLAY_0_1.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_41.json'
+      - '.github/workflows/experiment-062-w-g0-w097-source-151-members-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w05-w103-strict-hodge-source-0-2.mjs
+      - run: node experiments/062/tools/verify-w05-w109-completed-local-ring-source-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-exact-source-equations-0-1.mjs
+      - run: node experiments/062/tools/verify-w02-late-source-expressions-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g-stage-hostile-audit-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g4-historical-independent-0-1.mjs
+      - run: node experiments/062/tools/verify-w-g0-w097-151-member-0-1.mjs
+      - run: node experiments/062/tools/verify-w097-projective-coordinate-source-0-1.mjs

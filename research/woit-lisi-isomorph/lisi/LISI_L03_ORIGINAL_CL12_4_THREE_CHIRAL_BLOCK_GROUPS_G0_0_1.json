@@ -1,0 +1,191 @@
+{
+  "schema": "isograph.track-L.G0.L03-original-Eq3_2-Eq4_1-Eq4_2-Clifford-chiral-extension.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_primary": {
+    "id": "L03",
+    "revision": "arXiv:1006.4908v1",
+    "source_PDF": "https://arxiv.org/pdf/1006.4908v1",
+    "SHA256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "pdf_total_pages": 14,
+    "source_pages_exact_original": {
+      "original_pdf_page_zero_based_6": {
+        "original_pdftotext_layout_page_SHA256": "343c62aaf8e349f371d37efec8077f2fc29f3cebc154f1fff09a94f58b6cfeef",
+        "source_layout_blocks": 4,
+        "nonblank_lines": 49
+      },
+      "original_pdf_page_zero_based_9": {
+        "original_pdftotext_layout_page_SHA256": "bf1ddb0b3ec39131d895136f0e46fda47e1a97224501506f33c7a6a21eb28471",
+        "source_layout_blocks": 12,
+        "nonblank_lines": 40
+      },
+      "original_pdf_page_zero_based_10": {
+        "original_pdftotext_layout_page_SHA256": "ef80733d9d84119ad6b8dc87c84f9deb77254309cef87d69737e8fe8b108a1fa",
+        "source_layout_blocks": 11,
+        "nonblank_lines": 68
+      }
+    }
+  },
+  "original_visual_oracle": {
+    "run_id": 38098981415,
+    "job_id": 114350756436,
+    "head_sha": "2a570db518b09c58e4bbda0f8ce1a16175128866",
+    "conclusion": "success",
+    "exact_source_PDF_sha256_checked": true,
+    "source_pages_visually_read": [
+      7,
+      10,
+      11
+    ],
+    "source_claims_original_pdf_mathematics_not_independently_proved": true
+  },
+  "original_first_groups": {
+    "L03-S018": {
+      "equation": "3.2",
+      "source_PDF_page_zero_based": 6,
+      "SSC_owners": [
+        "L-SSC-007",
+        "L-SSC-072"
+      ],
+      "original_claim": "Cl(11,3) spin bivector Γ_ij on R128 is block-diagonal in positive/negative 64-real chirality",
+      "Cl11_3_source_bivector": "Gamma_ij=Gamma_i Gamma_j (i<j)",
+      "block_diagonal_matrix_128": [
+        [
+          "GammaPlus_ij",
+          "0"
+        ],
+        [
+          "0",
+          "GammaMinus_ij"
+        ]
+      ],
+      "positive_chiral_block_dimension_real": 64,
+      "negative_chiral_block_dimension_real": 64,
+      "positive_spinor_action": "GammaPlus_ij on real positive-chiral Majorana-Weyl 64R basis",
+      "independent_bivector_basis_count": 91,
+      "source_assertion_modality": "CHOSEN_REAL_CLIFFORD_REPRESENTATION_EXACT_SOURCE_MATRIX_BLOCKS"
+    },
+    "L03-S029": {
+      "equation": "4.1",
+      "source_PDF_page_zero_based": 9,
+      "SSC_owners": [
+        "L-SSC-080"
+      ],
+      "original_claim": "Source constructs Cl(12,4) real R256 by adjoining two chosen Pauli factors to earlier R128 Cl(11,3) matrices",
+      "sixteen_generator_families": [
+        [
+          "i=1..14",
+          "GammaPrime_i=sigma1 tensor Gamma_i"
+        ],
+        [
+          "15",
+          "GammaPrime_15=sigma1 tensor Gamma"
+        ],
+        [
+          "16",
+          "GammaPrime_16=-i sigma2 tensor 1"
+        ]
+      ],
+      "old_14_Cl11_3_product": "Gamma=Gamma1 Gamma2 ... Gamma14=sigma3 tensor 1",
+      "Gamma_chirality_diagonal_blocks": [
+        1,
+        -1
+      ],
+      "source_real_clifford_dimension": 256,
+      "Clifford_source_signature": [
+        12,
+        4
+      ],
+      "author_modality": "ORIGINAL_SOURCE_CHOSEN_CLIFFORD_MATRIX_EXTENSION_NOT_PROOF_OF_PHYSICAL_EMBEDDING"
+    },
+    "L03-S030": {
+      "equation": "4.2",
+      "source_PDF_page_zero_based": 10,
+      "SSC_owners": [
+        "L-SSC-080"
+      ],
+      "original_claim": "All 120 Spin(12,4) bivectors as R256 and their positive-chiral R128 source restrictions with explicit diagonal/offdiagonal signs",
+      "R256_bivector_families": [
+        [
+          "ij 1<=i<j<=14",
+          "GammaPrime_ij=1 tensor Gamma_ij"
+        ],
+        [
+          "i15 i=1..14",
+          "GammaPrime_i15=1 tensor Gamma_i Gamma"
+        ],
+        [
+          "i16 i=1..14",
+          "GammaPrime_i16=sigma3 tensor Gamma_i"
+        ],
+        [
+          "1516",
+          "GammaPrime_1516=sigma3 tensor Gamma"
+        ]
+      ],
+      "positive_chiral_R128_restriction_families": [
+        [
+          "ij",
+          "GammaPrimePlus_ij=Gamma_ij",
+          "[[GammaPlus_ij,0],[0,GammaMinus_ij]]"
+        ],
+        [
+          "i15",
+          "GammaPrimePlus_i15=Gamma_i Gamma",
+          "[[0,-GammaPlus_i],[GammaMinus_i,0]]"
+        ],
+        [
+          "i16",
+          "GammaPrimePlus_i16=Gamma_i",
+          "[[0,GammaPlus_i],[GammaMinus_i,0]]"
+        ],
+        [
+          "1516",
+          "GammaPrimePlus_1516=Gamma",
+          "[[1,0],[0,-1]]"
+        ]
+      ],
+      "family_source_counts": {
+        "1516": 1,
+        "ij": 91,
+        "i15": 14,
+        "i16": 14,
+        "total": 120
+      },
+      "Spin12_4_positive_chiral_real_spinor_dimension": 128,
+      "source_partition_independent_R256_vs_R128": true,
+      "author_modality": "ORIGINAL_SOURCE_CHOSEN_REPRESENTATION_AND_CARRIER_DIMENSIONS_NOT_E8_PHYSICS_PROOF"
+    }
+  },
+  "scope_and_method": {
+    "original_source_47_covered_groups_unchanged": true,
+    "three_genuine_prior_underindexed_matrix_binder_groups_reconstructed": 3,
+    "other_remaining_exact_groups": [
+      "L03-S015",
+      "L03-S017",
+      "L03-S019",
+      "L03-S021"
+    ],
+    "source_exact_original_groups_old_pending": 7,
+    "source_exact_original_groups_after_scope": 4,
+    "other_old_source_first_groups_wholly_unchanged": 44,
+    "original_SSC_changed_existing_ids": [
+      "L-SSC-007",
+      "L-SSC-072",
+      "L-SSC-080"
+    ],
+    "other_old_global_SSC_items_entirely_unchanged": 188,
+    "new_source_typed_ID_count": 0,
+    "systematic_failure": "FORMULA_LABEL_AND_REPRESENTATION_DIMENSION_SUMMARY_SUPPRESSED_EXACT_POSITIVE_CHIRAL_BLOCKS_SIGNED_SOURCE_TENSOR_PRODUCT",
+    "systemic_correction": "Independently inspect original source printed 3.2,4.1,4.2 matrix cell/block signs and source chirality carrier, preserve ordered Pauli tensor factors and 91+14+14+1 count; source record remains original author's claim even if underlying Clifford/E8 assertions unresolved. Check other exact-source tables with same method.",
+    "preserved_beyond_this_round": "Do not mark 18 six-factor R64 Eq2.8 rows, fourteen Cl11,3 Eq3.1 source vectors, 18 GraviGUT Eq3.3 bivector combinations or Eq3.4 Pati-Salam conversion as fully original-exact merely because Eq3.2/4.1/4.2 carrier equations are source-accurate."
+  },
+  "independent_source_math_check": "From exact source Eq4.1 generators, Pauli σ1(-iσ2)=σ3 and σ1²=1 imply all Eq4.2 four bivector tensor signs with 91+14+14+1=120, checked only as transcription fidelity, not author physical theory proof.",
+  "G0_frozen": false,
+  "G0_complete": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

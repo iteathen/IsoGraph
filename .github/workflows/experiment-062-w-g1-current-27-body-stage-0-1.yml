@@ -1,0 +1,27 @@
+name: Experiment 062 W G1 27 body current source stage 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_6.json'
+      - 'experiments/062/tools/verify-w-g1-current-27-body-stage-0-1.cjs'
+      - '.github/workflows/experiment-062-w-g1-current-27-body-stage-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-current-27-body-stage-0-1.cjs
+      - name: Exact current W 27/151 original G1 source stage, 22 hostiles and full prior record conservation
+        run: node experiments/062/tools/verify-w-g1-current-27-body-stage-0-1.cjs
+      - name: Original March 5 W04a G1 source and 28 hostile
+        run: node experiments/062/tools/verify-w-g1-w04a-059-061-0-4.cjs
+      - name: Frozen W G0 original 151 source and stage integrity
+        run: |
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

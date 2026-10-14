@@ -1,0 +1,172 @@
+{
+  "schema": "isograph.lisi-l05-f4-eq17-g0-source-literal.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "L05_SECTION4_3_EQ17_FOUR_COMPONENT_SOURCE_TRANSCRIBED_OPERATOR_SEMANTICS_OPEN",
+  "authority": false,
+  "source_source_semantically_complete": false,
+  "source_census_frozen": false,
+  "G1_authorized": false,
+  "global_mathematical_qualification": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L05",
+    "author": "A. Garrett Lisi",
+    "title": "Division Algebras, Triality, and Exceptional Magic",
+    "published": "2026-08-29 journal version of record",
+    "doi": "10.1007/s00006-026-01447-5",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "section": "§4.3",
+    "page": "printed page 19/51, zero-based PDF page 18",
+    "eq": "(17)",
+    "real_form": "ordinary source f4(-52) ONLY",
+    "modality": "AUTHOR_ASSERTED_LIE_BRACKET_COMPONENTS_NOT_MATHEMATICALLY_QUALIFIED"
+  },
+  "parents": {
+    "Eq15_Eq16_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_F4_EQ15_EQ16_SOURCE_G0_0_1.json",
+      "git_blob_sha": "45aaaa3420fccc708d8249578b8380bcd6ed06a9"
+    },
+    "current_SSC_015": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_15.json",
+      "git_blob_sha": "3b9614158895b41b815319e3be82f4048c751fc8"
+    },
+    "current_G0_gate_016": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_16.json",
+      "git_blob_sha": "fd6f8a93c38c0f40342684d61e786d6ce4134b4d"
+    },
+    "Eq1_source_table": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    }
+  },
+  "context": {
+    "starting_source_display": "[A(B1,v1,psi1,chi1),A(B2,v2,psi2,chi2)] = A(B3,v3,psi3,chi3)",
+    "generators_roles": [
+      "B is bi-product/chiral bivector operator, not a plain associative octonion",
+      "v source vector role",
+      "psi source negative-spinor role",
+      "chi source positive-spinor role"
+    ],
+    "ordered_product": "The B_i act as compositional operators; cannot rewrite B_i*psi as ordinary octonion multiplication or reassociate factors across the source's parentheses.",
+    "conjugation": "tilde(e_0)=e_0; tilde(e_i)=-e_i for i>0; never treat tilde as an inverse or untyped sign.",
+    "source_triality_action": "t and t² act on B operators, but neither their all-and-only generating semantics nor matrix/index transport is primitive-closed by this packet.",
+    "scoping": "ordinary O and compact real form only for Eq(17). Split-O' and f4(-20) sign families remain distinct source cases and are not inferred from this bracket.",
+    "signature": "No blanket replacement of ∓ or metric of Eq(16) by named Lie-algebra knowledge.",
+    "non_associativity": "source explicitly orders right action before left via a nested product."
+  },
+  "diagonal_operator_source": [
+    {
+      "id": "L4-EQ17-BM",
+      "lhs": "B_M",
+      "rhs": "-1/2*B^{ab}*tilde(e_a)*e_b",
+      "source_loc": "§4.3 opening of printed p19",
+      "status": "SOURCE_ASSERTION_OPERATOR_ACTION_NOT_PRIMITIVE_CLOSED"
+    },
+    {
+      "id": "L4-EQ17-BP",
+      "lhs": "B_P=t(B_M)",
+      "rhs_1": "-1/2*B^{ab}*t_{ab}^{cd}*tilde(e_c)*e_d",
+      "rhs_2": "-1/2*B^{ab}*e_a*tilde(e_b)",
+      "status": "SOURCE_EQUALITIES_WITH_UNRESOLVED_t_AUXILIARY"
+    },
+    {
+      "id": "L4-EQ17-BV",
+      "lhs": "B_V=t(B_P)=t²(B_M)",
+      "rhs_1": "-1/2*B^{ab}*t_{ab}^{cd}*e_c*tilde(e_d)",
+      "rhs_2": "-1/2*B^{ab}*(t²)_{ab}^{cd}*tilde(e_c)*e_d",
+      "status": "SOURCE_EQUALITIES_WITH_UNRESOLVED_t2_AUXILIARY"
+    }
+  ],
+  "eq17_components": [
+    {
+      "id": "L4-EQ17-B3",
+      "lhs": "B3",
+      "rhs": "B1*B2-B2*B1-(tilde(v1)*v2-tilde(v2)*v1)-t²(tilde(psi1)*psi2-tilde(psi2)*psi1)-t(tilde(chi1)*chi2-tilde(chi2)*chi1)",
+      "term_order": [
+        "B1 B2",
+        "-B2 B1",
+        "- vector-pair",
+        "-t² negative-spinor-pair",
+        "-t positive-spinor-pair"
+      ],
+      "result_role": "bivector"
+    },
+    {
+      "id": "L4-EQ17-V3",
+      "lhs": "v3",
+      "rhs": "t²(B1)*v2-t²(B2)*v1+tilde(chi1)*tilde(psi2)-tilde(chi2)*tilde(psi1)",
+      "term_order": [
+        "t²(B1) v2",
+        "-t²(B2) v1",
+        "+mixed chi/psi",
+        "-mixed chi/psi"
+      ],
+      "result_role": "vector"
+    },
+    {
+      "id": "L4-EQ17-PSI3",
+      "lhs": "psi3",
+      "rhs": "B1*psi2-B2*psi1+tilde(v1)*tilde(chi2)-tilde(v2)*tilde(chi1)",
+      "term_order": [
+        "B1 psi2",
+        "-B2 psi1",
+        "+mixed vector/chi",
+        "-mixed vector/chi"
+      ],
+      "result_role": "negative_spinor"
+    },
+    {
+      "id": "L4-EQ17-CHI3",
+      "lhs": "chi3",
+      "rhs": "t(B1)*chi2-t(B2)*chi1+tilde(psi1)*tilde(v2)-tilde(psi2)*tilde(v1)",
+      "term_order": [
+        "t(B1) chi2",
+        "-t(B2) chi1",
+        "+mixed psi/vector",
+        "-mixed psi/vector"
+      ],
+      "result_role": "positive_spinor"
+    }
+  ],
+  "ordered_composition_example": {
+    "source_role": "B1 acting on psi2 by right-octonion multiplication first; source shows explicit ψ2^c factor and nested e_b e_c product.",
+    "source_formula": "B1*psi2=-1/2*B1^{ab}*psi2^c*tilde(e_a)*(e_b*e_c)",
+    "ordered_AST": {
+      "outer": {
+        "operator": "left-multiply by tilde(e_a)",
+        "operand": "(e_b*e_c)"
+      },
+      "inner": "e_b*e_c",
+      "evaluation": [
+        "multiply rightmost e_b*e_c",
+        "then multiply on the left by tilde(e_a)",
+        "apply scalar coefficients -1/2 B1^{ab} psi2^c"
+      ]
+    },
+    "free_result": "ordinary-octonion typed negative-spinor source role in compact f4(-52) scope only; no field/group module qualified"
+  },
+  "negative_evidence": {
+    "Eq1_ordinary_O_printed_conflict": "e6*e7=-e2 and e7*e6=-e2, as published; do not adopt mathematical repair cell",
+    "Eq2_3_source_clifford_failure": "7 of 36 unordered Clifford generator pairs and 28 matrix entries fail under frozen ordinary O",
+    "Eq4_ordinary_O_cycles": "4 of 512 ordinary-O source M-coefficient triples fail, four Γ members not fully tested",
+    "Eq5_bivector_Lie_failure": "168 of 378 source upper-bivector commutators fall outside source 28D generating span with original O table",
+    "Eq17_full_f4_semantic_reconstruction": "NOT_ESTABLISHED: t/t² source actions and compositional bilinear maps unqualified; Eq17 syntax-only",
+    "source_unchanged": true,
+    "stage_G1_authorized": false,
+    "external_verification_passed": false
+  },
+  "unreconstructed_primary_source": [
+    "Eq17 direct source matrix component identities are transcribed as text; exact 3x3 octonionic compositions require source-defined nonassociative operator representations, not naive matrix multiplication.",
+    "Eq17 t/t² action laws and indices remain unexpanded with ordered input/output roles.",
+    "§4.3 reflection matrices R_v^u, R_m^u, R_p^u and their actions on γ_ab immediately after Eq(17) remain to be cold transcribed.",
+    "Remaining §4.3 trials, triality phases, root maps, source f4 real forms, and all other L01–L06 sections require independent full audit."
+  ],
+  "next_lawful_step": "Verify exact printed Eq17 four component strings and three diagonal operator roles with source-conditional negative controls and old source-census pins. Preserve G0 only, and only then consider one-body L133 SSC successor without G1 promotion.",
+  "source_transcription_defect_repair": {
+    "path": "experiments/062/L133_EQ17_PSI_CONJUGATION_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "status": "EXACT_OPERAND_REPAIRED_PENDING_SOURCE_VERIFICATION",
+    "adopted_author_source_only": true
+  }
+}

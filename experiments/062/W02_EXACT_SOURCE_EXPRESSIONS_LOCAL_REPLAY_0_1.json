@@ -1,0 +1,66 @@
+{
+  "schema": "isograph.exp062-w02-exact-source-expressions-local-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "V8_LOCAL_31_31_ADVERSARIAL_CONTROLS_REJECTED_NODE_CI_NOT_AT_CREATION",
+  "authority": false,
+  "input_source": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_12.json",
+    "git_blob_sha": "94ba7b0c94148651b765f0873bc70bf3d46d2404"
+  },
+  "source_successor": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_13.json",
+    "git_blob_sha": "d63a1a71492cb1ea3f5f5be6dc28d83645f395fc"
+  },
+  "prior_W_projection": {
+    "path": "experiments/062/W_G0_W109_SOURCE_DEMAND_PROJECTION_0_2.json",
+    "git_blob_sha": "a023e1b5397a025887d086879f7f4573f84c0dfa"
+  },
+  "W_projection_candidate": {
+    "path": "experiments/062/W_G0_W02_SOURCE_DEMAND_PROJECTION_0_3.json",
+    "git_blob_sha": "ecb6b8a3aa57c0982ca5f79ea2361d7b66a12a26"
+  },
+  "defect": {
+    "path": "experiments/062/W02_SIX_EXACT_SOURCE_EXPRESSIONS_G0_DEFECT_0_1.json",
+    "git_blob_sha": "0c4399cc6e75dd5e34911d2509298216bd57425e"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w02-exact-source-equations-0-1.mjs",
+    "git_blob_sha": "b62f1478e63e7df6b16aa13b82e7e69ba684b08b"
+  },
+  "method": "GitHub-fetched exact source and demand JSON verified in internal V8 with same validator/mutation functions serialized in Node verifier. Node and CI not exercised at record creation.",
+  "result": {
+    "positive_errors": [],
+    "adversarial_total": 31,
+    "rejected": 31,
+    "escaped": 0,
+    "W_source_count": 151,
+    "W_source_changed": 6,
+    "W_source_other_unchanged": 145,
+    "prior_W_unresolved_projection_count": 86,
+    "prior_W_demand_changed": 5,
+    "prior_W_demand_other_unchanged": 81
+  },
+  "qualification": {
+    "W131_modified_source_without_old_demand_projection_membership": true,
+    "all_151_demand_membership_rebuild_pending": true,
+    "source_full_audit_complete": false,
+    "G0_frozen": false,
+    "G1_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "source_identity": {
+    "arxiv_v2_PDF_inspected": true,
+    "arxiv_v2_HTML_inspected": true,
+    "PDF_dateline": "December 14, 2023",
+    "HTML_display_date": "August 24, 2026",
+    "HTML_PDF_display_dates_match": false,
+    "PDF_revision_primary": true
+  },
+  "nonclaims": [
+    "W source census remains unfrozen",
+    "No W131 resolved primitive",
+    "No W/L semantics added",
+    "Not independent Node verification"
+  ]
+}

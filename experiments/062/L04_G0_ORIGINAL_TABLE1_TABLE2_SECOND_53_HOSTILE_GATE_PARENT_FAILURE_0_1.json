@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-weight-source-second-CI-gate-predecessor-schema-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_CI": {
+    "run_id": 38073853172,
+    "job_id": 114276616809,
+    "head_sha": "0bcfe392dab5b76f758dffbd6f6c356fcb026ae7",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38073853172",
+    "conclusion": "failure",
+    "status": "completed"
+  },
+  "observed": {
+    "baseline_error": [
+      "exact G0 procedural gate ancestor"
+    ],
+    "hostiles_defined": 53,
+    "hostiles_rejected": 53,
+    "all_Table1_Table2_original_weight_data_checks_passed": true,
+    "all_6_changed_L_SSC_bodies_guarded": true,
+    "remaining_original_exact_L04_groups": 14
+  },
+  "root_cause": {
+    "class": "VERIFIER_STALE_PREDECESSOR_GATE_SCHEMA_LITERAL",
+    "specific": "Verifier0.2 read the actual original predecessor file L_CURRENT_STAGE_GATE_0_86.json but still asserted that its schema was v0.85. Current gate0.87 versus original 0.86 is a valid exact successor; not evidence of source semantic omission.",
+    "systemic_method_fix": "Test file-bound exact previous-stage schema against its actual version and current gate schema, plus a separate immediate predecessor SHA/path. Avoid applying string substitutions to both historical and current version schema checks as if they refer to one stage."
+  },
+  "initial_failure_retained": {
+    "run_id": 38073635148,
+    "head_sha": "c0e449c71caad16363469fc97736746225185e72",
+    "conclusion": "failure",
+    "failure_packet_sha": "3162f4ba0d415c5998649a6092d4aeee7cdd8b12"
+  },
+  "source_original_semantics_modified_by_this_failure": false,
+  "SSC0_56_source_identities_preserved": 191,
+  "whole_SSC_source_bodies_changed_this_fix": 0,
+  "G0_open": true,
+  "G1_authorized": false,
+  "W_semantics_not_imported": true,
+  "PR70_merge_not_authorized": true
+}

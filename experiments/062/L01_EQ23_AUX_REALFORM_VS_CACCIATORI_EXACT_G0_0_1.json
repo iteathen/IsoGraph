@@ -1,0 +1,163 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.original-matrix-vs-cited-compact-aux-realform.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "title": "Uniqueness and indefinite signature of invariant symmetric forms for source-assisted Eq2.3 integer-rescaled real spans",
+  "original_source": {
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "PDF_page_zero_based": 6,
+    "original_equation": "2.3",
+    "source_location": "L01-S014",
+    "SSC_owner": "L-SSC-029",
+    "frozen_source_fixture": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "fixture_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "original_PDF_sha256_from_prior_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "original_page_directly_viewed_this_pass": true,
+    "original_PDF_binary_rehashed_this_pass": false,
+    "independent_cold_matrix_transcription_complete": false
+  },
+  "cited_source": {
+    "title": "Euler angles for G2",
+    "authors": "S. L. Cacciatori et al.",
+    "revision": "arXiv:hep-th/0503106v2",
+    "url": "https://arxiv.org/pdf/hep-th/0503106",
+    "original_pages_zero_based": [
+      4,
+      5
+    ],
+    "direct_original_pages_inspected": true,
+    "source_basis_normalization": "Tr(C_i C_j)=-4 delta_ij",
+    "real_compact_basis": "Fourteen 7x7 real skew-symmetric matrices obtained from infinitesimal octonion automorphisms; real span preserves Euclidean I_7",
+    "independent_full_14_source_matrix_cold_transcription": false,
+    "basis_conjugacy_not_claimed": true
+  },
+  "scope": {
+    "b1": "Frozen assisted source 49 cells, after invertible non-real source-generator scalar rescalings to integer matrices",
+    "b2": "Project-only comparison that changes six first-row q/qbar integer coefficients; not author source",
+    "caution": "Original Cartan g3/g8 are multiplied by non-real -2i and -2i sqrt3. Their auxiliary real matrix spans are not a qualified real-form description of Lisi's source or physics.",
+    "source_claim_modified": false,
+    "qualified_source_real_form": false
+  },
+  "proof": {
+    "invariant_equations": "For each of 14 integer-rescaled matrices A and symmetric H, A^T H+H A=0. Symmetric H has 28 scalar unknowns and 686 linear constraints.",
+    "source_b1": {
+      "H": "H00=1; H12=H21=H34=H43=H56=H65=1; remaining entries=0 (zero-based)",
+      "determinant": "-1",
+      "signature": [
+        4,
+        3
+      ],
+      "nonzero_minor27": "-16384"
+    },
+    "project_b2": {
+      "H": "H00=1; H12=H21=H34=H43=H56=H65=2; remaining entries=0 (zero-based)",
+      "determinant": "-64",
+      "signature": [
+        4,
+        3
+      ],
+      "nonzero_minor27": "-32768"
+    },
+    "minor_rows_zero_based": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      11,
+      12,
+      13,
+      17,
+      18,
+      19,
+      20,
+      24,
+      27,
+      32,
+      33,
+      40,
+      48,
+      50,
+      51,
+      57,
+      65,
+      75,
+      83,
+      125,
+      206,
+      395
+    ],
+    "minor_cols_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27
+    ],
+    "inference": "Exact nonzero 27x27 minor gives rank at least 27; displayed nonzero H in kernel gives rank at most 27. Hence both have a one-dimensional invariant symmetric form space over Q and R.",
+    "exact_auxiliary_g3_diag": "[0,0,0,1,-1,-1,1]",
+    "exact_auxiliary_g3_trace_square": "4",
+    "disproof_real_GL7_similarity_to_cited_compact": "Any real linear combination of real skew-symmetric Cacciatori matrices has Tr(X^2)<=0; trace square is invariant under real similarity. Our auxiliary real matrix span contains g3 with Tr(g3^2)=4. Thus no real GL7 similarity plus real Lie-generator recombination identifies these displayed real spans.",
+    "complex_change_of_basis": "NOT TESTED; not ruled out",
+    "physical_signature_or_emergent_spacetime_claim": "NONE"
+  },
+  "replay": {
+    "script": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_auxiliary_realform_0_1.mjs",
+    "script_git_blob_sha": "46e186f415a2d5d39fc178539d9733c7c63a7c18",
+    "output": "experiments/062/L01_EQ23_AUX_REALFORM_EXACT_LOCAL_OUTPUT_0_1.json",
+    "output_git_blob_sha": "784f511d6d137b9176c16a73fce01e67bd52cc2a",
+    "exact_GitHub_blob_script_executed_with_only_file_loading_adapted": true,
+    "independently_recomputed_in_SymPy": true,
+    "SymPy_constraint_ranks_for_b1_b2": [
+      27,
+      27
+    ],
+    "negative_controls_rejected": 10,
+    "negative_controls_defined": 10
+  },
+  "governance": {
+    "SSC": "0.96",
+    "SSC_items": 191,
+    "all_six_source_groups": 350,
+    "L01_source_groups": 98,
+    "full_original_cold_reviews": 0,
+    "L01_exact_visual_groups_still_open": 16,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "Woit_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "external_sources": "Garrett Lisi 2007; Cacciatori et al. 2005",
+    "research_formalization": "agent-assisted",
+    "date": "2026-10-13"
+  }
+}

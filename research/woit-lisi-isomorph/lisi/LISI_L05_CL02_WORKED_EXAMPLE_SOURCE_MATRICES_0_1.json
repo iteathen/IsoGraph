@@ -1,0 +1,238 @@
+{
+  "schema": "isograph.lisi-l05-cl02-worked-example-exact-source-matrix-ledger.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "SOURCE_VERBATIM_CL02_SPARSE_MATRIX_TRANSCRIPTION_G0_CANDIDATE_NOT_FROZEN_NOT_QUALIFIED",
+  "authority": false,
+  "authority_effect": "NONE_DIRECT_SOURCE_PRESERVATION_ONLY",
+  "frozen_source": {
+    "id": "L05",
+    "revision": "A. Garrett Lisi (2026-08-29), Division Algebras, Triality, and Exceptional Magic",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "locator": "§2, printed page 5 of 51, Cl(0,2) example directly after Eq.(5), before §3",
+    "method": "Direct examination of published PDF matrix-layout image, matched against Eq.(2) chiral block construction. Sparse blanks represent zero entries; this is source representation incidence, not independently verified theorem."
+  },
+  "inputs": {
+    "section2_source_ledger": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "git_blob_sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "L_SSC": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_8.json",
+      "git_blob_sha": "1a9af092429fa179ba5dd34c14c5691ddb91045e"
+    },
+    "stage_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_8.json",
+      "git_blob_sha": "5d6b3466165c2e9e8e1ba76ca28cfc385fdb279e"
+    }
+  },
+  "source_coefficient_claims": [
+    {
+      "indexed": "M_(0 0)^(tilde 0)",
+      "value": 1
+    },
+    {
+      "indexed": "M_(0 1)^(tilde 1)",
+      "value": -1
+    },
+    {
+      "indexed": "M_(1 0)^(tilde 1)",
+      "value": -1
+    },
+    {
+      "indexed": "M_(1 1)^(tilde 0)",
+      "value": -1
+    }
+  ],
+  "source_matrix_chain": {
+    "division_algebra": "C",
+    "signature_choice": "Cl(0,2) source chooses minus sign in chiral block Eq.(2)",
+    "matrix_Gamma_0": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "matrix_Gamma_1": [
+      [
+        0,
+        -1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "source_transpose_rule": "barGamma_c=n_cc transpose(Gamma_c); n_00=n_11=1 for ordinary C",
+    "matrix_barGamma_0": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "matrix_barGamma_1": [
+      [
+        0,
+        -1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "chiral_gamma_rule": "gamma_c = [[0,-barGamma_c],[Gamma_c,0]]",
+    "matrix_gamma_0": [
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ]
+    ],
+    "matrix_gamma_1": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "matrix_shape": {
+      "Gamma": [
+        2,
+        2
+      ],
+      "gamma": [
+        4,
+        4
+      ]
+    },
+    "equality_scope": "Exactly the two displayed Cl(0,2) generators and basis representation, not a global field-independent Clifford generator schema."
+  },
+  "source_spinor_basis": [
+    {
+      "id": "Qminus_0",
+      "representation": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "carrier": "negative chirality",
+      "source_order": 1
+    },
+    {
+      "id": "Qminus_1",
+      "representation": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "carrier": "negative chirality",
+      "source_order": 2
+    },
+    {
+      "id": "Qplus_0",
+      "representation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "carrier": "positive chirality",
+      "source_order": 3
+    },
+    {
+      "id": "Qplus_1",
+      "representation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "carrier": "positive chirality",
+      "source_order": 4
+    }
+  ],
+  "source_polarity_and_syntax": {
+    "source_asserted_equalities": [
+      "Gamma0 matrix",
+      "Gamma1 matrix",
+      "gamma0 sparse 4x4",
+      "gamma1 sparse 4x4",
+      "Qminus0/1 and Qplus0/1 four source vector columns"
+    ],
+    "source_uses_blank_entries_as_zero": true,
+    "source_exact": true,
+    "source_only_unqualified": true,
+    "separate_octal_source_discrepancy_still_preserved": true,
+    "do_not_infer": "Matrix representations for arbitrary n, nonassociative octonions, or the source Eq.(5) Γ/M block-index semantics."
+  },
+  "target_impact": {
+    "census_ids": [
+      "L-SSC-126",
+      "L-SSC-127"
+    ],
+    "source_expansion": false,
+    "new_qualified_semantics": false,
+    "upstream_L_G0_incomplete": true,
+    "L132_replay_authorized": false
+  },
+  "test_requirements": [
+    "Independent exact 2x2 and 4x4 scalar entry reconstruction; reject any flipped source sign or transposed chirality block.",
+    "Derive gamma matrices from the stated chiral block relation, not from artifact's own expected output.",
+    "Reconstruct Cl(0,2) exact gamma_i gamma_j+gamma_j gamma_i=-2 delta_ij I as finite consistency test; do not promote to universal theorem.",
+    "Preserve and reject changes to printed source ordinary-O table inconsistency.",
+    "Adversarial controls for swapped basis Qplus/Qminus and changed signs."
+  ],
+  "remaining_open": [
+    "Eq.(5) exact source Γ/M indexed bivector products not yet conserved in the source SSC; do not claim §2 complete.",
+    "Current G0 SSC remains not frozen and G1/G7 unauthorized.",
+    "No independent external mathematical verification."
+  ]
+}

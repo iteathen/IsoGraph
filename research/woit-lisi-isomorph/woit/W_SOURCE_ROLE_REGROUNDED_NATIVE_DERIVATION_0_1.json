@@ -1,0 +1,122 @@
+{
+  "schema": "woit.regrounded-source-role-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_ROLE_BODIES_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "frontier": "W_REGROUNDED_SOURCE_ROLE_FRONTIER_0_1.json",
+  "native_bundle": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_10.isg",
+  "relation_atoms": {
+    "934050": "source role assignment",
+    "934051": "source association",
+    "934052": "source use of carrier-kind for target in context",
+    "934053": "source interpretation-as relation",
+    "934055": "source proposition: target recovery occurs",
+    "934056": "source necessary-degree relation",
+    "934057": "source proposition: distinguished Euclidean target exists",
+    "934058": "source proposition: extra structure is present",
+    "934059": "source places all listed gauge groups in one larger group",
+    "934060": "source identifies generation with one usual GUT spinor representation",
+    "934061": "source explicitly contrasts two opaque proposal identities",
+    "934063": "source identifies one opaque structure as the essence of another",
+    "934064": "source treats one opaque role/fact as a possible route"
+  },
+  "status_values": {
+    "934076": "source proposal",
+    "934077": "possible route toward interaction unification"
+  },
+  "target_atoms": {
+    "934350": "W003 recovery of Lorentz signature",
+    "934351": "W003 imaginary-time-direction degree of freedom",
+    "934352": "W003 Higgs role",
+    "934360": "W009 Euclidean left-handed spinors",
+    "934361": "W009 internal SU(2) role",
+    "934370": "W012 right-handed spinor kind",
+    "934371": "W012 left-handed spinor kind",
+    "934372": "W012 spacetime vectors",
+    "934373": "W012 Minkowski-signature context",
+    "934374": "W012 Euclidean-signature context",
+    "934375": "W012 right-handed-only proposal",
+    "934380": "W015 Euclidean spacetime",
+    "934381": "W015 extra fibration/real-structure data",
+    "934382": "W015 Euclidean real-form identity",
+    "934383": "W015 Minkowski real-form identity",
+    "934390": "W017 Wick rotation",
+    "934391": "W017 gauge-like extra choice",
+    "934392": "W017 left chiral symmetry",
+    "934393": "W017 internal role",
+    "934394": "W017 internal-interpretation event",
+    "934395": "W017 extra-choice event",
+    "934400": "W019 complex-time holomorphy/boundary-values structure",
+    "934401": "W019 Wick rotation",
+    "934402": "W019 distinguished Euclidean target",
+    "934403": "W019 extra structure",
+    "934410": "W038 W01 construction",
+    "934411": "W038 all gauge groups",
+    "934412": "W038 one larger Lie group",
+    "934413": "W038 generation",
+    "934414": "W038 single usual GUT spinor representation",
+    "934420": "W073 Wick rotation",
+    "934421": "W073 extra choice of CP1 fibration/imaginary-time direction",
+    "934422": "W073 fundamental Euclidean-to-Minkowski coordinate substitution",
+    "934430": "W137 SU(2)_L source identity",
+    "934431": "W137 internal-symmetry role",
+    "934432": "W137 spacetime-symmetry role",
+    "934433": "W137 possible interaction-unification route",
+    "934434": "W137 earlier Minkowski gravi-weak proposals"
+  },
+  "items": [
+    {
+      "census_id": "W-SSC-003",
+      "frozen_body": "Recovering Lorentz signature requires an imaginary-time-direction degree of freedom assigned a Higgs role.",
+      "logical_reading": "AND(IMPLIES(recovery_occurs, required_degree_present), role_assignment(imaginary_time_degree,Higgs_role))"
+    },
+    {
+      "census_id": "W-SSC-009",
+      "frozen_body": "In that formulation, Euclidean left-handed spinors acquire an internal SU(2) role.",
+      "logical_reading": "role_assignment(Euclidean_left_spinors, internal_SU2_role)"
+    },
+    {
+      "census_id": "W-SSC-012",
+      "frozen_body": "W04a proposes using only the right-handed spinor kind for spacetime vectors in both Minkowski and Euclidean signatures.",
+      "logical_reading": "AND(proposal_status, use(right,spacetime_vectors,Minkowski), use(right,spacetime_vectors,Euclidean), NOT(use(left,...Minkowski)), NOT(use(left,...Euclidean)))"
+    },
+    {
+      "census_id": "W-SSC-015",
+      "frozen_body": "Euclidean spacetime is associated with extra fibration/real-structure data rather than the same real form as Minkowski spacetime.",
+      "logical_reading": "AND(associated(Euclidean_spacetime,extra_data), NOT(EQUAL(Euclidean_real_form,Minkowski_real_form)))"
+    },
+    {
+      "census_id": "W-SSC-017",
+      "frozen_body": "In W04c, Wick rotation becomes a gauge-like extra choice, and the left chiral symmetry is interpreted internally before that choice.",
+      "logical_reading": "AND(interprets_as(Wick_rotation,gauge_like_extra_choice), role_assignment(left_chiral_symmetry,internal_role), chronology_precedes(internal_interpretation_event,extra_choice_event))"
+    },
+    {
+      "census_id": "W-SSC-019",
+      "frozen_body": "W04d identifies complex-time holomorphy / boundary values as the essence of Wick rotation and says there is no distinguished Euclidean target without extra structure.",
+      "logical_reading": "AND(identifies_as_essence(holomorphy_boundary,Wick_rotation), IMPLIES(distinguished_Euclidean_target_exists, extra_structure_present))"
+    },
+    {
+      "census_id": "W-SSC-038",
+      "frozen_body": "W01 explicitly distinguishes this construction from conventional GUT unification: it does not place all gauge groups into one larger Lie group and does not identify a generation with a single usual GUT spinor representation.",
+      "logical_reading": "AND(NOT(places_all_gauge_groups_in_one_larger_group), NOT(identifies_generation_with_single_GUT_spinor_rep))"
+    },
+    {
+      "census_id": "W-SSC-073",
+      "frozen_body": "W04c interprets Wick rotation as an extra choice of CP1 fibration/imaginary-time direction rather than a fundamental Euclidean-to-Minkowski coordinate substitution.",
+      "logical_reading": "AND(interprets_as(Wick_rotation,extra_fibration_direction_choice), NOT(interprets_as(Wick_rotation,fundamental_coordinate_substitution)))"
+    },
+    {
+      "census_id": "W-SSC-137",
+      "frozen_body": "In the right-handed Euclidean description SU(2)_L behaves as an internal rather than spacetime symmetry; W02 treats this as a possible route toward interaction unification, while distinguishing it from earlier Minkowski gravi-weak proposals.",
+      "logical_reading": "AND(role(SU2L,internal), NOT(role(SU2L,spacetime)), possible_route_status, treats_role_as_route, contrasts(route,earlier_proposals))"
+    }
+  ],
+  "guards": [
+    "every named physics/mathematics target is an opaque raw identity",
+    "role/interpretation/contrast predicates have only their finite represented applications and no hidden domain behavior",
+    "all negation, implication, and equality force is supplied by Core operators",
+    "no historical closure packet or campaign mathematical schema is a premise",
+    "all nine items remain INCOMPLETE_UNEXPANDED until separate primitive-closure audit"
+  ],
+  "target_behavior_imported": false,
+  "closure_claim": false
+}

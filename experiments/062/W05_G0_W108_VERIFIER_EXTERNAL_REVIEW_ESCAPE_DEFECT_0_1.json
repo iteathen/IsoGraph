@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062-w05-w108-verifier-external-review-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_POSITIVE_PASS_BUT_ONE_OF_35_ADVERSARIAL_MUTATIONS_ESCAPED",
+  "candidate_source": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_26.json",
+    "git_blob_sha": "730b57fa3a56ef7f384fc3d9480f5c41842df972"
+  },
+  "current_oracle": {
+    "path": "experiments/062/W05_G0_W108_CITED_CLAUSES_SOURCE_ORACLE_0_1.json",
+    "git_blob_sha": "bd86d292992820e04e47097596a6b5605ec127dc"
+  },
+  "corrected_reverse": {
+    "path": "experiments/062/W05_G0_FULL_PRIMARY_SOURCE_REVERSE_0_2.json",
+    "git_blob_sha": "3a367ebcf1e956e0e15e6c9477c31b10890c548d"
+  },
+  "observed": {
+    "baseline_errors": [],
+    "mutations_total": 35,
+    "rejected": 34,
+    "escaped": [
+      "source oracle external pass forged"
+    ],
+    "attack": "Mutate oracle.external_review from OWNER_BYPASSED_NOT_PASSED to PASSED",
+    "cause": "Missing fail-closed check of oracle.external_review in validator",
+    "failed_test_source": "Local V8 draft uncommitted verifier"
+  },
+  "repair": "Bind exact oracle.external_review === OWNER_BYPASSED_NOT_PASSED, and deny source-level external confirmation or G0 freeze. Keep original failure preserved and rerun positive and 35/35 adversarial mutations before Node CI.",
+  "qualification": {
+    "source_review": "W05 primary arxiv v2 source review scoped only",
+    "G0_frozen": false,
+    "G1_to_G7_authorized": false,
+    "third_party": "BYPASSED_NOT_PASSED",
+    "CI": "NOT_EXECUTED_FOR_THIS_CANDIDATE"
+  },
+  "nonclaims": [
+    "Not a mathematical source defect itself",
+    "Prior 0.1 interval-marker positive failed fixture separately preserved",
+    "Not evidence of independent external verification"
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "schema": "isograph.exp062-l133-g1-source-incidence.v0.1",
+  "date": "2026-10-07",
+  "status": "L133_TARGETED_G1_SOURCE_INCIDENCE_COMPLETE_CANDIDATE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "ec76abbd01cbddcdb503ed6f5ebcb5309fc4bde3",
+  "audit": {
+    "path": "experiments/062/L133_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_1.json",
+    "git_blob_sha": "4f836f380e4452b153f37c6058ffc855e0d9cdc8"
+  },
+  "source_provenance": "L05 §4, frozen arXiv:2609.12112v1 / version-of-record corpus entry",
+  "source_coordinates": [
+    "§4 opening table p.10",
+    "§4.1 eqs.4.1-4.2 pp.10-12",
+    "§4.2 eq.4.5 pp.14-15",
+    "§4.3 eqs.4.7-4.8 pp.17-19"
+  ],
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-133-R01",
+      "source_reversible_reference": "L05 §4 opening decomposition table, printed p.10",
+      "source_span": "for each D in C,Cprime,H,Hprime,O,Oprime the source presents a triality-Lie carrier as tri(D) plus three distinct D-role summands V,M,P",
+      "relation_span": "four-summand triality-Lie carrier decomposition",
+      "argument_spans": [
+        "tri(D) carrier",
+        "V role carrier",
+        "M role carrier",
+        "P role carrier",
+        "total carrier",
+        "four injections"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Preserves four source roles and unique structural decomposition; result names are not definitions.",
+      "formula_ast": {
+        "op": "FOUR_SUMMAND_CARRIER",
+        "args": [
+          "T",
+          "V",
+          "M",
+          "P",
+          "G"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R02",
+      "source_reversible_reference": "L05 §4 general construction / inherited triality algebra",
+      "source_span": "the tri(D) summand retains its source Lie bracket inside the larger triality-Lie carrier",
+      "relation_span": "inherited triality-subalgebra bracket",
+      "argument_spans": [
+        "tri(D) elements",
+        "tri(D) bracket",
+        "total bracket",
+        "tri(D) injection"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R01"
+      ],
+      "load_bearing_note": "Subalgebra inheritance, not a named-Lie shortcut.",
+      "formula_ast": {
+        "op": "INHERITED_SUBALGEBRA_BRACKET",
+        "args": [
+          "T",
+          "BR_T",
+          "G",
+          "BR_G"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R03",
+      "source_reversible_reference": "L05 §3 triality action carried into §4 construction",
+      "source_span": "tri(D) acts on each of V,M,P according to the source vector/negative-spinor/positive-spinor triality action",
+      "relation_span": "triality-algebra action on role summands",
+      "argument_spans": [
+        "tri(D) element",
+        "role V/M/P element",
+        "role action",
+        "total bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R01",
+        "L-SSC-133-R02"
+      ],
+      "load_bearing_note": "Action is source behavior already developed in §§3-4, not representation-name authority.",
+      "formula_ast": {
+        "op": "THREE_ROLE_LIE_ACTION",
+        "args": [
+          "T",
+          "V",
+          "M",
+          "P",
+          "actions"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R04",
+      "source_reversible_reference": "L05 §4 explicit su(3)/sp(3)/f4 bracket systems",
+      "source_span": "brackets between two different role summands land in the third role, cyclically, with coefficients determined by source multiplication/Clifford data",
+      "relation_span": "cross-role cyclic bracket",
+      "argument_spans": [
+        "V element",
+        "M element",
+        "P element",
+        "source product/coefficient map",
+        "total bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R01"
+      ],
+      "load_bearing_note": "Captures VxM->P, MxP->V, PxV->M structural destination and source coefficient dependence.",
+      "formula_ast": {
+        "op": "CYCLIC_CROSS_ROLE_BRACKET",
+        "args": [
+          "V",
+          "M",
+          "P",
+          "mu_VM",
+          "mu_MP",
+          "mu_PV"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R05",
+      "source_reversible_reference": "L05 §4 explicit su(3)/sp(3)/f4 bracket systems",
+      "source_span": "brackets within one role summand return triality-algebra components determined by source metric/Clifford/multiplication coefficients",
+      "relation_span": "same-role bracket into triality summand",
+      "argument_spans": [
+        "two V elements",
+        "two M elements",
+        "two P elements",
+        "tri(D) output maps",
+        "total bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R01",
+        "L-SSC-133-R02"
+      ],
+      "load_bearing_note": "Three alternating source pairings land in T; no so/su/sp name is used as the definition.",
+      "formula_ast": {
+        "op": "SAME_ROLE_TO_T_BRACKETS",
+        "args": [
+          "beta_VV",
+          "beta_MM",
+          "beta_PP",
+          "T"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R06",
+      "source_reversible_reference": "L05 §4 general construction statement and explicit family brackets",
+      "source_span": "combining tri(D) and the three role carriers with the displayed homogeneous brackets gives the source triality Lie algebra",
+      "relation_span": "assembled total Lie bracket",
+      "argument_spans": [
+        "four summands",
+        "injections",
+        "T bracket",
+        "three T-actions",
+        "three cross-role brackets",
+        "three same-role brackets",
+        "total bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [
+        "L-SSC-133-R01",
+        "L-SSC-133-R02",
+        "L-SSC-133-R03",
+        "L-SSC-133-R04",
+        "L-SSC-133-R05"
+      ],
+      "load_bearing_note": "Potential reusable four-summand Lie-assembly boundary; must not be renamed TRIALITY_LIE_ALGEBRA.",
+      "formula_ast": {
+        "op": "FOUR_SUMMAND_LIE_ASSEMBLY",
+        "args": [
+          "T",
+          "V",
+          "M",
+          "P",
+          "BR_G"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R07",
+      "source_reversible_reference": "L05 §4.1 equations (4.1)-(4.2), printed pp.10-12",
+      "source_span": "complex and split-complex source constructions give explicit eight-dimensional bracket systems from the tri(C/Cprime) sector and three two-dimensional role carriers",
+      "relation_span": "C/Cprime explicit source bracket systems",
+      "argument_spans": [
+        "C or Cprime triality carrier",
+        "three role carriers",
+        "source coefficient maps",
+        "source bracket table"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R06"
+      ],
+      "load_bearing_note": "Exact source family realization; su(3)/sl(3) names are result labels only.",
+      "formula_ast": {
+        "op": "SOURCE_FAMILY_BRACKET_SYSTEM",
+        "args": [
+          "C-family",
+          "eq4.2"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R08",
+      "source_reversible_reference": "L05 §4.2 equation (4.5), printed pp.14-15",
+      "source_span": "quaternion and split-quaternion source constructions give explicit twenty-one-dimensional bracket systems from three 3D triality factors and three 4D role carriers",
+      "relation_span": "H/Hprime explicit source bracket systems",
+      "argument_spans": [
+        "H or Hprime triality carrier",
+        "three role carriers",
+        "multiplication coefficients",
+        "source bracket table"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R06"
+      ],
+      "load_bearing_note": "Exact source family realization; sp(3)/sp(6,R) names are result labels only.",
+      "formula_ast": {
+        "op": "SOURCE_FAMILY_BRACKET_SYSTEM",
+        "args": [
+          "H-family",
+          "eq4.5"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R09",
+      "source_reversible_reference": "L05 §4.3 equations (4.7)-(4.8) and compositional bracket form, printed pp.17-19",
+      "source_span": "octonion and split-octonion source constructions give explicit fifty-two-dimensional bracket systems from the 28D triality sector and three 8D role carriers",
+      "relation_span": "O/Oprime explicit source bracket systems",
+      "argument_spans": [
+        "O or Oprime triality carrier",
+        "three role carriers",
+        "Clifford/multiplication coefficients",
+        "compositional source bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R06"
+      ],
+      "load_bearing_note": "Exact source family realization; f4 real-form names are result labels only.",
+      "formula_ast": {
+        "op": "SOURCE_FAMILY_BRACKET_SYSTEM",
+        "args": [
+          "O-family",
+          "eq4.8"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R10",
+      "source_reversible_reference": "L05 §4 opening representation table, printed p.10",
+      "source_span": "the three added role carriers are recorded under tri(D) as source representation roles: two 1D conjugate roles for C/Cprime, pairwise tensor-role patterns for H/Hprime, and vector/two chiral-8 roles for O/Oprime",
+      "relation_span": "source representation-role decomposition",
+      "argument_spans": [
+        "triality sector",
+        "V role representation",
+        "M role representation",
+        "P role representation",
+        "source carrier"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R01",
+        "L-SSC-133-R03"
+      ],
+      "load_bearing_note": "Preserves action/role decomposition without importing representation-classification theorems.",
+      "formula_ast": {
+        "op": "ROLE_REPRESENTATION_DECOMPOSITION",
+        "args": [
+          "T",
+          "V",
+          "M",
+          "P"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R11",
+      "source_reversible_reference": "L05 §4 compact/split family table and subsection constructions",
+      "source_span": "ordinary and split composition-algebra inputs produce distinct source total carriers and real forms while preserving the same four-role construction pattern",
+      "relation_span": "compact/split source-family distinction",
+      "argument_spans": [
+        "ordinary source carrier",
+        "split source carrier",
+        "shared construction pattern",
+        "distinct total carrier"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R07",
+        "L-SSC-133-R08",
+        "L-SSC-133-R09"
+      ],
+      "load_bearing_note": "Same construction shape does not identify compact/split source carriers.",
+      "formula_ast": {
+        "op": "PRESERVE_SOURCE_IDENTITY_WITH_SHARED_SHAPE",
+        "args": [
+          "ordinary",
+          "split",
+          "shape"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-133-R12",
+      "source_reversible_reference": "L05 §4 opening table",
+      "source_span": "the six completed source constructions are labeled su(3), sp(3), f4(-52), sl(3), sp(6,R), and f4(4)",
+      "relation_span": "source result-label mapping",
+      "argument_spans": [
+        "source coefficient family",
+        "constructed total carrier",
+        "source result label"
+      ],
+      "logical_force": "EQUALITY_OR_IDENTIFICATION",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-133-R07",
+        "L-SSC-133-R08",
+        "L-SSC-133-R09"
+      ],
+      "load_bearing_note": "Labels are preserved as source result names after construction, never used as premises.",
+      "formula_ast": {
+        "op": "SOURCE_RESULT_LABEL",
+        "args": [
+          "family",
+          "G",
+          "label"
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 12
+  },
+  "next_stage": "TARGETED_G2_NEUTRAL_SUBGRAPH"
+}

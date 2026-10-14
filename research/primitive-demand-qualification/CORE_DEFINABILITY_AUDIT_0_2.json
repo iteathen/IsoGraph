@@ -1,0 +1,80 @@
+{
+  "schema": "isograph.domain-neutral-basis-core-definability-audit.v0.2",
+  "date": "2026-10-05",
+  "status": "FOUNDATIONAL_BOUNDARY_REFINED_TO_WELL_FOUNDED_CONSTRUCTOR_AUTHORITY",
+  "predecessor": "CORE_DEFINABILITY_AUDIT_0_1.json",
+  "demand_graph": "PRIMITIVE_DEMAND_GRAPH_0_1.json",
+  "candidate_basis": "CANDIDATE_PRIMITIVE_BASIS_0_1.json",
+  "governing_core_finding": "Core K7 states recursion/induction are not primitive leaves and requires represented well-founded or inductive carrier authority. Core K8 separately excludes arithmetic/cardinality. Generic arithmetic can be schema-defined once inductive data authority exists.",
+  "refinement": {
+    "prior_first_module": "DNIA-0.1",
+    "new_first_module": "DNWF-0.1",
+    "new_module_name": "Domain-Neutral Well-Founded Constructor Authority 0.1",
+    "reason": "DNIA itself can be derived as a schema module from Core plus a generic well-founded constructor/structural-induction authority. Introducing natural arithmetic as the primitive would be less neutral and larger than necessary."
+  },
+  "DNWF_required_semantics": [
+    "finite constructor signature with ordered fields",
+    "generated carrier contains all and only finite well-founded constructor trees admitted by the signature",
+    "constructor disjointness and injectivity/extensional field equality",
+    "structural induction over the generated carrier",
+    "structural recursion/fold existence and uniqueness into an arbitrary target algebra"
+  ],
+  "after_DNWF": [
+    {
+      "module": "DNIA-0.1",
+      "disposition": "DERIVED_SCHEMA_QUALIFICATION_TARGET",
+      "note": "Natural zero/successor data, addition, multiplication, order, finite indices/cardinality, integers/rationals, tuples and folds become Core+DNWF schemas."
+    },
+    {
+      "module": "B-TYPED-MAP",
+      "disposition": "CORE_SCHEMA"
+    },
+    {
+      "module": "B-OPERATION-LAW",
+      "disposition": "CORE_SCHEMA_AFTER_INDEX_PRODUCT"
+    },
+    {
+      "module": "B-SUBOBJECT-QUOTIENT",
+      "disposition": "CORE_SCHEMA"
+    },
+    {
+      "module": "B-INDEXED-FAMILY",
+      "disposition": "CORE_SCHEMA"
+    },
+    {
+      "module": "B-ADDITIVE-SCALAR",
+      "disposition": "CORE_SCHEMA_AFTER_DNIA"
+    },
+    {
+      "module": "B-MULTILINEAR-FORM",
+      "disposition": "CORE_SCHEMA_AFTER_ADDITIVE_SCALAR"
+    },
+    {
+      "module": "B-INVOLUTION-GRADING",
+      "disposition": "CORE_SCHEMA"
+    },
+    {
+      "module": "B-TOPOLOGY-LIMIT",
+      "disposition": "CORE_SCHEMA_OVER_GENERIC_FAMILIES"
+    },
+    {
+      "module": "B-DIFFERENTIAL",
+      "disposition": "CORE_SCHEMA_AFTER_ADDITIVE_SCALAR"
+    },
+    {
+      "module": "B-AGGREGATE",
+      "disposition": "ABSTRACT_CORE_SCHEMA_WITH_INSTANCE_BURDENS"
+    },
+    {
+      "module": "B-PARITY-GRADED",
+      "disposition": "CORE_SCHEMA_AFTER_DNIA"
+    }
+  ],
+  "minimality_claim": "DNWF is the only candidate new semantic primitive extension presently forced by the frozen v0.1 capability dependency model. This is revision-scoped and must be falsified by qualification; it is not yet authority.",
+  "guards": [
+    "Do not promote the historical primitive-natural-arithmetic candidate.",
+    "Do not add group/vector/bundle/topology/physics primitives.",
+    "Do not let W or L consume DNWF or DNIA before independent qualification.",
+    "If DNWF itself can be reduced under current Core without hidden induction authority, this audit is falsified and no new semantic primitive should be added."
+  ]
+}

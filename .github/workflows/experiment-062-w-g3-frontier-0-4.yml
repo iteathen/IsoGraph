@@ -1,0 +1,31 @@
+name: Experiment 062 W G3 frontier 0.4 verify
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_3.json
+      - experiments/062/W_G3_DEFINITION_STATUS_FRONTIER_0_4.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_4.json
+      - experiments/062/W_EXTRACTION_RECONCILED_0_18.json
+      - experiments/062/tools/apply-w-g3-definition-status-frontier-0-4.mjs
+      - experiments/062/tools/verify-w-g3-definition-status-frontier-0-4.mjs
+      - .github/workflows/experiment-062-w-g3-frontier-0-4.yml
+  pull_request:
+    paths:
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_3.json
+      - experiments/062/W_G3_DEFINITION_STATUS_FRONTIER_0_4.json
+      - experiments/062/W_G3_CORE_DEFINABILITY_0_4.json
+      - experiments/062/W_EXTRACTION_RECONCILED_0_18.json
+      - experiments/062/tools/apply-w-g3-definition-status-frontier-0-4.mjs
+      - experiments/062/tools/verify-w-g3-definition-status-frontier-0-4.mjs
+      - .github/workflows/experiment-062-w-g3-frontier-0-4.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: node experiments/062/tools/verify-w-g3-definition-status-frontier-0-4.mjs

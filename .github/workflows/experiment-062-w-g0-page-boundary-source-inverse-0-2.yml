@@ -1,0 +1,25 @@
+name: "Experiment 062 W G0 original page-boundary hostile inverse 0.2"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W04E_G0_SOURCE_FIRST_PRINTED_FORMULA_INVERSE_0_2.json"
+      - "experiments/062/W_G0_FINITE_BIDIRECTIONAL_CONVERGENCE_0_6.json"
+      - "experiments/062/W_CURRENT_STAGE_GATE_0_128.json"
+      - "experiments/062/tools/verify-w04e-g0-original-page-boundaries-0-2.cjs"
+      - ".github/workflows/experiment-062-w-g0-page-boundary-source-inverse-0-2.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w_g0_page_source_inverse:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Verify current W G0 original page-boundary and all hostile controls
+        run: |
+          node --check experiments/062/tools/verify-w04e-g0-original-page-boundaries-0-2.cjs
+          node experiments/062/tools/verify-w04e-g0-original-page-boundaries-0-2.cjs

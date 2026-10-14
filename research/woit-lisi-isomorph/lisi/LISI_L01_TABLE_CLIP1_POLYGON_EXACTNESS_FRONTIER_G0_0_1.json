@@ -1,0 +1,70 @@
+{
+  "schema": "isograph.track-L.G0.L01-table-border-positive-ink-clip-bound-frontier.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source_evidence": {
+    "path": "experiments/062/L01_FIG1_ORIGINAL_CLIPPED_TABLE_BORDER_W_INK_CI_SUCCESS_0_1.json",
+    "git_blob_sha": "4913b792b8cae24df6ebe2b49226a898502a7990",
+    "CI_run": 38342627424,
+    "PDF_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe"
+  },
+  "finding": "The original SVG table frame root/svg[216]/g[0]/path has four transformed sides. All three W-junction paths have positive un-clipped butt stroke intersection with the left table boundary. Table frame is inside clip-1 context. Clip-1 previously verified closed, 4 linear edges, with rectangle-like bbox that contains the left border, but exact clip vertex/path orientation not yet source-certified.",
+  "next_ranked_options": [
+    {
+      "id": "K1",
+      "rank": 1,
+      "action": "Source-extract literal original clip-1 vertex sequence and inherited clip-rule, mathematically certify simple convex rectangle and left border's filled stroke support under clipping with witness points.",
+      "status": "RUN_NEXT",
+      "mechanical_possible": true
+    },
+    {
+      "id": "K2",
+      "rank": 2,
+      "action": "Reconstruct other ten clipped source figures/paths, including box grid separators, to establish source Figure1 ink vs panel decoration independent of field action.",
+      "status": "OPEN",
+      "mechanical_possible": true
+    },
+    {
+      "id": "K3",
+      "rank": 3,
+      "action": "Bind the six marker symbols to vector and raster occurrence IDs, then separately cold-review original cell and glyph role labels; test line endpoints relative to row seams instead of author action prose.",
+      "status": "OPEN",
+      "mechanical_possible": true,
+      "cold_independent_reviewer_needed": true
+    },
+    {
+      "id": "K4",
+      "rank": 4,
+      "action": "Continue full 16-group L01 and 6-original-source cold review and 191 SSC exact semantic reconstruction for G0.",
+      "status": "OPEN",
+      "mechanical_possible_in_part": true,
+      "cold_independent_reviewer_needed": true
+    }
+  ],
+  "guardrails": [
+    "No conditional border/clip envelope qualifies original source graph vertex or physics field action.",
+    "Without literal polygon and nonzero fill rule, a closed four-line path is not necessarily the rectangle implied by its bbox.",
+    "A source graphic line touching a cell seam is not uniquely an edge to either or both cells.",
+    "Do not drop filled glyph outlines or curves to improve source-figure closure.",
+    "Keep past first-failure CI and bounded internal successes with their original statuses."
+  ],
+  "existing_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_194.json",
+    "git_blob_sha": "cc9e1a133fbfdbc2c98c868812ca61f69feffb0f",
+    "SSC_revision": "0.96",
+    "original_six_full_cold_completed": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "PR_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "technical_recommendations": "agent-assisted source original vector inspection",
+    "recorded_on": "2026-10-12",
+    "first_evidence": "source CI 38342627424",
+    "external_original": "A. Garrett Lisi 0711.0770v1"
+  }
+}

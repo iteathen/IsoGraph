@@ -1,0 +1,785 @@
+{
+  "schema": "isograph.exp062-l-g1-source-local-adjudication.v0.15",
+  "date": "2026-10-06",
+  "status": "SOURCE_LOCAL_CORRECTIONS_SUPPORTED_INDEPENDENT_COLD_REAUDIT_PENDING_PROVIDER_QUOTA",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "predecessor_input": "experiments/062/L_EXTRACTION_RECONCILED_0_14.json",
+  "predecessor_adjudication": "experiments/062/L_G1_SOURCE_LOCAL_ADJUDICATION_0_14.json",
+  "diagnostic_frontier": "experiments/062/G1_SURFACE_LOCATOR_COVERAGE_FRONTIER_0_1.json",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "purpose": "Second source-local review after deterministic application of the 0.14 adjudication. Preserve additional load-bearing relations and side conditions that remain semantically unrepresented even when their text is enclosed by a predecessor source span. This is not an independent cold completeness result.",
+  "adjudication_rule": "Admit only source-explicit operations, relations, laws, incidence, dependencies, model-status boundaries, and load-bearing side conditions. A sentence-level source_span does not conserve a semantic relation unless relation_span/argument incidence exposes it. Familiar mathematical names remain unexpanded when the frozen body supplies only the name; those occurrences are marked NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED rather than treated as primitives.",
+  "corrections": [
+    {
+      "census_id": "L-SSC-013",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-013-O02",
+        "source_span": "does not claim the model complete",
+        "relation_span": "does not claim",
+        "argument_spans": [
+          "model complete"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Explicit completeness negation; unresolved issues must not be promoted to a complete-model claim."
+      }
+    },
+    {
+      "census_id": "L-SSC-028",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-028-O04",
+        "source_span": "L01 defines Cartan subalgebra, root vectors, weights, and Cartan-Weyl decomposition",
+        "relation_span": "defines",
+        "argument_spans": [
+          "Cartan subalgebra",
+          "root vectors",
+          "weights",
+          "Cartan-Weyl decomposition"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Source-explicit definition inventory whose internal mathematical behavior is not supplied by the frozen body."
+      }
+    },
+    {
+      "census_id": "L-SSC-032",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-032-O03",
+        "source_span": "L01 builds explicit Cl(7,1) generators",
+        "relation_span": "builds",
+        "argument_spans": [
+          "explicit Cl(7,1) generators"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Source-explicit Clifford-generator construction distinct from the already conserved graviweak-connection formula."
+      }
+    },
+    {
+      "census_id": "L-SSC-036",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-036-O03",
+        "source_span": "The E8 construction introduces an additional quantum number w and new w and xPhi field sectors",
+        "relation_span": "introduces",
+        "argument_spans": [
+          "additional quantum number w",
+          "new w and xPhi field sectors"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Conserves the source-explicit introduction of w together with the new field sectors."
+      }
+    },
+    {
+      "census_id": "L-SSC-036",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-036-O04",
+        "source_span": "the chosen Cartan coordinates are related by explicit rotations",
+        "relation_span": "are related by",
+        "argument_spans": [
+          "chosen Cartan coordinates",
+          "explicit rotations"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Explicit coordinate-relation operation omitted by the predecessor extraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-047",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-047-O02",
+        "source_span": "the action as chosen by hand to agree with known Standard Model/gravity dynamics",
+        "relation_span": "chosen by hand to agree with",
+        "argument_spans": [
+          "the action",
+          "known Standard Model/gravity dynamics"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source's model-choice status for the action rather than treating agreement as a derived result."
+      }
+    },
+    {
+      "census_id": "L-SSC-047",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-047-O03",
+        "source_span": "claims no free parameters at that level",
+        "relation_span": "claims no free parameters",
+        "argument_spans": [
+          "no free parameters",
+          "that level"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Source-local no-free-parameter claim with its explicit scope."
+      }
+    },
+    {
+      "census_id": "L-SSC-063",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-063-O03",
+        "source_span": "de Sitter/Higgs nonzero-vev background solving the restricted equations and strictly minimizing the selected action",
+        "relation_span": "strictly minimizing",
+        "argument_spans": [
+          "de Sitter/Higgs nonzero-vev background",
+          "selected action"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-063-O02"
+        ],
+        "load_bearing_note": "Separate minimization relation; the predecessor recorded only solution incidence from the same source span."
+      }
+    },
+    {
+      "census_id": "L-SSC-064",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-064-O02",
+        "source_span": "the bare coupling relations are far from observed low-energy values",
+        "relation_span": "are far from",
+        "argument_spans": [
+          "bare coupling relations",
+          "observed low-energy values"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Explicit bare-versus-observed mismatch retained independently of the speculative running qualification."
+      }
+    },
+    {
+      "census_id": "L-SSC-070",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-070-O03",
+        "source_span": "L03 distinguishes the conventional complex 32-component one-generation fermion representation from an exactly action-equivalent 64-real representation",
+        "relation_span": "distinguishes",
+        "argument_spans": [
+          "conventional complex 32-component one-generation fermion representation",
+          "exactly action-equivalent 64-real representation"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source distinction while keeping the separately represented action equivalence."
+      }
+    },
+    {
+      "census_id": "L-SSC-076",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-076-O02",
+        "source_span": "L03 defines frame, spin connection, torsion, spin(10) Higgs covariant derivative",
+        "relation_span": "defines",
+        "argument_spans": [
+          "frame",
+          "spin connection",
+          "torsion",
+          "spin(10) Higgs covariant derivative"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Source-explicit geometric/derivative definition inventory omitted by the predecessor connection formula."
+      }
+    },
+    {
+      "census_id": "L-SSC-082",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-082-O05",
+        "source_span": "E8(-24) Killing-form block structure, with spin(12,4) bivector signature (48,72), zero bivector-spinor pairing, spinor metric signature (64,64), and total signature (112,136), supporting the -24 real-form label",
+        "relation_span": "supporting",
+        "argument_spans": [
+          "E8(-24) Killing-form block structure",
+          "-24 real-form label"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Explicit inference from the block/signature data to the source real-form label."
+      }
+    },
+    {
+      "census_id": "L-SSC-084",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-084-O02",
+        "source_span": "this exact embedding claim is distinct from any claim that every E8 generator has a physically correct particle interpretation",
+        "relation_span": "is distinct from",
+        "argument_spans": [
+          "exact embedding claim",
+          "claim that every E8 generator has a physically correct particle interpretation"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Source firewall separating the exact algebraic embedding from a stronger particle-interpretation claim."
+      }
+    },
+    {
+      "census_id": "L-SSC-095",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-095-O05",
+        "source_span": "deliberately chooses the phase-modified representative U_P=i gamma_0",
+        "relation_span": "chooses",
+        "argument_spans": [
+          "phase-modified representative U_P=i gamma_0"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the deliberate phase-modified representative choice that controls the separately recorded P-square behavior."
+      }
+    },
+    {
+      "census_id": "L-SSC-108",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-108-O03",
+        "source_span": "the full multiplication table is source data",
+        "relation_span": "is source data",
+        "argument_spans": [
+          "full multiplication table",
+          "source data"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Records that the multiplication table is load-bearing source data rather than an inferred group presentation."
+      }
+    },
+    {
+      "census_id": "L-SSC-110",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-110-O04",
+        "source_span": "L04 rejects that commuting-C extension as physically insufficient for its target",
+        "relation_span": "rejects",
+        "argument_spans": [
+          "commuting-C extension",
+          "physically insufficient for its target"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Source-local rejection of the commuting-C extension."
+      }
+    },
+    {
+      "census_id": "L-SSC-110",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-110-O05",
+        "source_span": "the Standard Model is not C-invariant",
+        "relation_span": "is not C-invariant",
+        "argument_spans": [
+          "Standard Model"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Physical non-invariance premise in the source's rejection rationale."
+      }
+    },
+    {
+      "census_id": "L-SSC-110",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-110-O06",
+        "source_span": "CPT is preserved",
+        "relation_span": "is preserved",
+        "argument_spans": [
+          "CPT"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Preserved-CPT premise contrasted with the C non-invariance premise."
+      }
+    },
+    {
+      "census_id": "L-SSC-110",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-110-O07",
+        "source_span": "it therefore requires a triality extension with t not commuting with C but commuting with CPT",
+        "relation_span": "requires",
+        "argument_spans": [
+          "triality extension",
+          "t not commuting with C",
+          "commuting with CPT"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-110-O04",
+          "L-SSC-110-O05",
+          "L-SSC-110-O06"
+        ],
+        "load_bearing_note": "Explicit requirement relation tying the physical rationale to the already conserved t/C/CPT commutation constraints."
+      }
+    },
+    {
+      "census_id": "L-SSC-119",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-119-O04",
+        "source_span": "L04 gives a projective 24-cell representation with coordinates (omega_t,omega_S,h,q)",
+        "relation_span": "with coordinates",
+        "argument_spans": [
+          "projective 24-cell representation",
+          "(omega_t,omega_S,h,q)"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Explicit carrier/coordinate incidence for the subsequent weight relation and discrete transformations."
+      }
+    },
+    {
+      "census_id": "L-SSC-123",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-123-O02",
+        "source_span": "E8 Theory is the only current proposal it knows satisfying that criterion",
+        "relation_span": "is the only current proposal it knows satisfying",
+        "argument_spans": [
+          "E8 Theory",
+          "that criterion"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source-bounded proposal-status claim without upgrading it to mathematical uniqueness."
+      }
+    },
+    {
+      "census_id": "L-SSC-123",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-123-O03",
+        "source_span": "this is a source model claim",
+        "relation_span": "is",
+        "argument_spans": [
+          "this",
+          "source model claim"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-123-O02"
+        ],
+        "load_bearing_note": "Explicit source-status classification for the preceding proposal claim."
+      }
+    },
+    {
+      "census_id": "L-SSC-123",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-123-O04",
+        "source_span": "this is a source model claim, not an independently established uniqueness theorem",
+        "relation_span": "not an independently established uniqueness theorem",
+        "argument_spans": [
+          "source model claim",
+          "independently established uniqueness theorem"
+        ],
+        "logical_force": "NEGATED",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [
+          "L-SSC-123-O03"
+        ],
+        "load_bearing_note": "Explicit prohibition on treating the proposal-status statement as an independently established uniqueness theorem."
+      }
+    },
+    {
+      "census_id": "L-SSC-125",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-125-O03",
+        "source_span": "L05 defines division and split-composition algebras by explicit basis, conjugation, multiplication tables, and metric",
+        "relation_span": "defines",
+        "argument_spans": [
+          "division and split-composition algebras",
+          "explicit basis",
+          "conjugation",
+          "multiplication tables",
+          "metric"
+        ],
+        "logical_force": "EQUALITY_OR_IDENTIFICATION",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Source-explicit definition ingredients; the table/conjugation/metric behavior remains to be expanded rather than hidden behind the algebra names."
+      }
+    },
+    {
+      "census_id": "L-SSC-129",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-129-O02",
+        "source_span": "T(v,psi,chi) is defined from multiplication and can conversely define the division-algebra product",
+        "relation_span": "can conversely define",
+        "argument_spans": [
+          "T(v,psi,chi)",
+          "division-algebra product"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-129-O01"
+        ],
+        "load_bearing_note": "Conserves the reverse direction of the source-stated triality/product reconstruction."
+      }
+    },
+    {
+      "census_id": "L-SSC-129",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-129-O03",
+        "source_span": "the source treats this bidirectionality as structural, not merely notation",
+        "relation_span": "as structural, not merely notation",
+        "argument_spans": [
+          "this bidirectionality"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-129-O02"
+        ],
+        "load_bearing_note": "Source interpretation makes the bidirectionality load-bearing rather than presentational."
+      }
+    },
+    {
+      "census_id": "L-SSC-130",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-130-O05",
+        "source_span": "L05 defines generalized reflections through vector and spinor roles with explicit signature factors sqrt(s_u), including time-like split-algebra cases",
+        "relation_span": "including",
+        "argument_spans": [
+          "generalized reflections",
+          "time-like split-algebra cases"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-130-O02"
+        ],
+        "load_bearing_note": "Preserves the explicitly included time-like split-algebra scope without altering the corrected individual-versus-even-composition semantics."
+      }
+    },
+    {
+      "census_id": "L-SSC-133",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-133-O03",
+        "source_span": "yielding su(3), sp(3), f4(-52) and split/noncompact analogues with explicit representation decompositions and Lie brackets",
+        "relation_span": "with",
+        "argument_spans": [
+          "su(3), sp(3), f4(-52) and split/noncompact analogues",
+          "explicit representation decompositions",
+          "Lie brackets"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-133-O02"
+        ],
+        "load_bearing_note": "Source-explicit representation/bracket structure attached to the triality-Lie-algebra outputs."
+      }
+    },
+    {
+      "census_id": "L-SSC-134",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-134-O03",
+        "source_span": "For sp(3), L05 gives an explicit quaternionic 3x3 realization",
+        "relation_span": "gives",
+        "argument_spans": [
+          "sp(3)",
+          "explicit quaternionic 3x3 realization"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Explicit realization omitted by the predecessor automorphism-only extraction."
+      }
+    },
+    {
+      "census_id": "L-SSC-135",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-135-O03",
+        "source_span": "For f4, L05 treats compact and noncompact/split real forms with signature-sensitive Clifford metrics and generalized reflections",
+        "relation_span": "treats",
+        "argument_spans": [
+          "f4",
+          "compact and noncompact/split real forms",
+          "signature-sensitive Clifford metrics",
+          "generalized reflections"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Conserves the source's real-form/metric/reflection incidence before any lower-level definability pass."
+      }
+    },
+    {
+      "census_id": "L-SSC-137",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-137-O03",
+        "source_span": "L05 gives multiple f4 decompositions emphasizing sp(3)-type and su(3)-type invariant subalgebras",
+        "relation_span": "emphasizing",
+        "argument_spans": [
+          "multiple f4 decompositions",
+          "sp(3)-type and su(3)-type invariant subalgebras"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Explicit decomposition/invariant-subalgebra relation omitted by the label-status occurrences."
+      }
+    },
+    {
+      "census_id": "L-SSC-147",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-147-O03",
+        "source_span": "particle labels on roots are source model assignments layered over the algebra",
+        "relation_span": "are source model assignments layered over",
+        "argument_spans": [
+          "particle labels on roots",
+          "algebra"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source-model status boundary separating root labels from algebraic construction."
+      }
+    },
+    {
+      "census_id": "L-SSC-150",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-150-O04",
+        "source_span": "L05 uses triality eigenspaces after Wick rotation to propose three generation-related 64-dimensional fermion sets",
+        "relation_span": "uses",
+        "argument_spans": [
+          "triality eigenspaces after Wick rotation",
+          "three generation-related 64-dimensional fermion sets"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-150-O01"
+        ],
+        "load_bearing_note": "Explicit proposal dependency on post-Wick triality eigenspaces."
+      }
+    },
+    {
+      "census_id": "L-SSC-153",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-153-O04",
+        "source_span": "gives explicit inner triality-related automorphisms whose validity differs between ordinary and split algebras",
+        "relation_span": "gives",
+        "argument_spans": [
+          "explicit inner triality-related automorphisms",
+          "validity differs between ordinary and split algebras"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-153-O03"
+        ],
+        "load_bearing_note": "Conserves the automorphism existence/construction to which the already represented validity distinction applies."
+      }
+    },
+    {
+      "census_id": "L-SSC-157",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-157-O03",
+        "source_span": "L06 gives the conventional fiber-bundle/section/transition-function/principal-connection construction",
+        "relation_span": "gives",
+        "argument_spans": [
+          "conventional fiber-bundle/section/transition-function/principal-connection construction"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Source-explicit construction family; its hidden bundle/section/transition/connection behavior remains unexpanded."
+      }
+    },
+    {
+      "census_id": "L-SSC-177",
+      "action": "REPLACE_OCCURRENCE",
+      "replace_id": "L-SSC-177-O02",
+      "occurrence": {
+        "occurrence_id": "L-SSC-177-O02",
+        "source_span": "extended generalized Yang-Mills action over the full deforming group and reduces it to spacetime only when H and G/G0 remain rigid enough that the integrand depends solely on embedded-spacetime coordinates",
+        "relation_span": "reduces it to spacetime only when",
+        "argument_spans": [
+          "extended generalized Yang-Mills action",
+          "spacetime",
+          "H and G/G0 remain rigid enough that the integrand depends solely on embedded-spacetime coordinates"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Conserves the full source condition on action reduction rather than enclosing it as unstructured sentence text."
+      }
+    },
+    {
+      "census_id": "L-SSC-177",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-177-O03",
+        "source_span": "H and G/G0 remain rigid enough",
+        "relation_span": "remain rigid enough",
+        "argument_spans": [
+          "H",
+          "G/G0"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-177-O02"
+        ],
+        "load_bearing_note": "Explicit rigidity side condition required for the full-group-to-spacetime reduction."
+      }
+    },
+    {
+      "census_id": "L-SSC-177",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-177-O04",
+        "source_span": "the integrand depends solely on embedded-spacetime coordinates",
+        "relation_span": "depends solely on",
+        "argument_spans": [
+          "integrand",
+          "embedded-spacetime coordinates"
+        ],
+        "logical_force": "CONDITIONAL",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [
+          "L-SSC-177-O02"
+        ],
+        "load_bearing_note": "Explicit coordinate-dependence condition required by the source reduction."
+      }
+    },
+    {
+      "census_id": "L-SSC-178",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-178-O03",
+        "source_span": "fermion conjugation is induced using deforming-group metric/Killing structure rather than introduced independently",
+        "relation_span": "rather than introduced independently",
+        "argument_spans": [
+          "fermion conjugation",
+          "deforming-group metric/Killing structure"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [
+          "L-SSC-178-O01"
+        ],
+        "load_bearing_note": "Preserves the source's construction boundary: conjugation is induced from the group metric/Killing structure, not supplied as an independent operator."
+      }
+    },
+    {
+      "census_id": "L-SSC-180",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-180-O04",
+        "source_span": "L06 supplies a polynomial modified-BF alternative with auxiliary B and Phi",
+        "relation_span": "supplies",
+        "argument_spans": [
+          "polynomial modified-BF alternative",
+          "auxiliary B and Phi"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED",
+        "depends_on": [],
+        "load_bearing_note": "Explicit action/auxiliary-field architecture distinct from the already recorded solution equations."
+      }
+    },
+    {
+      "census_id": "L-SSC-183",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-183-O03",
+        "source_span": "reviews the one-generation spin(11,3) embedding as an algebraic input",
+        "relation_span": "as",
+        "argument_spans": [
+          "one-generation spin(11,3) embedding",
+          "algebraic input"
+        ],
+        "logical_force": "ASSERTED",
+        "definition_status": "PARTIAL_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Source dependency/status relation for the one-generation embedding used as input."
+      }
+    },
+    {
+      "census_id": "L-SSC-187",
+      "action": "ADD_OCCURRENCE",
+      "occurrence": {
+        "occurrence_id": "L-SSC-187-O03",
+        "source_span": "the accompanying E8 root-particle figure is explicitly described as suggestive rather than definitive",
+        "relation_span": "described as",
+        "argument_spans": [
+          "accompanying E8 root-particle figure",
+          "suggestive rather than definitive"
+        ],
+        "logical_force": "COMPARISON",
+        "definition_status": "EXPLICIT_IN_BODY",
+        "depends_on": [],
+        "load_bearing_note": "Preserves the source's non-definitive interpretation boundary for the root-particle figure."
+      }
+    }
+  ],
+  "counts": {
+    "total_corrections": 42,
+    "additions": 41,
+    "replacements": 1,
+    "affected_bodies": 32
+  },
+  "protected_semantics": [
+    "L-SSC-130 continues to distinguish individual generalized-reflection anti-invariance plus role exchange/sign from even-composition triality transformations preserving T.",
+    "No L05 ordinary-octonion table sign is repaired or normalized by this adjudication.",
+    "No superseded complex-scalar support is imported.",
+    "L-SSC-177 and L-SSC-178 remain decomposition demands; recording their reduction/conjugation conditions does not close their hidden mathematics."
+  ],
+  "provider_boundary": "experiments/062/L_G1_FINAL_AUDIT_V12_TRANSPORT_BOUNDARY_0_2.json",
+  "fixed_point_claim": false,
+  "g2_authorized": false,
+  "next_required_steps": [
+    "Generate an additive L_EXTRACTION_RECONCILED_0_15.json from 0.14 plus exactly these corrections.",
+    "Run deterministic source-span, incidence, dependency, duplicate-ID, and predecessor-conservation verification.",
+    "Recompute the L locator diagnostic against 0.15 and continue source-local review for any substantive uncovered relation; reporting wrappers alone do not require occurrences.",
+    "Run a fresh independent all-151 cold audit only after the provider quota is available and only against the final current successor.",
+    "Do not authorize G2, G3, primitive categorization, IA, NEI, DTS, or DP before a structurally valid zero-correction independent fixed point."
+  ]
+}

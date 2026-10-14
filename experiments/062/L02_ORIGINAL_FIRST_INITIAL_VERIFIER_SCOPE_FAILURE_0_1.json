@@ -1,0 +1,63 @@
+{
+  "schema": "isograph.exp062.l-g0-l02-original-first-initial-CI-failure-preservation.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "date": "2026-10-09",
+  "semantic_authority": false,
+  "exact_run": {
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38027183302",
+    "run_id": 38027183302,
+    "job_id": 114140397489,
+    "trigger": "push",
+    "head_sha": "c5f0aa76af7894ef6cd3e878f9fcf0e2caf8805e",
+    "status": "completed",
+    "conclusion": "failure",
+    "work_step": "node experiments/062/tools/verify-l-g0-l02-source-first-reverse-0-1.mjs",
+    "exit_code": 1
+  },
+  "original_artifacts": {
+    "audit_path": "research/woit-lisi-isomorph/lisi/LISI_L02_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "audit_git_blob_sha": "e65b9794e1648ac6ebf4c84805ce552720d6d7e4",
+    "ssc_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_51.json",
+    "ssc_git_blob_sha": "5e0c4777b8e28c8c2ae300c8fcfdd5667e859fd2",
+    "gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_70.json",
+    "gate_git_blob_sha": "975446324527479c5921f4bff880d2c31845f054"
+  },
+  "errors_as_reported": [
+    "L-only G0 audit scope",
+    "source-first meaningful text and location 2",
+    "source-first meaningful text and location 12",
+    "source-first meaningful text and location 17"
+  ],
+  "root_causes": [
+    {
+      "class": "SOURCE_AUDIT_GENERATOR_SCHEMA_SHADOWING",
+      "exact_location": "LISI_L02_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json stage",
+      "what_happened": "stage initially set to string G0 then overwritten by a stage-lock object",
+      "remedy": "v0.2 stage G0 plus separately named stage_locks object; preserve all 59 source semantic locations"
+    },
+    {
+      "class": "VERIFIER_ARBITRARY_LENGTH_RULE",
+      "exact_location": "verify-l-g0-l02-source-first-reverse-0-1.mjs length>=8 / length>=25",
+      "what_happened": "valid locator §1 p2 / §2.1 p4 and exact short Eq3 source text were rejected only due to character count",
+      "remedy": "v0.2 require recoverable source-role patterns and meaningful nonempty exact formula; check all 30 equation identities instead of enforcing arbitrary length"
+    }
+  ],
+  "original_run_checks": {
+    "source_locations": 59,
+    "original_eqs": 30,
+    "original_footnotes": 3,
+    "SSC_owners": 21,
+    "changed_predecessor_items": 7,
+    "unchanged_predecessor_records": 184,
+    "hostiles_defined": 28,
+    "hostiles_rejected": 28,
+    "source_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false
+  },
+  "correction_success_NOT_YET_PROVED": true,
+  "source_omission_newly_proven_by_this_failure": false,
+  "W_track_mutated": false,
+  "original_CI_result_retained_verbatim": true
+}

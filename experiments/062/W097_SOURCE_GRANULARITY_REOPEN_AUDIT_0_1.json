@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.exp062-w097-source-granularity-reopen-audit.v0.1",
+  "date": "2026-10-07",
+  "status": "TARGETED_W097_SOURCE_GRANULARITY_CORRECTION_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "target": {
+    "census_id": "W-SSC-097",
+    "source": "W05 §§1–2",
+    "predecessor_body": "W05 distinguishes ordinary conjugation on CP1 from the twistor antipodal real structure rho_tw, with rho_tw squared equal to -1 on the C2 coordinate carrier but +1 projectively and with no projective fixed points; it also presents the same real form as a real projective conic with complex but no real points."
+  },
+  "finding": "The predecessor W-SSC-097 occurrence W-SSC-097-O01 combines two distinct load-bearing square laws: rho_tw squared equals -1 on the C2 coordinate carrier, while the same source states +1 projectively. The fixed-point-free clause depends on the projective action, not on the vector-level square-minus-one law. Keeping both square laws in one occurrence hides a dependency distinction exposed by the next G5H candidate.",
+  "correction_rule": "Clarify the already-frozen body without adding a new source: preserve the vector square-minus-one law and rewrite the projective +1 clause as explicit twice-applied projective identity behavior so G1 can represent them separately.",
+  "source_expansion": false,
+  "source_corpus_unchanged": true,
+  "L_evidence_used": false,
+  "cross_track_evidence_used": false,
+  "downstream_effect": "A semantic change to W-SSC-097 invalidates current W G1 for that body and all current W G2-G5/G5H artifacts for the corrected source tuple. Historical artifacts remain evidence for their exact predecessor tuple.",
+  "candidate_interaction": {
+    "candidate_family": "FIXED_POINT_FREE_INVOLUTION_ON_REPRESENTED_PROJECTIVE_CARRIER",
+    "candidate_authority": false,
+    "note": "The hypothesis motivated the granularity check but is not authority and is not consumed until the corrected graph is replayed."
+  },
+  "prohibited_shortcuts": [
+    "Do not reuse W G4 class IDs after this source correction.",
+    "Do not qualify the fixed-point-free involution candidate before corrected W G1-G5 replay.",
+    "Do not import quaternionic/vector/projective textbook semantics into W-SSC-097.",
+    "Do not use L evidence."
+  ],
+  "next_stage": "CREATE_W_SOURCE_SEMANTIC_CENSUS_0_4_AND_SOURCE_DEMAND_CENSUS_0_3"
+}

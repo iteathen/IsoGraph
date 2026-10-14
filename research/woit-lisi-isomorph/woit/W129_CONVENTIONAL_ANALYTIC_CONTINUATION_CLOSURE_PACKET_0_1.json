@@ -1,0 +1,63 @@
+{
+  "schema": "woit.w129-conventional-analytic-continuation-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-129",
+  "source_assertion_id": "W-A0-048",
+  "frozen_body": "Complexifying the coordinates yields a complex spacetime acted on by SL(2,C)_L x SL(2,C)_R; the real Lorentz group and Euclidean SU(2)_L x SU(2)_R rotation group occur as distinct real forms used in the conventional analytic-continuation picture.",
+  "source": "W02 §I",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_CONVENTIONAL_ANALYTIC_CONTINUATION_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json",
+    "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_3.json",
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_ids": 113,
+    "additional_declared_ids": 93,
+    "total_provider_ids": 206,
+    "unresolved_local_refs": 0,
+    "all_extra_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "common_complex_carrier": 204110,
+    "conventional_complex_action": 204220,
+    "minkowski_real_carrier": 204130,
+    "minkowski_embedding": 204151,
+    "euclidean_real_carrier": 205100,
+    "euclidean_embedding": 205111,
+    "wick_real_linear_bijection": 948100,
+    "embedded_slice_relation": 948101,
+    "lorentz_real_form_condition": 204230,
+    "euclidean_real_form_condition": 204231,
+    "minkowski_complex_basis": [
+      204116,
+      204141,
+      204144,
+      204146
+    ],
+    "euclidean_complex_basis": [
+      205112,
+      204141,
+      204144,
+      204146
+    ]
+  },
+  "semantic_guards": [
+    "Both real coordinate presentations complex-span the same exact M2(C) carrier.",
+    "The Wick map is an exact real-linear bijection with only the time basis rotated inside the complex carrier.",
+    "Lorentz and Euclidean group real-form conditions remain distinct and are not identified.",
+    "The conventional two-factor complex action uses corrected matrix identity 204116=I.",
+    "No claim is made that the right-handed proposal preserves the conventional holomorphic group-coordinate continuation.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

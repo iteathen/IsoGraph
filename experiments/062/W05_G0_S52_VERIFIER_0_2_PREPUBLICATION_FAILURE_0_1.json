@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w05-s52-verifier-v02-prepublication-positive-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SECOND_PREPUBLICATION_V8_POSITIVE_FAIL_HOSTILE_COUNT_UNQUALIFIED",
+  "execution": {
+    "method": "PREPUBLICATION_V8_PRODUCTION_CHECKER_EXACT_GITHUB_BLOBS_HASH_LOOKUP_NOT_NODE",
+    "native_Node_CI": false,
+    "GitHub_Actions_run": false,
+    "source_items": 151,
+    "structured_incidences": 371,
+    "positive_pass": false,
+    "positive_errors": [
+      "external bypass not a source/semantic proof"
+    ],
+    "hostile_total": 59,
+    "hostile_rejected": 59,
+    "hostile_escaped": 0,
+    "hostile_crashed": 0,
+    "mutant_qualification": false
+  },
+  "checker": {
+    "path": "experiments/062/tools/verify-w05-s52-hodge-source-g0-0-2.mjs",
+    "git_blob_sha": "08b304c379dbc0da0543ac2600fcf95b94991e41"
+  },
+  "candidate_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_90.json",
+    "git_blob_sha": "2e934012b7137205ccf714f5d68c72c37a2802dc",
+    "committed": false
+  },
+  "defect": {
+    "checker_assumed": "O.original_nine_source_reverse_exhaustiveness",
+    "actual_source_oracle": "O.method.all_nine_source_complete=false; O.method.g0_source_complete=false",
+    "unchanged_W05_primary_source_oracle_git_blob_sha": "030240f26b0b1e0c58c553346c1f896602ee23ce",
+    "reason": "Second guessed property name instead of inspecting actual JSON shape",
+    "correction": "Use two actual method Boolean fields, test changes to both in hostile suite."
+  },
+  "historical_previous": {
+    "v01_prepublication_path": "experiments/062/W05_G0_S52_VERIFIER_0_1_PREPUBLICATION_FAILURE_0_1.json",
+    "git_blob_sha": "29ec5728eee463be901271c30f2235d1244c7e71",
+    "qualified": false
+  },
+  "nonclaims": [
+    "Neither v0.1 nor v0.2 59-of-59 under failed positive qualifies",
+    "No GitHub Actions native Node run yet",
+    "Source W103 original text and W151 registered body unchanged",
+    "All G0 qualification and cross-track constraints still active"
+  ]
+}

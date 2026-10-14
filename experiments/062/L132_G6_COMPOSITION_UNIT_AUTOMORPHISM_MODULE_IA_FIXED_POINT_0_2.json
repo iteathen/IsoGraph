@@ -1,0 +1,121 @@
+{
+  "schema": "isograph.exp062-l132-composition-unit-automorphism-module-ia-fixed-point.v0.2",
+  "date": "2026-10-08",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "COMPOSITION_UNIT_AUTOMORPHISM_0_2",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L132_G5H_COMPOSITION_UNIT_AUTOMORPHISM_0_2.json",
+      "git_blob_sha": "e0ea597c795fcd7e870deb781312d6ebfc6cab26"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L132_G6_COMPOSITION_UNIT_AUTOMORPHISM_MODULE_SSC_0_2.json",
+      "git_blob_sha": "da8b73944c95e58b759c9ed4bbec9ad5181aa59f"
+    }
+  },
+  "inference_profile": {
+    "id": "composition-unit-automorphism-conjunct-projection-0.1",
+    "scope": "Direct dependency/conjunct projections from 187701 only.",
+    "rules": [
+      {
+        "id": "AUT-IA-R1",
+        "trigger": "187701",
+        "derives": [
+          "185003",
+          "183002",
+          "BIJECTION",
+          "UNIT_FIXING",
+          "PRODUCT_PRESERVATION",
+          "Q_PRESERVATION"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "187701 -> automorphism group closure",
+      "187701 -> inner/outer classification",
+      "187701 -> triality or rotation",
+      "187701 -> named coefficient algebra identity"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(187701)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "AUT-IA-001",
+          "assertion": "187701 entails exact 185003 composition-algebra support.",
+          "support": [
+            "187701 explicit body"
+          ]
+        },
+        {
+          "id": "AUT-IA-002",
+          "assertion": "187701 entails an exact linear bijection A->A.",
+          "support": [
+            "187701 explicit body"
+          ]
+        },
+        {
+          "id": "AUT-IA-003",
+          "assertion": "187701 entails unit fixing.",
+          "support": [
+            "187701 explicit body"
+          ]
+        },
+        {
+          "id": "AUT-IA-004",
+          "assertion": "187701 entails product preservation.",
+          "support": [
+            "187701 explicit body"
+          ]
+        },
+        {
+          "id": "AUT-IA-005",
+          "assertion": "187701 entails Q preservation.",
+          "support": [
+            "187701 explicit body"
+          ]
+        },
+        {
+          "id": "AUT-IA-006",
+          "assertion": "No group-level or triality/rotation semantics follow from the selected relation.",
+          "support": [
+            "scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No further selected-relation consequence."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 6,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES",
+  "predecessor": {
+    "path": "experiments/062/L132_G6_COMPOSITION_UNIT_AUTOMORPHISM_MODULE_IA_FIXED_POINT_0_1.json",
+    "git_blob_sha": "ac47760c721aab2d400f7ce3ccaa172a345517cc",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_SI_COLLISION"
+  },
+  "replay_invariance": {
+    "inference_profile_unchanged": true,
+    "iterations_unchanged": true,
+    "fixed_point_unchanged": true
+  }
+}

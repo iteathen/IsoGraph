@@ -1,0 +1,37 @@
+{
+  "schema": "isograph.exp062-l039-normalization-higgs-scalar-role-verifier-escape.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_ADVERSARIAL_SCALAR_FORM_DEGREE_MUTATION_ESCAPE",
+  "run": {
+    "id": 37911920307,
+    "head_sha": "2aea10e3b04840cd2264ab78ef07302f22421d25",
+    "conclusion": "failure",
+    "unmutated_math_reconstruction": {
+      "clifford_pairs": 64,
+      "bad": 0,
+      "mixed_brackets": 120,
+      "bad_mixed": 0,
+      "quadratic_matrix_entries": 124416,
+      "bad_quadratic": 0,
+      "gradient_cases": 48,
+      "bad_gradient": 0,
+      "torsion_cases": 48,
+      "bad_torsion": 0
+    },
+    "adversarial_defined": 22,
+    "adversarial_rejected": 21,
+    "escape": "field scalar becomes form"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l039-common-basis-normalization-0-1.mjs",
+    "git_blob_sha": "271a6a326284efa8c0736d618bf1007f440aa8d2"
+  },
+  "cause": "Source packet's exact typed mixed-E assertion marks e one-form and phi degree-0 scalar. The checker tested H1 coefficient and generic gradient but did not preserve the complete literal typed definition. A mutated phi 1-form was accepted despite changing graded exterior sign and total degree.",
+  "repair": "Check complete source mixed_1form_E literal and source e/phi types under frozen v1. Retest unmutated baseline and all 22 effective mutation cases. No original source changes.",
+  "effect": "Failed CI does not certify semantic source claim or mutation completeness; current G0 source still unfrozen.",
+  "G1_authorized": false,
+  "external_review_passed": false
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "isograph.lisi-l01-real-spin-group-isomorphism-negative-source-evidence.g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "FROZEN_L01_PRINTED_REAL_LIE_GROUP_EQUALITY_COUNTEREXAMPLE_SOURCE_ERROR_CANDIDATE",
+  "authority": false,
+  "source_paper_repaired": false,
+  "source_complete": false,
+  "G1_authorized": false,
+  "frozen_source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "arxiv_version": "0711.0770v1, 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "section": "§2.2.1 immediately before §2.2.2 Electroweak D2",
+    "pdf_zero_based_page": 10,
+    "printed_page": 10,
+    "verbatim_source_statement": "The Spin^+(3,1) Lie group of gravity, with Lie algebra so(3,1), is neither simple nor compact — it is isomorphic to SL(2,C) = SL(2,R) × SL(2,R).",
+    "source_kind": "PUBLISHED_MATHEMATICAL_ASSERTION_NOT_A_G0_QUALIFIED_AXIOM"
+  },
+  "predecessors": {
+    "current_L_SSC": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_18.json",
+      "git_blob_sha": "ebf1848a310af1bc62a33917859272a4d0b88982"
+    },
+    "full_L01_visual_review": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    },
+    "current_procedural_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_18.json",
+      "git_blob_sha": "0cda97d56f22d1cf825f42d011a79de95e36fbbc"
+    }
+  },
+  "mathematical_scope": {
+    "left": "SL(2,C) viewed as a real connected Lie group / real Lie algebra sl(2,C)_R; double-cover model of proper orthochronous Lorentz transformations",
+    "right": "SL(2,R) × SL(2,R) as the direct product of two real Lie groups; underlying real Lie algebra sl(2,R) ⊕ sl(2,R)",
+    "real_forms_not_identical": true,
+    "conditional_noncounterexample": "Their COMPLEXIFIED real Lie algebras can become isomorphic as sl2(C)⊕sl2(C); this does not make the original stated REAL group/direct-product equality true.",
+    "do_not_conflate": "Spin(3,1), Spin(4), and Spin(2,2) real forms; source's complexified D2 root system identification does not prove equality of real forms."
+  },
+  "independent_group_center_certificate": {
+    "Z_SL2C": "{+I2,-I2}",
+    "center_order_left": 2,
+    "Z_SL2R_product": "{(+I2,+I2),(+I2,-I2),(-I2,+I2),(-I2,-I2)}",
+    "center_order_right": 4,
+    "algebraic_principle": "Any group isomorphism carries center onto center bijectively; finite center orders 2 and 4 cannot be equal.",
+    "group_isomorphism_possible": false
+  },
+  "independent_real_Lie_algebra_certificate": {
+    "basis_left": [
+      "E",
+      "F",
+      "H",
+      "iE",
+      "iF",
+      "iH"
+    ],
+    "basis_right": [
+      "E1",
+      "F1",
+      "H1",
+      "E2",
+      "F2",
+      "H2"
+    ],
+    "Chevalley_relation": "[E,F]=H; [H,E]=2E; [H,F]=-2F; i²=-1 for realification; cross-factor brackets zero in direct product",
+    "Killing_formula": "K_ij=Tr(ad(e_i) ad(e_j)), exact signed integer structure constants",
+    "Killing_SL2C_as_real": [
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -16
+      ]
+    ],
+    "Killing_SL2R_product": [
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ]
+    ],
+    "signature_sl2C_R": {
+      "positive": 3,
+      "negative": 3,
+      "zero": 0
+    },
+    "signature_sl2R_plus_sl2R": {
+      "positive": 4,
+      "negative": 2,
+      "zero": 0
+    },
+    "invariant_argument": "Killing inertia of real Lie algebra is invariant under real Lie algebra isomorphism by congruence/Sylvester law; different signatures preclude the printed real Lie algebra/group isomorphism.",
+    "real_Lie_algebra_isomorphism_possible": false
+  },
+  "source_disposition": {
+    "printed_author_claim_preserved_verbatim": true,
+    "source_external_math_disagrees": true,
+    "source_group_equality_false_under_stated_real_category": true,
+    "source_Cartan_complexification_hidden_equivalence_not_same_real_identity": true,
+    "no_claim_of_author_intent": true,
+    "no_claim_full_2007_E8_model_invalid": true,
+    "L_SSC_030_original_general_gravity_spin_representation_claim_retained": true,
+    "needed_next": "Freeze exact integer ad/Killing verifier plus center argument with adversarial source-version, structure-constant, and false-promotion mutations; then source-conserve this negative qualifier in L-SSC-030 with no other SI changes."
+  },
+  "qualification_boundary": {
+    "source_31_page_VISUAL_audit_full_formula_closure": false,
+    "source_mathematical_proof_scope": "this particular real Lie-group equality only",
+    "source_paper_correction_authorized": false,
+    "L_G0_source_census_frozen": false,
+    "L_G1_through_G7_authorized": false,
+    "full_primitive_closure": false,
+    "external_review_passed": false
+  },
+  "epistemic_provenance": {
+    "primary_source_frozen": "2007 arXiv 0711.0770v1 printed 2.2.1 group equality",
+    "independent_math_oracles": [
+      "group center cardinalities 2 vs 4",
+      "6D exact Lie algebra structure-adjoint trace Killing matrix signatures"
+    ],
+    "recorded_on": "2026-10-08",
+    "distinction": "Observation that two real forms share an abstract D2 root diagram does not grant group isomorphism or global source mathematical correctness."
+  }
+}

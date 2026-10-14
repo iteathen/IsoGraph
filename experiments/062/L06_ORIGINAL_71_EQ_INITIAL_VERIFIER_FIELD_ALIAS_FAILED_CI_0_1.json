@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062.l.G0.L06-original-71-source-equations-initial-CI-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_run": {
+    "run_id": 38071431639,
+    "job_id": 114269459480,
+    "head_sha": "ec6a63e44eadd501cb21b61874d6ec6564a8fa58",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38071431639",
+    "conclusion": "failure",
+    "status": "completed"
+  },
+  "failed_step": {
+    "path": "experiments/062/tools/verify-l-g0-l06-all-71-original-source-equations-0-1.mjs",
+    "git_blob_sha": "88d1e00da6dd3b38e495868eeddcba0955c26ad2",
+    "node_version": "26.7.0",
+    "unhandled_error": "TypeError: Cannot read properties of undefined (reading 'schema')",
+    "line": 65,
+    "bad_owner": "Generated Node runner populated D.gate, but check(D) destructured D.g as current gate. Preflight model had manually supplied D.g."
+  },
+  "original_source_artifacts": {
+    "source_L06_v2_71_eq_git_blob_sha": "15339147b9fc36767d10d97e7093be034c5dacf9",
+    "source_L06_v2_reverse_sha": "c020274072cefc2b360fb9d5c1b047d47527b1fb",
+    "source_ssc55_sha": "f3813f3ba1757429d643bd9b645397e394d43fd5",
+    "source_traversal22_sha": "18df1d3900250f1193f4a96c900637208c7d7672",
+    "gate0_84_sha": "484f97aa48503453df4bfafb1411c37cc4cbf07a"
+  },
+  "root_cause_class": "VERIFIER_RUNTIME_DATA_SHAPE_AND_PREFLIGHT_DATA_SHAPE_DIVERGENCE",
+  "method_fix": "Use one normalized runtime data-object shape in the Node script (D.g=D.gate) before both baseline and hostile verification. Preserve exact gate predecessor/authority SHA and add hostile provenance checks for the original failure. Do not edit source assertion/census to compensate for incorrect checker machinery.",
+  "baseline_source_semantic_mismatch_proved": false,
+  "adversarial_hostiles_ran_in_original_CI": false,
+  "first_failed_run_never_retrospectively_success": true,
+  "unchanged_source_scope": {
+    "frozen_original": "arXiv:1506.08073v2",
+    "source_numbered_eq": 71,
+    "prior_sample": 28,
+    "new_source_locations": 43,
+    "other_unchanged_SSC_records": 181,
+    "all_SSC_identities": 191
+  },
+  "original_whole_source_cold_COMPLETE": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_track_semantics_imported": false,
+  "PR70_merge_authorized": false
+}

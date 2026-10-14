@@ -1,0 +1,53 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-K-first-original-source-CI-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "first_original_CI": {
+    "run_id": 38207941810,
+    "job_id": 114675500735,
+    "head_sha": "7b5528b9865490b3d63a504fd74856a13057cd1c",
+    "conclusion": "failure",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-K-creation-original-source-0-1.mjs",
+    "verifier_git_blob_sha": "13bb3d30fe737a0eaeb6fa9a95ea9c1ef300f4ac",
+    "original_pdf_binary_sha256_verified": true,
+    "original_page13_layout_sha256_verified": true,
+    "original_source_blocks_sha256_verified": 3,
+    "source_semantic_group": "L04-S036",
+    "SSCID_population": 191,
+    "source_location_population": 350,
+    "conditional_finite_group_sizes": {
+      "PT": 8,
+      "CPT": 16,
+      "PTt": 48,
+      "CPTt": 96
+    },
+    "K_model_commutes_P_T_t": true,
+    "K_model_anticommutes_C": true,
+    "hostiles_defined": 34,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0,
+    "baseline_failure": [
+      "PRESERVE_EXPLICIT_PHYSICAL_EXCLUSION"
+    ]
+  },
+  "diagnosis": {
+    "class": "VERIFIER_FALSE_NEGATIVE_EXACT_PROSE_ORACLE",
+    "expected_checker_phrase": "not a symmetry of nature",
+    "actual_packet_phrase": "does not consider K a symmetry of nature",
+    "same_negative_source_modality": true,
+    "source_math_corruption_identified": false,
+    "why_not_source_defect": "PDF/original source atom SHAs passed and negative-physical-symmetry source role is correctly represented; the checker demanded different prose wording.",
+    "repair": "Use the existing packet's exact source-conserving negative wording in the verifier; preserve existing SSC0.94 and original inverse0.27 bytes; re-run all 34 hostile mutations.",
+    "first_failure_remains_failure": true
+  },
+  "locks": {
+    "G0_frozen": false,
+    "whole_L04_cold_complete": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

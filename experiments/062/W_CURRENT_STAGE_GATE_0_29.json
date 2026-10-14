@@ -1,0 +1,37 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.29",
+  "date": "2026-10-08",
+  "status": "W_G2_REAL_PREDICATE_CORRECTED_INPUT_COMPLETE_G3_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_28.json",
+    "git_blob_sha": "59dab5c254da2d7993794b40a3c383560d9357b0",
+    "reason": "W G2 0.4 passed deterministic replay on the 446-occurrence G1 tuple."
+  },
+  "current_G2": {
+    "graph": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_4.json",
+      "git_blob_sha": "4a6ef4b2e4987c6875e6fc4c0205a04f84c37b57"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G2_FIXED_POINT_0_4.json",
+      "git_blob_sha": "61de0e501e91246a59ac4b2ce90aa3f98de29052"
+    },
+    "workflow_run_id": 37740009421,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G2_complete": true,
+    "G3_authorized": true,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Replay W G3 from the corrected G2 graph. Directly adjudicate W-SSC-097-O08 and the changed O05 dependency; carry forward only byte-identical predecessor rulings."
+}

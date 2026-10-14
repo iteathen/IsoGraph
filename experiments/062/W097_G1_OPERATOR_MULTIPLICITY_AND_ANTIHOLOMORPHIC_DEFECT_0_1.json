@@ -1,0 +1,57 @@
+{
+  "schema": "isograph.exp062-w097-g1-operator-multiplicity-antiholomorphic-defect.v0.1",
+  "date": "2026-10-08",
+  "status": "CONFIRMED_G1_LOAD_BEARING_OPERATOR_AND_PREDICATE_GRANULARITY_DEFECT",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "earliest_affected_stage": "G1_OCCURRENCE_EXTRACTION",
+  "source": {
+    "id": "W05",
+    "frozen_locator": "Notes on the Twistor P1 §2 printed pp.2-3",
+    "pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "source_corpus_changed": false
+  },
+  "input": {
+    "path": "experiments/062/W_EXTRACTION_RECONCILED_0_30.json",
+    "git_blob_sha": "aa0060a404d7252d2283419633bb3847e5a21147",
+    "current_W097_occurrences": 55,
+    "current_W_occurrences": 493
+  },
+  "findings": [
+    {
+      "id": "W097-G1-OP58",
+      "classification": "UNEXTRACTED_UNARY_OPERATOR",
+      "source": "rho_tw([z1,z2])=[-bar(z2),bar(z1)]",
+      "problem": "Conjugation operands are represented as O39/O40 but unary '-' acting on bar(z2) is left embedded inside O18's opaque formula.",
+      "repair": "Represent source-written -bar(z2) as its own unary sign occurrence, with O18 depending on the new occurrence."
+    },
+    {
+      "id": "W097-G1-OP59",
+      "classification": "OPERATOR_MULTIPLICITY_LOSS",
+      "source": "x^2+y^2+z^2=0",
+      "problem": "O45 records one addition occurrence over three terms although source prints two + operator tokens.",
+      "repair": "Represent both plus token occurrences as distinct ordered source operators without assuming an algebraic association or an unprinted grouping; make conic equation O22 consume both."
+    },
+    {
+      "id": "W097-G1-OP60",
+      "classification": "NAMED_SEMANTIC_PROPERTY_UNEXTRACTED",
+      "source": "real structure on CP1 as an antiholomorphic map rho: CP1 -> CP1",
+      "problem": "O09 names the typed map, but no separate occurrence exposes the load-bearing 'antiholomorphic' predicate requiring a lower definition.",
+      "repair": "Extract antiholomorphic as its own name-only semantic property of rho's CP1 self-map; keep it unexpanded and let O09 depend on it."
+    }
+  ],
+  "negative_controls": [
+    "No assumed association/commutativity of + beyond two source-written tokens.",
+    "No import of complex-analysis definition of antiholomorphic map.",
+    "No standard vector negation axioms imported from the mathematical noun.",
+    "No L evidence or G5 candidate used.",
+    "No source-semantic-census change; 83 other W bodies remain exact."
+  ],
+  "prior_ci": {
+    "workflow_run_id": 37796455714,
+    "conclusion": "success",
+    "limitation": "CI verified existing 55 G1 nodes; independent operation-census audit exposed omitted tokens/property."
+  },
+  "next_lawful_action": "Publish G1 0.31 with three added independent occurrences, run deterministic replay with adversarial controls, and repeat complete source-local zero-change verification before G2."
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-w-multisource-census-seal-verifier-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_PREPUBLICATION_VERIFIER_ESCAPE_43_OF_44_REJECTED_ONE_FALSE_SEAL_NOT_REJECTED",
+  "target_source_blob": "34be22f77f84e9f40c9a9d7c92a7eab76b4e7d03",
+  "target_W_demand_blob": "66760bb8f58cbe50cb334dd1a653e3c89924cf05",
+  "observed_failure": {
+    "mutation": "promote closed source",
+    "action": "Set src.closure_claims.sealed=true",
+    "result": "UNDETECTED",
+    "positive_baseline_errors": 0,
+    "other_controls_rejected": 43,
+    "total_controls": 44
+  },
+  "cause": "Verification tested source schema, member/operand fidelity, and specific G1 authorization but failed to assert src.closure_claims.sealed=false.",
+  "repair_rule": "Require all closure claims primitive_closure/ia_fixed_point/sealed false, current source candidate not frozen, source-registered 144 cold reviews pending. Rerun all controls and preserve failed local version as negative evidence.",
+  "source_effect": "NONE",
+  "stage": "G0_UNFROZEN",
+  "external_review": "NONE_CI_NOT_RUN_FOR_FAILED_PREPUBLICATION_SCRIPT"
+}

@@ -1,0 +1,230 @@
+{
+  "schema": "isograph.exp062-w-seven-source-literal-oracle.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "AGENT_INDEPENDENT_SOURCE_LITERAL_EXPECTATIONS_SEVEN_G0_ROWS_ONLY",
+  "source_checks": {
+    "W-SSC-059": {
+      "source": "W04a",
+      "exact_location": "2026-03-05 author post, displayed Weyl + factorization + helicity",
+      "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+      "equation_count": 4,
+      "source_strings": [
+        "(E-sigma.p) tilde_psi_R(E,p)=0",
+        "(E+sigma.p)(E-sigma.p)=E^2-|p|^2",
+        "E=+|p| or -|p| conditional on Weyl equation",
+        "helicity=(1/2)(sigma.p)/|p| with plus/minus energy signs"
+      ]
+    },
+    "W-SSC-061": {
+      "source": "W04a",
+      "exact_location": "2026-03-05 author post, Wightman and attempted Wick Schwinger formulas",
+      "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15574",
+      "equation_count": 3,
+      "source_strings": [
+        "tilde_W2(E,p)=(E-sigma.p)^(-1)=(E+sigma.p)/(E^2-|p|^2)",
+        "tilde_S2(E,p)=(iE-sigma.p)^(-1) - attempted, source-rejected simple continuation",
+        "conventional source maps S_R* to S_L, not right-only proposal"
+      ]
+    },
+    "W-SSC-066": {
+      "source": "W04b",
+      "exact_location": "2026-03-09 original author post, first six mathematical lines",
+      "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+      "equation_count": 3,
+      "source_strings": [
+        "Spin(4,C)=SL(2,C)_L x SL(2,C)_R",
+        "g in SL(2,C) -> (bar(g), g); FIRST factor conjugate",
+        "Spin(4)=SU(2)_L x SU(2)_R; no mathematically imposed Z2 quotient in transcription"
+      ]
+    },
+    "W-SSC-079": {
+      "source": "W04d",
+      "exact_location": "2026-04-17 original author post, complex time section",
+      "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15663",
+      "equation_count": 2,
+      "source_strings": [
+        "U(t)=exp(-itH)",
+        "z=t+is; U(z)=exp(-izH) holomorphic lower half-plane s<0 under positive-energy hypothesis"
+      ]
+    },
+    "W-SSC-107": {
+      "source": "W05",
+      "exact_location": "arXiv:2202.02657v2, printed §6.1, H1 paragraph",
+      "url": "https://arxiv.org/html/2202.02657v2",
+      "equation_count": 2,
+      "source_strings": [
+        "H^1(Gal(Fbar/F),PGL_2(Fbar)), said 'which has two elements' in source",
+        "H^1(Gal(Fbar/F),PGL_n(Fbar)); source distinguishes real versus p-adic higher n; no general quantifier inferred"
+      ]
+    },
+    "W-SSC-122": {
+      "source": "W04e",
+      "exact_location": "linked author preliminary PDF dated July 14 2026 §3 p.7–8 (PDF indices 6–7)",
+      "url": "https://www.math.columbia.edu/~woit/twistorunification/chiralwick-sketch.pdf",
+      "equation_count": 4,
+      "source_strings": [
+        "Theta f(tau)=overline(f(-tau))",
+        "Theta(lambda f)=overline(lambda) f and Theta^2=1 PRINTED without Theta(f) on RHS (source anomaly)",
+        "<f,g>_OS=S2(Theta f,g) on S_+(R) positive-support Schwartz",
+        "H1=S(R+)/{f:<f,f>_OS=0} one-particle free-field quotient"
+      ]
+    },
+    "W-SSC-124": {
+      "source": "W04e",
+      "exact_location": "linked author preliminary PDF dated July 14 2026 §4 pp.8–10 (PDF indices 7–9)",
+      "url": "https://www.math.columbia.edu/~woit/twistorunification/chiralwick-sketch.pdf",
+      "equation_count": 4,
+      "source_strings": [
+        "(partial_t+partial_x)psi_R=0; (partial_t-partial_x)psi_L=0",
+        "z -> (z-i)/(z+i) with ordered numerator and denominator",
+        "Minkowski real form (zR,zL)->(bar(zR),bar(zL))",
+        "Euclidean real form (zR,zL)->(-bar(zL),-bar(zR)), opposite component order and two minus signs"
+      ]
+    }
+  },
+  "incidence_checks": {
+    "W-SSC-059": [
+      {
+        "id": "W04A-059-01",
+        "modality": "SOURCE_DISPLAYED_EQUATION_OF_MOTION",
+        "exact": "(E-σ·p)ψ̃_R(E,p)=0"
+      },
+      {
+        "id": "W04A-059-02",
+        "modality": "SOURCE_DISPLAYED_FACTORIZATION_EQUALITY",
+        "exact": "(E+σ·p)(E-σ·p)=E²-|p|²"
+      },
+      {
+        "id": "W04A-059-03",
+        "modality": "SOURCE_CONDITIONAL_MASSLESS_SOLUTION",
+        "exact": "E=±|p| conditioned on Weyl equation"
+      },
+      {
+        "id": "W04A-059-04",
+        "modality": "SOURCE_DEFINED_HELICITY_EIGENVALUE_OPERATOR",
+        "exact": "1/2(σ·p)/|p| energy-helicity branch sign"
+      }
+    ],
+    "W-SSC-061": [
+      {
+        "id": "W04A-061-01",
+        "modality": "SOURCE_PRINTED_WIGHTMAN_MATRIX_EQUALITY",
+        "exact": "inverse equals rational denominator E²-|p|²"
+      },
+      {
+        "id": "W04A-061-02",
+        "modality": "SOURCE_PROPOSED_NAIVE_WICK_REPLACEMENT_NOT_ESTABLISHED_RECONSTRUCTION",
+        "exact": "iE in attempted source Schwinger inverse"
+      },
+      {
+        "id": "W04A-061-03",
+        "modality": "CONVENTIONAL_SOURCE_REPRESENTATION_ROLE_NOT_PROPOSED_RIGHT_ONLY_ALTERNATIVE",
+        "exact": "S_R* -> S_L only conventional scope"
+      }
+    ],
+    "W-SSC-066": [
+      {
+        "id": "W04B-066-01",
+        "modality": "SOURCE_PRINTED_COMPLEX_SPIN_DECOMPOSITION",
+        "exact": "SL2_L x SL2_R"
+      },
+      {
+        "id": "W04B-066-02",
+        "modality": "SOURCE_PRINTED_MINKOWSKI_REAL_SUBGROUP_EMBEDDING",
+        "exact": "(bar g,g)"
+      },
+      {
+        "id": "W04B-066-03",
+        "modality": "SOURCE_PRINTED_EUCLIDEAN_REAL_SUBGROUP",
+        "exact": "SU2_L x SU2_R printed"
+      }
+    ],
+    "W-SSC-079": [
+      {
+        "id": "W04D-079-01",
+        "modality": "SOURCE_TIME_EVOLUTION",
+        "exact": "-itH"
+      },
+      {
+        "id": "W04D-079-02",
+        "modality": "SOURCE_COMPLEX_TIME_FORMULA_AND_DOMAIN",
+        "exact": "z=t+is, -izH, s<0"
+      }
+    ],
+    "W-SSC-107": [
+      {
+        "id": "W05-107-01",
+        "modality": "SOURCE_GALOIS_COHOMOLOGY_CLASSIFYING_CLAIM",
+        "exact": "PGL2 H^1 source printed two elements, F scope ambiguous"
+      },
+      {
+        "id": "W05-107-02",
+        "modality": "SOURCE_HIGHER_N_COMPARISON",
+        "exact": "PGL_n H^1 real/p-adic distinction"
+      }
+    ],
+    "W-SSC-122": [
+      {
+        "id": "W04E-122-01",
+        "modality": "SOURCE_OSTERWALDER_SCHRADER_CONJUGATION",
+        "exact": "f -> overline f(-tau)"
+      },
+      {
+        "id": "W04E-122-02",
+        "modality": "SOURCE_PRINTED_ANTILINEARITY_WITH_UNUSUAL_RHS",
+        "exact": "Theta(lambda f)=overline(lambda) f source printed"
+      },
+      {
+        "id": "W04E-122-03",
+        "modality": "SOURCE_CONDITIONAL_OS_HERMITIAN_FORM",
+        "exact": "S2(Theta f,g)"
+      },
+      {
+        "id": "W04E-122-04",
+        "modality": "SOURCE_FORMAL_QUOTIENT_BY_NULL_SPACE",
+        "exact": "Schwartz positive-time / zero OS norm"
+      }
+    ],
+    "W-SSC-124": [
+      {
+        "id": "W04E-124-01",
+        "modality": "SOURCE_TWO_SEPARATE_CHIRAL_EOM",
+        "exact": "right + left - source signs"
+      },
+      {
+        "id": "W04E-124-02",
+        "modality": "SOURCE_CAYLEY_TRANSFORM",
+        "exact": "(z-i)/(z+i)"
+      },
+      {
+        "id": "W04E-124-03",
+        "modality": "SOURCE_MINKOWSKI_REAL_FORM_CONJUGATION",
+        "exact": "(bar zR,bar zL)"
+      },
+      {
+        "id": "W04E-124-04",
+        "modality": "SOURCE_EUCLIDEAN_REAL_FORM_CONJUGATION",
+        "exact": "(-bar zL,-bar zR)"
+      }
+    ]
+  },
+  "covered_source_ids": [
+    "W-SSC-059",
+    "W-SSC-061",
+    "W-SSC-066",
+    "W-SSC-079",
+    "W-SSC-107",
+    "W-SSC-122",
+    "W-SSC-124"
+  ],
+  "coverage": {
+    "item_count": 7,
+    "source_expression_count": 22,
+    "cold_9_source_complete": false
+  },
+  "review_boundary": "Agent-read direct frozen Woit sources and linked preliminary PDF pages; semantic reviewer external independent not passed, mutable blog snapshots not byte-pinned to 2026-10-03",
+  "unresolved_source_anomaly": "W04e Theta(lambda f)=conjugate(lambda) f bare f on RHS beside antilinear prose; no silent correction",
+  "no_L_semantics_used": true
+}

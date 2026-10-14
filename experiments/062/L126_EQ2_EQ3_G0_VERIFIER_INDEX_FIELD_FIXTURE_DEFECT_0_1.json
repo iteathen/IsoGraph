@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.exp062-l126-eq2-eq3-source-check-index-label-fixture-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_VERIFIER_INDEX_FIELD_SCHEMA_MISMATCH_BASELINE_FAILURE",
+  "run": {
+    "id": 37833925600,
+    "sha": "c68f5e8c64cdb69ed866d197ec24cdc3c4c962d3",
+    "conclusion": "failure",
+    "baseline_error": "barGamma index equality exact two-entry contradiction",
+    "test_counts": {
+      "source_pair_failures": 7,
+      "source_matrix_entries": 28,
+      "barGamma_definitions_disagreements": 2,
+      "positive_controls": [
+        "C",
+        "H"
+      ],
+      "mutations_defined": 20,
+      "mutations_tested": 0
+    }
+  },
+  "cause": "Defect artifact uses field `c` to denote the bound Clifford index in its two barGamma mismatch witnesses; independent checker calculated the same integer in field `gamma`. The structural equality test compared object key names literally, so it rejected equal mathematical indices.",
+  "fix": "Change only the checker witness schema to use `c` as in the pinned source artifact, preserve matrix products, all pair-level counts, exact original source and full mutation baseline-gate discipline.",
+  "nonclaims": [
+    "The failed CI did not test the 20 adversarial mutations, because baseline failed and mutation testing remained gated.",
+    "No source mathematical counterexample was invalidated by this fixture difference.",
+    "No source, current SSC, stage authority or W track was changed."
+  ],
+  "next_step": "Rerun Node with corrected comparison and verify baseline plus all effective adversarial modifications."
+}

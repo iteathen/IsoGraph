@@ -1,0 +1,350 @@
+{
+  "schema": "isograph.lisi-l01-electroweak-connection-cartan-table4-g0.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "L01_FROZEN_WEW_SU2_BLOCK_CARTAN_TABLE4_LITERAL_CANDIDATE_UNVERIFIED",
+  "authority": false,
+  "source_complete": false,
+  "source_census_frozen": false,
+  "mathematical_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1 2007-11-06",
+    "title": "An Exceptionally Simple Theory of Everything",
+    "author": "A. Garrett Lisi",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "section": "§2.2.2 Electroweak D2",
+    "pdf_pages_zero_based": [
+      10,
+      11
+    ],
+    "printed_pages": [
+      10,
+      11
+    ],
+    "source_modality": "PUBLISHED_FORMULAS_AND_PROPOSED_PHYSICAL_LABELS_NOT_GLOBALLY_QUALIFIED_MATHEMATICAL_OR_EXPERIMENTAL_THEOREMS",
+    "visual_source_check": "Direct PDF page image reading of pp10/11, compared independently with source §2.2.1 bivector definition on printed p9."
+  },
+  "parents": {
+    "ssc_021": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_21.json",
+      "git_blob_sha": "882ce411777e773f18151ab321ee72d4a29a006b"
+    },
+    "gate_021": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_21.json",
+      "git_blob_sha": "d33f2019e1425c2f1bb58ab6ee78bd26d70e4448"
+    },
+    "higgs_cl4_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ELECTROWEAK_CL4_HIGGS_SOURCE_G0_0_1.json",
+      "git_blob_sha": "a7d06039ece48b315a9b94792a1983123b31ce1d"
+    },
+    "L01_visual_audit": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    },
+    "frozen_corpus": {
+      "path": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+      "git_blob_sha": "5775af1ab9289f97d903b39d5eb8eda241bafe78"
+    }
+  },
+  "fermion_and_gauge_roles": {
+    "left": "W in su(2)_L acts on LEFT-chiral fermion doublets only; upper 2x2 chiral block in electroweak Cl(4) representation.",
+    "right": "B_1 in su(2)_R is a DIFFERENT Pati-Salam right-chiral partner; lower 2x2 block, not a standard model SU2_L gauge field.",
+    "right_cartan_u1": "B_1^3*(i/2)*sigma3 lies in source u(1)_R; combines with source B2 of strong su3 complement in later Y relation.",
+    "Higgs": "phiPlus,phiZero complex Higgs doublet built from four real phi^mu as separately source-conserved at SSC0.21; source treats so(4) action on this as sensible proposal.",
+    "source_algebra": "so(4)=su(2)_L+su(2)_R=Cl^2(4), an asserted Lie algebra decomposition; do not promote full group equality or entire physical dynamics.",
+    "source_cross_requirement": "B1plus and B1minus are Pati-Salam extra right-chiral gauge bosons, not observed SM fields; possible heavy masses/left-right symmetry breaking are speculative source statements, not proven."
+  },
+  "wew": {
+    "source_lhs": "w_ew=(1/2)*sum_{mu,nu}(w_ew)^{mu nu}*gammaPrime_{mu nu}",
+    "source_bivector_definition": "gammaPrime_{mu nu}=(1/2)*(gammaPrime_mu*gammaPrime_nu-gammaPrime_nu*gammaPrime_mu), as in preceding §2.2.1; source field w_ew^{mu nu} antisymmetric with ordered index roles.",
+    "first_2x2_block": "sum_{tau=1}^3 (V^tau+U^tau)*(i/2)*sigma_tau",
+    "second_2x2_block": "sum_{tau=1}^3 (V^tau-U^tau)*(i/2)*sigma_tau",
+    "off_diagonal_blocks": "0_2x2",
+    "equal_first": "sum_{tau=1}^3 W^tau*(i/2)*sigma_tau",
+    "equal_second": "sum_{tau=1}^3 B_1^tau*(i/2)*sigma_tau",
+    "roles_equalities": [
+      "W^tau=V^tau+U^tau",
+      "B_1^tau=V^tau-U^tau",
+      "V^tau=(W^tau+B_1^tau)/2",
+      "U^tau=(W^tau-B_1^tau)/2"
+    ],
+    "binder": "tau ranges 1..3, summed; W,B1,V,U are real independent source Lie gauge coefficients only subject to displayed equalities, not four duplicate SI handles",
+    "source_rotation": "U,V are ANALOGOUS to 1/2 omega_T, omega_S gravity roles and relate to W/B1 by same pi/4 rotation plus scaling as gravitational Eq.(2.9); do not equate electroweak U with gravitational omega_T or import its factor of i.",
+    "source_row_col": "each displayed block is 2x2 complex; upper rows/cols 1,2 are left Weyl-doublet, lower rows/cols 3,4 right Weyl-doublet. No upper/lower interchange.",
+    "diagnostic_six_bivector_basis": {
+      "status": "INDEPENDENT_DERIVED_CHECK_WITNESS_NOT_SOURCE_COEFFICIENT_IDENTIFICATION",
+      "common": [
+        [
+          "tau1",
+          "gammaPrime_23"
+        ],
+        [
+          "tau2",
+          "gammaPrime_31"
+        ],
+        [
+          "tau3",
+          "gammaPrime_12"
+        ]
+      ],
+      "difference": [
+        [
+          "tau1",
+          "gammaPrime_14"
+        ],
+        [
+          "tau2",
+          "gammaPrime_24"
+        ],
+        [
+          "tau3",
+          "gammaPrime_34"
+        ]
+      ],
+      "witness_formula": "X=(1/2)*sum_tau (V^tau*C_tau+U^tau*D_tau), C_tau=gammaPrime_23,31,12; D_tau=gammaPrime_14,24,34",
+      "declaration": "This provides an exact 4x4 matrix witness. It is not a source assertion fixing all antisymmetric w_ew^{mu nu} index coefficient conventions or removing the explicit 1/2 Einstein-summation ambiguity."
+    }
+  },
+  "cartan": {
+    "source_expr": "C=(1/4)*(W^3+B_1^3)*gammaPrime_12+(1/4)*(W^3-B_1^3)*gammaPrime_34",
+    "source_diag": "C=(i/2)*diag(W^3,-W^3,B_1^3,-B_1^3)",
+    "source_gamma12": "gammaPrime_12=i*diag(1,-1,1,-1)",
+    "source_gamma34": "gammaPrime_34=i*diag(1,-1,-1,1)",
+    "source_assumptions": "Cartan representative selects tau=3 independently in W and B1, not a full general connection/gauge-fixing theorem.",
+    "phiZero_weight_example": {
+      "source_vector": "X_phiZero=(1/2)*(-gammaPrime_3+i*gammaPrime_4)",
+      "source_eigenbracket": "[C,X_phiZero]=i*(-W^3/2+B_1^3/2)*X_phiZero",
+      "role": "source Higgs phiZero has W3=-1/2, B1^3=+1/2, not equal to four-real phi^1 or another field label; source Lie bracket is a matrix commutator."
+    }
+  },
+  "table4": {
+    "printed_page": 11,
+    "columns": [
+      "source_label",
+      "W3",
+      "B1^3",
+      "sqrt(2)/sqrt(3)*B2",
+      "halfY",
+      "Q"
+    ],
+    "common_denominator": 6,
+    "source_rows_ordered": [
+      {
+        "label": "Wplus",
+        "units": [
+          6,
+          0,
+          0,
+          0,
+          6
+        ]
+      },
+      {
+        "label": "Wminus",
+        "units": [
+          -6,
+          0,
+          0,
+          0,
+          -6
+        ]
+      },
+      {
+        "label": "B1plus",
+        "units": [
+          0,
+          6,
+          0,
+          6,
+          6
+        ]
+      },
+      {
+        "label": "B1minus",
+        "units": [
+          0,
+          -6,
+          0,
+          -6,
+          -6
+        ]
+      },
+      {
+        "label": "phiPlus",
+        "units": [
+          3,
+          3,
+          0,
+          3,
+          6
+        ]
+      },
+      {
+        "label": "phiMinus",
+        "units": [
+          -3,
+          -3,
+          0,
+          -3,
+          -6
+        ]
+      },
+      {
+        "label": "phiZero",
+        "units": [
+          -3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      {
+        "label": "phiOne",
+        "units": [
+          3,
+          -3,
+          0,
+          -3,
+          0
+        ]
+      },
+      {
+        "label": "nuL",
+        "units": [
+          3,
+          0,
+          3,
+          -3,
+          0
+        ]
+      },
+      {
+        "label": "eL",
+        "units": [
+          -3,
+          0,
+          3,
+          -3,
+          -6
+        ]
+      },
+      {
+        "label": "nuR",
+        "units": [
+          0,
+          3,
+          3,
+          0,
+          0
+        ]
+      },
+      {
+        "label": "eR",
+        "units": [
+          0,
+          -3,
+          3,
+          -6,
+          -6
+        ]
+      },
+      {
+        "label": "uL",
+        "units": [
+          3,
+          0,
+          -1,
+          1,
+          4
+        ]
+      },
+      {
+        "label": "dL",
+        "units": [
+          -3,
+          0,
+          -1,
+          1,
+          -2
+        ]
+      },
+      {
+        "label": "uR",
+        "units": [
+          0,
+          3,
+          -1,
+          4,
+          4
+        ]
+      },
+      {
+        "label": "dR",
+        "units": [
+          0,
+          -3,
+          -1,
+          -2,
+          -2
+        ]
+      }
+    ],
+    "check_identity_1": "halfY = B1^3 - [sqrt(2)/sqrt(3)*B2]",
+    "check_identity_2": "Q = W3 + halfY",
+    "exact_source_scope": "All 16 printed ordered rows and 80 weight entries, not complete matter generation/mass/normalization theory.",
+    "source_modality": "Table 4 ASSIGNS proposed field/gauge weights and SM labels; agreement with known charges is claimed conditionally on identification. Do not infer existence or masses of B1plus/B1minus.",
+    "distinguish_phiOne": "phiOne (printed phi_1) is the complex source label -phi^3+i phi^4, NOT real phi^1; Table 4 phiOne row W3=+1/2,B1^3=-1/2."
+  },
+  "derived_source_claims": {
+    "half_hypercharge": "(1/2)Y=B_1^3-sqrt(2)/sqrt(3)*B2",
+    "electric_charge": "Q=W3+(1/2)Y",
+    "coupling": "author source implies g1=sqrt(3/5) and sin²(theta_W)=3/8; reported normalized source inference, NOT independently qualified physical phenomenology.",
+    "other_charge": "X is source-mentioned B1^3/B2 orthogonal-partner quantum number, explicit numerical normalization not reconstructed here.",
+    "PatiSalam_nonstandard_bosons": "The source explicitly says B1plus/B1minus are absent from Standard Model and presumably heavy or otherwise hidden. This is conjectural language; no mass theorem."
+  },
+  "excluded_domains": [
+    "DO NOT use source W and B1 as one SI gauge field.",
+    "DO NOT treat W/B1 coefficient domain as unrestricted complex in anti-Hermitian su(2); a complex coefficient is an out-of-scope negative test.",
+    "DO NOT identify old gravitational omega_S/T with current electroweak U/V; source states analogy and analogous rotation only.",
+    "DO NOT infer independent antisymmetric w_ew coefficient factor solely from diagnostic gamma-bivector witness; the source's 1/2 Einstein-index convention is explicit.",
+    "DO NOT treat the 2007 so(4) Lie algebra decomposition as real group isomorphism or SM electroweak breaking proof.",
+    "DO NOT import any Woit or cross-track source semantics, hypotheses or criticisms into L track.",
+    "DO NOT source-correct L05 octonion printed sign or real Spin(3,1) group equality based on this distinct finite L01 case."
+  ],
+  "pending": [
+    "Source non-coordinate 1-forms for W and B1 and full grading/DTS of wew not fully primitive-closed.",
+    "Table 4 complete root-vector Clifford representatives and independent all generator commutators still not reconstructed; one phiZero sample only.",
+    "Coupling normalization g1 and Weinberg angle are source claims only, no independent physical-parameter prediction qualified.",
+    "L01 §2.2.3 exact graviweak Cl(7,1) and combination H1 remain pending.",
+    "Other L01-L06 source assertion census remains G0 incomplete; G1-G7 current replay forbidden."
+  ],
+  "expected_limited_finite_reconstruction": {
+    "real_coeff_values": [
+      -1,
+      0,
+      1
+    ],
+    "ordered_six_real_W_B1_inputs": 729,
+    "matrix_cells_per_input": 16,
+    "expected_matrix_cells": 11664,
+    "source_table4_rows": 16,
+    "source_table4_cells": 80,
+    "independent_integer_weight_identities": 32,
+    "cartan_W3_B1_inputs": 9,
+    "source_phiZero_eigenbracket_matrix_cells": 144,
+    "positive_metric_control": "six derived common/difference bivectors from original gammaPrime are block diagonal with i sigma upper/lower actions",
+    "negative_controls": [
+      "exchange W and B1 source block roles",
+      "reverse U sign only in one chirality",
+      "flip Cartan B_1 coefficient",
+      "incorrectly replace phiOne with real phi^1",
+      "alter one Table 4 halfY or Q cell",
+      "replace real W3 with imaginary W3 (out of source su2 domain)"
+    ]
+  }
+}

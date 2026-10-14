@@ -1,0 +1,127 @@
+{
+  "schema": "isograph.exp062-l130-scalar-extension-reconstruction-routing.v0.1",
+  "date": "2026-10-07",
+  "status": "L130_SCALAR_EXTENSION_CURRENT_RECONSTRUCTION_ROUTED_PARTIAL",
+  "authority_effect": "NONE_SOURCE_ROUTING_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "44a07f7d57eb148e695702855b7ebc5935f9043f",
+  "consumed_authority": {
+    "path": "experiments/062/L_G6_SCALAR_EXTENSION_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "5fc627050dd1c96c7d7742c5e2b0ee45b83ffd18",
+    "relations": [
+      193302,
+      193303,
+      193400,
+      222000,
+      222001,
+      222002,
+      225000,
+      231000
+    ],
+    "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+  },
+  "predecessor_replay": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_4.json",
+    "git_blob_sha": "bc7ec731ea4d77db0015615e0ecdf921b4095883"
+  },
+  "source_instances": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2.isg",
+      "git_blob_sha": "0bb063db4a49f38a3909621ed320cc2af6286c58",
+      "selected_relations": [
+        222000,
+        222001,
+        222002
+      ],
+      "role": "Exact 2/4/8 complexified role-carrier construction with embedded real basis images."
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_GENERALIZED_REFLECTION_ANTIINVARIANCE_0_1.isg",
+      "git_blob_sha": "37892266a2ff35035875a3f66b5f68177726ce92",
+      "selected_relations": [
+        225000
+      ],
+      "role": "Scalar extension of the triality form used by source reflection anti-invariance assertions."
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TIMELIKE_REFLECTION_ANTIINVARIANCE_0_1.isg",
+      "git_blob_sha": "05ebcca2b21571d4fdc3717f62a58f00371a8cd4",
+      "selected_relations": [
+        225000
+      ],
+      "role": "Timelike branch scalar-extended triality support."
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_COMPLEX_GENERALIZED_REFLECTION_EXTENSION_0_1.isg",
+      "git_blob_sha": "e132f10a3123165587e6194bff5973a9bd61c744",
+      "selected_relations": [
+        231000
+      ],
+      "role": "Parameterized complex-linear extension of already-defined real reflection component maps."
+    }
+  ],
+  "occurrence_routing": [
+    {
+      "occurrence_id": "L-SSC-130-R05",
+      "disposition": "RECONSTRUCTABLE_WITH_CURRENT_SCALAR_EXTENSION_AUTHORITY",
+      "reason": "The exact LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2 source instance instantiates 222000/222001/222002 for the 2/4/8 role families, giving the complexified carriers, embedded real subspaces, scalar restriction, and exact basis injections required by R05."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R02",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_SOURCE_PHASE_REFLECTION_SEMANTICS",
+      "reason": "231000 can extend an already-defined real reflection map, but R02 still requires the source signature/phase branch and exact R_v formula as source-specific behavior."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R03",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_SOURCE_PHASE_REFLECTION_SEMANTICS",
+      "reason": "231000 can extend an already-defined real reflection map, but R03 still requires the source signature/phase branch and exact R_m formula as source-specific behavior."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R04",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_SOURCE_PHASE_REFLECTION_SEMANTICS",
+      "reason": "231000 can extend an already-defined real reflection map, but R04 still requires the source signature/phase branch and exact R_p formula as source-specific behavior."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R06",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_REFLECTION_MAP_SEMANTICS",
+      "reason": "225000 supplies exact trilinear scalar extension, but the anti-invariance equality remains dependent on R_v."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R07",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_REFLECTION_MAP_SEMANTICS",
+      "reason": "225000 supplies exact trilinear scalar extension, but the anti-invariance equality remains dependent on R_m."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R08",
+      "disposition": "STILL_DEPENDS_ON_UNQUALIFIED_REFLECTION_MAP_SEMANTICS",
+      "reason": "225000 supplies exact trilinear scalar extension, but the anti-invariance equality remains dependent on R_p."
+    },
+    {
+      "occurrence_id": "L-SSC-130-R09",
+      "disposition": "STILL_DEPENDS_ON_R06_R08",
+      "reason": "Even-composition invariance remains downstream of the three unclosed reflection/anti-invariance branches."
+    }
+  ],
+  "next_lower_demand": {
+    "family": "SIGNATURE_PHASE_AND_TYPED_GENERALIZED_REFLECTION",
+    "supporting_occurrences": [
+      "L-SSC-130-R01",
+      "L-SSC-130-R02",
+      "L-SSC-130-R03",
+      "L-SSC-130-R04",
+      "L-SSC-130-R06",
+      "L-SSC-130-R07",
+      "L-SSC-130-R08",
+      "L-SSC-130-R09"
+    ],
+    "rule": "Do not infer the phase branch or reflection map semantics from scalar-extension authority. Re-derive exact source-local candidate behavior and falsifiers before G6."
+  },
+  "nonclaims": [
+    "This routing artifact does not itself close an L occurrence.",
+    "225000 does not imply reflection anti-invariance without the source reflection maps.",
+    "231000 does not define the source reflection maps or signature/phase branch.",
+    "No historical L130 closure packet is promoted.",
+    "No W/cross-track evidence is used."
+  ]
+}

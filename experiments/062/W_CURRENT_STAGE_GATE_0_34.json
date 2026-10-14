@@ -1,0 +1,51 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.34",
+  "date": "2026-10-08",
+  "status": "W_W05_FROZEN_SOURCE_MULTI_BODY_CONSERVATION_REOPEN_G0_AUDIT_ONLY",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_33.json",
+    "git_blob_sha": "950b063d47c42dfe70db0b8cf504c59d7f428519",
+    "reason": "Direct W05 §2-4 source audit found compressed W098-W101 bodies and omitted load-bearing formulas and operator incidence."
+  },
+  "defect_audit": {
+    "path": "experiments/062/W05_MULTI_BODY_SOURCE_CONSERVATION_DEFECT_AUDIT_0_1.json",
+    "git_blob_sha": "cc42b8dfb8bdd35d171b7495a1d644d9bddf02c2"
+  },
+  "corrected_source": {
+    "status": "NOT_YET_FROZEN",
+    "predecessor_source_semantic_census": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_8.json",
+      "git_blob_sha": "b0a87489b1c04fcfc2a191d42964648d6e686ef0"
+    },
+    "predecessor_source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_7.json",
+      "git_blob_sha": "a6cb48c82e5fa72a5820e01da80711eaf96ac2d0"
+    },
+    "known_affected_bodies": [
+      "W-SSC-098",
+      "W-SSC-099",
+      "W-SSC-100",
+      "W-SSC-101"
+    ],
+    "pending_additional_W05_source_sweep": true
+  },
+  "current_lawful_state": {
+    "G0_reopened": true,
+    "G0_source_audit_authorized": true,
+    "G1_rebuild_authorized": false,
+    "G2_authorized": false,
+    "G3_authorized": false,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G5H_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Audit frozen W05 §§2-7 for exact source-census conservation, including W098-W110. Create successor source SSC and source-demand tuple only after all identified omissions are conserved; then re-extract affected W G1 bodies before G2."
+}

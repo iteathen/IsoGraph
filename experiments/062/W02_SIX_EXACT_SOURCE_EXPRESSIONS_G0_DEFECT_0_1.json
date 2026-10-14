@@ -1,0 +1,227 @@
+{
+  "schema": "isograph.exp062-w02-six-source-equation-omissions-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "stage": "G0",
+  "status": "CONFIRMED_W02_EXACT_EQUATION_AND_CONJUGATION_INCIDENTS_COMPRESSED_IN_SSC012",
+  "authority": false,
+  "source": {
+    "id": "W02",
+    "frozen_revision": "arXiv:2311.00608v2",
+    "pdf": "https://arxiv.org/pdf/2311.00608v2",
+    "html": "https://arxiv.org/html/2311.00608v2",
+    "PDF_watermark": "arXiv v2 12 Dec 2023",
+    "PDF_dateline": "December 14, 2023",
+    "HTML_display_dateline": "August 24, 2026",
+    "warning": "HTML and frozen PDF have different display datelines; versioned PDF is pinned source, do not treat HTML generation date as W02 source revision.",
+    "PDF_byte_equivalence_to_HTML": "NOT_APPLICABLE_OR_CLAIMED"
+  },
+  "predecessors": [
+    {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_12.json",
+      "sha": "94ba7b0c94148651b765f0873bc70bf3d46d2404"
+    },
+    {
+      "path": "experiments/062/W_G0_W109_SOURCE_DEMAND_PROJECTION_0_2.json",
+      "sha": "a023e1b5397a025887d086879f7f4573f84c0dfa"
+    }
+  ],
+  "affected_W_census_ids": [
+    "W-SSC-128",
+    "W-SSC-130",
+    "W-SSC-131",
+    "W-SSC-135",
+    "W-SSC-140",
+    "W-SSC-142"
+  ],
+  "affected_older_W_unresolved_demand_ids": [
+    "W-SSC-128",
+    "W-SSC-130",
+    "W-SSC-135",
+    "W-SSC-140",
+    "W-SSC-142"
+  ],
+  "not_in_old_86_demand_projection": [
+    "W-SSC-131"
+  ],
+  "source_expression_incidents": {
+    "W-SSC-128": [
+      {
+        "id": "W02-G0-MATRIX-01",
+        "source": "W02 §I Eq.(1)",
+        "modality": "SOURCE_PRINTED_VECTOR_MATRIX_PRESENTATION",
+        "coordinates": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ],
+        "matrix": [
+          [
+            "x0+x3",
+            "x1-i*x2"
+          ],
+          [
+            "x1+i*x2",
+            "x0-x3"
+          ]
+        ],
+        "row_order": "TOP_TO_BOTTOM",
+        "source_latex": "\\begin{pmatrix}x_0+x_3&x_1-i x_2\\\\x_1+i x_2&x_0-x_3\\end{pmatrix}"
+      },
+      {
+        "id": "W02-G0-MATRIX-02",
+        "source": "W02 §I Eq.(1) following prose",
+        "modality": "SOURCE_TEXT_NEGATIVE_NORM_STATEMENT",
+        "operation": "DETERMINANT_EQUALS_MINUS_MINKOWSKI_LENGTH_SQUARED",
+        "source_printed_minkowski_length_squared": "-x0^2+x1^2+x2^2+x3^2",
+        "guard": "Do not silently equate the matrix determinant to the negative-signature norm expression itself; author says minus that length-squared."
+      },
+      {
+        "id": "W02-G0-MATRIX-03",
+        "source": "W02 §I following Eq.(1)",
+        "modality": "SOURCE_PRINTED_ACTION_AND_CONDITIONAL",
+        "action": {
+          "lhs": "X",
+          "operator": "MAPS_TO",
+          "rhs": "Omega_L * X * inverse(Omega_R)"
+        },
+        "hermiticity_condition": {
+          "lhs": "inverse(Omega_R)",
+          "operator": "EQUAL",
+          "rhs": "adjoint(Omega_L)"
+        },
+        "condition_scope": "MINKOWSKI_REAL_HERMITIAN_SUBSPACE"
+      }
+    ],
+    "W-SSC-130": [
+      {
+        "id": "W02-G0-CHIRAL-01",
+        "source": "W02 §I Eq.(2)",
+        "modality": "SOURCE_DISPLAYED_TENSOR_REPRESENTATION",
+        "operator": "TENSOR",
+        "left": "(1/2)_L",
+        "right": "(1/2)_R",
+        "maps": "Hom(dual((1/2)_R),(1/2)_L)",
+        "source_latex": "\\left(\\frac12\\right)_L\\otimes\\left(\\frac12\\right)_R",
+        "guard": "Chirally symmetric holomorphic conventional representation, not the source's alternative."
+      }
+    ],
+    "W-SSC-131": [
+      {
+        "id": "W02-G0-CHIRAL-02",
+        "source": "W02 §II source displayed formula",
+        "modality": "SOURCE_DISPLAYED_NONHOLOMORPHIC_TENSOR",
+        "operator": "TENSOR",
+        "left": "(0)_L",
+        "right": {
+          "operator": "TENSOR",
+          "left": "(1/2)_R",
+          "right": "conjugate((1/2)_R)"
+        },
+        "source_latex": "(0)_L\\otimes\\left(\\left(\\frac12\\right)_R\\otimes\\left(\\overline{\\frac12}\\right)_R\\right)",
+        "guard": "Conjugation occurs only on second right-handed factor; source says no SL(2,C)_L action on complex spacetime."
+      }
+    ],
+    "W-SSC-135": [
+      {
+        "id": "W02-G0-CHIRAL-03",
+        "source": "W02 §III displayed decomposition",
+        "modality": "SOURCE_DISPLAYED_REPRESENTATION_EQUALITY",
+        "lhs": "(1/2)_R tensor (1/2)_R",
+        "operator": "EQUAL",
+        "rhs": {
+          "operator": "SOURCE_PRINTED_PLUS",
+          "first": "(0)_R",
+          "second": "(1)_R"
+        },
+        "source_latex": "\\left(\\frac12\\right)_R\\otimes\\left(\\frac12\\right)_R=(0)_R+(1)_R",
+        "guard": "Source's plus symbol preserved without upgrading to globally qualified tensor decomposition."
+      }
+    ],
+    "W-SSC-140": [
+      {
+        "id": "W02-G0-WEYL-01",
+        "source": "W02 §IV.1 printed p.5",
+        "modality": "SOURCE_DISPLAYED_WEYL_LAGRANGIAN",
+        "lhs": "L",
+        "operator": "EQUAL",
+        "rhs": {
+          "ordered_factors": [
+            "tilde_psi_dagger(p)",
+            "p0 - sigma_dot_bold_p",
+            "tilde_psi(p)"
+          ],
+          "momentum": "p",
+          "spinor_chirality": "RIGHT_HANDED",
+          "theory": "MINKOWSKI"
+        },
+        "source_latex": "\\mathcal{L}=\\widetilde{\\psi}^{\\dagger}(p)(p_0-\\boldsymbol{\\sigma}\\cdot\\boldsymbol{p})\\widetilde{\\psi}(p)"
+      },
+      {
+        "id": "W02-G0-WEYL-02",
+        "source": "W02 §IV.1 printed p.5",
+        "modality": "SOURCE_DISPLAYED_HELICITY_OPERATOR",
+        "lhs": "helicity operator",
+        "operator": "EIGENVALUE_OF",
+        "rhs": {
+          "operator": "PRODUCT",
+          "scalar": "1/2",
+          "numerator": "sigma_dot_bold_p",
+          "denominator": "absolute_bold_p"
+        },
+        "source_latex": "\\frac12\\frac{\\boldsymbol{\\sigma}\\cdot\\boldsymbol{p}}{|\\boldsymbol{p}|}",
+        "source_polarities": [
+          {
+            "energy": "POSITIVE_p0",
+            "helicity": "+1/2",
+            "role": "particles"
+          },
+          {
+            "energy": "NEGATIVE_p0",
+            "helicity": "-1/2",
+            "role": "antiparticles"
+          }
+        ]
+      }
+    ],
+    "W-SSC-142": [
+      {
+        "id": "W02-G0-WICK-01",
+        "source": "W02 §IV.1 printed pp.5-6",
+        "modality": "SOURCE_PRINTED_WICK_SUBSTITUTION_AND_OPERATOR",
+        "substitution": {
+          "lhs": "p0",
+          "operator": "MAPS_TO",
+          "rhs": "i*p0"
+        },
+        "minkowski": "p0 - sigma_dot_bold_p",
+        "euclidean": "i*p0 - sigma_dot_bold_p",
+        "source_latex": "p_0\\to i p_0;\\quad p_0-\\boldsymbol{\\sigma}\\cdot\\boldsymbol{p}\\mapsto i p_0-\\boldsymbol{\\sigma}\\cdot\\boldsymbol{p}",
+        "guard": "Source's momentum-space Wick substitution only, not a generally qualified analytic continuation operator."
+      }
+    ]
+  },
+  "cause": "Prior prose summaries omitted source exact matrix entries/sign scope, tensor chirality/conjugation, scalar-plus-vector decomposition, Weyl Lagrangian, helicity numerator/denominator and momentum Wick substitution.",
+  "repair": "Append exact source-local incidences without changing existing prose; update 5 old W-only unresolved demand members. W131 has no prior projection membership, so that projection is expressly incomplete for full G0 and its older closure dependency must be reopened and re-derived before any freeze.",
+  "invalidation": {
+    "G0": "OPEN_RECONSTRUCTION",
+    "source012": "HISTORICAL_INCOMPLETE_W02",
+    "W_demand_projection_02": "HISTORICAL_INCOMPLETE_W02",
+    "W131_historical_closure": "INVALID_PENDING_REDERIVATION",
+    "G1_through_G7": "BLOCKED",
+    "L": "NOT_MODIFIED"
+  },
+  "qualifications": {
+    "source_items_total": 151,
+    "source_scope_audited_here": "W02 §I–§IV.1 TARGETED_SIX_ITEMS_ONLY",
+    "full_W_cold_audit_complete": false,
+    "Node_CI_not_yet_run": true,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "nonclaims": [
+    "No global SI/tensor authority derived",
+    "No equality of two W02 representations",
+    "No full W02 or W corpus freeze"
+  ]
+}

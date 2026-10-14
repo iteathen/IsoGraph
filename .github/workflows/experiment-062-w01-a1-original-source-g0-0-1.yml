@@ -1,0 +1,15 @@
+name: Experiment 062 W01 Appendix A1 exact original source G0 0.1
+# Historical FAILED workflow on run 38078531817; retained as manual-only, never retrospectively qualified.
+# Strict -0/+0 false negative; W01 full inverse v0.4 is separate green lineage.
+on:
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-a1-original-source-g0-0-1.cjs

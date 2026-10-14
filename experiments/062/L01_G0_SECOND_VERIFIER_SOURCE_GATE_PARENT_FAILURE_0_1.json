@@ -1,0 +1,45 @@
+{
+  "schema": "isograph.exp062.l.G0.L01.secondary-original-source-gate-ancestry-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_second_CI": {
+    "run_id": 38036133384,
+    "job_id": 114166816262,
+    "head_sha": "ed83a4a70502e8a3f5e159052d9f4f9472942fd3",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38036133384",
+    "status": "completed",
+    "conclusion": "failure",
+    "baseline_error": "immutable current L lineage",
+    "hostiles_defined": 31,
+    "hostiles_rejected": 31
+  },
+  "first_failed_run": {
+    "run_id": 38035978814,
+    "head_sha": "98b9fbfb0bc6b857a71c411aa60ff6adcdf15a08",
+    "conclusion": "failure",
+    "immutable_provenance_path": "experiments/062/L01_G0_ORIGINAL_FIRST_INITIAL_VERIFIER_LOCK_FIELD_FAILURE_0_1.json",
+    "immutable_blob": "72da6060199ff286110c7ff6fc7f263e9c92d5e6"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-source-first-reverse-0-2.mjs",
+    "git_blob_sha": "f9d1107757a2f1824b3c3a96dd2a44003bd6f2b9"
+  },
+  "source_gate_provenance": {
+    "source_packet": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_packet_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "source_packet_original_parent_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_74.json",
+    "source_packet_original_parent_sha": "45c8378f58010cb426e4fd01e84563732d9a1066",
+    "current_successor_0_76_predecessor_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_75.json",
+    "current_successor_predecessor_sha": "2f908ca54bd0c0d20b1d92b989d7ba679ec29609"
+  },
+  "failure_class": "SOURCE_AUDIT_PARENT_VS_PROCEDURAL_CURRENT_GATE_PROVENANCE_CONFLATION",
+  "general_method_correction": "Maintain distinct source-audit historical parent gate, current successor immediate predecessor gate, and exact current source census paths in all future checkers. Never assert that historical source packet parent equals the moving procedural predecessor. Test both relations independently.",
+  "remedy": "In L01 checker0.3 add originalSourceGate path0.74 and separate current predecessor gate0.76; point source-packet provenance to originalSourceGate, procedural successor to predecessorGate. Preserve source semantic bodies, SSC0.54 and original page ledger without changes.",
+  "original_semantic_gap_proven_by_failure": false,
+  "result_must_remain_FAIL": true,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_semantics_imported": false
+}

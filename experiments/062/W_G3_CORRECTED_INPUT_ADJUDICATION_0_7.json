@@ -1,0 +1,112 @@
+{
+  "schema": "isograph.exp062-w-g3-corrected-input-adjudication.v0.7",
+  "date": "2026-10-07",
+  "status": "W097_CORRECTED_INPUT_DELTA_ADJUDICATION_COMPLETE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "g3": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_6.json",
+      "git_blob_sha": "fa5a610ba6a85268557d746cc82a75f3a09ade47"
+    },
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_21.json",
+      "git_blob_sha": "0c82bedc5bfe8fc72910ddfba74220237044ac59"
+    }
+  },
+  "current": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "g2": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_3.json",
+      "git_blob_sha": "c9ee4f844ee1cb5a7b27378779694361c0d17451"
+    },
+    "g2_fixed_point": {
+      "path": "experiments/062/W_G2_FIXED_POINT_0_3.json",
+      "git_blob_sha": "234a6baf1353c945cb12ec3611c3aa764edfb300"
+    }
+  },
+  "delta": {
+    "affected_occurrences": [
+      "W-SSC-097-O01",
+      "W-SSC-097-O06",
+      "W-SSC-097-O07",
+      "W-SSC-097-O04",
+      "W-SSC-097-O02"
+    ],
+    "affected_count": 5,
+    "carried_forward_occurrences": 440,
+    "removed_occurrences": 0,
+    "previous_CORE_CLOSED_affected": []
+  },
+  "rules": [
+    "Carry forward prior final G3 semantics only for occurrence IDs whose complete G1 occurrence record is byte-identical.",
+    "Recompute all G2 node references from the W097-corrected neutral graph.",
+    "Directly adjudicate the five changed/new W097 occurrences under exact qualified Core.",
+    "Do not consume the fixed-point-free involution hypothesis, historical closure packets, or L evidence as G3 authority."
+  ],
+  "rows": [
+    {
+      "occurrence_id": "W-SSC-097-O01",
+      "disposition": "UNEXPANDED_DEMAND",
+      "closure_basis": null,
+      "missing_definition_or_authority": "The vector-level square-minus-one law is now isolated, but the source-local semantics of rho_tw application and scalar -1 action on the C2 carrier remain unexpanded.",
+      "review_note": null,
+      "review_state": "FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION",
+      "review_state_reason": "The vector-level square-minus-one law is now isolated, but the source-local semantics of rho_tw application and scalar -1 action on the C2 carrier remain unexpanded."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O06",
+      "disposition": "UNEXPANDED_DEMAND",
+      "closure_basis": null,
+      "missing_definition_or_authority": "The projective involution law is now isolated, but the projective carrier and rho_tw action/function semantics needed to render repeated application remain unexpanded.",
+      "review_note": "Direct W097 corrected-input adjudication; exact qualified Core does not yet supply the required lower map/carrier semantics.",
+      "review_state": "FINAL_UNEXPANDED_EXPLICIT_IN_BODY",
+      "review_state_reason": "The projective involution law is now isolated, but the projective carrier and rho_tw action/function semantics needed to render repeated application remain unexpanded."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O07",
+      "disposition": "UNEXPANDED_DEMAND",
+      "closure_basis": null,
+      "missing_definition_or_authority": "The scope contrast is source-conserved, but both vector and projective action semantics remain unresolved.",
+      "review_note": null,
+      "review_state": "FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION",
+      "review_state_reason": "The scope contrast is source-conserved, but both vector and projective action semantics remain unresolved."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O04",
+      "disposition": "UNEXPANDED_DEMAND",
+      "closure_basis": null,
+      "missing_definition_or_authority": "The fixed-point-free clause is explicit but depends on unresolved projective carrier and involution/action semantics; it is not merely a Core NOT wrapper.",
+      "review_note": "Direct W097 corrected-input adjudication; exact qualified Core does not yet supply the required lower map/carrier semantics.",
+      "review_state": "FINAL_UNEXPANDED_EXPLICIT_IN_BODY",
+      "review_state_reason": "The fixed-point-free clause is explicit but depends on unresolved projective carrier and involution/action semantics; it is not merely a Core NOT wrapper."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O02",
+      "disposition": "UNEXPANDED_DEMAND",
+      "closure_basis": null,
+      "missing_definition_or_authority": "The W097-corrected source exposes this behavior and its scope, but exact lower map/carrier semantics are not yet supplied by qualified Core. Closing it now would hide unresolved action/evaluation behavior.",
+      "review_note": null,
+      "review_state": "FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION",
+      "review_state_reason": "The W097-corrected source exposes this behavior and its scope, but exact lower map/carrier semantics are not yet supplied by qualified Core. Closing it now would hide unresolved action/evaluation behavior."
+    }
+  ],
+  "resulting_counts": {
+    "CORE_CLOSED": 13,
+    "CORE_SCHEMA_CANDIDATE_PENDING_QUALIFICATION": 0,
+    "QUALIFIED_QU_BOUNDARY_CANDIDATE": 0,
+    "UNEXPANDED_DEMAND": 432
+  },
+  "resulting_review_counts": {
+    "FINAL_CORE_CLOSED": 13,
+    "FINAL_UNEXPANDED_EXTERNAL_DEFINITION": 72,
+    "FINAL_UNEXPANDED_PARTIAL_SOURCE_DEFINITION": 318,
+    "FINAL_UNEXPANDED_EXPLICIT_IN_BODY": 42
+  },
+  "conclusion": "The W097 granularity correction creates no new Core-closed occurrence. The 13 predecessor CORE_CLOSED rulings remain untouched; all five changed/new W097 occurrences remain UNEXPANDED_DEMAND under current qualified Core."
+}

@@ -1,0 +1,288 @@
+{
+  "schema": "isograph.exp062-l132-g1-source-incidence.v0.2",
+  "date": "2026-10-08",
+  "status": "L132_TARGETED_G1_SOURCE_INCIDENCE_REPLAYED_AFTER_L127_SI_REPAIR",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "96ef7d99496d1f4f38ce966ed8f137ba42b4d42d",
+  "audit": {
+    "path": "experiments/062/L132_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_2.json",
+    "git_blob_sha": "cb3f306103062ed3c306bb9da24a718bd231a536"
+  },
+  "source_pins": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_LIE_ALGEBRA_SOURCE_INSTANCE_0_1.isg",
+      "git_blob_sha": "c636288092d3ac1afa1dec4238ec9214d1fc1f26"
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_TRIALITY_ROTATION_AUTOMORPHISM_DISTINCTION_0_1.isg",
+      "git_blob_sha": "88684c8af094faf45c50c5948c694fbbd4433deb"
+    }
+  ],
+  "source_provenance": "L05 §3 triality transformation and Lie-algebra table",
+  "source_expansion": false,
+  "cross_track_evidence_used": false,
+  "occurrences": [
+    {
+      "occurrence_id": "L-SSC-132-R01",
+      "source_reversible_reference": "L05 transformation-category distinction",
+      "source_span": "multiplication automorphism, ordinary rotation, and nonrotation triality are represented as distinct source roles",
+      "relation_span": "transformation-role distinction",
+      "argument_spans": [
+        "automorphism category",
+        "rotation category",
+        "triality category"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Category atoms are distinct; no set-disjointness claim.",
+      "formula_ast": {
+        "op": "PAIRWISE_CATEGORY_NONIDENTITY",
+        "args": [
+          "AutRole",
+          "RotationRole",
+          "TrialityRole"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R02",
+      "source_reversible_reference": "L05 automorphism source instance",
+      "source_span": "multiplication automorphism is a linear bijection fixing unit and preserving product and norm",
+      "relation_span": "composition-unit automorphism",
+      "argument_spans": [
+        "coefficient carrier",
+        "product",
+        "unit",
+        "norm",
+        "linear bijection"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Exact structural content of source Aut(D) label.",
+      "formula_ast": {
+        "op": "UNIT_PRODUCT_NORM_AUTOMORPHISM",
+        "args": [
+          "carrier",
+          "product",
+          "unit",
+          "Q",
+          "map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R03",
+      "source_reversible_reference": "L05 rotation distinction via closed L131",
+      "source_span": "ordinary rotation is a same-type even generalized-reflection composition with identity role permutation",
+      "relation_span": "same-type rotation class",
+      "argument_spans": [
+        "same reflection type",
+        "T-preserving composition",
+        "identity role permutation"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Name reduced to closed L131 structural behavior.",
+      "formula_ast": {
+        "op": "STRUCTURAL_CLASS",
+        "args": [
+          "same-type",
+          "T-invariant",
+          "identity-role-map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R04",
+      "source_reversible_reference": "L05 triality distinction via closed L131",
+      "source_span": "nonrotation triality is a different-type even generalized-reflection composition with nontrivial order-three role permutation",
+      "relation_span": "different-type triality class",
+      "argument_spans": [
+        "different reflection types",
+        "T-preserving composition",
+        "order-three role permutation"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Name reduced to closed L131 structural behavior.",
+      "formula_ast": {
+        "op": "STRUCTURAL_CLASS",
+        "args": [
+          "different-type",
+          "T-invariant",
+          "order-three-role-map"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R05",
+      "source_reversible_reference": "L05 triality Lie table C/Cprime",
+      "source_span": "C and Cprime triality Lie carriers are separate direct sums of two one-dimensional abelian Lie factors",
+      "relation_span": "two-factor 1D abelian Lie presentation",
+      "argument_spans": [
+        "C carrier",
+        "Cprime carrier",
+        "factor A",
+        "factor B",
+        "direct-sum injections",
+        "zero cross bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Same reduced shape does not identify the two source carriers.",
+      "formula_ast": {
+        "op": "TWO_FACTOR_1D_ABELIAN_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "factor1",
+          "factor2"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R06",
+      "source_reversible_reference": "L05 triality Lie table H",
+      "source_span": "H triality Lie carrier is a direct sum of three compact-type three-dimensional Lie factors",
+      "relation_span": "three-factor compact 3D Lie presentation",
+      "argument_spans": [
+        "H triality carrier",
+        "three 3D factors",
+        "factor brackets",
+        "direct-sum injections"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Compact-type factor behavior must be represented, not inferred from su(2) name.",
+      "formula_ast": {
+        "op": "THREE_FACTOR_COMPACT_3D_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "A",
+          "B",
+          "D"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R07",
+      "source_reversible_reference": "L05 triality Lie table Hprime",
+      "source_span": "Hprime triality Lie carrier is a direct sum of three split three-dimensional Lie factors",
+      "relation_span": "three-factor split 3D Lie presentation",
+      "argument_spans": [
+        "Hprime triality carrier",
+        "three split 3D factors",
+        "factor brackets",
+        "direct-sum injections"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "SOURCE_BEHAVIOR_REQUIRES_LOWER_SCHEMA",
+      "depends_on": [],
+      "load_bearing_note": "Split bracket table must be represented, not inferred from sl2 name.",
+      "formula_ast": {
+        "op": "THREE_FACTOR_SPLIT_3D_DIRECT_SUM",
+        "args": [
+          "carrier",
+          "A",
+          "B",
+          "D"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R08",
+      "source_reversible_reference": "L05 triality Lie table O",
+      "source_span": "O triality Lie carrier is all metric-skew endomorphisms of the positive eight-dimensional coefficient space",
+      "relation_span": "positive-form metric-skew Lie carrier",
+      "argument_spans": [
+        "O coefficient space",
+        "positive metric",
+        "endomorphism carrier",
+        "commutator bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Can reuse exact current metric-skew Lie authority.",
+      "formula_ast": {
+        "op": "FULL_METRIC_SKEW_LIE",
+        "args": [
+          "O-space",
+          "B",
+          "endomorphisms"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R09",
+      "source_reversible_reference": "L05 triality Lie table Oprime",
+      "source_span": "Oprime triality Lie carrier is all metric-skew endomorphisms of the split (4,4) coefficient space",
+      "relation_span": "split-form metric-skew Lie carrier",
+      "argument_spans": [
+        "Oprime coefficient space",
+        "split metric",
+        "endomorphism carrier",
+        "commutator bracket"
+      ],
+      "logical_force": "ASSERTED",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [],
+      "load_bearing_note": "Can reuse exact current metric-skew Lie authority; no so(4,4) name required.",
+      "formula_ast": {
+        "op": "FULL_METRIC_SKEW_LIE",
+        "args": [
+          "Oprime-space",
+          "B",
+          "endomorphisms"
+        ]
+      }
+    },
+    {
+      "occurrence_id": "L-SSC-132-R10",
+      "source_reversible_reference": "L05 source-carrier/role distinction guard",
+      "source_span": "C/Cprime carriers remain separate despite same reduced shape; transformation categories are distinct roles without pairwise-set-disjointness claim",
+      "relation_span": "source distinction guard",
+      "argument_spans": [
+        "source carrier identity",
+        "reduced structural shape",
+        "category role identity"
+      ],
+      "logical_force": "COMPARISON",
+      "definition_status": "EXPLICIT_IN_SOURCE",
+      "depends_on": [
+        "L-SSC-132-R01",
+        "L-SSC-132-R05"
+      ],
+      "load_bearing_note": "Prevents structural reduction from collapsing source identities.",
+      "formula_ast": {
+        "op": "PRESERVE_SOURCE_IDENTITY_WITH_SHARED_SHAPE",
+        "args": [
+          "carriers",
+          "shape",
+          "categories"
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "reopened_bodies": 1,
+    "reopened_occurrences": 10
+  },
+  "next_stage": "TARGETED_G2_NEUTRAL_SUBGRAPH",
+  "predecessor": {
+    "path": "experiments/062/L132_G1_SOURCE_INCIDENCE_0_1.json",
+    "git_blob_sha": "ca6800951cdc722c66bfd0ded1945001bd3dc0a0",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_SI_COLLISION"
+  },
+  "replay_invariance": {
+    "source_occurrences_unchanged": true,
+    "source_pins_unchanged": true
+  }
+}

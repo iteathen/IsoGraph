@@ -1,0 +1,155 @@
+{
+  "schema": "isograph.lisi-l01-h1-ew-pure-coefficient-source.g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "SIX_PURE_EW_PRIME_BIVECTORS_MATCH_PRINTED_W_B1_CHIRAL_PAULI_BLOCKS_SOURCE_COEFFICIENT_ONLY",
+  "authority": false,
+  "source_census_frozen": false,
+  "complete_physical_gauge_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_review_passed": false,
+  "frozen_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      10,
+      12
+    ],
+    "literal_claims": [
+      "§2.2.2 printed p10: gamma'_1=σ1⊗σ1, gamma'_2=σ1⊗σ2, gamma'_3=σ1⊗σ3, gamma'_4=σ2⊗I2; w_ew=(1/2) w_ew^{ab} gamma'_{ab}.",
+      "§2.2.2 printed p10: w_ew=diag((V^tau+U^tau)*(i/2)*sigma_tau,(V^tau-U^tau)*(i/2)*sigma_tau)=diag(W^tau*(i/2)*sigma_tau,B_1^tau*(i/2)*sigma_tau).",
+      "§2.2.3 printed p12: GammaPrime1..4 are lifted complex 16x16 Pauli tensor gamma with same source original order, and the positive-chiral 8x8 first quadrant acts on (nu_eL,eL,nu_eR,eR).",
+      "§2.2.3 printed p12: 8x8 H1 gauge block uses W±, W³/2 on left and B1±, B1³/2 on right with independent source channels and no ad hoc identification."
+    ],
+    "modality": "SIX_REAL_SOURCE_COEFFICIENT_LINEAR_MAPS_ONLY; NOT_IDENTIFICATION_OF_ALL_QFT_FIELDS_OR_SOURCE_GRADED_CURVATURE"
+  },
+  "dependency_pins": {
+    "Cl71_source_gamma": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "EW_printed_H1_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "previous_pure_gravity_mixed_G0": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_PURE_GRAVITY_AND_ALL_MIXED_BRACKET_SOURCE_G0_0_1.json",
+      "git_blob_sha": "179598200e03e2bcea2d8ee40b8dfd9f5be837ba"
+    },
+    "SSC0_28": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_28.json",
+      "git_blob_sha": "21d5463e4c1e6d747b818763081053b4859b7613"
+    },
+    "gate0_28": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_28.json",
+      "git_blob_sha": "b91efa76ea8f7320ffef0ecff39004e33a96440c"
+    }
+  },
+  "basis_coefficient_contract": {
+    "source_selection": "For each unordered a<b in source four γ′ basis, set independent REAL antisymmetric coefficient w_ew^{ab}=+1 and w_ew^{ba}=−1, all other components zero; then (1/2)*sum w_ew^{ij} Γ′_{ij}=Γ′_a Γ′_b since Γ′_a Γ′_b anticommute.",
+    "pure_electroweak_native": "E_(a,b)=(GammaPrime_a GammaPrime_b)_{first8}, source exact Kronecker factor order",
+    "printed_chiral_operator": "Build first eight-by-eight from p10 w_ew block diag((i/2) sum W^tau sigma_tau, (i/2) sum B_1^tau sigma_tau), acting on source four electroweak ν/e labels, then tensor each scalar 4x4 entry with gravitational identity I2.",
+    "role_transport": "W^tau=V^tau+U^tau, B_1^tau=V^tau-U^tau; V for 3 spatial γ′ pairs, U for 3 mixed with fourth positive γ′ generator; source's 1/2 antisymmetric coefficient sum fixes factor of two for selected ordered pair.",
+    "source_sign": "Γ′_1Γ′_2 = +i σ3 in both left/right electroweak subblocks; Γ′_1Γ′_3 = −i σ2; Γ′_2Γ′_3 = +i σ1; Γ′_jΓ′_4 = +i σ_j in left and −i σ_j in right.",
+    "source_paper_omega_analogy": "The paper describes the U,V chiral combinations as analogous to gravity's spin/boost decomposition. This coefficient reconstruction does not imply a real-group isomorphism or full source electroweak action beyond these six exact finite cases.",
+    "field_roles": "W∈su2_L and B1∈su2_R are independent source roles. Printed Wplus/Minus and B1plus/Minus are Pauli offdiagonal source connection entries, not scalar Higgs phi nor frame one-forms.",
+    "prohibition": "No complex source-field rescaling, Γ′ redefinition, basis SI transport, W/L cross-author semantic data or unqualified Lie theorem."
+  },
+  "six_exact_source_pair_images": [
+    {
+      "a": 1,
+      "b": 2,
+      "source_electroweak_vector": "V^3=+2,U=0",
+      "W": "W^3=+2",
+      "B1": "B_1^3=+2",
+      "printed_L_and_R": "both +i*sigma3"
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "source_electroweak_vector": "V^2=-2,U=0",
+      "W": "W^2=-2",
+      "B1": "B_1^2=-2",
+      "printed_L_and_R": "both -i*sigma2"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "source_electroweak_vector": "V^1=+2,U=0",
+      "W": "W^1=+2",
+      "B1": "B_1^1=+2",
+      "printed_L_and_R": "both +i*sigma1"
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "source_electroweak_vector": "U^1=+2,V=0",
+      "W": "W^1=+2",
+      "B1": "B_1^1=-2",
+      "printed_L_and_R": "left +i*sigma1, right -i*sigma1"
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "source_electroweak_vector": "U^2=+2,V=0",
+      "W": "W^2=+2",
+      "B1": "B_1^2=-2",
+      "printed_L_and_R": "left +i*sigma2, right -i*sigma2"
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "source_electroweak_vector": "U^3=+2,V=0",
+      "W": "W^3=+2",
+      "B1": "B_1^3=-2",
+      "printed_L_and_R": "left +i*sigma3, right -i*sigma3"
+    }
+  ],
+  "finite_evidence": {
+    "matrix_dimension": 8,
+    "source_primed_bivector_pairs": 6,
+    "each_coefficient_case_tested": 64,
+    "native_vs_printed_complex_matrix_entry_mismatches": 0,
+    "pure_ew_with_mixed_cases": 96,
+    "pure_ew_mixed_bracket_phase_covariant": 96,
+    "pure_ew_with_pure_ew_pairs": 15,
+    "source_pure_ew_to_printed_bracket_agreement": 15,
+    "source_pure_gravity_pure_ew_cross_pairs": 36,
+    "gravity_ew_bracket_zero_pairs": 36,
+    "all_source_mixed_bracket_pairs": 120,
+    "source_mixed_mixed_nonzero_pairs": 48,
+    "gravity_target_24_sign_changed": 24,
+    "ew_target_24_sign_changed": 24,
+    "disjoint_72_zero": 72,
+    "source_ew_output_bracket_sample": {
+      "mu": 1,
+      "nu": 1,
+      "lambda": 2,
+      "pure_E_12": "(GammaPrime1 GammaPrime2)_first8",
+      "native_mixed_operator_bracket": "[X_11,X_12]=-2*E_12",
+      "printed_mixed_operator_bracket": "[P_11,P_12]=+2*E_12",
+      "real_source_gravity_metric_sign_caveat": "For mu=4 timelike Γ4²=-I, the relative sign against E_(nu,lambda) is reversed; do not apply -2 to all 24 EW target cases."
+    },
+    "pure_source_omega_negative_evidence_conserved": true,
+    "phase_factor_project_diagnostic_only": true
+  },
+  "reconstruction_limits": {
+    "source_ew_Spinor_W_B1_blocks_qualified": "These six γ′-bivector first-quadrant matrices match the explicit p10 chiral SU(2)_L/R Pauli form at the SAME coefficient labels.",
+    "source_full_graded_curvature_reconstructed": false,
+    "source_field_connection_differential_forms_identified_everywhere": false,
+    "source_published_Wplus_Bplus_scalar_normalizations_independently_reconstructed": false,
+    "source_source_authorized_relative_i_repair_found": false,
+    "source_complete_G0": false,
+    "source_native_primitive_closure": false,
+    "author_paper_physical_theory_disproved": false,
+    "cross_track_source_used": false
+  },
+  "next_lawful_work": [
+    "Independent fresh CI reconstruct 6 pure primed Pauli bivectors against printed U/V/W/B1 chiral formulas, 96 EW/mixed covariance cases, 15 pure EW brackets, 36 gravity-EW commuting controls, 24+24 mixed-output sign countercases.",
+    "Do not conflate this ordinary complex 8x8 operator coefficient basis test with full graded one-form wedge, spinor/gauge physics, or all real-form representations.",
+    "Conserve this finite source-exact result into L-SSC-032 only after baseline-first source verifier and complete adversarial negative controls.",
+    "Continue frozen L01 §3 curvature and full L01–L06 source assertions; no current G1–G7 until source G0 fixed point."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "isograph.exp062-l039-source-literal-verifier-fixture-defect.v0.1",
+  "track": "L",
+  "date": "2026-10-09",
+  "stage": "G0",
+  "source_revision": "L01 arXiv:0711.0770v1",
+  "run_id": 37913992010,
+  "head_sha": "9b02ddbb9fcf98d1a2cd9ba3a914e364f957c910",
+  "conclusion": "failure",
+  "observed_output": {
+    "historical_imported_math_passed": true,
+    "Clifford_pairs": 64,
+    "mixed_pairs": 120,
+    "independently_computed_gradient_jet_cases": 48,
+    "independently_computed_torsion_jet_cases": 48,
+    "independent_jet_failures": 0,
+    "strict_fixture_failures": 1,
+    "adversarial_mutations_executed": 0
+  },
+  "defect": "The verifier compared a source-printed Eq.(3.4) expression using d(e), d(phi) and trailing =T phi-e Dphi to a semantically abbreviated project notation de, dphi without the shorthand equality. This was a verifier-text exactness error and not a source transcription defect.",
+  "correction": "Check each frozen source expression and the distinct project shorthand against its own exact oracle instead of requiring the two differently formatted source representations to have identical bytes.",
+  "remaining_status": "G0_OPEN_UNFROZEN; no promotion, no external cold PASS, and no author-source error established."
+}

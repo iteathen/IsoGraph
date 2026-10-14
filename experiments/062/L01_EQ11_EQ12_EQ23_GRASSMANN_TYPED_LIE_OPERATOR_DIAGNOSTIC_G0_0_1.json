@@ -1,0 +1,158 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-original-Eq1.1-Eq1.2-Eq2.3-Grassmann-coefficient-even-generator-firewall.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source_scope": {
+    "author": "A. Garrett Lisi",
+    "original_paper": "An Exceptionally Simple Theory of Everything",
+    "original_revision": "arXiv:0711.0770v1",
+    "original_url": "https://arxiv.org/pdf/0711.0770v1",
+    "source_original_PDF_page_zero_based": [
+      3,
+      6
+    ],
+    "source_first_loci": [
+      "L01-S007",
+      "L01-S008",
+      "L01-S014"
+    ],
+    "existing_SSC_owners": [
+      "L-SSC-026",
+      "L-SSC-027",
+      "L-SSC-029"
+    ],
+    "prior_frozen_PDF_SHA256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "PDF_bytes_reacquired_or_hashed_this_pass": false,
+    "original_PDF_pages3_and6_directly_visually_read": true,
+    "original_source_exact_7x7_matrix_cells_independently_cold_verified": false,
+    "whole_original_source_cold_review_completed": false
+  },
+  "exact_original_author_statements_scoped": {
+    "Eq1_1_source_channel": "Printed Eq.(1.1) introduces A including bosonic omega/ephi/gauge sectors and fermion-generation fields; adjacent prose states fermionic u=u^A T_A is Lie-algebra-valued with Grassmann-number coefficients.",
+    "Eq1_2_source_channel": "Printed Eq.(1.2) writes F=dA+1/2[A,A], with interactions discussed in terms of brackets of Lie generators.",
+    "Eq2_3_source_channel": "Printed Eq.(2.3) presents a chosen smallest irreducible 7x7 matrix representation of g2 for gluons, quarks and antiquarks. The prose says squaring this matrix gives interactions.",
+    "unqualified_extensions": [
+      "Complete BRST extended-connection degree/operator rules and all original equation ASTs not yet reconstructed.",
+      "No independent cold original-source transcription of all 49 Eq2.3 matrix cells.",
+      "Original source does not in the inspected passage explicitly require every q source component to be independent odd Grassmann generators with no relations. Test assumes two independent odd coefficients as a discriminating finite case.",
+      "Neither a specific Lie superalgebra, parity on intrinsic generators, nor a coefficient constraint is qualified by the present test."
+    ]
+  },
+  "tested_competing_operator_interpretations": {
+    "even_generator_assumption": "The 7x7 Eq2.3 coefficient matrices X,Y are even, with odd Grassmann coefficients theta and eta. They commute with theta and eta. Formal algebra is the Z2 graded associative tensor product Grassmann(theta,eta) tensor M7.",
+    "original_source_claim_strength": "SOURCE_COMPATIBLE_CONDITIONAL_MATHEMATICAL_MODEL_NOT_A_COMPLETE_ORIGINAL_BRST_OPERATOR_SPECIFICATION",
+    "exterior_multiplication": "theta^2=eta^2=0, theta*eta= -eta*theta != 0 for independent theta and eta",
+    "graded_odd_odd_identity": "[theta X,eta Y]_s=theta eta (XY-YX)=theta eta [X,Y]",
+    "ordinary_odd_odd_commutator_identity": "[theta X,eta Y]_ordinary=theta eta (XY+YX)=theta eta {X,Y}",
+    "even_odd_bracket_identity": "[G,theta X]_s=theta [G,X] for even G",
+    "Grassmann_result_parity": "Product theta eta has even Grassmann degree. Its coefficient structure must not be identified automatically with a source-odd independent antifermion field or a physical vertex.",
+    "alternative_intrinsically_odd_generator_scenario": "If instead X,Y themselves are intrinsically odd generators in a supermatrix representation, a different graded tensor-product rule applies. This is not the original even-Lie-generator assumption and must be established from source, not assumed to repair closure.",
+    "no_simple_sign_switch_restores_source_14D_ordinary_Lie_span": true
+  },
+  "source_derived_exact_selected_generator_witness": {
+    "integer_rescaling_from_source": "Multiply each q/qbar 7x7 coefficient matrix by sqrt(2). Other source-matrix scaling in the existing source algebra packet is unchanged. This is an invertible complex multiplication and does not modify the earlier source.",
+    "bracket_symbol_labels": [
+      "q_r",
+      "q_g",
+      "qbar_b"
+    ],
+    "selected_matrix_positions_one_based": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "matrix_commutator_in_scaled_units": [
+      2,
+      -1
+    ],
+    "matrix_anticommutator_in_scaled_units": [
+      0,
+      -1
+    ],
+    "source_qbar_b_in_scaled_units": [
+      -1,
+      1
+    ],
+    "source_other_13_generator_coefficients_at_two_positions": "All other source generator coefficient matrices are zero at these two locations under the assisted original fixture.",
+    "two_cell_matrix_commutator_coefficient_crossproduct": "1 (nonzero)",
+    "two_cell_matrix_anticommutator_coefficient_crossproduct": "-1 (nonzero)",
+    "original_source_14D_ordinary_closure_repaired": false,
+    "source_49_cell_author_error_established": false
+  },
+  "source_independent_mathematical_conservation": {
+    "prior_L_G0_21D_complex_closure": "experiments/062/L01_EQ23_ASSISTED_COMPLEX_LIE_GENERATED_SO7_EXACT_CERTIFICATE_G0_0_1.json",
+    "prior_threeform_nonexistence": "experiments/062/L01_EQ23_G2_THREEFORM_NO_INVARIANT_EXACT_CERTIFICATE_G0_0_1.json",
+    "prior_project_only_normalization_fork": "experiments/062/L01_EQ23_SOURCE_ASSISTED_NORMALIZATION_FORK_EXACT_SUCCESS_G0_0_1.json",
+    "no_source_or_prior_success_failure_bytes_rewritten": true
+  },
+  "reproducible_method": {
+    "fixture_path": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "fixture_git_blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "exact_script_path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_grassmann_typed_operator_0_1.mjs",
+    "exact_script_git_blob_sha": "db848b9a2dbe62bea08ef1ddfb197ebb26b8db31",
+    "saved_output_path": "experiments/062/L01_EQ23_GRASSMANN_TYPED_OPERATOR_LOCAL_OUTPUT_0_1.json",
+    "saved_output_git_blob_sha": "73b6587c6b22dfe511afaa2b4f7413b8fb0be278",
+    "execution": "Exact GitHub source + fixture executed under V8 with only shebang/Node file reader adapted. Exhaustive two-generator Grassmann monomial mask sign product, sparse 7x7 BigInt matrix product and matrix bracket checks.",
+    "secondary_math": "Local SymPy independently entered sparse source witness Qr/Qg/Qbarb matrices and reproduced (2,-1), (0,-1), (-1,1), respective crossproducts 1 and -1. This implementation is mathematically independent but not source-semantic cold.",
+    "before_final_local_success": "An uncommitted script draft had a wrong expected anticommutator crossproduct sign (+1 instead of -1); corrected without changing any source cell, then rerun. No GitHub CI executed on the failed draft.",
+    "hostile_controls_defined": 10,
+    "hostile_controls_rejected": 10,
+    "external_source_ORACLE_use": "Direct frozen PDF page screenshots to read Lisi original author statements. No source-independent cold reviewer.",
+    "external_mathematical_context": "Standard graded tensor product/Grassmann envelope conventions; see https://aimath.org/~kaur/publications/u10.pdf and https://onlinelibrary.wiley.com/doi/10.1155/2017/7842482. These are mathematical background, not an authority for original Lisi author-specific conventions."
+  },
+  "competing_dispositions": [
+    {
+      "id": "E1",
+      "hypothesis": "Plain anticommutativity of Grassmann-valued q coefficients alone makes the assisted 14 underlying ordinary even Lie coefficient matrices close.",
+      "disposition": "REJECTED_FOR_TESTED_TWO_INDEPENDENT_GRASSMANN_COEFFICIENT_CASE"
+    },
+    {
+      "id": "E2",
+      "hypothesis": "Switch to raw matrix anticommutators without an original source-defined generator parity repairs 14D source closure.",
+      "disposition": "REJECTED_BY_EXACT_TWO_CELL_MISMATCH_FOR_TESTED_SOURCE_MATRIX"
+    },
+    {
+      "id": "E3",
+      "hypothesis": "The author intended a different BRST total-degree graded operation or restricted field sector, so the literal source claim does not require the tested free-even-generator Lie closure.",
+      "disposition": "OPEN_REQUIRES_ORIGINAL_SOURCE_TYPED_OPERATOR_COLD_REVIEW"
+    },
+    {
+      "id": "E4",
+      "hypothesis": "A source original Eq2.3 matrix coefficient/glyph was mistranscribed or the printed statement contains an algebraic source normalization discrepancy.",
+      "disposition": "OPEN_ORIGINAL_49_CELL_COLD_ORACLE_NOT_EXECUTED"
+    },
+    {
+      "id": "E5",
+      "hypothesis": "Project b2 counterfactual represents Lisi's actual original 2007 matrix.",
+      "disposition": "REJECT_NO_SOURCE_SUPPORT_FOR_REPLACING_THE_FROZEN_B1_INPUT"
+    }
+  ],
+  "repair_disposition": "NO_AUTOMATIC_SOURCE_OR_OPERATOR_PATCH; MAINTAIN_L01_S014_UNQUALIFIED",
+  "discovery_disposition": "SOURCE_TYPED_GRASSMANN_SIGN_HYPOTHESIS_NARROWED; E3/E4_UNRESOLVED",
+  "stage_locks": {
+    "SSC_revision": "0.96",
+    "SSC_items": 191,
+    "six_original_source_first_groups": 350,
+    "L01_source_locations": 98,
+    "L01_original_exact_visual_groups_not_cold_qualified": 16,
+    "whole_six_source_independent_cold_complete": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "original_source_author": "A. Garrett Lisi",
+    "technical_analysis": "AI assistant, independent finite Grassmann sign algebra and BigInt exact source-assisted matrix replay",
+    "recorded_on": "2026-10-13"
+  }
+}

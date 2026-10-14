@@ -1,0 +1,22 @@
+import fs from "node:fs";
+const native=fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_REGROUNDED_0_19.isg","utf8");
+const manifest=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_19.json","utf8"));
+const ssc=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_2.json","utf8"));
+const d=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/L023_REGROUNDED_NATIVE_DERIVATION_0_2.json","utf8"));
+const errors=[],norm=s=>s.replace(/\s+/g,"");
+const item=ssc.items.find(x=>x.id==="L-SSC-023");
+if(d.frozen_body!==item?.body)errors.push("frozen body");
+if(!norm(native).includes(norm(d.serialized_formula)))errors.push("formula");
+for(const t of d.support_incidences){const q="(^150010 "+t.join(" ")+")";if(!native.includes(q))errors.push("support "+q);}
+for(const q of ["(^150010 944005 942023 942154)","(^150010 944006 942154 944090 944079)","(^150010 944006 942154 944097 944080)"])if(!native.includes(q))errors.push("dependency evidence "+q);
+if(!native.includes("(^150010 940002 941023 940010)"))errors.push("closure disposition changed");
+if(!native.includes("(^150010 940003 942023 940014)"))errors.push("compiled state missing");
+const mi=manifest.items.find(x=>x.census_id==="L-SSC-023");
+if(mi?.closure_mode!=="INCOMPLETE_UNEXPANDED"||mi?.semantic_compilation_state!=="CORE_LOGIC_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT")errors.push("manifest state");
+const l154=manifest.items.find(x=>x.census_id==="L-SSC-154");
+if(l154?.closure_mode!=="CLOSED_PRIMITIVE")errors.push("L154 dependency not closed");
+if(manifest.regrounded_compilation?.accepted_closed_census_items!==14)errors.push("accepted count");
+if(JSON.stringify(manifest.regrounded_compilation?.compiled_pending_primitive_closure_audit)!==JSON.stringify(["L-SSC-013","L-SSC-023"]))errors.push("pending set");
+if(d.closure_claim!==false||d.target_internal_behavior_imported!==false)errors.push("firewall");
+const result={pass:errors.length===0,errors,census_id:"L-SSC-023",dependency:"L-SSC-154",accepted_closed:14,pending:["L-SSC-013","L-SSC-023"]};
+console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;

@@ -1,0 +1,132 @@
+{
+  "schema": "isograph.exp062-w-g7-relational-two-step-return-instantiation.v0.1",
+  "date": "2026-10-07",
+  "status": "SOURCE_INSTANCE_SATISFIES_RELATIONAL_TWO_STEP_RETURN_INTERFACE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "candidate": {
+    "id": "RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE_0_1",
+    "primitive_id": 221101,
+    "qualification": {
+      "path": "experiments/065/OWNER_BYPASS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "08b76b3c01ff82b5ee64de8e00fa8e692881f77d"
+    }
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_19.json",
+    "git_blob_sha": "be8ff79ef93fcba70dd9f2b73f68c7d0d32d58ef"
+  },
+  "source_input": {
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_22.json",
+      "git_blob_sha": "b0a668ef5bdc507e83f4cec17a15f73e02530023"
+    },
+    "source_demand": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_3.json",
+      "git_blob_sha": "f3b6b556ac26bfcc3a767652d45cab1509f627ce"
+    }
+  },
+  "scope": {
+    "census_id": "W-SSC-097",
+    "target_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "other_W_occurrences_consumed": [],
+    "L_evidence_used": false
+  },
+  "source_instance_binding": {
+    "P": {
+      "meaning": "represented projective-point scope named by W-SSC-097-O06",
+      "source_support": "on projective points",
+      "imported_geometry": false
+    },
+    "R": {
+      "meaning": "realized one-step rho_tw application incidence only",
+      "source_support": "the composite source phrase 'applying rho_tw twice' contains two ordered rho_tw application incidences",
+      "binding_rule": "Introduce no global function graph. A source-realized first application supplies R(x,y); the immediately following source-realized second application supplies R(y,z). Only such realized incidences are used.",
+      "totality_assumed": false,
+      "single_valuedness_assumed": false,
+      "symmetry_assumed": false,
+      "existence_beyond_source_sequence_assumed": false
+    }
+  },
+  "interface_obligations": [
+    {
+      "id": "P_TYPED_SCOPE",
+      "required": "R endpoints used in reconstruction are represented within the projective-point source scope",
+      "source_support": "W-SSC-097-O06: 'on projective points applying rho_tw twice returns the same projective point'",
+      "satisfied": true
+    },
+    {
+      "id": "R_REALIZED_ONE_STEP_INCIDENCE",
+      "required": "a source-justified binary relation for each realized one-step rho_tw application in the stated two-step sequence",
+      "source_support": "W-SSC-097-O06 explicitly states 'applying rho_tw twice'; decomposition into first and second realized application incidences preserves the source sequence without adding totality or uniqueness",
+      "satisfied": true
+    },
+    {
+      "id": "TWO_STEP_RETURN",
+      "required": "for the realized two-step source sequence, the endpoint equals the starting projective point",
+      "source_support": "W-SSC-097-O06",
+      "satisfied": true
+    },
+    {
+      "id": "NO_SELF_LOOP",
+      "required": "no represented source application incidence maps a projective point to itself",
+      "source_support": "W-SSC-097-O04: rho_tw has no projective fixed points",
+      "satisfied": true
+    }
+  ],
+  "reconstruction": [
+    {
+      "occurrence_id": "W-SSC-097-O06",
+      "candidate_clause": "RTR-A02",
+      "result": "RECONSTRUCTED",
+      "explanation": "The source's realized two-step rho_tw application sequence is represented by R(x,y), R(y,z), and the source-stated return z=x. No statement is made about unobserved/unrepresented one-step applications."
+    },
+    {
+      "occurrence_id": "W-SSC-097-O04",
+      "candidate_clause": "RTR-A03",
+      "result": "RECONSTRUCTED",
+      "explanation": "A projective fixed point would be a realized source self-loop R(x,x); the source explicitly excludes such fixed points."
+    }
+  ],
+  "ruling": {
+    "candidate_qualification_preserved": true,
+    "W_source_instance_satisfies_candidate": true,
+    "closed_occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "closure_disposition": "CLOSED_WITH_CAMPAIGN_LOCAL_PROVISIONAL_AUTHORITY",
+    "remaining_W097_unexpanded": [
+      "W-SSC-097-O01",
+      "W-SSC-097-O07",
+      "W-SSC-097-O02",
+      "W-SSC-097-O03",
+      "W-SSC-097-O05"
+    ],
+    "reason": "Removing totality and single-valuedness makes the generic schema match exactly the source-visible behavior: typed realized application incidence, two-step return, and absence of self-loops. The source instance does not need or receive function semantics."
+  },
+  "prohibited_inferences_preserved": [
+    "rho_tw is total",
+    "rho_tw is single-valued",
+    "rho_tw is a function",
+    "R is symmetric",
+    "the projective carrier is nonempty by schema 221101",
+    "the vector-level square-minus-one law follows from schema 221101",
+    "quaternionic/projective quotient/topological semantics follow from schema 221101"
+  ],
+  "downstream_effect": {
+    "affected_current_G5_roots": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "current_G4_G5_tuple_requires_replay_for_future_candidate_discovery": true,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Regenerate the affected W primitive-closure/quotient state with O06/O04 removed from unresolved demand, then inspect the remaining W097 residuals and other W families for the next lawful G5H path."
+}

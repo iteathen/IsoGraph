@@ -1,0 +1,266 @@
+{
+  "schema": "isograph.lisi-l05-sp3-eq13-eq14-g0-source.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "status": "SOURCE_EXACT_EQ13_EQ14_ORDINARY_QUATERNION_SUBSCOPE_AUDIT_PENDING_CI",
+  "authority": false,
+  "source_complete": false,
+  "G1_authorized": false,
+  "source_formulas_not_mathematical_authority": true,
+  "no_cross_track_import": true,
+  "external_cold_review_passed": false,
+  "source": {
+    "source_id": "L05",
+    "title": "Division Algebras, Triality, and Exceptional Magic",
+    "author": "A. Garrett Lisi",
+    "revision": "2026-08-29 version of record",
+    "doi": "10.1007/s00006-026-01447-5",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+    "section": "4.2",
+    "printed_page": 15,
+    "pdf_zero_based_page": 14,
+    "display": "orthogonal, Killing-normalized basis; Eq.(13), reflection Eq.(14)"
+  },
+  "scope": {
+    "algebra": "H",
+    "real_form": "ordinary quaternion",
+    "matrix_dim": 3,
+    "bracket_kind": "SOURCE_ASSERTED_QUATERNIONIC_MATRIX_COMMUTATOR",
+    "source_equivalence_claim": "Eq12 unnormalized A and Eq13 Killing-normalized generator coordinates describe ordinary sp(3); basis normalization preserved; no automatic identification of coordinate symbols without mapping",
+    "excluded": [
+      "split Hprime",
+      "f4",
+      "source-wide L05",
+      "general Clifford theorem"
+    ]
+  },
+  "indices": {
+    "uppercase": "A,B,C range 1..3, imaginary quaternion basis",
+    "lowercase": "a,b,c range 0..3, quaternion basis",
+    "summation": "repeated c and C summed, no reordering of noncommutative operands",
+    "tilde": "quaternion conjugation, tilde(e0)=e0; tilde(e_i)=-e_i (i=1..3)",
+    "structure_constants": "e_a e_b = M_ab^c e_c, with index order semantically load-bearing",
+    "antisymmetrization": "M_[AB]^C=(M_AB^C-M_BA^C)/2; no untyped antisymmetrization inferred"
+  },
+  "matrix_basis": {
+    "normalization": "orthogonal Killing-normalized 1/sqrt(2) offdiagonal, distinct from Eq12 unnormalized coordinates",
+    "linear_combination": "A=M^A*T^M_A+P^A*T^P_A+V^A*T^V_A+v^a*gamma_a+psi^a*Qminus_a+chi^a*Qplus_a",
+    "entries": [
+      [
+        "M^A*e_A",
+        "-v^a*tilde(e_a)/sqrt(2)",
+        "psi^a*e_a/sqrt(2)"
+      ],
+      [
+        "v^a*e_a/sqrt(2)",
+        "P^A*e_A",
+        "-chi^a*tilde(e_a)/sqrt(2)"
+      ],
+      [
+        "-psi^a*tilde(e_a)/sqrt(2)",
+        "chi^a*e_a/sqrt(2)",
+        "V^A*e_A"
+      ]
+    ],
+    "guards": [
+      "upper and lower offdiagonal signs differ; row/column incidence part of source",
+      "v,psi,chi use independent source role carriers",
+      "M,P,V use imaginary quaternion coefficient roles",
+      "orthogonality/Killing normalization is source-asserted, not proved by finite check"
+    ]
+  },
+  "brackets": [
+    {
+      "id": "L4-SP3-EQ13-01",
+      "lhs": "[T^M_A,T^M_B]",
+      "rhs": "T^M_C*(2*M_[AB]^C)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-02",
+      "lhs": "[T^P_A,T^P_B]",
+      "rhs": "T^P_C*(2*M_[AB]^C)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-03",
+      "lhs": "[T^V_A,T^V_B]",
+      "rhs": "T^V_C*(2*M_[AB]^C)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-04",
+      "lhs": "[T^M_A,gamma_b]",
+      "rhs": "gamma_c*(-M_{bA}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-05",
+      "lhs": "[T^P_A,gamma_b]",
+      "rhs": "gamma_c*(M_{Ab}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-06",
+      "lhs": "[T^V_A,Qminus_b]",
+      "rhs": "Qminus_c*(-M_{bA}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-07",
+      "lhs": "[T^M_A,Qminus_b]",
+      "rhs": "Qminus_c*(M_{Ab}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-08",
+      "lhs": "[T^P_A,Qplus_b]",
+      "rhs": "Qplus_c*(-M_{bA}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-09",
+      "lhs": "[T^V_A,Qplus_b]",
+      "rhs": "Qplus_c*(M_{Ab}^c)",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-10",
+      "lhs": "[gamma_a,Qminus_b]",
+      "rhs": "Qplus_c*(-M_{tilde(b)tilde(a)}^c/sqrt(2))",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-11",
+      "lhs": "[gamma_a,Qplus_b]",
+      "rhs": "Qminus_c*(M_{tilde(a)tilde(b)}^c/sqrt(2))",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-12",
+      "lhs": "[Qminus_a,Qplus_b]",
+      "rhs": "gamma_c*(-M_{tilde(b)tilde(a)}^c/sqrt(2))",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-13",
+      "lhs": "[gamma_a,gamma_b]",
+      "rhs": "T^M_C*(M_{tilde(b)a}^C-M_{tilde(a)b}^C)/2+T^P_C*(M_{btilde(a)}^C-M_{atilde(b)}^C)/2",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-14",
+      "lhs": "[Qminus_a,Qminus_b]",
+      "rhs": "T^V_C*(M_{tilde(b)a}^C-M_{tilde(a)b}^C)/2+T^M_C*(M_{btilde(a)}^C-M_{atilde(b)}^C)/2",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    },
+    {
+      "id": "L4-SP3-EQ13-15",
+      "lhs": "[Qplus_a,Qplus_b]",
+      "rhs": "T^P_C*(M_{tilde(b)a}^C-M_{tilde(a)b}^C)/2+T^V_C*(M_{btilde(a)}^C-M_{atilde(b)}^C)/2",
+      "modality": "SOURCE_ASSERTED_EXPLICIT_LIE_BRACKET",
+      "source_expression": "L05 §4.2 Eq.(13)",
+      "operand_order": "AS_PRINTED",
+      "bracket_direction": "FIRST_INPUT_THEN_SECOND_INPUT"
+    }
+  ],
+  "eq14": {
+    "source_location": "L05 §4.2 Eq.(14) printed p.15/51",
+    "reflection": {
+      "input": "A(M,P,V,v,psi,chi)",
+      "output": "A(M,V,P,tilde(psi),tilde(v),-tilde(chi))",
+      "gR": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "asserted": "gR*A*gR_inverse"
+    },
+    "matrix_is_involutive": true,
+    "reflection_role": "R_p^0 generalized reflection along unit positive spinor",
+    "automorphism_scope": "SOURCE_ASSERTION_NOT_INDEPENDENT_UNIVERSAL_THEOREM",
+    "phase_completeness": "NOT_SPECIFIED_BY_ROOT_REFLECTION_OR_ROTATION",
+    "source_root_roles": "swaps P,V; M fixed; root/Cartan reflection representations separate from generator conjugation and require phase data",
+    "source_triality_later": "t:gamma_a->Qminus_a->Qplus_a->gamma_a; T^M_A->T^V_A->T^P_A->T^M_A is separately printed, not proved here"
+  },
+  "source_fidelity_negative_controls": [
+    "Do not merge Qminus and Qplus or scalar/imaginary quaternion role types",
+    "Preserve all twelve tilde index positions (including M_tilde(b)tilde(a) versus M_tilde(a)tilde(b))",
+    "Do not drop offdiagonal 1/sqrt(2) or commute quaternion operands",
+    "Eq13 source assertions may be tested on finite H basis; check is not universal theorem proof",
+    "Do not fix frozen Eq1 printed ordinary octonion source inconsistency",
+    "No assertion of cross-track equivalence or primitive/schema closure",
+    "Eq14 root reflection does not supply missing phase mappings"
+  ],
+  "outstanding": [
+    "§4.3 full f4 and split-octonionic cases",
+    "§4.1 split-complex and full root/Cartan phase tables",
+    "L01-L06 entire source assertion census",
+    "L05 §2 Eq5 exact Gamma/M matrix-index equalities",
+    "Independent source-complete G0 fixed point and adversarial reconstruction",
+    "G1 re-extraction and G2-G7 dependency replay only after G0 freeze"
+  ],
+  "evidence_status": {
+    "source_direct_pdf_read": true,
+    "finite_matrix_tests_local": "198 basis-level brackets/reflection; must pass committed Node CI separately",
+    "external_independent_audit": "OWNER_BYPASS_NOT_PASSED",
+    "gate": "G0_ONLY_UNFROZEN_UNQUALIFIED"
+  },
+  "parent_l_stage_gate": "experiments/062/L_CURRENT_STAGE_GATE_0_10.json",
+  "predecessor_source_census": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_10.json"
+}

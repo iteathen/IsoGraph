@@ -1,0 +1,56 @@
+{
+  "schema": "isograph.exp062-w-g5-fixed-point.v0.4",
+  "date": "2026-10-08",
+  "status": "W_LOCAL_G5_POST_G7_RELATIONAL_CLOSURE_COMPLETE_NEXT_G5H_IDENTIFIED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_4.json",
+      "git_blob_sha": "57392c7f4fa78cfcfdab8af8ba794f36190a22b8"
+    },
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_4.json",
+      "git_blob_sha": "e0c3afe21f88e36c3b7a6843a08cb64897df1a00"
+    },
+    "source_sufficiency_review": {
+      "path": "experiments/062/W_G5_SOURCE_SUFFICIENCY_REVIEW_0_4.json",
+      "git_blob_sha": "a67c906257cd2f6e5d998fc44182c0fa6665303a"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g5-post-g7-0-4.mjs",
+      "git_blob_sha": "4d0268e6165ab7fa5f31bb2cd4dd51869d8e7ce0"
+    }
+  },
+  "verification": {
+    "workflow_run_id": 37737067387,
+    "conclusion": "success",
+    "quotient_classes": 370,
+    "unresolved_boundaries": 370,
+    "proposed_reusable_candidates": 0,
+    "effective_closed_by_G7": 2
+  },
+  "fixed_point": {
+    "W_local_G5_complete": true,
+    "W_G5H_hypothesis_generation_authorized": true,
+    "W_local_G6_required": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "W_track_sealed": false
+  },
+  "next_hypothesis": {
+    "target_occurrence": "W-SSC-097-O05",
+    "target_class": "W-G4-Q0206",
+    "family": "SOURCE_NEUTRAL_EMPTY_INTERSECTION_DECOMPOSITION",
+    "rule": "Attempt only a logical decomposition of no-real-points into empty overlap of two represented predicates; do not define either predicate by hidden source-domain semantics."
+  },
+  "nonclaims": [
+    "No deterministic candidate exists at this G5 fixed point.",
+    "The empty-intersection hypothesis is not authority.",
+    "No L evidence is used.",
+    "External review remains incomplete under the owner bypass."
+  ]
+}

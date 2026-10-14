@@ -1,0 +1,31 @@
+name: Experiment 062 W G1 current author twelve body convergence 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_2.json'
+      - 'experiments/062/tools/verify-w-g1-twelve-body-convergence-0-2.cjs'
+      - '.github/workflows/experiment-062-w-g1-twelve-body-convergence-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-twelve-body-convergence-0-2.cjs
+      - name: Verify twelve source-local W bodies, 139 pending, original provenance, and 19 hostiles
+        run: node experiments/062/tools/verify-w-g1-twelve-body-convergence-0-2.cjs
+      - name: Cold Woit original v2 section4.3 source check, 22 fixed anchors
+        run: python3 -u experiments/062/tools/cold-w01-s43-original-source-0-1.py
+      - name: Conserve current W G1 source-local source-first work and G0 freeze
+        run: |
+          node experiments/062/tools/verify-w-g1-w01-s43-0-2.cjs
+          node experiments/062/tools/verify-w-g1-current-high-risk-0-3.cjs
+          node experiments/062/tools/verify-w-g1-four-stale-0-3.cjs
+          node experiments/062/tools/verify-w-g1-current-source-frontier-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+          node experiments/062/tools/verify-w-g0-current-qualified-stage-0-1.cjs

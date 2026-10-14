@@ -1,0 +1,29 @@
+name: "Experiment 062 W G0 W04e full current 15-page original-first source audit 0.1"
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json"
+      - "experiments/062/W04E_G0_ORIGINAL_10PAGE_CONTIGUOUS_SOURCE_FIRST_AUDIT_0_1.json"
+      - "experiments/062/W04E_G0_ALL_15PAGE_CURRENT_AUTHOR_PDF_ORIGINAL_FIRST_CONVERGENCE_0_1.json"
+      - "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_56.json"
+      - "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_55.json"
+      - "experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_37.json"
+      - "experiments/062/W_CURRENT_STAGE_GATE_0_131.json"
+      - "experiments/062/W_G0_FINITE_BIDIRECTIONAL_CONVERGENCE_0_9.json"
+      - "experiments/062/tools/verify-w-g0-w04e-full-current-original-15page-0-1.cjs"
+      - ".github/workflows/experiment-062-w-g0-w04e-current-full15-source-first-0-1.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  original_first_W04e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Check syntax of independent original-source semantic and conservation validator
+        run: node --check experiments/062/tools/verify-w-g0-w04e-full-current-original-15page-0-1.cjs
+      - name: Verify 694 current original PDF source lines, 88 original intervals, all 151 SSC inverses, 539 typed source incidences and hostiles
+        run: node experiments/062/tools/verify-w-g0-w04e-full-current-original-15page-0-1.cjs

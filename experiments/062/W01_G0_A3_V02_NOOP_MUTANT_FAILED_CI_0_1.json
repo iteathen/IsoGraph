@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-w01-a3-v02-inert-hostile-failed-ci.v0.1",
+  "track": "W",
+  "status": "HISTORICAL_FAILED_CI_NOOP_HOSTILE_MUTATION_G0_NOT_QUALIFIED",
+  "run_id": 38071012374,
+  "commit": "5cb6143aac6942cd906f0f268eff82127f728f4e",
+  "workflow_url": "https://github.com/iteathen/IsoGraph/actions/runs/38071012374",
+  "predecessor_verifier_path": "experiments/062/tools/verify-w01-a3-original-source-g0-0-2.cjs",
+  "predecessor_verifier_blob_sha": "d504e0c64aebfaeb1b0dc54d89067c7914f49981",
+  "conclusion": "failure",
+  "baseline_positive": true,
+  "hostile_planned": 35,
+  "rejected_before_escape": 3,
+  "escaped_mutation": "source original owner missing",
+  "escape_reason": "The adversarial control tried to remove source owners from audit.locations[3], a HEADING whose owners were already []. It changed no fixture bytes, so no predicate was violated; verify() properly passed that unmodified source, then adversarial test failed. A second wrong-owner mutation similarly pointed to that heading and was not a valid load-bearing owner attack.",
+  "qualified": false,
+  "classification": "INERT_ADVERSARIAL_FIXTURE_TARGET_AND_MISSING_NONEMPTY_MUTATION_ASSERTION",
+  "fix": "Select original load-bearing A.3 interval index4 (SPLIT_CONJUGATION) for missing/wrong owner; impose assert.notDeepEqual(mutatedFixture,originals) before every adverse verification call, eliminating entire no-op mutation class. Preserve exact prior failed test and untouched source SSC0.61, gate0.121.",
+  "historical_v01_failure_preserved": true,
+  "no_author_math_change": true,
+  "no_G0_freeze": true
+}

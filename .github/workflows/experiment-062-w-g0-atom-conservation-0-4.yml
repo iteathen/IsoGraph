@@ -1,0 +1,33 @@
+name: "Experiment 062 W G0 source-first 0.66 and 526-atom reverse audit"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_66.json"
+      - "experiments/062/W04E_G0_SEC2_OSCILLATOR_ATOM_SOURCE_DEFECT_0_1.json"
+      - "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_52.json"
+      - "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_51.json"
+      - "experiments/062/W_G0_NINE_SOURCE_COVERAGE_STATUS_0_33.json"
+      - "experiments/062/W_CURRENT_STAGE_GATE_0_126.json"
+      - "experiments/062/W_G0_FINITE_BIDIRECTIONAL_CONVERGENCE_0_4.json"
+      - "experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-4.cjs"
+      - ".github/workflows/experiment-062-w-g0-atom-conservation-0-4.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w_g0_original_inverse_current:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Verify original 0.65 seven-atom historical tuple without retroactive promotion
+        run: |
+          node --check experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-3.cjs
+          node experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-3.cjs
+      - name: Verify 0.66 finite source, 151 inverse identities, 526 source atoms and hostile controls
+        run: |
+          node --check experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-4.cjs
+          node experiments/062/tools/verify-w-g0-finite-bidirectional-convergence-0-4.cjs

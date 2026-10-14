@@ -1,0 +1,74 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.39",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "L_G0_SSC039_CONDITIONAL_COMPLEX_D4_PHASE_CONJUGACY_OPEN_UNFROZEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "predecessor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_38.json",
+    "git_blob_sha": "b96a7977dbae6212bfb857a5f514fc2254f43b3c"
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_39.json",
+    "git_blob_sha": "dbbb782b3651cf574eaf9dc7baf4de1d8c0b0c3f",
+    "source_identities": 191,
+    "changed": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged": 189,
+    "frozen": false,
+    "complete": false
+  },
+  "current_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_COMPLEX_PHASE_PLAQUETTE_G0_0_1.json",
+    "git_blob_sha": "c767ac892e7e3297c7f5621928bf7b0a62598b51",
+    "source_revision": "L01 arXiv:0711.0770v1"
+  },
+  "source_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-d4-complex-plaquette-0-1.mjs",
+    "git_blob_sha": "cba1b4ff1680f933189efd107ebc225f905fb103",
+    "status": "INDEPENDENT_ALL_COMPLEX_PHASE_CERTIFICATE_LOCAL_PREFLIGHT_PASS_CI_PENDING"
+  },
+  "source_CI": {
+    "status": "PENDING_INITIAL_PUSH",
+    "external_cold_review_passed": false
+  },
+  "last_verified_sign_run": {
+    "id": 37997453337,
+    "head_sha": "3f101ea534489a9c24515b55b32d6dbfa3ca3f3a",
+    "conclusion": "success",
+    "math_mutants_rejected": 3,
+    "source_mutants_rejected": 12,
+    "does_not_authorize_G1": true
+  },
+  "current_lawful_state": {
+    "G0_source_audit_open": true,
+    "source_census_frozen": false,
+    "source_census_complete": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "global_primitive_closure_qualified": false,
+    "source_original_root_vector_phases_qualified": false,
+    "source_original_xPhi_factorization_mandatory": false,
+    "source_original_E8_field_reality_qualified": false,
+    "source_original_Hodge_trace_qualified": false,
+    "source_S2_global_action_equivalence_qualified": false,
+    "author_mathematical_error_confirmed": false,
+    "external_review_passed": false
+  },
+  "retained_unresolved": [
+    "Original L01 Table9 root weights and proposal xPhi factorization are not an author-specified Chevalley basis or unique required factorization.",
+    "The all-complex-phase determinant obstruction is proven only under the project-chosen compact skew-Hermitian D4 representation and anti-color/x2 reality.",
+    "Actual original E8 real form, allowed x/Phi coefficient constraints, H1 Fgw output normalization, H2 quadratic source projection, Hodge pairing and full dynamics remain unqualified.",
+    "L01–L06 source cold audit, L05 published ordinary octonion sign discrepancy, Core0.21 primitive/schema closure, native bundles, IA/NEI/DP/DTS/EI and independent cold reviews remain open."
+  ],
+  "next_lawful_step": "Recover author source-root-vector phases and field conjugacy from frozen independent L sources, and reject unproven source assumptions. Continue G0 primitive-source audit; no G1 or W semantics.",
+  "W_track_mutated": false,
+  "author_outreach_authorized": false,
+  "PR70_merge_authorized": false
+}

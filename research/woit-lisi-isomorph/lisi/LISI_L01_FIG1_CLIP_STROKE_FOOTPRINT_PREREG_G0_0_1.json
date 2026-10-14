@@ -1,0 +1,128 @@
+{
+  "schema": "isograph.track-L.G0.L01-original-svg-clip-and-ink-footprint-prereg.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "PDF_SHA256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "PDF_bytes": 623525,
+    "source_svg_SHA256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "raster96_SHA256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe",
+    "source_page_zero_based": 2,
+    "figure": "Figure 1"
+  },
+  "frozen_dependencies": {
+    "parent_HEAD": "2026928eba607d1b219a544b5a8907c8b8f176d5",
+    "current_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_193.json",
+      "blob_sha": "3f6b39fbb8314bad167402a208d301f6d725bc7d"
+    },
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+      "blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+    },
+    "source_inverse": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+      "blob_sha": "24163965af4d1e13e75371638fcfd70b793db2ac"
+    },
+    "previous_svg_extractor": {
+      "path": "research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py",
+      "blob_sha": "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+    },
+    "source_fig1_CI": {
+      "path": "experiments/062/L01_FIG1_CLIP_W_JUNCTION_FROZEN_SOURCE_CI_SUCCESS_0_1.json",
+      "blob_sha": "46f4dba7fc4e658b5b865e327674a08cf2852ce8",
+      "run_id": 38338924212
+    }
+  },
+  "candidate": {
+    "script_path": "experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-1.py",
+    "script_blob_sha": "4b4ca5243a6787bfc5ee46e9d73a930458ee83ae",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-clip-stroke-footprint-0-1.yml",
+    "workflow_blob_sha": "50b7a9b82afb573a8ba6eacbe4645e28cf0ed357",
+    "host": "GitHub Ubuntu 24.04 with Poppler; no semantic LLM calls"
+  },
+  "question": "Does original SVG actually give overlapping filled ink footprints to black path strokes 249, 251, 256 near the W/table boundary under their inherited SVG pen settings, or is the earlier endpoint-distance cluster an artifact of applying an arbitrary tolerance? Are all 11 clipPath source definitions closed straight paths?",
+  "prior_results_to_replay": {
+    "candidate_strokes_in_crop": 108,
+    "full_expanded_shapes": 2354,
+    "page_curved_paths": 2256,
+    "fill_only_curved_paths": 2114,
+    "stroked_curved_paths": 142,
+    "clip_definitions_and_refs": 11,
+    "W_source_paths": [
+      249,
+      251,
+      256
+    ],
+    "known_endpoint_separations_pdfpt": [
+      0.3007812,
+      0.3007813,
+      0.4253689
+    ],
+    "W_old_192dpi_line_dark_samples": [
+      10,
+      10,
+      10
+    ],
+    "original_svg_transform_source_path_251": "matrix(0.037662,0,0,-0.037662,276.066,478.767)",
+    "local_stroke_width_source_path_251": "18"
+  },
+  "chosen_geometric_test": {
+    "geometry": "For each direct-source single-segment path, reconstruct effective local inherited SVG stroke-width, affine transform and visible paint. Under *affirmatively established* uniform affine scale, default/explicit butt cap, no stroke dash, no non-scaling-stroke, and no clip/mask/filter, map centerline to exact four-vertex butt-cap stroke rectangle in PDF-point coordinates. Intersect convex rectangles using independent Sutherland-Hodgman clipping to compute pairwise and triple overlap polygon/area. Otherwise return UNKNOWN, not forced no-contact.",
+    "positive_control": "Three synthetic butt-cap rectangles sharing nonzero triple-area polygon.",
+    "negative_control": "Separated synthetic stroke must have zero overlap even if envelope selection would be overinclusive.",
+    "source_visibility": "Preserve exact original source file hashes and old 108 candidate count; at 384 DPI sample original page near computed triple-overlap polygon and displaced controls without treating same-renderer raster as cold independent judgement.",
+    "clip_control": "Read all 11 source clipPath definitions, path commands, chain closure, adjacency, reference IDs and raw coordinate frame. Definition completeness does not prove all clipping effects or semantics."
+  },
+  "adversarial_and_hard_stops": [
+    "Any original PDF/SVG/previous96DPI PNG hash or source count mismatch stops the source-specific claim.",
+    "Any nonuniform path transform, unresolved inherited style, linecap other than butt, clip ancestor, opacity/dash/non-scaling stroke invalidates use of simple rectangle footprint model.",
+    "Clip path definition lacking closed contiguous linear polygon stays unresolved rather than being treated as a valid convex crop.",
+    "Triple footprint polygon area >0 proves only conditional overlap of drawn source strokes; no Standard Model particle action edge, gauge coupling, field marker identity or physical graph incidence follows.",
+    "Fill-only curves, 142 stroke-bearing curves, 16 unresolved L01 exact-visual source groups, 0/6 cold source audits remain in target.",
+    "Woit import, synthesis, SSC/G0 gate promotion, PR merge and outreach remain forbidden."
+  ],
+  "resource_provenance": {
+    "intended_CI_source_replays": 1,
+    "workflow_path_triggered": true,
+    "manual_workflow_dispatch": false,
+    "external_agent_or_semantic_model_calls": 0,
+    "github_workflow_setup_cost": "one scoped source job plus unavoidable existing PR-triggered checks"
+  },
+  "history": {
+    "first_figure_model_failure_run": 38279072465,
+    "first_clip_fixture_failure_run": 38338693014,
+    "corrected_clip_source_success": 38338924212,
+    "all_preserved_without_revision": true
+  },
+  "stage_locks": {
+    "SSC_revision": "0.96",
+    "SSC_count": 191,
+    "original_source_first_groups": 350,
+    "L01_source_first_groups": 98,
+    "L01_visual_exact_open": 16,
+    "whole_original_source_cold": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "technical_formulation": "agent-assisted internal source SVG pen-footprint geometry audit",
+    "external_sources": [
+      "A. Garrett Lisi original arxiv:0711.0770v1",
+      "standard SVG stroke model and convex polygon intersection"
+    ],
+    "earliest_evidence_currently_located": "2026-10-12 source endpoint CI 38338924212 and local synthetic geometry",
+    "recorded_on": "2026-10-12",
+    "retrospective": false,
+    "novelty_or_priority_claim": false
+  }
+}

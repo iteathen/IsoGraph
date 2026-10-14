@@ -1,0 +1,62 @@
+name: Experiment 062 L source-local adjudication
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/L_ADJUDICATION_RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-062-l-source-local-adjudication
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  EXP062_L_ADJUDICATION_BATCH_SIZE: 7
+
+jobs:
+  adjudicate-l:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/062/tools/run-exp062-l-source-local-adjudication.mjs
+          test -f experiments/062/L_SOURCE_LOCAL_ADJUDICATION_SUCCESSOR_0_1.md
+          test -f experiments/062/L_EXTRACTION_RECONCILED_0_1.json
+          test -f experiments/062/evidence/run-37502616897-attempt-2/exp062-l-batched-audit/AUDIT.json
+          test -f experiments/062/evidence/run-37502616897-attempt-2/exp062-l-batched-audit/AUDIT_VALIDATION.json
+          node experiments/062/tools/verify-l-reconciled-extraction.mjs
+      - name: Adjudicate all validated L correction leads
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/062/tools/run-exp062-l-source-local-adjudication.mjs
+      - name: Persist research evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/062/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -d out/exp062-l-adjudication ] && cp -R out/exp062-l-adjudication "$E/"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","track":"L","mode":"source-local-adjudication"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL_L_ADJUDICATION.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 062 L source-local adjudication run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi

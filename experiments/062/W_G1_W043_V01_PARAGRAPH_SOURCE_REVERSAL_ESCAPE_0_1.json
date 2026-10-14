@@ -1,0 +1,19 @@
+{
+  "schema": "isograph.exp062-W-G1-W043-v01-original-source-paragraph-reversal-hostile-escape.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "exact_failure": {
+    "run_id": 38153444885,
+    "job_id": 114511457493,
+    "commit_sha": "bc08ed13a37fd6994171a612d4db81c450ba12c4",
+    "conclusion": "FAILED",
+    "source_positive_baseline_passed": true
+  },
+  "escaped_hostile": "reverse source statement order",
+  "failure_mechanism": "Original HTMLParser incremented nesting for void tags such as br or img, allowing a paragraph to absorb subsequent author text; the anti-reversal check did not independently assert first and second paragraph identity.",
+  "correction": "v0.2 parser respects HTML void tags and asserts separate exact W01 §4.3 paragraph start markers and non-overlap before asserting source roles; replays eight hostiles and W source inverse.",
+  "historical_failure_preserved": true,
+  "current_G0_frozen_unchanged": true,
+  "previous_G1_candidate_unqualified": true,
+  "no_L_semantics": true
+}

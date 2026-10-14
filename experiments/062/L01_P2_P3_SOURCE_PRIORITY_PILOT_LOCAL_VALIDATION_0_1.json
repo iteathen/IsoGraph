@@ -1,0 +1,108 @@
+{
+  "schema": "isograph.track-L.G0.L01-semantic-priority-pilot-local-deterministic-check.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "baseline_status": "PASS_AUTHOR_SIDE_MECHANICAL_ONLY",
+  "source": {
+    "original_pdf_source_revision": "arXiv:0711.0770v1",
+    "original_paper_from_web": "https://arxiv.org/pdf/0711.0770v1",
+    "original_binary_rehashed_this_run": false
+  },
+  "checked": {
+    "source_inverse_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "ssc_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "gate_sha": "74f1fb96448c759d3711d6c539f798cb1a631c42",
+    "source_groups_pilot": 6,
+    "original_L01_groups": 98,
+    "SSC_records": 191,
+    "semantic_atoms": 20,
+    "unique_atoms": 20,
+    "entire_original_cold_reviews": 0,
+    "method_file_blob": "1cf078d5ecbdb5f156c05b71d2df246c84b30342",
+    "pilot_file_blob": "ea5793b35e308685bb4dcd7e679fcee0aad6dbb6",
+    "blind_packet_blob": "02facdd8bae1db3a970b8fb11c69d43342a18690"
+  },
+  "negative_controls": {
+    "defined": 9,
+    "rejected": 9,
+    "mutant_results": [
+      {
+        "mutation": "figure_to_assertion",
+        "rejected": true,
+        "reasons": [
+          "ARTWORK_PROMOTED_TO_ASSERTION_L01-PILOT-002"
+        ]
+      },
+      {
+        "mutation": "unknown_edge_promoted",
+        "rejected": true,
+        "reasons": [
+          "INK_TO_GRAPH_OVERCLAIM"
+        ]
+      },
+      {
+        "mutation": "inverse_owner_erased",
+        "rejected": true,
+        "reasons": [
+          "SOURCE_INVERSE_OWNER_L01-S004",
+          "ATOM_OWNER_L01-PILOT-001",
+          "ATOM_OWNER_L01-PILOT-002"
+        ]
+      },
+      {
+        "mutation": "fake_cold_completion",
+        "rejected": true,
+        "reasons": [
+          "COLD_LOCATION_PROMOTION"
+        ]
+      },
+      {
+        "mutation": "permit_G1",
+        "rejected": true,
+        "reasons": [
+          "GATE_UNLOCK"
+        ]
+      },
+      {
+        "mutation": "change_source_page",
+        "rejected": true,
+        "reasons": [
+          "ATOM_SOURCE_LOC_L01-PILOT-001"
+        ]
+      },
+      {
+        "mutation": "silently_remove_atom",
+        "rejected": true,
+        "reasons": [
+          "ATOM_COUNT_OR_DUP",
+          "MISSING_ATOM_BACKLINK_L01-PILOT-020"
+        ]
+      },
+      {
+        "mutation": "invent_native_semantic_graph",
+        "rejected": true,
+        "reasons": [
+          "ATOM_QUALIFIED_L01-PILOT-001"
+        ]
+      }
+    ],
+    "additional_blind_oracle_contamination": {
+      "rejected": true,
+      "reason": "BLIND_ORACLE_LEAK"
+    }
+  },
+  "limits": [
+    "Not a test of accuracy of the interpretation against fresh independent source reviewer",
+    "No image-only cold reading performed",
+    "No original PDF binary rehashed in this local audit",
+    "No G0 promotion, no core module revision, no merge",
+    "No use of Woit interpretations"
+  ],
+  "provenance": {
+    "methodology_direction": "Joshua Oshiro",
+    "author_side_validation": "agent-assisted",
+    "recorded_on": "2026-10-13"
+  }
+}

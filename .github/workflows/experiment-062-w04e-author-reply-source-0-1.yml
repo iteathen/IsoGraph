@@ -1,0 +1,17 @@
+name: Experiment 062 W04e July10 author reply source-byte evidence 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/capture-w04e-author-reply-0-1.py'
+      - '.github/workflows/experiment-062-w04e-author-reply-source-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  author_reply:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: python3 -m py_compile experiments/062/tools/capture-w04e-author-reply-0-1.py
+      - run: python3 -u experiments/062/tools/capture-w04e-author-reply-0-1.py

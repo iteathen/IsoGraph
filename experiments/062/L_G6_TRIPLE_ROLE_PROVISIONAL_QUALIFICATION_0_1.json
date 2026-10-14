@@ -1,0 +1,109 @@
+{
+  "schema": "isograph.exp062-l-g6-triple-role-provisional-qualification.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS",
+  "authority_effect": "CAMPAIGN_LOCAL_SCOPED_PROVISIONAL_AUTHORITY_ONLY",
+  "semantic_authority": true,
+  "global_qualified_authority": false,
+  "provenance_class": "HYPOTHESIS_QUALIFIED",
+  "track_origin": "L",
+  "module": "TRIPLE_ROLE_COEFFICIENT_2_4_8_0_1",
+  "branch_head_at_creation": "cf0fb0f054cce8d8c7dcb23f31020473d63b4404",
+  "exact_revision": {
+    "hypothesis": {
+      "path": "experiments/062/L_G5H_TRIPLE_ROLE_COEFFICIENT_0_1.json",
+      "git_blob_sha": "a330e06693baa9239224a5fea1aca978ce87bc8c"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L_G6_TRIPLE_ROLE_MODULE_SSC_0_1.json",
+      "git_blob_sha": "fb5e9b249cc759fd6fb127cc4c5f494fa13036f4"
+    },
+    "module_ia": {
+      "path": "experiments/062/L_G6_TRIPLE_ROLE_MODULE_IA_FIXED_POINT_0_1.json",
+      "git_blob_sha": "83f6b05b6c9353b7521ea896be3c7a57876fb804"
+    },
+    "qualifier": {
+      "path": "experiments/062/tools/qualify-l-g6-triple-role-coefficient-0-1.mjs",
+      "git_blob_sha": "a4e1c86dadaa0cf6caedadd6845407057f09b1fa"
+    },
+    "field_vector_dependency": {
+      "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b"
+    },
+    "linear_basis_dependency": {
+      "path": "experiments/062/L_G6_LINEAR_BASIS_PROVISIONAL_QUALIFICATION_0_1.json",
+      "git_blob_sha": "a6415184c6d09b3cffcab00b16a10a413208a2ff"
+    }
+  },
+  "qualification_evidence": {
+    "workflow": "Experiment 062 L G6 triple-role provisional qualification",
+    "workflow_run_id": 37671961580,
+    "workflow_run_head": "cf0fb0f054cce8d8c7dcb23f31020473d63b4404",
+    "job_id": 112965685577,
+    "conclusion": "success",
+    "selected_relation_ids": [
+      219000,
+      219001,
+      219002
+    ],
+    "dependency_audit": [
+      182001,
+      187600,
+      187601,
+      193200,
+      215000,
+      219000,
+      219001,
+      219002
+    ],
+    "tests": {
+      "ssc_obligations": 12,
+      "ia_fixed_point_iteration": 2,
+      "ia_admitted": 7,
+      "positive_variants": 3,
+      "wrong_positive_role_anchor": 3,
+      "wrong_negative_role_anchor": 3,
+      "non_bijective_map": 3,
+      "partial_kappa": 3
+    },
+    "failures": []
+  },
+  "qualified_scope": {
+    "relations": [
+      219000,
+      219001,
+      219002
+    ],
+    "dimensions": [
+      2,
+      4,
+      8
+    ],
+    "kappa_semantics": "TOTAL_SINGLE_VALUED_A_TO_A_ONLY",
+    "role_identity_inference": false,
+    "triality_inference": false
+  },
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2",
+    "external_third_party_verification": "INCOMPLETE_BYPASSED_NOT_PASSED",
+    "label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "consumption_rule": "Only exact 219000/219001/219002 may be consumed under their pinned provisional dependencies; no stronger KAPPA or role-identity semantics are inherited.",
+  "global_routing": {
+    "qualified_module_manifest_changed": false,
+    "permission_to_change_global_manifest": false,
+    "independent_external_validation_claimed": false
+  },
+  "consequence_for_L": [
+    "L128 source instances may now reconstruct their exact 2/4/8 typed-role coefficient wrappers.",
+    "Source-local reconstruction remains required before closing L128 occurrences.",
+    "No L129/L130 triality/reflection behavior is supplied."
+  ],
+  "nonclaims": [
+    "No global authority change.",
+    "No third-party verification claim.",
+    "No KAPPA anti-involution claim.",
+    "No W/cross-track evidence used."
+  ]
+}

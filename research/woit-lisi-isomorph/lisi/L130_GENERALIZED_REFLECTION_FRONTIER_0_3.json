@@ -1,0 +1,45 @@
+{
+  "schema": "lisi.l130-generalized-reflection-frontier.v0.3",
+  "date": "2026-10-05",
+  "status": "REPRESENTATION_COMPLETE_CANDIDATE_CLOSURE_PENDING_DEPENDENCY_SCAN",
+  "predecessor": "L130_GENERALIZED_REFLECTION_FRONTIER_0_2.json",
+  "census_id": "L-SSC-130",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "completed": [
+    "spacelike s_u=+1 typed reflection formulas",
+    "spacelike odd anti-invariance and even-composition invariance",
+    "time-like s_u=-1 phase sqrt(s_u)=i",
+    "time-like real-input reflection maps into complexified roles",
+    "scalar-extended time-like odd anti-invariance",
+    "complex-linear extension of each time-like reflection component",
+    "arbitrary complex-domain odd anti-invariance",
+    "arbitrary complex-domain two-reflection composition invariance"
+  ],
+  "complex_domain": {
+    "generic_extension_schema": 231000,
+    "source_instance": "LISI_L05_COMPLEX_GENERALIZED_REFLECTION_EXTENSION_0_1.isg",
+    "falsifier": "L130_COMPLEX_REFLECTION_FALSIFIER_0_1.json",
+    "verifier": "tools/verify_l130_complex_reflections.mjs",
+    "finite_controls": {
+      "total_odd_basis_cases": 6552,
+      "total_even_basis_cases": 76104,
+      "failures": 0
+    }
+  },
+  "real_form_boundary": {
+    "required_for_L130": false,
+    "owner": "L-SSC-135",
+    "reason": "The corrected L-SSC-130 body requires generalized-reflection formulas, odd anti-invariance, time-like signature factors, and invariant even compositions. The later claim that complex-coefficient maps are real relative to an alternate anti-linear structure is explicitly frozen under L-SSC-135."
+  },
+  "source_evidence": {
+    "ordinary_O": "INCONSISTENT_SOURCE_PROPAGATED_IN_SPACELIKE_BRANCH",
+    "split_time_like_controls": "CLEAN",
+    "source_repair_used": false
+  },
+  "remaining": [
+    "recursive dependency/materialization audit",
+    "Core-0.21 exact-all-and-only reconstruction packet"
+  ],
+  "whole_item_closure": "CANDIDATE_READY_FOR_PACKET",
+  "dp_allowed": false
+}

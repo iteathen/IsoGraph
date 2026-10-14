@@ -1,0 +1,136 @@
+{
+  "schema": "woit.regrounded-source-summary-role-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_SUMMARY_ROLE_BODIES_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "frontier": "W_REGROUNDED_SOURCE_SUMMARY_ROLE_FRONTIER_0_1.json",
+  "native_bundle": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_16.isg",
+  "manifest": "WOIT_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_15.json",
+  "correction_lineage": {
+    "native_0_14": "draft; W013 roleAssignment omitted body-root argument",
+    "native_0_15": "fixed W013 arity; semantic audit then found W002 two-factor/cardinality loss, W023 missing context, W074 missing 'more primitive' relation",
+    "native_0_16": "current corrected compilation; no item was closed in 0.14/0.15"
+  },
+  "relation_atoms": {
+    "934081": "source proposes opaque target as natural base in opaque theory context",
+    "934082": "source states opaque construction supplies opaque internal structure",
+    "934083": "source states opaque proposal contains opaque construction",
+    "934084": "source records replacement within opaque formulation",
+    "934085": "source represents opaque target by opaque representation in opaque context",
+    "934086": "source presents opaque target as geometric avatar of opaque referent",
+    "934087": "source treats opaque target as chosen realization of opaque referent",
+    "934088": "source identifies two opaque identities",
+    "934089": "source represents opaque target using only opaque carrier identity",
+    "934092": "source actor acts on opaque target",
+    "934093": "source treats first opaque identity as more primitive than second"
+  },
+  "reused_atoms": {
+    "934002": "body-target-source-status",
+    "934003": "source records change from one opaque viewpoint to another",
+    "934050": "source role assignment",
+    "934076": "source proposal status"
+  },
+  "status_atoms": {
+    "934090": "chirally symmetric source descriptor",
+    "934091": "purely right-handed source descriptor"
+  },
+  "target_atoms": {
+    "934500": "W002 factor A source referent",
+    "934501": "W002 factor B source referent",
+    "934502": "W002 gravitational/spacetime role",
+    "934503": "W002 internal-gauge role",
+    "934510": "W004 projective twistor-space source identity",
+    "934511": "W004 Euclidean-first theory identity",
+    "934520": "W005 twistor construction identity",
+    "934521": "W005 internal U(1) structure identity",
+    "934522": "W005 internal SU(3) structure identity",
+    "934530": "W006 proposal identity",
+    "934531": "W006 one-Standard-Model-generation construction identity",
+    "934540": "W008 2023 formulation identity",
+    "934541": "W008 chirally symmetric complex-spacetime description identity",
+    "934542": "W008 purely right-handed Lorentz-action identity",
+    "934550": "W013 SU(2)_R source identity",
+    "934551": "W013 geometric role",
+    "934552": "W013 SU(2)_L source identity",
+    "934553": "W013 available internal-symmetry role",
+    "934560": "W023 spacetime-point source identity",
+    "934561": "W023 twistor-P1 source identity",
+    "934562": "W023 Euclidean-twistor-geometry context",
+    "934570": "W024 twistor-P1 source identity",
+    "934571": "W024 quaternion source identity",
+    "934580": "W074 Euclidean-first program identity",
+    "934581": "W074 Minkowski-twistor/holomorphic-first viewpoint identity",
+    "934582": "W074 Euclidean-geometry identity",
+    "934583": "W074 complex-twistor-data identity",
+    "934590": "W131 proposed-alternative identity",
+    "934591": "W131 Lorentz-group identity",
+    "934592": "W131 right-handed SL(2,C)_R factor identity",
+    "934593": "W131 complex-spacetime identity",
+    "934594": "W131 right-handed-spinor-structure identity",
+    "934595": "W131 left-handed SL(2,C)_L factor identity"
+  },
+  "items": [
+    {
+      "census_id": "W-SSC-002",
+      "frozen_body": "The two factors receive distinct gravitational/spacetime and internal-gauge roles.",
+      "logical_reading": "Two distinct opaque factor identities and two distinct opaque role identities; OR over the two possible factor-to-role assignments prevents an invented factor ordering."
+    },
+    {
+      "census_id": "W-SSC-004",
+      "frozen_body": "Projective twistor space is the proposed natural base of the Euclidean-first theory.",
+      "logical_reading": "source_proposes_as_natural_base(projective_twistor_space, Euclidean_first_theory)"
+    },
+    {
+      "census_id": "W-SSC-005",
+      "frozen_body": "The twistor construction supplies internal U(1) and SU(3) structure.",
+      "logical_reading": "AND(supplies_internal_structure(twistor_construction,U1), supplies_internal_structure(twistor_construction,SU3))"
+    },
+    {
+      "census_id": "W-SSC-006",
+      "frozen_body": "The proposal contains a construction for one Standard Model generation.",
+      "logical_reading": "contains_construction(proposal, one_Standard_Model_generation_construction)"
+    },
+    {
+      "census_id": "W-SSC-008",
+      "frozen_body": "The 2023 formulation replaces the chirally symmetric complex-spacetime description with a purely right-handed Lorentz action.",
+      "logical_reading": "AND(replaces(2023_formulation,old_description,new_action), status(old,chirally_symmetric), status(new,purely_right_handed))"
+    },
+    {
+      "census_id": "W-SSC-013",
+      "frozen_body": "Under W04a, SU(2)_R acts geometrically and SU(2)_L is available as an internal symmetry.",
+      "logical_reading": "AND(role_assignment(body,SU2R,geometric), role_assignment(body,SU2L,available_internal_symmetry))"
+    },
+    {
+      "census_id": "W-SSC-023",
+      "frozen_body": "In Euclidean twistor geometry, a spacetime point is represented by a twistor P1.",
+      "logical_reading": "represents_by_in_context(spacetime_point,twistor_P1,Euclidean_twistor_geometry)"
+    },
+    {
+      "census_id": "W-SSC-024",
+      "frozen_body": "W05 presents the twistor P1 as a geometric avatar of quaternions.",
+      "logical_reading": "presents_as_geometric_avatar_of(twistor_P1,quaternions)"
+    },
+    {
+      "census_id": "W-SSC-074",
+      "frozen_body": "W04c explicitly revises the Euclidean-first program into a Minkowski-twistor/holomorphic-first viewpoint and treats Euclidean geometry as a chosen realization of more primitive complex-twistor data.",
+      "logical_reading": "AND(revises(Euclidean_first,Minkowski_twistor_holomorphic_first), chosen_realization(Euclidean_geometry,complex_twistor_data), more_primitive(complex_twistor_data,Euclidean_geometry))"
+    },
+    {
+      "census_id": "W-SSC-131",
+      "frozen_body": "W02's proposed alternative identifies the Lorentz group with the right-handed SL(2,C)_R factor and represents complex spacetime using only right-handed spinor structure; in this formulation no SL(2,C)_L acts on complex spacetime.",
+      "logical_reading": "AND(proposal_status, identifies(Lorentz_group,right_factor), represents_using_only(complex_spacetime,right_spinor_structure), NOT(acts_on(left_factor,complex_spacetime)))"
+    }
+  ],
+  "guards": [
+    "all named mathematical objects remain opaque raw identities",
+    "detailed mathematical behavior for these names remains separately open in other SSC obligations",
+    "W002 encodes two distinct factors without assigning an unsupported left/right ordering",
+    "W023 preserves the Euclidean-twistor-geometry context",
+    "W074 preserves the source's 'more primitive' relation",
+    "all logical force is supplied by qualified Core primitive operators",
+    "no historical closure packet or research-local mathematical schema is a premise",
+    "all ten items remain INCOMPLETE_UNEXPANDED until separate primitive-closure audit",
+    "no Lisi/cross-track premise is present"
+  ],
+  "target_behavior_imported": false,
+  "closure_claim": false
+}

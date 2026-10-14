@@ -1,0 +1,218 @@
+{
+  "schema": "isograph.lisi-L01-first-generation-fermion-action-coframe-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "ORIGINAL_L01_FERMION_ACTION_SOURCE_AND_COFRA_CONTRACTION_G0_UNFROZEN",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "author": "A. Garrett Lisi",
+    "printed_pages": [
+      24,
+      27,
+      28
+    ],
+    "PDF_zero_based_pages": [
+      24,
+      27,
+      28
+    ],
+    "sections": [
+      "3.1",
+      "3.2.3"
+    ],
+    "source_method": "Direct visual inspection original arXiv PDF frozen v1, pp27-28; earlier independent page-level audit cross-check, no inferred 2nd/3rd action"
+  },
+  "frozen_parents": {
+    "ssc039": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_39.json",
+      "git_blob_sha": "dbbb782b3651cf574eaf9dc7baf4de1d8c0b0c3f"
+    },
+    "gate039": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_39.json",
+      "git_blob_sha": "24e5f13c3792c8e587624e515870bbdac07e4b54"
+    },
+    "h2Packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H2_F2_FERMION_GRADED_SOURCE_G0_0_1.json",
+      "git_blob_sha": "68a3fa00fbd61d03bfe3931aa3e90753e647a74c"
+    },
+    "pageAudit": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    }
+  },
+  "source_equation_layers": [
+    {
+      "id": "CURVATURE_FIRST_GEN",
+      "printed_page": 24,
+      "kind": "covariant Grassmann one-form",
+      "normalized": "D(Psi)=d(Psi)+[H1+H2,Psi]"
+    },
+    {
+      "id": "AUXILIARY_3_FORM_CHOICE",
+      "printed_page": 27,
+      "kind": "anti-Grassmann 3-form multiplied by coframe and volume",
+      "normalized": "Bdot=volume4*Psi_bar*coframe_contraction",
+      "source_status": "Chosen fermionic multiplier, not a derived consequence of pure E8 bracket"
+    },
+    {
+      "id": "ACTION_LEFT_RIGHT_OPERATOR",
+      "printed_page": 27,
+      "kind": "graded mixed action",
+      "normalized": "S_f=integral<volume4*Psi_bar*coframe*(d(Psi)+H1*Psi-Psi*H2)>"
+    },
+    {
+      "id": "ACTION_SUBSTITUTED_H1_H2",
+      "printed_page": 27,
+      "kind": "mixed left/right prior to component-coordinate representation",
+      "normalized": "d(Psi)+(omega/2+e*phi/4+W+B1)*Psi-Psi*(w+B2+xPhi+g)"
+    },
+    {
+      "id": "ACTION_COMPONENT_DERIVATIVE",
+      "printed_page": 27,
+      "kind": "component gamma and inverse-coframe",
+      "normalized": "Psi_bar*gamma^mu*(e_mu)^i*(partial_i(Psi)+(1/4)*omega_i^mu_nu*gamma_mu_nu*Psi + W_i*Psi + B1_i*Psi + Psi*w_i + Psi*B2_i + Psi*x_i*Phi + Psi*g_i) + Psi_bar*phi*Psi",
+      "right_component_sign_note": "Printed coordinate expansion shows PLUS for each of the four right-sector terms, whereas the preceding operator displays -Psi*H2."
+    },
+    {
+      "id": "SOURCE_COFRA_IDENTITY",
+      "printed_page": 27,
+      "kind": "inverse frame and Clifford contraction",
+      "normalized": "gamma^mu*(e_mu)^i*(e_i)^nu*gamma_nu=gamma^mu*gamma_mu=4"
+    },
+    {
+      "id": "SOURCE_UNDERSTANDING_LIMIT",
+      "printed_page": 28,
+      "kind": "author explicit knowledge limit",
+      "normalized": "New w and xPhi fermionic terms not yet well understood; CKM recovery a possibility, not a derivation."
+    },
+    {
+      "id": "OTHER_GENERATION_ACTION_LIMIT",
+      "printed_page": 28,
+      "kind": "author explicit incompleteness",
+      "normalized": "Fermion action for second and third generations is not understood well enough to write down; one generation only."
+    }
+  ],
+  "source_roles": [
+    {
+      "id": "Psi",
+      "degree": 0,
+      "statistics": "Grassmann fermion field"
+    },
+    {
+      "id": "Psi_bar",
+      "degree": 0,
+      "statistics": "anti-Grassmann conjugate coefficient"
+    },
+    {
+      "id": "Bdot",
+      "degree": 3,
+      "statistics": "anti-Grassmann multiplier"
+    },
+    {
+      "id": "D_Psi",
+      "degree": 1,
+      "statistics": "Grassmann connection derivative"
+    },
+    {
+      "id": "volume4",
+      "degree": 4,
+      "statistics": "bosonic oriented spacetime volume"
+    },
+    {
+      "id": "coframe",
+      "degree": 1,
+      "statistics": "inverse tetrad contraction of coefficient indices, not an independently existing source scalar"
+    },
+    {
+      "id": "e",
+      "degree": 1,
+      "statistics": "bosonic gravitational coframe/frame on tangent bundle, invertible only locally if nondegenerate"
+    },
+    {
+      "id": "phi",
+      "degree": 0,
+      "statistics": "H1 four-real-component Higgs scalar, not uppercase Phi"
+    },
+    {
+      "id": "Phi",
+      "degree": 0,
+      "statistics": "H2 colored/anti-colored Higgs scalar, not lowercase phi"
+    },
+    {
+      "id": "H1",
+      "degree": 1,
+      "statistics": "bosonic left connection"
+    },
+    {
+      "id": "H2",
+      "degree": 1,
+      "statistics": "bosonic right connection"
+    }
+  ],
+  "source_right_sign_boundary": {
+    "pre_component_signs": [
+      "-Psi*w",
+      "-Psi*B2",
+      "-Psi*xPhi",
+      "-Psi*g"
+    ],
+    "printed_component_signs": [
+      "+Psi*w_i",
+      "+Psi*B2_i",
+      "+Psi*x_i*Phi",
+      "+Psi*g_i"
+    ],
+    "source_native_generator_to_component_map_qualified": false,
+    "necessary_formal_mapping_under_identical_labels": "If all preceding source right Lie operators T and printed right component matrices T_i were otherwise identical, reproducing the printed plus sign requires T_i=-T evaluated on the relevant representation; this is a PROJECT conditional sign bookkeeping relation, not an author-stated global homomorphism.",
+    "not_conclude_source_typo": true,
+    "cannot_replace_H2_with_negative_generator_for_other_brackets_without_rechecking": true,
+    "source_quark_color_restriction_from_3_1_preserved": true
+  },
+  "conditional_math": {
+    "signature": [
+      1,
+      1,
+      1,
+      -1
+    ],
+    "frame_inverse_requirements": "e_i^mu invertible 4x4 real tetrad, coframe E_mu^i is its matrix inverse; source Eq p27 is local and not defined for degenerate frames.",
+    "gamma_contraction": "gamma^mu gamma_mu=4*I in Lorentzian Cl(3,1), requiring raised/lowered eta and the exact 4D invertible coframe.",
+    "exterior_3form_pairing": "For orientation volume4=dx0^dx1^dx2^dx3, alpha_i=i_(partial_i)volume4 has degree 3 and dx^j wedge alpha_i=delta_i^j volume4, alpha_i wedge dx^j=-delta_i^j volume4. Orientation/sign is fixed by order, not the source's unpublished detailed Grassmann pairing convention.",
+    "requires_antiGrassmann_sign_convention": "The PDF does not by itself provide a cold full graded trace/Grassmann/reality normalization; coframe degree and contraction checks do not prove complete S_f derivation.",
+    "Higgs_coupling": "Only the algebraic contraction of gamma^mu gamma_mu yields factor 4 cancelling the source e*phi/4; this does not qualify physical Higgs masses."
+  },
+  "new_source_scope": {
+    "target_SSC": "SOURCE_SEMANTIC_CENSUS_0_40.json",
+    "changed_only": [
+      "L-SSC-041",
+      "L-SSC-046"
+    ],
+    "unchanged_full_records": 189,
+    "ids": 191,
+    "frozen": false
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "full_native_E8_source_reconstruction_complete": false,
+    "source_exact_component_right_action_map_qualified": false,
+    "source_other_generations_dirac_action_qualified": false,
+    "full_fermion_physics_qualified": false,
+    "external_cold_review_passed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next": "Independently reconstruct source full E8 graded Lie action translating -Psi H2 to component matrices +Psi w_i/B2_i/x_iPhi/g_i, including quark-only strong restriction and Grassmann pairing signs. Independently audit actual two remaining triality-generation actions as explicitly UNSPECIFIED, rather than inventing them.",
+  "provenance": {
+    "human_direction": "Joshua Oshiro: full independent source-faithful IsoGraph L treatment",
+    "agent_formalization": "2026-10-09 source-local p27-28 one-generation action/graded degree/coframe and right-sign layer distinction",
+    "external_antecedent": "A. Garrett Lisi 2007 source, ordinary Clifford/coframe and exterior algebra. No novel mathematical priority claim."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "isograph.exp062-L-G0-L04-p3-time-unitarity-first-CI-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_CI": {
+    "run_id": 38181860303,
+    "job_id": 114595928813,
+    "head_sha": "b5cb914007941d6cf06e6ed79e16b8d7373c29cf",
+    "conclusion": "failure",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-p3-pin-time-original-0-1.mjs",
+    "verifier_git_blob_sha": "044d8100d32c9038682a5017b6e1fca7f796dede",
+    "original_PDF_SHA256_verified": true,
+    "original_p3_full_page_and_block_SHA256_verified": true,
+    "source_groups_scoped": 2,
+    "source_roles": 13,
+    "SSC_IDs": 191,
+    "source_first_group_count": 350,
+    "hostiles_defined": 25,
+    "hostiles_rejected": 24,
+    "escaped_mutation": "wrong_quantized_unitarity"
+  },
+  "diagnosis": {
+    "failure_class": "CHECKER_MODALITY_POLARITY_SUBSTRING_FALSE_NEGATIVE",
+    "why": "String 'antiunitary' contains substring 'unitary', so the quantized T unitary guard accepted the hostile antiunitary replacement.",
+    "prior_related_failure": "L04 §5 C/T antiunitary mutation escape retained in previous G0 campaign; same general string matching weakness.",
+    "cause_owner": "VERIFIER_ONLY_NOT_SOURCE",
+    "source_p3_math_incorrect_not_established": true,
+    "repair": "Use exclusive word-boundary checks for unitary and antiunitary for C, T_Q, and unquantized T; preserve original source and SSC0.87 bytes",
+    "original_run_remains_failure": true,
+    "retest_reason": "25th hostile escaped and check insufficient for admissibility"
+  },
+  "locks": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "whole_source_cold_complete": 0,
+    "W_source_imported": false,
+    "cross_author_synthesis": false,
+    "PR70_merge_authorized": false
+  }
+}

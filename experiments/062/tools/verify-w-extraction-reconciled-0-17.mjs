@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+const corpusPath='research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json';
+const predecessorPath='experiments/062/W_EXTRACTION_RECONCILED_0_16.json';
+const adjudicationPath='experiments/062/W_G1_FORMULA_OPERATOR_ADJUDICATION_0_2.json';
+const successorPath='experiments/062/W_EXTRACTION_RECONCILED_0_17.json';
+const corpus=JSON.parse(fs.readFileSync(corpusPath,'utf8'));
+const predecessor=JSON.parse(fs.readFileSync(predecessorPath,'utf8'));
+const adjudication=JSON.parse(fs.readFileSync(adjudicationPath,'utf8'));
+const successor=JSON.parse(fs.readFileSync(successorPath,'utf8'));
+const errors=[],fail=m=>errors.push(m);
+const expected=JSON.parse(JSON.stringify(predecessor)),em=new Map(expected.items.map(x=>[x.census_id,x]));
+for(const c of adjudication.corrections||[]){if(c.action!=='ADD_OCCURRENCE'){fail('action '+c.action);continue;}const it=em.get(c.census_id);if(!it){fail('item '+c.census_id);continue;}if(it.occurrences.some(o=>o.occurrence_id===c.occurrence.occurrence_id))fail('collision '+c.occurrence.occurrence_id);else it.occurrences.push(c.occurrence);}
+if(JSON.stringify(expected)!==JSON.stringify(successor))fail('successor replay mismatch');
+const expectedItems=corpus.items.filter(x=>x.track==='W'),bodies=new Map(expectedItems.map(x=>[x.census_id,x.body]));
+const predCount=predecessor.items.reduce((n,x)=>n+x.occurrences.length,0),succCount=successor.items.reduce((n,x)=>n+x.occurrences.length,0);
+if(predecessor.track!=='W'||predecessor.items.length!==84||predCount!==410)fail('predecessor shape/count');
+if((adjudication.corrections||[]).length!==8)fail('correction count');
+if(successor.track!=='W'||successor.items.length!==84||succCount!==418)fail('successor shape/count');
+const forces=new Set(['ASSERTED','NEGATED','CONDITIONAL','EQUALITY_OR_IDENTIFICATION','EXISTENCE','COMPARISON','OTHER']);
+const defs=new Set(['EXPLICIT_IN_BODY','PARTIAL_IN_BODY','NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED']);
+const keys=new Set(['occurrence_id','source_span','relation_span','argument_spans','logical_force','definition_status','depends_on','load_bearing_note']);
+const global=new Set();
+for(const it of successor.items){const body=bodies.get(it.census_id),prior=new Set(),sigs=new Map();if(!body){fail('body '+it.census_id);continue;}if(it.extraction_status!=='COMPLETE')fail('incomplete '+it.census_id);for(const o of it.occurrences){if(global.has(o.occurrence_id))fail('global duplicate '+o.occurrence_id);global.add(o.occurrence_id);const extra=Object.keys(o).filter(k=>!keys.has(k));if(extra.length)fail('extra '+o.occurrence_id);if(!body.includes(o.source_span)||!o.source_span.includes(o.relation_span))fail('span '+o.occurrence_id);for(const a of o.argument_spans||[])if(!o.source_span.includes(a))fail('arg '+o.occurrence_id+' :: '+a);if(!forces.has(o.logical_force))fail('force '+o.occurrence_id);if(!defs.has(o.definition_status))fail('def '+o.occurrence_id);for(const d of o.depends_on||[])if(!prior.has(d))fail('dep '+o.occurrence_id+' -> '+d);prior.add(o.occurrence_id);const sig=JSON.stringify([o.source_span,o.relation_span,o.argument_spans,o.logical_force,o.definition_status,o.depends_on]);if(sigs.has(sig))fail('semantic duplicate '+sigs.get(sig)+' / '+o.occurrence_id);sigs.set(sig,o.occurrence_id);const ns=JSON.stringify({logical_force:o.logical_force,definition_status:o.definition_status,depends_on:o.depends_on,load_bearing_note:o.load_bearing_note});if(/\b(?:PD-[A-Z0-9_-]+|B-[A-Z0-9_-]+|DNWF|DNIA)\b/i.test(ns))fail('pre-G5 '+o.occurrence_id);}}
+console.log(JSON.stringify({schema:'isograph.exp062-verify-w-extraction-reconciled-0-17.v0.1',pass:!errors.length,errors,item_count:successor.items.length,predecessor_occurrence_count:predCount,added_occurrences:adjudication.corrections.length,occurrence_count:succCount,gate_effect:'DETERMINISTIC_ONLY_COMPLETE_ZERO_CHANGE_REPEAT_AND_INDEPENDENT_COLD_AUDIT_REQUIRED'},null,2));if(errors.length)process.exitCode=1;

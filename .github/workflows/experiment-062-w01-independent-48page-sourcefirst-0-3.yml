@@ -1,0 +1,23 @@
+name: "Experiment 062 W01 independent full 48-page original source verified 0.3"
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/W01_G0_48PAGE_V02_METADATA_SCHEMA_FAILURE_0_1.json"
+      - "experiments/062/tools/verify-w01-independent-48page-original-pdf-g0-0-3.cjs"
+      - ".github/workflows/experiment-062-w01-independent-48page-sourcefirst-0-3.yml"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  w01_original_48page_v03:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Verify W01 48 original pages, full versioned source conservation, 44 SSC inverse and hostile source controls
+        run: |
+          node --check experiments/062/tools/verify-w01-independent-48page-original-pdf-g0-0-3.cjs
+          node experiments/062/tools/verify-w01-independent-48page-original-pdf-g0-0-3.cjs

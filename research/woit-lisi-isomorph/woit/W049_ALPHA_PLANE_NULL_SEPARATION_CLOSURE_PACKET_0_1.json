@@ -1,0 +1,74 @@
+{
+  "schema": "woit.w049-alpha-null-separation-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-049",
+  "frozen_body": "Appendix A defines alpha-planes from a twistor point and states that two spacetime points incident with the same projective twistor have null separation in the determinant quadratic form.",
+  "source": "W01 App. A.1",
+  "root_native": "research/woit-lisi-isomorph/woit/W01_ALPHA_PLANE_NULL_SEPARATION_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W047_GRASSMANNIAN_BUNDLE_KLEIN_CLOSURE_PACKET_0_2.json"
+  ],
+  "compositional_interface": {
+    "root_external_refs": [
+      182000,
+      182001,
+      189000,
+      189001,
+      189002,
+      189003,
+      189005,
+      189010,
+      189020,
+      189021,
+      189023,
+      189040,
+      189041,
+      189042,
+      189043,
+      202100,
+      202101,
+      202105,
+      202106,
+      202111,
+      202113,
+      202114,
+      990100,
+      990220,
+      990299
+    ],
+    "provider_rule": "All root external refs are supplied by the current W023 and W047 closure graphs.",
+    "unresolved_local_refs": 0,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "global_twistor_plane_incidence": 993013,
+    "alpha_plane_relation": 993015,
+    "full_affine_hom_carrier": 990220,
+    "hom_evaluation": 993010,
+    "graph_vector_membership": 993011,
+    "affine_point_to_grassmannian_plane": 993012,
+    "affine_twistor_incidence": 993014,
+    "common_twistor_relation": 993016,
+    "affine_matrix_coordinates": 993020,
+    "determinant_quadratic_form": 993021,
+    "null_separation_relation": 993022,
+    "source_theorem": "COMMON_TWISTOR(F1,F2) -> NULL_SEPARATION(F1,F2)"
+  },
+  "semantic_guards": [
+    "The alpha-plane relation is global on the represented Grassmannian.",
+    "The determinant null-separation theorem is rendered on the standard affine Hom(S_R,S_L) chart where the source determinant quadratic form is defined.",
+    "The affine carrier is the full exact Hom carrier from current W047 support, not an arbitrary parameter family.",
+    "No SL(4,C) fractional-linear action is imported; that remains W-SSC-048.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "isograph.dnia-source-semantic-census.v0.1",
+  "date": "2026-10-05",
+  "status": "FROZEN_CANDIDATE_MODULE_SSC",
+  "qualification_target": "DNIA_0_1",
+  "module_name": "Domain-Neutral Index and Arithmetic 0.1",
+  "provenance": {
+    "demand_graph": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_0_1.json",
+    "definability_audit": "research/primitive-demand-qualification/CORE_DEFINABILITY_AUDIT_0_1.json",
+    "selection_rule": "Include only index/counting/arithmetic semantics that remain non-Core after the graph-derived Core-definability audit."
+  },
+  "governing_authority": {
+    "core": "0.17-0.21 cumulative qualified",
+    "qu": "not used unless a genuine unresolved semantic family appears",
+    "cross_author_semantics": false
+  },
+  "items": [
+    {
+      "id": "DNIA-SSC-001",
+      "kind": "carrier_constructor_semantics",
+      "body": "There is an inductive natural-index carrier N with distinguished zero value 0 and successor constructor S:N->N; zero is not a successor and successor is injective."
+    },
+    {
+      "id": "DNIA-SSC-002",
+      "kind": "induction_authority",
+      "body": "N carries induction/well-founded recursion authority: a property holding at zero and preserved from n to S(n) holds for every n in N, and recursive definitions over N must expose zero and successor clauses."
+    },
+    {
+      "id": "DNIA-SSC-003",
+      "kind": "operation_definition",
+      "body": "Natural addition add:NxN->N is defined by add(a,0)=a and add(a,S(b))=S(add(a,b))."
+    },
+    {
+      "id": "DNIA-SSC-004",
+      "kind": "operation_definition",
+      "body": "Natural multiplication mul:NxN->N is defined by mul(a,0)=0 and mul(a,S(b))=add(mul(a,b),a)."
+    },
+    {
+      "id": "DNIA-SSC-005",
+      "kind": "order_definition",
+      "body": "Natural strict order lt(a,b) holds exactly when there exists a nonzero successor-count k such that add(a,k)=b; weak order le(a,b) holds exactly when a=b or lt(a,b)."
+    },
+    {
+      "id": "DNIA-SSC-006",
+      "kind": "finite_index_schema",
+      "body": "For every n in N there is a finite index segment I(n) whose members are exactly the natural indices k satisfying lt(k,n)."
+    },
+    {
+      "id": "DNIA-SSC-007",
+      "kind": "cardinality_schema",
+      "body": "A carrier X has exact finite cardinality n exactly when there exists a bijective typed map between I(n) and X."
+    },
+    {
+      "id": "DNIA-SSC-008",
+      "kind": "integer_schema",
+      "body": "Signed integers are represented by an exact quotient of ordered natural pairs (a,b), where (a,b) and (c,d) are equivalent exactly when add(a,d)=add(c,b); integer addition and multiplication are induced from natural addition and multiplication and must be well-defined under the quotient."
+    },
+    {
+      "id": "DNIA-SSC-009",
+      "kind": "rational_schema",
+      "body": "Rationals are represented by an exact quotient of integer/natural pairs (p,q) with q nonzero, where (p,q) and (r,s) are equivalent exactly when p*s=r*q; rational addition and multiplication are induced by the usual cross-product formulas and must be well-defined under the quotient."
+    },
+    {
+      "id": "DNIA-SSC-010",
+      "kind": "literal_embedding_schema",
+      "body": "Natural, integer, and rational exact literals used by downstream schemas are represented through canonical embeddings N->Z->Q and equality in the target carrier; a printed numeral or fraction alone carries no arithmetic behavior."
+    },
+    {
+      "id": "DNIA-SSC-011",
+      "kind": "finite_tuple_schema",
+      "body": "For every n and carrier A, an n-tuple over A is an indexed family t with domain I(n) and values in A; tuple equality is extensional equality at every index in I(n)."
+    },
+    {
+      "id": "DNIA-SSC-012",
+      "kind": "finite_fold_schema",
+      "body": "Given a carrier A, binary operation op:AxA->A, identity e in A, n in N, and tuple t:I(n)->A, fold(op,e,t) is defined by the zero case e and successor case applying op to the preceding fold and the next indexed value; the schema records operand order explicitly."
+    }
+  ],
+  "counts": {
+    "total": 12
+  },
+  "anti_scope": [
+    "No field/group/vector/matrix/bundle/projective/topological/differential/physical object is part of DNIA source semantics.",
+    "No Woit or Lisi source object is a premise.",
+    "DNIA may not be used by W or L until independent qualification completes.",
+    "Historical primitive-natural-arithmetic artifacts are evidence only and were not used to choose this frozen SSC."
+  ],
+  "required_pipeline": [
+    "native compilation",
+    "primitive/schema closure under qualified Core",
+    "Core-0.21 ledger qualification",
+    "recursive implicit assertions to fixed point",
+    "NEI/DTS only if their semantics are actually invoked",
+    "fresh independent module qualification"
+  ]
+}

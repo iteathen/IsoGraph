@@ -1,0 +1,163 @@
+{
+  "schema": "isograph.track-L.G0.L03-original-unified-superconnection-graded-source-scope.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original_source": {
+    "id": "L03",
+    "frozen_revision": "arXiv:1006.4908v1",
+    "source_pdf_sha256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "source_pdf_pages": 14,
+    "official_url": "https://arxiv.org/pdf/1006.4908v1",
+    "direct_original_visual_pages_zero_based": [
+      8,
+      12
+    ],
+    "original_version_head_and_pdf_pages_verified": true,
+    "full_external_independent_whole_original_semantic_review_passed": false
+  },
+  "predecessor": {
+    "source_first_path": "research/woit-lisi-isomorph/lisi/LISI_L03_SOURCE_FIRST_REVERSE_COVERAGE_0_3.json",
+    "source_first_git_blob_sha": "1dd449c2bd3b891dd0453da7f4c3eff974b2f7ee",
+    "SSC_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_57.json",
+    "SSC_git_blob_sha": "ed31878d7996bbf89869b3ab3de4b03ce5e8537c",
+    "source_formula_exact_groups_remaining_before": 22
+  },
+  "direct_source_original_numbered_equations": [
+    {
+      "number": "3.5",
+      "location": "L03-S022",
+      "PDF_page_zero_based": 8,
+      "SSC_ids": [
+        "L-SSC-076"
+      ],
+      "formula": "T=De=de+omega×e=de+(1/2)omega e+(1/2)e omega=(de^a+omega^a_b e^b)gamma_a",
+      "semantics": "Torsion is a differential 2form; exterior wedge between forms is implicit, Clifford matrix multiplication separate; mixed 1/2 coefficients are original source-defined, not a general torsionless theorem."
+    },
+    {
+      "number": "3.6",
+      "location": "L03-S023",
+      "PDF_page_zero_based": 8,
+      "SSC_ids": [
+        "L-SSC-076"
+      ],
+      "formula": "H=(1/2)omega+(1/4)e phi+A=(1/4)omega^ab Gamma_ab+(1/4)e^a phi^P Gamma_aP+(1/2)A^PQ Gamma_PQ",
+      "semantics": "Three separate Lorentz, frame-Higgs and Spin(10) gauge carrier sectors, with distinct 1/2 and 1/4 normalizations and signed bivector generator conventions."
+    },
+    {
+      "number": "3.7",
+      "location": "L03-S024",
+      "PDF_page_zero_based": 8,
+      "SSC_ids": [
+        "L-SSC-077"
+      ],
+      "formula": "F=dH+HH=(1/2)(R-(1/8)ee phi^2)+(1/4)(T phi-e Dphi)+F_A",
+      "semantics": "The 1/2 factor scopes the whole gravity curvature parenthesis and the 1/4 factor scopes the whole mixed torsion/Higgs term, not just one factor. R=d omega+(1/2)omega omega; F_A=dA+AA. Exact source sector semantics distinct from solution/physical action proof."
+    },
+    {
+      "number": "3.8",
+      "location": "L03-S025",
+      "PDF_page_zero_based": 8,
+      "SSC_ids": [
+        "L-SSC-077"
+      ],
+      "formula": "Dpsi=dpsi+Hpsi=(d+(1/2)omega+(1/4)e phi+A)psi",
+      "semantics": "The source's selected bosonic Spin(11,3) H acts on an appropriately represented generation spinor; expectation of Higgs masses is conditional on a selected nonzero vacuum and covariant action."
+    },
+    {
+      "number": "4.6",
+      "location": "L03-S038",
+      "PDF_page_zero_based": 12,
+      "SSC_ids": [
+        "L-SSC-089"
+      ],
+      "formula": "mathcal_A=H+psi",
+      "semantics": "A formal superconnection sum combines bosonic gauge/connection 1forms over spacetime and Grassmann-valued fermionic fields that source explicitly says are NOT conventional spacetime 1forms. BRST/space-of-connections is an analogy, not an extra frozen source theorem."
+    },
+    {
+      "number": "4.7",
+      "location": "L03-S039",
+      "PDF_page_zero_based": 12,
+      "SSC_ids": [
+        "L-SSC-089"
+      ],
+      "formula": "mathcal_F=d mathcal_A+(1/2)[mathcal_A,mathcal_A]=F+Dpsi+psi psi",
+      "semantics": "In the full E8 source superconnection, quadratic anticommuting fermion term psi psi occurs, separate from the GraviGUT semidirect zero [Q,Q] source Eq3.11. Equality to the source covariant Dirac derivative Eq3.8 is conditional on H=Eq3.6 and fermions in the claimed Standard Model or selected E8 subspace."
+    }
+  ],
+  "cross_equation_source_roles": [
+    {
+      "id": "FRAME_AND_TORSION_GRADE",
+      "original_eq": [
+        "3.5",
+        "3.6",
+        "3.7"
+      ],
+      "constraint": "T is a spacetime exterior 2form; H oneform with frame-Higgs sector; curvature terms have separate tensor coefficient groups. No torsionless condition is forced by Eq3.5."
+    },
+    {
+      "id": "BOSONIC_H_TO_SELECTED_DIRAC",
+      "original_eq": [
+        "3.6",
+        "3.8",
+        "4.7"
+      ],
+      "constraint": "The source claim Dpsi from the superconnection agrees with Eq3.8 only when H is the selected bosonic connection and the anticommuting field is a selected fermion multiplet. Not all E8 algebra-valued fields are physically solved fermions."
+    },
+    {
+      "id": "GRAVIGUT_SEMIDIRECT_VS_E8_SUPERCONNECTION",
+      "original_eq": [
+        "3.11",
+        "4.7"
+      ],
+      "constraint": "The GraviGUT source choice [Q,Q]=0 in Eq3.11 and the E8 superconnection source quadratic Grassmann psi psi in Eq4.7 are distinct algebra/source carriers; do not silently identify their fermion–fermion products."
+    },
+    {
+      "id": "SOURCE_PHYSICS_MODALITY",
+      "original_eq": [
+        "3.6",
+        "3.7",
+        "3.8",
+        "4.6",
+        "4.7"
+      ],
+      "constraint": "These are definitions/proposed dynamics and conditional mathematical source relations, not proof of the complete 248-generator physical model or mass spectrum."
+    }
+  ],
+  "counting": {
+    "original_source_eq_literals_scoped": 6,
+    "old_pending_exact_groups_to_replay": [
+      "L03-S022",
+      "L03-S023",
+      "L03-S024",
+      "L03-S038",
+      "L03-S039"
+    ],
+    "preexisting_non_pending_eq3_8_original_source_role_also_examined": "L03-S025",
+    "old_exact_source_pending_groups": 22,
+    "remaining_after_scoped_replay": 17,
+    "source_SSC_identities_to_extend": [
+      "L-SSC-076",
+      "L-SSC-077",
+      "L-SSC-089"
+    ],
+    "new_typed_source_ids_required": 0
+  },
+  "source_discrepancy_and_negative_guards": {
+    "H_gauge_carrier_not_generic_fermion_1form": true,
+    "source_psi_GRAssmann_not_spacetime_1form": true,
+    "source_semidirect_zero_Q_Q_not_erasable_E8_psi_psi": true,
+    "source_partial_E8_physical_action_conditional": true,
+    "original_Eq3_7_outer_half_and_mixed_quarter_not_omitted": true,
+    "source_original_Eq4_7_half_bracket_not_omitted": true,
+    "original_theory_physics_proof_not_required": true
+  },
+  "systematic_method_fix": "Cross-check all original source equation groups as an interconnected source-defined operator chain with exact rational normalization and field-carrier/grade binders. Do not accept separately summarized curvature or superconnection expressions when coefficients or conditional equality are lost. Apply to remaining L03 original matrix-sector sources without solving their physics.",
+  "exact_source_formula_scope": "SCOPED_Eq3_5_3_6_3_7_3_8_4_6_4_7_ORIGINAL_LITERAL_AND_ROLES",
+  "unreplayed_other_original_formula_and_matrix_groups": 17,
+  "whole_original_PDF_semantic_cold_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "W_math_imported": false
+}

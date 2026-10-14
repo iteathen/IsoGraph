@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04.source-figure-glyph-polarity-57-hostile-failure.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "date": "2026-10-11",
+  "semantic_authority": false,
+  "failed_CI": {
+    "run_id": 38159639068,
+    "job_id": 114529669215,
+    "head_sha": "0cfd69a37c58adada56450efc1f8aad35abde688",
+    "conclusion": "failure",
+    "html_url": "https://github.com/iteathen/IsoGraph/actions/runs/38159639068",
+    "source_original_PDF_SHA256_verified": true,
+    "source_figures": [
+      14,
+      16
+    ],
+    "all_exact_source_edges_reconciled": {
+      "Fig1": 60,
+      "Fig2": 192
+    },
+    "all_source_glyph_polygons_reconciled": {
+      "Fig1": 24,
+      "Fig2": 192
+    },
+    "original_frozen_SVG_sha_verified": true,
+    "baseline_issue_count": 0,
+    "adversarial_defined": 57,
+    "adversarial_rejected": 56,
+    "escaped_mutation": "claim_full_L04_original_semantic_cold",
+    "never_reclassify_as_pass": true
+  },
+  "failure_cause": {
+    "class": "VERIFIER_MISSING_WHOLE_SOURCE_COLD_STAGE_INVARIANT",
+    "exact_scope": "The original-source figure packet truthfully says G0_whole_L04_original_semantic_cold_complete=false. A hostile flip to true was not checked. The packet, all 191 SSC records and 53 original L04 source groups are unchanged.",
+    "old_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-full-figures-source-0-3.mjs",
+      "git_blob_sha": "42913a9275a42331b378552185155aff6f7b0fbb"
+    },
+    "repaired_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-full-figures-source-0-4.mjs",
+      "git_blob_sha": "ecce0dd3825e8ab5b9c37e0c78e88d0ed90e236b"
+    },
+    "repair": "Require G0_whole_L04_original_semantic_cold_complete===false in the immutable source-scope lock, together with G0 frozen false, G1 unauthorized, and six-source cold passes zero."
+  },
+  "qualification_effect": {
+    "full_source_G0_complete": false,
+    "figure_source_scoped_CI_qualified": false,
+    "source_records_semantics_changed": false,
+    "L04_selected_exact_groups_remaining": 2,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

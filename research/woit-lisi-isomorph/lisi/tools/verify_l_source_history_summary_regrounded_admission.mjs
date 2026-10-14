@@ -1,0 +1,11 @@
+import fs from "node:fs";
+const native=fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_REGROUNDED_0_28.isg","utf8");
+const manifest=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/LISI_NATIVE_COMPILATION_MANIFEST_REGROUNDED_0_28.json","utf8"));
+const audit=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/L_SOURCE_HISTORY_SUMMARY_REGROUNDED_PRIMITIVE_CLOSURE_AUDIT_0_1.json","utf8"));
+const d=JSON.parse(fs.readFileSync("research/woit-lisi-isomorph/lisi/L_SOURCE_HISTORY_SUMMARY_REGROUNDED_NATIVE_DERIVATION_0_1.json","utf8"));
+const errors=[],norm=s=>s.replace(/\s+/g,"");
+if(audit.status!=="PASS_7_CANDIDATE_CLOSED_PRIMITIVE")errors.push("audit");
+for(const row of d.items){const n=Number(row.census_id.slice(-3)),item=941000+n,body=942000+n;if(!norm(native).includes(norm(row.serialized_formula)))errors.push("formula "+row.census_id);if(!native.includes("(^150010 940002 "+item+" 940015)")||!native.includes("(^150010 940003 "+body+" 940016)"))errors.push("closed state "+row.census_id);if(native.includes("(^150010 940002 "+item+" 940010)")||native.includes("(^150010 940003 "+body+" 940014)"))errors.push("stale state "+row.census_id);const mi=manifest.items.find(x=>x.census_id===row.census_id);if(mi?.closure_mode!=="CLOSED_PRIMITIVE"||mi?.semantic_compilation_state!=="PRIMITIVE_CLOSED_AFTER_REGROUNDED_SOURCE_HISTORY_AUDIT")errors.push("manifest "+row.census_id);if(mi?.primitive_formula_closure?.qualified_qu_used||mi?.primitive_formula_closure?.schema_used||mi?.primitive_formula_closure?.cross_author_semantics_used)errors.push("closure flags "+row.census_id);}
+for(const n of [177,178])if(!native.includes("(^150010 940002 "+(941000+n)+" 940010)")||!native.includes("(^150010 940003 "+(942000+n)+" 940011)"))errors.push("blocker "+n);
+if(manifest.regrounded_compilation?.accepted_closed_census_items!==25)errors.push("count");if(JSON.stringify(manifest.regrounded_compilation?.compiled_pending_primitive_closure_audit)!==JSON.stringify(["L-SSC-013"]))errors.push("pending");
+const result={pass:errors.length===0,errors,accepted_closed:25,reopened:["L-SSC-177","L-SSC-178"],pending:["L-SSC-013"]};console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;

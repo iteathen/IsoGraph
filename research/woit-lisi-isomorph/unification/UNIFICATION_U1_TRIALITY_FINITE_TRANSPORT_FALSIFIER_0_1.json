@@ -1,0 +1,17 @@
+{
+  "schema": "woit-lisi.u1-triality-finite-transport-falsifier.v0.1",
+  "carrier": "standard quaternion basis {1,i,j,k}",
+  "triples_tested": 64,
+  "formulas": {
+    "source_triality": "T(v,psi,chi)=Re(chi*v*psi)",
+    "cyclicity": "T(v,psi,chi)=T(psi,chi,v)=T(chi,v,psi)",
+    "conjugation_law": "T(kappa(v),kappa(psi),kappa(chi))=T(v,chi,psi)",
+    "conjugation_plus_chiral_swap": "T(kappa(v),kappa(chi),kappa(psi))=T(v,psi,chi)"
+  },
+  "failures": {
+    "cyclic": 0,
+    "conjugation_reverses_chiral_order": 0,
+    "conjugation_plus_chiral_swap_invariance": 0
+  },
+  "pass": true
+}

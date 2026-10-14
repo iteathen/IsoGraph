@@ -1,0 +1,112 @@
+{
+  "schema": "isograph.exp062-L02-Lorentzian-Hodge-Auxiliary-G0-CI-and-conservation.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_original_frozen_source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "url": "https://arxiv.org/pdf/1004.4866",
+    "equations": [
+      "Eq1",
+      "Eq3",
+      "Eq4/5",
+      "Eq6",
+      "Eq7",
+      "Eq8/9",
+      "Eq10",
+      "Eq24",
+      "Eq25",
+      "Eq27"
+    ]
+  },
+  "passing_run": {
+    "run_id": 38007830597,
+    "github_actions_url": "https://github.com/iteathen/IsoGraph/actions/runs/38007830597",
+    "head_sha": "e84834a7060c6f1fece8d5a9ed1d5156c5fec8f2",
+    "job_id": 114080634174,
+    "conclusion": "success",
+    "duration_source_not_calibrated": true,
+    "verifier_step": "node experiments/062/tools/verify-l-g0-l02-plebanski-lorentzian-hodge-auxiliary-0-1.mjs",
+    "log_inspected": true,
+    "reported_pass": true,
+    "reported_issues": [],
+    "math_mutants_defined": 10,
+    "math_mutants_rejected": 10,
+    "source_provenance_mutants_defined": 16,
+    "source_provenance_mutants_rejected": 16
+  },
+  "independent_exact_rational_evidence": {
+    "oriented_non_degenerate_lorentzian_4_coframes": 6,
+    "arbitrary_nontrivial_2form_seeds": 5,
+    "metric_wedge_hodge_bilinear_pairs": 216,
+    "independent_star_squared_basis_probes": 36,
+    "Eq3_cases": 30,
+    "Eq5_cases": 30,
+    "Eq1_to_Eq24_to_Eq25_action_equivalence_cases": 30,
+    "nonzero_action_witnesses": 28,
+    "negative_orientation_frames": 1,
+    "scaled_determinant_frames": 3,
+    "metric_and_second_exterior_power_Hodge_oracles_independent": true,
+    "Euclidean_plusplus_nonsource_model_falsification": true
+  },
+  "record_conservation": {
+    "predecessor": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_43.json",
+      "git_blob_sha": "afb81fbc69bb8f60480d6654dbcc1ebfdfbd5f35"
+    },
+    "successor": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_44.json",
+      "git_blob_sha": "a1814158b7fd79e8322394e29e63031aa1cc5d7e"
+    },
+    "total_source_ids": 191,
+    "changed_only": [
+      "L-SSC-052",
+      "L-SSC-053",
+      "L-SSC-054",
+      "L-SSC-055",
+      "L-SSC-057",
+      "L-SSC-061"
+    ],
+    "other_full_records_identical": 185,
+    "G0_unfrozen": true
+  },
+  "packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json",
+    "git_blob_sha": "831279f107a7d36f49580179e6970468a457f044"
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-plebanski-lorentzian-hodge-auxiliary-0-1.mjs",
+    "git_blob_sha": "396ce74eff731312b4e5b566f4924c890fe8ad75"
+  },
+  "procedural_gate_at_ci": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_47.json",
+    "git_blob_sha": "f8eb041a40e152852727f221b843358a6789c8aa"
+  },
+  "preserved_concurrent_L_predecessor": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_46.json",
+    "git_blob_sha": "b85b14dd8bf8cbdeb4e77e88307141e3ccc82357",
+    "other_L_so8_sign_CI_run": 38007096806,
+    "other_L_chiral_CI_run": 38006899819
+  },
+  "source_scoping": [
+    "Exact project local exterior/Hodge rational probes do not reconstruct original spin(1+N,3) Clifford scalar-trace matrices.",
+    "B=(3/4)*F is source-author-selected first Phi=* Lorentzian branch, not all alternative cubic Phi ansatz branches or U(Phi).",
+    "DB=0 requires D*F=0 field equation and is not identically satisfied by arbitrary F.",
+    "Independent source e and connection eprime are not identified before explicit later subset restriction; torsionless not assumed.",
+    "CI is cold GitHub Node on frozen commit, NOT independent source-author theory proof or external cold mathematics adversarial review."
+  ],
+  "stage_locks": {
+    "G0_open": true,
+    "SSC0_44_frozen": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_semantics_authorized": false,
+    "author_original_error_confirmed": false,
+    "outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next": "Audit original L02 v2 broken-connection Eq12-Eq19 mixed curvature decomposition using graded Clifford/wedge operators and source frame distinctions; no W imports."
+}

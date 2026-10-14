@@ -1,0 +1,165 @@
+{
+  "schema": "isograph.lisi-L01-table9-D4-xPhi-Q-root-support-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "FROZEN_L01_TABLE9_SOURCE_ROOT_SUPPORT_PLUS_PROJECT_COMPLEX_D4_RANK_ONE_WITNESS_UNQUALIFIED",
+  "original_source": {
+    "source_id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      16,
+      18,
+      21,
+      22,
+      23,
+      24,
+      27
+    ],
+    "mathematically_relevant_original_sections": [
+      "§2.4 Table 9",
+      "§2.4 source Cartan-rotation table",
+      "§2.4.1 xPhi proposed factorization",
+      "§3.1 Eqs.(3.1),(3.6)",
+      "§3.2.2 so8 action and Hodge frame dependency"
+    ],
+    "source_role": "Source directly gives root weights, groups H2 into abelian/mixed/strong, and proposes simple factorization; does not prescribe every Cartan-Weyl root vector phase."
+  },
+  "pinned_predecessors": {
+    "census034": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_34.json",
+      "git_blob_sha": "fd7a7376670bc00a585a6da56feae0a69593c6d7"
+    },
+    "gate034": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_34.json",
+      "git_blob_sha": "b5a1a047d4a0221fdbac79ece149e07a8f81c7b7"
+    },
+    "H2_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H2_F2_FERMION_GRADED_SOURCE_G0_0_1.json",
+      "git_blob_sha": "68a3fa00fbd61d03bfe3931aa3e90753e647a74c"
+    },
+    "S2_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.json",
+      "git_blob_sha": "114d7746efc074a15dae814f708f21758b86c507"
+    }
+  },
+  "source_table9_root_data": {
+    "coordinate_order": [
+      "w",
+      "x",
+      "y",
+      "z"
+    ],
+    "strong_su3": "w=0; xyz all ordered permutations of (+1,-1,0); six roots",
+    "new_x1_Phi": "w=-1; xyz permutations of (±1,0,0); six roots",
+    "new_x2_Phi": "w=+1; xyz permutations of (±1,0,0); six roots",
+    "new_x3_Phi": "w=0; xyz ± permutations of (+1,+1,0) with a common ± sign; six roots",
+    "complete_D4_root_count": 24,
+    "Cartan_dimension": 4,
+    "source_so8_decomposition": "so(8) -> su(3) + u(1) + u(1) + 3*(3+bar3): 8+1+1+18=28",
+    "source_three_grouping": [
+      "Combined u(1)_w plus u(1)_(B-L) abelian sector (two separately named w and B2 curvatures)",
+      "3*(3+bar3) xPhi mixed sector",
+      "su(3) strong sector"
+    ],
+    "source_four_named_curvature_terms": [
+      "Fw",
+      "FB2",
+      "Fx",
+      "Fg"
+    ],
+    "author_three_parts_wording_explained_as_coarse_group_count": true,
+    "exact_Q_projection_and_all_coefficients_source_qualified": false,
+    "phi_color_alignment": "Project constructs three generation families with the same six su3-weight labels by projecting xyz to its traceless su3 Cartan; root-vector phases not source-specified.",
+    "source_factorization": "X_p=sum_(a=1..3) x_(a,p) sum_(color c1,c2,c3,anti a1,a2,a3) Phi_color E_root(a,color), with x_a 1-form and Phi_color scalar; model of paper's proposed 3 by (3+bar3) simple factorization."
+  },
+  "exact_root_support": {
+    "unordered_mixed_root_pairs_total": 153,
+    "all_pairs": {
+      "cartan_opposite": 9,
+      "strong_root": 18,
+      "mixed_root": 36,
+      "no_root": 90
+    },
+    "effective_cross_generation_oneform_pairs_total": 108,
+    "effective_cross_generation": {
+      "cartan_opposite": 6,
+      "strong_root": 12,
+      "mixed_root": 36,
+      "no_root": 54
+    },
+    "same_generation_oneform_wedge_excluded": true,
+    "necessary_caution": "Root addition gives potential Lie-bracket support; it does not determine source root-vector phases, coefficients or a physical field configuration."
+  },
+  "independently_chosen_mathematical_model": {
+    "model": "Standard complexified D4=so8(C) in 8x8 matrices preserving J=[[0,I4],[I4,0]], with Cartan H_i=E_ii-E_(i+4,i+4) and integral Chevalley-type root matrices.",
+    "not_a_source_fixed_real_form_or_phase_choice": true,
+    "original_table9_roots_reconstructed_exactly": true,
+    "full_24_root_matrix_commutators_tested": 276,
+    "paired_su3_color_weight_alignment_verified": true,
+    "source_rank_one_phi_monomial_support": {
+      "x1_x2": {
+        "nonzero_phi_monomials": 9,
+        "nonzero_B2_Cartan_monomials": 3,
+        "strong_root_monomials": 6,
+        "mixed_root_monomials": 0
+      },
+      "x1_x3": {
+        "nonzero_phi_monomials": 4,
+        "mixed_root_monomials": 4
+      },
+      "x2_x3": {
+        "nonzero_phi_monomials": 4,
+        "mixed_root_monomials": 4
+      }
+    },
+    "conditional_trace_identity": "tr([Y1,Y2]^2)=8*(Phi_a1*Phi_c1+Phi_a2*Phi_c2+Phi_a3*Phi_c3)^2",
+    "trace_quartic_independent_monomials": 6,
+    "source_rank_one_minimal_example": "Phi_c1=Phi_a1=1, all other Phi=0; two different x1,x2 1-form components give tr([Y1,Y2]^2)=8 in this complex 8x8 normalization.",
+    "zero_connection_derivatives_example": "With spatial constant x1,x2 one-forms, x3=0, Phi constant, and w=B2=g=0, the formal Fw,FB2,Fx,Fg can be zero while Q=[X_p,X_q] is nonzero, in the specified complex model.",
+    "original_real_E8_or_compact_so8_field_admissibility_proved": false,
+    "author_original_clifford_trace_equals_this_normalization_proved": false,
+    "nonzero_4D_Hodge_norm_for_source_real_form_proved": false,
+    "does_not_prove_source_mistake": true
+  },
+  "comparison_with_prior_Gram_result": {
+    "predecessor_scope": "Previous SSC0.34 proved conditional abstract five-carrier symmetric Gram residual and denied E8 field admissibility of generic counterexamples.",
+    "new_scope": "This is a concrete complex D4 subalgebra/root-label witness with source rank-one xPhi factorization, stronger algebraically than unconstrained Gram variables, but it remains conditional on real structure, phases and source Hodge metric.",
+    "missing_equality": "H(Q,Q)=2*sum_(i<j among Fw,FB2,Fx,Fg) H(Fi,Fj)",
+    "source_admissible_failure_not_claimed": true
+  },
+  "source_census_proposed_delta": {
+    "predecessor": 34,
+    "new": 35,
+    "total": 191,
+    "changed_only": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged": 189,
+    "frozen": false
+  },
+  "stage_guards": {
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "full_E8_action_qualified": false,
+    "author_math_error_proved": false,
+    "root_phase_source_qualified": false,
+    "real_form_field_admissibility_proved": false,
+    "external_cold_review_passed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next_lawful_step": "Independently source-fix exact root-vector/real-form phases and allowed x_a Phi_color reality conditions, then source-reconstruct Hodge pairing of Q against Fw,FB2,Fx,Fg; do not promote from root support or complex Chevalley model.",
+  "provenance": {
+    "human_originated_direction": "Joshua Oshiro: complete independent L source-faithful IsoGraph treatment",
+    "project_specific_formulation": "Agent-originated G0 source Table9 root-envelope and rank-one complex D4 matrix witness, 2026-10-09; internal evidence, no priority claim.",
+    "external_antecedent": "Lisi 2007 original source Table9 and standard D4 Cartan-Weyl/Chevalley matrix mathematics",
+    "earliest_located_record": "This 2026-10-09 research cycle and its planned GitHub commit"
+  }
+}

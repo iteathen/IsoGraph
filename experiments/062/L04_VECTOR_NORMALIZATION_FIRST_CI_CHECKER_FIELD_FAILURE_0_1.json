@@ -1,0 +1,54 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L04-vector-normalization-first-CI-checker-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "first_original_CI": {
+    "run_id": 38185057415,
+    "job_id": 114605488726,
+    "head_sha": "954fe47698c2a4ec8c764a173a0f1b956613f4de",
+    "conclusion": "failure",
+    "original_verifier_path": "experiments/062/tools/verify-l-g0-l04-vector-normalization-original-source-0-1.mjs",
+    "original_verifier_git_blob_sha": "128e8c30df76cd844c5a62e765d1ab5e91ed89d9",
+    "PDF_sha256_verified": true,
+    "original_full_pages_sha256_verified": 2,
+    "original_source_blocks_sha256_verified": 3,
+    "scoped_original_source_group": "L04-S010",
+    "eleven_roles_sha_anchored": true,
+    "four_branch_exact_matrix_model_baseline_passed": true,
+    "SSC_items_conserved": 191,
+    "source_location_groups_conserved": 350,
+    "hostiles_defined": 27,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0,
+    "reported_baseline_error": "packet conservation"
+  },
+  "diagnosis": {
+    "failure_class": "VERIFIER_SCHEMA_FIELD_NAME_FALSE_NEGATIVE",
+    "verifier_expected_nonexistent_key": "source_preservation.unchanged_entire_SSC_records",
+    "frozen_packet_actual_key": "source_preservation.other_complete_SSC_records_unchanged",
+    "independent_existing_190_record_conservation_guard_passed": true,
+    "original_52_other_L04_conservation_guard_also_rechecked_on_successor": true,
+    "reason": "A source packet bookkeeping field was named differently from the checking script. This is a verifier path mistake, not evidence of a source PDF, packet, mathematical or SSC discrepancy.",
+    "source_revision_changed": false,
+    "SSC_0_89_changed": false,
+    "source_inverse_0_22_changed": false,
+    "model_changed": false,
+    "history_failed_status_retained": true
+  },
+  "repair": {
+    "corrected_verifier": "experiments/062/tools/verify-l-g0-l04-vector-normalization-original-source-0-2.mjs",
+    "new_run_required": true,
+    "not_rescoring_first_failed_run": true
+  },
+  "locks": {
+    "G0_frozen": false,
+    "SSC_frozen": false,
+    "G1_authorized": false,
+    "whole_original_cold_sources_complete": 0,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

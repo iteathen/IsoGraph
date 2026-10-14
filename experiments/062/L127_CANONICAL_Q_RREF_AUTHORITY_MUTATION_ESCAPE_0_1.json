@@ -1,0 +1,32 @@
+{
+  "schema": "isograph.exp062-l127-canonical-rational-verifier-authority-bypass.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_THREE_ADVERSARIAL_AUTHORITY_MUTATION_ESCAPES_MATH_BASELINE_UNCHANGED",
+  "failed_workflow": {
+    "id": 37857261876,
+    "head_sha": "29951ce9e1ae9ea4b1cdf82dfe27d8d43da4a90e",
+    "conclusion": "failure",
+    "baseline_math": "PASS: all 8 Q-canonical RREF variants rank 28, published 168/378, diagnostic 0/378, all basis residuals zero, sparse witnesses retained",
+    "adversarial_defined": 18,
+    "adversarial_rejected": 15,
+    "escaped": [
+      "claim formal publisher erratum",
+      "claim f4 theorem",
+      "claim source external reviewer"
+    ]
+  },
+  "source_verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-o-canonical-q-rref-0-1.mjs",
+    "git_blob_sha": "1dacbfcb748e4694fb7d2e4f8e4d7ddd8d06ecdc"
+  },
+  "root_cause": "Checker compares numerical finite source constructions but omitted explicit false assertions for counterfactual_repair.editorial_intent_or_formal_erratum_established, dependencies_and_gates.f4_L133_source_mathematics_qualified, and external_review_passed. These are load-bearing authority negative controls.",
+  "repair": "Verify all three are false, source-era edition unchanged, and G1 off; rerun exact same Q numerical baseline and all effective mutations without promoting mathematics or source edition.",
+  "source_original_table_unchanged": true,
+  "source_nonclosure_discrepancy_from_previous_report": 0,
+  "full_source_cold_review_passed": false,
+  "G1_authorized": false,
+  "external_review_passed": false
+}

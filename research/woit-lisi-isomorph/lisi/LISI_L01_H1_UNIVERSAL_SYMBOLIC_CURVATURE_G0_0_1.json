@@ -1,0 +1,100 @@
+{
+  "schema": "isograph.lisi-l01-H1-universal-symbolic-curvature-project-G0.v0.1",
+  "created_utc_date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "EXACT_RESTRICTED_BOSONIC_H1_FORMAL_COEFFICIENT_IDENTITY_INTERNAL_DIAGNOSTIC_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      12,
+      23,
+      24
+    ],
+    "H1": "H1=(1/2)*omega+(1/4)*e*phi+(W+B1)",
+    "Fgw": "F_gw=(d(e)+(1/2)*[omega,e])*phi-e*(d(phi)+[W+B1,phi])",
+    "form_degree_omega_e_V": 1,
+    "form_degree_phi": 0
+  },
+  "inputs": {
+    "ssc031": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "6004578250d4e742f70406f4a547410699ecd813"
+    },
+    "gate031": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea"
+    },
+    "frozen_three_sector_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_ALL_THREE_GRADED_CURVATURE_SECTORS_G0_0_1.json"
+    },
+    "frozen_source_curvature_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_GRADED_CURVATURE_EQ3_1_TO_EQ3_5_SOURCE_G0_0_1.json"
+    }
+  },
+  "implementation": {
+    "path": "experiments/062/tools/verify-l-g0-l039-universal-symbolic-h1-0-1.mjs",
+    "git_blob_sha": "8a9c76fea18b32ee4796e8c373c5e729b169d75d",
+    "method": "Exact integer multivariate commutative polynomial coefficients with independent real field first-jet symbols, tensored with the full 256 Clifford blades of signature (+,+,+,-,+,+,+,+). Multiplication reduces blade products independently by source generator swaps and signature.",
+    "complete_oriented_pairs": 6,
+    "random_samples": 0
+  },
+  "typed_project_scope": {
+    "coefficients": "Four independent source e vector one-form coefficients per spacetime leg, four independent real phi scalar components, six omega gravity bivector coefficients, six V=(W+B1) primed-bivector coefficients and their independent ordered spacetime first jets",
+    "curvature": "F_pq=partial_p H_q-partial_q H_p+[H_p,H_q] for p<q, with all Clifford contractions exact",
+    "project_formula_G": "16 P_G(F)=8 d(Omega)+4[Omega_p,Omega_q]-(phi^2)[e_p,e_q], with d(Omega) the p,q curl",
+    "project_formula_EW": "16 P_EW(F)=16(dV+[V_p,V_q])",
+    "project_formula_mixed": "16 P_M(F)=4((d e+(1/2)[Omega,e])phi-e wedge (dphi+[V,phi]))",
+    "output_basis_warning": "Project P_M uses UNSCALED Gamma_a GammaPrime_c generators. The printed named F_gw output basis is not source-authorized as identical, so the factor of four is conditional. Defining N=M/4 is a project-coordinate option, not an author's specification."
+  },
+  "verification": {
+    "local_preflight": "EXACT_FORMAL_MATH_ONLY_CHECK_PASSED; full source-integrity GitHub Actions run pending at initial commit",
+    "all_six_twoforms": {
+      "per_pair_full_monomial_blade_terms": 376,
+      "per_pair_gravity": 84,
+      "per_pair_ew": 36,
+      "per_pair_mixed": 256,
+      "per_pair_non_bivector_residual": 0
+    },
+    "clifford_generator_anticommutators": 64,
+    "mixed_mixed_bracket_tests": 120,
+    "gravity_mixed_bracket_tests": 96,
+    "EW_mixed_bracket_tests": 96,
+    "gravity_EW_commuting_bracket_tests": 36,
+    "math_adversarial_mutants_defined": 10,
+    "math_adversarial_mutants_rejected_local": 10,
+    "math_only_preflight_skips_source_checks": true,
+    "full_source_integrity_verification": "PENDING",
+    "external_cold_review": "NOT_RUN"
+  },
+  "distinct_issues": {
+    "math_repair": "Earlier sample/tautology and source-literal-fixture defects preserved; this independent symbolic polynomial construction checks all monomial support rather than identical guessed expected outputs.",
+    "discovery": "The raw project M-basis factor-four relationship still invites source-native output-generator and 8x8/16x16 spinor-map investigation; not resolved by the polynomial result."
+  },
+  "unresolved": [
+    "Original author F_gw common-output generator normalization",
+    "Paper 8x8 chiral to original 16x16 gamma coefficient map and phases",
+    "Full L01–L06 source line-by-line audit and 191-item frozen census",
+    "L05 original-journal octonion sign inconsistency ownership",
+    "Primitive/schema closure, native full L bundle, IA fixed point, NEI, DTS, DP, EI, cold external review"
+  ],
+  "stage_guards": {
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "cross_author_semantics_authorized": false,
+    "physical_unification_claim": false,
+    "source_author_error_proved": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro directs independent IsoGraph L continuation",
+    "mathematical_formalization_and_implementation": "agent-assisted internally, 2026-10-09",
+    "earliest_evidence_currently_located": "This dated project work and associated GitHub commit; no priority claim",
+    "source_author": "A. Garrett Lisi; L01 source equations retained without reinterpretation"
+  },
+  "next": "Run source-pinned symbolic checker in exact branch CI, independently audit monomial construction and mutations, and continue full G0 source census and output-basis mapping without granting G1."
+}

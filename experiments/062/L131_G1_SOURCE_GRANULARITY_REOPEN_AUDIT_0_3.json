@@ -1,0 +1,65 @@
+{
+  "schema": "isograph.exp062-l131-source-granularity-reopen-audit.v0.3",
+  "date": "2026-10-08",
+  "status": "L131_G1_ROTATION_PAIR_SOURCE_REOPEN_CONFIRMED",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_DIAGNOSTIC_ONLY",
+  "track": "L",
+  "branch_head_at_creation": "136c82449e444bf3926a502dbe5717d3c4fcd67b",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "path": "experiments/062/L131_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_2.json",
+    "git_blob_sha": "bfe8dc97482f3274810ea8443a8b08287ed289ba",
+    "status": "INCOMPLETE_FOR_SOURCE_ROTATION_PAIR_DEFINITION"
+  },
+  "defect": {
+    "path": "experiments/062/L131_ROTATION_PAIR_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "8924e3cef9a5343c39290991cfbf1a88ce46a0ca"
+  },
+  "still_active_previous_defect": {
+    "path": "experiments/062/L131_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "aa38a3e96e597fd4fb57c51aa194905c250c0ef0"
+  },
+  "frozen_source": {
+    "id": "L-SSC-131",
+    "paper": "L05 §3, sentence immediately after t^(uw) equality chain",
+    "literal_equation": [
+      "EQUAL",
+      "R_v^(uw)",
+      [
+        "COMPOSE_ORDERED",
+        "R_v^w",
+        "R_v^u"
+      ]
+    ],
+    "source_url": "https://link.springer.com/article/10.1007/s00006-026-01447-5"
+  },
+  "diagnosis": {
+    "old_occurrence_count": 12,
+    "expected_replay_occurrence_count": 13,
+    "old_R01_R12": "PRESERVE_VERBATIM",
+    "new_R13": "DIRECT_SOURCE_ROTATION_PAIR_EQUALITY",
+    "role_scope": "V, Q_minus, Q_plus typed coefficient transformations, not simply permutation labels",
+    "binder_scope": "u,w are the very same source parameters on both sides of the equality",
+    "operator_order": "PRESERVE_SOURCE_WRITTEN_ORDER_WITHOUT_UNJUSTIFIED_EVALUATION_DIRECTION",
+    "epistemic_status": "SOURCE_ASSERTED_NOT_INDEPENDENTLY_QUALIFIED"
+  },
+  "ambiguity_guard": {
+    "Rp_uw": "The paired-p notation occurs in source t^(uw) chain but must not be replaced by a product of algebra elements u*w or a postulated group axiom.",
+    "Rv_uw": "Explicitly source-defined as R_v^w R_v^u; its source-level operator identity cannot remain opaque.",
+    "rotation_label": "No global ROTATION_GROUP primitive or equivalence imported.",
+    "source_O_inconsistency": "PRESERVE_UNREPAIRED"
+  },
+  "ordered_next": [
+    "new L131 G1 0.3 including a distinct R13 and exact expression tree",
+    "new L131 G2 neutral source graph with no shorthand-only leaf",
+    "new L131 G3 scope-conservative disposition",
+    "adversarial verifier independently freezes direct paper identity",
+    "no dependent L132/L133 replay before L131 closure"
+  ],
+  "nonclaims": [
+    "No operator equality has been independently proved.",
+    "No G7 or module promotion.",
+    "No W premise or external verification claim."
+  ]
+}

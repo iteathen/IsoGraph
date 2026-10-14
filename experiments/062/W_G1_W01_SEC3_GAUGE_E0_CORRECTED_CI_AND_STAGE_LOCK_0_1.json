@@ -1,0 +1,76 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-sec3-mechanical-CI-and-stage-lock.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "qualification_scope": "SELF_AUTHORED_MECHANICAL_SOURCE_CROSSWALK_NOT_INDEPENDENT_COLD_G1",
+  "original_source": {
+    "author": "Peter Woit",
+    "revision": "arXiv:2104.05099v2",
+    "url": "https://arxiv.org/html/2104.05099v2",
+    "complete_external_original_source_bytes_independently_fingerprinted": false
+  },
+  "frozen_input_g0": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+    "blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+    "body_count": 151
+  },
+  "candidate": {
+    "path": "experiments/062/W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_CANDIDATES_0_1.json",
+    "git_blob_sha": "b1da902ed2699afa4cef324a0dd5198ded16b839",
+    "source_bodies": [
+      "W-SSC-002",
+      "W-SSC-003"
+    ],
+    "new_occurrences": 13,
+    "qualified_source_bodies": 0
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-w-g1-w01-sec3-gauge-e0-0-1.cjs",
+    "git_blob_sha": "d913a8f67252f800b69cec613c4c218f142d7a19",
+    "version": "0.1",
+    "claims": "Frozen G0/39-body G1 SHA, typed/inverse exactness, source-only role semantics, dependency incidence, stage locks and 22 hostile mutation rejections; not a new cold source oracle"
+  },
+  "first_run": {
+    "run_id": 38190309565,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38190309565",
+    "job_id": 114621443804,
+    "commit_sha": "19ad932514e844e9b94b508fd0e032920cacad6e",
+    "status": "COMPLETED",
+    "conclusion": "FAILURE",
+    "verifier_started": false,
+    "hostile_controls_executed": 0,
+    "cause": "unpinned checkout action rejected during runner setup",
+    "preserved_failure_path": "experiments/062/W_G1_W01_SEC3_GAUGE_E0_FIRST_CI_SETUP_FAILURE_0_1.json"
+  },
+  "corrected_run": {
+    "run_id": 38190425787,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38190425787",
+    "job_id": 114621815721,
+    "commit_sha": "b6569657be8af178cc5cca5fe5c535a17d300cec",
+    "status": "COMPLETED",
+    "conclusion": "SUCCESS",
+    "tested_source_bodies": 2,
+    "tested_source_local_occurrences": 13,
+    "hostile_controls_rejected": 22,
+    "hostile_controls_total": 22
+  },
+  "local_finite_model": {
+    "method": "SymPy exact symbolic 2x2 representative",
+    "checks_passed": 5,
+    "checks_total": 5,
+    "scope": "one representative; not mathematical theory qualification or source cold proof"
+  },
+  "stage": {
+    "original_oct03_mutable_bytes": "UNAUTHENTICATED_OPEN",
+    "current_author_G0": "FROZEN_151",
+    "G1_qualified_bodies": 39,
+    "G1_total_bodies": 151,
+    "G1_global_complete": false,
+    "G2_authorized": false,
+    "G3_G7_authorized": false,
+    "source_seal_authorized": false,
+    "W_L_semantics_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "preservation": "First CI failure not changed to PASS; corrected exact-run scoped mechanical PASS cannot bootstrap independent author source verification."
+}

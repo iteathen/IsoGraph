@@ -1,0 +1,142 @@
+{
+  "schema": "isograph.exp062-L040-L044-phase-rank-one-transport-G0-CI-and-scope.v0.1",
+  "recorded_date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "primary_pdf_pages_examined": [
+      16,
+      21,
+      22,
+      23,
+      24,
+      27
+    ],
+    "source_fact": "24 D4 roots; 3 x oneform sectors, common 6 Phi scalars as proposed factorization; root phases not individually supplied"
+  },
+  "candidate_commit": "bbc6e6a8371264784df3203a8182ccfae86f09ec",
+  "CI": {
+    "run_id": 37990455177,
+    "job_id": 114022963772,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37990455177",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "bbc6e6a8371264784df3203a8182ccfae86f09ec",
+    "full_source_checks_enabled": true,
+    "external_cold_semantic_review_passed": false
+  },
+  "frozen_evidence": {
+    "packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_ROOT_PHASE_RANK_ONE_TRANSPORT_G0_0_1.json",
+      "git_blob_sha": "4857a88a16d30be1a9da115b5e87eed25e2d7168"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l01-d4-phase-rank-one-transport-0-1.mjs",
+      "git_blob_sha": "d5a588afa56911e501709cd85b8ecd2eb83f54dc"
+    },
+    "ssc_prev": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_36.json",
+      "git_blob_sha": "e45b1c07e0ee6d8af306d9baa43692010ac30759"
+    },
+    "ssc_current": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_37.json",
+      "git_blob_sha": "994e8b4cd2e32aae8efad908398bb62e99941fdd"
+    },
+    "current_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_37.json",
+      "git_blob_sha": "fb9705ea3bf4d0be65724890039c477160fcfee4"
+    }
+  },
+  "algebra_results": {
+    "complete_2x2_minors": 45,
+    "unphased_nonzero_minors": 0,
+    "compact_chosen_nonzero_minors": 18,
+    "separable_phase_nonzero_minors": 0,
+    "fully_inverse_transported_field_and_curvature_pairs": 4,
+    "fixed_parameter_nonseparable_field_change_cases": 4,
+    "inverse_transport_rank_two_cases": 4,
+    "unphased_Q12": {
+      "nonzero_phi_monomials": 9,
+      "color_cartan": 3,
+      "strong_root": 6,
+      "w_cartan": 0
+    },
+    "selected_rephase_Q12": {
+      "nonzero_phi_monomials": 3,
+      "color_cartan": 0,
+      "strong_root": 0,
+      "w_cartan": 3
+    },
+    "both_quartic_trace_polynomial_coefficients": [
+      6,
+      6
+    ],
+    "special_Q12_matrix_diagonal_original": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "special_Q12_matrix_diagonal_rephased": [
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "both_special_quadratic_matrix_traces": [
+      8,
+      8
+    ],
+    "phase_or_algebra_mutants_defined": 4,
+    "phase_or_algebra_mutants_rejected": 4,
+    "source_role_revision_stage_parent_mutants_defined": 12,
+    "source_role_revision_stage_parent_mutants_rejected": 12,
+    "source_semantic_limitation": "Both output allocations use project-chosen complex D4 Chevalley phases, and their shared quartic trace does not identify source-real E8 root vectors, fields or physical configurations."
+  },
+  "census_conservation": {
+    "full_parsed_record_comparison_by_id": true,
+    "original_source_identities": 191,
+    "new_source_identities": 191,
+    "distinct_ids_before": 191,
+    "distinct_ids_after": 191,
+    "changed_full_records": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "untouched_complete_records": 189,
+    "added_ids": [],
+    "deleted_ids": [],
+    "all_remaining_primary_L01_to_L06_original_semantics_reaudited": false
+  },
+  "research_dispositions": {
+    "repair": "No original source error or historical verifier defect established; the initial in-memory source guard was aligned to explicit recorded per-item false qualifications before committing and executing CI. No failed CI baseline or historical source bytes rewritten.",
+    "discovery": "Root-vector rephasing is unrestricted-coordinate covariant with inverse transport, but the source-style common-Phi rank-one subfamily is preserved globally iff the inverse phase matrix has rank one. The previous compact model's nonseparable phase must be treated as a different project parameterized family at fixed x/Phi labels, not automatically source-equivalent.",
+    "requires_source_root_phase": true,
+    "requires_source_field_coefficient_reality": true,
+    "requires_source_Hodge_trace_normalization": true,
+    "source_author_mathematical_error_proved": false,
+    "physical_E8_counterexample_proved": false,
+    "full_source_complete": false,
+    "G1_authorized": false,
+    "G2_to_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_author_semantics_authorized": false,
+    "external_cold_review_passed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "next": "Recover author-original D4/E8 root-vector phases and x/Phi coefficient reality from independent original L sources, and only then reconstruct source-admissible Hodge/trace Q projectors or assess displayed S2 equality. Retain L source audit and stage0.37 open."
+}

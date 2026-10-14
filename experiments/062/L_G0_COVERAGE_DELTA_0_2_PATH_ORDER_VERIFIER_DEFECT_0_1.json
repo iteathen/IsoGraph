@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l-g0-coverage-delta-canonical-path-order-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_SOURCE_INVENTORY_BASELINE_ORDERING_FIXTURE_NOT_SEMANTIC_SOURCE_ERROR",
+  "failed_run": {
+    "id": 37847970197,
+    "head_sha": "7bf3bf983eec78f54bf847f5867779d5fbec67f9",
+    "conclusion": "failure",
+    "reported": "exact literal path/blob/size prior-to-current delta",
+    "observed_files": 1204,
+    "added": 13,
+    "changed": 1,
+    "removed": 0,
+    "json_parsed": 555,
+    "mjs_syntax_checked": 184,
+    "adversarial_defined": 18,
+    "adversarial_tested": 0
+  },
+  "cause": "Manifest new path records naturally inherit five declared directory-group order while verifier computed sorted global full-path order. Raw JSON-array equality enforced a non-semantic presentation order not part of the file membership/hash contract.",
+  "repair": "Compare exact full records after canonical sorting by unchanged literal path on BOTH sides; require unique path membership and identical per-path SHA and byte size. Do not weaken no-missing/extra/path/source guards. Rerun baseline and all 18 effective mutations.",
+  "source_semantics_effect": "NONE; source assertions, source identity count and original published formulas unchanged.",
+  "current_lawful_stage": "G0_UNFROZEN_CURRENT_SSC0.16",
+  "G1_to_G7_authorized": false,
+  "external_cold_review_passed": false
+}

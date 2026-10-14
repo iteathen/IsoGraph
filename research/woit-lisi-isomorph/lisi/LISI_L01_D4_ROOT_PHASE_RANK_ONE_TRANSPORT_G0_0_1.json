@@ -1,0 +1,146 @@
+{
+  "schema": "isograph.lisi-L01-D4-phase-rank-one-transport-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "PROJECT_EXACT_PHASE_GAUGE_AND_FACTORIZATION_NONINVARIANCE_DIAGNOSTIC_NOT_SOURCE_PHASE_AUTHORITY",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      16,
+      21,
+      22,
+      23,
+      24,
+      27
+    ],
+    "fixed_evidence": "Table 9 has D4 strong su3 roots and three six-root xPhi families; §2.4.1 proposes x_a times six shared colored/anticolored Phi scalar factors; §3.1 uses H2=w+B2+xPhi+g and nonseparable Q=(xPhi)(xPhi); §3.2.2 speculates on new-field action and requires a frame-derived Hodge star.",
+    "source_scope": "Root labels and proposed factorization are source evidence; individual complex Chevalley generator phases, exact source field conjugacies and trace normalizations are not extracted from frozen paper.",
+    "source_three_coarse_groups": [
+      "combined abelian w+B2",
+      "mixed xPhi",
+      "strong su3"
+    ]
+  },
+  "parents": {
+    "ssc036": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_36.json",
+      "git_blob_sha": "e45b1c07e0ee6d8af306d9baa43692010ac30759"
+    },
+    "gate036": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_36.json",
+      "git_blob_sha": "74b049fb0ca3a362c0bb1eb1a245f1fd67b8a163"
+    },
+    "root_source": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_TABLE9_D4_XPHI_Q_ROOT_SUPPORT_G0_0_1.json",
+      "git_blob_sha": "4f4f5e75d2dd46ba8cf6793ea140eaf2405cc199"
+    },
+    "compact_project": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_COMPACT_PHASE_Q_WITNESS_G0_0_1.json",
+      "git_blob_sha": "68181be4192da8621842289ac6b46476a4f377a9"
+    },
+    "prior_Q_action": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_S2_QUADRATIC_RESIDUAL_G0_0_1.json",
+      "git_blob_sha": "114d7746efc074a15dae814f708f21758b86c507"
+    }
+  },
+  "mathematical_problem": {
+    "role_labels": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "color_labels": [
+      "c1",
+      "c2",
+      "c3",
+      "a1",
+      "a2",
+      "a3"
+    ],
+    "root_vector_operators": "E_(a,c) in complexified D4 root spaces as independently selected integral Chevalley matrices",
+    "source_project_rank_one_family": "X= sum_(a,c) x_a * Phi_c * E_(a,c), where the same six Phi_c scalar parameters are used for all three x_a oneforms",
+    "phase_basis_transform": "Eprime_(a,c)=lambda_(a,c)*E_(a,c), nonzero complex scalar lambda",
+    "true_coordinate_transport": "Cprime_(a,c)=C_(a,c)/lambda_(a,c), for all 18 independent root coordinates, leaves the full connection X and [X_p,X_q] exactly unchanged",
+    "factorization_invariant_condition": "For generic nonzero x_a and Phi_c, Cprime admits source-style shared-Phi rank one iff the 3x6 matrix of inverse phases lambda_(a,c)^(-1) has rank one (all 2x2 minors zero).",
+    "separable_phase_condition": "lambda_(a,c)=u_a*v_c for nonzero row factors u_a and column factors v_c; inverse root-coordinate transport may then be reabsorbed into xprime_a=x_a/u_a and Phiprime_c=Phi_c/v_c.",
+    "model_scope": "Transport invariance is a linear coordinate identity, not a Lie-algebra automorphism keeping structure constants numerically fixed; sourced factorized subfamily is not invariant under every coordinate rephasing."
+  },
+  "two_exact_project_completions": {
+    "unphased": {
+      "lambda": "all 18 mixed root phases +1",
+      "matrix_rank": 1,
+      "nonzero_inverse_phase_2x2_minors": 0,
+      "Q12_polynomial_nonzero_Phi_monomials": 9,
+      "w_Cartan_Phi_monomials": 0,
+      "other_Cartan_Phi_monomials": 3,
+      "strong_root_Phi_monomials": 6
+    },
+    "chosen_compact": {
+      "lambda": "three x2 positive-color roots c1/c2/c3 rephased -1; all other 15 phases +1",
+      "matrix_rank": 2,
+      "inverse_phase_2x2_minor_cases": 45,
+      "nonzero_inverse_phase_2x2_minors": 18,
+      "Q12_polynomial_nonzero_Phi_monomials": 3,
+      "w_Cartan_Phi_monomials": 3,
+      "other_Cartan_Phi_monomials": 0,
+      "strong_root_Phi_monomials": 0
+    },
+    "important_difference": "With the same factorized x_a Phi_c component labels held fixed, Q12's projected source-root channels differ: initial Chevalley model distributes Q12 into strong and color/B-L Cartan, whereas chosen compact rephasing moves Q12 entirely into w Cartan. These are different rank-one embeddings, not a source-error correction.",
+    "example": "Use Phi_c1=Phi_a1=1, all other Phi=0 and noncommuting x1/x2 oneform coefficients. The two project phases give different nonzero Cartan Q matrices; neither is specified by the original paper as its intended root-vector phases.",
+    "separable_control": {
+      "lambda": "u_a*v_c where u=[1,-1,1] and v=[1,-1,1,-1,1,-1]",
+      "rank": 1,
+      "nonzero_inverse_phase_2x2_minors": 0,
+      "rank_one_transport_preserved": true
+    }
+  },
+  "scoped_trace_invariant": {
+    "source_conditions": "First x1/x2 bracket; shared Phi variables commute as scalars and all phase changes explicitly stated.",
+    "project_both_phase_policies": "tr([Y1,Y2]^2)=8*(Phi_a1*Phi_c1+Phi_a2*Phi_c2+Phi_a3*Phi_c3)^2",
+    "distinct_quartic_monomials": 6,
+    "scope": "The same chosen 8x8 complex-vector-trace polynomial may survive a particular nonseparable phase redefinition even when projected channel support changes. This is not a proof of original E8/Hodge trace normalization or physical equivalence."
+  },
+  "adversarial_and_discovery_disposition": {
+    "repair": "No prior verified mathematical identity or frozen author source corrected; independently detect whether source-parameter factorization survives arbitrary root-basis rephasing before inferring physical meaning from the compact model.",
+    "discovery": "The phase choice can be a load-bearing additional source semantic parameter because shared-Phi rank-one factorization restricts the 18 root coefficients nonlinearly. Full algebra coordinate covariance and restricted-field-family equivalence are distinct.",
+    "source_field_phase_conventions_extracted": false,
+    "source_factorized_field_family_equivalence_qualified": false,
+    "source_original_real_E8_phase_map_qualified": false,
+    "source_Hodge_trace_E8_admissibility_qualified": false,
+    "source_author_math_error_established": false
+  },
+  "census": {
+    "target_revision": 37,
+    "total_source_IDs": 191,
+    "changed_only": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged_complete_predecessor_records": 189,
+    "source_census_frozen": false
+  },
+  "stage_guards": {
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "full_E8_theorem_qualified": false,
+    "source_original_phase_identification_qualified": false,
+    "real_E8_source_Hodge_qualified": false,
+    "author_source_error_qualified": false,
+    "external_cold_review_passed": false,
+    "PR70_merge_authorized": false,
+    "author_outreach_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Independent full source-faithful IsoGraph Track L treatment (project owner).",
+    "project_formulation": "Agent-generated research finding: nonseparable root-vector rephasing fails to preserve the same shared-Phi factorized 3x6 field subfamily, 2026-10-09.",
+    "external_antecedent": "A. Garrett Lisi original arXiv:0711.0770v1, standard D4/Chevalley Lie theory and elementary matrix rank-one conditions; no novel priority claim.",
+    "earliest_evidence_currently_located": "This research session and subsequent GitHub commit."
+  },
+  "next": "Recover original source-author root-vector phase conventions and lawful x/Phi coefficient reality, and test equivalence of factorization after source-authorized transport. Revisit Q Hodge/trace only when that source identification is fixed; G0 remains open."
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.exp062-W-G1-W01-einstein-weak-mechanical-CI-and-gate-lineage.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SOURCE_LOCAL_MECHANICAL_CI_SUCCESS_COLD_G1_QUALIFICATION_NOT_PERFORMED",
+  "W_current_author_G0_target": "W_G0_AUTHOR_WEB_REBASELINE_2026_10_11_0_1",
+  "historical_Oct03_G0_target": "OPEN_HISTORICAL_MUTABLE_SOURCE_RAW_BYTES_UNAUTHENTICATED",
+  "frozen_artifacts": {
+    "candidate": {
+      "path": "experiments/062/W_G1_W01_EINSTEIN_WEAK_SOURCE_FIRST_CANDIDATES_0_1.json",
+      "git_blob_sha": "b4785401d186c6f348eb075f9dd35996ada57f15"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w-g1-w01-einstein-weak-0-1.cjs",
+      "git_blob_sha": "62c5792b5dc8d7224b6ead1cd6ff60e47f21026e"
+    },
+    "review": {
+      "path": "research/woit-lisi-isomorph/woit/W_G1_W01_EINSTEIN_WEAK_SOURCE_FIRST_RESULT_0_1.md",
+      "git_blob_sha": "21b9b9324844df908aa3ceac7a645aa91e322850"
+    },
+    "workflow": {
+      "path": ".github/workflows/experiment-062-w-g1-w01-einstein-weak-0-1.yml",
+      "git_blob_sha": "c35a263df85c548a03edf3dccab58bb294376968"
+    }
+  },
+  "exact_successful_ci": {
+    "run_id": 38190680149,
+    "job_id": 114622584157,
+    "head_sha": "11922b34119e60ef395959a1615be22554eba1ef",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38190680149",
+    "conclusion": "success",
+    "source_local_W01_candidate": {
+      "bodies": 2,
+      "typed_source_statements": 10,
+      "occurrence_candidates": 15,
+      "same_author_hostile_mutations_rejected": 38,
+      "same_author_hostile_total": 38
+    },
+    "qualified_W_G1_regression": {
+      "bodies": 39,
+      "total_bodies": 151,
+      "original_occurrences": 262,
+      "remaining": 112,
+      "hostile_rejected": 28,
+      "hostile_total": 28
+    },
+    "frozen_current_W_G0_regression": {
+      "G0_frozen": true,
+      "original_source_units": 9,
+      "SSC_items": 151,
+      "source_locations": 649,
+      "reciprocal_source_links": 560,
+      "hostile_rejected": 22,
+      "hostile_total": 22
+    },
+    "workflow_steps": [
+      {
+        "name": "Check W01 source-local candidate and 38 hostile mutations",
+        "conclusion": "success"
+      },
+      {
+        "name": "Recheck prior qualified W G1 39-body stage and frozen W G0",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "independent_cold_original_source_reconstruction": "NOT_PERFORMED",
+  "historical_W01_other_verifier_failure": {
+    "run_id": 38188527495,
+    "conclusion": "failure",
+    "note": "Separate earlier Palatini/Hodge within-body dependency mutation escape; neither changed nor rescored by this new packet"
+  },
+  "gates": {
+    "W_G0_current_author_frozen": true,
+    "qualified_W_G1_bodies_unchanged": 39,
+    "W_G1_remaining_unqualified": 112,
+    "historical_Oct03_G0_complete": false,
+    "W031_W032_cold_qualified": false,
+    "global_G1_complete": false,
+    "G2_G7_authorized": false,
+    "IA_NEI_DTS_DP_authorized": false,
+    "W_L_synthesis_authorized": false,
+    "source_sealed": false,
+    "PR70_merge_authorized": false
+  },
+  "note": "This mechanical workflow checks consistency with the frozen SSC/inverse and same-agent expected occurrence semantics, plus 38 internal mutations. It is not independent source-semantic confirmation or a mathematical/physics theorem; cold reviewer must reconstruct without candidate/expected answers before any body qualification promotion.",
+  "provenance": "Woit source; Joshua Oshiro direction; agent-assisted W-only research/mechanical verification October 11 2026."
+}

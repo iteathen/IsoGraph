@@ -1,0 +1,35 @@
+{
+  "schema": "isograph.exp062-w02-independent-original-source-positive-heading-fixture-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "W",
+  "historical": {
+    "commit": "dbc1543bb5746bab5ec68f3f2258ce9d03912577",
+    "run_id": 38099314361,
+    "job_id": 114351753363,
+    "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38099314361",
+    "result": "FAILURE",
+    "failure_stage": "POSITIVE_FIXTURE_BEFORE_MUTATIONS",
+    "error": "unsupported source semantic disposition W02-PDF-A02",
+    "old_checker": {
+      "path": "experiments/062/tools/verify-w02-independent-11page-original-g0-0-1.cjs",
+      "git_blob_sha": "265390ffeab262860b44ac6dcbc38046cbaf5574"
+    },
+    "old_source_first": {
+      "path": "experiments/062/W02_G0_INDEPENDENT_11_PAGE_ORIGINAL_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "9b69b047f4f91200861812a75d6128671db035f3"
+    }
+  },
+  "defect_class": "INVALID_VALIDATOR_CATEGORY_THRESHOLD",
+  "diagnosis": "Verifier imposed semantic-paraphrase character-length requirement on nonload page/heading navigation record. The W02 original source supplies valid Section I heading; its short explanatory disposition is legitimate.",
+  "repair": "Keep strict length requirement for load-bearing semantic source explanation, but require a nonempty explicit disposition for nonload provenance/header. Add hostile case for erased nonload heading disposition.",
+  "corrected_checker": {
+    "path": "experiments/062/tools/verify-w02-independent-11page-original-g0-0-2.cjs",
+    "git_blob_sha": "f93fcefbb9a6b64ff63542bb69f5e7ae66eb6f52"
+  },
+  "source_changes": false,
+  "SSC_changes": false,
+  "Original_Oct03_pdf_download_SHA256_verified": false,
+  "full_W_G0_frozen": false,
+  "continued_original_audit_required": true,
+  "no_reclassification": true
+}

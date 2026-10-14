@@ -1,0 +1,121 @@
+{
+  "schema": "isograph.dnwf-candidate-scope-no-evasion-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "PASS_CANDIDATE_SCOPE_READY_FOR_NATIVE_COMPILATION_NOT_QUALIFIED",
+  "target": "DNWF_0_1",
+  "source_census": "DNWF_SOURCE_SEMANTIC_CENSUS_0_2.json",
+  "candidate_md": "DNWF_0_1_CANDIDATE.md",
+  "candidate_json": "DNWF_0_1_CANDIDATE.json",
+  "governing_authority": [
+    "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md#K7-K8",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+  ],
+  "audit_questions": {
+    "source_census_conserved": true,
+    "candidate_adds_source_domain_objects": false,
+    "metadata_relations_are_finite_extensional_packet_data": true,
+    "ordering_behavior_hidden_in_metadata_names": false,
+    "arithmetic_or_numeric_indexing_assumed": false,
+    "well_founded_authority_owned_explicitly_by_new_extension_relation": true,
+    "candidate_claims_core_primitive_closure": false,
+    "downstream_W_L_consumption_allowed": false
+  },
+  "census_coverage": [
+    {
+      "census_id": "DNWF-SSC-001",
+      "candidate_support": [
+        "§2 Signature input",
+        "§5 raw packet metadata relations"
+      ],
+      "disposition": "EXACT",
+      "note": "First/next/last relations contribute only frozen packet incidences. Their role in field correspondence is interpreted by WF_TERM_ALGEBRA; no numeric index/list/cardinality theory is assumed."
+    },
+    {
+      "census_id": "DNWF-SSC-002",
+      "candidate_support": [
+        "§3.1 constructor closure",
+        "§3.2 constructor coverage",
+        "§3.4 well-foundedness",
+        "§3.5 least generated carrier"
+      ],
+      "disposition": "EXACT_UNPACKING",
+      "note": "Closure+coverage+well-foundedness+leastness are the explicit all-and-only content of the frozen generated-carrier body, not additional domain semantics."
+    },
+    {
+      "census_id": "DNWF-SSC-003",
+      "candidate_support": [
+        "§3.3 constructor separation"
+      ],
+      "disposition": "EXACT"
+    },
+    {
+      "census_id": "DNWF-SSC-004",
+      "candidate_support": [
+        "§4 derived authority / structural induction"
+      ],
+      "disposition": "EXACT_REQUIRED_CONSEQUENCE"
+    },
+    {
+      "census_id": "DNWF-SSC-005",
+      "candidate_support": [
+        "§3.6 initial fold property",
+        "§4 structural recursion"
+      ],
+      "disposition": "EXACT"
+    },
+    {
+      "census_id": "DNWF-SSC-006",
+      "candidate_support": [
+        "§3.4 well-foundedness",
+        "§4 constructor recursion termination",
+        "§4 finite-tree exclusion"
+      ],
+      "disposition": "EXACT"
+    },
+    {
+      "census_id": "DNWF-SSC-007",
+      "candidate_support": [
+        "§1 purpose",
+        "§6 explicit non-claims",
+        "§7 anti-evasion rule"
+      ],
+      "disposition": "EXACT"
+    }
+  ],
+  "interface_audit": {
+    "new_semantic_surface": [
+      {
+        "id": 160100,
+        "name": "WF_TERM_ALGEBRA",
+        "semantic_owner": "DNWF_0_1",
+        "note": "This is a proposed separately qualified extension relation. Its behavior is the six explicit semantic clauses in the frozen candidate; it is not claimed to be an extensional Core leaf."
+      }
+    ],
+    "packet_metadata": [
+      "160110 SIGNATURE_HAS_CONSTRUCTOR",
+      "160111 CONSTRUCTOR_HAS_FIELD",
+      "160112 FIRST_FIELD",
+      "160113 NEXT_FIELD",
+      "160114 LAST_FIELD",
+      "160115 FIELD_IS_RECURSIVE",
+      "160116 FIELD_HAS_EXTERNAL_CARRIER"
+    ],
+    "packet_metadata_semantics": "Finite extensional incidence only. Any all-and-only constructor generation, ordering correspondence, recursive-field descent, induction, or fold behavior belongs to WF_TERM_ALGEBRA, not to the metadata labels."
+  },
+  "no_evasion_findings": {
+    "core_k7_gap": "Qualified Core requires well-founded/inductive carrier authority for recursion/induction but does not itself supply that authority.",
+    "core_k8_guard": "DNWF supplies no arithmetic, cardinality, numeric index, order, or literal arithmetic behavior.",
+    "core021_schema_guard": "DNWF is not being smuggled through Schema Closure. It is the candidate semantic authority required before later recursive/arithmetic schemas can lawfully close.",
+    "qu_not_applicable": "The missing well-founded authority is missing definition/authority, not a structured unresolved realization family."
+  },
+  "required_next": [
+    "native compilation of the frozen DNWF candidate and all seven SSC bodies",
+    "mechanical Core-0.21 closure ledger over the DNWF module candidate",
+    "recursive source-local IA to no-change fixed point after primitive/schema closure",
+    "fresh independent qualification campaign with positive and adversarial controls",
+    "independent scorer-blind promotion review",
+    "only after qualification: derive/qualify DNIA and downstream generic schemas, then re-run W/L demand coverage"
+  ],
+  "authority": false
+}

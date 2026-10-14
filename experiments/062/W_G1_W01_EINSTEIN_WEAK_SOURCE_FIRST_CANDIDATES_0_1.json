@@ -1,0 +1,540 @@
+{
+  "schema": "isograph.exp062-w-G1-W01-Einstein-weak-source-candidate.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "stage": "G1_SOURCE_LOCAL_SEMANTIC_OCCURRENCES",
+  "status": "CANDIDATE_NOT_INDEPENDENTLY_COLD_QUALIFIED",
+  "semantic_authority": false,
+  "source": {
+    "author": "Peter Woit",
+    "title": "Euclidean Twistor Unification",
+    "revision": "arXiv:2104.05099v2 (2021-10-14)",
+    "url": "https://arxiv.org/html/2104.05099v2",
+    "original_html_sections": [
+      "3.1, lines 205–212",
+      "3.2, lines 218–230"
+    ],
+    "original_source_byte_hash_newly_authenticated": false,
+    "October03_historical_mutable_raw_bytes_authenticated": false
+  },
+  "exact_pins": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+      "sha": "f13075a1e2b039bab66e738cc992e121cd6c9947"
+    },
+    "source_inverse": {
+      "path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+      "sha": "6a959eabe8803770bc8e9851e288de6535821477"
+    },
+    "current_G0": {
+      "path": "experiments/062/W_G0_CURRENT_AUTHOR_SOURCE_STAGE_GATE_0_2.json",
+      "sha": "e3848f4025a733d33b8b8b3411fa779e8b0a5b9a"
+    },
+    "qualified_G1": {
+      "path": "experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_8.json",
+      "sha": "8dced9390509bbb18e22a9327c8acf1d6013c23c"
+    }
+  },
+  "counts": {
+    "original_G0_bodies": 151,
+    "previous_qualified_G1_bodies": 39,
+    "G1_unqualified_remaining": 112,
+    "candidate_bodies": 2,
+    "candidate_typed_statements": 10,
+    "candidate_source_occurrences": 15
+  },
+  "rows": [
+    {
+      "census_id": "W-SSC-031",
+      "unit": "W01",
+      "frozen_obligation_exact": "For a torsion-free connection W01 states the vacuum Einstein condition as vanishing of a specified mixed/chiral curvature component and motivates a chiral formulation using only the right-handed connection/curvature sector; the omitted left connection becomes unconstrained if torsion is allowed. W01's exact torsion-free vacuum Einstein condition is Omega_(-,R)(omega)=0, and W01 separately prints its implication Omega_(+,L)(omega)=0. A third distinct source statement says solutions with Omega_(-,L)=0 will be self-dual/half-flat. These are not three interchangeable vanishing conditions and the first is conditional on torsion freedom. Chiral gravitational action replaces Omega by Omega_R, with the omitted omega_L left unconstrained only if torsion is allowed.",
+      "frozen_typed_statements_exact": [
+        {
+          "id": "W01-031-EINSTEIN-01",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_CONDITIONAL_VACUUM_EINSTEIN",
+          "premise": "omega_TORSION_FREE",
+          "required_equation": "Omega_(-,R)(omega)=0",
+          "operator": "EQUAL_ZERO",
+          "carrier": "RIGHT_CHIRAL_ANTI_SELF_DUAL_CURVATURE",
+          "source_latex": "\\Omega_{-,R}(\\omega)=0"
+        },
+        {
+          "id": "W01-031-EINSTEIN-02",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_DECLARED_IMPLICATION",
+          "premise": "omega_TORSION_FREE_AND_Omega_(-,R)=0",
+          "consequence": "Omega_(+,L)(omega)=0",
+          "source_latex": "\\Omega_{+,L}(\\omega)=0",
+          "guard": "NOT_THE_PRIMARY_SOURCE_EINSTEIN_CONDITION"
+        },
+        {
+          "id": "W01-031-HALFFLAT-03",
+          "scope": "§3.1 printed p.7",
+          "kind": "SOURCE_SELF_DUAL_OTHER_COMPONENT",
+          "premise": "Omega_(-,L)=0",
+          "consequence": "SELF_DUAL_OR_HALF_FLAT",
+          "guard": "NO_CONFLATION_WITH_EINSTEIN_Omega_(-,R)"
+        },
+        {
+          "id": "W01-031-CHIRAL-04",
+          "scope": "§3.1 printed p.8",
+          "kind": "SOURCE_CHIRAL_ACTION_SCOPE",
+          "replacement": {
+            "from": "Omega(omega)",
+            "to": "Omega_R(omega_R)"
+          },
+          "absent": [
+            "omega_L",
+            "Omega_L(omega_L)"
+          ],
+          "torsion_permitted_case": "omega_L_ARBITRARY_IF_TORSION_ALLOWED"
+        }
+      ],
+      "original_G0_source_keys": [
+        "W01/versioned_original_HTML/W01-INVERSE-048",
+        "W01/versioned_original_HTML/W01-INVERSE-049"
+      ],
+      "original_G0_typed_ids": [
+        "W01-031-EINSTEIN-01",
+        "W01-031-EINSTEIN-02",
+        "W01-031-HALFFLAT-03",
+        "W01-031-CHIRAL-04"
+      ],
+      "occurrences": [
+        {
+          "id": "W-SSC-031-G1-W01-EW-1",
+          "original_typed_statement_id": "W01-031-EINSTEIN-01",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            205,
+            205
+          ],
+          "source_operation_or_relation": "TORSION_FREE_EINSTEIN_SCOPE",
+          "argument_and_carrier_roles": "omega spin connection, Riemannian four-geometry",
+          "result_role": "torsion-free scope antecedent",
+          "within_body_dependencies": [],
+          "source_modality_and_negative_guard": "No statement for arbitrary torsionful omega",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-2",
+          "original_typed_statement_id": "W01-031-EINSTEIN-01",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            205,
+            207
+          ],
+          "source_operation_or_relation": "VACUUM_EINSTEIN_MINUS_RIGHT_ZERO",
+          "argument_and_carrier_roles": "Omega_(-,R)(omega), right-chiral/Hodge-minus",
+          "result_role": "Omega_(-,R)(omega)=0",
+          "within_body_dependencies": [
+            "TORSION_FREE_EINSTEIN_SCOPE"
+          ],
+          "source_modality_and_negative_guard": "Einstein criterion only under printed torsion-free premise",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-3",
+          "original_typed_statement_id": "W01-031-EINSTEIN-02",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            209,
+            210
+          ],
+          "source_operation_or_relation": "CONSEQUENT_PLUS_LEFT_ZERO",
+          "argument_and_carrier_roles": "Omega_(+,L)(omega), left-chiral/Hodge-plus",
+          "result_role": "Omega_(+,L)(omega)=0",
+          "within_body_dependencies": [
+            "VACUUM_EINSTEIN_MINUS_RIGHT_ZERO",
+            "TORSION_FREE_EINSTEIN_SCOPE"
+          ],
+          "source_modality_and_negative_guard": "Conditional implication, not independent block equality",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-4",
+          "original_typed_statement_id": "W01-031-HALFFLAT-03",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            211,
+            211
+          ],
+          "source_operation_or_relation": "DISTINCT_MINUS_LEFT_HALF_FLAT",
+          "argument_and_carrier_roles": "Omega_(-,L), left-chiral/Hodge-minus",
+          "result_role": "self-dual or half-flat solutions if Omega_(-,L)=0",
+          "within_body_dependencies": [],
+          "source_modality_and_negative_guard": "Not interchangeable with Einstein Omega_(-,R) condition",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-5",
+          "original_typed_statement_id": "W01-031-CHIRAL-04",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            211,
+            211
+          ],
+          "source_operation_or_relation": "CHIRAL_RIGHT_CURVATURE_REPLACEMENT",
+          "argument_and_carrier_roles": "Palatini full curvature Omega(omega), right Omega_R",
+          "result_role": "proposed Omega -> Omega_R right chiral Palatini action",
+          "within_body_dependencies": [],
+          "source_modality_and_negative_guard": "Not complete quantized gravity dynamics",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-6",
+          "original_typed_statement_id": "W01-031-CHIRAL-04",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            212,
+            212
+          ],
+          "source_operation_or_relation": "RIGHT_CONNECTION_VARIATION",
+          "argument_and_carrier_roles": "omega_R, right su(2) connection",
+          "result_role": "omega_R determined as right component of torsion-free spin connection",
+          "within_body_dependencies": [
+            "CHIRAL_RIGHT_CURVATURE_REPLACEMENT"
+          ],
+          "source_modality_and_negative_guard": "No independent determination of omega_L",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-7",
+          "original_typed_statement_id": "W01-031-CHIRAL-04",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            212,
+            212
+          ],
+          "source_operation_or_relation": "LEFT_CONNECTION_CURVATURE_ABSENCE",
+          "argument_and_carrier_roles": "omega_L, Omega_L(omega_L)",
+          "result_role": "omitted from right chiral action",
+          "within_body_dependencies": [
+            "CHIRAL_RIGHT_CURVATURE_REPLACEMENT"
+          ],
+          "source_modality_and_negative_guard": "Omission is only from the chiral formulation",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-031-G1-W01-EW-8",
+          "original_typed_statement_id": "W01-031-CHIRAL-04",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            212,
+            212
+          ],
+          "source_operation_or_relation": "LEFT_CONNECTION_FREEDOM_IF_TORSION",
+          "argument_and_carrier_roles": "omega_L and torsion-permitted side condition",
+          "result_role": "omega_L can be arbitrary only if torsion allowed",
+          "within_body_dependencies": [
+            "LEFT_CONNECTION_CURVATURE_ABSENCE"
+          ],
+          "source_modality_and_negative_guard": "Torsion-free fixes left connection",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        }
+      ]
+    },
+    {
+      "census_id": "W-SSC-032",
+      "unit": "W01",
+      "frozen_obligation_exact": "W01 constructs the weak SU(2)_L gauge sector from the left spin connection and uses the imaginary-time component of the canonical one-form as a Higgs candidate; it explicitly records the missing electroweak U(1) and SU(2)_R-invariance problems that motivate the twistor-space reformulation. W01 §3.2 separately says the proposed SU(2)_L weak connection omega_L and imaginary-time component of the canonical one-form as Higgs could be assigned the usual Standard Model Yang–Mills and Higgs kinetic/potential dynamics (an author claim, not a demonstrated complete model). It then lists two explicit objections: the electroweak extra U(1) is not yet supplied by SU(2)_L alone; and the Higgs one-form transforms nontrivially under BOTH SU(2)_L and SU(2)_R although the author wants invariance under SU(2)_R. W01 says the extra U(1) SHOULD combine with SU(2)_L to give U(2), with the Higgs in the defining complex C2 representation. The author points forward to a twistor-space formulation as a proposed solution, not a completed source-local proof in §3.2.",
+      "frozen_typed_statements_exact": [
+        {
+          "id": "W01-SEC32-EW-01",
+          "pages": [
+            8,
+            9
+          ],
+          "kind": "SOURCE_GRAVITY_AND_WEAK_ROLE_SEPARATION",
+          "gravity": {
+            "field": "R4_VALUED_CANONICAL_FORM_THETA",
+            "connection": "SU2_R_SPIN_CONNECTION_OMEGA_R"
+          },
+          "electroweak": {
+            "field": "IMAGINARY_TIME_COMPONENT_OF_THETA_AS_HIGGS",
+            "connection": "SU2_L_SPIN_CONNECTION_OMEGA_L"
+          },
+          "source_modality": "SOURCE_EUCLIDEAN_FIRST_PROPOSAL",
+          "guard": "Roles are not interchangeable and do not establish final electroweak/GR unification."
+        },
+        {
+          "id": "W01-SEC32-EW-02",
+          "pages": [
+            8
+          ],
+          "kind": "SOURCE_AUTHOR_DYNAMICS_CONSTRUCTION_CLAIM",
+          "source_quoted_clause": "These can be given exactly the dynamics of the Standard Model",
+          "methods": [
+            "USUAL_YANG_MILLS_ACTION",
+            "STANDARD_HIGGS_KINETIC_TERM",
+            "STANDARD_HIGGS_POTENTIAL"
+          ],
+          "source_modality": "AUTHOR_ASSERTS_POSSIBILITY_WITH_CONVENTIONAL_DYNAMICS_NOT_GIVEN_COMPLETE_DERIVATION",
+          "guard": "Do not turn the possibility statement into demonstrated physical model closure."
+        },
+        {
+          "id": "W01-SEC32-EW-03",
+          "pages": [
+            8,
+            9
+          ],
+          "kind": "SOURCE_NEGATIVE_U1_DEFICIT",
+          "first_problem": "ELECTROWEAK_U1_EXTRA_GAUGE_SYMMETRY_NOT_SUPPLIED_BY_SU2_L_ALONE",
+          "source_modality": "AUTHOR_EXPLICIT_PROBLEM"
+        },
+        {
+          "id": "W01-SEC32-EW-04",
+          "pages": [
+            9
+          ],
+          "kind": "SOURCE_HIGGS_ONE_FORM_TRANSFORMATION_OBSTACLE",
+          "source_carrier": "ONE_FORM_HIGGS_COMPONENT",
+          "acts_nontrivially": [
+            "SU2_L",
+            "SU2_R"
+          ],
+          "author_wants_invariant_under": "SU2_R",
+          "source_modality": "AUTHOR_EXPLICIT_PROBLEM_NOT_SOLVED_IN_THIS_SECTION",
+          "guard": "Do not assume the SU2_R invariance already holds for the unmodified one-form."
+        },
+        {
+          "id": "W01-SEC32-EW-05",
+          "pages": [
+            9
+          ],
+          "kind": "SOURCE_DESIRED_EXTENDED_GAUGE_REPRESENTATION",
+          "extra_group": "U1",
+          "combine_with": "SU2_L",
+          "desired_group": "U2",
+          "desired_Higgs_representation": "DEFINING_C2_OF_U2",
+          "source_modality": "AUTHOR_DESIRED_CONSTRUCTION",
+          "guard": "Printed U(2) proposal not a proven existing factor; do not silently replace with SU2×U1 as an identical group."
+        },
+        {
+          "id": "W01-SEC32-EW-06",
+          "pages": [
+            9
+          ],
+          "kind": "SOURCE_FORWARD_TWISTOR_SOLUTION",
+          "author_wording": "A solution to these problems can be found by formulating the theory in twistor space",
+          "location": "DESCRIBED_NEXT_SECTION",
+          "source_modality": "AUTHOR_FORWARD_PROPOSAL_NOT_ESTABLISHED_WITHIN_SECTION3_2",
+          "guard": "No completed Higgs dynamics or source-equivalent electroweak solution is established in §3.2 alone."
+        }
+      ],
+      "original_G0_source_keys": [
+        "W01/versioned_original_HTML/W01-INVERSE-054",
+        "W01/versioned_original_HTML/W01-INVERSE-055",
+        "W01/versioned_original_HTML/W01-INVERSE-056",
+        "W01/versioned_original_HTML/W01-INVERSE-057"
+      ],
+      "original_G0_typed_ids": [
+        "W01-SEC32-EW-01",
+        "W01-SEC32-EW-02",
+        "W01-SEC32-EW-03",
+        "W01-SEC32-EW-04",
+        "W01-SEC32-EW-05",
+        "W01-SEC32-EW-06"
+      ],
+      "occurrences": [
+        {
+          "id": "W-SSC-032-G1-W01-EW-1",
+          "original_typed_statement_id": "W01-SEC32-EW-01",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            219,
+            219
+          ],
+          "source_operation_or_relation": "GRAVITY_THETA_RIGHT_CONNECTION",
+          "argument_and_carrier_roles": "theta R4-valued form, omega_R su(2)_R",
+          "result_role": "proposed gravity-side pair",
+          "within_body_dependencies": [],
+          "source_modality_and_negative_guard": "Author source role, not full physical proof",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-2",
+          "original_typed_statement_id": "W01-SEC32-EW-01",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            219,
+            219
+          ],
+          "source_operation_or_relation": "WEAK_LEFT_CONNECTION_TIME_HIGGS",
+          "argument_and_carrier_roles": "omega_L su(2)_L, theta imaginary-time component",
+          "result_role": "weak connection and proposed Higgs",
+          "within_body_dependencies": [],
+          "source_modality_and_negative_guard": "Not full theta or omega_R",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-3",
+          "original_typed_statement_id": "W01-SEC32-EW-02",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            220,
+            220
+          ],
+          "source_operation_or_relation": "CONVENTIONAL_YM_HIGGS_DYNAMICS_CLAIM",
+          "argument_and_carrier_roles": "left weak field, usual Yang-Mills and Higgs terms",
+          "result_role": "author states ordinary dynamics can be assigned",
+          "within_body_dependencies": [
+            "WEAK_LEFT_CONNECTION_TIME_HIGGS"
+          ],
+          "source_modality_and_negative_guard": "No complete derived model in source section",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-4",
+          "original_typed_statement_id": "W01-SEC32-EW-03",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            221,
+            225
+          ],
+          "source_operation_or_relation": "EXTRA_U1_MISSING",
+          "argument_and_carrier_roles": "SU2L alone, additional U1",
+          "result_role": "first author-stated gauge-symmetry problem",
+          "within_body_dependencies": [
+            "WEAK_LEFT_CONNECTION_TIME_HIGGS"
+          ],
+          "source_modality_and_negative_guard": "Do not invent an already-existing U1",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-5",
+          "original_typed_statement_id": "W01-SEC32-EW-04",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            227,
+            229
+          ],
+          "source_operation_or_relation": "SU2R_HIGGS_NONINVARIANCE",
+          "argument_and_carrier_roles": "one-form Higgs, SU2L/SU2R nontrivial actions",
+          "result_role": "second author-stated problem",
+          "within_body_dependencies": [
+            "WEAK_LEFT_CONNECTION_TIME_HIGGS"
+          ],
+          "source_modality_and_negative_guard": "Desired SU2R invariance not possessed by original one-form",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-6",
+          "original_typed_statement_id": "W01-SEC32-EW-05",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            229,
+            229
+          ],
+          "source_operation_or_relation": "DESIRED_U2_C2_REP",
+          "argument_and_carrier_roles": "extra U1, SU2L, U2, defining C2 Higgs",
+          "result_role": "desired U2/defining-C2 representation",
+          "within_body_dependencies": [
+            "EXTRA_U1_MISSING",
+            "SU2R_HIGGS_NONINVARIANCE"
+          ],
+          "source_modality_and_negative_guard": "Not literal U2=SU2xU1 identity or already complete construction",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        },
+        {
+          "id": "W-SSC-032-G1-W01-EW-7",
+          "original_typed_statement_id": "W01-SEC32-EW-06",
+          "source_version": "2104.05099v2",
+          "original_rendered_html_lines": [
+            230,
+            230
+          ],
+          "source_operation_or_relation": "TWISTOR_FORWARD_PROPOSAL",
+          "argument_and_carrier_roles": "twistor-space reformulation in following section",
+          "result_role": "source claim that twistor space can address the problems",
+          "within_body_dependencies": [
+            "EXTRA_U1_MISSING",
+            "SU2R_HIGGS_NONINVARIANCE"
+          ],
+          "source_modality_and_negative_guard": "No completed section-3.2 dynamical theory",
+          "source_binder_scope": "W01 section-specific author assertion/conditional/proposal; no added formal universal quantifier",
+          "scope": "SOURCE_LOCAL_ONLY",
+          "named_mathematics": "UNEXPANDED",
+          "L_semantic_import": false,
+          "independent_cold_qualified": false
+        }
+      ]
+    }
+  ],
+  "finite_non_source_negative_control": {
+    "description": "Independent toy curvature component values right_minus=0, left_plus=1 refute the unconditional implication after source torsion-free premises are omitted; this does not test Woit's torsion-free geometry",
+    "minus_right": 0,
+    "plus_left": 1,
+    "source_truth_claim": false
+  },
+  "qualification": {
+    "current_author_G0_frozen": true,
+    "historical_Oct03_G0_qualified": false,
+    "this_packet_independent_cold_review": false,
+    "this_packet_G1_qualified": false,
+    "global_G1_complete": false,
+    "G2_to_G7_authorized": false,
+    "IA_NEI_DTS_DP_authorized": false,
+    "W_L_synthesis_authorized": false,
+    "source_sealed": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": "Peter Woit original source; Joshua Oshiro human-originated full independent W track direction; agent-assisted W-only source-local formulation and limited mechanical preflight, 2026-10-11"
+}

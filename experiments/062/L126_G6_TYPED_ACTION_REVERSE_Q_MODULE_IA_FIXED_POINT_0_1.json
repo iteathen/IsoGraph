@@ -1,0 +1,139 @@
+{
+  "schema": "isograph.exp062-l126-typed-action-reverse-q-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "TYPED_ACTION_REVERSE_Q_0_1",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L126_G5H_TYPED_ACTION_REVERSE_Q_0_1.json",
+      "git_blob_sha": "eae12df0a08c37904ffa2e3d69a31e27bca132f8"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L126_G6_TYPED_ACTION_REVERSE_Q_MODULE_SSC_0_1.json",
+      "git_blob_sha": "20ce07685b6d56881060bc87bb8414c8d5e5e5c2"
+    }
+  },
+  "inference_profile": {
+    "id": "typed-action-reverse-q-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 187200/195000. No external Clifford or representation-theory theorem library.",
+    "rules": [
+      {
+        "id": "TAQ-IA-R1",
+        "trigger": "187200",
+        "derives": [
+          "VECTOR(V)",
+          "VECTOR(M)",
+          "VECTOR(P)",
+          "TOTAL_ACTION(ACT,V,M,P)",
+          "V_LINEARITY",
+          "M_LINEARITY"
+        ]
+      },
+      {
+        "id": "TAQ-IA-R2",
+        "trigger": "195000",
+        "derives": [
+          "185002(V,B,Q)",
+          "187200(GM,V,SM,SP)",
+          "187200(GP,V,SP,SM)",
+          "GP_AFTER_GM_EQUALS_Q_SCALE",
+          "GM_AFTER_GP_EQUALS_Q_SCALE"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "195000 -> named Clifford algebra",
+      "195000 -> matrix representation or transpose",
+      "195000 -> coefficient cyclic identity",
+      "195000 -> Pin/Spin group semantics",
+      "195000 -> irreducible/chiral representation ontology beyond typed carriers",
+      "195000 -> triality/reflection semantics"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(187200)",
+        "SCHEMA_DEFINITION(195000)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "TAQ-IA-001",
+          "assertion": "187200 entails exact vector structure on its three carriers and a total V×M->P action relation.",
+          "support": [
+            "187200 explicit body"
+          ]
+        },
+        {
+          "id": "TAQ-IA-002",
+          "assertion": "187200 entails linearity in the vector-direction input.",
+          "support": [
+            "187200 explicit body"
+          ]
+        },
+        {
+          "id": "TAQ-IA-003",
+          "assertion": "187200 entails linearity in the acted-on input.",
+          "support": [
+            "187200 explicit body"
+          ]
+        },
+        {
+          "id": "TAQ-IA-004",
+          "assertion": "195000 entails exact 185002 quadratic-form support on V.",
+          "support": [
+            "195000 explicit conjunct"
+          ]
+        },
+        {
+          "id": "TAQ-IA-005",
+          "assertion": "195000 entails two opposite exact 187200 actions between SM and SP.",
+          "support": [
+            "195000 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "TAQ-IA-006",
+          "assertion": "195000 entails GP(v,GM(v,m))=Q(v)·m.",
+          "support": [
+            "195000 explicit body"
+          ]
+        },
+        {
+          "id": "TAQ-IA-007",
+          "assertion": "195000 entails GM(v,GP(v,p))=Q(v)·p.",
+          "support": [
+            "195000 explicit body"
+          ]
+        },
+        {
+          "id": "TAQ-IA-008",
+          "assertion": "No matrix, cyclic-coefficient, named-Clifford, Pin/Spin, triality, or reflection conclusion follows from the selected relations alone.",
+          "support": [
+            "candidate scope firewall and absence of stronger dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only selected dependency/conjunct projections produces no new assertion and cannot cross the prohibited semantic boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 8,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES"
+}

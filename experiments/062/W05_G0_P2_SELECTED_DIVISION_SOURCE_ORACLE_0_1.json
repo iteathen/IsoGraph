@@ -1,0 +1,95 @@
+{
+  "schema": "isograph.exp062-w05-p2-selected-division-primary-source-oracle.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "DIRECT_W05_ARXIV_V2_PRINTED_P9_P10_CONTEXTUAL_CLASS_BINDER_AND_POINT_CASE_NOT_G0_FROZEN",
+  "source": {
+    "author": "Peter Woit",
+    "title": "Notes on the Twistor P1",
+    "revision": "arXiv:2202.02657v2",
+    "pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "printed_pages": [
+      9,
+      10
+    ],
+    "pdf_zero_based_pages": [
+      8,
+      9
+    ],
+    "October03_pdf_byte_identity": "NOT_ESTABLISHED"
+  },
+  "printed_primary_assertion_roles": [
+    {
+      "id": "W05-P9-CLASS",
+      "printed_page": 9,
+      "kind": "SOURCE_TWO_CLASS_EXAMPLE_WITH_DIVISION_ROLE",
+      "given": "two isomorphism classes, one includes M(2,Qp), the other includes (p,u/Qp) for a unit u not a square; author says the second is a division algebra",
+      "logical_form": "SELECTED_EXAMPLE_REPRESENTATIVE_IN_OTHER_CLASS",
+      "universal_u_declared": false
+    },
+    {
+      "id": "W05-P9-THREE-EXT",
+      "printed_page": 9,
+      "kind": "EXPLICIT_P_NOT_TWO_THREE_QUADRATIC_EXTENSION_GUARD",
+      "given": "for p != 2 there are three named quadratic extensions",
+      "guard_scope": "NAMED_EXTENSION_COUNT_ONLY"
+    },
+    {
+      "id": "W05-P10-HILBERT",
+      "printed_page": 10,
+      "kind": "SPLIT_DIVISION_POINT_TWO_CASES",
+      "positive": "+1 Hilbert symbol gives F point",
+      "negative": "-1 Hilbert symbol gives no F point"
+    },
+    {
+      "id": "W05-P10-ANISOTROPY",
+      "printed_page": 10,
+      "kind": "SOURCE_PRINTED_NO_QP_POINTS_CONTEXTUALLY_APPLIED_TO_DIVISION_REPRESENTATIVE",
+      "given": "-p x^2-u y^2+up z^2=0 which has no solutions in Qp",
+      "antecedent_not_repeated_in_same_sentence": true,
+      "antecedent_from_p9": "chosen representative of nonsplit quaternion isomorphism class"
+    }
+  ],
+  "new_source_incidents": {
+    "W-SSC-105": [
+      {
+        "id": "W05-105-05",
+        "source": "W05 §6.1 printed p.9 arXiv:2202.02657v2",
+        "modality": "SOURCE_CONTEXTUAL_DIVISION_CLASS_REPRESENTATIVE",
+        "source_linguistic_form": "one of two quaternion Qp isomorphism classes includes (p,u/Qp) where u is a unit and not a square; the second class is a division algebra",
+        "selected_class": "DIVISION_CLASS_SOURCE_EXAMPLE",
+        "source_given_u_property": "UNIT_AND_NON_SQUARE",
+        "quantifier_scope": "SOURCE_DOES_NOT_SAY_FOR_ALL_NONSQUARE_UNITS_U",
+        "consequent_scope": "FURTHER_SPLITTING_AND_CONIC_NO_POINT_CLAIMS_REFER_TO_CHOSEN_DIVISION_REPRESENTATIVE",
+        "p_not_two_guard_location": "SOURCE_EXPLICIT_P_NOT_TWO_RESTRICTION_IS_ON_THREE_NAMED_QUADRATIC_EXTENSIONS",
+        "negative_guard": "Class membership is a separate premise; do not infer p=2 arbitrary nonsquare u guarantees division."
+      }
+    ],
+    "W-SSC-106": [
+      {
+        "id": "W05-106-04",
+        "source": "W05 §6.1 printed p.10 arXiv:2202.02657v2",
+        "modality": "SOURCE_CONTEXTUAL_FINITE_PRIME_CONIC_ANISOTROPY_GIVEN_DIVISION_REPRESENTATIVE",
+        "source_conic": "-p*x^2-u*y^2+p*u*z^2=0",
+        "source_printed_prose": "at a prime p the analog conic has no Qp solution but has solutions in quadratic extensions K",
+        "contextual_antecedent": "SELECTED_DIVISION_CLASS_REPRESENTATIVE_W05_105_05",
+        "internal_source_dependency": "W05-106-02 HILBERT_MINUS1_NO_F_POINTS",
+        "required_for_nonpoint_inference": "QUATERNION_CLASS_IS_DIVISION_HILBERT_MINUS1",
+        "source_premise_printed_at_conic_sentence": "NOT_REPEATED_VERBATIM_CONTEXT_FROM_P9",
+        "unrestricted_u_quantification": "NOT_SOURCE_ASSERTED",
+        "negative_guard": "Do not apply printed no-point conclusion to every nonsquare 2-adic unit absent division selection."
+      }
+    ]
+  },
+  "scope_guard": "This oracle records the author's context and words and distinguishes source-attribution from independent mathematical counterexample. A selected nonsplit representative exists; universal sufficiency of nonsquare u for every p is not asserted.",
+  "independent_falsifier": {
+    "path": "experiments/062/W05_G0_P2_NONSQUARE_UNIT_CONIC_COUNTEREXAMPLE_0_1.json",
+    "git_blob_sha": "bc86be42057c5ab6fe71a5ae7f81466e92ec80a9",
+    "role": "G0_NEGATIVE_TEST_NOT_ATTRIBUTED_TO_WOIT"
+  },
+  "third_party_review": "OWNER_BYPASSED_NOT_PASSED",
+  "frozen": false,
+  "G1_authorized": false,
+  "L_evidence_used": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "isograph.exp062-w05-w103-verifier-missing-member-exception-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "status": "CONFIRMED_G0_VERIFIER_FAIL_CLOSED_EXCEPTION_ESCAPE_ON_MISSING_W_DEMAND_ROW",
+  "authority": false,
+  "authority_effect": "PRESERVE_FAILED_HARNESS_REQUIRES_VERIFIER_SUCCESSOR",
+  "source_scope": "W05 §5.2 and exact W source-demand 86-member diagnostic projection",
+  "branch_head_at_discovery": "db38e06bae4f1197599d98520190560d131bc1d9",
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w05-w103-strict-hodge-source-0-1.mjs",
+    "git_blob_sha": "8cb2435213feb66bb863d0b5aba154634be3e0a1"
+  },
+  "observed_failure": {
+    "mode": "Deterministic V8 evaluation with exact GitHub file contents and Git blob SHA map; Node imports removed and fs mapped to received bytes",
+    "control": "remove demand member",
+    "behavior": "TypeError: Cannot read properties of undefined (reading 'census_id')",
+    "mechanism": "The projection loop accessed d.items[i].census_id even after missing-row count had already been detected; the validator did not short-circuit safely.",
+    "assessment": "Harness defect, not evidence that the W103 source correction is false. No passing verifier result earned."
+  },
+  "repair_requirement": [
+    "Version successor 0-2 must handle absent item explicitly and report failed source-demand membership with no unhandled exception.",
+    "Carry forward independent strict > and conjugate-intersection controls and all other source conservation checks.",
+    "Exercise all adversarial controls to completion; only then record local replay outcome.",
+    "Do not promote G0, G1, or source-demand authority from a harness crash."
+  ],
+  "external_review": "OWNER_BYPASS_EXTERNAL_CALL_ONLY_NOT_INDEPENDENT_PASS",
+  "nonclaims": [
+    "No new mathematics or W/L correspondence.",
+    "No source-census freeze.",
+    "No W G1 replay or G6 qualification."
+  ]
+}

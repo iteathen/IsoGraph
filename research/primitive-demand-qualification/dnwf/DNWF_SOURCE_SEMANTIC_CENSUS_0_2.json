@@ -1,0 +1,77 @@
+{
+  "schema": "isograph.dnwf-source-semantic-census.v0.2",
+  "date": "2026-10-05",
+  "status": "FROZEN_CANDIDATE_MODULE_SSC",
+  "qualification_target": "DNWF_0_1",
+  "module_name": "Domain-Neutral Well-Founded Constructor Authority 0.1",
+  "predecessor": "DNWF_SOURCE_SEMANTIC_CENSUS_0_1.json",
+  "correction": {
+    "defect": "SSC 0.1 described signatures/field lists using finite indexing language that would presuppose the index semantics DNWF is intended to support.",
+    "repair": "Represent each candidate signature as a finite extensional metadata graph present in the packet. Constructor fields are ordered by explicit first/next/last incidences; no numeric index, cardinality, arithmetic or list theory is assumed."
+  },
+  "provenance": {
+    "demand_graph": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_0_1.json",
+    "definability_audit": "research/primitive-demand-qualification/CORE_DEFINABILITY_AUDIT_0_2.json"
+  },
+  "governing_authority": {
+    "core": "0.17-0.21 cumulative qualified",
+    "qu": "not used",
+    "cross_author_semantics": false
+  },
+  "items": [
+    {
+      "id": "DNWF-SSC-001",
+      "kind": "signature",
+      "body": "A constructor signature Sigma is a finite extensional metadata graph explicitly present in the qualification packet. It declares constructor tags and, for each constructor, zero or more ordered field-role incidences using explicit first/next/last structure. Each field role is marked either recursive into the generated carrier or external into a separately declared raw carrier. No arithmetic or numeric indexing is assumed by the signature representation."
+    },
+    {
+      "id": "DNWF-SSC-002",
+      "kind": "generated_carrier",
+      "body": "Given Sigma, the generated carrier Mu(Sigma) contains all and only finite well-founded constructor trees formed from the tags and field roles declared by Sigma; no other members are admitted."
+    },
+    {
+      "id": "DNWF-SSC-003",
+      "kind": "constructor_separation",
+      "body": "Different constructor tags produce distinct members of Mu(Sigma). For one constructor tag, two constructed members are equal exactly when every corresponding ordered field value is equal."
+    },
+    {
+      "id": "DNWF-SSC-004",
+      "kind": "structural_induction",
+      "body": "For any property P on Mu(Sigma), if every constructor case preserves P assuming P for each recursive field, then P holds for every member of Mu(Sigma)."
+    },
+    {
+      "id": "DNWF-SSC-005",
+      "kind": "structural_recursion",
+      "body": "For any target carrier A and one target constructor-function for each Sigma constructor, there exists exactly one fold map fold:Mu(Sigma)->A whose value on a constructed member is the corresponding target constructor-function applied to the folded recursive fields and unchanged external fields."
+    },
+    {
+      "id": "DNWF-SSC-006",
+      "kind": "well_foundedness_guard",
+      "body": "No member of Mu(Sigma) has an infinite descending chain through recursive fields; every member is a finite constructor tree, and recursive definitions may recurse only through recursive fields."
+    },
+    {
+      "id": "DNWF-SSC-007",
+      "kind": "scope_guard",
+      "body": "DNWF supplies only generic well-founded constructor, structural-induction, and structural-fold authority. It supplies no arithmetic, ordering, cardinality, algebra, topology, geometry, physics, source-domain object, or source-specific theorem."
+    }
+  ],
+  "counts": {
+    "total": 7
+  },
+  "anti_scope": [
+    "No Woit or Lisi source object appears in DNWF semantics.",
+    "No arithmetic operation, numeric index, or cardinality predicate is primitive DNWF authority.",
+    "No group/vector/matrix/bundle/topology/differential semantics are in DNWF.",
+    "DNWF may not be consumed by W, L, or DNIA until independently qualified."
+  ],
+  "required_qualification": [
+    "Q0 source freeze and interpretation closure",
+    "Q1 exact semantic coverage",
+    "Q2 candidate closure/interface integrity",
+    "Q3 two independent fresh cold reconstructions",
+    "Q4 exact canonical source/reconstruction sameness",
+    "Q5 adversarial distinction preservation",
+    "Q6 independent scorer-blind verification",
+    "Q7 promotion"
+  ]
+}

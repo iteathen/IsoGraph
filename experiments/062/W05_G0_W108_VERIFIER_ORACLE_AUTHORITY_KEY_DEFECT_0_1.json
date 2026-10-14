@@ -1,0 +1,26 @@
+{
+  "schema": "isograph.exp062-w05-w108-verifier-oracle-authority-key-baseline-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PREPUBLICATION_BASELINE_FAILED_VERIFIER_CHECKED_NONEXISTENT_AUTHORITY_KEY",
+  "source_oracle": {
+    "path": "experiments/062/W05_G0_W108_CITED_CLAUSES_SOURCE_ORACLE_0_1.json",
+    "git_blob_sha": "bd86d292992820e04e47097596a6b5605ec127dc"
+  },
+  "observed": {
+    "positive_baseline_errors": [
+      "source revision and external bypass NOT externally reviewed"
+    ],
+    "mutations_total": 45,
+    "mutations_individually_rejected": 45,
+    "usable_mutation_pass": false
+  },
+  "cause": "The source-oracle record uses semantic_authority:false. Uncommitted verifier erroneously required oracle.authority===false. This is a schema-key mismatch and not a source assertion discrepancy.",
+  "repair": "Require oracle.semantic_authority===false; additionally require source_identity_unresolved===true and external_review===OWNER_BYPASSED_NOT_PASSED. Preserve the failed positive baseline and restart adversarial replay, never report 45/45 PASS while positive baseline fails.",
+  "source_impact": "NONE",
+  "G0_frozen": false,
+  "G1_authorized": false,
+  "CI": "NOT_RUN_FOR_THE_UNPUBLISHED_CHECKER",
+  "third_party": "NOT_PASSED"
+}

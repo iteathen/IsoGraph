@@ -1,0 +1,32 @@
+{
+  "schema": "woit.w073-wick-fibration-direction-choice-summary.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-073",
+  "frozen_body": "W04c interprets Wick rotation as an extra choice of CP1 fibration/imaginary-time direction rather than a fundamental Euclidean-to-Minkowski coordinate substitution.",
+  "source": "W04c",
+  "support_packets": [
+    "W015_EUCLIDEAN_EXTRA_REAL_STRUCTURE_SUMMARY_CLOSURE_PACKET_0_1.json",
+    "W129_CONVENTIONAL_ANALYTIC_CONTINUATION_CLOSURE_PACKET_0_1.json",
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "reconstruction": {
+    "euclidean_extra_fibration_choice": "W-SSC-015",
+    "conventional_coordinate_wick_map": "W-SSC-129",
+    "twistor_P1_fibers": "W-SSC-023",
+    "source_contrast": "EXTRA_FIBRATION_OR_DIRECTION_CHOICE_NOT_FUNDAMENTAL_COORDINATE_SUBSTITUTION"
+  },
+  "guards": [
+    "The source contrast does not identify the two procedures.",
+    "No exact OS reflection is inferred here.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

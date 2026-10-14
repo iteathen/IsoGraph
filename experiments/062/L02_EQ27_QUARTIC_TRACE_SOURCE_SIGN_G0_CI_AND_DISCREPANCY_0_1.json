@@ -1,0 +1,105 @@
+{
+  "schema": "isograph.exp062-L02-Eq27-quartic-trace-source-sign-G0-CI.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "printed_pages": [
+      3,
+      6,
+      7,
+      8
+    ],
+    "authors": "A. Garrett Lisi, Lee Smolin, Simone Speziale",
+    "preserved_Eq26": "Source term +(phi4/256)<SigmaPrime wedge star_e SigmaPrime>",
+    "preserved_Eq27": "After ePrime=e, T=0: component +3phi4/32 * |e|",
+    "source_equivalence_requires": "source scalar Clifford projection Sigma wedge *Sigma / oriented volume = +24"
+  },
+  "mathematical_evidence": {
+    "model_scope": "Source-compatible but chosen ordinary real Cl(1,3) matched Lorentzian Hodge and scalar Clifford grade-zero trace; area Sigma=e wedge e carries coefficient 2 in 6 bivector channels.",
+    "exact_identity": "<Sigma wedge star_e Sigma>_scalar / vol_e = -24",
+    "independent_per_bivector_argument": "Clifford gamma_ab^2 = -eta_a eta_b and squared simple form norm=eta_a eta_b, giving -4 per each of 6 pairs.",
+    "source_required_vs_model_diff": "(+24) - (-24) = +48",
+    "nuisance": "Uniform global trace sign flip would also reverse internal compact Yang–Mills gamma_mn^2 negative sign, conflicting with source -1/4 YM term in same chosen model.",
+    "author_error_proved": false,
+    "global_no_go_proved": false,
+    "missing": "Actual source selection of complete Clifford/gauge/gravity sector normalization and matrix phases; original Spin(1+N,3) trace-to-tensor projection needed."
+  },
+  "verified_ci": {
+    "run_id": 38019834566,
+    "job_id": 114118162227,
+    "head_sha": "865d24f832cef96c70f3818633b653b0d868166b",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38019834566",
+    "completed_at_utc": "2026-10-10T03:14:10Z",
+    "status": "completed",
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "python": "Ubuntu-provided Python3 with fractions.Fraction, no external packages",
+    "complete_job_logs_inspected": true,
+    "baseline_pass": true,
+    "issues": [],
+    "source_identities": 191,
+    "unchanged_complete_records": 189,
+    "changed": [
+      "L-SSC-061",
+      "L-SSC-062"
+    ],
+    "six_original_frame_witnesses": 6,
+    "orientation_reversing_frames": 2,
+    "nonunit_scaled_frames": 2,
+    "Hodge_square_entries": 216,
+    "independent_Clifford_scalar_bivector_probes": 36,
+    "YM_sector_trace_sign_tests": 6,
+    "math_hostiles_defined": 13,
+    "math_hostiles_rejected": 13,
+    "source_hostiles_defined": 16,
+    "source_hostiles_rejected": 16,
+    "escapes": 0
+  },
+  "exact_artifacts": {
+    "packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_EQ27_QUARTIC_CLIFFORD_TRACE_SIGN_G0_0_1.json",
+      "git_blob_sha": "9707d7362df235ea4f2122911004789f5f464018"
+    },
+    "math": {
+      "path": "experiments/062/tools/l02-eq27-quartic-clifford-trace-math-0-1.py",
+      "git_blob_sha": "69e9e1af823f52628bee8aad41f98760b1907ef7"
+    },
+    "checker": {
+      "path": "experiments/062/tools/verify-l-g0-l02-eq27-quartic-trace-0-1.py",
+      "git_blob_sha": "bc6c682bc30db4273ab8e56592d7afc6da8e0e26"
+    },
+    "census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_48.json",
+      "git_blob_sha": "adf81efbec8ddbf7dedf12067d05c31179f89246"
+    },
+    "stage": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_55.json",
+      "git_blob_sha": "128d480237c82d4cfd213cecf4e0099bb75f61b0"
+    }
+  },
+  "boundaries": {
+    "G0_open": true,
+    "census_frozen": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "IA_authorized": false,
+    "source_general_all_N_theorem_qualified": false,
+    "source_author_mathematical_error_confirmed": false,
+    "source_exact_general_Eq27_physical_action_qualified": false,
+    "external_independent_cold_theory_review_passed": false,
+    "W_L_synthesis_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro independent Track L source treatment",
+    "source_authors": "Lisi/Smolin/Speziale original frozen 2010 v2",
+    "agent_generated_math": "2026-10-09 six-coframe exact Hodge/Clifford source-selected representation sign residual",
+    "verification": "Exact 2026-10-10 GitHub Python3 runner, not external mathematical cold audit",
+    "priority_claim": "NONE"
+  }
+}

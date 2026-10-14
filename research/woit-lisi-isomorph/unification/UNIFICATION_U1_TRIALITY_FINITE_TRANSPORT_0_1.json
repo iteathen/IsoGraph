@@ -1,0 +1,27 @@
+{
+  "schema": "woit-lisi.unification-u1-triality-finite-transport.v0.1",
+  "date": "2026-10-04",
+  "status": "ROLE_PRESERVING_TRANSPORT_REJECTED",
+  "parent": "U1.1-TR",
+  "inputs": {
+    "l05_triality": "../lisi/LISI_L05_QUATERNION_TRIALITY_SOURCE_INSTANCE_0_1.isg",
+    "l05_quaternion_transport": "../lisi/LISI_BT01_QUATERNION_COEFFICIENT_TRANSPORT_0_1.isg",
+    "woit_projective_transform": "../woit/WOIT_HP1_PROJECTIVE_CONVENTION_TRANSFORM_0_1.isg"
+  },
+  "derived_laws": {
+    "cyclicity": "T(v,psi,chi)=T(psi,chi,v)=T(chi,v,psi)",
+    "conjugation": "T(kappa(v),kappa(psi),kappa(chi))=T(v,chi,psi)",
+    "conjugation_plus_chiral_swap": "T(kappa(v),kappa(chi),kappa(psi))=T(v,psi,chi)"
+  },
+  "tests": {
+    "l05_quaternionic_scalar_triality": "SOURCE_NATIVE_CLOSED_SLICE",
+    "canonical_role_cycle": "SOURCE_NATIVE_CLOSED_SLICE",
+    "basis_falsifier": "PASS_64_OF_64",
+    "role_preserving_triality_chart_invariance": "FAIL",
+    "explicit_chiral_role_swap_tensor_invariance": "PASS",
+    "w05_source_backed_chiral_role_assignment": "ABSENT_QU",
+    "global_infinity_extension": "REJECTED_PREVIOUSLY"
+  },
+  "synthesis_edges_accepted": [],
+  "result": "Finite scalar triality transport is exact only when conjugation is accompanied by an explicit exchange of the two chiral roles. The frozen source-role-preserving U1 transport therefore fails; W05 does not source-authorize the needed chiral typing."
+}

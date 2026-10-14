@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l-g0-stage016-frozen-source-revision-mutation-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_G0_GATE_VERSION_MUTATION_ESCAPE_CI_FAILED",
+  "failed_run": {
+    "id": 37841639439,
+    "head_sha": "553c8f83015621002e7a4d73180e5ffdd61ece73",
+    "conclusion": "failure",
+    "source_steps": [
+      "Eq4 source verifier PASS 23/23 mutations",
+      "SSC0.15 source verifier PASS 20/20 mutations"
+    ],
+    "gate_adversarial_defined": 20,
+    "gate_adversarial_rejected": 19,
+    "escape": "wrong source revision"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-stage-gate-0-16.mjs",
+    "git_blob_sha": "da8063c443bfab2781214dca64ba7bbce43209c1"
+  },
+  "cause": "Current L Eq4 G0 source packet is pinned to the original journal version. The gate verifier tested packet SHA but did not enforce the *displayed literal frozen_source revision* in gate.Eq4_G0_source_packet. Hostile mutation changed label to an unqualified September source without changing pinned blob.",
+  "minimal_repair": "Check Eq4_G0_source_packet.frozen_source exact L05 published 2026-08-29 journal §2 Eq4 printed p4, in addition to unchanged source blob and current-scope nonclaims; rerun gate CI and effective mutation suite.",
+  "impact": "Gate0.16 is still G0-only, no G1-G7 promotion; math/source source packet results unchanged. Failed test preserved for provenance.",
+  "external_review_passed": false
+}

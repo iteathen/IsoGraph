@@ -1,0 +1,24 @@
+name: Experiment 062 W G1 W01 original factor roles and e0 integrity
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - .github/workflows/experiment-062-w-g1-w01-sec3-gauge-e0.yml
+      - experiments/062/W_G1_W01_SEC3_GAUGE_E0_SOURCE_FIRST_CANDIDATES_0_1.json
+      - experiments/062/tools/verify-w-g1-w01-sec3-gauge-e0-0-1.cjs
+      - research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json
+      - experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json
+      - experiments/062/W_G0_CURRENT_AUTHOR_SOURCE_STAGE_GATE_0_2.json
+      - experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_8.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mechanical-source-integrity-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify frozen G0 trace, 13 source-local candidate occurrences and hostile controls
+        run: node experiments/062/tools/verify-w-g1-w01-sec3-gauge-e0-0-1.cjs

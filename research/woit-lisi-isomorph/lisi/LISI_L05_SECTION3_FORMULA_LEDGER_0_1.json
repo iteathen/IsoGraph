@@ -1,0 +1,1213 @@
+{
+  "schema": "isograph.research-l05-section3-source-formula-conservation.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "DIRECT_SOURCE_TRANSCRIPTION_CANDIDATE_NOT_QUALIFIED_NOT_FULL_CORPUS",
+  "source": {
+    "frozen_id": "L05",
+    "frozen_corpus": "research/woit-lisi-isomorph/SOURCE_CORPUS_FREEZE_0_2.md",
+    "version_of_record": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "section": "§3 Generalized Reflections and Triality",
+    "review_window": "Displayed Eq.(6)–Eq.(9), intervening duality and reflection formulas, rotor and bivector generators, triality Lie formulas/table",
+    "source_scope_expanded": false
+  },
+  "predecessor": {
+    "census_candidate_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_4.json",
+    "replay_defect": "experiments/062/L_G0_L05_SOURCE_CENSUS_OMISSION_DEFECT_0_3.json"
+  },
+  "interpretation_boundary": {
+    "every_formula": "SOURCE_STATED_NOT_MATHEMATICALLY_PROVEN_OR_PRIMITIVE_CLOSED",
+    "operators": "Unresolved named operations retain exact source syntax and typed incidence; no conventional formulas imported.",
+    "minus_notation": "U^- / (u gamma)^- remain SOURCE_SUPERSCRIPT_MINUS, not INVERSE or CLAFFORD_REVERSION without separate source-local definition.",
+    "exact_vs_approx": "SOURCE_FIRST_ORDER_APPROXIMATION separate from SOURCE_EXACT_EQUALITY",
+    "W_semantics_used": false,
+    "external_verification_passed": false,
+    "independently_cold_verified": false
+  },
+  "inventory": {
+    "assertion_groups": 26,
+    "formula_rows": 70,
+    "counts_by_group": {
+      "S01": 3,
+      "S02": 1,
+      "S03": 1,
+      "S04": 1,
+      "S05": 3,
+      "S06": 1,
+      "S07": 9,
+      "S08": 9,
+      "S09": 1,
+      "S10": 3,
+      "S11": 1,
+      "S12": 3,
+      "S13": 2,
+      "S14": 1,
+      "S15": 6,
+      "S16": 1,
+      "S17": 2,
+      "S18": 1,
+      "S19": 5,
+      "S20": 1,
+      "S21": 2,
+      "S22": 1,
+      "S23": 1,
+      "S24": 4,
+      "S25": 6,
+      "S26": 1
+    },
+    "scope": "L05 §3 FORMULA_SURFACE_ONLY — no global L01–L06 source completeness claim"
+  },
+  "rows": [
+    {
+      "formula_id": "L05-S01-E06",
+      "assertion_group": "S01",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "Eq.(6)",
+      "source_expression": "chi^b v^c psi^a Gamma_cba = bar(chi) v psi = T(v,psi,chi) = (tilde(chi),v psi) = chi^b v^c psi^a M_ca(tilde b)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "guard": "Five expression roles and the signature-adjusted transpose must remain distinguishable."
+    },
+    {
+      "formula_id": "L05-S01-TRANSPOSE",
+      "assertion_group": "S01",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after Eq.(6)",
+      "source_expression": "bar(Q+_b)=n_bb transpose(Q+_b)",
+      "source_logical_force": "SOURCE_DEFINED_OPERATOR",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false
+    },
+    {
+      "formula_id": "L05-S01-CYCLIC",
+      "assertion_group": "S01",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after Eq.(6)",
+      "source_expression": "T(v,psi,chi)=T(psi,chi,v)",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false
+    },
+    {
+      "formula_id": "L05-S02-RECOVERY",
+      "assertion_group": "S02",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after Eq.(6)",
+      "source_expression": "cyclic trilinear T alternatively defines product on a vector carrier",
+      "source_logical_force": "SOURCE_CLAIM_WITH_UNGROUNDED_INTERNAL_CONSTRUCTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "No full product-reconstruction operator is supplied here; this statement remains unresolved."
+    },
+    {
+      "formula_id": "L05-S03-TRI-ACTION",
+      "assertion_group": "S03",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "after Eq.(6)",
+      "source_expression": "r:(v,psi,chi)->(v',psi',chi'); T(v',psi',chi')=T(v,psi,chi)",
+      "source_logical_force": "SOURCE_EQUALITY_AND_ROLE_ACTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "binder": [
+        "r in Tri(D)"
+      ],
+      "guard": "Source additionally calls the three-role action linear. Does not prove group axioms inside the G0 census."
+    },
+    {
+      "formula_id": "L05-S04-SIGNATURE",
+      "assertion_group": "S04",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "before Eq.(7)",
+      "source_expression": "-u dot u = u^a u^b n_ab = s_u = tilde(u) u = +/-1",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Spacelike and split timelike cases; do not treat sqrt(s_u) as uniformly real."
+    },
+    {
+      "formula_id": "L05-S05-CLIFF-V",
+      "assertion_group": "S05",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "before Eq.(7)",
+      "source_expression": "v'=R_v^u(v)=-u v u^-",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "vector",
+        "unit u"
+      ],
+      "guard": "Source-superscript-minus on u is opaque; NOT converted into inverse."
+    },
+    {
+      "formula_id": "L05-S05-CLIFF-SPINOR",
+      "assertion_group": "S05",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "before Eq.(7)",
+      "source_expression": "Psi'=R_v^u(Psi)=sqrt(s_u) u gamma Psi",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "spinor",
+        "unit u"
+      ]
+    },
+    {
+      "formula_id": "L05-S05-INVOL",
+      "assertion_group": "S05",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "before Eq.(7)",
+      "source_expression": "R_v^u R_v^u = 1",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Involution assertion applies to the displayed Clifford-vector reflection under source assumptions."
+    },
+    {
+      "formula_id": "L05-S06-ADJOINT",
+      "assertion_group": "S06",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "before Eq.(7)",
+      "source_expression": "R^u(A)=(u gamma) A (u gamma)^-",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "binder": [
+        "A arbitrary Clifford algebra element"
+      ],
+      "guard": "Explicit general-Clifford carrier, not only v/Psi; (u gamma)^- source minus is opaque, Pin membership is only source-stated."
+    },
+    {
+      "formula_id": "L05-S07-E07-01",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "v'=R_v^u(v)=-s_u u tilde(v) u",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "v"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-02",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "psi'=R_v^u(chi)=sqrt(s_u) tilde(u) tilde(chi)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-03",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "chi'=R_v^u(psi)=sqrt(s_u) tilde(psi) tilde(u)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "chi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-04",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "v'=R_m^u(chi)=sqrt(s_u) tilde(chi) tilde(u)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "v"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-05",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "psi'=R_m^u(psi)=-s_u u tilde(psi) u",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "psi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-06",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "chi'=R_m^u(v)=sqrt(s_u) tilde(u) tilde(v)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "chi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-07",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "v'=R_p^u(psi)=sqrt(s_u) tilde(u) tilde(psi)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "v"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-08",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "psi'=R_p^u(v)=sqrt(s_u) tilde(v) tilde(u)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "psi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S07-E07-09",
+      "assertion_group": "S07",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(7)",
+      "source_expression": "chi'=R_p^u(chi)=-s_u u tilde(chi) u",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "chi"
+      ],
+      "binder": [
+        "u unit",
+        "s_u +/-1"
+      ],
+      "guard": "Exactly one of nine source-written reflection-role entries; preserve order/sign/source tilde."
+    },
+    {
+      "formula_id": "L05-S08-E08-01",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "gamma'_c=(delta^a_c-2 s_u u^a u_c) gamma_a",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "gamma'_c"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-02",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q^-_a)'=sqrt(s_u) u^c (bar(Gamma)_c)^b_a Q+_b",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "(Q^-_a)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-03",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q+_b)'=sqrt(s_u) u^c (Gamma_c)^a_b Q^-_a",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "(Q+_b)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-04",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "gamma'_c=sqrt(s_u) u^a (Gamma_a)^b_c Q+_b",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "gamma'_c"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-05",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q^-_a)'=(delta^b_a-2 s_u u^b u_a) Q^-_b",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "(Q^-_a)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-06",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q+_b)'=sqrt(s_u) u^c (bar(Gamma)_c)^a_b gamma_a",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "m",
+        "(Q+_b)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-07",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "gamma'_c=sqrt(s_u) u^b (bar(Gamma)_b)^a_c Q^-_a",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "gamma'_c"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-08",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q^-_a)'=sqrt(s_u) u^c (Gamma_c)^b_a gamma_b",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "(Q^-_a)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S08-E08-09",
+      "assertion_group": "S08",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "Eq.(8)",
+      "source_expression": "(Q+_b)'=(delta^a_b-2 s_u u^a u_b) Q+_a",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "p",
+        "(Q+_b)'"
+      ],
+      "binder": [
+        "u unit",
+        "index positions as printed"
+      ],
+      "guard": "Source-typed Clifford basis, explicit index roles and Gamma/barGamma distinction."
+    },
+    {
+      "formula_id": "L05-S09-NEG-T",
+      "assertion_group": "S09",
+      "target_census_id": "L-SSC-130",
+      "source_locator": "after Eq.(8)",
+      "source_expression": "T(v',psi',chi')=-T(v,chi,psi)",
+      "source_logical_force": "SOURCE_ANTI_INVARIANCE_WITH_ROLE_SWAP",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "chi",
+        "psi"
+      ],
+      "guard": "Both negative sign and psi/chi permutation are mandatory."
+    },
+    {
+      "formula_id": "L05-S10-CONDITIONAL-1",
+      "assertion_group": "S10",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after anti-invariance paragraph",
+      "source_expression": "T(v,psi,chi)=1 => v=(1/|psi chi|^2) tilde(psi chi)",
+      "source_logical_force": "SOURCE_CONDITIONAL_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "guard": "Printed normalization by squared product norm, fixed operand order. No nonzero-denominator law is inferred."
+    },
+    {
+      "formula_id": "L05-S10-CONDITIONAL-2",
+      "assertion_group": "S10",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after anti-invariance paragraph",
+      "source_expression": "T(v,psi,chi)=1 => psi=(1/|chi v|^2) tilde(chi v)",
+      "source_logical_force": "SOURCE_CONDITIONAL_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "guard": "Printed normalization by squared product norm, fixed operand order. No nonzero-denominator law is inferred."
+    },
+    {
+      "formula_id": "L05-S10-CONDITIONAL-3",
+      "assertion_group": "S10",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after anti-invariance paragraph",
+      "source_expression": "T(v,psi,chi)=1 => chi=(1/|v psi|^2) tilde(v psi)",
+      "source_logical_force": "SOURCE_CONDITIONAL_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "guard": "Printed normalization by squared product norm, fixed operand order. No nonzero-denominator law is inferred."
+    },
+    {
+      "formula_id": "L05-S11-NONUNIT",
+      "assertion_group": "S11",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "after conditional duality",
+      "source_expression": "non-unit reflection duality example: psi=tilde(chi v)",
+      "source_logical_force": "SOURCE_EXAMPLE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "chi",
+        "v",
+        "psi"
+      ],
+      "guard": "The statement is example-scoped, not universal equivalence to the T=1 conditional triplet."
+    },
+    {
+      "formula_id": "L05-S12-INCIDENCE-01",
+      "assertion_group": "S12",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "twistor incidence paragraph",
+      "source_expression": "psi=tilde(v) tilde(chi)",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "chi",
+        "psi"
+      ]
+    },
+    {
+      "formula_id": "L05-S12-INCIDENCE-02",
+      "assertion_group": "S12",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "twistor incidence paragraph",
+      "source_expression": "psi^a=v^c chi^b M_(tilde c)(tilde b)^a",
+      "source_logical_force": "SOURCE_REPRESENTATION_CORRESPONDENCE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "chi",
+        "psi"
+      ],
+      "guard": "Coefficient multiplication-table presentation; preserve source index positions."
+    },
+    {
+      "formula_id": "L05-S12-INCIDENCE-03",
+      "assertion_group": "S12",
+      "target_census_id": "L-SSC-129",
+      "source_locator": "twistor incidence paragraph",
+      "source_expression": "psi^a=(v^c bar(Gamma)_c^a_b) chi^b",
+      "source_logical_force": "SOURCE_REPRESENTATION_CORRESPONDENCE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "chi",
+        "psi"
+      ],
+      "guard": "Clifford/matrix presentation; citation to Woit remains opaque, no W semantics."
+    },
+    {
+      "formula_id": "L05-S13-SAME",
+      "assertion_group": "S13",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after twistor paragraph",
+      "source_expression": "two generalized reflections of SAME type -> generalized rotation in Tri(D)",
+      "source_logical_force": "SOURCE_CLASSIFICATION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Does not independently define global rotation-group ontology."
+    },
+    {
+      "formula_id": "L05-S13-DIFFERENT",
+      "assertion_group": "S13",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after twistor paragraph",
+      "source_expression": "two generalized reflections of DIFFERENT types -> Tri(D) element NOT a rotation",
+      "source_logical_force": "SOURCE_NEGATED_CLASSIFICATION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Preserve nonrotation negative predicate."
+    },
+    {
+      "formula_id": "L05-S14-FOUR",
+      "assertion_group": "S14",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9) antecedent",
+      "source_expression": "t^(uw)=R_p^w R_v^u R_m^tilde(u) R_p^tilde(u)",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "binder": [
+        "u unit",
+        "w unit"
+      ],
+      "guard": "Four ordered reflections; do not commute/reassociate by convention."
+    },
+    {
+      "formula_id": "L05-S15-V",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9)",
+      "source_expression": "v'=sqrt(s_u s_w) tilde(w) (u psi)",
+      "source_logical_force": "SOURCE_TYPED_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v'",
+        "psi",
+        "u",
+        "w"
+      ],
+      "guard": "First of three exact division-algebra role formulas; grouped multiplication is load bearing."
+    },
+    {
+      "formula_id": "L05-S15-PSI",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9)",
+      "source_expression": "psi'=sqrt(s_u s_w) (chi u) tilde(w)",
+      "source_logical_force": "SOURCE_TYPED_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "psi'",
+        "chi",
+        "u",
+        "w"
+      ],
+      "guard": "Second role; retain parenthesized product order."
+    },
+    {
+      "formula_id": "L05-S15-CHI",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9)",
+      "source_expression": "chi'=s_u s_w w (tilde(u) v tilde(u)) w",
+      "source_logical_force": "SOURCE_TYPED_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "chi'",
+        "v",
+        "u",
+        "w"
+      ],
+      "guard": "Third role, two w appearances, 2 tilde(u) with explicit grouping."
+    },
+    {
+      "formula_id": "L05-S15-V-MATRIX",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9) v' line",
+      "source_expression": "v' coefficient M_(tilde d)(tilde b)^f M_ca^(tilde b) <-> Clifford bar(Gamma)_d Gamma_c",
+      "source_logical_force": "SOURCE_REPRESENTATION_CORRESPONDENCE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Detailed printed coefficients and Clifford matrix incidence require continued G1 extraction; not a qualified equivalence theorem."
+    },
+    {
+      "formula_id": "L05-S15-PSI-MATRIX",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9) psi' line",
+      "source_expression": "psi' coefficient M_bc^(tilde a) M_(tilde a)(tilde d)^f <-> Clifford Gamma_d bar(Gamma)_c",
+      "source_logical_force": "SOURCE_REPRESENTATION_CORRESPONDENCE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false
+    },
+    {
+      "formula_id": "L05-S15-CHI-MATRIX",
+      "assertion_group": "S15",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Eq.(9) chi' line",
+      "source_expression": "chi' coefficient M_af^g M_(tilde b)c^a M_a(tilde d)^f M_ge^h <-> Clifford 2 ordered reflection matrices",
+      "source_logical_force": "SOURCE_REPRESENTATION_CORRESPONDENCE",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Source index reuse and free/bound distinctions are not resolved by this mnemonic; cold audit required."
+    },
+    {
+      "formula_id": "L05-S16-CANONICAL",
+      "assertion_group": "S16",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after Eq.(9)",
+      "source_expression": "u=1,w=1 -> t:(v,psi,chi)->(psi,chi,v)",
+      "source_logical_force": "SOURCE_CONDITIONAL_ACTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v",
+        "psi",
+        "chi"
+      ],
+      "binder": [
+        "u=1",
+        "w=1"
+      ]
+    },
+    {
+      "formula_id": "L05-S17-FACTOR",
+      "assertion_group": "S17",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after canonical action",
+      "source_expression": "t^(uw)=R_p^w R_v^u R_m^tilde(u) R_p^tilde(u)=R_p^w R_p^u t=R_p^(uw) t=t R_v^(uw)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Four forms exactly printed; powers of t not inferred here."
+    },
+    {
+      "formula_id": "L05-S17-EVEN",
+      "assertion_group": "S17",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "before factorization display",
+      "source_expression": "source claims even generalized-reflection words can factor into canonical triality and rotations",
+      "source_logical_force": "SOURCE_GENERALITY_CLAIM_NEEDS_GENERATOR_PROOF",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Scope of arbitrary even word, generation and termination not supplied as closed primitive scheme."
+    },
+    {
+      "formula_id": "L05-S18-SIMPLE",
+      "assertion_group": "S18",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "simple rotation paragraph",
+      "source_expression": "R_v^(uw)=R_v^w R_v^u",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "binder": [
+        "u",
+        "w"
+      ],
+      "guard": "Composition order fixed, different from the four-reflection t^uw expression."
+    },
+    {
+      "formula_id": "L05-S19-ROTOR",
+      "assertion_group": "S19",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "Clifford rotor paragraph",
+      "source_expression": "U=exp(B/2)",
+      "source_logical_force": "SOURCE_DEFINED_OPERATOR",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Source exponential printed; no global exponential algebra imported."
+    },
+    {
+      "formula_id": "L05-S19-V-EXACT",
+      "assertion_group": "S19",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "rotor vector display",
+      "source_expression": "v'=R_v^B(v)=U v U^-",
+      "source_logical_force": "SOURCE_EXACT_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "vector v",
+        "rotor U"
+      ],
+      "guard": "SOURCE_MINUS(U) is not automatically inverse."
+    },
+    {
+      "formula_id": "L05-S19-V-APPROX",
+      "assertion_group": "S19",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "rotor vector display",
+      "source_expression": "v' ~= v + (1/2) B v - (1/2) v B",
+      "source_logical_force": "SOURCE_FIRST_ORDER_APPROXIMATION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "vector v"
+      ],
+      "guard": "Do not convert first-order approximation to exact equality."
+    },
+    {
+      "formula_id": "L05-S19-SPINOR-EXACT",
+      "assertion_group": "S19",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "rotor spinor display",
+      "source_expression": "Psi'=R_v^B(Psi)=U Psi",
+      "source_logical_force": "SOURCE_EXACT_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "spinor Psi",
+        "rotor U"
+      ]
+    },
+    {
+      "formula_id": "L05-S19-SPINOR-APPROX",
+      "assertion_group": "S19",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "rotor spinor display",
+      "source_expression": "Psi' ~= Psi + (1/2) B Psi",
+      "source_logical_force": "SOURCE_FIRST_ORDER_APPROXIMATION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "spinor Psi"
+      ]
+    },
+    {
+      "formula_id": "L05-S20-BIVECTOR",
+      "assertion_group": "S20",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "bivector definition",
+      "source_expression": "B=(1/2) B^cd gamma_cd = diag(B_m,B_p)",
+      "source_logical_force": "SOURCE_EQUALITY_CHAIN",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "B",
+        "B_m",
+        "B_p"
+      ],
+      "guard": "Chiral diagonal blocks must not be merged."
+    },
+    {
+      "formula_id": "L05-S21-M",
+      "assertion_group": "S21",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after bivector definition",
+      "source_expression": "R_m^B=t^2 R_v^B t",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Ordered composition; no imported group-conjugacy theorem."
+    },
+    {
+      "formula_id": "L05-S21-P",
+      "assertion_group": "S21",
+      "target_census_id": "L-SSC-131",
+      "source_locator": "after bivector definition",
+      "source_expression": "R_p^B=t R_v^B t^2",
+      "source_logical_force": "SOURCE_EQUALITY",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "The t powers are reversed versus m-role; preserve exact distinction."
+    },
+    {
+      "formula_id": "L05-S22-INCLUSION",
+      "assertion_group": "S22",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "after bivector definition",
+      "source_expression": "Tri(D) includes rotations AND triality automorphisms",
+      "source_logical_force": "SOURCE_GROUP_INCLUSION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Group carrier and closure not inferred from label."
+    },
+    {
+      "formula_id": "L05-S23-LIE-T",
+      "assertion_group": "S23",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "Lie algebra group paragraph",
+      "source_expression": "R in tri(D): T(v',psi,chi)+T(v,psi',chi)+T(v,psi,chi')=0",
+      "source_logical_force": "SOURCE_INFINITESIMAL_CONSTRAINT",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v'",
+        "psi'",
+        "chi'"
+      ],
+      "guard": "Primed generator outputs in three distinct slots; not the finite equality T(v',psi',chi')=T(v,psi,chi)."
+    },
+    {
+      "formula_id": "L05-S24-V",
+      "assertion_group": "S24",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "bivector generator display",
+      "source_expression": "v'=(1/2) offdiag(B_m v_p - v_p B_p, B_p v_m - v_m B_m)",
+      "source_logical_force": "SOURCE_LIE_ACTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "v_m",
+        "v_p",
+        "B_m",
+        "B_p"
+      ]
+    },
+    {
+      "formula_id": "L05-S24-PSI",
+      "assertion_group": "S24",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "bivector generator display",
+      "source_expression": "psi'=(1/2) B_m psi",
+      "source_logical_force": "SOURCE_LIE_ACTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "psi",
+        "B_m"
+      ]
+    },
+    {
+      "formula_id": "L05-S24-CHI",
+      "assertion_group": "S24",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "bivector generator display",
+      "source_expression": "chi'=(1/2) B_p chi",
+      "source_logical_force": "SOURCE_LIE_ACTION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "chi",
+        "B_p"
+      ]
+    },
+    {
+      "formula_id": "L05-S24-BBAR",
+      "assertion_group": "S24",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "immediately after bivector generator display",
+      "source_expression": "bar(B_p)=-B_p; expanded three-term cancellation of infinitesimal T constraint",
+      "source_logical_force": "SOURCE_EQUALITY_AND_DERIVATION",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Source gives algebraic expansion; closure requires separate ordered-factor support."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-1",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(C)=u(1)+u(1)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "C",
+        "u(1)+u(1)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-2",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(C_split)=gl(1)+gl(1)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "C_split",
+        "gl(1)+gl(1)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-3",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(H)=su(2)+su(2)+su(2)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "H",
+        "su(2)+su(2)+su(2)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-4",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(H_split)=sl(2)+sl(2)+sl(2)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "H_split",
+        "sl(2)+sl(2)+sl(2)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-5",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(O)=so(8)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "O",
+        "so(8)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S25-TABLE-6",
+      "assertion_group": "S25",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "six-entry tri(D) table",
+      "source_expression": "tri(O_split)=so(4,4)",
+      "source_logical_force": "SOURCE_PRESENTATION_TABLE_ROW",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "ordered_roles": [
+        "O_split",
+        "so(4,4)"
+      ],
+      "guard": "Source-labelled Lie presentations only; no name-based classification authority."
+    },
+    {
+      "formula_id": "L05-S26-ROLE-DISTINCTIONS",
+      "assertion_group": "S26",
+      "target_census_id": "L-SSC-132",
+      "source_locator": "§3 role discussions",
+      "source_expression": "composition-preserving automorphism != ordinary rotation category != nonrotation triality category",
+      "source_logical_force": "SOURCE_ROLE_COMPARISON",
+      "source_term_scope": "AS_PRINTED_NO_EXTERNAL_OPERATIONS",
+      "qualification_status": "SOURCE_ONLY_LOWER_SEMANTICS_NOT_YET_QUALIFIED",
+      "external_evidence_used": false,
+      "guard": "Source distinctions, not globally disjoint algebraic sets absent source proof."
+    }
+  ],
+  "open_correctness_obligations": [
+    "Audit all Eq.(9) indexed M/Gamma expressions exactly: mnemonic rows S15-MATRIX are insufficient for final exact symbol-index reconstruction.",
+    "Audit Eq.(6) signature-adjusted transpose and Eq.(7)/(8) each source index binder against the frozen PDF typeset display.",
+    "Adjudicate semantics of source U^- / (u gamma)^- only if lower source or qualified module supplies a definition.",
+    "Prove No-Evasion and independent source reconstruction at G1; this G0 ledger only conserves source-visible terms and modalities.",
+    "Audit remaining five L source papers before declaring entire 191-item SSC complete."
+  ],
+  "nonclaims": [
+    "This ledger alone is not a frozen complete SSC.",
+    "No L127/L132 G7 or G6 provisional authority is promoted.",
+    "No W comparison or physical-unification claim.",
+    "Formula mnemonics preserve explicit operand roles but must not substitute for exact original math displays during final source proof."
+  ]
+}

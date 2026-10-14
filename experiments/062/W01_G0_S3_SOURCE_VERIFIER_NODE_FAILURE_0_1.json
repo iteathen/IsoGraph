@@ -1,0 +1,35 @@
+{
+  "schema": "isograph.exp062-w01-s3-source-validator-node-replay-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "FAILED_SOURCE_VERIFIER_NODE_0_1_PRESERVED_NO_CI_PASS",
+  "failed_commit": "af505ae58b472a4baf142c06c619b9ab075dbfd5",
+  "CI": {
+    "run_id": 37905359267,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37905359267",
+    "conclusion": "failure",
+    "job": "verify",
+    "step": "node experiments/062/tools/verify-w01-section3-e0-source-0-1.mjs",
+    "second_step": "SKIPPED"
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w01-section3-e0-source-0-1.mjs",
+    "git_blob_sha": "df40834a9bff981f4da7b62779754e2a1ddc529c"
+  },
+  "observed": [
+    "MUTATION_ESCAPED forge oct03 identity",
+    "MUTATION_ESCAPED premature current source freeze",
+    "MUTATION_NOT_CONTROLLED delete source statement threw TypeError: Cannot read properties of undefined (reading 'factor_roles')"
+  ],
+  "cause": [
+    "SSC membership and formula count did not guard d.register.policy.source_revision_Oct03_mutable_bytes_verified=false",
+    "stage source object frozen field was not checked despite live G0 source being unfrozen",
+    "validator dereferenced a[1].factor_roles before recognizing missing expression member"
+  ],
+  "necessary_correction": "Version new checker with explicit negative provenance/stage checks, guarded 2+4 exact source incidents, static source-body appendix witnesses and fail-closed malformed member tests. Do not edit failed 0.1.",
+  "stage_routing": "W_G0_UNFROZEN_SOURCE_SSC0_31_NOT_QUALIFIED_BY_FAILED_WORKFLOW",
+  "qualification_note": "Previous local V8 checker pass had 32 of 35 adversarial controls detected but two escaped and one crashed; 0.1 is not a success, historical green active-stage guard is separate.",
+  "no_L_changes": true,
+  "source_scope": "W01 §3 printed page 6 only"
+}

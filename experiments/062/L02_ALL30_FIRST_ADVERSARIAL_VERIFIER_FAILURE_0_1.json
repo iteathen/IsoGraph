@@ -1,0 +1,65 @@
+{
+  "schema": "isograph.exp062.L.G0.L02.original-30-eq-initial-hostile-verifier-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "source_commit": "89407f02dc72c8865a12fa9717f53832db84f0e6",
+  "run_id": 38082065162,
+  "job_id": 114300844814,
+  "conclusion": "failure",
+  "workflow": "Experiment 062 L G0 L02 all 30 frozen original equation source locators 0.1",
+  "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38082065162",
+  "original_source_result": {
+    "frozen_revision": "arXiv:1004.4866v2",
+    "original_pdf_SHA256_verified": true,
+    "original_numbered_eq_labels_found_on_pinned_pages": 30,
+    "original_PDF_page_count": 12,
+    "source_SSCOwner_crosswalks": 191,
+    "source_first_350_location_membership_check_accepted": true,
+    "full_30_formula_body_original_exactness_proven": false,
+    "whole_source_cold_complete": false
+  },
+  "original_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l02-original-30-eq-boundary-0-1.mjs",
+    "git_blob_sha": "ae809d1138b5f308832b119ea1bb10a5d760ff99",
+    "hostiles_defined": 28,
+    "hostiles_rejected": 25,
+    "failed_hostiles": [
+      {
+        "name": "drop_original_eq30",
+        "kind": "VERIFIER_EXCEPTION",
+        "actual": "TypeError: Cannot read properties of undefined (reading 'SSC_ids')",
+        "cause": "Deleted original equation row produced undefined predecessor, unchecked property access threw before adversarial could be registered as rejection.",
+        "fix": "Use optional chaining to convert a deleted row into a verifiable failed invariant, not a crash."
+      },
+      {
+        "name": "change_prior_selected_packet",
+        "kind": "HOSTILE_ESCAPED",
+        "cause": "The selected 9-expression packet includes an unnumbered original generator. Verifier checked 8 numbered expressions but not the ninth unnumbered expression",
+        "fix": "Check exact unnumbered source generator literal and preserve all nine original packet entries, not just the numbered subset."
+      },
+      {
+        "name": "change_existing_SSC",
+        "kind": "HOSTILE_ESCAPED",
+        "cause": "Verifier checked 191 SSC identity names but not whole SSA source bodies against immutable canonical predecessor",
+        "fix": "Add exact pinned original Git blob SHA and content equality baseline covering all 191 records while still checking original-first independent PDF directly."
+      }
+    ]
+  },
+  "correction_scope": {
+    "one_existing_verifier_replaced": true,
+    "source_packets_changed": false,
+    "SSC_items_changed": 0,
+    "source_original_first_location_rows_changed": 0,
+    "L02_evidence_equation_count_changed": 0,
+    "prior_failed_Github_Action_remains_historically_failed": true,
+    "not_a_source_semantic_omission_from_failed_hostile": true
+  },
+  "lawful_stage": {
+    "G0_open": true,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "PR70_merge_authorized": false
+  }
+}

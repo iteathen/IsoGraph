@@ -1,0 +1,99 @@
+{
+  "schema": "isograph.exp062-l125-ordered-signature-reconstruction-routing.v0.1",
+  "date": "2026-10-07",
+  "status": "L125_R06_CURRENT_RECONSTRUCTION_ROUTED",
+  "authority_effect": "NONE_SOURCE_ROUTING_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "L",
+  "branch_head_at_creation": "c1b88b8dda17b3f8cff63449c7d467272061f425",
+  "consumed_authority": {
+    "path": "experiments/062/L_G6_ORDERED_POSITIVITY_SPLIT_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "88c5b01f727f8e483d71ebb3a340cad0b69391ba",
+    "relations": [
+      216000,
+      216001,
+      216002
+    ],
+    "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+  },
+  "predecessor_replay": {
+    "path": "experiments/062/L_G7_DEPENDENCY_CONE_REPLAY_0_6.json",
+    "git_blob_sha": "0bee7ad0dd75fe758e6503c89e4e891f196f40a5"
+  },
+  "source_instances": [
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_REAL_ORDER_SOURCE_INSTANCE_0_2.isg",
+      "git_blob_sha": "e2ade7b84bf53f59a8425cd6ce6510f88a27c97c",
+      "selected_relations": [
+        216000
+      ],
+      "role": "Exact L05 real scalar order instance selecting 216000."
+    },
+    {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_COMPOSITION_SIGNATURE_SOURCE_OVERLAY_0_1.isg",
+      "git_blob_sha": "77c416436463a1fd51a413d053ae3d707b2d237e",
+      "selected_relations": [
+        216001,
+        216002
+      ],
+      "role": "Exact L05 source overlay selecting positive-definite Q for ordinary cases and explicit negative-Q witnesses for split cases."
+    }
+  ],
+  "reconstruction": {
+    "occurrence_id": "L-SSC-125-R06",
+    "ordinary_cases": [
+      {
+        "family": "C",
+        "relation": 216001,
+        "norm": 214008
+      },
+      {
+        "family": "H",
+        "relation": 216001,
+        "norm": 189208
+      },
+      {
+        "family": "O",
+        "relation": 216001,
+        "norm": 214308,
+        "source_consistency": "INCONSISTENT_SOURCE_TABLE_PRESERVED"
+      }
+    ],
+    "split_cases": [
+      {
+        "family": "Cprime",
+        "relation": 216002,
+        "norm": 214108,
+        "witness": 214111,
+        "witness_value": 214112
+      },
+      {
+        "family": "Hprime",
+        "relation": 216002,
+        "norm": 214208,
+        "witness": 214211,
+        "witness_value": 214218
+      },
+      {
+        "family": "Oprime",
+        "relation": 216002,
+        "norm": 214408,
+        "witness": 214414,
+        "witness_value": 214426
+      }
+    ],
+    "disposition": "RECONSTRUCTABLE_WITH_CURRENT_ORDERED_POSITIVITY_AUTHORITY",
+    "reason": "The frozen L05 source explicitly routes all six coefficient families through one exact real order. Ordinary C/H/O instantiate 216001 positive-definite Q; split Cprime/Hprime/Oprime instantiate 216002 with explicit negative-norm source witnesses. The distinction therefore reconstructs without 216003 division or named-algebra semantics."
+  },
+  "source_inconsistency_policy": {
+    "ordinary_O": "Positive-definite Q is a source assertion routed through 216001 while the independent frozen table/composition inconsistency remains preserved. Representation closure does not repair or erase that contradiction.",
+    "source_repair_used": false
+  },
+  "scope_guards": [
+    "No division relation 216003 is consumed.",
+    "No inference from negative witness to a generic named split algebra is made.",
+    "No field completeness/Archimedean/real-closed semantics are imported.",
+    "No W/cross-track evidence is used."
+  ],
+  "next_action": "Close L125-R06 in G7 replay if routing verifier passes."
+}

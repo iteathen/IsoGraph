@@ -1,0 +1,54 @@
+name: Experiment 062 generate L G1 successor 0.14
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - "experiments/062/L_EXTRACTION_RECONCILED_0_13.json"
+      - "experiments/062/L_G1_SOURCE_LOCAL_ADJUDICATION_0_14.json"
+      - "experiments/062/tools/apply-l-g1-adjudication-0-14.mjs"
+      - "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json"
+      - ".github/workflows/experiment-062-generate-l-g1-successor-0-14.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: exp062-generate-l-g1-successor-0-14
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: research/woit-lisi-isomorph-20261003
+          fetch-depth: 0
+
+      - name: Re-sync without rewriting concurrent work
+        run: |
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git rebase origin/research/woit-lisi-isomorph-20261003
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Generate and validate L successor
+        run: node experiments/062/tools/apply-l-g1-adjudication-0-14.mjs
+
+      - name: Persist generated successor
+        run: |
+          if [ -z "$(git status --porcelain -- experiments/062/L_EXTRACTION_RECONCILED_0_14.json)" ]; then
+            echo "L 0.14 already matches deterministic generation."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/062/L_EXTRACTION_RECONCILED_0_14.json
+          git commit -m "research: generate L G1 reconciled 0.14"
+          git push origin HEAD:research/woit-lisi-isomorph-20261003

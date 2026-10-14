@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.dnwf-cold-case-coverage-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "FAIL_PREDECESSOR_HOLDOUT_INCOMPLETE_SUCCESSOR_REQUIRED",
+  "qualification_plan": "DNWF_0_1_QUALIFICATION_PLAN.md",
+  "predecessor_cases": "DNWF_COLD_CASES_0_1.json",
+  "predecessor_oracle": "DNWF_COLD_ORACLE_0_1.json",
+  "finding": "Cold holdout 0.1 was frozen before execution but did not instantiate every mutation family explicitly required by Q5. It is preserved as evidence and must not be used as the complete Q5 qualification packet.",
+  "q5_mapping_predecessor": {
+    "recursive field changed to external": "MISSING",
+    "external field changed to recursive": "MISSING",
+    "constructor tag overlap introduced": "DNWF-C05",
+    "one constructor case omitted": "MISSING",
+    "field order swapped": "DNWF-C12",
+    "constructor injectivity removed": "DNWF-C06",
+    "junk member admitted": "DNWF-C04",
+    "cyclic recursive member admitted": "DNWF-C07",
+    "fold existence retained but uniqueness removed": "DNWF-C09",
+    "fold allowed to recurse through an external field": "DNWF-C11",
+    "induction restricted to a strict subset": "NOT_EXACTLY_COVERED_BY_C10",
+    "arithmetic/cardinality semantics spuriously added": "DNWF-C13"
+  },
+  "additional_gap": "Candidate interface depends on explicit first/next/last field correspondence; predecessor holdout tests field-order distinction but not malformed field-order packet integrity.",
+  "repair": "Freeze successor public cases/oracle/prompt 0.2 before any cold decoder execution. Add C15-C19 and require 19/19 classification accuracy.",
+  "predecessor_mutated": false,
+  "cold_execution_on_predecessor_allowed_for_qualification": false
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "isograph.lisi-L01-right-action-contragredient-G0.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "NEGATIVE_RIGHT_MODULE_STRUCTURE_PROVED_IN_EXPLICIT_MODEL__SOURCE_TO_COMPONENT_SIGN_UNRESOLVED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "work": "An Exceptionally Simple Theory of Everything",
+    "pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      3,
+      7,
+      16,
+      21,
+      23,
+      24,
+      27,
+      28
+    ],
+    "checked": "Original visually checked p3 nonabelian color bracket; p7 singlet/triplet source, p16 Table9 mixed roots, p21 8 tensor color/anti-color/singlets, p23 E8 into so(7,1)+so(8)+8x8 carriers, p24 first-gen negative H2, p27 first-gen action operator versus component, p28 other generations not understood.",
+    "original_layers": [
+      {
+        "id": "COVARIANT_OPERATOR",
+        "page": 24,
+        "source": "D(Psi)=d(Psi)+[H1+H2,Psi]",
+        "right": "-Psi*(w+B2+xPhi)-Psi_q*g",
+        "strong_quark_projected": true
+      },
+      {
+        "id": "ACTION_OPERATOR",
+        "page": 27,
+        "source": "S_f=integral<e Psi_bar coframe [d(Psi)+H1 Psi-Psi H2]>",
+        "right": "-Psi*(w+B2+xPhi+g)",
+        "strong_quark_projected_explicitly": false
+      },
+      {
+        "id": "ACTION_COMPONENT",
+        "page": 27,
+        "source": "Psi_bar gamma^mu(e_mu)^i(partial_i Psi+...+Psi*w_i+Psi*B2_i+Psi*x_i*Phi+Psi*g_i)+Psi_bar*phi*Psi",
+        "right": "+Psi*w_i+Psi*B2_i+Psi*x_i*Phi+Psi*g_i"
+      },
+      {
+        "id": "LIMIT_OTHER_GENERATIONS",
+        "page": 28,
+        "source": "Other two triality-related fermionic actions not understood well enough to write down."
+      }
+    ]
+  },
+  "provenance_parents": {
+    "source_fermi_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_FERMION_ACTION_COFRA_SIGN_SOURCE_G0_0_1.json",
+      "git_blob_sha": "a440ccfebd1f7202d1ba5d9d47a3debd9db079d3"
+    },
+    "ssc040": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_40.json",
+      "git_blob_sha": "09fadc2cd1a6d484b4955d9d7135f9c35f6d0425"
+    },
+    "gate040": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_40.json",
+      "git_blob_sha": "39ad94a0b64cd6ae4cad1259c93d2bfca46513fd"
+    }
+  },
+  "findings": [
+    {
+      "id": "R01",
+      "category": "MATHEMATICAL_RECONSTRUCTION",
+      "claim": "For row/matrix fermions Psi and a noncommuting right Lie matrix X, rho(X)Psi=-Psi X is a Lie representation, since [rho(X),rho(Y)]=rho([X,Y]); naive sigma(X)Psi=+Psi X is an anti-representation and fails the same Lie bracket on nonabelian sectors.",
+      "model": "Exact matrix units E01,E12,E02 in gl(4,Q) with E01*E12=E02 and reverse product zero; strong su3 complexified witness, NOT an original E8 structure-constant reconstruction."
+    },
+    {
+      "id": "R02",
+      "category": "MATHEMATICAL_RECONSTRUCTION",
+      "claim": "Formal coefficient agreement with a plus right term requires X_component=-X_operator if the fermion matrix carrier, multiplication direction, and other coefficients are fixed. This global raw matrix minus is not a same-bracket Lie-algebra basis conjugation on the nonabelian strong sector; [-X,-Y]=[X,Y] differs from -[X,Y].",
+      "classification": "NECESSARY_CONDITIONAL_NOT_SOURCE_AUTHORIZED"
+    },
+    {
+      "id": "R03",
+      "category": "MATHEMATICAL_RECONSTRUCTION",
+      "claim": "A genuine contragredient representation exists on the transposed dual carrier: chi=Psi^T and rho_dual(X)chi=-X^T chi. It respects nonabelian brackets and reproduces the right action, but moves action from right to left and changes carrier. Source does not give an explicit identification of the printed right-component coefficients with this dual carrier.",
+      "classification": "POSSIBLE_UNSTATED_COMPLETION_NOT_AUTHOR_ADOPTED"
+    },
+    {
+      "id": "R04",
+      "category": "MATHEMATICAL_RECONSTRUCTION",
+      "claim": "If strong g acts block diagonally on a colored triplet plus one lepton singlet with zero singlet block, Psi*g=(Psi*P_q)*g, so omission of the _q subscript from the p27 g term can be representation shorthand. This is a compatible model, not an independently derived exact E8 matrix action.",
+      "classification": "CONDITIONAL_RECONCILIATION_OF_QUARK_PROJECTOR_NOT_RIGHT_SIGN"
+    },
+    {
+      "id": "R05",
+      "category": "MATHEMATICAL_RECONSTRUCTION",
+      "claim": "For a fixed uniform odd anti-Grassmann pairing order and even connection coefficients, switching Grassmann order or reversing the exterior 3form/1form order changes the sign of all similarly paired sectors, not only the four H2 right sectors; Clifford gamma/coframe contraction and the 1/4 Higgs factor do not supply a right-only sign.",
+      "classification": "CONDITIONAL_SIGN_EXCLUSION_COMMON_PAIRING_ONLY"
+    },
+    {
+      "id": "R06",
+      "category": "SOURCE_OBSERVATION",
+      "claim": "Original printed p24 and p27 retain a negative H2 right operator, while the last displayed p27 component line uses four positive right terms. Neither a source-native right-generator-to-component change of basis nor an exact Grassmann/Clifford trace convention identifying them has yet been specified in the frozen paper.",
+      "classification": "OPEN_SOURCE_REPRESENTATION_OBLIGATION"
+    }
+  ],
+  "source_capabilities_missing": [
+    "Source-specified 8x8 strong/mixed H2 representation simultaneously compatible with original E8 root-vector phases, real form and right chiral fermion carriers.",
+    "Source-approved map from H2 Lie generator coefficients to p27 right component matrices (including whether opposite/dual/transpose or charge-conjugate representations are used).",
+    "Source-selected fermion/anti-fermion right-module identification, chiral conjugation, trace/Grassmann scalar pairing and external-form ordering to prove the complete action, not only a chosen model.",
+    "Unambiguous treatment of colored quarks, anticolored antiquarks, singlet leptons in the same fermion action and triality for other generations."
+  ],
+  "independent_exact_verification": {
+    "model": "2x4 rational/integer rectangular fermion; 4x4 sparse noncommuting strong roots; 2x2 left actors; source-conditioned Grassmann/exterior/Clifford simple probes",
+    "math_adversarial_mutants": 12,
+    "source_adversarial_mutants": 16
+  },
+  "not_claimed": {
+    "genuine_source_discrepancy_proved": false,
+    "source_equivalent_transformation_proved": false,
+    "original_E8_representation_derived": false,
+    "arbitrary_source_coframe_or_trace_qualified": false,
+    "source_typo_proved": false,
+    "source_same_bracket_global_minus_isomorphism": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "W_comparison_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "scope": {
+    "changed_ids": [
+      "L-SSC-041",
+      "L-SSC-046"
+    ],
+    "unchanged_full_records": 189,
+    "all_source_identities": 191,
+    "SSC_frozen": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro: independent full-source L treatment and exact right-action investigation",
+    "source_author": "A. Garrett Lisi, 2007 original v1",
+    "agent_finding": "2026-10-09 conditional nonabelian right-module/contragredient sign-obstruction and singlet-projection tests",
+    "external_antecedents": "Standard finite matrix Lie representations, dual representations, superalgebra and exterior algebra; no priority claim"
+  }
+}

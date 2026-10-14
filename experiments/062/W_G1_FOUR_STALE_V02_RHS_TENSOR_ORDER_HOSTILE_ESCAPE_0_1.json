@@ -1,0 +1,20 @@
+{
+  "schema": "isograph.exp062.W-G1-four-stale-v02-TENSOR_ORDER_HOSTILE_ESCAPE.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "exact_failure": {
+    "run_id": 38147946438,
+    "job_id": 114495141409,
+    "commit_sha": "414e096900f191f68d3f6161539b22852f7d7229",
+    "conclusion": "FAILURE",
+    "positive_source_baseline_passed": true,
+    "hostile_tests_rejected_until_failure": 3
+  },
+  "escaped_mutation": "source RHS product swapped",
+  "root_cause": "Checker guarded source's TENSOR operator identity but not independently its exact right-hand ordered factors. A mutant reversed the left dual carrier and right (SL+SR) source roles while retaining TENSOR, escaping v0.2 checks.",
+  "correction": "v0.3 pins both ordered RHS factor roles, six ordered physical particle assignments and CP1 contained-in relation, preserving native frozen source record.",
+  "old_run_reclassified_as_success": false,
+  "ssc_changed": false,
+  "G0_freeze_changed": false,
+  "G2_not_authorized": true
+}

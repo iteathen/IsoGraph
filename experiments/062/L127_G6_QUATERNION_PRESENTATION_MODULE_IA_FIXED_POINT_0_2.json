@@ -1,0 +1,114 @@
+{
+  "schema": "isograph.exp062-l127-quaternion-presentation-module-ia-fixed-point.v0.2",
+  "date": "2026-10-08",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_EVIDENCE_ONLY",
+  "authority": false,
+  "module": "QUATERNION_PRESENTATION_0_2",
+  "inputs": {
+    "hypothesis": {
+      "path": "experiments/062/L127_G5H_QUATERNION_PRESENTATION_0_2.json",
+      "git_blob_sha": "a263b46f75db6e44a0c6c8abf419502c92736636"
+    },
+    "module_ssc": {
+      "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_SSC_0_2.json",
+      "git_blob_sha": "f214372ab7fe2d72499cb8a8e4316589d0d154e9"
+    }
+  },
+  "inference_profile": {
+    "id": "quaternion-presentation-conjunct-projection-0.1",
+    "scope": "Only direct conjunct/dependency projections from exact 193100. No external quaternion classification theorem.",
+    "rules": [
+      {
+        "id": "QP-IA-R1",
+        "trigger": "193100",
+        "derives": [
+          "185001",
+          "187601",
+          "188000",
+          "CHARACTERISTIC_NOT_TWO",
+          "UNIT_TABLE",
+          "SQUARE_TABLE",
+          "CYCLE_TABLE",
+          "REVERSED_TABLE",
+          "BASIS_KAPPA_TABLE"
+        ]
+      }
+    ],
+    "prohibited_inferences": [
+      "193100 -> division algebra",
+      "193100 -> positive norm",
+      "193100 -> unique/canonical quaternion algebra",
+      "193100 -> octonion semantics",
+      "193100 -> operator/Lie semantics"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "SCHEMA_DEFINITION(193100)"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "QP-IA-001",
+          "assertion": "193100 entails exact associative-algebra, four-basis, and anti-involution parents.",
+          "support": [
+            "193100 explicit conjuncts"
+          ]
+        },
+        {
+          "id": "QP-IA-002",
+          "assertion": "193100 entails 1+1 != 0.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-003",
+          "assertion": "193100 entails the explicit unit and signed quaternion basis multiplication table.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-004",
+          "assertion": "193100 entails the explicit basis conjugation table.",
+          "support": [
+            "193100 explicit body"
+          ]
+        },
+        {
+          "id": "QP-IA-005",
+          "assertion": "No division/norm/classification/operator semantics follow from selected relation alone.",
+          "support": [
+            "candidate scope firewall"
+          ]
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "No additional assertion follows without crossing prohibited division/norm/classification boundaries."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 5,
+    "unresolved_ia_obligations": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "next_stage": "DETERMINISTIC_G6_QUALIFICATION_CASES",
+  "predecessor": {
+    "path": "experiments/062/L127_G6_QUATERNION_PRESENTATION_MODULE_IA_FIXED_POINT_0_1.json",
+    "git_blob_sha": "0739829d872da6d89924e487e777eba7a1f70c93",
+    "status": "INVALIDATED_BY_UPSTREAM_L127_G1_SI_COLLISION"
+  },
+  "replay_note": "IA profile and admitted assertions are unchanged; inputs are replayed from corrected L127 G3."
+}

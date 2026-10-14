@@ -1,0 +1,140 @@
+{
+  "schema": "isograph.track-L.G0.L01.Eq2.3-assisted-original-7x7-matrix.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "PDF_page_zero_based": 6,
+    "original_source_location": "L01-S014",
+    "SSC_owner": "L-SSC-029",
+    "frozen_PDF_SHA256_from_prior_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "PDF_binary_rehashed_this_turn": false,
+    "original_PDF_screenshot_viewed": true,
+    "secondary_ar5iv_source": "https://ar5iv.labs.arxiv.org/html/0711.0770",
+    "source_exact_cold_qualified": false
+  },
+  "printed_equation": "Eq2.3 original proposed 7x7 G2 gluon, quark and antiquark generator connection",
+  "original_shape": [
+    7,
+    7
+  ],
+  "coefficients": {
+    "t": "1/sqrt(2)",
+    "token_syntax": "symbol:coefficient; multiple terms semicolon-separated",
+    "allowed": [
+      "-t",
+      "+t",
+      "-1",
+      "+1",
+      "+i/sqrt3",
+      "-i/sqrt3",
+      "+i/2",
+      "-i/2",
+      "+i/(2sqrt3)",
+      "-i/(2sqrt3)"
+    ]
+  },
+  "source_symbols": {
+    "g3": "Cartan g3",
+    "g8": "Cartan g8",
+    "g_rg": "gluon g^(r antigr)",
+    "g_gr": "gluon g^(antir g)",
+    "g_rb": "gluon g^(r antib)",
+    "g_br": "gluon g^(antir b)",
+    "g_gb": "gluon g^(g antib)",
+    "g_bg": "gluon g^(antig b)",
+    "q_r": "quark red",
+    "q_g": "quark green",
+    "q_b": "quark blue",
+    "qbar_r": "anti-quark red",
+    "qbar_g": "anti-quark green",
+    "qbar_b": "anti-quark blue"
+  },
+  "matrix": [
+    [
+      "0",
+      "qbar_b:-t",
+      "q_b:-t",
+      "q_r:-t",
+      "qbar_r:-t",
+      "q_g:-t",
+      "qbar_g:-t"
+    ],
+    [
+      "q_b:+t",
+      "g8:+i/sqrt3",
+      "0",
+      "qbar_g:+t",
+      "g_br:+1",
+      "qbar_r:-t",
+      "g_bg:-1"
+    ],
+    [
+      "qbar_b:+t",
+      "0",
+      "g8:-i/sqrt3",
+      "g_rb:+1",
+      "q_g:+t",
+      "g_gb:-1",
+      "q_r:-t"
+    ],
+    [
+      "qbar_r:+t",
+      "q_g:-t",
+      "g_br:-1",
+      "g3:+i/2;g8:+i/(2sqrt3)",
+      "0",
+      "g_gr:+1",
+      "q_b:+t"
+    ],
+    [
+      "q_r:+t",
+      "g_rb:-1",
+      "qbar_g:-t",
+      "0",
+      "g3:-i/2;g8:-i/(2sqrt3)",
+      "qbar_b:+t",
+      "g_rg:+1"
+    ],
+    [
+      "qbar_g:+t",
+      "q_r:+t",
+      "g_bg:+1",
+      "g_rg:-1",
+      "q_b:-t",
+      "g3:-i/2;g8:+i/(2sqrt3)",
+      "0"
+    ],
+    [
+      "q_g:+t",
+      "g_gb:+1",
+      "qbar_r:+t",
+      "qbar_b:-t",
+      "g_gr:-1",
+      "0",
+      "g3:+i/2;g8:-i/(2sqrt3)"
+    ]
+  ],
+  "qualification_locks": {
+    "full_49_cells_source_cold_qualified": false,
+    "independent_external_semantic_review": false,
+    "ordinary_matrix_commutator_necessarily_author_physics_rule": false,
+    "source_author_error_proven": false,
+    "physical_theory_qualified": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "original_source": "A. Garrett Lisi",
+    "research_direction": "Joshua Oshiro",
+    "technical_transcription": "assisted secondary ar5iv TeX and original PDF screenshot comparison",
+    "date": "2026-10-13"
+  }
+}

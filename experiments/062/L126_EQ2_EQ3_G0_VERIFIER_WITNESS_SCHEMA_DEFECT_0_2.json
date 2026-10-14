@@ -1,0 +1,27 @@
+{
+  "schema": "isograph.exp062-l126-eq2-eq3-source-witness-schema-fixture-defect.v0.2",
+  "date": "2026-10-08",
+  "stage": "G0",
+  "track": "L",
+  "authority": false,
+  "status": "TWO_FAILED_BASELINE_RUNS_WITNESS_FIELD_SCHEMA_NO_SOURCE_MATH_ERROR",
+  "failed_runs": [
+    {
+      "id": 37833925600,
+      "head": "c68f5e8c64cdb69ed866d197ec24cdc3c4c962d3",
+      "baseline_error": "barGamma index equality exact two-entry contradiction",
+      "cause": "Defect record labels Clifford bound input index c; verifier output label gamma."
+    },
+    {
+      "id": 37834051764,
+      "head": "02cc35efdf1ec1fc2690baeeae027836c29add7a",
+      "baseline_error": "barGamma index equality exact two-entry contradiction",
+      "cause": "After index-name correction, defect record uses from_table for direct M coefficient; verifier used from_printed_M."
+    }
+  ],
+  "repair": "Use the defect record's exact witness fields {c,row,col,from_table,from_transpose} in the independently computed output. Keep all 2 entry values, 7/36 failing pairs, 28 incorrect matrix entries, C/H positive controls, source-original octonion cells, and exact parent SHA pins unchanged.",
+  "test_truth": "No adversarial mutants were evaluated or counted in either failed run because both baseline checks returned errors.",
+  "G1_authorized": false,
+  "source_complete": false,
+  "external_review_passed": false
+}

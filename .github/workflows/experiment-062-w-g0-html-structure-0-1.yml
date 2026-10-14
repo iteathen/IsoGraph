@@ -1,0 +1,17 @@
+name: Experiment 062 W G0 original author semantic HTML structure audit 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/audit-w-current-author-html-structure-0-1.py'
+      - '.github/workflows/experiment-062-w-g0-html-structure-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  source_structure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: python3 -m py_compile experiments/062/tools/audit-w-current-author-html-structure-0-1.py
+      - run: python3 -u experiments/062/tools/audit-w-current-author-html-structure-0-1.py

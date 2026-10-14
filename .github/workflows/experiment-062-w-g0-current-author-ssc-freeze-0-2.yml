@@ -1,0 +1,26 @@
+name: Experiment 062 W current author G0 SSC freeze transition qualification 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G0_CURRENT_AUTHOR_SOURCE_STAGE_GATE_0_1.json'
+      - 'experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs'
+      - 'research/woit-lisi-isomorph/woit/G0_CURRENT_AUTHOR_SSC_FREEZE_0_1.md'
+      - '.github/workflows/experiment-062-w-g0-current-author-ssc-freeze-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+      - name: Current-author G0 source-census-only freeze and 22 hostile controls
+        run: node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+      - name: Independently original-first current nine W source reciprocal and 29 hostile
+        run: node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+      - name: Original three original versioned W sources and 22 hostile
+        run: node experiments/062/tools/verify-w-g0-exact-reciprocal-original-index-0-1.cjs

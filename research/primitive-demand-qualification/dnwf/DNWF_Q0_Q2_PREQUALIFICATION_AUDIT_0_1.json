@@ -1,0 +1,133 @@
+{
+  "schema": "isograph.dnwf-prequalification-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "Q0_Q1_Q2_PASS_Q3_NOT_RUN",
+  "target": "DNWF_0_1",
+  "pinned": {
+    "source_census": {
+      "path": "DNWF_SOURCE_SEMANTIC_CENSUS_0_2.json",
+      "blob": "531e86ace89e399db063cfd48c88242f34914e0c"
+    },
+    "candidate_md": {
+      "path": "DNWF_0_1_CANDIDATE.md",
+      "blob": "69ff8b7f47cd4a101f1e8ef1116a68f3460a11a9"
+    },
+    "candidate_json": {
+      "path": "DNWF_0_1_CANDIDATE.json",
+      "blob": "f81fc5f14209de8d708bc6a8cf0d50151ea1af19"
+    },
+    "qualification_plan": {
+      "path": "DNWF_0_1_QUALIFICATION_PLAN.md",
+      "blob": "663c615571d9e87eace8be2bf1f0a3bf72f8deec"
+    },
+    "demand_graph": {
+      "path": "../PRIMITIVE_DEMAND_GRAPH_0_1.json",
+      "blob": "3f30107c2b09f3331048c1d458a995bf4ba7c3d8"
+    },
+    "candidate_basis": {
+      "path": "../CANDIDATE_PRIMITIVE_BASIS_0_1.json",
+      "blob": "1f115e0f0dfd3794d0477efde09d570a4e9e65e9"
+    }
+  },
+  "q0": {
+    "disposition": "PASS",
+    "checks": [
+      "SSC 0.2 frozen after removal of index/arithmetic circularity",
+      "candidate prose and machine-readable surface frozen",
+      "exactly one new semantic relation ID reserved",
+      "qualified dependency limited to cumulative Core 0.17-0.21",
+      "QU not invoked",
+      "W/L source objects absent from module semantics"
+    ]
+  },
+  "q1": {
+    "disposition": "PASS",
+    "coverage": {
+      "DNWF-SSC-001": [
+        "candidate §2"
+      ],
+      "DNWF-SSC-002": [
+        "candidate §3.1",
+        "candidate §3.2",
+        "candidate §3.4",
+        "candidate §3.5"
+      ],
+      "DNWF-SSC-003": [
+        "candidate §3.2",
+        "candidate §3.3"
+      ],
+      "DNWF-SSC-004": [
+        "candidate §4 structural induction"
+      ],
+      "DNWF-SSC-005": [
+        "candidate §3.6",
+        "candidate §4 structural recursion"
+      ],
+      "DNWF-SSC-006": [
+        "candidate §3.4",
+        "candidate §4 finite-tree exclusion"
+      ],
+      "DNWF-SSC-007": [
+        "candidate §6 explicit non-claims"
+      ]
+    },
+    "uncovered_ssc_items": [],
+    "unsupported_candidate_semantic_clauses": []
+  },
+  "q2": {
+    "disposition": "PASS",
+    "interface": {
+      "new_semantic_relations": [
+        {
+          "id": 160100,
+          "name": "WF_TERM_ALGEBRA",
+          "arity": 2
+        }
+      ],
+      "raw_metadata_relation_ids": [
+        160110,
+        160111,
+        160112,
+        160113,
+        160114,
+        160115,
+        160116
+      ],
+      "parser_syntax_change": false,
+      "core_primitive_change": false
+    },
+    "checks": [
+      "candidate relation can be carried by ordinary Core PREDICATE_APPLICATION",
+      "signature metadata has finite extensional contribution only",
+      "no arithmetic/order/cardinality semantics included",
+      "no domain-specific algebra/geometry/physics primitive included",
+      "derived induction/fold obligations are explicit rather than gloss"
+    ]
+  },
+  "q3": {
+    "disposition": "NOT_RUN",
+    "reason": "Requires two independent fresh isolated decoder executions after freeze."
+  },
+  "q4": {
+    "disposition": "BLOCKED_ON_Q3"
+  },
+  "q5": {
+    "disposition": "PLANNED_FROZEN_CONTROL_FAMILIES_NOT_YET_EXECUTED"
+  },
+  "q6": {
+    "disposition": "BLOCKED_ON_Q3_Q5"
+  },
+  "q7": {
+    "disposition": "INCOMPLETE_EVIDENCE"
+  },
+  "authority": false,
+  "downstream": {
+    "DNIA": "BLOCKED_ON_DNWF_Q7",
+    "W": "BLOCKED_ON_PRIMITIVE_DOMAIN_BOUNDARY",
+    "L": "INDEPENDENT_NO_DNWF_AUTHORITY",
+    "W_IA": false,
+    "W_NEI": false,
+    "W_DTS": false,
+    "W_DP": false
+  }
+}

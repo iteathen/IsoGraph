@@ -1,0 +1,109 @@
+{
+  "schema": "isograph.exp062-w-g5-source-sufficiency-review.v0.3",
+  "date": "2026-10-07",
+  "status": "W_G5_W097_CORRECTED_INPUT_NO_DETERMINISTIC_CANDIDATE_CONFIRMED_AFTER_SOURCE_REVIEW",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "input": {
+    "synthesis": {
+      "path": "experiments/062/W_G5_CANDIDATE_BASIS_SYNTHESIS_0_3.json",
+      "git_blob_sha": "3096dc8f9d76f7718ca6e54bc02f8d52637a0293"
+    },
+    "g3_fixed_point": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_7.json",
+      "git_blob_sha": "62e1236d7aa4c7b2814606b1640e35e280b73919"
+    },
+    "g4_fixed_point": {
+      "path": "experiments/062/W_G4_FIXED_POINT_0_3.json",
+      "git_blob_sha": "7f1e97c11c9bdff3a9feca1bebcfefe75e91eff2"
+    }
+  },
+  "multi_member_class_review": {
+    "total_multi_member_classes": 28,
+    "heterogeneous_surface_relation_classes": 24,
+    "uniform_surface_relation_classes": 4,
+    "uniform_classes": [
+      {
+        "class_id": "W-G4-Q0153",
+        "surface_relation": "=",
+        "members": [
+          "W-SSC-071-O04",
+          "W-SSC-071-O05",
+          "W-SSC-071-O06"
+        ],
+        "disposition": "NO_DETERMINISTIC_CANDIDATE",
+        "reason": "Shared graph shape and source spelling do not define the missing lower behavior."
+      },
+      {
+        "class_id": "W-G4-Q0233",
+        "surface_relation": "+",
+        "members": [
+          "W-SSC-102-O04",
+          "W-SSC-102-O05"
+        ],
+        "disposition": "NO_DETERMINISTIC_CANDIDATE",
+        "reason": "Shared graph shape and source spelling do not define the missing lower behavior."
+      },
+      {
+        "class_id": "W-G4-Q0237",
+        "surface_relation": "giving",
+        "members": [
+          "W-SSC-104-O02",
+          "W-SSC-104-O03"
+        ],
+        "disposition": "NO_DETERMINISTIC_CANDIDATE",
+        "reason": "Shared graph shape and source spelling do not define the missing lower behavior."
+      },
+      {
+        "class_id": "W-G4-Q0366",
+        "surface_relation": "is",
+        "members": [
+          "W-SSC-149-O09",
+          "W-SSC-149-O10"
+        ],
+        "disposition": "NO_DETERMINISTIC_CANDIDATE",
+        "reason": "Shared graph shape and source spelling do not define the missing lower behavior."
+      }
+    ]
+  },
+  "target_w097_review": {
+    "occurrences": [
+      "W-SSC-097-O06",
+      "W-SSC-097-O04"
+    ],
+    "quotient_classes": [
+      "W-G4-Q0204",
+      "W-G4-Q0206"
+    ],
+    "source_visible_behavior": [
+      "a represented projective-point scope",
+      "applying rho_tw twice returns the same projective point",
+      "rho_tw has no projective fixed points"
+    ],
+    "still_missing_at_deterministic_G5": [
+      "an explicit generic carrier predicate for the projective-point scope",
+      "a total single-valued map graph for rho_tw on that carrier",
+      "generic quantified laws reconstructing involution and fixed-point absence"
+    ],
+    "disposition": "NO_DETERMINISTIC_REUSABLE_CANDIDATE_G5H_WARRANTED",
+    "reason": "The source supplies enough concrete behavior to motivate a falsifiable lower hypothesis, but deterministic authority does not already provide the generic map/carrier schema."
+  },
+  "conclusion": {
+    "proposed_reusable_candidates": 0,
+    "unresolved_boundaries": 372,
+    "W_local_G5_complete": true,
+    "W_local_G6_required": false,
+    "W_G5H_authorized": true,
+    "W_track_primitive_closure_complete": false,
+    "W_track_sealed": false,
+    "cross_track_comparison_authorized": false
+  },
+  "nonclaims": [
+    "No projective geometry is inferred.",
+    "No historical W support packet is authority.",
+    "No L evidence or L provisional module is used.",
+    "G5H authorization is not qualification."
+  ]
+}

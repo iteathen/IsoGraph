@@ -1,0 +1,26 @@
+name: Experiment 062 W G1 exact frozen-body negative and speculation repair 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_EXACT_BODY_NEGATIVE_MODALITY_REAUDIT_0_2.json'
+      - 'experiments/062/tools/verify-w-g1-exact-body-negative-0-2.cjs'
+      - '.github/workflows/experiment-062-w-g1-exact-body-negative-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node --check experiments/062/tools/verify-w-g1-exact-body-negative-0-2.cjs
+      - run: node experiments/062/tools/verify-w-g1-exact-body-negative-0-2.cjs
+      - name: Recheck prior 7 W local repair bodies and full frozen G0
+        run: |
+          node experiments/062/tools/verify-w-g1-current-high-risk-0-3.cjs
+          node experiments/062/tools/verify-w-g1-four-stale-0-3.cjs
+          node experiments/062/tools/verify-w-g1-current-source-frontier-0-1.cjs
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs

@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062.W.G0.structural-html-v01-positive-oracle-literal-error.v0.1",
+  "date": "2026-10-11",
+  "track": "W",
+  "exact_failure": {
+    "run_id": 38142997131,
+    "job_id": 114480507677,
+    "commit_sha": "1db8abf4f1e3b902d6d2ea4d8394ed234c930513",
+    "conclusion": "FAILURE",
+    "positive_baseline_passed": false,
+    "hostiles_executed": false
+  },
+  "incorrect_W04b_immutable_checker_literal": "0a9592be1e5670d2e7e7ffbdfb85700d2cf8a6f9f0fe64bb037448e4b1d6d9ee",
+  "correct_W04b_source_first_run_38142568606_hash": "0a9592be1e5670d2e7e7ffbdfb85700d2cf8a6f9f0fe64bb0374482790f506ec",
+  "root_cause": "Hand-copied fixed W04b structural hash in v0.1 differs from independently captured original author HTML hash; source and manifest both correctly shared original hash. No new source semantic contradiction observed.",
+  "correction": "Separate v0.2 checker corrects fixed literal to independently pinned original hash; rerun all 6 originals, adversarial controls and existing G0 qualification.",
+  "frozen_source_census_mutated": false,
+  "historical_failure_remains_failed": true,
+  "old_oct03_G0_open": true,
+  "new_current_G0_freeze_predecessor_conserved": true
+}

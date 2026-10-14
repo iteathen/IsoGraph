@@ -1,0 +1,62 @@
+{
+  "schema": "isograph.exp062-w-g5h-historical-shared-readme-verifier-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_HISTORICAL_W_G5H_VERIFIER_CURRENT_SHARED_DOSSIER_SCOPE_LEAK_AND_REPEATED_CI_FAILURE",
+  "failed_ci": {
+    "run_id": 37874462094,
+    "head_sha": "c767a7be620c956dab46234e8ac5857fa9957a53",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37874462094",
+    "conclusion": "failure",
+    "failed_step": "node experiments/062/tools/verify-w-g5h-fixed-point-0-1.mjs",
+    "errors": [
+      "README missing 443 occurrences",
+      "README missing 370 structural classes",
+      "README missing No hypothesis survived to G6",
+      "README missing SOURCE_INFORMATION_AND_INTERNAL_VARIATION_SEMANTICS_BOUNDARY",
+      "README missing L_G7_DEPENDENCY_CONE_REPLAY_0_2.json"
+    ]
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w-g5h-fixed-point-0-1.mjs",
+    "git_blob_sha": "25e9b0df2fbbe40937436962f8afc8948264e91a"
+  },
+  "failed_workflow": {
+    "path": ".github/workflows/experiment-062-w-g5h-fixed-point-0-1.yml",
+    "git_blob_sha": "29aea191bcb7329846a349ce1a39a6ec4f9a722b"
+  },
+  "owner": "PROCEDURAL_VERIFIER_AND_WORKFLOW_NOT_G5H_SOURCE_SEMANTICS",
+  "root_cause": "The historical W G5H fixed-point verifier checked shared root W/L dossier current text instead of exclusively its own frozen W artifacts. Five obsolete prose-token requirements include a foreign L_G7 artifact reference. Its workflow triggered on updates to the shared README, repeatedly rerunning a stale stage review against modern G0 routing.",
+  "repair": {
+    "historical_readme_checks": "REMOVE_FROM_VERSIONED_SUCCESSOR_ONLY",
+    "historical_json_pins": "PRESERVE_AND_REPLAY",
+    "current_W_stage_gate": "EXPLICITLY_ASSERT_G0_SSC0_22_UNFROZEN_AND_G1_TO_G7_FALSE",
+    "original_failed_verifier": "PRESERVE_UNMODIFIED",
+    "original_workflow": "ARCHIVE_TO_WORKFLOW_DISPATCH_ONLY",
+    "new_verifier": {
+      "path": "experiments/062/tools/verify-w-g5h-historical-nonpromotion-0-2.mjs",
+      "git_blob_sha": "2c8d66a130510e8bd555e73964b6f9892413a772"
+    }
+  },
+  "semantic_effect": "NONE: Five G5H variation hypotheses remain historically rejected with zero survivors; current G0 source remains unfrozen. Neither historical 37674234072 PASS nor repeated 37874462094 failure qualifies current G5H.",
+  "repair_disposition": "FIX_VERIFICATION_SCOPE_AND_TRIGGER_BEFORE_FURTHER_RESEARCH",
+  "discovery_disposition": "NO_SOURCE_MATHEMATICAL_DISCOVERY_IN_CI_FAILURE",
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro",
+    "formalization_and_verifier_diagnosis": "agent-assisted",
+    "earliest_evidence_currently_located": "2026-10-08 failing GitHub Actions logs at run 37874462094"
+  },
+  "qualifications": {
+    "W_cross_track_semantics_used": false,
+    "external_third_party": "OWNER_BYPASSED_NOT_PASSED",
+    "current_G0_frozen": false,
+    "G6_or_G7_authorized": false
+  },
+  "nonclaims": [
+    "No semantic validity conclusion from stale README token checks",
+    "No fresh W source mathematical qualification",
+    "No L artifact modification or L semantic import",
+    "No global primitive/module promotion"
+  ]
+}

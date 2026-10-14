@@ -1,0 +1,88 @@
+{
+  "schema": "isograph.exp067-qualification-cases.v0.1",
+  "date": "2026-10-08",
+  "status": "FROZEN_SOURCE_NEUTRAL_EMPTY_PREDICATE_CONTROLS",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "module_ssc": {
+    "path": "experiments/067/MODULE_SSC_0_1.json",
+    "git_blob_sha": "d4660845d93057fdda96a7f2ed48f4e719496319"
+  },
+  "hypothesis": {
+    "path": "experiments/062/W_G5H_EMPTY_TYPED_PREDICATE_0_1.json",
+    "git_blob_sha": "8e79aecd118b0de4753bfe162cf2e2ea2e41367a"
+  },
+  "positive_controls": [
+    {
+      "id": "P01",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [],
+        "B": []
+      },
+      "expected": "ACCEPT",
+      "target": "empty carrier permitted"
+    },
+    {
+      "id": "P02",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "B": []
+      },
+      "expected": "ACCEPT",
+      "target": "nonempty carrier with empty B"
+    },
+    {
+      "id": "P03",
+      "kind": "positive-fresh",
+      "model": {
+        "U": [
+          "a",
+          "b",
+          "c"
+        ],
+        "B": []
+      },
+      "expected": "ACCEPT",
+      "target": "larger carrier with empty B"
+    }
+  ],
+  "adversarial_controls": [
+    {
+      "id": "N01",
+      "kind": "negative-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "B": [
+          "a"
+        ]
+      },
+      "expected": "REJECT_NONEMPTY_B"
+    },
+    {
+      "id": "N02",
+      "kind": "negative-fresh",
+      "model": {
+        "U": [
+          "a"
+        ],
+        "B": [
+          "outside"
+        ]
+      },
+      "expected": "REJECT_TYPING"
+    }
+  ],
+  "promotion_gate": {
+    "deterministic_required": true,
+    "module_local_ia_required": true,
+    "fresh_controls_required": true,
+    "external_semantic_review_required_normally": true,
+    "external_semantic_review_bypassed_under_current_owner_exception_only_after_internal_pass": true,
+    "global_manifest_update_authorized": false
+  }
+}

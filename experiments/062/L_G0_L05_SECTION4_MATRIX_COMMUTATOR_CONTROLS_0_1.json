@@ -1,0 +1,278 @@
+{
+  "schema": "isograph.exp062-l-g0-l05-section4-matrix-commutator-controls.v0.1",
+  "date": "2026-10-08",
+  "status": "LOCAL_DETERMINISTIC_POSITIVE_MATRIX_COMMUTATOR_CONTROLS_PASS_NOT_QUALIFIED",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_TEST_EVIDENCE_ONLY",
+  "track": "L",
+  "branch_head_at_creation": "db9211bc6e79f7986c4012dfef27415fcc3631e1",
+  "source_inventory": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_EXPRESSION_AUDIT_0_1.json",
+    "git_blob_sha": "09b7e87f5652530c65ae1094793c6c7c51adcda0"
+  },
+  "parent_defect": {
+    "path": "experiments/062/L_G0_L05_SECTION4_L133_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "100df3d1d52920382ccffbb77501430b7c7de953"
+  },
+  "assumptions": {
+    "su3": "Represent complex numbers as ordered real/imaginary pairs with exact complex conjugation; use source Eq(10) 3x3 matrix layout and independently multiply matrices.",
+    "sp3": "Represent ordinary quaternions by basis 1,i,j,k with i*j=k, j*k=i, k*i=j, squares=-1; matrix products use ordered quaternion multiplication and conjugation. These multiplication rules are test assumptions and must be checked against exact frozen L05 signed table before being claimed as source qualification.",
+    "bracket": "[A1,A2]=A1*A2-A2*A1",
+    "scope": "Ordinary C/H carriers only; no split families, octonion nonassociativity, or Lie classification."
+  },
+  "SU3": {
+    "expected": "The five independently evaluated source commutator components coincide with entries of direct complex 3x3 matrix commutator within floating arithmetic tolerance.",
+    "controls": [
+      {
+        "id": "S3-01",
+        "input1": {
+          "B1": 1,
+          "B2": -2,
+          "v": [
+            1,
+            2
+          ],
+          "psi": [
+            0,
+            -1
+          ],
+          "chi": [
+            2,
+            3
+          ]
+        },
+        "input2": {
+          "B1": -1,
+          "B2": 1,
+          "v": [
+            0,
+            3
+          ],
+          "psi": [
+            1,
+            2
+          ],
+          "chi": [
+            3,
+            -2
+          ]
+        },
+        "max_abs_error": 3.552713678800501e-15
+      },
+      {
+        "id": "S3-02",
+        "input1": {
+          "B1": 0,
+          "B2": 0,
+          "v": [
+            0,
+            0
+          ],
+          "psi": [
+            1,
+            0
+          ],
+          "chi": [
+            0,
+            0
+          ]
+        },
+        "input2": {
+          "B1": 2,
+          "B2": 0,
+          "v": [
+            0,
+            1
+          ],
+          "psi": [
+            0,
+            0
+          ],
+          "chi": [
+            1,
+            1
+          ]
+        },
+        "max_abs_error": 0
+      },
+      {
+        "id": "S3-03",
+        "input1": {
+          "B1": 1,
+          "B2": 1,
+          "v": [
+            1,
+            1
+          ],
+          "psi": [
+            2,
+            2
+          ],
+          "chi": [
+            3,
+            1
+          ]
+        },
+        "input2": {
+          "B1": 1,
+          "B2": -1,
+          "v": [
+            -1,
+            0
+          ],
+          "psi": [
+            1,
+            -2
+          ],
+          "chi": [
+            1,
+            -2
+          ]
+        },
+        "max_abs_error": 8.881784197001252e-16
+      }
+    ],
+    "tolerance": 1e-10,
+    "maximum_observed_absolute_error": 3.552713678800501e-15,
+    "passed": 3,
+    "failed": 0,
+    "components": [
+      "2iB1_3",
+      "2i/sqrt3 B2_3",
+      "v3",
+      "psi3",
+      "chi3"
+    ]
+  },
+  "SP3": {
+    "expected": "All six source component equations match direct quaternionic 3x3 matrix commutator for the three predeclared distinct test pairs and one scaled case.",
+    "input1": {
+      "M": [
+        0,
+        1,
+        -2,
+        3
+      ],
+      "P": [
+        0,
+        2,
+        1,
+        -1
+      ],
+      "V": [
+        0,
+        -1,
+        3,
+        1
+      ],
+      "v": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "psi": [
+        -2,
+        1,
+        0,
+        3
+      ],
+      "chi": [
+        1,
+        -1,
+        2,
+        0
+      ]
+    },
+    "input2": {
+      "M": [
+        0,
+        -1,
+        1,
+        2
+      ],
+      "P": [
+        0,
+        3,
+        -2,
+        2
+      ],
+      "V": [
+        0,
+        2,
+        1,
+        -3
+      ],
+      "v": [
+        3,
+        1,
+        -2,
+        1
+      ],
+      "psi": [
+        0,
+        -1,
+        3,
+        2
+      ],
+      "chi": [
+        -2,
+        2,
+        1,
+        1
+      ]
+    },
+    "controls": [
+      {
+        "id": "H3-01",
+        "kind": "original pair",
+        "max_abs_error": 0
+      },
+      {
+        "id": "H3-02",
+        "kind": "first matrix componentwise scaled by one-half",
+        "max_abs_error": 0
+      },
+      {
+        "id": "H3-03",
+        "kind": "reversed pair (antisymmetry)",
+        "max_abs_error": 0
+      }
+    ],
+    "tolerance": 1e-10,
+    "passed": 3,
+    "failed": 0,
+    "components": [
+      "M3",
+      "P3",
+      "V3",
+      "v3",
+      "psi3",
+      "chi3"
+    ]
+  },
+  "verification_caveat": {
+    "mode": "Pure V8 deterministic hand-written matrix multiplication control; no GitHub Actions CI run, no cold checkout.",
+    "independence": "Matrix commutator computed independently from source-output component formulas, but both are agent-implemented source transcriptions; this is not external cold semantic review.",
+    "untested": [
+      "all quantified source inputs",
+      "full ordinary-H multiplication table matching frozen source conventions",
+      "split-real families",
+      "octonion f4",
+      "source phase-sensitive automorphism",
+      "Jacobi across all admissible carriers"
+    ]
+  },
+  "invalidation": {
+    "L133_G1_G3": "STILL_SOURCE_INCOMPLETE_AND_PARENT_STALE",
+    "G0": "NOT_FROZEN",
+    "L132": "UPSTREAM_OPEN",
+    "Recursive_IA": false
+  },
+  "next": "Build a fail-closed Node verifier for exact source entries, predeclared mutations of matrix position/conjugate/sign, and complete §4.1–§4.3 source evidence before G0 source-census successor is frozen.",
+  "nonclaims": [
+    "Six finite positive matrix checks do not prove full source Lie algebra equality.",
+    "No generic SU3/SP3 primitive, group theorem or external authority is granted.",
+    "No W evidence used."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "isograph.exp062-L02-E26-Hodge-trace-G0-CI.v0.1",
+  "recorded_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "pdf": "https://arxiv.org/pdf/1004.4866",
+    "printed_pages": [
+      6,
+      7,
+      8
+    ]
+  },
+  "exact_committed_ci": {
+    "run_id": 38018442138,
+    "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38018442138",
+    "exact_head_sha": "43d463a7d0ef920c6ad66793e603a05ed578f785",
+    "job_id": 114113879328,
+    "runner": "ubuntu-24.04",
+    "node_version": "26.7.0",
+    "conclusion": "success",
+    "completed_at_utc": "2026-10-10T02:50:59Z",
+    "complete_job_log_inspected": true,
+    "baseline_pass": true,
+    "issues": [],
+    "math_mutants_defined": 14,
+    "math_mutants_rejected": 14,
+    "source_mutants_defined": 16,
+    "source_mutants_rejected": 16,
+    "escapes": 0,
+    "samples": 24,
+    "Hodge_involution_basis_checks": 864,
+    "independent_Clifford_vs_Gram_pairs": 384,
+    "independent_cross_sector_zero_cases": 240,
+    "source_identities": 191,
+    "full_unchanged_source_records": 188,
+    "changed_source_items": [
+      "L-SSC-057",
+      "L-SSC-061",
+      "L-SSC-062"
+    ]
+  },
+  "exact_tested_artifacts": {
+    "packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_E26_HODGE_TRACE_SECTOR_G0_0_1.json",
+      "git_blob_sha": "d63304811b1ed204c36f93a315ae5df2888b578a"
+    },
+    "census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_46.json",
+      "git_blob_sha": "e3ce369dd0c93216bfc0e45a5e617e5948f86751"
+    },
+    "gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_50.json",
+      "git_blob_sha": "a28b0d46050e6888b0fd1f6a3f27aab6d732a219"
+    },
+    "checker": {
+      "path": "experiments/062/tools/verify-l-g0-l02-e26-hodge-trace-sector-0-1.mjs",
+      "git_blob_sha": "c10867e3770f33e03c7da02f5822491b84d3554e"
+    },
+    "math": {
+      "path": "experiments/062/tools/l02-e26-exact-math-0-1.mjs",
+      "git_blob_sha": "b964740070c29602cd5d7648bd39f7ad2eb295a7"
+    }
+  },
+  "mathematical_disposition": {
+    "claim": "Within selected finite local Cl(4,3) Clifford/exterior/Hodge tensor model and source Lorentzian star_e, the source Eq26 source component action is exactly the scalar-trace F=R/2-phi2 SigmaPrime/16+M/4+FA quadratic expansion; distinct e and ePrime survive.",
+    "proven_checks": "Generic Clifford/exterior matrix-bitmask scalar products crosschecked independently against sector diagonal gamma^2 Gram and exact metric 6x6 Hodge pairing; all admissible finite sources pass; field choices are not source solutions.",
+    "new_falsifiers": "Wrong gravity/Higgs/cross/mixed/YM coefficients, loss of signed frame orientation, Euclidean signature, temporal Clifford phase, e=ePrime substitution and field omission fail.",
+    "author_typo_proved": false,
+    "physical_equivalence_proved": false,
+    "full_spinN_reconstruction_qualified": false,
+    "source_Eq27_reduction_and_physical_parameters_qualified": false,
+    "source_fields_solve_dynamics": false
+  },
+  "other_track_boundaries": {
+    "W_read_for_L": false,
+    "source_frozen_complete": false,
+    "G1_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false,
+    "external_mathematical_cold_review_passed": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "primary_authors": "A. Garrett Lisi, Lee Smolin, Simone Speziale",
+    "agent_mathematical_formulation": "Clifford exterior vs Gram Hodge exact local witness 2026-10-09",
+    "independent_execution": "GitHub Actions Node runner at exact research commit, not independent mathematical author review"
+  }
+}

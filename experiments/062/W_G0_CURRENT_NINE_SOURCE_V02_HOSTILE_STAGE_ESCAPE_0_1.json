@@ -1,0 +1,16 @@
+{
+  "schema": "isograph.exp062-w-g0-current-all-nine-verifier-v02-hostile-escape.v0.1",
+  "run_id": 38122045839,
+  "commit_sha": "d83d20622d343ff5e1071b24e9a8a1ce7aff89ba",
+  "job_id": 114418608324,
+  "result": "FAILURE",
+  "positive_baseline_passed": true,
+  "hostile_rejected_at_failure": "FALSE_G0_READY_STAGE_STATUS",
+  "reason": "Stage status was reported in current index but v0.2 verifier did not assert it. Mutant replaced candidate status with a false G0_COMPLETE label, escaped other controls.",
+  "remedy": "Separate v0.3 validates current exact stage status and keeps historical Oct03 G0 OPEN; successor exact CI must independently pass.",
+  "failed_run_reclassified": false,
+  "stage_promotion": false,
+  "prior_v01_failure": "38121919671",
+  "old_source_semantics_changed": false,
+  "track": "W"
+}

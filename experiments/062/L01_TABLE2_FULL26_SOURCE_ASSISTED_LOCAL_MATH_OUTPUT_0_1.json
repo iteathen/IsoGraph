@@ -1,0 +1,143 @@
+{
+  "schema": "isograph.track-L.G0.L01.Table2-full26-local-math.v0.1",
+  "baseline": "PASS",
+  "exact_rational_input": true,
+  "source_PDF_rehashed_this_run": false,
+  "cold_semantic_review_complete": false,
+  "qualifies_L01_S016_exact_visual": false,
+  "G0_frozen": false,
+  "row_count": 26,
+  "distinct_3d_points": 26,
+  "distinct_projected_2d_points": 13,
+  "kind_counts": {
+    "gluon": 6,
+    "quark": 9,
+    "antiquark": 9,
+    "lepton": 1,
+    "antilepton": 1
+  },
+  "projection_fiber_multiplicities": {
+    "1": 6,
+    "2": 1,
+    "3": 6
+  },
+  "distinct_scaled_B2_grades": [
+    "-1/2",
+    "-1/3",
+    "-1/6",
+    "-2/3",
+    "0",
+    "1/2",
+    "1/3",
+    "1/6",
+    "2/3"
+  ],
+  "color_carrier_fibers": 6,
+  "provenance": "SOURCE_ASSISTED_ORIGINAL_PDF_PAGE7_NOT_INDEPENDENT_COLD",
+  "Lie_algebra_quotient_qualified": false,
+  "natural_identity_qualified": false,
+  "negative_controls": [
+    {
+      "name": "flip_qI_r_g3",
+      "rejected": true,
+      "diagnostic": [
+        "MISMATCH_q[I,r]_AXIS_1",
+        "FIBER_MULTIPLICITIES",
+        "SAME_PROJECTED_COLOR_quark_red"
+      ]
+    },
+    {
+      "name": "change_qIII_b_xyz",
+      "rejected": true,
+      "diagnostic": [
+        "MISMATCH_q[III,b]_AXIS_0",
+        "MISMATCH_q[III,b]_AXIS_1",
+        "MISMATCH_q[III,b]_AXIS_2",
+        "DUP_3D_q[III,b]"
+      ]
+    },
+    {
+      "name": "wrong_lepton_grade",
+      "rejected": true,
+      "diagnostic": [
+        "MISMATCH_l_AXIS_0",
+        "NINE_B2_GRADES"
+      ]
+    },
+    {
+      "name": "remove_anti_lepton",
+      "rejected": true,
+      "diagnostic": [
+        "ROW_COUNT_26",
+        "PANEL_COUNT_14_12",
+        "UNIQUE_SOURCE_MARKERS",
+        "KIND_COUNTS"
+      ]
+    },
+    {
+      "name": "misclass_anti_quark",
+      "rejected": true,
+      "diagnostic": [
+        "KIND_COUNTS",
+        "THREE_SERIES_quark_red",
+        "SAME_PROJECTED_COLOR_quark_red",
+        "DIFFERENT_GRADES_quark_red"
+      ]
+    },
+    {
+      "name": "duplicate_full_coordinate",
+      "rejected": true,
+      "diagnostic": [
+        "MISMATCH_qbar[III,g]_AXIS_1",
+        "DUP_3D_qbar[III,g]",
+        "UNIQUE_3D_26"
+      ]
+    },
+    {
+      "name": "promote_false_identity",
+      "rejected": true,
+      "diagnostic": [
+        "GUARD_projection_implies_natural_identity"
+      ]
+    },
+    {
+      "name": "promote_false_cold",
+      "rejected": true,
+      "diagnostic": [
+        "GUARD_independent_cold_review_complete"
+      ]
+    },
+    {
+      "name": "promote_G1",
+      "rejected": true,
+      "diagnostic": [
+        "GUARD_G1_authorized"
+      ]
+    },
+    {
+      "name": "invent_algebra_quotient",
+      "rejected": true,
+      "diagnostic": [
+        "GUARD_projected_su4_to_g2_Lie_quotient_qualified"
+      ]
+    },
+    {
+      "name": "change_g8_radical",
+      "rejected": true,
+      "diagnostic": [
+        "MISMATCH_g[r,bbar]_AXIS_2",
+        "PROJECTED_POSITIONS_13",
+        "FIBER_MULTIPLICITIES"
+      ]
+    },
+    {
+      "name": "swapped_color_series_marker",
+      "rejected": true,
+      "diagnostic": [
+        "UNIQUE_SOURCE_MARKERS"
+      ]
+    }
+  ],
+  "negative_controls_defined": 12,
+  "negative_controls_rejected": 12
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "isograph.exp062-l126-eq4-source-revision-mutant-escape.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_SOURCE_VERSION_MUTATION_ESCAPE_IN_EQ4_G0_VERIFIER",
+  "failed_ci": {
+    "id": 37840691538,
+    "head_sha": "c950a27311737e0ef1793b232cdd022a32043d3d",
+    "conclusion": "failure",
+    "source_baseline_numeric": "C 8/8 and H 64/64 source cyclic coefficient controls, original O 4/512 failures",
+    "adversarial_defined": 23,
+    "adversarial_rejected": 22,
+    "escaped": "change source version",
+    "independent_external_verification_passed": false
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l05-eq4-cyclic-source-0-1.mjs",
+    "git_blob_sha": "e58cc41ff53fb70e90c75be0f025e6535a5679ff"
+  },
+  "root_cause": "Source checker verified source ID, page index and equation but did not bind source.frozen_published to the explicitly frozen journal 2026-08-29 version of record. A hostile mutation to other dated source was therefore accepted, violating G0 source fidelity.",
+  "repair": "Require exact source.frozen_published===2026-08-29 journal version of record and DOI/URL. Verify source archival branch/source index pin, pass unmutated baseline before independent 23 mutant tests. Retain source Eq4 ordinary four-coefficient negative witnesses and split not-tested boundary.",
+  "status_boundary": "G0 source packet research only; no SSC successor or downstream replay authorized by failed CI."
+}

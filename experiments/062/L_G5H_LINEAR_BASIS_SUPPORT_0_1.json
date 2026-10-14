@@ -1,0 +1,110 @@
+{
+  "schema": "isograph.exp062-l-g5h-linear-basis-support.v0.1",
+  "date": "2026-10-07",
+  "status": "HYPOTHESIS_CANDIDATE_G6_QUALIFICATION_REQUIRED",
+  "authority_effect": "NONE_HYPOTHESIS_ONLY",
+  "authority": false,
+  "track_origin": "L",
+  "branch_head_at_creation": "9f5743a26df1232abc72888e23d4d3bad6c34ee9",
+  "origin": "HYPOTHESIS",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "parent_authority": {
+    "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+    "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+  },
+  "exact_scoped_relations": [
+    {
+      "id": 183002,
+      "role": "linear map",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "ecf84b358fb77aa4f7da9c87b4df67b76c0e00a6"
+    },
+    {
+      "id": 183003,
+      "role": "bilinear scalar-valued form",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_FORM_CHIRAL_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "ecf84b358fb77aa4f7da9c87b4df67b76c0e00a6"
+    },
+    {
+      "id": 188100,
+      "role": "bijection",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "c412592fbc57acb7764d07d6a25fd5a1f097781f"
+    },
+    {
+      "id": 193200,
+      "role": "linear bijection",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "cd944b6f925dfefe561e04af172653bbd88554e5"
+    },
+    {
+      "id": 187600,
+      "role": "two-element basis presentation",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "c6d4740238b27f4bf3e066980e9dda6f2a171021"
+    },
+    {
+      "id": 187601,
+      "role": "four-element basis presentation",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_2_4_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "c6d4740238b27f4bf3e066980e9dda6f2a171021"
+    },
+    {
+      "id": 215000,
+      "role": "eight-element basis presentation",
+      "source_path": "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_8_SCHEMA_0_1.isg",
+      "source_git_blob_sha": "e7a21cfbc4ef6389558c183d8f26521215e5eca6"
+    }
+  ],
+  "candidate_statement": "The seven exact scoped relation definitions form a source-neutral pure-Core-plus-field/vector module: they add no irreducible semantic leaf, and their full behavior is expressed by qualified Core logical structure plus exact campaign-local field/vector authority.",
+  "declared_scope": {
+    "included": [
+      "linearity as total function plus preservation of zero/addition/scalar action",
+      "bilinear scalar form as total binary function plus linearity in each argument",
+      "bijection as total function plus injectivity and surjectivity",
+      "linear bijection as conjunction of exact linear-map and bijection schemas",
+      "2/4/8 basis presentations as exact membership + linear independence + spanning over an admitted vector presentation"
+    ],
+    "excluded": [
+      "canonical basis choice",
+      "dimension outside 2/4/8",
+      "orthogonality or metric signature",
+      "algebra multiplication",
+      "composition algebra",
+      "conjugation/anti-involution",
+      "triality/reflection semantics",
+      "natural identity between isomorphic carriers",
+      "W/cross-track semantics"
+    ]
+  },
+  "motivating_evidence": [
+    "L125/L128 reopened occurrences require exact basis, map, and pairing behavior after field/vector support.",
+    "All seven selected definitions are explicit lower-schema candidates whose transitive semantic dependencies are limited to Core and exact field/vector relations 182001/182002/182004, with 193200 depending internally on 183002 and 188100.",
+    "Historical status labels are ignored; only exact scoped definitions are being tested."
+  ],
+  "prohibited_evidence": [
+    "unselected relations in the same historical files",
+    "historical CLOSED_SCHEMA labels",
+    "W source semantics",
+    "cross-track recurrence",
+    "textbook definitions not encoded in the exact selected relation bodies"
+  ],
+  "predicted_consequences": [
+    "Identity and invertible linear maps satisfy linear/linear-bijection schemas.",
+    "Nonlinear bijections fail linearity while remaining bijections.",
+    "Linear non-bijections fail the bijection layer.",
+    "Standard coordinate bases in dimensions 2/4/8 satisfy exact independence/spanning tests.",
+    "Dependent or non-spanning tuples fail the matching basis schema.",
+    "Standard dot-product-style finite bilinear forms satisfy the exact bilinear law; affine-shifted forms fail."
+  ],
+  "falsifier": "Any selected relation has a hidden dependency outside Core plus provisionally qualified 182001-182004 plus the selected internal relations; or any deterministic positive/adversarial case disagrees with the exact relation semantics; or module SSC/IA/reconstruction fails.",
+  "adaptive_evidence": "Selected only after G7-eligible field/vector support exposed basis/linearity as the next transitive L125/L128 blockers.",
+  "fresh_confirmation_status": "PENDING_INTERNAL_DETERMINISTIC_QUALIFICATION; external third-party review waived but not passed.",
+  "coverage_limits": "Qualification would authorize only the seven exact relation definitions for this campaign. It would not qualify unselected relations sharing their historical files.",
+  "owner_external_verification_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "next_stage": "G6_CAMPAIGN_LOCAL_PROVISIONAL_QUALIFICATION"
+}

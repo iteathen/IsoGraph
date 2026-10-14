@@ -1,0 +1,107 @@
+{
+  "schema": "woit.w081-regrounded-core-logic-native-derivation.v0.1",
+  "date": "2026-10-05",
+  "status": "CORE_LOGIC_BODY_COMPILED_PENDING_PRIMITIVE_CLOSURE_AUDIT",
+  "census_id": "W-SSC-081",
+  "frozen_body": "W04d says a Euclidean realization requires additional quaternionic/fibration structure and explicitly leaves the exact new spinor/twistor Wick-rotation implementation unresolved.",
+  "source_provenance": "W04d",
+  "native_bundle": "WOIT_NATIVE_COMPILATION_REGROUNDED_0_12.isg",
+  "routing_body_root": 932081,
+  "relation_atoms": {
+    "934002": "body target has source status",
+    "934065": "source proposition: Euclidean realization occurs",
+    "934066": "source proposition: additional quaternionic/fibration structure is present"
+  },
+  "raw_targets": {
+    "934011": "source status: unresolved",
+    "934440": "W081 Euclidean realization",
+    "934441": "W081 additional quaternionic/fibration structure",
+    "934442": "W081 exact new spinor/twistor Wick-rotation implementation"
+  },
+  "body_formula": {
+    "kind": "OP",
+    "role": "DEFINITION_EXPANDS_TO",
+    "args": [
+      {
+        "kind": "RAW",
+        "id": 932081
+      },
+      {
+        "kind": "OP",
+        "role": "AND",
+        "args": [
+          {
+            "kind": "OP",
+            "role": "IMPLIES",
+            "args": [
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 934065
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 934440
+                  }
+                ]
+              },
+              {
+                "kind": "OP",
+                "role": "PREDICATE_APPLICATION",
+                "args": [
+                  {
+                    "kind": "RAW",
+                    "id": 934066
+                  },
+                  {
+                    "kind": "RAW",
+                    "id": 934441
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "OP",
+            "role": "PREDICATE_APPLICATION",
+            "args": [
+              {
+                "kind": "RAW",
+                "id": 934002
+              },
+              {
+                "kind": "RAW",
+                "id": 932081
+              },
+              {
+                "kind": "RAW",
+                "id": 934442
+              },
+              {
+                "kind": "RAW",
+                "id": 934011
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "support_incidence": [
+    930005,
+    931081,
+    930106
+  ],
+  "target_internal_behavior_imported": false,
+  "guards": [
+    "quaternionic/fibration structure is an opaque source referent; no quaternionic or fibration mathematics is imported",
+    "the exact spinor/twistor Wick implementation is an opaque source referent; no Wick/twistor/spinor semantics are imported",
+    "the requirement force is owned by Core IMPLIES rather than a named domain relation",
+    "historical W081 closure packets, if any, are not premises",
+    "no Lisi or cross-track semantics are premises"
+  ],
+  "closure_claim": false
+}

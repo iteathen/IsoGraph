@@ -1,0 +1,97 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-Figure1-source-pinned-48-glyph-model-internal-CI-success.v0.1",
+  "date": "2026-10-12",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "evidence_class": "INTERNAL-QUALIFICATION",
+  "source": {
+    "frozen_pdf": "arXiv:0711.0770v1",
+    "sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "pages": 31,
+    "figure": "Figure 1",
+    "source_page_zero_based": 2
+  },
+  "successful_CI": {
+    "run_id": 38279423956,
+    "job_id": 114912784892,
+    "head_sha": "e7955618616abc627dc2eda914c6746a4a8efb2a",
+    "conclusion": "success",
+    "report_schema": "isograph.exp062.L01-Fig1-source-pinned-48-role-candidate.v0.2",
+    "PASS": true,
+    "original_pdf_sha256_verified": true,
+    "original_page3_text_sha256_verified": true,
+    "rendered_original_page": {
+      "valid": true,
+      "width": 816,
+      "height": 1056,
+      "bytes": 229461,
+      "sha256": "8355664c5dd621e0aaec479db0e13f6bacacaa2b01b9dea517c581edbdf1b4fe"
+    },
+    "source_model_generation_glyphs": 48,
+    "printed_Y_numerals": 16,
+    "internal_rational_checks": 48,
+    "hostiles_defined": 26,
+    "hostiles_rejected": 26,
+    "original_semantic_glyphs_independently_decoded": false
+  },
+  "candidate": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_ORIGINAL_FIG1_SM_PERIODIC_TABLE_SOURCE_CANDIDATE_G0_0_2.json",
+    "git_blob_sha": "2f38cc22709cfd9c92d0aca2997390da03a06767",
+    "source_semantic_authority": false,
+    "predecessor_candidate_retained": true
+  },
+  "verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-fig1-source-candidate-0-3.mjs",
+    "git_blob_sha": "a2f2d402b91563854591f57b347b3e33bca0d26b"
+  },
+  "workflow": {
+    "path": ".github/workflows/experiment-062-l-g0-l01-fig1-source-candidate-0-3.yml",
+    "git_blob_sha": "6e9126e0a6ff54f875825f885cba3440fcccd332"
+  },
+  "historical_failed_CI": {
+    "run_id": 38279072465,
+    "job_id": 114911619759,
+    "head_sha": "34740d0342cdce9efc792a9a7beba216dbcd7851",
+    "conclusion": "failure",
+    "hostiles_defined": 23,
+    "hostiles_rejected": 22,
+    "escaped_mutation": "alter_unrelated_SSC",
+    "failure_record": {
+      "path": "experiments/062/L01_FIG1_FIRST_SOURCE_CANDIDATE_CI_SSC_GUARD_FAILURE_0_1.json",
+      "git_blob_sha": "218ef75ae6e38d1daf4bbded806aeee6556a307d",
+      "run_id": 38279072465,
+      "job_id": 114911619759,
+      "conclusion": "failure",
+      "hostiles_defined": 23,
+      "hostiles_rejected": 22,
+      "escaped_mutation": "alter_unrelated_SSC",
+      "not_reclassified": true
+    },
+    "not_reclassified": true
+  },
+  "conservation": {
+    "SSC_revision": "0.96",
+    "source_inverse_revision": "0.1",
+    "L01_S004_disposition": "ORIGINAL_TABLE_FIGURE_OR_MATRIX_EXACT_CELLS_UNVERIFIED",
+    "unverified_L01_original_exact_groups": 16,
+    "original_SSC_IDs": 191,
+    "original_source_groups": 350,
+    "complete_six_source_cold_audits": 0,
+    "SSC_changed": false,
+    "L01_inverse_changed": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_author_synthesis_authorized": false,
+    "PR_merge_authorized": false
+  },
+  "limitations": {
+    "source_fig_glyphs_not_programmatically_independently_decoded": true,
+    "figure_connector_topology_not_verified": true,
+    "model_is_not_physical_theory_proof": true,
+    "whole_original_L01_source_cold_complete": false,
+    "CI_check_is_repository_owned_not_external_validation": true
+  },
+  "next": "Independent cold original Figure1 raster/glyph/connector audit and only then source-first inversion/SSC owner successor if that separate qualification passes."
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "isograph.exp062.L.G0.L04.original-section5-CPT-first-source-verifier-baseline-case-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "failed_run": {
+    "run_id": 38165581657,
+    "job_id": 114547341656,
+    "head_sha": "71438ba907734c02bb04a7d559c46b996dc39704",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38165581657",
+    "conclusion": "failure",
+    "baseline_issue": "opposite P phases and coupled T spinor source superscripts",
+    "hostiles_defined": 34,
+    "hostiles_rejected": 0,
+    "original_frozen_PDF_SHA256_verified": true,
+    "original_page10_all_13_blocks_SHA_verified": true,
+    "original_visual_page10_crop_SHA_verified": true,
+    "old_verifier": {
+      "path": "experiments/062/tools/verify-l-g0-l04-original-section5-CPT-source-0-1.mjs",
+      "git_blob_sha": "7fab89901fd6e08be6167c922ac00a1abf74167f"
+    },
+    "failed_result_never_reclassified": true
+  },
+  "methodology_diagnosis": {
+    "class": "VERIFIER_SOURCE_PROSE_CASE_SENSITIVITY_FALSE_BASELINE_NEGATIVE",
+    "cause": "Verifier asserted literal uppercase 'PAIR' in packet source modality for T signs, while frozen source packet says 'Upper/lower signs paired'. The exact Eq5.3 operator signs and source modality were not semantically different; the checker tested editorial case rather than semantic meaning.",
+    "correction": "Require case-independent 'paired' in that source semantic scope check; do not change original frozen source, packet or SSC, and rerun all 34 source-scoped adversarial controls.",
+    "original_source_printed_formula_count_changed": 0,
+    "source_corpus_revision_changed": false,
+    "older_CI_historical_failure_kept": true
+  },
+  "corrected_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l04-original-section5-CPT-source-0-2.mjs",
+    "git_blob_sha": "bf864a5059f0053de09bcb5d3097385a7cd650bd"
+  },
+  "source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L04_ORIGINAL_SECTION5_C_P_T_QFT_SIGNED_SOURCE_G0_0_1.json",
+    "git_blob_sha": "8fcc6f1edfc30786eade93ae71d3ea2330adae66",
+    "original_source_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422"
+  },
+  "locks": {
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "six_source_full_original_cold_complete": 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "isograph.exp062-l01-h1-phase-bracket-nextstep-token-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "FAILED_BASELINE_ON_NONLOADBEARING_NEXT_STEP_TOKEN_NO_MATH_TEST_OR_MUTATIONS_COUNTED",
+  "failed_run": {
+    "id": 37893439563,
+    "head_sha": "c7f49694d548cf9953ad7e92bbcf91c2b9110c4a",
+    "conclusion": "failure",
+    "error": "residual alternatives and dependency ordering",
+    "adversarial_defined": 18,
+    "adversarial_executed": 0,
+    "previous_trace_square_step": "passed"
+  },
+  "old_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-h1-phase-only-bracket-0-1.mjs",
+    "git_blob_sha": "133622b6d66fd892ff1d09f2f1ee844763c0fba5"
+  },
+  "cause": "Verifier required the literal substring G0 in packet.next_lawful_step, despite source packet explicitly asserting stage=G0 at top-level. This syntactic condition does not establish source mathematical fidelity and falsely fails the valid baseline.",
+  "repair": "Check the explicit next lawful L032 source replay obligation instead of redundant prose token; retain strict packet.stage=G0 and all semantically meaningful guards, rerun baseline and mutations.",
+  "nonclaims": [
+    "Do not report baseline as mathematical success",
+    "No adversarial mutants were executed on failed run",
+    "G1-G7 remain unauthorized; external reviewer not passed"
+  ]
+}

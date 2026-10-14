@@ -1,0 +1,101 @@
+{
+  "schema": "isograph.lisi-l01-h1-mixed-pure-bivector-bracket-obstruction.g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "PHASE_ONLY_SOURCE_INTERPOLATION_FAILS_PURE_MIXED_LIE_BRACKET_COMPATIBILITY_CANDIDATE",
+  "authority": false,
+  "source_complete": false,
+  "source_census_frozen": false,
+  "mathematical_theory_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "frozen_source": {
+    "id": "L01",
+    "revision": "A. Garrett Lisi arXiv:0711.0770v1 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "locations": [
+      "printed p8 gravity Cl(3,1) gamma and e_R/e_L two-spinor operators",
+      "printed p10 real Higgs phi labels and electroweak gamma",
+      "printed p12 eight 16x16 Cl(7,1) gamma factors, Gamma_{IJ}=(1/2)[Gamma_I,Gamma_J], H1 positive-chiral field blocks"
+    ],
+    "modality": "AUTHOR_CLIFFORD_BIVECTOR_COMMUTATOR_DEFINITION_PLUS_SOURCE_MATRIX_COMPONENTS; NOT_A_QFT_ACTION_THEOREM"
+  },
+  "parents": {
+    "trace_square_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_MIXED_TRACE_SQUARE_SIMILARITY_OBSTRUCTION_G0_0_1.json",
+      "git_blob_sha": "6a1412c782eb2034bfb0553bd8248faabcb14870"
+    },
+    "printed_H1_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "source_gamma_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "SSC0_26": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_26.json",
+      "git_blob_sha": "20207d4e1876871587eceecb739a470b47a9087d"
+    },
+    "current_gate0_26": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_26.json",
+      "git_blob_sha": "e3284380cd38a735afa06262d76e5e7ac94fb452"
+    }
+  },
+  "operator_scope": {
+    "X": "X_mu_nu=(Gamma_mu GammaPrime_nu)_{first8x8}; mu=1..4 source gravity index, nu=1..4 electroweak Higgs index",
+    "P": "P_mu_nu is the printed H1 coefficient of e^mu (FRAME ONE-FORM) phi^nu (REAL Higgs scalar), extracted from the H1 4x4 of 2spinor blocks; remove identical 1/4 scalars",
+    "G": "G_mu_kappa=(Gamma_mu Gamma_kappa)_{first8x8} for gravity mu<kappa; equals source Clifford bivector Gamma_mu_kappa because source gravity gamma factors anticommute",
+    "bracket": "[A,B]=AB-BA as ordinary complex operator matrices on 8-component positive-chiral spinor source carrier; NOT exterior wedge or full graded one-form H1 curvature, which has separate degree and source dynamics.",
+    "source_coefficient_guard": "Conclusions compare matrix COEFFICIENT operators, not the square of e^mu as a differential one-form (which would wedge to zero for same mu). Test mu≠kappa and fixed nu without suppressing coefficient roles.",
+    "source_frame_guard": "H1 source e_R/e_L use i times original real frame e^mu components; changing source coefficients or representation is not a simple complex similarity.",
+    "transformation_tested": "source-UNAUTHORIZED global diagnostic P_mu_nu=(-i)X_mu_nu for all 16 mixed source coefficients WHILE FIXING source pure gravity G_mu_kappa operator matrices; is this a Lie algebra automorphism of the spanned source matrices?",
+    "nonclaims": "May not infer corrected full source e phi action, QFT graded bracket or physical Lie group merely from matrix coefficient algebra."
+  },
+  "exact_algebraic_witness": {
+    "source_indices": {
+      "mu": 1,
+      "kappa": 2,
+      "nu": 1
+    },
+    "native_mixed": "X_11 = Gamma1 GammaPrime1; X_21=Gamma2 GammaPrime1",
+    "source_gravity": "G_12=(Gamma1 Gamma2)_{first8}=(i I2⊗I2⊗sigma3)",
+    "native_commutator": "[X_11,X_21]=-2 G_12",
+    "printed_mixed": "P_11=(-i)X_11; P_21=(-i)X_21, as separately source-matrix reconstructed",
+    "printed_commutator": "[P_11,P_21]=+2 G_12",
+    "native_row0_col0": "-2i",
+    "printed_row0_col0": "+2i",
+    "pure_G12_row0_col0": "+i",
+    "conditional_bracket_preservation": false,
+    "reason": "[-i X,-i Y]=(-i)^2[X,Y]=-[X,Y]; G_12 is nonzero. A source relative i rescaling that leaves G_12 unchanged cannot preserve both structure constants.",
+    "source_published_bracket_equivalence_for_all_generator_roles_certified": false
+  },
+  "finite_scope": {
+    "gravity_unordered_index_pairs": 6,
+    "fixed_electroweak_index_choices": 4,
+    "independent_mixed_mixed_bracket_cases": 24,
+    "matrix_dimension": 8,
+    "all_native_commutators_equal_minus2_original_gravity_bivector": true,
+    "all_printed_commutators_equal_plus2_original_gravity_bivector": true,
+    "all_24_brackets_not_equal_without_source_redefinition": true,
+    "matrix_cells_changing_between_commutators": 192,
+    "each_case_changing_matrix_cells": 8,
+    "source_original_gamma_real_form_metric": "Cl(7,1) diag(+,+,+,-,+,+,+,+), no prime-generator imaginary redefinition adopted",
+    "source_pure_gravity_fixed": true,
+    "global_phase_only_operator_Lie_automorphism": false,
+    "diagnostic_phase_is_not_source_authority": true
+  },
+  "hypotheses_not_ruled_out": [
+    "An explicit source-justified coefficient/field normalization with corresponding changes to other sectors, not yet located.",
+    "A changed real form or additional source operator transformation that modifies also pure sectors; must be independently sourced and preserve frozen revision.",
+    "A non-similarity or field-dependent action on source spinor/bundle carriers with explicit tensor/binder roles, not represented by this finite scope.",
+    "A paper typo or intended different convention—possible but not established and not authorized as correction."
+  ],
+  "falsifiers": [
+    "Any source-basis rereading that makes the first eight rows/columns or Pauli factor ordering different must be adjudicated against the frozen PDF.",
+    "Any primary-source global phase convention restoring ALL source Lie bracket relations without changing field coefficients must be reconstructed with exact operator roles.",
+    "Any full source exact graded representation whose connection-curvature action does not reduce to the isolated operator matrix bracket must be treated separately, not overruled by this check."
+  ],
+  "next_lawful_step": "Independent matrix construction using source L01 Γ and printed H1, all 24 source bracket cases with complete matrix entry checks and hostile mutations. Preserve negative scope and no invented i correction. Only afterwards source-census L032 replay if confirmed."
+}

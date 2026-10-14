@@ -1,0 +1,193 @@
+{
+  "schema": "isograph.lisi-l01-h1-pure-mixed-full-graded-coefficient-bracket-audit.g0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "FULL_FINITE_SOURCE_MATRIX_COEFFICIENT_DIAGNOSTIC_NOT_FULL_GRADED_CURVATURE_CLAIM",
+  "authority": false,
+  "source_census_frozen": false,
+  "source_complete": false,
+  "source_mathematical_theorem_qualified": false,
+  "G1_authorized": false,
+  "external_cold_review_passed": false,
+  "frozen_source": {
+    "id": "L01",
+    "author": "A. Garrett Lisi",
+    "work": "An Exceptionally Simple Theory of Everything",
+    "revision": "arXiv:0711.0770v1 2007-11-06",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "primary_source_pages": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "pdf_zero_based": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "source_assertions": [
+      "§2.2.1 printed p9: omega=(1/2) omega^{mu nu} gamma_{mu nu}=diag(omega_L,omega_R), with gamma_{mu nu}=(1/2)[gamma_mu,gamma_nu].",
+      "§2.2.1 printed p9: omega_{L/R}=(omega_S^tau ∓ i omega_T^tau)*i sigma_tau, omega_S^tau=(1/2) epsilon^{epsilon pi}_tau omega^{epsilon pi}, omega_T^tau=omega^{tau4}.",
+      "§2.2.3 printed p12: eight 16x16 Cl(7,1) Gamma generators with exact Pauli Kronecker order; ephi=e^mu phi^nu Gamma_mu GammaPrime_nu.",
+      "§2.2.3 printed p12: H1=omega/2+ephi/4+w_ew, 8x8 positive-chiral first quadrant displayed as 4x4 of two-spinor operator blocks with omega_L on first two diagonal slots and omega_R on last two.",
+      "§2.2.2 printed p10: Higgs complex phiPlus,phiMinus,phiZero,phiOne are exact linear combinations of four REAL phi^nu; frame e_R=i(e4−spatial), e_L=i(e4+spatial), with the frame a ONE-FORM."
+    ],
+    "modality": "SOURCE-RELATIVE_FIXED_COEFFICIENT_8X8_OPERATOR_ANALYSIS; NO CLAIM ABOUT FULL_CURVATURE_LIE_HOMOMORPHISM_OR_GLOBAL_SOURCE_ERROR"
+  },
+  "dependency_pins": {
+    "native_source_gamma": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_GRAVIWEAK_CL71_H1_SOURCE_G0_0_1.json",
+      "git_blob_sha": "463d101820539144184d6328e0bf2d2a56453b78"
+    },
+    "printed_source_H1": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_POSITIVE_CHIRAL_FIELD_BLOCKS_G0_0_1.json",
+      "git_blob_sha": "5900e9a63cbbdba814edbefe5124d1262a17f995"
+    },
+    "earlier_24_gravity_bracket": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_PHASE_ONLY_LIE_BRACKET_OBSTRUCTION_G0_0_1.json",
+      "git_blob_sha": "1d049b7adeb2503d7d1529bb5521818b9b366058"
+    },
+    "source_SSC_0_27": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_27.json",
+      "git_blob_sha": "924c5b652b977eb8eeb225724d98eb20b814bbc0"
+    },
+    "procedural_gate_0_27": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_27.json",
+      "git_blob_sha": "5f64c3cf2ce834a107bf05b5c28a0545dae9ecf8"
+    }
+  },
+  "source_roles": {
+    "gravity_basis": [
+      "Gamma1",
+      "Gamma2",
+      "Gamma3",
+      "Gamma4"
+    ],
+    "electroweak_basis": [
+      "GammaPrime1",
+      "GammaPrime2",
+      "GammaPrime3",
+      "GammaPrime4"
+    ],
+    "native_mixed": "X_(mu,nu)=(Gamma_mu GammaPrime_nu)_{first8}; mu,nu=1..4; ordinary complex 8x8 OPERATOR COEFFICIENT of e^mu phi^nu",
+    "printed_mixed": "P_(mu,nu) is coefficient in source printed H1 4x4 two-spinor blocks after removing same printed 1/4 scalar, SAME real e^mu,phi^nu coefficient labels; derived only from printed e_R/e_L and four real Higgs expressions",
+    "pure_gravity": "G_(mu,kappa)=(Gamma_mu Gamma_kappa)_{first8}, mu<kappa; source spin-connection omega_L/omega_R coefficient compared INDEPENDENTLY using omega_S and omega_T, respecting gamma_{mu kappa}=Gamma_mu Gamma_kappa for distinct source gamma basis elements",
+    "matrix_bracket": "[A,B]=AB-BA computed in ordinary complex coefficient ENDOMORPHISMS of 8-source-spinor carrier. e^mu is a frame ONE-FORM and phi^nu a real Higgs scalar; ordinary matrix coefficient brackets do not prove graded differential form wedge/curvature.",
+    "original_source_gamma_metric": "diag(+,+,+,-,+,+,+,+); do not suppress timelike sign or alter phi scalar reality",
+    "pure_electroweak_channel": "When two X generators share mu but not nu, their commutator is a source-primed Clifford bivector; this audit does NOT independently identify all these with printed W/B1 normalized coefficient generators.",
+    "prohibited_change": "Do not insert relative -i as an author-approved phase, change source gamma/field real form or assert an author typo."
+  },
+  "independent_printed_omega_six_cases": [
+    {
+      "mu": 1,
+      "kappa": 2,
+      "source_spatial_spin": "omega_S^3=+1",
+      "printed_four_2spin_diagonal_blocks": "[i*sigma3,i*sigma3,i*sigma3,i*sigma3]"
+    },
+    {
+      "mu": 1,
+      "kappa": 3,
+      "source_spatial_spin": "omega_S^2=-1",
+      "printed_four_2spin_diagonal_blocks": "[-i*sigma2,-i*sigma2,-i*sigma2,-i*sigma2]"
+    },
+    {
+      "mu": 2,
+      "kappa": 3,
+      "source_spatial_spin": "omega_S^1=+1",
+      "printed_four_2spin_diagonal_blocks": "[i*sigma1,i*sigma1,i*sigma1,i*sigma1]"
+    },
+    {
+      "mu": 1,
+      "kappa": 4,
+      "source_boost_spin": "omega_T^1=+1",
+      "printed_four_2spin_diagonal_blocks": "[+sigma1,+sigma1,-sigma1,-sigma1]"
+    },
+    {
+      "mu": 2,
+      "kappa": 4,
+      "source_boost_spin": "omega_T^2=+1",
+      "printed_four_2spin_diagonal_blocks": "[+sigma2,+sigma2,-sigma2,-sigma2]"
+    },
+    {
+      "mu": 3,
+      "kappa": 4,
+      "source_boost_spin": "omega_T^3=+1",
+      "printed_four_2spin_diagonal_blocks": "[+sigma3,+sigma3,-sigma3,-sigma3]"
+    }
+  ],
+  "finite_observations": {
+    "gravity_pairs": 6,
+    "gravity_operator_dimension": 8,
+    "native_to_printed_pure_omega_nonzero_entry_mismatches": 0,
+    "mixed_pairs": 16,
+    "mixed_operator_dimension": 8,
+    "mixed_direct_native_vs_printed_nonzero_entry_mismatches": 128,
+    "printed_mixed_equals_diagnostic_minus_i_native_all_16": true,
+    "source_mixed_phase_source_authorized": false,
+    "pure_gravity_with_mixed_brackets": {
+      "pairs": 96,
+      "passes_under_diagnostic_F_G_identity_F_X_minus_i": 96,
+      "failures": 0,
+      "operator_matrix_dimensions": 8
+    },
+    "all_mixed_pairs": {
+      "pairs": 120,
+      "share_gravity_mu": {
+        "pairs": 24,
+        "nonzero": 24,
+        "phase_bracket_sign_changed": 24,
+        "changed_matrix_entries": 192,
+        "channel": "SOURCE_PRIMED_CLIFFORD_BIVECTOR_NOT_FULLY_MATCHED_TO_PRINTED_SU2_FIELD_COEFFICIENTS"
+      },
+      "share_higgs_nu": {
+        "pairs": 24,
+        "nonzero": 24,
+        "phase_bracket_sign_changed": 24,
+        "changed_matrix_entries": 192,
+        "channel": "SOURCE_PURE_GRAVITY_BIVECTOR_FULLY_MATCHED_TO_PRINTED_OMEGA_IN_SAME_FIXED_ORDER"
+      },
+      "disjoint_indices": {
+        "pairs": 72,
+        "nonzero": 0,
+        "phase_bracket_sign_changed": 0,
+        "changed_matrix_entries": 0
+      },
+      "nonzero_total": 48,
+      "changed_nonzero_pairs": 48,
+      "changed_matrix_entries": 384
+    },
+    "first_gravity_witness": {
+      "source_indices": "X_11,X_21 fixed nu=1",
+      "native_bracket": "-2*G_12",
+      "printed_bracket": "+2*G_12",
+      "pure_G12_row0col0": "+i",
+      "native_row0col0": "-2i",
+      "printed_row0col0": "+2i"
+    },
+    "first_electroweak_witness": {
+      "source_indices": "X_11,X_12 fixed mu=1",
+      "source_channel": "primed Cl(4) bivector",
+      "qualification": "SOURCE_COEFFICIENT_DIAGNOSTIC_ONLY"
+    }
+  },
+  "source_implications_and_nonclaims": {
+    "source_pure_gravity_fixed_was_not_an_arbitrary_test_assumption": "For this EXACT printed basis and original omega_S/T coefficients, direct 16x16 first-quadrant gravity gamma products equal the independently printed 8x8 chiral omega_L/R coefficients in ALL SIX source generator pairs.",
+    "source_mixed_phase_only_fails_gravity_bracket": "The conditional map F(G)=G, F(X)=(-i)X on source operator coefficient matrices fails 24 mixed/mixed -> gravity brackets (and 24 primed-output cases under F of source primed output held fixed), so it cannot be an automorphism of the fixed source G-and-X Clifford coefficient representation.",
+    "not_claimed_primed_source_field_equality": "The six source primed bivectors are not yet individually reconstructed as original W/B1 source connection coefficients in the printed 8x8 layout. Do not turn their 24 commutator sign changes into an independent fully source-typed electroweak Lie algebra theorem.",
+    "not_claimed_full_author_defect": "The paper may use a separate phase, coefficient convention, redefinition of generators, different bundle action or graded field treatment not yet reconstructed. The source may be internally representationally inconsistent under exactly fixed factors without establishing why or author intent.",
+    "not_claimed_differential_curvature": "Products and brackets of matrix COEFFICIENTS ignore exterior form wedge, torsion, Higgs field derivatives and curvature; do not infer predictions, dynamics, or global non-unification.",
+    "no_cross_track": true,
+    "all_current_G1_G7_authorized": false,
+    "source_primary_complete": false,
+    "primitive_closure_complete": false
+  },
+  "next_lawful_steps": [
+    "Independent Node reconstruction against the exact frozen source Γ, H1 and omega roles, with baseline-first hostile sign/index/gravity timelike controls.",
+    "Preserve as L-SSC-032 G0 source-only negative evidence in a successor SSC only if CI verifies all six pure omega and 120 mixed pairs.",
+    "Before calling a publication error, inspect whether the source itself explicitly normalizes mixed ephi by i, transports both pure sectors, or uses different field coefficient roles in subsequent §3 curvature/action.",
+    "Full frozen L01–L06 exact source assertion census and primitive closure still G0 open; do not use historical G1–G7 or W source."
+  ]
+}

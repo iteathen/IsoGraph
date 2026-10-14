@@ -1,0 +1,151 @@
+{
+  "schema": "isograph.track-L.G0.L04-original-p3-pin-signature-and-conjugation-source.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "original": {
+    "source": "L04",
+    "revision": "arXiv:2407.02497v2",
+    "url": "https://arxiv.org/pdf/2407.02497v2",
+    "PDF_SHA256": "5655350615517fafc0604cb9fcf2c22852489f8dc70f84849dd9df6510e19422",
+    "pdf_bytes": 348134,
+    "PDF_pages": 17,
+    "p3_page_SHA256": "7f569c8a8ef99942eb0bb318bdaff4e9509d923ada6b0bd81540a57947d044bf",
+    "source_atom": "L04-P003-B001",
+    "source_atom_SHA256": "599069870dfbe88de38891eb84e32d38aed9ca92ca66a0cee397c2cb98c15f5f",
+    "source_atom_lines": [
+      1,
+      34
+    ]
+  },
+  "source_first": [
+    {
+      "id": "L04-S004",
+      "old_ssc": [
+        "L-SSC-095"
+      ],
+      "current_ssc": [
+        "L-SSC-095"
+      ],
+      "source_scope": "§1 printed page3 Pin signature and P-phase paragraph",
+      "roles": [
+        {
+          "key": "PIN13_SIGNS",
+          "literal": "Pin(1,3) U'_P²=+1, U'_T²=+1, U'_PT²=-1",
+          "signs": [
+            1,
+            1,
+            -1
+          ],
+          "modality": "ORIGINAL_SIGNED_SOURCE_ASSERTION"
+        },
+        {
+          "key": "PIN31_SIGNS",
+          "literal": "Pin(3,1) U'_P²=-1, U'_T²=-1, U'_PT²=-1",
+          "signs": [
+            -1,
+            -1,
+            -1
+          ],
+          "modality": "ORIGINAL_SIGNED_SOURCE_ASSERTION"
+        },
+        {
+          "key": "NOT_ISOMORPHIC_AUTHOR",
+          "literal": "Author concludes two Pin signatures are not isomorphic",
+          "modality": "AUTHOR_MATH_CLAIM_UNPROVED"
+        },
+        {
+          "key": "P_PRIME_VS_PHASE",
+          "literal": "U'_P=gamma0 and chosen U_P=i gamma0 must remain distinct source representatives",
+          "modality": "SOURCE_REPRESENTATIVE_CHOICE"
+        },
+        {
+          "key": "P_PHASE_SQUARE",
+          "literal": "Author's chosen phase gives U_P²=-1, motivated by 2π spinor sign",
+          "sign": -1,
+          "modality": "SOURCE_PHASE_CONVENTION"
+        },
+        {
+          "key": "P_UNDERLYING_PIN31",
+          "literal": "Author says physically we appear to live with underlying Pin(3,1), whereas calculations are easier in Pin(1,3)",
+          "modality": "AUTHOR_PHYSICAL_INFERENCE_NOT_PROOF"
+        },
+        {
+          "key": "P3_SOURCE_DIRECT",
+          "literal": "p3 twice prints Spin(1,3)=Spin+(1,3) × {1,P T_U}; prior S003 already conserves literal × and unresolved factor semantics",
+          "modality": "CROSS_GROUP_SOURCE_CONSERVATION_ONLY"
+        }
+      ]
+    },
+    {
+      "id": "L04-S005",
+      "old_ssc": [
+        "L-SSC-096"
+      ],
+      "current_ssc": [
+        "L-SSC-096"
+      ],
+      "source_scope": "§1 printed page3 C and differentiated T quantization source",
+      "roles": [
+        {
+          "key": "C_ANTIUNITARY",
+          "literal": "U_C=i gamma2 K antiunitary, K complex conjugation, maps complex Dirac spinors particles to antiparticles",
+          "modality": "SOURCE_OPERATOR_TYPE"
+        },
+        {
+          "key": "TIME_Q_REASON",
+          "literal": "T on quantized fermion fields is more complicated because of the positive energy constraint",
+          "modality": "SOURCE_QUALIFIER"
+        },
+        {
+          "key": "TIME_Q_UNITARY",
+          "literal": "U_T^Q=gamma13 unitary for quantized T symmetry",
+          "modality": "SOURCE_OPERATOR_TYPE"
+        },
+        {
+          "key": "TIME_UNQUANTIZED_ANTIUNITARY",
+          "literal": "U_T=-i U'_T U_C=gamma13 K antiunitary on unquantized Dirac spinors",
+          "modality": "SOURCE_OPERATOR_COMPOSITION"
+        },
+        {
+          "key": "THREE_DISTINCT_TIME_ROLES",
+          "literal": "Earlier unitary T_U reflection U'_T=gamma1 gamma2 gamma3, U_T^Q and antiunitary U_T are distinct carriers/actions",
+          "modality": "SOURCE_SCOPE_DISAMBIGUATION"
+        },
+        {
+          "key": "CPT_ORDER_16_BOUNDARY",
+          "literal": "C/P/T order16 finite group, projective cube and biquaternion change belong to adjacent S006 and existing SSC-097/108/111; no silent conflation",
+          "modality": "ADJACENT_SOURCE_GROUP_BOUNDARY"
+        }
+      ]
+    }
+  ],
+  "source_model_diagnostic": {
+    "carrier": "unquotiented signed Cl(1,3), gamma0²=+1; space gamma_i²=-1; complex scalar i²=-1; K anti-linear",
+    "intended_scope": "check source's finite product -i U'_T U_C=gamma13 K in Clifford blade coefficients",
+    "mathematics_global_proof": false
+  },
+  "predecessors": {
+    "ssc_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_86.json",
+    "ssc_sha": "0743dfa1a160c8bc742c18af00b004df9eec4011",
+    "inverse_path": "research/woit-lisi-isomorph/lisi/LISI_L04_SOURCE_FIRST_REVERSE_COVERAGE_0_19.json",
+    "inverse_sha": "f41fc1bcc29dea7a7ecc6d797d67ed0fc1e255f7",
+    "gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_159.json",
+    "gate_sha": "d072cea5fc2120a7e0e1f877df6f5f9a83683653"
+  },
+  "locks": {
+    "source_formulation_count": 6,
+    "source_groups": 350,
+    "SSC_IDs": 191,
+    "L04_groups": 53,
+    "source_groups_newly_reviewed": 2,
+    "original_mapped_cold_open_after": 14,
+    "whole_source_cold_passes": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_semantics_imported": false,
+    "cross_track_authorized": false,
+    "PR70_merge_authorized": false
+  }
+}

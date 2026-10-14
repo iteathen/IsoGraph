@@ -1,0 +1,72 @@
+{
+  "schema": "isograph.exp065-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_G6_MODULE_SSC",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module_id": "RELATIONAL_FIXED_POINT_FREE_TWO_STEP_RETURN_INTERFACE_0_1",
+  "primitive_id": 221101,
+  "candidate": {
+    "md": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_RELATIONAL_TWO_STEP_RETURN_SCHEMA_0_1.md",
+      "git_blob_sha": "e51d5ac3ec15a799a63912c0df9b0c31fa367ff1"
+    },
+    "native": {
+      "path": "research/woit-lisi-isomorph/support/PRIMITIVE_RELATIONAL_TWO_STEP_RETURN_SCHEMA_0_1.isg",
+      "git_blob_sha": "919cdece9f5d6aaba92a43c706417d4875c2cd27"
+    }
+  },
+  "discovery_evidence": {
+    "path": "experiments/062/W_G5H_RELATIONAL_TWO_STEP_RETURN_0_1.json",
+    "git_blob_sha": "c1d4e3eb1f626233c8d56f87ceea3c05666e77d0",
+    "origin": "HYPOTHESIS_REVISION"
+  },
+  "stage_gate": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_18.json",
+    "git_blob_sha": "54cf5204faa23f0660ba4844e97a8a2def874a10"
+  },
+  "native_support": {
+    "primitive_logic": {
+      "path": "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.isg",
+      "git_blob_sha": "2630336da5c4117a15a43c1dc0847536b33ed083"
+    },
+    "primitive_data": {
+      "path": "research/primitive-logic/PRIMITIVE_DATA_CONSTRUCTORS_0_5.isg",
+      "git_blob_sha": "c0479ac1de1a1c8ff5737221133601618b1a56cf"
+    }
+  },
+  "assertions": [
+    {
+      "id": "RTR-A01",
+      "claim": "Every realized R(x,y) is typed by P(x) and P(y)."
+    },
+    {
+      "id": "RTR-A02",
+      "claim": "Every realized two-step path x R y R z among represented P-elements returns to its start: z=x."
+    },
+    {
+      "id": "RTR-A03",
+      "claim": "No represented P-element has an R self-loop."
+    }
+  ],
+  "explicit_nonclaims": [
+    {
+      "id": "RTR-N01",
+      "claim": "The module does not assert totality, existence of any R edge, or nonemptiness of P."
+    },
+    {
+      "id": "RTR-N02",
+      "claim": "The module does not assert single-valuedness, functionhood, symmetry, injectivity, or surjectivity."
+    },
+    {
+      "id": "RTR-N03",
+      "claim": "The module does not assert finiteness, parity, cardinality, projective/quaternionic/vector/topological/geometric semantics."
+    },
+    {
+      "id": "RTR-N04",
+      "claim": "Qualification does not close W-SSC-097; G7 source reconstruction is separate."
+    }
+  ],
+  "qualification_target": "CORE_DEFINABLE_SCHEMA_WITH_EXPLICIT_SCOPE",
+  "qualification_scope": "Typed binary relations with realized two-step return and no self-loop only."
+}

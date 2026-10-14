@@ -1,0 +1,24 @@
+name: Experiment 062 verify W G1 0.27 W05 source conservation
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - 'experiments/062/W097_W05_DIRECT_SOURCE_ADDITIONAL_OMISSIONS_AUDIT_0_1.json'
+      - 'research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_7.json'
+      - 'research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_6.json'
+      - 'experiments/062/W_CURRENT_STAGE_GATE_0_32.json'
+      - 'experiments/062/W_G1_SOURCE_LOCAL_ADJUDICATION_0_27.json'
+      - 'experiments/062/W_EXTRACTION_RECONCILED_0_27.json'
+      - 'experiments/062/tools/verify-w-extraction-reconciled-0-27.mjs'
+      - '.github/workflows/experiment-062-verify-w-g1-0-27.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w-extraction-reconciled-0-27.mjs

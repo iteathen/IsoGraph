@@ -1,0 +1,25 @@
+name: Experiment 062 L G0 official frozen source byte provenance 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/L_G0_FROZEN_ORIGINAL_PDF_FIRST_FETCH_MISSING_POPPLER_FAILURE_0_1.json'
+      - '.github/workflows/experiment-062-l-g0-original-pdf-provenance-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  original-bytes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Install official PDF parsing tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          command -v pdfinfo
+          command -v pdftotext
+      - name: Verify exact frozen original version headers, pages, and SHA256
+        run: node experiments/062/tools/probe-l-g0-frozen-original-pdf-bytes-0-1.mjs

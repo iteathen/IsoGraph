@@ -1,0 +1,31 @@
+name: Experiment 062 W G1 six author originals exact source-local 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_CURRENT_AUTHOR_SIX_SOURCE_FIRST_EXACT_BODIES_0_1.json'
+      - 'experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs'
+      - 'experiments/062/tools/verify-w-g1-six-original-author-0-1.py'
+      - '.github/workflows/experiment-062-w-g1-six-exact-original-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Source/extraction verifier syntax
+        run: |
+          python3 -m py_compile experiments/062/tools/verify-w-g1-six-original-author-0-1.py
+          node --check experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs
+      - name: Re-fetch four distinct W author originals and verify six original source anchor sets
+        run: python3 -u experiments/062/tools/verify-w-g1-six-original-author-0-1.py
+      - name: Verify six source G0 inverse and G1 29 occurrence candidates with 30 adverse cases
+        run: node experiments/062/tools/verify-w-g1-six-exact-source-0-1.cjs
+      - name: Existing G0 stage and qualified prior 12 W body conservation
+        run: |
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs
+          node experiments/062/tools/verify-w-g0-current-qualified-stage-0-1.cjs

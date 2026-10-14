@@ -1,0 +1,136 @@
+{
+  "schema": "isograph.lisi-L01-D4-complex-phase-conjugacy-obstruction-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "EXACT_COMPLEX_PHASE_PLAQUETTE_OBSTRUCTION_CONDITIONAL_PROJECT_COMPACT_MODEL_NOT_SOURCE_THEOREM",
+  "original_source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "visually_examined_printed_pages": [
+      4,
+      16,
+      22,
+      23,
+      24,
+      27
+    ],
+    "source_semantics": "Table9 identifies 18 xPhi root-weight roles. §2.4.1 only proposes their shared-six-Phi scalar factorization as natural, without a uniqueness theorem. §3.1 uses bosonic xPhi in H2. §3.2.2 calls its new-field action speculative and its Hodge frame/coframe extraction awkward.",
+    "not_an_author_root_phase_choice": true
+  },
+  "pinned_inputs": {
+    "ssc038": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_38.json",
+      "git_blob_sha": "8adfdbd99edf65568d1f67376b77843714199ac4"
+    },
+    "gate038": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_38.json",
+      "git_blob_sha": "b96a7977dbae6212bfb857a5f514fc2254f43b3c"
+    },
+    "sign_exhaustion": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_COMPACT_REALITY_SIGN_PHASE_G0_0_1.json",
+      "git_blob_sha": "46b6dc87b1e37d6119ff3284622938947cd4ac0a"
+    },
+    "rank_one_transport": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_ROOT_PHASE_RANK_ONE_TRANSPORT_G0_0_1.json",
+      "git_blob_sha": "4857a88a16d30be1a9da115b5e87eed25e2d7168"
+    }
+  },
+  "chosen_model": {
+    "representation": "Same project 8x8 complex J-orthogonal D4 Chevalley matrices, with compactness defined as matrix skew-Hermitian intersection. Original source does not fix this matrix and its coefficient normalizations.",
+    "source_root_roles": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "shared_scalar_roles": [
+      "c1",
+      "c2",
+      "c3",
+      "a1",
+      "a2",
+      "a3"
+    ],
+    "field_reality_choice": [
+      "Phi_ai=conjugate(Phi_ci), i in {1,2,3}",
+      "x2=-kappa*conjugate(x1), with kappa a nonzero complex constant (row amplitude/phase normalization)",
+      "x3 real in the same chart"
+    ],
+    "root_matrices_exact_adjoint": [
+      "E_(1,ci)^dagger=+E_(2,ai)",
+      "E_(1,ai)^dagger=-E_(2,ci)",
+      "E_(3,ci)^dagger=-E_(3,ai)"
+    ],
+    "allowed_generator_rescalings": "All 18 lambda_(a,c) are arbitrary NONZERO complex numbers; not restricted to signs or unit modulus. Full coefficient inverse-transport preserves unrestricted X.",
+    "compactness_constraints_for_generic_fields": [
+      "kappa*lambda_(2,ai)=conjugate(lambda_(1,ci))",
+      "kappa*lambda_(2,ci)=-conjugate(lambda_(1,ai))",
+      "lambda_(3,ai)=conjugate(lambda_(3,ci))"
+    ],
+    "plaquette_expression": "D_i=lambda_(1,ci)*lambda_(2,ai)-lambda_(1,ai)*lambda_(2,ci)",
+    "exact_polynomial_certificate": "kappa*D_i=abs(lambda_(1,ci))^2+abs(lambda_(1,ai))^2=u_i^2+v_i^2+r_i^2+s_i^2",
+    "independent_real_variables_per_color": 4,
+    "independent_colors": 3,
+    "nonzero_monomial_coefficients_in_certificate": 12,
+    "strict_nonzero_result": "For kappa != 0 and nonzero complex lambda_(1,ci), lambda_(1,ai), every D_i is nonzero.",
+    "rank_one_incompatibility": "A separable 3x6 phase matrix lambda_(a,c)=u_a*v_c has every 2x2 minor zero, including D_i. Therefore NO project compact real coefficient completion satisfying the chosen conjugacy rules and nonzero complex phases can preserve generic shared-Phi rank one by inverse root-coordinate transport.",
+    "previous_sign_result": "The prior 2^9=512 +/-1 compact sign-phase enumeration is a finite special case with D_i=+2; the present argument does not rely on finite enumeration.",
+    "source_limit": "This proves only a conditional project-compact-phase vs source-style proposed factorization incompatibility; it does NOT prove source's own E8 real form or scalar reality is this chosen model."
+  },
+  "finite_exact_cross_checks": {
+    "method": "Independent Gaussian-integer complex matrix replay with nonzero complex kappa, nontrivial lambda1 and lambda3, lambda2 forced by compact adjoint, Phi anti-color conjugate, x2=-kappa*conj(x1).",
+    "root_dagger_checks": 18,
+    "root_J_checks": 18,
+    "chosen_nonreal_kappa_examples": [
+      "1+i",
+      "2-i",
+      "-1+2i"
+    ],
+    "complex_parameter_sets": 3,
+    "spacetime_coefficient_examples_per_set": 3,
+    "generic_compact_matrix_cases": 9,
+    "plaquette_samples": 9,
+    "forbidden_controls": [
+      "reverse x2 anti-color conjugacy sign",
+      "reverse x2 positive-color conjugacy sign",
+      "delete lambda3 anti-color conjugation",
+      "replace x2=-kappa*conj(x1) by x2=+kappa*conj(x1)",
+      "drop Phi anti-color conjugation"
+    ],
+    "external_reality_test_basis_authorized": false
+  },
+  "census": {
+    "planned_successor": "SSC0.39",
+    "ids": 191,
+    "changed_only": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged_full_records": 189,
+    "frozen": false
+  },
+  "guards": {
+    "source_author_specified_root_phases": false,
+    "source_factorization_proven_mandatory": false,
+    "source_actual_e8_reality_identified": false,
+    "all_L01_L06_original_semantics_cold_reaudited": false,
+    "original_E8_Hodge_trace_qualified": false,
+    "source_author_error_proved": false,
+    "physical_theory_falsified": false,
+    "independent_external_review_passed": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_author_semantics_authorized": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro, independent full L source-faithful IsoGraph treatment.",
+    "project_math": "AI-assisted conditional complex root-phase determinant/compactness derivation and exact Gaussian integer hostile checks, 2026-10-09.",
+    "external_antecedents": "Lisi original 2007 root weights and proposed Higgs factorization; standard D4 compact conjugation and elementary complex matrix rank, no novelty or priority claim."
+  },
+  "next": "Search source L01–L06 for original actual compact/reality coefficient conventions. Do NOT extend the chosen complex project calculation to physics; then test source-authored root phase choices, unprojected E8 bracket and Hodge/trace."
+}

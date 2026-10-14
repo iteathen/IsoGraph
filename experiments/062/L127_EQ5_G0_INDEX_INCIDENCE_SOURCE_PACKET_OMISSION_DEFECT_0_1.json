@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062-l127-eq5-source-index-incidence-omission.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_PACKET_OMITTED_LOAD_BEARING_MATRIX_ROW_COLUMN_ROLE_ASSERTION_VERIFIER_BASELINE_FAILED",
+  "failed_workflow": {
+    "run_id": 37838619149,
+    "head_sha": "27e7f20aad7461c1bfdef93890666060a9eb8134",
+    "conclusion": "failure",
+    "baseline_error": "chiral row/column roles",
+    "adversarial_mutations_defined": 24,
+    "adversarial_mutations_tested": 0
+  },
+  "packet_before": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L05_EQ5_INDEXED_BIVECTOR_SOURCE_RECONSTRUCTION_0_1.json",
+    "git_blob_sha": "0e9f1b755839090674e2d8da26762b50a39caf0d"
+  },
+  "cause": "The source packet correctly distinguished upper a/e and lower b/f free indices and their contracted indices, but its index_semantics object lacked a separate explicit rule that matrix rows are output coordinates, columns input coordinates, and row/column naming is block scoped. The verifier correctly rejected the missing representation incidence; do not relax it.",
+  "minimal_repair": "Add index_semantics.matrix_incidence with exact signed row/column/output/input/binder requirement, preserve all source formula bytes otherwise, rerun Node baseline then 24 effective mutations.",
+  "qualifications_prohibited": [
+    "source-complete G0",
+    "G1",
+    "G2-G7",
+    "IA",
+    "cross-track"
+  ],
+  "source_truth_status": "No numeric Eq5 source matrix violation established by this baseline failure; earlier observed source inconsistencies remain evidence only, independent of this packet fixture."
+}

@@ -1,0 +1,279 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.auxiliary-realform-comparison-vs-compact-G2.v0.1",
+  "source_exact_PDF_review_cold": false,
+  "source_physical_realform_identified": false,
+  "external_context": {
+    "reference": "Cacciatori et al., Euler angles for G2, hep-th/0503106v2, source PDF pp4-5",
+    "stated_matrix_normalization": "Tr(C_i C_j)=-4 delta_ij",
+    "basis_matrices": "real skew-symmetric, so real span preserves Euclidean I_7",
+    "mathematical_contrast": "Any real linear combination of real-skew matrices has trace(square)<=0, invariant under real similarity; the auxiliary integer-rescaled Cartan g3 has trace(square)=+4. No real GL7 change of basis can identify these real matrix sets.",
+    "complex_equivalence_not_ruled_out": true,
+    "source_G2_realform_identified": false
+  },
+  "original": {
+    "parameter": 1,
+    "source_model": "ASSISTED_ORIGINAL",
+    "source_generator_count": 14,
+    "source_coefficient_matrix_entries": 49,
+    "chosen_auxiliary_real_metric_H": {
+      "first_diagonal": "1",
+      "paired_offdiagonal": [
+        [
+          2,
+          3,
+          "1"
+        ],
+        [
+          4,
+          5,
+          "1"
+        ],
+        [
+          6,
+          7,
+          "1"
+        ]
+      ],
+      "determinant": "-1",
+      "real_signature": {
+        "positive": 4,
+        "negative": 3
+      },
+      "all_fourteen_matrices_preserve_H": true
+    },
+    "symmetric_invariant_form_space": {
+      "variables": 28,
+      "constraint_rows": 686,
+      "exact_independent_minor_size": 27,
+      "selected_rows_zero_based": [
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18,
+        19,
+        20,
+        24,
+        27,
+        32,
+        33,
+        40,
+        48,
+        50,
+        51,
+        57,
+        65,
+        75,
+        83,
+        125,
+        206,
+        395
+      ],
+      "selected_cols_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27
+      ],
+      "exact_minor_determinant": "-16384",
+      "nonzero_H_proves_rank_at_most": 27,
+      "nonzero_minor_proves_rank_at_least": 27,
+      "unique_invariant_symmetric_form_up_to_real_or_rational_scalar": true
+    },
+    "one_auxiliary_real_Cartan_generator": {
+      "generator": "integer-rescaled g3",
+      "diagonal": "[0,0,0,1,-1,-1,1]",
+      "real_trace_of_square": "4",
+      "forbids_real_similarity_to_an_entire_algebra_of_real_skew_symmetric_matrices": true
+    },
+    "boundary": "This tests integer-rescaled real spans, after multiplication of original Cartan by nonreal scalars. Source real-form claim is NOT derived."
+  },
+  "comparison": {
+    "parameter": 2,
+    "source_model": "HYPOTHETICAL_COMPARISON_NOT_SOURCE",
+    "source_generator_count": 14,
+    "source_coefficient_matrix_entries": 49,
+    "chosen_auxiliary_real_metric_H": {
+      "first_diagonal": "1",
+      "paired_offdiagonal": [
+        [
+          2,
+          3,
+          "2"
+        ],
+        [
+          4,
+          5,
+          "2"
+        ],
+        [
+          6,
+          7,
+          "2"
+        ]
+      ],
+      "determinant": "-64",
+      "real_signature": {
+        "positive": 4,
+        "negative": 3
+      },
+      "all_fourteen_matrices_preserve_H": true
+    },
+    "symmetric_invariant_form_space": {
+      "variables": 28,
+      "constraint_rows": 686,
+      "exact_independent_minor_size": 27,
+      "selected_rows_zero_based": [
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18,
+        19,
+        20,
+        24,
+        27,
+        32,
+        33,
+        40,
+        48,
+        50,
+        51,
+        57,
+        65,
+        75,
+        83,
+        125,
+        206,
+        395
+      ],
+      "selected_cols_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27
+      ],
+      "exact_minor_determinant": "-32768",
+      "nonzero_H_proves_rank_at_most": 27,
+      "nonzero_minor_proves_rank_at_least": 27,
+      "unique_invariant_symmetric_form_up_to_real_or_rational_scalar": true
+    },
+    "one_auxiliary_real_Cartan_generator": {
+      "generator": "integer-rescaled g3",
+      "diagonal": "[0,0,0,1,-1,-1,1]",
+      "real_trace_of_square": "4",
+      "forbids_real_similarity_to_an_entire_algebra_of_real_skew_symmetric_matrices": true
+    },
+    "boundary": "This tests integer-rescaled real spans, after multiplication of original Cartan by nonreal scalars. Source real-form claim is NOT derived."
+  },
+  "controls_defined": 10,
+  "controls_rejected": 10,
+  "negative_controls": [
+    {
+      "name": "change_g3_sign",
+      "rejected": true,
+      "reason": "SOURCE_COMPARISON_FORM_INVARIANCE_LOST_g3"
+    },
+    {
+      "name": "change_first_quark",
+      "rejected": true,
+      "reason": "SOURCE_COMPARISON_FORM_INVARIANCE_LOST_q_r"
+    },
+    {
+      "name": "corrupt_g8",
+      "rejected": true,
+      "reason": "SOURCE_COMPARISON_FORM_INVARIANCE_LOST_g8"
+    },
+    {
+      "name": "forge_cold",
+      "rejected": true,
+      "reason": "AUTHORITY_VIOLATION_full_49_cells_source_cold_qualified"
+    },
+    {
+      "name": "forge_error",
+      "rejected": true,
+      "reason": "AUTHORITY_VIOLATION_source_author_error_proven"
+    },
+    {
+      "name": "forge_G1",
+      "rejected": true,
+      "reason": "AUTHORITY_VIOLATION_G1_authorized"
+    },
+    {
+      "name": "forge_W",
+      "rejected": true,
+      "reason": "AUTHORITY_VIOLATION_W_semantics_imported"
+    },
+    {
+      "name": "wrong_revision",
+      "rejected": true,
+      "reason": "ORIGINAL_SOURCE_MOVED"
+    },
+    {
+      "name": "corrupt_rank27_minor",
+      "rejected": true,
+      "reason": "SYMMETRIC_FORM_RANK27_MINOR_FAILED"
+    },
+    {
+      "name": "corrupt_unique_metric",
+      "rejected": true,
+      "reason": "SOURCE_COMPARISON_FORM_INVARIANCE_LOST_q_r_q_g_q_b_qbar_r_qbar_g_qbar_b"
+    }
+  ]
+}

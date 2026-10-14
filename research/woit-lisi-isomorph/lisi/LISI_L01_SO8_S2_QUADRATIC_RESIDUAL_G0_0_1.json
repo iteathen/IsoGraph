@@ -1,0 +1,95 @@
+{
+  "schema": "isograph.lisi-L01-so8-action-quadratic-scope-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_S2_QUADRATIC_SCOPE_CONDITIONAL_GRAM_RESIDUAL_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "url": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      24,
+      26,
+      27
+    ],
+    "sections": [
+      "3.1 Eq3.6",
+      "3.2.2 Other bosons"
+    ]
+  },
+  "parents": {
+    "ssc033": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_33.json",
+      "git_blob_sha": "d3fb7f7cd752a286dea438fcd714cba38d6adb6a"
+    },
+    "gate033": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_33.json",
+      "git_blob_sha": "00b9338ab8fa3d93ee04297121ef0a2cbd716e11"
+    },
+    "bf": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_BF_ACTION_AUXILIARY_G0_0_1.json",
+      "git_blob_sha": "4b21bf5da7bef47d24eb15806fc3a2d3e27a8854"
+    },
+    "h2": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H2_F2_FERMION_GRADED_SOURCE_G0_0_1.json",
+      "git_blob_sha": "68a3fa00fbd61d03bfe3931aa3e90753e647a74c"
+    }
+  },
+  "source_equations": {
+    "F2": "F2=Fw+FB2+Fx+Fg+Q; Q=(xPhi)(xPhi)",
+    "nonseparation": "Q does not easily separate and contributes to all three parts of F2",
+    "S2_unexpanded": "S2=-(1/4)*integral<trace(F2*star(F2))>",
+    "S2_display": "S2=-(1/4)*integral(sum_i<trace(Fi*star(Fi))>) -(1/2)*integral<trace((Fw+FB2+Fx+Fg+Q)*star(Q))>; i in [w,B2,x,g]",
+    "source_action_status": "Action for new fields is speculative and likely to change",
+    "source_hodge_caveat": "Hodge star requires extracting the frame e from E8 connection, inverting to coframe, and contracting curvature; source calls this awkward and asks for a more natural justification.",
+    "source_roles": "Fw new u(1); FB2 B-L distinct from B1; Fx mixed 3 x (3+3bar); Fg strong su3; Q shared xPhi two-form quadratic not independently closed."
+  },
+  "formal_diagnostic": {
+    "carriers": [
+      "Fw",
+      "FB2",
+      "Fx",
+      "Fg",
+      "Q"
+    ],
+    "pairing": "H(A,B)=integral<trace(A*star(B))>, symmetric bosonic degree-two Hodge pairing; 15 formally independent Gram entries, not source-admissible configurations by default.",
+    "residual": "S2_display-S2_unexpanded=(1/2)*sum_(i<j<4)H(Fi,Fj)-(1/4)*H(Q,Q)",
+    "necessary_sufficient_condition": "H(Q,Q)=2*sum_(i<j<4)H(Fi,Fj)",
+    "missing_source_premise": "No current G0 source-derived E8 generator or Hodge Gram constraints are known to imply the condition; Fi and Q need not be independent physical fields.",
+    "conditional_Q_only": "Fi=0, H(Q,Q)=1 -> residual -1/4; actual E8 realizability untested",
+    "conditional_cross_only": "H(Fw,FB2)=1,H(Q,Q)=0 -> residual +1/2; actual E8 realizability untested",
+    "conditional_positive": "All Fi pairwise H-orthogonal and H(Q,Q)=0 suffice; not a proven source fact.",
+    "no_error_claim": "These generic symmetric-pairing countermodels do NOT prove an actual source/physical counterexample. The author explicitly warns Q is shared and the action speculative."
+  },
+  "source_census": {
+    "total": 191,
+    "changed_only": [
+      "L-SSC-044",
+      "L-SSC-045"
+    ],
+    "unchanged_complete_records": 189,
+    "frozen": false
+  },
+  "guards": {
+    "original_Q_nonsplitting_preserved": true,
+    "source_three_part_grouping_resolved": false,
+    "source_new_field_action_speculative": true,
+    "Hodge_requires_invertible_coframe": true,
+    "E8_Gram_representation_verified": false,
+    "author_mathematical_error_proved": false,
+    "external_cold_review_passed": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "cross_author_comparison_authorized": false,
+    "source_census_frozen": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_research_direction": "Joshua Oshiro: source-faithful L IsoGraph treatment",
+    "mathematical_formulation": "Agent-assisted independent symmetric-pairing analysis from L01 §3.2.2 on 2026-10-09",
+    "external_antecedent": "Lisi 2007 source and elementary bilinear-form expansion; no novelty or priority claim"
+  },
+  "next": "Reconstruct source E8 root/so(8) Q generators, source subspace pairings, actual 4D Hodge metric before adjudicating the residual. Continue L G0 source audit."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "isograph.exp062-w-g1-completeness-record.v0.1",
+  "date": "2026-10-06",
+  "track": "W",
+  "status": "G1_SOURCE_CONSERVED_SEMANTIC_OCCURRENCE_CENSUS_COMPLETE",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "frozen_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "occurrence_census": "experiments/062/W_EXTRACTION_RECONCILED_0_4.json",
+  "deterministic_verifier": "experiments/062/tools/verify-w-extraction-reconciled-0-4.mjs",
+  "source_local_adjudication": "experiments/062/W_SOURCE_COMPLETENESS_REAUDIT_ADJUDICATION_0_1.json",
+  "cold_completeness_audit": {
+    "workflow_run_id": 37503983958,
+    "attempt": 1,
+    "evidence": "experiments/062/evidence/run-37503983958-attempt-1/exp062-w-audit/AUDIT.json",
+    "validation": "experiments/062/evidence/run-37503983958-attempt-1/exp062-w-audit/AUDIT_VALIDATION.json",
+    "validation_pass": true,
+    "overall": "PASS",
+    "item_count": 84,
+    "occurrence_count": 177,
+    "correction_count": 0,
+    "batch_count": 7,
+    "extraction_sha256": "38f1fade13ab961f880271d098d7f2e6357cafaf5ffa781ecdfeae0f84efaf64",
+    "corpus_sha256": "18e13c86c8880c64193fec2ced70e4d604456945ebae2ebfb4fb34da10e130a1",
+    "method_sha256": "b191792fe9b1cce3855cf4d2cdef1d2d8cb91d1ce5340af45989b7660b244042"
+  },
+  "conservation": {
+    "frozen_W_bodies": 84,
+    "occurrence_census_items": 84,
+    "occurrence_count": 177,
+    "extraction_status_all_complete": true,
+    "audit_rows": 84,
+    "audit_corrections": 0
+  },
+  "procedural_effect": {
+    "W_G1_complete": true,
+    "joint_W_L_G1_complete": false,
+    "G2_joint_neutral_occurrence_graph_authorized": false,
+    "primitive_selection_authorized": false,
+    "W_source_closure_authorized_from_this_record": false,
+    "recursive_IA_authorized": false,
+    "NEI_DTS_DP_authorized": false
+  },
+  "next_gate": "Complete and independently audit the 151-body L G1 occurrence census; only then may the joint 235-body campaign advance to G2 under PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md."
+}

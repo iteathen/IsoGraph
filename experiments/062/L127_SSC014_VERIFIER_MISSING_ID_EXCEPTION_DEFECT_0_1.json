@@ -1,0 +1,26 @@
+{
+  "schema": "isograph.exp062-l127-ssc014-missing-identity-uncaught-exception.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "CONFIRMED_ADVERSARIAL_VERIFIER_CRASH_MISSING_L127_ITEM_NOT_FAIL_CLOSED",
+  "failed_run": {
+    "id": 37839683075,
+    "head_sha": "a1b70b1e24cf5a5b70a4319fa7905d04217843a6",
+    "conclusion": "failure",
+    "prior_step": "Eq5 source arithmetic verifier passed",
+    "failed_step": "verify-l-g0-l127-ssc-source-0-14.mjs",
+    "exception": "TypeError Cannot read properties of undefined (reading 'includes')",
+    "mutation_context": "adversarial identity collision replaced the only L127 id with L125; verifier used JSON.stringify(undefined).includes(...)"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l127-ssc-source-0-14.mjs",
+    "git_blob_sha": "6f0f3874c9427b6f24129223e94a390a4db03edf"
+  },
+  "causal_failure": "Source-census mutation erased the indexed L127 lookup; check() recorded missing identities but later dereferenced serialization of undefined rather than returning a structured FAIL. This masks exact mutation-rejection counts.",
+  "repair": "Fail-close by treating missing L127 as an explicit conservation error and guarding every use of that item, including track-firewall check; rerun baseline and all 22 non-noop mutations.",
+  "source_math_status": "No alteration to printed L05 Eq5 or signed octonion table.",
+  "current_stage": "G0_UNFROZEN_G1_FORBIDDEN",
+  "external_review_passed": false
+}

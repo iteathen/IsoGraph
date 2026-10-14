@@ -1,0 +1,39 @@
+{
+  "schema": "woit.w033-euclidean-twistor-orthogonal-complex-fiber-closure.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-033",
+  "frozen_body": "W01 identifies Euclidean projective twistor space CP3 -> S4 as the bundle whose CP1/S2 fiber parametrizes orthogonal complex structures J on each R4 tangent space, with J^2=-1.",
+  "source": "W01 §4.1 / App. A.3.3",
+  "abstraction_boundary": "W_EUCLIDEAN_TWISTOR_ORTHOGONAL_COMPLEX_BOUNDARY_0_1.json",
+  "support_packets": [
+    "W023_TWISTOR_P1_CLOSURE_PACKET_0_2.json",
+    "W024_QUATERNIONIC_P1_CLOSURE_PACKET_0_2.json"
+  ],
+  "source_instance": "research/woit-lisi-isomorph/woit/WOIT_BT01_ORTHOGONAL_COMPLEX_STRUCTURE_FIBER_0_1.isg",
+  "reconstruction": {
+    "projective_twistor_space": 202113,
+    "euclidean_base": 202120,
+    "twistor_projection": 202126,
+    "finite_fiber_membership": 202123,
+    "infinity_fiber_membership": 202124,
+    "unit_imaginary_quaternion_carrier": 203000,
+    "complex_structure_action": 203001,
+    "cp1_complex_structure_bijection": 203002,
+    "square_minus_one": true,
+    "norm_preservation": true
+  },
+  "guards": [
+    "S4 is used at the frozen algebraic base-role boundary; topological homeomorphism/smooth atlas are not imported.",
+    "The tangent R4 model is the exact quaternion carrier H; global tangent-bundle transitions are not asserted.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

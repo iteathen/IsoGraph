@@ -1,0 +1,122 @@
+{
+  "schema": "isograph.exp064-module-ia-fixed-point.v0.1",
+  "date": "2026-10-07",
+  "status": "MODULE_LOCAL_IA_FIXED_POINT_CANDIDATE",
+  "authority_effect": "NONE_CANDIDATE_QUALIFICATION_ONLY",
+  "authority": false,
+  "module_id": "FIXED_POINT_FREE_INVOLUTION_INTERFACE_0_1",
+  "module_ssc": {
+    "path": "experiments/064/MODULE_SSC_0_1.json",
+    "git_blob_sha": "394a60f5c1b28d77b367db2d4983c41b450b6d0a"
+  },
+  "inference_profile": {
+    "id": "fixed-point-free-involution-core-consequence-0.1",
+    "scope": "Only direct first-order consequences of FPI-A01..A03 and qualified total single-valued function/equality/logic semantics.",
+    "prohibited_inferences": [
+      "P is nonempty",
+      "P is finite",
+      "P has even cardinality",
+      "F is projective or antipodal",
+      "F is linear or antilinear",
+      "there exists a vector-level square-minus-one operator",
+      "any quaternionic, topological, geometric, real-form, or twistor conclusion"
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "seed_assertions": [
+        "FPI-A01",
+        "FPI-A02",
+        "FPI-A03"
+      ],
+      "newly_admitted": []
+    },
+    {
+      "iteration": 1,
+      "newly_admitted": [
+        {
+          "id": "FPI-IA01",
+          "premises": [
+            "FPI-A01"
+          ],
+          "consequence": "Every represented x in P has exactly one represented y in P with F(x,y)."
+        },
+        {
+          "id": "FPI-IA02",
+          "premises": [
+            "FPI-A01",
+            "FPI-A02"
+          ],
+          "consequence": "For represented x,y, F(x,y) implies F(y,x); F is its own inverse on P."
+        },
+        {
+          "id": "FPI-IA03",
+          "premises": [
+            "FPI-A01",
+            "FPI-A02"
+          ],
+          "consequence": "F is injective on P."
+        },
+        {
+          "id": "FPI-IA04",
+          "premises": [
+            "FPI-A01",
+            "FPI-A02"
+          ],
+          "consequence": "F is surjective onto P."
+        },
+        {
+          "id": "FPI-IA05",
+          "premises": [
+            "FPI-A01",
+            "FPI-A03"
+          ],
+          "consequence": "Every represented x in P has a represented partner y in P with F(x,y) and y != x."
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "newly_admitted": [],
+      "reason": "Reapplying only total-function, equality, involution, and fixed-point-free consequences yields no additional assertion inside the declared vocabulary."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "FPI-IA-R01",
+      "claim": "P is nonempty.",
+      "reason": "All candidate axioms are compatible with an empty represented carrier."
+    },
+    {
+      "id": "FPI-IA-R02",
+      "claim": "P is finite or has even cardinality.",
+      "reason": "Finiteness/cardinality are not in the module vocabulary or authority; even-cardinality reasoning would require an additional finite-cardinality layer."
+    },
+    {
+      "id": "FPI-IA-R03",
+      "claim": "F arises from a vector map J with J^2=-1.",
+      "reason": "No vector carrier or vector-level map occurs in the candidate."
+    },
+    {
+      "id": "FPI-IA-R04",
+      "claim": "F is antipodal, projective, quaternionic, a real structure, or fixed-point-free for geometric reasons.",
+      "reason": "Those source-domain interpretations are explicitly excluded."
+    }
+  ],
+  "fixed_point": {
+    "reached": true,
+    "first_zero_change_iteration": 2,
+    "admitted_implicit_assertions": 5,
+    "rejected_count": 4,
+    "open_module_local_ia": 0,
+    "profile_complete_for_declared_scope": true
+  },
+  "downstream": {
+    "nei_authorized": false,
+    "dts_authorized": false,
+    "dp_authorized": false,
+    "reason": "No downstream discovery or transition system is needed to qualify the base Core-definable schema."
+  },
+  "next_stage": "FREEZE_FRESH_SOURCE_NEUTRAL_G6_QUALIFICATION_CASES"
+}

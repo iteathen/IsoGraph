@@ -1,0 +1,149 @@
+{
+  "schema": "isograph.lisi-L02-v2-frame-Higgs-graded-curvature-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_L02_V2_EQUATIONS_12_14_EXACT_POINTWISE_CLIFFORD_EXTERIOR_DECOMPOSITION__DYNAMICAL_E_PRIME_EQUALS_E_UNRESOLVED",
+  "original_source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "url": "https://arxiv.org/pdf/1004.4866",
+    "pdf_pages_zero_based": [
+      4,
+      5,
+      6
+    ],
+    "printed_pages": [
+      5,
+      6,
+      7
+    ],
+    "source_method": "Direct visual re-examination of frozen v2 §§2.1.1–2.2, especially Eqs12–19; no silent v1/published equation replacement."
+  },
+  "parent": {
+    "predecessor_source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_44.json",
+      "git_blob_sha": "a1814158b7fd79e8322394e29e63031aa1cc5d7e"
+    },
+    "predecessor_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_48.json",
+      "git_blob_sha": "77aad4f3c955e580f928a63c437d597964978ebe"
+    },
+    "selected_phi_hodge_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json",
+      "git_blob_sha": "831279f107a7d36f49580179e6970468a457f044"
+    }
+  },
+  "source_equations": [
+    {
+      "id": "EQ12",
+      "pdf_page": 5,
+      "text": "H=(1/2)omega+(1/4)E+A",
+      "role": "SOURCE_SYMMETRY_BROKEN_CONNECTION"
+    },
+    {
+      "id": "EQ13",
+      "pdf_page": 5,
+      "text": "E=e_prime phi; e_prime is connection's frame, phi internal Higgs vector",
+      "role": "SOURCE_SIMPLE_BIVECTOR_ANSATZ"
+    },
+    {
+      "id": "EQ14",
+      "pdf_page": 5,
+      "text": "F=(1/2)(R-(1/8)Sigma_prime phi2)+(1/4)(T phi-e_prime Dphi)+F_A",
+      "role": "SOURCE_BROKEN_CURVATURE"
+    },
+    {
+      "id": "EQ14_DEFS",
+      "pdf_page": 5,
+      "text": "R=domega+(1/2)omega omega; Sigma_prime=e_prime e_prime; phi2=sum_m phi_m^2; T=de_prime+(1/2)[omega,e_prime]; Dphi=dphi+[A,phi]; F_A=dA+A A",
+      "role": "SOURCE_SUBSECTOR_DEFINITIONS"
+    },
+    {
+      "id": "EQ15_17",
+      "pdf_page": 5,
+      "text": "Source writes independent grav, mixed and YM equations; full solutions not proved by algebraic Eq14 decomposition",
+      "role": "SOURCE_DYNAMICS_BOUNDARY"
+    },
+    {
+      "id": "EQ18",
+      "pdf_page": 5,
+      "text": "e_prime=e is an additional restricted-solution ansatz, not a consequence of Eq12/Eq14 alone",
+      "role": "SOURCE_EXTRA_RESTRICTION"
+    },
+    {
+      "id": "EQ19",
+      "pdf_page": 5,
+      "text": "T=0 is an additional torsion-free restriction after ignoring fermionic matter sources",
+      "role": "SOURCE_EXTRA_RESTRICTION"
+    }
+  ],
+  "project_exact_reconstruction": {
+    "model": "Select N=3 only to instantiate a source-compatible 7-generator Clifford Cl(1+N,3)=Cl(4,3) at a point in 4D spacetime; ordered bitmask basis gamma_I and exterior dx^mu with independent Grassmann wedge. This is a finite algebra witness and NOT full source spin(N), E8, physics or all N.",
+    "metric_signature": "Source spin(1+N,3) is instantiated with eta=(+,-,-,-,+,+,+) for N=3: gamma_0^2=+1, gamma_1..gamma_3^2=-1, gamma_4..gamma_6^2=+1; distinct gamma anticommute and Clifford bivectors are gamma_I gamma_J. Exterior dx0..dx3 anticommute independently.",
+    "independent_jet_method": "Choose exact integer values and first jets for omega_{ab,mu}, A_{mn,mu}, e_prime_{a,mu}, phi_m. Construct dE directly from explicit partial_derivative(eprime_a_mu*phi_m) per mu nu, not by invoking target graded Leibniz identity; construct F=dH+H wedge H on full Clifford-exterior basis. Compare with independently assembled grav, 4N mixed and gauge Eq14 terms.",
+    "source_grav_norm": "H_omega=omega/2 gives R=domega+(1/2)omega wedge omega and Fgrav=R/2 -Sigma_prime phi2/16.",
+    "source_quadratic_offblock_sign": "Because internal vector phi anticommutes with spacetime vector e_prime, (e_prime phi) wedge (e_prime phi)=-(e_prime wedge e_prime)(phi dot phi)=-Sigma_prime phi2. Thus H_E^2=-Sigma_prime phi2/16, as required by source -1/8 INSIDE the leading 1/2.",
+    "source_mixed_graded_derivative": "Direct derivative d(e_prime phi)=(de_prime)phi - e_prime wedge dphi because e_prime is degree-one. Internal A bivectors commute with external e_prime and give A wedge(e_prime phi)+(e_prime phi)wedge A = -e_prime wedge [A,phi]. Lorentz sector yields (1/2)[omega,e_prime]phi. Combined Fmixed=(1/4)(T phi-e_prime Dphi).",
+    "source_gauge_norm": "H_A=A gives F_A=dA+A wedge A, independent of the right-module fermionic conventions in original L01.",
+    "source_frame_boundary": "The e in source Phi=* Hodge is initially INDEPENDENT from e_prime in source E=e_prime phi. Eq18 chooses e_prime=e only for a solution subset, Eq19 then presumes torsionless when fermions ignored. No identity or prebreaking equality is asserted.",
+    "projection": "Project Clifford bivector grades onto gamma_{a<b<4}, gamma_{a<4,m>=4}, gamma_{4<=m<n} and compare each with the corresponding source Eq14 role. Basis dimension is 6+12+3=21 when N=3; SOURCE 4N complement 12, not complete original arbitrary N.",
+    "unqualified": [
+      "No independent dynamic proof of Phi field equation, Eq15–Eq17 solutions, Eq18 restricted subset being exhaustive, or Eq19 torsionless in the presence of fermions.",
+      "No general source Clifford scalar-trace coefficients or exact full spin(1+N,3) global gauge action deduced from finite N=3 local representation.",
+      "No original L01 E8 fermion signed generator/source representation map, no author typo, no W import.",
+      "No freeze of L02 or other L sources, no G1–G7, no author outreach or PR merge."
+    ],
+    "double_grading_sign_control": "Distinct external/internal gamma vectors anticommute as Clifford 0-forms. Two degree-one Clifford-vector-valued forms have a second exterior minus and therefore commute in the tensor-product form/Clifford algebra. The first LOCAL preflight wrongly asserted they anticommute, although all Eq14 and sector checks passed; corrected only the defective baseline control before GitHub CI, not an original-source discrepancy."
+  },
+  "exact_verifier_contract": {
+    "source_compatible_Clifford_generators": 7,
+    "spacetime_basis_1forms": 4,
+    "nondegenerate_connection_eprime_coframes": 5,
+    "independent_first_jets": true,
+    "noncommuting_gauge_spin_coefficients": true,
+    "exact_full_curvature_compared_to_sector_eq14": true,
+    "gravitational_projected_bivector_dim": 6,
+    "mixed_projected_dim": 12,
+    "internal_gauge_projected_dim": 3,
+    "hostile_coeff_sign_gradient_mutations_minimum": 10,
+    "hostile_source_provenance_mutations_minimum": 14,
+    "full_191_identity_conservation": true,
+    "CI_and_authority_distinct": true
+  },
+  "source_census_delta": {
+    "successor": "SOURCE_SEMANTIC_CENSUS_0_45.json",
+    "changed_only": [
+      "L-SSC-056",
+      "L-SSC-057",
+      "L-SSC-058",
+      "L-SSC-059"
+    ],
+    "other_complete_records": 187,
+    "total_ids": 191,
+    "frozen": false
+  },
+  "stage_locks": {
+    "G0_open": true,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_semantics_authorized": false,
+    "full_L02_dynamics_qualified": false,
+    "source_all_spin_groups_qualified": false,
+    "source_frame_e_eprime_equality_derived": false,
+    "source_gravitational_solution_qualified": false,
+    "second_third_generation_actions_qualified": false,
+    "external_independent_theory_review_passed": false,
+    "author_error_proved": false,
+    "outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro independent six-source Track L",
+    "external_antecedent": "Lisi Smolin Speziale arXiv:1004.4866v2; Clifford/exterior graded product",
+    "agent_implementation": "2026-10-09 exact pointwise mixed d(e_prime phi) jet reconstruction and source coefficient/sector projections N=3 only; no original-author interpretation of reduced model."
+  },
+  "next": "Compare source Eq15–19 field equations on e_prime!=e versus restricted solution subset; source explicit variational operator and Hodge frame dependence remain open, as does native L01 right action."
+}

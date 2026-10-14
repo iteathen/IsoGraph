@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062.l-G0-L03-original-bivector-literal-adversarial-oracle-failure.v0.1",
+  "date": "2026-10-10",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "exact_failed_CI": {
+    "run_id": 38077641405,
+    "job_id": 114287849927,
+    "head_sha": "f8e10da1f5cc3b260e2fd3b22f82fa04b5d4a3b2",
+    "conclusion": "failure",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38077641405",
+    "status": "completed"
+  },
+  "source_artifacts": {
+    "original_frozen_source": "arXiv:1006.4908v1",
+    "PDF_SHA256": "603d1319f3887917ee76a898a5153c261818b85f3d0946d113ea91b5afe3697e",
+    "exact_original_bivector_packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L03_26_ORIGINAL_EQUATION_AND_BIVECTOR_LITERAL_COMPARISON_0_1.json",
+      "git_blob_sha": "a47696ca2e3ea07cda36355b9a09760663090022"
+    },
+    "source_first_packet_SHA": "1dd449c2bd3b891dd0453da7f4c3eff974b2f7ee",
+    "source_SSC0_57_SHA": "ed31878d7996bbf89869b3ab3de4b03ce5e8537c",
+    "original_checker_sha": "c1451557dc598a8b9552bcc7bfbfc9034fb40401",
+    "original_stage_gate0_89_sha": "0a80ff428027835b025c89e968bbcb2a415cc095"
+  },
+  "actual_baseline_status": "SOURCE_AND_CONSERVATION_BASELINE_PASSED",
+  "original_hostiles_defined": 36,
+  "original_hostiles_rejected": 34,
+  "escaped_adversarial_controls": [
+    "regress_Eq45_source_replay",
+    "promote_register_L03"
+  ],
+  "cause_class": "ADVERSARIAL_ACCEPTANCE_ORACLE_INCOMPLETE_SOURCE_COLD_NONPROMOTION_GUARDS",
+  "systemic_source_fidelity_risk": "The checker counted 3 exact source replay dispositions without verifying each targeted original source location's current disposition and accepted a forged fully cold L03 status on the six-source register despite G0 still open.",
+  "method_correction": "Independently assert each of L03-S026/S031/S033 exact source replay disposition and evidence pointer, and the six-source register current L03 original_complete_cold_review_passed===false. Preserve the literal Eq4.5 second-index anomaly and full source cold remaining debt. Include negative-history mutation for this exact failed CI.",
+  "initial_failure_must_remain_failure": true,
+  "do_not_modify_source_SSC_for_checker_bug": true,
+  "original_SSC_items_191_conserved": true,
+  "original_full_source_cold_complete": false,
+  "G0_frozen": false,
+  "G1_authorized": false
+}

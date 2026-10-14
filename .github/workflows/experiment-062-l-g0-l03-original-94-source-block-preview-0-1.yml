@@ -1,0 +1,22 @@
+name: Experiment 062 L G0 L03 frozen original 94 source blocks 0.1
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/L_G0_SIX_ORIGINAL_LAYOUT_FULL_24_HOSTILE_VERIFICATION_SUCCESS_0_1.json'
+      - 'experiments/062/tools/probe-l-g0-l03-frozen94-source-blocks-0-1.mjs'
+      - 'experiments/062/L_CURRENT_STAGE_GATE_0_110.json'
+      - '.github/workflows/experiment-062-l-g0-l03-original-94-source-block-preview-0-1.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  L03-source-first-94-blocks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: node --check experiments/062/tools/probe-l-g0-l03-frozen94-source-blocks-0-1.mjs
+      - run: node experiments/062/tools/probe-l-g0-l03-frozen94-source-blocks-0-1.mjs

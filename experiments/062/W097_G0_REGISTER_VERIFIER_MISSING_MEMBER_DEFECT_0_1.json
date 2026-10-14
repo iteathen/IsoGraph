@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-w097-151-register-verifier-missing-member-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "authority": false,
+  "status": "PREPUBLICATION_INTERNAL_VERIFIER_EXCEPTION_PRESERVED",
+  "input_target": {
+    "source_successor_blob": "4a39e2d36465519a91731d193128dbd4b0720192",
+    "demand_successor_blob": "2f45b3c137b7de051e36c2e20d8bf95b647eb110",
+    "register_blob": "ef5ed068a8241479b5db60814a369b2796f568e4"
+  },
+  "failed_control": "Remove one source member (W-SSC-151) from clone during source-census mutation replay.",
+  "observed_failure": "TypeError: Cannot read properties of undefined (reading 'id')",
+  "failed_verifier_status": "LOCAL_V8_PREPUBLICATION_NOT_COMMITTED",
+  "expected": "Fail closed with explicit source membership count/order error and continue adversarial loop without exception.",
+  "causal_owner": "VALIDATOR_ITERATION_MISSING_ROW_GUARD",
+  "repair": "Check required arrays and exact lengths before iterating, return controlled errors; omit unchecked member dereference. Rerun all controls, including missing-source and missing-demand.",
+  "source_semantic_effect": "NONE; no W source correction invalidated by verifier test harness issue",
+  "nonclaims": [
+    "Not a CI or Node failure",
+    "No prior published verifier was modified",
+    "No source qualification established by fail-closed control"
+  ]
+}

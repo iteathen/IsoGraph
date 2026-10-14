@@ -1,0 +1,180 @@
+{
+  "schema": "isograph.exp062-linear-basis-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "LINEAR_BASIS_SUPPORT_0_1",
+  "branch_head_at_creation": "0b4f82ed2634217e1a8e19ea49b5b6200f622f7d",
+  "hypothesis_origin": {
+    "path": "experiments/062/L_G5H_LINEAR_BASIS_SUPPORT_0_1.json",
+    "git_blob_sha": "4205a98a50f1d0320bf1250ef3de1658f1b8a120"
+  },
+  "dependency_authority": {
+    "path": "experiments/062/L_G6_FIELD_VECTOR_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "e88c6665a7d5df63aef2c4fa0f5f30127853ec7b",
+    "status": "HYPOTHESIS_QUALIFIED_CAMPAIGN_LOCAL_OWNER_BYPASS"
+  },
+  "scope": {
+    "obligation_count": 24,
+    "selected_relation_ids": [
+      183002,
+      183003,
+      188100,
+      193200,
+      187600,
+      187601,
+      215000
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "LB-SSC-001",
+      "kind": "LINEAR_FUNCTION",
+      "body": "183002 requires F to be a total single-valued function from source vector carrier to target vector carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-002",
+      "kind": "LINEAR_ZERO",
+      "body": "183002 requires F(0_A)=0_B.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-003",
+      "kind": "LINEAR_ADD",
+      "body": "183002 requires F(u+v)=F(u)+F(v).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-004",
+      "kind": "LINEAR_SCALE",
+      "body": "183002 requires F(a*v)=a*F(v).",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-005",
+      "kind": "BILINEAR_FUNCTION",
+      "body": "183003 requires BFORM to be a total single-valued binary relation V×V->C.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-006",
+      "kind": "BILINEAR_FIRST_ADD",
+      "body": "183003 requires additivity in the first argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-007",
+      "kind": "BILINEAR_FIRST_SCALE",
+      "body": "183003 requires scalar linearity in the first argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-008",
+      "kind": "BILINEAR_SECOND_ADD",
+      "body": "183003 requires additivity in the second argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-009",
+      "kind": "BILINEAR_SECOND_SCALE",
+      "body": "183003 requires scalar linearity in the second argument.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-010",
+      "kind": "BIJECTION_FUNCTION",
+      "body": "188100 requires F to satisfy the exact unary-function schema.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-011",
+      "kind": "BIJECTION_INJECTIVE",
+      "body": "188100 requires equal represented outputs to imply equal represented inputs.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-012",
+      "kind": "BIJECTION_SURJECTIVE",
+      "body": "188100 requires every target member to have a represented source preimage.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-013",
+      "kind": "LINEAR_BIJECTION_CONJUNCTION",
+      "body": "193200 requires exactly both 183002 linearity and 188100 bijection for the same F and carriers.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-014",
+      "kind": "BASIS_MEMBERSHIP_2",
+      "body": "187600 requires exactly two named vectors to lie in the admitted vector carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-015",
+      "kind": "BASIS_INDEPENDENCE_2",
+      "body": "187600 requires zero linear combination of the two named vectors to force both coefficients to zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-016",
+      "kind": "BASIS_SPANNING_2",
+      "body": "187600 requires every admitted vector to have a two-coordinate representation in the named vectors.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-017",
+      "kind": "BASIS_MEMBERSHIP_4",
+      "body": "187601 requires exactly four named vectors to lie in the admitted vector carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-018",
+      "kind": "BASIS_INDEPENDENCE_4",
+      "body": "187601 requires zero linear combination of the four named vectors to force all four coefficients to zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-019",
+      "kind": "BASIS_SPANNING_4",
+      "body": "187601 requires every admitted vector to have a four-coordinate representation in the named vectors.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-020",
+      "kind": "BASIS_MEMBERSHIP_8",
+      "body": "215000 requires exactly eight named vectors to lie in the admitted vector carrier.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-021",
+      "kind": "BASIS_INDEPENDENCE_8",
+      "body": "215000 requires zero linear combination of the eight named vectors to force all eight coefficients to zero.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-022",
+      "kind": "BASIS_SPANNING_8",
+      "body": "215000 requires every admitted vector to have an eight-coordinate representation in the named vectors.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-023",
+      "kind": "SCOPE_EXCLUSION",
+      "body": "No orthogonality, norm, signature, canonicality, algebra product, composition algebra, conjugation, triality, reflection, or natural-identity semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "LB-SSC-024",
+      "kind": "FILE_SCOPE_FIREWALL",
+      "body": "Relations 183001,183004,183005,183006 and 188101 that share historical files with selected candidates remain outside this module and receive no authority from this qualification.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "closure_rule": "All 24 obligations must reconstruct from the exact selected relation bodies. Unselected relations in shared files remain outside scope and unqualified.",
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

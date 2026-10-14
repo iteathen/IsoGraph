@@ -1,0 +1,24 @@
+{
+  "schema": "isograph.exp062-l032-h1-pure-gravity-dual-fixture-order-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SECOND_BASELINE_FAILURE_EXPECTED_MATRIX_ORDER_NOT_REPAIRED_ZERO_MUTATIONS",
+  "run": {
+    "id": 37896285018,
+    "head_sha": "a3f49d5ec2b3099ebfd06259b536e6dfe3cd5e2d",
+    "conclusion": "failure",
+    "baseline_failures": [
+      "source source spinor blocks positions 2,3",
+      "source Levi/T coefficient positions 2,3"
+    ],
+    "adversarial_defined": 23,
+    "adversarial_executed": 0
+  },
+  "cause": "Previous correction to sourcePairs list aligned pair names spatial-first, but the separate printedOmega expected string/source-sign array retained old lexicographic list positions, so test compared wrong source matrices and spin coefficient roles for (2,3) and (1,4). Identical failure set; not independent numerical discrepancy.",
+  "repair": "Reorder BOTH sourcePairs and printedOmega fixture in the same six-pair order [(1,2),(1,3),(2,3),(1,4),(2,4),(3,4)] matching source packet. Keep native Pauli products and diagnostic classification unchanged. Re-run baseline and then effective mutants.",
+  "source_error_claim": false,
+  "current_G1_authorized": false,
+  "external_review_passed": false
+}

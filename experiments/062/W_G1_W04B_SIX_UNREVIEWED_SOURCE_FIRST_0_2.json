@@ -1,0 +1,1270 @@
+{
+  "schema": "isograph.exp062-W-G1-current-author-W04b-six-source-local-cold-candidates.v0.2",
+  "date": "2026-10-11",
+  "track": "W",
+  "status": "W04B_SIX_AUTHOR_SOURCE_FIRST_REVISED_CANDIDATES_PENDING_COLD_CI",
+  "current_target": "W_G0_AUTHOR_WEB_REBASELINE_2026_10_11_0_1",
+  "historical_oct03_G0": "OPEN",
+  "frozen_W_G0_count": 151,
+  "source_only": true,
+  "G1_global_complete": false,
+  "G2_authorized": false,
+  "no_L_semantics": true,
+  "no_W_L_synthesis": true,
+  "original_author": {
+    "url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+    "date": "2026-03-09",
+    "normalized_entry_content_sha256": "b706bc304a45c29059e74c5db0be3e8cd4da25f0d71f68de941d45db38d4cb67",
+    "original_article_line_range": [
+      10,
+      30
+    ],
+    "reader_comments_excluded": true,
+    "already_G0_original_line_first_audit": "experiments/062/W04B_G0_FULL_AUTHOR_POST_REVERSE_AUDIT_0_1.json"
+  },
+  "frozen_inputs": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+      "sha": "f13075a1e2b039bab66e738cc992e121cd6c9947"
+    },
+    "inverse": {
+      "path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+      "sha": "6a959eabe8803770bc8e9851e288de6535821477"
+    },
+    "stage": {
+      "path": "experiments/062/W_G1_CURRENT_AUTHOR_SOURCE_LOCAL_CONVERGENCE_STAGE_0_7.json",
+      "sha": "6898f1f62e85b5cbca3f258b3d7d28a552a3e61a"
+    },
+    "original_G0": {
+      "path": "experiments/062/W04B_G0_FULL_AUTHOR_POST_REVERSE_AUDIT_0_1.json",
+      "sha": "1c5b8e1bcaed4dba555711a06b8cbc35d2cffa0a"
+    },
+    "scope": {
+      "path": "research/woit-lisi-isomorph/woit/W_CURRENT_AUTHOR_SOURCE_SCOPE_2026_10_11_0_1.json",
+      "sha": "86bb7d5ad55c26ea3586f2a74f1411c2a5d843c7"
+    }
+  },
+  "interpretation_rule": "Primary authored original March9 lines10-30 before G1: assert only original source roles and exact frozen SSC0.70 G0 bodies. Keep source's speculations, citations and negative guards distinct; no imported source math/physics. Original G0 inverse/typed IDs are additional support, not proof of full G1 reconstruction.",
+  "reviewed_predecessor_count": 33,
+  "original_G0_reciprocal_source_owner_support_all_six": true,
+  "rows": [
+    {
+      "id": "W-SSC-015",
+      "census_id": "W-SSC-015",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "Euclidean spacetime is associated with extra fibration/real-structure data rather than the same real form as Minkowski spacetime.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L27",
+          "W04b/web_author_article/W04B-L29"
+        ],
+        "original_source_typed_ids": []
+      },
+      "source_first_method": "W04b author original lines27 and29; Euclidean real structure requires chosen fibration, not the same real form as Minkowski.",
+      "source_scope_guards": [],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-015-CURG1-01",
+          "original_author_line": 27,
+          "original_typed_assertion_id": null,
+          "exact_current_frozen_body_span": "Euclidean spacetime is associated with extra fibration/real-structure data",
+          "relation_span": "associated with",
+          "argument_spans": [
+            "Euclidean spacetime",
+            "extra fibration/real-structure data"
+          ],
+          "source_logical_force": "SOURCE_EUCLIDEAN_FIBRATION_DEPENDENCE",
+          "source_argument_result_roles": {
+            "subject": "EUCLIDEAN_SPACETIME",
+            "extra": "REAL_STRUCTURE_AND_FIBRATION"
+          },
+          "source_specific_guard": "AUTHOR_METHODOLOGICAL_DESCRIPTION_NOT_PROVED_CONTINUATION",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-015-CURG1-02",
+          "original_author_line": 29,
+          "original_typed_assertion_id": null,
+          "exact_current_frozen_body_span": "rather than the same real form as Minkowski spacetime",
+          "relation_span": "rather than",
+          "argument_spans": [
+            "the same real form as Minkowski spacetime"
+          ],
+          "source_logical_force": "SOURCE_REAL_FORM_CONTRAST",
+          "source_argument_result_roles": {
+            "contrast": "MINKOWSKI_VS_EUCLIDEAN"
+          },
+          "source_specific_guard": "NO_IDENTICAL_REAL_FORM",
+          "depends_on": [
+            "W-SSC-015-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    },
+    {
+      "id": "W-SSC-066",
+      "census_id": "W-SSC-066",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "W04b treats complexified four-dimensional spacetime as the common carrier for SL(2,C)_L x SL(2,C)_R and distinguishes Minkowski and Euclidean real forms by different real subgroup conditions rather than by identifying their chiral factors. W04b prints Spin(4,C)=SL(2,C)_L×SL(2,C)_R; its Minkowski real-form embedding is g∈SL(2,C)↦(conjugate(g),g) with conjugation on the FIRST factor, and its Euclidean preserving group is printed Spin(4)=SU(2)_L×SU(2)_R. Do not swap factor order, remove conjugation, add an inverse/adjoint not printed here, or normalize the group presentation. W04b prints the conventional complex vector presentation S_L tensor S_R (equivalently Hom(S_R*,S_L)) and discusses Weyl Wick rotation as analytic continuation in four-complex-dimensional spacetime. Minkowski needs one spinor kind plus its conjugate, whereas the conventional Euclidean continuation requires independent chiral kinds and Dirac-pair introduction. The author's alternative remains a proposal to use only S_R, not a proved equivalence of physical theories.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L10",
+          "W04b/web_author_article/W04B-L11",
+          "W04b/web_author_article/W04B-L12",
+          "W04b/web_author_article/W04B-L13",
+          "W04b/web_author_article/W04B-L14",
+          "W04b/web_author_article/W04B-L15",
+          "W04b/web_author_article/W04B-L16"
+        ],
+        "original_source_typed_ids": [
+          "W04B-066-01",
+          "W04B-066-02",
+          "W04B-066-03",
+          "W04B-066-04",
+          "W04B-066-05",
+          "W04B-066-06"
+        ]
+      },
+      "source_first_method": "W04b original author lines10–16 source complex-spin and ordered real-form embeddings.",
+      "source_scope_guards": [],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-066-CURG1-01",
+          "original_author_line": 10,
+          "original_typed_assertion_id": "W04B-066-01",
+          "exact_current_frozen_body_span": "Spin(4,C)=SL(2,C)_L×SL(2,C)_R",
+          "relation_span": "=",
+          "argument_spans": [
+            "Spin(4,C)",
+            "SL(2,C)_L×SL(2,C)_R"
+          ],
+          "source_logical_force": "SOURCE_COMPLEX_SPIN_GROUP_DISPLAY",
+          "source_argument_result_roles": {
+            "lhs": "Spin4C",
+            "ordered_factors": [
+              "SL2C_L",
+              "SL2C_R"
+            ]
+          },
+          "source_specific_guard": "PRESERVE_L_R_ORDER_NO_GROUP_QUOTIENT_IMPORT",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-02",
+          "original_author_line": 12,
+          "original_typed_assertion_id": "W04B-066-02",
+          "exact_current_frozen_body_span": "g∈SL(2,C)↦(conjugate(g),g)",
+          "relation_span": "↦",
+          "argument_spans": [
+            "g∈SL(2,C)",
+            "(conjugate(g),g)"
+          ],
+          "source_logical_force": "SOURCE_MINKOWSKI_REAL_FORM_EMBEDDING",
+          "source_argument_result_roles": {
+            "variable": "g",
+            "domain": "SL2C",
+            "range_order": [
+              "CONJUGATE_G",
+              "G"
+            ],
+            "operator": "MAPS_TO"
+          },
+          "source_specific_guard": "CONJUGATION_ON_FIRST_FACTOR_NOT_ADJOINT_OR_INVERSE",
+          "depends_on": [
+            "W-SSC-066-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-03",
+          "original_author_line": 14,
+          "original_typed_assertion_id": "W04B-066-03",
+          "exact_current_frozen_body_span": "Spin(4)=SU(2)_L×SU(2)_R",
+          "relation_span": "=",
+          "argument_spans": [
+            "Spin(4)",
+            "SU(2)_L×SU(2)_R"
+          ],
+          "source_logical_force": "SOURCE_EUCLIDEAN_REAL_FORM_GROUP",
+          "source_argument_result_roles": {
+            "lhs": "Spin4",
+            "ordered_factors": [
+              "SU2_L",
+              "SU2_R"
+            ]
+          },
+          "source_specific_guard": "DISTINCT_FROM_MINKOWSKI_BAR_ON_FIRST_FACTOR",
+          "depends_on": [
+            "W-SSC-066-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-04",
+          "original_author_line": 10,
+          "original_typed_assertion_id": "W04B-066-04",
+          "exact_current_frozen_body_span": "S_L tensor S_R (equivalently Hom(S_R*,S_L))",
+          "relation_span": "equivalently",
+          "argument_spans": [
+            "S_L tensor S_R",
+            "Hom(S_R*,S_L)"
+          ],
+          "source_logical_force": "SOURCE_CONVENTIONAL_SPINOR_VECTOR_PRESENTATIONS",
+          "source_argument_result_roles": {
+            "presentations": [
+              "SL_TENSOR_SR",
+              "Hom(DUAL_SR,SL)"
+            ]
+          },
+          "source_specific_guard": "NO_UNPRINTED_SOURCE_CARRIER_EQUIVALENCE_PROOF",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-05",
+          "original_author_line": 10,
+          "original_typed_assertion_id": "W04B-066-04",
+          "exact_current_frozen_body_span": "Hom(S_R*,S_L)",
+          "relation_span": "Hom",
+          "argument_spans": [
+            "S_R*",
+            "S_L"
+          ],
+          "source_logical_force": "SOURCE_NAMED_LINEAR_MAP_CONSTRUCTOR",
+          "source_argument_result_roles": {
+            "domain": "DUAL(S_R)",
+            "codomain": "S_L"
+          },
+          "source_specific_guard": "NOT_A_NEW_PRIMITIVE_DEFINITION",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-06",
+          "original_author_line": 10,
+          "original_typed_assertion_id": "W04B-066-05",
+          "exact_current_frozen_body_span": "four-complex-dimensional spacetime",
+          "relation_span": "four",
+          "argument_spans": [
+            "complex-dimensional spacetime"
+          ],
+          "source_logical_force": "SOURCE_WICK_ANALYTIC_CONTINUATION_DOMAIN",
+          "source_argument_result_roles": {
+            "complex_dimension": 4
+          },
+          "source_specific_guard": "CONVENTIONAL_WICK_NOT_AUTHOR_COMPLETED_ALTERNATIVE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-07",
+          "original_author_line": 16,
+          "original_typed_assertion_id": "W04B-066-06",
+          "exact_current_frozen_body_span": "Minkowski needs one spinor kind plus its conjugate",
+          "relation_span": "needs",
+          "argument_spans": [
+            "one spinor kind",
+            "its conjugate"
+          ],
+          "source_logical_force": "SOURCE_MINKOWSKI_CHIRAL_CONJUGATE_CONDITION",
+          "source_argument_result_roles": {
+            "signature": "MINKOWSKI",
+            "roles": [
+              "ONE_SPINOR_KIND",
+              "CONJUGATE"
+            ]
+          },
+          "source_specific_guard": "DO_NOT_CONFUSE_WITH_TWO_INDEPENDENT_EUCLIDEAN_KINDS",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-08",
+          "original_author_line": 16,
+          "original_typed_assertion_id": "W04B-066-06",
+          "exact_current_frozen_body_span": "conventional Euclidean continuation requires independent chiral kinds and Dirac-pair introduction",
+          "relation_span": "requires",
+          "argument_spans": [
+            "independent chiral kinds",
+            "Dirac-pair introduction"
+          ],
+          "source_logical_force": "SOURCE_CONVENTIONAL_EUCLIDEAN_DOUBLING",
+          "source_argument_result_roles": {
+            "signature": "EUCLIDEAN_CONVENTIONAL",
+            "kind_count": "INDEPENDENT_TWO_CHIRAL"
+          },
+          "source_specific_guard": "CONVENTIONAL_NOT_WOIT_RIGHT_ONLY_PROPOSAL",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-066-CURG1-09",
+          "original_author_line": 16,
+          "original_typed_assertion_id": "W04B-066-06",
+          "exact_current_frozen_body_span": "proposal to use only S_R",
+          "relation_span": "use",
+          "argument_spans": [
+            "only S_R"
+          ],
+          "source_logical_force": "AUTHOR_RIGHT_ONLY_PROPOSAL",
+          "source_argument_result_roles": {
+            "only_spinor_kind": "S_R",
+            "status": "UNCONSTRUCTED_PROPOSAL"
+          },
+          "source_specific_guard": "NOT_A_PROVEN_WICK_EQUIVALENCE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    },
+    {
+      "id": "W-SSC-067",
+      "census_id": "W-SSC-067",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "W04b uses T=C4, PT=CP3, and projective CP1 data to describe spacetime points and presents the one-complex-dimensional CP1 case as an instructive lower-dimensional real-form/orbit analogue. The author prints T=C4 with complex spacetime points as C2 subspaces, and PT=CP3 after quotienting by nonzero complex scalars; CP1s represent spacetime points. He proposes exploiting the complex dimension-three PT rather than the four-complex-dimensional family of CP1s. The CP1 analogue has an SL(2,C) transitive conformal-sphere action, SU(2) transitive compact real-form action, and finite-dimensional Borel-Weil/Bott representations on holomorphic sections or H1 cohomology.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L17",
+          "W04b/web_author_article/W04B-L18",
+          "W04b/web_author_article/W04B-L19",
+          "W04b/web_author_article/W04B-L20"
+        ],
+        "original_source_typed_ids": [
+          "W04B-067-01",
+          "W04B-067-02",
+          "W04B-067-03",
+          "W04B-067-04"
+        ]
+      },
+      "source_first_method": "W04b original author lines17–20 projectivization, twistor spacetime points and CP1 real-form analogy.",
+      "source_scope_guards": [],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-067-CURG1-01",
+          "original_author_line": 17,
+          "original_typed_assertion_id": "W04B-067-01",
+          "exact_current_frozen_body_span": "T=C4",
+          "relation_span": "=",
+          "argument_spans": [
+            "T",
+            "C4"
+          ],
+          "source_logical_force": "SOURCE_TWISTOR_CARRIER",
+          "source_argument_result_roles": {
+            "carrier": "T",
+            "value": "C4"
+          },
+          "source_specific_guard": "SOURCE_COMPLEX_DIM4",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-02",
+          "original_author_line": 17,
+          "original_typed_assertion_id": "W04B-067-01",
+          "exact_current_frozen_body_span": "complex spacetime points as C2 subspaces",
+          "relation_span": "as",
+          "argument_spans": [
+            "complex spacetime points",
+            "C2 subspaces"
+          ],
+          "source_logical_force": "SOURCE_SPACETIME_POINT_SPINOR_PLANE",
+          "source_argument_result_roles": {
+            "point": "SPACETIME_COMPLEX",
+            "representer": "C2_SUBSPACE_OF_T"
+          },
+          "source_specific_guard": "NOT_POINT_OF_PT_EQUALS_POINT_OF_SPACETIME",
+          "depends_on": [
+            "W-SSC-067-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-03",
+          "original_author_line": 17,
+          "original_typed_assertion_id": "W04B-067-01",
+          "exact_current_frozen_body_span": "PT=CP3",
+          "relation_span": "=",
+          "argument_spans": [
+            "PT",
+            "CP3"
+          ],
+          "source_logical_force": "SOURCE_PROJECTIVE_TWISTOR_CARRIER",
+          "source_argument_result_roles": {
+            "carrier": "PT",
+            "result": "CP3"
+          },
+          "source_specific_guard": "PROJECTIVIZED_BY_NONZERO_COMPLEX_SCALARS",
+          "depends_on": [
+            "W-SSC-067-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-04",
+          "original_author_line": 17,
+          "original_typed_assertion_id": "W04B-067-01",
+          "exact_current_frozen_body_span": "quotienting by nonzero complex scalars",
+          "relation_span": "by",
+          "argument_spans": [
+            "nonzero complex scalars"
+          ],
+          "source_logical_force": "SOURCE_PROJECTIVIZATION_ACTION",
+          "source_argument_result_roles": {
+            "scalar_carrier": "NONZERO_C",
+            "operation": "QUOTIENT_ACTION"
+          },
+          "source_specific_guard": "SOURCE_NOT_ADDITIVE_SCALAR_QUOTIENT",
+          "depends_on": [
+            "W-SSC-067-CURG1-03"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-05",
+          "original_author_line": 17,
+          "original_typed_assertion_id": "W04B-067-01",
+          "exact_current_frozen_body_span": "CP1s represent spacetime points",
+          "relation_span": "represent",
+          "argument_spans": [
+            "CP1s",
+            "spacetime points"
+          ],
+          "source_logical_force": "SOURCE_CP1_SPACETIME_POINT_INCIDENCE",
+          "source_argument_result_roles": {
+            "representer": "CP1_IN_PT",
+            "subject": "COMPLEX_SPACETIME_POINT"
+          },
+          "source_specific_guard": "NOT_EVERY_PT_POINT_A_SPACETIME_POINT",
+          "depends_on": [
+            "W-SSC-067-CURG1-03"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-06",
+          "original_author_line": 18,
+          "original_typed_assertion_id": "W04B-067-02",
+          "exact_current_frozen_body_span": "complex dimension-three PT rather than the four-complex-dimensional family of CP1s",
+          "relation_span": "rather than",
+          "argument_spans": [
+            "complex dimension-three PT",
+            "four-complex-dimensional family of CP1s"
+          ],
+          "source_logical_force": "AUTHOR_HOLOMORPHIC_CARRIER_PRIORITY",
+          "source_argument_result_roles": {
+            "preferred": "PT_COMPLEX_3",
+            "alternative": "CP1_FAMILY_COMPLEX_4"
+          },
+          "source_specific_guard": "AUTHOR_SUGGESTION_NOT_OPTIMALITY_THEOREM",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-07",
+          "original_author_line": 19,
+          "original_typed_assertion_id": "W04B-067-03",
+          "exact_current_frozen_body_span": "CP1 analogue has an SL(2,C) transitive conformal-sphere action",
+          "relation_span": "has",
+          "argument_spans": [
+            "CP1 analogue",
+            "SL(2,C) transitive conformal-sphere action"
+          ],
+          "source_logical_force": "SOURCE_CP1_CONFORMAL_TRANSITIVE_ACTION",
+          "source_argument_result_roles": {
+            "actor": "SL2C",
+            "patient": "CP1_RIEMANN_SPHERE",
+            "action": "TRANSITIVE"
+          },
+          "source_specific_guard": "ONE_DIMENSIONAL_ANALOGUE_NOT_W04b_PHYSICAL_RECONSTRUCTION",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-08",
+          "original_author_line": 20,
+          "original_typed_assertion_id": "W04B-067-04",
+          "exact_current_frozen_body_span": "SU(2) transitive compact real-form action",
+          "relation_span": "action",
+          "argument_spans": [
+            "SU(2)",
+            "transitive compact real-form"
+          ],
+          "source_logical_force": "SOURCE_SU2_COMPACT_REAL_FORM_ACTION",
+          "source_argument_result_roles": {
+            "actor": "SU2",
+            "patient": "CP1",
+            "action": "TRANSITIVE"
+          },
+          "source_specific_guard": "DISTINGUISH_COMPLEX_SL2C_FROM_COMPACT_SU2",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-067-CURG1-09",
+          "original_author_line": 20,
+          "original_typed_assertion_id": "W04B-067-04",
+          "exact_current_frozen_body_span": "finite-dimensional Borel-Weil/Bott representations on holomorphic sections or H1 cohomology",
+          "relation_span": "on",
+          "argument_spans": [
+            "holomorphic sections",
+            "H1 cohomology"
+          ],
+          "source_logical_force": "SOURCE_NAMED_ALTERNATIVE_REPRESENTATION_CARRIERS",
+          "source_argument_result_roles": {
+            "types": [
+              "HOLOMORPHIC_SECTIONS",
+              "H1_COHOMOLOGY"
+            ],
+            "named_context": "BOREL_WEIL_BOTT"
+          },
+          "source_specific_guard": "NOT_SOURCE_THEOREM_PROVED_OR_H1_REDUCED_TO_CORE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    },
+    {
+      "id": "W-SSC-068",
+      "census_id": "W-SSC-068",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "In the CP1 analogue W04b uses the three SU(1,1)=SL(2,R) orbits and hyperfunction boundary values to model the relation between holomorphic domains and Lorentzian boundary data. The three CP1 split-real-form orbits are CP1+ upper hemisphere, CP1- lower hemisphere, and the S1 equator. W04b describes infinite-dimensional unitary discrete-series representations on holomorphic line-bundle sections over either open orbit or H1 cohomology. Boundary function spaces admit different choices, with hyperfunctions described as natural rather than uniquely forced. The Cayley transform relates SL(2,R) upper/lower-half-plane and real-axis actions to SU(1,1) CP1 actions; SL(2,Z) is a number-theory subgroup context, not additional twistor structure. Preserve printed SL(2,R)=SU(1,1) without mathematical normalization.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L20",
+          "W04b/web_author_article/W04B-L21",
+          "W04b/web_author_article/W04B-L22",
+          "W04b/web_author_article/W04B-L23"
+        ],
+        "original_source_typed_ids": [
+          "W04B-068-01",
+          "W04B-068-02",
+          "W04B-068-03",
+          "W04B-068-04"
+        ]
+      },
+      "source_first_method": "W04b original author lines21–23 three split-real CP1 orbits, boundary hyperfunction alternatives and Cayley transform.",
+      "source_scope_guards": [],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-068-CURG1-01",
+          "original_author_line": 21,
+          "original_typed_assertion_id": "W04B-068-01",
+          "exact_current_frozen_body_span": "SL(2,R)=SU(1,1)",
+          "relation_span": "=",
+          "argument_spans": [
+            "SL(2,R)",
+            "SU(1,1)"
+          ],
+          "source_logical_force": "SOURCE_PRINTED_SPLIT_REAL_GROUP_PRESENTATION",
+          "source_argument_result_roles": {
+            "printed_lhs": "SL2R",
+            "printed_rhs": "SU11"
+          },
+          "source_specific_guard": "AUTHOR_PRINTED_EQUALITY_NOT_GLOBAL_GROUP_IDENTITY_QUALIFICATION",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-02",
+          "original_author_line": 21,
+          "original_typed_assertion_id": "W04B-068-01",
+          "exact_current_frozen_body_span": "three SU(1,1)=SL(2,R) orbits",
+          "relation_span": "orbits",
+          "argument_spans": [
+            "SU(1,1)=SL(2,R)"
+          ],
+          "source_logical_force": "SOURCE_THREE_REAL_FORM_ORBITS",
+          "source_argument_result_roles": {
+            "number": 3,
+            "actor": "SU11_SL2R",
+            "carrier": "CP1"
+          },
+          "source_specific_guard": "DO_NOT_ADD_FOURTH_ORBIT",
+          "depends_on": [
+            "W-SSC-068-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-03",
+          "original_author_line": 21,
+          "original_typed_assertion_id": "W04B-068-01",
+          "exact_current_frozen_body_span": "CP1+ upper hemisphere, CP1- lower hemisphere, and the S1 equator",
+          "relation_span": "and",
+          "argument_spans": [
+            "CP1+ upper hemisphere",
+            "CP1- lower hemisphere",
+            "S1 equator"
+          ],
+          "source_logical_force": "SOURCE_THREE_ORDERED_CP1_ORBIT_ROLES",
+          "source_argument_result_roles": {
+            "ordered": [
+              "CP1_PLUS",
+              "CP1_MINUS",
+              "S1_EQUATOR"
+            ]
+          },
+          "source_specific_guard": "EQUATOR_IS_COMMON_BOUNDARY_NOT_THIRD_OPEN_HEMISPHERE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-04",
+          "original_author_line": 21,
+          "original_typed_assertion_id": "W04B-068-02",
+          "exact_current_frozen_body_span": "infinite-dimensional unitary discrete-series representations",
+          "relation_span": "representations",
+          "argument_spans": [
+            "unitary discrete-series"
+          ],
+          "source_logical_force": "SOURCE_NAMED_UNITARY_DISCRETE_SERIES",
+          "source_argument_result_roles": {
+            "group": "SU11",
+            "dimension": "INFINITE"
+          },
+          "source_specific_guard": "SOURCE_ASSERTS_REPRESENTATION_CLASS_NO_INDEPENDENT_THEOREM",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-05",
+          "original_author_line": 21,
+          "original_typed_assertion_id": "W04B-068-02",
+          "exact_current_frozen_body_span": "holomorphic line-bundle sections over either open orbit or H1 cohomology",
+          "relation_span": "or",
+          "argument_spans": [
+            "holomorphic line-bundle sections over either open orbit",
+            "H1 cohomology"
+          ],
+          "source_logical_force": "SOURCE_ALTERNATIVE_OPEN_ORBIT_REPRESENTATION_CARRIERS",
+          "source_argument_result_roles": {
+            "carriers": [
+              "SECTION_CP1_PLUS_OR_MINUS",
+              "H1_COHOMOLOGY"
+            ]
+          },
+          "source_specific_guard": "NO_UNCONDITIONAL_EQUIVALENCE_OF_SECTIONS_AND_H1",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-06",
+          "original_author_line": 22,
+          "original_typed_assertion_id": "W04B-068-03",
+          "exact_current_frozen_body_span": "S1 equator",
+          "relation_span": "equator",
+          "argument_spans": [
+            "S1"
+          ],
+          "source_logical_force": "SOURCE_BOUNDARY_ORBIT",
+          "source_argument_result_roles": {
+            "boundary": "S1_EQUATOR"
+          },
+          "source_specific_guard": "NOT_OPEN_COMPLEX_DOMAIN",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-07",
+          "original_author_line": 22,
+          "original_typed_assertion_id": "W04B-068-03",
+          "exact_current_frozen_body_span": "Boundary function spaces admit different choices",
+          "relation_span": "admit",
+          "argument_spans": [
+            "Boundary function spaces",
+            "different choices"
+          ],
+          "source_logical_force": "SOURCE_BOUNDARY_SPACE_NONUNIQUENESS",
+          "source_argument_result_roles": {
+            "scope": "S1_BOUNDARY",
+            "selection": "MULTIPLE_CHOICES"
+          },
+          "source_specific_guard": "NOT_UNIQUE_FUNCTION_SPACE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-08",
+          "original_author_line": 22,
+          "original_typed_assertion_id": "W04B-068-03",
+          "exact_current_frozen_body_span": "hyperfunctions described as natural rather than uniquely forced",
+          "relation_span": "natural",
+          "argument_spans": [
+            "hyperfunctions"
+          ],
+          "source_logical_force": "AUTHOR_NATURAL_HYPERFUNCTION_CHOICE",
+          "source_argument_result_roles": {
+            "preferred": "HYPERFUNCTIONS",
+            "unique": false
+          },
+          "source_specific_guard": "NOT_REQUIRED_UNIQUELY",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-09",
+          "original_author_line": 23,
+          "original_typed_assertion_id": "W04B-068-04",
+          "exact_current_frozen_body_span": "Cayley transform relates SL(2,R) upper/lower-half-plane and real-axis actions to SU(1,1) CP1 actions",
+          "relation_span": "relates",
+          "argument_spans": [
+            "SL(2,R) upper/lower-half-plane and real-axis actions",
+            "SU(1,1) CP1 actions"
+          ],
+          "source_logical_force": "SOURCE_CAYLEY_ACTION_RELATION",
+          "source_argument_result_roles": {
+            "source": "SL2R_C_HALF_PLANE_REAL_AXIS",
+            "target": "SU11_CP1_ORBITS"
+          },
+          "source_specific_guard": "RELATES_ACTIONS_NOT_IDENTICAL_CARRIERS",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-068-CURG1-10",
+          "original_author_line": 23,
+          "original_typed_assertion_id": "W04B-068-04",
+          "exact_current_frozen_body_span": "SL(2,Z) is a number-theory subgroup context",
+          "relation_span": "is",
+          "argument_spans": [
+            "SL(2,Z)",
+            "a number-theory subgroup context"
+          ],
+          "source_logical_force": "SOURCE_ARITHMETIC_SUBGROUP_PROVENANCE",
+          "source_argument_result_roles": {
+            "subgroup": "SL2Z",
+            "context": "NUMBER_THEORY"
+          },
+          "source_specific_guard": "NOT_EXTRA_TWISTOR_GEOMETRY",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    },
+    {
+      "id": "W-SSC-070",
+      "census_id": "W-SSC-070",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "W04b invokes Penrose-transform holomorphic data on the open twistor orbits and boundary-value data on the null orbit as the source-side analogue of complex-time continuation. W04b's Penrose-transform identification is explicitly scoped to massless wave-equation solutions in Minkowski spacetime, compared with SU(2,2) representations on infinite-dimensional holomorphic line-bundle section spaces over PT+ or PT-, or alternatively H1 cohomology. Hyperfunctions on N are proposed as a natural characterization of boundary data. No general interacting-field reconstruction or unique boundary space follows.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L26"
+        ],
+        "original_source_typed_ids": [
+          "W04B-070-01",
+          "W04B-070-02",
+          "W04B-070-03"
+        ]
+      },
+      "source_first_method": "W04b source line26 original massless Penrose-transform limits, alternative H1 carrier, author-preferred hyperfunctions on N.",
+      "source_scope_guards": [
+        {
+          "kind": "G0_ANALYST_NEGATIVE_RECONSTRUCTION_GUARD",
+          "text": "No general interacting-field reconstruction or unique boundary space follows from author line26; these limits are not separate Woit source-defined operators.",
+          "source_body_unchanged": true,
+          "should_not_be_G1_occurrence": true
+        }
+      ],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-070-CURG1-01",
+          "original_author_line": 26,
+          "original_typed_assertion_id": "W04B-070-01",
+          "exact_current_frozen_body_span": "Penrose-transform identification is explicitly scoped to massless wave-equation solutions in Minkowski spacetime",
+          "relation_span": "scoped to",
+          "argument_spans": [
+            "massless wave-equation solutions in Minkowski spacetime"
+          ],
+          "source_logical_force": "SOURCE_PENROSE_MASSLESS_DOMAIN_LIMIT",
+          "source_argument_result_roles": {
+            "solutions": "MASSLESS_WAVE_EQUATIONS",
+            "signature": "MINKOWSKI"
+          },
+          "source_specific_guard": "NO_GENERAL_INTERACTING_QFT_RECONSTRUCTION",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-070-CURG1-02",
+          "original_author_line": 26,
+          "original_typed_assertion_id": "W04B-070-01",
+          "exact_current_frozen_body_span": "SU(2,2) representations on infinite-dimensional holomorphic line-bundle section spaces over PT+ or PT-",
+          "relation_span": "on",
+          "argument_spans": [
+            "SU(2,2) representations",
+            "infinite-dimensional holomorphic line-bundle section spaces over PT+ or PT-"
+          ],
+          "source_logical_force": "SOURCE_HOLOMORPHIC_REPRESENTATION_CARRIER",
+          "source_argument_result_roles": {
+            "actor": "SU22",
+            "domains": [
+              "PT_PLUS",
+              "PT_MINUS"
+            ],
+            "carrier": "HOLOMORPHIC_SECTIONS"
+          },
+          "source_specific_guard": "INFINITE_DIMENSIONAL_AUTHOR_CONTEXT",
+          "depends_on": [
+            "W-SSC-070-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-070-CURG1-03",
+          "original_author_line": 26,
+          "original_typed_assertion_id": "W04B-070-02",
+          "exact_current_frozen_body_span": "alternatively H1 cohomology",
+          "relation_span": "alternatively",
+          "argument_spans": [
+            "H1 cohomology"
+          ],
+          "source_logical_force": "SOURCE_ALTERNATIVE_H1_CARRIER",
+          "source_argument_result_roles": {
+            "alternative": "H1_COHOMOLOGY"
+          },
+          "source_specific_guard": "DO_NOT_IDENTIFY_H1_WITH_HOLOMORPHIC_SECTIONS_WO_PROOF",
+          "depends_on": [
+            "W-SSC-070-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-070-CURG1-04",
+          "original_author_line": 26,
+          "original_typed_assertion_id": "W04B-070-03",
+          "exact_current_frozen_body_span": "Hyperfunctions on N are proposed as a natural characterization of boundary data",
+          "relation_span": "proposed as",
+          "argument_spans": [
+            "Hyperfunctions on N",
+            "a natural characterization of boundary data"
+          ],
+          "source_logical_force": "AUTHOR_NATURAL_BOUNDARY_HYPERFUNCTION_CHOICE",
+          "source_argument_result_roles": {
+            "candidate": "HYPERFUNCTIONS_ON_N",
+            "role": "BOUNDARY_VALUES"
+          },
+          "source_specific_guard": "NATURAL_NOT_UNIQUELY_FORCED",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    },
+    {
+      "id": "W-SSC-071",
+      "census_id": "W-SSC-071",
+      "source_unit": "W04b",
+      "exact_frozen_ssc_body": "For the Euclidean real form W04b uses SL(2,H)=Spin(5,1), C4=H2, and the CP3 -> HP1=S4 fibration with CP1 fibers; Wick rotation requires choosing such a Euclidean fibration and its intersection with the Minkowski null geometry. Under C4=H2, the author calls SL(2,H)=Spin(5,1) the Euclidean conformal real form and says it acts transitively on PT. Quaternion multiplication produces CP3 -> HP1=S4 with CP1=S2 fibers; conformally compactified Euclidean S4 points correspond to these fibers. Choosing the Euclidean fibration determines an S3 subset S4 at the Minkowski intersection, and N has a geometric S2 fibration over S3, not just a topological S3 times S2. The author defers the physics implementation to a later post.",
+      "source_provenance": {
+        "original_author_url": "https://www.math.columbia.edu/~woit/wordpress/?p=15600",
+        "original_article_date": "2026-03-09",
+        "source_original_exact_revision": "2026-10-11_STABLE_AUTHOR_BODY_FINGERPRINT",
+        "ssc_path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_70.json",
+        "ssc_blob_sha": "f13075a1e2b039bab66e738cc992e121cd6c9947",
+        "original_index_path": "experiments/062/W_G0_NINE_CURRENT_SOURCE_FIRST_INVENTORY_0_1.json",
+        "original_index_blob_sha": "6a959eabe8803770bc8e9851e288de6535821477",
+        "source_location_keys": [
+          "W04b/web_author_article/W04B-L27",
+          "W04b/web_author_article/W04B-L28",
+          "W04b/web_author_article/W04B-L29",
+          "W04b/web_author_article/W04B-L30"
+        ],
+        "original_source_typed_ids": [
+          "W04B-071-01",
+          "W04B-071-02",
+          "W04B-071-03",
+          "W04B-071-04"
+        ]
+      },
+      "source_first_method": "W04b original lines27–30 Euclidean real-form transitive action, quaternionic S4 projection, S3 intersection, and explicit unfinished physics.",
+      "source_scope_guards": [],
+      "current_G1_status": "SOURCE_LOCAL_G1_CANDIDATE_PENDING_COLD_AUTHOR_CI",
+      "occurrences": [
+        {
+          "occurrence_id": "W-SSC-071-CURG1-01",
+          "original_author_line": 27,
+          "original_typed_assertion_id": "W04B-071-01",
+          "exact_current_frozen_body_span": "C4=H2",
+          "relation_span": "=",
+          "argument_spans": [
+            "C4",
+            "H2"
+          ],
+          "source_logical_force": "SOURCE_CHOSEN_QUATERNIONIC_CARRIER_IDENTIFICATION",
+          "source_argument_result_roles": {
+            "carrier": "C4",
+            "chosen_model": "H2"
+          },
+          "source_specific_guard": "CHOICE_SPECIFIC_NOT_MINKOWSKI_PRESERVING_REAL_FORM",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-02",
+          "original_author_line": 27,
+          "original_typed_assertion_id": "W04B-071-01",
+          "exact_current_frozen_body_span": "SL(2,H)=Spin(5,1)",
+          "relation_span": "=",
+          "argument_spans": [
+            "SL(2,H)",
+            "Spin(5,1)"
+          ],
+          "source_logical_force": "SOURCE_EUCLIDEAN_CONFORMAL_REAL_FORM",
+          "source_argument_result_roles": {
+            "lhs": "SL2H",
+            "rhs": "Spin51"
+          },
+          "source_specific_guard": "AUTHOR_PRINTED_GROUP_REALIZATION",
+          "depends_on": [
+            "W-SSC-071-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-03",
+          "original_author_line": 27,
+          "original_typed_assertion_id": "W04B-071-01",
+          "exact_current_frozen_body_span": "acts transitively on PT",
+          "relation_span": "acts",
+          "argument_spans": [
+            "PT"
+          ],
+          "source_logical_force": "SOURCE_EUCLIDEAN_TRANSITIVE_PT_ACTION",
+          "source_argument_result_roles": {
+            "actor": "SL2H_SPIN51",
+            "patient": "PT",
+            "action": "TRANSITIVE"
+          },
+          "source_specific_guard": "DIFFERENT_REAL_FORM_FROM_SU22",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-04",
+          "original_author_line": 28,
+          "original_typed_assertion_id": "W04B-071-02",
+          "exact_current_frozen_body_span": "Quaternion multiplication produces CP3 -> HP1=S4 with CP1=S2 fibers",
+          "relation_span": "produces",
+          "argument_spans": [
+            "Quaternion multiplication",
+            "CP3 -> HP1=S4",
+            "CP1=S2 fibers"
+          ],
+          "source_logical_force": "SOURCE_PROJECTIVE_QUATERNIONIC_FIBRATION",
+          "source_argument_result_roles": {
+            "operator": "QUATERNIONIC_MULTIPLICATION",
+            "total": "CP3",
+            "base": "HP1_EQUALS_S4",
+            "fiber": "CP1_EQUALS_S2"
+          },
+          "source_specific_guard": "FIBER_AND_BASE_DISTINGUISHED",
+          "depends_on": [
+            "W-SSC-071-CURG1-01"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-05",
+          "original_author_line": 28,
+          "original_typed_assertion_id": "W04B-071-02",
+          "exact_current_frozen_body_span": "CP3 -> HP1=S4",
+          "relation_span": "->",
+          "argument_spans": [
+            "CP3",
+            "HP1=S4"
+          ],
+          "source_logical_force": "SOURCE_PROJECTIVE_FIBRATION_PROJECTION",
+          "source_argument_result_roles": {
+            "total": "CP3",
+            "base": "HP1_S4"
+          },
+          "source_specific_guard": "NOT_MINKOWSKI_REAL_FIBRATION",
+          "depends_on": [
+            "W-SSC-071-CURG1-04"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-06",
+          "original_author_line": 28,
+          "original_typed_assertion_id": "W04B-071-02",
+          "exact_current_frozen_body_span": "CP1=S2 fibers",
+          "relation_span": "=",
+          "argument_spans": [
+            "CP1",
+            "S2"
+          ],
+          "source_logical_force": "SOURCE_FIBER_REPRESENTATION",
+          "source_argument_result_roles": {
+            "fiber": "CP1_S2"
+          },
+          "source_specific_guard": "FIBER_DIM2_REAL_NOT_BASE_S4",
+          "depends_on": [
+            "W-SSC-071-CURG1-04"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-07",
+          "original_author_line": 28,
+          "original_typed_assertion_id": "W04B-071-02",
+          "exact_current_frozen_body_span": "conformally compactified Euclidean S4 points correspond to these fibers",
+          "relation_span": "correspond to",
+          "argument_spans": [
+            "conformally compactified Euclidean S4 points",
+            "these fibers"
+          ],
+          "source_logical_force": "SOURCE_EUCLIDEAN_SPACETIME_POINT_CORRESPONDENCE",
+          "source_argument_result_roles": {
+            "points": "S4_EUCLIDEAN",
+            "representer": "CP1_FIBERS_IN_PT"
+          },
+          "source_specific_guard": "NOT_MINKOWSKI_POINTS_CP1_NULL_ORBIT",
+          "depends_on": [
+            "W-SSC-071-CURG1-04"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-08",
+          "original_author_line": 29,
+          "original_typed_assertion_id": "W04B-071-03",
+          "exact_current_frozen_body_span": "Choosing the Euclidean fibration determines an S3 subset S4 at the Minkowski intersection",
+          "relation_span": "determines",
+          "argument_spans": [
+            "Choosing the Euclidean fibration",
+            "S3 subset S4"
+          ],
+          "source_logical_force": "SOURCE_CHOICE_DEPENDENT_S3_INTERSECTION",
+          "source_argument_result_roles": {
+            "selection": "EUCLIDEAN_FIBRATION",
+            "intersection": "S3_IN_S4"
+          },
+          "source_specific_guard": "NOT_CANONICAL_S3_BEFORE_FIBRATION_CHOICE",
+          "depends_on": [
+            "W-SSC-071-CURG1-04"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-09",
+          "original_author_line": 29,
+          "original_typed_assertion_id": "W04B-071-03",
+          "exact_current_frozen_body_span": "N has a geometric S2 fibration over S3",
+          "relation_span": "over",
+          "argument_spans": [
+            "N",
+            "geometric S2 fibration",
+            "S3"
+          ],
+          "source_logical_force": "SOURCE_NULL_ORBIT_GEOMETRIC_FIBRATION",
+          "source_argument_result_roles": {
+            "total": "N",
+            "base": "S3",
+            "fiber": "S2"
+          },
+          "source_specific_guard": "GEOMETRIC_NOT_MERELY_TOPOLOGICAL_PRODUCT",
+          "depends_on": [
+            "W-SSC-071-CURG1-08"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-10",
+          "original_author_line": 29,
+          "original_typed_assertion_id": "W04B-071-03",
+          "exact_current_frozen_body_span": "not just a topological S3 times S2",
+          "relation_span": "not just",
+          "argument_spans": [
+            "a topological S3 times S2"
+          ],
+          "source_logical_force": "SOURCE_NEGATIVE_TOPOLOGY_INSUFFICIENT",
+          "source_argument_result_roles": {
+            "topology": "S3_TIMES_S2",
+            "additional": "GEOMETRIC_FIBRATION"
+          },
+          "source_specific_guard": "DO_NOT_EQUATE_TOPOLOGICAL_PRODUCT_WITH_FIBRATION",
+          "depends_on": [
+            "W-SSC-071-CURG1-08"
+          ],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        },
+        {
+          "occurrence_id": "W-SSC-071-CURG1-11",
+          "original_author_line": 30,
+          "original_typed_assertion_id": "W04B-071-04",
+          "exact_current_frozen_body_span": "author defers the physics implementation to a later post",
+          "relation_span": "defers",
+          "argument_spans": [
+            "the physics implementation",
+            "a later post"
+          ],
+          "source_logical_force": "AUTHOR_OPEN_PHYSICAL_IMPLEMENTATION",
+          "source_argument_result_roles": {
+            "construction": "DEFERRED",
+            "completion": false
+          },
+          "source_specific_guard": "NO_COMPLETED_RIGHT_HANDED_WICK_THEORY_IN_SOURCE",
+          "depends_on": [],
+          "binder_ownership": "ONLY_WHERE_PRINTED_WITHIN_AUTHOR_SOURCE_SCOPE",
+          "source_semantic_authority": false,
+          "current_qualification": "SOURCE_LOCAL_CANDIDATE_NOT_FULL_G1_CLOSURE"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "source_bodies": 6,
+    "authored_occurrence_candidates": 45,
+    "previous_source_local_qualified": 33,
+    "max_after_qualification": 39,
+    "remaining_if_all_qualify": 112,
+    "current_total": 151,
+    "predecessor_occurrence_candidates": 46,
+    "removed_pseudo_occurrences": 1,
+    "global_G1_qualified": false
+  },
+  "predecessor": {
+    "path": "experiments/062/W_G1_W04B_SIX_UNREVIEWED_SOURCE_FIRST_0_1.json",
+    "git_blob_sha": "39e49c605ede376bf7c07cd40d0ccfaa3b64f567",
+    "historical_46_candidate_preserved": true
+  },
+  "audit_only_reclassifications": [
+    {
+      "old_occurrence_id": "W-SSC-070-CURG1-05",
+      "reason": "NEGATIVE_G0_ANALYST_INFERENCE_NOT_AUTHOR_PRINTED_NEW_SEMANTIC_OPERATION",
+      "source_limit_preserved": true
+    }
+  ]
+}

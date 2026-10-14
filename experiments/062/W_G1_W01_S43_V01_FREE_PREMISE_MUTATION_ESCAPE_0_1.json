@@ -1,0 +1,26 @@
+{
+  "schema": "isograph.exp062-W-g1-W01-S43-v01-hostile-premise-escape.v0.1",
+  "track": "W",
+  "date": "2026-10-11",
+  "failed_original_run": {
+    "run_id": 38149417761,
+    "job_id": 114499554015,
+    "head_sha": "c9e1338c3ac61c20f6d0b6157513374fe516313e",
+    "conclusion": "FAILURE"
+  },
+  "original_author_cold_read": {
+    "status": "PASS",
+    "original_author_prose_anchors": 22,
+    "source": "arXiv:2104.05099v2 §4.3",
+    "same_run_id": 38149417761
+  },
+  "positive_source_local_baseline_before_hostiles": "PASS",
+  "failure_class": "INCORRECT_VERIFIER_WEAKNESS",
+  "escaped_hostile": "free premise dropped",
+  "defect": "Validator checked occurrence source span presence, typed provenance and immutable G0 source but failed to assert that generated role.source_domain equals the original FREE_MASSLESS scope. A mutant changed only semantic classification while retaining source words.",
+  "repair": "Separate v0.2 verifier independently compares role semantics to source-frozen typed modality for both no-gauge/no-Higgs exclusions, Poincare symmetry limitation, free source-domain and Ward ASD-to-holomorphic output direction. Preserve all 30 adversarial mutations, exact original citation and provenance.",
+  "old_run_not_rescored": true,
+  "original_G0_not_changed": true,
+  "G1_global_not_qualified": true,
+  "G2_still_blocked": true
+}

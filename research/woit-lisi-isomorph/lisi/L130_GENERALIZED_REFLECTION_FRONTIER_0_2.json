@@ -1,0 +1,59 @@
+{
+  "schema": "lisi.l130-generalized-reflection-frontier.v0.2",
+  "date": "2026-10-05",
+  "status": "PARTIAL_NATIVE_SUPPORT_NO_WHOLE_ITEM_CLOSURE",
+  "predecessor": "L130_GENERALIZED_REFLECTION_FRONTIER_0_1.json",
+  "census_id": "L-SSC-130",
+  "current_target": "LISI_FULL_RENDERING_0_2",
+  "completed_branches": {
+    "spacelike": {
+      "source_instance": "LISI_L05_SPACELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_2.isg",
+      "scope": "s_u=+1 across C,Cprime,H,Hprime,O,Oprime",
+      "represented": [
+        "three typed generalized-reflection formulas",
+        "involution of each odd reflection",
+        "typed cubic anti-invariance",
+        "invariance of represented even two-reflection compositions"
+      ]
+    },
+    "timelike": {
+      "maps": "LISI_L05_TIMELIKE_GENERALIZED_REFLECTION_SOURCE_INSTANCE_0_1.isg",
+      "antiinvariance": "LISI_L05_TIMELIKE_REFLECTION_ANTIINVARIANCE_0_1.isg",
+      "complexified_roles": "LISI_L05_COMPLEXIFIED_ROLE_CARRIERS_0_2.isg",
+      "scope": "s_u=-1 for Cprime,Hprime,Oprime",
+      "represented": [
+        "sqrt(s_u)=i with i^2=embed(-1)",
+        "three typed reflection maps from real source roles into corrected complexified roles",
+        "scalar-extended typed triality form",
+        "odd-reflection anti-invariance"
+      ],
+      "falsifier": "L130_TIMELIKE_REFLECTION_FALSIFIER_0_1.json",
+      "verifier": "tools/verify_l130_timelike_reflections.mjs",
+      "finite_controls": {
+        "Cprime": {
+          "cases_per_reflection": 8,
+          "failures": 0
+        },
+        "Hprime": {
+          "cases_per_reflection": 128,
+          "failures": 0
+        },
+        "Oprime": {
+          "cases_per_reflection": 2048,
+          "failures": 0
+        }
+      }
+    }
+  },
+  "source_evidence": {
+    "ordinary_O": "INCONSISTENT_SOURCE_PROPAGATED_IN_SPACELIKE_BRANCH",
+    "source_repair_used": false
+  },
+  "remaining": [
+    "scalar-extension of the generalized reflection maps from embedded real inputs to arbitrary complexified role inputs",
+    "arbitrary even compositions involving time-like reflections on the complexified role domain",
+    "decide whether the alternate anti-linear real-structure statement belongs to L-SSC-130 closure or later L05 real-form obligations; do not import it silently"
+  ],
+  "whole_item_closure": "INCOMPLETE_UNEXPANDED",
+  "dp_allowed": false
+}

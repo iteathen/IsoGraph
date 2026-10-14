@@ -1,0 +1,89 @@
+{
+  "schema": "isograph.exp062-w02-sv-corrected-source0-48-node-ci-result.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SOURCE0_48_W02_SV_ONE_CHIRAL_VS_EW_OPEN_POSITIVE_AND_62_OF_62_PASS",
+  "input": {
+    "head_sha": "46691848059b930fe4dddf74a79b7b6d757f80a3",
+    "source": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_48.json",
+      "git_blob_sha": "a5e048e320ad64ab71e071ac6dbc8bc8a0393ab3",
+      "source_items": 151,
+      "typed_occurrences": 407,
+      "original_source_obligation_strings_changed": 0
+    },
+    "gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_99.json",
+      "git_blob_sha": "3dcc1c8d3d65b0744db43fdb8591ac74ec236964"
+    },
+    "oracle": {
+      "path": "experiments/062/W02_G0_SV_CONCLUSION_SOURCE_FIRST_0_1.json",
+      "git_blob_sha": "ec23ba4b0c24f907b21de5120bbfcd6bd36dda00"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w02-sv-conclusion-source-g0-0-2.mjs",
+      "git_blob_sha": "2cca87808a5811e900bdd5148643111ae332f820"
+    },
+    "negative": {
+      "path": "experiments/062/W02_G0_SV_EW_NONENTAILMENT_GUARD_0_1.json",
+      "git_blob_sha": "82aa939dd167cf0e70a768380383db63735981a2"
+    }
+  },
+  "verified_Node": {
+    "run_id": 38008824516,
+    "job_id": 114083805366,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38008824516",
+    "head_sha": "46691848059b930fe4dddf74a79b7b6d757f80a3",
+    "conclusion": "success",
+    "positive_baseline": "PASS",
+    "positive_errors": [],
+    "hostile_total": 62,
+    "hostile_rejected": 62,
+    "hostile_escaped": 0,
+    "hostile_crashed": 0,
+    "node_version": "26.7.0",
+    "runner": "ubuntu-24.04"
+  },
+  "parallel_same_head_old_guards": [
+    {
+      "run_id": 38008824365,
+      "scope": "HISTORICAL_W_ACTIVE_G0_GUARD",
+      "result": "success"
+    },
+    {
+      "run_id": 38008824369,
+      "scope": "HISTORICAL_W_G_STAGE_SOURCE_LINEAGE",
+      "result": "success"
+    }
+  ],
+  "preserved_prepublication_failure": {
+    "path": "experiments/062/W02_G0_SV_VERIFIER_0_1_PREPUB_ESCAPE_0_1.json",
+    "git_blob_sha": "ca3edd3004ebe848facf014f182a0e6923351529",
+    "positive": true,
+    "rejected": 57,
+    "total": 59,
+    "escaped": 2,
+    "qualified": false
+  },
+  "historical_prior_scope": {
+    "run_id": 38008120874,
+    "source_census": "SSC0_47",
+    "result": "success",
+    "hostile": "63/63",
+    "not_current_SSC0_48_qualification": true
+  },
+  "legal_limits": {
+    "G0_open": true,
+    "G0_complete": false,
+    "G0_frozen": false,
+    "all_nine_original_source_reverse_complete": false,
+    "Oct03_mutable_author_webpage_bytes_verified": false,
+    "all151_current_semantic_demands_requalified": false,
+    "historical_W86_current_complete": false,
+    "G1_G7_authorized": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "L_semantics_available": false
+  },
+  "interpretation": "SOURCE_CITED_RIGHT_CHIRAL_DESCRIPTION_ELECTROWEAK_REPRODUCTION_REMAINS_EXPLICITLY_OPEN"
+}

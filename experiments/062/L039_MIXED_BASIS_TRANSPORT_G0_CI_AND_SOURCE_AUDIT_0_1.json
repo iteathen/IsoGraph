@@ -1,0 +1,98 @@
+{
+  "schema": "isograph.exp062-l039-mixed-basis-output-G0-CI-and-source-audit.v0.1",
+  "recorded_utc": "2026-10-09T17:06:50Z",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "frozen_commit": "225256d17a612e91ef944ec21c4653c90cc1eddd",
+  "source": "L01 arXiv:0711.0770v1, original printed pp12,23,24",
+  "workflow": {
+    "id": 37963838526,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37963838526",
+    "job_id": 113933096258,
+    "status": "completed",
+    "conclusion": "success",
+    "source_checks_skipped": false,
+    "head_sha": "225256d17a612e91ef944ec21c4653c90cc1eddd"
+  },
+  "frozen_evidence": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_H1_MIXED_BASIS_TRANSPORT_G0_0_1.json",
+    "blob_sha": "cb0414646189d84e29682e46563ef77aa33638ce"
+  },
+  "independently_checked_verifiers": [
+    {
+      "path": "experiments/062/tools/verify-l-g0-l039-mixed-output-basis-transport-0-1.mjs",
+      "git_blob_sha": "17294295f43761097ad9efab13f0c0a1f6f67031",
+      "result": {
+        "pass": true,
+        "issues": [],
+        "Clifford_basis_generators": 28,
+        "unordered_bracket_pairs": 378,
+        "source_G_to_N_brackets": 96,
+        "source_EW_to_N_brackets": 96,
+        "source_NN_G_cases": 24,
+        "source_NN_EW_cases": 24,
+        "source_NN_zero_cases": 72,
+        "source_pure_commuting_pairs": 36,
+        "Jacobi_triples": 3276,
+        "Jacobi_failures": 0,
+        "wrong_sign_Jacobi_failures": 0,
+        "wrong_sign_source_bracket_mismatches": 48,
+        "uniform_basis_scale_mutants_rejected": 5,
+        "provenance_source_mutants_rejected": 7
+      }
+    },
+    {
+      "path": "experiments/062/tools/verify-l-g0-l039-direct-pauli-mixed-transport-0-1.mjs",
+      "git_blob_sha": "957e873b2aaa905a89d2e416a0b7e57b8c9773fa",
+      "result": {
+        "pass": true,
+        "issues": [],
+        "source_16x16_gamma_anticommutators": 64,
+        "even_bivector_positive_chiral_8x8_pairs": 28,
+        "G_to_N": 96,
+        "EW_to_N": 96,
+        "NN": 120,
+        "G_EW": 36,
+        "source_wrong_sign_mismatches": 48,
+        "full_16x16_and_first_8x8_checked": true
+      }
+    }
+  ],
+  "research_logic": {
+    "true_claim": "Within frozen source-derived restricted bosonic H1, the mixed sector can be represented in the coordinate basis N=M/4; this has transformed mixed/mixed coefficients /16 of the original M basis while leaving the pure gravity/EW coordinate generators fixed. The uniform nonzero s is uniquely 1/4 for a printed mixed coefficient 1 with original fields held fixed.",
+    "negative_claim": "This transport is not an automorphism fixing pure-sector generators; neither is its use as an author-stated basis a verified source fact.",
+    "adversarial_finding": "Negating every mixed/mixed bracket produces a sign-altered algebra satisfying all 3276 Jacobi identities, but contradicting exactly 48 nonzero original L01 Pauli gamma bivector commutators. Jacobi-only reasoning is too weak for source-fidelity proof.",
+    "validity_limits": "Finite exact algebra and independent source representations, not externally authoritative mathematical certification or equivalence of the entire printed H1 field block to the gamma basis, not full graded E8 source closure.",
+    "required_next": "Find source-authorized named Fgw output-generator coordinate interpretation, and separately reconstruct printed chiral field blocks before any asserted basis identity."
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro — complete independent L IsoGraph rendering and substantive source-faithful continuation.",
+    "agent_formulation": "AI assistant — conditional normalization/automorphism distinction and adversarial sign-check design.",
+    "external_antecedent": "A. Garrett Lisi 2007 source and standard Clifford/graded Lie-algebra mathematics.",
+    "local_preflight_repair": "A temporary uncommitted direct-Pauli implementation mistakenly wrote a 3-entry second row of sigma3; dimension/Clifford preflight failed and identified the project fixture error. The corrected original Pauli sigma3 2x2 row was rerun locally before commit and passed. No source mathematical error was inferred from the failing fixture.",
+    "first_public_frozen_evidence": "GitHub commit 225256d17a612e91ef944ec21c4653c90cc1eddd and associated successful CI, 2026-10-09.",
+    "priority_claim": "NONE"
+  },
+  "governance": {
+    "current_census_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+    "current_census_sha": "6004578250d4e742f70406f4a547410699ecd813",
+    "source_identities": 191,
+    "census_frozen": false,
+    "controlling_stage_gate_path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+    "controlling_gate_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea",
+    "G1_to_G7_authorized": false,
+    "cross_author_synthesis_authorized": false,
+    "external_cold_review_passed": false,
+    "author_output_basis_fixed": false,
+    "author_math_error_proved": false,
+    "PR70_merge_authorized": false
+  },
+  "remaining_open": [
+    "Full original L01-L06 line-by-line source census, source equations and scope",
+    "Paper-native mixed output basis for Fgw vs raw original Pauli Cl71 bivector basis",
+    "Printed positive-chiral 8x8 field blocks and original 16x16 Pauli matrix comparison including phases/field roles",
+    "Original frozen L05 ordinary octonion multiplication sign inconsistency and revision ownership",
+    "Full native Core021 closure/reconstruction, recursive IA, NEI, DTS, DP/EI, independent cold qualification and eventual seal"
+  ]
+}

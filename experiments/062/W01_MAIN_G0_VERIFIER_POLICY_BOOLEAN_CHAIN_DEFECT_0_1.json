@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062-w01-main-source-local-prepublication-verifier-boolean-chain-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "status": "PREPUBLICATION_POSITIVE_BASELINE_FAILED_ZERO_MUTATIONS_QUALIFIED",
+  "semantic_authority": false,
+  "observed": {
+    "positive_errors": [
+      "register no G0/G1 promotion"
+    ],
+    "mutations_executed": 0,
+    "source_register_policy_actual": {
+      "G0_frozen": false,
+      "G1_authorized": false,
+      "source_revision_Oct03_mutable_bytes_verified": false
+    }
+  },
+  "cause": "Verifier accidentally wrote x===false===false for the mutable-source identity flag. JavaScript evaluates this as (x===false)===false, rejecting the intended false guard; no source record failed.",
+  "repair": "Replace with x===false; explicitly test baseline before mutation, preserve this failure as v0.1 local evidence.",
+  "impact": "No changed W source assertion or G0 stage qualification. Node CI not run.",
+  "prior_prepublication_failures": [
+    "NOT_FROZEN_TOKEN",
+    "REGISTER_STATUS_TOKEN"
+  ],
+  "qualifications": {
+    "Node": false,
+    "CI": false,
+    "G0_frozen": false
+  }
+}

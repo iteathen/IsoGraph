@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062-w-current-stage-gate.v0.5",
+  "date": "2026-10-07",
+  "status": "W_G2_CORRECTED_INPUT_COMPLETE_G3_AUTHORIZED",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "supersedes": {
+    "path": "experiments/062/W_CURRENT_STAGE_GATE_0_4.json",
+    "git_blob_sha": "b66f45539c920441b5f52da0cfa18b06f1befa61",
+    "reason": "Corrected-input G2 neutral graph passed deterministic structural verification."
+  },
+  "current_G2": {
+    "graph": {
+      "path": "experiments/062/W_G2_NEUTRAL_OCCURRENCE_GRAPH_0_2.json",
+      "git_blob_sha": "6235ff8ec39081a0f97fded5e59c56a4d4c8360b"
+    },
+    "fixed_point": {
+      "path": "experiments/062/W_G2_FIXED_POINT_0_2.json",
+      "git_blob_sha": "09833729b0e77ce003f12c1406adcca655706759"
+    },
+    "workflow_run_id": 37667227929,
+    "conclusion": "success"
+  },
+  "current_lawful_state": {
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "G2_complete": true,
+    "G3_authorized": true,
+    "G4_authorized": false,
+    "G5_authorized": false,
+    "G6_new_candidate_authorized": false,
+    "G7_authorized": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "cross_track_comparison_authorized": false
+  },
+  "next_lawful_action": "Run a complete corrected-input W G3 qualified-Core definability pass, carrying forward only semantically unchanged prior rulings and directly adjudicating every occurrence changed or added by W G1 0.21."
+}

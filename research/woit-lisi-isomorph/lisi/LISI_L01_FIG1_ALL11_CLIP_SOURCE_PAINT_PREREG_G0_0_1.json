@@ -1,0 +1,77 @@
+{
+  "schema": "isograph.track-L.G0.L01-all11-original-source-clip-paint-prereg.v0.1",
+  "date": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "parent_expected": "f41e013800182634d243eb9866e494ca3251ffdd",
+  "source": {
+    "revision": "arXiv:0711.0770v1",
+    "pdf_sha256": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "svg_sha256": "3e6d5eb7ba8ad6410ac25ae50a4a47ae844e932aad06284684e8c0f9fe183430",
+    "page_zero_based": 2
+  },
+  "gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_197.json",
+    "git_blob_sha": "77d37d16fcd72852c1e7a7487786b896069db5e9",
+    "G0_frozen": false
+  },
+  "census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "git_blob_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d",
+    "item_count": 191
+  },
+  "candidate": {
+    "path": "experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-4.py",
+    "git_blob_sha": "50b89059dd7c6d66ea1e1e6c35da1c91eb3c6043",
+    "workflow_path": ".github/workflows/experiment-062-l-g0-l01-all11-clips-paint-0-4.yml",
+    "prior_0_3_source_path": "experiments/062/tools/audit-l-g0-l01-table-border-row-rule-0-3.py",
+    "prior_0_3_git_blob_sha": "674adc02e88a06403ef1267722ff5b1bc2149dc5"
+  },
+  "earliest_unresolved_question": "For all eleven original Figure1 SVG clip contexts, what are the literal source path occurrences, raw fill/stroke, inherited dasharray/offset, pathLength override, source geometry, clipped stroke footprints, and near-W/table-border contacts? Does clip10's actual dash phase preserve the prior secondary geometry?",
+  "alternatives": [
+    {
+      "id": "A",
+      "description": "All eleven groups can be inventoried, but only supported single-segment stroke footprints can be geometrically reconstructed",
+      "rank": 1,
+      "status": "SELECTED_TEST"
+    },
+    {
+      "id": "B",
+      "description": "Assume uninterrupted strokes and infer cell-field edges from Figure1 geometry",
+      "status": "REJECTED_UNQUALIFIED_AND_DASH_INCORRECT"
+    },
+    {
+      "id": "C",
+      "description": "Infer group roles from bounding rectangles or companion physics prose",
+      "status": "REJECTED_NON_SOURCE_EXACT"
+    },
+    {
+      "id": "D",
+      "description": "Blinded image-only glyph mapping and full original cold source audits after vector evidence",
+      "status": "RETAINED_REQUIRED_LATER"
+    }
+  ],
+  "falsifiers_and_fail_closed": [
+    "Original PDF or SVG SHA/bytes differ from pinned source",
+    "Any clip group lacks a unique path source occurrence",
+    "CSS stylesheet/class, non-affine frame, pathLength, alpha, unsupported dash/cap remains UNRESOLVED rather than inferred",
+    "Dashes and row source contact disagree with phase-zero secondary reconstruction",
+    "Source SVG polygon contact does not imply composited raster contact or field-action semantics",
+    "Negative and positive synthetic dash controls must pass before downloading the original",
+    "No changes to frozen SSC/source inverse, Woi​t data, G0/G1 gates, past failed CI dispositions, or PR merge authorization"
+  ],
+  "expected_scope": "SOURCE_PDF/SVG_EXACT_VECTOR_AND_PROVISIONAL_PRE_COMPOSITING_STROKE_GEOMETRY_ONLY",
+  "resource": {
+    "expected_source_CI_workflow_jobs": 1,
+    "manual_dispatch": false,
+    "external_semantic_model_calls": 0
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "original_source": "A. Garrett Lisi 2007",
+    "technical_formalization": "agent-assisted",
+    "earliest_source_evidence": "GitHub run 38343610137",
+    "recorded_on": "2026-10-13"
+  }
+}

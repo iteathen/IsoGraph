@@ -1,0 +1,31 @@
+{
+  "schema": "isograph.exp062-w-current-source-byte-probe-v01-failed-and-v02-binary-correction.v0.1",
+  "track": "W",
+  "failed_commit": "cfcebf1b0f73cb55c5c3192b8f30b98c82157a18",
+  "failed_run_id": 38121249339,
+  "failed_job_id": 114416261810,
+  "failed_conclusion": "failure",
+  "positive_baseline_passed": false,
+  "run_reclassified_as_success": false,
+  "source_fetch_success_in_failed_run": [
+    "W03",
+    "W04a",
+    "W04b",
+    "W04c",
+    "W04d",
+    "W04d_slides",
+    "W04e",
+    "W04e_notes"
+  ],
+  "failed_binary_validations": [
+    "W04d_slides",
+    "W04e_notes"
+  ],
+  "pdf_header_magic_valid_for_both": true,
+  "failure_owner": "VERIFIER",
+  "failure_class": "NON_TEXT_PDF_TITLE_SUBSTRING_GATE",
+  "root_cause": "Source validator applied UTF-8 title-string inclusion to both HTML and binary PDF; PDF titles need not appear verbatim in binary bytes. Both PDFs began with %PDF-.",
+  "correction": "v0.2 separately checks PDF magic and nontrivial byte length, HTML doctype plus author title; raw SHA256 still calculated from downloaded bytes.",
+  "scope": "No source semantically omitted or modified; no G0 freeze or October03-byte identity inferred.",
+  "historical_evidence_preserved": true
+}

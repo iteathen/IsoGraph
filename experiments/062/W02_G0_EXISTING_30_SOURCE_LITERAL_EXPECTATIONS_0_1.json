@@ -1,0 +1,916 @@
+{
+  "schema": "isograph.exp062-w02-existing30-independent-source-literal-expectations.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "PRIMARY_ARXIV_V2_READ_30_EXISTING_BODY_ASSERTIONS_11_SOURCE_FIDELITY_AMENDMENTS_NOT_FULL_W02_PAPER_ASSERTION_ENUMERATION",
+  "primary": {
+    "source_id": "W02",
+    "title": "Spacetime is Right-handed",
+    "author": "Peter Woit",
+    "revision": "arXiv:2311.00608v2",
+    "url": "https://arxiv.org/pdf/2311.00608v2",
+    "page_count": 11,
+    "arxiv_revision_stamp": "12 Dec 2023",
+    "paper_dated": "14 Dec 2023",
+    "author_pdf_revision_identity": "NOT_CHECKED"
+  },
+  "existing_census_ids_in_source_order": [
+    "W-SSC-008",
+    "W-SSC-009",
+    "W-SSC-010",
+    "W-SSC-118",
+    "W-SSC-119",
+    "W-SSC-120",
+    "W-SSC-128",
+    "W-SSC-129",
+    "W-SSC-130",
+    "W-SSC-131",
+    "W-SSC-132",
+    "W-SSC-133",
+    "W-SSC-134",
+    "W-SSC-135",
+    "W-SSC-136",
+    "W-SSC-137",
+    "W-SSC-138",
+    "W-SSC-139",
+    "W-SSC-140",
+    "W-SSC-141",
+    "W-SSC-142",
+    "W-SSC-143",
+    "W-SSC-144",
+    "W-SSC-145",
+    "W-SSC-146",
+    "W-SSC-147",
+    "W-SSC-148",
+    "W-SSC-149",
+    "W-SSC-150",
+    "W-SSC-151"
+  ],
+  "corrections_by_source_id": {
+    "W-SSC-118": [
+      {
+        "id": "W02-COLD-YM-CARRIER-01",
+        "source_page": 7,
+        "role": "SOURCE_GAUGE_CONTEXT",
+        "modality": "AUTHOR_SOURCE_DESCRIPTION",
+        "group": "G",
+        "connection": "A",
+        "connection_value": "Lie(G)",
+        "curvature": "F_A",
+        "source_clause": "In Euclidean Yang-Mills with gauge group G dynamical variables A are connections valued in Lie(G), with curvature F_A",
+        "guard": "Gauge-group and curvature roles are source supplied; no gauge theorem promoted"
+      }
+    ],
+    "W-SSC-119": [
+      {
+        "id": "W02-COLD-FRAME-01",
+        "source_page": 8,
+        "role": "SOURCE_GENERIC_VS_CARTAN_FRAME_CONTEXT",
+        "modality": "AUTHOR_SOURCE_DESCRIPTIVE_DISTINCTION",
+        "generic_bundle": {
+          "total": "P",
+          "base": "M",
+          "group": "G",
+          "connection_oneform": "Lie(G)_valued",
+          "curvature_twoform": "Lie(G)_valued",
+          "equivariance": "UNDER_G_ACTION_ON_P"
+        },
+        "frame_bundle": {
+          "carrier": "orthonormal_frames",
+          "group": "metric_defined_orthogonal_group",
+          "spin_double_cover": "EXPLICIT_SOURCE"
+        },
+        "guard": "Generic gauge group is internal and independent of spacetime geometry; frame group is metric determined"
+      },
+      {
+        "id": "W02-COLD-FRAME-02",
+        "source_page": 8,
+        "role": "SOURCE_CANONICAL_TETRAD_MAP",
+        "modality": "AUTHOR_SOURCE_INCIDENT",
+        "name": "theta",
+        "carrier": "frame_bundle",
+        "form_degree": 1,
+        "value_space": "R4",
+        "argument": "tangent_vector_at_frame",
+        "result": "coordinates_of_tangent_vector_relative_to_frame",
+        "negative": "UNAVAILABLE_IN_GENERIC_INTERNAL_GAUGE_BUNDLE",
+        "guard": "Do not infer source-given coordinate formula or source-admitted variation law"
+      }
+    ],
+    "W-SSC-120": [
+      {
+        "id": "W02-COLD-HITCHIN-01",
+        "source_page": 6,
+        "role": "CITED_EXTERNAL_CONTEXT",
+        "modality": "SOURCE_ATTRIBUTES_TO_REFERENCE_11_NOT_WOIT_THEOREM",
+        "source_citation": "[11] Hitchin",
+        "operator": "DISTINGUISHED_IMAGINARY_TIME_CLIFFORD_DIRAC",
+        "carrier": "connection_space_identified_as_Dirac_operators",
+        "geometry": "INFINITE_DIMENSIONAL_HYPERKAHLER",
+        "quotient": "ANTI_SELF_DUAL_CONNECTIONS_IN_HITCHIN_CASE",
+        "guard": "Attribution remains external and source-specific; no theorem imported as W qualified authority"
+      }
+    ],
+    "W-SSC-129": [
+      {
+        "id": "W02-COLD-REALFORMS-01",
+        "source_page": 2,
+        "role": "CONVENTIONAL_MINKOWSKI_REAL_FORM",
+        "modality": "SOURCE_EQUALITY_CONDITION",
+        "lhs": "inverse(Omega_R)",
+        "op": "EQUAL",
+        "rhs": "adjoint(Omega_L)",
+        "source_latex": "\\Omega_R^{-1}=\\Omega_L^{\\dagger}",
+        "group": "SL(2,C)",
+        "carrier": "Hermitian_Minkowski_matrices"
+      },
+      {
+        "id": "W02-COLD-REALFORMS-02",
+        "source_page": 2,
+        "role": "CONVENTIONAL_EUCLIDEAN_REAL_FORM",
+        "modality": "SOURCE_GROUP_MEMBERSHIP_AND_COORDINATE_CONDITION",
+        "Omega_L": "SU(2)",
+        "Omega_R": "SU(2)",
+        "coordinate_condition": "x0_PURE_IMAGINARY",
+        "result": "SU(2)_L_times_SU(2)_R_COVARIANT_SCHWINGER_FUNCTIONS",
+        "guard": "Conventional analytic-continuation context, not source's alternative right-handed Lorentz identification"
+      }
+    ],
+    "W-SSC-130": [
+      {
+        "id": "W02-COLD-INDEX-01",
+        "source_page": 3,
+        "role": "MINKOWSKI_SPINOR_INDEX_CONVENTION",
+        "modality": "SOURCE_EXPLICIT_BINDER_AND_CONJUGATION",
+        "undotted": "s^A",
+        "binder": "A_in_1_2",
+        "dotted": "s^dot(A)",
+        "dotted_role": "CONJUGATE_RIGHT_OR_LEFT_AS_CONVENTIONAL_MINKOWSKI",
+        "guard": "Preserve source's van der Waerden notation and distinct dotted role"
+      },
+      {
+        "id": "W02-COLD-INDEX-02",
+        "source_page": 3,
+        "role": "COMPLEX_SPACETIME_CONVENTIONAL_CHIRAL_INDEX_ROLES",
+        "modality": "SOURCE_EXPLICIT_CHIRAL_FACTOR_BINDERS",
+        "undotted": {
+          "left": "(1/2)_L",
+          "right": "(0)_R"
+        },
+        "dotted": {
+          "left": "(0)_L",
+          "right": "(1/2)_R"
+        },
+        "guard": "Printed chirality roles apply to conventional complex spacetime; not proposed W02 alternative"
+      }
+    ],
+    "W-SSC-131": [
+      {
+        "id": "W02-COLD-ALT-MAP-01",
+        "source_page": 3,
+        "role": "PROPOSED_CHIRAL_ALTERNATIVE_DOMAIN_CODOMAIN",
+        "modality": "SOURCE_PROPOSAL_NOT_ESTABLISHED_EQUIVALENCE",
+        "domain": "dual((1/2)_R)",
+        "codomain": "(1/2)_R",
+        "map_type": "COMPLEX_MATRIX_LINEAR_MAP",
+        "complex_spacetime_representation": "NONHOLOMORPHIC",
+        "no_SL2_L_action": true,
+        "guard": "Second right-handed factor conjugation remains as previously source-censused; do not recast as holomorphic"
+      }
+    ],
+    "W-SSC-136": [
+      {
+        "id": "W02-COLD-OS-01",
+        "source_page": 4,
+        "role": "EUCLIDEAN_PHYSICAL_STATE_RECONSTRUCTION",
+        "modality": "SOURCE_NECESSARY_CHOICE",
+        "Schwinger_functions": true,
+        "selected_imaginary_time_direction": true,
+        "restriction": "POSITIVE_IMAGINARY_TIME",
+        "reflection": "OSTERWALDER_SCHRADER",
+        "source_citation": "[5]",
+        "guard": "POSITIVE time restriction is source-scoped and not an arbitrary ± sign normalization"
+      },
+      {
+        "id": "W02-COLD-OS-02",
+        "source_page": 4,
+        "role": "MINKOWSKI_STATE_CONTRAST",
+        "modality": "SOURCE_CONTRASTIVE_ASSERTION",
+        "Lorentz_covariance": "SL(2,C)",
+        "distinguished_time_direction": false,
+        "energy_sign_distinction": "POSITIVE_VERSUS_NEGATIVE",
+        "guard": "Do not confuse energy sign distinction with Euclidean imaginary-time reflection choice"
+      }
+    ],
+    "W-SSC-137": [
+      {
+        "id": "W02-COLD-GRAVIWEAK-CIT-01",
+        "source_page": 5,
+        "role": "OPAQUE_EXTERNAL_SOURCE_CITATION",
+        "modality": "W02_CITES_SEPARATE_MINKOWSKI_GRAVIWEAK_PROPOSAL",
+        "references": [
+          "[6]",
+          "[7]",
+          "[8]"
+        ],
+        "cited_idea": "LORENTZ_RIGHT_CHIRAL_HALF_ELECTROWEAK_OTHER_HALF",
+        "cited_setting": "MINKOWSKI",
+        "explicit_negative": [
+          "NOT_EUCLIDEAN_SPACETIME",
+          "NOT_TWISTOR_GEOMETRY"
+        ],
+        "guard": "References not imported for W source semantic authority; statement only preserves W02 citation scope and contrast"
+      }
+    ],
+    "W-SSC-145": [
+      {
+        "id": "W02-COLD-SELFDUAL-01",
+        "source_page": 7,
+        "role": "COMPLEXIFIED_SELF_DUAL_TWO_FORMS_SOURCE_IDENTIFICATION",
+        "modality": "AUTHOR_SOURCE_MATHEMATICAL_IDENTIFICATION",
+        "group": "SL(2,C)_R",
+        "algebra": "sl(2,C)_R",
+        "operator": "TRACELESS_ENDOMORPHISMS",
+        "domain": "(1/2)_R",
+        "codomain": "(1/2)_R",
+        "dimension": {
+          "scalar": 3,
+          "field": "C"
+        },
+        "guard": "Source declares three-complex-dimensional carrier; no independent proof or left-handed conflation"
+      },
+      {
+        "id": "W02-COLD-SELFDUAL-02",
+        "source_page": 7,
+        "role": "SYMMETRIC_TENSOR_DESCRIPTION",
+        "modality": "AUTHOR_SOURCE_MATHEMATICAL_IDENTIFICATION",
+        "operator": "SYMMETRIC_PART_OF_TENSOR",
+        "factors": [
+          "(1/2)_R",
+          "(1/2)_R"
+        ],
+        "source_scope": "COMPLEXIFIED_SELF_DUAL_TWO_FORMS",
+        "guard": "Do not silently introduce conjugation in this two-right-spinor symmetric tensor source phrase"
+      }
+    ],
+    "W-SSC-148": [
+      {
+        "id": "W02-COLD-CURV-BLOCK-01",
+        "source_page": 8,
+        "role": "CURVATURE_TWO_FORM_SPIN_FRAME_ENDOMORPHISM",
+        "modality": "SOURCE_DESCRIPTIVE_STRUCTURE",
+        "acting_space": "SIX_DIMENSIONAL_TWO_FORMS",
+        "decomposition": [
+          3,
+          3
+        ],
+        "source_phrase": "This has a block diagonal form",
+        "guard": "Author wording 'block diagonal form' preserved without interpreting how it coexists with following off-diagonal Einstein statement"
+      },
+      {
+        "id": "W02-COLD-CURV-BLOCK-02",
+        "source_page": 8,
+        "role": "EINSTEIN_OFF_DIAGONAL_CONDITION",
+        "modality": "SOURCE_EQUATIONS_CONDITION",
+        "operator": "VANISHING_OFF_DIAGONAL_CURVATURE_BLOCKS",
+        "condition": "EINSTEIN_EQUATIONS",
+        "source_citations": [
+          "[14]",
+          "[13]"
+        ],
+        "guard": "Source says Einstein equations correspond to vanishing off-diagonal blocks; does NOT establish same as identically block-diagonal curvature without condition"
+      }
+    ],
+    "W-SSC-151": [
+      {
+        "id": "W02-COLD-DISCUSSION-01",
+        "source_page": 9,
+        "role": "AUTHOR_QFT_DEFINITIONAL_LIMITATION",
+        "modality": "SOURCE_AUTHOR_ASSESSMENT_NOT_MATHEMATICAL_THEOREM",
+        "source_claim": "Standard Model quantum field theory is not well-defined in Minkowski spacetime without some further information",
+        "source_possible_remedy": "ANALYTIC_CONTINUATION_FROM_EUCLIDEAN_AS_ONE_WAY",
+        "guard": "W02's stated interpretive condition; no external theorem qualified"
+      },
+      {
+        "id": "W02-COLD-DISCUSSION-02",
+        "source_page": 10,
+        "role": "OPEN_ELECTROWEAK_RECONSTRUCTION_QUESTION",
+        "modality": "SOURCE_EXPLICIT_OPEN_PROBLEM",
+        "target": "REPRODUCE_USUAL_ELECTROWEAK_THEORY_FROM_EUCLIDEAN_SU(2)_L",
+        "closure": false,
+        "source_literal": "requires further investigation",
+        "guard": "Must not claim construction finished or Standard Model derived"
+      }
+    ]
+  },
+  "correction_append_exact": {
+    "W-SSC-118": " W02 specifies the Euclidean gauge group G, with A a Lie(G)-valued connection and F_A its curvature; these role carriers are source statements alongside the two separately qualified action expressions.",
+    "W-SSC-119": " The source explicitly contrasts arbitrary Lie G-valued equivariant gauge forms on a principal G-bundle P over M with the metric-defined orthonormal/spin frame bundle. Its extra canonical theta is an R4-valued one-form on the frame bundle, sending a tangent vector at a frame to that vector's coordinates relative to the frame; this map role is absent from generic internal gauge bundles.",
+    "W-SSC-120": " W02 specifically attributes this construction to Hitchin [11]: the distinguished-imaginary-time Clifford basis element yields the modified Euclidean Dirac operator, the connection space is identified with Dirac operators, and Hitchin's hyperkahler quotient gives (in his case ANTI)-self-dual connections; none are promoted as W-original mathematical authority.",
+    "W-SSC-129": " For conventional real-form continuation W02 prints the Lorentz Hermiticity condition inverse(Omega_R)=adjoint(Omega_L), but the Euclidean group restriction is Omega_L and Omega_R in SU(2) together with x0 PURELY IMAGINARY; under Lorentz-covariant Wightman assumptions the latter yields SU(2)_L x SU(2)_R-covariant Schwinger functions. These apply to the conventional formulation, not to the proposed one-sided alternative.",
+    "W-SSC-130": " The W02 van der Waerden index convention distinguishes Minkowski undotted s^A (A=1,2) from dotted conjugate s^(dot A), and in conventional COMPLEX spacetime declares undotted spinor carrier (1/2)_L tensor (0)_R versus dotted (0)_L tensor (1/2)_R; these binder/chirality roles are separate from the proposed alternative.",
+    "W-SSC-131": " W02 specifically describes the proposed two-by-two complex spacetime matrices as linear maps FROM the dual of the right-handed (1/2)_R representation TO the right-handed (1/2)_R representation; its nonholomorphic expression and absence of SL(2,C)_L remain source-scoped proposal assertions.",
+    "W-SSC-136": " The source specifically requires restricting Euclidean Schwinger-function reconstruction to POSITIVE IMAGINARY TIME and applying Osterwalder-Schrader reflection [5], while its Minkowski construction has no distinguished time direction but distinguishes positive from negative energy.",
+    "W-SSC-137": " W02 cites earlier gravi-weak proposals [6], [7], [8] as external Minkowski-spacetime examples; it explicitly says those proposals do NOT involve Euclidean spacetime or twistor geometry. Those references are opaque source citation evidence, not imported W source semantics.",
+    "W-SSC-145": " W02 additionally states that these complexified self-dual forms are THREE-complex-dimensional traceless maps from (1/2)_R to itself and identifies their carrier with the SYMMETRIC part of two copies of (1/2)_R. No conjugate is inserted into this symmetric-product expression.",
+    "W-SSC-148": " The source describes curvature as an endomorphism of a SIX-dimensional two-form space split into TWO THREE-dimensional spaces, says 'This has a block diagonal form', and then says Einstein equations correspond to vanishing of OFF-DIAGONAL blocks, citing [14]/[13]. Preserve both pieces of wording and their possible source-scope tension without normalization or silently declaring one implication.",
+    "W-SSC-151": " W02 further describes Standard Model QFT as not well-defined on Minkowski spacetime WITHOUT FURTHER INFORMATION, with analytic continuation from Euclidean spacetime one proposed route; this is the author's assessment, not a separately proved theorem. It expressly leaves reproducing observed electroweak SU(2)_L interactions as an OPEN question requiring further investigation."
+  },
+  "reviewed_all_30_source_body_rows": [
+    {
+      "id": "W-SSC-008",
+      "source_locator": "abstract / §II",
+      "printed_pages": [
+        0,
+        3
+      ],
+      "source_pdf_index_pages": [
+        -1,
+        2
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-009",
+      "source_locator": "abstract / §III",
+      "printed_pages": [
+        0,
+        4
+      ],
+      "source_pdf_index_pages": [
+        -1,
+        3
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-010",
+      "source_locator": "§III",
+      "printed_pages": [
+        5,
+        5
+      ],
+      "source_pdf_index_pages": [
+        4,
+        4
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-118",
+      "source_locator": "§IV.2",
+      "printed_pages": [
+        7,
+        7
+      ],
+      "source_pdf_index_pages": [
+        6,
+        6
+      ],
+      "original_statement_count": 2,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-119",
+      "source_locator": "§IV.3",
+      "printed_pages": [
+        8,
+        8
+      ],
+      "source_pdf_index_pages": [
+        7,
+        7
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-120",
+      "source_locator": "§IV.1",
+      "printed_pages": [
+        6,
+        6
+      ],
+      "source_pdf_index_pages": [
+        5,
+        5
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-128",
+      "source_locator": "§I",
+      "printed_pages": [
+        2,
+        2
+      ],
+      "source_pdf_index_pages": [
+        1,
+        1
+      ],
+      "original_statement_count": 3,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-129",
+      "source_locator": "§I",
+      "printed_pages": [
+        2,
+        2
+      ],
+      "source_pdf_index_pages": [
+        1,
+        1
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-130",
+      "source_locator": "§I",
+      "printed_pages": [
+        2,
+        3
+      ],
+      "source_pdf_index_pages": [
+        1,
+        2
+      ],
+      "original_statement_count": 1,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-131",
+      "source_locator": "§II",
+      "printed_pages": [
+        3,
+        3
+      ],
+      "source_pdf_index_pages": [
+        2,
+        2
+      ],
+      "original_statement_count": 1,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-132",
+      "source_locator": "§II",
+      "printed_pages": [
+        3,
+        3
+      ],
+      "source_pdf_index_pages": [
+        2,
+        2
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-133",
+      "source_locator": "§II",
+      "printed_pages": [
+        3,
+        4
+      ],
+      "source_pdf_index_pages": [
+        2,
+        3
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-134",
+      "source_locator": "§III",
+      "printed_pages": [
+        4,
+        4
+      ],
+      "source_pdf_index_pages": [
+        3,
+        3
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-135",
+      "source_locator": "§III",
+      "printed_pages": [
+        4,
+        4
+      ],
+      "source_pdf_index_pages": [
+        3,
+        3
+      ],
+      "original_statement_count": 1,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-136",
+      "source_locator": "§III",
+      "printed_pages": [
+        4,
+        4
+      ],
+      "source_pdf_index_pages": [
+        3,
+        3
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-137",
+      "source_locator": "§III",
+      "printed_pages": [
+        4,
+        5
+      ],
+      "source_pdf_index_pages": [
+        3,
+        4
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-138",
+      "source_locator": "§III",
+      "printed_pages": [
+        5,
+        5
+      ],
+      "source_pdf_index_pages": [
+        4,
+        4
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-139",
+      "source_locator": "§IV",
+      "printed_pages": [
+        5,
+        5
+      ],
+      "source_pdf_index_pages": [
+        4,
+        4
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-140",
+      "source_locator": "§IV.1",
+      "printed_pages": [
+        5,
+        5
+      ],
+      "source_pdf_index_pages": [
+        4,
+        4
+      ],
+      "original_statement_count": 2,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-141",
+      "source_locator": "§IV.1",
+      "printed_pages": [
+        5,
+        6
+      ],
+      "source_pdf_index_pages": [
+        4,
+        5
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-142",
+      "source_locator": "§IV.1",
+      "printed_pages": [
+        6,
+        6
+      ],
+      "source_pdf_index_pages": [
+        5,
+        5
+      ],
+      "original_statement_count": 1,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-143",
+      "source_locator": "§IV.1",
+      "printed_pages": [
+        6,
+        6
+      ],
+      "source_pdf_index_pages": [
+        5,
+        5
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-144",
+      "source_locator": "§IV.2",
+      "printed_pages": [
+        6,
+        7
+      ],
+      "source_pdf_index_pages": [
+        5,
+        6
+      ],
+      "original_statement_count": 2,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-145",
+      "source_locator": "§IV.2",
+      "printed_pages": [
+        7,
+        7
+      ],
+      "source_pdf_index_pages": [
+        6,
+        6
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-146",
+      "source_locator": "§IV.2",
+      "printed_pages": [
+        7,
+        7
+      ],
+      "source_pdf_index_pages": [
+        6,
+        6
+      ],
+      "original_statement_count": 2,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-147",
+      "source_locator": "§IV.3",
+      "printed_pages": [
+        7,
+        8
+      ],
+      "source_pdf_index_pages": [
+        6,
+        7
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-148",
+      "source_locator": "§IV.3",
+      "printed_pages": [
+        8,
+        8
+      ],
+      "source_pdf_index_pages": [
+        7,
+        7
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-149",
+      "source_locator": "§IV.3",
+      "printed_pages": [
+        8,
+        9
+      ],
+      "source_pdf_index_pages": [
+        7,
+        8
+      ],
+      "original_statement_count": 2,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-150",
+      "source_locator": "§IV.3",
+      "printed_pages": [
+        9,
+        9
+      ],
+      "source_pdf_index_pages": [
+        8,
+        8
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXISTING_BODY_SUPPORTED_NO_SOURCE_BODY_CORRECTION_REQUIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    },
+    {
+      "id": "W-SSC-151",
+      "source_locator": "§V",
+      "printed_pages": [
+        9,
+        10
+      ],
+      "source_pdf_index_pages": [
+        8,
+        9
+      ],
+      "original_statement_count": 0,
+      "review": "DIRECT_FROZEN_ARXIV_V2_PDF_ALL_EXISTING_SOURCE_BODY_ASSERTIONS_READ_AND_COMPARED",
+      "disposition": "EXPLICIT_MISSING_SOURCE_OPERATOR_BINDER_SCOPE_OR_NEGATIVE_REPAIRED",
+      "source_item_set_exhaustive": false,
+      "read_source_reference": "https://arxiv.org/pdf/2311.00608v2",
+      "governing_revision": "arXiv:2311.00608v2",
+      "closed_or_proven": false
+    }
+  ],
+  "negative_source_guards": [
+    "No conversion of Wick rotation into an unqualified theorem; Euclidean imaginary time is source-selected positive direction.",
+    "No mixing conventional L/R complex holomorphic roles with proposed chirally asymmetric right/right nonholomorphic roles.",
+    "No placement of new conjugate on complexified symmetric right-spinor tensor where author prints two right factors.",
+    "No conversion of cited Hitchin/GR/prior gravi-weak references into W-original proofs.",
+    "Preserve source's block-diagonal wording alongside stated off-diagonal Einstein condition, not normalize apparent interpretive tension.",
+    "No claim Euclidean SU2_L electroweak construction is finished.",
+    "Do not identify source's Yang-Mills action two forms as exact equal functions: source says equivalent by topological term.",
+    "Do not mistake pdf v2 arxiv stamp and internal manuscript dated 14 Dec 2023 for different version identifiers."
+  ],
+  "coverage_limit": "All 30 existing W02 SSC bodies compared against source text and rendered equations; not a reverse enumeration proving every source assertion from entire 11-page paper is present.",
+  "qualification": {
+    "G0_complete": false,
+    "G1_to_G7_authorized": false,
+    "independent_external_review": "OWNER_BYPASSED_NOT_PASSED",
+    "source_semantic_authority": false
+  },
+  "provenance": {
+    "source_author": "Peter Woit",
+    "source_revision": "arXiv:2311.00608v2",
+    "human_research_direction": "Joshua Oshiro",
+    "direct_source_audit_and_formalization": "agent-assisted",
+    "earliest_evidence_currently_located": "2026-10-08 source arXiv v2"
+  }
+}

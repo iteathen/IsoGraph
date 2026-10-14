@@ -1,0 +1,112 @@
+{
+  "schema": "woit-lisi.bt01-algebraic-projective-projection.v0.1",
+  "status": "CLOSED_SCOPED_PROJECTION_NOT_TRACK_SEAL",
+  "branch_head": "0465151505c30b78204a0906fd2726caeb62917b",
+  "purpose": "Freeze exactly the algebraic/projective semantic projection used by BT01 while preserving topological and physical residuals outside the projection.",
+  "source_parent_assertions": {
+    "W": [
+      "W-A0-026",
+      "W-A0-027",
+      "W-A0-028",
+      "W-A0-034",
+      "W-A0-035",
+      "W-A0-036",
+      "W-A0-037",
+      "W-A0-038",
+      "W-A0-039",
+      "W-A0-040",
+      "W-A0-041",
+      "W-A0-042",
+      "W-A0-043",
+      "W-A0-044",
+      "W-A0-045",
+      "W-IA-BT01-001"
+    ],
+    "L": [
+      "L-A0-027",
+      "L-A0-028",
+      "L-A0-029",
+      "L-A0-030",
+      "L-A0-031",
+      "L-A0-032",
+      "L-A0-033",
+      "L-A0-034",
+      "L-A0-035",
+      "L-A0-036",
+      "L-A0-037",
+      "L-A0-038",
+      "L-A0-039"
+    ]
+  },
+  "projections": [
+    {
+      "id": "BT01-W-028-AP",
+      "parent": "W-A0-028",
+      "status": "CLOSED",
+      "semantic_projection": [
+        "HP affine quaternion chart plus infinity",
+        "PT projective quotient",
+        "pi:PT->HP incidence",
+        "projective 2C fibers"
+      ],
+      "witness": "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg"
+    },
+    {
+      "id": "BT01-W-028-TOP",
+      "parent": "W-A0-028",
+      "status": "OUTSIDE_BT01_OPEN_FULL_TRACK",
+      "semantic_projection": [
+        "topological identification HP1=S4"
+      ],
+      "reason": "Topology/manifold semantics not required by BT01 common quotient and not yet rendered."
+    },
+    {
+      "id": "BT01-W-036-AP",
+      "parent": "W-A0-036",
+      "status": "CLOSED",
+      "semantic_projection": [
+        "C4 as two chiral C2 carriers",
+        "H2 source representation",
+        "CP3 projective quotient",
+        "CP3->HP source projection"
+      ],
+      "witness": [
+        "woit/WOIT_BT01_GLOBAL_TWISTOR_FIBRATION_0_1.isg",
+        "woit/WOIT_BT01_H_C2_PSEUDOREAL_SOURCE_INSTANCE_0_2.isg"
+      ]
+    },
+    {
+      "id": "BT01-W-036-TOP",
+      "parent": "W-A0-036",
+      "status": "OUTSIDE_BT01_OPEN_FULL_TRACK",
+      "semantic_projection": [
+        "base identified topologically with S4"
+      ],
+      "reason": "Topology/manifold semantics not required by BT01 common quotient and not yet rendered."
+    }
+  ],
+  "all_other_bt01_entries": "CLOSED_OR_IA_CLOSED_IN_BT01_SLICE_LEDGER",
+  "residuals_preserved": {
+    "W": [
+      "HP1=S4 topology/manifold identification",
+      "physical interpretation",
+      "global analytic/smooth structure beyond current algebraic/projective rendering"
+    ],
+    "L": [
+      "triality",
+      "magic-square/exceptional structure",
+      "generation/model-building interpretation"
+    ],
+    "comparison": [
+      "NEI SAME",
+      "program equivalence",
+      "physical-role equivalence"
+    ]
+  },
+  "firewall": {
+    "full_W_sealed": false,
+    "full_L_sealed": false,
+    "source_native_xrefs_unquarantined": false,
+    "cross_track_NEI_allowed": false
+  }
+}

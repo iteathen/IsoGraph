@@ -1,0 +1,43 @@
+{
+  "schema": "isograph.exp062-w-active-g0-stage-guard-local-replay.v0.2",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NODE_0_1_FAILED_UNCAPTURED_S_ALIAS_PRESERVED_V0_2_REPAIRED_AWAITING_NODE_CI",
+  "failed_CI": {
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37840552477",
+    "commit_sha": "a9d488493c61b20b8fb8d3ba6835db68217d3aee",
+    "result": "failure",
+    "exception": "ReferenceError: s is not defined"
+  },
+  "failed_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-1.mjs",
+    "git_blob_sha": "c989104f31205179ab1ca10c4ba637be6c2c3141"
+  },
+  "preserved_failure": {
+    "path": "experiments/062/W_ACTIVE_G0_STAGE_GUARD_NODE_CAPTURE_DEFECT_0_1.json",
+    "git_blob_sha": "e882eb8a9bd13c1f86811048feca3ec49a71fd8f"
+  },
+  "current_verifier": {
+    "path": "experiments/062/tools/verify-w-active-g0-stage-0-2.mjs",
+    "git_blob_sha": "594138f7407fc509fb163d7c4587129d1272ab31"
+  },
+  "archived_workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-1.yml",
+    "historical_predecessor_git_blob_sha": "6e28db933f8db463bd6f654ba2dd90c26a9fbc11",
+    "manual_only_successor_sha": "0a9a30a637cebdab883ce915ae8515a2511f09df"
+  },
+  "current_workflow": {
+    "path": ".github/workflows/experiment-062-w-active-g0-stage-0-2.yml",
+    "git_blob_sha": "31ee80d4b5a57231df88f324d66df5e5ca841a13"
+  },
+  "exact_repair": "Declare const s=shaExpected in emitted Node script, which already had shaExpected but check(z) closed over s when locally authored; update output schema v0.2. No gate/source formula semantics changed.",
+  "positive_local_v8": "HISTORICAL_FUNCTION_POSITIVE_RECONSTRUCTION_PASS",
+  "adversarial_mutations": 26,
+  "adversarial_rejections": 26,
+  "Node_CI": "PENDING_COMMIT",
+  "source_census": "W_SSC0_15_UNCHANGED",
+  "W_stage": "G0_UNFROZEN_GATE0_42",
+  "third_party": "OWNER_BYPASSED_NOT_PASSED",
+  "no_L_modification": true
+}

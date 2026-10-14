@@ -1,0 +1,255 @@
+{
+  "schema": "isograph.lisi-l01-h2-f2-fermion-graded-source-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "NEW_SOURCE_EXPR_L040_L041_PARTIAL_RECONSTRUCTION_UNQUALIFIED",
+  "source": {
+    "id": "L01",
+    "revision": "arXiv:0711.0770v1",
+    "author": "A. Garrett Lisi",
+    "work": "An Exceptionally Simple Theory of Everything",
+    "pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "printed_pages": [
+      22,
+      23,
+      24
+    ],
+    "sections": [
+      "§2.4.1",
+      "§3.1"
+    ],
+    "source_mode": "AUTHOR_WRITTEN_SOURCE_FORMULAS_AND_MODEL_ASSIGNMENT_NOT_THEOREM_QUALIFICATION"
+  },
+  "parent": {
+    "ssc031": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_31.json",
+      "git_blob_sha": "6004578250d4e742f70406f4a547410699ecd813"
+    },
+    "gate031": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_31.json",
+      "git_blob_sha": "5db1fd6dbac360a2cd3ee81cf564382028cadfea"
+    },
+    "visual_audit": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_31_PAGE_VISUAL_SOURCE_G0_AUDIT_0_1.json",
+      "git_blob_sha": "0276b5fe839e379cb10e850cdcf8ecc379717934"
+    }
+  },
+  "source_expressions": [
+    {
+      "id": "H2_CONNECTION",
+      "location": "printed p23 §3.1",
+      "text": "H2=w+B2+xPhi+g",
+      "degree": 1,
+      "kind": "BOSONIC_CONNECTION"
+    },
+    {
+      "id": "H2_U1_GROUP",
+      "location": "printed p23 §3.1",
+      "text": "w+B2 in u(1)+u(1)_(B-L)",
+      "kind": "CARRIER_REPRESENTATION"
+    },
+    {
+      "id": "H2_XPHI_CARRIER",
+      "location": "printed pp22-23 §§2.4.1,3.1",
+      "text": "xPhi=(x1+x2+x3) x (Phi_(r/g/b)+Phi_(rbar/gbar/bbar)) in 3 x (3+3bar)",
+      "degree": 1,
+      "kind": "SOURCE_FACTORIZATION_PROPOSAL"
+    },
+    {
+      "id": "F2_DECOMPOSITION",
+      "location": "printed p24 Eq(3.6)",
+      "text": "F2=Fw+FB2+Fx+Fg+(xPhi)(xPhi)",
+      "degree": 2,
+      "kind": "ADDITIVE_SOURCE_WITH_NONSEPARABLE_RESIDUAL"
+    },
+    {
+      "id": "FW",
+      "location": "printed p24 after Eq(3.6)",
+      "text": "Fw=d(w)",
+      "degree": 2,
+      "kind": "SOURCE_CURVATURE"
+    },
+    {
+      "id": "FB2",
+      "location": "printed p24 after Eq(3.6)",
+      "text": "FB2=d(B2)",
+      "degree": 2,
+      "kind": "SOURCE_CURVATURE"
+    },
+    {
+      "id": "FX",
+      "location": "printed p24 after Eq(3.6)",
+      "text": "Fx=(d(x)+[w+B2,x])Phi-x(d(Phi)+[g,Phi])=(Dx)Phi-x(DPhi)",
+      "degree": 2,
+      "kind": "MIXED_COVARIANT_SOURCE_FORMULA"
+    },
+    {
+      "id": "FG_STRONG",
+      "location": "printed p24 after Eq(3.6)",
+      "text": "Fg=d(g)+g*g",
+      "degree": 2,
+      "kind": "NONABELIAN_SOURCE_CURVATURE"
+    },
+    {
+      "id": "XPHI_RESIDUAL",
+      "location": "printed p24 after Eq(3.6)",
+      "text": "The last term does not easily separate; xPhi xPhi contributes to all three parts of F2.",
+      "kind": "NONSPLIT_AUTHOR_QUALIFICATION"
+    },
+    {
+      "id": "DPSI_DEFINITION",
+      "location": "printed p24 §3.1",
+      "text": "D(Psi)=d(Psi)+[H1+H2,Psi]",
+      "kind": "FERMIONIC_SUPERCURVATURE"
+    },
+    {
+      "id": "DPSI_EXPANDED",
+      "location": "printed p24 §3.1",
+      "text": "D(Psi)=(d+(1/2)omega+(1/4)ephi)Psi+W Psi_L+B1 Psi_R-Psi(w+B2+xPhi)-Psi_q g",
+      "kind": "LEFT_RIGHT_GRADED_FERMION_ACTION"
+    },
+    {
+      "id": "OTHER_GENERATIONS",
+      "location": "printed p24 §3.1",
+      "text": "The second and third fermion generation parts of this curvature are similar.",
+      "kind": "SOURCE_ANALOGY_NOT_FORMULA_COMPLETENESS"
+    }
+  ],
+  "actor_roles": [
+    {
+      "id": "w",
+      "degree": 1,
+      "meaning": "source new u(1) connection; distinct from electroweak uppercase W"
+    },
+    {
+      "id": "B2",
+      "degree": 1,
+      "meaning": "source u(1)_(B-L) in H2; distinct from B1 in H1"
+    },
+    {
+      "id": "x",
+      "degree": 1,
+      "meaning": "source factor for mixed xPhi, H2 bosonic one-form role"
+    },
+    {
+      "id": "Phi",
+      "degree": 0,
+      "meaning": "colored/anti-colored Higgs factor (source model assignment, not proved unique)"
+    },
+    {
+      "id": "g",
+      "degree": 1,
+      "meaning": "strong su(3) connection in H2"
+    },
+    {
+      "id": "xPhi",
+      "degree": 1,
+      "meaning": "source mixed bosonic one-form, factorization proposal"
+    },
+    {
+      "id": "Fw",
+      "degree": 2,
+      "meaning": "source u1 curvature"
+    },
+    {
+      "id": "FB2",
+      "degree": 2,
+      "meaning": "source u1 B-L curvature"
+    },
+    {
+      "id": "Fx",
+      "degree": 2,
+      "meaning": "source mixed curvature"
+    },
+    {
+      "id": "Fg",
+      "degree": 2,
+      "meaning": "source strong curvature"
+    },
+    {
+      "id": "Psi",
+      "degree": "Grassmann-valued field",
+      "meaning": "fermionic first-generation field; not a bosonic connection one-form"
+    },
+    {
+      "id": "D(Psi)",
+      "degree": "Grassmann 1-form",
+      "meaning": "source covariant fermionic part of supercurvature"
+    }
+  ],
+  "strictly_scoped_observations": {
+    "source_displayed_addends_in_F2": [
+      "Fw",
+      "FB2",
+      "Fx",
+      "Fg",
+      "(xPhi)(xPhi)"
+    ],
+    "named_component_terms": 4,
+    "last_term_independent_of_named_components": false,
+    "literal_author_N_part_wording": "all three parts",
+    "grouping_of_three_vs_four_labels": "UNRESOLVED_SOURCE_GROUPING; do not silently infer which F2 sectors aggregate or project",
+    "source_says_xPhi_product_contributes_to_multiple_sectors": true,
+    "xPhi_one_form_product": "The final graded product has degree 2, not a scalar square; no commuting product or forced independent closure.",
+    "xPhi_factorization": "L01 §2.4.1 presents factorization of 18 mixed generator coefficients into three x fields and six colored/anticolored Higgs factors as a motivated proposal, not a uniqueness theorem.",
+    "distinct_notation": [
+      "w is NOT W; source H2 w has u(1) role, H1 W is su(2)_L",
+      "B2 is NOT B1 or arbitrary weak hypercharge B",
+      "Phi is NOT the H1 Higgs phi",
+      "g strong su3 acts only on quark sector Psi_q in the first-generation expanded source operator"
+    ],
+    "source_Fx_signed_operands": [
+      "+(d(x)+[w+B2,x])*Phi",
+      "-x*(d(Phi)+[g,Phi])"
+    ],
+    "source_DPsi_signed_operands": [
+      "+(d+(1/2)omega+(1/4)ephi)*Psi",
+      "+W*Psi_L",
+      "+B1*Psi_R",
+      "-Psi*(w+B2+xPhi)",
+      "-Psi_q*g"
+    ],
+    "source_DPsi_only_first_generation_expanded": true,
+    "source_fermion_second_third_curvatures": "SOURCE_ASSERTED_ANALOGY_ONLY; no fully derived second/third generation operator inferred"
+  },
+  "conditional_math_reconstruction": {
+    "derived_hypothesis": "With x a degree-one left-factor matrix form, Phi degree-zero right-factor field, U=w+B2 acting on left x, and g acting on right Phi, the graded differential of x tensor Phi and cross-brackets with U and g reproduce (Dx)Phi-x D(Phi).",
+    "model_scope": "A faithful formalization of the source-displayed operator action, NOT independently proven as an E8 bracket identification. Use independent 2x2 polynomial matrices for left/right factors solely to verify signs, noncommuting products and degree-1 Leibniz rule.",
+    "explicit_component_identity": "d(x tensor Phi)_(p,q)+[U_p tensor I+I tensor g_p,x_q tensor Phi]-[U_q tensor I+I tensor g_q,x_p tensor Phi]=(dx_pq+[U_p,x_q]-[U_q,x_p]) tensor Phi -x_p tensor (d_q Phi+[g_q,Phi])+x_q tensor (d_p Phi+[g_p,Phi])",
+    "not_proved": "The actual frozen E8 coefficients for (xPhi)(xPhi), its projections into any particular three sectors, full source fermion dynamics, actual 3x(3+3bar) carrier realization and second/third-generation formulas."
+  },
+  "source_census_delta": {
+    "changed_only": [
+      "L-SSC-040",
+      "L-SSC-041"
+    ],
+    "other_unchanged": 189,
+    "ids_preserved": 191,
+    "full_original_text_census_complete": false,
+    "G1_authorized": false
+  },
+  "repair_vs_discovery": {
+    "repair": "No prior H1 source/basis packet or any L05 inconsistency is modified.",
+    "discovery": "Ambiguous source phrase 'all three parts' coexists with four named F2 components plus explicit unseparated xPhi quadratic contribution. Preserve source distinction; do not treat as a source author mistake or a fourth closed curvature splitting."
+  },
+  "constraints": {
+    "source_frozen_complete": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_semantics_authorized": false,
+    "source_mistake_established": false,
+    "E8_Lie_closure_qualified": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro: full independent L-source IsoGraph treatment",
+    "source_author": "A. Garrett Lisi (2007 v1)",
+    "implementation": "AI-assisted G0 source transcription, algebraic sign diagnostic and adversarial tests on 2026-10-09",
+    "priority_claim": "NONE",
+    "source_visual_review": "arxiv original revision printed pp22–24, including Eqs. (3.1), (3.2), (3.6) and displayed fermionic derivative"
+  }
+}

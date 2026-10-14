@@ -1,0 +1,36 @@
+{
+  "schema": "isograph.exp062-l133-g0-source-verifier-nonclaim-literal-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "status": "CONFIRMED_INTERNAL_FIXTURE_LITERAL_MISMATCH_IN_G0_SOURCE_NONCLAIM_CHECK",
+  "authority": false,
+  "authority_effect": "NONE_TEST_FIXTURE_REPAIR_ONLY",
+  "failed_run": {
+    "id": 37815089562,
+    "conclusion": "failure",
+    "failed_step": "verify-l-g0-l133-ssc-source-0-10.mjs",
+    "reported_error": "open source families and nonclaims",
+    "prior_step": "source matrix commutator verifier completed successfully"
+  },
+  "source_input": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_10.json",
+    "frozen": false
+  },
+  "test_input": {
+    "path": "experiments/062/tools/verify-l-g0-l133-ssc-source-0-10.mjs",
+    "git_blob_sha": "3cfa8c7b9c23ab1e6cbf813f68e566ff596064d3"
+  },
+  "defect": "The verifier requires the exact English token 'full-source' in the appended L133 body; the actual source-census body conserves the same unexpanded scope as 'G0-complete or G3 CORE_CLOSED' and explicitly lists Eq.(13), root/Cartan/phase, split and f4 branches. This is a mismatched presentation fixture, not a semantic source omission.",
+  "repair": "Require the actual explicit source incompleteness clauses and audit unexpanded_other_section4 exact row list, rather than an arbitrary word token; retain all 15 mutation controls.",
+  "invalidation": {
+    "run_not_green": true,
+    "G0_candidate_frozen": false,
+    "G1_authorized": false,
+    "source_packet_needs_semantic_edit": false
+  },
+  "nonclaims": [
+    "No external semantic review passed.",
+    "No G3 requalification.",
+    "No W source used."
+  ]
+}

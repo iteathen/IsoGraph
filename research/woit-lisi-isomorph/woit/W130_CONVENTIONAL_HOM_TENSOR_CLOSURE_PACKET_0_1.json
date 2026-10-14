@@ -1,0 +1,62 @@
+{
+  "schema": "woit.w130-conventional-hom-tensor-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-130",
+  "source_assertion_id": "W-A0-049",
+  "frozen_body": "The conventional complex-spacetime vector representation is chirally symmetric: matrices are linear maps from the dual of the right spinor to the left spinor, equivalently the (1/2)_L tensor (1/2)_R representation.",
+  "source": "W02 §I",
+  "root_native": "research/woit-lisi-isomorph/woit/W02_CONVENTIONAL_HOM_TENSOR_SOURCE_INSTANCE_0_1.isg",
+  "support_packets": [
+    "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_3.json",
+    "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_ids": 113,
+    "additional_declared_ids": 76,
+    "total_provider_ids": 189,
+    "unresolved_local_refs": 0,
+    "all_extra_files_reachable_from_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "right_spinor_carrier": 189010,
+    "left_spinor_carrier": 189020,
+    "dual_right_spinor_carrier": 947100,
+    "dual_pairing": 947110,
+    "matrix_vector_carrier": 204110,
+    "matrix_as_hom_evaluation": 947120,
+    "tensor_bilinear_map": 947130,
+    "conventional_two_factor_action": 204220,
+    "left_group_role": 204210,
+    "right_group_role": 204211
+  },
+  "dual_basis_pairing": {
+    "e1*·e1": "1",
+    "e1*·e2": "0",
+    "e2*·e1": "0",
+    "e2*·e2": "1"
+  },
+  "tensor_basis_presentation": {
+    "l1⊗r1": 204117,
+    "l1⊗r2": 204118,
+    "l2⊗r1": 204119,
+    "l2⊗r2": 204120
+  },
+  "semantic_guards": [
+    "The dual carrier is behaviorally defined by a nondegenerate bilinear pairing, not a role label.",
+    "The Hom and tensor presentations share the same exact M2(C) carrier; no hidden carrier identification is used.",
+    "The two-factor complex action is the corrected conventional source action from W02 real-forms revision 0.2.",
+    "No canonical S_R≈S_R* identification is added.",
+    "No topology/smooth structure or right-handed replacement semantics are inferred.",
+    "No Lisi or cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

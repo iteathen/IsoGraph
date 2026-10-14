@@ -1,0 +1,34 @@
+{
+  "schema": "woit.w093-pt-sign-orbit-light-ray-summary-closure-packet.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-093",
+  "frozen_body": "Under the SU(2,2) real form W04d defines PT+, PT-, and PT0 by the sign of a signature-(2,2) Hermitian form; compactified Minkowski points are CP1s lying in PT0, and PT0 is the space of Minkowski light rays/celestial spheres.",
+  "source": "W04d slides pp. 21–23",
+  "support_packets": [
+    "W014_SU22_PROJECTIVE_ORBITS_CLOSURE_PACKET_0_1.json",
+    "W069_NULL_TWISTOR_MINKOWSKI_POINTS_CLOSURE_PACKET_0_1.json"
+  ],
+  "reconstruction": {
+    "PT_plus": 995130,
+    "PT_minus": 995131,
+    "PT_zero": 995132,
+    "hermitian_form": 995110,
+    "signature": "(+,+,-,-)",
+    "compactified_minkowski_point_carrier": 995140,
+    "light_ray_celestial_role": "SOURCE_ROLE_METADATA_ON_PT0"
+  },
+  "guards": [
+    "Light-ray/celestial-sphere is preserved as a source role attached to the exact PT0 carrier; differential geometry is not imported.",
+    "No new orbit or real-form mathematics is added beyond W014/W069.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

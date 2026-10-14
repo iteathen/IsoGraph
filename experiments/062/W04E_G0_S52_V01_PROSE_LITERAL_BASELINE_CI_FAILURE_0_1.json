@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-w04e-s52-source-first-verifier-prose-literal-baseline-defect.v0.1",
+  "track": "W",
+  "date": "2026-10-10",
+  "semantic_authority": false,
+  "status": "HISTORICAL_EXACT_CI_FAILURE_CONSERVED_CHECKER_BASELINE_ONLY",
+  "failed_run": {
+    "run_id": 38095997653,
+    "job_id": 114341910759,
+    "commit": "d898c1342537b12aa62888372c7ce5bac05d0a60",
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/38095997653",
+    "conclusion": "failure",
+    "old_verifier": {
+      "path": "experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-1.cjs",
+      "git_blob_sha": "73529c4d6041002eb1ca3448e7f358eca2ccffd1"
+    },
+    "failed_positive_assertion": "record.obligation.includes('Z(M)=P(S_R)')",
+    "reported_actual": false
+  },
+  "source_and_repair": {
+    "current_source_census": "SOURCE_SEMANTIC_CENSUS_0_68.json",
+    "unchanged_ssc_blob": "710af561f6786ddfc69278ef66f3a9071a94c5e5",
+    "text_source": "W04e July14 preliminary PDF §5.2 printed p12",
+    "source_author_conditional": "When M is a spin manifold, Z(M)=P(S_R)",
+    "ssc_body": "conditionally identifies it with P(S_R) for a spin four-manifold",
+    "ssc_typed": "Z(M)=P(S_R)",
+    "failure_class": "VERIFIER_REQUIREMENT_TOO_SYNTACTIC_FOR_CORRECT_MEANING_AND_DIRECT_EXACT_SOURCE_TYPED_RECORD",
+    "cause": "Checker incorrectly demanded exact mathematical normalization as a literal substring in human-readable summary, where the same conditional source statement was expressed faithfully in prose and exact typed value. It aborted positive baseline before reaching any adversarial controls.",
+    "method_correction": "Require source summary preserve conditional and target P(S_R) semantics, separately require exact equation and spin hypothesis in typed original source atom, add adversarial test for dropping 'conditional'. Do not rewrite mathematical SSC, the original author source, or the failed score.",
+    "semantic_source_omission": false,
+    "checker_successor": {
+      "path": "experiments/062/tools/verify-w04e-s52-euclidean-twistor-source-first-0-2.cjs",
+      "git_blob_sha": "0d75ad6c36a8eaf1d438174808c5a66ae652efe3"
+    }
+  },
+  "provenance": {
+    "previous_0_67_source_ci_run": 38094757993,
+    "previous_0_67_status": "SUCCESS_HISTORICAL_ONLY",
+    "new_0_68_verifier_successor_ci": "PENDING_NEW_EXACT_COMMIT",
+    "failed_run_reclassified": false
+  },
+  "G0": {
+    "open": true,
+    "frozen": false,
+    "oct03_six_mutable_original_bytes_authenticated": false,
+    "global_cold_all_nine_complete": false,
+    "G1_authorized": false
+  },
+  "other_track_semantics_used": false
+}

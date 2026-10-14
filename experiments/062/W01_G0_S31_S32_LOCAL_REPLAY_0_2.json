@@ -1,0 +1,86 @@
+{
+  "schema": "isograph.exp062-w01-section31-32-local-replay.v0.2",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "LOCAL_V8_PASS_46_OF_46_ADVERSARIAL_CONTROLS_NODE_CI_PENDING",
+  "input_tuple": {
+    "ssc": {
+      "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_32.json",
+      "git_blob_sha": "04212aa6fc74c679fb4744aa038df0ef43b83262"
+    },
+    "demand": {
+      "path": "experiments/062/W_G0_W01_SECTION31_32_SOURCE_DEMAND_PROJECTION_0_17.json",
+      "git_blob_sha": "ea9690fdeb1e8d1349aab3b7e4e1641502628f39"
+    },
+    "register": {
+      "path": "experiments/062/W_G0_ALL_151_SOURCE_MEMBERSHIP_REGISTER_0_18.json",
+      "git_blob_sha": "180c367a94457344ac6168eca0ea9f4f354709a1"
+    },
+    "coverage": {
+      "path": "experiments/062/W_G0_LINE_BY_LINE_151_COVERAGE_0_17.json",
+      "git_blob_sha": "bc2eedcf813167d09935f2b948c0849a47443ea8"
+    },
+    "oracle": {
+      "path": "experiments/062/W01_G0_SECTIONS_31_32_PRIMARY_SOURCE_ORACLE_0_2.json",
+      "git_blob_sha": "68746cd9046143e6bc807698fa8588b09d05305c"
+    },
+    "verifier": {
+      "path": "experiments/062/tools/verify-w01-section31-32-source-0-2.mjs",
+      "git_blob_sha": "227c0f85c9c46a8f80715206556b5ad8c744e6f5"
+    },
+    "defect": {
+      "path": "experiments/062/W01_G0_SECTIONS_31_32_SOURCE_CONSERVATION_DEFECT_0_1.json",
+      "git_blob_sha": "74f518af12815348ac25bb85fcad9bdad45178ec"
+    },
+    "failed": {
+      "path": "experiments/062/W01_G0_SECTION31_32_VERIFIER_FREEZE_MUTATION_ESCAPE_0_1.json",
+      "git_blob_sha": "ba39c150bc10664e8c4a48cc2c050e2833b0e8a4"
+    },
+    "reverse": {
+      "path": "experiments/062/W01_G0_S31_S32_TARGETED_REVERSE_COVERAGE_0_1.json",
+      "git_blob_sha": "e8d0eedae01c044582ac1359afca9e78182d53cf"
+    }
+  },
+  "previous": {
+    "SSC0_31": "75dd724efbfffdcd5d475769cb5f3bea6eaaa97b",
+    "historical_W_86": "5415ad2e1e6491e89657e0f2d59804108f6bf163",
+    "Register0_17": "95182dfb2d5bdec8740743325ce5a32e765d6a25",
+    "Coverage0_16": "ed5f6e4bb7c80f4a792997372f699b0dc707446c"
+  },
+  "result": {
+    "source_items": 151,
+    "changed_source_ids": [
+      "W-SSC-032",
+      "W-SSC-112"
+    ],
+    "other_149_source_objects_exact": true,
+    "historical_W_demand_members": 86,
+    "other_84_W_demand_objects_exact": true,
+    "source_incidents_added": 15,
+    "W01_structured_incidents_107_to_122": true,
+    "register_151_rows_reconstructed": true,
+    "coverage_151_rows_reconstructed": true,
+    "positive_errors": [],
+    "mutation_count": 46,
+    "mutations_rejected": 46,
+    "escaped_mutations": 0,
+    "failed_prepublication_42_of_43_preserved": true
+  },
+  "verification": {
+    "local": "PASS_V8_INTERNAL",
+    "GitHub_Node": "PENDING_COMMIT",
+    "full_W01_reverse": "OPEN",
+    "full_nine_source_reverse": "OPEN",
+    "Oct03_mutable_source_identical": "UNVERIFIED",
+    "external": "OWNER_BYPASSED_NOT_PASSED",
+    "G0_frozen": false,
+    "G1_authorized": false
+  },
+  "negative_evidence": [
+    "Two missing source roles corrected without loss of prior W103/W109 formula strictness",
+    "No fallacious equivalence between Ashtekar and YM Hamiltonians",
+    "No unconditional Hamiltonian=0 without boundary scope",
+    "No U(2) completion or Higgs invariance falsely asserted"
+  ]
+}

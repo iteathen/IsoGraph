@@ -1,0 +1,92 @@
+{
+  "schema": "isograph.owner-external-verification-bypass.v0.2",
+  "date": "2026-10-07",
+  "status": "OWNER_TEMPORARY_EXTERNAL_VERIFICATION_BYPASS_ACTIVE",
+  "authority_effect": "CAMPAIGN_PROCEDURE_EXCEPTION_ONLY",
+  "semantic_authority": false,
+  "branch": "research/woit-lisi-isomorph-20261003",
+  "pr": 70,
+  "owner_instruction": "Third-party verification is unavailable. For the time being, we have to bypass third-party verification on both branches, W and L.",
+  "scope": {
+    "campaign": "Experiment 062/063 Woit-Lisi IsoGraph campaign",
+    "tracks": [
+      "W",
+      "L"
+    ],
+    "waived_only": [
+      "external/third-party cold semantic audit calls",
+      "external/third-party promotion-review calls"
+    ],
+    "still_required": [
+      "frozen source/SSC inputs",
+      "complete source-local zero-change fixed point where the stage requires it",
+      "deterministic replay and CI verification",
+      "module-local IA fixed point",
+      "deterministic/adversarial qualification cases",
+      "exact source reconstruction and falsifiers",
+      "qualified-authority boundaries",
+      "documented stage ordering except the explicitly waived external-call substeps"
+    ],
+    "duration": "Temporary; active until the owner explicitly revokes it or restores third-party verification.",
+    "reusable_outside_campaign": false
+  },
+  "supersedes_for_routing": [
+    {
+      "path": "experiments/062/G1_OWNER_COLD_AUDIT_WAIVER_0_1.json",
+      "git_blob_sha": "2580eb58ec9388d739b41d06b4298d4b1f14a859",
+      "note": "Preserved as the historical one-instance G1 waiver; this successor broadens the temporary external-verification exception for the active campaign."
+    },
+    {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_1.json",
+      "git_blob_sha": "e15ce6e382abf3c592bc3f2a0d10ac0566ef1f10",
+      "note": "Its provider-blocked routing is superseded; its factual record of missing external verification is preserved."
+    },
+    {
+      "path": "experiments/063/PROVIDER_BOUNDARY_0_1.json",
+      "git_blob_sha": "d47a1bc441a45b6eb2f54ddb45ef05a07bfb45ee",
+      "note": "Provider unavailability remains factual transport evidence but no longer blocks campaign-local routing while this bypass is active."
+    }
+  ],
+  "g1_inputs": {
+    "W": {
+      "extraction": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "extraction_git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b",
+      "fixed_point_record": "experiments/062/W_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "fixed_point_git_blob_sha": "c298b613e4f4d1876cbc7c1d93709fac5f6b961b",
+      "source_local_zero_change": true
+    },
+    "L": {
+      "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_25.json",
+      "extraction_git_blob_sha": "80e2f576471aab8396f21f9f0b58e15fb5435c16",
+      "fixed_point_record": "experiments/062/L_G1_COMPLETE_REPEAT_AUDIT_0_1.json",
+      "fixed_point_git_blob_sha": "1ca0f58aac91a7032f6d1595089e948727b4cec9",
+      "source_local_zero_change": true
+    }
+  },
+  "routing": {
+    "G1_method_complete_without_exception": false,
+    "G1_campaign_accepted_under_owner_bypass": true,
+    "joint_G1_campaign_gate_satisfied": true,
+    "G2_through_G5_may_consume_pinned_G1_inputs": true,
+    "G6_external_semantic_and_external_promotion_substeps_temporarily_bypassed": true,
+    "G6_campaign_consumption_rule": "A G6 candidate may be consumed only under an explicit campaign-local provisional qualification record after frozen SSC, IA fixed point, deterministic qualification cases, scope review, reconstruction controls, and falsifiers pass.",
+    "global_qualified_module_manifest_may_be_changed": false,
+    "independently_verified_claim_allowed": false
+  },
+  "evidence_labels": {
+    "global_external_verification_state": "INCOMPLETE_EVIDENCE",
+    "campaign_label": "OWNER_BYPASS_PROVISIONAL_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "risk_record": {
+    "accepted_risk": "Systematic blind spots normally targeted by an independent semantic reviewer can survive internal review.",
+    "mitigation": "Exact frozen inputs, source-local fixed points, deterministic replays, module SSC/IA, positive controls, adversarial controls, and explicit nonclaims remain mandatory.",
+    "later_external_failure_effect": "Reopen every campaign result that consumed the affected provisional gate; do not silently preserve promotion."
+  },
+  "invalidation": [
+    "Any semantic change to W_EXTRACTION_RECONCILED_0_18.json requires a new W G1 routing decision.",
+    "Any semantic change to L_EXTRACTION_RECONCILED_0_25.json requires a new L G1 routing decision.",
+    "Any semantic change to a provisionally consumed G6 candidate, SSC, IA fixed point, or frozen qualification cases invalidates that provisional qualification.",
+    "An explicit owner revocation ends this bypass.",
+    "This artifact never converts missing third-party evidence into a PASS."
+  ]
+}

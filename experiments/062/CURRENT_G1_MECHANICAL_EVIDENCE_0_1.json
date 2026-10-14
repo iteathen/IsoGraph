@@ -1,0 +1,91 @@
+{
+  "schema": "isograph.exp062-current-g1-mechanical-evidence.v0.1",
+  "date": "2026-10-06",
+  "status": "PASS_DETERMINISTIC_CURRENT_INPUTS_INDEPENDENT_G1_AUDITS_STILL_REQUIRED",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "inputs": {
+    "corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+    "W": "experiments/062/W_EXTRACTION_RECONCILED_0_5.json",
+    "L": "experiments/062/L_EXTRACTION_RECONCILED_0_13.json",
+    "W_reconciliation": "experiments/062/W_EXTRACTION_RECONCILIATION_0_5.json",
+    "L_reconciliation": "experiments/062/L_EXTRACTION_RECONCILIATION_0_13.json",
+    "extraction_contract": "experiments/062/OCCURRENCE_EXTRACTION_PROMPT_0_2.md"
+  },
+  "guard": {
+    "tool": "experiments/062/tools/verify-current-g1-inputs.mjs",
+    "workflow": ".github/workflows/experiment-062-current-g1-mechanical-guard.yml",
+    "workflow_run_id": 37549232219,
+    "job_id": 112560479375,
+    "tested_commit": "0243debb4527928bdfcf39646a5eb6763b3c9c54",
+    "conclusion": "SUCCESS"
+  },
+  "checks": {
+    "W": {
+      "item_count": 84,
+      "occurrence_count": 177,
+      "all_complete": true,
+      "unique_occurrence_ids": true,
+      "source_spans_exact_and_unique_within_frozen_body": true,
+      "relation_spans_enclosed": true,
+      "argument_spans_enclosed": true,
+      "same_item_backward_dependency_incidence_valid": true,
+      "exact_duplicate_semantic_occurrences": 0,
+      "forbidden_pre_G5_keys": 0,
+      "zero_occurrence_items": 0,
+      "relation_span_text_ambiguities_inside_unique_source_span": 6
+    },
+    "L": {
+      "item_count": 151,
+      "occurrence_count": 319,
+      "all_complete": true,
+      "unique_occurrence_ids": true,
+      "source_spans_exact_and_unique_within_frozen_body": true,
+      "relation_spans_enclosed": true,
+      "argument_spans_enclosed": true,
+      "same_item_backward_dependency_incidence_valid": true,
+      "exact_duplicate_semantic_occurrences": 0,
+      "forbidden_pre_G5_keys": 0,
+      "zero_occurrence_items": 0,
+      "relation_span_text_ambiguities_inside_unique_source_span": 10
+    }
+  },
+  "definition_status_diagnostic": {
+    "W": {
+      "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED": 15,
+      "PARTIAL_IN_BODY": 147,
+      "EXPLICIT_IN_BODY": 15
+    },
+    "L": {
+      "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED": 119,
+      "PARTIAL_IN_BODY": 79,
+      "EXPLICIT_IN_BODY": 121
+    },
+    "interpretation": "NAME_ONLY_OR_EXTERNAL_DEFINITION_REQUIRED is an unresolved demand marker, not permission to treat a conventional mathematical name as a primitive leaf. Any load-bearing reconstruction behavior remains subject to the graph-first G3/G4/G5/G6 path once joint G1 is lawfully closed."
+  },
+  "semantic_limits": [
+    "The frozen 0.2 occurrence serialization has no dedicated side-condition-span field. The extraction contract requires source_span to preserve stated side conditions, but semantic completeness of that preservation cannot be established mechanically from a separate field.",
+    "Repeated relation_span text inside a unique reversible source_span is retained as a diagnostic only; the source_span itself identifies the occurrence region and no governing contract requires relation_span text to be globally unique inside it.",
+    "This guard does not independently decide semantic completeness, recursive mathematical decomposition, spuriousness, or omitted source-local relations. Those remain the role of the unchanged independent cold audits and later graph-first gates."
+  ],
+  "provider_boundary_at_record_time": {
+    "W": {
+      "latest_record": "experiments/062/W_G1_REPAIRED_AUDIT_V6_TRANSPORT_BOUNDARY_0_4.json",
+      "latest_attempt": 6,
+      "result": "HTTP_429_BEFORE_BATCH_1",
+      "G1_complete_for_current_input": false
+    },
+    "L": {
+      "latest_record": "experiments/062/L_G1_FINAL_AUDIT_V12_TRANSPORT_BOUNDARY_0_2.json",
+      "latest_attempt": 3,
+      "result": "HTTP_429_BEFORE_ANY_NEW_BATCH",
+      "G1_complete_for_current_input": false
+    }
+  },
+  "gate_effect": {
+    "joint_G1_complete": false,
+    "G2_authorized": false,
+    "G3_or_later_authorized": false
+  },
+  "next_lawful_action": "Continue unchanged W 0.5 all-84 cold-audit probing when provider quota is available, then unchanged L 0.13 all-151 cold audit. Reconcile only source-local corrections actually supported by frozen bodies. Do not alter semantic inputs to manufacture a pass."
+}

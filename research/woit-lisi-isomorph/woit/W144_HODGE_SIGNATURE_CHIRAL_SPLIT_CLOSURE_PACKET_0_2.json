@@ -1,0 +1,70 @@
+{
+  "schema": "woit.w144-hodge-signature-chiral-split-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_AFTER_GROUP_IDENTITY_CORRECTION",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-144",
+  "source_assertion_id": "W-A0-063",
+  "frozen_body": "In Euclidean signature W02 uses Hodge star squared equal to +1 to split two-forms into self-dual and anti-self-dual sectors; self-dual two-forms correspond to su(2)_R and anti-self-dual two-forms to su(2)_L. In Minkowski signature star squared is -1 and the corresponding chiral decomposition requires complexification.",
+  "source": "W02 §IV.2",
+  "root_native_files": [
+    "research/woit-lisi-isomorph/woit/W02_HODGE_SPIN4_LIE_SOURCE_INSTANCE_0_1.isg",
+    "research/woit-lisi-isomorph/woit/W02_MINKOWSKI_HODGE_COMPLEX_SOURCE_INSTANCE_0_1.isg"
+  ],
+  "base_support_packet": "W027_SPIN4_ACTION_CLOSURE_PACKET_0_2.json",
+  "additional_dependency_files": [
+    "research/woit-lisi-isomorph/woit/W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_4.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_ALGEBRA_PRESENTATION_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_MATRIX2_DET_ADJOINT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_SL_SU_MATRIX2_GROUP_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/woit/W02_CONVENTIONAL_REAL_FORMS_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/woit/W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_EXTERIOR2_HODGE_SPLIT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_6_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/woit/W02_EUCLIDEAN_HODGE_SELFDUAL_SOURCE_INSTANCE_0_2.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_LINEAR_BIJECTION_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_BIJECTION_ACTION_TRANSPORT_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_DIMENSION_3_SCHEMA_0_1.isg",
+    "research/woit-lisi-isomorph/support/PRIMITIVE_SU2_LIE_ALGEBRA_SCHEMA_0_1.isg"
+  ],
+  "mechanical_dependency_check": {
+    "validated_base_provider_ids": 113,
+    "additional_declared_ids": 181,
+    "total_provider_ids": 294,
+    "unresolved_local_refs": 0,
+    "root_count": 2,
+    "all_required_files_reachable_from_at_least_one_root": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "euclidean_two_form_carrier": 205700,
+    "euclidean_hodge_star": 205712,
+    "euclidean_selfdual_carrier": 205713,
+    "euclidean_antiselfdual_carrier": 205714,
+    "euclidean_hodge_square": "+identity",
+    "selfdual_to_su2_R_lie_map": 207150,
+    "antiselfdual_to_su2_L_lie_map": 207151,
+    "minkowski_real_two_form_carrier": 206000,
+    "minkowski_hodge_star": 206012,
+    "minkowski_hodge_square": "-identity",
+    "complexified_two_form_carrier": 206100,
+    "complex_hodge_star": 206113,
+    "plus_i_eigenspace": 206114,
+    "minus_i_eigenspace": 206115
+  },
+  "semantic_guards": [
+    "Euclidean and Minkowski branches are represented as separate roots; no artificial transition identity is introduced.",
+    "The corrected Minkowski-vector support 0.4 preserves 204145=-i used by the complex Hodge eigenspaces.",
+    "The Euclidean Hodge-to-SU(2) correspondences use exact Lie-role maps, not group-name matching.",
+    "No bundle/connection/Yang-Mills dynamics are added."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W144_HODGE_SIGNATURE_CHIRAL_SPLIT_CLOSURE_PACKET_0_1.json",
+  "group_identity_revalidation": "PASS via W02_GROUP_IDENTITY_CORRECTION_INTERFACE_AUDIT_0_1.json; Hodge/SU2 role maps retain public IDs but now rest on correct group identity."
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "isograph.exp062-w02-hermitian-matrix-independent-source-algebra-replay.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "source": {
+    "id": "W02",
+    "rev": "arXiv:2311.00608v2",
+    "page": 2,
+    "equation": "Eq.(1)",
+    "matrix_source_id": "W-SSC-128",
+    "source_census_git_blob": "0df0ba471a7fe6b2c2abb0969ba09e630f36039c"
+  },
+  "status": "DETERMINANT_DIRECT_EXPANSION_AND_625_FINITE_NEGATIVE_SIGN_CASES_PASS_WITH_SOURCE_LITERAL_COUNTERCONTROLS",
+  "source_algebra": "det([[x0+x3,x1-i*x2],[x1+i*x2,x0-x3]]) = (x0+x3)(x0-x3)-(x1-i*x2)(x1+i*x2) = x0²-x1²-x2²-x3², the negative of source Minkowski length-squared -x0²+x1²+x2²+x3².",
+  "verification": {
+    "cases": 625,
+    "source_expression_correct": true,
+    "mutations": [
+      {
+        "name": "upper_imaginary_sign",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": false
+      },
+      {
+        "name": "lower_imaginary_sign",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": false
+      },
+      {
+        "name": "lower_diagonal_equal_upper",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": false
+      },
+      {
+        "name": "omit_x2_in_upper",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": false
+      },
+      {
+        "name": "swap_two_diagonal_entries",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": true
+      },
+      {
+        "name": "swap_x1_x2",
+        "source_formula_literal_equal": false,
+        "same_negative_minkowski_det": true
+      }
+    ]
+  },
+  "critical_negative_evidence": "Determinant equality alone DOES NOT distinguish swapped diagonal positions or swapped spatial x1/x2 labels. Those incorrect sources pass 625 determinant checks but fail the literal ordered source matrix oracle, proving exact source-fidelity control is necessary beyond mathematics.",
+  "scope": "W02_SOURCE_FORMULA_CONSERVATION_ONLY_NOT_GENERAL_LORENTZ_GROUP_PROOF_NOT_G0_FREEZE",
+  "reconstruction": {
+    "analytic_source_ring_identity": true,
+    "finite_integer_samples": 625,
+    "source_literal_6_wrong_matrices_rejected": 6,
+    "mathematical_det_rejects_only": 4
+  },
+  "provenance": {
+    "source_author": "Peter Woit",
+    "original_source": "arXiv v2 PDF",
+    "agent_assisted_verification": "2026-10-08",
+    "direction": "Joshua Oshiro"
+  },
+  "nonclaims": [
+    "No author PDF byte-identity check",
+    "No W/L math",
+    "No primitive/schema promotion"
+  ]
+}

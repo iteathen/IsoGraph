@@ -1,0 +1,166 @@
+{
+  "schema": "isograph.exp062-w05-w097-primary-source-typed-incidence-oracle.v0.1",
+  "source": {
+    "source_id": "W05",
+    "author": "Peter Woit",
+    "frozen_revision": "arXiv:2202.02657v2",
+    "pdf": "https://arxiv.org/pdf/2202.02657v2",
+    "author_pdf": "https://www.math.columbia.edu/~woit/twistorp1.pdf",
+    "pages": {
+      "print": [
+        2,
+        3
+      ],
+      "pdf_index": [
+        1,
+        2
+      ]
+    },
+    "revision_verification": "ARXIV_PDF_EXPLICIT_V2_AND_AUTHOR_PDF_DISPLAY_VISUALLY_AGREE_ON_PAGES_2_3",
+    "pdf_byte_identity": "NOT_ESTABLISHED"
+  },
+  "status": "SOURCE_LITERAL_ORACLE_FOR_W097_G0_ONLY_NOT_INDEPENDENT_EXTERNAL_VERIFICATION",
+  "track": "W",
+  "authority": false,
+  "statements": [
+    {
+      "id": "W097-S01",
+      "source_page": "printed p.2 (PDF index 1)",
+      "source_modality": "DEFINED_TYPE_AND_UNIVERSAL_INOLUTION",
+      "typed_carrier": "CP1_PROJECTIVE_POINTS",
+      "operator": "ANTIHOLomorphic_SELF_MAP",
+      "declared_map": "rho: CP1 -> CP1",
+      "domain": "CP1",
+      "codomain": "CP1",
+      "single_valued_map_declared": true,
+      "application_total_on_declared_domain": true,
+      "composition": {
+        "operator": "SELF_COMPOSITION_EQUAL_IDENTITY",
+        "source_literal": "rho^2 = 1",
+        "quantifier_scope": "EVERY_CP1_POINT"
+      },
+      "source_literal": "A real structure on CP1 is given by an antiholomorphic map rho: CP1 -> CP1 such that rho^2 = 1",
+      "guard": "Map and quantifier roles source-declared; no new qualified primitive function authority."
+    },
+    {
+      "id": "W097-S02",
+      "source_page": "printed p.2",
+      "source_modality": "ORDINARY_REAL_STRUCTURE_COORDINATE_APPLICATION",
+      "typed_carrier": "CP1",
+      "operator": "HOMOGENEOUS_POINT_MAP",
+      "map": "rho",
+      "args": [
+        "z1",
+        "z2"
+      ],
+      "result": [
+        "conjugate(z1)",
+        "conjugate(z2)"
+      ],
+      "source_literal": "rho([z1,z2])=[bar(z1),bar(z2)]",
+      "ordinary_real_point_criterion": "rho([z1,z2])=[z1,z2]",
+      "real_point_locus_source": "CIRCLE_IN_CP1_REAL_LINE_ON_AFFINE_Z_CHART",
+      "contrast_with_twistor": true
+    },
+    {
+      "id": "W097-S03",
+      "source_page": "printed p.2",
+      "source_modality": "TWISTOR_REAL_STRUCTURE_TYPED_PROJECTIVE_MAP",
+      "typed_carrier": "CP1",
+      "operator": "HOMOGENEOUS_POINT_MAP",
+      "map": "rho_tw",
+      "domain": "CP1",
+      "codomain": "CP1",
+      "single_valued_map_declared": true,
+      "application_total_on_declared_domain": true,
+      "args": [
+        "z1",
+        "z2"
+      ],
+      "result": [
+        "NEGATE(CONJUGATE(z2))",
+        "CONJUGATE(z1)"
+      ],
+      "source_literal": "rho_tw([z1,z2])=[-bar(z2),bar(z1)]",
+      "guard": "The source says CP1 endowed with a different real structure; do not replace this map with an arbitrarily partial binary relation."
+    },
+    {
+      "id": "W097-S04",
+      "source_page": "printed p.2",
+      "source_modality": "AFFINE_CHART_FORMULA_WITH_PROJECTIVE_DOMAIN_GUARD",
+      "operator": "COORDINATE_CHART_RULE",
+      "chart": "z=z1/z2",
+      "map": "rho_tw",
+      "source_literal": "rho_tw(z)=-1/bar(z)",
+      "formula": "NEGATE(RECIPROCAL(CONJUGATE(z)))",
+      "chart_scope": "AFFINE_EXPRESSION_ONLY",
+      "guard": "Pole and point-at-infinity must be handled by the homogeneous CP1 formula; this chart formula alone does not define a total map on affine C."
+    },
+    {
+      "id": "W097-S05",
+      "source_page": "printed p.2",
+      "source_modality": "VECTOR_CARRIER_TWO_STEP_NEGATIVE_IDENTITY",
+      "carrier": "C2_COORDINATE_PAIRS",
+      "map": "rho_tw",
+      "operator": "TWO_STEP_COMPOSITION",
+      "source_literal": "rho_tw^2 = -1 on coordinates (z1,z2) of C2",
+      "result": "NEGATIVE_IDENTITY_ON_C2",
+      "distinct_from": "W097-S06"
+    },
+    {
+      "id": "W097-S06",
+      "source_page": "printed p.2",
+      "source_modality": "PROJECTIVE_CARRIER_TWO_STEP_IDENTITY",
+      "carrier": "CP1_COMPLEX_LINES",
+      "map": "rho_tw",
+      "operator": "TWO_STEP_COMPOSITION",
+      "source_literal": "rho_tw^2 = 1 as a map on the space of complex lines",
+      "result": "IDENTITY_ON_CP1",
+      "quantifier_scope": "EVERY_CP1_POINT",
+      "distinct_from": "W097-S05"
+    },
+    {
+      "id": "W097-S07",
+      "source_page": "printed pp.2-3",
+      "source_modality": "UNIVERSAL_NEGATIVE_FIXED_POINT_ASSERTION",
+      "carrier": "CP1_COMPLEX_LINES",
+      "operator": "NO_FIXED_POINT",
+      "map": "rho_tw",
+      "source_literal": "There are no points on CP1 such that rho_tw([z1,z2])=[z1,z2]",
+      "negative_scope": "NOT_EXISTS_PROJECTIVE_POINT_FIXED",
+      "argument_roles": {
+        "subject": "rho_tw([z1,z2])",
+        "reference": "[z1,z2]"
+      },
+      "source_affine_reason": "z=-1/bar(z) implies |z|^2=-1",
+      "guard": "Source explicitly states global homogeneous absence; the affine contradiction is an explanatory chart argument, not a replacement for the projective source assertion."
+    },
+    {
+      "id": "W097-S08",
+      "source_page": "printed p.3",
+      "source_modality": "REAL_PROJECTIVE_CONIC_SOURCE_PRESENTATION",
+      "carrier": "REAL_DEFINED_PROJECTIVE_CONIC_WITH_COMPLEX_POINTS",
+      "operator": "SOURCE_CONIC_EQUATION",
+      "source_literal": "x^2+y^2+z^2=0",
+      "projective_ambient": "P2",
+      "source_complex_points": "EXIST",
+      "source_real_points": "NONE",
+      "conic_vs_twistor": "SOURCE_SAME_REAL_FORM_PRESENTATION_NOT_NEW_CROSS_DOMAIN_ISOMORPHISM"
+    }
+  ],
+  "extraction_obligations": {
+    "map_declared_total_and_single_valued": true,
+    "conjugation_and_argument_order": true,
+    "vector_vs_projective_square_distinct": true,
+    "global_homogeneous_fixed_point_negation": true,
+    "real_point_predicate_scope_distinct": true,
+    "not_just_affine_chart": true,
+    "lower_function_semantics_reconstructible_from_source": true
+  },
+  "qualifications": {
+    "hypothesis": false,
+    "source_mathematical_truth_not_proved": true,
+    "source_reconstruction_only": true,
+    "third_party_review": "OWNER_BYPASSED_NOT_PASSED"
+  }
+}

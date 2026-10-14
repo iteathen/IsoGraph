@@ -1,0 +1,133 @@
+{
+  "schema": "isograph.exp062-l126-typed-action-reverse-q-module-ssc.v0.1",
+  "date": "2026-10-07",
+  "status": "FROZEN_MODULE_SSC_G6_CANDIDATE",
+  "authority_effect": "NONE_QUALIFICATION_INPUT_ONLY",
+  "authority": false,
+  "module": "TYPED_ACTION_REVERSE_Q_0_1",
+  "hypothesis": {
+    "path": "experiments/062/L126_G5H_TYPED_ACTION_REVERSE_Q_0_1.json",
+    "git_blob_sha": "eae12df0a08c37904ffa2e3d69a31e27bca132f8"
+  },
+  "scope": {
+    "obligation_count": 16,
+    "selected_relation_ids": [
+      187200,
+      195000
+    ],
+    "source_neutral": true,
+    "cross_track_semantics_used": false
+  },
+  "obligations": [
+    {
+      "id": "TAQ-SSC-001",
+      "kind": "ACTION_VECTOR_PARENT",
+      "body": "187200 requires exact vector structure on V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-002",
+      "kind": "ACTION_INPUT_PARENT",
+      "body": "187200 requires exact vector structure on M.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-003",
+      "kind": "ACTION_OUTPUT_PARENT",
+      "body": "187200 requires exact vector structure on P.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-004",
+      "kind": "ACTION_TOTAL",
+      "body": "187200 requires ACT:V×M->P total and single-valued.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-005",
+      "kind": "ACTION_V_ADD",
+      "body": "187200 requires additivity in the V input.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-006",
+      "kind": "ACTION_V_SCALE",
+      "body": "187200 requires homogeneity in the V input.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-007",
+      "kind": "ACTION_M_ADD",
+      "body": "187200 requires additivity in the M input.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-008",
+      "kind": "ACTION_M_SCALE",
+      "body": "187200 requires homogeneity in the M input.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-009",
+      "kind": "PAIR_Q_PARENT",
+      "body": "195000 requires exact 185002 quadratic-form support on V.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-010",
+      "kind": "PAIR_MINUS_PARENT",
+      "body": "195000 requires exact vector structure on SM.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-011",
+      "kind": "PAIR_PLUS_PARENT",
+      "body": "195000 requires exact vector structure on SP.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-012",
+      "kind": "PAIR_FORWARD_ACTION",
+      "body": "195000 requires exact 187200 for GM:V×SM->SP.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-013",
+      "kind": "PAIR_REVERSE_ACTION",
+      "body": "195000 requires exact 187200 for GP:V×SP->SM.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-014",
+      "kind": "PAIR_MINUS_REVERSE_Q",
+      "body": "195000 requires GP(v,GM(v,m))=Q(v)·m for admitted v,m.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-015",
+      "kind": "PAIR_PLUS_REVERSE_Q",
+      "body": "195000 requires GM(v,GP(v,p))=Q(v)·p for admitted v,p.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    },
+    {
+      "id": "TAQ-SSC-016",
+      "kind": "SCOPE_FIREWALL",
+      "body": "No matrix, cyclic coefficient, named Clifford, Pin/Spin, triality/reflection, or cross-track semantics are included.",
+      "status": "OPEN_FOR_G6_QUALIFICATION"
+    }
+  ],
+  "frozen_controls": {
+    "positive": [
+      "F3^2 componentwise bilinear action",
+      "F3 one-dimensional paired multiplication actions with Q(v)=v^2"
+    ],
+    "adversarial": [
+      "affine action",
+      "first-input nonlinear action",
+      "second-input nonlinear action",
+      "bilinear pair with reverse factor 2",
+      "pair satisfying only one reverse-Q direction"
+    ]
+  },
+  "next_stage": "MODULE_LOCAL_IA_FIXED_POINT"
+}

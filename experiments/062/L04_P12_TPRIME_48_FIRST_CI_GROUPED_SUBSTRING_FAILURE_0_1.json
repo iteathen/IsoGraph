@@ -1,0 +1,55 @@
+{
+  "schema": "isograph.exp062.L.G0.L04-p12-commuting-C-first-CI-failure.v0.1",
+  "date": "2026-10-11",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "CI": {
+    "run_id": 38190554058,
+    "job_id": 114622204207,
+    "head_sha": "60204a04ca647d9d6f972fb99415b877fdb2f11c",
+    "conclusion": "failure",
+    "verifier_path": "experiments/062/tools/verify-l-g0-l04-original-p12-commuting-C-48-0-1.mjs",
+    "verifier_git_blob_sha": "5b063836f06a26d0405a0f6c147da82839780840",
+    "report_schema": "isograph.exp062.L.G0.original-L04-tprime-48.v0.1",
+    "baseline_PASS": false,
+    "failed_assertions": [
+      "original p12 exact modal passage"
+    ],
+    "hostiles_defined": 34,
+    "hostiles_executed": 0,
+    "hostiles_rejected": 0,
+    "original_PDF_binary_SHA256_verified": true,
+    "original_p12_p15_whole_text_page_SHAs_verified": true,
+    "original_source_atom_SHAs_verified": [
+      "L04-P012-B001",
+      "L04-P012-B002",
+      "L04-P015-B002"
+    ],
+    "Q8_order": 8,
+    "binary_tetrahedral_order": 24,
+    "commuting_C_extension_order": 48
+  },
+  "diagnosis": {
+    "class": "VERIFIER_OVER_SPECIFIC_ORIGINAL_P12_GROUPED_SUBSTRING_ORACLE",
+    "cause": "An over-specific conjunction of source-content phrases failed although source binary/page/atom digests and other baseline checks passed; the particular lexical subtest that failed is not isolated by the first verifier.",
+    "source_math_semantic_defect_established": false,
+    "source_revision_changed": false,
+    "SSC091_changed": false,
+    "source_first_inverse024_changed": false,
+    "repair": "Replace fragile multiple-substring predicate with a bounded p12 narrative locator, retain byte-exact original PDF/page/atom SHA checks, signed model, full lineage guards and all 34 mutations; run new separate CI.",
+    "prior_failure_must_remain_failure": true,
+    "retest_required": true
+  },
+  "preservation": {
+    "six_frozen_original_sources": 6,
+    "SSC_ids": 191,
+    "original_source_location_groups": 350,
+    "L04_original_groups": 53,
+    "whole_original_semantics_cold_complete": 0,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "PR70_merge_authorized": false,
+    "all_earlier_historical_failed_CI_preserved": true
+  }
+}

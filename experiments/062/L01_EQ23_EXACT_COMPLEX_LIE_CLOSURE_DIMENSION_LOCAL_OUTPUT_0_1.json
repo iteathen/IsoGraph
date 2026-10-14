@@ -1,0 +1,227 @@
+{
+  "schema": "isograph.exp062.L.G0.L01.eq23-complex-Lie-closure-exact-determinant.v0.1",
+  "track": "L",
+  "stage": "G0",
+  "original_source_cold_verified": false,
+  "source_semantic_authority": false,
+  "G0_frozen": false,
+  "original_matrix_positions": 49,
+  "original_generator_count": 14,
+  "source_scaled_integral_generator_count": 21,
+  "generator_rescalings": {
+    "g3": "multiply original g3 matrix by -2i",
+    "g8": "multiply original g8 matrix by -2i*sqrt(3)",
+    "quark_and_antiquark": "multiply original q matrices by sqrt(2)",
+    "six_offdiagonal_gluons": "unchanged"
+  },
+  "rescaling_semantics": "Nonzero complex rescalings preserve the generated complex Lie algebra, but not necessarily a specified source real form",
+  "chosen_seven_independent_commutator_pairs": [
+    [
+      "q_r",
+      "q_g"
+    ],
+    [
+      "q_r",
+      "q_b"
+    ],
+    [
+      "q_r",
+      "qbar_r"
+    ],
+    [
+      "q_g",
+      "q_b"
+    ],
+    [
+      "qbar_r",
+      "qbar_g"
+    ],
+    [
+      "qbar_r",
+      "qbar_b"
+    ],
+    [
+      "qbar_g",
+      "qbar_b"
+    ]
+  ],
+  "independent_21_vector_rows_zero_based": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    11,
+    12,
+    13,
+    17,
+    18,
+    19,
+    20,
+    24,
+    26,
+    27,
+    33,
+    34,
+    40
+  ],
+  "determinant_of_exact_21_by_21_minor": "-2",
+  "invariant_symmetric_H_entries_1_based": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "det_H": "-1",
+  "auxiliary_real_signature": [
+    4,
+    3
+  ],
+  "symmetric_form_invariance_for_all_14": true,
+  "upper_bound_from_form": 21,
+  "lower_bound_from_nonzero_minor": 21,
+  "resulting_complex_Lie_generated_algebra": "so(7,C) given the source-assisted generators and ordinary matrix Lie commutator",
+  "printed_source_claim": "a chosen 7x7 matrix representation of g2, which is dimension 14",
+  "residual_added_commutator_directions": 7,
+  "odd_odd_ordinary_witness_rescaled": {
+    "bracket_positions_1based": {
+      "1,2": "2",
+      "5,6": "-1"
+    },
+    "only_compatible_original_generator": "qbar_b",
+    "qbar_b_entries": {
+      "1,2": "-1",
+      "5,6": "1"
+    }
+  },
+  "odd_odd_anticommutator_witness_rescaled": {
+    "entries_1based": {
+      "1,2": "0",
+      "5,6": "-1"
+    },
+    "no_single_qbar_b_coefficient_matches": true
+  },
+  "status": "ASSISTED_ORIGINAL_PDF_TRANSCRIPTION_CONDITIONAL_EXACT_ALGEBRA_NOT_SEMANTIC_AUTHORITY",
+  "controls_defined": 12,
+  "controls_rejected": 12,
+  "negative_controls": [
+    {
+      "name": "flip_qr_1_4",
+      "rejected": true,
+      "errors": [
+        "DOES_NOT_PRESERVE_METRIC_q_r",
+        "ORIGINAL_21x21_NONZERO_MINOR_REPLAY_FAILED",
+        "KEY_TWO_CELL_SOURCE_CLOSURE_DIAGNOSTIC_CHANGED"
+      ]
+    },
+    {
+      "name": "flip_qg_4_2",
+      "rejected": true,
+      "errors": [
+        "DOES_NOT_PRESERVE_METRIC_q_g",
+        "ORIGINAL_21x21_NONZERO_MINOR_REPLAY_FAILED",
+        "KEY_TWO_CELL_SOURCE_CLOSURE_DIAGNOSTIC_CHANGED"
+      ]
+    },
+    {
+      "name": "flip_qbarb_5_6",
+      "rejected": true,
+      "errors": [
+        "DOES_NOT_PRESERVE_METRIC_qbar_b",
+        "ORIGINAL_21x21_NONZERO_MINOR_REPLAY_FAILED",
+        "KEY_TWO_CELL_SOURCE_CLOSURE_DIAGNOSTIC_CHANGED"
+      ]
+    },
+    {
+      "name": "alter_g8_2_2",
+      "rejected": true,
+      "errors": [
+        "DOES_NOT_PRESERVE_METRIC_g8"
+      ]
+    },
+    {
+      "name": "delete_quark_r_5_1",
+      "rejected": true,
+      "errors": [
+        "WRONG_NONZERO_POSITIONS"
+      ]
+    },
+    {
+      "name": "invent_odd_cell",
+      "rejected": true,
+      "errors": [
+        "DOES_NOT_PRESERVE_METRIC_g8",
+        "DOES_NOT_PRESERVE_METRIC_q_r"
+      ]
+    },
+    {
+      "name": "truncate_row",
+      "rejected": true,
+      "errors": [
+        "BAD_ORIGINAL_7X7_SHAPE"
+      ]
+    },
+    {
+      "name": "wrong_generator_coeff",
+      "rejected": true,
+      "errors": [
+        "SOURCE_COEFFICIENT_DOMAIN_MISMATCH_g_gr_+t"
+      ]
+    },
+    {
+      "name": "false_cold",
+      "rejected": true,
+      "errors": [
+        "INVALID_AUTHORITY_full_49_cells_source_cold_qualified"
+      ]
+    },
+    {
+      "name": "false_author_error",
+      "rejected": true,
+      "errors": [
+        "INVALID_AUTHORITY_source_author_error_proven"
+      ]
+    },
+    {
+      "name": "false_G1",
+      "rejected": true,
+      "errors": [
+        "INVALID_AUTHORITY_G1_authorized"
+      ]
+    },
+    {
+      "name": "false_W_import",
+      "rejected": true,
+      "errors": [
+        "INVALID_AUTHORITY_W_semantics_imported"
+      ]
+    }
+  ]
+}

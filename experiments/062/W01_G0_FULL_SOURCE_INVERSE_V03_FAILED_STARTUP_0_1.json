@@ -1,0 +1,21 @@
+{
+  "schema": "isograph.exp062-w01-full-inverse-v03-startup-failure.v0.1",
+  "track": "W",
+  "status": "FAILED_EARLY_SCRIPT_INITIALIZATION_NO_SEMANTIC_OR_ADVERSARIAL_QUALIFICATION",
+  "qualification": "FAILED_UNQUALIFIED",
+  "run_id": 38074517176,
+  "commit": "4cfef940f74072ab040407d4bcd58b8922c3b67f",
+  "workflow": "Experiment 062 W01 frozen original complete inverse G0 repaired 0.3",
+  "url": "https://github.com/iteathen/IsoGraph/actions/runs/38074517176",
+  "conclusion": "failure",
+  "startup_succeeded": false,
+  "adversarial_controls_executed": false,
+  "predecessor_checker_path": "experiments/062/tools/verify-w01-full-frozen-original-bidirectional-0-3.cjs",
+  "predecessor_checker_blob_sha": "0a673dcde1d0e9923c37b9bff93394222e7d53dd",
+  "source_and_ssc_changed": false,
+  "source_first_union_sha": "67a8b002a799b60a3c3dd5178fa4fcac584ffd0e",
+  "cause": "JavaScript temporal dead zone: docs.register=read(registerPath) occurred before const docs declaration, causing Cannot access 'docs' before initialization. This is a verifier initialization error, not a missing frozen source obligation.",
+  "repair": "v0.4 declares docs object with register field as part of its initialization, retains full-SSC and register-source exact-blob checks, and preserves all v01/v02/v03 failed statuses.",
+  "G0": "OPEN_UNFROZEN",
+  "old_ci_failures_not_reclassified": true
+}

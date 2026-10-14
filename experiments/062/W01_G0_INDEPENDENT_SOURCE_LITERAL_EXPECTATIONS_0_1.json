@@ -1,0 +1,204 @@
+{
+  "schema": "isograph.exp062-w01-g0-source-literal-independent-expectations.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "SOURCE_LOCAL_INDEPENDENT_EXPECTATIONS_W01_15_STRUCTURAL_FIDELITY_CONTROLS_NOT_FULL_SOURCE_ASSERTION_ENUMERATION",
+  "source": {
+    "id": "W01",
+    "author": "Peter Woit",
+    "work": "Euclidean Twistor Unification",
+    "revision": "arXiv:2104.05099v2",
+    "pdf": "https://arxiv.org/pdf/2104.05099v2",
+    "arxiv_version_mark": "arXiv v2 14 October 2021",
+    "author_pdf_revision_byte_identity": "UNCONFIRMED"
+  },
+  "expected_changed_ids": [
+    "W-SSC-026",
+    "W-SSC-028",
+    "W-SSC-029",
+    "W-SSC-030",
+    "W-SSC-031",
+    "W-SSC-034",
+    "W-SSC-036",
+    "W-SSC-037",
+    "W-SSC-048",
+    "W-SSC-049",
+    "W-SSC-050",
+    "W-SSC-052",
+    "W-SSC-053",
+    "W-SSC-054",
+    "W-SSC-056"
+  ],
+  "expected_count_of_source_statement_incidences_by_id": {
+    "W-SSC-026": 4,
+    "W-SSC-028": 5,
+    "W-SSC-029": 3,
+    "W-SSC-030": 4,
+    "W-SSC-031": 4,
+    "W-SSC-034": 4,
+    "W-SSC-036": 4,
+    "W-SSC-037": 3,
+    "W-SSC-048": 2,
+    "W-SSC-049": 1,
+    "W-SSC-050": 3,
+    "W-SSC-052": 2,
+    "W-SSC-053": 3,
+    "W-SSC-054": 4,
+    "W-SSC-056": 4
+  },
+  "frozen_literal_witnesses": [
+    {
+      "id": "W01-026-QUATNORM-04",
+      "source_page": 4,
+      "source_display": "|x|^2=x*conjugate(x)",
+      "carrier": "H quaternion",
+      "binder": "x",
+      "negative": "not KAPPA(x) and not invented q"
+    },
+    {
+      "id": "W01-028-SPLIT-02",
+      "source_page": 4,
+      "source_display": "[[x0+x3,x1+x2],[x1-x2,x0-x3]]",
+      "norm": "x0^2-x1^2+x2^2-x3^2"
+    },
+    {
+      "id": "W01-028-MINKACT-04",
+      "source_page": 4,
+      "source_display": "x->inverse(adjoint(g))*x*inverse(g)",
+      "group": "SL(2,C)"
+    },
+    {
+      "id": "W01-028-SPLITACT-05",
+      "source_page": 4,
+      "source_display": "x->gL*x*inverse(gR)",
+      "group": "SL(2,R)_L*SL(2,R)_R"
+    },
+    {
+      "id": "W01-029-VAR-02",
+      "source_page": 7,
+      "source_display": "de^A+omega^A_B wedge e^B=0",
+      "variation": "omega^AB"
+    },
+    {
+      "id": "W01-030-CURV-04",
+      "source_page": 7,
+      "source_display": "Omega=Omega_+,R+Omega_+,L+Omega_-,R+Omega_-,L",
+      "four_terms": true
+    },
+    {
+      "id": "W01-031-EINSTEIN-01",
+      "source_page": 7,
+      "source_display": "Omega_(-,R)(omega)=0",
+      "premise": "torsion-free"
+    },
+    {
+      "id": "W01-031-EINSTEIN-02",
+      "source_page": 7,
+      "source_display": "Omega_(+,L)(omega)=0",
+      "role": "implied not primary"
+    },
+    {
+      "id": "W01-031-HALFFLAT-03",
+      "source_page": 7,
+      "source_display": "Omega_(-,L)(omega)=0",
+      "role": "self dual / half flat not Einstein condition"
+    },
+    {
+      "id": "W01-034-SPINOR-01",
+      "source_page": 11,
+      "source_display": "S_R+S_L=Lambda^*(C2) tensor (Lambda^2 bar(C2))^(1/2)",
+      "conjugation": true,
+      "exponent": "1/2"
+    },
+    {
+      "id": "W01-036-WEIGHT-03",
+      "source_page": 11,
+      "source_display": "l weight +1; C4/l weight -1/3",
+      "scope": "determinant-one subgroup"
+    },
+    {
+      "id": "W01-037-REP-02",
+      "source_page": 12,
+      "source_display": "C2_-1,C_-2,C_0,C3C2_1/3,C3_-2/3,C3_4/3",
+      "source_ordered_six": true
+    },
+    {
+      "id": "W01-048-ACTION-02",
+      "source_page": 18,
+      "source_display": "Z->(C+DZ)(A+BZ)^-1",
+      "guard": "invertible on chart"
+    },
+    {
+      "id": "W01-049-NULL-01",
+      "source_page": 19,
+      "source_display": "(Z1-Z2)s=0 => det(Z1-Z2)=0",
+      "condition": "same projective twistor incident with both"
+    },
+    {
+      "id": "W01-050-WARD-02",
+      "source_page": 20,
+      "source_display": "*F_A=-F_A",
+      "sign": "anti self dual"
+    },
+    {
+      "id": "W01-052-ORB-M-01",
+      "source_page": 23,
+      "source_display": "SIX source-claimed M orbits, FIVE names visibly listed",
+      "listed": [
+        "M_++",
+        "M_--",
+        "M_+0",
+        "M_-0",
+        "M_00"
+      ],
+      "negative": "sixth member not inferred or invented"
+    },
+    {
+      "id": "W01-053-QUAT-01",
+      "source_page": 24,
+      "source_display": "sigma(s1,s2,s1perp,s2perp)=(-bar(s2),bar(s1),-bar(s2perp),bar(s1perp))",
+      "vector_square": "-1",
+      "projective_square": "+1"
+    },
+    {
+      "id": "W01-054-SUPPORT-01",
+      "source_page": 36,
+      "source_display": "E1_plus supported tau<0",
+      "negative": "not W04e positive tau convention"
+    },
+    {
+      "id": "W01-056-GLUE-02",
+      "source_page": 41,
+      "source_display": "(Phi+,Phi-)~(Phi++psi,Phi-+psi)",
+      "requirement": "same globally holomorphic psi on both"
+    },
+    {
+      "id": "W01-056-BOUND-03",
+      "source_page": 42,
+      "source_display": "Phi+(t+i eps) minus Phi-(t-i eps)",
+      "polarity": "UPPER_PLUS_LOWER_MINUS"
+    }
+  ],
+  "source_negative_and_scope": [
+    "No mathematical normalization of author-printed six/five orbit discrepancy",
+    "No conflation of Euclidean, Minkowski, split and projective carrier action laws",
+    "No blanket anti-self-duality for all Ward connections without open-set/trivial-on-lines conditions",
+    "No global fractional chart map when denominator A+BZ singular",
+    "No t>0 switch in W01 OS when source uses tau<0",
+    "No assert total source census completed from direct checking 44 existing item summaries",
+    "No source mathematical theorem or L semantic authority promoted"
+  ],
+  "qualification": {
+    "full_W01_assertion_exhaustiveness": false,
+    "full_nine_W_source_G0_frozen": false,
+    "owner_bypass": "THIRD_PARTY_ONLY_NOT_INDEPENDENT_CI",
+    "source_identity_external_pdf_byte_equality": false
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "source_author": "Peter Woit",
+    "independent_check_method": "Agent-assisted direct frozen v2 primary PDF visual/equation source transcription separate from successor SSC data model",
+    "recorded": "2026-10-08"
+  }
+}

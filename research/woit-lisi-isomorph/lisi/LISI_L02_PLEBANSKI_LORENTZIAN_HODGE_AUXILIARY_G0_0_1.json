@@ -1,0 +1,171 @@
+{
+  "schema": "isograph.lisi-L02-plebanski-hodge-auxiliary-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "ORIGINAL_L02_V2_EQUATIONS_1_3_5_6_8_9_24_25_EXACT_LORENTZIAN_HODGE_AUXILIARY_REDUCTION__L02_FULL_SOURCE_UNFROZEN",
+  "source": {
+    "id": "L02",
+    "paper": "A. Garrett Lisi, Lee Smolin, Simone Speziale, Unification of gravity, gauge fields, and Higgs bosons",
+    "revision": "arXiv:1004.4866v2",
+    "url": "https://arxiv.org/pdf/1004.4866",
+    "pdf_pages_zero_based": [
+      2,
+      3,
+      4,
+      6,
+      7
+    ],
+    "source_method": "Direct original v2 PDF and printed equations visually inspected; do not substitute earlier arXiv v1 or published article formula."
+  },
+  "provenance_parents": {
+    "predecessor_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_43.json",
+      "git_blob_sha": "afb81fbc69bb8f60480d6654dbcc1ebfdfbd5f35"
+    },
+    "predecessor_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_46.json",
+      "git_blob_sha": "b85b14dd8bf8cbdeb4e77e88307141e3ccc82357"
+    }
+  },
+  "source_equation_transcriptions": [
+    {
+      "id": "EQ1",
+      "pdf_page": 2,
+      "expression": "S(H,B,Phi)=g^-1 int <B wedge F+B wedge Phi(B)+(1/3)B wedge Phi^3(B)>",
+      "source_role": "SOURCE_ACTION"
+    },
+    {
+      "id": "EQ3",
+      "pdf_page": 2,
+      "expression": "F=-2(Phi+(1/3)Phi^3)B",
+      "source_role": "SOURCE_B_EULER_EQUATION"
+    },
+    {
+      "id": "EQ4_5",
+      "pdf_page": 2,
+      "expression": "Phi field equation is satisfied for any B when B=-Phi^2(B)",
+      "source_role": "SOURCE_SUFFICIENT_NOT_UNIQUENESS"
+    },
+    {
+      "id": "EQ6",
+      "pdf_page": 3,
+      "expression": "For gravitational area Sigma=e wedge e, *Sigma=star_Lie(Sigma), *^2=star_Lie^2=-1 under nondegenerate Lorentzian frame e",
+      "source_role": "SOURCE_LORENTZIAN_IDENTITY"
+    },
+    {
+      "id": "EQ7",
+      "pdf_page": 3,
+      "expression": "Phi=a+b*+c star_Lie+d(* star_Lie)",
+      "source_role": "SOURCE_ANSATZ_OTHER_CLASSES_OPEN"
+    },
+    {
+      "id": "EQ8_9",
+      "pdf_page": 4,
+      "expression": "First selected class Phi=* and B=(3/4)*F",
+      "source_role": "SOURCE_SELECTED_CONSISTENT_CLASS"
+    },
+    {
+      "id": "EQ10",
+      "pdf_page": 4,
+      "expression": "D*F=0 from DB=0 after nonzero 3/4 factor; not an arbitrary field-equation solution",
+      "source_role": "SOURCE_REMAINING_FIELD_EQUATION"
+    },
+    {
+      "id": "EQ24",
+      "pdf_page": 6,
+      "expression": "S(H,e,B)=g^-1 int <B wedge F+(2/3) B wedge *B>",
+      "source_role": "SOURCE_REDUCED_BEFORE_B_ELIMINATION"
+    },
+    {
+      "id": "EQ25",
+      "pdf_page": 6,
+      "expression": "S(H,e)=(3/(8g)) int <F wedge *F>",
+      "source_role": "SOURCE_CONDITIONAL_B_ELIMINATION"
+    },
+    {
+      "id": "EQ27",
+      "pdf_page": 7,
+      "expression": "Low-energy action additionally imposes e'=e and torsion-free restriction; not implied by algebraic Phi=* choice alone",
+      "source_role": "SOURCE_LATER_ADDITIONAL_RESTRICTIONS"
+    }
+  ],
+  "mathematical_reconstruction": {
+    "algebraic_assumptions": [
+      "Nondegenerate oriented real 4D gravitational frame e used in spacetime Hodge, Lorentzian metric signature (-,+,+,+).",
+      "Phi=* on 2forms as selected source first solution class, not Phi=all four source ansatz coefficients.",
+      "Clifford scalar trace is cyclic on even bosonic degree-two products; wedge of two 2forms is symmetric.",
+      "g != 0, finite model coefficients rational, forms local and off-shell; source original E8/Spin(1+N,3) Clifford trace matrix not reconstructed."
+    ],
+    "direct_E3_substitution": "Phi^2=-I => Phi^3=-Phi; Phi+(1/3)Phi^3=(2/3)Phi; F=-(4/3)*B. With B=(3/4)*F, F=-(4/3)*(3/4)*^2F=F.",
+    "direct_E5_substitution": "B=-Phi^2(B)=B for all 2form B, using Lorentzian *^2=-I. Source Eq4 is covered by this Eq5 sufficient route only, not unique Phi sector classification.",
+    "original_vs_reduced_action": "S_uneliminated integrand=B wedge F+B wedge *B+(1/3)B wedge *^3B; Lorentzian *^3=-*, so S=(B wedge F)+(2/3)(B wedge *B). B=(3/4)*F gives ((3/4)-(3/8))F wedge *F=(3/8)F wedge *F.",
+    "source_hodge_metric": "For coordinate 2form basis I=(01,02,03,12,13,23), W_(ij)=oriented wedge epsilon of four indices, M_(ij)=gInv_(a,c)gInv_(b,d)-gInv_(a,d)gInv_(b,c), and signed tetrad volume delta=det(e), * = W^-1 delta M. Independently transform orthonormal Lorentzian complement-star by exterior-square coframe matrix.",
+    "source_e_and_eprime": "Frame e specifies Hodge Phi=* in the first class; independent H-connection broken E=e'phi uses e' and is only subsequently restricted to e'=e and T=0 for Eq27. Do not silently identify e with e'.",
+    "euclidean_negative_control": "With Euclidean signature ++++ we instead have *^2=+I. Eq5 implies B=-B, so only B=0 over characteristic zero; the general source B=(3/4)*F solution does not follow. Source Lorentzian premise is essential.",
+    "global_orientation_negative_control": "For orientation-reversing e with fixed g, * changes sign; use det(e) not absolute determinant in explicit oriented-coordinate computation. Both orientations have *^2=-I.",
+    "source_scope": "Exact rational finite linear algebra and polynomial source Eq1/Eq3/Eq5/Eq24/Eq25 algebra only, no source dynamics, spinor sector, real Clifford generator embedding, any field equation solution for H, or global path-integral/cold independent mathematical reviewer."
+  },
+  "verifier_contract": {
+    "nondegenerate_coframes": 6,
+    "nontrivial_2form_seeds": 5,
+    "source_equation3_cases": 30,
+    "source_equation5_cases": 30,
+    "action_equivalence_cases": 30,
+    "independent_hodge_basis_probes": 36,
+    "per_coframe_source_hodge_pairing_probes": 36,
+    "independent_orthonormal_to_coordinate_star": true,
+    "orientation_reverse_control": true,
+    "Euclidean_star_squared_plus_identity_negative": true,
+    "non_unit_determinant_coframes": true,
+    "hostile_math_mutations_minimum": 10,
+    "hostile_source_provenance_mutations_minimum": 14,
+    "whole_source_record_conservation": true,
+    "code_CI_not_source_qualification": true
+  },
+  "source_census_delta": {
+    "successor": "SOURCE_SEMANTIC_CENSUS_0_44.json",
+    "changed_only": [
+      "L-SSC-052",
+      "L-SSC-053",
+      "L-SSC-054",
+      "L-SSC-055",
+      "L-SSC-057",
+      "L-SSC-061"
+    ],
+    "unchanged_full_records": 185,
+    "total_ids": 191,
+    "frozen": false
+  },
+  "source_uncertainties": [
+    "Eq4 variation only asserted sufficient from Eq5; generic classes of Phi solutions and source U(Phi) are outside chosen class.",
+    "Hodge * depends on an externally chosen nondegenerate frame before eventual e'=e; full equation of motion linking e in Phi and E in H not solved.",
+    "No full Lie algebra Clifford scalar trace normalization and global action/boundary source equivalence established.",
+    "No numerical prediction or phenomenological strength; source bare coupling mismatch and gravity corrections remain.",
+    "L02-only analysis not a reinterpretation of source L01; no W/L synthesis or transition to G1."
+  ],
+  "stage_locks": {
+    "G0_open": true,
+    "source_census_frozen": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "cross_track_semantics_authorized": false,
+    "full_L02_source_equivalence_qualified": false,
+    "source_spacetime_global_action_qualified": false,
+    "external_cold_mathematical_review_passed": false,
+    "author_error_proved": false,
+    "outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro: source-faithful independent Track L across the frozen six-source corpus",
+    "external_antecedents": [
+      "Lisi, Smolin, Speziale arXiv:1004.4866v2",
+      "Standard 4-dimensional Lorentzian exterior algebra and Hodge duality"
+    ],
+    "agent_generated_formulation": "2026-10-09 independent exact rational Hodge coordinate/tetrad source algebra reconstruction with ad hoc nondegenerate local frames; no mathematical novelty priority or original-author field convention asserted."
+  },
+  "next": "Reconcile L02 field-dependent Hodge/frame e and connection frame e' in full Eq15-Eq22, source authorization of e'=e and torsionless solution subset, and source scalar trace across the full spin(1+N,3) Lie generators.",
+  "concurrent_L_CI_g0_gate46": "Predecessor G0 gate0.46 is a separate L01 source-shaped so8 sign witness and chiral source success with 56/56 hostile CI; preserve its procedural record unmodified."
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "isograph.domain-neutral-basis-core-definability-audit.v0.1",
+  "date": "2026-10-05",
+  "status": "FOUNDATIONAL_BOUNDARY_NARROWED_TO_INDEX_ARITHMETIC_PLUS_SCHEMA_QUALIFICATION",
+  "demand_graph": "PRIMITIVE_DEMAND_GRAPH_0_1.json",
+  "candidate_basis": "CANDIDATE_PRIMITIVE_BASIS_0_1.json",
+  "governing_authority": [
+    "research/primitive-logic/PRIMITIVE_LOGIC_KERNEL_0_1.md",
+    "CORE_SPEC_DRAFT_0_20_PRIMITIVE_LOGIC_CLOSURE_CANDIDATE.md",
+    "CORE_SPEC_DRAFT_0_21_RENDERING_CONSERVATION_SCHEMA_CLOSURE_CANDIDATE.md"
+  ],
+  "core_capabilities_used": [
+    "raw carrier/value identity",
+    "binders and declared quantifier domains",
+    "AND/OR/NOT/IMPLIES/IFF",
+    "FORALL/EXISTS/EQUAL",
+    "APPLY/PREDICATE_APPLICATION",
+    "finite constructor tags and ordered fields",
+    "DEFINITION_EXPANDS_TO",
+    "schema closure"
+  ],
+  "findings": {
+    "B-TYPED-MAP": {
+      "disposition": "SCHEMA_DEFINABLE_IN_CORE",
+      "construction": "raw domain/codomain carriers + APPLY graph + FORALL/EXISTS totality/partial-domain clause + EQUAL uniqueness"
+    },
+    "B-OPERATION-LAW": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_INDEX_PRODUCT",
+      "construction": "n-ary operation = typed map from indexed product; laws are Core quantified formulas"
+    },
+    "B-SUBOBJECT-QUOTIENT": {
+      "disposition": "SCHEMA_DEFINABLE_IN_CORE",
+      "construction": "subcarrier predicate/inclusion + equivalence relation laws + quotient carrier/projection characterized by q(x)=q(y) iff E(x,y) and surjectivity"
+    },
+    "B-INDEXED-FAMILY": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_TYPED_MAP",
+      "construction": "projection total->base; fiber = preimage; section/pullback/restriction expressed by maps and equalities"
+    },
+    "B-ADDITIVE-SCALAR": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_INDEX_ARITHMETIC",
+      "construction": "two operation maps plus quantified additive/scalar/distributive laws; exact coefficient construction needs number/index authority"
+    },
+    "B-MULTILINEAR-FORM": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_ADDITIVE_SCALAR",
+      "construction": "typed multi-argument map plus linearity/symmetry/conjugation/positivity laws"
+    },
+    "B-INVOLUTION-GRADING": {
+      "disposition": "SCHEMA_DEFINABLE_IN_CORE_AFTER_TYPED_MAP",
+      "construction": "typed finite-order map + composition/equality; fixed/eigenspace carriers as subcarriers; grading indexed by finite carrier"
+    },
+    "B-TOPOLOGY-LIMIT": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_INDEXED_FAMILY",
+      "construction": "carrier of neighborhoods/open regions plus membership/closure laws; convergence/limit as quantified relation; completion as schema, not primitive leaf"
+    },
+    "B-DIFFERENTIAL": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_ADDITIVE_SCALAR",
+      "construction": "typed map with linearity and derivation/nilpotence/composition laws; chains/kernels/images/quotients use generic schemas"
+    },
+    "B-AGGREGATE": {
+      "disposition": "SCHEMA_DEFINABLE_ABSTRACTLY_AFTER_TYPED_MAP",
+      "construction": "measure/aggregate as typed map/functionals with additivity/linearity/normalization laws; concrete analytic instances remain separate qualification burdens"
+    },
+    "B-PARITY-GRADED": {
+      "disposition": "SCHEMA_DEFINABLE_AFTER_INDEX_ARITHMETIC",
+      "construction": "two-class index carrier plus parity/sign law over generic operations"
+    },
+    "B-FINITE-PRODUCT-INDEX": {
+      "disposition": "REQUIRES_SEPARATE_QUALIFIED_INDEX_ARITHMETIC_DATA_THEORY",
+      "reason": "Core K8 explicitly excludes cardinality/arithmetic; Core K7 requires base/successor and inductive/well-founded carrier authority. Generic finite arity, dimension, cardinality and exact coefficient/index semantics cannot be hidden in literals or relation names."
+    }
+  },
+  "first_required_independent_module": {
+    "id": "DNIA-0.1",
+    "name": "Domain-Neutral Index and Arithmetic 0.1",
+    "purpose": "Supply only the inductive/counting/arithmetic data semantics forced by the demand graph: natural index carrier, zero/successor, induction/well-founded authority, finite index segments, addition, multiplication, order, exact finite cardinality and rational-literal construction.",
+    "prohibited_scope": [
+      "no group/vector/bundle/twistor/triality/domain objects",
+      "no W or L source-object identities",
+      "no algebra/geometry/physics-specific theorems",
+      "no campaign closure claims"
+    ],
+    "historical_evidence_only": "research/primitive-logic/PRIMITIVE_NATURAL_ARITHMETIC_* may be inspected as prior research but is not authority and must not be promoted without fresh derivation/qualification."
+  },
+  "consequence": "Do not add new semantic Core primitive IDs for W/L at this stage. Qualify DNIA independently, then qualify the remaining graph-derived generic schemas as schema modules over Core+DNIA. Re-run demand coverage afterward.",
+  "downstream_block": "W and L must not consume DNIA or any generic schema until independent module qualification is complete."
+}

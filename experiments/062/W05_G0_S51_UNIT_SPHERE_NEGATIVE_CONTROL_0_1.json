@@ -1,0 +1,75 @@
+{
+  "schema": "isograph.exp062-w05-s51-unit-quaternion-sphere-nonauthor-negative.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "NONAUTHOR_EVALUATION_UNIT_SPHERE_BINDER_NOT_GENERAL_HYPERKAHLER_THEOREM",
+  "original_context": {
+    "revision": "arXiv:2202.02657v2",
+    "source_html": [
+      168,
+      171
+    ],
+    "source_formula": "aI+bJ+cK",
+    "source_bindings": [
+      "real dimension 4k",
+      "IJ=K",
+      "a^2+b^2+c^2=1",
+      "I,J,K are Kähler structures"
+    ],
+    "source_first_oracle": "experiments/062/W05_G0_S51_HYPERKAHLER_SOURCE_FIRST_0_1.json"
+  },
+  "calculation": {
+    "carrier": "H=R4",
+    "I": "left multiplication by i",
+    "J": "left multiplication by j",
+    "K": "left multiplication by k",
+    "quaternion_relation": "i²=j²=k²=-1, ij=k=-ji; all quaternionic products fixed",
+    "source_unit_cases": [
+      {
+        "a": 1,
+        "b": 0,
+        "c": 0
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "c": 0
+      },
+      {
+        "a": 0,
+        "b": 0,
+        "c": 1
+      },
+      {
+        "a": 0.6,
+        "b": 0.8,
+        "c": 0
+      },
+      {
+        "a": 0.3333333333333333,
+        "b": 0.6666666666666666,
+        "c": 0.6666666666666666
+      }
+    ],
+    "expected_unit_squares": "-1",
+    "negative_case": {
+      "a": 2,
+      "b": 0,
+      "c": 0,
+      "norm_squared": 4,
+      "square": "-4",
+      "not_complex_structure": true
+    }
+  },
+  "conclusion": {
+    "negative_scope": "WITHOUT_NORM_EQUALS_1_THE_FORMULA_DOES_NOT_SQUARE_TO_NEGATIVE_IDENTITY",
+    "source_text_changed": false,
+    "not_an_author_statement": true,
+    "not_general_quotient_theorem": true,
+    "not_a_counterexample_to_hyperkahler_source_sphere": true,
+    "not_all9_source_reverse": true,
+    "not_G1_authorization": true
+  },
+  "source_source0_40": "78aa5be5cd0dd8c5ae56ac2e645d6b36193369b7"
+}

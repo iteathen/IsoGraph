@@ -1,0 +1,50 @@
+name: Experiment 062 L G0 original Figure1 eleven clip paint inventory 0.6
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py'
+      - '.github/workflows/experiment-062-l-g0-l01-all11-clips-paint-0-6.yml'
+      - 'research/woit-lisi-isomorph/lisi/LISI_L01_FIG1_ALL11_CLIP_SOURCE_PAINT_PREREG_G0_0_3.json'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  frozen-L01-clip-paint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - name: Exact source and synthetic controls preflight
+        run: |
+          set -euo pipefail
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py)" = "476114cc86250d159a34f591982592fa9bb29fea"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/LISI_L01_FIG1_ALL11_CLIP_SOURCE_PAINT_PREREG_G0_0_3.json)" = "9c2703a9e3539ba1f52edd270f8939e84d7f7018"
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-table-border-row-rule-0-3.py)" = "674adc02e88a06403ef1267722ff5b1bc2149dc5"
+          test "$(git hash-object experiments/062/tools/audit-l-g0-l01-clip-and-stroke-footprint-0-3.py)" = "c340c117fc90369cec830811762c1bb2e684d9e6"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/tools/extract_l01_svg_strokes_0_2.py)" = "f0f144e06dc17992a8b3ea2bae9e32299ed848b5"
+          test "$(git hash-object experiments/062/L_CURRENT_STAGE_GATE_0_197.json)" = "77d37d16fcd72852c1e7a7487786b896069db5e9"
+          test "$(git hash-object research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json)" = "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+          python3 -m py_compile experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py
+          python3 experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py --self-test
+      - name: Install original SVG renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Freeze exact original L01 PDF and replay eleven clip paths
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          export FROZEN_L01="$work/L01-v1.pdf"
+          node --input-type=module -e '
+            import {createHash} from "node:crypto";
+            import {writeFileSync} from "node:fs";
+            const r=await fetch("https://arxiv.org/pdf/0711.0770v1",{signal:AbortSignal.timeout(65000)});
+            if(!r.ok)throw Error("FROZEN_SOURCE_HTTP_"+r.status);
+            const b=Buffer.from(await r.arrayBuffer());
+            const h=createHash("sha256").update(b).digest("hex");
+            if(b.length!==623525||h!=="344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe")throw Error("FROZEN_SOURCE_BYTES_CHANGED");
+            writeFileSync(process.env.FROZEN_L01,b);
+            console.log(JSON.stringify({pdf_sha256:h,bytes:b.length}));
+          '
+          python3 experiments/062/tools/audit-l-g0-l01-all11-clips-paint-0-6.py --pdf "$FROZEN_L01"

@@ -1,0 +1,39 @@
+{
+  "schema": "woit.w131-right-handed-spacetime-closure-packet.v0.2",
+  "status": "CLOSED_SCHEMA_REVALIDATED_ON_MINKOWSKI_VECTOR_0_4",
+  "date": "2026-10-04",
+  "census_id": "W-SSC-131",
+  "source_assertion_id": "W-A0-050",
+  "frozen_body": "W02's proposed alternative identifies the Lorentz group with the right-handed SL(2,C)_R factor and represents complex spacetime using only right-handed spinor structure; in this formulation no SL(2,C)_L acts on complex spacetime.",
+  "source": "W02 §II",
+  "source_component": "W02_RIGHT_HANDED_EUCLIDEAN_SOURCE_INSTANCE_0_1.isg",
+  "support_packet": "W128_MINKOWSKI_HERMITIAN_LORENTZ_CLOSURE_PACKET_0_2.json",
+  "dependency_check": {
+    "direct_scalar_handle_uses": 0,
+    "external_refs_all_covered_by_W128_W027": true,
+    "result": "PASS"
+  },
+  "reconstruction": {
+    "right_handed_group_role": 205132,
+    "right_handed_complex_action": 205120,
+    "complex_matrix_carrier": 204110,
+    "action_formula": "X -> g X g^dagger",
+    "left_factor_spacetime_action_in_proposal": "ABSENT_BY_SOURCE_FORMULATION"
+  },
+  "guards": [
+    "The source proposition is represented as the positive right-factor action plus the explicit formulation boundary that no SL(2,C)_L spacetime action is part of this proposal.",
+    "W-SSC-132's comparison/tradeoff against the conventional holomorphic two-factor formulation remains separate.",
+    "No claim is made that SU(2)_L has already been physically identified with electroweak symmetry.",
+    "No Lisi semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  },
+  "predecessor": "W131_RIGHT_HANDED_SPACETIME_CLOSURE_PACKET_0_1.json",
+  "correction_revalidation": "PASS compositionally after W128 revalidation on W02_MINKOWSKI_HERMITIAN_VECTOR_SOURCE_INSTANCE_0_4.isg; right-handed source instance's expected public 204xxx meanings are restored."
+}

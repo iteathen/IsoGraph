@@ -1,0 +1,39 @@
+{
+  "schema": "isograph.exp062-w01-section31-32-current-g0-verifier-uncaptured-alias-failure.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_COMMITTED_NODE_CI_FAILURE_STAGE_VERIFIER_RUNTIME_CLOSURE",
+  "source": {
+    "commit": "4730c206fa275a4f2f4fe98895aa64fe1109b5df",
+    "run_id": 37913281430,
+    "url": "https://github.com/iteathen/IsoGraph/actions/runs/37913281430",
+    "conclusion": "failure",
+    "failing_step": "node experiments/062/tools/verify-w01-section31-32-current-g0-gate-0-1.mjs",
+    "exception": "ReferenceError: artifact is not defined",
+    "line": 9
+  },
+  "baseline": {
+    "source_verifier": "node experiments/062/tools/verify-w01-section31-32-source-0-2.mjs PASS",
+    "prior_W01_S3_source_verifier": "PASS",
+    "prior_W01_S3_quaternion_inverse_verifier": "PASS",
+    "new_gate_verifier": "FAIL"
+  },
+  "failed_script": {
+    "path": "experiments/062/tools/verify-w01-section31-32-current-g0-gate-0-1.mjs",
+    "git_blob_sha": "c24e2a821c05a6e8613f1bda65277b0d4d1c657a"
+  },
+  "cause": "The function validate(a) refers to artifact.oldGate/source/reg/coverage/demand; the internal V8 harness supplied artifact, but the emitted Node program declared artifacts, not alias artifact. The initial local 32/32 test was not independent Node execution.",
+  "minimal_repair": {
+    "successor_script": "experiments/062/tools/verify-w01-section31-32-current-g0-gate-0-2.mjs",
+    "action": "Declare const artifact=artifacts; and route checks to gate 0.61, after preserving failed 0.60 run. Avoid self-referential gate SHA pin, still verify exact source/coverage/demand hashes."
+  },
+  "source_effect": "NO_NEW_SOURCE_SEMANTICS_ERROR_IMPLIED",
+  "G0_stage": "REMAINS_OPEN_UNFROZEN",
+  "G1_to_G7": "UNAUTHORIZED",
+  "nonclaims": [
+    "No corrected Node PASS until new CI completed",
+    "No mutation pass attributed to failed script",
+    "No L artifact touched"
+  ]
+}

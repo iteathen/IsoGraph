@@ -1,0 +1,145 @@
+{
+  "schema": "isograph.exp062-w-g7-variational-stationarity-instantiation.v0.1",
+  "date": "2026-10-07",
+  "status": "G7_SOURCE_INSTANCE_INCOMPLETE_NO_W_CLOSURE",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "track": "W",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "owner_bypass": {
+    "path": "experiments/062/OWNER_EXTERNAL_VERIFICATION_BYPASS_0_2.json",
+    "git_blob_sha": "b123824d8adb26a80f3fbb675464e59fc2aff2b2"
+  },
+  "g6_provisional_qualification": {
+    "path": "experiments/063/OWNER_WAIVER_PROVISIONAL_QUALIFICATION_0_1.json",
+    "git_blob_sha": "b69940a5dd1ef85c8a78114e0989ec7e6e68c99a",
+    "candidate_id": "VARIATIONAL_STATIONARITY_INTERFACE_0_1",
+    "primitive_id": 211000
+  },
+  "inputs": {
+    "source_census": {
+      "path": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+      "git_blob_sha": "0b1c0e1bb9a742a0c219b0953b77aabe9f90e802"
+    },
+    "extraction": {
+      "path": "experiments/062/W_EXTRACTION_RECONCILED_0_18.json",
+      "git_blob_sha": "26d23d76f9ae9c4a26d7a82cad4f3c44d3e2d62b"
+    },
+    "g3": {
+      "path": "experiments/062/W_G3_CORE_DEFINABILITY_0_5.json",
+      "git_blob_sha": "bde960cd84f532ec6e775e84319b94a4a6009275"
+    },
+    "hypothesis": {
+      "path": "experiments/062/W_G5_HYPOTHESIS_VARIATIONAL_STATIONARITY_0_1.json",
+      "git_blob_sha": "290aa83aaa1ac2dccf63bfce977868e68e31c35f"
+    },
+    "stage_gate": {
+      "path": "experiments/062/W_CURRENT_STAGE_GATE_0_1.json",
+      "git_blob_sha": "93044f358732cff89b46a86452f9a7fafc5a91b1"
+    }
+  },
+  "candidate_instance_obligations": [
+    "ACT is a total single-valued relation X x Y -> scalar.",
+    "VARX is a total single-valued relation X x Y x DX -> scalar.",
+    "VARY is a total single-valued relation X x Y x DY -> scalar.",
+    "DX and DY are represented vector-space variation carriers.",
+    "STATX(x,y) iff VARX(x,y,dx)=ZERO for every represented dx in DX.",
+    "STATY(x,y) iff VARY(x,y,dy)=ZERO for every represented dy in DY.",
+    "A source instance independently justifies that its declared VARX/VARY are first variations of ACT."
+  ],
+  "source_scope": [
+    {
+      "census_id": "W-SSC-029",
+      "body": "W01's frame-bundle description distinguishes spin-connection one-forms from canonical/frame one-forms and uses the Palatini action integral epsilon e wedge e wedge Omega; connection variation gives torsion-free Levi-Civita structure and frame variation gives Einstein equations.",
+      "action_occurrence": "W-SSC-029-O01",
+      "candidate_variation_occurrences": [
+        "W-SSC-029-O03",
+        "W-SSC-029-O04"
+      ],
+      "structural_match": {
+        "action_parent_dependency": true,
+        "two_distinct_varied_roles": true,
+        "gives_relation": true
+      }
+    },
+    {
+      "census_id": "W-SSC-149",
+      "body": "W02 records a chiral gravitational action involving a self-dual two-form Sigma constructed from the tetrad and a right-handed curvature two-form; varying the connection gives the torsion-free relation and varying the tetrad gives the Einstein equations.",
+      "action_occurrence": "W-SSC-149-O01",
+      "candidate_variation_occurrences": [
+        "W-SSC-149-O02",
+        "W-SSC-149-O03"
+      ],
+      "structural_match": {
+        "action_parent_dependency": true,
+        "two_distinct_varied_roles": true,
+        "gives_relation": true
+      }
+    }
+  ],
+  "source_local_findings": {
+    "matched": [
+      "Each target body explicitly names an action-like parent occurrence.",
+      "Each target result occurrence explicitly names a variation/varying role and a source result.",
+      "Each target result occurrence depends directly on the corresponding action parent.",
+      "The W-local hypothesis/falsifier cleanly excludes the five declared non-variation give/gives/giving controls."
+    ],
+    "not_established_by_frozen_source": [
+      "A total single-valued bivariate ACT relation over explicit X and Y carriers.",
+      "Explicit variation-direction carriers DX and DY with vector-space structure.",
+      "Total single-valued VARX/VARY relations over every represented variation direction.",
+      "An explicit zero-first-variation condition.",
+      "An explicit iff identifying torsion-free Levi-Civita structure, torsion-free relation, or Einstein equations with STATX/STATY.",
+      "The module-level universal quantification over every represented variation direction."
+    ],
+    "prohibited_inference": "Conventional variational-calculus knowledge may not be used to fill the missing source-instance obligations. The owner bypass waives third-party verification only; it does not waive No-Evasion Primitive Closure or source-local reconstruction."
+  },
+  "occurrence_rulings": [
+    {
+      "occurrence_id": "W-SSC-029-O03",
+      "g3_disposition_before": "UNEXPANDED_DEMAND",
+      "g7_disposition": "REMAINS_UNEXPANDED_DEMAND"
+    },
+    {
+      "occurrence_id": "W-SSC-029-O04",
+      "g3_disposition_before": "UNEXPANDED_DEMAND",
+      "g7_disposition": "REMAINS_UNEXPANDED_DEMAND"
+    },
+    {
+      "occurrence_id": "W-SSC-149-O02",
+      "g3_disposition_before": "UNEXPANDED_DEMAND",
+      "g7_disposition": "REMAINS_UNEXPANDED_DEMAND"
+    },
+    {
+      "occurrence_id": "W-SSC-149-O03",
+      "g3_disposition_before": "UNEXPANDED_DEMAND",
+      "g7_disposition": "REMAINS_UNEXPANDED_DEMAND"
+    }
+  ],
+  "ruling": {
+    "primitive_211000_campaign_provisional_status_preserved": true,
+    "primitive_211000_consumed_to_close_W": false,
+    "W_g3_changes": 0,
+    "W_g4_g5_replay_required": false,
+    "W_primitive_closure_complete": false,
+    "W_recursive_IA_authorized": false,
+    "G7_result": "SOURCE_INSTANCE_INSUFFICIENT_FOR_CANDIDATE_INTERFACE"
+  },
+  "boundary": {
+    "kind": "SOURCE_INFORMATION_AND_INSTANCE_SEMANTICS_BOUNDARY",
+    "statement": "The provisionally qualified variational stationarity interface is stronger than the exact frozen W01/W02 statements. The W source provides variation-to-result incidence but does not provide the total/single-valued first-variation and zero-stationarity semantics required to instantiate primitive 211000 without semantic import.",
+    "independent_of_external_provider": true,
+    "not_mathematical_impossibility": true,
+    "lawful_unblock_paths": [
+      "Provide independently authoritative W-source evidence that explicitly supplies the missing first-variation/stationarity interface obligations; reopen only affected W source bodies and rerun downstream stages.",
+      "Propose a different generic semantic candidate only if it reduces the missing behavior rather than merely renaming 'variation gives result'; qualify it under the active campaign procedure.",
+      "If third-party verification is later restored, external approval of primitive 211000 alone does not remove this source-instance mismatch."
+    ],
+    "prohibited_shortcuts": [
+      "Do not infer zero variation, Euler-Lagrange stationarity, or total derivative relations from conventional meaning of the word variation.",
+      "Do not treat the surface relation 'gives' as a raw finite extensional relation if the hidden variation operation remains load-bearing.",
+      "Do not close the named result equations by making them opaque STAT predicates unless the frozen source establishes that identification.",
+      "Do not use L evidence or cross-track analogy to supply the missing W instance semantics."
+    ]
+  },
+  "next_stage": "CURRENT_AUTHORITY_BOUNDARY_NO_G7_CLOSURE_FROM_PRIMITIVE_211000"
+}

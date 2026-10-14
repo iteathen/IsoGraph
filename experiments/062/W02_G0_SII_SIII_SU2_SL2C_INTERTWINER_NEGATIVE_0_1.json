@@ -1,0 +1,119 @@
+{
+  "schema": "isograph.exp062-w02-right-spinor-conjugate-compact-bridge-negative.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "INDEPENDENT_FINITE_COMPLEX_MATRIX_CALCULATION_COMPACT_RESTRICTION_NOT_GLOBAL_COMPLEX_EQUIVALENCE",
+  "source_scope": {
+    "paper": "arXiv:2311.00608v2",
+    "section": "§II–III",
+    "html_lines": [
+      63,
+      81
+    ],
+    "source_item_ids": [
+      "W-SSC-132",
+      "W-SSC-134",
+      "W-SSC-138"
+    ],
+    "source_fidelity_not_mathematical_theorem": true
+  },
+  "epsilon_matrix": [
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "epsilon_inverse": [
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "compact_subgroup": {
+    "group": "SU(2)",
+    "test_matrix": [
+      [
+        {
+          "re": 0,
+          "im": 1
+        },
+        {
+          "re": 0,
+          "im": 0
+        }
+      ],
+      [
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": -1
+        }
+      ]
+    ],
+    "quaternionic_standard_identity": "epsilon * conjugate(g) * epsilon^{-1} = g",
+    "scope": "FOR_SU2_IN_THE_STANDARD_COMPLEX_2D_REPRESENTATION",
+    "derivation": "For g=[[a,b],[-conj(b),conj(a)]], epsilon conjugate(g) epsilon^{-1}=[[a,b],[-conj(b),conj(a)]].",
+    "not_claim_general_group_rep_equivalence": true
+  },
+  "counterexample_outside_compact": {
+    "group": "SL(2,C)",
+    "test_matrix": [
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2"
+      ]
+    ],
+    "determinant": "1",
+    "conjugated_by_epsilon": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "2"
+      ]
+    ],
+    "same_as_g": false,
+    "scope": "INTERTWINER_EPSILON_DOES_NOT_INTERTWINE_ENTIRE_SL2C_REP_WITH_ITS_CONJUGATE"
+  },
+  "holomorphic_risk": {
+    "complex_path": "g(z)=diag(z,z^-1), z in C*",
+    "conjugate_factor": "conj(z)",
+    "nonholomorphic_as_a_function_of_complex_group_coordinates": true,
+    "distinct_from": "COMPLEX_LINEARITY_OF_MAP_X_TO_g*X*g_DAGGER_FOR_FIXED_g"
+  },
+  "original_scope_separation": [
+    "SAME_FORMALISM_ON_REAL_LORENTZ_RESTRICTION_IS_NOT_HOLOMORPHIC_COMPLEX_GROUP_EQUIVALENCE",
+    "SU2_REP_AND_CONJUGATE_SU2_EQUIVALENCE_DOES_NOT_EXTEND_BY_THIS_INTERTWINER_TO_SL2C",
+    "CHOICE_OF_NONZERO_EUCLIDEAN_VECTOR_PROVIDES_ADDITIONAL_CONDITIONAL_IDENTIFICATION"
+  ],
+  "not_falsified": [
+    "WOIT_PROPOSAL",
+    "STANDARD_TWISTOR_CITED_GEOMETRY",
+    "EXISTENCE_OF_OTHER_COMPLEX_INTERTWINERS_NOT_TESTED",
+    "AUTHOR_TEXT_EXACTNESS"
+  ],
+  "not_new_source_claim": true,
+  "G0_open": true,
+  "G0_complete": false,
+  "G1_authorized": false,
+  "third_party": "OWNER_BYPASSED_NOT_PASSED",
+  "L_semantics_used": false
+}

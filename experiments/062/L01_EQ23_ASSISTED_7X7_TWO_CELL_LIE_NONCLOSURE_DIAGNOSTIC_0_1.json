@@ -1,0 +1,207 @@
+{
+  "schema": "isograph.exp062.track-L.G0.L01-Eq2.3-original-assisted-7x7-conditional-Lie-span-discrepancy.v0.1",
+  "recorded_on": "2026-10-13",
+  "track": "L",
+  "stage": "G0",
+  "disposition": "PROJECT_MATHEMATICAL_DISCREPANCY_CANDIDATE_REQUIRES_ORIGINAL_SOURCE_COLD_AND_OPERATOR_SCOPE_ADJUDICATION",
+  "source_semantic_authority": false,
+  "author_defect_established": false,
+  "source": {
+    "author": "A. Garrett Lisi",
+    "revision": "arXiv:0711.0770v1",
+    "original_pdf": "https://arxiv.org/pdf/0711.0770v1",
+    "PDF_page_index_zero_based": 6,
+    "original_source_location": "L01-S014",
+    "existing_SSC_owner": "L-SSC-029",
+    "original_pdf_sha256_from_old_verified_CI": "344cfc45eb505b28f322ccee3de6192703893da7c31260ed384885525d6a9dfe",
+    "PDF_binary_re_downloaded_or_rehashed_in_this_batch": false,
+    "original_image_seen_in_web_PDF_screenshot": true,
+    "secondary_source": "https://ar5iv.labs.arxiv.org/html/0711.0770",
+    "ar5iv_equation_label_note": "Secondary HTML lists printed original Eq2.3 as its equation (5) because ar5iv reindexes source expressions. Original PDF Eq2.3 remains authority.",
+    "blind_independent_original_49_cells_review_performed": false
+  },
+  "fixture": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/l01_eq23_original_7x7_assisted_cells_0_1.json",
+    "blob_sha": "6d9f19d3a2d0bcd754bce79059a7b75e6390d62a",
+    "source_original_matrix_positions_assisted": 49,
+    "nonzero_positions": 42,
+    "coefficient_symbol_labels": 14,
+    "independent_exact_cells_qualified": 0,
+    "source_transcription_carries_all_coefficients": true,
+    "source_original_known_Grassmann_context_not_conflated_with_ordinary_matrix_operator": true
+  },
+  "exact_math_checker": {
+    "path": "research/woit-lisi-isomorph/lisi/tools/verify_l01_eq23_two_cell_nonclosure_0_1.mjs",
+    "blob_sha": "ffa33adf03170fe211d3cb42549f20f1470c52f9",
+    "exact_local_output": "experiments/062/L01_EQ23_TWO_CELL_SOURCE_ASSISTED_NONCLOSURE_LOCAL_OUTPUT_0_1.json",
+    "local_output_blob_sha": "c48fd946c0b27791086f6e8207c2677393d49568",
+    "executed_from_exact_GitHub_script_blob_against_exact_GitHub_fixture_blob": true,
+    "environment": "JavaScript V8 with Node filesystem loading shim only",
+    "source_PDF_rendering_qualified": false,
+    "negative_mutations_defined": 12,
+    "negative_mutations_rejected": 12
+  },
+  "direct_source_cell_witness": {
+    "notational_definition": "t=1/sqrt(2); Q_r, Q_g, Qbar_b are the source Eq2.3 coefficient matrices for distinct quark/antiquark symbols.",
+    "original_coefficients_needed": [
+      {
+        "symbol": "Q_r",
+        "row": 1,
+        "col": 4,
+        "value": "-t"
+      },
+      {
+        "symbol": "Q_g",
+        "row": 4,
+        "col": 2,
+        "value": "-t"
+      },
+      {
+        "symbol": "Q_g",
+        "row": 1,
+        "col": 6,
+        "value": "-t"
+      },
+      {
+        "symbol": "Q_r",
+        "row": 6,
+        "col": 2,
+        "value": "+t"
+      },
+      {
+        "symbol": "Q_r",
+        "row": 5,
+        "col": 1,
+        "value": "+t"
+      },
+      {
+        "symbol": "Qbar_b",
+        "row": 1,
+        "col": 2,
+        "value": "-t"
+      },
+      {
+        "symbol": "Qbar_b",
+        "row": 5,
+        "col": 6,
+        "value": "+t"
+      }
+    ],
+    "bracket_entry_row1_col2": "(-t)(-t) - (-t)(+t) = 2t^2 = 1",
+    "bracket_entry_row5_col6": "(+t)(-t) = -t^2 = -1/2",
+    "source_Qbar_b_row1_col2": "-t",
+    "source_Qbar_b_row5_col6": "+t",
+    "all_other_extracted_generator_entries_zero_at_both_target_positions": true,
+    "coefficient_for_Qbar_b_required_by_row1_col2": "-sqrt(2)",
+    "coefficient_for_Qbar_b_required_by_row5_col6": "-1/sqrt(2)",
+    "exact_cross_multiplied_ratio_witness": "2 != 1 in common t^3 units",
+    "mathematically_falsified_conditional_target": "That the fourteen source-assisted 7x7 coefficient matrices form a Lie algebra under the ordinary matrix commutator, without further source restrictions or changed coefficient interpretation.",
+    "not_falsified": "That the original source uses a different graded/Grassmann-valued operation or a restricted carrier family; the physically intended model; the already verified Table1/Table2 coordinate projection."
+  },
+  "exploratory_full_span_probe": {
+    "tool": "Secondary local Sympy 7x7 coefficient-matrix expansion and independent NumPy complex least squares on the same assisted transcription; not a separately validated original-source extraction",
+    "dimension_of_linear_coefficient_span": 14,
+    "unordered_commutator_pairs": 91,
+    "commutators_in_span_under_ordinary_matrix_product": 82,
+    "commutators_outside_span_under_ordinary_matrix_product": 9,
+    "same_nine_failed_pairs_in_both_impls": [
+      [
+        "q_r",
+        "q_g"
+      ],
+      [
+        "q_r",
+        "q_b"
+      ],
+      [
+        "q_r",
+        "qbar_r"
+      ],
+      [
+        "q_g",
+        "q_b"
+      ],
+      [
+        "q_g",
+        "qbar_g"
+      ],
+      [
+        "q_b",
+        "qbar_b"
+      ],
+      [
+        "qbar_r",
+        "qbar_g"
+      ],
+      [
+        "qbar_r",
+        "qbar_b"
+      ],
+      [
+        "qbar_g",
+        "qbar_b"
+      ]
+    ],
+    "full_probe_script_repo_frozen": false,
+    "supporting_scope": "Discovery lead only; exact minimal two-cell checker is the reproducible committed algebraic witness.",
+    "original_author_error_conclusion": "NOT_AUTHORIZED"
+  },
+  "discrepancy_owner_competing": [
+    {
+      "id": "A",
+      "explanation": "An assisted original matrix glyph/cell was misread or the ar5iv conversion differs from the frozen PDF.",
+      "status": "OPEN",
+      "falsifier": "Independent original PDF image-only 49-cell transcription, including all seven load-bearing coefficients and positions; compare after cold output frozen."
+    },
+    {
+      "id": "B",
+      "explanation": "The source's chosen 7x7 expression is schematic and does not assert ordinary 14-dimensional matrix Lie-span closure with all quark entries independent.",
+      "status": "OPEN",
+      "falsifier": "Locate explicit source interpretation of matrix representation, source field constraints, and status of the claimed G2 algebra closure."
+    },
+    {
+      "id": "C",
+      "explanation": "Grassmann coefficients, graded brackets, or a specified realization alter the relevant multiplication/closure question.",
+      "status": "OPEN",
+      "falsifier": "Derive source-defined multiplication and show how it changes the exact selected two-cell calculation without importing later author revisions."
+    },
+    {
+      "id": "D",
+      "explanation": "The algebra calculation is wrong even for the literal assisted 49-cell coefficients.",
+      "status": "DISFAVORED_BY_TWO_CELL_SYMBOLIC_WITNESS_AND_TWO_INDEPENDENT_ARITHMETIC_IMPLEMENTATIONS",
+      "falsifier": "Reimplement from original candidate-free matrix entries and obtain consistent closure for all 91 pairs."
+    },
+    {
+      "id": "E",
+      "explanation": "The original source as printed contains an algebraic normalization or sign inconsistency within Eq2.3.",
+      "status": "HYPOTHESIS_NOT_PROMOTED_TO_AUTHOR_DEFECT",
+      "falsifier": "A source-faithful applicable operator/domain convention or corrected independent transcription restores closure."
+    }
+  ],
+  "repair_disposition": "NO_SOURCE_OR_QUALIFIED_THEORY_REPAIR_ATTEMPTED",
+  "discovery_disposition": "SURVIVING_SOURCE_LOCAL_CONDITIONAL_LIE_CLOSURE_CLUE",
+  "historical_prior_source_fidelity_and_CI_failures_preserved": true,
+  "qualifications": {
+    "SSC_0_96_modified": false,
+    "source_semantics_cold_complete": false,
+    "G0_frozen": false,
+    "G1_authorized": false,
+    "W_imported": false,
+    "cross_track_synthesis_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "parents": {
+    "stage_gate_0_202_path": "experiments/062/L_CURRENT_STAGE_GATE_0_202.json",
+    "stage_gate_0_202_git_blob_sha": "d471ed146c6fac28ce6e8d18e8c583e6c27fe2d9",
+    "original_source_inverse_path": "research/woit-lisi-isomorph/lisi/LISI_L01_SOURCE_FIRST_REVERSE_COVERAGE_0_1.json",
+    "source_inverse_sha": "24163965af4d1e13e75371638fcfd70b793db2ac",
+    "SSC_path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_96.json",
+    "SSC_sha": "40bdc793bce2fa8187665bc9aeda2a01a615025d"
+  },
+  "provenance": {
+    "research_direction": "Joshua Oshiro",
+    "technical_hypothesis_and_verification": "agent-assisted local mathematical audit",
+    "source_author": "A. Garrett Lisi",
+    "recorded_on": "2026-10-13"
+  }
+}

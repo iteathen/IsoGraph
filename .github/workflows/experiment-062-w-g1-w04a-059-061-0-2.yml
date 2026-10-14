@@ -1,0 +1,30 @@
+name: Experiment 062 W G1 W04a original March5 cold and occurrence 0.2
+on:
+  push:
+    branches: [research/woit-lisi-isomorph-20261003]
+    paths:
+      - 'experiments/062/W_G1_W059_W060_W061_W04A_AUTHOR_ORIGINAL_FIRST_0_1.json'
+      - 'experiments/062/tools/audit-w-g1-w04a-author-original-0-1.py'
+      - 'experiments/062/tools/verify-w-g1-w04a-059-061-0-2.cjs'
+      - '.github/workflows/experiment-062-w-g1-w04a-059-061-0-2.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: |
+          python3 -m py_compile experiments/062/tools/audit-w-g1-w04a-author-original-0-1.py
+          node --check experiments/062/tools/verify-w-g1-w04a-059-061-0-2.cjs
+      - name: Independent twice-retrieved W04a article, 14 original anchors and 6 adversarial controls
+        run: python3 -u experiments/062/tools/audit-w-g1-w04a-author-original-0-1.py
+      - name: Exact current G0 W059 W060 W061 author occurrence mapping, 27 hostile controls
+        run: node experiments/062/tools/verify-w-g1-w04a-059-061-0-2.cjs
+      - name: G0 nine source reciprocal and frozen source state conserved
+        run: |
+          node experiments/062/tools/verify-w-g0-current-nine-source-0-4.cjs
+          node experiments/062/tools/verify-w-g0-current-author-freeze-0-2.cjs

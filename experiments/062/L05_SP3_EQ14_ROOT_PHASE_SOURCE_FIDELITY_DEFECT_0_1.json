@@ -1,0 +1,31 @@
+{
+  "schema": "isograph.exp062-l05-sp3-eq14-root-phase-fidelity-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "source": "L05 2026-08-29 version of record §4.2 Eq.(14) pp.15-16",
+  "source_url": "https://link.springer.com/content/pdf/10.1007/s00006-026-01447-5.pdf",
+  "stage": "G0",
+  "status": "CONFIRMED_NEGATIVE_MODALITY_SCOPE_ERROR_REOPENED_AT_G0",
+  "authority": false,
+  "source_census_previous": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_10.json",
+  "affected_id": "L-SSC-133",
+  "previous_record": {
+    "id": "L4-OTHER-05",
+    "behavior": "source gives R_p^0 A(M,P,V,v,psi,chi)=A(M,V,P,tilde(psi),tilde(v),-tilde(chi)), exact printed conjugation and root phases",
+    "status": "L134_HISTORICAL_NATIVE_PARTIAL_DEPENDENT_ON_L133"
+  },
+  "defect": "The phrase 'exact printed conjugation and root phases' merges a printed exact conjugation of matrix generators with alleged complete root-vector phases. Source p16 explicitly states that root-space reflections/rotations and Cartan/root maps do not fix phases. This is a source-modality overclaim, not a new theorem.",
+  "conserved_positive": "Eq14 gives an exact source-written generator transformation and conjugating signed permutation matrix g_R; its root-space reflection and Cartan interchange are separately represented.",
+  "conserved_negative": "Root-space transformations alone do not specify phases between root vectors; those must be determined using transformations on generators and resulting Cartan-Weyl description.",
+  "minimal_repair": "In new G0 SSC, retain the eight stable L4-OTHER identities; replace only the erroneous L4-OTHER-05 behavior/scope status and correct old Eq13 gap sentence after exact formula transcription. Preserve L05 §4.2 canonical triality root-phase gap and all other 190 source bodies.",
+  "replay_requirements": [
+    "exact source packet and 216 finite basis cases with 24 mutation controls",
+    "190 unchanged old SSC bodies and all 191 IDs",
+    "new L133 Eq13 15 rows and Eq14 matrix-source fidelity/negative phases",
+    "G0 unfrozen G1 forbidden",
+    "no W semantics",
+    "track downstream remains invalid"
+  ],
+  "invalidation": "L133 historical G1-G7 not current; L134 depends on unclosed L133; no G1/G2/G3 or global primitive promotion allowed",
+  "external_verification": "OWNER_BYPASSED_NOT_PASSED"
+}

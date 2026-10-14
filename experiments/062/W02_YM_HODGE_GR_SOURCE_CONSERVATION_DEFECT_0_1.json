@@ -1,0 +1,327 @@
+{
+  "schema": "isograph.exp062-w02-ym-hodge-gr-source-conservation-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "W",
+  "stage": "G0",
+  "semantic_authority": false,
+  "status": "CONFIRMED_EXPLICIT_SOURCE_OPERATOR_COEFFICIENT_POLARITY_CITATION_GAPS",
+  "source": {
+    "id": "W02",
+    "revision": "arXiv:2311.00608v2",
+    "source_pdf": "https://arxiv.org/pdf/2311.00608v2",
+    "printed_pages": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "PDF_version_confirmed": true,
+    "alternate_HTML_date_not_USED": true
+  },
+  "predecessor_source": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_13.json",
+    "git_blob_sha": "d63a1a71492cb1ea3f5f5be6dc28d83645f395fc"
+  },
+  "predecessor_demand": {
+    "path": "experiments/062/W_G0_W02_SOURCE_DEMAND_PROJECTION_0_3.json",
+    "git_blob_sha": "ecb6b8a3aa57c0982ca5f79ea2361d7b66a12a26"
+  },
+  "changed_ids": [
+    "W-SSC-118",
+    "W-SSC-144",
+    "W-SSC-146",
+    "W-SSC-149"
+  ],
+  "defects": [
+    {
+      "id": "W118",
+      "issue": "Printed LHS norm and two exact action formulas absent; source equivalence up to topological term conflated with equality."
+    },
+    {
+      "id": "W144",
+      "issue": "±i and explicit no-real-self-dual negative missing."
+    },
+    {
+      "id": "W146",
+      "issue": "both Yang–Mills action operands/coefficient absent, W118 duplicate source incidence unmarked."
+    },
+    {
+      "id": "W149",
+      "issue": "ordered raised/lowered dotted index and dual symmetric-spinor carrier absent; third-party reference [15] provenance not explicitly guarded."
+    }
+  ],
+  "source_expression_controls": {
+    "W-SSC-118": {
+      "statements": [
+        {
+          "id": "W02-G0-YM-01",
+          "scope": "W02 §IV.2 printed p.7",
+          "modality": "SOURCE_DISPLAYED_EXACT_EQUALITY_WITHIN_FIRST_ACTION",
+          "lhs": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "4*g^2"
+            },
+            "operator": "SQUARED_NORM",
+            "operand": "F_A"
+          },
+          "op": "EQUAL",
+          "rhs": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "4*g^2"
+            },
+            "operator": "INTEGRAL",
+            "integrand": {
+              "operator": "TRACE",
+              "operand": {
+                "operator": "WEDGE",
+                "left": "F_A",
+                "right": {
+                  "operator": "HODGE_STAR",
+                  "operand": "F(A)"
+                }
+              }
+            }
+          },
+          "source_latex": "\\frac{1}{4g^2}|F_A|^2=\\frac{1}{4g^2}\\int\\mathrm{Tr}(F_A\\wedge *F(A))",
+          "source_distinctness": "Source prints F_A in left operand and F(A) inside the star; do not silently normalize notation."
+        },
+        {
+          "id": "W02-G0-YM-02",
+          "scope": "W02 §IV.2 printed p.7",
+          "modality": "SOURCE_DISPLAYED_EQUIVALENT_ACTION_MOD_TOPOLOGICAL_TERM_NOT_EQUALITY",
+          "action": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "2*g^2"
+            },
+            "operator": "INTEGRAL",
+            "integrand": {
+              "operator": "TRACE",
+              "operand": {
+                "operator": "WEDGE",
+                "left": "F_A^+",
+                "right": {
+                  "operator": "HODGE_STAR",
+                  "operand": "F_A^+"
+                }
+              }
+            }
+          },
+          "source_latex": "\\frac{1}{2g^2}\\int\\mathrm{Tr}(F_A^{+}\\wedge *F_A^{+})",
+          "condition": {
+            "source_assertion": "EQUIVALENT_FORM_OF_ACTION",
+            "basis": {
+              "operator": "TOPOLOGICAL_INVARIANT",
+              "expression": "\\int\\mathrm{Tr}(F_A\\wedge F_A)"
+            }
+          },
+          "guard": "Never interpret same-action variation equivalence as a pointwise equality of the two displayed actions; no exact proportional factor for their difference is printed."
+        }
+      ],
+      "scope": "W02 §IV.2 YM exact action and topological-equivalence",
+      "duplicate_occurrence_with": "W-SSC-146",
+      "assertions": "TWO_DISPLAYED_ACTIONS_ONE_EXACT_INTERNAL_EQUALITY_ONE_EQUIVALENCE_UP_TO_TOPOLOGICAL",
+      "source_version": "arXiv:2311.00608v2"
+    },
+    "W-SSC-144": {
+      "statements": [
+        {
+          "id": "W02-G0-HODGE-01",
+          "scope": "W02 §IV.2 printed pp.6–7",
+          "modality": "SOURCE_SIGNATURE_SPLIT",
+          "signature": "EUCLIDEAN",
+          "operator": "HODGE_STAR_SQUARE",
+          "value": "+1",
+          "eigenvalues": [
+            {
+              "value": "+1",
+              "sector": "SELF_DUAL",
+              "chiral": "SU(2)_R"
+            },
+            {
+              "value": "-1",
+              "sector": "ANTI_SELF_DUAL",
+              "chiral": "SU(2)_L"
+            }
+          ],
+          "source_latex": "*^2=1"
+        },
+        {
+          "id": "W02-G0-HODGE-02",
+          "scope": "W02 §IV.2 printed p.7",
+          "modality": "SOURCE_SIGNATURE_SPLIT_WITH_EXPLICIT_NEGATIVE",
+          "signature": "MINKOWSKI",
+          "operator": "HODGE_STAR_SQUARE",
+          "value": "-1",
+          "eigenvalues": [
+            "+i",
+            "-i"
+          ],
+          "real_selfdual_forms_exist": false,
+          "real_anti_selfdual_forms_exist": false,
+          "requires": "FOUR_COMPLEX_DIMENSIONS_AND_COMPLEXIFIED_SL2C_RIGHT_LEFT_LIE_ALGEBRAS",
+          "source_latex": "*^2=-1",
+          "guard": "Do not drop ±i or author-provided no-real-sector limitation."
+        }
+      ],
+      "scope": "W02 §IV.2 Euclidean/Minkowski Hodge star conditions",
+      "source_version": "arXiv:2311.00608v2"
+    },
+    "W-SSC-146": {
+      "statements": [
+        {
+          "id": "W02-G0-YM-01",
+          "scope": "W02 §IV.2 printed p.7",
+          "modality": "SOURCE_DISPLAYED_EXACT_EQUALITY_WITHIN_FIRST_ACTION",
+          "lhs": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "4*g^2"
+            },
+            "operator": "SQUARED_NORM",
+            "operand": "F_A"
+          },
+          "op": "EQUAL",
+          "rhs": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "4*g^2"
+            },
+            "operator": "INTEGRAL",
+            "integrand": {
+              "operator": "TRACE",
+              "operand": {
+                "operator": "WEDGE",
+                "left": "F_A",
+                "right": {
+                  "operator": "HODGE_STAR",
+                  "operand": "F(A)"
+                }
+              }
+            }
+          },
+          "source_latex": "\\frac{1}{4g^2}|F_A|^2=\\frac{1}{4g^2}\\int\\mathrm{Tr}(F_A\\wedge *F(A))",
+          "source_distinctness": "Source prints F_A in left operand and F(A) inside the star; do not silently normalize notation."
+        },
+        {
+          "id": "W02-G0-YM-02",
+          "scope": "W02 §IV.2 printed p.7",
+          "modality": "SOURCE_DISPLAYED_EQUIVALENT_ACTION_MOD_TOPOLOGICAL_TERM_NOT_EQUALITY",
+          "action": {
+            "coeff": {
+              "numerator": "1",
+              "denominator": "2*g^2"
+            },
+            "operator": "INTEGRAL",
+            "integrand": {
+              "operator": "TRACE",
+              "operand": {
+                "operator": "WEDGE",
+                "left": "F_A^+",
+                "right": {
+                  "operator": "HODGE_STAR",
+                  "operand": "F_A^+"
+                }
+              }
+            }
+          },
+          "source_latex": "\\frac{1}{2g^2}\\int\\mathrm{Tr}(F_A^{+}\\wedge *F_A^{+})",
+          "condition": {
+            "source_assertion": "EQUIVALENT_FORM_OF_ACTION",
+            "basis": {
+              "operator": "TOPOLOGICAL_INVARIANT",
+              "expression": "\\int\\mathrm{Tr}(F_A\\wedge F_A)"
+            }
+          },
+          "guard": "Never interpret same-action variation equivalence as a pointwise equality of the two displayed actions; no exact proportional factor for their difference is printed."
+        }
+      ],
+      "scope": "W02 §IV.2 repeated Y-M source-actions for self-dual right geometry",
+      "duplicate_occurrence_with": "W-SSC-118",
+      "source_version": "arXiv:2311.00608v2",
+      "authority_guard": "Repeated source assertion, not independent corroboration"
+    },
+    "W-SSC-149": {
+      "statements": [
+        {
+          "id": "W02-G0-GR-01",
+          "scope": "W02 §IV.3 printed p.8, attributed to reference [15]",
+          "modality": "SOURCE_CITED_GRAVITATIONAL_ACTION_DISPLAY",
+          "operator": "INTEGRAL",
+          "integrand": {
+            "operator": "WEDGE",
+            "left": {
+              "symbol": "Sigma",
+              "index_role": "CONTRAVARIANT_PAIR",
+              "indices": [
+                "dotted_A",
+                "dotted_B"
+              ],
+              "kind": "SELF_DUAL_TWO_FORM_FROM_TETRAD",
+              "value_space": "SYMMETRIC_PRODUCT_OF_TWO_RIGHT_SPINORS"
+            },
+            "right": {
+              "symbol": "R",
+              "index_role": "COVARIANT_PAIR",
+              "indices": [
+                "dotted_A",
+                "dotted_B"
+              ],
+              "kind": "CURVATURE_TWO_FORM",
+              "value_space": "DUAL_SYMMETRIC_PRODUCT_OF_TWO_RIGHT_SPINORS"
+            }
+          },
+          "source_latex": "\\int\\Sigma^{\\dot A\\dot B}\\wedge R_{\\dot A\\dot B}",
+          "citation_role": "W02_ATTRIBUTES_COMPLEX_GRAVITATIONAL_LAGRANGIAN_TO_REFERENCE_15",
+          "guard": "This is a source cited formulation, not an originally Woit-proven action law."
+        },
+        {
+          "id": "W02-G0-GR-02",
+          "scope": "W02 §IV.3 printed pp.8–9",
+          "modality": "SOURCE_VARIATIONAL_OUTCOME_CONDITIONAL",
+          "variation_cases": [
+            {
+              "varied": "CONNECTION",
+              "consequence": "TORSION_FREE_LEVI_CIVITA_RELATION_BETWEEN_TETRAD_AND_CONNECTION"
+            },
+            {
+              "varied": "TETRAD",
+              "consequence": "EINSTEIN_EQUATIONS"
+            }
+          ],
+          "condition": "WITHIN_CITED_CHIRAL_GRAVITATIONAL_ACTION",
+          "guard": "Do not promote the source's variation statement to an unqualified generic variational operator."
+        }
+      ],
+      "scope": "W02 §IV.3 chiral action citation/ordered variation roles",
+      "source_version": "arXiv:2311.00608v2"
+    }
+  },
+  "pre_source_qualifications": {
+    "full_W_nine_source_audit_complete": false,
+    "source_frozen": false,
+    "external_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "invalidation": {
+    "earliest": "G0",
+    "new_source": "W_SSC0.14_CANDIDATE",
+    "W_source_0_13": "HISTORICAL_INCOMPLETE_W02_LATE",
+    "W_demand_03": "HISTORICAL_FOUR_MISSING_FORMULA_INCIDENCES",
+    "G1_G7": "UNAUTHORIZED",
+    "old_W131": "REOPEN_UNDER_G0",
+    "L": "NO_CHANGES"
+  },
+  "provenance": {
+    "research_owner": "Joshua Oshiro",
+    "source_author": "Peter Woit",
+    "source_fidelity_review": "agent-assisted",
+    "record_date": "2026-10-08"
+  },
+  "nonclaims": [
+    "No computed topological difference coefficient",
+    "No exact equality between separate action formulas",
+    "No chiral gravitational action established as new original physics"
+  ]
+}

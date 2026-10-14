@@ -1,0 +1,88 @@
+{
+  "schema": "isograph.dnwf-0.1-qualification-review.v0.1",
+  "date": "2026-10-06",
+  "target": "DNWF_0_1",
+  "status": "FINAL_Q7_DOES_NOT_QUALIFY",
+  "candidate": {
+    "prose": "DNWF_0_1_CANDIDATE.md",
+    "machine": "DNWF_0_1_CANDIDATE.json",
+    "semantic_relation": "WF_TERM_ALGEBRA",
+    "relation_id": 160100,
+    "authority": false
+  },
+  "governing_plan": "DNWF_0_1_QUALIFICATION_PLAN.md",
+  "qualification_stages": {
+    "Q0": "PASS",
+    "Q1": "PASS",
+    "Q2": "PASS",
+    "Q3": "FAIL",
+    "Q4": "NOT_REACHED_AS_PROMOTION_EVIDENCE",
+    "Q5": "NOT_REACHED_AS_PROMOTION_EVIDENCE",
+    "Q6": "NOT_RUN_BECAUSE_Q3_FAILED",
+    "Q7": "DOES_NOT_QUALIFY"
+  },
+  "predecessor_attempt": {
+    "run_id": 37414305171,
+    "freeze": "experiments/061/FREEZE_MANIFEST_0_2.json",
+    "disposition": "DOES_NOT_QUALIFY",
+    "diagnosis": "Demonstrated public classification-taxonomy ambiguity at C15/C17/C18; candidate semantics reconstructed correctly in both reports.",
+    "repair_authority": "DNWF_ATTEMPT1_CLASSIFICATION_TAXONOMY_AUDIT_0_1.json",
+    "successor_justification": "DNWF_COLD_TAXONOMY_REPAIR_AUDIT_0_1.json"
+  },
+  "successor_attempt": {
+    "run_id": 37435790421,
+    "run_attempt": 1,
+    "freeze": "experiments/061/FREEZE_MANIFEST_0_3.json",
+    "source_sha": "5eeb70320c8c21e91b7de0f1747c4eda44108d47",
+    "evidence_root": "experiments/061/evidence/run-37435790421-attempt-1",
+    "decoder_A": "19/19 PASS",
+    "decoder_B": "18/19 FAIL",
+    "sole_mismatch": {
+      "case_id": "DNWF-C10",
+      "oracle": "INCONSISTENT_DNWF",
+      "decoder_B": "OVERCLAIM",
+      "public_case": "A property P holds for every nullary constructor result and every constructor case preserves P whenever P holds for all recursive fields, yet the structure contains m in Mu with P(m) false.",
+      "decoder_reason": "The failure of P on m in Mu despite the inductive step suggests the induction argument is incomplete or the property is not closed.",
+      "determination": "GENUINE_COLD_RECONSTRUCTION_MISS_NOT_HOLDOUT_AMBIGUITY",
+      "basis": [
+        "The 0.3 public taxonomy reserves OVERCLAIM for a proof/report/conclusion defect where the underlying DNWF structure is not the defect.",
+        "C10 states the full induction premises as facts and then asserts a member of Mu violating the derived structural-induction consequence; it does not present an incomplete proof/report.",
+        "Decoder B invents an incomplete induction argument not present in the frozen public case.",
+        "Decoder A independently classifies the same frozen case as INCONSISTENT_DNWF and reconstructs the structural-induction consequence."
+      ]
+    },
+    "scorer_disposition": "DOES_NOT_QUALIFY",
+    "verifier": "SKIPPED_BY_FROZEN_WORKFLOW_AFTER_Q3_FAILURE",
+    "finalizer": "SKIPPED_BY_FROZEN_WORKFLOW_AFTER_Q3_FAILURE"
+  },
+  "q7_assessment": {
+    "disposition": "DOES_NOT_QUALIFY",
+    "reason": "The qualification plan requires both independent decoders to reconstruct all 19 frozen classifications. The taxonomy-repaired successor produced one genuine cold miss, so Q3 is not discharged and semantic promotion is forbidden.",
+    "historical_evidence_immutable": true,
+    "posthoc_rescore_forbidden": true,
+    "unchanged_freeze_rerun_for_promotion_forbidden": true,
+    "future_path": "A future DNWF revision or independently justified new candidate may begin a new qualification campaign with a newly frozen independent holdout. Run 37435790421 remains negative evidence and must not be rewritten."
+  },
+  "authority_effect": {
+    "dnwf_0_1_qualified": false,
+    "dnwf_0_1_semantic_authority": false,
+    "dnia_status": "BLOCKED_ON_DNWF",
+    "W_status": "BLOCKED_ON_GENUINE_PRIMITIVE_DOMAIN_BOUNDARY",
+    "L_status": "BLOCKED_ON_GENUINE_PRIMITIVE_DOMAIN_BOUNDARY",
+    "W_recursive_IA": false,
+    "L_recursive_IA": false,
+    "W_NEI_DTS_DP": false,
+    "L_NEI_DTS_DP": false
+  },
+  "evidence": [
+    "research/primitive-demand-qualification/dnwf/DNWF_Q0_Q2_PREQUALIFICATION_AUDIT_0_1.json",
+    "research/primitive-demand-qualification/dnwf/DNWF_ATTEMPT1_CLASSIFICATION_TAXONOMY_AUDIT_0_1.json",
+    "research/primitive-demand-qualification/dnwf/DNWF_COLD_TAXONOMY_REPAIR_AUDIT_0_1.json",
+    "experiments/061/evidence/run-37435790421-attempt-1/CONTROL.json",
+    "experiments/061/evidence/run-37435790421-attempt-1/SCORE_DECODERS.json",
+    "experiments/061/evidence/run-37435790421-attempt-1/decoder-A/PARSED_REPORT.json",
+    "experiments/061/evidence/run-37435790421-attempt-1/decoder-B/PARSED_REPORT.json",
+    "qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_CANDIDATE.md",
+    "qualification/QUALIFICATION_REJECTION_CONTRACT_0_1_QUALIFICATION.md"
+  ]
+}

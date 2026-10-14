@@ -1,0 +1,29 @@
+{
+  "schema": "woit.w122-os-theta-form-closure.v0.1",
+  "status": "CANDIDATE_CLOSED_SCHEMA_READY_FOR_CORE021_LEDGER",
+  "date": "2026-10-05",
+  "census_id": "W-SSC-122",
+  "frozen_body": "W04e defines Osterwalder-Schrader conjugation on imaginary-time test functions by Theta f(tau)=conjugate(f(-tau)), with Theta an antilinear involution, and defines the OS Hermitian form by <f,g>_OS=S2(Theta f,g).",
+  "source": "W04e notes §3",
+  "support_packet": "W_OS_REFLECTION_POSITIVE_SUPPORT_PACKET_0_1.json",
+  "reconstruction": {
+    "time_reflection": 996110,
+    "test_function_conjugation": 996111,
+    "theta": 996112,
+    "schwinger_two_point_form": 996150,
+    "os_form": 996151,
+    "formula": "Theta = conjugation o time-reflection; OS(f,g)=S2(Theta f,g)"
+  },
+  "guards": [
+    "Pointwise tau evaluation is abstracted at the frozen OS boundary; the exact invariant reflection/conjugation composition is represented.",
+    "No cross-track semantics are used."
+  ],
+  "core021_candidate": {
+    "closure_mode": "CLOSED_SCHEMA",
+    "coverage": "EXACT_ALL_AND_ONLY_AT_FROZEN_AXIOMATIC_BOUNDARY",
+    "hidden_side_conditions_unresolved": false,
+    "materialization": "NONE",
+    "termination_status": "NOT_LOAD_BEARING",
+    "termination_qu_nodes": []
+  }
+}

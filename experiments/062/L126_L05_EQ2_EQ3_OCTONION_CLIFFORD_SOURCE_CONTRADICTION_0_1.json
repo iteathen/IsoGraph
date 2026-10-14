@@ -1,0 +1,173 @@
+{
+  "schema": "isograph.exp062-l126-eq2-eq3-ordinary-octonion-clifford-source-discrepancy.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "defect_owner": "INTERNAL_FROZEN_SOURCE_ASSERTION_INCONSISTENCY",
+  "status": "CONFIRMED_FINITE_SOURCE_EQ2_EQ3_INTERNAL_CONTRADICTION_G0_OPEN",
+  "method": "Reconstruct source Eq.(2) Γ_c[b,a]=M_ca^(tilde b), barΓ_c=n_cc Γ_c^T and, independently, barΓ_c[a,b]=M_(tilde c)(tilde b)^a. Use negative Clifford upper block, lower Γ block, then check Eq.(3) gamma_a gamma_b + gamma_b gamma_a = -2 delta_ab I_16 on all 36 unordered c<=d pairs and 16x16 matrix entries.",
+  "primary_source": {
+    "id": "L05",
+    "work": "A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic",
+    "revision": "29 August 2026 version of record",
+    "doi": "10.1007/s00006-026-01447-5",
+    "url": "https://link.springer.com/article/10.1007/s00006-026-01447-5",
+    "printed_locations": [
+      "§2 Eq.(1) ordinary octonion multiplication table",
+      "§2 Eq.(2) Γ/barΓ and gamma Clifford block matrices",
+      "§2 Eq.(3) fundamental anticommutator assertion"
+    ]
+  },
+  "inputs": {
+    "source_table": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L05_SECTION2_TABLE_AND_CLIFFORD_FORMULA_LEDGER_0_2.json",
+      "sha": "c62ca51519935514f9403886d052cdce0b031cd0"
+    },
+    "source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_12.json",
+      "sha": "f4b34d4f0531b7687e65c2c59cb20787067b07a5"
+    },
+    "current_gate": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_12.json",
+      "sha": "285076b2dc0314612db42d3c0c45bd74c4b3c406"
+    }
+  },
+  "formal_scope": {
+    "carrier": "ordinary printed O, 8 basis elements e0-e7",
+    "basis_input": "all 8^2 coefficients for 16x16 real gamma block matrices",
+    "matrix_signature": "negative Cl(0,8) sign explicitly chosen by author",
+    "universe": "unordered generator pairs 0<=a<=b<=7",
+    "cardinality": 36,
+    "element_type": "integers in {-2,-1,0,1,2} from frozen table",
+    "no_universal_theorem_claim": true
+  },
+  "explicit_source_facts": {
+    "O_e6_times_e7": "-e2",
+    "O_e7_times_e6": "-e2",
+    "conjugation": "tilde(e0)=e0, tilde(e_i)=-e_i for i>0",
+    "source_barGamma_transpose": "barGamma_c=Gamma_c^T for ordinary O n_cc=+1",
+    "source_barGamma_table": "barGamma_c[a,b]=M_(tilde c)(tilde b)^a",
+    "source_Clifford": "gamma_a gamma_b+gamma_b gamma_a=-2 delta_ab I16"
+  },
+  "observations": {
+    "barGamma_interpretation_clash": {
+      "total_entry_disagreements": 2,
+      "rows": [
+        {
+          "c": 6,
+          "row": 2,
+          "col": 7,
+          "from_table": -1,
+          "from_transpose": 1
+        },
+        {
+          "c": 6,
+          "row": 7,
+          "col": 2,
+          "from_table": -1,
+          "from_transpose": 1
+        }
+      ]
+    },
+    "transpose_construction": {
+      "generator_pairs_tested": 36,
+      "pairs_failing": 7,
+      "entries_failing": 28,
+      "first": {
+        "generator_a": 0,
+        "generator_b": 6,
+        "row": 2,
+        "col": 7,
+        "observed": 2,
+        "required": 0
+      },
+      "failing_pairs": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    "table_upper_construction": {
+      "generator_pairs_tested": 36,
+      "pairs_failing": 7,
+      "entries_failing": 28,
+      "first": {
+        "generator_a": 1,
+        "generator_b": 6,
+        "row": 2,
+        "col": 3,
+        "observed": -2,
+        "required": 0
+      }
+    },
+    "counterfactual_not_source": {
+      "change": "e6e7: -e2 -> +e2",
+      "transpose_failing_pairs": 0,
+      "transpose_failing_entries": 0,
+      "disposition": "NOT_ADOPTED_SOURCE_MODIFICATION"
+    },
+    "other_counterfactual_not_source": {
+      "change": "e7e6: -e2 -> +e2",
+      "transpose_failing_pairs": 12,
+      "transpose_failing_entries": 48,
+      "disposition": "NOT_ADOPTED_SOURCE_MODIFICATION"
+    }
+  },
+  "invalidation": {
+    "earliest_lawful_stage": "G0",
+    "earliest_source_obligation": "L-SSC-126",
+    "unchanged_published_source_required": true,
+    "affected_source_dependencies": [
+      "L-SSC-125 source product/conjugation",
+      "L-SSC-126 Clifford Eq(2)/Eq(3)",
+      "L-SSC-127 Eq(5) bivector construction",
+      "L-SSC-133 f4 Eq(15)/Eq(16) references to Γ and related spin structures"
+    ],
+    "current_source_census_frozen": false,
+    "G1_reextraction_authorized": false,
+    "G2_through_G7_qualified": false,
+    "recursive_IA_authorized": false,
+    "cross_track_authorized": false,
+    "existing_Eq5_counterexamples_preserved": true
+  },
+  "repair_requirement": [
+    "Preserve exact original signed O table and BOTH source definitions of barGamma, making the contradiction explicit rather than selecting the satisfying oracle.",
+    "Pin all generator pair and all matrix entry counterexamples, not selected cases.",
+    "Run Node CI against the source table, with independent formula constructions and adversarial source/table/control mutations.",
+    "Append source-negative evidence to L-SSC-126 in a successor G0 census, conserving unrelated census records.",
+    "Keep historical downstream G1-G7 research artifacts non-authoritative, as already required by current gate."
+  ],
+  "nonclaims": [
+    "The printed-source discrepancy does not establish a correction to the published text.",
+    "A source assertion can be represented faithfully even when its mathematically asserted consistency fails.",
+    "A proposed one-cell repair is a diagnostic counterfactual, not source authority.",
+    "No external semantic verification is passed.",
+    "No Woot/Woit evidence or cross-track semantics used."
+  ]
+}

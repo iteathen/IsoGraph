@@ -1,0 +1,67 @@
+{
+  "schema": "isograph.exp062-l-current-stage-gate.v0.37",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "status": "L_G0_SSC037_D4_PHASE_FACTORIZATION_COVARIANCE_OPEN_UNFROZEN",
+  "authority_effect": "PROCEDURAL_STAGE_ROUTING_ONLY",
+  "semantic_authority": false,
+  "predecessor_gate": {
+    "path": "experiments/062/L_CURRENT_STAGE_GATE_0_36.json",
+    "git_blob_sha": "74b049fb0ca3a362c0bb1eb1a245f1fd67b8a163"
+  },
+  "current_source_census": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_37.json",
+    "git_blob_sha": "994e8b4cd2e32aae8efad908398bb62e99941fdd",
+    "source_identities": 191,
+    "changed": [
+      "L-SSC-040",
+      "L-SSC-044"
+    ],
+    "unchanged": 189,
+    "frozen": false,
+    "complete": false
+  },
+  "current_source_packet": {
+    "path": "research/woit-lisi-isomorph/lisi/LISI_L01_D4_ROOT_PHASE_RANK_ONE_TRANSPORT_G0_0_1.json",
+    "git_blob_sha": "4857a88a16d30be1a9da115b5e87eed25e2d7168",
+    "source_revision": "L01 arXiv:0711.0770v1"
+  },
+  "source_verifier": {
+    "path": "experiments/062/tools/verify-l-g0-l01-d4-phase-rank-one-transport-0-1.mjs",
+    "git_blob_sha": "d5a588afa56911e501709cd85b8ecd2eb83f54dc",
+    "status": "EXACT_PHASE_AND_FACTORIZATION_MATH_PREFLIGHT_PASS_CI_PENDING"
+  },
+  "source_CI": {
+    "status": "PENDING_PUSH",
+    "external_cold_review_passed": false
+  },
+  "current_lawful_state": {
+    "G0_source_audit_open": true,
+    "source_census_frozen": false,
+    "source_census_complete": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "cross_track_synthesis_authorized": false,
+    "global_primitive_closure_qualified": false,
+    "source_original_root_phases_qualified": false,
+    "source_original_field_factorization_transport_qualified": false,
+    "source_E8_Hodge_pairing_qualified": false,
+    "source_Q_full_projection_qualified": false,
+    "full_E8_action_qualified": false,
+    "author_mathematical_error_confirmed": false,
+    "external_review_passed": false
+  },
+  "retained_unresolved": [
+    "L01 original Table9 root coordinates do not specify full Chevalley generator phases or author parameter transport; no source equivariance of rank-one xPhi assumed.",
+    "L01 source nonseparable xPhi quadratic Q projection into three H2 groups not qualified; factorization phase choice load-bearing.",
+    "L01 original H1 Fgw output normalization and 8x8/16x16 printed field map still open.",
+    "2007 L01 modified BF and S2 action includes tentative new-field terms and unresolved Hodge/coframe; E8 field case not qualified.",
+    "L01–L06 primary-source completeness, published L05 octonion table ambiguity, primitive/schema closure, native reconstruction, IA/NEI/DTS/DP/EI, cold external verification incomplete."
+  ],
+  "next_lawful_step": "Find frozen author root-vector phases and 18-source-coefficient identities, derive which separable phase/generator transports preserve source shared-Phi factorization, and independently reconstruct actual E8 normalized trace and frame-derived Hodge before any author-error or G1 claim.",
+  "W_track_mutated": false,
+  "author_outreach_authorized": false,
+  "PR70_merge_authorized": false
+}

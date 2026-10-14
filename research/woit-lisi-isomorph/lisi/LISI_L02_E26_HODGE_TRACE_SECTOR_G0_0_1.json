@@ -1,0 +1,196 @@
+{
+  "schema": "isograph.lisi-L02-E26-Hodge-trace-sector-G0.v0.1",
+  "date": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "SOURCE_L02_V2_EQ26_PROJECT_N3_CLIFFORD_HODGE_ACTION_EXPANSION_EXACT__EQ27_DYNAMICS_AND_GENERAL_TRACE_OPEN",
+  "source": {
+    "id": "L02",
+    "revision": "arXiv:1004.4866v2",
+    "authors": [
+      "A. Garrett Lisi",
+      "Lee Smolin",
+      "Simone Speziale"
+    ],
+    "work": "Unification of gravity, gauge fields, and Higgs bosons",
+    "pdf_url": "https://arxiv.org/pdf/1004.4866",
+    "printed_pages": [
+      6,
+      7,
+      8
+    ],
+    "zero_based_pdf_pages": [
+      5,
+      6,
+      7
+    ],
+    "method": "Direct visual audit of original frozen arXiv v2 printed pp6–8 and exact Eq14/25/26/27, respecting source version and Eq27 additional frame/torsion restrictions"
+  },
+  "ancestors": {
+    "ssc045": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_45.json",
+      "git_blob_sha": "e12b6e0a06bed30d92e5d5287a5c26076e37b1ed"
+    },
+    "gate049": {
+      "path": "experiments/062/L_CURRENT_STAGE_GATE_0_49.json",
+      "git_blob_sha": "874e6b0510ca8b92003f89e930ccf844ccd57429"
+    },
+    "eq14": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_FRAME_HIGGS_GRADED_CURVATURE_G0_0_1.json",
+      "git_blob_sha": "a5a9dc6bbe656a680cebb02bc272c56401dc4b14"
+    },
+    "hodgeAux": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L02_PLEBANSKI_LORENTZIAN_HODGE_AUXILIARY_G0_0_1.json",
+      "git_blob_sha": "831279f107a7d36f49580179e6970468a457f044"
+    }
+  },
+  "source_equations": [
+    {
+      "id": "E14",
+      "source_printed_page": 6,
+      "role": "SOURCE_CURVATURE_DECOMPOSITION",
+      "normalized": "F=1/2*(R-1/8*SigmaPrime*phi2)+1/4*(T*phi-ePrime*Dphi)+FA"
+    },
+    {
+      "id": "E25",
+      "source_printed_page": 7,
+      "role": "SOURCE_PHI_EQ5_SELECTED_B_ELIMINATED_ACTION",
+      "normalized": "S(H,e)=3/(8*g)*int< F wedge star_e(F) >"
+    },
+    {
+      "id": "E26",
+      "source_printed_page": 7,
+      "role": "SOURCE_F2_TRACE_SECTOR_EXPANSION",
+      "normalized": "S(H,e)=3/(8*g)*int< -phi2/16*R*star_e(SigmaPrime)+phi4/256*SigmaPrime*star_e(SigmaPrime)+1/4*R*star_e(R)+1/16*M*star_e(M)+FA*star_e(FA) >"
+    },
+    {
+      "id": "E27",
+      "source_printed_page": 8,
+      "role": "SOURCE_ADDITIONAL_RESTRICTED_GRAVITY_SECTOR_ONLY",
+      "normalized": "Only after choosing ePrime=e and T=0, restricted component gravitational/Higgs/YM action; source does not state equality before these assumptions"
+    },
+    {
+      "id": "FRAME",
+      "source_printed_page": 6,
+      "role": "SOURCE_INDEPENDENT_FRAME_CARRIERS",
+      "normalized": "star_e uses independent gravitational e; SigmaPrime=ePrime wedge ePrime uses connection frame ePrime"
+    },
+    {
+      "id": "SOURCE_LIMIT",
+      "source_printed_page": 8,
+      "role": "SOURCE_INTERPRETATION_AND_SCOPE_LIMIT",
+      "normalized": "G0 source Eq26 bilinear expansion, not a proof of universal Clifford trace, original arbitrary Spin(N), Eq27 physical normalization or complete field-equation solutions"
+    }
+  ],
+  "source_field_types": [
+    {
+      "id": "R",
+      "carrier": "spin(1,3) Clifford bivector valued 2form",
+      "projection": "6 gravity bivectors"
+    },
+    {
+      "id": "SigmaPrime",
+      "carrier": "gravity-valued area 2form from connection ePrime",
+      "projection": "6 gravity bivectors"
+    },
+    {
+      "id": "phi",
+      "carrier": "internal spin(N) vector-valued scalar",
+      "projection": "N internal vectors"
+    },
+    {
+      "id": "phi2",
+      "carrier": "source phi_m phi_m nonnegative for selected internal real factor",
+      "projection": "scalar"
+    },
+    {
+      "id": "M",
+      "carrier": "T phi - ePrime wedge Dphi mixed Clifford bivector 2form",
+      "projection": "4N off-diagonal"
+    },
+    {
+      "id": "FA",
+      "carrier": "internal spin(N) Clifford bivector 2form",
+      "projection": "N(N-1)/2 internal"
+    },
+    {
+      "id": "star_e",
+      "carrier": "spacetime Hodge of degree-two forms built from independent gravitational frame e",
+      "projection": "depends on signed coframe orientation"
+    }
+  ],
+  "model": {
+    "sample_N": 3,
+    "signature": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "grading": "Clifford gamma multiplication times exterior 2-form wedge; scalar Clifford grade projected only after multiplying",
+    "coframes": 6,
+    "independent_seeds_per_frame": 4,
+    "e_equals_eprime_before_eq27": false,
+    "direct_oracle": "Exact generic Clifford product, exterior wedge and e-dependent Hodge on all 21 Lie bivectors",
+    "independent_oracle": "Sector-diagonal metric trace coefficients -eta_i*eta_j and independently constructed 6x6 Hodge pairing",
+    "source_rank_one_Phi_recovered": false,
+    "original_all_spinN_matrix_trace_qualified": false,
+    "equations": "Project finite mathematical witness to Eq(26): quadratic pairings from F=R/2-phi2*SigmaPrime/16+M/4+FA reproduce 1/4 RR -phi2/16 R SigmaPrime +phi4/256 SigmaPrime SigmaPrime +1/16 MM +FA FA. Mixed-sector cross terms vanish only under the explicitly chosen bivector scalar trace and source-compatible metric.",
+    "missing_source_auth": "The source calls angle-brackets the Clifford scalar trace; no global complete spin(1+N,3) matrix realization, local-to-global Hodge integration, all N coupling normalization, source Eq27 dynamical solution or actual source E8 fermionic pairing is established."
+  },
+  "math_evidence": {
+    "eq26_action_cases": 24,
+    "clifford_pair_tests": 384,
+    "Hodge_square_basis_tests": 864,
+    "cross_sector_zero_cases": 240,
+    "distinct_e_and_eprime_examples": true,
+    "nonunit_and_orientation_reversing_frames": true,
+    "all_oracles_exact_rational": true,
+    "math_hostiles": 14,
+    "source_hostiles": 16,
+    "invariance_not_a_physical_action_theorem": true
+  },
+  "source_observation": {
+    "Eq26_coefficient_matrix": "(RR:1/4,R-SigmaPrime:-phi2/16,SigmaPrimeSigmaPrime:phi4/256,MM:1/16,FAFA:1)",
+    "author_assumptions": "e in Phi Hodge chosen before ePrime=e; Eq27 requires ePrime=e and T=0. Source Eq25 already requires selected Phi=* and auxiliary B elimination; not arbitrary solutions.",
+    "known_scope": "Original L02 v2 Eq26 forms exact conditional algebra in chosen G0 Cl(4,3) test; all higher physical coupling and dynamics claims remain separate.",
+    "repair_vs_discovery": "No mathematical source discrepancy found in Eq26 coefficient balance under chosen scalar trace. The result is exact algebra conditional upon the representation, not a claim that any unknown original source component is erroneous."
+  },
+  "next": "Directly audit original L02 v2 Eqs15–23 projected field equations and Eqs27–28 low-energy physical normalizations, preserving explicit ePrime=e and T=0 scope; continue independent L01 right E8 fermion pairing without W import.",
+  "source_census": {
+    "proposed_successor": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_46.json",
+    "affected": [
+      "L-SSC-057",
+      "L-SSC-061",
+      "L-SSC-062"
+    ],
+    "untouched": 188,
+    "ids": 191,
+    "frozen": false
+  },
+  "stage_locks": {
+    "source_census_frozen": false,
+    "original_global_spinN_action_qualified": false,
+    "original_E8_fermion_trace_qualified": false,
+    "source_Eq27_unrestricted_qualified": false,
+    "physical_GN_gYM_normalizations_qualified": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "cross_track_comparison_authorized": false,
+    "recursive_IA_authorized": false,
+    "external_independent_theory_review_passed": false,
+    "author_error_proved": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "human_direction": "Joshua Oshiro: independent full-source Track L research under IsoGraph G0 policy",
+    "external_antecedent": "Lisi, Smolin, Speziale, arXiv:1004.4866v2 (2010), original Eqs 14,25–27; elementary Clifford/Hodge algebra",
+    "agent_formulation": "Exact rational independent Clifford scalar and 2form sector Gram Hodge checks with 6 gravity frames, distinct connection frames and 4 seeds each, dated 2026-10-09",
+    "implementation": "Agent-authored source packet and deterministic mathematics/hostile controls; no originality priority claim"
+  }
+}

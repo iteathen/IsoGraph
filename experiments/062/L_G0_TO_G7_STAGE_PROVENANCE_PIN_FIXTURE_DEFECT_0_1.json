@@ -1,0 +1,22 @@
+{
+  "schema": "isograph.exp062-l-g0-g7-hostile-audit-pin-fixture-defect.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "authority": false,
+  "status": "AUDIT_METADATA_WRONG_STAGE_INDEX_PIN_NO_SEMANTIC_PROMOTION",
+  "affected": "experiments/062/L_G0_TO_G7_HOSTILE_STAGE_PROVENANCE_AUDIT_0_1.json",
+  "observed": {
+    "field": "stage_lineage.G4.old_G3_dependency_sha",
+    "incorrect": "274571b9be24e0af9f6bf2f76a7b24a7978da6cb",
+    "actual_type_of_incorrect_value": "old G4 fixed point self blob",
+    "correct": "0cba7dfdf3409bdf3ab76ee29b4ae794d3d178d5",
+    "correct_meaning": "the G3 0.5 blob actually pinned by old G4 fixed point input"
+  },
+  "cause": "Indexed the stage list element G4 when writing G4's predecessor G3 pin. No underlying repository graph modified; this is an audit metadata indexing error.",
+  "repair": "Update only the research audit pin to G3 0.5 true parent hash; then independently compare each stage's recorded dependency blob with its actual file and inject wrong-stage alternatives as adversarial mutants.",
+  "nonclaims": [
+    "The stale G4 status remains historical regardless of this pin correction.",
+    "No G1-G7 stage is authorized by changing an audit record.",
+    "This does not change Eq2/3 source math results."
+  ]
+}

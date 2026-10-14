@@ -1,0 +1,50 @@
+{
+  "schema": "isograph.exp062-l131-source-granularity-reopen-audit.v0.4",
+  "date": "2026-10-08",
+  "status": "L131_G1_DEPENDENCY_CONSERVING_ROTATION_PAIR_REOPEN",
+  "authority": false,
+  "authority_effect": "NONE_RESEARCH_DIAGNOSTIC_ONLY",
+  "track": "L",
+  "branch_head_at_creation": "d5fd6af67a066d6c3d5be141e1c41d38ff27f475",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_3.md",
+  "predecessor": {
+    "path": "experiments/062/L131_G1_SOURCE_GRANULARITY_REOPEN_AUDIT_0_3.json",
+    "git_blob_sha": "22e1c3c478fd232be8a745a140c2f67013a2b0cf",
+    "status": "CORRECTED_REPLAY_RULE_TOO_STRICT"
+  },
+  "defect": {
+    "path": "experiments/062/L131_ROTATION_PAIR_SOURCE_FIDELITY_DEFECT_0_1.json",
+    "git_blob_sha": "8924e3cef9a5343c39290991cfbf1a88ce46a0ca"
+  },
+  "correction": "The v0.3 audit incorrectly demanded all prior R01-R12 records be verbatim identical while simultaneously requiring full dependency closure. Because R11 invokes the formerly opaque R_v^(uw), R11 must now depend on the new source-definition occurrence R13. This is a justified dependency-edge correction, not a changed source equation.",
+  "replay_contract": {
+    "source_body_and_scope": "unchanged L-SSC-131",
+    "new_occurrence": "R13 exact source R_v^(uw)=R_v^w R_v^u",
+    "old_R01_R10": "identity and dispositions exactly conserved",
+    "old_R11": "assertions and roles unchanged; add dependence on R13 only",
+    "old_R12": "unchanged",
+    "R13_dependencies": [
+      "L-SSC-131-R05",
+      "L-SSC-131-R06",
+      "L-SSC-131-R07"
+    ],
+    "R11_new_dependency": "L-SSC-131-R13",
+    "cycles_forbidden": true,
+    "source_expression_alias_expansion": "not licensed to treat R_p^(uw) as a primitive group product; preserve as separately unresolved term"
+  },
+  "graph_replay_rule": "Regenerate G2 from the new G1. The old G2 graph is not semantically complete; change its O11 dependency edge and add O13 with fully ordered source expression. Other old node content must conserve unless changed for new dependency.",
+  "g3_rule": "Adjudicate exactly 13 occurrences, leave R11/R12 unexpanded; evaluate R13 without conflating role permutations with pointwise coefficient maps.",
+  "controls": [
+    "swap R_v^w/R_v^u -> rejection",
+    "remove new R11->R13 edge -> rejection",
+    "swap source parameter identity -> rejection",
+    "leave R_v^(uw) uninterpreted and claim closure -> rejection",
+    "retain L132 stale dependency -> rejection"
+  ],
+  "nonclaims": [
+    "No source factorization proof.",
+    "No L131 G7 closure.",
+    "No L132/L133 permission.",
+    "No W or external review authority."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "isograph.exp062-l127-ssc017-counterfactual-source-label-fixture.v0.1",
+  "date": "2026-10-08",
+  "track": "L",
+  "stage": "G0",
+  "authority": false,
+  "status": "BASELINE_FAILED_EXACT_LABEL_MISSING_NO_MUTANTS_TESTED",
+  "failed_workflow": {
+    "id": 37856511570,
+    "head_sha": "6195b7efa9bab7c1a4591cbabbec703da8f9f6f1",
+    "conclusion": "failure",
+    "error": "source claim/body exact scope COUNTERFACTUAL",
+    "proof_verifier_step": "PASS",
+    "ssc_conservation_step": "FAILED_BASELINE",
+    "adversarial_defined": 20,
+    "adversarial_run": 0
+  },
+  "source_Census_before": {
+    "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_17.json",
+    "git_blob_sha": "07a42a7c399d5f16ed1e0bba6d6607ca77212c43"
+  },
+  "verifier_before": {
+    "path": "experiments/062/tools/verify-l-g0-l127-ssc-source-0-17.mjs",
+    "git_blob_sha": "7b011ebda17fc050d4b57dcaf89d9ed8757d98f5"
+  },
+  "cause": "The authored L127 successor calls the altered one-cell ordinary-O source interpretation an unfrozen, unadopted diagnostic alternative, but lacks the explicit exact negative-evidence term COUNTERFACTUAL required by its source-census verifier.",
+  "minimal_repair": "Append exact word COUNTERFACTUAL within the pre-existing source exclusion clause; preserve every mathematical witness, source-original table, all earlier 191 identities and 190 unrelated bodies. Rerun passing baseline before counting the 20 effective mutations.",
+  "qualification_effect": "NONE; G0 source partial and G1 onward forbidden",
+  "external_review_passed": false
+}

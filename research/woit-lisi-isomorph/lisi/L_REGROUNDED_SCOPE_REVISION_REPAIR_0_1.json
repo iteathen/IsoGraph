@@ -1,0 +1,35 @@
+{
+  "schema": "lisi.regrounded-scope-revision-repair.v0.1",
+  "date": "2026-10-05",
+  "status": "REPAIRED_IN_SUCCESSOR_LEDGER",
+  "defect": "Re-grounded partial ledgers CORE021_CLOSURE_LEDGER_0_19.json through CORE021_CLOSURE_LEDGER_0_23.json set scope_revision to null even though the active target LISI_FULL_RENDERING_0_2 exists because of the preserved SSC 0.1 -> 0.2 source-semantic correction.",
+  "affected_historical_ledgers": [
+    "CORE021_CLOSURE_LEDGER_0_19.json",
+    "CORE021_CLOSURE_LEDGER_0_20.json",
+    "CORE021_CLOSURE_LEDGER_0_21.json",
+    "CORE021_CLOSURE_LEDGER_0_22.json",
+    "CORE021_CLOSURE_LEDGER_0_23.json"
+  ],
+  "source_revision": "LISI_SSC_SOURCE_CORRECTION_0_2.json",
+  "restored_scope_revision": {
+    "old_target_id": "LISI_FULL_RENDERING_0_1",
+    "old_scope_sha256": "2da24bff417476f8ea5d57af754cfd3800a6d988354befa93d8b617abcf9028b",
+    "new_target_id": "LISI_FULL_RENDERING_0_2",
+    "new_scope_sha256": "121475df318b71c90d3dcf4336e202b1b97acdebb830e54374cebb1f980d1790",
+    "removed_census_ids": [],
+    "added_census_ids": [],
+    "changed_boundaries": [
+      "SOURCE_SEMANTIC_CENSUS_0_1.json -> SOURCE_SEMANTIC_CENSUS_0_2.json",
+      "LISI_SSC_PREFREEZE_CONSERVATION_0_1.md -> LISI_SSC_SOURCE_CORRECTION_0_2.md",
+      "L-SSC-130 source semantics corrected: individual reflections anti-invariant; even compositions invariant"
+    ],
+    "reason": "Source-semantic correction discovered during primitive reduction of L05 generalized reflections.",
+    "old_target_preserved": true,
+    "in_place_mutation": false
+  },
+  "repair_rule": "Do not mutate historical ledgers. Restore the exact prior scope-revision record in successor CORE021_CLOSURE_LEDGER_0_24.json and all later descendants until superseded by another explicit revision.",
+  "semantic_change": false,
+  "closure_disposition_change_from_repair": false,
+  "ia_effect": "none; no current IA fixed point exists",
+  "historical_evidence_preserved": true
+}

@@ -1,0 +1,2142 @@
+{
+  "schema": "isograph.exp062-l-g1-formula-operator-frontier.v0.1",
+  "date": "2026-10-06",
+  "status": "DIAGNOSTIC_SOURCE_ONLY_OPERATOR_FRONTIER_NOT_G1_COMPLETENESS",
+  "authority_effect": "NONE_RESEARCH_EVIDENCE_ONLY",
+  "governing_method": "research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md",
+  "source_corpus": "research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json",
+  "extraction": "experiments/062/L_EXTRACTION_RECONCILED_0_20.json",
+  "purpose": "Enumerate exact source-visible symbolic tokens in the frozen L bodies after ordinary 0.20 incidence repair. No conventional mathematical meaning is assigned by this frontier; every token requires source-local adjudication before semantic promotion.",
+  "token_kinds": [
+    "EQUALS",
+    "APPROX",
+    "TILDE",
+    "ARROW_ASCII",
+    "TENSOR",
+    "CENTRAL_PRODUCT",
+    "SUBSET_SYMBOL",
+    "PLUS",
+    "STAR",
+    "CARET",
+    "NUMERIC_FRACTION",
+    "BRACKET_GROUP"
+  ],
+  "guards": [
+    "Token kinds are lexical/source-visible only; PLUS does not assert addition, STAR does not assert Hodge duality, TENSOR does not assert tensor-product semantics, and so on.",
+    "Hyphen/minus and slash are not scanned generically because prose/names use them ambiguously; numeric fractions are recorded explicitly.",
+    "Compact named operators such as dA, Dphi, det(...), tilde(...), bar(...), and source juxtaposition require a separate source-local review because their operator boundaries are not safely determined by symbol lexing alone.",
+    "A token inside an identifier or role label may be adjudicated NON_OPERATOR_SOURCE_TOKEN; no token is promoted automatically.",
+    "This frontier neither closes G1 nor authorizes G2."
+  ],
+  "counts": {
+    "bodies_with_tokens": 50,
+    "total_tokens": 141,
+    "by_kind": {
+      "EQUALS": 34,
+      "PLUS": 54,
+      "NUMERIC_FRACTION": 16,
+      "BRACKET_GROUP": 3,
+      "CARET": 9,
+      "STAR": 5,
+      "APPROX": 1,
+      "TENSOR": 8,
+      "TILDE": 7,
+      "CENTRAL_PRODUCT": 1,
+      "ARROW_ASCII": 1,
+      "SUBSET_SYMBOL": 2
+    }
+  },
+  "items": [
+    {
+      "census_id": "L-SSC-027",
+      "body": "L01 defines curvature by F=dA+1/2[A,A] and uses Lie brackets both as algebraic interaction structure and, in selected exceptional embeddings, as the source of subgroup-representation actions.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 26,
+          "end": 27,
+          "enclosing_occurrence_ids": [
+            "L-SSC-027-O01",
+            "L-SSC-027-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 29,
+          "end": 30,
+          "enclosing_occurrence_ids": [
+            "L-SSC-027-O01",
+            "L-SSC-027-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 30,
+          "end": 33,
+          "enclosing_occurrence_ids": [
+            "L-SSC-027-O01",
+            "L-SSC-027-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "BRACKET_GROUP",
+          "lexeme": "[A,A]",
+          "start": 33,
+          "end": 38,
+          "enclosing_occurrence_ids": [
+            "L-SSC-027-O01",
+            "L-SSC-027-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-029",
+      "body": "L01 embeds su(3) together with defining 3 and dual bar3 weight carriers into g2=g2 decomposition su(3)+3+bar3, treating quark/anti-quark generators as Lie-algebra root vectors rather than only external representation vectors.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 79,
+          "end": 80,
+          "enclosing_occurrence_ids": [
+            "L-SSC-029-O01",
+            "L-SSC-029-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 102,
+          "end": 103,
+          "enclosing_occurrence_ids": [
+            "L-SSC-029-O01",
+            "L-SSC-029-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 104,
+          "end": 105,
+          "enclosing_occurrence_ids": [
+            "L-SSC-029-O01",
+            "L-SSC-029-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-030",
+      "body": "L01 represents gravitational so(3,1)=Cl^2(3,1) using explicit chiral Clifford matrices, decomposes the spin connection into left/right chiral blocks, and represents the frame in Cl^1(3,1).",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 36,
+          "end": 37,
+          "enclosing_occurrence_ids": [
+            "L-SSC-030-O02",
+            "L-SSC-030-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-030-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 39,
+          "end": 40,
+          "enclosing_occurrence_ids": [
+            "L-SSC-030-O02",
+            "L-SSC-030-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 180,
+          "end": 181,
+          "enclosing_occurrence_ids": [
+            "L-SSC-030-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-032",
+      "body": "L01 builds explicit Cl(7,1) generators and the graviweak connection H1=1/2 omega+1/4 e phi+w_ew, acting chirally on an 8-dimensional positive-chiral spinor carrier.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 70,
+          "end": 71,
+          "enclosing_occurrence_ids": [
+            "L-SSC-032-O01",
+            "L-SSC-032-O02",
+            "L-SSC-032-O04",
+            "L-SSC-032-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 71,
+          "end": 74,
+          "enclosing_occurrence_ids": [
+            "L-SSC-032-O01",
+            "L-SSC-032-O02",
+            "L-SSC-032-O04",
+            "L-SSC-032-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 80,
+          "end": 81,
+          "enclosing_occurrence_ids": [
+            "L-SSC-032-O01",
+            "L-SSC-032-O02",
+            "L-SSC-032-O04",
+            "L-SSC-032-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/4",
+          "start": 81,
+          "end": 84,
+          "enclosing_occurrence_ids": [
+            "L-SSC-032-O01",
+            "L-SSC-032-O02",
+            "L-SSC-032-O04",
+            "L-SSC-032-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 90,
+          "end": 91,
+          "enclosing_occurrence_ids": [
+            "L-SSC-032-O01",
+            "L-SSC-032-O02",
+            "L-SSC-032-O04",
+            "L-SSC-032-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-033",
+      "body": "L01 introduces a canonical order-three D4 triality rotation cycling 8_S+, 8_S-, and 8_V and tentatively uses the three triality-related 8-dimensional roles for the three fermion generations.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 71,
+          "end": 72,
+          "enclosing_occurrence_ids": [
+            "L-SSC-033-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-035",
+      "body": "L01 combines F4 and G2+U(1) quantum-number structures so that 222 gravitational/Standard-Model field weights match 222 of the 240 E8 roots before the remaining roots are assigned to new fields.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 22,
+          "end": 23,
+          "enclosing_occurrence_ids": [
+            "L-SSC-035-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-039",
+      "body": "Within F1, L01 decomposes curvature into gravitational, mixed graviweak, and electroweak parts; the gravitational term combines Riemann curvature with an e e phi^2 term, while the mixed term is torsion times phi minus e Dphi.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 161,
+          "end": 162,
+          "enclosing_occurrence_ids": [
+            "L-SSC-039-O01",
+            "L-SSC-039-O08"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-051",
+      "body": "L02 treats the fundamental bosonic variable as a connection H over a four-dimensional base, valued in g=spin(1+N,3), with spacetime spin(1,3), Yang-Mills spin(N), and off-diagonal complement roles.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 103,
+          "end": 104,
+          "enclosing_occurrence_ids": [
+            "L-SSC-051-O01",
+            "L-SSC-051-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 110,
+          "end": 111,
+          "enclosing_occurrence_ids": [
+            "L-SSC-051-O01",
+            "L-SSC-051-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-052",
+      "body": "L02 begins from a fully g-invariant polynomial extended-Plebanski action S(H,B,Phi) with one parameter g, curvature F=dH+1/2[H,H], an auxiliary g-valued 2-form B, and a symmetric operator Phi acting on bivectors and 2-forms.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 117,
+          "end": 118,
+          "enclosing_occurrence_ids": [
+            "L-SSC-052-O01",
+            "L-SSC-052-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-052-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 120,
+          "end": 121,
+          "enclosing_occurrence_ids": [
+            "L-SSC-052-O01",
+            "L-SSC-052-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 121,
+          "end": 124,
+          "enclosing_occurrence_ids": [
+            "L-SSC-052-O01",
+            "L-SSC-052-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "BRACKET_GROUP",
+          "lexeme": "[H,H]",
+          "start": 124,
+          "end": 129,
+          "enclosing_occurrence_ids": [
+            "L-SSC-052-O01",
+            "L-SSC-052-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-055",
+      "body": "L02 makes a Phi ansatz as a linear combination of identity, Hodge dual, Lie-algebra dual, and their composition; one solution class reduces to Phi=* and B=3/4 *F, leaving a Yang-Mills-form equation D*F=0.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 146,
+          "end": 147,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O01",
+            "L-SSC-055-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-055-O04",
+            "L-SSC-055-O05",
+            "L-SSC-055-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 147,
+          "end": 148,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O01",
+            "L-SSC-055-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 154,
+          "end": 155,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O01",
+            "L-SSC-055-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-055-O04",
+            "L-SSC-055-O05",
+            "L-SSC-055-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "3/4",
+          "start": 155,
+          "end": 158,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O01",
+            "L-SSC-055-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 159,
+          "end": 160,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O01",
+            "L-SSC-055-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 199,
+          "end": 200,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O02",
+            "L-SSC-055-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 201,
+          "end": 202,
+          "enclosing_occurrence_ids": [
+            "L-SSC-055-O02",
+            "L-SSC-055-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-055-O04",
+            "L-SSC-055-O05",
+            "L-SSC-055-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-056",
+      "body": "After symmetry breaking L02 decomposes H=1/2 omega+1/4 E+A into spin connection, off-diagonal frame-Higgs, and Yang-Mills connection, and makes the simple-bivector ansatz E=e' phi with frame e' and Higgs zero-form phi.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 40,
+          "end": 41,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O01",
+            "L-SSC-056-O03",
+            "L-SSC-056-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-056-O05",
+            "L-SSC-056-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 41,
+          "end": 44,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O01",
+            "L-SSC-056-O03",
+            "L-SSC-056-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 50,
+          "end": 51,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O01",
+            "L-SSC-056-O03",
+            "L-SSC-056-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/4",
+          "start": 51,
+          "end": 54,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O01",
+            "L-SSC-056-O03",
+            "L-SSC-056-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 56,
+          "end": 57,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O01",
+            "L-SSC-056-O03",
+            "L-SSC-056-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 172,
+          "end": 173,
+          "enclosing_occurrence_ids": [
+            "L-SSC-056-O02",
+            "L-SSC-056-O04",
+            "L-SSC-056-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-056-O05",
+            "L-SSC-056-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-057",
+      "body": "L02 explicitly distinguishes the frame e used to build the Hodge star from the frame e' appearing in the connection and only later restricts to the solution subset e'=e.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 166,
+          "end": 167,
+          "enclosing_occurrence_ids": [
+            "L-SSC-057-O02",
+            "L-SSC-057-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-057-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-058",
+      "body": "The broken curvature decomposes into gravitational R-1/8 Sigma' phi^2, mixed T phi-e'Dphi, and Yang-Mills F_A sectors, with torsion and Higgs covariant derivative separately defined.",
+      "tokens": [
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/8",
+          "start": 53,
+          "end": 56,
+          "enclosing_occurrence_ids": [
+            "L-SSC-058-O01",
+            "L-SSC-058-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 67,
+          "end": 68,
+          "enclosing_occurrence_ids": [
+            "L-SSC-058-O01",
+            "L-SSC-058-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-059",
+      "body": "The symmetry-broken field equations separate into spacetime, off-diagonal, and Yang-Mills roles and admit a broad solution space; matching e'=e and setting torsion to zero (without fermionic sources) are consistent restrictions, not consequences of symmetry breaking.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 141,
+          "end": 142,
+          "enclosing_occurrence_ids": [
+            "L-SSC-059-O01",
+            "L-SSC-059-O04",
+            "L-SSC-059-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-059-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-061",
+      "body": "With Phi=* the action becomes a Yang-Mills-form curvature-squared action; substituting the broken connection yields gravitational, torsion/Higgs, and Yang-Mills terms before further restriction.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 8,
+          "end": 9,
+          "enclosing_occurrence_ids": [
+            "L-SSC-061-O03",
+            "L-SSC-061-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-061-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 9,
+          "end": 10,
+          "enclosing_occurrence_ids": [
+            "L-SSC-061-O03",
+            "L-SSC-061-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-062",
+      "body": "After e'=e and vanishing torsion, the low-energy action contains Einstein-Hilbert, cosmological/Higgs potential, a Stephenson-Kilmister-Yang curvature-squared modification, Higgs kinetic, and Yang-Mills terms.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 8,
+          "end": 9,
+          "enclosing_occurrence_ids": [
+            "L-SSC-062-O01",
+            "L-SSC-062-O03",
+            "L-SSC-062-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-062-O03"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-065",
+      "body": "Fermions couple through the covariant Dirac derivative (d+H)psi; after breaking this yields spin, frame-Higgs, and Yang-Mills interactions, and the source expects fermions to source torsion.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 57,
+          "end": 58,
+          "enclosing_occurrence_ids": [
+            "L-SSC-065-O01",
+            "L-SSC-065-O02",
+            "L-SSC-065-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-071",
+      "body": "The 18 gravity+Standard-Model generators in the 64-real realization retain real Lie-algebra structure constants and act on the 64-real fermion column exactly as their 32-complex counterparts act on the original generation.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 14,
+          "end": 15,
+          "enclosing_occurrence_ids": [
+            "L-SSC-071-O01",
+            "L-SSC-071-O02",
+            "L-SSC-071-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-073",
+      "body": "The 18 conventional gravity+Standard-Model 64-real generators are numerically identical, in the chosen representation, to specified positive-chiral spin(11,3) bivector combinations, making the fermion 64-real carrier componentwise identical to a positive-chiral Majorana-Weyl spinor.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 27,
+          "end": 28,
+          "enclosing_occurrence_ids": [
+            "L-SSC-073-O01",
+            "L-SSC-073-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-075",
+      "body": "The same spin(11,3) Clifford presentation contains the Pati-Salam chain su(4)+su(2)_L+su(2)_R subset spin(10) subset spin(11,3), with the Standard Model generators as a subset and forty complementary spin(11,3) generators available for frame-Higgs roles.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 77,
+          "end": 78,
+          "enclosing_occurrence_ids": [
+            "L-SSC-075-O01",
+            "L-SSC-075-O03",
+            "L-SSC-075-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 85,
+          "end": 86,
+          "enclosing_occurrence_ids": [
+            "L-SSC-075-O01",
+            "L-SSC-075-O03",
+            "L-SSC-075-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-076",
+      "body": "L03 defines frame, spin connection, torsion, spin(10) Higgs covariant derivative, and combines spin connection, frame-Higgs, and gauge field into the spin(11,3) bosonic connection H=1/2 omega+1/4 e phi+A.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 181,
+          "end": 182,
+          "enclosing_occurrence_ids": [
+            "L-SSC-076-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 182,
+          "end": 185,
+          "enclosing_occurrence_ids": [
+            "L-SSC-076-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 191,
+          "end": 192,
+          "enclosing_occurrence_ids": [
+            "L-SSC-076-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/4",
+          "start": 192,
+          "end": 195,
+          "enclosing_occurrence_ids": [
+            "L-SSC-076-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 201,
+          "end": 202,
+          "enclosing_occurrence_ids": [
+            "L-SSC-076-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-077",
+      "body": "The curvature of the unified spin(11,3) bosonic connection decomposes into R-1/8 ee phi^2, mixed T phi-eDphi, and spin(10) gauge curvature sectors; the frame-Higgs vev is used to summarize symmetry breaking to gravity+SM and mass generation.",
+      "tokens": [
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/8",
+          "start": 77,
+          "end": 80,
+          "enclosing_occurrence_ids": [
+            "L-SSC-077-O01",
+            "L-SSC-077-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 87,
+          "end": 88,
+          "enclosing_occurrence_ids": [
+            "L-SSC-077-O01",
+            "L-SSC-077-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 217,
+          "end": 218,
+          "enclosing_occurrence_ids": [
+            "L-SSC-077-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-084",
+      "body": "L03's exact algebraic embedding therefore includes both the gravity+SM Lie algebra and its correct action on one fermion generation; this exact embedding claim is distinct from any claim that every E8 generator has a physically correct particle interpretation.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 67,
+          "end": 68,
+          "enclosing_occurrence_ids": [
+            "L-SSC-084-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-089",
+      "body": "L03 forms a superconnection A=H+psi from bosonic connection 1-forms and Grassmann-valued fermionic fields in the same algebra; its curvature contains F, Dpsi, and a quadratic psi psi term, with Dpsi matching the source's covariant Dirac derivative for the selected fermion subspace.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 29,
+          "end": 30,
+          "enclosing_occurrence_ids": [
+            "L-SSC-089-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 31,
+          "end": 32,
+          "enclosing_occurrence_ids": [
+            "L-SSC-089-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-093",
+      "body": "L04 treats a Dirac spinor as an irreducible representation of Pin(1,3), not merely Spin+(1,3), and distinguishes the Pin extension by parity P and unitary time conjugation T_U from the connected Lorentz-spin subgroup.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 87,
+          "end": 88,
+          "enclosing_occurrence_ids": [
+            "L-SSC-093-O02",
+            "L-SSC-093-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-095",
+      "body": "L04 distinguishes Pin(1,3) from Pin(3,1) by the squares of P, T, and PT, then deliberately chooses the phase-modified representative U_P=i gamma_0 so spinors acquire P^2=-1 while calculations retain Spin+(1,3)≈SL(2,C).",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 136,
+          "end": 137,
+          "enclosing_occurrence_ids": [
+            "L-SSC-095-O01",
+            "L-SSC-095-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-095-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 167,
+          "end": 168,
+          "enclosing_occurrence_ids": [
+            "L-SSC-095-O01",
+            "L-SSC-095-O02",
+            "L-SSC-095-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 169,
+          "end": 170,
+          "enclosing_occurrence_ids": [
+            "L-SSC-095-O01",
+            "L-SSC-095-O02",
+            "L-SSC-095-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-095-O06"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 203,
+          "end": 204,
+          "enclosing_occurrence_ids": [
+            "L-SSC-095-O04",
+            "L-SSC-095-O07"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "APPROX",
+          "lexeme": "≈",
+          "start": 209,
+          "end": 210,
+          "enclosing_occurrence_ids": [
+            "L-SSC-095-O04",
+            "L-SSC-095-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-095-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-096",
+      "body": "L04 defines charge conjugation by the antiunitary operator U_C=i gamma_2 K and distinguishes quantized time reversal U_T^Q=gamma_13 from the antiunitary unquantized representative U_T=gamma_13 K.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 62,
+          "end": 63,
+          "enclosing_occurrence_ids": [
+            "L-SSC-096-O01",
+            "L-SSC-096-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 120,
+          "end": 121,
+          "enclosing_occurrence_ids": [
+            "L-SSC-096-O02",
+            "L-SSC-096-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 122,
+          "end": 123,
+          "enclosing_occurrence_ids": [
+            "L-SSC-096-O02",
+            "L-SSC-096-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 183,
+          "end": 184,
+          "enclosing_occurrence_ids": [
+            "L-SSC-096-O02",
+            "L-SSC-096-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-106",
+      "body": "L04 derives antiunitary time conjugation on QFT operators as momentum reflection plus spin exchange, preserving helicity and charge; T^2=-1 is used to classify the fermion representation space as quaternionic.",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 134,
+          "end": 135,
+          "enclosing_occurrence_ids": [
+            "L-SSC-106-O02",
+            "L-SSC-106-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 136,
+          "end": 137,
+          "enclosing_occurrence_ids": [
+            "L-SSC-106-O02",
+            "L-SSC-106-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-106-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-109",
+      "body": "L04 first constructs a mathematically valid but non-unique triality extension using t'=-1/2(1+e1+e2+e3), yielding 2T×Z2 of order 48 because t' commutes with C.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 86,
+          "end": 87,
+          "enclosing_occurrence_ids": [
+            "L-SSC-109-O01",
+            "L-SSC-109-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 88,
+          "end": 91,
+          "enclosing_occurrence_ids": [
+            "L-SSC-109-O01",
+            "L-SSC-109-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 93,
+          "end": 94,
+          "enclosing_occurrence_ids": [
+            "L-SSC-109-O01",
+            "L-SSC-109-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 96,
+          "end": 97,
+          "enclosing_occurrence_ids": [
+            "L-SSC-109-O01",
+            "L-SSC-109-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 99,
+          "end": 100,
+          "enclosing_occurrence_ids": [
+            "L-SSC-109-O01",
+            "L-SSC-109-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-111",
+      "body": "Rather than guessing new generators, L04 reconstructs the C/P/T operations after reorganizing Dirac degrees of freedom into left/right chiral biquaternionic carriers C⊗H.",
+      "tokens": [
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 167,
+          "end": 168,
+          "enclosing_occurrence_ids": [
+            "L-SSC-111-O01",
+            "L-SSC-111-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-112",
+      "body": "The biquaternionic representation uses the Pauli realization e0~sigma0, e_pi~-i sigma_pi and an exact relation between left/right chiral biquaternions and the original Dirac/charge-conjugate components.",
+      "tokens": [
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 63,
+          "end": 64,
+          "enclosing_occurrence_ids": [
+            "L-SSC-112-O03",
+            "L-SSC-112-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-112-O04",
+            "L-SSC-112-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 76,
+          "end": 77,
+          "enclosing_occurrence_ids": [
+            "L-SSC-112-O03",
+            "L-SSC-112-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-112-O04",
+            "L-SSC-112-O05"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-114",
+      "body": "L04's biquaternionic invariant satisfies tilde(psi_HL) psi_HL=det(psi_QL), while the Dirac scalar bar(Psi)Psi is twice the real part of that invariant.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 61,
+          "end": 62,
+          "enclosing_occurrence_ids": [
+            "L-SSC-114-O01",
+            "L-SSC-114-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-114-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-115",
+      "body": "In the final biquaternionic presentation the source uses C~i e1, P~-K e3, T~-K e2, and CPT~-i, with quaternionic multiplication acting from the right.",
+      "tokens": [
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 58,
+          "end": 59,
+          "enclosing_occurrence_ids": [
+            "L-SSC-115-O03",
+            "L-SSC-115-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-115-O04",
+            "L-SSC-115-O05",
+            "L-SSC-115-O06",
+            "L-SSC-115-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 66,
+          "end": 67,
+          "enclosing_occurrence_ids": [
+            "L-SSC-115-O03",
+            "L-SSC-115-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-115-O04",
+            "L-SSC-115-O05",
+            "L-SSC-115-O06",
+            "L-SSC-115-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 75,
+          "end": 76,
+          "enclosing_occurrence_ids": [
+            "L-SSC-115-O03",
+            "L-SSC-115-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-115-O04",
+            "L-SSC-115-O05",
+            "L-SSC-115-O06",
+            "L-SSC-115-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 90,
+          "end": 91,
+          "enclosing_occurrence_ids": [
+            "L-SSC-115-O03",
+            "L-SSC-115-O07"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-115-O04",
+            "L-SSC-115-O05",
+            "L-SSC-115-O06",
+            "L-SSC-115-O07"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-116",
+      "body": "Adding t~-1/2(1+e1+e2+e3) or ad_t gives a triality generator that does not commute with C but does commute with CPT; from C/P/T/t the source also constructs a complex/creation conjugation K.",
+      "tokens": [
+        {
+          "kind": "TILDE",
+          "lexeme": "~",
+          "start": 8,
+          "end": 9,
+          "enclosing_occurrence_ids": [
+            "L-SSC-116-O01",
+            "L-SSC-116-O05",
+            "L-SSC-116-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-116-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 10,
+          "end": 13,
+          "enclosing_occurrence_ids": [
+            "L-SSC-116-O01",
+            "L-SSC-116-O05",
+            "L-SSC-116-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 15,
+          "end": 16,
+          "enclosing_occurrence_ids": [
+            "L-SSC-116-O01",
+            "L-SSC-116-O05",
+            "L-SSC-116-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 18,
+          "end": 19,
+          "enclosing_occurrence_ids": [
+            "L-SSC-116-O01",
+            "L-SSC-116-O05",
+            "L-SSC-116-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 21,
+          "end": 22,
+          "enclosing_occurrence_ids": [
+            "L-SSC-116-O01",
+            "L-SSC-116-O05",
+            "L-SSC-116-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-118",
+      "body": "The final CPTt group has order 96 and is the central product 2T∘D4, with Q8, 2T, and D4 normal subgroups sharing center {±1}; L04 v2 records GAP ID [96,202].",
+      "tokens": [
+        {
+          "kind": "CENTRAL_PRODUCT",
+          "lexeme": "∘",
+          "start": 63,
+          "end": 64,
+          "enclosing_occurrence_ids": [
+            "L-SSC-118-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "BRACKET_GROUP",
+          "lexeme": "[96,202]",
+          "start": 148,
+          "end": 156,
+          "enclosing_occurrence_ids": [
+            "L-SSC-118-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-119",
+      "body": "L04 gives a projective 24-cell representation with coordinates (omega_t,omega_S,h,q), omega_t=4 omega_S h q, first-generation C/P/T sign matrices, and a triality matrix relating second/third-generation weights.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 93,
+          "end": 94,
+          "enclosing_occurrence_ids": [
+            "L-SSC-119-O01"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-119-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-131",
+      "body": "Compositions of generalized reflections produce ordinary rotations and generalized triality automorphisms t^(uw); the canonical u=w=1 case cycles (v,psi,chi)->(psi,chi,v).",
+      "tokens": [
+        {
+          "kind": "CARET",
+          "lexeme": "^",
+          "start": 107,
+          "end": 108,
+          "enclosing_occurrence_ids": [
+            "L-SSC-131-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 129,
+          "end": 130,
+          "enclosing_occurrence_ids": [
+            "L-SSC-131-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 131,
+          "end": 132,
+          "enclosing_occurrence_ids": [
+            "L-SSC-131-O03"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "ARROW_ASCII",
+          "lexeme": "->",
+          "start": 157,
+          "end": 159,
+          "enclosing_occurrence_ids": [
+            "L-SSC-131-O01",
+            "L-SSC-131-O03"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-131-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-139",
+      "body": "The magic-square Lie algebra decomposition is Tri(D')+Tri(D)+D'_v⊗D_v+D'_m⊗D_m+D'_p⊗D_p with brackets inherited from the constituent triality structures; each member has a canonical triality automorphism built from the constituent automorphisms.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 53,
+          "end": 54,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 60,
+          "end": 61,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 65,
+          "end": 66,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 69,
+          "end": 70,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 74,
+          "end": 75,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 78,
+          "end": 79,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 83,
+          "end": 84,
+          "enclosing_occurrence_ids": [
+            "L-SSC-139-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-141",
+      "body": "An order-three triality automorphism decomposes each relevant Lie algebra into g_-1+g_0+g_+1 with bracket grading modulo three, conjugate ±1 eigenspaces, and a real invariant subalgebra g_0.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 83,
+          "end": 84,
+          "enclosing_occurrence_ids": [
+            "L-SSC-141-O01",
+            "L-SSC-141-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 87,
+          "end": 88,
+          "enclosing_occurrence_ids": [
+            "L-SSC-141-O01",
+            "L-SSC-141-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 90,
+          "end": 91,
+          "enclosing_occurrence_ids": [
+            "L-SSC-141-O01",
+            "L-SSC-141-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-145",
+      "body": "L05 constructs e6 from C⊗O triality data, with explicit brackets/real-form dependence, canonical triality, so(10)+u(1)+16+16 decomposition, and Standard-Model/GUT charge combinations.",
+      "tokens": [
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 24,
+          "end": 25,
+          "enclosing_occurrence_ids": [
+            "L-SSC-145-O01",
+            "L-SSC-145-O02",
+            "L-SSC-145-O03",
+            "L-SSC-145-O04",
+            "L-SSC-145-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 113,
+          "end": 114,
+          "enclosing_occurrence_ids": [
+            "L-SSC-145-O03",
+            "L-SSC-145-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 118,
+          "end": 119,
+          "enclosing_occurrence_ids": [
+            "L-SSC-145-O03",
+            "L-SSC-145-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 121,
+          "end": 122,
+          "enclosing_occurrence_ids": [
+            "L-SSC-145-O03",
+            "L-SSC-145-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-146",
+      "body": "L05 constructs e7 from H⊗O triality data and distinguishes two model-building readings: a real one-generation model with both chiralities or a complex/triality three-generation interpretation that cannot simultaneously house all chiral/antiparticle partners in the same real form.",
+      "tokens": [
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 24,
+          "end": 25,
+          "enclosing_occurrence_ids": [
+            "L-SSC-146-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-147",
+      "body": "L05 constructs e8 from O⊗O triality data with explicit bracket classes, real-form signatures, and canonical triality automorphisms; particle labels on roots are source model assignments layered over the algebra.",
+      "tokens": [
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 24,
+          "end": 25,
+          "enclosing_occurrence_ids": [
+            "L-SSC-147-O01",
+            "L-SSC-147-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-160",
+      "body": "The MacDowell-Mansouri presentation combines spin connection and frame-Higgs into a Spin(1,4) connection H=1/2 omega+E, with E=e phi_S and fixed spacelike Higgs vev; its curvature splits into R+EE and torsion pieces.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 106,
+          "end": 107,
+          "enclosing_occurrence_ids": [
+            "L-SSC-160-O01",
+            "L-SSC-160-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-160-O01",
+            "L-SSC-160-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 107,
+          "end": 110,
+          "enclosing_occurrence_ids": [
+            "L-SSC-160-O01",
+            "L-SSC-160-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 116,
+          "end": 117,
+          "enclosing_occurrence_ids": [
+            "L-SSC-160-O01",
+            "L-SSC-160-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 126,
+          "end": 127,
+          "enclosing_occurrence_ids": [
+            "L-SSC-160-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-160-O01",
+            "L-SSC-160-O04"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 193,
+          "end": 194,
+          "enclosing_occurrence_ids": [
+            "L-SSC-160-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-168",
+      "body": "For large G with H⊂G0⊂G, L06 defines a generalized Cartan connection C=1/2 omega+E+A with values in Lie(H), Lie(G0/H), and Lie(G/G0), respectively, and treats it as pullback of a generalized Ehresmann-Cartan connection over the deforming group.",
+      "tokens": [
+        {
+          "kind": "SUBSET_SYMBOL",
+          "lexeme": "⊂",
+          "start": 18,
+          "end": 19,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O03",
+            "L-SSC-168-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "SUBSET_SYMBOL",
+          "lexeme": "⊂",
+          "start": 21,
+          "end": 22,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O03",
+            "L-SSC-168-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 70,
+          "end": 71,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O01",
+            "L-SSC-168-O02",
+            "L-SSC-168-O03",
+            "L-SSC-168-O05",
+            "L-SSC-168-O06"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-168-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 71,
+          "end": 74,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O01",
+            "L-SSC-168-O02",
+            "L-SSC-168-O03",
+            "L-SSC-168-O05",
+            "L-SSC-168-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 80,
+          "end": 81,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O01",
+            "L-SSC-168-O02",
+            "L-SSC-168-O03",
+            "L-SSC-168-O05",
+            "L-SSC-168-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 82,
+          "end": 83,
+          "enclosing_occurrence_ids": [
+            "L-SSC-168-O01",
+            "L-SSC-168-O02",
+            "L-SSC-168-O03",
+            "L-SSC-168-O05",
+            "L-SSC-168-O06"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-169",
+      "body": "The generalized Cartan curvature decomposes exactly as (1/2 R+EE)+DE+F_A; reduction of a full-group integral to spacetime requires the integrand to be independent of the rigid G/G0 and H coordinates and introduces their group volumes as factors.",
+      "tokens": [
+        {
+          "kind": "NUMERIC_FRACTION",
+          "lexeme": "1/2",
+          "start": 56,
+          "end": 59,
+          "enclosing_occurrence_ids": [
+            "L-SSC-169-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 61,
+          "end": 62,
+          "enclosing_occurrence_ids": [
+            "L-SSC-169-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 65,
+          "end": 66,
+          "enclosing_occurrence_ids": [
+            "L-SSC-169-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 68,
+          "end": 69,
+          "enclosing_occurrence_ids": [
+            "L-SSC-169-O01"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-175",
+      "body": "The preferred L06 superconnection G=C+Psi consists of bosonic spacetime 1-forms and anticommuting non-spacetime/vertical 1-forms orthogonal to embedded spacetime, valued in complementary Lie-algebra sectors; the exact vertical fermion directions are admitted as not fully specified.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 35,
+          "end": 36,
+          "enclosing_occurrence_ids": [
+            "L-SSC-175-O01",
+            "L-SSC-175-O03",
+            "L-SSC-175-O04"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-175-O01"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 37,
+          "end": 38,
+          "enclosing_occurrence_ids": [
+            "L-SSC-175-O01",
+            "L-SSC-175-O03",
+            "L-SSC-175-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-180",
+      "body": "L06 supplies a polynomial modified-BF alternative with auxiliary B and Phi whose field equations admit Phi equal to the deforming-group Hodge operator and B=*F, reproducing the generalized Yang-Mills equations.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 156,
+          "end": 157,
+          "enclosing_occurrence_ids": [
+            "L-SSC-180-O02",
+            "L-SSC-180-O03",
+            "L-SSC-180-O05"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-180-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "STAR",
+          "lexeme": "*",
+          "start": 157,
+          "end": 158,
+          "enclosing_occurrence_ids": [
+            "L-SSC-180-O02",
+            "L-SSC-180-O03",
+            "L-SSC-180-O05"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-183",
+      "body": "L06 states that the target large algebra must contain spin(1,3)+frame⊗Higgs+su(2)_L+u(1)_Y+su(3) acting on three fermion generations, and reviews the one-generation spin(11,3) embedding as an algebraic input.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 63,
+          "end": 64,
+          "enclosing_occurrence_ids": [
+            "L-SSC-183-O01",
+            "L-SSC-183-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "TENSOR",
+          "lexeme": "⊗",
+          "start": 69,
+          "end": 70,
+          "enclosing_occurrence_ids": [
+            "L-SSC-183-O01",
+            "L-SSC-183-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 75,
+          "end": 76,
+          "enclosing_occurrence_ids": [
+            "L-SSC-183-O01",
+            "L-SSC-183-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 83,
+          "end": 84,
+          "enclosing_occurrence_ids": [
+            "L-SSC-183-O01",
+            "L-SSC-183-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 90,
+          "end": 91,
+          "enclosing_occurrence_ids": [
+            "L-SSC-183-O01",
+            "L-SSC-183-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-185",
+      "body": "L06 instead uses the E8(-24)=spin(4,4)+spin(8)+three 64-generator triality blocks decomposition and presumes each fermion generation is accessible only from its corresponding triality-related spacetime region; under this regional assumption it claims three chiral generations without mirror fermions.",
+      "tokens": [
+        {
+          "kind": "EQUALS",
+          "lexeme": "=",
+          "start": 28,
+          "end": 29,
+          "enclosing_occurrence_ids": [
+            "L-SSC-185-O02"
+          ],
+          "exact_relation_occurrence_ids": [
+            "L-SSC-185-O02"
+          ],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 38,
+          "end": 39,
+          "enclosing_occurrence_ids": [
+            "L-SSC-185-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        },
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 46,
+          "end": 47,
+          "enclosing_occurrence_ids": [
+            "L-SSC-185-O02"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    },
+    {
+      "census_id": "L-SSC-186",
+      "body": "The weak su(2)_L does not fit wholly inside spin(4,4)+spin(8) with the other target generators; L06 therefore places weak degrees across triality blocks and infers Majorana-neutrino and CKM/PMNS-mixing implications from that model arrangement.",
+      "tokens": [
+        {
+          "kind": "PLUS",
+          "lexeme": "+",
+          "start": 53,
+          "end": 54,
+          "enclosing_occurrence_ids": [
+            "L-SSC-186-O02",
+            "L-SSC-186-O04"
+          ],
+          "exact_relation_occurrence_ids": [],
+          "review_state": "SOURCE_LOCAL_OPERATOR_REVIEW_REQUIRED"
+        }
+      ]
+    }
+  ]
+}

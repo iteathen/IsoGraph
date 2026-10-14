@@ -1,0 +1,69 @@
+{
+  "schema": "isograph.exp062-w05-s53-nonabelian-hodge-author-credit-defect.v0.1",
+  "date": "2026-10-09",
+  "track": "W",
+  "semantic_authority": false,
+  "status": "CONFIRMED_AUTHOR_ATTRIBUTION_AND_LAMBDA1_SOURCE_SCOPE_DRIFT_G0",
+  "source_first_oracle": {
+    "path": "experiments/062/W05_G0_S53_NONABELIAN_HODGE_SOURCE_FIRST_0_1.json",
+    "git_blob_sha": "5ff946f6152818171fb3e9751895317dc671f4ae"
+  },
+  "old_census": {
+    "path": "research/woit-lisi-isomorph/woit/SOURCE_SEMANTIC_CENSUS_0_36.json",
+    "git_blob_sha": "631cd8b54e34ccca5b4a6de050a3136d3a26de7b",
+    "source_id": "W-SSC-104",
+    "existing_typed": 2
+  },
+  "source_support": "Original Peter Woit W05 arXiv:2202.02657v2 §5.3 printed page 8 / HTML lines 214,218,219",
+  "affected_issues": [
+    {
+      "id": "SIMPSON_EXPLICIT_CREDIT",
+      "original_author_qualifier": "non-abelian version of Hodge theory due to Simpson [15]",
+      "old_W104": "omits Simpson name/explicit credit",
+      "repair": "separate source-typed attribution; no mathematical proof imported"
+    },
+    {
+      "id": "DELIGNE_CREDIT_TYPED",
+      "original_author_qualifier": "uses Deligne's lambda-connections",
+      "old_W104": "Deligne only in prose not typed source modality",
+      "repair": "separate source-typed Deligne attribution and exact lambda cases"
+    },
+    {
+      "id": "RIEMANN_SURFACE_SCOPE_TYPED",
+      "original_author_qualifier": "For X=Σ a Riemann surface this moduli space is hyperkähler; CP1 points give differing descriptions",
+      "old_W104": "recorded in prose but missing source typed conditional case",
+      "repair": "source-scoped CP1 role not arbitrary X theorem"
+    },
+    {
+      "id": "LAMBDA1_FLAT_CONFLATION",
+      "source_exact": "For λ=1 one gets usual connections",
+      "predecessor_phrase": "lambda=1 giving ordinary flat connections",
+      "repair_phrase": "lambda=1 giving usual connections",
+      "risk": "do not import flat from separate preceding moduli-of-flat-connections sentence into quoted lambda1 case"
+    }
+  ],
+  "successor": {
+    "source_census": "SOURCE_SEMANTIC_CENSUS_0_37.json",
+    "changed_W_ids": [
+      "W-SSC-104"
+    ],
+    "unchanged_other_source_items": 150,
+    "source_id_count": 151,
+    "typed_incidences_added": 3,
+    "source_W05_from": 54,
+    "source_W05_to": 57,
+    "all_W_typed_from": 327,
+    "all_W_typed_to": 330
+  },
+  "impact": {
+    "earliest_gate": "G0_SOURCE_SEMANTIC_CENSUS",
+    "old_hist_86_W104_member": true,
+    "other_hist_85_exact_unchanged_required": true,
+    "source_corpus_frozen_papers_unchanged": true,
+    "SSC0_36_and_gate0_76_retained_as_predecessor": true,
+    "old_node_run_37974732198_current_for_source0_37": false,
+    "G1_authorized": false,
+    "external_cold_review": "OWNER_BYPASSED_NOT_PASSED"
+  },
+  "full_original_nine_source_reverse_still_open": true
+}

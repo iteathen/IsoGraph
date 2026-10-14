@@ -1,0 +1,110 @@
+{
+  "schema": "isograph.exp062-L01-so8-tensor-right-G0-verified-CI.v0.1",
+  "created_on": "2026-10-09",
+  "track": "L",
+  "stage": "G0",
+  "semantic_authority": false,
+  "source_revision": "L01: arXiv:0711.0770v1 printed pp21–24 and 27",
+  "independent_runner": {
+    "run_id": 38007096806,
+    "run_url": "https://github.com/iteathen/IsoGraph/actions/runs/38007096806",
+    "job_id": 114078283926,
+    "exact_head_sha": "01be01a473efc758f95d428969076917d209184c",
+    "completed_at": "2026-10-10T00:00:28Z",
+    "status": "completed",
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "node": "v26.7.0",
+    "complete_job_log_checked": true
+  },
+  "results": {
+    "baseline": "PASS",
+    "issues": [],
+    "exact_integer_matrix_arithmetic": true,
+    "so8_basis": 28,
+    "rank_mod101": 28,
+    "su3_generators": 8,
+    "su3_complex_real_pair_tests": 64,
+    "two_commuting_u1_generators": 2,
+    "three_mixed_stable_six_families": 3,
+    "mixed_invariance_tests": 144,
+    "right_transpose_negative_operator_identical_generator_checks": 28,
+    "raw_positive_right_sign_mismatch_checks": 28,
+    "full_so8_right_Lie_module_pair_checks": 378,
+    "naive_positive_raw_right_nonabelian_falsifiers": 256,
+    "math_mutants_defined": 12,
+    "math_mutants_rejected": 12,
+    "source_mutants_defined": 16,
+    "source_mutants_rejected": 16,
+    "all_191_source_identities_retained": true,
+    "so8_original_predecessor_188_whole_items_unchanged": true,
+    "concurrent_chiral_SSC043_kept": true
+  },
+  "exact_artifacts": {
+    "packet": {
+      "path": "research/woit-lisi-isomorph/lisi/LISI_L01_SO8_TENSOR_RIGHT_TRANSPOSE_G0_0_1.json",
+      "git_blob_sha": "94ce20166dac8820005c8d8f5ff01037b9d013c1"
+    },
+    "checker": {
+      "path": "experiments/062/tools/verify-l-g0-l01-so8-tensor-right-0-1.mjs",
+      "git_blob_sha": "a3e8b0aaccdac666244a1daa9f12032ff923c13d"
+    },
+    "current_source_census": {
+      "path": "research/woit-lisi-isomorph/lisi/SOURCE_SEMANTIC_CENSUS_0_43.json",
+      "git_blob_sha": "afb81fbc69bb8f60480d6654dbcc1ebfdfbd5f35"
+    },
+    "repair_record": {
+      "path": "experiments/062/L_SO8_RIGHT_TENSOR_NODE_REPAIR_EVIDENCE_G0_0_1.json",
+      "git_blob_sha": "8b08ce12c977e33ec1be1f769b305cd15c2921a0"
+    }
+  },
+  "predecessor_run_history": [
+    {
+      "run": 38006663593,
+      "conclusion": "failure",
+      "reason": "Original Node syntax error in so8 matrix multiply; source math did not run"
+    },
+    {
+      "run": 38006663585,
+      "conclusion": "failure",
+      "reason": "Independent L chiral projector verifier source0.42 collision; other L agent later restored and rebased into source0.43"
+    },
+    {
+      "run": 38006976694,
+      "conclusion": "failure",
+      "reason": "Math baseline and 28/28 hostile tests succeeded but repaired checker conflicted with immutable older gate0.43 original verifier git blob"
+    },
+    {
+      "run": 38007096806,
+      "conclusion": "success",
+      "reason": "Exact separate syntax-repair evidence binding to original gate plus full math/source hostile checks pass"
+    }
+  ],
+  "separate_findings": {
+    "mathematics": "Project-selected full 28D real so8 basis splits as 8 su3 +2 abelian +3 six-real stable mixed submodules. In this skew model -Psi R(X)=+Psi R(X)^T, including nonabelian cases, with complete Lie module bracket consistency.",
+    "source_observation": "Original L01 §3.1 prints negative H2 right operator and §3.2.3 coordinate formula positive H2 right coefficients. A source-specific identification of those coefficients as transposed generators is still missing.",
+    "software_repair": "One parser parenthesis and later exact pin provenance correction; the original mathematical construction never changed. The independent L source checkpoint version collision was resolved by the other L agent rebasing its chiral work as SSC0.43."
+  },
+  "qualification_limits": {
+    "original_E8_8Splus_specific_gamma_root_basis_qualified": false,
+    "original_H2_right_component_transposition_source_confirmed": false,
+    "source_Grassmann_trace_action_equivalence_qualified": false,
+    "source_rank_one_shared_Phi_phase_factorization_qualified": false,
+    "second_third_generation_action_derived": false,
+    "G1_authorized": false,
+    "G2_G7_authorized": false,
+    "recursive_IA_authorized": false,
+    "W_L_synthesis_authorized": false,
+    "external_independent_math_cold_review_passed": false,
+    "author_error_confirmed": false,
+    "author_outreach_authorized": false,
+    "PR70_merge_authorized": false
+  },
+  "provenance": {
+    "original_source_author": "Garrett Lisi (2007 v1)",
+    "human_direction": "Joshua Oshiro",
+    "agent_reconstruction": "2026-10-09 exact project so8 realification and tensor-index map",
+    "software_repair": "Agent-authored Node verifier repair and provenance/source-checkpoint collision separation",
+    "independent_execution": "GitHub Actions exact run above; not a third-party cold theory evaluation"
+  }
+}

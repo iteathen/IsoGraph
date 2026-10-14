@@ -1,0 +1,15 @@
+name: Experiment 062 W01 original source §§2–3 G0 0.1
+# Historical FAILED workflow on run 38078531868; retained as manual-only, never retrospectively qualified.
+# Prior SSC mutation escaped v0.1; corrected v0.2 distinct.
+on:
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: {node-version: '26.7.0'}
+      - run: node experiments/062/tools/verify-w01-s2-s3-original-source-g0-0-1.cjs

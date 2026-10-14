@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const read=p=>fs.readFileSync(p,'utf8');
+const json=p=>JSON.parse(read(p));
+const blob=p=>{const b=Buffer.from(read(p));return crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex');};
+const errors=[];const check=(x,m)=>{if(!x)errors.push(m);};
+const R=json('experiments/062/L131_CURRENT_RECONSTRUCTION_ROUTING_0_1.json');
+check(R.status==='L131_CURRENT_RECONSTRUCTION_ROUTED_NO_NEW_GENERIC_PRIMITIVE','status');
+check(R.authority===false&&R.track==='L','authority/track');
+for(const x of [R.predecessor_g3,R.lower_source_closure,...R.source_instances,...R.source_falsifiers]){
+  check(fs.existsSync(x.path),'missing '+x.path);
+  if(fs.existsSync(x.path))check(blob(x.path)===x.git_blob_sha,'pin '+x.path);
+}
+const tuw=read(R.source_instances[0].path);
+const roles=read(R.source_instances[1].path);
+for(const id of [234001,234200,234201,234202,234210,234211,234212,234220,234221,234222,234230,234231,234232,234240,234241,234242,234250,234251,234252])check(tuw.includes('(^150010 '+id),'tuw '+id);
+check(tuw.includes('(^150010 225000'),'225000');
+for(const id of [235010,235011,235012,235013,235014])check(roles.includes('(^150010 '+id),'roles '+id);
+const TF=json(R.source_falsifiers[0].path),RF=json(R.source_falsifiers[1].path);
+check(TF.pass===true&&TF.source_repair_used===false,'tuw falsifier');
+const O=TF.results.find(x=>x.name==='O');
+check(O.invariance_failures===500&&O.canonical_failures===0,'O signature');
+for(const x of TF.results)if(x.name!=='O')check(x.invariance_failures===0&&x.canonical_failures===0,'unexpected '+x.name);
+check(RF.pass===true,'role falsifier');
+check(RF.same_type_identity_failures===0,'same-type');
+check(RF.distinct_type_three_cycle_failures===0,'different-type');
+check(JSON.stringify(RF.canonical_sequence)===JSON.stringify(['V->Qplus','Qminus->V','Qplus->Qminus']),'cycle');
+check((R.occurrence_routing||[]).length===10,'route count');
+check(R.current_method_ruling?.new_generic_primitive_required===false,'new primitive');
+check(R.source_inconsistency_policy?.source_repair_used===false,'repair');
+check(!JSON.stringify(R).includes('W-SSC-'),'W leak');
+console.log(JSON.stringify({schema:'isograph.exp062-l131-current-reconstruction-routing-verifier.v0.1',pass:errors.length===0,errors,routed_occurrences:R.occurrence_routing.length,ordinary_O_invariance_failures:O.invariance_failures,same_type_identity_failures:RF.same_type_identity_failures,distinct_type_three_cycle_failures:RF.distinct_type_three_cycle_failures,external_third_party_verification:'BYPASSED_BY_OWNER_NOT_PASSED'},null,2));
+if(errors.length)process.exit(1);

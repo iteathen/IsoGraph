@@ -1,0 +1,68 @@
+name: Experiment 062 L batched occurrence audit
+
+on:
+  push:
+    branches:
+      - research/woit-lisi-isomorph-20261003
+    paths:
+      - experiments/062/L_BATCHED_AUDIT_RUN.request
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiment-062-l-batched-audit
+  cancel-in-progress: false
+
+env:
+  GEMINI_MODEL: gemini-3.1-flash-lite
+  EXP062_L_AUDIT_BATCH_SIZE: 10
+
+jobs:
+  audit-l:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26.7.0
+
+      - name: Deterministic preflight
+        run: |
+          set -euo pipefail
+          node --check experiments/062/tools/run-exp062-l-audit-batched-v2.mjs
+          test -f experiments/062/L_BATCHED_AUDIT_SUCCESSOR_0_2.md
+          test -f experiments/062/L_EXTRACTION_RECONCILED_0_1.json
+          test -f research/primitive-demand-qualification/SOURCE_DEMAND_CENSUS_0_1.json
+          test -f research/primitive-demand-qualification/PRIMITIVE_DEMAND_GRAPH_FIRST_METHOD_0_2.md
+          node experiments/062/tools/verify-l-reconciled-extraction.mjs
+
+      - name: Audit all 151 L rows in validated batches
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node experiments/062/tools/run-exp062-l-audit-batched-v2.mjs
+
+      - name: Persist research evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin research/woit-lisi-isomorph-20261003
+          git merge --ff-only origin/research/woit-lisi-isomorph-20261003
+          E="experiments/062/evidence/run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$E"
+          [ -d out/exp062-l-batched-audit ] && cp -R out/exp062-l-batched-audit "$E/"
+          printf '{"workflow_run_id":"%s","workflow_attempt":"%s","source_sha":"%s","track":"L","mode":"batched-audit-v2"}\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" > "$E/CONTROL_L_BATCHED_AUDIT.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add "$E"
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: Experiment 062 L batched audit run ${GITHUB_RUN_ID} attempt ${GITHUB_RUN_ATTEMPT}"
+            git push origin HEAD:research/woit-lisi-isomorph-20261003
+          fi
