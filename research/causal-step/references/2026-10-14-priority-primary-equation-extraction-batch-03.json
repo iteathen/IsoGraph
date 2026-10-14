@@ -1,0 +1,184 @@
+{
+  "title": "Source-primary comparison extraction across coarse-graining, statistics, causal emergence and quantum operator sufficiency",
+  "date": "2026-10-14",
+  "branch": "research/causal-step",
+  "status": "FOUR direct source definition/equation audits, zero native faithful mappings or independent full proofs",
+  "records": [
+    {
+      "id": "MECH-11",
+      "corpusRecord": "LS/LS-058",
+      "domain": "R11",
+      "title": "Mutual information, neural networks and the renormalization group",
+      "authors": [
+        "Maciej Koch-Janusz",
+        "Zohar Ringel"
+      ],
+      "year": 2018,
+      "doi": "10.1038/s41567-018-0081-4",
+      "primarySource": "https://arxiv.org/pdf/1704.06279",
+      "sourceVersion": "Author arXiv 1704.06279v2 (2018-09-24) original 18pp; published Nature Physics 14:578–582",
+      "originalEquationLocators": [
+        {
+          "where": "preprint PDF p2 Eq(1)",
+          "math": "I_Λ(H:E)=Σ_{h,e}P_Λ(h,e) log[P_Λ(h,e)/(P_Λ(h)P(e))]",
+          "meaning": "Coarse region random variable H chosen to retain information about distant environment E."
+        },
+        {
+          "where": "preprint PDF p2 Eq(2)",
+          "math": "P_Θ(V,H)=Z^{-1} exp[-E_Θ(V,H)]",
+          "meaning": "Restricted Boltzmann machine is a computational family for P_Λ(H|V), not an inherent universal geometry."
+        }
+      ],
+      "objects": [
+        "predefined spatial statistical physical lattice configuration X=(V,E)",
+        "physical Hamiltonian H(X) and Gibbs distribution P(X)",
+        "probabilistic coarse observer P_Λ(H|V)",
+        "buffer region and environment E"
+      ],
+      "actualDynamics": "Learning a coarse-graining map, not fundamental time-free state evolution; RG iteration of sampled coarse ensembles",
+      "criticalAssumptions": [
+        "Already spatially partitioned 1D/2D Ising or dimer states",
+        "Hamiltonian, temperature inverse β, equilibrium Boltzmann ensemble",
+        "chosen V/E/environment and buffer",
+        "MI objective may retain prediction but not all microscopic causal intervention responses"
+      ],
+      "structuralRelevance": "Potential criterion for preserving long-range predictive information, with T3 exact KL sufficiency as stronger check of complete source interventions.",
+      "exactObstruction": "Static environment-MI sufficiency ≠ native stateful event guard and three-event composition preservation; cannot infer physical entropy/backpressure is primitive.",
+      "evidenceStatus": "original PDF p2 Eq(1),(2) visually checked; paper's RG numerical critical exponents not rerun"
+    },
+    {
+      "id": "MECH-12",
+      "corpusRecord": "LS/LS-059",
+      "domain": "R12",
+      "title": "A synthetic approach to Markov kernels, conditional independence and theorems on sufficient statistics",
+      "authors": [
+        "Tobias Fritz"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.aim.2020.107239",
+      "primarySource": "https://arxiv.org/pdf/1908.07021",
+      "sourceVersion": "Author arXiv 1908.07021, 98pp; published Advances in Mathematics volume 370 article 107239, 2020",
+      "originalEquationLocators": [
+        {
+          "where": "preprint PDF p84 Definition 14.2",
+          "math": "Statistical model p:Θ→X, statistic s:X→V a deterministic morphism",
+          "meaning": "An observation map s must be specified, independent of researcher's physical interpretation."
+        },
+        {
+          "where": "preprint PDF p84 Definition 14.3 Eq(14.1)",
+          "math": "s is sufficient for p iff exists α:V→X such that joint law (parameter Θ, sample X) is reproduced by α applied to statistical observation s(X)",
+          "meaning": "Exact common reconstruction map α is part of structural equivalence; not just matching scalar entropy."
+        }
+      ],
+      "objects": [
+        "Markov category",
+        "morphisms p:Θ→X, s:X→V",
+        "disintegration and conditional independence",
+        "sufficient statistic witness α:V→X"
+      ],
+      "actualDynamics": "Probabilistic category and sufficient-statistic representation; not a general source dynamics/generative physical rule.",
+      "criticalAssumptions": [
+        "Monoidal copy/delete structural axioms of Markov category",
+        "Deterministic statistic morphism s and Markov models",
+        "Some results require strictly positive Markov category and disintegrations"
+      ],
+      "structuralRelevance": "A precise abstract equivalence contract for recovering named source transitions/outcomes from coarse observer; T3's classical conditional KL test is a special finite-statistical analogy.",
+      "exactObstruction": "No native global probability kernel, dimension or measure uniquely derived; do not assign quantum/physical status to abstract Markov arrows.",
+      "evidenceStatus": "original PDF p84 Defs14.2–14.3 visually inspected; no proof recapitulated"
+    },
+    {
+      "id": "MECH-13",
+      "corpusRecord": "LS/LS-061",
+      "domain": "R13",
+      "title": "Quantifying causal emergence shows that macro can beat micro",
+      "authors": [
+        "Erik P. Hoel",
+        "Larissa Albantakis",
+        "Giulio Tononi"
+      ],
+      "year": 2013,
+      "doi": "10.1073/pnas.1314922110",
+      "primarySource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856819/",
+      "sourceVersion": "Original open PNAS 110(49):19790–19795 published December 2013; full source text including definition and methodological discussion read.",
+      "originalEquationLocators": [
+        {
+          "where": "PNAS original Main Text section State-Independent Causal Analysis",
+          "math": "EI(S)=MI(U^C;U^E) under uniformly perturbed possible cause repertoire U^C and transition probability matrix defining effect repertoire U^E",
+          "meaning": "Effective information refers to imposed intervention distribution and source transition kernel; not generic intrinsic microcausal completeness."
+        },
+        {
+          "where": "PNAS original Micro Macro Mappings and Repertoires of Alternatives",
+          "math": "Under macro coarsening, impose a separate uniform macro intervention distribution, which changes underlying micro-state perturbation weights",
+          "meaning": "A macro effective-information increase need not violate classical data processing under a single fixed input ensemble because the intervention ensemble changed."
+        }
+      ],
+      "objects": [
+        "finite micro/macro state spaces",
+        "Markov or discrete transition matrix",
+        "intervention distribution fixed uniform at each scale",
+        "coarse-graining map",
+        "determinism/degeneracy and entropy relation"
+      ],
+      "actualDynamics": "Specified transitions with macro/micro intervention-based information measures; not a new physical force or spacetime emergence.",
+      "criticalAssumptions": [
+        "Discrete state repertoire and transition probability matrix",
+        "Uniform interventions chosen anew at each tested scale",
+        "Coarse-graining may change intervention ensemble",
+        "Time-indexed cause/effect model is defined"
+      ],
+      "structuralRelevance": "Direct adversarial control for interpreting a high macro-information score as a new physical causal structure; compare under identical transported intervention distributions too.",
+      "exactObstruction": "No guarantee a macro model recovers all source-native legal rewrites even when its normalized effective information exceeds micro under a rescaled intervention prior.",
+      "evidenceStatus": "original open full journal HTML section read; some displayed main-text mathematical symbols rendered as figures, method interpretation verified in prose"
+    },
+    {
+      "id": "MECH-14",
+      "corpusRecord": "I/I01",
+      "domain": "R08",
+      "title": "Sufficient Subalgebras and the Relative Entropy of States of a von Neumann Algebra",
+      "authors": [
+        "Dénes Petz"
+      ],
+      "year": 1986,
+      "primarySource": "https://math.bme.hu/~petz/pdf/29suff.pdf",
+      "sourceVersion": "Communications in Mathematical Physics 105, 123–131 (1986), author's archived original 10pp",
+      "originalEquationLocators": [
+        {
+          "where": "PDF p1 abstract / p5 Theorem 4",
+          "math": "S(φ,ω)=S(φ|M0,ω|M0) (weak sufficiency); for finite S and faithful state, equivalent to [Dφ,Dω]_t∈M0 for every t",
+          "meaning": "A subalgebra observation sufficient for a pair of quantum states preserves relative entropy and specific Radon–Nikodym cocycle."
+        },
+        {
+          "where": "PDF p5 Theorem 4 (ii)–(vii)",
+          "math": "Equivalent to existence of sufficient subalgebra and preserving conditional expectation conditions under theorem's hypotheses",
+          "meaning": "Exact recovery/sufficiency is stronger than matching any one entropy-like scalar outside assumptions."
+        }
+      ],
+      "objects": [
+        "von Neumann algebra M with subalgebra M0",
+        "faithful normal states φ and ω",
+        "quantum relative entropy S",
+        "Connes Radon–Nikodym cocycle",
+        "conditional expectation"
+      ],
+      "actualDynamics": "No microscopic dynamical rewrite specified; this is a theorem characterizing quantum statistical observations and recoverability.",
+      "criticalAssumptions": [
+        "Quantum operator algebra/faithful normal states",
+        "finite relative entropy for theorem",
+        "modular theory and conditional expectation definitions",
+        "not a classical hypergraph transformation theorem"
+      ],
+      "structuralRelevance": "Formal source for a quantum information recoverability notion, but our native simulator currently supports only source event occurrence and binary bits.",
+      "exactObstruction": "Classical T3 KL-chain equality under a chosen probability model is only an analogy and does not construct von Neumann algebra quantum Petz sufficiency.",
+      "evidenceStatus": "original PDF p1 and Theorem4 PDF p5 visually inspected; proof not reproduced"
+    }
+  ],
+  "importantNewContrast": "Causal emergence EI comparison reweights uniform interventions separately at each grain; do not misuse its macro>micro result as data processing violation under one fixed ensemble.",
+  "mathMainClasses": [
+    "Classical real-space mutual information optimizes selective environmental predictive information",
+    "Markov categorical sufficient statistic requires common reconstruction witness",
+    "Effective-information coarse-graining involves different intervention priors",
+    "Petz weakly sufficient quantum subalgebra requires modular equality and positive operator assumptions"
+  ],
+  "originalPapersInspected": "Original arxiv PDFs visually checked for Eq/Definition locators, original PNAS full HTML for methodological causal interventions.",
+  "runtime": "literature-only, no source-native model simulation"
+}
