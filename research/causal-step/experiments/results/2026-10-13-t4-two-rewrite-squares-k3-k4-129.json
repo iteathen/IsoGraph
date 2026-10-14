@@ -1,0 +1,4008 @@
+{
+  "experiment": "T4 exact two-rewrite operational independence and event-conflict squares",
+  "status": "executed scoped combinatorial comparisons with preserved original generator; no new dynamical premise",
+  "date": "2026-10-13",
+  "sourceGitBlobs": {
+    "engine": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "t2": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+    "historical": "d2d40f87d59a5a94d2df71a69543e521f6ad807f"
+  },
+  "equivalence": "same complete node bit/depth state and all live/dead/fired/eligible higher-order occurrence states, holding preexisting node and edge identities fixed while tagging the two newborn identities by their firing parent event occurrence rather than execution position; no incidence deduplication",
+  "scope": {
+    "ks": [
+      3,
+      4
+    ],
+    "horizon": 129,
+    "selectedPrefixes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "maxPairsPerOverlapBucket": 7,
+    "schedulers": [
+      "fifo",
+      "random"
+    ],
+    "modes": [
+      "active",
+      "fixed"
+    ],
+    "goldValidation": "original source snapshots vs independent local two-step exact reducer at all sampled adjacent stored checkpoints",
+    "physicalClock": false,
+    "coordinates": false,
+    "physicalDimension": false,
+    "entropyForce": false
+  },
+  "totals": {
+    "nativeHistories": 16,
+    "sourceGoldTransitions": 208,
+    "goldMismatches": 0,
+    "sourceCheckpoints": 304,
+    "statesWithTwoEligible": 148,
+    "concurrentPairsExamined": 2117,
+    "commutingSquares": 1612,
+    "disablingConflicts": 484,
+    "bothEnabledNoncommuting": 21,
+    "disjointPairs": 416,
+    "disjointCommute": 416,
+    "disjointNoncommute": 0,
+    "overlapPairs": 1701,
+    "overlapCommute": 1196,
+    "overlapConflict": 484,
+    "overlapNoncommute": 21,
+    "readOnlyOverlapCommute": 878,
+    "readOnlyOverlapConflict": 0,
+    "casesWithoutEligiblePair": 12,
+    "syntheticBaselineRewrites": 2064
+  },
+  "examples": {
+    "commuteOverlap": [
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 1,
+        "originA": "birth1:0,1,3",
+        "originB": "birth1:0,2,3",
+        "overlap": 2,
+        "overlapIds": [
+          0,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 1,
+        "originA": "birth1:0,1,3",
+        "originB": "birth1:1,2,3",
+        "overlap": 2,
+        "overlapIds": [
+          1,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 1,
+        "originA": "birth1:0,2,3",
+        "originB": "birth1:1,2,3",
+        "overlap": 2,
+        "overlapIds": [
+          2,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:0,2,3",
+        "originB": "birth1:1,2,3",
+        "overlap": 2,
+        "overlapIds": [
+          2,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:0,2,3",
+        "originB": "birth2:0,3,4",
+        "overlap": 2,
+        "overlapIds": [
+          0,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:1,2,3",
+        "originB": "birth2:1,3,4",
+        "overlap": 2,
+        "overlapIds": [
+          1,
+          3
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth2:0,1,4",
+        "originB": "birth2:0,3,4",
+        "overlap": 2,
+        "overlapIds": [
+          0,
+          4
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth2:0,1,4",
+        "originB": "birth2:1,3,4",
+        "overlap": 2,
+        "overlapIds": [
+          1,
+          4
+        ],
+        "sharedWrites": 2,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "conflictOverlap": [
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:0,2,3",
+        "originB": "birth2:0,1,4",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:0,2,3",
+        "originB": "birth2:1,3,4",
+        "overlap": 1,
+        "overlapIds": [
+          3
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:1,2,3",
+        "originB": "birth2:0,1,4",
+        "overlap": 1,
+        "overlapIds": [
+          1
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 2,
+        "originA": "birth1:1,2,3",
+        "originB": "birth2:0,3,4",
+        "overlap": 1,
+        "overlapIds": [
+          3
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          1
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 3,
+        "originA": "birth1:1,2,3",
+        "originB": "birth2:0,3,4",
+        "overlap": 1,
+        "overlapIds": [
+          3
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": true,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 3,
+        "originA": "birth1:1,2,3",
+        "originB": "birth3:0,3,5",
+        "overlap": 1,
+        "overlapIds": [
+          3
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": true,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 4,
+        "originA": "birth2:0,1,4",
+        "originB": "birth3:0,2,5",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 4,
+        "originA": "birth2:0,1,4",
+        "originB": "birth4:1,2,6",
+        "overlap": 1,
+        "overlapIds": [
+          1
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": false,
+        "availableEafterF": false,
+        "status": "coenabled-but-disabling-conflict",
+        "nonCommuteReason": "At least one originally enabled event is disabled by firing the other first",
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": null,
+          "reverseNewbornBits": null
+        }
+      }
+    ],
+    "noncommuteOverlap": [
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 16,
+        "originA": "birth10:0,2,7,13",
+        "originB": "birth9:0,2,7,12",
+        "overlap": 3,
+        "overlapIds": [
+          0,
+          2,
+          7
+        ],
+        "sharedWrites": 3,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 4,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth15:0,1,10,18",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth15:0,5,10,18",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth16:0,1,10,19",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth16:0,6,10,19",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth17:0,5,10,20",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth17:0,6,10,20",
+        "overlap": 1,
+        "overlapIds": [
+          0
+        ],
+        "sharedWrites": 1,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 0,
+        "firstInputWeights": [
+          3,
+          2
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 32,
+        "originA": "birth12:0,2,9,15",
+        "originB": "birth14:0,2,9,17",
+        "overlap": 3,
+        "overlapIds": [
+          0,
+          2,
+          9
+        ],
+        "sharedWrites": 3,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "two-orders-enabled-but-different-complete-states",
+        "nonCommuteReason": "Different labeled fixed-old-node/canonically newborn-tagged node and/or full hyperedge occurrence state",
+        "oneStepAChanged": 4,
+        "oneStepBChanged": 4,
+        "firstInputWeights": [
+          3,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "commuteDisjoint": [
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth2:1,3,4",
+        "originB": "birth7:0,5,9",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth2:1,3,4",
+        "originB": "birth8:0,5,10",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth3:2,3,5",
+        "originB": "birth5:0,4,7",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth3:2,3,5",
+        "originB": "birth6:0,4,8",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth4:1,2,6",
+        "originB": "birth5:0,4,7",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth4:1,2,6",
+        "originB": "birth6:0,4,8",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 8,
+        "originA": "birth4:1,2,6",
+        "originB": "birth7:0,5,9",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "mode": "active",
+        "scheduler": "fifo",
+        "t": 16,
+        "originA": "birth10:1,6,12",
+        "originB": "birth11:2,3,13",
+        "overlap": 0,
+        "overlapIds": [],
+        "sharedWrites": 0,
+        "availableFafterE": true,
+        "availableEafterF": true,
+        "status": "commuting-square",
+        "nonCommuteReason": null,
+        "oneStepAChanged": 3,
+        "oneStepBChanged": 3,
+        "firstInputWeights": [
+          1,
+          3
+        ],
+        "firstNewbornBits": [
+          1,
+          1
+        ],
+        "ifBoth": {
+          "forwardNewbornBits": [
+            1,
+            1
+          ],
+          "reverseNewbornBits": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "noncommuteDisjoint": []
+  },
+  "perCase": [
+    {
+      "k": 3,
+      "ruleId": 4,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 11,
+        "ranks": 1,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 121,
+      "stats": {
+        "commuting-square": 77,
+        "coenabled-but-disabling-conflict": 44
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 5,
+          "pool": 5,
+          "pairs": 10,
+          "overlapBins": [
+            0,
+            4,
+            6,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 4,
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 2,
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 3
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 9,
+          "pool": 9,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 11,
+          "pool": 11,
+          "pairs": 18,
+          "overlapBins": [
+            7,
+            7,
+            4,
+            0
+          ],
+          "classified": {
+            "commuting-square": 11,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 21,
+          "pool": 21,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 68,
+          "pool": 58,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 143,
+          "pool": 69,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 4,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 11,
+        "ranks": 1,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 27,
+      "stats": {
+        "commuting-square": 27
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 4,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 11,
+        "ranks": 1,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 124,
+      "stats": {
+        "commuting-square": 70,
+        "coenabled-but-disabling-conflict": 54
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 5,
+          "pool": 5,
+          "pairs": 10,
+          "overlapBins": [
+            0,
+            4,
+            6,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 4,
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 2,
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 3
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 9,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 16,
+          "pool": 16,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 43,
+          "pool": 43,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 12,
+            "coenabled-but-disabling-conflict": 9
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 75,
+          "pool": 60,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 13,
+            "coenabled-but-disabling-conflict": 8
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 119,
+          "pool": 67,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 12,
+            "coenabled-but-disabling-conflict": 9
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 4,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 11,
+        "ranks": 1,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 27,
+      "stats": {
+        "commuting-square": 27
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "kind": "overlap",
+      "scheduler": "fifo",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 13,
+        "ranks": 3,
+        "mode": "zero",
+        "keep": true
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 149,
+      "stats": {
+        "commuting-square": 78,
+        "coenabled-but-disabling-conflict": 71
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 1,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 8,
+          "pool": 8,
+          "pairs": 16,
+          "overlapBins": [
+            2,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 7,
+            "coenabled-but-disabling-conflict": 9
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 5,
+          "pool": 5,
+          "pairs": 10,
+          "overlapBins": [
+            0,
+            5,
+            5,
+            0
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 5,
+            "commuting-square": 5
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 8,
+          "pool": 8,
+          "pairs": 16,
+          "overlapBins": [
+            2,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 4,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 9,
+          "pool": 9,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 23,
+          "pool": 23,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 46,
+          "pool": 46,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 9,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 128,
+          "pool": 69,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 9,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 122,
+          "pool": 67,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "kind": "overlap",
+      "scheduler": "fifo",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 13,
+        "ranks": 3,
+        "mode": "zero",
+        "keep": true
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 10,
+      "stats": {
+        "commuting-square": 10
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 1,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "kind": "overlap",
+      "scheduler": "random",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 13,
+        "ranks": 3,
+        "mode": "zero",
+        "keep": true
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 146,
+      "stats": {
+        "commuting-square": 85,
+        "coenabled-but-disabling-conflict": 61
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 1,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 8,
+          "pool": 8,
+          "pairs": 16,
+          "overlapBins": [
+            2,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 7,
+            "coenabled-but-disabling-conflict": 9
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 5,
+          "pool": 5,
+          "pairs": 10,
+          "overlapBins": [
+            1,
+            6,
+            3,
+            0
+          ],
+          "classified": {
+            "commuting-square": 4,
+            "coenabled-but-disabling-conflict": 6
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 6,
+          "pool": 6,
+          "pairs": 13,
+          "overlapBins": [
+            2,
+            7,
+            4,
+            0
+          ],
+          "classified": {
+            "commuting-square": 6,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 18,
+          "pool": 18,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 51,
+          "pool": 51,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 13,
+            "coenabled-but-disabling-conflict": 8
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 67,
+          "pool": 58,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 149,
+          "pool": 69,
+          "pairs": 21,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            0
+          ],
+          "classified": {
+            "commuting-square": 11,
+            "coenabled-but-disabling-conflict": 10
+          }
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "kind": "overlap",
+      "scheduler": "random",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 13,
+        "ranks": 3,
+        "mode": "zero",
+        "keep": true
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 10,
+      "stats": {
+        "commuting-square": 10
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 1,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 2,
+          "pool": 2,
+          "pairs": 1,
+          "overlapBins": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "classified": {
+            "commuting-square": 1
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 27,
+        "ranks": 2,
+        "mode": "zero",
+        "keep": false
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 189,
+      "stats": {
+        "coenabled-but-disabling-conflict": 82,
+        "commuting-square": 107
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 3,
+            "coenabled-but-disabling-conflict": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 10,
+          "pool": 10,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 13,
+            "commuting-square": 7
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 9,
+          "pool": 9,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 11,
+            "commuting-square": 9
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 19,
+          "pool": 19,
+          "pairs": 25,
+          "overlapBins": [
+            4,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 13,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 49,
+          "pool": 49,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 15,
+            "coenabled-but-disabling-conflict": 13
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 64,
+          "pool": 58,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 17,
+            "coenabled-but-disabling-conflict": 11
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 122,
+          "pool": 67,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 20,
+            "coenabled-but-disabling-conflict": 8
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 232,
+          "pool": 73,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 23,
+            "coenabled-but-disabling-conflict": 5
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 27,
+        "ranks": 2,
+        "mode": "zero",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 201,
+      "stats": {
+        "commuting-square": 201
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 7,
+          "pool": 7,
+          "pairs": 14,
+          "overlapBins": [
+            0,
+            0,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 14
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 10,
+          "pool": 10,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 20
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 21,
+          "overlapBins": [
+            0,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 21
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 25,
+          "pool": 25,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 49,
+          "pool": 49,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 97,
+          "pool": 65,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 193,
+          "pool": 72,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 385,
+          "pool": 76,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 27,
+        "ranks": 2,
+        "mode": "zero",
+        "keep": false
+      },
+      "mutation": 1,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 177,
+      "stats": {
+        "coenabled-but-disabling-conflict": 77,
+        "commuting-square": 100
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 3,
+            "coenabled-but-disabling-conflict": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 23,
+          "overlapBins": [
+            2,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 9,
+            "coenabled-but-disabling-conflict": 14
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 11,
+          "pool": 11,
+          "pairs": 27,
+          "overlapBins": [
+            6,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 18,
+            "coenabled-but-disabling-conflict": 9
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 30,
+          "pool": 30,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 17,
+            "coenabled-but-disabling-conflict": 11
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 48,
+          "pool": 48,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 17,
+            "coenabled-but-disabling-conflict": 11
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 135,
+          "pool": 69,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 17,
+            "coenabled-but-disabling-conflict": 11
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 246,
+          "pool": 73,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 16,
+            "coenabled-but-disabling-conflict": 12
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 27,
+        "ranks": 2,
+        "mode": "zero",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 200,
+      "stats": {
+        "commuting-square": 200
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 7,
+          "pool": 7,
+          "pairs": 14,
+          "overlapBins": [
+            0,
+            0,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 14
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 10,
+          "pool": 10,
+          "pairs": 18,
+          "overlapBins": [
+            0,
+            4,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 18
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 22,
+          "overlapBins": [
+            1,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 22
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 25,
+          "pool": 25,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 49,
+          "pool": 49,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 97,
+          "pool": 65,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 193,
+          "pool": 72,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 385,
+          "pool": 76,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 28,
+        "ranks": 7,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 2,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 175,
+      "stats": {
+        "coenabled-but-disabling-conflict": 40,
+        "commuting-square": 118,
+        "two-orders-enabled-but-different-complete-states": 17
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 5,
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 6,
+          "pool": 6,
+          "pairs": 13,
+          "overlapBins": [
+            0,
+            0,
+            6,
+            7
+          ],
+          "classified": {
+            "commuting-square": 6,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 9,
+          "pool": 9,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 8,
+            "coenabled-but-disabling-conflict": 12
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 12,
+          "pool": 12,
+          "pairs": 21,
+          "overlapBins": [
+            0,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 21
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 36,
+          "pool": 36,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 19,
+            "coenabled-but-disabling-conflict": 8,
+            "two-orders-enabled-but-different-complete-states": 1
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 75,
+          "pool": 60,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 14,
+            "coenabled-but-disabling-conflict": 3,
+            "two-orders-enabled-but-different-complete-states": 11
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 135,
+          "pool": 69,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 258,
+          "pool": 74,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 18,
+            "two-orders-enabled-but-different-complete-states": 5,
+            "coenabled-but-disabling-conflict": 5
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "kind": "single",
+      "scheduler": "fifo",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 28,
+        "ranks": 7,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 201,
+      "stats": {
+        "commuting-square": 201
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 7,
+          "pool": 7,
+          "pairs": 14,
+          "overlapBins": [
+            0,
+            0,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 14
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 10,
+          "pool": 10,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 20
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 21,
+          "overlapBins": [
+            0,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 21
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 25,
+          "pool": 25,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 49,
+          "pool": 49,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 97,
+          "pool": 65,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 193,
+          "pool": 72,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 385,
+          "pool": 76,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "active",
+      "selectedRule": {
+        "weights": 28,
+        "ranks": 7,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 2,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 157,
+      "stats": {
+        "coenabled-but-disabling-conflict": 55,
+        "commuting-square": 98,
+        "two-orders-enabled-but-different-complete-states": 4
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 5,
+            "commuting-square": 1
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 6,
+          "pool": 6,
+          "pairs": 13,
+          "overlapBins": [
+            0,
+            0,
+            6,
+            7
+          ],
+          "classified": {
+            "commuting-square": 6,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 3,
+          "pool": 3,
+          "pairs": 3,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "classified": {
+            "commuting-square": 3
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 9,
+          "pool": 9,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "coenabled-but-disabling-conflict": 12,
+            "commuting-square": 8
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 15,
+          "pool": 15,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 27,
+            "coenabled-but-disabling-conflict": 1
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 44,
+          "pool": 44,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 18,
+            "coenabled-but-disabling-conflict": 10
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 77,
+          "pool": 61,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 21,
+            "coenabled-but-disabling-conflict": 7
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 112,
+          "pool": 67,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 11,
+            "coenabled-but-disabling-conflict": 13,
+            "two-orders-enabled-but-different-complete-states": 4
+          }
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "kind": "single",
+      "scheduler": "random",
+      "mutationMode": "fixed",
+      "selectedRule": {
+        "weights": 28,
+        "ranks": 7,
+        "mode": "one",
+        "keep": false
+      },
+      "mutation": 0,
+      "horizon": 129,
+      "goldChecks": 13,
+      "pairs": 203,
+      "stats": {
+        "commuting-square": 203
+      },
+      "byCheckpoint": [
+        {
+          "t": 0,
+          "eligible": 1,
+          "pool": 1,
+          "pairs": 0,
+          "overlapBins": [],
+          "classified": {}
+        },
+        {
+          "t": 1,
+          "eligible": 4,
+          "pool": 4,
+          "pairs": 6,
+          "overlapBins": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "classified": {
+            "commuting-square": 6
+          }
+        },
+        {
+          "t": 2,
+          "eligible": 7,
+          "pool": 7,
+          "pairs": 14,
+          "overlapBins": [
+            0,
+            0,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 14
+          }
+        },
+        {
+          "t": 3,
+          "eligible": 10,
+          "pool": 10,
+          "pairs": 20,
+          "overlapBins": [
+            0,
+            6,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 20
+          }
+        },
+        {
+          "t": 4,
+          "eligible": 13,
+          "pool": 13,
+          "pairs": 23,
+          "overlapBins": [
+            2,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 23
+          }
+        },
+        {
+          "t": 8,
+          "eligible": 25,
+          "pool": 25,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 16,
+          "eligible": 49,
+          "pool": 49,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 32,
+          "eligible": 97,
+          "pool": 65,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 64,
+          "eligible": 193,
+          "pool": 72,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        },
+        {
+          "t": 128,
+          "eligible": 385,
+          "pool": 76,
+          "pairs": 28,
+          "overlapBins": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "classified": {
+            "commuting-square": 28
+          }
+        }
+      ]
+    }
+  ],
+  "centralDispositions": [
+    "A commuting square is an operational *independence witness* for this local two-step intervention and declared full-state observer, not a universal causality theorem.",
+    "A coenabled pair may be incompatible: if one disables the other, represent as conflict, not automatically one event temporally preceding the other.",
+    "Two operations can remain enabled both ways yet have different complete successor states; do not collapse this into a simple read/write edge or birth ancestry.",
+    "Overlapping participants alone never certify dependence: read-only overlaps can commute, contradicting unconditional conservative-touch ordering.",
+    "Disjoint participant pairs are a necessary positive locality control; every discovered violation is a potential source-fidelity fault or hidden global interaction.",
+    "This experiment cannot yet define a unique global physically correct event partial order or guarantee confluence for arbitrary futures."
+  ],
+  "limitations": [
+    "Small sampled concurrently-enabled rank-k pairs from the unchanged finite source histories; not exhaustive states, all rules, or all horizons.",
+    "Source 8000-rewrite historical evidence and all earlier T1–T3 findings remain untouched.",
+    "The reducer reimplements source local rules independently and must pass source-backed exact one-step full-state comparison before accepting any square.",
+    "The choice of fixed preexisting labels / event-born newborn labels is declared equivalence, not a unique canonical representation across arbitrary histories.",
+    "Scheduler law, real quantum processes, physical spacetime or dark-sector explanations remain unproved."
+  ],
+  "execution": {
+    "actual": true,
+    "host": "local V8 isolate; source backed exact 1-step gold checks",
+    "elapsedMilliseconds": 2239,
+    "inputBlobs": {
+      "sourceCode": "f41e1449a5ddc4af11a3d5def7beab8cf6d7742d",
+      "t2": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+      "engine": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08"
+    }
+  }
+}
