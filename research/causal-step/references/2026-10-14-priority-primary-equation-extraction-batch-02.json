@@ -1,0 +1,179 @@
+{
+  "recorded": "2026-10-14",
+  "scope": "Follow-up primary-source technical extraction from the first citation-snowball tranche",
+  "status": "FOUR additional original math source records, exact named definitions/equation locators only, NOT full proofs/bisimulations/source-native simulation",
+  "records": [
+    {
+      "id": "MECH-07",
+      "corpusSourceRef": "SNOW-06",
+      "title": "Dynamical systems on hypergraphs",
+      "author": "Timoteo Carletti, Duccio Fanelli, Sara Nicoletti",
+      "year": 2020,
+      "version": "Original 2020 published Journal of Physics: Complexity 1 035006, 16 pp",
+      "doi": "10.1088/2632-072X/aba8e1",
+      "primaryURL": "https://flore.unifi.it/retrieve/e398c37f-ed8e-179a-e053-3705fe0a4cff/Carletti_2020_J._Phys._Complex._1_035006.pdf",
+      "sourceInspection": "Original publisher open PDF, page 3 (zero-index page 2) Eq(1)–(3), full screenshot inspected.",
+      "typedObjects": [
+        "n ordinary hypergraph vertices",
+        "m unordered hyperedge incidence columns e_iα",
+        "C=e^T e hyperedge-intersection matrix",
+        "K^H size-weighted co-occurrence matrix",
+        "L^H=D-K^H matrix Laplacian",
+        "continuous oscillator and reaction-diffusion states"
+      ],
+      "equations": [
+        {
+          "location": "PDF page 3 Eq.(1)",
+          "expression": "e_{iα}=1 when v_i∈E_α, else 0; ordinary projection A=e e^T",
+          "mechanical": "Native occurrence multiplicity appears in incidence edge-index rather than physical time."
+        },
+        {
+          "location": "PDF page 3 Eq.(2)",
+          "expression": "K^H_ij=Σ_α(C_αα−1)e_iα e_jα for i≠j; zero diagonal",
+          "mechanical": "Higher-order edge size enters weight for each shared source pair; even though full hyperedge is present, weighted pairwise matrix can encode this linear operation."
+        },
+        {
+          "location": "PDF page 3 Eq.(3)",
+          "expression": "L^H=D−K^H, D_ii=Σ_{j≠i}K^H_ij",
+          "mechanical": "Linear diffusion/coupling described by effective weighted graph Laplacian."
+        }
+      ],
+      "strongPositive": "The projection into K^H can preserve this source's selected linear Laplacian-coupled dynamics; demonstrates some physically relevant high-order geometry's response may be compressed.",
+      "strongNegative": "The authors explicitly remark dynamics through this matrix are equivalent to dynamics on its corresponding weighted pairwise network; this does not prove full k-ary rewrite/event identity, AND-type enabling, actual selected hyperedge, or T4 three-event coherence is preserved.",
+      "assumptions": [
+        "Fixed incidence graph or hypergraph during the dynamics",
+        "continuous time and real-variable Laplacian-coupled reaction/oscillator equations",
+        "chosen edge-size weighting C_αα−1",
+        "no premetric graph birth or physical spacetime derived"
+      ],
+      "relevance": "Direct null benchmark for distinguishing reducible weighted projection from genuinely irreducible native transition mechanics.",
+      "verification": "original_page_equations_visually_verified; external master stability derivations and simulated dynamics not replicated",
+      "mappingStatus": "not_attempted"
+    },
+    {
+      "id": "MECH-08",
+      "corpusSourceRef": "SNOW-01",
+      "title": "Compositionality of Rewriting Rules with Conditions",
+      "author": "Nicolas Behr and Jean Krivine",
+      "year": 2021,
+      "version": "Compositionality 3 article 2 (2021), original arXiv 1904.09322v2, 51 pp",
+      "doi": "10.32408/compositionality-3-2",
+      "primaryURL": "https://arxiv.org/pdf/1904.09322",
+      "sourceInspection": "Introduction pp1–5; mathematical pages 18,29 (PDF zero-index page 17 and 29) original source screenshot; Eq29 shift and Thm6 Eq72–73.",
+      "typedObjects": [
+        "category of graphs / typed objects C",
+        "M-adhesive mono matches",
+        "linear rule r: output <- preserved interface -> input",
+        "guard/application condition on input",
+        "shift/transport of guards",
+        "admissible triple rule-overlap matches"
+      ],
+      "equations": [
+        {
+          "location": "PDF page 18 Eq.(29)",
+          "expression": "Shift(g, Shift(f,c_X)) = Shift(g∘f, c_X)",
+          "mechanical": "Application condition transformation composes coherently under further subgraph embeddings; guards are load-bearing."
+        },
+        {
+          "location": "PDF page 30 Theorem 6 Eqs.(72)–(73)",
+          "expression": "MA={(μ21, μ3(21)) admissible}; MB={(μ32, μ(32)1) admissible}; MA≅MB, conditional triple composites are isomorphic and their transported guards agree",
+          "mechanical": "Association of three *valid matched guarded rules* yields matching output; does not assert every triple of initially pairwise commuting events is valid."
+        }
+      ],
+      "strongPositive": "Closest discovered abstract candidate for keeping actual Causal Step bit-dependent Hamming eligibility as a transported application guard across sequences.",
+      "strongNegative": "Theorem assumes M-adhesive categorical source and separately verified match admissibility and Shift/Trans compatibility; no current proof native selected rule/hyperedge duplicate occurrence/source bit guard admits a faithful encoding. The T4 660 triple obstructions are not counterexamples to a theorem whose triple matches must be admissible.",
+      "assumptions": [
+        "typed rule objects and monic matches",
+        "M-adhesivity and M-effective unions/extra categorical conditions",
+        "specific DPO or SqPO rule composition semantics",
+        "application-condition shifting and transporting must be defined"
+      ],
+      "relevance": "A law-level bridge for state-sensitive guard composition, not just a graph visual analogy.",
+      "verification": "exact original Theorem 6 and shift equations inspected via PDF page screenshot; theorem proof not rederived",
+      "mappingStatus": "not_attempted"
+    },
+    {
+      "id": "MECH-09",
+      "corpusSourceRef": "SNOW-05",
+      "title": "Combinatorial Conversion and Moment Bisimulation for Stochastic Rewriting Systems",
+      "author": "Nicolas Behr, Vincent Danos, Ilias Garnier",
+      "year": 2020,
+      "version": "Logical Methods in Computer Science 16(3), source arXiv 1904.07313 article rendering 45 PDF pp",
+      "arxiv": "1904.07313",
+      "doi": "10.23638/LMCS-16(3:15)2020",
+      "primaryURL": "https://arxiv.org/pdf/1904.07313",
+      "sourceInspection": "Source PDF page 24 (zero-index 23) visually checked Definition 5.1, moment-bisimulation equality and downstream discussion.",
+      "typedObjects": [
+        "finitary graph rewrite systems as stochastic processes",
+        "Markov generator H_i",
+        "observable sets O_i with closure properties",
+        "exponential moment generating function EMGF",
+        "bijection between observable families"
+      ],
+      "equations": [
+        {
+          "location": "PDF page 24, Definition 5.1 moment bisimulation",
+          "expression": "(H1,O1)≈_MB(H2,O2) when a bijection f:O1→O2 makes the designated observable exponential moment generating equations agree (MB)",
+          "mechanical": "Different source microscopic rewriting can agree on selected entire moment evolution, without requiring microstate or all event-law identity."
+        },
+        {
+          "location": "PDF page 24, immediately after Def.5.1",
+          "expression": "Matching initial EMGFs and equal EMGF derivative equations implies M1(t;λ)=M2(t;λ) for all t≥0 within solution domain",
+          "mechanical": "Explicit scope-defined *weak observational equivalence*, not full step-by-step bisimulation."
+        }
+      ],
+      "strongPositive": "A rigorous candidate for comparing the evolution of selected observables between source-native rewrite histories and chemical processes, if a stochastic model is separately declared.",
+      "strongNegative": "Moment-bisimilar processes need not have identical microscopic state/event transitions; *exactly our information-loss caveat*. Existing Causal Step source has no assumed continuous-time Markov rate or physical time, so CTMC generator must not be declared primitive.",
+      "assumptions": [
+        "specified CTMC rates/time parameter",
+        "finitary/extensive/adhesive rewrite source categories",
+        "polynomially jump-closed sets of observables",
+        "stochastic state initial conditions"
+      ],
+      "relevance": "Precise way to compare processes at the level of observables while explicitly not claiming ontological microequivalence.",
+      "verification": "definition and consequences read in original source PDF screenshot; exact moment conversion proof not replicated",
+      "mappingStatus": "not_attempted"
+    },
+    {
+      "id": "MECH-10",
+      "corpusSourceRef": "SNOW-07",
+      "title": "Network Dynamics with Higher-Order Interactions: Coupled Cell Hypernetworks for Identical Cells and Synchrony",
+      "author": "Manuela Aguiar, Christian Bick, Ana Dias",
+      "year": 2023,
+      "version": "Published Nonlinearity 36(9), 4641–4673 (2023), original arXiv 2201.09379",
+      "doi": "10.1088/1361-6544/ace39f",
+      "primaryURL": "https://arxiv.org/pdf/2201.09379",
+      "sourceInspection": "Original arXiv PDF zero-index pp3 and17 inspected visually for Figure 1 and Definition 4.1.",
+      "typedObjects": [
+        "directed weighted hypergraph with tail/head multiset",
+        "hyperedge incidence digraph nodes and edge-objects",
+        "identical cellular ODE states",
+        "edge input equivalence/robust synchronization partition"
+      ],
+      "equations": [
+        {
+          "location": "PDF page 18 Definition 4.1",
+          "expression": "c~_I c' if B(c)=B(c'), and for all incoming hyperedge cardinalities k, Σ_{e∈BS_k(c)} w_e = Σ_{e∈BS_k(c')} w_e",
+          "mechanical": "Input equivalence is typed by true higher-order tail rank and weight; different from merely matching degree in the pairwise shadow."
+        }
+      ],
+      "strongPositive": "Finite typed incidence graph plus original hyperedge-index nodes can carry higher-order cardinality data and a robust synchrony-invariant observer. Useful exact structural test of a faithfully typed bipartite representation.",
+      "strongNegative": "The paper uses directed hypergraphs, continuous identical-cell dynamics and exogenously specified coupling. Native k-ary hyperedges unordered and fired asynchronously with stateful bits; synchrony pattern alone doesn't recover legal future rewrite histories.",
+      "assumptions": [
+        "directed weighted tail/head relations",
+        "identical cell ODE functions and time",
+        "synchrony/invariant partition condition",
+        "edge cardinality/weights supplied"
+      ],
+      "relevance": "Partial observer preservation and synchrony structural invariants; distinct from native event causation and from merely drawing a bipartite graph.",
+      "verification": "original Definition 4.1 inspected in page screenshot; external synchrony theorem not replicated",
+      "mappingStatus": "not_attempted"
+    }
+  ],
+  "sourceScreened": [
+    "arxiv original PDFs screenshots",
+    "journal and institutional records",
+    "source author's references"
+  ],
+  "dataClassification": "source mathematical knowledge; not core physics assumption"
+}
