@@ -20,6 +20,19 @@ const popcount=x=>{let n=0;while(x){x&=x-1;n++;}return n};
 const triples=comb([0,1,2,3,4],3).map(t=>t.reduce((v,i)=>v|(1<<i),0));
 const trikey=x=>[0,1,2,3,4].filter(i=>x&(1<<i)).map(i=>'abcde'[i]).join('');
 const combinations=comb(triples,3);
+const sourceLabelPermutations=(()=>{
+ const loop=arr=>arr.length?arr.flatMap((x,i)=>loop(arr.filter((_,j)=>j!==i)).map(p=>[x,...p])):[[]];
+ return loop([0,1,2,3,4]);
+})();
+function canonicalUnlabeledHypergraph(edges){
+ let best=null;
+ for(const P of sourceLabelPermutations){
+  const e=edges.map(mask=>[0,1,2,3,4].reduce((bits,i)=>bits|((mask&(1<<i))?(1<<P[i]):0),0))
+   .sort((a,b)=>a-b).join(',');
+  if(best===null||e<best)best=e;
+ }
+ return best;
+}
 function enabling(model,mask){return model.some(edge=>(edge&mask)===edge)?1:0}
 function shadow(model){return model.reduce((a,x)=>a|x,0)}
 function incidence(model){return Array.from({length:5},(_,i)=>model.map(e=>(e>>i)&1))}
@@ -93,15 +106,11 @@ function analyzeProjection(p,q,name){
  const pp=keys.map(k=>P.get(k)||0),qq=keys.map(k=>Q.get(k)||0);
  normalize(pp);normalize(qq);
  const relative=kl(pp,qq),t=tv(pp,qq);
- const original=kl(p,q),retained=relative/original;
+ const original=kl(p,q),retained=kl(p,q)>EPS?relative/original:null;
  // Classical reference-dependent recovery R_Q(x|z) = Q(x) / Q_Z(z)
  // reconstructs Q by construction. It recovers P iff both
  // source conditionals inside every deterministic observer fiber agree.
  let reconstructionP=Array(64).fill(0),reconstructionQ=Array(64).fill(0);
- const keyOf=x=>{
-  const e=Array(64).fill(0);e[x]=1;
-  const o=observe(e,name);return [...o.entries()].find(([,mass])=>mass>0)[0];
- };
  // observe() intentionally normalizes only distributions, so use
  // direct key reconstruction from basis-independent deterministic logic.
  const key=(m,y)=>name==="full"?String(m*2+y):
@@ -164,7 +173,7 @@ function recoveryTest(w){
 function catalog(){
  const models=combinations.map((e,i)=>({
   id:i,edges:e,shadow:shadow(e),
-  gramPolynomial:symmetricPoly(e),
+  gramPolynomial:symmetricPoly(e),isomorphismOrbit:canonicalUnlabeledHypergraph(e),
   truthVector:Array.from({length:32},(_,m)=>enabling(e,m)).join(''),
   outcomes:Array.from({length:32},(_,m)=>enabling(e,m))
  }));
@@ -173,6 +182,7 @@ function catalog(){
   sameFullOrderButDifferentResponse:0,
   sameIncidenceGramPolyButDifferentResponse:0,
   sameFullOrderSameGramPolyButDifferentResponse:0,
+  sameFullOrderSameGramPolyDifferentUnlabeledIsomorphismTypes:0,
   minTVWithinEqualFullOrder:1,maxTVWithinEqualFullOrder:0,
   sumTVWithinEqualFullOrder:0,unlabeledCommonSupportGroups:{}};
  const polyCollisions=[],incidenceCollisions=[];
@@ -192,6 +202,8 @@ function catalog(){
    pairStats.sameIncidenceGramPolyButDifferentResponse++;
    if(a.shadow===b.shadow){
     pairStats.sameFullOrderSameGramPolyButDifferentResponse++;
+    if(a.isomorphismOrbit!==b.isomorphismOrbit)
+      pairStats.sameFullOrderSameGramPolyDifferentUnlabeledIsomorphismTypes++;
     if(polyCollisions.length<3)polyCollisions.push({modelIds:[a.id,b.id],
      A:a.edges.map(trikey),B:b.edges.map(trikey),commonPoly:a.gramPolynomial,shadow:trikey(a.shadow),diff});
    }
@@ -221,8 +233,20 @@ function catalog(){
   }
  }
  check(Number.isFinite(best)&&best<=9,'nine triplet tests must suffice under exactly three distinct events');
- const gramShapes=new Map();
- for(const m of models)gramShapes.set(m.gramPolynomial,(gramShapes.get(m.gramPolynomial)||0)+1);
+ const gramShapes=new Map(),orbitShapes=new Map(),gramToOrbits=new Map();
+ for(const m of models){
+  gramShapes.set(m.gramPolynomial,(gramShapes.get(m.gramPolynomial)||0)+1);
+  if(!orbitShapes.has(m.isomorphismOrbit))orbitShapes.set(m.isomorphismOrbit,{
+    count:0,representativeSourceTriples:m.edges.map(trikey),polynomial:m.gramPolynomial,
+    sourceShadowCardinality:popcount(m.shadow)});
+  orbitShapes.get(m.isomorphismOrbit).count++;
+  if(!gramToOrbits.has(m.gramPolynomial))gramToOrbits.set(m.gramPolynomial,new Set());
+  gramToOrbits.get(m.gramPolynomial).add(m.isomorphismOrbit);
+ }
+ check(orbitShapes.size===4 && gramShapes.size===3 && sourceLabelPermutations.length===120,
+  'unexpected finite isomorphism/spectral classification');
+ check(pairStats.sameFullOrderSameGramPolyDifferentUnlabeledIsomorphismTypes===0,
+  'spectrum plus full shadow unexpectedly fails to separate unlabeled 5-source class');
  return {candidateModelClass:'all exactly 3 distinct rank-4 (3-input AND -> 1 sink OR) occurrence sets chosen from 10 labeled triples of 5 sources',
   numberOfModels:models.length,directedBinaryShadows:group.size,
   fullLabeled32InterventionSignatureUniqueModels:new Set(models.map(m=>m.truthVector)).size,
@@ -232,6 +256,14 @@ function catalog(){
    optimalProbeSubsetsAmong15:numberOptimal,oneMinimumProbeSet:example,
    probeUniverseSize:15,
    proofScope:'exhaustive all 2^15 subsets of the 10 size-3 and 5 size-4 masks; size 0/1/2 always disable, size 5 always enables; exactly three distinct rank-4 occurrences known'},
+  numberOfUnlabeledIsomorphismClasses:orbitShapes.size,
+  sourceRelabelPermutationsCheckedPerModel:sourceLabelPermutations.length,
+  unlabeledOrbitCensus:[...orbitShapes].map(([canonical,r])=>({canonical,count:r.count,
+    representativeSourceTriples:r.representativeSourceTriples,polynomial:r.polynomial,
+    sourceShadowCardinality:r.sourceShadowCardinality})),
+  gramPolynomialsFailToSeparateUnlabeledOrbits:[...gramToOrbits].filter(([,set])=>set.size>1)
+    .map(([polynomial,orbits])=>({polynomial,nonIsomorphicOrbits:[...orbits]})),
+  inThisFiniteClassGramPolynomialPlusShadowDoesSeparateUnlabeledOrbits:true,
   incidenceGramCharacteristicPolynomialClasses:gramShapes.size,
   incidenceGramPolyHistogram:Object.fromEntries([...gramShapes].sort((a,b)=>a[0].localeCompare(b[0]))),
   sameShadowSameGramButDistinctNamedInterventions:polyCollisions};
