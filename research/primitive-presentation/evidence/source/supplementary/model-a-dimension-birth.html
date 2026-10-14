@@ -1,0 +1,669 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Supplementary Model A — Dimension Birth: Exploratory Execution Sketch</title>
+<meta name="author" content="Josh Oshiro" />
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#02060c;color:#dcecff;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  canvas{display:block;width:100vw;height:100vh;background:radial-gradient(circle at 50% 45%,#06101c 0%,#02060c 50%,#00030a 100%)}
+  #hud{position:fixed;left:0;top:0;box-sizing:border-box;max-width:min(820px,calc(100vw - 16px));padding:14px 18px 12px 18px;background:rgba(3,8,18,.80);border:1px solid rgba(130,170,220,.35);border-radius:0 0 14px 0;box-shadow:0 0 34px rgba(80,150,220,.08);white-space:pre;line-height:1.48;font-size:12px;color:#cfe4ff;backdrop-filter:blur(8px)}
+  #title{font-weight:800;letter-spacing:.08em;color:#f1f7ff;font-size:15px;margin-bottom:4px}
+  #author{font-size:11px;color:#9fbde0;margin-bottom:8px;letter-spacing:.03em}
+  #warn{position:fixed;right:12px;bottom:10px;font-size:11px;color:#9fbde0;opacity:.9;text-align:right;line-height:1.35}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud"><div id="title">SUPPLEMENTARY MODEL A — DIMENSION BIRTH</div><div id="author">Author: Josh Oshiro</div></div>
+<div id="warn">Symplectic Euler · pairwise spring forces · damping off by default<br>No origin pull in this toy model; angular momentum is only monitored<br>Motion reflects the chosen topology and update rule, not a physical claim</div>
+<script>
+(() => {
+'use strict';
+
+// Supplementary Model A: Dimension Birth — Exploratory Execution Sketch.
+// Author: Josh Oshiro.
+// This file is included with the primitive-presentation paper as an exploratory
+// execution-layer sketch. It is not evidence for a physical theory, a proof of
+// role minimality, or a privileged model of dimensional structure.
+//
+// Paper-supplement boundary:
+//   - The browser, JavaScript, canvas, colors, controls, and runtime constants
+//     are host apparatus. They make the example runnable and inspectable.
+//   - The isolated object-language witness below uses only the three visible
+//     carriers { (, ∅, ) } to serialize a finite execution snapshot.
+//   - The host evaluator is counted. It is not hidden syntax and it is not
+//     claimed to be written in the three-carrier object language.
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d', { alpha:false });
+const hud = document.getElementById('hud');
+const DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+
+let W=0,H=0;
+function resize(){ W=innerWidth; H=innerHeight; canvas.width=W*DPR; canvas.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0); }
+addEventListener('resize', resize); resize();
+
+// ------------------------------------------------------------
+// Paper witness layer: pure three-carrier object codes
+// ------------------------------------------------------------
+//
+// This is the intentionally small object-language boundary for the paper.
+// The runtime state remains ordinary JavaScript data because JavaScript is the
+// counted parser/evaluator. The serialized witness string returned by d() is
+// restricted to the carrier set { (, ∅, ) }.
+//
+// Encoding convention:
+//   nat(n)  = "(" + n copies of "∅" + ")"
+//   pair    = "(" + left + right + ")"
+//   snapshot = pair(nat(step), pair(nat(dim), pair(nat(nodes), nat(edges))))
+//
+// The exact tuple fields are arbitrary support choices; the important point is
+// that finite determinate state can be carried at the object layer using only
+// the three visible carriers while the evaluator boundary remains explicit.
+
+// One-character names are deliberate in this isolated witness layer. They keep
+// the object-code boundary visually separate from the ordinary JS host.
+const z = '(';
+const p = '∅';
+const r = ')';
+const s = new Set([z, p, r]);
+
+function a(x){
+  for(const i of x){
+    if(!s.has(i)) throw new Error(`object-code mark outside the visible carrier set: ${i}`);
+  }
+}
+function b(x){
+  return z + p.repeat(Math.max(0, Math.floor(x))) + r;
+}
+function c(x, y){
+  const o = z + x + y + r;
+  a(o);
+  return o;
+}
+function d(){
+  const o = c(
+    b(step),
+    c(b(dim), c(b(nodes.length), b(edges.length)))
+  );
+  a(o);
+  return o;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Config — display/runtime parameters
+// Support apparatus only: these values change the display/runtime behavior,
+// not the three-carrier boundary. They are deliberately not treated as primitive
+// carriers in the paper example.
+// ─────────────────────────────────────────────────────────────
+const cfg = {
+  maxNodes: 3000,
+  maxEdges: 9000,
+  targetUnit: 1.0,
+  birthThreshold: 0.20,
+  internalDimCap: 12,
+  mergeDistance: 0.055,
+  qfWidth: 1024,
+  stepsPerFrame: 2,
+  autoView: false,
+  forceRule30: false,
+  paused: false,
+  showDormantAtOrigin: true,
+  dimBirthCooldown: 20,    // min steps between dimension births
+};
+
+// ─────────────────────────────────────────────────────────────
+// Toy dynamics — symplectic Euler with equal-and-opposite pairwise spring forces
+// Damping is 0 by default. Press D to toggle a
+// tiny viscous term for comparison, then D again to clear it.
+// This is the chosen host dynamics for the visual example, not a privileged
+// part of the three-carrier object language.
+// ─────────────────────────────────────────────────────────────
+const PHYSICS = {
+  springK:  0.55,  // spring stiffness
+  mass:     1.0,   // node mass (uniform)
+  dt:       0.06,  // time step  (ω·dt << 1 for stable symplectic Euler)
+  damping:  0.0,   // 0 = no damping; toggle with D key
+};
+
+// ─────────────────────────────────────────────────────────────
+// History ring buffers for energy / |L| plots
+// ─────────────────────────────────────────────────────────────
+const HLEN = 400;
+const eHist  = new Float64Array(HLEN);   // total energy
+const lHist  = new Float64Array(HLEN);   // |angular momentum|
+const keHist = new Float64Array(HLEN);   // kinetic energy
+let histIdx  = 0;
+let E0 = NaN;   // initial total energy (set on first non-zero reading)
+
+// ─────────────────────────────────────────────────────────────
+// State
+// ─────────────────────────────────────────────────────────────
+let step=0, dim=0, lastGrowth=0, sourceIndex=0, qfHits=0;
+let lastDimBirth=-999;
+let yaw=-0.55, pitch=0.38, roll=0.0, zoom=92, viewX=0, viewY=0;
+let dragging=false, lastMouseX=0, lastMouseY=0, dragMode='rotate';
+let rule30 = new Uint8Array(cfg.qfWidth); rule30[cfg.qfWidth>>1]=1;
+let recent=[];
+let nodes=[], edges=[];
+let nextNodeId=0, nextEdgeId=0;
+let nodeCache = new Map();
+
+function refreshCache(){
+  nodeCache.clear();
+  for(const n of nodes) nodeCache.set(n.id, n);
+}
+function nodeById(id){ return nodeCache.get(id); }
+
+// ─────────────────────────────────────────────────────────────
+// Deterministic sparse input source
+// ─────────────────────────────────────────────────────────────
+function mix32(x){ x|=0; x^=x>>>16; x=Math.imul(x,0x7feb352d); x^=x>>>15; x=Math.imul(x,0x846ca68b); x^=x>>>16; return x>>>0; }
+function qfBit(i,t){ return ((mix32(i ^ Math.imul(t+1,0x9e3779b9) ^ sourceIndex) >>> ((i+t)&31)) & 1); }
+function qfWord(t){ let v=0; for(let i=0;i<32;i++) v=(v<<1)|qfBit((i*37+t*13)&(cfg.qfWidth-1),t); return v>>>0; }
+function rule30Advance(){
+  const next = new Uint8Array(cfg.qfWidth);
+  for(let i=1;i<cfg.qfWidth-1;i++){
+    const l=rule30[i-1], c=rule30[i], r=rule30[i+1];
+    next[i] = (l ^ (c || r)) ? 1 : 0;
+  }
+  rule30 = next;
+}
+function sourceWord(t){
+  if(!cfg.forceRule30) return qfWord(t);
+  rule30Advance();
+  let v=0;
+  const off=(t*17)&(cfg.qfWidth-1);
+  for(let i=0;i<32;i++) v=(v<<1)|rule30[(off+i*13)&(cfg.qfWidth-1)];
+  return v>>>0;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Node / edge constructors — UNCHANGED from v2
+// ─────────────────────────────────────────────────────────────
+function makeNode(parent=null, qf=false){
+  const p = parent ? parent.x.slice() : [];
+  while(p.length < dim) p.push(0);
+  const n = {
+    id: nextNodeId++, born: step, parent: parent?parent.id:null, qf,
+    x: p, v: new Array(Math.max(dim,1)).fill(0),
+    f: new Array(Math.max(dim,1)).fill(0),
+    age: 0, alive: true
+  };
+  nodes.push(n);
+  if(nodes.length > cfg.maxNodes) nodes.shift();
+  return n;
+}
+function makeEdge(a,b,kind='causal'){
+  const e={ id:nextEdgeId++, a:a.id, b:b.id, born:step, kind, target:cfg.targetUnit };
+  edges.push(e);
+  if(edges.length > cfg.maxEdges) edges.shift();
+  return e;
+}
+
+const origin = makeNode(null,false);
+refreshCache();
+
+// ─────────────────────────────────────────────────────────────
+// grow() — UNCHANGED from v2
+// ─────────────────────────────────────────────────────────────
+function grow(){
+  step++;
+  const active = nodes.filter(n=>n.alive);
+  if(active.length===0){
+    nodes=[]; edges=[]; nextNodeId=0; nextEdgeId=0; dim=0;
+    nodes.push(makeNode(null,false));
+    refreshCache();
+    return;
+  }
+  const word = sourceWord(step);
+  const liveCount = active.length;
+  const parent = active[word % liveCount];
+  const births = 1 + ((word>>>7)&3) + (cfg.forceRule30 ? ((word>>>3)&1) : 0) + (((word>>>13)&15)===0 ? 2 : 0);
+  for(let k=0;k<births;k++){
+    const child = makeNode(parent, true);
+    makeEdge(parent, child, 'unit');
+    qfHits++;
+    lastGrowth=step;
+    if(active.length>3 && ((word >>> (k+17)) & 3)===0){
+      const other = active[(word>>>11) % active.length];
+      if(other.id !== parent.id) makeEdge(other, child, 'unit');
+    }
+  }
+  if(active.length>5 && (word&7)===3){
+    const a=active[(word>>>3)%active.length], b=active[(word>>>19)%active.length];
+    if(a.id!==b.id) makeEdge(a,b,'causal');
+  }
+  const minBorn = step - 900;
+  for(const n of nodes){ n.age=step-n.born; if(n.born<minBorn && degree(n.id)<=1 && n.id!==0) n.alive=false; }
+  nodes = nodes.filter(n=>n.alive || n.age<80);
+  const liveIds = new Set(nodes.map(n=>n.id));
+  edges = edges.filter(e=>liveIds.has(e.a)&&liveIds.has(e.b));
+  refreshCache();
+}
+function degree(id){ let d=0; for(const e of edges) if(e.a===id||e.b===id)d++; return d; }
+
+// ─────────────────────────────────────────────────────────────
+// ensureDim() — UNCHANGED from v2
+// ─────────────────────────────────────────────────────────────
+function ensureDim(d){
+  if(d<=dim) return;
+  dim = Math.min(d, cfg.internalDimCap);
+  for(const n of nodes){
+    while(n.x.length<dim){ n.x.push(0); }
+    while(n.v.length<dim){ n.v.push(0); }
+    while(n.f.length<dim){ n.f.push(0); }
+  }
+  recent.unshift(`d${dim}: constraint failure → dimension birth`);
+  recent=recent.slice(0,5);
+}
+
+// ─────────────────────────────────────────────────────────────
+// constraintStats() — UNCHANGED from v2
+// ─────────────────────────────────────────────────────────────
+function constraintStats(){
+  let totalErr=0,maxErr=0,coll=0,count=0;
+  for(const e of edges){
+    const a=nodeById(e.a), b=nodeById(e.b); if(!a||!b) continue;
+    let d2=0; for(let i=0;i<dim;i++){ const dx=(b.x[i]||0)-(a.x[i]||0); d2+=dx*dx; }
+    const d=Math.sqrt(d2); const err=Math.abs(d-e.target);
+    totalErr+=err; maxErr=Math.max(maxErr,err);
+    if(d<cfg.mergeDistance) coll++;
+    count++;
+  }
+  return { mean:count?totalErr/count:0, max:maxErr, coll, count };
+}
+
+// ─────────────────────────────────────────────────────────────
+// birthDimensionIfNeeded() — modified: no XPBD, cooldown added
+// On birth, places collapsed node pair along new axis, v=0.
+// Asymmetric topology can then create torques in this toy model without
+// injecting velocity directly.
+// ─────────────────────────────────────────────────────────────
+function birthDimensionIfNeeded(){
+  const st = constraintStats();
+  if( edges.length &&
+      step - lastDimBirth > cfg.dimBirthCooldown &&
+      (dim===0 || st.mean>cfg.birthThreshold || st.max>0.52) &&
+      dim < cfg.internalDimCap ){
+    lastDimBirth = step;
+    ensureDim(dim+1);
+    const axis = dim-1;
+    for(const e of edges){
+      const a=nodeById(e.a), b=nodeById(e.b); if(!a||!b) continue;
+      let d2=0;
+      for(let i=0;i<dim;i++){ const dx=(b.x[i]||0)-(a.x[i]||0); d2+=dx*dx; }
+      if(Math.sqrt(d2) < cfg.mergeDistance){
+        // Minimum displacement to satisfy unit edge in new dimension.
+        // v = 0: no artificial velocity is injected here.
+        b.x[axis] = (a.x[axis]||0) + cfg.targetUnit;
+        b.v[axis] = 0;
+      }
+    }
+  }
+  return st;
+}
+
+// ─────────────────────────────────────────────────────────────
+// accumulateForces() — NEW
+// Pairwise spring forces: equal and opposite updates on each edge.
+// For each edge: F_a = +fmag*unit, F_b = -fmag*unit.
+// There is no origin pull in this toy model; angular momentum is monitored as
+// an internal diagnostic, not as a physical conservation claim.
+// ─────────────────────────────────────────────────────────────
+function accumulateForces(){
+  // Zero force accumulators
+  for(const n of nodes){
+    if(n.f.length !== dim){
+      n.f = new Array(dim).fill(0);
+    } else {
+      for(let i=0;i<dim;i++) n.f[i]=0;
+    }
+  }
+  // Pairwise spring forces
+  for(const e of edges){
+    const a=nodeById(e.a), b=nodeById(e.b); if(!a||!b) continue;
+    let d2=0;
+    const delta = new Array(dim);
+    for(let i=0;i<dim;i++){
+      const dx=(b.x[i]||0)-(a.x[i]||0); delta[i]=dx; d2+=dx*dx;
+    }
+    const d=Math.sqrt(d2);
+    if(d < 1e-9) continue;   // collapsed: dimension birth handles this
+    const fmag = PHYSICS.springK * (d - e.target);
+    for(let i=0;i<dim;i++){
+      const fi = fmag * (delta[i]/d);
+      a.f[i] += fi;    // force on a (toward b if stretched)
+      b.f[i] -= fi;    // equal and opposite on b
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// integrate() — NEW: Symplectic Euler (kick-drift)
+// Order: v += F/m·dt (kick with current forces), then x += v·dt (drift)
+// Symplectic Euler is chosen for stable qualitative behavior in the sketch.
+// PHYSICS.damping = 0.0. If toggled to >0, a tiny viscous
+// term appears for comparison purposes only.
+// ─────────────────────────────────────────────────────────────
+function integrate(){
+  const invM = 1.0 / PHYSICS.mass;
+  const dt   = PHYSICS.dt;
+  const damp = PHYSICS.damping;
+  for(const n of nodes){
+    for(let i=0;i<dim;i++){
+      // Kick: update velocity from accumulated force
+      n.v[i] = (n.v[i]||0) + (n.f[i]||0) * invM * dt;
+      // Optional viscous damping (0 by default)
+      if(damp > 0) n.v[i] *= (1.0 - damp);
+      // Drift: update position using updated velocity (symplectic!)
+      n.x[i] = (n.x[i]||0) + n.v[i] * dt;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// computeEnergy() — NEW
+// KE = Σ ½m|v|²    PE = Σ_edges ½k(d-d₀)²
+// ─────────────────────────────────────────────────────────────
+function computeEnergy(){
+  if(dim===0) return { KE:0, PE:0, total:0 };
+  let KE=0, PE=0;
+  for(const n of nodes){
+    let v2=0;
+    for(let i=0;i<dim;i++) v2 += (n.v[i]||0)**2;
+    KE += 0.5 * PHYSICS.mass * v2;
+  }
+  for(const e of edges){
+    const a=nodeById(e.a), b=nodeById(e.b); if(!a||!b) continue;
+    let d2=0;
+    for(let i=0;i<dim;i++){ const dx=(b.x[i]||0)-(a.x[i]||0); d2+=dx*dx; }
+    const stretch = Math.sqrt(d2) - e.target;
+    PE += 0.5 * PHYSICS.springK * stretch*stretch;
+  }
+  return { KE, PE, total: KE+PE };
+}
+
+// ─────────────────────────────────────────────────────────────
+// computeAngularMomentum() — NEW
+// L = Σ m (r - r_cm) × v   using first 3 internal dimensions.
+// |L| is a diagnostic for rotation-like motion in the rendered toy model.
+// ─────────────────────────────────────────────────────────────
+function computeAngularMomentum(){
+  if(dim < 2) return { Lx:0, Ly:0, Lz:0, L:0 };
+  let cx=0, cy=0, cz=0, total=0;
+  for(const n of nodes){
+    cx += (n.x[0]||0); cy += (n.x[1]||0); cz += (n.x[2]||0); total++;
+  }
+  if(!total) return { Lx:0, Ly:0, Lz:0, L:0 };
+  cx/=total; cy/=total; cz/=total;
+  let Lx=0, Ly=0, Lz=0;
+  const m = PHYSICS.mass;
+  for(const n of nodes){
+    const rx=(n.x[0]||0)-cx, ry=(n.x[1]||0)-cy, rz=(n.x[2]||0)-cz;
+    const vx=n.v[0]||0,       vy=n.v[1]||0,       vz=n.v[2]||0;
+    // r × v  (cross product)
+    Lx += m*(ry*vz - rz*vy);
+    Ly += m*(rz*vx - rx*vz);
+    Lz += m*(rx*vy - ry*vx);
+  }
+  return { Lx, Ly, Lz, L: Math.sqrt(Lx*Lx + Ly*Ly + Lz*Lz) };
+}
+
+// ─────────────────────────────────────────────────────────────
+// project() — UNCHANGED from v2
+// ─────────────────────────────────────────────────────────────
+function project(n){
+  const x=n.x[0]||0, y=n.x[1]||0, z=n.x[2]||0;
+  const cy=Math.cos(yaw), sy=Math.sin(yaw), cp=Math.cos(pitch), sp=Math.sin(pitch), cr=Math.cos(roll), sr=Math.sin(roll);
+  let X=cy*x + sy*z, Z=-sy*x + cy*z, Y=y;
+  let Y2=cp*Y - sp*Z, Z2=sp*Y + cp*Z; Y=Y2; Z=Z2;
+  let X2=cr*X - sr*Y, Y3=sr*X + cr*Y; X=X2; Y=Y3;
+  const s=zoom/(1+Math.max(-0.75, Z*0.035));
+  return { x:W*0.55+viewX+X*s, y:H*0.50+viewY+Y*s, z:Z, s };
+}
+
+// ─────────────────────────────────────────────────────────────
+// drawPlots() — NEW
+// Bottom-right corner: energy time-series (blue/cyan) + |L| (orange/gold).
+// A flat blue line = energy is conserved. A rising orange = rotation.
+// ─────────────────────────────────────────────────────────────
+function drawPlots(energy, Lobj){
+  const PW=230, PH=70, PX=W-PW-12, GAP=6;
+  const PY1=H-PH*2-GAP*2-10, PY2=H-PH-GAP-10;
+
+  function plotPanel(px,py,label,hist,col,nSamples){
+    ctx.fillStyle='rgba(2,8,18,0.82)';
+    ctx.strokeStyle='rgba(80,140,200,0.28)';
+    ctx.lineWidth=0.8;
+    ctx.beginPath(); ctx.rect(px,py,PW,PH); ctx.fill(); ctx.stroke();
+
+    ctx.fillStyle='rgba(140,180,220,0.55)';
+    ctx.font='10px ui-monospace,monospace';
+    ctx.textAlign='left';
+    ctx.fillText(label, px+6, py+12);
+
+    // find min/max over ring buffer
+    let mn=Infinity, mx=-Infinity;
+    for(let i=0;i<nSamples;i++){
+      const v=hist[(histIdx-1-i+HLEN)%HLEN];
+      if(v<mn) mn=v; if(v>mx) mx=v;
+    }
+    if(mx===mn){ mx=mn+1e-9; }
+    const range=mx-mn;
+
+    ctx.beginPath();
+    ctx.strokeStyle=col;
+    ctx.lineWidth=1.2;
+    for(let i=0;i<Math.min(nSamples,PW-12);i++){
+      const v=hist[(histIdx-1-i+HLEN)%HLEN];
+      const nx2=px+PW-6-i;
+      const ny2=py+PH-8 - (v-mn)/range*(PH-20);
+      if(i===0) ctx.moveTo(nx2,ny2); else ctx.lineTo(nx2,ny2);
+    }
+    ctx.stroke();
+
+    // Latest value label
+    const latest=hist[(histIdx-1+HLEN)%HLEN];
+    ctx.fillStyle=col;
+    ctx.textAlign='right';
+    ctx.fillText(latest.toExponential(2), px+PW-6, py+12);
+    ctx.textAlign='left';
+  }
+
+  const nSamples=Math.min(histIdx, HLEN, PW-12);
+  plotPanel(PX, PY1, 'E_total (KE+PE)', eHist, 'rgba(100,200,255,0.85)', nSamples);
+  plotPanel(PX, PY2, '|L| angular momentum',  lHist, 'rgba(255,180,60,0.85)', nSamples);
+
+  // Energy conservation metric (E/E0 - 1)
+  if(!isNaN(E0) && E0 > 1e-12){
+    const drift = (energy.total - E0)/E0;
+    ctx.fillStyle = Math.abs(drift)<0.01 ? 'rgba(80,220,130,0.85)' : 'rgba(255,100,80,0.85)';
+    ctx.font='10px ui-monospace,monospace';
+    ctx.textAlign='left';
+    ctx.fillText(`ΔE/E₀ = ${(drift*100).toFixed(2)}%`, PX+6, PY1-6);
+    ctx.textAlign='left';
+  }
+
+  // KE bar (small, inline)
+  ctx.fillStyle='rgba(140,180,220,0.55)';
+  ctx.font='10px ui-monospace,monospace';
+  ctx.fillText(`KE=${energy.KE.toExponential(2)}  PE=${energy.PE.toExponential(2)}`, PX+6, PY2+PH+14);
+  const Lmag=Lobj.L;
+  if(Lmag > 0.001){
+    ctx.fillStyle='rgba(255,180,60,0.8)';
+    ctx.fillText(`Lx=${Lobj.Lx.toFixed(3)}  Ly=${Lobj.Ly.toFixed(3)}  Lz=${Lobj.Lz.toFixed(3)}`, PX+6, PY2+PH+26);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// render() — modified from v2: draws main scene + calls drawPlots()
+// Rendering is explanatory support. It can be replaced without changing the
+// isolated object-language witness or the counted evaluator boundary.
+// ─────────────────────────────────────────────────────────────
+function render(st, energy, Lobj){
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#02060c'; ctx.fillRect(0,0,W,H);
+
+  if(cfg.autoView){ yaw += 0.0025; pitch += 0.001; }
+
+  const visible = dim>0;
+  const pts = new Map();
+  for(const n of nodes) pts.set(n.id, project(n));
+
+  ctx.lineCap='round'; ctx.lineJoin='round';
+  if(visible){
+    for(const e of edges){
+      const a=nodeById(e.a), b=nodeById(e.b); if(!a||!b) continue;
+      const pa=pts.get(a.id), pb=pts.get(b.id); if(!pa||!pb) continue;
+      const age=Math.min(1,(step-e.born)/120);
+      const alpha = e.kind==='unit' ? 0.35+0.25*(1-age) : 0.18;
+      ctx.strokeStyle=`rgba(142,205,238,${alpha})`;
+      ctx.lineWidth=e.kind==='unit'?1.05:0.72;
+      ctx.beginPath(); ctx.moveTo(pa.x,pa.y); ctx.lineTo(pb.x,pb.y); ctx.stroke();
+    }
+    for(const n of nodes){
+      const p=pts.get(n.id);
+      const a=Math.max(.18,1-(step-n.born)/1000);
+      const r=n.id===0?5:Math.max(1.0,2.1-n.age/900);
+      // Tint nodes by kinetic energy
+      let ke=0; for(let i=0;i<dim;i++) ke+=(n.v[i]||0)**2;
+      ke=Math.min(1, ke*6);
+      const rr=Math.round(175+80*ke), gg=Math.round(226-60*ke), bb=Math.round(252-80*ke);
+      ctx.fillStyle=n.id===0?'rgba(255,255,255,.95)':`rgba(${rr},${gg},${bb},${a})`;
+      ctx.beginPath(); ctx.arc(p.x,p.y,r,0,Math.PI*2); ctx.fill();
+    }
+  } else {
+    ctx.fillStyle='rgba(255,255,255,.95)'; ctx.beginPath(); ctx.arc(W*0.55+viewX,H*0.5+viewY,6,0,Math.PI*2); ctx.fill();
+    if(cfg.showDormantAtOrigin){
+      ctx.strokeStyle='rgba(145,210,245,.18)';
+      for(let r=12;r<52;r+=10){ ctx.beginPath(); ctx.arc(W*0.55+viewX,H*0.5+viewY,r,0,Math.PI*2); ctx.stroke(); }
+    }
+  }
+
+  drawPlots(energy, Lobj);
+
+  const dampStr = PHYSICS.damping===0 ? 'OFF (0)' : `${PHYSICS.damping.toFixed(4)} [press D to clear]`;
+  hud.innerHTML = `<div id="title">SUPPLEMENTARY MODEL A — DIMENSION BIRTH</div><div id="author">Author: Josh Oshiro</div>`+
+`frame/step:              ${step}\n`+
+`active nodes:            ${nodes.filter(n=>n.alive).length}\n`+
+`edges:                   ${edges.length}\n`+
+`internal dimensions:     ${dim}   cap=${cfg.internalDimCap}\n`+
+`mean edge error:         ${st.mean.toFixed(4)}   max=${st.max.toFixed(4)}\n`+
+`collision pressure:      ${(st.coll/Math.max(1,st.count)).toFixed(4)}\n`+
+`mean origin distance:    ${meanOrigin().toFixed(4)}\n`+
+`sparse source hits:      ${qfHits}   src=${cfg.forceRule30?'RULE30':'hash source'}\n`+
+`toy dynamics:            symplectic Euler · k=${PHYSICS.springK} · m=${PHYSICS.mass} · dt=${PHYSICS.dt}\n`+
+`damping:                 ${dampStr}\n`+
+`energy conserv.:         ${isNaN(E0)||E0<1e-12?'—':((energy.total-E0)/E0*100).toFixed(3)+'%  (ΔE/E₀)'}\n`+
+`|angular momentum|:      ${Lobj.L.toExponential(4)}\n`+
+`recent births:           ${recent.join(' | ') || 'none yet'}\n`+
+`controls:                Space pause · N step · A auto-rotate · F rule30 · R reset\n`+
+`                         D toggle damping · +/- speed · mouse drag rotate\n`+
+`                         shift/ctrl drag pan · wheel zoom · arrows rotate · IJKL pan · Q/E roll`;
+}
+
+function span(axis){ if(!nodes.length||dim<=axis)return 0; let mn=Infinity,mx=-Infinity; for(const n of nodes){ mn=Math.min(mn,n.x[axis]||0); mx=Math.max(mx,n.x[axis]||0); } return mx-mn; }
+function meanOrigin(){ if(!nodes.length||dim===0)return 0; let s=0; for(const n of nodes){ let d2=0; for(let i=0;i<dim;i++) d2+=n.x[i]*n.x[i]; s+=Math.sqrt(d2); } return s/nodes.length; }
+
+// ─────────────────────────────────────────────────────────────
+// tick() — main loop
+// grow() + toy dynamics per sub-step, then render
+// ─────────────────────────────────────────────────────────────
+function tick(){
+  if(!cfg.paused){
+    for(let i=0;i<cfg.stepsPerFrame;i++){
+      grow();                         // add new nodes from deterministic sparse input
+      birthDimensionIfNeeded();       // open new dimension if constraints fail
+      if(dim>0){
+        accumulateForces();           // compute pairwise spring forces
+        integrate();                  // symplectic Euler: kick then drift
+      }
+    }
+  }
+
+  const energy = computeEnergy();
+  const Lobj   = computeAngularMomentum();
+
+  // Record initial energy when system first has meaningful energy
+  if(isNaN(E0) && energy.total > 1e-10) E0 = energy.total;
+
+  eHist[histIdx % HLEN]  = energy.total;
+  keHist[histIdx % HLEN] = energy.KE;
+  lHist[histIdx % HLEN]  = Lobj.L;
+  histIdx++;
+
+  const st = constraintStats();
+  render(st, energy, Lobj);
+
+  requestAnimationFrame(tick);
+}
+
+// ─────────────────────────────────────────────────────────────
+// reset()
+// ─────────────────────────────────────────────────────────────
+function reset(){
+  step=0; dim=0; lastGrowth=0; qfHits=0; lastDimBirth=-999;
+  recent=[]; nodes=[]; edges=[]; nextNodeId=0; nextEdgeId=0;
+  rule30 = new Uint8Array(cfg.qfWidth); rule30[cfg.qfWidth>>1]=1;
+  eHist.fill(0); lHist.fill(0); keHist.fill(0); histIdx=0; E0=NaN;
+  nodes.push(makeNode(null,false));
+  refreshCache();
+}
+
+// ─────────────────────────────────────────────────────────────
+// Input handlers
+// ─────────────────────────────────────────────────────────────
+addEventListener('keydown', e=>{
+  if(e.key===' '){ cfg.paused=!cfg.paused; e.preventDefault(); }
+  else if(e.key==='n'||e.key==='N'){ grow(); birthDimensionIfNeeded(); if(dim>0){ accumulateForces(); integrate(); } }
+  else if(e.key==='a'||e.key==='A'){ cfg.autoView=!cfg.autoView; }
+  else if(e.key==='f'||e.key==='F'){ cfg.forceRule30=!cfg.forceRule30; recent.unshift(cfg.forceRule30?'FORCED RULE30 source':'hash source'); recent=recent.slice(0,5); }
+  else if(e.key==='r'||e.key==='R'){ reset(); }
+  else if(e.key==='d'||e.key==='D'){
+    PHYSICS.damping = PHYSICS.damping===0 ? 0.002 : 0;
+    recent.unshift(PHYSICS.damping===0?'damping OFF':'damping ON (0.002) — for comparison');
+    recent=recent.slice(0,5);
+    E0=NaN; // reset energy reference on mode change
+  }
+  else if(e.key==='+'||e.key==='='){ cfg.stepsPerFrame=Math.min(20,cfg.stepsPerFrame+1); }
+  else if(e.key==='-'||e.key==='_'){ cfg.stepsPerFrame=Math.max(1,cfg.stepsPerFrame-1); }
+  else if(e.key==='ArrowLeft'){ yaw-=0.08; }
+  else if(e.key==='ArrowRight'){ yaw+=0.08; }
+  else if(e.key==='ArrowUp'){ pitch-=0.08; }
+  else if(e.key==='ArrowDown'){ pitch+=0.08; }
+  else if(e.key==='i'||e.key==='I'){ viewY-=24; }
+  else if(e.key==='k'||e.key==='K'){ viewY+=24; }
+  else if(e.key==='j'||e.key==='J'){ viewX-=24; }
+  else if(e.key==='l'||e.key==='L'){ viewX+=24; }
+  else if(e.key==='q'||e.key==='Q'){ roll-=0.06; }
+  else if(e.key==='e'||e.key==='E'){ roll+=0.06; }
+});
+
+canvas.addEventListener('mousedown', e=>{
+  dragging=true; lastMouseX=e.clientX; lastMouseY=e.clientY;
+  dragMode=(e.shiftKey||e.ctrlKey||e.button===1||e.button===2)?'pan':'rotate';
+});
+addEventListener('mouseup', ()=>{ dragging=false; });
+addEventListener('mousemove', e=>{
+  if(!dragging) return;
+  const dx=e.clientX-lastMouseX, dy=e.clientY-lastMouseY;
+  lastMouseX=e.clientX; lastMouseY=e.clientY;
+  if(dragMode==='pan'){ viewX+=dx; viewY+=dy; }
+  else { yaw+=dx*0.006; pitch+=dy*0.006; }
+});
+canvas.addEventListener('contextmenu', e=>e.preventDefault());
+canvas.addEventListener('wheel', e=>{
+  zoom *= Math.exp(-e.deltaY*0.001);
+  zoom = Math.max(8, Math.min(900, zoom));
+  e.preventDefault();
+}, {passive:false});
+
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
+

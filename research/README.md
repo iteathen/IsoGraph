@@ -34,6 +34,9 @@ research/
 
 ## Current research areas
 
+- [Three roles in effective symbolic presentation](primitive-presentation/README.md) — imported inquiry manuscript and supplements on the dependency requirements of effective formal presentations; archived, not qualified.
+- [Entropy and indistinguishability](entropy-indistinguishability/README.md) — independent working notes on source/apparent randomness and physically indistinguishable generative histories.
+- [Archived sketches: Minimal Rule / Minimum Representation](minimal-role-reduction-adapter/README.md) — original imported source bundle; the minimum-rule-related sketch belongs with emergent-reality foundations, while the two-track physics-to-SKI sketch belongs with Primitive Presentation / minimum-representation research.
 - [Causal Step](causal-step/README.md) — independent Causal Step research with two provisional premises and executed supplementary Model A dimension/orbital controls.
 - [Discovery-method research](discovery/README.md) — research notes supporting Discovery Protocol development; current DP authority remains under `extensions/discovery/` and qualification routing.
 - [DTS research](dts/README.md) — development history and implementation research behind the Detailed Transition System.
