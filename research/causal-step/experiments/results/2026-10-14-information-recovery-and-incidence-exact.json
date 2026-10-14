@@ -353,6 +353,24 @@
         -13
       ]
     ],
+    "declaredIncidenceGraphHomologies": [
+      {
+        "declaredComplex": "bipartite incidence graph, no 2-cells",
+        "graphVertices": 8,
+        "graphIncidenceLinks": 9,
+        "b0": 1,
+        "b1": 2,
+        "b2": 0
+      },
+      {
+        "declaredComplex": "bipartite incidence graph, no 2-cells",
+        "graphVertices": 8,
+        "graphIncidenceLinks": 9,
+        "b0": 1,
+        "b1": 2,
+        "b2": 0
+      }
+    ],
     "exactEigenvalueForms": [
       "7, 1, 1",
       "1, 4+sqrt(3), 4-sqrt(3)"
@@ -642,6 +660,12 @@
     },
     "numberOfUnlabeledIsomorphismClasses": 4,
     "sourceRelabelPermutationsCheckedPerModel": 120,
+    "declaredBipartiteGraphHomologyClasses": 2,
+    "declaredBipartiteGraphHomologyHistogram": {
+      "1,2,0": 100,
+      "2,3,0": 20
+    },
+    "gramPolynomialPlusDeclaredHomologySeparatesUnlabeledTypes": true,
     "unlabeledOrbitCensus": [
       {
         "canonical": "11,13,25",
@@ -768,18 +792,19 @@
     "These are directed AND-source / OR-across-edge events, intentionally not the native unordered higher-order bit-mutation generator.",
     "Classical D_KL and total variation on investigator-imposed intervention/output distributions are not quantum relative entropy, spacetime geometry, gravitational dynamics or fundamental entropy back-pressure.",
     "The artificial binary-output flip channel eta is a regularization/control, not intrinsic physical stochasticity; eta=0 deterministic differences yield infinite KL, even though TV is finite.",
-    "The full binary order loses genuine k-ary joint enabling; an incidence Gram operator can distinguish the T3 witness but does not reconstruct all named interventions and does not define an oriented cellular boundary complex.",
+    "The full binary order loses genuine k-ary joint enabling; a static incidence Gram operator can distinguish the T3 witness but does not reconstruct all named interventions or define an oriented cellular boundary complex.",
+    "The deliberately constructed bipartite graph 1-complex has well-defined b0/b1 but imposes no original k-way AND semantics: the T3 witness has identical graph homology despite different event incidence Gram spectra.",
     "Exact full-output recoverability in a predeclared finite hypothesis class is not equal to microscopic-source reconstruction in all causal models.",
     "Fixed labeled input-node interventions are part of operational equivalence; re-label invariance must be specified and checked separately.",
     "Petz recovery and holographic bulk/boundary statements require quantum state/channel or code-subspace assumptions not available in this experiment."
   ],
   "execution": {
     "actuallyExecuted": true,
-    "host": "local V8 isolate running stored standalone Node-compatible source unmodified",
-    "elapsedMilliseconds": 254,
+    "host": "local V8 isolate running current standalone Node-compatible source unmodified",
+    "elapsedMilliseconds": 249,
     "standaloneNodeCLIIndependentlyExecuted": false,
-    "sourceBlobSha": "51daa998dd91680cdf63b41862ecdbd910835ffa",
-    "independentlyReplicatedSubset": "Python itertools independent 120 labeled / 4 unlabeled classes, Gram coefficients and six distinguishing input masks; 15-probe exhaustive result only primary JS execution",
+    "sourceBlobSha": "d480193d140cb501636741213e1f154e2bde126d",
+    "independentCheck": "Independent Python itertools implementation replicated the 120 labeled/4 unlabeled model counts, all six differing input masks, both exact 3x3 Gram polynomials, and the nonisomorphic spectral collision; 9-of-15 probe minimality and graph homology were tested by the committed JS implementation.",
     "sourceRuleChanged": false,
     "originalT3WitnessSource": "2bad02a08ccf8bccf0e6e73216dcb63fe9365e7f"
   }
