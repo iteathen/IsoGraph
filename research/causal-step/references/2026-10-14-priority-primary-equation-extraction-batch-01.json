@@ -1,0 +1,432 @@
+{
+  "title": "Source-primary transition mechanisms: six exact comparison records, first deep audit batch",
+  "date": "2026-10-14",
+  "repository": "iteathen/IsoGraph",
+  "branch": "research/causal-step",
+  "status": "Original paper mathematical definitions/expressions located and typed into source-extraction data; NO formal native Causal Step mapping or full theorem proof reproduced.",
+  "sourceMethod": "Read journal HTML and original PDF, inspected necessary original PDF pages, recorded explicit publication versions, definition/equation locators, assumptions, comparisons, blockers and formal correspondence level. Exact mathematical expressions transcribed/paraphrased only to identify source operations; source papers remain authority.",
+  "modelCount": 6,
+  "records": [
+    {
+      "id": "MECH-01",
+      "corpusParentId": "new - not in v0.3; R04",
+      "field": "R04",
+      "title": "Learning the effective order of a hypergraph dynamical system",
+      "authors": [
+        "Leonie Neuhäuser",
+        "Michael Scholkemper",
+        "Francesco Tudisco",
+        "Michael T. Schaub"
+      ],
+      "year": 2024,
+      "doi": "10.1126/sciadv.adh4053",
+      "primaryURL": "https://arxiv.org/pdf/2306.01813",
+      "sourceVersion": "arXiv 2306.01813v1 2023-06-02 as read; final Science Advances 10(19) May 2024 uses shifted definition numbering, check before quoting published text.",
+      "definitions": [
+        {
+          "name": "topological order",
+          "formal": "k=max_{E∈ℰ} |E|; size/cardinality of largest hyperedge"
+        },
+        {
+          "name": "dynamical order",
+          "formal": "minimal p>=2 such that each fd(y1,s)=Σ_{v⊆s, |v|=p-1} φ_d^p(y1,v)"
+        },
+        {
+          "name": "effective order",
+          "formal": "p_min=minimal hyperedge order preserving described system; p_min ≤ min(k,p_dyn), with equalities under additional example-specific conditions"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "Preprint p.2 Eqs.(1)–(3)",
+          "expression": "(1) dot x_i=Σ_{E∋i} sin[Σ_{j∈E}(x_j-x_i)]; (2) dot x_i=Σ_{E∋i}Σ_{j∈E}sin(x_j-x_i)=Σ_j(B^T B)_{ij}sin(x_j-x_i); (3) B_{Ei}=1_{i∈E}",
+          "meaning": "Same nontrivial hypergraph incidence may support irreducible joint hyperedge update or exactly reducible pairwise dynamics depending on source interaction function."
+        },
+        {
+          "locator": "Preprint p.3 Definition 1 and Eq.(4)",
+          "expression": "dot x_i=f1(x_i)+Σ_{d=2}^k Σ_{E∈ℰ_d:i∈E} f_d(x_i,{x_j|j∈E\\{i}})",
+          "meaning": "Types and event-edge group are given; dynamics functional form on simultaneous source values"
+        },
+        {
+          "locator": "Preprint p.4 Definition 2 Eq.(5), Definition 3 Eq.(7)",
+          "expression": "f_d(y1,s)=Σ_{v⊆s:|v|=p-1} φ^p_d(y1,v); p_min≤min(k,p_dyn)",
+          "meaning": "Explicit reducibility/factorization test; observed max hyperedge size does not imply irreducible physical dynamical order."
+        }
+      ],
+      "modelObjects": [
+        "finite unordered hypergraph edges E",
+        "real-valued dynamical node states x_i(t)",
+        "incidence B",
+        "local d-node symmetric state functions f_d",
+        "dynamical and effective orders"
+      ],
+      "transition": "ODEs dot x_i in real time, not discrete birth/mutation of source-native edge occurrences",
+      "sourceAssumptions": [
+        "fixed hypergraph topology during the dynamical observation",
+        "real node states and time derivative",
+        "per-edge symmetric local functions and additive sum of contributions",
+        "topological order and multiplicity conventions differ from native growing multi-occurrence source"
+      ],
+      "positiveStructuralLink": "Exactly defined joint-input irreducibility and inverse minimal order test; distinguishes static incidence from actual transition arity.",
+      "nonfaithfulMappingRisk": "Native simulator mutates bit states, births nodes, consumes/keeps hyperedge occurrences and updates eligibility. A Gram reduction that reproduces continuous pairwise oscillator ODE need not reproduce that discrete transition relation.",
+      "falsifier": "Same projection A=B^T B and same local pairwise driving but different true native k-ary firing/offspring choices; or lower-order reduction cannot reconstruct all eligible occurrences.",
+      "newStructuralFamily": "Effective dynamical interaction order vs topological hyperedge order",
+      "webEvidence": "https://arxiv.org/abs/2306.01813",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    },
+    {
+      "id": "MECH-02",
+      "corpusParentId": "LX/LX-008",
+      "field": "R04",
+      "title": "Higher-order interactions shape collective dynamics differently in hypergraphs and simplicial complexes",
+      "authors": [
+        "Yuanzhao Zhang",
+        "Maxime Lucas",
+        "Federico Battiston"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41467-023-37190-9",
+      "primaryURL": "https://www.nature.com/articles/s41467-023-37190-9",
+      "sourceVersion": "Nature Communications 14, 1605 (2023), original open HTML and results section checked.",
+      "definitions": [
+        {
+          "name": "simplicial triangle closure",
+          "formal": "B_ijk higher-order 2-simplex present only if all three dyadic (i,j),(j,k),(i,k) occur; random hypergraph lacks this forced closure."
+        },
+        {
+          "name": "generalized degree",
+          "formal": "k_i^(2)=(1/2) Σ_{jk} B_ijk; A_ij^(2)=Σ_k B_ijk"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "Results Eq.(1)–(2)",
+          "expression": "dot θ_i = ω + (γ1/<k1>)Σ_j A_ij sin(θ_j-θ_i) + (γ2/<k2>)Σ_{jk}(1/4)B_ijk sin(θ_j+θ_k-2θ_i); γ1=1-α, γ2=α",
+          "meaning": "Physical multi-node oscillator coupling is specified including interaction-order normalizations."
+        },
+        {
+          "locator": "Results Eq.(3)–(5)",
+          "expression": "L_ij^(2)=k_i^(2)δ_ij-(1/2)A_ij^(2); δdotθ_i=-Σ_j L_ij^(mul)δθ_j; L^(mul)=(1-α)L^(1)/<k1>+α L^(2)/<k2>",
+          "meaning": "Linearized stability uses effective multiorder Laplacian, not actual complete nonlinear trajectory recovery."
+        },
+        {
+          "locator": "Results Eq.(6)",
+          "expression": "E[k^(2)|k^(1)]≈p*binom(k^(1),2) for clique-filled Erdős-Rényi complexes",
+          "meaning": "Forced simplicial closure correlates higher-order and dyadic degrees and alters collective stability."
+        }
+      ],
+      "modelObjects": [
+        "fixed population n oscillators with real phases θ_i",
+        "pairwise adjacency A",
+        "three-body incidence B_ijk",
+        "normalized coupling budget",
+        "Laplacian spectrum"
+      ],
+      "transition": "Continuous real-time phase oscillator ODE; linearization near synchrony yields effective Laplacian stability conditions.",
+      "sourceAssumptions": [
+        "intrinsic oscillator phase/time/frequency ω chosen",
+        "γ and α coupling law supplied",
+        "constructed Erdős-Rényi graph vs randomized hypergraph ensembles",
+        "linearization around fully synchronized state; general nonlinear conclusions model scoped"
+      ],
+      "positiveStructuralLink": "Representation choice (hypergraph vs forced simplex closure) can reverse synchronizability response under otherwise analogous local node dynamics.",
+      "nonfaithfulMappingRisk": "Inferring lower faces from source rank-k hyperedges changes available interactions; Laplacian spectrum is stability information, not full native enabling/composition.",
+      "falsifier": "Pairwise/simplicial projection predicts the same native behavior even when actual event occurrence and bit state yield distinct legal firings.",
+      "newStructuralFamily": "Representation-dependent qualitative dynamics from imposing simplicial closure",
+      "webEvidence": "https://www.nature.com/articles/s41467-023-37190-9",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    },
+    {
+      "id": "MECH-03",
+      "corpusParentId": "LS/LS-012 and LS/LS-054",
+      "field": "R10",
+      "title": "Encoding reaction systems in Petri nets",
+      "authors": [
+        "Maciej Koutny",
+        "Łukasz Mikulski"
+      ],
+      "year": 2026,
+      "doi": "10.1007/s11047-025-10060-7",
+      "primaryURL": "https://link.springer.com/article/10.1007/s11047-025-10060-7",
+      "sourceVersion": "Natural Computing 25, article 8, published 14 February 2026 (version of record), original full text read.",
+      "definitions": [
+        {
+          "name": "reaction",
+          "formal": "r-system ℛ=(S,A), finite S; each a=(R,I,P) with R,I,P nonempty subsets of S and R∩I=∅"
+        },
+        {
+          "name": "enabled",
+          "formal": "a enabled in U⊆S iff R⊆U and I∩U=∅"
+        },
+        {
+          "name": "parallel deterministic update",
+          "formal": "res_A(U)=⋃_{a∈A enabled at U} P_a; all enabled reactions at U are executed, no one-event scheduler"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "Section 2 Petri preliminaries",
+          "expression": "PT-net N=(P,T,F,M0), pre(t)⊂P and post(t)⊂P, t enabled at M if M(p)≥1 for every p∈pre(t)",
+          "meaning": "Token-transition semantics is not identical to set-level reaction semantics."
+        },
+        {
+          "locator": "Section 3 Definitions 1–2",
+          "expression": "a=(R,I,P); enabled(U): R⊆U ∧ I∩U=∅; res_A(U)=∪_{a∈enabled(U)}P_a",
+          "meaning": "Higher-order positive reactant conjunction plus explicit negative inhibitor guard and concurrent production."
+        },
+        {
+          "locator": "Section 3 Encoding I Eqs.(3),(4), Theorem 1 clauses (2),(3)",
+          "expression": "pre(v_U)={p_start},post(v_U)={p_U}; pre(t_U)={p_U},post(t_U)={p_res_A(U)}; initialized Petri firing sequence projects to r-system sequence and conversely.",
+          "meaning": "Exact forward/back history correspondence for the stated 1-safe encoding, but the encoding uses an extra place for every U⊆S."
+        }
+      ],
+      "modelObjects": [
+        "finite set S of species",
+        "reaction triples with reactants/inhibitors/products",
+        "1-safe place-transition Petri states",
+        "state projection of Petri traces"
+      ],
+      "transition": "Synchronous/parallel update U→res_A(U), translated to Petri firing sequences with selected encoding and exact mapping",
+      "sourceAssumptions": [
+        "fixed finite S",
+        "entities not automatically persistent: only products survive if re-produced",
+        "source reactions generally parallel at each step",
+        "Petri encoding introduces controller/source-enumerated auxiliary places; number of places exponential in |S| for encoding I"
+      ],
+      "positiveStructuralLink": "Formal guard/read/inhibit pattern and true dynamic forward/back observational recovery, not just a static graph.",
+      "nonfaithfulMappingRisk": "Native Causal Step allows one chosen eligible event firing at a time, always births a new node and may retain or consume source occurrences; reaction system has fixed S and executes all enabled rules together.",
+      "falsifier": "Proposed native→Petri map cannot represent distinct source-edge occurrence multiplicity, Hamming-weight enabling, or T4 asymmetric conflicts/triple blocking without additional typed control state.",
+      "newStructuralFamily": "Reaction inhibitors and process-preserving Petri encodings with explicit inverse projection",
+      "webEvidence": "https://doi.org/10.1007/s11047-025-10060-7",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    },
+    {
+      "id": "MECH-04",
+      "corpusParentId": "LS/LS-010 (different original publication version)",
+      "field": "R02",
+      "title": "Rule Algebras for Adhesive Categories",
+      "authors": [
+        "Nicolas Behr",
+        "Paweł Sobociński"
+      ],
+      "year": 2018,
+      "doi": "10.4230/LIPIcs.CSL.2018.11",
+      "primaryURL": "https://drops.dagstuhl.de/opus/volltexte/2018/9678/pdf/LIPIcs-CSL-2018-11.pdf",
+      "sourceVersion": "Computer Science Logic 2018 published original proceedings PDF, 21 pages; distinguish later journal/LMCS version and arXiv/abstract aliases.",
+      "definitions": [
+        {
+          "name": "adhesive category",
+          "formal": "category C has pullbacks, pushouts along monos and those pushouts form van Kampen squares, Def. 2.1"
+        },
+        {
+          "name": "linear DPO production",
+          "formal": "span L<-l-K-r->R with mono l and r, Def. 2.2; admissible monic match m:L↪C satisfying gluing/pushout complement (Def. 2.3,2.6)"
+        },
+        {
+          "name": "dependency overlap",
+          "formal": "span of monos R1<-X12->L2 with required pushout complements (Sec. 3 Eq.4)"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "PDF p2 Definition 2.2 Eq.(1) and p3 Def 2.6 Eq.(3)",
+          "expression": "L←K→R; admissible match m:L↪C yields double pushout C ⇒_{p,m} D, unique up to isomorphism",
+          "meaning": "DPO source category and exact gluing/match admissibility define lawful event step."
+        },
+        {
+          "locator": "PDF p4 Eq.(6) and Theorem 3.1",
+          "expression": "Concurrent composition p2 ▷_m p1 from overlap m; valid two-step derivation C⇒_{p}⇒_{q} is represented by a composite admissible rule, producing isomorphic result.",
+          "meaning": "Theorem composes admissible matched source rewrites, not arbitrary overlapping events."
+        },
+        {
+          "locator": "PDF p5 Theorem 3.3 Eq.(7)",
+          "expression": "For admissibly corresponding match pairs, p3▷(p2▷p1)=(p3▷p2)▷p1",
+          "meaning": "Associativity holds via bijection of *admissible match data*, not initial pairwise commuting of all standalone firings."
+        }
+      ],
+      "modelObjects": [
+        "typed graph-like objects in adhesive category",
+        "monomorphisms/matches",
+        "linear span rules L←K→R",
+        "overlap dependency witnesses"
+      ],
+      "transition": "DPO pushout complement then pushout, with gluing condition; not arbitrary bit-mutation rewriting without categorical encoding.",
+      "sourceAssumptions": [
+        "well-behaved adhesive category structure",
+        "linear rules and admissible mono matches",
+        "isomorphic outputs/overlap equivalences in stated category",
+        "source-native bit mutation requires explicit delete-and-rewrite typed attributes, occurrence identity and guards"
+      ],
+      "positiveStructuralLink": "Most direct algebraic candidate for source T4 operational commutation and three-event coherence proof obligations.",
+      "nonfaithfulMappingRisk": "T4's 660 three-event obstacles do NOT refute DPO associativity theorem: the needed three-event overlap matches may become inadmissible after changed state; categorical embeddings unproved.",
+      "falsifier": "No faithful functor to category and lawful overlap objects simultaneously preserving source-edge bits, Hamming guard, born nodes, multiplicity, old edge keep/consume and three-event enabledness.",
+      "newStructuralFamily": "Associative composition with explicit match admissibility, distinct from naive commuting squares",
+      "webEvidence": "https://doi.org/10.4230/LIPIcs.CSL.2018.11",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    },
+    {
+      "id": "MECH-05",
+      "corpusParentId": "F/F01",
+      "field": "R01",
+      "title": "Classical sequential growth dynamics for causal sets",
+      "authors": [
+        "David P. Rideout",
+        "Rafael D. Sorkin"
+      ],
+      "year": 1999,
+      "doi": "10.1103/PhysRevD.61.024002",
+      "primaryURL": "https://arxiv.org/pdf/gr-qc/9904062",
+      "sourceVersion": "arXiv gr-qc/9904062v3 dated June 2004, PRD 61 024002 appeared 1999/2000, original arXiv paper text and pages 8–11 inspected.",
+      "definitions": [
+        {
+          "name": "internal temporality",
+          "formal": "new causet element born to future of, or unrelated to, existing elements; cannot be added to past (PDF p.9)"
+        },
+        {
+          "name": "discrete general covariance",
+          "formal": "product of transition probabilities along paths from empty causet to same unlabeled finite causet agrees for any allowed birth order (PDF p.9)"
+        },
+        {
+          "name": "Bell causality for transitions",
+          "formal": "ratio of two child transition probabilities in causet C equals ratio of corresponding probabilities after removing spectator elements, for nonzero probabilities (PDF p.10 Eq.2)"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "PDF p.9 discrete general covariance paragraph",
+          "expression": "For paths γ1,γ2 from ∅ to same unlabeled causet C: ∏_{t∈γ1}p(t)=∏_{t∈γ2}p(t)",
+          "meaning": "Gauge-independent sequential birth probability is a postulated criterion, not generally implied by any graph rewrite."
+        },
+        {
+          "locator": "PDF p.10 Eq.(2)",
+          "expression": "Pr(C→C1)/Pr(C→C2) = Pr(B→B1)/Pr(B→B2) for B=union of two precursor sets, after deleting spectators",
+          "meaning": "Conditional probability ratio uses explicit causal ancestors; requires well-defined stochastic transition probabilities and nonzero case."
+        },
+        {
+          "locator": "PDF p.11 onward Markov sum rule",
+          "expression": "Σ_{distinct allowed child transitions from C} Pr(C→Ci) = 1 (with appropriate multiplicities/possible transition equivalences)",
+          "meaning": "Transition probabilities obey specific Markov normalization and general covariance."
+        }
+      ],
+      "modelObjects": [
+        "locally finite causal poset",
+        "natural birth labeling",
+        "causal past/precursor sets",
+        "stochastic transition weight and unlabeled isomorphism classes"
+      ],
+      "transition": "One poset element added to future of chosen precursor with postulated Markov transition probabilities satisfying internal temporality, Bell causality and general covariance.",
+      "sourceAssumptions": [
+        "binary locally finite partial order fundamental, not native k-ary event occurrence multiset",
+        "stochastic Markov transition kernel fundamental",
+        "new element birth postulated; same host birth label is gauge",
+        "precursor past constraints and nonzero probabilities in Bell ratio"
+      ],
+      "positiveStructuralLink": "Exact benchmark for invariance of probabilities of equivalent birth-history orderings and conditional independence of uninvolved spectators.",
+      "nonfaithfulMappingRisk": "T2 native raw FIFO/same-index random diverges under relabeling, and T4 has state-sensitive coenabled orders; cannot identify these with sequential-growth covariance without an exact quotient and stochastic law.",
+      "falsifier": "No well-defined native stochastic Markov kernel invariant under tested occurrence transport, or intrinsic cause relation not represented by source hyperedge birth order.",
+      "newStructuralFamily": "Stochastic path-covariance and spectator-independent transition ratios",
+      "webEvidence": "https://doi.org/10.1103/PhysRevD.61.024002",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    },
+    {
+      "id": "MECH-06",
+      "corpusParentId": "LS/LS-001",
+      "field": "R04",
+      "title": "What Are Higher-Order Networks?",
+      "authors": [
+        "Christian Bick",
+        "Elizabeth Gross",
+        "Heather A. Harrington",
+        "Michael T. Schaub"
+      ],
+      "year": 2023,
+      "doi": "10.1137/21M1414024",
+      "primaryURL": "https://epubs.siam.org/doi/epdf/10.1137/21M1414024",
+      "sourceVersion": "SIAM Review 65(3) 686–731 (2023), PDF 46 pages inspected §§2.1,5.2,5.4.2 and Eqs.(5.2),(5.3),(5.8).",
+      "definitions": [
+        {
+          "name": "hypergraph",
+          "formal": "H=(V,E) with finite vertex set V and collection of nonempty subsets E, Definition 2.1; multiset incidence needs additional typed multiplicity bookkeeping"
+        },
+        {
+          "name": "simplicial complex",
+          "formal": "Every nonempty subset of a simplex must also be a simplex, Definition 2.3"
+        },
+        {
+          "name": "generic joint dynamical influence",
+          "formal": "dot x_k=F(x_k)+H_k(x), with H_k depending jointly on all node states; Eq.5.2"
+        }
+      ],
+      "equations": [
+        {
+          "locator": "PDF p.10 Definition 2.1 and 2.3",
+          "expression": "H=(V,E), E⊆P(V)\\{∅}; simplicial K downward-closed: e∈K ⇒ any nonempty f⊆e is also in K",
+          "meaning": "Incidence and simplicial closure are different model inputs, not equivalent physics."
+        },
+        {
+          "locator": "PDF p.27 Eq.(5.2) and Eq.(5.3)",
+          "expression": "dot x_k=F(x_k)+H_k(x); formal expansion dot x_k=F(x_k)+Σ_j A_jk G_k(x_k,x_j)+Σ_{j,l} A^3_jlk G^3_k(x_k,x_j,x_l)+…",
+          "meaning": "A binary graph of dependencies can still permit nonlinear multiway dynamical interaction; formal higher-order decompositions need not be unique."
+        },
+        {
+          "locator": "PDF p.31 Eq.(5.8) and §5.4.2",
+          "expression": "dot x_k=F(x_k)+ε Ĥ_k(x), with an attracting phase torus. Phase-reduced dynamics may contain effective nonpairwise terms even if original full-state coupling was additive/pairwise.",
+          "meaning": "Higher-order interaction appearance depends on observer/change of variables, not solely native microscopic arity."
+        }
+      ],
+      "modelObjects": [
+        "node vector field and state x_k",
+        "graph/hypergraph/simplicial relational support",
+        "formal multi-body dynamical coupling functions",
+        "phase-reduced invariant torus"
+      ],
+      "transition": "Continuous-time network ODEs; original pairwise-additive dynamical system may show effective higher-order phase couplings after reduction.",
+      "sourceAssumptions": [
+        "continuous real time and differentiable node states",
+        "time scale/weak-coupling ε and stable attracting phase torus for specific reduction",
+        "fixed topology in examples",
+        "formal decomposition into higher-order terms often nonunique"
+      ],
+      "positiveStructuralLink": "Powerful observer-sufficiency falsifier: a detected higher-order effective term need not mean primitive physical higher-order law, and a large hyperedge need not mean dynamically irreducible update.",
+      "nonfaithfulMappingRisk": "No automatic transfer from continuous oscillator ODE and invariant tori to discrete born-node bit-mutating unordered hypergraph rewrites; static B^T B spectra do not prove source dynamics.",
+      "falsifier": "Algebraic rewrite quotient changes enabled-event occurrence or future transition distribution despite matching vector-field/readout.",
+      "newStructuralFamily": "Nonunique effective interaction order under reductions of pairwise full-state dynamics",
+      "webEvidence": "https://doi.org/10.1137/21M1414024",
+      "evidenceTier": "original_theorem_definitions_and_equations_located_not_independently_proved",
+      "sourceToNativeMapping": "not_attempted",
+      "reproductionStatus": "not_executed",
+      "qualification": "EXTERNAL mathematical source only; no native Causal Step equivalence"
+    }
+  ],
+  "priority": [
+    "Effective dynamical order vs topological order (Neuhäuser): immediate falsifier for 'k-hyperedge implies irreducible k-body dynamics'.",
+    "Conditional enabling/inhibition and forward-back Petri encoding (Koutny): closest typed finite process comparison.",
+    "Associative rewrites under admissible matches (Behr): exact conditions for carrying T4 concurrent/higher-composition semantics.",
+    "Formal ambiguity of effective vs microscopic higher-order state (Bick) and representation-dependent dynamics (Zhang).",
+    "Sequential growth Bell/Markov/covariance (Rideout–Sorkin): strictly requires locally finite binary causal poset and specific stochasticity."
+  ],
+  "noNativeExecution": true,
+  "noPhysicsValidation": true,
+  "unreproduced": [
+    "External derivations, proofs and datasets (only source definitions and theorem statements checked)",
+    "Native Causal Step faithful representation or bisimulation for any extracted case",
+    "Cross-domain search source saturation for 16 domains",
+    "Physical gravity, quantum, topology or matter emergence"
+  ],
+  "freshness": "Exact six independent original research papers. Corpus prior version remains frozen; new records and edition aliases must be audited against v0.3."
+}
