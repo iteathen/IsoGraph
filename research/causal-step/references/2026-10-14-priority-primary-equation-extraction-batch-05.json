@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-14",
+  "branch": "research/causal-step",
+  "status": "FOUR original technical source equations/definitions from previously unrepresented mathematical comparison domains (R07, R09, R16); no rederivation of external theorems",
+  "records": [
+    {
+      "id": "MECH-17",
+      "canonicalCorpus": "LS/LS-051",
+      "domain": "R09",
+      "title": "Stochastic thermodynamics, fluctuation theorems, and molecular machines",
+      "authors": [
+        "Udo Seifert"
+      ],
+      "year": 2012,
+      "publication": "Reports on Progress in Physics 75 (2012) 126001, original arXiv 1205.4176 v1",
+      "doi": "10.1088/0034-4885/75/12/126001",
+      "original": "https://arxiv.org/pdf/1205.4176",
+      "pageEvidence": [
+        "Original arXiv PDF zero-index p36 (printed page 37) Eqs 110–115, screenshot inspected",
+        "PDF p38 (printed page39) Eqs 121–126, screenshot inspected"
+      ],
+      "objectTypes": [
+        "discrete states n and Markov chain transition rates w_{mn}(τ)",
+        "explicit physical time τ",
+        "state distribution p_n(τ)",
+        "stochastic trajectories n(τ) and conjugate reverse dynamics"
+      ],
+      "equations": [
+        {
+          "where": "PDF p36 Eq(110)",
+          "expr": "∂_τ p_n(τ)=Σ_{m≠n}[w_{mn}(τ)p_m(τ)−w_{nm}(τ)p_n(τ)]",
+          "role": "forward Markov master equation, rates are not derived from a static graph alone"
+        },
+        {
+          "where": "PDF p36 Eq(111)",
+          "expr": "j_{mn}(τ)=p_m(τ)w_{mn}(τ)−p_n(τ)w_{nm}(τ)=−j_{nm}(τ)",
+          "role": "physical probability current from rate-asymmetry; not ordinary causal hyperedge count"
+        },
+        {
+          "where": "PDF p38 Eq(123)",
+          "expr": "Δs^m=Σ_j ln[w_{n^-_j n^+_j}(τ_j)/w_{n^+_j n^-_j}(τ_j)]",
+          "role": "trajectory entropy production from forward/reversed rate ratios; reverse transitions and admissible stochastic ensembles assumed"
+        }
+      ],
+      "assumptions": [
+        "Continuous background time τ and differentiable distribution p_n(τ)",
+        "positive transition rates; reversed rates needed for finite log expression",
+        "Markov process ensemble, initial distribution and pathway probability weights",
+        "heat bath/thermodynamics only under additional local detailed balance and energy balance"
+      ],
+      "transfer": "Any candidate native causal entropy/back-pressure must first produce its own intrinsic stochastic rates and admissible reversed-event comparators; rates need not be tied to forced node birth.",
+      "negative": "A graph with cycles or changing edge counts does not by itself define heat, thermodynamic entropy production, or a fluctuation theorem. Seifert expressly notes identifying reverse log rates with medium heat is analogy absent a first law.",
+      "sourceStatus": "original primary PDF screenshots of exact three equations; external fluctuation theorem not rederived",
+      "sourceMapping": "not_attempted"
+    },
+    {
+      "id": "MECH-18",
+      "canonicalCorpus": "LS/LS-052",
+      "domain": "R09",
+      "title": "A Compositional Framework for Markov Processes",
+      "authors": [
+        "John C. Baez",
+        "Brendan Fong",
+        "Blake S. Pollard"
+      ],
+      "year": 2016,
+      "publication": "Journal of Mathematical Physics 57 (2016) 033301; author PDF Feb 15 2016",
+      "doi": "10.1063/1.4941578",
+      "original": "https://math.ucr.edu/home/baez/markov.pdf",
+      "pageEvidence": [
+        "Original author PDF zero-index page11, Definition8 open master equation, inspected screenshot",
+        "Original author PDF zero-index page35 Theorem52, screenshot inspected"
+      ],
+      "objectTypes": [
+        "finite directed Markov process states N, edges E with rates",
+        "chosen input/output terminals X,Y and terminal image T⊆N",
+        "population variables p_i(t), equilibrium q_i",
+        "open Markov process morphisms, steady-state boundary relations"
+      ],
+      "equations": [
+        {
+          "where": "PDF p11 Definition 8",
+          "expr": "d p_i/dt = Σ_j H_{ij} p_j(t) for i∈N\\T, with p_i(t)=f_i(t) on terminals T",
+          "role": "given rates and physical time: internal Markov evolution with external boundary inputs"
+        },
+        {
+          "where": "PDF p12 Definition 12 (original publisher)",
+          "expr": "H_{ij} q_j=H_{ji} q_i",
+          "role": "detailed balance required for selected minimization and resistor analogy; not a generic network property"
+        },
+        {
+          "where": "PDF p35 Theorem 52",
+          "expr": "black-box functor □:DetBalMark→LinRel maps detailed-balanced open Markov process to a Lagrangian relation, preserving composition",
+          "role": "lossy boundary-relation projection functor under given equilibrium hypotheses"
+        }
+      ],
+      "assumptions": [
+        "continuous-time Markov generator H and chosen reaction rates",
+        "distinguished input/output terminals and prescribed boundary populations",
+        "positive equilibrium population q, detailed balance for Thm52",
+        "finite sets / chosen categories and linear relations"
+      ],
+      "transfer": "Exact test of *boundary observer completeness* versus micro-event difference; names the reconstruction limitation and composition when detailed balance holds.",
+      "negative": "Matching steady-state boundary relation alone does not give every local transition or distinguish different internal Markov processes. The native simulator lacks stipulated continuous-time rates and detailed balance.",
+      "sourceStatus": "original author PDF Eq/definitions and theorem visually inspected; full categorical theorem not rederived",
+      "sourceMapping": "not_attempted"
+    },
+    {
+      "id": "MECH-19",
+      "canonicalCorpus": "F/F13",
+      "domain": "R07",
+      "title": "String-net condensation: A physical mechanism for topological phases",
+      "authors": [
+        "Michael A. Levin",
+        "Xiao-Gang Wen"
+      ],
+      "year": 2005,
+      "publication": "Physical Review B 71 045110 (2005), original arXiv cond-mat/0404617v2",
+      "doi": "10.1103/PhysRevB.71.045110",
+      "original": "https://arxiv.org/pdf/cond-mat/0404617",
+      "pageEvidence": [
+        "Original arXiv PDF zero-index page6 (printed page7) Eq(10)–(14), screenshot inspected"
+      ],
+      "objectTypes": [
+        "specified honeycomb lattice with spin labels on edges",
+        "complex quantum spin Hilbert space",
+        "string-net branching/fusion rules and F-symbol/6j data",
+        "vertex charge projectors Q_I, plaquette flux operators B_p"
+      ],
+      "equations": [
+        {
+          "where": "PDF p6 Eq(10)",
+          "expr": "H=−Σ_I Q_I−Σ_p B_p; B_p=Σ_s a_s B_p^s",
+          "role": "assumed exactly-solvable quantum spin Hamiltonian with explicitly supplied local projectors"
+        },
+        {
+          "where": "PDF p6 Eq(11)",
+          "expr": "Q_I |i,j,k>=δ_{ijk}|i,j,k>",
+          "role": "local branching/fusion admissibility imposed, not emergent arbitrary source hyperedge enabling"
+        },
+        {
+          "where": "PDF p6 just below Eq(14)",
+          "expr": "[Q_I,B_p]=[B_p,B_q]=0 for exact-solvability under F-symbol consistency",
+          "role": "commuting projectors structure requires fusion category consistency"
+        }
+      ],
+      "assumptions": [
+        "2D honeycomb and local spin labels preselected; higher dimensional 3D model separately discussed",
+        "full Hilbert-space quantum amplitudes and fixed Hamiltonian",
+        "fusion and F-symbol algebraic consistency",
+        "physical phase interpreted relative to the preexisting lattice/gauge/spin dynamics"
+      ],
+      "transfer": "Potential exact benchmark for *genuine emergence within a known quantum many-body system* and for testing which local projectors/fusion constraints are input rather than output.",
+      "negative": "A k-way hyperedge occurrence or periodic bit pattern is not a string-net condensate, quantum gauge field, or fermion. Quantized Hilbert states/lattice already there; cannot read photons or particles off rank alone.",
+      "sourceStatus": "original source Eq(10)-(14) and local projector properties inspected; full fusion identities and ground-state proof not reproduced",
+      "sourceMapping": "not_attempted"
+    },
+    {
+      "id": "MECH-20",
+      "canonicalCorpus": "LX/LX-020",
+      "domain": "R16",
+      "title": "Derivation of the Dirac equation from principles of information processing",
+      "authors": [
+        "Giacomo Mauro D'Ariano",
+        "Paolo Perinotti"
+      ],
+      "year": 2014,
+      "publication": "Physical Review A 90 (2014) 062106; original author's published PDF",
+      "doi": "10.1103/PhysRevA.90.062106",
+      "original": "https://wordpress.qubit.it/wp-content/uploads/publications-dariano/1306.1934.pdf",
+      "pageEvidence": [
+        "Original author-published PDF zero-index p2 (printed 062106-3) Eqs(10),(11),(14),(16),(17), screenshot inspected"
+      ],
+      "objectTypes": [
+        "homogeneous local quantum cellular automaton",
+        "Cayley graph of finitely generated Abelian group Z^3",
+        "complex quantum Hilbert spinor/site degrees",
+        "unitarity-constrained local operator matrices A_h and quantum translation operators T_h"
+      ],
+      "equations": [
+        {
+          "where": "Original published PDF p2 Eq(10)",
+          "expr": "A=Σ_{h∈S} T_h⊗A_h",
+          "role": "quantum-step global unitary assembled from local group translation plus internal coin/spin operators"
+        },
+        {
+          "where": "Original published PDF p2 Eq(11)",
+          "expr": "T_h |k> = exp(−i k·h)|k>",
+          "role": "Fourier labeling and lattice group translations; geometric wavevector structure assumed or derived under chosen group"
+        },
+        {
+          "where": "Original published PDF p2 Eq(17)",
+          "expr": "Σ_{h∈S} A_h A_h†=I_s and Σ_{h−h'=h''} A_h A_h'†=0",
+          "role": "unitarity constraints on transition matrices used to classify automata"
+        }
+      ],
+      "assumptions": [
+        "quantum Hilbert states with locally unitary evolution postulated",
+        "homogeneity/locality and isotropy chosen as operational axioms",
+        "Abelian Z^3 and bcc lattice singled out for 3-space-dimensional Dirac limit",
+        "wavevector/mass small-scale asymptotic limit required, not emergent from native causal hyperedges"
+      ],
+      "transfer": "One of the clearest independent examples of a continuum equation appearing from discrete relational quantum dynamics once strong explicit information-processing axioms and a chosen 3D group hold.",
+      "negative": "Does not recover Hilbert/unitarity/3D group from unconstrained premetric bits; finite native causal rewrite rank k=3 is not an automatically emergent 3D spatial lattice.",
+      "sourceStatus": "original published original author PDF Eq(10-17) inspected, large-scale Dirac PDE limit not independently rederived",
+      "sourceMapping": "not_attempted"
+    }
+  ],
+  "distinctFields": [
+    "R07",
+    "R09",
+    "R16"
+  ],
+  "controls": {
+    "prefilledHilbertQuantum": "Levin-Wen and D'Ariano quantum Hilbert states assumed",
+    "prefilledKineticAndEntropy": "Seifert Markov rate and physical time assumed",
+    "compositionalBlackBoxBoundary": "Baez Markov blackbox functor obeys specific detailed balance hypotheses",
+    "nativeRuleSourceUnchanged": true
+  },
+  "next": "Continue original mathematical extraction in observational R14 as data/forward operator rather than invented micro-generative transition. Then domain/citation saturation passes."
+}
