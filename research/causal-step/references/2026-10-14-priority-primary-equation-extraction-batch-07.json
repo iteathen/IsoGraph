@@ -1,0 +1,322 @@
+{
+  "date": "2026-10-14",
+  "branch": "research/causal-step",
+  "title": "Batch 07 original biochemical formal dynamics: κ-calculus and reaction systems",
+  "status": "TWO original mathematical source schemes with guards/transition composition extracted; no full proof/native map/saturation",
+  "paperVersionCaution": "2003 author prepublication PDF of a 2004 journal paper explicitly separated from journal page numbering",
+  "searchRoutes": [
+    "chemical site/bond concurrent rule formalism as alternative to hyperedge physics taxonomy",
+    "reaction systems inhibition/no permanence as alternative to graph/Petri token-process semantics"
+  ],
+  "records": [
+    {
+      "id": "MECH-24",
+      "canonicalCorpus": "LS/LS-008",
+      "domain": "R02",
+      "title": "Formal molecular biology",
+      "authors": [
+        "Vincent Danos",
+        "Cosimo Laneve"
+      ],
+      "year": 2004,
+      "sourceVersion": {
+        "sourceDOIorArxiv": "10.1016/j.tcs.2004.03.065",
+        "versionDate": "Original author-hosted prepublication manuscript dated 2003-12-23; published Theoretical Computer Science 325(1) 69-110 (2004); inspected PDF page numbers refer to the prepublication PDF, not automatically the journal.",
+        "sourceGitOrDatasetHash": null,
+        "exactMathLocator": [
+          "author PDF zero-index page 9, printed 10: Definition 1 structural congruence; α-conversion, multiset mixture, scope extrusion",
+          "author PDF zero-index page 10, printed 11: Definition 2 graph-likeness; free names at most twice and bound names zero or exactly twice; Definition 3 translation of graph-like solutions to graphs-with-sites",
+          "author PDF zero-index page 12, printed 13: Lemma 1 free-name preservation under growth, Definition 4 monotonic reaction and antimonotonic dual",
+          "author PDF zero-index page 22, printed 23: forgetting extended site/interface logs and Definitions 7–8 of mκ interaction and monotonic projection"
+        ]
+      },
+      "originalPrimary": "https://www.cs.unibo.it/~laneve/papers/fmb.pdf",
+      "modelScope": {
+        "physicalClaims": "Formal biochemical mechanism semantics, not a physical law inferred from Causal Step or proof of natural kinetics",
+        "formalDomain": "finite protein agent instances with site interfaces; bond-name scope restriction and binary named bonds, with optional free sites; pre-solutions/extended interfaces, site activity, binding history logs and group names in mκ",
+        "relevantCounterexample": "A graph-like solution with a bound name at three sites is inadmissible (Definition 2), whereas a single native rank-3 hyperedge is admissible. An encoding via event vertex adds new state/identity obligations."
+      },
+      "stateObject": {
+        "types": [
+          "finite protein agent instances with site interfaces",
+          "bond-name scope restriction and binary named bonds, with optional free sites",
+          "pre-solutions/extended interfaces, site activity, binding history logs and group names in mκ"
+        ],
+        "arityAndMultiplicity": {
+          "allowedArity": "κ graph-like bond labels appear 0 or 2 times under bound name and free names at most twice; mκ interaction at most two protein agents, but coarse reactions may change connected groups; group names in mκ add separate coordination",
+          "occurrenceIdentity": "protein instances and their site bond naming distinguished modulo syntactic congruence and α-renaming; event identity not automatically an exposed label",
+          "pairwiseProjection": "projection forgetting integer site logs erases detailed history; transforming each k-way hyperedge into a binary-bond clique loses original native occurrence identity unless explicit event-node genealogy retained"
+        },
+        "labelsAndSymmetries": [
+          "α-equivalence of bound bond names; structural congruence, site annotations and log projection"
+        ],
+        "fundamentalVariables": [
+          "finite protein agent instances with site interfaces",
+          "bond-name scope restriction and binary named bonds, with optional free sites",
+          "pre-solutions/extended interfaces, site activity, binding history logs and group names in mκ"
+        ],
+        "derivedVariables": [
+          "Enabled reaction/event set under source guards",
+          "source-specific reachable successor configurations"
+        ]
+      },
+      "actualDynamics": {
+        "initialStatePredicates": [
+          "solution must satisfy graph-likeness, named-site interface sort/correct scope",
+          "rule L,R must satisfy graph-likeness; nonempty/connected reactum for monotonic reaction under Definition 4"
+        ],
+        "eventEnablement": [
+          "monotone rule L -> (~x)R only when (~x) |- L <= R in extended growth preorder; both sides graph-like and R connected",
+          "newly synthesized protein site interface is complete; newly introduced links use fresh bound names; antimonotonic dual controls removal",
+          "mκ interaction at most two agents, with free names of reactum no greater than free names of redex, and monotonicity of κ projection"
+        ],
+        "transitionRule": [
+          "match typed protein patterns in solution modulo structural congruence, replace L occurrence by bound/new-name R under monotone or dual antimonotone rule",
+          "site bonds and agents may be created or destroyed, preserving unaffected free name links; mκ forgets site logs under projection"
+        ],
+        "compositionRule": [
+          "compositional mixture/α-scope laws and rewrite closure under contexts with rule and graph-likeness premises",
+          "coarse κ transformations can be embedded as multi-step mκ self-assembly under special treatment of group/site logs; not literal one-step event equality"
+        ],
+        "schedulingAndStochasticity": [
+          "nondeterministic rule application/causal monotonicity condition; no assumed numerical real-time reactions or mass-action rates"
+        ],
+        "birthDeathConservation": [
+          "create/remove protein agents or named bonds according to explicitly selected rule; no obligatory single newborn per event"
+        ],
+        "observerAccess": [
+          "source-admissible interventions only: reagent presence, inhibitor flags, protein interface patterns and legal source contexts; no physical measurement"
+        ],
+        "resourceLimits": [
+          "formal finite species/site conditions are typed mathematical assumptions, not physical spatial dimensionality or an experiment cap"
+        ]
+      },
+      "preloadedAssumptions": {
+        "spacetime": "not supplied by source",
+        "topologicalDimension": "not supplied by source",
+        "metric": "not supplied by source",
+        "physicalTime": "not supplied by source",
+        "HilbertOrProbability": "not supplied by source",
+        "energy": "not supplied by source",
+        "massOrMatter": "not supplied by source",
+        "entropyOrTemperature": "not supplied by source",
+        "geometryOrTopology": "typed protein site-interface graph and named binary bonds postulated",
+        "causalDirectedOrder": "causal monotonicity is formal named-bond-growth constraint, not an assumed physical causal poset"
+      },
+      "mappingToNativeCausalStep": {
+        "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+        "representationMap": "possible source node-bit -> protein site-state encoding and k-way occurrence -> auxiliary event agent with bond sites; would require demonstrating event multiplicity, read-only guard and guaranteed newborn/offspring rule and projection reversibility",
+        "equivalenceRelation": "would need to preserve all typed source/native event enabling, participant states, source occurrence identity, allowed transforms and complete histories under declared α-renaming/equivalence, not only output-set behavior",
+        "forwardLawfulDynamicsProof": "NOT_ATTEMPTED",
+        "reverseRecoveryOrCounterexample": "A graph-like solution with a bound name at three sites is inadmissible (Definition 2), whereas a single native rank-3 hyperedge is admissible. An encoding via event vertex adds new state/identity obligations.",
+        "statefulInterferenceAndTripleCompositionCheck": "NOT_ATTEMPTED; every proposed mapping must test 83 T4 bit-state-sensitive independence signatures and 660 initial pairwise commuting but noncomposable triple source cases",
+        "independentNulls": [
+          "same final presence set but different producers and event multiplicities",
+          "matching guard syntax but different global versus selected-event update semantics"
+        ],
+        "status": "not_attempted",
+        "commutingOperationalDiagram": "R(T_native(s,e)) ≅ T_external(R(s),F_s(e)) unproven and in simple one-step identifications falsified by stated mechanisms",
+        "higherCompositionWitness": "No native event-triple reconstruction; source/target scheduling and positive/negative site guards differ",
+        "similarityByPhysicalMeasurementsPermitted": false
+      },
+      "physicalEvidence": {
+        "status": "outside source-level relational mapping",
+        "notRequiredForRelationalComparison": true,
+        "notUsedToInferUnits": true,
+        "notUsedAsPositiveMatch": true,
+        "originalPhysicsSources": "original mathematical paper only",
+        "futureEmpiricalQuestion": "No physical quantity or unit introduced"
+      },
+      "extractionStatus": {
+        "reviewerOrAgent": "AI assistant, under Joshua Oshiro's 2026-10-14 source-first research direction",
+        "recordedOn": "2026-10-14",
+        "evidenceTier": "formal_transition_extracted",
+        "mathEquationReadBackVerified": true,
+        "simulationOrTheoremReproduced": false,
+        "ambiguitiesAndCompetingFormulations": [
+          "source bond arity strictly two endpoints for graph-like representation; direct rank-k event link fails without encoding",
+          "monotonic κ/anti dual admissibility and named-edge freshness are not native complete bit Hamming guard",
+          "κ-mκ projection forgets site logs, coarse step can need several fine interactions; no native T4 triple-coherence preservation theorem",
+          "Danos-Laneve author manuscript and published 2004 journal may differ in exact pagination; keep source version explicit",
+          "External biochemical interpretation is model motivation, not verified microscopic physical law"
+        ],
+        "noInferenceBeyondOriginalSource": true
+      },
+      "exactSourceNotes": {
+        "original": "https://www.cs.unibo.it/~laneve/papers/fmb.pdf",
+        "assessedOriginalMath": true,
+        "validityVersion": "Original author-hosted prepublication manuscript dated 2003-12-23; published Theoretical Computer Science 325(1) 69-110 (2004); inspected PDF page numbers refer to the prepublication PDF, not automatically the journal.",
+        "negativeResults": [
+          "Definition 2 intentionally excludes a single κ bond-name appearing three times, so native rank-3 unordered hyperedge cannot be simply identified with one κ edge",
+          "site log erasure in extended mκ->κ projection can collapse event-history or site-state information; coarse->fine changes temporal granularity, not automatic step-for-step bisimulation"
+        ]
+      }
+    },
+    {
+      "id": "MECH-25",
+      "canonicalCorpus": "EXP/212",
+      "domain": "R10",
+      "title": "Reaction Systems: a Formal Framework for Processes Based on Biochemical Interactions",
+      "authors": [
+        "Andrzej Ehrenfeucht",
+        "Grzegorz Rozenberg"
+      ],
+      "year": 2010,
+      "sourceVersion": {
+        "sourceDOIorArxiv": "10.14279/tuj.eceasst.26.364",
+        "versionDate": "Electronic Communications of the EASST 26, 2010-04-04, original publisher nine-page article; source PDF includes a cover so zero-index page2 is printed page2. Basic reaction-system formalism predates this survey.",
+        "sourceGitOrDatasetHash": null,
+        "exactMathLocator": [
+          "publisher original PDF zero-index page2 (printed 2/9) Definition 1: reaction triplet a=(R,I,P) and Definition 2: R subset T, I intersect T empty; res_a(T), res_A(T)=union res_a(T)",
+          "publisher PDF zero-index page3 (printed 3/9): §3 explicit no-permanency, no resource counting, shared positive reactants have no mutual exclusion; Definition 3 system (S,A)",
+          "publisher PDF zero-index page4 (printed 4/9): Definition 4 external context C, results D, step D_i=res_A(D_(i-1) union C_(i-1)), W_i=D_i union C_i"
+        ]
+      },
+      "originalPrimary": "https://eceasst.org/index.php/eceasst/article/download/1635/1762/1773",
+      "modelScope": {
+        "physicalClaims": "Formal biochemical mechanism semantics, not a physical law inferred from Causal Step or proof of natural kinetics",
+        "formalDomain": "finite species/background set S; presence-only state T subset S, reaction identifiers a in A subset rac(S); positive reactants R_a, inhibitors I_a and products P_a finite subsets S; optional exogenous context sequence C_i and result sequence D_i",
+        "relevantCounterexample": "Let a and b be both enabled with overlapping reactants and disjoint product sets. Source res_A(T) unconditionally includes both outputs, but a native selected single firing yields only the chosen event effect; treating them as identical one-step dynamics fails. A species present in T and no product of A vanishes, without any consuming event."
+      },
+      "stateObject": {
+        "types": [
+          "finite species/background set S",
+          "presence-only state T subset S, reaction identifiers a in A subset rac(S)",
+          "positive reactants R_a, inhibitors I_a and products P_a finite subsets S",
+          "optional exogenous context sequence C_i and result sequence D_i"
+        ],
+        "arityAndMultiplicity": {
+          "allowedArity": "finite positive reactant and inhibitor sets; semantic guards genuine multi-reactant conjunctive positive and disjoint negative conditions, unbounded except finite background S",
+          "occurrenceIdentity": "species present/absent as sets; no counts of resource tokens, copies, births or distinct repeated producer occurrences in resulting state",
+          "pairwiseProjection": "distinct simultaneously enabled producers with overlapping P union to same product set; no per-reaction event history recoverable from T alone"
+        },
+        "labelsAndSymmetries": [
+          "literal species set membership and reaction identities, but outputs quotient producing provenance"
+        ],
+        "fundamentalVariables": [
+          "finite species/background set S",
+          "presence-only state T subset S, reaction identifiers a in A subset rac(S)",
+          "positive reactants R_a, inhibitors I_a and products P_a finite subsets S",
+          "optional exogenous context sequence C_i and result sequence D_i"
+        ],
+        "derivedVariables": [
+          "Enabled reaction/event set under source guards",
+          "source-specific reachable successor configurations"
+        ]
+      },
+      "actualDynamics": {
+        "initialStatePredicates": [
+          "finite background species S and finite reaction set A",
+          "for each a, R∩I=∅ and paper assumes all R,I,P nonempty",
+          "chosen input T subset S; C_i exogenous environment in interactive processes"
+        ],
+        "eventEnablement": [
+          "reaction enabled iff R_a subseteq T and I_a intersection T is empty",
+          "all and only enabled reactions in A contribute products to the same global successor"
+        ],
+        "transitionRule": [
+          "res_a(T)=P_a if enabled else empty set",
+          "res_A(T)=union_{a in A} res_a(T); other input species disappear unless produced, even if not reactants",
+          "interactive process D_1=res_A(C_0); D_i=res_A(D_(i-1) union C_(i-1)), W_i=D_i union C_i"
+        ],
+        "compositionRule": [
+          "system union (S1,A1)+(S2,A2)=(S1 union S2,A1 union A2), with shared chemical alphabet, no distinguished interface required",
+          "a parallel global union of independent output sets for each state; unlike serialized, consuming event occurrences or competing resource use"
+        ],
+        "schedulingAndStochasticity": [
+          "synchronous global successor over all eligible reactions, optional exogenous context; no physical time unit or kinetic probability rate fixed"
+        ],
+        "birthDeathConservation": [
+          "all species not in union of produced output sets fail to persist; contexts may restore external presence; no forced unique new instance"
+        ],
+        "observerAccess": [
+          "source-admissible interventions only: reagent presence, inhibitor flags, protein interface patterns and legal source contexts; no physical measurement"
+        ],
+        "resourceLimits": [
+          "formal finite species/site conditions are typed mathematical assumptions, not physical spatial dimensionality or an experiment cap"
+        ]
+      },
+      "preloadedAssumptions": {
+        "spacetime": "not supplied by source",
+        "topologicalDimension": "not supplied by source",
+        "metric": "not supplied by source",
+        "physicalTime": "not supplied by source",
+        "HilbertOrProbability": "not supplied by source",
+        "energy": "not supplied by source",
+        "massOrMatter": "not supplied by source",
+        "entropyOrTemperature": "not supplied by source",
+        "geometryOrTopology": "no geometry, but finite static type universe and fixed reaction set A postulated",
+        "causalDirectedOrder": "synchronous interactive-process index, no fundamental causal partial order"
+      },
+      "mappingToNativeCausalStep": {
+        "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+        "representationMap": "abstract source participant-bit guard could be encoded as presence/absence inhibitor/positive species tests only under an invented species mapping; global parallel union and node-creation lack faithful native transition map",
+        "equivalenceRelation": "would need to preserve all typed source/native event enabling, participant states, source occurrence identity, allowed transforms and complete histories under declared α-renaming/equivalence, not only output-set behavior",
+        "forwardLawfulDynamicsProof": "NOT_ATTEMPTED",
+        "reverseRecoveryOrCounterexample": "Let a and b be both enabled with overlapping reactants and disjoint product sets. Source res_A(T) unconditionally includes both outputs, but a native selected single firing yields only the chosen event effect; treating them as identical one-step dynamics fails. A species present in T and no product of A vanishes, without any consuming event.",
+        "statefulInterferenceAndTripleCompositionCheck": "NOT_ATTEMPTED; every proposed mapping must test 83 T4 bit-state-sensitive independence signatures and 660 initial pairwise commuting but noncomposable triple source cases",
+        "independentNulls": [
+          "same final presence set but different producers and event multiplicities",
+          "matching guard syntax but different global versus selected-event update semantics"
+        ],
+        "status": "not_attempted",
+        "commutingOperationalDiagram": "R(T_native(s,e)) ≅ T_external(R(s),F_s(e)) unproven and in simple one-step identifications falsified by stated mechanisms",
+        "higherCompositionWitness": "No native event-triple reconstruction; source/target scheduling and positive/negative site guards differ",
+        "similarityByPhysicalMeasurementsPermitted": false
+      },
+      "physicalEvidence": {
+        "status": "outside source-level relational mapping",
+        "notRequiredForRelationalComparison": true,
+        "notUsedToInferUnits": true,
+        "notUsedAsPositiveMatch": true,
+        "originalPhysicsSources": "original mathematical paper only",
+        "futureEmpiricalQuestion": "No physical quantity or unit introduced"
+      },
+      "extractionStatus": {
+        "reviewerOrAgent": "AI assistant, under Joshua Oshiro's 2026-10-14 source-first research direction",
+        "recordedOn": "2026-10-14",
+        "evidenceTier": "formal_transition_extracted",
+        "mathEquationReadBackVerified": true,
+        "simulationOrTheoremReproduced": false,
+        "ambiguitiesAndCompetingFormulations": [
+          "parallel all-enabled reactions versus native exactly one selected occurrence with state-dependent mutation and scheduling",
+          "set-of-species outputs merge identical products and lose original native event identity/multiplicity and provenance",
+          "no native node birth, existing link occurrence deletion/creation and history-dependent three-step guard automatically present",
+          "Danos-Laneve author manuscript and published 2004 journal may differ in exact pagination; keep source version explicit",
+          "External biochemical interpretation is model motivation, not verified microscopic physical law"
+        ],
+        "noInferenceBeyondOriginalSource": true
+      },
+      "exactSourceNotes": {
+        "original": "https://eceasst.org/index.php/eceasst/article/download/1635/1762/1773",
+        "assessedOriginalMath": true,
+        "validityVersion": "Electronic Communications of the EASST 26, 2010-04-04, original publisher nine-page article; source PDF includes a cover so zero-index page2 is printed page2. Basic reaction-system formalism predates this survey.",
+        "negativeResults": [
+          "source expressly rejects conflict for reactions with overlapping positive reactants; both simultaneously contribute products",
+          "source expressly rejects permanence and token counts; state T and next T' do not retain reaction-occurrence identity",
+          "requires prechosen finite species alphabet and externally supplied reaction catalogue; native newborn nodes create fresh graph objects not named species states"
+        ]
+      }
+    }
+  ],
+  "comparativeStructuralFindings": [
+    "Danos–Laneve κ bound names represent two-site edges, not direct k-ary edges; complex multi-agent rewrite effects may arise via underlying pairwise bonds and mκ interactions",
+    "Ehrenfeucht–Rozenberg fixed-species set applies every enabled reaction in parallel, suppresses positive reactant conflicts, merges producer identities and discards nonreproduced input species",
+    "both are formal source-defined event guards and state updates, but exact dynamic equivalence between them or to native Causal Step is unproven"
+  ],
+  "negativeSourceEquivalence": "Counterexample: reaction systems produce all enabled overlapping-positive-reactant reaction products globally, while native simulator selects a single hyperedge event. κ graph-like bound name must have exactly two occurrences; a native unordered rank-k≥3 occurrence violates literal one-bond representation.",
+  "priorArtCredit": "Danos and Laneve 2004; Ehrenfeucht and Rozenberg 2010 survey of their earlier reaction-systems formalism; prior original 2007 research acknowledged",
+  "native": {
+    "unmodifiedSourceGitBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "separateDirectedT3MathematicalWitness": true,
+    "preserveT4StateSensitivePairCases": 83,
+    "preserveT4TripleBlocks": 660
+  },
+  "gates": {
+    "C1": "OPEN 0/16, two source papers no qualified systematic field-wide query/citation saturation",
+    "C2": "PARTIAL 2 source mathematical original readbacks, 0 independently replicated complete proof",
+    "C3": "OPEN negative-case screening partial, no independent contrary literature saturation",
+    "C4": "OPEN 0 native bisimulations; no physical unit fitting"
+  },
+  "physicalMeasurementMatchingUsed": false
+}
