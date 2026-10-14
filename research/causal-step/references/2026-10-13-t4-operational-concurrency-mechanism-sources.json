@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-13",
+  "track": "Causal Step",
+  "research_direction": "Joshua Oshiro: genuinely higher-order, pre-metric causal rewriting; derive causal dependencies through operations, not graph-overlap resemblance",
+  "status": "Primary published abstracts/institutional records inspected; the cited paper theorems have NOT been independently reproduced and are NOT assumed to apply to current Causal Step generator.",
+  "entries": [
+    {
+      "id": "T4-P01",
+      "title": "Theory of traces",
+      "authors": "A. Mazurkiewicz",
+      "published": "Theoretical Computer Science 60 (1988), 1–82",
+      "primary": "https://doi.org/10.1016/0304-3975(88)90051-5",
+      "objects": "partially commuting action words and labeled partial-order / acyclic graph models",
+      "operations": "swap adjacent independent letters according to a specified independence relation; quotient interleavings into traces",
+      "transfer": "candidate notion of causal equivalence via commuting rewrite histories",
+      "assumptions": "independence relation must be stated for the action alphabet and domain; a fixed relation on bare edge identities is not justified when enabling/mutation is state-dependent",
+      "source_verification": "published journal abstract reviewed, detailed proof not reproduced"
+    },
+    {
+      "id": "T4-P02",
+      "title": "Fundamental Theory for Typed Attributed Graphs and Graph Transformation based on Adhesive HLR Categories",
+      "authors": "Hartmut Ehrig, Karsten Ehrig, Ulrike Prange, Gabriele Taentzer",
+      "published": "Fundamenta Informaticae 74 (2006), 31–61",
+      "primary": "https://doi.org/10.3233/FUN-2006-74103",
+      "objects": "typed attributed graphs and adhesive high-level replacement categories",
+      "operations": "graph transformation via DPO/HLR rules with local Church-Rosser, parallelism, concurrency, embedding and critical-pair results",
+      "transfer": "candidate precise conditions under which independent typed rewrites commute",
+      "assumptions": "categorical adhesive HLR structure, morphism/match/gluing, labels and conditions are load bearing; no demonstrated DPO interpretation of current state-mutation and born-node source rule",
+      "source_verification": "journal abstract reviewed; no imported theorem"
+    },
+    {
+      "id": "T4-P03",
+      "title": "Domain and event structure semantics for Petri nets with read and inhibitor arcs",
+      "authors": "Paolo Baldan, Nadia Busi, Andrea Corradini, G. Michele Pinna",
+      "published": "Theoretical Computer Science 323 (2004), 129–189",
+      "primary": "https://doi.org/10.1016/j.tcs.2004.04.001",
+      "objects": "Petri nets with reading and inhibition, event structures with dependency and asymmetric conflict",
+      "operations": "concurrent semantics using context/read arcs and inhibitor constraints; translates to event/domain structure",
+      "transfer": "most relevant mechanism for overlaps that are observationally read-only and for asymmetric enablement conflicts",
+      "assumptions": "token/place semantics, domain/event axioms, and net typing require fidelity proof before using with n-ary hypergraph source",
+      "source_verification": "published abstract and institutional bibliographic record checked; detailed categorical proof not independently checked"
+    },
+    {
+      "id": "T4-P04",
+      "title": "McMillan's Complete Prefix for Contextual Nets",
+      "authors": "Paolo Baldan, Andrea Corradini, Barbara König, Stefan Schwoon",
+      "published": "Transactions on Petri Nets and Other Models of Concurrency I (2008), LNCS",
+      "primary": "https://doi.org/10.1007/978-3-540-89287-8_12",
+      "objects": "bounded contextual Petri nets with nonconsuming read arcs, occurrence net prefixes",
+      "operations": "unfolding with histories, enabling contexts, and causal-conflict relations",
+      "transfer": "explicit precedent that one event may have multiple admissible histories and that shared reads should not automatically create dependence",
+      "assumptions": "bounded semi-weighted contextual nets; current Causal Step toy has forced node birth and may grow without bound",
+      "source_verification": "institutional record/author abstract verified; theorem not reproduced"
+    },
+    {
+      "id": "T4-P05",
+      "title": "Efficient unfolding of contextual Petri nets",
+      "authors": "Paolo Baldan, Alessandro Bruni, Andrea Corradini, Barbara König, César Rodríguez, Stefan Schwoon",
+      "published": "Theoretical Computer Science 449 (2012)",
+      "primary": "https://doi.org/10.1016/j.tcs.2012.04.046",
+      "objects": "contextual nets extended with read arcs",
+      "operations": "context-preserving unfoldings representing truly concurrent read-only access without forcing artificial read/write cycles",
+      "transfer": "potentially more faithful than pairwise touch order for comparing nonconsuming source participation",
+      "assumptions": "bounded-state unfolding formalisms have resource/marking constraints not yet derived from primitive hypergraph rewriting",
+      "source_verification": "published journal abstract verified; no theorem assumed"
+    }
+  ],
+  "historical_relation": "Addendum to F01–F27 foundational research registers, not a modification of existing source history or qualified semantic authority."
+}
