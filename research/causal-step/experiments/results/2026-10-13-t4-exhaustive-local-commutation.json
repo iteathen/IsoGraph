@@ -1,0 +1,1273 @@
+{
+  "experiment": "T4 exhaustive finite same-rule operational commute, conflict, dynamic independence tests",
+  "status": "executed mathematically exhaustive on listed finite initial-incidence and binary-state families",
+  "sourceBlobs": {
+    "engine": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "t2": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+    "historical": "d2d40f87d59a5a94d2df71a69543e521f6ad807f"
+  },
+  "category": "source-faithful local-rule operator applied to explicit counterfactual initial states; not a changed published source history",
+  "scope": {
+    "ruleCoefficients": "retrieved from pinned native engine, not hand-entered",
+    "families": [
+      "all k+1 choose k overlapping initial rank-k occurrences on k+1 vertices for all 2^(k+1) binary source assignments",
+      "two disjoint rank-k occurrences on 2k vertices for all 2^(2k) assignments",
+      "two distinct duplicate-occurrence rank-k incidences on k vertices for all 2^k assignments"
+    ],
+    "ruleModes": [
+      "original selected active mutation",
+      "frozen selected rule with mutation disabled as control"
+    ],
+    "constraints": [
+      "k=3,4,5 are finite prior experimental scopes, not physical dimension/rank ceilings",
+      "Every pair case is conditioned on both source occurrences already being enabled",
+      "Original simulator source rules unchanged; born-node names translated by selected event occurrence for two-order equivalence"
+    ]
+  },
+  "summary": {
+    "contexts": 7,
+    "ruleModes": 14,
+    "exhaustiveInputStates": 8288,
+    "coenabledPairs": 10102,
+    "commuting": 9285,
+    "disabling": 767,
+    "bothEnabledDifferent": 50,
+    "overlapStates": 576,
+    "overlapCoenabled": 5178,
+    "overlapCommuting": 4407,
+    "overlapBlocking": 741,
+    "overlapOrderSensitive": 30,
+    "disjointStates": 7424,
+    "disjointCoenabled": 4704,
+    "disjointCommuting": 4704,
+    "disjointNoncommuting": 0,
+    "duplicateStates": 288,
+    "duplicateCoenabled": 220,
+    "duplicateCommuting": 174,
+    "duplicateBlocking": 26,
+    "duplicateOrderSensitive": 20,
+    "stateDependentPairSignatures": 83,
+    "caseRuleSubsets": []
+  },
+  "examples": {
+    "stateDependent": [
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "pair": "initial:0,1,2|initial:0,1,3",
+        "possibleStatuses": [
+          "coenabled-but-disabling-conflict",
+          "commuting-square"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "pair": "occurrence-1|occurrence-2",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 3,
+        "id": 28,
+        "mode": "active",
+        "family": "complete-overlap",
+        "pair": "initial:0,1,2|initial:0,1,3",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 3,
+        "id": 28,
+        "mode": "active",
+        "family": "duplicate",
+        "pair": "occurrence-1|occurrence-2",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 4,
+        "id": 0,
+        "mode": "active",
+        "family": "complete-overlap",
+        "pair": "initial:0,1,2,3|initial:0,1,2,4",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "pair": "initial:0,1,2,3|initial:0,1,2,4",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict",
+          "two-orders-enabled-but-different-complete-states"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "duplicate",
+        "pair": "occurrence-1|occurrence-2",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      },
+      {
+        "k": 5,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "pair": "initial:0,1,2,3,4|initial:0,1,2,3,5",
+        "possibleStatuses": [
+          "commuting-square",
+          "coenabled-but-disabling-conflict"
+        ],
+        "note": "same typed incidences and rule coefficients, but different binary participant-state assignments"
+      }
+    ],
+    "commuteOverlap": [
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:0,1,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:0,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,1,3|initial:0,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 2,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:0,1,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 2,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:1,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 2,
+        "ones": 1,
+        "pair": "initial:0,1,3|initial:1,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 3,
+        "ones": 2,
+        "pair": "initial:0,2,3|initial:1,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 4,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:0,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 4,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:1,2,3",
+        "status": "commuting-square",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": true,
+        "eAfterF": true
+      }
+    ],
+    "disablingOverlap": [
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,1,2|initial:0,1,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,1,2|initial:0,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,1,2|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,1,3|initial:0,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,1,3|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 0,
+        "ones": 0,
+        "pair": "initial:0,2,3|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,1,2|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,1,3|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 1,
+        "ones": 1,
+        "pair": "initial:0,2,3|initial:1,2,3",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 2,
+        "sharedWrites": 2,
+        "fAfterE": false,
+        "eAfterF": true
+      }
+    ],
+    "orderSensitiveOverlap": [
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,1,2,4|initial:0,1,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,1,2,4|initial:0,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,1,2,4|initial:1,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,1,3,4|initial:0,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,1,3,4|initial:1,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 15,
+        "ones": 4,
+        "pair": "initial:0,2,3,4|initial:1,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 23,
+        "ones": 4,
+        "pair": "initial:0,1,2,3|initial:0,1,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 23,
+        "ones": 4,
+        "pair": "initial:0,1,2,3|initial:0,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 4,
+        "id": 21,
+        "mode": "active",
+        "family": "complete-overlap",
+        "mask": 23,
+        "ones": 4,
+        "pair": "initial:0,1,2,3|initial:1,2,3,4",
+        "status": "two-orders-enabled-but-different-complete-states",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      }
+    ],
+    "disjointCounterexample": [],
+    "duplicate": [
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "mask": 0,
+        "ones": 0,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "mask": 1,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "mask": 2,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "mask": 4,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "coenabled-but-disabling-conflict",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": false,
+        "eAfterF": false
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "active",
+        "family": "duplicate",
+        "mask": 7,
+        "ones": 3,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 3,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "fixed",
+        "family": "duplicate",
+        "mask": 0,
+        "ones": 0,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 0,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "fixed",
+        "family": "duplicate",
+        "mask": 1,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 0,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "fixed",
+        "family": "duplicate",
+        "mask": 2,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 0,
+        "fAfterE": true,
+        "eAfterF": true
+      },
+      {
+        "k": 3,
+        "id": 4,
+        "mode": "fixed",
+        "family": "duplicate",
+        "mask": 4,
+        "ones": 1,
+        "pair": "occurrence-1|occurrence-2",
+        "status": "commuting-square",
+        "overlap": 3,
+        "sharedWrites": 0,
+        "fAfterE": true,
+        "eAfterF": true
+      }
+    ]
+  },
+  "perCase": [
+    {
+      "k": 3,
+      "ruleId": 4,
+      "rule": {
+        "arity": 3,
+        "weights": 11,
+        "ranks": 1,
+        "mode": 1,
+        "keep": false
+      },
+      "mutation": 1,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 42,
+          "commuting": 24,
+          "disabling": 18,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 6
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 8,
+          "pairsInitiallyEnabled": 5,
+          "commuting": 2,
+          "disabling": 3,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 25,
+          "commuting": 25,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 4,
+      "rule": {
+        "arity": 3,
+        "weights": 11,
+        "ranks": 1,
+        "mode": 1,
+        "keep": false
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 42,
+          "commuting": 42,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 8,
+          "pairsInitiallyEnabled": 5,
+          "commuting": 5,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 25,
+          "commuting": 25,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "rule": {
+        "arity": 3,
+        "weights": 13,
+        "ranks": 3,
+        "mode": 0,
+        "keep": true
+      },
+      "mutation": 1,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 42,
+          "commuting": 24,
+          "disabling": 18,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 6
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 8,
+          "pairsInitiallyEnabled": 5,
+          "commuting": 2,
+          "disabling": 3,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 25,
+          "commuting": 25,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ruleId": 28,
+      "rule": {
+        "arity": 3,
+        "weights": 13,
+        "ranks": 3,
+        "mode": 0,
+        "keep": true
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 42,
+          "commuting": 42,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 8,
+          "pairsInitiallyEnabled": 5,
+          "commuting": 5,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 25,
+          "commuting": 25,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "rule": {
+        "arity": 4,
+        "weights": 27,
+        "ranks": 2,
+        "mode": 0,
+        "keep": false
+      },
+      "mutation": 1,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 140,
+          "commuting": 80,
+          "disabling": 60,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 10
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 10,
+          "commuting": 10,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 256,
+          "pairsInitiallyEnabled": 100,
+          "commuting": 100,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 0,
+      "rule": {
+        "arity": 4,
+        "weights": 27,
+        "ranks": 2,
+        "mode": 0,
+        "keep": false
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 140,
+          "commuting": 140,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 10,
+          "commuting": 10,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 256,
+          "pairsInitiallyEnabled": 100,
+          "commuting": 100,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "rule": {
+        "arity": 4,
+        "weights": 28,
+        "ranks": 7,
+        "mode": 1,
+        "keep": false
+      },
+      "mutation": 2,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 190,
+          "commuting": 70,
+          "disabling": 90,
+          "bothEnabledDifferent": 30,
+          "dynamicStatusPairs": 10
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 11,
+          "commuting": 7,
+          "disabling": 4,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 256,
+          "pairsInitiallyEnabled": 121,
+          "commuting": 121,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "ruleId": 21,
+      "rule": {
+        "arity": 4,
+        "weights": 28,
+        "ranks": 7,
+        "mode": 1,
+        "keep": false
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 190,
+          "commuting": 190,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 16,
+          "pairsInitiallyEnabled": 11,
+          "commuting": 11,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 256,
+          "pairsInitiallyEnabled": 121,
+          "commuting": 121,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 21,
+      "rule": {
+        "arity": 5,
+        "weights": 15,
+        "ranks": 15,
+        "mode": 0,
+        "keep": true
+      },
+      "mutation": 2,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 720,
+          "commuting": 555,
+          "disabling": 165,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 15
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 26,
+          "commuting": 21,
+          "disabling": 5,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 676,
+          "commuting": 676,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 21,
+      "rule": {
+        "arity": 5,
+        "weights": 15,
+        "ranks": 15,
+        "mode": 0,
+        "keep": true
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 720,
+          "commuting": 720,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 26,
+          "commuting": 26,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 676,
+          "commuting": 676,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 81,
+      "rule": {
+        "arity": 5,
+        "weights": 47,
+        "ranks": 13,
+        "mode": 1,
+        "keep": true
+      },
+      "mutation": 2,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 735,
+          "commuting": 585,
+          "disabling": 150,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 15
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 27,
+          "commuting": 22,
+          "disabling": 5,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 729,
+          "commuting": 729,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 81,
+      "rule": {
+        "arity": 5,
+        "weights": 47,
+        "ranks": 13,
+        "mode": 1,
+        "keep": true
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 735,
+          "commuting": 735,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 27,
+          "commuting": 27,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 729,
+          "commuting": 729,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 4,
+      "rule": {
+        "arity": 5,
+        "weights": 60,
+        "ranks": 13,
+        "mode": 2,
+        "keep": true
+      },
+      "mutation": 1,
+      "mode": "active",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 720,
+          "commuting": 480,
+          "disabling": 240,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 15
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 26,
+          "commuting": 0,
+          "disabling": 6,
+          "bothEnabledDifferent": 20,
+          "dynamicStatusPairs": 1
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 676,
+          "commuting": 676,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "ruleId": 4,
+      "rule": {
+        "arity": 5,
+        "weights": 60,
+        "ranks": 13,
+        "mode": 2,
+        "keep": true
+      },
+      "mutation": 0,
+      "mode": "fixed",
+      "families": [
+        {
+          "name": "complete-overlap",
+          "inputBinaryAssignments": 64,
+          "pairsInitiallyEnabled": 720,
+          "commuting": 720,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "duplicate",
+          "inputBinaryAssignments": 32,
+          "pairsInitiallyEnabled": 26,
+          "commuting": 26,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        },
+        {
+          "name": "disjoint",
+          "inputBinaryAssignments": 1024,
+          "pairsInitiallyEnabled": 676,
+          "commuting": 676,
+          "disabling": 0,
+          "bothEnabledDifferent": 0,
+          "dynamicStatusPairs": 0
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "A fixed static independence relation based only on event incidence and source rule identity can fail if the same coenabled occurrence pair commutes in one source-bit state but conflicts in another.",
+    "Overlapping read-only active hyperedges can commute, so shared-participant touch is not sufficient for causal precedence.",
+    "Disjoint simultaneous source operations provide an exact positive locality control in all enumerated allowed binary assignments.",
+    "Duplicate incidence does not imply the same event occurrence; both identity and multiplicity must survive causal comparison.",
+    "Exhaustive quantification is over only the stated small initial families and selected 7 source rules; not over all reachable graphs or all higher-order rules."
+  ],
+  "execution": {
+    "actual": true,
+    "environment": "local V8 isolate; source-backed rule extraction and independently gold-tested exact reducer",
+    "elapsedMilliseconds": 2722,
+    "sourceBlobSha": "35ef31a1234b2523b787a605498fe3ff332a99fa",
+    "reducerBlobSha": "f41e1449a5ddc4af11a3d5def7beab8cf6d7742d",
+    "t2BlobSha": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+    "nativeEngineBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "nodeCLIExecuted": false
+  }
+}
