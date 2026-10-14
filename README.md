@@ -136,7 +136,7 @@ IsoGraph is exercised both through domain applications and through research on t
 ### Domain/application research
 
 - [Emergent reality foundations](research/emergent-reality-foundations/README.md) — exploratory conditional constraints on pre-spacetime generation, structural back-pressure, coherent emergence, and generative–reconstructive asymmetry; dated discussion log.
-- [Three roles in effective symbolic presentation](research/primitive-presentation/README.md) — unqualified, original author-supplied inquiry draft and supporting source evidence on primitive dependency questions in complete symbolic presentations.
+- [Primitive Presentation — incomplete inquiry](research/primitive-presentation/README.md) — original source-preserved three-role manuscript, critical counterexamples, and explicitly incomplete/concluded author draft; unqualified research.
 - [Entropy and indistinguishability](research/entropy-indistinguishability/README.md) — source/apparent randomness, total physical indistinguishability conjecture, and critical adjacent literature (unverified working notes).
 - [Minimal Rule / Minimum Representation source sketches](research/minimal-role-reduction-adapter/README.md) — preserved historic source bundle, now routed separately: generative-rule work to emergent-reality foundations; two-track physics-to-SKI work to Primitive Presentation.
 - [P-vs-NP research](research/p-vs-np/README.md) — primitive computation structure, recursive IA, continuation-support reductions, representation-relative support growth, and explicit non-resolution of P versus NP.
@@ -149,7 +149,7 @@ IsoGraph is exercised both through domain applications and through research on t
 
 ### IsoGraph-family and research-method work
 
-- [Causal Step](research/causal-step/README.md) — independent new research folder; no defined hypothesis or disciplinary scope yet.
+- [Causal Step](research/causal-step/README.md) — independent exploratory causal-foundations research; two provisional premises, preserved failure evidence, and source-verified T1–T4 higher-order rewrite tests. Current working branch: `research/causal-step`.
 - [Discovery-method research](research/discovery/README.md) — discrepancy adjudication, Minimum Sufficient Support / Valuation development, and IA-oriented discovery guidance behind later DP revisions.
 - [DTS research](research/dts/README.md) — detailed transition anatomy, Transition Isomorph controls, decomposition, QU projection, and interpretation barriers.
 - [NEI research](research/nei/README.md) — the design/correction history behind conservative natural/domain identity reasoning and the rejection of unsupported coarsening.
