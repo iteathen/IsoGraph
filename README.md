@@ -135,6 +135,7 @@ IsoGraph is exercised both through domain applications and through research on t
 
 ### Domain/application research
 
+- [Emergent reality foundations](research/emergent-reality-foundations/README.md) — exploratory conditional constraints on pre-spacetime generation, structural back-pressure, coherent emergence, and generative–reconstructive asymmetry; dated discussion log.
 - [Three roles in effective symbolic presentation](research/primitive-presentation/README.md) — unqualified, original author-supplied inquiry draft and supporting source evidence on primitive dependency questions in complete symbolic presentations.
 - [Entropy and indistinguishability](research/entropy-indistinguishability/README.md) — source/apparent randomness, total physical indistinguishability conjecture, and critical adjacent literature (unverified working notes).
 - [Minimal Rule / Minimum Representation source sketches](research/minimal-role-reduction-adapter/README.md) — preserved historic source bundle, now routed separately: generative-rule work to emergent-reality foundations; two-track physics-to-SKI work to Primitive Presentation.

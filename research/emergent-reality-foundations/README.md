@@ -1,0 +1,92 @@
+# Emergent Reality Foundations
+
+**Project:** The Invariant Content of Formal and Physical Theories — emergent-reality foundations  
+**Status:** exploratory discussion / hypotheses only; no physical derivation, computational qualification, or experimental confirmation  
+**Current research dossier:** this README  
+**Earliest evidence currently located for this particular discussion:** preserved ChatGPT discussion dated 2026-10-12 (not necessarily public at that time)  
+**Retrospective record created:** 2026-10-12  
+**Discussion record:** [DISCUSSION_LOG.md](DISCUSSION_LOG.md) — user prompts preserved verbatim from the visible conversation; earlier assistant replies condensed and labeled as such
+
+## Minimal Rule research — supporting archived sketch
+
+The author has clarified that the [*Minimal Productive-Role Reduction as an Adapter Between Computation and Physical Structure* sketch](https://github.com/iteathen/IsoGraph/blob/research/import-archived-papers-20261012/research/minimal-role-reduction-adapter/evidence/source/minimal-role-reduction-adapter-sketch.md) belongs with this **Minimal Rule / emergent-generative-rules** investigation. It is *not* a third independent research project alongside the author's Minimum Representation work.
+
+The archived sketch offers a tentative pathway from executed computational models through reduction and cross-method comparison toward candidate minimal generative constraints. Its inherited three-role `α/β/γ` descriptions are historical analytical vocabulary from the unproved Primitive Presentation minimum; **they are not an established minimum rule count or an ontology of physical reality**. A computational translation or compressed role trace is not itself proof of an underlying physical generator. The source document remains unchanged and retains its [original archive provenance](https://github.com/iteathen/IsoGraph/blob/research/import-archived-papers-20261012/research/minimal-role-reduction-adapter/SOURCE_IMPORT.json).
+
+This is a retrospective **research-ownership correction by Joshua Oshiro** recorded on 2026-10-12, with agent-assisted dossier routing, not a new derivation or an activation of a new research campaign. The *separate* two-track physics-to-SKI translation sketch belongs to [Minimum Representation / Primitive Presentation research](https://github.com/iteathen/IsoGraph/blob/research/primitive-presentation-adversarial-review-20261012/research/primitive-presentation/README.md).
+
+## Research question and posture
+
+If observable reality emerges from a comparatively simple set of underlying rules or relations, what minimal requirements must that system satisfy to generate the complexity, coherence, persistent structures, common physical laws, and apparent directional asymmetries of our universe?
+
+Work **backward from necessary structural conditions**, not by declaring a favorite cellular automaton or branching rule to be the origin of reality. Do not import primitive space, time, mass, physical energy, or already-established thermodynamics when the investigation is explicitly asking how those properties could emerge. Maintain precise boundaries between speculation, conditional reasoning, mathematical consequence, analogy, and verified physics. Use conventional physics to look for structurally similar behavior and possible constraints, not to preemptively redefine the originating question.
+
+The goal is to identify candidate structural invariants across otherwise different generative and physical formulations, and ultimately to distinguish such invariants from representation-dependent coincidences.
+
+## Working language — essential interpretation
+
+- **Entropy**, in the human researcher's intended foundational use here, means a proposed primitive back-pressure / organizing tendency that forces proliferating possibilities into constrained, possibly stable or low-energy-like arrangements. This is **not a claim** that established statistical, information-theoretic, or thermodynamic entropy already has this definition. Whether one primitive mechanism can produce the later physical quantities remains open.
+- **P = 2P** is shorthand for an illustrative branching operation, not an assertion of numerical identity or a claimed physical origin. Likewise **Rule 110** illustrates how simple rules can support tremendous complexity; neither is the privileged substrate.
+- **P → NP** is a deliberately informal structural analogy for possible one-directional complexity growth and inversion difficulty, **not** the definition of P, NP, or the P-versus-NP decision problem, and not a proof of their separation.
+- **Quantum foam / boiling potential** is an illustrative image of available configurations, not an assertion that conventional quantum vacuum or pre-existing spacetime is present at the prephysical origin. Avoid smuggling temporal duration into an explicitly timeless premise.
+- **Finite rules** means the conjecture of a compact or finite generative constraint set; it does **not** mean finitely many states, a bounded universe, or currently proven finiteness of the laws.
+
+## Conditional constraints and conjectures accumulated
+
+1. **Generative sufficiency (conditional necessity).** If observable reality is generated by a primitive system G, G must support structures sufficient to account for observable physical phenomena. A system that cannot express the required structure cannot be the whole explanation.
+2. **Unbounded complexity versus universality.** Infinite or unbounded complexity alone does not entail that every imaginable structure is realizable. Universality requires a **specified target class and representation criterion**. If formalized physics belongs to that class, then a universal G can represent it. Consistency by itself does not imply computable representability.
+3. **Observed lawlike consistency.** The apparent persistence of physical regularities across large regions motivates—but does not logically prove—a stable, possibly compact set of admissibility constraints. An infinity of unrealized, isolated, or observationally inaccessible possibilities is not thereby excluded.
+4. **Possibility versus physical evidence.** All candidate possibilities might be present/executed in a prephysical sense, while only compatible combinations become mutually evident in an emergent reality. This proposal needs a rigorous account of what “executed,” “compatible,” and “evident” mean without presupposed time or observation.
+5. **Organizing back-pressure.** The key question is what makes generative possibilities **necessarily interact or constrain one another** instead of proliferating independently. Candidate explanations include a separate primitive rule, constraint intrinsic to differentiation, and globally consistent co-realization. None has yet been derived.
+6. **Persistence.** A realistic theory must account for stable relational patterns and enduring lawlike regularity, not only raw multiplicity.
+7. **Generative–reconstructive asymmetry.** The human researcher observes that simple forward generative rules can produce intricate interaction fields and that reconstructing the generator from partial emergent evidence may be much harder. The assistant offered this descriptive term; it is not an established theorem or demonstrated NP-hardness of physical reconstruction.
+8. **Graph-rewrite observation.** The human researcher reports exploring hundreds of graph rewrites and finding exhaustive interaction calculations difficult. This is a **researcher-reported observation**, not independently reproduced evidence. Exact implementation, graph rules, workloads, benchmarks, and growth curves have not yet been preserved here.
+9. **Physical analogies, not validations.** Holography, black-hole entropy, gravity from thermodynamic relationships, stationary action/geodesics, and quantum histories suggest possible motifs; no correspondence sufficient to derive the proposed origin has been established.
+
+## Current result and authority boundary
+
+The **current defensible result** is a progressively articulated *research program* with necessary conditional questions and candidate constraints. No evidence here establishes that reality is emergent, that all possibilities are executed, that a primitive entropy-like pressure exists, that it causes physical lower-energy behavior, or that a specific simple rule yields our universe.
+
+This directory is not an amendment to qualified IsoGraph Core, QU, NEI, DP, DTS, or experimental semantics, and does not reinterpret historical qualification. It is a separate, unqualified research thread.
+
+### Important corrections and non-implications preserved
+
+- Arbitrarily many generable configurations **do not imply** full structural universality.
+- A universal ability to represent a physical formalism **does not imply** the universe actually manifests that formalism.
+- Consistency and a large solution space **do not imply** a mechanism selecting physically evident configurations.
+- Stable observed physics **does not prove** a finite rule set, nor that all other possibilities are absent.
+- Simple local generation **does not imply** cheap global prediction or cheap inversion, nor does computational asymmetry directly establish thermodynamic entropy or P ≠ NP.
+- The ordinary least-action principle is **stationary**, not universally least-energy or globally least action. Geodesics and entropy are analogies to investigate, not empirical demonstrations of prephysical back-pressure.
+- A finite descriptive theory of behavior can fail to reveal the generator; different substrates can share observable consequences. Any claim of equivalence or invariant must state its scope and criterion.
+
+## Competing research directions (none selected as fact)
+
+- **Independent primitive organizing rule:** a constraint separate from generation.
+- **Constraint intrinsic to differentiation:** each meaningful distinction imposes restrictions whose compounded relationships generate stable structure.
+- **Global structural admissibility:** arbitrarily many local candidates exist, but only mutually compatible coherent configurations are evident.
+- **Coupled generation and selection:** generative and constraining behavior are aspects of one primitive operation.
+
+Compare these using the same target obligations and explicit falsifiers, rather than choosing by rhetorical appeal.
+
+## Immediate open questions
+
+1. What minimal definition of *relational co-realization* is possible without importing space, time, or energy?
+2. Is a distinct constraint necessary for branching descendants to interact, or could interaction follow from the meaning of differentiation under a suitable primitive?
+3. Does the proposal allow all possibilities or only all computably definable/structurally admissible possibilities?
+4. Can we derive a persistent structural invariant (not merely label persistence) and a viable emergent locality or temporal ordering?
+5. Can a quantified precursor-count/compatibility measure connect the hypothesized back-pressure to observationally defined thermodynamics without equivocating on “entropy”?
+6. Is generative–reconstructive difficulty intrinsic or caused by loss of observational information? Under what graph rewrite systems is it provably hard?
+7. What would *falsify* the candidate organizing principle and distinguish it from ordinary computational universality or consistency filtering?
+8. Which observables and structural equivalence criteria would allow physically meaningful comparisons across generative formulations?
+
+## Research and provenance
+
+- **Research direction and central hypotheses:** Joshua Oshiro (HUMAN_ORIGINATED_DIRECTION / HUMAN_ORIGINATED_IDEA), expressed in the 2026-10-12 conversation; earlier work may exist and has not been exhaustively searched.
+- **Assistant contributions during discussion:** reframing into explicit conditional necessities, universality caveat, proposed compatibility/closure options, the descriptive phrase “generative–reconstructive asymmetry,” and candidate testing axes (AGENT_ASSISTED_FORMALIZATION; some AGENT_ORIGINATED_FORMULATION).
+- **Record status:** created retrospectively from the currently visible conversation, not contemporaneous public proof of priority. The date is the visible conversation date; individual per-turn timestamps are not verified.
+- **Publication/priority:** no publication claim; no novelty or external-prior-art audit; no claim of independent verification.
+- **Origin and retained wording:** [DISCUSSION_LOG.md](DISCUSSION_LOG.md). Repository governance: [research conventions](../README.md), [provenance policy](../../IDEA_PROVENANCE_POLICY.md).
+
+## Maintenance rule
+
+Append a dated, sequential discussion entry **only for substantive research ideas and work**: hypotheses, premises, arguments, structural comparisons, counterexamples, evidence, experiments, research corrections, and consequential research decisions. Preserve user wording exactly where available and clearly identify assistant summaries versus verbatim quotations. **Exclude procedural exchanges** about file organization, Drive or GitHub links, uploads, transfers, permissions, archiving, and repository status; handle those tasks without inserting them into the research dialogue. Do not silently rewrite recorded research arguments; correct with a subsequent entry. Update this consolidated dossier when the research substance changes. Verify GitHub writes and report failures accurately; no autonomous logging occurs between conversations.
