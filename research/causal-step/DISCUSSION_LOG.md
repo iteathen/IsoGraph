@@ -776,3 +776,18 @@ Begin by resynchronizing and reading the existing work, then proceed with substa
 **Research disposition:** Define a **derived state-indexed, occurrence-preserving operational independence test** rather than imposing a pre-geometric metric, globally fixed independence relation, physical duration or entropy-pressure force. Keep producer/activation support, asymmetric enabling conflicts, coenabled order-sensitive alternative histories, local commuting squares, and third-event coherence guards structurally separate. Do **not** assert that this already specifies a unique physical causal partial order, particles, real quantum behavior, GR, dark matter/energy or the observable universe.
 
 **Next priority:** T4.1 **observer-only contextual higher-order event structure**, with exact reconstruction/intervention tests on held-out unchanged source histories and adversarial three-event controls. Any later Petri/categorical physics bridge needs an equivalence criterion and evidence of all load-bearing source operations. Historic Model A 12D-cap withdrawal, k5/#81 FIFO period-five and k4/#21 scheduler-sensitive negatives, previous 8,000-rewrite records, exactly two provisional premises and Woit/Lisi independence remain unchanged. No default-branch merge or qualified IsoGraph module change.
+
+
+## 2026-10-13 — Researcher clarifies open-ended difficulty of foundational discovery
+
+**Researcher (verbatim, initial caution):**
+
+> Well, don't get ahead of yourself. We're not going to find derived gravity particles or quantum behavior of space-time easily.
+
+**Researcher (verbatim, immediate correction):**
+
+> I mean, I guess it is possible that we find it easily. So we can't exclude that possibility.
+
+**Researcher-originated methodological correction:** Do not project near-term success or assume foundational breakthroughs will follow automatically from current toy-model invariants. Equally, **do not preclude rapid or simple discovery**: the researcher explicitly reopens that possibility. Difficulty and timing are not adopted premises, falsification criteria, or constraints on which hypotheses may be explored. Follow the mathematical and physical evidence, pursue unexpectedly strong connections promptly, and distinguish precise finite structural findings from verified emergent spacetime, quantum behavior, particles, and gravity. Neither quotation establishes a theorem or modifies the two existing provisional Causal Step premises.
+
+**Agent interpretation (not researcher verbatim):** Evaluate apparent cross-field correspondences on their actual assumptions, operations, compositional content and independent tests. Maintain an open-ended research horizon without predicting an easy or hard outcome. The previous phrasing that these phenomena are not expected to be discovered easily must not be converted into an exclusion rule or a mandated pessimistic research posture. No generator modification, additional physical mechanism or qualification follows from this clarification.
