@@ -415,6 +415,10 @@ The researcher raises a specific structural-comparison concern: **an entropy the
 
 **Next scientific priority:** T4.1, build **observer-only contextual event-structure semantics** capable of representing *all* operationally distinguished relations and three-event coherence guards; test reconstruction on held-out original histories before borrowing contextual Petri net or adhesive graph transformation theorems, or attempting causal-set topology / matter/gravity predictions. Keep the two original Causal Step premises, noncollapse + complexity capacity filters, k5/#81 FIFO period-five negative, k4/#21 scheduler sensitivity, and O01–O14 independent astrophysical falsification gates unchanged. **No Woit/Lisi, archived source, default branch, qualified IsoGraph Core or empirical physics publication status changed.**
 
+## Research pace and discovery openness (2026-10-13)
+
+The researcher cautioned against presenting gravity, particles, quantum behavior or spacetime emergence as an imminent consequence of the existing toy results, then immediately clarified that **an unexpectedly easy or rapid discovery remains possible and must not be ruled out**. Neither easy nor difficult discovery is a premise. Continue mechanism-level research with fully open outcomes: investigate unexpected strong results as they arise, while requiring appropriate derivation, faithful representations, source assumptions, null controls and empirical confirmation before claiming physical emergence. Preserve the exact exchange and attribution in [the discussion log](DISCUSSION_LOG.md). This is a methodological clarification, not a third Causal Step premise, a physical result or an instruction to delay promising research.
+
 ## Current research state
 
 - **Research question:** causal origin(s), observer-connected possibilities, emergent 3D geometry and matter concentration; now also the near/far single-light-link puzzle and compatibility with relativistic null propagation. No specific origin model selected.
