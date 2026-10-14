@@ -1,0 +1,43 @@
+{
+  "experiment": "Exact algebraic weak-field/lensing observer non-injectivity",
+  "date": "2026-10-14",
+  "status": "SymPy symbolic identities executed locally; no source-native causal rewriting",
+  "scope": "Effective continuum metric assumed; purely formal response/inverse ambiguity; no original Causal Step generator modified",
+  "checks": {
+    "finite_path_transverse_Weyl_gradient_integral": "2*G*L*M*(gamma + 1)/(b*c**2*sqrt(L**2 + b**2))",
+    "asymptotic_deflection": "2*G*M*(gamma + 1)/(b*c**2)",
+    "PPN_GR_gamma_equal_one": "4*G*M/(b*c**2)",
+    "PPN_gamma_equal_zero": "2*G*M/(b*c**2)",
+    "same_time_potential_distinct_spatial_potential_alters_deflection": true,
+    "opposite_shift_of_two_potentials_preserves_Weyl_sum": true,
+    "same_Weyl_sum_does_not_fix_slow_matter_acceleration": true,
+    "mass_sheet_transformed_lens_equation": "beta_lambda = lambda * (theta-alpha(theta))",
+    "mass_sheet_lens_equation_invariance_verified": true
+  },
+  "execution": {
+    "actual_local_SymPy_run": true,
+    "sourceGitBlobSha": "1d6b792bb7cf1a249f5e8a38ed3bbe454a978e16",
+    "locally_executed_script_equations_match_committed_script": true,
+    "committedGitHubScript_independently_rerun_from_fresh_checkout": false,
+    "localScriptHasDifferentCommentsThanGitHubCopy": true,
+    "exactAlgebraicClaimsChecked": [
+      "transverse Weyl gradient finite and infinite path integral",
+      "GR gamma=1 and Newtonian-style gamma=0 deflection control",
+      "Weyl sum cancellation under opposite two-potential shift",
+      "idealized mass sheet transform lens equation identity"
+    ]
+  },
+  "negative_exclusions": [
+    "This calculation does not predict dynamics or lensing from Causal Step, causal sets, gravity-from-information or any microscopic model.",
+    "The two potentials are assumed post-emergence weak-field observable parameters, not declared primitive hypergraph variables.",
+    "A lensing mass map is an inferred GR-model reconstruction, not a directly photographed particle-density map.",
+    "MST is an inverse inference degeneracy under idealized assumptions, not a proof of universal indistinguishability when time delays, kinematics and independent distances are supplied.",
+    "Null curves are conformally invariant as unparameterized curves, but not all measured lensing quantities or massive geodesics are invariant."
+  ],
+  "sources": [
+    "https://doi.org/10.1098/rsta.2011.0369",
+    "https://doi.org/10.1146/annurev.nucl.58.110707.171151",
+    "https://doi.org/10.1007/s11214-024-01041-w",
+    "https://doi.org/10.1103/PhysRevD.95.024004"
+  ]
+}
