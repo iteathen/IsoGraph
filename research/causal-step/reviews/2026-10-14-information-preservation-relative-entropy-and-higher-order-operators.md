@@ -1,7 +1,7 @@
 # Causal Step — information preservation, classical recovery, and higher-order incidence operators
 
 **Research cycle:** 2026-10-14 (America/Los_Angeles)  
-**Track:** Causal Step on permanent \`research/causal-step\` branch, independent of Woit and Lisi  
+**Track:** Causal Step on permanent `research/causal-step` branch, independent of Woit and Lisi  
 **Human direction:** Joshua Oshiro — compare existing genuinely higher-order causal relational patterns with outside foundational physics without presupposing geometry, quantum states, a fundamental clock or a predetermined level of difficulty.  
 **AI-assisted contributions:** source-claim audit, source-compatible exact finite comparator, independent controls, alternative observer ranking, code/evidence and documented interpretation.  
 **Status:** **executed exact finite mathematical research and external-theory comparison**, not physical mechanism verification or a qualified IsoGraph theorem.
@@ -12,9 +12,9 @@ The supplied October 2026 news/physics synopsis brought together AdS/CFT, hologr
 
 Continue the priority from [the existing T3 exact higher-order intervention witness](2026-10-13-t3-causal-order-interval-observer-noninjectivity.md) and [T4 operational concurrency/coherence](2026-10-13-t4-operational-concurrency-higher-order-coherence.md): find what an observer retains, what it irreversibly loses and which extra operational or higher-order information would permit recovery. Do not elevate finite sampled graph data to quantum physics or a cosmological explanation.
 
-**Critical declared model distinction:** The new experiment is the **directed AND-input comparator constructed in T3**, not a rewrite of the original **unordered rank-k, bit-mutating, hyperedge-growing native generator**. Five named source ports feed one named target. A rank-4 event occurrence has three *jointly required* source inputs. Three distinct occurrences are alternative paths to enable the target. This makes all 32 source-activation subsets and all 120 three-occurrence models enumerable. The T3 original source file Git blob is **\`2bad02a08ccf8bccf0e6e73216dcb63fe9365e7f\`**.
+**Critical declared model distinction:** The new experiment is the **directed AND-input comparator constructed in T3**, not a rewrite of the original **unordered rank-k, bit-mutating, hyperedge-growing native generator**. Five named source ports feed one named target. A rank-4 event occurrence has three *jointly required* source inputs. Three distinct occurrences are alternative paths to enable the target. This makes all 32 source-activation subsets and all 120 three-occurrence models enumerable. The T3 original source file Git blob is **`2bad02a08ccf8bccf0e6e73216dcb63fe9365e7f`**.
 
-New source: [standalone Node/V8 finite experiment](../experiments/2026-10-14-classical-recovery-and-incidence.cjs). Actual execution: [machine-readable full result with source-blob pin](../experiments/results/2026-10-14-information-recovery-and-incidence-exact.json). The original T3 witness is recreated internally and checked by exact source degree, source-mask, six differing intervention cases, and Gram polynomial controls. Independently implemented Python \`itertools\` checks reproduced the 120-model and four-orbit counts, six intervention masks, Gram polynomials, and **minimum nine probes / ten optimal subsets**. The committed standalone Node CLI was prepared, but **not separately executed**; the actually executed path used a local V8 isolate.
+New source: [standalone Node/V8 finite experiment](../experiments/2026-10-14-classical-recovery-and-incidence.cjs). Actual execution: [machine-readable full result with source-blob pin](../experiments/results/2026-10-14-information-recovery-and-incidence-exact.json). The original T3 witness is recreated internally and checked by exact source degree, source-mask, six differing intervention cases, and Gram polynomial controls. Independently implemented Python `itertools` checks reproduced the 120-model and four-orbit counts, six intervention masks, Gram polynomials, and **minimum nine probes / ten optimal subsets**. The committed standalone Node CLI was prepared, but **not separately executed**; the actually executed path used a local V8 isolate.
 
 ## 2. Exact finite observation and recovery test
 
@@ -25,7 +25,7 @@ Fix labeled source ports a,b,c,d,e and target x.
 - **H0:** abc→x, abd→x, abe→x.
 - **H1:** abc→x, ade→x, bde→x.
 
-Every event is one **three-input conjunction**, and the target is enabled when **at least one** of the three event input sets is fully present (OR). H0 and H1 each have **three distinct rank-4 occurrences**, all five source ports link to the same sink in their naive binary causal shadow; their **complete pairwise causal order is identical**. However, 6 of 32 possible named-source subsets give different target-enable responses: \`abd\`, \`abe\` favor H0; \`ade\`, \`bde\`, \`acde\`, \`bcde\` favor H1. H0 enables 7 of 32 masks, H1 enables 9 of 32.
+Every event is one **three-input conjunction**, and the target is enabled when **at least one** of the three event input sets is fully present (OR). H0 and H1 each have **three distinct rank-4 occurrences**, all five source ports link to the same sink in their naive binary causal shadow; their **complete pairwise causal order is identical**. However, 6 of 32 possible named-source subsets give different target-enable responses: `abd`, `abe` favor H0; `ade`, `bde`, `acde`, `bcde` favor H1. H0 enables 7 of 32 masks, H1 enables 9 of 32.
 
 For a uniformly chosen source-subset intervention I and deterministic observed enablement bit Y, the two **joint distributions** P_H(I,Y) differ in total variation **6/32 = 0.1875**. If the model is represented only by the identical binary causal-order shadow, the remaining structure cannot distinguish them. The order-equality is scoped to the defined projection; it does not assert that either mechanism has a physical causal spacetime metric.
 
@@ -33,7 +33,7 @@ For a uniformly chosen source-subset intervention I and deterministic observed e
 
 The deterministic P and Q have disjoint support at each mask where their enabling outputs differ. Consequently **D_KL(P||Q) is infinite** despite finite total variation. To test finite information loss, the experiment declares a **purely observer-side binary output flip probability** η = 0.1, 0.25 or 0.5. This is not a physical randomness/entropy law, and it is not installed in the simulator's source dynamics.
 
-At η = 0.1, the **full** pair \`(I,Y)\` has
+At η = 0.1, the **full** pair `(I,Y)` has
 
 \[
  \operatorname{TV}(P,Q)=(6/32)(1-2\eta)=0.15,
@@ -63,7 +63,7 @@ D(P\Vert Q)=D(TP\Vert TQ)+
 \sum_z P_T(z)\,D(P(X\mid z)\Vert Q(X\mid z)).
 \]
 
-The loss term is nonnegative. For the classical reference-based inverse \`R_Q(x|z)=Q(x)/Q_T(z)\` within each fiber \`T(x)=z\`, exact recovery of P and Q requires the source conditionals to agree in every observed fiber. The program checks this by reconstruction and total variation. The η=0.5 control makes P=Q and all divergences zero; it is a **trivial indistinguishability case**, not a recovery of mechanism labels.
+The loss term is nonnegative. For the classical reference-based inverse `R_Q(x|z)=Q(x)/Q_T(z)` within each fiber `T(x)=z`, exact recovery of P and Q requires the source conditionals to agree in every observed fiber. The program checks this by reconstruction and total variation. The η=0.5 control makes P=Q and all divergences zero; it is a **trivial indistinguishability case**, not a recovery of mechanism labels.
 
 This finite classical sufficiency statement is mathematically analogous in *role*, not in quantum formalism, to [Dénes Petz's 1986 sufficiency result](https://math.bme.hu/~petz/pdf/29suff.pdf). Petz's von Neumann algebra theorem has an **operator-algebraic hypothesis** and its recovery meaning cannot be borrowed as a quantum result without a Hilbert-space state/channel construction.
 
@@ -181,4 +181,4 @@ Apply the *same conditional distinguishability and sufficiency vocabulary to act
 - [T4 actual rewrite intervention and higher composition evidence](2026-10-13-t4-operational-concurrency-higher-order-coherence.md).
 - [Original research direction and exact user continuation](../DISCUSSION_LOG.md).
 
-**Workstream:** one contiguous \`research/causal-step\` branch, no main merge, no Actions, no Woit/Lisi modification, no qualified IsoGraph semantic promotion. The fully correct original findings and negative cases remain historical and byte-preserved.
+**Workstream:** one contiguous `research/causal-step` branch, no main merge, no Actions, no Woit/Lisi modification, no qualified IsoGraph semantic promotion. The fully correct original findings and negative cases remain historical and byte-preserved.
