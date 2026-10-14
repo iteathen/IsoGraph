@@ -1,0 +1,1406 @@
+{
+  "experiment": "T3 exact source-conditional uniform event occurrence kernel versus raw FIFO/PRNG coupling",
+  "date": "2026-10-13",
+  "scope": "mathematical exact per-state conditional measure on currently enabled k-ary hyperedge occurrences; neither a derived stochastic law nor physical randomness",
+  "generatorChecks": {
+    "source": "unchanged k=3/4/5 high-order original simulator; original T2 instrumentation plus checked observer snapshot insertion",
+    "sourceBlobs": {
+      "frozenEngine": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+      "frozenT2Observer": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e"
+    },
+    "cases": [
+      {
+        "k": 3,
+        "ruleId": 4,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3",
+            "relabeledRawSelection": "birth1:0,2,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth1:0,2,3",
+            "relabeledRawSelection": "birth1:0,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3",
+            "relabeledRawSelection": "birth1:1,2,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,2,3",
+            "relabeledRawSelection": "birth1:1,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3",
+            "relabeledRawSelection": "birth1:0,2,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth1:0,2,3",
+            "relabeledRawSelection": "birth1:0,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3",
+            "relabeledRawSelection": "birth1:1,2,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,2,3",
+            "relabeledRawSelection": "birth1:1,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 28,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3",
+            "relabeledRawSelection": "initial:0,1,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,2,3",
+            "relabeledRawSelection": "initial:0,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 28,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3",
+            "relabeledRawSelection": "initial:0,1,3"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,2,3",
+            "relabeledRawSelection": "initial:0,2,3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 28,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3",
+            "relabeledRawSelection": "initial:0,1,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,3,4",
+            "relabeledRawSelection": "birth1:1,3,4"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "ruleId": 28,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3",
+            "relabeledRawSelection": "initial:0,1,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 2,
+            "exactConditionalUniformKernel": "1/2 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2",
+            "relabeledRawSelection": "initial:0,1,2"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth1:0,3,4",
+            "relabeledRawSelection": "birth1:0,3,4"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,4",
+            "relabeledRawSelection": "birth1:0,1,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,1,2,5",
+            "relabeledRawSelection": "birth2:0,1,2,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,4",
+            "relabeledRawSelection": "birth1:1,2,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,1,2,5",
+            "relabeledRawSelection": "birth2:0,1,2,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,2,3,4",
+            "relabeledRawSelection": "birth1:1,2,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth2:2,3,4,5",
+            "relabeledRawSelection": "birth2:0,2,4,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,2,3,4",
+            "relabeledRawSelection": "birth1:0,1,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth2:2,3,4,5",
+            "relabeledRawSelection": "birth2:0,2,4,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,4",
+            "relabeledRawSelection": "birth1:0,1,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,1,2,5",
+            "relabeledRawSelection": "birth2:0,1,2,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,4",
+            "relabeledRawSelection": "birth1:1,2,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,1,2,5",
+            "relabeledRawSelection": "birth2:0,1,2,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3,4",
+            "relabeledRawSelection": "birth1:0,2,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,3,4,5",
+            "relabeledRawSelection": "birth2:0,3,4,5"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3",
+            "relabeledRawSelection": "initial:0,1,2,3"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 4,
+            "exactConditionalUniformKernel": "1/4 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,3,4",
+            "relabeledRawSelection": "birth1:0,2,3,4"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth2:0,3,4,5",
+            "relabeledRawSelection": "birth2:1,3,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,5",
+            "relabeledRawSelection": "birth1:0,1,2,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 9,
+            "exactConditionalUniformKernel": "1/9 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth1:0,1,2,4,5",
+            "relabeledRawSelection": "birth1:0,1,2,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,5",
+            "relabeledRawSelection": "birth1:1,2,3,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 9,
+            "exactConditionalUniformKernel": "1/9 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,4,5",
+            "relabeledRawSelection": "birth1:1,2,3,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,5",
+            "relabeledRawSelection": "birth1:0,1,2,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 9,
+            "exactConditionalUniformKernel": "1/9 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth2:0,2,3,5,6",
+            "relabeledRawSelection": "birth2:0,2,3,5,6"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "kind": "single",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 1,
+            "exactConditionalUniformKernel": "1/1 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 5,
+            "exactConditionalUniformKernel": "1/5 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,5",
+            "relabeledRawSelection": "birth1:1,2,3,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 9,
+            "exactConditionalUniformKernel": "1/9 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth2:0,2,3,5,6",
+            "relabeledRawSelection": "birth2:0,1,3,5,6"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 81,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,4,5",
+            "relabeledRawSelection": "initial:0,1,2,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 81,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 3,
+            "exactConditionalUniformKernel": "1/3 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,4,5",
+            "relabeledRawSelection": "initial:0,1,2,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 81,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,6",
+            "relabeledRawSelection": "birth1:0,1,2,5,6"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 14,
+            "exactConditionalUniformKernel": "1/14 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "birth1:0,2,3,5,6",
+            "relabeledRawSelection": "birth1:0,2,3,5,6"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 81,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,1,2,3,6",
+            "relabeledRawSelection": "birth1:1,2,3,5,6"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 14,
+            "exactConditionalUniformKernel": "1/14 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:0,2,3,5,6",
+            "relabeledRawSelection": "birth1:0,1,3,5,6"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 4,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3,4,5",
+            "relabeledRawSelection": "initial:0,1,3,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 14,
+            "exactConditionalUniformKernel": "1/14 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 4,
+        "kind": "overlap",
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,4",
+            "relabeledRawSelection": "initial:0,1,2,3,4"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 8,
+            "exactConditionalUniformKernel": "1/8 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3,4,5",
+            "relabeledRawSelection": "initial:0,1,3,4,5"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 14,
+            "exactConditionalUniformKernel": "1/14 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,2,3,5",
+            "relabeledRawSelection": "initial:0,1,2,3,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 4,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "rotation",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3,4,5",
+            "relabeledRawSelection": "initial:0,1,3,4,5"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:1,3,4,5,6",
+            "relabeledRawSelection": "birth1:0,1,3,4,6"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 12,
+            "exactConditionalUniformKernel": "1/12 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:1,2,3,4,5",
+            "relabeledRawSelection": "initial:1,2,3,4,5"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "ruleId": 4,
+        "kind": "overlap",
+        "scheduler": "random",
+        "permutation": "reversal",
+        "transportedHistoryReplayed": true,
+        "steps": [
+          {
+            "step": 1,
+            "eligibleOccurrenceCount": 6,
+            "exactConditionalUniformKernel": "1/6 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:0,1,3,4,5",
+            "relabeledRawSelection": "initial:0,1,3,4,5"
+          },
+          {
+            "step": 2,
+            "eligibleOccurrenceCount": 10,
+            "exactConditionalUniformKernel": "1/10 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": true,
+            "baselineRawSelection": "birth1:1,3,4,5,6",
+            "relabeledRawSelection": "birth1:0,1,3,4,6"
+          },
+          {
+            "step": 3,
+            "eligibleOccurrenceCount": 12,
+            "exactConditionalUniformKernel": "1/12 per selected occurrence",
+            "sameOccurrenceSupport": true,
+            "sameExactUniformKernel": true,
+            "rawNumberedSelectionDifferent": false,
+            "baselineRawSelection": "initial:1,2,3,4,5",
+            "relabeledRawSelection": "initial:1,2,3,4,5"
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "originalContexts": 7,
+      "schedulersPerContext": 2,
+      "relabelingChecks": 28,
+      "conditionalOneStepStatesExamined": 84,
+      "exactUniformKernelPushforwardsEqual": 84,
+      "rawIndexedSchedulerSelectionsDifferent": 29,
+      "minEligible": 1,
+      "maxEligible": 14
+    },
+    "sampleOfNumberedSchedulerDifferences": [
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,3",
+        "b": "birth1:0,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,3",
+        "b": "birth1:1,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 3,
+        "a": "birth1:0,2,3",
+        "b": "birth1:1,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,3",
+        "b": "birth1:0,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,3",
+        "b": "birth1:1,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 4,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 3,
+        "a": "birth1:0,2,3",
+        "b": "birth1:1,2,3"
+      },
+      {
+        "k": 3,
+        "ruleId": 28,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 3,
+        "a": "birth1:0,3,4",
+        "b": "birth1:1,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,2,4",
+        "b": "birth1:0,1,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,2,4",
+        "b": "birth1:1,2,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,2,3,4",
+        "b": "birth1:1,2,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 3,
+        "a": "birth2:2,3,4,5",
+        "b": "birth2:0,2,4,5"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,2,3,4",
+        "b": "birth1:0,1,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 0,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 3,
+        "a": "birth2:2,3,4,5",
+        "b": "birth2:0,2,4,5"
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,2,4",
+        "b": "birth1:0,1,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,2,4",
+        "b": "birth1:1,2,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,3,4",
+        "b": "birth1:0,2,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,3,4",
+        "b": "birth1:0,2,3,4"
+      },
+      {
+        "k": 4,
+        "ruleId": 21,
+        "scheduler": "random",
+        "permutation": "reversal",
+        "step": 3,
+        "a": "birth2:0,3,4,5",
+        "b": "birth2:1,3,4,5"
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "scheduler": "fifo",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,2,3,5",
+        "b": "birth1:0,1,2,4,5"
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 2,
+        "a": "birth1:0,1,2,3,5",
+        "b": "birth1:1,2,3,4,5"
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "scheduler": "fifo",
+        "permutation": "reversal",
+        "step": 3,
+        "a": "birth1:0,1,2,4,5",
+        "b": "birth1:1,2,3,4,5"
+      },
+      {
+        "k": 5,
+        "ruleId": 21,
+        "scheduler": "random",
+        "permutation": "rotation",
+        "step": 2,
+        "a": "birth1:0,1,2,3,5",
+        "b": "birth1:0,1,2,4,5"
+      }
+    ],
+    "conditionalProbabilityMeaning": "mass 1/m assigned to every distinct *eligible hyperedge occurrence*, where m is the actual eligible frontier count; no claim that reality selects events uniformly",
+    "crucialDifference": "A same-seed random integer rank or first-created FIFO index does not define an equivariant pathwise coupling of the same occurrence; the conditional uniform kernel on the occurrence set does, under a bijection."
+  },
+  "eventMultiplicity": {
+    "occurrences": [
+      {
+        "id": "alpha1",
+        "incidence": "a,b,c->x"
+      },
+      {
+        "id": "alpha2",
+        "incidence": "a,b,c->x"
+      },
+      {
+        "id": "beta1",
+        "incidence": "a,b,d->x"
+      }
+    ],
+    "eachOccurrenceProbability": "1/3",
+    "projection": [
+      {
+        "incidence": "a,b,c->x",
+        "actualOccurrenceUniform": {
+          "numerator": 2,
+          "denominator": 3
+        },
+        "incorrectDeduplicateThenUniform": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "incidence": "a,b,d->x",
+        "actualOccurrenceUniform": {
+          "numerator": 1,
+          "denominator": 3
+        },
+        "incorrectDeduplicateThenUniform": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      }
+    ],
+    "result": "Collapsing distinct event occurrences before sampling changes the probability measure on incidence classes (2/3 versus 1/2)."
+  },
+  "limitations": [
+    "No reweighting of actual source scheduler or editing of the original generator",
+    "One-step kernels tested on first three selected event prefixes of seven configurations under both schedulers, with transported histories",
+    "Equality of probability kernels conditioned on a state is not equality of sample paths using the same numeric random seed",
+    "Possible quantum or physical stochastic rules are not established by uniform event sampling",
+    "Multiplicities and event origin provenance must survive any causal representation map"
+  ],
+  "execution": {
+    "executed": true,
+    "executionHost": "local V8 isolate, observer-only source instrumentation",
+    "elapsedMilliseconds": 106,
+    "exactSourceBlobChecks": {
+      "kernel": "8b064593303224f987216c914b771ea77bf7c64b",
+      "t2": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+      "engine": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08"
+    },
+    "nodeStandaloneCLIExecuted": false
+  }
+}
