@@ -1,0 +1,460 @@
+{
+  "date": "2026-10-14",
+  "branch": "research/causal-step",
+  "status": "THREE original primary mathematical definitions/transition schemes read from exact versions; NOT theorem proof replication, native mapping or literature saturation",
+  "title": "Batch 06: local causal graph updates, contextual bigraph reactions, reversible event enabling",
+  "sourceRoute": [
+    "independent formula/family search: causal evolving graphs and local consistency",
+    "reaction context and link-place semantics source search",
+    "event configuration, reversibility, inhibition and disjunctive enabling; original reference-chain screening"
+  ],
+  "records": [
+    {
+      "id": "MECH-21",
+      "canonicalCorpus": "EXP/209",
+      "domain": "R16",
+      "title": "Causal graph dynamics",
+      "authors": [
+        "Pablo Arrighi",
+        "Gilles Dowek"
+      ],
+      "year": 2013,
+      "sourceVersion": {
+        "sourceDOIorArxiv": "10.1016/j.ic.2012.10.019",
+        "versionDate": "arXiv:1202.1098v3, dated 2012-05-08 (the inspected original mathematical version); journal 2013 version may have different pagination/equation numbering",
+        "sourceGitOrDatasetHash": null,
+        "exactMathLocator": [
+          "arXiv v3 PDF zero-index p3 Definition 1: typed port graph with finite port alphabet; graph state sigma, edge incidence delta",
+          "PDF p4-5 Proposition 1 and Definition 5: strict naming commutation blocks vertex creation; conjugacy and freshness",
+          "PDF p6-7 Definitions 7,8,9: bounded graph-neighborhood disks, antecedent codynamics, causal uniform continuity and boundedness",
+          "PDF p8 Definitions 10-15: consistency, union and local rule; F(G)=union over all v of f(G_v^r)",
+          "PDF p12 Theorem 1: causal if and only if localizable",
+          "PDF p14 Theorem 2: closure of causal graph dynamics by composition"
+        ]
+      },
+      "originalPrimary": "https://arxiv.org/pdf/1202.1098",
+      "modelScope": {
+        "physicalClaims": "formal structural semantics, not an established emergent physical interpretation",
+        "formalDomain": "port-labelled vertices with typed internal labels; partial edge incidence on named vertex-ports; renaming bijections and source-to-output antecedent codynamics",
+        "relevantCounterexample": "T4 identical native static incidence/rule may change independent event status with bit state; global source localizability does not settle that event-history claim."
+      },
+      "stateObject": {
+        "types": [
+          "port-labelled vertices with typed internal labels",
+          "partial edge incidence on named vertex-ports",
+          "renaming bijections and source-to-output antecedent codynamics"
+        ],
+        "arityAndMultiplicity": {
+          "allowedArity": "finite graph vertex port degree fixed by port alphabet; each edge pairs ports; graph size unbounded",
+          "occurrenceIdentity": "vertex names subject to renaming; port edges not independent unordered k-input source events",
+          "pairwiseProjection": "the native k-ary occurrence requires a separately justified incidence-node encoding with distinct source events"
+        },
+        "labelsAndSymmetries": [
+          "vertex renaming, conjugacy rather than same-name commutation"
+        ],
+        "fundamentalVariables": [
+          "port-labelled vertices with typed internal labels",
+          "partial edge incidence on named vertex-ports",
+          "renaming bijections and source-to-output antecedent codynamics"
+        ],
+        "derivedVariables": [
+          "intervention comparisons defined only in future work, not presupposed"
+        ]
+      },
+      "actualDynamics": {
+        "initialStatePredicates": [
+          "graph obeys port uniqueness and label domains",
+          "conjugacy and freshness for global dynamics"
+        ],
+        "eventEnablement": [
+          "not a source-selected single-event firing relation; all graph vertices contribute local output patches",
+          "locality constrains output by equality of graph neighborhoods and bounded antecedent influence"
+        ],
+        "transitionRule": [
+          "F(G)=union_{v in V(G)} f(G_v^r), provided local patch outputs are consistent",
+          "global evolution can create/delete graph vertices and modify state and connectivity"
+        ],
+        "compositionRule": [
+          "composition of causal global graph maps is causal (Theorem 2), under common formal graph domain and bounds",
+          "parallel local patch union requires consistency on shared labels and ports; not source-event pair/triple commutation"
+        ],
+        "schedulingAndStochasticity": [
+          "synchronous whole-graph update; no arbitrary source-event scheduler; no Markov probability assumed"
+        ],
+        "birthDeathConservation": [
+          "source rules may create/delete/reverse as specified; native forced newborn is not borrowed"
+        ],
+        "observerAccess": [
+          "full typed states and admissible event histories; no assumed physical response measurements"
+        ],
+        "resourceLimits": [
+          "bounded-locality or source well-foundedness is a formal axiom; experimental resource caps are not physical units"
+        ]
+      },
+      "preloadedAssumptions": {
+        "spacetime": "not imposed",
+        "topologicalDimension": "not imposed",
+        "metric": "no physical metric; does assume bounded combinatorial port-graph neighborhood radius",
+        "physicalTime": "one synchronous update index; physical time/units not supplied",
+        "HilbertOrProbability": "not supplied",
+        "energy": "not supplied",
+        "massOrMatter": "not supplied",
+        "entropyOrTemperature": "not supplied",
+        "geometryOrTopology": "typed port graph and bounded degree preloaded",
+        "causalDirectedOrder": "source-to-output antecedent relation is derived from global map; not a causal-set primitive"
+      },
+      "mappingToNativeCausalStep": {
+        "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+        "representationMap": "partial representation of node bit as vertex label and of hyperedge as auxiliary incidence node, but no proven correspondence of single event, guards or global synchronous step",
+        "equivalenceRelation": "only if typed admissible events, complete update, distinct native occurrence identity and composition preserved under explicit graph/event renaming",
+        "forwardLawfulDynamicsProof": "not attempted; candidate only",
+        "reverseRecoveryOrCounterexample": "T4 identical native static incidence/rule may change independent event status with bit state; global source localizability does not settle that event-history claim.",
+        "statefulInterferenceAndTripleCompositionCheck": "required: exact T4 83 state-sensitive pair signature differences and 660 blocked triples; not yet mapped",
+        "independentNulls": [
+          "same static incidence but different guards",
+          "matching single-step observers with different third-step legal histories"
+        ],
+        "status": "not_attempted",
+        "commutingOperationalDiagram": "R(T_native(s,e)) ≅ T_external(R(s),F_s(e)) not established",
+        "higherCompositionWitness": "no source/native three-event reconstruction proved",
+        "similarityByPhysicalMeasurementsPermitted": false
+      },
+      "physicalEvidence": {
+        "status": "excluded from formal source comparison",
+        "notRequiredForRelationalComparison": true,
+        "notUsedToInferUnits": true,
+        "notUsedAsPositiveMatch": true,
+        "originalPhysicsSources": "formal source paper only",
+        "futureEmpiricalQuestion": "outside current scope"
+      },
+      "extractionStatus": {
+        "reviewerOrAgent": "AI assistant under Joshua Oshiro human-originated research direction",
+        "recordedOn": "2026-10-14",
+        "evidenceTier": "formal_transition_extracted",
+        "mathEquationReadBackVerified": true,
+        "simulationOrTheoremReproduced": false,
+        "ambiguitiesAndCompetingFormulations": [
+          "pairwise port edges versus genuine unordered k-ary occurrences; encoding might change path-locality bound",
+          "source global updates vs native state-dependent selected firing and scheduler",
+          "renaming-conjugacy and output ancestor relation not automatically equivalent to newborn producing-event identity",
+          "Source equation/definition readback, not an independent full theorem rederivation"
+        ],
+        "noInferenceBeyondOriginalSource": true
+      },
+      "exactSourceNotes": {
+        "original": "https://arxiv.org/pdf/1202.1098",
+        "assessedOriginalMath": true,
+        "validityVersion": "arXiv:1202.1098v3, dated 2012-05-08 (the inspected original mathematical version); journal 2013 version may have different pagination/equation numbering",
+        "negativeResults": [
+          "Proposition 1: requiring F(RG)=R(F(G)) for the same arbitrary renaming R prevents genuinely new vertex names; use conjugacy instead",
+          "a global synchronous map does not preserve a chosen native occurrence firing history or T4 660 triple failures without an independently built event expansion"
+        ]
+      }
+    },
+    {
+      "id": "MECH-22",
+      "canonicalCorpus": "EXP/210",
+      "domain": "R02",
+      "title": "Pure bigraphs",
+      "authors": [
+        "Robin Milner"
+      ],
+      "year": 2005,
+      "sourceVersion": {
+        "sourceDOIorArxiv": "10.48456/tr-614",
+        "versionDate": "University of Cambridge Computer Laboratory Technical Report UCAM-CL-TR-614, January 2005; source-specific definition numbers; not a claim of matching 2006 journal pagination",
+        "sourceGitOrDatasetHash": null,
+        "exactMathLocator": [
+          "Technical report PDF zero-index p23 Definitions 5.1-5.2: signature control arity, G=(V,E,ctrl,G^P,G^L):I→J, place/link projections",
+          "PDF p15 Definition 3.3: active context closure; p17 Definition 4.1: labeled context transition with location lambda and support equivalence",
+          "PDF p40 Definitions 9.1-9.2: activity and redex/reactum/parameter-instantiation reaction",
+          "PDF p41 Definition 9.3: reactive-system rule set closed under support equivalence",
+          "PDF p18 Definition 4.4: context-respecting bisimulation"
+        ]
+      },
+      "originalPrimary": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-614.pdf",
+      "modelScope": {
+        "physicalClaims": "formal structural semantics, not an established emergent physical interpretation",
+        "formalDomain": "finite controlled nodes V and distinct edges E; place graph GP: parent forest/nesting; separate link graph GL: ports and names into hyperedges; typed inner/outer interfaces, sites, active/passive controls, support equivalence",
+        "relevantCounterexample": "same shared hyperedge/link connectivity but different place ancestors can change legal bigraph reaction, so connectivity alone cannot preserve enabling."
+      },
+      "stateObject": {
+        "types": [
+          "finite controlled nodes V and distinct edges E",
+          "place graph GP: parent forest/nesting; separate link graph GL: ports and names into hyperedges",
+          "typed inner/outer interfaces, sites, active/passive controls, support equivalence"
+        ],
+        "arityAndMultiplicity": {
+          "allowedArity": "each control has finite ordinal of ports; a link can collect multiple endpoints; no universal fixed physical interaction arity",
+          "occurrenceIdentity": "concrete support nodes and edges can be tracked; support quotients deliberately forget selected names",
+          "pairwiseProjection": "reducing link hyperedges or nesting to pairwise adjacency may erase place-parent and named-interface structure"
+        },
+        "labelsAndSymmetries": [
+          "support equivalence and compatible interfaces"
+        ],
+        "fundamentalVariables": [
+          "finite controlled nodes V and distinct edges E",
+          "place graph GP: parent forest/nesting; separate link graph GL: ports and names into hyperedges",
+          "typed inner/outer interfaces, sites, active/passive controls, support equivalence"
+        ],
+        "derivedVariables": [
+          "intervention comparisons defined only in future work, not presupposed"
+        ]
+      },
+      "actualDynamics": {
+        "initialStatePredicates": [
+          "bigraph generated from valid place/link constituents sharing typed node control and interface",
+          "reaction redex/reactum have matching outer face J; parameter matching and instantiation eta specified"
+        ],
+        "eventEnablement": [
+          "a reaction site is active only if all enclosing controls along the relevant site path are active (Definition 9.1)",
+          "ground transition requires active context D and matched redex with La=Dr (Definition 4.1)"
+        ],
+        "transitionRule": [
+          "parametric reaction (R:m→J, R':m'→J, eta:m'→m) generates ground rules by parameter instantiation",
+          "matched redex in active context D is replaced by reactum while retained/deleted/duplicated parameters follow eta; a' support-equivalent to D r'"
+        ],
+        "compositionRule": [
+          "bigraphs compose by matching sites/regions and inner/outer names, independently for place and link structure",
+          "context-labelled transitions and suitable minimal pushout-derived transitions define behavior; bisimilarity congruence is relative to stated class and contexts"
+        ],
+        "schedulingAndStochasticity": [
+          "nondeterministic matched reactions; no physical time, rate or stochastic scheduler given"
+        ],
+        "birthDeathConservation": [
+          "source rules may create/delete/reverse as specified; native forced newborn is not borrowed"
+        ],
+        "observerAccess": [
+          "full typed states and admissible event histories; no assumed physical response measurements"
+        ],
+        "resourceLimits": [
+          "bounded-locality or source well-foundedness is a formal axiom; experimental resource caps are not physical units"
+        ]
+      },
+      "preloadedAssumptions": {
+        "spacetime": "no physical spacetime; nesting/region structure explicitly supplied",
+        "topologicalDimension": "not supplied",
+        "metric": "not supplied",
+        "physicalTime": "not supplied",
+        "HilbertOrProbability": "not supplied",
+        "energy": "not supplied",
+        "massOrMatter": "not supplied",
+        "entropyOrTemperature": "not supplied",
+        "geometryOrTopology": "place nesting plus link graph and interfaces preloaded as formal graph structure",
+        "causalDirectedOrder": "not a primitive global event order"
+      },
+      "mappingToNativeCausalStep": {
+        "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+        "representationMap": "candidate context-preserving encoding of unordered multiway hyperedge as distinct link with event node, bit guard encoded as explicit control/test and rewrite, but not constructed or proved",
+        "equivalenceRelation": "only if typed admissible events, complete update, distinct native occurrence identity and composition preserved under explicit graph/event renaming",
+        "forwardLawfulDynamicsProof": "not attempted; candidate only",
+        "reverseRecoveryOrCounterexample": "same shared hyperedge/link connectivity but different place ancestors can change legal bigraph reaction, so connectivity alone cannot preserve enabling.",
+        "statefulInterferenceAndTripleCompositionCheck": "required: exact T4 83 state-sensitive pair signature differences and 660 blocked triples; not yet mapped",
+        "independentNulls": [
+          "same static incidence but different guards",
+          "matching single-step observers with different third-step legal histories"
+        ],
+        "status": "not_attempted",
+        "commutingOperationalDiagram": "R(T_native(s,e)) ≅ T_external(R(s),F_s(e)) not established",
+        "higherCompositionWitness": "no source/native three-event reconstruction proved",
+        "similarityByPhysicalMeasurementsPermitted": false
+      },
+      "physicalEvidence": {
+        "status": "excluded from formal source comparison",
+        "notRequiredForRelationalComparison": true,
+        "notUsedToInferUnits": true,
+        "notUsedAsPositiveMatch": true,
+        "originalPhysicsSources": "formal source paper only",
+        "futureEmpiricalQuestion": "outside current scope"
+      },
+      "extractionStatus": {
+        "reviewerOrAgent": "AI assistant under Joshua Oshiro human-originated research direction",
+        "recordedOn": "2026-10-14",
+        "evidenceTier": "formal_transition_extracted",
+        "mathEquationReadBackVerified": true,
+        "simulationOrTheoremReproduced": false,
+        "ambiguitiesAndCompetingFormulations": [
+          "source requires valid place nesting and interface/port controls absent in primitive native model",
+          "matching activity is nesting/context-aware rather than Hamming bit eligibility",
+          "duplicate links, support quotient, parameter copying and transition-label equivalence require explicit occurrence/provenance mapping",
+          "Source equation/definition readback, not an independent full theorem rederivation"
+        ],
+        "noInferenceBeyondOriginalSource": true
+      },
+      "exactSourceNotes": {
+        "original": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-614.pdf",
+        "assessedOriginalMath": true,
+        "validityVersion": "University of Cambridge Computer Laboratory Technical Report UCAM-CL-TR-614, January 2005; source-specific definition numbers; not a claim of matching 2006 journal pagination",
+        "negativeResults": [
+          "active/passive nesting is a genuine extra guard not derivable from the native source's node bit guard without an explicit encoding",
+          "parameter copying/discarding under eta differs from native's mandated one-newborn event, mutation and offspring hyperedges",
+          "support quotient or bisimulation can forget distinctions native T4 occurrences require"
+        ]
+      }
+    },
+    {
+      "id": "MECH-23",
+      "canonicalCorpus": "EXP/211",
+      "domain": "R02",
+      "title": "Reversing Event Structures",
+      "authors": [
+        "Irek Ulidowski",
+        "Iain Phillips",
+        "Shoji Yuen"
+      ],
+      "year": 2018,
+      "sourceVersion": {
+        "sourceDOIorArxiv": "10.1007/s00354-018-0040-8",
+        "versionDate": "New Generation Computing 36 (2018) 281–306 version of record, published 2018-08-24, Springer open full text",
+        "sourceGitOrDatasetHash": null,
+        "exactMathLocator": [
+          "Definition 3: reversible asymmetric event structure RAES=(E,F,prec,triangleleft), causation and prevention",
+          "Definition 4: mixed step X →_{A∪underlined(B)} (X\\B)∪A and all five enabling/consistency conditions",
+          "Definition 8: RES=(E,Con,turnstile), X preventing-set Y enables forward/reverse event e*, disjointness and weakening",
+          "Example 9: initially mutual exclusion of a and b can be resolved after c, showing context-sensitive event enabling",
+          "Definition 9 and Proposition 4: embed RAES in RES with explicit cause/prevention sets",
+          "Definitions 10-11: infinite configuration limits handle nonmonotone reversible histories; limit need not exist"
+        ]
+      },
+      "originalPrimary": "https://link.springer.com/article/10.1007/s00354-018-0040-8",
+      "modelScope": {
+        "physicalClaims": "formal structural semantics, not an established emergent physical interpretation",
+        "formalDomain": "named event occurrences E and subset F of reversible events; configuration X subset of E; consistent families Con; cause, precedence/inhibition, enabling-with-prevention triples",
+        "relevantCounterexample": "Def 4 and Example 9 show permission to act may change after a third event; native T4 660 blocked triples cannot be inferred from initial pairwise commutation alone."
+      },
+      "stateObject": {
+        "types": [
+          "named event occurrences E and subset F of reversible events",
+          "configuration X subset of E",
+          "consistent families Con; cause, precedence/inhibition, enabling-with-prevention triples"
+        ],
+        "arityAndMultiplicity": {
+          "allowedArity": "arbitrary finite cause/enabling and prevention sets subject to source well-foundedness/finiteness provisions",
+          "occurrenceIdentity": "events are distinguished; undo preserves the identity of a previously occurred event",
+          "pairwiseProjection": "binary precedence cannot in general encode disjunctive enabling and context-dependent prevention"
+        },
+        "labelsAndSymmetries": [
+          "event-occurrence identity, distinct forward and reverse labels"
+        ],
+        "fundamentalVariables": [
+          "named event occurrences E and subset F of reversible events",
+          "configuration X subset of E",
+          "consistent families Con; cause, precedence/inhibition, enabling-with-prevention triples"
+        ],
+        "derivedVariables": [
+          "intervention comparisons defined only in future work, not presupposed"
+        ]
+      },
+      "actualDynamics": {
+        "initialStatePredicates": [
+          "X is consistent/configuration under source-defined Con and selected event-structure formalism",
+          "RAES has required well-founded/acyclic cause and precedence assumptions; RES requires downward-closed consistency and enabler weakening"
+        ],
+        "eventEnablement": [
+          "RAES forward A disjoint X, reverse B subset X; each cause present outside reversed set and each preventer absent from the relevant union (Definition 4)",
+          "RES X_enabler and Y_preventer disjoint; if undo e then e must occur among enablers, with weakening only for consistent supersets disjoint from preventers"
+        ],
+        "transitionRule": [
+          "RAES mixed transition C'=(C\\B)∪A under all five source-specific guards",
+          "RES forward/reverse changes configuration membership and permits out-of-causal order undo; no forced graph-node birth/edge offspring or bit state mutation specified"
+        ],
+        "compositionRule": [
+          "legal mixed event steps depend on configuration, simultaneous step enablement and absence of preventers",
+          "Def 9/Proposition 4 RAES-to-RES is directional, not claim all RES arise as RAES; history/cause-order changes legality"
+        ],
+        "schedulingAndStochasticity": [
+          "asynchronous event steps may be forward/reversed; no physical time, rate or Hilbert dynamics postulated"
+        ],
+        "birthDeathConservation": [
+          "source rules may create/delete/reverse as specified; native forced newborn is not borrowed"
+        ],
+        "observerAccess": [
+          "full typed states and admissible event histories; no assumed physical response measurements"
+        ],
+        "resourceLimits": [
+          "bounded-locality or source well-foundedness is a formal axiom; experimental resource caps are not physical units"
+        ]
+      },
+      "preloadedAssumptions": {
+        "spacetime": "not supplied",
+        "topologicalDimension": "not supplied",
+        "metric": "not supplied",
+        "physicalTime": "not supplied",
+        "HilbertOrProbability": "not supplied",
+        "energy": "not supplied",
+        "massOrMatter": "not supplied",
+        "entropyOrTemperature": "not supplied",
+        "geometryOrTopology": "not preloaded, but abstract event-structure consistency axioms supplied",
+        "causalDirectedOrder": "source causation/precedence explicitly postulated relations; not derived from native source"
+      },
+      "mappingToNativeCausalStep": {
+        "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+        "representationMap": "partial observer map from source native occurrence histories to event configurations with state/condition indexed enablement; information loss in bit/graph state and causal reversal must be tested",
+        "equivalenceRelation": "only if typed admissible events, complete update, distinct native occurrence identity and composition preserved under explicit graph/event renaming",
+        "forwardLawfulDynamicsProof": "not attempted; candidate only",
+        "reverseRecoveryOrCounterexample": "Def 4 and Example 9 show permission to act may change after a third event; native T4 660 blocked triples cannot be inferred from initial pairwise commutation alone.",
+        "statefulInterferenceAndTripleCompositionCheck": "required: exact T4 83 state-sensitive pair signature differences and 660 blocked triples; not yet mapped",
+        "independentNulls": [
+          "same static incidence but different guards",
+          "matching single-step observers with different third-step legal histories"
+        ],
+        "status": "not_attempted",
+        "commutingOperationalDiagram": "R(T_native(s,e)) ≅ T_external(R(s),F_s(e)) not established",
+        "higherCompositionWitness": "no source/native three-event reconstruction proved",
+        "similarityByPhysicalMeasurementsPermitted": false
+      },
+      "physicalEvidence": {
+        "status": "excluded from formal source comparison",
+        "notRequiredForRelationalComparison": true,
+        "notUsedToInferUnits": true,
+        "notUsedAsPositiveMatch": true,
+        "originalPhysicsSources": "formal source paper only",
+        "futureEmpiricalQuestion": "outside current scope"
+      },
+      "extractionStatus": {
+        "reviewerOrAgent": "AI assistant under Joshua Oshiro human-originated research direction",
+        "recordedOn": "2026-10-14",
+        "evidenceTier": "formal_transition_extracted",
+        "mathEquationReadBackVerified": true,
+        "simulationOrTheoremReproduced": false,
+        "ambiguitiesAndCompetingFormulations": [
+          "source reversibility optional and not an inverse to native birth/mutation rewrite",
+          "native participant bits and offspring occurrence graph absent from pure event-configuration state",
+          "RAES pairwise precedence and RES cause/prevention must be derived from full native state guards, including T4 triples",
+          "Source equation/definition readback, not an independent full theorem rederivation"
+        ],
+        "noInferenceBeyondOriginalSource": true
+      },
+      "exactSourceNotes": {
+        "original": "https://link.springer.com/article/10.1007/s00354-018-0040-8",
+        "assessedOriginalMath": true,
+        "validityVersion": "New Generation Computing 36 (2018) 281–306 version of record, published 2018-08-24, Springer open full text",
+        "negativeResults": [
+          "source states explicitly that not all concurrent reversible systems are RAES-representable (RES is strictly more expressive for disjunctive causes)",
+          "Example 9: an event c resolves a/b initial conflict; static event-pair conflict relation alone insufficient for conditional branching",
+          "alternating present/absent event forever has no configuration limit (Definition 10)"
+        ]
+      }
+    }
+  ],
+  "sourceIntegrity": {
+    "issue": "A purported alternate Edinburgh-hosted Milner PDF returned an unrelated 1985 algebra of communicating processes text on visual inspection; excluded from equation-level source evidence. No inference of malfeasance; the retrieval/mismatched document is an unreliable record.",
+    "suspectURL": "https://www.pure.ed.ac.uk/ws/files/15231255/Pure_bigraphs_Structure_and_dynamics.pdf",
+    "correctSource": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-614.pdf",
+    "versionBoundary": "January 2005 Cambridge report not silently treated as 2006 journal equation numbering",
+    "status": "source version contamination averted"
+  },
+  "negativeControls": [
+    "T4 83 state-dependent independence signatures",
+    "T4 660 initially pairwise-commuting but incomplete triple compositions",
+    "T3 directed AND/OR mathematical witness is not original unordered native source"
+  ],
+  "qualification": {
+    "C1": "OPEN two independent fully logged search routes and citation-saturation not met",
+    "C2": "PARTIAL 3 additional original-source structural law extractions",
+    "C3": "OPEN formal contrary/exclusion campaign not complete",
+    "C4": "OPEN no source-to-native bisimulation or equivalent transition construction"
+  },
+  "independentTheoremReplication": false,
+  "physicalUnitsOrMeasurementsUsed": false
+}
