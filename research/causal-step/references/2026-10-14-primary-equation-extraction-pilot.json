@@ -1,0 +1,121 @@
+{
+  "asOf": "2026-10-14",
+  "title": "Primary-paper exact mathematical-object pilot: relational quantum clock and network/field coupling",
+  "status": "TWO original full-text equation-level extracts checked directly on publisher HTML; not replicated theorem proofs or executable source equivalences",
+  "metadata": [
+    "Paper version DOI, authors, publisher section and Eq number inspected; sources cited with direct URLs, not screenshots.",
+    "The equations are external author expressions under declared assumptions. The assistant has not proved their derivation or compared an exact source-derived dynamical map to Causal Step."
+  ],
+  "cases": [
+    {
+      "id": "PILOT-QRF-001",
+      "parentSourceRecord": "LE/LE-001",
+      "title": "Quantum Spacetime from Constraints: Wave Equations and Fields",
+      "authors": "Tommaso Favalli",
+      "publicationDate": "2026-10-08",
+      "doi": "10.1007/s10773-026-06495-y",
+      "sourceURL": "https://link.springer.com/article/10.1007/s10773-026-06495-y",
+      "originalMath": [
+        {
+          "section": "2.1 Subsystems in the Universe",
+          "eq": "Hilbert decomposition before Eq. (1)",
+          "expression": "H = H_C ⊗ H_R ⊗ H_S",
+          "implication": "Quantum tensor-product state space preloaded; cannot claim generation of Hilbert states."
+        },
+        {
+          "section": "2.1 Subsystems",
+          "eq": "Eq. (2), Eq. (3)",
+          "expression": "|t>_C = sum_i exp(-i E_i t)|E_i>_C; I_C = (1/T) integral dt |t><t|",
+          "implication": "Quantum clock spectral/effect structure assumed; clock inferred as POVM conditioned on total state."
+        },
+        {
+          "section": "2.2 Spacetime from Constraints",
+          "eq": "Eq. (10)",
+          "expression": "(H_C+H_R+H_S)|Ψ> = 0",
+          "implication": "Global energy/Hamiltonian constraint is imposed, not derived from native causal hypergraph."
+        },
+        {
+          "section": "2.2 Spacetime from Constraints",
+          "eq": "Eq. (11)",
+          "expression": "(P_R+P_S)|Ψ> = 0",
+          "implication": "Global momentum constraint, with clock momentum set P_C=0 by assumption."
+        }
+      ],
+      "typedObjects": [
+        "quantum clock C",
+        "reference particle R",
+        "target system S",
+        "total quantum state |Ψ>",
+        "energy and momentum operators",
+        "clock and rod POVM states"
+      ],
+      "allowedOps": "Conditional projection on clock/rod quantum observables under two global constraint equations; effectively single excitation in second-quantized examples.",
+      "specificallyPreloaded": [
+        "Hilbert state and tensor factorization",
+        "Hamiltonian, momentum and energy operators",
+        "1+1 dimension selected for exposition; not a derived physical dimension",
+        "quantum clock spectrum and periodic spatial coordinate ranges",
+        "assumptions permitting heavy or negligible reference-particle kinetic energy"
+      ],
+      "claimedEmergences": "Schrodinger, Klein-Gordon, Dirac equations from stated constraints; the author explicitly cautions in introduction that this embeds known wave equations within the constrained total quantum state rather than first-principles creation of all their ingredients.",
+      "positiveConnection": "Possible precise conditional relational-clock/projection formal comparator; does not establish same native causal-step event causality.",
+      "obstruction": "No provided mapping from unordered firing rank-k hyperedges or stateful multi-event conflicts to Hilbert clock/momentum constraints; quantum probability, dimensionality and mass remain external inputs.",
+      "verificationTier": "original_source_equation_locator_checked_no_theorem_or_source_reproduction"
+    },
+    {
+      "id": "PILOT-NETFIELD-002",
+      "parentSourceRecord": "LS/LS-? old R14 and LX/LX-015 network field",
+      "title": "Coupled Dynamics Between Networks and Fields in Physical Space: A Theoretical Perspective",
+      "authors": "Alex Arenas, Oriol Artime, Albert Díaz-Guilera, Sergio Gómez, Clara Granell",
+      "publicationDate": "2026-09-11",
+      "doi": "10.1002/andp.70288",
+      "sourceURL": "https://onlinelibrary.wiley.com/doi/full/10.1002/andp.70288",
+      "originalMath": [
+        {
+          "section": "2 Mathematical Notation",
+          "eq": "Eq. (1)",
+          "expression": "dot x_i = F_i(x_i) + Σ_j A_ij G_ij(x_i,x_j) + Φ_i(M_i[u](t), x_i)",
+          "implication": "State evolution explicitly time-differentiable, pairwise adjacency A_ij and field-to-node observation operator are preloaded."
+        },
+        {
+          "section": "2 Mathematical Notation",
+          "eq": "Eq. (2)",
+          "expression": "T u(r,t)=L u(r,t)+Ψ(r,u;{r_i,x_i}_{i=1}^N)",
+          "implication": "Continuous field on ambient Ω⊂R^d and node-to-field injection already given."
+        },
+        {
+          "section": "2 Mathematical Notation",
+          "eq": "Eq. (3)",
+          "expression": "T=a_2(r,t)∂_t²+a_1(r,t)∂_t+a_0(r,t)",
+          "implication": "Derivative structure and time parameter preselected, not emergent."
+        }
+      ],
+      "typedObjects": [
+        "graph G=(V,E), adjacency A_ij",
+        "node states x_i(t)",
+        "positions r_i∈Ω⊂R^d",
+        "continuous field u(r,t)",
+        "sampling and injection M_i, Φ_i, Ψ operators"
+      ],
+      "allowedOps": "Coupled state/field evolution with source operators and PDE; separate on-metric-network and ambient-field varieties.",
+      "specificallyPreloaded": [
+        "ambient R^d and source node coordinates or metric graph",
+        "continuous physical time t and derivative operators",
+        "graph adjacency (mostly pairwise) and node positions",
+        "field regularity/source-sink and boundary conditions",
+        "physical balance/passivity restrictions"
+      ],
+      "claimedEmergences": "Emergent effective network coupling from eliminating a faster/slower field under actual scale separation; authors warn topology alone insufficient in general.",
+      "positiveConnection": "Demonstrates how to compare observation/injection interfaces and forward dynamical laws without claiming pre-spacetime origin.",
+      "obstruction": "Cannot import an ambient field, spatial metric or gradient into primitive source; must show if and how these structures arise from true multi-event source operations.",
+      "verificationTier": "original_source_equation_locator_checked_no_theorem_or_source_reproduction"
+    }
+  ],
+  "versionAndInterpretationNotes": [
+    "Source extraction is equation- and section-level; it is not a faithful computational reproduction of either paper.",
+    "These two papers are selected examples showing how bibliography-only rows differ from structural test-ready records.",
+    "The corpus has 197 records and 0 complete source-by-source theorem/transition-level mappings. This pilot does not by itself satisfy readiness gate C2.",
+    "The Favalli introduction itself expressly distinguishes embedding existing wave equations from first-principles derivations; preserve that negative qualification.",
+    "Arenas original equations make explicit that continuum time, spatial embedding, fields and adjacency are inputs, not native unbounded causal emergence."
+  ]
+}
