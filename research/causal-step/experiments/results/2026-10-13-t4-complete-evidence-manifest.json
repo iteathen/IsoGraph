@@ -1,0 +1,175 @@
+{
+  "title": "Causal Step T4 — Exact native operational dependency and higher-composition",
+  "as_of": "2026-10-13",
+  "repository": "iteathen/IsoGraph",
+  "branch": "research/causal-step-foundational-bridges-20261013",
+  "parent_checkpoint": "7c7621a01cea1798060d54a1e30fa19f1c1e7dbe",
+  "authority": "exploratory research and exact finite local tests only; no qualified physical or IsoGraph claim",
+  "sourceProvenance": {
+    "human_direction": "Joshua Oshiro",
+    "agent_contribution": "AI-assisted mathematical mechanism design, implementation, executed tests, source audit",
+    "external_antecedents": "Mazurkiewicz; Ehrig et al.; Baldan et al.; original cited authors in source register"
+  },
+  "method": "Four independently named bounded experiments, checking T4 local reducer at 364 source-derived checkpoint next states and 3584 original adjacent next states; exact full-state pair interchange and three-event-birth-tag equivalence, source rules and history unchanged",
+  "files": [
+    {
+      "path": "research/causal-step/experiments/2026-10-13-t4-two-event-squares.cjs",
+      "git_blob_sha": "f41e1449a5ddc4af11a3d5def7beab8cf6d7742d",
+      "utf8_character_count": 17548
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-two-rewrite-squares-k3-k4-129.json",
+      "git_blob_sha": "8202250530f022523ea9270b713737027435cf7d",
+      "utf8_character_count": 85379
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-two-rewrite-squares-k5-129.json",
+      "git_blob_sha": "0f5813d37301f23fc2ed6ce7ee149dbc88bfbae3",
+      "utf8_character_count": 76747
+    },
+    {
+      "path": "research/causal-step/experiments/2026-10-13-t4-adjacent-dependency.cjs",
+      "git_blob_sha": "50e4cb486c46553314444f020b7654ec1175e7c0",
+      "utf8_character_count": 9748
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-adjacent-event-dependence-k3-k4-129.json",
+      "git_blob_sha": "b178e7fcc2654732c1e68378730ea48de6b2ba3c",
+      "utf8_character_count": 23300
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-adjacent-event-dependence-k5-129.json",
+      "git_blob_sha": "7c23a207a32e600561a0fa5b4905b4fd0db966db",
+      "utf8_character_count": 23998
+    },
+    {
+      "path": "research/causal-step/experiments/2026-10-13-t4-exhaustive-local-commutation.cjs",
+      "git_blob_sha": "35ef31a1234b2523b787a605498fe3ff332a99fa",
+      "utf8_character_count": 10654
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-exhaustive-local-commutation.json",
+      "git_blob_sha": "e8427e9fe7fe2d3aa0834af1fc89213cabad62f8",
+      "utf8_character_count": 33673
+    },
+    {
+      "path": "research/causal-step/experiments/2026-10-13-t4-three-event-coherence.cjs",
+      "git_blob_sha": "31fa42bb30caa19710ccf481d130f99ab260bde7",
+      "utf8_character_count": 8146
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-13-t4-three-event-coherence.json",
+      "git_blob_sha": "59089392d42a6b6a291f7000989ebfecbb770861",
+      "utf8_character_count": 21902
+    },
+    {
+      "path": "research/causal-step/reviews/2026-10-13-t4-operational-concurrency-higher-order-coherence.md",
+      "git_blob_sha": "07bcaf3b6a3ff629e4abb28ae26612577a3b6791",
+      "utf8_character_count": 19012
+    },
+    {
+      "path": "research/causal-step/references/2026-10-13-t4-operational-concurrency-mechanism-sources.json",
+      "git_blob_sha": "d5f3a4eb169564c7ed4cf516efaf6e9ae8e74cce",
+      "utf8_character_count": 5329
+    },
+    {
+      "path": "research/causal-step/experiments/hypergraph-long-horizon.mjs",
+      "git_blob_sha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+      "utf8_character_count": 15648
+    },
+    {
+      "path": "research/causal-step/experiments/hypergraph-t2-invariance-replay.cjs",
+      "git_blob_sha": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+      "utf8_character_count": 14660
+    },
+    {
+      "path": "research/causal-step/experiments/results/2026-10-12-higher-order-long-8000-summary.csv",
+      "git_blob_sha": "d2d40f87d59a5a94d2df71a69543e521f6ad807f",
+      "utf8_character_count": 3584
+    }
+  ],
+  "verified": {
+    "sampledTwoEventSquares": {
+      "nativeHistories": 28,
+      "sourceGoldTransitions": 364,
+      "goldMismatches": 0,
+      "sourceCheckpoints": 532,
+      "statesWithTwoEligible": 264,
+      "concurrentPairsExamined": 4287,
+      "commutingSquares": 3320,
+      "disablingConflicts": 652,
+      "bothEnabledNoncommuting": 315,
+      "disjointPairs": 704,
+      "disjointCommute": 704,
+      "disjointNoncommute": 0,
+      "overlapPairs": 3583,
+      "overlapCommute": 2616,
+      "overlapConflict": 652,
+      "overlapNoncommute": 315,
+      "readOnlyOverlapCommute": 1922,
+      "readOnlyOverlapConflict": 0,
+      "casesWithoutEligiblePair": 16,
+      "syntheticBaselineRewrites": 3612
+    },
+    "actualAdjacentEventHistories": {
+      "nativeHistories": 28,
+      "totalSourceEvents": 3612,
+      "adjacentPairs": 3584,
+      "sourceVerifiedNextStates": 3584,
+      "newlyCreatedNextOccurrence": 228,
+      "oldOccurrenceReactivated": 357,
+      "preEnabledNextEvents": 2999,
+      "preEnabledCommuting": 2737,
+      "preEnabledNoncommuting": 138,
+      "preEnabledBlocking": 124,
+      "preEnabledCommutingSharedParticipant": 2076,
+      "preEnabledCommutingDisjoint": 661,
+      "preEnabledNoncommutingSharedParticipant": 138,
+      "preEnabledNoncommutingDisjoint": 0,
+      "naiveTouchWouldOverorder": 2076,
+      "naiveBirthWouldMissOrderSensitivity": 262
+    },
+    "exhaustiveFiniteInitialStateFamilies": {
+      "inputBinaryStates": 8288,
+      "coenabledPairs": 10102,
+      "commuting": 9285,
+      "disable": 767,
+      "bothEnabledDifferent": 50,
+      "distinctPairSignaturesWithStateDependentClass": 83,
+      "disjointAllPairs": 4704,
+      "disjointCommuting": 4704,
+      "duplicateOccurrencePairs": 220
+    },
+    "threeEventCoherence": {
+      "ruleModes": 14,
+      "binaryInitialStates": 576,
+      "coenabledTriples": 6116,
+      "initiallyPairwiseAllCommutingTriples": 4724,
+      "initiallyNotAllPairwiseCommutingTriples": 1392,
+      "threeEventOrderPermutationsTried": 28344,
+      "threeEventOrderPathsLegallyComplete": 26544,
+      "pairwiseInitialIndependentButSomeTripleOrderBlocked": 660,
+      "pairwiseInitialIndependentButTripleEndpointsDisagree": 0,
+      "pairwiseInitialIndependentWithAll6Equivalent": 4064
+    },
+    "sourceChecks": {
+      "historicalEngineBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+      "originalT2ObserverBlobSha": "bb1eefb92fedbd0d4f1b1b6ce6b6839bc35d669e",
+      "historicalCsvBlobSha": "d2d40f87d59a5a94d2df71a69543e521f6ad807f",
+      "directSourceNextStateGoldMismatches": 0,
+      "sampledSourceNextStateGoldMatches": 364,
+      "adjacentSourceNextStateGoldMatches": 3584
+    }
+  },
+  "limitations": [
+    "Binary states, seven selected native sampled rules, k=3/4/5 as observational experimental scopes only; no physical dimension cap.",
+    "The complete-overlap/disjoint/duplicate control families vary initial conditions counterfactually while preserving pinned local dynamics.",
+    "Only coenabled distinct higher-order event occurrences evaluated, full newborn identity mapping by producing event, not host numeric birth index.",
+    "Pairwise commuting in one state is not universal commutation across future states; 660/4724 exact triple controls exhibit blocked composition.",
+    "No primitive spacetime clock, metric, matter/force/energy, Hilbert state, entropy pressure or dark-sector law introduced.",
+    "Host source counters and numeric scheduler coupling are not included in the full-state equivalence, because they are separate observer/instrumentation variables.",
+    "Standalone Node22 scripts were authored but not independently executed; local tests used V8 isolate. No GitHub Actions.",
+    "No merge, no Woit/Lisi modifications, no IsoGraph Core authority change, no physics publication qualification."
+  ],
+  "recommended_next": "T4.1 contextual source event-structure observer retaining producer/activation supports, conditional conflicts, state-indexed commuting classes and triple coherence, validated on held-out unchanged histories; only then attempt external read/inhibitor event-structure or adhesive categorical transfer."
+}
