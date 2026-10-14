@@ -1,0 +1,167 @@
+{
+  "title": "Causal Step — Source-technical extraction and comparison contract v0.1",
+  "date": "2026-10-14",
+  "status": "PROPOSED SCHEMA; source abstraction and test-suite design only, not a tested general formal equivalence",
+  "aim": "Make cross-domain physics models mechanically comparable at the level of dynamic relational operations, while separately recording externally justified mathematical/physical claims.",
+  "valuesAllowed": {
+    "evidenceTier": [
+      "bibliography_only",
+      "publisher_abstract_checked",
+      "source_definitions_extracted",
+      "formal_transition_extracted",
+      "proof_scope_checked",
+      "reproduced_finite_cases",
+      "independent_source_faithful_map_tested",
+      "physical_prediction_externally_validated"
+    ],
+    "mappingResult": [
+      "not_attempted",
+      "candidate_partial",
+      "observer_only_match",
+      "bisimulation_or_equivalent_under_named_scope",
+      "proved_nonisomorphic_or_nonfaithful",
+      "inconclusive_under_named_scope"
+    ],
+    "preloadedClassification": [
+      "not_preloaded",
+      "preloaded_explicitly",
+      "induced_conditionally",
+      "derived_under_specified_premises",
+      "not_applicable",
+      "unknown"
+    ],
+    "reviewMode": [
+      "positive_finding",
+      "negative_counterexample",
+      "unresolved",
+      "review_reference"
+    ]
+  },
+  "mandatoryPaperModelRecord": {
+    "stableCorpusID": "e.g. F/F18 or LE/LE-001",
+    "originalTitle": "Required full paper title and original authors (names verified)",
+    "sourceVersion": {
+      "sourceDOIorArxiv": null,
+      "versionDate": null,
+      "sourceGitOrDatasetHash": null,
+      "exactMathLocator": [
+        "definition number / equation number / page numbers; not merely a DOI"
+      ]
+    },
+    "modelScope": {
+      "physicalClaims": "exact claim and current independent evidence, not implication of topic title",
+      "formalDomain": "which state-space subset / initial conditions / automorphism quotient / algebra assumptions",
+      "relevantCounterexample": "at least one source negative or counterexample, if available"
+    },
+    "stateObject": {
+      "types": [
+        "e.g. nodes, hyperedges, ports, cells, edges, tensor states, charges, maps"
+      ],
+      "arityAndMultiplicity": {
+        "allowedArity": "finite/variable/unbounded?",
+        "occurrenceIdentity": "how handled",
+        "pairwiseProjection": "loss/gain under projection"
+      },
+      "labelsAndSymmetries": [
+        "renaming of nodes, environment, gauge/references, orientations"
+      ],
+      "fundamentalVariables": [
+        "exact declared primitive"
+      ],
+      "derivedVariables": [
+        "relations not originally assumed"
+      ]
+    },
+    "actualDynamics": {
+      "initialStatePredicates": [
+        "explicit source admissibility conditions"
+      ],
+      "eventEnablement": [
+        "complete guards, not just diagram adjacency"
+      ],
+      "transitionRule": [
+        "exact equation or algorithm, including read/write/delete/create operations"
+      ],
+      "compositionRule": [
+        "commutation/conflict/higher-order coherence, not only pairwise tensor"
+      ],
+      "schedulingAndStochasticity": [
+        "source-proved or postulated time/order/probability"
+      ],
+      "birthDeathConservation": [
+        "source invariant, no unsupported substance"
+      ],
+      "observerAccess": [
+        "permitted interventions and measurements"
+      ],
+      "resourceLimits": [
+        "simulation cap vs physical assumptions"
+      ]
+    },
+    "preloadedAssumptions": {
+      "spacetime": null,
+      "topologicalDimension": null,
+      "metric": null,
+      "physicalTime": null,
+      "HilbertOrProbability": null,
+      "energy": null,
+      "massOrMatter": null,
+      "entropyOrTemperature": null,
+      "geometryOrTopology": null,
+      "causalDirectedOrder": null
+    },
+    "mappingToNativeCausalStep": {
+      "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+      "representationMap": "native event occurrence -> source model typed action, declared or absent",
+      "equivalenceRelation": "exactly what observational/intervention content must be preserved",
+      "forwardLawfulDynamicsProof": "source equation and exceptions",
+      "reverseRecoveryOrCounterexample": "proof, exact finite witness, or failure",
+      "statefulInterferenceAndTripleCompositionCheck": "must account for T4 83 state-sensitive pair signatures and 660 blocked triples",
+      "independentNulls": [
+        "pairwise-only matching with different higher-order response",
+        "same scalar entropy/homology but different events"
+      ],
+      "status": "not_attempted"
+    },
+    "physicalEvidence": {
+      "observables": [
+        "actual paper predictions, uncertainty and data sources"
+      ],
+      "positiveTests": [
+        "independently verified if any"
+      ],
+      "negativeTests": [
+        "known contrary observations and systematic degeneracies"
+      ],
+      "scopeOfExternalVerification": "not assumed by citation"
+    },
+    "extractionStatus": {
+      "reviewerOrAgent": null,
+      "recordedOn": null,
+      "evidenceTier": "bibliography_only",
+      "mathEquationReadBackVerified": false,
+      "simulationOrTheoremReproduced": false,
+      "ambiguitiesAndCompetingFormulations": [
+        "what still needs adjudication"
+      ],
+      "noInferenceBeyondOriginalSource": true
+    }
+  },
+  "nativeSourceReferenceRecordExample": {
+    "nativeFile": "research/causal-step/experiments/hypergraph-long-horizon.mjs",
+    "gitBlobSha": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "formalDomain": "7 selected frozen rule contexts, k=3/4/5 observational scopes, node bit vectors, distinct unordered hyperedge occurrences; not an underlying physical arity/dimensional bound.",
+    "sourceEventEnabling": "Full-rank edge occurrence is eligible iff alive, unfired, and sum(source bits) belongs to the rule's allowed Hamming weights.",
+    "sourceEventEffect": "Mark fired; may remove from alive set; mutate source bits according to original selected mutation; produce one newborn with state determined by rule and input weight; create offspring hyperedges at allowed ranks consisting of newborn and selected old participants.",
+    "actualNoMetric": "No initial metric, Hilbert state, actual force, mass, field or physical dimension is present in this frozen source.",
+    "sourceKnownFailures": [
+      "Every fired step forces a newborn, so node growth is not independent emergence",
+      "T4 83 state-sensitive interference signatures",
+      "660 initial pairwise commuting triples can fail to compose",
+      "k5/#81 periodic FIFO local tail and k4/#21 scheduler dependence"
+    ],
+    "technicalFidelity": "source code and T1–T4 exact finite tests exist; no external physical equivalence achieved"
+  },
+  "processRule": "Every new source-comparison claim must cite its object, equation/operation, exact assumptions, transfer map and negative controls. A matching shape at the diagram/abstract level is only a candidate.",
+  "premetricBoundary": "Do not define fundamental graph distance, dimensionality, time parameter, energy, entropy or quantum state just to make existing physics formulas true."
+}
