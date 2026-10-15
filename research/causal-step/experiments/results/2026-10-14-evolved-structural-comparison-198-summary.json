@@ -1,0 +1,131 @@
+{
+  "title": "Causal Step actual evolved graph structural screen — 198 histories",
+  "recordedOn": "2026-10-14",
+  "source": {
+    "repository": "iteathen/IsoGraph",
+    "branch": "research/causal-step",
+    "commitBefore": "7846f8223c0de9547dea61bd0320a1b57b61bf78",
+    "originalNativeSimulatorGitBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "rules": "frozen k=3,4,5 sampled top six uniform-certified and six other among first shuffled 192 source rules per k",
+    "seedPolicy": "choose overlap or single seed using original k-ary incidence; choose bitmask maximizing initially enabled occurrences, then proximity of ones to half; deterministic lower mask tie-break",
+    "mutation": "one native active mode 1+(sourceRuleId mod 4) or zero-mutation control",
+    "scheduling": "FIFO and seeded random, Fenwick eligible occurrence selection",
+    "resourceCaps": {
+      "nodes": 12000,
+      "liveEdges": 250000,
+      "sourceModelUnmodified": true
+    }
+  },
+  "phaseSummaries": [
+    {
+      "name": "overlap_1000",
+      "runs": 144,
+      "successfulRewrites": 81343,
+      "reached1000": 81,
+      "stoppedBefore1000": 63,
+      "fullSnapshotsAndStructuralRecords": true,
+      "finiteInducedEventPosetNodes": 81343,
+      "coverLinks": 80708,
+      "roots": 635,
+      "producerPairComparabilityChecks": 212979,
+      "coverMergers": 0
+    },
+    {
+      "name": "single_1000",
+      "runs": 36,
+      "successfulRewrites": 20019,
+      "reached1000": 20,
+      "stoppedBefore1000": 16,
+      "fullSnapshotsAndStructuralRecords": true,
+      "finiteInducedEventPosetNodes": 20019,
+      "coverLinks": 19983,
+      "roots": 36,
+      "producerPairComparabilityChecks": 40802,
+      "coverMergers": 0
+    },
+    {
+      "name": "overlap_4000_targeted_deep",
+      "runs": 18,
+      "successfulRewrites": 72000,
+      "reached4000": 18,
+      "stoppedBefore4000": 0,
+      "fullSnapshotsAndStructuralRecords": true,
+      "finiteInducedEventPosetNodes": 72000,
+      "coverLinks": 71910,
+      "roots": 90,
+      "producerPairComparabilityChecks": 268437,
+      "coverMergers": 0
+    }
+  ],
+  "totals": {
+    "runs": 198,
+    "distinctSampledSourceRuleCandidates": 36,
+    "successfulNativeRewrites": 173362,
+    "atLeast1000Completed": 119,
+    "deepRunsAt4000": 18,
+    "stoppedEarly": 79,
+    "completeCompressedSourceGraphSnapshots": 699,
+    "rewritesIndependentlyReplayedWithoutMismatch": 173362,
+    "terminalGraphStatesIndependentlyReproduced": 198,
+    "matchedArchivedOriginalSourceGold400StepCheckpoints": 6,
+    "birthPosetNodes": 173362,
+    "birthPosetCoverLinks": 172601,
+    "birthForestRoots": 761,
+    "birthCoverMergers": 0,
+    "immediateCreatorPairsVerifiedComparable": 522218,
+    "deepSnapshotsWithSampledCrossbranchOperationalInterference": 16,
+    "deepSnapshotsSearchedForSuchPairs": 18,
+    "sampledGrownSnapshotsWithLivePairShadowFalseRank3Triangle": 24
+  },
+  "deepRuleIds": [
+    "3:1",
+    "3:28",
+    "3:4",
+    "4:21",
+    "4:0",
+    "4:26",
+    "5:4",
+    "5:81",
+    "5:21"
+  ],
+  "graphDataArchive": {
+    "filename": "causal_step_evolved_graphs_198_runs_2026-10-14.zip",
+    "sha256": "b3c10dbda3d9a790fbbe586cc7ef6f9c51eeaf572eda09da33d83c2781f277dc",
+    "bytes": 13989249,
+    "entries": 716,
+    "location": "generated conversation download artifact, NOT uploaded to GitHub repository",
+    "contains": "699 full gzip JSON snapshots and all 198 run tables, scripts, analysis, independent full selected-event replay, witness records and SHA manifest",
+    "fullZipByteSourceAvailableHere": false
+  },
+  "localScriptProofHashes": {
+    "nativeDriverSHA256": "6d3f165005fd35a445a222e232435d7c5509810acfb0ae81bcbcaead95d267e6",
+    "structuralAnalyzerSHA256": "56f4dc8df0efe7004c61deb3e85f54b49e670225ea36d081bfa6ce6030ab633b",
+    "independentFullReplaySHA256": "3a2256746b2c43ab2ffb7d49960ae23d906aa4bd6295241e49582c9da7c225e1",
+    "crossbranchInterferenceSHA256": "3a73d5d75e63a30a73a4838341890bfa44df4510ddd474ae7f062447bab0e909",
+    "independentReplayResultSHA256": "6e858892fd02924892bf5dbb2d112c314a5322664a0b303a844dd37f03313319",
+    "grownShapeAnalysisSHA256": "78a5038d9812d501ebcfa182fbce0a12c34bba6022eb93ab46070dadf53c5995",
+    "crossbranchWitnessResultSHA256": "4f73fe92a2362f0b4b2c6fe550154f304058e96763278b438739815d4eb08088"
+  },
+  "knownLimitations": [
+    "Sampling 36 original selected rules not exhaustive across all rule families, input topology, bit seeds or stochastic seeds",
+    "63+16 histories stopped before their target; no fictitious 1000-step coverage",
+    "Deep rules were deliberately screened by earlier 1000-step survival and local complexity; selection bias recorded",
+    "Birth-order forest is a precise induced provenance subrelation, NOT all operational/causal dependence, physical spacetime, or a particle result",
+    "16/18 deep local crossbranch interference detection is bounded witness search; two without witness not proved free of interactions",
+    "Independent Python replay consumes reconstructed selected occurrence sequence and independently checks legality/final-state, not seeded RNG rank selection for every step",
+    "6 archival native-source gold cases validate both FIFO and random source result at 400 steps; complete external theorem corpus/physics simulations not run",
+    "Only source-defined relational algebra/invariants, not physical distances, units, fitted curves, force values or spatial dimension, used to compare",
+    "Full binary source graph snapshots supplied as user download, not falsely described as GitHub committed"
+  ],
+  "readiness": {
+    "C1": "OPEN 0/16 citation-saturated fields",
+    "C2": "PARTIAL",
+    "C3": "PARTIAL",
+    "C4": "OPEN zero external/native full faithful process equivalences",
+    "originalNativeSourceModified": false,
+    "T4HistoricalNegativeControlsPreserved": true,
+    "qualifiedIsoGraphCoreModified": false,
+    "independentWoitLisiModified": false,
+    "mainModified": false
+  }
+}
