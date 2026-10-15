@@ -1,0 +1,129 @@
+{
+  "title": "String-theory mathematics, stripped of ontology as comparison input — original-primary pilot 01",
+  "date": "2026-10-14",
+  "branch": "research/causal-step",
+  "reviewType": "source mathematical readback of original closed string field theory; publisher-abstract Witten open algebra is discovery pointer only",
+  "originalPaper": {
+    "id": "MECH-33",
+    "canonicalCorpusId": "EXP/216",
+    "domain": "R12",
+    "originalTitle": "Closed String Field Theory: Quantum Action and the B-V Master Equation",
+    "authors": [
+      "Barton Zwiebach"
+    ],
+    "submitted": "1992-06-23",
+    "journal": "Nuclear Physics B 390 (1993) 33–152",
+    "doi": "10.1016/0550-3213(93)90388-6",
+    "sourceVersion": "arXiv:hep-th/9206084v1, 23 June 1992 — inspected source, not assumed identical to the 1993 publisher page numbering",
+    "originalFullTextURL": "https://arxiv.org/pdf/hep-th/9206084",
+    "originalMathLocators": [
+      "PDF zero-index p29 §4.1 Eqs (4.1)–(4.3), string product [B1,…,Bn]_g maps H^⊗n→H; H is the combined matter+ghost CFT Hilbert space, with grading and subsidiary conditions",
+      "PDF zero-index p30 Eqs (4.4), (4.7), (4.9): graded commutation, unary genus-0 [B]_0=QB, and ghost/degree constraints",
+      "PDF zero-index p30 Eq (4.10), expanded on p31 in Eqs (4.11)–(4.14): BRST derivation terms plus graded sums of nested n-ary products and a genus-reduction contraction/sum; genus-0 gives homotopy-Lie Jacobi hierarchy",
+      "PDF zero-index p54–55 §5.2 around Eq (5.1): string-vertex moduli-region boundary described as sums of surfaces sewn at punctures including self-sewing, with labels/signs and factor-of-two conventions; equation graphic itself not fully text-rendered, so NO exact transcription claimed",
+      "PDF zero-index p1–3 Introduction, source explicitly acknowledges chosen conformal background; genus, off-shell fields, moduli spaces, minimal-area metrics and Feynman decomposition are source assumptions/structures, not primitive causal graph results"
+    ],
+    "sourceMathematicalKernel": {
+      "objects": [
+        "graded vector/Hilbert space H supplied by conformal field theory with ghost degrees and constraints",
+        "a family of genus-indexed multilinear maps m_n^g : H^⊗n→H for n≥0",
+        "unary BRST operator Q and graded-sign permutation constraints",
+        "moduli-space sets V_g,n with punctured Riemann surfaces/local coordinates",
+        "sewing/gluing and genus/arity-changing contractions in the geometrical recursion"
+      ],
+      "operationArity": "n is arbitrary (n≥0) with grading and genus g≥0; NOT fixed 2-ary and NOT native rank-k hyperedge firing",
+      "exactSelectedEquations": [
+        {
+          "locator": "Eq (4.1), PDF p29",
+          "formal": "[B1,…,Bn]_g ∈ H",
+          "meaning": "typed n-input operation parameterized by genus g"
+        },
+        {
+          "locator": "Eq (4.4), PDF p30",
+          "formal": "[...,Bi,B(i+1),...]_g = (-1)^(deg(Bi)deg(B(i+1))) [...,B(i+1),Bi,...]_g",
+          "meaning": "graded commutation, NOT strict set-level unordered hyperedge identity"
+        },
+        {
+          "locator": "Eq (4.7), PDF p30",
+          "formal": "[B]_0 = Q B",
+          "meaning": "unary product is BRST differential at genus zero"
+        },
+        {
+          "locator": "Eq (4.10), PDF p30, and (4.12)–(4.14), PDF p31",
+          "formal": "0 = Q∘m_n^g + Σ_i m_n^g(...,QB_i,...) with graded signs + Σ_splits graded m_l^g1(...,m_k^g2(...),...) + 1/2 Σ_basis_contractions m_(n+2)^(g−1)(Φ_s,Φ~_s,...) [schematic; SOURCE has exact combinatorial, index and sign restrictions]",
+          "meaning": "nested higher-arity composition is constrained by an identity across all allowed splittings and, at higher genus, loop contractions"
+        },
+        {
+          "locator": "§5.2 Eq (5.1), PDF pp54–55, verbal only",
+          "formal": "∂V_(g,n) described by signed sums of sewings V_(g1,n1)⊛V_(g2,n2) and self-sewings V_(g−1,n+2), with exact original puncture/genus restrictions",
+          "meaning": "typed surface-boundary gluing operation, not a source-level node-birth law; exact displayed graph not transcribed"
+        }
+      ],
+      "mathematicallyLoadBearing": [
+        "source-selected conformal background / combined matter+ghost CFT state space",
+        "graded H and sign/ghost conventions, BRST Q and subsidiary constraints",
+        "punctured Riemann-surface moduli and local coordinate sewing conditions",
+        "selected genus, symmetry factors, nontrivial sewing constraints; more than an arbitrary graph rewrite"
+      ],
+      "compositionalAlgebra": [
+        "graded-commutative n-ary product hierarchy",
+        "genus-0 homotopy Lie (L-infinity) identity rather than strict binary associativity",
+        "higher-genus trace/contraction term and BV-compatible recursion",
+        "surface gluing/vertex decomposition provides graph-like compositional representation"
+      ],
+      "schedulingAndDynamics": "These are algebraic composition identities on supplied source state spaces, not a graph-evolving discrete event process, no automatic physical time or Causal Step scheduler.",
+      "noPhysicalUnitMatching": true
+    },
+    "neutralizedStructuralView": {
+      "candidate": "typed higher-arity compositional operations, graded permutation symmetry, derivation, nested-product obstruction/cancellation identity, loop contraction and boundary-sewing of interfaces",
+      "whatCanBeCompared": "formal operation arity, index/cycle structure, admissibility of nesting, exact sign/symmetry conditions and whether diagrams of the appropriate algebraic mapping commute",
+      "notAccepted": "source author's worldsheet/string ontology as compulsory interpretation; genus is a topological type/index in original math but NOT a native spatial dimension",
+      "mathematicalMap": "candidate partial structure map R of a selected source n-ary operations/identities to typed relational operations on Causal Step states; R not yet defined",
+      "knownObstacles": [
+        "m_n^g accepts graded quantum CFT states, while native hyperedge is an unordered occurrence with bit-state eligibility",
+        "L-infinity identity is a SUM of graded nested terms equal to zero, not assertion that every pair of event updates commutes or that a three-event permutation is legal",
+        "genus/contraction, conformal CFT and moduli sewing are mathematical source data, not automatic derived native geometry",
+        "in source, graph/Feynman diagrams organize amplitudes/surface decompositions; graph readability does not prove a fundamental causal partial order"
+      ],
+      "requiredNegativeChecks": [
+        "native source T4 83 state-dependent pair signatures and 660 triple obstructions not inferred from graded Jacobi hierarchy",
+        "no preservation/recovery of original event birth/mutation/occurrence identity shown"
+      ],
+      "mappingToNativeStatus": "not_attempted",
+      "provesUnderlyingCausalGraph": false,
+      "provesParticlePhysics": false,
+      "externalTheoremIndependentlyReproduced": false,
+      "evidenceTier": "formal_operations_and_composition_equations_inspected_from_original"
+    }
+  },
+  "separatePrimaryBibliographicLead": {
+    "id": "EXP/217",
+    "domain": "R12",
+    "title": "Non-commutative geometry and string field theory",
+    "authors": [
+      "Edward Witten"
+    ],
+    "year": 1986,
+    "doi": "10.1016/0550-3213(86)90155-0",
+    "primaryPublisher": "https://www.sciencedirect.com/science/article/pii/0550321386901550",
+    "publisherAbstractEvidence": "open string interactions are formulated in an associative, noncommutative algebra, associated with a BRST approach; publisher source abstract checked",
+    "originalEquationsInspected": false,
+    "mathEvidenceTier": "publisher_abstract_checked",
+    "followup": "Acquire an accessible original full PDF and extract exact associative star-product, BRST differential, degree/gauge and cyclic trace identities with source-page locators; do NOT inherit an unverified formula from a secondary review."
+  },
+  "negativeControl": "Witten's 1986 open-string associative star algebra and Zwiebach's 1992 closed-string homotopy-Lie hierarchy must NOT be silently identified as the same mathematical law. Their relation is comparison/investigation, not automatically strict equivalence.",
+  "provenance": {
+    "human": "user requested mathematical content independent of string-theory conceptual ontology; offered string theory as example and explicitly hypothesized latent graph-like structure, not proved",
+    "agent": "read Zwiebach 1992 original PDF equations/sections, screened Witten 1986 publisher abstract, defined neutral typed operations and blockers",
+    "external": "all original results credited separately to Barton Zwiebach and Edward Witten"
+  },
+  "readiness": {
+    "C1": "open: 16 domain comprehensive saturation not achieved",
+    "C2": "partial: one original paper mathematical operation/identity readback; one publisher abstract discovery-only",
+    "C3": "partial: opposing assumptions/failures recorded; no comprehensive contrary sweep",
+    "C4": "open: no native-to-string operation-preserving map proved"
+  },
+  "broadNativeSimulationRun": false,
+  "physicalMeasurementsUsedForStructuralComparison": false,
+  "nativeSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08"
+}
