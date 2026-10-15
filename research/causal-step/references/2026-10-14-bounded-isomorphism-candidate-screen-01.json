@@ -1,0 +1,178 @@
+{
+  "title": "Causal Step bounded math-first isomorphism pass 01 — fragment-level constructive equivalences and counterexamples",
+  "recordedOn": "2026-10-14",
+  "sourceBranch": "research/causal-step",
+  "sourceHead": "09172805d52d7ea3681d25be493f92be572b60c5",
+  "scope": "Only exact typed representations, local enabling/frontier observers and selected fixed-state operators; NOT a full native/external physical system equivalence, physical simulation or literature completeness qualification",
+  "externalMathematicalSources": [
+    {
+      "id": "MECH-25",
+      "authors": "Andrzej Ehrenfeucht and Grzegorz Rozenberg",
+      "source": "Reaction Systems: a Formal Framework for Processes Based on Biochemical Interactions",
+      "sourceExtract": "research/causal-step/references/2026-10-14-priority-primary-equation-extraction-batch-07.json",
+      "requiredPremises": [
+        "finite fixed species set S",
+        "reaction triple (R,I,P) with R,I,P nonempty, R∩I=∅",
+        "enabled iff R⊆T and I∩T=∅",
+        "synchronous union of all product sets at a given input state"
+      ],
+      "broadPhysicalLabel": "biochemical reaction-system formalization: kept as author context, not a claim of emerged chemistry"
+    },
+    {
+      "id": "MECH-07",
+      "authors": "Timoteo Carletti, Duccio Fanelli and Sara Nicoletti",
+      "source": "Dynamical systems on hypergraphs",
+      "sourceExtract": "research/causal-step/references/2026-10-14-priority-primary-equation-extraction-batch-02.json",
+      "requiredPremises": [
+        "source-defined hypergraph and vertex–hyperedge incidence",
+        "K^H_ij=Σα(|Eα|−1)Bαi Bαj for i≠j",
+        "L^H=D−K^H"
+      ],
+      "broadPhysicalLabel": "higher-order network coupling and selected linear stability dynamics; not a native physical wave/force"
+    },
+    {
+      "id": "MECH-33",
+      "authors": "Barton Zwiebach",
+      "source": "Closed String Field Theory: Quantum Action and the B-V Master Equation",
+      "sourceExtract": "research/causal-step/references/2026-10-14-string-field-algebra-original-math-pilot-01.json",
+      "requiredPremises": [
+        "graded H/CFT states, BRST Q, genus-indexed n-ary products",
+        "graded higher-composition identities"
+      ],
+      "broadPhysicalLabel": "string field interactions; no identified native field/particle/causal analogue"
+    },
+    {
+      "id": "T4",
+      "authors": "IsoGraph Causal Step prior exact mathematical experimental record",
+      "source": "Native state-indexed commutation and triple-coherence analysis",
+      "sourceExtract": "research/causal-step/experiments/results/2026-10-13-t4-complete-evidence-manifest.json",
+      "requiredPremises": [
+        "source bit-state guards, event occurrence IDs, full successor equality modulo production names",
+        "83 state-sensitive pair signature variations",
+        "660 initially pairwise-commuting triple block cases"
+      ],
+      "broadPhysicalLabel": "none; exact exploratory formal event-history evidence"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "ISO-F01",
+      "status": "EXACT_CONSTRUCTIVE_TYPED_REPRESENTATION",
+      "scope": "Finite node/occurrence incidence multihypergraph with node bits, alive/fired occurrence flags and explicit optional producer fields, with fixed names or type-respecting bijective renaming",
+      "sourceOperation": "H=(V,E,ι:E→P(V),attributes)",
+      "imageOperation": "Typed bipartite incidence graph B with vertex types V/E and edge (v,e) iff v∈ι(e); all node/occurrence attributes retained",
+      "equivalence": "encode/decode inverse on named finite states; isomorphism of typed incidence states, not proof of full published graph rewrite theory",
+      "proof": "E-side neighborhood of any occurrence vertex exactly reconstructs ι(e); attributes reconstruct labels/statuses; no event occurrence is merged",
+      "tested": {
+        "roundtrips": 27648,
+        "failures": 0
+      },
+      "negative": "Dropping the E partition and taking the pairwise clique loses distinct duplicate hyperedge occurrences",
+      "physicalImplication": "none established"
+    },
+    {
+      "id": "ISO-F02",
+      "status": "EXACT_CONSTRUCTIVE_SNAPSHOT_GUARD_AND_FRONTIER",
+      "scope": "Fixed finite state, known incidence occurrence set, binary participant bits, alive/unfired flags, common rank k, allowed Hamming weights W",
+      "sourceOperation": "native En(e) = live(e) ∧ ¬fired(e) ∧ |ι(e)|=k ∧ |{v∈ι(e):bit(v)=1}|∈W",
+      "imageOperation": "For each e and S⊆ι(e) with |S|∈W, construct a source-valid reaction (R=S∪{alwaysPresent,alive_e,unfired_e}, I=(ι(e)\\S)∪{alwaysAbsent}, P={eligible_e}). The always-present species is in T; always-absent species is not.",
+      "equivalence": "Exactly one reaction clause for an occurrence e is enabled iff original En(e), and reaction-system output union equals set of enabled occurrence markers for all e. The extra sentinels ensure source requirement nonempty R, I and P including weights 0 and k.",
+      "proof": "R⊆T and I∩T=∅ iff S is exactly the positive-bit subset of ι(e) and e is alive/unfired. That S is unique; it exists among generated clauses iff |S|∈W.",
+      "tested": {
+        "localGuardChecks": 10752,
+        "frontierChecks": 145152,
+        "rankScope": [
+          3,
+          4,
+          5
+        ],
+        "includesDuplicateOccurrenceIDs": true,
+        "failures": 0
+      },
+      "negative": "Native next state is a selected firing with bit mutations, occurrence-state updates, new nodes and child hyperedges, whereas reaction systems fire all enabled products simultaneously and have a fixed species alphabet. Full process equivalence is NOT proved.",
+      "physicalImplication": "no inference about underlying chemistry; formal enabling language only"
+    },
+    {
+      "id": "ISO-F03",
+      "status": "EXACT_EQUAL_SELECTED_OPERATOR_WITH_EXPLICIT_NONRECONSTRUCTION",
+      "scope": "Fixed finite rank-3 hypergraphs under same named vertices, Carletti hypergraph Laplacian as defined by K_ij=Σ_e(|e|−1)B_eiB_ej",
+      "sourceOperation": "Original hypergraph rank-weighted pairwise K and L=D−K operator",
+      "imageOperation": "A weighted dyadic graph with edge weights K_ij computes identical selected linear operator for given K",
+      "proof": "Two distinct named Fano block collections on V={0,…,6}, each with seven rank-3 hyperedges covering every unordered node pair exactly once, have K_ij=2 for all i≠j and equal L. Under bit1 subset {1,3,5} and native W={3}, an eligible rank3 occurrence appears only in collection A.",
+      "tested": {
+        "allPairsChecked": 21,
+        "operatorEquality": true,
+        "distinguishedByNamedBitIntervention": true
+      },
+      "negative": "The two collections ARE isomorphic after a simultaneous node permutation. The failure is reconstruction of incidence and named-input guard under fixed labels, NOT unlabeled graph nonisomorphism. The Carletti operator is an observer/selected linear source law, not native bit-rewrite evolution.",
+      "physicalImplication": "none established; source physical label preserved only as paper context"
+    },
+    {
+      "id": "ISO-N04",
+      "status": "NEGATIVE_STATIC_EVENT_INDEPENDENCE",
+      "scope": "Source T4 original k3/rule4 case with unchanged initial overlap incidence and rule, but different bit masks",
+      "sourceOperation": "k3 ruleID4 weights=11, active flip mutation=1, original source event checks",
+      "imageOperation": "any attempted static event-pair conflict graph depending only on incidence and selected rule ID",
+      "proof": "For original pair (0,1,2) and (0,1,3), mask 0 yields coenabled disabling conflict; mask 1 yields a complete commuting square. Same static adjacency/rule ID cannot encode both.",
+      "tested": {
+        "counterfactualMasks": [
+          0,
+          1
+        ],
+        "reproduced": true
+      },
+      "negative": "Historical T4 has 83 state-dependent signature differences and 660 pairwise-initial-commuting triple obstructions; this pass directly rechecks only the named k3 pair example.",
+      "physicalImplication": "none established"
+    },
+    {
+      "id": "ISO-C05",
+      "status": "UNPROVED_HYPOTHESIS_ONLY",
+      "scope": "Zwiebach source-original genus-indexed, graded n-ary string field product hierarchy versus native event-arity and higher composition",
+      "sourceOperation": "graded m_n^g with BRST differential, sum-to-zero nested identities and loop contractions",
+      "imageOperation": "candidate typed higher-arity graph/operator comparison, no map yet constructed",
+      "proof": "none",
+      "negative": "same input arity is not preservation of the graded operation, Q, domain H, interaction law or native legal three-event histories",
+      "physicalImplication": "source string/gravitation interpretation retained for future contingent investigation, no native physical claim"
+    },
+    {
+      "id": "ISO-C06",
+      "status": "UNPROVED_HYPOTHESIS_ONLY",
+      "scope": "Causal-set fixed-order propagation/covers and graphity/quantum automaton operations",
+      "sourceOperation": "paper-specific observer kernels or Hilbert/quantum dynamics",
+      "imageOperation": "possible partial mathematical operator fragments",
+      "proof": "none",
+      "negative": "source order, quantum state, dimensions, energies and operator conditions must remain mathematical assumptions where required; do not force native ontology",
+      "physicalImplication": "not evaluated"
+    }
+  ],
+  "independentVerification": {
+    "primaryExecutable": "research/causal-step/experiments/2026-10-14-bounded-isomorphism-pass.cjs",
+    "primaryGitBlob": "5c2ec873a4a4d44dc4a69cf2ad3e0c820d899f49",
+    "primaryResult": "research/causal-step/experiments/results/2026-10-14-bounded-isomorphism-pass.json",
+    "primaryResultBlob": "cecbd50c242ba0b9426351475acf542b828d2ee2",
+    "independentChecker": "research/causal-step/experiments/2026-10-14-bounded-isomorphism-independent.py",
+    "independentCheckerBlob": "64bdfab48812b9d3183e76dbc47ac22f62583db7",
+    "primaryEngine": "local Node.js 22.16.0",
+    "independentEngine": "local Python 3",
+    "exactValidated": {
+      "localGuards": 10752,
+      "frontierContexts": 145152,
+      "typedIncidenceRoundtrips": 27648,
+      "FanoPairWeights": 21,
+      "T4StateWitnesses": 2
+    },
+    "testFailureCount": 0
+  },
+  "remaining": {
+    "fullNativePhysicalIsomorphisms": 0,
+    "fullNativeExternalProcessBisimulations": 0,
+    "fullTheoremReproductions": 0,
+    "corpusRowsUnchanged": 217,
+    "originalMathPaperInspectionsUnchanged": 35,
+    "C1": "OPEN",
+    "C2": "OPEN_PARTIAL",
+    "C3": "OPEN_PARTIAL",
+    "C4": "OPEN"
+  },
+  "notes": "Exact finite mathematical validation and a constructive fragment proof are not source-level physical measurements. This is no general saturation or independent exhaustive large-physics emergence simulation."
+}
