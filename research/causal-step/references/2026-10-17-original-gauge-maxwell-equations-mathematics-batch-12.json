@@ -1,0 +1,122 @@
+{
+  "title": "Causal Step original-source physics-facing mathematical comparison batch 12",
+  "date": "2026-10-17",
+  "status": "Two original mathematical source checks of discrete gauge covariance and Maxwell field dynamics; NO derived Causal Step physical field, spacetime or measurement",
+  "branch": "research/causal-step",
+  "previousMathContract": "research/causal-step/references/2026-10-14-math-first-source-comparison-contract-v0.3.json",
+  "originalSources": [
+    {
+      "stableID": "MECH-39",
+      "newCorpusID": "EXP/223",
+      "domain": "R16",
+      "authors": [
+        "Pablo Arrighi",
+        "Giuseppe Di Molfetta",
+        "Nathanaël Eon"
+      ],
+      "originalTitle": "A gauge-invariant reversible cellular automaton",
+      "originalFullText": "https://arxiv.org/abs/1802.07644",
+      "originalPDF": "https://arxiv.org/pdf/1802.07644",
+      "version": "arXiv:1802.07644 original full-text version accessed 2026-10-17; exact version suffix not asserted",
+      "mathLocators": [
+        "arxiv original full HTML §2 Definition 1 and Eq (1) local (X⊗X)^φ transformation",
+        "§2 Definition 1 Eq (2): G_(Zφ) ∘ T = T ∘ G_φ, full update gauge-covariance obligation",
+        "§3 Definition 2 Eq (3), Eqs (7)-(9): inhomogeneous covariance of update with compensating gauge connection A and its transformation",
+        "§3 Remark 1 Eqs (13)-(20): F=Δ_r A_l−Δ_l A_r invariant under local connection transformations, with integrability proof",
+        "§4 gauge field dynamics: internalize A, update it and preserve covariance; gauge fixing/constraining must preserve theory equivalence"
+      ],
+      "sourceMath": {
+        "objects": [
+          "discrete cell configurations ψ∈Σ^Z",
+          "group of local Z2 bit-flip transformations Gφ",
+          "reversible local CA rule T",
+          "additional gauge-connection bit field A=(A_r,A_l) if gauging is required",
+          "gauge-invariant field F built from connection differences"
+        ],
+        "operators": [
+          "G_(Zφ) ◦ T = T ◦ G_φ is a strict naturality/covariance requirement for original gauge-invariant automaton, not a generic graph property.",
+          "For A-dependent dynamics, G_(Zφ) ◦ T_A = T_(Gφ A) ◦ Gφ, which transforms the compensating field as well.",
+          "F=Δ_r A_l−Δ_l A_r is gauge-invariant only for the source-defined transformed connection; F may have its own supplied update dynamics."
+        ],
+        "necessaryAssumptions": [
+          "original example has a one-dimensional coordinate lattice and synchronous CA clock; neither is a native Causal Step primitive",
+          "specific local Z2 action and bit/connection types explicitly specified",
+          "comparison map must preserve original transformation of connection and actual legal update, not simply construct topological faces"
+        ],
+        "structuralPositive": "A discrete transformation law and exact criterion by which local gauge covariance of legal dynamics can be checked.",
+        "nativeLimit": "Native rule uses unordered k-ary selected Hamming guards, bit mutations and fresh node birth; source paper's cellular automaton and compensating gauge field are NOT native-derived.",
+        "negative": "Uncompensated arbitrary local source bit flips generally change admissibility; such a failure cannot be repaired by citing d²=0. Compensating relational degree of freedom or a different native gauge action would require separate derivation."
+      },
+      "broadPhysicalCategory": "Authors explicitly connect local gauge covariance to physics of gauge fields. This is source broad physics context, not Causal Step electromagnetism."
+    },
+    {
+      "stableID": "MECH-40",
+      "newCorpusID": "EXP/224",
+      "domain": "R07",
+      "authors": [
+        "Ari Stern",
+        "Yiying Tong",
+        "Mathieu Desbrun",
+        "Jerrold E. Marsden"
+      ],
+      "originalTitle": "Geometric Computational Electrodynamics with Variational Integrators and Discrete Differential Forms",
+      "originalFullText": "https://arxiv.org/pdf/0707.4470",
+      "originalArxivAbstract": "https://arxiv.org/abs/0707.4470",
+      "version": "arXiv:0707.4470v3 (27 May 2009), original mathematical paper PDF inspected; later published chapter pagination separately specified",
+      "mathLocators": [
+        "original arxiv v3 PDF zero-index p6 Eq (2.1): variational equation d * d A = J",
+        "PDF index p7 Eqs (2.2)–(2.3): dF=0, dG=J; F=dA, G=*F; Eqs (2.4)–(2.7) classical Maxwell vector form",
+        "PDF index p21 §4.2: actual discrete evolution for B and D in terms of incidence derivative d1 and its transpose",
+        "PDF index p28 §5: discrete variational extremization yields d* dA=J, hence dynamical Maxwell after a Hodge/constitutive structure is supplied"
+      ],
+      "sourceMath": {
+        "objects": [
+          "oriented discrete cellular/simplicial spacetime complex",
+          "cochain d with d²=0",
+          "electromagnetic potential 1-form A, curvature 2-form F=dA",
+          "constitutive Hodge star * mapping F to G",
+          "charge-current J and fields on primal/dual complexes"
+        ],
+        "operators": [
+          "d²=0 is a universal chain-complex identity, and only gives homogeneous relation dF=0 when F=dA has been specified.",
+          "Full Maxwell source uses additional G=*F plus actual dynamical equation dG=J, alternatively d* dA=J from a source-specified action.",
+          "Source discrete evolution updates electric/magnetic forms using spatial incidence derivatives and chosen time/mesh structure."
+        ],
+        "necessaryAssumptions": [
+          "4D spacetime or appropriate dimension/dual structure in source benchmark, NOT derived by arbitrary incidence",
+          "source physical time/metric/constitutive Hodge action and gauge field variables supplied in electrodynamics model",
+          "original numerical predictions and units NOT matching criterion for Causal Step structural discovery"
+        ],
+        "structuralPositive": "Exact operational benchmark for a real Maxwell-like field: nontrivial field-to-current evolution and local constraints beyond universal d²=0.",
+        "nativeLimit": "Putting artificial simplex closure on evolved native hyperedges yields d²=0 for every closure but does not identify a physical field, dual constitutive law, Maxwell evolution or photons.",
+        "negative": "Any graph can be given formal cochain/gauge potential for which d(dA)=0; this cannot alone distinguish emergent physics from unrelated graph models."
+      },
+      "broadPhysicalCategory": "Original researchers address numerical and mathematical representations of established classical electromagnetism and Maxwell dynamics."
+    }
+  ],
+  "nativeEvidence": {
+    "frozenSourceBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "evolvedArchiveSHA256": "b3c10dbda3d9a790fbbe586cc7ef6f9c51eeaf572eda09da33d83c2781f277dc",
+    "original36SampleRuleMath": "exact source Hamming-weight guards, keep/delete edge occurrence, mutating bits and forced one newborn plus specified offspring ranks",
+    "currentEstablished": "Some native rules conserve global node-bit parity in Z2; no native local gauge action or Maxwell field proven.",
+    "testingEvidenceFiles": {
+      "parityAndAddedCochainLocalArtifact": "causal_step_traditional_physics_bridge_2026-10-17.json",
+      "originalGaugeRuleLocalArtifact": "causal_step_physics_qualification_2026-10-17.json",
+      "originalGaugeRuleScriptSHA256": "cab212366fdbf8bdba278c21256a4ed1eb0730aef261d7176e8d04bdf6a8d8cb",
+      "parityAndCochainScriptSHA256": "c951666ba7a05017eb98c17e655466f4c5115c7f46734e78588368426c41138c",
+      "copiedIntoGitHub": false
+    }
+  },
+  "domainGates": {
+    "C1": "OPEN 0/16 saturated literature fields",
+    "C2": "PARTIAL +2 source maths inspected, full external theorem proof NOT repeated",
+    "C3": "PARTIAL source negative controls and exact no-go scope documented",
+    "C4": "OPEN zero native-to-established-physics whole-process representations/bisimulations"
+  },
+  "evidenceDiscipline": "Original source physical labels preserved; mathematics compared structurally without matching numerical measurements/units; no assumed 3D/4D Causal Step, no imported gauge connection or source physical clock; no physical prediction established.",
+  "provenance": {
+    "human": "Joshua Oshiro repeatedly emphasized conventional physics linkage for meaningful scientific recognition",
+    "agent": "source-primary math extraction and selected native rule symmetry/physics qualifier analysis",
+    "external": "Arrighi, Di Molfetta, Eon; Stern, Tong, Desbrun, Marsden retain original-source credit"
+  }
+}
