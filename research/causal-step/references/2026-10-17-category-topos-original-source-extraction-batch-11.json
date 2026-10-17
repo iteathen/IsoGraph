@@ -1,0 +1,206 @@
+{
+  "title": "Causal Step source-primary category theory batch 11 — incidence presheaf topoi, generalized graph formalisms, adhesive rewriting, incidence duality and pregeometric homotopy",
+  "date": "2026-10-17",
+  "branch": "research/causal-step",
+  "status": "Five original-paper mathematical extractions inspected, none complete independently reproduced external theorem; existing Behr–Krivine guarded rewrite record remains earlier source evidence.",
+  "objective": "Mathematical relational structures/compositions independent of source authors' detailed ontology, with original broad physical context preserved; compare actual evolved native occurrence incidence and distinct full-state rewriting rather than pretend the native full state is already a topos.",
+  "sourcePaperRecords": [
+    {
+      "id": "MECH-34",
+      "newCorpusId": "EXP/218",
+      "domain": "R02",
+      "title": "Incidence hypergraphs: The categorical inconsistency of set-systems and a characterization of quiver exponentials",
+      "authors": [
+        "Will Grilliette",
+        "Lucas J. Rusnak"
+      ],
+      "originalURL": "https://arxiv.org/pdf/1805.07670",
+      "sourceVersion": "arXiv:1805.07670v2, 2019-05-03, original manuscript PDF (different PDF numbering from final journal)",
+      "originalMathLocators": [
+        "PDF index 16 (printed p17) §3.1 Definition 3.1.1: incidence presheaf category R=Set^D for shape D: 2→0 and 2→1; G=(V,E,I,s:I→V,t:I→E).",
+        "PDF index 18 (printed p19) §3.3 Definition 3.3.1: set-system-to-incidence functor I with incidences {(v,e):v∈ε(e)}; Lemma 3.3.2 this functor preserves neither limits nor colimits."
+      ],
+      "exactMathematicalFragment": {
+        "objects": "Three separate sets: vertices V, edge occurrences E and incidences I; two endpoint maps s:I→V and t:I→E.",
+        "morphisms": "Commuting triples (fV,fE,fI) with s'∘fI=fV∘s and t'∘fI=fE∘t",
+        "equivalence": "Componentwise bijective maps preserving incidence; ambient category functor/presheaf topos",
+        "composition": "componentwise composition of incidence-preserving maps; topoi support limits, colimits, subobject classifiers, exponentials",
+        "mathPrerequisites": "No imposed binary node bit, hyperedge rank, scheduler, field or physical metric. Functor category includes more general incidence objects than finite source rank-k set-system hypergraphs."
+      },
+      "broadPhysicalCategory": "Foundations of hypergraph/graph representation, no independently claimed gravitational or photon physics.",
+      "fineInterpretationBoundary": "Source's ambient presheaf topos NOT the finite fixed-rank typed-with-Hamming-guard native Causal Step restricted subcategory. Lemma 3.3.2 directly prevents silently transporting all topos limits/colimits through naïve set-system encoding.",
+      "candidateNativeMapping": "Frozen native historical V_t,E_t plus unique (e,v)∈I_t for each membership, with componentwise time-indexed inclusion maps; attributes retained separately. Injective incidence representation under original rank/unique-member restriction.",
+      "mappingStatus": "exact structural representation and verified evolved inclusion on chosen histories; not full physical/process equivalence"
+    },
+    {
+      "id": "MECH-35",
+      "newCorpusId": "EXP/219",
+      "domain": "R12",
+      "title": "Functorial Approach to Graph and Hypergraph Theory",
+      "authors": [
+        "Martin Schmidt"
+      ],
+      "originalURL": "https://arxiv.org/pdf/1907.02574",
+      "sourceVersion": "arXiv:1907.02574v1 2019-07-04 (author manuscript 106-page PDF, printed chapter page 15 at zero-index 14)",
+      "originalMathLocators": [
+        "Original PDF index 14 (printed p15) Chapter 1 §1.1 Definition 1: right M-set X and monoid M, category G_(X,M) has objects V,A; hom(V,A)=X; hom(A,A)=M, composition by action; presheaf category [G_(X,M)^op,Set].",
+        "Source Introduction/Sections I–II: choices of X and M determine arity/orientation/symmetry of generalized graph objects, with exceptional loose/unfixed edges and morphism constraints."
+      ],
+      "exactMathematicalFragment": {
+        "objects": "Specified monoid M, right M-set X, two-object syntax category with graph-object data as contravariant Set-valued functor.",
+        "morphisms": "Natural transformations of presheaves; M action controls edge symmetries and X indexes endpoint/port incidences",
+        "equivalence": "Presheaf isomorphism under chosen (X,M); switching M or X is change of graph theory, not automatic equivalence",
+        "composition": "natural transformation and M-action composition; categorical (co)limits depend on full presheaf setting",
+        "mathPrerequisites": "Choice of graph arity X and symmetry monoid M, plus possible loose edges/extra morphisms; no physical time metric"
+      },
+      "broadPhysicalCategory": "Generalized graph/hypergraph mathematical foundations; no physical force category assigned.",
+      "fineInterpretationBoundary": "A fixed source rank k, unordered incidence occurrence may fit X of size k modulo S_k, but distinct repeated incidences/non-fixed edges can violate a naive endpoint tuple presentation. Need an exact functor and proof rather than presume equivalence.",
+      "candidateNativeMapping": "Rank-k historical occurrence with k distinct incident nodes as symmetric k-tuple modulo S_k, only within chosen subcategory; verify whether full presheaf morphisms remain valid after imposed source restrictions.",
+      "mappingStatus": "possible scoped representation, exact functor/reconstruction not yet proved"
+    },
+    {
+      "id": "MECH-36",
+      "newCorpusId": "EXP/220",
+      "domain": "R02",
+      "title": "Adhesive Categories",
+      "authors": [
+        "Stephen Lack",
+        "Paweł Sobociński"
+      ],
+      "originalURL": "https://www.brics.dk/RS/03/31/BRICS-RS-03-31.pdf",
+      "sourceVersion": "BRICS Research Series RS-03-31 October 2003 original author technical report; separate publication from 2005 'Adhesive and quasiadhesive categories' already indexed under LS/LS-009",
+      "originalMathLocators": [
+        "PDF index 8, original printed p7 Definition 3.1: adhesive category has pullbacks, pushouts along monomorphisms and van Kampen squares.",
+        "PDF index 8, Counterexample 3.3: Pos, Cat, Top, Gpd are NOT adhesive.",
+        "PDF index 9, Proposition 3.4(iii): functor category [X,C] adhesive when C adhesive; Proposition 3.5 any elementary topos adhesive.",
+        "PDF index 14, Definition 5.1: double-pushout rule span L←K→R."
+      ],
+      "exactMathematicalFragment": {
+        "objects": "Ambient adhesive category C, monomorphisms and pullback/pushout diagrams, typed rewrite objects L,K,R.",
+        "morphisms": "Valid matches m:L→G, pushout complements and pushout gluing; side conditions needed for applicability",
+        "equivalence": "DPO diagram squares up to canonical isomorphism under adhesive assumptions",
+        "composition": "pushout along monos, categorical pullbacks, van Kampen property; well-behaved compositional rewriting conditional on admissibility",
+        "mathPrerequisites": "Must work in adhesive C with valid monos/pushout complement; category of posets Pos is explicitly nonadhesive."
+      },
+      "broadPhysicalCategory": "Formal graph transformation in mathematics and computation, not an established gravitational theory.",
+      "fineInterpretationBoundary": "Because incidence R is a presheaf topos, ambient R is adhesive. The full category of native state-labelled k-ary guards is not proven adhesive, nor DPO match+guards automatically preserve actual Causal Step all states or original T4 83/660 tests.",
+      "candidateNativeMapping": "Represent node/edge incidence plus labels in ambient R; attempt guarded DPO rule with fresh node, conditional existing-member bit mutation, keep/consume and offspring creation; prove exact match and composition only under all source-specific constraints.",
+      "mappingStatus": "ambient theorem applies; native guarded DPO embedding not constructed/proved"
+    },
+    {
+      "id": "MECH-37",
+      "newCorpusId": "EXP/221",
+      "domain": "R02",
+      "title": "Incidence Hypergraphs: Box Products and the Laplacian",
+      "authors": [
+        "Will Grilliette",
+        "Lucas J. Rusnak"
+      ],
+      "originalURL": "https://arxiv.org/pdf/2007.01842",
+      "sourceVersion": "arXiv:2007.01842v4 2023-07-12, original PDF of paper submitted 2020",
+      "originalMathLocators": [
+        "PDF index 12 (printed p13) §3.1 Definition 3.1.1 and Theorem 3.1.3: incidence dual G# swaps V and E and s/t, functor involutive.",
+        "PDF index 12–15 §3.1 Def 3.1.5 Laplacian product and Theorem 3.1.10 (PDF index 15) natural dual/product isomorphisms (G■H)# ≅ G#■H ≅ G■H#.",
+        "PDF index 21–23 §4.2 relates the path evaluation of Laplacian exponential to signed/symmetric graph Laplacian powers; not equivalent to source Carletti k-weighted Laplacian definition."
+      ],
+      "exactMathematicalFragment": {
+        "objects": "Incidence category R as presheaves; edge/vertex duality; Laplacian monoidal product and exponential.",
+        "morphisms": "Natural incidence dual G#=(E,V,I,t,s); dual action on morphisms; Laplacian product natural isomorphisms",
+        "equivalence": "G## naturally equals/isomorphic G in the ambient category, not native vertex↔hyperedge *physical* equivalence",
+        "composition": "Functorial incidence duality and symmetric monoidal product with stated natural coherences; matrix/paths are derived observers.",
+        "mathPrerequisites": "Ambient incidence presheaves, available loose incidences, specified monoidal product and path evaluation; source oriented-graph sign conventions"
+      },
+      "broadPhysicalCategory": "Graph combinatorics and Laplacian/network operators; no asserted physical light or gravity identity.",
+      "fineInterpretationBoundary": "Duality swaps nodes and hyperedge occurrences in the ambient graph category; the native nodes hold bit/birth states and E occurrences have fired/alive flags, and ranks differ, so native dynamics is NOT dual-invariant. The 'Laplacian' here is source-specific, not Carletti–Fanelli–Nicoletti weighted dyadic K/L by name alone.",
+      "candidateNativeMapping": "Try dualization as mathematical presentation comparison for unlabelled incidence, then test loss when restoring native types and guards; not a physical duality.",
+      "mappingStatus": "ambient incidence duality genuine exact; full native dynamics not shown to preserve it"
+    },
+    {
+      "id": "MECH-38",
+      "newCorpusId": "EXP/222",
+      "domain": "R03",
+      "title": "Pregeometric Spaces from Wolfram Model Rewriting Systems as Homotopy Types",
+      "authors": [
+        "Xerxes D. Arsiwalla",
+        "Jonathan Gorard"
+      ],
+      "originalURL": "https://link.springer.com/article/10.1007/s10773-024-05576-0",
+      "sourceVersion": "2024-03-28 original publisher open-access HTML, International Journal of Theoretical Physics 63 article 83; DOI 10.1007/s10773-024-05576-0",
+      "originalMathLocators": [
+        "Original publisher §§2 Definitions 2.1–2.5: model hypergraph and pattern substitution rewrite H1→H2, abstract rewriting system (A,→), multiway state transition graph and event-causal adjacency In(b)∩Out(a)≠∅.",
+        "Publisher §4.2 Proposition 4.1 and Definition 4.1: double-category higher homotopy structure after supplementing multiway system with path-homotopy rewrite rules.",
+        "Publisher §4.2 Corollary 4.1, Proposition 4.2–4.4: double groupoid, n-fold and ∞-groupoid interpretations explicitly contingent on invertible higher rules and admissibility.",
+        "Publisher §5: ∞-topos/spatial/cohesion constructions require subobject classifiers, additional (co)limits/adjoints and topology/cohesion structures; some fiber construction described as future work."
+      ],
+      "exactMathematicalFragment": {
+        "objects": "Hypergraph rewriting states, multiway legal path category, additional path/path-homotopy rewrites 2-cells; supplementary higher/invertible rules.",
+        "morphisms": "Source state paths concatenate to form category; added 2-morphisms between paths only with additional rewriting rules; invertibility is added for groupoid constructions.",
+        "equivalence": "higher homotopy/localization conditional, not automatically Causal Step equivalence or proof of native 3D.",
+        "composition": "horizontal/vertical path and 2-cell compositions; higher compositions only when prescribed admissible extra homotopy rules.",
+        "mathPrerequisites": "Particular Wolfram model ordered hyperedge convention, rule patterns, separate causal ancestry definition based on source edge In/Out overlap; additional invertible rules/topos/cohesion infrastructure."
+      },
+      "broadPhysicalCategory": "Proposed pregeometric origin of spatial structure in physical models (authors' context, no independent physics validation by this extraction).",
+      "fineInterpretationBoundary": "Native source-selected Causal Step model has forced new vertices, non-invertible forward actions and bit-sensitive T4 conflict; its full path category cannot be declared ∞-groupoid or cohesive ∞-topos from this paper alone. Source notion of causal network uses produced edge reuse, not necessarily same as our forest of creator node ancestry or operational conflict.",
+      "candidateNativeMapping": "Objects: full native states, 1-morphisms: legal finite selected-event sequences with occurrence IDs, 2-morphisms: ONLY pairs of histories for which an explicit admissible 2-cell is defined. Compare original multiway and category construction without adding inverses to native rules.",
+      "mappingStatus": "path-category fragment constructible; 2-cells/inverses/topos not native-proved"
+    }
+  ],
+  "existingRelatedSource": {
+    "id": "MECH-08",
+    "paper": "Compositionality of Rewriting Rules with Conditions",
+    "sourceMathRef": "research/causal-step/references/2026-10-14-priority-primary-equation-extraction-batch-02.json",
+    "relevance": "Shift(g,Shift(f,c))=Shift(g∘f,c); conditional associative matched rewrite composition, not a claim every initially coenabled T4 triple remains legal."
+  },
+  "currentNativeCategoryCandidate": {
+    "originalNativeBlob": "87a420edfb3e562d7fcbacf4ca607b1e6952ac08",
+    "historicalIncidence": "G_t=(V_t,E_t,I_t,s_t,t_t) with every original occurrence retained as historical record even after firing and/or death; all previous incidence endpoints unchanged",
+    "sequentialMorphism": "time-indexed componentwise injection G_t→G_u for t≤u; commute with incidence structure maps. These maps do NOT preserve mutable state labels if those are part of the category object requiring equality.",
+    "operationalPathCategory": "Reachable fully specified mutable native states as objects; each finite typed legal occurrence-firing path is a morphism, composition concatenation; arrows non-invertible when successful source rewrite strictly increases |V|. Relabeling quotient needs separate equivalence and provenance test.",
+    "birthPoset": "event-birth order is a forest-poset from original rule, individually a thin category; its categorical structure not equivalent to complete lawful event path category",
+    "T4Controls": {
+      "stateSensitivePairSignatures": 83,
+      "tripleCompositionObstructions": 660
+    }
+  },
+  "executionEvidence": {
+    "codeFile": "causal_step_categorical_evolved_test_2026-10-17.py",
+    "codeSHA256": "c0d284051cd410f92bd6953e67d149bf1e89f11cd83375fb218436556f5db055",
+    "rawFile": "causal_step_categorical_evolved_test_2026-10-17.json",
+    "rawSHA256": "a4461e53f799edc473d5f10d58e4ee92574b4727b03d0c8369dfd9f5bd31943c",
+    "sourceArchive": "causal_step_evolved_graphs_198_runs_2026-10-14.zip",
+    "sourceArchiveSHA256": "b3c10dbda3d9a790fbbe586cc7ef6f9c51eeaf572eda09da33d83c2781f277dc",
+    "archiveAndScriptsLocation": "existing verified conversation sandbox artifacts; do NOT assert binary snapshots/this source code are committed to GitHub unless separately uploaded",
+    "testScope": {
+      "deepHistories": 18,
+      "snapshotAges": [
+        1000,
+        2000,
+        4000
+      ],
+      "objects": 54,
+      "componentwiseInclusions": 36,
+      "incidenceNaturalityCases": 2088744,
+      "compositionChecks": 18,
+      "existingBitsChanged": 13818,
+      "existingOccurrenceFlagsChanged": 42927,
+      "oldLiveRetired": 13896,
+      "flagsFired": 42927
+    },
+    "higherOrderHistoryPreserved": true,
+    "noBroadPhysicsUnitsUsed": true,
+    "noNewNativeGenerationInThisTest": true,
+    "scriptReadsActualEvolvedFullSourceIncidence": true
+  },
+  "provenance": {
+    "humanOriginated": "Joshua Oshiro's proposal to explore category theory and generalized-space/topos overlaps with set theory, causal set theory and Causal Step",
+    "AI": "original-paper mathematical extraction, scoped categorical mapping, evolved graph state/morphism checks and exact negative interpretation",
+    "externalOriginalAuthors": "Will Grilliette, Lucas J. Rusnak, Martin Schmidt, Stephen Lack, Paweł Sobociński, Xerxes D. Arsiwalla, Jonathan Gorard"
+  },
+  "readiness": {
+    "C1": "OPEN source field saturation 0/16",
+    "C2": "PARTIAL 5 additional original equations/theorems partly inspected; no original full external theorem independently reproduced",
+    "C3": "PARTIAL external presheaf/set-system and Pos nonadhesive counterexamples recorded; broad contrary sweep not done",
+    "C4": "OPEN no full source-native to external dynamical bisimulation or derived geometry"
+  },
+  "noPhysicallyMeasuredMatch": true
+}

@@ -1062,3 +1062,26 @@ Begin by resynchronizing and reading the existing work, then proceed with substa
 **Critical counterexample on real evolved structures:** A local original-rule two-event test found effect interactions between otherwise **birth-incomparable creator events in 16 of the 18 4,000-step grown snapshots**. Explicit k3 rule1 active-FIFO 4,000-step event occurrences 4000 and 4006 (shared node150) remain coenabled in both orders but yield different node/newborn bits; creators are incomparable birth events 1333/1335. Pairwise shadow can likewise show false current rank-3 event: at step4,000 k3 rule4, triangle nodes 0/1/2 is supported by other live rank3 hyperedges, while actual original hyperedge 012 ID0 was fired and dead. Exact external mathematical Carletti K/L dyadic operator projection and original Ehrenfeucht–Rozenberg enabled-frontier read/inhibit fragment remain **scoped** maps only; no physical/light/string whole-source law equivalence.
 
 **Artifacts/evidence and preservation:** [GitHub evolution summary](experiments/results/2026-10-14-evolved-structural-comparison-198-summary.json), [critical mathematical proof/review](reviews/2026-10-14-evolved-hypergraph-structural-comparison-birth-forest-and-crossbranch.md), [candidate register](references/2026-10-14-evolved-structure-isomorphism-candidates.json) and this log plus provenance. Full raw 699 gzipped source graphs, 198 run configs, executable/independent scripts and per-file SHA checks are in a separate conversation download ZIP `causal_step_evolved_graphs_198_runs_2026-10-14.zip` (SHA256 `b3c10dbda3d9a790fbbe586cc7ef6f9c51eeaf572eda09da33d83c2781f277dc`). **Do not claim this binary archive was committed to GitHub**. Existing source library v1.3 217/203/35 unchanged; C1–C4 remain OPEN; qualified authority, main, Woit/Lisi, native source and T4 historical 83/660 negative findings unchanged.
+
+
+## 2026-10-17 — Category theory and common core, unequal current formulations
+
+**Researcher (verbatim):**
+
+> I'm looking at category theory, and loads of work in category theory look like they might overlap with this topic. The theorem, the topos of generalized spaces, has certain shapes in it that resemble what we're doing here. But I think more broadly category theory has a lot of relations to what we're doing. It probably has those relations for the same reason that set theory has relations with what we're doing, and causal set theory as well as causal step theory, which I think, honestly, I think they're kind of broadly more or less in the same category of ideas.
+
+**Researcher further correction (verbatim):**
+
+> They are same but not equal, the framework will work out to be equal.in the end but not in their current form.
+
+**AI interpretation:** common invariant formal structure is a **hypothesis**, not a proven equality, isomorphism or categorical equivalence. Original Grilliette–Rusnak results prohibit equality of complete set-system hypergraph versus incidence-presheaf categories; seek explicitly scoped shared fragments, including relational incidence, transitions, composition and reverse reconstruction.
+
+**Actually researched:** Five original categorical papers, separately attributed, extracted with exact source-page/definition locations. Original evolved native 18 4,000-step histories passed 36 inclusion-preserving triples with 2,088,744 incidence naturality comparisons, 18 composition checks and 54 source snapshots. Native historical membership only grows; prior bit and alive/fired labels mutate. No full guarded process equivalence or physical spacetime inferred.
+
+## 2026-10-17 — Physics-facing relevance priority
+
+**Researcher (verbatim):**
+
+> These theories have incredibly rich territory to explore but unless we can connect something concrete to traditional physics it will not get proper attention.
+
+**Human priority:** To move beyond rich pure mathematics, seek a **recognizable connection to existing physics**, with its source experimental/theoretical support and explicit structural preservation conditions. Mathematical similarity is not sufficient to claim light, gravity, charge or Higgs/neutrino emergence. Test native source conservation/gauge and compare to exact established physical field equations in a separate, labeled follow-up batch; do not use physical measurements/unknown units to force a match.
