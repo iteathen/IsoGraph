@@ -45,6 +45,21 @@ research/
 - [Research publications](publications/README.md) — publication-facing outputs and revision indexes.
 - [Repository reconciliation](repository-reconciliation/README.md) — preserved research/provenance review of surviving historical branches.
 
+## Cross-domain research extracted from Connect Four (2026-10-18)
+
+These ten independent first-level dossiers preserve source-revision links, exact conditional results, negative controls and research questions. They are not a qualified extension of IsoGraph or a promotion of Connect4 gameplay semantics.
+
+- [Observation-relative structural invariants](observation-relative-invariants/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Strategy-preserving chronology elimination](strategy-preserving-chronology/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Online relational covering under precedence](online-relational-covering/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Local-to-global relational realizability](local-to-global-realizability/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Discrete difference fields and topology](discrete-difference-geometry/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [First-occurrence and competing terminal-event dynamics](first-occurrence-dynamics/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Resource-capacity duality and inevitable outcomes](resource-capacity-duality/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Scalar-free optimal decision certificates](scalar-free-decision-certificates/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Linked-interval unfolding of relational geometry](relational-geometry-unfolding/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+- [Composable structural proofs and dependency-closed certificates](composable-structural-proofs/README.md) — transferred Connect4-derived research; specific results and cross-domain hypotheses remain unqualified.
+
 ## Current IsoGraph family
 
 Repository-wide current authority is routed by:
